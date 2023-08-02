@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,8 +3,8 @@
+ pkgname=libtool
+ _commit=1ec8fa28dcb29500d485c136db28315671ec4c3b
+ pkgver=2.4.7+4+g1ec8fa28
+-pkgrel=6
+-_gccver=13.2.1
++pkgrel=4
++_gccver=13.1.1
+ pkgdesc='A generic library support script'
+ arch=(x86_64)
+ url='https://www.gnu.org/software/libtool'
+@@ -15,6 +15,7 @@
+ provides=("libltdl=$pkgver" "libtool-multilib=$pkgver")
+ conflicts=(libltdl libtool-multilib)
+ replaces=(libltdl libtool-multilib)
++options=(debug)
+ source=(git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
+         git+https://git.savannah.gnu.org/git/gnulib.git
+         gnulib-bootstrap::git+https://github.com/gnulib-modules/bootstrap.git
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+ provides=("libltdl=$pkgver" "libtool-multilib=$pkgver")
+ conflicts=(libltdl libtool-multilib)
+ replaces=(libltdl libtool-multilib)
+ prepare() {
+   cd libtool
+   patch -Np1 -i "${srcdir}"/no_hostname.patch
