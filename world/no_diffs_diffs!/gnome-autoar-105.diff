@@ -27,10 +27,10 @@
    vala
  )
  provides=(libgnome-autoar{,-gtk}-${pkgver%%.*}.so)
- _commit=b387c2482d2a5c8efdfc8c7498f13cd3881685c0  # tags/0.4.4^0
  prepare() {
    cd $pkgname
-@@ -22,6 +23,6 @@
+ }
+@@ -21,6 +22,6 @@
      -D tests=true
      -D vapi=true
    )

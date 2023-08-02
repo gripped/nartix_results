@@ -46,7 +46,7 @@
  makedepends=(gobject-introspection vala sane bash-completion argyllcms git meson gtk-doc
               docbook-xsl)
  options=(!emptydirs)
-@@ -9,11 +9,12 @@
+@@ -8,11 +8,12 @@
    cd colord
  }
  build() {
@@ -60,7 +60,7 @@
      -D daemon_user=colord
    meson compile -C build
  }
-@@ -49,7 +50,7 @@
+@@ -48,7 +49,7 @@
  }
  package_libcolord() {
    pkgdesc+=" (client library)"

@@ -51,14 +51,13 @@
    tpm2-tss
  )
  makedepends=(
-@@ -29,6 +28,7 @@
+@@ -29,14 +28,16 @@
    wireplumber
  )
  groups=(gnome)
- _commit=9d1ee9c9458636dbe4d3326dceec81dfefef56dd  # tags/44.2^0
  prepare() {
    cd $pkgname
-@@ -36,8 +36,9 @@
+ }
  build() {
    local meson_options=(
      -D vnc=true

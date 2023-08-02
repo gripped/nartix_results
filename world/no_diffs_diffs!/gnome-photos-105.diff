@@ -27,10 +27,10 @@
    yelp-tools
  )
  groups=(gnome)
- _commit=a0eb37bfb6760aa1414fa41ee1ff007336301b8c  # tags/44.0^0
  prepare() {
    cd $pkgname
-@@ -33,6 +34,6 @@
+   git submodule init
+@@ -32,6 +33,6 @@
    local meson_options=(
      -D manuals=true
    )

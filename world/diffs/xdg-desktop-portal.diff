@@ -39,11 +39,10 @@
  )
  makedepends=(
    docbook-xsl
-@@ -16,12 +15,13 @@
+@@ -16,11 +15,12 @@
    meson
    xmlto
  )
- _commit=88af6c8ca4106fcf70925355350a669848e9fd5a  # tags/1.16.0^0
  prepare() {
    cd $pkgname
    git cherry-pick -n 2a219279997c2124c8a639b0d009c9946ec97b40

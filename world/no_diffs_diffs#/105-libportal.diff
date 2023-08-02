@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,12 +3,13 @@
+@@ -3,11 +3,12 @@
  makedepends=(git meson gi-docgen vala gobject-introspection gtk3 gtk4 qt5-base
               qt5-x11extras gjs)
  checkdepends=(xorg-server-xvfb)
- _commit=13df0b887a7eb7b0f9b14069561a41f62e813155  # tags/0.6
  prepare() {
    cd libportal
  }

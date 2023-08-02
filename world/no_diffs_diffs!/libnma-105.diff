@@ -27,10 +27,10 @@
    mobile-broadband-provider-info
    vala
  )
- _commit=3e324b69d0d74c8693fb58b9ee66efe0bad6cb34  # tags/1.10.6^0
  prepare() {
    cd libnma
-@@ -22,7 +23,7 @@
+ }
+@@ -21,7 +22,7 @@
    local meson_options=(
      -D libnma_gtk4=true
    )

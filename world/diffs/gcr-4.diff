@@ -39,7 +39,7 @@
  )
  makedepends=(
    gi-docgen
-@@ -21,7 +20,7 @@
+@@ -20,7 +19,7 @@
    cd gcr
  }
  build() {
@@ -48,7 +48,7 @@
    meson compile -C build
  }
  package_gcr-4() {
-@@ -29,7 +28,6 @@
+@@ -28,7 +27,6 @@
      libgck-2.so
      libgcr-4.so
    )

@@ -68,11 +68,10 @@
  )
  makedepends=(
    docbook-xsl
-@@ -20,11 +20,16 @@
+@@ -20,10 +20,15 @@
    xtrans
  )
  groups=(gnome)
- _commit=ce29eaa05c68807b9cc5f19f4afb59cc4d806040  # tags/44.0^0
  prepare() {
    cd $pkgname
 +  git apply -3 ../0001-meson-add-elogind-support.patch

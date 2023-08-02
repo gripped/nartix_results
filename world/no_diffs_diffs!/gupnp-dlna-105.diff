@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,10 +1,11 @@
  pkgname=gupnp-dlna
  depends=(gst-plugins-base-libs)
  makedepends=(gobject-introspection gtk-doc vala meson git)
- _commit=cc09daae47ef0e030895edbeba58636c76f53b3d  # tags/gupnp-dlna-0.12.0^0
  prepare() {
    cd $pkgname
  }

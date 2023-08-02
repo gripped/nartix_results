@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,14 @@
+@@ -3,12 +3,13 @@
  depends=(libsoup3 geocode-glib-2 dconf libxml2)
  makedepends=(gobject-introspection vala git gi-docgen meson python-gobject)
  checkdepends=(python-pylint)
- _commit=699cfb7e114acba4e066ebda9a51e6820da3daa7  # tags/4.2.0^0
  prepare() {
    cd libgweather
    git apply -3 ../disable-metar-test.diff

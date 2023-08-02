@@ -43,10 +43,10 @@
  )
  groups=(gnome)
  backup=(etc/xdg/Xwayland-session.d/00-xrdb)
- _commit=7cc9a78f1d562ea759d1776ed061d4339a6f4610  # tags/44.1^0
  prepare() {
    cd $pkgname
-@@ -42,6 +42,6 @@
+   git submodule init
+@@ -41,6 +41,6 @@
    git -c protocol.file.allow=always submodule update
  }
  build() {

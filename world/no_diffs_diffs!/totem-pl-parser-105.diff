@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,11 +5,12 @@
+@@ -5,10 +5,11 @@
  provides=("totem-plparser=$pkgver-$pkgrel" libtotem-plparser{,-mini}.so)
  conflicts=(totem-plparser)
  replaces=("totem-plparser<=3.26.3-1")
- _commit=1431f520fb82f98873c3870f2bbe8eba4d0e670a  # tags/V_3_26_6^0
  prepare() {
    cd $pkgname
  }

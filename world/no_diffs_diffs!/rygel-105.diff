@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,11 +20,12 @@
+@@ -20,10 +20,11 @@
  provides=(librygel-{core,db,renderer,renderer-gst,ruih,server}-2.8.so)
  backup=(etc/rygel.conf)
  groups=(gnome)
- _commit=54ee75b8bbbe094b18b7597815856107e3cc51b7  # tags/rygel-0.42.3^0
  prepare() {
    cd rygel
  }

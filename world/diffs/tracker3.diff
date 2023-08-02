@@ -39,8 +39,8 @@
 -  systemd
    vala
  )
- _commit=d56637112f027aec9fcf069e1ce9218460f64e99  # tags/3.5.3^0
-@@ -38,8 +37,9 @@
+ prepare() {
+@@ -37,8 +36,9 @@
  build() {
    local meson_options=(
      -D tests_tap_protocol=true

@@ -33,15 +33,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,6 @@
+@@ -10,14 +10,14 @@
    meson
    python-dbus
    python-dbusmock
 -  systemd
  )
  checkdepends=(umockdev)
- _commit=0dd257edd6b27589d2a1013cda1d2d5f325eee8b  # tags/2.6^0
-@@ -18,7 +17,8 @@
+ build() {
    local meson_options=(
      -D gtk_doc=true
      -D tests=true

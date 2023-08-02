@@ -30,10 +30,10 @@
  provides=(libgucharmap_2_90.so)
 -options=!lto
 +options=!lto
- _commit=367f957574e7d7277839e7dfc3de6890937c4e2a  # tags/15.0.4^0
  prepare() {
    cd $pkgname
-@@ -22,6 +22,6 @@
+ }
+@@ -21,6 +21,6 @@
      -D b_lto=false
      -D ucd_path=/usr/share/unicode
    )

@@ -18,6 +18,6 @@
  depends=(gcc-libs)
  makedepends=(git)
  provides=(libspeexdsp.so)
- _commit=1b28a0f61bc31162979e1f26f3981fc3637095c8  # tags/SpeexDSP-1.2.1^0
  prepare() {
    cd speexdsp
+   ./autogen.sh

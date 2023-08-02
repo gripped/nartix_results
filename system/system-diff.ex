@@ -4,7 +4,6 @@ python-audit
 base-devel
 base
 bash
-binutils
 btrfs-progs
 cryptsetup
 curl
@@ -19,16 +18,6 @@ elfutils
 debuginfod
 libelf
 fakeroot
-gcc
-gcc-libs
-lib32-gcc-libs
-gcc-ada
-gcc-d
-gcc-fortran
-gcc-go
-gcc-objc
-lto-dump
-libgccjit
 glibc
 lib32-glibc
 gssproxy

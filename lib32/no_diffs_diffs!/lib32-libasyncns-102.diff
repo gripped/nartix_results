@@ -18,6 +18,6 @@
  pkgname=lib32-libasyncns
  depends=(lib32-glibc libasyncns)
  makedepends=(git lynx)
- _commit=68cd5aff1467638c086f1bedcc750e34917168e4  # master
  prepare() {
    cd libasyncns
+   sed -i '/^libdir=/s:/lib:/lib32:' *.pc.in

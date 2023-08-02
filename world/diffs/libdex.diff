@@ -35,16 +35,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
+@@ -17,7 +17,7 @@
+   vala
  )
- _commit=c59ec85110954d8e9a1bf31322944225e1dc6874  # tags/0.2.0^0
  prepare() {
 -  cd libdex
 +  cd _libdex
    git cherry-pick -n dd2453dab189643a73e8 2194086a5bf83a56a5bf
  }
  build() {
-@@ -26,7 +26,7 @@
+@@ -25,7 +25,7 @@
      -D docs=true
      -D sysprof=true
    )

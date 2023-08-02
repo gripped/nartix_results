@@ -41,14 +41,14 @@
    libgoa
    libsoup
  )
-@@ -12,6 +13,7 @@
+@@ -11,6 +12,7 @@
+   meson
    vala
  )
- _commit=eb7db048e5445ad567817dced344c47a20c6ea6b  # tags/0.18.1^0
  prepare() {
    cd libgdata
  }
-@@ -21,6 +23,6 @@
+@@ -20,6 +22,6 @@
      -D gtk_doc=true
      -D man=true
    )

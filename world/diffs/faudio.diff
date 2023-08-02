@@ -27,14 +27,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- pkgname=faudio
--_commit=f1a10b353237175481a97081b36c5c58f3596fcc
-+_commit=58cf606b5f718883e5dffbafdec44859d4e304ec
- depends=('sdl2' 'gst-libav')
- makedepends=('git' 'cmake' 'ninja')
- prepare() {
-@@ -9,6 +9,8 @@
+@@ -8,6 +8,8 @@
    cd build
    cmake ../FAudio -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \

@@ -14,9 +14,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=signon-ui
- _commit=4368bb77d9d1abc2978af514225ba4a42c29a646
  depends=(libaccounts-qt qt5-webengine signond libnotify)
  prepare() {
    cd $pkgname-$_commit

@@ -18,6 +18,6 @@
  pkgname=lib32-speex
  depends=(lib32-gcc-libs speex)
  makedepends=(git)
- _commit=5dceaaf3e23ee7fd17c80cb5f02a838fd6c18e01  # tags/Speex-1.2.1^0
  prepare() {
    cd speex
+   ./autogen.sh

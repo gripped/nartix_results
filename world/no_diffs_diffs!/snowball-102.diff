@@ -18,6 +18,6 @@
  pkgbase=snowball
  pkgname=(snowball libstemmer)
  makedepends=(git)
- _commit=48a67a2831005f49c48ec29a5837640e23e54e6b  # tags/v2.2.0^0
  prepare() {
    cd snowball
+   git apply -3 ../dynamiclib.diff

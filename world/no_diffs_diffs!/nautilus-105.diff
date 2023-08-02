@@ -27,10 +27,10 @@
    tracker3-miners
  )
  checkdepends=(python-gobject)
- _commit=c5504fe6204e3bbbfb75ba8f6a153277062feb60  # tags/44.2.1^0
  prepare() {
    cd nautilus
-@@ -36,7 +37,7 @@
+   git apply -3 ../no-tracker-test.diff
+@@ -35,7 +36,7 @@
      -D docs=true
      -D packagekit=false
    )

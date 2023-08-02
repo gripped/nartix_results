@@ -64,8 +64,8 @@
 -  socat
    valgrind
  )
- _commit=e936e3100d406c50ba49f3ad6a0ecae455345ec0  # tags/1.15.4^0
-@@ -52,7 +50,7 @@
+ prepare() {
+@@ -51,7 +49,7 @@
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
    )

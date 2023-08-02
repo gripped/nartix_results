@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,12 +13,13 @@
+@@ -13,11 +13,12 @@
    pangomm-2.48-docs
  )
  checkdepends=(xorg-server-xvfb)
- _commit=301f8b2674350f23708f71b98c9a3fc94c0c7f80  # tags/4.10.0^0
  prepare() {
    cd gtkmm
  }

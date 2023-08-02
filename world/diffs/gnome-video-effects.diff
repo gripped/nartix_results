@@ -23,10 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,10 +9,11 @@
+@@ -8,10 +8,11 @@
+   git
    meson
  )
- _commit=e4ae5aa3ee136333c6481469ed1d8869307ef5e4  # tags/0.6.0^0
 +groups=(gnome)
  prepare() {
    cd $pkgname

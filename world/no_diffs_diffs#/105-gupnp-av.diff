@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,10 +1,11 @@
  pkgname=gupnp-av
  depends=(glib2 libxml2)
  makedepends=(gobject-introspection gtk-doc vala meson git)
- _commit=86f148ebb920a8113190fd3e6cae636c9fdd3ca7  # tags/gupnp-av-0.14.1^0
  prepare() {
    cd gupnp-av
  }

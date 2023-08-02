@@ -53,9 +53,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,8 @@
+@@ -1,8 +1,8 @@
  pkgname=python-scramp
--_commit=10a1f8491247b13f6e87a6a05ab0cc6b9288b6ac
  depends=(python python-asn1crypto)
 -makedepends=(git python-build python-installer python-setuptools python-versioningit python-wheel)
 +makedepends=(python-build python-installer python-setuptools python-versioningit python-wheel)

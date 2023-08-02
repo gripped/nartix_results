@@ -100,7 +100,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,10 @@
+@@ -1,27 +1,10 @@
 -pkgname=python-rapidfuzz
 -depends=(
 -  'glibc'
@@ -116,7 +116,6 @@
 -  'rapidfuzz-cpp'
 -)
 -checkdepends=('python-hypothesis' 'python-pandas' 'python-pytest')
--_commit='b23067f659c605ba6ca31df823d1a2603c258b6b'
 -prepare() {
 -  cd "$pkgname"
 -  patch -p1 -i "$srcdir/remove-version-constraints.patch"

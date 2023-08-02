@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-rpds-py
+-pkgver=0.9.2
++pkgver=0.8.8
+ pkgrel=1
+ pkgdesc='Python bindings to the Rust rpds crate for persistent data structures'
+ arch=('x86_64')
+@@ -17,7 +17,7 @@
+   'python-maturin'
+   'python-installer'
+ )
+-_commit='d7b5670ec9f53f3a9a93e99668450c2b489df772'
++_commit='a4fc5c25e8578550aab9120c28e91e62d936cb93'
+ source=("$pkgname::git+$url#commit=$_commit")
+ b2sums=('SKIP')
+ 

@@ -62,16 +62,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgbase=jack2
  pkgname=(jack2 jack2-dbus jack2-docs)
- _commit=80149e552b56d6d57d754dc04d119b8170d27313  # refs/tags/v1.9.22
 -makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus systemd waf)
 +makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus waf)
  options=(!lto)
  _pick() {
    local p="$1" f d; shift
-@@ -13,8 +13,8 @@
+@@ -12,8 +12,8 @@
    done
  }
  prepare() {
@@ -82,7 +81,7 @@
  }
  build() {
    local waf_options=(
-@@ -22,11 +22,10 @@
+@@ -21,11 +21,10 @@
      --htmldir=/usr/share/doc/$pkgbase/html
      --autostart=none
      --doxygen=yes
@@ -95,7 +94,7 @@
    export CXXFLAGS="$CXXFLAGS -I/usr/include/db5.3"
    export LDFLAGS="$LDFLAGS -ldb-5.3"
    export LINKFLAGS="$LDFLAGS"
-@@ -44,11 +43,10 @@
+@@ -43,11 +42,10 @@
      glibc
      libsamplerate libsamplerate.so
      opus libopus.so

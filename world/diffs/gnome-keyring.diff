@@ -104,10 +104,10 @@
  provides=(org.freedesktop.secrets)
  groups=(gnome)
 -install=gnome-keyring.install
- _commit=9d562e1e359e3ce01b61f0f52c75d38b96dece7b  # tags/42.1^0
  prepare() {
    cd $pkgname
-@@ -22,18 +12,16 @@
+   git apply -3 ../0001-build-Use-p11_module_configs-as-default-pkcs11-confi.patch
+@@ -21,18 +11,16 @@
    NOCONFIGURE=1 ./autogen.sh
  }
  build() {

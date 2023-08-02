@@ -27,10 +27,10 @@
    xorg-server-xvfb
  )
  groups=(gnome)
- _commit=6af9a48c3238114dab6480f1fb3bdc818dc4a647  # tags/44.3^0
  prepare() {
    cd $pkgname
-@@ -54,6 +55,6 @@
+   git apply -3 ../pixmaps-dir.diff
+@@ -53,6 +54,6 @@
      -D documentation=true
      -D malcontent=true
    )

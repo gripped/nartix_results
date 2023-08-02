@@ -28,6 +28,6 @@
 -depends=(gtk3 cogl libinput)
 +depends=(gtk3 cogl libinput json-glib)
  makedepends=(gobject-introspection gtk-doc git)
- _commit=fd85623d34a54b3f5607011086cf19cb2c756a6a  # tags/1.26.4^0
  prepare() {
    cd $pkgname
+   NOCONFIGURE=1 ./autogen.sh

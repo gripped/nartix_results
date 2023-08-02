@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,11 +14,12 @@
+@@ -14,10 +14,11 @@
    meson
  )
  groups=(gnome)
- _commit=0d0ef588ad192094c63b73d768a8a01d091d61a7  # tags/44.1^0
  prepare() {
    cd $pkgname
  }

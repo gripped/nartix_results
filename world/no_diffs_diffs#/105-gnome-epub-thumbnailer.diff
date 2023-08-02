@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,10 +1,11 @@
  pkgname=gnome-epub-thumbnailer
  depends=(gdk-pixbuf2 librsvg libarchive libxml2)
  makedepends=(git meson)
- _commit=24829a20630ee5a004f00b5fdd3b6830f593503f  # tags/1.7^0
  prepare() {
    cd $pkgname
  }

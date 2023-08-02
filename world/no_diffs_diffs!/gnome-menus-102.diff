@@ -18,6 +18,6 @@
  depends=(glib2)
  makedepends=(intltool gobject-introspection git gnome-common)
  provides=(libgnome-menu-3.so)
- _commit=66ac7579856968d3f4b76c04d55327c60b37f2fb  # tags/3.36.0^0
  prepare() {
    cd $pkgname
+   NOCONFIGURE=1 ./autogen.sh

@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -2,10 +2,11 @@
  depends=(gtk3 librsvg libgnome-games-support)
  makedepends=(meson gobject-introspection yelp-tools appstream-glib git)
  groups=(gnome-extra)
- _commit=cfe92305315f7850fdf83aaf0dffd628fa8d64ed  # tags/40.9^0
  prepare() {
    cd tali
  }

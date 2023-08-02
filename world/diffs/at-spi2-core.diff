@@ -42,7 +42,7 @@
    xorg-xprop
  )
  makedepends=(
-@@ -33,7 +33,7 @@
+@@ -32,7 +32,7 @@
      -D default_bus=dbus-broker
      -D docs=true
    )
@@ -51,7 +51,7 @@
    meson compile -C build
  }
  package_at-spi2-core() {
-@@ -53,6 +53,7 @@
+@@ -52,6 +52,7 @@
      'atk<=2.38.0-2'
    )
    meson install -C build --destdir "$pkgdir"

@@ -60,12 +60,11 @@
    udisks2
  )
  makedepends=(
-@@ -16,9 +17,9 @@
+@@ -16,8 +17,8 @@
    git
    meson
  )
 -groups=(gnome)
- _commit=68c13081e29973b31ee37245626b1755b8cd53a6  # tags/44.0^0
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build -Dlogind=libelogind

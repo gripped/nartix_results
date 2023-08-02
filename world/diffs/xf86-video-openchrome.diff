@@ -17,9 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=xf86-video-openchrome
- _commit=0c752742e54fa34140386547947c81a832c9cad1 # master 2022-09-21 // v0.6.602
 -depends=('libdrm' 'libxvmc' 'systemd-libs')
 -makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=25.2' 'systemd' 'libxv'
 +depends=('libdrm' 'libxvmc' 'libudev')

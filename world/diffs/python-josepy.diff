@@ -82,7 +82,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,26 +1,19 @@
+@@ -1,25 +1,19 @@
  pkgname=python-josepy
 +_pkgname=josepy
  depends=(
@@ -99,7 +99,6 @@
 -)
 +makedepends=('python-setuptools')
  checkdepends=('python-pytest')
--_commit='10e2e3a1c09974d41097cc4c08f836421ce39f1b'
  prepare() {
 -  cd "$pkgname"
 +  cd "$_pkgname-$pkgver"

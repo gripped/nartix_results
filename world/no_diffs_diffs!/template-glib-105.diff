@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -2,10 +2,11 @@
  depends=(glib2 gobject-introspection-runtime)
  makedepends=(git meson vala gobject-introspection gtk-doc)
  provides=(libtemplate_glib-1.0.so)
- _commit=f7c21273599381494bc8d9b0633b93e14586471a  # tags/3.36.1^0
  prepare() {
    cd $pkgname
  }

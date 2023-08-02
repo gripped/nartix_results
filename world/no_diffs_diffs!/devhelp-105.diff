@@ -35,10 +35,10 @@
  depends=(webkit2gtk-4.1)
  makedepends=(git appstream-glib gobject-introspection meson yelp-tools
               gi-docgen)
- _commit=f4e68f3f0134becbdd737eaac85caaa0a8e43a66  # tags/43.0^0
  prepare() {
    cd devhelp
-@@ -14,7 +15,7 @@
+ }
+@@ -13,7 +14,7 @@
      -D plugin_gedit=true
      -D plugin_vim=true
    )

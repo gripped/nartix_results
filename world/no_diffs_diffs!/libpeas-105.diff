@@ -27,10 +27,10 @@
    vala
  )
  checkdepends=(xorg-server-xvfb)
- _commit=7f245fa5158204621c3469756a951b68a651c4fe  # tags/libpeas-1.36.0^0
  prepare() {
    cd libpeas
-@@ -23,7 +24,7 @@
+ }
+@@ -22,7 +23,7 @@
      -D gtk_doc=true
      -D vapi=true
    )

@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,8 +9,9 @@
+@@ -9,7 +9,8 @@
    meson
  )
  groups=(gnome)
- _commit=728c5f7af41f855c151bce6b8626072e62943712  # tags/44.0^0
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build

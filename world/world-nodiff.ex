@@ -667,6 +667,7 @@ gsm
 gsmartcontrol
 gsoap
 gsound
+gspell
 gssdp
 gssdp-docs
 gst-python
@@ -700,6 +701,8 @@ gumbo-parser
 gupnp-av
 gupnp-dlna
 gupnp-igd
+gupnp
+gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
@@ -1218,6 +1221,7 @@ libdeflate
 libdiscid
 libdispatch
 libdisplay-info
+libdmapsharing
 libdmtx
 libdnet
 libdrm
@@ -1500,6 +1504,7 @@ libuninameslist
 libunwind
 libupnp
 liburcu
+liburing
 libusb-compat
 libutf8proc
 libutp
@@ -1631,6 +1636,7 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
+luajit
 luajson
 lua52-luajson
 luasec
@@ -1775,6 +1781,7 @@ md4c
 mediainfo
 mediainfo-gui
 meld
+memray
 menu-cache
 menumaker
 mercurial
@@ -1849,6 +1856,7 @@ nautilus
 libnautilus-extension
 libnautilus-extension-docs
 nauty
+nawk
 nbd
 ncdu
 ncompress
@@ -2509,6 +2517,7 @@ python-arrow
 python-asgiref
 python-asn1crypto
 python-aspectlib
+python-asteval
 python-astor
 python-astroid
 python-asttokens
@@ -2597,7 +2606,6 @@ python-cheetah3-docs
 python-cheroot
 python-claripy
 python-cleo
-python-clevercsv
 python-click-aliases
 python-click-command-tree
 python-click-default-group
@@ -2705,6 +2713,7 @@ python-doublex
 python-dpcontracts
 python-dropbox
 python-dulwich
+python-dunamai
 python-easyprocess
 python-ecdsa
 python-editables
@@ -2729,6 +2738,7 @@ python-executing
 python-expects
 python-extras
 python-factory-boy
+python-faker
 python-fakeredis
 python-falcon
 python-fastbencode
@@ -2878,6 +2888,7 @@ python-jaraco.context
 python-jaraco.envs
 python-jaraco.functools
 python-jaraco.itertools
+python-jaraco.path
 python-jaraco.test
 python-jaraco.text
 python-jedi
@@ -2899,6 +2910,8 @@ python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
 python-jsonschema-spec
+python-jsonschema-specifications
+python-jsonschema
 python-junit-xml
 python-jupyter-client
 python-jupyter-core
@@ -2931,6 +2944,7 @@ python-libcst
 python-libevdev
 python-librabbitmq
 python-libusb1
+python-license-expression
 python-linetable
 python-linkify-it-py
 python-littleutils
@@ -2958,6 +2972,7 @@ python-mako
 python-mamba
 python-manuel
 python-markdown-it-py
+python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
@@ -3107,6 +3122,7 @@ python-pluggy
 python-plumbum
 python-ply
 python-poetry-core
+python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
 python-pooch
@@ -3219,6 +3235,7 @@ python-pyspnego
 python-pystache
 python-pytables
 python-pytest-aiohttp
+python-pytest-asyncio
 python-pytest-bdd
 python-pytest-black
 python-pytest-celery
@@ -3240,6 +3257,7 @@ python-pytest-jupyter
 python-pytest-lazy-fixture
 python-pytest-localserver
 python-pytest-metadata
+python-pytest-mock
 python-pytest-mpi
 python-pytest-mypy
 python-pytest-ordering
@@ -3308,6 +3326,7 @@ python-reactivex
 python-readme-renderer
 python-recommonmark
 python-redis
+python-referencing
 python-reflink
 python-regex
 python-rencode
@@ -3338,6 +3357,7 @@ python-rjsmin
 python-robot-detection
 python-rope
 python-routes
+python-rpds-py
 python-rpyc
 python-rsa
 python-rtree
@@ -3441,6 +3461,7 @@ python-subprocess-tee
 python-subunit
 python-sure
 python-svglib
+python-sybil
 python-sympy
 python-tabulate
 python-tabview
@@ -3577,6 +3598,7 @@ python-ytmusicapi
 python-zc.lockfile
 python-zeroconf
 python-zict
+python-zipp
 python-zope-component
 python-zope-configuration
 python-zope-copy
@@ -3931,6 +3953,7 @@ ruby-sass
 ruby-sassc
 ruby-scanf
 ruby-semantic_puppet
+ruby-sequel
 ruby-shadow
 ruby-simplecov-html
 ruby-simplecov
@@ -4388,6 +4411,7 @@ usort
 utf8cpp
 uthash
 uvicorn
+v2ray-domain-list-community
 v2ray-geoip
 vala
 valabind

@@ -30,11 +30,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,11 +14,12 @@
+@@ -14,10 +14,11 @@
  conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
  replaces=('xdg-desktop-portal-gtk<1.10.0-2')
  groups=(gnome)
- _commit=89203bf3522556965fc225782d1a635afdac611e  # tags/44.1^0
  prepare() {
    cd $pkgname
  }

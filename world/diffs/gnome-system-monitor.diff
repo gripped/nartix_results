@@ -39,11 +39,10 @@
  )
  makedepends=(
    appstream-glib
-@@ -14,11 +13,12 @@
+@@ -14,10 +13,11 @@
    yelp-tools
  )
  groups=(gnome)
- _commit=e75e0f8b3162daa1f66664e4531bc717b092c164  # tags/44.0^0
  prepare() {
    cd $pkgname
  }

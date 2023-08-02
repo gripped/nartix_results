@@ -18,6 +18,6 @@
  pkgname=libgee
  depends=(glib2)
  makedepends=(gobject-introspection vala autoconf-archive git)
- _commit=7d332f82c750ba72a6c625f38e4bfd44b786a926  # tags/0.20.6^0
  prepare() {
    cd libgee
+   NOCONFIGURE=1 ./autogen.sh

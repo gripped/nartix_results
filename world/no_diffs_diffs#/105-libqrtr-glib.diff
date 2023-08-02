@@ -28,11 +28,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -2,10 +2,11 @@
  depends=(glib2)
  makedepends=(gtk-doc meson git gobject-introspection)
  provides=(libqrtr-glib.so)
- _commit=8991f0e93713ebf4da48ae4f23940ead42f64c8c  # tags/1.2.2^0
  prepare() {
    cd libqrtr-glib
  }

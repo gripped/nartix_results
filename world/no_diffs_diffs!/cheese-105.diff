@@ -27,10 +27,10 @@
    yelp-tools
  )
  checkdepends=(xorg-server-xvfb)
- _commit=1513eb4d705c71635cdc12712811e4f78b2983e9  # tags/44.1^0
  prepare() {
    cd cheese
-@@ -35,7 +36,7 @@
+ }
+@@ -34,7 +35,7 @@
    local meson_options=(
      -D tests=true
    )

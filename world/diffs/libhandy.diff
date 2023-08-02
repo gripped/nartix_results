@@ -33,11 +33,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,12 +13,13 @@
+@@ -13,11 +13,12 @@
    vala
  )
  checkdepends=(xorg-server-xvfb)
- _commit=48ae7ec0f7f9ee5f666da38b0e39e66874957166  # tags/1.8.2^0
  prepare() {
 -  cd libhandy
 +  cd libhandy-${pkgver}

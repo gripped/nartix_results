@@ -27,10 +27,10 @@
  makedepends=(gobject-introspection vala gtk-doc glade yelp-tools git meson)
  checkdepends=(xorg-server-xvfb)
  provides=(libgtksourceview-${pkgver%%.*}.so)
- _commit=7fd3adb3134bbec167167bb6400e018e4f781eb9  # tags/4.8.4^0
  prepare() {
    cd gtksourceview
-@@ -12,6 +13,6 @@
+ }
+@@ -11,6 +12,6 @@
      -D glade_catalog=true
      -D gtk_doc=true
    )

@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,8 +20,9 @@
+@@ -20,7 +20,8 @@
    libgci-1.so
  )
  groups=(gnome)
- _commit=2fc61459192ffa7ad91acdbafb4d692a20743bca  # tags/44.0^0
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build

@@ -27,10 +27,10 @@
  conflicts=(totem-plugin)
  replaces=(totem-plugin)
  groups=(gnome)
- _commit=7bb879e1f6746ca19f99629794e918cdbbd06008  # tags/43.0^0
  prepare() {
    cd totem
-@@ -20,6 +21,6 @@
+   git submodule init
+@@ -19,6 +20,6 @@
    local meson_options=(
      -D enable-gtk-doc=true
    )

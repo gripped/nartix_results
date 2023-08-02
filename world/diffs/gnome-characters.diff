@@ -39,11 +39,10 @@
  )
  makedepends=(
    appstream-glib
-@@ -14,11 +15,12 @@
+@@ -14,10 +15,11 @@
    meson
  )
  groups=(gnome)
- _commit=9bbbe9fc4d62f1d7a642d504beb48df79b2e7ab5  # tags/44.0^0
  prepare() {
    cd $pkgname
  }

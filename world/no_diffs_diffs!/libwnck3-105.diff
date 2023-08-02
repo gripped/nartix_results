@@ -27,10 +27,10 @@
  pkgname=libwnck3
  depends=(gtk3 startup-notification libxres)
  makedepends=(gobject-introspection gtk-doc git meson)
- _commit=6147abd0c1fe35b96e1fbb63fa94d23f91fb2934  # tags/43.0^0
  prepare() {
    cd libwnck
-@@ -11,6 +12,6 @@
+   git apply -3 ../0001-handle-avoid-segfault-in-invalidate_icons.patch
+@@ -10,6 +11,6 @@
    git apply -3 ../0005-xutils-check-if-XRes-is-available-before-using-XResQ.patch
  }
  build() {

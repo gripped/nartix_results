@@ -105,15 +105,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,6 @@
- _commit=f06d9adae8e297798113f67ecda43145b23c7747  # refs/tags/3.3.8
+@@ -2,7 +2,6 @@
+ pkgname=mailman3
  depends=(
    gunicorn
 -  python
    python-aiosmtpd
    python-alembic
    python-atpublic
-@@ -16,6 +15,7 @@
+@@ -15,6 +14,7 @@
    python-flufl.bounce
    python-flufl.i18n
    python-flufl-lock
@@ -121,7 +121,7 @@
    python-lazr.config
    python-passlib
    python-requests
-@@ -25,24 +25,13 @@
+@@ -24,24 +24,13 @@
    python-zope-event
    python-zope-interface
  )

@@ -30,7 +30,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,14 +11,14 @@
+@@ -10,14 +10,14 @@
    go-md2man
    gpgme
    libseccomp
@@ -47,7 +47,7 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -52,4 +52,5 @@
+@@ -51,4 +51,5 @@
    conflicts=(docker)
    provides=(docker)
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase

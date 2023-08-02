@@ -18,6 +18,6 @@
  )
  provides=(libyelp.so)
  groups=(gnome)
- _commit=9fd1a84e1eae23db21939ff76c7e96d5422d3b1a  # tags/42.2^0
  prepare() {
    cd yelp
+   git apply -3 ../no-gtk-doc.diff

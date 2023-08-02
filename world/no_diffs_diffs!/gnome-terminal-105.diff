@@ -27,10 +27,10 @@
    yelp-tools
  )
  groups=(gnome-extra)
- _commit=1446ff0abc478bdd03c6665b718214d075729024  # tags/3.48.1^0
  prepare() {
    cd $pkgname
-@@ -20,6 +21,6 @@
+ }
+@@ -19,6 +20,6 @@
    local meson_options=(
      -D b_lto=false
    )

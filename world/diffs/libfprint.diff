@@ -29,7 +29,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,15 @@
+@@ -1,13 +1,14 @@
  pkgname=libfprint
 -depends=(libgusb pixman nss systemd libgudev)
 +depends=(libgusb pixman nss udev libgudev)
@@ -37,7 +37,6 @@
  checkdepends=(cairo)
  provides=(libfprint-2.so)
  groups=(fprint)
- _commit=86961a9429d589c387da37351fd6b4ff3caf67ea  # tags/v1.94.5^0
  prepare() {
    cd $pkgname
  }

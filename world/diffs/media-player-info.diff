@@ -29,6 +29,6 @@
 -makedepends=('python' git)
 +depends=('udev')
 +makedepends=('python' 'git')
- _commit=337c758d95cc37f5a1b7a2a065e2e2cd8a75c4d8  # tags/24^0
  prepare() {
    cd $pkgname
+   NOCONFIGURE=1 ./autogen.sh

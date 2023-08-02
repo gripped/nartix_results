@@ -63,10 +63,10 @@
    meson
  )
  provides=(libpolkit-gobject-1.so)
- _commit=da87c5698019897dd731bb2cbb54ebd9c9481f52  # tags/122
  prepare() {
    cd polkit
-@@ -22,12 +23,13 @@
+   git apply -3 ../multilib.diff
+@@ -21,12 +22,13 @@
      -D introspection=false
      -D libs-only=true
      -D os_type=redhat

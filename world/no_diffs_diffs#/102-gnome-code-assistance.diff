@@ -21,6 +21,6 @@
  makedepends=(intltool gobject-introspection llvm clang gjs go gnome-common git)
 -options=!lto
 +options=!lto
- _commit=aad6437571461d35fe86c34a97f264e9bd7720c3  # master
  prepare() {
    cd $pkgname
+   NOCONFIGURE=1 ./autogen.sh

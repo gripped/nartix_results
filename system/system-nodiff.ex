@@ -3,6 +3,7 @@ attr
 autoconf
 automake
 b43-fwcutter
+binutils
 bison
 brotli
 python-brotli
@@ -33,6 +34,16 @@ findutils
 flex
 gawk
 gc
+gcc
+gcc-libs
+lib32-gcc-libs
+gcc-ada
+gcc-d
+gcc-fortran
+gcc-go
+gcc-objc
+lto-dump
+libgccjit
 gdbm
 gettext
 glib2

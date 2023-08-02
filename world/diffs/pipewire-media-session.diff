@@ -39,7 +39,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,19 +5,18 @@
+@@ -5,18 +5,17 @@
    dbus
    git
    meson
@@ -48,7 +48,6 @@
  provides=(pipewire-session-manager)
  conflicts=(wireplumber)
 -install=pipewire-media-session.install
- _commit=80dae7e24bec02b2befe09a72fbac6e2b38ccb5c  # tags/0.4.2
  prepare() {
    cd $pkgname
  }

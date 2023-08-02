@@ -54,7 +54,7 @@
           mobile-broadband-provider-info)
  makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
  checkdepends=(python-gobject python-dbus)
-@@ -15,11 +15,14 @@
+@@ -14,11 +14,14 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
@@ -70,7 +70,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -32,7 +35,7 @@
+@@ -31,7 +34,7 @@
    done
  }
  package_modemmanager() {

@@ -58,10 +58,10 @@
    xorg-server-xvfb
  )
  groups=(gnome)
- _commit=60ec50efa693735cb959a3378516a82d2e9df009  # tags/44.3^0
  prepare() {
    cd $pkgname
-@@ -47,10 +47,11 @@
+   git submodule init
+@@ -46,10 +46,11 @@
  build() {
    local meson_options=(
      -D gtk_doc=true

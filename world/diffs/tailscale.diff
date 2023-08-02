@@ -32,14 +32,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,6 +1,6 @@
  pkgname=tailscale
  makedepends=("git" "go")
 -depends=("glibc")
 +depends=("glibc" "iptables")
  backup=("etc/default/tailscaled")
--_commit=e42e60103b1ea58d9d06d5a0c77500e44c44f202 #  git rev-parse tags/v1.46.1
-+_commit=03b5aa8b4d846b67e5f6e14543f5e8fd25ff259d #  git rev-parse tags/v1.46.0
  prepare() {
      cd "${pkgname}"
-     go mod vendor

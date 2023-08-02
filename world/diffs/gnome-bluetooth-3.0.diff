@@ -29,7 +29,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,16 @@
+@@ -1,14 +1,15 @@
  pkgname=gnome-bluetooth-3.0
 -depends=(gtk4 libadwaita libnotify bluez gsound systemd pulseaudio-bluetooth
 +depends=(gtk4 libadwaita libnotify bluez gsound pulseaudio-bluetooth
@@ -37,7 +37,6 @@
  makedepends=(gobject-introspection gtk-doc docbook-xsl git meson)
  checkdepends=(python-dbusmock)
  provides=(libgnome-bluetooth{,-ui}-3.0.so)
- _commit=8ff1cc5f60b4855c9618d3cef75abf9a0b9c66f8  # master
  prepare() {
    cd gnome-bluetooth
    git tag -f 42.5 8ff1cc5f60b4855c9618d3cef75abf9a0b9c66f8

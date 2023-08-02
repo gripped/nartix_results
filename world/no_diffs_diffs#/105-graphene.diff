@@ -27,10 +27,10 @@
  pkgname=graphene
  makedepends=(git gtk-doc gobject-introspection meson glib2)
  checkdepends=(python-gobject python-tappy)
- _commit=4e2578450809c2099400cf85caf18eafcd7100aa  # tags/1.10.8^0
  prepare() {
    cd graphene
-@@ -10,7 +11,7 @@
+   git apply -3 ../no-installed-tests.diff
+@@ -9,7 +10,7 @@
    git submodule update
  }
  build() {

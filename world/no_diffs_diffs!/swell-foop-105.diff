@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -2,10 +2,11 @@
  depends=(clutter-gtk librsvg libgnome-games-support libgee)
  makedepends=(yelp-tools appstream-glib vala git meson)
  groups=(gnome-extra)
- _commit=f89d9cfe7c4b73ae37cf5ed0a6bdc9060365e55d  # tags/41.1^0
  prepare() {
    cd $pkgname
  }

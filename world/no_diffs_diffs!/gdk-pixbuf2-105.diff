@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,13 @@
+@@ -2,11 +2,12 @@
  pkgname=(gdk-pixbuf2 gdk-pixbuf2-docs)
  depends=(glib2 libpng libtiff libjpeg shared-mime-info)
  makedepends=(gobject-introspection git meson gi-docgen python-docutils)
- _commit=9ac257eb38f772fec4253e8051743029e75a2acd  # tags/2.42.10^0
  prepare() {
    cd gdk-pixbuf
  }

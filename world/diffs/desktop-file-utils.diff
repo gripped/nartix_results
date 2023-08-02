@@ -36,9 +36,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,10 @@
+@@ -2,10 +2,10 @@
+ depends=(glib2)
  makedepends=(git meson)
- _commit=54cec012921e52eb66b6ee1a1f40f2e9c9849f7c  # tags/0.26
  prepare() {
 -  cd $pkgname
 +  cd dfu

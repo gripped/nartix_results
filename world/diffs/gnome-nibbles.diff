@@ -24,11 +24,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,9 +15,12 @@
+@@ -15,8 +15,11 @@
    yelp-tools
  )
  groups=(gnome-extra)
- _commit=6eb6013344ab720275adadaeede5154e3d2afda2  # tags/3.38.3^0
  prepare() {
    cd $pkgname
 +  git cherry-pick -n 1b48446068608aff9b5edf1fdbd4b8c0d9f0be94

@@ -77,11 +77,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,24 @@
+@@ -1,12 +1,24 @@
 -pkgname='jp2a'
 -depends=('curl' 'libjpeg' 'libpng')
 -makedepends=('doxygen' 'autoconf-archive' 'git')
--_commit=9ed01d6aa57c5b63657abe5c76cd28935206084c	#refs/tags/v1.1.0
 +pkgname=jp2a
 +changelog=Changelog.txt
 +depends=(

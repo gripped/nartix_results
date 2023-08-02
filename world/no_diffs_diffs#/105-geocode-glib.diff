@@ -29,10 +29,10 @@
  pkgname=(geocode-glib-common geocode-glib geocode-glib-2)
  makedepends=(gobject-introspection git gtk-doc meson glib2 json-glib libsoup
               libsoup3)
- _commit=210abe69d68e38947106f4680631c369b0c23189  # tags/3.26.4^0
  prepare() {
    cd geocode-glib
-@@ -10,8 +11,8 @@
+ }
+@@ -9,8 +10,8 @@
    local meson_options=(
      -D enable-installed-tests=false
    )

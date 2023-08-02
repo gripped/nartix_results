@@ -49,12 +49,10 @@
    libarchive
    libportal-gtk4
    libsoup3
-@@ -28,12 +29,13 @@
+@@ -28,11 +29,12 @@
    xorg-server-xvfb
  )
  groups=(gnome)
--_commit=6577b8821be640301224f3f1fc7513686f369a44  # tags/44.6^0
-+_commit=2aef87b1850f0261be0d2b0e68493ea6c25abb90  # tags/44.5^0
  prepare() {
    cd epiphany
    git apply -3 ../fix-test.diff

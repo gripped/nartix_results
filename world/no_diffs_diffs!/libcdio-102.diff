@@ -18,6 +18,6 @@
  pkgname=libcdio
  depends=(ncurses gcc-libs)
  makedepends=(git help2man)
- _commit=9c7a2779846da161279bc1501e83c849cf89a594  # tags/release-2.1.0
  prepare() {
    cd $pkgname
+   git cherry-pick -n 2adb43c60afc6e98e94d86dad9f93d3df52862b1

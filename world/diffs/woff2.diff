@@ -24,6 +24,6 @@
 +depends=(brotli)
  makedepends=(git cmake ninja)
  provides=(libwoff2{common,dec,enc}.so)
- _commit=1bccf208bca986e53a647dfe4811322adb06ecf8  # tags/v1.0.2
  prepare() {
    cd woff2
+   sed -i 's/NOT BUILD_SHARED_LIBS/TRUE/' CMakeLists.txt

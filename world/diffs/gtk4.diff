@@ -47,10 +47,10 @@
    wayland-protocols
  )
  checkdepends=(weston)
- _commit=55bc7808cc7796b06c27b1e64f608cd83b9b18ec  # tags/4.10.4^0
  prepare() {
    cd gtk
-@@ -68,10 +68,9 @@
+ }
+@@ -67,10 +67,9 @@
      -D colord=enabled
      -D gtk_doc=true
      -D man-pages=true

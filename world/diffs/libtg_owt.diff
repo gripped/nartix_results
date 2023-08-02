@@ -43,14 +43,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- pkgname=libtg_owt
--_commit=a45d8b8f0a99bd0e5118dda1dc4a8b7b3ad5dcfd
-+_commit=dcb5069ff76bd293e86928804208737e6cee2ccc
- depends=('libdrm')
- makedepends=('git' 'ninja' 'unzip' 'cmake' 'protobuf' 'libxrandr' 'libxcomposite' 'openssl' 'glibc'
-              'ffmpeg' 'libva' 'opus' 'yasm' 'libjpeg-turbo' 'pipewire' 'libxtst' 'libepoxy')
-@@ -11,6 +11,7 @@
+@@ -10,6 +10,7 @@
    git config submodule.src/third_party/libyuv.url "$srcdir"/libyuv
    git config submodule.src/third_party/pipewire.url "$srcdir"/pipewire
    git -c protocol.file.allow=always submodule update

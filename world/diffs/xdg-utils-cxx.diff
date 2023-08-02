@@ -47,9 +47,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,15 @@
+@@ -1,10 +1,14 @@
  pkgname=xdg-utils-cxx
-+_commit=6e6428a3248566ef0fd0c448fda8eb83e8835c31
  depends=()
  makedepends=(cmake)
 +prepare() {

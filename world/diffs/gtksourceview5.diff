@@ -24,12 +24,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,12 +13,14 @@
+@@ -13,11 +13,13 @@
    vala
  )
  checkdepends=(xorg-server-xvfb)
 +checkdepends=(xorg-server-xvfb)
- _commit=21ca89f7947d232f1ebd12b2a7780994d7771ea4  # tags/5.8.0^0
  prepare() {
    cd gtksourceview
  }

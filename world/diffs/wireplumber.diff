@@ -60,15 +60,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
- _commit=6d0c7f7b7f484b3cd2aaf2e2b3cc902c095b4946  # tags/0.4.14
+@@ -5,6 +5,7 @@
+ )
  makedepends=(
    doxygen
 +  elogind
    git
    glib2
    gobject-introspection
-@@ -14,19 +15,20 @@
+@@ -13,19 +14,20 @@
    meson
    pipewire
    python-lxml
@@ -93,7 +93,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -42,13 +44,11 @@
+@@ -41,13 +43,11 @@
  package_wireplumber() {
    depends=(
      "libwireplumber=$pkgver-$pkgrel"

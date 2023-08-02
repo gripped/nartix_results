@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,10 +1,11 @@
  pkgname=gnome-screenshot
  depends=(gtk3 libhandy)
  makedepends=(git meson appstream-glib)
- _commit=45f08f0b91a7b2aa589c9b3add671e144207e37a  # master
  prepare() {
    cd $pkgname
  }

@@ -18,6 +18,6 @@
           libxrandr)
  makedepends=(gobject-introspection git gtk-doc)
  provides=(libcogl.so libcogl-{gles2,pango,path}.so)
- _commit=c2e25cef6bd7b3f12c8625f82956388e419cd046  # tags/1.22.8^0
  prepare() {
    cd cogl
+   NOCONFIGURE=1 ./autogen.sh

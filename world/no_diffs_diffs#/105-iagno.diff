@@ -32,11 +32,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -2,10 +2,11 @@
  depends=(gtk3 gsound librsvg)
  makedepends=(meson gobject-introspection yelp-tools appstream-glib vala git)
  groups=(gnome-extra)
- _commit=d147e1a30189716d654e9b9e9aba2112d35b7dc6  # master
  prepare() {
    cd $pkgname
  }

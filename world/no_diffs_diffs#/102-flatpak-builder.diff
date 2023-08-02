@@ -29,6 +29,6 @@
  makedepends=(gobject-introspection git docbook-xsl xmlto)
  checkdepends=(valgrind)
  replaces=('flatpak<0.9.10')
- _commit=d7dbc51267e83242a9fe0d5a7b5304db0ac72f4f  # tags/1.2.3
  prepare() {
    cd $pkgname
+   git apply -3 ../fusermount3.diff
