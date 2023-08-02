@@ -22,7 +22,6 @@ glibc
 lib32-glibc
 gssproxy
 iputils
-libinih
 libtool
 libusb
 linux-firmware

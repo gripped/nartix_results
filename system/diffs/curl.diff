@@ -20,12 +20,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgbase=curl
  pkgname=(curl libcurl-compat libcurl-gnutls)
--_tag='51ca9c12f959b7e97c1e67d0bebb33aa0d1f28b2' # git rev-parse v${_tag_name}
 -_tag_name='8_2_1'
-+_tag='7d901d74d390a7e9ad7c7b3fa759cd5b9bbc7742' # git rev-parse v${_tag_name}
 +_tag_name='8_2_0'
  depends=('ca-certificates' 'brotli' 'libbrotlidec.so' 'krb5' 'libgssapi_krb5.so'
           'libidn2' 'libidn2.so' 'libnghttp2' 'libpsl' 'libpsl.so' 'libssh2' 'libssh2.so'

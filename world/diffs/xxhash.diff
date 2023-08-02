@@ -40,12 +40,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,11 @@
+@@ -2,6 +2,10 @@
  depends=(glibc)
  makedepends=(git)
  provides=(libxxhash.so)
--_tag=bbb27a5efb85b92a0486cf361a8635715a53f6ba
-+_tag=35b0373c697b5f160d3db26b1cbb45a0d5ba788c
 +prepare() {
 +  cd xxHash
 +  patch -Np1 -i ../xxhash-man-symlinks.patch

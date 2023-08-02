@@ -17,9 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=multipath-tools
- _tag='24bc5cadb4b98443e754b7f9f3228b87ecea83de' # git rev-parse ${pkgver}
 -depends=('libaio' 'device-mapper' 'json-c' 'liburcu' 'systemd-libs')
 -makedepends=('git' 'systemd')
 +depends=('libaio' 'device-mapper' 'json-c' 'liburcu' 'libudev.so')

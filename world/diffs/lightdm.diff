@@ -65,7 +65,7 @@
    glib2
    git
    gobject-introspection
-@@ -78,10 +79,10 @@
+@@ -77,10 +78,10 @@
    rm -rf "${pkgdir}"/usr/include/lightdm-qt{,5}-*
    install -m 644 ../lightdm.pam "${pkgdir}"/etc/pam.d/lightdm
    install -m 644 ../lightdm-autologin.pam "${pkgdir}"/etc/pam.d/lightdm-autologin

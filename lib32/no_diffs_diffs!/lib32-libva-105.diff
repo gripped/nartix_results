@@ -32,14 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,12 +23,12 @@
-   libva-x11.so
-   libva.so
- )
--_tag=807044bd0fcb944edf230052fa09acc4266790fe
-+_tag=b06ccb323cd68bc5ce3fa9861c831766d6355d88
- build() {
-   export CC='gcc -m32'
+@@ -28,6 +28,6 @@
    export CXX='g++ -m32'
    export PKG_CONFIG='i686-pc-linux-gnu-pkg-config'
    CFLAGS+=" -DENABLE_VA_MESSAGING"  # Option missing

@@ -134,7 +134,6 @@ libgdm
 genxrdpattern
 geoclue
 git
-gitea
 github-cli
 glslang
 glusterfs
@@ -379,9 +378,6 @@ mate-user-share
 matrix-synapse
 media-player-info
 memcached
-memtest86plus
-memtest86+-efi
-memtest86+-iso
 mesa
 vulkan-mesa-layers
 opencl-clover-mesa
@@ -404,7 +400,6 @@ muffin
 multipath-tools
 mumble
 mumble-server
-musescore
 mutter
 mutter-docs
 namcap
@@ -549,7 +544,6 @@ pyside6-tools
 python-aiosqlite
 python-authheaders
 python-aws-sam-translator
-python-awscrt
 python-cachy
 python-cairo
 python-cairo-docs
@@ -560,11 +554,9 @@ python-cherrypy
 python-clevercsv
 python-click-repl
 python-cytoolz
-python-discogs-client
 python-django-classy-tags
 python-geopandas
 python-gnupg
-python-graphene
 python-hypothesis
 python-ipywidgets
 python-josepy

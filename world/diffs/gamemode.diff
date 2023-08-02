@@ -47,8 +47,8 @@
    polkit
  )
  makedepends=(
-@@ -18,10 +18,10 @@
- _tag=4dc99dff76218718763a6b07fc1900fa6d1dafd9
+@@ -17,10 +17,10 @@
+ )
  build() {
    export CFLAGS+=' -Wno-implicit-function-declaration'
 -  arch-meson gamemode build \

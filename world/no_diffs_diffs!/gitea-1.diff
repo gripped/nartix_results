@@ -32,18 +32,3 @@
    install -Dm644 ${pkgname}.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/${pkgname}.conf
    install -Dm644 ${pkgname}.sysusers "${pkgdir}"/usr/lib/sysusers.d/${pkgname}.conf
    install -D ${pkgname}/custom/conf/app.example.ini -t "${pkgdir}"/etc/gitea/
-
-
-############# Stripped diff below #################
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(go nodejs npm)
- checkdepends=(openssh)
- options=(!lto)
--_tag=5fd5233ffbb5c17f310dfbdb5a9ea9ceb2c13e2b # git rev-parse v${pkgver}
-+_tag=16e2841276216f9e765d31f1563b434d5663d884 # git rev-parse v${pkgver}
- prepare() {
-   cd ${pkgname}
-   make deps

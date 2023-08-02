@@ -550,6 +550,7 @@ gifski
 gimp
 girara
 git-lfs
+gitea
 gjs
 gl2ps
 glad
@@ -1782,6 +1783,9 @@ mediainfo
 mediainfo-gui
 meld
 memray
+memtest86plus
+memtest86+-efi
+memtest86+-iso
 menu-cache
 menumaker
 mercurial
@@ -1847,6 +1851,7 @@ mupdf-tools
 musepack
 musepack-tools
 libmpcdec
+musescore
 musl
 mutt
 mypaint-brushes1
@@ -2540,6 +2545,7 @@ python-automat
 python-autopage
 python-awesomeversion
 python-aws-xray-sdk
+python-awscrt
 python-axolotl-curve25519
 python-axolotl
 python-babel
@@ -2675,6 +2681,7 @@ python-diff-cover
 python-dill
 python-dirty-equals
 python-discid
+python-discogs-client
 python-distlib
 python-distributed
 python-distro
@@ -2818,6 +2825,7 @@ python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth
 python-googleapis-common-protos
+python-graphene
 python-graphql-core
 python-graphql-relay
 python-graphviz

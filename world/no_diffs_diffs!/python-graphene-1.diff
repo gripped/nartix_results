@@ -19,18 +19,3 @@
  source=(python-graphene::git+https://github.com/graphql-python/graphene.git#tag=${_tag})
  sha512sums=(SKIP)
  
-
-
-############# Stripped diff below #################
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
-   git
-   python-setuptools
- )
--_tag=f5aba2c027df90e650accf136f3105eb601216c6
-+_tag=57cbef6666e2e466808cce21b8a1769ecd3fd118
- build() {
-   cd python-graphene
-   python setup.py build

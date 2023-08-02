@@ -94,6 +94,7 @@ libgcrypt
 libgpg-error
 libgssglue
 libidn2
+libinih
 libisl
 libksba
 libmicrohttpd

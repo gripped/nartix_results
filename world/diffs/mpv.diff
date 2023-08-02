@@ -44,14 +44,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- pkgname=mpv
--_tag='3996724d3fa1c51cc7998f3de2e22e2c99e6d270' # git rev-parse v${pkgver}
-+_tag='5ae02ccad10542a74b397e39800ec01def0db4e1' # git rev-parse v${pkgver}
- depends=('alsa-lib' 'libasound.so' 'desktop-file-utils' 'ffmpeg' 'libavcodec.so' 'libavdevice.so'
-          'libavfilter.so' 'libavformat.so' 'libavutil.so' 'libswresample.so' 'libswscale.so'
-          'glibc' 'hicolor-icon-theme' 'jack' 'libjack.so' 'lcms2' 'liblcms2.so' 'libarchive'
-@@ -14,6 +14,13 @@
+@@ -13,6 +13,13 @@
               'ffnvcodec-headers' 'vulkan-headers')
  provides=('libmpv.so')
  options=('!emptydirs')
@@ -65,7 +58,7 @@
  build() {
    local _meson_options=(
      --auto-features auto
-@@ -24,6 +31,6 @@
+@@ -23,6 +30,6 @@
      -Ddvdnav=enabled
      -Dlibarchive=enabled
    )

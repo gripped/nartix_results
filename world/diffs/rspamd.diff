@@ -52,10 +52,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -105,10 +105,6 @@
+@@ -104,10 +104,6 @@
+   etc/rspamd/worker-proxy.inc
  )
  install=rspamd.install
- _tag=0c671194e81f702a5e26009b33612c3d36d52840
 -prepare() {
 -  cd rspamd
 -  sed 's/_rspamd/rspamd/g' -i rspamd.service
@@ -63,7 +63,7 @@
  build() {
    cmake -S rspamd -B build -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \
-@@ -118,7 +114,7 @@
+@@ -117,7 +113,7 @@
      -DRUNDIR=/run/rspamd \
      -DRSPAMD_USER=rspamd \
      -DNO_SHARED=ON \

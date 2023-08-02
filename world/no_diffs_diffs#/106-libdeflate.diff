@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -7,7 +7,7 @@
+ )
  provides=(libdeflate.so)
- _tag=495fee110ebb48a5eb63b75fd67e42b2955871e2
  build() {
 -  cmake -S libdeflate -B build -G Ninja \
 +  artix-cmake -S libdeflate -B build -G Ninja \

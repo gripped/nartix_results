@@ -36,5 +36,5 @@
 -depends=(getdns libsystemd libyaml)
 +depends=(getdns libyaml)
  makedepends=(cmake git)
- _tag=b9a56ea629b9abdc2aaaf5aa7d7b568143b3d9c7 # git rev-parse v${pkgver}
  prepare() {
+   cd ${pkgname}

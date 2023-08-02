@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,6 +28,6 @@
- _tag=807044bd0fcb944edf230052fa09acc4266790fe
+@@ -27,6 +27,6 @@
+ backup=(etc/libva.conf)
  build() {
    CFLAGS+=" -DENABLE_VA_MESSAGING" # Option missing
 -  arch-meson libva build

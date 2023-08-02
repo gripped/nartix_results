@@ -81,8 +81,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,8 @@
- _tag='722ea47989cef5d892711614c4a2767213b177d8' # git rev-parse v${_tag_name}
+@@ -2,7 +2,8 @@
+ pkgname=(util-linux util-linux-libs)
  _tag_name=2.39.1
  makedepends=('git' 'meson' 'asciidoctor' 'bash-completion' 'libcap-ng'
 -             'libutempter' 'libxcrypt' 'python' 'systemd')
@@ -91,7 +91,7 @@
  options=('strip')
  _backports=(
  )
-@@ -37,16 +38,17 @@
+@@ -36,16 +37,17 @@
      -Dbuild-newgrp=enabled
      -Dbuild-vipw=enabled
      -Dbuild-write=enabled
@@ -112,7 +112,7 @@
             'libmagic.so' 'libncursesw.so')
    backup=(etc/pam.d/chfn
            etc/pam.d/chsh
-@@ -66,7 +68,6 @@
+@@ -65,7 +67,6 @@
    install -m0644 pam-runuser "${pkgdir}/etc/pam.d/runuser-l"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su-l"
@@ -120,7 +120,7 @@
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/pkgconfig util-linux-libs/lib/pkgconfig
-@@ -78,10 +79,6 @@
+@@ -77,10 +78,6 @@
      "${pkgdir}/usr/lib/sysusers.d/util-linux.conf"
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"
