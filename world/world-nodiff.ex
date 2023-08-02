@@ -3758,6 +3758,7 @@ raptor
 rasqal
 rav1e
 rawtherapee
+razor
 rclone
 re2
 re2c
@@ -4448,6 +4449,7 @@ v2ray-geoip
 vala
 valabind
 valgrind
+vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
 vcdimager

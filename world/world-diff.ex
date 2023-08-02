@@ -667,7 +667,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-razor
 redis
 redshift
 refind
@@ -759,7 +758,6 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
-vamp-plugin-sdk
 verdict
 virtualbox
 virtualbox-sdk
