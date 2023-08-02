@@ -71,6 +71,7 @@ ddcutil
 desktop-file-utils
 dhcp
 dhclient
+distcc
 dns-over-https
 docker
 dolphin-emu

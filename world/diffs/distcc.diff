@@ -1,6 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,14 +12,12 @@
+@@ -1,24 +1,23 @@
+ 
+ pkgname=distcc
+ pkgver=3.4
+-pkgrel=9
++pkgrel=8
++_gccver=13.1.1 # Current GCC version, used for symlinks, ref FS#69044
+ pkgdesc='Distributed compilation service for C, C++ and Objective-C'
+ arch=(x86_64)
+ url='https://github.com/distcc/distcc'
+ license=(GPL)
+-depends=(avahi popt python)
++depends=(avahi popt python "gcc=$_gccver")
+ makedepends=(git gtk3)
  optdepends=('gtk3: for distccmon')
  backup=(etc/conf.d/distccd
          etc/distcc/hosts)
@@ -16,7 +29,7 @@
          'd1b057ce49994ac61e9d5a861c1c770452102300d47a9c396b3272d7f5afbd3fe3e865e6db11c046e73ae3b6886bc8970a10624650731d55132362436904f989'
          '9e2fcd16070837f45852f4f8be6fc1a53d2f4c70a4058260d97ebde7d6bc58a6557d90a71b69a6a17d53e68c2b4d55b94afaf10b34610cac9ecf925298a02799')
  validpgpkeys=(30782E2BE4EB9FD5B293D3DA6D100BF096B8A005) # Shawn Landden
-@@ -58,9 +56,6 @@
+@@ -57,11 +56,8 @@
      install
  
    install -Dm644 distccd.conf.d "$pkgdir/etc/conf.d/distccd"
@@ -24,5 +37,21 @@
 -    "$pkgdir/usr/lib/systemd/system/distccd.service"
 -
    _targets=(c++ c89 c99 cc clang clang++ cpp g++ gcc $CARCH-pc-linux-gnu-g++
-             $CARCH-pc-linux-gnu-gcc $CARCH-pc-linux-gnu-gcc-$_gccver)
+-            $CARCH-pc-linux-gnu-gcc $CARCH-pc-linux-gnu-gcc-$(gcc -dumpversion))
++            $CARCH-pc-linux-gnu-gcc $CARCH-pc-linux-gnu-gcc-$_gccver)
    install -d "$pkgdir/usr/lib/$pkgname/bin"
+   for bin in "${_targets[@]}"; do
+     ln -sf ../../bin/$pkgname "$pkgdir/usr/lib/$pkgname/$bin"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=distcc
+-depends=(avahi popt python)
++depends=(avahi popt python "gcc=$_gccver")
+ makedepends=(git gtk3)
+ backup=(etc/conf.d/distccd
+         etc/distcc/hosts)

@@ -336,7 +336,6 @@ directx-headers
 directx-shader-compiler
 discount
 discover
-distcc
 django
 python-django
 djvulibre
