@@ -143,6 +143,8 @@ nettle
 nilfs-utils
 npth
 nspr
+nss
+ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl
