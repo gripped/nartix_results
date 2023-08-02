@@ -559,7 +559,6 @@ python-pydantic-core
 python-pydantic
 python-pygit2
 python-pymupdf
-python-pynitrokey
 python-pyproj
 python-pytest-benchmark
 python-pytest-enabler

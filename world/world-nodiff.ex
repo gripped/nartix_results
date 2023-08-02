@@ -3224,6 +3224,7 @@ python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
+python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
