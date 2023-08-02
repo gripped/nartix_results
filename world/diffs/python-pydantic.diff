@@ -79,8 +79,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,9 @@
- _name=pydantic
+@@ -1,7 +1,8 @@
  pkgname=python-$_name
  depends=(
 -  glibc
@@ -90,7 +89,7 @@
    python-typing-extensions
  )
  makedepends=(
-@@ -10,7 +11,8 @@
+@@ -9,7 +10,8 @@
    python-build
    python-installer
    python-importlib-metadata

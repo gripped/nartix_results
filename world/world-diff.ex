@@ -567,9 +567,7 @@ python-pyudev
 python-rapidfuzz
 python-scramp
 python-sphinx-alabaster-theme
-python-sphinx
 python-spsdk
-python-tokenize-rt
 python-tpm2-pytss
 python-uri-template
 python-wxpython
@@ -697,7 +695,6 @@ smartmontools
 snapper
 spice-gtk
 spice-vdagent
-spirv-tools
 squid
 sshguard
 sslh

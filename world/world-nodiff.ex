@@ -3450,6 +3450,7 @@ python-sphinx-lv2-theme
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
+python-sphinx
 python-sphinx_rtd_theme
 python-sphinxcontrib-applehelp
 python-sphinxcontrib-devhelp
@@ -3510,6 +3511,7 @@ python-tiny-proxy
 python-tinycss
 python-tinycss2
 python-tlv8
+python-tokenize-rt
 python-toml
 python-tomli-w
 python-tomli
@@ -4136,6 +4138,7 @@ spice-protocol
 spice
 spirv-headers
 spirv-llvm-translator
+spirv-tools
 splint
 spotifyd
 sqlcipher
