@@ -126,7 +126,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,36 +1,14 @@
+@@ -1,20 +1,10 @@
 -_name=hypothesis
 -_alt_name="${_name}-python"
  pkgname=python-hypothesis
@@ -143,28 +143,8 @@
 -  python-setuptools
 -  python-wheel
 -)
--checkdepends=(
--  python-black
--  python-dpcontracts
--  python-django
--  python-faker
--  python-fakeredis
--  python-flaky
--  python-lark-parser
--  python-libcst
--  python-numpy
--  python-pandas
--  python-pexpect
--  python-pytest
--  python-pytest-xdist
--  python-pytz
--)
 +depends=('python-attrs' 'python-sortedcontainers' 'python-exceptiongroup')
 +makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
-+checkdepends=('python-pytest' 'flake8' 'python-pytz' 'python-numpy' 'python-faker'
-+              'python-flaky' 'python-django' 'python-pandas' 'python-dpcontracts'
-+              'python-pytest-xdist' 'python-lark-parser' 'python-pexpect' 'python-coverage'
-+              'python-typing_extensions' 'python-black' 'python-fakeredis' 'python-libcst')
 +prepare() {
 +  mv hypothesis-hypothesis-python-$pkgver hypothesis-$pkgver
 +}

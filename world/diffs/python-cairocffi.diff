@@ -26,5 +26,5 @@
 -makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel' 'python-xcffib'
 +makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel'
               'gdk-pixbuf2')
- checkdepends=('python-pytest' 'python-numpy' 'python-pikepdf')
  build() {
+   cd cairocffi-$pkgver

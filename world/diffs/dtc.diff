@@ -29,9 +29,9 @@
 -depends=(bash glibc libyaml python)
 +depends=(libyaml)
  makedepends=(meson swig python-setuptools-scm)
- checkdepends=(valgrind)
  prepare() {
-@@ -11,6 +11,6 @@
+   cd dtc-$pkgver
+@@ -10,6 +10,6 @@
    sed -i "s/@VERSION@/$pkgver/" setup.py
  }
  build() {

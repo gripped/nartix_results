@@ -689,6 +689,8 @@ gtkmm3
 gtkmm3-docs
 gtksourceview3
 gtksourceview4
+gtksourceview5
+gtksourceview5-docs
 gtksourceviewmm
 gtksourceviewmm-docs
 gtkspell
@@ -1752,6 +1754,7 @@ ruby-marisa
 markdownpart
 marked-man
 marked
+mat2
 mate-backgrounds
 mate-calc
 mate-common
@@ -1810,6 +1813,7 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
+mitmproxy
 mjpegtools
 mktorrent
 mlt
@@ -1856,6 +1860,7 @@ musl
 mutt
 mypaint-brushes1
 mypy
+namcap
 nasm
 nautilus
 libnautilus-extension
@@ -1943,6 +1948,7 @@ okteta
 okular
 onetbb
 oniguruma
+onionshare
 opam
 open-isns
 openal
@@ -2599,6 +2605,7 @@ python-case
 python-cattrs
 python-cbor2
 python-cchardet
+python-celery
 python-cerberus
 python-certifi
 python-cffi
@@ -2610,8 +2617,10 @@ python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
 python-cheroot
+python-cherrypy
 python-claripy
 python-cleo
+python-clevercsv
 python-click-aliases
 python-click-command-tree
 python-click-default-group
@@ -2809,6 +2818,7 @@ python-genshi
 python-genty
 python-geographiclib
 python-geoip
+python-geopandas
 python-geopy
 python-gevent-websocket
 python-gevent
@@ -2930,6 +2940,7 @@ python-jupyterlab_server
 python-jwcrypto
 python-k5test
 python-kaitaistruct
+python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
@@ -2984,6 +2995,7 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
+python-matplotlib
 python-matrix-common
 python-mccabe
 python-mdit_py_plugins
@@ -3068,6 +3080,7 @@ python-oslo-db
 python-oslo-i18n
 python-oslo-log
 python-oslo-serialization
+python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
@@ -3137,6 +3150,7 @@ python-pooch
 python-portend
 python-pprofile
 python-prance
+python-pre-commit
 python-precis_i18n
 python-pretend
 python-prettytable
@@ -3786,17 +3800,20 @@ rubberband
 rubberband-ladspa
 rubberband-lv2
 rubberband-vamp
+rubocop
 ruby-abbrev
 ruby-activesupport
 ruby-addressable
 ruby-ae
 ruby-ansi
+ruby-ast
 ruby-async-container
 ruby-async-dns
 ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
+ruby-async-rest
 ruby-async-rspec
 ruby-async
 ruby-atk
@@ -3811,6 +3828,7 @@ ruby-bigdecimal
 ruby-brass
 ruby-build-files
 ruby-builder
+ruby-bump
 ruby-bundler
 ruby-cgi
 ruby-chronic
@@ -3836,6 +3854,9 @@ ruby-erubi
 ruby-etc
 ruby-eventmachine
 ruby-facets
+ruby-faraday-em_http
+ruby-faraday-em_synchrony
+ruby-faraday-excon
 ruby-faraday-httpclient
 ruby-faraday-net_http
 ruby-faraday-net_http_persistent
@@ -3914,6 +3935,7 @@ ruby-pkg-config
 ruby-power_assert
 ruby-protocol-hpack
 ruby-protocol-http
+ruby-protocol-http1
 ruby-protocol-http2
 ruby-psych
 ruby-public_suffix
@@ -3934,6 +3956,7 @@ ruby-rdiscount
 ruby-rdoc
 ruby-redcarpet
 ruby-regexp_parser
+ruby-regexp_property_values
 ruby-reline
 ruby-rexml
 ruby-ronn-ng
@@ -4155,6 +4178,7 @@ t1utils
 taglib
 tali
 talloc
+tang
 tcc
 tcl
 tclap
@@ -4642,6 +4666,7 @@ yamllint
 yapf
 yara
 yarn
+yasm
 yaz
 yelp-tools
 yelp-xsl

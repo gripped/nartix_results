@@ -33,10 +33,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,11 +13,12 @@
+@@ -12,11 +12,12 @@
+   meson
    vala
  )
- checkdepends=(xorg-server-xvfb)
  prepare() {
 -  cd libhandy
 +  cd libhandy-${pkgver}

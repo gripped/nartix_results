@@ -21,6 +21,6 @@
  depends=('glibc' 'filesystem' 'sed' 'util-linux' 'sh')
 -makedepends=('systemd' 'po4a')
 +makedepends=('udev' 'po4a')
- checkdepends=('sharutils')
  build() {
    cd $pkgname-$pkgver
+   ./configure --prefix=/usr \

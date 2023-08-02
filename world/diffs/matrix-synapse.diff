@@ -87,5 +87,5 @@
 -         'python-bleach' 'python-typing_extensions' 'systemd')
 +         'python-bleach' 'python-typing_extensions')
  makedepends=(git python-build python-installer python-wheel python-poetry-core python-setuptools-rust)
- checkdepends=('python-pip' 'python-authlib' 'python-pyjwt' 'python-lxml' 'python-parameterized'
-               'python-txredisapi' 'python-hiredis' 'postgresql' 'python-pyicu')
+ backup=('etc/synapse/log_config.yaml')
+ install=synapse.install

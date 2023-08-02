@@ -42,10 +42,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,8 +3,12 @@
+@@ -2,8 +2,12 @@
+ pkgname=(python-cairo python-cairo-docs)
  depends=(cairo python)
  makedepends=(meson python-sphinx python-sphinx_rtd_theme)
- checkdepends=(python-pytest)
 +prepare() {
 +  cd pycairo-$pkgver
 +  patch -Np1 -i ../pycairo-sphinx6.patch

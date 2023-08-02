@@ -36,9 +36,9 @@
 -depends=('alsa-lib' 'dbus' 'glib2' 'gtk3' 'libdrm' 'libpciaccess' 'libxfixes' 'libxinerama' 'libxrandr' 'systemd')
 +depends=('alsa-lib' 'dbus' 'glib2' 'gtk3' 'libdrm' 'libpciaccess' 'libxfixes' 'libxinerama' 'libxrandr' 'elogind')
  makedepends=('spice-protocol' 'git')
- checkdepends=('procps-ng')
  backup=('etc/conf.d/spice-vdagentd')
-@@ -12,6 +12,6 @@
+ prepare() {
+@@ -11,6 +11,6 @@
  build() {
    cd $pkgname-$pkgver
    ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin \

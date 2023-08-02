@@ -34,9 +34,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,21 +3,15 @@
+@@ -2,21 +2,15 @@
+ depends=(libxml2 gdk-pixbuf2 bzip2)
  makedepends=(gobject-introspection git gtk-doc autoconf-archive)
- checkdepends=(perl-xml-parser unzip valgrind)
  provides=(libgsf-1.so)
  prepare() {
    cd libgsf

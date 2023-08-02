@@ -100,7 +100,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,27 +1,10 @@
+@@ -1,26 +1,9 @@
 -pkgname=python-rapidfuzz
 -depends=(
 -  'glibc'
@@ -115,7 +115,6 @@
 -  'python-scikit-build'
 -  'rapidfuzz-cpp'
 -)
--checkdepends=('python-hypothesis' 'python-pandas' 'python-pytest')
 -prepare() {
 -  cd "$pkgname"
 -  patch -p1 -i "$srcdir/remove-version-constraints.patch"
@@ -126,7 +125,6 @@
 +pkgname=python-$_pkgname
 +depends=(python)
 +makedepends=(python-build python-installer python-scikit-build rapidfuzz-cpp)
-+checkdepends=(python-hypothesis python-pandas python-pytest)
 +build() {
 +  cd $_pkgname-$pkgver
 +  RAPIDFUZZ_BUILD_EXTENSION=1 \

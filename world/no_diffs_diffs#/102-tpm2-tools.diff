@@ -15,10 +15,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=tpm2-tools
  depends=('curl' 'openssl' 'tpm2-tss' 'util-linux-libs' 'libtss2-esys.so' 'libtss2-fapi.so'
           'libtss2-mu.so' 'libtss2-rc.so' 'libtss2-sys.so' 'libtss2-tctildr.so')
- checkdepends=('cmocka' 'expect' 'iproute2' 'python-yaml' 'swtpm' 'tpm2-abrmd' 'xxd')
 -options=!lto
 +options=!lto
   <william.c.roberts@intel.com>

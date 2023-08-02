@@ -37,8 +37,8 @@
 -  systemd
    xz
  )
- checkdepends=(
-@@ -63,6 +62,7 @@
+ provides=(libostree-1.so)
+@@ -55,6 +54,7 @@
      --with-ed25519-libsodium
      --with-mkinitcpio
      --with-openssl

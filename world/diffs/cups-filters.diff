@@ -30,5 +30,5 @@
 -depends=('lcms2' 'poppler' 'qpdf' 'libcups>=2.2.6-2' 'systemd' 'libexif')
 +depends=('lcms2' 'poppler' 'qpdf' 'ijs' 'libcups>=2.2.6-2' 'libexif')
  makedepends=('ghostscript' 'python' 'mupdf-tools' 'liblouis')
- checkdepends=('ttf-dejavu') # ttf-dejavu for make check
  backup=(etc/cups/cups-browsed.conf)
+ prepare() {

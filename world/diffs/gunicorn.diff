@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -4,7 +4,7 @@
    cd gunicorn-$pkgver
    sed -e 's/==/>=/' -e 's/,<.*$//' -i requirements_test.txt
    patch -Np1 -i ../$pkgname-eventlet-0.30.3.patch

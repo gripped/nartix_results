@@ -74,7 +74,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,10 @@
+@@ -1,24 +1,9 @@
  pkgname=picard
 -depends=(
 -  glibc
@@ -99,7 +99,6 @@
 +python-fasteners python-markdown python-mutagen python-pyjwt python-pyqt5
 +python-yaml)
 +makedepends=(python-build python-installer python-setuptools python-wheel)
- checkdepends=(python-pytest)
  build() {
 -  cd $pkgname-release-$pkgver
 +  cd $pkgname-$pkgver

@@ -72,7 +72,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,26 +1,10 @@
+@@ -1,18 +1,8 @@
  _name=mailmanclient
  pkgname=python-mailmanclient
 -depends=(
@@ -87,18 +87,8 @@
 -  python-setuptools
 -  python-wheel
 -)
--checkdepends=(
--  mailman3
--  python-falcon
--  python-httpx
--  python-pytest
--  python-pytest-asyncio
--  python-pytest-services
--)
 +depends=(python-requests python-typing-extensions)
 +makedepends=(python-build python-installer python-setuptools python-wheel)
-+checkdepends=(mailman3 python-falcon python-httpx python-pytest python-pytest-asyncio
-+python-pytest-services)
  build() {
 -  cd $_name
 +  cd $_name-$pkgver

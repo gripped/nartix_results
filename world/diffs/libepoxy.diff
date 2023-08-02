@@ -24,13 +24,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
+@@ -1,12 +1,12 @@
  pkgbase=libepoxy
  pkgname=(libepoxy libepoxy-docs)
  depends=(glibc libglvnd libx11)
 -makedepends=(git meson mesa-libgl systemd doxygen graphviz)
 +makedepends=(git meson mesa-libgl doxygen graphviz)
- checkdepends=(xorg-server-xvfb)
  prepare() {
    cd libepoxy
  }

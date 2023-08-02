@@ -26,12 +26,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,14 @@
+@@ -1,12 +1,13 @@
  pkgname=lib32-libepoxy
  depends=(lib32-glibc)
 -makedepends=(git meson lib32-libgl lib32-systemd)
 +makedepends=('git' 'lib32-libgl' 'lib32-elogind' 'meson')
- checkdepends=(xorg-server-xvfb)
  prepare() {
    cd libepoxy
  }

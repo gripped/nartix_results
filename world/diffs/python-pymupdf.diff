@@ -22,5 +22,5 @@
 -  systemd
 +  udev
  )
- checkdepends=(
-   python-fonttools
+ prepare() {
+   rm -frv $pkgname/*.tgz

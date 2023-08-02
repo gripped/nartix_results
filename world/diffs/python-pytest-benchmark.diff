@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-               'python-pytest-xdist' 'python-elasticsearch' 'git')
+@@ -3,7 +3,7 @@
+ makedepends=('python-setuptools')
  prepare() {
    cd pytest-benchmark-$pkgver
 -  sed -i '/^    error$/d' pytest.ini

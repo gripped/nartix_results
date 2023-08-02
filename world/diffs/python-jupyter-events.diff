@@ -31,7 +31,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,10 @@
+@@ -1,6 +1,8 @@
  _pipname=jupyter_events
  pkgname=python-jupyter-events
 -depends=(python-jsonschema python-json-logger python-traitlets python-yaml python-click python-rich)
@@ -39,8 +39,5 @@
 +         python-jsonpointer python-isoduration python-rfc3986-validator python-rfc3339-validator
 +         python-fqdn python-uri-template python-webcolors)
  makedepends=(python-build python-installer python-hatchling)
--checkdepends=(python-pytest-console-scripts python-pytest-asyncio python-rfc3986-validator python-rfc3339-validator)
-+checkdepends=(python-pytest-console-scripts)
  build() {
    cd $_pipname-$pkgver
-   python -m build --wheel --no-isolation

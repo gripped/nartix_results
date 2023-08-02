@@ -45,11 +45,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,8 @@
  pkgname=python-zope-event
  depends=('python')
  makedepends=('python-setuptools')
--checkdepends=('python-zope-testrunner')
 +makedepends=('python-setuptools')
  build() {
 -  cd zope.event-$pkgver

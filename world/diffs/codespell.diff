@@ -43,11 +43,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,6 @@
+@@ -1,10 +1,6 @@
  pkgname=codespell
  depends=('python-chardet')
  makedepends=('python-build' 'python-installer' 'python-wheel' 'python-setuptools-scm')
--checkdepends=('python-pytest-cov' 'python-pytest-dependency')
 -prepare() {
 -	cd "${pkgname}-${pkgver}"
 -	patch -Np1 <"${srcdir}"/remove-check-test_command.patch

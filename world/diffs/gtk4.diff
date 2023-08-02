@@ -43,14 +43,14 @@
    wayland
  )
  makedepends=(
-@@ -57,6 +56,7 @@
+@@ -56,6 +55,7 @@
+   shaderc
    wayland-protocols
  )
- checkdepends=(weston)
  prepare() {
    cd gtk
  }
-@@ -67,10 +67,9 @@
+@@ -66,10 +66,9 @@
      -D colord=enabled
      -D gtk_doc=true
      -D man-pages=true

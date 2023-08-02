@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=lib32-libffi
  depends=(lib32-glibc libffi=$pkgver)
- checkdepends=(dejagnu)
  provides=(libffi.so)
  build() {
    cd libffi-$pkgver

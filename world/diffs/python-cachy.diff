@@ -22,5 +22,5 @@
 -             python-poetry-core)
 +             python-poetry-core python-setuptools)
  _checkdeps=(flexmock pytest-mock memcached fakeredis)
- checkdepends=("${_checkdeps[@]/#/python-}"
-               pifpaf
+ _archive="$_pkgname-$pkgver"
+ prepare() {

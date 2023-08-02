@@ -30,14 +30,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,6 +1,6 @@
  pkgname=python-ipywidgets
  _pipname=ipywidgets
 -depends=(ipython python-comm python-jsonschema)
 +depends=(python-ipykernel python-jsonschema)
  makedepends=(python-build python-installer python-setuptools python-wheel)
--checkdepends=(python-pytest python-pytz python-ipykernel)
-+checkdepends=(python-pytest python-pytz)
  build() {
    cd ipywidgets-$pkgver
-   python -m build --wheel --no-isolation

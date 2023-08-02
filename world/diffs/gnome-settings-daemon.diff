@@ -39,14 +39,14 @@
    upower
  )
  makedepends=(
-@@ -34,6 +33,7 @@
+@@ -30,6 +29,7 @@
  )
  groups=(gnome)
  backup=(etc/xdg/Xwayland-session.d/00-xrdb)
  prepare() {
    cd $pkgname
    git submodule init
-@@ -41,6 +41,6 @@
+@@ -37,6 +37,6 @@
    git -c protocol.file.allow=always submodule update
  }
  build() {

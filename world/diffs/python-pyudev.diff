@@ -21,5 +21,5 @@
 -depends=('python-six' 'systemd')
 +depends=('python-six' 'udev')
  makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel' 'python-sphinx')
- checkdepends=('python-pytest' 'python-docutils' 'python-hypothesis' 'python-pip')
  prepare() {
+   cd $_pkgname-$pkgver

@@ -28,5 +28,5 @@
 -makedepends=('re2' 're2c' 'protobuf' 'php' 'php-legacy' 'c-ares' 'openssl' 'chrpath' 'cython0'
 +makedepends=('re2' 're2c' 'protobuf' 'php' 'php-legacy' 'c-ares' 'openssl' 'chrpath' 'cython'
               'cmake' 'benchmark' 'python-setuptools' 'abseil-cpp' 'ninja')
- checkdepends=('python-six')
  prepare() {
+   cd "$srcdir/$pkgbase-$pkgver"

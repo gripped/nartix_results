@@ -56,7 +56,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,8 @@
+@@ -2,14 +2,15 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
           fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
@@ -64,10 +64,9 @@
 -makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio systemd meson)
 +         openssl webrtc-audio-processing libudev libarchive)
 +makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio meson)
- checkdepends=(cppunit)
  _pjprojectver=e4b83585a0bdf1523e808a4fc1946ec82ac733d0
  noextract=(pjproject-${_pjprojectver}.tar.gz)
-@@ -11,6 +11,7 @@
+ prepare() {
    cd ${pkgname}
    cp ../pjproject-${_pjprojectver}.tar.gz contrib/tarballs
    mkdir contrib/native
@@ -75,7 +74,7 @@
    git cherry-pick -n d5e6509975bfaa67f7b3c54db72336b810454fc2 # Fix build with GCC 13
    patch -p1 -i ../fmt-10.patch # Fix build with fmt 10
  }
-@@ -23,7 +24,7 @@
+@@ -22,7 +23,7 @@
        --enable-pjproject
    make DEPS_pjproject=
    cd "${srcdir}"

@@ -59,7 +59,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,8 @@
+@@ -1,13 +1,7 @@
  _pkgname=aiosqlite
  pkgname=python-$_pkgname
 -depends=(
@@ -70,12 +70,8 @@
 -  python-flit-core
 -  python-installer
 -)
--checkdepends=(
--  python-aiounittest
--)
 +depends=('python-typing_extensions' 'python-pydantic')
 +makedepends=('python-build' 'python-installer' 'python-flit-core')
-+checkdepends=('python-pytest-runner')
  build() {
    cd $_pkgname-$pkgver
    python -m build --wheel --no-isolation

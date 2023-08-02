@@ -54,7 +54,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,22 +11,15 @@
+@@ -11,21 +11,14 @@
    'libnsl'
    'openssl'
    'pcre'
@@ -63,7 +63,6 @@
  makedepends=('libxslt' 'mongo-c-driver' 'librabbitmq-c' 'python' 'libesmtp' 'hiredis'
 -             'libdbi' 'libmaxminddb' 'net-snmp' 'librdkafka' 'systemd')
 +             'libdbi' 'libmaxminddb' 'net-snmp' 'librdkafka')
- checkdepends=('python-nose' 'python-ply')
  conflicts=('eventlog')
  replaces=('eventlog')
  backup=('etc/syslog-ng/scl.conf'
@@ -79,7 +78,7 @@
  build() {
    cd $pkgname-$pkgver
    export CFLAGS+=" -ffat-lto-objects"
-@@ -45,7 +38,7 @@
+@@ -44,7 +37,7 @@
    ./configure --prefix=/usr --sysconfdir=/etc/syslog-ng --libexecdir=/usr/lib \
      --sbindir=/usr/bin --localstatedir=/var/lib/syslog-ng --datadir=/usr/share \
      --with-pidfile-dir=/run --enable-spoof-source --enable-ipv6 \

@@ -121,7 +121,7 @@
    python-lazr.config
    python-passlib
    python-requests
-@@ -24,24 +24,13 @@
+@@ -24,18 +24,11 @@
    python-zope-event
    python-zope-interface
  )
@@ -132,15 +132,7 @@
 -  python-setuptools
 -  python-wheel
 -)
--checkdepends=(
--  python-nose2
--  python-psycopg2
--  python-pymysql
--  python-pytest
--)
 +makedepends=(git python-build python-installer python-setuptools python-wheel)
-+checkdepends=(python-flufl.testing python-nose2 python-psycopg2
-+python-pymysql python-pytest)
  conflicts=(mailman)
  replaces=(mailman-core)
  backup=(etc/mailman.cfg)

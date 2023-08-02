@@ -54,14 +54,14 @@
    libcanberra-pulse
    libgdm
    libgweather-4
-@@ -37,6 +36,7 @@
-   xorg-server-xvfb
+@@ -32,6 +31,7 @@
+   sassc
  )
  groups=(gnome)
  prepare() {
    cd $pkgname
    git submodule init
-@@ -46,10 +46,11 @@
+@@ -41,10 +41,11 @@
  build() {
    local meson_options=(
      -D gtk_doc=true

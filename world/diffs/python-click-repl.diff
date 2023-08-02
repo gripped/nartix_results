@@ -81,7 +81,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,12 @@
+@@ -1,20 +1,11 @@
  _name=click-repl
  pkgname=python-click-repl
 -depends=(
@@ -95,10 +95,8 @@
 -  python-setuptools
 -  python-wheel
 -)
--checkdepends=(python-pytest)
 +depends=('python-click' 'python-prompt_toolkit' 'python-six')
 +makedepends=('python-setuptools')
-+checkdepends=('python-pytest')
  prepare() {
 -  sed -e '/--cov/d' -i $_name-$pkgver/pyproject.toml
 +  mv -v "${_name}-$pkgver" "$pkgname-$pkgver"

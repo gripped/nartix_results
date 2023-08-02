@@ -40,7 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,4 +20,5 @@
+@@ -19,4 +19,5 @@
  prepare() {
    cd "${pkgname}-${pkgver}"
    sed -i 's_/opt/puppetlabs/puppet_/usr_' ext/systemd/puppet.service

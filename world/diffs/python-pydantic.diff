@@ -90,7 +90,7 @@
    python-typing-extensions
  )
  makedepends=(
-@@ -10,13 +11,23 @@
+@@ -10,7 +11,8 @@
    python-build
    python-installer
    python-importlib-metadata
@@ -99,19 +99,4 @@
 +  python-hatch-fancy-pypi-readme
    python-wheel
  )
- checkdepends=(
-+  python-ansi2html
-+  python-devtools
-+  python-dirty-equals
-+  python-email-validator
-+  python-faker
-   python-hypothesis
-+  python-pygments
-   python-pytest
-+  python-pytest-benchmark
-+  python-pytest-examples
-   python-pytest-mock
-+  python-sqlalchemy
- )
  build() {
-   cd $_name-$pkgver

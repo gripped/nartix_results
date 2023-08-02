@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,6 +27,7 @@
+@@ -26,6 +26,7 @@
+   vala
    yelp-tools
  )
- checkdepends=(xorg-server-xvfb)
  prepare() {
    cd cheese
  }
-@@ -34,7 +35,7 @@
+@@ -33,7 +34,7 @@
    local meson_options=(
      -D tests=true
    )

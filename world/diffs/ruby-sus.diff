@@ -34,13 +34,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- pkgname=ruby-sus
- depends=(ruby)
- makedepends=(git)
--checkdepends=(ruby-bake-modernize ruby-bake-test ruby-bake-test-external ruby-covered)
-+checkdepends=(ruby-bake-test ruby-bake-test-external ruby-covered)
- options=(!emptydirs)
+@@ -5,7 +5,7 @@
  prepare() {
    cd sus
    sed -r -e 's|~>|>=|g' -e '/signing_key/d' -i sus.gemspec

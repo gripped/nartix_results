@@ -55,4 +55,4 @@
 +depends=('bash' 'glibc' 'libarchive' 'curl' 'gpgme' 'artix-mirrorlist'
           'gettext' 'gawk' 'coreutils' 'gnupg' 'grep')
  makedepends=('meson' 'asciidoc' 'doxygen')
- checkdepends=('python' 'fakechroot')
+ provides=('libalpm.so')

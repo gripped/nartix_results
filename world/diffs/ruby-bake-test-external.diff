@@ -33,12 +33,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,10 +1,11 @@
  pkgname=ruby-bake-test-external
  depends=(ruby-bake)
--checkdepends=(ruby-bake-modernize ruby-bake-test ruby-rspec ruby-sus git)
 +makedepends=(ruby-rspec)
-+checkdepends=(ruby-bake-test ruby-sus git)
  options=(!emptydirs)
  prepare() {
    cd bake-test-external-$pkgver

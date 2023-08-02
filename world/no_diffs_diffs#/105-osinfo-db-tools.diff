@@ -22,9 +22,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
+@@ -2,6 +2,6 @@
+ depends=('gcc-libs' 'glib2' 'glibc' 'json-glib' 'libarchive' 'libsoup3' 'libxml2')
  makedepends=('meson')
- checkdepends=('python-pytest' 'python-requests')
  build() {
 -  arch-meson $pkgname-$pkgver build
 +  artix-meson $pkgname-$pkgver build

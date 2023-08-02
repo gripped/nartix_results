@@ -21,9 +21,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=softhsm
  depends=('botan' 'sqlite3' 'openssl' 'p11-kit')
- checkdepends=('cppunit')
  backup=("etc/softhsm2.conf")
 -options=!libtool!lto
 +options=!libtool!lto

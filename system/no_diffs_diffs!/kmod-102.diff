@@ -15,10 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=kmod
  depends=('glibc' 'zlib' 'openssl' 'xz' 'zstd')
- checkdepends=('linux-headers' 'libelf')
 -options=strip
 +options=strip
  provides=('module-init-tools=3.16' 'libkmod.so')

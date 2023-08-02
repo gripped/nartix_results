@@ -55,6 +55,6 @@
 -)
 +depends=(gnupg python)
 +makedepends=(python-build python-installer python-setuptools python-wheel)
- checkdepends=(python-pytest)
  build() {
    cd $pkgname-$pkgver
+   python -m build --wheel --no-isolation

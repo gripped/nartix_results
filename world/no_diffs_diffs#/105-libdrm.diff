@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- checkdepends=('cairo')
+@@ -3,7 +3,7 @@
+ makedepends=('python-docutils' 'meson')
  replaces=('libdrm-new' 'libdrm-nouveau')
  build() {
 -  arch-meson $pkgname-$pkgver build \

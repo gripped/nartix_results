@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,6 +20,8 @@
+   vala
+ )
+ checkdepends=(xorg-server-xvfb)
++checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=21ca89f7947d232f1ebd12b2a7780994d7771ea4  # tags/5.8.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gtksourceview.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -34,7 +36,7 @@
+ }
+ 
+ build() {
+-  arch-meson gtksourceview build -D gtk_doc=true
++  artix-meson gtksourceview build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,11 +12,12 @@
+   meson
+   vala
+ )
+ prepare() {
+   cd gtksourceview
+ }
+ build() {
+-  arch-meson gtksourceview build -D gtk_doc=true
++  artix-meson gtksourceview build -D gtk_doc=true
+   meson compile -C build
+ }
+ package_gtksourceview5-docs() {

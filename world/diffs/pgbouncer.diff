@@ -42,5 +42,5 @@
 -depends=('glibc' 'libevent' 'c-ares' 'libcares.so' 'systemd' 'pam' 'libpam.so' 'openssl')
 +depends=('glibc' 'libevent' 'c-ares' 'libcares.so' 'pam' 'libpam.so' 'openssl')
  makedepends=('asciidoc' 'xmlto')
- checkdepends=('postgresql-libs' 'postgresql')
  backup=('etc/pgbouncer/pgbouncer.ini'
+         'etc/logrotate.d/pgbouncer')

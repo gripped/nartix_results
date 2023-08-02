@@ -53,12 +53,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  pkgname=python-scramp
  depends=(python python-asn1crypto)
 -makedepends=(git python-build python-installer python-setuptools python-versioningit python-wheel)
 +makedepends=(python-build python-installer python-setuptools python-versioningit python-wheel)
- checkdepends=(python-pytest python-pytest-mock python-passlib)
  build() {
 -  cd scramp
 +  cd scramp-$pkgver

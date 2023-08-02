@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,10 +4,11 @@
+@@ -3,10 +3,11 @@
+ makedepends=(yelp-tools git appstream-glib meson docbook-utils docbook-sgml
               perl-sgmls)
- checkdepends=(xorg-server-xvfb)
  groups=(gnome)
  prepare() {
    cd $pkgname

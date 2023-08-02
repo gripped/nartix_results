@@ -75,7 +75,7 @@
    'tevent'
    'ldb'
    'bc'
-@@ -45,6 +45,7 @@
+@@ -38,6 +38,7 @@
    sed -i 's#/var/run/#/run/#' src/examples/logrotate
    sed '/AM_PROG_CC_C_O/ i AC_PROG_CPP' -i configure.ac
    sed -i 's/^dbuspolicydir = $(sysconfdir)/dbuspolicydir = $(datadir)/' Makefile.in
@@ -83,7 +83,7 @@
    sed '/fail_over-tests/d' -i Makefile.am
    autoreconf -fiv
  }
-@@ -59,16 +60,14 @@
+@@ -52,16 +53,14 @@
      --datadir=/usr/share                          \
      --enable-pammoddir=/usr/lib/security          \
      --enable-pac-responder                        \

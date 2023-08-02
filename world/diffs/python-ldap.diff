@@ -31,6 +31,6 @@
  depends=('python-pyasn1' 'python-pyasn1-modules' 'libldap')
 -makedepends=('python-setuptools' 'python-coverage' 'python-pytest')
 +makedepends=('python-setuptools' 'python-coverage')
- checkdepends=('openldap' 'python-pyasn1' 'python-pyasn1-modules')
  prepare() {
    cd "$pkgbase-$pkgbase-$pkgver"
+   sed -i "/'-F', self.testrundir,/d" Lib/slapdtest/_slapdtest.py

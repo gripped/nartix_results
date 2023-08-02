@@ -53,8 +53,8 @@
 -  systemd
    zeroc-ice
  )
- checkdepends=(
-@@ -71,9 +70,9 @@
+ prepare() {
+@@ -68,9 +67,9 @@
      -D client=OFF
      -B build-server
    )

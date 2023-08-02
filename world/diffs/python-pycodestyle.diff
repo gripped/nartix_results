@@ -33,7 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,7 @@
+@@ -1,11 +1,7 @@
  pkgname=python-pycodestyle
  depends=('python')
 -makedepends=(
@@ -42,7 +42,6 @@
 -  'python-setuptools'
 -  'python-wheel'
 -)
--checkdepends=('python-pytest')
 +makedepends=('python-build' 'python-installer' 'python-setuptools'
 +             'python-wheel')
  build() {

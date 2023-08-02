@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,6 +14,7 @@
+@@ -13,6 +13,7 @@
+   python-gobject
    vala
  )
- checkdepends=(xorg-server-xvfb)
  prepare() {
    cd libpeas
  }
-@@ -22,7 +23,7 @@
+@@ -21,7 +22,7 @@
      -D gtk_doc=true
      -D vapi=true
    )

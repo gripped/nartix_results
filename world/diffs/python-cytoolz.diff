@@ -58,6 +58,6 @@
 -)
 +depends=(cython python-toolz)
 +makedepends=(python-build python-installer python-setuptools python-wheel)
- checkdepends=(python-pytest)
  build() {
    cd $_name-$pkgver
+   python -m build --wheel --no-isolation

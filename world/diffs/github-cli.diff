@@ -88,11 +88,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,23 @@
+@@ -1,22 +1,23 @@
  pkgname=github-cli
 -depends=("glibc" "mailcap")
 -makedepends=("go" "git")
--checkdepends=("openssh")
 +makedepends=(
 +	"go"
 +	"gcc"

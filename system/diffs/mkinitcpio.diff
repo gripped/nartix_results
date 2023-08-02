@@ -47,12 +47,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,11 @@
+@@ -1,6 +1,10 @@
  pkgname=mkinitcpio
  depends=('awk' 'mkinitcpio-busybox>=1.19.4-2' 'kmod' 'util-linux>=2.23' 'libarchive' 'coreutils'
 -         'bash' 'binutils' 'diffutils' 'findutils' 'grep' 'filesystem>=2011.10-1' 'zstd' 'systemd')
 +         'bash' 'binutils' 'diffutils' 'findutils' 'grep' 'filesystem>=2011.10-1' 'zstd' 'udev')
- checkdepends=('bash-bats' 'bash-bats-assert' 'lzop')
  provides=('initramfs')
  backup=('etc/mkinitcpio.conf')
  install=mkinitcpio.install

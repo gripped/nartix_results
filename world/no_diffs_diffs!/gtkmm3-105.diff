@@ -24,10 +24,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,12 +4,12 @@
+@@ -3,12 +3,12 @@
+ depends=(gtk3 pangomm atkmm)
  makedepends=(git meson mm-common glibmm-docs cairomm-docs pangomm-docs
               atkmm-docs)
- checkdepends=(xorg-server-xvfb)
 -options=!emptydirs
 +options=!emptydirs
  prepare() {

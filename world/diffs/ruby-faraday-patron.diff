@@ -51,13 +51,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,14 @@
+@@ -1,14 +1,13 @@
  _gemname='faraday-patron'
  pkgname="ruby-${_gemname}"
 -_archive
  depends=('ruby')
  makedepends=('ruby-rspec')
- checkdepends=('ruby-faraday' 'ruby-webmock' 'ruby-multipart-parser')
  options=('!emptydirs')
  prepare() {
 -  cd "${srcdir}/${_gemname}-${_archivepkgver}"

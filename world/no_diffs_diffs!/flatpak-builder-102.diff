@@ -25,9 +25,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,7 @@
+@@ -3,6 +3,7 @@
+          appstream-glib fuse3)
  makedepends=(gobject-introspection git docbook-xsl xmlto)
- checkdepends=(valgrind)
  replaces=('flatpak<0.9.10')
  prepare() {
    cd $pkgname

@@ -34,7 +34,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,6 @@
+@@ -4,7 +4,6 @@
  prepare() {
  	cd "pygit2-$pkgver"
  	sed -e '/has_network/s/True/False/' -i test/utils.py

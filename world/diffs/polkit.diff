@@ -81,7 +81,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,24 @@
+@@ -1,21 +1,23 @@
  pkgname=polkit
  depends=(
    duktape
@@ -100,7 +100,6 @@
 -  gtk-doc
 -  meson
  )
- checkdepends=(python-dbusmock)
  provides=(libpolkit-{agent,gobject}-1.so)
  backup=(etc/pam.d/polkit-1)
  prepare() {
@@ -109,7 +108,7 @@
  }
  build() {
    local meson_options=(
-@@ -24,9 +26,9 @@
+@@ -23,9 +25,9 @@
      -D gtk_doc=true
      -D man=true
      -D os_type=redhat

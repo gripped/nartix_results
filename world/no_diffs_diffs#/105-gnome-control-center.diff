@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,6 +41,7 @@
-   xorg-server-xvfb
+@@ -36,6 +36,7 @@
+   python
  )
  groups=(gnome)
  prepare() {
    cd $pkgname
    git apply -3 ../pixmaps-dir.diff
-@@ -53,6 +54,6 @@
+@@ -48,6 +49,6 @@
      -D documentation=true
      -D malcontent=true
    )
