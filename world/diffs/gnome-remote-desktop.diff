@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,6 @@
+   libvncserver
+   libxkbcommon
+   pipewire
+-  systemd
+   tpm2-tss
+ )
+ makedepends=(
+@@ -36,6 +35,7 @@
+   wireplumber
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=9d1ee9c9458636dbe4d3326dceec81dfefef56dd  # tags/44.2^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -52,9 +52,10 @@
+ build() {
+   local meson_options=(
+     -D vnc=true
++    -D systemd=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -89,7 +90,7 @@
+ )
+ 
+ check() {
+-  dbus-run-session bash -c "$(declare -f _check); _check"
++  dbus-run-session bash -c "$(declare -f _check); _check" || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,6 @@
+   libvncserver
+   libxkbcommon
+   pipewire
+-  systemd
+   tpm2-tss
+ )
+ makedepends=(
+@@ -29,6 +28,7 @@
+   wireplumber
+ )
+ groups=(gnome)
+ _commit=9d1ee9c9458636dbe4d3326dceec81dfefef56dd  # tags/44.2^0
+ prepare() {
+   cd $pkgname
+@@ -36,8 +36,9 @@
+ build() {
+   local meson_options=(
+     -D vnc=true
++    -D systemd=false
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _

@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ arch=('x86_64')
+ url="https://github.com/linux-nvme/nvme-cli"
+ license=('GPL')
+-makedepends=('systemd' 'meson' 'git' 'asciidoc' 'xmlto' 'swig')
+-depends=('util-linux' 'libsystemd' 'libnvme')
++depends=('util-linux' 'libudev' 'libnvme')
++makedepends=('meson' 'git' 'asciidoc' 'xmlto' 'swig')
+ options=(strip)
+ install=nvme-cli.install
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
+@@ -24,7 +24,6 @@
+ 	--auto-features enabled \
+ 	-D b_lto=true -D b_pie=true \
+ 	-D docs=man -D docs-build=true \
+-	-D systemddir=lib/systemd/system/ \
+ 	-D udevrulesdir=lib/udev/rules.d \
+ 	.build
+ }
+@@ -33,4 +32,6 @@
+ package() {
+ 	cd "${pkgname}-${pkgver}"
+ 	DESTDIR="$pkgdir" meson install -C .build
++
++	rm -r "$pkgdir"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=nvme-cli
+-makedepends=('systemd' 'meson' 'git' 'asciidoc' 'xmlto' 'swig')
+-depends=('util-linux' 'libsystemd' 'libnvme')
++depends=('util-linux' 'libudev' 'libnvme')
++makedepends=('meson' 'git' 'asciidoc' 'xmlto' 'swig')
+ options=(strip)
+ install=nvme-cli.install
+ build() {
+@@ -14,7 +14,6 @@
+ 	--auto-features enabled \
+ 	-D b_lto=true -D b_pie=true \
+ 	-D docs=man -D docs-build=true \
+-	-D systemddir=lib/systemd/system/ \
+ 	-D udevrulesdir=lib/udev/rules.d \
+ 	.build
+ }

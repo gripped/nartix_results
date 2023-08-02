@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ provides=(xdg-desktop-portal-impl)
+ depends=(libinih
+          libuuid.so
++         libelogind
+          pipewire
+          qt6-base
+          qt6-wayland
+@@ -35,7 +36,7 @@
+ 
+ build() {
+     cd "$_archive"
+-    arch-meson -Dsd-bus-provider=libsystemd build
++    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
+     ninja -C build
+     make -C hyprland-share-picker all
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ provides=(xdg-desktop-portal-impl)
+ depends=(libinih
+          libuuid.so
++         libelogind
+          pipewire
+          qt6-base
+          qt6-wayland
+@@ -20,7 +21,7 @@
+ }
+ build() {
+     cd "$_archive"
+-    arch-meson -Dsd-bus-provider=libsystemd build
++    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
+     ninja -C build
+     make -C hyprland-share-picker all
+ }

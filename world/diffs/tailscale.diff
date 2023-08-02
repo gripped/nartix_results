@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=tailscale
+-pkgver=1.46.1
++pkgver=1.46.0
+ pkgrel=1
+ pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
+ arch=("x86_64")
+ url="https://tailscale.com"
+ license=("MIT")
+ makedepends=("git" "go")
+-depends=("glibc")
++depends=("glibc" "iptables")
+ backup=("etc/default/tailscaled")
+-_commit=e42e60103b1ea58d9d06d5a0c77500e44c44f202 #  git rev-parse tags/v1.46.1
++_commit=03b5aa8b4d846b67e5f6e14543f5e8fd25ff259d #  git rev-parse tags/v1.46.0
+ source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}")
+ sha256sums=('SKIP')
+ 
+@@ -46,6 +46,5 @@
+     cd "${pkgname}"
+     install -Dm755 tailscale tailscaled -t "$pkgdir/usr/bin"
+     install -Dm644 cmd/tailscaled/tailscaled.defaults "$pkgdir/etc/default/tailscaled"
+-    install -Dm644 cmd/tailscaled/tailscaled.service -t "$pkgdir/usr/lib/systemd/system"
+     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ pkgname=tailscale
+ makedepends=("git" "go")
+-depends=("glibc")
++depends=("glibc" "iptables")
+ backup=("etc/default/tailscaled")
+-_commit=e42e60103b1ea58d9d06d5a0c77500e44c44f202 #  git rev-parse tags/v1.46.1
++_commit=03b5aa8b4d846b67e5f6e14543f5e8fd25ff259d #  git rev-parse tags/v1.46.0
+ prepare() {
+     cd "${pkgname}"
+     go mod vendor

@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=strongswan
+-pkgver=5.9.11
++pkgver=5.9.10
+ pkgrel=1
+ pkgdesc='Open source IPsec implementation'
+ url='https://www.strongswan.org'
+ license=('GPL2')
+ arch=('x86_64')
+-makedepends=('libnm' 'systemd' 'python' 'ruby' 'mariadb' 'python-setuptools')
+-depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'systemd-libs' 'pam')
++depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'pam')
++makedepends=('libnm' 'python' 'ruby' 'mariadb' 'python-setuptools')
+ optdepends=('libnm: for networkmanager support'
+   'mariadb: MySQL support'
+   'ruby: Ruby support'
+@@ -25,10 +25,9 @@
+   'configure_ac.patch')
+ 
+ validpgpkeys=("948F158A4E76A27BF3D07532DF42C170B34DBA77")
+-sha512sums=('d500523215f5ec5c5550c4d2c49060b350ae396d8c60170792c46775d04fc7a132aa70a6242145477753668351d26ed957e08903683ecc340aa8d84fb2ae5498'
++sha512sums=('cf1d4a79ec02ac0502494ce6bfcab7399ddff151e2bc39bd4fbb9562bae7d0c66cf8d1e387b3c36a35e4387d597889fd7519e7bce07d3a7f764b1b73bd8a4667'
+             'SKIP'
+             '0e2c818f2f620410dda949d9016a4c1a686bf2946acb3b42a729b2376c077f4dad6762fe8d2f736c213c4895c1fbd60c0d654a1c36f72d06f58ba7cff635bc74')
+-install=strongswan.install
+ prepare() {
+   cd ${pkgname}-${pkgver}
+   patch -p1 -l <"${srcdir}/configure_ac.patch"
+@@ -67,7 +66,6 @@
+     --enable-ha \
+     --enable-vici \
+     --enable-swanctl \
+-    --enable-systemd \
+     --enable-ext-auth \
+     --enable-mysql \
+     --enable-ldap \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=strongswan
+-makedepends=('libnm' 'systemd' 'python' 'ruby' 'mariadb' 'python-setuptools')
+-depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'systemd-libs' 'pam')
++depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'pam')
++makedepends=('libnm' 'python' 'ruby' 'mariadb' 'python-setuptools')
+ backup=(
+   etc/ipsec.conf
+   etc/ipsec.secrets
+@@ -8,7 +8,6 @@
+   etc/strongswan.conf
+   etc/strongswan.d/{charon-logging.conf,charon.conf,pki.conf,pool.conf,scepclient.conf,starter.conf,swanctl.conf}
+   etc/strongswan.d/charon/{aesni.conf,attr-sql.conf,attr.conf,bliss.conf,chapoly.conf,cmac.conf,connmark.conf,constraints.conf,curl.conf,des.conf,dhcp.conf,dnskey.conf,eap-aka-3gpp2.conf,eap-aka.conf,eap-gtc.conf,eap-identity.conf,eap-md5.conf,eap-mschapv2.conf,eap-radius.conf,eap-sim-file.conf,eap-sim.conf,eap-simaka-pseudonym.conf,eap-simaka-reauth.conf,eap-tls.conf,ext-auth.conf,farp.conf,fips-prf.conf,forecast.conf,gmp.conf,ha.conf,hmac.conf,kernel-netlink.conf,md5.conf,mgf1.conf,nonce.conf,newhope.conf,ntru.conf,openssl.conf,pem.conf,pgp.conf,pkcs1.conf,pkcs12.conf,pkcs7.conf,pkcs8.conf,pubkey.conf,random.conf,rc2.conf,resolve.conf,revocation.conf,sha1.conf,sha2.conf,sha3.conf,socket-default.conf,sql.conf,sqlite.conf,sshkey.conf,stroke.conf,updown.conf,vici.conf,x509.conf,xauth-eap.conf,xauth-generic.conf,xcbc.conf,unity.conf,curve25519.conf,bypass-lan.conf})
+-install=strongswan.install
+ prepare() {
+   cd ${pkgname}-${pkgver}
+   patch -p1 -l <"${srcdir}/configure_ac.patch"
+@@ -46,7 +45,6 @@
+     --enable-ha \
+     --enable-vici \
+     --enable-swanctl \
+-    --enable-systemd \
+     --enable-ext-auth \
+     --enable-mysql \
+     --enable-ldap \

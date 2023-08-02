@@ -1,0 +1,224 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgbase=networkmanager
+ pkgname=(networkmanager libnm nm-cloud-setup)
+-pkgver=1.42.6
++pkgver=1.42.8
+ pkgrel=1
+ pkgdesc="Network connection manager and user applications"
+ url="https://networkmanager.dev/"
+ arch=(x86_64)
+ license=(GPL)
+-_pppver=2.4.9
++_pppver=2.5.0
+ makedepends=(
+   audit
+   bluez-libs
+@@ -15,6 +15,7 @@
+   dhclient
+   dhcpcd
+   dnsmasq
++  elogind
+   git
+   glib2-docs
+   gobject-introspection
+@@ -38,7 +39,6 @@
+   polkit
+   "ppp=$_pppver"
+   python-gobject
+-  systemd
+   vala
+   vala
+   wpa_supplicant
+@@ -47,7 +47,7 @@
+   libx11
+   python-dbus
+ )
+-_commit=b6cc7c7e695ba3b1f2a5c95b0d6df418b8556e57  # tags/1.42.6^0
++_commit=7c6da25396162ba05ffa71f00e227351dc1452b6  # tags/1.42.8^0
+ source=("git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -66,9 +66,12 @@
+ 
+     -D dist_version="$pkgver-$pkgrel"
+     -D session_tracking_consolekit=false
+-    -D suspend_resume=systemd
++    -D suspend_resume=elogind
+     -D modify_system=true
+     -D selinux=false
++    -D systemdsystemunitdir=no
++    -D session_tracking=elogind
++    -D systemd_journal=false
+ 
+     -D iwd=true
+     -D pppd_plugin_dir=/usr/lib/pppd/$_pppver
+@@ -91,7 +94,7 @@
+     -D qt=false
+   )
+ 
+-  arch-meson NetworkManager build "${meson_options[@]}"
++  artix-meson NetworkManager build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -114,6 +117,7 @@
+     audit
+     bluez-libs
+     curl
++    elogind
+     iproute2
+     jansson
+     libmm-glib
+@@ -149,6 +153,9 @@
+   install -d etc/NetworkManager/{conf,dnsmasq}.d
+   install -dm700 etc/NetworkManager/system-connections
+   install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
++[main]
++plugins=keyfile
++hostname-mode=none
+ END
+ 
+   install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
+@@ -166,12 +173,8 @@
+   _pick libnm usr/share/gtk-doc/html/libnm
+   _pick libnm usr/share/vala/vapi/libnm.*
+ 
+-  _pick cloud usr/lib/**/*nm-cloud-setup*
+-  _pick cloud usr/share/man/*/nm-cloud-setup*
+-
+-  _pick ovs usr/lib/systemd/system/NetworkManager.service.d/NetworkManager-ovs.conf
+-
+-  install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
++  _pick nm-cloud-setup "$pkgdir"/usr/lib/**/*nm-cloud-setup*
++
+ }
+ 
+ package_libnm() {
+@@ -180,7 +183,7 @@
+   depends=(
+     glib2
+     nss
+-    systemd-libs
++    libelogind
+     util-linux-libs
+   )
+   provides=(libnm.so)
+@@ -192,6 +195,6 @@
+   pkgdesc="Automatically configure NetworkManager in cloud"
+   depends=(networkmanager)
+ 
+-  mv cloud/* "$pkgdir"
+-}
+-
++  mv nm-cloud-setup/* "$pkgdir"
++}
++
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgbase=networkmanager
+ pkgname=(networkmanager libnm nm-cloud-setup)
+-_pppver=2.4.9
++_pppver=2.5.0
+ makedepends=(
+   audit
+   bluez-libs
+@@ -8,6 +8,7 @@
+   dhclient
+   dhcpcd
+   dnsmasq
++  elogind
+   git
+   glib2-docs
+   gobject-introspection
+@@ -31,7 +32,6 @@
+   polkit
+   "ppp=$_pppver"
+   python-gobject
+-  systemd
+   vala
+   vala
+   wpa_supplicant
+@@ -40,7 +40,7 @@
+   libx11
+   python-dbus
+ )
+-_commit=b6cc7c7e695ba3b1f2a5c95b0d6df418b8556e57  # tags/1.42.6^0
++_commit=7c6da25396162ba05ffa71f00e227351dc1452b6  # tags/1.42.8^0
+ prepare() {
+   cd NetworkManager
+ }
+@@ -49,9 +49,12 @@
+     -D dbus_conf_dir=/usr/share/dbus-1/system.d
+     -D dist_version="$pkgver-$pkgrel"
+     -D session_tracking_consolekit=false
+-    -D suspend_resume=systemd
++    -D suspend_resume=elogind
+     -D modify_system=true
+     -D selinux=false
++    -D systemdsystemunitdir=no
++    -D session_tracking=elogind
++    -D systemd_journal=false
+     -D iwd=true
+     -D pppd_plugin_dir=/usr/lib/pppd/$_pppver
+     -D teamdctl=true
+@@ -69,7 +72,7 @@
+     -D more_logging=false
+     -D qt=false
+   )
+-  arch-meson NetworkManager build "${meson_options[@]}"
++  artix-meson NetworkManager build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -86,6 +89,7 @@
+     audit
+     bluez-libs
+     curl
++    elogind
+     iproute2
+     jansson
+     libmm-glib
+@@ -103,6 +107,9 @@
+   install -d etc/NetworkManager/{conf,dnsmasq}.d
+   install -dm700 etc/NetworkManager/system-connections
+   install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
++[main]
++plugins=keyfile
++hostname-mode=none
+ END
+   install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
+ [connectivity]
+@@ -116,16 +123,13 @@
+   _pick libnm usr/share/gir-1.0/NM-*
+   _pick libnm usr/share/gtk-doc/html/libnm
+   _pick libnm usr/share/vala/vapi/libnm.*
+-  _pick cloud usr/lib/**/*nm-cloud-setup*
+-  _pick cloud usr/share/man/*/nm-cloud-setup*
+-  _pick ovs usr/lib/systemd/system/NetworkManager.service.d/NetworkManager-ovs.conf
+-  install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
++  _pick nm-cloud-setup "$pkgdir"/usr/lib/**/*nm-cloud-setup*
+ }
+ package_libnm() {
+   depends=(
+     glib2
+     nss
+-    systemd-libs
++    libelogind
+     util-linux-libs
+   )
+   provides=(libnm.so)
+@@ -133,5 +137,5 @@
+ }
+ package_nm-cloud-setup() {
+   depends=(networkmanager)
+-  mv cloud/* "$pkgdir"
++  mv nm-cloud-setup/* "$pkgdir"
+ }

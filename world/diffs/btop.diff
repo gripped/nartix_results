@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,32 @@
+-
+ pkgname=btop
+ pkgver=1.2.13
+ pkgrel=1
+-pkgdesc='A monitor of system resources, bpytop ported to C++'
+-arch=(x86_64)
+-url="https://github.com/aristocratos/$pkgname"
+-license=(Apache)
+-depends=(gcc-libs)
+-_archive="$pkgname-$pkgver"
+-source=("$url/archive/v$pkgver/$_archive.tar.gz")
+-sha256sums=('668dc4782432564c35ad0d32748f972248cc5c5448c9009faeb3445282920e02')
++pkgdesc="A monitor of resources"
++arch=("x86_64")
++url="https://github.com/aristocratos/btop"
++changelog=Changelog.txt
++license=("Apache2")
++depends=("gcc-libs")
++makedepends=(
++	"gcc>=10.0.0"
++	"make"
++	"sed"
++	"coreutils"
++)
++source=(
++	"https://github.com/aristocratos/$pkgname/archive/refs/tags/v$pkgver.tar.gz"
++)
++sha256sums=(
++	"668dc4782432564c35ad0d32748f972248cc5c5448c9009faeb3445282920e02"
++)
+ 
+ build() {
+-	cd "$_archive"
+-	make all
++	cd "$pkgname-$pkgver"
++	make ADDFLAGS="$CXXFLAGS $LDFLAGS"
+ }
+ 
+ package() {
+-	cd "$_archive"
+-	make DESTDIR="$pkgdir" PREFIX=/usr install
++	cd "$pkgname-$pkgver"
++	make install PREFIX="$pkgdir/usr"
++	make setuid PREFIX="$pkgdir/usr"
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,13 @@
+ pkgname=btop
+-depends=(gcc-libs)
+-_archive="$pkgname-$pkgver"
++changelog=Changelog.txt
++depends=("gcc-libs")
++makedepends=(
++	"gcc>=10.0.0"
++	"make"
++	"sed"
++	"coreutils"
++)
+ build() {
+-	cd "$_archive"
+-	make all
++	cd "$pkgname-$pkgver"
++	make ADDFLAGS="$CXXFLAGS $LDFLAGS"
+ }

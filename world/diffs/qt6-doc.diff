@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,7 @@
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \
++    -DCMAKE_PREFIX_PATH=/usr \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DQT_HOST_PATH=/usr \
+     -DINSTALL_BINDIR=lib/qt6/bin \
+@@ -25,7 +26,7 @@
+     -DINSTALL_INCLUDEDIR=include/qt6 \
+     -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
+     -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
+-    -DQT_FEATURE_journald=ON \
++    -DQT_FEATURE_journald=OFF \
+     -DQT_FEATURE_openssl_linked=ON \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build --target docs
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,7 @@
+ _pkgfn=qt-everywhere-src-$_qtver
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \
++    -DCMAKE_PREFIX_PATH=/usr \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DQT_HOST_PATH=/usr \
+     -DINSTALL_BINDIR=lib/qt6/bin \
+@@ -16,7 +17,7 @@
+     -DINSTALL_INCLUDEDIR=include/qt6 \
+     -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
+     -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
+-    -DQT_FEATURE_journald=ON \
++    -DQT_FEATURE_journald=OFF \
+     -DQT_FEATURE_openssl_linked=ON \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build --target docs

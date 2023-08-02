@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ 
+ prepare() {
+   cd pytest-benchmark-$pkgver
+-  sed -i '/^    error$/d' pytest.ini
++  sed -i '/ error/d' pytest.ini
+   patch --forward --strip=1 --input=../pytest-benchmark-backport-232.patch
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+               'python-pytest-xdist' 'python-elasticsearch' 'git')
+ prepare() {
+   cd pytest-benchmark-$pkgver
+-  sed -i '/^    error$/d' pytest.ini
++  sed -i '/ error/d' pytest.ini
+   patch --forward --strip=1 --input=../pytest-benchmark-backport-232.patch
+ }
+ build() {

@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -70,8 +70,6 @@
+   cd "${_gemname}-${pkgver}"
+ 
+   local _gemdir="$(gem env gemdir)"
+-
+-  GEM_HOME="tmp_install/${_gemdir}" RUBOCOP_VERSION=none rake spec
+ }
+ 
+ package() {

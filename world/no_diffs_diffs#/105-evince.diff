@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,7 +55,7 @@
+     -D ps=enabled
+   )
+ 
+-  arch-meson evince build "${meson_options[@]}"
++  artix-meson evince build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,7 @@
+   local meson_options=(
+     -D ps=enabled
+   )
+-  arch-meson evince build "${meson_options[@]}"
++  artix-meson evince build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {

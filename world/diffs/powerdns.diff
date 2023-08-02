@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,9 +7,9 @@
+ arch=('x86_64')
+ license=('GPL2')
+ depends=('boost-libs' 'gnutls' 'libcurl.so' 'libsodium' 'lmdb' 'luajit'
+-         'openssl' 'sqlite' 'systemd-libs')
++         'openssl' 'sqlite')
+ makedepends=('boost' 'geoip' 'libldap' 'mariadb-libs' 'curl' 'libmaxminddb'
+-             'postgresql-libs' 'systemd' 'tinycdb' 'unixodbc' 'yaml-cpp')
++             'postgresql-libs' 'tinycdb' 'unixodbc' 'yaml-cpp')
+ optdepends=('geoip: GeoIP backend'
+             'mariadb-libs: MariaDB/MySQL and MyDNS backend'
+             'libldap: LDAP backend'
+@@ -52,7 +52,7 @@
+     --disable-silent-rules \
+     --enable-reproducible \
+     --enable-unit-tests \
+-    --enable-systemd \
++    --disable-systemd \
+     --enable-lto=thin \
+     --enable-auto-var-init=zero \
+     --with-service-user=powerdns \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ pkgname=powerdns
+ depends=('boost-libs' 'gnutls' 'libcurl.so' 'libsodium' 'lmdb' 'luajit'
+-         'openssl' 'sqlite' 'systemd-libs')
++         'openssl' 'sqlite')
+ makedepends=('boost' 'geoip' 'libldap' 'mariadb-libs' 'curl' 'libmaxminddb'
+-             'postgresql-libs' 'systemd' 'tinycdb' 'unixodbc' 'yaml-cpp')
++             'postgresql-libs' 'tinycdb' 'unixodbc' 'yaml-cpp')
+ provides=('pdns')
+ conflicts=('pdns')
+ backup=('etc/powerdns/pdns.conf')
+@@ -27,7 +27,7 @@
+     --disable-silent-rules \
+     --enable-reproducible \
+     --enable-unit-tests \
+-    --enable-systemd \
++    --disable-systemd \
+     --enable-lto=thin \
+     --enable-auto-var-init=zero \
+     --with-service-user=powerdns \

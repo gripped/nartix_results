@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,6 @@
+     'glslang'
+     'meson'
+     'ninja'
+-    'systemd'
+     'vulkan-headers'
+     'wayland-protocols'
+     'xorg-xwayland'
+@@ -43,17 +42,25 @@
+ source=(
+     "$pkgname-$pkgver.tar.gz::https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/$pkgver/downloads/wlroots-$pkgver.tar.gz"
+     "https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/$pkgver/downloads/wlroots-$pkgver.tar.gz.sig"
++    "0001-find-libseat.patch"
+ )
+ sha256sums=('83e9a11605f23d4bf781ab1947089483d9ec3f7e9ba65398e0609593b77d44aa'
+-            'SKIP')
++            'SKIP'
++            'ea5499b3663682d22301f62498b92929c96d2ec4290916e91a95d2ca3af9956d')
+ validpgpkeys=(
+     '34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48' # Simon Ser
+     '9DDA3B9FA5D58DD5392C78E652CB6609B22DA89A' # Drew DeVault
+     '4100929B33EEB0FD1DB852797BC79407090047CA' # Sway signing key
+ )
+ 
++prepare() {
++    cd "$pkgname-$pkgver"
++    patch -Np1 -i ../0001-find-libseat.patch
++}
++
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    export LDFLAGS="$LDFLAGS -lseat"
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,6 @@
+     'glslang'
+     'meson'
+     'ninja'
+-    'systemd'
+     'vulkan-headers'
+     'wayland-protocols'
+     'xorg-xwayland'
+@@ -30,7 +29,12 @@
+ options=(
+     'debug'
+ )
++prepare() {
++    cd "$pkgname-$pkgver"
++    patch -Np1 -i ../0001-find-libseat.patch
++}
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    export LDFLAGS="$LDFLAGS -lseat"
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -89,7 +89,7 @@
+     --with-autoipd-user=avahi
+     --with-avahi-priv-access-group=network
+     --with-distro=archlinux
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --with-systemdsystemunitdir=no
+     with_dbus_sys=/usr/share/dbus-1/system.d
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,7 +48,7 @@
+     --with-autoipd-user=avahi
+     --with-avahi-priv-access-group=network
+     --with-distro=archlinux
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --with-systemdsystemunitdir=no
+     with_dbus_sys=/usr/share/dbus-1/system.d
+   )
+   cd avahi

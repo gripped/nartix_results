@@ -1,0 +1,134 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+              'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
+              'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
+              'xcb-util' 'xcb-util-image' 'xcb-util-renderutil' 'xcb-util-wm' 'xcb-util-keysyms'
+-             'libxshmfence' 'libunwind' 'systemd' 'meson' 'git')
++             'libxshmfence' 'libunwind' 'elogind' 'meson' 'git')
+ source=(https://xorg.freedesktop.org/releases/individual/xserver/${pkgbase}-${pkgver}.tar.xz{,.sig}
+         xvfb-run # with updates from FC master
+         xvfb-run.1
+@@ -42,7 +42,7 @@
+   export CXXFLAGS=${CXXFLAGS/-fno-plt}
+   export LDFLAGS=${LDFLAGS/,-z,now}
+ 
+-  arch-meson ${pkgbase}-$pkgver build \
++  artix-meson ${pkgbase}-$pkgver build \
+     -D ipv6=true \
+     -D xvfb=true \
+     -D xnest=true \
+@@ -77,7 +77,7 @@
+ 
+ package_xorg-server-common() {
+   pkgdesc="Xorg server common files"
+-  depends=(xkeyboard-config xorg-xkbcomp xorg-setxkbmap)
++  depends=(xkeyboard-config xorg-xkbcomp xorg-setxkbmap libelogind)
+ 
+   _install fakeinstall/usr/lib/xorg/protocol.txt
+   _install fakeinstall/usr/share/man/man1/Xserver.1
+@@ -89,7 +89,7 @@
+ package_xorg-server() {
+   pkgdesc="Xorg X server"
+   depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
+-           dbus libgl xf86-input-libinput nettle
++           dbus libgl xf86-input-libinput nettle elogind
+            libpciaccess libdrm libxshmfence libxcvt) # FS#52949
+   provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
+   conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
+@@ -111,7 +111,7 @@
+ 
+ package_xorg-server-xephyr() {
+   pkgdesc="A nested X server that runs as an X application"
+-  depends=(libxfont2 libgl libepoxy libunwind systemd-libs libxv pixman xorg-server-common
++  depends=(libxfont2 libgl libepoxy libunwind libxv pixman xorg-server-common
+            xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
+            nettle libtirpc)
+ 
+@@ -124,7 +124,7 @@
+ package_xorg-server-xvfb() {
+   pkgdesc="Virtual framebuffer X server"
+   depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
+-           libgl nettle libtirpc systemd-libs)
++           libgl nettle libtirpc)
+ 
+   _install fakeinstall/usr/bin/Xvfb
+   _install fakeinstall/usr/share/man/man1/Xvfb.1
+@@ -137,7 +137,7 @@
+ 
+ package_xorg-server-xnest() {
+   pkgdesc="A nested X server that runs as an X application"
+-  depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc systemd-libs)
++  depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc)
+ 
+   _install fakeinstall/usr/bin/Xnest
+   _install fakeinstall/usr/share/man/man1/Xnest.1
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+              'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
+              'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
+              'xcb-util' 'xcb-util-image' 'xcb-util-renderutil' 'xcb-util-wm' 'xcb-util-keysyms'
+-             'libxshmfence' 'libunwind' 'systemd' 'meson' 'git')
++             'libxshmfence' 'libunwind' 'elogind' 'meson' 'git')
+  <office@who-t.net>
+               '67DC86F2623FC5FD4BB5225D14706DBE1E4B4540'  # Olivier Fourdan <fourdan@xfce.org>
+               'FD0004A26EADFE43A4C3F249C6F7AE200374452D') # Povilas Kanapickas <povilas@radix.lt>
+@@ -20,7 +20,7 @@
+   export CFLAGS=${CFLAGS/-fno-plt}
+   export CXXFLAGS=${CXXFLAGS/-fno-plt}
+   export LDFLAGS=${LDFLAGS/,-z,now}
+-  arch-meson ${pkgbase}-$pkgver build \
++  artix-meson ${pkgbase}-$pkgver build \
+     -D ipv6=true \
+     -D xvfb=true \
+     -D xnest=true \
+@@ -50,7 +50,7 @@
+   done
+ }
+ package_xorg-server-common() {
+-  depends=(xkeyboard-config xorg-xkbcomp xorg-setxkbmap)
++  depends=(xkeyboard-config xorg-xkbcomp xorg-setxkbmap libelogind)
+   _install fakeinstall/usr/lib/xorg/protocol.txt
+   _install fakeinstall/usr/share/man/man1/Xserver.1
+   install -m644 -Dt "${pkgdir}/var/lib/xkb/" "${pkgbase}-${pkgver}"/xkb/README.compiled
+@@ -58,7 +58,7 @@
+ }
+ package_xorg-server() {
+   depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
+-           dbus libgl xf86-input-libinput nettle
++           dbus libgl xf86-input-libinput nettle elogind
+            libpciaccess libdrm libxshmfence libxcvt) # FS#52949
+   provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
+   conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
+@@ -75,7 +75,7 @@
+   install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ package_xorg-server-xephyr() {
+-  depends=(libxfont2 libgl libepoxy libunwind systemd-libs libxv pixman xorg-server-common
++  depends=(libxfont2 libgl libepoxy libunwind libxv pixman xorg-server-common
+            xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
+            nettle libtirpc)
+   _install fakeinstall/usr/bin/Xephyr
+@@ -84,7 +84,7 @@
+ }
+ package_xorg-server-xvfb() {
+   depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
+-           libgl nettle libtirpc systemd-libs)
++           libgl nettle libtirpc)
+   _install fakeinstall/usr/bin/Xvfb
+   _install fakeinstall/usr/share/man/man1/Xvfb.1
+   install -m755 "${srcdir}/xvfb-run" "${pkgdir}/usr/bin/"
+@@ -92,7 +92,7 @@
+   install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ package_xorg-server-xnest() {
+-  depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc systemd-libs)
++  depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc)
+   _install fakeinstall/usr/bin/Xnest
+   _install fakeinstall/usr/share/man/man1/Xnest.1
+   install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING

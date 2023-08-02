@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,8 @@
+ depends=('glibc')
+ makedepends=('pkgconfig' 'xorgproto' 'perl' 'xorg-util-macros' 'xorg-font-util')
+ optdepends=('perl: for mkhtmlindex')
+-source=(https://xorg.freedesktop.org/archive/individual/util/imake-${pkgver}.tar.xz{,.sig}
++options=('debug')
++source=(https://xorg.freedesktop.org/archive/individual/util/imake-${pkgver}.tar.xz
+         https://xorg.freedesktop.org/releases/individual/util/gccmakedep-1.0.3.tar.bz2
+         https://xorg.freedesktop.org/releases/individual/util/lndir-1.0.3.tar.bz2
+         https://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.6.tar.bz2
+@@ -17,7 +18,6 @@
+         linuxconfig.patch
+         LICENSE)
+ sha512sums=('e7587cf80369c8f4fcc1207c13bcb74a53d838b504ac8a7f3b98fb8f5f595cc7b8e5e9fad50cadcf40cf27bd02ef4eae7fe458854bbed7bea27d474d66520644'
+-            'SKIP'
+             '563b2897770a4df2792ea3eae8183a1f9e78192b7efc9c8296ee68d1cba6e72fa962a88e3251bb780df776e2aa7e80d74d5096675c61526c232aefa4f9e6a5fc'
+             'c9f03c825c627935abe399bf8292bbf69304cb9e9d65a4c860b49e32e2ed4dde25bf658a5ab2116cd215381d0a52f464a8a53469c27adddbd9fa2bfd135a7289'
+             'eb0e8ee8ab7515806d7d98a060cdcd392ec38e4225e5e05db26daa6651f185d0b764aab403edeea904d4d23211b1f7db20daeee6eafce8abe65225784ed0aa42'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=imake
+ depends=('glibc')
+ makedepends=('pkgconfig' 'xorgproto' 'perl' 'xorg-util-macros' 'xorg-font-util')
+ prepare() {
+   cd xorg-cf-files-1.0.7
+   patch -p1 -i ../linuxconfig.patch

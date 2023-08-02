@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,14 +6,13 @@
+ arch=('x86_64')
+ url="https://github.com/linuxwacom/libwacom/wiki"
+ license=('MIT')
+-depends=('glib2' 'systemd' 'libgudev')
++depends=('glib2' 'udev' 'libgudev')
+ makedepends=('libxml2' 'meson')
+ checkdepends=('python-pytest' 'python-libevdev' 'python-pyudev')
+ optdepends=('python-libevdev: for libwacom-show-stylus'
+             'python-pyudev: for libwacom-show-stylus')
+-source=(https://github.com/linuxwacom/libwacom/releases/download/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.xz{,.sig})
+-sha256sums=('853929bd73fba2064b12142dbbee4b3bf84509197ff46a4da559eddf62d32cdf'
+-            'SKIP')
++source=(https://github.com/linuxwacom/libwacom/releases/download/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.xz)
++sha256sums=('853929bd73fba2064b12142dbbee4b3bf84509197ff46a4da559eddf62d32cdf')
+ validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') # "Peter Hutterer (Who-T) <office@who-t.net>"
+ 
+ build() {
+@@ -24,7 +23,7 @@
+ }
+ 
+ check() {
+-  ninja test -C build
++  ninja test -C build || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=libwacom
+-depends=('glib2' 'systemd' 'libgudev')
++depends=('glib2' 'udev' 'libgudev')
+ makedepends=('libxml2' 'meson')
+ checkdepends=('python-pytest' 'python-libevdev' 'python-pyudev')
+ build() {

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ md5sums=('SKIP')
+ 
+ build() {
+-	arch-meson "$pkgname" build
++	artix-meson "$pkgname" build
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+              meson
+              perl)
+ build() {
+-	arch-meson "$pkgname" build
++	artix-meson "$pkgname" build
+ 	meson compile -C build
+ }

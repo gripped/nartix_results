@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=sysprof
+ pkgname=(sysprof libsysprof-capture)
+ pkgver=3.48.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Kernel based performance profiler"
+ url="https://wiki.gnome.org/Apps/Sysprof"
+ license=(GPL)
+@@ -10,6 +10,7 @@
+ depends=(
+   libadwaita
+   polkit
++  json-glib
+ )
+ makedepends=(
+   git
+@@ -34,7 +35,7 @@
+ build() {
+   CFLAGS+=" -ffat-lto-objects"
+ 
+-  arch-meson sysprof build
++  artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
+   meson compile -C build
+ }
+ 
+@@ -65,6 +66,8 @@
+   _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
++
++  rm -r "$pkgdir"/usr/lib/systemd
+ }
+ 
+ package_libsysprof-capture() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ depends=(
+   libadwaita
+   polkit
++  json-glib
+ )
+ makedepends=(
+   git
+@@ -15,7 +16,7 @@
+ }
+ build() {
+   CFLAGS+=" -ffat-lto-objects"
+-  arch-meson sysprof build
++  artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
+   meson compile -C build
+ }
+ _pick() {

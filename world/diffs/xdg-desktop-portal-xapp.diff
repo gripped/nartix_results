@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,10 +13,12 @@
+ sha256sums=('78e42c905b2a023bb0152bbcfa68680a70bf9d5f773c1023703296ed3c8306d0')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  arch-meson -D systemduserunitdir=/usr/lib/systemd $pkgname-$pkgver build
+   meson compile -C build
+ }
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ makedepends=(meson)
+ provides=(xdg-desktop-portal-impl)
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  arch-meson -D systemduserunitdir=/usr/lib/systemd $pkgname-$pkgver build
+   meson compile -C build
+ }

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+ 
+ build() {
+   cd i3-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,6 +13,6 @@
+ }
+ build() {
+   cd i3-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }

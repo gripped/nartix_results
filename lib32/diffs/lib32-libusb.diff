@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ license=(LGPL2.1)
+ depends=(
+   lib32-glibc
+-  lib32-systemd
++  lib32-elogind
+   libusb=$pkgver
+ )
+ makedepends=(gcc-multilib)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=lib32-libusb
+ depends=(
+   lib32-glibc
+-  lib32-systemd
++  lib32-elogind
+   libusb=$pkgver
+ )
+ makedepends=(gcc-multilib)

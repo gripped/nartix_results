@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=plasma-systemmonitor
+-pkgver=5.27.7
++pkgver=5.27.6
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='An interface for monitoring system sensors, process information and other system resources'
+@@ -11,7 +11,7 @@
+ depends=(ksystemstats kitemmodels qqc2-desktop-style kquickcharts kdeclarative)
+ makedepends=(extra-cmake-modules)
+ groups=(plasma)
+-sha256sums=('14611b425b1817743acaf594005f16a6ae347b063182fec0ee1f8676589e28e3'
++sha256sums=('796eb25f061f05cd4e59019cfe902cb61d53be60904bec69366b347c3cfb9c1d'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>

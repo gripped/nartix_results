@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,22 +7,14 @@
+ arch=('x86_64')
+ url='https://www.rutschle.net/tech/sslh/README.html'
+ license=('GPL2')
+-makedepends=('systemd')
+-depends=('glibc' 'libcap' 'libconfig' 'pcre2' 'systemd-libs')
++depends=('glibc' 'libcap' 'libconfig' 'pcre2')
+ backup=('etc/sslh.cfg')
+-install=$pkgname.install
+ source=("https://www.rutschle.net/tech/sslh/$pkgname-v$_pkgver.tar.gz"{,.asc}
+-        'sslh.cfg'
+-        'sslh.service'
+-        'sslh-select.service'
+-        'sslh-fork.service')
++        'sslh.cfg')
+ validpgpkeys=('CDDDBADBEA4B72748E007D326C056F7AC7934136') # Yves Rutschle <yves@rutschle.net>
+ sha256sums=('8e3742d14edf4119350cfdc7bb96b89134d9218eb6d2a6e1f70891ca18a649b1'
+             'SKIP'
+-            '3feff7e2c096bc18d8f0073141c1017dccd4abbbc491fa16b55afd5c5ff6352c'
+-            '49ed1c88b0de079bc31a94e600b63edd7ea95b4aa9b5f533c15db1221d0892db'
+-            '885dfa4a4de75e28d0471debcb0473ecaf813eb21b83db4e855caf76a6d5cb3b'
+-            '46114de034266ea953eecb825730e4382faa8a97718f23df2a3ab2189623eb00')
++            '3feff7e2c096bc18d8f0073141c1017dccd4abbbc491fa16b55afd5c5ff6352c')
+ 
+ prepare() {
+   cd $pkgname-v$_pkgver
+@@ -38,7 +30,7 @@
+ 
+ build() {
+   cd $pkgname-v$_pkgver
+-  make VERSION=\"v$pkgver\" USELIBCAP=1 USESYSTEMD=1 all systemd-sslh-generator
++  make VERSION=\"v$pkgver\" USELIBCAP=1 all
+ }
+ 
+ package() {
+@@ -52,9 +44,5 @@
+   ln -s sslh.8.gz "$pkgdir/usr/share/man/man8/sslh-select.8.gz"
+   install -Dm 644 basic.cfg "$pkgdir/usr/share/doc/$pkgname/basic.cfg"
+   install -Dm 644 example.cfg "$pkgdir/usr/share/doc/$pkgname/example.cfg"
+-  install -dm 755 "$pkgdir"/usr/lib/systemd/{system,system-generators}
+-  install -Dm 755 systemd-sslh-generator "$pkgdir/usr/lib/systemd/system-generators/systemd-sslh-generator"
+-  cd "$pkgdir"
+-  install -Dm 644 "$srcdir"/sslh{,-fork,-select}.service usr/lib/systemd/system
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,7 @@
+ pkgname=sslh
+ _
+-makedepends=('systemd')
+-depends=('glibc' 'libcap' 'libconfig' 'pcre2' 'systemd-libs')
++depends=('glibc' 'libcap' 'libconfig' 'pcre2')
+ backup=('etc/sslh.cfg')
+-install=$pkgname.install
+ prepare() {
+   cd $pkgname-v$_pkgver
+   local src
+@@ -17,5 +15,5 @@
+ }
+ build() {
+   cd $pkgname-v$_pkgver
+-  make VERSION=\"v$pkgver\" USELIBCAP=1 USESYSTEMD=1 all systemd-sslh-generator
++  make VERSION=\"v$pkgver\" USELIBCAP=1 all
+ }

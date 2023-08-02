@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-builder
+ pkgver=44.2
+-pkgrel=4
++pkgrel=3
+ pkgdesc="An IDE for writing GNOME-based software"
+ url="https://wiki.gnome.org/Apps/Builder"
+ arch=(x86_64)
+@@ -46,6 +46,7 @@
+   python-sphinx_rtd_theme
+   yelp-tools
+ )
++
+ checkdepends=(weston)
+ _commit=abc6bbd213df29f156514e40d3f9cdfee57f8c01  # tags/44.2^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
+@@ -63,9 +64,10 @@
+ build() {
+   local meson_options=(
+     -D help=true
++    -D plugin_flatpak=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,8 +47,9 @@
+ build() {
+   local meson_options=(
+     -D help=true
++    -D plugin_flatpak=false
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ check() (

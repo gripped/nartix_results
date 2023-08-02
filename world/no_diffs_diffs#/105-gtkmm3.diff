@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ makedepends=(git meson mm-common glibmm-docs cairomm-docs pangomm-docs
+              atkmm-docs)
+ checkdepends=(xorg-server-xvfb)
+-options=(!emptydirs)
++options=(!emptydirs debug)
+ _commit=d8bd947d97684bfd351552b962bdc79d04c0f24d  # tags/3.24.7^0
+ source=("git+https://gitlab.gnome.org/GNOME/gtkmm.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -26,7 +26,7 @@
+ }
+ 
+ build() {
+-  arch-meson gtkmm build -D maintainer-mode=true
++  artix-meson gtkmm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,13 +4,13 @@
+ makedepends=(git meson mm-common glibmm-docs cairomm-docs pangomm-docs
+              atkmm-docs)
+ checkdepends=(xorg-server-xvfb)
+-options=!emptydirs
++options=!emptydirs
+ _commit=d8bd947d97684bfd351552b962bdc79d04c0f24d  # tags/3.24.7^0
+ prepare() {
+   cd gtkmm
+ }
+ build() {
+-  arch-meson gtkmm build -D maintainer-mode=true
++  artix-meson gtkmm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ package_gtkmm3-docs() {

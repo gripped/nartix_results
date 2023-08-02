@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ }
+ 
+ build() {
+-  arch-meson orc build
++  artix-meson orc build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,6 @@
+   cd orc
+ }
+ build() {
+-  arch-meson orc build
++  artix-meson orc build
+   meson compile -C build
+ }

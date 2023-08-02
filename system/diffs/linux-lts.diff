@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=linux-lts
+ pkgver=6.1.39
+-pkgrel=2
++pkgrel=1
+ pkgdesc='LTS Linux'
+ url="https://www.kernel.org/"
+ arch=(x86_64)
+@@ -23,10 +23,10 @@
+ )
+ sha256sums=('4cddee22fdf657138a06af653492f67cd3a4762c04a34725534bd200d99085b8'
+             'SKIP'
+-            '20e2f62eb004af3f47609b4ab3380d8e870d51eba0df5f318a565910eada3503'
++            'b5ddd4c95acffe68bb83a1a80dd5bcd67868ff2723249a8fa8699b78f0b37b59'
+             '1bd8388fcb6ed4eec46450c65eb7a0889a8c541f164a39e3064633981a7a4a3d')
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ )
+ options=('!strip')
+ _srcname=linux-$pkgver
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ prepare() {

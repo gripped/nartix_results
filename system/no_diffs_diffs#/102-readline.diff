@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ backup=('etc/inputrc')
+ depends=('glibc' 'ncurses' 'libncursesw.so')
+ provides=('libhistory.so' 'libreadline.so')
+-options=('!emptydirs')
++options=('!emptydirs' 'debug')
+ source=(https://ftp.gnu.org/gnu/readline/readline-$_basever.tar.gz{,.sig}
+         inputrc)
+ sha256sums=('3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ backup=('etc/inputrc')
+ depends=('glibc' 'ncurses' 'libncursesw.so')
+ provides=('libhistory.so' 'libreadline.so')
+-options=!emptydirs
++options=!emptydirs
+ if [ $_patchlevel -gt 0 ]; then
+     for (( _p=1; _p <= $((10#${_patchlevel})); _p++ )); do
+         {,.sig})

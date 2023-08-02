@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+   libsamplerate
+   ncurses
+   python-docutils
+-  systemd
++  udev
+   xmlto
+ )
+ optdepends=(
+@@ -45,7 +45,6 @@
+     --disable-alsaconf
+     --sbindir=/usr/bin
+     --with-udev-rules-dir=/usr/lib/udev/rules.d
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
+   )
+ 
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+   libsamplerate
+   ncurses
+   python-docutils
+-  systemd
++  udev
+   xmlto
+ )
+ options=(emptydirs)
+@@ -26,7 +26,6 @@
+     --disable-alsaconf
+     --sbindir=/usr/bin
+     --with-udev-rules-dir=/usr/lib/udev/rules.d
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
+   )
+   cd $pkgname-$pkgver
+   ./configure "${configure_options[@]}"

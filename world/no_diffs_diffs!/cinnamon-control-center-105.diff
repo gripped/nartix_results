@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ b2sums=('3bc009e696c7d469b2a2e15aecc62f290e26d08f65400418666e4a5564a3a113107996326e1edec93a45e9cb935ea96946e385376fe7f1b4b1185425bb4d4964')
+ 
+ build() {
+-  arch-meson build ${pkgname}-${pkgver}
++  artix-meson build ${pkgname}-${pkgver}
+   samu -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ makedepends=(meson samurai gnome-online-accounts)
+ options=(!emptydirs)
+ build() {
+-  arch-meson build ${pkgname}-${pkgver}
++  artix-meson build ${pkgname}-${pkgver}
+   samu -C build
+ }

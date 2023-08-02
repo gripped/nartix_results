@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=xfce4-clipman-plugin
+-pkgver=1.6.4
++pkgver=1.6.3
+ pkgrel=1
+ pkgdesc="A clipboard plugin for the Xfce4 panel"
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ depends=('xfce4-panel' 'libxtst' 'qrencode')
+ makedepends=('intltool')
+ source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
+-sha256sums=('9fde581e35977ecefecea9138fa37b9a66ef00bda3a2148c20862852c20facec')
++sha256sums=('e11c1f976217fc959cee98ecfb934058ae485cb363d2c25c7ddede44394c9a10')
+ 
+ build() {
+   cd $pkgname-$pkgver

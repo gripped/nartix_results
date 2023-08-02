@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,12 +4,12 @@
+ pkgname=(glibc lib32-glibc)
+ pkgver=2.37
+ _commit=7c32cb7dd88cf100b0b412163896e30aa2ee671a
+-pkgrel=4
++pkgrel=3
+ arch=(x86_64)
+ url='https://www.gnu.org/software/libc'
+ license=(GPL LGPL)
+ makedepends=(git gd lib32-gcc-libs python)
+-options=(staticlibs !lto)
++options=(staticlibs !lto debug)
+ source=(git+https://sourceware.org/git/glibc.git#commit=${_commit}
+         locale.gen.txt
+         locale-gen
+@@ -145,9 +145,8 @@
+ 
+   cd glibc
+ 
+-  install -dm755 "${pkgdir}"/usr/lib/{locale,systemd/system,tmpfiles.d}
++  install -dm755 "${pkgdir}"/usr/lib/{locale,tmpfiles.d}
+   install -m644 nscd/nscd.conf "${pkgdir}"/etc/nscd.conf
+-  install -m644 nscd/nscd.service "${pkgdir}"/usr/lib/systemd/system
+   install -m644 nscd/nscd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/nscd.conf
+   install -dm755 "${pkgdir}"/var/db/nscd
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=(glibc lib32-glibc)
+ _commit=7c32cb7dd88cf100b0b412163896e30aa2ee671a
+ makedepends=(git gd lib32-gcc-libs python)
+-options=staticlibs!lto
++options=staticlibs!lto
+ prepare() {
+   mkdir -p glibc-build lib32-glibc-build
+   [[ -d glibc-$pkgver ]] && ln -s glibc-$pkgver glibc
+@@ -74,9 +74,8 @@
+   rm -f "${pkgdir}"/etc/ld.so.cache
+   rm -f "${pkgdir}"/usr/bin/{tzselect,zdump,zic}
+   cd glibc
+-  install -dm755 "${pkgdir}"/usr/lib/{locale,systemd/system,tmpfiles.d}
++  install -dm755 "${pkgdir}"/usr/lib/{locale,tmpfiles.d}
+   install -m644 nscd/nscd.conf "${pkgdir}"/etc/nscd.conf
+-  install -m644 nscd/nscd.service "${pkgdir}"/usr/lib/systemd/system
+   install -m644 nscd/nscd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/nscd.conf
+   install -dm755 "${pkgdir}"/var/db/nscd
+   install -m644 posix/gai.conf "${pkgdir}"/etc/gai.conf

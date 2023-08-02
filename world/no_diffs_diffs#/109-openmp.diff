@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,8 +8,6 @@
+ license=('custom:Apache 2.0 with LLVM Exception')
+ depends=('llvm-libs' 'libelf' 'libffi')
+ makedepends=('llvm' 'clang' 'cmake' 'ninja')
+-optdepends=('cuda: offloading to NVIDIA GPUs'
+-            'hsa-rocr: offloading to AMD GPUs')
+ options=('!lto') # https://bugzilla.redhat.com/show_bug.cgi?id=1988155
+ _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
+ source=($_source_base/openmp-$pkgver.src.tar.xz{,.sig}
+@@ -35,6 +33,7 @@
+     -DCMAKE_BUILD_TYPE=Release
+     -DCMAKE_INSTALL_PREFIX=/usr
+     -DLIBOMP_INSTALL_ALIASES=OFF
++    -DCMAKE_PREFIX_PATH=/usr
+   )
+   cmake .. "${cmake_args[@]}"
+   ninja
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,6 +15,7 @@
+     -DCMAKE_BUILD_TYPE=Release
+     -DCMAKE_INSTALL_PREFIX=/usr
+     -DLIBOMP_INSTALL_ALIASES=OFF
++    -DCMAKE_PREFIX_PATH=/usr
+   )
+   cmake .. "${cmake_args[@]}"
+   ninja

@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,6 +22,7 @@
+   meson
+ )
+ optdepends=('libreoffice: OpenDocument formats')
++options=(debug)
+ groups=(gnome)
+ _commit=ecb7840a0845b2b40db9cdadb071ab3a061ec127  # tags/44.2^0
+ source=("git+https://gitlab.gnome.org/GNOME/sushi.git#commit=$_commit")
+@@ -37,7 +38,7 @@
+ }
+ 
+ build() {
+-  arch-meson sushi build
++  artix-meson sushi build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,12 +14,13 @@
+   gobject-introspection
+   meson
+ )
+ groups=(gnome)
+ _commit=ecb7840a0845b2b40db9cdadb071ab3a061ec127  # tags/44.2^0
+ prepare() {
+   cd sushi
+ }
+ build() {
+-  arch-meson sushi build
++  artix-meson sushi build
+   meson compile -C build
+ }

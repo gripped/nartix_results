@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ validpgpkeys=('3BB639E56F861FA2E86505690FDD682D974CA72A') # Matt Turner <mattst88@gmail.com>
+ 
+ build() {
+- arch-meson libXvMC-${pkgver} build
++ artix-meson libXvMC-${pkgver} build
+  meson configure build
+  meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=('libxext' 'libxv')
+ makedepends=('meson')
+ build() {
+- arch-meson libXvMC-${pkgver} build
++ artix-meson libXvMC-${pkgver} build
+  meson configure build
+  meson compile -C build
+ }

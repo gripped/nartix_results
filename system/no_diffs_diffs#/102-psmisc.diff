@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,7 @@
+ url='https://gitlab.com/psmisc/psmisc'
+ license=('GPL')
+ depends=('ncurses')
++options=('debug')
+ validpgpkeys=('5D2FB320B825D93904D205193938F96BDF50FEA5') # Craig Small <csmall@debian.org>
+ source=("https://downloads.sourceforge.net/psmisc/${pkgname}-${pkgver}.tar.xz"{,.asc})
+ sha256sums=('257dde06159a4c49223d06f1cccbeb68933a4514fc8f1d77c64b54f0d108822a'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ pkgname=psmisc
+ depends=('ncurses')
+ build() {
+   cd ${pkgname}-${pkgver}
+   ./configure \

@@ -1,0 +1,130 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,6 +25,7 @@
+   check
+   dbus
+   doxygen
++  elogind
+   fftw
+   git
+   gst-plugins-base-libs
+@@ -43,7 +44,6 @@
+   rtkit
+   sbc
+   speexdsp
+-  systemd
+   tdb
+   valgrind
+   webrtc-audio-processing
+@@ -66,14 +66,15 @@
+ 
+ build() {
+   local meson_options=(
+-    -D elogind=disabled
+     -D pulsedsp-location='/usr/\$LIB/pulseaudio'
++    -D elogind=enabled
+     -D stream-restore-clear-old-devices=true
+     -D tcpwrap=disabled
++    -D systemd=disabled
+     -D udevrulesdir=/usr/lib/udev/rules.d
+   )
+ 
+-  arch-meson pulseaudio build "${meson_options[@]}"
++  artix-meson pulseaudio build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -122,7 +123,6 @@
+     etc/pulse/default.pa
+     etc/pulse/system.pa
+   )
+-  install=pulseaudio.install
+   replaces=(
+     'pulseaudio-gconf<=11.1'
+     'pulseaudio-xen<=9.0'
+@@ -132,7 +132,7 @@
+ 
+   cd "$pkgdir"
+ 
+-  sed -e '/autospawn/iautospawn = no' \
++  sed -e '/autospawn/iautospawn = yes' \
+       -i etc/pulse/client.conf
+ 
+   sed -e 's|/usr/bin/pactl load-module module-x11-cork-request|#&|' \
+@@ -184,9 +184,9 @@
+   depends=(
+     dbus
+     libasyncns
++    libelogind
+     libsndfile
+     libxcb
+-    systemd
+   )
+   optdepends=('glib2: mainloop integration')
+   provides=(
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,6 +18,7 @@
+   check
+   dbus
+   doxygen
++  elogind
+   fftw
+   git
+   gst-plugins-base-libs
+@@ -36,7 +37,6 @@
+   rtkit
+   sbc
+   speexdsp
+-  systemd
+   tdb
+   valgrind
+   webrtc-audio-processing
+@@ -49,13 +49,14 @@
+ }
+ build() {
+   local meson_options=(
+-    -D elogind=disabled
+     -D pulsedsp-location='/usr/\$LIB/pulseaudio'
++    -D elogind=enabled
+     -D stream-restore-clear-old-devices=true
+     -D tcpwrap=disabled
++    -D systemd=disabled
+     -D udevrulesdir=/usr/lib/udev/rules.d
+   )
+-  arch-meson pulseaudio build "${meson_options[@]}"
++  artix-meson pulseaudio build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -96,14 +97,13 @@
+     etc/pulse/default.pa
+     etc/pulse/system.pa
+   )
+-  install=pulseaudio.install
+   replaces=(
+     'pulseaudio-gconf<=11.1'
+     'pulseaudio-xen<=9.0'
+   )
+   meson install -C build --destdir "$pkgdir"
+   cd "$pkgdir"
+-  sed -e '/autospawn/iautospawn = no' \
++  sed -e '/autospawn/iautospawn = yes' \
+       -i etc/pulse/client.conf
+   sed -e 's|/usr/bin/pactl load-module module-x11-cork-request|#&|' \
+       -i usr/bin/start-pulseaudio-x11
+@@ -142,9 +142,9 @@
+   depends=(
+     dbus
+     libasyncns
++    libelogind
+     libsndfile
+     libxcb
+-    systemd
+   )
+   provides=(
+     libpulse-mainloop-glib.so

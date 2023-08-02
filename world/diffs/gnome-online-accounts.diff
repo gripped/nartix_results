@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
+ arch=(x86_64)
+ license=(LGPL)
++provides=(libgoa-1.0.so libgoa-backend-1.0.so)
+ depends=(
+   gcr
+   json-glib
+@@ -28,6 +29,7 @@
+ )
+ _commit=ebab108d4d8505b56cc313acad341520ed18df8f  # tags/3.48.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-online-accounts.git#commit=$_commit")
++sha256sums=('SKIP')
+ b2sums=('SKIP')
+ 
+ pkgver() {
+@@ -46,7 +48,7 @@
+     -D media_server=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+   gnome-online-accounts
+   libgoa
+ )
++provides=(libgoa-1.0.so libgoa-backend-1.0.so)
+ depends=(
+   gcr
+   json-glib
+@@ -29,7 +30,7 @@
+     -D man=true
+     -D media_server=true
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {

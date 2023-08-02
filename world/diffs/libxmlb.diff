@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=(x86_64)
+ url="https://github.com/hughsie/libxmlb"
+ license=(LGPL)
+-depends=(glib2 libstemmer xz zstd)
++depends=(glib2 libstemmer xz)
+ makedepends=(meson gobject-introspection gtk-doc)
+ checkdepends=(shared-mime-info)
+ source=("https://github.com/hughsie/libxmlb/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc})
+@@ -15,7 +15,7 @@
+ validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build -D stemmer=true
++  artix-meson ${pkgname}-${pkgver} build -D stemmer=true
+   ninja -v -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ pkgname=libxmlb
+-depends=(glib2 libstemmer xz zstd)
++depends=(glib2 libstemmer xz)
+ makedepends=(meson gobject-introspection gtk-doc)
+ checkdepends=(shared-mime-info)
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build -D stemmer=true
++  artix-meson ${pkgname}-${pkgver} build -D stemmer=true
+   ninja -v -C build
+ }

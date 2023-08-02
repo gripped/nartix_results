@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+ }
+ 
+ build() {
+-  arch-meson libgusb build
++  artix-meson libgusb build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,6 @@
+ )
+ _tag=03ba6c83de960fbe5aad13a0d0e2d16e2eca771a
+ build() {
+-  arch-meson libgusb build
++  artix-meson libgusb build
+   ninja -C build
+ }

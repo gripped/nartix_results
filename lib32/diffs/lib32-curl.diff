@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgbase=lib32-curl
+ pkgname=(lib32-curl lib32-libcurl-compat lib32-libcurl-gnutls)
+-_tag='51ca9c12f959b7e97c1e67d0bebb33aa0d1f28b2' # git rev-parse v${_tag_name}
+-_tag_name='8_2_1'
++_tag='7d901d74d390a7e9ad7c7b3fa759cd5b9bbc7742' # git rev-parse v${_tag_name}
++_tag_name='8_2_0'
+ pkgver="${_tag_name//_/.}"
+ pkgrel=1
+ pkgdesc='command line tool and library for transferring data with URLs (32-bit)'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgbase=lib32-curl
+ pkgname=(lib32-curl lib32-libcurl-compat lib32-libcurl-gnutls)
+-_tag='51ca9c12f959b7e97c1e67d0bebb33aa0d1f28b2' # git rev-parse v${_tag_name}
+-_tag_name='8_2_1'
++_tag='7d901d74d390a7e9ad7c7b3fa759cd5b9bbc7742' # git rev-parse v${_tag_name}
++_tag_name='8_2_0'
+ depends=('curl' 'lib32-brotli' 'lib32-libidn2' 'lib32-libssh2' 'lib32-krb5'
+          'lib32-libpsl' 'lib32-zlib' 'lib32-zstd')
+ makedepends=('git' 'patchelf' 'lib32-gnutls' 'lib32-openssl')

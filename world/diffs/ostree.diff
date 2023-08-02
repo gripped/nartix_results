@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,6 @@
+   mkinitcpio
+   openssl
+   python
+-  systemd
+   xz
+ )
+ checkdepends=(
+@@ -88,6 +87,7 @@
+     --with-ed25519-libsodium
+     --with-mkinitcpio
+     --with-openssl
++    --without-libsystemd
+   )
+ 
+   cd $pkgname
+@@ -109,7 +109,6 @@
+     libarchive libarchive.so
+     libsoup libsoup-2.4.so
+     openssl libcrypto.so
+-    systemd-libs libsystemd.so
+     xz liblzma.so
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,6 @@
+   mkinitcpio
+   openssl
+   python
+-  systemd
+   xz
+ )
+ checkdepends=(
+@@ -64,6 +63,7 @@
+     --with-ed25519-libsodium
+     --with-mkinitcpio
+     --with-openssl
++    --without-libsystemd
+   )
+   cd $pkgname
+   ./configure "${configure_options[@]}"

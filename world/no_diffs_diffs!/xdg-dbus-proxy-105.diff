@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=(LGPL)
+ depends=(glib2 dbus)
+ makedepends=(git meson docbook-xsl)
++options=(debug)
+ _commit=6bfe8c32ab23f8c1d80af7a70b3d318a79a17652  # tags/0.1.4^0
+ source=("git+$url#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -22,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,12 @@
+ pkgname=xdg-dbus-proxy
+ depends=(glib2 dbus)
+ makedepends=(git meson docbook-xsl)
+ _commit=6bfe8c32ab23f8c1d80af7a70b3d318a79a17652  # tags/0.1.4^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

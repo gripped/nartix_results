@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=('MIT')
+ depends=('cairo' 'wayland' 'libxkbcommon')
+ makedepends=('meson' 'scdoc' 'wayland-protocols')
++options=(debug)
+ source=(
+     "$pkgname-$pkgver.tar.gz::https://github.com/emersion/slurp/releases/download/v$pkgver/slurp-$pkgver.tar.gz"
+     "$pkgname-$pkgver.tar.gz.sig::https://github.com/emersion/slurp/releases/download/v$pkgver/slurp-$pkgver.tar.gz.sig"
+@@ -17,7 +18,7 @@
+             'SKIP')
+ 
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ pkgname=slurp
+ depends=('cairo' 'wayland' 'libxkbcommon')
+ makedepends=('meson' 'scdoc' 'wayland-protocols')
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }

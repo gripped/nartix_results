@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ 
+ check() {
+   cd tabview-$pkgver
+-  unbuffer python -m unittest discover
++  TERM=xterm unbuffer python -m unittest discover
+ }
+ 
+ package() {

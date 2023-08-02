@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,20 @@
+ 
+ pkgname=pc-ble-driver
+ pkgver=4.1.4
+-pkgrel=6
++pkgrel=5
+ pkgdesc="C/C++ libraries for Bluetooth Low Energy nRF5 SoftDevice serialization"
+ arch=(x86_64)
+ url="https://github.com/NordicSemiconductor/pc-ble-driver"
+ license=(custom)
+ depends=(gcc-libs glibc)
+-makedepends=(asio catch2 cmake fmt git spdlog systemd)
++makedepends=(asio catch2 cmake fmt git spdlog udev)
+ provides=(
+   libnrf-ble-driver-sd_api_v2.so
+   libnrf-ble-driver-sd_api_v3.so
+   libnrf-ble-driver-sd_api_v5.so
+   libnrf-ble-driver-sd_api_v6.so
+ )
+-options=(staticlibs)
++options=(debug staticlibs)
+ source=(
+   $pkgname-$pkgver.tar.gz::https://github.com/NordicSemiconductor/$pkgname/archive/refs/tags/v$pkgver.tar.gz
+   $pkgname-4.1.4-gcc_11.2.patch::https://github.com/NordicSemiconductor/pc-ble-driver/commit/37258e65bdbcd0b4369ae448faf650dd181816ec.patch
+@@ -33,8 +33,6 @@
+   cmake -B build -S $pkgname-$pkgver \
+       -DCMAKE_BUILD_TYPE='None' \
+       -DCMAKE_INSTALL_PREFIX='/usr' \
+-      -DCMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects" \
+-      -DCMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects" \
+       -Wno-dev
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ pkgname=pc-ble-driver
+ depends=(gcc-libs glibc)
+-makedepends=(asio catch2 cmake fmt git spdlog systemd)
++makedepends=(asio catch2 cmake fmt git spdlog udev)
+ provides=(
+   libnrf-ble-driver-sd_api_v2.so
+   libnrf-ble-driver-sd_api_v3.so
+   libnrf-ble-driver-sd_api_v5.so
+   libnrf-ble-driver-sd_api_v6.so
+ )
+-options=staticlibs
++options=staticlibs
+ prepare() {
+   patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-4.1.4-gcc_11.2.patch
+   sed -e "s/0.0.0/$pkgver/g" -i $pkgname-$pkgver/CMakeLists.txt
+@@ -16,8 +16,6 @@
+   cmake -B build -S $pkgname-$pkgver \
+       -DCMAKE_BUILD_TYPE='None' \
+       -DCMAKE_INSTALL_PREFIX='/usr' \
+-      -DCMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects" \
+-      -DCMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects" \
+       -Wno-dev
+   cmake --build build
+ }

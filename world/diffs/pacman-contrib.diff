@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,12 +13,15 @@
+             'mlocate: for pacdiff --locate'
+             'sudo: privilege elevation for several scripts'
+             'vim: default merge program for pacdiff')
+-source=("git+$url.git#tag=v$pkgver")
+-b2sums=('SKIP')
++source=("git+$url.git#tag=v$pkgver"
++        rankmirrors-artix.patch)
++b2sums=('SKIP'
++        'ca5d31cdd7a386241ba75a67e517bbd087f77f8740f0d7b5b53b26e2418516e395f01b7b43d09fff2430d214387e8386db679dfd2b226b1403d02135d349e469')
+ validpgpkeys=('04DC3FB1445FECA813C27EFAEA4F7B321A906AD9') # Daniel M. Capella <polyzen@archlinux.org>
+ 
+ prepare() {
+   cd $pkgname
++  patch -Np 1 -i ../rankmirrors-artix.patch
+   ./autogen.sh
+ }
+ 
+@@ -39,5 +42,6 @@
+ package() {
+   cd $pkgname
+   make DESTDIR="$pkgdir" install
++  rm -fr ${pkgdir}/usr/lib/systemd
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ makedepends=('asciidoc' 'git')
+ prepare() {
+   cd $pkgname
++  patch -Np 1 -i ../rankmirrors-artix.patch
+   ./autogen.sh
+ }
+ build() {

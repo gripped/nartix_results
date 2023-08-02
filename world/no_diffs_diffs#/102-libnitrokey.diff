@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=('glibc' 'gcc-libs')
+ makedepends=('catch2' 'cmake' 'hidapi' 'libusb' 'qt5-tools')
+ provides=('libnitrokey.so')
++options=(debug)
+ source=(https://github.com/Nitrokey/libnitrokey/releases/download/v${pkgver}/libnitrokey-v${pkgver}.tar.gz{,.sig})
+ sha512sums=('f986824f642f36d3cd3ebad6fd354843f6045cf0b619f971394f3917f1b447ca72ddae81bdba1886ac95797f07a90b702441b81cbc47618ee629364a348f96ff'
+             'SKIP')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,7 @@
+ depends=('glibc' 'gcc-libs')
+ makedepends=('catch2' 'cmake' 'hidapi' 'libusb' 'qt5-tools')
+ provides=('libnitrokey.so')
+ build() {
+   cmake -B build \
+     -DBUILD_SHARED_LIBS=ON \

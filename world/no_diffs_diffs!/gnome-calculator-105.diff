@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,6 +27,7 @@
+   libgci-1.so
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=2fc61459192ffa7ad91acdbafb4d692a20743bca  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-calculator.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -37,7 +38,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,8 +20,9 @@
+   libgci-1.so
+ )
+ groups=(gnome)
+ _commit=2fc61459192ffa7ad91acdbafb4d692a20743bca  # tags/44.0^0
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=neovim
+ pkgver=0.9.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Fork of Vim aiming to improve user experience, plugins, and GUIs'
+ arch=('x86_64')
+ url='https://neovim.io'
+@@ -19,7 +19,7 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
+-  make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=/usr USE_BUNDLED=OFF USE_BUNDLED_TS_PARSERS=ON
++  make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=/usr
+ }
+ 
+ check() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,5 +9,5 @@
+             'wl-clipboard: for clipboard support on wayland (see :help clipboard)')
+ build() {
+   cd ${pkgname}-${pkgver}
+-  make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=/usr USE_BUNDLED=OFF USE_BUNDLED_TS_PARSERS=ON
++  make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=/usr
+ }

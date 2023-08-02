@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ url='https://gitlab.com/procps-ng/procps'
+ license=(GPL LGPL)
+ arch=(x86_64)
+-depends=(glibc ncurses libncursesw.so systemd-libs)
+-makedepends=(systemd)
++depends=(glibc ncurses libncursesw.so libelogind)
++makedepends=(elogind)
+ conflicts=(procps sysvinit-tools)
+ provides=(procps sysvinit-tools libproc2.so)
+ replaces=(procps sysvinit-tools)
+@@ -34,7 +34,8 @@
+     --bindir=/usr/bin \
+     --sbindir=/usr/bin \
+     --enable-watch8bit \
+-    --with-systemd \
++    --without-systemd \
++    --with-elogind \
+     --disable-modern-top \
+     --disable-kill
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=procps-ng
+-depends=(glibc ncurses libncursesw.so systemd-libs)
+-makedepends=(systemd)
++depends=(glibc ncurses libncursesw.so libelogind)
++makedepends=(elogind)
+ conflicts=(procps sysvinit-tools)
+ provides=(procps sysvinit-tools libproc2.so)
+ replaces=(procps sysvinit-tools)
+@@ -19,7 +19,8 @@
+     --bindir=/usr/bin \
+     --sbindir=/usr/bin \
+     --enable-watch8bit \
+-    --with-systemd \
++    --without-systemd \
++    --with-elogind \
+     --disable-modern-top \
+     --disable-kill
+   make

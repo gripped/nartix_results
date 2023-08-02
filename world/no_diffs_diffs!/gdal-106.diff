@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ }
+ 
+ build() {
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_CXX_STANDARD=17 \
+     -DENABLE_IPO=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+   sed -e 's|podofo.h|podofo/podofo.h|' -i $pkgbase-$pkgver/frmts/pdf/pdfsdk_headers.h
+ }
+ build() {
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_CXX_STANDARD=17 \
+     -DENABLE_IPO=ON \

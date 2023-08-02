@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ build() {
+   cd ${pkgname}-${pkgver}
+ 
+-  cmake \
++  artix-cmake \
+     -Bbuild \
+     -GNinja \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ makedepends=('cmake' 'ninja')
+ build() {
+   cd ${pkgname}-${pkgver}
+-  cmake \
++  artix-cmake \
+     -Bbuild \
+     -GNinja \
+     -DCMAKE_INSTALL_PREFIX=/usr \

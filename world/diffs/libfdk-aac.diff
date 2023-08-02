@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+ arch=(x86_64)
+ url=https://sourceforge.net/projects/opencore-amr/
+ license=(custom)
+-depends=(glibc)
+ makedepends=(git)
+ provides=(libfdk-aac.so)
+ source=(git+https://github.com/mstorsjo/fdk-aac.git#tag=8003a054c81c45c10fe70a832f02c6985383608f)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,4 @@
+ pkgname=libfdk-aac
+-depends=(glibc)
+ makedepends=(git)
+ provides=(libfdk-aac.so)
+ prepare() {

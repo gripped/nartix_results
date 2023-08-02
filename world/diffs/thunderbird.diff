@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -65,9 +65,6 @@
+   4360FE2109C49763186F8E21EBE41E90F6F12F6D # Mozilla Software Releases <release@mozilla.com>
+ )
+ 
+-_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+-
+-_mozilla_api_key=16674381-f021-49de-8622-3021c5942aff
+ 
+ prepare() {
+   cd $pkgname-$pkgver
+@@ -87,10 +84,9 @@
+ 
+   sed -i '/^<rect/d' comm/mail/branding/thunderbird/TB-symbolic.svg
+ 
+-  printf "%s" "$_google_api_key" >google-api-key
+-  printf "%s" "$_mozilla_api_key" >mozilla-api-key
+   cp ../mozconfig.cfg .mozconfig
+   sed "s|@PWD@|${PWD@Q}|g" -i .mozconfig
++  sed -i '/CHECK_EVENT_SIZEOF(TIME_T, time_t);/d' ipc/chromium/src/base/message_pump_libevent.cc
+ }
+ 
+ build() {
+@@ -235,8 +231,8 @@
+             'SKIP'
+             'a0061fcb2a7f66061e336a8d95948592f56f4752e56467f14ba63846720ebf845cce7511d1a2637e3b80d5a1ffdaa2fb783fa37195103425ef65222d45372012'
+             '6918c0de63deeddc6f53b9ba331390556c12e0d649cf54587dfaabb98b32d6a597b63cf02809c7c58b15501720455a724d527375a8fb9d757ccca57460320734'
+-            '5cd3ac4c94ef6dcce72fba02bc18b771a2f67906ff795e0e3d71ce7db6d8a41165bd5443908470915bdbdb98dddd9cf3f837c4ba3a36413f55ec570e6efdbb9f'
+-            'a34dd97954f415a5ffe956ca1f10718bd164950566ceba328805c2ccbb54ed9081df07f2e063479bf932c4a443bb5b7443cca2f82eea3914465ed6e4863e0c0e'
++            'f0c95fc9502cc81491684fb7556145e1e502a9b1a8a18640feffa00516722c722fe9e07b6061e5be3b7c7736b892fb14fd5225f2386c82dd5cbee80c935a6a9b'
++            'f5045451184b49c31be92bc21ee2fc7d2ef38eef2af151c7782f59d6db3d4525fe342355da3e2f29bd70bc1d1b721c6239238d8547395ab4aeb7cc5e5c1080dd'
+             '7e43b1f25827ddae615ad43fc1e11c6ba439d6c2049477dfe60e00188a70c0a76160c59a97cc01d1fd99c476f261c7cecb57628b5be48874be7cf991c22db290'
+             '347010baf2984689539780f9de6358207c6982dcabbcd48cd703659aa763f869d516ef5b3ab7bb258d67e650fe36487f5eb2f6294c8b7149834adbb5b73122da'
+             '9bd68c3657e7b7b012a36ebd8f94d12d42276cf4044074acee2b19884692d18d5541185d956169fc277931a3278225705111475ceb029d908b257b0c0abb9624'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,8 +46,6 @@
+   gawk perl findutils libotr wasi-compiler-rt wasi-libc wasi-libc++ wasi-libc++abi
+ )
+ options=(!emptydirs !makeflags !lto)
+-_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+-_mozilla_api_key=16674381-f021-49de-8622-3021c5942aff
+ prepare() {
+   cd $pkgname-$pkgver
+   echo "${noextract[@]}"
+@@ -62,10 +60,9 @@
+   sed -e 's|73114a5c28472e77082ad259113ffafb418ed602c1741f26da3e10278b0bf93e|a88d6cc10ec1322b53a8f4c782b5133135ace0fdfcf03d1624b768788e17be0f|' \
+     -i third_party/rust/mp4parse/.cargo-checksum.json
+   sed -i '/^<rect/d' comm/mail/branding/thunderbird/TB-symbolic.svg
+-  printf "%s" "$_google_api_key" >google-api-key
+-  printf "%s" "$_mozilla_api_key" >mozilla-api-key
+   cp ../mozconfig.cfg .mozconfig
+   sed "s|@PWD@|${PWD@Q}|g" -i .mozconfig
++  sed -i '/CHECK_EVENT_SIZEOF(TIME_T, time_t);/d' ipc/chromium/src/base/message_pump_libevent.cc
+ }
+ build() {
+   cd $pkgname-$pkgver

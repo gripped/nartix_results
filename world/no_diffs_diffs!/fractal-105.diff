@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ build() {
+     cd ${pkgname}-${pkgver}
+     CFLAGS+=' -ffat-lto-objects'
+-    arch-meson . _build
++    artix-meson . _build
+     meson compile -C _build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ build() {
+     cd ${pkgname}-${pkgver}
+     CFLAGS+=' -ffat-lto-objects'
+-    arch-meson . _build
++    artix-meson . _build
+     meson compile -C _build
+ }

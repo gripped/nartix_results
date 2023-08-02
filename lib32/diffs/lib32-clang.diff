@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=lib32-clang
+ pkgver=15.0.7
+-pkgrel=1
++pkgrel=1.2
+ pkgdesc="C language family frontend for LLVM (32-bit)"
+ arch=('x86_64')
+ url="https://clang.llvm.org/"
+ license=('custom:Apache 2.0 with LLVM Exception')
+ depends=('lib32-llvm-libs' 'gcc-multilib')
+-makedepends=('lib32-llvm' 'cmake' 'ninja' 'python')
++makedepends=('lib32-llvm11' 'cmake' 'ninja' 'python')
+ _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
+ source=($_source_base/clang-$pkgver.src.tar.xz{,.sig}
+         $_source_base/llvm-$pkgver.src.tar.xz{,.sig}
+@@ -72,6 +72,7 @@
+     -DLLVM_LIBDIR_SUFFIX=32
+     -DLLVM_LINK_LLVM_DYLIB=ON
+     -DLLVM_MAIN_SRC_DIR="$srcdir/llvm-$pkgver.src"
++    -DCMAKE_PREFIX_PATH=/usr
+   )
+ 
+   cmake .. "${cmake_args[@]}"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=lib32-clang
+ depends=('lib32-llvm-libs' 'gcc-multilib')
+-makedepends=('lib32-llvm' 'cmake' 'ninja' 'python')
++makedepends=('lib32-llvm11' 'cmake' 'ninja' 'python')
+ _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
+ _get_distribution_components() {
+   local target
+@@ -47,6 +47,7 @@
+     -DLLVM_LIBDIR_SUFFIX=32
+     -DLLVM_LINK_LLVM_DYLIB=ON
+     -DLLVM_MAIN_SRC_DIR="$srcdir/llvm-$pkgver.src"
++    -DCMAKE_PREFIX_PATH=/usr
+   )
+   cmake .. "${cmake_args[@]}"
+   local distribution_components=$(_get_distribution_components | paste -sd\;)

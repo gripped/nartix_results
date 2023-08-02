@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+          'python-sortedcontainers' 'python-tornado' 'python-urwid' 'python-wsproto' 'python-publicsuffix2'
+          'python-zstandard')
+ checkdepends=('python-asynctest' 'python-parver' 'python-pytest-runner' 'python-pytest-asyncio'
+-              'python-requests' 'python-hypothesis')
++              'python-requests' 'python-hypothesis' 'python-wheel' 'python-pip')
+ provides=('pathod')
+ conflicts=('pathod')
+ replaces=('pathod')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+          'python-sortedcontainers' 'python-tornado' 'python-urwid' 'python-wsproto' 'python-publicsuffix2'
+          'python-zstandard')
+ checkdepends=('python-asynctest' 'python-parver' 'python-pytest-runner' 'python-pytest-asyncio'
+-              'python-requests' 'python-hypothesis')
++              'python-requests' 'python-hypothesis' 'python-wheel' 'python-pip')
+ provides=('pathod')
+ conflicts=('pathod')
+ replaces=('pathod')

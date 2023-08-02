@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,12 @@
++
++_v=1.1
++_url=https://gitea.artixlinux.org/artix/alpm-hooks
+ 
+ pkgname=base
+ pkgver=3
+ pkgrel=1
+-pkgdesc='Minimal package set to define a basic Arch Linux installation'
+-url='https://www.archlinux.org'
++pkgdesc='Minimal package set to define a basic Artix Linux installation'
++url='https://www.artixlinux.org'
+ arch=('any')
+ license=('GPL')
+ depends=(
+@@ -13,11 +16,18 @@
+ 
+   'gettext' 'pciutils' 'psmisc' 'shadow' 'util-linux' 'bzip2' 'gzip' 'xz'
+ 
+-  'licenses' 'pacman' 'archlinux-keyring' 'systemd' 'systemd-sysvcompat'
++  'licenses' 'pacman' 'artix-keyring' 'init-logind' 'esysusers' 'etmpfiles'
+ 
+   'iputils' 'iproute2'
+ )
+ optdepends=('linux: bare metal support')
++source=("alpm-hooks-$_v.tar.gz::$_url/archive/$_v.tar.gz")
++sha256sums=('6d08e6853a7b66f5bcfb5df9c37428f410981ed8ca52f65e2923f8f74276f327')
+ 
++package() {
++    make -C alpm-hooks DESTDIR="${pkgdir}" install_base
+ 
++    install -d "${pkgdir}"/usr/bin
++    ln -svf openrc-init "${pkgdir}"/usr/bin/init
++}
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,10 @@
++_v=1.1
++_
+ pkgname=base
+ depends=(
+   'filesystem' 'gcc-libs' 'glibc' 'bash'
+   'coreutils' 'file' 'findutils' 'gawk' 'grep' 'procps-ng' 'sed' 'tar'
+   'gettext' 'pciutils' 'psmisc' 'shadow' 'util-linux' 'bzip2' 'gzip' 'xz'
+-  'licenses' 'pacman' 'archlinux-keyring' 'systemd' 'systemd-sysvcompat'
++  'licenses' 'pacman' 'artix-keyring' 'init-logind' 'esysusers' 'etmpfiles'
+   'iputils' 'iproute2'
+ )

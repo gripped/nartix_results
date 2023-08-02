@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,10 +31,11 @@
+                 -Dgtk_doc=false
+                 -Dgtk_module=false
+                 -Dpackaging_backend=alpm
+-                -Dsystemd=true
++                -Dsystemd=false \
++                -Doffline_update=false
+         )
+ 
+-        arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
++        artix-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
+ 
+         ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,9 +16,10 @@
+                 -Dgtk_doc=false
+                 -Dgtk_module=false
+                 -Dpackaging_backend=alpm
+-                -Dsystemd=true
++                -Dsystemd=false \
++                -Doffline_update=false
+         )
+-        arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
++        artix-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
+         ninja -C build
+ }
+ package_packagekit() {

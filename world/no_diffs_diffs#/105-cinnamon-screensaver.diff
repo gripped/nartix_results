@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ b2sums=('ebbbc0690f3a423b300a2be045fbf07953278992c48cc5182bc1b31944afb15a19103b13752adea64083d6cb14406b04610285e11b9f52f0aa48d9e9d1a41e15')
+ 
+ build() {
+-  arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
++  artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
+   samu -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ makedepends=(gobject-introspection meson samurai)
+ backup=(etc/pam.d/cinnamon-screensaver)
+ build() {
+-  arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
++  artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
+   samu -C build
+ }

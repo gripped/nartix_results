@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url='https://git.kernel.org/cgit/network/wireless/iwd.git/'
+ license=('LGPL')
+ depends=('glibc' 'readline' 'libreadline.so' 'ell' 'gcc-libs')
+-makedepends=('python-docutils' 'dbus' 'systemd')
++makedepends=('python-docutils' 'dbus' 'udev')
+ optdepends=('qrencode: for displaying QR code after DPP is started')
+ source=("https://www.kernel.org/pub/linux/network/wireless/iwd-${pkgver}.tar"{.xz,.sign})
+ sha256sums=('289ff47a76fb854e7789c45c5e3e0f15de4adc5fd2e82e47ab08e3564d8961d9'
+@@ -26,6 +26,7 @@
+ 	--enable-wired \
+ 	--enable-ofono \
+ 	--enable-hwsim \
++	--disable-systemd-service \
+ 	--disable-tools
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=iwd
+ depends=('glibc' 'readline' 'libreadline.so' 'ell' 'gcc-libs')
+-makedepends=('python-docutils' 'dbus' 'systemd')
++makedepends=('python-docutils' 'dbus' 'udev')
+ changelog=ChangeLog
+ install=iwd.install
+ build() {
+@@ -13,6 +13,7 @@
+ 	--enable-wired \
+ 	--enable-ofono \
+ 	--enable-hwsim \
++	--disable-systemd-service \
+ 	--disable-tools
+   make
+ }

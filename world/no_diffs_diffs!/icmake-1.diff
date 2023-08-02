@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=icmake
+ pkgver=10.03.03
+-pkgrel=1
++pkgrel=1.2
+ pkgdesc='A program maintenance (make) utility using a C-like grammar'
+ arch=('x86_64')
+ url='https://fbb-git.gitlab.io/icmake/'
+@@ -16,7 +16,6 @@
+ prepare() {
+ 	cd "${srcdir}/${pkgname}-${pkgver}"
+     patch -Np1 -i "${srcdir}/disable-clear-screen.patch"
+-
+     sed -i 's|usr/libexec/icmake|usr/lib/icmake|' icmake/INSTALL.im
+ 
+     sed -e '/verbinclude(\/home\/frank\/.icmake\/AUTHOR)/d' -i icmake/doc/manpage/icmconf.yo

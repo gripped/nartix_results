@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,12 +9,10 @@
+ depends=(
+   audit
+   expat
+-  systemd-libs
+ )
+ makedepends=(
+   meson
+   python-docutils
+-  systemd
+ )
+ source=(
+   https://github.com/bus1/dbus-broker/releases/download/v$pkgver/$pkgname-$pkgver.tar.xz{,.asc}
+@@ -31,11 +29,12 @@
+   local meson_options=(
+     -D audit=true
+     -D docs=true
++    -D launcher=false
+     -D linux-4-17=true
+     -D system-console-users=gdm,sddm,lightdm,lxdm
+   )
+ 
+-  arch-meson $pkgname-$pkgver build "${meson_options[@]}"
++  artix-meson $pkgname-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,10 @@
+ depends=(
+   audit
+   expat
+-  systemd-libs
+ )
+ makedepends=(
+   meson
+   python-docutils
+-  systemd
+ )
+ prepare() {
+   cd $pkgname-$pkgver
+@@ -16,9 +14,10 @@
+   local meson_options=(
+     -D audit=true
+     -D docs=true
++    -D launcher=false
+     -D linux-4-17=true
+     -D system-console-users=gdm,sddm,lightdm,lxdm
+   )
+-  arch-meson $pkgname-$pkgver build "${meson_options[@]}"
++  artix-meson $pkgname-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }

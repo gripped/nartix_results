@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+   spamassassin
+   yelp-tools
+ )
+-options=(!emptydirs)
++options=(!emptydirs debug)
+ _commit=7090262158e872f02ceae8c857fc43d5678f0031  # tags/3.48.4^0
+ source=("git+https://gitlab.gnome.org/GNOME/evolution.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -110,6 +110,7 @@
+     bogofilter
+   )
+ 
++
+   mv bogofilter/* "$pkgdir"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,7 @@
+   spamassassin
+   yelp-tools
+ )
+-options=!emptydirs
++options=!emptydirs
+ _commit=7090262158e872f02ceae8c857fc43d5678f0031  # tags/3.48.4^0
+ prepare() {
+   cd $pkgbase

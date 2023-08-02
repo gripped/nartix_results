@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,6 +22,7 @@
+ )
+ checkdepends=(xorg-server-xvfb)
+ optdepends=('python-gobject: Python loader')
++options=(debug)
+ _commit=7f245fa5158204621c3469756a951b68a651c4fe  # tags/libpeas-1.36.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/libpeas.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -41,7 +42,7 @@
+     -D vapi=true
+   )
+ 
+-  arch-meson libpeas build "${meson_options[@]}"
++  artix-meson libpeas build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,7 @@
+   vala
+ )
+ checkdepends=(xorg-server-xvfb)
+ _commit=7f245fa5158204621c3469756a951b68a651c4fe  # tags/libpeas-1.36.0^0
+ prepare() {
+   cd libpeas
+@@ -23,7 +24,7 @@
+     -D gtk_doc=true
+     -D vapi=true
+   )
+-  arch-meson libpeas build "${meson_options[@]}"
++  artix-meson libpeas build "${meson_options[@]}"
+   meson compile -C build
+ }
+ package_libpeas-docs() {

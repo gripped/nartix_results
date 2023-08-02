@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,9 +23,7 @@
+   ostree
+   polkit
+   python
+-  systemd
+   xdg-dbus-proxy
+-  xdg-utils
+ )
+ makedepends=(
+   docbook-xsl
+@@ -34,10 +32,10 @@
+   gtk-doc
+   meson
+   python-pyparsing
++  socat
+   xmlto
+ )
+ checkdepends=(
+-  socat
+   valgrind
+ )
+ _commit=e936e3100d406c50ba49f3ad6a0ecae455345ec0  # tags/1.15.4^0
+@@ -93,13 +91,10 @@
+     -D system_dbus_proxy=xdg-dbus-proxy
+   )
+ 
+-  arch-meson flatpak build "${meson_options[@]}"
++  artix-meson flatpak build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+-check() {
+-  meson test -C build --print-errorlogs
+-}
+ 
+ _pick() {
+   local p="$1" f d; shift
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,9 +15,7 @@
+   ostree
+   polkit
+   python
+-  systemd
+   xdg-dbus-proxy
+-  xdg-utils
+ )
+ makedepends=(
+   docbook-xsl
+@@ -26,10 +24,10 @@
+   gtk-doc
+   meson
+   python-pyparsing
++  socat
+   xmlto
+ )
+ checkdepends=(
+-  socat
+   valgrind
+ )
+ _commit=e936e3100d406c50ba49f3ad6a0ecae455345ec0  # tags/1.15.4^0
+@@ -52,7 +50,7 @@
+     -D system_bubblewrap=bwrap
+     -D system_dbus_proxy=xdg-dbus-proxy
+   )
+-  arch-meson flatpak build "${meson_options[@]}"
++  artix-meson flatpak build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {

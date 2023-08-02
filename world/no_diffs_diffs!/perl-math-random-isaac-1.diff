@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ makedepends=('perl-test-nowarnings')
+ options=(!emptydirs)
+ source=("https://search.cpan.org/CPAN/authors/id/J/JA/JAWNSY/Math-Random-ISAAC-$pkgver.tar.gz")
+-sha256sums=('2773f02fbf207e9745e76a037df08bf5a8cc987ed23c57040ce7f7b1561f2b7c')
++md5sums=('46110b9a7bb96fe641bdfaf35bdafec5')
+ 
+ build() {
+   cd "$srcdir/Math-Random-ISAAC-$pkgver"

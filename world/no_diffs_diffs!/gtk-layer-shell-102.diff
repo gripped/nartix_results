@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+     "ninja"
+     "valabind"
+ )
++options=(debug)
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/wmww/gtk-layer-shell/archive/v$pkgver.tar.gz")
+ sha512sums=('070673a73166c9fd0ea10e6aa98c480318fbf8a6c2dff2a9b4900aea40bb59680d41d9bba9917953fabe4358c0dfa6c3d0221c579ada37cee72ce23433b40329')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+     "ninja"
+     "valabind"
+ )
+ build() {
+     meson --prefix=/usr \
+           --wrap-mode=nofallback \

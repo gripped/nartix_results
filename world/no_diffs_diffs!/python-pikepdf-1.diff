@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pikepdf
+-pkgver=8.2.3
+-pkgrel=1
++pkgver=8.1.1
++pkgrel=2
+ pkgdesc='Read and write PDFs with Python, powered by qpdf'
+ arch=(x86_64)
+ url='https://github.com/pikepdf/pikepdf'
+@@ -10,7 +10,7 @@
+ depends=(python-lxml python-pillow python-packaging qpdf)
+ checkdepends=(python-pytest-xdist python-hypothesis python-psutil)
+ source=(https://github.com/pikepdf/pikepdf/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('3c18687100d1e34534a2d9309ac6c6a2a88a113ca66e793540fe1a0c7c451613')
++sha256sums=('6d66aecfc6eaead3bf24de4a9b1cdf9f98704498b0a78edeb40224349394353d')
+ 
+ build() {
+   cd pikepdf-$pkgver

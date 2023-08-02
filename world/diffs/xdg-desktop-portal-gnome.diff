@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,6 +22,7 @@
+ conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
+ replaces=('xdg-desktop-portal-gtk<1.10.0-2')
+ groups=(gnome)
++options=(debug)
+ _commit=89203bf3522556965fc225782d1a635afdac611e  # tags/44.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -36,7 +37,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemduserunitdir=/usr/lib/systemd
+   meson compile -C build
+ }
+ 
+@@ -46,5 +47,6 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,11 +14,12 @@
+ conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
+ replaces=('xdg-desktop-portal-gtk<1.10.0-2')
+ groups=(gnome)
+ _commit=89203bf3522556965fc225782d1a635afdac611e  # tags/44.1^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemduserunitdir=/usr/lib/systemd
+   meson compile -C build
+ }

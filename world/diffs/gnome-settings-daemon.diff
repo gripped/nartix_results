@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,6 @@
+   nss
+   pulseaudio
+   pulseaudio-alsa
+-  systemd
+   upower
+ )
+ makedepends=(
+@@ -42,6 +41,7 @@
+ optdepends=('usbguard: USB protection support')
+ groups=(gnome)
+ backup=(etc/xdg/Xwayland-session.d/00-xrdb)
++options=(debug)
+ _commit=7cc9a78f1d562ea759d1776ed061d4339a6f4610  # tags/44.1^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
+@@ -64,7 +64,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+   nss
+   pulseaudio
+   pulseaudio-alsa
+-  systemd
+   upower
+ )
+ makedepends=(
+@@ -34,6 +33,7 @@
+ )
+ groups=(gnome)
+ backup=(etc/xdg/Xwayland-session.d/00-xrdb)
+ _commit=7cc9a78f1d562ea759d1776ed061d4339a6f4610  # tags/44.1^0
+ prepare() {
+   cd $pkgname
+@@ -42,6 +42,6 @@
+   git -c protocol.file.allow=always submodule update
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemd=false
+   meson compile -C build
+ }

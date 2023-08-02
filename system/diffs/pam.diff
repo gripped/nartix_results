@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,6 +31,7 @@
+     --libdir=/usr/lib \
+     --sbindir=/usr/bin \
+     --enable-logind \
++    --without-systemdunitdir \
+     --disable-db
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+     --libdir=/usr/lib \
+     --sbindir=/usr/bin \
+     --enable-logind \
++    --without-systemdunitdir \
+     --disable-db
+   make
+ }

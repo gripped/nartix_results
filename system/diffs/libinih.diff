@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libinih
+-pkgver=56
++pkgver=57
+ pkgrel=1
+ pkgdesc='A simple .INI file parser written in C'
+ arch=(x86_64)
+@@ -18,7 +18,7 @@
+   libinih.so
+   libINIReader.so
+ )
+-_tag=5e1d9e2625842dddb3f9c086a50f22e4f45dfc2b
++_tag=9cecf0643da0846e77f64d10a126d9f48b9e05e8
+ source=(git+https://github.com/benhoyt/inih.git#tag=${_tag})
+ b2sums=(SKIP)
+ 
+@@ -28,7 +28,7 @@
+ }
+ 
+ build() {
+-  arch-meson inih build \
++  artix-meson inih build \
+     -Ddefault_library=shared \
+     -Ddistro_install=true \
+     -Dwith_INIReader=true
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,9 +11,9 @@
+   libinih.so
+   libINIReader.so
+ )
+-_tag=5e1d9e2625842dddb3f9c086a50f22e4f45dfc2b
++_tag=9cecf0643da0846e77f64d10a126d9f48b9e05e8
+ build() {
+-  arch-meson inih build \
++  artix-meson inih build \
+     -Ddefault_library=shared \
+     -Ddistro_install=true \
+     -Dwith_INIReader=true

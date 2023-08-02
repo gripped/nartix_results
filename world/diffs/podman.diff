@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   go-md2man
+   gpgme
+   libseccomp
+-  systemd
++  libudev
+ )
+ options=(!lto)
+ source=(
+@@ -43,7 +43,7 @@
+ }
+ 
+ build() {
+-  export BUILDTAGS='apparmor seccomp systemd'
++  export BUILDTAGS='apparmor seccomp'
+   export CGO_CPPFLAGS="${CPPFLAGS}"
+   export CGO_CFLAGS="${CFLAGS}"
+   export CGO_CXXFLAGS="${CXXFLAGS}"
+@@ -92,4 +92,5 @@
+   provides=(docker)
+ 
+   make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
++  rm -rf "$pkgdir"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,14 +11,14 @@
+   go-md2man
+   gpgme
+   libseccomp
+-  systemd
++  libudev
+ )
+ options=(!lto)
+ prepare() {
+   patch -Np1 -d $pkgname -i ../$pkgname-4.6.0-defaultinitpath.patch
+ }
+ build() {
+-  export BUILDTAGS='apparmor seccomp systemd'
++  export BUILDTAGS='apparmor seccomp'
+   export CGO_CPPFLAGS="${CPPFLAGS}"
+   export CGO_CFLAGS="${CFLAGS}"
+   export CGO_CXXFLAGS="${CXXFLAGS}"
+@@ -52,4 +52,5 @@
+   conflicts=(docker)
+   provides=(docker)
+   make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
++  rm -rf "$pkgdir"/usr/lib/systemd
+ }

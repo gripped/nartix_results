@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ license=('GPL')
+ url='https://git.kernel.org/pub/scm/utils/mdadm'
+ makedepends=('git')
+-depends=('glibc' 'systemd')
++depends=('glibc' 'udev')
+ optdepends=('bash: mdcheck')
+ replaces=('raidtools')
+ backup=('etc/mdadm.conf')
+@@ -35,7 +35,6 @@
+   cd mdadm
+ 
+   make INSTALL=/usr/bin/install BINDIR=/usr/bin DESTDIR="$pkgdir" UDEVDIR=/usr/lib/udev install
+-  make SYSTEMD_DIR="$pkgdir"/usr/lib/systemd/system install-systemd
+   install -D -m644 ../mdadm.conf "$pkgdir"/etc/mdadm.conf
+   install -D -m644 ../mdadm_udev_install "$pkgdir"/usr/lib/initcpio/install/mdadm_udev
+   install -D -m755 misc/mdcheck "$pkgdir"/usr/share/mdadm/mdcheck
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=mdadm
+ makedepends=('git')
+-depends=('glibc' 'systemd')
++depends=('glibc' 'udev')
+ replaces=('raidtools')
+ backup=('etc/mdadm.conf')
+ prepare() {

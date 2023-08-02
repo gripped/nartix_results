@@ -1,0 +1,112 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,14 @@
++
++_ver=6.4.4
++_rel=1
++_tag=arch${_rel}
++_artix=artix${_rel}
+ 
+ pkgbase=linux
+-pkgver=6.4.7.arch1
+-pkgrel=2
++pkgver=${_ver}.${_artix}
++pkgrel=1
+ pkgdesc='Linux'
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srctag=v${pkgver%.*}-${_tag}
+ url="https://github.com/archlinux/linux/commits/$_srctag"
+ arch=(x86_64)
+ license=(GPL2)
+@@ -15,7 +20,6 @@
+   libelf
+   pahole
+   perl
+-  python
+   tar
+   xz
+ 
+@@ -37,9 +41,9 @@
+   C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
+ )
+ b2sums=('SKIP'
+-        'a73a9eaa59dd45ccdd564b762c3816342873e9002c54b742f481ccd79c34549131ab3b0188445139b9e5fab696b60270f8148337387619456b4674d6ff28ccb7')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        '8876d833f9bc8278964bb72aa9903032fdd97c43b036226f715f960b9c188e411bb0ad4a25c00103945e63d5d8b0744cb3a97c931b5b5e4fed6ada3c41e2a3a6')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -67,6 +71,9 @@
+     patch -Np1 < "../$src"
+   done
+ 
++  sed -i -r "s|arch|artix|" "version"
++  sed -i -r "s|EXTRAVERSION = -${_tag}|EXTRAVERSION = -${_artix}|" "Makefile"
++
+   echo "Setting config..."
+   cp ../config .config
+   _make olddefconfig
+@@ -98,7 +105,7 @@
+     WIREGUARD-MODULE
+   )
+   replaces=(
+-    virtualbox-guest-modules-arch
++    virtualbox-guest-modules-artix
+     wireguard-arch
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,9 @@
++_ver=6.4.4
++_rel=1
++_tag=arch${_rel}
++_artix=artix${_rel}
+ pkgbase=linux
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srctag=v${pkgver%.*}-${_tag}
+ makedepends=(
+   bc
+   cpio
+@@ -8,7 +12,6 @@
+   libelf
+   pahole
+   perl
+-  python
+   tar
+   xz
+   graphviz
+@@ -20,7 +23,7 @@
+ _srcname=archlinux-linux
+   C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
+ )
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ _make() {
+@@ -43,6 +46,8 @@
+     echo "Applying patch $src..."
+     patch -Np1 < "../$src"
+   done
++  sed -i -r "s|arch|artix|" "version"
++  sed -i -r "s|EXTRAVERSION = -${_tag}|EXTRAVERSION = -${_artix}|" "Makefile"
+   echo "Setting config..."
+   cp ../config .config
+   _make olddefconfig
+@@ -66,7 +71,7 @@
+     WIREGUARD-MODULE
+   )
+   replaces=(
+-    virtualbox-guest-modules-arch
++    virtualbox-guest-modules-artix
+     wireguard-arch
+   )
+   cd $_srcname

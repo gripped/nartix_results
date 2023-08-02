@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gamemode
+ pkgver=1.7
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS'
+ arch=(x86_64)
+ url=https://github.com/FeralInteractive/gamemode
+@@ -10,7 +10,7 @@
+   glibc
+   libdbus-1.so
+   libinih
+-  libsystemd.so
++  libelogind.so
+   polkit
+ )
+ makedepends=(
+@@ -33,11 +33,11 @@
+ 
+ build() {
+   export CFLAGS+=' -Wno-implicit-function-declaration'
+-  arch-meson gamemode build \
++  artix-meson gamemode build \
+     --libexecdir /usr/lib/gamemode \
+     -Dwith-examples=false \
+     -Dwith-pam-group=gamemode \
+-    -Dwith-systemd-user-unit-dir=/usr/lib/systemd/user
++    -Dwith-sd-bus-provider=elogind
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+   glibc
+   libdbus-1.so
+   libinih
+-  libsystemd.so
++  libelogind.so
+   polkit
+ )
+ makedepends=(
+@@ -18,10 +18,10 @@
+ _tag=4dc99dff76218718763a6b07fc1900fa6d1dafd9
+ build() {
+   export CFLAGS+=' -Wno-implicit-function-declaration'
+-  arch-meson gamemode build \
++  artix-meson gamemode build \
+     --libexecdir /usr/lib/gamemode \
+     -Dwith-examples=false \
+     -Dwith-pam-group=gamemode \
+-    -Dwith-systemd-user-unit-dir=/usr/lib/systemd/user
++    -Dwith-sd-bus-provider=elogind
+   meson compile -C build
+ }

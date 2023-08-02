@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,7 @@
+ build() {
+   cd findlib-$pkgver
+   ./configure \
++    -bindir /usr/bin \
+     -config /etc/findlib.conf \
+     -mandir /usr/share/man \
+     -sitelib /usr/lib/ocaml
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,7 @@
+ build() {
+   cd findlib-$pkgver
+   ./configure \
++    -bindir /usr/bin \
+     -config /etc/findlib.conf \
+     -mandir /usr/share/man \
+     -sitelib /usr/lib/ocaml

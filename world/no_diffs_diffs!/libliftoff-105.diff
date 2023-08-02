@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+ }
+ 
+ build() {
+-  arch-meson libliftoff build
++  artix-meson libliftoff build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,6 @@
+ provides=(libliftoff.so)
+ _tag=e045589f37835d66e3ffe8130a597bb4eb9ee08f
+ build() {
+-  arch-meson libliftoff build
++  artix-meson libliftoff build
+   meson compile -C build
+ }

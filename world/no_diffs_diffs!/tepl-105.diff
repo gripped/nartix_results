@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ sha256sums=('5e56b20669d0cf05fa1d64b58c8c342c59158122dc518100d093d59df9b87321')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D gtk_doc=true
++  artix-meson $pkgname-$pkgver build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ makedepends=('gobject-introspection' 'gtk-doc' 'meson')
+ checkdepends=('xorg-server-xvfb')
+ build() {
+-  arch-meson $pkgname-$pkgver build -D gtk_doc=true
++  artix-meson $pkgname-$pkgver build -D gtk_doc=true
+   meson compile -C build
+ }

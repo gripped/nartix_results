@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ provides=("gdisk=$pkgver")
+ conflicts=('gdisk')
+ replaces=('gdisk')
++options=('debug')
+ source=(https://downloads.sourceforge.net/project/$pkgname/$pkgname/$pkgver/$pkgname-$pkgver.tar.gz
+         popt-1.19.patch
+         popt-1.19-follow-up.patch
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ provides=("gdisk=$pkgver")
+ conflicts=('gdisk')
+ replaces=('gdisk')
+ prepare() {
+   cd "$srcdir/$pkgname-$pkgver"
+   patch -Np1 -i ../popt-1.19.patch

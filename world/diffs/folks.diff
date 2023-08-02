@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+   libfolks.so
+   libfolks-{dummy,eds}.so
+ )
+-options=(!lto)
++options=(!lto debug)
+ _commit=1ae8ccc3e55bd1b840d9082de1a19e5a6b5ccf83  # tags/0.15.6^0
+ source=("git+https://gitlab.gnome.org/GNOME/folks.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -46,7 +46,7 @@
+     -D telepathy_backend=false
+   )
+ 
+-  arch-meson folks build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+   libfolks.so
+   libfolks-{dummy,eds}.so
+ )
+-options=!lto
++options=!lto
+ _commit=1ae8ccc3e55bd1b840d9082de1a19e5a6b5ccf83  # tags/0.15.6^0
+ prepare() {
+   cd folks
+@@ -29,6 +29,6 @@
+     -D profiling=true
+     -D telepathy_backend=false
+   )
+-  arch-meson folks build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }

@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kdoctools
+ pkgver=5.108.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Documentation generation from docbook'
+ arch=(x86_64)
+ url='https://community.kde.org/Frameworks'
+@@ -17,8 +17,7 @@
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+-    -DBUILD_QCH=ON \
+-    -DDocBookXSL_DIR=/usr/share/xml/docbook/xsl-stylesheets-1.79.2-nons
++    -DBUILD_QCH=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,6 @@
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+-    -DBUILD_QCH=ON \
+-    -DDocBookXSL_DIR=/usr/share/xml/docbook/xsl-stylesheets-1.79.2-nons
++    -DBUILD_QCH=ON
+   cmake --build build
+ }

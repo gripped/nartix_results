@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+   gnome-desktop-4
+   gtk4
+   libadwaita
++  libunistring
+ )
+ makedepends=(
+   appstream-glib
+@@ -21,6 +22,7 @@
+   meson
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=9bbbe9fc4d62f1d7a642d504beb48df79b2e7ab5  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-characters.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -35,7 +37,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+   gnome-desktop-4
+   gtk4
+   libadwaita
++  libunistring
+ )
+ makedepends=(
+   appstream-glib
+@@ -14,11 +15,12 @@
+   meson
+ )
+ groups=(gnome)
+ _commit=9bbbe9fc4d62f1d7a642d504beb48df79b2e7ab5  # tags/44.0^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

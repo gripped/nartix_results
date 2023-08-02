@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,14 +14,13 @@
+ )
+ depends=(
+   dbus
+-  lib32-systemd
++  lib32-elogind
+ )
+ makedepends=(
+   autoconf-archive
+   git
+   lib32-expat
+   lib32-glib2
+-  systemd
+ )
+ source=(
+   "git+https://gitlab.freedesktop.org/dbus/dbus.git?signed#tag=dbus-$pkgver"
+@@ -47,10 +46,10 @@
+     --with-dbus-user=dbus
+     --with-system-pid-file=/run/dbus/pid
+     --with-system-socket=/run/dbus/system_bus_socket
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --without-systemdsystemunitdir
+     --enable-inotify
+     --disable-libaudit
+-    --enable-systemd
++    --disable-systemd
+     --enable-user-session
+     --disable-xml-docs
+     --disable-doxygen-docs
+@@ -74,7 +73,7 @@
+ 
+ package_lib32-dbus() {
+   depends+=(
+-    libsystemd.so
++    libelogind.so
+   )
+   provides=(
+     lib32-libdbus
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,14 +4,13 @@
+ )
+ depends=(
+   dbus
+-  lib32-systemd
++  lib32-elogind
+ )
+ makedepends=(
+   autoconf-archive
+   git
+   lib32-expat
+   lib32-glib2
+-  systemd
+ )
+ prepare() {
+   cd dbus
+@@ -29,10 +28,10 @@
+     --with-dbus-user=dbus
+     --with-system-pid-file=/run/dbus/pid
+     --with-system-socket=/run/dbus/system_bus_socket
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --without-systemdsystemunitdir
+     --enable-inotify
+     --disable-libaudit
+-    --enable-systemd
++    --disable-systemd
+     --enable-user-session
+     --disable-xml-docs
+     --disable-doxygen-docs

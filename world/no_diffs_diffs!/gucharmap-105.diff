@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+   yelp-tools
+ )
+ provides=(libgucharmap_2_90.so)
+-options=(!lto)
++options=(debug !lto)
+ _commit=367f957574e7d7277839e7dfc3de6890937c4e2a  # tags/15.0.4^0
+ source=("git+https://gitlab.gnome.org/GNOME/gucharmap.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -39,7 +39,7 @@
+     -D ucd_path=/usr/share/unicode
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+   yelp-tools
+ )
+ provides=(libgucharmap_2_90.so)
+-options=!lto
++options=!lto
+ _commit=367f957574e7d7277839e7dfc3de6890937c4e2a  # tags/15.0.4^0
+ prepare() {
+   cd $pkgname
+@@ -22,6 +22,6 @@
+     -D b_lto=false
+     -D ucd_path=/usr/share/unicode
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }

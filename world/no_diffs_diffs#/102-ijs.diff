@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=('GPL')
+ depends=('glibc' 'sh')
+ makedepends=('docbook-utils' 'ghostscript')
++options=('debug')
+ source=("https://www.openprinting.org/download/ijs/download/ijs-$pkgver.tar.bz2")
+ md5sums=('896fdcb7a01c586ba6eb81398ea3f6e9')
+ sha256sums=('11a5f5084488c480f3ff5a24d64d7147bb64272bf60a0ba51330a56c5b50cab9')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=ijs
+ depends=('glibc' 'sh')
+ makedepends=('docbook-utils' 'ghostscript')
+ build() {
+ 	cd "$pkgname-$pkgver"
+ 	./configure --prefix=/usr \

@@ -1,0 +1,109 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,6 +13,7 @@
+ license=(MIT)
+ makedepends=(
+   doxygen
++  elogind
+   git
+   glib2
+   gobject-introspection
+@@ -21,11 +22,11 @@
+   meson
+   pipewire
+   python-lxml
+-  systemd
+ )
++depends=('libelogind')
+ checkdepends=(pipewire-audio)
+ source=("git+https://gitlab.freedesktop.org/pipewire/$pkgbase.git#commit=$_commit")
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgbase
+@@ -38,12 +39,13 @@
+ 
+ build() {
+   local meson_options=(
++    -D system-lua=true
++    -D systemd=disabled
+     -D doc=disabled
+-    -D elogind=disabled
+-    -D system-lua=true
++    -D elogind=enabled
+   )
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -66,13 +68,12 @@
+ package_wireplumber() {
+   depends=(
+     "libwireplumber=$pkgver-$pkgrel"
+-    libsystemd.so
+     lua
+     pipewire
+   )
++  optdepends=('wireplumber-docs: Documentation')
+   provides=(pipewire-session-manager)
+   conflicts=(pipewire-media-session)
+-  install=wireplumber.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ _commit=6d0c7f7b7f484b3cd2aaf2e2b3cc902c095b4946  # tags/0.4.14
+ makedepends=(
+   doxygen
++  elogind
+   git
+   glib2
+   gobject-introspection
+@@ -14,19 +15,20 @@
+   meson
+   pipewire
+   python-lxml
+-  systemd
+ )
++depends=('libelogind')
+ checkdepends=(pipewire-audio)
+ prepare() {
+   cd $pkgbase
+ }
+ build() {
+   local meson_options=(
++    -D system-lua=true
++    -D systemd=disabled
+     -D doc=disabled
+-    -D elogind=disabled
+-    -D system-lua=true
++    -D elogind=enabled
+   )
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -42,13 +44,11 @@
+ package_wireplumber() {
+   depends=(
+     "libwireplumber=$pkgver-$pkgrel"
+-    libsystemd.so
+     lua
+     pipewire
+   )
+   provides=(pipewire-session-manager)
+   conflicts=(pipewire-media-session)
+-  install=wireplumber.install
+   meson install -C build --destdir "$pkgdir"
+   (
+     cd "$pkgdir"

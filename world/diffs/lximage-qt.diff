@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ depends=("lxqt-themes" "libfm-qt" "qt5-svg" "libexif" "libxfixes" "libfm-qt.so")
+ optdepends=(
+ 	"qt5-imageformats: support for additional image formats (WEBP, TIFF, etc.)"
+-	"kimageformats: support for additional image formats (PCX, XCF, HEIF, etc.)"
++	"kimageformats: support for additional image formats (PCX, XCF, etc.)"
+ )
+ makedepends=("lxqt-build-tools")
+ source=(
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ groups=("lxqt")
+ depends=("lxqt-themes" "libfm-qt" "qt5-svg" "libexif" "libxfixes" "libfm-qt.so")
+ "
+-	"kimageformats: support for additional image formats (PCX, XCF, HEIF, etc.)"
++	"kimageformats: support for additional image formats (PCX, XCF, etc.)"
+ )
+ makedepends=("lxqt-build-tools")
+ build() {

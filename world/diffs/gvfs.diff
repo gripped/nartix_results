@@ -1,0 +1,116 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,6 +43,7 @@
+   smbclient
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=ca9c22c4c41afe8ce4cc4a0bae376e9d2850f0a5  # tags/1.50.5^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gvfs.git#commit=$_commit"
+@@ -61,7 +62,9 @@
+ }
+ 
+ build() {
+-  arch-meson gvfs build -D man=true
++  artix-meson gvfs build -D man=true \
++    -D systemduserunitdir=no \
++    -D tmpfilesdir=/usr/lib/tmpfiles.d
+   meson compile -C build
+ }
+ 
+@@ -92,7 +95,7 @@
+     'gvfs-smb: SMB/CIFS (Windows client) support'
+   )
+ 
+-  meson install -C build --destdir "$pkgdir"
++meson install -C build --destdir "$pkgdir"
+ 
+   ( cd "$pkgdir"
+ 
+@@ -104,28 +107,24 @@
+ 
+     _pick afc \
+       usr/lib/gvfs{-afc-volume-monitor,d-afc} \
+-      usr/lib/systemd/user/gvfs-afc-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
+       usr/share/gvfs/mounts/afc.mount \
+       usr/share/gvfs/remote-volume-monitors/afc.monitor
+ 
+     _pick gphoto2 \
+       usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \
+-      usr/lib/systemd/user/gvfs-gphoto2-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service \
+       usr/share/gvfs/mounts/gphoto2.mount \
+       usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+ 
+     _pick mtp \
+       usr/lib/gvfs{-mtp-volume-monitor,d-mtp} \
+-      usr/lib/systemd/user/gvfs-mtp-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service \
+       usr/share/gvfs/mounts/mtp.mount \
+       usr/share/gvfs/remote-volume-monitors/mtp.monitor
+ 
+     _pick goa \
+       usr/lib/gvfs-goa-volume-monitor \
+-      usr/lib/systemd/user/gvfs-goa-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
+       usr/share/gvfs/remote-volume-monitors/goa.monitor
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,12 +36,15 @@
+   smbclient
+ )
+ groups=(gnome)
+ _commit=ca9c22c4c41afe8ce4cc4a0bae376e9d2850f0a5  # tags/1.50.5^0
+ prepare() {
+   cd gvfs
+ }
+ build() {
+-  arch-meson gvfs build -D man=true
++  artix-meson gvfs build -D man=true \
++    -D systemduserunitdir=no \
++    -D tmpfilesdir=/usr/lib/tmpfiles.d
+   meson compile -C build
+ }
+ _pick() {
+@@ -63,7 +66,7 @@
+     'gvfs-nfs: NFS support'
+     'gvfs-smb: SMB/CIFS (Windows client) support'
+   )
+-  meson install -C build --destdir "$pkgdir"
++meson install -C build --destdir "$pkgdir"
+   ( cd "$pkgdir"
+     _pick smb \
+       usr/lib/gvfsd-smb{,-browse} \
+@@ -72,25 +75,21 @@
+       usr/share/gvfs/mounts/smb{,-browse}.mount
+     _pick afc \
+       usr/lib/gvfs{-afc-volume-monitor,d-afc} \
+-      usr/lib/systemd/user/gvfs-afc-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
+       usr/share/gvfs/mounts/afc.mount \
+       usr/share/gvfs/remote-volume-monitors/afc.monitor
+     _pick gphoto2 \
+       usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \
+-      usr/lib/systemd/user/gvfs-gphoto2-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service \
+       usr/share/gvfs/mounts/gphoto2.mount \
+       usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+     _pick mtp \
+       usr/lib/gvfs{-mtp-volume-monitor,d-mtp} \
+-      usr/lib/systemd/user/gvfs-mtp-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service \
+       usr/share/gvfs/mounts/mtp.mount \
+       usr/share/gvfs/remote-volume-monitors/mtp.monitor
+     _pick goa \
+       usr/lib/gvfs-goa-volume-monitor \
+-      usr/lib/systemd/user/gvfs-goa-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
+       usr/share/gvfs/remote-volume-monitors/goa.monitor
+     _pick nfs \

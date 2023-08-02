@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ depends=('perl>=5.10.0')
+ options=('!emptydirs')
+ source=("https://search.cpan.org/CPAN/authors/id/S/SH/SHAY/Class-Singleton-$pkgver.tar.gz")
+-sha256sums=('27ba13f0d9512929166bbd8c9ef95d90d630fc80f0c9a1b7458891055e9282a4')
++md5sums=('d9c84a7b8d1c490c38e88ed1f9faae47')
+ 
+ build() {
+   cd  "$srcdir"/Class-Singleton-$pkgver

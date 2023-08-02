@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=imath
+ pkgver=3.1.9
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='A C++ and python library of 2D and 3D vector, matrix, and math operations for computer graphics'
+ url='https://www.openexr.com/'
+ arch=(x86_64)
+@@ -13,7 +13,7 @@
+ sha256sums=('f1d8aacd46afed958babfced3190d2d3c8209b66da451f556abd6da94c165cf3')
+ 
+ build() {
+-  cmake -B build -S Imath-$pkgver \
++  artix-cmake -B build -S Imath-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DPYTHON=ON
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=(gcc-libs)
+ makedepends=(cmake python boost)
+ build() {
+-  cmake -B build -S Imath-$pkgver \
++  artix-cmake -B build -S Imath-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DPYTHON=ON
+   cmake --build build

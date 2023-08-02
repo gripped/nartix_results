@@ -1,0 +1,128 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+   lib32-pipewire-jack
+   lib32-pipewire-v4l2
+ )
+-_commit=9bcc90fdc3ece16a4e0a91446641e56332b979fd  # tags/0.3.76
+-pkgver=0.3.76
++_commit=a3bd0f7a0a8dec9045deeb5eb3eb92b09ff75d57  # tags/0.3.75
++pkgver=0.3.75
+ pkgrel=1
+ epoch=1
+ pkgdesc="Low-latency audio/video router and processor - 32-bit"
+@@ -19,9 +19,7 @@
+   lib32-alsa-lib
+   lib32-dbus
+   lib32-glib2
+-  lib32-systemd
+   meson
+-  systemd
+ )
+ source=("git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -59,6 +57,7 @@
+     -D libmysofa=disabled
+     -D libpulse=disabled
+     -D libusb=disabled
++    -D systemd=disabled
+     -D lv2=disabled
+     -D man=disabled
+     -D opus=disabled
+@@ -82,7 +81,7 @@
+   export CXX="g++ -m32"
+   export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
+ 
+-  arch-meson pipewire build "${meson_options[@]}"
++  artix-meson pipewire build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -111,7 +110,6 @@
+     libdbus-1.so
+     libglib-2.0.so
+     libpipewire-$_ver.so
+-    libsystemd.so
+     pipewire
+   )
+   optdepends=(
+@@ -161,13 +159,8 @@
+     libpipewire-$_ver.so
+     pipewire-jack
+   )
+-  conflicts=(
+-    lib32-jack
+-    lib32-jack2
+-  )
+-  provides=(
+-    lib32-jack libjack.so libjackserver.so libjacknet.so
+-  )
++  conflicts=(lib32-jack lib32-jack2)
++  provides=(lib32-jack libjack.so libjackserver.so libjacknet.so)
+ 
+   mv jack/* "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,15 +5,13 @@
+   lib32-pipewire-jack
+   lib32-pipewire-v4l2
+ )
+-_commit=9bcc90fdc3ece16a4e0a91446641e56332b979fd  # tags/0.3.76
++_commit=a3bd0f7a0a8dec9045deeb5eb3eb92b09ff75d57  # tags/0.3.75
+ makedepends=(
+   git
+   lib32-alsa-lib
+   lib32-dbus
+   lib32-glib2
+-  lib32-systemd
+   meson
+-  systemd
+ )
+ prepare() {
+   cd pipewire
+@@ -42,6 +40,7 @@
+     -D libmysofa=disabled
+     -D libpulse=disabled
+     -D libusb=disabled
++    -D systemd=disabled
+     -D lv2=disabled
+     -D man=disabled
+     -D opus=disabled
+@@ -63,7 +62,7 @@
+   export CC="gcc -m32"
+   export CXX="g++ -m32"
+   export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
+-  arch-meson pipewire build "${meson_options[@]}"
++  artix-meson pipewire build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -85,7 +84,6 @@
+     libdbus-1.so
+     libglib-2.0.so
+     libpipewire-$_ver.so
+-    libsystemd.so
+     pipewire
+   )
+   meson install -C build --destdir "$pkgdir"
+@@ -120,13 +118,8 @@
+     libpipewire-$_ver.so
+     pipewire-jack
+   )
+-  conflicts=(
+-    lib32-jack
+-    lib32-jack2
+-  )
+-  provides=(
+-    lib32-jack libjack.so libjackserver.so libjacknet.so
+-  )
++  conflicts=(lib32-jack lib32-jack2)
++  provides=(lib32-jack libjack.so libjackserver.so libjacknet.so)
+   mv jack/* "$pkgdir"
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
+ }

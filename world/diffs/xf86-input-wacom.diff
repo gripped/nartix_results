@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=(x86_64)
+ url="https://github.com/linuxwacom/xf86-input-wacom"
+ license=(GPL)
+-depends=(libxi libxinerama libxrandr systemd-libs)
++depends=(libxi libxinerama libxrandr libudev.so)
+ makedepends=('xorg-server-devel' 'X-ABI-XINPUT_VERSION=24.4' 'meson'
+  	'gobject-introspection'
+         'python-libevdev' 'python-pytest' 'python-yaml' 'python-gobject' 'attr')
+@@ -17,9 +17,8 @@
+ validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') #  "Peter Hutterer (Who-T) <office@who-t.net>"
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -D xorg-conf-dir=/usr/share/X11/xorg.conf.d/ \
+-    -D systemd-unit-dir=/usr/lib/systemd/system/ \
+     -D unittests=enabled
+ 
+   meson configure build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,12 @@
+ pkgname=xf86-input-wacom
+-depends=(libxi libxinerama libxrandr systemd-libs)
++depends=(libxi libxinerama libxrandr libudev.so)
+ makedepends=('xorg-server-devel' 'X-ABI-XINPUT_VERSION=24.4' 'meson'
+  	'gobject-introspection'
+         'python-libevdev' 'python-pytest' 'python-yaml' 'python-gobject' 'attr')
+ conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
+ build() {
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -D xorg-conf-dir=/usr/share/X11/xorg.conf.d/ \
+-    -D systemd-unit-dir=/usr/lib/systemd/system/ \
+     -D unittests=enabled
+   meson configure build
+   ninja -C build

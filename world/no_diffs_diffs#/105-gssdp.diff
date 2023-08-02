@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ license=(LGPL)
+ depends=(glib2 libsoup3)
+ makedepends=(gobject-introspection gi-docgen vala meson git gtk4 pandoc)
++options=(debug)
+ _commit=c2d417d6a79f03c095e5730efd60015eb3109a82  # tags/gssdp-1.6.2^0
+ source=("git+https://gitlab.gnome.org/GNOME/gssdp.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -23,7 +24,7 @@
+ }
+ 
+ build() {
+-  arch-meson gssdp build -D gtk_doc=true
++  artix-meson gssdp build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,13 @@
+ pkgname=(gssdp gssdp-docs)
+ depends=(glib2 libsoup3)
+ makedepends=(gobject-introspection gi-docgen vala meson git gtk4 pandoc)
+ _commit=c2d417d6a79f03c095e5730efd60015eb3109a82  # tags/gssdp-1.6.2^0
+ prepare() {
+   cd gssdp
+ }
+ build() {
+-  arch-meson gssdp build -D gtk_doc=true
++  artix-meson gssdp build -D gtk_doc=true
+   meson compile -C build
+ }
+ _pick() {

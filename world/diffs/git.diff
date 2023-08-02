@@ -1,0 +1,167 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=git
+ pkgver=2.41.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='the fast distributed version control system'
+ arch=('x86_64')
+ url='https://git-scm.com/'
+@@ -25,41 +25,38 @@
+ install=git.install
+ validpgpkeys=('96E07AF25771955980DAD10020D04E5A713660A7') # Junio C Hamano
+ source=("https://www.kernel.org/pub/software/scm/git/git-$pkgver.tar."{xz,sign}
+-        'git-daemon@.service'
+-        'git-daemon.socket'
+         'git-sysusers.conf')
+ sha256sums=('e748bafd424cfe80b212cbc6f1bbccc3a47d4862fb1eb7988877750478568040'
+             'SKIP'
+-            '14c0b67cfe116b430645c19d8c4759419657e6809dfa28f438c33a005245ad91'
+-            'ac4c90d62c44926e6d30d18d97767efc901076d4e0283ed812a349aece72f203'
+             '7630e8245526ad80f703fac9900a1328588c503ce32b37b9f8811674fcda4a45')
+ 
+-_make() {
+-  local make_options=(
+-    prefix='/usr'
+-    gitexecdir='/usr/lib/git-core'
+-    perllibdir="$(/usr/bin/perl -MConfig -wle 'print $Config{installvendorlib}')"
++_make_paths=(
++  prefix='/usr'
++  gitexecdir='/usr/lib/git-core'
++  perllibdir="$(/usr/bin/perl -MConfig -wle 'print $Config{installvendorlib}')"
++)
+ 
+-    CFLAGS="$CFLAGS"
+-    LDFLAGS="$LDFLAGS"
+-    INSTALL_SYMLINKS=1
+-    MAN_BOLD_LITERAL=1
+-    NO_PERL_CPAN_FALLBACKS=1
+-    USE_LIBPCRE2=1
+-  )
+-
+-  make "${make_options[@]}" "$@"
+-}
++_make_options=(
++  CFLAGS="$CFLAGS"
++  LDFLAGS="$LDFLAGS"
++  INSTALL_SYMLINKS=1
++  MAN_BOLD_LITERAL=1
++  NO_PERL_CPAN_FALLBACKS=1
++  USE_LIBPCRE2=1
++)
+ 
+ build() {
+   cd "$srcdir/$pkgname-$pkgver"
+ 
+-  _make all man
++  make \
++    "${_make_paths[@]}" \
++    "${_make_options[@]}" \
++    all man
+ 
+-  _make -C contrib/credential/libsecret
+-  _make -C contrib/subtree all man
+-  _make -C contrib/mw-to-git all
+-  _make -C contrib/diff-highlight
++  make -C contrib/credential/libsecret
++  make -C contrib/subtree "${_make_paths[@]}" all man
++  make -C contrib/mw-to-git "${_make_paths[@]}" all
++  make -C contrib/diff-highlight "${_make_paths[@]}"
+ }
+ 
+ check() {
+@@ -69,7 +66,9 @@
+   jobs=$(expr "$MAKEFLAGS" : '.*\(-j[0-9]*\).*') || true
+   mkdir -p /dev/shm/git-test
+   SHELL=/bin/sh \
+-  _make \
++  make \
++    "${_make_paths[@]}" \
++    "${_make_options[@]}" \
+     NO_SVN_TESTS=y \
+     DEFAULT_TEST_TARGET=prove \
+     GIT_PROVE_OPTS="$jobs -Q" \
+@@ -80,7 +79,9 @@
+ package() {
+   cd "$srcdir/$pkgname-$pkgver"
+ 
+-  _make \
++  make \
++    "${_make_paths[@]}" \
++    "${_make_options[@]}" \
+     DESTDIR="$pkgdir" \
+     install install-man
+ 
+@@ -90,14 +91,12 @@
+   install -m 0644 ./contrib/completion/git-prompt.sh "$pkgdir"/usr/share/git/git-prompt.sh
+   install -m 0755 contrib/credential/libsecret/git-credential-libsecret \
+       "$pkgdir"/usr/lib/git-core/git-credential-libsecret
+-  _make -C contrib/credential/libsecret clean
+-  _make -C contrib/subtree DESTDIR="$pkgdir" install install-man
+-  _make -C contrib/mw-to-git DESTDIR="$pkgdir" install
++  make -C contrib/credential/libsecret clean
++  make -C contrib/subtree "${_make_paths[@]}" DESTDIR="$pkgdir" install install-man
++  make -C contrib/mw-to-git "${_make_paths[@]}" DESTDIR="$pkgdir" install
+   find contrib/ -name '.gitignore' -delete
+   cp -a ./contrib/* "$pkgdir"/usr/share/git/
+ 
+-  install -D -m 0644 "$srcdir"/git-daemon@.service "$pkgdir"/usr/lib/systemd/system/git-daemon@.service
+-  install -D -m 0644 "$srcdir"/git-daemon.socket "$pkgdir"/usr/lib/systemd/system/git-daemon.socket
+ 
+   install -D -m 0644 "$srcdir"/git-sysusers.conf "$pkgdir"/usr/lib/sysusers.d/git.conf
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,25 +8,27 @@
+             'org.freedesktop.secrets: keyring credential helper'
+             'libsecret: libsecret credential helper')
+ install=git.install
+-_make() {
+-  local make_options=(
+-    prefix='/usr'
+-    gitexecdir='/usr/lib/git-core'
+-    perllibdir="$(/usr/bin/perl -MConfig -wle 'print $Config{installvendorlib}')"
+-    CFLAGS="$CFLAGS"
+-    LDFLAGS="$LDFLAGS"
+-    INSTALL_SYMLINKS=1
+-    MAN_BOLD_LITERAL=1
+-    NO_PERL_CPAN_FALLBACKS=1
+-    USE_LIBPCRE2=1
+-  )
+-  make "${make_options[@]}" "$@"
+-}
++_make_paths=(
++  prefix='/usr'
++  gitexecdir='/usr/lib/git-core'
++  perllibdir="$(/usr/bin/perl -MConfig -wle 'print $Config{installvendorlib}')"
++)
++_make_options=(
++  CFLAGS="$CFLAGS"
++  LDFLAGS="$LDFLAGS"
++  INSTALL_SYMLINKS=1
++  MAN_BOLD_LITERAL=1
++  NO_PERL_CPAN_FALLBACKS=1
++  USE_LIBPCRE2=1
++)
+ build() {
+   cd "$srcdir/$pkgname-$pkgver"
+-  _make all man
+-  _make -C contrib/credential/libsecret
+-  _make -C contrib/subtree all man
+-  _make -C contrib/mw-to-git all
+-  _make -C contrib/diff-highlight
++  make \
++    "${_make_paths[@]}" \
++    "${_make_options[@]}" \
++    all man
++  make -C contrib/credential/libsecret
++  make -C contrib/subtree "${_make_paths[@]}" all man
++  make -C contrib/mw-to-git "${_make_paths[@]}" all
++  make -C contrib/diff-highlight "${_make_paths[@]}"
+ }

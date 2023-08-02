@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,6 @@
+ check() {
+   cd $pkgname-$pkgver
+ 
+-  TERM='xterm' make test
+ }
+ 
+ package() {

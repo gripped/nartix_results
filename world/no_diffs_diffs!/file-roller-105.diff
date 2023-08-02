@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,6 +31,7 @@
+   'unrar: better RAR archive support'
+ )
+ groups=(gnome-extra)
++options=(debug)
+ _commit=6d57d9962efb976aa3036db965f558b96575289c  # tags/43.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/file-roller.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -45,7 +46,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,11 +17,12 @@
+   yelp-tools
+ )
+ groups=(gnome-extra)
+ _commit=6d57d9962efb976aa3036db965f558b96575289c  # tags/43.0^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

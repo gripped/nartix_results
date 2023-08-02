@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,6 +34,7 @@
+         "yumrepo_core::git+https://github.com/puppetlabs/puppetlabs-yumrepo_core#commit=${_yumrepo_commit}"
+         "zfs_core::git+https://github.com/puppetlabs/puppetlabs-zfs_core#commit=${_zfs_commit}"
+         "zone_core::git+https://github.com/puppetlabs/puppetlabs-zone_core#commit=${_zone_commit}"
++        "artix.patch::https://github.com/puppetlabs/puppet/commit/b31d40b687c05ef6f6350b29f727144285b7aaab.patch"
+         )
+ sha512sums=('4ba01e0a433b40fbe08933fbfd885e75d5855465ac217a980bce9104b77e65a17aa5b606daddaae1aac4fa14929b307122afde0444b958ef98b075604ffddf1f'
+             'SKIP'
+@@ -44,7 +45,8 @@
+             'SKIP'
+             'SKIP'
+             'SKIP'
+-            'SKIP')
++            'SKIP'
++            '2e12f6155acb3e065372cde456add7abf8335341a70d89ac3c3e28c370a4eecb1a062f7751cb4f05bf49225b31e70c882deb8fa3b7e31bd5d669a7e471242276')
+ conflicts=('puppet5' 'puppet6')
+ provides=('puppet')
+ 
+@@ -52,6 +54,7 @@
+   cd "${pkgname}-${pkgver}"
+ 
+   sed -i 's_/opt/puppetlabs/puppet_/usr_' ext/systemd/puppet.service
++  patch --strip=1 --input=../artix.patch
+ }
+ 
+ check() {
+@@ -73,7 +76,6 @@
+   echo 'u puppet 52 "Puppet" /var/lib/puppet' > "$pkgdir"/usr/lib/sysusers.d/$pkgname.conf
+   echo "d /run/puppetlabs 0755 $pkgname $pkgname -" > "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
+ 
+-  install -Dm644 "${srcdir}/$pkgname-${pkgver}/ext/systemd/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+ 
+   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,4 +20,5 @@
+ prepare() {
+   cd "${pkgname}-${pkgver}"
+   sed -i 's_/opt/puppetlabs/puppet_/usr_' ext/systemd/puppet.service
++  patch --strip=1 --input=../artix.patch
+ }

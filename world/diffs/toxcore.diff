@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ arch=('x86_64')
+ url='https://tox.chat'
+ license=('GPL3')
+-depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
++depends=('udev' 'libconfig' 'libsodium' 'libvpx' 'opus')
+ makedepends=('check' 'cmake')
+ conflicts=("tox")
+ provides=("tox")
+@@ -60,6 +60,5 @@
+   make DESTDIR="$pkgdir" install
+   install -Dm644 "$srcdir/toxcore.conf" "$pkgdir/usr/lib/sysusers.d/toxcore.conf"
+   install -Dm644 "$srcdir/toxcore.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/toxcore.conf"
+-  install -Dm644 ../other/bootstrap_daemon/tox-bootstrapd.service "$pkgdir/usr/lib/systemd/system/tox-bootstrapd.service"
+   install -Dm644 ../other/bootstrap_daemon/tox-bootstrapd.conf "$pkgdir/etc/tox-bootstrapd.conf"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=toxcore
+ _pkgname=c-toxcore
+-depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
++depends=('udev' 'libconfig' 'libsodium' 'libvpx' 'opus')
+ makedepends=('check' 'cmake')
+ conflicts=("tox")
+ provides=("tox")

@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ checkdepends=('perl-test-fatal' 'perl-module-runtime')
+ url="https://metacpan.org/release/Dist-CheckConflicts"
+ source=(https://search.cpan.org/CPAN/authors/id/D/DO/DOY/Dist-CheckConflicts-$pkgver.tar.gz)
+-sha256sums=('ea844b9686c94d666d9d444321d764490b2cde2f985c4165b4c2c77665caedc4')
++md5sums=('c8725a92b9169708b0f63036812070f2')
+ 
+ build() {
+   ( export PERL_MM_USE_DEFAULT=1 PERL5LIB="" \

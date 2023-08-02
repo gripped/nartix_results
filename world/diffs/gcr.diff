@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+ }
+ 
+ build() {
+-  arch-meson gcr build -D ssh_agent=false
++  artix-meson gcr build -Dssh_agent=false -Dsystemd=disabled
+   meson compile -C build
+ }
+ 
+@@ -49,7 +49,6 @@
+     libgck-1.so
+     libgcr-{base,ui}-3.so
+   )
+-  install=gcr.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+   cd gcr
+ }
+ build() {
+-  arch-meson gcr build -D ssh_agent=false
++  artix-meson gcr build -Dssh_agent=false -Dsystemd=disabled
+   meson compile -C build
+ }
+ package_gcr-docs() {

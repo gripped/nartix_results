@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ source=("git+https://gitlab.gnome.org/GNOME/mm-common.git#commit=$_commit"
+         https://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/libstdc++.tag)
+ sha256sums=('SKIP'
+-            'dfb6521cb807fc827c34bcd47dbcf2f7564b2fc1b6014ebb13bed349ddf55af0')
++            'SKIP')
+ 
+ pkgver() {
+   cd $pkgname
+@@ -25,7 +25,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+   cp ../libstdc++.tag doctags
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

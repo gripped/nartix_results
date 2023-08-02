@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,6 @@
+   libhandy
+   librsvg
+   polkit
+-  systemd
+ )
+ makedepends=(
+   appstream-glib
+@@ -21,6 +20,7 @@
+   yelp-tools
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=e75e0f8b3162daa1f66664e4531bc717b092c164  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-system-monitor.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -35,7 +35,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,6 @@
+   libhandy
+   librsvg
+   polkit
+-  systemd
+ )
+ makedepends=(
+   appstream-glib
+@@ -14,11 +13,12 @@
+   yelp-tools
+ )
+ groups=(gnome)
+ _commit=e75e0f8b3162daa1f66664e4531bc717b092c164  # tags/44.0^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemd=false
+   meson compile -C build
+ }

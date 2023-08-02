@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha512sums=('4b01dd0d23bdcaec6f69fe5f059902e7f49eafdf19d53d4cce8b4d52a54b2057b764de29390f4da9e75aeb32cb6af8606b23478b04edf9f7dcb1e4b769c5fff2')
+ 
+ build() {
+-  cmake -B build -S ${pkgname}-${pkgver} \
++  artix-cmake -B build -S ${pkgname}-${pkgver} \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DLIBHPDF_STATIC=OFF
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=('libpng' 'zlib')
+ makedepends=('cmake')
+ build() {
+-  cmake -B build -S ${pkgname}-${pkgver} \
++  artix-cmake -B build -S ${pkgname}-${pkgver} \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DLIBHPDF_STATIC=OFF

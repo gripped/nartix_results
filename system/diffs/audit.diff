@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -66,7 +66,7 @@
+     --sysconfdir=/etc
+     --libexecdir=/usr/lib/audit
+     --enable-gssapi-krb5=yes
+-    --enable-systemd=yes
++    --enable-systemd=no
+     --with-io_uring=yes
+     --with-libcap-ng=yes
+   )
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+     --sysconfdir=/etc
+     --libexecdir=/usr/lib/audit
+     --enable-gssapi-krb5=yes
+-    --enable-systemd=yes
++    --enable-systemd=no
+     --with-io_uring=yes
+     --with-libcap-ng=yes
+   )

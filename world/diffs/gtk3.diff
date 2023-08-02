@@ -1,0 +1,108 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,9 +43,9 @@
+   libxkbcommon
+   libxrandr
+   libxrender
++  mesa
+   pango
+   shared-mime-info
+-  tracker3
+   wayland
+ )
+ makedepends=(
+@@ -57,21 +57,17 @@
+   sassc
+   wayland-protocols
+ )
+-_commit=3e6fd55ee00d4209ce2f2af292829e4d6f674adc  # tags/3.24.38^0
++options=(debug)
+ source=(
+-  "git+https://gitlab.gnome.org/GNOME/gtk.git#commit=$_commit"
++  "https://gitlab.gnome.org/GNOME/gtk/-/archive/${pkgver}/gtk-${pkgver}.tar.gz"
+   gtk-query-immodules-3.0.hook
+ )
+-sha256sums=('SKIP'
++sha256sums=('6cdf7189322b8465745fbb30249044d05b792a8f006746ccce9213db671ec16d'
+             'a0319b6795410f06d38de1e8695a9bf9636ff2169f40701671580e60a108e229')
+ 
+-pkgver() {
+-  cd gtk
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+-}
+ 
+ prepare() {
+-  cd gtk
++  cd gtk-${pkgver}
+ }
+ 
+ build() {
+@@ -82,11 +78,10 @@
+     -D gtk_doc=true
+     -D introspection=true
+     -D man=true
+-    -D tracker3=true
+   )
+ 
+   CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-  arch-meson gtk build "${meson_options[@]}"
++  artix-meson gtk-${pkgver} build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -101,7 +96,6 @@
+ }
+ 
+ package_gtk3() {
+-  depends+=(gtk-update-icon-cache)
+   optdepends=('evince: Default print preview command')
+   provides=(
+     gtk3-print-backends
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,9 +35,9 @@
+   libxkbcommon
+   libxrandr
+   libxrender
++  mesa
+   pango
+   shared-mime-info
+-  tracker3
+   wayland
+ )
+ makedepends=(
+@@ -49,9 +49,9 @@
+   sassc
+   wayland-protocols
+ )
+-_commit=3e6fd55ee00d4209ce2f2af292829e4d6f674adc  # tags/3.24.38^0
+ prepare() {
+-  cd gtk
++  cd gtk-${pkgver}
+ }
+ build() {
+   local meson_options=(
+@@ -61,10 +61,9 @@
+     -D gtk_doc=true
+     -D introspection=true
+     -D man=true
+-    -D tracker3=true
+   )
+   CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-  arch-meson gtk build "${meson_options[@]}"
++  artix-meson gtk-${pkgver} build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -77,7 +76,6 @@
+   done
+ }
+ package_gtk3() {
+-  depends+=(gtk-update-icon-cache)
+   provides=(
+     gtk3-print-backends
+     libgailutil-3.so

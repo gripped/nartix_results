@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+   export CXX='g++ -m32'
+   export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+ 
+-  arch-meson orc build \
++  artix-meson orc build \
+     --libdir=/usr/lib32
+   ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+   export CC='gcc -m32'
+   export CXX='g++ -m32'
+   export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+-  arch-meson orc build \
++  artix-meson orc build \
+     --libdir=/usr/lib32
+   ninja -C build
+ }

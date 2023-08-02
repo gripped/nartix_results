@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ license=('LGPL3')
+ depends=('glibc' 'lcms2')
+ makedepends=('git' 'meson' 'gobject-introspection' 'vala')
++options=('debug')
+ source=("git+https://gitlab.gnome.org/GNOME/babl.git#tag=$_tag")
+ sha256sums=('SKIP')
+ 
+@@ -22,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson "${pkgname}" build
++  artix-meson "${pkgname}" build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,10 +2,11 @@
+ _tag='45c18c8cfaf7d2c610d0c4bc1b33d58c37bc9d0f'
+ depends=('glibc' 'lcms2')
+ makedepends=('git' 'meson' 'gobject-introspection' 'vala')
+ prepare() {
+   sed -i s/Description/description/ "${pkgname}"/meson.build
+ }
+ build() {
+-  arch-meson "${pkgname}" build
++  artix-meson "${pkgname}" build
+   ninja -C build
+ }

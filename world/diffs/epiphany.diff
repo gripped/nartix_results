@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=epiphany
+-pkgver=44.6
++pkgver=44.5
+ pkgrel=1
+ pkgdesc="A GNOME web browser based on the WebKit rendering engine"
+ url="https://wiki.gnome.org/Apps/Web"
+@@ -12,6 +12,7 @@
+   gtk4
+   icu
+   libadwaita
++  json-glib
+   libarchive
+   libportal-gtk4
+   libsoup3
+@@ -35,7 +36,8 @@
+   xorg-server-xvfb
+ )
+ groups=(gnome)
+-_commit=6577b8821be640301224f3f1fc7513686f369a44  # tags/44.6^0
++options=(debug)
++_commit=2aef87b1850f0261be0d2b0e68493ea6c25abb90  # tags/44.5^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/epiphany.git#commit=$_commit"
+   fix-test.diff
+@@ -55,7 +57,7 @@
+ }
+ 
+ build() {
+-  arch-meson epiphany build
++  artix-meson epiphany build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+   gtk4
+   icu
+   libadwaita
++  json-glib
+   libarchive
+   libportal-gtk4
+   libsoup3
+@@ -28,12 +29,13 @@
+   xorg-server-xvfb
+ )
+ groups=(gnome)
+-_commit=6577b8821be640301224f3f1fc7513686f369a44  # tags/44.6^0
++_commit=2aef87b1850f0261be0d2b0e68493ea6c25abb90  # tags/44.5^0
+ prepare() {
+   cd epiphany
+   git apply -3 ../fix-test.diff
+ }
+ build() {
+-  arch-meson epiphany build
++  artix-meson epiphany build
+   meson compile -C build
+ }

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+ }
+ 
+ build() {
+-  arch-meson pangomm build -D maintainer-mode=true
++  artix-meson pangomm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+   cd pangomm
+ }
+ build() {
+-  arch-meson pangomm build -D maintainer-mode=true
++  artix-meson pangomm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ package_pangomm-2.48() {

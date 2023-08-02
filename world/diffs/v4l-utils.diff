@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ conflicts=('libv4l')
+ backup=(etc/rc_maps.cfg)
+ license=('LGPL')
+-depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'systemd-libs' 'json-c')
++depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo' 'json-c')
+ makedepends=('qt5-base' 'alsa-lib')
+ optdepends=('qt5-base: for qv4l2 and qvidcap' 'alsa-lib: for qv4l2')
+ source=(https://linuxtv.org/downloads/v4l-utils/${pkgname}-${pkgver}.tar.bz2{,.asc})
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ replaces=('libv4l')
+ conflicts=('libv4l')
+ backup=(etc/rc_maps.cfg)
+-depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'systemd-libs' 'json-c')
++depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo' 'json-c')
+ makedepends=('qt5-base' 'alsa-lib')
+ build() {
+   cd "${srcdir}/${pkgname}-${pkgver}"

@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ url='http://ddcutil.com/'
+ arch=('x86_64')
+ license=('GPL2')
+-depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'kmod')
+-makedepends=('systemd')
++depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'dkms')
++makedepends=('libudev')
+ source=(https://github.com/rockowitz/ddcutil/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+ sha512sums=('e53820662c12cd3a91b1182e02ad74841238117c129e88c8bcdede42d4e0dec22a9c1ec37a7b1e1dd512f2cf7ef410e737d9fdba62d95ea48e5912e43e6d3857')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=ddcutil
+-depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'kmod')
+-makedepends=('systemd')
++depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'dkms')
++makedepends=('libudev')
+ prepare() {
+   cd $pkgname-$pkgver
+   NOCONFIGURE=1 ./autogen.sh

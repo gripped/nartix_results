@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -92,7 +92,7 @@
+     -D gst-examples=disabled
+     -D libnice=disabled
+     -D orc-source=system
+-    -D package-origin="https://www.archlinux.org/"
++    -D package-origin="https://www.artixlinux.org/"
+     -D vaapi=enabled
+ 
+     -D gstreamer:package-name="Arch Linux gstreamer $pkgver-$pkgrel"
+@@ -132,7 +132,7 @@
+     -D gst-editing-services:validate=disabled
+   )
+ 
+-  arch-meson gstreamer build "${meson_options[@]}"
++  artix-meson gstreamer build "${meson_options[@]}"
+   meson configure build  # Print config
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,7 +59,7 @@
+     -D gst-examples=disabled
+     -D libnice=disabled
+     -D orc-
+-    -D package-origin="https://www.archlinux.org/"
++    -D package-origin="https://www.artixlinux.org/"
+     -D vaapi=enabled
+     -D gstreamer:package-name="Arch Linux gstreamer $pkgver-$pkgrel"
+     -D gst-plugins-base:package-name="Arch Linux gst-plugins-base $pkgver-$pkgrel"
+@@ -96,7 +96,7 @@
+     -D gst-plugins-ugly:sidplay=disabled
+     -D gst-editing-services:validate=disabled
+   )
+-  arch-meson gstreamer build "${meson_options[@]}"
++  artix-meson gstreamer build "${meson_options[@]}"
+   meson configure build  # Print config
+   meson compile -C build
+ }

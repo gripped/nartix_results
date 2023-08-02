@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,6 +34,7 @@
+   yelp-tools
+ )
+ checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=1513eb4d705c71635cdc12712811e4f78b2983e9  # tags/44.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/cheese.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -52,7 +53,7 @@
+     -D tests=true
+   )
+ 
+-  arch-meson cheese build "${meson_options[@]}"
++  artix-meson cheese build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,6 +27,7 @@
+   yelp-tools
+ )
+ checkdepends=(xorg-server-xvfb)
+ _commit=1513eb4d705c71635cdc12712811e4f78b2983e9  # tags/44.1^0
+ prepare() {
+   cd cheese
+@@ -35,7 +36,7 @@
+   local meson_options=(
+     -D tests=true
+   )
+-  arch-meson cheese build "${meson_options[@]}"
++  artix-meson cheese build "${meson_options[@]}"
+   meson compile -C build
+ }
+ package_libcheese() {

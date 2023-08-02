@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+   'python-yaml'
+   'python-netifaces'
+   'iproute2'
+-  'systemd'
++  'elogind'
+ )
+ makedepends=(
+   'python'
+@@ -19,9 +19,16 @@
+   'pandoc'
+ )
+ source=(
+-  "https://github.com/CanonicalLtd/${pkgname}/archive/${pkgver}.tar.gz"
++  "${pkgname}-${pkgver}.tar.gz::https://github.com/CanonicalLtd/${pkgname}/archive/${pkgver}.tar.gz"
++  "0001-no-systemd.patch"
+ )
+-sha256sums=('09ca8c191f4cc387edb816c48aa77bcaffb712ba54a188fd27ce961eea02aa53')
++sha256sums=('09ca8c191f4cc387edb816c48aa77bcaffb712ba54a188fd27ce961eea02aa53'
++            '85b404c4f0a0090a4f42f55624089f57da5f539410bc2e477a86a9c70d411ba0')
++
++prepare() {
++  cd "${pkgname}-${pkgver}"
++  patch -Np1 -i ../0001-no-systemd.patch
++}
+ 
+ build() {
+   cd "${pkgname}-${pkgver}"
+@@ -35,4 +42,6 @@
+ package() {
+   cd "${pkgname}-${pkgver}"
+   make DESTDIR="${pkgdir}" ROOTPREFIX=/usr SBINDIR=/usr/bin install
++
++  rm "$pkgdir"/netplan
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,13 +4,17 @@
+   'python-yaml'
+   'python-netifaces'
+   'iproute2'
+-  'systemd'
++  'elogind'
+ )
+ makedepends=(
+   'python'
+   'pkgconf'
+   'pandoc'
+ )
++prepare() {
++  cd "${pkgname}-${pkgver}"
++  patch -Np1 -i ../0001-no-systemd.patch
++}
+ build() {
+   cd "${pkgname}-${pkgver}"
+   sed -e "s/-Werror//g" -i Makefile

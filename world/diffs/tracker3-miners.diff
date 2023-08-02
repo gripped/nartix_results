@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,6 +38,7 @@
+   python-tappy
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=eb4b8e1e939b5a01418cac3795e198116968b351  # tags/3.5.2^0
+ source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -54,9 +55,10 @@
+ build() {
+   local meson_options=(
+     -D tests_tap_protocol=true
++    -D systemd_user_services=false
+   )
+ 
+-  arch-meson tracker-miners build "${meson_options[@]}"
++  artix-meson tracker-miners build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,6 +31,7 @@
+   python-tappy
+ )
+ groups=(gnome)
+ _commit=eb4b8e1e939b5a01418cac3795e198116968b351  # tags/3.5.2^0
+ prepare() {
+   cd tracker-miners
+@@ -38,7 +39,8 @@
+ build() {
+   local meson_options=(
+     -D tests_tap_protocol=true
++    -D systemd_user_services=false
+   )
+-  arch-meson tracker-miners build "${meson_options[@]}"
++  artix-meson tracker-miners build "${meson_options[@]}"
+   meson compile -C build
+ }

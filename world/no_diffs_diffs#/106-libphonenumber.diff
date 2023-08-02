@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -49,7 +49,7 @@
+     -DUSE_STDMUTEX=ON
+   )
+ 
+-  cmake -S $pkgname/cpp -B build "${cmake_options[@]}"
++  artix-cmake -S $pkgname/cpp -B build "${cmake_options[@]}"
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,6 +25,6 @@
+     -DUSE_BOOST=OFF
+     -DUSE_STDMUTEX=ON
+   )
+-  cmake -S $pkgname/cpp -B build "${cmake_options[@]}"
++  artix-cmake -S $pkgname/cpp -B build "${cmake_options[@]}"
+   cmake --build build
+ }

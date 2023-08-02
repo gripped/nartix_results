@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,6 @@
+   libsecret
+   openssh
+   p11-kit
+-  systemd
+ )
+ makedepends=(
+   gi-docgen
+@@ -37,7 +36,7 @@
+ }
+ 
+ build() {
+-  arch-meson gcr build
++  artix-meson gcr build -Dsystemd=disabled
+   meson compile -C build
+ }
+ 
+@@ -51,7 +50,6 @@
+     libgck-2.so
+     libgcr-4.so
+   )
+-  install=gcr-4.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+   libsecret
+   openssh
+   p11-kit
+-  systemd
+ )
+ makedepends=(
+   gi-docgen
+@@ -21,7 +20,7 @@
+   cd gcr
+ }
+ build() {
+-  arch-meson gcr build
++  artix-meson gcr build -Dsystemd=disabled
+   meson compile -C build
+ }
+ package_gcr-4() {
+@@ -29,7 +28,6 @@
+     libgck-2.so
+     libgcr-4.so
+   )
+-  install=gcr-4.install
+   meson install -C build --destdir "$pkgdir"
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/doc

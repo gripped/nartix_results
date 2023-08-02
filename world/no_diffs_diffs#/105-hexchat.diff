@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ sha256sums=('SKIP')
+ 
+ build() {
+-  arch-meson hexchat build \
++  artix-meson hexchat build \
+     -Dwith-lua='lua' \
+     -Dtext-frontend='true'
+   ninja -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+          'libcanberra' 'openssl' 'pango' 'pciutils')
+ makedepends=('git' 'intltool' 'iso-codes' 'lua' 'meson' 'perl' 'python-cffi')
+ build() {
+-  arch-meson hexchat build \
++  artix-meson hexchat build \
+     -Dwith-lua='lua' \
+     -Dtext-frontend='true'
+   ninja -C build

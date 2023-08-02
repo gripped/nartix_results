@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,7 @@
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \
++    -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \
++    -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }

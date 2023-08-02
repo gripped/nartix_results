@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ conflicts=('mod_proxy_uwsgi')
+ replaces=('mod_proxy_uwsgi')
+ depends=('zlib' 'apr-util' 'pcre2' 'libnghttp2' 'openssl' 'libxcrypt')
+-makedepends=('libxml2' 'lua' 'curl' 'brotli' 'jansson' 'db' 'systemd')
++makedepends=('libxml2' 'lua' 'curl' 'brotli' 'jansson' 'db')
+ optdepends=(
+     'lua: for mod_lua module'
+     'libxml2: for mod_proxy_html, mod_xml2enc modules'
+@@ -29,20 +29,17 @@
+     'uwsgi: for mod_proxy_uwsgi module'
+     'lynx: apachectl status'
+     'perl: for apxs and dbmmanage'
+-    'systemd-libs: for mod_systemd module'
+ )
+ source=(
+     https://www.apache.org/dist/httpd/httpd-${pkgver}.tar.bz2{,.asc}
+     apache.tmpfiles.conf
+     httpd.logrotate
+-    httpd.service
+     arch.layout
+ )
+ sha256sums=('dbccb84aee95e095edfbb81e5eb926ccd24e6ada55dcd83caecb262e5cf94d2a'
+             'SKIP'
+             '63da1a420f4714a3e7af2672d28384419cc7eedbe7bf35baebd02938fabc15bf'
+-            '0bbbfae23a917b2fce0bf8f900f60319b50769224a96314e9301a75ccd078e16'
+-            'f574bac6d5f398e7a649fc0e1ca66ff01ad4ef34dac71258e93d8a9d9a2b3960'
++            'd8c5465ba6490e6ee3ddeb69285a0c6a4fca8130fc0f516f2f3563bc171c8929'
+             'dda05c6e76f12624e418ca18a36f2e90ec1c5b1cc52fed7142fce6076ec413f3')
+ validpgpkeys=('A93D62ECC3C8EA12DB220EC934EA76E6791485A8' # Jim Jagielski
+               'B9E8213AEFB861AF35A41F2C995E35221AD84DFF'
+@@ -84,7 +81,7 @@
+       --enable-proxy-http --enable-proxy-ftp \
+       --enable-dbd --enable-imagemap --enable-ident --enable-cern-meta \
+       --enable-lua --enable-xml2enc --enable-http2 \
+-      --enable-proxy-http2 --enable-md --enable-brotli --enable-systemd \
++      --enable-proxy-http2 --enable-md --enable-brotli \
+       --with-apr=/usr/bin/apr-1-config \
+       --with-apr-util=/usr/bin/apu-1-config \
+       --with-pcre2
+@@ -99,7 +96,6 @@
+ 
+   install -D -m644 "${srcdir}/httpd.logrotate" "${pkgdir}/etc/logrotate.d/httpd"
+   install -D -m644 "${srcdir}/apache.tmpfiles.conf" "${pkgdir}/usr/lib/tmpfiles.d/apache.conf"
+-  install -D -m644 "${srcdir}/httpd.service" "${pkgdir}/usr/lib/systemd/system/httpd.service"
+   install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+ 
+   ln -fs /usr/lib/httpd/modules "${pkgdir}/etc/httpd/modules"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ conflicts=('mod_proxy_uwsgi')
+ replaces=('mod_proxy_uwsgi')
+ depends=('zlib' 'apr-util' 'pcre2' 'libnghttp2' 'openssl' 'libxcrypt')
+-makedepends=('libxml2' 'lua' 'curl' 'brotli' 'jansson' 'db' 'systemd')
++makedepends=('libxml2' 'lua' 'curl' 'brotli' 'jansson' 'db')
+  <stefan@eissing.org>
+               'E3480043595621FE56105F112AB12A7ADC55C003' # Daniel Ruggeri
+ 	      '65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA')  # Eric Covener <covener@apache.org>
+@@ -45,7 +45,7 @@
+       --enable-proxy-http --enable-proxy-ftp \
+       --enable-dbd --enable-imagemap --enable-ident --enable-cern-meta \
+       --enable-lua --enable-xml2enc --enable-http2 \
+-      --enable-proxy-http2 --enable-md --enable-brotli --enable-systemd \
++      --enable-proxy-http2 --enable-md --enable-brotli \
+       --with-apr=/usr/bin/apr-1-config \
+       --with-apr-util=/usr/bin/apu-1-config \
+       --with-pcre2

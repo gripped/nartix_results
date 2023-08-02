@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,9 +9,8 @@
+ depends=('xaw3d' 'ghostscript')
+ optdepends=('perl: gv-update-userconfig')
+ options=('emptydirs')
+-source=(https://ftp.gnu.org/gnu/gv/${pkgname}-${pkgver}.tar.gz{,.sig} gv.desktop)
++source=(https://ftp.gnu.org/gnu/gv/${pkgname}-${pkgver}.tar.gz gv.desktop)
+ sha256sums=('2162b3b3a95481d3855b3c4e28f974617eef67824523e56e20b56f12fe201a61'
+-            'SKIP'
+             '9b272fe86a7bdfbb170dfd850ae18204ef1ed0982bd88a8b2b3db7a7f5e87eb7')
+ validpgpkeys=('5A15E3DBE8D7DE6F2AC69EB5B1AF90204976D4CD')
+ 

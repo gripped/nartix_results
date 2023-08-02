@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,7 @@
+ optdepends=(
+   "lib32-librsvg: Load .svg, .svgz, and .svg.gz"
+ )
++options=(debug)
+ _commit=9ac257eb38f772fec4253e8051743029e75a2acd  # tags/2.42.10^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gdk-pixbuf.git#commit=$_commit"
+@@ -37,7 +38,7 @@
+   export CXX="g++ -m32"
+   export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
+ 
+-  arch-meson gdk-pixbuf build \
++  artix-meson gdk-pixbuf build \
+     --libdir /usr/lib32 \
+     -D builtin_loaders=all \
+     -D introspection=disabled \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=lib32-gdk-pixbuf2
+ depends=(lib32-glib2 lib32-libpng lib32-libtiff lib32-libjpeg gdk-pixbuf2)
+ makedepends=(git meson)
+ _commit=9ac257eb38f772fec4253e8051743029e75a2acd  # tags/2.42.10^0
+ prepare() {
+   cd gdk-pixbuf
+@@ -10,7 +11,7 @@
+   export CC="gcc -m32"
+   export CXX="g++ -m32"
+   export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
+-  arch-meson gdk-pixbuf build \
++  artix-meson gdk-pixbuf build \
+     --libdir /usr/lib32 \
+     -D builtin_loaders=all \
+     -D introspection=disabled \

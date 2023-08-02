@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(glibc)
+ makedepends=(cmake)
+ provides=(libexpat.so)
++options=(debug)
+ source=(https://github.com/libexpat/libexpat/releases/download/R_${pkgver//./_}/$pkgname-$pkgver.tar.bz2{,.asc})
+ sha512sums=('22fd904d75aab7506a85c03519b9cf79e44898c8e1ba6abf6cb7f95de71b8e63a7e2d5cf4395e3627d46035ea29342b3e631a8809fef8aad3f59976dc075ad17'
+             'SKIP')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,7 @@
+ depends=(glibc)
+ makedepends=(cmake)
+ provides=(libexpat.so)
+ build() {
+   cmake -DCMAKE_INSTALL_PREFIX=/usr \
+         -DCMAKE_BUILD_TYPE=None \

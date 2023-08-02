@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ url="https://www.freedesktop.org/wiki/Software/libmbim/"
+ arch=(x86_64)
+ license=(GPL2)
+-depends=(glib2 bash systemd)
++depends=(glib2 bash)
+ makedepends=(gtk-doc meson git help2man gobject-introspection bash-completion)
+ provides=(libmbim-glib.so)
+ _commit=7f1c7907c4654ba5c619a635cef5475ca161d027  # tags/1.28.4^0
+@@ -23,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson libmbim build -D gtk_doc=true
++  artix-meson libmbim build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=libmbim
+-depends=(glib2 bash systemd)
++depends=(glib2 bash)
+ makedepends=(gtk-doc meson git help2man gobject-introspection bash-completion)
+ provides=(libmbim-glib.so)
+ _commit=7f1c7907c4654ba5c619a635cef5475ca161d027  # tags/1.28.4^0
+@@ -7,6 +7,6 @@
+   cd libmbim
+ }
+ build() {
+-  arch-meson libmbim build -D gtk_doc=true
++  artix-meson libmbim build -D gtk_doc=true
+   meson compile -C build
+ }

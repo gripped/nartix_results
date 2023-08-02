@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _pkgname=aws-crt-python
+ pkgname=python-awscrt
+-pkgver=0.17.0
+-_tag=348f79dfdb5fd5cc05c632f48baf4eaf9f485fe7
++pkgver=0.16.24
++_tag=3bc469ea77b2b26d04c1c8034758e4379a27c5a5
+ pkgrel=1
+ pkgdesc='A common runtime for AWS Python projects'
+ arch=(x86_64)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ _pkgname=aws-crt-python
+ pkgname=python-awscrt
+-_tag=348f79dfdb5fd5cc05c632f48baf4eaf9f485fe7
++_tag=3bc469ea77b2b26d04c1c8034758e4379a27c5a5
+ depends=(glibc gcc-libs python)
+ makedepends=(git cmake python-build python-installer python-setuptools python-wheel)
+ checkdepends=(python-websockets)

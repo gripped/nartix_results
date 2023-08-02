@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,6 +33,7 @@
+   tracker3-miners
+ )
+ checkdepends=(python-gobject)
++options=(debug)
+ _commit=c5504fe6204e3bbbfb75ba8f6a153277062feb60  # tags/44.2.1^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
+@@ -58,7 +59,7 @@
+     -D packagekit=false
+   )
+ 
+-  arch-meson nautilus build "${meson_options[@]}"
++  artix-meson nautilus build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,6 +26,7 @@
+   tracker3-miners
+ )
+ checkdepends=(python-gobject)
+ _commit=c5504fe6204e3bbbfb75ba8f6a153277062feb60  # tags/44.2.1^0
+ prepare() {
+   cd nautilus
+@@ -36,7 +37,7 @@
+     -D docs=true
+     -D packagekit=false
+   )
+-  arch-meson nautilus build "${meson_options[@]}"
++  artix-meson nautilus build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {

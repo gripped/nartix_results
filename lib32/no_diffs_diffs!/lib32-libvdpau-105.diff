@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+   export CXX='g++ -m32'
+   export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+ 
+-  arch-meson libvdpau build \
++  artix-meson libvdpau build \
+     --libdir=/usr/lib32
+   ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+   export CC='gcc -m32'
+   export CXX='g++ -m32'
+   export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+-  arch-meson libvdpau build \
++  artix-meson libvdpau build \
+     --libdir=/usr/lib32
+   ninja -C build
+ }

@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=linux-zen
+-pkgver=6.4.7.zen1
+-pkgrel=2
++pkgver=6.4.4.zen1
++pkgrel=1
+ pkgdesc='Linux ZEN'
+ _srctag=v${pkgver%.*}-${pkgver##*.}
+ url="https://github.com/zen-kernel/zen-kernel/commits/$_srctag"
+@@ -15,7 +15,6 @@
+   libelf
+   pahole
+   perl
+-  python
+   tar
+   xz
+ 
+@@ -37,9 +36,9 @@
+   C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D  # Steven Barrett <steven@liquorix.net>
+ )
+ b2sums=('SKIP'
+-        '259b889056573ca178c66eaeee32df053d677e861788288c21f10fe861b66d4e82da4800b1f2b90dc85a98473928528019e54c1885e9f4683d69c1dbb869a9f5')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        '3030f0ba73cc349456b9eadb1e2a02a10f82b0dbadbae3eba8c88b3bda573cdd7c345c857258737fbc39528123adf0de00d58d968292657aaa9f8e2dfd939e8e')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+   libelf
+   pahole
+   perl
+-  python
+   tar
+   xz
+   graphviz
+@@ -20,7 +19,7 @@
+ _srcname=zen-kernel
+   C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D  # Steven Barrett <steven@liquorix.net>
+ )
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ _make() {

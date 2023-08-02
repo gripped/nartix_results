@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,6 +59,7 @@
+   'system-config-printer: printer settings'
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=6af9a48c3238114dab6480f1fb3bdc818dc4a647  # tags/44.3^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
+@@ -91,7 +92,7 @@
+     -D malcontent=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,6 +41,7 @@
+   xorg-server-xvfb
+ )
+ groups=(gnome)
+ _commit=6af9a48c3238114dab6480f1fb3bdc818dc4a647  # tags/44.3^0
+ prepare() {
+   cd $pkgname
+@@ -54,6 +55,6 @@
+     -D documentation=true
+     -D malcontent=true
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }

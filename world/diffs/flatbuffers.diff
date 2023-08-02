@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+ 
+   cd $pkgbase-$pkgver
+   sed -i 's#${test_dir}/../flatc#${test_dir}/../../build/flatc#' tests/PythonTest.sh
++  sed -i 's#${test_dir}/../../python#${test_dir}/../python#' tests/PythonTest.sh
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+   sed -i 's/-Werror=/-W/g;s/-Werror//g' $pkgname-$pkgver/CMakeLists.txt
+   cd $pkgbase-$pkgver
+   sed -i 's#${test_dir}/../flatc#${test_dir}/../../build/flatc#' tests/PythonTest.sh
++  sed -i 's#${test_dir}/../../python#${test_dir}/../python#' tests/PythonTest.sh
+ }
+ build() {
+   cmake -B build -S $pkgbase-$pkgver \

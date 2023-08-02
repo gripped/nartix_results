@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,7 @@
+ sha256sums=('5e69fdeccb060c7e6b5924cef2e65bee5a08ace4127005b95344ed3077dc6397'
+             'SKIP')
+ validpgpkeys=(CB9387521E1EE0127DA804843FDBB55084CC5D84) # Harald Sitter <sitter@kde.org>
++options=(debug)
+ 
+ build() {
+   cmake -B build -S phonon-backend-vlc-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ depends=(vlc phonon-qt5)
+ provides=(phonon-qt5-backend)
+ makedepends=(extra-cmake-modules qt5-tools)
+ build() {
+   cmake -B build -S phonon-backend-vlc-$pkgver
+   cmake --build build

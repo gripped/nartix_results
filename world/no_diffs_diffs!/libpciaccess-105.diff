@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ url="https://xorg.freedesktop.org/"
+ depends=('glibc' 'zlib')
+ makedepends=('xorg-util-macros' 'meson')
++options=('debug')
+ source=(${url}/releases/individual/lib/${pkgname}-${pkgver}.tar.xz{,.sig})
+ sha512sums=('8484605c66ef18c8d8a3e029a6d33e26fcaa450c1263790d89ac8b0a160ffb2dfceaa6140ac9ad7d8087283ecbec8ac801f757e44890d547c3cbecd2c922ca47'
+             'SKIP')
+@@ -18,7 +19,7 @@
+ }
+ 
+ build() {
+-  arch-meson "$pkgname"-$pkgver build
++  artix-meson "$pkgname"-$pkgver build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ pkgname=libpciaccess
+ depends=('glibc' 'zlib')
+ makedepends=('xorg-util-macros' 'meson')
+ prepare() {
+   mkdir build
+ }
+ build() {
+-  arch-meson "$pkgname"-$pkgver build
++  artix-meson "$pkgname"-$pkgver build
+   ninja -C build
+ }

@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,8 +10,8 @@
+ makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
+ depends=(
+   'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
+-  'libxml2' 'libpulse' 'libxnvctrl' 'systemd-libs' 'ncurses' 'curl'
+-  libncursesw.so libXNVCtrl.so libsystemd.so libpulse.so libcurl.so)
++  'libxml2' 'libpulse' 'libxnvctrl' 'ncurses' 'curl'
++  libncursesw.so libXNVCtrl.so libpulse.so libcurl.so)
+ source=("git+https://github.com/brndnmtthws/conky.git#tag=v$pkgver?signed")
+ sha512sums=('SKIP')
+ b2sums=('SKIP')
+@@ -48,7 +48,7 @@
+     -D BUILD_RSS=ON \
+     -D BUILD_NVIDIA=ON \
+     -D BUILD_PULSEAUDIO=ON \
+-    -D BUILD_JOURNAL=ON \
++    -D BUILD_JOURNAL=OFF \
+     -D CMAKE_INSTALL_PREFIX=/usr \
+     -Wno-dev \
+     -S .
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,8 +3,8 @@
+ makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
+ depends=(
+   'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
+-  'libxml2' 'libpulse' 'libxnvctrl' 'systemd-libs' 'ncurses' 'curl'
+-  libncursesw.so libXNVCtrl.so libsystemd.so libpulse.so libcurl.so)
++  'libxml2' 'libpulse' 'libxnvctrl' 'ncurses' 'curl'
++  libncursesw.so libXNVCtrl.so libpulse.so libcurl.so)
+ prepare() {
+   cd $pkgname
+   rm -r tests/catch2
+@@ -28,7 +28,7 @@
+     -D BUILD_RSS=ON \
+     -D BUILD_NVIDIA=ON \
+     -D BUILD_PULSEAUDIO=ON \
+-    -D BUILD_JOURNAL=ON \
++    -D BUILD_JOURNAL=OFF \
+     -D CMAKE_INSTALL_PREFIX=/usr \
+     -Wno-dev \
+     -S .

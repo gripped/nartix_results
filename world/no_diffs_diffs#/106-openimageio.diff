@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   cd oiio-$pkgver
+ 
+   local python_version=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+-  cmake \
++  artix-cmake \
+     -Bbuild \
+     -GNinja \
+     -DUSE_PYTHON=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ build() {
+   cd oiio-$pkgver
+   local python_version=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+-  cmake \
++  artix-cmake \
+     -Bbuild \
+     -GNinja \
+     -DUSE_PYTHON=ON \

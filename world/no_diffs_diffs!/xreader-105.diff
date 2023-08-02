@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ b2sums=('96269b3a2ed0c8245cdd9e137e7bfabbe3a7d8fe048087c92aa858af313d9acdc95910055ec0f6d1a723af71f8e3b8bb3935f5943b083ba237c18824a0402545')
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build \
++  artix-meson ${pkgname}-${pkgver} build \
+     --libexecdir=lib/${pkgname} \
+     -Dmathjax-directory=/usr/share/mathjax2 \
+     -Dcomics=true \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ makedepends=(meson samurai intltool itstool gobject-introspection djvulibre
+              libgxps libspectre texlive-bin)
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build \
++  artix-meson ${pkgname}-${pkgver} build \
+     --libexecdir=lib/${pkgname} \
+     -Dmathjax-directory=/usr/share/mathjax2 \
+     -Dcomics=true \

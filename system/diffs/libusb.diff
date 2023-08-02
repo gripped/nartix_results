@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://libusb.info/"
+ license=(LGPL2.1)
+ depends=(glibc)
+-makedepends=(systemd)
++makedepends=(udev)
+ provides=(libusb-1.0.so)
+ source=(https://github.com/$pkgname/$pkgname/releases/download/v$pkgver/$pkgname-$pkgver.tar.bz2)
+ sha512sums=('fcdb85c98f21639668693c2fd522814d440972d65883984c4ae53d0555bdbdb7e8c7a32199cd4b01113556a1eb5be7841b750cc73c9f6bda79bfe1af80914e71')
+@@ -31,7 +31,7 @@
+ 
+ package () {
+   depends+=(
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+ 
+   make DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=libusb
+ depends=(glibc)
+-makedepends=(systemd)
++makedepends=(udev)
+ provides=(libusb-1.0.so)
+ prepare() {
+   cd $pkgname-$pkgver
+@@ -14,7 +14,7 @@
+ }
+ package () {
+   depends+=(
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+   make DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+   install -vDm 644 $pkgname-$pkgver/{AUTHORS,ChangeLog,README} -t "$pkgdir/usr/share/doc/$pkgname/"

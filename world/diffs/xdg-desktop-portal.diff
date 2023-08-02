@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,6 @@
+   glib2
+   pipewire
+   rtkit
+-  systemd
+ )
+ makedepends=(
+   docbook-xsl
+@@ -23,6 +22,7 @@
+   meson
+   xmlto
+ )
++options=(debug)
+ _commit=88af6c8ca4106fcf70925355350a669848e9fd5a  # tags/1.16.0^0
+ source=("git+https://github.com/flatpak/xdg-desktop-portal#commit=$_commit")
+ b2sums=('SKIP')
+@@ -39,7 +39,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+   glib2
+   pipewire
+   rtkit
+-  systemd
+ )
+ makedepends=(
+   docbook-xsl
+@@ -16,12 +15,13 @@
+   meson
+   xmlto
+ )
+ _commit=88af6c8ca4106fcf70925355350a669848e9fd5a  # tags/1.16.0^0
+ prepare() {
+   cd $pkgname
+   git cherry-pick -n 2a219279997c2124c8a639b0d009c9946ec97b40
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

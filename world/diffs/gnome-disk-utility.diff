@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,16 +6,17 @@
+ url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
+ arch=(x86_64)
+ license=(GPL)
++groups=(gnome)
+ depends=(
+   gtk3
+   libcanberra
+   libdvdread
++  libelogind
+   libhandy
+   libnotify
+   libpwquality
+   libsecret
+   parted
+-  systemd
+   udisks2
+ )
+ makedepends=(
+@@ -23,7 +24,7 @@
+   git
+   meson
+ )
+-groups=(gnome)
++options=(debug)
+ _commit=68c13081e29973b31ee37245626b1755b8cd53a6  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -34,7 +35,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dlogind=libelogind
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,15 @@
+ pkgname=gnome-disk-utility
++groups=(gnome)
+ depends=(
+   gtk3
+   libcanberra
+   libdvdread
++  libelogind
+   libhandy
+   libnotify
+   libpwquality
+   libsecret
+   parted
+-  systemd
+   udisks2
+ )
+ makedepends=(
+@@ -16,9 +17,9 @@
+   git
+   meson
+ )
+-groups=(gnome)
+ _commit=68c13081e29973b31ee37245626b1755b8cd53a6  # tags/44.0^0
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dlogind=libelogind
+   meson compile -C build
+ }

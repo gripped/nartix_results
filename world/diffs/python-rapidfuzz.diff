@@ -1,0 +1,140 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,76 +1,36 @@
+ 
+-pkgname=python-rapidfuzz
+-pkgver=3.1.2
++_pkgname=rapidfuzz
++pkgname=python-$_pkgname
++pkgver=3.1.1
+ pkgrel=1
+ pkgdesc='Rapid fuzzy string matching in Python using various string metrics'
+-arch=('x86_64')
++arch=(x86_64)
+ url='https://github.com/maxbachmann/rapidfuzz'
+-license=('MIT')
+-depends=(
+-  'glibc'
+-  'gcc-libs'
+-  'python'
+-)
+-makedepends=(
+-  'git'
+-  'python-build'
+-  'python-installer'
+-  'cython'
+-  'python-scikit-build'
+-  'rapidfuzz-cpp'
+-)
+-checkdepends=('python-hypothesis' 'python-pandas' 'python-pytest')
+-optdepends=('python-numpy')
+-_commit='b23067f659c605ba6ca31df823d1a2603c258b6b'
+-source=(
+-  "$pkgname::git+$url#commit=$_commit"
+-  'github.com-taskflow-taskflow::git+https://github.com/taskflow/taskflow'
+-  'remove-version-constraints.patch'
+-)
+-b2sums=('SKIP'
+-        'SKIP'
+-        '00acfe61b719f592a97bf01376f783737c71eb886b78cd08d4aac11d30524abfc8677a17eef511c0593f7f01e52b261ae1556abd03e54ba10701ec1c5e68948c')
+-
+-pkgver() {
+-  cd "$pkgname"
+-
+-  git describe --tags | sed 's/^v//'
+-}
+-
+-prepare() {
+-  cd "$pkgname"
+-
+-  patch -p1 -i "$srcdir/remove-version-constraints.patch"
+-
+-  git submodule init extern/taskflow
+-  git config submodule.extern/taskflow.url "$srcdir/github.com-taskflow-taskflow"
+-  git -c protocol.file.allow=always submodule update
+-}
++license=(MIT)
++depends=(python)
++makedepends=(python-build python-installer python-scikit-build rapidfuzz-cpp)
++checkdepends=(python-hypothesis python-pandas python-pytest)
++optdepends=(python-numpy)
++source=(https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz)
++sha256sums=('a06a08be3cb7d7df7993dd16e84aaf59bd5a7ff98a9f1b3e893d18b273a71c64')
+ 
+ build() {
+-  cd "$pkgname"
+-
++  cd $_pkgname-$pkgver
+   RAPIDFUZZ_BUILD_EXTENSION=1 \
+-    python -m build --wheel --no-isolation
++  python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd "$pkgname"
+-
++  cd $_pkgname-$pkgver
+   python -m venv --system-site-packages test-env
+   test-env/bin/python -m installer dist/*.whl
+   test-env/bin/python -m pytest
+ }
+ 
+ package() {
+-  cd "$pkgname"
+-
++  cd $_pkgname-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ 
+-  install -vDm644 -t "$pkgdir/usr/share/doc/$pkgname" README.md
+-
+-  local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+-  install -d "$pkgdir/usr/share/licenses/$pkgname"
+-  ln -s "$site_packages/${pkgname#python-}-$pkgver.dist-info/LICENSE" \
+-    "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
++  install -Dm644 README.md -t "$pkgdir"/usr/share/doc/$pkgname
++  install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,10 @@
+-pkgname=python-rapidfuzz
+-depends=(
+-  'glibc'
+-  'gcc-libs'
+-  'python'
+-)
+-makedepends=(
+-  'git'
+-  'python-build'
+-  'python-installer'
+-  'cython'
+-  'python-scikit-build'
+-  'rapidfuzz-cpp'
+-)
+-checkdepends=('python-hypothesis' 'python-pandas' 'python-pytest')
+-_commit='b23067f659c605ba6ca31df823d1a2603c258b6b'
+-prepare() {
+-  cd "$pkgname"
+-  patch -p1 -i "$srcdir/remove-version-constraints.patch"
+-  git submodule init extern/taskflow
+-  git config submodule.extern/taskflow.url "$srcdir/github.com-taskflow-taskflow"
+-  git -c protocol.file.allow=always submodule update
++_pkgname=rapidfuzz
++pkgname=python-$_pkgname
++depends=(python)
++makedepends=(python-build python-installer python-scikit-build rapidfuzz-cpp)
++checkdepends=(python-hypothesis python-pandas python-pytest)
++build() {
++  cd $_pkgname-$pkgver
++  RAPIDFUZZ_BUILD_EXTENSION=1 \
++  python -m build --wheel --no-isolation
+ }
+-build() {
+-  cd "$pkgname"
+-  RAPIDFUZZ_BUILD_EXTENSION=1 \
+-    python -m build --wheel --no-isolation
+-}

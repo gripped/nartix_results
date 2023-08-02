@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://www.freedesktop.org/software/colord"
+ arch=(x86_64)
+ license=(GPL2)
+-depends=(lcms2 libgusb polkit sqlite dconf dbus libgudev shared-mime-info systemd)
++depends=(lcms2 libgusb polkit sqlite dconf dbus libgudev shared-mime-info udev)
+ makedepends=(gobject-introspection vala sane bash-completion argyllcms git meson gtk-doc
+              docbook-xsl)
+ options=(!emptydirs)
+@@ -26,11 +26,12 @@
+ }
+ 
+ build() {
+-  arch-meson colord build \
++  artix-meson colord build \
+     -D libcolordcompat=true \
+     -D sane=true \
+     -D vapi=true \
+     -D print_profiles=true \
++    -D systemd=false \
+     -D daemon_user=colord
+   meson compile -C build
+ }
+@@ -81,7 +82,7 @@
+ 
+ package_libcolord() {
+   pkgdesc+=" (client library)"
+-  depends=(glib2 lcms2 systemd)
++  depends=(glib2 lcms2)
+   provides=(libcolord.so)
+   mv lib/* "$pkgdir"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgbase=colord
+ pkgname=(colord colord-sane libcolord)
+-depends=(lcms2 libgusb polkit sqlite dconf dbus libgudev shared-mime-info systemd)
++depends=(lcms2 libgusb polkit sqlite dconf dbus libgudev shared-mime-info udev)
+ makedepends=(gobject-introspection vala sane bash-completion argyllcms git meson gtk-doc
+              docbook-xsl)
+ options=(!emptydirs)
+@@ -9,11 +9,12 @@
+   cd colord
+ }
+ build() {
+-  arch-meson colord build \
++  artix-meson colord build \
+     -D libcolordcompat=true \
+     -D sane=true \
+     -D vapi=true \
+     -D print_profiles=true \
++    -D systemd=false \
+     -D daemon_user=colord
+   meson compile -C build
+ }
+@@ -49,7 +50,7 @@
+ }
+ package_libcolord() {
+   pkgdesc+=" (client library)"
+-  depends=(glib2 lcms2 systemd)
++  depends=(glib2 lcms2)
+   provides=(libcolord.so)
+   mv lib/* "$pkgdir"
+ }

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ruby-sequel
+-pkgver=5.70.0
+-_commit=318dece9043be108768d693b473680027fef7830
++pkgver=5.69.0
++_commit=3bfa0f0cea86ab1cb97b3bcbfdd5966d8c8da8d4
+ pkgrel=1
+ pkgdesc='Sequel: The Database Toolkit for Ruby'
+ arch=(any)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=ruby-sequel
+-_commit=318dece9043be108768d693b473680027fef7830
++_commit=3bfa0f0cea86ab1cb97b3bcbfdd5966d8c8da8d4
+ depends=(ruby)
+ makedepends=(git ruby-minitest ruby-minitest-hooks ruby-minitest-global_expectations ruby-tzinfo
+              ruby-nokogiri)

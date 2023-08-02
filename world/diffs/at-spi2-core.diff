@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+   libx11
+   libxml2
+   libxtst
+-  systemd
++  libelogind
+   xorg-xprop
+ )
+ makedepends=(
+@@ -50,7 +50,7 @@
+     -D docs=true
+   )
+ 
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -78,6 +78,8 @@
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
++  rm -r "$pkgdir"/usr/lib/systemd
++
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/doc
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+   libx11
+   libxml2
+   libxtst
+-  systemd
++  libelogind
+   xorg-xprop
+ )
+ makedepends=(
+@@ -33,7 +33,7 @@
+     -D default_bus=dbus-broker
+     -D docs=true
+   )
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }
+ package_at-spi2-core() {
+@@ -53,6 +53,7 @@
+     'atk<=2.38.0-2'
+   )
+   meson install -C build --destdir "$pkgdir"
++  rm -r "$pkgdir"/usr/lib/systemd
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/doc
+ }

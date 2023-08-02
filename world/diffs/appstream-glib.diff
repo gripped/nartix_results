@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(
+   curl
+   gtk3
++  json-glib
+   libstemmer
+   libyaml
+   pacman
+@@ -46,7 +47,7 @@
+     -D rpm=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,7 @@
+ depends=(
+   curl
+   gtk3
++  json-glib
+   libstemmer
+   libyaml
+   pacman
+@@ -29,6 +30,6 @@
+     -D gtk-doc=true
+     -D rpm=false
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }

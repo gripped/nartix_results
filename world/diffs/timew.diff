@@ -1,0 +1,119 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,55 @@
+-
+ pkgname=timew
+ pkgver=1.5.0
++_libshared_c="47c3262fa97c4b69542040d39be6c516c38d0e57"
+ pkgrel=1
+-pkgdesc="Timewarrior, A command line time tracking application"
+-arch=('x86_64')
+-url="https://timewarrior.net/"
+-license=('MIT')
+-makedepends=('cmake' 'gcc-libs' 'asciidoctor')
+-optdepends=('task: Taskwarrior integration'
+-            'python: Holiday refresh script')
+-install=$pkgname.install
+-source=("https://github.com/GothenburgBitFactory/timewarrior/releases/download/v${pkgver}/timew-${pkgver}.tar.gz")
+-sha256sums=('51e7c2c772837bbd6d56da8d16506c4b6de8644166e0b5234ad36ae6a70dd4f6')
++pkgdesc="Commandline Time Tracking and Reporting"
++arch=("x86_64")
++url="https://timewarrior.net"
++changelog=Changelog.txt
++license=("MIT")
++depends=("gcc-libs")
++makedepends=(
++	"gcc"
++	"make"
++	"cmake>=2.8.12"
++	"asciidoctor"
++)
++checkdepends=(
++	"python"
++	"python-dateutil"
++	"man"
++)
++source=(
++	"https://github.com/GothenburgBitFactory/timewarrior/archive/refs/tags/v$pkgver.tar.gz"
++	"https://github.com/GothenburgBitFactory/libshared/archive/$_libshared_c.tar.gz"
++	"help_man_test.patch"
++)
++sha256sums=(
++	"4179d9115ffbb671a4092152740e08ed53eaced9bc5ec5553de17f309b743f7f"
++	"0ca2ad809bcfc68d9563e7c43ae52cffb5729d4761a80be6b5f66332b6e9ad39"
++	"SKIP"
++)
++
++prepare() {
++	rm -rf "timewarrior-$pkgver/src/libshared"
++	ln -sr "libshared-$_libshared_c" "timewarrior-$pkgver/src/libshared"
++
++	cd "timewarrior-$pkgver"
++	patch -Np 1 -i ../help_man_test.patch
++}
+ 
+ build() {
+-    cd "${pkgname}-${pkgver}"
+-    cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr .
+-    make
++	cd "timewarrior-$pkgver"
++	cmake -D CMAKE_INSTALL_PREFIX=/usr .
++	make
+ }
+ 
++check() {
++	cd "timewarrior-$pkgver"
++	make test
++}
+ 
+ package() {
+-    cd "${pkgname}-${pkgver}"
+-
+-    make DESTDIR="${pkgdir}" install
+-
+-    chmod 755 "${pkgdir}"/usr/share/doc/timew/doc/holidays/refresh
+-    ln -s /usr/share/doc/timew/doc/holidays/refresh "${pkgdir}"/usr/bin/timew-refresh-holidays
+-
+-    rm -r $pkgdir/usr/share/man/man1/CMakeFiles
+-    rm -r $pkgdir/usr/share/man/man7/CMakeFiles
++	cd "timewarrior-$pkgver"
++	make install DESTDIR="$pkgdir"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,26 @@
+ pkgname=timew
+-makedepends=('cmake' 'gcc-libs' 'asciidoctor')
+-install=$pkgname.install
++_libshared_c="47c3262fa97c4b69542040d39be6c516c38d0e57"
++changelog=Changelog.txt
++depends=("gcc-libs")
++makedepends=(
++	"gcc"
++	"make"
++	"cmake>=2.8.12"
++	"asciidoctor"
++)
++checkdepends=(
++	"python"
++	"python-dateutil"
++	"man"
++)
++prepare() {
++	rm -rf "timewarrior-$pkgver/src/libshared"
++	ln -sr "libshared-$_libshared_c" "timewarrior-$pkgver/src/libshared"
++	cd "timewarrior-$pkgver"
++	patch -Np 1 -i ../help_man_test.patch
++}
+ build() {
+-    cd "${pkgname}-${pkgver}"
+-    cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr .
+-    make
++	cd "timewarrior-$pkgver"
++	cmake -D CMAKE_INSTALL_PREFIX=/usr .
++	make
+ }

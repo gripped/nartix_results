@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+ arch=('x86_64')
+ url='https://savannah.nongnu.org/projects/acl'
+ license=('LGPL')
+-depends=('glibc')
+ makedepends=('attr')
+ replaces=('xfsacl')
+ provides=('xfsacl' 'libacl.so')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,4 @@
+ pkgname=acl
+-depends=('glibc')
+ makedepends=('attr')
+ replaces=('xfsacl')
+ provides=('xfsacl' 'libacl.so')

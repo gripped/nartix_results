@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xed
+ pkgver=3.4.3
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A small and lightweight text editor. X-Apps Project."
+ arch=(x86_64)
+ url="https://github.com/linuxmint/${pkgname}"
+@@ -15,7 +15,7 @@
+ b2sums=('5bb90a11dfb3901d63c0b2f6c35c2529ea8ed8fd11c2bc9e8b22a4ec1226f5c609e7913dacdaa3e4d06a51e369706360f18ad3a1205b785e6bce113b2fe7d23e')
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build
++  artix-meson ${pkgname}-${pkgver} build
+   samu -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ depends=(gspell gtksourceview4 libpeas xapp)
+ makedepends=(meson samurai gobject-introspection intltool itstool)
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build
++  artix-meson ${pkgname}-${pkgver} build
+   samu -C build
+ }

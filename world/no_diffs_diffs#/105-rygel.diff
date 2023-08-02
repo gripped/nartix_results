@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,6 +37,7 @@
+ provides=(librygel-{core,db,renderer,renderer-gst,ruih,server}-2.8.so)
+ backup=(etc/rygel.conf)
+ groups=(gnome)
++options=(debug)
+ _commit=54ee75b8bbbe094b18b7597815856107e3cc51b7  # tags/rygel-0.42.3^0
+ source=("git+https://gitlab.gnome.org/GNOME/rygel.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -51,7 +52,7 @@
+ }
+ 
+ build() {
+-  arch-meson rygel build
++  artix-meson rygel build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,11 +20,12 @@
+ provides=(librygel-{core,db,renderer,renderer-gst,ruih,server}-2.8.so)
+ backup=(etc/rygel.conf)
+ groups=(gnome)
+ _commit=54ee75b8bbbe094b18b7597815856107e3cc51b7  # tags/rygel-0.42.3^0
+ prepare() {
+   cd rygel
+ }
+ build() {
+-  arch-meson rygel build
++  artix-meson rygel build
+   meson compile -C build
+ }

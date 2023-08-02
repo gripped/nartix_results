@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson aml build
++  artix-meson aml build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ provides=(libaml.so)
+ _tag=b83f3576ce4187d9285f06e9066ef43a691464d4
+ build() {
+-  arch-meson aml build
++  artix-meson aml build
+   meson compile -C build
+ }

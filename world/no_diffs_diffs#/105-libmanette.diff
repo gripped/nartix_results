@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha256sums=('63653259a821ec7d90d681e52e757e2219d462828c9d74b056a5f53267636bac')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D doc=true
++  artix-meson $pkgname-$pkgver build -D doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('gcc-libs' 'glib2' 'glibc' 'libevdev' 'libgudev')
+ makedepends=('gobject-introspection' 'meson' 'vala')
+ build() {
+-  arch-meson $pkgname-$pkgver build -D doc=true
++  artix-meson $pkgname-$pkgver build -D doc=true
+   meson compile -C build
+ }

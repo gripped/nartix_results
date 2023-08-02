@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,6 +22,7 @@
+ )
+ optdepends=('gnome-control-center: Manage online accounts')
+ groups=(gnome)
++options=(debug)
+ _commit=0d0ef588ad192094c63b73d768a8a01d091d61a7  # tags/44.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-calendar.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -36,7 +37,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,11 +14,12 @@
+   meson
+ )
+ groups=(gnome)
+ _commit=0d0ef588ad192094c63b73d768a8a01d091d61a7  # tags/44.1^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

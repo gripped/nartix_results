@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+ }
+ 
+ build() {
+-  arch-meson d-spy build
++  artix-meson d-spy build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+ groups=(gnome-extra)
+ _commit=9268a01e3fcc7d15c617f4bb57f2fe213bb4d078  # tags/1.6.0^0
+ build() {
+-  arch-meson d-spy build
++  artix-meson d-spy build
+   meson compile -C build
+ }

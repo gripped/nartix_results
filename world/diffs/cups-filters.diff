@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url="https://wiki.linuxfoundation.org/openprinting/cups-filters"
+ license=('custom')
+-depends=('lcms2' 'poppler' 'qpdf' 'libcups>=2.2.6-2' 'systemd' 'libexif')
++depends=('lcms2' 'poppler' 'qpdf' 'ijs' 'libcups>=2.2.6-2' 'libexif')
+ makedepends=('ghostscript' 'python' 'mupdf-tools' 'liblouis')
+ checkdepends=('ttf-dejavu') # ttf-dejavu for make check
+ optdepends=('ghostscript: for non-PostScript printers to print with CUPS to convert PostScript to raster images'
+@@ -54,9 +54,6 @@
+   cd "$pkgname"-$pkgver
+   make DESTDIR="$pkgdir/" install
+ 
+-  install -Dm644 utils/cups-browsed.service "${pkgdir}"/usr/lib/systemd/system/cups-browsed.service
+-  sed -i "s|/usr/sbin/cups-browsed|/usr/bin/cups-browsed|" "${pkgdir}"/usr/lib/systemd/system/cups-browsed.service
+-
+   chgrp -R 209 "${pkgdir}"/etc/cups
+ 
+   mkdir -p "${pkgdir}"/usr/share/licenses/${pkgname}
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=cups-filters
+-depends=('lcms2' 'poppler' 'qpdf' 'libcups>=2.2.6-2' 'systemd' 'libexif')
++depends=('lcms2' 'poppler' 'qpdf' 'ijs' 'libcups>=2.2.6-2' 'libexif')
+ makedepends=('ghostscript' 'python' 'mupdf-tools' 'liblouis')
+ checkdepends=('ttf-dejavu') # ttf-dejavu for make check
+ backup=(etc/cups/cups-browsed.conf)

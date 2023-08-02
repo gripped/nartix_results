@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ 
+ build(){
+   cd zathura-djvu-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ makedepends=('meson' 'ninja')
+ build(){
+   cd zathura-djvu-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }

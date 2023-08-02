@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ 
+ build() {
+   cd zathura-$pkgver
+-  arch-meson build
++  artix-meson build
+ 
+   cd build
+   ninja
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ depends=('girara>=0.2.7' 'sqlite' 'desktop-file-utils' 'file' 'libsynctex' 'file')
+ build() {
+   cd zathura-$pkgver
+-  arch-meson build
++  artix-meson build
+   cd build
+   ninja
+ }

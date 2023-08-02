@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ url="https://gitlab.freedesktop.org/libinput"
+ arch=(x86_64)
+ license=(custom:X11)
+-depends=('mtdev' 'systemd' 'libevdev' 'libwacom')
++depends=('mtdev' 'udev' 'libevdev' 'libwacom')
+ makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
+ checkdepends=('python-pytest')
+ optdepends=('gtk4: libinput debug-gui'
+@@ -16,7 +16,7 @@
+ sha256sums=('fad7011705a21f500229199f789f3e3e794b4c9826b70073745cdaec23bc1d0b')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -D udev-dir=/usr/lib/udev \
+     -D documentation=false
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ pkgname=libinput
+-depends=('mtdev' 'systemd' 'libevdev' 'libwacom')
++depends=('mtdev' 'udev' 'libevdev' 'libwacom')
+ makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
+ checkdepends=('python-pytest')
+ build() {
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -D udev-dir=/usr/lib/udev \
+     -D documentation=false
+   meson configure build

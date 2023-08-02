@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://www.freedesktop.org/wiki/Software/ModemManager/"
+ arch=(x86_64)
+ license=(GPL2 LGPL2.1)
+-depends=(systemd libgudev polkit ppp libqmi libmbim
++depends=(libgudev polkit ppp libqmi libmbim
+          mobile-broadband-provider-info)
+ makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
+ checkdepends=(python-gobject python-dbus)
+@@ -32,13 +32,20 @@
+     -D dbus_policy_dir=/usr/share/dbus-1/system.d
+     -D dist_version="\"$pkgver-$pkgrel\""
+     -D gtk_doc=true
++    -D systemd_journal=false
++    -D systemd_suspend_resume=false
++    -D systemdsystemunitdir=no
+     -D plugin_qcom_soc=disabled
+     -D polkit=permissive
+     -D vapi=true
+   )
+ 
+-  arch-meson ModemManager build "${meson_options[@]}"
++  artix-meson ModemManager build "${meson_options[@]}"
+   meson compile -C build
++}
++
++check() {
++  : meson test -C build --print-errorlogs
+ }
+ 
+ _pick() {
+@@ -52,7 +59,7 @@
+ }
+ 
+ package_modemmanager() {
+-  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libsystemd.so libgudev-1.0.so
++  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libgudev-1.0.so
+             libqmi-glib.so libmbim-glib.so)
+   optdepends=('usb_modeswitch: install if your modem shows up as a storage drive')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgbase=modemmanager
+ pkgname=(modemmanager libmm-glib)
+-depends=(systemd libgudev polkit ppp libqmi libmbim
++depends=(libgudev polkit ppp libqmi libmbim
+          mobile-broadband-provider-info)
+ makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
+ checkdepends=(python-gobject python-dbus)
+@@ -15,11 +15,14 @@
+     -D dbus_policy_dir=/usr/share/dbus-1/system.d
+     -D dist_version="\"$pkgver-$pkgrel\""
+     -D gtk_doc=true
++    -D systemd_journal=false
++    -D systemd_suspend_resume=false
++    -D systemdsystemunitdir=no
+     -D plugin_qcom_soc=disabled
+     -D polkit=permissive
+     -D vapi=true
+   )
+-  arch-meson ModemManager build "${meson_options[@]}"
++  artix-meson ModemManager build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -32,7 +35,7 @@
+   done
+ }
+ package_modemmanager() {
+-  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libsystemd.so libgudev-1.0.so
++  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libgudev-1.0.so
+             libqmi-glib.so libmbim-glib.so)
+   meson install -C build --destdir "$pkgdir"
+   cd "$pkgdir"

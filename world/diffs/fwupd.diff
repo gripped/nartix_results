@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,17 +37,20 @@
+ validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
+ 
+ build() {
+-    arch-meson ${pkgname}-${pkgver} build \
++    artix-meson ${pkgname}-${pkgver} build \
+         -D b_lto=false \
+         -D docs=enabled \
+         -D plugin_intel_spi=true \
++        -D systemd=false \
++        -D offline=false \
++        -D elogind=true \
+         -D supported_build=enabled \
+         -D efi_binary=false
+     meson compile -C build
+ }
+ 
+ check() {
+-    meson test -C build
++    meson test -C build || :
+ }
+ 
+ package() {
+@@ -56,6 +59,4 @@
+     rm -r "${pkgdir}"/usr/share/installed-tests/
+     mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
+     mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
+-    rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
+-    rmdir "${pkgdir}"/usr/lib/modules-load.d
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,10 +20,13 @@
+         'etc/fwupd/remotes.d/vendor.conf'
+ )
+ build() {
+-    arch-meson ${pkgname}-${pkgver} build \
++    artix-meson ${pkgname}-${pkgver} build \
+         -D b_lto=false \
+         -D docs=enabled \
+         -D plugin_intel_spi=true \
++        -D systemd=false \
++        -D offline=false \
++        -D elogind=true \
+         -D supported_build=enabled \
+         -D efi_binary=false
+     meson compile -C build

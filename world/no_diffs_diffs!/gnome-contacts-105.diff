@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,7 @@
+   vala
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=7de4264212aac05f8acec29ba54adac90ae8ed39  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -38,7 +39,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,11 +17,12 @@
+   vala
+ )
+ groups=(gnome)
+ _commit=7de4264212aac05f8acec29ba54adac90ae8ed39  # tags/44.0^0
+ prepare() {
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

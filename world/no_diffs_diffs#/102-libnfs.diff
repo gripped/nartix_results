@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ arch=('x86_64')
+ url="https://github.com/sahlberg/libnfs"
+ license=('GPL')
++options=('debug')
+ depends=('glibc')
+ source=(
+ 	"https://github.com/sahlberg/$pkgname/archive/$pkgname-$pkgver.tar.gz"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ pkgname=libnfs
+ depends=('glibc')
+ build() {
+ 	cd "$pkgname-$pkgname-$pkgver"

@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=pkgconf
+ pkgver=1.8.1
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="Package compiler and linker metadata toolkit"
+ url="https://gitea.treehouse.systems/ariadne/pkgconf"
+ license=(custom:ISC)
+@@ -29,7 +29,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D tests=false
++  artix-meson $pkgname build -D tests=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,6 @@
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build -D tests=false
++  artix-meson $pkgname build -D tests=false
+   meson compile -C build
+ }

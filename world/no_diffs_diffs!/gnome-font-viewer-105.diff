@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,7 @@
+   meson
+ )
+ groups=(gnome)
++options=(debug)
+ _commit=728c5f7af41f855c151bce6b8626072e62943712  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-font-viewer.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -26,7 +27,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,9 @@
+   meson
+ )
+ groups=(gnome)
+ _commit=728c5f7af41f855c151bce6b8626072e62943712  # tags/44.0^0
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }

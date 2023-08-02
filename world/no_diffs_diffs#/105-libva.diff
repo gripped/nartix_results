@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+ 
+ build() {
+   CFLAGS+=" -DENABLE_VA_MESSAGING" # Option missing
+-  arch-meson libva build
++  artix-meson libva build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,6 +28,6 @@
+ _tag=807044bd0fcb944edf230052fa09acc4266790fe
+ build() {
+   CFLAGS+=" -DENABLE_VA_MESSAGING" # Option missing
+-  arch-meson libva build
++  artix-meson libva build
+   meson compile -C build
+ }

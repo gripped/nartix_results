@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pygit2
+ pkgver=1.12.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Python bindings for libgit2'
+ arch=('x86_64')
+ url="https://github.com/libgit2/pygit2"
+@@ -9,16 +9,12 @@
+ depends=('libgit2.so' 'python-cffi' 'python-six' 'python-cached-property')
+ makedepends=('cython' 'python-build' 'python-cffi' 'python-installer' 'python-setuptools' 'git' 'python-six' 'python-wheel')
+ checkdepends=('python-pytest-runner')
+-source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
+-         libgit2-1.7.patch)
+-sha256sums=('a1da2bf04bcacb2a1bc70536b2507766520873ec6feb046102a73c143e83959a'
+-            'fb1023efd7cbdc804502e5d1dc62ecac15bcce85d44c6cb3b5a847ac3737d73f')
++source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
++sha256sums=('a1da2bf04bcacb2a1bc70536b2507766520873ec6feb046102a73c143e83959a')
+ 
+ prepare() {
+ 	cd "pygit2-$pkgver"
+ 	sed -e '/has_network/s/True/False/' -i test/utils.py
+-
+-        patch -p1 -i ../libgit2-1.7.patch
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,6 @@
+ prepare() {
+ 	cd "pygit2-$pkgver"
+ 	sed -e '/has_network/s/True/False/' -i test/utils.py
+-        patch -p1 -i ../libgit2-1.7.patch
+ }
+ build() {
+ 	cd "pygit2-$pkgver"

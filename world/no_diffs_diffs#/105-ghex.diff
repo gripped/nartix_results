@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,7 @@
+   yelp-tools
+ )
+ _commit=128561d95b1d5088a27d5ad4ebe7bab265437d7a  # tags/44.1^0
++options=(debug)
+ source=("git+https://gitlab.gnome.org/GNOME/ghex.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -32,7 +33,7 @@
+ }
+ 
+ build() {
+-  arch-meson ghex build -D gtk_doc=true
++  artix-meson ghex build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,11 +12,12 @@
+   yelp-tools
+ )
+ _commit=128561d95b1d5088a27d5ad4ebe7bab265437d7a  # tags/44.1^0
+ prepare() {
+   cd ghex
+ }
+ build() {
+-  arch-meson ghex build -D gtk_doc=true
++  artix-meson ghex build -D gtk_doc=true
+   meson compile -C build
+ }
+ package_ghex-docs() {

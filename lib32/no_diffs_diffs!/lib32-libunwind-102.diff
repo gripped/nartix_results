@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ url="https://www.nongnu.org/libunwind/"
+ license=('GPL')
+ depends=('lib32-gcc-libs' 'libunwind' 'lib32-xz')
++options=('debug')
+ source=(https://download.savannah.gnu.org/releases/$_pkgbasename/$_pkgbasename-$pkgver.tar.gz{,.sig})
+ sha512sums=('1d17dfb14f99a894a6cda256caf9ec481c14068aaf8f3a85fa3befa7c7cca7fca0f544a91a3a7c2f2fc55bab19b06a67ca79f55ac9081151d94478c7f611f8f7'
+             'SKIP')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ _pkgbasename=libunwind
+ pkgname=lib32-libunwind
+ depends=('lib32-gcc-libs' 'libunwind' 'lib32-xz')
+ validpgpkeys+=('75D2CFC56CC2E935A4143297015A268A17D55FA4') # Dave Watson
+ build() {
+   export CC="gcc -m32"

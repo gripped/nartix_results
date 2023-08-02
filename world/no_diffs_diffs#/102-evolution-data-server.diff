@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,6 +36,7 @@
+ )
+ checkdepends=(db)
+ license=(GPL)
++options=(debug)
+ _commit=fe6cec8149323c292f78a088f3f08b86721e64b8  # tags/3.48.4^0
+ source=("git+https://gitlab.gnome.org/GNOME/evolution-data-server.git#commit=$_commit")
+ b2sums=('SKIP')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,6 +29,7 @@
+   webkitgtk-6.0
+ )
+ checkdepends=(db)
+ _commit=fe6cec8149323c292f78a088f3f08b86721e64b8  # tags/3.48.4^0
+ prepare() {
+   cd $pkgbase

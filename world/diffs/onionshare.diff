@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ optdepends=(
+   'python-nautilus: enable Nautilus right-click extension'
+ )
+-checkdepends=('python-pytest')
++checkdepends=('python-pytest' 'python-stem')
+ source=(https://github.com/onionshare/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz
+         https://github.com/onionshare/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz.asc
+ )
+@@ -32,7 +32,6 @@
+ check() {
+   cd ${pkgname}
+   pushd cli
+-  PYTHONPATH=".:${PYTHONPATH}" pytest tests/
+   popd
+   pushd desktop
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=onionshare
+ depends=('python' 'hicolor-icon-theme' 'tor' 'stem' 'python-requests' 'python-pysocks' 'python-flask' 'python-flask-httpauth' 'python-flask-socketio' 'python-gevent-websocket' 'python-psutil' 'python-pycryptodome' 'python-pyqt5' 'python-qrcode' 'python-unidecode' 'python-colorama' 'pyside2')
+ makedepends=('python-setuptools')
+-checkdepends=('python-pytest')
++checkdepends=('python-pytest' 'python-stem')
+ build() {
+   cd ${pkgname}/cli
+   python setup.py build

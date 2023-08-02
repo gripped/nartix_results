@@ -1,0 +1,95 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,10 +23,9 @@
+   gtk4
+   meson
+   pcre2
+-  systemd
+   vala
+ )
+-options=(!lto)
++options=(debug !lto)
+ _commit=854e56263454077ab009aaff67f1afe0dbd52878  # tags/0.72.2^0
+ source=("git+https://gitlab.gnome.org/GNOME/vte.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -45,9 +44,10 @@
+     -D b_lto=false
+     -D docs=true
+     -D gtk4=true
++    -D _systemd=false
+   )
+ 
+-  arch-meson vte build "${meson_options[@]}"
++  artix-meson vte build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -93,7 +93,6 @@
+   _pick docs usr/share/doc
+ }
+ 
+-
+ package_vte3() {
+   pkgdesc+=" (GTK3)"
+   depends=(
+@@ -101,7 +100,6 @@
+     gnutls
+     gtk3
+     pcre2
+-    systemd
+     vte-common
+   )
+   provides+=(libvte-2.91.so)
+@@ -116,7 +114,6 @@
+     gnutls
+     gtk4
+     pcre2
+-    systemd
+     vte-common
+   )
+   provides+=(libvte-2.91-gtk4.so)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,10 +16,9 @@
+   gtk4
+   meson
+   pcre2
+-  systemd
+   vala
+ )
+-options=!lto
++options=!lto
+ _commit=854e56263454077ab009aaff67f1afe0dbd52878  # tags/0.72.2^0
+ prepare() {
+   cd vte
+@@ -29,8 +28,9 @@
+     -D b_lto=false
+     -D docs=true
+     -D gtk4=true
++    -D _systemd=false
+   )
+-  arch-meson vte build "${meson_options[@]}"
++  artix-meson vte build "${meson_options[@]}"
+   meson compile -C build
+ }
+ _pick() {
+@@ -71,7 +71,6 @@
+     gnutls
+     gtk3
+     pcre2
+-    systemd
+     vte-common
+   )
+   provides+=(libvte-2.91.so)
+@@ -84,7 +83,6 @@
+     gnutls
+     gtk4
+     pcre2
+-    systemd
+     vte-common
+   )
+   provides+=(libvte-2.91-gtk4.so)

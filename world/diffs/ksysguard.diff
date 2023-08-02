@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ 
+ pkgname=ksysguard
+ pkgver=5.22.0
+-_dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='Track and control the processes running in your system'
+ arch=(x86_64)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,4 @@
+ pkgname=ksysguard
+-_dirver=$(echo $pkgver | cut -d. -f1-3)
+ depends=(ksystemstats)
+ makedepends=(extra-cmake-modules kdoctools)
+ build() {

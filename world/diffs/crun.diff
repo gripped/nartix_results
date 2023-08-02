@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=crun
+ pkgver=1.8.5
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A fast and lightweight fully featured OCI runtime and C library for running containers"
+ url="https://github.com/containers/crun"
+ license=('LGPL')
+ arch=('x86_64')
+ provides=('oci-runtime')
+-depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu')
+-makedepends=('libtool' 'python' 'go-md2man' 'systemd' 'git')
++depends=('yajl' 'libudev' 'libcap' 'libseccomp' 'criu')
++makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git')
+ source=("https://github.com/containers/crun/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc})
+ validpgpkeys=('AC404C1C0BF735C63FF4D562263D6DF2E163E1EA')
+ sha256sums=('00ad733ecfef50b5e8683b1031171f6ecd3539691fbdaf2fa384c05397298c61'
+@@ -19,6 +19,7 @@
+     ./autogen.sh
+     ./configure \
+         --prefix=/usr \
++        --disable-systemd \
+         --enable-shared \
+         --enable-dynamic \
+         --with-python-bindings
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ pkgname=crun
+ provides=('oci-runtime')
+-depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu')
+-makedepends=('libtool' 'python' 'go-md2man' 'systemd' 'git')
++depends=('yajl' 'libudev' 'libcap' 'libseccomp' 'criu')
++makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git')
+ build() {
+     cd "$pkgname-$pkgver"
+     ./autogen.sh
+     ./configure \
+         --prefix=/usr \
++        --disable-systemd \
+         --enable-shared \
+         --enable-dynamic \
+         --with-python-bindings
