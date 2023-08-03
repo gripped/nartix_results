@@ -72,6 +72,9 @@ desktop-file-utils
 dhcp
 dhclient
 distcc
+dmd
+dmd-docs
+libphobos
 dns-over-https
 docker
 dolphin-emu

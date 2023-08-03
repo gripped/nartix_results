@@ -342,9 +342,6 @@ djvulibre
 dkms
 dleyna
 dleyna-docs
-dmd
-dmd-docs
-libphobos
 dmenu
 dmidecode
 dnscrypt-proxy

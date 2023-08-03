@@ -1,13 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,6 +37,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=rygel
+-pkgver=0.42.4
++pkgver=0.42.3
+ pkgrel=1
+ epoch=1
+ pkgdesc="UPnP AV MediaServer and MediaRenderer"
+@@ -37,7 +37,8 @@
  provides=(librygel-{core,db,renderer,renderer-gst,ruih,server}-2.8.so)
  backup=(etc/rygel.conf)
  groups=(gnome)
+-_commit=01154a2ff6e652b281f38c615586bd2188c76f74  # tags/rygel-0.42.4^0
 +options=(debug)
- _commit=54ee75b8bbbe094b18b7597815856107e3cc51b7  # tags/rygel-0.42.3^0
++_commit=54ee75b8bbbe094b18b7597815856107e3cc51b7  # tags/rygel-0.42.3^0
  source=("git+https://gitlab.gnome.org/GNOME/rygel.git#commit=$_commit")
  b2sums=('SKIP')
+ 
 @@ -51,7 +52,7 @@
  }
  
