@@ -1,25 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgbase=emacs
 -pkgname=(emacs emacs-nativecomp emacs-nox emacs-wayland)
 -pkgver=29.1
+-pkgrel=4
 +pkgname=(emacs emacs-nativecomp emacs-nox)
 +pkgver=28.2
- pkgrel=2
++pkgrel=2
  arch=('x86_64')
  url='https://www.gnu.org/software/emacs/emacs.html'
-@@ -33,37 +33,33 @@
+ license=('GPL3')
+@@ -33,40 +33,33 @@
    libpng
    librsvg-2.so
    libsm
+-  sqlite libsqlite3.so
 -  libsystemd.so
    libtiff.so
+-  libtree-sitter.so
+-  libwebp.so
+-  libwebpdemux.so
    libxfixes
    libxml2.so
    m17n-lib
--  tree-sitter
    zlib
  )
  makedepends=(libgccjit)
@@ -53,7 +58,7 @@
      --with-modules"
  
    export ac_cv_lib_gif_EGifPutExtensionLast=yes
-@@ -76,9 +72,9 @@
+@@ -79,9 +72,9 @@
    cd ../${pkgbase}-${pkgver}-nativecomp
    ./configure \
      --with-x-toolkit=gtk3 \
@@ -65,7 +70,7 @@
  
    cd ../${pkgbase}-${pkgver}-nox
    ./configure \
-@@ -86,13 +82,6 @@
+@@ -89,13 +82,6 @@
      --without-sound \
      $_confflags
    make
@@ -79,15 +84,16 @@
  }
  
  package_emacs() {
-@@ -134,7 +123,6 @@
+@@ -137,8 +123,6 @@
      libdbus-1.so
      libgpm.so
      libncursesw.so
 -    libsystemd.so
+-    libtree-sitter.so
      libxml2.so
      zlib
    )
-@@ -149,18 +137,3 @@
+@@ -153,18 +137,3 @@
  
    find "${pkgdir}"/usr/share/emacs/${pkgver} -exec chown root:root {} \;
  }
@@ -119,16 +125,19 @@
  depends=(
    gmp
    gnutls
-@@ -27,30 +27,26 @@
+@@ -27,33 +27,26 @@
    libpng
    librsvg-2.so
    libsm
+-  sqlite libsqlite3.so
 -  libsystemd.so
    libtiff.so
+-  libtree-sitter.so
+-  libwebp.so
+-  libwebpdemux.so
    libxfixes
    libxml2.so
    m17n-lib
--  tree-sitter
    zlib
  )
  makedepends=(libgccjit)
@@ -153,7 +162,7 @@
      --with-modules"
    export ac_cv_lib_gif_EGifPutExtensionLast=yes
    cd ${pkgname}-${pkgver}
-@@ -60,21 +56,15 @@
+@@ -63,21 +56,15 @@
    cd ../${pkgbase}-${pkgver}-nativecomp
    ./configure \
      --with-x-toolkit=gtk3 \
@@ -177,11 +186,12 @@
  }
  package_emacs-nox() {
    depends=(
-@@ -87,7 +77,6 @@
+@@ -90,8 +77,6 @@
      libdbus-1.so
      libgpm.so
      libncursesw.so
 -    libsystemd.so
+-    libtree-sitter.so
      libxml2.so
      zlib
    )
