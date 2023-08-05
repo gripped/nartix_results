@@ -3,7 +3,6 @@ attr
 autoconf
 automake
 b43-fwcutter
-binutils
 bison
 brotli
 python-brotli

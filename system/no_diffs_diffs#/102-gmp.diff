@@ -1,10 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,9 +8,10 @@
+@@ -1,16 +1,17 @@
+ 
+ pkgname=gmp
+-pkgver=6.3.0
+-pkgrel=1
++pkgver=6.2.1
++pkgrel=2
+ pkgdesc='A free library for arbitrary precision arithmetic'
+ arch=(x86_64)
+ url='https://gmplib.org/'
  depends=(gcc-libs sh)
  license=(LGPL3 GPL)
  source=(https://gmplib.org/download/gmp/gmp-$pkgver.tar.lz{,.sig})
--sha256sums=('2c7f4f0d370801b2849c48c9ef3f59553b5f1d3791d070cffb04599f9fc67b41'
+-sha256sums=('be5c908a7a836c3a9bd9d62aa58563c5e9e7fef94c43a7f42dbc35bb6d02733c'
 -            'SKIP')
 +md5sums=('03a31d8cbaf29d136252f8f38875ed82'
 +         'SKIP')

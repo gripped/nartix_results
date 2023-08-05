@@ -1,0 +1,123 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=('lib32-llvm' 'lib32-llvm-libs')
+ pkgver=15.0.7
+-pkgrel=3
++pkgrel=1.2
+ arch=('x86_64')
+ url="https://llvm.org/"
+ license=('custom:Apache 2.0 with LLVM Exception')
+ makedepends=('cmake' 'ninja' 'lib32-libffi' 'lib32-zlib' 'lib32-zstd' 'python'
+              'gcc-multilib' 'lib32-libxml2')
+-options=('staticlibs' '!lto') # extra/llvm has many test failures with LTO
++options=('staticlibs' 'debug' '!lto') # extra/llvm has many test failures with LTO
+ _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
+ source=($_source_base/llvm-$pkgver.src.tar.xz{,.sig}
+         $_source_base/cmake-$pkgver.src.tar.xz{,.sig})
+@@ -18,27 +18,6 @@
+ validpgpkeys=('474E22316ABF4785A88C6E8EA2C794A986419D8A'  # Tom Stellard <tstellar@redhat.com>
+               'D574BD5D1D0E98895E3BF90044F2485E45D59042') # Tobias Hieta <tobias@hieta.se>
+ 
+-_get_distribution_components() {
+-  local target
+-  ninja -t targets | grep -Po 'install-\K.*(?=-stripped:)' | while read -r target; do
+-    case $target in
+-      llvm-libraries|distribution)
+-        continue
+-        ;;
+-      LLVM|LLVMgold)
+-        ;;
+-      LLVMDemangle|LLVMSupport|LLVMTableGen)
+-        ;;
+-      LLVM*)
+-        continue
+-        ;;
+-      llvm-exegesis)
+-        continue
+-        ;;
+-    esac
+-    echo $target
+-  done
+-}
+ prepare() {
+   mv cmake{-$pkgver.src,}
+   cd llvm-$pkgver.src
+@@ -75,12 +54,6 @@
+     -DLLVM_TARGET_ARCH:STRING=i686
+     -DLLVM_USE_PERF=ON
+   )
+-
+-  cmake .. "${cmake_args[@]}"
+-  local distribution_components=$(_get_distribution_components | paste -sd\;)
+-  test -n "$distribution_components"
+-  cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
+-
+   cmake .. "${cmake_args[@]}"
+   ninja
+ }
+@@ -91,7 +64,7 @@
+ 
+   cd llvm-$pkgver.src/build
+ 
+-  DESTDIR="$pkgdir" ninja install-distribution
++  DESTDIR="$pkgdir" ninja install
+ 
+   mv "$pkgdir"/usr/lib32/lib{LLVM,LTO,Remarks}*.so* "$srcdir"
+   mv -f "$pkgdir"/usr/lib32/LLVMgold.so "$srcdir"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,8 @@
+ pkgname=('lib32-llvm' 'lib32-llvm-libs')
+ makedepends=('cmake' 'ninja' 'lib32-libffi' 'lib32-zlib' 'lib32-zstd' 'python'
+              'gcc-multilib' 'lib32-libxml2')
+-options=staticlibs!lto#extra/llvmhasmanytestfailureswithLTO
++options=staticlibs!lto#extra/llvmhasmanytestfailureswithLTO
+ _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
+-_get_distribution_components() {
+-  local target
+-  ninja -t targets | grep -Po 'install-\K.*(?=-stripped:)' | while read -r target; do
+-    case $target in
+-      llvm-libraries|distribution)
+-        continue
+-        ;;
+-      LLVM|LLVMgold)
+-        ;;
+-      LLVMDemangle|LLVMSupport|LLVMTableGen)
+-        ;;
+-      LLVM*)
+-        continue
+-        ;;
+-      llvm-exegesis)
+-        continue
+-        ;;
+-    esac
+-    echo $target
+-  done
+-}
+ prepare() {
+   mv cmake{-$pkgver.src,}
+   cd llvm-$pkgver.src
+@@ -57,16 +36,12 @@
+     -DLLVM_USE_PERF=ON
+   )
+   cmake .. "${cmake_args[@]}"
+-  local distribution_components=$(_get_distribution_components | paste -sd\;)
+-  test -n "$distribution_components"
+-  cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
+-  cmake .. "${cmake_args[@]}"
+   ninja
+ }
+ package_lib32-llvm() {
+   depends=('lib32-llvm-libs' 'llvm')
+   cd llvm-$pkgver.src/build
+-  DESTDIR="$pkgdir" ninja install-distribution
++  DESTDIR="$pkgdir" ninja install
+   mv "$pkgdir"/usr/lib32/lib{LLVM,LTO,Remarks}*.so* "$srcdir"
+   mv -f "$pkgdir"/usr/lib32/LLVMgold.so "$srcdir"
+   chmod -x "$pkgdir"/usr/lib32/*.a

@@ -130,7 +130,6 @@ lib32-libxt
 lib32-libxtst
 lib32-libxv
 lib32-libxxf86vm
-lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123

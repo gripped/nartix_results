@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=intel-media-sdk
+ pkgname=('intel-media-sdk' 'libmfx')
+ pkgver=23.2.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Legacy API for hardware video acceleration on Intel GPUs (Broadwell to Rocket Lake)'
+ arch=('x86_64')
+ url='https://software.intel.com/en-us/media-sdk/'
+@@ -46,6 +46,7 @@
+ package_intel-media-sdk() {
+     depends=('libdrm' 'libva' 'wayland' "libmfx=${pkgver}" 'intel-media-driver')
+     options=('!emptydirs')
++    provides=('onevpl-runtime')
+ 
+     DESTDIR="$pkgdir" cmake --install build
+     ln -s mfx/samples/libcttmetrics.so "${pkgdir}/usr/lib/libcttmetrics.so"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,6 +26,7 @@
+ package_intel-media-sdk() {
+     depends=('libdrm' 'libva' 'wayland' "libmfx=${pkgver}" 'intel-media-driver')
+     options=('!emptydirs')
++    provides=('onevpl-runtime')
+     DESTDIR="$pkgdir" cmake --install build
+     ln -s mfx/samples/libcttmetrics.so "${pkgdir}/usr/lib/libcttmetrics.so"
+     install -D -m644 "MediaSDK-intel-mediasdk-${pkgver}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}"

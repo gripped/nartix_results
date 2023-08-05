@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-more-itertools
+-pkgver=10.0.1
+-pkgrel=1
++pkgver=9.1.1
++pkgrel=4
+ pkgdesc='More routines for operating on iterables, beyond itertools'
+ arch=('any')
+ url='https://github.com/more-itertools/more-itertools'
+@@ -14,7 +14,7 @@
+   'python-wheel'
+   'python-flit-core'
+ )
+-_commit='b8f615076d8ad7b19598eff56c26bade37b5a5f7'
++_commit='89d58c2ec089f3df54ed6cc9279949b8e2bbcd29'
+ source=("$pkgname::git+$url#commit=$_commit")
+ b2sums=('SKIP')
+ 

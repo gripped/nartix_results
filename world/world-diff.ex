@@ -224,6 +224,8 @@ igsc
 inkscape
 intel-compute-runtime
 intel-graphics-compiler
+intel-media-sdk
+libmfx
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -267,6 +269,9 @@ krita
 ksysguard
 ldc
 lensfun
+libadwaita
+libadwaita-docs
+libadwaita-demos
 libatasmart
 libayatana-indicator
 libblockdev
@@ -681,6 +686,11 @@ ruby-bake-test-external
 ruby-faraday-patron
 ruby-rugged
 ruby-sus
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 salt
 samba
 libwbclient

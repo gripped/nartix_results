@@ -4,6 +4,7 @@ python-audit
 base-devel
 base
 bash
+binutils
 btrfs-progs
 cryptsetup
 dbus

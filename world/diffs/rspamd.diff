@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -119,26 +119,15 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=rspamd
+-pkgver=3.6
+-pkgrel=1
++pkgver=3.5
++pkgrel=3
+ epoch=
+ pkgdesc='Fast, free and open-source spam filtering system'
+ arch=(x86_64)
+@@ -113,32 +113,21 @@
+   etc/rspamd/worker-proxy.inc
+ )
+ install=rspamd.install
+-_tag=bbb8660e55b8a842fc9c5c3d2cc57b177786778d
++_tag=0c671194e81f702a5e26009b33612c3d36d52840
+ source=(
+   git+https://github.com/rspamd/rspamd.git#tag=${_tag}
    rspamd.tmpfiles
    rspamd.sysusers
    rspamd.logrotate

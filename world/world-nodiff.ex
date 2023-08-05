@@ -784,8 +784,6 @@ iniparser
 innoextract
 intel-gmmlib
 intel-media-driver
-intel-media-sdk
-libmfx
 intel-metee
 intel-metee-doc
 intel-ucode
@@ -1161,9 +1159,6 @@ lib2geom
 libabw
 libaccounts-glib
 libaccounts-qt
-libadwaita
-libadwaita-docs
-libadwaita-demos
 libaec
 libalkimia
 libao
@@ -4027,11 +4022,6 @@ ruff
 python-ruff
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
