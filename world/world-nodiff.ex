@@ -1318,7 +1318,6 @@ libksieve
 libktorrent
 liblangtag
 liblas
-liblc3
 libldac
 libliftoff
 liblo
@@ -2662,7 +2661,6 @@ python-cycler
 python-cython-test-exception-raiser
 python-daemonize
 python-daiquiri
-python-dask
 python-databases
 python-dateutil
 python-dbus-deviation
@@ -2683,7 +2681,6 @@ python-dirty-equals
 python-discid
 python-discogs-client
 python-distlib
-python-distributed
 python-distro
 python-distutils-extra
 python-django-allauth
@@ -2935,8 +2932,6 @@ python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
-python-keyring
-python-keyrings-alt
 python-keystoneauth1
 python-keyutils
 python-kiwisolver

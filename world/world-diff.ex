@@ -306,6 +306,7 @@ libjxl
 libjxl-doc
 libkscreen
 libksysguard
+liblc3
 libldm
 libmateweather
 libmbim
@@ -554,12 +555,16 @@ python-cairocffi
 python-chardet
 python-click-repl
 python-cytoolz
+python-dask
+python-distributed
 python-django-classy-tags
 python-gnupg
 python-hypothesis
 python-ipywidgets
 python-josepy
 python-jupyter-events
+python-keyring
+python-keyrings-alt
 python-ldap
 python-mailmanclient
 python-pathspec
