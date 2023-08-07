@@ -1744,7 +1744,6 @@ ruby-marisa
 markdownpart
 marked-man
 marked
-mat2
 mate-backgrounds
 mate-calc
 mate-common
@@ -2687,7 +2686,6 @@ python-django-allauth
 python-django-appconf
 python-django-compressor
 python-django-crispy-forms
-python-django-debug-toolbar
 python-django-environ
 python-django-extensions
 python-django-fake-model

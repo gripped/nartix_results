@@ -371,6 +371,7 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+mat2
 mate-applets
 mate-media
 mate-menus
@@ -558,6 +559,7 @@ python-cytoolz
 python-dask
 python-distributed
 python-django-classy-tags
+python-django-debug-toolbar
 python-gnupg
 python-hypothesis
 python-ipywidgets

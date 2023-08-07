@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=netplan
+-pkgver=0.106.1
++pkgver=0.106
+ pkgrel=1
+ pkgdesc="Network configuration abstraction renderer"
+ arch=('x86_64')
 @@ -11,7 +11,7 @@
    'python-yaml'
    'python-netifaces'
@@ -9,7 +17,7 @@
  )
  makedepends=(
    'python'
-@@ -19,9 +19,16 @@
+@@ -19,10 +19,16 @@
    'pandoc'
  )
  source=(
@@ -17,7 +25,8 @@
 +  "${pkgname}-${pkgver}.tar.gz::https://github.com/CanonicalLtd/${pkgname}/archive/${pkgver}.tar.gz"
 +  "0001-no-systemd.patch"
  )
--sha256sums=('09ca8c191f4cc387edb816c48aa77bcaffb712ba54a188fd27ce961eea02aa53')
+-sha512sums=('0592079888dc6be8802f5d5b01b62e1a570ac1fa340628bab9d7a4a38e796a1cde8c22ec98448e29a83569381035e9d7b06a92418a82547d0b1030151d94a9e2')
+-b2sums=('3c77c8193269b372f79366bf31160a53fc59a5fff8f18fb12bcba89073da053e174349acd9ccd05c128023dd4e56d379d380a91ed309e651686dbbecfa5c7fb6')
 +sha256sums=('09ca8c191f4cc387edb816c48aa77bcaffb712ba54a188fd27ce961eea02aa53'
 +            '85b404c4f0a0090a4f42f55624089f57da5f539410bc2e477a86a9c70d411ba0')
 +
@@ -28,7 +37,7 @@
  
  build() {
    cd "${pkgname}-${pkgver}"
-@@ -35,4 +42,6 @@
+@@ -36,4 +42,6 @@
  package() {
    cd "${pkgname}-${pkgver}"
    make DESTDIR="${pkgdir}" ROOTPREFIX=/usr SBINDIR=/usr/bin install
