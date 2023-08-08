@@ -1,5 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=xmms2
+ pkgver=0.9.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='X-platform Music Multiplexing System 2'
+ arch=(x86_64)
+-url='https://github.com/xmms2/wiki/wiki'
++url='https://xmms2.org/'
+ license=(GPL LGPL)
+ _depends=('alsa-lib: ALSA output'
+           'avahi: announce xmms2d via bonjour/mDNS/zeroconf'
 @@ -43,14 +43,10 @@
  optdepends=("${_depends[@]}" 'pulseaudio: PulseAudio output')
  source=(https://github.com/xmms2/xmms2-devel/releases/download/$pkgver/$pkgname-$pkgver.tar.xz

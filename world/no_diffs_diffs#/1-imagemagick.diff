@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=imagemagick
 -pkgver=7.1.1.15
+-pkgrel=2
 +pkgver=7.1.1.13
- pkgrel=1
++pkgrel=1
  _relname=ImageMagick-${pkgver%%.*}
  _tarname=ImageMagick-${pkgver%.*}-${pkgver##*.}
+ pkgdesc='An image viewing/manipulation program'
 @@ -31,7 +31,7 @@
  replaces=(imagemagick-doc)
  source=(https://imagemagick.org/archive/$_tarname.tar.xz{,.asc}

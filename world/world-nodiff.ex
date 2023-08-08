@@ -1297,7 +1297,6 @@ libiscsi
 libisoburn
 libisofs
 libjcat
-libjpeg-turbo
 libkate
 libkate-docs
 libkcddb
@@ -2142,7 +2141,6 @@ perl-http-daemon
 perl-http-date
 perl-http-message
 perl-http-negotiate
-perl-image-exiftool
 perl-image-info
 perl-import-into
 perl-importer
@@ -2181,7 +2179,6 @@ perl-lwp-protocol-https
 perl-mail-authenticationresults
 perl-mail-box
 perl-mail-dkim
-perl-mail-message
 perl-mail-spf
 perl-mailtools
 perl-math-random-isaac
@@ -4016,8 +4013,6 @@ python-ruff
 runc
 rust-bindgen
 rustup
-rxvt-unicode
-rxvt-unicode-terminfo
 rygel
 s2n-tls
 s3cmd
@@ -4137,7 +4132,6 @@ stk-docs
 stoken
 strace
 strawberry
-strip-nondeterminism
 sugar-datastore
 suil
 suil-docs
@@ -4442,9 +4436,6 @@ vice
 vid.stab
 viewnior
 vigra
-vim
-gvim
-vim-runtime
 vimiv
 virglrenderer
 virt-manager

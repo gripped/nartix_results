@@ -302,6 +302,7 @@ libhandy
 libhandy-docs
 libhandy0
 libinput
+libjpeg-turbo
 libjxl
 libjxl-doc
 libkscreen
@@ -451,6 +452,8 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-image-exiftool
+perl-mail-message
 pgbouncer
 phodav
 php-legacy
@@ -698,6 +701,8 @@ lib32-rust-libs
 rust-musl
 rust-wasm
 rust-src
+rxvt-unicode
+rxvt-unicode-terminfo
 salt
 samba
 libwbclient
@@ -719,6 +724,7 @@ squid
 sshguard
 sslh
 sssd
+strip-nondeterminism
 strongswan
 stubby
 stunnel
@@ -776,6 +782,9 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 verdict
+vim
+gvim
+vim-runtime
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms

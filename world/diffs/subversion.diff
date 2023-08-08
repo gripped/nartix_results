@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,9 +7,9 @@
+@@ -1,15 +1,15 @@
+ 
+ pkgname=subversion
+ pkgver=1.14.2
+-pkgrel=9
++pkgrel=8
+ pkgdesc="A Modern Concurrent Version Control System"
+ arch=('x86_64')
  url="https://subversion.apache.org/"
  license=('APACHE')
  depends=('apr' 'apr-util' 'bash' 'dbus' 'expat' 'file' 'gcc-libs' 'glibc' 'libsasl' 'libutf8proc' 'lz4' 'serf' 'sqlite'

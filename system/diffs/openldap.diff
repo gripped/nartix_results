@@ -4,10 +4,9 @@
  
  pkgbase=openldap
  pkgname=('openldap' 'libldap')
--pkgver=2.6.4
--pkgrel=2
+-pkgver=2.6.6
 +pkgver=2.6.5
-+pkgrel=1
+ pkgrel=1
  arch=('x86_64')
  url="https://www.openldap.org/"
  license=('custom')
@@ -18,7 +17,7 @@
    https://www.openldap.org/software/download/OpenLDAP/openldap-release/${pkgbase}-${pkgver}.tgz{,.asc}
    openldap.tmpfiles
    openldap.sysusers)
--sha256sums=('d51704e50178430c06cf3d8aa174da66badf559747a47d920bb54b2d4aa40991'
+-sha256sums=('082e998cf542984d43634442dbe11da860759e510907152ea579bdc42fe39ea0'
 +sha256sums=('2e27a8d4f4c2af8fe840b573271c20aa163e24987f9765214644290f5beb38d9'
              'SKIP'
              '0be46138e53ff2fa6d4b4c06bfbdd2100426e0bd2ed29bf3419ade6b5974e9a0'
