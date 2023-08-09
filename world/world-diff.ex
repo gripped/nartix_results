@@ -202,6 +202,8 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gtkmm3
+gtkmm3-docs
 gunicorn
 gvfs
 gvfs-smb
@@ -229,6 +231,7 @@ libmfx
 intel-opencl-clang
 intel-undervolt
 interception-tools
+irssi
 iwd
 jack2
 jack2-dbus
@@ -295,6 +298,7 @@ libfido2
 libfprint
 libfreexl
 libgdata
+libgexiv2
 libgit2
 libgsf
 libgudev
@@ -583,6 +587,7 @@ python-pytest-benchmark
 python-pytest-enabler
 python-pyudev
 python-rapidfuzz
+python-requests-mock
 python-scramp
 python-sphinx-alabaster-theme
 python-spsdk
@@ -763,6 +768,7 @@ umockdev
 unbound
 upower
 uptimed
+upx
 usb_modeswitch
 usbguard
 usbmuxd
@@ -817,6 +823,7 @@ wlroots0.15
 woff2
 wpewebkit
 wpewebkit-docs
+xdg-dbus-proxy
 xdg-desktop-portal-gnome
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-lxqt

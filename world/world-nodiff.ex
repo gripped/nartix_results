@@ -681,8 +681,6 @@ gtkmm-4.0
 gtkmm-4.0-docs
 gtkmm
 gtkmm-docs
-gtkmm3
-gtkmm3-docs
 gtksourceview3
 gtksourceview4
 gtksourceview5
@@ -791,7 +789,6 @@ intltool
 inxi
 ipset
 ipython
-irssi
 iso-codes
 isodate
 python-isodate
@@ -1254,7 +1251,6 @@ libgdiplus
 libgee
 libgeotiff
 libgepub
-libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
@@ -3341,7 +3337,6 @@ python-requests-file
 python-requests-ftp
 python-requests-futures
 python-requests-kerberos
-python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
@@ -4414,7 +4409,6 @@ libunrar
 unrealircd
 unrtf
 unzip
-upx
 uriparser
 usbredir
 usort
@@ -4518,7 +4512,6 @@ xcb-util
 xclip
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
-xdg-dbus-proxy
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
 xdg-user-dirs-gtk
