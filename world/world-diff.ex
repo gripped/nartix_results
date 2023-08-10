@@ -560,8 +560,10 @@ python-cachy
 python-cairo
 python-cairo-docs
 python-cairocffi
+python-cerberus
 python-chardet
 python-click-repl
+python-cookiecutter
 python-cytoolz
 python-dask
 python-distributed
@@ -572,6 +574,7 @@ python-hypothesis
 python-ipywidgets
 python-josepy
 python-jupyter-events
+python-kajiki
 python-keyring
 python-keyrings-alt
 python-ldap
@@ -693,6 +696,7 @@ redshift
 refind
 refind-docs
 rng-tools
+rofi
 rpm-tools
 rrdtool
 rspamd

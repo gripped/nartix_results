@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=rofi
+ pkgver=1.7.5
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A window switcher, application launcher and dmenu replacement'
+ arch=(x86_64)
+ url="https://github.com/DaveDavenport/$pkgname"
+@@ -11,11 +11,6 @@
+ optdepends=('i3-wm: use as a window switcher')
+ source=("$url/releases/download/$pkgver/$pkgname-$pkgver.tar.xz")
+ sha256sums=('caffcf66d165cb32b748c1db7f229d6d75da58c1685eb17455f65c60e8220c8d')
+-
+-prepare() {
+-  cd "$pkgname-$pkgver"
+-  sed -i "s/xfce4-terminal.wrapper/xfce4-terminal/g" script/rofi-sensible-terminal
+-}
+ 
+ build() {
+   cd "$pkgname-$pkgver"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,6 @@
+ pkgname=rofi
+ depends=(libxdg-basedir startup-notification libxkbcommon-x11 xcb-util-wm xcb-util-xrm librsvg xcb-util-cursor)
+ makedepends=(check)
+-prepare() {
+-  cd "$pkgname-$pkgver"
+-  sed -i "s/xfce4-terminal.wrapper/xfce4-terminal/g" script/rofi-sensible-terminal
+-}
+ build() {
+   cd "$pkgname-$pkgver"
+   autoreconf -i

@@ -2588,7 +2588,6 @@ python-cattrs
 python-cbor2
 python-cchardet
 python-celery
-python-cerberus
 python-certifi
 python-cffi
 python-cfgv
@@ -2633,7 +2632,6 @@ python-confuse
 python-constantly
 python-contextlib2
 python-contourpy
-python-cookiecutter
 python-coverage
 python-cppy
 python-crashtest
@@ -2919,7 +2917,6 @@ python-jupyterlab_server
 python-jwcrypto
 python-k5test
 python-kaitaistruct
-python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
@@ -3764,7 +3761,6 @@ rnnoise
 robin-map
 roc-toolkit
 rocs
-rofi
 ropgadget
 ropper
 rpcsvc-proto
