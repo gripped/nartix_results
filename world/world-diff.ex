@@ -162,6 +162,7 @@ gnome-taquin
 gnome-user-share
 gnome-video-effects
 go-bindata
+go-tools
 gpsd
 grim
 grpc
@@ -566,9 +567,11 @@ python-click-repl
 python-cookiecutter
 python-cytoolz
 python-dask
+python-distlib
 python-distributed
 python-django-classy-tags
 python-django-debug-toolbar
+python-editables
 python-gnupg
 python-hypothesis
 python-ipywidgets
@@ -577,6 +580,7 @@ python-jupyter-events
 python-kajiki
 python-keyring
 python-keyrings-alt
+python-lark-parser
 python-ldap
 python-mailmanclient
 python-pathspec
@@ -593,9 +597,15 @@ python-rapidfuzz
 python-requests-mock
 python-scramp
 python-sphinx-alabaster-theme
+python-sphinxcontrib-applehelp
+python-sphinxcontrib-devhelp
+python-sphinxcontrib-htmlhelp
+python-sphinxcontrib-qthelp
+python-sphinxcontrib-serializinghtml
 python-spsdk
 python-tpm2-pytss
 python-uri-template
+python-virtualenv
 python-wxpython
 python-xapian
 python-yaml
@@ -701,10 +711,13 @@ rpm-tools
 rrdtool
 rspamd
 rtkit
+ruby-bake-modernize
 ruby-bake-test-external
 ruby-faraday-patron
 ruby-rugged
 ruby-sus
+ruff
+python-ruff
 rust
 lib32-rust-libs
 rust-musl

@@ -623,7 +623,6 @@ go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
 go-md2man
-go-tools
 go-yq
 go
 gobject-introspection
@@ -2670,7 +2669,6 @@ python-dill
 python-dirty-equals
 python-discid
 python-discogs-client
-python-distlib
 python-distro
 python-distutils-extra
 python-django-allauth
@@ -2709,7 +2707,6 @@ python-dulwich
 python-dunamai
 python-easyprocess
 python-ecdsa
-python-editables
 python-editdistance-s
 python-editdistance
 python-editor
@@ -2925,7 +2922,6 @@ python-keyutils
 python-kiwisolver
 python-kombu
 python-krb5
-python-lark-parser
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
@@ -3426,13 +3422,8 @@ python-sphinx-reredirects
 python-sphinx-theme-builder
 python-sphinx
 python-sphinx_rtd_theme
-python-sphinxcontrib-applehelp
-python-sphinxcontrib-devhelp
-python-sphinxcontrib-htmlhelp
 python-sphinxcontrib-jquery
 python-sphinxcontrib-jsmath
-python-sphinxcontrib-qthelp
-python-sphinxcontrib-serializinghtml
 python-sphinxcontrib-spelling
 python-sphinxcontrib-towncrier
 python-sphinxcontrib-trio
@@ -3541,7 +3532,6 @@ python-vcrpy
 python-versioneer
 python-versioningit
 python-vine
-python-virtualenv
 python-vistir
 python-vobject
 python-volatile
@@ -3794,7 +3784,6 @@ ruby-async-rspec
 ruby-async
 ruby-atk
 ruby-augeas
-ruby-bake-modernize
 ruby-bake-test
 ruby-bake
 ruby-base64
@@ -3999,8 +3988,6 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
-ruff
-python-ruff
 runc
 rust-bindgen
 rustup

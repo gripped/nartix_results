@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ruby-bake-modernize
+-pkgver=0.17.3
+-_commit=8c7a8b2b7576d40b91969fd35936952b662a25ad
++pkgver=0.17.1
++_commit=0e6b07bc508b7cea8f38d2bf978219e6bee3cda7
+ pkgrel=1
+ pkgdesc='Automatically modernize parts of your project/gem'
+ arch=(any)
+@@ -17,7 +17,7 @@
+ prepare() {
+   cd bake-modernize
+   sed -i -e '/signing_key/d' -e 's/~>/>=/' bake-modernize.gemspec
+-  sed -i '/bake-gem/d;/bake-github-pages/d;/utopia-project/d' gems.rb
++  echo -e 'gemspec\ngem "bake-test"' > gems.rb
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ prepare() {
+   cd bake-modernize
+   sed -i -e '/signing_key/d' -e 's/~>/>=/' bake-modernize.gemspec
+-  sed -i '/bake-gem/d;/bake-github-pages/d;/utopia-project/d' gems.rb
++  echo -e 'gemspec\ngem "bake-test"' > gems.rb
+ }
+ build() {
+   local _gemdir="$(gem env gemdir)"

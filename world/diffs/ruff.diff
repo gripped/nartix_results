@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgbase=ruff
+ pkgname=($pkgbase python-$pkgbase)
+-pkgver=0.0.284
++pkgver=0.0.278
+ pkgrel=1
+ pkgdesc='An extremely fast Python linter, written in Rust'
+ arch=(x86_64)
+-url="https://github.com/astral-sh/$pkgbase"
++url="https://github.com/charliermarsh/$pkgname"
+ license=(MIT)
+ depends=(
+   gcc-libs
+@@ -17,10 +17,10 @@
+   python-installer
+ )
+ options=(!lto)
+-_archive="$pkgbase-$pkgver"
++_archive="$pkgname-$pkgver"
+ source=($url/archive/refs/tags/v$pkgver/$_archive.tar.gz)
+-sha512sums=('2ba28bc9f2606b5e1e7d192c148204dd9b35fcaea5b69c0b8788a10fb67d4a1f22d12edb1855f233194a3f984312c8c8aee61defde4dc942494ac9194aed92e6')
+-b2sums=('0df062a8d47ed3ab882eabd44d0a9931b3f406ecea16bbc70e99aa5382791a5f5c23049bc063a349811ed9e37ec9a80e7c08a77ebbeaf01691535efb4fc03aa3')
++sha512sums=('4341704f2c812b96b8f36227bddebf6f6ccc7b15ffbc8ffa495ccbd43e9b90652d5a0a69a95e4cd90bccd451813c9a4441f2e264c46f9d539a5bad0ec61d1878')
++b2sums=('b9fe82cbd599b5d8735f02a23dc53424898fae46b0fd42c1f8e80fca8565e189f45e14fa19050fc1192e54ef7637743f15eb2d398f0ef6da3ba6ab80edebf7e0')
+ 
+ prepare() {
+   cd "$_archive"
+@@ -47,9 +47,9 @@
+   _package_common
+   local _target="target/$CARCH-unknown-linux-gnu/release/ruff"
+   install -Dm0755 -t "$pkgdir/usr/bin/" "$_target"
+-  $_target --generate-shell-completion bash | install -Dm0644 /dev/stdin "$pkgdir/usr/share/bash-completion/completions/$pkgbase.bash"
+-  $_target --generate-shell-completion fish | install -Dm0644 /dev/stdin "$pkgdir/usr/share/fish/vendor_completions.d/$pkgbase.fish"
+-  $_target --generate-shell-completion zsh  | install -Dm0644 /dev/stdin "$pkgdir/usr/share/zsh/site-functions/_$pkgbase"
++  $_target --generate-shell-completion bash | install -Dm0644 /dev/stdin "$pkgdir/usr/share/bash-completion/completions/$pkgname.bash"
++  $_target --generate-shell-completion fish | install -Dm0644 /dev/stdin "$pkgdir/usr/share/fish/vendor_completions.d/$pkgname.fish"
++  $_target --generate-shell-completion zsh  | install -Dm0644 /dev/stdin "$pkgdir/usr/share/zsh/site-functions/_$pkgname"
+ }
+ 
+ package_python-ruff() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+   python-installer
+ )
+ options=(!lto)
+-_archive="$pkgbase-$pkgver"
++_archive="$pkgname-$pkgver"
+ prepare() {
+   cd "$_archive"
+   cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
