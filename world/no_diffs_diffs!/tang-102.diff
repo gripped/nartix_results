@@ -23,10 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=tang
  depends=('http-parser' 'jose')
- makedepends=('git' 'asciidoc' 'meson')
  build() {
  	cd "$pkgname"
  	meson --libexecdir=/usr/lib --buildtype=plain build

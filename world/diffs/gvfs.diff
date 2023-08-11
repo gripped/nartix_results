@@ -74,8 +74,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,11 +36,14 @@
-   smbclient
+@@ -19,11 +19,14 @@
+   udisks2
  )
  groups=(gnome)
  prepare() {
@@ -89,7 +89,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -62,7 +65,7 @@
+@@ -45,7 +48,7 @@
      'gvfs-nfs: NFS support'
      'gvfs-smb: SMB/CIFS (Windows client) support'
    )
@@ -98,7 +98,7 @@
    ( cd "$pkgdir"
      _pick smb \
        usr/lib/gvfsd-smb{,-browse} \
-@@ -71,25 +74,21 @@
+@@ -54,25 +57,21 @@
        usr/share/gvfs/mounts/smb{,-browse}.mount
      _pick afc \
        usr/lib/gvfs{-afc-volume-monitor,d-afc} \

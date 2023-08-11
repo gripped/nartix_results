@@ -27,13 +27,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,10 +1,10 @@
  pkgname=ndctl
 -depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'systemd-libs'
 +depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'libudev'
           'util-linux-libs')
--makedepends=('asciidoctor' 'bash-completion' 'cmake' 'meson' 'systemd' 'xmlto')
-+makedepends=('asciidoctor' 'bash-completion' 'cmake' 'meson' 'udev' 'xmlto')
  prepare() {
    sed -i "s|^modprobedatadir =.*|modprobedatadir = '/usr/lib/modprobe.d/'|" $pkgname-$pkgver/contrib/meson.build
  }

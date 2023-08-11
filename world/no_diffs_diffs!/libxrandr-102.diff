@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=libxrandr
  depends=('libxext' 'libxrender')
- makedepends=('xorg-util-macros' 'xorgproto')
  validpgpkeys+=('4A193C06D35E7C670FA4EF0BA2FB9E081F2D130E') # Alan Coopersmith <alan.coopersmith@oracle.com>
  build() {
    cd libXrandr-${pkgver}

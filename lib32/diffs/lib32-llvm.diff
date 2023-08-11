@@ -72,10 +72,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,29 +1,8 @@
+@@ -1,27 +1,6 @@
  pkgname=('lib32-llvm' 'lib32-llvm-libs')
- makedepends=('cmake' 'ninja' 'lib32-libffi' 'lib32-zlib' 'lib32-zstd' 'python'
-              'gcc-multilib' 'lib32-libxml2')
 -options=staticlibs!lto#extra/llvmhasmanytestfailureswithLTO
 +options=staticlibs!lto#extra/llvmhasmanytestfailureswithLTO
  _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
@@ -103,7 +101,7 @@
  prepare() {
    mv cmake{-$pkgver.src,}
    cd llvm-$pkgver.src
-@@ -57,16 +36,12 @@
+@@ -55,16 +34,12 @@
      -DLLVM_USE_PERF=ON
    )
    cmake .. "${cmake_args[@]}"

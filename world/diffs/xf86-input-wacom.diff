@@ -26,13 +26,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,12 @@
+@@ -1,10 +1,9 @@
  pkgname=xf86-input-wacom
 -depends=(libxi libxinerama libxrandr systemd-libs)
 +depends=(libxi libxinerama libxrandr libudev.so)
- makedepends=('xorg-server-devel' 'X-ABI-XINPUT_VERSION=24.4' 'meson'
-  	'gobject-introspection'
-         'python-libevdev' 'python-pytest' 'python-yaml' 'python-gobject' 'attr')
  conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
  build() {
 -  arch-meson $pkgname-$pkgver build \

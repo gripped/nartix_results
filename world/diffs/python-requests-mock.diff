@@ -57,11 +57,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,12 @@
+@@ -1,6 +1,11 @@
  pkgname=python-requests-mock
  depends=('python-requests' 'python-six')
--makedepends=('git' 'python-pbr')
-+makedepends=('python-pbr')
 +export PBR_VERSION=$pkgver
 +prepare() {
 +  cd requests-mock-$pkgver

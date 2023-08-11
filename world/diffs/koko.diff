@@ -48,9 +48,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,10 @@
+@@ -2,10 +2,10 @@
+ groups=(kde-applications kde-graphics)
  depends=(kirigami2 kdeclarative qt5-location kfilemetadata kquickimageeditor)
- makedepends=(extra-cmake-modules)
  prepare() {
 -  cp -L cities1000-2023-07-30.zip admin1CodesASCII-2023-07-30.txt $pkgname-$pkgver/src
 +  cp -L cities1000.zip admin1CodesASCII.txt admin2Codes.txt $pkgname-$pkgver/src

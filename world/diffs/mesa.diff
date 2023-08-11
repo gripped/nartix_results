@@ -179,37 +179,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,10 +28,6 @@
-   'libxxf86vm'
-   'llvm'
-   'lm_sensors'
--  'rust'
--  'spirv-llvm-translator'
--  'spirv-tools'
--  'systemd'
-   'vulkan-icd-loader'
-   'wayland'
-   'zstd'
-@@ -42,13 +38,16 @@
-   'libclc'
-   'meson'
-   'python-mako'
--  'python-ply'
--  'rust-bindgen'
-   'wayland-protocols'
-   'xorgproto'
-   'valgrind'
-   'directx-headers'
-   'libomxil-bellagio'
-+  'rust'
-+  'rust-bindgen'
-+  'spirv-tools'
-+  'python-ply'
-+  'spirv-llvm-translator'
- )
-  <jasuarez@igalia.com>
-               'A5CC9FEC93F2F837CB044912336909B6B25FADFA'  # Juan A. Suarez Romero <jasuarez@igalia.com>
-@@ -56,9 +55,14 @@
+@@ -17,9 +17,14 @@
                '57551DE15B968F6341C248F68D8E31AFC32428A6') # Eric Engestrom <eric@engestrom.ch>
  prepare() {
    cd mesa-$pkgver
@@ -225,7 +195,7 @@
      -D android-libbacktrace=disabled
      -D b_ndebug=true
      -D dri3=enabled
-@@ -93,7 +97,9 @@
+@@ -54,7 +59,9 @@
    )
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
@@ -236,7 +206,7 @@
    meson configure build # Print config
    meson compile -C build
    DESTDIR="${srcdir}/fakeinstall" meson install -C build
-@@ -107,7 +113,6 @@
+@@ -68,7 +75,6 @@
      mv -v "${src}" "${dir}/"
    done
  }
@@ -244,7 +214,7 @@
  package_vulkan-mesa-layers() {
    depends=(
      'libdrm'
-@@ -129,12 +134,12 @@
+@@ -90,12 +96,12 @@
      'expat'
      'libdrm'
      'libelf'
@@ -260,7 +230,7 @@
    conflicts=('opencl-mesa')
    _install fakeinstall/etc/OpenCL/vendors/mesa.icd
    _install fakeinstall/$_libdir/libMesaOpenCL*
-@@ -147,13 +152,12 @@
+@@ -108,13 +114,12 @@
      'expat'
      'libdrm'
      'libelf'
@@ -277,7 +247,7 @@
    conflicts=('opencl-mesa')
    _install fakeinstall/etc/OpenCL/vendors/rusticl.icd
    _install fakeinstall/$_libdir/libRusticlOpenCL*
-@@ -164,7 +168,6 @@
+@@ -125,7 +130,6 @@
      'libdrm'
      'libx11'
      'libxshmfence'
@@ -285,7 +255,7 @@
      'wayland'
      'zstd'
    )
-@@ -180,7 +183,6 @@
+@@ -141,7 +145,6 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -293,7 +263,7 @@
      'wayland'
      'zstd'
    )
-@@ -197,7 +199,6 @@
+@@ -158,7 +161,6 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -301,7 +271,7 @@
      'wayland'
      'zstd'
    )
-@@ -213,7 +214,6 @@
+@@ -174,7 +176,6 @@
      'libdrm'
      'libx11'
      'libxshmfence'

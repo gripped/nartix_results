@@ -26,8 +26,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,9 @@
- makedepends=(cmake qt5-base qt6-5compat)
+@@ -2,7 +2,9 @@
+ pkgname=(quazip-qt5 quazip-qt6)
  build() {
    cmake -B build5 -S $pkgbase-$pkgver \
 -    -DCMAKE_INSTALL_PREFIX=/usr

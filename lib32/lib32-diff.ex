@@ -6,7 +6,6 @@ lib32-freetype2
 lib32-gamemode
 lib32-jack2
 lib32-libdrm
-lib32-libepoxy
 lib32-libgudev
 lib32-libjpeg-turbo
 lib32-libpulse
@@ -30,5 +29,4 @@ lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-polkit
 lib32-v4l-utils
-wine-staging
 wine

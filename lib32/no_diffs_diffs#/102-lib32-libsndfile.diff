@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
- makedepends=(cmake lib32-alsa-lib lib32-flac lib32-libogg lib32-libvorbis
- lib32-sqlite python)
+@@ -1,6 +1,7 @@
+ pkgname=lib32-$_name
+ depends=(lib32-opus $
  provides=(libsndfile.so)
  build() {
    export CC="gcc -m32"

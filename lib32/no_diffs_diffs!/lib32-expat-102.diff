@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
+@@ -4,6 +4,7 @@
+   lib32-glibc
  )
- makedepends=(cmake)
  provides=(libexpat.so)
  build() {
    export CC='gcc -m32'

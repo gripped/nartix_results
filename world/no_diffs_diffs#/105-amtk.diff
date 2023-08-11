@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=amtk
  depends=('glib2' 'glibc' 'gtk3')
- makedepends=('meson' 'gobject-introspection' 'gtk-doc')
  build() {
 -  arch-meson $pkgname-$pkgver build
 +  artix-meson $pkgname-$pkgver build

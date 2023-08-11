@@ -17,12 +17,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=hwloc
 -depends=('glibc' 'libtool' 'systemd-libs' 'libpciaccess')
--makedepends=('cairo' 'libxml2' 'pciutils' 'systemd' 'libx11')
 +depends=('glibc' 'libtool' 'libudev.so' 'libpciaccess')
-+makedepends=('cairo' 'libxml2' 'pciutils' 'udev' 'libx11')
  options=('!docs')
  build() {
    cd hwloc-${pkgver}

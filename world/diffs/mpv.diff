@@ -44,8 +44,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,6 +13,13 @@
-              'ffnvcodec-headers' 'vulkan-headers')
+@@ -11,6 +11,13 @@
+          'libshaderc_shared.so' 'uchardet' 'vulkan-icd-loader' 'wayland' 'zlib')
  provides=('libmpv.so')
  options=('!emptydirs')
 +prepare() {
@@ -58,7 +58,7 @@
  build() {
    local _meson_options=(
      --auto-features auto
-@@ -23,6 +30,6 @@
+@@ -21,6 +28,6 @@
      -Ddvdnav=enabled
      -Dlibarchive=enabled
    )

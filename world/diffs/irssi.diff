@@ -40,8 +40,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,9 @@
- makedepends=('meson' 'ninja')
+@@ -2,13 +2,9 @@
+ depends=('glibc' 'glib2' 'openssl' 'libotr' 'perl' 'ncurses' 'libncursesw.so')
  replaces=('irssi-otr')
  backup=('etc/irssi.conf')
 -prepare() {

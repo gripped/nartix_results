@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=libepubgen
  depends=('librevenge')
- makedepends=('boost' 'cppunit' 'doxygen' 'libxml2')
  build() {
  	cd "$pkgname-$pkgver"
  	./configure --prefix=/usr

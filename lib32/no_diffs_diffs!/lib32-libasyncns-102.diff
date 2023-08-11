@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=lib32-libasyncns
  depends=(lib32-glibc libasyncns)
- makedepends=(git lynx)
  prepare() {
    cd libasyncns
    sed -i '/^libdir=/s:/lib:/lib32:' *.pc.in

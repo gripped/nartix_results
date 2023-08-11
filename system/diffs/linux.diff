@@ -63,25 +63,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,8 @@
+@@ -1,10 +1,13 @@
 +_ver=6.4.4
 +_rel=1
 +_artix=artix${_rel}
  pkgbase=linux
 -_srctag=v${pkgver%.*}-${pkgver##*.}
 +_srctag=v${pkgver%.*}-${_tag}
- makedepends=(
-   bc
-   cpio
-@@ -8,7 +11,6 @@
-   libelf
-   pahole
-   perl
--  python
-   tar
-   xz
-   graphviz
-@@ -20,7 +22,7 @@
+ options=('!strip')
  _srcname=archlinux-linux
    C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
  )
@@ -90,7 +79,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  _make() {
-@@ -43,6 +45,8 @@
+@@ -27,6 +30,8 @@
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
@@ -99,7 +88,7 @@
    echo "Setting config..."
    cp ../config .config
    _make olddefconfig
-@@ -66,7 +70,7 @@
+@@ -50,7 +55,7 @@
      WIREGUARD-MODULE
    )
    replaces=(

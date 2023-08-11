@@ -38,7 +38,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,6 @@
+@@ -8,7 +8,6 @@
      patch -d "${pkgname}-${pkgver}" -Np1 -i "${srcdir}/005-i2pd-tests-use-arch-flags.conf"
      patch -d "${pkgname}-${pkgver}" -Np1 -i "${srcdir}/010-i2pd-config.patch"
      patch -d "${pkgname}-${pkgver}" -Np1 -i "${srcdir}/020-i2pd-do-not-override-config.patch"

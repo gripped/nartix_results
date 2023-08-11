@@ -52,6 +52,6 @@
  pkgname=distcc
 -depends=(avahi popt python)
 +depends=(avahi popt python "gcc=$_gccver")
- makedepends=(git gtk3)
  backup=(etc/conf.d/distccd
          etc/distcc/hosts)
+ prepare() {

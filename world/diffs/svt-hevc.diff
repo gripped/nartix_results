@@ -21,6 +21,6 @@
 -depends=(
 -  glibc
 -)
- makedepends=(
-   cmake
-   git
+ prepare() {
+   sed '/CMAKE_BUILD_TYPE Release/d' -i SVT-HEVC/CMakeLists.txt
+ }

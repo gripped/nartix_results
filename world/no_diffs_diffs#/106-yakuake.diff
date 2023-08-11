@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules)
+@@ -2,7 +2,7 @@
+ depends=(konsole kwayland hicolor-icon-theme)
  groups=(kde-applications kde-utilities)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

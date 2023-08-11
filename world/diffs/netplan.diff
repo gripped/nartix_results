@@ -50,17 +50,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,13 +4,17 @@
+@@ -4,8 +4,12 @@
    'python-yaml'
    'python-netifaces'
    'iproute2'
 -  'systemd'
 +  'elogind'
- )
- makedepends=(
-   'python'
-   'pkgconf'
-   'pandoc'
  )
 +prepare() {
 +  cd "${pkgname}-${pkgver}"

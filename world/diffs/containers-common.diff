@@ -68,6 +68,6 @@
  _storage_
 -depends=('container-network-stack>1')
 +depends=('container-network-stack')
- makedepends=(go-md2man)
  backup=(
    etc/containers/containers.conf
+   etc/containers/mounts.conf

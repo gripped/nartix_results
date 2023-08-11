@@ -31,22 +31,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,6 @@
+@@ -17,11 +17,11 @@
    nss
    pulseaudio
    pulseaudio-alsa
 -  systemd
    upower
  )
- makedepends=(
-@@ -30,6 +29,7 @@
- )
  groups=(gnome)
  backup=(etc/xdg/Xwayland-session.d/00-xrdb)
  prepare() {
    cd $pkgname
    git submodule init
-@@ -37,6 +37,6 @@
+@@ -29,6 +29,6 @@
    git -c protocol.file.allow=always submodule update
  }
  build() {

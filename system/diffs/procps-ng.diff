@@ -27,16 +27,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=procps-ng
 -depends=(glibc ncurses libncursesw.so systemd-libs)
--makedepends=(systemd)
 +depends=(glibc ncurses libncursesw.so libelogind)
-+makedepends=(elogind)
  conflicts=(procps sysvinit-tools)
  provides=(procps sysvinit-tools libproc2.so)
  replaces=(procps sysvinit-tools)
-@@ -19,7 +19,8 @@
+@@ -18,7 +18,8 @@
      --bindir=/usr/bin \
      --sbindir=/usr/bin \
      --enable-watch8bit \

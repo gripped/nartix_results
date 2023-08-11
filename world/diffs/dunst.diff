@@ -19,6 +19,6 @@
  pkgname=dunst
 -depends=('libxinerama' 'dbus' 'systemd' 'wayland' 'libxss' 'pango' 'gdk-pixbuf2' 'libxrandr' 'glib2')
 +depends=('libxinerama' 'dbus' 'wayland' 'libxss' 'pango' 'gdk-pixbuf2' 'libxrandr' 'glib2')
- makedepends=('libnotify')
  backup=('etc/dunst/dunstrc')
  provides=('notification-daemon')
+ build() {

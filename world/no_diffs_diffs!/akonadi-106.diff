@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgbase=akonadi
  pkgname=(akonadi libakonadi)
- makedepends=(extra-cmake-modules postgresql qt5-tools kitemmodels kaccounts-integration doxygen)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

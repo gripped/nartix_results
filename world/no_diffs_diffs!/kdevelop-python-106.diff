@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules)
+@@ -2,7 +2,7 @@
+ depends=(kdevelop python)
  groups=(kde-applications kdevelop)
  build() {
 -  cmake -B build -S kdev-python-$pkgver \

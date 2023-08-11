@@ -19,6 +19,6 @@
  pkgname=ocaml-ctypes
 -depends=('ocaml' 'libffi' 'ocaml-integers' 'ocaml-bigarray-compat')
 +depends=('ocaml' 'libffi' 'ocaml-integers' 'ocaml-bigarray-compat' 'ocaml-stdlib-shims')
- makedepends=('ocaml-findlib' 'ocaml-compiler-libs')
  options=('!strip' '!makeflags')
  build() {
+   cd "$srcdir/$pkgname-$pkgver"

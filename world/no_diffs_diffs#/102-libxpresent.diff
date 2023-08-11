@@ -19,10 +19,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=libxpresent
  depends=('libxfixes' 'libxrandr')
- makedepends=('xorg-util-macros' 'xorgproto')
  build() {
    cd libXpresent-${pkgver}
    ./configure --prefix=/usr

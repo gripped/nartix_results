@@ -23,10 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,8 @@
+@@ -1,6 +1,7 @@
  pkgname=slurp
  depends=('cairo' 'wayland' 'libxkbcommon')
- makedepends=('meson' 'scdoc' 'wayland-protocols')
  build() {
 -    arch-meson "$pkgname-$pkgver" build
 +    artix-meson "$pkgname-$pkgver" build

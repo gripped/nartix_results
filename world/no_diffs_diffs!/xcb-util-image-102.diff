@@ -19,10 +19,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=xcb-util-image
  depends=('libxcb' 'xcb-util')
- makedepends=('xorg-util-macros' 'xorgproto')
  build() {
    cd ${pkgname}-${pkgver}
    ./configure --prefix=/usr --disable-static

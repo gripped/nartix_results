@@ -31,16 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,6 @@
+@@ -5,13 +5,13 @@
    libhandy
    librsvg
    polkit
 -  systemd
- )
- makedepends=(
-   appstream-glib
-@@ -14,10 +13,11 @@
-   yelp-tools
  )
  groups=(gnome)
  prepare() {

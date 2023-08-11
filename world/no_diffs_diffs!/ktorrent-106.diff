@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- makedepends=(extra-cmake-modules kdoctools boost plasma-workspace kdnssd taglib syndication kplotting geoip)
+@@ -2,6 +2,6 @@
+ depends=(libktorrent kcmutils knotifyconfig kparts phonon-qt5 qt5-webengine)
  groups=(kde-applications kde-network)
  build() {
 -  cmake -B build -S $pkgname-$pkgver

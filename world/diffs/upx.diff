@@ -67,10 +67,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,18 @@
+@@ -1,15 +1,17 @@
  pkgname=upx
--makedepends=(cmake git perl)
-+makedepends=(cmake git perl setconf)
  prepare() {
    cd $pkgname
 +  sed -i "66 a set(GIT_DESCRIBE \"$pkgver\")" CMakeLists.txt

@@ -15,9 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=cli11
- makedepends=(cmake)
  build() {
 -  cmake -B build -S ${pkgname^^}-${pkgver} \
 +  artix-cmake -B build -S ${pkgname^^}-${pkgver} \

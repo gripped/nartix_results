@@ -18,5 +18,5 @@
  pkgname=xdg-desktop-portal-lxqt
 -groups=(lxqt)
  depends=(qt5-base kwindowsystem xdg-desktop-portal libfm-qt)
- makedepends=(cmake)
  provides=(xdg-desktop-portal-impl)
+ build() {

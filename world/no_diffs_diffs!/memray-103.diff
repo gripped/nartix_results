@@ -23,12 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=memray
--_tag
- depends=('python' 'libunwind' 'python-rich' 'python-jinja' 'lz4' 'ipython')
- makedepends=('git' 'python-setuptools-scm' 'python-build' 'python-installer' 'python-wheel' 'cython' 'npm')
-+_tag
++depends=('python' 'libunwind' 'python-rich' 'python-jinja' 'lz4' 'ipython')
+ _tag
+-depends=('python' 'libunwind' 'python-rich' 'python-jinja' 'lz4' 'ipython')
  build() {
    cd "${pkgname}"
    export DIST_NAME='Arch Linux'

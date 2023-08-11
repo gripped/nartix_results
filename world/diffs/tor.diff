@@ -52,14 +52,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=tor
 -depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap' 'systemd-libs'
 -         'libsystemd.so' 'libzstd.so' 'libseccomp.so' 'libcap.so')
--makedepends=('ca-certificates' 'systemd')
 +depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap'
 +         'libzstd.so' 'libseccomp.so' 'libcap.so')
-+makedepends=('ca-certificates')
  backup=('etc/tor/torrc')
  prepare() {
    sha256sum -c ${pkgname}-${pkgver}.tar.gz.sha256sum

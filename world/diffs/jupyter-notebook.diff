@@ -26,10 +26,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,6 @@
+@@ -1,7 +1,6 @@
+ pkgname=jupyter-notebook
  _pipname=notebook
  depends=(jupyterlab python-tornado python-traitlets python-jupyter-core python-jupyter-client)
- makedepends=(python-build python-installer python-hatch-jupyter-builder)
 -replaces=(jupyter-retrolab)
  build() {
    cd notebook-$pkgver

@@ -45,7 +45,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,6 @@
+@@ -7,7 +7,6 @@
  options=(!emptydirs)
  prepare() {
    patch -Np1 -d $_name-$pkgver -i ../$pkgname-1.6.2-remove_broken_libgit2_detection.patch

@@ -27,11 +27,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
+@@ -1,13 +1,13 @@
  pkgname=plocate
 -depends=('zstd' 'liburing' 'systemd')
 +depends=('zstd' 'liburing')
- makedepends=('meson')
  conflicts=('mlocate')
  provides=('mlocate' 'locate')
  backup=('etc/updatedb.conf')

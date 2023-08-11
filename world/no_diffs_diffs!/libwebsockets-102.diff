@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=libwebsockets
  depends=(glibc openssl libuv libev zlib)
- makedepends=(cmake glib2 libcap)
  provides=(libwebsockets.so)
  build() {
    cmake -D CMAKE_INSTALL_PREFIX=/usr \

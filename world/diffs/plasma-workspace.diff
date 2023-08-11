@@ -53,9 +53,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,9 +7,6 @@
+@@ -6,9 +6,6 @@
+          plasma-integration kpeople kactivities-stats kquickcharts kuserfeedback kpipewire
           accountsservice kio-extras kio-fuse qt5-tools oxygen-sounds)
- makedepends=(extra-cmake-modules kdoctools gpsd baloo networkmanager-qt plasma-wayland-protocols wayland-protocols kunitconversion)
  groups=(plasma)
 -prepare() {
 -  patch -d $pkgbase-$pkgver -p1 < fc01a7f8.patch # Fix crash when closing popups
@@ -63,7 +63,7 @@
  build() {
    cmake -B build -S $pkgbase-$pkgver \
      -DCMAKE_INSTALL_LIBEXECDIR=lib \
-@@ -22,6 +19,8 @@
+@@ -21,6 +18,8 @@
    DESTDIR="$pkgdir" cmake --install build
    install -Dm644 "$srcdir"/kde.pam "$pkgdir"/etc/pam.d/kde
    rm -r "$pkgdir"/usr/share/wayland-sessions

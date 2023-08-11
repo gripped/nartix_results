@@ -118,20 +118,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,11 +6,11 @@
-   'python-platformdirs'
- )
- makedepends=(
--  'git'
-   'python-build'
-   'python-installer'
-   'python-hatchling'
-   'python-hatch-vcs'
-+  'python-importlib-metadata'
-   'python-sphinx'
-   'python-sphinx-argparse'
-   'python-sphinxcontrib-towncrier'
-@@ -20,11 +20,15 @@
+@@ -8,11 +8,15 @@
  replaces=('virtualenv')
  conflicts=('virtualenv')
  options=('!makeflags')

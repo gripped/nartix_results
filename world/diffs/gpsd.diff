@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -6,7 +6,7 @@
    export LINKFLAGS="${LDFLAGS}"
    _pythonpath=`python -c "from sysconfig import get_path; print(get_path('platlib'))"`
    scons prefix=/usr \

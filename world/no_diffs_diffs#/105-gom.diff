@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=gom
  depends=('glib2' 'glibc' 'sqlite')
- makedepends=('gdk-pixbuf2' 'gobject-introspection' 'gtk-doc' 'meson' 'python-gobject')
  build() {
 -  arch-meson $pkgname-$pkgver build -D enable-gtk-doc=true
 +  artix-meson $pkgname-$pkgver build -D enable-gtk-doc=true

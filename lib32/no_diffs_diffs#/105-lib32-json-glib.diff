@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,10 +7,11 @@
-   git
-   meson
+@@ -3,10 +3,11 @@
+   json-glib
+   lib32-glib2
  )
  build() {
    export CC='gcc -m32'

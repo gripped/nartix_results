@@ -41,13 +41,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,18 @@
+@@ -1,16 +1,17 @@
  pkgname=udisks2
  depends=('acl' 'polkit' 'glib2' 'gcc-libs' 'glibc' 'libatasmart' 'libgudev' 'libblockdev'
 -         'systemd-libs' 'util-linux-libs')
--makedepends=('gobject-introspection' 'gtk-doc')
 +         'util-linux-libs' 'libelogind')
-+makedepends=('gobject-introspection' 'gtk-doc' 'elogind')
  backup=('etc/udisks2/udisks2.conf')
  prepare() {
    cd udisks-$pkgver

@@ -126,7 +126,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,10 @@
+@@ -1,13 +1,9 @@
 -_alt
  pkgname=python-hypothesis
 -_version="${_alt_name}-${pkgver}"
@@ -136,14 +136,7 @@
 -  python-attrs
 -  python-sortedcontainers
 -)
--makedepends=(
--  python-build
--  python-installer
--  python-setuptools
--  python-wheel
--)
 +depends=('python-attrs' 'python-sortedcontainers' 'python-exceptiongroup')
-+makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
 +prepare() {
 +  mv hypothesis-hypothesis-python-$pkgver hypothesis-$pkgver
 +}

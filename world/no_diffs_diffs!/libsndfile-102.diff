@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,6 +13,7 @@
-   sqlite
- )
+@@ -1,6 +1,7 @@
+ pkgname=libsndfile
+ depends=(glibc)
  provides=(libsndfile.so)
  build() {
    cmake -DCMAKE_INSTALL_PREFIX=/usr \

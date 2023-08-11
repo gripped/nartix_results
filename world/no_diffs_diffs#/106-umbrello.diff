@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools kdesignerplugin kdevelop-pg-qt llvm kinit doxygen)
+@@ -2,7 +2,7 @@
+ depends=(kdelibs4support kdevelop-php)
  groups=(kde-applications kdesdk)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

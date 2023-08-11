@@ -79,15 +79,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=lib32-clang
- depends=('lib32-llvm-libs' 'gcc-multilib')
--makedepends=('lib32-llvm' 'cmake' 'ninja' 'python')
-+makedepends=('lib32-llvm11' 'cmake' 'ninja' 'python')
- _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
- _get_distribution_components() {
-   local target
-@@ -25,14 +25,7 @@
+@@ -24,14 +24,7 @@
    mv cmake{-$pkgver.src,}
    cd clang-$pkgver.src
    mkdir build
@@ -102,7 +94,7 @@
  }
  build() {
    cd "$srcdir/clang-$pkgver.src/build"
-@@ -47,16 +40,14 @@
+@@ -46,16 +39,14 @@
      -DCMAKE_CXX_FLAGS:STRING=-m32
      -DCMAKE_C_FLAGS:STRING=-m32
      -DENABLE_LINKER_BUILD_ID=ON

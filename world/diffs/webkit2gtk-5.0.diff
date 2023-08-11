@@ -48,15 +48,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -59,7 +58,6 @@
-   ninja
-   python
-   ruby
--  systemd
-   wayland-protocols
- )
- prepare() {
-@@ -73,6 +71,8 @@
+@@ -61,6 +60,8 @@
      -DCMAKE_INSTALL_LIBDIR=lib
      -DCMAKE_INSTALL_LIBEXECDIR=lib
      -DCMAKE_SKIP_RPATH=ON
@@ -65,7 +57,7 @@
      -DUSE_AVIF=ON
      -DUSE_GTK4=ON
      -DENABLE_DOCUMENTATION=ON
-@@ -80,7 +80,7 @@
+@@ -68,7 +69,7 @@
    )
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'

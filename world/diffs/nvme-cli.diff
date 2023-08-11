@@ -32,16 +32,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=nvme-cli
--makedepends=('systemd' 'meson' 'git' 'asciidoc' 'xmlto' 'swig')
 -depends=('util-linux' 'libsystemd' 'libnvme')
 +depends=('util-linux' 'libudev' 'libnvme')
-+makedepends=('meson' 'git' 'asciidoc' 'xmlto' 'swig')
  options=(strip)
  install=nvme-cli.install
  build() {
-@@ -14,7 +14,6 @@
+@@ -13,7 +13,6 @@
  	--auto-features enabled \
  	-D b_lto=true -D b_pie=true \
  	-D docs=man -D docs-build=true \

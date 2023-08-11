@@ -49,19 +49,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,6 @@
    libpcap         lib32-libpcap
    desktop-file-utils
  )
--makedepends=(autoconf bison perl flex mingw-w64-gcc
-+makedepends=(autoconf bison perl gcc
-   giflib                lib32-giflib
-   gnutls                lib32-gnutls
-   libxinerama           lib32-libxinerama
-@@ -36,7 +36,6 @@
-   opencl-headers
- )
- makedepends=(${makedepends[@]} ${depends[@]})
 -install=wine.install
  prepare() {
    mv $pkgname-$_pkgbasever $pkgname

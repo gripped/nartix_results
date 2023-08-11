@@ -34,5 +34,5 @@
  pkgname=lsb-release
 +install=lsb-release.install
  depends=('sh')
- makedepends=('git')
  prepare() {
+ 	cd lsb-samples/lsb_release/src

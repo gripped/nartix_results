@@ -20,8 +20,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools)
+@@ -2,7 +2,7 @@
+ depends=(baloo-widgets knewstuff kio-extras kcmutils kparts kactivities kuserfeedback)
  groups=(kde-applications kde-system)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

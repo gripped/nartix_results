@@ -72,7 +72,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
+@@ -1,27 +1,20 @@
  pkgbase=libadwaita
 -pkgname=(
 -  libadwaita
@@ -81,9 +81,7 @@
 -)
 +pkgname=(libadwaita libadwaita-docs libadwaita-demos)
  depends=(gtk4)
- makedepends=(
-   gi-docgen
-@@ -17,19 +13,16 @@
+ prepare() {
    cd $pkgname
  }
  build() {

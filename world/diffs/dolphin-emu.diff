@@ -41,7 +41,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -44,7 +44,6 @@
+@@ -38,7 +38,6 @@
      git config submodule.${submodule}.url ../${submodule##*/}
      git -c protocol.file.allow=always submodule update ${submodule}
    done

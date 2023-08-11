@@ -10,6 +10,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-icon-theme
@@ -116,6 +117,7 @@ avogadro-molecules
 avogadrolibs
 avogadrolibs-qt5
 awesome-terminal-fonts
+awesome
 aws-c-auth
 aws-c-cal
 aws-c-common
@@ -401,6 +403,8 @@ enet
 engrampa
 enscript
 entr
+eog
+eog-docs
 eom
 erlang-nox
 espeak-ng
@@ -471,6 +475,7 @@ flickcurl
 flite
 fltk
 fltk-docs
+fluidsynth
 fmt
 font-awesome
 ttf-font-awesome
@@ -490,6 +495,7 @@ freealut
 freecell-solver
 freeglut
 freeradius
+freerdp
 freetds
 freetype2
 freetype2-demos
@@ -500,6 +506,7 @@ fstrm
 ftgl
 ftjam
 fuse-overlayfs
+fuse2
 fuse3
 fuse-common
 fwknop
@@ -653,6 +660,12 @@ graphviz
 grilo-plugins
 grilo
 groovy
+grpc
+python-grpcio
+python-grpcio-tools
+php-grpc
+php-legacy-grpc
+grpc-cli
 grub-customizer
 grunt-cli
 gsasl
@@ -919,6 +932,7 @@ kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
 kde-development-environment-meta
+kde-gtk-config
 kde-inotify-survey
 kdebugsettings
 kdeclarative
@@ -1203,6 +1217,9 @@ libdbi-docs
 libdbusmenu-qt
 libdbusmenu-qt5
 libdbusmenu-qt6
+libdbusmenu
+libdbusmenu-gtk2
+libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
@@ -1223,6 +1240,8 @@ libdwarf
 libe-book
 libebml
 libebur128
+libepoxy
+libepoxy-docs
 libepubgen
 libesmtp
 libetebase
@@ -1312,6 +1331,7 @@ libksieve
 libktorrent
 liblangtag
 liblas
+liblc3
 libldac
 libliftoff
 liblo
@@ -1372,7 +1392,9 @@ libnma-gtk4
 libnotify
 libnotify-docs
 libnumbertext
+libnvme
 liboauth
+libodfgen
 libofa
 libofx
 libofx-doc
@@ -1493,6 +1515,7 @@ libupnp
 liburcu
 liburing
 libusb-compat
+libutempter
 libutf8proc
 libutp
 libuv
@@ -1579,8 +1602,10 @@ lightdm-gtk-greeter
 lightsoff
 lilv
 lilv-docs
+lilypond
 linux-atm
 liquidctl
+lirc
 litehtml
 live-media
 lksctp-tools
@@ -1645,6 +1670,7 @@ lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
+lxd
 lxde-common
 lxde-icon-theme
 lxdm
@@ -1829,6 +1855,7 @@ mtdev
 mtools
 mtr
 mtr-gtk
+muffin
 mujs
 muparser
 mupdf
@@ -1852,6 +1879,7 @@ nauty
 nawk
 nbd
 ncdu
+ncftp
 ncompress
 neatvnc
 nemo-extensions
@@ -1867,6 +1895,7 @@ nemo-share
 nemo-terminal
 nemo
 neochat
+neofetch
 neomutt
 neon
 neovim-qt
@@ -2575,6 +2604,8 @@ python-cached-property
 python-cachelib
 python-cachetools
 python-cacheyou
+python-cachy
+python-cairocffi
 python-cairosvg
 python-caja
 python-calmjs.parse
@@ -2669,6 +2700,7 @@ python-dill
 python-dirty-equals
 python-discid
 python-discogs-client
+python-distributed
 python-distro
 python-distutils-extra
 python-django-allauth
@@ -2925,6 +2957,7 @@ python-krb5
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
+python-ldap
 python-ldap3
 python-levenshtein
 python-lexicon
@@ -3023,7 +3056,6 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
-python-numba
 python-numexpr
 python-numpy
 python-oauth2client
@@ -3075,6 +3107,7 @@ python-pastedeploy
 python-pastel
 python-path
 python-pathable
+python-pathspec
 python-pathtools
 python-patiencediff
 python-patsy
@@ -3152,6 +3185,7 @@ python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
 python-pycares
+python-pycodestyle
 python-pycountry
 python-pycparser
 python-pycryptodome
@@ -3190,6 +3224,7 @@ python-pylint
 python-pylons-sphinx-themes
 python-pymacaroons
 python-pymongo
+python-pymupdf
 python-pymysql
 python-pynacl
 python-pynamodb
@@ -3362,6 +3397,7 @@ python-schema
 python-scikit-build
 python-scikit-learn
 python-scipy
+python-scramp
 python-scripttest
 python-scrypt
 python-seaborn
@@ -3422,8 +3458,12 @@ python-sphinx-reredirects
 python-sphinx-theme-builder
 python-sphinx
 python-sphinx_rtd_theme
+python-sphinxcontrib-applehelp
+python-sphinxcontrib-devhelp
+python-sphinxcontrib-htmlhelp
 python-sphinxcontrib-jquery
 python-sphinxcontrib-jsmath
+python-sphinxcontrib-serializinghtml
 python-sphinxcontrib-spelling
 python-sphinxcontrib-towncrier
 python-sphinxcontrib-trio
@@ -3592,6 +3632,7 @@ python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
+python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
@@ -3755,6 +3796,7 @@ ropgadget
 ropper
 rpcsvc-proto
 rpmextract
+rrdtool
 rst2pdf
 rsync
 rtaudio
@@ -4027,6 +4069,7 @@ serd
 serd-docs
 serf
 setconf
+sfml
 sfsexp
 sg3_utils
 sgml-common
@@ -4055,6 +4098,7 @@ slop
 slurp
 smb4k
 smpeg
+snapper
 snappy
 sndio
 snorenotify
@@ -4367,6 +4411,7 @@ twolame
 txt2man
 typescript
 uchardet
+udftools
 udiskie
 udpxy
 ufmt
@@ -4392,7 +4437,9 @@ libunrar
 unrealircd
 unrtf
 unzip
+uptimed
 uriparser
+usb_modeswitch
 usbredir
 usort
 utf8cpp
@@ -4422,6 +4469,7 @@ virtiofsd
 virtualbox-guest-iso
 virtualgl
 vkd3d
+vlc
 vmaf
 vncdotool
 vnstat

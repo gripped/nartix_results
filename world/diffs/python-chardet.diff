@@ -44,9 +44,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=python-chardet
  depends=('python')
- makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
  build() {
 -  cd chardet-$pkgver
 -  python -m build --wheel --no-isolation

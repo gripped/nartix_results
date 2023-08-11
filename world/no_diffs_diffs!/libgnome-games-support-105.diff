@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,11 @@
+@@ -1,10 +1,11 @@
+ pkgname=libgnome-games-support
  depends=(libgee gtk3)
- makedepends=(vala git meson)
  provides=("libgnome-games-support-${pkgver%%.*}.so")
  prepare() {
    cd libgnome-games-support

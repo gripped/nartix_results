@@ -39,15 +39,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,18 @@
+@@ -1,9 +1,17 @@
  _pkgbasename=libdrm
  pkgname=lib32-$_pkgbasename
  depends=('lib32-libpciaccess' $_pkgbasename)
--makedepends=('meson')
 -prepare() {
 -  cd $_pkgbasename-$pkgver
 -}
-+makedepends=('valgrind' 'meson')
 +validpgpkeys+=('215DEE688925CCB965BE5DA97C03D7797B6E1AE2') # Damien Lespiau <damien.lespiau@intel.com>
 +validpgpkeys+=('10A6D91DA1B05BD29F6DEBAC0C74F35979C486BE') # David Airlie <airlied@redhat.com>
 +validpgpkeys+=('8703B6700E7EE06D7A39B8D6EDAE37B02CEB490D') # Emil Velikov <emil.l.velikov@gmail.com>

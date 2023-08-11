@@ -60,11 +60,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
+@@ -1,17 +1,17 @@
  pkgname=bumblebee
 -depends=('virtualgl' 'glib2' 'mesa-libgl')
 +depends=('virtualgl' 'glib2' 'mesa-libgl' ''libbsd'')
- makedepends=('help2man')
  install=bumblebee.install
  backup=('etc/bumblebee/bumblebee.conf'
          'etc/bumblebee/xorg.conf.nouveau'

@@ -34,14 +34,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,12 +1,13 @@
  pkgname=fprintd
 -depends=(glib2 libfprint polkit dbus dbus-glib systemd)
 +depends=(glib2 libfprint polkit dbus dbus-glib)
- makedepends=(gtk-doc git meson pam_wrapper python-cairo python-dbus
-              python-dbusmock)
  groups=(fprint)
-@@ -7,8 +7,9 @@
+ prepare() {
    cd fprintd
  }
  build() {

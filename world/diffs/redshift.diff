@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
+@@ -3,6 +3,6 @@
  build() {
    cd "${srcdir}/${pkgname}-${pkgver}"
    ./configure --prefix=/usr --enable-drm --enable-randr --enable-vidmode --enable-geoclue2 \

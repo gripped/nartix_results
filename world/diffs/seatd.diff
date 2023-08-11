@@ -54,13 +54,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,18 +5,17 @@
-     'meson'
-     'ninja'
-     'scdoc'
--    'systemd'
-+    'elogind'
- )
+@@ -1,16 +1,15 @@
+ pkgname=seatd
+ provides=("libseat.so")
+ replaces=("libseat")
 -depends=(
 -    'systemd-libs'
 -)

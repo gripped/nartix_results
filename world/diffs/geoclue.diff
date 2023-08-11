@@ -52,7 +52,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,6 @@
+@@ -1,10 +1,5 @@
  pkgname=geoclue
 -depends=(
 -  avahi
@@ -60,21 +60,11 @@
 -  libmm-glib
 -  libsoup3
 -)
--makedepends=(
--  git
--  gobject-introspection
--  gtk-doc
--  libnotify
--  meson
--  systemd
--  vala
--)
 +depends=(libsoup3 json-glib libmm-glib avahi)
-+makedepends=(udev gobject-introspection git vala meson gtk-doc libnotify)
  provides=("geoclue2=$pkgver-$pkgrel")
  conflicts=(geoclue2)
  replaces=(geoclue2)
-@@ -28,6 +15,6 @@
+@@ -19,6 +14,6 @@
      -D dbus-sys-dir=/usr/share/dbus-1/system.d
      -D mozilla-api-key="$_mozilla_api_key"
    )

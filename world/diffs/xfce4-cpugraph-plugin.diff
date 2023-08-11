@@ -31,6 +31,6 @@
  groups=('xfce4-goodies')
 -depends=('xfce4-panel' 'xfconf')
 +depends=('xfce4-panel')
- makedepends=('intltool')
  build() {
    cd $pkgname-$pkgver
+   ./configure \

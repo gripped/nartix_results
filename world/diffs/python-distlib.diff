@@ -68,18 +68,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,12 @@
+@@ -1,10 +1,11 @@
  pkgname=python-distlib
 +_pkgname="${pkgname#python-}"
  depends=('python')
--makedepends=(
--  'git'
--  'python-build'
--  'python-installer'
--  'python-setuptools'
--  'python-wheel'
--)
-+makedepends=('python-setuptools' 'python-build' 'python-installer' 'python-wheel')
  prepare() {
 -  cd "$pkgname"
 +  cd "$_pkgname-$pkgver"

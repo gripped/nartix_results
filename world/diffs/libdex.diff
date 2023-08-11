@@ -35,8 +35,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
-   vala
+@@ -8,7 +8,7 @@
+   liburing
  )
  prepare() {
 -  cd libdex
@@ -44,7 +44,7 @@
    git cherry-pick -n dd2453dab189643a73e8 2194086a5bf83a56a5bf
  }
  build() {
-@@ -25,7 +25,7 @@
+@@ -16,7 +16,7 @@
      -D docs=true
      -D sysprof=true
    )

@@ -46,17 +46,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,13 @@
+@@ -1,15 +1,12 @@
  pkgname=crun
  provides=('oci-runtime')
 -depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu')
--makedepends=('libtool' 'python' 'go-md2man' 'systemd' 'git')
 -prepare() {
 -    cd "${pkgname}-${pkgver}"
 -    patch -Np1 < "$srcdir/crun-1.8.6-fix-missingsymbol.patch"
 -}
 +depends=('yajl' 'libudev' 'libcap' 'libseccomp' 'criu')
-+makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git')
  build() {
      cd "$pkgname-$pkgver"
      ./autogen.sh

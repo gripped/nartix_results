@@ -24,9 +24,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ depends=('dbus-glib' 'desktop-file-utils' 'gdk-pixbuf2' 'glib2' 'gtk2'
           'libcanberra' 'openssl' 'pango' 'pciutils')
- makedepends=('git' 'intltool' 'iso-codes' 'lua' 'meson' 'perl' 'python-cffi')
  build() {
 -  arch-meson hexchat build \
 +  artix-meson hexchat build \

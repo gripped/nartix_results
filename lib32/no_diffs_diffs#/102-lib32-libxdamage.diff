@@ -14,10 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ _pkgbasename=libxdamage
  pkgname=lib32-$_pkgbasename
  depends=('lib32-libxfixes>=4.0.4' $_pkgbasename)
- makedepends=('xorgproto')
  build() {
    export CC="gcc -m32"
    export CXX="g++ -m32"

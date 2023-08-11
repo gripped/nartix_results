@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=json-c
  depends=(glibc)
- makedepends=(git cmake ninja)
  provides=(libjson-c.so)
  prepare() {
    cd json-c

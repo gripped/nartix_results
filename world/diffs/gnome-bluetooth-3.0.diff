@@ -29,12 +29,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,14 @@
+@@ -1,12 +1,13 @@
  pkgname=gnome-bluetooth-3.0
 -depends=(gtk4 libadwaita libnotify bluez gsound systemd pulseaudio-bluetooth
 +depends=(gtk4 libadwaita libnotify bluez gsound pulseaudio-bluetooth
           upower)
- makedepends=(gobject-introspection gtk-doc docbook-xsl git meson)
  provides=(libgnome-bluetooth{,-ui}-3.0.so)
  prepare() {
    cd gnome-bluetooth

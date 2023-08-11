@@ -83,7 +83,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,31 +1,14 @@
+@@ -1,22 +1,12 @@
  pkgbase=gtkmm3
 -pkgname=(
 -  gtkmm3
@@ -94,20 +94,9 @@
 -  gtk3
 -  pangomm
 -)
--makedepends=(
--  atkmm-docs
--  cairomm-docs
--  git
--  glibmm-docs
--  meson
--  mm-common
--  pangomm-docs
--)
 -options=!emptydirs
 +pkgname=(gtkmm3 gtkmm3-docs)
 +depends=(gtk3 pangomm atkmm)
-+makedepends=(git meson mm-common glibmm-docs cairomm-docs pangomm-docs
-+             atkmm-docs)
 +options=!emptydirs
  prepare() {
    cd gtkmm

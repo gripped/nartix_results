@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=("cmake")
+@@ -2,7 +2,7 @@
+ depends=("fcitx>=4.2.7" "gtk3" "iso-codes")
  build() {
    cd $pkgname-$pkgver
 -  echo "Starting make..."

@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=xorg-sessreg
  depends=('glibc')
- makedepends=('xorg-util-macros' 'xorgproto')
  groups=('xorg-apps' 'xorg')
  build() {
    cd "sessreg-${pkgver}"

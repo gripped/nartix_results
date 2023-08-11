@@ -100,20 +100,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,26 +1,9 @@
+@@ -1,18 +1,8 @@
 -pkgname=python-rapidfuzz
 -depends=(
 -  'glibc'
 -  'gcc-libs'
 -  'python'
--)
--makedepends=(
--  'git'
--  'python-build'
--  'python-installer'
--  'cython'
--  'python-scikit-build'
--  'rapidfuzz-cpp'
 -)
 -prepare() {
 -  cd "$pkgname"
@@ -124,7 +116,6 @@
 +_pkgname=rapidfuzz
 +pkgname=python-$_pkgname
 +depends=(python)
-+makedepends=(python-build python-installer python-scikit-build rapidfuzz-cpp)
 +build() {
 +  cd $_pkgname-$pkgver
 +  RAPIDFUZZ_BUILD_EXTENSION=1 \

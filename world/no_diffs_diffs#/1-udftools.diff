@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('GPL')
+ depends=('ncurses' 'readline')
+-makedepends=('systemd')
++makedepends=('udev')
+ source=("https://github.com/pali/$pkgname/releases/download/$pkgver/$pkgname-${pkgver}.tar.gz")
+ sha256sums=('750dcf5c797765eb42265e0a56d1a99f97f94b7f6f4534263a5410503f0caf59')
+ 

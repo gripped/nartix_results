@@ -27,10 +27,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,6 @@
+@@ -1,9 +1,5 @@
  pkgname=rofi
  depends=(libxdg-basedir startup-notification libxkbcommon-x11 xcb-util-wm xcb-util-xrm librsvg xcb-util-cursor)
- makedepends=(check)
 -prepare() {
 -  cd "$pkgname-$pkgver"
 -  sed -i "s/xfce4-terminal.wrapper/xfce4-terminal/g" script/rofi-sensible-terminal

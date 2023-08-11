@@ -23,10 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,13 @@
+@@ -1,12 +1,13 @@
+ pkgbase=libgweather-4
  pkgname=(libgweather-4 libgweather-4-docs)
  depends=(libsoup3 geocode-glib-2 dconf libxml2)
- makedepends=(gobject-introspection vala git gi-docgen meson python-gobject)
  prepare() {
    cd libgweather
    git apply -3 ../disable-metar-test.diff

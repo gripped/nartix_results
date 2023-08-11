@@ -50,10 +50,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,11 @@
+@@ -1,5 +1,10 @@
  pkgname=mat2
  depends=('python' 'python-mutagen' 'python-cairo' 'python-gobject' 'gdk-pixbuf2' 'poppler-glib' 'librsvg' 'perl-image-exiftool' 'mailcap')
- makedepends=('python-setuptools')
 +prepare() {
 +  cd ${pkgname}-${pkgver}
 +  patch -i ../ed0ffa5693b6d710b19a9101d6cb0625f8b6f1fc.patch

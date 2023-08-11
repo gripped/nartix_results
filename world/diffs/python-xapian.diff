@@ -81,7 +81,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,13 @@
+@@ -1,16 +1,12 @@
  pkgname=python-xapian
 -depends=(
 -  gcc-libs
@@ -89,13 +89,7 @@
 -  python
 -  zlib
 -)
--makedepends=(
--  util-linux-libs
--  python-sphinx
--  "xapian-core=$epoch:$pkgver"
--)
 +depends=('gcc-libs' 'glibc' 'python' 'zlib')
-+makedepends=('util-linux-libs' 'python-sphinx' "xapian-core=$epoch:$pkgver")
  prepare() {
 -  cd $_name-$pkgver
 -  autoreconf -fiv

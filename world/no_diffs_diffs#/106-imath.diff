@@ -24,9 +24,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=imath
  depends=(gcc-libs)
- makedepends=(cmake python boost)
  build() {
 -  cmake -B build -S Imath-$pkgver \
 +  artix-cmake -B build -S Imath-$pkgver \

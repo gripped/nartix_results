@@ -35,7 +35,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,6 @@
+@@ -3,7 +3,6 @@
  prepare() {
    cd serverless-application-model-$pkgver
    sed -i -r 's#--cov\S*\s+\S+##g' pytest.ini

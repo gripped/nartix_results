@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=('python-docutils' 'meson')
+@@ -2,7 +2,7 @@
+ depends=('libpciaccess')
  replaces=('libdrm-new' 'libdrm-nouveau')
  build() {
 -  arch-meson $pkgname-$pkgver build \

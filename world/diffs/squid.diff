@@ -61,13 +61,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,12 @@
+@@ -1,15 +1,11 @@
  pkgname=squid
  depends=('openssl' 'pam' 'perl' 'libltdl' 'libcap' 'nettle' 'gnutls' 'libnsl' 'libxml2'
 -	'tdb' 'systemd-libs')
--makedepends=('krb5' 'libldap' 'systemd')
 +	'tdb')
-+makedepends=('krb5' 'libldap')
  options=('emptydirs')
  backup=('etc/squid/squid.conf'
  	'etc/squid/cachemgr.conf'

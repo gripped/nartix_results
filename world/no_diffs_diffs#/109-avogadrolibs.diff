@@ -14,7 +14,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
+@@ -7,6 +7,7 @@
  build() {
    cmake -B build -S $pkgname-$pkgver \
      -DCMAKE_INSTALL_PREFIX=/usr \

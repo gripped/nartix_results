@@ -46,6 +46,6 @@
  pkgname=apcupsd
 -depends=('gcc-libs' 'systemd-sysvcompat' 'libusb-compat')
 +depends=('gcc-libs' 'svc-manager' 'libusb-compat')
- makedepends=('gd')
  backup=(etc/apcupsd/apcupsd.conf
          etc/apcupsd/hosts.conf
+         etc/apcupsd/multimon.conf

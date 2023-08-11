@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=libnitrokey
  depends=('glibc' 'gcc-libs')
- makedepends=('catch2' 'cmake' 'hidapi' 'libusb' 'qt5-tools')
  provides=('libnitrokey.so')
  build() {
    cmake -B build \

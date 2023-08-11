@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- makedepends=(meson samurai gnome-online-accounts)
+@@ -3,6 +3,6 @@
+          libgnomekbd libmm-glib nm-connection-editor)
  options=(!emptydirs)
  build() {
 -  arch-meson build ${pkgname}-${pkgver}

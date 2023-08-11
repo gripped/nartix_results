@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- makedepends=('meson' 'ninja')
+@@ -2,6 +2,6 @@
+ depends=('djvulibre' 'zathura' 'desktop-file-utils')
  build(){
    cd zathura-djvu-$pkgver
 -  arch-meson build

@@ -31,5 +31,5 @@
 +_pkgcommit=e01006ceb2ef82b12c75fe823479e88c414b9218
 +_dversion=2.102.2
  _clangversion=15.0.7 # related to where ldc2 looks for compiler-rt sanitizers
- makedepends=('git' 'cmake' 'llvm' 'ldc' 'ninja')
  options=(!lto)
+ prepare() {

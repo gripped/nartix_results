@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,11 @@
- makedepends=(yelp-tools git appstream-glib meson docbook-utils docbook-sgml
-              perl-sgmls)
+@@ -1,10 +1,11 @@
+ pkgname=gnome-color-manager
+ depends=(glib2 gtk3 colord lcms2)
  groups=(gnome)
  prepare() {
    cd $pkgname

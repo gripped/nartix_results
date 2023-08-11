@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=xorg-xhost
  depends=('libx11' 'libxmu')
- makedepends=('xorg-util-macros')
  groups=('xorg-apps' 'xorg')
  build() {
    cd xhost-${pkgver}

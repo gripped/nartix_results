@@ -28,6 +28,6 @@
  pkgname=fail2ban
 -depends=('python-pyinotify' 'whois' 'sqlite' 'python-systemd')
 +depends=('python-pyinotify' 'whois' 'sqlite')
- makedepends=('python-setuptools')
  backup=(
    'etc/fail2ban/fail2ban.conf'
+   'etc/fail2ban/jail.conf'

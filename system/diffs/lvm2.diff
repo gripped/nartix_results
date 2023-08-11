@@ -92,15 +92,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgbase=lvm2
- pkgname=('lvm2' 'device-mapper')
--makedepends=('git' 'systemd' 'libaio' 'thin-provisioning-tools')
-+makedepends=('git' 'udev' 'libaio' 'thin-provisioning-tools')
- _backports=(
- )
- prepare() {
-@@ -11,10 +11,6 @@
+@@ -10,10 +10,6 @@
      git show "${_c}" -- ':(exclude)WHATS_NEW' | git apply
    done
    patch -Np1 --output='udev/69-dm-lvm-initcpio.rules.in' < ../0001-udev-initcpio.patch
@@ -111,7 +103,7 @@
  }
  build() {
    export CONFIG_SHELL=/bin/bash
-@@ -38,26 +34,22 @@
+@@ -37,26 +33,22 @@
      --with-default-locking-dir=/run/lock/lvm \
      --with-default-pid-dir=/run \
      --with-default-run-dir=/run/lvm \
@@ -141,7 +133,7 @@
      'libudev.so' 'util-linux-libs' 'libblkid.so' 'readline' 'libreadline.so'
      'thin-provisioning-tools' 'libaio' 'libaio.so')
    conflicts=('lvm' 'mkinitcpio<0.7')
-@@ -67,12 +59,5 @@
+@@ -66,12 +58,5 @@
    make DESTDIR="${pkgdir}" install_lvm2
    install -d "${pkgdir}"/etc/lvm/{archive,backup}
    install -D -m0644 "${srcdir}/lvm2_install" "${pkgdir}/usr/lib/initcpio/install/lvm2"

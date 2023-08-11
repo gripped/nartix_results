@@ -23,14 +23,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,6 +14,7 @@
-   mobile-broadband-provider-info
-   vala
- )
+@@ -1,5 +1,6 @@
+ pkgbase=libnma
+ pkgname=(libnma-common libnma libnma-gtk4)
  prepare() {
    cd libnma
  }
-@@ -21,7 +22,7 @@
+@@ -7,7 +8,7 @@
    local meson_options=(
      -D libnma_gtk4=true
    )

@@ -85,7 +85,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,9 @@
+@@ -1,13 +1,8 @@
  pkgname=gnome-keyring
 -depends=(
 -  gcr
@@ -93,21 +93,14 @@
 -  openssh
 -  pam
 -)
--makedepends=(
--  docbook-xsl
--  git
--  p11-kit
--  python
--)
 +depends=(gcr gcr-4 pam openssh)
-+makedepends=(git docbook-xsl python p11-kit)
  provides=(org.freedesktop.secrets)
  groups=(gnome)
 -install=gnome-keyring.install
  prepare() {
    cd $pkgname
    git apply -3 ../0001-build-Use-p11_module_configs-as-default-pkcs11-confi.patch
-@@ -21,18 +11,16 @@
+@@ -15,18 +10,16 @@
    NOCONFIGURE=1 ./autogen.sh
  }
  build() {

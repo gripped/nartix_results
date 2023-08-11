@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
+@@ -3,7 +3,7 @@
+ groups=(kde-applications kde-network telepathy-kde)
  depends=(knotifyconfig ktexteditor kpeople telepathy-logger-qt kaccounts-integration libotr telepathy-accounts-signon telepathy-kde-integration-module)
- makedepends=(extra-cmake-modules kdoctools doxygen)
  build() {
 -  cmake -B build -S $_pkgname-$pkgver \
 +  artix-cmake -B build -S $_pkgname-$pkgver \

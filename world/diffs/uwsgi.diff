@@ -101,13 +101,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,16 +31,17 @@
-   python-gevent
-   python-greenlet
-   ruby
--  systemd
-   util-linux
-   zlib
+@@ -16,10 +16,12 @@
  )
  prepare() {
    cd $pkgbase-$pkgver
@@ -120,7 +114,7 @@
    cp -av plugins/php{,_legacy}
    sed -e 's/lphp/lphp-legacy/g; s/UWSGICONFIG_PHPPATH/UWSGICONFIG_PHP_LEGACY_PATH/g; s/NAME=.*/NAME="php_legacy"/g' -i plugins/php_legacy/uwsgiplugin.py
    sed -e 's/php_plugin/php_legacy_plugin/g' -i plugins/php_legacy/php_plugin.c
-@@ -53,15 +54,11 @@
+@@ -32,15 +34,11 @@
  }
  package_uwsgi() {
    depends=(glibc jansson libcap.so libcrypt.so libpam.so libxml2

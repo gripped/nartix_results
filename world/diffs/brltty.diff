@@ -159,48 +159,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,82 +1,38 @@
+@@ -1,49 +1,33 @@
  pkgbase=brltty
  pkgname=(brltty brltty-udev-generic)
--makedepends=(
--  alsa-lib
--  at-spi2-atk
--  at-spi2-core
--  atk
--  bluez-libs
--  cython0
--  dbus
--  dracut
--  espeak-ng
--  expat
--  festival
--  gcc-libs
--  glibc
--  glib2
--  gpm
--  icu
--  java-environment
--  libcap
--  liblouis
--  libspeechd
--  libxaw
--  ncurses
--  ocaml-ctypes
--  ocaml-findlib
--  pcre2
--  polkit
--  python-setuptools
--  speech-dispatcher
--  strip-nondeterminism
--  systemd-libs
--  tcl
--)
 -options=!emptydirs
-+makedepends=(alsa-lib at-spi2-atk at-spi2-core atk bluez-libs cython dbus
-+dracut espeak-ng expat festival gcc-libs glibc glib2 gpm icu java-environment
-+liblouis libspeechd libxaw ncurses ocaml-ctypes ocaml-findlib pcre2
-+polkit python-setuptools speech-dispatcher strip-nondeterminism elogind
-+tcl)
 +options=!emptydirs
  prepare() {
    cd $pkgbase-$pkgver
@@ -263,7 +225,7 @@
    provides=(libbrlapi.so)
    backup=(
      etc/brltty.conf
-@@ -85,11 +41,14 @@
+@@ -52,11 +36,14 @@
    install=brltty.install
    cd $pkgbase-$pkgver
    make -j1 INSTALL_ROOT="$pkgdir" install

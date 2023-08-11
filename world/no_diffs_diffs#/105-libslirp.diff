@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- makedepends=(meson)
+@@ -2,6 +2,6 @@
+ depends=(glib2)
  provides=('libslirp.so')
  build() {
 -  arch-meson "$pkgname-v${pkgver}" build

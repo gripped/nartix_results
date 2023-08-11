@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,6 +13,7 @@
-   python-gobject
-   vala
+@@ -4,6 +4,7 @@
+   gobject-introspection-runtime
+   gtk3
  )
  prepare() {
    cd libpeas
  }
-@@ -21,7 +22,7 @@
+@@ -12,7 +13,7 @@
      -D gtk_doc=true
      -D vapi=true
    )

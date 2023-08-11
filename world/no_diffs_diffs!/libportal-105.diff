@@ -23,10 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -1,10 +1,11 @@
+ pkgbase=libportal
  pkgname=(libportal libportal-{gtk3,gtk4,qt5,docs})
- makedepends=(git meson gi-docgen vala gobject-introspection gtk3 gtk4 qt5-base
-              qt5-x11extras gjs)
  prepare() {
    cd libportal
  }

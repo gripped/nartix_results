@@ -46,16 +46,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=redis
 -depends=('jemalloc' 'grep' 'shadow' 'systemd-libs')
--makedepends=('systemd' 'openssl')
 +depends=('jemalloc' 'grep' 'shadow')
-+makedepends=('openssl')
  backup=('etc/redis/redis.conf'
          'etc/redis/sentinel.conf')
  install=redis.install
-@@ -11,6 +11,5 @@
+@@ -10,6 +10,5 @@
  }
  build() {
    make BUILD_TLS=yes \

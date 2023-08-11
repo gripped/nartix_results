@@ -51,17 +51,9 @@
    xdg-dbus-proxy
 -  xdg-utils
  )
- makedepends=(
-   docbook-xsl
-@@ -26,6 +24,7 @@
-   gtk-doc
-   meson
-   python-pyparsing
-+  socat
-   xmlto
- )
  prepare() {
-@@ -47,7 +46,7 @@
+   cd flatpak
+@@ -38,7 +36,7 @@
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
    )

@@ -188,8 +188,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,8 +46,6 @@
-   gawk perl findutils libotr wasi-compiler-rt wasi-libc wasi-libc++ wasi-libc++abi
+@@ -41,8 +41,6 @@
+   icu libicui18n.so libicuuc.so
  )
  options=(!emptydirs !makeflags !lto)
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
@@ -197,7 +197,7 @@
  prepare() {
    cd $pkgname-$pkgver
    echo "${noextract[@]}"
-@@ -62,10 +60,9 @@
+@@ -57,10 +55,9 @@
    sed -e 's|73114a5c28472e77082ad259113ffafb418ed602c1741f26da3e10278b0bf93e|a88d6cc10ec1322b53a8f4c782b5133135ace0fdfcf03d1624b768788e17be0f|' \
      -i third_party/rust/mp4parse/.cargo-checksum.json
    sed -i '/^<rect/d' comm/mail/branding/thunderbird/TB-symbolic.svg

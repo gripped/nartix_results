@@ -25,6 +25,6 @@
  pkgname=hidapi
 -depends=('libusb' 'systemd-libs')
 +depends=('libusb' 'libudev')
- makedepends=('cmake')
  provides=('libhidapi-hidraw.so' 'libhidapi-libusb.so')
  build() {
+   cmake -B build -S ${pkgname}-${pkgname}-${pkgver} -DCMAKE_INSTALL_PREFIX=/usr

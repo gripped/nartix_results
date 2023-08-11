@@ -112,15 +112,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,38 @@
+@@ -1,24 +1,37 @@
  pkgname=intel-graphics-compiler
 -depends=(llvm-libs intel-opencl-clang ncurses spirv-tools zlib lld)
--makedepends=(git cmake clang llvm python libunwind spirv-headers vc-intrinsics)
 -options=!emptydirs
 +_llvmmaj=14
 +_llvmver="${_llvmmaj}.0.5"
 +depends=('gcc-libs' 'zlib' 'spirv-tools')
-+makedepends=('git' 'cmake' 'ninja' 'python' 'spirv-headers')
 +provides=('intel-opencl-clang=15.0.0')
 +conflicts=('intel-opencl-clang')
 +replaces=('intel-opencl-clang')

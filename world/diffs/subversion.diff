@@ -79,15 +79,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,20 @@
+@@ -1,16 +1,18 @@
  pkgname=subversion
  depends=('apr' 'apr-util' 'bash' 'dbus' 'expat' 'file' 'gcc-libs' 'glibc' 'libsasl' 'libutf8proc' 'lz4' 'serf' 'sqlite'
 -         'systemd' 'zlib' )
--makedepends=('apache' 'python' 'python-py3c' 'perl' 'swig' 'java-environment>=8'
--             'libsecret' 'kwallet' 'kdelibs4support' 'ruby')
 +         'zlib' )
-+makedepends=('apache' 'autoconf' 'automake' 'libtool' 'python' 'python-py3c' 'perl' 'swig'
-+             'java-environment>=8' 'libsecret' 'kwallet' 'kdelibs4support' 'ruby')
  provides=('svn')
 -backup=('etc/xinetd.d/svn' 'etc/conf.d/svnserve')
 +backup=('etc/xinetd.d/svn')

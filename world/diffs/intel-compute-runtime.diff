@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,8 @@
+@@ -7,6 +7,8 @@
    patch -d compute-runtime-${pkgver} -Np1 -i "${srcdir}/020-intel-compute-runtime-disable-werror.patch"
  }
  build() {

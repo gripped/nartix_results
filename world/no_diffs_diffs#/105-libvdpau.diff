@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=libvdpau
  depends=('libxext')
- makedepends=('xorgproto' 'meson')
  build() {
 -  arch-meson $pkgname-$pkgver build
 +  artix-meson $pkgname-$pkgver build

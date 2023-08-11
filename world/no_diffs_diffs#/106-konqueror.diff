@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools kdesu)
+@@ -2,7 +2,7 @@
+ depends=(dolphin keditbookmarks qt5-webengine kinit)
  groups=(kde-applications kde-network)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

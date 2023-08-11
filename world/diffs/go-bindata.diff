@@ -42,10 +42,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1 @@
+@@ -1,15 +1 @@
 -pkgname=go-bindata
 -depends=('glibc')
--makedepends=('go')
 -build() {
 -  export GO111MODULE=off
 -  export CGO_LDFLAGS="${LDFLAGS}"

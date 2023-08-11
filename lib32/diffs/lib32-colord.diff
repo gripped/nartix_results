@@ -42,8 +42,8 @@
 +  lib32-elogind
    lib32-lcms2
  )
- makedepends=(
-@@ -33,7 +33,7 @@
+ provides=(
+@@ -17,7 +17,7 @@
    export CC='gcc -m32'
    export CXX='g++ -m32'
    export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
@@ -52,7 +52,7 @@
      --libdir=/usr/lib32 \
      -D docs=false \
      -D man=false \
-@@ -43,6 +43,7 @@
+@@ -27,6 +27,7 @@
      -D introspection=false \
      -D vapi=false \
      -D print_profiles=false \

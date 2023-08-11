@@ -36,13 +36,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,4 +1,4 @@
 -_electron=electron25
 +_electron=electron24
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--makedepends=(npm git yarn python rust tcl ${_electron} nodejs libxcrypt-compat)
-+makedepends=(npm git yarn python rust tcl ${_electron} nodejs-lts-gallium libxcrypt-compat)
  _
- prepare() {
-   sed -i "s|@ELECTRON@|${_electron}|" element-desktop.sh

@@ -35,6 +35,6 @@
  backup=(etc/stubby/stubby.yml)
 -depends=(getdns libsystemd libyaml)
 +depends=(getdns libyaml)
- makedepends=(cmake git)
  prepare() {
    cd ${pkgname}
+   sed -e 's/^# appdata_dir:/appdata_dir:/g' \

@@ -34,9 +34,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,6 @@
+@@ -1,10 +1,6 @@
+ pkgname=glslang
  depends=('gcc-libs')
- makedepends=('cmake' 'ninja' 'git' 'spirv-tools' 'spirv-headers' 'python')
  options=('staticlibs')
 -prepare() {
 -  cd ${pkgname}-${pkgver}

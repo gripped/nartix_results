@@ -23,10 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -1,10 +1,11 @@
+ pkgbase=colord-gtk
  pkgname=(colord-gtk-common colord-gtk colord-gtk4)
- makedepends=(gobject-introspection vala gtk-doc git docbook-utils docbook-xsl
-              meson lcms2 colord gtk3 gtk4)
  prepare() {
    cd $pkgbase
  }

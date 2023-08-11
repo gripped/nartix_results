@@ -34,8 +34,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,8 @@
- makedepends=(git)
+@@ -2,13 +2,8 @@
+ depends=(glibc jansson libelf zlib zstd)
  conflicts=(binutils-multilib)
  replaces=(binutils-multilib)
 -provides=(

@@ -24,16 +24,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -4,7 +4,7 @@
+ _blasver=3.11.0
  depends=('gcc-libs')
- makedepends=('cmake' 'perl' 'gcc-fortran')
  build() {
 -  FC=gfortran cmake -B build -S $_pkgname-$pkgver \
 +  FC=gfortran artix-cmake -B build -S $_pkgname-$pkgver \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DBUILD_SHARED_LIBS=ON \
      -DBUILD_TESTING=OFF \
-@@ -16,7 +16,7 @@
+@@ -15,7 +15,7 @@
      -DNUM_THREADS=64 \
      -DDYNAMIC_ARCH=ON
    cmake --build build

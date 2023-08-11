@@ -72,17 +72,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=python-editables
 -depends=('python')
--makedepends=(
--  'git'
--  'python-build'
--  'python-installer'
--  'python-flit-core'
--)
 +depends=(python)
-+makedepends=(python-build python-installer python-setuptools python-wheel)
  build() {
 -  cd "$pkgname"
 +  cd $_name-$pkgver

@@ -19,10 +19,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=xcb-util-errors
  depends=('libxcb')
- makedepends=('xorgproto' 'python') # 'xorg-util-macros' 'doxygen' 'graphviz')  # no docs yet to build
  build() {
      cd "$pkgname-$pkgver"
      ./configure --prefix=/usr

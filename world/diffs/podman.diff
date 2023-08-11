@@ -30,15 +30,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,14 +10,14 @@
-   go-md2man
-   gpgme
-   libseccomp
--  systemd
-+  libudev
- )
- options=(!lto)
- prepare() {
+@@ -5,7 +5,7 @@
    patch -Np1 -d $pkgname -i ../$pkgname-4.6.0-defaultinitpath.patch
  }
  build() {
@@ -47,7 +39,7 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -51,4 +51,5 @@
+@@ -39,4 +39,5 @@
    conflicts=(docker)
    provides=(docker)
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase

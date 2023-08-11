@@ -23,9 +23,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=mdadm
- makedepends=('git')
 -depends=('glibc' 'systemd')
 +depends=('glibc' 'udev')
  replaces=('raidtools')

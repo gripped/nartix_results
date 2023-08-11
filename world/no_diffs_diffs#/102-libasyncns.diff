@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=libasyncns
  depends=(glibc)
- makedepends=(git lynx)
  prepare() {
    cd libasyncns
    NOCONFIGURE=1 ./bootstrap.sh

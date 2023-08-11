@@ -32,6 +32,6 @@
  pkgbase=dmd
 -_docsvers=2.105.0
 +_docsvers=2.104.1
- makedepends=('git' 'ldc')
  noextract=("dmd.$_docsvers.linux.tar.xz")
  prepare() {
+     tar xfJ "dmd.$_docsvers.linux.tar.xz" dmd2/html

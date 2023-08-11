@@ -43,9 +43,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,13 @@
+@@ -2,13 +2,13 @@
+ _pkgname=signon-oauth2
  depends=(signond)
- makedepends=(qt5-xmlpatterns)
  prepare() {
 -  cd $pkgname-VERSION_$pkgver
 +  cd signon-plugin-oauth2-VERSION_$pkgver-*

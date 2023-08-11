@@ -26,8 +26,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,8 +3,8 @@
- makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
+@@ -2,8 +2,8 @@
+ _gitcommit=a21a8f7d26f07f1dc5c144be2120e8bc6721159f
  depends=(
    'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
 -  'libxml2' 'libpulse' 'libxnvctrl' 'systemd-libs' 'ncurses' 'curl'
@@ -37,7 +37,7 @@
  prepare() {
    cd $pkgname
    rm -r tests/catch2
-@@ -28,7 +28,7 @@
+@@ -27,7 +27,7 @@
      -D BUILD_RSS=ON \
      -D BUILD_NVIDIA=ON \
      -D BUILD_PULSEAUDIO=ON \

@@ -236,27 +236,7 @@
    'lib32-vulkan-intel'
    'lib32-vulkan-radeon'
    'lib32-vulkan-swrast'
-@@ -28,10 +27,6 @@
-   'lib32-libxxf86vm'
-   'lib32-llvm'
-   'lib32-lm_sensors'
--  'lib32-rust-libs'
--  'lib32-spirv-llvm-translator'
--  'lib32-spirv-tools'
--  'lib32-systemd'
-   'lib32-vulkan-icd-loader'
-   'lib32-wayland'
-   'lib32-zstd'
-@@ -42,8 +37,6 @@
-   'libclc'
-   'meson'
-   'python-mako'
--  'python-ply'
--  'rust-bindgen'
-   'wayland-protocols'
-   'xorgproto'
- )
-@@ -53,10 +46,12 @@
+@@ -17,10 +16,12 @@
                '57551DE15B968F6341C248F68D8E31AFC32428A6') # Eric Engestrom <eric@engestrom.ch>
  prepare() {
    cd mesa-$pkgver
@@ -271,7 +251,7 @@
      -D android-libbacktrace=disabled
      -D b_ndebug=true
      -D dri3=enabled
-@@ -66,7 +61,7 @@
+@@ -30,7 +31,7 @@
      -D gallium-nine=true
      -D gallium-omx=disabled
      -D gallium-opencl=icd
@@ -280,7 +260,7 @@
      -D gallium-va=enabled
      -D gallium-vdpau=enabled
      -D gallium-xa=enabled
-@@ -75,7 +70,7 @@
+@@ -39,7 +40,7 @@
      -D gles2=enabled
      -D glvnd=true
      -D glx=dri
@@ -289,7 +269,7 @@
      -D libunwind=enabled
      -D llvm=enabled
      -D lmsensors=enabled
-@@ -91,13 +86,14 @@
+@@ -55,13 +56,14 @@
    )
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
@@ -310,7 +290,7 @@
    meson compile -C build
    DESTDIR="${srcdir}/fakeinstall" meson install -C build
  }
-@@ -110,7 +106,6 @@
+@@ -74,7 +76,6 @@
      mv -v "${src}" "${dir}/"
    done
  }
@@ -318,7 +298,7 @@
  package_lib32-vulkan-mesa-layers() {
    depends=(
      'lib32-libdrm'
-@@ -126,50 +121,28 @@
+@@ -90,50 +91,28 @@
    rm -v fakeinstall/usr/bin/mesa-overlay-control.py
    install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" LICENSE
  }
@@ -374,7 +354,7 @@
      'lib32-wayland'
      'lib32-zstd'
    )
-@@ -185,7 +158,6 @@
+@@ -149,7 +128,6 @@
      'lib32-libx11'
      'lib32-libxshmfence'
      'lib32-llvm-libs'
@@ -382,7 +362,7 @@
      'lib32-wayland'
      'lib32-zstd'
      'vulkan-radeon'
-@@ -203,7 +175,6 @@
+@@ -167,7 +145,6 @@
      'lib32-libx11'
      'lib32-libxshmfence'
      'lib32-llvm-libs'
@@ -390,7 +370,7 @@
      'lib32-wayland'
      'lib32-zstd'
    )
-@@ -219,7 +190,6 @@
+@@ -183,7 +160,6 @@
      'lib32-libdrm'
      'lib32-libx11'
      'lib32-libxshmfence'

@@ -32,6 +32,6 @@
  _dirver=$(echo $pkgver | cut -d. -f1-3)
 -depends=(qt5-x11extras kwayland kconfig)
 +depends=(qt5-x11extras libxrandr kwayland kconfig)
- makedepends=(extra-cmake-modules doxygen qt5-tools qt5-doc plasma-wayland-protocols)
  groups=(plasma)
  build() {
+   cmake -B build -S $pkgname-$pkgver \

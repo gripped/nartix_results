@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ license=(MIT)
+ depends=(python)
+ makedepends=(python-{build,installer,wheel}
+-             python-poetry-core)
++             python-poetry-core python-setuptools)
+ _checkdeps=(flexmock pytest-mock memcached fakeredis)
+ checkdepends=("${_checkdeps[@]/#/python-}"
+               pifpaf

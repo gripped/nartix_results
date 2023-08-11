@@ -33,17 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,9 +9,7 @@
-   libp11-kit
- )
- makedepends=(
--  lib32-systemd
-   meson
--  systemd
- )
- prepare() {
-   mkdir -p path
-@@ -22,11 +20,12 @@
+@@ -17,11 +17,12 @@
    local meson_options=(
      --libdir /usr/lib32
      -D bash_completion=disabled

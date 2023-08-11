@@ -127,26 +127,10 @@
  pkgname=(networkmanager libnm nm-cloud-setup)
 -_pppver=2.4.9
 +_pppver=2.5.0
- makedepends=(
-   audit
-   bluez-libs
-@@ -8,6 +8,7 @@
-   dhclient
-   dhcpcd
-   dnsmasq
-+  elogind
-   git
-   glib2-docs
-   gobject-introspection
-@@ -31,7 +32,6 @@
-   polkit
-   "ppp=$_pppver"
-   python-gobject
--  systemd
-   vala
-   vala
-   wpa_supplicant
-@@ -44,9 +44,12 @@
+ prepare() {
+   cd NetworkManager
+ }
+@@ -9,9 +9,12 @@
      -D dbus_conf_dir=/usr/share/dbus-1/system.d
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -160,7 +144,7 @@
      -D iwd=true
      -D pppd_plugin_dir=/usr/lib/pppd/$_pppver
      -D teamdctl=true
-@@ -64,7 +67,7 @@
+@@ -29,7 +32,7 @@
      -D more_logging=false
      -D qt=false
    )
@@ -169,7 +153,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -81,6 +84,7 @@
+@@ -46,6 +49,7 @@
      audit
      bluez-libs
      curl
@@ -177,7 +161,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -98,6 +102,9 @@
+@@ -63,6 +67,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -187,7 +171,7 @@
  END
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
  [connectivity]
-@@ -111,16 +118,13 @@
+@@ -76,16 +83,13 @@
    _pick libnm usr/share/gir-1.0/NM-*
    _pick libnm usr/share/gtk-doc/html/libnm
    _pick libnm usr/share/vala/vapi/libnm.*
@@ -206,7 +190,7 @@
      util-linux-libs
    )
    provides=(libnm.so)
-@@ -128,5 +132,5 @@
+@@ -93,5 +97,5 @@
  }
  package_nm-cloud-setup() {
    depends=(networkmanager)

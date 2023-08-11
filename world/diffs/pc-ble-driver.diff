@@ -39,14 +39,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- pkgname=pc-ble-driver
- depends=(gcc-libs glibc)
--makedepends=(asio catch2 cmake fmt git spdlog systemd)
-+makedepends=(asio catch2 cmake fmt git spdlog udev)
- provides=(
-   libnrf-ble-driver-sd_api_v2.so
-   libnrf-ble-driver-sd_api_v3.so
+@@ -6,7 +6,7 @@
    libnrf-ble-driver-sd_api_v5.so
    libnrf-ble-driver-sd_api_v6.so
  )
@@ -55,7 +48,7 @@
  prepare() {
    patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-4.1.4-gcc_11.2.patch
    sed -e "s/0.0.0/$pkgver/g" -i $pkgname-$pkgver/CMakeLists.txt
-@@ -16,8 +16,6 @@
+@@ -15,8 +15,6 @@
    cmake -B build -S $pkgname-$pkgver \
        -DCMAKE_BUILD_TYPE='None' \
        -DCMAKE_INSTALL_PREFIX='/usr' \

@@ -44,13 +44,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,5 @@
+@@ -1,16 +1,17 @@
  pkgname=krita
 +_
  depends=(kitemviews kitemmodels ki18n kcompletion kguiaddons kcrash qt5-svg qt5-multimedia quazip
           gsl libraw exiv2 openexr fftw openjpeg2 opencolorio libwebp hicolor-icon-theme)
- makedepends=(extra-cmake-modules kdoctools boost eigen poppler-qt5 python-pyqt5 libheif
-@@ -6,13 +7,13 @@
   <dimula73@gmail.com>
                '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
  prepare() {

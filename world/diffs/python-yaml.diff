@@ -61,22 +61,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,8 @@
+@@ -1,11 +1,7 @@
  pkgname=python-yaml
 -depends=(
 -  glibc
 -  libyaml
 -  python
 -)
--makedepends=(
--  cython0
--  python-build
--  python-installer
--  python-setuptools
--  python-wheel
--)
 +depends=(libyaml python)
-+makedepends=(cython python-setuptools)
  provides=(python-pyyaml)
  build() {
    cd $_name-$pkgver

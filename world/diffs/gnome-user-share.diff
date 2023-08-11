@@ -39,10 +39,10 @@
  pkgname=gnome-user-share
 -depends=(glib2 dconf mod_dnssd systemd)
 +depends=(glib2 dconf mod_dnssd)
- makedepends=(git meson)
  groups=(gnome)
  prepare() {
-@@ -9,7 +9,8 @@
+   cd $pkgname
+@@ -8,7 +8,8 @@
    local meson_options=(
      -D httpd=/usr/bin/httpd
      -D modules_path=/usr/lib/httpd/modules

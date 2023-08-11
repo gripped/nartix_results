@@ -31,16 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
+@@ -5,12 +5,14 @@
    gnome-desktop-4
    gtk4
    libadwaita
 +  libunistring
- )
- makedepends=(
-   appstream-glib
-@@ -14,10 +15,11 @@
-   meson
  )
  groups=(gnome)
  prepare() {

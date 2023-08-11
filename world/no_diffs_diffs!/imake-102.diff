@@ -24,10 +24,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=imake
  depends=('glibc')
- makedepends=('pkgconfig' 'xorgproto' 'perl' 'xorg-util-macros' 'xorg-font-util')
  prepare() {
    cd xorg-cf-files-1.0.7
    patch -p1 -i ../linuxconfig.patch

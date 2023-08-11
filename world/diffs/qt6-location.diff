@@ -14,7 +14,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
+@@ -5,6 +5,7 @@
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  build() {
    cmake -B build -S $_pkgfn -G Ninja \

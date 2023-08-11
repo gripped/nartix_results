@@ -29,9 +29,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=wl-clipboard
  depends=('wayland')
- makedepends=('meson' 'wayland-protocols')
  build() {
 -    arch-meson "$pkgname-$pkgver" build
 +    artix-meson "$pkgname-$pkgver" build

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=libjcat
  depends=(json-glib gnutls gpgme)
- makedepends=(meson gobject-introspection gtk-doc vala help2man)
  build() {
 -  arch-meson ${pkgname}-${pkgver} build -D gtkdoc=true
 +  artix-meson ${pkgname}-${pkgver} build -D gtkdoc=true

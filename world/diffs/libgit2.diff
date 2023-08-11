@@ -36,7 +36,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,6 @@
+@@ -8,7 +8,6 @@
  provides=(libgit2.so)
  prepare() {
    patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-1.7.0-git_oidarray_include.patch

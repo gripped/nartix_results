@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- makedepends=(glib2 meson)
+@@ -2,6 +2,6 @@
+ depends=(webp-pixbuf-loader)
  groups=(gnome)
  build() {
 -  arch-meson $pkgname-$pkgver build

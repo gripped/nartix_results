@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules gpsd kdoctools kparts krunner libwlocate phonon-qt5
-              plasma-workspace qt5-serialport qt5-tools qt5-webengine shapelib protobuf)
+@@ -1,7 +1,7 @@
+ pkgbase=marble
+ pkgname=(marble-common marble-qt marble-maps marble)
  build() {
 -  cmake -B build -S $pkgbase-$pkgver \
 +  artix-cmake -B build -S $pkgbase-$pkgver \

@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgbase=hyphen
  pkgname=('hyphen' 'hyphen-en')
- makedepends=('glibc' 'perl')
  build() {
    cd "$pkgname"-$pkgver
    ./configure --prefix=/usr --disable-static

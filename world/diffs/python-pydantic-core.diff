@@ -50,7 +50,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,6 @@
+@@ -8,7 +8,6 @@
  options=(!lto)
  prepare() {
    sed -e 's/,!=4.7.0//g' -i $_name-$pkgver/pyproject.toml

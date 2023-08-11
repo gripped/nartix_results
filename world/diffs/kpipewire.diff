@@ -28,13 +28,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=kpipewire
  _dirver=$(echo $pkgver | cut -d. -f1-3)
 -depends=(ki18n kcoreaddons pipewire libepoxy ffmpeg)
--makedepends=(extra-cmake-modules plasma-wayland-protocols kwayland)
 +depends=(kwayland ki18n kcoreaddons pipewire libepoxy ffmpeg)
-+makedepends=(extra-cmake-modules plasma-wayland-protocols)
  groups=(plasma)
  build() {
    cmake -B build -S $pkgname-$pkgver \
