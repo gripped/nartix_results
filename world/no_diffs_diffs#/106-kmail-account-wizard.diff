@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(kidentitymanagement pimcommon kmailtransport kross libkleo)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules kdoctools qt5-tools knotifyconfig ktexteditor)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

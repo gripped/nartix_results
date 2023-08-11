@@ -35,9 +35,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=(vulkan-devel)
+@@ -3,7 +3,7 @@
  depends=('gcc-libs' 'sh')
+ makedepends=('cmake' 'python' 'git' 'ninja' 'spirv-headers')
  build() {
 -  cd SPIRV-Tools
 +  cd SPIRV-Tools1

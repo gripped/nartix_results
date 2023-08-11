@@ -31,9 +31,9 @@
 -  systemd
 +  udev
  )
- prepare() {
-   cd libgudev
-@@ -12,6 +12,6 @@
+ makedepends=(
+   git
+@@ -20,6 +20,6 @@
    local meson_options=(
      -D gtk_doc=true
    )

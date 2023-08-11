@@ -23,10 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
- pkgbase=librest
- pkgname=(librest librest-docs librest-demos)
+@@ -3,12 +3,13 @@
  depends=(glib2 libxml2 libsoup3 json-glib)
+ makedepends=(gobject-introspection git meson gi-docgen vala libadwaita
+              gtksourceview5)
  prepare() {
    cd librest
    git apply -3 ../30.patch

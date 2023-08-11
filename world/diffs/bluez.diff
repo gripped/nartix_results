@@ -75,7 +75,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,6 +15,7 @@
+@@ -1,6 +1,6 @@
+ pkgbase=bluez
+ pkgname=('bluez' 'bluez-utils' 'bluez-libs' 'bluez-cups' 'bluez-hid2hci' 'bluez-plugins')
+-makedepends=('dbus' 'libical' 'systemd' 'alsa-lib' 'json-c' 'ell' 'python-docutils')
++makedepends=('dbus' 'libical' 'udev' 'alsa-lib' 'json-c' 'ell' 'python-docutils')
+ build() {
+   cd "${pkgname}"-${pkgver}
+   ./configure \
+@@ -16,6 +16,7 @@
            --enable-mesh \
            --enable-hid2hci \
            --enable-experimental \
@@ -83,7 +91,7 @@
            --enable-library # this is deprecated
    make
  }
-@@ -26,8 +27,6 @@
+@@ -27,8 +28,6 @@
    make DESTDIR=${pkgdir} \
         install-pkglibexecPROGRAMS \
         install-dbussessionbusDATA \
@@ -92,7 +100,7 @@
         install-dbussystembusDATA \
         install-dbusDATA \
         install-man8
-@@ -39,12 +38,16 @@
+@@ -40,12 +39,16 @@
    install -Dm644 "${srcdir}"/bluetooth.modprobe "${pkgdir}"/usr/lib/modprobe.d/bluetooth-usb.conf
    install -dm755 "$pkgdir"/usr/lib/modules-load.d
    echo "crypto_user" > "$pkgdir"/usr/lib/modules-load.d/bluez.conf
@@ -112,7 +120,7 @@
    backup=('etc/bluetooth/mesh-main.conf')
    conflicts=('bluez-hcidump')
    provides=('bluez-hcidump')
-@@ -79,7 +82,7 @@
+@@ -80,7 +83,7 @@
    rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-hid2hci() {
@@ -121,7 +129,7 @@
    cd "${pkgbase}"-${pkgver}
    make DESTDIR=${pkgdir} \
         install-udevPROGRAMS \
-@@ -89,7 +92,7 @@
+@@ -90,7 +93,7 @@
    rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-plugins() {

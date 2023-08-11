@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgbase=mesa-demos
- pkgname=('mesa-demos' 'mesa-utils')
+@@ -4,7 +4,7 @@
+              'libdecor' 'glu' 'freeglut'
+              'glslang' 'vulkan-headers' 'wayland-protocols')
  build() {
 -  arch-meson mesa-demos-$pkgver build \
 +  artix-meson mesa-demos-$pkgver build \

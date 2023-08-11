@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgbase=snowball
  pkgname=(snowball libstemmer)
+ makedepends=(git)
  prepare() {
    cd snowball
    git apply -3 ../dynamiclib.diff

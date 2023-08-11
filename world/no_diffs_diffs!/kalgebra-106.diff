@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=(kde-applications kde-education)
+@@ -3,7 +3,7 @@
  depends=(analitza kio qt5-webengine)
+ makedepends=(extra-cmake-modules kdoctools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

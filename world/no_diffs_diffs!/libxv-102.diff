@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libxv
  depends=('libxext')
+ makedepends=('xorgproto')
  validpgpkeys+=('4A193C06D35E7C670FA4EF0BA2FB9E081F2D130E') # "Alan Coopersmith <alan.coopersmith@oracle.com>"
  build() {
    cd libXv-${pkgver}

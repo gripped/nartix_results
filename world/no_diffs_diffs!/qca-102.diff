@@ -29,9 +29,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgbase=qca
  pkgname=(qca-qt5 qca-qt6)
+ makedepends=(cmake doxygen pkcs11-helper botan qt5-base qt6-5compat)
  build() {
    cmake -B build-qt5 -S $pkgbase-$pkgver \
      -DCMAKE_INSTALL_PREFIX=/usr \

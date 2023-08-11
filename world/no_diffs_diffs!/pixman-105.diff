@@ -21,9 +21,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,9 @@
+@@ -1,9 +1,10 @@
  pkgname=pixman
  depends=('glibc')
+ makedepends=('meson' 'libpng')
  provides=('libpixman-1.so')
  build() {
 -  arch-meson $pkgbase-$pkgver build \

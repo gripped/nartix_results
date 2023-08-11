@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=(kde-applications kde-multimedia)
+@@ -3,7 +3,7 @@
  depends=(kirigami-addons qt5-svg qtkeychain-qt5 syndication threadweaver ki18n kcoreaddons kconfig networkmanager-qt taglib qt5-multimedia vlc)
+ makedepends=(extra-cmake-modules)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

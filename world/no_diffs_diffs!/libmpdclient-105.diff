@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=(glibc)
+@@ -3,6 +3,6 @@
+ makedepends=(meson)
  provides=(libmpdclient.so)
  build() {
 -  arch-meson build $pkgname-$pkgver

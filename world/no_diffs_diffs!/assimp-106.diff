@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=('zlib' 'gcc-libs')
+@@ -3,7 +3,7 @@
+ makedepends=('cmake' 'ninja')
  build() {
    cd ${pkgname}-${pkgver}
 -  cmake \

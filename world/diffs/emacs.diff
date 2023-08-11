@@ -125,7 +125,7 @@
  depends=(
    gmp
    gnutls
-@@ -27,32 +27,25 @@
+@@ -27,33 +27,26 @@
    libpng
    librsvg-2.so
    libsm
@@ -140,6 +140,7 @@
    m17n-lib
    zlib
  )
+ makedepends=(libgccjit)
  prepare() {
 -  cp --reflink=auto -ar ${pkgname}-${pkgver} ${pkgbase}-${pkgver}-nativecomp
 -  cp --reflink=auto -ar ${pkgname}-${pkgver} ${pkgbase}-${pkgver}-nox
@@ -161,7 +162,7 @@
      --with-modules"
    export ac_cv_lib_gif_EGifPutExtensionLast=yes
    cd ${pkgname}-${pkgver}
-@@ -62,21 +55,15 @@
+@@ -63,21 +56,15 @@
    cd ../${pkgbase}-${pkgver}-nativecomp
    ./configure \
      --with-x-toolkit=gtk3 \
@@ -185,7 +186,7 @@
  }
  package_emacs-nox() {
    depends=(
-@@ -89,8 +76,6 @@
+@@ -90,8 +77,6 @@
      libdbus-1.so
      libgpm.so
      libncursesw.so

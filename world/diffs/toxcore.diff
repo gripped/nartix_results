@@ -27,6 +27,6 @@
  _pkgname=c-toxcore
 -depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
 +depends=('udev' 'libconfig' 'libsodium' 'libvpx' 'opus')
+ makedepends=('check' 'cmake')
  conflicts=("tox")
  provides=("tox")
- backup=('etc/tox-bootstrapd.conf')

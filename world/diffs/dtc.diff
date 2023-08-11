@@ -28,10 +28,10 @@
  pkgname=dtc
 -depends=(bash glibc libyaml python)
 +depends=(libyaml)
+ makedepends=(meson swig python-setuptools-scm)
  prepare() {
    cd dtc-$pkgver
-   patch -Np1 < ../fix_test.patch
-@@ -9,6 +9,6 @@
+@@ -10,6 +10,6 @@
    sed -i "s/@VERSION@/$pkgver/" setup.py
  }
  build() {

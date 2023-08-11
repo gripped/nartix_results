@@ -38,13 +38,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,5 @@
+@@ -1,14 +1,6 @@
  pkgname=python-django-classy-tags
 -depends=(
 -  python
 -  python-django
 -)
+-makedepends=(
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
 +depends=(python-django)
++makedepends=(python-build python-installer python-setuptools python-wheel)
  build() {
    cd $_name-$pkgver
    python -m build --wheel --no-isolation

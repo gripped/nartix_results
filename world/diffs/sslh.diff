@@ -51,9 +51,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,7 @@
+@@ -1,9 +1,7 @@
  pkgname=sslh
  _
+-makedepends=('systemd')
 -depends=('glibc' 'libcap' 'libconfig' 'pcre2' 'systemd-libs')
 +depends=('glibc' 'libcap' 'libconfig' 'pcre2')
  backup=('etc/sslh.cfg')
@@ -61,7 +62,7 @@
  prepare() {
    cd $pkgname-v$_pkgver
    local src
-@@ -16,5 +15,5 @@
+@@ -17,5 +15,5 @@
  }
  build() {
    cd $pkgname-v$_pkgver

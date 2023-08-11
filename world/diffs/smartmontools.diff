@@ -67,12 +67,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,9 @@
+@@ -1,12 +1,10 @@
  pkgname=smartmontools
 -depends=('gcc-libs' 'libcap-ng' 'bash' 'systemd-libs')
+-makedepends=('systemd')
 -backup=('etc/smartd.conf'
 -        'etc/conf.d/smartd')
 +depends=('gcc-libs' 'libcap-ng' 'bash' 'libudev.so')
++makedepends=('udev')
 +backup=('etc/smartd.conf')
  prepare() {
    cd "${srcdir}/${pkgname}-${pkgver}"
@@ -81,7 +83,7 @@
    autoreconf -fi
  }
  build() {
-@@ -16,9 +14,8 @@
+@@ -17,9 +15,8 @@
      --sysconfdir=/etc \
      --with-drivedbdir \
      --with-libcap-ng=yes \

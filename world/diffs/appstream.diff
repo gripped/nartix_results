@@ -24,10 +24,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,15 @@
- pkgbase=appstream
+@@ -2,13 +2,15 @@
  pkgname=(appstream appstream-qt)
  depends=(curl librsvg libyaml libxmlb)
+ makedepends=(meson xmlto gobject-introspection gtk-doc qt5-tools itstool vala gperf)
  build() {
    meson build AppStream-$pkgver \
      --prefix=/usr \

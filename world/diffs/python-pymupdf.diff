@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+   python-setuptools
+   python-wheel
+   swig
+-  systemd
++  udev
+ )
+ checkdepends=(
+   python-fonttools
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+   python-setuptools
+   python-wheel
+   swig
+-  systemd
++  udev
+ )
+ prepare() {
+   rm -frv $pkgname/*.tgz

@@ -78,15 +78,23 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,7 @@
+@@ -1,17 +1,9 @@
  pkgname=scons
 -depends=(
 -  python
+-)
+-makedepends=(
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
 -)
 -prepare() {
 -  patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-4.4.0-dont_install_manpages.patch
 -}
 +depends=(python)
++makedepends=(fop ninja python-build python-installer python-lxml python-setuptools
++python-sphinx python-sphinx_rtd_theme python-wheel rst2pdf)
  build() {
    cd $pkgname-$pkgver
 +  python scripts/scons.py --include-dir= -j1

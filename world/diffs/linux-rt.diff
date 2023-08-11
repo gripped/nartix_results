@@ -36,8 +36,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgbase=linux-rt
+@@ -16,7 +16,7 @@
+   xz
+ )
  options=(!strip)
 -export KBUILD_BUILD_HOST=archlinux
 +export KBUILD_BUILD_HOST=artixlinux

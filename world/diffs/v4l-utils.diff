@@ -21,6 +21,6 @@
  backup=(etc/rc_maps.cfg)
 -depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'systemd-libs' 'json-c')
 +depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo' 'json-c')
+ makedepends=('qt5-base' 'alsa-lib')
  build() {
    cd "${srcdir}/${pkgname}-${pkgver}"
-   ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin

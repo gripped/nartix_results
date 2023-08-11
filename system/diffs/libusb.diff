@@ -24,7 +24,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
+@@ -1,6 +1,6 @@
+ pkgname=libusb
+ depends=(glibc)
+-makedepends=(systemd)
++makedepends=(udev)
+ provides=(libusb-1.0.so)
+ prepare() {
+   cd $pkgname-$pkgver
+@@ -14,7 +14,7 @@
  }
  package () {
    depends+=(

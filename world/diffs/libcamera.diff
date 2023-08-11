@@ -57,10 +57,18 @@
    gst-plugin-libcamera
  )
 +depends=(glibc)
+ makedepends=(
+   doxygen
+   git
+@@ -25,7 +26,6 @@
+   qt5-base
+   qt5-tools
+   sdl2
+-  systemd
+   texlive-core
+ )
  _pick() {
-   local p="$1" f d; shift
-   for f; do
-@@ -26,7 +27,7 @@
+@@ -48,7 +48,7 @@
      -D tracing=disabled
      -D test=true
    )
@@ -69,7 +77,7 @@
    meson compile -C build
  }
  package_libcamera() {
-@@ -38,8 +39,8 @@
+@@ -60,8 +60,8 @@
      libelf
      libunwind
      libyaml

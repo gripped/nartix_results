@@ -30,6 +30,6 @@
  pkgname=("python-${_pkgbase}")
 -depends=('python' 'python-linetable')
 +depends=('python')
+ makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-sphinx' 'python-wheel')
  build() {
    cd "${srcdir}/${_pkgbase}-${pkgver}"
-   python -m build --wheel --skip-dependency-check --no-isolation

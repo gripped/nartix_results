@@ -19,6 +19,6 @@
  pkgname=conmon
 -depends=(glibc glib2 systemd)
 +depends=(glibc glib2)
+ makedepends=(git)
  build() {
    cd conmon
-   make PREFIX=/usr LIBEXECDIR=/usr/lib DESTDIR="$pkgdir"

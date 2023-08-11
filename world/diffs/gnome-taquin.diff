@@ -35,9 +35,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,12 @@
- pkgname=gnome-taquin
+@@ -2,10 +2,12 @@
  depends=(gtk3 librsvg gsound)
+ makedepends=(meson vala yelp-tools appstream-glib git)
  groups=(gnome-extra)
  prepare() {
    cd $pkgname

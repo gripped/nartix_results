@@ -40,9 +40,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,10 @@
- pkgname=xxhash
+@@ -2,6 +2,10 @@
  depends=(glibc)
+ makedepends=(git)
  provides=(libxxhash.so)
 +prepare() {
 +  cd xxHash

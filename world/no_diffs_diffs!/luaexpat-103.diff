@@ -38,11 +38,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,14 @@
+@@ -2,17 +2,19 @@
  pkgname=(lua-expat lua51-expat lua52-expat lua53-expat)
  _rockrel=1
  depends=(expat)
-+options=(debug)
+ makedepends=(lua
+              lua51
+              lua52
+              lua53
+              luarocks)
  _archive="$pkgbase-$pkgver"
  _rock="$_archive-$_rockrel.linux-$CARCH.rock"
  _rockspec="$_archive-$_rockrel.rockspec"

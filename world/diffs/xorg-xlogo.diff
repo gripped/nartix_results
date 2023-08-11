@@ -60,10 +60,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,10 @@
+@@ -1,8 +1,19 @@
  pkgname=xorg-xlogo
 -depends=('libsm' 'libxaw' 'libxmu' 'libxt' 'libxext' 'libx11' 'libxrender' 'libxft')
+-makedepends=('xorg-util-macros')
 +depends=("libsm" "libxaw" "libxmu" "libxt" "libxext" "libx11" "libxrender" "libxft" "libxkbfile")
++makedepends=(
++	"make"
++	"gcc"
++	"autogen"
++	"autoconf"
++	"automake"
++	"pkgconf"
++	"xorg-util-macros"
++)
  build() {
 -  cd xlogo-${pkgver}
 -  ./configure --prefix=/usr

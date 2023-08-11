@@ -31,13 +31,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,13 +6,12 @@
+@@ -6,7 +6,6 @@
    libsecret
    openssh
    p11-kit
 -  systemd
  )
- prepare() {
+ makedepends=(
+   gi-docgen
+@@ -20,7 +19,7 @@
    cd gcr
  }
  build() {
@@ -46,7 +48,7 @@
    meson compile -C build
  }
  package_gcr-4() {
-@@ -20,7 +19,6 @@
+@@ -28,7 +27,6 @@
      libgck-2.so
      libgcr-4.so
    )

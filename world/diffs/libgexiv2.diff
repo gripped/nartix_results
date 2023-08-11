@@ -44,9 +44,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,9 @@
+@@ -1,7 +1,10 @@
  pkgname=libgexiv2
  depends=(exiv2 glib2)
+ makedepends=(gobject-introspection meson python-gobject vala)
 +prepare() {
 +  patch -d gexiv2-gexiv2-$pkgver -p1 < 06adc8fb.patch
 +}

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=(kde-applications kde-education)
+@@ -3,7 +3,7 @@
  depends=(kqtquickcharts libxkbfile kcmutils hicolor-icon-theme qt5-quickcontrols2 qt5-graphicaleffects qt5-xmlpatterns)
+ makedepends=(extra-cmake-modules kdoctools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

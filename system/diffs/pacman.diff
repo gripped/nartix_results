@@ -54,5 +54,5 @@
 -depends=('bash' 'glibc' 'libarchive' 'curl' 'gpgme' 'pacman-mirrorlist'
 +depends=('bash' 'glibc' 'libarchive' 'curl' 'gpgme' 'artix-mirrorlist'
           'gettext' 'gawk' 'coreutils' 'gnupg' 'grep')
+ makedepends=('meson' 'asciidoc' 'doxygen')
  provides=('libalpm.so')
- backup=(etc/pacman.conf

@@ -41,8 +41,8 @@
 +  libelogind
    xorg-xprop
  )
- prepare() {
-@@ -21,7 +21,7 @@
+ makedepends=(
+@@ -29,7 +29,7 @@
      -D default_bus=dbus-broker
      -D docs=true
    )
@@ -51,7 +51,7 @@
    meson compile -C build
  }
  package_at-spi2-core() {
-@@ -41,6 +41,7 @@
+@@ -49,6 +49,7 @@
      'atk<=2.38.0-2'
    )
    meson install -C build --destdir "$pkgdir"

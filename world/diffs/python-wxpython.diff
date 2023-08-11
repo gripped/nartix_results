@@ -37,13 +37,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,12 @@
+@@ -1,11 +1,13 @@
  pkgname=python-wxpython
  _pkgname=wxPython
 +_wxver=3.2.0
  _
  _post="${pkgver##*.}"
  depends=('wxwidgets-gtk3' 'python-six')
+ makedepends=('mesa' 'glu' 'webkit2gtk' 'python-requests' 'python-setuptools' 'python-attrdict' 'sip' 'doxygen' 'waf')
  build() {
    cd $_pkgname-$pkgver
 +  rm -r sip/{cpp,gen}/* # Recreate sip files with current wxWidgets

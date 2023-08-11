@@ -43,7 +43,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,6 @@
+@@ -1,7 +1,7 @@
+ pkgbase=rabbitmq
+ pkgname=(rabbitmq rabbitmqadmin)
+ makedepends=(
+-  'zip' 'unzip' 'libxslt' 'xmlto' 'systemd' 'elixir' 'python' 'python-simplejson' 'rsync'
++  'zip' 'unzip' 'libxslt' 'xmlto' 'udev' 'elixir' 'python' 'python-simplejson' 'rsync'
+   'util-linux' 'inetutils' 'erlang-nox' 'socat'
+ )
+ options=('!makeflags')
+@@ -12,7 +12,6 @@
    sed -E 's|@RABBITMQ_GROUP@|rabbitmq|g' -i scripts/rabbitmq-script-wrapper
    sed -E 's|@STDOUT_STDERR_REDIRECTION@||g' -i scripts/rabbitmq-script-wrapper
    sed -e "s|%%VSN%%|${pkgver}|" -i deps/rabbitmq_management/bin/rabbitmqadmin
@@ -51,7 +60,7 @@
  }
  build() {
    cd ${pkgbase}-server-${pkgver}
-@@ -27,7 +26,6 @@
+@@ -31,7 +30,6 @@
    for script in "${libdir}"/sbin/rabbit*; do
      ln -s /usr/lib/rabbitmq/bin/rabbitmq-script-wrapper "${pkgdir}/usr/bin/${script#${libdir}/sbin/}"
    done

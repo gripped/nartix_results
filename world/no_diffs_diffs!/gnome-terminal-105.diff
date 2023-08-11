@@ -33,14 +33,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,7 @@
-   vte3
+@@ -12,6 +12,7 @@
+   yelp-tools
  )
  groups=(gnome-extra)
  prepare() {
    cd $pkgname
  }
-@@ -11,6 +12,6 @@
+@@ -19,6 +20,6 @@
    local meson_options=(
      -D b_lto=false
    )

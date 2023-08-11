@@ -48,8 +48,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,12 @@
- depends=('glib2')
+@@ -3,12 +3,12 @@
+ makedepends=('gobject-introspection')
  groups=('mate')
  build() {
 -    	cd "${pkgname}-${pkgver}"

@@ -40,7 +40,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,18 +2,18 @@
+@@ -1,20 +1,20 @@
+ pkgname=mako
+-makedepends=("meson" "scdoc" "systemd" "wayland-protocols")
++makedepends=("meson" "scdoc" "wayland-protocols" "elogind")
  depends=(
  	"gdk-pixbuf2"
  	"pango"

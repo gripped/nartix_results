@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,6 +17,7 @@
-   libportal-gtk4
-   tracker3
+@@ -25,6 +25,7 @@
+   meson
+   tracker3-miners
  )
  prepare() {
    cd nautilus
    git apply -3 ../no-tracker-test.diff
-@@ -26,7 +27,7 @@
+@@ -34,7 +35,7 @@
      -D docs=true
      -D packagekit=false
    )

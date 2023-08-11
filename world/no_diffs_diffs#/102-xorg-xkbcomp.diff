@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=xorg-xkbcomp
+@@ -2,6 +2,7 @@
  depends=('libxkbfile')
+ makedepends=('xorg-util-macros')
  groups=('xorg-apps' 'xorg')
  build() {
    cd xkbcomp-${pkgver}

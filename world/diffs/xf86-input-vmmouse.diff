@@ -19,6 +19,6 @@
  pkgname=xf86-input-vmmouse
 -depends=('systemd-libs')
 +depends=('libudev.so')
+ makedepends=('xorg-server-devel' 'X-ABI-XINPUT_VERSION=24.4' 'xorgproto')
  conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
  groups=('xorg-drivers')
- build() {

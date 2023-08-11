@@ -32,6 +32,6 @@
  pkgname=python-keyrings-alt
 -depends=('python-keyring' 'python-pycryptodomex')
 +depends=('python-keyring' 'python-jaraco.text')
+ makedepends=('git' 'python-build' 'python-installer' 'python-setuptools-scm' 'python-wheel')
  build() {
    cd keyrings.alt
-   python -m build --wheel --no-isolation

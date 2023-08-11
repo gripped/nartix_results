@@ -18,10 +18,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,7 +1,8 @@
  pkgname=woff2
 -depends=(brotli gcc-libs)
 +depends=(brotli)
+ makedepends=(git cmake ninja)
  provides=(libwoff2{common,dec,enc}.so)
  prepare() {
    cd woff2

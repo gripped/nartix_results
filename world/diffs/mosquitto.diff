@@ -47,13 +47,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=mosquitto
  depends=(cjson openssl util-linux-libs)
+-makedepends=(c-ares cmake docbook-xsl libwebsockets systemd uthash)
++makedepends=(c-ares cmake docbook-xsl libwebsockets uthash)
  backup=("etc/$pkgname/$pkgname.conf")
  build() {
    cmake -DCMAKE_INSTALL_PREFIX=/usr \
-@@ -8,7 +9,7 @@
+@@ -9,7 +10,7 @@
          -DCMAKE_BUILD_TYPE=None \
          -DWITH_BUNDLED_DEPS=OFF \
          -DWITH_SRV=ON \

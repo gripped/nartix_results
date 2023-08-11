@@ -19,6 +19,6 @@
  pkgname=onboard
 -depends=('gtk3' 'hunspell' 'iso-codes' 'libcanberra' 'libxkbfile' 'python-cairo' 'python-dbus' 'python-gobject' 'systemd')
 +depends=('gtk3' 'hunspell' 'iso-codes' 'libcanberra' 'libxkbfile' 'python-cairo' 'python-dbus' 'python-gobject' 'udev')
+ makedepends=('python-distutils-extra')
  build() {
    cd $pkgname-$pkgver
-   python3 setup.py build

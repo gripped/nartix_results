@@ -25,13 +25,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
- pkgbase=geocode-glib
+@@ -2,6 +2,7 @@
  pkgname=(geocode-glib-common geocode-glib geocode-glib-2)
+ makedepends=(gobject-introspection git gtk-doc meson glib2 json-glib libsoup
+              libsoup3)
  prepare() {
    cd geocode-glib
  }
-@@ -7,8 +8,8 @@
+@@ -9,8 +10,8 @@
    local meson_options=(
      -D enable-installed-tests=false
    )

@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -29,6 +29,7 @@
-   upower
+@@ -36,6 +36,7 @@
+   python
  )
  groups=(gnome)
  prepare() {
    cd $pkgname
    git apply -3 ../pixmaps-dir.diff
-@@ -41,6 +42,6 @@
+@@ -48,6 +49,6 @@
      -D documentation=true
      -D malcontent=true
    )

@@ -56,12 +56,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,6 @@
+@@ -1,20 +1,7 @@
  pkgname=lib32-$_name
 -depends=(
 -  lib32-glibc
 -  $
 -)
+-makedepends=(
+-  cmake
+-  ninja
+-  nasm)
 -provides=(
 -  lib32-libjpeg
 -  libjpeg.so
@@ -71,6 +75,7 @@
 -  patch -Np1 -d $_name-$pkgver -i ../$pkgname-3.0.0-fix_test_concurrency.patch
 -}
 +depends=(lib32-glibc "$
++makedepends=(cmake ninja nasm)
 +provides=(lib32-libjpeg libjpeg.so libturbojpeg.so)
  build() {
    local cmake_options=(

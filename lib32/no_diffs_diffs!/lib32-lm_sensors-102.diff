@@ -14,8 +14,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=lib32-lm_sensors
+@@ -2,6 +2,7 @@
+ makedepends=('git')
  depends=('lm_sensors' 'lib32-glibc')
  provides=('libsensors.so')
  prepare() {

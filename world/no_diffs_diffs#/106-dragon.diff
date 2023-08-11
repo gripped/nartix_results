@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(hicolor-icon-theme kparts phonon-qt5)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules kdoctools)
  groups=(kde-applications kde-multimedia)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

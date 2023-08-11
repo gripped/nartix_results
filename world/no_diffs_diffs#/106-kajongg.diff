@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- groups=(kde-applications kde-games)
+@@ -3,6 +3,6 @@
  depends=(python-twisted python-qtpy qt5-python-bindings libkmahjongg hicolor-icon-theme)
+ makedepends=(extra-cmake-modules kdoctools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver
 +  artix-cmake -B build -S $pkgname-$pkgver

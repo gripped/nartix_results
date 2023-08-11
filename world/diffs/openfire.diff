@@ -40,9 +40,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
+@@ -1,8 +1,7 @@
  pkgname=openfire
  depends=('java-runtime-headless<19')
+ makedepends=('maven' 'jre11-openjdk-headless' 'jdk11-openjdk')
 -backup=('etc/conf.d/openfire'
 -        'etc/openfire/openfire.xml'
 +backup=('etc/openfire/openfire.xml'

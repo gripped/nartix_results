@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,9 +3,7 @@
- depends=(glibc)
+@@ -4,9 +4,7 @@
+ makedepends=(cmake)
  build() {
    cmake -B build -S $pkgname-$pkgver \
 -    -DCMAKE_INSTALL_PREFIX=/usr \

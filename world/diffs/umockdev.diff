@@ -31,10 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  pkgname=umockdev
 -depends=('systemd' 'libgudev')
 +depends=('udev' 'libgudev' 'libpcap')
+ makedepends=('meson' 'gobject-introspection' 'gtk-doc' 'vala')
  build() {
    cd $pkgname-$pkgver
 -  arch-meson -Dgtk_doc=true ../build

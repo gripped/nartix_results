@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=kpimtextedit
+@@ -2,7 +2,7 @@
  depends=(kio syntax-highlighting)
+ makedepends=(extra-cmake-modules qt5-tools doxygen)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

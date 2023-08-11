@@ -47,9 +47,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,13 @@
+@@ -1,10 +1,14 @@
  pkgname=xdg-utils-cxx
  depends=()
+ makedepends=(cmake)
 +prepare() {
 +  mkdir -p build
 +}

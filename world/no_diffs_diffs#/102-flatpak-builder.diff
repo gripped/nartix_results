@@ -25,9 +25,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
- depends=(flatpak binutils elfutils unzip tar git bzr patch rpmextract cpio
+@@ -3,6 +3,7 @@
           appstream-glib fuse3)
+ makedepends=(gobject-introspection git docbook-xsl xmlto)
  replaces=('flatpak<0.9.10')
  prepare() {
    cd $pkgname

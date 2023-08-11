@@ -18,5 +18,5 @@
  pkgname=ksysguard
 -_dirver=$(echo $pkgver | cut -d. -f1-3)
  depends=(ksystemstats)
+ makedepends=(extra-cmake-modules kdoctools)
  build() {
-   cmake -B build -S $pkgname-$pkgver \

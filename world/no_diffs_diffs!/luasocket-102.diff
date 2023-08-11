@@ -18,6 +18,6 @@
  pkgbase=luasocket
  pkgname=(lua-socket lua51-socket lua52-socket lua53-socket)
  _rockrel=1
- _archive="$pkgbase-$pkgver"
- _rock="$_archive-$_rockrel.linux-$CARCH.rock"
- build() {
+ makedepends=(lua
+              lua51
+              lua52

@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libxtst
  depends=('libxext' 'libxi' 'libxfixes')
+ makedepends=('xorg-util-macros' 'xorgproto')
  build() {
    cd "${srcdir}/libXtst-${pkgver}"
    ./configure --prefix=/usr --disable-static

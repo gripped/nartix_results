@@ -49,7 +49,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,13 @@
+@@ -1,21 +1,16 @@
  pkgname=telegram-desktop
  depends=('hunspell' 'ffmpeg' 'hicolor-icon-theme' 'lz4' 'minizip' 'openal' 'ttf-opensans'
 -         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash'
@@ -57,6 +57,10 @@
           'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'jemalloc' 'abseil-cpp' 'libdispatch'
 -         'openssl' 'protobuf' 'glib2' 'libsigc++-3.0')
 +         'openssl' 'protobuf')
+ makedepends=('cmake' 'git' 'ninja' 'python' 'range-v3' 'tl-expected' 'microsoft-gsl' 'meson'
+              'extra-cmake-modules' 'wayland-protocols' 'plasma-wayland-protocols' 'libtg_owt'
+-             'gobject-introspection' 'boost' 'fmt' 'mm-common' 'perl-xml-parser' 'libsigc++-3.0')
++             'gobject-introspection' 'glib2' 'boost' 'fmt')
  build() {
      CXXFLAGS+=' -ffat-lto-objects'
 -    meson setup -D maintainer-mode=true --default-library static --prefix "$srcdir/glibmm" glibmm-2.77.0 glibmm-build

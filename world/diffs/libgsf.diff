@@ -34,9 +34,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,15 @@
- pkgname=libgsf
+@@ -2,21 +2,15 @@
  depends=(libxml2 gdk-pixbuf2 bzip2)
+ makedepends=(gobject-introspection git gtk-doc autoconf-archive)
  provides=(libgsf-1.so)
  prepare() {
    cd libgsf

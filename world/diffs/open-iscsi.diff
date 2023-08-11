@@ -29,14 +29,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=open-iscsi
+-makedepends=('meson' 'systemd')
 -depends=('systemd-libs' 'util-linux-libs' 'kmod' 'openssl' 'open-isns')
++makedepends=('meson' 'udev')
 +depends=('libudev' 'util-linux-libs' 'kmod' 'openssl' 'open-isns')
  install=$pkgname.install
  backup=('etc/iscsi/iscsid.conf'
  	'etc/iscsi/initiatorname.iscsi')
-@@ -8,7 +8,8 @@
+@@ -9,7 +9,8 @@
    local _meson_options=(
      -Discsi_sbindir=/usr/bin/
      -Drulesdir=/usr/lib/udev/rules.d/

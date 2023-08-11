@@ -36,9 +36,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,10 @@
- pkgname=desktop-file-utils
+@@ -2,10 +2,10 @@
  depends=(glib2)
+ makedepends=(git meson)
  prepare() {
 -  cd $pkgname
 +  cd dfu

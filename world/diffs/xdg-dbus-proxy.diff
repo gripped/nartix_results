@@ -45,13 +45,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,10 @@
+@@ -1,17 +1,11 @@
  pkgname=xdg-dbus-proxy
 -depends=(
 -  dbus
 -  glib2
 -)
+-makedepends=(
+-  docbook-xsl
+-  git
+-  meson
+-)
 +depends=(glib2 dbus)
++makedepends=(git meson docbook-xsl)
  prepare() {
    cd $pkgname
  }

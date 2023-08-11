@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(kio hicolor-icon-theme)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules kdoctools kcmutils)
  groups=(kde-applications kde-utilities)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

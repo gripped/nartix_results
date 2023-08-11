@@ -22,9 +22,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,7 +1,8 @@
  pkgname=libxcvt
  depends=('glibc')
+ makedepends=('meson')
  build() {
 -  arch-meson ${pkgname}-${pkgver} build
 +  artix-meson ${pkgname}-${pkgver} build

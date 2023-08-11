@@ -26,7 +26,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,8 +17,6 @@
+@@ -18,8 +18,6 @@
    depends=(libxcrypt zlib)
    install -d "$pkgdir/etc/$pkgname"
    make -C $pkgbase install DESTDIR="$pkgdir"

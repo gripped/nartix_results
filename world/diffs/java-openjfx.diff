@@ -25,6 +25,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -14,7 +14,7 @@
+   gdk-pixbuf2
+   glib2
+   gperf
+-  gradle
++  gradle7
+   gtk2
+   gtk3
+   java-environment-openjdk=17
+@@ -39,7 +39,7 @@
  build() {
    cd jfx${pkgver//.*}u-${pkgver//.u/-}
    export PKG_CONFIG_PATH='/usr/lib/ffmpeg4.4/pkgconfig'

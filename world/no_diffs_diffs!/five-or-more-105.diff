@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,11 @@
- pkgname=five-or-more
+@@ -2,10 +2,11 @@
  depends=(gtk3 librsvg libgnome-games-support)
+ makedepends=(gobject-introspection yelp-tools appstream-glib git meson vala)
  groups=(gnome-extra)
  prepare() {
    cd $pkgname

@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=maliit-framework
  depends=(qt5-declarative)
+ makedepends=(cmake qt5-wayland wayland-protocols gtk3 python)
  build() {
    cmake -B build -S framework-$pkgver \
      -DCMAKE_INSTALL_PREFIX=/usr \

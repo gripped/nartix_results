@@ -57,7 +57,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -56,10 +56,10 @@
+@@ -4,6 +4,7 @@
+   liblightdm-qt5
+ )
+ makedepends=(
++  elogind
+   glib2
+   git
+   gobject-introspection
+@@ -77,10 +78,10 @@
    rm -rf "${pkgdir}"/usr/include/lightdm-qt{,5}-*
    install -m 644 ../lightdm.pam "${pkgdir}"/etc/pam.d/lightdm
    install -m 644 ../lightdm-autologin.pam "${pkgdir}"/etc/pam.d/lightdm-autologin

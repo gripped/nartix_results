@@ -75,7 +75,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,41 +2,36 @@
+@@ -2,50 +2,43 @@
  depends=(
    gcc-libs
    glibc
@@ -105,6 +105,15 @@
    wayland
 +  wayland-protocols
    xorg-server-xwayland
+ )
+ makedepends=(
+-  benchmark
+   git
+   glslang
+   meson
+   ninja
+   vulkan-headers
+-  wayland-protocols
  )
  prepare() {
    cd gamescope

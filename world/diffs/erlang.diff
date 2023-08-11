@@ -35,7 +35,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,9 +26,6 @@
+@@ -27,9 +27,6 @@
    make -C otp DESTDIR="$pkgdir" DOC_TARGETS=chunks install install-docs
    mkdir -p unixodbc
    mv "$pkgdir/usr/lib/erlang/lib/odbc"* "$srcdir/unixodbc/"

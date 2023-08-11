@@ -14,8 +14,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
- depends=('glibc')
+@@ -3,6 +3,7 @@
+ makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=25.2')
  conflicts=('xorg-server<21.1.1' 'X-ABI-VIDEODRV_VERSION<25' 'X-ABI-VIDEODRV_VERSION>=26')
  groups=('xorg-drivers' 'xorg')
  build() {

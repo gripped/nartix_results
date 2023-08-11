@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(kcalendarcore kcontacts kwallet)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules qt5-tools)
  options=(!lto) # https://bugs.kde.org/show_bug.cgi?id=411425
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

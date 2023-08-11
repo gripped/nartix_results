@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
-          pim-data-exporter pim-sieve-editor kontactinterface ktnef)
+@@ -4,7 +4,7 @@
+ makedepends=(extra-cmake-modules kdoctools)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

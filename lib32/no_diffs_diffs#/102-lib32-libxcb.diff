@@ -14,10 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- _pkgbasename=libxcb
- pkgname=lib32-$_pkgbasename
+@@ -3,6 +3,7 @@
  depends=('lib32-libxdmcp' 'lib32-libxau' $_pkgbasename)
+ makedepends=('pkgconfig' 'libxslt' 'python' 'xorg-util-macros' 'gcc-multilib'
+              'autoconf' 'xorgproto')
  validpgpkeys+=('3BB639E56F861FA2E86505690FDD682D974CA72A') # "Matt Turner <mattst88@gmail.com>"
  build() {
    cd "${srcdir}/${_pkgbasename}-${pkgver}"

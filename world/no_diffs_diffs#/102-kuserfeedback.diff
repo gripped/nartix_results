@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=kuserfeedback
  depends=(qt5-base)
+ makedepends=(extra-cmake-modules qt5-tools clang qt5-charts qt5-svg qt5-declarative)
  build() {
    cmake -B build -S $pkgname-$pkgver \
      -DBUILD_TESTING=OFF

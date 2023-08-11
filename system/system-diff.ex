@@ -6,15 +6,20 @@ base
 bash
 binutils
 btrfs-progs
+cryptsetup
 dbus
 dbus-docs
 dhcpcd
+e2fsprogs
+fuse2fs
 elfutils
 debuginfod
 libelf
+fakeroot
 glibc
 lib32-glibc
 gssproxy
+iputils
 libusb
 linux-firmware
 linux-firmware-whence
@@ -41,6 +46,7 @@ nfs-utils
 nfsidmap
 openldap
 libldap
+openresolv
 openssh
 p11-kit
 libp11-kit
@@ -54,6 +60,7 @@ procps-ng
 rpcbind
 sudo
 syslinux
+usbutils
 util-linux
 util-linux-libs
 xfsprogs

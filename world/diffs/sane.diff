@@ -70,7 +70,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,8 +32,8 @@
+@@ -21,7 +21,6 @@
+   libxml2
+   poppler-glib
+   python
+-  systemd
+   texlive-latexextra
+ )
+ provides=(libsane.so)
+@@ -47,8 +46,8 @@
      --with-libcurl
      --with-pic
      --with-poppler-glib

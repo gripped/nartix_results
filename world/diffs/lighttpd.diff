@@ -43,6 +43,6 @@
  pkgname=lighttpd
 -depends=('pcre2' 'systemd' 'brotli')
 +depends=('pcre2' 'brotli')
+ makedepends=('mariadb-libs' 'lua' 'libxml2' 'e2fsprogs' 'sqlite' 'pkgconfig')
  backup=('etc/lighttpd/lighttpd.conf' 'etc/logrotate.d/lighttpd')
  options=('emptydirs')
- build() {

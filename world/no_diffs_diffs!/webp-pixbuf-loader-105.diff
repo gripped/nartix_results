@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=webp-pixbuf-loader
+@@ -2,6 +2,6 @@
  depends=(gdk-pixbuf2 libwebp)
+ makedepends=(meson)
  build() {
 -  arch-meson ${pkgname}-${pkgver} build
 +  artix-meson ${pkgname}-${pkgver} build

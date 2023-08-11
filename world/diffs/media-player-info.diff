@@ -23,10 +23,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=media-player-info
 -depends=('systemd')
+-makedepends=('python' git)
 +depends=('udev')
++makedepends=('python' 'git')
  prepare() {
    cd $pkgname
    NOCONFIGURE=1 ./autogen.sh

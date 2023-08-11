@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=kpublictransport
+@@ -2,7 +2,7 @@
  depends=(qt5-declarative networkmanager-qt ki18n)
+ makedepends=(extra-cmake-modules protobuf qt5-tools doxygen)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

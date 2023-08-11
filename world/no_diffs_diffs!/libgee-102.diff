@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libgee
  depends=(glib2)
+ makedepends=(gobject-introspection vala autoconf-archive git)
  prepare() {
    cd libgee
    NOCONFIGURE=1 ./autogen.sh

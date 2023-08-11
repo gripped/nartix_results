@@ -31,14 +31,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgbase=devhelp
- pkgname=(devhelp devhelp-docs)
+@@ -3,6 +3,7 @@
  depends=(webkit2gtk-4.1)
+ makedepends=(git appstream-glib gobject-introspection meson yelp-tools
+              gi-docgen)
  prepare() {
    cd devhelp
  }
-@@ -11,7 +12,7 @@
+@@ -13,7 +14,7 @@
      -D plugin_gedit=true
      -D plugin_vim=true
    )

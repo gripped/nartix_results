@@ -27,9 +27,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,10 @@
+@@ -1,6 +1,11 @@
  pkgname=libspf2
  depends=('glibc' 'libnsl')
+-makedepends=('libmilter' 'git')
++makedepends=('libmilter' 'git' 'autoconf')
 +prepare() {
 +  cd "$pkgname"
 +  patch -Np1 -i ../0001-Fix-resolv-functions.patch

@@ -42,8 +42,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,6 @@
- _versiondir=90
+@@ -5,7 +5,6 @@
+              'gawk' 'tcl' 'zlib' 'libcanberra')
  prepare() {
    (cd vim-${pkgver}/src
 -    patch -Np2 -i ../../fix-perl-build.patch

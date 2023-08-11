@@ -62,12 +62,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,7 @@
+@@ -1,15 +1,8 @@
  pkgname=python-cerberus
 -depends=(
 -  python
 -)
+-makedepends=(
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
 +depends=('python' 'python-setuptools')
++makedepends=('python-build' 'python-installer' 'python-wheel')
  build() {
 -  cd $_name-$pkgver
 +  cd cerberus-$pkgver

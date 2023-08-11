@@ -24,10 +24,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- pkgbase=atkmm-2.36
+@@ -2,12 +2,12 @@
  pkgname=(atkmm-2.36 atkmm-2.36-docs)
  depends=(atk glibmm-2.68)
+ makedepends=(git meson mm-common glibmm-2.68-docs)
 -options=!emptydirs
 +options=!emptydirs
  prepare() {

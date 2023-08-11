@@ -27,9 +27,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=qbs
+@@ -2,7 +2,7 @@
  depends=(qt6-5compat)
+ makedepends=(cmake)
  build() {
 -  cmake -B build -S $pkgname-src-$pkgver \
 +  artix-cmake -B build -S $pkgname-src-$pkgver \

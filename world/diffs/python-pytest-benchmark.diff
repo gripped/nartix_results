@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=('python-pytest' 'python-py-cpuinfo')
+@@ -3,7 +3,7 @@
+ makedepends=('python-setuptools')
  prepare() {
    cd pytest-benchmark-$pkgver
 -  sed -i '/^    error$/d' pytest.ini

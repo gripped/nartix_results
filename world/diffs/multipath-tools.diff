@@ -17,10 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=multipath-tools
 -depends=('libaio' 'device-mapper' 'json-c' 'liburcu' 'systemd-libs')
+-makedepends=('git' 'systemd')
 +depends=('libaio' 'device-mapper' 'json-c' 'liburcu' 'libudev.so')
++makedepends=('git')
  build() {
    cd "${pkgname}"
    make \

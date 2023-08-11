@@ -88,7 +88,7 @@
  _pkgbase=mozc
  pkgname=fcitx-mozc
  depends=('qt5-base' 'fcitx')
-@@ -30,10 +30,8 @@
+@@ -31,10 +31,8 @@
    echo "Done."
    rm unix/fcitx5/fcitx5.gyp
    sed "/stdlib=libc++/d;/-lc++/d" -i gyp/common.gypi

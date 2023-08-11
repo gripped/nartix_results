@@ -38,10 +38,10 @@
  	 'libgl' 'libgcrypt' 'perl' 'libxdamage' 'libxfont2' 'libdrm'
 -	 'xorg-xinit' 'libxcvt' 'ffmpeg')
 +	 'xorg-xinit' 'libxcvt')
- conflicts=('tightvnc')
- backup=(etc/pam.d/tigervnc
- 	etc/tigervnc/vncserver-config-defaults
-@@ -23,6 +23,7 @@
+ makedepends=('cmake' 'nasm' 'xorg-font-util' 'xorg-util-macros'
+ 	     'xtrans' 'xorgproto'
+ 	     'mesa' 'imagemagick' 'java-environment=8')
+@@ -26,6 +26,7 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_INSTALL_SBINDIR=/usr/bin \
      -DCMAKE_INSTALL_LIBEXECDIR=/usr/bin \

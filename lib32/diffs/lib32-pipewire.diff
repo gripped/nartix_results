@@ -68,7 +68,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,6 +32,7 @@
+@@ -10,9 +10,7 @@
+   lib32-alsa-lib
+   lib32-dbus
+   lib32-glib2
+-  lib32-systemd
+   meson
+-  systemd
+ )
+ prepare() {
+   cd pipewire
+@@ -41,6 +39,7 @@
      -D libmysofa=disabled
      -D libpulse=disabled
      -D libusb=disabled
@@ -76,7 +86,7 @@
      -D lv2=disabled
      -D man=disabled
      -D opus=disabled
-@@ -53,7 +54,7 @@
+@@ -62,7 +61,7 @@
    export CC="gcc -m32"
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
@@ -85,7 +95,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -75,7 +76,6 @@
+@@ -84,7 +83,6 @@
      libdbus-1.so
      libglib-2.0.so
      libpipewire-$_ver.so
@@ -93,7 +103,7 @@
      pipewire
    )
    meson install -C build --destdir "$pkgdir"
-@@ -110,13 +110,8 @@
+@@ -119,13 +117,8 @@
      libpipewire-$_ver.so
      pipewire-jack
    )

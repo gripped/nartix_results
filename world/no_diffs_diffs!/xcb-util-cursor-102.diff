@@ -19,9 +19,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=xcb-util-cursor
  depends=('libxcb' 'xcb-util-renderutil' 'xcb-util-image')
+ makedepends=('xorgproto')
  build() {
    cd $pkgname-$pkgver
    ./configure --prefix=/usr

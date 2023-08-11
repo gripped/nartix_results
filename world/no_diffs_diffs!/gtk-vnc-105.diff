@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=gtk-vnc
+@@ -2,6 +2,7 @@
  depends=(libgcrypt gtk3 gnutls libpulse)
+ makedepends=(vala gobject-introspection git perl-text-csv meson)
  provides=(libgtk-vnc-2.0.so libgvnc{,pulse}-1.0.so)
  prepare() {
    cd gtk-vnc
    git submodule init
-@@ -8,6 +9,6 @@
+@@ -9,6 +10,6 @@
    git submodule update
  }
  build() {

@@ -43,7 +43,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -29,8 +29,6 @@
+@@ -30,8 +30,6 @@
    make DESTDIR="${pkgdir}" install
    install -D -m644 "${srcdir}/dhcp-sysusers.conf" "${pkgdir}/usr/lib/sysusers.d/dhcp.conf"
    install -D -m644 "${srcdir}/dhcp-tmpfiles.conf" "${pkgdir}/usr/lib/tmpfiles.d/dhcp.conf"
@@ -52,7 +52,7 @@
    mv "${pkgdir}/etc/dhcpd.conf.example" "${pkgdir}/etc/dhcpd.conf"
    install -D -m644 doc/examples/dhcpd-dhcpv6.conf "${pkgdir}/etc/dhcpd6.conf"
    make -C client DESTDIR="${pkgdir}" uninstall
-@@ -46,5 +44,4 @@
+@@ -47,5 +45,4 @@
    install -d "${pkgdir}/var/lib/dhclient"
    install -m755 client/scripts/linux "${pkgdir}/usr/bin/dhclient-script"
    install -m644 -D LICENSE "${pkgdir}/usr/share/licenses/dhclient/LICENSE"

@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
- groups=(gnome)
+@@ -3,6 +3,7 @@
  depends=(glib2)
+ makedepends=(intltool gobject-introspection git gnome-common)
  provides=(libgnome-menu-3.so)
  prepare() {
    cd $pkgname

@@ -14,10 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=easytag
- depends=('cairo' 'gcc-libs' 'gdk-pixbuf2' 'glibc' 'id3lib' 'taglib' 'wavpack'
+@@ -3,6 +3,7 @@
  'zlib')
+ makedepends=('appstream-glib' 'atk' 'flac' 'glib2' 'gtk3' 'harfbuzz' 'intltool'
+ 'itstool' 'libid3tag' 'pango' 'python' 'yelp-tools')
  prepare() {
    mv -v "${pkgname}-${pkgname}-${pkgver}" "${pkgname}-${pkgver}"
    cd "${pkgname}-${pkgver}"

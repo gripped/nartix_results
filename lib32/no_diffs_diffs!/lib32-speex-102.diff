@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=lib32-speex
  depends=(lib32-gcc-libs speex)
+ makedepends=(git)
  prepare() {
    cd speex
    ./autogen.sh

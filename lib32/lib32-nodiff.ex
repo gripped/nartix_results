@@ -57,7 +57,6 @@ lib32-libcups
 lib32-libdatrie
 lib32-libdv
 lib32-libelf
-lib32-libepoxy
 lib32-libffi
 lib32-libgcrypt
 lib32-libglvnd
@@ -171,5 +170,4 @@ lib32-zlib
 lib32-zstd
 multilib-devel
 steam
-wine-staging
 winetricks

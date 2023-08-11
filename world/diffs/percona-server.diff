@@ -95,7 +95,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,22 +6,14 @@
+@@ -3,27 +3,19 @@
+ _boost_ver=1.77.0
+ _
+ _myver=${pkgver/_rel*}
+-makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
++makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
+              'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'protobuf' 'libfido2') # 'boost'
  prepare() {
  	cd $pkgbase-$_pkgver
  	rm -v sql/sql_yacc.{cc,h}
@@ -119,7 +125,7 @@
  		-DCMAKE_C_FLAGS_RELWITHDEBINFO="${CFLAGS} -DNDEBUG -ffat-lto-objects -msse4.2 -mpclmul" \
  		-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="${CXXFLAGS} -DNDEBUG -ffat-lto-objects -msse4.2 -mpclmul" \
  		-Wno-dev \
-@@ -73,7 +65,7 @@
+@@ -75,7 +67,7 @@
  		-DDEBUG_EXTNAME=OFF \
  		-DBUILD_TESTING=OFF \
  		-DWITH_UNIT_TESTS=OFF \
@@ -128,7 +134,7 @@
  		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
  		-DWITH_NUMA=ON \
  		-DWITH_BOOST="../boost_${_boost_ver//./_}"
-@@ -106,7 +98,7 @@
+@@ -108,7 +100,7 @@
  }
  package_percona-server() {
  	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf')
@@ -137,7 +143,7 @@
  	         'libevent' 'protobuf' 'icu') # 'boost-libs'
  	conflicts=('mysql')
  	provides=("mysql=$_myver" "mariadb=$_myver")
-@@ -137,4 +129,5 @@
+@@ -139,4 +131,5 @@
  	rm usr/lib/perconaserver/plugin/authentication_*_client.so
  	rm usr/share/man/man1/mysql{,admin,check,dump,import,show,slap,pump,binlog,_upgrade}.1
  	rm -r usr/share/mysql-test

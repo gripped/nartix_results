@@ -27,9 +27,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=smb4k
+@@ -2,7 +2,7 @@
  depends=(kparts kdnssd hicolor-icon-theme smbclient)
+ makedepends=(extra-cmake-modules kdoctools plasma-framework)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

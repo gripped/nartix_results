@@ -23,9 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,10 @@
+@@ -1,10 +1,11 @@
  pkgname=libpciaccess
  depends=('glibc' 'zlib')
+ makedepends=('xorg-util-macros' 'meson')
  prepare() {
    mkdir build
  }

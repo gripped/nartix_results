@@ -28,10 +28,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgbase=json-glib
+@@ -2,11 +2,12 @@
  pkgname=(json-glib json-glib-docs)
  depends=(glib2)
+ makedepends=(gobject-introspection git meson gi-docgen docbook-xsl)
  prepare() {
 -  cd json-glib
 +  cd $pkgname

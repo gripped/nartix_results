@@ -88,4 +88,14 @@
 +  python-pydantic-core
    python-typing-extensions
  )
+ makedepends=(
+@@ -9,7 +10,8 @@
+   python-build
+   python-installer
+   python-importlib-metadata
+-  python-setuptools
++  python-hatchling
++  python-hatch-fancy-pypi-readme
+   python-wheel
+ )
  build() {

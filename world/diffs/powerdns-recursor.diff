@@ -27,14 +27,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,7 +1,7 @@
  pkgname=powerdns-recursor
 -depends=('gcc-libs' 'boost-libs' 'libcurl.so' 'libsodium' 'systemd-libs' 'luajit' 'openssl'
 +depends=('gcc-libs' 'boost-libs' 'libcurl.so' 'libsodium' 'luajit' 'openssl'
           'libboost_context.so' 'fstrm' 'net-snmp')
+-makedepends=('boost' 'pandoc' 'ragel' 'systemd')
++makedepends=('boost' 'pandoc' 'ragel')
  provides=('pdns-recursor')
  conflicts=('pdns-recursor')
-@@ -16,7 +16,7 @@
+ backup=('etc/powerdns/recursor.conf')
+@@ -17,7 +17,7 @@
      --sysconfdir=/etc/powerdns \
      --disable-silent-rules \
      --enable-reproducible \

@@ -67,7 +67,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,11 @@
+@@ -1,7 +1,7 @@
  pkgname=lib32-polkit
  depends=(
    lib32-glib2
@@ -75,11 +75,15 @@
 +  lib32-elogind
    polkit
  )
+ makedepends=(
+@@ -11,6 +11,7 @@
+   meson
+ )
  provides=(libpolkit-gobject-1.so)
  prepare() {
    cd polkit
    git apply -3 ../multilib.diff
-@@ -15,12 +16,13 @@
+@@ -21,12 +22,13 @@
      -D introspection=false
      -D libs-only=true
      -D os_type=redhat

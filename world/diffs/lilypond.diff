@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=lilypond
+ pkgver=2.24.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Music engraving program, devoted to producing the highest-quality sheet music possible"
+ arch=(x86_64)
+ url="https://lilypond.org"
+@@ -11,8 +11,7 @@
+          ghostscript
+          glibc
+          gsfonts)
+-makedepends=(dblatex
+-             fontconfig
++makedepends=(fontconfig
+              fontforge
+              freetype2
+              glib2
+@@ -23,13 +22,8 @@
+              rsync
+              t1utils
+              texinfo
+-             texlive-basic
+-             texlive-bin
+-             texlive-binextra
+-             texlive-fontutils
++             texlive-core
+              texlive-langcyrillic
+-             texlive-metapost
+-             texlive-xetex
+              zip)
+ optdepends=(
+   'python: for lilypond-book and other scripts'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,8 +4,7 @@
+          ghostscript
+          glibc
+          gsfonts)
+-makedepends=(dblatex
+-             fontconfig
++makedepends=(fontconfig
+              fontforge
+              freetype2
+              glib2
+@@ -16,13 +15,8 @@
+              rsync
+              t1utils
+              texinfo
+-             texlive-basic
+-             texlive-bin
+-             texlive-binextra
+-             texlive-fontutils
++             texlive-core
+              texlive-langcyrillic
+-             texlive-metapost
+-             texlive-xetex
+              zip)
+ build() {
+   cd $pkgname-$pkgver

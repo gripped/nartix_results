@@ -77,9 +77,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,18 @@
+@@ -1,12 +1,24 @@
 -pkgname='jp2a'
 -depends=('curl' 'libjpeg' 'libpng')
+-makedepends=('doxygen' 'autoconf-archive' 'git')
 +pkgname=jp2a
 +changelog=Changelog.txt
 +depends=(
@@ -87,6 +88,12 @@
 +	"libjpeg-turbo"
 +	"libpng"
 +	"ncurses"
++)
++makedepends=(
++	"make"
++	"autoconf-archive"
++	"automake"
++	"gcc"
 +)
  prepare(){
 -  cd "${pkgname}"

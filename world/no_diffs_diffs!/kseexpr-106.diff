@@ -24,8 +24,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(qt5-base)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules qt5-tools)
  replaces=(seexpr-krita)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

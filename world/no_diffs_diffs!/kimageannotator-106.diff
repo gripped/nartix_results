@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=kimageannotator
+@@ -2,7 +2,7 @@
  depends=(qt5-svg kcolorpicker)
+ makedepends=(cmake qt5-tools)
  build() {
 -  cmake -B build -S kImageAnnotator-$pkgver \
 +  artix-cmake -B build -S kImageAnnotator-$pkgver \

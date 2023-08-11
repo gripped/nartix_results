@@ -23,8 +23,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=lib32-libglvnd
+@@ -2,11 +2,12 @@
+ makedepends=('lib32-libx11' 'lib32-libxext' 'xorgproto' 'python' 'meson')
  provides=('lib32-libgl' 'lib32-libegl' 'lib32-libgles')
  provides+=(libEGL.so libGL.so libGLESv2.so libGLX.so libGLdispatch.so libOpenGL.so)
  build() {

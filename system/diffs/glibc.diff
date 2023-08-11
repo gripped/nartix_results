@@ -125,9 +125,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,11 @@
+@@ -1,13 +1,12 @@
  pkgbase=glibc
  pkgname=(glibc lib32-glibc)
+ makedepends=(git gd lib32-gcc-libs python)
 -options=staticlibs!lto
 +options=staticlibs!lto
  prepare() {
@@ -139,7 +140,7 @@
  }
  build() {
    local _configure_flags=(
-@@ -15,11 +14,11 @@
+@@ -16,11 +15,11 @@
        --with-bug
        --enable-bind-now
        --enable-cet
@@ -152,7 +153,7 @@
        --disable-profile
        --disable-werror
    )
-@@ -28,10 +27,15 @@
+@@ -29,10 +28,15 @@
    echo "rtlddir=/usr/lib" >> configparms
    echo "sbindir=/usr/bin" >> configparms
    echo "rootsbindir=/usr/bin" >> configparms
@@ -168,7 +169,7 @@
    make -O
    make info
    cd "${srcdir}"/lib32-glibc-build
-@@ -46,13 +50,17 @@
+@@ -47,13 +51,17 @@
        --libdir=/usr/lib32 \
        --libexecdir=/usr/lib32 \
        "${_configure_flags[@]}"
@@ -187,7 +188,7 @@
  }
  package_glibc() {
    depends=('linux-api-headers>=4.10' tzdata filesystem)
-@@ -64,9 +72,8 @@
+@@ -65,9 +73,8 @@
    rm -f "${pkgdir}"/etc/ld.so.cache
    rm -f "${pkgdir}"/usr/bin/{tzselect,zdump,zic}
    cd glibc

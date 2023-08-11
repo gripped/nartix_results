@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=('jsoncpp' 'libx11' 'vulkan-icd-loader' 'libglvnd' 'libxrandr' 'libxxf86vm')
+@@ -3,7 +3,7 @@
+ makedepends=('cmake' 'vulkan-headers' 'python' 'ninja' 'wayland' 'mesa')
  build() {
    cd OpenXR-SDK-Source-release-${pkgver}
 -  cmake \

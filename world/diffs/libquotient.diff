@@ -31,10 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,9 @@
+@@ -1,11 +1,10 @@
  pkgname=libquotient
 -depends=(qt5-multimedia qtkeychain-qt5 libolm)
 +depends=(qt5-multimedia qtkeychain-qt5)
+ makedepends=(cmake)
  build() {
    cmake -B build -S libQuotient-$pkgver \
      -DCMAKE_INSTALL_PREFIX=/usr \

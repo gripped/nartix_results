@@ -37,10 +37,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,12 +1,13 @@
 +_pkg=pam-wrapper
  pkgname=pam_wrapper
  depends=(pam python)
+ makedepends=(git cmake ninja cmocka doxygen graphviz)
  provides=(libpam_wrapper.so libpamtest.so)
  prepare() {
 -  cd $pkgname

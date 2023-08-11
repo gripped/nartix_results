@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libxcb
  depends=('xcb-proto' 'libxdmcp' 'libxau')
+ makedepends=('libxslt' 'python' 'xorg-util-macros' 'xorgproto')
  build() {
    cd "$pkgname-$pkgver"
    ./configure --prefix=/usr \

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libkeduvocdocument
+@@ -2,6 +2,6 @@
  depends=(kio kdeedu-data)
+ makedepends=(extra-cmake-modules kdoctools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver
 +  artix-cmake -B build -S $pkgname-$pkgver

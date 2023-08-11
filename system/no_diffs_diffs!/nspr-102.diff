@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=nspr
  depends=(glibc sh)
+ makedepends=(zip mercurial)
  prepare() {
    cd nspr
  }

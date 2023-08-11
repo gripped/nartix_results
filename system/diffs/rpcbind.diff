@@ -61,10 +61,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,10 @@
+@@ -1,12 +1,10 @@
  pkgname=rpcbind
 -backup=('etc/conf.d/rpcbind')
 -depends=('bash' 'glibc' 'libtirpc' 'systemd-libs')
+-makedepends=('systemd')
 +depends=('bash' 'glibc' 'libtirpc')
  replaces=('portmap')
  prepare() {
@@ -74,7 +75,7 @@
    patch -Np1 -i ../CVE-2017-8779.diff
  }
  build() {
-@@ -14,6 +13,7 @@
+@@ -15,6 +13,7 @@
      --with-rpcuser=rpc \
      --enable-warmstarts \
      --with-statedir=/var/lib/rpcbind \

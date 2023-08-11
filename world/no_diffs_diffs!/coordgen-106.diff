@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=coordgen
+@@ -2,7 +2,7 @@
  depends=(maeparser)
+ makedepends=(cmake boost)
  build() {
 -  cmake -B build -S coordgenlibs-$pkgver \
 +  artix-cmake -B build -S coordgenlibs-$pkgver \

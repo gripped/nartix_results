@@ -23,10 +23,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  pkgname=igsc
 -depends=(intel-metee systemd-libs)
+-makedepends=(cmake systemd)
 +depends=(intel-metee libudev)
++makedepends=(cmake udev)
  build() {
 -  cmake -B build -S ${pkgname}-${pkgver} \
 +  artix-cmake -B build -S ${pkgname}-${pkgver} \

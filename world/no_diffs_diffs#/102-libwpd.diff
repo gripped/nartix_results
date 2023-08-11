@@ -15,9 +15,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  pkgname=libwpd
  depends=('gcc-libs' 'zlib' 'librevenge')
+ makedepends=('libgsf>=1.14.26' 'doxygen' 'boost')
 -options=!emptydirs
 +options=!emptydirs
  prepare() {

@@ -32,7 +32,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -1,6 +1,6 @@
+ pkgname=fcron
+ depends=('pam' 'run-parts')
+-makedepends=('smtp-forwarder' 'vim' 'fcron' 'systemd')
++makedepends=('smtp-forwarder' 'vim' 'fcron')
+ provides=('cron')
+ conflicts=('dcron')
+ backup=('etc/fcron/fcron.conf'
+@@ -20,7 +20,7 @@
                --datadir=/usr/share \
                --with-docdir=/usr/share/doc \
                --localstatedir=/var \

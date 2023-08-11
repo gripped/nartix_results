@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=directx-headers
+@@ -2,7 +2,7 @@
+ makedepends=('meson')
  build() {
    export CXXFLAGS="$CXXFLAGS -fno-lto"
 -  arch-meson DirectX-Headers-$pkgver build \

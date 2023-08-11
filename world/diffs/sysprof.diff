@@ -41,14 +41,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,14 @@
+@@ -3,6 +3,7 @@
  depends=(
    libadwaita
    polkit
 +  json-glib
  )
- prepare() {
-   cd sysprof
+ makedepends=(
+   git
+@@ -14,7 +15,7 @@
  }
  build() {
    CFLAGS+=" -ffat-lto-objects"

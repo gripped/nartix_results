@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=cups-pk-helper
+@@ -2,7 +2,7 @@
  depends=(polkit libcups)
+ makedepends=('meson')
  build() {
 -  arch-meson $pkgname-$pkgver build
 +  artix-meson $pkgname-$pkgver build

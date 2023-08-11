@@ -65,7 +65,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,9 @@
+@@ -1,6 +1,6 @@
+ pkgname=lxc
+ depends=('bash' 'perl' 'libseccomp' 'libcap' 'python' 'rsync' 'wget')
+-makedepends=('docbook2x' 'systemd' 'meson' 'lua' 'python-setuptools' 'apparmor')
++makedepends=('docbook2x' 'meson' 'lua' 'python-setuptools' 'apparmor')
+ options=('emptydirs')
+ backup=('etc/lxc/default.conf'
+ 	'etc/default/lxc')
+@@ -10,6 +10,9 @@
  }
  build() {
    cd "$pkgname-${pkgver/_/-}"

@@ -17,10 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=ddcutil
 -depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'kmod')
+-makedepends=('systemd')
 +depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'dkms')
++makedepends=('libudev')
  prepare() {
    cd $pkgname-$pkgver
    NOCONFIGURE=1 ./autogen.sh

@@ -43,7 +43,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,8 +22,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=('libwbclient' 'smbclient' 'samba')
+ makedepends=('python' 'python-markdown' 'python-dnspython' 'docbook-xsl' 'pkg-config' 'libbsd' 'popt' 'libcups'
+              'readline' 'tevent' 'acl' 'libldap' 'libcap' 'ldb' 'krb5' 'pam'
+-             'systemd' 'gnutls' 'talloc' 'tdb' 'dbus'
++             'gnutls' 'talloc' 'tdb' 'dbus'
+              'perl-parse-yapp' 'libnsl' 'libtirpc' 'rpcsvc-proto' 'jansson'
+              'liburing' 'perl-json' 'glusterfs')
+ build() {
+@@ -27,8 +27,7 @@
                --with-ldap \
                --with-winbind \
                --with-acl-support \
@@ -53,7 +62,7 @@
                --with-pam \
                --with-pammodulesdir=/usr/lib/security \
                --bundled-libraries=!tdb,!talloc,!pytalloc-util,!tevent,!popt,!ldb,!pyldb-util \
-@@ -108,9 +107,6 @@
+@@ -113,9 +112,6 @@
  sys.path.insert(0, '/usr/lib/python${_pyver}/site-packages')" \
                 "${pkgdir}"/usr/${script}
      done

@@ -29,15 +29,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,5 @@
+@@ -1,7 +1,6 @@
  pkgname=openvpn
 -depends=('openssl' 'lzo' 'lz4' 'systemd-libs' 'libsystemd.so' 'pkcs11-helper' 'libpkcs11-helper.so')
+-makedepends=('git' 'systemd' 'python-docutils')
 -install=openvpn.install
 +depends=('openssl' 'lzo' 'lz4' 'pkcs11-helper' 'libnl'  'libpkcs11-helper.so')
++makedepends=('git' 'python-docutils')
  prepare() {
    cd "${srcdir}"/${pkgname}
    sed -i '/^CONFIGURE_DEFINES=/s/set/env/g' configure.ac
-@@ -15,7 +14,7 @@
+@@ -16,7 +15,7 @@
      --sbindir=/usr/bin \
      --enable-pkcs11 \
      --enable-plugins \

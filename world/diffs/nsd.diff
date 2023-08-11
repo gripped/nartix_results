@@ -42,14 +42,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,5 @@
  pkgname=nsd
 -depends=(openssl libevent fstrm protobuf-c systemd-libs)
+-makedepends=(systemd)
 +depends=(openssl libevent fstrm protobuf-c)
  install=nsd.install
  prepare() {
    cd ${pkgname}-${pkgver}
-@@ -17,7 +17,7 @@
+@@ -18,7 +17,7 @@
      --enable-relro-now \
      --enable-pie \
      --enable-dnstap \

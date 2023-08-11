@@ -96,3 +96,17 @@
    python-colorama
    python-commentjson
    python-crcmod
+@@ -26,12 +26,7 @@
+   python-sly
+   python-typing-extensions
+ )
+-makedepends=(
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
++makedepends=(python-build python-installer python-setuptools python-wheel)
+ prepare() {
+   cd $_name-$pkgver
+   sed -e 's|>=.*||g;s|==.*||g;s|~=.*||g;s|<.*||g' -i requirements{,-develop}.txt

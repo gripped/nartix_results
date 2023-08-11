@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=('gcc-libs')
+@@ -3,6 +3,6 @@
+ makedepends=('meson' 'nasm' 'vim' 'doxygen')
  options=('!lto')
  build() {
 -    arch-meson "${pkgname}-${pkgver}/libvmaf/build" "${pkgname}-${pkgver}/libvmaf"

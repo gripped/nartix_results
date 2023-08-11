@@ -85,12 +85,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,15 @@
+@@ -1,8 +1,21 @@
  pkgname=timew
+-makedepends=('cmake' 'gcc-libs' 'asciidoctor')
 -install=$pkgname.install
 +_libshared_c="47c3262fa97c4b69542040d39be6c516c38d0e57"
 +changelog=Changelog.txt
 +depends=("gcc-libs")
++makedepends=(
++	"gcc"
++	"make"
++	"cmake>=2.8.12"
++	"asciidoctor"
++)
 +prepare() {
 +	rm -rf "timewarrior-$pkgver/src/libshared"
 +	ln -sr "libshared-$_libshared_c" "timewarrior-$pkgver/src/libshared"

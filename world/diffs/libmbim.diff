@@ -24,10 +24,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,10 @@
+@@ -1,11 +1,11 @@
  pkgname=libmbim
 -depends=(glib2 bash systemd)
 +depends=(glib2 bash)
+ makedepends=(gtk-doc meson git help2man gobject-introspection bash-completion)
  provides=(libmbim-glib.so)
  prepare() {
    cd libmbim

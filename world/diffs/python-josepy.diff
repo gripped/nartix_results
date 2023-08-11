@@ -82,7 +82,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,17 @@
+@@ -1,24 +1,18 @@
  pkgname=python-josepy
 +_pkgname=josepy
  depends=(
@@ -90,6 +90,14 @@
    'python-cryptography'
    'python-pyopenssl'
  )
+-makedepends=(
+-  'git'
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
+-)
++makedepends=('python-setuptools')
  prepare() {
 -  cd "$pkgname"
 +  cd "$_pkgname-$pkgver"

@@ -62,9 +62,29 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,9 +3,6 @@
-   audacity
-   audacity-docs
+@@ -14,7 +14,6 @@
+   gdk-pixbuf2
+   glib2
+   gtk3
+-  gtkmm3
+   jack
+   lame
+   libid3tag
+@@ -24,7 +23,6 @@
+   libsndfile
+   libsoxr
+   libvorbis
+-  libxkbcommon-x11
+   lilv
+   lv2
+   mpg123
+@@ -40,13 +38,7 @@
+   wxwidgets-gtk3
+   vamp-plugin-sdk
+   vst3sdk
+-  xcb-util
+-  xcb-util-cursor
+-  xcb-util-keysyms
  )
 -prepare() {
 -    patch -d "$pkgname-$_name-$pkgver" -N -p 1 -i "${srcdir}/$pkgname-3.3.3-remove_obsolete_printf_specifier.patch"

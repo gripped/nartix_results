@@ -34,9 +34,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=grim
+@@ -2,6 +2,6 @@
  depends=(cairo libjpeg-turbo wayland)
+ makedepends=(fish git meson ninja pango scdoc wayland-protocols)
  build() {
 -  arch-meson build $pkgname
 +  artix-meson build _$pkgname

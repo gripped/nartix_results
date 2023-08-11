@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
- pkgname=gtksourceview3
+@@ -2,6 +2,7 @@
  depends=(gtk3 libxml2)
+ makedepends=(intltool gobject-introspection vala gtk-doc autoconf-archive
+              yelp-tools git)
  prepare() {
    cd gtksourceview
    find . -name Makefile.am -exec sed -i '/@CODE_COVERAGE_RULES@/d' {} +

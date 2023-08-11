@@ -43,12 +43,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,18 +13,19 @@
+@@ -13,7 +13,6 @@
    libvncserver
    libxkbcommon
    pipewire
 -  systemd
    tpm2-tss
+ )
+ makedepends=(
+@@ -23,14 +22,16 @@
+   meson
  )
  groups=(gnome)
  prepare() {

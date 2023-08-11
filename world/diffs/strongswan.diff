@@ -43,14 +43,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=strongswan
+-makedepends=('libnm' 'systemd' 'python' 'ruby' 'mariadb' 'python-setuptools')
 -depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'systemd-libs' 'pam')
 +depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'pam')
++makedepends=('libnm' 'python' 'ruby' 'mariadb' 'python-setuptools')
  backup=(
    etc/ipsec.conf
    etc/ipsec.secrets
-@@ -7,7 +7,6 @@
+@@ -8,7 +8,6 @@
    etc/strongswan.conf
    etc/strongswan.d/{charon-logging.conf,charon.conf,pki.conf,pool.conf,scepclient.conf,starter.conf,swanctl.conf}
    etc/strongswan.d/charon/{aesni.conf,attr-sql.conf,attr.conf,bliss.conf,chapoly.conf,cmac.conf,connmark.conf,constraints.conf,curl.conf,des.conf,dhcp.conf,dnskey.conf,eap-aka-3gpp2.conf,eap-aka.conf,eap-gtc.conf,eap-identity.conf,eap-md5.conf,eap-mschapv2.conf,eap-radius.conf,eap-sim-file.conf,eap-sim.conf,eap-simaka-pseudonym.conf,eap-simaka-reauth.conf,eap-tls.conf,ext-auth.conf,farp.conf,fips-prf.conf,forecast.conf,gmp.conf,ha.conf,hmac.conf,kernel-netlink.conf,md5.conf,mgf1.conf,nonce.conf,newhope.conf,ntru.conf,openssl.conf,pem.conf,pgp.conf,pkcs1.conf,pkcs12.conf,pkcs7.conf,pkcs8.conf,pubkey.conf,random.conf,rc2.conf,resolve.conf,revocation.conf,sha1.conf,sha2.conf,sha3.conf,socket-default.conf,sql.conf,sqlite.conf,sshkey.conf,stroke.conf,updown.conf,vici.conf,x509.conf,xauth-eap.conf,xauth-generic.conf,xcbc.conf,unity.conf,curve25519.conf,bypass-lan.conf})
@@ -58,7 +60,7 @@
  prepare() {
    cd ${pkgname}-${pkgver}
    patch -p1 -l <"${srcdir}/configure_ac.patch"
-@@ -45,7 +44,6 @@
+@@ -46,7 +45,6 @@
      --enable-ha \
      --enable-vici \
      --enable-swanctl \

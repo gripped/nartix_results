@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(dolphin)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules ktexteditor)
  groups=(kde-applications kdesdk)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

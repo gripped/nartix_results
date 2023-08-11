@@ -136,7 +136,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,21 @@
+@@ -1,25 +1,22 @@
  pkgname=openssh
  depends=(
 -  glibc
@@ -156,6 +156,11 @@
 +  'pam' 'libpam.so'
 +  'zlib'
  )
+-makedepends=(
+-  libfido2
+-  linux-headers
+-)
++makedepends=('libfido2' 'linux-headers')
  backup=(
 -  etc/pam.d/sshd
 -  etc/ssh/ssh_config
@@ -170,7 +175,7 @@
  }
  build() {
    local configure_options=(
-@@ -35,7 +35,7 @@
+@@ -39,7 +36,7 @@
      --with-pid-dir=/run
      --with-default-path='/usr/local/sbin:/usr/local/bin:/usr/bin'
    )

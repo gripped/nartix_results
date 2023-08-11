@@ -31,8 +31,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(libftdi pciutils libusb)
+@@ -3,7 +3,7 @@
+ makedepends=(meson)
  build() {
    cd ${pkgname}-v${pkgver}
 -  arch-meson ../build

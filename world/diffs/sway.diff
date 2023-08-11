@@ -47,15 +47,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,6 @@
+@@ -14,10 +14,9 @@
+   'pcre2'
+   'ttf-font'
  )
+-makedepends=(meson ninja scdoc setconf wayland-protocols)
++makedepends=(meson ninja scdoc setconf wayland-protocols elogind)
  backup=(
    etc/sway/config
 -  etc/sway/config.d/50-systemd-user.conf
  )
  install=sway.install
  prepare() {
-@@ -26,6 +25,6 @@
+@@ -27,6 +26,6 @@
  }
  build() {
    mkdir -p build

@@ -54,7 +54,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -44,7 +44,7 @@
+@@ -12,7 +12,7 @@
+ conflicts=('mod_proxy_uwsgi')
+ replaces=('mod_proxy_uwsgi')
+ depends=('zlib' 'apr-util' 'pcre2' 'libnghttp2' 'openssl' 'libxcrypt')
+-makedepends=('libxml2' 'lua' 'curl' 'brotli' 'jansson' 'db' 'systemd')
++makedepends=('libxml2' 'lua' 'curl' 'brotli' 'jansson' 'db')
+  <stefan@eissing.org>
+               'E3480043595621FE56105F112AB12A7ADC55C003' # Daniel Ruggeri
+ 	      '65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA')  # Eric Covener <covener@apache.org>
+@@ -45,7 +45,7 @@
        --enable-proxy-http --enable-proxy-ftp \
        --enable-dbd --enable-imagemap --enable-ident --enable-cern-meta \
        --enable-lua --enable-xml2enc --enable-http2 \

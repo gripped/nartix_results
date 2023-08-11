@@ -24,16 +24,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=gucharmap
- depends=(gtk3)
+@@ -12,7 +12,7 @@
+   yelp-tools
+ )
  provides=(libgucharmap_2_90.so)
 -options=!lto
 +options=!lto
  prepare() {
    cd $pkgname
  }
-@@ -10,6 +10,6 @@
+@@ -21,6 +21,6 @@
      -D b_lto=false
      -D ucd_path=/usr/share/unicode
    )

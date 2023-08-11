@@ -26,8 +26,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,10 @@
- pkgname=supermin
+@@ -2,6 +2,10 @@
+ makedepends=('ocaml' 'ocaml-findlib')
  depends=('e2fsprogs' 'pacman' 'pacman-contrib' 'cpio')
  conflicts=('febootstrap<=3.21')
 +prepare() {

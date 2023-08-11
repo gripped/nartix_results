@@ -193,7 +193,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,17 @@
+@@ -1,81 +1,24 @@
  pkgname=vtk
 -depends=(
 -  double-conversion
@@ -203,7 +203,71 @@
 -  onetbb
 -  pugixml
 -)
+-makedepends=(
+-  adios2
+-  boost
+-  cgns
+-  cli11
+-  cmake
+-  doxygen
+-  eigen
+-  expat
+-  ffmpeg
+-  fmt
+-  freetype2
+-  gdal
+-  git
+-  gl2ps
+-  glew
+-  gnuplot
+-  hdf5
+-  java-environment=11
+-  jsoncpp
+-  libharu
+-  libjpeg
+-  liblas
+-  libogg
+-  libpng
+-  libtheora
+-  libxml2
+-  libxt
+-  lz4
+-  mariadb-libs
+-  netcdf
+-  openimagedenoise
+-  openmp
+-  openmpi
+-  openvdb
+-  openvr
+-  openxr
+-  ospray
+-  pdal
+-  postgresql-libs
+-  proj
+-  python-matplotlib
+-  python-mpi4py
+-  qt5-base
+-  qt5-tools
+-  qt5-declarative
+-  rapidjson
+-  sqlite
+-  tk
+-  unixodbc
+-  utf8cpp
+-  verdict
+-  wget
+-  xz
+-  zfp
+-  zlib
+-)
 +depends=(gcc-libs double-conversion pugixml tbb libtiff)
++makedepends=(adios2 cmake boost doxygen ffmpeg gdal git gnuplot java-environment=11
++             liblas libxt mariadb-libs openimagedenoise openmp openmpi openvdb
++             openvr ospray pdal postgresql-libs python-matplotlib qt5-base
++             qt5-tools qt5-declarative tk unixodbc wget
++             cgns cli11 eigen expat fmt freetype2 gl2ps glew hdf5 libjpeg
++             jsoncpp libjsoncpp.so libharu proj libxml2 lz4 xz python-mpi4py
++             netcdf libogg libpng rapidjson sqlite libtheora utf8cpp zfp zlib openxr verdict)
  options=(staticlibs)
  prepare() {
    cd ${pkgname^^}-${pkgver}

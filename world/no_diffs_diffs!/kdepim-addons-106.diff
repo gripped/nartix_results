@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(incidenceeditor ktnef libksieve akonadi-import-wizard kitinerary kontactinterface discount)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules kdoctools kaddressbook)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

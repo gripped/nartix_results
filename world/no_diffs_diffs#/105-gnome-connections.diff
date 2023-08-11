@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
-          'hicolor-icon-theme' 'libhandy' 'libsecret' 'libxml2')
+@@ -4,6 +4,6 @@
+ makedepends=('appstream-glib' 'gobject-introspection' 'itstool' 'meson' 'vala')
  groups=('gnome')
  build() {
 -  arch-meson $pkgname-$pkgver build

@@ -21,8 +21,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(xcb-util-cursor purpose knewstuff qt5-tools kpipewire)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules kdoctools plasma-wayland-protocols)
  groups=(kde-applications kde-graphics)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

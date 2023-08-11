@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,14 +6,14 @@
+ arch=('x86_64')
+ url="https://github.com/linux-nvme/libnvme"
+ license=('LGPL2.1')
+-makedepends=('systemd' 'meson' 'asciidoc' 'python' 'swig')
++makedepends=('meson' 'asciidoc' 'python' 'swig')
+ depends=('json-c' 'openssl' 'keyutils' 'dbus')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
+ sha256sums=('f73ba1edde059b2d5e7c1048ad4f895e6047bff241c94b34a7aff5894779d086')
+ 
+ build() {
+ 	cd "${pkgname}-${pkgver}"
+-    arch-meson \
++    artix-meson \
+ 	-Dlibdbus=auto \
+ 	-Ddocs-build=true \
+ 	.build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ pkgname=libnvme
+-makedepends=('systemd' 'meson' 'asciidoc' 'python' 'swig')
++makedepends=('meson' 'asciidoc' 'python' 'swig')
+ depends=('json-c' 'openssl' 'keyutils' 'dbus')
+ build() {
+ 	cd "${pkgname}-${pkgver}"
+-    arch-meson \
++    artix-meson \
+ 	-Dlibdbus=auto \
+ 	-Ddocs-build=true \
+ 	.build

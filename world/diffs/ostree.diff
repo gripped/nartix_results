@@ -30,7 +30,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,6 +37,7 @@
+@@ -25,7 +25,6 @@
+   mkinitcpio
+   openssl
+   python
+-  systemd
+   xz
+ )
+ provides=(libostree-1.so)
+@@ -55,6 +54,7 @@
      --with-ed25519-libsodium
      --with-mkinitcpio
      --with-openssl

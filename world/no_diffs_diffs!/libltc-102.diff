@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=libltc
+@@ -2,6 +2,7 @@
  depends=(glibc)
+ makedepends=(doxygen)
  provides=(libltc.so)
  prepare() {
    cd $pkgname-$pkgver

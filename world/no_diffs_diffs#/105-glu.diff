@@ -23,13 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=glu
  depends=('libgl')
+ makedepends=('meson')
  prepare() {
    cd glu-$pkgver
    patch -Np1 -i ../0001-pkgconfig-Depend-on-opengl-when-built-with-libglvnd.patch
-@@ -7,7 +8,7 @@
+@@ -8,7 +9,7 @@
    patch -Np1 -i ../0003-pkgconfig-meson-build-should-match-autotools-require.patch
  }
  build() {

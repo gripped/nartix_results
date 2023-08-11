@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=('amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas' 'gtk3' 'gtksourceview4' 'icu'
+@@ -3,6 +3,6 @@
           'pango')
+ makedepends=('gobject-introspection' 'gtk-doc' 'meson')
  build() {
 -  arch-meson $pkgname-$pkgver build -D gtk_doc=true
 +  artix-meson $pkgname-$pkgver build -D gtk_doc=true

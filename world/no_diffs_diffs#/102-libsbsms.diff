@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=libsbsms
+@@ -2,6 +2,7 @@
  depends=(gcc-libs)
+ makedepends=(cmake)
  provides=(libsbsms.so)
  build() {
    cmake -B build -S $pkgname-$pkgver \

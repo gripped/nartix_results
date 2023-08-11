@@ -35,6 +35,6 @@
  _pipname=ipywidgets
 -depends=(ipython python-comm python-jsonschema)
 +depends=(python-ipykernel python-jsonschema)
+ makedepends=(python-build python-installer python-setuptools python-wheel)
  build() {
    cd ipywidgets-$pkgver
-   python -m build --wheel --no-isolation

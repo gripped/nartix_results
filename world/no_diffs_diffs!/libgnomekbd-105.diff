@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=libgnomekbd
+@@ -2,11 +2,12 @@
  depends=(libxklavier gtk3 dconf)
+ makedepends=(gobject-introspection git meson)
  provides=(libgnomekbd{,ui}.so)
  prepare() {
    cd $pkgname

@@ -40,9 +40,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,9 @@
+@@ -1,15 +1,10 @@
  pkgname=lensfun
  depends=(glib2)
+ makedepends=(python-setuptools python-build python-installer python-wheel libpng doxygen cmake)
 -prepare() {
 -  patch -d $pkgname-$pkgver -p1 < fix-python-module-install.patch
 -}

@@ -32,9 +32,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,9 @@
- _dirver=$(echo $pkgver | cut -d. -f1-3)
+@@ -3,6 +3,9 @@
  depends=(plasma-framework perl)
+ makedepends=(extra-cmake-modules kdoctools ktexteditor)
  groups=(plasma)
 +prepare() {
 +  rm -r $pkgname-$pkgver/po/nl/docs/plasma-sdk # Fix build

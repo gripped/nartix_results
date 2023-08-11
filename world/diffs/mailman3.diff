@@ -121,7 +121,19 @@
    python-lazr.config
    python-passlib
    python-requests
-@@ -27,7 +27,6 @@
+@@ -23,18 +23,11 @@
+   python-zope-event
+   python-zope-interface
+ )
+-makedepends=(
+-  git
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
++makedepends=(git python-build python-installer python-setuptools python-wheel)
+ conflicts=(mailman)
  replaces=(mailman-core)
  backup=(etc/mailman.cfg)
  prepare() {

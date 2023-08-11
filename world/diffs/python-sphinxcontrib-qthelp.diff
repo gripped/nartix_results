@@ -48,8 +48,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,8 @@
+@@ -1,5 +1,10 @@
  pkgname=python-sphinxcontrib-qthelp
+-makedepends=('python-build' 'python-flit-core' 'python-installer')
++makedepends=('python-build' 'python-installer' 'python-setuptools'
++             'python-wheel')
 +prepare() {
 +  cd $_name-$pkgver
 +  patch --forward --strip=1 --input=../qthelp-read_text.patch

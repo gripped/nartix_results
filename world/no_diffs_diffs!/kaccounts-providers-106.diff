@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=kaccounts-providers
+@@ -2,7 +2,7 @@
  depends=(kaccounts-integration)
+ makedepends=(extra-cmake-modules intltool)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

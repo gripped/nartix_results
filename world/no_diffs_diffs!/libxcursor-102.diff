@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libxcursor
  depends=('libxfixes' 'libxrender' 'default-cursors')
+ makedepends=('xorg-util-macros')
  build() {
    cd libXcursor-${pkgver}
    ./configure --prefix=/usr --sysconfdir=/etc --disable-static

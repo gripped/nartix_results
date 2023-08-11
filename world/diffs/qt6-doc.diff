@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
+@@ -7,6 +7,7 @@
  _pkgfn=qt-everywhere-src-$_qtver
  build() {
    cmake -B build -S $_pkgfn -G Ninja \
@@ -31,7 +31,7 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DQT_HOST_PATH=/usr \
      -DINSTALL_BINDIR=lib/qt6/bin \
-@@ -14,7 +15,7 @@
+@@ -16,7 +17,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \

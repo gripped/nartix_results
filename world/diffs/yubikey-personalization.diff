@@ -40,7 +40,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
+@@ -1,12 +1,13 @@
+ pkgname=yubikey-personalization
+ _shortname=ykpers
+ depends=('libusb' 'json-c' 'yubico-c-client')
+-makedepends=('systemd')
++makedepends=('udev')
+ provides=('ykpers')
+ conflicts=('ykpers')
  prepare() {
  	cd "${_shortname}-${pkgver}"
  	patch -Np1 < ../0001-fix-boolean-value-with-json-c-0.14.patch

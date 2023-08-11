@@ -38,9 +38,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,10 @@
- _dirver=$(echo $pkgver | cut -d. -f1-3)
+@@ -3,6 +3,10 @@
  depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
+ makedepends=(extra-cmake-modules)
  groups=(plasma)
 +prepare() {
 +  cd $pkgname-$pkgver

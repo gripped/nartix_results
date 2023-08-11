@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="http://snapper.io"
+ license=('GPL2')
+ depends=('btrfs-progs' 'libxml2' 'dbus' 'boost-libs' 'acl' 'json-c')
+-makedepends=('boost' 'lvm2' 'libxslt' 'docbook-xsl' 'pam' 'git' 'systemd')
++makedepends=('boost' 'lvm2' 'libxslt' 'docbook-xsl' 'pam' 'git' 'elogind')
+ optdepends=('pam: pam_snapper')
+ backup=('etc/conf.d/snapper')
+ source=("https://github.com/openSUSE/snapper/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
+@@ -54,4 +54,6 @@
+     "$pkgdir"/etc/conf.d/snapper
+ 
+   rm -rf "$pkgdir/usr/lib/snapper/testsuite/"
++
++  rm -rf "$pkgdir"/usr/lib/{snapper/systemd-helper,systemd}
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=snapper
+ depends=('btrfs-progs' 'libxml2' 'dbus' 'boost-libs' 'acl' 'json-c')
+-makedepends=('boost' 'lvm2' 'libxslt' 'docbook-xsl' 'pam' 'git' 'systemd')
++makedepends=('boost' 'lvm2' 'libxslt' 'docbook-xsl' 'pam' 'git' 'elogind')
+ backup=('etc/conf.d/snapper')
+ prepare() {
+   cd "$srcdir/$pkgname-$pkgver"

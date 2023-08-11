@@ -24,7 +24,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -10,7 +10,7 @@
+   python-installer
+   python-setuptools
+   python-wheel
+-  systemd
++  udev
+ )
+ prepare() {
+   cd $pkgbase-$pkgver-src
+@@ -28,7 +28,7 @@
  package_libusbsio() {
    depends=(
      glibc

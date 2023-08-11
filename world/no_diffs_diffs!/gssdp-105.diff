@@ -23,10 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgbase=gssdp
+@@ -2,11 +2,12 @@
  pkgname=(gssdp gssdp-docs)
  depends=(glib2 libsoup3)
+ makedepends=(gobject-introspection gi-docgen vala meson git gtk4 pandoc)
  prepare() {
    cd gssdp
  }

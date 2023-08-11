@@ -31,7 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
+@@ -1,9 +1,9 @@
+ pkgname=pkgfile
+ depends=('libarchive' 'curl' 'pcre' 'pacman')
+-makedepends=('git' 'meson' 'clang' 'systemd')
++makedepends=('git' 'meson' 'clang')
  install=pkgfile.install
  build() {
    cd "$pkgname"

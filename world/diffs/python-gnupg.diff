@@ -41,13 +41,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,5 @@
+@@ -1,14 +1,6 @@
  pkgname=python-gnupg
 -depends=(
 -  gnupg
 -  python
 -)
+-makedepends=(
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
 +depends=(gnupg python)
++makedepends=(python-build python-installer python-setuptools python-wheel)
  build() {
    cd $pkgname-$pkgver
    python -m build --wheel --no-isolation

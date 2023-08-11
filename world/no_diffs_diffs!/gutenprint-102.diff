@@ -15,9 +15,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgbase=gutenprint
+@@ -2,7 +2,7 @@
  pkgname=('gutenprint' 'foomatic-db-gutenprint-ppds')
+ makedepends=('gimp' 'gtk2' 'cups' 'ghostscript'
+             'dialog' 'doxygen' 'docbook-utils' 'texi2html' 'texlive-bin')
 -options=!emptydirs
 +options=!emptydirs
  prepare(){

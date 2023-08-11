@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(kdevelop)
+@@ -3,7 +3,7 @@
+ makedepends=(extra-cmake-modules kdoctools kdevelop-pg-qt)
  groups=(kde-applications kdevelop)
  build() {
 -  cmake -B build -S kdev-php-$pkgver \

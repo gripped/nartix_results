@@ -75,9 +75,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,14 @@
+@@ -1,13 +1,20 @@
  pkgname=sdcv
 -depends=('glib2' 'readline' 'zlib')
+-makedepends=('cmake')
 -provides=('stardict')
 -changelog=$pkgname.changelog
 +changelog=Changelog.txt
@@ -86,6 +87,12 @@
 +	"glib2>=2.36"
 +	"zlib"
 +	"readline"
++)
++makedepends=(
++	"gcc"
++	"make"
++	"cmake>=3.5"
++	"pkgconf"
 +)
  build() {
 -  cd "${srcdir}"/$pkgname-$pkgver

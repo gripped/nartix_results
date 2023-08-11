@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libcdio
  depends=(ncurses gcc-libs)
+ makedepends=(git help2man)
  prepare() {
    cd $pkgname
    git cherry-pick -n 2adb43c60afc6e98e94d86dad9f93d3df52862b1

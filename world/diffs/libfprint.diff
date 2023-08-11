@@ -29,10 +29,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,12 +1,13 @@
  pkgname=libfprint
 -depends=(libgusb pixman nss systemd libgudev)
 +depends=(libgusb pixman nss udev libgudev)
+ makedepends=(git meson gtk-doc gobject-introspection)
  provides=(libfprint-2.so)
  groups=(fprint)
  prepare() {

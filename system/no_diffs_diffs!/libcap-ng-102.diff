@@ -23,10 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgbase=libcap-ng
+@@ -2,6 +2,7 @@
  pkgname=(libcap-ng python-capng)
  depends=(glibc)
+ makedepends=(python swig)
  _pick() {
    local p="$1" f d; shift
    for f; do

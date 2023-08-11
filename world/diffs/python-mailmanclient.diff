@@ -72,14 +72,22 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,6 @@
+@@ -1,17 +1,7 @@
  pkgname=python-mailmanclient
 -depends=(
 -  python
 -  python-requests
 -  python-typing-extensions
 -)
+-makedepends=(
+-  git
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
 +depends=(python-requests python-typing-extensions)
++makedepends=(python-build python-installer python-setuptools python-wheel)
  build() {
 -  cd $_name
 +  cd $_name-$pkgver

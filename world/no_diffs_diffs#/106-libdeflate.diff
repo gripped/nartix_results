@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(glibc)
+@@ -7,7 +7,7 @@
+ )
  provides=(libdeflate.so)
  build() {
 -  cmake -S libdeflate -B build -G Ninja \

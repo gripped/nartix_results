@@ -60,7 +60,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,11 +3,9 @@
+@@ -14,11 +14,9 @@
  prepare() {
    mv -v "$pkgname-$pkgver.tar.bz2."{signature,sig}
    signify -V -p "$pkgname-$pkgver.pub" -m "$pkgname-$pkgver.tar.bz2"
@@ -72,7 +72,7 @@
    ./configure \
      --prefix=/usr \
      --enable-256-color \
-@@ -51,6 +49,8 @@
+@@ -62,6 +60,8 @@
      install -Dm 644 ${_f}.desktop "${pkgdir}/usr/share/applications/${_f}.desktop"
    done
    cd ${pkgname}-${pkgver}

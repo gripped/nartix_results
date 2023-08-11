@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=(kde-applications kde-education)
+@@ -3,7 +3,7 @@
  depends=(libqalculate gsl knewstuff kplotting hicolor-icon-theme)
+ makedepends=(extra-cmake-modules kdoctools eigen qt5-tools python)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

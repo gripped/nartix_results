@@ -13,7 +13,6 @@ ca-certificates-utils
 coreutils
 cracklib
 cronie
-cryptsetup
 curl
 libcurl-compat
 libcurl-gnutls
@@ -27,13 +26,10 @@ ding-libs
 dmraid
 dnssec-anchors
 dosfstools
-e2fsprogs
-fuse2fs
 ed
 efibootmgr
 efivar
 expat
-fakeroot
 file
 filesystem
 findutils
@@ -75,7 +71,6 @@ inetutils
 iproute2
 iptables
 iptables-nft
-iputils
 iw
 jansson
 jfsutils
@@ -153,7 +148,6 @@ npth
 nspr
 nss
 ca-certificates-mozilla
-openresolv
 openssl-1.1
 openssl
 patch
@@ -187,7 +181,6 @@ tpm2-tss
 traceroute
 tzdata
 unixodbc
-usbutils
 vi
 which
 wireless-regdb

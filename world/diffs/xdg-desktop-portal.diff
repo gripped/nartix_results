@@ -31,11 +31,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,13 +6,13 @@
+@@ -6,7 +6,6 @@
    glib2
    pipewire
    rtkit
 -  systemd
+ )
+ makedepends=(
+   docbook-xsl
+@@ -16,11 +15,12 @@
+   meson
+   xmlto
  )
  prepare() {
    cd $pkgname

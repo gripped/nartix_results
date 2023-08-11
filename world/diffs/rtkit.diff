@@ -41,10 +41,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,9 @@
+@@ -1,9 +1,10 @@
  pkgname=rtkit
 -depends=(dbus polkit systemd)
 +depends=(dbus polkit elogind)
+ makedepends=(git meson vim)
  prepare() {
    cd rtkit
  }

@@ -24,10 +24,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  pkgname=bolt
 -depends=('polkit' 'systemd')
 +depends=('polkit' 'udev')
+ makedepends=('asciidoc' 'meson' 'python-setuptools' 'patch')
  build() {
    cd $pkgname-$pkgver
 -  arch-meson ../build

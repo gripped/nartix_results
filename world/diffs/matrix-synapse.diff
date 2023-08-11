@@ -86,6 +86,6 @@
           'python-treq' 'python-idna' 'python-jinja' 'python-matrix-common'
 -         'python-bleach' 'python-typing_extensions' 'systemd')
 +         'python-bleach' 'python-typing_extensions')
+ makedepends=(git python-build python-installer python-wheel python-poetry-core python-setuptools-rust)
  backup=('etc/synapse/log_config.yaml')
  install=synapse.install
- prepare() {

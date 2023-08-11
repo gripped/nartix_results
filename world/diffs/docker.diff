@@ -54,14 +54,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,7 +1,7 @@
  pkgname=docker
 -depends=('glibc' 'bridge-utils' 'iproute2' 'device-mapper' 'sqlite' 'systemd-libs'
 +depends=('glibc' 'bridge-utils' 'iproute2' 'device-mapper' 'sqlite' 'libudev'
           'libseccomp' 'libtool' 'runc' 'containerd')
+-makedepends=('git' 'go' 'btrfs-progs' 'cmake' 'systemd' 'go-md2man' 'sed')
++makedepends=('git' 'go' 'btrfs-progs' 'cmake' 'udev' 'go-md2man' 'sed')
  options=(!lto)
  _TINI_COMMIT=de40ad007797e0dcd8b7126f27bb87401d224240
-@@ -41,7 +41,7 @@
+ _fake_gopath_pushd() {
+@@ -42,7 +42,7 @@
    echo 'Building daemon'
    _fake_gopath_pushd moby github.com/docker/docker
    DOCKER_GITCOMMIT=$(cd "$srcdir"/moby && git rev-parse --short HEAD) \

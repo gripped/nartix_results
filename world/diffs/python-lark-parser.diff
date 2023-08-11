@@ -117,13 +117,25 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,16 @@
+@@ -1,24 +1,23 @@
  pkgname=python-lark-parser
  depends=(
 -  'python'
 -  'python-typing_extensions'
 +  python
 +  python-typing_extensions
+ )
+ makedepends=(
+-  'git'
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
++  git
++  python-build
++  python-installer
++  python-setuptools
++  python-wheel
  )
 -provides=('python-lark')
 +provides=(python-lark)

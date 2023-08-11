@@ -37,6 +37,6 @@
  pkgname=libwacom
 -depends=('glib2' 'systemd' 'libgudev')
 +depends=('glib2' 'udev' 'libgudev')
+ makedepends=('libxml2' 'meson')
  build() {
    meson build $pkgname-$pkgver \
-     --prefix=/usr

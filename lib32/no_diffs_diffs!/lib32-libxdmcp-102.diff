@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
- pkgname=lib32-$_pkgbasename
+@@ -3,6 +3,7 @@
  depends=('lib32-glibc' $_pkgbasename)
+ makedepends=('xorg-util-macros' 'xorgproto')
  provides=('libXdmcp.so')
  build() {
    cd libXdmcp-${pkgver}

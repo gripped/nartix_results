@@ -46,17 +46,22 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,9 +41,9 @@
+@@ -41,7 +41,6 @@
    libxrender
    pango
    shared-mime-info
 -  tracker3
    wayland
  )
+ makedepends=(
+@@ -56,6 +55,7 @@
+   shaderc
+   wayland-protocols
+ )
  prepare() {
    cd gtk
  }
-@@ -54,10 +54,9 @@
+@@ -66,10 +66,9 @@
      -D colord=enabled
      -D gtk_doc=true
      -D man-pages=true

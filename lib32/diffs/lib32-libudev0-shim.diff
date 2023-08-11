@@ -17,12 +17,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,8 +2,8 @@
  pkgname=lib32-${_basepkgname}
  provides=('lib32-libudev0')
  conflicts=('lib32-libudev0')
 -depends=('lib32-systemd' 'libudev0-shim')
+-makedepends=('systemd')
 +depends=('lib32-udev' 'libudev0-shim')
++makedepends=('udev')
  build() {
    cd ${_basepkgname}-${pkgver}
    unset LDFLAGS

@@ -31,9 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
+@@ -1,8 +1,7 @@
  pkgname=ndisc6
  depends=('glibc' 'perl')
+-makedepends=('glibc' 'gcc' 'systemd')
++makedepends=('glibc' 'gcc')
  options=('!emptydirs')
 -install=$pkgname.install
  prepare() {

@@ -17,10 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=libfido2
 -depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'systemd-libs'  'libudev.so' 'zlib')
+-makedepends=('cmake' 'systemd')
 +depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'libudev.so' 'zlib')
++makedepends=('cmake' 'udev')
  provides=('libfido2.so')
  build() {
    cd ${pkgname}-${pkgver}

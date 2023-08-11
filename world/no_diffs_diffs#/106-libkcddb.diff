@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=libkcddb
+@@ -2,7 +2,7 @@
  depends=(kio libmusicbrainz5)
+ makedepends=(extra-cmake-modules kdoctools kcmutils)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

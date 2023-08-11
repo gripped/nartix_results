@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=xdg-desktop-portal-gtk
+@@ -2,6 +2,7 @@
  depends=(gtk3 gsettings-desktop-schemas)
+ makedepends=(xdg-desktop-portal python git)
  provides=(xdg-desktop-portal-impl)
  prepare() {
    cd $pkgname

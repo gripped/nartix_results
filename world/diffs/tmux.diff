@@ -25,14 +25,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,5 @@
  pkgname=tmux
 -depends=('ncurses' 'libevent' 'libutempter' 'systemd-libs')
+-makedepends=('systemd')
 +depends=('ncurses' 'libevent' 'libutempter')
  prepare() {
  	cd "$pkgname-${pkgver/_/}"
  	patch -Np1 -i ../0001-CVE-2022-47016.patch
-@@ -11,6 +11,6 @@
+@@ -12,6 +11,6 @@
  	./configure \
  		--prefix=/usr \
  		--enable-utempter \

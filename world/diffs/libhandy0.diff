@@ -31,8 +31,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,10 @@
- depends=(glib2 gtk3)
+@@ -3,10 +3,10 @@
+ makedepends=(git gobject-introspection meson vala)
  provides=(libhandy-0.0.so)
  prepare() {
 -  cd libhandy

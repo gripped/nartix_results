@@ -33,7 +33,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
+@@ -1,10 +1,11 @@
+ pkgname=ruby-bake-test-external
+ depends=(ruby-bake)
++makedepends=(ruby-rspec)
+ options=(!emptydirs)
  prepare() {
    cd bake-test-external-$pkgver
    sed -e '/signing_key/d' -i bake-test-external.gemspec

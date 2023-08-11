@@ -43,7 +43,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,19 @@
+@@ -1,14 +1,15 @@
  pkgname=gnome-disk-utility
 +groups=(gnome)
  depends=(
@@ -58,6 +58,11 @@
    parted
 -  systemd
    udisks2
+ )
+ makedepends=(
+@@ -16,8 +17,8 @@
+   git
+   meson
  )
 -groups=(gnome)
  build() {

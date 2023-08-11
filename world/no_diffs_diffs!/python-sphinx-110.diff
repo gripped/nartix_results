@@ -56,9 +56,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
-   'python-sphinxcontrib-'{{apple,dev,html}help,jsmath,qthelp,serializinghtml}
+@@ -13,7 +13,7 @@
  )
+ makedepends=('python-build' 'python-flit-core' 'python-installer')
  build() {
 -  cd "$_name"-$pkgver
 +  cd Sphinx-$pkgver

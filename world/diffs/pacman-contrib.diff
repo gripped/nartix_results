@@ -31,8 +31,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
- depends=('fakeroot' 'pacman' 'perl')
+@@ -3,6 +3,7 @@
+ makedepends=('asciidoc' 'git')
  prepare() {
    cd $pkgname
 +  patch -Np 1 -i ../rankmirrors-artix.patch

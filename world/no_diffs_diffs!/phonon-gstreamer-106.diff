@@ -22,9 +22,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,11 @@
- pkgname=(phonon-qt5-gstreamer)
+@@ -3,10 +3,11 @@
  depends=(gst-plugins-base qt5-x11extras phonon-qt5)
+ makedepends=(extra-cmake-modules qt5-tools)
  provides=(phonon-qt5-backend)
  prepare() {
    patch -d phonon-backend-gstreamer-$pkgver -p1 < bbbb160f.patch # Fix tearing on wayland

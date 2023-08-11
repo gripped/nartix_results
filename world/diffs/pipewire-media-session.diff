@@ -39,8 +39,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,14 +2,14 @@
- depends=('pipewire>=0.3.39')
+@@ -5,18 +5,17 @@
+   dbus
+   git
+   meson
+-  systemd
+ )
  provides=(pipewire-session-manager)
  conflicts=(wireplumber)
 -install=pipewire-media-session.install

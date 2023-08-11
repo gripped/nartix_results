@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=expac
- depends=(pacman)
+@@ -4,6 +4,6 @@
+              meson
+              perl)
  build() {
 -	arch-meson "$pkgname" build
 +	artix-meson "$pkgname" build

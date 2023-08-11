@@ -35,6 +35,6 @@
  pkgname=python-keyring
 -depends=('python-jaraco.classes' 'python-secretstorage' 'python-importlib-metadata')
 +depends=('python-jaraco.classes' 'python-jeepney' 'python-secretstorage' 'python-importlib-metadata')
+ makedepends=('python-build' 'python-installer' 'python-setuptools-scm' 'python-wheel')
  build() {
    cd $_name-$pkgver
-   python -m build

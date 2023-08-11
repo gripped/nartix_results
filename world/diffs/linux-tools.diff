@@ -94,7 +94,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -113,7 +113,7 @@
+@@ -114,7 +114,7 @@
  package_perf() {
    depends=('glibc' 'perl' 'python' 'slang' 'elfutils' 'libunwind' 'binutils'
             'numactl' 'audit' 'coreutils' 'glib2' 'xz' 'zlib' 'libelf' 'bash'
@@ -103,7 +103,7 @@
    cd linux/tools/perf
    make -f Makefile.perf \
      prefix=/usr \
-@@ -148,8 +148,6 @@
+@@ -149,8 +149,6 @@
      install install-man
    popd
    install -Dm 644 $pkgname.default "$pkgdir/etc/default/$pkgname"
@@ -112,7 +112,7 @@
  }
  package_x86_energy_perf_policy() {
    depends=('glibc')
-@@ -158,13 +156,12 @@
+@@ -159,13 +157,12 @@
    install -Dm 644 x86_energy_perf_policy.8 "$pkgdir/usr/share/man/man8/x86_energy_perf_policy.8"
  }
  package_usbip() {
@@ -127,7 +127,7 @@
  }
  package_tmon() {
    depends=('glibc' 'ncurses')
-@@ -186,12 +183,11 @@
+@@ -187,12 +184,11 @@
    cd linux/tools/hv
    for _p in hv_fcopy_daemon hv_kvp_daemon hv_vss_daemon; do
      install -Dm755 "$_p" "$pkgdir/usr/bin/$_p"

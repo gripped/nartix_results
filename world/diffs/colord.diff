@@ -38,13 +38,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,17 @@
+@@ -1,6 +1,6 @@
  pkgbase=colord
  pkgname=(colord colord-sane libcolord)
 -depends=(lcms2 libgusb polkit sqlite dconf dbus libgudev shared-mime-info systemd)
 +depends=(lcms2 libgusb polkit sqlite dconf dbus libgudev shared-mime-info udev)
+ makedepends=(gobject-introspection vala sane bash-completion argyllcms git meson gtk-doc
+              docbook-xsl)
  options=(!emptydirs)
- prepare() {
+@@ -8,11 +8,12 @@
    cd colord
  }
  build() {
@@ -58,7 +60,7 @@
      -D daemon_user=colord
    meson compile -C build
  }
-@@ -46,7 +47,7 @@
+@@ -48,7 +49,7 @@
  }
  package_libcolord() {
    pkgdesc+=" (client library)"

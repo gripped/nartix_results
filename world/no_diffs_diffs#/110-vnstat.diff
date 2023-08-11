@@ -37,8 +37,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=('bash' 'sqlite')
+@@ -3,7 +3,7 @@
+ makedepends=('gd')
  backup=(etc/vnstat.conf)
  build() {
 -  cd $pkgname-$pkgver

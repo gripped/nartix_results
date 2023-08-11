@@ -48,9 +48,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=python-tokenize-rt
- depends=('python')
+@@ -3,6 +3,6 @@
+ makedepends=('python-build' 'python-installer' 'python-setuptools'
+              'python-wheel')
  build() {
 -  cd "$_name"-$pkgver
 +  cd $_name-$pkgver

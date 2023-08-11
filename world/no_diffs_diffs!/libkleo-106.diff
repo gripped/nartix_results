@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=libkleo
+@@ -2,7 +2,7 @@
  depends=(qgpgme-qt5 kitemmodels kpimtextedit)
+ makedepends=(extra-cmake-modules qt5-tools boost doxygen)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

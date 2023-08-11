@@ -68,7 +68,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,8 @@
+@@ -1,20 +1,9 @@
  pkgname=mailman3-hyperkitty
 -depends=(
 -  mailman3
@@ -76,7 +76,15 @@
 -  python-requests
 -  python-zope-interface
 -)
+-makedepends=(
+-  git
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
 +depends=(mailman3 python-requests python-zope-interface)
++makedepends=(python-build python-installer python-setuptools python-wheel)
  replaces=(python-mailman-hyperkitty-plugin)
  backup=(etc/mailman-hyperkitty.cfg)
  build() {

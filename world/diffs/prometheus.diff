@@ -51,9 +51,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=prometheus
+@@ -2,7 +2,7 @@
  depends=('glibc')
+ makedepends=('go' 'git' 'npm' 'nodejs' 'yamllint' 'typescript' 'yarn')
  options=(!lto)
 -backup=('etc/prometheus/prometheus.yml' 'etc/conf.d/prometheus')
 +backup=('etc/prometheus/prometheus.yml')

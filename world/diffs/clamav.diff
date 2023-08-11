@@ -32,12 +32,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  pkgname=clamav
 -depends=('bzip2' 'libltdl' 'libxml2' 'curl' 'systemd-libs' 'pcre2' 'json-c' 'libmspack'
 -         'ncurses' libsystemd.so libncursesw.so libcurl.so libjson-c.so libbz2.so)
+-makedepends=('libmilter' 'systemd' 'cmake' 'ninja' 'python' 'cargo')
 +depends=('bzip2' 'libltdl' 'libxml2' 'curl' 'pcre2' 'json-c' 'libmspack'
 +         'ncurses' libncursesw.so libcurl.so libjson-c.so libbz2.so)
++makedepends=('libmilter' 'cmake' 'ninja' 'python' 'cargo')
  backup=('etc/clamav/clamd.conf'
          'etc/clamav/freshclam.conf'
          'etc/clamav/clamav-milter.conf'

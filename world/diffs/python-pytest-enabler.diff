@@ -30,6 +30,6 @@
  pkgname=python-pytest-enabler
 -depends=('python-jaraco.context' 'python-jaraco.functools' 'python-pytest' 'python-toml' 'python-importlib-resources')
 +depends=('python-jaraco.context' 'python-jaraco.functools' 'python-pytest' 'python-toml')
+ makedepends=('git' 'python-build' 'python-installer' 'python-setuptools-scm' 'python-wheel')
  prepare() {
    cd pytest-enabler
-   ln -s ../types-toml-0.10.1/toml-stubs .

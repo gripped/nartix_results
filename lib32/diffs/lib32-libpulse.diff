@@ -43,8 +43,8 @@
 -  lib32-systemd
    libpulse
  )
- provides=("lib32-pulseaudio=$pkgver")
-@@ -40,11 +40,13 @@
+ makedepends=(
+@@ -48,11 +48,13 @@
      -D tests=false
      -D udevrulesdir=/usr/lib/udev/rules.d
      -D webrtc-aec=disabled

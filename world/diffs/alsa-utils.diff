@@ -23,7 +23,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,6 @@
+@@ -12,7 +12,7 @@
+   libsamplerate
+   ncurses
+   python-docutils
+-  systemd
++  udev
+   xmlto
+ )
+ options=(emptydirs)
+@@ -26,7 +26,6 @@
      --disable-alsaconf
      --sbindir=/usr/bin
      --with-udev-rules-dir=/usr/lib/udev/rules.d

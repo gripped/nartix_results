@@ -14,9 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=libxrender
  depends=('libx11')
+ makedepends=('xorgproto')
  build() {
    cd libXrender-${pkgver}
    ./configure --prefix=/usr --disable-static

@@ -38,6 +38,6 @@
 +depends=(python-jsonschema python-json-logger python-traitlets python-yaml python-click python-rich
 +         python-jsonpointer python-isoduration python-rfc3986-validator python-rfc3339-validator
 +         python-fqdn python-uri-template python-webcolors)
+ makedepends=(python-build python-installer python-hatchling)
  build() {
    cd $_pipname-$pkgver
-   python -m build --wheel --no-isolation

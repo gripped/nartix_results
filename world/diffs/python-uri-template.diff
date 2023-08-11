@@ -50,9 +50,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,9 @@
- pkgname=python-uri-template
- depends=('python')
+@@ -6,8 +6,11 @@
+   'python-installer'
+   'python-wheel'
+   'python-setuptools'
+-  'python-setuptools-scm'
+ )
 +prepare() {
 +  cd "$pkgname"
 +  sed -e "s:\(version='\)0.0.0:\1$pkgver:" -i setup.py

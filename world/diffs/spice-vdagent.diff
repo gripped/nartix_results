@@ -35,10 +35,10 @@
  pkgname=spice-vdagent
 -depends=('alsa-lib' 'dbus' 'glib2' 'gtk3' 'libdrm' 'libpciaccess' 'libxfixes' 'libxinerama' 'libxrandr' 'systemd')
 +depends=('alsa-lib' 'dbus' 'glib2' 'gtk3' 'libdrm' 'libpciaccess' 'libxfixes' 'libxinerama' 'libxrandr' 'elogind')
+ makedepends=('spice-protocol' 'git')
  backup=('etc/conf.d/spice-vdagentd')
  prepare() {
-   cd $pkgname-$pkgver
-@@ -10,6 +10,6 @@
+@@ -11,6 +11,6 @@
  build() {
    cd $pkgname-$pkgver
    ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin \
