@@ -1796,7 +1796,6 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
-mitmproxy
 mjpegtools
 mktorrent
 mlt
@@ -2977,7 +2976,6 @@ python-memory-profiler
 python-merge3
 python-mimeparse
 python-minidump
-python-mistune
 python-mitmproxy-wireguard
 python-mock
 python-mongoengine
@@ -3003,7 +3001,6 @@ python-mysql-connector
 python-mysqlclient
 python-myst-parser
 python-natsort
-python-nbxmpp
 python-ndg-httpsclient
 python-nest-asyncio
 python-netaddr

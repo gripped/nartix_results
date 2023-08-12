@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=bazel
--pkgver=6.3.1
+-pkgver=6.3.2
 +pkgver=6.2.1
  pkgrel=1
  pkgdesc='Correct, reproducible, and fast builds for everyone'
@@ -12,7 +12,7 @@
  options=('!distcc' '!strip')
  source=("https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"
          "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip.sig")
--b2sums=('f5876a05dcfed8d6e86593eb73a46bc215ca49d011c4e99d4aae1e2f98c66a769807bbd216945041a60239d573f64cf5fba7e85d8b14499c53a573070a45e309'
+-b2sums=('2da884561343707ab0fa79667759fe6b30522a0aa7ea2bd12b910e066fd9ebb1a6674bc98538a48b0abead19aa22736d2c00df3d8fddcf4a8dc5421bae32a1a2'
 +b2sums=('d354e295ae9272570f9a3b561c5ff9ee423374d7d11022f834d99f52e89c593a1e5d116bacd895ef5032f0c814572988a0d680ed484a2630236c855ea19d54f0'
          'SKIP')
  validpgpkeys=('71A1D0EFCFEB6281FD0437C93D5919B448457EE0')

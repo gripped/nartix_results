@@ -404,6 +404,7 @@ libva-mesa-driver
 mesa-vdpau
 minicom
 minio
+mitmproxy
 modemmanager
 libmm-glib
 mosquitto
@@ -583,6 +584,8 @@ python-keyrings-alt
 python-lark-parser
 python-ldap
 python-mailmanclient
+python-mistune
+python-nbxmpp
 python-pathspec
 python-pycodestyle
 python-pydantic-core

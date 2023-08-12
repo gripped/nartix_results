@@ -1,22 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=python-aws-sam-translator
--pkgver=1.72.0
--pkgrel=2
+-pkgver=1.73.0
 +pkgver=1.70.0
-+pkgrel=1
+ pkgrel=1
  pkgdesc='AWS Serverless Application Model (AWS SAM) prescribes rules for expressing Serverless applications on AWS'
  arch=(any)
- url='https://github.com/aws/serverless-application-model'
 @@ -9,16 +9,12 @@
  depends=(python python-botocore python-boto3 python-jsonschema python-pydantic python-typing_extensions)
  makedepends=(python-build python-installer python-setuptools python-wheel)
  checkdepends=(python-pytest python-pytest-rerunfailures python-yaml python-parameterized)
 -source=("https://github.com/aws/serverless-application-model/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
 -        "pydantic2.diff")
--sha256sums=('fa5655a1a996128ce262044be87dc90b6326818a64870a2dfd410e87cf669379'
+-sha256sums=('b748de069f2a8a9266be28dd0e239b71b70ce4c2d3f71508e2eae8e819c60295'
 -            '42072cdbba7ff000f78effd55f97cf2768cfdd2c9bce46d0c2114cdfa222f3bb')
 +source=("https://github.com/aws/serverless-application-model/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
 +sha256sums=('5e6dd7d8b9caeef477d611fd4f7016a4dc71900598756c9068ee1ea320d5f799')
