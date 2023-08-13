@@ -48,6 +48,7 @@ openldap
 libldap
 openresolv
 openssh
+openssl-1.1
 p11-kit
 libp11-kit
 p11-kit-docs

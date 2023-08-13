@@ -148,7 +148,6 @@ npth
 nspr
 nss
 ca-certificates-mozilla
-openssl-1.1
 openssl
 patch
 pciutils

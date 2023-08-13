@@ -42,6 +42,7 @@ caja-xattr-tags
 caja-audio-video-properties
 cdparanoia
 cgmanager
+check-jsonschema
 chromium-bsu
 chrony
 clamav
@@ -138,6 +139,7 @@ libgdm
 genxrdpattern
 geoclue
 git
+gitea
 github-cli
 glslang
 glusterfs
@@ -444,6 +446,8 @@ opencc-doc
 opendht
 opendoas
 openfire
+openpmix
+openpmix-docs
 openvpn
 osinfo-db
 ostree
@@ -702,6 +706,7 @@ qt6-tools
 quazip
 quazip-qt5
 quazip-qt6
+r8168
 rabbitmq
 rabbitmqadmin
 redis

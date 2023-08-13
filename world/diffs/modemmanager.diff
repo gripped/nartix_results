@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -2,12 +2,12 @@
+ pkgbase=modemmanager
+ pkgname=(modemmanager libmm-glib)
+ pkgver=1.20.6
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Mobile broadband modem management service"
  url="https://www.freedesktop.org/wiki/Software/ModemManager/"
  arch=(x86_64)
  license=(GPL2 LGPL2.1)
@@ -9,14 +15,14 @@
           mobile-broadband-provider-info)
  makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
  checkdepends=(python-gobject python-dbus)
-@@ -32,13 +32,20 @@
+@@ -32,12 +32,20 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
 +    -D systemd_journal=false
 +    -D systemd_suspend_resume=false
 +    -D systemdsystemunitdir=no
-     -D plugin_qcom_soc=disabled
++    -D plugin_qcom_soc=disabled
      -D polkit=permissive
      -D vapi=true
    )
@@ -31,7 +37,7 @@
  }
  
  _pick() {
-@@ -52,7 +59,7 @@
+@@ -51,7 +59,7 @@
  }
  
  package_modemmanager() {
@@ -54,14 +60,14 @@
           mobile-broadband-provider-info)
  makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
  prepare() {
-@@ -13,11 +13,14 @@
+@@ -13,10 +13,14 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
 +    -D systemd_journal=false
 +    -D systemd_suspend_resume=false
 +    -D systemdsystemunitdir=no
-     -D plugin_qcom_soc=disabled
++    -D plugin_qcom_soc=disabled
      -D polkit=permissive
      -D vapi=true
    )
@@ -70,7 +76,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -30,7 +33,7 @@
+@@ -29,7 +33,7 @@
    done
  }
  package_modemmanager() {

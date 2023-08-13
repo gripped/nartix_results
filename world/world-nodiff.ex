@@ -223,7 +223,6 @@ cervisia
 cfitsio
 cgns
 chafa
-check-jsonschema
 check
 check-docs
 checkbashisms
@@ -546,7 +545,6 @@ gifski
 gimp
 girara
 git-lfs
-gitea
 gjs
 gl2ps
 glad
@@ -1963,8 +1961,6 @@ openlibm
 openmp
 openmpi
 openntpd
-openpmix
-openpmix-docs
 openrct2
 openscenegraph
 openshadinglanguage
@@ -3708,7 +3704,6 @@ quilt
 quota-tools
 qutebrowser
 r
-r8168
 radeontop
 radicale
 raft

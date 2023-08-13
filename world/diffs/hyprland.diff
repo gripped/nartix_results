@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=hyprland
+-pkgver=0.28.0
++pkgver=0.27.2
+ pkgrel=1
+ pkgdesc='a highly customizable dynamic tiling Wayland compositor'
+ arch=(x86_64 aarch64)
 @@ -27,7 +27,7 @@
           pixman
           polkit
@@ -9,6 +17,15 @@
           vulkan-icd-loader
           vulkan-validation-layers
           wayland
+@@ -49,7 +49,7 @@
+              xorgproto)
+ _archive="${pkgname^}-$pkgver"
+ source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
+-sha256sums=('baf355cb4e301b27de59fa5fc503b7338eed1bc921fcf76b73629504a00ffefd')
++sha256sums=('1cb1b345fd98e80cb04ba60c7bb42ead6b6ad79898f84b468f3ba87459d99f1f')
+ 
+ prepare() {
+ 	ln -sf hyprland-source "$_archive"
 @@ -67,7 +67,7 @@
  	ninja -C build/ install
  	popd
