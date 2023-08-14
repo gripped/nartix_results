@@ -427,6 +427,7 @@ netplan
 networkmanager
 libnm
 nm-cloud-setup
+nftables
 nsd
 nvchecker
 nvidia-open
@@ -580,6 +581,7 @@ python-editables
 python-gnupg
 python-hypothesis
 python-ipywidgets
+python-jaraco.functools
 python-josepy
 python-jupyter-events
 python-kajiki
@@ -589,6 +591,7 @@ python-lark-parser
 python-ldap
 python-mailmanclient
 python-mistune
+python-mysql-connector
 python-nbxmpp
 python-pathspec
 python-pycodestyle
@@ -840,6 +843,7 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
+webrtc-audio-processing
 weston
 wireplumber
 libwireplumber

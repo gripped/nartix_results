@@ -1877,7 +1877,6 @@ nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt
 newsboat
-nftables
 nginx
 nginx-src
 ninja
@@ -2873,7 +2872,6 @@ python-jaraco.classes
 python-jaraco.collections
 python-jaraco.context
 python-jaraco.envs
-python-jaraco.functools
 python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
@@ -2993,7 +2991,6 @@ python-munkres
 python-musicbrainzngs
 python-mutagen
 python-mypy_extensions
-python-mysql-connector
 python-mysqlclient
 python-myst-parser
 python-natsort
@@ -4442,7 +4439,6 @@ wayland
 wayland-docs
 webhook
 webp-pixbuf-loader
-webrtc-audio-processing
 weechat
 wf-recorder
 wget

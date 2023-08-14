@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=embree
 -pkgver=4.2.0
+-pkgrel=3
 +pkgver=4.1.0
- pkgrel=1
++pkgrel=1
  pkgdesc="Collection of high-performance ray tracing kernels"
  arch=('x86_64')
+ url="https://embree.github.io/"
 @@ -9,7 +9,7 @@
  depends=('gcc-libs' 'glibc' 'intel-tbb')
  makedepends=('cmake' 'ispc' 'freeglut' 'libxmu' 'ninja')
@@ -17,3 +19,11 @@
  
  build() {
      cmake \
+@@ -27,7 +27,4 @@
+ 
+ package() {
+     DESTDIR="${pkgdir}" ninja -C build install
+-
+-    mkdir "${pkgdir}"/usr/bin/
+-    mv "${pkgdir}"/usr/embree-vars.* "${pkgdir}"/usr/bin/
+ }
