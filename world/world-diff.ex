@@ -166,6 +166,7 @@ gnome-video-effects
 go-bindata
 go-tools
 gpsd
+graphicsmagick
 grim
 grpc
 python-grpcio
@@ -205,6 +206,8 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gtkmm-4.0
+gtkmm-4.0-docs
 gtkmm3
 gtkmm3-docs
 gunicorn
@@ -287,6 +290,7 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 libcanberra
+libcloudproviders
 libdaemon
 libdbusmenu
 libdbusmenu-gtk2
@@ -790,6 +794,9 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-mono
+ttf-nerd-fonts-symbols-common
 udftools
 udisks2
 umockdev

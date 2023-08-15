@@ -644,7 +644,6 @@ grantlee-editor
 grantlee
 grantleetheme
 graphene
-graphicsmagick
 graphite
 graphite-docs
 graphviz
@@ -674,8 +673,6 @@ gtk-sharp-2
 gtk-vnc
 gtk2-compat
 gtk2
-gtkmm-4.0
-gtkmm-4.0-docs
 gtkmm
 gtkmm-docs
 gtksourceview3
@@ -1187,7 +1184,6 @@ libcgif
 libchamplain
 libchewing
 libclc
-libcloudproviders
 libcmis
 libconfig
 libcroco
@@ -4343,9 +4339,6 @@ ttf-hack
 ttf-inconsolata
 ttf-indic-otf
 ttf-liberation
-ttf-nerd-fonts-symbols
-ttf-nerd-fonts-symbols-mono
-ttf-nerd-fonts-symbols-common
 ttf-opensans
 ttf-roboto-mono
 ttf-roboto

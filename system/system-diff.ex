@@ -20,6 +20,8 @@ glibc
 lib32-glibc
 gssproxy
 iputils
+libsecret
+libsecret-docs
 libusb
 linux-firmware
 linux-firmware-whence

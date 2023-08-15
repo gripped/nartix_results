@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -6,8 +6,8 @@
    gtk4-docs
    gtk-update-icon-cache
  )
--pkgver=4.10.5
+-pkgver=4.12.0
+-pkgrel=2
 +pkgver=4.10.4
- pkgrel=1
++pkgrel=1
  epoch=1
  pkgdesc="GObject-based multi-platform GUI toolkit"
+ url="https://www.gtk.org/"
 @@ -49,7 +49,6 @@
    libxrender
    pango
@@ -17,19 +19,41 @@
    wayland
  )
  makedepends=(
-@@ -65,7 +64,8 @@
+@@ -64,16 +63,9 @@
+   shaderc
    wayland-protocols
  )
- checkdepends=(weston)
--_commit=f5516845d451ddc1286d6c9c0d7a5a8ce1dd8bc3  # tags/4.10.5^0
+-checkdepends=(
+-  gst-plugin-pipewire
+-  gst-plugins-base
+-  mutter
+-  pipewire
+-  python-pydbus
+-  weston
+-  wireplumber
+-)
+-_commit=fef69881a7bac60b6a89c8b5cd9fd0f36372ee21  # tags/4.12.0^0
++checkdepends=(weston)
 +options=(debug)
 +_commit=55bc7808cc7796b06c27b1e64f608cd83b9b18ec  # tags/4.10.4^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/gtk.git#commit=$_commit"
    gtk-update-icon-cache.{hook,script}
-@@ -93,11 +93,10 @@
+@@ -92,8 +84,6 @@
+ 
+ prepare() {
+   cd gtk
+-
+-  git cherry-pick -n 4d7277f72c8f4915f237e36982ffd7dfba524b15
+ }
+ 
+ build() {
+@@ -101,13 +91,12 @@
+     -D broadway-backend=true
+     -D cloudproviders=enabled
      -D colord=enabled
-     -D gtk_doc=true
+-    -D documentation=true
++    -D gtk_doc=true
      -D man-pages=true
 -    -D tracker=enabled
    )
@@ -54,16 +78,21 @@
    wayland
  )
  makedepends=(
-@@ -56,6 +55,7 @@
+@@ -56,21 +55,20 @@
    shaderc
    wayland-protocols
  )
  prepare() {
    cd gtk
+-  git cherry-pick -n 4d7277f72c8f4915f237e36982ffd7dfba524b15
  }
-@@ -66,10 +66,9 @@
+ build() {
+   local meson_options=(
+     -D broadway-backend=true
+     -D cloudproviders=enabled
      -D colord=enabled
-     -D gtk_doc=true
+-    -D documentation=true
++    -D gtk_doc=true
      -D man-pages=true
 -    -D tracker=enabled
    )
