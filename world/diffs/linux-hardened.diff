@@ -3,22 +3,30 @@
 @@ -1,6 +1,6 @@
  
  pkgbase=linux-hardened
--pkgver=6.4.9.hardened1
+-pkgver=6.4.10.hardened1
 +pkgver=6.4.4.hardened1
  pkgrel=1
  pkgdesc='Security-Hardened Linux'
  url='https://github.com/anthraxx/linux-hardened'
-@@ -35,13 +35,13 @@
+@@ -14,7 +14,6 @@
+   libelf
+   pahole
+   perl
+-  python
+   tar
+   xz
+ 
+@@ -36,13 +35,13 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
--b2sums=('87a05cae7d5dca89921801f69467ec01a871941f5dd1bd956bc9f13c4786b35a141811808b36e45471ee3bbe15d669d7114257759f3e5893d17ca38e40ebdc4b'
+-b2sums=('700017448073f63880739efed3f60baba18116500737419e305b2b5e0d2532e2d40a41368c773772cba437236bc1edda85c8f16ca23a945c754e283a30184a6d'
 +b2sums=('1ab6c93da986dac6a07a5e3bc764f9d2a5bb9b8989321244455d894690634ac04364e6a3f960e8674f47ae22fc4ed09b18aa60cbf279636083e61aa6524f8a59'
          'SKIP'
--        '14c6b8b16294aa9ed401f8aab2b9e219ba6071b35a57abdd45b20dce983b8dd40b90900b096d774ee44b63d77168f5087beb0c1f1ca6ce1400e1c891f80e2173'
+-        '566ce03d0b86c1d8e819d7e4a0e0aef889f4046c25d63aebeb891bc66efb41ccd7d6300d864727434df556eddc37394c50996558fc6875d9cfcc982340cb1760'
 +        'f67b0f6c4eca304f28cd01412d6a56f97fa9e495d5b368e105f22e56e6ea3228466770121555a571955b044dd7dad4e84d012c39327bd1389bdd7b63bb5fd47b'
          'SKIP'
--        'e0ebaa5bb3e325cb968bf2243b6bf91fb6582bc05770350204af20ad5dc9cb7c52b25d88de9f8845521d801cb19d05f9d321ea5f6b3f7e7129c35a209b2e5e48')
+-        'eb5d106d6564c70170916c00bd5333a4fc624c426fc4ae3374fe9de55a93b3a0c28d7f9fd7a26d2280137f0e466565e7591062d86f6e4781f2ffd2c39bc431e4')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        '53528e2600f3be7689cdd91749f7147c612c5a384eee0d4a3f91ddec98eae3cd0de01f1227ddb18c758fd154c74647fe618d129596f4c41e50b00e663b02c475')
@@ -27,7 +35,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -72,12 +72,8 @@
+@@ -73,12 +72,8 @@
  
  build() {
    cd $_srcname
@@ -47,7 +55,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -7,7 +7,6 @@
+   libelf
+   pahole
+   perl
+-  python
+   tar
+   xz
+   graphviz
+@@ -18,7 +17,7 @@
  options=('!strip')
  _srcname=linux-${pkgver%.*}
  _srctag=${pkgver%.*}-${pkgver##*.}
@@ -56,7 +72,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-@@ -42,10 +42,8 @@
+@@ -43,10 +42,8 @@
  }
  build() {
    cd $_srcname

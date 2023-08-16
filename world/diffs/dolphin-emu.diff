@@ -3,49 +3,57 @@
 @@ -1,7 +1,7 @@
  
  pkgname=dolphin-emu
- pkgver=5.0.r19433.34527cadcc
--pkgrel=5
+-pkgver=5.0.r19870.032c77b462
+-pkgrel=1
++pkgver=5.0.r19433.34527cadcc
 +pkgrel=4
  epoch=1
  pkgdesc='A Gamecube / Wii / Triforce emulator'
  arch=(x86_64)
-@@ -58,7 +58,6 @@
-   git+https://github.com/KhronosGroup/SPIRV-Cross.git
-   git+https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
-   git+https://github.com/zlib-ng/zlib-ng.git
--  fmt-10.patch
+@@ -19,6 +19,7 @@
+   libavutil.so
+   libcurl.so
+   libevdev
++  libfmt.so
+   libgl
+   libminiupnpc.so
+   libpulse
+@@ -34,7 +35,6 @@
+   minizip-ng
+   pugixml
+   qt6-base
+-  qt6-svg
+   sfml
+   zlib
  )
- b2sums=('SKIP'
-         'SKIP'
-@@ -69,8 +68,7 @@
-         'SKIP'
-         'SKIP'
-         'SKIP'
--        'SKIP'
--        '83aa91ed5a78ed4e661ce20f9ae5a28ea7c1c7f63c999ac8f6c23f5e8518cadaec44b3fa6e7deb557cbe8ea4aaab11fec8da751f0c669139af618b78c137287b')
-+        'SKIP')
- 
- prepare() {
-   cd dolphin-emu
-@@ -79,7 +77,6 @@
-     git config submodule.${submodule}.url ../${submodule##*/}
-     git -c protocol.file.allow=always submodule update ${submodule}
-   done
--  patch -p1 -i ../fmt-10.patch # Fix build with fmt 10
-   cd Externals/cubeb/cubeb
-   git submodule init cmake/sanitizers-cmake
-   git config submodule.cmake/sanitizers-cmake.url "${srcdir}"/sanitizers-cmake
+@@ -46,7 +46,7 @@
+ )
+ optdepends=('pulseaudio: PulseAudio backend')
+ options=(!emptydirs)
+-_commit=032c77b462a220016f23c5079e71bb23e0ad2adf
++_commit=34527cadcce49a9a78f05949973b0930ac4dd999
+ source=(
+   dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#commit=${_commit}
+   git+https://github.com/mozilla/cubeb.git
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -44,7 +44,6 @@
-     git config submodule.${submodule}.url ../${submodule##*/}
-     git -c protocol.file.allow=always submodule update ${submodule}
-   done
--  patch -p1 -i ../fmt-10.patch # Fix build with fmt 10
-   cd Externals/cubeb/cubeb
-   git submodule init cmake/sanitizers-cmake
-   git config submodule.cmake/sanitizers-cmake.url "${srcdir}"/sanitizers-cmake
+@@ -11,6 +11,7 @@
+   libavutil.so
+   libcurl.so
+   libevdev
++  libfmt.so
+   libgl
+   libminiupnpc.so
+   libpulse
+@@ -26,7 +27,6 @@
+   minizip-ng
+   pugixml
+   qt6-base
+-  qt6-svg
+   sfml
+   zlib
+ )

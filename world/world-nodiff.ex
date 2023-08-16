@@ -470,7 +470,6 @@ flickcurl
 flite
 fltk
 fltk-docs
-fmt
 font-awesome
 ttf-font-awesome
 otf-font-awesome
@@ -562,7 +561,6 @@ glibmm
 glibmm-docs
 glm
 glpk
-glu
 gmic
 gimp-plugin-gmic
 gmime3
@@ -1756,7 +1754,6 @@ maven
 mbedtls
 mbedtls2
 mbox-importer
-mc
 mcpp
 md4c
 mediainfo
@@ -2455,7 +2452,6 @@ python-acme
 python-adblock
 python-aiobotocore
 python-aiodns
-python-aiofiles
 python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
@@ -3638,7 +3634,6 @@ qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
 qt5-webchannel
-qt5-webengine
 qt5-webglplugin
 qt5-websockets
 qt5-webview
@@ -3678,7 +3673,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -3711,7 +3705,6 @@ rav1e
 rawtherapee
 razor
 rclone
-re2
 re2c
 rebar
 recode

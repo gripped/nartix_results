@@ -18,6 +18,7 @@ libelf
 fakeroot
 glibc
 lib32-glibc
+gnutls
 gssproxy
 iputils
 libsecret

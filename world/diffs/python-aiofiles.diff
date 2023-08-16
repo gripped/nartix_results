@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-aiofiles
+-pkgver=23.2.1
+-pkgrel=1
++pkgver=23.1.0
++pkgrel=2
+ pkgdesc='File support for asyncio'
+ arch=(any)
+ license=(APACHE)
+@@ -10,14 +10,14 @@
+ makedepends=(
+   git
+   python-build
+-  python-hatchling
+   python-installer
++  python-poetry-core
+ )
+ checkdepends=(
+   python-pytest-asyncio
+   python-pytest
+ )
+-_tag=c35ef69768aed5a1a900164f80761a288836b015
++_tag=5cb9b6d3d51e0d9f8170cab06db8ae7f5792d8ff
+ source=(git+https://github.com/Tinche/aiofiles.git#tag=${_tag})
+ sha256sums=(SKIP)
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,8 +3,8 @@
+ makedepends=(
+   git
+   python-build
+-  python-hatchling
+   python-installer
++  python-poetry-core
+ )
+ build() {
+   cd aiofiles

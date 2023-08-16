@@ -122,6 +122,7 @@ python-flatbuffers
 flatpak
 flatpak-docs
 fluidsynth
+fmt
 folks
 fprintd
 freerdp
@@ -142,6 +143,7 @@ git
 gitea
 github-cli
 glslang
+glu
 glusterfs
 gnome-bluetooth-3.0
 gnome-builder
@@ -396,6 +398,7 @@ mate-session-manager
 mate-system-monitor
 mate-user-share
 matrix-synapse
+mc
 media-player-info
 memcached
 mesa
@@ -564,6 +567,7 @@ pyqt6
 pyside6
 shiboken6
 pyside6-tools
+python-aiofiles
 python-aiosqlite
 python-authheaders
 python-aws-sam-translator
@@ -705,17 +709,20 @@ qhull
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
+qt5-webengine
 qt6-base
 qt6-doc
 qt6-examples
 qt6-location
 qt6-tools
+qt6-webengine
 quazip
 quazip-qt5
 quazip-qt6
 r8168
 rabbitmq
 rabbitmqadmin
+re2
 redis
 redshift
 refind
