@@ -507,7 +507,6 @@ galculator
 garcon
 gavl
 gcab
-gcc12
 gd
 gdal
 python-gdal
@@ -2945,7 +2944,6 @@ python-magic
 python-mako
 python-mamba
 python-manuel
-python-markdown-it-py
 python-markdown
 python-markupsafe
 python-marshmallow
@@ -2984,7 +2982,6 @@ python-musicbrainzngs
 python-mutagen
 python-mypy_extensions
 python-mysqlclient
-python-myst-parser
 python-natsort
 python-ndg-httpsclient
 python-nest-asyncio
@@ -3237,7 +3234,6 @@ python-pytest-mpi
 python-pytest-mypy
 python-pytest-ordering
 python-pytest-pacman
-python-pytest-param-files
 python-pytest-plugins
 python-pytest-fixture-config
 python-pytest-shutil
@@ -3440,7 +3436,6 @@ python-tblib
 python-teamcity-messages
 python-tempita
 python-tempora
-python-tenacity
 python-termcolor
 python-terminado
 python-termstyle
@@ -3988,7 +3983,6 @@ sddm-kcm
 sdl12-compat
 sdl2
 sdl2_image
-sdl2_mixer
 sdl2_ttf
 sdl_image
 sdl_mixer

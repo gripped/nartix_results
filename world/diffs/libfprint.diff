@@ -1,24 +1,56 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,11 +6,12 @@
+@@ -1,35 +1,20 @@
+ 
+ pkgname=libfprint
+ pkgver=1.94.5
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Library for fingerprint readers"
  url="https://fprint.freedesktop.org/"
  arch=(x86_64)
  license=(LGPL)
--depends=(libgusb pixman nss systemd libgudev)
+-depends=(
+-  libgudev
+-  libgusb
+-  nss
+-  pixman
+-  systemd
+-)
+-makedepends=(
+-  git
+-  gobject-introspection
+-  gtk-doc
+-  meson
+-  python-cairo
+-  python-gobject
+-)
+-checkdepends=(
+-  cairo
+-  umockdev
+-)
 +depends=(libgusb pixman nss udev libgudev)
- makedepends=(git meson gtk-doc gobject-introspection)
- checkdepends=(cairo)
++makedepends=(git meson gtk-doc gobject-introspection)
++checkdepends=(cairo)
  provides=(libfprint-2.so)
  groups=(fprint)
 +options=(debug)
  _commit=86961a9429d589c387da37351fd6b4ff3caf67ea  # tags/v1.94.5^0
  source=("git+https://gitlab.freedesktop.org/libfprint/libfprint.git#commit=$_commit")
- sha256sums=('SKIP')
-@@ -25,7 +26,7 @@
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgname
+@@ -41,11 +26,7 @@
  }
  
  build() {
--  arch-meson $pkgname build
+-  local meson_options=(
+-    -D drivers=all
+-  )
+-
+-  arch-meson $pkgname build "${meson_options[@]}"
 +  artix-meson $pkgname build
    meson compile -C build
  }
@@ -29,18 +61,35 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
+@@ -1,28 +1,13 @@
  pkgname=libfprint
--depends=(libgusb pixman nss systemd libgudev)
+-depends=(
+-  libgudev
+-  libgusb
+-  nss
+-  pixman
+-  systemd
+-)
+-makedepends=(
+-  git
+-  gobject-introspection
+-  gtk-doc
+-  meson
+-  python-cairo
+-  python-gobject
+-)
 +depends=(libgusb pixman nss udev libgudev)
- makedepends=(git meson gtk-doc gobject-introspection)
++makedepends=(git meson gtk-doc gobject-introspection)
  provides=(libfprint-2.so)
  groups=(fprint)
  prepare() {
    cd $pkgname
  }
  build() {
--  arch-meson $pkgname build
+-  local meson_options=(
+-    -D drivers=all
+-  )
+-  arch-meson $pkgname build "${meson_options[@]}"
 +  artix-meson $pkgname build
    meson compile -C build
  }

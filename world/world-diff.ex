@@ -131,6 +131,7 @@ fwupd-efi
 fwupd
 gamemode
 gamescope
+gcc12
 gcr-4
 gcr-4-docs
 gcr
@@ -598,8 +599,10 @@ python-keyrings-alt
 python-lark-parser
 python-ldap
 python-mailmanclient
+python-markdown-it-py
 python-mistune
 python-mysql-connector
+python-myst-parser
 python-nbxmpp
 python-pathspec
 python-pycodestyle
@@ -610,6 +613,7 @@ python-pymupdf
 python-pyproj
 python-pytest-benchmark
 python-pytest-enabler
+python-pytest-param-files
 python-pyudev
 python-rapidfuzz
 python-requests-mock
@@ -621,6 +625,7 @@ python-sphinxcontrib-htmlhelp
 python-sphinxcontrib-qthelp
 python-sphinxcontrib-serializinghtml
 python-spsdk
+python-tenacity
 python-tpm2-pytss
 python-uri-template
 python-virtualenv
@@ -755,6 +760,7 @@ sane
 scons
 sdcv
 sddm
+sdl2_mixer
 seatd
 sfml
 shairport-sync
