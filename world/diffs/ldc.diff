@@ -1,35 +1,79 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
+@@ -1,17 +1,17 @@
  
  pkgname=('ldc' 'liblphobos')
  groups=('dlang' 'dlang-ldc')
 -pkgver=1.33.0
 -_pkgcommit=94edb02a3aff4e8dc64814c20ef325f367672f78
 -_dversion=2.103.1
+-_clangversion=14.0.6 # related to where ldc2 looks for compiler-rt sanitizers
 +pkgver=1.32.2
 +_pkgcommit=e01006ceb2ef82b12c75fe823479e88c414b9218
 +_dversion=2.102.2
- _clangversion=15.0.7 # related to where ldc2 looks for compiler-rt sanitizers
++_clangversion=15.0.7 # related to where ldc2 looks for compiler-rt sanitizers
  epoch=3
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="A D Compiler based on the LLVM Compiler Infrastructure including D runtime and libphobos2"
  arch=('x86_64')
  url="https://github.com/ldc-developers/ldc"
+ license=('BSD')
+-makedepends=('git' 'cmake' 'llvm14' 'ldc' 'ninja')
++makedepends=('git' 'cmake' 'llvm' 'ldc' 'ninja')
+ options=(!lto)
+ 
+ source=(
+@@ -47,7 +47,7 @@
+     -DLDC_WITH_LLD=OFF \
+     -DD_COMPILER_FLAGS="-link-defaultlib-shared=false -linker=gold --flto=thin" \
+     -DADDITIONAL_DEFAULT_LDC_SWITCHES="\"-link-defaultlib-shared\"" \
+-    -DCMAKE_PREFIX_PATH=/usr/lib/llvm14 \
++    -DCMAKE_PREFIX_PATH=/usr/lib/llvm \
+     ..
+     ninja
+ }
+@@ -58,7 +58,7 @@
+ }
+ 
+ package_ldc() {
+-    depends=('liblphobos' 'llvm14-libs' 'gcc' 'compiler-rt14')
++    depends=('liblphobos' 'llvm-libs' 'gcc' 'compiler-rt')
+     backup=('etc/ldc2.conf')
+     provides=("d-compiler=$_dversion")
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,9 +1,9 @@
  pkgname=('ldc' 'liblphobos')
  groups=('dlang' 'dlang-ldc')
 -_pkgcommit=94edb02a3aff4e8dc64814c20ef325f367672f78
 -_dversion=2.103.1
+-_clangversion=14.0.6 # related to where ldc2 looks for compiler-rt sanitizers
+-makedepends=('git' 'cmake' 'llvm14' 'ldc' 'ninja')
 +_pkgcommit=e01006ceb2ef82b12c75fe823479e88c414b9218
 +_dversion=2.102.2
- _clangversion=15.0.7 # related to where ldc2 looks for compiler-rt sanitizers
- makedepends=('git' 'cmake' 'llvm' 'ldc' 'ninja')
++_clangversion=15.0.7 # related to where ldc2 looks for compiler-rt sanitizers
++makedepends=('git' 'cmake' 'llvm' 'ldc' 'ninja')
  options=(!lto)
+ prepare() {
+     cd "$srcdir/ldc"
+@@ -25,12 +25,12 @@
+     -DLDC_WITH_LLD=OFF \
+     -DD_COMPILER_FLAGS="-link-defaultlib-shared=false -linker=gold --flto=thin" \
+     -DADDITIONAL_DEFAULT_LDC_SWITCHES="\"-link-defaultlib-shared\"" \
+-    -DCMAKE_PREFIX_PATH=/usr/lib/llvm14 \
++    -DCMAKE_PREFIX_PATH=/usr/lib/llvm \
+     ..
+     ninja
+ }
+ package_ldc() {
+-    depends=('liblphobos' 'llvm14-libs' 'gcc' 'compiler-rt14')
++    depends=('liblphobos' 'llvm-libs' 'gcc' 'compiler-rt')
+     backup=('etc/ldc2.conf')
+     provides=("d-compiler=$_dversion")
+     cd "$srcdir/ldc/build"

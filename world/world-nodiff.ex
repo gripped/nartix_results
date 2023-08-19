@@ -532,8 +532,6 @@ geoip
 geos
 getdns
 gflags
-ghex
-ghex-docs
 ghostscript
 ghostxps
 ghostpcl
@@ -3684,7 +3682,6 @@ qtxdg-tools
 quadrapassel
 quilt
 quota-tools
-qutebrowser
 r
 radeontop
 radicale
@@ -4382,6 +4379,9 @@ vice
 vid.stab
 viewnior
 vigra
+vim
+gvim
+vim-runtime
 vimiv
 virglrenderer
 virt-manager
@@ -4466,7 +4466,6 @@ xcursor-vanilla-dmz-aa
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
 xdg-user-dirs-gtk
-xdg-utils
 xdotool
 xdp-tools
 libxdp

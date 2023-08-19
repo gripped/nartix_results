@@ -140,6 +140,8 @@ gdm
 libgdm
 genxrdpattern
 geoclue
+ghex
+ghex-docs
 git
 gitea
 github-cli
@@ -724,6 +726,7 @@ qt6-webengine
 quazip
 quazip-qt5
 quazip-qt6
+qutebrowser
 r8168
 rabbitmq
 rabbitmqadmin
@@ -836,9 +839,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 verdict
-vim
-gvim
-vim-runtime
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms
@@ -881,6 +881,7 @@ xdg-desktop-portal-xapp
 xdg-desktop-portal
 xdg-user-dirs
 xdg-utils-cxx
+xdg-utils
 xf86-input-evdev
 xf86-input-vmmouse
 xf86-input-wacom

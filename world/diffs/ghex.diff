@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   ghex
+   ghex-docs
+ )
+-pkgver=44.2
++pkgver=44.1
+ pkgrel=1
+ pkgdesc="A simple binary editor for the Gnome desktop"
+ url="https://wiki.gnome.org/Apps/Ghex"
+@@ -18,7 +18,8 @@
+   meson
+   yelp-tools
+ )
+-_commit=9a7a8b3cad007057fd95944a64b461a4826247e1  # tags/44.2^0
++_commit=128561d95b1d5088a27d5ad4ebe7bab265437d7a  # tags/44.1^0
++options=(debug)
+ source=("git+https://gitlab.gnome.org/GNOME/ghex.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -32,11 +33,7 @@
+ }
+ 
+ build() {
+-  local meson_options=(
+-    -D gtk_doc=true
+-  )
+-
+-  arch-meson ghex build "${meson_options[@]}"
++  artix-meson ghex build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,14 +11,12 @@
+   meson
+   yelp-tools
+ )
+ prepare() {
+   cd ghex
+ }
+ build() {
+-  local meson_options=(
+-    -D gtk_doc=true
+-  )
+-  arch-meson ghex build "${meson_options[@]}"
++  artix-meson ghex build -D gtk_doc=true
+   meson compile -C build
+ }
+ package_ghex-docs() {

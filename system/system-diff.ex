@@ -64,6 +64,7 @@ procps-ng
 rpcbind
 sudo
 syslinux
+unixodbc
 usbutils
 util-linux
 util-linux-libs

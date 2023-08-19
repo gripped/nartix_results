@@ -176,7 +176,6 @@ thin-provisioning-tools
 tpm2-tss
 traceroute
 tzdata
-unixodbc
 vi
 which
 wireless-regdb

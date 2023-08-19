@@ -1,15 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,21 +2,20 @@
+@@ -2,22 +2,20 @@
  
  pkgbase=glibc
  pkgname=(glibc lib32-glibc)
 -pkgver=2.38
--_commit=36f2487f13e3540be9ee0fb51876b1da72176d3f
--pkgrel=2
+-_commit=6b99458d197ab779ebb6ff632c168e2cbfa4f543
 +pkgver=2.37
 +_commit=7c32cb7dd88cf100b0b412163896e30aa2ee671a
-+pkgrel=3
+ pkgrel=3
  arch=(x86_64)
  url='https://www.gnu.org/software/libc'
  license=(GPL LGPL)
@@ -22,30 +21,33 @@
          lib32-glibc.conf
          sdt.h sdt-config.h
          reenable_DT_HASH.patch
--        PATCH-nscd-Do-not-rebuild-getaddrinfo-bug-30709.patch
+-        fix-malloc-p1.patch
+-        fix-malloc-p2.patch
  )
  validpgpkeys=(7273542B39962DF7B299931416792B4EA25340F8 # Carlos O'Donell
                BC7C7372637EC10C57D7AA6579C43DFBF1CF2187) # Siddhesh Poyarekar
-@@ -26,8 +25,7 @@
+@@ -27,9 +25,7 @@
          '7c265e6d36a5c0dff127093580827d15519b6c7205c2e1300e82f0fb5b9dd00b6accb40c56581f18179c4fbbc95bd2bf1b900ace867a83accde0969f7b609f8a'
          'a6a5e2f2a627cc0d13d11a82458cfd0aa75ec1c5a3c7647e5d5a3bb1d4c0770887a3909bfda1236803d5bc9801bfd6251e13483e9adf797e4725332cd0d91a0e'
          '214e995e84b342fe7b2a7704ce011b7c7fc74c2971f98eeb3b4e677b99c860addc0a7d91b8dc0f0b8be7537782ee331999e02ba48f4ccc1c331b60f27d715678'
 -        '35e03ed912e1b0cd23783ab83ce919412885c141344905b8b67bbad4a86c48cf3e893806060e48d5737514ff80cea0b58b0e1f15707c32224579c416dcd810c0'
--        '2a83dad4bcca543a5a85e91ebbe2bbccb4f863044d9e6e65806be0ea43ba70dd4e1e76e1548f9d189e996d4fcda0afc75efebdc9431fe10f2b66d3d2e878615b')
+-        '28c983bcebc0eeeb37a60756ccee50d587a99d5e2100430d5c0ee51a19d9b2176a4013574a7d72b5857302fbb60d371bbf0b3cdb4fc700a1dbe3aae4a42b04b9'
+-        'c3e94f5b0999878ff472e32f49dc13c20eb9db68c633017cb7824617eb824cf6cff7ea53b92962926e0ee84fd39736616298dcb926356625dd124f3754e79932')
 +        '5fdd133c367af2f5454ea1eea7907de12166fb95eb59dbe33eae16aa9e26209b6585972bc1c80e36a0af4bfb04296acaf940ee78cd624cdcbab9669dff46c051')
  
  prepare() {
    mkdir -p glibc-build lib32-glibc-build
-@@ -36,8 +34,6 @@
+@@ -38,9 +34,6 @@
    cd glibc
  
    patch -Np1 -i "${srcdir}"/reenable_DT_HASH.patch
 -
--  patch -Np1 < ../PATCH-nscd-Do-not-rebuild-getaddrinfo-bug-30709.patch
+-  patch -Np1 -i "${srcdir}"/fix-malloc-p1.patch
+-  patch -Np1 -i "${srcdir}"/fix-malloc-p2.patch
  }
  
  build() {
-@@ -47,11 +43,11 @@
+@@ -50,11 +43,11 @@
        --with-bugurl=https://bugs.archlinux.org/
        --enable-bind-now
        --enable-cet
@@ -58,7 +60,7 @@
        --disable-profile
        --disable-werror
    )
-@@ -63,12 +59,18 @@
+@@ -66,12 +59,18 @@
    echo "sbindir=/usr/bin" >> configparms
    echo "rootsbindir=/usr/bin" >> configparms
  
@@ -77,7 +79,7 @@
    make -O
  
    make info
-@@ -88,6 +90,11 @@
+@@ -91,6 +90,11 @@
        --libexecdir=/usr/lib32 \
        "${_configure_flags[@]}"
  
@@ -89,7 +91,7 @@
    make -O
  
    elf/ld.so --library-path "$PWD" locale/localedef -c -f ../glibc/localedata/charmaps/UTF-8 -i ../glibc/localedata/locales/C ../C.UTF-8/
-@@ -96,7 +103,7 @@
+@@ -99,7 +103,7 @@
  skip_test() {
    test=${1}
    file=${2}
@@ -98,7 +100,7 @@
  }
  
  check() {
-@@ -114,7 +121,9 @@
+@@ -117,7 +121,9 @@
    skip_test tst-ntp_gettimex        sysdeps/unix/sysv/linux/Makefile
    skip_test tst-pkey                sysdeps/unix/sysv/linux/Makefile
    skip_test tst-process_mrelease    sysdeps/unix/sysv/linux/Makefile
@@ -108,7 +110,7 @@
  
    make -O check
  }
-@@ -136,9 +145,8 @@
+@@ -139,9 +145,8 @@
  
    cd glibc
  
@@ -125,7 +127,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,12 @@
+@@ -1,14 +1,12 @@
  pkgbase=glibc
  pkgname=(glibc lib32-glibc)
  makedepends=(git gd lib32-gcc-libs python)
@@ -136,11 +138,12 @@
    [[ -d glibc-$pkgver ]] && ln -s glibc-$pkgver glibc
    cd glibc
    patch -Np1 -i "${srcdir}"/reenable_DT_HASH.patch
--  patch -Np1 < ../PATCH-nscd-Do-not-rebuild-getaddrinfo-bug-30709.patch
+-  patch -Np1 -i "${srcdir}"/fix-malloc-p1.patch
+-  patch -Np1 -i "${srcdir}"/fix-malloc-p2.patch
  }
  build() {
    local _configure_flags=(
-@@ -16,11 +15,11 @@
+@@ -17,11 +15,11 @@
        --with-bug
        --enable-bind-now
        --enable-cet
@@ -153,7 +156,7 @@
        --disable-profile
        --disable-werror
    )
-@@ -29,10 +28,15 @@
+@@ -30,10 +28,15 @@
    echo "rtlddir=/usr/lib" >> configparms
    echo "sbindir=/usr/bin" >> configparms
    echo "rootsbindir=/usr/bin" >> configparms
@@ -169,7 +172,7 @@
    make -O
    make info
    cd "${srcdir}"/lib32-glibc-build
-@@ -47,13 +51,17 @@
+@@ -48,13 +51,17 @@
        --libdir=/usr/lib32 \
        --libexecdir=/usr/lib32 \
        "${_configure_flags[@]}"
@@ -188,7 +191,7 @@
  }
  package_glibc() {
    depends=('linux-api-headers>=4.10' tzdata filesystem)
-@@ -65,9 +73,8 @@
+@@ -66,9 +73,8 @@
    rm -f "${pkgdir}"/etc/ld.so.cache
    rm -f "${pkgdir}"/usr/bin/{tzselect,zdump,zic}
    cd glibc
