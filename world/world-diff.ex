@@ -414,6 +414,10 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+mgba
+libmgba
+mgba-sdl
+mgba-qt
 minicom
 minio
 mitmproxy
@@ -629,6 +633,7 @@ python-sphinxcontrib-serializinghtml
 python-spsdk
 python-tenacity
 python-tpm2-pytss
+python-tqdm
 python-uri-template
 python-virtualenv
 python-wxpython

@@ -1770,10 +1770,6 @@ meson
 messagelib
 metalog
 mgard
-mgba
-libmgba
-mgba-sdl
-mgba-qt
 micro
 microsoft-gsl
 milou
@@ -3461,7 +3457,6 @@ python-toposort
 python-tornado
 python-tox-current-env
 python-tox
-python-tqdm
 python-trailrunner
 python-traitlets
 python-transaction

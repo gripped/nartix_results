@@ -3,9 +3,19 @@
 @@ -1,7 +1,7 @@
  
  pkgname=keepassxc
- pkgver=2.7.5
--pkgrel=2
+-pkgver=2.7.6
+-pkgrel=1
++pkgver=2.7.5
 +pkgrel=2.1
  pkgdesc="Cross-platform community-driven port of Keepass password manager"
  arch=(x86_64)
  url="https://keepassxc.org/"
+@@ -14,7 +14,7 @@
+ checkdepends=(xclip xorg-server-xvfb)
+ provides=(org.freedesktop.secrets)
+ source=(https://github.com/keepassxreboot/keepassxc/releases/download/$pkgver/keepassxc-$pkgver-src.tar.xz{,.sig})
+-sha256sums=('a58074509fa8e90f152c6247f73e75e126303081f55eedb4ea0cbb6fa980d670'
++sha256sums=('ede24800901816c49569aa4f8bc7180a40cb8b554617fa2a2a2653caac13000c'
+             'SKIP')
+ validpgpkeys=(BF5A669F2272CF4324C1FDA8CFB4C2166397D0D2
+               71D4673D73C7F83C17DAE6A2D8538E98A26FD9C4

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,12 @@
+ pkgbase=mgba
+ pkgname=('libmgba' 'mgba-sdl' 'mgba-qt')
+ pkgver=0.10.2
+-pkgrel=2
++pkgrel=1
+ arch=('x86_64')
+ url='http://mgba.io'
+ license=('custom:MPL2')
+ makedepends=('cmake' 'qt5-multimedia' 'sdl2' 'zlib' 'libpng' 'libzip' 'libedit'
+-             'ffmpeg' 'desktop-file-utils' 'qt5-tools' 'lua')
+-optdepends=('lua: scripting support')
++             'ffmpeg' 'desktop-file-utils' 'qt5-tools')
+ source=($pkgbase-$pkgver.tar.gz::https://github.com/mgba-emu/mgba/archive/$pkgver.tar.gz)
+ sha256sums=('60afef8fb79ba1f7be565b737bae73c6604a790391c737f291482a7422d675ae')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgbase=mgba
+ pkgname=('libmgba' 'mgba-sdl' 'mgba-qt')
+ makedepends=('cmake' 'qt5-multimedia' 'sdl2' 'zlib' 'libpng' 'libzip' 'libedit'
+-             'ffmpeg' 'desktop-file-utils' 'qt5-tools' 'lua')
++             'ffmpeg' 'desktop-file-utils' 'qt5-tools')
+ build() {
+   cmake -B build -S mgba-$pkgver \
+     -DCMAKE_BUILD_TYPE=None \

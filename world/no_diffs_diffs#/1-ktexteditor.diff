@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ktexteditor
+-pkgver=5.109.0
++pkgver=5.108.0
+ pkgrel=1
+ pkgdesc='Advanced embeddable text editor'
+ arch=(x86_64)
+@@ -11,7 +11,7 @@
+ optdepends=('git: git integration')
+ groups=(kf5)
+ source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('dca1bc529e7156ebb1c4ce2361adbced3f8e2619fd720fda9f0421b57992f2ad'
++sha256sums=('2e5691b074f59390e5ce71cacba7e06693a681e4f991c7d4b6defde3134c5f65'
+             'SKIP')
+ validpgpkeys=(53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB) # David Faure <faure@kde.org>
+ 
