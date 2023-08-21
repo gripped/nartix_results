@@ -86,6 +86,7 @@ dropbear
 dropbear-scp
 dtc
 dunst
+duplicity
 earlyoom
 edk2
 edk2-shell
@@ -334,6 +335,7 @@ libpng
 libprocps
 libquotient
 libsidplay
+libsndfile
 libspf2
 libtg_owt
 libudev0-shim
@@ -343,6 +345,7 @@ python-libusbsio
 libutempter
 libvirt-glib
 libwacom
+libxcb
 libxmlb
 light-locker
 lightdm
@@ -583,6 +586,7 @@ python-cairo
 python-cairo-docs
 python-cairocffi
 python-cerberus
+python-cfgv
 python-chardet
 python-click-repl
 python-cookiecutter

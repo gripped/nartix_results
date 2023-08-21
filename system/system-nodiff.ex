@@ -61,7 +61,6 @@ grep
 groff
 grub
 guile
-gzip
 hdparm
 hwdata
 iana-etc
@@ -148,7 +147,6 @@ ca-certificates-mozilla
 openssl
 patch
 pciutils
-pcre
 pcre2
 pinentry
 pkgconf

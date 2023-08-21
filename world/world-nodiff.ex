@@ -368,7 +368,6 @@ dragon
 duktape
 dump_syms
 dune
-duplicity
 dvd-rw-tools
 dvdauthor
 dvisvgm
@@ -1440,7 +1439,6 @@ libsigsegv
 libslirp
 libsm
 libsmbios
-libsndfile
 libsodium
 libsonic
 libsoup
@@ -1517,7 +1515,6 @@ libx11
 libx86emu
 libxau
 libxaw
-libxcb
 libxcomposite
 libxcursor
 libxcvt
@@ -2568,7 +2565,6 @@ python-cchardet
 python-celery
 python-certifi
 python-cffi
-python-cfgv
 python-cfn-lint
 python-cftime
 python-characteristic

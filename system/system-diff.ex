@@ -20,6 +20,7 @@ glibc
 lib32-glibc
 gnutls
 gssproxy
+gzip
 iputils
 libsecret
 libsecret-docs
@@ -58,6 +59,7 @@ p11-kit-docs
 pacman
 pam
 pambase
+pcre
 perl
 ppp
 procps-ng
