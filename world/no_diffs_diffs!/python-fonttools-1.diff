@@ -4,7 +4,7 @@
  
  pkgname=python-fonttools
  _pyname=${pkgname#python-}
--pkgver=4.42.0
+-pkgver=4.42.1
 +pkgver=4.41.0
  pkgrel=1
  pkgdesc='A library to manipulate font files from Python'
@@ -13,7 +13,7 @@
              'python-unicodedata2: for displaying the Unicode character names when dumping the cmap table with ttx'
              'python-zopfli: faster backend fom WOFF 1.0 web fonts compression')
  source=("$url/archive/$pkgver/$_pyname-$pkgver.tar.gz")
--sha256sums=('f556a5c7a208c58eb1fc2055a6bc6bdb8bc8a3a02acfc6e79f7db75f085fb3b3')
+-sha256sums=('1e96ea7e11c76649da322fb059fe5506696efe6929983c1d3cee3d636d05629a')
 +sha256sums=('c3b247bad5f11f20475eb7ab68ea1600b459ddde16dbed434bc4f9ad645ee9b3')
  
  build() {

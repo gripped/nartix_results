@@ -334,6 +334,7 @@ libotr
 libpng
 libprocps
 libquotient
+libsass
 libsidplay
 libsndfile
 libspf2
@@ -379,6 +380,7 @@ linux-zen-docs
 lirc
 lm_sensors
 lsb-release
+luajit
 luarocks
 lxc
 lxcfs
@@ -588,6 +590,7 @@ python-cairocffi
 python-cerberus
 python-cfgv
 python-chardet
+python-click-help-colors
 python-click-repl
 python-cookiecutter
 python-cytoolz
@@ -614,6 +617,7 @@ python-mistune
 python-mysql-connector
 python-myst-parser
 python-nbxmpp
+python-parse
 python-pathspec
 python-pycodestyle
 python-pydantic-core
@@ -769,6 +773,7 @@ samba
 libwbclient
 smbclient
 sane
+sassc
 scons
 sdcv
 sddm

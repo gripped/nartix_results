@@ -1423,7 +1423,6 @@ librsvg-docs
 librsync
 librttopo
 libsamplerate
-libsass
 libsbsms
 libsecp256k1
 libshout
@@ -1609,7 +1608,6 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
-luajit
 luajson
 lua52-luajson
 luasec
@@ -2580,7 +2578,6 @@ python-click-aliases
 python-click-command-tree
 python-click-default-group
 python-click-didyoumean
-python-click-help-colors
 python-click-option-group
 python-click-plugins
 python-click
@@ -3033,7 +3030,6 @@ python-pandocfilters
 python-parameterized
 python-paramiko
 python-parse-type
-python-parse
 python-parsedatetime
 python-parso
 python-partd
@@ -3956,7 +3952,6 @@ rygel
 s2n-tls
 s3cmd
 samurai
-sassc
 sbc
 sbsigntools
 scdoc

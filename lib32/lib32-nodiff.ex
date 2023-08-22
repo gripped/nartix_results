@@ -85,7 +85,6 @@ lib32-librsvg
 lib32-libsamplerate
 lib32-libshout
 lib32-libsm
-lib32-libsndfile
 lib32-libsoup
 lib32-libsoup3
 lib32-libssh2
