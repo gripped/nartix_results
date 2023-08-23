@@ -600,6 +600,7 @@ python-distributed
 python-django-classy-tags
 python-django-debug-toolbar
 python-editables
+python-exceptiongroup
 python-gnupg
 python-hypothesis
 python-ipywidgets
@@ -782,6 +783,7 @@ seatd
 sfml
 shairport-sync
 sharutils
+signal-desktop
 signon-plugin-oauth2
 smartmontools
 snapper
@@ -906,6 +908,7 @@ xf86-video-nouveau
 xf86-video-openchrome
 xf86-video-vmware
 xfce4-cpugraph-plugin
+xfce4-terminal
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

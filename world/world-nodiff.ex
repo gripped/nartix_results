@@ -2694,7 +2694,6 @@ python-ephemeral-port-reserve
 python-et-xmlfile
 python-evdev
 python-eventlet
-python-exceptiongroup
 python-execnet
 python-executing
 python-expects
@@ -3992,7 +3991,6 @@ shared-color-targets
 shared-mime-info
 shhmsg
 shhopt
-signal-desktop
 signify
 signon-kwallet-extension
 signon-ui
@@ -4495,7 +4493,6 @@ xfce4-settings
 xfce4-smartbookmark-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
-xfce4-terminal
 xfce4-time-out-plugin
 xfce4-timer-plugin
 xfce4-verve-plugin
