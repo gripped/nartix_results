@@ -95,6 +95,7 @@ element.io
 element-web
 element-desktop
 elinks
+ell
 emacs
 emacs-nativecomp
 emacs-nox
@@ -252,6 +253,18 @@ jami-daemon
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
+java11-openjdk
+jre11-openjdk-headless
+jre11-openjdk
+jdk11-openjdk
+openjdk11-src
+openjdk11-doc
+java17-openjdk
+jre17-openjdk-headless
+jre17-openjdk
+jdk17-openjdk
+openjdk17-src
+openjdk17-doc
 jedi-language-server
 jenkins
 jp2a
@@ -303,6 +316,7 @@ libdbusmenu-gtk2
 libdbusmenu-gtk3
 libdex
 libdex-docs
+libdrm
 libdvbpsi
 libepoxy
 libepoxy-docs
@@ -386,6 +400,7 @@ lxc
 lxcfs
 lxd
 lximage-qt
+magic-wormhole
 mailman3-hyperkitty
 mailman3
 mako
@@ -429,6 +444,7 @@ mitmproxy
 modemmanager
 libmm-glib
 mosquitto
+mousepad
 mpd
 mpv
 muffin
@@ -484,6 +500,7 @@ libperconaserverclient
 percona-server-clients
 perl-image-exiftool
 perl-mail-message
+perl-text-csv
 pgbouncer
 phodav
 php-legacy
@@ -583,6 +600,7 @@ python-aiofiles
 python-aiosqlite
 python-authheaders
 python-aws-sam-translator
+python-bcrypt
 python-cachy
 python-cairo
 python-cairo-docs
@@ -809,6 +827,7 @@ libsysprof-capture
 system-config-printer
 tailscale
 telegram-desktop
+texlive-bin
 thunderbird
 tigervnc
 timew
@@ -899,6 +918,7 @@ xdg-user-dirs
 xdg-utils-cxx
 xdg-utils
 xf86-input-evdev
+xf86-input-libinput
 xf86-input-vmmouse
 xf86-input-wacom
 xf86-video-amdgpu

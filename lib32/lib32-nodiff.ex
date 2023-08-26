@@ -165,7 +165,6 @@ lib32-wavpack
 lib32-wayland
 lib32-xcb-util-keysyms
 lib32-xz
-lib32-zlib
 lib32-zstd
 multilib-devel
 steam

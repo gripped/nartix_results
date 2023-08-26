@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,18 @@
+@@ -1,28 +1,35 @@
  
--_name=sphinxcontrib_serializinghtml
 +_name=sphinxcontrib-serializinghtml
  pkgname=python-sphinxcontrib-serializinghtml
--pkgver=1.1.8
+-_name=${pkgname#python-}
+-pkgver=1.1.9
 -pkgrel=1
 +pkgver=1.1.5
 +pkgrel=6
@@ -13,23 +13,35 @@
  arch=('any')
  url=https://github.com/sphinx-doc/sphinxcontrib-serializinghtml
  license=('BSD')
--makedepends=('python-build' 'python-flit-core' 'python-installer')
+-makedepends=('git' 'python-build' 'python-flit-core' 'python-installer')
+-source=("git+$url.git#tag=$pkgver")
+-b2sums=('SKIP')
 +makedepends=('python-build' 'python-installer' 'python-setuptools'
 +             'python-wheel')
- checkdepends=('python-pytest' 'python-sphinx')
- source=("https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
--sha256sums=('aaf3026335146e688fd209b72320314b1b278320cf232e3cda198f873838511a')
--b2sums=('b88b5386434b02f18726a84ab600fbd8cebd0a9b732b95fed566b40a75b026c70723eb85d9a3655af57e5476623cd3d0d3cf87596d656f0a7329bfb3ae7f4eac')
++checkdepends=('python-pytest' 'python-sphinx')
++source=("https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 +sha256sums=('aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952')
 +b2sums=('e2da8b1e1300a327b8d508ce98e7c0d3eff1e0cea28cd874df4fbd9ed0bd4de6c17e107e622ec72e00bb237025ae26b2c5aaa33b2156cee2fad7c8f8d2c65ed5')
  
  build() {
-   cd $_name-$pkgver
-@@ -29,6 +30,6 @@
+-  cd "$_name"
++  cd $_name-$pkgver
+   python -m build --wheel --skip-dependency-check --no-isolation
+ }
+ 
++check() {
++  cd $_name-$pkgver
++  pytest
++}
+ 
+ package() {
+-  cd "$_name"
++  cd $_name-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
  
    local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
    install -d "$pkgdir"/usr/share/licenses/$pkgname
--  ln -s "$site_packages"/$_name-$pkgver.dist-info/LICENSE \
+-  ln -s "$site_packages"/"${_name//-/_}"-$pkgver.dist-info/LICENSE \
 +  ln -s "$site_packages"/sphinxcontrib_serializinghtml-$pkgver.dist-info/LICENSE \
      "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
  }
@@ -39,11 +51,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  pkgname=python-sphinxcontrib-serializinghtml
--makedepends=('python-build' 'python-flit-core' 'python-installer')
+-makedepends=('git' 'python-build' 'python-flit-core' 'python-installer')
 +makedepends=('python-build' 'python-installer' 'python-setuptools'
 +             'python-wheel')
  build() {
-   cd $_name-$pkgver
+-  cd "$_name"
++  cd $_name-$pkgver
    python -m build --wheel --skip-dependency-check --no-isolation
+ }

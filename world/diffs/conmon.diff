@@ -1,14 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,17 +1,17 @@
+ 
+ pkgname=conmon
+-pkgver=2.1.8
++pkgver=2.1.7
+ pkgrel=1
+ epoch=1
+ pkgdesc='OCI container runtime monitor'
  arch=(x86_64)
  url='https://github.com/containers/conmon'
  license=(APACHE)
 -depends=(glibc glib2 systemd)
 +depends=(glibc glib2)
  makedepends=(git)
- _commit=f633919178f6c8ee4fb41b848a056ec33f8d707d	#refs/tags/v2.1.7
+-_commit=00e08f4a9ca5420de733bf542b930ad58e1a7e7d	#refs/tags/v2.1.8
++_commit=f633919178f6c8ee4fb41b848a056ec33f8d707d	#refs/tags/v2.1.7
  source=("git+https://github.com/containers/conmon#commit=${_commit}")
+-b2sums=('SKIP')
++md5sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgname
 
 
 ############# Stripped diff below #################

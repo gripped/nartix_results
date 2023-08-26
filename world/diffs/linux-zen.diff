@@ -3,27 +3,20 @@
 @@ -1,6 +1,6 @@
  
  pkgbase=linux-zen
--pkgver=6.4.11.zen2
+-pkgver=6.4.12.zen1
 +pkgver=6.4.4.zen1
  pkgrel=1
  pkgdesc='Linux ZEN'
  _srctag=v${pkgver%.*}-${pkgver##*.}
-@@ -15,9 +15,13 @@
+@@ -15,7 +15,6 @@
    libelf
    pahole
    perl
 -  python
    tar
    xz
-+
-+  graphviz
-+  imagemagick
-+  python-sphinx
-+  texlive-latexextra
- )
- options=('!strip')
- _srcname=zen-kernel
-@@ -32,9 +36,9 @@
+ 
+@@ -37,9 +36,9 @@
    C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D  # Steven Barrett <steven@liquorix.net>
  )
  b2sums=('SKIP'
@@ -36,33 +29,21 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -73,6 +77,7 @@
- build() {
-   cd $_srcname
-   _make all
-+  _make htmldocs
- }
- 
- _package() {
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,15 +8,18 @@
+@@ -8,7 +8,6 @@
    libelf
    pahole
    perl
 -  python
    tar
    xz
-+  graphviz
-+  imagemagick
-+  python-sphinx
-+  texlive-latexextra
- )
- options=('!strip')
+   graphviz
+@@ -20,7 +19,7 @@
  _srcname=zen-kernel
    C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D  # Steven Barrett <steven@liquorix.net>
  )
@@ -71,11 +52,3 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  _make() {
-@@ -48,6 +51,7 @@
- build() {
-   cd $_srcname
-   _make all
-+  _make htmldocs
- }
- _package() {
-   depends=(

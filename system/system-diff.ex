@@ -19,9 +19,14 @@ fakeroot
 glibc
 lib32-glibc
 gnutls
+gpgme
+qgpgme-qt5
+qgpgme-qt6
+python-gpgme
 gssproxy
 gzip
 iputils
+json-c
 libsecret
 libsecret-docs
 libusb
@@ -46,6 +51,7 @@ device-mapper
 man-db
 mdadm
 mkinitcpio
+mpfr
 nfs-utils
 nfsidmap
 openldap
@@ -71,3 +77,5 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
+zlib
+minizip

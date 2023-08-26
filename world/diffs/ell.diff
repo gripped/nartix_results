@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=ell
+-pkgver=0.58
++pkgver=0.57
+ pkgrel=1
+ pkgdesc="Embedded Linux library"
+ arch=(x86_64)
+ url="https://01.org/ell"
+ license=('LGPL2.1')
+-depends=('gcc-libs' 'glibc')
+-checkdepends=('dbus' 'procps-ng')
++depends=('gcc-libs')
++checkdepends=('dbus')
+ source=(https://mirrors.edge.kernel.org/pub/linux/libs/$pkgname/$pkgname-$pkgver.tar.{xz,sign})
+-sha256sums=('531a980589c8954ff12a3110b4d958fa75a74c88ddcc3e2ace4317e76a7c1e9b'
++sha256sums=('7603928ee584b758ca27c67e4dc513049a09b038d7d28459a9440f8443c91018'
+             'SKIP')
+ validpgpkeys=('E932D120BC2AEC444E558F0106CA9F5D1DCF2659') # "Marcel Holtmann <marcel@holtmann.org>"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=ell
+-depends=('gcc-libs' 'glibc')
++depends=('gcc-libs')
+ build() {
+   cd "$pkgname-$pkgver"
+  ./configure --prefix=/usr

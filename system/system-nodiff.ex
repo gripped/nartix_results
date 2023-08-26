@@ -52,10 +52,6 @@ glib2
 glib2-docs
 gmp
 gnupg
-gpgme
-qgpgme-qt5
-qgpgme-qt6
-python-gpgme
 gpm
 grep
 groff
@@ -72,7 +68,6 @@ iptables-nft
 iw
 jansson
 jfsutils
-json-c
 kbd
 keyutils
 kmod
@@ -134,7 +129,6 @@ man-pages
 mkinitcpio-busybox
 mkinitcpio-nfs-utils
 mlocate
-mpfr
 nano
 ncurses
 net-tools
@@ -179,6 +173,4 @@ which
 wireless-regdb
 wpa_supplicant
 xz
-zlib
-minizip
 zstd

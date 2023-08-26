@@ -4,7 +4,7 @@
  pkgbase=mariadb
  pkgname=('mariadb-libs' 'mariadb-clients' 'mariadb' 'mytop')
  pkgdesc='Fast SQL database server, derived from MySQL'
--pkgver=11.0.3
+-pkgver=11.1.2
 -pkgrel=1
 +pkgver=11.0.2
 +pkgrel=2
@@ -20,7 +20,7 @@
 +        'mariadb.tmpfiles.conf'
 +        '0002-MDEV-31443-FATAL-InnoDB-Unable-to-find-charset-colla.patch'
          '0001-arch-specific.patch')
--sha256sums=('529f08a064ee7733a136ec474a4239e8ac9bd6db139b8ba70bff8a7f1303839a'
+-sha256sums=('19a9e980e57fa332931f643b48ad7390528c889ff6ea8b0e16fd306aa3088238'
 +sha256sums=('3c71576cad0ea416882270e383f94cc89693b7fbcce1fa4f306fe3e931e464ae'
              'SKIP'
 +            'd21fa98b57b3f44d1731551ac441bf24b75662fb26393757aa22f9cb92d470cd'
@@ -89,6 +89,15 @@
  
    rm usr/bin/{mariadb{_,-},mysql_}config
    rm -r usr/include/
+@@ -184,7 +191,7 @@
+ 
+   rm usr/bin/mytop
+ 
+-  rm -r usr/{mariadb-test,sql-bench}
++  rm -r usr/{mysql-test,sql-bench}
+   rm usr/share/man/man1/mysql-test-run.pl.1
+ }
+ 
 
 
 ############# Stripped diff below #################
@@ -158,3 +167,12 @@
    rm usr/bin/{mariadb{_,-},mysql_}config
    rm -r usr/include/
    rm usr/share/man/man1/{mariadb,mysql}_config.1
+@@ -126,7 +127,7 @@
+     rm "${pkgdir}"/usr/bin/"$(basename "${bin}")" "${pkgdir}"/usr/share/man/man1/"$(basename "${bin}")".1
+   done
+   rm usr/bin/mytop
+-  rm -r usr/{mariadb-test,sql-bench}
++  rm -r usr/{mysql-test,sql-bench}
+   rm usr/share/man/man1/mysql-test-run.pl.1
+ }
+ package_mytop() {

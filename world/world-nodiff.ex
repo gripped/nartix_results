@@ -387,7 +387,6 @@ electrum
 elementary-icon-theme
 elisa
 elixir
-ell
 embree
 embree3
 emovix
@@ -803,18 +802,6 @@ jdk-openjdk
 openjdk-src
 openjdk-doc
 java-xmlgraphics-commons
-java11-openjdk
-jre11-openjdk-headless
-jre11-openjdk
-jdk11-openjdk
-openjdk11-src
-openjdk11-doc
-java17-openjdk
-jre17-openjdk-headless
-jre17-openjdk
-jdk17-openjdk
-openjdk17-src
-openjdk17-doc
 java8-openjdk
 jre8-openjdk-headless
 jre8-openjdk
@@ -1202,7 +1189,6 @@ libdisplay-info
 libdmapsharing
 libdmtx
 libdnet
-libdrm
 libdv
 libdvdcss
 libdvdnav
@@ -1673,7 +1659,6 @@ m17n-db
 m17n-lib
 mac
 maeparser
-magic-wormhole
 mailcap
 mailcommon
 mailgraph
@@ -1792,7 +1777,6 @@ mopidy
 moreutils
 mosh
 motion
-mousepad
 movit
 mozo
 mpdecimal
@@ -2270,7 +2254,6 @@ perl-test2-suite
 perl-test2-tools-process
 perl-text-bibtex
 perl-text-charwidth
-perl-text-csv
 perl-text-diff
 perl-text-glob
 perl-text-wrapi18n
@@ -2511,7 +2494,6 @@ python-axolotl-curve25519
 python-axolotl
 python-babel
 python-backcall
-python-bcrypt
 python-beaker
 python-beautifulsoup4
 python-behave
@@ -4254,7 +4236,6 @@ testdisk
 tevent
 tex-gyre-fonts
 texi2html
-texlive-bin
 texlive-core
 texlive-fontsextra
 texlive-formatsextra
@@ -4456,7 +4437,6 @@ libxdp
 xed
 xerces-c
 xf86-input-elographics
-xf86-input-libinput
 xf86-input-synaptics
 xf86-video-dummy
 xf86-video-fbdev

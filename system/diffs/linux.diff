@@ -8,7 +8,7 @@
 +_artix=artix${_rel}
  
  pkgbase=linux
--pkgver=6.4.11.arch2
+-pkgver=6.4.12.arch1
 +pkgver=${_ver}.${_artix}
  pkgrel=1
  pkgdesc='Linux'
@@ -17,22 +17,15 @@
  url="https://github.com/archlinux/linux/commits/$_srctag"
  arch=(x86_64)
  license=(GPL2)
-@@ -15,9 +20,13 @@
+@@ -15,7 +20,6 @@
    libelf
    pahole
    perl
 -  python
    tar
    xz
-+
-+  graphviz
-+  imagemagick
-+  python-sphinx
-+  texlive-latexextra
- )
- options=('!strip')
- _srcname=archlinux-linux
-@@ -32,9 +41,9 @@
+ 
+@@ -37,9 +41,9 @@
    C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
  )
  b2sums=('SKIP'
@@ -45,7 +38,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -62,6 +71,9 @@
+@@ -67,6 +71,9 @@
      patch -Np1 < "../$src"
    done
  
@@ -55,15 +48,7 @@
    echo "Setting config..."
    cp ../config .config
    _make olddefconfig
-@@ -73,6 +85,7 @@
- build() {
-   cd $_srcname
-   _make all
-+  _make htmldocs
- }
- 
- _package() {
-@@ -92,7 +105,7 @@
+@@ -98,7 +105,7 @@
      WIREGUARD-MODULE
    )
    replaces=(
@@ -88,19 +73,15 @@
  makedepends=(
    bc
    cpio
-@@ -8,15 +11,18 @@
+@@ -8,7 +11,6 @@
    libelf
    pahole
    perl
 -  python
    tar
    xz
-+  graphviz
-+  imagemagick
-+  python-sphinx
-+  texlive-latexextra
- )
- options=('!strip')
+   graphviz
+@@ -20,7 +22,7 @@
  _srcname=archlinux-linux
    C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
  )
@@ -109,7 +90,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  _make() {
-@@ -39,6 +45,8 @@
+@@ -43,6 +45,8 @@
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
@@ -118,15 +99,7 @@
    echo "Setting config..."
    cp ../config .config
    _make olddefconfig
-@@ -48,6 +56,7 @@
- build() {
-   cd $_srcname
-   _make all
-+  _make htmldocs
- }
- _package() {
-   depends=(
-@@ -61,7 +70,7 @@
+@@ -66,7 +70,7 @@
      WIREGUARD-MODULE
    )
    replaces=(
