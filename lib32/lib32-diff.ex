@@ -4,6 +4,7 @@ lib32-dbus
 lib32-fluidsynth
 lib32-freetype2
 lib32-gamemode
+lib32-glu
 lib32-jack2
 lib32-libdrm
 lib32-libepoxy
@@ -13,6 +14,7 @@ lib32-libpulse
 lib32-libsndfile
 lib32-libudev0-shim
 lib32-libusb
+lib32-libxcb
 lib32-llvm
 lib32-mesa
 lib32-vulkan-mesa-layers

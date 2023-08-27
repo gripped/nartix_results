@@ -27,7 +27,6 @@ lib32-gettext
 lib32-giflib
 lib32-glib-networking
 lib32-glib2
-lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-gpm
@@ -103,7 +102,6 @@ lib32-libvpx
 lib32-libwebp
 lib32-libx11
 lib32-libxau
-lib32-libxcb
 lib32-libxcomposite
 lib32-libxcrypt
 lib32-libxcrypt-compat

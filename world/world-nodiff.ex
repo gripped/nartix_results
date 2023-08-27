@@ -35,7 +35,6 @@ alsa-plugins
 pulseaudio-alsa
 alsa-topology-conf
 alsa-ucm-conf
-amdvlk
 amf-headers
 amfora
 aml
@@ -767,7 +766,9 @@ imlib2
 incidenceeditor
 iniparser
 innoextract
+intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-metee
 intel-metee-doc
@@ -973,7 +974,6 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
-kio
 kirigami-addons
 kirigami-gallery
 kirigami2
@@ -1534,7 +1534,6 @@ libxres
 libxshmfence
 libxslt
 libxslt-docs
-libxss
 libxt
 libxtst
 libxv
@@ -3607,7 +3606,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-grpc
 qt6-httpserver
 qt6-imageformats
@@ -3632,7 +3630,6 @@ qt6-speech
 qt6-svg
 qt6-translations
 qt6-virtualkeyboard
-qt6-wayland
 qt6-webchannel
 qt6-websockets
 qt6-webview

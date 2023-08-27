@@ -2,6 +2,7 @@ abseil-cpp
 accountsservice
 adios2
 alsa-utils
+amdvlk
 amule
 ansible-core
 apache
@@ -237,8 +238,6 @@ ibus
 libibus
 igsc
 inkscape
-intel-compute-runtime
-intel-graphics-compiler
 intel-media-sdk
 libmfx
 intel-opencl-clang
@@ -289,6 +288,7 @@ telepathy-kde-meta
 kdevelop-meta
 kde-gtk-config
 kdoctools
+kio
 kismet
 knot
 koko
@@ -362,6 +362,7 @@ libvirt-glib
 libwacom
 libxcb
 libxmlb
+libxss
 light-locker
 lightdm
 liblightdm-qt5
@@ -750,10 +751,12 @@ qt5-base
 qt5-xcb-private-headers
 qt5-webengine
 qt6-base
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-location
 qt6-tools
+qt6-wayland
 qt6-webengine
 quazip
 quazip-qt5
