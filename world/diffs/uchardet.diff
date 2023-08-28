@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=uchardet
+ pkgver=0.0.8
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Encoding detector library ported from Mozilla'
+ arch=('x86_64')
+ url='https://www.freedesktop.org/wiki/Software/uchardet'
+@@ -15,7 +15,8 @@
+ 	cd ${pkgname}-${pkgver}
+ 	cmake \
+ 		-DCMAKE_INSTALL_PREFIX=/usr \
+-		-DBUILD_STATIC=OFF
++		-DCMAKE_INSTALL_LIBDIR=lib \
++		-DCMAKE_BUILD_TYPE=Release
+ 	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+ 	cd ${pkgname}-${pkgver}
+ 	cmake \
+ 		-DCMAKE_INSTALL_PREFIX=/usr \
+-		-DBUILD_STATIC=OFF
++		-DCMAKE_INSTALL_LIBDIR=lib \
++		-DCMAKE_BUILD_TYPE=Release
+ 	make
+ }

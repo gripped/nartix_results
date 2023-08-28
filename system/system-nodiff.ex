@@ -156,11 +156,6 @@ s-nail
 sdparm
 sed
 shadow
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 sysfsutils
 tar
 texinfo

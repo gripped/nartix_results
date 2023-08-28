@@ -1,6 +1,50 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -226,7 +226,6 @@
+@@ -12,8 +12,9 @@
+          kde-sdk-meta
+          kde-system-meta
+          kde-utilities-meta
++         telepathy-kde-meta
+          kdevelop-meta)
+-pkgver=23.08
++pkgver=23.04
+ pkgrel=1
+ arch=(any)
+ license=(None)
+@@ -118,8 +119,7 @@
+ package_kde-graphics-meta() {
+   pkgdesc='Meta package for KDE graphics applications'
+   replaces=(kdegraphics-meta kdewebdev-meta)
+-  depends=(arianna
+-           colord-kde
++  depends=(colord-kde
+            gwenview
+            kamera
+            kcolorchooser
+@@ -171,6 +171,7 @@
+            krfb
+            ktorrent
+            neochat
++           telepathy-kde-meta
+            tokodon)
+ }
+ 
+@@ -189,13 +190,13 @@
+            itinerary
+            kaddressbook
+            kalarm
++           kalendar
+            kleopatra
+            kmail
+            knotes
+            kontact
+            korganizer
+            kdepim-addons
+-           merkuro
+            zanshin)
+ }
+ 
+@@ -225,7 +226,6 @@
             kde-inotify-survey
             khelpcenter
             kio-admin
@@ -8,13 +52,84 @@
             ksystemlog
             partitionmanager)
  }
+@@ -247,6 +247,7 @@
+            keditbookmarks
+            keysmith
+            kfind
++           kfloppy
+            kgpg
+            kongress
+            konsole
+@@ -264,6 +265,21 @@
+            yakuake)
+ }
+ 
++package_telepathy-kde-meta() {
++  pkgdesc='KDE-Telepathy meta package'
++  depends=(telepathy-kde-accounts-kcm
++           telepathy-kde-approver
++           telepathy-kde-auth-handler
++           telepathy-kde-call-ui
++           telepathy-kde-contact-runner
++           telepathy-kde-contact-list
++           telepathy-kde-desktop-applets
++           telepathy-kde-filetransfer-handler
++           telepathy-kde-integration-module
++           telepathy-kde-send-file
++           telepathy-kde-text-ui)
++}
++
+ package_kdevelop-meta() {
+   pkgdesc='Meta package for KDevelop'
+   depends=(kdevelop
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -198,7 +198,6 @@
+@@ -11,6 +11,7 @@
+          kde-sdk-meta
+          kde-system-meta
+          kde-utilities-meta
++         telepathy-kde-meta
+          kdevelop-meta)
+ package_kde-applications-meta() {
+   depends=(kde-accessibility-meta
+@@ -102,8 +103,7 @@
+ }
+ package_kde-graphics-meta() {
+   replaces=(kdegraphics-meta kdewebdev-meta)
+-  depends=(arianna
+-           colord-kde
++  depends=(colord-kde
+            gwenview
+            kamera
+            kcolorchooser
+@@ -151,6 +151,7 @@
+            krfb
+            ktorrent
+            neochat
++           telepathy-kde-meta
+            tokodon)
+ }
+ package_kde-office-meta() {
+@@ -165,13 +166,13 @@
+            itinerary
+            kaddressbook
+            kalarm
++           kalendar
+            kleopatra
+            kmail
+            knotes
+            kontact
+            korganizer
+            kdepim-addons
+-           merkuro
+            zanshin)
+ }
+ package_kde-sdk-meta() {
+@@ -197,7 +198,6 @@
             kde-inotify-survey
             khelpcenter
             kio-admin
@@ -22,3 +137,31 @@
             ksystemlog
             partitionmanager)
  }
+@@ -217,6 +217,7 @@
+            keditbookmarks
+            keysmith
+            kfind
++           kfloppy
+            kgpg
+            kongress
+            konsole
+@@ -233,6 +234,19 @@
+            telly-skout
+            yakuake)
+ }
++package_telepathy-kde-meta() {
++  depends=(telepathy-kde-accounts-kcm
++           telepathy-kde-approver
++           telepathy-kde-auth-handler
++           telepathy-kde-call-ui
++           telepathy-kde-contact-runner
++           telepathy-kde-contact-list
++           telepathy-kde-desktop-applets
++           telepathy-kde-filetransfer-handler
++           telepathy-kde-integration-module
++           telepathy-kde-send-file
++           telepathy-kde-text-ui)
++}
+ package_kdevelop-meta() {
+   depends=(kdevelop
+            kdevelop-php

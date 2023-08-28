@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=zvbi
+-pkgver=0.2.42
++pkgver=0.2.41
+ pkgrel=1
+ pkgdesc='VBI capture and decoding library'
+ url=http://zapping.sourceforge.net/cgi-bin/view/ZVBI/WebHome
+@@ -16,7 +16,7 @@
+   LGPL2.1
+   MIT
+ )
+-_tag=3785481f51f41a49e28f2b7f6fd5bd9187d24ae1
++_tag=74016b7aef2f52f44920a04f9bcfe52ed72905d1
+ source=(git+https://github.com/zapping-vbi/zvbi.git#tag=${_tag})
+ b2sums=(SKIP)
+ validpgpkeys=(FA26CA784BE188927F22B99F6570EA01146F7354) # Ileana Dumitrescu <ileanadumitrescu95@gmail.com>

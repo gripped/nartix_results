@@ -151,7 +151,6 @@ lib32-sdl12-compat
 lib32-sdl2
 lib32-speex
 lib32-speexdsp
-lib32-sqlite
 lib32-taglib
 lib32-tdb
 lib32-twolame

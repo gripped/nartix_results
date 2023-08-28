@@ -1,15 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ 
  pkgname=noto-fonts-cjk
- pkgver=20220126
- _commit=473da44c32fec739db7e5458c81a833513cb4084
--pkgrel=2
-+pkgrel=1
+-pkgver=20230817
+-_commit=4efc595762d1f4b4fa504bccfe8e59de91fda063
++pkgver=20220126
++_commit=473da44c32fec739db7e5458c81a833513cb4084
+ pkgrel=1
  pkgdesc='Google Noto CJK fonts'
  arch=(any)
- url='https://www.google.com/get/noto/'
-@@ -11,7 +11,7 @@
+@@ -11,11 +11,11 @@
  source=(git+https://github.com/googlefonts/noto-cjk.git#commit=$_commit
          70-noto-cjk.conf)
  sha256sums=('SKIP'
@@ -18,3 +19,8 @@
  
  package() {
    install -Dm644 noto-cjk/*/OTC/*.ttc -t "$pkgdir"/usr/share/fonts/noto-cjk
+-  install -Dm644 noto-cjk/Sans/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
++  install -Dm644 noto-cjk/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+   install -Dm644 70-noto-cjk.conf -t "$pkgdir"/usr/share/fontconfig/conf.avail
+   install -d "$pkgdir"/usr/share/fontconfig/conf.default
+   ln -rs "$pkgdir"/usr/share/fontconfig/conf.avail/* "$pkgdir"/usr/share/fontconfig/conf.default

@@ -1,9 +1,12 @@
 abseil-cpp
 accountsservice
 adios2
+akonadi-calendar
+akonadi-search
 alsa-utils
 amdvlk
 amule
+angelfish
 ansible-core
 apache
 apcupsd
@@ -17,6 +20,7 @@ at-spi2-core-docs
 at
 audacity
 audacity-docs
+audiotube
 avahi
 awesome
 ayatana-ido
@@ -41,6 +45,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
+cantor
 cdparanoia
 cgmanager
 check-jsonschema
@@ -174,6 +179,7 @@ gnome-video-effects
 go-bindata
 go-tools
 gpsd
+grantleetheme
 graphicsmagick
 grim
 grpc
@@ -230,6 +236,7 @@ gvfs-google
 haproxy
 haveged
 hidapi
+hotdoc
 hwloc
 hyprland
 i2pd
@@ -244,6 +251,7 @@ intel-opencl-clang
 intel-undervolt
 interception-tools
 irssi
+itinerary
 iwd
 jack2
 jack2-dbus
@@ -272,6 +280,11 @@ json-glib
 json-glib-docs
 jupyter-notebook
 jupyterlab
+k3b
+kalarm
+kalgebra
+kalzium
+kcron
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -286,15 +299,26 @@ kde-system-meta
 kde-utilities-meta
 telepathy-kde-meta
 kdevelop-meta
+kde-development-environment-meta
 kde-gtk-config
+kdevelop
 kdoctools
 kio
 kismet
+kleopatra
+kmail-account-wizard
+kmailtransport
 knot
 koko
+kontrast
+kosmindoormap
+kpimtextedit
 kpipewire
+kpmcore
 krita
 ksysguard
+ktnef
+kwordquiz
 ldc
 lensfun
 libadwaita
@@ -336,7 +360,10 @@ libinput
 libjpeg-turbo
 libjxl
 libjxl-doc
+libkdepim
+libkgapi
 libkscreen
+libksieve
 libksysguard
 liblc3
 libldm
@@ -435,6 +462,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+messagelib
 mgba
 libmgba
 mgba-sdl
@@ -457,6 +485,7 @@ mutter-docs
 ncftp
 ndctl
 ndisc6
+neochat
 neofetch
 neovim
 netplan
@@ -476,6 +505,7 @@ nvidia
 nvme-cli
 ocaml-ctypes
 ocaml-findlib
+okular
 onboard
 open-iscsi
 opencc
@@ -650,7 +680,9 @@ python-pytest-enabler
 python-pytest-param-files
 python-pyudev
 python-rapidfuzz
+python-readme-renderer
 python-requests-mock
+python-scipy
 python-scramp
 python-sphinx-alabaster-theme
 python-sphinxcontrib-applehelp
@@ -806,6 +838,7 @@ shairport-sync
 sharutils
 signal-desktop
 signon-plugin-oauth2
+skanpage
 smartmontools
 snapper
 spice-gtk
@@ -837,6 +870,7 @@ timew
 tlp
 tlp-rdw
 tmux
+tokodon
 tor
 torsocks
 toxcore
@@ -851,6 +885,7 @@ libtransmission
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-nerd-fonts-symbols-common
+uchardet
 udftools
 udisks2
 umockdev
@@ -943,5 +978,6 @@ xorg-xlogo
 xorg-xwayland
 xscreensaver
 xxhash
+yt-dlp
 yubikey-personalization
 znc

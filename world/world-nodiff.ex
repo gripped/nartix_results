@@ -16,12 +16,10 @@ adwaita-icon-theme
 adwaita-cursors
 aha
 akonadi-calendar-tools
-akonadi-calendar
 akonadi-contacts
 akonadi-import-wizard
 akonadi-mime
 akonadi-notes
-akonadi-search
 akonadi
 libakonadi
 akonadiconsole
@@ -40,7 +38,6 @@ amfora
 aml
 amtk
 analitza
-angelfish
 ansible
 ant
 ant-doc
@@ -102,7 +99,6 @@ aubio
 python-aubio
 audiocd-kio
 audiofile
-audiotube
 augeas
 auth-tarball-from-git
 autoconf-archive
@@ -202,7 +198,6 @@ calf
 camlp-streams
 camlp4
 cantarell-fonts
-cantor
 capstone
 python-capstone
 cargo-c
@@ -634,7 +629,6 @@ grafana
 granatier
 grantlee-editor
 grantlee
-grantleetheme
 graphene
 graphite
 graphite-docs
@@ -714,7 +708,6 @@ hiredis
 hitori
 hivex
 hostapd
-hotdoc
 hplip
 hspell
 hunspell-he
@@ -783,7 +776,6 @@ python-isodate
 ispc
 ispell
 isync
-itinerary
 itstool
 iucode-tool
 jasper
@@ -840,7 +832,6 @@ jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab_pygments
-k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -848,11 +839,8 @@ kactivities
 kactivitymanagerd
 kaddressbook
 kajongg
-kalarm
 kalendar
-kalgebra
 kalk
-kalzium
 kamera
 kamoso
 kanagram
@@ -889,13 +877,11 @@ kconfigwidgets
 kcontacts
 kcoreaddons
 kcrash
-kcron
 kdav
 kdbusaddons
 kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
-kde-development-environment-meta
 kde-inotify-survey
 kdebugsettings
 kdeclarative
@@ -918,7 +904,6 @@ kdesu
 kdevelop-pg-qt
 kdevelop-php
 kdevelop-python
-kdevelop
 kdf
 kdiagram
 kdialog
@@ -989,15 +974,12 @@ kjobwidgets
 kjs
 kjumpingcube
 kldap
-kleopatra
 klettres
 klickety
 klines
 kmag
 kmahjongg
-kmail-account-wizard
 kmail
-kmailtransport
 kmbox
 kmenuedit
 kmime
@@ -1024,22 +1006,18 @@ konquest
 konsole
 kontact
 kontactinterface
-kontrast
 konversation
 kopeninghours
 kopete
 korganizer
-kosmindoormap
 kotlin
 kpackage
 kparts
 kpat
 kpeople
 kpeoplevcard
-kpimtextedit
 kpkpass
 kplotting
-kpmcore
 kpty
 kpublictransport
 kqtquickcharts
@@ -1073,7 +1051,6 @@ ktextaddons
 ktexteditor
 ktextwidgets
 ktimer
-ktnef
 ktorrent
 ktouch
 ktrip
@@ -1094,7 +1071,6 @@ kweathercore
 kwidgetsaddons
 kwin
 kwindowsystem
-kwordquiz
 kwrited
 kxmlgui
 kyotocabinet
@@ -1272,17 +1248,14 @@ libkcddb
 libkcompactdisc
 libkdcraw
 libkdegames
-libkdepim
 libkeduvocdocument
 libkexiv2
 libkeybinder3
-libkgapi
 libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
 libksane
-libksieve
 libktorrent
 liblangtag
 liblas
@@ -1746,7 +1719,6 @@ mesa-demos
 mesa-utils
 meson-python
 meson
-messagelib
 metalog
 mgard
 micro
@@ -1827,7 +1799,6 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 nemo
-neochat
 neomutt
 neon
 neovim-qt
@@ -1888,7 +1859,6 @@ ocamlbuild
 ocl-icd
 odt2txt
 okteta
-okular
 onetbb
 oniguruma
 onionshare
@@ -3260,7 +3230,6 @@ python-rcssmin
 python-rdflib
 python-re-assert
 python-reactivex
-python-readme-renderer
 python-recommonmark
 python-redis
 python-referencing
@@ -3305,7 +3274,6 @@ python-sarif-om
 python-schema
 python-scikit-build
 python-scikit-learn
-python-scipy
 python-scripttest
 python-scrypt
 python-seaborn
@@ -3977,7 +3945,6 @@ signond
 simple-scan
 sip
 skanlite
-skanpage
 slang
 sleuthkit
 slimit
@@ -4262,7 +4229,6 @@ tk
 tl-expected
 tldp-howtos-txt
 tldr
-tokodon
 totem-pl-parser
 totem
 towncrier
@@ -4294,7 +4260,6 @@ twine
 twolame
 txt2man
 typescript
-uchardet
 udiskie
 udpxy
 ufmt
@@ -4552,7 +4517,6 @@ yelp-xsl
 yelp
 yodl
 youtube-dl
-yt-dlp
 yubico-c-client
 yubico-c
 z3

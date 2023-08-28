@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,16 +1,16 @@
+ 
+ pkgbase=bluez
+ pkgname=('bluez' 'bluez-utils' 'bluez-libs' 'bluez-cups' 'bluez-hid2hci' 'bluez-plugins')
+-pkgver=5.69
++pkgver=5.68
+ pkgrel=1
  url="http://www.bluez.org/"
  arch=('x86_64')
  license=('GPL2')
@@ -9,6 +15,11 @@
  source=(https://www.kernel.org/pub/linux/bluetooth/${pkgname}-${pkgver}.tar.{xz,sign}
          bluetooth.modprobe
  )
+-sha256sums=('bc5a35ddc7c72d0d3999a0d7b2175c8b7d57ab670774f8b5b4900ff38a2627fc'
++sha256sums=('fc505e6445cb579a55cacee6821fe70d633921522043d322b696de0a175ff933'
+             'SKIP'
+             '46c021be659c9a1c4e55afd04df0c059af1f3d98a96338236412e449bf7477b4')
+ validpgpkeys=('E932D120BC2AEC444E558F0106CA9F5D1DCF2659') # Marcel Holtmann <marcel@holtmann.org>
 @@ -30,6 +30,7 @@
            --enable-mesh \
            --enable-hid2hci \
@@ -17,6 +28,15 @@
            --enable-library # this is deprecated
    make
  }
+@@ -42,7 +43,7 @@
+ 
+ package_bluez() {
+   pkgdesc="Daemons for the bluetooth protocol stack"
+-  depends=('libical' 'dbus' 'glib2' 'alsa-lib' 'json-c' 'glibc')
++  depends=('libical' 'dbus' 'glib2' 'alsa-lib' 'json-c')
+   backup=('etc/bluetooth/main.conf')
+   conflicts=('obexd-client' 'obexd-server')
+ 
 @@ -50,8 +51,6 @@
    make DESTDIR=${pkgdir} \
         install-pkglibexecPROGRAMS \
@@ -26,7 +46,7 @@
         install-dbussystembusDATA \
         install-dbusDATA \
         install-man8
-@@ -65,17 +64,20 @@
+@@ -65,19 +64,21 @@
    install -Dm644 "${srcdir}"/bluetooth.modprobe "${pkgdir}"/usr/lib/modprobe.d/bluetooth-usb.conf
    install -dm755 "$pkgdir"/usr/lib/modules-load.d
    echo "crypto_user" > "$pkgdir"/usr/lib/modules-load.d/bluez.conf
@@ -46,25 +66,37 @@
  
  package_bluez-utils() {
    pkgdesc="Development and debugging utilities for the bluetooth protocol stack"
--  depends=('dbus' 'systemd' 'glib2')
+-  depends=('dbus' 'systemd' 'systemd-libs' 'glib2' 'glibc' 'readline')
+-  optdepends=('ell: for btpclient'
+-              'json-c: for mesh-cfgclient')
 +  depends=('dbus' 'udev' 'glib2')
-   optdepends=('ell: for btpclient')
++  optdepends=('ell: for btpclient')
    backup=('etc/bluetooth/mesh-main.conf')
    conflicts=('bluez-hcidump')
-@@ -126,7 +128,7 @@
+   provides=('bluez-hcidump')
+@@ -117,7 +118,7 @@
+ 
+ package_bluez-cups() {
+   pkgdesc="CUPS printer backend for Bluetooth printers"
+-  depends=('cups' 'glib2' 'glibc' 'dbus')
++  depends=('cups')
+ 
+   cd "${pkgbase}"-${pkgver}
+   make DESTDIR="${pkgdir}" install-cupsPROGRAMS
+@@ -127,7 +128,7 @@
  
  package_bluez-hid2hci() {
    pkgdesc="Put HID proxying bluetooth HCI's into HCI mode"
--  depends=('systemd')
+-  depends=('systemd' 'systemd-libs' 'glibc')
 +  depends=('udev')
  
    cd "${pkgbase}"-${pkgver}
    make DESTDIR=${pkgdir} \
-@@ -141,7 +143,7 @@
+@@ -142,7 +143,7 @@
  
  package_bluez-plugins() {
    pkgdesc="bluez plugins (PS3 Sixaxis controller)"
--  depends=('systemd')
+-  depends=('systemd' 'systemd-libs' 'glibc')
 +  depends=('udev')
  
    cd "${pkgbase}"-${pkgver}
@@ -83,7 +115,7 @@
  build() {
    cd "${pkgname}"-${pkgver}
    ./configure \
-@@ -16,6 +16,7 @@
+@@ -16,19 +16,18 @@
            --enable-mesh \
            --enable-hid2hci \
            --enable-experimental \
@@ -91,7 +123,12 @@
            --enable-library # this is deprecated
    make
  }
-@@ -27,8 +28,6 @@
+ package_bluez() {
+-  depends=('libical' 'dbus' 'glib2' 'alsa-lib' 'json-c' 'glibc')
++  depends=('libical' 'dbus' 'glib2' 'alsa-lib' 'json-c')
+   backup=('etc/bluetooth/main.conf')
+   conflicts=('obexd-client' 'obexd-server')
+   cd "${pkgbase}"-${pkgver}
    make DESTDIR=${pkgdir} \
         install-pkglibexecPROGRAMS \
         install-dbussessionbusDATA \
@@ -115,16 +152,23 @@
 -  rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-utils() {
--  depends=('dbus' 'systemd' 'glib2')
+-  depends=('dbus' 'systemd' 'systemd-libs' 'glib2' 'glibc' 'readline')
 +  depends=('dbus' 'udev' 'glib2')
    backup=('etc/bluetooth/mesh-main.conf')
    conflicts=('bluez-hcidump')
    provides=('bluez-hcidump')
-@@ -80,7 +83,7 @@
+@@ -74,13 +77,13 @@
+        install-pkgconfigDATA
+ }
+ package_bluez-cups() {
+-  depends=('cups' 'glib2' 'glibc' 'dbus')
++  depends=('cups')
+   cd "${pkgbase}"-${pkgver}
+   make DESTDIR="${pkgdir}" install-cupsPROGRAMS
    rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-hid2hci() {
--  depends=('systemd')
+-  depends=('systemd' 'systemd-libs' 'glibc')
 +  depends=('udev')
    cd "${pkgbase}"-${pkgver}
    make DESTDIR=${pkgdir} \
@@ -133,7 +177,7 @@
    rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-plugins() {
--  depends=('systemd')
+-  depends=('systemd' 'systemd-libs' 'glibc')
 +  depends=('udev')
    cd "${pkgbase}"-${pkgver}
    make DESTDIR="${pkgdir}" \
