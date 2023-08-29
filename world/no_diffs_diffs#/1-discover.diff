@@ -1,13 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,8 @@
  
  pkgname=discover
 -pkgver=5.27.7
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='KDE and Plasma resources management GUI'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
 @@ -15,7 +15,7 @@
              'fwupd: firmware update support')
  groups=(plasma)

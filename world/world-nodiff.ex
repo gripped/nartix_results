@@ -327,7 +327,6 @@ diffuse
 digikam
 directx-headers
 directx-shader-compiler
-discount
 discover
 django
 python-django
@@ -355,8 +354,6 @@ dos2unix
 dosbox
 dotconf
 double-conversion
-doxygen
-doxygen-docs
 dqlite
 dragon
 duktape
@@ -1444,8 +1441,6 @@ libuv
 libva-intel-driver
 libva-utils
 libva-vdpau-driver
-libva
-libvdpau
 libvips
 libvirt-python
 libvirt
@@ -1842,7 +1837,6 @@ ntfs-3g
 ntp
 nuklear
 numactl
-nuspell
 oath-toolkit
 obconf-qt
 obs-studio
@@ -3978,7 +3972,6 @@ spamassassin
 spandsp
 spandsp-docs
 spatialindex
-spdlog
 speakup-utils
 spectacle
 speech-dispatcher

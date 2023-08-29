@@ -78,6 +78,7 @@ ddcutil
 desktop-file-utils
 dhcp
 dhclient
+discount
 distcc
 dmd
 dmd-docs
@@ -86,6 +87,8 @@ dns-over-https
 docker
 dolphin-emu
 dovecot
+doxygen
+doxygen-docs
 dracut
 drkonqi
 dropbear
@@ -385,6 +388,8 @@ libusbmuxd
 libusbsio
 python-libusbsio
 libutempter
+libva
+libvdpau
 libvirt-glib
 libwacom
 libxcb
@@ -494,6 +499,7 @@ libnm
 nm-cloud-setup
 nftables
 nsd
+nuspell
 nvchecker
 nvidia-open
 nvidia-settings
@@ -841,6 +847,7 @@ signon-plugin-oauth2
 skanpage
 smartmontools
 snapper
+spdlog
 spice-gtk
 spice-vdagent
 squid

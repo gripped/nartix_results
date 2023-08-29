@@ -7,6 +7,7 @@ bash
 binutils
 btrfs-progs
 cryptsetup
+db5.3
 dbus
 dbus-docs
 dhcpcd

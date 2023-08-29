@@ -4,7 +4,7 @@
  
  pkgname=python-sphinx
 -_name=${pkgname#python-}
--pkgver=7.2.3
+-pkgver=7.2.4
 -pkgrel=1
 +pkgver=7.0.1
 +pkgrel=3
@@ -16,7 +16,7 @@
    'texlive-latexextra: for generation of PDF documentation'
  )
 -source=("https://github.com/$_name-doc/$_name/archive/v$pkgver/$_name-$pkgver.tar.gz")
--b2sums=('346ac3de17ae02b9b5167f3a13bf52ead9712b3ef2e71fc3d63882ff413e48b2b3c6688cc1eef9545193ef51ac0a1a0d56dad4442b8c8c79ae0b91159510486b')
+-b2sums=('2822d3fa7f2758fe984602debf6e15e6cbb50bccd63e4e91918fc231b65142fd089ee572972ca02f00b1273a7bede86c1f75a54ffa61005f6122e21addb6f49f')
 +source=("https://pypi.org/packages/source/S/Sphinx/Sphinx-$pkgver.tar.gz")
 +sha256sums=('61e025f788c5977d9412587e733733a289e2b9fdc2fef8868ddfbfc4ccfe881d')
 +b2sums=('f6193be4d63a1a6c04168b078a3da9e90da410b109b110b9b2402ce242321fae432c08318113b872c15eb5d822857b1cfc735c7f7ed65842cff12732cc31f232')
