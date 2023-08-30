@@ -14,6 +14,8 @@ lib32-libpulse
 lib32-libsndfile
 lib32-libudev0-shim
 lib32-libusb
+lib32-libva
+lib32-libvdpau
 lib32-libxcb
 lib32-llvm
 lib32-mesa

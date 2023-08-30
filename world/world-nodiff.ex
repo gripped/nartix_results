@@ -7,7 +7,6 @@ acme-tiny
 acpi
 acpi_call-dkms
 acpi_call
-acpica
 acpid
 acpilight
 adobe-source-code-pro-fonts
@@ -238,9 +237,7 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
-clang
 clang14
-clazy
 clevis
 cli11
 clinfo
@@ -269,7 +266,6 @@ colord-gtk-common
 colord-gtk4
 colord-kde
 colordiff
-compiler-rt
 compiler-rt14
 confuse
 consul
@@ -299,7 +295,6 @@ cython
 cython0
 d-spy
 darkhttpd
-darktable
 dart
 darts
 dav1d
@@ -690,7 +685,6 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
-hdf5
 help2man
 herbstluftwm
 hevea
@@ -770,7 +764,6 @@ ipython
 iso-codes
 isodate
 python-isodate
-ispc
 ispell
 isync
 itstool
@@ -815,7 +808,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -915,7 +907,6 @@ kexec-tools
 keybinder2
 libkeybinder2
 keychain
-keysmith
 keystone
 python-keystone
 kfilemetadata
@@ -946,7 +937,6 @@ kig
 kigo
 killbots
 kimageannotator
-kimageformats
 kimagemapeditor
 kimap
 kinfocenter
@@ -1115,7 +1105,6 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
-libavif
 libavtp
 libb2
 libb64
@@ -1522,9 +1511,6 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
-lld
-lldb
-llvm
 llvm14
 lmdb
 log4cplus
@@ -1735,7 +1721,6 @@ mobile-broadband-provider-info
 mod_dnssd
 modem-manager-gui
 modemmanager-qt
-molecule
 molequeue
 mongo-c-driver
 mono
@@ -1779,7 +1764,6 @@ libnautilus-extension-docs
 nauty
 nawk
 nbd
-ncdu
 ncompress
 neatvnc
 nemo-extensions
@@ -1811,7 +1795,6 @@ nginx
 nginx-src
 ninja
 nload
-nlohmann-json
 nmap
 node-gyp
 nodejs-lts-fermium
@@ -1890,7 +1873,6 @@ openmpi
 openntpd
 openrct2
 openscenegraph
-openshadinglanguage
 opensips
 openslide
 opensmtpd
@@ -2372,10 +2354,6 @@ pyqt6-networkauth
 python-pyqt6-networkauth
 pyqt6-webengine
 python-pyqt6-webengine
-pyside2
-shiboken2
-python-shiboken2
-pyside2-tools
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -2421,7 +2399,6 @@ python-aresponses
 python-argcomplete
 python-argh
 python-argon2-cffi-bindings
-python-argon2_cffi
 python-argparse-addons
 python-arpeggio
 python-arpy
@@ -2521,7 +2498,6 @@ python-cleo
 python-clevercsv
 python-click-aliases
 python-click-command-tree
-python-click-default-group
 python-click-didyoumean
 python-click-option-group
 python-click-plugins
@@ -2862,7 +2838,6 @@ python-logutils
 python-looseversion
 python-lsp-black
 python-lsp-jsonrpc
-python-lsp-server
 python-lsprotocol
 python-lupa
 python-lxml
@@ -3056,7 +3031,6 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
-python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -3182,7 +3156,6 @@ python-pytest-socket
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
-python-pytest-testinfra
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
@@ -3551,7 +3524,6 @@ qt5-serialbus
 qt5-serialport
 qt5-speech
 qt5-svg
-qt5-tools
 qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
@@ -3596,8 +3568,6 @@ qt6-webchannel
 qt6-websockets
 qt6-webview
 qt6ct
-qtcreator
-qtcreator-devel
 qterminal
 qtermwidget
 qtkeychain
@@ -3887,6 +3857,11 @@ ruby2.7
 rubygems
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rygel
 s2n-tls
@@ -3912,8 +3887,6 @@ sdl_mixer
 sdl_net
 sdl_sound
 sdl_ttf
-seabios
-seabios-docs
 seahorse
 semver
 sequoia-sq
@@ -3981,7 +3954,6 @@ speexdsp
 spglib
 spice-protocol
 spice
-spirv-headers
 spirv-llvm-translator
 spirv-tools
 splint
@@ -4328,7 +4300,6 @@ vulkan-validation-layers
 w3m
 waf
 warpinator
-wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
 wasi-libc++abi
@@ -4433,7 +4404,6 @@ xfce4-timer-plugin
 xfce4-verve-plugin
 xfce4-wavelan-plugin
 xfce4-weather-plugin
-xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfconf
 xfdesktop
@@ -4526,7 +4496,6 @@ zeroc-ice
 zeroc-ice-java
 zeromq
 zfp
-zig
 zimg
 zip
 zita-alsa-pcmi

@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,28 @@
+ 
+ pkgname=xfce4-whiskermenu-plugin
+-pkgver=2.8.0
++pkgver=2.7.3
+ pkgrel=1
+ pkgdesc='Menu for Xfce4'
+ arch=('x86_64')
+ url='https://gottcode.org/xfce4-whiskermenu-plugin/'
+ groups=('xfce4-goodies')
+ license=('GPL2')
+-depends=('accountsservice' 'garcon' 'gtk3' 'gtk-layer-shell' 'xfce4-panel')
++depends=('garcon' 'xfce4-panel' 'gtk3>=3.22')
+ makedepends=('cmake' 'ninja')
+ source=("https://archive.xfce.org/src/panel-plugins/${pkgname}/${pkgver%.*}/${pkgname}-${pkgver}.tar.bz2")
+-sha256sums=('bcf8035ee9080a955b7ad6f2da0fdefa4db283f9ce2d1717ad0faef5c23244e6')
++sha256sums=('da2699ec9665388cf7fa1090088290f78245667fa6846ffca14116264a9fe6e9')
+ 
+ build() {
+-  cmake -B build -S "${srcdir}/${pkgname}-${pkgver}" \
+-    -DCMAKE_BUILD_TYPE=Release \
+-    -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DCMAKE_INSTALL_LIBDIR=lib \
+-    -GNinja
+-  cmake --build build
++	mkdir -p build
++	cd build
++	cmake "$srcdir/$pkgname-$pkgver" \
++		-DCMAKE_BUILD_TYPE=Release \
++		-DCMAKE_INSTALL_PREFIX=/usr \
++		-DCMAKE_INSTALL_LIBDIR=lib \
++		-GNinja
++  	ninja
+ }
+ 
+ package() {
+-  DESTDIR="${pkgdir}" cmake --install build
++	DESTDIR="$pkgdir" ninja -C build install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,14 @@
+ pkgname=xfce4-whiskermenu-plugin
+ groups=('xfce4-goodies')
+-depends=('accountsservice' 'garcon' 'gtk3' 'gtk-layer-shell' 'xfce4-panel')
++depends=('garcon' 'xfce4-panel' 'gtk3>=3.22')
+ makedepends=('cmake' 'ninja')
+ build() {
+-  cmake -B build -S "${srcdir}/${pkgname}-${pkgver}" \
+-    -DCMAKE_BUILD_TYPE=Release \
+-    -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DCMAKE_INSTALL_LIBDIR=lib \
+-    -GNinja
+-  cmake --build build
++	mkdir -p build
++	cd build
++	cmake "$srcdir/$pkgname-$pkgver" \
++		-DCMAKE_BUILD_TYPE=Release \
++		-DCMAKE_INSTALL_PREFIX=/usr \
++		-DCMAKE_INSTALL_LIBDIR=lib \
++		-GNinja
++  	ninja
+ }

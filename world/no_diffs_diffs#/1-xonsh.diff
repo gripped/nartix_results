@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=xonsh
+-pkgver=0.14.1
++pkgver=0.14.0
+ pkgrel=1
+ pkgdesc="Python-powered, cross-platform, Unix-gazing shell"
+ url="https://xon.sh/"
+@@ -11,7 +11,7 @@
+ makedepends=("python-setuptools" "python-wheel")
+ source=("https://github.com/xonsh/xonsh/releases/download/$pkgver/$pkgname-$pkgver.tar.gz")
+ install=xonsh.install
+-sha256sums=('050640cc805a98a79288c8e57c367ed7eb4dde39b3e318c636a8f63e86267b29')
++sha256sums=('3047df57f9de4ea930b0b60f3b143924742fe9a349dddf3e86e74fe346ef476e')
+ 
+ package() {
+   cd $pkgname-$pkgver

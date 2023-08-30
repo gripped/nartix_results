@@ -70,6 +70,8 @@ pcre
 perl
 ppp
 procps-ng
+python
+python-tests
 rpcbind
 sqlite
 sqlite-tcl

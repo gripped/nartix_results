@@ -1,5 +1,6 @@
 abseil-cpp
 accountsservice
+acpica
 adios2
 akonadi-calendar
 akonadi-search
@@ -52,6 +53,8 @@ check-jsonschema
 chromium-bsu
 chrony
 clamav
+clang
+clazy
 cloud-init
 clutter
 cmake
@@ -59,6 +62,7 @@ codespell
 colord
 colord-sane
 libcolord
+compiler-rt
 conky
 conmon
 connman
@@ -73,6 +77,7 @@ cyrus-sasl
 cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
+darktable
 dbus-broker
 ddcutil
 desktop-file-utils
@@ -238,6 +243,7 @@ gvfs-nfs
 gvfs-google
 haproxy
 haveged
+hdf5
 hidapi
 hotdoc
 hwloc
@@ -254,6 +260,7 @@ intel-opencl-clang
 intel-undervolt
 interception-tools
 irssi
+ispc
 itinerary
 iwd
 jack2
@@ -281,6 +288,7 @@ jp2a
 js78
 json-glib
 json-glib-docs
+julia
 jupyter-notebook
 jupyterlab
 k3b
@@ -306,6 +314,8 @@ kde-development-environment-meta
 kde-gtk-config
 kdevelop
 kdoctools
+keysmith
+kimageformats
 kio
 kismet
 kleopatra
@@ -328,6 +338,7 @@ libadwaita
 libadwaita-docs
 libadwaita-demos
 libatasmart
+libavif
 libayatana-indicator
 libblockdev
 libcamera
@@ -425,6 +436,9 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+lld
+lldb
+llvm
 lm_sensors
 lsb-release
 luajit
@@ -477,6 +491,7 @@ minio
 mitmproxy
 modemmanager
 libmm-glib
+molecule
 mosquitto
 mousepad
 mpd
@@ -487,6 +502,7 @@ mumble
 mumble-server
 mutter
 mutter-docs
+ncdu
 ncftp
 ndctl
 ndisc6
@@ -498,6 +514,7 @@ networkmanager
 libnm
 nm-cloud-setup
 nftables
+nlohmann-json
 nsd
 nuspell
 nvchecker
@@ -521,6 +538,7 @@ opendoas
 openfire
 openpmix
 openpmix-docs
+openshadinglanguage
 openvpn
 osinfo-db
 ostree
@@ -630,11 +648,16 @@ pv
 pyqt5
 python-pyqt5
 pyqt6
+pyside2
+shiboken2
+python-shiboken2
+pyside2-tools
 pyside6
 shiboken6
 pyside6-tools
 python-aiofiles
 python-aiosqlite
+python-argon2_cffi
 python-authheaders
 python-aws-sam-translator
 python-bcrypt
@@ -645,6 +668,7 @@ python-cairocffi
 python-cerberus
 python-cfgv
 python-chardet
+python-click-default-group
 python-click-help-colors
 python-click-repl
 python-cookiecutter
@@ -667,6 +691,7 @@ python-keyring
 python-keyrings-alt
 python-lark-parser
 python-ldap
+python-lsp-server
 python-mailmanclient
 python-markdown-it-py
 python-mistune
@@ -675,6 +700,7 @@ python-myst-parser
 python-nbxmpp
 python-parse
 python-pathspec
+python-pyarrow
 python-pycodestyle
 python-pydantic-core
 python-pydantic
@@ -684,6 +710,7 @@ python-pyproj
 python-pytest-benchmark
 python-pytest-enabler
 python-pytest-param-files
+python-pytest-testinfra
 python-pyudev
 python-rapidfuzz
 python-readme-renderer
@@ -787,6 +814,7 @@ qhull
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
+qt5-tools
 qt5-webengine
 qt6-base
 qt6-declarative
@@ -796,6 +824,8 @@ qt6-location
 qt6-tools
 qt6-wayland
 qt6-webengine
+qtcreator
+qtcreator-devel
 quazip
 quazip-qt5
 quazip-qt6
@@ -821,11 +851,6 @@ ruby-rugged
 ruby-sus
 ruff
 python-ruff
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rxvt-unicode
 rxvt-unicode-terminfo
 salt
@@ -838,6 +863,8 @@ scons
 sdcv
 sddm
 sdl2_mixer
+seabios
+seabios-docs
 seatd
 sfml
 shairport-sync
@@ -850,6 +877,7 @@ snapper
 spdlog
 spice-gtk
 spice-vdagent
+spirv-headers
 squid
 sshguard
 sslh
@@ -934,6 +962,7 @@ vte-common
 vte4
 vte-docs
 vtk
+wasi-compiler-rt
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -974,6 +1003,7 @@ xf86-video-openchrome
 xf86-video-vmware
 xfce4-cpugraph-plugin
 xfce4-terminal
+xfce4-whiskermenu-plugin
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb
@@ -987,4 +1017,5 @@ xscreensaver
 xxhash
 yt-dlp
 yubikey-personalization
+zig
 znc

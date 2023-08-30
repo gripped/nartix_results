@@ -94,8 +94,6 @@ lib32-libtiff
 lib32-libtirpc
 lib32-libunistring
 lib32-libunwind
-lib32-libva
-lib32-libvdpau
 lib32-libvisual
 lib32-libvorbis
 lib32-libvpx

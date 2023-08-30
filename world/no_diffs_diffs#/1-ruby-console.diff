@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=ruby-console
--pkgver=1.17.4
+-pkgver=1.18.0
 +pkgver=1.17.2
  pkgrel=1
  pkgdesc='Beautiful logging for Ruby'
@@ -12,7 +12,7 @@
  checkdepends=(ruby-bake ruby-bake-test ruby-bake-test-external ruby-covered ruby-sus)
  options=(!emptydirs)
  source=(https://github.com/socketry/console/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
--sha256sums=('a8aebcb3d65e76eb9b2e4de009362fde94c7c36886d68cf88a05a10fc8a9109a')
+-sha256sums=('258f990f92d16ebf3c022f76fd78fcbbd592ef26df3f6bfc80a6b3da91ccf97f')
 +sha256sums=('915c0df1a53c04addb1179df27f7fa52082f2a43626ffdb10a9780e4fd253b43')
  
  prepare() {

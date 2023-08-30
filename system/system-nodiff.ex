@@ -146,8 +146,6 @@ pkgconf
 popt
 pptpclient
 psmisc
-python
-python-tests
 readline
 reiserfsprogs
 run-parts
