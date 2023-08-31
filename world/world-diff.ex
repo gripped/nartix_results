@@ -386,6 +386,7 @@ libmbim
 libnvme
 libodfgen
 libotr
+libphonenumber
 libpng
 libprocps
 libquotient
@@ -626,6 +627,7 @@ postfix-mysql
 postfix-pcre
 postfix-pgsql
 postfix-sqlite
+postgis
 postgresql-old-upgrade
 postgresql
 postgresql-libs
@@ -656,6 +658,7 @@ pyside6
 shiboken6
 pyside6-tools
 python-aiofiles
+python-aiohttp
 python-aiosqlite
 python-argon2_cffi
 python-authheaders
@@ -700,6 +703,7 @@ python-myst-parser
 python-nbxmpp
 python-parse
 python-pathspec
+python-pdm-backend
 python-pyarrow
 python-pycodestyle
 python-pydantic-core
@@ -707,6 +711,7 @@ python-pydantic
 python-pygit2
 python-pymupdf
 python-pyproj
+python-pyproject-api
 python-pytest-benchmark
 python-pytest-enabler
 python-pytest-param-files

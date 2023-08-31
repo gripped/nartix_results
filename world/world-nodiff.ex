@@ -1326,7 +1326,6 @@ libpciaccess
 libpeas
 libpeas-docs
 libpgm
-libphonenumber
 libpinyin
 libplacebo
 libplist
@@ -2288,7 +2287,6 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
-postgis
 postgrey
 postorius
 potrace
@@ -2368,7 +2366,6 @@ python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
-python-aiohttp
 python-aioitertools
 python-aiomysql
 python-aiopg
@@ -2967,7 +2964,6 @@ python-pbkdf2
 python-pbr
 python-pc-ble-driver-py
 python-pdfrw
-python-pdm-backend
 python-pdm-pep517
 python-pdm
 python-pecan
@@ -3089,7 +3085,6 @@ python-pyparsing
 python-pyperclip
 python-pypng
 python-pyppeteer
-python-pyproject-api
 python-pyproject-hooks
 python-pyproject-metadata
 python-pyqt5-sip
