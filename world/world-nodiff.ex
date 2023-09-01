@@ -1722,7 +1722,6 @@ modem-manager-gui
 modemmanager-qt
 molequeue
 mongo-c-driver
-mono
 mopidy
 moreutils
 mosh
@@ -4266,9 +4265,6 @@ vice
 vid.stab
 viewnior
 vigra
-vim
-gvim
-vim-runtime
 vimiv
 virglrenderer
 virt-manager
@@ -4477,8 +4473,6 @@ yodl
 youtube-dl
 yubico-c-client
 yubico-c
-z3
-python-z3-solver
 zanshin
 zathura-djvu
 zathura-pdf-mupdf

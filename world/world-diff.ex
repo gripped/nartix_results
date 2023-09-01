@@ -493,6 +493,7 @@ mitmproxy
 modemmanager
 libmm-glib
 molecule
+mono
 mosquitto
 mousepad
 mpd
@@ -952,6 +953,9 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 verdict
+vim
+gvim
+vim-runtime
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms
@@ -1022,5 +1026,7 @@ xscreensaver
 xxhash
 yt-dlp
 yubikey-personalization
+z3
+python-z3-solver
 zig
 znc
