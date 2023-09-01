@@ -119,7 +119,6 @@ libxml2-docs
 licenses
 links
 linux-api-headers
-logrotate
 lz4
 lzo
 m4

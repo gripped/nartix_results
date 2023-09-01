@@ -246,6 +246,7 @@ haveged
 hdf5
 hidapi
 hotdoc
+httpbin
 hwloc
 hyprland
 i2pd
@@ -323,6 +324,7 @@ kmail-account-wizard
 kmailtransport
 knot
 koko
+konsole
 kontrast
 kosmindoormap
 kpimtextedit

@@ -47,6 +47,7 @@ linux-lts-docs
 linux
 linux-headers
 linux-docs
+logrotate
 lvm2
 device-mapper
 man-db

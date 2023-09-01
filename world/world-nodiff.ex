@@ -704,7 +704,6 @@ hspell
 hunspell-he
 htop
 http-parser
-httpbin
 hub
 hugin
 hunspell-de
@@ -990,7 +989,6 @@ kompare
 kongress
 konqueror
 konquest
-konsole
 kontact
 kontactinterface
 konversation
