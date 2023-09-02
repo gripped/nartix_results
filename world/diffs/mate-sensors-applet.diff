@@ -1,14 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,16 +1,16 @@
  
  pkgname=mate-sensors-applet
 -pkgver=1.26.0
+-pkgrel=2
 +pkgver=1.27.0
- pkgrel=1
++pkgrel=1
  pkgdesc="A MATE Panel applet to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings"
  url="https://mate-desktop.org"
-@@ -10,20 +10,20 @@
+ arch=('x86_64')
+ license=('GPL')
+-depends=('udisks2' 'libnotify' 'libxnvctrl' 'lm_sensors' 'mate-panel' 'gettext')
++depends=('libatasmart' 'libnotify' 'libxnvctrl' 'lm_sensors' 'mate-panel' 'gettext')
  makedepends=('docbook-xsl' 'itstool')
  groups=('mate-extra')
  source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
@@ -17,44 +21,16 @@
  
  build() {
  	cd "${pkgname}-${pkgver}"
--    	./configure \
--        	--prefix=/usr \
--        	--libexecdir=/usr/lib/${pkgname}
-+	./configure \
-+	            --prefix=/usr \
-+	            --libexecdir=/usr/lib/${pkgname}
- 
--    	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-+	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
- 
--  	make
-+	make
- }
- 
- package() {
--    	cd "${pkgname}-${pkgver}"
--    	make DESTDIR="${pkgdir}" install
-+	cd "${pkgname}-${pkgver}"
-+	make DESTDIR="${pkgdir}" install
- }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,9 +4,9 @@
+@@ -1,5 +1,5 @@
+ pkgname=mate-sensors-applet
+-depends=('udisks2' 'libnotify' 'libxnvctrl' 'lm_sensors' 'mate-panel' 'gettext')
++depends=('libatasmart' 'libnotify' 'libxnvctrl' 'lm_sensors' 'mate-panel' 'gettext')
+ makedepends=('docbook-xsl' 'itstool')
  groups=('mate-extra')
  build() {
- 	cd "${pkgname}-${pkgver}"
--    	./configure \
--        	--prefix=/usr \
--        	--libexecdir=/usr/lib/${pkgname}
--    	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
--  	make
-+	./configure \
-+	            --prefix=/usr \
-+	            --libexecdir=/usr/lib/${pkgname}
-+	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-+	make
- }

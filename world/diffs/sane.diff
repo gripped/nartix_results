@@ -1,11 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -29,27 +29,23 @@
+@@ -2,7 +2,7 @@
+ _name=backends
+ pkgname=sane
+ pkgver=1.2.1
+-pkgrel=5
++pkgrel=4
+ pkgdesc="Scanner Access Now Easy"
+ arch=(x86_64)
+ url="http://www.sane-project.org/"
+@@ -29,30 +29,23 @@
    libxml2
    poppler-glib
    python
 -  systemd
    texlive-latexextra
+-)
+-optdepends=(
+-  'sane-airscan: for scanners working in driverless mode'
  )
  provides=(libsane.so)
  source=(
@@ -33,7 +45,7 @@
  
  prepare() {
    cd $_name-$pkgver
-@@ -74,8 +70,8 @@
+@@ -77,8 +70,8 @@
      --with-libcurl
      --with-pic
      --with-poppler-glib
@@ -43,7 +55,12 @@
    )
  
    cd $_name-$pkgver
-@@ -95,7 +91,6 @@
+@@ -94,12 +87,10 @@
+     curl libcurl.so
+     glib2 libgobject-2.0.so
+     libgphoto2 libgphoto2.so libgphoto2_port.so
+-    libjpeg-turbo libjpeg.so
+     libtiff libtiff.so
      libusb libusb-1.0.so
      libxml2 libxml2.so
      poppler-glib libpoppler-glib.so
@@ -51,7 +68,7 @@
    )
  
    cd $_name-$pkgver
-@@ -110,11 +105,9 @@
+@@ -114,11 +105,9 @@
    printf "\n" >> "$pkgdir/usr/lib/udev/hwdb.d/20-$pkgname.hwdb"
    tools/sane-desc -m hwdb -s doc/descriptions-external/ >> "$pkgdir/usr/lib/udev/hwdb.d/20-$pkgname.hwdb"
  

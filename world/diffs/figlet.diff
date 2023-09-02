@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=figlet
+ pkgver=2.2.5
+-pkgrel=5
++pkgrel=4
+ pkgdesc="A program for making large letters out of ordinary text"
+ arch=('x86_64')
+ url="http://www.figlet.org/"
+@@ -12,7 +12,7 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
+-  make CFLAGS="$CPPFLAGS $CFLAGS" LDFLAGS="$LDFLAGS" DEFAULTFONTDIR=/usr/share/figlet/fonts all
++  make DEFAULTFONTDIR=/usr/share/figlet/fonts all
+ }
+ 
+ check() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,5 +2,5 @@
+ depends=('glibc' 'sh')
+ build() {
+   cd ${pkgname}-${pkgver}
+-  make CFLAGS="$CPPFLAGS $CFLAGS" LDFLAGS="$LDFLAGS" DEFAULTFONTDIR=/usr/share/figlet/fonts all
++  make DEFAULTFONTDIR=/usr/share/figlet/fonts all
+ }

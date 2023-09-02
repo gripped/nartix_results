@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=materia-kde
+ pkgname=(materia-kde kvantum-theme-materia)
+ pkgver=20220823
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Materia theme for KDE Plasma 5"
+ arch=(any)
+ url="https://github.com/PapirusDevelopmentTeam/materia-kde"
+@@ -12,7 +12,6 @@
+ sha256sums=('2731ffbf22e6fa4afa321fd677d3981c9a3851b9bca1e65d2439e6f3f6b735bf')
+ 
+ package_materia-kde() {
+-    depends=('qt5-graphicaleffects' 'qt5-quickcontrols2')
+     optdepends=('materia-gtk-theme: Matching GTK theme'
+                 'kvantum-theme-materia: Materia theme for Kvantum Qt style (recommended)')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,6 @@
+ pkgname=(materia-kde kvantum-theme-materia)
+ options=(!strip)
+ package_materia-kde() {
+-    depends=('qt5-graphicaleffects' 'qt5-quickcontrols2')
+     ')
+     cd ${pkgbase}-${pkgver}
+     install -d "${pkgdir}"/usr/share

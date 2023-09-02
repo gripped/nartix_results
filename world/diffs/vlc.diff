@@ -1,14 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -3,12 +3,12 @@
  _vlcver=3.0.18
  _vlcfixupver=
  pkgver=${_vlcver}${_vlcfixupver//-/.r}
--pkgrel=14
+-pkgrel=15
 +pkgrel=13.1
  pkgdesc='Multi-platform MPEG, VCD/DVD, and DivX player'
  url='https://www.videolan.org/vlc/'
  arch=('x86_64')
+ license=('LGPL2.1' 'GPL2')
+-depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua' 'libidn'
++depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua52' 'libidn'
+          'libmatroska' 'taglib' 'libmpcdec' 'ffmpeg4.4' 'faad2' 'libmad'
+          'libmpeg2' 'xcb-util-keysyms' 'libtar' 'libxinerama' 'libsecret'
+          'libupnp' 'libixml.so' 'libupnp.so' 'libarchive' 'qt5-base'
 @@ -16,7 +16,7 @@
           'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
  makedepends=('gst-plugins-base-libs' 'live-media' 'libnotify' 'libbluray'
@@ -27,12 +33,41 @@
              'smbclient: SMB access plugin'
              'libcdio: audio CD playback'
              'gnu-free-fonts: subtitle font '
+@@ -52,7 +52,7 @@
+             'mpg123: mpg123 codec'
+             'protobuf: chromecast streaming'
+             'libmicrodns: mDNS services discovery (chromecast etc)'
+-            'lua-socket: http interface'
++            'lua52-socket: http interface'
+             'libdvdread: DVD input module'
+             'libdvdnav: DVD with navigation input module'
+             'libogg: Ogg and OggSpots codec'
+@@ -128,8 +128,8 @@
+   export CPPFLAGS+=" -I/usr/include/samba-4.0"
+   export CXXFLAGS+=" -std=c++17"
+   export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig"
+-  export LUAC=/usr/bin/luac
+-  export LUA_LIBS="$(pkg-config --libs lua)"
++  export LUAC=/usr/bin/luac5.2
++  export LUA_LIBS="$(pkg-config --libs lua5.2)"
+   export RCC=/usr/bin/rcc-qt5
+   export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig/:$PKG_CONFIG_PATH"
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=vlc
+ _vlcver=3.0.18
+ _vlcfixupver=
+-depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua' 'libidn'
++depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua52' 'libidn'
+          'libmatroska' 'taglib' 'libmpcdec' 'ffmpeg4.4' 'faad2' 'libmad'
+          'libmpeg2' 'xcb-util-keysyms' 'libtar' 'libxinerama' 'libsecret'
+          'libupnp' 'libixml.so' 'libupnp.so' 'libarchive' 'qt5-base'
 @@ -9,7 +9,7 @@
           'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
  makedepends=('gst-plugins-base-libs' 'live-media' 'libnotify' 'libbluray'
@@ -42,3 +77,23 @@
               'libmtp' 'libmicrodns' 'libdvdcss' 'smbclient'
               'vcdimager' 'libssh2' 'mesa' 'protobuf' 'libnfs' 'mpg123'
               'libdvdread' 'libdvdnav' 'libogg' 'libshout' 'libmodplug' 'libvpx'
+@@ -19,7 +19,7 @@
+              'lirc' 'libgoom2' 'projectm' 'aom' 'srt' 'dav1d'
+              'aribb25' 'pcsclite' 'wayland-protocols')
+ '
+-            'lua-socket: http interface'
++            'lua52-socket: http interface'
+             'libdvdread: DVD input module'
+             'libdvdnav: DVD with navigation input module'
+             'libogg: Ogg and OggSpots codec'
+@@ -82,8 +82,8 @@
+   export CPPFLAGS+=" -I/usr/include/samba-4.0"
+   export CXXFLAGS+=" -std=c++17"
+   export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig"
+-  export LUAC=/usr/bin/luac
+-  export LUA_LIBS="$(pkg-config --libs lua)"
++  export LUAC=/usr/bin/luac5.2
++  export LUA_LIBS="$(pkg-config --libs lua5.2)"
+   export RCC=/usr/bin/rcc-qt5
+   export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig/:$PKG_CONFIG_PATH"
+   ./configure \

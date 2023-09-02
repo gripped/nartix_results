@@ -299,7 +299,6 @@ darts
 dav1d
 dav1d-doc
 dblatex
-dbus-cplusplus
 dbus-glib
 dbus-python
 dbus-python-docs
@@ -427,7 +426,6 @@ ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
-figlet
 file-roller
 filelight
 fira-code
@@ -1059,7 +1057,6 @@ kwrited
 kxmlgui
 kyotocabinet
 l-smash
-ladspa
 lame
 languagetool
 lapack
@@ -1094,7 +1091,6 @@ libaccounts-qt
 libaec
 libalkimia
 libao
-libappimage
 libappindicator
 libappindicator-gtk2
 libappindicator-gtk3
@@ -1149,6 +1145,7 @@ libdmapsharing
 libdmtx
 libdnet
 libdv
+libdvbpsi
 libdvdcss
 libdvdnav
 libdvdread
@@ -1670,8 +1667,6 @@ mate-terminal
 mate-themes
 mate-user-guide
 mate-utils
-materia-kde
-kvantum-theme-materia
 mathjax2
 matterbridge
 maturin
@@ -1776,7 +1771,6 @@ nemo
 neomutt
 neon
 neovim-qt
-net-snmp
 netcdf-fortran
 netcdf
 netcf
@@ -2369,7 +2363,6 @@ python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiounittest
-python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
@@ -2690,7 +2683,6 @@ python-gmpy2
 python-gnupginterface
 python-google-api-core
 python-google-api-python-client
-python-google-auth-httplib2
 python-google-auth
 python-googleapis-common-protos
 python-graphene
@@ -4261,6 +4253,9 @@ vice
 vid.stab
 viewnior
 vigra
+vim
+gvim
+vim-runtime
 vimiv
 virglrenderer
 virt-manager

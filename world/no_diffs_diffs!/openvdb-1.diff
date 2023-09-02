@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=openvdb
+ pkgver=10.0.1
+-pkgrel=5
++pkgrel=4
+ pkgdesc='A large suite of tools for the efficient storage and manipulation of sparse volumetric data discretized on three-dimensional grids'
+ url='https://github.com/dreamworksanimation/openvdb'
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ optdepends=('glfw: for tools'
+             'glu: for tools'
+             'python-numpy: python module')
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/AcademySoftwareFoundation/openvdb/archive/v${pkgver}.tar.gz")
++source=("$pkgname-$pkgver.tar.gz::https://github.com/dreamworksanimation/openvdb/archive/v${pkgver}.tar.gz")
+ sha512sums=('361cef8932b69b19ee94c47fe78f665a1acabfabc3f45ff9f490e830f73ff092c42f56ce698677476a8ccf062c89e3e4dc6d4c550aa6842438cbd4d404ee83bb')
+ 
+ build() {

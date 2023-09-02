@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=kig
 -pkgver=23.08.0
+-pkgrel=2
 +pkgver=23.04.3
- pkgrel=1
++pkgrel=1
  pkgdesc='Interactive Geometry'
  url='https://apps.kde.org/kig/'
+ arch=(x86_64)
 @@ -10,14 +10,14 @@
  depends=(ktexteditor qt5-xmlpatterns boost-libs python hicolor-icon-theme)
  makedepends=(extra-cmake-modules kdoctools boost)

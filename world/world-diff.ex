@@ -80,6 +80,7 @@ cyrus-sasl-ldap
 cyrus-sasl-sql
 darktable
 dbus-broker
+dbus-cplusplus
 ddcutil
 desktop-file-utils
 dhcp
@@ -132,6 +133,7 @@ fcitx-configtool
 fcitx-mozc
 fcitx5
 fcron
+figlet
 firefox
 firewalld
 flatbuffers
@@ -335,11 +337,13 @@ krita
 ksysguard
 ktnef
 kwordquiz
+ladspa
 ldc
 lensfun
 libadwaita
 libadwaita-docs
 libadwaita-demos
+libappimage
 libatasmart
 libavif
 libayatana-indicator
@@ -358,7 +362,6 @@ libdbusmenu-gtk3
 libdex
 libdex-docs
 libdrm
-libdvbpsi
 libepoxy
 libepoxy-docs
 libfdk-aac
@@ -471,6 +474,8 @@ mate-sensors-applet
 mate-session-manager
 mate-system-monitor
 mate-user-share
+materia-kde
+kvantum-theme-materia
 matrix-synapse
 mc
 media-player-info
@@ -514,6 +519,7 @@ ndisc6
 neochat
 neofetch
 neovim
+net-snmp
 netplan
 networkmanager
 libnm
@@ -665,6 +671,7 @@ pyside6-tools
 python-aiofiles
 python-aiohttp
 python-aiosqlite
+python-alembic
 python-argon2_cffi
 python-authheaders
 python-aws-sam-translator
@@ -689,6 +696,7 @@ python-django-debug-toolbar
 python-editables
 python-exceptiongroup
 python-gnupg
+python-google-auth-httplib2
 python-hypothesis
 python-ipywidgets
 python-jaraco.functools
@@ -957,9 +965,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 verdict
-vim
-gvim
-vim-runtime
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms

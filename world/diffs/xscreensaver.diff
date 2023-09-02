@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,25 +1,25 @@
  
  pkgname=xscreensaver
 -pkgver=6.07
+-pkgrel=2
 +pkgver=6.06
- pkgrel=1
++pkgrel=1
  pkgdesc='Screen saver and locker for the X Window System'
  url='https://www.jwz.org/xscreensaver/'
-@@ -8,18 +8,18 @@
+ arch=('x86_64')
  license=('BSD')
  depends=(
    'gtk3' 'glu' 'xorg-appres' 'libglvnd' 'libjpeg-turbo' 'libjpeg.so'
@@ -31,6 +32,17 @@
          'cacb6ba39d6ecb8703ef5f5a7dc74de0ca805cce73b43a8b9b6b4c255c909aa9b5e692de76c2fbd4da26ce6efb5f2a46138c43b1b37f53cee6d20fd6ed41f4a9')
  
  build() {
+@@ -36,9 +36,7 @@
+     --with-gl \
+     --without-gle \
+     --with-pixbuf \
+-    --with-jpeg \
+-    --with-systemd \
+-    --enable-pam-check-account-type
++    --with-jpeg
+   make
+ }
+ 
 
 
 ############# Stripped diff below #################
@@ -51,3 +63,13 @@
  backup=('etc/pam.d/xscreensaver')
  build() {
    cd ${pkgname}-${pkgver}
+@@ -21,8 +21,6 @@
+     --with-gl \
+     --without-gle \
+     --with-pixbuf \
+-    --with-jpeg \
+-    --with-systemd \
+-    --enable-pam-check-account-type
++    --with-jpeg
+   make
+ }

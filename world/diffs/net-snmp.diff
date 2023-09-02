@@ -1,15 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,23 +1,20 @@
  
  pkgname=net-snmp
  pkgver=5.9.1
--pkgrel=7
+-pkgrel=8
 +pkgrel=6
  pkgdesc="A suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6"
  arch=('x86_64')
  url="http://www.net-snmp.org/"
-@@ -12,12 +12,9 @@
+ license=('BSD')
+-depends=('libnsl' 'libpcap' 'lm_sensors' 'pciutils' 'pcre' 'perl')
++depends=('libnsl' 'libpcap' 'lm_sensors' 'pciutils' 'pcre')
+ makedepends=('python-setuptools')
+ optdepends=('perl-term-readkey: for snmpcheck application'
              'perl-tk: for snmpcheck and tkmib applications'
              'python: for the python modules')
  options=('!emptydirs' '!makeflags')
@@ -32,3 +36,16 @@
 -  install -D -m644 "${srcdir}/snmptrapd.service" "${pkgdir}/usr/lib/systemd/system/snmptrapd.service"
    install -D -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=net-snmp
+-depends=('libnsl' 'libpcap' 'lm_sensors' 'pciutils' 'pcre' 'perl')
++depends=('libnsl' 'libpcap' 'lm_sensors' 'pciutils' 'pcre')
+ makedepends=('python-setuptools')
+ options=('!emptydirs' '!makeflags')
+ prepare() {

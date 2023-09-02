@@ -1,5 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -4,8 +4,8 @@
+   at-spi2-core
+   at-spi2-core-docs
+ )
+-pkgver=2.48.4
+-pkgrel=1
++pkgver=2.48.3
++pkgrel=2
+ pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
+ url="https://gitlab.gnome.org/GNOME/at-spi2-core"
+ arch=(x86_64)
 @@ -17,7 +17,7 @@
    libx11
    libxml2
@@ -9,6 +20,15 @@
    xorg-xprop
  )
  makedepends=(
+@@ -31,7 +31,7 @@
+ checkdepends=(
+   at-spi2-core
+ )
+-_commit=ebfda3a63fc351f977d5428b1e7e1979c8edb5c5  # tags/AT_SPI2_CORE_2_48_4^0
++_commit=c0c1b0477ab643e900cecfaf8d3af70ed9400b82  # tags/AT_SPI2_CORE_2_48_3^0
+ source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
 @@ -50,7 +50,7 @@
      -D docs=true
    )
