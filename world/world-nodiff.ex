@@ -63,7 +63,6 @@ aribb24
 aribb25
 ark
 armagetronad
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -1857,7 +1856,6 @@ opencv-samples
 python-opencv
 opencv-cuda
 opendbx
-openexr
 openfec
 openimagedenoise
 openimageio

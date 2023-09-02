@@ -4,6 +4,7 @@ lib32-dbus
 lib32-fluidsynth
 lib32-freetype2
 lib32-gamemode
+lib32-glib2
 lib32-glu
 lib32-jack2
 lib32-libdrm

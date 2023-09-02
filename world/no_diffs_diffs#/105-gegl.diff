@@ -1,14 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,6 +15,8 @@
+@@ -2,7 +2,7 @@
+ pkgname=gegl
+ _tag='c7cd8520066a05c9502dfc93a39e97a9546dc824'
+ pkgver=0.4.46
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Graph based image processing framework'
+ arch=('x86_64')
+ url='https://www.gegl.org/'
+@@ -15,7 +15,9 @@
  optdepends=('ffmpeg: FFmpeg Frame Loader and FFmpeg Frame Saver plugins'
              'graphviz: for gegl-introspect'
              'sdl2: SDL2 Display plugin')
+-source=("git+https://github.com/GNOME/gegl.git#tag=$_tag")
 +
 +options=('debug')
- source=("git+https://gitlab.gnome.org/GNOME/gegl.git#tag=$_tag")
++source=("git+https://gitlab.gnome.org/GNOME/gegl.git#tag=$_tag")
  sha256sums=('SKIP')
  
+ pkgver() {
 @@ -26,7 +28,7 @@
  build() {
    mkdir -p build

@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,7 +1,8 @@
  
  pkgname=krita
 -pkgver=5.1.5
+-pkgrel=11
 +_pkgver=5.1.5
 +pkgver=${_pkgver/-/}
- pkgrel=10
++pkgrel=10
  pkgdesc='Edit and paint images'
  arch=(x86_64)
+ url='https://krita.org'
 @@ -14,7 +15,7 @@
              'python-pyqt5: for the Python plugins' 'libheif: HEIF filter'
              'kseexpr: SeExpr generator layer' 'kimageformats: PSD support' 'libmypaint: support for MyPaint brushes'
@@ -18,7 +20,7 @@
          find-xsimd.patch
          https://invent.kde.org/graphics/krita/-/commit/e9184281.patch
          https://invent.kde.org/graphics/krita/-/commit/bbee5eff.patch
-@@ -30,14 +31,14 @@
+@@ -30,16 +31,15 @@
                '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
  
  prepare() {
@@ -34,10 +36,13 @@
  
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
+-    -DBUILD_TESTING=OFF
 +  artix-cmake -B build -S $pkgname-$_pkgver \
-     -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON
++    -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON
    cmake --build build
  }
+ 
 
 
 ############# Stripped diff below #################
@@ -50,7 +55,7 @@
  depends=(kitemviews kitemmodels ki18n kcompletion kguiaddons kcrash qt5-svg qt5-multimedia quazip
           gsl libraw exiv2 openexr fftw openjpeg2 opencolorio libwebp hicolor-icon-theme)
  makedepends=(extra-cmake-modules kdoctools boost eigen poppler-qt5 python-pyqt5 libheif
-@@ -6,13 +7,13 @@
+@@ -6,14 +7,13 @@
   <dimula73@gmail.com>
                '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
  prepare() {
@@ -65,7 +70,9 @@
  }
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
+-    -DBUILD_TESTING=OFF
 +  artix-cmake -B build -S $pkgname-$_pkgver \
-     -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON
++    -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON
    cmake --build build
  }

@@ -15,6 +15,7 @@ appstream-glib
 appstream
 appstream-qt
 archivetools
+arrow
 aspell-uk
 at-spi2-core
 at-spi2-core-docs
@@ -539,6 +540,7 @@ opencc
 opencc-doc
 opendht
 opendoas
+openexr
 openfire
 openpmix
 openpmix-docs

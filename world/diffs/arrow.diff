@@ -1,0 +1,139 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,33 @@
+ 
+ pkgname=arrow
+-pkgver=13.0.0
+-pkgrel=2
++pkgver=10.0.1
++pkgrel=10
+ pkgdesc="Columnar in-memory analytics layer for big data."
+ arch=(x86_64)
+ url="https://arrow.apache.org"
+ license=(Apache)
+-depends=(apache-orc brotli bzip2 gflags grpc google-glog libutf8proc
+-         lz4 openssl protobuf re2 snappy thrift zlib zstd)
++depends=(apache-orc boost-libs brotli bzip2 double-conversion c-ares gflags
++         grpc google-glog jemalloc libutf8proc lz4 openssl protobuf rapidjson re2
++         snappy thrift uriparser xsimd zlib zstd)
+ provides=(parquet-cpp)
+ conflicts=(parquet-cpp)
+-makedepends=(boost clang cmake flatbuffers git gmock rapidjson xsimd)
++makedepends=(boost cmake flatbuffers gmock python-numpy git clang)
+ source=(https://archive.apache.org/dist/${pkgname}/${pkgname}-${pkgver}/apache-${pkgname}-${pkgver}.tar.gz{,.asc}
+         git+https://github.com/apache/parquet-testing.git
+         git+https://github.com/apache/arrow-testing.git)
+-sha512sums=('3314d79ef20ac2cfc63f2c16fafb30c3f6187c10c6f5ea6ff036f6db766621d7c65401d85bf1e979bd0ecf831fbb0a785467642792d6bf77016f9807243c064e'
+-            'SKIP'
+-            'SKIP'
+-            'SKIP')
++sha512sums=(c6198e5c9b8fe5ccd89e445c9252da44d8d7c9e0c8eb5a802fa0cabf89482fddf775ed383bac1acc9331bc3195d21df7ea02c4a73aa6ee163c2959f34175d650
++            SKIP
++            SKIP
++            SKIP)
+ validpgpkeys=(265F80AB84FE03127E14F01125BCCA5220D84079  # Krisztian Szucs (apache) <szucs.krisztian@gmail.com>
+               08D3564B7C6A9CAFBFF6A66791D18FCF079F8007) # Kouhei Sutou <kou@cozmixng.org>
+ 
+ build(){
+   CC=clang \
+   CXX=clang++ \
++  ARROW_BUILD_TOOLCHAIN=/usr \
++  ORC_HOME=/usr \
++  DOUBLE_CONVERSION_HOME=/usr \
+   cmake \
+     -B build -S apache-${pkgname}-${pkgver}/cpp \
+     -DCMAKE_INSTALL_PREFIX="/usr" \
+@@ -33,7 +37,6 @@
+     -DARROW_DEPENDENCY_SOURCE=SYSTEM \
+     -DARROW_BUILD_TESTS=ON \
+     -DARROW_COMPUTE=ON \
+-    -DARROW_CSV=ON \
+     -DARROW_SUBSTRAIT=ON \
+     -DARROW_FLIGHT=ON \
+     -DARROW_FLIGHT_SQL=ON \
+@@ -43,6 +46,8 @@
+     -DARROW_JEMALLOC=ON \
+     -DARROW_ORC=ON \
+     -DARROW_PARQUET=ON \
++    -DARROW_PLASMA=ON \
++    -DARROW_PYTHON=ON \
+     -DARROW_TENSORFLOW=ON \
+     -DARROW_USE_GLOG=ON \
+     -DARROW_WITH_BROTLI=ON \
+@@ -51,18 +56,18 @@
+     -DARROW_WITH_SNAPPY=ON \
+     -DARROW_WITH_ZLIB=ON \
+     -DARROW_WITH_ZSTD=ON \
+-    -DPARQUET_REQUIRE_ENCRYPTION=ON \
+-    -Wno-dev
++    -DPARQUET_REQUIRE_ENCRYPTION=ON
+   make -C build
+ }
+ 
+ check(){
++  ARGS="-E parquet-internals-test" \
+   PARQUET_TEST_DATA="${srcdir}"/parquet-testing/data \
+   ARROW_TEST_DATA="${srcdir}"/arrow-testing/data \
+-  ctest --test-dir build --output-on-failure
++  make -C build test ||:
+ }
+ 
+ package(){
+-  DESTDIR="$pkgdir" cmake --install build
++  make -C build DESTDIR="${pkgdir}" install
+   find "${pkgdir}"/usr/lib/ -name '*testing*' -delete
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,18 @@
+ pkgname=arrow
+-depends=(apache-orc brotli bzip2 gflags grpc google-glog libutf8proc
+-         lz4 openssl protobuf re2 snappy thrift zlib zstd)
++depends=(apache-orc boost-libs brotli bzip2 double-conversion c-ares gflags
++         grpc google-glog jemalloc libutf8proc lz4 openssl protobuf rapidjson re2
++         snappy thrift uriparser xsimd zlib zstd)
+ provides=(parquet-cpp)
+ conflicts=(parquet-cpp)
+-makedepends=(boost clang cmake flatbuffers git gmock rapidjson xsimd)
++makedepends=(boost cmake flatbuffers gmock python-numpy git clang)
+  <szucs.krisztian@gmail.com>
+               08D3564B7C6A9CAFBFF6A66791D18FCF079F8007) # Kouhei Sutou <kou@cozmixng.org>
+ build(){
+   CC=clang \
+   CXX=clang++ \
++  ARROW_BUILD_TOOLCHAIN=/usr \
++  ORC_HOME=/usr \
++  DOUBLE_CONVERSION_HOME=/usr \
+   cmake \
+     -B build -S apache-${pkgname}-${pkgver}/cpp \
+     -DCMAKE_INSTALL_PREFIX="/usr" \
+@@ -18,7 +22,6 @@
+     -DARROW_DEPENDENCY_SOURCE=SYSTEM \
+     -DARROW_BUILD_TESTS=ON \
+     -DARROW_COMPUTE=ON \
+-    -DARROW_CSV=ON \
+     -DARROW_SUBSTRAIT=ON \
+     -DARROW_FLIGHT=ON \
+     -DARROW_FLIGHT_SQL=ON \
+@@ -28,6 +31,8 @@
+     -DARROW_JEMALLOC=ON \
+     -DARROW_ORC=ON \
+     -DARROW_PARQUET=ON \
++    -DARROW_PLASMA=ON \
++    -DARROW_PYTHON=ON \
+     -DARROW_TENSORFLOW=ON \
+     -DARROW_USE_GLOG=ON \
+     -DARROW_WITH_BROTLI=ON \
+@@ -36,7 +41,6 @@
+     -DARROW_WITH_SNAPPY=ON \
+     -DARROW_WITH_ZLIB=ON \
+     -DARROW_WITH_ZSTD=ON \
+-    -DPARQUET_REQUIRE_ENCRYPTION=ON \
+-    -Wno-dev
++    -DPARQUET_REQUIRE_ENCRYPTION=ON
+   make -C build
+ }

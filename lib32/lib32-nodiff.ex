@@ -26,7 +26,6 @@ lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
 lib32-glib-networking
-lib32-glib2
 lib32-gmp
 lib32-gnutls
 lib32-gpm
