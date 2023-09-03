@@ -371,6 +371,7 @@ libfreexl
 libgdata
 libgexiv2
 libgit2
+libgphoto2
 libgsf
 libgudev
 libhandy
@@ -397,6 +398,7 @@ libpng
 libprocps
 libquotient
 libsass
+libsecp256k1
 libsidplay
 libsndfile
 libspf2
@@ -548,6 +550,7 @@ opendht
 opendoas
 openexr
 openfire
+openjpeg2
 openpmix
 openpmix-docs
 openshadinglanguage

@@ -1191,7 +1191,6 @@ libgnome-keyring
 libgnomekbd
 libgnt
 libgoom2
-libgphoto2
 libgpod
 libgravatar
 libgrss
@@ -1362,7 +1361,6 @@ librsync
 librttopo
 libsamplerate
 libsbsms
-libsecp256k1
 libshout
 libshumate
 libshumate-docs
@@ -1854,7 +1852,6 @@ openfec
 openimagedenoise
 openimageio
 openjade
-openjpeg2
 openlibm
 openmp
 openmpi
