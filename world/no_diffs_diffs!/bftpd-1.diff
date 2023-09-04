@@ -1,6 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,18 +15,12 @@
+@@ -1,13 +1,12 @@
+ 
+ pkgname=bftpd
+ pkgver=6.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Small, easy-to-configure FTP server'
+ url='http://bftpd.sourceforge.net/'
+ arch=('x86_64')
+ license=('GPL')
+ depends=('pam' 'zlib' 'glibc' 'libxcrypt' 'libcrypt.so')
+-optdepends=('logrotate: log file administration')
+ backup=(etc/bftpd.conf
+         etc/logrotate.d/bftpd
+         etc/pam.d/bftpd
+@@ -16,18 +15,12 @@
          bftpd.logrotate
          bftpd.pam
          bftpd.xinetd
@@ -19,7 +34,7 @@
              '92650582747a34a29631b1755d2eb14d124a9632888c39cf2dbe5c2834f5b4c5f6506588ef0106cc643397587ffbe9a2240787030452bf29b17b7aacf1632cc1'
              'b6e7e455b94b6c6b442a57416b285f870e7a99546f9aa26c67d381ec1e62a1e1d2492d144cf075b6f1ecaa42bf1f9c3e0390a45d0edab456de8cb7fe5d24ede7')
  prepare() {
-@@ -54,9 +48,6 @@
+@@ -55,9 +48,6 @@
    cd ${pkgname}
    make DESTDIR="${pkgdir}" install
    rm -rf "${pkgdir}/usr/var"

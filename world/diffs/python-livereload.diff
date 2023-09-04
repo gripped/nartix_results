@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=python-livereload
+ pkgver=2.6.3
+-pkgrel=5
++pkgrel=4
+ pkgdesc='livereload server in python'
+ arch=('any')
+ url='https://github.com/lepture/python-livereload'
+ license=('BSD')
+-depends=('python' 'python-tornado' 'python-six')
++depends=('python' 'python-tornado')
+ makedepends=('python-setuptools')
+ checkdepends=('python-pytest')
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=python-livereload
+-depends=('python' 'python-tornado' 'python-six')
++depends=('python' 'python-tornado')
+ makedepends=('python-setuptools')
+ build() {
+   cd $pkgname-$pkgver

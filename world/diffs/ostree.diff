@@ -1,15 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,12 +1,12 @@
  
  pkgname=ostree
 -_commit=cf09e9f4e8f10d772a04ebe0ca9f66698e837f6a  # tags/v2023.6
 -pkgver=2023.6
+-pkgrel=2
 +_commit=518cd46f6c78d6ae5c0a93355dbf63aa86cbd7e4  # tags/v2023.5
 +pkgver=2023.5
- pkgrel=1
++pkgrel=1
  pkgdesc="Operating system and container binary deployment and upgrades"
  url="https://ostreedev.github.io/ostree/"
+ arch=(x86_64)
+-license=(LGPL-2.0-or-later)
++license=(custom:LGPL2)
+ depends=(
+   bash
+   fuse3
 @@ -33,7 +33,6 @@
    mkinitcpio
    openssl
@@ -18,7 +25,12 @@
    xz
  )
  checkdepends=(
-@@ -88,6 +87,7 @@
+@@ -84,10 +83,11 @@
+     --enable-gtk-doc
+     --with-builtin-grub2-mkconfig
+     --with-curl
+-    --with-dracut=yesbutnoconf
++    --with-dracut
      --with-ed25519-libsodium
      --with-mkinitcpio
      --with-openssl
@@ -51,7 +63,12 @@
    xz
  )
  provides=(libostree-1.so)
-@@ -55,6 +54,7 @@
+@@ -51,10 +50,11 @@
+     --enable-gtk-doc
+     --with-builtin-grub2-mkconfig
+     --with-curl
+-    --with-dracut=yesbutnoconf
++    --with-dracut
      --with-ed25519-libsodium
      --with-mkinitcpio
      --with-openssl

@@ -1,21 +1,74 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,8 +10,8 @@
- makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
+@@ -1,53 +1,18 @@
+ 
+ pkgname=conky
+ pkgver=1.18.1
+-_gitcommit=87858b6ae8f0b5e195faec5c79048ac4171bfc30  # refs/tags/v1.18.1
+-pkgrel=2
+-pkgdesc='Light-weight system monitor for X, Wayland, and other things, too'
++_gitcommit=a21a8f7d26f07f1dc5c144be2120e8bc6721159f
++pkgrel=1
++pkgdesc='Lightweight system monitor for X'
+ url='https://github.com/brndnmtthws/conky'
+-license=(
+-  'BSD-3-Clause'
+-  'GPL-3.0-or-later'
+-)
++license=('BSD' 'GPL')
+ arch=('x86_64')
+-makedepends=(
+-  'catch2'
+-  'cmake'
+-  'docbook2x'
+-  'docbook-xsl'
+-  'git'
+-  'man-db'
+-  'pandoc'
+-  'python-yaml'
+-  'python-jinja'
+-  'wayland-protocols'
+-)
++makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
  depends=(
-   'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
--  'libxml2' 'libpulse' 'libxnvctrl' 'systemd-libs' 'ncurses' 'curl'
--  libncursesw.so libXNVCtrl.so libsystemd.so libpulse.so libcurl.so)
+-  'cairo'
+-  'curl' libcurl.so
+-  'fontconfig'
+-  'gcc-libs'
+-  'glib2'
+-  'glibc'
+-  'hicolor-icon-theme'
+-  'imlib2'
+-  'libpulse' libpulse.so
+-  'libx11'
+-  'libxdamage'
+-  'libxext'
+-  'libxfixes'
+-  'libxft'
+-  'libxinerama'
+-  'libxml2'
+-  'libxnvctrl' libXNVCtrl.so
+-  'lua'
+-  'ncurses' libncursesw.so
+-  'pango'
+-  'systemd-libs' libsystemd.so
+-  'wayland'
+-  'wireless_tools'
+-)
+-source=("git+$url.git#tag=${_gitcommit}?signed")
++  'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
 +  'libxml2' 'libpulse' 'libxnvctrl' 'ncurses' 'curl'
 +  libncursesw.so libXNVCtrl.so libpulse.so libcurl.so)
- source=("git+https://github.com/brndnmtthws/conky.git#tag=v$pkgver?signed")
++source=("git+https://github.com/brndnmtthws/conky.git#tag=v$pkgver?signed")
  sha512sums=('SKIP')
  b2sums=('SKIP')
-@@ -48,7 +48,7 @@
+ validpgpkeys=(
+@@ -83,8 +48,7 @@
      -D BUILD_RSS=ON \
      -D BUILD_NVIDIA=ON \
      -D BUILD_PULSEAUDIO=ON \
 -    -D BUILD_JOURNAL=ON \
+-    -D BUILD_WAYLAND=ON \
 +    -D BUILD_JOURNAL=OFF \
      -D CMAKE_INSTALL_PREFIX=/usr \
      -Wno-dev \
@@ -26,22 +79,60 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,8 +3,8 @@
- makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
+@@ -1,42 +1,10 @@
+ pkgname=conky
+-_gitcommit=87858b6ae8f0b5e195faec5c79048ac4171bfc30  # refs/tags/v1.18.1
+-makedepends=(
+-  'catch2'
+-  'cmake'
+-  'docbook2x'
+-  'docbook-xsl'
+-  'git'
+-  'man-db'
+-  'pandoc'
+-  'python-yaml'
+-  'python-jinja'
+-  'wayland-protocols'
+-)
++_gitcommit=a21a8f7d26f07f1dc5c144be2120e8bc6721159f
++makedepends=('cmake' 'docbook2x' 'docbook-xsl' 'man-db' 'git' 'catch2' 'pandoc' 'python-yaml' 'python-jinja')
  depends=(
-   'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
--  'libxml2' 'libpulse' 'libxnvctrl' 'systemd-libs' 'ncurses' 'curl'
--  libncursesw.so libXNVCtrl.so libsystemd.so libpulse.so libcurl.so)
+-  'cairo'
+-  'curl' libcurl.so
+-  'fontconfig'
+-  'gcc-libs'
+-  'glib2'
+-  'glibc'
+-  'hicolor-icon-theme'
+-  'imlib2'
+-  'libpulse' libpulse.so
+-  'libx11'
+-  'libxdamage'
+-  'libxext'
+-  'libxfixes'
+-  'libxft'
+-  'libxinerama'
+-  'libxml2'
+-  'libxnvctrl' libXNVCtrl.so
+-  'lua'
+-  'ncurses' libncursesw.so
+-  'pango'
+-  'systemd-libs' libsystemd.so
+-  'wayland'
+-  'wireless_tools'
+-)
++  'glibc' 'glib2' 'lua' 'wireless_tools' 'libxdamage' 'libxinerama' 'libxft' 'imlib2'
 +  'libxml2' 'libpulse' 'libxnvctrl' 'ncurses' 'curl'
 +  libncursesw.so libXNVCtrl.so libpulse.so libcurl.so)
  prepare() {
    cd $pkgname
    rm -r tests/catch2
-@@ -28,7 +28,7 @@
+@@ -60,8 +28,7 @@
      -D BUILD_RSS=ON \
      -D BUILD_NVIDIA=ON \
      -D BUILD_PULSEAUDIO=ON \
 -    -D BUILD_JOURNAL=ON \
+-    -D BUILD_WAYLAND=ON \
 +    -D BUILD_JOURNAL=OFF \
      -D CMAKE_INSTALL_PREFIX=/usr \
      -Wno-dev \

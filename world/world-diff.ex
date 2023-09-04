@@ -33,6 +33,7 @@ bluez-cups
 bluez-hid2hci
 bluez-plugins
 bolt
+boost
 brightnessctl
 brltty
 brltty-udev-generic
@@ -189,6 +190,7 @@ gnome-user-share
 gnome-video-effects
 go-bindata
 go-tools
+gperf
 gpsd
 grantleetheme
 graphicsmagick
@@ -348,6 +350,7 @@ libatasmart
 libavif
 libayatana-indicator
 libblockdev
+libcacard
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -370,6 +373,8 @@ libfprint
 libfreexl
 libgdata
 libgexiv2
+libgit2-glib
+libgit2-glib-docs
 libgit2
 libgphoto2
 libgsf
@@ -456,6 +461,7 @@ lxc
 lxcfs
 lxd
 lximage-qt
+lynx
 magic-wormhole
 mailman3-hyperkitty
 mailman3
@@ -508,6 +514,8 @@ mosquitto
 mousepad
 mpd
 mpv
+mtr
+mtr-gtk
 muffin
 multipath-tools
 mumble
@@ -675,6 +683,7 @@ python-aiofiles
 python-aiohttp
 python-aiosqlite
 python-alembic
+python-appdirs
 python-argon2_cffi
 python-authheaders
 python-aws-sam-translator
@@ -696,10 +705,12 @@ python-distlib
 python-distributed
 python-django-classy-tags
 python-django-debug-toolbar
+python-dulwich
 python-editables
 python-exceptiongroup
 python-gnupg
 python-google-auth-httplib2
+python-google-auth
 python-hypothesis
 python-ipywidgets
 python-jaraco.functools
@@ -710,6 +721,7 @@ python-keyring
 python-keyrings-alt
 python-lark-parser
 python-ldap
+python-livereload
 python-lsp-server
 python-mailmanclient
 python-markdown-it-py
@@ -730,14 +742,17 @@ python-pyproj
 python-pyproject-api
 python-pytest-benchmark
 python-pytest-enabler
+python-pytest-localserver
 python-pytest-param-files
 python-pytest-testinfra
+python-pytest
 python-pyudev
 python-rapidfuzz
 python-readme-renderer
 python-requests-mock
 python-scipy
 python-scramp
+python-setuptools-rust
 python-sphinx-alabaster-theme
 python-sphinxcontrib-applehelp
 python-sphinxcontrib-devhelp
@@ -1041,4 +1056,6 @@ yubikey-personalization
 z3
 python-z3-solver
 zig
+zita-resampler
+zita-resampler-docs
 znc

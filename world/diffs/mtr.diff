@@ -1,0 +1,107 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,19 +2,12 @@
+ pkgbase=mtr
+ pkgname=('mtr' 'mtr-gtk')
+ pkgver=0.95
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Combines the functionality of traceroute and ping into one tool'
+ url='https://www.bitwizard.nl/mtr/'
+ arch=('x86_64')
+-license=('GPL-2.0-only')
+-makedepends=(
+-  'gdk-pixbuf2'
+-  'glibc'
+-  'gtk3'
+-  'jansson'
+-  'libcap'
+-  'ncurses'
+-)
++license=('GPL2')
++makedepends=('ncurses' 'gtk3' 'libcap' 'gdk-pixbuf2')
+ install=mtr.install
+ source=(https://github.com/traviscross/mtr/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
+ sha512sums=('a7d69e0c551a10ae80a650a34588119e6c6b124a8c2c93d3de29e5daa6ef99f9217d875529d443c3760cd6fd7bd04d1e9abe33ef12635826c66a98bd776c1690')
+@@ -46,12 +39,7 @@
+ 
+ package_mtr() {
+   pkgdesc='Combines the functionality of traceroute and ping into one tool (CLI version)'
+-  depends=(
+-    'glibc'
+-    'jansson'
+-    'libcap'
+-    'ncurses' libncursesw.so
+-  )
++  depends=('ncurses' 'libcap' libncursesw.so)
+   optdepends=('bash-completion: bash completion support')
+   cd ${pkgbase}-${pkgver}-cli
+   make DESTDIR="${pkgdir}" install
+@@ -59,15 +47,8 @@
+ 
+ package_mtr-gtk() {
+   pkgdesc='Combines the functionality of traceroute and ping into one tool (GTK version)'
+-  depends=(
+-    'gdk-pixbuf2' libgdk_pixbuf-2.0.so
+-    'glib2' libglib-2.0.so libgobject-2.0.so
+-    'glibc'
+-    'gtk3' libgtk-3.so
+-    'jansson'
+-    'libcap'
+-    'ncurses' libncursesw.so
+-  )
++  depends=('ncurses' 'libcap' 'gtk3' 'gdk-pixbuf2'
++            libgtk-3.so libgobject-2.0.so libgdk_pixbuf-2.0.so libgobject-2.0.so libglib-2.0.so libncursesw.so)
+   optdepends=('bash-completion: bash completion support')
+   conflicts=('mtr')
+   provides=("mtr=${pkgver}")
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,6 @@
+ pkgbase=mtr
+ pkgname=('mtr' 'mtr-gtk')
+-makedepends=(
+-  'gdk-pixbuf2'
+-  'glibc'
+-  'gtk3'
+-  'jansson'
+-  'libcap'
+-  'ncurses'
+-)
++makedepends=('ncurses' 'gtk3' 'libcap' 'gdk-pixbuf2')
+ install=mtr.install
+ prepare() {
+   (cd ${pkgbase}-${pkgver}
+@@ -32,25 +25,13 @@
+   )
+ }
+ package_mtr() {
+-  depends=(
+-    'glibc'
+-    'jansson'
+-    'libcap'
+-    'ncurses' libncursesw.so
+-  )
++  depends=('ncurses' 'libcap' libncursesw.so)
+   cd ${pkgbase}-${pkgver}-cli
+   make DESTDIR="${pkgdir}" install
+ }
+ package_mtr-gtk() {
+-  depends=(
+-    'gdk-pixbuf2' libgdk_pixbuf-2.0.so
+-    'glib2' libglib-2.0.so libgobject-2.0.so
+-    'glibc'
+-    'gtk3' libgtk-3.so
+-    'jansson'
+-    'libcap'
+-    'ncurses' libncursesw.so
+-  )
++  depends=('ncurses' 'libcap' 'gtk3' 'gdk-pixbuf2'
++            libgtk-3.so libgobject-2.0.so libgdk_pixbuf-2.0.so libgobject-2.0.so libglib-2.0.so libncursesw.so)
+   conflicts=('mtr')
+   provides=("mtr=${pkgver}")
+   cd ${pkgbase}-${pkgver}

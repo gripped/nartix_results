@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=python-google-auth
+ pkgver=2.18.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Google Authentication Library"
+ url="https://github.com/GoogleCloudPlatform/google-auth-library-python"
+ license=('Apache')
+ arch=('any')
+-depends=('python-cachetools' 'python-certifi' 'python-pyasn1-modules' 'python-rsa' 'python-aiohttp')
++depends=('python-cachetools' 'python-certifi' 'python-pyasn1-modules' 'python-rsa')
+ makedepends=('python-setuptools')
+ checkdepends=('python-pytest' 'python-mock' 'python-requests' 'python-flask'
+               'python-oauth2client' 'python-pytest-localserver' 'python-cryptography'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=python-google-auth
+-depends=('python-cachetools' 'python-certifi' 'python-pyasn1-modules' 'python-rsa' 'python-aiohttp')
++depends=('python-cachetools' 'python-certifi' 'python-pyasn1-modules' 'python-rsa')
+ makedepends=('python-setuptools')
+ prepare() {
+   cd google-auth-library-python-$pkgver

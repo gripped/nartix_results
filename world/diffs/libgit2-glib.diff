@@ -1,0 +1,92 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,9 +4,9 @@
+   libgit2-glib
+   libgit2-glib-docs
+ )
+-_commit=f9843757630160f1222ef084a47931c7d0b90fe3  # tags/v1.2.0^0
+-pkgver=1.2.0
+-pkgrel=1
++_commit=274f81c596b7c248407c14d4a7d58d72fb12cedc  # tags/v1.1.0^{}
++pkgver=1.1.0
++pkgrel=4
+ pkgdesc="GLib wrapper for libgit2"
+ url="https://gitlab.gnome.org/GNOME/libgit2-glib"
+ license=(LGPL2.1)
+@@ -16,13 +16,14 @@
+   git
+   glib2
+   gobject-introspection
++  gtk-doc
+   libgit2
+   meson
+   python-gobject
+   vala
+ )
+-source=("git+$url.git#commit=$_commit")
+-b2sums=('SKIP')
++source=(git+$url.git#commit=$_commit)
++sha256sums=('SKIP')
+ 
+ _pick() {
+   local p="$1" f d; shift
+@@ -36,11 +37,11 @@
+ 
+ pkgver() {
+   cd $pkgname
+-  git describe --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
++  git describe --tags | sed 's/\([^-]*-g\)/r\1/;s/v//g;s/-/./g'
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D gtk_doc=true
++  artix-meson $pkgname build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+@@ -66,6 +67,9 @@
+     _pick libgit2-glib-docs usr/share/gtk-doc
+   )
+ 
++  python -m compileall -d "/usr/lib" "$pkgdir/usr/lib"
++  python -O -m compileall -d "/usr/lib" "$pkgdir/usr/lib"
++
+   install -vDm 644 $pkgname/{AUTHORS,ChangeLog,NEWS,README} -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
+ 
+@@ -74,4 +78,3 @@
+ 
+   mv -v $pkgname/* "$pkgdir"
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+   git
+   glib2
+   gobject-introspection
++  gtk-doc
+   libgit2
+   meson
+   python-gobject
+@@ -23,7 +24,7 @@
+   done
+ }
+ build() {
+-  arch-meson $pkgname build -D gtk_doc=true
++  artix-meson $pkgname build -D gtk_doc=true
+   meson compile -C build
+ }
+ package_libgit2-glib() {
+@@ -38,5 +39,7 @@
+     cd "$pkgdir"
+     _pick libgit2-glib-docs usr/share/gtk-doc
+   )
++  python -m compileall -d "/usr/lib" "$pkgdir/usr/lib"
++  python -O -m compileall -d "/usr/lib" "$pkgdir/usr/lib"
+   install -vDm 644 $pkgname/{AUTHORS,ChangeLog,NEWS,README} -t "$pkgdir/usr/share/doc/$pkgname/"
+ }

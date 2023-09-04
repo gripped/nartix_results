@@ -158,7 +158,6 @@ bogofilter
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -607,7 +606,6 @@ gom
 google-glog
 gox
 gparted
-gperf
 gperftools
 gpicview
 gptfdisk
@@ -1109,7 +1107,6 @@ libbsd
 libburn
 libbytesize
 libcaca
-libcacard
 libcbor
 libcddb
 libcdio-paranoia
@@ -1181,8 +1178,6 @@ libgee
 libgeotiff
 libgepub
 libgig
-libgit2-glib
-libgit2-glib-docs
 libglib-testing
 libglvnd
 libgme
@@ -1596,7 +1591,6 @@ lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
-lynx
 lzip
 lzop
 m17n-db
@@ -1728,8 +1722,6 @@ msmtp
 msmtp-mta
 mtdev
 mtools
-mtr
-mtr-gtk
 mujs
 muparser
 mupdf
@@ -2373,7 +2365,6 @@ python-anytree
 python-apipkg
 python-apispec-webframeworks
 python-apispec
-python-appdirs
 python-apscheduler
 python-apsw
 python-archinfo
@@ -2578,7 +2569,6 @@ python-doublex-expects
 python-doublex
 python-dpcontracts
 python-dropbox
-python-dulwich
 python-dunamai
 python-easyprocess
 python-ecdsa
@@ -2680,7 +2670,6 @@ python-gmpy2
 python-gnupginterface
 python-google-api-core
 python-google-api-python-client
-python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -2809,7 +2798,6 @@ python-license-expression
 python-linetable
 python-linkify-it-py
 python-littleutils
-python-livereload
 python-llvmlite
 python-lmdb
 python-locket
@@ -3110,7 +3098,6 @@ python-pytest-httpserver
 python-pytest-isort
 python-pytest-jupyter
 python-pytest-lazy-fixture
-python-pytest-localserver
 python-pytest-metadata
 python-pytest-mock
 python-pytest-mpi
@@ -3144,7 +3131,6 @@ python-pytest-vcr
 python-pytest-xdist
 python-pytest-xprocess
 python-pytest-xvfb
-python-pytest
 python-python-multipart
 python-python-pkcs11
 python-python-socks
@@ -3234,7 +3220,6 @@ python-service-identity
 python-setproctitle
 python-setuptools-gettext
 python-setuptools-git
-python-setuptools-rust
 python-setuptools-scm
 python-setuptools
 python-sgmllib3k
@@ -4476,8 +4461,6 @@ zfp
 zimg
 zip
 zita-alsa-pcmi
-zita-resampler
-zita-resampler-docs
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
