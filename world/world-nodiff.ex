@@ -545,7 +545,6 @@ gn
 gnome-applets
 gnome-autoar
 gnome-backgrounds
-gnome-boxes
 gnome-calculator
 gnome-calendar
 gnome-chess
@@ -754,7 +753,6 @@ intel-ucode
 intltool
 inxi
 ipset
-ipython
 iso-codes
 isodate
 python-isodate
@@ -948,9 +946,6 @@ kitemmodels
 kitemviews
 kiten
 kitinerary
-kitty
-kitty-terminfo
-kitty-shell-integration
 kjobwidgets
 kjs
 kjumpingcube
@@ -2349,7 +2344,6 @@ python-aiomysql
 python-aiopg
 python-aioresponses
 python-aiorpcx
-python-aiosignal
 python-aiosmtpd
 python-aiounittest
 python-amqp
@@ -2382,7 +2376,6 @@ python-aspectlib
 python-asteval
 python-astor
 python-astroid
-python-asttokens
 python-astunparse
 python-async-lru
 python-async-timeout
@@ -2415,7 +2408,6 @@ python-betamax
 python-bidict
 python-big-o
 python-billiard
-python-binaryornot
 python-bincopy
 python-biopython
 python-biscuits
@@ -2423,7 +2415,6 @@ python-bitstring
 python-black
 python-bleach
 python-blessed
-python-blinker
 python-blosc
 python-boolean.py
 python-boto
@@ -2579,7 +2570,6 @@ python-elasticsearch
 python-elementpath
 python-email-validator
 python-emoji
-python-engineio
 python-enrich
 python-entrypoint2
 python-entrypoints
@@ -2618,15 +2608,12 @@ python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
-python-flasgger
 python-flask-cors
 python-flask-httpauth
 python-flask-jwt
-python-flask-login
 python-flask-restful
 python-flask-socketio
 python-flask-sqlalchemy
-python-flask
 python-flex
 python-flexmock
 python-flit-core
@@ -2744,7 +2731,6 @@ python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
 python-jaraco.text
-python-jedi
 python-jeepney
 python-jellyfish
 python-jinja-time
@@ -2965,7 +2951,6 @@ python-pluggy
 python-plumbum
 python-ply
 python-poetry-core
-python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
 python-pooch
@@ -3392,7 +3377,6 @@ python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
-python-werkzeug
 python-whatthepatch
 python-wheel
 python-wheezy-template
@@ -3772,6 +3756,7 @@ ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubytest-cli
 ruby-rubytest
+ruby-rugged
 ruby-safe_yaml
 ruby-samovar
 ruby-samus

@@ -50,7 +50,6 @@ gettext
 glib2
 glib2-docs
 gmp
-gnupg
 gpm
 grep
 groff
@@ -116,7 +115,6 @@ libxcrypt
 libxcrypt-compat
 libxml2
 libxml2-docs
-licenses
 links
 linux-api-headers
 lz4

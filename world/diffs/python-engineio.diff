@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-engineio
+ pkgver=4.4.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Python implementation of the Engine.IO realtime server'
+ url='https://github.com/miguelgrinberg/python-engineio'
+ arch=('any')
+@@ -24,12 +24,12 @@
+ build() {
+   cd ${pkgname}-${pkgver}
+   python -m build --wheel --no-isolation
+-  PYTHONPATH="$PWD/src" make -C docs man text SPHINXBUILD=sphinx-build
++  make -C docs man text SPHINXBUILD=sphinx-build
+ }
+ 
+ check() {
+   cd ${pkgname}-${pkgver}
+-  PYTHONPATH=build/lib pytest -v
++  PYTHONPATH=build/lib python setup.py test
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,5 +7,5 @@
+ build() {
+   cd ${pkgname}-${pkgver}
+   python -m build --wheel --no-isolation
+-  PYTHONPATH="$PWD/src" make -C docs man text SPHINXBUILD=sphinx-build
++  make -C docs man text SPHINXBUILD=sphinx-build
+ }

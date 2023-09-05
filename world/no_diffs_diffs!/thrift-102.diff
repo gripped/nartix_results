@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ 
+ pkgname=thrift
+-pkgver=0.19.0
++pkgver=0.18.1
+ pkgrel=1
+ pkgdesc='Scalable cross-language services framework for IPC/RPC'
+ arch=(x86_64)
+@@ -12,8 +12,9 @@
+ optdepends=(
+   'qt5-base: TQTcpServer (Qt5) support'
+ )
+-source=(https://dlcdn.apache.org/thrift/$pkgver/thrift-$pkgver.tar.gz)
+-sha256sums=('d49c896c2724a78701e05cfccf6cf70b5db312d82a17efe951b441d300ccf275')
++options=(!lto) # https://issues.apache.org/jira/browse/THRIFT-5498
++source=(thrift-$pkgver.zip::https://github.com/apache/thrift/archive/v$pkgver.zip)
++sha256sums=('5f803ff19acd6dc0e3857bbe46e1b01ba18526ea41342a36ab17ef18ede92017')
+ 
+ build() {
+   cd thrift-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ makedepends=(qt5-base boost libevent emacs-nox)
+  support'
+ )
++options=!lto#https://issues.apache.org/jira/browse/THRIFT-5498
+ build() {
+   cd thrift-$pkgver
+   ./bootstrap.sh

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=bash-bats
+-pkgver=1.10.0
++pkgver=1.9.0
+ pkgrel=1
+ pkgdesc="Bash Automated Testing System"
+ arch=("any")
+@@ -8,7 +8,7 @@
+ license=("MIT")
+ depends=('bash')
+ source=($pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz)
+-sha256sums=('a1a9f7875aa4b6a9480ca384d5865f1ccf1b0b1faead6b47aa47d79709a5c5fd')
++sha256sums=('3c64295318d157616ca2478de819371e2c579ccdab30c1f0b7279f7b214fb1f4')
+ 
+ check() {
+   cd "bats-core-${pkgver}"

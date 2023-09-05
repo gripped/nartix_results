@@ -19,6 +19,7 @@ libelf
 fakeroot
 glibc
 lib32-glibc
+gnupg
 gnutls
 gpgme
 qgpgme-qt5
@@ -31,6 +32,7 @@ json-c
 libsecret
 libsecret-docs
 libusb
+licenses
 linux-firmware
 linux-firmware-whence
 amd-ucode

@@ -169,6 +169,7 @@ glslang
 glu
 glusterfs
 gnome-bluetooth-3.0
+gnome-boxes
 gnome-builder
 gnome-characters
 gnome-desktop
@@ -265,6 +266,7 @@ libmfx
 intel-opencl-clang
 intel-undervolt
 interception-tools
+ipython
 irssi
 ispc
 itinerary
@@ -324,6 +326,9 @@ keysmith
 kimageformats
 kio
 kismet
+kitty
+kitty-terminfo
+kitty-shell-integration
 kleopatra
 kmail-account-wizard
 kmailtransport
@@ -681,13 +686,17 @@ shiboken6
 pyside6-tools
 python-aiofiles
 python-aiohttp
+python-aiosignal
 python-aiosqlite
 python-alembic
 python-appdirs
 python-argon2_cffi
+python-asttokens
 python-authheaders
 python-aws-sam-translator
 python-bcrypt
+python-binaryornot
+python-blinker
 python-cachy
 python-cairo
 python-cairo-docs
@@ -707,13 +716,18 @@ python-django-classy-tags
 python-django-debug-toolbar
 python-dulwich
 python-editables
+python-engineio
 python-exceptiongroup
+python-flasgger
+python-flask-login
+python-flask
 python-gnupg
 python-google-auth-httplib2
 python-google-auth
 python-hypothesis
 python-ipywidgets
 python-jaraco.functools
+python-jedi
 python-josepy
 python-jupyter-events
 python-kajiki
@@ -732,6 +746,7 @@ python-nbxmpp
 python-parse
 python-pathspec
 python-pdm-backend
+python-poetry-dynamic-versioning
 python-pyarrow
 python-pycodestyle
 python-pydantic-core
@@ -765,6 +780,7 @@ python-tpm2-pytss
 python-tqdm
 python-uri-template
 python-virtualenv
+python-werkzeug
 python-wxpython
 python-xapian
 python-yaml
@@ -883,7 +899,6 @@ rtkit
 ruby-bake-modernize
 ruby-bake-test-external
 ruby-faraday-patron
-ruby-rugged
 ruby-sus
 ruff
 python-ruff

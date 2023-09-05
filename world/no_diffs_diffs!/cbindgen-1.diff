@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cbindgen
+-pkgver=0.25.0
++pkgver=0.24.6
+ pkgrel=1
+ pkgdesc="A tool for generating C bindings to Rust code"
+ url="https://github.com/eqrion/cbindgen"
+@@ -13,10 +13,10 @@
+ )
+ checkdepends=(
+   cmake
+-  cython0
++  cython
+   python
+ )
+-_commit=dd9a550152cd162a3aa01757a55dd22fc56d0d8a  # tags/v0.25.0^0
++_commit=cbd3541614d03a115c423a683328a78f6935f93d  # tags/v0.24.6^0
+ source=("git+$url#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -47,7 +47,6 @@
+ package() {
+   cd cbindgen
+   install -Dt "$pkgdir/usr/bin" target/release/cbindgen
+-  install -Dt "$pkgdir/usr/share/doc/$pkgname" -m644 CHANGES \
+-    {README,docs,internals}.md
++  install -Dt "$pkgdir/usr/share/doc/$pkgname" -m644 README.md
+ }
+ 

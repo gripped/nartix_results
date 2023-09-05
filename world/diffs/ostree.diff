@@ -5,7 +5,7 @@
  pkgname=ostree
 -_commit=cf09e9f4e8f10d772a04ebe0ca9f66698e837f6a  # tags/v2023.6
 -pkgver=2023.6
--pkgrel=2
+-pkgrel=3
 +_commit=518cd46f6c78d6ae5c0a93355dbf63aa86cbd7e4  # tags/v2023.5
 +pkgver=2023.5
 +pkgrel=1
@@ -25,20 +25,24 @@
    xz
  )
  checkdepends=(
-@@ -84,10 +83,11 @@
+@@ -82,13 +81,13 @@
+     --disable-static
+     --enable-experimental-api
      --enable-gtk-doc
-     --with-builtin-grub2-mkconfig
++    --with-builtin-grub2-mkconfig
      --with-curl
 -    --with-dracut=yesbutnoconf
 +    --with-dracut
      --with-ed25519-libsodium
+-    --with-grub2-mkconfig-path=/usr/bin/grub-mkconfig
      --with-mkinitcpio
+-    --with-modern-grub
      --with-openssl
 +    --without-libsystemd
    )
  
    cd $pkgname
-@@ -107,9 +107,8 @@
+@@ -108,9 +107,8 @@
      glib2 libgio-2.0.so libglib-2.0.so libgobject-2.0.so
      gpgme libgpgme.so
      libarchive libarchive.so
@@ -63,14 +67,18 @@
    xz
  )
  provides=(libostree-1.so)
-@@ -51,10 +50,11 @@
+@@ -49,13 +48,13 @@
+     --disable-static
+     --enable-experimental-api
      --enable-gtk-doc
-     --with-builtin-grub2-mkconfig
++    --with-builtin-grub2-mkconfig
      --with-curl
 -    --with-dracut=yesbutnoconf
 +    --with-dracut
      --with-ed25519-libsodium
+-    --with-grub2-mkconfig-path=/usr/bin/grub-mkconfig
      --with-mkinitcpio
+-    --with-modern-grub
      --with-openssl
 +    --without-libsystemd
    )
