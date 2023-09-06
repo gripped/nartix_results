@@ -31,7 +31,6 @@ alsa-oss
 alsa-plugins
 pulseaudio-alsa
 alsa-topology-conf
-alsa-ucm-conf
 amf-headers
 amfora
 aml
@@ -419,7 +418,6 @@ fcitx5-qt
 feh
 festival
 ffcall
-ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
@@ -784,7 +782,6 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbig2dec
-jbigkit
 jemalloc
 jitterentropy
 jose
@@ -1383,12 +1380,9 @@ libstaroffice
 libstatgrab
 libsysstat
 libtar
-libteam
-libteam-docs
 libtermkey
 libthai
 libtheora
-libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -1678,7 +1672,6 @@ mesa-demos
 mesa-utils
 meson-python
 meson
-metalog
 mgard
 micro
 microsoft-gsl
@@ -1759,7 +1752,6 @@ neovim-qt
 netcdf-fortran
 netcdf
 netcf
-netpbm
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
@@ -1814,7 +1806,6 @@ onetbb
 oniguruma
 onionshare
 opam
-open-isns
 openal
 openal-examples
 openbabel
@@ -1841,7 +1832,6 @@ openimageio
 openjade
 openlibm
 openmp
-openmpi
 openntpd
 openrct2
 openscenegraph
@@ -2532,7 +2522,6 @@ python-django-allauth
 python-django-appconf
 python-django-compressor
 python-django-crispy-forms
-python-django-environ
 python-django-extensions
 python-django-fake-model
 python-django-filter
@@ -2840,7 +2829,6 @@ python-multipart
 python-munch
 python-munkres
 python-musicbrainzngs
-python-mutagen
 python-mypy_extensions
 python-mysqlclient
 python-natsort

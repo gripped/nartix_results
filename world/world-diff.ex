@@ -4,6 +4,7 @@ acpica
 adios2
 akonadi-calendar
 akonadi-search
+alsa-ucm-conf
 alsa-utils
 amdvlk
 amule
@@ -134,6 +135,7 @@ fcitx-configtool
 fcitx-mozc
 fcitx5
 fcron
+ffmpeg
 figlet
 firefox
 firewalld
@@ -290,6 +292,7 @@ jre17-openjdk
 jdk17-openjdk
 openjdk17-src
 openjdk17-doc
+jbigkit
 jedi-language-server
 jenkins
 jp2a
@@ -412,7 +415,10 @@ libsecp256k1
 libsidplay
 libsndfile
 libspf2
+libteam
+libteam-docs
 libtg_owt
+libtiff
 libudev0-shim
 libusbmuxd
 libusbsio
@@ -504,6 +510,7 @@ vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
 messagelib
+metalog
 mgba
 libmgba
 mgba-sdl
@@ -535,6 +542,7 @@ neochat
 neofetch
 neovim
 net-snmp
+netpbm
 netplan
 networkmanager
 libnm
@@ -557,6 +565,7 @@ ocaml-findlib
 okular
 onboard
 open-iscsi
+open-isns
 opencc
 opencc-doc
 opendht
@@ -564,6 +573,7 @@ opendoas
 openexr
 openfire
 openjpeg2
+openmpi
 openpmix
 openpmix-docs
 openshadinglanguage
@@ -714,6 +724,7 @@ python-distlib
 python-distributed
 python-django-classy-tags
 python-django-debug-toolbar
+python-django-environ
 python-dulwich
 python-editables
 python-engineio
@@ -740,6 +751,7 @@ python-lsp-server
 python-mailmanclient
 python-markdown-it-py
 python-mistune
+python-mutagen
 python-mysql-connector
 python-myst-parser
 python-nbxmpp

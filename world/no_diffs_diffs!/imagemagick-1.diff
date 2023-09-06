@@ -4,13 +4,21 @@
  
  pkgname=imagemagick
 -pkgver=7.1.1.15
--pkgrel=3
+-pkgrel=4
 +pkgver=7.1.1.13
 +pkgrel=1
  _relname=ImageMagick-${pkgver%%.*}
  _tarname=ImageMagick-${pkgver%.*}-${pkgver##*.}
  pkgdesc='An image viewing/manipulation program'
-@@ -31,7 +31,7 @@
+@@ -10,7 +10,6 @@
+ license=(custom)
+ depends=(libltdl lcms2 fontconfig libxext liblqr libraqm libpng libxml2 fftw)
+ optdepends=('ghostscript: PS/PDF support'
+-            'jbigkit: JBIG support'
+             'libheif: HEIF support'
+             'libjxl: JPEG XL support'
+             'libraw: DNG support'
+@@ -32,7 +31,7 @@
  replaces=(imagemagick-doc)
  source=(https://imagemagick.org/archive/$_tarname.tar.xz{,.asc}
          arch-fonts.diff)
