@@ -1,20 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,21 +1,21 @@
  
  pkgname=ktextaddons
--pkgver=1.4.1
+-pkgver=1.5.0
 -pkgrel=1
 +pkgver=1.3.2
 +pkgrel=1.1
  pkgdesc='Various text handling addons'
  arch=(x86_64)
  license=(GPL)
-@@ -12,10 +12,10 @@
+ url='https://invent.kde.org/libraries/ktextaddons'
+-depends=(kio sonnet syntax-highlighting qtkeychain-qt5 qt5-speech)
++depends=(kxmlgui qtkeychain-qt5 qt5-speech)
+ makedepends=(extra-cmake-modules doxygen qt5-tools)
+ optdepends=('languagetool: Grammar checking'
              'grammalecte: French grammar checking'
              'libreoffice: Use autocorrection data from LibreOffice')
  source=(https://download.kde.org/stable/$pkgname/$pkgname-$pkgver.tar.xz)
--sha256sums=('894abb8fdc9360486bcaccba156504a8f914ea65b885f62fc4750f1a0d284637')
+-sha256sums=('68365b3832ef258df66650250746ba26be149afae36dde3e23c7fc33303ac765')
 +sha256sums=('981ec78762e3ae0f03d86c43c8709ad6ce825668390c3921c1a7c4aad4aa51e3')
  
  build() {
@@ -29,8 +33,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(kxmlgui qtkeychain-qt5 qt5-speech)
+@@ -1,8 +1,8 @@
+ pkgname=ktextaddons
+-depends=(kio sonnet syntax-highlighting qtkeychain-qt5 qt5-speech)
++depends=(kxmlgui qtkeychain-qt5 qt5-speech)
  makedepends=(extra-cmake-modules doxygen qt5-tools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

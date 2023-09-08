@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=winetricks
--pkgver=20220521
+-pkgver=20230212
 +pkgver=20220411
  pkgrel=1
  pkgdesc='Script to install various redistributable runtime libraries in Wine.'
@@ -12,7 +12,7 @@
  optdepends=('zenity: GUI for GNOME desktop'
              'kdialog: GUI for KDE desktop')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/Winetricks/winetricks/archive/$pkgver.tar.gz")
--sha512sums=('e0a20f255fe46c2bcda32731288cb0e8a6294057e308087b621b8e082252c2532411e3bb0ee6807a7f47b1ebdffc6641509b89c4a6f889fa9fba94773641201c')
+-sha512sums=('3d2211091754a2a254d5ac8dab27d59d488d512149d8060828cf9d69df96f5ccad183f2ba9f2172452a2ae322236e86e7fce560836a2bc05dc9a36c2a422f245')
 +sha512sums=('c4e77c5e62d2df56db6aa75979cc775f26472917108b0498c975458fd6f7ecbef52c329b7b6f33c12510176e105190bc538447b39348a42b7f1a8e07e5d92d09')
  
  package() {

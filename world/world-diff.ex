@@ -345,6 +345,7 @@ kpipewire
 kpmcore
 krita
 ksysguard
+ktextaddons
 ktnef
 kwordquiz
 ladspa
@@ -937,6 +938,7 @@ signon-plugin-oauth2
 skanpage
 smartmontools
 snapper
+sox
 spdlog
 spice-gtk
 spice-vdagent
@@ -1010,6 +1012,9 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 verdict
+vim
+gvim
+vim-runtime
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms

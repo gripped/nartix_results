@@ -1019,7 +1019,6 @@ ksudoku
 ksystemlog
 ksystemstats
 kteatime
-ktextaddons
 ktexteditor
 ktextwidgets
 ktimer
@@ -3877,7 +3876,6 @@ sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
-sox
 spamassassin
 spandsp
 spandsp-docs
@@ -4208,9 +4206,6 @@ vice
 vid.stab
 viewnior
 vigra
-vim
-gvim
-vim-runtime
 vimiv
 virglrenderer
 virt-manager

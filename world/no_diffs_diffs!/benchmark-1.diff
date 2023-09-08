@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=benchmark
+-pkgver=1.8.3
++pkgver=1.8.2
+ pkgrel=1
+ pkgdesc="A microbenchmark support library"
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ makedepends=('cmake')
+ 
+ source=("https://github.com/google/$pkgname/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('6bc180a57d23d4d9515519f92b0c83d61b05b5bab188961f36ac7b06b0d9e9ce')
++sha256sums=('2aab2980d0376137f969d92848fbb68216abb07633034534fc8c65cc4e7a0e93')
+ 
+ prepare() {
+   cd "$srcdir/$pkgname-$pkgver"
