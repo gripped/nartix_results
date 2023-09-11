@@ -1,0 +1,89 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-moto
+ _pkgname=moto
+-pkgver=4.2.2
++pkgver=4.1.12
+ pkgrel=1
+ pkgdesc='Moto is a library to mock out the boto library.'
+ arch=(any)
+@@ -12,7 +12,7 @@
+          python-jinja
+          python-urllib3)
+ makedepends=(python-build python-installer python-setuptools python-wheel)
+-checkdepends=(python-pytest python-pytest-ordering python-freezegun)
++checkdepends=(python-pytest python-pytest-ordering python-sure python-freezegun)
+ optdepends=(
+   'python-yaml: for apigatewayv2, cloudformation, s3 and ssm'
+   'python-jose: for apigateway, cloudformation and cognitoidp'
+@@ -25,33 +25,26 @@
+   'python-sshpubkeys: for cloudformation, directoryservice, ebs, ec2, efs, eks and route53resolver'
+   'python-pyparsing: for glue and cloudformation'
+   'python-py-partiql-parser: for cloudformation and s3'
+-  'python-crc32c: for s3'
+   'python-flask: for moto_server'
+   'python-flask-cors: for moto_server'
+ )
+ checkdepends+=(python-yaml python-jose python-openapi-spec-validator python-docker
+                python-graphql-core python-jsondiff python-aws-xray-sdk
+                python-cfn-lint python-sshpubkeys python-pyparsing python-py-partiql-parser
+-               python-crc32c
+                python-flask python-flask-cors)
+-source=("https://github.com/getmoto/moto/archive/refs/tags/$pkgver/$pkgname-$pkgver.tar.gz"
+-        "fix-tests.diff"
+-        "typing-extensions.diff")
+-sha256sums=('995248a7852f241fe488cbcb0317a4c60015cb1cead431b78c5069199b927d63'
+-            '21305cdf3d650ced1acb1d0f7dde8760b26e32a94c56a5571e798d6b6976cf5a'
+-            '8406f4c68b8b43c3666fe5a153de1321a9bc9f02ad19910c6078d8189d8cb24f')
++source=("https://files.pythonhosted.org/packages/source/m/moto/moto-${pkgver}.tar.gz"
++        "fix-tests.diff")
++sha256sums=('25577e4cf55f05235f4efe78bcfeb5a7704fb75c16b426a5de2fc1e6b7b8545b'
++            '21305cdf3d650ced1acb1d0f7dde8760b26e32a94c56a5571e798d6b6976cf5a')
+ 
+ prepare() {
+   cd $_pkgname-$pkgver
+ 
+   patch -Np1 -i ../fix-tests.diff
+-  patch -Np1 -i ../typing-extensions.diff
+ }
+ 
+ build() {
+   cd $_pkgname-$pkgver
+-
+-  python update_version_from_git.py $pkgver
+ 
+   python -m build --wheel --no-isolation
+ }
+@@ -59,7 +52,7 @@
+ check() {
+   cd $_pkgname-$pkgver
+ 
+-  TZ=UTC pytest tests -m 'not requires_docker'
++  TZ=UTC pytest tests -m 'not requires_docker' ||:
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,15 +8,12 @@
+ checkdepends+=(python-yaml python-jose python-openapi-spec-validator python-docker
+                python-graphql-core python-jsondiff python-aws-xray-sdk
+                python-cfn-lint python-sshpubkeys python-pyparsing python-py-partiql-parser
+-               python-crc32c
+                python-flask python-flask-cors)
+ prepare() {
+   cd $_pkgname-$pkgver
+   patch -Np1 -i ../fix-tests.diff
+-  patch -Np1 -i ../typing-extensions.diff
+ }
+ build() {
+   cd $_pkgname-$pkgver
+-  python update_version_from_git.py $pkgver
+   python -m build --wheel --no-isolation
+ }

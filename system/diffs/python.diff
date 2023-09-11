@@ -5,11 +5,11 @@
  pkgbase=python
  pkgname=(python python-tests)
 -pkgver=3.11.5
--pkgrel=1
 +pkgver=3.11.3
-+pkgrel=2
+ pkgrel=2
  _pybasever=${pkgver%.*}
- pkgdesc="Next generation of the python high-level scripting language"
+-pkgdesc="The Python programming language"
++pkgdesc="Next generation of the python high-level scripting language"
  arch=('x86_64')
  license=('custom')
  url="https://www.python.org/"
@@ -35,6 +35,20 @@
  
    sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python|" Lib/cgi.py
  
+@@ -72,10 +68,9 @@
+ }
+ 
+ package_python() {
+-  optdepends=('python-setuptools: for building Python packages using tooling that is usually bundled with Python'
+-              'python-pip: for installing Python packages using tooling that is usually bundled with Python'
+-              'python-pipx: for installing Python software not packaged on Arch Linux'
+-              'sqlite: for a default database integration'
++  optdepends=('python-setuptools'
++              'python-pip'
++              'sqlite'
+               'mpdecimal: for decimal'
+               'xz: for lzma'
+               'tk: for tkinter')
 
 
 ############# Stripped diff below #################

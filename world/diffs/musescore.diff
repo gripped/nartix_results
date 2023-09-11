@@ -1,15 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=musescore
 -pkgver=4.1.1
--pkgrel=1
 +pkgver=4.1.0
-+pkgrel=2
+ pkgrel=2
  pkgdesc='Create, play and print beautiful sheet music'
  arch=(x86_64)
- url=https://musescore.org/
 @@ -36,7 +36,7 @@
  )
  optdepends=('lame: MP3 export')
@@ -28,6 +26,15 @@
      -DCMAKE_BUILD_TYPE=None \
      -DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
      -DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+@@ -63,7 +63,7 @@
+     -DMUE_BUILD_CRASHPAD_CLIENT=OFF \
+     -DMUE_BUILD_UNIT_TESTS=OFF \
+     -DMUE_ENABLE_FILE_ASSOCIATION=ON \
+-    -DMUE_INSTALL_SOUNDFONT=ON \
++    -DMUE_INSTALL_SOUNDFONT=OFF \
+     -Wno-dev
+   cmake --build build
+ }
 
 
 ############# Stripped diff below #################
@@ -43,3 +50,12 @@
      -DCMAKE_BUILD_TYPE=None \
      -DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
      -DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+@@ -45,7 +45,7 @@
+     -DMUE_BUILD_CRASHPAD_CLIENT=OFF \
+     -DMUE_BUILD_UNIT_TESTS=OFF \
+     -DMUE_ENABLE_FILE_ASSOCIATION=ON \
+-    -DMUE_INSTALL_SOUNDFONT=ON \
++    -DMUE_INSTALL_SOUNDFONT=OFF \
+     -Wno-dev
+   cmake --build build
+ }

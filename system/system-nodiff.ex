@@ -47,8 +47,6 @@ lto-dump
 libgccjit
 gdbm
 gettext
-glib2
-glib2-docs
 gmp
 gpm
 grep
@@ -60,7 +58,6 @@ hwdata
 iana-etc
 icu
 inetutils
-iproute2
 iptables
 iptables-nft
 iw

@@ -191,8 +191,13 @@ gnome-system-monitor
 gnome-taquin
 gnome-user-share
 gnome-video-effects
+gnuplot
+gnuplot-demos
 go-bindata
 go-tools
+gobject-introspection
+gobject-introspection-runtime
+libgirepository
 gperf
 gpsd
 grantleetheme
@@ -420,6 +425,7 @@ libteam
 libteam-docs
 libtg_owt
 libtiff
+libtommath
 libudev0-shim
 libusbmuxd
 libusbsio
@@ -516,9 +522,11 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
+micro
 minicom
 minio
 mitmproxy
+mlt
 modemmanager
 libmm-glib
 molecule
@@ -533,6 +541,7 @@ muffin
 multipath-tools
 mumble
 mumble-server
+musescore
 mutter
 mutter-docs
 ncdu
@@ -733,6 +742,7 @@ python-exceptiongroup
 python-flasgger
 python-flask-login
 python-flask
+python-future
 python-gnupg
 python-google-auth-httplib2
 python-google-auth
@@ -752,6 +762,7 @@ python-lsp-server
 python-mailmanclient
 python-markdown-it-py
 python-mistune
+python-moto
 python-mutagen
 python-mysql-connector
 python-myst-parser
@@ -765,6 +776,7 @@ python-pycodestyle
 python-pydantic-core
 python-pydantic
 python-pygit2
+python-pyhcl
 python-pymupdf
 python-pyproj
 python-pyproject-api
@@ -798,6 +810,7 @@ python-wxpython
 python-xapian
 python-yaml
 python-zope-event
+python-zopfli
 qemu
 qemu-common
 qemu-audio-alsa
@@ -990,6 +1003,7 @@ udftools
 udisks2
 umockdev
 unbound
+unrealircd
 upower
 uptimed
 upx

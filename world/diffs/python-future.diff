@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=python-future
+ pkgver=0.18.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Clean single-source support for Python 3 and 2"
+ url="https://python-future.org/"
+ arch=('any')
+ license=('MIT')
+ depends=('python')
+ provides=('futurize' 'pasteurize')
+-checkdepends=('python-requests' 'python-pytest')
+-makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++checkdepends=('python-requests')
++makedepends=('python-setuptools')
+ optdepends=('python-setuptools: futurize and pasteurize scripts')
+ options=('!emptydirs')
+ source=("https://pypi.io/packages/source/f/future/future-$pkgver.tar.gz")
+@@ -17,18 +17,17 @@
+ 
+ build() {
+   cd "$srcdir"/future-$pkgver
+-  python -m build --wheel
++  python setup.py build
+ }
+ 
+ check() {
+   cd "$srcdir"/future-$pkgver
+-  PYTHONPATH="$PWD/build/lib:$PYTHONPATH" pytest -v tests/test_past
+ }
+ 
+ package() {
+   cd future-$pkgver
+ 
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+   install -D -m644 LICENSE.txt \
+     "$pkgdir"/usr/share/licenses/$pkgname/LICENSE.txt
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ pkgname=python-future
+ depends=('python')
+ provides=('futurize' 'pasteurize')
+-makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++makedepends=('python-setuptools')
+ options=('!emptydirs')
+ build() {
+   cd "$srcdir"/future-$pkgver
+-  python -m build --wheel
++  python setup.py build
+ }

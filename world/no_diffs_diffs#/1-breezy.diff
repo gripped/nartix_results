@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=breezy
+-pkgver=3.3.4
++pkgver=3.3.3
+ pkgrel=1
+ pkgdesc='A decentralized revision control system with support for Bazaar and Git file formats'
+ arch=(x86_64)
+@@ -34,7 +34,7 @@
+ provides=(bzr)
+ conflicts=(bzr)
+ replaces=(bzr)
+-_tag=d206a54af4040025561cc9159fa5559c14a7ef46
++_tag=213cd83e081cfe22f6adb60f1bd4716d391aebae
+ source=(git+https://github.com/breezy-team/breezy.git#tag=${_tag})
+ sha256sums=(SKIP)
+ 

@@ -17,6 +17,8 @@ elfutils
 debuginfod
 libelf
 fakeroot
+glib2
+glib2-docs
 glibc
 lib32-glibc
 gnupg
@@ -27,6 +29,7 @@ qgpgme-qt6
 python-gpgme
 gssproxy
 gzip
+iproute2
 iputils
 json-c
 libsecret

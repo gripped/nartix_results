@@ -585,8 +585,6 @@ gnu-efi
 gnu-free-fonts
 gnu-netcat
 gnugo
-gnuplot
-gnuplot-demos
 gnustep-base
 gnustep-make
 go-bindata-assetfs
@@ -595,9 +593,6 @@ go-ethereum
 go-md2man
 go-yq
 go
-gobject-introspection
-gobject-introspection-runtime
-libgirepository
 godot
 gom
 google-glog
@@ -1384,7 +1379,6 @@ libthai
 libtheora
 libtiger
 libtomcrypt
-libtommath
 libtorrent-rasterbar
 libtorrent
 libtpms
@@ -1672,7 +1666,6 @@ mesa-utils
 meson-python
 meson
 mgard
-micro
 microsoft-gsl
 milou
 mimetic
@@ -1684,7 +1677,6 @@ minizip-ng
 minuet
 mjpegtools
 mktorrent
-mlt
 mm-common
 mmtf-cpp
 mobile-broadband-provider-info
@@ -1718,7 +1710,6 @@ mupdf-tools
 musepack
 musepack-tools
 libmpcdec
-musescore
 musl
 mutt
 mypaint-brushes1
@@ -2622,7 +2613,6 @@ python-fs
 python-fsspec
 python-func-timeout
 python-funcparserlib
-python-future
 python-fuzzywuzzy
 python-gast
 python-gast03
@@ -2816,7 +2806,6 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
-python-moto
 python-mpd2
 python-mpi4py
 python-mpmath
@@ -2998,7 +2987,6 @@ python-pygeos
 python-pygls
 python-pygments
 python-pyhamcrest
-python-pyhcl
 python-pyicu
 python-pyinotify
 python-pyjsparser
@@ -3414,7 +3402,6 @@ python-zope-schema
 python-zope-security
 python-zope-testing
 python-zope-testrunner
-python-zopfli
 python-zstandard
 pyxdg
 qbe
@@ -4182,7 +4169,6 @@ unittestpp
 unoconv
 unrar
 libunrar
-unrealircd
 unrtf
 unzip
 uriparser

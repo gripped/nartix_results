@@ -1,6 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,14 +13,12 @@
+@@ -1,26 +1,24 @@
+ 
+ pkgname=unrealircd
+ pkgver=6.1.1.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Open Source IRC Server"
+ arch=('x86_64')
+ url="https://www.unrealircd.org"
+ license=('GPL2')
+-depends=('openssl' 'curl' 'c-ares' 'tre' 'pcre2' 'libnsl' 'argon2' 'libsodium')
++depends=('openssl' 'curl' 'c-ares' 'tre' 'pcre2' 'libnsl' 'argon2')
+ conflicts=('ircd')
+ provides=('ircd')
+ backup=('etc/unrealircd/unrealircd.conf')
  install=unrealircd.install
  validpgpkeys=('1D2D2B03A0B68ED11D68A24BA7A21B0A108FF4A9')
  source=(https://www.unrealircd.org/unrealircd4/unrealircd-$pkgver.tar.gz{,.asc}
@@ -23,3 +37,16 @@
    install -Dm0644 "$srcdir"/unrealircd.tmpfiles.d "$pkgdir"/usr/lib/tmpfiles.d/unrealircd.conf
    install -Dm0644 "$srcdir"/unrealircd.sysusers.d "$pkgdir"/usr/lib/sysusers.d/unrealircd.conf
  }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=unrealircd
+-depends=('openssl' 'curl' 'c-ares' 'tre' 'pcre2' 'libnsl' 'argon2' 'libsodium')
++depends=('openssl' 'curl' 'c-ares' 'tre' 'pcre2' 'libnsl' 'argon2')
+ conflicts=('ircd')
+ provides=('ircd')
+ backup=('etc/unrealircd/unrealircd.conf')

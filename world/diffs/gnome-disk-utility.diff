@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,16 +6,17 @@
+@@ -1,21 +1,22 @@
+ 
+ pkgname=gnome-disk-utility
+-pkgver=45.0
++pkgver=44.0
+ pkgrel=1
+ pkgdesc="Disk Management Utility for GNOME"
  url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
  arch=(x86_64)
  license=(GPL)
@@ -19,15 +25,20 @@
    udisks2
  )
  makedepends=(
-@@ -23,7 +24,7 @@
+@@ -23,10 +24,10 @@
    git
    meson
  )
 -groups=(gnome)
+-_commit=c8b97677523e672be080b22b027f3988d9514cb2  # tags/45.0^0
 +options=(debug)
- _commit=68c13081e29973b31ee37245626b1755b8cd53a6  # tags/44.0^0
++_commit=68c13081e29973b31ee37245626b1755b8cd53a6  # tags/44.0^0
  source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#commit=$_commit")
- sha256sums=('SKIP')
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgname
 @@ -34,7 +35,7 @@
  }
  

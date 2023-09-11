@@ -3,7 +3,7 @@
 @@ -1,7 +1,7 @@
  
  pkgname=python-pikepdf
--pkgver=8.4.0
+-pkgver=8.4.1
 -pkgrel=1
 +pkgver=8.1.1
 +pkgrel=2
@@ -14,7 +14,7 @@
  depends=(python-lxml python-pillow python-packaging qpdf)
  checkdepends=(python-pytest-xdist python-hypothesis python-psutil)
  source=(https://github.com/pikepdf/pikepdf/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
--sha256sums=('45514a9d4f1df38dd26406c44cc052ef15730aa65376c59b80afda045671f1db')
+-sha256sums=('c31cbfb125423391cb97443e421f4377e84ae4826c9d3e4adb55a63c7b5fd4af')
 +sha256sums=('6d66aecfc6eaead3bf24de4a9b1cdf9f98704498b0a78edeb40224349394353d')
  
  build() {

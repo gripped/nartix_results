@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,30 +1,29 @@
+ 
+ _pkgname=pyhcl
+ pkgname=python-pyhcl
+-_commit=5dcf8b8a5e826e24cd6e572c4215283bf4b06d45
+-pkgver=0.4.5
+-pkgrel=1
++pkgver=0.4.4
++pkgrel=4
+ pkgdesc='HCL configuration parser for python'
+ arch=(any)
+ url='https://pypi.org/project/pyhcl/'
+ license=(MPL2)
+ depends=(python)
+-makedepends=(git python-build python-installer python-setuptools python-wheel)
++makedepends=(python-setuptools)
+ checkdepends=(python-pytest)
+-source=("git+https://github.com/virtuald/pyhcl.git#commit=$_commit")
+-sha256sums=('SKIP')
++source=("https://files.pythonhosted.org/packages/source/p/$_pkgname/$_pkgname-$pkgver.tar.gz")
++sha256sums=('2d9b9dcdf1023d812bfed561ba72c99104c5b3f52e558d595130a44ce081b003')
+ 
+ build() {
+-  cd $_pkgname
+-  python -m build --wheel --no-isolation
++  cd $_pkgname-$pkgver
++  python setup.py build
+ }
+ 
+ check() {
+-  cd $_pkgname
++  cd $_pkgname-$pkgver
+   PYTHONPATH="$PWD/src" pytest tests
+ }
+ 
+ package() {
+-  cd $_pkgname
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  cd $_pkgname-$pkgver
++  python setup.py install --root="$pkgdir" --optimize=1 --skip-build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ _pkgname=pyhcl
+ pkgname=python-pyhcl
+ depends=(python)
+-makedepends=(git python-build python-installer python-setuptools python-wheel)
++makedepends=(python-setuptools)
+ build() {
+-  cd $_pkgname
+-  python -m build --wheel --no-isolation
++  cd $_pkgname-$pkgver
++  python setup.py build
+ }

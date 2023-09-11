@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,57 +1,50 @@
  
  pkgname=gamescope
--pkgver=3.12.3
+-pkgver=3.12.5
 +pkgver=3.11.51
  pkgrel=1
  pkgdesc='SteamOS session compositing window manager'
  arch=(x86_64)
-@@ -9,49 +9,42 @@
+-url=https://github.com/ValveSoftware/gamescope
++url=https://github.com/Plagman/gamescope
+ license=(BSD)
  depends=(
    gcc-libs
    glibc
@@ -48,9 +50,10 @@
    vulkan-headers
 -  wayland-protocols
  )
--_tag=22618ea0841158d0d0ff0f50a76ee24fbfa63893
+-_tag=a8471d81b36ea1d9dc90a7d35f9ad0631feaf1ae
+-source=(git+https://github.com/ValveSoftware/gamescope.git#tag=${_tag})
 +_tag=7aef264dfcf81c5f303422d820b7e1ecf81568f3
- source=(git+https://github.com/Plagman/gamescope.git#tag=${_tag})
++source=(git+https://github.com/Plagman/gamescope.git#tag=${_tag})
  b2sums=(SKIP)
  
  prepare() {

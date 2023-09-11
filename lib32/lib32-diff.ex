@@ -39,6 +39,7 @@ lib32-pipewire-v4l2
 lib32-polkit
 lib32-sqlite
 lib32-v4l-utils
+lib32-vulkan-icd-loader
 lib32-zlib
 wine-staging
 wine
