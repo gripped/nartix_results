@@ -141,6 +141,7 @@ firefox
 firewalld
 flatbuffers
 python-flatbuffers
+flatpak-builder
 flatpak
 flatpak-docs
 fluidsynth
@@ -167,6 +168,8 @@ ghex-docs
 git
 gitea
 github-cli
+glibmm-2.68
+glibmm-2.68-docs
 glslang
 glu
 glusterfs
@@ -331,7 +334,6 @@ kde-gtk-config
 kdevelop
 kdoctools
 keysmith
-kimageformats
 kio
 kismet
 kitty
@@ -414,6 +416,11 @@ libodfgen
 libotr
 libphonenumber
 libpng
+libportal
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-docs
 libprocps
 libquotient
 libsass
@@ -694,6 +701,9 @@ pulseaudio-equalizer
 pulseaudio-rtp
 puppet
 pv
+pygobject
+python-gobject
+python-gobject-docs
 pyqt5
 python-pyqt5
 pyqt6

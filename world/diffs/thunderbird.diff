@@ -5,7 +5,7 @@
  pkgbase=thunderbird
  pkgname=(thunderbird)
 -pkgver=115.2.0
--pkgrel=3
+-pkgrel=4
 +pkgver=115.0.1
 +pkgrel=1
  pkgdesc='Standalone mail and news reader from mozilla.org'
@@ -45,7 +45,18 @@
  }
  
  build() {
-@@ -115,13 +113,13 @@
+@@ -98,10 +96,6 @@
+   fi
+   export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+   export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
+-
+-  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+-  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+-
+   ./mach configure
+   ./mach build
+   ./mach buildsymbols
+@@ -119,13 +113,13 @@
  
    install -Dm 644 ../vendor-prefs.js -t "$pkgdir/usr/lib/$pkgname/defaults/pref"
    install -Dm 644 ../distribution.ini -t "$pkgdir/usr/lib/$pkgname/distribution"
@@ -61,7 +72,7 @@
    done
    install -Dm644 comm/mail/branding/thunderbird/TB-symbolic.svg \
      "$pkgdir/usr/share/icons/hicolor/symbolic/apps/thunderbird-symbolic.svg"
-@@ -229,73 +227,75 @@
+@@ -233,73 +227,75 @@
      esac
  done
  
@@ -231,7 +242,16 @@
  }
  build() {
    cd $pkgname-$pkgver
-@@ -83,12 +80,12 @@
+@@ -74,8 +71,6 @@
+   fi
+   export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+   export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
+-  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+-  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   ./mach configure
+   ./mach build
+   ./mach buildsymbols
+@@ -85,12 +80,12 @@
    DESTDIR="$pkgdir" ./mach install
    install -Dm 644 ../vendor-prefs.js -t "$pkgdir/usr/lib/$pkgname/defaults/pref"
    install -Dm 644 ../distribution.ini -t "$pkgdir/usr/lib/$pkgname/distribution"

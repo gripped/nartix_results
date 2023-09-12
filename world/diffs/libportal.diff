@@ -1,0 +1,172 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,38 +1,19 @@
+ 
+ pkgbase=libportal
+-pkgname=(
+-  libportal
+-  libportal-gtk3
+-  libportal-gtk4
+-  libportal-qt5
+-  libportal-docs
+-)
+-pkgver=0.7
++pkgname=(libportal libportal-{gtk3,gtk4,qt5,docs})
++pkgver=0.6
+ pkgrel=1
+ pkgdesc="GIO-style async APIs for most Flatpak portals"
+ url="https://github.com/flatpak/libportal"
+ arch=(x86_64)
+ license=(LGPL3)
+-makedepends=(
+-  gi-docgen
+-  git
+-  gjs
+-  gobject-introspection
+-  gtk3
+-  gtk4
+-  meson
+-  qt5-base
+-  qt5-x11extras
+-  vala
+-)
+-checkdepends=(
+-  python-dbusmock
+-  python-pytest
+-  xorg-server-xvfb
+-)
+-_commit=fcfd10af0d60b0e5e81aff1db523145a3e2e87aa  # tags/0.7^0
++makedepends=(git meson gi-docgen vala gobject-introspection gtk3 gtk4 qt5-base
++             qt5-x11extras gjs)
++checkdepends=(xorg-server-xvfb)
++options=(debug)
++_commit=13df0b887a7eb7b0f9b14069561a41f62e813155  # tags/0.6
+ source=("git+https://github.com/flatpak/libportal#commit=$_commit")
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd libportal
+@@ -41,11 +22,10 @@
+ 
+ prepare() {
+   cd libportal
+-  git cherry-pick -n f68e30a7fcd98c320d39b981902cc8b48e6b6dec
+ }
+ 
+ build() {
+-  arch-meson libportal build
++  artix-meson libportal build
+   meson compile -C build
+ }
+ 
+@@ -90,10 +70,7 @@
+ 
+ package_libportal-gtk3() {
+   pkgdesc+=" - GTK 3 backend"
+-  depends=(
+-    libg{d,t}k-3.so
+-    libportal
+-  )
++  depends=(libportal lib{gdk,gtk}-3.so)
+   provides=(libportal-gtk3.so)
+ 
+   mv gtk3/* "$pkgdir"
+@@ -101,10 +78,7 @@
+ 
+ package_libportal-gtk4() {
+   pkgdesc+=" - GTK 4 backend"
+-  depends=(
+-    libgtk-4.so
+-    libportal
+-  )
++  depends=(libportal libgtk-4.so)
+   provides=(libportal-gtk4.so)
+ 
+   mv gtk4/* "$pkgdir"
+@@ -112,11 +86,7 @@
+ 
+ package_libportal-qt5() {
+   pkgdesc+=" - Qt 5 backend"
+-  depends=(
+-    libportal
+-    qt5-base
+-    qt5-x11extras
+-  )
++  depends=(libportal qt5-base qt5-x11extras)
+   provides=(libportal-qt5.so)
+ 
+   mv qt5/* "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,13 @@
+ pkgbase=libportal
+-pkgname=(
+-  libportal
+-  libportal-gtk3
+-  libportal-gtk4
+-  libportal-qt5
+-  libportal-docs
+-)
+-makedepends=(
+-  gi-docgen
+-  git
+-  gjs
+-  gobject-introspection
+-  gtk3
+-  gtk4
+-  meson
+-  qt5-base
+-  qt5-x11extras
+-  vala
+-)
++pkgname=(libportal libportal-{gtk3,gtk4,qt5,docs})
++makedepends=(git meson gi-docgen vala gobject-introspection gtk3 gtk4 qt5-base
++             qt5-x11extras gjs)
+ prepare() {
+   cd libportal
+-  git cherry-pick -n f68e30a7fcd98c320d39b981902cc8b48e6b6dec
+ }
+ build() {
+-  arch-meson libportal build
++  artix-meson libportal build
+   meson compile -C build
+ }
+ _pick() {
+@@ -54,29 +38,19 @@
+ }
+ package_libportal-gtk3() {
+   pkgdesc+=" - GTK 3 backend"
+-  depends=(
+-    libg{d,t}k-3.so
+-    libportal
+-  )
++  depends=(libportal lib{gdk,gtk}-3.so)
+   provides=(libportal-gtk3.so)
+   mv gtk3/* "$pkgdir"
+ }
+ package_libportal-gtk4() {
+   pkgdesc+=" - GTK 4 backend"
+-  depends=(
+-    libgtk-4.so
+-    libportal
+-  )
++  depends=(libportal libgtk-4.so)
+   provides=(libportal-gtk4.so)
+   mv gtk4/* "$pkgdir"
+ }
+ package_libportal-qt5() {
+   pkgdesc+=" - Qt 5 backend"
+-  depends=(
+-    libportal
+-    qt5-base
+-    qt5-x11extras
+-  )
++  depends=(libportal qt5-base qt5-x11extras)
+   provides=(libportal-qt5.so)
+   mv qt5/* "$pkgdir"
+ }

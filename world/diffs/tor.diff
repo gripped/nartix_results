@@ -1,17 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,26 @@
+@@ -1,37 +1,26 @@
  
  pkgname=tor
--pkgver=0.4.8.4
+-pkgver=0.4.8.5
+-pkgrel=1
 +pkgver=0.4.7.13
- pkgrel=2
++pkgrel=2
  pkgdesc='Anonymizing overlay network.'
  arch=('x86_64')
  url='https://www.torproject.org/download/tor/'
  license=('BSD')
--depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap' 'systemd-libs'
--         'libsystemd.so' 'libzstd.so' 'libseccomp.so' 'libcap.so')
+-depends=(
+-  'bash'
+-  'libcap.so'
+-  'libevent'
+-  'liblzma.so'
+-  'libseccomp.so'
+-  'libssl.so'
+-  'libsystemd.so'
+-  'libz.so'
+-  'libzstd.so'
+-)
 +depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap'
 +         'libzstd.so' 'libseccomp.so' 'libcap.so')
  optdepends=('torsocks: for torify')
@@ -23,8 +33,8 @@
          'tor.sysusers'
 -        'tor.tmpfiles'
 -        'tor.service')
--b2sums=('e283d828fede259b1186b45214d466ff7ee79c835d68d0253537cd44b4dfdc4effe97ffb864d788eb0c65e7c09dc79673b1f191662c3641917a36af935cb9e7f'
--        '83a237b60e9a5217e61da9f12c53e2cdb59e329af88b255b74a6225cf4055d99fe3c2028aea519e496e4a3c4204fe2ea098899a31d91d21bc311fc2fc90f2f32'
+-b2sums=('71a4807284ecefc4a18d6bc15ce798844304f860338b786590779fb171f851d630e8af3114dbc84fe854561e0085dcb147b4dd87787988a8fb6c3628bfcc8175'
+-        'eddb6cf660e9e5b0eef20477d4536a0063bf8dcd0da75238514e620a9f6046431d656d4492f3765f14ff99175525dc4ae5c66f7f5ed0e1f7efe69e8f3b2a9583'
 +        'tor.tmpfiles')
 +b2sums=('338a0a541423f27f594a091307b5edeafc9826bb651c2bd050f3282c9355d9d43d1ef4791f3c98a37dc4c0f64bc40925ea1c1e32cbdff78b1a7308df501f279a'
 +        '339db9869bfe485cbd328fe942cc23e60c08ad67fc2d9e7927ed3c9f3b606192e5efac34013c5bf0b0e8b26e957dcf8b586e1cc0a0c27756b8b3d823af37fdee'
@@ -38,7 +48,7 @@
  validpgpkeys=(
    '2133BC600AB133E1D826D173FE43009C4607B1FB' # Nick Mathewson
    'B74417EDDF22AC9F9E90F49142E86A2A11F48D36' # David Goulet
-@@ -50,7 +48,6 @@
+@@ -59,7 +48,6 @@
    make DESTDIR="${pkgdir}" install
    mv "${pkgdir}"/etc/tor/torrc{.sample,}
  
@@ -52,10 +62,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,16 +1,7 @@
  pkgname=tor
--depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap' 'systemd-libs'
--         'libsystemd.so' 'libzstd.so' 'libseccomp.so' 'libcap.so')
+-depends=(
+-  'bash'
+-  'libcap.so'
+-  'libevent'
+-  'liblzma.so'
+-  'libseccomp.so'
+-  'libssl.so'
+-  'libsystemd.so'
+-  'libz.so'
+-  'libzstd.so'
+-)
 -makedepends=('ca-certificates' 'systemd')
 +depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap'
 +         'libzstd.so' 'libseccomp.so' 'libcap.so')

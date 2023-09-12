@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,8 @@
+ 
+ pkgbase=pygobject
+-pkgname=(
+-  python-gobject
+-  python-gobject-docs
+-)
+-pkgver=3.46.0
+-pkgrel=1
++pkgname=(python-gobject python-gobject-docs)
++pkgver=3.44.1
++pkgrel=4
+ pkgdesc="Python bindings for GLib/GObject/GIO/GTK"
+ url="https://wiki.gnome.org/Projects/PyGObject"
+ arch=(x86_64)
+@@ -28,7 +25,7 @@
+   xorg-server-xvfb
+ )
+ optdepends=('cairo: Cairo bindings')
+-_commit=b5b3fb1fcdbf539dd0cc04120ee4a8e81bce403c  # tags/3.46.0^0
++_commit=1a2544c898ca2aafcab0c9e472be22657f310cf3  # tags/3.44.1^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/pygobject.git#commit=$_commit"
+ )
+@@ -41,10 +38,11 @@
+ 
+ prepare() {
+   cd pygobject
++  git cherry-pick -n ce5b0a622e376d8ac77ba5e8c3c000a2ebbad073
+ }
+ 
+ build() {
+-  arch-meson pygobject build
++  artix-meson pygobject build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,5 @@
+ pkgbase=pygobject
+-pkgname=(
+-  python-gobject
+-  python-gobject-docs
+-)
++pkgname=(python-gobject python-gobject-docs)
+ depends=(
+   gobject-introspection-runtime
+   python
+@@ -17,9 +14,10 @@
+ )
+ prepare() {
+   cd pygobject
++  git cherry-pick -n ce5b0a622e376d8ac77ba5e8c3c000a2ebbad073
+ }
+ build() {
+-  arch-meson pygobject build
++  artix-meson pygobject build
+   meson compile -C build
+ }
+ package_python-gobject-docs() {

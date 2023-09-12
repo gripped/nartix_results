@@ -442,7 +442,6 @@ flac
 flac-doc
 flake8
 flashrom
-flatpak-builder
 flatpak-kcm
 flickcurl
 flite
@@ -530,8 +529,6 @@ glfw-x11
 glfw-wayland
 glfw-doc
 glib-networking
-glibmm-2.68
-glibmm-2.68-docs
 glibmm
 glibmm-docs
 glm
@@ -921,6 +918,7 @@ kig
 kigo
 killbots
 kimageannotator
+kimageformats
 kimagemapeditor
 kimap
 kinfocenter
@@ -1304,11 +1302,6 @@ libpinyin
 libplacebo
 libplist
 libpng12
-libportal
-libportal-gtk3
-libportal-gtk4
-libportal-qt5
-libportal-docs
 libproxy
 libproxy-docs
 libpst
@@ -2274,9 +2267,6 @@ pybind11
 pycups
 python-pycups
 pyenv
-pygobject
-python-gobject
-python-gobject-docs
 pylama
 pyopengl
 python-opengl
