@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=kwallet-pam
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('2b3bf57d4d1108c64fdaee7b3b14008636ff8316d9dd8325206f47fc2f8680a9'
+-sha256sums=('ba77fab2422aaf7c0eec59cd529093678ac8933d72db433cc866e0efe912fb55'
 +sha256sums=('b7adf0065f20855edc18959f5fa661f79fe53081cc35d4c4df242988e3d16830'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

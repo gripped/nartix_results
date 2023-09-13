@@ -3,7 +3,7 @@
 @@ -1,19 +1,19 @@
  
  pkgname=libksysguard
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -18,7 +18,7 @@
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
  install=libksysguard.install
--sha256sums=('682a939252e35a52b7f95a6f5bfcc7cb983fa3b5275ae3b377ab8040b292cb18'
+-sha256sums=('a024c0183b0aed1e2fb4661ba0e31942f54a4a630ceb14ca745ac5f76245fd7d'
 +sha256sums=('9ecb2cb4aab6ba8f0b790267f22aab48244a78c6370b86eb662a0480fb031bdb'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=breeze-plymouth
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('bfb58d6354243e79e375658558cb89e1a9742e1c99bc42dc2d492a65621ba3ee'
+-sha256sums=('0eddb064c228f990f05ed632c5c50f21534de4ed8fefaa37e449bcb669ad3b5c'
 +sha256sums=('6c8fd5e21ca48f9f7ac6d08afd2e1e80ece09628b36c0aa46d85bcc15a1b4f3e'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

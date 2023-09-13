@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-pa
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules kdoctools)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('4c73fb72af73a5258fb7d384eea65084b76341ae9c55652a491e1163cb46e2ed'
+-sha256sums=('69234132db1aba794c165d71490c158b099680fa5021aaffed103ef9fd3ed70b'
 +sha256sums=('4e7608ba32a47affe64bb77ec30bc3ed977a4ca7577399238dd3821df5856e4f'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

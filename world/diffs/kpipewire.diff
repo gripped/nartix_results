@@ -3,7 +3,7 @@
 @@ -1,17 +1,17 @@
  
  pkgname=kpipewire
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -17,7 +17,7 @@
 +makedepends=(extra-cmake-modules plasma-wayland-protocols)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('0ad273b8875c0472e0b4f4332c9f1a5d93dca6533f978fd0606094bd91d24782'
+-sha256sums=('5ae64c6d494634f86aa87d550b6548ef0ac19ed67c24dd9fe1b5cf5387504780'
 +sha256sums=('7ed653bfc0e82aa32e05766def3466937a5b2e31abbf3d50c9298b23e6e4328b'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

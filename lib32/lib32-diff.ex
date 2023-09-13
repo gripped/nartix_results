@@ -19,6 +19,7 @@ lib32-libudev0-shim
 lib32-libusb
 lib32-libva
 lib32-libvdpau
+lib32-libwebp
 lib32-libxcb
 lib32-llvm
 lib32-mesa

@@ -1401,7 +1401,6 @@ libvoikko
 libvorbis
 libvpx
 libvterm
-libwebp
 libwebsockets
 libwhereami
 libwhich

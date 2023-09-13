@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=xdg-desktop-portal-kde
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  provides=(xdg-desktop-portal-impl)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('ccdbf9bad6465de934c4dc30a6fb4d4376872caf0014b91c3749e27140fe08cd'
+-sha256sums=('7e1fdf244c6363a73f487c5e9f854b08885cda74aa7f429bd9ceb4c35c273f53'
 +sha256sums=('aed5e49660a47c86f26df67bf80ac3e55d2ce9bf2a3e676bfaa905516810f773'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=kdecoration
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules kcoreaddons)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('ef26a499d51f4da9e6c25a0209d08b5e8dcedddc86e066537f46f20f001f7294'
+-sha256sums=('dead3e3fc6fa4a596ad3398a95f1f7e190c43d57f9cb7d6af4497a3d3cb0c889'
 +sha256sums=('9db69b439a9a6c863c5be74ba380964087c83b0f438aeaf6d0a97f5fd05294e6'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

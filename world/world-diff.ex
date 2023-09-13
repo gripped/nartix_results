@@ -442,6 +442,7 @@ libva
 libvdpau
 libvirt-glib
 libwacom
+libwebp
 libxcb
 libxmlb
 libxss

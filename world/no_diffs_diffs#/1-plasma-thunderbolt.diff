@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-thunderbolt
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  depends=(bolt systemsettings)
  makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('d60ac7888f5b11e53573c41617588bbc5120bc23ac4377265c20a6ebd42df069'
+-sha256sums=('b35da4ccec24ec2a1514e262024bbb4423d322a3919548f60a3a2c692e988715'
 +sha256sums=('669fee26f59bb2c9122b9a9286a45f0808de42d47ed4b66382bf40ae925d6cc6'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=polkit-kde-agent
--pkgver=5.27.7
+-pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules kdoctools)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-1-$pkgver.tar.xz{,.sig})
--sha256sums=('8c4906f13f0a8b31423f6e2eb42163fea3a9517adec518b3f165d99acab6cf5c'
+-sha256sums=('58973715cca7789caa1c6ffa1d5f7de988b952aa9317caf75119ce800ff9cf8d'
 +sha256sums=('df737ae267ffab5abe460624c325daad176882ac1a4fd5df81e4ba44be4ced4c'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
