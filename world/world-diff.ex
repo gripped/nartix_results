@@ -717,6 +717,7 @@ shiboken6
 pyside6-tools
 python-aiofiles
 python-aiohttp
+python-aiomysql
 python-aiosignal
 python-aiosqlite
 python-alembic

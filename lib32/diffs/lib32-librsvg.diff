@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,8 +3,8 @@
+ pkgname=(
+   lib32-librsvg
+ )
+-pkgver=2.57.0
+-pkgrel=1
++pkgver=2.56.3
++pkgrel=1.1
+ epoch=2
+ pkgdesc="SVG rendering library (32-bit)"
+ url="https://wiki.gnome.org/Projects/LibRsvg"
+@@ -27,11 +27,13 @@
+   rust
+ )
+ checkdepends=(ttf-dejavu)
+-_commit=cd2e29d85df4e09f2af7d24e4254220a051f090d  # tags/2.57.0^0
++_commit=312c4b8c28c99b9051ee6de6fa966cf977b0f7b4  # tags/2.56.3^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/librsvg.git#commit=$_commit"
++  multilib.diff
+ )
+-b2sums=('SKIP')
++b2sums=('SKIP'
++        '90f6cfc7205b7645c66db22deb045c1455d73ba425a69ed0cf2225d70f6e00a847c86fba1b3df816fa35bdd347575e0e48c1ef24227f10327c67afc45dae84c1')
+ 
+ pkgver() {
+   cd librsvg
+@@ -40,6 +42,9 @@
+ 
+ prepare() {
+   cd librsvg
++
++  git apply -3 ../multilib.diff
++
+   NOCONFIGURE=1 ./autogen.sh
+ }
+ 
+@@ -49,8 +54,6 @@
+ 
+ build() {
+   local configure_options=(
+-    --build="$CHOST"
+-    --host=i686-pc-linux-gnu
+     --prefix=/usr
+     --libdir=/usr/lib32
+     --disable-introspection
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,14 +20,13 @@
+ )
+ prepare() {
+   cd librsvg
++  git apply -3 ../multilib.diff
+   NOCONFIGURE=1 ./autogen.sh
+ }
+ export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
+ export CARGO_PROFILE_RELEASE_DEBUG=2
+ build() {
+   local configure_options=(
+-    --build="$CHOST"
+-    --host=i686-pc-linux-gnu
+     --prefix=/usr
+     --libdir=/usr/lib32
+     --disable-introspection

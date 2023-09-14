@@ -4,7 +4,7 @@
  
  _pkgname=libtiff
  pkgname=lib32-${_pkgname}
--pkgver=4.6.0rc1
+-pkgver=4.6.0
 +pkgver=4.5.1
  pkgrel=1
  pkgdesc='Library for manipulation of TIFF images (32-bit)'
@@ -14,13 +14,13 @@
  )
  provides=('libtiff.so' 'libtiffxx.so')
 -source=("https://download.osgeo.org/libtiff/tiff-${pkgver}.tar.gz"{,.sig})
--sha512sums=('96266319a1214acd82d22dac8a79c681ba8d2c8ee7dc1672fd2bfa693acc009f82abf1362b8f026267f46214529cec5ff5a038aa29130bdd7b6e065cb0f16938'
+-sha512sums=('80a117780fe5e2519b5c6661efa90a8a1e4591eb6300068b611ff9887285641c0782d9835482f589d6d109c3be6ffab8831c3561bb40e2456258deb1e896f08e'
 +source=(
 +  "https://download.osgeo.org/libtiff/tiff-${pkgver}.tar.gz"{,.sig}
 +)
 +sha512sums=('64ad2ae84f3cc67b9774d10cdeed41ab66cde9b50276dd4134318c963d26bea60de8c0b0297e77f47963bae163e0d28ed482fa8e809b1e0fb7b7c8a7f5a1cb9a'
              'SKIP')
--b2sums=('a87a67d460e1228f63314b668f849f93c572155d69675443283498d30064e02970098641331c282a940ae673dcfa22b49815bc09cb547b8cbffa920b58a1d786'
+-b2sums=('aa3d51ffb7d800424a05e6a12e2eaad41adfe7d676650d2857bcc073a25627be88372410a27126e9c067692060c26bd2dec80a42a2188197f6f3ff9d8507fc8f'
 +b2sums=('ee496a5deeb49b6c4f866dbac0736c4bb84c29f45ae07cea52297679269a835761a3e54eeca5d75903e3d65f8117d4bbd16abdf1487813a31f9c9eb8d03e04c4'
          'SKIP')
  validpgpkeys=(

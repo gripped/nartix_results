@@ -2309,7 +2309,6 @@ python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aioitertools
-python-aiomysql
 python-aiopg
 python-aioresponses
 python-aiorpcx

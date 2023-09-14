@@ -13,6 +13,7 @@ lib32-libepoxy
 lib32-libgudev
 lib32-libjpeg-turbo
 lib32-libpulse
+lib32-librsvg
 lib32-libsndfile
 lib32-libtiff
 lib32-libudev0-shim
