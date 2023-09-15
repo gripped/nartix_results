@@ -203,6 +203,7 @@ gobject-introspection-runtime
 libgirepository
 gperf
 gpsd
+grafana
 grantleetheme
 graphicsmagick
 grim
@@ -344,7 +345,6 @@ kmail-account-wizard
 kmailtransport
 knot
 koko
-konsole
 kontrast
 kosmindoormap
 kpimtextedit
@@ -442,7 +442,6 @@ libva
 libvdpau
 libvirt-glib
 libwacom
-libwebp
 libxcb
 libxmlb
 libxss
@@ -584,6 +583,10 @@ okular
 onboard
 open-iscsi
 open-isns
+openblas
+openblas64
+blas-openblas
+blas64-openblas
 opencc
 opencc-doc
 opendht
@@ -806,6 +809,7 @@ python-scipy
 python-scramp
 python-setuptools-rust
 python-sphinx-alabaster-theme
+python-sphinx
 python-sphinxcontrib-applehelp
 python-sphinxcontrib-devhelp
 python-sphinxcontrib-htmlhelp
@@ -816,6 +820,7 @@ python-tenacity
 python-tpm2-pytss
 python-tqdm
 python-uri-template
+python-uvloop
 python-virtualenv
 python-werkzeug
 python-wxpython

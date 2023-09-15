@@ -4,7 +4,7 @@
  
  pkgbase=akonadi
  pkgname=(akonadi libakonadi)
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='PIM layer, which provides an asynchronous API to access all kind of PIM data'
@@ -13,7 +13,7 @@
  license=(LGPL)
  makedepends=(extra-cmake-modules postgresql qt5-tools kitemmodels kaccounts-integration doxygen)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('0298f8231337a393eb93408c9e98577b07ef25307be7ddc9759c775c257761e3'
+-sha256sums=('8a944a53f1c7b4dbab3e0b11bf4d15471853b4ec27342d5bf6994e4809539638'
 +sha256sums=('2b53d72291c6cfb692f0683a3a089b2294adeb8f9d0794b2c174d15c5a48f74a'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

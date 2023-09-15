@@ -3,7 +3,7 @@
 @@ -1,24 +1,23 @@
  
  pkgname=ktnef
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='API for handling TNEF data'
@@ -14,7 +14,7 @@
 -makedepends=(extra-cmake-modules qt5-tools doxygen)
 +makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('8186e45771df597c3a69f7ec384420aea27ef5bb451cf6bd48c3bcf257c3cb03'
+-sha256sums=('4aab9901aa0656b3b9ec24ada3229148d5a01ba5434ae860b46c20cac007e548'
 +sha256sums=('339676879ff3a48691e56c4d1360a5e4f0c140e174923bc52ef877c97d65b301'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

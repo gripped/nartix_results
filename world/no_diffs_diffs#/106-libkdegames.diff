@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=libkdegames
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Common code and data for many KDE games'
@@ -12,7 +12,7 @@
  depends=(kdnssd knewstuff)
  makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('8799c705256b8d8735070058ecc6dea72c54e2500f179d9654ec2a86e41bcb8a'
+-sha256sums=('0ea260a762bf9dcc27f793fea1628c7653383ab5b5e41e50cf2ae4a62aa7db97'
 +sha256sums=('982ba27058bf2e7c962a7b4b5832496bde3c0638301cdf1c68c5f699b5bb2cea'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

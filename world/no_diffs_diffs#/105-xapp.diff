@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xapp
+ pkgver=2.6.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Common library for X-Apps project"
+ arch=(x86_64)
+ url="https://github.com/linuxmint/${pkgname}"
 @@ -17,7 +17,7 @@
  b2sums=('0f2572b2e9ec4056bea0fc532f5327bd6de4741719a49b68180d45ff00fcea9b760acb362fc39d3f2dc9d94001b7021267a8a84c067aa90c5a201a46be76e97c')
  
@@ -8,6 +17,15 @@
 +  artix-meson ${pkgname}-${pkgver} build \
      --buildtype=debugoptimized
    samu -C build
+ }
+@@ -25,6 +25,8 @@
+ package(){
+   DESTDIR="${pkgdir}" samu -C build install
+ 
++  rm -r "${pkgdir}"/usr/bin
++
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   python -m compileall -o 0 -o 1 -o 2 --hardlink-dupes -s "${pkgdir}" "${pkgdir}"${site_packages}
  }
 
 

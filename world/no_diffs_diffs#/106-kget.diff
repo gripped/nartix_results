@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=kget
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Download Manager'
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules boost libktorrent libmms kdoctools)
  optdepends=('libktorrent: torrent support' 'libmms: MMS support')
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('168ce8fea7e0e66d21eb128c98f81377316e6cff1627e67692e2cb0f2f2bbef0'
+-sha256sums=('499ed2aede9b871c44a38bac2828899f393666de8b9fd46fc04c7265c82aa7f5'
 +sha256sums=('f99c7e6fbc2acc864e35e99f8864055b29c14645f962f5d1cee491a843b53cd9'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

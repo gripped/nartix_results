@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=step
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Interactive Physical Simulator'
@@ -12,7 +12,7 @@
  depends=(libqalculate gsl knewstuff kplotting hicolor-icon-theme)
  makedepends=(extra-cmake-modules kdoctools eigen qt5-tools python)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('1b7b7fe5abd843092884fd5c60afbd244fe87c8d9640a2ab0711fe9f0e2d0b8d'
+-sha256sums=('4e683a78ee2289678787491826b1824c2c067563c2519255919474025050ee80'
 +sha256sums=('e010da63bb016f55b4d24a5741009e73edbd1ed21ba9317fc04a6bc27720cf2b'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

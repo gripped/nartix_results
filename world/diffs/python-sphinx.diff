@@ -4,25 +4,34 @@
  
  pkgname=python-sphinx
 -_name=${pkgname#python-}
--pkgver=7.2.5
+-pkgver=7.2.6
 -pkgrel=1
 +pkgver=7.0.1
 +pkgrel=3
  pkgdesc='Python documentation generator'
  arch=('any')
  url=http://www.sphinx-doc.org/
+@@ -19,7 +18,7 @@
+   'python-sphinx-alabaster-theme'
+   'python-sphinxcontrib-'{{apple,dev,html}help,jsmath,qthelp,serializinghtml}
+ )
+-makedepends=('git' 'python-build' 'python-flit-core' 'python-installer')
++makedepends=('python-build' 'python-flit-core' 'python-installer')
+ checkdepends=(
+   'cython'
+   'imagemagick' 'librsvg'
 @@ -33,11 +32,12 @@
    'imagemagick: for ext.imgconverter'
    'texlive-latexextra: for generation of PDF documentation'
  )
--source=("https://github.com/$_name-doc/$_name/archive/v$pkgver/$_name-$pkgver.tar.gz")
--b2sums=('27e0c7f8916e36990e214f4c5013434ff0e1e0045513efdf4b16eb56f0865d4cb52db802a41e7f62cc18aae58457d03be6720c129854cc63f35a7537b361ba2d')
+-source=("git+https://github.com/$_name-doc/$_name.git#tag=v$pkgver")
+-b2sums=('SKIP')
 +source=("https://pypi.org/packages/source/S/Sphinx/Sphinx-$pkgver.tar.gz")
 +sha256sums=('61e025f788c5977d9412587e733733a289e2b9fdc2fef8868ddfbfc4ccfe881d')
 +b2sums=('f6193be4d63a1a6c04168b078a3da9e90da410b109b110b9b2402ce242321fae432c08318113b872c15eb5d822857b1cfc735c7f7ed65842cff12732cc31f232')
  
  build() {
--  cd "$_name"-$pkgver
+-  cd "$_name"
 +  cd Sphinx-$pkgver
    python -m build --wheel --skip-dependency-check --no-isolation
  
@@ -31,13 +40,13 @@
  }
  
  check() {
--  cd "$_name"-$pkgver
+-  cd "$_name"
 +  cd Sphinx-$pkgver
    LC_ALL="en_US.UTF-8" python -X dev -X warn_default_encoding -m pytest -v
  }
  
  package() {
--  cd "$_name"-$pkgver
+-  cd "$_name"
 +  cd Sphinx-$pkgver
    python -m installer --destdir="$pkgdir" dist/*.whl
 -  install -Dt "$pkgdir"/usr/share/man/man1 doc/_build/man/"$_name"-*.1
@@ -56,11 +65,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
+@@ -11,9 +11,9 @@
+   'python-sphinx-alabaster-theme'
+   'python-sphinxcontrib-'{{apple,dev,html}help,jsmath,qthelp,serializinghtml}
  )
- makedepends=('python-build' 'python-flit-core' 'python-installer')
+-makedepends=('git' 'python-build' 'python-flit-core' 'python-installer')
++makedepends=('python-build' 'python-flit-core' 'python-installer')
  build() {
--  cd "$_name"-$pkgver
+-  cd "$_name"
 +  cd Sphinx-$pkgver
    python -m build --wheel --skip-dependency-check --no-isolation
    mkdir -p tempinstall

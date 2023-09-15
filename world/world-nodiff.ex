@@ -601,7 +601,6 @@ gptfdisk
 gradle
 gradle-doc
 gradle-src
-grafana
 granatier
 grantlee-editor
 grantlee
@@ -969,6 +968,7 @@ kompare
 kongress
 konqueror
 konquest
+konsole
 kontact
 kontactinterface
 konversation
@@ -1401,6 +1401,7 @@ libvoikko
 libvorbis
 libvpx
 libvterm
+libwebp
 libwebsockets
 libwhereami
 libwhich
@@ -1792,10 +1793,6 @@ openal
 openal-examples
 openbabel
 python-openbabel
-openblas
-openblas64
-blas-openblas
-blas64-openblas
 openbox
 openbsd-netcat
 opencl-clhpp
@@ -3211,7 +3208,6 @@ python-sphinx-lv2-theme
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
-python-sphinx
 python-sphinx_rtd_theme
 python-sphinxcontrib-jquery
 python-sphinxcontrib-jsmath
@@ -3313,7 +3309,6 @@ python-uritemplate
 python-urllib3
 python-urllib3-doc
 python-urwid
-python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators

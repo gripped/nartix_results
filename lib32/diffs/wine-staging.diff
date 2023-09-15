@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=wine-staging
 -pkgver=8.15
+-pkgrel=2
 +pkgver=8.12
- pkgrel=1
++pkgrel=1
  
  _pkgbasever=${pkgver/rc/-rc}
+ _winever=$_pkgbasever
 @@ -10,9 +10,9 @@
          "https://github.com/wine-staging/wine-staging/archive/v$_pkgbasever/wine-staging-v$_pkgbasever.tar.gz"
          30-win32-aliases.conf
@@ -29,6 +31,17 @@
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
+@@ -85,8 +85,8 @@
+   samba           dosbox
+ )
+ 
+-provides=("wine=$pkgver")
+-conflicts=('wine')
++provides=("wine=$pkgver" "wine-wow64=$pkgver")
++conflicts=('wine' 'wine-wow64')
+ install=wine.install
+ 
+ prepare() {
 @@ -151,8 +151,5 @@
    install -m644 "$srcdir/30-win32-aliases.conf" "$pkgdir/usr/share/fontconfig/conf.avail"
    ln -s ../conf.avail/30-win32-aliases.conf "$pkgdir/usr/share/fontconfig/conf.default/30-win32-aliases.conf"
@@ -53,3 +66,14 @@
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
+@@ -39,8 +39,8 @@
+   samba
+   opencl-headers
+ )
+-provides=("wine=$pkgver")
+-conflicts=('wine')
++provides=("wine=$pkgver" "wine-wow64=$pkgver")
++conflicts=('wine' 'wine-wow64')
+ install=wine.install
+ prepare() {
+   mv wine-$_winever $pkgname

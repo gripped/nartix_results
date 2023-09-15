@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,13 @@
+ _pkgname=uvloop
+ pkgname=python-$_pkgname
+ pkgver=0.17.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Ultra fast asyncio event loop'
+ arch=('x86_64')
+ url='https://github.com/MagicStack/uvloop'
+ license=('Apache' 'MIT')
+ depends=('python' 'libuv')
+-makedepends=('python-setuptools' 'cython0' 'git')
++makedepends=('python-setuptools' 'cython' 'git')
+ _tag=afb326897c26f01b864f65f016a7f3f80d9db8ad
+ source=(git+https://github.com/MagicStack/uvloop.git#tag=${_tag})
+ b2sums=(SKIP)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ _pkgname=uvloop
+ pkgname=python-$_pkgname
+ depends=('python' 'libuv')
+-makedepends=('python-setuptools' 'cython0' 'git')
++makedepends=('python-setuptools' 'cython' 'git')
+ build() {
+   cd $_pkgname
+   python setup.py build build_ext --use-system-libuv

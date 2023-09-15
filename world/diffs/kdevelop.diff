@@ -1,23 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  
  pkgname=kdevelop
--pkgver=23.08.0
+-pkgver=23.08.1
 -_clangver=16.0.6
--pkgrel=2
 +pkgver=23.04.3
 +_clangver=15.0.7
-+pkgrel=1
+ pkgrel=1
  pkgdesc='C++ IDE using KDE technologies'
  arch=(x86_64)
- url='http://www.kdevelop.org/'
 @@ -27,15 +27,21 @@
  conflicts=(kdevelop-qmljs kdevplatform)
  replaces=(kdevelop-qmljs kdevplatform kdevelop-clang-tidy)
  groups=(kde-applications kdevelop)
 -source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('307c99359ba435a530ec7ff86d9e80aaff5650c6c0b8ea126d392b46147aee6a'
+-sha256sums=('2edbd5e912df8b6d4034d468e14138d9b9c9ae5d8c6ea74d48e0c7c983616227'
 -            'SKIP')
 +source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
 +        https://invent.kde.org/kdevelop/kdevelop/-/commit/8ca40a64.patch)

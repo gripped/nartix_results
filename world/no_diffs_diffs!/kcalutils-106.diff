@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=kcalutils
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='The KDE calendar utility library'
@@ -12,7 +12,7 @@
  depends=(kcalendarcore kidentitymanagement grantlee)
  makedepends=(extra-cmake-modules doxygen qt5-tools)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('fe49f59c44383d3fa0df69fa444d5283749beec7a59f0db1dac1e20b480317f3'
+-sha256sums=('15df3615318b159b81292237bb50ca7ce7bf4cce2966640d4f754dfabdda1156'
 +sha256sums=('94ee31390e12caf91bcb6528d3e62a3576ad88307eee36f87b9dfd22a22aeec8'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

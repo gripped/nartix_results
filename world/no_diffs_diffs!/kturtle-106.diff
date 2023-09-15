@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=kturtle
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Educational Programming Environment'
@@ -12,7 +12,7 @@
  depends=(knewstuff hicolor-icon-theme)
  makedepends=(extra-cmake-modules kdoctools)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('9b56a1e8688174325b52aea5915a36c49f48fca0aa867deb3fdb767e95719318'
+-sha256sums=('a48cdff31d802fb07087fa759278b12080fa7387d03c73c08eb624035c837944'
 +sha256sums=('49912cb1a72544137d4440982799f7f8caf40cfad117848c0bd5a959ccab7642'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

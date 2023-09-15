@@ -3,7 +3,7 @@
 @@ -1,22 +1,22 @@
  
  pkgname=kmailtransport
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Mail Transport Service'
@@ -14,7 +14,7 @@
 +depends=(akonadi-mime ksmtp libkgapi qtkeychain-qt5)
  makedepends=(extra-cmake-modules qt5-tools doxygen)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('ef0ede439bc25acbd085917e4ac8573535a9b5d51a8b449fa53a5677e5c2ca45'
+-sha256sums=('a0b03a775abfd1fd985acc3d8febbb0c20832aa5dcfb811bdb05a398b8d438a9'
 +sha256sums=('4cf0cb46b591ecd0b7a4b60b3f40ada6d349181de70382e53924224577aa7593'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

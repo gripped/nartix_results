@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=kalzium
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Periodic Table of Elements'
@@ -13,7 +13,7 @@
  makedepends=(extra-cmake-modules kdoctools eigen ocaml facile python)
  groups=(kde-applications kde-education)
 -source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('1e9d23675c93ad559b57e6f98c8b9f47366459d66a1e792860836f4dd84c466e'
+-sha256sums=('892b9e1c98622b4a40a0648f6c5f5df1adf42b2d6c4ffc27bd1a07e51537f4de'
 -            'SKIP')
 +source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
 +        https://invent.kde.org/education/kalzium/-/commit/80a9ab41.patch)

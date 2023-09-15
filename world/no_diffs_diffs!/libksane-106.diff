@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=libksane
--pkgver=23.08.0
+-pkgver=23.08.1
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='An image scanning library'
@@ -12,7 +12,7 @@
  depends=(ktextwidgets kwallet ksanecore)
  makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('3155c8ce0f167734e130440be3f29c8c24409854b18b10e1e41c631fc9626ae0'
+-sha256sums=('eabdcac6f2231fba63e13e59e2be7e5b7b0e5973c42e1c36220472a593bb8e36'
 +sha256sums=('26c3cf34a741bb2b50cfdbbc20a5dffd58fc7b7ab2580a356bd047ccf2ccba42'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
