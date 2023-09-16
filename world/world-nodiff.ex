@@ -26,7 +26,6 @@ akregator
 alacarte
 alligator
 alsa-firmware
-alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
@@ -674,7 +673,6 @@ hevea
 hexchat
 hexer-hobu
 hicolor-icon-theme
-hiera
 highlight
 highlight-gui
 highway
@@ -1372,7 +1370,6 @@ libthai
 libtheora
 libtiger
 libtomcrypt
-libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -1797,7 +1794,6 @@ openbox
 openbsd-netcat
 opencl-clhpp
 opencl-headers
-opencolorio
 openconnect
 opencore-amr
 opencv
@@ -2394,7 +2390,6 @@ python-breathe
 python-brotlicffi
 python-btchip
 python-btrees
-python-build
 python-cachecontrol
 python-cached-property
 python-cachelib
@@ -3157,7 +3152,6 @@ python-seaborn
 python-secretstorage
 python-seedir
 python-semantic-version
-python-semver
 python-send2trash
 python-sentinels
 python-serpent
@@ -3645,7 +3639,6 @@ ruby-minitest-parallel_fork
 ruby-minitest-reporters
 ruby-minitest-sprint
 ruby-minitest
-ruby-mocha
 ruby-msgpack
 ruby-multi_json
 ruby-multipart-parser
@@ -4369,7 +4362,6 @@ xvidcore
 xwallpaper
 yajl
 yakuake
-yaml-cpp
 yamllint
 yapf
 yara

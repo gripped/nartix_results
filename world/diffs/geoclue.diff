@@ -1,7 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,24 +3,11 @@
- pkgver=2.7.0
+@@ -1,34 +1,21 @@
+ 
+ pkgname=geoclue
+-pkgver=2.7.1
++pkgver=2.7.0
  pkgrel=1
  pkgdesc="Modular geoinformation service built on the D-Bus messaging system"
 -url="https://gitlab.freedesktop.org/geoclue/geoclue/-/wikis/home"
@@ -28,16 +31,21 @@
  optdepends=('libnotify: Demo Agent')
  provides=("geoclue2=$pkgver-$pkgrel")
  conflicts=(geoclue2)
-@@ -28,7 +15,7 @@
+ replaces=(geoclue2)
  backup=(etc/geoclue/geoclue.conf)
- _commit=bbfb6289dedb88cb8155d9f6868787d5432e1f90  # tags/2.7.0^0
+-_commit=8a24f60969d4c235d9918796c38a6a9c42e10131  # tags/2.7.1
++_commit=bbfb6289dedb88cb8155d9f6868787d5432e1f90  # tags/2.7.0^0
  source=("git+https://gitlab.freedesktop.org/geoclue/geoclue.git#commit=$_commit")
 -b2sums=('SKIP')
 +sha256sums=('SKIP')
  
  _mozilla_api_key=e05d56db0a694edc8b5aaebda3f2db6a
  
-@@ -48,7 +35,7 @@
+@@ -44,10 +31,11 @@
+ build() {
+   local meson_options=(
+     -D dbus-srv-user=geoclue
++    -D dbus-sys-dir=/usr/share/dbus-1/system.d
      -D mozilla-api-key="$_mozilla_api_key"
    )
  
@@ -74,8 +82,11 @@
  provides=("geoclue2=$pkgver-$pkgrel")
  conflicts=(geoclue2)
  replaces=(geoclue2)
-@@ -28,6 +15,6 @@
-     -D dbus-sys-dir=/usr/share/dbus-1/system.d
+@@ -25,8 +12,9 @@
+ build() {
+   local meson_options=(
+     -D dbus-srv-user=geoclue
++    -D dbus-sys-dir=/usr/share/dbus-1/system.d
      -D mozilla-api-key="$_mozilla_api_key"
    )
 -  arch-meson geoclue build "${meson_options[@]}"

@@ -4,6 +4,7 @@ acpica
 adios2
 akonadi-calendar
 akonadi-search
+alsa-lib
 alsa-ucm-conf
 alsa-utils
 amdvlk
@@ -262,6 +263,7 @@ haproxy
 haveged
 hdf5
 hidapi
+hiera
 hotdoc
 httpbin
 hwloc
@@ -433,6 +435,7 @@ libteam-docs
 libtg_owt
 libtiff
 libtommath
+libtorrent-rasterbar
 libudev0-shim
 libusbmuxd
 libusbsio
@@ -589,6 +592,7 @@ blas-openblas
 blas64-openblas
 opencc
 opencc-doc
+opencolorio
 opendht
 opendoas
 openexr
@@ -732,6 +736,7 @@ python-aws-sam-translator
 python-bcrypt
 python-binaryornot
 python-blinker
+python-build
 python-cachy
 python-cairo
 python-cairo-docs
@@ -807,6 +812,7 @@ python-readme-renderer
 python-requests-mock
 python-scipy
 python-scramp
+python-semver
 python-setuptools-rust
 python-sphinx-alabaster-theme
 python-sphinx
@@ -942,6 +948,7 @@ rtkit
 ruby-bake-modernize
 ruby-bake-test-external
 ruby-faraday-patron
+ruby-mocha
 ruby-sus
 ruff
 python-ruff
@@ -1114,6 +1121,7 @@ xorg-xlogo
 xorg-xwayland
 xscreensaver
 xxhash
+yaml-cpp
 yt-dlp
 yubikey-personalization
 z3
