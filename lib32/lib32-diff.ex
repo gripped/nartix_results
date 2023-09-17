@@ -9,6 +9,7 @@ lib32-gamemode
 lib32-glib2
 lib32-glu
 lib32-jack2
+lib32-json-glib
 lib32-libdrm
 lib32-libepoxy
 lib32-libgudev

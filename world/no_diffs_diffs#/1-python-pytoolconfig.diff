@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-pytoolconfig
+ _name=${pkgname#python-}
+ pkgver=1.2.5
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Manage configuration for python tools, such as black and rope."
+ arch=('any')
+ url="https://pypi.org/project/pytoolconfig/"
+@@ -11,7 +11,7 @@
+ makedepends=('python-build' 'python-installer' 'python-wheel' 'python-pdm-pep517')
+ checkdepends=('python-docutils' 'python-pytest' 'python-sphinx' 'python-tabulate')
+ optdepends=(
+-	'python-platformdirs: for finding configuration dirs'
++	'python-appdirs: for finding configuration dirs'
+ 	'python-pydantic: for validation'
+ 	'python-sphinx: for automatic documentation'
+ 	'python-tabulate: for tables in documentation'

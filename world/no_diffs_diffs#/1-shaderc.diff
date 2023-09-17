@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=shaderc
 -pkgver=2023.4
+-pkgrel=2
 +pkgver=2023.3
- pkgrel=1
++pkgrel=1
  pkgdesc='Collection of tools, libraries and tests for shader compilation'
  url='https://github.com/google/shaderc'
+ arch=('x86_64')
 @@ -10,8 +10,8 @@
  makedepends=('asciidoctor' 'cmake' 'ninja' 'python' 'spirv-headers')
  provides=('libshaderc_shared.so')

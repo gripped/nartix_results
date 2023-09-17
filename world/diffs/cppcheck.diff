@@ -1,6 +1,47 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -52,7 +52,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cppcheck
+-pkgver=2.12.0
++pkgver=2.11.1
+ pkgrel=1
+ pkgdesc='A tool for static C/C++ code analysis'
+ arch=('x86_64')
+@@ -14,20 +14,19 @@
+ makedepends=(
+   'git'
+   'docbook-xsl'
+-  'qt6-tools'
+-  'qt6-base'
+-  'qt6-declarative'
++  'qt5-tools'
++  'qt5-base'
+   'python'
+   'pandoc'
+   'cmake'
+   'clang'
+ )
+ optdepends=(
+-  'qt6-tools: run cppcheck-gui'
++  'qt5-tools: run cppcheck-gui'
+   'python-pygments: cppcheck-htmlreport'
+   'clang: for cppcheck-gui integration'
+ )
+-_commit='f2f1fb0bca5f23aac8f02fb9c09e4529a7935749'
++_commit='13746898140fa229018b57acdb18091942c8ea05'
+ source=(
+   "$pkgname::git+https://github.com/danmar/cppcheck.git#commit=$_commit"
+   'translations-location.patch'
+@@ -47,15 +46,13 @@
+   cd "$pkgname"
+ 
+   patch -p1 -i "$srcdir/translations-location.patch"
+-
+-  git revert --no-commit 499f566e9dcdf7d033145c4eb613dd4a4738ab0a
+ }
+ 
+ build() {
    export CXXFLAGS+=" -DNDEBUG"
  
    pushd "$pkgname"
@@ -9,13 +50,56 @@
    make DB2MAN=/usr/share/xml/docbook/xsl-stylesheets-${xsversion}-nons/manpages/docbook.xsl man
    pandoc man/manual.md -o man/manual.html -s --number-sections --toc
    pandoc man/reference-cfg-format.md -o man/reference-cfg-format.html -s --number-sections --toc
+@@ -64,16 +61,15 @@
+   cmake \
+     -B build \
+     -S "$pkgname" \
+-    -D CMAKE_INSTALL_PREFIX=/usr \
+-    -D CMAKE_BUILD_TYPE=RelWithDebInfo \
+-    -D USE_MATCHCOMPILER=ON \
+-    -D HAVE_RULES=ON \
+-    -D BUILD_GUI=ON \
+-    -D BUILD_SHARED_LIBS=OFF \
+-    -D BUILD_TESTS=ON \
+-    -D FILESDIR=/usr/share/cppcheck \
+-    -D USE_BUNDLED_TINYXML2=OFF \
+-    -D USE_QT6=ON
++    -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
++    -DUSE_MATCHCOMPILER=ON \
++    -DHAVE_RULES=ON \
++    -DBUILD_GUI=ON \
++    -DBUILD_SHARED_LIBS=OFF \
++    -DBUILD_TESTS=ON \
++    -DFILESDIR=/usr/share/cppcheck \
++    -DUSE_BUNDLED_TINYXML2=OFF
+ 
+   cmake --build build
+ }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
+@@ -7,9 +7,8 @@
+ makedepends=(
+   'git'
+   'docbook-xsl'
+-  'qt6-tools'
+-  'qt6-base'
+-  'qt6-declarative'
++  'qt5-tools'
++  'qt5-base'
+   'python'
+   'pandoc'
+   'cmake'
+@@ -18,12 +17,11 @@
+ prepare() {
+   cd "$pkgname"
+   patch -p1 -i "$srcdir/translations-location.patch"
+-  git revert --no-commit 499f566e9dcdf7d033145c4eb613dd4a4738ab0a
+ }
  build() {
    export CXXFLAGS+=" -DNDEBUG"
    pushd "$pkgname"
@@ -24,3 +108,28 @@
    make DB2MAN=/usr/share/xml/docbook/xsl-stylesheets-${xsversion}-nons/manpages/docbook.xsl man
    pandoc man/manual.md -o man/manual.html -s --number-sections --toc
    pandoc man/reference-cfg-format.md -o man/reference-cfg-format.html -s --number-sections --toc
+@@ -31,15 +29,14 @@
+   cmake \
+     -B build \
+     -S "$pkgname" \
+-    -D CMAKE_INSTALL_PREFIX=/usr \
+-    -D CMAKE_BUILD_TYPE=RelWithDebInfo \
+-    -D USE_MATCHCOMPILER=ON \
+-    -D HAVE_RULES=ON \
+-    -D BUILD_GUI=ON \
+-    -D BUILD_SHARED_LIBS=OFF \
+-    -D BUILD_TESTS=ON \
+-    -D FILESDIR=/usr/share/cppcheck \
+-    -D USE_BUNDLED_TINYXML2=OFF \
+-    -D USE_QT6=ON
++    -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
++    -DUSE_MATCHCOMPILER=ON \
++    -DHAVE_RULES=ON \
++    -DBUILD_GUI=ON \
++    -DBUILD_SHARED_LIBS=OFF \
++    -DBUILD_TESTS=ON \
++    -DFILESDIR=/usr/share/cppcheck \
++    -DUSE_BUNDLED_TINYXML2=OFF
+   cmake --build build
+ }

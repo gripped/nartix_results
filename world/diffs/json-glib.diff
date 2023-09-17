@@ -1,14 +1,44 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,7 @@
+@@ -1,44 +1,30 @@
+ 
+ pkgbase=json-glib
+-pkgname=(
+-  json-glib
+-  json-glib-docs
+-)
+-pkgver=1.8.0
+-pkgrel=1
++pkgname=(json-glib json-glib-docs)
++pkgver=1.6.6
++pkgrel=2
+ pkgdesc="JSON library built on GLib"
+ url="https://wiki.gnome.org/Projects/JsonGlib"
+ arch=(x86_64)
  license=(GPL)
- depends=(glib2)
- makedepends=(gobject-introspection git meson gi-docgen docbook-xsl)
+-depends=(
+-  glib2
+-)
+-makedepends=(
+-  docbook-xsl
+-  gi-docgen
+-  git
+-  gobject-introspection
+-  meson
+-)
+-_commit=66413437f80f6bd935827eef51dde47c0a114144  # tags/1.8.0-actual^0
++depends=(glib2)
++makedepends=(gobject-introspection git meson gi-docgen docbook-xsl)
 +options=(debug)
- _commit=3cf2b53667a73376c852e08dcadd197a5f8325b9  # tags/1.6.6^0
++_commit=3cf2b53667a73376c852e08dcadd197a5f8325b9  # tags/1.6.6^0
  source=("git+https://gitlab.gnome.org/GNOME/json-glib.git#commit=$_commit")
- sha256sums=('SKIP')
-@@ -19,11 +20,11 @@
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd json-glib
+-  git describe --tags | sed 's/-actual//;s/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
  }
  
  prepare() {
@@ -17,7 +47,11 @@
  }
  
  build() {
--  arch-meson json-glib build -D man=true
+-  local meson_options=(
+-    -D man=true
+-  )
+-
+-  arch-meson json-glib build "${meson_options[@]}"
 +  artix-meson json-glib build -D man=true
    meson compile -C build
  }
@@ -28,16 +62,34 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
- pkgname=(json-glib json-glib-docs)
- depends=(glib2)
- makedepends=(gobject-introspection git meson gi-docgen docbook-xsl)
+@@ -1,26 +1,13 @@
+ pkgbase=json-glib
+-pkgname=(
+-  json-glib
+-  json-glib-docs
+-)
+-depends=(
+-  glib2
+-)
+-makedepends=(
+-  docbook-xsl
+-  gi-docgen
+-  git
+-  gobject-introspection
+-  meson
+-)
++pkgname=(json-glib json-glib-docs)
++depends=(glib2)
++makedepends=(gobject-introspection git meson gi-docgen docbook-xsl)
  prepare() {
 -  cd json-glib
 +  cd $pkgname
  }
  build() {
--  arch-meson json-glib build -D man=true
+-  local meson_options=(
+-    -D man=true
+-  )
+-  arch-meson json-glib build "${meson_options[@]}"
 +  artix-meson json-glib build -D man=true
    meson compile -C build
  }

@@ -56,6 +56,7 @@ cgmanager
 check-jsonschema
 chromium-bsu
 chrony
+cinnamon
 clamav
 clang
 clazy
@@ -171,7 +172,6 @@ gitea
 github-cli
 glibmm-2.68
 glibmm-2.68-docs
-glslang
 glu
 glusterfs
 gnome-bluetooth-3.0
@@ -274,6 +274,7 @@ ibus
 libibus
 igsc
 inkscape
+intel-gmmlib
 intel-media-sdk
 libmfx
 intel-opencl-clang
@@ -397,6 +398,8 @@ libgit2
 libgphoto2
 libgsf
 libgudev
+libgweather-4
+libgweather-4-docs
 libhandy
 libhandy-docs
 libhandy0
@@ -515,6 +518,8 @@ kvantum-theme-materia
 matrix-synapse
 mc
 media-player-info
+mediainfo
+mediainfo-gui
 memcached
 mesa
 vulkan-mesa-layers
@@ -568,6 +573,8 @@ networkmanager
 libnm
 nm-cloud-setup
 nftables
+nginx
+nginx-src
 nlohmann-json
 nsd
 nuspell
@@ -584,6 +591,7 @@ ocaml-ctypes
 ocaml-findlib
 okular
 onboard
+onetbb
 open-iscsi
 open-isns
 openblas
@@ -759,6 +767,7 @@ python-dulwich
 python-editables
 python-engineio
 python-exceptiongroup
+python-findpython
 python-flasgger
 python-flask-login
 python-flask
@@ -781,6 +790,8 @@ python-livereload
 python-lsp-server
 python-mailmanclient
 python-markdown-it-py
+python-matplotlib
+python-matrix-common
 python-mistune
 python-moto
 python-mutagen
@@ -791,10 +802,9 @@ python-parse
 python-pathspec
 python-pdm-backend
 python-poetry-dynamic-versioning
+python-pwntools
 python-pyarrow
 python-pycodestyle
-python-pydantic-core
-python-pydantic
 python-pygit2
 python-pyhcl
 python-pymupdf
@@ -915,12 +925,14 @@ qhull
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
+qt5-imageformats
 qt5-tools
 qt5-webengine
 qt6-base
 qt6-declarative
 qt6-doc
 qt6-examples
+qt6-imageformats
 qt6-location
 qt6-tools
 qt6-wayland
@@ -947,8 +959,10 @@ rspamd
 rtkit
 ruby-bake-modernize
 ruby-bake-test-external
+ruby-console
 ruby-faraday-patron
 ruby-mocha
+ruby-sequel
 ruby-sus
 ruff
 python-ruff
@@ -989,6 +1003,7 @@ strongswan
 stubby
 stunnel
 subversion
+suitesparse
 supermin
 svt-hevc
 sway
@@ -1019,6 +1034,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+tree-sitter
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-nerd-fonts-symbols-common
@@ -1126,6 +1142,7 @@ yt-dlp
 yubikey-personalization
 z3
 python-z3-solver
+zathura-pdf-mupdf
 zig
 zita-resampler
 zita-resampler-docs

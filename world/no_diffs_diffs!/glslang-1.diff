@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=glslang
+-pkgver=13.0.0
++pkgver=12.2.0
+ pkgrel=1
+ pkgdesc='OpenGL and OpenGL ES shader front end and validator'
+ arch=('x86_64')
+@@ -10,8 +10,7 @@
+ makedepends=('cmake' 'ninja' 'git' 'spirv-tools' 'spirv-headers' 'python')
+ options=('staticlibs')
+ source=(${pkgname}-${pkgver}.tar.gz::https://github.com/KhronosGroup/glslang/archive/${pkgver}.tar.gz)
+-sha256sums=('bcda732434f829aa74414ea0e06d329ec8ac28637c38a0de45e17c8fd25a4715')
+-
++sha256sums=('870d17030fda7308c1521fb2e01a9e93cbe4b130bc8274e90d00e127432ab6f6')
+ 
+ build() {
+   cd ${pkgname}-${pkgver}

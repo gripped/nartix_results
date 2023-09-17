@@ -230,7 +230,6 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
-cinnamon
 cjs
 cjson
 clang14
@@ -532,6 +531,7 @@ glibmm
 glibmm-docs
 glm
 glpk
+glslang
 gmic
 gimp-plugin-gmic
 gmime3
@@ -731,7 +731,6 @@ incidenceeditor
 iniparser
 innoextract
 intel-compute-runtime
-intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
 intel-metee
@@ -1173,8 +1172,6 @@ libgravatar
 libgrss
 libgtop
 libgusb
-libgweather-4
-libgweather-4-docs
 libgxps
 libharu
 libheif
@@ -1641,8 +1638,6 @@ mbedtls2
 mbox-importer
 mcpp
 md4c
-mediainfo
-mediainfo-gui
 meld
 memray
 memtest86plus
@@ -1737,8 +1732,6 @@ nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt
 newsboat
-nginx
-nginx-src
 ninja
 nload
 nmap
@@ -1782,7 +1775,6 @@ ocamlbuild
 ocl-icd
 odt2txt
 okteta
-onetbb
 oniguruma
 onionshare
 opam
@@ -2558,7 +2550,6 @@ python-fido2
 python-fields
 python-filebytes
 python-filelock
-python-findpython
 python-fiona
 python-fire
 python-first
@@ -2767,8 +2758,6 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
-python-matplotlib
-python-matrix-common
 python-mccabe
 python-mdit_py_plugins
 python-mdurl
@@ -2932,7 +2921,6 @@ python-ptyprocess
 python-publicsuffix2
 python-pure-eval
 python-purl
-python-pwntools
 python-py-cpuinfo
 python-py-partiql-parser
 python-py
@@ -2950,6 +2938,8 @@ python-pycryptodome
 python-pycryptodomex
 python-pycuda
 python-pycurl
+python-pydantic-core
+python-pydantic
 python-pydocstyle
 python-pydot
 python-pydrive
@@ -3405,7 +3395,6 @@ qt5-examples
 qt5-feedback
 qt5-gamepad
 qt5-graphicaleffects
-qt5-imageformats
 qt5-location
 qt5-lottie
 qt5-multimedia
@@ -3441,7 +3430,6 @@ qt6-connectivity
 qt6-datavis3d
 qt6-grpc
 qt6-httpserver
-qt6-imageformats
 qt6-languageserver
 qt6-lottie
 qt6-multimedia
@@ -3564,7 +3552,6 @@ ruby-bundler
 ruby-cgi
 ruby-chronic
 ruby-concurrent
-ruby-console
 ruby-covered
 ruby-crack
 ruby-crass
@@ -3715,7 +3702,6 @@ ruby-sass
 ruby-sassc
 ruby-scanf
 ruby-semantic_puppet
-ruby-sequel
 ruby-shadow
 ruby-simplecov-html
 ruby-simplecov
@@ -3875,7 +3861,6 @@ strawberry
 sugar-datastore
 suil
 suil-docs
-suitesparse
 sushi
 svgpart
 svt-av1
@@ -4102,7 +4087,6 @@ tpm2-tools
 transcode
 transmageddon
 tre
-tree-sitter
 tree
 trojan
 tslib
@@ -4377,7 +4361,6 @@ yubico-c-client
 yubico-c
 zanshin
 zathura-djvu
-zathura-pdf-mupdf
 zathura-ps
 zathura
 zbar

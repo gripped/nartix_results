@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _name=pydantic
+ pkgname=python-$_name
+-pkgver=2.3.0
+-pkgrel=1
++pkgver=2.0.3
++pkgrel=3
+ pkgdesc='Data parsing and validation using Python type hints'
+ arch=(any)
+ url="https://github.com/pydantic/pydantic"
+@@ -37,14 +37,12 @@
+   python-sqlalchemy
+ )
+ optdepends=(
+-  'mypy: for type validation with mypy'
+   'python-dotenv: for .env file support'
+   'python-email-validator: for email validation'
+-  'python-hypothesis: for hypothesis plugin when using legacy v1'
+ )
+ source=($url/archive/v$pkgver/$_name-v$pkgver.tar.gz)
+-sha512sums=('7538c213ac298896a5833c75049e5c03581e9cd486fc985cec4149ccf7263c344bd47e84b80d11276d2e4aa3afe2c4da22e4bc9a02755116dede402a9c47c18a')
+-b2sums=('f38d359a26ade1f3d1043bd0122c6368e0d85eb30729acae3f6a40241acdfe437dc95a601650986c8cfb7a5ac9a72717f35ffb1e739d75f10a7e34ba419c45f9')
++sha512sums=('2930cb85b5d4c02bc38d68875e2e5771beb28eb329ce14fcc85d0ed2c27194717e26f22f5fb0a9d548ee2a0ed7172d082a4e9213e55cb971ce8e5f68c0b1b660')
++b2sums=('ea04e906c5f16d2a3f962937b6de946b9bb6e3845b11a0d477db047ff502ea0f2ebcea624c53fe5f4590d6164f200c8f8cc1a0d9fe8c6b801a93c5957d305a02')
+ 
+ build() {
+   cd $_name-$pkgver
