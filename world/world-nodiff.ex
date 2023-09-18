@@ -2175,7 +2175,6 @@ pim-sieve-editor
 pimcommon
 pixman
 pkcs11-helper
-plantuml
 plasma-browser-integration
 plasma-desktop
 plasma-disks
@@ -2291,7 +2290,6 @@ python-aiobotocore
 python-aiodns
 python-aiogram
 python-aiohttp-cors
-python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aioitertools
 python-aiopg
@@ -3048,7 +3046,6 @@ python-pytest-rerunfailures
 python-pytest-ruff
 python-pytest-runner
 python-pytest-services
-python-pytest-socket
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar

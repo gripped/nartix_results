@@ -680,6 +680,7 @@ pipewire-zeroconf
 pipewire-v4l2
 pipewire-x11-bell
 pkgfile
+plantuml
 plasma-meta
 plasma-sdk
 plasma-workspace
@@ -731,6 +732,7 @@ pyside6
 shiboken6
 pyside6-tools
 python-aiofiles
+python-aiohttp-openmetrics
 python-aiohttp
 python-aiomysql
 python-aiosignal
@@ -814,6 +816,7 @@ python-pytest-benchmark
 python-pytest-enabler
 python-pytest-localserver
 python-pytest-param-files
+python-pytest-socket
 python-pytest-testinfra
 python-pytest
 python-pyudev

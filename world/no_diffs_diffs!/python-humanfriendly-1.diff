@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=humanfriendly
+ pkgname=python-humanfriendly
+ pkgver=10.0
+-pkgrel=6
++pkgrel=5
+ pkgdesc="Human friendly input/output for text interfaces using Python"
+ arch=(any)
+ url="https://github.com/xolox/python-humanfriendly"
+@@ -16,6 +16,7 @@
+ )
+ checkdepends=(
+   python-docutils
++  python-mock
+   python-pytest
+ )
+ source=(https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz)

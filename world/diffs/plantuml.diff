@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=plantuml
+ pkgver=1.2023.6
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Component that allows to quickly write uml diagrams"
+ arch=(any)
+ url="https://plantuml.com/"
+@@ -18,6 +18,7 @@
+ 
+ prepare(){
+   cd "$srcdir/$pkgname-$pkgver"
++    sed 's/target="1.6"/target="1.7"/g;s/source="1.6"/source="1.7"/g' -i build.xml
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ makedepends=("apache-ant" "java-environment>=8")
+ prepare(){
+   cd "$srcdir/$pkgname-$pkgver"
++    sed 's/target="1.6"/target="1.7"/g;s/
+ }
+ build() {
+   cd "$srcdir/$pkgname-$pkgver"
