@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-patiencediff
+-pkgver=0.2.14
+-pkgrel=1
++pkgver=0.2.13
++pkgrel=2
+ pkgdesc='Patiencediff Python and C implementations'
+ arch=(x86_64)
+ url=https://www.breezy-vcs.org/
+@@ -11,7 +11,7 @@
+   git
+   python-setuptools
+ )
+-_tag=84e7d1ccb8f623bc082a4412f6b8686523b57a0b
++_tag=834fad2d280fa0634d00d658c61c15d82031f519
+ source=(git+https://github.com/breezy-team/patiencediff.git#tag=${_tag})
+ sha256sums=(SKIP)
+ 

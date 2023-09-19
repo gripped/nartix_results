@@ -151,6 +151,7 @@ fmt
 folks
 fprintd
 freerdp
+freetds
 fuse2
 fwupd-efi
 fwupd
@@ -427,6 +428,7 @@ libportal-gtk4
 libportal-qt5
 libportal-docs
 libprocps
+libqalculate
 libquotient
 libsass
 libsecp256k1
@@ -576,6 +578,10 @@ nftables
 nginx
 nginx-src
 nlohmann-json
+notmuch
+notmuch-vim
+notmuch-mutt
+notmuch-runtime
 nsd
 nuspell
 nvchecker
@@ -760,11 +766,13 @@ python-click-repl
 python-cookiecutter
 python-cytoolz
 python-dask
+python-deepdiff
 python-distlib
 python-distributed
 python-django-classy-tags
 python-django-debug-toolbar
 python-django-environ
+python-django-filter
 python-dulwich
 python-editables
 python-engineio
@@ -1046,6 +1054,8 @@ udftools
 udisks2
 umockdev
 unbound
+unrar
+libunrar
 unrealircd
 upower
 uptimed

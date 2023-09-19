@@ -463,7 +463,6 @@ freealut
 freecell-solver
 freeglut
 freeradius
-freetds
 freetype2
 freetype2-demos
 freetype2-docs
@@ -1304,7 +1303,6 @@ libpst-docs
 libptytty
 libpwquality
 libqaccessibilityclient
-libqalculate
 libqb
 libqmi
 libqrtr-glib
@@ -1744,10 +1742,6 @@ nodejs-yaml
 nodejs
 noise-suppression-for-voice
 notify-osd
-notmuch
-notmuch-vim
-notmuch-mutt
-notmuch-runtime
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts
@@ -2465,7 +2459,6 @@ python-ddt
 python-debtcollector
 python-debugpy
 python-decorator
-python-deepdiff
 python-deepmerge
 python-defusedxml
 python-deprecated
@@ -2484,7 +2477,6 @@ python-django-compressor
 python-django-crispy-forms
 python-django-extensions
 python-django-fake-model
-python-django-filter
 python-django-gravatar
 python-django-guardian
 python-django-haystack
@@ -4124,8 +4116,6 @@ ruby-unicorn-engine
 unifdef
 unittestpp
 unoconv
-unrar
-libunrar
 unrtf
 unzip
 uriparser

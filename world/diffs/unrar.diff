@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,17 +1,14 @@
+ 
+ pkgbase=unrar
+-pkgname=(libunrar
+-         unrar)
+-pkgver=6.2.11
++pkgname=(unrar libunrar)
++pkgver=6.2.9
+ pkgrel=1
+ epoch=1
+ arch=(x86_64)
+ url='https://www.rarlab.com/rar_add.htm'
+-depends=(gcc-libs
+-         glibc)
+ license=(custom)
+ source=(https://www.rarlab.com/rar/unrarsrc-$pkgver.tar.gz)
+-sha256sums=('a805e150d56445770f71a85c3fbdc9ab4b04fbe61b01cb57182d86fe3e7e6cec')
++sha256sums=('477aecdad08062b20eb63e14f60dc70293dcb92ec7b1d80ab3ea8acec33c2cb4')
+ 
+ prepare() {
+   sed -e '/CXXFLAGS=/d' -e '/LDFLAGS=/d' -i unrar/makefile # Use system build flags
+@@ -26,6 +23,7 @@
+ 
+ package_unrar() {
+   pkgdesc='The RAR uncompression program'
++  depends=(gcc-libs)
+   cd unrar
+   install -Dm755 unrar -t "$pkgdir"/usr/bin/
+   install -Dm644 license.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+@@ -33,6 +31,7 @@
+ 
+ package_libunrar() {
+   pkgdesc='Library and header file for applications that use libunrar'
++  depends=(gcc-libs)
+   cd libunrar
+   install -Dm755 libunrar.so -t "$pkgdir"/usr/lib/
+   install -Dm644 dll.hpp -t "$pkgdir"/usr/include/unrar/
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,5 @@
+ pkgbase=unrar
+-pkgname=(libunrar
+-         unrar)
+-depends=(gcc-libs
+-         glibc)
++pkgname=(unrar libunrar)
+ prepare() {
+   sed -e '/CXXFLAGS=/d' -e '/LDFLAGS=/d' -i unrar/makefile # Use system build flags
+ }
+@@ -12,3 +9,16 @@
+   make -C libunrar lib
+   make -C unrar -j1
+ }
++package_unrar() {
++  depends=(gcc-libs)
++  cd unrar
++  install -Dm755 unrar -t "$pkgdir"/usr/bin/
++  install -Dm644 license.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
++}
++package_libunrar() {
++  depends=(gcc-libs)
++  cd libunrar
++  install -Dm755 libunrar.so -t "$pkgdir"/usr/lib/
++  install -Dm644 dll.hpp -t "$pkgdir"/usr/include/unrar/
++  install -Dm644 license.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
++}
