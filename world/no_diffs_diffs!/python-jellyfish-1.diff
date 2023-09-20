@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-jellyfish
+-pkgver=1.0.1
++pkgver=0.11.2
+ pkgrel=1
+ pkgdesc='A python library for doing approximate and phonetic matching of strings'
+ arch=(x86_64)
+@@ -13,7 +13,7 @@
+   python-build
+   python-installer
+ )
+-_tag=44ea14d3a70c560a9ef21b571ad2f28f9ea7869b
++_tag=eda72de333944e2eb65c5dbfb58424e492840924
+ source=(git+https://github.com/jamesturk/jellyfish.git#tag=${_tag})
+ b2sums=(SKIP)
+ 

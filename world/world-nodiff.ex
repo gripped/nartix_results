@@ -1293,7 +1293,6 @@ libpeas
 libpeas-docs
 libpgm
 libpinyin
-libplacebo
 libplist
 libpng12
 libproxy
@@ -3154,7 +3153,6 @@ python-slugify
 python-sly
 python-smartypants
 python-smbprotocol
-python-smmap
 python-snappy
 python-sniffio
 python-snowballstemmer

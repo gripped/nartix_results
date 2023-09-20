@@ -4,12 +4,38 @@
  
  pkgname=ffmpeg
  pkgver=6.0
--pkgrel=10
+-pkgrel=11
 +pkgrel=8
  epoch=2
  pkgdesc='Complete solution to record, convert and stream audio and video'
  arch=(x86_64)
-@@ -112,8 +112,6 @@
+@@ -28,6 +28,7 @@
+   libgl
+   libiec61883
+   libjxl.so
++  libmfx
+   libmodplug
+   libopenmpt.so
+   libpulse
+@@ -56,7 +57,6 @@
+   libxvidcore.so
+   libzimg.so
+   ocl-icd
+-  onevpl
+   opencore-amr
+   openjpeg2
+   opus
+@@ -84,8 +84,7 @@
+ )
+ optdepends=(
+   'avisynthplus: AviSynthPlus support'
+-  'intel-media-sdk: Intel QuickSync support (legacy)'
+-  'onevpl-intel-gpu: Intel QuickSync support'
++  'intel-media-sdk: Intel QuickSync support'
+   'ladspa: LADSPA filters'
+   'nvidia-utils: Nvidia NVDEC/NVENC support'
+ )
+@@ -113,8 +112,6 @@
  
  prepare() {
    cd ffmpeg
@@ -18,13 +44,57 @@
    patch -Np1 -i ../add-av_stream_get_first_dts-for-chromium.patch # https://crbug.com/1251779
  }
  
+@@ -151,6 +148,7 @@
+     --enable-libiec61883 \
+     --enable-libjack \
+     --enable-libjxl \
++    --enable-libmfx \
+     --enable-libmodplug \
+     --enable-libmp3lame \
+     --enable-libopencore_amrnb \
+@@ -171,7 +169,6 @@
+     --enable-libvidstab \
+     --enable-libvmaf \
+     --enable-libvorbis \
+-    --enable-libvpl \
+     --enable-libvpx \
+     --enable-libwebp \
+     --enable-libx264 \
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -89,8 +89,6 @@
+@@ -20,6 +20,7 @@
+   libgl
+   libiec61883
+   libjxl.so
++  libmfx
+   libmodplug
+   libopenmpt.so
+   libpulse
+@@ -48,7 +49,6 @@
+   libxvidcore.so
+   libzimg.so
+   ocl-icd
+-  onevpl
+   opencore-amr
+   openjpeg2
+   opus
+@@ -74,11 +74,6 @@
+   opencl-headers
+   vulkan-headers
+ )
+-'
+-  'onevpl-intel-gpu: Intel QuickSync support'
+-  'ladspa: LADSPA filters'
+-  'nvidia-utils: Nvidia NVDEC/NVENC support'
+-)
+ provides=(
+   libavcodec.so
+   libavdevice.so
+@@ -94,8 +89,6 @@
  )
  prepare() {
    cd ffmpeg
@@ -33,3 +103,19 @@
    patch -Np1 -i ../add-av_stream_get_first_dts-for-chromium.patch # https://crbug.com/1251779
  }
  build() {
+@@ -126,6 +119,7 @@
+     --enable-libiec61883 \
+     --enable-libjack \
+     --enable-libjxl \
++    --enable-libmfx \
+     --enable-libmodplug \
+     --enable-libmp3lame \
+     --enable-libopencore_amrnb \
+@@ -146,7 +140,6 @@
+     --enable-libvidstab \
+     --enable-libvmaf \
+     --enable-libvorbis \
+-    --enable-libvpl \
+     --enable-libvpx \
+     --enable-libwebp \
+     --enable-libx264 \

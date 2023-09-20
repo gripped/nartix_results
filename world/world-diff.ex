@@ -421,6 +421,7 @@ libnvme
 libodfgen
 libotr
 libphonenumber
+libplacebo
 libpng
 libportal
 libportal-gtk3
@@ -835,6 +836,7 @@ python-scipy
 python-scramp
 python-semver
 python-setuptools-rust
+python-smmap
 python-sphinx-alabaster-theme
 python-sphinx
 python-sphinxcontrib-applehelp

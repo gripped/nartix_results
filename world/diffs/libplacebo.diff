@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=libplacebo
+ pkgver=5.264.1
+-pkgrel=4
++pkgrel=1
+ pkgdesc='Reusable library for GPU-accelerated video/image rendering primitives'
+ url='https://github.com/haasn/libplacebo'
+ arch=('x86_64')
+ license=('LGPL2.1')
+ depends=('vulkan-icd-loader' 'libvulkan.so' 'glslang' 'lcms2' 'liblcms2.so' 'shaderc' 'libshaderc_shared.so'
+-         'glibc' 'gcc-libs' 'libunwind' 'libdovi.so')
++         'glibc' 'gcc-libs' 'libunwind')
+ makedepends=(
+   'meson' 'ninja' 'vulkan-headers' 'glad' 'nuklear'
+   'python' 'python-setuptools' 'python-mako' 'python-markupsafe' 'python-jinja'
+@@ -20,14 +20,14 @@
+ build() {
+   cd ${pkgbase}-v${pkgver}
+   CXXFLAGS+=" -I/usr/include/glslang"
+-  arch-meson build \
++  artix-meson build \
+     -D tests=true \
+     -D vulkan=enabled \
+     -D glslang=enabled \
+     -D shaderc=enabled \
+     -D lcms=enabled \
+     -D d3d11=disabled \
+-    -D libdovi=enabled \
++    -D libdovi=disabled \
+     -D demos=false
+   ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=libplacebo
+ depends=('vulkan-icd-loader' 'libvulkan.so' 'glslang' 'lcms2' 'liblcms2.so' 'shaderc' 'libshaderc_shared.so'
+-         'glibc' 'gcc-libs' 'libunwind' 'libdovi.so')
++         'glibc' 'gcc-libs' 'libunwind')
+ makedepends=(
+   'meson' 'ninja' 'vulkan-headers' 'glad' 'nuklear'
+   'python' 'python-setuptools' 'python-mako' 'python-markupsafe' 'python-jinja'
+@@ -9,14 +9,14 @@
+ build() {
+   cd ${pkgbase}-v${pkgver}
+   CXXFLAGS+=" -I/usr/include/glslang"
+-  arch-meson build \
++  artix-meson build \
+     -D tests=true \
+     -D vulkan=enabled \
+     -D glslang=enabled \
+     -D shaderc=enabled \
+     -D lcms=enabled \
+     -D d3d11=disabled \
+-    -D libdovi=enabled \
++    -D libdovi=disabled \
+     -D demos=false
+   ninja -C build
+ }
