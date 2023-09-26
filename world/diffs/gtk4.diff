@@ -4,7 +4,7 @@
    gtk4-docs
    gtk-update-icon-cache
  )
--pkgver=4.12.1
+-pkgver=4.12.2
 +pkgver=4.10.4
  pkgrel=1
  epoch=1
@@ -17,7 +17,7 @@
    wayland
  )
  makedepends=(
-@@ -64,16 +63,9 @@
+@@ -64,17 +63,9 @@
    shaderc
    wayland-protocols
  )
@@ -25,19 +25,20 @@
 -  gst-plugin-pipewire
 -  gst-plugins-base
 -  mutter
+-  noto-fonts
 -  pipewire
 -  python-pydbus
 -  weston
 -  wireplumber
 -)
--_commit=b51a3980f365775d92fa188f5533e78094474401  # tags/4.12.1^0
+-_commit=d6b966ba32b5fd7ccc207b98974a92841d9a24ae  # tags/4.12.2^0
 +checkdepends=(weston)
 +options=(debug)
 +_commit=55bc7808cc7796b06c27b1e64f608cd83b9b18ec  # tags/4.10.4^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/gtk.git#commit=$_commit"
    gtk-update-icon-cache.{hook,script}
-@@ -92,8 +84,6 @@
+@@ -93,8 +84,6 @@
  
  prepare() {
    cd gtk
@@ -46,7 +47,7 @@
  }
  
  build() {
-@@ -101,13 +91,12 @@
+@@ -102,13 +91,12 @@
      -D broadway-backend=true
      -D cloudproviders=enabled
      -D colord=enabled

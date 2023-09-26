@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,7 @@
+@@ -1,21 +1,14 @@
  
  pkgbase=libadwaita
 -pkgname=(
@@ -8,22 +8,33 @@
 -  libadwaita-demos
 -  libadwaita-docs
 -)
--pkgver=1.3.5
+-pkgver=1.4.0
 +pkgname=(libadwaita libadwaita-docs libadwaita-demos)
 +pkgver=1.3.3
  pkgrel=1
  epoch=1
  pkgdesc="Building blocks for modern adaptive GNOME applications"
-@@ -22,7 +18,7 @@
+ url="https://gnome.pages.gitlab.gnome.org/libadwaita/"
+ arch=(x86_64)
+ license=(LGPL)
+-depends=(
+-  appstream
+-  gtk4
+-)
++depends=(gtk4)
+ makedepends=(
+   gi-docgen
+   git
+@@ -25,7 +18,7 @@
    vala
  )
  checkdepends=(weston)
--_commit=e006737320804ddeba28eb00228fe2c25d545a6a  # tags/1.3.5^0
+-_commit=c196ee37a2938ce6ed0bfde2b575a0013d997158  # tags/1.4.0^0
 +_commit=f665152a70d5f2c61c0f5a0a947cb38524e64cfe  # tags/1.3.3^0
  source=("git+https://gitlab.gnome.org/GNOME/libadwaita.git#commit=$_commit")
  b2sums=('SKIP')
  
-@@ -36,11 +32,7 @@
+@@ -39,11 +32,7 @@
  }
  
  build() {
@@ -36,7 +47,7 @@
    meson compile -C build
  }
  
-@@ -74,12 +66,18 @@
+@@ -77,12 +66,18 @@
  
    cd "$pkgdir"
  
@@ -56,7 +67,7 @@
  }
  
  package_libadwaita-demos() {
-@@ -88,9 +86,3 @@
+@@ -91,9 +86,3 @@
    mv demo/* "$pkgdir"
  }
  
@@ -72,18 +83,23 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
+@@ -1,13 +1,6 @@
  pkgbase=libadwaita
 -pkgname=(
 -  libadwaita
 -  libadwaita-demos
 -  libadwaita-docs
 -)
+-depends=(
+-  appstream
+-  gtk4
+-)
 +pkgname=(libadwaita libadwaita-docs libadwaita-demos)
- depends=(gtk4)
++depends=(gtk4)
  makedepends=(
    gi-docgen
-@@ -17,19 +13,16 @@
+   git
+@@ -20,19 +13,16 @@
    cd $pkgname
  }
  build() {

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,14 @@
+@@ -1,9 +1,15 @@
 +
 +_ver=6.4.4
 +_rel=1
@@ -8,16 +8,17 @@
 +_artix=artix${_rel}
  
  pkgbase=linux
--pkgver=6.5.3.arch1
+-pkgver=6.5.4.arch2
 +pkgver=${_ver}.${_artix}
  pkgrel=1
  pkgdesc='Linux'
--_srctag=v${pkgver%.*}-${pkgver##*.}
+-url='https://github.com/archlinux/linux'
 +_srctag=v${pkgver%.*}-${_tag}
- url="https://github.com/archlinux/linux/commits/$_srctag"
++url="https://github.com/archlinux/linux/commits/$_srctag"
  arch=(x86_64)
  license=(GPL2)
-@@ -15,7 +20,6 @@
+ makedepends=(
+@@ -14,7 +20,6 @@
    libelf
    pahole
    perl
@@ -25,20 +26,62 @@
    tar
    xz
  
-@@ -37,9 +41,9 @@
-   C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
+@@ -24,27 +29,28 @@
+   texlive-latexextra
  )
- b2sums=('SKIP'
+ options=('!strip')
+-_srcname=linux-${pkgver%.*}
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srcname=archlinux-linux
+ source=(
+-  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/$_srcname.tar.{xz,sign}
+-  $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
++  "$_srcname::git+https://github.com/archlinux/linux?signed#tag=$_srctag"
+   config  # the main kernel config file
+ )
+ validpgpkeys=(
+   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
+   A2FF3A36AAA56654109064AB19802F8B0D70FC30  # Jan Alexander Steffens (heftig)
+-)
+-b2sums=('99df210ee8f244de9059c9699648f7aad8e520030ce14e61971ba95365635e698e7c66074aa3f5c57bd75f1058e1c1dbaecea66d0b381202f239b3a04a396371'
+-        'SKIP'
+-        '7c5fd8d2160d4b94f014ea55ae8cad24c93a6360ea093186b304bf94c2f982428789d27b4924025a103af58d60ae0f087ebd57f2c81d8426442380ed9cc92f48'
+-        'SKIP'
 -        '9a1770eed7e306ddd532b1df9d62c52b4f6c938d147473bed6ba92a4139654f313d7033bb6bc509f4054fa757acf33a8d73b6f36fed2a134f72d1724bf2db717')
 -
 -export KBUILD_BUILD_HOST=archlinux
++  C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
++)
++b2sums=('SKIP'
 +        '8876d833f9bc8278964bb72aa9903032fdd97c43b036226f715f960b9c188e411bb0ad4a25c00103945e63d5d8b0744cb3a97c931b5b5e4fed6ada3c41e2a3a6')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
++
++_make() {
++  test -s version
++  make KERNELRELEASE="$(<version)" "$@"
++}
  
-@@ -67,6 +71,9 @@
+ prepare() {
+   cd $_srcname
+@@ -52,30 +58,34 @@
+   echo "Setting version..."
+   echo "-$pkgrel" > localversion.10-pkgrel
+   echo "${pkgbase#linux}" > localversion.20-pkgname
++  make defconfig
++  make -s kernelrelease > version
++  make mrproper
+ 
+   local src
+   for src in "${source[@]}"; do
+     src="${src%%::*}"
+     src="${src##*/}"
+-    src="${src%.zst}"
+     [[ $src = *.patch ]] || continue
+     echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
  
@@ -47,8 +90,24 @@
 +
    echo "Setting config..."
    cp ../config .config
-   _make olddefconfig
-@@ -98,7 +105,7 @@
+-  make olddefconfig
++  _make olddefconfig
+   diff -u ../config .config || :
+ 
+-  make -s kernelrelease > version
+   echo "Prepared $pkgbase version $(<version)"
+ }
+ 
+ build() {
+   cd $_srcname
+-  make all
+-  make htmldocs
++  _make all
++  _make htmldocs
+ }
+ 
+ _package() {
+@@ -95,7 +105,7 @@
      WIREGUARD-MODULE
    )
    replaces=(
@@ -57,23 +116,37 @@
      wireguard-arch
    )
  
+@@ -103,12 +113,12 @@
+   local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
+ 
+   echo "Installing boot image..."
+-  install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
++  install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
+ 
+   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
+ 
+   echo "Installing modules..."
+-  ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
++  ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
+     DEPMOD=/doesnt/exist modules_install  # Suppress depmod
+ 
+   rm "$modulesdir"/{source,build}
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,8 @@
+@@ -1,4 +1,8 @@
 +_ver=6.4.4
 +_rel=1
 +_artix=artix${_rel}
  pkgbase=linux
--_srctag=v${pkgver%.*}-${pkgver##*.}
 +_srctag=v${pkgver%.*}-${_tag}
  makedepends=(
    bc
    cpio
-@@ -8,7 +11,6 @@
+@@ -7,7 +11,6 @@
    libelf
    pahole
    perl
@@ -81,16 +154,37 @@
    tar
    xz
    graphviz
-@@ -20,7 +22,7 @@
- _srcname=archlinux-linux
-   C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
+@@ -16,37 +19,44 @@
+   texlive-latexextra
+ )
+ options=('!strip')
+-_srcname=linux-${pkgver%.*}
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srcname=archlinux-linux
++  C7E7849466FE2358343588377258734B41C31549  # David Runge <dvzrv@archlinux.org>
  )
 -export KBUILD_BUILD_HOST=archlinux
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
- _make() {
-@@ -43,6 +45,8 @@
++_make() {
++  test -s version
++  make KERNELRELEASE="$(<version)" "$@"
++}
+ prepare() {
+   cd $_srcname
+   echo "Setting version..."
+   echo "-$pkgrel" > localversion.10-pkgrel
+   echo "${pkgbase#linux}" > localversion.20-pkgname
++  make defconfig
++  make -s kernelrelease > version
++  make mrproper
+   local src
+   for src in "${source[@]}"; do
+     src="${src%%::*}"
+     src="${src##*/}"
+-    src="${src%.zst}"
+     [[ $src = *.patch ]] || continue
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
@@ -98,8 +192,22 @@
 +  sed -i -r "s|EXTRAVERSION = -${_tag}|EXTRAVERSION = -${_artix}|" "Makefile"
    echo "Setting config..."
    cp ../config .config
-   _make olddefconfig
-@@ -66,7 +70,7 @@
+-  make olddefconfig
++  _make olddefconfig
+   diff -u ../config .config || :
+-  make -s kernelrelease > version
+   echo "Prepared $pkgbase version $(<version)"
+ }
+ build() {
+   cd $_srcname
+-  make all
+-  make htmldocs
++  _make all
++  _make htmldocs
+ }
+ _package() {
+   depends=(
+@@ -60,16 +70,16 @@
      WIREGUARD-MODULE
    )
    replaces=(
@@ -108,3 +216,14 @@
      wireguard-arch
    )
    cd $_srcname
+   local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
+   echo "Installing boot image..."
+-  install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
++  install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
+   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
+   echo "Installing modules..."
+-  ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
++  ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
+     DEPMOD=/doesnt/exist modules_install  # Suppress depmod
+   rm "$modulesdir"/{source,build}
+ }

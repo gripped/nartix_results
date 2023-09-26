@@ -5,7 +5,7 @@
 -_upstream_name=license-list-data
 -_upstream_version=3.21
  pkgname=licenses
--pkgver=20230903
+-pkgver=20230917
 -pkgrel=1
 +pkgver=20220125
 +pkgrel=2
@@ -57,15 +57,26 @@
          '5d342f32a42b4563b5604b3101cc7122516c6a514b853eb3974b61ecb68ef0691b9da1742e5d0c688247e51c178b26d34957b01b357ec8a8be28b22554bac73a'
          '4b8113182ec7889743d2c3f153ae13a64c3ea0a2d1b9d6a5bd85be446e87882fddf70afea5d8acae413bbea00e258bd79d0c002ea29c7b6c21073cdbbeedbfdd'
          '953343f375b14990dde1f51b9f9dc1f11d3c70a75f82575698390404af31e2983ba9acf03139e65026c737bf7afadd7b956e4ddd94fe303e1438041dc1667c79'
-@@ -101,112 +97,9 @@
+@@ -101,123 +97,9 @@
          '0b1e59408032239cd6ea8765eabca5cafccfce94a05785824aba1dc8b37188695bf7990e3454b0f2d0b399f1a22c30de7f056e2f685fafadcef71cd1a91a6796'
          '560b95eb5bc04b02762fe9fa42554b47d161d22251f2b18f642d9c45f8bfa574fd847228935ee5244e6dbb5ee0f1fa446fe4ce6f5ff9feeb7ef3e5a91b894549'
          '41fe12d3613e61134c9b027c6e3dacacdc368e6eecc1614578850f5b784813b41cf2089418738706939db2c7fb9f17cdab005cd134a440a8aadf8b887aa8fa48'
 -        '63aefec94bf37792b1b10ee4ae36a5ad54f5df1ef175eddf8528bc8fb1c5a71cf7c258f856f99a9ed4e678c9226f0ac99ea825fc68e10695e905a618c36896e8'
 -        'f4f762da3c7c286596e1e047c6e083017e2662334ab039faeb57e0947ab700e0c8540727375c2170a35bac5b983fd80e8824ebbe5b051a5e23be0f7bdcb173ed')
+-
+-prepare() {
+-  local license
+-
+-  {
+-    for license in "$_upstream_name-$_upstream_version/text/"*.txt; do
+-      printf "%s\n" "$(basename "${license//.txt/}")"
+-    done
+-  } > known_spdx_license_identifiers.txt
+-}
 +        '63aefec94bf37792b1b10ee4ae36a5ad54f5df1ef175eddf8528bc8fb1c5a71cf7c258f856f99a9ed4e678c9226f0ac99ea825fc68e10695e905a618c36896e8')
  
  package() {
+-  local license
 -  local standard_licenses=(
 -    AGPL-3.0-only
 -    AGPL-3.0-or-later
@@ -171,7 +182,7 @@
    local _license_dir="$pkgdir/usr/share/licenses/common"
  
    install -vDm 644 agpl-3.0.txt "$_license_dir/"AGPL3/license.txt
-@@ -264,9 +157,5 @@
+@@ -275,10 +157,5 @@
    install -vDm 644 w3c.txt "$_license_dir/"W3C/license.txt
  
    install -vDm 644 ZopePublicLicense.txt "$_license_dir/"ZPL/license.txt
@@ -179,6 +190,7 @@
 -  for license in "${standard_licenses[@]}"; do
 -    install -vDm 644 "$_upstream_name-$_upstream_version/text/$license.txt" -t "$pkgdir/usr/share/licenses/spdx/"
 -  done
+-  install -vDm 644 known_spdx_license_identifiers.txt -t "$pkgdir/usr/share/licenses/"
  }
  
 
@@ -187,7 +199,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,3 +1 @@
+@@ -1,11 +1 @@
 -_upstream
 -_upstream_version=3.21
  pkgname=licenses
+-prepare() {
+-  local license
+-  {
+-    for license in "$_upstream_name-$_upstream_version/text/"*.txt; do
+-      printf "%s\n" "$(basename "${license//.txt/}")"
+-    done
+-  } > known_spdx_license_identifiers.txt
+-}

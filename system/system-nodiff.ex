@@ -46,7 +46,6 @@ gcc-objc
 lto-dump
 libgccjit
 gdbm
-gettext
 gmp
 gpm
 grep
@@ -57,7 +56,6 @@ hdparm
 hwdata
 iana-etc
 icu
-inetutils
 iptables
 iptables-nft
 iw
@@ -146,7 +144,6 @@ run-parts
 s-nail
 sdparm
 sed
-shadow
 sysfsutils
 tar
 texinfo

@@ -1,17 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,8 +4,8 @@
+@@ -4,7 +4,7 @@
    webkit2gtk
    webkit2gtk-docs
  )
--pkgver=2.40.5
--pkgrel=2
+-pkgver=2.42.0
 +pkgver=2.40.4
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Web content engine for GTK"
  url="https://webkitgtk.org"
- arch=(x86_64)
-@@ -40,7 +40,6 @@
+@@ -35,13 +35,11 @@
+   libgl
+   libgles
+   libjpeg
+-  libjxl
+   libmanette
+   libpng
    libseccomp
    libsecret
    libsoup
@@ -19,7 +23,17 @@
    libtasn1
    libwebp
    libwpe
-@@ -67,16 +66,15 @@
+@@ -60,26 +58,23 @@
+   zlib
+ )
+ makedepends=(
+-  clang
+   cmake
+   gi-docgen
+   gobject-introspection
+   gperf
+   gst-plugins-bad
+-  lld
    ninja
    python
    ruby
@@ -30,15 +44,15 @@
  source=(
    $url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
  )
--sha256sums=('7de051a263668621d91a61a5eb1c3771d1a7cec900043d4afef06c326c16037f'
+-sha256sums=('828f95935861fae583fb8f2ae58cf64c63c178ae2b7c2d6f73070813ad64ed1b'
 +sha256sums=('8d163379297a2f7f51b455127f99836d9fe1572289f77b630ff3d63a2cb06dac'
              'SKIP')
--b2sums=('67b8f429af8b746a256ca36c335c33ab4fef92a4699b09b87c38e81d56e0da7b5fb20d9e0dbbc32016025e60ca2c6e44d9032c300bfbdc931f4097d5608bb62f'
+-b2sums=('afaaef8482fe81645eee55be86a80fb51eff83dc000ac0dc5981d41810b5c72c59428d8e92a02c04718c0367ac19689501c81764f9603b767d7271ad9cd66075'
 +b2sums=('a6bab5ede61d85d93c61f70222156123ebbe8d352d00004e9aa317c3902745530676f40c9caef93485d2e0c227882554623dd4bee6343360bb914c4ccaefb8ad'
          'SKIP')
  validpgpkeys=(
    'D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
-@@ -97,6 +95,8 @@
+@@ -100,17 +95,16 @@
      -DCMAKE_SKIP_RPATH=ON
      -DUSE_AVIF=ON
      -DUSE_SOUP2=ON
@@ -47,7 +61,10 @@
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
    )
-@@ -104,7 +104,7 @@
+ 
+-  export CC=clang CXX=clang++
+-  LDFLAGS+=" -fuse-ld=lld"
+-
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
  
@@ -62,7 +79,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,6 @@
+@@ -28,13 +28,11 @@
+   libgl
+   libgles
+   libjpeg
+-  libjxl
+   libmanette
+   libpng
    libseccomp
    libsecret
    libsoup
@@ -70,7 +93,17 @@
    libtasn1
    libwebp
    libwpe
-@@ -60,7 +59,6 @@
+@@ -53,17 +51,14 @@
+   zlib
+ )
+ makedepends=(
+-  clang
+   cmake
+   gi-docgen
+   gobject-introspection
+   gperf
+   gst-plugins-bad
+-  lld
    ninja
    python
    ruby
@@ -78,7 +111,7 @@
    unifdef
    wayland-protocols
  )
-@@ -77,12 +75,14 @@
+@@ -80,14 +75,14 @@
      -DCMAKE_SKIP_RPATH=ON
      -DUSE_AVIF=ON
      -DUSE_SOUP2=ON
@@ -87,6 +120,8 @@
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
    )
+-  export CC=clang CXX=clang++
+-  LDFLAGS+=" -fuse-ld=lld"
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
 -  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"

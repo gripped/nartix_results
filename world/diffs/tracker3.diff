@@ -1,14 +1,51 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,6 @@
+@@ -4,10 +4,10 @@
+   tracker3
+   tracker3-docs
+ )
+-pkgver=3.6.0
+-pkgrel=1
+-pkgdesc="SQLite-based RDF triplestore database with SPARQL interface"
+-url="https://tracker.gnome.org/"
++pkgver=3.5.3
++pkgrel=2
++pkgdesc="Desktop-neutral user information store, search tool and indexer"
++url="https://wiki.gnome.org/Projects/Tracker"
+ arch=(x86_64)
+ license=(GPL)
+ depends=(
+@@ -31,16 +31,17 @@
    python-dbus
    python-gobject
    python-tappy
 -  systemd
    vala
  )
- _commit=d56637112f027aec9fcf069e1ce9218460f64e99  # tags/3.5.3^0
-@@ -62,14 +61,15 @@
+-_commit=624ef729966f2d9cf748321bd7bac822489fa8ed  # tags/3.6.0^0
++_commit=d56637112f027aec9fcf069e1ce9218460f64e99  # tags/3.5.3^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit"
+   "git+https://gitlab.gnome.org/GNOME/gvdb.git"
++  0001-tests-Adapt-FTS-snippet-tests-to-run-before-after-SQ.patch
+ )
+ b2sums=('SKIP'
+-        'SKIP')
++        'SKIP'
++        '8c44e537e3e29e68ddb28fa125e8321255c10122cab080b2ba63bea3c6af07e699e9b9b4085b8fb5939e832e64931f4fad9e1eebf79f0beb29d652f872811f67')
+ 
+ pkgver() {
+   cd tracker
+@@ -50,6 +51,8 @@
+ prepare() {
+   cd tracker
+ 
++  git apply -3 ../0001-tests-Adapt-FTS-snippet-tests-to-run-before-after-SQ.patch
++
+   git submodule init
+   git submodule set-url subprojects/gvdb "$srcdir/gvdb"
+   git -c protocol.file.allow=always submodule update
+@@ -58,14 +61,15 @@
  build() {
    local meson_options=(
      -D tests_tap_protocol=true
@@ -32,7 +69,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,6 @@
+@@ -24,11 +24,11 @@
    python-dbus
    python-gobject
    python-tappy
@@ -40,7 +77,12 @@
    vala
  )
  prepare() {
-@@ -37,8 +36,9 @@
+   cd tracker
++  git apply -3 ../0001-tests-Adapt-FTS-snippet-tests-to-run-before-after-SQ.patch
+   git submodule init
+   git submodule set-url subprojects/gvdb "$srcdir/gvdb"
+   git -c protocol.file.allow=always submodule update
+@@ -36,8 +36,9 @@
  build() {
    local meson_options=(
      -D tests_tap_protocol=true

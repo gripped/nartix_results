@@ -1,14 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,8 @@
  
  pkgname=xdg-desktop-portal-hyprland
--pkgver=0.5.0
+-pkgver=1.1.0
 +pkgver=0.4.0
  _protocolver=4d29e48433270a2af06b8bc711ca1fe5109746cd
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='xdg-desktop-portal backend for hyprland'
-@@ -10,6 +10,7 @@
+ url="https://github.com/hyprwm/$pkgname"
+ arch=(x86_64)
+@@ -10,10 +10,10 @@
  provides=(xdg-desktop-portal-impl)
  depends=(libinih
           libuuid.so
@@ -16,20 +19,28 @@
           pipewire
           qt6-base
           qt6-wayland
-@@ -24,7 +25,7 @@
+-         sdbus-cpp
+          xdg-desktop-portal)
+ makedepends=(cmake
+              meson
+@@ -25,18 +25,18 @@
  _archive="$pkgname-$pkgver"
  source=("$url/archive/v$pkgver/v$pkgver.tar.gz"
          "https://github.com/hyprwm/hyprland-protocols/archive/$_protocolver.tar.gz")
--sha256sums=('d346cbe170e7042d5e364242a715d021d9b8da2078a169771cf84cda13f24e76'
+-sha256sums=('4a51163ec91f1d5ec7f8c44205d44e4cb429db05edf75cc273d3a8a8efffb7c3'
 +sha256sums=('d4f30cadb1f958dafc76ca409843c50481e6313664bb1b546dd57863c8943333'
              '5f6be4d870e94314f05ec7ff9c9c1f028748230ff80a7f89aeaf66c08e5c70e0')
  
  prepare() {
-@@ -35,7 +36,7 @@
+     cd "$_archive/subprojects"
+-    rm -rf hyprland-protocols sdbus-cpp
++    rm -rf hyprland-protocols
+     ln -sfT "$srcdir/hyprland-protocols-$_protocolver" hyprland-protocols
+ }
  
  build() {
      cd "$_archive"
--    arch-meson -Dsd-bus-provider=libsystemd build
+-    arch-meson build
 +    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
      ninja -C build
      make -C hyprland-share-picker all
@@ -40,7 +51,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
+@@ -3,10 +3,10 @@
  provides=(xdg-desktop-portal-impl)
  depends=(libinih
           libuuid.so
@@ -48,11 +59,21 @@
           pipewire
           qt6-base
           qt6-wayland
-@@ -20,7 +21,7 @@
+-         sdbus-cpp
+          xdg-desktop-portal)
+ makedepends=(cmake
+              meson
+@@ -16,12 +16,12 @@
+ _archive="$pkgname-$pkgver"
+ prepare() {
+     cd "$_archive/subprojects"
+-    rm -rf hyprland-protocols sdbus-cpp
++    rm -rf hyprland-protocols
+     ln -sfT "$srcdir/hyprland-protocols-$_protocolver" hyprland-protocols
  }
  build() {
      cd "$_archive"
--    arch-meson -Dsd-bus-provider=libsystemd build
+-    arch-meson build
 +    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
      ninja -C build
      make -C hyprland-share-picker all

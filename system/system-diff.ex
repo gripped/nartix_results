@@ -17,6 +17,7 @@ elfutils
 debuginfod
 libelf
 fakeroot
+gettext
 glib2
 glib2-docs
 glibc
@@ -29,6 +30,7 @@ qgpgme-qt6
 python-gpgme
 gssproxy
 gzip
+inetutils
 iproute2
 iputils
 json-c
@@ -79,6 +81,7 @@ procps-ng
 python
 python-tests
 rpcbind
+shadow
 sqlite
 sqlite-tcl
 sqlite-analyzer

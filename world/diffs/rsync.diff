@@ -1,0 +1,104 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=rsync
+ _tag='b13e7a8ef4fa430223f66403506fb821caae5cfd' # git rev-parse v${pkgver}
+ pkgver=3.2.7
+-pkgrel=6
++pkgrel=4
+ pkgdesc='A fast and versatile file copying tool for remote and local files'
+ arch=('x86_64')
+ url='https://rsync.samba.org/'
+@@ -11,7 +11,8 @@
+          'zlib' 'zstd')
+ optdepends=('python: for rrsync')
+ makedepends=('git' 'python-commonmark')
+-backup=('etc/rsyncd.conf')
++backup=('etc/rsyncd.conf'
++        'etc/xinetd.d/rsync')
+ validpgpkeys=('0048C8B026D4C96F0E589C2F6C859FB14B96A8C5') # Wayne Davison <wayned@users.sourceforge.net>
+ source=("git+https://github.com/WayneD/rsync#tag=${_tag}?signed"
+         'rsyncd.conf')
+@@ -25,7 +26,7 @@
+ )
+ 
+ prepare() {
+-  cd ${pkgname}
++  cd "$srcdir/rsync"
+ 
+   local _c
+   for _c in "${_backports[@]}"; do
+@@ -43,11 +44,10 @@
+ }
+ 
+ build() {
+-  cd ${pkgname}
++  cd "$srcdir/rsync"
+ 
+   ./configure \
+     --prefix=/usr \
+-    --enable-ipv6 \
+     --disable-debug \
+     --with-rrsync \
+     --with-included-popt=no \
+@@ -56,22 +56,15 @@
+ }
+ 
+ check() {
+-  cd ${pkgname}
+-
+-  if rsync -V | grep -q 'no IPv6'; then
+-    echo 'Built without IPv6 support!' >&2
+-    exit 1
+-  fi
++  cd "$srcdir/rsync"
+ 
+   make test
+ }
+ 
+ package() {
+-  cd ${pkgname}
++  cd "$srcdir/rsync"
+ 
+   make DESTDIR="$pkgdir" install
+   install -Dm0644 ../rsyncd.conf "$pkgdir/etc/rsyncd.conf"
+-  install -Dm0644 packaging/systemd/rsync.service "$pkgdir/usr/lib/systemd/system/rsyncd.service"
+-  install -Dm0644 packaging/systemd/rsync.socket "$pkgdir/usr/lib/systemd/system/rsyncd.socket"
+-  install -Dm0644 packaging/systemd/rsync@.service "$pkgdir/usr/lib/systemd/system/rsyncd@.service"
++  install -Dm0644 packaging/lsb/rsync.xinetd "$pkgdir/etc/xinetd.d/rsync"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,14 @@
+ depends=('acl' 'libacl.so' 'lz4' 'openssl' 'popt' 'xxhash' 'libxxhash.so'
+          'zlib' 'zstd')
+ makedepends=('git' 'python-commonmark')
+-backup=('etc/rsyncd.conf')
++backup=('etc/rsyncd.conf'
++        'etc/xinetd.d/rsync')
+ _backports=(
+ )
+ _reverts=(
+ )
+ prepare() {
+-  cd ${pkgname}
++  cd "$srcdir/rsync"
+   local _c
+   for _c in "${_backports[@]}"; do
+     if [[ $_c == *..* ]]; then
+@@ -24,10 +25,9 @@
+   done
+ }
+ build() {
+-  cd ${pkgname}
++  cd "$srcdir/rsync"
+   ./configure \
+     --prefix=/usr \
+-    --enable-ipv6 \
+     --disable-debug \
+     --with-rrsync \
+     --with-included-popt=no \

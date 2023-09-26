@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgbase='protobuf'
  pkgname=('protobuf' 'python-protobuf')
 -pkgver=24.2
+-pkgrel=2
 +pkgver=23.4
- pkgrel=1
++pkgrel=1
  pkgdesc="Protocol Buffers - Google's data interchange format"
  arch=('x86_64')
+ url='https://developers.google.com/protocol-buffers/'
 @@ -29,7 +29,7 @@
          https://github.com/protocolbuffers/protobuf/commit/2e62ef1e.patch
          soversion.patch

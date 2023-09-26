@@ -36,8 +36,6 @@ aml
 amtk
 analitza
 ansible
-ant
-ant-doc
 anthy
 aom
 aom-docs
@@ -141,7 +139,6 @@ bemenu-ncurses
 bemenu-x11
 bemenu-wayland
 benchmark
-bftpd
 bigsh0t
 bin86
 bind
@@ -379,7 +376,6 @@ engrampa
 enscript
 entr
 eom
-erlang-nox
 espeak-ng
 ethtool
 eventviews
@@ -517,7 +513,6 @@ girara
 git-lfs
 gjs
 gl2ps
-glad
 glade
 glances
 glew
@@ -525,7 +520,6 @@ glfw
 glfw-x11
 glfw-wayland
 glfw-doc
-glib-networking
 glibmm
 glibmm-docs
 glm
@@ -755,12 +749,6 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-xmlgraphics-commons
 java8-openjdk
 jre8-openjdk-headless
@@ -769,7 +757,6 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbig2dec
-jemalloc
 jitterentropy
 jose
 jq
@@ -860,7 +847,6 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
-kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -1491,7 +1477,6 @@ lua51-mpack
 lua52-mpack
 lua53-mpack
 lua
-lua51
 lua52
 lua53
 luaexpat
@@ -1685,10 +1670,6 @@ mtdev
 mtools
 mujs
 muparser
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
 musepack
 musepack-tools
 libmpcdec
@@ -1746,7 +1727,6 @@ noto-fonts-emoji
 noto-fonts
 noto-fonts-extra
 npm
-nrpe
 nss-mdns
 ntfs-3g
 ntp
@@ -1781,10 +1761,6 @@ opencl-clhpp
 opencl-headers
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
 opendbx
 openfec
 openimagedenoise
@@ -1985,7 +1961,6 @@ perl-ipc-run3
 perl-json-xs
 perl-json
 perl-libintl-perl
-perl-libwww
 perl-lingua-en-inflect
 perl-list-allutils
 perl-list-moreutils-xs
@@ -2338,6 +2313,7 @@ python-autocommand
 python-automat
 python-autopage
 python-awesomeversion
+python-aws-sam-translator
 python-aws-xray-sdk
 python-awscrt
 python-axolotl-curve25519
@@ -2622,7 +2598,6 @@ python-html2text
 python-html5-parser
 python-html5lib
 python-http-parser
-python-httpcore
 python-httplib2
 python-httpretty
 python-httptools
@@ -2694,7 +2669,6 @@ python-jupyter-client
 python-jupyter-core
 python-jupyter-packaging
 python-jupyter-server-terminals
-python-jupyter-ydoc
 python-jupyterlab_server
 python-jwcrypto
 python-k5test
@@ -2730,7 +2704,6 @@ python-logbook
 python-logutils
 python-looseversion
 python-lsp-black
-python-lsp-jsonrpc
 python-lsprotocol
 python-lupa
 python-lxml
@@ -2797,9 +2770,7 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
-python-numba
 python-numexpr
-python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -2835,7 +2806,6 @@ python-pam
 python-pandas-datareader
 python-pandas
 python-pandocfilters
-python-parameterized
 python-paramiko
 python-parse-type
 python-parsedatetime
@@ -2886,7 +2856,6 @@ python-plumbum
 python-ply
 python-poetry-core
 python-poetry-plugin-export
-python-poetry
 python-pooch
 python-portend
 python-pprofile
@@ -3047,7 +3016,6 @@ python-pytest-trio
 python-pytest-twisted
 python-pytest-vcr
 python-pytest-xdist
-python-pytest-xprocess
 python-pytest-xvfb
 python-python-multipart
 python-python-pkcs11
@@ -3093,7 +3061,6 @@ python-requests-file
 python-requests-ftp
 python-requests-futures
 python-requests-kerberos
-python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
 python-requests-unixsocket
@@ -3194,7 +3161,6 @@ python-sqlparse
 python-sshpubkeys
 python-stack-data
 python-starlette
-python-statsmodels
 python-stdlibs
 python-stem
 python-stestr
@@ -3497,7 +3463,6 @@ ropper
 rpcsvc-proto
 rpmextract
 rst2pdf
-rsync
 rtaudio
 rtaudio-docs
 rtl-sdr
@@ -4153,7 +4118,6 @@ volume_key
 python-volume_key
 volumeicon
 vorbis-tools
-vsftpd
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -4332,7 +4296,6 @@ xwallpaper
 yajl
 yakuake
 yamllint
-yapf
 yara
 yarn
 yasm

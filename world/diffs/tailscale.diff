@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,17 @@
+@@ -1,15 +1,15 @@
  
  pkgname=tailscale
--pkgver=1.48.2
+-pkgver=1.50.0
 +pkgver=1.46.0
  pkgrel=1
  pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
@@ -14,26 +14,12 @@
 -depends=("glibc")
 +depends=("glibc" "iptables")
  backup=("etc/default/tailscaled")
--_commit=a6bcfd69149c491d7542cc758b762bae8882db04 #  git rev-parse tags/v1.48.2
--source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}"
--        "tailscale_1.48.2_no-self-update.patch")
--sha256sums=('SKIP'
--            '33105b1986b3b77924fbc3f34f219a67a6cc3846d7411a2165b48af1c616175e')
+-_commit=a920f02311d00d9bf8ba09503ec78fe6b054ca75 #  git rev-parse tags/v1.50.0
 +_commit=03b5aa8b4d846b67e5f6e14543f5e8fd25ff259d #  git rev-parse tags/v1.46.0
-+source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}")
-+sha256sums=('SKIP')
+ source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}")
+ sha256sums=('SKIP')
  
- pkgver() {
-   cd "${pkgname}"
-@@ -22,7 +20,6 @@
- 
- prepare() {
-     cd "${pkgname}"
--    patch --forward --strip=1 --input="${srcdir}/tailscale_1.48.2_no-self-update.patch"
-     go mod vendor
- }
- 
-@@ -36,9 +33,9 @@
+@@ -33,9 +33,9 @@
      GO_LDFLAGS="\
          -compressdwarf=false \
          -linkmode=external \
@@ -46,7 +32,7 @@
      for cmd in ./cmd/tailscale ./cmd/tailscaled; do
          go build -v -tags xversion -ldflags "$GO_LDFLAGS" "$cmd"
      done
-@@ -49,6 +46,5 @@
+@@ -46,6 +46,5 @@
      cd "${pkgname}"
      install -Dm755 tailscale tailscaled -t "$pkgdir/usr/bin"
      install -Dm644 cmd/tailscaled/tailscaled.defaults "$pkgdir/etc/default/tailscaled"
@@ -59,7 +45,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,9 @@
+@@ -1,6 +1,6 @@
  pkgname=tailscale
  makedepends=("git" "go")
 -depends=("glibc")
@@ -67,11 +53,7 @@
  backup=("etc/default/tailscaled")
  prepare() {
      cd "${pkgname}"
--    patch --forward --strip=1 --input="${srcdir}/tailscale_1.48.2_no-self-update.patch"
-     go mod vendor
- }
- build() {
-@@ -17,9 +16,9 @@
+@@ -16,9 +16,9 @@
      GO_LDFLAGS="\
          -compressdwarf=false \
          -linkmode=external \

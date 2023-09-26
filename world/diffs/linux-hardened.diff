@@ -3,37 +3,50 @@
 @@ -1,6 +1,6 @@
  
  pkgbase=linux-hardened
--pkgver=6.5.3.hardened1
+-pkgver=6.5.5.hardened1
 +pkgver=6.4.4.hardened1
  pkgrel=1
  pkgdesc='Security-Hardened Linux'
  url='https://github.com/anthraxx/linux-hardened'
-@@ -14,9 +14,13 @@
+@@ -10,10 +10,10 @@
+   bc
+   cpio
+   gettext
++  git
    libelf
    pahole
    perl
 -  python
    tar
    xz
-+
-+  graphviz
-+  imagemagick
-+  python-sphinx
-+  texlive-latexextra
- )
- options=('!strip')
+ 
+@@ -26,8 +26,8 @@
  _srcname=linux-${pkgver%.*}
-@@ -31,13 +35,13 @@
+ _srctag=${pkgver%.*}-${pkgver##*.}
+ source=(
+-  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
+-  ${url}/releases/download/${_srctag}/${pkgbase}-${_srctag}.patch{,.sig}
++  https://www.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
++  https://github.com/anthraxx/${pkgbase}/releases/download/${_srctag}/${pkgbase}-${_srctag}.patch{,.sig}
+   config  # the main kernel config file
+ )
+ validpgpkeys=(
+@@ -35,18 +35,13 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
--b2sums=('7673a5375b0a715eca2dcff5b4f6fca13c8564a930b3b7ee112b67ed51541277378408abed1e1b128610f0db3425abbb30cd3751ce30ff73795cf594fb508142'
+-sha256sums=('8cf10379f7df8ea731e09bff3d0827414e4b643dd41dc99d0af339669646ef95'
+-            'SKIP'
+-            '51b27f8ea39c4006e405d6c568c75efcca67c7453fa61a09b62fe5bdb5ab00bc'
+-            'SKIP'
+-            '50761bba4d37367ab48f857b7e258cb0c8b487cbda37e6838573d382edd999e7')
+-b2sums=('2152bdcd8799b89612e76c1b3794313f981e08eda23c0150e56297a07f326c85f2a7a08106eb4e4d502b2134ed69e4344263fe6a2b398af5b5d7ccd018c0899b'
 +b2sums=('1ab6c93da986dac6a07a5e3bc764f9d2a5bb9b8989321244455d894690634ac04364e6a3f960e8674f47ae22fc4ed09b18aa60cbf279636083e61aa6524f8a59'
          'SKIP'
--        '8d37bb443277ef39dd6edd2ceb34336208860cbd5b513eb58eb972b2e47e742a75fcc30afbcaab78754180354dc9ec914ef2002d02bc669792b110d2ec8c47a6'
+-        'f252b104fbd42428de4bafc1d400a7ccf20812bb341e1d3a37172dbf5c5e57f98594fe59abeae8e4e025a548481e3a147b64c175766ca4462bd4bc85d7f80f5a'
 +        'f67b0f6c4eca304f28cd01412d6a56f97fa9e495d5b368e105f22e56e6ea3228466770121555a571955b044dd7dad4e84d012c39327bd1389bdd7b63bb5fd47b'
          'SKIP'
--        '646dae30e8104a53c2e9d52fcfdec5b84a131402fbd62444291838b03c6a9192e7b013055eb37731786521c8b1b65622f28c5aa5f2ead1f7523620556932c7eb')
+-        '0e27199552cd2d5b38b004a63023d9fd004502621b77f40b9b18d0f0b99372e7661707329fbc3ec0c2686333a12bcd8da3c9905eb5d6b7815553a6358f648b9e')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        '53528e2600f3be7689cdd91749f7147c612c5a384eee0d4a3f91ddec98eae3cd0de01f1227ddb18c758fd154c74647fe618d129596f4c41e50b00e663b02c475')
@@ -42,32 +55,56 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -69,6 +73,7 @@
+@@ -61,7 +56,6 @@
+   for src in "${source[@]}"; do
+     src="${src%%::*}"
+     src="${src##*/}"
+-    src="${src%.zst}"
+     [[ $src = *.patch ]] || continue
+     echo "Applying patch $src..."
+     patch -Np1 < "../$src"
+@@ -78,12 +72,8 @@
+ 
  build() {
    cd $_srcname
+-
+-  make htmldocs &
+-  local pid_docs=$!
+-
    make all
+-  wait "${pid_docs}"
 +  make htmldocs
  }
  
  _package() {
+@@ -103,8 +93,6 @@
+     VIRTUALBOX-GUEST-MODULES
+     WIREGUARD-MODULE
+   )
+-  replaces=(
+-  )
+ 
+   cd $_srcname
+   local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,14 +7,17 @@
+@@ -3,10 +3,10 @@
+   bc
+   cpio
+   gettext
++  git
    libelf
    pahole
    perl
 -  python
    tar
    xz
-+  graphviz
-+  imagemagick
-+  python-sphinx
-+  texlive-latexextra
- )
+   graphviz
+@@ -17,7 +17,7 @@
  options=('!strip')
  _srcname=linux-${pkgver%.*}
  _srctag=${pkgver%.*}-${pkgver##*.}
@@ -76,11 +113,32 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-@@ -40,6 +43,7 @@
+@@ -29,7 +29,6 @@
+   for src in "${source[@]}"; do
+     src="${src%%::*}"
+     src="${src##*/}"
+-    src="${src%.zst}"
+     [[ $src = *.patch ]] || continue
+     echo "Applying patch $src..."
+     patch -Np1 < "../$src"
+@@ -43,10 +42,8 @@
+ }
  build() {
    cd $_srcname
+-  make htmldocs &
+-  local pid_docs=$!
    make all
+-  wait "${pid_docs}"
 +  make htmldocs
  }
  _package() {
    depends=(
+@@ -58,8 +55,6 @@
+     KSMBD-MODULE
+     VIRTUALBOX-GUEST-MODULES
+     WIREGUARD-MODULE
+-  )
+-  replaces=(
+   )
+   cd $_srcname
+   local modulesdir="$pkgdir/usr/lib/modules/$(<version)"

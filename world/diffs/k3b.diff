@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,31 +1,31 @@
  
  pkgname=k3b
 -pkgver=23.08.1
+-pkgrel=2
 +pkgver=23.04.3
- pkgrel=1
++pkgrel=1
  epoch=1
  pkgdesc='Feature-rich and easy to handle CD burning application'
-@@ -8,7 +8,7 @@
+ arch=(x86_64)
  url='https://apps.kde.org/k3b/'
  license=(GPL)
  depends=(libkcddb kcmutils knotifyconfig libmad kfilemetadata knewstuff
@@ -17,8 +18,11 @@
  makedepends=(extra-cmake-modules kdoctools)
  optdepends=('cdrtools: for CD burning with cdrecord'
              'dvd+rw-tools: for DVD burning support'
-@@ -18,14 +18,14 @@
-             'cdparanoia: for CD ripping support' 'transcode: for DVD ripping support')
+             'vcdimager: for VCD burning support'
+             'emovix: for bootable multimedia CD/DVD support'
+             'cdrdao: for disk-at-once (DAO) mode support'
+-            'cdparanoia: for CD ripping support')
++            'cdparanoia: for CD ripping support' 'transcode: for DVD ripping support')
  groups=(kde-applications kde-multimedia)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
 -sha256sums=('25547379656d98e3d25df9d582c6c99b1ef3772d7ddd655e80cb078dfa90600f'
@@ -47,7 +51,8 @@
 +         libmpcdec libdvdread libburn libsamplerate)
  makedepends=(extra-cmake-modules kdoctools)
   mode support'
-             'cdparanoia: for CD ripping support' 'transcode: for DVD ripping support')
+-            'cdparanoia: for CD ripping support')
++            'cdparanoia: for CD ripping support' 'transcode: for DVD ripping support')
  groups=(kde-applications kde-multimedia)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

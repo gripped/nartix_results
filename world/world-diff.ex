@@ -11,6 +11,8 @@ amdvlk
 amule
 angelfish
 ansible-core
+ant
+ant-doc
 apache
 apcupsd
 appstream-glib
@@ -28,6 +30,7 @@ audiotube
 avahi
 awesome
 ayatana-ido
+bftpd
 bluez
 bluez-utils
 bluez-libs
@@ -122,6 +125,7 @@ emacs-nox
 eog
 eog-docs
 epiphany
+erlang-nox
 erlang
 erlang-unixodbc
 espeakup
@@ -171,6 +175,8 @@ ghex-docs
 git
 gitea
 github-cli
+glad
+glib-networking
 glibmm-2.68
 glibmm-2.68-docs
 glu
@@ -290,6 +296,12 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -307,6 +319,7 @@ openjdk17-src
 openjdk17-doc
 jbigkit
 jedi-language-server
+jemalloc
 jenkins
 jp2a
 js78
@@ -336,6 +349,7 @@ telepathy-kde-meta
 kdevelop-meta
 kde-development-environment-meta
 kde-gtk-config
+kdepim-runtime
 kdevelop
 kdoctools
 keysmith
@@ -489,6 +503,7 @@ lldb
 llvm
 lm_sensors
 lsb-release
+lua51
 luajit
 luarocks
 lxc
@@ -559,6 +574,10 @@ muffin
 multipath-tools
 mumble
 mumble-server
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
 musescore
 mutter
 mutter-docs
@@ -583,6 +602,7 @@ notmuch
 notmuch-vim
 notmuch-mutt
 notmuch-runtime
+nrpe
 nsd
 nuspell
 nvchecker
@@ -608,6 +628,10 @@ blas64-openblas
 opencc
 opencc-doc
 opencolorio
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendht
 opendoas
 openexr
@@ -632,6 +656,7 @@ percona-server
 libperconaserverclient
 percona-server-clients
 perl-image-exiftool
+perl-libwww
 perl-mail-message
 perl-text-csv
 pgbouncer
@@ -749,7 +774,6 @@ python-appdirs
 python-argon2_cffi
 python-asttokens
 python-authheaders
-python-aws-sam-translator
 python-bcrypt
 python-binaryornot
 python-blinker
@@ -786,18 +810,21 @@ python-future
 python-gnupg
 python-google-auth-httplib2
 python-google-auth
+python-httpcore
 python-hypothesis
 python-ipywidgets
 python-jaraco.functools
 python-jedi
 python-josepy
 python-jupyter-events
+python-jupyter-ydoc
 python-kajiki
 python-keyring
 python-keyrings-alt
 python-lark-parser
 python-ldap
 python-livereload
+python-lsp-jsonrpc
 python-lsp-server
 python-mailmanclient
 python-markdown-it-py
@@ -809,10 +836,14 @@ python-mutagen
 python-mysql-connector
 python-myst-parser
 python-nbxmpp
+python-numba
+python-numpy
+python-parameterized
 python-parse
 python-pathspec
 python-pdm-backend
 python-poetry-dynamic-versioning
+python-poetry
 python-pwntools
 python-pyarrow
 python-pycodestyle
@@ -827,11 +858,13 @@ python-pytest-localserver
 python-pytest-param-files
 python-pytest-socket
 python-pytest-testinfra
+python-pytest-xprocess
 python-pytest
 python-pyudev
 python-rapidfuzz
 python-readme-renderer
 python-requests-mock
+python-requests-ntlm
 python-scipy
 python-scramp
 python-semver
@@ -845,6 +878,7 @@ python-sphinxcontrib-htmlhelp
 python-sphinxcontrib-qthelp
 python-sphinxcontrib-serializinghtml
 python-spsdk
+python-statsmodels
 python-tenacity
 python-tpm2-pytss
 python-tqdm
@@ -969,6 +1003,7 @@ rofi
 rpm-tools
 rrdtool
 rspamd
+rsync
 rtkit
 ruby-bake-modernize
 ruby-bake-test-external
@@ -1092,6 +1127,7 @@ virtualbox-guest-utils-nox
 virtualbox-ext-vnc
 vlc
 vpnc
+vsftpd
 vst3sdk
 vst3sdk-docs
 vte3
@@ -1153,6 +1189,7 @@ xorg-xwayland
 xscreensaver
 xxhash
 yaml-cpp
+yapf
 yt-dlp
 yubikey-personalization
 z3
