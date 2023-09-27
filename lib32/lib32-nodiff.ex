@@ -4,7 +4,6 @@ lib32-alsa-plugins
 lib32-attr
 lib32-brotli
 lib32-bzip2
-lib32-cairo
 lib32-cdparanoia
 lib32-cmocka
 lib32-curl
@@ -23,7 +22,6 @@ lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
-lib32-glib-networking
 lib32-gmp
 lib32-gnutls
 lib32-gpm
@@ -80,7 +78,6 @@ lib32-libsamplerate
 lib32-libshout
 lib32-libsm
 lib32-libsoup
-lib32-libsoup3
 lib32-libssh2
 lib32-libtasn1
 lib32-libthai
@@ -154,5 +151,4 @@ lib32-xcb-util-keysyms
 lib32-xz
 lib32-zstd
 multilib-devel
-steam
 winetricks

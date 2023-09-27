@@ -1,11 +1,13 @@
 lib32-alsa-lib
 lib32-at-spi2-core
+lib32-cairo
 lib32-clang
 lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-freetype2
 lib32-gamemode
+lib32-glib-networking
 lib32-glib2
 lib32-glu
 lib32-jack2
@@ -17,6 +19,7 @@ lib32-libjpeg-turbo
 lib32-libpulse
 lib32-librsvg
 lib32-libsndfile
+lib32-libsoup3
 lib32-libtiff
 lib32-libudev0-shim
 lib32-libusb
@@ -45,5 +48,6 @@ lib32-sqlite
 lib32-v4l-utils
 lib32-vulkan-icd-loader
 lib32-zlib
+steam
 wine-staging
 wine

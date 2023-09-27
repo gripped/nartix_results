@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,33 @@
+ 
+ pkgname=gumbo-parser
+-pkgver=0.12.1
+-pkgrel=1
++pkgver=0.10.1
++pkgrel=2
+ pkgdesc="HTML5 parsing library in pure C99"
+ arch=(x86_64)
+-url="https://codeberg.org/grisha/gumbo-parser/"
++url="https://github.com/google/gumbo-parser"
+ license=(Apache)
+ depends=(glibc)
+ checkdepends=(gtest)
+-source=("$pkgname-$pkgver.tar.gz::https://codeberg.org/grisha/gumbo-parser/archive/$pkgver.tar.gz")
+-sha256sums=('c0bb5354e46539680724d638dbea07296b797229a7e965b13305c930ddc10d82')
++source=("$pkgname-$pkgver.tar.gz::https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz")
++sha256sums=('28463053d44a5dfbc4b77bcf49c8cee119338ffa636cc17fc3378421d714efad')
+ 
+ prepare() {
+-  cd $pkgname
+-  ./autogen.sh
++	cd $pkgname-$pkgver
++	./autogen.sh
+ }
+ 
+ build() {
+-  cd $pkgname
+-  ./configure --prefix=/usr
+-  make
++	cd $pkgname-$pkgver
++	./configure --prefix=/usr
++	make
+ }
+ 
+ check() {
+-  cd $pkgname
+-  make -k check
++	cd $pkgname-$pkgver
++	make -k check
+ }
+ 
+ package() {
+-  cd $pkgname
+-  make DESTDIR="$pkgdir" install
++	cd $pkgname-$pkgver
++	make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ pkgname=gumbo-parser
+ depends=(glibc)
+ prepare() {
+-  cd $pkgname
+-  ./autogen.sh
++	cd $pkgname-$pkgver
++	./autogen.sh
+ }
+ build() {
+-  cd $pkgname
+-  ./configure --prefix=/usr
+-  make
++	cd $pkgname-$pkgver
++	./configure --prefix=/usr
++	make
+ }

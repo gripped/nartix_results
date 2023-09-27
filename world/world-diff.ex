@@ -44,6 +44,8 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
+cairo
+cairo-docs
 caja-extensions
 caja-extensions-common
 caja-image-converter
@@ -206,6 +208,7 @@ gnuplot
 gnuplot-demos
 go-bindata
 go-tools
+go-yq
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -257,6 +260,7 @@ gtkmm-4.0
 gtkmm-4.0-docs
 gtkmm3
 gtkmm3-docs
+gumbo-parser
 gunicorn
 gvfs
 gvfs-smb
@@ -449,6 +453,8 @@ libsass
 libsecp256k1
 libsidplay
 libsndfile
+libsoup3
+libsoup3-docs
 libspf2
 libteam
 libteam-docs
@@ -498,11 +504,13 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+litehtml
 lld
 lldb
 llvm
 lm_sensors
 lsb-release
+lsof
 lua51
 luajit
 luarocks
@@ -568,6 +576,8 @@ mosquitto
 mousepad
 mpd
 mpv
+msmtp
+msmtp-mta
 mtr
 mtr-gtk
 muffin
@@ -641,6 +651,7 @@ openmpi
 openpmix
 openpmix-docs
 openshadinglanguage
+opensmtpd
 openvpn
 osinfo-db
 ostree
@@ -882,8 +893,10 @@ python-statsmodels
 python-tenacity
 python-tpm2-pytss
 python-tqdm
+python-traitlets
 python-uri-template
 python-uvloop
+python-vine
 python-virtualenv
 python-werkzeug
 python-wxpython
@@ -984,6 +997,7 @@ qt6-location
 qt6-tools
 qt6-wayland
 qt6-webengine
+qt6ct
 qtcreator
 qtcreator-devel
 quazip
@@ -1046,6 +1060,7 @@ squid
 sshguard
 sslh
 sssd
+strawberry
 strip-nondeterminism
 strongswan
 stubby
@@ -1145,6 +1160,7 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
+webp-pixbuf-loader
 webrtc-audio-processing
 weston
 wireplumber

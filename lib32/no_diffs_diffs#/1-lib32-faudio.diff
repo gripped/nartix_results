@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=lib32-faudio
--pkgver=23.07
+-pkgver=23.09
 +pkgver=23.06
  pkgrel=1
  pkgdesc="XAudio2 reimplementation"
@@ -12,7 +12,7 @@
  depends=('lib32-dbus' 'lib32-sdl2' 'faudio')
  makedepends=('cmake' 'ninja')
  source=("https://github.com/FNA-XNA/FAudio/archive/$pkgver/faudio-$pkgver.tar.gz")
--sha512sums=('b7d90d1bc81238553d3c18360a9b510c423e39c77545dcb27d7d62514855ab77fea113b1ef6861eb54aba67cae0d62b00c78fa94851575f732045a62fc89d996')
+-sha512sums=('bebde17f8337442c9dda6743b9046d891f91c9dc82a85284f98d84ba086f17d715bf028d1917130733a18fac82f2fb3f870df05d7acd923f4400e6998756637c')
 +sha512sums=('a897d2f254f3633836352a266cefcb7bc7f55e98a569cd696f76b9e4796eb8b1aa983dfeb9e1a6a508d413d11cf0bfa1da3a825aa29032785b48be9f39b8757c')
  
  prepare() {

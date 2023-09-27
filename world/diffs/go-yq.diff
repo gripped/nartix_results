@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,24 @@
+ 
+ pkgname=go-yq
+-pkgver=4.35.2
++pkgver=4.34.2
+ pkgrel=1
+ pkgdesc='Portable command-line YAML processor'
+ arch=('x86_64')
+ url=https://github.com/mikefarah/yq
+ license=('MIT')
+ depends=('glibc')
+-makedepends=('git' 'go')
++makedepends=('go')
+ conflicts=('yq')
+-source=("git+$url.git#tag=v$pkgver")
+-b2sums=('SKIP')
++source=("$url/archive/v$pkgver/yq-$pkgver.tar.gz")
++b2sums=('ee1decaa591b854dd247660de66661d61fa5c0641affbbbf66e53dbfb9303a361e6390ae4ac47f626d23435e846e0984d479d4f56aeb15ce4094812c110ed589')
+ 
+ prepare() {
+-  cd yq
++  cd yq-$pkgver
+   go mod vendor
+ }
+ 
+ build() {
+-  cd yq
++  cd yq-$pkgver
+   export CGO_CPPFLAGS="$CPPFLAGS"
+   export CGO_CFLAGS="$CFLAGS"
+   export CGO_CXXFLAGS="$CXXFLAGS"
+@@ -28,12 +28,12 @@
+ }
+ 
+ check() {
+-  cd yq
++  cd yq-$pkgver
+   go test ./...
+ }
+ 
+ package() {
+-  cd yq
++  cd yq-$pkgver
+   install -Dt "$pkgdir"/usr/bin yq
+   install -Dm644 -t "$pkgdir"/usr/share/licenses/$pkgname LICENSE
+   install -Dm644 -t "$pkgdir"/usr/share/doc/$pkgname README.md
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ pkgname=go-yq
+ depends=('glibc')
+-makedepends=('git' 'go')
++makedepends=('go')
+ conflicts=('yq')
+ prepare() {
+-  cd yq
++  cd yq-$pkgver
+   go mod vendor
+ }
+ build() {
+-  cd yq
++  cd yq-$pkgver
+   export CGO_CPPFLAGS="$CPPFLAGS"
+   export CGO_CFLAGS="$CFLAGS"
+   export CGO_CXXFLAGS="$CXXFLAGS"

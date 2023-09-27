@@ -176,8 +176,6 @@ bullet-docs
 python-pybullet
 c-ares
 cabextract
-cairo
-cairo-docs
 cairomm-1.16
 cairomm-1.16-docs
 cairomm
@@ -580,7 +578,6 @@ go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
 go-md2man
-go-yq
 go
 godot
 gom
@@ -641,7 +638,6 @@ gucharmap
 gufw
 guile2.2
 gulp
-gumbo-parser
 gupnp-av
 gupnp-dlna
 gupnp-igd
@@ -1330,8 +1326,6 @@ libsodium
 libsonic
 libsoup
 libsoup-docs
-libsoup3
-libsoup3-docs
 libsoxr
 libspatialite
 libspectre
@@ -1446,7 +1440,6 @@ lilv
 lilv-docs
 linux-atm
 liquidctl
-litehtml
 live-media
 lksctp-tools
 llvm14
@@ -1463,7 +1456,6 @@ lua53-lpeg
 lpsolve
 lrzip
 lskat
-lsof
 lsscsi
 lua-bitop
 lua51-bitop
@@ -1664,8 +1656,6 @@ mplayer
 mencoder
 msgpack-c
 msgpack-cxx
-msmtp
-msmtp-mta
 mtdev
 mtools
 mujs
@@ -1773,7 +1763,6 @@ openrct2
 openscenegraph
 opensips
 openslide
-opensmtpd
 opensp
 openvdb
 openvkl
@@ -3210,7 +3199,6 @@ python-tornado
 python-tox-current-env
 python-tox
 python-trailrunner
-python-traitlets
 python-transaction
 python-treq
 python-trio-asyncio
@@ -3252,7 +3240,6 @@ python-validators
 python-vcrpy
 python-versioneer
 python-versioningit
-python-vine
 python-vistir
 python-vobject
 python-volatile
@@ -3407,7 +3394,6 @@ qt6-virtualkeyboard
 qt6-webchannel
 qt6-websockets
 qt6-webview
-qt6ct
 qterminal
 qtermwidget
 qtkeychain
@@ -3809,7 +3795,6 @@ stk
 stk-docs
 stoken
 strace
-strawberry
 sugar-datastore
 suil
 suil-docs
@@ -4136,7 +4121,6 @@ wayland-utils
 wayland
 wayland-docs
 webhook
-webp-pixbuf-loader
 weechat
 wf-recorder
 wget
