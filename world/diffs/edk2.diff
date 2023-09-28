@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,19 @@
+@@ -1,24 +1,19 @@
  
  _brotli_ver=1.0.9
 -_openssl_ver=3.0.9
@@ -9,7 +9,7 @@
 -pkgname=(edk2-arm edk2-aarch64 edk2-shell edk2-ovmf)
 -pkgver=202308
 -_commit=819cfc6b42a68790a23509e4fcc58ceb70e1965e  # refs/tags/edk2-stable202308
--pkgrel=2
+-pkgrel=3
 +pkgname=(edk2-shell edk2-ovmf)
 +pkgver=202305
 +_commit=ba91d0292e593df8528b66f99c1b0b14fadc8e16  # refs/tags/edk2-stable202305
@@ -17,7 +17,12 @@
  pkgdesc="Modern, feature-rich firmware development environment for the UEFI specifications"
  arch=(any)
  url="https://github.com/tianocore/edk2"
- license=(BSD)
+-license=(
+-  Apache-2.0
+-  BSD-2-Clause-Patent
+-  MIT
+-)
++license=(BSD)
  makedepends=(
 -  aarch64-linux-gnu-gcc
 -  arm-none-eabi-gcc
@@ -27,7 +32,7 @@
    util-linux-libs
    nasm
    python
-@@ -52,7 +51,7 @@
+@@ -56,7 +51,7 @@
  )
  sha512sums=('SKIP'
              'SKIP'
@@ -36,7 +41,7 @@
              'SKIP'
              'b8e2df955e8796ac1f022eb4ebad29532cb7e3aa6a4b6aee91dbd2c7d637eee84d9a144d3e878895bb5e62800875c2c01c8f737a1261020c54feacf9f676b5f5'
              '9182615c6f89e4f3c19f1b0f4434aa0a3293f982cf3ed783a2c140c2555d824b417c7c3c7a00ad10616188507f5068226c720b20ffd41d44449605ba0844bad2'
-@@ -80,7 +79,7 @@
+@@ -84,7 +79,7 @@
              'd074c794796d17d77eed7c34201d93d7ef3f1322fe1ea4a2ddd7137fae884d49f94f465ee39cfd8346b026142668a41f5a8671e521409505dd6d002f71c0eebc')
  b2sums=('SKIP'
          'SKIP'
@@ -45,7 +50,7 @@
          'SKIP'
          '8b9939d5224396ef33b43e019250ba4bc8949903583615e8dc02c85340fc0a1e2d1632161e00b0ee7355d77f05529ac772f482e05d2089afd71a0bf71e803904'
          '98742b83c2d605772a1bfa64ee434430413516db13d80235f0bc0be3a0e930aa17d737a6d2c95ce3d60f33de9f93679e09f421632d9e3fc9575d662fcf198f4b'
-@@ -111,7 +110,7 @@
+@@ -115,7 +110,7 @@
    7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C  # Richard Levitte <richard@levitte.org>
    A21FAB74B0088AA361152586B8EF1A6BA9DA2D5C  # Tomáš Mráz <tm@t8m.info>
  )
@@ -54,7 +59,16 @@
  _build_type=RELEASE
  _build_plugin=GCC5
  
-@@ -179,8 +178,6 @@
+@@ -128,6 +123,8 @@
+   patch -Np1 -d $pkgbase -i ../$pkgbase-202202-brotli.patch
+ 
+   cd $pkgbase
++
++  git revert -n 173a7a7daaad560cd69e1000faca1d2b91774c46
+ 
+   git submodule init
+   git submodule deinit BaseTools/Source/C/BrotliCompress/brotli
+@@ -181,8 +178,6 @@
    cd $pkgbase
    export GCC5_IA32_PREFIX="x86_64-linux-gnu-"
    export GCC5_X64_PREFIX="x86_64-linux-gnu-"
@@ -63,7 +77,129 @@
    echo "Building base tools (AARCH64)"
    ARCH=AARCH64 make -C BaseTools
    echo "Building base tools (ARM)"
-@@ -353,41 +350,6 @@
+@@ -197,7 +192,7 @@
+     case "$_arch" in
+       IA32)
+       echo "Building ovmf ($_arch) with secure boot support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -208,7 +203,7 @@
+                        -D SMM_REQUIRE
+       mv -v Build/Ovmf{Ia32,IA32-secure}
+       echo "Building ovmf ($_arch) with secure boot support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -219,7 +214,7 @@
+                        -D SMM_REQUIRE
+       mv -v Build/Ovmf{Ia32,IA32-secure-4mb}
+       echo "Building ovmf ($_arch) with CSM support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -228,7 +223,7 @@
+                        -D LOAD_X64_ON_IA32_ENABLE
+       mv -v Build/Ovmf{Ia32,IA32-csm}
+       echo "Building ovmf ($_arch) with CSM support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -237,7 +232,7 @@
+                        -D LOAD_X64_ON_IA32_ENABLE
+       mv -v Build/Ovmf{Ia32,IA32-csm-4mb}
+       echo "Building ovmf ($_arch) default"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -245,7 +240,7 @@
+                        -D LOAD_X64_ON_IA32_ENABLE
+       mv -v Build/Ovmf{Ia32,IA32}
+       echo "Building ovmf ($_arch) default (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -255,20 +250,20 @@
+       ;;
+       X64)
+       echo "Building ovmf ($_arch) with microvm support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/Microvm/Microvm$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/Microvm/Microvm$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+                        "${_4mb_args[@]}"
+       mv -v Build/MicrovmX64{,-4mb}
+       echo "Building ovmf ($_arch) with microvm support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/Microvm/Microvm$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/Microvm/Microvm$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+                        "${_x86_args[@]}"
+       echo "Building ovmf ($_arch) with secure boot support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32X64.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32X64.dsc \
+                        -a IA32 -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -278,7 +273,7 @@
+                        -D EXCLUDE_SHELL_FROM_FD
+       mv -v Build/Ovmf3264{,-secure}
+       echo "Building ovmf ($_arch) with secure boot support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32X64.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32X64.dsc \
+                        -a IA32 -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -288,7 +283,7 @@
+                        -D EXCLUDE_SHELL_FROM_FD
+       mv -v Build/Ovmf3264{,-secure-4mb}
+       echo "Building ovmf ($_arch) with CSM support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -296,7 +291,7 @@
+                        -D CSM_ENABLE
+       mv -v Build/OvmfX64{,-csm}
+       echo "Building ovmf ($_arch) with CSM support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -304,14 +299,14 @@
+                        -D CSM_ENABLE
+       mv -v Build/OvmfX64{,-csm-4mb}
+       echo "Building ovmf (${_arch}) without secure boot (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+                        "${_4mb_args[@]}"
+       mv -v Build/OvmfX64{,-4mb}
+       echo "Building ovmf (${_arch}) without secure boot"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -355,41 +350,6 @@
    done
  }
  
@@ -111,7 +247,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,18 @@
+@@ -1,24 +1,24 @@
  _brotli_ver=1.0.9
 -_openssl_ver=3.0.9
 +_openssl_ver=1.1.1t
@@ -135,7 +271,13 @@
  _build_type=RELEASE
  _build_plugin=GCC5
  prepare() {
-@@ -66,8 +65,6 @@
+   patch -Np1 -d $pkgbase -i ../$pkgbase-202202-brotli.patch
+   cd $pkgbase
++  git revert -n 173a7a7daaad560cd69e1000faca1d2b91774c46
+   git submodule init
+   git submodule deinit BaseTools/Source/C/BrotliCompress/brotli
+   git submodule deinit CryptoPkg/Library/OpensslLib/openssl
+@@ -65,8 +65,6 @@
    cd $pkgbase
    export GCC5_IA32_PREFIX="x86_64-linux-gnu-"
    export GCC5_X64_PREFIX="x86_64-linux-gnu-"
@@ -144,3 +286,125 @@
    echo "Building base tools (AARCH64)"
    ARCH=AARCH64 make -C BaseTools
    echo "Building base tools (ARM)"
+@@ -80,7 +78,7 @@
+     case "$_arch" in
+       IA32)
+       echo "Building ovmf ($_arch) with secure boot support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -91,7 +89,7 @@
+                        -D SMM_REQUIRE
+       mv -v Build/Ovmf{Ia32,IA32-secure}
+       echo "Building ovmf ($_arch) with secure boot support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -102,7 +100,7 @@
+                        -D SMM_REQUIRE
+       mv -v Build/Ovmf{Ia32,IA32-secure-4mb}
+       echo "Building ovmf ($_arch) with CSM support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -111,7 +109,7 @@
+                        -D LOAD_X64_ON_IA32_ENABLE
+       mv -v Build/Ovmf{Ia32,IA32-csm}
+       echo "Building ovmf ($_arch) with CSM support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -120,7 +118,7 @@
+                        -D LOAD_X64_ON_IA32_ENABLE
+       mv -v Build/Ovmf{Ia32,IA32-csm-4mb}
+       echo "Building ovmf ($_arch) default"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -128,7 +126,7 @@
+                        -D LOAD_X64_ON_IA32_ENABLE
+       mv -v Build/Ovmf{Ia32,IA32}
+       echo "Building ovmf ($_arch) default (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -138,20 +136,20 @@
+       ;;
+       X64)
+       echo "Building ovmf ($_arch) with microvm support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/Microvm/Microvm$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/Microvm/Microvm$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+                        "${_4mb_args[@]}"
+       mv -v Build/MicrovmX64{,-4mb}
+       echo "Building ovmf ($_arch) with microvm support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/Microvm/Microvm$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/Microvm/Microvm$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+                        "${_x86_args[@]}"
+       echo "Building ovmf ($_arch) with secure boot support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32X64.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32X64.dsc \
+                        -a IA32 -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -161,7 +159,7 @@
+                        -D EXCLUDE_SHELL_FROM_FD
+       mv -v Build/Ovmf3264{,-secure}
+       echo "Building ovmf ($_arch) with secure boot support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkgIa32X64.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkgIa32X64.dsc \
+                        -a IA32 -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -171,7 +169,7 @@
+                        -D EXCLUDE_SHELL_FROM_FD
+       mv -v Build/Ovmf3264{,-secure-4mb}
+       echo "Building ovmf ($_arch) with CSM support"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -179,7 +177,7 @@
+                        -D CSM_ENABLE
+       mv -v Build/OvmfX64{,-csm}
+       echo "Building ovmf ($_arch) with CSM support (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "${_arch}" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+@@ -187,14 +185,14 @@
+                        -D CSM_ENABLE
+       mv -v Build/OvmfX64{,-csm-4mb}
+       echo "Building ovmf (${_arch}) without secure boot (4MB FD)"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \
+                        "${_4mb_args[@]}"
+       mv -v Build/OvmfX64{,-4mb}
+       echo "Building ovmf (${_arch}) without secure boot"
+-      BaseTools/BinWrappers/PosixLike/build -p OvmfPkg/OvmfPkg$_arch.dsc \
++      OvmfPkg/build.sh -p OvmfPkg/OvmfPkg$_arch.dsc \
+                        -a "$_arch" \
+                        "${_common_args[@]}" \
+                        "${_efi_args[@]}" \

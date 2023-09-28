@@ -719,14 +719,11 @@ imlib2
 incidenceeditor
 iniparser
 innoextract
-intel-compute-runtime
-intel-graphics-compiler
 intel-media-driver
 intel-metee
 intel-metee-doc
 intel-ucode
 intltool
-inxi
 ipset
 iso-codes
 isodate
@@ -1095,7 +1092,6 @@ libdbusmenu-qt6
 libdc1394
 libdca
 libde265
-libdecor
 libdeflate
 libdiscid
 libdispatch
@@ -1651,7 +1647,6 @@ motion
 movit
 mozo
 mpdecimal
-mpg123
 mplayer
 mencoder
 msgpack-c
@@ -2317,7 +2312,6 @@ python-betamax
 python-bidict
 python-big-o
 python-billiard
-python-bincopy
 python-biopython
 python-biscuits
 python-bitstring
@@ -2655,7 +2649,6 @@ python-jsonschema-specifications
 python-jsonschema
 python-junit-xml
 python-jupyter-client
-python-jupyter-core
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyterlab_server
@@ -3079,7 +3072,6 @@ python-s3transfer
 python-sarif-om
 python-schema
 python-scikit-build
-python-scikit-learn
 python-scripttest
 python-scrypt
 python-seaborn
@@ -4199,7 +4191,6 @@ xfce4-mpc-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
 xfce4-notifyd
-xfce4-panel
 xfce4-power-manager
 xfce4-pulseaudio-plugin
 xfce4-screensaver

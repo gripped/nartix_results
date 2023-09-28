@@ -285,12 +285,15 @@ ibus
 libibus
 igsc
 inkscape
+intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-sdk
 libmfx
 intel-opencl-clang
 intel-undervolt
 interception-tools
+inxi
 ipython
 irssi
 ispc
@@ -400,6 +403,7 @@ libdaemon
 libdbusmenu
 libdbusmenu-gtk2
 libdbusmenu-gtk3
+libdecor
 libdex
 libdex-docs
 libdrm
@@ -575,6 +579,7 @@ mono
 mosquitto
 mousepad
 mpd
+mpg123
 mpv
 msmtp
 msmtp-mta
@@ -787,6 +792,7 @@ python-asttokens
 python-authheaders
 python-bcrypt
 python-binaryornot
+python-bincopy
 python-blinker
 python-build
 python-cachy
@@ -827,6 +833,7 @@ python-ipywidgets
 python-jaraco.functools
 python-jedi
 python-josepy
+python-jupyter-core
 python-jupyter-events
 python-jupyter-ydoc
 python-kajiki
@@ -876,6 +883,7 @@ python-rapidfuzz
 python-readme-renderer
 python-requests-mock
 python-requests-ntlm
+python-scikit-learn
 python-scipy
 python-scramp
 python-semver
@@ -1191,6 +1199,7 @@ xf86-video-nouveau
 xf86-video-openchrome
 xf86-video-vmware
 xfce4-cpugraph-plugin
+xfce4-panel
 xfce4-terminal
 xfce4-whiskermenu-plugin
 xorg-server

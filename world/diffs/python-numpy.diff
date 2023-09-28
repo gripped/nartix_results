@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,40 +1,36 @@
+@@ -1,39 +1,36 @@
  
  pkgname=python-numpy
 -pkgver=1.26.0
--pkgrel=2
+-pkgrel=3
 +pkgver=1.25.1
 +pkgrel=1
  pkgdesc="Scientific tools for Python"
@@ -12,11 +12,12 @@
  license=('custom')
  url="https://www.numpy.org/"
  depends=('cblas' 'lapack' 'python')
- optdepends=('openblas: faster linear algebra')
+-optdepends=('blas-openblas: faster linear algebra')
 -makedepends=('python-build' 'python-installer' 'meson-python' 'cmake' 'gcc-fortran' 'cython')
++optdepends=('openblas: faster linear algebra')
 +makedepends=('python-setuptools' 'gcc-fortran' 'cython')
  checkdepends=('python-pytest' 'python-hypothesis')
- options=('staticlibs')
++options=('staticlibs')
  source=("https://github.com/numpy/numpy/releases/download/v$pkgver/numpy-$pkgver.tar.gz")
 -sha512sums=('0d500c623b274a219740c78ae2febb32a2f167016a9ff529678526e6b3e89a5b732c41defa23460a5da6f7f89d4a7d827f44fa9a1334c78e204b00ce164fb40c')
 +sha512sums=('69cc5426f657a21a6a1fb3bb043b8acec90b87969f90177abb6d7294ca96d04f723ddf90fa40822704b16147a390abafbcda9702e40405ea6b6e22377aade71d')
@@ -54,12 +55,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,8 @@
+@@ -1,11 +1,8 @@
  pkgname=python-numpy
  depends=('cblas' 'lapack' 'python')
 -makedepends=('python-build' 'python-installer' 'meson-python' 'cmake' 'gcc-fortran' 'cython')
 +makedepends=('python-setuptools' 'gcc-fortran' 'cython')
- options=('staticlibs')
++options=staticlibs
  build() {
    cd numpy-$pkgver
 -  CFLAGS+=" -ffat-lto-objects" \

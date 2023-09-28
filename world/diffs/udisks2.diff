@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,49 +1,37 @@
+@@ -1,60 +1,37 @@
  
  pkgname=udisks2
 -pkgver=2.10.1
--pkgrel=1
+-pkgrel=2
 -pkgdesc="Daemon, tools and libraries to access and manipulate disks, storage devices and technologies"
 +pkgver=2.9.4
 +pkgrel=4
@@ -17,12 +17,14 @@
 -)
 -depends=(
 -  'acl'
+-  'btrfs-progs'
 -  'gcc-libs'
 -  'glib2'
 -  'glibc'
 -  'libatasmart'
 -  'libblockdev'
 -  'libgudev'
+-  'lvm2'
 -  'polkit'
 -  'systemd-libs'
 -  'util-linux-libs'
@@ -30,6 +32,13 @@
 -makedepends=(
 -  'gobject-introspection'
 -  'gtk-doc'
+-)
+-optdepends=(
+-  'dosfstools: FAT filesystem support'
+-  'exfatprogs: exFAT filesystem support'
+-  'e2fsprogs: Ext2/3/4 filesystem suport'
+-  'udftools: UDF filesystem support'
+-  'xfsprogs: XFS filesystem support'
 -)
 +license=('GPL2')
 +depends=('acl' 'polkit' 'glib2' 'gcc-libs' 'glibc' 'libatasmart' 'libgudev' 'libblockdev'
@@ -58,7 +67,9 @@
  build() {
 -  local configure_options=(
 -    --disable-static
+-    --enable-btrfs
 -    --enable-gtk-doc
+-    --enable-lvm2
 -    --libexecdir=/usr/lib
 -    --localstatedir=/var
 -    --prefix=/usr
@@ -76,7 +87,7 @@
    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
    make
  }
-@@ -56,6 +44,4 @@
+@@ -67,6 +44,4 @@
  package() {
    cd udisks-$pkgver
    make DESTDIR="$pkgdir" install
@@ -89,16 +100,18 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,34 +1,20 @@
+@@ -1,38 +1,20 @@
  pkgname=udisks2
 -depends=(
 -  'acl'
+-  'btrfs-progs'
 -  'gcc-libs'
 -  'glib2'
 -  'glibc'
 -  'libatasmart'
 -  'libblockdev'
 -  'libgudev'
+-  'lvm2'
 -  'polkit'
 -  'systemd-libs'
 -  'util-linux-libs'
@@ -120,7 +133,9 @@
  build() {
 -  local configure_options=(
 -    --disable-static
+-    --enable-btrfs
 -    --enable-gtk-doc
+-    --enable-lvm2
 -    --libexecdir=/usr/lib
 -    --localstatedir=/var
 -    --prefix=/usr

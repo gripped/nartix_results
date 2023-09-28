@@ -1,0 +1,98 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,21 @@
+ 
+ pkgbase=brotli
+ pkgname=('brotli' 'python-brotli' 'brotli-testdata')
+-_gitcommit=ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+-pkgver=1.1.0
+-pkgrel=1
++_gitcommit=e61745a6b7add50d380cfd7d3883dd6c62fc2c71
++pkgver=1.0.9
++pkgrel=12
+ pkgdesc='Generic-purpose lossless compression algorithm'
+ url='https://github.com/google/brotli'
+ arch=('x86_64')
+ license=('MIT')
+-makedepends=(
+-  git
+-  cmake
+-  python-setuptools
+-  python-build
+-  python-installer
+-  python-wheel
+-)
++makedepends=('git' 'cmake' 'python-setuptools')
+ source=(${pkgname}::"git+${url}#commit=${_gitcommit}")
+ sha512sums=('SKIP')
++
++prepare() {
++  cd ${pkgbase}
++  git cherry-pick -n 09b0992b6acb7faa6fd3b23f9bc036ea117230fc # Fix broken Libs: in pc file
++}
+ 
+ pkgver() {
+   cd ${pkgbase}
+@@ -26,7 +24,7 @@
+ 
+ build() {
+   cd ${pkgbase}
+-  python -m build --wheel --no-isolation
++  python setup.py build
+   cmake -S . -B build \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -61,7 +59,7 @@
+   depends=('python')
+ 
+   cd ${pkgbase}
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --skip-build -O1 --root="$pkgdir"
+   install -Dm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+ 
+@@ -74,4 +72,3 @@
+   cp -a tests/testdata "$pkgdir"/usr/share/brotli/
+   install -Dm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,17 +1,14 @@
+ pkgbase=brotli
+ pkgname=('brotli' 'python-brotli' 'brotli-testdata')
+-_gitcommit=ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+-makedepends=(
+-  git
+-  cmake
+-  python-setuptools
+-  python-build
+-  python-installer
+-  python-wheel
+-)
++_gitcommit=e61745a6b7add50d380cfd7d3883dd6c62fc2c71
++makedepends=('git' 'cmake' 'python-setuptools')
++prepare() {
++  cd ${pkgbase}
++  git cherry-pick -n 09b0992b6acb7faa6fd3b23f9bc036ea117230fc # Fix broken Libs: in pc file
++}
+ build() {
+   cd ${pkgbase}
+-  python -m build --wheel --no-isolation
++  python setup.py build
+   cmake -S . -B build \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -34,7 +31,7 @@
+   pkgdesc+=' - python library'
+   depends=('python')
+   cd ${pkgbase}
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --skip-build -O1 --root="$pkgdir"
+   install -Dm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+ package_brotli-testdata() {

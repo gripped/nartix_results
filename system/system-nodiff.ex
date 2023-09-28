@@ -4,9 +4,6 @@ autoconf
 automake
 b43-fwcutter
 bison
-brotli
-python-brotli
-brotli-testdata
 bzip2
 ca-certificates
 ca-certificates-utils
@@ -133,7 +130,6 @@ openssl
 patch
 pciutils
 pcre2
-pinentry
 pkgconf
 popt
 pptpclient

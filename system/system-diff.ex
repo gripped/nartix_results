@@ -5,6 +5,9 @@ base-devel
 base
 bash
 binutils
+brotli
+python-brotli
+brotli-testdata
 btrfs-progs
 cryptsetup
 db5.3
@@ -76,6 +79,7 @@ pam
 pambase
 pcre
 perl
+pinentry
 ppp
 procps-ng
 python
