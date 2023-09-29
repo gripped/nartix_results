@@ -1,0 +1,99 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,45 +1,34 @@
+ 
+-pkgname=lib32-mpg123
+-pkgver=1.32.2
++_pkgbasename=mpg123
++pkgname=lib32-$_pkgbasename
++pkgver=1.31.3
+ pkgrel=1
+-pkgdesc='Console based real time MPEG Audio Player for Layer 1, 2 and 3 (32-bit)'
+-url='https://mpg123.de/'
++pkgdesc="A console based real time MPEG Audio Player for Layer 1, 2 and 3 (32-bit)"
+ arch=('x86_64')
++url="http://sourceforge.net/projects/mpg123"
+ license=('LGPL2.1')
+-depends=('lib32-alsa-lib' 'mpg123')
+-makedepends=('lib32-sdl2' 'lib32-jack2' 'lib32-libpulse')
+-optdepends=(
+-  'lib32-sdl2: for sdl audio support'
+-  'lib32-jack: for jack audio support'
+-  'lib32-libpulse: for pulse audio support'
+-)
+-provides=(lib{mpg,out,syn}123.so)
+-source=(https://downloads.sourceforge.net/sourceforge/mpg123/mpg123-${pkgver}.tar.bz2{,.sig})
+-sha512sums=('08d94a0c58455e23d3d6a4aedf97775e29ae07a0e1a449d73fe018c8c6094f6db01ce368476b8d0a0d51398e215f7584aeee3ac7b84e37c866713c4dca9c01f1'
++depends=('lib32-glibc' 'lib32-libtool' 'lib32-alsa-lib' $_pkgbasename)
++makedepends=('lib32-sdl' gcc-multilib libtool-multilib)
++optdepends=('lib32-sdl: for additional audio support')
++source=(https://downloads.sourceforge.net/sourceforge/${_pkgbasename}/${_pkgbasename}-${pkgver}.tar.bz2{,.sig})
++sha512sums=('5dd550e06f5d0d432cac1b7e546215e56378b44588c1a98031498473211e08bc4228de45be41f7ba764f7f6c0eb752a6501235bcc3712c9a8d8852ae3c607d98'
+             'SKIP')
+-validpgpkeys=('D021FF8ECF4BE09719D61A27231C4CBC60D5CAFE')
++validpgpkeys=(D021FF8ECF4BE09719D61A27231C4CBC60D5CAFE)
+ 
+ build() {
+-  cd mpg123-${pkgver}
+-
+   export CC="gcc -m32"
+   export CXX="g++ -m32"
+-  export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
++  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+ 
+-  ./configure \
+-    --build="$CHOST" \
+-    --host=i686-pc-linux-gnu \
+-    --prefix=/usr \
+-    --libdir=/usr/lib32 \
+-    --enable-int-quality \
+-    --with-audio="alsa oss sdl jack pulse"
+-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++  cd "${srcdir}/${_pkgbasename}-${pkgver}"
++
++  ./configure --prefix=/usr --with-audio="alsa sdl" --with-cpu=i586 --libdir=/usr/lib32
+   make
+ }
+ 
+ package() {
+-  cd mpg123-${pkgver}
++  cd "${srcdir}/${_pkgbasename}-${pkgver}"
+   make DESTDIR="${pkgdir}" install
+-  rm -r "${pkgdir}"/usr/{include,share,bin}
++
++  rm -rf "${pkgdir}"/usr/{include,share,bin}
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,19 +1,12 @@
+-pkgname=lib32-mpg123
+-depends=('lib32-alsa-lib' 'mpg123')
+-makedepends=('lib32-sdl2' 'lib32-jack2' 'lib32-libpulse')
+-provides=(lib{mpg,out,syn}123.so)
++_pkgbasename=mpg123
++pkgname=lib32-$_pkgbasename
++depends=('lib32-glibc' 'lib32-libtool' 'lib32-alsa-lib' $_pkgbasename)
++makedepends=('lib32-sdl' gcc-multilib libtool-multilib)
+ build() {
+-  cd mpg123-${pkgver}
+   export CC="gcc -m32"
+   export CXX="g++ -m32"
+-  export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
+-  ./configure \
+-    --build="$CHOST" \
+-    --host=i686-pc-linux-gnu \
+-    --prefix=/usr \
+-    --libdir=/usr/lib32 \
+-    --enable-int-quality \
+-    --with-audio="alsa oss sdl jack pulse"
+-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
++  cd "${srcdir}/${_pkgbasename}-${pkgver}"
++  ./configure --prefix=/usr --with-audio="alsa sdl" --with-cpu=i586 --libdir=/usr/lib32
+   make
+ }

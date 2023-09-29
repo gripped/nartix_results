@@ -1048,9 +1048,6 @@ libaccounts-qt
 libaec
 libalkimia
 libao
-libappindicator
-libappindicator-gtk2
-libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
@@ -1366,7 +1363,6 @@ libvisual
 libvncserver
 libvoikko
 libvorbis
-libvpx
 libvterm
 libwebp
 libwebsockets
@@ -3304,7 +3300,6 @@ python-zope-testrunner
 python-zstandard
 pyxdg
 qbe
-qbs
 qca
 qca-qt5
 qca-qt6
@@ -3392,7 +3387,6 @@ qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
-qtqr
 qtxdg-tools
 quadrapassel
 quilt

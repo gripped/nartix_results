@@ -25,6 +25,7 @@ lib32-libudev0-shim
 lib32-libusb
 lib32-libva
 lib32-libvdpau
+lib32-libvpx
 lib32-libwebp
 lib32-libxcb
 lib32-llvm
@@ -37,6 +38,7 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
+lib32-mpg123
 lib32-nvidia-utils
 lib32-p11-kit
 lib32-pipewire

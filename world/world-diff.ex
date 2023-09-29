@@ -387,6 +387,9 @@ libadwaita
 libadwaita-docs
 libadwaita-demos
 libappimage
+libappindicator
+libappindicator-gtk2
+libappindicator-gtk3
 libatasmart
 libavif
 libayatana-indicator
@@ -474,6 +477,7 @@ libutempter
 libva
 libvdpau
 libvirt-glib
+libvpx
 libwacom
 libxcb
 libxmlb
@@ -912,6 +916,7 @@ python-xapian
 python-yaml
 python-zope-event
 python-zopfli
+qbs
 qemu
 qemu-common
 qemu-audio-alsa
@@ -1008,6 +1013,7 @@ qt6-webengine
 qt6ct
 qtcreator
 qtcreator-devel
+qtqr
 quazip
 quazip-qt5
 quazip-qt6

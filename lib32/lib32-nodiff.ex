@@ -87,7 +87,6 @@ lib32-libunistring
 lib32-libunwind
 lib32-libvisual
 lib32-libvorbis
-lib32-libvpx
 lib32-libx11
 lib32-libxau
 lib32-libxcomposite
@@ -116,7 +115,6 @@ lib32-libxv
 lib32-libxxf86vm
 lib32-lm_sensors
 lib32-lz4
-lib32-mpg123
 lib32-ncurses
 lib32-nettle
 lib32-nspr

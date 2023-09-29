@@ -1,51 +1,69 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,27 +1,25 @@
  
  pkgname=mpg123
--pkgver=1.32.1
--pkgrel=2
+-pkgver=1.32.2
 +pkgver=1.31.3
-+pkgrel=1
+ pkgrel=1
  pkgdesc='Console based real time MPEG Audio Player for Layer 1, 2 and 3'
- url="https://sourceforge.net/projects/mpg123"
+-url='https://mpg123.de/'
++url="https://sourceforge.net/projects/mpg123"
  arch=('x86_64')
-@@ -13,18 +13,10 @@
-             'libpulse: for pulse audio support'
-             'perl: for conplay')
- provides=(libmpg123.so libout123.so)
--source=(https://downloads.sourceforge.net/sourceforge/${pkgname}/${pkgname}-${pkgver}.tar.bz2{,.sig}
--        largename-hack.diff)
--sha512sums=('084f4575d3ad88373a04035778b40e4871b6da969f42b426c76d9539632baa12534d7f0f9b976be228fd313dea9c31f7a259e0a8b56d044c7e89fefdf897def2'
--            'SKIP'
--            'bde9d7ae91e1dd8f420b876c71d0d8b30d3cd190b56cf3515754fe202b20f1b74a161b390db46b212428aec0590c9e12cceb09f12e1d599a5356d871bbd361dc')
+ license=('LGPL2.1')
+ depends=('alsa-lib')
+ makedepends=('sdl2' 'jack' 'libpulse')
+-optdepends=(
+-  'sdl2: for sdl audio support'
+-  'jack: for jack audio support'
+-  'libpulse: for pulse audio support'
+-  'perl: for conplay'
+-)
+-provides=(lib{mpg,out,syn}123.so)
+-source=(https://downloads.sourceforge.net/sourceforge/mpg123/mpg123-${pkgver}.tar.bz2{,.sig})
+-sha512sums=('08d94a0c58455e23d3d6a4aedf97775e29ae07a0e1a449d73fe018c8c6094f6db01ce368476b8d0a0d51398e215f7584aeee3ac7b84e37c866713c4dca9c01f1'
++optdepends=('sdl2: for sdl audio support'
++            'jack: for jack audio support'
++            'libpulse: for pulse audio support'
++            'perl: for conplay')
++provides=(libmpg123.so libout123.so)
 +source=(https://downloads.sourceforge.net/sourceforge/${pkgname}/${pkgname}-${pkgver}.tar.bz2{,.sig})
 +sha512sums=('5dd550e06f5d0d432cac1b7e546215e56378b44588c1a98031498473211e08bc4228de45be41f7ba764f7f6c0eb752a6501235bcc3712c9a8d8852ae3c607d98'
-+            'SKIP')
+             'SKIP')
  validpgpkeys=('D021FF8ECF4BE09719D61A27231C4CBC60D5CAFE')
--
--prepare() {
--  cd ${pkgname}-${pkgver}
--
--  patch -Np1 -i ../largename-hack.diff
--}
  
  build() {
-   cd ${pkgname}-${pkgver}
+-  cd mpg123-${pkgver}
++  cd ${pkgname}-${pkgver}
+   ./configure \
+     --prefix=/usr \
+     --enable-int-quality \
+@@ -31,8 +29,8 @@
+ }
+ 
+ package() {
+-  cd mpg123-${pkgver}
++  cd ${pkgname}-${pkgver}
+   make DESTDIR="${pkgdir}" install
+-  install -Dm 755 scripts/conplay -t "${pkgdir}/usr/bin"
++  install -Dm 755 scripts/conplay "${pkgdir}/usr/bin/conplay"
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,6 @@
+@@ -1,9 +1,9 @@
+ pkgname=mpg123
  depends=('alsa-lib')
  makedepends=('sdl2' 'jack' 'libpulse')
- provides=(libmpg123.so libout123.so)
--prepare() {
--  cd ${pkgname}-${pkgver}
--  patch -Np1 -i ../largename-hack.diff
--}
+-provides=(lib{mpg,out,syn}123.so)
++provides=(libmpg123.so libout123.so)
  build() {
-   cd ${pkgname}-${pkgver}
+-  cd mpg123-${pkgver}
++  cd ${pkgname}-${pkgver}
    ./configure \
+     --prefix=/usr \
+     --enable-int-quality \

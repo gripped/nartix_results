@@ -3,7 +3,7 @@
 @@ -1,80 +1,45 @@
  
  pkgname=mitmproxy
--pkgver=10.1.0
+-pkgver=10.1.1
 -pkgrel=1
 +pkgver=9.0.1
 +pkgrel=2
@@ -69,7 +69,7 @@
  conflicts=('pathod')
  replaces=('pathod')
  source=("https://github.com/mitmproxy/mitmproxy/archive/$pkgver/$pkgname-$pkgver.tar.gz")
--sha512sums=('75c8a44d33c259d01afdc1eec401c317ede0f2bc08472ffd8b4c1bce2eb6d2303abba09e233b5c40189bb2f2c457c4e4f67ae7ca4fb288c26b545255d94a001b')
+-sha512sums=('c5699bbc45dc14422f7aa7df716a67ac9995722a69492d45497b16de3f2547a683122a63ac17884575e184f8f846c69b551fadb1aa7baffc977afa5b63cc7d6e')
 +sha512sums=('601d9171f48d93fbc6f002a1dc243c2f358186059e491490ffe5ab7be797e8e622fdb5a9e2fdab10fac7350057f9e9491952527d600477c841c9b5102a045bc1')
 +
 +prepare() {

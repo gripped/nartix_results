@@ -1,18 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,21 +1,18 @@
  
  pkgname=qbs
--pkgver=2.1.1
+-pkgver=2.1.2
 +pkgver=2.0.2
  pkgrel=1
  pkgdesc='Cross platform build tool'
  arch=(x86_64)
-@@ -9,10 +9,10 @@
- depends=(qt6-5compat)
+ url='https://wiki.qt.io/Qbs'
+ license=(LGPL)
+-depends=(gcc-libs
+-         glibc
+-         qt6-base
+-         qt6-5compat)
++depends=(qt6-5compat)
  makedepends=(cmake)
  source=(https://download.qt.io/official_releases/qbs/$pkgver/qbs-src-$pkgver.tar.gz)
--sha256sums=('3acd5704494777f185ba64a47adfb8a690086f007ad0e3d296f32bcb21f72843')
+-sha256sums=('465d398ba3ac2bf157c4c32118e7ea55759050550e5e2babff091b000f2c27c9')
 +sha256sums=('ddef1a6bfa6c7bf52b9f87a8cb0f1a940973031ad408529156070411beb9c19b')
  
  build() {
@@ -27,8 +32,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(qt6-5compat)
+@@ -1,11 +1,8 @@
+ pkgname=qbs
+-depends=(gcc-libs
+-         glibc
+-         qt6-base
+-         qt6-5compat)
++depends=(qt6-5compat)
  makedepends=(cmake)
  build() {
 -  cmake -B build -S $pkgname-src-$pkgver \

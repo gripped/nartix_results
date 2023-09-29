@@ -1,10 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -4,12 +4,12 @@
+ _bzrtag=16.04.0
+ _bzrrev=498
+ pkgver=${_bzrtag}.r${_bzrrev}
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Library for passing menus over DBus'
  url='https://launchpad.net/libdbusmenu'
  arch=('x86_64')
  license=('GPL3' 'LGPL2.1' 'LGPL3')
--makedepends=('bzr' 'gnome-common' 'gobject-introspection' 'gtk2' 'gtk3' 'intltool' 'vala')
+-makedepends=('breezy' 'gnome-common' 'gobject-introspection' 'gtk2' 'gtk3' 'intltool' 'vala')
 +makedepends=('bzr' 'gnome-common' 'gobject-introspection' 'gtk2' 'gtk3' 'intltool' 'vala' 'json-glib')
  options=('!emptydirs')
  source=($pkgbase::bzr+https://code.launchpad.net/~dbusmenu-team/libdbusmenu/trunk.16.10#revision=$_bzrrev)
@@ -19,7 +25,7 @@
  pkgname=("${pkgbase}-glib" "${pkgbase}-gtk"{2,3})
  _bzrtag=16.04.0
  _bzrrev=498
--makedepends=('bzr' 'gnome-common' 'gobject-introspection' 'gtk2' 'gtk3' 'intltool' 'vala')
+-makedepends=('breezy' 'gnome-common' 'gobject-introspection' 'gtk2' 'gtk3' 'intltool' 'vala')
 +makedepends=('bzr' 'gnome-common' 'gobject-introspection' 'gtk2' 'gtk3' 'intltool' 'vala' 'json-glib')
  options=('!emptydirs')
  prepare() {
