@@ -2,22 +2,22 @@
 +++ Artix PKGBUILD
 @@ -1,6 +1,6 @@
  
- pkgname=qt6-location
+ pkgname=qt6-quick3d
 -_qtver=6.5.3
 +_qtver=6.5.2
  pkgver=${_qtver/-/}
  pkgrel=1
  arch=(x86_64)
-@@ -12,10 +12,11 @@
+@@ -13,10 +13,10 @@
  groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
--sha256sums=('530cd1d597bfa7018cddd243594b47ee4252544b577ce1e9976c7253ca64e7cc')
-+sha256sums=('891d7d64c26617bf1993a6d8b3d206ec9ce5b0a5396146f691b11d895fd86dfb')
+-sha256sums=('6682aa603f308de409b26f3d2665f3467d722e6f2e8d8d022fcd44c57888ce5d')
++sha256sums=('75e0a35d9419e8b2ae98c950056b55f2377e4b559aafbe00a9c8d150c5db00da')
  
  build() {
-   cmake -B build -S $_pkgfn -G Ninja \
-+    -DCMAKE_INSTALL_PREFIX=/usr \
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build
  }
@@ -27,17 +27,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=qt6-location
+@@ -1,11 +1,11 @@
+ pkgname=qt6-quick3d
 -_qtver=6.5.3
 +_qtver=6.5.2
- depends=(qt6-declarative qt6-positioning)
- makedepends=(cmake ninja qt6-shadertools)
+ depends=(qt6-quicktimeline)
+ makedepends=(cmake ninja qt6-shadertools assimp)
  groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  build() {
-   cmake -B build -S $_pkgfn -G Ninja \
-+    -DCMAKE_INSTALL_PREFIX=/usr \
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build
  }

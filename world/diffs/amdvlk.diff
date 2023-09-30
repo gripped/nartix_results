@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=amdvlk
--pkgver=2023.Q3.2
+-pkgver=2023.Q3.3
 +pkgver=2023.Q2.3
  pkgrel=1
  pkgdesc="AMD's standalone Vulkan driver"
@@ -13,7 +13,7 @@
               'cmake' 'ninja' 'git')
  options=('!lto')
 -source=("https://github.com/GPUOpen-Drivers/AMDVLK/archive/v-${pkgver}.tar.gz")
--sha256sums=('70753b0840079e35a4289e22838d72798867407936be70de7f76bf5040bfe642')
+-sha256sums=('5156ec8b2d6fd1cb7173ec707f495bc1cd1de15f5441f48e59ad9f817b9c68f5')
 +source=("https://github.com/GPUOpen-Drivers/AMDVLK/archive/v-${pkgver}.tar.gz"
 +        cstdint.patch)
 +sha256sums=('0fd70d472200c98dabdf86b58a0cf7a1af1a46dd32d02d165676faa8dedf16f7'

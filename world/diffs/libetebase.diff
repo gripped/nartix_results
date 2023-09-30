@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,15 @@
+ 
+ pkgname=libetebase
+-pkgver=0.5.6
++pkgver=0.5.5
+ pkgrel=1
+ pkgdesc='Etebase C library'
+ arch=(x86_64)
+ url='https://github.com/etesync/libetebase'
+ license=(BSD)
+-depends=(gcc-libs
+-         glibc
+-         libsodium
+-         openssl)
++depends=(openssl gcc-libs libsodium)
+ makedepends=(rust)
+ source=(https://github.com/etesync/libetebase/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('b149afcabce839347cb3cef870e781d34df32016885bfed50c08dcab0ab9b1f0')
++sha256sums=('c5712362375a01fcc0da43a98900100a3a364025a1307a7d9cf85091fb35ff76')
+ 
+ prepare() {
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,5 @@
+ pkgname=libetebase
+-depends=(gcc-libs
+-         glibc
+-         libsodium
+-         openssl)
++depends=(openssl gcc-libs libsodium)
+ makedepends=(rust)
+ prepare() {
+   cd $pkgname-$pkgver

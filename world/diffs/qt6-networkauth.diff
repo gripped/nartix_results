@@ -2,22 +2,22 @@
 +++ Artix PKGBUILD
 @@ -1,6 +1,6 @@
  
- pkgname=qt6-location
+ pkgname=qt6-networkauth
 -_qtver=6.5.3
 +_qtver=6.5.2
  pkgver=${_qtver/-/}
  pkgrel=1
  arch=(x86_64)
-@@ -12,10 +12,11 @@
+@@ -12,10 +12,10 @@
  groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
--sha256sums=('530cd1d597bfa7018cddd243594b47ee4252544b577ce1e9976c7253ca64e7cc')
-+sha256sums=('891d7d64c26617bf1993a6d8b3d206ec9ce5b0a5396146f691b11d895fd86dfb')
+-sha256sums=('36b45d75595fcd8886f54fb66253dd0db5f0bd10624360bf84a48625c008a702')
++sha256sums=('4ecc4b560ac24c29086550972d634a4e1a1a58936b6186a24dd131f8079c283c')
  
  build() {
-   cmake -B build -S $_pkgfn -G Ninja \
-+    -DCMAKE_INSTALL_PREFIX=/usr \
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build
  }
@@ -27,17 +27,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=qt6-location
+@@ -1,11 +1,11 @@
+ pkgname=qt6-networkauth
 -_qtver=6.5.3
 +_qtver=6.5.2
- depends=(qt6-declarative qt6-positioning)
- makedepends=(cmake ninja qt6-shadertools)
+ depends=(qt6-base)
+ makedepends=(cmake ninja)
  groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  build() {
-   cmake -B build -S $_pkgfn -G Ninja \
-+    -DCMAKE_INSTALL_PREFIX=/usr \
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build
  }

@@ -4,7 +4,7 @@
  
  pkgname=dolphin-emu
 -pkgver=5.0.r19870.032c77b462
--pkgrel=1
+-pkgrel=2
 +pkgver=5.0.r19433.34527cadcc
 +pkgrel=4
  epoch=1
@@ -35,6 +35,14 @@
  source=(
    dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#commit=${_commit}
    git+https://github.com/mozilla/cubeb.git
+@@ -89,7 +89,6 @@
+ }
+ 
+ build() {
+-  export CXXFLAGS="${CXXFLAGS/-O2/-O1}"
+   cmake -S dolphin-emu -B build -G Ninja \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_INSTALL_PREFIX=/usr \
 
 
 ############# Stripped diff below #################
@@ -57,3 +65,11 @@
    sfml
    zlib
  )
+@@ -50,7 +50,6 @@
+   git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
+ }
+ build() {
+-  export CXXFLAGS="${CXXFLAGS/-O2/-O1}"
+   cmake -S dolphin-emu -B build -G Ninja \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_INSTALL_PREFIX=/usr \

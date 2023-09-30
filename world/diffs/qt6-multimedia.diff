@@ -1,26 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
- pkgname=qt6-declarative
+ pkgbase=qt6-multimedia
+ pkgname=(qt6-multimedia qt6-multimedia-gstreamer qt6-multimedia-ffmpeg)
 -_qtver=6.5.3
 +_qtver=6.5.2
  pkgver=${_qtver/-/}
  pkgrel=1
  arch=(x86_64)
-@@ -16,11 +16,11 @@
+@@ -12,10 +12,10 @@
  groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
--sha256sums=('404dd6d2d206bb882ecd6622f0c708c9d6bd724a4d83776e13c49761c159d215')
-+sha256sums=('f3a11fe54e9fac77c649e46e39f1cbe161e9efe89bad205115ba2861b1eb8719')
+-sha256sums=('ed64f3d2bb98c20cd12df19dbf84dc0233d9fcb2078fea812adf42eef9a0ff27')
++sha256sums=('948f00aa679e92839a2a71bd07245a92cc849af486607417ee4c334b2b998975')
  
  build() {
-   export CXXFLAGS+=" -ffat-lto-objects"
 -  cmake -B build -S $_pkgfn -G Ninja \
 +  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
-     -DINSTALL_PUBLICBINDIR=usr/bin \
-     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+     -DCMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects"
    cmake --build build
 
 
@@ -28,19 +28,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- pkgname=qt6-declarative
+@@ -1,11 +1,11 @@
+ pkgbase=qt6-multimedia
+ pkgname=(qt6-multimedia qt6-multimedia-gstreamer qt6-multimedia-ffmpeg)
 -_qtver=6.5.3
 +_qtver=6.5.2
- depends=(qt6-base)
- makedepends=(cmake ninja python at-spi2-core qt6-shadertools qt6-languageserver qt6-tools)
- conflicts=(qt6-quickcontrols2)
-@@ -9,7 +9,7 @@
+ makedepends=(cmake ninja qt6-declarative qt6-shadertools gst-plugins-base libpulse ffmpeg qt6-quick3d libxrandr)
+ groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  build() {
-   export CXXFLAGS+=" -ffat-lto-objects"
 -  cmake -B build -S $_pkgfn -G Ninja \
 +  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
-     -DINSTALL_PUBLICBINDIR=usr/bin \
-     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+     -DCMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects"
    cmake --build build
