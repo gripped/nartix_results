@@ -1,0 +1,85 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,14 +2,14 @@
+ pkgbase=gutenprint
+ pkgname=('gutenprint' 'foomatic-db-gutenprint-ppds')
+ pkgver=5.3.4
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Top quality printer drivers for POSIX systems"
+ arch=('x86_64')
+ license=('GPL')
+ url="http://gimp-print.sourceforge.net/" # no https
+ makedepends=('gimp' 'gtk2' 'cups' 'ghostscript'
+             'dialog' 'doxygen' 'docbook-utils' 'texi2html' 'texlive-bin')
+-options=('!emptydirs')
++options=('!emptydirs' 'debug')
+ source=(https://downloads.sourceforge.net/gimp-print/$pkgname-$pkgver.tar.xz)
+ sha1sums=('46167d00c2a4fb07c3fd3d62c80cd3fa004629f0')
+ sha256sums=('db44a701d2b8e6a8931c83cec06c91226be266d23e5c189d20a39dd175f2023b')
+@@ -17,9 +17,6 @@
+ prepare(){
+   cd "${pkgbase}"-${pkgver}
+   sed -i "s:cups_sbindir=\"\${cups_exec_prefix}\/sbin\":cups_sbindir=\"\${cups_exec_prefix}\/bin\":" m4local/stp_cups.m4
+-
+-  find -name Makefile.in -exec sed -i 's/$(CURDIR)/BUILDPATH/g' {} +
+-
+   autoreconf -vfi
+ }
+ 
+@@ -36,9 +33,6 @@
+     --enable-translated-cups-ppds \
+     --enable-globalized-cups-ppds #--help
+ 
+-  sed -i -e 's,Generated at.*,Generated at REDACTED,g' \
+-	 -e 's,uname -a output:.*,uname -a output: REDACTED,g' config.summary
+-
+ 
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+@@ -47,8 +41,7 @@
+ package_gutenprint() {
+   pkgdesc="Top quality printer drivers for POSIX systems"
+   install=gutenprint.install
+-  depends=('cups' 'cups-filters'
+-           'glib2' 'zlib' 'glibc' 'readline')
++  depends=('cups' 'cups-filters')
+   optdepends=('gimp:	adds gutenprint plugin to gimp'
+             'libusb:	required for drivers that depend on gutenprint52usb backend'
+             'foomatic-db-gutenprint-ppds: prebuilt ppd files'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,11 +2,10 @@
+ pkgname=('gutenprint' 'foomatic-db-gutenprint-ppds')
+ makedepends=('gimp' 'gtk2' 'cups' 'ghostscript'
+             'dialog' 'doxygen' 'docbook-utils' 'texi2html' 'texlive-bin')
+-options=!emptydirs
++options=!emptydirs
+ prepare(){
+   cd "${pkgbase}"-${pkgver}
+   sed -i "s:cups_sbindir=\"\${cups_exec_prefix}\/sbin\":cups_sbindir=\"\${cups_exec_prefix}\/bin\":" m4local/stp_cups.m4
+-  find -name Makefile.in -exec sed -i 's/$(CURDIR)/BUILDPATH/g' {} +
+   autoreconf -vfi
+ }
+ build() {
+@@ -21,15 +20,12 @@
+     --enable-simplified-cups-ppds=only \
+     --enable-translated-cups-ppds \
+     --enable-globalized-cups-ppds #--help
+-  sed -i -e 's,Generated at.*,Generated at REDACTED,g' \
+-	 -e 's,uname -a output:.*,uname -a output: REDACTED,g' config.summary
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+ package_gutenprint() {
+   install=gutenprint.install
+-  depends=('cups' 'cups-filters'
+-           'glib2' 'zlib' 'glibc' 'readline')
++  depends=('cups' 'cups-filters')
+   replaces=('gimp-print')
+   cd "${pkgname}"-${pkgver}
+   make DESTDIR="${pkgdir}" install

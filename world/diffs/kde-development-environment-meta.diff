@@ -3,107 +3,209 @@
 @@ -1,7 +1,7 @@
  
  pkgname=kde-development-environment-meta
--pkgver=20230827
+-pkgver=20230930
 -pkgrel=1
 +pkgver=20221206
 +pkgrel=2
  pkgdesc='Metapackage to install a full KDE development environment'
  arch=(any)
  url='https://phabricator.kde.org/T3722'
-@@ -10,26 +10,30 @@
+@@ -10,89 +10,95 @@
           akonadi-contacts
           akonadi-mime
           akonadi-notes
+-         attica5
 +         akonadi-search
-          attica
-          baloo
++         attica
++         baloo
           baloo-widgets
+-         baloo5
           bash-completion
-          bluez-qt
+-         bear
+-         bluez-qt5
 -         breeze-icons
++         bluez-qt
           calendarsupport
-          clang
++         clang
           cmake
 +         eventviews
           extra-cmake-modules
-          frameworkintegration
+-         frameworkintegration5
++         frameworkintegration
           gcc
           gettext
           git
+-         kactivities-stats5
+-         kactivities5
+-         karchive5
+-         kauth5
+-         kbookmarks5
+-         kcalendarcore5
+-         kcmutils5
+-         kcodecs5
+-         kcompletion5
+-         kconfig5
+-         kconfigwidgets5
+-         kcontacts5
+-         kcoreaddons5
+-         kcrash5
+-         kdav5
+-         kdbusaddons5
+-         kdeclarative5
 +         grantleetheme
 +         incidenceeditor
-          kactivities
-          kactivities-stats
-          karchive
-          kauth
-          kbookmarks
-          kcalendarcore
++         kactivities
++         kactivities-stats
++         karchive
++         kauth
++         kbookmarks
++         kcalendarcore
 +         kcalutils
-          kcmutils
-          kcodecs
-          kcompletion
-@@ -59,18 +63,20 @@
++         kcmutils
++         kcodecs
++         kcompletion
++         kconfig
++         kconfigwidgets
++         kcontacts
++         kcoreaddons
++         kcrash
++         kdav
++         kdbusaddons
++         kdeclarative
+          kdelibs4support
+          kdesignerplugin
+-         kdesu5
+-         kdnssd5
+-         kdoctools5
++         kdesu
++         kdnssd
++         kdoctools
+          kemoticons
+-         kfilemetadata5
+-         kglobalaccel5
+-         kguiaddons5
+-         kholidays5
++         kfilemetadata
++         kglobalaccel
++         kguiaddons
++         kholidays
+          khtml
+-         ki18n5
+-         kiconthemes5
++         ki18n
++         kiconthemes
+          kidentitymanagement
+-         kidletime5
++         kidletime
           kimap
           kinit
-          kio
+-         kio5
 -         kirigami-addons
++         kio
           kirigami2
-          kitemmodels
-          kitemviews
-          kjobwidgets
+-         kitemmodels5
+-         kitemviews5
+-         kjobwidgets5
++         kitemmodels
++         kitemviews
++         kjobwidgets
           kjs
 +         kldap
           kmailtransport
 +         kmbox
           kmime
-          knewstuff
-          knotifications
-          knotifyconfig
+-         knewstuff5
+-         knotifications5
+-         knotifyconfig5
++         knewstuff
++         knotifications
++         knotifyconfig
           konqueror
+-         kpackage5
+-         kparts5
+-         kpeople5
 +         kontactinterface
-          kpackage
-          kparts
-          kpeople
-@@ -82,17 +88,17 @@
++         kpackage
++         kparts
++         kpeople
+          kpeoplevcard
+          kpimtextedit
+-         kplotting5
+-         kpty5
+-         kquickcharts5
++         kplotting
++         kpty
++         kquickcharts
           kross
-          krunner
-          kservice
+-         krunner5
+-         kservice5
 -         ktextaddons
-          ktexteditor
-          ktextwidgets
-+         ktnef
-          kunitconversion
-          kwallet
-          kwayland
+-         ktexteditor5
+-         ktextwidgets5
+-         kunitconversion5
+-         kwallet5
+-         kwayland5
 -         kweathercore
-          kwidgetsaddons
-          kwindowsystem
-          kxmlgui
+-         kwidgetsaddons5
+-         kwindowsystem5
+-         kxmlgui5
++         krunner
++         kservice
++         ktexteditor
++         ktextwidgets
++         ktnef
++         kunitconversion
++         kwallet
++         kwayland
++         kwidgetsaddons
++         kwindowsystem
++         kxmlgui
           libakonadi
 +         libgravatar
           libkcddb
           libkcompactdisc
           libkdcraw
-@@ -103,14 +109,17 @@
+@@ -103,33 +109,37 @@
           libkmahjongg
           libksane
           libkscreen
 +         libksieve
           libksysguard
           libktorrent
--         linux-lts-headers
           mailcommon
 +         mailimporter
           make
+-         modemmanager-qt5
+-         networkmanager-qt5
 +         messagelib
-          modemmanager-qt
-          networkmanager-qt
++         modemmanager-qt
++         networkmanager-qt
           ninja
 +         pimcommon
           plasma-framework
-          prison
+-         prison5
++         prison
           pulseaudio-qt
-@@ -130,7 +139,7 @@
+-         purpose5
+-         qqc2-desktop-style5
++         purpose
++         qqc2-desktop-style
+          qt5-base
+          qt5-declarative
+          qt5-webengine
+-         solid5
+-         sonnet5
+-         syndication5
+-         syntax-highlighting5
+-         threadweaver5)
++         solid
++         sonnet
++         syndication
++         syntax-highlighting
++         threadweaver)
+ optdepends=(kate
+             kdevelop
+             plasma-sdk
              plasma-workspace)
  makedepends=()
  source=(org.kde.development.appdata.xml kdesdk-devenv-dependencies.svg)
@@ -118,96 +220,198 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,26 +3,30 @@
+@@ -3,89 +3,95 @@
           akonadi-contacts
           akonadi-mime
           akonadi-notes
+-         attica5
 +         akonadi-search
-          attica
-          baloo
++         attica
++         baloo
           baloo-widgets
+-         baloo5
           bash-completion
-          bluez-qt
+-         bear
+-         bluez-qt5
 -         breeze-icons
++         bluez-qt
           calendarsupport
-          clang
++         clang
           cmake
 +         eventviews
           extra-cmake-modules
-          frameworkintegration
+-         frameworkintegration5
++         frameworkintegration
           gcc
           gettext
           git
+-         kactivities-stats5
+-         kactivities5
+-         karchive5
+-         kauth5
+-         kbookmarks5
+-         kcalendarcore5
+-         kcmutils5
+-         kcodecs5
+-         kcompletion5
+-         kconfig5
+-         kconfigwidgets5
+-         kcontacts5
+-         kcoreaddons5
+-         kcrash5
+-         kdav5
+-         kdbusaddons5
+-         kdeclarative5
 +         grantleetheme
 +         incidenceeditor
-          kactivities
-          kactivities-stats
-          karchive
-          kauth
-          kbookmarks
-          kcalendarcore
++         kactivities
++         kactivities-stats
++         karchive
++         kauth
++         kbookmarks
++         kcalendarcore
 +         kcalutils
-          kcmutils
-          kcodecs
-          kcompletion
-@@ -52,18 +56,20 @@
++         kcmutils
++         kcodecs
++         kcompletion
++         kconfig
++         kconfigwidgets
++         kcontacts
++         kcoreaddons
++         kcrash
++         kdav
++         kdbusaddons
++         kdeclarative
+          kdelibs4support
+          kdesignerplugin
+-         kdesu5
+-         kdnssd5
+-         kdoctools5
++         kdesu
++         kdnssd
++         kdoctools
+          kemoticons
+-         kfilemetadata5
+-         kglobalaccel5
+-         kguiaddons5
+-         kholidays5
++         kfilemetadata
++         kglobalaccel
++         kguiaddons
++         kholidays
+          khtml
+-         ki18n5
+-         kiconthemes5
++         ki18n
++         kiconthemes
+          kidentitymanagement
+-         kidletime5
++         kidletime
           kimap
           kinit
-          kio
+-         kio5
 -         kirigami-addons
++         kio
           kirigami2
-          kitemmodels
-          kitemviews
-          kjobwidgets
+-         kitemmodels5
+-         kitemviews5
+-         kjobwidgets5
++         kitemmodels
++         kitemviews
++         kjobwidgets
           kjs
 +         kldap
           kmailtransport
 +         kmbox
           kmime
-          knewstuff
-          knotifications
-          knotifyconfig
+-         knewstuff5
+-         knotifications5
+-         knotifyconfig5
++         knewstuff
++         knotifications
++         knotifyconfig
           konqueror
+-         kpackage5
+-         kparts5
+-         kpeople5
 +         kontactinterface
-          kpackage
-          kparts
-          kpeople
-@@ -75,17 +81,17 @@
++         kpackage
++         kparts
++         kpeople
+          kpeoplevcard
+          kpimtextedit
+-         kplotting5
+-         kpty5
+-         kquickcharts5
++         kplotting
++         kpty
++         kquickcharts
           kross
-          krunner
-          kservice
+-         krunner5
+-         kservice5
 -         ktextaddons
-          ktexteditor
-          ktextwidgets
-+         ktnef
-          kunitconversion
-          kwallet
-          kwayland
+-         ktexteditor5
+-         ktextwidgets5
+-         kunitconversion5
+-         kwallet5
+-         kwayland5
 -         kweathercore
-          kwidgetsaddons
-          kwindowsystem
-          kxmlgui
+-         kwidgetsaddons5
+-         kwindowsystem5
+-         kxmlgui5
++         krunner
++         kservice
++         ktexteditor
++         ktextwidgets
++         ktnef
++         kunitconversion
++         kwallet
++         kwayland
++         kwidgetsaddons
++         kwindowsystem
++         kxmlgui
           libakonadi
 +         libgravatar
           libkcddb
           libkcompactdisc
           libkdcraw
-@@ -96,14 +102,17 @@
+@@ -96,25 +102,29 @@
           libkmahjongg
           libksane
           libkscreen
 +         libksieve
           libksysguard
           libktorrent
--         linux-lts-headers
           mailcommon
 +         mailimporter
           make
+-         modemmanager-qt5
+-         networkmanager-qt5
 +         messagelib
-          modemmanager-qt
-          networkmanager-qt
++         modemmanager-qt
++         networkmanager-qt
           ninja
 +         pimcommon
           plasma-framework
-          prison
+-         prison5
++         prison
           pulseaudio-qt
+-         purpose5
+-         qqc2-desktop-style5
++         purpose
++         qqc2-desktop-style
+          qt5-base
+          qt5-declarative
+          qt5-webengine
+-         solid5
+-         sonnet5
+-         syndication5
+-         syntax-highlighting5
+-         threadweaver5)
++         solid
++         sonnet
++         syndication
++         syntax-highlighting
++         threadweaver)
+ makedepends=()
+ noextract=()

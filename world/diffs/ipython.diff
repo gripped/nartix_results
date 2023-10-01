@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,55 +1,26 @@
+@@ -1,72 +1,44 @@
  
  pkgname=ipython
--pkgver=8.15.0
--pkgrel=3
+-pkgver=8.16.0
 +pkgver=8.14.0
-+pkgrel=1
+ pkgrel=1
  pkgdesc='Enhanced Interactive Python shell'
  arch=('any')
  url=https://ipython.org
@@ -25,13 +24,13 @@
 -  'sqlite'
 -)
 -makedepends=(
+-  'git'
 -  'python-build'
 -  'python-installer'
 -  'python-setuptools'
 -  'python-wheel'
 -)
 -checkdepends=(
--  'git'
 -  'jupyter-nbformat'
 -  'python-curio'
 -  'python-ipykernel'
@@ -51,10 +50,10 @@
 -  'yapf: to auto format with YAPF'
 -)
 -source=(
--  "https://github.com/ipython/ipython/archive/$pkgver/$pkgname-$pkgver.tar.gz"
+-  "git+https://github.com/ipython/ipython.git#tag=$pkgver?signed"
 -  'IPython-icon.png::https://www.packal.org/sites/default/files/public/styles/icon_large/public/workflow-files/nkeimipynbworkflow/icon/icon.png'
 -)
--b2sums=('9b2f10686a3c65e4085994904d38552bd263b809a7c6714823bda43f2d66976d9f094aded5b40a416ca10e0261583bdd590b2ca534a58737d8dd9ee9024b82ad'
+-b2sums=('SKIP'
 +depends=('python' 'python-traitlets' 'python-pexpect' 'sqlite'
 +         'python-pickleshare' 'python-prompt_toolkit'
 +         'python-jedi' 'python-pygments' 'python-backcall'
@@ -71,15 +70,38 @@
 +            '3c44a6fa1e3a8afc24754c90469404770b639cb960361988999a4cdd677699d8')
 +b2sums=('9789b49b771e69439f957ff85d81f40e6511f4440e2372cac881c708503a5ce1c22e9f1fac45828ee723d1bd9b9ee4684c475d08ed96ed98396faf1400b802af'
          'd445e2bc7a037db8715ea103611720e965987e155c32e445b0ef783e519fca8a0301b16c5763fd9a5d8d169c3b0d7b4db6c0bd0f9772842258b135dcb1d6d5a2')
+-validpgpkeys=('99B17F64FD5C94692E9EF8064968B2CC0208DCC8') # Matthias Bussonnier <bussonniermatthias@gmail.com>
  
  build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   python -m build --wheel --skip-dependency-check --no-isolation
+ }
+ 
+ check() {
+-  cd $pkgname
+-  PYTHONPATH="$PWD/$pkgname:$PYTHONPATH" pytest
++  cd $pkgname-$pkgver
++  python -m venv --system-site-packages test-env
++  test-env/bin/python -m installer dist/*.whl
++  test-env/bin/python -m pytest
+ }
+ 
+ package() {
+   install -Dm644 IPython-icon.png "$pkgdir"/usr/share/pixmaps/ipython.png
+ 
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ 
+   cd 'examples/IPython Kernel'
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,9 @@
+@@ -1,25 +1,10 @@
  pkgname=ipython
 -depends=(
 -  'python-backcall'
@@ -95,6 +117,7 @@
 -  'sqlite'
 -)
 -makedepends=(
+-  'git'
 -  'python-build'
 -  'python-installer'
 -  'python-setuptools'
@@ -106,5 +129,7 @@
 +         'python-matplotlib-inline' 'python-stack-data')
 +makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
  build() {
-   cd $pkgname-$pkgver
+-  cd $pkgname
++  cd $pkgname-$pkgver
    python -m build --wheel --skip-dependency-check --no-isolation
+ }

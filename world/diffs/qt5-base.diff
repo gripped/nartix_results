@@ -4,16 +4,20 @@
  pkgbase=qt5-base
  pkgname=(qt5-base qt5-xcb-private-headers)
  _basever=5.15.10
--pkgver=5.15.10+kde+r162
+-pkgver=5.15.10+kde+r163
 +pkgver=5.15.10+kde+r135
  pkgrel=1
--_commit=9d613932ab4cbf09d162b5529199f166be2280d6
+-_commit=a08b9184feb0809e3b30ad8c845f3828da2c0dda
 +_commit=9815348dd2fdc8c0eac8abd6f6219a3c2e1978fa
  arch=('x86_64')
  url='https://www.qt.io'
  license=('GPL3' 'LGPL3' 'FDL' 'custom')
-@@ -27,11 +27,9 @@
- groups=('qt' 'qt5')
+@@ -24,14 +24,12 @@
+             'gtk3: GTK platform plugin'
+             'perl: for fixqt4headers and syncqt')
+ conflicts=('qtchooser')
+-groups=('qt5')
++groups=('qt' 'qt5')
  _pkgfqn=${pkgbase/5-/}
  source=(git+https://invent.kde.org/qt/qt/$_pkgfqn#commit=$_commit
 -        work-around-pyside2-brokenness.patch
@@ -47,7 +51,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,6 @@
+@@ -7,11 +7,10 @@
+ makedepends=('libfbclient' 'mariadb-libs' 'unixodbc' 'postgresql-libs' 'alsa-lib' 'gst-plugins-base-libs'
+              'gtk3' 'libpulse' 'cups' 'freetds' 'vulkan-headers' 'git')
+ conflicts=('qtchooser')
+-groups=('qt5')
++groups=('qt' 'qt5')
  _pkgfqn=${pkgbase/5-/}
  prepare() {
    cd ${_pkgfqn}

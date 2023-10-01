@@ -4,7 +4,7 @@
  
  pkgname=dolphin-emu
 -pkgver=5.0.r19870.032c77b462
--pkgrel=2
+-pkgrel=3
 +pkgver=5.0.r19433.34527cadcc
 +pkgrel=4
  epoch=1
@@ -26,23 +26,17 @@
    sfml
    zlib
  )
-@@ -46,7 +46,7 @@
+@@ -45,8 +45,8 @@
+   python
  )
  optdepends=('pulseaudio: PulseAudio backend')
- options=(!emptydirs)
+-options=(!emptydirs !lto)
 -_commit=032c77b462a220016f23c5079e71bb23e0ad2adf
++options=(!emptydirs)
 +_commit=34527cadcce49a9a78f05949973b0930ac4dd999
  source=(
    dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#commit=${_commit}
    git+https://github.com/mozilla/cubeb.git
-@@ -89,7 +89,6 @@
- }
- 
- build() {
--  export CXXFLAGS="${CXXFLAGS/-O2/-O1}"
-   cmake -S dolphin-emu -B build -G Ninja \
-     -DCMAKE_BUILD_TYPE=None \
-     -DCMAKE_INSTALL_PREFIX=/usr \
 
 
 ############# Stripped diff below #################
@@ -65,11 +59,12 @@
    sfml
    zlib
  )
-@@ -50,7 +50,6 @@
-   git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
- }
- build() {
--  export CXXFLAGS="${CXXFLAGS/-O2/-O1}"
-   cmake -S dolphin-emu -B build -G Ninja \
-     -DCMAKE_BUILD_TYPE=None \
-     -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -36,7 +36,7 @@
+   ninja
+   python
+ )
+-options=!emptydirs!lto
++options=!emptydirs
+ prepare() {
+   cd dolphin-emu
+   for submodule in Externals/{cubeb/cubeb,implot/implot,libspng/libspng,mGBA/mgba,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,VulkanMemoryAllocator,zlib-ng/zlib-ng}; do

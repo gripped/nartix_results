@@ -6,14 +6,16 @@
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='Library to retrieve information on the current status of computer hardware'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
  license=(LGPL)
--depends=(libxres qt5-webengine knewstuff)
+-depends=(libxres qt5-webengine knewstuff5)
+-makedepends=(extra-cmake-modules kdoctools5 qt5-tools)
 +depends=(libxres qt5-webengine knewstuff libpcap libnl)
- makedepends=(extra-cmake-modules kdoctools qt5-tools)
++makedepends=(extra-cmake-modules kdoctools qt5-tools)
  conflicts=('ksysguard<5.21.90')
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
@@ -29,11 +31,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  pkgname=libksysguard
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--depends=(libxres qt5-webengine knewstuff)
+-depends=(libxres qt5-webengine knewstuff5)
+-makedepends=(extra-cmake-modules kdoctools5 qt5-tools)
 +depends=(libxres qt5-webengine knewstuff libpcap libnl)
- makedepends=(extra-cmake-modules kdoctools qt5-tools)
++makedepends=(extra-cmake-modules kdoctools qt5-tools)
  conflicts=('ksysguard<5.21.90')
  groups=(plasma)
+ install=libksysguard.install
