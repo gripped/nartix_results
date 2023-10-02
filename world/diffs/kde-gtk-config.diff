@@ -1,18 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,18 +1,18 @@
  
  pkgname=kde-gtk-config
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='GTK2 and GTK3 Configurator for KDE'
-@@ -8,11 +8,11 @@
+ arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
  license=(LGPL)
- depends=(qt5-svg kdecoration kconfigwidgets kdbusaddons kwindowsystem)
+-depends=(qt5-svg kdecoration kconfigwidgets5 kdbusaddons5 kwindowsystem5)
 -makedepends=(extra-cmake-modules gtk3 sassc)
++depends=(qt5-svg kdecoration kconfigwidgets kdbusaddons kwindowsystem)
 +makedepends=(extra-cmake-modules gtk3 sassc gsettings-desktop-schemas)
  optdepends=('gtk3: GTK3 apps support' 'xsettingsd: apply settings to GTK applications on the fly')
  groups=(plasma)
@@ -31,8 +33,9 @@
 @@ -1,7 +1,7 @@
  pkgname=kde-gtk-config
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- depends=(qt5-svg kdecoration kconfigwidgets kdbusaddons kwindowsystem)
+-depends=(qt5-svg kdecoration kconfigwidgets5 kdbusaddons5 kwindowsystem5)
 -makedepends=(extra-cmake-modules gtk3 sassc)
++depends=(qt5-svg kdecoration kconfigwidgets kdbusaddons kwindowsystem)
 +makedepends=(extra-cmake-modules gtk3 sassc gsettings-desktop-schemas)
  groups=(plasma)
  build() {

@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,29 @@
+ 
+ pkgname=kpeoplevcard
+ pkgver=0.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Makes it possible to expose vcards to KPeople'
+ url='https://kde.org/'
+ license=(GPL)
+ arch=(x86_64)
+-depends=(kpeople5 kcontacts5)
++depends=(kpeople kcontacts)
+ makedepends=(extra-cmake-modules)
+-source=(https://download.kde.org/stable/$pkgname/$pkgver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('8de5df5a3abeed2b13fc56f33d1846ae5b90adfc2127bc1b0ffa5e300b7663c3'
+-            'SKIP')
++source=("https://download.kde.org/stable/$pkgname/$pkgver/$pkgname-$pkgver.tar.xz")
++sha256sums=('8de5df5a3abeed2b13fc56f33d1846ae5b90adfc2127bc1b0ffa5e300b7663c3')
+ validpgpkeys=(F53223F3337665C2CCEA122E873AC3459BBCF5C0) # Nicolas Fella <nicolas.fella@kdab.com>
+ 
++prepare() {
++  mkdir -p build
++}
++
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  cd build
++  cmake ../$pkgname-$pkgver \
+     -DBUILD_TESTING=OFF
+-  cmake --build build
++  make
+ }
+ 
+ package() {
+-  DESTDIR="$pkgdir" cmake --install build
++  cd build
++  make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,12 @@
+ pkgname=kpeoplevcard
+-depends=(kpeople5 kcontacts5)
++depends=(kpeople kcontacts)
+ makedepends=(extra-cmake-modules)
++prepare() {
++  mkdir -p build
++}
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  cd build
++  cmake ../$pkgname-$pkgver \
+     -DBUILD_TESTING=OFF
+-  cmake --build build
++  make
+ }

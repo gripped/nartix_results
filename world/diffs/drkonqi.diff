@@ -1,15 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,22 +1,29 @@
  
  pkgname=drkonqi
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='The KDE crash handler'
-@@ -10,13 +10,20 @@
- depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+ license=(GPL2)
+-depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
++depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
 -source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
@@ -38,8 +42,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,10 @@
- depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
+@@ -1,8 +1,12 @@
+ pkgname=drkonqi
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
++depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
 +prepare() {

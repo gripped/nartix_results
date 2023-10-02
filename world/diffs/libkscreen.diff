@@ -6,12 +6,13 @@
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='KDE screen management software'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
  license=(LGPL)
--depends=(qt5-x11extras kwayland kconfig)
+-depends=(qt5-x11extras kwayland5 kconfig5)
 +depends=(qt5-x11extras libxrandr kwayland kconfig)
  makedepends=(extra-cmake-modules doxygen qt5-tools qt5-doc plasma-wayland-protocols)
  groups=(plasma)
@@ -30,7 +31,7 @@
 @@ -1,6 +1,6 @@
  pkgname=libkscreen
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--depends=(qt5-x11extras kwayland kconfig)
+-depends=(qt5-x11extras kwayland5 kconfig5)
 +depends=(qt5-x11extras libxrandr kwayland kconfig)
  makedepends=(extra-cmake-modules doxygen qt5-tools qt5-doc plasma-wayland-protocols)
  groups=(plasma)

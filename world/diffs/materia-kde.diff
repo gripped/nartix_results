@@ -4,7 +4,7 @@
  pkgbase=materia-kde
  pkgname=(materia-kde kvantum-theme-materia)
  pkgver=20220823
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Materia theme for KDE Plasma 5"
  arch=(any)
@@ -17,6 +17,15 @@
      optdepends=('materia-gtk-theme: Matching GTK theme'
                  'kvantum-theme-materia: Materia theme for Kvantum Qt style (recommended)')
  
+@@ -29,7 +28,7 @@
+ 
+ package_kvantum-theme-materia() {
+     pkgdesc="Materia theme for KDE Plasma 5"
+-    depends=(kvantum)
++    depends=(kvantum-qt5)
+ 
+     cd ${pkgbase}-${pkgver}
+     install -d "${pkgdir}"/usr/share
 
 
 ############# Stripped diff below #################
@@ -31,3 +40,12 @@
      ')
      cd ${pkgbase}-${pkgver}
      install -d "${pkgdir}"/usr/share
+@@ -14,7 +13,7 @@
+     cp -r yakuake "${pkgdir}"/usr/share
+ }
+ package_kvantum-theme-materia() {
+-    depends=(kvantum)
++    depends=(kvantum-qt5)
+     cd ${pkgbase}-${pkgver}
+     install -d "${pkgdir}"/usr/share
+     cp -r Kvantum "${pkgdir}"/usr/share

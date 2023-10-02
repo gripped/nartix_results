@@ -161,7 +161,6 @@ box2d
 breeze-gtk
 breeze-icons
 breeze-plymouth
-breeze
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -175,10 +174,6 @@ bullet-docs
 python-pybullet
 c-ares
 cabextract
-cairomm-1.16
-cairomm-1.16-docs
-cairomm
-cairomm-docs
 caja
 calc
 calcurse
@@ -309,7 +304,6 @@ diffstat
 diffuse
 directx-headers
 directx-shader-compiler
-discover
 django
 python-django
 djvulibre
@@ -359,7 +353,6 @@ electron
 electrum
 elementary-icon-theme
 elisa
-elixir
 embree
 embree3
 emovix
@@ -401,7 +394,6 @@ fcgi
 fcitx-qt5
 fcitx-qt6
 fcitx
-fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
 fcitx5-qt
@@ -833,7 +825,6 @@ kdegraphics-thumbnailers
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
-kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
 kdesu
@@ -881,11 +872,9 @@ kimagemapeditor
 kimap
 kio-admin
 kio-extras
-kio-fuse
 kio-gdrive
 kio-zeroconf
 kirigami-gallery
-kirigami2
 kiriki
 kitemmodels
 kitemviews
@@ -934,7 +923,6 @@ kpackage
 kparts
 kpat
 kpeople
-kpeoplevcard
 kpkpass
 kplotting
 kpty
@@ -944,13 +932,11 @@ kquickcharts
 kquickimageeditor
 krdc
 krecorder
-krename
 kreversi
 krfb
 kruler
 krunner
 ksanecore
-kscreen
 kseexpr
 kservice
 kshisen
@@ -961,7 +947,6 @@ kspaceduel
 ksquares
 ksudoku
 ksystemlog
-ksystemstats
 kteatime
 ktexteditor
 ktextwidgets
@@ -974,12 +959,9 @@ kturtle
 kubrick
 kunitconversion
 kuserfeedback
-kvantum
-kwallet-pam
 kwallet
 kwalletmanager
 kwave
-kwayland-integration
 kwayland
 kweather
 kwidgetsaddons
@@ -1170,7 +1152,6 @@ lua-luv
 lua51-luv
 lua52-luv
 lua53-luv
-liblxqt
 liblzf
 libmad
 libmanette
@@ -1235,8 +1216,6 @@ libpanel-docs
 libpano13
 libpaper
 libpciaccess
-libpeas
-libpeas-docs
 libpgm
 libpinyin
 libplist
@@ -1277,10 +1256,6 @@ libshout
 libshumate
 libshumate-docs
 libsidplayfp
-libsigcplusplus-3.0
-libsigc++-3.0-docs
-libsigcplusplus
-libsigc++-docs
 libsignon-glib
 libsigsegv
 libslirp
@@ -1475,19 +1450,14 @@ lxmusic
 lxpanel-gtk3
 lxpanel
 lxqt-about
-lxqt-admin
 lxqt-archiver
 lxqt-build-tools
 lxqt-config
 lxqt-globalkeys
-lxqt-notificationd
 lxqt-openssh-askpass
-lxqt-panel
 lxqt-policykit
-lxqt-powermanagement
 lxqt-qtplugin
 lxqt-runner
-lxqt-session
 lxqt-sudo
 lxqt-themes
 lxrandr
@@ -2089,17 +2059,11 @@ pim-sieve-editor
 pimcommon
 pixman
 pkcs11-helper
-plasma-browser-integration
 plasma-disks
 plasma-firewall
-plasma-integration
-plasma-nm
 plasma-pass
-plasma-systemmonitor
 plasma-thunderbolt
-plasma-vault
 plasma-wayland-protocols
-plasma-welcome
 plasma-workspace-wallpapers
 plasma5-applets-active-window-control
 plasma5-applets-thermal-monitor
@@ -2115,8 +2079,6 @@ podofo
 podofo-tools
 polari
 polkit-gnome
-polkit-qt
-polkit-qt5
 polybar
 poppler-data
 poppler
@@ -3313,7 +3275,6 @@ qtermwidget
 qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
-qtox
 qtxdg-tools
 quadrapassel
 quilt
@@ -3609,7 +3570,6 @@ schedtool
 schroedinger
 scim
 screen
-screengrab
 scribus
 scrot
 sdl12-compat

@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
+@@ -1,39 +1,38 @@
  
  pkgname=subversion
  pkgver=1.14.2
--pkgrel=10
+-pkgrel=11
 +pkgrel=8
  pkgdesc="A Modern Concurrent Version Control System"
  arch=('x86_64')
@@ -14,14 +14,16 @@
  depends=('apr' 'apr-util' 'bash' 'dbus' 'expat' 'file' 'gcc-libs' 'glibc' 'libsasl' 'libutf8proc' 'lz4' 'serf' 'sqlite'
 -         'systemd' 'zlib' )
 -makedepends=('apache' 'python' 'python-py3c' 'perl' 'swig' 'java-environment>=8'
--             'libsecret' 'kwallet' 'kdelibs4support' 'ruby')
+-             'libsecret' 'kwallet5' 'kdelibs4support' 'ruby')
 +         'zlib' )
 +makedepends=('apache' 'autoconf' 'automake' 'libtool' 'python' 'python-py3c' 'perl' 'swig'
 +             'java-environment>=8' 'libsecret' 'kwallet' 'kdelibs4support' 'ruby')
  optdepends=('libsecret: for GNOME Keyring for auth credentials'
-             'kwallet: for KWallet for auth credentials'
+-            'kwallet5: for KWallet for auth credentials'
++            'kwallet: for KWallet for auth credentials'
              'bash-completion: for svn bash completion'
-@@ -18,22 +18,21 @@
+             'python: for some hook scripts'
+             'java-environment: for Java support'
              'ruby: for some hook scripts')
  checkdepends=('ruby-test-unit')
  provides=('svn')
@@ -87,7 +89,7 @@
  depends=('apr' 'apr-util' 'bash' 'dbus' 'expat' 'file' 'gcc-libs' 'glibc' 'libsasl' 'libutf8proc' 'lz4' 'serf' 'sqlite'
 -         'systemd' 'zlib' )
 -makedepends=('apache' 'python' 'python-py3c' 'perl' 'swig' 'java-environment>=8'
--             'libsecret' 'kwallet' 'kdelibs4support' 'ruby')
+-             'libsecret' 'kwallet5' 'kdelibs4support' 'ruby')
 +         'zlib' )
 +makedepends=('apache' 'autoconf' 'automake' 'libtool' 'python' 'python-py3c' 'perl' 'swig'
 +             'java-environment>=8' 'libsecret' 'kwallet' 'kdelibs4support' 'ruby')

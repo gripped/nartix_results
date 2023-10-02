@@ -60,7 +60,6 @@ jansson
 jfsutils
 kbd
 keyutils
-kmod
 krb5
 ldns
 less

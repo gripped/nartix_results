@@ -1,0 +1,91 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,31 +1,18 @@
+ 
+ pkgbase=cairomm
+-pkgname=(
+-  cairomm
+-  cairomm-docs
+-)
+-pkgver=1.14.5
++pkgname=(cairomm cairomm-docs)
++pkgver=1.14.4
+ pkgrel=1
+ pkgdesc="C++ bindings for Cairo"
+ url="https://www.cairographics.org/cairomm/"
+ arch=(x86_64)
+-license=(
+-  LGPL
+-  MPL
+-)
+-depends=(
+-  cairo
+-  libsigc++
+-)
+-makedepends=(
+-  git
+-  meson
+-  mm-common
+-)
++license=(LGPL MPL)
++depends=(cairo libsigc++)
++makedepends=(git meson mm-common)
+ options=(!emptydirs)
+-_commit=669e87a460bca3fa8d57cdaeac70bff183636354  # tags/1.14.5^0
++_commit=b6b7e0ba65d8362c2f13b17570302015ae7222b4  # tags/1.14.4^0
+ source=("git+https://gitlab.freedesktop.org/cairo/cairomm.git#commit=$_commit")
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd cairomm
+@@ -37,11 +24,7 @@
+ }
+ 
+ build() {
+-  local meson_options=(
+-    -D maintainer-mode=true
+-  )
+-
+-  arch-meson cairomm build "${meson_options[@]}"
++  artix-meson cairomm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,13 @@
+ pkgbase=cairomm
+-pkgname=(
+-  cairomm
+-  cairomm-docs
+-)
+-depends=(
+-  cairo
+-  libsigc++
+-)
+-makedepends=(
+-  git
+-  meson
+-  mm-common
+-)
++pkgname=(cairomm cairomm-docs)
++depends=(cairo libsigc++)
++makedepends=(git meson mm-common)
+ options=(!emptydirs)
+ prepare() {
+   cd cairomm
+ }
+ build() {
+-  local meson_options=(
+-    -D maintainer-mode=true
+-  )
+-  arch-meson cairomm build "${meson_options[@]}"
++  artix-meson cairomm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ package_cairomm-docs() {

@@ -37,6 +37,7 @@ inetutils
 iproute2
 iputils
 json-c
+kmod
 libsecret
 libsecret-docs
 libusb

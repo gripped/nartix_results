@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=qtkeychain
+ pkgname=(qtkeychain-qt5 qtkeychain-qt6)
+ pkgver=0.14.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Provides support for secure credentials storage'
+ arch=(x86_64)
+ url='https://github.com/frankosterfeld/qtkeychain'
+@@ -25,7 +25,7 @@
+ 
+ package_qtkeychain-qt5() {
+   depends+=(qt5-base)
+-  optdepends=('kwallet5: kwallet backend')
++  optdepends=('kwallet: kwallet backend')
+   conflicts=(qtkeychain)
+   provides=(qtkeychain)
+   replaces=(qtkeychain)

@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,19 +1,19 @@
+ 
+ pkgname=breeze
+-pkgver=5.27.8
++pkgver=5.27.6
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=2
++pkgrel=1
+ arch=(x86_64)
+ pkgdesc='Artwork, styles and assets for the Breeze visual style for the Plasma Desktop'
+ url='https://kde.org/plasma-desktop/'
+ license=(LGPL)
+-depends=(frameworkintegration5 kdecoration breeze-icons kirigami2 hicolor-icon-theme)
+-makedepends=(extra-cmake-modules kcmutils5)
++depends=(frameworkintegration kdecoration breeze-icons kirigami2 hicolor-icon-theme)
++makedepends=(extra-cmake-modules kcmutils)
+ optdepends=('breeze-gtk: Breeze widget style for GTK applications'
+-            'kcmutils5: for breeze-settings')
++            'kcmutils: for breeze-settings')
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('cda48253cb74a4f18c0edbc3065a61055cafcb167362c4e90be52182b0e73e44'
++sha256sums=('5d9a8d7e5b061ce4183c4f842b0e82e6132b6c8e7ebc2c1d579baa066ffa6c6c'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=breeze
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-depends=(frameworkintegration5 kdecoration breeze-icons kirigami2 hicolor-icon-theme)
+-makedepends=(extra-cmake-modules kcmutils5)
++depends=(frameworkintegration kdecoration breeze-icons kirigami2 hicolor-icon-theme)
++makedepends=(extra-cmake-modules kcmutils)
+ groups=(plasma)
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
