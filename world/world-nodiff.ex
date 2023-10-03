@@ -971,15 +971,6 @@ kyotocabinet
 l-smash
 lame
 languagetool
-lapack
-blas
-cblas
-lapacke
-lapack64
-blas64
-cblas64
-lapacke64
-lapack-doc
 laszip
 laszip2
 layer-shell-qt
@@ -2812,7 +2803,6 @@ python-pygaljs
 python-pygame-sdl2
 python-pygame
 python-pygeos
-python-pygls
 python-pygments
 python-pyhamcrest
 python-pyicu

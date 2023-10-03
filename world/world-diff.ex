@@ -426,6 +426,15 @@ kwin
 kwordquiz
 kwrited
 ladspa
+lapack
+blas
+cblas
+lapacke
+lapack64
+blas64
+cblas64
+lapacke64
+lapack-doc
 ldc
 lensfun
 libadwaita
@@ -948,6 +957,7 @@ python-pwntools
 python-pyarrow
 python-pycodestyle
 python-pygit2
+python-pygls
 python-pyhcl
 python-pymupdf
 python-pyproj
