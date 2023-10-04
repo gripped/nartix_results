@@ -23,7 +23,6 @@ akonadi
 libakonadi
 akonadiconsole
 akregator
-alacarte
 alligator
 alsa-firmware
 alsa-oss
@@ -478,7 +477,6 @@ geany-plugins
 geany
 geary
 gedit-plugins
-gedit
 gegl
 gendesk
 gengetopt
@@ -525,7 +523,6 @@ gnome-calendar
 gnome-chess
 gnome-clocks
 gnome-code-assistance
-gnome-color-manager
 gnome-common
 gnome-connections
 gnome-contacts
@@ -713,6 +710,7 @@ intel-metee-doc
 intel-ucode
 intltool
 ipset
+irssi
 iso-codes
 isodate
 python-isodate
@@ -1878,7 +1876,6 @@ perl-locale-gettext
 perl-log-message-simple
 perl-log-message
 perl-lwp-mediatypes
-perl-lwp-protocol-https
 perl-mail-authenticationresults
 perl-mail-box
 perl-mail-dkim
@@ -1972,7 +1969,6 @@ perl-task-weaken
 perl-template-toolkit
 perl-term-readkey
 perl-term-readline-gnu
-perl-term-table
 perl-term-ui
 perl-test-base
 perl-test-deep
@@ -2315,7 +2311,6 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
-python-cycler
 python-cython-test-exception-raiser
 python-daemonize
 python-daiquiri
@@ -2783,7 +2778,6 @@ python-pyaxmlparser
 python-pycares
 python-pycountry
 python-pycparser
-python-pycryptodome
 python-pycryptodomex
 python-pycuda
 python-pycurl
@@ -3188,7 +3182,6 @@ python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket
-python-ytmusicapi
 python-zc.lockfile
 python-zeroconf
 python-zict
@@ -3706,7 +3699,6 @@ telepathy-qt
 telepathy-salut
 telly-skout
 template-glib
-tepl
 terminus-font
 tesseract-data
 tesseract
@@ -4020,8 +4012,6 @@ xcb-util
 xclip
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
-xdg-desktop-portal-gtk
-xdg-desktop-portal-kde
 xdg-user-dirs-gtk
 xdotool
 xdp-tools

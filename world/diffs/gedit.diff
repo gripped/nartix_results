@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=gedit
+-pkgver=46.1
+-pkgrel=1
++pkgver=44.2
++pkgrel=2
+ pkgdesc="GNOME Text Editor"
+ url="https://wiki.gnome.org/Apps/Gedit"
+ arch=(x86_64)
+ license=(GPL)
+ depends=(
++  amtk
+   gsettings-desktop-schemas
+   gspell
+-  libgedit-amtk
+   libpeas
+   python-gobject
+   tepl
+@@ -27,7 +27,7 @@
+ optdepends=('gedit-plugins: Additional features')
+ conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
+ groups=(gnome-extra)
+-_commit=5a08fe0aef0164ab2c21140ca406d47bd9805c25  # tags/46.1^0
++_commit=394f425d769fce24810fb7dd59107a9ee8616d55  # tags/44.2^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
+   "git+https://gitlab.gnome.org/GNOME/libgd.git"
+@@ -54,7 +54,7 @@
+     -D require_all_tests=true
+   )
+ 
+-  arch-meson gedit build "${meson_options[@]}"
++  artix-meson gedit build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ pkgname=gedit
+ depends=(
++  amtk
+   gsettings-desktop-schemas
+   gspell
+-  libgedit-amtk
+   libpeas
+   python-gobject
+   tepl
+@@ -30,6 +30,6 @@
+     -D gtk_doc=true
+     -D require_all_tests=true
+   )
+-  arch-meson gedit build "${meson_options[@]}"
++  artix-meson gedit build "${meson_options[@]}"
+   meson compile -C build
+ }

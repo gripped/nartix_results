@@ -1,16 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=xdg-desktop-portal-gnome
 -pkgver=44.2
--pkgrel=1
 +pkgver=44.1
-+pkgrel=2
+ pkgrel=2
  pkgdesc="A backend implementation for xdg-desktop-portal for the GNOME desktop environment"
  url="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
- arch=(x86_64)
-@@ -22,7 +22,8 @@
+@@ -10,19 +10,20 @@
+   gnome-desktop-4
+   gnome-keyring
+   libadwaita
+-  xdg-desktop-portal
+   'xdg-desktop-portal-gtk>=1.10.0-2'
+ )
+ makedepends=(
+   git
+   meson
++  xdg-desktop-portal
+ )
+ optdepends=('evince: Print previews')
+ provides=(xdg-desktop-portal-impl)
  conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
  replaces=('xdg-desktop-portal-gtk<1.10.0-2')
  groups=(gnome)
@@ -42,7 +53,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,10 +14,11 @@
+@@ -3,21 +3,22 @@
+   gnome-desktop-4
+   gnome-keyring
+   libadwaita
+-  xdg-desktop-portal
+   'xdg-desktop-portal-gtk>=1.10.0-2'
+ )
+ makedepends=(
+   git
+   meson
++  xdg-desktop-portal
+ )
+ provides=(xdg-desktop-portal-impl)
  conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
  replaces=('xdg-desktop-portal-gtk<1.10.0-2')
  groups=(gnome)

@@ -1,14 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,18 +1,18 @@
  
  pkgname=xdg-desktop-portal-kde
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='A backend implementation for xdg-desktop-portal using Qt/KF5'
-@@ -12,7 +12,7 @@
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+ license=(LGPL)
+-depends=(kirigami2 plasma-framework kio-fuse xdg-desktop-portal)
++depends=(kirigami2 plasma-framework kio-fuse)
+ makedepends=(extra-cmake-modules plasma-wayland-protocols wayland-protocols)
  provides=(xdg-desktop-portal-impl)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
@@ -24,3 +30,17 @@
 +
 +  rm -r $pkgdir/usr/lib/systemd # remove systemd service
  }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=xdg-desktop-portal-kde
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-depends=(kirigami2 plasma-framework kio-fuse xdg-desktop-portal)
++depends=(kirigami2 plasma-framework kio-fuse)
+ makedepends=(extra-cmake-modules plasma-wayland-protocols wayland-protocols)
+ provides=(xdg-desktop-portal-impl)
+ groups=(plasma)

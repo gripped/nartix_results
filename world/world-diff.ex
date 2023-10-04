@@ -4,6 +4,7 @@ acpica
 adios2
 akonadi-calendar
 akonadi-search
+alacarte
 alsa-lib
 alsa-ucm-conf
 alsa-utils
@@ -180,6 +181,7 @@ gcr
 gcr-docs
 gdm
 libgdm
+gedit
 genxrdpattern
 geoclue
 ghex
@@ -197,6 +199,7 @@ gnome-bluetooth-3.0
 gnome-boxes
 gnome-builder
 gnome-characters
+gnome-color-manager
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -307,7 +310,6 @@ intel-undervolt
 interception-tools
 inxi
 ipython
-irssi
 ispc
 itinerary
 iwd
@@ -750,7 +752,9 @@ libperconaserverclient
 percona-server-clients
 perl-image-exiftool
 perl-libwww
+perl-lwp-protocol-https
 perl-mail-message
+perl-term-table
 perl-text-csv
 pgbouncer
 phodav
@@ -896,6 +900,7 @@ python-click-default-group
 python-click-help-colors
 python-click-repl
 python-cookiecutter
+python-cycler
 python-cytoolz
 python-dask
 python-deepdiff
@@ -956,6 +961,7 @@ python-poetry
 python-pwntools
 python-pyarrow
 python-pycodestyle
+python-pycryptodome
 python-pygit2
 python-pygls
 python-pyhcl
@@ -1003,6 +1009,7 @@ python-werkzeug
 python-wxpython
 python-xapian
 python-yaml
+python-ytmusicapi
 python-zope-event
 python-zopfli
 qbs
@@ -1223,6 +1230,7 @@ systemsettings
 tailscale
 telegram-desktop
 tellico
+tepl
 texlive-bin
 thunderbird
 tigervnc
@@ -1317,7 +1325,9 @@ wpewebkit
 wpewebkit-docs
 xdg-dbus-proxy
 xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

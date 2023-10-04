@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=alacarte
+-pkgver=3.50.0
++pkgver=3.44.3
+ pkgrel=1
+ epoch=1
+ pkgdesc="Menu editor for gnome"
+@@ -18,7 +18,7 @@
+   git
+   libxslt
+ )
+-_commit=167780e0e9fc5cb26ccd3e5d55e33b32ae15ea44  # tags/3.50.0^0
++_commit=9bfd515525cd82b56c6d2343d0507c9355f4e26b  # tags/3.44.3^0
+ source=("git+https://gitlab.gnome.org/GNOME/alacarte.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -33,14 +33,8 @@
+ }
+ 
+ build() {
+-  local configure_options=(
+-    --prefix=/usr
+-    --sysconfdir=/etc
+-    --localstatedir=/var
+-  )
+-
+   cd alacarte
+-  ./configure "${configure_options[@]}"
++  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,12 +15,7 @@
+   NOCONFIGURE=1 ./autogen.sh
+ }
+ build() {
+-  local configure_options=(
+-    --prefix=/usr
+-    --sysconfdir=/etc
+-    --localstatedir=/var
+-  )
+   cd alacarte
+-  ./configure "${configure_options[@]}"
++  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+   make
+ }

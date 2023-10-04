@@ -4,7 +4,7 @@
  
  pkgname=pinentry
  pkgver=1.2.1
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc='Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol'
  url='https://gnupg.org/related_software/pinentry/'
@@ -13,14 +13,14 @@
  depends=(
 -  'glibc' 'ncurses' 'libassuan' 'libsecret' 'glib2'
 -  libsecret-1.so libncursesw.so libassuan.so libglib-2.0.so)
--makedepends=('gtk2' 'qt5-base' 'qt5-x11extras' 'kwayland' 'gcr')
+-makedepends=('gtk2' 'qt5-base' 'qt5-x11extras' 'kwayland5' 'gcr')
 +  'glibc' 'ncurses' 'libcap' 'libassuan' 'libsecret' 'glib2'
 +  libsecret-1.so libcap.so libncursesw.so libassuan.so libglib-2.0.so)
 +makedepends=('gtk2' 'qt5-base' 'gcr')
  optdepends=(
    'gtk2: gtk2 backend'
 -  'qt5-x11extras: qt backend'
--  'kwayland: qt backend'
+-  'kwayland5: qt backend'
 +  'qt5-base: qt backend'
    'gcr: gnome3 backend'
  )
@@ -36,7 +36,7 @@
  depends=(
 -  'glibc' 'ncurses' 'libassuan' 'libsecret' 'glib2'
 -  libsecret-1.so libncursesw.so libassuan.so libglib-2.0.so)
--makedepends=('gtk2' 'qt5-base' 'qt5-x11extras' 'kwayland' 'gcr')
+-makedepends=('gtk2' 'qt5-base' 'qt5-x11extras' 'kwayland5' 'gcr')
 +  'glibc' 'ncurses' 'libcap' 'libassuan' 'libsecret' 'glib2'
 +  libsecret-1.so libcap.so libncursesw.so libassuan.so libglib-2.0.so)
 +makedepends=('gtk2' 'qt5-base' 'gcr')

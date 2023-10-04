@@ -1,5 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xdg-desktop-portal
+-pkgver=1.18.0
+-pkgrel=2
++pkgver=1.16.0
++pkgrel=3
+ pkgdesc="Desktop integration portals for sandboxed apps"
+ url="https://github.com/flatpak/xdg-desktop-portal"
+ arch=(x86_64)
 @@ -13,7 +13,6 @@
    glib2
    pipewire
@@ -8,21 +18,45 @@
  )
  makedepends=(
    docbook-xsl
-@@ -23,6 +22,7 @@
+@@ -21,15 +20,10 @@
+   git
+   libportal
    meson
+-  python-dbus
+-  python-dbusmock
+-  python-docutils
+-  python-gobject
+-  python-pytest
    xmlto
  )
+-optdepends=('xdg-desktop-portal-impl: Portal backends')
+-_commit=a4b27063222b16652e73b422e5448d75335199ef  # tags/1.18.0^0
 +options=(debug)
- _commit=88af6c8ca4106fcf70925355350a669848e9fd5a  # tags/1.16.0^0
++_commit=88af6c8ca4106fcf70925355350a669848e9fd5a  # tags/1.16.0^0
  source=("git+https://github.com/flatpak/xdg-desktop-portal#commit=$_commit")
  b2sums=('SKIP')
-@@ -39,7 +39,7 @@
+ 
+@@ -40,10 +34,12 @@
+ 
+ prepare() {
+   cd $pkgname
++
++  git cherry-pick -n 2a219279997c2124c8a639b0d009c9946ec97b40
  }
  
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build
    meson compile -C build
+ }
+ 
+@@ -52,6 +48,8 @@
+ }
+ 
+ package() {
++  depends+=(xdg-desktop-portal-impl)
++
+   meson install -C build --destdir "$pkgdir"
  }
  
 
@@ -39,13 +73,20 @@
  )
  makedepends=(
    docbook-xsl
-@@ -16,11 +15,12 @@
+@@ -14,17 +13,14 @@
+   git
+   libportal
    meson
+-  python-dbus
+-  python-dbusmock
+-  python-docutils
+-  python-gobject
+-  python-pytest
    xmlto
  )
  prepare() {
    cd $pkgname
-   git cherry-pick -n 2a219279997c2124c8a639b0d009c9946ec97b40
++  git cherry-pick -n 2a219279997c2124c8a639b0d009c9946ec97b40
  }
  build() {
 -  arch-meson $pkgname build
