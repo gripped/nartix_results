@@ -225,6 +225,7 @@ go-yq
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
+godot
 gperf
 gpsd
 grafana
@@ -347,6 +348,7 @@ js78
 json-glib
 json-glib-docs
 julia
+jupyter-nbconvert
 jupyter-notebook
 jupyterlab
 k3b
@@ -620,6 +622,8 @@ mate-user-share
 materia-kde
 kvantum-theme-materia
 matrix-synapse
+maturin
+python-maturin
 mc
 media-player-info
 mediainfo
@@ -637,6 +641,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+meson
 messagelib
 metalog
 mgba
@@ -683,6 +688,8 @@ neovim
 net-snmp
 netpbm
 netplan
+network-manager-applet
+nm-connection-editor
 networkmanager
 libnm
 nm-cloud-setup
@@ -754,6 +761,7 @@ perl-image-exiftool
 perl-libwww
 perl-lwp-protocol-https
 perl-mail-message
+perl-module-scandeps
 perl-term-table
 perl-text-csv
 pgbouncer
@@ -956,6 +964,7 @@ python-parameterized
 python-parse
 python-pathspec
 python-pdm-backend
+python-pikepdf
 python-poetry-dynamic-versioning
 python-poetry
 python-pwntools
@@ -978,6 +987,7 @@ python-pytest-xprocess
 python-pytest
 python-pyudev
 python-rapidfuzz
+python-rcssmin
 python-readme-renderer
 python-requests-mock
 python-requests-ntlm
@@ -997,10 +1007,12 @@ python-sphinxcontrib-serializinghtml
 python-spsdk
 python-stack-data
 python-statsmodels
+python-subunit
 python-tenacity
 python-tpm2-pytss
 python-tqdm
 python-traitlets
+python-tzlocal
 python-uri-template
 python-uvloop
 python-vine
@@ -1009,6 +1021,7 @@ python-werkzeug
 python-wxpython
 python-xapian
 python-yaml
+python-ypy-websocket
 python-ytmusicapi
 python-zope-event
 python-zopfli

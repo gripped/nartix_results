@@ -31,6 +31,7 @@ gpgme
 qgpgme-qt5
 qgpgme-qt6
 python-gpgme
+grub
 gssproxy
 gzip
 inetutils

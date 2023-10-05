@@ -47,7 +47,6 @@ gmp
 gpm
 grep
 groff
-grub
 guile
 hdparm
 hwdata

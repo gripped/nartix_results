@@ -566,7 +566,6 @@ go-bindata-hashicorp
 go-ethereum
 go-md2man
 go
-godot
 gom
 google-glog
 gox
@@ -754,7 +753,6 @@ junit
 jupyter-console
 jupyter-nbclassic
 jupyter-nbclient
-jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
 jupyter-server-fileid
@@ -1526,8 +1524,6 @@ mate-user-guide
 mate-utils
 mathjax2
 matterbridge
-maturin
-python-maturin
 maven
 mbedtls
 mbedtls2
@@ -1543,7 +1539,6 @@ menu-cache
 menumaker
 mercurial
 meson-python
-meson
 mgard
 microsoft-gsl
 mimetic
@@ -1613,8 +1608,6 @@ neovim-qt
 netcdf-fortran
 netcdf
 netcf
-network-manager-applet
-nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt
 newsboat
@@ -1893,7 +1886,6 @@ perl-module-implementation
 perl-module-install
 perl-module-pluggable
 perl-module-runtime
-perl-module-scandeps
 perl-moo
 perl-mouse
 perl-mozilla-ca
@@ -2727,7 +2719,6 @@ python-pg8000
 python-phonenumbers
 python-piccata
 python-pickleshare
-python-pikepdf
 python-pillow
 python-pint
 python-pip-run
@@ -2928,7 +2919,6 @@ python-quart
 python-railroad-diagrams
 python-random2
 python-rapidjson
-python-rcssmin
 python-rdflib
 python-re-assert
 python-reactivex
@@ -3052,7 +3042,6 @@ python-straight.plugin
 python-strict-rfc3339
 python-structlog
 python-subprocess-tee
-python-subunit
 python-sure
 python-svglib
 python-sybil
@@ -3108,7 +3097,6 @@ python-typeguard
 python-typing_extensions
 python-typing_inspect
 python-typogrify
-python-tzlocal
 python-u-msgpack
 python-ubjson
 python-uc-micro-py
@@ -3181,7 +3169,6 @@ python-yarg
 python-yarl
 python-yaspin
 python-yg.lockfile
-python-ypy-websocket
 python-zc.lockfile
 python-zeroconf
 python-zict
