@@ -94,6 +94,7 @@ cyrus-sasl
 cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
+cython
 darktable
 dbus-broker
 dbus-cplusplus
@@ -195,6 +196,8 @@ glibmm-2.68
 glibmm-2.68-docs
 glu
 glusterfs
+gmic
+gimp-plugin-gmic
 gnome-bluetooth-3.0
 gnome-boxes
 gnome-builder
@@ -396,6 +399,7 @@ kio
 kirigami-addons
 kirigami2
 kismet
+kitinerary
 kitty
 kitty-terminfo
 kitty-shell-integration
@@ -548,6 +552,7 @@ libvpx
 libwacom
 libxcb
 libxmlb
+libxrandr
 libxss
 light-locker
 lightdm
@@ -986,11 +991,14 @@ python-pytest-testinfra
 python-pytest-xprocess
 python-pytest
 python-pyudev
+python-pywayland
+python-pywlroots
 python-rapidfuzz
 python-rcssmin
 python-readme-renderer
 python-requests-mock
 python-requests-ntlm
+python-rjsmin
 python-scikit-learn
 python-scipy
 python-scramp
@@ -1020,6 +1028,7 @@ python-virtualenv
 python-werkzeug
 python-wxpython
 python-xapian
+python-y-py
 python-yaml
 python-ypy-websocket
 python-ytmusicapi

@@ -274,7 +274,6 @@ cunit
 cups-pdf
 cups-pk-helper
 cython-dev
-cython
 cython0
 d-spy
 darkhttpd
@@ -511,8 +510,6 @@ glibmm-docs
 glm
 glpk
 glslang
-gmic
-gimp-plugin-gmic
 gmime3
 gn
 gnome-applets
@@ -875,7 +872,6 @@ kiriki
 kitemmodels
 kitemviews
 kiten
-kitinerary
 kjobwidgets
 kjs
 kjumpingcube
@@ -1342,7 +1338,6 @@ libxmu
 libxp
 libxpm
 libxpresent
-libxrandr
 libxrender
 libxres
 libxshmfence
@@ -2907,9 +2902,7 @@ python-pyusb
 python-pyvex
 python-pyvirtualdisplay
 python-pywal
-python-pywayland
 python-pywinrm
-python-pywlroots
 python-pyxbe
 python-pyzmq
 python-qdarkstyle
@@ -2949,7 +2942,6 @@ python-rfc3986-validator
 python-rfc3986
 python-rfc3987
 python-rich
-python-rjsmin
 python-robot-detection
 python-rope
 python-routes
@@ -3164,7 +3156,6 @@ python-xmlschema
 python-xmlsec
 python-xmltodict
 python-xxhash
-python-y-py
 python-yarg
 python-yarl
 python-yaspin

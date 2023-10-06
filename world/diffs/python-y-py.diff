@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,21 +1,17 @@
+ 
+-_pyname=ypy
++_pyname=y_py
+ pkgname=python-y-py
+-pkgver=0.6.2
+-pkgrel=1
++pkgver=0.6.0
++pkgrel=2
+ pkgdesc='Python bindings for the Y-CRDT built from yrs'
+ arch=(x86_64)
+ url='https://github.com/y-crdt/ypy'
+ license=(MIT)
+-depends=(gcc-libs
+-         glibc
+-         python)
+-makedepends=(python-build
+-             python-installer
+-             python-maturin)
++depends=(python)
++makedepends=(python-build python-installer python-maturin)
+ checkdepends=(python-pytest)
+-source=(https://github.com/y-crdt/ypy/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('87fddb8a5ff8e00e2d37440ce6556704aa4fb9bf9b4939f8656433871e3c01a1')
++source=(https://pypi.python.org/packages/source/${_pyname:0:1}/$_pyname/$_pyname-$pkgver.tar.gz)
++sha256sums=('46836169f7dc2957df8513cfe4bc2009175b3a473e630af421a8e75ee1c48f98')
+ 
+ build() {
+   cd $_pyname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,7 @@
+-_pyname=ypy
++_pyname=y_py
+ pkgname=python-y-py
+-depends=(gcc-libs
+-         glibc
+-         python)
+-makedepends=(python-build
+-             python-installer
+-             python-maturin)
++depends=(python)
++makedepends=(python-build python-installer python-maturin)
+ build() {
+   cd $_pyname-$pkgver
+   python -m build --wheel --no-isolation

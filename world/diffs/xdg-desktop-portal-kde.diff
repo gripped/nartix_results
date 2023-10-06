@@ -6,13 +6,13 @@
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=3
+-pkgrel=4
 +pkgrel=1
  pkgdesc='A backend implementation for xdg-desktop-portal using Qt/KF5'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
  license=(LGPL)
--depends=(kirigami2 plasma-framework kio-fuse xdg-desktop-portal)
+-depends=(kirigami2 plasma-framework5 kio-fuse xdg-desktop-portal)
 +depends=(kirigami2 plasma-framework kio-fuse)
  makedepends=(extra-cmake-modules plasma-wayland-protocols wayland-protocols)
  provides=(xdg-desktop-portal-impl)
@@ -52,7 +52,7 @@
 @@ -1,12 +1,9 @@
  pkgname=xdg-desktop-portal-kde
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--depends=(kirigami2 plasma-framework kio-fuse xdg-desktop-portal)
+-depends=(kirigami2 plasma-framework5 kio-fuse xdg-desktop-portal)
 +depends=(kirigami2 plasma-framework kio-fuse)
  makedepends=(extra-cmake-modules plasma-wayland-protocols wayland-protocols)
  provides=(xdg-desktop-portal-impl)

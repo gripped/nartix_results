@@ -6,14 +6,15 @@
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc='KDE screen management software'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
  license=(LGPL)
- depends=(libkscreen plasma-framework qt5-sensors layer-shell-qt)
+-depends=(libkscreen plasma-framework5 qt5-sensors layer-shell-qt)
 -makedepends=(extra-cmake-modules kcmutils5)
++depends=(libkscreen plasma-framework qt5-sensors layer-shell-qt)
 +makedepends=(extra-cmake-modules kcmutils)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
@@ -31,8 +32,9 @@
 @@ -1,7 +1,7 @@
  pkgname=kscreen
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- depends=(libkscreen plasma-framework qt5-sensors layer-shell-qt)
+-depends=(libkscreen plasma-framework5 qt5-sensors layer-shell-qt)
 -makedepends=(extra-cmake-modules kcmutils5)
++depends=(libkscreen plasma-framework qt5-sensors layer-shell-qt)
 +makedepends=(extra-cmake-modules kcmutils)
  groups=(plasma)
  build() {

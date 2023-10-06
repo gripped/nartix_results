@@ -6,13 +6,13 @@
 -pkgver=5.27.8
 +pkgver=5.27.6
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc='A friendly onboarding wizard for Plasma'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
  license=(LGPL)
--depends=(kaccounts-integration kuserfeedback kirigami2 plasma-framework knewstuff5)
+-depends=(kaccounts-integration kuserfeedback kirigami2 plasma-framework5 knewstuff5)
 +depends=(kaccounts-integration kuserfeedback kirigami2 plasma-framework knewstuff)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
@@ -31,7 +31,7 @@
 @@ -1,6 +1,6 @@
  pkgname=plasma-welcome
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--depends=(kaccounts-integration kuserfeedback kirigami2 plasma-framework knewstuff5)
+-depends=(kaccounts-integration kuserfeedback kirigami2 plasma-framework5 knewstuff5)
 +depends=(kaccounts-integration kuserfeedback kirigami2 plasma-framework knewstuff)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
