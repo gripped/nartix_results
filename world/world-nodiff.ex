@@ -185,7 +185,6 @@ capstone
 python-capstone
 cargo-c
 caribou
-catatonit
 catch2
 catdoc
 catfish
@@ -398,7 +397,6 @@ fcitx5-qt
 feh
 festival
 ffcall
-ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -1084,7 +1082,6 @@ libgtop
 libgusb
 libgxps
 libharu
-libheif
 libical
 libice
 libiconv
@@ -2761,7 +2758,6 @@ python-pyaml
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
-python-pycares
 python-pycountry
 python-pycparser
 python-pycryptodomex
@@ -3027,7 +3023,6 @@ python-sshpubkeys
 python-starlette
 python-stdlibs
 python-stem
-python-stestr
 python-stevedore
 python-stone
 python-straight.plugin
@@ -4091,7 +4086,6 @@ xorgproto
 xosd
 xpdf
 xreader
-xsd
 xsel
 xsettingsd
 xsimd

@@ -63,6 +63,7 @@ caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
 cantor
+catatonit
 cdparanoia
 cgmanager
 check-jsonschema
@@ -156,6 +157,7 @@ fcitx5-configtool
 fcitx5
 fcron
 ffmpeg
+ffmpeg4.4
 figlet
 firefox
 firewalld
@@ -493,6 +495,7 @@ libgweather-4-docs
 libhandy
 libhandy-docs
 libhandy0
+libheif
 libinput
 libjpeg-turbo
 libjxl
@@ -974,6 +977,7 @@ python-poetry-dynamic-versioning
 python-poetry
 python-pwntools
 python-pyarrow
+python-pycares
 python-pycodestyle
 python-pycryptodome
 python-pygit2
@@ -1015,6 +1019,7 @@ python-sphinxcontrib-serializinghtml
 python-spsdk
 python-stack-data
 python-statsmodels
+python-stestr
 python-subunit
 python-tenacity
 python-tpm2-pytss
@@ -1381,6 +1386,7 @@ xorg-xdm
 xorg-xlogo
 xorg-xwayland
 xscreensaver
+xsd
 xxhash
 yaml-cpp
 yapf

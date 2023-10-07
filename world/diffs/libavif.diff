@@ -1,15 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,19 +1,20 @@
  
  pkgname=libavif
 -pkgver=1.0.1
+-pkgrel=2
 +pkgver=0.11.1
- pkgrel=1
++pkgrel=1
  pkgdesc="Library for encoding and decoding .avif files"
  arch=(x86_64)
-@@ -9,11 +9,12 @@
- depends=(glibc aom dav1d rav1e svt-av1 zlib libpng libjpeg libyuv)
+ url="https://github.com/AOMediaCodec/libavif"
+ license=(BSD)
+-depends=(glibc aom dav1d rav1e svt-av1 libpng libjpeg libyuv)
++depends=(glibc aom dav1d rav1e svt-av1 zlib libpng libjpeg libyuv)
  makedepends=(cmake nasm pkgconf gdk-pixbuf2)
  source=(${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
 -sha256sums=('398fe7039ce35db80fe7da8d116035924f2c02ea4a4aa9f4903df6699287599c')
@@ -28,7 +31,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,7 @@
+@@ -1,9 +1,10 @@
+ pkgname=libavif
+-depends=(glibc aom dav1d rav1e svt-av1 libpng libjpeg libyuv)
++depends=(glibc aom dav1d rav1e svt-av1 zlib libpng libjpeg libyuv)
+ makedepends=(cmake nasm pkgconf gdk-pixbuf2)
  build() {
    cmake -B build -S ${pkgname}-${pkgver} \
      -DCMAKE_INSTALL_PREFIX=/usr \

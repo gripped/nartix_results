@@ -14,8 +14,9 @@
    qemu-{base,desktop,emulators-full,full}
  )
 -pkgver=8.1.1
+-pkgrel=2
 +pkgver=8.0.3
- pkgrel=1
++pkgrel=1
  pkgdesc="A generic and open source machine emulator and virtualizer"
  arch=(x86_64)
  url="https://www.qemu.org/"
@@ -82,11 +83,12 @@
  source=(
    https://download.qemu.org/qemu-$pkgver.tar.xz{,.sig}
    bridge.conf
-@@ -114,24 +93,21 @@
+@@ -114,27 +93,21 @@
    qemu-sysusers.conf
    65-kvm.rules
    99-qemu-guest-agent.rules
 -  $pkgbase-8.1.0-keyutils.patch
+-  $pkgbase-8.1.1-static_regression.patch
  )
 -sha512sums=('199db58f9a413cbe4449ff557bc362e666c6c0291f9963cb74e5542e8abd1edcd65001fa1fd453b850a376de455f93258707ce6feee5a44bf40753b12a2e956c'
 +sha512sums=('18b2ccb65f7ec2ae92f0e04406539620c881e2b75f63816588c86043a07464bb99d16a83e792ed9508de393f4b694c46d52f4d07edf52741e85224c8b8d5d5c3'
@@ -96,7 +98,8 @@
              '985c2c7a6b5217c87a15b45368089ee91b2f9027b070f9eafa448a18b27ae0d9edd964d52e134b9c1f4aeef4d6aae88afd3f454551ca898affef7f9d28b99b8f'
              'bdf05f99407491e27a03aaf845b7cc8acfa2e0e59968236f10ffc905e5e3d5e8569df496fd71c887da2b5b8d1902494520c7da2d3a8258f7fd93a881dd610c99'
 -            '93b905046fcea8a0a89513b9259c222494ab3b91319dde23baebcb40dc17376a56661b159b99785d6e816831974a0f3cbd7b2f7d89e5fc3c258f88f4492f3839'
--            '400cca1177bd72ac1dfe646a2197754a1829116ade02cb4b0dea817f62a62ff3324675f772cdacd58ae74cff6147bf04a249dabb9729df6678500d47f7e728a8')
+-            '400cca1177bd72ac1dfe646a2197754a1829116ade02cb4b0dea817f62a62ff3324675f772cdacd58ae74cff6147bf04a249dabb9729df6678500d47f7e728a8'
+-            'c7d086a951e9a378434ea95a843a4b01f0eb2ae430135a81365147cf6806a7ba1b49014a3aa66904970853ba84a4a28dbaded7bccb99a0bc3730572c80fb8b12')
 -b2sums=('71220fad7c9f74bed6211879f01566ac1e52835feb3d45eaa1b2fe1d5f95d9fa5db53b7aec72b4ef098c03d0c4070076c907fb3e6b839002de6f56ee5ab44340'
 +            '93b905046fcea8a0a89513b9259c222494ab3b91319dde23baebcb40dc17376a56661b159b99785d6e816831974a0f3cbd7b2f7d89e5fc3c258f88f4492f3839')
 +b2sums=('071cc1a35209a02e8c5dd4f43cb112f110b4655adb0f870a04fdf9a6e2c761699574e8c9426f70f60787a99acf252d7a64d94a8e837cdfeda93d89428d7866f3'
@@ -106,12 +109,13 @@
          '69177b962d2fda20cafdbc6226fd017b5ca5a0f69f866d055dc1c744b7b2955059f47c693cfb5b4c863ec159569fdabd4327ab4b8a95566a68cd8ce38e339c7a'
          '3559fe9c4f744194939770047a0a02d07ff791c845a80726d0bc7b8c4801ed5f11150e7d5adab813844b3dab1cf38c3a5a87fb6efbb8fc9dccdda9fa56409ed8'
 -        'a9a2bdfeeb44eb86cbe88ac7c65f72800bdb2fd5cecb02f3a258cf9470b52832180aab43c89d481f7fd4d067342a9a27dd6c8a94d625b95d6e2b912e47d274e7'
--        '3608b43b4751554a7f1ff74ecdb161625bb565b083b471df4e13be0f98b556992f4c707760610b87d02cb5bd11cec5b59a3b4c59024c4a791acfb80f720c2c0e')
+-        '3608b43b4751554a7f1ff74ecdb161625bb565b083b471df4e13be0f98b556992f4c707760610b87d02cb5bd11cec5b59a3b4c59024c4a791acfb80f720c2c0e'
+-        '209ec05e161d157aaa08a9fcbea45cf87aa22fe9360f9b3c477a78a274e4ecee989c16121f9e6b7765bb479c9db718c98db047c27fd426c127c4c95e28877a16')
 +        'a9a2bdfeeb44eb86cbe88ac7c65f72800bdb2fd5cecb02f3a258cf9470b52832180aab43c89d481f7fd4d067342a9a27dd6c8a94d625b95d6e2b912e47d274e7')
  validpgpkeys=('CEACC9E15534EBABB82D3FA03353C9CEF108B584') # Michael Roth <flukshun@gmail.com>
  
  _qemu_system_deps=(
-@@ -164,21 +140,17 @@
+@@ -167,21 +140,17 @@
    zstd libzstd.so
  )
  
@@ -135,7 +139,7 @@
    'qemu-system-aarch64: for AARCH64 system emulator'
    'qemu-system-alpha: for Alpha system emulator'
    'qemu-system-arm: for ARM system emulator'
-@@ -199,8 +171,9 @@
+@@ -202,8 +171,9 @@
    'qemu-system-tricore: for tricore system emulator'
    'qemu-system-xtensa: for Xtensa system emulator'
    'qemu-tests: for QEMU tests'
@@ -146,7 +150,7 @@
  )
  
  _qemu_base_optdepends=(
-@@ -210,33 +183,12 @@
+@@ -213,33 +183,12 @@
    'qemu-audio-jack: for JACK audio driver'
    'qemu-audio-oss: for OSS audio driver'
    'qemu-audio-pa: for PulseAudio audio driver'
@@ -180,7 +184,7 @@
    'qemu-user: for user mode emulation of QEMU targets'
    'qemu-vhost-user-gpu: for vhost-user-gpu display device'
  )
-@@ -245,21 +197,18 @@
+@@ -248,23 +197,18 @@
    local p="$1" f d; shift
    for f; do
      d="$srcdir/$p/${f#$pkgdir/}"
@@ -196,6 +200,8 @@
  prepare() {
 -
 -  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.0-keyutils.patch
+-
+-  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.1-static_regression.patch
  
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tcg-internal.h > tcg.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/arm/tcg-target.c.inc > tcg-arm.LICENSE.MIT
@@ -205,7 +211,7 @@
  
    mkdir -vp build
    mkdir -vp build-static
-@@ -321,7 +270,7 @@
+@@ -326,7 +270,7 @@
      --static
    )
  
@@ -214,7 +220,7 @@
      cd build-static
      ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
      ninja
-@@ -335,7 +284,6 @@
+@@ -340,7 +284,6 @@
      ../$pkgbase-$pkgver/configure "${configure_options[@]}"
      ninja
    )
@@ -222,7 +228,7 @@
  }
  
  package_qemu-common() {
-@@ -347,6 +295,7 @@
+@@ -352,6 +295,7 @@
      --preserve-argv0 yes
    )
  
@@ -230,7 +236,7 @@
    depends=(gcc-libs glibc glib2 libglib-2.0.so libgmodule-2.0.so hicolor-icon-theme libcap-ng libcap-ng.so numactl libnuma.so)
    backup=(
      etc/$pkgbase/bridge.conf
-@@ -407,7 +356,6 @@
+@@ -412,7 +356,6 @@
      _pick qemu-audio-jack usr/lib/qemu/audio-jack.so
      _pick qemu-audio-oss usr/lib/qemu/audio-oss.so
      _pick qemu-audio-pa usr/lib/qemu/audio-pa.so
@@ -238,7 +244,7 @@
      _pick qemu-audio-sdl usr/lib/qemu/audio-sdl.so
      _pick qemu-audio-spice usr/lib/qemu/audio-spice.so
  
-@@ -574,7 +522,7 @@
+@@ -579,7 +522,7 @@
  
  package_qemu-audio-jack() {
    pkgdesc="QEMU JACK audio driver"
@@ -247,7 +253,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -590,12 +538,6 @@
+@@ -595,12 +538,6 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
@@ -260,7 +266,7 @@
  package_qemu-audio-sdl() {
    pkgdesc="QEMU SDL audio driver"
    depends=(glibc qemu-common=$pkgver-$pkgrel sdl2)
-@@ -652,7 +594,7 @@
+@@ -657,7 +594,7 @@
  
  package_qemu-chardev-spice() {
    pkgdesc="QEMU spice chardev driver"
@@ -269,7 +275,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -663,14 +605,12 @@
+@@ -668,14 +605,12 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -286,7 +292,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -727,13 +667,13 @@
+@@ -732,13 +667,13 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
@@ -302,7 +308,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -745,7 +685,7 @@
+@@ -750,7 +685,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -311,7 +317,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -769,7 +709,7 @@
+@@ -774,7 +709,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -320,7 +326,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -781,7 +721,7 @@
+@@ -786,7 +721,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -329,7 +335,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -805,7 +745,7 @@
+@@ -810,7 +745,7 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -338,7 +344,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -817,13 +757,13 @@
+@@ -822,13 +757,13 @@
  
  package_qemu-system-or1k() {
    pkgdesc="QEMU system emulator for OpenRisc32"
@@ -354,7 +360,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -835,7 +775,7 @@
+@@ -840,7 +775,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -363,7 +369,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -853,7 +793,7 @@
+@@ -858,7 +793,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -372,7 +378,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -865,13 +805,13 @@
+@@ -870,13 +805,13 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -388,7 +394,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -889,7 +829,7 @@
+@@ -894,7 +829,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
@@ -397,7 +403,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -901,7 +841,7 @@
+@@ -906,7 +841,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -406,7 +412,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -931,9 +871,8 @@
+@@ -936,9 +871,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -418,7 +424,7 @@
  }
  
  package_qemu-tests() {
-@@ -1030,13 +969,14 @@
+@@ -1035,13 +969,14 @@
  
  package_qemu-user-static() {
    pkgdesc="QEMU static user mode emulation"
@@ -434,7 +440,7 @@
    provides=(qemu-user-binfmt-provider)
    conflicts=(qemu-user-binfmt-provider)
    mv -v $pkgname/* "$pkgdir"
-@@ -1052,29 +992,49 @@
+@@ -1057,29 +992,49 @@
    pkgdesc="A basic QEMU setup for headless environments"
    depends=(
      qemu-common=$pkgver-$pkgrel
@@ -497,7 +503,7 @@
  }
  
  package_qemu-emulators-full() {
-@@ -1083,24 +1043,34 @@
+@@ -1088,24 +1043,34 @@
      qemu-system-{aarch64,alpha,arm,avr,cris,hppa,loongarch64,m68k,microblaze,mips,nios2,or1k,ppc,riscv,rx,s390x,sh4,sparc,tricore,x86,xtensa}=$pkgver-$pkgrel
      qemu-user=$pkgver-$pkgrel
    )
@@ -603,7 +609,7 @@
  _qemu_desktop_ system emulator'
    'qemu-system-microblaze: for Microblaze system emulator'
    'qemu-system-mips: for MIPS system emulator'
-@@ -128,25 +123,24 @@
+@@ -128,26 +123,24 @@
    'qemu-system-tricore: for tricore system emulator'
    'qemu-system-xtensa: for Xtensa system emulator'
    'qemu-tests: for QEMU tests'
@@ -627,6 +633,7 @@
  }
  prepare() {
 -  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.0-keyutils.patch
+-  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.1-static_regression.patch
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tcg-internal.h > tcg.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/arm/tcg-target.c.inc > tcg-arm.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tci/tcg-target.h > tci.LICENSE.MIT
@@ -634,7 +641,7 @@
    mkdir -vp build
    mkdir -vp build-static
  }
-@@ -205,7 +199,7 @@
+@@ -206,7 +199,7 @@
      --disable-zstd
      --static
    )
@@ -643,7 +650,7 @@
      cd build-static
      ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
      ninja
-@@ -226,6 +220,7 @@
+@@ -227,6 +220,7 @@
      --persistent yes
      --preserve-argv0 yes
    )
@@ -651,7 +658,7 @@
    depends=(gcc-libs glibc glib2 libglib-2.0.so libgmodule-2.0.so hicolor-icon-theme libcap-ng libcap-ng.so numactl libnuma.so)
    backup=(
      etc/$pkgbase/bridge.conf
-@@ -272,7 +267,6 @@
+@@ -273,7 +267,6 @@
      _pick qemu-audio-jack usr/lib/qemu/audio-jack.so
      _pick qemu-audio-oss usr/lib/qemu/audio-oss.so
      _pick qemu-audio-pa usr/lib/qemu/audio-pa.so
@@ -659,7 +666,7 @@
      _pick qemu-audio-sdl usr/lib/qemu/audio-sdl.so
      _pick qemu-audio-spice usr/lib/qemu/audio-spice.so
      _pick qemu-block-curl usr/lib/qemu/block-curl.so
-@@ -389,7 +383,7 @@
+@@ -390,7 +383,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-audio-jack() {
@@ -668,7 +675,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-audio-oss() {
-@@ -400,10 +394,6 @@
+@@ -401,10 +394,6 @@
    depends=(glibc libpulse libpulse.so qemu-common=$pkgver-$pkgrel)
    mv -v $pkgname/* "$pkgdir"
  }
@@ -679,7 +686,7 @@
  package_qemu-audio-sdl() {
    depends=(glibc qemu-common=$pkgver-$pkgrel sdl2)
    mv -v $pkgname/* "$pkgdir"
-@@ -441,18 +431,16 @@
+@@ -442,18 +431,16 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-chardev-spice() {
@@ -701,7 +708,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -491,15 +479,15 @@
+@@ -492,15 +479,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-aarch64() {
@@ -720,7 +727,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-avr() {
-@@ -511,11 +499,11 @@
+@@ -512,11 +499,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-hppa() {
@@ -734,7 +741,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-m68k() {
-@@ -527,7 +515,7 @@
+@@ -528,7 +515,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-mips() {
@@ -743,7 +750,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-nios2() {
-@@ -535,15 +523,15 @@
+@@ -536,15 +523,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-or1k() {
@@ -762,7 +769,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-rx() {
-@@ -551,15 +539,15 @@
+@@ -552,15 +539,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-s390x() {
@@ -781,7 +788,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-tricore() {
-@@ -567,11 +555,11 @@
+@@ -568,11 +555,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-x86() {
@@ -795,7 +802,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-hw-usb-host() {
-@@ -591,9 +579,8 @@
+@@ -592,9 +579,8 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-pr-helper() {
@@ -807,7 +814,7 @@
  }
  package_qemu-tests() {
    depends=(qemu-common=$pkgver-$pkgrel)
-@@ -663,10 +650,11 @@
+@@ -664,10 +650,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-user-static() {
@@ -820,7 +827,7 @@
    provides=(qemu-user-binfmt-provider)
    conflicts=(qemu-user-binfmt-provider)
    mv -v $pkgname/* "$pkgdir"
-@@ -678,45 +666,75 @@
+@@ -679,45 +666,75 @@
  package_qemu-base() {
    depends=(
      qemu-common=$pkgver-$pkgrel

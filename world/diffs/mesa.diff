@@ -5,9 +5,10 @@
    'mesa'
  )
 -pkgver=23.2.1
-+pkgver=23.1.4
- pkgrel=1
+-pkgrel=2
 -epoch=1
++pkgver=23.1.4
++pkgrel=1
  pkgdesc="An open-source implementation of the OpenGL specification"
  url="https://www.mesa3d.org/"
  arch=('x86_64')
@@ -34,7 +35,7 @@
    'wayland-protocols'
    'xorgproto'
  
-@@ -62,16 +54,26 @@
+@@ -62,19 +54,26 @@
    'directx-headers'
  
    'libomxil-bellagio'
@@ -48,25 +49,30 @@
  )
  source=(
    https://mesa.freedesktop.org/archive/mesa-${pkgver}.tar.xz{,.sig}
+-  0001-radeonsi-prefix-function-with-si_-to-prevent-name-co.patch
 +  clang_resource_dir.patch
    LICENSE
  )
 -sha256sums=('64de0616fc2d801f929ab1ac2a4f16b3e2783c4309a724c8a259b20df8bbc1cc'
 +sha256sums=('7261a17fb94867e3dc5a90d8a1f100fa04b0cbbde51d25302c0872b5e9a10959'
              'SKIP'
+-            'fcd21477e5c6122dc74f72457364448b171f7843b7a671e1f9df9c61bd888898'
 +            '9ed89eee34f69d57d37bad3eb061d313a0433a22be4b6e8f82949e86592aee7d'
              '7052ba73bb07ea78873a2431ee4e828f4e72bda7d176d07f770fa48373dec537')
 -b2sums=('51e44c2e9b7dfe17cf4cb7252e169109d03a006caa8ec34036fb594c0c44e9278d0088170894c1a9debdea911f746470e1d256576e0635cae5c3e670ab49161b'
 +b2sums=('9c696766f4f7af9a2d12c6e7663f300e4dbcfc27ee210770151a8be76b3413b51aad1e2a00f4cf38695cf26d5b684e38a65de8a63723597a0ff97f3a9935b1a1'
          'SKIP'
+-        'b5f2ee167103d53bc0d5ada123d9c3a1e394b5c0b992401da2d4cf69da30710f7d5b6b9264634e02a1e9856798780c1dc3faed01058274599290cb82c15dd193'
 +        '40cf2bc3381d5318c95d3fdadef1bdb6bb57f3b04270e07c0a66613b6432ad617be73d34122be3280d861dde0663fc5c96bb37a9312c2e333e39e69287a9e33a'
          '1ecf007b82260710a7bf5048f47dd5d600c168824c02c595af654632326536a6527fbe0738670ee7b921dd85a70425108e0f471ba85a8e1ca47d294ad74b4adb')
  validpgpkeys=('8703B6700E7EE06D7A39B8D6EDAE37B02CEB490D'  # Emil Velikov <emil.l.velikov@gmail.com>
                '946D09B5E4C9845E63075FF1D961C596A7203456'  # Andres Gomez <tanty@igalia.com>
-@@ -82,12 +84,16 @@
+@@ -85,14 +84,16 @@
  
  prepare() {
    cd mesa-$pkgver
+-
+-  patch -Np1 -i ../0001-radeonsi-prefix-function-with-si_-to-prevent-name-co.patch
 -
 -  echo "$pkgver-arch$epoch.$pkgrel" >VERSION
 -}
@@ -83,7 +89,7 @@
      -D android-libbacktrace=disabled
      -D b_ndebug=true
      -D dri3=enabled
-@@ -117,14 +123,14 @@
+@@ -122,14 +123,14 @@
      -D shared-glapi=enabled
      -D valgrind=enabled
      -D video-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
@@ -102,7 +108,7 @@
    meson configure build # Print config
    meson compile -C build
  
-@@ -141,8 +147,6 @@
+@@ -146,8 +147,6 @@
    done
  }
  
@@ -111,7 +117,7 @@
  package_vulkan-mesa-layers() {
    pkgdesc="Mesa's Vulkan layers"
    depends=(
-@@ -170,14 +174,14 @@
+@@ -175,14 +174,14 @@
      'expat'
      'libdrm'
      'libelf'
@@ -130,7 +136,7 @@
    conflicts=('opencl-mesa')
  
    _install fakeinstall/etc/OpenCL/vendors/mesa.icd
-@@ -194,15 +198,14 @@
+@@ -199,15 +198,14 @@
      'expat'
      'libdrm'
      'libelf'
@@ -150,7 +156,7 @@
    conflicts=('opencl-mesa')
  
    _install fakeinstall/etc/OpenCL/vendors/rusticl.icd
-@@ -217,9 +220,7 @@
+@@ -222,9 +220,7 @@
      'libdrm'
      'libx11'
      'libxshmfence'
@@ -161,7 +167,7 @@
      'zstd'
    )
    optdepends=('vulkan-mesa-layers: additional vulkan layers')
-@@ -239,9 +240,7 @@
+@@ -244,9 +240,7 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -172,7 +178,7 @@
      'zstd'
    )
    optdepends=('vulkan-mesa-layers: additional vulkan layers')
-@@ -262,9 +261,7 @@
+@@ -267,9 +261,7 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -183,7 +189,7 @@
      'zstd'
    )
    optdepends=('vulkan-mesa-layers: additional vulkan layers')
-@@ -284,9 +281,7 @@
+@@ -289,9 +281,7 @@
      'libdrm'
      'libx11'
      'libxshmfence'
@@ -194,7 +200,7 @@
      'zstd'
    )
    optdepends=('vulkan-mesa-layers: additional vulkan layers')
-@@ -352,6 +347,8 @@
+@@ -357,6 +347,8 @@
      'libomxil-bellagio'
    )
    optdepends=(
@@ -242,10 +248,11 @@
  )
   <jasuarez@igalia.com>
                'A5CC9FEC93F2F837CB044912336909B6B25FADFA'  # Juan A. Suarez Romero <jasuarez@igalia.com>
-@@ -57,10 +55,14 @@
+@@ -57,11 +55,14 @@
                '57551DE15B968F6341C248F68D8E31AFC32428A6') # Eric Engestrom <eric@engestrom.ch>
  prepare() {
    cd mesa-$pkgver
+-  patch -Np1 -i ../0001-radeonsi-prefix-function-with-si_-to-prevent-name-co.patch
 -  echo "$pkgver-arch$epoch.$pkgrel" >VERSION
 -}
 +  patch -Np1 -i ../clang_resource_dir.patch
@@ -259,7 +266,7 @@
      -D android-libbacktrace=disabled
      -D b_ndebug=true
      -D dri3=enabled
-@@ -90,12 +92,14 @@
+@@ -91,12 +92,14 @@
      -D shared-glapi=enabled
      -D valgrind=enabled
      -D video-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
@@ -276,7 +283,7 @@
    meson configure build # Print config
    meson compile -C build
    DESTDIR="${srcdir}/fakeinstall" meson install -C build
-@@ -109,7 +113,6 @@
+@@ -110,7 +113,6 @@
      mv -v "${src}" "${dir}/"
    done
  }
@@ -284,7 +291,7 @@
  package_vulkan-mesa-layers() {
    depends=(
      'libdrm'
-@@ -131,12 +134,12 @@
+@@ -132,12 +134,12 @@
      'expat'
      'libdrm'
      'libelf'
@@ -300,7 +307,7 @@
    conflicts=('opencl-mesa')
    _install fakeinstall/etc/OpenCL/vendors/mesa.icd
    _install fakeinstall/$_libdir/libMesaOpenCL*
-@@ -149,13 +152,12 @@
+@@ -150,13 +152,12 @@
      'expat'
      'libdrm'
      'libelf'
@@ -317,7 +324,7 @@
    conflicts=('opencl-mesa')
    _install fakeinstall/etc/OpenCL/vendors/rusticl.icd
    _install fakeinstall/$_libdir/libRusticlOpenCL*
-@@ -166,9 +168,7 @@
+@@ -167,9 +168,7 @@
      'libdrm'
      'libx11'
      'libxshmfence'
@@ -328,7 +335,7 @@
      'zstd'
    )
    provides=('vulkan-driver')
-@@ -183,9 +183,7 @@
+@@ -184,9 +183,7 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -339,7 +346,7 @@
      'zstd'
    )
    provides=('vulkan-driver')
-@@ -201,9 +199,7 @@
+@@ -202,9 +199,7 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -350,7 +357,7 @@
      'zstd'
    )
    conflicts=('vulkan-mesa')
-@@ -218,9 +214,7 @@
+@@ -219,9 +214,7 @@
      'libdrm'
      'libx11'
      'libxshmfence'

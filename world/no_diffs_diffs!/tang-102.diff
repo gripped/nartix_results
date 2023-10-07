@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -1,14 +1,14 @@
+ pkgname=tang
+ pkgver=11
+ _commit=e2059ee1109510a7c14b099af7dcd8631e598270 # git rev-parse "v$pkgver^{}"
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Server for binding data to network presence'
+ arch=('x86_64')
+ url='https://github.com/latchset/tang'
  license=('GPL3')
  depends=('http-parser' 'jose')
  makedepends=('git' 'asciidoc' 'meson')
