@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=avahi
--pkgver=0.8+r127+g55d783d
+-pkgver=0.8+r139+ge5b0bad
 +pkgver=0.8+r22+gfd482a7
  pkgrel=1
  epoch=1
@@ -12,7 +12,7 @@
    etc/avahi/{hosts,avahi-daemon.conf,avahi-{autoip,dnsconf}d.action}
    usr/lib/avahi/service-types.db
  )
--_commit=55d783d9d11ced838d73a2757273c5f6958ccd5c  # master
+-_commit=e5b0badfc725b7fa9e6069b6a3d5f278d1b96113  # master
 +_commit=fd482a74625b8db8547b8cfca3ee3d3c6c721423  # master
  source=(
    "git+https://github.com/lathiat/avahi#commit=$_commit"

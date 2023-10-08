@@ -770,6 +770,7 @@ perl-libwww
 perl-lwp-protocol-https
 perl-mail-message
 perl-module-scandeps
+perl-perl4-corelibs
 perl-term-table
 perl-text-csv
 pgbouncer
@@ -889,6 +890,7 @@ pyside2-tools
 pyside6
 shiboken6
 pyside6-tools
+python-aiodns
 python-aiofiles
 python-aiohttp-openmetrics
 python-aiohttp
@@ -1199,6 +1201,11 @@ ruby-sequel
 ruby-sus
 ruff
 python-ruff
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rxvt-unicode
 rxvt-unicode-terminfo
 salt
@@ -1218,6 +1225,7 @@ seabios-docs
 seatd
 sfml
 shairport-sync
+shared-mime-info
 sharutils
 signal-desktop
 signon-plugin-oauth2
@@ -1374,6 +1382,7 @@ xf86-video-openchrome
 xf86-video-vmware
 xfce4-cpugraph-plugin
 xfce4-panel
+xfce4-taskmanager
 xfce4-terminal
 xfce4-whiskermenu-plugin
 xorg-server

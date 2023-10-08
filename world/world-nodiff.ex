@@ -1910,7 +1910,6 @@ perl-path-tiny
 perl-pegex
 perl-perl-critic
 perl-perl-minimumversion
-perl-perl4-corelibs
 perl-pkgconfig-libpkgconf
 perl-pkgconfig
 perl-pod-coverage
@@ -2129,7 +2128,6 @@ python-aafigure
 python-acme
 python-adblock
 python-aiobotocore
-python-aiodns
 python-aiogram
 python-aiohttp-cors
 python-aiohttp-socks
@@ -3509,11 +3507,6 @@ ruby2.7
 rubygems
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rygel
 s2n-tls
@@ -3552,7 +3545,6 @@ shaderc
 shairplay
 shapelib
 shared-color-targets
-shared-mime-info
 shhmsg
 shhopt
 signify
@@ -4026,7 +4018,6 @@ xfce4-session
 xfce4-settings
 xfce4-smartbookmark-plugin
 xfce4-systemload-plugin
-xfce4-taskmanager
 xfce4-time-out-plugin
 xfce4-timer-plugin
 xfce4-verve-plugin
