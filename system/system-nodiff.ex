@@ -139,7 +139,6 @@ s-nail
 sdparm
 sed
 sysfsutils
-tar
 texinfo
 thin-provisioning-tools
 tpm2-tss

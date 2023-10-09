@@ -1,15 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=tar
 -pkgver=1.35
--pkgrel=1
 +pkgver=1.34
-+pkgrel=2
+ pkgrel=2
  pkgdesc='Utility used to store, backup, and transport files'
  arch=('x86_64')
- url='https://www.gnu.org/software/tar/'
 @@ -10,9 +10,11 @@
  checkdepends=('attr')
  options=('!emptydirs')
@@ -34,13 +32,26 @@
      patch -Np1 < "../$src"
    done
    :
+@@ -29,11 +31,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-  ./configure \
+-    --prefix=/usr \
+-    --sbindir=/usr/bin \
+-    --libexecdir=/usr/lib/tar \
+-    --enable-backup-scripts
++  ./configure --prefix=/usr --libexecdir=/usr/lib/tar
+   make
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -8,17 +8,13 @@
      src="${src%%::*}"
      src="${src##*/}"
      [[ $src = *.patch ]] || continue
@@ -49,3 +60,14 @@
      patch -Np1 < "../$src"
    done
    :
+ }
+ build() {
+   cd $pkgname-$pkgver
+-  ./configure \
+-    --prefix=/usr \
+-    --sbindir=/usr/bin \
+-    --libexecdir=/usr/lib/tar \
+-    --enable-backup-scripts
++  ./configure --prefix=/usr --libexecdir=/usr/lib/tar
+   make
+ }

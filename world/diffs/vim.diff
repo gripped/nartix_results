@@ -4,7 +4,7 @@
  
  pkgbase=vim
  pkgname=('vim' 'gvim' 'vim-runtime')
--pkgver=9.0.1976
+-pkgver=9.0.2002
 +pkgver=9.0.1676
  _versiondir=90
  pkgrel=1
@@ -76,7 +76,12 @@
  
    make -j1 VIMRCLOC=/etc DESTDIR="${pkgdir}" install
    rm -r "${pkgdir}"/usr/share/man/ "${pkgdir}"/usr/bin/
-@@ -111,17 +114,16 @@
+@@ -106,20 +109,21 @@
+   install -dm 755 "${pkgdir}"/usr/share/licenses/vim-runtime
+   ln -s /usr/share/vim/vim${_versiondir}/doc/uganda.txt \
+     "${pkgdir}"/usr/share/licenses/vim-runtime/license.txt
++
++  install -Dm 644 "${srcdir}"/vimdoc.hook "${pkgdir}"/usr/share/libalpm/hooks/vimdoc.hook
  }
  
  package_vim() {
@@ -96,7 +101,14 @@
    make -j1 VIMRCLOC=/etc DESTDIR="${pkgdir}" install
  
    rm "${pkgdir}"/usr/bin/{ex,view}
-@@ -144,16 +146,15 @@
+@@ -137,23 +141,20 @@
+ 
+   install -Dm 644 runtime/doc/uganda.txt \
+     "${pkgdir}"/usr/share/licenses/${pkgname}/license.txt
+-
+-  install -Dm 644 "${srcdir}"/vimdoc.hook "${pkgdir}"/usr/share/libalpm/hooks/vimdoc.hook
+ }
+ 
  package_gvim() {
    pkgdesc+=' (with advanced features, such as a GUI)'
    depends=("vim-runtime=${pkgver}-${pkgrel}" 'gpm' 'libxt' 'gtk3' 'glibc' 'libgcrypt'
@@ -162,8 +174,11 @@
    make -j1 VIMRCLOC=/etc DESTDIR="${pkgdir}" install
    rm -r "${pkgdir}"/usr/share/man/ "${pkgdir}"/usr/bin/
    install -Dm 644 runtime/ftplugin/logtalk.dict \
-@@ -75,11 +75,11 @@
-   install -Dm 644 "${srcdir}"/vimdoc.hook "${pkgdir}"/usr/share/libalpm/hooks/vimdoc.hook
+@@ -72,13 +72,14 @@
+   install -dm 755 "${pkgdir}"/usr/share/licenses/vim-runtime
+   ln -s /usr/share/vim/vim${_versiondir}/doc/uganda.txt \
+     "${pkgdir}"/usr/share/licenses/vim-runtime/license.txt
++  install -Dm 644 "${srcdir}"/vimdoc.hook "${pkgdir}"/usr/share/libalpm/hooks/vimdoc.hook
  }
  package_vim() {
 -  depends=("vim-runtime=${pkgver}-${pkgrel}" 'gpm' 'acl' 'glibc' 'libgcrypt' 'zlib')
@@ -176,7 +191,12 @@
    make -j1 VIMRCLOC=/etc DESTDIR="${pkgdir}" install
    rm "${pkgdir}"/usr/bin/{ex,view}
    find "${pkgdir}"/usr/share/man -type d -name 'man1' 2>/dev/null | \
-@@ -96,10 +96,10 @@
+@@ -91,15 +92,14 @@
+   rm "${pkgdir}"/usr/share/applications/gvim.desktop
+   install -Dm 644 runtime/doc/uganda.txt \
+     "${pkgdir}"/usr/share/licenses/${pkgname}/license.txt
+-  install -Dm 644 "${srcdir}"/vimdoc.hook "${pkgdir}"/usr/share/libalpm/hooks/vimdoc.hook
+ }
  package_gvim() {
    pkgdesc+=' (with advanced features, such as a GUI)'
    depends=("vim-runtime=${pkgver}-${pkgrel}" 'gpm' 'libxt' 'gtk3' 'glibc' 'libgcrypt'

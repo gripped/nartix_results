@@ -4,14 +4,14 @@
    lib32-pipewire-jack
    lib32-pipewire-v4l2
  )
--_commit=35cca08d2bef14248ac25ff2a1efb0bf274d0a6f  # tags/0.3.80
--pkgver=0.3.80
+-_commit=181fbfee6d3fcc3afd3c93613f126a8346dad586  # tags/0.3.81
+-pkgver=0.3.81
 +_commit=a3bd0f7a0a8dec9045deeb5eb3eb92b09ff75d57  # tags/0.3.75
 +pkgver=0.3.75
  pkgrel=1
  epoch=1
  pkgdesc="Low-latency audio/video router and processor - 32-bit"
-@@ -19,9 +19,7 @@
+@@ -19,13 +19,9 @@
    lib32-alsa-lib
    lib32-dbus
    lib32-glib2
@@ -19,9 +19,14 @@
    meson
 -  systemd
  )
- source=("git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit")
+-source=(
+-  "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit"
+-)
++source=("git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit")
  b2sums=('SKIP')
-@@ -59,6 +57,7 @@
+ 
+ pkgver() {
+@@ -61,6 +57,7 @@
      -D libmysofa=disabled
      -D libpulse=disabled
      -D libusb=disabled
@@ -29,7 +34,7 @@
      -D lv2=disabled
      -D man=disabled
      -D opus=disabled
-@@ -82,7 +81,7 @@
+@@ -84,7 +81,7 @@
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
  
@@ -38,7 +43,7 @@
    meson compile -C build
  }
  
-@@ -111,7 +110,6 @@
+@@ -113,7 +110,6 @@
      libdbus-1.so
      libglib-2.0.so
      libpipewire-$_ver.so
@@ -46,7 +51,7 @@
      pipewire
    )
    optdepends=(
-@@ -161,13 +159,8 @@
+@@ -163,13 +159,8 @@
      libpipewire-$_ver.so
      pipewire-jack
    )

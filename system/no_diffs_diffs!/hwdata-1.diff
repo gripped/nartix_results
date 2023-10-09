@@ -3,13 +3,14 @@
 @@ -1,11 +1,11 @@
  pkgname=hwdata
 -pkgver=0.375
+-pkgrel=2
 +pkgver=0.372
- pkgrel=1
++pkgrel=1
  pkgdesc="hardware identification databases"
  makedepends=('git')
  replaces=('hwids')
  url=https://github.com/vcrhonek/hwdata
--license=('GPL2-or-later')
+-license=('GPL-2.0-or-later')
 +license=('GPL2')
  arch=('any')
  source=("git+https://github.com/vcrhonek/hwdata.git#tag=v${pkgver}?signed")

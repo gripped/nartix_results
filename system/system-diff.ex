@@ -95,6 +95,7 @@ lemon
 sqlite-doc
 sudo
 syslinux
+tar
 unixodbc
 usbutils
 util-linux

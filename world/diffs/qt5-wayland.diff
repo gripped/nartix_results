@@ -3,10 +3,11 @@
 @@ -1,16 +1,16 @@
  
  pkgname=qt5-wayland
- _basever=5.15.10
--pkgver=5.15.10+kde+r62
+-_basever=5.15.11
+-pkgver=5.15.11+kde+r59
 -pkgrel=1
--_commit=8167ea2432a8313ffd130e071aa31570de52e97b
+-_commit=4de268cbaf6ff3b633429577f06d3d746a3b202a
++_basever=5.15.10
 +pkgver=5.15.10+kde+r52
 +pkgrel=1.1
 +_commit=3a8613b91d2239aebc73b43562f929aa71af0de5
@@ -27,8 +28,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- _basever=5.15.10
+@@ -1,8 +1,8 @@
+ pkgname=qt5-wayland
+-_basever=5.15.11
++_basever=5.15.10
  depends=('qt5-declarative' 'libxcomposite')
  makedepends=('vulkan-headers' 'git')
 -groups=('qt5')

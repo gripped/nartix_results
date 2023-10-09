@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,9 @@
+@@ -1,10 +1,10 @@
+ 
  pkgbase=qt5-base
  pkgname=(qt5-base qt5-xcb-private-headers)
- _basever=5.15.10
--pkgver=5.15.10+kde+r165
+-_basever=5.15.11
+-pkgver=5.15.11+kde+r134
++_basever=5.15.10
 +pkgver=5.15.10+kde+r135
  pkgrel=1
--_commit=9b7fd27c2b4a363ba4434353be2932483be99234
+-_commit=c672f8bffff5af90a40bad7e621eae4616b12a31
 +_commit=9815348dd2fdc8c0eac8abd6f6219a3c2e1978fa
  arch=('x86_64')
  url='https://www.qt.io'
@@ -51,7 +53,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,11 +7,10 @@
+@@ -1,17 +1,16 @@
+ pkgbase=qt5-base
+ pkgname=(qt5-base qt5-xcb-private-headers)
+-_basever=5.15.11
++_basever=5.15.10
+ depends=('libjpeg-turbo' 'xcb-util-keysyms' 'xcb-util-renderutil' 'libgl' 'fontconfig' 'xdg-utils'
+          'shared-mime-info' 'xcb-util-wm' 'libxrender' 'libxi' 'sqlite' 'xcb-util-image' 'mesa'
+          'tslib' 'libinput' 'libxkbcommon-x11' 'libproxy' 'libcups' 'double-conversion' 'md4c')
  makedepends=('libfbclient' 'mariadb-libs' 'unixodbc' 'postgresql-libs' 'alsa-lib' 'gst-plugins-base-libs'
               'gtk3' 'libpulse' 'cups' 'freetds' 'vulkan-headers' 'git')
  conflicts=('qtchooser')
