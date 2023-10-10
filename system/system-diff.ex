@@ -41,6 +41,7 @@ json-c
 kmod
 libsecret
 libsecret-docs
+libtirpc
 libusb
 licenses
 linux-firmware

@@ -97,7 +97,6 @@ libseccomp
 python-libseccomp
 libssh2
 libtasn1
-libtirpc
 libtool
 libunistring
 libverto
