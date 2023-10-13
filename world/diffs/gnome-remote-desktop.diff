@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,6 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gnome-remote-desktop
+-pkgver=45.0
++pkgver=44.2
+ pkgrel=1
+ pkgdesc="GNOME Remote Desktop server"
+ url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
+@@ -13,16 +13,13 @@
+   fuse3
+   glib2
+   libdrm
+-  libei
+   libepoxy
+   libfdk-aac
+   libnotify
+-  libpipewire
+   libsecret
    libvncserver
    libxkbcommon
    pipewire
@@ -8,15 +25,25 @@
    tpm2-tss
  )
  makedepends=(
-@@ -36,6 +35,7 @@
+@@ -32,15 +29,14 @@
+   meson
+ )
+ checkdepends=(
+-  dbus-broker
+-  libegl
+   mutter
+   python-dbus
+   python-gobject
    wireplumber
  )
  groups=(gnome)
+-_commit=a7c4f2dd87fe09389dd93268b0ce3e32a6ceb6eb  # tags/45.0^0
 +options=(debug)
- _commit=9d1ee9c9458636dbe4d3326dceec81dfefef56dd  # tags/44.2^0
++_commit=9d1ee9c9458636dbe4d3326dceec81dfefef56dd  # tags/44.2^0
  source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
  b2sums=('SKIP')
-@@ -52,9 +52,10 @@
+ 
+@@ -56,14 +52,45 @@
  build() {
    local meson_options=(
      -D vnc=true
@@ -28,11 +55,38 @@
    meson compile -C build
  }
  
-@@ -89,7 +90,7 @@
- )
- 
++_check() (
++  export XDG_CONFIG_HOME="$PWD/config-dir" XDG_RUNTIME_DIR="$PWD/runtime-dir"
++  mkdir -p -m 700 "$XDG_CONFIG_HOME" "$XDG_RUNTIME_DIR"
++
++  export GSETTINGS_SCHEMA_DIR="$PWD/build/src" GSETTINGS_BACKEND=keyfile
++  glib-compile-schemas "$GSETTINGS_SCHEMA_DIR"
++
++  openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 \
++    -subj /C=DE/ST=NONE/L=NONE/O=GNOME/CN=gnome.org \
++    -keyout tls.key -out tls.crt
++
++  gsettings set org.gnome.desktop.remote-desktop.rdp tls-cert "$PWD/tls.crt"
++  gsettings set org.gnome.desktop.remote-desktop.rdp tls-key "$PWD/tls.key"
++  gsettings set org.gnome.desktop.remote-desktop.rdp screen-share-mode extend
++  gsettings set org.gnome.desktop.remote-desktop.rdp enable true
++  gsettings set org.gnome.desktop.remote-desktop.vnc enable true
++
++  pipewire &
++  _p1=$!
++
++  wireplumber &
++  _p2=$!
++
++  trap "kill $_p1 $_p2; wait" EXIT
++
++  export TCTI=tabrmd:bus_type=session
++
++  meson test -C build --print-errorlogs -t 3
++)
++
  check() {
--  dbus-run-session bash -c "$(declare -f _check); _check"
+-  meson test -C build --print-errorlogs -t 3
 +  dbus-run-session bash -c "$(declare -f _check); _check" || :
  }
  
@@ -43,7 +97,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,6 @@
+@@ -6,16 +6,13 @@
+   fuse3
+   glib2
+   libdrm
+-  libei
+   libepoxy
+   libfdk-aac
+   libnotify
+-  libpipewire
+   libsecret
    libvncserver
    libxkbcommon
    pipewire
@@ -51,7 +114,7 @@
    tpm2-tss
  )
  makedepends=(
-@@ -23,14 +22,16 @@
+@@ -25,13 +22,16 @@
    meson
  )
  groups=(gnome)
@@ -67,4 +130,4 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
- _
++_

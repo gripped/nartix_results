@@ -3,7 +3,7 @@
 @@ -1,23 +1,23 @@
  
  pkgname=kwordquiz
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Flash Card Trainer'
@@ -11,11 +11,12 @@
  arch=(x86_64)
  license=(GPL LGPL FDL)
  groups=(kde-applications kde-education)
--depends=(knotifyconfig libkeduvocdocument knewstuff kirigami-addons)
+-depends=(knotifyconfig5 libkeduvocdocument knewstuff5 kirigami-addons)
+-makedepends=(extra-cmake-modules kdoctools5)
 +depends=(knotifyconfig libkeduvocdocument knewstuff phonon-qt5)
- makedepends=(extra-cmake-modules kdoctools)
++makedepends=(extra-cmake-modules kdoctools)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('2234dcd616199e0783e6df643baa8f3aee0013c75f973962fe2bd4c95511f3e9'
+-sha256sums=('78661636146e68d49a62d688f247daa41e3f0b67cf18285e3615134a3dc59740'
 +sha256sums=('2147d84b264a0aad1214144dc1616d469aa6cf042f9dc5ea0a4b80cb58f74b95'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
@@ -37,9 +38,10 @@
 @@ -1,9 +1,9 @@
  pkgname=kwordquiz
  groups=(kde-applications kde-education)
--depends=(knotifyconfig libkeduvocdocument knewstuff kirigami-addons)
+-depends=(knotifyconfig5 libkeduvocdocument knewstuff5 kirigami-addons)
+-makedepends=(extra-cmake-modules kdoctools5)
 +depends=(knotifyconfig libkeduvocdocument knewstuff phonon-qt5)
- makedepends=(extra-cmake-modules kdoctools)
++makedepends=(extra-cmake-modules kdoctools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

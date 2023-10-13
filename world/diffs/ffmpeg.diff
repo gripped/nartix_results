@@ -4,7 +4,7 @@
  
  pkgname=ffmpeg
  pkgver=6.0
--pkgrel=12
+-pkgrel=13
 +pkgrel=8
  epoch=2
  pkgdesc='Complete solution to record, convert and stream audio and video'
@@ -35,16 +35,19 @@
    'ladspa: LADSPA filters'
    'nvidia-utils: Nvidia NVDEC/NVENC support'
  )
-@@ -113,8 +112,6 @@
+@@ -113,11 +112,7 @@
  
  prepare() {
    cd ffmpeg
 -  git cherry-pick -n effadce6c756247ea8bae32dc13bb3e6f464f0eb
 -  git cherry-pick -n cbcc817353a019da4332ad43deb7bbc4e695d02a
    patch -Np1 -i ../add-av_stream_get_first_dts-for-chromium.patch # https://crbug.com/1251779
+-  git cherry-pick -n 03823ac0c6a38bd6ba972539e3203a592579792f
+-  git cherry-pick -n d2b46c1ef768bc31ba9180f6d469d5b8be677500
  }
  
-@@ -151,6 +148,7 @@
+ pkgver() {
+@@ -153,6 +148,7 @@
      --enable-libiec61883 \
      --enable-libjack \
      --enable-libjxl \
@@ -52,7 +55,7 @@
      --enable-libmodplug \
      --enable-libmp3lame \
      --enable-libopencore_amrnb \
-@@ -171,7 +169,6 @@
+@@ -173,7 +169,6 @@
      --enable-libvidstab \
      --enable-libvmaf \
      --enable-libvorbis \
@@ -94,16 +97,19 @@
  provides=(
    libavcodec.so
    libavdevice.so
-@@ -94,8 +89,6 @@
+@@ -94,11 +89,7 @@
  )
  prepare() {
    cd ffmpeg
 -  git cherry-pick -n effadce6c756247ea8bae32dc13bb3e6f464f0eb
 -  git cherry-pick -n cbcc817353a019da4332ad43deb7bbc4e695d02a
    patch -Np1 -i ../add-av_stream_get_first_dts-for-chromium.patch # https://crbug.com/1251779
+-  git cherry-pick -n 03823ac0c6a38bd6ba972539e3203a592579792f
+-  git cherry-pick -n d2b46c1ef768bc31ba9180f6d469d5b8be677500
  }
  build() {
-@@ -126,6 +119,7 @@
+   cd ffmpeg
+@@ -128,6 +119,7 @@
      --enable-libiec61883 \
      --enable-libjack \
      --enable-libjxl \
@@ -111,7 +117,7 @@
      --enable-libmodplug \
      --enable-libmp3lame \
      --enable-libopencore_amrnb \
-@@ -146,7 +140,6 @@
+@@ -148,7 +140,6 @@
      --enable-libvidstab \
      --enable-libvmaf \
      --enable-libvorbis \

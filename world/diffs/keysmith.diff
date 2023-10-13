@@ -3,7 +3,7 @@
 @@ -1,23 +1,23 @@
  
  pkgname=keysmith
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='OTP client for Plasma Mobile and Desktop'
@@ -11,11 +11,11 @@
  arch=(x86_64)
  license=(GPL LGPL)
  groups=(kde-applications kde-utilities)
--depends=(kirigami-addons ki18n kdbusaddons kwindowsystem libsodium qt5-svg)
+-depends=(kirigami-addons ki18n5 kdbusaddons5 kwindowsystem5 libsodium qt5-svg)
 +depends=(kirigami2 ki18n kdbusaddons kwindowsystem libsodium qt5-svg)
  makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('52c3dff6be4987531cc851bd33fae1e0822de301b65566d1cf700690396d4c13'
+-sha256sums=('b52140bdbdabafded55dfdb42774229410ac26b21078e233c137b9bb4463a5e4'
 +sha256sums=('924eb9a378bae98a7581746dfd3c20e38b8d6e0e0a926e4f613ed2a64c28d7e5'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
@@ -37,7 +37,7 @@
 @@ -1,9 +1,9 @@
  pkgname=keysmith
  groups=(kde-applications kde-utilities)
--depends=(kirigami-addons ki18n kdbusaddons kwindowsystem libsodium qt5-svg)
+-depends=(kirigami-addons ki18n5 kdbusaddons5 kwindowsystem5 libsodium qt5-svg)
 +depends=(kirigami2 ki18n kdbusaddons kwindowsystem libsodium qt5-svg)
  makedepends=(extra-cmake-modules)
  build() {

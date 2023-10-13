@@ -1,14 +1,54 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,6 @@
+@@ -1,44 +1,30 @@
+ 
+ pkgbase=eog
+-pkgname=(
+-  eog
+-  eog-docs
+-)
+-pkgver=45.0
++pkgname=(eog eog-docs)
++pkgver=44.3
+ pkgrel=1
+ pkgdesc="Eye of Gnome: An image viewing and cataloging program"
+ url="https://wiki.gnome.org/Apps/EyeOfGnome"
+ arch=(x86_64)
+ license=(GPL)
+ depends=(
+-  cairo
+-  dconf
+   exempi
+-  gdk-pixbuf2
+-  glib2
+   gnome-desktop
+-  gtk3
+-  hicolor-icon-theme
+   lcms2
+   libexif
+-  libgirepository
+   libhandy
+-  libjpeg-turbo
+   libpeas
+   librsvg
+-  libx11
+   webp-pixbuf-loader
+-  zlib
+ )
+ makedepends=(
+   gi-docgen
    git
    gobject-introspection
    meson
 -  systemd
    yelp-tools
  )
- _commit=e2fc5176f80f6d514a787ffb829df7bfeec949e1  # tags/44.3^0
-@@ -40,7 +39,7 @@
+-_commit=8173799eee5477f2b112c21b148073ebe85287db  # tags/45.0^0
++_commit=e2fc5176f80f6d514a787ffb829df7bfeec949e1  # tags/44.3^0
+ source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -53,7 +39,7 @@
      -D libportal=false
    )
  
@@ -17,13 +57,49 @@
    meson compile -C build
  }
  
+@@ -63,6 +49,7 @@
+ 
+ package_eog() {
+   optdepends=('eog-plugins: Additional features')
++  groups=(gnome)
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,6 @@
+@@ -1,34 +1,20 @@
+ pkgbase=eog
+-pkgname=(
+-  eog
+-  eog-docs
+-)
++pkgname=(eog eog-docs)
+ depends=(
+-  cairo
+-  dconf
+   exempi
+-  gdk-pixbuf2
+-  glib2
+   gnome-desktop
+-  gtk3
+-  hicolor-icon-theme
+   lcms2
+   libexif
+-  libgirepository
+   libhandy
+-  libjpeg-turbo
+   libpeas
+   librsvg
+-  libx11
+   webp-pixbuf-loader
+-  zlib
+ )
+ makedepends=(
+   gi-docgen
    git
    gobject-introspection
    meson
@@ -31,7 +107,7 @@
    yelp-tools
  )
  build() {
-@@ -23,7 +22,7 @@
+@@ -36,10 +22,11 @@
      -D gtk_doc=true
      -D libportal=false
    )
@@ -40,3 +116,7 @@
    meson compile -C build
  }
  package_eog() {
++  groups=(gnome)
+   meson install -C build --destdir "$pkgdir"
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/gtk-doc

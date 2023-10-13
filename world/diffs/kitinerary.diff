@@ -3,9 +3,10 @@
 @@ -1,22 +1,22 @@
  
  pkgname=kitinerary
--pkgver=23.08.1
+-pkgver=23.08.2
+-pkgrel=1
 +pkgver=23.04.3
- pkgrel=2
++pkgrel=2
  pkgdesc='Data model and extraction system for travel reservation information'
  arch=(x86_64)
  url='https://kontact.kde.org'
@@ -14,7 +15,7 @@
 +depends=(kmime kpkpass kcalendarcore kcontacts poppler libphonenumber zxing-cpp)
  makedepends=(extra-cmake-modules qt5-tools doxygen)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('2842985dd99ae4ee3df5f478f6e0c11ffc149be709b33134fa8a799b4758c7f3'
+-sha256sums=('99bda3fe00442bead2bdaed50ad83302d47719b63cf236ca5c3d7d9179d8b47e'
 +sha256sums=('c9a00754edec31efeed10eefa2d52f11b7f366301ed7df1dc367d7074f8f9839'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

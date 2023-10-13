@@ -1,19 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,23 +1,29 @@
  
  pkgname=kalzium
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Periodic Table of Elements'
  url='https://apps.kde.org/kalzium/'
-@@ -9,15 +9,21 @@
- depends=(kparts knewstuff kplotting kunitconversion qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
- makedepends=(extra-cmake-modules kdoctools eigen ocaml facile python)
+ arch=(x86_64)
+ license=(GPL LGPL FDL)
+-depends=(kparts5 knewstuff5 kplotting5 kunitconversion5 qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
+-makedepends=(extra-cmake-modules kdoctools5 eigen ocaml facile python)
++depends=(kparts knewstuff kplotting kunitconversion qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
++makedepends=(extra-cmake-modules kdoctools eigen ocaml facile python)
  groups=(kde-applications kde-education)
 -source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('892b9e1c98622b4a40a0648f6c5f5df1adf42b2d6c4ffc27bd1a07e51537f4de'
+-sha256sums=('9074ea7e74f0bd117565964c86de150b3b8fbf86fc0efb2cb44e63f5baa05f88'
 -            'SKIP')
 +source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
 +        https://invent.kde.org/education/kalzium/-/commit/80a9ab41.patch)
@@ -40,9 +43,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,11 @@
- depends=(kparts knewstuff kplotting kunitconversion qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
- makedepends=(extra-cmake-modules kdoctools eigen ocaml facile python)
+@@ -1,9 +1,12 @@
+ pkgname=kalzium
+-depends=(kparts5 knewstuff5 kplotting5 kunitconversion5 qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
+-makedepends=(extra-cmake-modules kdoctools5 eigen ocaml facile python)
++depends=(kparts knewstuff kplotting kunitconversion qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
++makedepends=(extra-cmake-modules kdoctools eigen ocaml facile python)
  groups=(kde-applications kde-education)
 +prepare() {
 +  patch -d $pkgname-$pkgver -p1 < 80a9ab41.patch # Fix build with OCaml 5

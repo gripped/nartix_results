@@ -1,21 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,33 +1,33 @@
  
  pkgname=koko
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Image gallery application'
  url='https://apps.kde.org/koko/'
-@@ -10,24 +10,24 @@
- depends=(kirigami2 kdeclarative qt5-location kfilemetadata kquickimageeditor)
+ arch=(x86_64)
+ license=(GPL LGPL)
+ groups=(kde-applications kde-graphics)
+-depends=(kirigami2 kdeclarative5 qt5-location kfilemetadata5 kquickimageeditor)
++depends=(kirigami2 kdeclarative qt5-location kfilemetadata kquickimageeditor)
  makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
 -        https://sources.archlinux.org/other/packages/koko/cities1000-2023-07-30.zip
 -        https://sources.archlinux.org/other/packages/koko/admin1CodesASCII-2023-07-30.txt
 -        https://sources.archlinux.org/other/packages/koko/admin2Codes-2023-07-30.txt)
--sha256sums=('e75d5db66dfb8aab61d621ffc7abf3587acadd20d70b0a500154335c1b3cc2e0'
+-sha256sums=('378d344d0bb78c87aae9244bb397fd5fc702d5b8117f038c7568874837832282'
 +        https://download.geonames.org/export/dump/cities1000.zip
 +        https://download.geonames.org/export/dump/admin1CodesASCII.txt
 +        https://download.geonames.org/export/dump/admin2Codes.txt)
@@ -48,8 +51,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,10 @@
- depends=(kirigami2 kdeclarative qt5-location kfilemetadata kquickimageeditor)
+@@ -1,12 +1,12 @@
+ pkgname=koko
+ groups=(kde-applications kde-graphics)
+-depends=(kirigami2 kdeclarative5 qt5-location kfilemetadata5 kquickimageeditor)
++depends=(kirigami2 kdeclarative qt5-location kfilemetadata kquickimageeditor)
  makedepends=(extra-cmake-modules)
  prepare() {
 -  cp -L cities1000-2023-07-30.zip admin1CodesASCII-2023-07-30.txt $pkgname-$pkgver/src

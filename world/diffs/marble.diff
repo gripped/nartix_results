@@ -1,0 +1,68 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,23 @@
+ 
+ pkgbase=marble
+ pkgname=(marble-common marble-qt marble-maps marble)
+-pkgver=23.08.2
++pkgver=23.04.3
+ pkgrel=1
+ pkgdesc='Desktop Globe'
+ arch=(x86_64)
+ url='https://apps.kde.org/marble/'
+ license=(GPL)
+-makedepends=(extra-cmake-modules gpsd kdoctools5 kparts5 krunner5 libwlocate phonon-qt5
++makedepends=(extra-cmake-modules gpsd kdoctools kparts krunner libwlocate phonon-qt5
+              plasma-workspace qt5-serialport qt5-tools qt5-webengine shapelib protobuf)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgbase-$pkgver.tar.xz{,.sig})
+-sha256sums=('aba39f07184f61c1e70f1c6b0d45aae035ce4afa3e650814bbfda0ca537dd57f'
++sha256sums=('88feb03e4b3b1fcfc17e7ea4cd4bd4ddc7f08fd30fa550393171406e9d4fda93'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_SYSCONFDIR=/etc \
+     -DCMAKE_CXX_STANDARD=17 \
+@@ -55,8 +55,8 @@
+ }
+ 
+ package_marble() {
+-  depends=(marble-common kparts5)
+-  optdepends=('krunner5: Krunner plugin')
++  depends=(marble-common kparts)
++  optdepends=('krunner: Krunner plugin')
+   groups=(kde-applications kde-education)
+ 
+   DESTDIR="$pkgdir" cmake --install build/src/apps/marble-kde
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ pkgbase=marble
+ pkgname=(marble-common marble-qt marble-maps marble)
+-makedepends=(extra-cmake-modules gpsd kdoctools5 kparts5 krunner5 libwlocate phonon-qt5
++makedepends=(extra-cmake-modules gpsd kdoctools kparts krunner libwlocate phonon-qt5
+              plasma-workspace qt5-serialport qt5-tools qt5-webengine shapelib protobuf)
+ build() {
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_SYSCONFDIR=/etc \
+     -DCMAKE_CXX_STANDARD=17 \
+@@ -31,7 +31,7 @@
+   DESTDIR="$pkgdir" cmake --install build/src/apps/marble-qt
+ }
+ package_marble() {
+-  depends=(marble-common kparts5)
++  depends=(marble-common kparts)
+   groups=(kde-applications kde-education)
+   DESTDIR="$pkgdir" cmake --install build/src/apps/marble-kde
+   DESTDIR="$pkgdir" cmake --install build/src/plasma

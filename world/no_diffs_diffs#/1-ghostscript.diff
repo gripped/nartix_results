@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgbase=ghostscript
  pkgname=(ghostscript ghostxps ghostpcl)
 -pkgver=10.02.0
+-pkgrel=2
 +pkgver=10.01.2
- pkgrel=1
++pkgrel=1
  pkgdesc="An interpreter for the PostScript language"
  url="https://www.ghostscript.com/"
+ arch=('x86_64')
 @@ -13,7 +13,7 @@
  makedepends=('gtk3' 'gnutls' 'glu' 'freeglut')
  source=(https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${pkgver//./}/ghostpdl-${pkgver}.tar.xz

@@ -1,0 +1,173 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gnome-control-center
+-pkgver=45.0
++pkgver=44.3
+ pkgrel=1
+ pkgdesc="GNOME's main interface to configure various aspects of the desktop"
+ url="https://gitlab.gnome.org/GNOME/gnome-control-center"
+@@ -9,51 +9,29 @@
+ depends=(
+   accountsservice
+   bolt
+-  cairo
+   colord-gtk4
+   cups-pk-helper
+-  dconf
+-  fontconfig
+   gcr
+-  gdk-pixbuf2
+-  glib2
+   gnome-bluetooth-3.0
+   gnome-color-manager
+   gnome-desktop-4
+   gnome-online-accounts
+   gnome-settings-daemon
+-  gnutls
++  gnome-shell
+   gsettings-desktop-schemas
+   gsound
+-  gtk3
+   gtk4
+-  hicolor-icon-theme
+-  krb5
+   libadwaita
+-  libcolord
+-  libcups
+-  libepoxy
+   libgnomekbd
+-  libgoa
+   libgtop
+   libgudev
+   libibus
+   libmalcontent
+   libmm-glib
+-  libnm
+   libnma-gtk4
+-  libpulse
+   libpwquality
+-  libsecret
+-  libwacom
+-  libx11
+-  libxi
+-  libxml2
+-  pango
+-  polkit
+   smbclient
+   sound-theme-freedesktop
+-  tecla
+   udisks2
+   upower
+ )
+@@ -72,9 +50,6 @@
+ optdepends=(
+   'fwupd: device security panel'
+   'gnome-remote-desktop: screen sharing'
+-
+-  'gnome-shell: multitasking panel'
+-
+   'gnome-user-share: WebDAV file sharing'
+   'malcontent: application permission control'
+   'networkmanager: network settings'
+@@ -84,7 +59,8 @@
+   'system-config-printer: printer settings'
+ )
+ groups=(gnome)
+-_commit=e4d0d5abf9cb716cb01cda17751b162d4bfea5b0  # tags/45.0^0
++options=(debug)
++_commit=6af9a48c3238114dab6480f1fb3bdc818dc4a647  # tags/44.3^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
+   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
+@@ -116,13 +92,12 @@
+     -D malcontent=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  GTK_A11Y=none dbus-run-session xvfb-run -s '-nolisten local +iglx -noreset' \
+-    meson test -C build --print-errorlogs
++  GTK_A11Y=none meson test -C build --print-errorlogs
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,51 +2,29 @@
+ depends=(
+   accountsservice
+   bolt
+-  cairo
+   colord-gtk4
+   cups-pk-helper
+-  dconf
+-  fontconfig
+   gcr
+-  gdk-pixbuf2
+-  glib2
+   gnome-bluetooth-3.0
+   gnome-color-manager
+   gnome-desktop-4
+   gnome-online-accounts
+   gnome-settings-daemon
+-  gnutls
++  gnome-shell
+   gsettings-desktop-schemas
+   gsound
+-  gtk3
+   gtk4
+-  hicolor-icon-theme
+-  krb5
+   libadwaita
+-  libcolord
+-  libcups
+-  libepoxy
+   libgnomekbd
+-  libgoa
+   libgtop
+   libgudev
+   libibus
+   libmalcontent
+   libmm-glib
+-  libnm
+   libnma-gtk4
+-  libpulse
+   libpwquality
+-  libsecret
+-  libwacom
+-  libx11
+-  libxi
+-  libxml2
+-  pango
+-  polkit
+   smbclient
+   sound-theme-freedesktop
+-  tecla
+   udisks2
+   upower
+ )
+@@ -58,6 +36,7 @@
+   python
+ )
+ groups=(gnome)
+ prepare() {
+   cd $pkgname
+   git apply -3 ../pixmaps-dir.diff
+@@ -70,6 +49,6 @@
+     -D documentation=true
+     -D malcontent=true
+   )
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }

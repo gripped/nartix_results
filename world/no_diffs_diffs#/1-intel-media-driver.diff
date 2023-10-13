@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=intel-media-driver
--pkgver=23.3.3
+-pkgver=23.3.4
 +pkgver=23.3.0
  pkgrel=1
  pkgdesc="Intel Media Driver for VAAPI — Broadwell+ iGPUs"
@@ -12,7 +12,7 @@
  depends=(gcc-libs intel-gmmlib libva)
  makedepends=(cmake)
  source=(${url}/archive/${pkgname%-*}-${pkgver}.tar.gz)
--sha256sums=('66bcce50e9ade800891d08ae3e6cac5aeda60c7ede945ab19e8d2a33e321d06e')
+-sha256sums=('0101a600d70fa423b224d8ab53d8359c880a697af7a32fcfae3c744518277773')
 +sha256sums=('2d0e8892199f1f2365fd8729776bdfd9968a97a63ce1e759b3724bff57e9fc08')
  
  build() {

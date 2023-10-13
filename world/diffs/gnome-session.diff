@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,20 @@
+@@ -1,6 +1,6 @@
  
  pkgname=gnome-session
- pkgver=44.0
--pkgrel=2
-+pkgrel=1
+-pkgver=45.0
++pkgver=44.0
+ pkgrel=1
  pkgdesc="The GNOME Session Handler"
  url="https://gitlab.gnome.org/GNOME/gnome-session"
- arch=(x86_64)
+@@ -8,13 +8,13 @@
  license=(GPL)
  depends=(
    dconf
@@ -27,10 +27,11 @@
    xtrans
  )
  groups=(gnome)
-+options=(debug)
- _commit=ce29eaa05c68807b9cc5f19f4afb59cc4d806040  # tags/44.0^0
+-_commit=998ed1d8ee2ff5396583c284230648625b4103e5  # tags/45.0^0
 -source=("git+https://gitlab.gnome.org/GNOME/gnome-session.git#commit=$_commit")
 -b2sums=('SKIP')
++options=(debug)
++_commit=ce29eaa05c68807b9cc5f19f4afb59cc4d806040  # tags/44.0^0
 +source=("git+https://gitlab.gnome.org/GNOME/gnome-session.git#commit=$_commit"
 +        "0001-meson-add-elogind-support.patch")
 +b2sums=('SKIP'
@@ -38,11 +39,11 @@
  
  pkgver() {
    cd $pkgname
-@@ -39,11 +42,14 @@
+@@ -38,10 +41,15 @@
+ 
  prepare() {
    cd $pkgname
- 
--  git cherry-pick -n 353a43f81877d23b347c04c30e7ebc861f39c468
++
 +  git apply -3 ../0001-meson-add-elogind-support.patch
  }
  
@@ -76,13 +77,12 @@
  )
  makedepends=(
    docbook-xsl
-@@ -20,11 +20,15 @@
+@@ -20,10 +20,15 @@
    xtrans
  )
  groups=(gnome)
  prepare() {
    cd $pkgname
--  git cherry-pick -n 353a43f81877d23b347c04c30e7ebc861f39c468
 +  git apply -3 ../0001-meson-add-elogind-support.patch
  }
  build() {

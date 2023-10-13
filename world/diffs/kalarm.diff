@@ -3,19 +3,20 @@
 @@ -1,23 +1,23 @@
  
  pkgname=kalarm
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Personal alarm scheduler'
  arch=(x86_64)
  url='https://apps.kde.org/kalarm/'
  license=(GPL2)
--depends=(phonon-qt5 kmime kidletime knotifyconfig pimcommon kmailtransport kholidays kcalutils)
+-depends=(phonon-qt5 kmime kidletime5 knotifyconfig5 pimcommon kmailtransport kholidays5 kcalutils)
+-makedepends=(extra-cmake-modules kdoctools5)
 +depends=(phonon-qt5 kidletime knotifyconfig pimcommon kmailtransport kholidays kcalutils)
- makedepends=(extra-cmake-modules kdoctools)
++makedepends=(extra-cmake-modules kdoctools)
  groups=(kde-applications kde-pim)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('f2e379f497226eed50dd3aa46753ecbafe7fbb3f282fb3ec4841677299978e5c'
+-sha256sums=('6f0807ef01690a3e3f9afe0b69a67ce8a4662b8fc7606b602dd4f0336cb9dbe4'
 +sha256sums=('e0a1519e8d078c9599be70a113365c6d5bf339daa1d05ed36b3cc584902f1888'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
@@ -36,9 +37,10 @@
 +++ Artix PKGBUILD
 @@ -1,9 +1,9 @@
  pkgname=kalarm
--depends=(phonon-qt5 kmime kidletime knotifyconfig pimcommon kmailtransport kholidays kcalutils)
+-depends=(phonon-qt5 kmime kidletime5 knotifyconfig5 pimcommon kmailtransport kholidays5 kcalutils)
+-makedepends=(extra-cmake-modules kdoctools5)
 +depends=(phonon-qt5 kidletime knotifyconfig pimcommon kmailtransport kholidays kcalutils)
- makedepends=(extra-cmake-modules kdoctools)
++makedepends=(extra-cmake-modules kdoctools)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

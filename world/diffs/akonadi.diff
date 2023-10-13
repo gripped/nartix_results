@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,22 @@
+ 
+ pkgbase=akonadi
+ pkgname=(akonadi libakonadi)
+-pkgver=23.08.2
++pkgver=23.04.3
+ pkgrel=1
+ pkgdesc='PIM layer, which provides an asynchronous API to access all kind of PIM data'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+ license=(LGPL)
+-makedepends=(extra-cmake-modules postgresql qt5-tools kitemmodels5 kaccounts-integration doxygen)
++makedepends=(extra-cmake-modules postgresql qt5-tools kitemmodels kaccounts-integration doxygen)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('5f665bad3fb418d572ca491188ca1d994c72e848162521a78e46616fe797cea0'
++sha256sums=('2b53d72291c6cfb692f0683a3a089b2294adeb8f9d0794b2c174d15c5a48f74a'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
+@@ -24,7 +24,7 @@
+ 
+ package_libakonadi() {
+   pkgdesc='Libraries used by applications based on Akonadi'
+-  depends=(kitemmodels5 kaccounts-integration)
++  depends=(kitemmodels kaccounts-integration)
+ 
+   DESTDIR="$pkgdir" cmake --install build
+   rm -r "$pkgdir"/usr/bin # Provided by akonadi
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ pkgbase=akonadi
+ pkgname=(akonadi libakonadi)
+-makedepends=(extra-cmake-modules postgresql qt5-tools kitemmodels5 kaccounts-integration doxygen)
++makedepends=(extra-cmake-modules postgresql qt5-tools kitemmodels kaccounts-integration doxygen)
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
+ }
+ package_libakonadi() {
+-  depends=(kitemmodels5 kaccounts-integration)
++  depends=(kitemmodels kaccounts-integration)
+   DESTDIR="$pkgdir" cmake --install build
+   rm -r "$pkgdir"/usr/bin # Provided by akonadi
+ }

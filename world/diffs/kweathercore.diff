@@ -4,7 +4,7 @@
  
  pkgname=kweathercore
  pkgver=0.7
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc='Library to facilitate retrieval of weather information including forecasts and alerts'
  arch=(x86_64)
@@ -12,7 +12,7 @@
  url='https://invent.kde.org/libraries/kweathercore'
 -depends=(gcc-libs
 -         glibc
--         kholidays
+-         kholidays5
 -         ki18n5
 -         qt5-base
 -         qt5-location)
@@ -42,7 +42,7 @@
  pkgname=kweathercore
 -depends=(gcc-libs
 -         glibc
--         kholidays
+-         kholidays5
 -         ki18n5
 -         qt5-base
 -         qt5-location)

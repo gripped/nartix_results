@@ -10,14 +10,21 @@
 -)
 +pkgname=(libpeas libpeas-docs)
  pkgver=1.36.0
--pkgrel=3
+-pkgrel=4
 -pkgdesc="GObject Plugin System"
 +pkgrel=2
 +pkgdesc="A GObject plugins library"
  url="https://wiki.gnome.org/Projects/Libpeas"
  arch=(x86_64)
  license=(LGPL)
-@@ -25,6 +21,8 @@
+@@ -20,13 +16,13 @@
+   git
+   glade
+   gobject-introspection
+-  lua51-lgi
+-  luajit
+   meson
+   python-gobject
    vala
  )
  checkdepends=(xorg-server-xvfb)
@@ -26,7 +33,7 @@
  _commit=7f245fa5158204621c3469756a951b68a651c4fe  # tags/libpeas-1.36.0^0
  source=("git+https://gitlab.gnome.org/GNOME/libpeas.git#commit=$_commit")
  b2sums=('SKIP')
-@@ -44,7 +42,7 @@
+@@ -46,7 +42,7 @@
      -D vapi=true
    )
  
@@ -35,7 +42,7 @@
    meson compile -C build
  }
  
-@@ -53,42 +51,19 @@
+@@ -55,45 +51,19 @@
      meson test -C build --print-errorlogs
  }
  
@@ -50,7 +57,10 @@
 -}
 -
  package_libpeas() {
--  optdepends=('python-gobject: Python loader')
+-  optdepends=(
+-    'lua51-lgi: Lua loader'
+-    'python-gobject: Python loader'
+-  )
    provides=(libpeas{,-gtk}-1.0.so)
  
    meson install -C build --destdir "$pkgdir"
@@ -99,14 +109,20 @@
  depends=(
    gobject-introspection-runtime
    gtk3
-@@ -17,6 +13,7 @@
+@@ -13,12 +9,11 @@
+   git
+   glade
+   gobject-introspection
+-  lua51-lgi
+-  luajit
+   meson
    python-gobject
    vala
  )
  prepare() {
    cd libpeas
  }
-@@ -25,36 +22,11 @@
+@@ -27,36 +22,11 @@
      -D gtk_doc=true
      -D vapi=true
    )

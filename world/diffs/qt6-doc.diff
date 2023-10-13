@@ -1,19 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,36 +1,22 @@
  
  pkgbase=qt6-doc
  pkgname=(qt6-doc qt6-examples)
--_qtver=6.5.3
+-_qtver=6.6.0
 +_qtver=6.5.2
  pkgver=${_qtver/-/}
  pkgrel=1
  arch=('any')
-@@ -12,10 +12,11 @@
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+-makedepends=(alsa-lib
+-             clang
+-             cmake
+-             cups
+-             freetds
+-             gst-plugins-base-libs
+-             gtk3
+-             libpulse
+-             llvm
+-             mariadb-libs
+-             ninja
+-             postgresql
+-             python
+-             qt6-declarative
+-             qt6-tools
+-             unixodbc
+-             vulkan-headers)
++makedepends=(cmake ninja mariadb-libs unixodbc postgresql alsa-lib gst-plugins-base-libs
++             gtk3 libpulse cups freetds vulkan-headers clang python llvm qt6-tools qt6-declarative)
  groups=(qt6)
  _pkgfn=qt-everywhere-src-$_qtver
  source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/single/$_pkgfn.tar.xz)
--sha256sums=('7cda4d119aad27a3887329cfc285f2aba5da85601212bcb0aea27bd6b7b544cb')
+-sha256sums=('652538fcb5d175d8f8176c84c847b79177c87847b7273dccaec1897d80b50002')
 +sha256sums=('cde57be663d0f875759797298bdc37a936d517c39f2013e4e6ece5e12edeed12')
  
  build() {
@@ -22,7 +42,7 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DQT_HOST_PATH=/usr \
      -DINSTALL_BINDIR=lib/qt6/bin \
-@@ -25,7 +26,7 @@
+@@ -40,7 +26,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
@@ -31,28 +51,53 @@
      -DQT_FEATURE_openssl_linked=ON \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build --target docs
-@@ -35,7 +36,7 @@
-   pkgdesc='A cross-platform application and UI framework (Documentation)'
-   DESTDIR="$pkgdir" cmake --build build --target install_docs
- 
--  install -Dm644 $_pkgfn/LICENSES/* -t "$pkgdir"/usr/share/licenses/$pkgbase
-+  install -Dm644 $_pkgfn/LICENSE* -t "$pkgdir"/usr/share/licenses/$pkgbase
- }
+@@ -55,14 +41,14 @@
  
  package_qt6-examples() {
+   pkgdesc='Examples and demos from qt6 documentation'
+-  depends=(qt6-doc)
++  depends=('qt6-doc')
+ 
+   _base="$pkgdir"/usr/share/doc/qt6/examples
+ 
+   mkdir -p $_base
+   cp ${_pkgfn}/qtbase/examples/examples.pro $_base
+ 
+-  _fdirs=$(find "$_pkgfn" -maxdepth 2 -type d -name examples)
++  _fdirs=$(find "${_pkgfn}" -maxdepth 2 -type d -name examples)
+   for _dir in $_fdirs; do
+     rm -f $_dir/{examples.pro,CMakeLists.txt,README}
+     cp -rn $_dir/* $_base
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
+@@ -1,27 +1,13 @@
  pkgbase=qt6-doc
  pkgname=(qt6-doc qt6-examples)
--_qtver=6.5.3
+-_qtver=6.6.0
+-makedepends=(alsa-lib
+-             clang
+-             cmake
+-             cups
+-             freetds
+-             gst-plugins-base-libs
+-             gtk3
+-             libpulse
+-             llvm
+-             mariadb-libs
+-             ninja
+-             postgresql
+-             python
+-             qt6-declarative
+-             qt6-tools
+-             unixodbc
+-             vulkan-headers)
 +_qtver=6.5.2
- makedepends=(cmake ninja mariadb-libs unixodbc postgresql alsa-lib gst-plugins-base-libs
-              gtk3 libpulse cups freetds vulkan-headers clang python llvm qt6-tools qt6-declarative)
++makedepends=(cmake ninja mariadb-libs unixodbc postgresql alsa-lib gst-plugins-base-libs
++             gtk3 libpulse cups freetds vulkan-headers clang python llvm qt6-tools qt6-declarative)
  groups=(qt6)
  _pkgfn=qt-everywhere-src-$_qtver
  build() {
@@ -61,7 +106,7 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DQT_HOST_PATH=/usr \
      -DINSTALL_BINDIR=lib/qt6/bin \
-@@ -16,7 +17,7 @@
+@@ -31,17 +17,17 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
@@ -70,3 +115,15 @@
      -DQT_FEATURE_openssl_linked=ON \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build --target docs
+ }
+ package_qt6-examples() {
+-  depends=(qt6-doc)
++  depends=('qt6-doc')
+   _base="$pkgdir"/usr/share/doc/qt6/examples
+   mkdir -p $_base
+   cp ${_pkgfn}/qtbase/examples/examples.pro $_base
+-  _fdirs=$(find "$_pkgfn" -maxdepth 2 -type d -name examples)
++  _fdirs=$(find "${_pkgfn}" -maxdepth 2 -type d -name examples)
+   for _dir in $_fdirs; do
+     rm -f $_dir/{examples.pro,CMakeLists.txt,README}
+     cp -rn $_dir/* $_base

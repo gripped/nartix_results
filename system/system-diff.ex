@@ -10,6 +10,9 @@ python-brotli
 brotli-testdata
 btrfs-progs
 cryptsetup
+curl
+libcurl-compat
+libcurl-gnutls
 db5.3
 dbus
 dbus-docs

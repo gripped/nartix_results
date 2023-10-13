@@ -1,23 +1,70 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,48 +1,33 @@
  
  pkgname=gnome-builder
- pkgver=44.2
--pkgrel=5
+-pkgver=45.0
+-pkgrel=1
++pkgver=44.2
 +pkgrel=3
  pkgdesc="An IDE for writing GNOME-based software"
  url="https://wiki.gnome.org/Apps/Builder"
  arch=(x86_64)
-@@ -46,6 +46,7 @@
+ license=(GPL3)
+ depends=(
+   autoconf-archive
+-  cairo
+   clang
+   cmark
+   ctags
+   d-spy
+-  dconf
+   desktop-file-utils
+   devhelp
+   editorconfig-core-c
+-  enchant
+-  flatpak
+   flatpak-builder
+-  gdk-pixbuf2
+   gjs
+   glib2
+-  gobject-introspection-runtime
+-  gtk4
+   gtksourceview5
+-  hicolor-icon-theme
+-  icu
+-  json-glib
+   jsonrpc-glib
+   libadwaita
+   libdex
+-  libgirepository
+   libgit2-glib
+   libpanel
+-  libpeas-2
+-  libportal
++  libpeas
+   libportal-gtk4
+-  libsoup3
+-  libxml2
+   meson
+-  pango
+-  python
++  python-gobject
+   python-lxml
+   python-sphinx
+   sysprof
+@@ -61,8 +46,9 @@
    python-sphinx_rtd_theme
    yelp-tools
  )
 +
  checkdepends=(weston)
- _commit=abc6bbd213df29f156514e40d3f9cdfee57f8c01  # tags/44.2^0
+-_commit=82b055c8cc4dbcf171f8236e2a7d15cd19225fe1  # tags/45.0^0
++_commit=abc6bbd213df29f156514e40d3f9cdfee57f8c01  # tags/44.2^0
  source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
-@@ -63,9 +64,10 @@
+ b2sums=('SKIP')
+ 
+@@ -78,17 +64,17 @@
  build() {
    local meson_options=(
      -D help=true
@@ -29,13 +76,67 @@
    meson compile -C build
  }
  
+ check() (
+-  export XDG_RUNTIME_DIR="$PWD/runtime-dir"
++  export XDG_RUNTIME_DIR="$PWD/runtime-dir" WAYLAND_DISPLAY=wayland-5
++
+   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
+-
+-  export WAYLAND_DISPLAY=wayland-5
+   weston --backend=headless-backend.so --socket=$WAYLAND_DISPLAY --idle-time=0 &
+   _w=$!
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -45,8 +45,9 @@
+@@ -1,41 +1,26 @@
+ pkgname=gnome-builder
+ depends=(
+   autoconf-archive
+-  cairo
+   clang
+   cmark
+   ctags
+   d-spy
+-  dconf
+   desktop-file-utils
+   devhelp
+   editorconfig-core-c
+-  enchant
+-  flatpak
+   flatpak-builder
+-  gdk-pixbuf2
+   gjs
+   glib2
+-  gobject-introspection-runtime
+-  gtk4
+   gtksourceview5
+-  hicolor-icon-theme
+-  icu
+-  json-glib
+   jsonrpc-glib
+   libadwaita
+   libdex
+-  libgirepository
+   libgit2-glib
+   libpanel
+-  libpeas-2
+-  libportal
++  libpeas
+   libportal-gtk4
+-  libsoup3
+-  libxml2
+   meson
+-  pango
+-  python
++  python-gobject
+   python-lxml
+   python-sphinx
+   sysprof
+@@ -60,14 +45,14 @@
  build() {
    local meson_options=(
      -D help=true
@@ -46,3 +147,10 @@
    meson compile -C build
  }
  check() (
+-  export XDG_RUNTIME_DIR="$PWD/runtime-dir"
++  export XDG_RUNTIME_DIR="$PWD/runtime-dir" WAYLAND_DISPLAY=wayland-5
+   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
+-  export WAYLAND_DISPLAY=wayland-5
+   weston --backend=headless-backend.so --socket=$WAYLAND_DISPLAY --idle-time=0 &
+   _w=$!
+   trap "kill $_w; wait" EXIT

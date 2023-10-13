@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,14 @@
+ 
+ pkgname=ardour
+-pkgver=8.0
+-_commit=120979bd760d06cb2ea7d4da166624eec4bd94ab  # refs/tags/8.0^{}
++pkgver=7.5
++_commit=e1950ec49e601864f06e316ba8cee730a3964989  # refs/tags/7.5^{}
+ pkgrel=1
+ pkgdesc="Professional-grade digital audio workstation"
+ arch=(x86_64)
+ url="https://ardour.org/"
+ license=(
+-  CC0-1.0
+-  GPL-2.0-or-later
+-  GPL-3.0-or-later
++  custom:CC0
++  GPL2
+   MIT
+ )
+ groups=(pro-audio)
+@@ -123,6 +122,8 @@
+     --configdir=/etc
+     --cxx11
+     --freedesktop
++    --lxvst
++    --nls
+     --no-phone-home
+     --optimize
+     --ptformat
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -85,6 +85,8 @@
+     --configdir=/etc
+     --cxx11
+     --freedesktop
++    --lxvst
++    --nls
+     --no-phone-home
+     --optimize
+     --ptformat

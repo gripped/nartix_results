@@ -3,7 +3,7 @@
 @@ -1,23 +1,32 @@
  
  pkgname=audiotube
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Client for YouTube Music'
@@ -11,10 +11,10 @@
  arch=(x86_64)
  license=(GPL LGPL)
  groups=(kde-applications kde-multimedia)
--depends=(kirigami-addons qt5-imageformats qt5-multimedia qt5-svg ki18n kcrash kwindowsystem yt-dlp python-ytmusicapi futuresql-qt5)
+-depends=(kirigami-addons qt5-imageformats qt5-multimedia qt5-svg ki18n5 kcrash5 kwindowsystem5 yt-dlp python-ytmusicapi futuresql-qt5)
 -makedepends=(extra-cmake-modules pybind11 qcoro-qt5)
 -source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('97d53269009f67f30ceca829117eecb07dec96c03ad2aa2b4a8d35361dabad1e'
+-sha256sums=('a91dfb18f11414f79cad9c5d5966a995d52ec9b864fabc352dc01b2c1fe98147'
 -            'SKIP')
 +depends=(kirigami-addons qt5-imageformats qt5-multimedia qt5-svg ki18n kcrash kwindowsystem yt-dlp python-ytmusicapi)
 +makedepends=(extra-cmake-modules pybind11)
@@ -49,7 +49,7 @@
 @@ -1,9 +1,13 @@
  pkgname=audiotube
  groups=(kde-applications kde-multimedia)
--depends=(kirigami-addons qt5-imageformats qt5-multimedia qt5-svg ki18n kcrash kwindowsystem yt-dlp python-ytmusicapi futuresql-qt5)
+-depends=(kirigami-addons qt5-imageformats qt5-multimedia qt5-svg ki18n5 kcrash5 kwindowsystem5 yt-dlp python-ytmusicapi futuresql-qt5)
 -makedepends=(extra-cmake-modules pybind11 qcoro-qt5)
 +depends=(kirigami-addons qt5-imageformats qt5-multimedia qt5-svg ki18n kcrash kwindowsystem yt-dlp python-ytmusicapi)
 +makedepends=(extra-cmake-modules pybind11)

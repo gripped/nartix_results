@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,19 @@
+@@ -1,39 +1,19 @@
  
  pkgbase=libportal
 -pkgname=(
@@ -11,9 +11,10 @@
 -  libportal-docs
 -)
 -pkgver=0.7.1
+-pkgrel=2
 +pkgname=(libportal libportal-{gtk3,gtk4,qt5,docs})
 +pkgver=0.6
- pkgrel=1
++pkgrel=1
  pkgdesc="GIO-style async APIs for most Flatpak portals"
  url="https://github.com/flatpak/libportal"
  arch=(x86_64)
@@ -29,6 +30,7 @@
 -  qt5-base
 -  qt5-x11extras
 -  vala
+-  xdg-desktop-portal
 -)
 -checkdepends=(
 -  python-dbusmock
@@ -47,7 +49,7 @@
  
  pkgver() {
    cd libportal
-@@ -44,7 +25,7 @@
+@@ -45,7 +25,7 @@
  }
  
  build() {
@@ -56,7 +58,19 @@
    meson compile -C build
  }
  
-@@ -89,10 +70,7 @@
+@@ -65,10 +45,7 @@
+ }
+ 
+ package_libportal() {
+-  depends=(
+-    libg{lib,object,io}-2.0.so
+-    xdg-desktop-portal
+-  )
++  depends=(libg{lib,object,io}-2.0.so)
+   provides=(libportal.so)
+ 
+   meson install -C build --destdir "$pkgdir"
+@@ -93,10 +70,7 @@
  
  package_libportal-gtk3() {
    pkgdesc+=" - GTK 3 backend"
@@ -68,7 +82,7 @@
    provides=(libportal-gtk3.so)
  
    mv gtk3/* "$pkgdir"
-@@ -100,10 +78,7 @@
+@@ -104,10 +78,7 @@
  
  package_libportal-gtk4() {
    pkgdesc+=" - GTK 4 backend"
@@ -80,7 +94,7 @@
    provides=(libportal-gtk4.so)
  
    mv gtk4/* "$pkgdir"
-@@ -111,11 +86,7 @@
+@@ -115,11 +86,7 @@
  
  package_libportal-qt5() {
    pkgdesc+=" - Qt 5 backend"
@@ -99,7 +113,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,13 @@
+@@ -1,29 +1,13 @@
  pkgbase=libportal
 -pkgname=(
 -  libportal
@@ -119,6 +133,7 @@
 -  qt5-base
 -  qt5-x11extras
 -  vala
+-  xdg-desktop-portal
 -)
 +pkgname=(libportal libportal-{gtk3,gtk4,qt5,docs})
 +makedepends=(git meson gi-docgen vala gobject-introspection gtk3 gtk4 qt5-base
@@ -132,7 +147,19 @@
    meson compile -C build
  }
  _pick() {
-@@ -53,29 +38,19 @@
+@@ -36,10 +20,7 @@
+   done
+ }
+ package_libportal() {
+-  depends=(
+-    libg{lib,object,io}-2.0.so
+-    xdg-desktop-portal
+-  )
++  depends=(libg{lib,object,io}-2.0.so)
+   provides=(libportal.so)
+   meson install -C build --destdir "$pkgdir"
+   cd "$pkgdir"
+@@ -57,29 +38,19 @@
  }
  package_libportal-gtk3() {
    pkgdesc+=" - GTK 3 backend"

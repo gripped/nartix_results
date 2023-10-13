@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=gnome-shell
--pkgver=44.5
+-pkgver=45.0
 +pkgver=44.3
  pkgrel=1
  epoch=1
@@ -16,17 +16,21 @@
    libcanberra-pulse
    libgdm
    libgweather-4
-@@ -55,7 +54,8 @@
+@@ -52,11 +51,11 @@
+   'gst-plugin-pipewire: Screen recording'
+   'gst-plugins-good: Screen recording'
+   'power-profiles-daemon: Power profile switching'
+-  'python-gobject: gnome-shell-test-tool performance tester'
    'switcheroo-control: Multi-GPU support'
  )
  groups=(gnome)
--_commit=d49cc6fa355d59d3a4c878ae89885cb1c571bfda  # tags/44.5^0
+-_commit=2127c62b210f605747e019e6e2abee82516e3ccb  # tags/45.0^0
 +options=(debug)
 +_commit=60ec50efa693735cb959a3378516a82d2e9df009  # tags/44.3^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
    "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
-@@ -79,12 +79,13 @@
+@@ -80,12 +79,13 @@
  build() {
    local meson_options=(
      -D gtk_doc=true
@@ -41,15 +45,26 @@
    meson compile -C build
  }
  
-@@ -92,7 +93,7 @@
+@@ -93,9 +93,7 @@
    export XDG_RUNTIME_DIR="$PWD/rdir"
    mkdir -p -m 700 "$XDG_RUNTIME_DIR"
  
+-  export NO_AT_BRIDGE=1 GTK_A11Y=none
+-
 -  meson test -C build --print-errorlogs -t 3
 +  meson test -C build --print-errorlogs -t 3 || : # skip failing tests
  )
  
  check() {
+@@ -104,7 +102,7 @@
+ }
+ 
+ package() {
+-  depends+=(libmutter-13.so)
++  depends+=(libmutter-12.so)
+   meson install -C build --destdir "$pkgdir"
+ }
+ 
 
 
 ############# Stripped diff below #################

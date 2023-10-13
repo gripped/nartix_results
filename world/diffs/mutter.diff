@@ -4,32 +4,51 @@
    mutter
    mutter-docs
  )
--pkgver=44.5
+-pkgver=45.0
 +pkgver=44.3
  pkgrel=1
  pkgdesc="Window manager and compositor for GNOME"
  url="https://gitlab.gnome.org/GNOME/mutter"
-@@ -17,7 +17,6 @@
+@@ -17,11 +17,8 @@
    gnome-settings-daemon
    graphene
    gsettings-desktop-schemas
 -  iio-sensor-proxy
    lcms2
    libcanberra
+-  libdisplay-info
+-  libei
    libgudev
-@@ -47,7 +46,7 @@
+   libinput
+   libsm
+@@ -45,12 +42,11 @@
+   xorg-server-xvfb
+ )
+ checkdepends=(
+-  gnome-session
+   python-dbusmock
    wireplumber
    zenity
  )
--_commit=1511e6e1cdc8fa1a84f6fbbb169777ac26ba7f44  # tags/44.5^0
+-_commit=4f6c91847088d7d6476b88575b3a6601b819b443  # tags/45.0^0
 +_commit=99d83f2985483bc192e1271665c442c7c480a588  # tags/44.3^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit"
  )
-@@ -69,13 +68,14 @@
+@@ -63,6 +59,8 @@
+ 
+ prepare() {
+   cd mutter
++
++  git cherry-pick -n '5a83e8ef8250526a40e8e69c^..d65883e0d7d70987e3888b86'
+ }
+ 
+ build() {
+@@ -70,29 +68,37 @@
      -D docs=true
      -D egl_device=true
      -D installed_tests=false
+-    -D libdisplay_info=true
 +    -D systemd=false
      -D wayland_eglstream=true
    )
@@ -42,33 +61,74 @@
    meson compile -C build
  }
  
-@@ -92,7 +92,7 @@
+-check() (
++_check() (
+   export XDG_RUNTIME_DIR="$PWD/rdir" GSETTINGS_SCHEMA_DIR="$PWD/build/data"
+   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
+   glib-compile-schemas "$GSETTINGS_SCHEMA_DIR"
  
-   trap "kill $_p1 $_p2; wait" EXIT
+-  export NO_AT_BRIDGE=1 GTK_A11Y=none
+-  export MUTTER_DEBUG_DUMMY_MODE_SPECS="800x600@10.0"
++  pipewire &
++  _p1=$!
  
--  meson test -C build --print-errorlogs -t 3
+-  xvfb-run -s '-nolisten local +iglx -noreset' \
+-    mutter/src/tests/meta-dbus-runner.py --launch=pipewire --launch=wireplumber \
+-    meson test -C build --print-errorlogs -t 5 --setup plain
++  wireplumber &
++  _p2=$!
++
++  trap "kill $_p1 $_p2; wait" EXIT
++
 +  meson test -C build --print-errorlogs -t 3 ||: #one test fails; just skip
  )
++
++check() {
++  dbus-run-session xvfb-run -s '-nolisten local +iglx -noreset' \
++    bash -c "$(declare -f _check); _check"
++}
  
- check() {
+ _pick() {
+   local p="$1" f d; shift
+@@ -105,7 +111,7 @@
+ }
+ 
+ package_mutter() {
+-  provides=(libmutter-13.so)
++  provides=(libmutter-12.so)
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,6 @@
+@@ -10,11 +10,8 @@
    gnome-settings-daemon
    graphene
    gsettings-desktop-schemas
 -  iio-sensor-proxy
    lcms2
    libcanberra
+-  libdisplay-info
+-  libei
    libgudev
-@@ -44,11 +43,12 @@
+   libinput
+   libsm
+@@ -39,19 +36,30 @@
+ )
+ prepare() {
+   cd mutter
++  git cherry-pick -n '5a83e8ef8250526a40e8e69c^..d65883e0d7d70987e3888b86'
+ }
+ build() {
+   local meson_options=(
      -D docs=true
      -D egl_device=true
      -D installed_tests=false
+-    -D libdisplay_info=true
 +    -D systemd=false
      -D wayland_eglstream=true
    )
@@ -77,5 +137,16 @@
 -  arch-meson mutter build "${meson_options[@]}"
 +  artix-meson mutter build "${meson_options[@]}"
    meson compile -C build
++}
++_
++_pick() {
++  local p="$1" f d; shift
++  for f; do
++    d="$srcdir/$p/${f#$pkgdir/}"
++    mkdir -p "$(dirname "$d")"
++    mv "$f" "$d"
++    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
++  done
  }
- _
+ package_mutter-docs() {
+   pkgdesc+=" (documentation)"

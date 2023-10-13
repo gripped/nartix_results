@@ -1,13 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,6 +22,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=sushi
+-pkgver=45.0
++pkgver=44.2
+ pkgrel=1
+ pkgdesc="A quick previewer for Nautilus"
+ url="https://gitlab.gnome.org/GNOME/sushi"
+@@ -22,8 +22,9 @@
    meson
  )
  optdepends=('libreoffice: OpenDocument formats')
 +options=(debug)
  groups=(gnome)
- _commit=ecb7840a0845b2b40db9cdadb071ab3a061ec127  # tags/44.2^0
+-_commit=ecab9e67f8c079303d88e7db4325755de1286b64  # tags/45.0^0
++_commit=ecb7840a0845b2b40db9cdadb071ab3a061ec127  # tags/44.2^0
  source=("git+https://gitlab.gnome.org/GNOME/sushi.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
 @@ -37,7 +38,7 @@
  }
  

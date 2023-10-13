@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,22 @@
+ 
+ pkgname=akonadi-mime
+-pkgver=23.08.2
++pkgver=23.04.3
+ pkgrel=1
+ pkgdesc='Libraries and daemons to implement basic email handling'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+ license=(LGPL)
+ depends=(libakonadi kmime)
+-makedepends=(extra-cmake-modules kdoctools5 qt5-tools doxygen)
++makedepends=(extra-cmake-modules kdoctools qt5-tools doxygen)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('d1ebf37ebcb3cbedb8e400f80d8c3af7772df28a4f348a7877f9016f01ac1728'
++sha256sums=('05d2c9e6bf7f2b3d1b56fadbc5c02c32dc9415050f4bd22248f4e844b0d863e4'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ pkgname=akonadi-mime
+ depends=(libakonadi kmime)
+-makedepends=(extra-cmake-modules kdoctools5 qt5-tools doxygen)
++makedepends=(extra-cmake-modules kdoctools qt5-tools doxygen)
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build

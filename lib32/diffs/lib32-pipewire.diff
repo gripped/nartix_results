@@ -1,16 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -6,9 +6,9 @@
    lib32-pipewire-jack
    lib32-pipewire-v4l2
  )
 -_commit=181fbfee6d3fcc3afd3c93613f126a8346dad586  # tags/0.3.81
 -pkgver=0.3.81
+-pkgrel=2
 +_commit=a3bd0f7a0a8dec9045deeb5eb3eb92b09ff75d57  # tags/0.3.75
 +pkgver=0.3.75
- pkgrel=1
++pkgrel=1
  epoch=1
  pkgdesc="Low-latency audio/video router and processor - 32-bit"
+ url="https://pipewire.org"
 @@ -19,13 +19,9 @@
    lib32-alsa-lib
    lib32-dbus
@@ -26,7 +28,17 @@
  b2sums=('SKIP')
  
  pkgver() {
-@@ -61,6 +57,7 @@
+@@ -35,9 +31,6 @@
+ 
+ prepare() {
+   cd pipewire
+-
+-  git cherry-pick -n a8636b04cbf5e1b22e3344630df47bf4e5ee53ea
+-  git cherry-pick -n e940361c947cf8519b11c7e6792441c86fc59042
+ }
+ 
+ build() {
+@@ -64,6 +57,7 @@
      -D libmysofa=disabled
      -D libpulse=disabled
      -D libusb=disabled
@@ -34,7 +46,7 @@
      -D lv2=disabled
      -D man=disabled
      -D opus=disabled
-@@ -84,7 +81,7 @@
+@@ -87,7 +81,7 @@
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
  
@@ -43,7 +55,7 @@
    meson compile -C build
  }
  
-@@ -113,7 +110,6 @@
+@@ -116,7 +110,6 @@
      libdbus-1.so
      libglib-2.0.so
      libpipewire-$_ver.so
@@ -51,7 +63,7 @@
      pipewire
    )
    optdepends=(
-@@ -163,13 +159,8 @@
+@@ -166,13 +159,8 @@
      libpipewire-$_ver.so
      pipewire-jack
    )
@@ -73,7 +85,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,9 +10,7 @@
+@@ -10,14 +10,10 @@
    lib32-alsa-lib
    lib32-dbus
    lib32-glib2
@@ -83,7 +95,12 @@
  )
  prepare() {
    cd pipewire
-@@ -41,6 +39,7 @@
+-  git cherry-pick -n a8636b04cbf5e1b22e3344630df47bf4e5ee53ea
+-  git cherry-pick -n e940361c947cf8519b11c7e6792441c86fc59042
+ }
+ build() {
+   local meson_options=(
+@@ -43,6 +39,7 @@
      -D libmysofa=disabled
      -D libpulse=disabled
      -D libusb=disabled
@@ -91,7 +108,7 @@
      -D lv2=disabled
      -D man=disabled
      -D opus=disabled
-@@ -62,7 +61,7 @@
+@@ -64,7 +61,7 @@
    export CC="gcc -m32"
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
@@ -100,7 +117,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -84,7 +83,6 @@
+@@ -86,7 +83,6 @@
      libdbus-1.so
      libglib-2.0.so
      libpipewire-$_ver.so
@@ -108,7 +125,7 @@
      pipewire
    )
    meson install -C build --destdir "$pkgdir"
-@@ -119,13 +117,8 @@
+@@ -121,13 +117,8 @@
      libpipewire-$_ver.so
      pipewire-jack
    )

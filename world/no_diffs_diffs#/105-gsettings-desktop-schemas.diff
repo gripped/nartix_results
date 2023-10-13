@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gsettings-desktop-schemas
+-pkgver=45.0
++pkgver=44.0
+ pkgrel=1
+ pkgdesc="Shared GSettings schemas for the desktop"
+ url="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"
+@@ -17,7 +17,7 @@
+   gobject-introspection
+   meson
+ )
+-_commit=5e903c1c205086495213dedc32b0ad50f6010c27  # tags/45.0^0
++_commit=eff0b3609ff745fcb58cba7198397c642702736e  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
 @@ -31,7 +31,7 @@
  }
  

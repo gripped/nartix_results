@@ -3,6 +3,9 @@ lib32-at-spi2-core
 lib32-cairo
 lib32-clang
 lib32-colord
+lib32-curl
+lib32-libcurl-compat
+lib32-libcurl-gnutls
 lib32-dbus
 lib32-fluidsynth
 lib32-freetype2
@@ -28,6 +31,8 @@ lib32-libvdpau
 lib32-libvpx
 lib32-libwebp
 lib32-libxcb
+lib32-libxkbcommon
+lib32-libxkbcommon-x11
 lib32-llvm
 lib32-mesa
 lib32-vulkan-mesa-layers

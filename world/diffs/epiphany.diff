@@ -3,24 +3,34 @@
 @@ -1,6 +1,6 @@
  
  pkgname=epiphany
--pkgver=44.7
+-pkgver=45.0
 +pkgver=44.5
  pkgrel=1
  pkgdesc="A GNOME web browser based on the WebKit rendering engine"
  url="https://wiki.gnome.org/Apps/Web"
-@@ -12,6 +12,7 @@
+@@ -10,7 +10,9 @@
+   gcr-4
+   gstreamer
    gtk4
-   icu
++  icu
    libadwaita
 +  json-glib
    libarchive
    libportal-gtk4
    libsoup3
+@@ -27,7 +29,6 @@
+ )
+ checkdepends=(
+   aspell
+-  glibc-locales
+   hspell
+   hunspell
+   libvoikko
 @@ -35,7 +36,8 @@
    xorg-server-xvfb
  )
  groups=(gnome)
--_commit=542c5000479cbe0bf637d37718aff4df7d3da715  # tags/44.7^0
+-_commit=a3dcb33c646154355698796dcd9e462da88bff7f  # tags/45.0^0
 +options=(debug)
 +_commit=2aef87b1850f0261be0d2b0e68493ea6c25abb90  # tags/44.5^0
  source=(
@@ -41,15 +51,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
+@@ -3,7 +3,9 @@
+   gcr-4
+   gstreamer
    gtk4
-   icu
++  icu
    libadwaita
 +  json-glib
    libarchive
    libportal-gtk4
    libsoup3
-@@ -20,11 +21,12 @@
+@@ -19,11 +21,12 @@
    yelp-tools
  )
  groups=(gnome)

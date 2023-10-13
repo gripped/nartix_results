@@ -6,9 +6,6 @@ lib32-brotli
 lib32-bzip2
 lib32-cdparanoia
 lib32-cmocka
-lib32-curl
-lib32-libcurl-compat
-lib32-libcurl-gnutls
 lib32-dconf
 lib32-duktape
 lib32-e2fsprogs
@@ -100,8 +97,6 @@ lib32-libxfixes
 lib32-libxft
 lib32-libxi
 lib32-libxinerama
-lib32-libxkbcommon
-lib32-libxkbcommon-x11
 lib32-libxml2
 lib32-libxmu
 lib32-libxrandr

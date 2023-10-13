@@ -3,20 +3,20 @@
 @@ -1,23 +1,23 @@
  
  pkgname=kontrast
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Tool to check contrast for colors that allows verifying that your colors are correctly accessible'
  arch=(x86_64)
  url='https://apps.kde.org/kontrast/'
  license=(GPL)
--depends=(kirigami2 ki18n kcoreaddons qt5-svg futuresql-qt5)
--makedepends=(extra-cmake-modules kdoctools qcoro-qt5)
+-depends=(kirigami2 ki18n5 kcoreaddons5 qt5-svg futuresql-qt5)
+-makedepends=(extra-cmake-modules kdoctools5 qcoro-qt5)
 +depends=(kirigami2 ki18n kcoreaddons qt5-svg hicolor-icon-theme)
 +makedepends=(extra-cmake-modules kdoctools)
  groups=(kde-applications kde-accessibility)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('31d94facb068e48dc8c9361e3d011fbd04b7de7e40cd33136d5c3621c74d52ec'
+-sha256sums=('78e8e97f23cb47e70200eb2d15c7ed1b9134a0ca30335186e7c7597f09b870bd'
 +sha256sums=('22e9debd7456371f8c19d27eced7ac64b4c3978daaf34d450043aeb204db1c23'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
@@ -37,8 +37,8 @@
 +++ Artix PKGBUILD
 @@ -1,9 +1,9 @@
  pkgname=kontrast
--depends=(kirigami2 ki18n kcoreaddons qt5-svg futuresql-qt5)
--makedepends=(extra-cmake-modules kdoctools qcoro-qt5)
+-depends=(kirigami2 ki18n5 kcoreaddons5 qt5-svg futuresql-qt5)
+-makedepends=(extra-cmake-modules kdoctools5 qcoro-qt5)
 +depends=(kirigami2 ki18n kcoreaddons qt5-svg hicolor-icon-theme)
 +makedepends=(extra-cmake-modules kdoctools)
  groups=(kde-applications kde-accessibility)

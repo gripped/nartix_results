@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=mbox-importer
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Import mbox files to KMail'
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules)
  groups=(kde-applications kde-pim)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('3b16e252dec022ddc2dbb6f4b2966bf3b77a4b4aba1a4bc94596e2b0977bf9ec'
+-sha256sums=('0ee8423864e99f3c877556a845041f83dd12751fd496d00aa8c277c23f085534'
 +sha256sums=('62f4853261dc37d8a0f41b0bae254250a303632665f6caa5790ad7974c265f61'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>

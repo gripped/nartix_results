@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=electrum
 -pkgver=4.4.6
+-pkgrel=2
 +pkgver=4.4.5
- pkgrel=1
++pkgrel=1
  pkgdesc="Lightweight Bitcoin wallet"
  arch=('any')
+ makedepends=('python-setuptools')
 @@ -23,7 +23,7 @@
  license=('MIT')
  source=("https://download.electrum.org/${pkgver}/${pkgname^}-${pkgver}.tar.gz"

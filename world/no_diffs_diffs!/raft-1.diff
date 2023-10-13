@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=raft
+-pkgver=0.18.0
++pkgver=0.17.1
+ pkgrel=1
+ pkgdesc="C implementation of the Raft consensus protocol"
+ arch=('x86_64')
+@@ -9,7 +9,7 @@
+ depends=('libuv')
+ options=(strip)
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/canonical/${pkgname}/archive/v${pkgver}.tar.gz")
+-sha256sums=('a26d4a8a401d4b221336aaa5d80eb92d4b26c1be30a6194021097d9c387a3e39')
++sha256sums=('e31c7fafbdd5f94913161c5d64341a203364e512524b47295c97a91e83c4198b')
+ 
+ build() {
+ 	cd "${pkgname}-${pkgver}"

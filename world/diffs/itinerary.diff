@@ -3,20 +3,21 @@
 @@ -1,24 +1,24 @@
  
  pkgname=itinerary
--pkgver=23.08.1
+-pkgver=23.08.2
 +pkgver=23.04.3
  pkgrel=1
  pkgdesc='Itinerary and boarding pass management application'
  arch=(x86_64)
  url='https://apps.kde.org/itinerary/'
  license=(LGPL BSD)
- depends=(kitinerary kio networkmanager-qt kosmindoormap khealthcertificate qt5-location qqc2-desktop-style prison
--         kitemmodels kunitconversion kfilemetadata kirigami-addons libquotient)
+-depends=(kitinerary kio5 networkmanager-qt5 kosmindoormap khealthcertificate qt5-location qqc2-desktop-style5 prison5
+-         kitemmodels5 kunitconversion5 kfilemetadata5 kirigami-addons libquotient)
++depends=(kitinerary kio networkmanager-qt kosmindoormap khealthcertificate qt5-location qqc2-desktop-style prison
 +         kitemmodels kunitconversion kfilemetadata kirigami-addons)
  makedepends=(extra-cmake-modules)
  groups=(kde-applications kde-pim)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('cc3b1067b405f104ab3ea6d423cf6d9c6b48632a3d5f7a764c474e0be34bb7ba'
+-sha256sums=('4bb97da33884dbd3d4ad09dbbb6c19f2a07c568618f1393d26c9c8227b53bdef'
 +sha256sums=('d1b8dfa26e8fe019fe63344977c813b56057a3762de63d5fa7545dc238325d8c'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
@@ -37,8 +38,9 @@
 +++ Artix PKGBUILD
 @@ -1,10 +1,10 @@
  pkgname=itinerary
- depends=(kitinerary kio networkmanager-qt kosmindoormap khealthcertificate qt5-location qqc2-desktop-style prison
--         kitemmodels kunitconversion kfilemetadata kirigami-addons libquotient)
+-depends=(kitinerary kio5 networkmanager-qt5 kosmindoormap khealthcertificate qt5-location qqc2-desktop-style5 prison5
+-         kitemmodels5 kunitconversion5 kfilemetadata5 kirigami-addons libquotient)
++depends=(kitinerary kio networkmanager-qt kosmindoormap khealthcertificate qt5-location qqc2-desktop-style prison
 +         kitemmodels kunitconversion kfilemetadata kirigami-addons)
  makedepends=(extra-cmake-modules)
  groups=(kde-applications kde-pim)
