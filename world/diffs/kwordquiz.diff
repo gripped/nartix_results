@@ -4,14 +4,15 @@
  
  pkgname=kwordquiz
 -pkgver=23.08.2
+-pkgrel=2
 +pkgver=23.04.3
- pkgrel=1
++pkgrel=1
  pkgdesc='Flash Card Trainer'
  url='https://apps.kde.org/kwordquiz/'
  arch=(x86_64)
  license=(GPL LGPL FDL)
  groups=(kde-applications kde-education)
--depends=(knotifyconfig5 libkeduvocdocument knewstuff5 kirigami-addons)
+-depends=(knotifyconfig5 libkeduvocdocument knewstuff5 kirigami-addons5)
 -makedepends=(extra-cmake-modules kdoctools5)
 +depends=(knotifyconfig libkeduvocdocument knewstuff phonon-qt5)
 +makedepends=(extra-cmake-modules kdoctools)
@@ -38,7 +39,7 @@
 @@ -1,9 +1,9 @@
  pkgname=kwordquiz
  groups=(kde-applications kde-education)
--depends=(knotifyconfig5 libkeduvocdocument knewstuff5 kirigami-addons)
+-depends=(knotifyconfig5 libkeduvocdocument knewstuff5 kirigami-addons5)
 -makedepends=(extra-cmake-modules kdoctools5)
 +depends=(knotifyconfig libkeduvocdocument knewstuff phonon-qt5)
 +makedepends=(extra-cmake-modules kdoctools)

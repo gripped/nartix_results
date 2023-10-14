@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=openntpd
+ pkgver=6.8p1
+-pkgrel=7
++pkgrel=6
+ pkgdesc='Free, easy to use implementation of the Network Time Protocol'
+ url='https://www.openntpd.org/'
+ arch=('x86_64')
 @@ -11,12 +11,10 @@
  options=(emptydirs)
  backup=('etc/ntpd.conf')

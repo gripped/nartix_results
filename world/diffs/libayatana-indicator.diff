@@ -1,18 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,42 @@
--
- pkgname=libayatana-indicator
- pkgver=0.9.3
- pkgrel=1
--pkgdesc='Ayatana Indicators shared library'
--arch=(x86_64)
--url='https://github.com/AyatanaIndicators/libayatana-indicator'
--license=(LGPL2.1 LGPL3)
--depends=(ayatana-ido)
--makedepends=(cmake gobject-introspection vala)
--source=(https://github.com/AyatanaIndicators/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz)
--sha256sums=('09c5456fcb430b6ee0626fafdf99a32eb8746b267d56ab2bd4c8a8dd6ca731da')
+@@ -1,29 +1,42 @@
++pkgname=libayatana-indicator
++pkgver=0.9.3
++pkgrel=1
 +pkgdesc="Ayatana Indicators Shared Library"
 +arch=("x86_64")
 +url="https://github.com/AyatanaIndicators/libayatana-indicator"
@@ -21,7 +12,24 @@
 +depends=(
 +	"gtk3>=3.24"
 +	"glib2>=2.37"
-+
+ 
+-pkgname=libayatana-indicator
+-pkgver=0.9.4
+-pkgrel=1
+-pkgdesc='Ayatana Indicators shared library'
+-arch=(x86_64)
+-url='https://github.com/AyatanaIndicators/libayatana-indicator'
+-license=(LGPL2.1 LGPL3)
+-depends=(ayatana-ido
+-         gdk-pixbuf2
+-         glib2
+-         glibc
+-         gtk3)
+-makedepends=(cmake
+-             gobject-introspection
+-             vala)
+-source=(https://github.com/AyatanaIndicators/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('a18d3c682e29afd77db24366f8475b26bda22b0e16ff569a2ec71cd6eb4eac95')
 +	"ayatana-ido"
 +)
 +makedepends=(
@@ -63,10 +71,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,22 @@
+@@ -1,15 +1,22 @@
  pkgname=libayatana-indicator
--depends=(ayatana-ido)
--makedepends=(cmake gobject-introspection vala)
+-depends=(ayatana-ido
+-         gdk-pixbuf2
+-         glib2
+-         glibc
+-         gtk3)
+-makedepends=(cmake
+-             gobject-introspection
+-             vala)
 +changelog=Changelog.txt
 +depends=(
 +	"gtk3>=3.24"

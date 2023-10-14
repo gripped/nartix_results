@@ -4,14 +4,15 @@
  
  pkgname=kasts
 -pkgver=23.08.2
+-pkgrel=2
 +pkgver=23.04.3
- pkgrel=1
++pkgrel=1
  pkgdesc='Kirigami-based podcast player'
  url='https://apps.kde.org/kasts/'
  arch=(x86_64)
  license=(GPL LGPL)
  groups=(kde-applications kde-multimedia)
--depends=(kirigami-addons qt5-svg qtkeychain-qt5 syndication5 threadweaver5 ki18n5 kcoreaddons5
+-depends=(kirigami-addons5 qt5-svg qtkeychain-qt5 syndication5 threadweaver5 ki18n5 kcoreaddons5
 -         kconfig5 networkmanager-qt5 taglib qt5-multimedia vlc)
 +depends=(kirigami-addons qt5-svg qtkeychain-qt5 syndication threadweaver ki18n kcoreaddons kconfig networkmanager-qt taglib qt5-multimedia vlc)
  makedepends=(extra-cmake-modules)
@@ -38,7 +39,7 @@
 @@ -1,10 +1,9 @@
  pkgname=kasts
  groups=(kde-applications kde-multimedia)
--depends=(kirigami-addons qt5-svg qtkeychain-qt5 syndication5 threadweaver5 ki18n5 kcoreaddons5
+-depends=(kirigami-addons5 qt5-svg qtkeychain-qt5 syndication5 threadweaver5 ki18n5 kcoreaddons5
 -         kconfig5 networkmanager-qt5 taglib qt5-multimedia vlc)
 +depends=(kirigami-addons qt5-svg qtkeychain-qt5 syndication threadweaver ki18n kcoreaddons kconfig networkmanager-qt taglib qt5-multimedia vlc)
  makedepends=(extra-cmake-modules)

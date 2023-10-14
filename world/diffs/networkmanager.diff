@@ -9,9 +9,10 @@
 -  nm-cloud-setup
 -)
 -pkgver=1.44.2
+-pkgrel=2
 +pkgname=(networkmanager libnm nm-cloud-setup)
 +pkgver=1.42.8
- pkgrel=1
++pkgrel=1
  pkgdesc="Network connection manager and user applications"
  url="https://networkmanager.dev/"
  arch=(x86_64)
@@ -39,16 +40,33 @@
    vala
    vala
    wpa_supplicant
-@@ -50,7 +47,7 @@
+@@ -50,13 +47,9 @@
    libx11
    python-dbus
  )
 -_commit=8bee6ef894a27ffc8a464df3b32b03e811e1a15d  # tags/1.44.2^0
+-source=(
+-  "git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit"
+-  0001-connectivity-Make-curl-timeout-callback-non-repeatin.patch
+-)
+-b2sums=('SKIP'
+-        'd5466c3edc1f989238bc5c414e5b166cf22cdf2bb21a59654e34bb9b930542945027856bb995eee322daa8e84b3c9c2a81ab5d1c20d498211a54426040cca9c8')
 +_commit=7c6da25396162ba05ffa71f00e227351dc1452b6  # tags/1.42.8^0
- source=("git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit")
- b2sums=('SKIP')
++source=("git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit")
++b2sums=('SKIP')
  
-@@ -69,16 +66,22 @@
+ pkgver() {
+   cd NetworkManager
+@@ -65,8 +58,6 @@
+ 
+ prepare() {
+   cd NetworkManager
+-
+-  git apply -3 ../0001-connectivity-Make-curl-timeout-callback-non-repeatin.patch
+ }
+ 
+ build() {
+@@ -75,16 +66,22 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -72,7 +90,7 @@
      -D ifupdown=false
  
      -D netconfig=no
-@@ -91,10 +94,7 @@
+@@ -97,10 +94,7 @@
      -D qt=false
    )
  
@@ -84,7 +102,7 @@
    meson compile -C build
  }
  
-@@ -117,6 +117,7 @@
+@@ -123,6 +117,7 @@
      audit
      bluez-libs
      curl
@@ -92,7 +110,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -152,6 +153,9 @@
+@@ -158,6 +153,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -102,7 +120,7 @@
  END
  
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -169,12 +173,8 @@
+@@ -175,12 +173,8 @@
    _pick libnm usr/share/gtk-doc/html/libnm
    _pick libnm usr/share/vala/vapi/libnm.*
  
@@ -117,7 +135,7 @@
  }
  
  package_libnm() {
-@@ -183,7 +183,7 @@
+@@ -189,7 +183,7 @@
    depends=(
      glib2
      nss
@@ -126,7 +144,7 @@
      util-linux-libs
    )
    provides=(libnm.so)
-@@ -195,6 +195,6 @@
+@@ -201,6 +195,6 @@
    pkgdesc="Automatically configure NetworkManager in cloud"
    depends=(networkmanager)
  
@@ -162,7 +180,7 @@
    git
    glib2-docs
    gobject-introspection
-@@ -32,9 +30,8 @@
+@@ -32,30 +30,34 @@
    pacrunner
    perl-yaml
    polkit
@@ -173,7 +191,13 @@
    vala
    vala
    wpa_supplicant
-@@ -47,14 +44,20 @@
+ )
+ prepare() {
+   cd NetworkManager
+-  git apply -3 ../0001-connectivity-Make-curl-timeout-callback-non-repeatin.patch
+ }
+ build() {
+   local meson_options=(
      -D dbus_conf_dir=/usr/share/dbus-1/system.d
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -195,7 +219,7 @@
      -D ifupdown=false
      -D netconfig=no
      -D config_dns_rc_manager_default=symlink
-@@ -64,9 +67,7 @@
+@@ -65,9 +67,7 @@
      -D more_logging=false
      -D qt=false
    )
@@ -206,7 +230,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -83,6 +84,7 @@
+@@ -84,6 +84,7 @@
      audit
      bluez-libs
      curl
@@ -214,7 +238,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -100,6 +102,9 @@
+@@ -101,6 +102,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -224,7 +248,7 @@
  END
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
  [connectivity]
-@@ -113,16 +118,13 @@
+@@ -114,16 +118,13 @@
    _pick libnm usr/share/gir-1.0/NM-*
    _pick libnm usr/share/gtk-doc/html/libnm
    _pick libnm usr/share/vala/vapi/libnm.*
@@ -243,7 +267,7 @@
      util-linux-libs
    )
    provides=(libnm.so)
-@@ -130,5 +132,5 @@
+@@ -131,5 +132,5 @@
  }
  package_nm-cloud-setup() {
    depends=(networkmanager)
