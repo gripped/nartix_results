@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gnome-mahjongg
--pkgver=3.40.0+r35+g96668c5
-+pkgver=3.40.0
- pkgrel=1
- pkgdesc="Disassemble a pile of tiles by removing matching pairs"
- url="https://wiki.gnome.org/Apps/Mahjongg"
-@@ -20,7 +20,7 @@
-   yelp-tools
- )
- groups=(gnome-extra)
--_commit=96668c52afaec1636d1df4af17ef6decb04149a8  # master
-+_commit=9bd0a49f97371d0cb1f2c0ecea94da407ed5c965  # tags/3.40.0^0
- source=("git+https://gitlab.gnome.org/GNOME/gnome-mahjongg.git#commit=$_commit")
- b2sums=('SKIP')
- 
 @@ -34,7 +34,7 @@
  }
  

@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
- 
- pkgname=adios2
- pkgver=2.8.3
--pkgrel=6
-+pkgrel=4
- pkgdesc="The Adaptable Input/Output System version 2"
- arch=(x86_64)
- url="https://adios2.readthedocs.io/en/latest/"
+@@ -8,7 +8,7 @@
  license=(Apache)
  depends=(blosc bzip2 glibc gcc-libs hdf5 libfabric libpng nlohmann-json
           openmpi pugixml pybind11 sz yaml-cpp zeromq zfp zlib)
@@ -17,15 +9,15 @@
  source=(https://github.com/ornladios/ADIOS2/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz
          https://github.com/ornladios/ADIOS2/commit/bc67316d.patch
          https://github.com/ornladios/ADIOS2/commit/c3967d39.patch
-@@ -28,7 +28,7 @@
- }
- 
+@@ -30,6 +30,8 @@
  build() {
--  cmake -B build -S ${pkgname^^}-${pkgver} \
-+  artix-cmake -B build -S ${pkgname^^}-${pkgver} \
+   cmake -B build -S ${pkgname^^}-${pkgver} \
      -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
      -DCMAKE_SKIP_RPATH=ON \
      -DADIOS2_USE_EXTERNAL_DEPENDENCIES=ON \
+     -DADIOS2_HAVE_HDF5_VOL=OFF \
 
 
 ############# Stripped diff below #################
@@ -41,12 +33,12 @@
  prepare() {
    patch -d ${pkgname^^}-${pkgver} -p1 < bc67316d.patch
    patch -d ${pkgname^^}-${pkgver} -p1 < c3967d39.patch
-@@ -9,7 +9,7 @@
-   patch -d ${pkgname^^}-${pkgver} -p1 < a6b6c668.patch
- }
+@@ -11,6 +11,8 @@
  build() {
--  cmake -B build -S ${pkgname^^}-${pkgver} \
-+  artix-cmake -B build -S ${pkgname^^}-${pkgver} \
+   cmake -B build -S ${pkgname^^}-${pkgver} \
      -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
      -DCMAKE_SKIP_RPATH=ON \
      -DADIOS2_USE_EXTERNAL_DEPENDENCIES=ON \
+     -DADIOS2_HAVE_HDF5_VOL=OFF \

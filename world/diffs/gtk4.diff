@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   gtk4-docs
-   gtk-update-icon-cache
- )
--pkgver=4.12.3
-+pkgver=4.10.4
- pkgrel=1
- epoch=1
- pkgdesc="GObject-based multi-platform GUI toolkit"
 @@ -49,7 +49,6 @@
    libxrender
    pango
@@ -17,42 +8,9 @@
    wayland
  )
  makedepends=(
-@@ -64,17 +63,9 @@
-   shaderc
-   wayland-protocols
- )
--checkdepends=(
--  gst-plugin-pipewire
--  gst-plugins-base
--  mutter
--  noto-fonts
--  pipewire
--  python-pydbus
--  weston
--  wireplumber
--)
--_commit=11ef4c8f43dca478d6acfaa31a3fea659946db26  # tags/4.12.3^0
-+checkdepends=(weston)
-+options=(debug)
-+_commit=55bc7808cc7796b06c27b1e64f608cd83b9b18ec  # tags/4.10.4^0
- source=(
-   "git+https://gitlab.gnome.org/GNOME/gtk.git#commit=$_commit"
-   gtk-update-icon-cache.{hook,script}
-@@ -93,8 +84,6 @@
- 
- prepare() {
-   cd gtk
--
--  git cherry-pick -n 4d7277f72c8f4915f237e36982ffd7dfba524b15
- }
- 
- build() {
-@@ -102,13 +91,12 @@
-     -D broadway-backend=true
-     -D cloudproviders=enabled
+@@ -104,11 +103,10 @@
      -D colord=enabled
--    -D documentation=true
-+    -D gtk_doc=true
+     -D documentation=true
      -D man-pages=true
 -    -D tracker=enabled
    )
@@ -63,6 +21,15 @@
    meson compile -C build
  }
  
+@@ -121,7 +119,7 @@
+ 
+   trap "kill $_w; wait" EXIT
+ 
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs --no-suite headless # skip these test for now
+ )
+ 
+ _pick() {
 
 
 ############# Stripped diff below #################
@@ -77,21 +44,9 @@
    wayland
  )
  makedepends=(
-@@ -56,21 +55,20 @@
-   shaderc
-   wayland-protocols
- )
- prepare() {
-   cd gtk
--  git cherry-pick -n 4d7277f72c8f4915f237e36982ffd7dfba524b15
- }
- build() {
-   local meson_options=(
-     -D broadway-backend=true
-     -D cloudproviders=enabled
+@@ -67,10 +66,9 @@
      -D colord=enabled
--    -D documentation=true
-+    -D gtk_doc=true
+     -D documentation=true
      -D man-pages=true
 -    -D tracker=enabled
    )

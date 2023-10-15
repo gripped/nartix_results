@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,10 +8,8 @@
+ license=('custom:Artistic 2.0')
+ depends=(glibc)
+ _archive="$pkgname-$pkgver"
+-source=("${url%/*}/sources/$_archive.tar.gz"
+-        "$_archive.tar.gz.sig::${url%/*}/sources/$_archive.tar.gz.txt")
+-sha256sums=('5cec4f737826a0eddab471dd3b75a587bd29a2e7cfa30068d57f29439a251fdf'
+-            'SKIP')
++source=("${url%/*}/sources/$_archive.tar.gz")
++sha256sums=('5cec4f737826a0eddab471dd3b75a587bd29a2e7cfa30068d57f29439a251fdf')
+ validpgpkeys=(2189D5C29F041F2277AFD50AC1596BA33FC56F51  # andrew.wood@ivarch.com
+               4267B4F90F2678A112169BD61D1EF7581B45E9A0) # https://codeberg.org/a-j-wood.gpg
+ 

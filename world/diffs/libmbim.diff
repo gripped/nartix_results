@@ -1,49 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,17 @@
- 
- pkgname=libmbim
--pkgver=1.30.0
-+pkgver=1.28.4
- pkgrel=1
- pkgdesc="MBIM modem protocol helper library"
- url="https://www.freedesktop.org/wiki/Software/libmbim/"
- arch=(x86_64)
- license=(GPL2)
--depends=(
--  bash
--  glib2
+@@ -9,7 +9,6 @@
+ depends=(
+   bash
+   glib2
 -  systemd
--)
--makedepends=(
--  bash-completion
--  git
--  gobject-introspection
--  gtk-doc
--  help2man
--  meson
--)
-+depends=(glib2 bash)
-+makedepends=(gtk-doc meson git help2man gobject-introspection bash-completion)
- provides=(libmbim-glib.so)
--_commit=8415687e4f30ae5e36f407f179c8147f1529725c  # tags/1.30.0^0
-+_commit=7f1c7907c4654ba5c619a635cef5475ca161d027  # tags/1.28.4^0
- source=("git+https://gitlab.freedesktop.org/mobile-broadband/libmbim.git#commit=$_commit")
--b2sums=('SKIP')
-+sha256sums=('SKIP')
+ )
+ makedepends=(
+   bash-completion
+@@ -38,7 +37,7 @@
+     -D gtk_doc=true
+   )
  
- pkgver() {
-   cd libmbim
-@@ -34,11 +23,7 @@
- }
- 
- build() {
--  local meson_options=(
--    -D gtk_doc=true
--  )
--
 -  arch-meson libmbim build "${meson_options[@]}"
-+  artix-meson libmbim build -D gtk_doc=true
++  artix-meson libmbim build "${meson_options[@]}"
    meson compile -C build
  }
  
@@ -53,32 +23,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,11 @@
- pkgname=libmbim
--depends=(
--  bash
--  glib2
+@@ -2,7 +2,6 @@
+ depends=(
+   bash
+   glib2
 -  systemd
--)
--makedepends=(
--  bash-completion
--  git
--  gobject-introspection
--  gtk-doc
--  help2man
--  meson
--)
-+depends=(glib2 bash)
-+makedepends=(gtk-doc meson git help2man gobject-introspection bash-completion)
- provides=(libmbim-glib.so)
- prepare() {
-   cd libmbim
- }
- build() {
--  local meson_options=(
--    -D gtk_doc=true
--  )
+ )
+ makedepends=(
+   bash-completion
+@@ -20,6 +19,6 @@
+   local meson_options=(
+     -D gtk_doc=true
+   )
 -  arch-meson libmbim build "${meson_options[@]}"
-+  artix-meson libmbim build -D gtk_doc=true
++  artix-meson libmbim build "${meson_options[@]}"
    meson compile -C build
  }

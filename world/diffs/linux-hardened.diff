@@ -4,11 +4,11 @@
  
  pkgbase=linux-hardened
 -pkgver=6.5.7.hardened1
-+pkgver=6.4.4.hardened1
++pkgver=6.4.14.hardened1
  pkgrel=1
  pkgdesc='Security-Hardened Linux'
  url='https://github.com/anthraxx/linux-hardened'
-@@ -10,10 +10,10 @@
+@@ -10,24 +10,20 @@
    bc
    cpio
    gettext
@@ -16,11 +16,16 @@
    libelf
    pahole
    perl
--  python
+   python
    tar
    xz
- 
-@@ -26,8 +26,8 @@
+-
+-  graphviz
+-  imagemagick
+-  python-sphinx
+-  texlive-latexextra
+ )
+ options=('!strip')
  _srcname=linux-${pkgver%.*}
  _srctag=${pkgver%.*}-${pkgver##*.}
  source=(
@@ -31,7 +36,7 @@
    config  # the main kernel config file
  )
  validpgpkeys=(
-@@ -35,18 +35,13 @@
+@@ -35,18 +31,13 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
@@ -41,21 +46,21 @@
 -            'SKIP'
 -            '059173bee257e81b539418d88e826c3662213d1ce2da3acfe8abcf95c7bb4f7e')
 -b2sums=('a9bed9907bf4b22c08df8a8beaaf923648e4f0f1a4b00c11012871094e7c06a127e54bc1935edb8afc92999456c01ebabd04bc542a0e2fa16de0852a5f4be681'
-+b2sums=('1ab6c93da986dac6a07a5e3bc764f9d2a5bb9b8989321244455d894690634ac04364e6a3f960e8674f47ae22fc4ed09b18aa60cbf279636083e61aa6524f8a59'
++b2sums=('f81dabaef7e31b743aeb75d0dbb0a337e747d1d743fb0b38cb314498200d8d459d82f5f8bb34d6ad688842f3617fd53fd35b1b518654c845a6781580531ab1b2'
          'SKIP'
 -        'ea5238fb1d9e9b028ac40de5a669ce3b413635a5229b9588166488ab97a3558ea9119d8bc540bee4c960da53195b85f4507d18fbe0f61de58f1629ae049ab85f'
-+        'f67b0f6c4eca304f28cd01412d6a56f97fa9e495d5b368e105f22e56e6ea3228466770121555a571955b044dd7dad4e84d012c39327bd1389bdd7b63bb5fd47b'
++        'd12ff8cbb4dc171167050a198a783e8341df51aa1c3579d3c3f20b9d28025847e6cae9575fc2a37dda2e0f96a10d0306ec4293edaa53ebdfe15a21892c6d2a5f'
          'SKIP'
 -        'aca6c9d9893d7a494a70f8d784b094fac92ff7f906ddbb2baa91f8cf11e540495a5f91982b77db654945ecb0794903da29015b89561a84028c2734470f846eed')
 -
 -export KBUILD_BUILD_HOST=archlinux
-+        '53528e2600f3be7689cdd91749f7147c612c5a384eee0d4a3f91ddec98eae3cd0de01f1227ddb18c758fd154c74647fe618d129596f4c41e50b00e663b02c475')
++        'f60be61e60a36d8c8fd186ddb2ac7514a6439c413a0a563d8c3d13593aaa5e34e20a3ddeba2d0b868fffdd515678320ddda1fe843e24f90369c1d4d0c4019306')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -61,7 +56,6 @@
+@@ -61,7 +52,6 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -63,7 +68,7 @@
      [[ $src = *.patch ]] || continue
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
-@@ -78,12 +72,8 @@
+@@ -78,12 +68,7 @@
  
  build() {
    cd $_srcname
@@ -73,11 +78,10 @@
 -
    make all
 -  wait "${pid_docs}"
-+  make htmldocs
  }
  
  _package() {
-@@ -103,8 +93,6 @@
+@@ -103,8 +88,6 @@
      VIRTUALBOX-GUEST-MODULES
      WIREGUARD-MODULE
    )
@@ -92,7 +96,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,10 @@
+@@ -3,21 +3,18 @@
    bc
    cpio
    gettext
@@ -100,11 +104,14 @@
    libelf
    pahole
    perl
--  python
+   python
    tar
    xz
-   graphviz
-@@ -17,7 +17,7 @@
+-  graphviz
+-  imagemagick
+-  python-sphinx
+-  texlive-latexextra
+ )
  options=('!strip')
  _srcname=linux-${pkgver%.*}
  _srctag=${pkgver%.*}-${pkgver##*.}
@@ -113,7 +120,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-@@ -29,7 +29,6 @@
+@@ -29,7 +26,6 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -121,7 +128,7 @@
      [[ $src = *.patch ]] || continue
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
-@@ -43,10 +42,8 @@
+@@ -43,10 +39,7 @@
  }
  build() {
    cd $_srcname
@@ -129,11 +136,10 @@
 -  local pid_docs=$!
    make all
 -  wait "${pid_docs}"
-+  make htmldocs
  }
  _package() {
    depends=(
-@@ -58,8 +55,6 @@
+@@ -58,8 +51,6 @@
      KSMBD-MODULE
      VIRTUALBOX-GUEST-MODULES
      WIREGUARD-MODULE

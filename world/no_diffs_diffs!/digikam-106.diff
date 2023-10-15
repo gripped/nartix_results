@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ validpgpkeys=(D1CF2444A7858C5F2FB095B74A77747BC2386E50) # digiKam.org (digiKam project) <digikamdeveloper@gmail.com>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_TESTING=OFF \
+     -DENABLE_KFILEMETADATASUPPORT=ON \
+     -DENABLE_MEDIAPLAYER=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+             'rawtherapee: RAW import' 'darktable: RAW import'
+             'perl: for digitaglinktree')
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_TESTING=OFF \
+     -DENABLE_KFILEMETADATASUPPORT=ON \
+     -DENABLE_MEDIAPLAYER=ON \

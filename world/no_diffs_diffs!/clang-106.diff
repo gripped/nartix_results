@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=clang
+ pkgver=16.0.6
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="C language family frontend for LLVM"
+ arch=('x86_64')
+ url="https://clang.llvm.org/"
+@@ -92,12 +92,12 @@
+     -DSPHINX_WARNINGS_AS_ERRORS=OFF
+   )
+ 
+-  cmake .. "${cmake_args[@]}"
++  artix-cmake .. "${cmake_args[@]}"
+   local distribution_components=$(_get_distribution_components | paste -sd\;)
+   test -n "$distribution_components"
+   cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
+ 
+-  cmake .. "${cmake_args[@]}"
++  artix-cmake .. "${cmake_args[@]}"
+   ninja
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -56,11 +56,11 @@
+     -DLLVM_MAIN_SRC_DIR="$srcdir/llvm-$pkgver.src"
+     -DSPHINX_WARNINGS_AS_ERRORS=OFF
+   )
+-  cmake .. "${cmake_args[@]}"
++  artix-cmake .. "${cmake_args[@]}"
+   local distribution_components=$(_get_distribution_components | paste -sd\;)
+   test -n "$distribution_components"
+   cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
+-  cmake .. "${cmake_args[@]}"
++  artix-cmake .. "${cmake_args[@]}"
+   ninja
+ }
+ _python_optimize() {

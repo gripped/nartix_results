@@ -3,10 +3,10 @@
 @@ -1,7 +1,7 @@
  
  pkgname=wine-staging
--pkgver=8.15
--pkgrel=2
-+pkgver=8.12
-+pkgrel=1
+-pkgver=8.18
+-pkgrel=1
++pkgver=8.15
++pkgrel=2
  
  _pkgbasever=${pkgver/rc/-rc}
  _winever=$_pkgbasever
@@ -14,11 +14,11 @@
          "https://github.com/wine-staging/wine-staging/archive/v$_pkgbasever/wine-staging-v$_pkgbasever.tar.gz"
          30-win32-aliases.conf
          wine-binfmt.conf)
--sha512sums=('d450dfe868ac7c7cb26ccc5e6d492c1311395c5f8b150610f5b1e78451d303b63b67c7e0ad48d6a66ae5265c5bc16da970544cf12195d8635cc3fc96c4a26cad'
-+sha512sums=('6b9eab7ca1ed5a13202b1250d8d95f6bd8ee5176f0c39b5358aedaf28f7f23543f4a73bf0782c3b4e50936813fc2a459582b5d294569c976ace784fbd9e0af1b'
+-sha512sums=('0f8e6b5c6709930bc7f774d92cd025976f6442c3785a224b5988a37152f3a875150b228f12442e9b9c0d9e7884568aca26159df86d48f2550a630625fef3c8b9'
++sha512sums=('d450dfe868ac7c7cb26ccc5e6d492c1311395c5f8b150610f5b1e78451d303b63b67c7e0ad48d6a66ae5265c5bc16da970544cf12195d8635cc3fc96c4a26cad'
              'SKIP'
--            '23d956dd9a5d5b8cb4efd5dcb5a0fd5926539b7e45d230920e20a84d27ecd6e4b1cc8285d328a0be622f66c48d453b577a4eeb096f8a866760da81cc47410a2a'
-+            '11364b2367e25706b98c168710288b796e9dea1e3400efc0d010ea8827cb8c4187385f53aebd1fda46611902f6619282ea97ce9d7c20fe18aa48c14f15c99d14'
+-            '1016849b3381a3ac039c2376517a5c7857f632eb1e49e9e3d6feedbc8c4e182da1a7117e89a1a1e4798121176e04b8f91cf3f3c001abf767398a3c3cd38850fb'
++            '23d956dd9a5d5b8cb4efd5dcb5a0fd5926539b7e45d230920e20a84d27ecd6e4b1cc8285d328a0be622f66c48d453b577a4eeb096f8a866760da81cc47410a2a'
              '6e54ece7ec7022b3c9d94ad64bdf1017338da16c618966e8baf398e6f18f80f7b0576edf1d1da47ed77b96d577e4cbb2bb0156b0b11c183a0accf22654b0a2bb'
              'bdde7ae015d8a98ba55e84b86dc05aca1d4f8de85be7e4bd6187054bfe4ac83b5a20538945b63fb073caab78022141e9545685e4e3698c97ff173cf30859e285')
  validpgpkeys=(5AC1A08B03BD7A313E0A955AF5E6E9EEB9461DD7
@@ -27,21 +27,26 @@
  )
  
 -makedepends=(autoconf bison perl flex mingw-w64-gcc
-+makedepends=(autoconf bison perl fontforge flex
++makedepends=(autoconf bison perl flex
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
-@@ -85,8 +85,8 @@
-   samba           dosbox
- )
+@@ -97,12 +97,12 @@
  
--provides=("wine=$pkgver")
--conflicts=('wine')
-+provides=("wine=$pkgver" "wine-wow64=$pkgver")
-+conflicts=('wine' 'wine-wow64')
- install=wine.install
+   cd $pkgname
+   ../wine-staging-$_pkgbasever/staging/patchinstall.py --all
++
++  export CFLAGS="${CFLAGS/-fno-plt/}"
++  export LDFLAGS="${LDFLAGS/,-z,now/}"
+ }
  
- prepare() {
+ build() {
+-  export CFLAGS="${CFLAGS/-fno-plt/}"
+-  export LDFLAGS="${LDFLAGS/,-z,now/}"
+-
+   cd "$srcdir"
+ 
+   msg2 "Building Wine-64..."
 @@ -151,8 +151,5 @@
    install -m644 "$srcdir/30-win32-aliases.conf" "$pkgdir/usr/share/fontconfig/conf.avail"
    ln -s ../conf.avail/30-win32-aliases.conf "$pkgdir/usr/share/fontconfig/conf.default/30-win32-aliases.conf"
@@ -62,18 +67,20 @@
    desktop-file-utils
  )
 -makedepends=(autoconf bison perl flex mingw-w64-gcc
-+makedepends=(autoconf bison perl fontforge flex
++makedepends=(autoconf bison perl flex
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
-@@ -39,8 +39,8 @@
-   samba
-   opencl-headers
- )
--provides=("wine=$pkgver")
--conflicts=('wine')
-+provides=("wine=$pkgver" "wine-wow64=$pkgver")
-+conflicts=('wine' 'wine-wow64')
- install=wine.install
- prepare() {
-   mv wine-$_winever $pkgname
+@@ -48,10 +48,10 @@
+   mkdir $pkgname-{32,64}-build
+   cd $pkgname
+   ../wine-staging-$_pkgbasever/staging/patchinstall.py --all
++  export CFLAGS="${CFLAGS/-fno-plt/}"
++  export LDFLAGS="${LDFLAGS/,-z,now/}"
+ }
+ build() {
+-  export CFLAGS="${CFLAGS/-fno-plt/}"
+-  export LDFLAGS="${LDFLAGS/,-z,now/}"
+   cd "$srcdir"
+   msg2 "Building Wine-64..."
+   cd "$srcdir/$pkgname-64-build"

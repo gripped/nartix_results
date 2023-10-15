@@ -1,30 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,26 @@
- 
- pkgname=tor
--pkgver=0.4.8.7
--pkgrel=1
-+pkgver=0.4.7.13
-+pkgrel=2
- pkgdesc='Anonymizing overlay network.'
- arch=('x86_64')
- url='https://www.torproject.org/download/tor/'
- license=('BSD')
--depends=(
--  'bash'
--  'libcap.so'
--  'libcrypto.so'
--  'libevent'
--  'liblzma.so'
--  'libseccomp.so'
--  'libssl.so'
+@@ -14,25 +14,24 @@
+   'liblzma.so'
+   'libseccomp.so'
+   'libssl.so'
 -  'libsystemd.so'
--  'libz.so'
--  'libzstd.so'
--)
-+depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap'
-+         'libzstd.so' 'libseccomp.so' 'libcap.so')
++  'etmpfiles'
++  'esysusers'
+   'libz.so'
+   'libzstd.so'
+ )
  optdepends=('torsocks: for torify')
 -makedepends=('ca-certificates' 'systemd')
 +makedepends=('ca-certificates')
@@ -34,14 +19,11 @@
          'tor.sysusers'
 -        'tor.tmpfiles'
 -        'tor.service')
--b2sums=('4d0cde752a729c64e380663e4438398fe768a8657e9aa3246bdf0ec9a4b4e01e277cb594ae0cb44cc66ea8c6080f2e58c6daf1bf01dc51b678d228e8e38fc971'
--        'd52ba96072b94775ce6d5cb3e31590af5d78cb63aa5c9097ebe526addd850aae54cdd21a49822e41444144b0cb0d7709492f7c42f53873706a4b09d844ad92ce'
 +        'tor.tmpfiles')
-+b2sums=('338a0a541423f27f594a091307b5edeafc9826bb651c2bd050f3282c9355d9d43d1ef4791f3c98a37dc4c0f64bc40925ea1c1e32cbdff78b1a7308df501f279a'
-+        '339db9869bfe485cbd328fe942cc23e60c08ad67fc2d9e7927ed3c9f3b606192e5efac34013c5bf0b0e8b26e957dcf8b586e1cc0a0c27756b8b3d823af37fdee'
+ b2sums=('4d0cde752a729c64e380663e4438398fe768a8657e9aa3246bdf0ec9a4b4e01e277cb594ae0cb44cc66ea8c6080f2e58c6daf1bf01dc51b678d228e8e38fc971'
+         'd52ba96072b94775ce6d5cb3e31590af5d78cb63aa5c9097ebe526addd850aae54cdd21a49822e41444144b0cb0d7709492f7c42f53873706a4b09d844ad92ce'
          'SKIP'
--        '98baf96cdac36072086f48bf4701cede6cf31eee207f4a1a4cfc81b483ba53b991082aaf4ed638e50dfd67fb006bbd915af97943ab658df29dfa51ea4aa77dd2'
-+        '3359e138d823a77df2a42ce3fe8c6ecb4004e9ec191863db7857aceea7c136c78f09518b1a199dfd3215f5d61f1c060f4a0e2141c5bdb6b847af60fb6e9a81a7'
+         '98baf96cdac36072086f48bf4701cede6cf31eee207f4a1a4cfc81b483ba53b991082aaf4ed638e50dfd67fb006bbd915af97943ab658df29dfa51ea4aa77dd2'
          '9053da53926f2120ac57b6c1442238f5bbd89bf9270347c4e00b721b39939bebc6adfcf814a9d7289dfd14d085d91c193529305336db93190da5b7f586a031df'
 -        '5d55d9a7e42b6ce78b8ab985bab37afe8f0bacddb5abd895c4a490adb8f98b9422f90b40066fef05ecf37b7b21e80aadc615c4b7f6e12b05581304113a1b1f1d'
 -        '79d35290cd40e407d3102366d585d37e3b50b41e30b7046f8b1c6a7ee199137701b3c5c4e63f5967d6185b66d675b71157d1ef673648162921323732bb0546cf')
@@ -49,7 +31,7 @@
  validpgpkeys=(
    '2133BC600AB133E1D826D173FE43009C4607B1FB' # Nick Mathewson
    'B74417EDDF22AC9F9E90F49142E86A2A11F48D36' # David Goulet
-@@ -60,7 +48,6 @@
+@@ -60,7 +59,6 @@
    make DESTDIR="${pkgdir}" install
    mv "${pkgdir}"/etc/tor/torrc{.sample,}
  
@@ -63,23 +45,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,7 @@
- pkgname=tor
--depends=(
--  'bash'
--  'libcap.so'
--  'libcrypto.so'
--  'libevent'
--  'liblzma.so'
--  'libseccomp.so'
--  'libssl.so'
+@@ -7,11 +7,12 @@
+   'liblzma.so'
+   'libseccomp.so'
+   'libssl.so'
 -  'libsystemd.so'
--  'libz.so'
--  'libzstd.so'
--)
++  'etmpfiles'
++  'esysusers'
+   'libz.so'
+   'libzstd.so'
+ )
 -makedepends=('ca-certificates' 'systemd')
-+depends=('openssl' 'libevent' 'bash' 'libseccomp' 'zstd' 'libcap'
-+         'libzstd.so' 'libseccomp.so' 'libcap.so')
 +makedepends=('ca-certificates')
  backup=('etc/tor/torrc')
  prepare() {

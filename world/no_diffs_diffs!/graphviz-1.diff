@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=graphviz
 -pkgver=9.0.0
+-pkgrel=1
 +pkgver=8.1.0
- pkgrel=1
++pkgrel=2
  pkgdesc='Graph visualization software'
  url='https://www.graphviz.org/'
+ license=('EPL')
 @@ -20,7 +20,7 @@
              'xterm: vimdot')
  source=("https://gitlab.com/graphviz/graphviz/-/archive/$pkgver/$pkgname-$pkgver.tar.gz"

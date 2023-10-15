@@ -1,39 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,27 @@
- 
- pkgname=man-db
--pkgver=2.12.0
-+pkgver=2.11.2
- pkgrel=1
- pkgdesc="A utility for reading man pages"
- arch=('x86_64')
--url="https://gitlab.com/man-db/man-db"
-+url="https://gitlab.com/cjwatson/man-db"
- license=('GPL' 'LGPL')
--depends=( 'bash' 'gdbm' 'zlib' 'groff' 'libpipeline' 'less' 'libseccomp' 'glibc')
-+depends=( 'bash' 'gdbm' 'zlib' 'groff' 'libpipeline' 'less' 'libseccomp')
- makedepends=('po4a')
- optdepends=('gzip') # covered by virtual "base" package
- backup=('etc/man_db.conf')
- conflicts=('man')
- provides=('man')
+@@ -15,10 +15,12 @@
  replaces=('man')
-+options=('debug')
  install=${pkgname}.install
  source=(https://savannah.nongnu.org/download/man-db/$pkgname-$pkgver.tar.xz{,.asc}
 +        convert-mans
  )
  validpgpkeys=('AC0A4FF12611B6FCCF01C111393587D97D86500B') # Colin Watson <cjwatson@debian.org>
--sha512sums=('4b644a508cf10ef6d27b6325b08f8a89e0695bbc1409bf420efd27649c6851860cc472c4d86063f7b71dccd01fb158faa82afa1e2b91c9a20154acf66b0349bf'
+ sha512sums=('4b644a508cf10ef6d27b6325b08f8a89e0695bbc1409bf420efd27649c6851860cc472c4d86063f7b71dccd01fb158faa82afa1e2b91c9a20154acf66b0349bf'
 -            'SKIP')
-+sha512sums=('edb71cce7249c7b7f2f524e92f682047a77ed9ae8856763dfc8e18e239444651ff4c505e697f5a8b1be3b85678e714fbb1a520defe72a4eb685bc2cecc0e4391'
 +            'SKIP'
 +            '0b159285da20008f0fc0afb21f1eaebd39e8df5b0594880aa0e8a913b656608b8d16bb8d279d9e62d7aae52f62cb9b2fc49e237c6711f4a5170972b38d345535')
  
  build() {
    cd ${pkgname}-${pkgver}
-@@ -26,7 +29,7 @@
+@@ -26,7 +28,7 @@
      --sbindir=/usr/bin \
      --sysconfdir=/etc \
      --libexecdir=/usr/lib \
@@ -42,7 +23,7 @@
      --with-snapdir=/var/lib/snapd/snap \
      --with-db=gdbm \
      --disable-setuid \
-@@ -47,6 +50,5 @@
+@@ -47,6 +49,5 @@
  
    rm -f ${pkgdir}/usr/bin/zsoelim
  
@@ -56,19 +37,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,11 @@
- pkgname=man-db
--depends=( 'bash' 'gdbm' 'zlib' 'groff' 'libpipeline' 'less' 'libseccomp' 'glibc')
-+depends=( 'bash' 'gdbm' 'zlib' 'groff' 'libpipeline' 'less' 'libseccomp')
- makedepends=('po4a')
- backup=('etc/man_db.conf')
- conflicts=('man')
- provides=('man')
- replaces=('man')
- install=${pkgname}.install
- build() {
-   cd ${pkgname}-${pkgver}
-@@ -12,7 +13,7 @@
+@@ -12,7 +12,7 @@
      --sbindir=/usr/bin \
      --sysconfdir=/etc \
      --libexecdir=/usr/lib \

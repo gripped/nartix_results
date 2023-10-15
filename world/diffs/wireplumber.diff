@@ -1,16 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,8 +4,8 @@
-   wireplumber
-   libwireplumber
- )
--_commit=d67b48e595cb4612fd7fd47f97df6b8883ef7f60  # tags/0.4.15
--pkgver=0.4.15
-+_commit=6d0c7f7b7f484b3cd2aaf2e2b3cc902c095b4946  # tags/0.4.14
-+pkgver=0.4.14
- pkgrel=1
- pkgdesc="Session / policy manager implementation for PipeWire"
- url="https://pipewire.pages.freedesktop.org/wireplumber/"
 @@ -13,6 +13,7 @@
  license=(MIT)
  makedepends=(
@@ -19,30 +8,23 @@
    git
    glib2
    gobject-introspection
-@@ -21,11 +22,11 @@
+@@ -21,7 +22,6 @@
    meson
    pipewire
    python-lxml
 -  systemd
  )
-+depends=('libelogind')
  checkdepends=(pipewire-audio)
  source=("git+https://gitlab.freedesktop.org/pipewire/$pkgbase.git#commit=$_commit")
--b2sums=('SKIP')
-+sha256sums=('SKIP')
- 
- pkgver() {
-   cd $pkgbase
-@@ -38,12 +39,13 @@
+@@ -38,12 +38,13 @@
  
  build() {
    local meson_options=(
-+    -D system-lua=true
 +    -D systemd=disabled
      -D doc=disabled
 -    -D elogind=disabled
--    -D system-lua=true
 +    -D elogind=enabled
+     -D system-lua=true
    )
  
 -  arch-meson $pkgbase build "${meson_options[@]}"
@@ -50,7 +32,7 @@
    meson compile -C build
  }
  
-@@ -66,13 +68,12 @@
+@@ -66,13 +67,11 @@
  package_wireplumber() {
    depends=(
      "libwireplumber=$pkgver-$pkgrel"
@@ -58,7 +40,6 @@
      lua
      pipewire
    )
-+  optdepends=('wireplumber-docs: Documentation')
    provides=(pipewire-session-manager)
    conflicts=(pipewire-media-session)
 -  install=wireplumber.install
@@ -79,31 +60,29 @@
    git
    glib2
    gobject-introspection
-@@ -13,18 +14,19 @@
+@@ -13,18 +14,18 @@
    meson
    pipewire
    python-lxml
 -  systemd
  )
-+depends=('libelogind')
  prepare() {
    cd $pkgbase
  }
  build() {
    local meson_options=(
-+    -D system-lua=true
 +    -D systemd=disabled
      -D doc=disabled
 -    -D elogind=disabled
--    -D system-lua=true
 +    -D elogind=enabled
+     -D system-lua=true
    )
 -  arch-meson $pkgbase build "${meson_options[@]}"
 +  artix-meson $pkgbase build "${meson_options[@]}"
    meson compile -C build
  }
  _pick() {
-@@ -40,13 +42,11 @@
+@@ -40,13 +41,11 @@
  package_wireplumber() {
    depends=(
      "libwireplumber=$pkgver-$pkgrel"

@@ -1,209 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,20 @@
- 
- pkgbase=linux-zen
--pkgver=6.5.7.zen1
-+pkgver=6.4.4.zen1
- pkgrel=1
- pkgdesc='Linux ZEN'
--url='https://github.com/zen-kernel/zen-kernel'
-+_srctag=v${pkgver%.*}-${pkgver##*.}
-+url="https://github.com/zen-kernel/zen-kernel/commits/$_srctag"
- arch=(x86_64)
- license=(GPL2)
- makedepends=(
-   bc
-   cpio
-   gettext
-+  git
-   libelf
-   pahole
-   perl
--  python
-   tar
-   xz
- 
-@@ -23,32 +24,28 @@
-   texlive-latexextra
- )
- options=('!strip')
--_srcname=linux-${pkgver%.*}
--_srctag=v${pkgver%.*}-${pkgver##*.}
-+_srcname=zen-kernel
- source=(
--  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
--  $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
-+  "$_srcname::git+https://github.com/zen-kernel/zen-kernel?signed#tag=$_srctag"
-   config  # the main kernel config file
- )
- validpgpkeys=(
-   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
-   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
-   A2FF3A36AAA56654109064AB19802F8B0D70FC30  # Jan Alexander Steffens (heftig)
--)
--sha256sums=('0d09ea448005c9cfe5383e4c72a872b39188b928f8c44e146b03b1b7851fbb8c'
--            'SKIP'
--            'd8774bae59d5f5c55ce3f46c355e022f222335d97bc9540d35402b152f83e5e8'
--            'SKIP'
+@@ -39,14 +39,14 @@
+             'SKIP'
+             'd8774bae59d5f5c55ce3f46c355e022f222335d97bc9540d35402b152f83e5e8'
+             'SKIP'
 -            '4de9475254b54ff08f9cb1ca7d69e0eab2a4c2765bbdb9db79d6bb2225df2a9b')
--b2sums=('a9bed9907bf4b22c08df8a8beaaf923648e4f0f1a4b00c11012871094e7c06a127e54bc1935edb8afc92999456c01ebabd04bc542a0e2fa16de0852a5f4be681'
--        'SKIP'
--        'd1e73c84d195555a6b6dfb7e14d2a92dde26768c6ac9c1559b1f2217f8b08c9003ed9ff98127d6b7169a66d42926fcc3e5d2c9559d53db86499d484739cfea12'
--        'SKIP'
++            '22cef01c043c19fa04784f076ca55d54825cc2425cfafe25d937099b5d6167af')
+ b2sums=('a9bed9907bf4b22c08df8a8beaaf923648e4f0f1a4b00c11012871094e7c06a127e54bc1935edb8afc92999456c01ebabd04bc542a0e2fa16de0852a5f4be681'
+         'SKIP'
+         'd1e73c84d195555a6b6dfb7e14d2a92dde26768c6ac9c1559b1f2217f8b08c9003ed9ff98127d6b7169a66d42926fcc3e5d2c9559d53db86499d484739cfea12'
+         'SKIP'
 -        'a33473ba721e7cf2de2cfeef3b2d54605c207c75604aca9a5d6be8020368e848f674ef6662d78fd864dd775bcbbb4c649c6e6721783fdc56fdd383963b735437')
 -
 -export KBUILD_BUILD_HOST=archlinux
-+  C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D  # Steven Barrett <steven@liquorix.net>
-+)
-+b2sums=('SKIP'
-+        '3030f0ba73cc349456b9eadb1e2a02a10f82b0dbadbae3eba8c88b3bda573cdd7c345c857258737fbc39528123adf0de00d58d968292657aaa9f8e2dfd939e8e')
++        '890d55f5b300febca001bf1a715d114497a74246f49e1465f9969c6bea50d918bc0ce4599e78c9a1f49799c508bf054744600a9b0d14f3a117400540e514f4ef')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
-+
-+_make() {
-+  test -s version
-+  make KERNELRELEASE="$(<version)" "$@"
-+}
  
- prepare() {
-   cd $_srcname
-@@ -56,12 +53,14 @@
-   echo "Setting version..."
-   echo "-$pkgrel" > localversion.10-pkgrel
-   echo "${pkgbase#linux}" > localversion.20-pkgname
-+  make defconfig
-+  make -s kernelrelease > version
-+  make mrproper
- 
-   local src
-   for src in "${source[@]}"; do
-     src="${src%%::*}"
-     src="${src##*/}"
--    src="${src%.zst}"
-     [[ $src = *.patch ]] || continue
-     echo "Applying patch $src..."
-     patch -Np1 < "../$src"
-@@ -69,17 +68,16 @@
- 
-   echo "Setting config..."
-   cp ../config .config
--  make olddefconfig
-+  _make olddefconfig
-   diff -u ../config .config || :
- 
--  make -s kernelrelease > version
-   echo "Prepared $pkgbase version $(<version)"
- }
- 
- build() {
-   cd $_srcname
--  make all
--  make htmldocs
-+  _make all
-+  _make htmldocs
- }
- 
- _package() {
-@@ -107,12 +105,12 @@
-   local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
- 
-   echo "Installing boot image..."
--  install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
-+  install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
- 
-   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
- 
-   echo "Installing modules..."
--  ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
-+  ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
-     DEPMOD=/doesnt/exist modules_install  # Suppress depmod
- 
-   rm "$modulesdir"/{source,build}
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
- pkgbase=linux-zen
-+_srctag=v${pkgver%.*}-${pkgver##*.}
- makedepends=(
-   bc
-   cpio
-   gettext
-+  git
-   libelf
-   pahole
-   perl
--  python
-   tar
-   xz
-   graphviz
-@@ -15,37 +16,42 @@
-   texlive-latexextra
- )
- options=('!strip')
--_srcname=linux-${pkgver%.*}
--_srctag=v${pkgver%.*}-${pkgver##*.}
-+_srcname=zen-kernel
-+  C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D  # Steven Barrett <steven@liquorix.net>
+@@ -18,7 +18,7 @@
+ _srcname=linux-${pkgver%.*}
+ _srctag=v${pkgver%.*}-${pkgver##*.}
  )
 -export KBUILD_BUILD_HOST=archlinux
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
-+_make() {
-+  test -s version
-+  make KERNELRELEASE="$(<version)" "$@"
-+}
  prepare() {
-   cd $_srcname
-   echo "Setting version..."
-   echo "-$pkgrel" > localversion.10-pkgrel
-   echo "${pkgbase#linux}" > localversion.20-pkgname
-+  make defconfig
-+  make -s kernelrelease > version
-+  make mrproper
-   local src
-   for src in "${source[@]}"; do
-     src="${src%%::*}"
-     src="${src##*/}"
--    src="${src%.zst}"
-     [[ $src = *.patch ]] || continue
-     echo "Applying patch $src..."
-     patch -Np1 < "../$src"
-   done
-   echo "Setting config..."
-   cp ../config .config
--  make olddefconfig
-+  _make olddefconfig
-   diff -u ../config .config || :
--  make -s kernelrelease > version
-   echo "Prepared $pkgbase version $(<version)"
- }
- build() {
-   cd $_srcname
--  make all
--  make htmldocs
-+  _make all
-+  _make htmldocs
- }
- _package() {
-   depends=(
-@@ -65,10 +71,10 @@
-   cd $_srcname
-   local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-   echo "Installing boot image..."
--  install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
-+  install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
-   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
-   echo "Installing modules..."
--  ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
-+  ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
-     DEPMOD=/doesnt/exist modules_install  # Suppress depmod
-   rm "$modulesdir"/{source,build}
- }

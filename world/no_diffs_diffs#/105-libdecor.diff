@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ sha512sums=('27365c9029caed1064c36490c2007afe5af6ef60c0538a06755be200f122caf444c5dba951fcb954095600469466f75eb75f6f1a642acde065723755a7656a3d')
+ 
+ build() {
+-  arch-meson -Ddemo=false build "${pkgname}-${pkgver}"
++  artix-meson -Ddemo=false build "${pkgname}-${pkgver}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('wayland' 'pango' 'dbus' 'gtk3')
+ makedepends=('cmake' 'ninja' 'meson' 'wayland-protocols')
+ build() {
+-  arch-meson -Ddemo=false build "${pkgname}-${pkgver}"
++  artix-meson -Ddemo=false build "${pkgname}-${pkgver}"
+   meson compile -C build
+ }

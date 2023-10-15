@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ sha256sums=('835277fa21182188278260d9690e067e9d3bacd6793ffdcbe89bb128ec672a01')
+ 
+ build() {
+-	arch-meson "${pkgname}-${pkgver}" build
++	artix-meson "${pkgname}-${pkgver}" build
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ makedepends=('help2man' 'meson' 'vala')
+ install="${pkgname}.install"
+ build() {
+-	arch-meson "${pkgname}-${pkgver}" build
++	artix-meson "${pkgname}-${pkgver}" build
+ 	meson compile -C build
+ }

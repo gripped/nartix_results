@@ -1,29 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,29 @@
- 
- pkgname=drkonqi
--pkgver=5.27.8
-+pkgver=5.27.6
- _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=2
-+pkgrel=1
- pkgdesc='The KDE crash handler'
- arch=(x86_64)
- url='https://kde.org/plasma-desktop/'
- license=(GPL2)
--depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
-+depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
+@@ -10,13 +10,20 @@
+ depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
 -source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('8b8fcc506de14eccd1b57aa96541fdfea885db875e7a42feec702acd14d1db2c'
--            'SKIP')
 +source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
 +		no-systemd.patch)
-+sha256sums=('f95e169790af38621635c35af21c6785c9b64f64608a4ce09226762e7ba8ca13'
+ sha256sums=('8b8fcc506de14eccd1b57aa96541fdfea885db875e7a42feec702acd14d1db2c'
+-            'SKIP')
 +            'SKIP'
-+			'b529848e4d4d41675578748e6c8a87bfd875a8ac9af53c988ea5bebcea3de1b5')
++            'b529848e4d4d41675578748e6c8a87bfd875a8ac9af53c988ea5bebcea3de1b5')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
                '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
                'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
@@ -42,11 +29,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,12 @@
- pkgname=drkonqi
- _dirver=$(echo $pkgver | cut -d. -f1-3)
--depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
-+depends=(kidletime syntax-highlighting kirigami2 kitemmodels kuserfeedback kio gdb python-distro python-psutil qt5-tools)
+@@ -3,6 +3,10 @@
+ depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
 +prepare() {

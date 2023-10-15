@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -78,7 +78,7 @@
+               '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
+     -DBUILD_TESTING=OFF
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -58,7 +58,7 @@
+  <dimula73@gmail.com>
+               '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
+     -DBUILD_TESTING=OFF
+   cmake --build build

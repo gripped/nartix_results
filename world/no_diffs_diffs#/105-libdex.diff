@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,7 +42,7 @@
+     -D sysprof=true
+   )
+ 
+-  arch-meson libdex build "${meson_options[@]}"
++  artix-meson libdex build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+     -D docs=true
+     -D sysprof=true
+   )
+-  arch-meson libdex build "${meson_options[@]}"
++  artix-meson libdex build "${meson_options[@]}"
+   meson compile -C build
+ }
+ package_libdex-docs() {

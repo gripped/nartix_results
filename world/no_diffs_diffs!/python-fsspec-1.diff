@@ -1,30 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- _pkg=filesystem_spec
- pkgname=python-fsspec
--pkgver=2023.9.2
--pkgrel=1
-+pkgver=2022.11.0
-+pkgrel=4
- pkgdesc="Specification that python filesystems should adhere to."
- arch=(any)
- url="https://github.com/intake/filesystem_spec"
-@@ -30,7 +30,6 @@
-     python-aiohttp
-     python-dask
-     python-distributed
--    python-fastparquet
-     python-libarchive-c
-     python-paramiko
-     python-pyarrow
-@@ -51,7 +50,7 @@
+@@ -51,7 +51,7 @@
      jupyter-notebook
  )
  source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
 -sha256sums=('ff662ab7cae5d762645e51f81ccc065655f81f6c33cdbcb2bb4a60787e5724f4')
-+sha256sums=('0c0c8373aba084c192396796eb3445841627fa16c7e43fc984439ae5b1b87545')
++sha256sums=('cb0472d8e7a8b05fb6ffbbf3558a96c648ae8ee045b24a1996061447c2c0e8bf')
  
  build() {
    cd ${_pkg}-${pkgver}

@@ -1,17 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,18 @@
- 
- pkgname=libwacom
--pkgver=2.8.0
-+pkgver=2.7.0
- pkgrel=1
- pkgdesc="Library to identify Wacom tablets and their features"
+@@ -6,14 +6,13 @@
  arch=('x86_64')
  url="https://github.com/linuxwacom/libwacom/wiki"
  license=('MIT')
 -depends=('glib2' 'libgudev' 'glibc')
-+depends=('glib2' 'udev' 'libgudev')
++depends=('glib2' 'libgudev' 'libudev'  'glibc')
  makedepends=('libxml2' 'meson')
  checkdepends=('python-pytest' 'python-libevdev' 'python-pyudev')
  optdepends=('python-libevdev: for libwacom-show-stylus'
@@ -20,7 +14,7 @@
 -sha256sums=('bb04b12c8688d0ff6a108d47a38d2057d572c4d7227d78138abd5fd0ba59f215'
 -            'SKIP')
 +source=(https://github.com/linuxwacom/libwacom/releases/download/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.xz)
-+sha256sums=('853929bd73fba2064b12142dbbee4b3bf84509197ff46a4da559eddf62d32cdf')
++sha256sums=('bb04b12c8688d0ff6a108d47a38d2057d572c4d7227d78138abd5fd0ba59f215')
  validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') # "Peter Hutterer (Who-T) <office@who-t.net>"
  
  build() {
@@ -42,7 +36,7 @@
 @@ -1,5 +1,5 @@
  pkgname=libwacom
 -depends=('glib2' 'libgudev' 'glibc')
-+depends=('glib2' 'udev' 'libgudev')
++depends=('glib2' 'libgudev' 'libudev'  'glibc')
  makedepends=('libxml2' 'meson')
  build() {
    meson build $pkgname-$pkgver \

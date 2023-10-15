@@ -1,19 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=mate-utils
--pkgver=1.26.0
-+pkgver=1.27.0
- pkgrel=1
+ pkgver=1.26.0
+-pkgrel=1
++pkgrel=1.1
  pkgdesc="Common MATE utilities for viewing disk usage, logs and fonts, taking screenshots, managing dictionaries and searching files"
  url="http://mate-desktop.org"
-@@ -13,7 +13,7 @@
- conflicts=('mate-utils-gtk3')
- replaces=('mate-utils-gtk3')
- source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
--sha256sums=('7ca56ab242e8efaa64f93ffb84f6e4bf8d4d0df01e20b3b6ef8956ce3192782e')
-+sha256sums=('1ace72641eac1fcc814f09aab5f10fbd25a67bfb1c473c2118aea252631dfcb0')
- 
- build() {
-     	cd "${pkgname}-${pkgver}"
+ arch=('x86_64')

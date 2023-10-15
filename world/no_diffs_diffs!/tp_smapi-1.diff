@@ -3,19 +3,9 @@
 @@ -1,7 +1,7 @@
  
  pkgname=tp_smapi
--pkgver=0.44
+ pkgver=0.44
 -pkgrel=12
-+pkgver=0.43+r3+g35be4ab
-+pkgrel=7
++pkgrel=9
  pkgdesc="Modules for ThinkPad's SMAPI functionality"
  url='https://github.com/evgeni/tp_smapi'
  arch=(x86_64)
-@@ -10,7 +10,7 @@
-   git
-   linux-headers
- )
--_commit=6e80bb1752280bcd142d86ecd0739661bd0e8312  # master
-+_commit=35be4ab60d2330e4f806dfcbb616629f47e0e7f7  # master
- source=("git+https://github.com/evgeni/tp_smapi#commit=$_commit")
- b2sums=('SKIP')
- 

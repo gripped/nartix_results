@@ -1,0 +1,68 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,6 @@
+   squashfs-tools
+   strace
+   syslinux
+-  systemd-sysvcompat
+   vim
+   xfsprogs
+   yara
+@@ -73,7 +72,6 @@
+   cdrtools
+   cpio
+   erlang-nox
+-  ghc
+   go
+   gobject-introspection
+   gperf
+@@ -139,7 +137,7 @@
+     --prefix=/usr
+     --sbindir=/usr/bin
+     --sysconfdir=/etc
+-    --with-extra-packages="libldm systemd-sysvcompat openssh qemu"
++    --with-extra-packages="libldm openssh qemu"
+     --with-guestfs-path=/usr/lib/guestfs
+   )
+ 
+@@ -149,9 +147,6 @@
+   make
+ }
+ 
+-check() {
+-  LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
+-}
+ 
+ package() {
+   make INSTALLDIRS=vendor DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,6 @@
+   squashfs-tools
+   strace
+   syslinux
+-  systemd-sysvcompat
+   vim
+   xfsprogs
+   yara
+@@ -63,7 +62,6 @@
+   cdrtools
+   cpio
+   erlang-nox
+-  ghc
+   go
+   gobject-introspection
+   gperf
+@@ -100,7 +98,7 @@
+     --prefix=/usr
+     --sbindir=/usr/bin
+     --sysconfdir=/etc
+-    --with-extra-packages="libldm systemd-sysvcompat openssh qemu"
++    --with-extra-packages="libldm openssh qemu"
+     --with-guestfs-path=/usr/lib/guestfs
+   )
+   cd $pkgname-$pkgver

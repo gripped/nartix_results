@@ -1,22 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,22 @@
+@@ -1,6 +1,6 @@
  
  pkgname=postgresql-old-upgrade
 -pkgver=14.9
-+pkgver=14.7
++pkgver=15.4
  _majorver=${pkgver%.*}
--pkgrel=2
-+pkgrel=3
+ pkgrel=2
  pkgdesc='PostgreSQL build for migrating between major versions with pg_upgrade'
- url='https://www.postgresql.org/'
+@@ -8,15 +8,15 @@
  arch=('x86_64')
  license=('custom:PostgreSQL')
  depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl>=1.0.0' 'pam'
 -         'zlib' 'icu' 'systemd-libs' 'libldap' 'krb5' 'llvm15-libs')
 -makedepends=('python' 'perl' 'tcl>=8.6.0' 'systemd' 'llvm15' 'clang15')
-+         'zlib' 'icu' 'libldap' 'krb5' 'llvm-libs')
-+makedepends=('python' 'perl' 'tcl>=8.6.0' 'llvm' 'clang')
++         'zlib' 'icu' 'libldap' 'krb5' 'llvm15-libs')
++makedepends=('python' 'perl' 'tcl>=8.6.0' 'llvm15' 'clang15')
  optdepends=('python: for PL/Python 3 support'
              'perl: for PL/Perl support'
              'tcl: for PL/Tcl support')
@@ -24,13 +23,13 @@
 -md5sums=('2d878449c930592e6cf3482e949c787b')
 -sha256sums=('b1fe3ba9b1a7f3a9637dd1656dfdad2889016073fd4d35f13b50143cbbb6a8ef')
 -b2sums=('51c2e6205092873369ca68e2502cfccb1de7d6e8275ebd02dd58d8ed6133aaab9eacc21f8057b7e6555df4207b7af51f43c84b5e6e22eaa9c494e4eceb806fbb')
-+md5sums=('2f02e1f0c6c302c52f1e74973a8a38ff')
-+sha256sums=('cef60f0098fa8101c1546f4254e45b722af5431337945b37af207007630db331')
-+b2sums=('ad07ce5852b10c44a40c3ce2e991b806b8067cba09046715de76a672142517cd7ea633872235595b39b3fb41d4bfd11a56c6cda74703e821b3896206b1e68801')
++md5sums=('f2f861fb99d742cb9c2f8aa46a8a947d')
++sha256sums=('baec5a4bdc4437336653b6cb5d9ed89be5bd5c0c58b94e0becee0a999e63c8f9')
++b2sums=('e17c62c4e3f048f28073c1706bfa1d3eb065c1416117061fd07b325072c19348f8f2badea1364a054aebccf6d65c2ca21bb46d9cf621d78bd0a75f5dc4b21fe5')
  
  
  build() {
-@@ -34,7 +34,7 @@
+@@ -34,10 +34,12 @@
      --with-system-tzdata=/usr/share/zoneinfo
      --with-uuid=e2fs
      --with-icu
@@ -39,14 +38,11 @@
      --with-ldap
      --with-llvm
      --without-libxslt
-@@ -45,7 +45,6 @@
- 
-   CFLAGS+=" -ffat-lto-objects"
- 
--  LLVM_CONFIG=llvm-config-15 CLANG=/usr/lib/llvm15/bin/clang \
-   ./configure "${configure_options[@]}"
-   make -C src all
-   make -C contrib all
++    --with-lz4
++    --with-zstd
+     --disable-nls
+     --enable-thread-safety
+     --disable-rpath
 
 
 ############# Stripped diff below #################
@@ -59,12 +55,12 @@
  depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl>=1.0.0' 'pam'
 -         'zlib' 'icu' 'systemd-libs' 'libldap' 'krb5' 'llvm15-libs')
 -makedepends=('python' 'perl' 'tcl>=8.6.0' 'systemd' 'llvm15' 'clang15')
-+         'zlib' 'icu' 'libldap' 'krb5' 'llvm-libs')
-+makedepends=('python' 'perl' 'tcl>=8.6.0' 'llvm' 'clang')
++         'zlib' 'icu' 'libldap' 'krb5' 'llvm15-libs')
++makedepends=('python' 'perl' 'tcl>=8.6.0' 'llvm15' 'clang15')
  build() {
    cd postgresql-${pkgver}
    local configure_options=(
-@@ -18,7 +18,7 @@
+@@ -18,10 +18,12 @@
      --with-system-tzdata=/usr/share/zoneinfo
      --with-uuid=e2fs
      --with-icu
@@ -73,11 +69,8 @@
      --with-ldap
      --with-llvm
      --without-libxslt
-@@ -27,7 +27,6 @@
++    --with-lz4
++    --with-zstd
+     --disable-nls
+     --enable-thread-safety
      --disable-rpath
-   )
-   CFLAGS+=" -ffat-lto-objects"
--  LLVM_CONFIG=llvm-config-15 CLANG=/usr/lib/llvm15/bin/clang \
-   ./configure "${configure_options[@]}"
-   make -C src all
-   make -C contrib all

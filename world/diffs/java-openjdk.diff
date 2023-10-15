@@ -1,71 +1,378 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,13 +2,13 @@
- 
- pkgbase=java-openjdk
- pkgname=('jre-openjdk-headless' 'jre-openjdk' 'jdk-openjdk' 'openjdk-src' 'openjdk-doc')
--_majorver=21
-+_majorver=20
- _minorver=0
--_securityver=0
--_updatever=35
--pkgver=${_majorver}.u${_updatever}
-+_securityver=2
-+_updatever=9
-+pkgver=${_majorver}.${_minorver}.${_securityver}.u${_updatever}
- pkgrel=3
--_git_tag=jdk-${_majorver}+${_updatever}
-+_git_tag=jdk-${_majorver}.${_minorver}.${_securityver}+${_updatever}
+@@ -7,7 +7,7 @@
+ _securityver=0
+ _updatever=35
+ pkgver=${_majorver}.u${_updatever}
+-pkgrel=3
++pkgrel=5
+ _git_tag=jdk-${_majorver}+${_updatever}
  arch=('x86_64')
  url='https://openjdk.java.net/'
- license=('custom')
-@@ -21,10 +21,10 @@
-         freedesktop-java.desktop
-         freedesktop-jconsole.desktop
-         freedesktop-jshell.desktop)
--sha256sums=('b798ebc2e899a98edf2be99e786bb0fbad144e2270925dffe624fbe052f07ade'
--            '72111743ab6ab36854b0c85a504172983715d0798fce10bc4e35689b7d15fd93'
--            '8ecdf5c1605bafa58b3f7da615e6d8d3d943e3a2d3831930d6efa7815aacce07'
--            '50fc0d677489b73d549df2f08d759d5f057f200adbbab83ea5e87456152ee03e')
-+sha256sums=('4d6f176075d5f2ce62fd16ebd5cc4c27a3e551ce4d3d3bc0e9946454e52fc88d'
-+            '761d4f1274c7dfb4ff61f6d6cb01504f2f886240229e371647ce227fcf81278e'
-+            '2b17178ac414e1d0768c8f482779efa88bfeab17b8b0517df4e66b3c2874131c'
-+            '82329d23887df14bce3f8d8f356fe8f4b643831d40ade5fed31a070516f86fd7')
+@@ -40,12 +40,9 @@
+               lib/libjsound.so
+               lib/libsplashscreen.so)
  
- case "${CARCH}" in
-   x86_64) _JARCH='x86_64';;
-@@ -43,7 +43,6 @@
- _nonjre=(lib/ct.sym
-           lib/libattach.so
-           lib/libsaproc.so
+-_nonjre=(lib/ct.sym
+-          lib/libattach.so
+-          lib/libsaproc.so
 -          lib/lible.so
-           lib/src.zip)
+-          lib/src.zip)
+-
++_commondeps=('java-runtime-common>=3' 'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
++           'lcms2' 'liblcms2.so' 'libnet' 'freetype2' 'libfreetype.so' 'harfbuzz' 'libharfbuzz.so'
++           'glibc' 'gcc-libs')
  
+ build() {
+   cd ${_jdkdir}
+@@ -105,9 +102,7 @@
  
+ package_jre-openjdk-headless() {
+   pkgdesc="OpenJDK Java ${_majorver} headless runtime environment"
+-  depends=('java-runtime-common>=3' 'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
+-           'lcms2' 'liblcms2.so' 'libnet' 'freetype2' 'libfreetype.so' 'harfbuzz' 'libharfbuzz.so'
+-           'glibc' 'gcc-libs')
++  depends=("${_commondeps[@]}")
+   optdepends=('java-rhino: for some JavaScript support')
+   provides=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
+   backup=(etc/${pkgbase}/logging.properties
+@@ -128,24 +123,14 @@
+ 
+   cd ${_imgdir}/jre
+ 
+-  install -dm 755 "${pkgdir}${_jvmdir}"/bin
+-
+-  for i in $(ls bin/); do
+-    cp ../jdk/bin/$i "${pkgdir}${_jvmdir}/bin/"
+-  done
+-
+-  cp -a ../jdk/lib "${pkgdir}${_jvmdir}"
+-
+-  for f in "${_nonjre[@]}"; do
+-    rm "${pkgdir}${_jvmdir}/${f}"
+-  done
++  install -dm 755 "${pkgdir}${_jvmdir}"
++
++  cp -a bin lib \
++    "${pkgdir}${_jvmdir}"
+ 
+   for f in "${_nonheadless[@]}"; do
+     rm "${pkgdir}${_jvmdir}/${f}"
+   done
+-
+-  cp ../jdk/release "${pkgdir}${_jvmdir}"
+-  cp ../jdk/lib/modules "${pkgdir}${_jvmdir}/lib"
+ 
+   install -dm 755 "${pkgdir}/etc"
+   cp -r conf "${pkgdir}/etc/${pkgbase}"
+@@ -169,31 +154,91 @@
+ 
+ package_jre-openjdk() {
+   pkgdesc="OpenJDK Java ${_majorver} full runtime environment"
+-  depends=("jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}" 'giflib' 'libgif.so'
+-           'glibc' 'gcc-libs' 'libpng')
++  depends=("${_commondeps[@]}" 'giflib' 'libgif.so' 'libpng')
+   optdepends=('alsa-lib: for basic sound support'
+               'gtk2: for the Gtk+ 2 look and feel - desktop usage'
+               'gtk3: for the Gtk+ 3 look and feel - desktop usage')
+-  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}")
++  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
++            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  backup=(etc/${pkgbase}/logging.properties
++          etc/${pkgbase}/management/jmxremote.access
++          etc/${pkgbase}/management/jmxremote.password.template
++          etc/${pkgbase}/management/management.properties
++          etc/${pkgbase}/net.properties
++          etc/${pkgbase}/security/java.policy
++          etc/${pkgbase}/security/java.security
++          etc/${pkgbase}/security/policy/README.txt
++          etc/${pkgbase}/security/policy/limited/default_US_export.policy
++          etc/${pkgbase}/security/policy/limited/default_local.policy
++          etc/${pkgbase}/security/policy/limited/exempt_local.policy
++          etc/${pkgbase}/security/policy/unlimited/default_US_export.policy
++          etc/${pkgbase}/security/policy/unlimited/default_local.policy
++          etc/${pkgbase}/sound.properties)
+   install=install_jre-openjdk.sh
+ 
+   cd ${_imgdir}/jre
+ 
+   install -dm 755 "${pkgdir}${_jvmdir}"
++
++  cp -a bin lib \
++    "${pkgdir}${_jvmdir}"
+ 
+   for f in "${_nonheadless[@]}"; do
+     install -Dm 644 ${f} "${pkgdir}${_jvmdir}/${f}"
+   done
+ 
+-  install -dm 755 "${pkgdir}/usr/share/licenses"
+-  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  install -dm 755 "${pkgdir}/etc"
++  cp -r conf "${pkgdir}/etc/${pkgbase}"
++  ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
++
++  install -dm 755 "${pkgdir}/usr/share/licenses"
++  cp -r legal "${pkgdir}/usr/share/licenses/${pkgbase}"
++  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  ln -s /usr/share/licenses/${pkgbase} "${pkgdir}/${_jvmdir}/legal"
++
++  for f in bin/*; do
++    f=$(basename "${f}")
++    _man=../jdk/man/man1/"${f}.1"
++    test -f "${_man}" && install -Dm 644 "${_man}" "${pkgdir}/usr/share/man/man1/${f}-openjdk${_majorver}.1"
++  done
++  ln -s /usr/share/man "${pkgdir}/${_jvmdir}/man"
++
++  rm -f "${pkgdir}${_jvmdir}/lib/security/cacerts"
++  ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
+ }
+ 
+ package_jdk-openjdk() {
+   pkgdesc="OpenJDK Java ${_majorver} development kit"
+-  depends=("jre${_majorver}-openjdk=${pkgver}-${pkgrel}" 'java-environment-common=3'
+-           'hicolor-icon-theme' 'libelf' 'glibc' 'gcc-libs')
+-  provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}")
++  depends=("${_commondeps[@]}" 'java-environment-common=3'
++           'hicolor-icon-theme' 'libelf' 'libgif.so' 'libpng'
++           'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
++           'lcms2' 'liblcms2.so' 'libnet' 'freetype2' 'libfreetype.so' 'harfbuzz'
++           'libharfbuzz.so')
++  optdepends=('java-rhino: for some JavaScript support'
++              'alsa-lib: for basic sound support'
++              'gtk2: for the Gtk+ 2 look and feel - desktop usage'
++              'gtk3: for the Gtk+ 3 look and feel - desktop usage')
++  provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}"
++            "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
++            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jre-openjdk" "jre-openjdk-headless"
++             "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
++             "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  backup=(etc/${pkgbase}/logging.properties
++          etc/${pkgbase}/management/jmxremote.access
++          etc/${pkgbase}/management/jmxremote.password.template
++          etc/${pkgbase}/management/management.properties
++          etc/${pkgbase}/net.properties
++          etc/${pkgbase}/security/java.policy
++          etc/${pkgbase}/security/java.security
++          etc/${pkgbase}/security/policy/README.txt
++          etc/${pkgbase}/security/policy/limited/default_US_export.policy
++          etc/${pkgbase}/security/policy/limited/default_local.policy
++          etc/${pkgbase}/security/policy/limited/exempt_local.policy
++          etc/${pkgbase}/security/policy/unlimited/default_US_export.policy
++          etc/${pkgbase}/security/policy/unlimited/default_local.policy
++          etc/${pkgbase}/sound.properties)
+   install=install_jdk-openjdk.sh
+ 
+   cd ${_imgdir}/jdk
+@@ -205,28 +250,24 @@
+ 
+   rm "${pkgdir}${_jvmdir}/lib/src.zip"
+ 
+-  pushd ../jre
+-  for d in bin lib; do
+-    find ${d} ! -type d -exec rm "${pkgdir}${_jvmdir}/{}" \;
+-  done
+-  popd
+-  find "${pkgdir}${_jvmdir}/lib" -type d -empty -delete
+-
++  install -dm 755 "${pkgdir}/etc"
++  cp -r conf "${pkgdir}/etc/${pkgbase}"
++  ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
+ 
+   install -dm 755 "${pkgdir}/usr/share/licenses"
+   cp -r legal "${pkgdir}/usr/share/licenses/${pkgbase}"
+-  pushd ../jre/legal
+-  find . ! -type d -exec rm "${pkgdir}/usr/share/licenses/${pkgbase}/{}" \;
+-  popd
+-  find "${pkgdir}/usr/share/licenses" -type d -empty -delete
+-  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  ln -s /usr/share/licenses/${pkgbase} "${pkgdir}/${_jvmdir}/legal"
+ 
+   for f in bin/*; do
+     f=$(basename "${f}")
+-    _man=man/man1/"${f}.1"
+-    test -f "../jre/bin/${f}" && continue
++    _man=../jdk/man/man1/"${f}.1"
+     test -f "${_man}" && install -Dm 644 "${_man}" "${pkgdir}/usr/share/man/man1/${f}-openjdk${_majorver}.1"
+   done
++  ln -s /usr/share/man "${pkgdir}/${_jvmdir}/man"
++
++  rm -f "${pkgdir}${_jvmdir}/lib/security/cacerts"
++  ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
+ 
+   for s in 16 24 32 48; do
+     install -Dm 644 \
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
- pkgbase=java-openjdk
- pkgname=('jre-openjdk-headless' 'jre-openjdk' 'jdk-openjdk' 'openjdk-src' 'openjdk-doc')
--_majorver=21
-+_majorver=20
- _minorver=0
--_securityver=0
--_updatever=35
-+_securityver=2
-+_updatever=9
- _git
- makedepends=('java-environment>=17' 'cpio' 'unzip' 'zip' 'libelf' 'libcups' 'libx11'
-              'libxrender' 'libxtst' 'libxt' 'libxext' 'libxrandr' 'alsa-lib' 'pandoc'
-@@ -24,7 +24,6 @@
- _nonjre=(lib/ct.sym
-           lib/libattach.so
-           lib/libsaproc.so
+@@ -21,11 +21,9 @@
+               lib/libjawt.so
+               lib/libjsound.so
+               lib/libsplashscreen.so)
+-_nonjre=(lib/ct.sym
+-          lib/libattach.so
+-          lib/libsaproc.so
 -          lib/lible.so
-           lib/src.zip)
+-          lib/src.zip)
++_commondeps=('java-runtime-common>=3' 'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
++           'lcms2' 'liblcms2.so' 'libnet' 'freetype2' 'libfreetype.so' 'harfbuzz' 'libharfbuzz.so'
++           'glibc' 'gcc-libs')
  build() {
    cd ${_jdkdir}
+   NUM_PROC_OPT=''
+@@ -71,9 +69,7 @@
+   find "../${_imgdir}" -iname '*.so' -exec chmod +x {} \;
+ }
+ package_jre-openjdk-headless() {
+-  depends=('java-runtime-common>=3' 'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
+-           'lcms2' 'liblcms2.so' 'libnet' 'freetype2' 'libfreetype.so' 'harfbuzz' 'libharfbuzz.so'
+-           'glibc' 'gcc-libs')
++  depends=("${_commondeps[@]}")
+   provides=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
+   backup=(etc/${pkgbase}/logging.properties
+           etc/${pkgbase}/management/jmxremote.access
+@@ -91,19 +87,12 @@
+           etc/${pkgbase}/sound.properties)
+   install=install_jre-openjdk-headless.sh
+   cd ${_imgdir}/jre
+-  install -dm 755 "${pkgdir}${_jvmdir}"/bin
+-  for i in $(ls bin/); do
+-    cp ../jdk/bin/$i "${pkgdir}${_jvmdir}/bin/"
+-  done
+-  cp -a ../jdk/lib "${pkgdir}${_jvmdir}"
+-  for f in "${_nonjre[@]}"; do
+-    rm "${pkgdir}${_jvmdir}/${f}"
+-  done
++  install -dm 755 "${pkgdir}${_jvmdir}"
++  cp -a bin lib \
++    "${pkgdir}${_jvmdir}"
+   for f in "${_nonheadless[@]}"; do
+     rm "${pkgdir}${_jvmdir}/${f}"
+   done
+-  cp ../jdk/release "${pkgdir}${_jvmdir}"
+-  cp ../jdk/lib/modules "${pkgdir}${_jvmdir}/lib"
+   install -dm 755 "${pkgdir}/etc"
+   cp -r conf "${pkgdir}/etc/${pkgbase}"
+   ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
+@@ -121,47 +110,95 @@
+   ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
+ }
+ package_jre-openjdk() {
+-  depends=("jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}" 'giflib' 'libgif.so'
+-           'glibc' 'gcc-libs' 'libpng')
+-  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}")
++  depends=("${_commondeps[@]}" 'giflib' 'libgif.so' 'libpng')
++  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
++            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  backup=(etc/${pkgbase}/logging.properties
++          etc/${pkgbase}/management/jmxremote.access
++          etc/${pkgbase}/management/jmxremote.password.template
++          etc/${pkgbase}/management/management.properties
++          etc/${pkgbase}/net.properties
++          etc/${pkgbase}/security/java.policy
++          etc/${pkgbase}/security/java.security
++          etc/${pkgbase}/security/policy/README.txt
++          etc/${pkgbase}/security/policy/limited/default_US_export.policy
++          etc/${pkgbase}/security/policy/limited/default_local.policy
++          etc/${pkgbase}/security/policy/limited/exempt_local.policy
++          etc/${pkgbase}/security/policy/unlimited/default_US_export.policy
++          etc/${pkgbase}/security/policy/unlimited/default_local.policy
++          etc/${pkgbase}/sound.properties)
+   install=install_jre-openjdk.sh
+   cd ${_imgdir}/jre
+   install -dm 755 "${pkgdir}${_jvmdir}"
++  cp -a bin lib \
++    "${pkgdir}${_jvmdir}"
+   for f in "${_nonheadless[@]}"; do
+     install -Dm 644 ${f} "${pkgdir}${_jvmdir}/${f}"
+   done
+-  install -dm 755 "${pkgdir}/usr/share/licenses"
+-  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  install -dm 755 "${pkgdir}/etc"
++  cp -r conf "${pkgdir}/etc/${pkgbase}"
++  ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
++  install -dm 755 "${pkgdir}/usr/share/licenses"
++  cp -r legal "${pkgdir}/usr/share/licenses/${pkgbase}"
++  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  ln -s /usr/share/licenses/${pkgbase} "${pkgdir}/${_jvmdir}/legal"
++  for f in bin/*; do
++    f=$(basename "${f}")
++    _man=../jdk/man/man1/"${f}.1"
++    test -f "${_man}" && install -Dm 644 "${_man}" "${pkgdir}/usr/share/man/man1/${f}-openjdk${_majorver}.1"
++  done
++  ln -s /usr/share/man "${pkgdir}/${_jvmdir}/man"
++  rm -f "${pkgdir}${_jvmdir}/lib/security/cacerts"
++  ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
+ }
+ package_jdk-openjdk() {
+-  depends=("jre${_majorver}-openjdk=${pkgver}-${pkgrel}" 'java-environment-common=3'
+-           'hicolor-icon-theme' 'libelf' 'glibc' 'gcc-libs')
+-  provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}")
++  depends=("${_commondeps[@]}" 'java-environment-common=3'
++           'hicolor-icon-theme' 'libelf' 'libgif.so' 'libpng'
++           'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
++           'lcms2' 'liblcms2.so' 'libnet' 'freetype2' 'libfreetype.so' 'harfbuzz'
++           'libharfbuzz.so')
++  provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}"
++            "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
++            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jre-openjdk" "jre-openjdk-headless"
++             "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
++             "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  backup=(etc/${pkgbase}/logging.properties
++          etc/${pkgbase}/management/jmxremote.access
++          etc/${pkgbase}/management/jmxremote.password.template
++          etc/${pkgbase}/management/management.properties
++          etc/${pkgbase}/net.properties
++          etc/${pkgbase}/security/java.policy
++          etc/${pkgbase}/security/java.security
++          etc/${pkgbase}/security/policy/README.txt
++          etc/${pkgbase}/security/policy/limited/default_US_export.policy
++          etc/${pkgbase}/security/policy/limited/default_local.policy
++          etc/${pkgbase}/security/policy/limited/exempt_local.policy
++          etc/${pkgbase}/security/policy/unlimited/default_US_export.policy
++          etc/${pkgbase}/security/policy/unlimited/default_local.policy
++          etc/${pkgbase}/sound.properties)
+   install=install_jdk-openjdk.sh
+   cd ${_imgdir}/jdk
+   install -dm 755 "${pkgdir}${_jvmdir}"
+   cp -a bin demo include jmods lib \
+     "${pkgdir}${_jvmdir}"
+   rm "${pkgdir}${_jvmdir}/lib/src.zip"
+-  pushd ../jre
+-  for d in bin lib; do
+-    find ${d} ! -type d -exec rm "${pkgdir}${_jvmdir}/{}" \;
+-  done
+-  popd
+-  find "${pkgdir}${_jvmdir}/lib" -type d -empty -delete
++  install -dm 755 "${pkgdir}/etc"
++  cp -r conf "${pkgdir}/etc/${pkgbase}"
++  ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
+   install -dm 755 "${pkgdir}/usr/share/licenses"
+   cp -r legal "${pkgdir}/usr/share/licenses/${pkgbase}"
+-  pushd ../jre/legal
+-  find . ! -type d -exec rm "${pkgdir}/usr/share/licenses/${pkgbase}/{}" \;
+-  popd
+-  find "${pkgdir}/usr/share/licenses" -type d -empty -delete
+-  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  ln -s ${pkgbase} "${pkgdir}/usr/share/licenses/${pkgname}"
++  ln -s /usr/share/licenses/${pkgbase} "${pkgdir}/${_jvmdir}/legal"
+   for f in bin/*; do
+     f=$(basename "${f}")
+-    _man=man/man1/"${f}.1"
+-    test -f "../jre/bin/${f}" && continue
++    _man=../jdk/man/man1/"${f}.1"
+     test -f "${_man}" && install -Dm 644 "${_man}" "${pkgdir}/usr/share/man/man1/${f}-openjdk${_majorver}.1"
+   done
++  ln -s /usr/share/man "${pkgdir}/${_jvmdir}/man"
++  rm -f "${pkgdir}${_jvmdir}/lib/security/cacerts"
++  ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
+   for s in 16 24 32 48; do
+     install -Dm 644 \
+       "${srcdir}/${_jdkdir}/src/java.desktop/unix/classes/sun/awt/X11/java-icon${s}.png" \

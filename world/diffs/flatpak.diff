@@ -1,16 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,9 +23,7 @@
+@@ -2,7 +2,7 @@
+ pkgbase=flatpak
+ pkgname=(flatpak flatpak-docs)
+ pkgver=1.15.4
+-pkgrel=1
++pkgrel=1.1
+ epoch=1
+ pkgdesc="Linux application sandboxing and distribution framework (formerly xdg-app)"
+ url="https://flatpak.org"
+@@ -23,7 +23,6 @@
    ostree
    polkit
    python
 -  systemd
    xdg-dbus-proxy
--  xdg-utils
+   xdg-utils
  )
- makedepends=(
-   docbook-xsl
-@@ -34,10 +32,10 @@
+@@ -34,10 +33,10 @@
    gtk-doc
    meson
    python-pyparsing
@@ -22,8 +29,11 @@
    valgrind
  )
  _commit=e936e3100d406c50ba49f3ad6a0ecae455345ec0  # tags/1.15.4^0
-@@ -93,13 +91,10 @@
+@@ -91,9 +90,10 @@
+     -D selinux_module=disabled
+     -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
++    -D systemd=disabled
    )
  
 -  arch-meson flatpak build "${meson_options[@]}"
@@ -31,29 +41,21 @@
    meson compile -C build
  }
  
--check() {
--  meson test -C build --print-errorlogs
--}
- 
- _pick() {
-   local p="$1" f d; shift
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,9 +15,7 @@
+@@ -15,7 +15,6 @@
    ostree
    polkit
    python
 -  systemd
    xdg-dbus-proxy
--  xdg-utils
+   xdg-utils
  )
- makedepends=(
-   docbook-xsl
-@@ -26,6 +24,7 @@
+@@ -26,6 +25,7 @@
    gtk-doc
    meson
    python-pyparsing
@@ -61,9 +63,11 @@
    xmlto
  )
  prepare() {
-@@ -47,7 +46,7 @@
+@@ -46,8 +46,9 @@
+     -D selinux_module=disabled
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
++    -D systemd=disabled
    )
 -  arch-meson flatpak build "${meson_options[@]}"
 +  artix-meson flatpak build "${meson_options[@]}"

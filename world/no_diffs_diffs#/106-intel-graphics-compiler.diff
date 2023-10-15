@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,7 +42,7 @@
+     CXXFLAGS+=" -I ${srcdir}/SPIRV-LLVM-Translator/include"
+ 
+     EMAIL='builduser@archlinux.org' \
+-    cmake -B build -S "${pkgname}-igc-${pkgver}" \
++    artix-cmake -B build -S "${pkgname}-igc-${pkgver}" \
+         -G Ninja \
+         -DCMAKE_BUILD_TYPE=Release \
+         -DCMAKE_INSTALL_PREFIX=/usr \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+     LDFLAGS+=" -Wl,-Bsymbolic"
+     CXXFLAGS+=" -I ${srcdir}/SPIRV-LLVM-Translator/include"
+     EMAIL='builduser@archlinux.org' \
+-    cmake -B build -S "${pkgname}-igc-${pkgver}" \
++    artix-cmake -B build -S "${pkgname}-igc-${pkgver}" \
+         -G Ninja \
+         -DCMAKE_BUILD_TYPE=Release \
+         -DCMAKE_INSTALL_PREFIX=/usr \

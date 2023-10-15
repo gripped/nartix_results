@@ -1,27 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,21 @@
- 
- pkgname=tepl
--pkgver=6.8.0
--pkgrel=1
-+pkgver=6.4.0
-+pkgrel=4
- epoch=1
- pkgdesc='Library that eases the development of GtkSourceView-based text editors and IDEs'
- arch=('x86_64')
- url='https://gitlab.gnome.org/swilmet/tepl'
- license=('LGPL3')
--depends=('libgedit-amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas'
--         'gtk3' 'libgedit-gtksourceview' 'icu' 'pango')
-+depends=('amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas' 'gtk3' 'gtksourceview4' 'icu'
-+         'pango')
+@@ -11,12 +11,11 @@
+          'gtk3' 'libgedit-gtksourceview' 'icu' 'pango')
  makedepends=('gobject-introspection' 'gtk-doc' 'meson')
  checkdepends=('xorg-server-xvfb')
 -provides=('libtepl-6.so')
  source=("https://download.gnome.org/sources/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.xz")
--sha256sums=('46e6e5f1bfdbc52e5956f06add575e9c7697c673d53d3803dfe768f490b560f0')
-+sha256sums=('5e56b20669d0cf05fa1d64b58c8c342c59158122dc518100d093d59df9b87321')
+ sha256sums=('46e6e5f1bfdbc52e5956f06add575e9c7697c673d53d3803dfe768f490b560f0')
  
  build() {
 -  arch-meson $pkgname-$pkgver build -D gtk_doc=true
@@ -40,12 +25,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,8 @@
- pkgname=tepl
--depends=('libgedit-amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas'
--         'gtk3' 'libgedit-gtksourceview' 'icu' 'pango')
-+depends=('amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas' 'gtk3' 'gtksourceview4' 'icu'
-+         'pango')
+@@ -2,8 +2,7 @@
+ depends=('libgedit-amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas'
+          'gtk3' 'libgedit-gtksourceview' 'icu' 'pango')
  makedepends=('gobject-introspection' 'gtk-doc' 'meson')
 -provides=('libtepl-6.so')
  build() {

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -56,7 +56,7 @@
+ }
+ 
+ build() {
+-  arch-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
++  artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
+   samu -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,6 @@
+   patch -p1 < ../fce9aad1.patch
+ }
+ build() {
+-  arch-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
++  artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
+   samu -C build
+ }

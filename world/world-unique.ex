@@ -229,6 +229,7 @@ grafana-dinit
 grafana-openrc
 grafana-runit
 grafana-s6
+greetd-dinit
 grub-theme
 haveged-dinit
 haveged-openrc
@@ -266,6 +267,7 @@ knot-openrc
 knot-runit
 knot-s6
 krb5-runit
+libplacebo5
 libvirt-dinit
 libvirt-openrc
 libvirt-runit
@@ -437,6 +439,7 @@ prometheus-dinit
 prometheus-openrc
 prometheus-runit
 prometheus-s6
+prosody-dinit
 prosody-openrc
 prosody-runit
 prosody-s6

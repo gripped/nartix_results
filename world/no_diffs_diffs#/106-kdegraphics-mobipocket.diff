@@ -1,22 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=kdegraphics-mobipocket
--pkgver=23.08.2
-+pkgver=23.04.3
- pkgrel=1
- pkgdesc='A library to handle mobipocket files'
- url='https://apps.kde.org/es/kdegraphics_mobipocket/'
-@@ -9,14 +9,14 @@
- depends=(qt5-base)
- makedepends=(extra-cmake-modules)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('0af40344918b85519f9cae631b24015c2ef365c2f2ee6960827d819d267474b7'
-+sha256sums=('bb65bd302a97466ed08c34668d32f61e50cfeadade73f3365d7a93566033168e'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+@@ -16,7 +16,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

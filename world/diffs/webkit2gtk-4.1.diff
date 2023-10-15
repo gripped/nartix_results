@@ -1,21 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   webkit2gtk-4.1
-   webkit2gtk-4.1-docs
- )
--pkgver=2.42.1
-+pkgver=2.40.4
- pkgrel=1
- pkgdesc="Web content engine for GTK"
- url="https://webkitgtk.org"
-@@ -35,13 +35,11 @@
-   libgl
-   libgles
-   libjpeg
--  libjxl
-   libmanette
-   libpng
+@@ -41,7 +41,6 @@
    libseccomp
    libsecret
    libsoup3
@@ -23,17 +8,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -60,30 +58,24 @@
-   zlib
- )
- makedepends=(
--  clang
-   cmake
-   gi-docgen
-   gobject-introspection
-   gperf
-   gst-plugins-bad
--  lld
+@@ -70,7 +69,6 @@
    ninja
    python
    ruby
@@ -41,33 +16,7 @@
    unifdef
    wayland-protocols
  )
- source=(
-   $url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
--  webkitgtk-MiniBrowser-fullscreen.patch::https://github.com/WebKit/WebKit/commit/e07345343415dd2496edc721daa61a3b42703131.patch
- )
--sha256sums=('6f41fac9989d3ee51c08c48de1d439cdeddecbc757e34b6180987d99b16d2499'
--            'SKIP'
--            'a921d6be1303e9f23474971f381886fd291ec5bb1a7ff1e85acede8cfb88bef2')
--b2sums=('c6453cf2d15661507df66c5478e7675217b62d9579cf9b9408cb3e4fa1a8405c5c2608edf0960baed62aafa766e6cdbe2f0c07e8fb728d86c111f12d5a816492'
--        'SKIP'
--        'd440d82c769f1b35caf5464dc850cdf1c896224205c90c17d8b0a44aee62e4b1383e11306936aaca067fde8836770d346d5122d7b05c91a5c7c1741c89c65e2f')
-+sha256sums=('8d163379297a2f7f51b455127f99836d9fe1572289f77b630ff3d63a2cb06dac'
-+            'SKIP')
-+b2sums=('a6bab5ede61d85d93c61f70222156123ebbe8d352d00004e9aa317c3902745530676f40c9caef93485d2e0c227882554623dd4bee6343360bb914c4ccaefb8ad'
-+        'SKIP')
- validpgpkeys=(
-   'D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
-   '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B'  # Adrián Pérez de Castro <aperez@igalia.com>
-@@ -91,8 +83,6 @@
- 
- prepare() {
-   cd webkitgtk-$pkgver
--
--  patch -Np1 < ../webkitgtk-MiniBrowser-fullscreen.patch
- }
- 
- build() {
-@@ -103,19 +93,18 @@
+@@ -103,6 +101,8 @@
      -DCMAKE_INSTALL_LIBDIR=lib
      -DCMAKE_INSTALL_LIBEXECDIR=lib
      -DCMAKE_SKIP_RPATH=ON
@@ -76,12 +25,7 @@
      -DUSE_AVIF=ON
      -DUSE_SOUP2=OFF
      -DENABLE_DOCUMENTATION=ON
-     -DENABLE_MINIBROWSER=ON
-   )
- 
--  export CC=clang CXX=clang++
--  LDFLAGS+=" -fuse-ld=lld"
--
+@@ -115,7 +115,7 @@
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
  
@@ -96,13 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,13 +28,11 @@
-   libgl
-   libgles
-   libjpeg
--  libjxl
-   libmanette
-   libpng
+@@ -34,7 +34,6 @@
    libseccomp
    libsecret
    libsoup3
@@ -110,17 +48,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -53,23 +51,19 @@
-   zlib
- )
- makedepends=(
--  clang
-   cmake
-   gi-docgen
-   gobject-introspection
-   gperf
-   gst-plugins-bad
--  lld
+@@ -63,7 +62,6 @@
    ninja
    python
    ruby
@@ -128,13 +56,7 @@
    unifdef
    wayland-protocols
  )
- prepare() {
-   cd webkitgtk-$pkgver
--  patch -Np1 < ../webkitgtk-MiniBrowser-fullscreen.patch
- }
- build() {
-   local cmake_options=(
-@@ -79,16 +73,16 @@
+@@ -79,6 +77,8 @@
      -DCMAKE_INSTALL_LIBDIR=lib
      -DCMAKE_INSTALL_LIBEXECDIR=lib
      -DCMAKE_SKIP_RPATH=ON
@@ -143,10 +65,8 @@
      -DUSE_AVIF=ON
      -DUSE_SOUP2=OFF
      -DENABLE_DOCUMENTATION=ON
-     -DENABLE_MINIBROWSER=ON
-   )
--  export CC=clang CXX=clang++
--  LDFLAGS+=" -fuse-ld=lld"
+@@ -88,7 +88,7 @@
+   LDFLAGS+=" -fuse-ld=lld"
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
 -  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"

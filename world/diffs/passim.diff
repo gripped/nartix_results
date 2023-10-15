@@ -1,0 +1,90 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,12 @@
+ 
+ pkgname=passim
+-pkgver=0.1.3
+-pkgrel=2
++pkgver=0.1.1
++pkgrel=1
+ pkgdesc="A local caching server"
+ arch=(x86_64)
+ url="https://github.com/hughsie/passim"
+ license=(LGPL)
+ depends=(
+-  avahi
+   glib2 libgio-2.0.so
+   gnutls
+   hicolor-icon-theme
+@@ -17,21 +16,27 @@
+   cmake
+   gobject-introspection
+   meson
+-  systemd
+ )
+ provides=(libpassim.so)
+ backup=(
+   etc/passim.conf
+ )
+-source=("https://github.com/hughsie/passim/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc})
+-sha512sums=('303f0cf3913a0f1880611fc48c8269dbe24d3394b6cf45cc6e9c51bb1c10729b793882d9b7aa64395268c3b6e29d47f23ec0f81711085a8df58b238d6a03c063'
+-            'SKIP')
+-b2sums=('ee1980f7c997f85d0d465b68b684b37b8ac42df05b7de5ef52888638fbd95fcbeacda13b36754dab5faa1825477eb226fa38f81ad16526b5725e8f639271d9eb'
+-        'SKIP')
++source=("https://github.com/hughsie/passim/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc}
++        "0001-no-systemd.patch")
++sha512sums=('f35079d3f242430e28d3ef55ade253509ba3bb986a4edde3e2b29f83e915c95564c91badd966969daa4de18e33f01d178a86704fef3c52162097048805be1780'
++            'SKIP'
++            'd51b7f50e8ad15e2c1b1001cd3d200947474a81f5d5f053c5f1f2c344c0246cd3352d5744190889f941aa60afe14f46994fe72b2768ab59a704985b54aeeaaf0')
++b2sums=('acf69c418f00b1c4f64adb56a2b46423b20dbeaa69d2695e78ec959487dd57c3f01d2826e5b2b10c52869709272a09d033826133653775cea14e9bb030d01265'
++        'SKIP'
++        '950423314a4627517c0c1421b8e605f06c40eb946c20c51e1398dd7cdd4618f310e260f65129db55429ea4c68f447325506ab8d2261a297432ef218e977867b8')
+ validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
+ 
++prepare() {
++  patch -Np1 -d $pkgname-$pkgver -i ../0001-no-systemd.patch
++}
++
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build
++  artix-meson ${pkgname}-${pkgver} build
+   meson compile -C build
+ }
+ 
+@@ -41,5 +46,4 @@
+ 
+ package() {
+   DESTDIR="${pkgdir}" meson install -C build
+-  rm "${pkgdir}"/var/lib/passim/data/*
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ pkgname=passim
+ depends=(
+-  avahi
+   glib2 libgio-2.0.so
+   gnutls
+   hicolor-icon-theme
+@@ -10,13 +9,15 @@
+   cmake
+   gobject-introspection
+   meson
+-  systemd
+ )
+ provides=(libpassim.so)
+ backup=(
+   etc/passim.conf
+ )
++prepare() {
++  patch -Np1 -d $pkgname-$pkgver -i ../0001-no-systemd.patch
++}
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build
++  artix-meson ${pkgname}-${pkgver} build
+   meson compile -C build
+ }

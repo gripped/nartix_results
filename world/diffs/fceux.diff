@@ -1,30 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,39 +1,39 @@
- 
- pkgname=fceux
--pkgver=2.6.6
--pkgrel=1
-+pkgver=2.6.5
-+pkgrel=2
- pkgdesc='Fast and ultra-compatible NES/Famicom emulator'
- arch=(x86_64)
--url='https://github.com/TASEmulators/fceux'
-+url='https://github.com/TASEmulators/fceux.git'
- license=(GPL)
+@@ -9,31 +9,31 @@
  depends=(gd lua minizip qt5-base sdl2)
  makedepends=(cmake git glu mesa-libgl ninja setconf scons)
  optdepends=('ffmpeg: for recording')
 -source=("git+$url#commit=34eb7601c415b81901fd02afbd5cfdc84b5047ac") # tag: v2.6.6
-+source=("_$pkgname::git+$url#commit=ea6ed69b874e3ae94072f1b4f14b9a8f0fdd774b") # tag: v2.6.5
++source=("$pkgname-$pkgver::git+$url#commit=34eb7601c415b81901fd02afbd5cfdc84b5047ac") # tag: v2.6.6
  b2sums=('SKIP')
  
  prepare() {
 -  cd $pkgname
-+  cd _$pkgname
++  cd $pkgname-$pkgver
    sed -i 's/-interim git//g' src/version.h
--  setconf scripts/genGitHdr.sh GIT_URL "'""${source:4:34}""'"
-+  setconf scripts/genGitHdr.sh GIT_URL "'""$url""'"
+   setconf scripts/genGitHdr.sh GIT_URL "'""${source:4:34}""'"
    setconf scripts/genGitHdr.sh GIT_REV "${source#*=}"
  }
  
@@ -37,7 +25,7 @@
      -D CMAKE_INSTALL_PREFIX=/usr \
      -G Ninja \
 -    -S $pkgname
-+    -S _$pkgname
++    -S $pkgname-$pkgver
    ninja -C build
  }
  
@@ -46,8 +34,8 @@
    install -d "$pkgdir/usr/share/doc/$pkgname"
 -  cp -r $pkgname/documentation/* "$pkgdir/usr/share/doc/$pkgname/"
 -  install -Dm644 $pkgname/changelog.txt \
-+  cp -r _$pkgname/documentation/* "$pkgdir/usr/share/doc/$pkgname/"
-+  install -Dm644 _$pkgname/changelog.txt \
++  cp -r $pkgname-$pkgver/documentation/* "$pkgdir/usr/share/doc/$pkgname/"
++  install -Dm644 $pkgname-$pkgver/changelog.txt \
      "$pkgdir/usr/share/doc/$pkgname/changelog.txt"
  }
 
@@ -61,10 +49,9 @@
  makedepends=(cmake git glu mesa-libgl ninja setconf scons)
  prepare() {
 -  cd $pkgname
-+  cd _$pkgname
++  cd $pkgname-$pkgver
    sed -i 's/-interim git//g' src/version.h
--  setconf scripts/genGitHdr.sh GIT_URL "'""${source:4:34}""'"
-+  setconf scripts/genGitHdr.sh GIT_URL "'""$url""'"
+   setconf scripts/genGitHdr.sh GIT_URL "'""${source:4:34}""'"
    setconf scripts/genGitHdr.sh GIT_REV "${source#*=}"
  }
  build() {
@@ -76,6 +63,6 @@
      -D CMAKE_INSTALL_PREFIX=/usr \
      -G Ninja \
 -    -S $pkgname
-+    -S _$pkgname
++    -S $pkgname-$pkgver
    ninja -C build
  }

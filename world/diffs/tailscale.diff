@@ -1,37 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
- 
- pkgname=tailscale
--pkgver=1.50.1
-+pkgver=1.46.0
- pkgrel=1
- pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
- arch=("x86_64")
+@@ -7,7 +7,7 @@
  url="https://tailscale.com"
  license=("MIT")
  makedepends=("git" "go")
 -depends=("glibc")
 +depends=("glibc" "iptables")
  backup=("etc/default/tailscaled")
--_commit=f45c02bfcf5ee5790c3af278c9e974c9b9b0e771 #  git rev-parse tags/v1.50.1
-+_commit=03b5aa8b4d846b67e5f6e14543f5e8fd25ff259d #  git rev-parse tags/v1.46.0
+ _commit=f45c02bfcf5ee5790c3af278c9e974c9b9b0e771 #  git rev-parse tags/v1.50.1
  source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}")
- sha256sums=('SKIP')
- 
-@@ -33,9 +33,9 @@
-     GO_LDFLAGS="\
-         -compressdwarf=false \
-         -linkmode=external \
--        -X tailscale.com/version.longStamp=${pkgver} \
--        -X tailscale.com/version.shortStamp=$(cut -d+ -f1 <<< "${pkgver}") \
--        -X tailscale.com/version.gitCommitStamp=${_commit}"
-+        -X tailscale.com/version.Long=${pkgver} \
-+        -X tailscale.com/version.Short=$(cut -d+ -f1 <<< "${pkgver}") \
-+        -X tailscale.com/version.GitCommit=${_commit}"
-     for cmd in ./cmd/tailscale ./cmd/tailscaled; do
-         go build -v -tags xversion -ldflags "$GO_LDFLAGS" "$cmd"
-     done
 @@ -46,6 +46,5 @@
      cd "${pkgname}"
      install -Dm755 tailscale tailscaled -t "$pkgdir/usr/bin"
@@ -53,16 +30,3 @@
  backup=("etc/default/tailscaled")
  prepare() {
      cd "${pkgname}"
-@@ -16,9 +16,9 @@
-     GO_LDFLAGS="\
-         -compressdwarf=false \
-         -linkmode=external \
--        -X tailscale.com/version.longStamp=${pkgver} \
--        -X tailscale.com/version.shortStamp=$(cut -d+ -f1 <<< "${pkgver}") \
--        -X tailscale.com/version.gitCommitStamp=${_commit}"
-+        -X tailscale.com/version.Long=${pkgver} \
-+        -X tailscale.com/version.Short=$(cut -d+ -f1 <<< "${pkgver}") \
-+        -X tailscale.com/version.GitCommit=${_commit}"
-     for cmd in ./cmd/tailscale ./cmd/tailscaled; do
-         go build -v -tags xversion -ldflags "$GO_LDFLAGS" "$cmd"
-     done

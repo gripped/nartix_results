@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=facter
- pkgver=3.14.24
--pkgrel=7
-+pkgrel=5
- pkgdesc="Collect and display system facts"
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url="https://puppetlabs.com/facter"
  license=('APACHE')
  depends=('yaml-cpp' 'boost-libs' 'curl' 'libwhereami' 'libwhereami.so' 'cpp-hocon' 'libcpp-hocon.so'
@@ -42,14 +35,6 @@
      -B build \
      -DCMAKE_BUILD_TYPE=None \
      -DCMAKE_INSTALL_PREFIX:PATH=/usr \
-@@ -68,7 +67,6 @@
- 
- check(){
-   cd "${srcdir}/${pkgname}-${pkgver}/build"
--  make test
- }
- 
- package() {
 
 
 ############# Stripped diff below #################

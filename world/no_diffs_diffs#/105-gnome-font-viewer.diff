@@ -1,24 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gnome-font-viewer
--pkgver=45.0
-+pkgver=44.0
- pkgrel=1
- pkgdesc="A font viewer utility for GNOME"
- url="https://gitlab.gnome.org/GNOME/gnome-font-viewer"
-@@ -16,7 +16,8 @@
-   meson
- )
- groups=(gnome)
--_commit=45a9be593244ec58e119cc7ac7db73b7ab419ca5  # tags/45.0^0
-+options=(debug)
-+_commit=728c5f7af41f855c151bce6b8626072e62943712  # tags/44.0^0
- source=("git+https://gitlab.gnome.org/GNOME/gnome-font-viewer.git#commit=$_commit")
- b2sums=('SKIP')
- 
-@@ -26,7 +27,7 @@
+@@ -26,7 +26,7 @@
  }
  
  build() {
@@ -33,8 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,8 @@
-   meson
+@@ -10,6 +10,6 @@
  )
  groups=(gnome)
  build() {

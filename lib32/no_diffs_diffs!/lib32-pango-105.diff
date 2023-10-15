@@ -1,23 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- pkgname=(
-   lib32-pango
- )
--pkgver=1.51.1
-+pkgver=1.50.14
- pkgrel=1
- epoch=1
- pkgdesc="A library for layout and rendering of text (32-bit)"
-@@ -22,7 +22,7 @@
-   git
-   meson
- )
--_commit=dfdbb8b55effc0feb72a1981944acaf20ee71354  # tags/1.51.1^0
-+_commit=25c27f452294f84044d5cc9f23b637193c7b4421  # tags/1.50.14^0
- source=("git+https://gitlab.gnome.org/GNOME/pango.git#commit=$_commit")
- b2sums=('SKIP')
- 
 @@ -45,7 +45,7 @@
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"

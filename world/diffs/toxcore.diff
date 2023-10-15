@@ -1,17 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,12 +3,12 @@
- _pkgname=c-toxcore
- epoch=1
- pkgver=0.2.18
--pkgrel=3
-+pkgrel=2
- pkgdesc='Secure, configuration-free, P2P Skype replacement backend'
+@@ -8,7 +8,7 @@
  arch=('x86_64')
  url='https://tox.chat'
  license=('GPL3')
 -depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
-+depends=('udev' 'libconfig' 'libsodium' 'libvpx' 'opus')
++depends=('esysusers' 'etmpfiles' 'libconfig' 'libsodium' 'libvpx' 'opus')
  makedepends=('check' 'cmake')
  conflicts=("tox")
  provides=("tox")
@@ -32,7 +26,7 @@
  pkgname=toxcore
  _pkgname=c-toxcore
 -depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
-+depends=('udev' 'libconfig' 'libsodium' 'libvpx' 'opus')
++depends=('esysusers' 'etmpfiles' 'libconfig' 'libsodium' 'libvpx' 'opus')
  makedepends=('check' 'cmake')
  conflicts=("tox")
  provides=("tox")

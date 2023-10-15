@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -61,7 +61,7 @@
+ }
+ 
+ build() {
+-  arch-meson gala build
++  artix-meson gala build -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,6 +43,6 @@
+   git cherry-pick -n 151e5f01750e9471cceac48f1999ac5e81f625b5
+ }
+ build() {
+-  arch-meson gala build
++  artix-meson gala build -Dsystemd=false
+   meson compile -C build
+ }

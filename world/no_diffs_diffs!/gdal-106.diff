@@ -1,25 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- pkgbase=gdal
- pkgname=(gdal python-gdal)
--pkgver=3.7.2
--pkgrel=3
-+pkgver=3.7.0
-+pkgrel=7
- pkgdesc="A translator library for raster and vector geospatial data formats"
- arch=(x86_64)
- url="https://gdal.org/"
-@@ -15,14 +15,14 @@
-              libspatialite sqlite swig libtiff libwebp xerces-c zlib zstd)
- changelog=$pkgbase.changelog
- source=(https://download.osgeo.org/${pkgbase}/${pkgver}/${pkgbase}-${pkgver}.tar.xz)
--b2sums=('29a96e34f4ffe661fc2af786b9a229be779ed5e91e4c580834f6624f4173ede8adf22c27b2830c446736c0ff37501441ab2afea9f780dad4588636b03deb1f71')
-+b2sums=('400cc17fc636c637f7c40e93aed8e2db7bfbbe73741da4135cfeec8dbcda24ce0c8035214edf038afc29a916012da86a78d789729540f870231dfa6aa27e424a')
- 
- prepare() {
-   sed -e 's|podofo.h|podofo/podofo.h|' -i $pkgbase-$pkgver/frmts/pdf/pdfsdk_headers.h
+@@ -22,7 +22,7 @@
  }
  
  build() {

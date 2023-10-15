@@ -1,23 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,16 @@
+@@ -1,7 +1,7 @@
  
  _pipname=debugpy
  pkgname=python-$_pipname
 -pkgver=1.8.0
--pkgrel=1
-+pkgver=1.6.7
-+pkgrel=3
++pkgver=1.7.0
+ pkgrel=1
  pkgdesc='An implementation of the Debug Adapter Protocol for Python'
  arch=(x86_64)
- url='https://aka.ms/debugpy'
- license=(EPL MIT)
+@@ -10,7 +10,7 @@
  depends=(python)
  makedepends=(python-setuptools)
--source=(https://github.com/microsoft/debugpy/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+ source=(https://github.com/microsoft/debugpy/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
 -sha256sums=('0adfbfd9a7df6b21f2ef084c070c99cfd6e0bc8aeee72976ddcbcbfbac1674bb')
-+source=($pkgname-$pkgver-$pkgrel.tar.gz::https://github.com/microsoft/debugpy/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
-+sha256sums=('8734997dc43dd40fe1725baf1dd816c0ab7611d98d1f01e3f3b42631135e1354')
++sha256sums=('b94e342e7e78ad2e85e2a8efd73b5c40b71030da0bbb362de1fa2706ce7bb40c')
  
  prepare() {
    cd $_pipname-$pkgver

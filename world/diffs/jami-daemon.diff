@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=jami-daemon
--pkgver=20230616
-+pkgver=20230323
- pkgrel=3
- pkgdesc="Free and universal communication platform which preserves the users’ privacy and freedoms (daemon component)"
- arch=(x86_64)
-@@ -9,10 +9,10 @@
+@@ -9,8 +9,8 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
           fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
@@ -17,29 +9,9 @@
 +         openssl webrtc-audio-processing libudev libarchive)
 +makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio meson)
  checkdepends=(cppunit)
--_commit=417447a167c52512e8c81250cc08bb5b24c6b667
-+_commit=c5bbd21e1c125f4012e2f88f485816a438ae62a7
+ _commit=417447a167c52512e8c81250cc08bb5b24c6b667
  _pjprojectver=e4b83585a0bdf1523e808a4fc1946ec82ac733d0
- source=(git+https://git.jami.net/savoirfairelinux/${pkgname}.git#commit=${_commit}
-         https://github.com/savoirfairelinux/pjproject/archive/${_pjprojectver}/pjproject-${_pjprojectver}.tar.gz
-@@ -20,7 +20,7 @@
- noextract=(pjproject-${_pjprojectver}.tar.gz)
- sha512sums=('SKIP'
-             '617f3a5cd38423a429b17553bb73ad467694ce3e899a788aaf20d0540f6a6904c06a2fc35bf9e0d1c9ab07ba821ca0e1d6d2b002e473bfa9850ff6f8b96447c0'
--            'c8b75b60d513cb1a90397f7d43e247d03c135f49d0d8c7de5c0d4ba13d27ce93fcb97e990d50a716bb739635d9e0c12ba53e2c893d0950e4ab18004332e1e1d6')
-+            '5b5d332f92928de8b7aa15553f3027a196e409d3d4d5d730a1bc03bffe0febf02f13daeadab834045e2c6c6c9f09dbb6c6dabcc475549c343f5a18abe5df77bf')
- 
- pkgver() {
-   cd ${pkgname}
-@@ -32,6 +32,7 @@
-   cp ../pjproject-${_pjprojectver}.tar.gz contrib/tarballs
-   mkdir contrib/native
- 
-+  git cherry-pick -n 315b5fbf546712f22a7b03ca750257bc92263a91 # Support opendht 2.5
-   git cherry-pick -n d5e6509975bfaa67f7b3c54db72336b810454fc2 # Fix build with GCC 13
-   patch -p1 -i ../fmt-10.patch # Fix build with fmt 10
- }
-@@ -46,7 +47,7 @@
+@@ -46,7 +46,7 @@
    make DEPS_pjproject=
  
    cd "${srcdir}"
@@ -54,7 +26,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,14 +2,15 @@
+@@ -2,8 +2,8 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
           fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
@@ -65,14 +37,7 @@
  _pjprojectver=e4b83585a0bdf1523e808a4fc1946ec82ac733d0
  noextract=(pjproject-${_pjprojectver}.tar.gz)
  prepare() {
-   cd ${pkgname}
-   cp ../pjproject-${_pjprojectver}.tar.gz contrib/tarballs
-   mkdir contrib/native
-+  git cherry-pick -n 315b5fbf546712f22a7b03ca750257bc92263a91 # Support opendht 2.5
-   git cherry-pick -n d5e6509975bfaa67f7b3c54db72336b810454fc2 # Fix build with GCC 13
-   patch -p1 -i ../fmt-10.patch # Fix build with fmt 10
- }
-@@ -22,7 +23,7 @@
+@@ -22,7 +22,7 @@
        --enable-pjproject
    make DEPS_pjproject=
    cd "${srcdir}"

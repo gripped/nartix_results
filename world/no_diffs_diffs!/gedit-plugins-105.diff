@@ -1,24 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gedit-plugins
--pkgver=46.0
--pkgrel=1
-+pkgver=44.1
-+pkgrel=2
- pkgdesc="Collection of plugins for the gedit Text Editor"
- url="https://wiki.gnome.org/Apps/Gedit/ShippedPlugins"
- arch=(x86_64)
-@@ -26,7 +26,7 @@
-   'libgit2-glib: for git plugin'
-   'vte3: for embedded terminal'
- )
--_commit=e4f3ca3eaac33f802db23c3ad4227481fdd18015  # tags/46.0^0
-+_commit=d558bb69903dc2dae1983c52ee90e6b4864889ad  # tags/44.1^0
- source=("git+https://gitlab.gnome.org/GNOME/gedit-plugins.git#commit=$_commit")
- b2sums=('SKIP')
- 
 @@ -40,7 +40,7 @@
  }
  

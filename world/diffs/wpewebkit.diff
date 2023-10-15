@@ -1,27 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,14 +4,14 @@
-   wpewebkit
-   wpewebkit-docs
- )
--pkgver=2.42.1
-+pkgver=2.40.4
- pkgrel=1
- pkgdesc="Embeddable web content engine"
- url="https://wpewebkit.org"
- arch=(x86_64)
- license=(custom)
- depends=(
--  at-spi2-core
-+  at-spi2-atk
-   atk
-   bubblewrap
-   cairo
-@@ -29,11 +29,9 @@
-   libepoxy
-   libgcrypt
-   libjpeg
--  libjxl
+@@ -33,7 +33,6 @@
    libpng
    libseccomp
    libsoup3
@@ -29,17 +8,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -50,26 +48,23 @@
-   zlib
- )
- makedepends=(
--  clang
-   cmake
-   gi-docgen
-   gobject-introspection
-   gperf
-   gst-plugins-bad
--  lld
+@@ -60,7 +59,6 @@
    ninja
    python
    ruby
@@ -47,50 +16,22 @@
    unifdef
    wayland-protocols
  )
- source=(
-   $url/releases/wpewebkit-$pkgver.tar.xz{,.asc}
- )
--sha256sums=('18a2cf547a503420f4cb8f523a2f4c24b4dc2773abbe74c7d585e6d23cb27bac'
-+sha256sums=('34d11fe79522081ecc2d623860c22ddd53ca29a0d08b4c0e55efbdc3e6a9435c'
-             'SKIP')
--b2sums=('12e8d0fb662e36c68f4e029d948de0b4bed4d9087d622d0b940726f3bb958572699cbe3d943408e9526d254a0b355b474281a432a38a7a19efbced4031dc7e6e'
-+b2sums=('f2ba67d4c21cd8d16043013905ea958c96641cdd68efe27dc588a7be833f99e9dca228800691634c77aeb3fcd40510ca49620b97618cf7fc50ab5e17fe7f05d7'
-         'SKIP')
- validpgpkeys=(
-   'D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
-@@ -92,10 +87,9 @@
+@@ -92,6 +90,8 @@
      -DENABLE_WPE_1_1_API=ON
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
 +    -DUSE_SYSTEMD=OFF
 +    -DENABLE_JOURNALD_LOG=OFF
    )
--
--  export CC=clang CXX=clang++
--  LDFLAGS+=" -fuse-ld=lld"
  
-   CFLAGS+=' -g1'
-   CXXFLAGS+=' -g1'
+   export CC=clang CXX=clang++
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   wpewebkit-docs
- )
- depends=(
--  at-spi2-core
-+  at-spi2-atk
-   atk
-   bubblewrap
-   cairo
-@@ -22,11 +22,9 @@
-   libepoxy
-   libgcrypt
-   libjpeg
--  libjxl
+@@ -26,7 +26,6 @@
    libpng
    libseccomp
    libsoup3
@@ -98,17 +39,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -43,17 +41,14 @@
-   zlib
- )
- makedepends=(
--  clang
-   cmake
-   gi-docgen
-   gobject-introspection
-   gperf
-   gst-plugins-bad
--  lld
+@@ -53,7 +52,6 @@
    ninja
    python
    ruby
@@ -116,15 +47,12 @@
    unifdef
    wayland-protocols
  )
-@@ -72,9 +67,9 @@
+@@ -72,6 +70,8 @@
      -DENABLE_WPE_1_1_API=ON
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
 +    -DUSE_SYSTEMD=OFF
 +    -DENABLE_JOURNALD_LOG=OFF
    )
--  export CC=clang CXX=clang++
--  LDFLAGS+=" -fuse-ld=lld"
-   CFLAGS+=' -g1'
-   CXXFLAGS+=' -g1'
-   cmake -S wpewebkit-$pkgver -B build -G Ninja "${cmake_options[@]}"
+   export CC=clang CXX=clang++
+   LDFLAGS+=" -fuse-ld=lld"

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url='https://community.kde.org/Frameworks'
+ license=(LGPL)
+ depends=(qt5-declarative iso-codes)
+-makedepends=(extra-cmake-modules clang doxygen qt5-tools qt5-doc python)
++makedepends=(extra-cmake-modules doxygen qt5-tools qt5-doc python)
+ optdepends=('python: to compile .ts files')
+ conflicts=("$_name<5.111")
+ replaces=("$_name<5.111")
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=${_name}5
+ depends=(qt5-declarative iso-codes)
+-makedepends=(extra-cmake-modules clang doxygen qt5-tools qt5-doc python)
++makedepends=(extra-cmake-modules doxygen qt5-tools qt5-doc python)
+ conflicts=("$_name<5.111")
+ replaces=("$_name<5.111")
+ provides=($

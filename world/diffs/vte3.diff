@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,14 +6,13 @@
-   vte4
-   vte-docs
- )
--pkgver=0.74.0
--pkgrel=1
-+pkgver=0.72.2
-+pkgrel=2
- pkgdesc="Virtual Terminal Emulator widget"
- url="https://wiki.gnome.org/Apps/Terminal/VTE"
- arch=(x86_64)
- license=(LGPL)
- makedepends=(
--  cairo
-   fribidi
-   gi-docgen
-   git
-@@ -24,11 +23,10 @@
+@@ -24,10 +24,9 @@
    gtk4
    meson
    pcre2
@@ -25,17 +8,14 @@
    vala
  )
 -options=(!lto)
--_commit=7fb5b2395c9e9c786c2277bc98d7e2661485fb10  # tags/0.74.0^0
 +options=(debug !lto)
-+_commit=854e56263454077ab009aaff67f1afe0dbd52878  # tags/0.72.2^0
+ _commit=7fb5b2395c9e9c786c2277bc98d7e2661485fb10  # tags/0.74.0^0
  source=("git+https://gitlab.gnome.org/GNOME/vte.git#commit=$_commit")
  b2sums=('SKIP')
- 
-@@ -45,9 +43,11 @@
+@@ -45,9 +44,10 @@
    local meson_options=(
      -D b_lto=false
      -D docs=true
-+    -D gtk4=true
 +    -D _systemd=false
    )
  
@@ -44,7 +24,7 @@
    meson compile -C build
  }
  
-@@ -93,16 +93,13 @@
+@@ -93,7 +93,6 @@
    _pick docs usr/share/doc
  }
  
@@ -52,8 +32,7 @@
  package_vte3() {
    pkgdesc+=" (GTK3)"
    depends=(
--    cairo
-     fribidi
+@@ -102,7 +101,6 @@
      gnutls
      gtk3
      pcre2
@@ -61,12 +40,7 @@
      vte-common
    )
    provides+=(libvte-2.91.so)
-@@ -113,12 +110,10 @@
- package_vte4() {
-   pkgdesc+=" (GTK4)"
-   depends=(
--    cairo
-     fribidi
+@@ -118,7 +116,6 @@
      gnutls
      gtk4
      pcre2
@@ -80,15 +54,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,6 @@
-   vte-docs
- )
- makedepends=(
--  cairo
-   fribidi
-   gi-docgen
-   git
-@@ -17,10 +16,9 @@
+@@ -17,10 +17,9 @@
    gtk4
    meson
    pcre2
@@ -100,11 +66,10 @@
  prepare() {
    cd vte
  }
-@@ -28,8 +26,10 @@
+@@ -28,8 +27,9 @@
    local meson_options=(
      -D b_lto=false
      -D docs=true
-+    -D gtk4=true
 +    -D _systemd=false
    )
 -  arch-meson vte build "${meson_options[@]}"
@@ -112,12 +77,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -66,12 +66,10 @@
- package_vte3() {
-   pkgdesc+=" (GTK3)"
-   depends=(
--    cairo
-     fribidi
+@@ -71,7 +71,6 @@
      gnutls
      gtk3
      pcre2
@@ -125,12 +85,7 @@
      vte-common
    )
    provides+=(libvte-2.91.so)
-@@ -80,12 +78,10 @@
- package_vte4() {
-   pkgdesc+=" (GTK4)"
-   depends=(
--    cairo
-     fribidi
+@@ -85,7 +84,6 @@
      gnutls
      gtk4
      pcre2

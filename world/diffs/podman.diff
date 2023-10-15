@@ -1,28 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgbase=podman
- pkgname=(podman podman-docker)
--pkgver=4.7.1
--_commit=ef83eeb9c7482826672f3efa12db3d61c88df6c4  #refs/tags/v4.7.0^{}
-+pkgver=4.6.0
-+_commit=38e6fab9664c6e59b66e73523b307a56130316ae  #refs/tags/v4.6.0^{}
- pkgrel=1
- pkgdesc='Tool and library for running OCI-based containers in pods'
- arch=(x86_64)
- url='https://github.com/containers/podman'
--license=(Apache-2.0)
-+license=(Apache)
- makedepends=(
-   apparmor
-   btrfs-progs
 @@ -18,7 +18,7 @@
    go-md2man
    gpgme
    libseccomp
 -  systemd
-+  libudev
++  udev
  )
  options=(!lto)
  source=(
@@ -35,11 +18,21 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -92,4 +92,5 @@
+@@ -80,6 +80,8 @@
+   )
+ 
+   make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
++
++  rm -rvf "$pkgdir"/usr/lib/systemd
+ }
+ 
+ package_podman-docker() {
+@@ -92,4 +94,6 @@
    provides=(docker)
  
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
-+  rm -rf "$pkgdir"/usr/lib/systemd
++
++  rm -rvf "$pkgdir"/usr/lib/systemd
  }
 
 
@@ -52,7 +45,7 @@
    gpgme
    libseccomp
 -  systemd
-+  libudev
++  udev
  )
  options=(!lto)
  prepare() {
@@ -64,9 +57,17 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -51,4 +51,5 @@
+@@ -42,6 +42,7 @@
+     slirp4netns
+   )
+   make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
++  rm -rvf "$pkgdir"/usr/lib/systemd
+ }
+ package_podman-docker() {
+   depends=(
+@@ -51,4 +52,5 @@
    conflicts=(docker)
    provides=(docker)
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
-+  rm -rf "$pkgdir"/usr/lib/systemd
++  rm -rvf "$pkgdir"/usr/lib/systemd
  }

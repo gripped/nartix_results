@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+   libsframe.so
+ )
+ backup=('etc/gprofng.rc')
+-options=(staticlibs !distcc !ccache)
++options=(staticlibs !distcc !ccache debug)
+ source=(git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
+         gold-warn-unsupported.patch)
+ sha256sums=('SKIP'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+   libsframe.so
+ )
+ backup=('etc/gprofng.rc')
+-options=staticlibs!distcc!ccache
++options=staticlibs!distcc!ccache
+ prepare() {
+   [[ ! -d binutils-gdb ]] && ln -s binutils-${pkgver} binutils-gdb
+   mkdir -p binutils-build

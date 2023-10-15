@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,7 +45,7 @@
+     -D introspection=disabled
+   )
+ 
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,6 +25,6 @@
+     -D docs=false
+     -D introspection=disabled
+   )
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }

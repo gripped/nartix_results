@@ -1,25 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,8 +7,8 @@
-   harfbuzz-utils
+@@ -8,7 +8,7 @@
    harfbuzz-docs
  )
--pkgver=8.2.1
+ pkgver=8.2.1
 -pkgrel=2
-+pkgver=8.0.1
 +pkgrel=1
  pkgdesc="OpenType text shaping engine"
  url="https://www.freedesktop.org/wiki/Software/HarfBuzz"
  arch=(x86_64)
-@@ -31,7 +31,7 @@
-   python-fonttools
-   python-setuptools
- )
--_commit=0967a3e24ab5d79cc55dbe224652d8aabd942def  # tags/8.2.1^0
-+_commit=d160d9389cb4c5b15ebea9b41eb74018c4358924  # tags/8.0.1^0
- source=("git+https://github.com/harfbuzz/harfbuzz#commit=$_commit")
- b2sums=('SKIP')
- 
 @@ -42,8 +42,6 @@
  
  prepare() {

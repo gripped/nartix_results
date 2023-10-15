@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -71,8 +71,8 @@
+             'b5d9fcd62ffb3c3950fdeb7089ec2dc2294ac52e9861980ad90a437dedbd3d47'
+             '4bdd5ceb13dbd4c41fde24163f16a0ba05447d821e74d938a0b9e5fce0431140'
+             '9f8921b2bacd69bde7ab0c3aff88c678d52c2a625c89264fb92184e7427b819b'
+-            '7df3f5cb5df7d2dfb17f4c9b5c5dedc9519ddce6f8d2c6cd43d1be17cecb65cb'
+-            'f34c2b0aa2ed4ab9c7e7bcab5197470c30fedc6c2148f337839dd24bceae35fd')
++            '1a8dd1d80d0eb8db0db56719694e2e6eee96d42b3e2ccbe618320d7c12ccd65c'
++            'a89ff0e8d5f0c202d61ddb3d21341ac0017ec7fb5b3f7c433d9f815bf5952952')
+ 
+ _backports=(
+ )
+@@ -324,4 +324,8 @@
+ 
+ 	echo "Package grub bios stuff..."
+ 	_package_grub-common_and_bios
+-}
++
++	install -m0755 /dev/stdin "${pkgdir}"/usr/bin/update-grub <<END
++grub-mkconfig -o /boot/grub/grub.cfg
++END
++}

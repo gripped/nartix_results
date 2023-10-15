@@ -1,25 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
- 
- pkgname=vlc
--_vlcver=3.0.19
-+_vlcver=3.0.18
- _vlcfixupver=
- pkgver=${_vlcver}${_vlcfixupver//-/.r}
--pkgrel=1
-+pkgrel=13.1
- pkgdesc='Multi-platform MPEG, VCD/DVD, and DivX player'
- url='https://www.videolan.org/vlc/'
- arch=('x86_64')
- license=('LGPL2.1' 'GPL2')
--depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua' 'libidn'
-+depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua52' 'libidn'
-          'libmatroska' 'taglib' 'libmpcdec' 'ffmpeg4.4' 'faad2' 'libmad'
+@@ -13,10 +13,10 @@
           'libmpeg2' 'xcb-util-keysyms' 'libtar' 'libxinerama' 'libsecret'
           'libupnp' 'libixml.so' 'libupnp.so' 'libarchive' 'qt5-base'
-@@ -16,7 +16,7 @@
-          'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
+          'qt5-x11extras' 'qt5-svg' 'freetype2' 'fribidi' 'harfbuzz'
+-         'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
++         'fontconfig' 'libxml2' 'gnutls' 'libplacebo5' 'aribb24')
  makedepends=('gst-plugins-base-libs' 'live-media' 'libnotify' 'libbluray'
               'flac' 'libdc1394' 'libavc1394' 'libcaca' 'gtk3'
 -             'librsvg' 'libgme' 'xosd' 'twolame' 'aalib' 'avahi' 'systemd-libs'
@@ -36,61 +22,36 @@
              'smbclient: SMB access plugin'
              'libcdio: audio CD playback'
              'gnu-free-fonts: subtitle font '
-@@ -52,7 +52,7 @@
-             'mpg123: mpg123 codec'
-             'protobuf: chromecast streaming'
-             'libmicrodns: mDNS services discovery (chromecast etc)'
--            'lua-socket: http interface'
-+            'lua52-socket: http interface'
-             'libdvdread: DVD input module'
-             'libdvdnav: DVD with navigation input module'
-             'libogg: Ogg and OggSpots codec'
-@@ -95,11 +95,13 @@
- options=('!emptydirs')
- source=(https://download.videolan.org/${pkgname}/${_vlcver}/${pkgname}-${_vlcver}${_vlcfixupver}.tar.xz{,.asc}
-         libplacebo-5.patch
--        update-vlc-plugin-cache.hook)
--sha512sums=('8e4a7a35f8ab7db139c6ef1ace9947c2e21ed721af5576761c4b7b8498aaeded366273aad9853541d70ba2773422141a5e9a6196ae3c2a3a7c4dee2a2e6c3e76'
-+        update-vlc-plugin-cache.hook
-+        c2dd4bfe.patch)
-+sha512sums=('6fc8fdaa7e8862ad7133d69b3dab99ab9cd3945846a6ce5e2379b7f68ee9accd385c53b8573fc7c82f732c24678b4932b1154d2ad8accf06305f2f578d6fcd8e'
-             'SKIP'
-             'a06b04a8b059dbbef77d27435bd5bec3c26f937390bd112b0843385587e866e617c3dd0e66f99eed5fa4a91bc5f0fd9b5623f65b2f2435a54456dde2aa96209b'
--            'b247510ffeadfd439a5dadd170c91900b6cdb05b5ca00d38b1a17c720ffe5a9f75a32e0cb1af5ebefdf1c23c5acc53513ed983a736e8fa30dd8fad237ef49dd3')
-+            'b247510ffeadfd439a5dadd170c91900b6cdb05b5ca00d38b1a17c720ffe5a9f75a32e0cb1af5ebefdf1c23c5acc53513ed983a736e8fa30dd8fad237ef49dd3'
-+            '10801260f94c38b57d1c5666dc1772296537dbfd11d132e46fce98c3b185d9c3861a0b4e9076091990bf035525ed4f67376d4766eae63059f025c76251b6379b')
- validpgpkeys=('65F7C6B4206BD057A7EB73787180713BE58D1ADC') # VideoLAN Release Signing Key
+@@ -122,14 +122,14 @@
+ build() {
+   cd ${pkgname}-${_vlcver}
  
- prepare() {
-@@ -126,8 +128,8 @@
-   export CPPFLAGS+=" -I/usr/include/samba-4.0"
+-  export CFLAGS+=" -I/usr/include/samba-4.0 -ffat-lto-objects"
+-  export CPPFLAGS+=" -I/usr/include/samba-4.0"
++  export CFLAGS+=" -I/usr/include/samba-4.0 -ffat-lto-objects -I/usr/include/libplacebo5"
++  export CPPFLAGS+=" -I/usr/include/samba-4.0 -I/usr/include/libplacebo5"
    export CXXFLAGS+=" -std=c++17"
    export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig"
--  export LUAC=/usr/bin/luac
--  export LUA_LIBS="$(pkg-config --libs lua)"
-+  export LUAC=/usr/bin/luac5.2
-+  export LUA_LIBS="$(pkg-config --libs lua5.2)"
++  export PKG_CONFIG_PATH="/usr/lib/libplacebo5/pkgconfig:$PKG_CONFIG_PATH"
+   export LUAC=/usr/bin/luac
+   export LUA_LIBS="$(pkg-config --libs lua)"
    export RCC=/usr/bin/rcc-qt5
-   export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig/:$PKG_CONFIG_PATH"
+-  export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig/:$PKG_CONFIG_PATH"
  
+   ./configure \
+     --prefix=/usr \
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=vlc
--_vlcver=3.0.19
-+_vlcver=3.0.18
- _vlcfixupver=
--depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua' 'libidn'
-+depends=('a52dec' 'libdvbpsi' 'libxpm' 'libdca' 'libproxy' 'lua52' 'libidn'
-          'libmatroska' 'taglib' 'libmpcdec' 'ffmpeg4.4' 'faad2' 'libmad'
+@@ -6,10 +6,10 @@
           'libmpeg2' 'xcb-util-keysyms' 'libtar' 'libxinerama' 'libsecret'
           'libupnp' 'libixml.so' 'libupnp.so' 'libarchive' 'qt5-base'
-@@ -9,7 +9,7 @@
-          'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
+          'qt5-x11extras' 'qt5-svg' 'freetype2' 'fribidi' 'harfbuzz'
+-         'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
++         'fontconfig' 'libxml2' 'gnutls' 'libplacebo5' 'aribb24')
  makedepends=('gst-plugins-base-libs' 'live-media' 'libnotify' 'libbluray'
               'flac' 'libdc1394' 'libavc1394' 'libcaca' 'gtk3'
 -             'librsvg' 'libgme' 'xosd' 'twolame' 'aalib' 'avahi' 'systemd-libs'
@@ -98,23 +59,21 @@
               'libmtp' 'libmicrodns' 'libdvdcss' 'smbclient'
               'vcdimager' 'libssh2' 'mesa' 'protobuf' 'libnfs' 'mpg123'
               'libdvdread' 'libdvdnav' 'libogg' 'libshout' 'libmodplug' 'libvpx'
-@@ -19,7 +19,7 @@
-              'lirc' 'libgoom2' 'projectm' 'aom' 'srt' 'dav1d'
-              'aribb25' 'pcsclite' 'wayland-protocols')
- '
--            'lua-socket: http interface'
-+            'lua52-socket: http interface'
-             'libdvdread: DVD input module'
-             'libdvdnav: DVD with navigation input module'
-             'libogg: Ogg and OggSpots codec'
-@@ -82,8 +82,8 @@
-   export CPPFLAGS+=" -I/usr/include/samba-4.0"
+@@ -78,14 +78,14 @@
+ }
+ build() {
+   cd ${pkgname}-${_vlcver}
+-  export CFLAGS+=" -I/usr/include/samba-4.0 -ffat-lto-objects"
+-  export CPPFLAGS+=" -I/usr/include/samba-4.0"
++  export CFLAGS+=" -I/usr/include/samba-4.0 -ffat-lto-objects -I/usr/include/libplacebo5"
++  export CPPFLAGS+=" -I/usr/include/samba-4.0 -I/usr/include/libplacebo5"
    export CXXFLAGS+=" -std=c++17"
    export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig"
--  export LUAC=/usr/bin/luac
--  export LUA_LIBS="$(pkg-config --libs lua)"
-+  export LUAC=/usr/bin/luac5.2
-+  export LUA_LIBS="$(pkg-config --libs lua5.2)"
++  export PKG_CONFIG_PATH="/usr/lib/libplacebo5/pkgconfig:$PKG_CONFIG_PATH"
+   export LUAC=/usr/bin/luac
+   export LUA_LIBS="$(pkg-config --libs lua)"
    export RCC=/usr/bin/rcc-qt5
-   export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig/:$PKG_CONFIG_PATH"
+-  export PKG_CONFIG_PATH="/usr/lib/ffmpeg4.4/pkgconfig/:$PKG_CONFIG_PATH"
    ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \

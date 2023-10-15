@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=libdeflate
--pkgver=1.19
-+pkgver=1.18
- pkgrel=1
- pkgdesc='Heavily optimized library for DEFLATE/zlib/gzip compression and decompression'
- arch=(x86_64)
-@@ -13,7 +13,7 @@
-   ninja
- )
- provides=(libdeflate.so)
--_tag=dd12ff2b36d603dbb7fa8838fe7e7176fcbd4f6f
-+_tag=495fee110ebb48a5eb63b75fd67e42b2955871e2
- source=(git+https://github.com/ebiggers/libdeflate.git#tag=${_tag})
- b2sums=(SKIP)
- 
 @@ -23,7 +23,7 @@
  }
  

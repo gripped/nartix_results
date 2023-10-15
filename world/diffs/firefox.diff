@@ -1,57 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -80,9 +80,7 @@
+         '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
+         'b2f4cb63aefd82a06af8b867bf77b6376589277828502783741f84b687d122ff6097b693ef469866dffea323668819b105dfbdaea9dbc1eda58024549729dc47')
  
- pkgname=firefox
--pkgver=118.0.2
-+pkgver=115.0.2
- pkgrel=1
- pkgdesc="Standalone web browser from mozilla.org"
- url="https://www.mozilla.org/firefox/"
-@@ -61,34 +61,24 @@
-   !strip
- )
- source=(
--  https://archive.mozilla.org/pub/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz{,.asc}
-+  https://archive.mozilla.org/pub/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz
-   $pkgname.desktop
-   identity-icons-brand.svg
--  0001-Bug-1849874-Update-from-packed_simd_2-to-packed_simd.patch
- )
- validpgpkeys=(
--  14F26682D0916CDD81E37B6D61B7B526D98F0353
--)
--sha256sums=('89626520f2f0f782f37c074b94690e0f08dcf416be2b992f4aad68df5d727b21'
--            'SKIP'
-+  '14F26682D0916CDD81E37B6D61B7B526D98F0353'  # Mozilla Software Releases <release@mozilla.com>
-+)
-+sha256sums=('6b2844124c13b4bd9d97ac7f5840f3e957b7631659591f3bea1ac9a89bee1654'
-             '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
--            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9'
--            '2406c4c2e18d535c0c7900fe7b176137ae130a75806a19516854894555b69e72')
--b2sums=('e7b166903dc13ddaf514dea7833de0f464611551b054e5c2e336d3e1995f9c0d3bf6cfbd3cb9306be672d6451b6343e56025c99d0fed4b1d23fd6ea8e519ac9c'
--        'SKIP'
-+            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
-+b2sums=('ca602d102f2b7b7fc7bebb6ca4b21e548d4542727da94410497ad6774b6dc7a9eba778c9b6e269beabdbf647e3447f621103cb68fbcac77c4beca1829cbfc535'
-         'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
--        '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
--        'b2f4cb63aefd82a06af8b867bf77b6376589277828502783741f84b687d122ff6097b693ef469866dffea323668819b105dfbdaea9dbc1eda58024549729dc47')
--
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 -
 -_mozilla_api_key=e05d56db0a694edc8b5aaebda3f2db6a
-+        '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34')
 +
  
  prepare() {
    mkdir mozbuild
-   cd firefox-$pkgver
--
--  patch -Np1 -i ../0001-Bug-1849874-Update-from-packed_simd_2-to-packed_simd.patch
- 
-   echo -n "$_google_api_key" >google-api-key
-   echo -n "$_mozilla_api_key" >mozilla-api-key
-@@ -109,15 +99,11 @@
+@@ -109,15 +107,12 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -61,33 +21,14 @@
  ac_add_options --allow-addon-sideload
  export MOZILLA_OFFICIAL=1
  export MOZ_APP_REMOTINGNAME=${pkgname//-/}
--
+ 
 -ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
 -ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
 -ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -137,9 +123,6 @@
-   export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
-   export MOZ_ENABLE_FULL_SYMBOLS=1
-   export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
--
--  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
- 
-   ulimit -n 4096
- 
-@@ -167,7 +150,7 @@
- 
-   echo "Building optimized browser..."
-   cat >.mozconfig ../mozconfig - <<END
--ac_add_options --enable-lto=cross,full
-+ac_add_options --enable-lto=cross
- ac_add_options --enable-profile-use=cross
- ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
- ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-@@ -203,14 +186,14 @@
+@@ -203,14 +198,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -112,7 +53,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,12 +41,9 @@
+@@ -41,8 +41,6 @@
    !makeflags
    !strip
  )
@@ -121,11 +62,7 @@
  prepare() {
    mkdir mozbuild
    cd firefox-$pkgver
--  patch -Np1 -i ../0001-Bug-1849874-Update-from-packed_simd_2-to-packed_simd.patch
-   echo -n "$_google_api_key" >google-api-key
-   echo -n "$_mozilla_api_key" >mozilla-api-key
-   cat >../mozconfig <<END
-@@ -63,14 +60,11 @@
+@@ -63,14 +61,11 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -141,21 +78,3 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
-@@ -86,8 +80,6 @@
-   export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
-   export MOZ_ENABLE_FULL_SYMBOLS=1
-   export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
--  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
-   ulimit -n 4096
-   echo "Building instrumented browser..."
-   cat >.mozconfig ../mozconfig - <<END
-@@ -108,7 +100,7 @@
-   ./mach clobber
-   echo "Building optimized browser..."
-   cat >.mozconfig ../mozconfig - <<END
--ac_add_options --enable-lto=cross,full
-+ac_add_options --enable-lto=cross
- ac_add_options --enable-profile-use=cross
- ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
- ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog

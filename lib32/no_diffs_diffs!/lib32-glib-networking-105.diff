@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,12 +36,12 @@
+     --cross-file lib32
+   )
+ 
+-  arch-meson glib-networking build "${meson_options[@]}"
++  artix-meson glib-networking build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,6 @@
+   local meson_options=(
+     --cross-file lib32
+   )
+-  arch-meson glib-networking build "${meson_options[@]}"
++  artix-meson glib-networking build "${meson_options[@]}"
+   meson compile -C build
+ }

@@ -1,19 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=libva-utils
--pkgver=2.20.0
-+pkgver=2.18.2
- pkgrel=1
- pkgdesc="Intel VA-API Media Applications and Scripts for libva"
- arch=(x86_64)
-@@ -9,10 +9,10 @@
- depends=(libva)
- makedepends=(mesa meson)
- source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
--sha256sums=('1a5e3c3c24677a6b4bbee21042c4c06b0a2c62e56ebb1baa4e712392b5c72f9b')
-+sha256sums=('c4c0555c96ca678f9ac47fbb56f0ae56ca39fd50fe3553bae5cb13117bfcb406')
+@@ -12,7 +12,7 @@
+ sha256sums=('1a5e3c3c24677a6b4bbee21042c4c06b0a2c62e56ebb1baa4e712392b5c72f9b')
  
  build() {
 -    arch-meson ${pkgname}-${pkgver} build

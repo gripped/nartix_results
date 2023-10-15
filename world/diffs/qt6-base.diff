@@ -1,120 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,93 +1,40 @@
- 
- pkgname=qt6-base
--_qtver=6.6.0
-+_qtver=6.5.1
- pkgver=${_qtver/-/}
--pkgrel=2
-+pkgrel=5
- arch=(x86_64)
- url='https://www.qt.io'
- license=(GPL3 LGPL3 FDL custom)
- pkgdesc='A cross-platform application and UI framework'
--depends=(brotli
--         dbus
--         double-conversion
--         fontconfig
--         freetype2
--         gcc-libs
--         glib2
--         glibc
--         harfbuzz
--         icu
--         krb5
--         libb2
--         libcups
--         libdrm
--         libgl
--         libice
--         libinput
--         libjpeg-turbo
--         libpng
--         libproxy
--         libsm
--         libx11
--         libxcb
--         libxkbcommon
--         libxkbcommon-x11
--         md4c
--         mesa
--         mtdev
--         openssl
--         pcre2
--         shared-mime-info
--         sqlite
+@@ -39,7 +39,7 @@
+          pcre2
+          shared-mime-info
+          sqlite
 -         systemd-libs
--         tslib
--         vulkan-headers
--         xcb-util-cursor
--         xcb-util-image
--         xcb-util-keysyms
--         xcb-util-renderutil
--         xcb-util-wm
--         xdg-utils
--         zlib
--         zstd)
--makedepends=(alsa-lib
--             cmake
--             cups
--             freetds
--             gst-plugins-base-libs
--             gtk3
--             libfbclient
--             libpulse
--             mariadb-libs
--             ninja
--             postgresql
--             unixodbc
--             xmlstarlet)
--optdepends=('freetds: MS SQL driver'
--            'gdk-pixbuf2: GTK platform plugin'
-+depends=(libjpeg-turbo xcb-util-keysyms xcb-util-cursor libgl fontconfig xdg-utils
-+         shared-mime-info xcb-util-wm libxrender libxi sqlite mesa vulkan-headers
-+         tslib libinput libxkbcommon-x11 libproxy libcups double-conversion brotli libb2 md4c)
-+makedepends=(cmake ninja libfbclient mariadb-libs unixodbc postgresql alsa-lib gst-plugins-base-libs
-+             gtk3 libpulse cups freetds xmlstarlet)
-+optdepends=('qt6-wayland: to run Qt6 applications in a Wayland session'
-+            'postgresql-libs: PostgreSQL driver'
-+            'mariadb-libs: MariaDB driver'
-+            'unixodbc: ODBC driver'
-+            'libfbclient: Firebird/iBase driver'
-+            'freetds: MS SQL driver'
-             'gtk3: GTK platform plugin'
--            'libfbclient: Firebird/iBase driver'
--            'mariadb-libs: MariaDB driver'
--            'pango: GTK platform plugin'
--            'perl: for syncqt'
--            'postgresql-libs: PostgreSQL driver'
--            'qt6-wayland: to run Qt6 applications in a Wayland session'
--            'unixodbc: ODBC driver')
-+            'perl: for syncqt')
- groups=(qt6)
- _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
- source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
-+        qtbug-114204.patch::https://code.qt.io/cgit/qt/qtbase.git/patch/?id=9177dbd8
-         qt6-base-cflags.patch
--        qt6-base-nostrip.patch
--        libxkbcommon-1.6.patch::https://code.qt.io/cgit/qt/qtbase.git/patch/?id=8af35d27)
--sha256sums=('039d53312acb5897a9054bd38c9ccbdab72500b71fdccdb3f4f0844b0dd39e0e'
-+        qt6-base-nostrip.patch)
-+sha256sums=('db56fa1f4303a1189fe33418d25d1924931c7aef237f89eea9de58e858eebfed'
-+            '1730b675ede24d80c2e73a2f662cc73718f3060c0b8a707784d188bb11297c4e'
-             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
--            '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094'
--            'f3e81eca8e41b93889943a20da94d683fb5b706cb0f9dc8b851d653df3a1bbf6')
-+            '4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094')
- 
- prepare() {
-   patch -d $_pkgfn -p1 < qt6-base-cflags.patch # Use system CFLAGS
-   patch -d $_pkgfn -p1 < qt6-base-nostrip.patch # Don't strip binaries with qmake
--  patch -d $_pkgfn -p1 < libxkbcommon-1.6.patch # Fix build with libxkbcommon 1.6
-+  patch -d $_pkgfn -p1 < qtbug-114204.patch # Fix vertical tabbar regression
- }
- 
- build() {
-@@ -103,7 +50,7 @@
++         udev
+          tslib
+          vulkan-headers
+          xcb-util-cursor
+@@ -103,7 +103,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
@@ -129,82 +24,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,67 +1,16 @@
- pkgname=qt6-base
--_qtver=6.6.0
--depends=(brotli
--         dbus
--         double-conversion
--         fontconfig
--         freetype2
--         gcc-libs
--         glib2
--         glibc
--         harfbuzz
--         icu
--         krb5
--         libb2
--         libcups
--         libdrm
--         libgl
--         libice
--         libinput
--         libjpeg-turbo
--         libpng
--         libproxy
--         libsm
--         libx11
--         libxcb
--         libxkbcommon
--         libxkbcommon-x11
--         md4c
--         mesa
--         mtdev
--         openssl
--         pcre2
--         shared-mime-info
--         sqlite
+@@ -32,7 +32,7 @@
+          pcre2
+          shared-mime-info
+          sqlite
 -         systemd-libs
--         tslib
--         vulkan-headers
--         xcb-util-cursor
--         xcb-util-image
--         xcb-util-keysyms
--         xcb-util-renderutil
--         xcb-util-wm
--         xdg-utils
--         zlib
--         zstd)
--makedepends=(alsa-lib
--             cmake
--             cups
--             freetds
--             gst-plugins-base-libs
--             gtk3
--             libfbclient
--             libpulse
--             mariadb-libs
--             ninja
--             postgresql
--             unixodbc
--             xmlstarlet)
-+_qtver=6.5.1
-+depends=(libjpeg-turbo xcb-util-keysyms xcb-util-cursor libgl fontconfig xdg-utils
-+         shared-mime-info xcb-util-wm libxrender libxi sqlite mesa vulkan-headers
-+         tslib libinput libxkbcommon-x11 libproxy libcups double-conversion brotli libb2 md4c)
-+makedepends=(cmake ninja libfbclient mariadb-libs unixodbc postgresql alsa-lib gst-plugins-base-libs
-+             gtk3 libpulse cups freetds xmlstarlet)
- groups=(qt6)
- _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
- prepare() {
-   patch -d $_pkgfn -p1 < qt6-base-cflags.patch # Use system CFLAGS
-   patch -d $_pkgfn -p1 < qt6-base-nostrip.patch # Don't strip binaries with qmake
--  patch -d $_pkgfn -p1 < libxkbcommon-1.6.patch # Fix build with libxkbcommon 1.6
-+  patch -d $_pkgfn -p1 < qtbug-114204.patch # Fix vertical tabbar regression
- }
- build() {
-   cmake -B build -S $_pkgfn -G Ninja \
-@@ -76,7 +25,7 @@
++         udev
+          tslib
+          vulkan-headers
+          xcb-util-cursor
+@@ -76,7 +76,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \

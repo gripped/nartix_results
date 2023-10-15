@@ -1,26 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,22 @@
- 
- pkgname=libinput
--pkgver=1.24.0
-+pkgver=1.23.0
- pkgrel=1
- pkgdesc="Input device management and event handling library"
--url="https://wayland.freedesktop.org/libinput/doc/$pkgver/"
-+url="https://gitlab.freedesktop.org/libinput"
+@@ -6,7 +6,7 @@
+ url="https://wayland.freedesktop.org/libinput/doc/$pkgver/"
  arch=(x86_64)
  license=(custom:X11)
 -depends=('mtdev' 'systemd' 'libevdev' 'libwacom' 'systemd-libs' 'glibc')
-+depends=('mtdev' 'udev' 'libevdev' 'libwacom')
++depends=('mtdev' 'libevdev' 'libwacom' 'udev' 'glibc')
  makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
  checkdepends=('python-pytest')
  optdepends=('gtk4: libinput debug-gui'
-             'python-pyudev: libinput measure'
-             'python-libevdev: libinput measure')
- source=(https://gitlab.freedesktop.org/libinput/libinput/-/archive/$pkgver/$pkgname-$pkgver.tar.bz2)
--sha256sums=('c07cd0f3f464e8d2e07dc9479fd5b9340e637408517b77e7e96b2245f37f6fe6')
-+sha256sums=('fad7011705a21f500229199f789f3e3e794b4c9826b70073745cdaec23bc1d0b')
+@@ -16,7 +16,7 @@
+ sha256sums=('c07cd0f3f464e8d2e07dc9479fd5b9340e637408517b77e7e96b2245f37f6fe6')
  
  build() {
 -  arch-meson $pkgname-$pkgver build \
@@ -37,7 +27,7 @@
 @@ -1,8 +1,8 @@
  pkgname=libinput
 -depends=('mtdev' 'systemd' 'libevdev' 'libwacom' 'systemd-libs' 'glibc')
-+depends=('mtdev' 'udev' 'libevdev' 'libwacom')
++depends=('mtdev' 'libevdev' 'libwacom' 'udev' 'glibc')
  makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
  build() {
 -  arch-meson $pkgname-$pkgver build \

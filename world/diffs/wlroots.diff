@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=wlroots
- pkgver=0.16.2
--pkgrel=2
-+pkgrel=1
- license=('MIT')
- pkgdesc='Modular Wayland compositor library'
- url='https://gitlab.freedesktop.org/wlroots/wlroots'
 @@ -26,7 +26,6 @@
      'glslang'
      'meson'
@@ -17,28 +8,25 @@
      'vulkan-headers'
      'wayland-protocols'
      'xorg-xwayland'
-@@ -43,11 +42,11 @@
+@@ -43,10 +42,12 @@
  source=(
      "$pkgname-$pkgver.tar.gz::https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/$pkgver/downloads/wlroots-$pkgver.tar.gz"
      "https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/$pkgver/downloads/wlroots-$pkgver.tar.gz.sig"
--    "Revert-layer-shell-error-on-0-dimension-without-anch.patch"
 +    "0001-find-libseat.patch"
+     "Revert-layer-shell-error-on-0-dimension-without-anch.patch"
  )
  sha256sums=('83e9a11605f23d4bf781ab1947089483d9ec3f7e9ba65398e0609593b77d44aa'
              'SKIP'
--            'd53a62f49334fe15583a951c9e38e7f9f74b19210bdb7f80f16ec0398c3d7b3e')
-+            'ea5499b3663682d22301f62498b92929c96d2ec4290916e91a95d2ca3af9956d')
++            'ea5499b3663682d22301f62498b92929c96d2ec4290916e91a95d2ca3af9956d'
+             'd53a62f49334fe15583a951c9e38e7f9f74b19210bdb7f80f16ec0398c3d7b3e')
  validpgpkeys=(
      '34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48' # Simon Ser
-     '9DDA3B9FA5D58DD5392C78E652CB6609B22DA89A' # Drew DeVault
-@@ -55,12 +54,13 @@
- )
+@@ -56,11 +57,13 @@
  
  prepare() {
--    cd "${pkgname}-${pkgver}"
--    patch -Np1 -i "${srcdir}/Revert-layer-shell-error-on-0-dimension-without-anch.patch"
-+    cd "$pkgname-$pkgver"
+     cd "${pkgname}-${pkgver}"
 +    patch -Np1 -i ../0001-find-libseat.patch
+     patch -Np1 -i "${srcdir}/Revert-layer-shell-error-on-0-dimension-without-anch.patch"
  }
  
  build() {
@@ -62,14 +50,12 @@
      'vulkan-headers'
      'wayland-protocols'
      'xorg-xwayland'
-@@ -31,10 +30,11 @@
-     'debug'
+@@ -32,9 +31,11 @@
  )
  prepare() {
--    cd "${pkgname}-${pkgver}"
--    patch -Np1 -i "${srcdir}/Revert-layer-shell-error-on-0-dimension-without-anch.patch"
-+    cd "$pkgname-$pkgver"
+     cd "${pkgname}-${pkgver}"
 +    patch -Np1 -i ../0001-find-libseat.patch
+     patch -Np1 -i "${srcdir}/Revert-layer-shell-error-on-0-dimension-without-anch.patch"
  }
  build() {
 -    arch-meson "$pkgname-$pkgver" build

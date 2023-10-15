@@ -1,21 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=mbedtls
 -pkgver=3.4.1
--pkgrel=1
-+pkgver=3.4.0
-+pkgrel=3
++pkgver=3.5.0
+ pkgrel=1
  pkgdesc='An open source, portable, easy to use, readable and flexible TLS library'
  arch=(x86_64)
- url=https://tls.mbed.org
 @@ -26,7 +26,7 @@
  replaces=(polarssl)
  conflicts=(polarssl)
  options=(staticlibs)
 -_tag=0b29872bf249f1a6b5a504ba797d7a260c471add
-+_tag=1873d3bfc2da771672bd8e7e8f41f57e0af77f33
++_tag=1ec69067fa1351427f904362c1221b31538c8b57
  source=(git+https://github.com/ARMmbed/mbedtls.git#tag=${_tag})
  b2sums=(SKIP)
  

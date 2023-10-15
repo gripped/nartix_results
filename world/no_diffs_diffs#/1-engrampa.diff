@@ -1,19 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=engrampa
--pkgver=1.26.1
-+pkgver=1.27.0
- pkgrel=1
+ pkgver=1.26.1
+-pkgrel=1
++pkgrel=1.1
  pkgdesc="Archive manipulator for MATE"
  url="https://mate-desktop.org"
-@@ -19,7 +19,7 @@
- conflicts=("engrampa-gtk3")
- replaces=("engrampa-gtk3")
- source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
--sha256sums=('f0224107a7a4e9ea6309c9e78aa5faac802c4cf72a49ac283aa9e7ae1e8a6c4a')
-+sha256sums=('1bb757d72d03787f2475d85e0741b3cd0f745e956fa55bc66c7921325c50130f')
- 
- build() {
-     	cd "${pkgname}-${pkgver}"
+ arch=('x86_64')

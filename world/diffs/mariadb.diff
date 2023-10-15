@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,29 +2,37 @@
- pkgbase=mariadb
- pkgname=('mariadb-libs' 'mariadb-clients' 'mariadb' 'mytop')
- pkgdesc='Fast SQL database server, derived from MySQL'
--pkgver=11.1.2
--pkgrel=1
-+pkgver=11.0.2
-+pkgrel=2
- arch=('x86_64')
+@@ -8,12 +8,16 @@
  license=('GPL')
  url='https://mariadb.org/'
  makedepends=('boost' 'bzip2' 'cmake' 'cracklib' 'curl' 'jemalloc' 'judy' 'krb5' 'liburing'
@@ -18,23 +10,15 @@
  source=("https://rsync.osuosl.org/pub/mariadb/mariadb-${pkgver}/source/mariadb-${pkgver}.tar.gz"{,.asc}
 +        'mariadb.sysusers.conf'
 +        'mariadb.tmpfiles.conf'
-+        '0002-MDEV-31443-FATAL-InnoDB-Unable-to-find-charset-colla.patch'
          '0001-arch-specific.patch')
--sha256sums=('19a9e980e57fa332931f643b48ad7390528c889ff6ea8b0e16fd306aa3088238'
-+sha256sums=('3c71576cad0ea416882270e383f94cc89693b7fbcce1fa4f306fe3e931e464ae'
+ sha256sums=('19a9e980e57fa332931f643b48ad7390528c889ff6ea8b0e16fd306aa3088238'
              'SKIP'
 +            'd21fa98b57b3f44d1731551ac441bf24b75662fb26393757aa22f9cb92d470cd'
 +            '65dfade5bfa2338ec201e3fdcddd819ee87a94a27e1c7c293e890927f4ac7555'
-+            'e4ea86c72fe0258e442cc8a2dc6cf040696535e22d70be4cb63007130e39d222'
              '3289efb3452d199aec872115f35da3f1d6fd4ce774615076690e9bc8afae1460')
  
  prepare() {
-   cd $pkgbase-$pkgver/
- 
-   patch -Np1 < ../0001-arch-specific.patch
-+
-+  patch -Np1 < ../0002-MDEV-31443-FATAL-InnoDB-Unable-to-find-charset-colla.patch
- }
+@@ -24,7 +28,7 @@
  
  build() {
    local _cmake_options=(
@@ -43,7 +27,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
  
-@@ -35,7 +43,7 @@
+@@ -35,7 +39,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -52,7 +36,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=/usr/lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=/usr/lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -60,7 +68,7 @@
+@@ -60,7 +64,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -61,7 +45,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -136,7 +144,7 @@
+@@ -136,7 +140,7 @@
            'etc/my.cnf.d/spider.cnf'
            'etc/security/user_map.conf')
    install=mariadb.install
@@ -70,7 +54,7 @@
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
                'galera: for MariaDB cluster with Galera WSREP'
-@@ -154,6 +162,8 @@
+@@ -154,6 +158,8 @@
  
    cd "$pkgdir"
  
@@ -79,7 +63,7 @@
    rm -r etc/logrotate.d
    rm usr/bin/rcmysql
    rm usr/share/mysql/{binary-configure,mysql{,d_multi}.server}
-@@ -166,9 +176,6 @@
+@@ -166,9 +172,6 @@
    install -d {etc,usr/lib}/security
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
@@ -89,22 +73,13 @@
  
    rm usr/bin/{mariadb{_,-},mysql_}config
    rm -r usr/include/
-@@ -184,7 +191,7 @@
- 
-   rm usr/bin/mytop
- 
--  rm -r usr/{mariadb-test,sql-bench}
-+  rm -r usr/{mysql-test,sql-bench}
-   rm usr/share/man/man1/mysql-test-run.pl.1
- }
- 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,15 @@
+@@ -1,14 +1,14 @@
  pkgbase=mariadb
  pkgname=('mariadb-libs' 'mariadb-clients' 'mariadb' 'mytop')
  makedepends=('boost' 'bzip2' 'cmake' 'cracklib' 'curl' 'jemalloc' 'judy' 'krb5' 'liburing'
@@ -113,7 +88,6 @@
  prepare() {
    cd $pkgbase-$pkgver/
    patch -Np1 < ../0001-arch-specific.patch
-+  patch -Np1 < ../0002-MDEV-31443-FATAL-InnoDB-Unable-to-find-charset-colla.patch
  }
  build() {
    local _cmake_options=(
@@ -122,7 +96,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
      -DINSTALL_SYSCONFDIR=/etc
-@@ -18,7 +19,7 @@
+@@ -18,7 +18,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -131,7 +105,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=/usr/lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=/usr/lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -41,7 +42,7 @@
+@@ -41,7 +41,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -140,7 +114,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -93,7 +94,7 @@
+@@ -93,7 +93,7 @@
            'etc/my.cnf.d/spider.cnf'
            'etc/security/user_map.conf')
    install=mariadb.install
@@ -149,7 +123,7 @@
     computation engine'
                'perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission'
                'python-mysqlclient: for myrocks_hotbackup'
-@@ -104,6 +105,8 @@
+@@ -104,6 +104,8 @@
    cd build
    make DESTDIR="$pkgdir" install
    cd "$pkgdir"
@@ -158,7 +132,7 @@
    rm -r etc/logrotate.d
    rm usr/bin/rcmysql
    rm usr/share/mysql/{binary-configure,mysql{,d_multi}.server}
-@@ -113,8 +116,6 @@
+@@ -113,8 +115,6 @@
    install -d {etc,usr/lib}/security
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
@@ -167,12 +141,3 @@
    rm usr/bin/{mariadb{_,-},mysql_}config
    rm -r usr/include/
    rm usr/share/man/man1/{mariadb,mysql}_config.1
-@@ -126,7 +127,7 @@
-     rm "${pkgdir}"/usr/bin/"$(basename "${bin}")" "${pkgdir}"/usr/share/man/man1/"$(basename "${bin}")".1
-   done
-   rm usr/bin/mytop
--  rm -r usr/{mariadb-test,sql-bench}
-+  rm -r usr/{mysql-test,sql-bench}
-   rm usr/share/man/man1/mysql-test-run.pl.1
- }
- package_mytop() {

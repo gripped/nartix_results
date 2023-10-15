@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,7 @@
+ CFLAGS+=" ${CPPFLAGS}"
+ 
+ build() {
+-  cmake -B build -S ${pkgname}-${pkgver} \
++  artix-cmake -B build -S ${pkgname}-${pkgver} \
+         -DCMAKE_BUILD_TYPE=None \
+         -DCMAKE_INSTALL_PREFIX=/usr \
+         -DENABLE_MAN=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+              'ruby' 'tcl')
+ CFLAGS+=" ${CPPFLAGS}"
+ build() {
+-  cmake -B build -S ${pkgname}-${pkgver} \
++  artix-cmake -B build -S ${pkgname}-${pkgver} \
+         -DCMAKE_BUILD_TYPE=None \
+         -DCMAKE_INSTALL_PREFIX=/usr \
+         -DENABLE_MAN=ON \

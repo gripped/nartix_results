@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,6 +36,8 @@
+     -B build
+     -DCMAKE_BUILD_TYPE=Release  # None is not supported :(
+     -DCMAKE_INSTALL_PREFIX=/usr
++    -DCMAKE_PREFIX_PATH=/usr
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib
+     -DCMAKE_INSTALL_LIBDIR=lib
+     -DOSPRAY_BUILD_ISA=ALL
+     -DOSPRAY_ENABLE_APPS_EXAMPLES=OFF
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,8 @@
+     -B build
+     -DCMAKE_BUILD_TYPE=Release  # None is not supported :(
+     -DCMAKE_INSTALL_PREFIX=/usr
++    -DCMAKE_PREFIX_PATH=/usr
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib
+     -DCMAKE_INSTALL_LIBDIR=lib
+     -DOSPRAY_BUILD_ISA=ALL
+     -DOSPRAY_ENABLE_APPS_EXAMPLES=OFF

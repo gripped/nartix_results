@@ -1,45 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,27 +1,17 @@
- 
- pkgname=gnome-system-monitor
--pkgver=45.0.2
-+pkgver=44.0
- pkgrel=1
- pkgdesc="View current processes and monitor system state"
- url="https://wiki.gnome.org/Apps/SystemMonitor"
- arch=(x86_64)
- license=(GPL)
- depends=(
--  cairo
--  dconf
--  gdk-pixbuf2
--  glib2
--  glibmm
--  gtk3
-   gtkmm3
--  hicolor-icon-theme
-   libgtop
-   libhandy
-   librsvg
--  libsigc++
--  pango
+@@ -21,7 +21,6 @@
+   libsigc++
+   pango
    polkit
 -  systemd
  )
  makedepends=(
    appstream-glib
-@@ -30,7 +20,8 @@
-   yelp-tools
- )
- groups=(gnome)
--_commit=e74545dbdebd8e591c1679181c5ff3d53c53386e  # tags/45.0.2^0
-+options=(debug)
-+_commit=e75e0f8b3162daa1f66664e4531bc717b092c164  # tags/44.0^0
- source=("git+https://gitlab.gnome.org/GNOME/gnome-system-monitor.git#commit=$_commit")
- b2sums=('SKIP')
- 
-@@ -44,7 +35,7 @@
+@@ -44,7 +43,7 @@
  }
  
  build() {
@@ -54,32 +23,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,10 @@
- pkgname=gnome-system-monitor
- depends=(
--  cairo
--  dconf
--  gdk-pixbuf2
--  glib2
--  glibmm
--  gtk3
-   gtkmm3
--  hicolor-icon-theme
-   libgtop
-   libhandy
-   librsvg
--  libsigc++
--  pango
+@@ -14,7 +14,6 @@
+   libsigc++
+   pango
    polkit
 -  systemd
  )
  makedepends=(
    appstream-glib
-@@ -23,10 +13,11 @@
-   yelp-tools
- )
- groups=(gnome)
- prepare() {
+@@ -27,6 +26,6 @@
    cd $pkgname
  }
  build() {

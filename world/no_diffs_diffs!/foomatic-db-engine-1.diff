@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,9 +17,6 @@
- )
- sha256sums=('SKIP')
+@@ -1,7 +1,7 @@
  
--pkgver() {
--  date +%Y%m%d
--}
- 
- build() {
-   export LIB_CUPS="/usr/lib/cups"
+ pkgname=foomatic-db-engine
+ arch=('x86_64')
+-pkgver=20220521
++pkgver=20230725
+ pkgrel=1
+ epoch=4
+ url="http://www.linuxprinting.org/foomatic.html"

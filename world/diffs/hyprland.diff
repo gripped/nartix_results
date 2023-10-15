@@ -1,40 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=hyprland
--pkgver=0.30.0
-+pkgver=0.27.2
- pkgrel=1
- pkgdesc='a highly customizable dynamic tiling Wayland compositor'
- arch=(x86_64 aarch64)
 @@ -27,7 +27,7 @@
           pixman
           polkit
           seatd
 -         systemd-libs
-+         libudev
++         udev
           vulkan-icd-loader
           vulkan-validation-layers
           wayland
-@@ -49,7 +49,7 @@
-              xorgproto)
- _archive="${pkgname^}-$pkgver"
- source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
--sha256sums=('68a79b2c1ae1a56c046e6ecf07f0b3a8135461d387f6ad0d8f0623a7f300ca80')
-+sha256sums=('1cb1b345fd98e80cb04ba60c7bb42ead6b6ad79898f84b468f3ba87459d99f1f')
- 
- prepare() {
- 	ln -sf hyprland-source "$_archive"
-@@ -67,7 +67,7 @@
- 	ninja -C build/ install
- 	popd
- 	pushd subprojects/udis86
--	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -H./ -B./build -G Ninja
-+        cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DNO_SYSTEMD:STRING=true -H./ -B./build -G Ninja
- 	cmake --build ./build --config Release --target all
- 	popd
- 	make protocols
 
 
 ############# Stripped diff below #################
@@ -46,16 +20,7 @@
           polkit
           seatd
 -         systemd-libs
-+         libudev
++         udev
           vulkan-icd-loader
           vulkan-validation-layers
           wayland
-@@ -56,7 +56,7 @@
- 	ninja -C build/ install
- 	popd
- 	pushd subprojects/udis86
--	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -H./ -B./build -G Ninja
-+        cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DNO_SYSTEMD:STRING=true -H./ -B./build -G Ninja
- 	cmake --build ./build --config Release --target all
- 	popd
- 	make protocols

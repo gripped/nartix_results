@@ -1,10 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,10 +18,9 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=syslog-ng
+-pkgver=4.2.0
++pkgver=4.4.0
+ pkgrel=1
+ pkgdesc="Next-generation syslogd with advanced networking and filtering capabilities"
+ arch=('x86_64')
+@@ -12,16 +12,17 @@
+   'curl'
+   'glib2'
+   'glibc'
++  'grpc'
+   'json-c'
+   'libcap'
+   'libnet'
    'libnsl'
    'openssl'
-   'pcre'
+-  'pcre'
 -  'systemd-libs'
++  'pcre2'
++  'protobuf'
  )
  makedepends=('libxslt' 'mongo-c-driver' 'librabbitmq-c' 'python' 'libesmtp' 'hiredis'
 -             'libdbi' 'libmaxminddb' 'net-snmp' 'librdkafka' 'systemd')
@@ -12,7 +29,7 @@
  checkdepends=('python-nose' 'python-ply')
  optdepends=('logrotate: for rotating log files'
              'libdbi: for the SQL plugin'
-@@ -38,19 +37,13 @@
+@@ -38,18 +39,15 @@
  replaces=('eventlog')
  backup=('etc/syslog-ng/scl.conf'
          'etc/syslog-ng/syslog-ng.conf'
@@ -21,19 +38,20 @@
 +        'etc/logrotate.d/syslog-ng')
  source=(https://github.com/balabit/syslog-ng/releases/download/syslog-ng-$pkgver/$pkgname-$pkgver.tar.gz
          syslog-ng.conf syslog-ng.logrotate)
- sha512sums=('85442b57b7934e8afbb4e7d8285ed1fd16aaad2a8d853e3765db4f885d88bee4910a3b5d271f1cbd100c2d3a3f81f1a4fe845bc948fe68c22d32bc9b730af04b'
-             '73239e783b6c4f8aabc30579153f531b022278aefecd84454935038274cc29f674a7093d68a3d797531e40c8f5d81e0b7e6b80d94e36fb11b60cfac6c2e93562'
+-sha512sums=('85442b57b7934e8afbb4e7d8285ed1fd16aaad2a8d853e3765db4f885d88bee4910a3b5d271f1cbd100c2d3a3f81f1a4fe845bc948fe68c22d32bc9b730af04b'
+-            '73239e783b6c4f8aabc30579153f531b022278aefecd84454935038274cc29f674a7093d68a3d797531e40c8f5d81e0b7e6b80d94e36fb11b60cfac6c2e93562'
++sha512sums=('1cf18c43321e523d0f49b25a4839fd10ec301b207da1b2c407df5167dba557ac0a7781b07f1c1e5d18241376966b8099d9e41dffa55030f6a8052388139c4107'
++            '599d9d1d00a11e2d75958b314848ee31b3da9d91016e0a0e8a002346d8b969d9759bb10b631ca22e37716078c6850e638573eff24a9b20703f79cbb8b788ef0c'
              'cd39f545a6a855c866a466bf846e33940b2c2dd1fc2eaf50cce29c68e1a5753c7c4b56411e4f01c152f32e155104a98dd755a96319767f47c73a8853f720b2cc')
  
--prepare() {
--  cd $pkgname-$pkgver
+ prepare() {
+   cd $pkgname-$pkgver
 -  sed -i -e 's,/bin/,/usr/bin/,' -e 's,/sbin/,/bin/,' contrib/systemd/syslog-ng@.service
 -  sed -i -e 's|/var/run|/run|g' contrib/systemd/syslog-ng@default
--}
+ }
  
  build() {
-   cd $pkgname-$pkgver
-@@ -75,7 +68,7 @@
+@@ -75,7 +73,7 @@
    ./configure --prefix=/usr --sysconfdir=/etc/syslog-ng --libexecdir=/usr/lib \
      --sbindir=/usr/bin --localstatedir=/var/lib/syslog-ng --datadir=/usr/share \
      --with-pidfile-dir=/run --enable-spoof-source --enable-ipv6 \
@@ -42,7 +60,7 @@
      --enable-manpages --enable-all-modules --disable-java --disable-java-modules  \
      --disable-mqtt --disable-riemann --with-python=3 --with-jsonc=system
    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-@@ -88,5 +81,4 @@
+@@ -88,5 +86,4 @@
    install -dm755 "$pkgdir/var/lib/syslog-ng" "$pkgdir/etc/syslog-ng/patterndb.d"
    install -Dm644 "$srcdir/syslog-ng.conf" "$pkgdir/etc/syslog-ng/syslog-ng.conf"
    install -Dm644 "$srcdir/syslog-ng.logrotate" "$pkgdir/etc/logrotate.d/syslog-ng"
@@ -54,11 +72,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,21 +11,14 @@
+@@ -5,26 +5,24 @@
+   'curl'
+   'glib2'
+   'glibc'
++  'grpc'
+   'json-c'
+   'libcap'
+   'libnet'
    'libnsl'
    'openssl'
-   'pcre'
+-  'pcre'
 -  'systemd-libs'
++  'pcre2'
++  'protobuf'
  )
  makedepends=('libxslt' 'mongo-c-driver' 'librabbitmq-c' 'python' 'libesmtp' 'hiredis'
 -             'libdbi' 'libmaxminddb' 'net-snmp' 'librdkafka' 'systemd')
@@ -69,16 +96,15 @@
          'etc/syslog-ng/syslog-ng.conf'
 -        'etc/logrotate.d/syslog-ng'
 -        'etc/default/syslog-ng@default')
--prepare() {
--  cd $pkgname-$pkgver
++        'etc/logrotate.d/syslog-ng')
+ prepare() {
+   cd $pkgname-$pkgver
 -  sed -i -e 's,/bin/,/usr/bin/,' -e 's,/sbin/,/bin/,' contrib/systemd/syslog-ng@.service
 -  sed -i -e 's|/var/run|/run|g' contrib/systemd/syslog-ng@default
--}
-+        'etc/logrotate.d/syslog-ng')
+ }
  build() {
    cd $pkgname-$pkgver
-   export CFLAGS+=" -ffat-lto-objects"
-@@ -44,7 +37,7 @@
+@@ -44,7 +42,7 @@
    ./configure --prefix=/usr --sysconfdir=/etc/syslog-ng --libexecdir=/usr/lib \
      --sbindir=/usr/bin --localstatedir=/var/lib/syslog-ng --datadir=/usr/share \
      --with-pidfile-dir=/run --enable-spoof-source --enable-ipv6 \

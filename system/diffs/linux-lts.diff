@@ -1,224 +1,48 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,49 +1,32 @@
+@@ -1,6 +1,6 @@
  
  pkgbase=linux-lts
 -pkgver=6.1.57
-+pkgver=6.1.39
++pkgver=6.1.56
  pkgrel=1
  pkgdesc='LTS Linux'
--url='https://www.kernel.org'
-+url="https://www.kernel.org/"
- arch=(x86_64)
- license=(GPL2)
- makedepends=(
--  bc
--  cpio
--  gettext
--  libelf
--  pahole
--  perl
--  python
--  tar
--  xz
--
--  graphviz
--  imagemagick
--  python-sphinx
--  texlive-latexextra
-+  bc libelf pahole cpio perl tar xz gettext
-+  xmlto python-sphinx graphviz imagemagick texlive-latexextra
- )
- options=('!strip')
- _srcname=linux-$pkgver
--_srctag=v$pkgver
- source=(
-   https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
-+  config         # the main kernel config file
-   0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
--  config  # the main kernel config file
- )
- validpgpkeys=(
--  ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
--  647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
-+  'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
-+  '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
+ url='https://www.kernel.org'
+@@ -34,16 +34,16 @@
+   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
  )
 -sha256sums=('f9ebfe3ddc5152d87b37e33be30e31875d137433be10a57ce29d2eae7b6e91b1'
-+sha256sums=('4cddee22fdf657138a06af653492f67cd3a4762c04a34725534bd200d99085b8'
++sha256sums=('9edefdde32c2298389dcd19566402332b3c2016f5ada17e5820f500b908d478c'
              'SKIP'
--            '21195509fded29d0256abfce947b5a8ce336d0d3e192f3f8ea90bde9dd95a889'
+             '21195509fded29d0256abfce947b5a8ce336d0d3e192f3f8ea90bde9dd95a889'
 -            'fcf0b005d3cde29b54a61b25bef3efb42a12ac38c039200ac8f4756618270820')
 -b2sums=('9fd3b4ffdc392d2bedf1b9366fdd773e006c7148756420ae621285874bb2ec9461199871579ba713ce5df1831ace7392969a97f2d5b90b08695f632b97655f9d'
--        'SKIP'
--        '02a10396c92ab93124139fc3e37b1d4d8654227556d0d11486390da35dfc401ff5784ad86d0d2aa7eacac12bc451aa2ff138749748c7e24deadd040d5404734c'
++            'ccaee58ea4357b659d5f83954576b1dd82920a3e26fc419dbff5dbfe7253880b')
++b2sums=('c70da3ecb8f849890fe2b5bf2874a2dd4f468508b508aaf1e7e6773c63845e782e2cf5285e0e7e62ce25e7a4485e1cf033122c4d6fbff0e83b92e172423e7a5c'
+         'SKIP'
+         '02a10396c92ab93124139fc3e37b1d4d8654227556d0d11486390da35dfc401ff5784ad86d0d2aa7eacac12bc451aa2ff138749748c7e24deadd040d5404734c'
 -        '2f5bea114cf95a54e9e9fddfc43c5f467a21b284f5d71e31664c81487d6a1adbddbb16e15a56307be47ff53782d89208e4df201286c35ec421177bc189a4a001')
-+            'b5ddd4c95acffe68bb83a1a80dd5bcd67868ff2723249a8fa8699b78f0b37b59'
-+            '1bd8388fcb6ed4eec46450c65eb7a0889a8c541f164a39e3064633981a7a4a3d')
- 
+-
 -export KBUILD_BUILD_HOST=archlinux
++        'ddc45c7dab3fb639d85164cbacc5d3071a9d26ebefef0d4587947c5ddd1570c8502b65be6fa17875dae3d3e779af92d3235fc11e36db9a238667cab4cdf25326')
++
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -51,6 +34,7 @@
-   cd $_srcname
- 
-   echo "Setting version..."
-+  scripts/setlocalversion --save-scmversion
-   echo "-$pkgrel" > localversion.10-pkgrel
-   echo "${pkgbase#linux}" > localversion.20-pkgname
- 
-@@ -58,7 +42,6 @@
-   for src in "${source[@]}"; do
-     src="${src%%::*}"
-     src="${src##*/}"
--    src="${src%.zst}"
-     [[ $src = *.patch ]] || continue
-     echo "Applying patch $src..."
-     patch -Np1 < "../$src"
-@@ -75,32 +58,20 @@
- 
- build() {
-   cd $_srcname
--  make all
--  make htmldocs
-+  make htmldocs all
- }
- 
- _package() {
-   pkgdesc="The $pkgdesc kernel and modules"
--  depends=(
--    coreutils
--    initramfs
--    kmod
--  )
--  optdepends=(
--    'wireless-regdb: to set the correct wireless channels of your country'
--    'linux-firmware: firmware images needed for some devices'
--  )
--  provides=(
--    KSMBD-MODULE
--    VIRTUALBOX-GUEST-MODULES
--    WIREGUARD-MODULE
--  )
--  replaces=(
--    wireguard-lts
--  )
-+  depends=(coreutils kmod initramfs)
-+  optdepends=('wireless-regdb: to set the correct wireless channels of your country'
-+              'linux-firmware: firmware images needed for some devices')
-+  provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE KSMBD-MODULE)
-+  replaces=(wireguard-lts)
- 
-   cd $_srcname
--  local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-+  local kernver="$(<version)"
-+  local modulesdir="$pkgdir/usr/lib/modules/$kernver"
- 
-   echo "Installing boot image..."
-   install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
-@@ -210,11 +181,7 @@
-   ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
- }
- 
--pkgname=(
--  "$pkgbase"
--  "$pkgbase-headers"
--  "$pkgbase-docs"
--)
-+pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
- for _p in "${pkgname[@]}"; do
-   eval "package_$_p() {
-     $(declare -f "_package${_p#$pkgbase}")
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,35 +1,23 @@
- pkgbase=linux-lts
- makedepends=(
--  bc
--  cpio
--  gettext
--  libelf
--  pahole
--  perl
--  python
--  tar
--  xz
--  graphviz
--  imagemagick
--  python-sphinx
--  texlive-latexextra
-+  bc libelf pahole cpio perl tar xz gettext
-+  xmlto python-sphinx graphviz imagemagick texlive-latexextra
- )
+@@ -17,7 +17,7 @@
  options=('!strip')
  _srcname=linux-$pkgver
--_srctag=v$pkgver
+ _srctag=v$pkgver
 -export KBUILD_BUILD_HOST=archlinux
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-   cd $_srcname
-   echo "Setting version..."
-+  scripts/setlocalversion --save-scmversion
-   echo "-$pkgrel" > localversion.10-pkgrel
-   echo "${pkgbase#linux}" > localversion.20-pkgname
-   local src
-   for src in "${source[@]}"; do
-     src="${src%%::*}"
-     src="${src##*/}"
--    src="${src%.zst}"
-     [[ $src = *.patch ]] || continue
-     echo "Applying patch $src..."
-     patch -Np1 < "../$src"
-@@ -43,25 +31,15 @@
- }
- build() {
-   cd $_srcname
--  make all
--  make htmldocs
-+  make htmldocs all
- }
- _package() {
--  depends=(
--    coreutils
--    initramfs
--    kmod
--  )
--  provides=(
--    KSMBD-MODULE
--    VIRTUALBOX-GUEST-MODULES
--    WIREGUARD-MODULE
--  )
--  replaces=(
--    wireguard-lts
--  )
-+  depends=(coreutils kmod initramfs)
-+  provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE KSMBD-MODULE)
-+  replaces=(wireguard-lts)
-   cd $_srcname
--  local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-+  local kernver="$(<version)"
-+  local modulesdir="$pkgdir/usr/lib/modules/$kernver"
-   echo "Installing boot image..."
-   install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
-   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
-@@ -128,11 +106,7 @@
-   mkdir -p "$pkgdir/usr/src"
-   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
- }
--pkgname=(
--  "$pkgbase"
--  "$pkgbase-headers"
--  "$pkgbase-docs"
--)
-+pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
- for _p in "${pkgname[@]}"; do
-   eval "package_$_p() {
-     $(declare -f "_package${_p#$pkgbase}")

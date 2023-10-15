@@ -1,63 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,13 @@
- 
- pkgbase=networkmanager
--pkgname=(
--  networkmanager
--  libnm
--  nm-cloud-setup
--)
--pkgver=1.44.2
+@@ -6,7 +6,7 @@
+   nm-cloud-setup
+ )
+ pkgver=1.44.2
 -pkgrel=3
-+pkgname=(networkmanager libnm nm-cloud-setup)
-+pkgver=1.42.8
 +pkgrel=1
  pkgdesc="Network connection manager and user applications"
  url="https://networkmanager.dev/"
  arch=(x86_64)
- license=(GPL)
-+_pppver=2.5.0
- makedepends=(
-   audit
-   bluez-libs
-@@ -18,6 +15,7 @@
-   dhclient
-   dhcpcd
-   dnsmasq
-+  elogind
-   git
-   glib2-docs
-   gobject-introspection
-@@ -39,9 +37,8 @@
-   pacrunner
-   perl-yaml
+@@ -41,7 +41,7 @@
    polkit
--  ppp
-+  "ppp=$_pppver"
+   ppp
    python-gobject
 -  systemd
++  elogind
    vala
    vala
    wpa_supplicant
-@@ -50,13 +47,9 @@
-   libx11
+@@ -51,12 +51,8 @@
    python-dbus
  )
--_commit=8bee6ef894a27ffc8a464df3b32b03e811e1a15d  # tags/1.44.2^0
+ _commit=8bee6ef894a27ffc8a464df3b32b03e811e1a15d  # tags/1.44.2^0
 -source=(
 -  "git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit"
 -  0001-connectivity-Make-curl-timeout-callback-non-repeatin.patch
 -)
 -b2sums=('SKIP'
 -        '51674577e4a2786b6491fdf90cc90734da3792e0a7e224f0eecc9c485a5f81b68a71bb559b23d294d52dc9065ee82c997c31f9272504c3d753e0ffe1321367e9')
-+_commit=7c6da25396162ba05ffa71f00e227351dc1452b6  # tags/1.42.8^0
 +source=("git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit")
 +b2sums=('SKIP')
  
  pkgver() {
    cd NetworkManager
-@@ -65,8 +58,6 @@
+@@ -65,8 +61,6 @@
  
  prepare() {
    cd NetworkManager
@@ -66,7 +42,7 @@
  }
  
  build() {
-@@ -75,16 +66,22 @@
+@@ -75,9 +69,12 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -79,30 +55,17 @@
 +    -D systemd_journal=false
  
      -D iwd=true
-+    -D pppd_plugin_dir=/usr/lib/pppd/$_pppver
      -D teamdctl=true
-+    -D nm_cloud_setup=true
-     -D bluez5_dun=true
-     -D ebpf=true
+@@ -100,7 +97,7 @@
+   CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
  
-     -D config_plugins_default=keyfile
-+    -D ifcfg_rh=false
-     -D ifupdown=false
- 
-     -D netconfig=no
-@@ -97,10 +94,7 @@
-     -D qt=false
-   )
- 
--  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--
 -  arch-meson NetworkManager build "${meson_options[@]}"
 +  artix-meson NetworkManager build "${meson_options[@]}"
    meson compile -C build
  }
  
-@@ -123,6 +117,7 @@
+@@ -123,6 +120,7 @@
      audit
      bluez-libs
      curl
@@ -110,7 +73,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -158,6 +153,9 @@
+@@ -158,6 +156,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -120,22 +83,18 @@
  END
  
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -175,12 +173,8 @@
-   _pick libnm usr/share/gtk-doc/html/libnm
+@@ -176,9 +177,7 @@
    _pick libnm usr/share/vala/vapi/libnm.*
  
--  _pick cloud usr/lib/**/*nm-cloud-setup*
+   _pick cloud usr/lib/**/*nm-cloud-setup*
 -  _pick cloud usr/share/man/*/nm-cloud-setup*
 -
 -  _pick ovs usr/lib/systemd/system/NetworkManager.service.d/NetworkManager-ovs.conf
--
--  install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
-+  _pick nm-cloud-setup "$pkgdir"/usr/lib/**/*nm-cloud-setup*
 +
- }
  
- package_libnm() {
-@@ -189,7 +183,7 @@
+   install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
+ }
+@@ -189,7 +188,7 @@
    depends=(
      glib2
      nss
@@ -144,50 +103,18 @@
      util-linux-libs
    )
    provides=(libnm.so)
-@@ -201,6 +195,6 @@
-   pkgdesc="Automatically configure NetworkManager in cloud"
-   depends=(networkmanager)
- 
--  mv cloud/* "$pkgdir"
--}
--
-+  mv nm-cloud-setup/* "$pkgdir"
-+}
-+
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,6 @@
- pkgbase=networkmanager
--pkgname=(
--  networkmanager
--  libnm
--  nm-cloud-setup
--)
-+pkgname=(networkmanager libnm nm-cloud-setup)
-+_pppver=2.5.0
- makedepends=(
-   audit
-   bluez-libs
-@@ -11,6 +8,7 @@
-   dhclient
-   dhcpcd
-   dnsmasq
-+  elogind
-   git
-   glib2-docs
-   gobject-introspection
-@@ -32,30 +30,34 @@
-   pacrunner
-   perl-yaml
+@@ -34,23 +34,25 @@
    polkit
--  ppp
-+  "ppp=$_pppver"
+   ppp
    python-gobject
 -  systemd
++  elogind
    vala
    vala
    wpa_supplicant
@@ -209,28 +136,18 @@
 +    -D session_tracking=elogind
 +    -D systemd_journal=false
      -D iwd=true
-+    -D pppd_plugin_dir=/usr/lib/pppd/$_pppver
      -D teamdctl=true
-+    -D nm_cloud_setup=true
      -D bluez5_dun=true
-     -D ebpf=true
-     -D config_plugins_default=keyfile
-+    -D ifcfg_rh=false
-     -D ifupdown=false
-     -D netconfig=no
-     -D config_dns_rc_manager_default=symlink
-@@ -65,9 +67,7 @@
-     -D more_logging=false
-     -D qt=false
+@@ -67,7 +69,7 @@
    )
--  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
 -  arch-meson NetworkManager build "${meson_options[@]}"
 +  artix-meson NetworkManager build "${meson_options[@]}"
    meson compile -C build
  }
  _pick() {
-@@ -84,6 +84,7 @@
+@@ -84,6 +86,7 @@
      audit
      bluez-libs
      curl
@@ -238,7 +155,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -101,6 +102,9 @@
+@@ -101,6 +104,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -248,15 +165,13 @@
  END
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
  [connectivity]
-@@ -114,16 +118,13 @@
-   _pick libnm usr/share/gir-1.0/NM-*
+@@ -115,15 +121,13 @@
    _pick libnm usr/share/gtk-doc/html/libnm
    _pick libnm usr/share/vala/vapi/libnm.*
--  _pick cloud usr/lib/**/*nm-cloud-setup*
+   _pick cloud usr/lib/**/*nm-cloud-setup*
 -  _pick cloud usr/share/man/*/nm-cloud-setup*
 -  _pick ovs usr/lib/systemd/system/NetworkManager.service.d/NetworkManager-ovs.conf
--  install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
-+  _pick nm-cloud-setup "$pkgdir"/usr/lib/**/*nm-cloud-setup*
+   install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
  package_libnm() {
    depends=(
@@ -267,10 +182,3 @@
      util-linux-libs
    )
    provides=(libnm.so)
-@@ -131,5 +132,5 @@
- }
- package_nm-cloud-setup() {
-   depends=(networkmanager)
--  mv cloud/* "$pkgdir"
-+  mv nm-cloud-setup/* "$pkgdir"
- }

@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=sssd
--pkgver=2.9.2
--pkgrel=1
-+pkgver=2.9.0
-+pkgrel=2
- pkgdesc="System Security Services Daemon"
- arch=('x86_64')
- url="https://github.com/SSSD/sssd"
 @@ -27,7 +27,7 @@
    'doxygen'
    'python'
@@ -19,31 +9,7 @@
    'tevent'
    'ldb'
    'bc'
-@@ -41,9 +41,11 @@
- )
- options=('!lto')
- backup=('etc/logrotate.d/sssd')
--source=("https://github.com/SSSD/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.gz"{,.asc})
--sha512sums=('d3d05e2743cf3a31cd1952aeddf7500cf57e5b973bb4010a0a44472441ee0159db0021e0e37df4ce1a11e42c5eb8531f14a1a64a547f83f6958b39b9b9013084'
--            'SKIP')
-+source=("https://github.com/SSSD/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.gz"{,.asc}
-+        "https://patch-diff.githubusercontent.com/raw/SSSD/sssd/pull/6724/file-watch-realpath.patch")
-+sha512sums=('cf65572cfa6468c4b3edc3a33a48ab6d58979917901662eb8b2d8fc5931494be81da13295246500a3a315b71d0395594c9a565014e5875f3cdde50da096f253d'
-+            'SKIP'
-+            '778b448ab80cac2f225802746b1db53656ba7bde4deaca9596f0509ff4fb057a82812c43f7c7e5b70afcc7622ff61081f48a511d270376abb144f382c2d11ad0')
- validpgpkeys=('C13CD07FFB2DB1408E457A3CD3D21B2910CF6759')
- 
- prepare() {
-@@ -61,6 +63,8 @@
- 
-   sed -i 's/^dbuspolicydir = $(sysconfdir)/dbuspolicydir = $(datadir)/' Makefile.in
- 
-+  sed -i 's#/usr/lib64/pkcs11/libsofthsm2.so ##' src/external/test_ca.m4
-+
-   sed '/fail_over-tests/d' -i Makefile.am
-   autoreconf -fiv
- }
-@@ -76,16 +80,14 @@
+@@ -76,16 +76,14 @@
      --datadir=/usr/share                          \
      --enable-pammoddir=/usr/lib/security          \
      --enable-pac-responder                        \
@@ -76,15 +42,7 @@
    'tevent'
    'ldb'
    'bc'
-@@ -38,6 +38,7 @@
-   sed -i 's#/var/run/#/run/#' src/examples/logrotate
-   sed '/AM_PROG_CC_C_O/ i AC_PROG_CPP' -i configure.ac
-   sed -i 's/^dbuspolicydir = $(sysconfdir)/dbuspolicydir = $(datadir)/' Makefile.in
-+  sed -i 's#/usr/lib64/pkcs11/libsofthsm2.so ##' src/external/test_ca.m4
-   sed '/fail_over-tests/d' -i Makefile.am
-   autoreconf -fiv
- }
-@@ -52,16 +53,14 @@
+@@ -52,16 +52,14 @@
      --datadir=/usr/share                          \
      --enable-pammoddir=/usr/lib/security          \
      --enable-pac-responder                        \

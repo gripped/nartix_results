@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,6 +39,8 @@
+   patch -d $pkgname-$pkgver -p1 < 2e62ef1e.patch # Fix cmake config compatibility mode
+   patch -d $pkgbase-$pkgver -p1 < soversion.patch # Restore soversion
+   sed -e 's|c++14|c++17|' -i $pkgbase-$pkgver/python/setup.py
++
++  rm -vrf $pkgbase-$pkgver/third_party/googletest
+ }
+ 
+ build() {
+@@ -63,7 +65,7 @@
+ }
+ 
+ check() {
+-  ctest --test-dir build
++  ctest --test-dir build --progress --output-on-failure
+ 
+   cd $pkgbase-$pkgver/python
+   pytest -vv google/$pkgbase/internal/ || true
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,7 @@
+   patch -d $pkgname-$pkgver -p1 < 2e62ef1e.patch # Fix cmake config compatibility mode
+   patch -d $pkgbase-$pkgver -p1 < soversion.patch # Restore soversion
+   sed -e 's|c++14|c++17|' -i $pkgbase-$pkgver/python/setup.py
++  rm -vrf $pkgbase-$pkgver/third_party/googletest
+ }
+ build() {
+   local cmake_options=(

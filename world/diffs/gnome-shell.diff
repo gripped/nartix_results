@@ -1,36 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gnome-shell
--pkgver=45.0
-+pkgver=44.3
- pkgrel=1
- epoch=1
- pkgdesc="Next generation desktop shell"
-@@ -16,7 +16,6 @@
-   gnome-settings-daemon
-   gsettings-desktop-schemas
-   gtk4
--  libadwaita
-   libcanberra-pulse
-   libgdm
-   libgweather-4
-@@ -52,11 +51,11 @@
-   'gst-plugin-pipewire: Screen recording'
-   'gst-plugins-good: Screen recording'
-   'power-profiles-daemon: Power profile switching'
--  'python-gobject: gnome-shell-test-tool performance tester'
-   'switcheroo-control: Multi-GPU support'
- )
- groups=(gnome)
--_commit=2127c62b210f605747e019e6e2abee82516e3ccb  # tags/45.0^0
-+options=(debug)
-+_commit=60ec50efa693735cb959a3378516a82d2e9df009  # tags/44.3^0
- source=(
-   "git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
-   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
-@@ -80,12 +79,13 @@
+@@ -80,12 +80,13 @@
  build() {
    local meson_options=(
      -D gtk_doc=true
@@ -45,47 +15,12 @@
    meson compile -C build
  }
  
-@@ -93,9 +93,7 @@
-   export XDG_RUNTIME_DIR="$PWD/rdir"
-   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
- 
--  export NO_AT_BRIDGE=1 GTK_A11Y=none
--
--  meson test -C build --print-errorlogs -t 3
-+  meson test -C build --print-errorlogs -t 3 || : # skip failing tests
- )
- 
- check() {
-@@ -104,7 +102,7 @@
- }
- 
- package() {
--  depends+=(libmutter-13.so)
-+  depends+=(libmutter-12.so)
-   meson install -C build --destdir "$pkgdir"
- }
- 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,6 @@
-   gnome-settings-daemon
-   gsettings-desktop-schemas
-   gtk4
--  libadwaita
-   libcanberra-pulse
-   libgdm
-   libgweather-4
-@@ -32,6 +31,7 @@
-   sassc
- )
- groups=(gnome)
- prepare() {
-   cd $pkgname
-   git submodule init
 @@ -41,10 +41,11 @@
  build() {
    local meson_options=(

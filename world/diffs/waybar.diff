@@ -1,24 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=waybar
--pkgver=0.9.22
-+pkgver=0.9.20
- pkgrel=1
- pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors'
- arch=('x86_64')
-@@ -45,15 +45,15 @@
-     'otf-font-awesome: Icons in the default configuration'
- )
- source=("$pkgname-$pkgver.tar.gz::https://github.com/Alexays/Waybar/archive/$pkgver.tar.gz")
--sha256sums=('61e8d934c178b9da8212162398d2be44c5606c92b9a3503526993bb204206c6b')
-+sha256sums=('e300183defece4799b6dfb7aea72400492ec6e330217c22158a334f35532d014')
- 
- build() {
-     cd "Waybar-$pkgver"
--    CXXFLAGS+=" -std=c++20" \
-     meson --prefix=/usr \
+@@ -54,6 +54,7 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
@@ -32,12 +14,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,11 +36,11 @@
- )
- build() {
-     cd "Waybar-$pkgver"
--    CXXFLAGS+=" -std=c++20" \
-     meson --prefix=/usr \
+@@ -41,6 +41,7 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \

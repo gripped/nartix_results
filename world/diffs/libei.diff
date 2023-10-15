@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,8 @@
+ arch=(x86_64)
+ license=(custom:X11)
+ depends=(
++  libelogind
+   libevdev
+-  systemd
+ )
+ makedepends=(
+   git
+@@ -47,13 +47,10 @@
+ }
+ 
+ build() {
+-  arch-meson libei build
++  artix-meson libei build -Dsd-bus-provider=libelogind
+   meson compile -C build
+ }
+ 
+-check() {
+-  meson test -C build --print-errorlogs
+-}
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir" --skip-subprojects
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=libei
+ depends=(
++  libelogind
+   libevdev
+-  systemd
+ )
+ makedepends=(
+   git
+@@ -22,6 +22,6 @@
+   ln -sr ../munit subprojects/munit
+ }
+ build() {
+-  arch-meson libei build
++  artix-meson libei build -Dsd-bus-provider=libelogind
+   meson compile -C build
+ }

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   gdm
-   libgdm
- )
--pkgver=45.0.1
-+pkgver=44.1
- pkgrel=1
- pkgdesc="Display manager and login screen"
- url="https://wiki.gnome.org/Projects/GDM"
 @@ -15,7 +15,7 @@
    gnome-shell
    libcanberra
@@ -18,12 +9,7 @@
    upower
    xorg-server
    xorg-xhost
-@@ -30,13 +30,15 @@
-   yelp-tools
- )
- checkdepends=(check)
--_commit=ef5620737de697d215f655722617e49f4a9a448e  # tags/45.0.1^0
-+_commit=b622872c5f24960c18900ebf14b5233b8701a8f9  # tags/44.1^0
+@@ -34,9 +34,11 @@
  source=(
    "git+https://gitlab.gnome.org/GNOME/gdm.git#commit=$_commit"
    0001-Xsession-Don-t-start-ssh-agent-by-default.patch
@@ -36,19 +22,16 @@
  
  pkgver() {
    cd gdm
-@@ -46,7 +48,11 @@
- prepare() {
+@@ -47,6 +49,8 @@
    cd gdm
  
-+  git cherry-pick -n b29510dbc51ccf71a7c0ed656d21634a83766c0c
-+
    git apply -3 ../0001-Xsession-Don-t-start-ssh-agent-by-default.patch
 +
 +  git apply -3 ../0002-meson-allow-building-with-elogind.patch
  }
  
  build() {
-@@ -58,9 +64,12 @@
+@@ -58,9 +62,13 @@
      -D ipv6=true
      -D run-dir=/run/gdm
      -D selinux=disabled
@@ -57,13 +40,13 @@
 +    -D systemdsystemunitdir=no
 +    -D systemduserunitdir=no
    )
--
+ 
 -  arch-meson gdm build "${meson_options[@]}"
 +  artix-meson gdm build "${meson_options[@]}"
    meson compile -C build
  }
  
-@@ -125,9 +134,8 @@
+@@ -125,7 +133,7 @@
  
  package_libgdm() {
    pkgdesc+=" - support library"
@@ -72,8 +55,6 @@
    provides=(libgdm.so)
  
    mv libgdm/* "$pkgdir"
- }
--
 
 
 ############# Stripped diff below #################
@@ -89,17 +70,15 @@
    upower
    xorg-server
    xorg-xhost
-@@ -24,7 +24,9 @@
- )
+@@ -25,6 +25,7 @@
  prepare() {
    cd gdm
-+  git cherry-pick -n b29510dbc51ccf71a7c0ed656d21634a83766c0c
    git apply -3 ../0001-Xsession-Don-t-start-ssh-agent-by-default.patch
 +  git apply -3 ../0002-meson-allow-building-with-elogind.patch
  }
  build() {
    local meson_options=(
-@@ -35,8 +37,12 @@
+@@ -35,8 +36,12 @@
      -D ipv6=true
      -D run-dir=/run/gdm
      -D selinux=disabled
@@ -113,7 +92,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -87,7 +93,7 @@
+@@ -87,7 +92,7 @@
  }
  package_libgdm() {
    pkgdesc+=" - support library"

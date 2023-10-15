@@ -1,27 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,9 +7,9 @@
-   libcamera-tools
-   gst-plugin-libcamera
- )
--pkgver=0.1.0
--_commit=9e3a83c03bab65b745eea2482be78077b409a2b5  # refs/tags/v0.1.0
--pkgrel=2
-+pkgver=0.0.5
-+_commit=5fa37d7623053ef5a693b276986a44d010d057e5  # refs/tags/v0.0.5
-+pkgrel=1
- pkgdesc="A complex camera support library for Linux, Android, and ChromeOS"
- arch=(x86_64)
- url="https://libcamera.org/"
-@@ -17,6 +17,7 @@
-   LGPL2.1
-   GPL2
- )
-+depends=(glibc)
- makedepends=(
-   doxygen
-   git
-@@ -36,7 +37,6 @@
+@@ -36,7 +36,6 @@
    qt5-base
    qt5-tools
    sdl2
@@ -29,7 +8,7 @@
    texlive-core
  )
  source=(
-@@ -73,7 +73,7 @@
+@@ -73,7 +72,7 @@
      -D test=true
    )
  
@@ -38,7 +17,7 @@
    meson compile -C build
  }
  
-@@ -90,8 +90,8 @@
+@@ -90,8 +89,8 @@
      libelf
      libunwind
      libyaml
@@ -54,15 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
-   libcamera-tools
-   gst-plugin-libcamera
- )
-+depends=(glibc)
- makedepends=(
-   doxygen
-   git
-@@ -25,7 +26,6 @@
+@@ -25,7 +25,6 @@
    qt5-base
    qt5-tools
    sdl2
@@ -70,7 +41,7 @@
    texlive-core
  )
  _pick() {
-@@ -48,7 +48,7 @@
+@@ -48,7 +47,7 @@
      -D tracing=disabled
      -D test=true
    )
@@ -79,7 +50,7 @@
    meson compile -C build
  }
  package_libcamera() {
-@@ -60,8 +60,8 @@
+@@ -60,8 +59,8 @@
      libelf
      libunwind
      libyaml

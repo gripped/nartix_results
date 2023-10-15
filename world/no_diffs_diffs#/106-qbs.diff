@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ sha256sums=('465d398ba3ac2bf157c4c32118e7ea55759050550e5e2babff091b000f2c27c9')
+ 
+ build() {
+-  cmake -B build -S $pkgname-src-$pkgver \
++  artix-cmake -B build -S $pkgname-src-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DWITH_TESTS=OFF \
+     -DQBS_LIBEXEC_INSTALL_DIR=lib/qbs
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+          qt6-5compat)
+ makedepends=(cmake)
+ build() {
+-  cmake -B build -S $pkgname-src-$pkgver \
++  artix-cmake -B build -S $pkgname-src-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DWITH_TESTS=OFF \
+     -DQBS_LIBEXEC_INSTALL_DIR=lib/qbs

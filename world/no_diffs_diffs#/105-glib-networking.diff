@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,7 @@
+   local meson_options=(
+   )
+ 
+-  arch-meson glib-networking build "${meson_options[@]}"
++  artix-meson glib-networking build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,6 +15,6 @@
+ build() {
+   local meson_options=(
+   )
+-  arch-meson glib-networking build "${meson_options[@]}"
++  artix-meson glib-networking build "${meson_options[@]}"
+   meson compile -C build
+ }
