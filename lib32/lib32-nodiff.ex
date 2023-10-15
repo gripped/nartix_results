@@ -28,9 +28,6 @@ lib32-gst-plugins-base
 lib32-gst-plugins-good
 lib32-gtk2
 lib32-gtk3
-lib32-harfbuzz
-lib32-harfbuzz-cairo
-lib32-harfbuzz-icu
 lib32-icu
 lib32-imlib2
 lib32-keyutils

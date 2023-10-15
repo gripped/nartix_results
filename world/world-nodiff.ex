@@ -569,11 +569,6 @@ gv
 gwenhywfar
 gyp
 handbrake
-harfbuzz
-harfbuzz-cairo
-harfbuzz-icu
-harfbuzz-utils
-harfbuzz-docs
 hddtemp
 help2man
 herbstluftwm
@@ -1008,7 +1003,6 @@ libptytty
 libpwquality
 libqaccessibilityclient
 libqb
-libqmi
 libqrtr-glib
 libqtxdg
 libquvi-scripts
@@ -1041,7 +1035,6 @@ libsigsegv
 libslirp
 libsm
 libsmbios
-libsodium
 libsonic
 libsoup
 libsoup-docs
@@ -1501,7 +1494,6 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 pdal
-pdfarranger
 pdfjs
 pdfmixtool
 pdnsd
@@ -1870,7 +1862,6 @@ pyopengl
 python-opengl
 pyprof2calltree
 pypy
-pyqt-builder
 pyqt5-3d
 python-pyqt5-3d
 pyqt5-chart
@@ -1959,7 +1950,6 @@ python-automat
 python-autopage
 python-awesomeversion
 python-aws-sam-translator
-python-aws-xray-sdk
 python-awscrt
 python-axolotl-curve25519
 python-axolotl
@@ -2581,8 +2571,6 @@ python-pypng
 python-pyppeteer
 python-pyproject-hooks
 python-pyproject-metadata
-python-pyqt5-sip
-python-pyqt6-sip
 python-pyquery
 python-pyrfc3339
 python-pyro
@@ -3281,7 +3269,6 @@ signify
 signon-ui
 signond
 simple-scan
-sip
 slang
 sleuthkit
 slimit
@@ -3746,7 +3733,6 @@ xfdesktop
 xfwm4-themes
 xfwm4
 xinetd
-xkeyboard-config
 xl2tpd
 xmldiff
 xmlsec
@@ -3822,7 +3808,6 @@ zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
-zeromq
 zfp
 zimg
 zip

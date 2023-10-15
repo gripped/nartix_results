@@ -1,5 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgname=python-structlog
+-pkgver=23.2.0
+-_tag=72ef675fdf0c63e1209debfabb96d6ddca857095
+-pkgrel=1
++pkgver=23.1.0
++_tag=785135e3db8d40c470acca88a263bb47be0c3a5d
++pkgrel=2
+ pkgdesc="Structured Logging for Python"
+ url="https://www.structlog.org"
+ license=('Apache')
 @@ -21,7 +21,7 @@
  source=("git+https://github.com/hynek/structlog.git?signed#tag=$_tag")
  sha512sums=('SKIP')

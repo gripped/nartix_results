@@ -3,18 +3,52 @@
 @@ -1,7 +1,7 @@
  
  pkgname=rspamd
--pkgver=3.6
+-pkgver=3.7.1
 -pkgrel=1
 +pkgver=3.5
 +pkgrel=3
  epoch=
  pkgdesc='Fast, free and open-source spam filtering system'
  arch=(x86_64)
-@@ -113,32 +113,21 @@
+@@ -9,13 +9,11 @@
+ license=(BSD)
+ depends=(
+   file
+-  gcc-libs
+   glib2
+   glibc
+   hyperscan
+   icu
+   jemalloc
+-  libelf
+   libsodium
+   luajit
+   openblas
+@@ -31,10 +29,7 @@
+   perl
+   ragel
+ )
+-optdepends=(
+-  'perl: rspamd stats script'
+-  'redis: redis cache and data storage'
+-)
++optdepends=('redis: Redis cache and data storage')
+ backup=(
+   etc/rspamd/actions.conf
+   etc/rspamd/cgp.inc
+@@ -70,7 +65,6 @@
+   etc/rspamd/modules.d/hfilter.conf
+   etc/rspamd/modules.d/history_redis.conf
+   etc/rspamd/modules.d/http_headers.conf
+-  etc/rspamd/modules.d/known_senders.conf
+   etc/rspamd/modules.d/maillist.conf
+   etc/rspamd/modules.d/metadata_exporter.conf
+   etc/rspamd/modules.d/metric_exporter.conf
+@@ -119,32 +113,21 @@
    etc/rspamd/worker-proxy.inc
  )
  install=rspamd.install
--_tag=bbb8660e55b8a842fc9c5c3d2cc57b177786778d
+-_tag=af3e90f67cc5e96238395f7b38282781f1bd64d5
 +_tag=0c671194e81f702a5e26009b33612c3d36d52840
  source=(
    git+https://github.com/rspamd/rspamd.git#tag=${_tag}
@@ -45,7 +79,7 @@
  }
  
  build() {
-@@ -150,7 +139,7 @@
+@@ -156,7 +139,7 @@
      -DRUNDIR=/run/rspamd \
      -DRSPAMD_USER=rspamd \
      -DNO_SHARED=ON \
@@ -54,7 +88,7 @@
      -DENABLE_HYPERSCAN=ON \
      -DENABLE_JEMALLOC=ON \
      -DENABLE_OPTIMIZATION=ON
-@@ -163,8 +152,5 @@
+@@ -169,8 +152,5 @@
    install -Dm 644 rspamd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/rspamd.conf
    install -Dm 644 rspamd.sysusers "${pkgdir}"/usr/lib/sysusers.d/rspamd.conf
    install -Dm 644 rspamd.logrotate "${pkgdir}"/etc/logrotate.d/rspamd
@@ -69,7 +103,29 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -104,10 +104,6 @@
+@@ -1,13 +1,11 @@
+ pkgname=rspamd
+ depends=(
+   file
+-  gcc-libs
+   glib2
+   glibc
+   hyperscan
+   icu
+   jemalloc
+-  libelf
+   libsodium
+   luajit
+   openblas
+@@ -58,7 +56,6 @@
+   etc/rspamd/modules.d/hfilter.conf
+   etc/rspamd/modules.d/history_redis.conf
+   etc/rspamd/modules.d/http_headers.conf
+-  etc/rspamd/modules.d/known_senders.conf
+   etc/rspamd/modules.d/maillist.conf
+   etc/rspamd/modules.d/metadata_exporter.conf
+   etc/rspamd/modules.d/metric_exporter.conf
+@@ -107,10 +104,6 @@
    etc/rspamd/worker-proxy.inc
  )
  install=rspamd.install
@@ -80,7 +136,7 @@
  build() {
    cmake -S rspamd -B build -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \
-@@ -117,7 +113,7 @@
+@@ -120,7 +113,7 @@
      -DRUNDIR=/run/rspamd \
      -DRSPAMD_USER=rspamd \
      -DNO_SHARED=ON \

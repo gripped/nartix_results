@@ -4,14 +4,15 @@
  
  pkgname=tokodon
 -pkgver=23.08.2
+-pkgrel=2
 +pkgver=23.04.3
- pkgrel=1
++pkgrel=1
  pkgdesc='A Mastodon client for Plasma'
  url='https://apps.kde.org/tokodon/'
  arch=(x86_64)
  license=(GPL LGPL FDL)
  groups=(kde-applications kde-network)
--depends=(qqc2-desktop-style5 kirigami-addons kdbusaddons5 knotifications5 kitemmodels5 kio5 qtkeychain-qt5 qt5-websockets mpv purpose5)
+-depends=(qqc2-desktop-style5 kirigami-addons5 kdbusaddons5 knotifications5 kitemmodels5 kio5 qtkeychain-qt5 qt5-websockets mpv purpose5)
 +depends=(qqc2-desktop-style kirigami-addons kdbusaddons knotifications kitemmodels kio qtkeychain-qt5 qt5-websockets)
  makedepends=(extra-cmake-modules)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
@@ -37,7 +38,7 @@
 @@ -1,9 +1,9 @@
  pkgname=tokodon
  groups=(kde-applications kde-network)
--depends=(qqc2-desktop-style5 kirigami-addons kdbusaddons5 knotifications5 kitemmodels5 kio5 qtkeychain-qt5 qt5-websockets mpv purpose5)
+-depends=(qqc2-desktop-style5 kirigami-addons5 kdbusaddons5 knotifications5 kitemmodels5 kio5 qtkeychain-qt5 qt5-websockets mpv purpose5)
 +depends=(qqc2-desktop-style kirigami-addons kdbusaddons knotifications kitemmodels kio qtkeychain-qt5 qt5-websockets)
  makedepends=(extra-cmake-modules)
  build() {

@@ -1,0 +1,88 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ 
+ pkgname=python-aws-xray-sdk
+ _pkgname=aws-xray-sdk-python
+-pkgver=2.12.1
+-_commit=c50fe3e144b4e0654d36b2be40c7ae7139a3e825
+-pkgrel=1
++pkgver=2.12.0
++_commit=c57d293198251e276988440400140ac247c24606
++pkgrel=3
+ pkgdesc='AWS X-Ray SDK for Python'
+ arch=(any)
+ url='https://github.com/aws/aws-xray-sdk-python'
+@@ -13,8 +13,8 @@
+             python-flask python-flask-sqlalchemy python-httpx python-mysql-connector
+             python-pg8000 python-psycopg2 python-pymongo python-pymysql
+             python-pynamodb python-requests python-sqlalchemy)
+-makedepends=(git python-build python-installer python-setuptools python-wheel ${optdepends[@]})
+-checkdepends=(python-pytest python-pytest-asyncio python-pytest-aiohttp python-testing.postgresql
++makedepends=(git python-setuptools ${optdepends[@]})
++checkdepends=(python-pytest python-pytest-asyncio python-testing.postgresql
+               python-webtest python-django-fake-model python-pytest-benchmark)
+ source=("git+https://github.com/aws/aws-xray-sdk-python.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -35,11 +35,16 @@
+     git log --oneline -1 "${_c}"
+     git cherry-pick -n "${_c}"
+   done
++
++  cat > pytest.ini <<EOF
++[pytest]
++asyncio_mode = auto
++EOF
+ }
+ 
+ build() {
+   cd $_pkgname
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -49,12 +54,12 @@
+   export AWS_SECRET_ACCESS_KEY=fake_key
+   export AWS_ACCESS_KEY_ID=fake_id
+ 
+-  pytest -v tests --asyncio-mode=auto \
++  pytest -v tests --ignore tests/ext/aiohttp \
+                   --ignore tests/ext/pg8000 \
+                   --ignore tests/ext/pymysql
+ }
+ 
+ package() {
+   cd $_pkgname
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1 --skip-build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=python-aws-xray-sdk
+ _pkgname=aws-xray-sdk-python
+ depends=(python python-botocore python-wrapt)
+-makedepends=(git python-build python-installer python-setuptools python-wheel ${optdepends[@]})
++makedepends=(git python-setuptools ${optdepends[@]})
+ _backports=(
+ )
+ prepare() {
+@@ -11,8 +11,12 @@
+     git log --oneline -1 "${_c}"
+     git cherry-pick -n "${_c}"
+   done
++  cat > pytest.ini <<EOF
++[pytest]
++asyncio_mode = auto
++EOF
+ }
+ build() {
+   cd $_pkgname
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }

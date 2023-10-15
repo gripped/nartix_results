@@ -352,6 +352,11 @@ gvfs-nfs
 gvfs-google
 gwenview
 haproxy
+harfbuzz
+harfbuzz-cairo
+harfbuzz-icu
+harfbuzz-utils
+harfbuzz-docs
 haveged
 hdf5
 hidapi
@@ -725,6 +730,7 @@ libportal-qt5
 libportal-docs
 libprocps
 libqalculate
+libqmi
 libquotient
 libsass
 libsecp256k1
@@ -734,6 +740,7 @@ libsigc++-3.0-docs
 libsigcplusplus
 libsigc++-docs
 libsndfile
+libsodium
 libsoup3
 libsoup3-docs
 libspf2
@@ -980,6 +987,7 @@ parley
 partitionmanager
 pc-ble-driver
 pcsclite
+pdfarranger
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -1106,6 +1114,7 @@ pv
 pygobject
 python-gobject
 python-gobject-docs
+pyqt-builder
 pyqt5
 python-pyqt5
 pyqt6
@@ -1129,6 +1138,7 @@ python-argon2_cffi
 python-arrow
 python-asttokens
 python-authheaders
+python-aws-xray-sdk
 python-bcrypt
 python-binaryornot
 python-bincopy
@@ -1218,6 +1228,8 @@ python-pyhcl
 python-pymupdf
 python-pyproj
 python-pyproject-api
+python-pyqt5-sip
+python-pyqt6-sip
 python-pytest-benchmark
 python-pytest-enabler
 python-pytest-localserver
@@ -1500,6 +1512,7 @@ sharutils
 signal-desktop
 signon-kwallet-extension
 signon-plugin-oauth2
+sip
 skanlite
 skanpage
 smartmontools
@@ -1668,6 +1681,7 @@ xfce4-panel
 xfce4-taskmanager
 xfce4-terminal
 xfce4-whiskermenu-plugin
+xkeyboard-config
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb
@@ -1689,6 +1703,7 @@ z3
 python-z3-solver
 zanshin
 zathura-pdf-mupdf
+zeromq
 zig
 zita-resampler
 zita-resampler-docs

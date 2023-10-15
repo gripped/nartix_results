@@ -3,7 +3,7 @@
 @@ -1,25 +1,24 @@
  pkgname=telegram-desktop
 -pkgver=4.10.3
--pkgrel=2
+-pkgrel=3
 +pkgver=4.8.4
 +pkgrel=1
  pkgdesc='Official Telegram Desktop client'
@@ -12,9 +12,10 @@
  license=('GPL3')
  depends=('hunspell' 'ffmpeg' 'hicolor-icon-theme' 'lz4' 'minizip' 'openal' 'ttf-opensans'
 -         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash'
-+         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash' 'glibmm-2.68'
-          'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'jemalloc' 'abseil-cpp' 'libdispatch'
+-         'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'libxcomposite' 'jemalloc' 'abseil-cpp' 'libdispatch'
 -         'openssl' 'protobuf' 'glib2' 'libsigc++-3.0' 'glibmm-2.68')
++         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash' 'glibmm-2.68'
++         'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'jemalloc' 'abseil-cpp' 'libdispatch'
 +         'openssl' 'protobuf')
  makedepends=('cmake' 'git' 'ninja' 'python' 'range-v3' 'tl-expected' 'microsoft-gsl' 'meson'
               'extra-cmake-modules' 'wayland-protocols' 'plasma-wayland-protocols' 'libtg_owt'
@@ -42,9 +43,10 @@
  pkgname=telegram-desktop
  depends=('hunspell' 'ffmpeg' 'hicolor-icon-theme' 'lz4' 'minizip' 'openal' 'ttf-opensans'
 -         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash'
-+         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash' 'glibmm-2.68'
-          'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'jemalloc' 'abseil-cpp' 'libdispatch'
+-         'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'libxcomposite' 'jemalloc' 'abseil-cpp' 'libdispatch'
 -         'openssl' 'protobuf' 'glib2' 'libsigc++-3.0' 'glibmm-2.68')
++         'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash' 'glibmm-2.68'
++         'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'jemalloc' 'abseil-cpp' 'libdispatch'
 +         'openssl' 'protobuf')
  makedepends=('cmake' 'git' 'ninja' 'python' 'range-v3' 'tl-expected' 'microsoft-gsl' 'meson'
               'extra-cmake-modules' 'wayland-protocols' 'plasma-wayland-protocols' 'libtg_owt'

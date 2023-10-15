@@ -9,7 +9,7 @@
 -  nm-cloud-setup
 -)
 -pkgver=1.44.2
--pkgrel=2
+-pkgrel=3
 +pkgname=(networkmanager libnm nm-cloud-setup)
 +pkgver=1.42.8
 +pkgrel=1
@@ -50,7 +50,7 @@
 -  0001-connectivity-Make-curl-timeout-callback-non-repeatin.patch
 -)
 -b2sums=('SKIP'
--        'd5466c3edc1f989238bc5c414e5b166cf22cdf2bb21a59654e34bb9b930542945027856bb995eee322daa8e84b3c9c2a81ab5d1c20d498211a54426040cca9c8')
+-        '51674577e4a2786b6491fdf90cc90734da3792e0a7e224f0eecc9c485a5f81b68a71bb559b23d294d52dc9065ee82c997c31f9272504c3d753e0ffe1321367e9')
 +_commit=7c6da25396162ba05ffa71f00e227351dc1452b6  # tags/1.42.8^0
 +source=("git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git#commit=$_commit")
 +b2sums=('SKIP')

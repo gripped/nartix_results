@@ -1,21 +1,68 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,12 @@
+@@ -1,42 +1,19 @@
+ 
  pkgbase=modemmanager
- pkgname=(modemmanager libmm-glib)
- pkgver=1.20.6
--pkgrel=2
-+pkgrel=1
+-pkgname=(
+-  modemmanager
+-  libmm-glib
+-)
+-pkgver=1.22.0
++pkgname=(modemmanager libmm-glib)
++pkgver=1.20.6
+ pkgrel=1
  pkgdesc="Mobile broadband modem management service"
  url="https://www.freedesktop.org/wiki/Software/ModemManager/"
  arch=(x86_64)
- license=(GPL2 LGPL2.1)
--depends=(systemd libgudev polkit ppp libqmi libmbim
+-license=(
+-  GPL2
+-  LGPL2.1
+-)
+-depends=(
+-  libgudev
+-  libmbim
+-  libqmi
+-  mobile-broadband-provider-info
+-  polkit
+-  ppp
+-  systemd
+-)
+-makedepends=(
+-  bash-completion
+-  git
+-  gobject-introspection
+-  gtk-doc
+-  meson
+-  vala
+-)
+-checkdepends=(
+-  python-dbus
+-  python-gobject
+-)
+-_commit=03f786ce66360d67c669f4f122f8aa458e6f01ea  # tags/1.22.0^0
++license=(GPL2 LGPL2.1)
 +depends=(libgudev polkit ppp libqmi libmbim
-          mobile-broadband-provider-info)
- makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
- checkdepends=(python-gobject python-dbus)
-@@ -32,12 +32,20 @@
++         mobile-broadband-provider-info)
++makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
++checkdepends=(python-gobject python-dbus)
++_commit=6aa0ff583d04aea88b4da7a1c20049f57062dab6  # tags/1.20.6^0
+ source=("git+https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git#commit=$_commit")
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd ModemManager
+@@ -45,6 +22,9 @@
+ 
+ prepare() {
+   cd ModemManager
++
++  chmod -x plugins/fibocom/77-mm-fibocom-port-types.rules \
++           plugins/foxconn/mm-foxconn-t77w968-carrier-mapping.conf
+ }
+ 
+ build() {
+@@ -52,12 +32,20 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
@@ -37,14 +84,26 @@
  }
  
  _pick() {
-@@ -51,7 +59,7 @@
+@@ -71,17 +59,9 @@
  }
  
  package_modemmanager() {
--  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libsystemd.so libgudev-1.0.so
+-  depends+=(
+-    libgudev-1.0.so
+-    libg{lib,object,io,module}-2.0.so
+-    libmbim-glib.so
+-    libmm-glib.so
+-    libqmi-glib.so
+-    libsystemd.so
+-  )
+-  optdepends=(
+-    'usb_modeswitch: install if your modem shows up as a storage drive'
+-  )
 +  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libgudev-1.0.so
-             libqmi-glib.so libmbim-glib.so)
-   optdepends=('usb_modeswitch: install if your modem shows up as a storage drive')
++            libqmi-glib.so libmbim-glib.so)
++  optdepends=('usb_modeswitch: install if your modem shows up as a storage drive')
+ 
+   meson install -C build --destdir "$pkgdir"
  
 
 
@@ -52,15 +111,40 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,37 +1,26 @@
  pkgbase=modemmanager
- pkgname=(modemmanager libmm-glib)
--depends=(systemd libgudev polkit ppp libqmi libmbim
+-pkgname=(
+-  modemmanager
+-  libmm-glib
+-)
+-depends=(
+-  libgudev
+-  libmbim
+-  libqmi
+-  mobile-broadband-provider-info
+-  polkit
+-  ppp
+-  systemd
+-)
+-makedepends=(
+-  bash-completion
+-  git
+-  gobject-introspection
+-  gtk-doc
+-  meson
+-  vala
+-)
++pkgname=(modemmanager libmm-glib)
 +depends=(libgudev polkit ppp libqmi libmbim
-          mobile-broadband-provider-info)
- makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
++         mobile-broadband-provider-info)
++makedepends=(gtk-doc gobject-introspection vala meson git bash-completion)
  prepare() {
-@@ -13,10 +13,14 @@
+   cd ModemManager
++  chmod -x plugins/fibocom/77-mm-fibocom-port-types.rules \
++           plugins/foxconn/mm-foxconn-t77w968-carrier-mapping.conf
+ }
+ build() {
+   local meson_options=(
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
@@ -76,12 +160,20 @@
    meson compile -C build
  }
  _pick() {
-@@ -29,7 +33,7 @@
+@@ -44,14 +33,8 @@
    done
  }
  package_modemmanager() {
--  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libsystemd.so libgudev-1.0.so
+-  depends+=(
+-    libgudev-1.0.so
+-    libg{lib,object,io,module}-2.0.so
+-    libmbim-glib.so
+-    libmm-glib.so
+-    libqmi-glib.so
+-    libsystemd.so
+-  )
 +  depends+=(libmm-glib.so libg{lib,object,io,module}-2.0.so libgudev-1.0.so
-             libqmi-glib.so libmbim-glib.so)
++            libqmi-glib.so libmbim-glib.so)
    meson install -C build --destdir "$pkgdir"
    cd "$pkgdir"
+   _pick libmm usr/include

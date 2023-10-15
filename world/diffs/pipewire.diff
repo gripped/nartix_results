@@ -8,19 +8,17 @@
    pipewire-jack
    pipewire-pulse
    pipewire-roc
-@@ -17,9 +16,9 @@
+@@ -17,8 +16,8 @@
    pipewire-v4l2
    pipewire-x11-bell
  )
--_commit=181fbfee6d3fcc3afd3c93613f126a8346dad586  # tags/0.3.81
--pkgver=0.3.81
--pkgrel=2
+-_commit=8a9117567c0af38dc664f7b4e12cf0d525ded20a  # tags/0.3.82
+-pkgver=0.3.82
 +_commit=a3bd0f7a0a8dec9045deeb5eb3eb92b09ff75d57  # tags/0.3.75
 +pkgver=0.3.75
-+pkgrel=1
+ pkgrel=1
  epoch=1
  pkgdesc="Low-latency audio/video router and processor"
- url="https://pipewire.org"
 @@ -35,7 +34,6 @@
    glib2
    graphviz
@@ -57,12 +55,11 @@
  
  pkgver() {
    cd pipewire
-@@ -80,27 +77,30 @@
+@@ -79,26 +76,31 @@
+ 
  prepare() {
    cd pipewire
- 
--  git cherry-pick -n a8636b04cbf5e1b22e3344630df47bf4e5ee53ea
--  git cherry-pick -n e940361c947cf8519b11c7e6792441c86fc59042
++
 +  sed -i '/LD_LIBRARY_PATH/d' pipewire-jack/src/pw-jack.in
  }
  
@@ -77,6 +74,7 @@
 +    -D systemd=disabled
      -D libjack-path=/usr/lib
      -D rlimits-install=false
+-    -D selinux=disabled
      -D session-managers=[]
      -D udevrulesdir=/usr/lib/udev/rules.d
    )
@@ -92,7 +90,7 @@
  }
  
  _pick() {
-@@ -118,8 +118,6 @@
+@@ -116,8 +118,6 @@
  package_pipewire() {
    license+=(LGPL)  # libspa-alsa
    depends=(
@@ -101,7 +99,7 @@
      "libpipewire=$epoch:$pkgver-$pkgrel"
      libcamera-base.so
      libcamera.so
-@@ -128,7 +126,6 @@
+@@ -126,7 +126,6 @@
      libncursesw.so
      libpipewire-$_ver.so
      libreadline.so
@@ -109,7 +107,7 @@
      libudev.so
    )
    optdepends=(
-@@ -137,8 +134,7 @@
+@@ -135,8 +134,7 @@
      'pipewire-audio: Audio support'
      'pipewire-docs: Documentation'
      'pipewire-ffado: FireWire support'
@@ -119,7 +117,7 @@
      'pipewire-pulse: PulseAudio replacement'
      'pipewire-roc: ROC streaming'
      'pipewire-session-manager: Session manager'
-@@ -148,7 +144,6 @@
+@@ -146,7 +144,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
    )
@@ -127,7 +125,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -177,15 +172,13 @@
+@@ -175,15 +172,13 @@
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-avb.so
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-echo-cancel.so
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-fallback-sink.so
@@ -144,7 +142,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,mididump}.1
      _pick audio usr/share/pipewire/filter-chain*
-@@ -193,9 +186,6 @@
+@@ -191,9 +186,6 @@
      _pick audio usr/share/spa-0.2/bluez5
  
      _pick ffado usr/lib/pipewire-$_ver/libpipewire-module-ffado*.so
@@ -154,7 +152,7 @@
  
      _pick jack usr/bin/pw-jack
      _pick jack usr/include/jack
-@@ -207,7 +197,6 @@
+@@ -205,7 +197,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/pipewire-$_ver/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/pipewire-$_ver/libpipewire-module-pulse-tunnel.so
@@ -162,7 +160,7 @@
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/pipewire/pipewire-pulse.conf
  
-@@ -224,14 +213,14 @@
+@@ -222,14 +213,14 @@
  
      mkdir -p etc/pipewire/{client-rt,client,minimal,pipewire}.conf.d
    )
@@ -179,7 +177,7 @@
      gcc-libs
    )
    provides=(libpipewire-$_ver.so)
-@@ -260,10 +249,6 @@
+@@ -258,10 +249,6 @@
    pkgdesc+=" - Audio support"
    depends=(
      alsa-card-profiles
@@ -190,7 +188,7 @@
      libasound.so
      libbluetooth.so
      libfdk-aac.so
-@@ -277,9 +262,8 @@
+@@ -275,9 +262,8 @@
      libsbc.so
      libsndfile.so
      libusb-1.0.so
@@ -202,7 +200,7 @@
    )
  
    mv audio/* "$pkgdir"
-@@ -314,7 +298,6 @@
+@@ -312,7 +298,6 @@
  package_pipewire-ffado() {
    pkgdesc+=" - FireWire support"
    depends=(
@@ -210,7 +208,7 @@
      libffado.so
      libpipewire-$_ver.so
      pipewire
-@@ -326,28 +309,10 @@
+@@ -324,28 +309,10 @@
    install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
  }
  
@@ -240,7 +238,7 @@
      libpipewire-$_ver.so
      pipewire
      pipewire-audio
-@@ -355,7 +320,7 @@
+@@ -353,7 +320,7 @@
      sh
    )
    optdepends=('jack-example-tools: for official JACK example-clients and tools')
@@ -249,7 +247,7 @@
    provides=(jack libjack.so libjackserver.so libjacknet.so)
  
    mv jack/* "$pkgdir"
-@@ -371,9 +336,6 @@
+@@ -369,9 +336,6 @@
  package_pipewire-pulse() {
    pkgdesc+=" - PulseAudio replacement"
    depends=(
@@ -259,7 +257,7 @@
      libavahi-{client,common}.so
      libglib-2.0.so
      libpipewire-$_ver.so
-@@ -381,11 +343,9 @@
+@@ -379,11 +343,9 @@
      pipewire
      pipewire-audio
      pipewire-session-manager
@@ -271,7 +269,7 @@
  
    mv pulse/* "$pkgdir"
  
-@@ -400,7 +360,6 @@
+@@ -398,7 +360,6 @@
  package_pipewire-roc() {
    pkgdesc+=" - ROC streaming support"
    depends=(
@@ -279,7 +277,7 @@
      libpipewire-$_ver.so
      libroc.so
      pipewire
-@@ -416,10 +375,7 @@
+@@ -414,10 +375,7 @@
  package_gst-plugin-pipewire() {
    pkgdesc="Multimedia graph framework - pipewire plugin"
    depends=(
@@ -290,7 +288,7 @@
      libpipewire-$_ver.so
      pipewire
      pipewire-session-manager
-@@ -433,12 +389,9 @@
+@@ -431,12 +389,9 @@
  package_pipewire-zeroconf() {
    pkgdesc+=" - Zeroconf support"
    depends=(
@@ -303,7 +301,7 @@
      pipewire
      pipewire-audio
    )
-@@ -451,7 +404,6 @@
+@@ -449,7 +404,6 @@
  package_pipewire-v4l2() {
    pkgdesc+=" - V4L2 interceptor"
    depends=(
@@ -311,7 +309,7 @@
      libpipewire-$_ver.so
      pipewire
      pipewire-session-manager
-@@ -466,7 +418,6 @@
+@@ -464,7 +418,6 @@
  package_pipewire-x11-bell() {
    pkgdesc+=" - X11 bell"
    depends=(
@@ -341,7 +339,7 @@
    libcamera
    libcanberra
    libfdk-aac
-@@ -50,26 +48,28 @@
+@@ -50,25 +48,28 @@
    rtkit
    sbc
    sdl2
@@ -352,8 +350,6 @@
  )
  prepare() {
    cd pipewire
--  git cherry-pick -n a8636b04cbf5e1b22e3344630df47bf4e5ee53ea
--  git cherry-pick -n e940361c947cf8519b11c7e6792441c86fc59042
 +  sed -i '/LD_LIBRARY_PATH/d' pipewire-jack/src/pw-jack.in
  }
  build() {
@@ -367,6 +363,7 @@
 +    -D systemd=disabled
      -D libjack-path=/usr/lib
      -D rlimits-install=false
+-    -D selinux=disabled
      -D session-managers=[]
      -D udevrulesdir=/usr/lib/udev/rules.d
    )
@@ -375,7 +372,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -85,8 +85,6 @@
+@@ -84,8 +85,6 @@
  package_pipewire() {
    license+=(LGPL)  # libspa-alsa
    depends=(
@@ -384,7 +381,7 @@
      "libpipewire=$epoch:$pkgver-$pkgrel"
      libcamera-base.so
      libcamera.so
-@@ -95,10 +93,8 @@
+@@ -94,10 +93,8 @@
      libncursesw.so
      libpipewire-$_ver.so
      libreadline.so
@@ -395,7 +392,7 @@
    meson install -C build --destdir "$pkgdir"
    (
      cd "$pkgdir"
-@@ -120,23 +116,19 @@
+@@ -119,23 +116,19 @@
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-avb.so
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-echo-cancel.so
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-fallback-sink.so
@@ -420,7 +417,7 @@
      _pick jack usr/bin/pw-jack
      _pick jack usr/include/jack
      _pick jack usr/lib/libjack*
-@@ -146,7 +138,6 @@
+@@ -145,7 +138,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/pipewire-$_ver/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/pipewire-$_ver/libpipewire-module-pulse-tunnel.so
@@ -428,7 +425,7 @@
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/pipewire/pipewire-pulse.conf
      _pick roc usr/lib/pipewire-$_ver/libpipewire-module-roc*.so
-@@ -157,12 +148,13 @@
+@@ -156,12 +148,13 @@
      _pick x11-bell usr/lib/pipewire-$_ver/libpipewire-module-x11-bell.so
      mkdir -p etc/pipewire/{client-rt,client,minimal,pipewire}.conf.d
    )
@@ -443,7 +440,7 @@
      gcc-libs
    )
    provides=(libpipewire-$_ver.so)
-@@ -173,10 +165,6 @@
+@@ -172,10 +165,6 @@
    pkgdesc+=" - Audio support"
    depends=(
      alsa-card-profiles
@@ -454,7 +451,7 @@
      libasound.so
      libbluetooth.so
      libfdk-aac.so
-@@ -190,9 +178,8 @@
+@@ -189,9 +178,8 @@
      libsbc.so
      libsndfile.so
      libusb-1.0.so
@@ -466,7 +463,7 @@
    )
    mv audio/* "$pkgdir"
    mkdir -p "$pkgdir/etc/alsa/conf.d"
-@@ -219,7 +206,6 @@
+@@ -218,7 +206,6 @@
  package_pipewire-ffado() {
    pkgdesc+=" - FireWire support"
    depends=(
@@ -474,7 +471,7 @@
      libffado.so
      libpipewire-$_ver.so
      pipewire
-@@ -228,32 +214,17 @@
+@@ -227,32 +214,17 @@
    mv ffado/* "$pkgdir"
    install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
  }
@@ -509,7 +506,7 @@
    provides=(jack libjack.so libjackserver.so libjacknet.so)
    mv jack/* "$pkgdir"
    install -Dm644 /dev/null \
-@@ -264,9 +235,6 @@
+@@ -263,9 +235,6 @@
  package_pipewire-pulse() {
    pkgdesc+=" - PulseAudio replacement"
    depends=(
@@ -519,7 +516,7 @@
      libavahi-{client,common}.so
      libglib-2.0.so
      libpipewire-$_ver.so
-@@ -274,11 +242,9 @@
+@@ -273,11 +242,9 @@
      pipewire
      pipewire-audio
      pipewire-session-manager
@@ -531,7 +528,7 @@
    mv pulse/* "$pkgdir"
    mkdir -p "$pkgdir/etc/pipewire/pipewire-pulse.conf.d"
    install -Dm644 /dev/null \
-@@ -288,7 +254,6 @@
+@@ -287,7 +254,6 @@
  package_pipewire-roc() {
    pkgdesc+=" - ROC streaming support"
    depends=(
@@ -539,7 +536,7 @@
      libpipewire-$_ver.so
      libroc.so
      pipewire
-@@ -300,10 +265,7 @@
+@@ -299,10 +265,7 @@
  }
  package_gst-plugin-pipewire() {
    depends=(
@@ -550,7 +547,7 @@
      libpipewire-$_ver.so
      pipewire
      pipewire-session-manager
-@@ -314,12 +276,9 @@
+@@ -313,12 +276,9 @@
  package_pipewire-zeroconf() {
    pkgdesc+=" - Zeroconf support"
    depends=(
@@ -563,7 +560,7 @@
      pipewire
      pipewire-audio
    )
-@@ -329,7 +288,6 @@
+@@ -328,7 +288,6 @@
  package_pipewire-v4l2() {
    pkgdesc+=" - V4L2 interceptor"
    depends=(
@@ -571,7 +568,7 @@
      libpipewire-$_ver.so
      pipewire
      pipewire-session-manager
-@@ -341,7 +299,6 @@
+@@ -340,7 +299,6 @@
  package_pipewire-x11-bell() {
    pkgdesc+=" - X11 bell"
    depends=(

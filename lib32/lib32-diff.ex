@@ -13,6 +13,9 @@ lib32-gamemode
 lib32-glib-networking
 lib32-glib2
 lib32-glu
+lib32-harfbuzz
+lib32-harfbuzz-cairo
+lib32-harfbuzz-icu
 lib32-jack2
 lib32-json-glib
 lib32-libdrm

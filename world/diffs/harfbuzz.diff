@@ -1,15 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   lib32-harfbuzz-cairo
-   lib32-harfbuzz-icu
+@@ -7,8 +7,8 @@
+   harfbuzz-utils
+   harfbuzz-docs
  )
 -pkgver=8.2.1
+-pkgrel=2
 +pkgver=8.0.1
- pkgrel=1
- pkgdesc="OpenType text shaping engine - 32-bit"
++pkgrel=1
+ pkgdesc="OpenType text shaping engine"
  url="https://www.freedesktop.org/wiki/Software/HarfBuzz"
-@@ -25,7 +25,7 @@
+ arch=(x86_64)
+@@ -31,7 +31,7 @@
    python-fonttools
    python-setuptools
  )
@@ -18,7 +20,16 @@
  source=("git+https://github.com/harfbuzz/harfbuzz#commit=$_commit")
  b2sums=('SKIP')
  
-@@ -53,7 +53,7 @@
+@@ -42,8 +42,6 @@
+ 
+ prepare() {
+   cd harfbuzz
+-
+-  git cherry-pick -n 3a1b0f0a72525d847197a8446d9503e44b1f2add
+ }
+ 
+ build() {
+@@ -54,7 +52,7 @@
    CFLAGS="${CFLAGS/-fexceptions/}"
    CXXFLAGS="${CXXFLAGS/-fexceptions/}"
  
@@ -33,8 +44,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -29,7 +29,7 @@
-   export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
+@@ -22,7 +22,6 @@
+ )
+ prepare() {
+   cd harfbuzz
+-  git cherry-pick -n 3a1b0f0a72525d847197a8446d9503e44b1f2add
+ }
+ build() {
+   local meson_options=(
+@@ -30,7 +29,7 @@
+   )
    CFLAGS="${CFLAGS/-fexceptions/}"
    CXXFLAGS="${CXXFLAGS/-fexceptions/}"
 -  arch-meson harfbuzz build "${meson_options[@]}"

@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=zeromq
+-pkgver=4.3.5
+-pkgrel=1
++pkgver=4.3.4
++pkgrel=4
+ pkgdesc='Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.'
+ arch=('x86_64')
+ url='http://www.zeromq.org'
+-license=('MPL2')
++license=('LGPL')
+ depends=(
+   'glibc'
+   'gnutls'
+@@ -22,7 +22,7 @@
+ )
+ optdepends=('cppzmq: C++ binding for libzmq')
+ provides=('libzmq.so')
+-_commit='622fc6dde99ee172ebaa9c8628d85a7a1995a21d'
++_commit='4097855ddaaa65ed7b5e8cb86d143842a594eebd'
+ source=(
+   "$pkgname::git+https://github.com/zeromq/libzmq#commit=$_commit"
+   'fix-doc-install.patch'
+@@ -40,6 +40,10 @@
+ 
+ prepare() {
+   cd "$pkgname"
++
++  git cherry-pick --no-commit 5381be6c71f2a34fea40a29c12e3f6f8dcf3bad2
++
++  git cherry-pick --no-commit 438d5d88392baffa6c2c5e0737d9de19d6686f0d
+ 
+   patch -p1 -i "$srcdir/fix-doc-install.patch"
+ }
+@@ -81,7 +85,7 @@
+     --test-dir build \
+     --output-on-failure \
+     -j1 \
+-    -E "test_(diffserv|security_curve|zmq_poll_fd|connect_rid|heartbeats|radio_dish)"
++    -E "test_(diffserv|security_curve|zmq_poll_fd|connect_rid|heartbeats)"
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,8 @@
+ provides=('libzmq.so')
+ prepare() {
+   cd "$pkgname"
++  git cherry-pick --no-commit 5381be6c71f2a34fea40a29c12e3f6f8dcf3bad2
++  git cherry-pick --no-commit 438d5d88392baffa6c2c5e0737d9de19d6686f0d
+   patch -p1 -i "$srcdir/fix-doc-install.patch"
+ }
+ build() {
