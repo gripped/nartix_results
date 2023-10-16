@@ -1384,13 +1384,11 @@ libgphoto2
 libgpod
 libgravatar
 libgrss
-libgtop
 libgusb
 libgweather-4
 libgweather-4-docs
 libgxps
 libharu
-libheif
 libical
 libice
 libiconv
@@ -2160,6 +2158,7 @@ pacutils
 pahole
 ostra-cg
 palapeli
+pam_wrapper
 pango
 pango-docs
 pangomm-2.48
@@ -3273,7 +3272,6 @@ python-pandas
 python-pandocfilters
 python-parameterized
 python-paramiko
-python-parse-type
 python-parse
 python-parsedatetime
 python-parso
@@ -4381,6 +4379,7 @@ strip-nondeterminism
 sugar-datastore
 suil
 suil-docs
+suitesparse
 sushi
 svgpart
 svt-av1

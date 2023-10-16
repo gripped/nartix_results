@@ -22,6 +22,7 @@ gssproxy
 inetutils
 iputils
 libarchive
+libnsl
 libusb
 linux-lts
 linux-lts-headers

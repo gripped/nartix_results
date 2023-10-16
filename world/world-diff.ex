@@ -288,11 +288,13 @@ libfido2
 libfprint
 libgdata
 libgsf
+libgtop
 libgudev
 libguestfs
 libhandy
 libhandy-docs
 libhandy0
+libheif
 libinput
 libkolabxml
 libksysguard
@@ -427,7 +429,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-pam_wrapper
 paprefs
 passim
 pc-ble-driver
@@ -535,6 +536,7 @@ python-cairocffi
 python-execnet
 python-ldap
 python-openapi-spec-validator
+python-parse-type
 python-pymupdf
 python-pytest-benchmark
 python-pyudev
@@ -674,7 +676,6 @@ strongswan
 stubby
 stunnel
 subversion
-suitesparse
 supermin
 svt-hevc
 sway
