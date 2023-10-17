@@ -81,6 +81,7 @@ dtc
 dunst
 dvisvgm
 earlyoom
+editline
 edk2
 edk2-shell
 edk2-ovmf
@@ -246,6 +247,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
+jupyter-server
 kauth5
 kcodecs5
 kcompletion5
@@ -349,6 +351,7 @@ linux-zen-headers
 linux-zen-docs
 lirc
 lm_sensors
+lowdown
 luajit
 luarocks
 lxc
@@ -534,13 +537,14 @@ python-aiomysql
 python-cachy
 python-cairocffi
 python-execnet
+python-jupyter-events
 python-ldap
+python-numpy
 python-openapi-spec-validator
 python-parse-type
 python-pymupdf
 python-pytest-benchmark
 python-pyudev
-python-setuptools-scm
 python-sphinx-alabaster-theme
 qastools
 qemu

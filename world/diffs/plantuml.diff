@@ -1,15 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,16 +1,16 @@
  
  pkgname=plantuml
- pkgver=1.2023.6
--pkgrel=2
-+pkgrel=1
+-pkgver=1.2023.11
++pkgver=1.2023.6
+ pkgrel=1
  pkgdesc="Component that allows to quickly write uml diagrams"
  arch=(any)
  url="https://plantuml.com/"
-@@ -18,6 +18,7 @@
+ license=('GPL')
+ depends=("java-runtime>=8" "bash")
+-makedepends=("gradle" "java-environment>=8")
+-source=("https://github.com/plantuml/plantuml/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
++makedepends=("apache-ant" "java-environment>=8")
++source=("https://downloads.sourceforge.net/project/$pkgname/$pkgver/$pkgname-$pkgver.tar.gz"
+         "$pkgname.run")
+-sha256sums=('70dc0b2fcb738abd7d2c7012085a04d34e7d90e64a517afbc09ebf26ef1c112a'
++sha256sums=('92b9284317f06ee09d6ca634ab13d55df23c068184f8de8a5ac52733be45239c'
+             'a3fb528f4c719cfd0ff6154c60fd54ce341011d132caf950cc30af4989f6aac8')
+ optdepends=('plantuml-ascii-math: allow use AsciiMath or JLaTeXMath notation'
+             'ditaa: allow use ditaa notation'
+@@ -18,11 +18,12 @@
  
  prepare(){
    cd "$srcdir/$pkgname-$pkgver"
@@ -17,17 +29,36 @@
  }
  
  build() {
+   cd "$srcdir/$pkgname-$pkgver"
+-  gradle jar
++  ant dist
+ }
+ 
+ package() {
+@@ -30,5 +31,5 @@
+   install -m 755 -D "$pkgname.run" "$pkgdir/usr/bin/$pkgname"
+ 
+   cd "$srcdir/$pkgname-$pkgver"
+-  install -m 644 -D "build/libs/$pkgname-$pkgver.jar" "$pkgdir/usr/share/java/$pkgname/$pkgname.jar"
++  install -m 644 -D "$pkgname.jar" "$pkgdir/usr/share/java/$pkgname/$pkgname.jar"
+ }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
- makedepends=("apache-ant" "java-environment>=8")
+@@ -1,10 +1,11 @@
+ pkgname=plantuml
+ depends=("java-runtime>=8" "bash")
+-makedepends=("gradle" "java-environment>=8")
++makedepends=("apache-ant" "java-environment>=8")
  prepare(){
    cd "$srcdir/$pkgname-$pkgver"
 +    sed 's/target="1.6"/target="1.7"/g;s/
  }
  build() {
    cd "$srcdir/$pkgname-$pkgver"
+-  gradle jar
++  ant dist
+ }

@@ -401,7 +401,6 @@ easytag
 ebook-tools
 eclipse-ecj
 ecryptfs-utils
-editline
 editorconfig-core-c
 egl-wayland
 eglexternalplatform
@@ -900,7 +899,6 @@ jupyter-notebook-shim
 jupyter-notebook
 jupyter-server-fileid
 jupyter-server-ydoc
-jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab
@@ -1726,7 +1724,6 @@ lmdb
 log4cplus
 lokalize
 lolcat
-lowdown
 lpeg
 lua-lpeg
 lua51-lpeg
@@ -3109,7 +3106,6 @@ python-jsonschema
 python-junit-xml
 python-jupyter-client
 python-jupyter-core
-python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyter-ydoc
@@ -3235,7 +3231,6 @@ python-nspektr
 python-ntlm-auth
 python-numba
 python-numexpr
-python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -3605,6 +3600,7 @@ python-setproctitle
 python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
+python-setuptools-scm
 python-setuptools
 python-sgmllib3k
 python-sh
