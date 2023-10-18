@@ -321,7 +321,6 @@ cups-filters
 cups-pdf
 cups-pk-helper
 cython-dev
-cython
 cython0
 d-spy
 darkhttpd
@@ -746,6 +745,11 @@ gwenhywfar
 gwenview
 gyp
 handbrake
+harfbuzz
+harfbuzz-cairo
+harfbuzz-icu
+harfbuzz-utils
+harfbuzz-docs
 hddtemp
 hdf5
 helix
@@ -1387,6 +1391,7 @@ libgweather-4
 libgweather-4-docs
 libgxps
 libharu
+libheif
 libical
 libice
 libiconv
@@ -1477,7 +1482,6 @@ libmusicbrainz5
 libmwaw
 libmwaw-docs
 libmypaint
-libmysofa
 libmythes
 libnatpmp
 libnbd
@@ -2647,7 +2651,6 @@ python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
-python-aiohttp
 python-aioitertools
 python-aiopg
 python-aioquic
@@ -3017,7 +3020,6 @@ python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
-python-hatch-nodejs-version
 python-hatch-vcs
 python-hatchling
 python-heapdict

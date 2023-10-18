@@ -65,6 +65,7 @@ cyrus-sasl
 cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
+cython
 dbus-broker
 ddcutil
 dhcp
@@ -210,11 +211,6 @@ gvfs-mtp
 gvfs-nfs
 gvfs-google
 haproxy
-harfbuzz
-harfbuzz-cairo
-harfbuzz-icu
-harfbuzz-utils
-harfbuzz-docs
 haveged
 hidapi
 hwloc
@@ -296,12 +292,12 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
-libheif
 libinput
 libkolabxml
 libksysguard
 libldm
 libmbim
+libmysofa
 libnvme
 libodfgen
 libplacebo
@@ -533,10 +529,12 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+python-aiohttp
 python-aiomysql
 python-cachy
 python-cairocffi
 python-execnet
+python-hatch-nodejs-version
 python-jupyter-events
 python-ldap
 python-numpy

@@ -1,5 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -21,8 +21,8 @@
+   qemu-vhost-user-gpu
+   qemu-{base,desktop,emulators-full,full}
+ )
+-pkgver=8.1.2
+-pkgrel=1
++pkgver=8.1.1
++pkgrel=2
+ pkgdesc="A generic and open source machine emulator and virtualizer"
+ arch=(x86_64)
+ url="https://www.qemu.org/"
 @@ -58,8 +58,8 @@
    glusterfs
    gnutls
@@ -26,40 +37,44 @@
  source=(
    https://download.qemu.org/qemu-$pkgver.tar.xz{,.sig}
    bridge.conf
-@@ -115,7 +115,6 @@
+@@ -114,24 +114,24 @@
+   qemu-sysusers.conf
    65-kvm.rules
    99-qemu-guest-agent.rules
-   $pkgbase-8.1.0-keyutils.patch
 -  $pkgbase-8.1.1-static_regression.patch
++  $pkgbase-8.1.0-keyutils.patch
  )
- sha512sums=('199db58f9a413cbe4449ff557bc362e666c6c0291f9963cb74e5542e8abd1edcd65001fa1fd453b850a376de455f93258707ce6feee5a44bf40753b12a2e956c'
+-sha512sums=('d95ba8b294115b86b7f3bd1b438b059e38c7ccc68f14e76b455b355b4b68ec84fb799bef44dbf96befcad7c40a15f4660096b5ad5be4396d54dfeaba34c89db8'
++sha512sums=('199db58f9a413cbe4449ff557bc362e666c6c0291f9963cb74e5542e8abd1edcd65001fa1fd453b850a376de455f93258707ce6feee5a44bf40753b12a2e956c'
              'SKIP'
-@@ -124,8 +123,7 @@
+             '7b412ffa5dcda47b0a4ec9e2c5e5e1d9eaaaf0a087b7ea3ead3e706ba4c9cafb919beadd088a0299b6f7aab753b81a5eafb545b4842ee5f26646d16544dd02a7'
+             '6e838773d63ae0ffdffe2b891bf611d8f5f3c67a9bc4cbbedf8363c150c2c9971c8e44d92270bc581af40eb0ece02192760bcdd6aee229fff55635f3a4825afa'
              '985c2c7a6b5217c87a15b45368089ee91b2f9027b070f9eafa448a18b27ae0d9edd964d52e134b9c1f4aeef4d6aae88afd3f454551ca898affef7f9d28b99b8f'
              'bdf05f99407491e27a03aaf845b7cc8acfa2e0e59968236f10ffc905e5e3d5e8569df496fd71c887da2b5b8d1902494520c7da2d3a8258f7fd93a881dd610c99'
              '93b905046fcea8a0a89513b9259c222494ab3b91319dde23baebcb40dc17376a56661b159b99785d6e816831974a0f3cbd7b2f7d89e5fc3c258f88f4492f3839'
--            '400cca1177bd72ac1dfe646a2197754a1829116ade02cb4b0dea817f62a62ff3324675f772cdacd58ae74cff6147bf04a249dabb9729df6678500d47f7e728a8'
 -            'c7d086a951e9a378434ea95a843a4b01f0eb2ae430135a81365147cf6806a7ba1b49014a3aa66904970853ba84a4a28dbaded7bccb99a0bc3730572c80fb8b12')
+-b2sums=('8f48638cd1f0285356aae2d14862f56cc79da09bb9ff9f09e90221fdca851e9c3f8a3d940039f578d24d0b4435baf19cb52a3e927e97bf978ea674d148ecd746'
 +            '400cca1177bd72ac1dfe646a2197754a1829116ade02cb4b0dea817f62a62ff3324675f772cdacd58ae74cff6147bf04a249dabb9729df6678500d47f7e728a8')
- b2sums=('71220fad7c9f74bed6211879f01566ac1e52835feb3d45eaa1b2fe1d5f95d9fa5db53b7aec72b4ef098c03d0c4070076c907fb3e6b839002de6f56ee5ab44340'
++b2sums=('71220fad7c9f74bed6211879f01566ac1e52835feb3d45eaa1b2fe1d5f95d9fa5db53b7aec72b4ef098c03d0c4070076c907fb3e6b839002de6f56ee5ab44340'
          'SKIP'
          'b1eca364aa60f130ff5e649f5d004d3fcb75356d3421a4542efdfc410d39b40d9434d15e1dd7bbdbd315cb72b5290d3ea5f77f9c41961a5601cd28ef7bbe72e8'
-@@ -133,8 +131,7 @@
+         '2102e4a34e11e406e9606c97e026e7b92e887e296a7f77b9cede1b37119d0df33735f3588628167b2b8e32244c196c491bfab623e2caddac9014d445aa2a6d98'
          '69177b962d2fda20cafdbc6226fd017b5ca5a0f69f866d055dc1c744b7b2955059f47c693cfb5b4c863ec159569fdabd4327ab4b8a95566a68cd8ce38e339c7a'
          '3559fe9c4f744194939770047a0a02d07ff791c845a80726d0bc7b8c4801ed5f11150e7d5adab813844b3dab1cf38c3a5a87fb6efbb8fc9dccdda9fa56409ed8'
          'a9a2bdfeeb44eb86cbe88ac7c65f72800bdb2fd5cecb02f3a258cf9470b52832180aab43c89d481f7fd4d067342a9a27dd6c8a94d625b95d6e2b912e47d274e7'
--        '3608b43b4751554a7f1ff74ecdb161625bb565b083b471df4e13be0f98b556992f4c707760610b87d02cb5bd11cec5b59a3b4c59024c4a791acfb80f720c2c0e'
 -        '209ec05e161d157aaa08a9fcbea45cf87aa22fe9360f9b3c477a78a274e4ecee989c16121f9e6b7765bb479c9db718c98db047c27fd426c127c4c95e28877a16')
 +        '3608b43b4751554a7f1ff74ecdb161625bb565b083b471df4e13be0f98b556992f4c707760610b87d02cb5bd11cec5b59a3b4c59024c4a791acfb80f720c2c0e')
  validpgpkeys=('CEACC9E15534EBABB82D3FA03353C9CEF108B584') # Michael Roth <flukshun@gmail.com>
  
  _qemu_system_deps=(
-@@ -258,13 +255,10 @@
+@@ -252,13 +252,13 @@
+ }
  
-   patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.0-keyutils.patch
- 
+ prepare() {
 -  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.1-static_regression.patch
--
++
++  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.0-keyutils.patch
+ 
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tcg-internal.h > tcg.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/arm/tcg-target.c.inc > tcg-arm.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tci/tcg-target.h > tci.LICENSE.MIT
@@ -68,7 +83,7 @@
  
    mkdir -vp build
    mkdir -vp build-static
-@@ -326,7 +320,7 @@
+@@ -320,7 +320,7 @@
      --static
    )
  
@@ -77,7 +92,7 @@
      cd build-static
      ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
      ninja
-@@ -340,7 +334,6 @@
+@@ -334,7 +334,6 @@
      ../$pkgbase-$pkgver/configure "${configure_options[@]}"
      ninja
    )
@@ -85,7 +100,7 @@
  }
  
  package_qemu-common() {
-@@ -668,14 +661,12 @@
+@@ -662,14 +661,12 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -102,7 +117,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -732,13 +723,13 @@
+@@ -726,13 +723,13 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
@@ -118,7 +133,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -750,7 +741,7 @@
+@@ -744,7 +741,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -127,7 +142,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -774,7 +765,7 @@
+@@ -768,7 +765,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -136,7 +151,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -786,7 +777,7 @@
+@@ -780,7 +777,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -145,7 +160,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -810,7 +801,7 @@
+@@ -804,7 +801,7 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -154,7 +169,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -822,13 +813,13 @@
+@@ -816,13 +813,13 @@
  
  package_qemu-system-or1k() {
    pkgdesc="QEMU system emulator for OpenRisc32"
@@ -170,7 +185,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -840,7 +831,7 @@
+@@ -834,7 +831,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -179,7 +194,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -858,7 +849,7 @@
+@@ -852,7 +849,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -188,7 +203,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -870,13 +861,13 @@
+@@ -864,13 +861,13 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -204,7 +219,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -894,7 +885,7 @@
+@@ -888,7 +885,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
@@ -213,7 +228,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -906,7 +897,7 @@
+@@ -900,7 +897,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -222,7 +237,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
-@@ -936,9 +927,8 @@
+@@ -930,9 +927,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -234,7 +249,7 @@
  }
  
  package_qemu-tests() {
-@@ -1041,7 +1031,7 @@
+@@ -1035,7 +1031,7 @@
  
  package_qemu-user-static-binfmt() {
    pkgdesc="Binary format rules for QEMU static user mode emulation"
@@ -274,11 +289,12 @@
  _qemu_system_deps=(
    capstone
    dtc
-@@ -143,11 +143,9 @@
+@@ -142,11 +142,10 @@
+   done
  }
  prepare() {
-   patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.0-keyutils.patch
 -  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.1-static_regression.patch
++  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.0-keyutils.patch
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tcg-internal.h > tcg.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/arm/tcg-target.c.inc > tcg-arm.LICENSE.MIT
    sed -n '1,23p' $pkgbase-$pkgver/tcg/tci/tcg-target.h > tci.LICENSE.MIT
@@ -286,7 +302,7 @@
    mkdir -vp build
    mkdir -vp build-static
  }
-@@ -206,7 +204,7 @@
+@@ -205,7 +204,7 @@
      --disable-zstd
      --static
    )
@@ -295,7 +311,7 @@
      cd build-static
      ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
      ninja
-@@ -446,14 +444,12 @@
+@@ -445,14 +444,12 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-guest-agent() {
@@ -312,7 +328,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -492,15 +488,15 @@
+@@ -491,15 +488,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-aarch64() {
@@ -331,7 +347,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-avr() {
-@@ -512,11 +508,11 @@
+@@ -511,11 +508,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-hppa() {
@@ -345,7 +361,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-m68k() {
-@@ -528,7 +524,7 @@
+@@ -527,7 +524,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-mips() {
@@ -354,7 +370,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-nios2() {
-@@ -536,15 +532,15 @@
+@@ -535,15 +532,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-or1k() {
@@ -373,7 +389,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-rx() {
-@@ -552,15 +548,15 @@
+@@ -551,15 +548,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-s390x() {
@@ -392,7 +408,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-tricore() {
-@@ -568,11 +564,11 @@
+@@ -567,11 +564,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-x86() {
@@ -406,7 +422,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-hw-usb-host() {
-@@ -592,9 +588,8 @@
+@@ -591,9 +588,8 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-pr-helper() {
@@ -418,7 +434,7 @@
  }
  package_qemu-tests() {
    depends=(qemu-common=$pkgver-$pkgrel)
-@@ -667,7 +662,7 @@
+@@ -666,7 +662,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-user-static-binfmt() {
