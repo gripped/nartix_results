@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=xfce4-dev-tools
+-pkgver=4.18.1
++pkgver=4.18.0
+ pkgrel=1
+ pkgdesc="Xfce developer tools"
+ arch=('x86_64')
+@@ -9,7 +9,7 @@
+ depends=('glib2' 'intltool' 'gtk-doc')
+ optdepends=('docker: xfce-build helper script')
+ source=(https://archive.xfce.org/src/xfce/xfce4-dev-tools/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
+-sha256sums=('812cabe7048922ebc176564b73c3e427e467c9566365ee3e54c0487d305a7681')
++sha256sums=('eedb4fc955f0e3459c46864ff98579295db2b900743e0ff69cad5970ba76be37')
+ 
+ build() {
+   cd $pkgname-$pkgver
