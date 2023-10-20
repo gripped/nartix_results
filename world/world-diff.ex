@@ -18,6 +18,7 @@ avahi
 awesome
 ayatana-ido
 bftpd
+blackbox
 bluez
 bluez-utils
 bluez-libs
@@ -556,7 +557,7 @@ python-aiomysql
 python-cachy
 python-cairocffi
 python-cffi
-python-execnet
+python-h5py
 python-hatch-nodejs-version
 python-jupyter-events
 python-ldap
@@ -566,6 +567,7 @@ python-parse-type
 python-pymupdf
 python-pytest-benchmark
 python-pyudev
+python-requests
 python-sphinx-alabaster-theme
 qastools
 qemu

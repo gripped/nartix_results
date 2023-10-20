@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,10 +24,9 @@
+@@ -6,7 +6,7 @@
+   vte4
+   vte-docs
+ )
+-pkgver=0.74.1
++pkgver=0.74.0
+ pkgrel=1
+ pkgdesc="Virtual Terminal Emulator widget"
+ url="https://wiki.gnome.org/Apps/Terminal/VTE"
+@@ -24,11 +24,10 @@
    gtk4
    meson
    pcre2
@@ -8,10 +17,12 @@
    vala
  )
 -options=(!lto)
+-_commit=eee37c871173d04387cd0004dde7f8676f390f62  # tags/0.74.1^0
 +options=(debug !lto)
- _commit=7fb5b2395c9e9c786c2277bc98d7e2661485fb10  # tags/0.74.0^0
++_commit=7fb5b2395c9e9c786c2277bc98d7e2661485fb10  # tags/0.74.0^0
  source=("git+https://gitlab.gnome.org/GNOME/vte.git#commit=$_commit")
  b2sums=('SKIP')
+ 
 @@ -45,9 +44,10 @@
    local meson_options=(
      -D b_lto=false

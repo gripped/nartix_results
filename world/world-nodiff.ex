@@ -169,7 +169,6 @@ bigsh0t
 bin86
 bind
 black-hole-solver
-blackbox
 blinken
 blockdiag
 blosc
@@ -2898,6 +2897,7 @@ python-et-xmlfile
 python-evdev
 python-eventlet
 python-exceptiongroup
+python-execnet
 python-executing
 python-expects
 python-extras
@@ -2993,7 +2993,6 @@ python-greenlet
 python-gssapi
 python-h11
 python-h2
-python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3536,7 +3535,6 @@ python-requests-oauthlib
 python-requests-toolbelt
 python-requests-unixsocket
 python-requests-wsgi-adapter
-python-requests
 python-requestsexceptions
 python-resolvelib
 python-responses
