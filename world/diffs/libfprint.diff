@@ -35,7 +35,7 @@
  )
  provides=(libfprint-2.so)
  groups=(fprint)
-@@ -20,7 +19,7 @@
+@@ -16,6 +15,6 @@
      -D drivers=all
      -D installed-tests=false
    )
@@ -43,4 +43,3 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

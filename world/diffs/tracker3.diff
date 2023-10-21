@@ -32,7 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,12 +25,13 @@
+@@ -21,8 +21,9 @@
  build() {
    local meson_options=(
      -D tests_tap_protocol=true
@@ -42,9 +42,4 @@
 +  artix-meson tracker build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
--  dbus-run-session meson test -C build --print-errorlogs -t 3
-+  dbus-run-session meson test -C build --print-errorlogs -t 3 ||: #one test fails
- }
  package_tracker3() {
-   provides=(libtracker-sparql-3.0.so)

@@ -37,7 +37,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,11 @@
+@@ -1,7 +1,6 @@
  pkgname=libdaemon
 -depends=('glibc')
  build() {
@@ -46,9 +46,3 @@
  	./bootstrap.sh
  	./configure --prefix=/usr --localstatedir=/var --disable-lynx
  	make
- }
- package() {
--	cd "${srcdir}/${pkgname}-${pkgver}"
-+	cd "${srcdir}/${pkgname}"
- 	make DESTDIR="${pkgdir}" install
- }

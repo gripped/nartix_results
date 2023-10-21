@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -9,6 +9,6 @@
  build() {
    local meson_options=(
    )
@@ -23,4 +23,3 @@
 +  artix-meson fribidi-$pkgver build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

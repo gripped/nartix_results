@@ -72,8 +72,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,19 +11,29 @@
- }
+@@ -7,11 +7,19 @@
+ provides=(xdg-desktop-portal-impl)
  prepare() {
    cd $pkgname
 +  git cherry-pick -n 366d3349041c2e06658c7c5a8b5bfd5f345d8157
@@ -96,15 +96,3 @@
 +  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 +  make
  }
- check() {
--  meson test -C build --print-errorlogs
-+  cd $pkgname
-+  make check
- }
- package() {
--  meson install -C build --destdir "$pkgdir"
-+  cd $pkgname
-+  DESTDIR="$pkgdir" make install
-   install -Dm644 /dev/stdin "$pkgdir/usr/share/xdg-desktop-portal/gtk-portals.conf" <<END
- [preferred]
- default=gtk

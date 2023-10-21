@@ -38,7 +38,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,9 +18,10 @@
+@@ -18,8 +18,9 @@
    local meson_options=(
      --cross-file lib32
      -D bash_completion=disabled
@@ -49,4 +49,3 @@
 +  artix-meson p11-kit-$pkgver build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

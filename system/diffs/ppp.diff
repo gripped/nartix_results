@@ -39,19 +39,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -6,6 +6,6 @@
  build() {
    cd $pkgname-$pkgver
    ./configure --prefix=/usr --sbindir=/usr/bin --sysconfdir=/etc --runstatedir=/run \
 -              --enable-systemd --enable-cbcp --enable-multilink
 +              --disable-systemd --enable-cbcp --enable-multilink
    make
- }
- package() {
-@@ -32,6 +32,5 @@
-   install -D -m600 etc.ppp/chap-secrets "$pkgdir"/etc/ppp/chap-secrets
-   install -d -m755 "$pkgdir"/etc/ppp/peers
-   chmod 0755 "$pkgdir"/usr/lib/pppd/$pkgver/*.so
--  install -D -m644 "$srcdir"/ppp.systemd "$pkgdir"/usr/lib/systemd/system/ppp@.service
-   install -Dm644 "$srcdir"/LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
  }

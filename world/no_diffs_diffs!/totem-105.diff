@@ -27,10 +27,10 @@
  conflicts=(totem-plugin)
  replaces=(totem-plugin)
  groups=(gnome)
- pkgver() {
+ prepare() {
    cd totem
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -20,7 +21,7 @@
+   git submodule init
+@@ -16,6 +17,6 @@
    local meson_options=(
      -D enable-gtk-doc=true
    )
@@ -38,4 +38,3 @@
 +  artix-meson totem build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

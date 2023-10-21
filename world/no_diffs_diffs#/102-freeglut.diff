@@ -18,6 +18,6 @@
  replaces=(glut)
  provides=(glut)
  conflicts=(glut)
- pkgver() {
+ prepare() {
    cd freeglut
-   git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
+ }

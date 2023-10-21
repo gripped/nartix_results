@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   git describe --tags
- }
+@@ -2,7 +2,7 @@
+ groups=(pantheon)
+ depends=(hicolor-icon-theme)
  build() {
 -  arch-meson elementary-icon-theme build \
 +  artix-meson elementary-icon-theme build \

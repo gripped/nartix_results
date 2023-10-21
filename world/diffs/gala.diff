@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -39,7 +39,7 @@
+@@ -35,6 +35,6 @@
    git cherry-pick -n 151e5f01750e9471cceac48f1999ac5e81f625b5
  }
  build() {
@@ -23,4 +23,3 @@
 +  artix-meson gala build -Dsystemd=false
    meson compile -C build
  }
- package() {

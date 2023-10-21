@@ -69,15 +69,3 @@
  build() {
    cd $_pipname-$pkgver
    python -m build --wheel --no-isolation
-@@ -18,10 +11,9 @@
-   export PATH="$PWD/test-env/bin:$PATH"
-   test-env/bin/python -m installer dist/*.whl
-   test-env/bin/python -m pytest -v
--  rm -fr test-env
-+  rm -r test-env
- }
- package() {
-   cd $_pipname-$pkgver
-   python -m installer --destdir="$pkgdir" dist/*.whl
--  install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
- }

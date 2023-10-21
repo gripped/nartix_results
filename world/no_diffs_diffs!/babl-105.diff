@@ -23,13 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,9 +1,10 @@
  pkgname=babl
  depends=('glibc' 'lcms2')
- pkgver() {
-   cd "${pkgname}"
-   git describe --tags | sed 's/^BABL_//;s/_$//;s/_/./g;s/-/+/g'
-@@ -8,7 +9,7 @@
+ prepare() {
    sed -i s/Description/description/ "${pkgname}"/meson.build
  }
  build() {
@@ -37,4 +34,3 @@
 +  artix-meson "${pkgname}" build
    ninja -C build
  }
- check() {

@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,6 +2,6 @@
  groups=(x-apps)
  depends=(gspell gtksourceview4 libpeas xapp)
  build() {
@@ -32,4 +32,3 @@
 +  artix-meson ${pkgname}-${pkgver} build
    samu -C build
  }
- package(){

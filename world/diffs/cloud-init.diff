@@ -66,16 +66,3 @@
  )
  backup=(
    etc/cloud/cloud.cfg
-@@ -52,12 +51,4 @@
-   install -vDm 644 doc/man/*.1 -t "$pkgdir/usr/share/man/man1/"
-   install -vDm 655 bash_completion/$pkgname -t "$pkgdir/usr/share/bash-completion/completions/"
-   install -vDm 644 udev/*.rules -t "$pkgdir/usr/lib/udev/rules.d/"
--  install -vdm 755 "$pkgdir/usr/lib/systemd/system"{,-generators}
--  for _file in cloud-{config,final,init-local,init}.service; do
--    ./tools/render-cloudcfg --variant arch ./systemd/$_file.tmpl "$pkgdir/usr/lib/systemd/system/$_file"
--  done
--  install -vDm 644 systemd/*.{service,socket,target} "$pkgdir/usr/lib/systemd/system/"
--  ./tools/render-cloudcfg --variant arch ./systemd/cloud-init-generator.tmpl "$pkgdir/usr/lib/systemd/system-generators/cloud-init-generator"
--  chmod 755 "$pkgdir/usr/lib/systemd/system-generators/cloud-init-generator"
--  install -vDm 644 systemd/disable-sshd-keygen-if-cloud-init-active.conf -t "$pkgdir/usr/lib/systemd/system/sshd-keygen@.service.d/"
- }

@@ -100,14 +100,3 @@
     ./autogen.sh
  }
  build() {
-@@ -46,9 +48,8 @@
-    install -dm755 "${pkgdir}"/usr/share/subversion
-    cp -a tools/hook-scripts "${pkgdir}"/usr/share/subversion/
-    rm "${pkgdir}"/usr/share/subversion/hook-scripts/*.in
--   install -D -m 644 "${srcdir}"/svnserve.service  "${pkgdir}"/usr/lib/systemd/system/svnserve.service
-+   install -D -m 644 "${srcdir}"/svn "${pkgdir}"/etc/xinetd.d/svn
-    install -D -m 644 "${srcdir}"/svnserve.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/svnserve.conf
--   install -D -m 644 "${srcdir}"/svnserve.conf "${pkgdir}"/etc/conf.d/svnserve
-    install -Dm 644 tools/client-side/bash_completion \
-      "${pkgdir}"/usr/share/bash-completion/completions/subversion
-    for i in svn svnadmin svndumpfilter svnlook svnsync svnversion; do

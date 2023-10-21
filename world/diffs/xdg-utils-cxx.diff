@@ -47,7 +47,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,18 @@
+@@ -1,9 +1,13 @@
  pkgname=xdg-utils-cxx
  depends=()
 +prepare() {
@@ -63,11 +63,4 @@
 -  cmake --build build
 +    -DCMAKE_CXX_FLAGS="${CXXFLAGS} -fPIC"
 +  make
- }
- package() {
--  DESTDIR="$pkgdir" cmake --install build
--  install -Dm644 $pkgname-$pkgver/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
-+  cd build
-+  make DESTDIR="$pkgdir" install
-+  install -Dm644 "$srcdir"/$pkgname-$pkgver/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
  }

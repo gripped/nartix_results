@@ -23,14 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,10 +1,11 @@
  pkgname=tali
  depends=(gtk3 librsvg libgnome-games-support)
  groups=(gnome-extra)
- pkgver() {
-   cd tali
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -9,7 +10,7 @@
+ prepare() {
    cd tali
  }
  build() {
@@ -38,4 +35,3 @@
 +  artix-meson tali build
    meson compile -C build
  }
- check() {

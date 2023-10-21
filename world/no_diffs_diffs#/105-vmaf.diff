@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,6 +2,6 @@
  depends=('gcc-libs')
  options=('!lto')
  build() {
@@ -23,4 +23,3 @@
 +    artix-meson "${pkgname}-${pkgver}/libvmaf/build" "${pkgname}-${pkgver}/libvmaf"
      ninja -v -C "${pkgname}-${pkgver}/libvmaf/build"
  }
- check() {

@@ -21,16 +21,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,11 @@
+@@ -2,6 +2,6 @@
  depends=(xdg-desktop-portal xapp)
  provides=(xdg-desktop-portal-impl)
  build() {
 -  arch-meson $pkgname-$pkgver build
 +  artix-meson -D systemduserunitdir=/usr/lib/systemd $pkgname-$pkgver build
    meson compile -C build
- }
- package() {
-   meson install -C build --destdir "$pkgdir"
-   install -Dm644 ${srcdir}/xapp-portals.conf  ${pkgdir}/usr/share/xdg-desktop-portal/xapp-portals.conf
-+  rm -r $pkgdir/usr/lib/systemd
  }

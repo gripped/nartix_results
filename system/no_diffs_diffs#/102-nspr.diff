@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=nspr
  depends=(glibc sh)
- pkgver() {
+ prepare() {
    cd nspr
-   hg id -t -r. | sed 's/^NSPR_//;s/_RTM$//;s/_/./g'
+ }

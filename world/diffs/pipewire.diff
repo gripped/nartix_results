@@ -124,7 +124,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,17 +28,18 @@
+@@ -24,13 +24,14 @@
      -D bluez5-codec-lc3plus=disabled
      -D docs=enabled
      -D jack-devel=true
@@ -139,13 +139,8 @@
 +  artix-meson pipewire build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
--  meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs || :
- }
  _pick() {
-   local p="$1" f d; shift
-@@ -63,10 +64,8 @@
+@@ -56,10 +57,8 @@
      libncursesw.so
      libpipewire-$_ver.so
      libreadline.so
@@ -156,7 +151,7 @@
    meson install -C build --destdir "$pkgdir"
    (
      cd "$pkgdir"
-@@ -96,7 +95,6 @@
+@@ -89,7 +88,6 @@
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/pipewire-$_ver/libpipewire-module-vban-{recv,send}.so
      _pick audio usr/lib/spa-0.2/{aec,alsa,audio*,avb,bluez5}
@@ -164,7 +159,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,mididump}.1
      _pick audio usr/share/pipewire/filter-chain*
-@@ -114,7 +112,6 @@
+@@ -107,7 +105,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/pipewire-$_ver/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/pipewire-$_ver/libpipewire-module-pulse-tunnel.so
@@ -172,7 +167,7 @@
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/pipewire/pipewire-pulse.conf
      _pick roc usr/lib/pipewire-$_ver/libpipewire-module-roc*.so
-@@ -125,6 +122,8 @@
+@@ -118,6 +115,8 @@
      _pick x11-bell usr/lib/pipewire-$_ver/libpipewire-module-x11-bell.so
      mkdir -p etc/pipewire/{client-rt,client,minimal,pipewire}.conf.d
    )
@@ -181,7 +176,7 @@
    install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
  }
  package_libpipewire() {
-@@ -169,7 +168,6 @@
+@@ -153,7 +152,6 @@
      libusb-1.0.so
      libwebrtc-audio-processing-1.so
      pipewire
@@ -189,7 +184,7 @@
    )
    mv audio/* "$pkgdir"
    mkdir -p "$pkgdir/etc/alsa/conf.d"
-@@ -251,11 +249,9 @@
+@@ -235,11 +233,9 @@
      pipewire
      pipewire-audio
      pipewire-session-manager

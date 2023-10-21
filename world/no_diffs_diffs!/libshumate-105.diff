@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
+@@ -17,7 +17,7 @@
    local meson_options=(
      -D demos=true
    )
@@ -23,4 +23,4 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ package_libshumate-docs() {

@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+ url="https://github.com/lostisland/${_gemname}"
+ license=('MIT')
+ depends=('ruby')
+-checkdepends=('ruby-rspec' 'ruby-faraday' 'ruby-webmock' 'ruby-multipart-parser')
+ options=('!emptydirs')
+ source=("${url}/archive/v${pkgver}/${_gemname}-v${pkgver}.tar.gz")
+ sha512sums=('0b352b49cf04b32769959727fb445416ae4a325dfdcb7e3494cfad664dac40acd4e5202dd6e55caccf1b07e491dcd76b8e72a7cf3ba02986ef3e18200c596c14')
+@@ -24,10 +23,6 @@
+   gem build "${_gemname}.gemspec"
+ }
+ 
+-check() {
+-  cd "${srcdir}/${_gemname}-${pkgver}"
+-}
+-
+ package() {
+ cd "${srcdir}/${_gemname}-${pkgver}"
+   local _gemdir="$(gem env gemdir)"

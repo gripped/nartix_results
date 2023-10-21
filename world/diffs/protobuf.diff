@@ -32,12 +32,3 @@
  }
  build() {
    local cmake_options=(
-@@ -31,7 +32,7 @@
-   python -m build --wheel --no-isolation
- }
- check() {
--  ctest --test-dir build
-+  ctest --test-dir build --progress --output-on-failure
-   cd $pkgbase-$pkgver/python
-   pytest -vv google/$pkgbase/internal/ || true
- }

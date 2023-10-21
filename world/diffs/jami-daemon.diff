@@ -34,8 +34,8 @@
 +         openssl webrtc-audio-processing libudev libarchive)
  _pjprojectver=e4b83585a0bdf1523e808a4fc1946ec82ac733d0
  noextract=(pjproject-${_pjprojectver}.tar.gz)
- pkgver() {
-@@ -25,7 +25,7 @@
+ prepare() {
+@@ -21,7 +21,7 @@
        --enable-pjproject
    make DEPS_pjproject=
    cd "${srcdir}"

@@ -61,20 +61,3 @@
  build() {
    cd $pkgname-$pkgver
    ./configure \
-@@ -17,15 +17,13 @@
-   cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
-   install -Dm644 sample-config/nrpe.cfg "$pkgdir"/etc/nrpe/nrpe.cfg
--  install -Dm644 startup/default-service "$pkgdir"/usr/lib/systemd/system/nrpe.service
--  install -Dm644 startup/default-socket "$pkgdir"/usr/lib/systemd/system/nrpe.socket
-+  install -Dm644 startup/default-xinetd "$pkgdir"/etc/xinetd.d/nrpe
-   install -Dm644 startup/tmpfile.conf "$pkgdir"/usr/lib/tmpfiles.d/nrpe.conf
-   install -Dm644 "$srcdir"/nrpe.sysusers "$pkgdir"/usr/lib/sysusers.d/nrpe.conf
-   install -Dm644 README.md "$pkgdir"/usr/share/doc/$pkgname/README.md
-   install -Dm644 README.SSL.md "$pkgdir"/usr/share/doc/$pkgname/README.SSL.md
-   install -Dm644 SECURITY.md "$pkgdir"/usr/share/doc/$pkgname/SECURITY.md
-   install -Dm644 LEGAL "$pkgdir"/usr/share/licenses/$pkgname/LEGAL
--  sed -i 's/=31$/=nrpe/g' "$pkgdir"/etc/nrpe/nrpe.cfg "$pkgdir"/usr/lib/systemd/system/nrpe.service
-   chmod -R 755 "$pkgdir"/usr/lib/monitoring-plugins
-   chown -R root:root "$pkgdir"/usr/lib/monitoring-plugins
-   rm -f "$pkgdir"/usr/bin/nrpe-uninstall

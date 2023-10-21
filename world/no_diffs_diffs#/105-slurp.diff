@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,8 @@
+@@ -1,6 +1,7 @@
  pkgname=slurp
  depends=('cairo' 'wayland' 'libxkbcommon')
  build() {
@@ -31,4 +31,3 @@
 +    artix-meson "$pkgname-$pkgver" build
      ninja -C build
  }
- package() {

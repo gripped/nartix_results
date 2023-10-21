@@ -45,4 +45,4 @@
 +  artix-meson $pkgbase-$pkgver build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ package_rtaudio() {

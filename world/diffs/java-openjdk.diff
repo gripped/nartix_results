@@ -225,8 +225,8 @@
  build() {
    cd ${_jdkdir}
    NUM_PROC_OPT=''
-@@ -70,9 +68,7 @@
-   cd ${_jdkdir}
+@@ -67,9 +65,7 @@
+   find "../${_imgdir}" -iname '*.so' -exec chmod +x {} \;
  }
  package_jre-openjdk-headless() {
 -  depends=('java-runtime-common>=3' 'ca-certificates-utils' 'nss' 'libjpeg-turbo' 'libjpeg.so'
@@ -236,7 +236,7 @@
    provides=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
    backup=(etc/${pkgbase}/logging.properties
            etc/${pkgbase}/management/jmxremote.access
-@@ -90,19 +86,12 @@
+@@ -87,19 +83,12 @@
            etc/${pkgbase}/sound.properties)
    install=install_jre-openjdk-headless.sh
    cd ${_imgdir}/jre
@@ -259,7 +259,7 @@
    install -dm 755 "${pkgdir}/etc"
    cp -r conf "${pkgdir}/etc/${pkgbase}"
    ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
-@@ -120,47 +109,95 @@
+@@ -117,47 +106,95 @@
    ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
  }
  package_jre-openjdk() {

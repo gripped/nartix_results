@@ -25,6 +25,8 @@ lib32-freetype2
 lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
+lib32-giflib
+lib32-glib-networking
 lib32-glib2
 lib32-glu
 lib32-gmp
@@ -36,6 +38,7 @@ lib32-gst-plugins-base
 lib32-gst-plugins-good
 lib32-gtk2
 lib32-gtk3
+lib32-icu
 lib32-imlib2
 lib32-json-glib
 lib32-keyutils

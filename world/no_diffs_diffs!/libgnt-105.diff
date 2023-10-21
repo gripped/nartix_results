@@ -20,7 +20,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=libgnt
  depends=('glib2' 'libxml2' 'ncurses')
  build() {
@@ -28,4 +28,3 @@
 +  artix-meson $pkgname-$pkgver build -D python2=false
    ninja -C build
  }
- package() {

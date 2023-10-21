@@ -86,7 +86,7 @@
            --enable-library # this is deprecated
    make
  }
-@@ -30,8 +31,6 @@
+@@ -26,8 +27,6 @@
    make DESTDIR=${pkgdir} \
         install-pkglibexecPROGRAMS \
         install-dbussessionbusDATA \
@@ -95,7 +95,7 @@
         install-dbussystembusDATA \
         install-dbusDATA \
         install-man8
-@@ -43,12 +42,16 @@
+@@ -39,12 +38,16 @@
    install -Dm644 "${srcdir}"/bluetooth.modprobe "${pkgdir}"/usr/lib/modprobe.d/bluetooth-usb.conf
    install -dm755 "$pkgdir"/usr/lib/modules-load.d
    echo "crypto_user" > "$pkgdir"/usr/lib/modules-load.d/bluez.conf
@@ -115,7 +115,7 @@
    backup=('etc/bluetooth/mesh-main.conf')
    conflicts=('bluez-hcidump')
    provides=('bluez-hcidump')
-@@ -83,7 +86,7 @@
+@@ -79,7 +82,7 @@
    rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-hid2hci() {
@@ -124,7 +124,7 @@
    cd "${pkgbase}"-${pkgver}
    make DESTDIR=${pkgdir} \
         install-udevPROGRAMS \
-@@ -93,7 +96,7 @@
+@@ -89,7 +92,7 @@
    rm "${pkgdir}"/usr/lib/libbluetooth.so*
  }
  package_bluez-plugins() {

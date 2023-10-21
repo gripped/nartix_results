@@ -43,7 +43,7 @@
      'libcap-ng'
      'libepoxy'
      'libjpeg-turbo'
-@@ -31,11 +34,12 @@
+@@ -31,10 +34,11 @@
  provides=("spice-glib=$pkgver" "spice-gtk3=$pkgver")
  replaces=('spice-glib' 'spice-gtk3')
  install=spice-gtk.install
@@ -55,4 +55,3 @@
 +  artix-meson $pkgname-$pkgver build
    meson compile -C build
  }
- check() {

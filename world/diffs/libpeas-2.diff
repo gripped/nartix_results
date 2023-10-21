@@ -65,9 +65,9 @@
 +  lua51
 +  python
  )
- pkgver() {
+ prepare() {
    cd libpeas
-@@ -18,7 +21,7 @@
+@@ -14,7 +17,7 @@
      -D gtk_doc=true
      -D vapi=true
    )
@@ -75,4 +75,4 @@
 +  artix-meson libpeas build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ _pick() {

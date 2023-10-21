@@ -35,11 +35,3 @@
  build() {
    cd "${pkgname}"
    export GOFLAGS="-trimpath -mod=readonly -modcacherw"
-@@ -17,7 +14,6 @@
- package() {
-   cd "${pkgname}"
-   make PREFIX=/usr DESTDIR="$pkgdir/" install
--  install -Dm644 containerd.service "$pkgdir"/usr/lib/systemd/system/containerd.service
-   install -Dm644 man/*.8 -t "$pkgdir/usr/share/man/man8"
-   install -Dm644 man/*.5 -t "$pkgdir/usr/share/man/man5"
- }

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
-   git describe --tags | sed 's/^r//'
- }
+@@ -8,7 +8,7 @@
+   libINIReader.so
+ )
  build() {
 -  arch-meson inih build \
 +  artix-meson inih build \

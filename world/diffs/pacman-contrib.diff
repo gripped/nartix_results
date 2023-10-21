@@ -39,9 +39,3 @@
    ./autogen.sh
  }
  build() {
-@@ -19,4 +20,5 @@
- package() {
-   cd $pkgname
-   make DESTDIR="$pkgdir" install
-+  rm -fr ${pkgdir}/usr/lib/systemd
- }

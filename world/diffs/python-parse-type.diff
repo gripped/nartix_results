@@ -42,20 +42,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,5 +2,5 @@
  depends=('python-parse' 'python-six')
  build() {
    cd parse_type-$pkgver
 -  python -m build -nw
 +  python setup.py build
- }
- check() {
-   cd parse_type-$pkgver
-@@ -10,6 +10,6 @@
- }
- package() {
-   cd parse_type-$pkgver
--  python -m installer -d "$pkgdir" dist/*.whl
-+  python setup.py install --root="$pkgdir" --optimize=1
-   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
  }

@@ -23,15 +23,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,7 @@
+@@ -4,10 +4,11 @@
    gst-plugins-bad
    gst-plugins-good
  )
 +groups=(gnome)
- pkgver() {
-   cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -12,7 +13,7 @@
+ prepare() {
    cd $pkgname
  }
  build() {
@@ -39,4 +36,3 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
- check() {

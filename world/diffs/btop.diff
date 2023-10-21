@@ -53,7 +53,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,7 +1,7 @@
  pkgname=btop
 -depends=(gcc-libs)
 -_archive="$pkgname-$pkgver"
@@ -64,11 +64,4 @@
 -	make all
 +	cd "$pkgname-$pkgver"
 +	make ADDFLAGS="$CXXFLAGS $LDFLAGS"
- }
- package() {
--	cd "$_archive"
--	make DESTDIR="$pkgdir" PREFIX=/usr install
-+	cd "$pkgname-$pkgver"
-+	make install PREFIX="$pkgdir/usr"
-+	make setuid PREFIX="$pkgdir/usr"
  }

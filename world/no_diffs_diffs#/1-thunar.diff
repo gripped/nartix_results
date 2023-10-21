@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,5 +40,7 @@
+ package() {
+   cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 

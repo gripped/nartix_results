@@ -21,7 +21,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,11 +25,12 @@
+@@ -21,6 +21,6 @@
    cd $pkgname
  }
  build() {
@@ -29,9 +29,3 @@
 +  artix-meson $pkgname build -Dsystemduserunitdir=/usr/lib/systemd
    meson compile -C build
  }
- check() {
-   meson test -C build --print-errorlogs
-+  rm -rf "$pkgdir"/usr/lib/systemd
- }
- package() {
-   meson install -C build --destdir "$pkgdir"

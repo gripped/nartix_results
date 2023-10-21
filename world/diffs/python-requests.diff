@@ -89,12 +89,3 @@
  }
  build() {
    cd requests-$pkgver
-@@ -11,7 +14,7 @@
- }
- check() {
-   cd requests-$pkgver
--  pytest tests
-+  pytest tests --deselect tests/test_requests.py::TestRequests::test_pyopenssl_redirect
- }
- package() {
-   cd requests-$pkgver

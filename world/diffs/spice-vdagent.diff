@@ -38,19 +38,11 @@
  backup=('etc/conf.d/spice-vdagentd')
  prepare() {
    cd $pkgname-$pkgver
-@@ -10,7 +10,7 @@
+@@ -10,6 +10,6 @@
  build() {
    cd $pkgname-$pkgver
    ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin \
 -              --with-session-info=systemd --with-init-script=systemd
 +              --with-session-info=systemd
    make
- }
- check() {
-@@ -20,6 +20,4 @@
-   cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
-   rm -r "$pkgdir/var"
--  install -dm755 "$pkgdir/etc/conf.d/"
--  echo 'SPICE_VDAGENTD_EXTRA_ARGS=""' > "$pkgdir/etc/conf.d/spice-vdagentd"
  }

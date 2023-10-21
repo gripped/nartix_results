@@ -69,7 +69,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,18 @@
+@@ -1,7 +1,14 @@
  pkgname=timew
 -install=$pkgname.install
 +_ver_c="1882058c5ee1e8b6cbcd5335536b1efca8935823"
@@ -87,12 +87,4 @@
 +	cd "timewarrior-$_ver_c"
 +	cmake -D CMAKE_INSTALL_PREFIX=/usr .
 +	make
- }
- package() {
--    cd "${pkgname}-${pkgver}"
--    make DESTDIR="${pkgdir}" install
--    chmod 755 "${pkgdir}"/usr/share/doc/timew/holidays/refresh
--    ln -s /usr/share/doc/timew/holidays/refresh "${pkgdir}"/usr/bin/timew-refresh-holidays
-+	cd "timewarrior-$_ver_c"
-+	make install DESTDIR="$pkgdir"
  }

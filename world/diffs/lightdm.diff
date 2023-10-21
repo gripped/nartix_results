@@ -57,7 +57,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -60,10 +60,10 @@
+@@ -56,10 +56,10 @@
    rm -rf "${pkgdir}"/usr/include/lightdm-qt{,5}-*
    install -m 644 ../lightdm.pam "${pkgdir}"/etc/pam.d/lightdm
    install -m 644 ../lightdm-autologin.pam "${pkgdir}"/etc/pam.d/lightdm-autologin

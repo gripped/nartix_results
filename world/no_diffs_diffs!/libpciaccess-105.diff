@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,11 @@
+@@ -1,9 +1,10 @@
  pkgname=libpciaccess
  depends=('glibc' 'zlib')
  prepare() {
@@ -34,4 +34,3 @@
 +  artix-meson "$pkgname"-$pkgver build
    ninja -C build
  }
- check() {

@@ -30,10 +30,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,2 +1,2 @@
  pkgname=osinfo-db
 -noextract=("$pkgname-$pkgver.tar.xz")
 +noextract=($pkgname-$pkgver.tar.xz)
- package() {
-   osinfo-db-import --root "$pkgdir" --system $pkgname-$pkgver.tar.xz
- }

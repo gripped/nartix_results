@@ -35,14 +35,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,18 @@
+@@ -1,10 +1,12 @@
  pkgname=gnome-taquin
  depends=(gtk3 librsvg gsound)
  groups=(gnome-extra)
- pkgver() {
-   cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
- }
  prepare() {
    cd $pkgname
 +  git cherry-pick -n 99dea5e7863e112f33f16e59898c56a4f1a547b3
@@ -51,10 +47,5 @@
  build() {
 -  arch-meson $pkgname build
 -  meson compile -C build
--}
--check() {
--  meson test -C build --print-errorlogs
 +  artix-meson $pkgname build
  }
- package() {
-   meson install -C build --destdir="$pkgdir"

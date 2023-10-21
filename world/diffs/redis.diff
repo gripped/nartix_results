@@ -60,19 +60,10 @@
  backup=('etc/redis/redis.conf'
          'etc/redis/sentinel.conf')
  install=redis.install
-@@ -10,7 +10,6 @@
+@@ -10,6 +10,5 @@
  }
  build() {
    make BUILD_TLS=yes \
 -       USE_SYSTEMD=yes \
         -C $pkgname-$pkgver
- }
- package() {
-@@ -18,7 +17,6 @@
-   make PREFIX="$pkgdir"/usr install
-   install -Dm644 COPYING "$pkgdir"/usr/share/licenses/redis/LICENSE
-   install -Dm644 -t "$pkgdir"/etc/redis redis.conf sentinel.conf
--  install -Dm644 -t "$pkgdir"/usr/lib/systemd/system/ ../redis.service ../redis-sentinel.service
-   install -Dm644 "$srcdir"/redis.sysusers "$pkgdir"/usr/lib/sysusers.d/redis.conf
-   install -Dm644 "$srcdir"/redis.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/redis.conf
  }

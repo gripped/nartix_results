@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
+@@ -10,6 +10,6 @@
      -D extension_set=all
      -D classic_mode=true
    )
@@ -23,4 +23,3 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

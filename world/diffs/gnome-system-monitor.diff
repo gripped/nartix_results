@@ -23,15 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,6 @@
+@@ -14,13 +14,12 @@
    libsigc++
    pango
    polkit
 -  systemd
  )
  groups=(gnome)
- pkgver() {
-@@ -25,7 +24,7 @@
+ prepare() {
    cd $pkgname
  }
  build() {
@@ -39,4 +38,3 @@
 +  artix-meson $pkgname build -Dsystemd=false
    meson compile -C build
  }
- check() {

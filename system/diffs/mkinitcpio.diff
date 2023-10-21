@@ -47,7 +47,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,17 @@
+@@ -1,6 +1,10 @@
  pkgname=mkinitcpio
  depends=('awk' 'mkinitcpio-busybox>=1.19.4-2' 'kmod' 'util-linux>=2.23' 'libarchive' 'coreutils'
 -         'bash' 'binutils' 'diffutils' 'findutils' 'grep' 'filesystem>=2011.10-1' 'zstd' 'systemd')
@@ -59,10 +59,3 @@
 +  cd "${pkgname}-${pkgver}"
 +  patch -Np1 -i ../nosystemd.patch
 +}
- check() {
-   make -C "$pkgname-$pkgver" check
- }
- package() {
-   make -C "$pkgname-$pkgver" DESTDIR="$pkgdir" install
-+  rm -f "${pkgdir}"/usr/lib/initcpio/install/sd-*
- }

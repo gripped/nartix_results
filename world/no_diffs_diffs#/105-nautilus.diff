@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,7 @@
+@@ -32,7 +32,7 @@
      -D docs=true
      -D packagekit=false
    )
@@ -23,4 +23,4 @@
 +  artix-meson nautilus build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ _pick() {

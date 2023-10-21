@@ -88,7 +88,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,32 +1,23 @@
+@@ -1,21 +1,18 @@
  pkgname=github-cli
 -depends=("glibc" "mailcap")
  prepare() {
@@ -111,10 +111,6 @@
 -    bin/gh completion -s bash | install -Dm644 /dev/stdin share/bash-completion/completions/gh
 -    bin/gh completion -s zsh | install -Dm644 /dev/stdin share/zsh/site-functions/_gh
 -    bin/gh completion -s fish | install -Dm644 /dev/stdin share/fish/vendor_completions.d/gh.fish
--}
--check(){
--    cd "cli-$pkgver"
--    make test
 +	cd "cli-$pkgver"
 +	export CGO_CFLAGS="$CFLAGS" CGO_LDFLAGS="$LDFLAGS"
 +	test ! -d bin && mkdir bin
@@ -126,14 +122,4 @@
 +		-modcacherw \
 +		-o bin/gh cmd/gh/main.go
 +	make manpages completions
- }
- package() {
--    cd "cli-$pkgver"
--    make DESTDIR="${pkgdir}" prefix="/usr" install
--    cp -r share/ "$pkgdir"/usr
--    install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
--    install -Dm644 "README.md" "$pkgdir/usr/share/doc/$pkgname/README.md"
-+	cd "cli-$pkgver"
-+	make install DESTDIR="$pkgdir" prefix="/usr"
-+	install -Dm 644 LICENSE -t "$pkgdir/usr/share/licenses/gh"
  }

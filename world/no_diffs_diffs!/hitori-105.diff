@@ -23,14 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,10 +1,11 @@
  pkgname=hitori
  depends=(gtk3)
  groups=(gnome-extra)
- pkgver() {
-   cd hitori
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -9,7 +10,7 @@
+ prepare() {
    cd hitori
  }
  build() {
@@ -38,4 +35,3 @@
 +  artix-meson hitori build
    meson compile -C build
  }
- check() {

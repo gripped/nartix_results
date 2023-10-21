@@ -58,7 +58,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,14 @@
+@@ -1,7 +1,10 @@
  pkgname=ayatana-ido
 -depends=(gtk3)
 +changelog=Changelog.txt
@@ -72,9 +72,4 @@
 -  cmake --build build
 +	cd "$pkgname-$pkgver"
 +	cmake -D CMAKE_INSTALL_PREFIX="/usr" .
- }
- package() {
--  DESTDIR="$pkgdir" cmake --install build
-+	cd "$pkgname-$pkgver"
-+	make install DESTDIR="$pkgdir"
  }

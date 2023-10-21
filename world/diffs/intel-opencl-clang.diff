@@ -54,15 +54,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,22 @@
+@@ -1,13 +1,18 @@
  _srcname=opencl-clang
  pkgname=intel-${_srcname}
 -depends=(clang llvm-libs spirv-llvm-translator)
 +depends=(clang14 llvm14-libs spirv-llvm-translator-14)
- pkgver() {
-   cd ${_srcname}
-   git describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./;s/-/+/'
- }
 +prepare() {
 +  cd ${_srcname}
 +  patch -Np1 -i ../intel-opencl-use-clang14.patch

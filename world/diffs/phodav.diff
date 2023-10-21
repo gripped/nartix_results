@@ -35,7 +35,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,9 @@
+@@ -1,12 +1,6 @@
  pkgname=phodav
 -depends=('avahi' 'glib2' 'libsoup3' 'libxml2' 'systemd')
 -backup=('etc/conf.d/spice-webdavd')
@@ -49,9 +49,4 @@
 -	arch-meson $pkgname-$pkgver build
 +	artix-meson $pkgname-$pkgver build
  	meson compile -C build
- }
- package() {
- 	meson install -C build --destdir "$pkgdir"
--	install -dm755 "$pkgdir/etc/conf.d/"
--	echo 'SPICE_WEBDAVD_EXTRA_ARGS=""' > "$pkgdir/etc/conf.d/spice-webdavd"
  }

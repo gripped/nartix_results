@@ -41,26 +41,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,8 +1,9 @@
  pkgname=rtkit
 -depends=(dbus polkit systemd)
 +depends=(dbus polkit elogind)
- pkgver() {
-   cd rtkit
-   git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
-@@ -8,13 +9,14 @@
+ prepare() {
    cd rtkit
  }
  build() {
 -  arch-meson rtkit build -D installed_tests=false
 +  artix-meson rtkit build -D installed_tests=false
  }
- check() {
-   meson test -C build --print-errorlogs
- }
- package() {
-   meson install -C build --destdir "$pkgdir"
-+  rm -r "$pkgdir"/usr/lib/systemd
-   echo 'u rtkit 133 "RealtimeKit" /proc' |
-     install -Dm644 /dev/stdin "$pkgdir/usr/lib/sysusers.d/rtkit.conf"
-   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 rtkit/LICENSE

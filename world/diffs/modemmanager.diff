@@ -53,9 +53,9 @@
    ppp
 -  systemd
  )
- pkgver() {
+ prepare() {
    cd ModemManager
-@@ -24,10 +23,13 @@
+@@ -20,10 +19,13 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
@@ -70,7 +70,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -46,7 +48,7 @@
+@@ -42,7 +44,7 @@
      libmbim-glib.so
      libmm-glib.so
      libqmi-glib.so

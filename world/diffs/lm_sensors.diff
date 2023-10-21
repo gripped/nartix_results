@@ -50,27 +50,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,10 @@
+@@ -1,12 +1,7 @@
  pkgname=lm_sensors
 -depends=('bash' 'glibc')
  provides=('libsensors.so')
  backup=('etc/sensors3.conf' 'etc/healthd.conf' 'etc/conf.d/sensord')
- pkgver() {
-   cd "${srcdir}"/lm-sensors*
-   git describe --long --tags | sed 's/V//;s/\([^-]*-g\)/r\1/;s/-/./g'
--}
 -prepare() {
 -  cd "${srcdir}"/lm-sensors*
 -  sed -i 's|/etc/sysconfig|/etc/conf.d|' prog/{detect/sensors-detect,init/{sensord,lm_sensors}.service}
 -  sed -i 's/EnvironmentFile=/EnvironmentFile=-/' prog/init/lm_sensors.service
- }
+-}
  build() {
    cd "${srcdir}"/lm-sensors*
-@@ -21,7 +16,4 @@
-     PREFIX=/usr SBINDIR=/usr/bin MANDIR=/usr/share/man DESTDIR="${pkgdir}" install
-   install -D -m755 "${srcdir}/healthd" "${pkgdir}/usr/bin/healthd"
-   install -D -m644 "${srcdir}/healthd.conf" "${pkgdir}/etc/healthd.conf"
--  install -D -m644 "${srcdir}/sensord.conf" "${pkgdir}/etc/conf.d/sensord"
--  install -D -m644 "${srcdir}/healthd.service" "${pkgdir}/usr/lib/systemd/system/healthd.service"
--  install -D -m644 prog/init/*.service "${pkgdir}/usr/lib/systemd/system/"
- }
+   make PREFIX=/usr

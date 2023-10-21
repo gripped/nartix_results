@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -3,6 +3,6 @@
  depends=('dconf' 'gcc-libs' 'glib2' 'glibc' 'gtk3' 'hicolor-icon-theme' 'libcanberra' 'libgudev'
           'libgusb' 'polkit' 'udisks2')
  build() {
@@ -23,4 +23,3 @@
 +  artix-meson $pkgname-$pkgver build
    meson compile -C build
  }
- package() {

@@ -18,7 +18,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,9 +8,8 @@
+@@ -8,7 +8,6 @@
  build() {
    cd shairport-sync-$pkgver
    autoreconf -i -f
@@ -27,5 +27,3 @@
    make
 -  sed 's|/usr/local/bin/|/usr/bin/|' -i scripts/shairport-sync.service.in
  }
- package() {
-   cd shairport-sync-$pkgver

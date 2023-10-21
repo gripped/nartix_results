@@ -59,7 +59,7 @@
  build() {
    local _meson_options=(
      --auto-features auto
-@@ -21,7 +29,7 @@
+@@ -21,6 +29,6 @@
      -Ddvdnav=enabled
      -Dlibarchive=enabled
    )
@@ -67,4 +67,3 @@
 +  artix-meson "${pkgname}" build "${_meson_options[@]}"
    meson compile -C build
  }
- check() {

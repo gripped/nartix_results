@@ -106,7 +106,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -94,7 +94,7 @@
+@@ -91,7 +91,7 @@
            'etc/my.cnf.d/spider.cnf'
            'etc/security/user_map.conf')
    install=mariadb.install
@@ -115,7 +115,7 @@
     computation engine'
                'perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission'
                'python-mysqlclient: for myrocks_hotbackup'
-@@ -105,6 +105,8 @@
+@@ -102,6 +102,8 @@
    cd build
    make DESTDIR="$pkgdir" install
    cd "$pkgdir"
@@ -124,7 +124,7 @@
    rm -r etc/logrotate.d
    rm usr/bin/rcmysql
    rm usr/share/mysql/{binary-configure,mysql{,d_multi}.server}
-@@ -114,8 +116,6 @@
+@@ -111,8 +113,6 @@
    install -d {etc,usr/lib}/security
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/

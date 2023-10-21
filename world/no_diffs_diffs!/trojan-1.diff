@@ -1,0 +1,9 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,4 +30,6 @@
+ package() {
+   cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
++
++  rm -rf "$pkgdir"/usr/lib
+ }

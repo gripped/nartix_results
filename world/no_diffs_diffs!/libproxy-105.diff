@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
+@@ -14,7 +14,7 @@
  build() {
    local meson_options=(
    )
@@ -23,4 +23,4 @@
 +  artix-meson libproxy build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ package_libproxy-docs() {

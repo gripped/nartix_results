@@ -34,7 +34,7 @@
           'mesa' 'libegl' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
           'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
           'gstreamer' 'gst-plugins-base-libs')
-@@ -17,8 +17,8 @@
+@@ -17,7 +17,7 @@
    done
  }
  build() {
@@ -44,4 +44,3 @@
 +    --libexec=lib/weston -D b_lto=false -Dsystemd=false
    ninja -C build
  }
- package() {

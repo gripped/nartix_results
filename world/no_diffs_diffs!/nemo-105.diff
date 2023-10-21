@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -6,6 +6,6 @@
    sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
  }
  build() {
@@ -23,4 +23,3 @@
 +  artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
    samu -C build
  }
- package() {

@@ -40,7 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,14 @@
+@@ -1,14 +1,13 @@
  pkgname=fcgiwrap
 -depends=('fcgi' 'systemd')
 +depends=('fcgi')
@@ -57,4 +57,3 @@
 +  ./configure --prefix=/usr --mandir=/share/man --sbindir=/bin
    make
  }
- package() {

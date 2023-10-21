@@ -19,7 +19,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=libesmtp
  depends=('openssl')
  build() {
@@ -27,4 +27,3 @@
 +  artix-meson build libESMTP-${pkgver}
    meson compile -C build
  }
- package() {

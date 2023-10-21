@@ -27,6 +27,6 @@
  pkgname=clutter
 -depends=(gtk3 cogl libinput)
 +depends=(gtk3 cogl libinput json-glib)
- pkgver() {
+ prepare() {
    cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+   NOCONFIGURE=1 ./autogen.sh

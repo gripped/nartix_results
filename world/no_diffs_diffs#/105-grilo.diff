@@ -23,14 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
+@@ -6,10 +6,11 @@
    totem-pl-parser
  )
  provides=(libgr{ilo,lnet,lpls}-0.3.so)
- pkgver() {
-   cd grilo
-   git describe --tags | sed 's/^grilo-//;s/[^-]*-g/r&/;s/-/+/g'
-@@ -14,7 +15,7 @@
+ prepare() {
    cd grilo
  }
  build() {
@@ -38,4 +35,3 @@
 +  artix-meson grilo build
    meson compile -C build
  }
- check() {

@@ -43,7 +43,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,12 +10,10 @@
+@@ -10,7 +10,6 @@
      --prefix=/usr \
      --sbindir=/usr/bin \
      --with-jobdir=/var/spool/atd \
@@ -51,9 +51,4 @@
 -    --with-systemdsystemunitdir=/usr/lib/systemd/system
 +    --with-atspool=/var/spool/atd
    CFLAGS="$CFLAGS -w" make
- }
- package() {
-   make -C "$pkgname-$pkgver" IROOT="$pkgdir" docdir=/usr/share/doc install
-   install -D -m0644 pam.conf "$pkgdir"/etc/pam.d/atd
--  install -D -m0644 80-atd.hook "$pkgdir"/usr/share/libalpm/hooks/80-atd.hook
  }

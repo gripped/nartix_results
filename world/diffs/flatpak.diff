@@ -55,7 +55,7 @@
    xdg-dbus-proxy
    xdg-utils
  )
-@@ -41,8 +40,9 @@
+@@ -37,8 +36,9 @@
      -D selinux_module=disabled
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
@@ -65,4 +65,4 @@
 +  artix-meson flatpak build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ _pick() {

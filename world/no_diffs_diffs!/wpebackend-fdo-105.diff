@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
+@@ -10,6 +10,6 @@
    cd WPEBackend-fdo
  }
  build() {
@@ -23,4 +23,3 @@
 +  artix-meson WPEBackend-fdo build
    meson compile -C build
  }
- check() {

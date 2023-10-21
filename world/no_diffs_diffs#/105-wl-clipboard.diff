@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=wl-clipboard
  depends=('wayland')
  build() {
@@ -23,4 +23,3 @@
 +    artix-meson "$pkgname-$pkgver" build
      ninja -C build
  }
- package() {

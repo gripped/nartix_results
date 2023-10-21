@@ -23,13 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,10 +1,11 @@
  pkgbase=colord-gtk
  pkgname=(colord-gtk-common colord-gtk colord-gtk4)
- pkgver() {
-   cd $pkgbase
-   git describe --tags | sed 's/^COLORD_GTK_//;s/_/./g;s/[^-]*-g/r&/;s/-/+/g'
-@@ -8,7 +9,7 @@
+ prepare() {
    cd $pkgbase
  }
  build() {

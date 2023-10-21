@@ -82,23 +82,3 @@
    )
    cd $_name-$pkgver
    ./configure "${configure_options[@]}"
-@@ -51,7 +51,6 @@
-     libusb libusb-1.0.so
-     libxml2 libxml2.so
-     poppler-glib libpoppler-glib.so
--    systemd-libs libsystemd.so
-   )
-   cd $_name-$pkgver
-   make DESTDIR="$pkgdir" install
-@@ -62,10 +61,8 @@
-   tools/sane-desc -m hwdb -s doc/descriptions/ > "$pkgdir/usr/lib/udev/hwdb.d/20-$pkgname.hwdb"
-   printf "\n" >> "$pkgdir/usr/lib/udev/hwdb.d/20-$pkgname.hwdb"
-   tools/sane-desc -m hwdb -s doc/descriptions-external/ >> "$pkgdir/usr/lib/udev/hwdb.d/20-$pkgname.hwdb"
--  install -vDm 644 ../${pkgname}d.socket -t "$pkgdir/usr/lib/systemd/system/"
--  install -vDm 644 ../${pkgname}d.service "$pkgdir/usr/lib/systemd/system/${pkgname}d@.service"
--  install -vDm 644 ../66-${pkgname}d.rules "$pkgdir/usr/lib/udev/rules.d/"
-   install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
-+  install -D -m644 "${srcdir}/sane.xinetd" "${pkgdir}/etc/xinetd.d/sane"
-   rm -rvf "$pkgdir/usr/share/doc/$pkgname/ChangeLogs/"
-   cd "$pkgdir"
-   [[ /usr/bin/true ]] && backup=( ${backup[@]} $(find "etc/${pkgname}.d/" -type f | sort) )

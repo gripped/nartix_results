@@ -51,7 +51,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,20 @@
+@@ -1,13 +1,12 @@
  _gemname='faraday-patron'
  pkgname="ruby-${_gemname}"
 -_archive
@@ -67,13 +67,3 @@
 +  cd "${srcdir}/${_gemname}-${pkgver}"
    gem build "${_gemname}.gemspec"
  }
- check() {
--  cd "${srcdir}/${_gemname}-${_archivepkgver}"
-+  cd "${srcdir}/${_gemname}-${pkgver}"
- }
- package() {
--cd "${srcdir}/${_gemname}-${_archivepkgver}"
-+cd "${srcdir}/${_gemname}-${pkgver}"
-   local _gemdir="$(gem env gemdir)"
-   gem install --verbose --ignore-dependencies --no-user-install --install-dir "${pkgdir}/${_gemdir}" --bindir "${pkgdir}/usr/bin" "${_gemname}-${pkgver}.gem"
-   install -Dm 644 LICENSE.md -t "${pkgdir}/usr/share/licenses/${pkgname}/"

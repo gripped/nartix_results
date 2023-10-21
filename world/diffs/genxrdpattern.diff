@@ -17,7 +17,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,9 +11,7 @@
+@@ -11,8 +11,6 @@
    cd objcryst/Fox
    make Fox-nogui shared=0 -j1
    cd "$srcdir"
@@ -27,4 +27,3 @@
 +  artix-cmake -B build -S genXrdPattern-$pkgver-linux -DCMAKE_INSTALL_PREFIX=/usr -DObjCryst_ROOT="$srcdir"/objcryst
    cmake --build build
  }
- package() {

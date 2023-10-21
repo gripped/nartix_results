@@ -62,7 +62,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,18 @@
+@@ -1,11 +1,14 @@
  pkgname=torsocks
 -depends=('tor')
 -backup=("etc/tor/${pkgname}.conf")
@@ -84,10 +84,4 @@
 +		--mandir=/usr/share/man \
 +		--localstatedir=/var
 +	make
- }
- package() {
--  cd ${pkgname}-v${pkgver}
--  make DESTDIR="${pkgdir}" install
-+	cd $pkgname-v$pkgver
-+	make DESTDIR="$pkgdir" install
  }

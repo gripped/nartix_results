@@ -51,7 +51,7 @@
    polkit
  )
  provides=(libpolkit-gobject-1.so)
-@@ -19,13 +19,14 @@
+@@ -15,12 +15,13 @@
      -D introspection=false
      -D libs-only=true
      -D os_type=redhat
@@ -66,12 +66,4 @@
 -  arch-meson polkit build "${meson_options[@]}"
 +  artix-meson polkit build "${meson_options[@]}"
    meson compile -C build
- }
- check() {
-@@ -33,5 +34,5 @@
- }
- package() {
-   meson install -C build --destdir "$pkgdir"
--  rm -r "$pkgdir"/{etc,usr/{include,lib,share}}
-+  rm -r "$pkgdir"/{etc,usr/{include,share}}
  }

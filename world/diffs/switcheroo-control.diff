@@ -33,7 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,8 +12,9 @@
+@@ -8,7 +8,8 @@
    local meson_options=(
      -D gtk_doc=true
      -D tests=true
@@ -42,11 +42,4 @@
 -  arch-meson $pkgname build "${meson_options[@]}"
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
- }
- check() {
-@@ -21,4 +22,5 @@
- }
- package() {
-   meson install -C build --destdir "$pkgdir"
-+  rm -r "$pkgdir"/usr/lib/systemd
  }

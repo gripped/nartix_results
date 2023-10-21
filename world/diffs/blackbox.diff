@@ -47,10 +47,3 @@
    sed -e '/AC_DISABLE_SHARED/d' -i configure.ac # Build shared library
    ./autogen.sh
  }
-@@ -14,6 +13,5 @@
- package() {
-   cd blackboxwm-$pkgver
-   make DESTDIR="$pkgdir" install
--  install -D -m644 ../blackbox.desktop "$pkgdir"/usr/share/xsessions/blackbox.desktop
-   install -D -m644 COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
- }

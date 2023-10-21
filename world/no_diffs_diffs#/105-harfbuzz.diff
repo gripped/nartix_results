@@ -33,7 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -15,7 +15,7 @@
    )
    CFLAGS="${CFLAGS/-fexceptions/}"
    CXXFLAGS="${CXXFLAGS/-fexceptions/}"
@@ -41,4 +41,4 @@
 +  artix-meson harfbuzz build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ _pick() {

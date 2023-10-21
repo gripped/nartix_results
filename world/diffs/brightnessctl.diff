@@ -40,7 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
+@@ -1,6 +1,6 @@
  pkgname=brightnessctl
 -depends=('systemd-libs')
 +depends=('udev')
@@ -48,11 +48,4 @@
  build() {
    cd "${pkgname}-${pkgver}"
 -  make ENABLE_SYSTEMD=1
- }
- package() {
-   cd "${pkgname}-${pkgver}"
--  make ENABLE_SYSTEMD=1 DESTDIR="$pkgdir" install
-+  make UDEVDIR="/usr/lib/udev/rules.d" INSTALL_UDEV_RULES=1 DESTDIR="$pkgdir" install
-   mkdir -p "${pkgdir}/usr/share/licenses/${pkgname}"
-   install -m 0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/"
  }

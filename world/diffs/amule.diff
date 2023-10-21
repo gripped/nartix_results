@@ -41,7 +41,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,14 +21,13 @@
+@@ -21,6 +21,7 @@
      -DBUILD_WEBSERVER=ON \
      -DBUILD_WXCAS=ON \
      -DBUILD_FILEVIEW=ON \
@@ -49,11 +49,3 @@
      -DENABLE_IP2COUNTRY=ON \
      -DENABLE_NLS=ON
    cmake --build build
- }
- package() {
-   DESTDIR="$pkgdir" cmake --install build
--  install -Dm644 "$srcdir"/amuled.systemd "$pkgdir"/usr/lib/systemd/system/amuled.service
--  install -Dm644 "$srcdir"/amuleweb.systemd "$pkgdir"/usr/lib/systemd/system/amuleweb.service
-   install -Dm644 "$srcdir"/amule.sysusers "$pkgdir"/usr/lib/sysusers.d/amule.conf
-   install -Dm644 "$srcdir"/amule.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/amule.conf
- }

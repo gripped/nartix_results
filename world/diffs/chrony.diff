@@ -28,7 +28,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,8 +22,7 @@
+@@ -22,7 +22,6 @@
      --with-user=chrony \
      --with-sendmail=/usr/bin/sendmail \
      --with-hwclockfile=/etc/adjtime \
@@ -37,16 +37,3 @@
 +    --sbindir=/usr/bin
    make
  }
- check() {
-@@ -35,11 +34,9 @@
-   make DESTDIR="${pkgdir}" install install-docs
-   install -Dm 644 "${srcdir}/chrony.sysusers" "${pkgdir}/usr/lib/sysusers.d/chrony.conf"
-   install -Dm 644 "${srcdir}/chrony.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/chrony.conf"
--  install -Dm 644 examples/{chronyd,chrony-wait}.service -t "${pkgdir}/usr/lib/systemd/system"
-   install -Dm 644 examples/chrony.logrotate "${pkgdir}/etc/logrotate.d/chrony"
-   install -Dm 644 README NEWS FAQ -t "${pkgdir}/usr/share/doc/${pkgname}"
-   install -Dm 644 examples/* -t "${pkgdir}/usr/share/doc/${pkgname}/examples"
--  echo "chronyd.service" | install -Dm 644 /dev/stdin "${pkgdir}/usr/lib/systemd/ntp-units.d/chrony.list"
-   install -Dm 644 examples/chrony.conf.example3 "${pkgdir}/etc/chrony.conf"
-   sed -i \
-     -e '/^! pool /s/^! //' \

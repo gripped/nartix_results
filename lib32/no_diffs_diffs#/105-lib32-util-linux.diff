@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -19,6 +19,6 @@
      -Dncurses=disabled
      -Dncursesw=enabled
    )
@@ -23,4 +23,3 @@
 +  artix-meson "${_pkgbasename}" build "${_meson_options[@]}"
    meson compile -C build
  }
- package() {

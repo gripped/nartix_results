@@ -37,7 +37,7 @@
    usbmuxd
  )
  backup=(etc/UPower/UPower.conf)
-@@ -14,11 +13,11 @@
+@@ -10,6 +9,6 @@
    cd upower
  }
  build() {
@@ -45,9 +45,3 @@
 +  artix-meson -D systemdsystemunitdir=no upower build
    meson compile -C build
  }
- check() {
--  meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs || :
- }
- package() {
-   depends+=(libg{lib,object,io}-2.0.so)

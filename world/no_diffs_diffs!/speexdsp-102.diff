@@ -18,6 +18,6 @@
  pkgname=speexdsp
  depends=(gcc-libs)
  provides=(libspeexdsp.so)
- pkgver() {
+ prepare() {
    cd speexdsp
-   git describe --tags | sed 's/^SpeexDSP-//;s/[^-]*-g/r&/;s/-/+/g'
+   ./autogen.sh

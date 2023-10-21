@@ -51,11 +51,3 @@
  }
  build() {
    cd "$srcdir/$pkgname-$pkgver"
-@@ -62,7 +62,5 @@
-   _make -C contrib/mw-to-git DESTDIR="$pkgdir" install
-   find contrib/ -name '.gitignore' -delete
-   cp -a ./contrib/* "$pkgdir"/usr/share/git/
--  install -D -m 0644 "$srcdir"/git-daemon@.service "$pkgdir"/usr/lib/systemd/system/git-daemon@.service
--  install -D -m 0644 "$srcdir"/git-daemon.socket "$pkgdir"/usr/lib/systemd/system/git-daemon.socket
-   install -D -m 0644 "$srcdir"/git-sysusers.conf "$pkgdir"/usr/lib/sysusers.d/git.conf
- }

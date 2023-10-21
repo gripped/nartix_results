@@ -23,13 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
+@@ -1,9 +1,10 @@
  pkgname=gnome-screenshot
  depends=(gtk3 libhandy)
- pkgver() {
-   cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -8,7 +9,7 @@
+ prepare() {
    cd $pkgname
  }
  build() {
@@ -37,4 +34,3 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
- check() {

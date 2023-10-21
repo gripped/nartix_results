@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,9 +10,11 @@
+ makedepends=('git')
+ backup=('etc/minidlna.conf')
+ source=("minidlna::git+https://git.code.sf.net/p/minidlna/git#tag=v${pkgver//./_}"
+-	minidlna.service)
++	minidlna.tmpfiles
++	minidlna.sysusers)
+ sha512sums=('SKIP'
+-            'fc5692adf537e203a0466a923d350498faba4f29a219bb6e1ad527fc267d6143403fe8b4c6f5d746805f451142b1ba3ed4e9bb57e445255f3769df8e037a8b66')
++            'c58631c20416997c538be6258ef9c13b9304d5906b19f063157df70f672b7153b452ffb9612be267a90942bd880af8d665ebe3c53a2926ffa99acc943d875d97'
++            'e3e6c46faac768b283134a47013b77c4152840c61d3503f51fbe154bf25fe8a0e585ed9a40950212254b4a844b007f674875e4d25f55af51914694213fecc420')
+ 
+ prepare() {
+   cd "$srcdir/$pkgname"
+@@ -35,7 +37,8 @@
+   cd "$srcdir/$pkgname"
+   DESTDIR="$pkgdir" make install
+   install -Dm644 minidlna.conf "$pkgdir"/etc/minidlna.conf
+-  install -Dm0644 "$srcdir"/minidlna.service "$pkgdir"/usr/lib/systemd/system/minidlna.service
++  install -Dm0644 "$srcdir"/minidlna.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/minidlna.conf
++  install -Dm0644 "$srcdir"/minidlna.sysusers "$pkgdir"/usr/lib/sysusers.d/minidlna.conf
+   install -Dm644 "$srcdir"/$pkgname/minidlna.conf.5 "$pkgdir"/usr/share/man/man5/minidlna.conf.5
+   install -Dm644 "$srcdir"/$pkgname/minidlnad.8 "$pkgdir"/usr/share/man/man8/minidlnad.8
+ }

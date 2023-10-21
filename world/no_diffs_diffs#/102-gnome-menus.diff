@@ -18,6 +18,6 @@
  groups=(gnome)
  depends=(glib2)
  provides=(libgnome-menu-3.so)
- pkgver() {
+ prepare() {
    cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+   NOCONFIGURE=1 ./autogen.sh

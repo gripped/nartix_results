@@ -45,15 +45,6 @@
 -install=xdg-user-dirs.install
 -options=!emptydirs
 +options=!emptydirs
- pkgver() {
+ prepare() {
    cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -18,7 +17,6 @@
- }
- package() {
-   cd $pkgname
-+  install -Dm755 "${srcdir}"/90-xdg-user-dirs "${pkgdir}"/etc/X11/xinit/xinitrc.d/90-xdg-user-dirs.sh
-   make DESTDIR="$pkgdir" install
--  rm "$pkgdir/etc/xdg/autostart/xdg-user-dirs.desktop"
--  install -Dt "$pkgdir/usr/lib/systemd/user" -m644 ../xdg-user-dirs-update.service
- }
+   NOCONFIGURE=1 ./autogen.sh

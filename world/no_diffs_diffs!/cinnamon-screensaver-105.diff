@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -3,6 +3,6 @@
           python-cairo python-gobject python-setproctitle python-xapp xapp xdotool)
  backup=(etc/pam.d/cinnamon-screensaver)
  build() {
@@ -23,4 +23,3 @@
 +  artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
    samu -C build
  }
- package() {

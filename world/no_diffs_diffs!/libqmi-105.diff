@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,7 @@
+@@ -12,6 +12,6 @@
    local meson_options=(
      -D gtk_doc=true
    )
@@ -23,4 +23,3 @@
 +  artix-meson libqmi build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

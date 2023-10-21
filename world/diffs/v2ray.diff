@@ -31,12 +31,3 @@
  }
  build() {
    cd v2ray-core
-@@ -20,8 +19,6 @@
- package() {
-   cd v2ray-core
-   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/v2ray/
--  install -Dm644 release/config/systemd/system/v2ray.service -t "$pkgdir"/usr/lib/systemd/system/
--  install -Dm644 release/config/systemd/system/v2ray@.service -t "$pkgdir"/usr/lib/systemd/system/
-   install -Dm644 release/config/*.json -t "$pkgdir"/etc/v2ray/
-   install -Dm755 v2ray -t "$pkgdir"/usr/bin/
- }

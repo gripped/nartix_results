@@ -49,12 +49,3 @@
          'etc/openfire/security.xml'
          'etc/openfire/crowd.properties'
          'etc/openfire/security/truststore'
-@@ -17,8 +16,6 @@
-   install -dm750 etc/openfire
-   cd "$srcdir"
-   install -Dm0755 openfire.sh "$pkgdir"/usr/bin/openfire
--  install -Dm0644 openfire.conf "$pkgdir"/etc/conf.d/openfire
--  install -Dm0644 openfire.service "$pkgdir"/usr/lib/systemd/system/openfire.service
-   install -Dm0644 user.conf "$pkgdir"/usr/lib/sysusers.d/openfire.conf
-   install -Dm0644 tmpfile.conf "$pkgdir"/usr/lib/tmpfiles.d/openfire.conf
-   cd Openfire-$pkgver/distribution/target/distribution-base

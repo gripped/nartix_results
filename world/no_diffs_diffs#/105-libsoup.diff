@@ -27,10 +27,10 @@
    libxml2
    sqlite
  )
- pkgver() {
+ prepare() {
    cd libsoup
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -22,7 +23,7 @@
+   git apply -3 ../disable-flaky-test.diff
+@@ -18,7 +19,7 @@
    local meson_options=(
      -D gtk_doc=true
    )
@@ -38,4 +38,4 @@
 +  artix-meson libsoup build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ package_libsoup() {

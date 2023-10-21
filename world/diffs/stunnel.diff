@@ -63,21 +63,11 @@
  prepare() {
    cd "$pkgname-$pkgver"
    patch -p0 <"$srcdir/Makefile.patch"
-@@ -14,14 +14,14 @@
+@@ -14,6 +14,7 @@
      --sysconfdir=/etc \
      --localstatedir=/var \
      --enable-ipv6 \
 +    --disable-systemd \
      --disable-libwrap
    make
- }
- package() {
-   cd "$pkgname-$pkgver"
-   make DESTDIR="$pkgdir" install
--  install -vDm644 tools/stunnel.service "$pkgdir/usr/lib/systemd/system/stunnel.service"
--  install -vDm644 "$srcdir/sysusers.conf" "$pkgdir/usr/lib/sysusers.d/stunnel.conf"
--  install -vDm644 "$srcdir/tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/stunnel.conf"
-+  install -Dm644 "$srcdir/sysusers.conf" "$pkgdir/usr/lib/sysusers.d/stunnel.conf"
-+  install -Dm644 "$srcdir/tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/stunnel.conf"
-   install -vDm644 tools/stunnel.bash -t "$pkgdir/usr/share/bash-completion/completions"
  }

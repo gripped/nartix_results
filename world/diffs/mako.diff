@@ -40,7 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,23 +2,22 @@
+@@ -2,18 +2,18 @@
  depends=(
  	"gdk-pixbuf2"
  	"pango"
@@ -61,9 +61,4 @@
 +		-Dsd-bus-provider=libelogind \
  		"$pkgname-$pkgver" build
  	ninja -C build
- }
- package() {
- 	DESTDIR="$pkgdir" ninja -C build install
- 	install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" "$pkgname-$pkgver/LICENSE"
--	install -Dm644 -t "$pkgdir/usr/lib/systemd/user/" "$pkgname-$pkgver/contrib/systemd/mako.service"
  }

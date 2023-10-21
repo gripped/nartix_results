@@ -32,7 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,7 @@
+@@ -2,8 +2,6 @@
  depends=('glib2' 'glibc' 'libxau')
  build() {
    cd $pkgname-$pkgver
@@ -42,4 +42,3 @@
 +  ./configure --prefix=/usr --libexecdir=/usr/lib/$pkgname
    make
  }
- package() {

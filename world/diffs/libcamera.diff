@@ -41,8 +41,8 @@
 +  artix-meson $pkgbase build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
-@@ -41,8 +41,8 @@
+ package_libcamera() {
+@@ -38,8 +38,8 @@
      libelf
      libunwind
      libyaml

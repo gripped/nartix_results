@@ -33,7 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,15 +36,13 @@
+@@ -31,15 +31,13 @@
    (cd $srcdir/$pkgbase-$pkgver/build; DESTDIR="$pkgdir" ninja $1/install)
  }
  package_transmission-cli() {

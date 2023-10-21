@@ -15,12 +15,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
- }
+@@ -6,6 +6,6 @@
+ )
+ groups=(gnome)
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build
    meson compile -C build
  }
- check() {

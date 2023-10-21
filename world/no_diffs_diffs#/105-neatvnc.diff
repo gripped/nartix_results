@@ -34,9 +34,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,7 @@
-   git describe --tags | sed 's/^v//'
- }
+@@ -12,7 +12,7 @@
+ )
+ provides=(libneatvnc.so)
  build() {
 -  arch-meson neatvnc build \
 +  artix-meson neatvnc build \

@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=jose
  depends=('jansson' 'openssl' 'zlib')
- pkgver() {
+ build() {
  	cd "$pkgname"
- 	git describe --tags | sed 's/^v//;s/\([^-]*-\)g/r\1/;s/-/./g'
+ 	meson --prefix=/usr --buildtype=plain build

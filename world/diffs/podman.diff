@@ -40,7 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -5,7 +5,7 @@
    patch -Np1 -d $pkgname -i ../$pkgname-4.6.0-defaultinitpath.patch
  }
  build() {
@@ -49,7 +49,7 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -34,6 +34,7 @@
+@@ -30,6 +30,7 @@
      slirp4netns
    )
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -57,7 +57,7 @@
  }
  package_podman-docker() {
    depends=(
-@@ -43,4 +44,5 @@
+@@ -39,4 +40,5 @@
    conflicts=(docker)
    provides=(docker)
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase

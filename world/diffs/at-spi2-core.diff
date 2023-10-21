@@ -41,8 +41,8 @@
 +  libelogind
    xorg-xprop
  )
- pkgver() {
-@@ -25,7 +25,7 @@
+ prepare() {
+@@ -21,7 +21,7 @@
      -D default_bus=dbus-broker
      -D docs=true
    )
@@ -50,8 +50,8 @@
 +  artix-meson at-spi2-core build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
-@@ -48,6 +48,7 @@
+ package_at-spi2-core() {
+@@ -41,6 +41,7 @@
      'atk<=2.38.0-2'
    )
    meson install -C build --destdir "$pkgdir"

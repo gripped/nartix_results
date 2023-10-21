@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -6,7 +6,7 @@
    cd pangomm
  }
  build() {
@@ -23,4 +23,4 @@
 +  artix-meson pangomm build -D maintainer-mode=true
    meson compile -C build
  }
- check() {
+ package_pangomm-2.48() {

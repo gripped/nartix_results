@@ -31,7 +31,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -3,6 +3,6 @@
  install=pkgfile.install
  build() {
    cd "$pkgname"
@@ -39,4 +39,3 @@
 +  arch-meson -D systemd_units=false build
    ninja -v -C build
  }
- package() {

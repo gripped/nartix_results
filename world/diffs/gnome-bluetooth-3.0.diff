@@ -31,7 +31,7 @@
    upower
  )
  provides=(libgnome-bluetooth{,-ui}-3.0.so)
-@@ -21,7 +20,7 @@
+@@ -17,6 +16,6 @@
    local meson_options=(
      -D gtk_doc=true
    )
@@ -39,4 +39,3 @@
 +  artix-meson gnome-bluetooth build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

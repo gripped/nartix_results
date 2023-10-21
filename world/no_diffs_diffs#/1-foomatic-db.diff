@@ -1,0 +1,12 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,9 +17,6 @@
+ sha256sums=('SKIP'
+             'SKIP')
+ 
+-pkgver() {
+-  date +%Y%m%d
+-}
+ 
+ prepare(){
+   cp -a foomatic-db foomatic-db-ppds

@@ -40,10 +40,10 @@
  )
 -groups=(gnome-extra)
 +groups=(gnome)
- pkgver() {
+ prepare() {
    cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -29,7 +30,7 @@
+   git submodule init
+@@ -25,6 +26,6 @@
    local meson_options=(
      -D manuals=true
    )
@@ -51,4 +51,3 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
- package() {

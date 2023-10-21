@@ -36,7 +36,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,17 @@
+@@ -1,11 +1,12 @@
  pkgname=chromium-bsu
  depends=('freeglut' 'glu' 'sdl_image' 'openal' 'freealut' 'ftgl' 'fontconfig')
 +options=!lto
@@ -51,12 +51,4 @@
 +  cd $srcdir/$pkgname-$pkgver
    ./configure --prefix=/usr
    make LDFLAGS=${LDFLAGS}
- }
- package() {
--  cd "$srcdir"/$pkgname-$pkgver
--  make DESTDIR="$pkgdir" install
--  install -Dm644 COPYING "$pkgdir"/usr/share/licenses/chromium-bsu/LICENSE
-+  cd $srcdir/$pkgname-$pkgver
-+  make DESTDIR=$pkgdir install
-+  install -Dm644 COPYING $pkgdir/usr/share/licenses/chromium-bsu/LICENSE
  }

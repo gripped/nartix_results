@@ -80,24 +80,3 @@
  options=('!emptydirs')
  install=inetutils.install
  build() {
-@@ -49,16 +51,11 @@
-   cd ${pkgname}-${pkgver}
-   make DESTDIR="${pkgdir}" install
-   chmod -s "${pkgdir}"/usr/bin/{rcp,rlogin,rsh}
-+  install -D -m644 "${srcdir}/telnet.xinetd" "${pkgdir}/etc/xinetd.d/telnet"
-+  install -D -m644 "${srcdir}/talk.xinetd" "${pkgdir}/etc/xinetd.d/talk"
-+  install -D -m644 "${srcdir}/rlogin.xinetd" "${pkgdir}/etc/xinetd.d/rlogin"
-+  install -D -m644 "${srcdir}/rsh.xinetd" "${pkgdir}/etc/xinetd.d/rsh"
-   install -D -m644 "${srcdir}/rlogin.pam" "${pkgdir}/etc/pam.d/rlogin"
-   install -D -m644 "${srcdir}/rsh.pam" "${pkgdir}/etc/pam.d/rsh"
--  install -D -m644 "${srcdir}/ftpd.service" "${pkgdir}/usr/lib/systemd/system/ftpd.service"
--  install -D -m644 "${srcdir}/rlogin@.service" "${pkgdir}/usr/lib/systemd/system/rlogin@.service"
--  install -D -m644 "${srcdir}/rlogin.socket" "${pkgdir}/usr/lib/systemd/system/rlogin.socket"
--  install -D -m644 "${srcdir}/rsh@.service" "${pkgdir}/usr/lib/systemd/system/rsh@.service"
--  install -D -m644 "${srcdir}/rsh.socket" "${pkgdir}/usr/lib/systemd/system/rsh.socket"
--  install -D -m644 "${srcdir}/talk.service" "${pkgdir}/usr/lib/systemd/system/talk.service"
--  install -D -m644 "${srcdir}/talk.socket" "${pkgdir}/usr/lib/systemd/system/talk.socket"
--  install -D -m644 "${srcdir}/telnet@.service" "${pkgdir}/usr/lib/systemd/system/telnet@.service"
--  install -D -m644 "${srcdir}/telnet.socket" "${pkgdir}/usr/lib/systemd/system/telnet.socket"
-   install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
- }

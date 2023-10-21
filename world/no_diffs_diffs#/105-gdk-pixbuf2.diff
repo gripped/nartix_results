@@ -23,14 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,11 +1,12 @@
  pkgbase=gdk-pixbuf2
  pkgname=(gdk-pixbuf2 gdk-pixbuf2-docs)
  depends=(glib2 libpng libtiff libjpeg shared-mime-info)
- pkgver() {
-   cd gdk-pixbuf
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -9,7 +10,7 @@
+ prepare() {
    cd gdk-pixbuf
  }
  build() {

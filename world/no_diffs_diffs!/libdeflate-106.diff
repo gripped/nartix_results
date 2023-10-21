@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   git describe --tags | sed 's/^v//'
- }
+@@ -2,7 +2,7 @@
+ depends=(glibc)
+ provides=(libdeflate.so)
  build() {
 -  cmake -S libdeflate -B build -G Ninja \
 +  artix-cmake -S libdeflate -B build -G Ninja \

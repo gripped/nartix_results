@@ -27,7 +27,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,10 +1,10 @@
  pkgname=ndctl
 -depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'systemd-libs'
 +depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'libudev'
@@ -40,4 +40,3 @@
 +  artix-meson $pkgname-$pkgver build -Dsystemd=disabled
    meson compile -C build
  }
- check() {

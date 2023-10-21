@@ -23,14 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,6 +10,7 @@
+@@ -10,10 +10,11 @@
    zip
  )
  groups=(gnome-extra)
- pkgver() {
-   cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -18,7 +19,7 @@
+ prepare() {
    cd $pkgname
  }
  build() {
@@ -38,4 +35,3 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
- check() {

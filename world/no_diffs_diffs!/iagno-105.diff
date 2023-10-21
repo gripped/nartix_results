@@ -32,14 +32,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,10 +1,11 @@
  pkgname=iagno
  depends=(gtk3 gsound librsvg)
  groups=(gnome-extra)
- pkgver() {
-   cd $pkgname
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -9,7 +10,7 @@
+ prepare() {
    cd $pkgname
  }
  build() {
@@ -47,4 +44,3 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
- check() {

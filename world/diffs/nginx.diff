@@ -72,7 +72,7 @@
  }
  build() {
    cd $pkgbase-$pkgver
-@@ -91,7 +90,6 @@
+@@ -87,7 +86,6 @@
    install -d "$pkgdir"/usr/share/nginx
    mv "$pkgdir"/etc/nginx/html/ "$pkgdir"/usr/share/nginx
    install -Dm644 ../logrotate "$pkgdir"/etc/logrotate.d/nginx

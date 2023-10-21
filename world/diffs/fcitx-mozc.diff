@@ -79,7 +79,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,17 +7,12 @@
+@@ -7,7 +7,7 @@
  _japanese_usage_dictionary
  _jsoncpp
  _protobuf
@@ -88,17 +88,7 @@
  _pkgbase=mozc
  pkgname=fcitx-mozc
  depends=('qt5-base' 'fcitx')
- replaces=('mozc-fcitx')
- conflicts=('mozc' 'mozc-server' 'mozc-utils-gui' 'mozc-fcitx' 'fcitx5-mozc')
--pkgver(){
--  cd mozc
--  _bzr_ver=$(sed 's/ //g;$ a echo $MAJOR.$MINOR.$BUILD.102' src/data/version/mozc_version_template.bzl | source /dev/stdin)
--  printf "%s.g%s" "${_bzr_ver}" "${_mozc_commit}"
--}
- prepare() {
-   cd "$srcdir/mozc"
-   git submodule init
-@@ -35,10 +30,8 @@
+@@ -30,10 +30,8 @@
    echo "Done."
    rm unix/fcitx5/fcitx5.gyp
    sed "/stdlib=libc++/d;/-lc++/d" -i gyp/common.gypi

@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=go-ethereum
+-pkgver=1.13.4
+-_commit=3f907d6a6f6de09cff1360ed529126765939851d
++pkgver=1.13.1
++_commit=3f40e65c484486dea6cff80b7db178985d21a2c6
+ pkgrel=1
+ pkgdesc='Official Go implementation of the Ethereum protocol'
+ arch=('x86_64')
+@@ -12,10 +12,8 @@
+ provides=('geth')
+ conflicts=('geth')
+ replaces=('geth')
+-source=("git+https://github.com/ethereum/go-ethereum.git#commit=${_commit}"
+-        'geth-user.service')
+-sha256sums=('SKIP'
+-            '806ab43221f0c203e663a78afced694786a5adb033f06fab07d07904384d7645')
++source=("git+https://github.com/ethereum/go-ethereum.git#commit=${_commit}")
++sha256sums=('SKIP')
+ 
+ build() {
+     cd ${pkgname}
+@@ -29,6 +27,4 @@
+     cd ${pkgname}
+ 
+     install -Dm755 -t "${pkgdir}"/usr/bin build/bin/*
+-    install -Dm644 ../geth-user.service \
+-        "${pkgdir}/usr/lib/systemd/user/geth.service"
+ }

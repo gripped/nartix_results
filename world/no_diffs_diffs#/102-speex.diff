@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=speex
  depends=(gcc-libs libogg speexdsp)
- pkgver() {
+ prepare() {
    cd speex
-   git describe --tags | sed 's/^Speex-//;s/[^-]*-g/r&/;s/-/+/g'
+   ./autogen.sh

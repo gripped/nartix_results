@@ -19,6 +19,6 @@
  pkgname=conmon
 -depends=(glibc glib2 systemd)
 +depends=(glibc glib2)
- pkgver() {
-   cd $pkgname
-   git describe --tags | sed 's/^v//;s/-/+/g'
+ build() {
+   cd conmon
+   make PREFIX=/usr LIBEXECDIR=/usr/lib DESTDIR="$pkgdir"

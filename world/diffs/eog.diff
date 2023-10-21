@@ -40,16 +40,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,14 +32,13 @@
+@@ -28,11 +28,10 @@
      -D gtk_doc=true
      -D libportal=false
    )
 -  arch-meson eog build "${meson_options[@]}"
 +  artix-meson eog build "${meson_options[@]}"
    meson compile -C build
- }
- check() {
-   meson test -C build --print-errorlogs
  }
  package_eog() {
 -  groups=(gnome-extra)

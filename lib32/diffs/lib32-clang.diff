@@ -34,12 +34,10 @@
    local cmake_args=(
      -G Ninja
      -DCMAKE_BUILD_TYPE=Release
-@@ -55,7 +57,7 @@
+@@ -55,5 +57,5 @@
    test -n "$distribution_components"
    cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
    cmake .. "${cmake_args[@]}"
 -  ninja
 +  ninja -j4
  }
- package() {
-   cd clang-$pkgver.src/build

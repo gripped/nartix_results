@@ -27,10 +27,10 @@
  pkgname=gtksourceview4
  depends=(gtk3 libxml2)
  provides=(libgtksourceview-${pkgver%%.*}.so)
- pkgver() {
+ prepare() {
    cd gtksourceview
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -13,7 +14,7 @@
+ }
+@@ -9,6 +10,6 @@
      -D glade_catalog=true
      -D gtk_doc=true
    )
@@ -38,4 +38,3 @@
 +  artix-meson gtksourceview build "${meson_options[@]}"
    meson compile -C build
  }
- check() {

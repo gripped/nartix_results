@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
+@@ -27,7 +27,7 @@
      -D symbol-lookup=disabled
      -D tests=disabled
    )
@@ -23,4 +23,4 @@
 +  artix-meson cairo build "${meson_options[@]}"
    meson compile -C build
  }
- package_cairo() {
+ package_cairo-docs() {

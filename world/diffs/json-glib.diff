@@ -24,9 +24,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,13 +11,13 @@
-   git describe --tags | sed 's/-actual//;s/[^-]*-g/r&/;s/-/+/g'
- }
+@@ -7,13 +7,13 @@
+   glib2
+ )
  prepare() {
 -  cd json-glib
 +  cd $pkgname
@@ -39,4 +39,4 @@
 +  artix-meson json-glib build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
+ package_json-glib-docs() {

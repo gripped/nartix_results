@@ -67,13 +67,3 @@
      --with-guestfs-path=/usr/lib/guestfs
    )
    cd $pkgname-$pkgver
-@@ -84,9 +83,6 @@
-   ./configure "${configure_options[@]}"
-   make
- }
--check() {
--  LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
--}
- package() {
-   make INSTALLDIRS=vendor DESTDIR="$pkgdir" install -C $pkgname-$pkgver
- }

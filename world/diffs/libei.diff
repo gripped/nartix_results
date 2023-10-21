@@ -40,16 +40,11 @@
  )
  provides=(
    lib{ei,eis,oeffis}.so
-@@ -15,11 +15,8 @@
+@@ -11,6 +11,6 @@
    ln -sr ../munit subprojects/munit
  }
  build() {
 -  arch-meson libei build
 +  artix-meson libei build -Dsd-bus-provider=libelogind
    meson compile -C build
--}
--check() {
--  meson test -C build --print-errorlogs
  }
- package() {
-   meson install -C build --destdir "$pkgdir" --skip-subprojects

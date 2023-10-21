@@ -53,7 +53,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,18 @@
+@@ -1,16 +1,17 @@
  pkgname=greetd-tuigreet
  _pkgname=${pkgname#*-}
 -depends=(gcc-libs
@@ -75,4 +75,3 @@
 +	cargo build --release --all-features
  	scdoc < contrib/man/$_pkgname-1.scd > contrib/man/$_pkgname.1
  }
- check() {

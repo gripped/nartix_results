@@ -23,14 +23,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,10 +1,11 @@
  pkgname=gcab
  depends=(glib2)
  provides=(libgcab-1.0.so)
- pkgver() {
-   cd gcab
-   git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
-@@ -9,7 +10,7 @@
+ prepare() {
    cd gcab
  }
  build() {
@@ -38,4 +35,3 @@
 +  artix-meson gcab build
    meson compile -C build
  }
- check() {

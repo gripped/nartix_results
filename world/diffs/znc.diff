@@ -17,7 +17,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,9 +11,7 @@
+@@ -11,8 +11,6 @@
      -DCMAKE_INSTALL_LIBDIR=lib \
      -DWANT_PYTHON=ON \
      -DWANT_PERL=ON \
@@ -27,4 +27,3 @@
 +    -DWANT_TCL=ON
    make
  }
- package() {

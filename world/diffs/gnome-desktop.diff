@@ -57,10 +57,10 @@
    gnome-desktop
    gnome-desktop-4
  )
- pkgver() {
+ prepare() {
    cd $pkgbase
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-@@ -15,8 +16,9 @@
+ }
+@@ -11,8 +12,9 @@
    local meson_options=(
      -D debug_tools=false
      -D gtk_doc=true
@@ -70,8 +70,8 @@
 +  artix-meson $pkgbase build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
-@@ -40,7 +42,7 @@
+ _pick() {
+@@ -32,7 +34,7 @@
      iso-codes
      libseccomp
      libxkbcommon

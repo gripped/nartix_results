@@ -67,7 +67,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,22 @@
+@@ -1,6 +1,12 @@
  pkgname=python-cffi
  depends=('python-pycparser')
 +prepare() {
@@ -81,20 +81,4 @@
 -  python -m build -nw
 +  cd cffi-v$pkgver
 +  python setup.py build
- }
- check() {
--  cd cffi-$pkgver
--  python -m installer --destdir=tmpinstall dist/*.whl
--  PYTHONPATH="$PWD/tmpinstall/usr/lib/python3.11/site-packages" pytest
-+  cd cffi-v$pkgver
-+  python setup.py pytest
- }
- package() {
--  cd cffi-$pkgver
--  rm -r testing/cffi{0,1}/__pycache__/
--  python -m installer --destdir="$pkgdir" dist/*.whl
-+  cd cffi-v$pkgver
-+  rm -rf testing/cffi{0,1}/__pycache__/
-+  python setup.py install --root="$pkgdir" --optimize=1
-   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
  }

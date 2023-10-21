@@ -62,7 +62,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,10 @@
+@@ -1,15 +1,16 @@
  pkgname=polkit
  depends=(
    duktape
@@ -74,15 +74,13 @@
  )
  provides=(libpolkit-{agent,gobject}-1.so)
  backup=(etc/pam.d/polkit-1)
-@@ -14,6 +14,7 @@
- }
  prepare() {
    cd polkit
 +  patch -Np1 -i ../0001-remove-sysd.patch
  }
  build() {
    local meson_options=(
-@@ -21,10 +22,10 @@
+@@ -17,9 +18,9 @@
      -D gtk_doc=true
      -D man=true
      -D os_type=redhat
@@ -93,11 +91,4 @@
 -  arch-meson polkit build "${meson_options[@]}"
 +  artix-meson polkit build "${meson_options[@]}"
    meson compile -C build
- }
- check() {
-@@ -37,4 +38,5 @@
- u polkitd 102 "PolicyKit daemon"
- m polkitd proc
- END
-+  install -m0644 "${srcdir}"/99-artix.rules "${pkgdir}"/etc/polkit-1/rules.d
  }

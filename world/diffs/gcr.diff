@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -11,7 +11,7 @@
    cd gcr
  }
  build() {
@@ -31,12 +31,4 @@
 +  artix-meson gcr build -Dssh_agent=false -Dsystemd=disabled
    meson compile -C build
  }
- check() {
-@@ -26,7 +26,6 @@
-     libgck-1.so
-     libgcr-{base,ui}-3.so
-   )
--  install=gcr.install
-   meson install -C build --destdir "$pkgdir"
-   mkdir -p doc/usr/share
-   mv {"$pkgdir",doc}/usr/share/doc
+ package_gcr-docs() {

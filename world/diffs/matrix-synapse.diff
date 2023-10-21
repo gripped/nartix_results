@@ -98,7 +98,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,45 +3,30 @@
+@@ -3,20 +3,20 @@
           'python-pyopenssl' 'python-yaml' 'python-pyasn1' 'python-pynacl'
           'python-bcrypt' 'python-immutabledict'
           'python-pillow' 'python-pysaml2'
@@ -122,28 +122,3 @@
  }
  build() {
  	cd $pkgname
- 	python -m build --wheel --no-isolation
- }
--check() {
--	cd $pkgname
--	local python_version=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
--	python -m venv --system-site-packages test-env
--	test-env/bin/python -m installer dist/*.whl
--	pushd build/lib.linux-$CARCH-cpython-${python_version}
--	ln -sv ../../tests .
--	PYTHONPATH="$PWD" PATH="../../test-env/bin:$PATH" ../../test-env/bin/python -m twisted.trial -j$(nproc) tests
--	rm -r tests _trial_temp
--	popd
--}
- package() {
- 	cd $pkgname
- 	python -m installer --destdir="$pkgdir" dist/*.whl
- 	install -vdm755 -o 198 -g 198 "$pkgdir"/etc/synapse
--	install -vDm644 contrib/systemd/log_config.yaml "$pkgdir"/etc/synapse/log_config.yaml
- 	install -vDm644 "$srcdir"/generic_worker.yaml.example "$pkgdir"/etc/synapse/workers/generic_worker.yaml.example
--	install -vDm644 "$srcdir/override-hardened.conf" -t "$pkgdir/usr/lib/systemd/system/synapse.service.d"
--	install -vDm644 "$srcdir/override-hardened.conf" -t "$pkgdir/usr/lib/systemd/system/synapse-worker@.service.d"
--	install -vDm644 -t "$pkgdir"/usr/lib/systemd/system/ "$srcdir"/synapse{,-worker@}.service "$srcdir"/synapse.target
- 	install -vDm644 "$srcdir"/sysusers-synapse.conf "$pkgdir"/usr/lib/sysusers.d/synapse.conf
- 	install -vDm644 "$srcdir"/tmpfiles-synapse.conf "$pkgdir"/usr/lib/tmpfiles.d/synapse.conf
- }

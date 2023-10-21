@@ -27,12 +27,5 @@
 -depends=("glibc")
 +depends=("glibc" "iptables")
  backup=("etc/default/tailscaled")
- pkgver() {
-   cd "${pkgname}"
-@@ -30,6 +30,5 @@
+ prepare() {
      cd "${pkgname}"
-     install -Dm755 tailscale tailscaled -t "$pkgdir/usr/bin"
-     install -Dm644 cmd/tailscaled/tailscaled.defaults "$pkgdir/etc/default/tailscaled"
--    install -Dm644 cmd/tailscaled/tailscaled.service -t "$pkgdir/usr/lib/systemd/system"
-     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
- }

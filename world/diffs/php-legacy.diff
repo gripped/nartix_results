@@ -67,15 +67,7 @@
  		--with-fpm-acl \
  		--with-fpm-user=http \
  		--with-fpm-group=http \
-@@ -127,7 +127,6 @@
- }
- check() {
- 	cd "${srcdir}/build"
--	sapi/cli/php -n -r 'echo ini_get("sendmail_path");' | grep -q '/usr/bin/sendmail'
- 	export REPORT_EXIT_STATUS=1
- 	export NO_INTERACTION=1
- 	export SKIP_ONLINE_TESTS=1
-@@ -165,18 +164,16 @@
+@@ -154,18 +154,16 @@
  	install -D -m644 "${srcdir}/apache.conf" "${pkgdir}/etc/httpd/conf/extra/php-legacy_module.conf"
  }
  package_php-legacy-fpm() {

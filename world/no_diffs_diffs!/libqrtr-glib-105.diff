@@ -28,14 +28,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,10 +1,11 @@
  pkgname=libqrtr-glib
  depends=(glib2)
  provides=(libqrtr-glib.so)
- pkgver() {
-   cd libqrtr-glib
-   git describe --tags | sed 's/-rc/rc/;s/[^-]*-g/r&/;s/-/+/g'
-@@ -9,7 +10,7 @@
+ prepare() {
    cd libqrtr-glib
  }
  build() {
@@ -43,4 +40,3 @@
 +  artix-meson libqrtr-glib build
    meson compile -C build
  }
- check() {

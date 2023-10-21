@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -15,7 +15,7 @@
      -D docs=true
      -D sysprof=true
    )
@@ -23,4 +23,4 @@
 +  artix-meson libdex build "${meson_options[@]}"
    meson compile -C build
  }
- check() (
+ package_libdex-docs() {

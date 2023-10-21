@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=gtksourceview3
  depends=(gtk3 libxml2)
- pkgver() {
+ prepare() {
    cd gtksourceview
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+   find . -name Makefile.am -exec sed -i '/@CODE_COVERAGE_RULES@/d' {} +

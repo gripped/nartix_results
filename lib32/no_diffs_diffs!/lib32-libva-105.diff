@@ -15,12 +15,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,7 @@
- }
+@@ -20,6 +20,6 @@
+ )
  build() {
    CFLAGS+=" -DENABLE_VA_MESSAGING"  # Option missing
 -  arch-meson libva build --cross-file lib32
 +  artix-meson libva build --cross-file lib32
    meson compile -C build
  }
- package() {

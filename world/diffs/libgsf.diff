@@ -34,14 +34,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,21 +1,15 @@
  pkgname=libgsf
  depends=(libxml2 gdk-pixbuf2 bzip2)
  provides=(libgsf-1.so)
- pkgver() {
+ prepare() {
    cd libgsf
-   git describe --tags | sed 's/^LIBGSF_//;s/_/./g;s/[^-]*-g/r&/;s/-/+/g'
-@@ -10,16 +11,9 @@
    NOCONFIGURE=1 ./autogen.sh
  }
  build() {

@@ -21,6 +21,6 @@
 -depends=(
 -  glibc
 -)
- pkgver() {
-   cd SVT-HEVC
-   git describe --tags | sed 's/^v//'
+ prepare() {
+   sed '/CMAKE_BUILD_TYPE Release/d' -i SVT-HEVC/CMakeLists.txt
+ }

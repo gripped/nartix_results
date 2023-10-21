@@ -42,7 +42,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1 @@
+@@ -1,15 +1 @@
 -pkgname=go-bindata
 -depends=('glibc')
 -build() {
@@ -57,10 +57,5 @@
 -  mv $pkgname-$pkgver $GOPATH/src/github.com/shuLhan/go-bindata
 -  cd $GOPATH/src/github.com/shuLhan/go-bindata
 -  go build ./cmd/...
--}
--package() {
--  cd src/github.com/shuLhan/go-bindata
--  install -Dm755 "go-bindata" "${pkgdir}/usr/bin/go-bindata"
--  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 -}
 +Path invalid

@@ -52,7 +52,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,11 +12,12 @@
+@@ -8,11 +8,12 @@
  }
  build() {
    local meson_options=(
@@ -66,8 +66,8 @@
 +  artix-meson $pkgbase build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
-@@ -35,13 +36,11 @@
+ _pick() {
+@@ -28,13 +29,11 @@
  package_wireplumber() {
    depends=(
      "libwireplumber=$pkgver-$pkgrel"

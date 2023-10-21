@@ -38,15 +38,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,6 @@
+@@ -4,17 +4,18 @@
    libxcrypt
    polkit
    shadow
 -  systemd
  )
- pkgver() {
+ prepare() {
    cd $pkgname
-@@ -15,11 +14,13 @@
  }
  build() {
    local meson_options=(
@@ -60,12 +59,3 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
- check() {
-@@ -29,7 +30,6 @@
-   depends+=(
-     libcrypt.so
-     libg{lib,object,io}-2.0.so
--    libsystemd.so
-   )
-   provides+=(libaccountsservice.so)
-   meson install -C build --destdir "$pkgdir"

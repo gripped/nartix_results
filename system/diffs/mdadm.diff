@@ -30,11 +30,3 @@
  replaces=('raidtools')
  backup=('etc/mdadm.conf')
  prepare() {
-@@ -13,7 +13,6 @@
- package() {
-   cd mdadm
-   make INSTALL=/usr/bin/install BINDIR=/usr/bin DESTDIR="$pkgdir" UDEVDIR=/usr/lib/udev install
--  make SYSTEMD_DIR="$pkgdir"/usr/lib/systemd/system install-systemd
-   install -D -m644 ../mdadm.conf "$pkgdir"/etc/mdadm.conf
-   install -D -m644 ../mdadm_udev_install "$pkgdir"/usr/lib/initcpio/install/mdadm_udev
-   install -D -m755 misc/mdcheck "$pkgdir"/usr/share/mdadm/mdcheck

@@ -68,7 +68,7 @@
    autoreconf -fi
  }
  build() {
-@@ -16,18 +14,14 @@
+@@ -16,9 +14,8 @@
      --sysconfdir=/etc \
      --with-drivedbdir \
      --with-libcap-ng=yes \
@@ -80,12 +80,3 @@
      --with-smartdscriptdir=/usr/share/smartmontools \
      --with-smartdplugindir=/usr/share/smartmontools/smartd_warning.d
    make
- }
- package() {
-   cd "${srcdir}/${pkgname}-${pkgver}"
--  sed -i -e "s:sysconfig/smartmontools:conf.d/smartd:g" smartd.service
--  sed -i -e "s:smartd_opts:SMARTD_ARGS:g" smartd.service
-   make DESTDIR="${pkgdir}" install
-   rm -rf "${pkgdir}"/etc/rc.d
--  install -D -m0644 "${srcdir}"/smartd.conf "${pkgdir}/etc/conf.d/smartd"
- }

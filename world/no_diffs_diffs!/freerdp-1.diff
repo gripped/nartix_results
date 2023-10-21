@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,6 @@
+   libusb
+   openssl
+   pam
+-  systemd
+   xmlto
+   xorgproto
+ )
+@@ -106,7 +105,6 @@
+     libusb libusb-1.0.so
+     openssl libcrypto.so libssl.so
+     pam libpam.so
+-    systemd-libs libsystemd.so
+   )
+ 
+   DESTDIR="$pkgdir" cmake --install build

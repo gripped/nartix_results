@@ -39,11 +39,3 @@
  prepare() {
    cd $pkgname-$pkgver
    local src
-@@ -27,7 +26,6 @@
-   pushd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
-   popd
--  install -Dm644 "$srcdir/rdnssd@.service" "$pkgdir/usr/lib/systemd/system/rdnssd@.service"
-   install -Dm644 /dev/null "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
-   echo 'd /run/rdnssd 0755 nobody root' > "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
-   install -Dm755 "$srcdir/resolvconf-hook" "$pkgdir/etc/rdnssd/resolvconf-hook"

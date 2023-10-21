@@ -22,7 +22,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,12 @@
+@@ -2,10 +2,11 @@
  pkgname=(phonon-qt5-gstreamer)
  depends=(gst-plugins-base qt5-x11extras phonon-qt5)
  provides=(phonon-qt5-backend)
@@ -34,4 +34,3 @@
 +  artix-cmake -B build -S phonon-backend-gstreamer-$pkgver
    cmake --build build
  }
- package_phonon-qt5-gstreamer() {

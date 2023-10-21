@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=lib32-nspr
  depends=(lib32-glibc nspr)
- pkgver() {
+ prepare() {
    cd nspr
-   hg id -t | sed 's/^NSPR_//;s/_RTM$//;s/_/./g'
+ }
