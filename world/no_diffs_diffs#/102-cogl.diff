@@ -18,6 +18,6 @@
  depends=(mesa libdrm libxext libxdamage libxcomposite gdk-pixbuf2 pango
           libxrandr)
  provides=(libcogl.so libcogl-{gles2,pango,path}.so)
- prepare() {
+ pkgver() {
    cd cogl
-   NOCONFIGURE=1 ./autogen.sh
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'

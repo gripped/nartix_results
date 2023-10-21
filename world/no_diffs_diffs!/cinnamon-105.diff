@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,6 +18,6 @@
+@@ -18,7 +18,7 @@
    patch -p1 < ../fce9aad1.patch
  }
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
    samu -C build
  }
+ package() {

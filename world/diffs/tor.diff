@@ -55,3 +55,11 @@
    'libz.so'
    'libzstd.so'
  )
+@@ -29,7 +30,6 @@
+   cd ${pkgname}-${pkgver}
+   make DESTDIR="${pkgdir}" install
+   mv "${pkgdir}"/etc/tor/torrc{.sample,}
+-  install -Dm 644 "${srcdir}"/*.service -t "${pkgdir}"/usr/lib/systemd/system
+   install -Dm 644 "${srcdir}"/tor.sysusers "${pkgdir}"/usr/lib/sysusers.d/tor.conf
+   install -Dm 644 "${srcdir}"/tor.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/tor.conf
+   install -Dm 644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}

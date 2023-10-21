@@ -41,7 +41,7 @@
  )
  prepare() {
    cd $pkgname-$pkgver
-@@ -11,9 +10,10 @@
+@@ -11,10 +10,11 @@
    local meson_options=(
      -D audit=true
      -D docs=true
@@ -53,3 +53,4 @@
 +  artix-meson $pkgname-$pkgver build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

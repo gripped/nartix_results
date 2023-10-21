@@ -138,7 +138,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,65 +1 @@
+@@ -1,88 +1 @@
 -pkgname=js78
 -depends=(gcc-libs readline zlib sh)
 -options=!lto
@@ -203,5 +203,28 @@
 -ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
 -END
 -  ./mach build
+-}
+-check() {
+-  local jstests_extra_args=(
+-    --format=none
+-    --exclude-random
+-    --wpt=disabled
+-  ) jittest_extra_args=(
+-    --format=none
+-    --timeout 300
+-  ) jittest_test_args=(
+-    basic
+-  )
+-  cd firefox-$pkgver/obj
+-  make -C js/src check-jstests check-jit-test \
+-    JSTESTS_EXTRA_ARGS="${jstests_extra_args[*]}" \
+-    JITTEST_EXTRA_ARGS="${jittest_extra_args[*]}" \
+-    JITTEST_TEST_ARGS="${jittest_test_args[*]}"
+-}
+-package() {
+-  cd firefox-$pkgver/obj
+-  make DESTDIR="$pkgdir" install
+-  rm "$pkgdir"/usr/lib/*.ajs
+-  find "$pkgdir"/usr/{lib/pkgconfig,include} -type f -exec chmod -c a-x {} +
 -}
 +Path invalid

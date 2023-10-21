@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
+@@ -4,7 +4,7 @@
           pulseaudio-alsa upower)
  options=(!emptydirs)
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
    samu -C build
  }
+ package() {

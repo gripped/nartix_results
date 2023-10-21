@@ -68,3 +68,14 @@
    export BUILD_NAME=arch_linux
    scons -j$(nproc --all) \
      CFLAGS="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls2" \
+@@ -46,8 +47,8 @@
+     use_llvm=no \
+     werror=no
+ }
+-package() {
+-  cd $pkgname-$pkgver-stable
++package_godot() {
++  cd $pkgbase-$pkgver-stable
+   install -Dm644 misc/dist/linux/org.godotengine.Godot.desktop \
+     "$pkgdir/usr/share/applications/godot.desktop"
+   install -Dm644 icon.svg "$pkgdir/usr/share/pixmaps/godot.svg"

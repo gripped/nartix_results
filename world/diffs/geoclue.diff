@@ -37,7 +37,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,8 +16,9 @@
+@@ -20,9 +20,10 @@
  build() {
    local meson_options=(
      -D dbus-srv-user=geoclue
@@ -48,3 +48,4 @@
 +  artix-meson geoclue build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

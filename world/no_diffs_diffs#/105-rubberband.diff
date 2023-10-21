@@ -23,4 +23,4 @@
 +  artix-meson build $pkgbase-$pkgver "${meson_options[@]}"
    meson compile -C build
  }
- package_rubberband() {
+ check() {

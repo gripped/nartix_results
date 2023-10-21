@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,6 +15,6 @@
+@@ -19,7 +19,7 @@
      -D gtk_doc=disabled
      -D introspection=disabled
    )
@@ -32,3 +32,4 @@
 +  artix-meson json-glib build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

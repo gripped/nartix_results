@@ -27,6 +27,6 @@
  pkgname=media-player-info
 -depends=('systemd')
 +depends=('udev')
- prepare() {
+ pkgver() {
    cd $pkgname
-   NOCONFIGURE=1 ./autogen.sh
+   git describe --tags | sed 's/-/+/g'

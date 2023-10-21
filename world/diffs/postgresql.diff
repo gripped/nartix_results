@@ -140,7 +140,7 @@
      --with-ldap
      --with-llvm
      --with-libxslt
-@@ -43,8 +43,8 @@
+@@ -49,8 +49,8 @@
  check() {
    export LANG=C
    cd postgresql-${pkgver}
@@ -151,7 +151,7 @@
  }
  package_postgresql-libs() {
    depends=('krb5' 'openssl>=1.0.0' 'readline>=6.0' 'zlib' 'libldap')
-@@ -75,7 +75,7 @@
+@@ -90,7 +90,7 @@
  package_postgresql() {
    backup=('etc/pam.d/postgresql' 'etc/logrotate.d/postgresql')
    depends=("postgresql-libs>=${pkgver}" 'krb5' 'libxml2' 'readline>=6.0'
@@ -160,7 +160,7 @@
             'libxslt' 'lz4' 'zstd')
    options+=('staticlibs')
    install=postgresql.install
-@@ -95,7 +95,6 @@
+@@ -110,7 +110,6 @@
    install -Dm 755 postgresql-check-db-dir -t "${pkgdir}/usr/bin"
    install -Dm 644 ${pkgname}.pam "${pkgdir}/etc/pam.d/${pkgname}"
    install -Dm 644 ${pkgname}.logrotate "${pkgdir}/etc/logrotate.d/${pkgname}"

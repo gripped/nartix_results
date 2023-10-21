@@ -21,6 +21,6 @@
           python-lxml python-simplejson ruby-dbus ruby-sass)
 -options=!lto
 +options=!lto
- prepare() {
+ pkgver() {
    cd $pkgname
-   NOCONFIGURE=1 ./autogen.sh
+   git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'

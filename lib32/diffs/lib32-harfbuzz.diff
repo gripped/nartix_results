@@ -47,7 +47,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,14 +9,17 @@
+@@ -13,14 +13,17 @@
  }
  build() {
    local meson_options=(
@@ -66,4 +66,4 @@
 +  artix-meson harfbuzz build "${meson_options[@]}"
    meson compile -C build
  }
- _pick() {
+ check() {

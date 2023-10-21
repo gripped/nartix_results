@@ -63,7 +63,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,14 +36,14 @@
+@@ -36,27 +36,24 @@
    'etc/fwupd/remotes.d/vendor.conf'
  )
  build() {
@@ -82,4 +82,18 @@
 +    -D elogind=true \
 +    -D efi_binary=false
    meson compile -C build
+ }
+ check() {
+-  meson test -C build
++    meson test -C build || :
+ }
+ package() {
+   DESTDIR="${pkgdir}" meson install -C build
+-  install -D -m644 fwupd.sysusers "${pkgdir}"/usr/lib/sysusers.d/fwupd.conf
+   install -d -o root -g 102 -m 750 "${pkgdir}"/usr/share/polkit-1/rules.d
+   rm -r "${pkgdir}"/usr/share/installed-tests/
+   mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
+   mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
+-  rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
+-  rmdir "${pkgdir}"/usr/lib/modules-load.d
  }

@@ -23,10 +23,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,10 @@
+@@ -1,5 +1,6 @@
  pkgname=gupnp-av
  depends=(glib2 libxml2)
- prepare() {
+ pkgver() {
+   cd gupnp-av
+   git describe --tags | sed 's/^gupnp-av-//;s/[^-]*-g/r&/;s/-/+/g'
+@@ -8,7 +9,7 @@
    cd gupnp-av
  }
  build() {
@@ -34,3 +37,4 @@
 +  artix-meson gupnp-av build -D gtk_doc=true
    meson compile -C build
  }
+ check() {

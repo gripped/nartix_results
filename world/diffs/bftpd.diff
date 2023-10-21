@@ -66,3 +66,15 @@
  prepare() {
    cd ${pkgname}
    patch -Np1 < ../bftpd-4.9-Makefile.patch
+@@ -26,10 +27,8 @@
+   cd ${pkgname}
+   make DESTDIR="${pkgdir}" install
+   rm -rf "${pkgdir}/usr/var"
+-  install -Dm 644 ../bftpd.service "${pkgdir}/usr/lib/systemd/system/bftpd.service"
+-  install -Dm 644 ../bftpd_AT.service "${pkgdir}/usr/lib/systemd/system/bftpd@.service"
+-  install -Dm 644 ../bftpd.socket "${pkgdir}/usr/lib/systemd/system/bftpd.socket"
+   install -Dm 644 ../bftpd.tmpfiles "${pkgdir}/usr/lib/tmpfiles.d/bftpd.conf"
+   install -Dm 644 ../bftpd.logrotate "${pkgdir}/etc/logrotate.d/bftpd"
+   install -Dm 644 ../bftpd.pam "${pkgdir}/etc/pam.d/bftpd"
++  install -Dm 644 ../bftpd.xinetd "${pkgdir}/etc/xinetd.d/bftpd"
+ }

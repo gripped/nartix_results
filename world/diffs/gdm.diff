@@ -70,7 +70,7 @@
    upower
    xorg-server
    xorg-xhost
-@@ -17,6 +17,7 @@
+@@ -21,6 +21,7 @@
  prepare() {
    cd gdm
    git apply -3 ../0001-Xsession-Don-t-start-ssh-agent-by-default.patch
@@ -78,7 +78,7 @@
  }
  build() {
    local meson_options=(
-@@ -27,8 +28,12 @@
+@@ -31,8 +32,12 @@
      -D ipv6=true
      -D run-dir=/run/gdm
      -D selinux=disabled
@@ -91,8 +91,8 @@
 +  artix-meson gdm build "${meson_options[@]}"
    meson compile -C build
  }
- _pick() {
-@@ -79,7 +84,7 @@
+ check() {
+@@ -86,7 +91,7 @@
  }
  package_libgdm() {
    pkgdesc+=" - support library"

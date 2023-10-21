@@ -16,7 +16,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,6 @@
+@@ -6,8 +6,7 @@
  		--prefix=/usr \
  		--sbindir=/usr/bin \
  		--libdir=/usr/lib \
@@ -25,3 +25,4 @@
 +		--libexecdir=/usr/lib
  	make
  }
+ package() {

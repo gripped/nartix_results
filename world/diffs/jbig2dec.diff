@@ -56,9 +56,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,19 +1,16 @@
  pkgname=jbig2dec
 -depends=('libpng' 'glibc')
+-pkgver() {
+-  cd $pkgname
+-  git describe --tags | sed 's/^Release.//;s/\([^-]*-g\)/\1/;s/-/+/g;'
+-}
 +_gsver=gs9530
 +depends=('libpng')
  prepare() {
@@ -74,4 +78,10 @@
 +	cd ${pkgname}-${pkgver}
 +	./configure --prefix=/usr
 +	make
+ }
+ package() {
+-  cd ${pkgname} #-${pkgver}
+-  make DESTDIR="${pkgdir}" install
++	cd ${pkgname}-${pkgver}
++	make DESTDIR="${pkgdir}" install
  }

@@ -23,12 +23,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,8 @@
+@@ -1,12 +1,13 @@
  pkgname=libdazzle
  depends=(gtk3)
  provides=(libdazzle-1.0.so)
+ pkgver() {
+   cd $pkgname
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+ }
  build() {
 -  arch-meson $pkgname build -D enable_gtk_doc=true
 +  artix-meson $pkgname build -D enable_gtk_doc=true
    meson compile -C build
  }
+ check() {

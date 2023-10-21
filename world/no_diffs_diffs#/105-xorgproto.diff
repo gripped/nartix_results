@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
+@@ -3,7 +3,7 @@
    mkdir build
  }
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson "$pkgname"-$pkgver build
    ninja -C build
  }
+ check() {

@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,6 +21,6 @@
+@@ -21,7 +21,7 @@
      --cross-file lib32
      -D default_library=shared
    )
@@ -23,3 +23,4 @@
 +  artix-meson freetype-$pkgver build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

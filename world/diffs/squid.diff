@@ -71,3 +71,15 @@
  build() {
    cd "$srcdir/$pkgname-$pkgver"
    ./configure \
+@@ -60,11 +56,5 @@
+   install -Dm644 "$srcdir/squid.pam" "$pkgdir/usr/lib/pam.d/squid"
+   install -Dm644 "$srcdir/squid.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/squid.conf"
+   install -Dm644 "$srcdir/squid.sysusers" "$pkgdir/usr/lib/sysusers.d/squid.conf"
+-  install -Dm644 "$pkgname-$pkgver/tools/systemd/squid.service" \
+-    "$pkgdir/usr/lib/systemd/system/squid.service"
+-  install -Dm644 "$srcdir/squid-rotate.service" \
+-    "$pkgdir/usr/lib/systemd/system/squid-rotate.service"
+-  install -Dm644 "$srcdir/squid-rotate.timer" \
+-    "$pkgdir/usr/lib/systemd/system/squid-rotate.timer"
+   rm -rf "$pkgdir/run" "$pkgdir"/var/{cache,log,run}
+ }

@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,11 +9,11 @@
+ groups=(vulkan-devel)
+ depends=('gcc-libs' 'sh')
+ makedepends=('cmake' 'python' 'git' 'ninja' 'spirv-headers')
+-source=("git+https://github.com/KhronosGroup/SPIRV-Tools.git#tag=v${pkgver}")
++source=("SPIRV-Tools1::git+https://github.com/KhronosGroup/SPIRV-Tools.git#tag=v${pkgver}")
+ sha256sums=('SKIP')
+ 
+ build() {
+-  cd SPIRV-Tools
++  cd SPIRV-Tools1
+ 
+   cmake \
+       -Bbuild \
+@@ -28,13 +28,8 @@
+   ninja -C build
+ }
+ 
+-check() {
+-  cd SPIRV-Tools
+-  ninja -C build test
+-}
+-
+ package() {
+-  cd SPIRV-Tools
++  cd SPIRV-Tools1
+ 
+   DESTDIR="${pkgdir}" ninja -C build install
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ groups=(vulkan-devel)
+ depends=('gcc-libs' 'sh')
+ build() {
+-  cd SPIRV-Tools
++  cd SPIRV-Tools1
+   cmake \
+       -Bbuild \
+       -GNinja \
+@@ -15,12 +15,8 @@
+       -DSPIRV-Headers_SOURCE_DIR=/usr
+   ninja -C build
+ }
+-check() {
+-  cd SPIRV-Tools
+-  ninja -C build test
+-}
+ package() {
+-  cd SPIRV-Tools
++  cd SPIRV-Tools1
+   DESTDIR="${pkgdir}" ninja -C build install
+   install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
+ }

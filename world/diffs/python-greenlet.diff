@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,8 +20,7 @@
+ 
+ check() {
+     cd greenlet-$pkgver
+-    local _python_version=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
+-    PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-$_python_version" python -m unittest discover -v greenlet.tests
++    PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-311" python -m unittest discover -v greenlet.tests
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,7 @@
+ }
+ check() {
+     cd greenlet-$pkgver
+-    local _python_version=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
+-    PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-$_python_version" python -m unittest discover -v greenlet.tests
++    PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-311" python -m unittest discover -v greenlet.tests
+ }
+ package() {
+     cd greenlet-$pkgver

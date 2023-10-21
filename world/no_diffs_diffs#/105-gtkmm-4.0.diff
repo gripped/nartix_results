@@ -23,11 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,11 +7,12 @@
+@@ -7,6 +7,7 @@
    gtk4
    pangomm-2.48
  )
- prepare() {
+ pkgver() {
+   cd gtkmm
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -15,7 +16,7 @@
    cd gtkmm
  }
  build() {
@@ -35,4 +38,4 @@
 +  artix-meson gtkmm build -D maintainer-mode=true
    meson compile -C build
  }
- _pick() {
+ check() {

@@ -53,8 +53,8 @@
 +  wireplumber
  )
  groups=(gnome)
- prepare() {
-@@ -24,8 +24,9 @@
+ pkgver() {
+@@ -28,13 +28,14 @@
  }
  build() {
    local meson_options=(
@@ -65,3 +65,9 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {
+-  meson test -C build --print-errorlogs -t 3
++  meson test -C build --print-errorlogs -t 3 ||: # test fails skip
+ }
+ package() {
+   meson install -C build --destdir "$pkgdir"

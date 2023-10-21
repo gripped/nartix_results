@@ -30,10 +30,10 @@
  )
 -options=!lto
 +options=!lto
- prepare() {
+ pkgver() {
    cd folks
- }
-@@ -19,6 +19,6 @@
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -23,7 +23,7 @@
      -D profiling=true
      -D telepathy_backend=false
    )
@@ -41,3 +41,4 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

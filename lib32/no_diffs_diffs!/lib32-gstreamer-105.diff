@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -48,7 +48,7 @@
+@@ -52,7 +52,7 @@
      -D gst-plugins-good:qt6=disabled
      -D gst-plugins-good:rpicamsrc=disabled
    )
@@ -23,4 +23,4 @@
 +  artix-meson gstreamer build "${meson_options[@]}"
    meson compile -C build
  }
- "
+ check() (

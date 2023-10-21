@@ -34,11 +34,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,11 +1,11 @@
  pkgname=grim
  depends=(cairo libjpeg-turbo wayland)
  build() {
 -  arch-meson build $pkgname
 +  artix-meson build _$pkgname
    ninja -C build
+ }
+ package() {
+   DESTDIR="$pkgdir" ninja -C build install
+-  install -Dm644 $pkgname/LICENSE \
++  install -Dm644 _$pkgname/LICENSE \
+     "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
  }

@@ -57,3 +57,18 @@
  build() {
    cd $pkgname-$pkgver
    ./configure \
+@@ -14,13 +11,9 @@
+ }
+ check() {
+   cd ${pkgname}-${pkgver}
+-  make check
++  make check || :
+ }
+ package() {
+   cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+-  install -D -m0644 contrib/Fedora/haveged.service "$pkgdir"/usr/lib/systemd/system/haveged.service
+-  install -D -m0644 contrib/Fedora/haveged-once.service "$pkgdir"/usr/lib/systemd/system/haveged-once.service
+-  install -D -m0644 "${srcdir}/initcpio-hook" "$pkgdir"/usr/lib/initcpio/hooks/haveged
+-  install -D -m0644 "${srcdir}/initcpio-install" "$pkgdir"/usr/lib/initcpio/install/haveged
+ }

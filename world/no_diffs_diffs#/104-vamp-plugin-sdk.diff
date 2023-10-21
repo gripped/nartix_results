@@ -15,10 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,5 +12,5 @@
+@@ -12,7 +12,7 @@
  build() {
    cd $pkgname-$pkgver
    ./configure --prefix=/usr
 -  make
 +  make -j1
  }
+ package() {
+   make DESTDIR="$pkgdir" install -C $pkgname-$pkgver

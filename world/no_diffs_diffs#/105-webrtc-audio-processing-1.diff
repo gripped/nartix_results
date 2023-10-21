@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,6 +11,6 @@
+@@ -15,7 +15,7 @@
    local meson_options=(
      -D cpp_std=c++17
    )
@@ -23,3 +23,4 @@
 +  artix-meson webrtc-audio-processing build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

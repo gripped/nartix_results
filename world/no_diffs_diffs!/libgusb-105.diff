@@ -15,11 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
-   libusb-1.0.so
- )
+@@ -9,7 +9,7 @@
+   git describe --tags
+ }
  build() {
 -  arch-meson libgusb build
 +  artix-meson libgusb build
    ninja -C build
  }
+ package() {

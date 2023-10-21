@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+ 
+ check() {
+ 	cd "$pkgname"
+-	make check
++	make check || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ }
+ check() {
+ 	cd "$pkgname"
+-	make check
++	make check || :
+ }
+ package() {
+ 	cd "$pkgname"

@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,6 @@
+@@ -6,7 +6,7 @@
  build() {
    mkdir -p build
    cd build
@@ -32,3 +32,4 @@
 +  artix-meson ../$pkgname
    ninja
  }
+ package() {

@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=lib32-speex
  depends=(lib32-gcc-libs speex)
- prepare() {
+ pkgver() {
    cd speex
-   ./autogen.sh
+   git describe --tags | sed 's/^Speex-//;s/[^-]*-g/r&/;s/-/+/g'

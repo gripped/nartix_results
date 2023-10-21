@@ -18,6 +18,6 @@
  )
  provides=(libyelp.so)
  groups=(gnome)
- prepare() {
+ pkgver() {
    cd yelp
-   git apply -3 ../no-gtk-doc.diff
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'

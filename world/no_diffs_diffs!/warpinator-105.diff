@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,6 +10,6 @@
+@@ -10,7 +10,7 @@
    sed -i 's/libexec/lib/' install-scripts/download_zeroconf.py
  }
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson $pkgname-$pkgver build -D bundle-zeroconf=false
    meson compile -C build
  }
+ package() {

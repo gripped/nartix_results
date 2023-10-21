@@ -27,10 +27,10 @@
    libarchive
  )
  provides=(libgnome-autoar{,-gtk}-${pkgver%%.*}.so)
- prepare() {
+ pkgver() {
    cd $pkgname
- }
-@@ -14,6 +15,6 @@
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -18,7 +19,7 @@
      -D tests=true
      -D vapi=true
    )
@@ -38,3 +38,4 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

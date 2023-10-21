@@ -41,10 +41,10 @@
    libgoa
    libsoup
  )
- prepare() {
+ pkgver() {
    cd libgdata
- }
-@@ -13,6 +15,6 @@
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -17,8 +19,8 @@
      -D gtk_doc=true
      -D man=true
    )
@@ -53,3 +53,5 @@
 +  artix-meson libgdata build "${meson_options[@]}"
 +  ninja -C build
  }
+ check() {
+   meson test -C build --print-errorlogs

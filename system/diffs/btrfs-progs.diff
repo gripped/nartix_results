@@ -52,3 +52,10 @@
  replaces=('btrfs-progs-unstable')
  conflicts=('btrfs-progs-unstable')
  provides=('btrfs-progs-unstable')
+@@ -32,6 +32,4 @@
+   cd "$srcdir"
+   install -Dm644 initcpio-install-btrfs "$pkgdir/usr/lib/initcpio/install/btrfs"
+   install -Dm644 initcpio-hook-btrfs "$pkgdir/usr/lib/initcpio/hooks/btrfs"
+-  install -Dm644 btrfs-scrub@.service "$pkgdir/usr/lib/systemd/system/btrfs-scrub@.service"
+-  install -Dm644 btrfs-scrub@.timer "$pkgdir/usr/lib/systemd/system/btrfs-scrub@.timer"
+ }

@@ -298,5 +298,14 @@
 -  install -vDm 644 LICENSES/preferred/{BSD*,MIT} -t "$pkgdir/usr/share/licenses/$pkgname/"
 -  install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
  }
+ _package-docs() {
+   cd $pkgbase
+@@ -159,8 +117,6 @@
+   echo "Adding symlink..."
+   mkdir -p "$pkgdir/usr/share/doc"
+   ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
+-  install -vDm 644 LICENSES/deprecated/X11 -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm 644 LICENSES/preferred/{BSD*,MIT} -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
  pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
  for _p in "${pkgname[@]}"; do

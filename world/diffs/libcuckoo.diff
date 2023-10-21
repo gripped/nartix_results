@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+ 
+ check() {
+   cd build
+-  ctest
++  ctest || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ }
+ check() {
+   cd build
+-  ctest
++  ctest || :
+ }
+ package() {
+     cd build

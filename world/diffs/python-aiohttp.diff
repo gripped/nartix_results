@@ -58,8 +58,8 @@
 +depends=('python' 'python-chardet' 'python-multidict' 'python-async-timeout'
           'python-yarl' 'python-attrs' 'python-charset-normalizer'
           'python-aiosignal' 'python-frozenlist')
- prepare() {
-@@ -12,6 +12,7 @@
+ pkgver() {
+@@ -16,6 +16,7 @@
    sed 's|.install-cython ||' -i Makefile
    sed -i "s/import {import_path!s}/import sys; sys.path.insert(0, '{os.environ['PYTHONPATH']}'); &/" \
        tests/test_circular_imports.py

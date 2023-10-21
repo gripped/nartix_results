@@ -18,5 +18,5 @@
  pkgname=libfdk-aac
 -depends=(glibc)
  provides=(libfdk-aac.so)
- prepare() {
+ pkgver() {
    cd fdk-aac

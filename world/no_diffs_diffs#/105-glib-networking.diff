@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,6 +11,6 @@
+@@ -15,7 +15,7 @@
  build() {
    local meson_options=(
    )
@@ -23,3 +23,4 @@
 +  artix-meson glib-networking build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

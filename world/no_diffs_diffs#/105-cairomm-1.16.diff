@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -19,7 +19,7 @@
    local meson_options=(
      -D maintainer-mode=true
    )
@@ -23,4 +23,4 @@
 +  artix-meson cairomm build "${meson_options[@]}"
    meson compile -C build
  }
- package_cairomm-1.16() {
+ check() {

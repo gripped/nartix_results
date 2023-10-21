@@ -40,9 +40,9 @@
 -depends=(glib2 dconf mod_dnssd systemd)
 +depends=(glib2 dconf mod_dnssd)
  groups=(gnome)
- prepare() {
+ pkgver() {
    cd $pkgname
-@@ -8,7 +8,8 @@
+@@ -12,8 +12,9 @@
    local meson_options=(
      -D httpd=/usr/bin/httpd
      -D modules_path=/usr/lib/httpd/modules
@@ -51,4 +51,11 @@
 -  arch-meson $pkgname build "${meson_options[@]}"
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
+ }
+ check() {
+@@ -21,4 +22,5 @@
+ }
+ package() {
+   meson install -C build --destdir "$pkgdir"
++  rm -r "$pkgdir"/usr/share/gnome
  }

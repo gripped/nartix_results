@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=libgee
  depends=(glib2)
- prepare() {
+ pkgver() {
    cd libgee
-   NOCONFIGURE=1 ./autogen.sh
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'

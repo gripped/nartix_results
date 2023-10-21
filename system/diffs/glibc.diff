@@ -32,7 +32,7 @@
  prepare() {
    mkdir -p glibc-build lib32-glibc-build
    [[ -d glibc-$pkgver ]] && ln -s glibc-$pkgver glibc
-@@ -77,7 +77,7 @@
+@@ -84,7 +84,7 @@
    rm -f "${pkgdir}"/etc/ld.so.cache
    rm -f "${pkgdir}"/usr/bin/{tzselect,zdump,zic}
    cd glibc

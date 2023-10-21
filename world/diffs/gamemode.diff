@@ -47,8 +47,8 @@
    polkit
  )
  provides=(
-@@ -12,10 +12,10 @@
- )
+@@ -16,11 +16,11 @@
+ }
  build() {
    export CFLAGS+=' -Wno-implicit-function-declaration'
 -  arch-meson gamemode build \
@@ -60,3 +60,4 @@
 +    -Dwith-sd-bus-provider=elogind
    meson compile -C build
  }
+ check() {

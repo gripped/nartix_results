@@ -72,7 +72,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,15 @@
+@@ -1,26 +1,24 @@
  pkgname=python-html5lib
  _deps=('six' 'webencodings')
  depends=("${_deps[@]/#/python-}")
@@ -92,4 +92,16 @@
 -    cd html5lib-python-${pkgver}
 +    cd "${srcdir}"/html5lib-python-${pkgver}
      python setup.py build
+ }
+ check() {
+-    cd html5lib-python-${pkgver}
+-    pytest
++    cd "${srcdir}"/html5lib-python-${pkgver}
++    py.test
+ }
+ package() {
+-    cd html5lib-python-${pkgver}
++    cd "${srcdir}"/html5lib-python-${pkgver}
+     python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
+     install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
  }

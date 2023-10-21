@@ -48,3 +48,12 @@
    export LINKFLAGS="$LDFLAGS"
    export PYTHONPATH="$PWD:$PYTHONPATH"
    export CC="gcc -m32"
+@@ -25,7 +25,7 @@
+     alsa-lib libasound.so
+     libsamplerate libsamplerate.so
+   )
+-  cd $_name
++  cd $pkgname
+   export PYTHONPATH="$PWD:$PYTHONPATH"
+   waf install --destdir="$pkgdir"
+   rm -rf "$pkgdir/usr/"{bin,include,share}

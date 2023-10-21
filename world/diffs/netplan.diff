@@ -118,7 +118,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,16 +11,16 @@
+@@ -11,61 +11,20 @@
    'python-netifaces'
    'python-rich'
    'iproute2'
@@ -138,3 +138,51 @@
 +  artix-meson $pkgname-$pkgver build
    meson compile -C build
  }
+-check() {
+-  local pytest_options=(
+-    -vv
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_empty_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_no_configs
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_systemd_generator
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_systemd_generator_badcall
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_systemd_generator_noconf
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_auto_ovs_backend
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_lacp
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_mode_explicit_params
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_mode_implicit_params
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_auto_ovs_backend
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_controller
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_external_ids_other_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_non_default_parameters
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_non_ovs_bond
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_set_protocols
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_fake_vlan_bridge_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_external_ids_other_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_ports
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_set_protocols
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_ssl
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_implicit_fake_vlan_bridge_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_interface_external_ids_other_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_invalid_device_type
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_missing_ssl
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_no_ovs_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_ovs_duplicates_when_parser_needs_second_pass
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_ovs_invalid_networkd_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_patch_ports
+-    --deselect $pkgname-$pkgver/tests/generator/test_wifis.py::TestNetworkManager::test_wifi_regdom
+-  )
+-  meson test -C build
+-  export PYTHONPATH="build/python-cffi:$pkgname-$pkgver:$PYTHONPATH"
+-  export NETPLAN_GENERATE_PATH="build/src/generate"
+-  export NETPLAN_DBUS_CMD="build/dbus/netplan-dbus"
+-  LD_LIBRARY_PATH="build/src" pytest "${pytest_options[@]}"
++package() {
++  rm "$pkgdir"/netplan
++  meson install -C build --destdir "$pkgdir"
+ }
+-package() {
+-  meson install -C build --destdir "$pkgdir"
+-  rm -frv "$pkgdir/lib"
+-}

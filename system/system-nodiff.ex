@@ -13,8 +13,6 @@ ca-certificates
 ca-certificates-utils
 coreutils
 cracklib
-cronie
-cryptsetup
 curl
 libcurl-compat
 libcurl-gnutls
@@ -25,7 +23,6 @@ debugedit
 dialog
 diffutils
 ding-libs
-dmraid
 dnssec-anchors
 dosfstools
 e2fsprogs
@@ -36,7 +33,6 @@ efivar
 expat
 fakeroot
 file
-filesystem
 findutils
 flex
 gawk
@@ -56,16 +52,13 @@ gettext
 glib2
 glib2-docs
 gmp
-gnupg
 gnutls
 gpgme
 qgpgme-qt5
 qgpgme-qt6
 python-gpgme
-gpm
 grep
 groff
-grub
 guile
 gzip
 hdparm
@@ -73,8 +66,6 @@ hwdata
 iana-etc
 icu
 iproute2
-iptables
-iptables-nft
 iputils
 iw
 jansson
@@ -83,14 +74,11 @@ json-c
 kbd
 keyutils
 kmod
-krb5
 ldns
 less
 libaio
 libassuan
 libbpf
-libcap-ng
-python-capng
 libcap
 libedit
 libevent
@@ -149,7 +137,6 @@ make
 man-pages
 mkinitcpio-busybox
 mkinitcpio-nfs-utils
-mlocate
 mpfr
 nano
 ncurses
@@ -161,7 +148,6 @@ nspr
 nss
 ca-certificates-mozilla
 openresolv
-openssh
 openssl-1.1
 openssl
 patch
@@ -182,13 +168,11 @@ run-parts
 s-nail
 sdparm
 sed
-shadow
 sqlite
 sqlite-tcl
 sqlite-analyzer
 lemon
 sqlite-doc
-sudo
 sysfsutils
 syslinux
 tar
@@ -198,11 +182,9 @@ tpm2-tss
 traceroute
 tzdata
 unixodbc
-usbutils
 vi
 which
 wireless-regdb
-wpa_supplicant
 xz
 zlib
 minizip

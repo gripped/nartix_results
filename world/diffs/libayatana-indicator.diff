@@ -69,7 +69,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,14 @@
+@@ -1,15 +1,18 @@
  pkgname=libayatana-indicator
 -depends=(ayatana-ido
 -         gdk-pixbuf2
@@ -92,4 +92,9 @@
 +		-D CMAKE_INSTALL_PREFIX="/usr" \
 +		.
 +	make
+ }
+ package() {
+-  DESTDIR="$pkgdir" cmake --install build
++	cd "$pkgname-$pkgver"
++	make install DESTDIR="$pkgdir"
  }

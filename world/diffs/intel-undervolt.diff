@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
+@@ -3,7 +3,7 @@
  backup=(etc/intel-undervolt.conf)
  build() {
    cd ${pkgname}-${pkgver}
@@ -32,3 +32,4 @@
 +  ./configure --enable-elogind --eloginddir=/usr/lib/elogind
    make
  }
+ package() {

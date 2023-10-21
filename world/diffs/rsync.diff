@@ -63,3 +63,22 @@
      --disable-debug \
      --with-rrsync \
      --with-included-popt=no \
+@@ -35,17 +35,11 @@
+ }
+ check() {
+   cd ${pkgname}
+-  if rsync -V | grep -q 'no IPv6'; then
+-    echo 'Built without IPv6 support!' >&2
+-    exit 1
+-  fi
+   make test
+ }
+ package() {
+   cd ${pkgname}
+   make DESTDIR="$pkgdir" install
+   install -Dm0644 ../rsyncd.conf "$pkgdir/etc/rsyncd.conf"
+-  install -Dm0644 packaging/systemd/rsync.service "$pkgdir/usr/lib/systemd/system/rsyncd.service"
+-  install -Dm0644 packaging/systemd/rsync.socket "$pkgdir/usr/lib/systemd/system/rsyncd.socket"
+-  install -Dm0644 packaging/systemd/rsync@.service "$pkgdir/usr/lib/systemd/system/rsyncd@.service"
++  install -Dm0644 packaging/lsb/rsync.xinetd "$pkgdir/etc/xinetd.d/rsync"
+ }

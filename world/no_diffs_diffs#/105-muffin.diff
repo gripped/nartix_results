@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
+@@ -3,7 +3,7 @@
           libsm libxkbcommon-x11 startup-notification zenity graphene pipewire)
  options=(!emptydirs)
  build() {
@@ -31,3 +31,4 @@
 +  artix-meson build ${pkgname}-${pkgver}
    meson compile -C build
  }
+ package() {

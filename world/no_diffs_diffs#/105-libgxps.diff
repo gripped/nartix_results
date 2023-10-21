@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,6 +17,6 @@
+@@ -21,7 +21,7 @@
      -D enable-man=true
      -D enable-gtk-doc=true
    )
@@ -23,3 +23,4 @@
 +  artix-meson libgxps build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

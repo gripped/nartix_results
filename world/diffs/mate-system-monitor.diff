@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,6 @@
+@@ -9,7 +9,7 @@
          	--prefix=/usr \
          	--libexecdir=/usr/lib/${pkgname} \
          	--localstatedir=/var \
@@ -32,3 +32,4 @@
 +        	--disable-systemd
      	make
  }
+ package() {

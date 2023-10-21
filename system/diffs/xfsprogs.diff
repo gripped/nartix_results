@@ -32,7 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,6 @@
+@@ -6,7 +6,7 @@
    make configure
    export OPTIMIZER="-m
    export DEBUG=-DNDEBUG
@@ -40,3 +40,4 @@
 +  ./configure --prefix=/usr --sbindir=/usr/bin --with-systemd-unit-dir=no
    make
  }
+ package() {

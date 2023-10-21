@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  pkgname=libkeduvocdocument
  depends=(kio5 kdeedu-data)
  build() {
@@ -23,3 +23,4 @@
 +  artix-cmake -B build -S $pkgname-$pkgver
    cmake --build build
  }
+ package() {

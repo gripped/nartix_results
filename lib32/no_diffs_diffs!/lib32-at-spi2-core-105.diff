@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,6 +20,6 @@
+@@ -24,7 +24,7 @@
      -D docs=false
      -D introspection=disabled
    )
@@ -23,3 +23,4 @@
 +  artix-meson at-spi2-core build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

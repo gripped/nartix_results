@@ -60,3 +60,13 @@
          -DCMAKE_BUILD_TYPE:STRING='None' \
          -DCMAKE_INSTALL_PREFIX:PATH='/usr' \
          -DCODE_COVERAGE:BOOL='OFF' \
+@@ -13,7 +13,8 @@
+     cmake --build "${pkgname}-${pkgver}/build"
+ }
+ check() {
+-    ctest --test-dir "${pkgname}-${pkgver}/build" --output-on-failure --stop-on-failure
++    cd "${pkgname}-${pkgver}/build"
++    ctest --output-on-failure --stop-on-failure -j1
+ }
+ package() {
+     DESTDIR="${pkgdir}" cmake --install "${pkgname}-${pkgver}/build"

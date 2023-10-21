@@ -15,11 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,6 @@
-   xdg-user-dirs
- )
+@@ -13,7 +13,7 @@
+   git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
+ }
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build
    meson compile -C build
  }
+ check() {

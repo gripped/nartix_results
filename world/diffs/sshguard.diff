@@ -45,3 +45,14 @@
  build() {
    cd "$srcdir/$pkgname-$pkgver"
    ./configure \
+@@ -18,10 +14,8 @@
+   cd "$srcdir/$pkgname-$pkgver"
+   make DESTDIR="$pkgdir" install
+   install -Dm0644 "$srcdir/tmpfile.conf" "$pkgdir/usr/lib/tmpfiles.d/sshguard.conf"
+-  install -Dm0644 "$srcdir/sshguard.service" "$pkgdir/usr/lib/systemd/system/sshguard.service"
+   install -dm0755 "$pkgdir/usr/share/doc/" "$pkgdir/etc"
+   cat <<EOF >"$pkgdir"/etc/sshguard.conf
+-LOGREADER="LANG=C /usr/bin/journalctl -afb -p info -n1 -t sshd -o cat"
+ BLACKLIST_FILE=120:/var/db/sshguard/blacklist.db
+ BACKEND="/usr/lib/sshguard/sshg-fw-iptables"
+ EOF

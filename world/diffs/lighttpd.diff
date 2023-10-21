@@ -53,3 +53,11 @@
  backup=('etc/lighttpd/lighttpd.conf' 'etc/logrotate.d/lighttpd')
  options=('emptydirs')
  build() {
+@@ -31,7 +31,6 @@
+ 	install -D -m644 "$srcdir/lighttpd.conf" "$pkgdir/etc/lighttpd/lighttpd.conf"
+ 	install -d -m700 -o http -g http "$pkgdir"/var/{log,cache}/lighttpd/
+ 	install -D -m644 "${srcdir}/lighttpd.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/lighttpd.conf"
+-	install -D -m644 "${srcdir}/lighttpd.service" "${pkgdir}/usr/lib/systemd/system/lighttpd.service"
+ 	pushd doc/config >/dev/null
+ 	find . -type f ! -name 'Makefile*' -exec install -D -m644 {} "${pkgdir}"/usr/share/doc/lighttpd/config/{} \;
+ 	popd >/dev/null

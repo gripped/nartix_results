@@ -39,7 +39,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
+@@ -1,13 +1,14 @@
  pkgname=swayidle
  depends=(
      'wayland'
@@ -55,3 +55,4 @@
 +        -Dlogind-provider=elogind
      ninja -C build
  }
+ package() {

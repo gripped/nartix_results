@@ -58,3 +58,20 @@
  build() {
    cd "$pkgname-$pkgver"
    export GOFLAGS="-buildmode=pie -trimpath"
+@@ -23,12 +19,10 @@
+ package() {
+   cd $pkgname-$pkgver
+   install -Dm755 client "$pkgdir"/usr/bin/doh-client
+-  install -Dm644 doh-client/doh-client.conf -t "$pkgdir"/etc/dns-over-https/
+-  install -Dm644 systemd/doh-client.service -t "$pkgdir"/usr/lib/systemd/system/
+-  install -Dm755 NetworkManager/dispatcher.d/doh-client -t "$pkgdir"/etc/NetworkManager/dispatcher.d/
++  install -Dm644 doh-client/doh-client.conf "$pkgdir"/etc/dns-over-https/doh-client.conf
++  install -Dm755 NetworkManager/dispatcher.d/doh-client "$pkgdir"/etc/NetworkManager/dispatcher.d/doh-client
+   install -Dm755 server "$pkgdir"/usr/bin/doh-server
+-  install -Dm644 doh-server/doh-server.conf -t "$pkgdir"/etc/dns-over-https/
+-  install -Dm644 systemd/doh-server.service -t "$pkgdir"/usr/lib/systemd/system/
+-  install -Dm755 NetworkManager/dispatcher.d/doh-server -t "$pkgdir"/etc/NetworkManager/dispatcher.d/
++  install -Dm644 doh-server/doh-server.conf "$pkgdir"/etc/dns-over-https/doh-server.conf
++  install -Dm755 NetworkManager/dispatcher.d/doh-server "$pkgdir"/etc/NetworkManager/dispatcher.d/doh-server
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }

@@ -18,6 +18,6 @@
  pkgname=libcryptui
  depends=(gtk3 gpgme dbus-glib libnotify gcr dconf libsm)
  provides=(libcryptui.so)
- prepare() {
+ pkgver() {
    cd $pkgname
-   NOCONFIGURE=1 ./autogen.sh
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'

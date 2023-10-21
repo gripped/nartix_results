@@ -79,3 +79,14 @@
      -D WITH_WEBSOCKETS=ON
      -S $pkgname-$pkgver
      -W no-dev
+@@ -45,10 +45,8 @@
+   depends+=(
+     c-ares libcares.so
+     libwebsockets libwebsockets.so
+-    systemd-libs libsystemd.so
+   )
+   DESTDIR="$pkgdir" cmake --install build
+-  install -vDm 644 "$pkgname.service" -t "$pkgdir/usr/lib/systemd/system/"
+   install -vDm 644 $pkgname-$pkgver/edl-v10 -t "$pkgdir/usr/share/licenses/$pkgname/"
+   install -vDm 644 sysusers_mosquitto.conf "${pkgdir}"/usr/lib/sysusers.d/mosquitto.conf
+ }

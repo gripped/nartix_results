@@ -83,3 +83,9 @@
      --enable-manpages --enable-all-modules --disable-java --disable-java-modules  \
      --disable-mqtt --disable-riemann --with-python=3 --with-jsonc=system
    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+@@ -55,5 +51,4 @@
+   install -dm755 "$pkgdir/var/lib/syslog-ng" "$pkgdir/etc/syslog-ng/patterndb.d"
+   install -Dm644 "$srcdir/syslog-ng.conf" "$pkgdir/etc/syslog-ng/syslog-ng.conf"
+   install -Dm644 "$srcdir/syslog-ng.logrotate" "$pkgdir/etc/logrotate.d/syslog-ng"
+-  install -Dm644 "$srcdir"/$pkgname-$pkgver/contrib/systemd/syslog-ng@default -t "$pkgdir"/etc/default
+ }

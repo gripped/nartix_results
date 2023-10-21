@@ -18,6 +18,6 @@
  pkgname=lib32-lm_sensors
  depends=('lm_sensors' 'lib32-glibc')
  provides=('libsensors.so')
- prepare() {
+ pkgver() {
    cd "${srcdir}"/lm-sensors*
-   sed -i 's/CC := gcc/CC := gcc -m32/' Makefile
+   git describe --long --tags | sed 's/V//;s/\([^-]*-g\)/r\1/;s/-/./g'

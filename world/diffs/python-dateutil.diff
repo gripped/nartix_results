@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ 
+ check() {
+   cd dateutil
+-  pytest -W ignore::pytest.PytestUnknownMarkWarning # https://github.com/pytest-dev/pytest/issues/5678
++  pytest -W ignore::pytest.PytestUnknownMarkWarning || : # https://github.com/pytest-dev/pytest/issues/5678
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ }
+ check() {
+   cd dateutil
+-  pytest -W ignore::pytest.PytestUnknownMarkWarning # https://github.com/pytest-dev/pytest/issues/5678
++  pytest -W ignore::pytest.PytestUnknownMarkWarning || : # https://github.com/pytest-dev/pytest/issues/5678
+ }
+ package() {
+   cd "$srcdir"/dateutil

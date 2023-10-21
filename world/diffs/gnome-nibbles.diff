@@ -24,10 +24,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,8 +7,11 @@
+@@ -7,12 +7,15 @@
    librsvg
  )
  groups=(gnome-extra)
+ pkgver() {
+   cd $pkgname
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+ }
  prepare() {
    cd $pkgname
 +  git cherry-pick -n 1b48446068608aff9b5edf1fdbd4b8c0d9f0be94

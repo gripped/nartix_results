@@ -3,9 +3,12 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
+lib32-giflib
+lib32-glib-networking
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
+lib32-icu
 lib32-jack2
 lib32-libgudev
 lib32-libpulse

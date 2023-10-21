@@ -40,7 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,6 +12,9 @@
+@@ -18,6 +18,9 @@
    sed 's|/sbin/resolvconf|/usr/bin/resolvconf|g' -i ../vpnc-scripts/vpnc-script
    ln -sf ../../vpnc-scripts/vpnc-script src
    ln -sf ../../vpnc.conf src
@@ -50,3 +50,11 @@
  }
  build() {
    make -C ${pkgname}
+@@ -30,7 +33,6 @@
+   install -d "${pkgdir}/usr/share/doc/${pkgname}"
+   make DESTDIR="${pkgdir}" PREFIX=/usr SBINDIR=/usr/bin install
+   install -Dm 755 ../vpnc-scripts/vpnc-script -t "${pkgdir}/etc/vpnc"
+-  install -Dm 644 ../vpnc@.service -t "${pkgdir}/usr/lib/systemd/system"
+   install -Dm 644 .github/README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+   install -Dm 644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+ }

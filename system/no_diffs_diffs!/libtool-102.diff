@@ -18,6 +18,6 @@
  provides=("libltdl=$pkgver" "libtool-multilib=$pkgver")
  conflicts=(libltdl libtool-multilib)
  replaces=(libltdl libtool-multilib)
- prepare() {
+ pkgver() {
    cd libtool
-   patch -Np1 -i "${srcdir}"/no_hostname.patch
+   git describe --tags | sed 's/-/+/g;s/^v//'

@@ -57,7 +57,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,9 @@
+@@ -9,16 +9,17 @@
  }
  build() {
    cd "$pkgname-${pkgver/_/-}"
@@ -69,3 +69,13 @@
 +  )
 +  artix-meson ${options[@]} build
  }
+ package() {
+   cd "$pkgname-${pkgver/_/-}"
+   meson install -C build --destdir "$pkgdir"
+   install -d -m755 "$pkgdir/var/lib/lxc"
+   install -d -m755 "$pkgdir/usr/lib/lxc/rootfs/dev"
+-  install -D -m644 "$srcdir"/lxc.service "$pkgdir"/usr/lib/systemd/system/lxc@.service
+-  install -D -m644 "$srcdir"/lxc-auto.service "$pkgdir"/usr/lib/systemd/system/lxc-auto.service
+   install -D -m644 "$srcdir"/lxc.tmpfiles.d "$pkgdir"/usr/lib/tmpfiles.d/lxc.conf
+   cd doc
+   find . -type f -name '*.1' -exec install -D -m644 "{}" "$pkgdir/usr/share/man/man1/{}" \;

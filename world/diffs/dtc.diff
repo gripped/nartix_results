@@ -31,7 +31,7 @@
  prepare() {
    cd dtc-$pkgver
    patch -Np1 < ../fix_test.patch
-@@ -9,6 +9,6 @@
+@@ -9,7 +9,7 @@
    sed -i "s/@VERSION@/$pkgver/" setup.py
  }
  build() {
@@ -39,3 +39,4 @@
 +  artix-meson dtc-$pkgver build
    meson compile -C build
  }
+ check() {

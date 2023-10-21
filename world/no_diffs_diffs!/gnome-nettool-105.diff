@@ -23,12 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,11 +5,12 @@
+@@ -5,6 +5,7 @@
    libgtop
    whois
  )
- prepare() {
+ pkgver() {
    cd $pkgname
+   git describe --tags | sed 's/^gnome-nettool-//;s/-/./;s/[^-]*-g/r&/;s/-/+/g'
+@@ -14,7 +15,7 @@
    git apply -3 ../fix-build.diff
  }
  build() {
@@ -36,3 +38,4 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
+ check() {

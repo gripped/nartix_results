@@ -75,7 +75,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,17 @@
+@@ -1,18 +1,21 @@
  pkgname=libayatana-appindicator
 -depends=(gcc-libs
 -         glib2
@@ -104,4 +104,9 @@
 +		-D ENABLE_BINDINGS_MONO=OFF \
 +		.
 +	make
+ }
+ package() {
+-  DESTDIR="$pkgdir" cmake --install build
++	cd "$pkgname-$pkgver"
++	make install DESTDIR="$pkgdir"
  }

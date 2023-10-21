@@ -78,3 +78,21 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
+@@ -112,13 +107,13 @@
+   local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
+   install -Dvm644 /dev/stdin "$distini" <<END
+ [Global]
+-id=archlinux
++id=artixlinux
+ version=1.0
+-about=Mozilla Firefox for Arch Linux
++about=Mozilla Firefox for Artix Linux
+ [Preferences]
+-app.distributor=archlinux
++app.distributor=artixlinux
+ app.distributor.channel=$pkgname
+-app.partner.archlinux=archlinux
++app.partner.artixlinux=artixlinux
+ END
+   local i theme=official
+   for i in 16 22 24 32 48 64 128 256; do

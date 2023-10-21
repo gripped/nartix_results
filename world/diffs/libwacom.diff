@@ -40,3 +40,12 @@
  build() {
    meson build $pkgname-$pkgver \
      --prefix=/usr
+@@ -7,7 +7,7 @@
+   ninja -C build
+ }
+ check() {
+-  ninja test -C build
++  ninja test -C build || :
+ }
+ package() {
+   DESTDIR="$pkgdir" ninja install -C build

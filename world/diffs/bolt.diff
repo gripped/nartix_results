@@ -32,7 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  pkgname=bolt
 -depends=('polkit' 'systemd')
 +depends=('polkit' 'udev')
@@ -42,3 +42,4 @@
 +  artix-meson ../build
    ninja -v -C ../build
  }
+ check() {

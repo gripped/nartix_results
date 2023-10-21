@@ -39,7 +39,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,6 +13,8 @@
+@@ -13,11 +13,15 @@
          -DDBUS_CONFIG_DIR=/usr/share/dbus-1/system.d \
          -DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
          -DBUILD_MAN_PAGES=ON \
@@ -48,3 +48,10 @@
          -DUID_MAX=60513
    cmake --build build
  }
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++  install -Dm644 sddm.sysusers "$pkgdir"/usr/lib/sysusers.d/sddm.conf
++  install -Dm644 sddm.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/sddm.conf
+   install -d "$pkgdir"/usr/lib/sddm/sddm.conf.d
+   "$pkgdir"/usr/bin/sddm --example-config > "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf
+   sed -r 's|DefaultPath=.*|DefaultPath=/usr/local/sbin:/usr/local/bin:/usr/bin|g' -i "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf

@@ -91,7 +91,7 @@
  }
  build() {
    local prefix=/usr sysconfdir=/etc
-@@ -15,7 +14,7 @@
+@@ -15,11 +14,15 @@
      --sysconfdir=${sysconfdir} \
      --prefix=${prefix} \
      --libdir=${prefix}/lib \
@@ -99,4 +99,12 @@
 +    --systemdsystemunitdir=no \
      --bashcompletiondir=$(pkg-config --variable=completionsdir bash-completion)
    make
+ }
+ package() {
+   cd "$srcdir/${pkgname}-${pkgver}"
+   DESTDIR="$pkgdir" make install
++  install -Dm 755 $srcdir/artix.conf $pkgdir/etc/dracut.conf.d/01-artix.conf
++  install -Dm755 "${srcdir}"/dracut-install.script "${pkgdir}"/usr/share/libalpm/scripts/dracut-install
++  install -Dm755 "${srcdir}"/dracut-remove.script "${pkgdir}"/usr/share/libalpm/scripts/dracut-remove
++  install -Dm644 -t "${pkgdir}"/usr/share/libalpm/hooks "${srcdir}"/*.hook
  }

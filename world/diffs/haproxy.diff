@@ -59,11 +59,23 @@
      USE_ZLIB=1
      make \
        SBINDIR=/usr/bin \
-@@ -27,7 +26,4 @@
+@@ -27,9 +26,6 @@
        CFLAGS="$CFLAGS" \
        LDFLAGS="$LDFLAGS" \
        admin/{halog/halog,iprange/ip{,6}range}
 -    make \
 -      SBINDIR=/usr/bin \
 -      -C admin/systemd/
+ }
+ package() {
+   cd haproxy-$pkgver
+@@ -43,9 +39,5 @@
+   done
+   install -D -m0644 ../haproxy.sysusers "$pkgdir"/usr/lib/sysusers.d/haproxy.conf
+   install -D -m0644 ../haproxy.cfg "$pkgdir"/etc/haproxy/haproxy.cfg
+-  install -D -m0644 admin/systemd/haproxy.service \
+-    "$pkgdir"/usr/lib/systemd/system/haproxy.service
+-  install -D -m0644 admin/syntax-highlight/haproxy.vim \
+-    "$pkgdir"/usr/share/nvim/runtime/syntax/haproxy.vim
+   cp -r examples "$pkgdir"/usr/share/haproxy/examples
  }

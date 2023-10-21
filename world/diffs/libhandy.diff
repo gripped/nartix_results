@@ -33,10 +33,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,11 +4,12 @@
+@@ -4,15 +4,16 @@
    glib2
    gtk3
  )
+ pkgver() {
+-  cd libhandy
++  cd libhandy-${pkgver}
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+ }
  prepare() {
 -  cd libhandy
 +  cd libhandy-${pkgver}
@@ -46,4 +51,4 @@
 +  artix-meson libhandy-${pkgver} build -D gtk_doc=true
    meson compile -C build
  }
- package_libhandy-docs() {
+ check() {

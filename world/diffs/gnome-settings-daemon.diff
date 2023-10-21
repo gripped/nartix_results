@@ -31,7 +31,7 @@
    upower
  )
  groups=(gnome)
-@@ -29,6 +28,6 @@
+@@ -33,7 +32,7 @@
    git -c protocol.file.allow=always submodule update
  }
  build() {
@@ -39,3 +39,4 @@
 +  artix-meson $pkgname build -Dsystemd=false
    meson compile -C build
  }
+ check() {

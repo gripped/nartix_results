@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,4 +27,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd    #remove systemd service
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,4 +10,5 @@
+ }
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++  rm -r $pkgdir/usr/lib/systemd    #remove systemd service
+ }

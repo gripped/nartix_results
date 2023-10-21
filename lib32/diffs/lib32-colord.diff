@@ -52,7 +52,7 @@
      --libdir=/usr/lib32 \
      -D docs=false \
      -D man=false \
-@@ -27,6 +27,7 @@
+@@ -27,7 +27,8 @@
      -D introspection=false \
      -D vapi=false \
      -D print_profiles=false \
@@ -61,3 +61,4 @@
 +    -D systemd=false
    meson compile -C build
  }
+ package() {

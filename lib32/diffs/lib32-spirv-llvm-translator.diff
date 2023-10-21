@@ -16,8 +16,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,8 @@
- depends=(lib32-llvm-libs lib32-spirv-tools ${pkgname#lib32-})
+@@ -7,6 +7,8 @@
+ }
  build() {
    export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
 +  export CMAKE_PREFIX_PATH=/usr

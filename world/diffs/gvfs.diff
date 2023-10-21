@@ -73,7 +73,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,7 +23,9 @@
+@@ -27,7 +27,9 @@
    cd gvfs
  }
  build() {
@@ -83,8 +83,8 @@
 +    -D tmpfilesdir=/usr/lib/tmpfiles.d
    meson compile -C build
  }
- _pick() {
-@@ -45,7 +47,7 @@
+ check() {
+@@ -52,7 +54,7 @@
      'gvfs-nfs: NFS support'
      'gvfs-smb: SMB/CIFS (Windows client) support'
    )
@@ -93,7 +93,7 @@
    ( cd "$pkgdir"
      _pick smb \
        usr/lib/gvfsd-smb{,-browse} \
-@@ -54,25 +56,21 @@
+@@ -61,25 +63,21 @@
        usr/share/gvfs/mounts/smb{,-browse}.mount
      _pick afc \
        usr/lib/gvfs{-afc-volume-monitor,d-afc} \

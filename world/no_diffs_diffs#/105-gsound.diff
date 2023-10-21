@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  pkgname=gsound
  depends=('glib2' 'glibc' 'libcanberra')
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson $pkgname-$pkgver build -D gtk_doc=true
    meson compile -C build
  }
+ package() {

@@ -20,9 +20,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
- )
- provides=(libgranite.so)
+@@ -14,7 +14,7 @@
+   git describe --tags
+ }
  build() {
 -  arch-meson granite build \
 +  artix-meson granite build \

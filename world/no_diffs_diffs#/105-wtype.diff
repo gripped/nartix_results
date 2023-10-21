@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -2,7 +2,7 @@
  depends=('libxkbcommon' 'wayland')
  build() {
    cd wtype-$pkgver
@@ -23,3 +23,4 @@
 +  artix-meson build
    ninja -C build
  }
+ package() {

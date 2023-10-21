@@ -27,7 +27,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,11 +3,9 @@
+@@ -3,16 +3,14 @@
  backup=("etc/default/earlyoom")
  prepare() {
      cd "$pkgname-$pkgver"
@@ -39,4 +39,10 @@
      cd "$pkgname-$pkgver"
 -    make PREFIX=/usr SYSTEMDUNITDIR=/usr/lib/systemd/system VERSION=$pkgver earlyoom
 +    make PREFIX=/usr VERSION=$pkgver earlyoom
+ }
+ package() {
+     cd "$pkgname-$pkgver"
+-    make install DESTDIR="$pkgdir" PREFIX=/usr SYSTEMDUNITDIR=/usr/lib/systemd/system
++    make install-default install-bin install-man  DESTDIR="$pkgdir" PREFIX=/usr
+     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
  }

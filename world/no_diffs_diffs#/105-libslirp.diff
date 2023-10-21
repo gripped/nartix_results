@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -2,7 +2,7 @@
  depends=(glib2)
  provides=('libslirp.so')
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson "$pkgname-v${pkgver}" build
    ninja -C build
  }
+ package() {

@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,6 +13,6 @@
+@@ -17,7 +17,7 @@
    cd $pkgname
  }
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
+ check() {

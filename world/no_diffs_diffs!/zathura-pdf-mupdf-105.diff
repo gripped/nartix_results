@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,6 +7,6 @@
+@@ -7,7 +7,7 @@
  }
  build() {
    cd zathura-pdf-mupdf-$pkgver
@@ -32,3 +32,4 @@
 +  artix-meson build
    ninja -C build
  }
+ package(){

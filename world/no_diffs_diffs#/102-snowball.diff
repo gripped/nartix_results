@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgbase=snowball
  pkgname=(snowball libstemmer)
- prepare() {
+ pkgver() {
    cd snowball
-   git apply -3 ../dynamiclib.diff
+   git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'

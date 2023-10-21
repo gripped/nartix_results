@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,9 +1,9 @@
  pkgname=xdg-desktop-portal-wlr
  provides=('xdg-desktop-portal-impl')
 -depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih')
@@ -35,3 +35,4 @@
 +    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
      ninja -C build
  }
+ package() {

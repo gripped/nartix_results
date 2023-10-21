@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,7 @@
+@@ -26,7 +26,7 @@
  }
  build() {
    CFLAGS+=" -ffat-lto-objects"
@@ -32,4 +32,12 @@
 +  artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
    meson compile -C build
  }
- _pick() {
+ check() {
+@@ -51,6 +51,7 @@
+   _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
++  rm -r "$pkgdir"/usr/lib/systemd
+ }
+ package_libsysprof-capture() {
+   pkgdesc+=" - capture library"

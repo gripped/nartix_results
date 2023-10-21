@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -38,7 +38,7 @@
-   git -c protocol.file.allow=always submodule update
+@@ -42,7 +42,7 @@
+   git describe --tags | sed 's/-//'
  }
  build() {
 -  arch-meson gamescope build \

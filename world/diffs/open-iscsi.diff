@@ -36,7 +36,7 @@
  install=$pkgname.install
  backup=('etc/iscsi/iscsid.conf'
  	'etc/iscsi/initiatorname.iscsi')
-@@ -8,7 +8,8 @@
+@@ -8,8 +8,9 @@
    local _meson_options=(
      -Discsi_sbindir=/usr/bin/
      -Drulesdir=/usr/lib/udev/rules.d/
@@ -46,3 +46,4 @@
 +  artix-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
    meson compile -C build
  }
+ package() {

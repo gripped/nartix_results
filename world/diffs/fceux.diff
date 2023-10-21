@@ -44,7 +44,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
+@@ -1,25 +1,25 @@
  pkgname=fceux
  depends=(gd lua minizip qt5-base sdl2)
  prepare() {
@@ -65,4 +65,13 @@
 -    -S $pkgname
 +    -S $pkgname-$pkgver
    ninja -C build
+ }
+ package() {
+   DESTDIR="$pkgdir" ninja -C build install
+   install -d "$pkgdir/usr/share/doc/$pkgname"
+-  cp -r $pkgname/documentation/* "$pkgdir/usr/share/doc/$pkgname/"
+-  install -Dm644 $pkgname/changelog.txt \
++  cp -r $pkgname-$pkgver/documentation/* "$pkgdir/usr/share/doc/$pkgname/"
++  install -Dm644 $pkgname-$pkgver/changelog.txt \
+     "$pkgdir/usr/share/doc/$pkgname/changelog.txt"
  }

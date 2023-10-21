@@ -31,7 +31,7 @@
    libstemmer
    libyaml
    pacman
-@@ -21,6 +22,6 @@
+@@ -25,7 +26,7 @@
      -D gtk-doc=true
      -D rpm=false
    )
@@ -39,3 +39,4 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

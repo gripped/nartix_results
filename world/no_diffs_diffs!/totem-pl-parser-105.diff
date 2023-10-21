@@ -23,11 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,11 @@
+@@ -3,6 +3,7 @@
  provides=("totem-plparser=$pkgver-$pkgrel" libtotem-plparser{,-mini}.so)
  conflicts=(totem-plparser)
  replaces=("totem-plparser<=3.26.3-1")
- prepare() {
+ pkgver() {
+   cd $pkgname
+   git describe --tags | sed 's/^V_//;s/_/./g;s/-/+/g'
+@@ -11,7 +12,7 @@
    cd $pkgname
  }
  build() {
@@ -35,3 +38,4 @@
 +  artix-meson $pkgname build -D enable-gtk-doc=true
    meson compile -C build
  }
+ check() {

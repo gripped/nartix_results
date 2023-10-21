@@ -43,7 +43,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,19 @@
+@@ -1,23 +1,24 @@
  pkgname=gnome-disk-utility
 +groups=(gnome)
  depends=(
@@ -60,8 +60,13 @@
    udisks2
  )
 -groups=(gnome)
+ pkgver() {
+   cd $pkgname
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+ }
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build -Dlogind=libelogind
    meson compile -C build
  }
+ check() {

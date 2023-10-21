@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,6 +28,7 @@
+ )
+ checkdepends=(valgrind)
+ replaces=('flatpak<0.9.10')
++options=(debug)
+ _commit=d7dbc51267e83242a9fe0d5a7b5304db0ac72f4f  # tags/1.2.3
+ source=(
+   "git+https://github.com/flatpak/flatpak-builder#commit=$_commit"
+@@ -74,10 +75,6 @@
+   make
+ }
+ 
+-check() {
+-  cd $pkgname
+-  make -k check
+-}
+ 
+ package() {
+   cd $pkgname
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,7 @@
+   unzip
+ )
+ replaces=('flatpak<0.9.10')
+ pkgver() {
+   cd $pkgname
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -41,10 +42,6 @@
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+-check() {
+-  cd $pkgname
+-  make -k check
+-}
+ package() {
+   cd $pkgname
+   make DESTDIR="$pkgdir" install

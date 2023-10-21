@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -14,7 +14,7 @@
    cd libportal
  }
  build() {
@@ -23,4 +23,4 @@
 +  artix-meson libportal build
    meson compile -C build
  }
- _pick() {
+ check() {

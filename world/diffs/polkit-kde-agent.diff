@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=polkit-kde-agent
+ pkgver=5.27.8
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc='Daemon providing a polkit authentication UI for KDE'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+@@ -27,4 +27,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd    # remove systemd service
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,4 +10,5 @@
+ }
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++  rm -r $pkgdir/usr/lib/systemd    # remove systemd service
+ }

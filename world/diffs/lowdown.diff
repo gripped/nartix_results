@@ -26,6 +26,6 @@
  pkgname=lowdown
  depends=('glibc' 'libmd')
 -provides=('liblowdown.so')
- build () {
+ pkgver() {
    cd "$pkgname"
- 	./configure \
+   git describe --tags | sed -e 's/^VERSION_//' -e 's/_/./g'

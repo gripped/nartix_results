@@ -70,7 +70,7 @@
    glib2 libgio-2.0.so
    gnutls
    hicolor-icon-theme
-@@ -10,7 +9,10 @@
+@@ -10,8 +9,11 @@
  backup=(
    etc/passim.conf
  )
@@ -81,4 +81,11 @@
 -  arch-meson ${pkgname}-${pkgver} build
 +  artix-meson ${pkgname}-${pkgver} build
    meson compile -C build
+ }
+ check() {
+@@ -19,5 +21,4 @@
+ }
+ package() {
+   DESTDIR="${pkgdir}" meson install -C build
+-  rm "${pkgdir}"/var/lib/passim/data/*
  }

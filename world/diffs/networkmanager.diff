@@ -109,8 +109,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,16 +6,18 @@
- )
+@@ -10,16 +10,18 @@
+ }
  prepare() {
    cd NetworkManager
 -  git apply -3 ../0001-connectivity-Make-curl-timeout-callback-non-repeatin.patch
@@ -130,7 +130,7 @@
      -D iwd=true
      -D teamdctl=true
      -D bluez5_dun=true
-@@ -32,7 +34,7 @@
+@@ -36,7 +38,7 @@
    )
    CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
    CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
@@ -138,8 +138,8 @@
 +  artix-meson NetworkManager build "${meson_options[@]}"
    meson compile -C build
  }
- _pick() {
-@@ -49,6 +51,7 @@
+ check() {
+@@ -56,6 +58,7 @@
      audit
      bluez-libs
      curl
@@ -147,7 +147,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -66,6 +69,9 @@
+@@ -73,6 +76,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -157,7 +157,7 @@
  END
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
  [connectivity]
-@@ -80,15 +86,13 @@
+@@ -87,15 +93,13 @@
    _pick libnm usr/share/gtk-doc/html/libnm
    _pick libnm usr/share/vala/vapi/libnm.*
    _pick cloud usr/lib/**/*nm-cloud-setup*

@@ -75,7 +75,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,14 @@
+@@ -1,16 +1,23 @@
  pkgname=sdcv
 -depends=('glib2' 'readline' 'zlib')
 -provides=('stardict')
@@ -98,4 +98,15 @@
 +	cmake -D CMAKE_INSTALL_PREFIX="/usr" \
 +		-D BUILD_TESTS=True .
 +	make
++}
++check() {
++	cd "$pkgname-$pkgver"
++	ctest --output-on-failure
+ }
+ package() {
+-  cd "${srcdir}"/$pkgname-$pkgver/build
+-  make DESTDIR="${pkgdir}" install
++	cd "$pkgname-$pkgver"
++	mkdir locale
++	make install DESTDIR="$pkgdir"
  }

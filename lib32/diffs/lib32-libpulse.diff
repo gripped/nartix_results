@@ -44,7 +44,7 @@
    libpulse
  )
  provides=("lib32-pulseaudio=$pkgver")
-@@ -40,11 +40,13 @@
+@@ -44,12 +44,14 @@
      -D tests=false
      -D udevrulesdir=/usr/lib/udev/rules.d
      -D webrtc-aec=disabled
@@ -59,3 +59,4 @@
 +  artix-meson pulseaudio build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

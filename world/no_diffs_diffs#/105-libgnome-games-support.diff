@@ -23,11 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,11 @@
+@@ -1,6 +1,7 @@
  pkgname=libgnome-games-support
  depends=(libgee gtk3)
  provides=("libgnome-games-support-${pkgver%%.*}.so")
- prepare() {
+ pkgver() {
+   cd libgnome-games-support
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -9,7 +10,7 @@
    cd libgnome-games-support
  }
  build() {
@@ -35,3 +38,4 @@
 +  artix-meson libgnome-games-support build
    meson compile -C build
  }
+ check() {

@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  pkgname=libxmlb
  depends=(glib2 libstemmer xz zstd)
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson ${pkgname}-${pkgver} build -D stemmer=true
    ninja -v -C build
  }
+ check() {

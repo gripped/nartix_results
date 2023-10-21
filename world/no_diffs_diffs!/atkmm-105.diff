@@ -24,13 +24,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
+@@ -1,7 +1,7 @@
  pkgbase=atkmm
  pkgname=(atkmm atkmm-docs)
  depends=(atk glibmm)
 -options=!emptydirs
 +options=!emptydirs
- prepare() {
+ pkgver() {
+   cd atkmm
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -10,7 +10,7 @@
    cd atkmm
  }
  build() {
@@ -38,4 +41,4 @@
 +  artix-meson atkmm build -D maintainer-mode=true
    meson compile -C build
  }
- package_atkmm-docs() {
+ check() {

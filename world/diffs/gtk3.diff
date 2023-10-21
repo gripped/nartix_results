@@ -64,7 +64,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,13 +35,14 @@
+@@ -35,17 +35,14 @@
    libxkbcommon
    libxrandr
    libxrender
@@ -74,13 +74,17 @@
 -  tracker3
    wayland
  )
+-pkgver() {
+-  cd gtk
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+-}
  prepare() {
 -  cd gtk
 +  cd gtk-${pkgver}
  }
  build() {
    local meson_options=(
-@@ -51,10 +52,9 @@
+@@ -55,10 +52,9 @@
      -D gtk_doc=true
      -D introspection=true
      -D man=true
@@ -92,7 +96,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -67,7 +67,6 @@
+@@ -71,7 +67,6 @@
    done
  }
  package_gtk3() {

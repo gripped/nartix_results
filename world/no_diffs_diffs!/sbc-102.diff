@@ -18,6 +18,6 @@
  pkgname=sbc
  depends=(glibc)
  provides=(libsbc.so)
- prepare() {
+ pkgver() {
    cd sbc
-   autoreconf -fvi
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'

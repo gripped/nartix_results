@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,9 +17,6 @@
+ sha256sums=('SKIP'
+             'SKIP')
+ 
+-pkgver() {
+-  date +%Y%m%d
+-}
+ 
+ prepare(){
+   cp -a foomatic-db foomatic-db-ppds
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,6 @@
+ pkgbase="foomatic-db"
+ pkgname=('foomatic-db' 'foomatic-db-ppds' 'foomatic-db-nonfree' 'foomatic-db-nonfree-ppds')
+ options=('!emptydirs')
+-pkgver() {
+-  date +%Y%m%d
+-}
+ prepare(){
+   cp -a foomatic-db foomatic-db-ppds
+   cp -a foomatic-db-nonfree foomatic-db-nonfree-ppds

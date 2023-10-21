@@ -15,12 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
-   done
+@@ -17,7 +17,7 @@
+   git describe --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
  }
  build() {
 -  arch-meson $pkgname build -D gtk_doc=true
 +  artix-meson $pkgname build -D gtk_doc=true
    meson compile -C build
  }
- package_libgit2-glib() {
+ check() {

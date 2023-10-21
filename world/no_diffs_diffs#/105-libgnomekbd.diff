@@ -23,12 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,6 +1,7 @@
  pkgname=libgnomekbd
  depends=(libxklavier gtk3 dconf)
  provides=(libgnomekbd{,ui}.so)
- prepare() {
+ pkgver() {
    cd $pkgname
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+@@ -10,7 +11,7 @@
    git apply -3 ../meson.diff
  }
  build() {
@@ -36,3 +38,4 @@
 +  artix-meson $pkgname build
    meson compile -C build
  }
+ check() {

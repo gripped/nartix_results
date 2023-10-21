@@ -32,7 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,6 +12,6 @@
+@@ -16,7 +16,7 @@
    local meson_options=(
      -D b_lto=false
    )
@@ -40,3 +40,4 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
+ check() {

@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,6 @@
+ 
+ check() {
+   cd icu/source
+-  make -k check
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,6 @@
+ }
+ check() {
+   cd icu/source
+-  make -k check
+ }
+ package() {
+   cd icu/source

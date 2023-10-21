@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,6 @@
+ 
+ check() {
+     cd $pkgname-v$pkgver
+-    make check
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,6 @@
+ }
+ check() {
+     cd $pkgname-v$pkgver
+-    make check
+ }
+ package() {
+     cd $pkgname-v$pkgver

@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,6 @@
+   cd ${pkgname}
+   make DESTDIR="${pkgdir}" install
+ 
+-  install -Dm644 sample-etc_systemd.service "$pkgdir"/usr/lib/systemd/system/ddclient.service
+   install -d "$pkgdir"/var/cache/ddclient
+ 
+   install -Dm644 README.cisco "$pkgdir"/usr/share/doc/ddclient/README.cisco
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,6 @@
+ package() {
+   cd ${pkgname}
+   make DESTDIR="${pkgdir}" install
+-  install -Dm644 sample-etc_systemd.service "$pkgdir"/usr/lib/systemd/system/ddclient.service
+   install -d "$pkgdir"/var/cache/ddclient
+   install -Dm644 README.cisco "$pkgdir"/usr/share/doc/ddclient/README.cisco
+   install -Dm644 README.md "$pkgdir"/usr/share/doc/ddclient/README.md

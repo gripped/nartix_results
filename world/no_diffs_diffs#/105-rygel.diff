@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,6 +18,6 @@
+@@ -22,7 +22,7 @@
    cd rygel
  }
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson rygel build
    meson compile -C build
  }
+ check() {

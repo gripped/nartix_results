@@ -95,8 +95,8 @@
 +_arch_list=(IA32 X64)
  _build_type=RELEASE
  _build_plugin=GCC5
- prepare() {
-@@ -55,8 +55,6 @@
+ pkgver() {
+@@ -59,8 +59,6 @@
    cd $pkgbase
    export GCC5_IA32_PREFIX="x86_64-linux-gnu-"
    export GCC5_X64_PREFIX="x86_64-linux-gnu-"
@@ -105,3 +105,34 @@
    echo "Building base tools (AARCH64)"
    ARCH=AARCH64 make -C BaseTools
    echo "Building base tools (ARM)"
+@@ -230,30 +228,6 @@
+       ;;
+     esac
+   done
+-}
+-package_edk2-aarch64() {
+-  local _
+-  conflicts=('edk2-armvirt<202211')
+-  provides=(edk2-armvirt)
+-  replaces=('edk2-armvirt<202211')
+-  cd $pkgbase
+-  install -vDm 644 Build/ArmVirtQemu-$_arch/${_build_type}_${_build_plugin}/FV/*.fd -t "$pkgdir/usr/share/$pkgbase/${_arch,,}/"
+-  install -vdm 755 "$pkgdir/usr/share/AAVMF"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_CODE.fd "$pkgdir/usr/share/AAVMF/AAVMF_CODE.fd"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_VARS.fd "$pkgdir/usr/share/AAVMF/AAVMF_VARS.fd"
+-  install -vDm 644 ../*$pkgname.json -t "$pkgdir/usr/share/qemu/firmware/"
+-  install -vDm 644 License.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  ln -svf /usr/share/$pkgbase "$pkgdir/usr/share/$pkgbase-armvirt"
+-}
+-package_edk2-arm() {
+-  local _
+-  cd $pkgbase
+-  install -vDm 644 Build/ArmVirtQemu-$_arch/${_build_type}_$_build_plugin/FV/*.fd -t "$pkgdir/usr/share/$pkgbase/${_arch,,}/"
+-  install -vdm 755 "$pkgdir/usr/share/AAVMF"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_CODE.fd "$pkgdir/usr/share/AAVMF/AAVMF32_CODE.fd"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_VARS.fd "$pkgdir/usr/share/AAVMF/AAVMF32_VARS.fd"
+-  install -vDm 644 ../*$pkgname.json -t "$pkgdir/usr/share/qemu/firmware/"
+-  install -vDm 644 License.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
+ package_edk2-shell() {
+   local _arch

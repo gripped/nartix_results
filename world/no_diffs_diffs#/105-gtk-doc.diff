@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,6 +12,6 @@
+@@ -16,7 +16,7 @@
    git apply -3 ../0002-Fix-tests.patch
  }
  build() {
@@ -23,3 +23,4 @@
 +  artix-meson gtk-doc build
    meson compile -C build
  }
+ check() {

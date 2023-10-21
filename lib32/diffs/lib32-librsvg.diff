@@ -52,8 +52,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,14 +14,13 @@
- )
+@@ -18,14 +18,13 @@
+ }
  prepare() {
    cd librsvg
 +  git apply -3 ../multilib.diff

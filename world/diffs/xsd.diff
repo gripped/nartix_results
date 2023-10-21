@@ -62,7 +62,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,11 @@
+@@ -1,22 +1,17 @@
  pkgname=xsd
 -depends=(gcc-libs
 -         glibc
@@ -85,4 +85,13 @@
 -  bpkg build xsd ?sys:libxerces-c/* ?sys:libxsd-frontend/* ?sys:libcutl/*
 +  cd $pkgname-$_pkgver
 +  make CXXFLAGS="${CXXFLAGS} -std=c++14"
+ }
+ package() {
+-  cd build
+-  bpkg install config.install.root="$pkgdir"/usr xsd
++  cd $pkgname-$_pkgver
++  make install_prefix="$pkgdir/usr" install
+   mv "$pkgdir"/usr/bin/xsd{,cxx}
+   mv "$pkgdir"/usr/share/man/man1/xsd{,cxx}.1
+-  install -Dm644 "$srcdir"/$pkgname-$pkgver/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
  }

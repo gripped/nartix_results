@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=libcdio
  depends=(ncurses gcc-libs)
- prepare() {
+ pkgver() {
    cd $pkgname
-   git cherry-pick -n 2adb43c60afc6e98e94d86dad9f93d3df52862b1
+   git describe --tags | sed 's/^release-//;s/[^-]*-g/r&/;s/-/+/g'

@@ -59,7 +59,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,13 +2,14 @@
+@@ -2,25 +2,26 @@
  depends=(
    'python-docstring-to-markdown'
    'python-jedi'
@@ -76,3 +76,20 @@
 +  cd $pkgname-$pkgver
    python -m build --wheel --skip-dependency-check --no-isolation
  }
+ check() {
+-  cd $pkgname
+-  python -m venv --system-site-packages test-env
+-  test-env/bin/python -m installer dist/*.whl
++  cd $pkgname-$pkgver
++  mkdir -p temp
++  local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   python -m installer --destdir=temp dist/*.whl
+-  PATH="$PWD/temp/usr/bin:$PATH" test-env/bin/python -m pytest tests
++  PATH="$PWD/temp/usr/bin:$PATH" PYTHONPATH="$PWD/temp/$site_packages" pytest tests
+ }
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   install -d "$pkgdir"/usr/share/licenses/$pkgname

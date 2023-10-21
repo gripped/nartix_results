@@ -15,10 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,5 +9,5 @@
+@@ -9,7 +9,7 @@
  build() {
    cd ${pkgname}-agents-${pkgver}
    perl Makefile.PL INSTALLDIRS=vendor
 -  make
 +  make -j1
  }
+ check() {
+   cd ${pkgname}-agents-${pkgver}

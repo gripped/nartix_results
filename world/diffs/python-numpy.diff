@@ -33,7 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
+@@ -5,7 +5,7 @@
    CFLAGS+=" -ffat-lto-objects" \
    CXXFLAGS+=" -ffat-lto-objects" \
    python -m build --wheel --no-isolation \
@@ -41,3 +41,4 @@
 +    -Csetup-args="-Dblas=blas" \
      -Csetup-args="-Dlapack=lapack"
  }
+ check() {

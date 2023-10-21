@@ -23,13 +23,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,12 +6,11 @@
+@@ -6,7 +6,6 @@
    glib2
    pipewire
    rtkit
 -  systemd
  )
- prepare() {
+ pkgver() {
+   cd $pkgname
+@@ -16,7 +15,7 @@
    cd $pkgname
  }
  build() {
@@ -37,3 +39,4 @@
 +  artix-meson $pkgname build -Dsystemd=disabled
    meson compile -C build
  }
+ check() {

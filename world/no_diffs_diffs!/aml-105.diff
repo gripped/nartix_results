@@ -15,11 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=(glibc)
- provides=(libaml.so)
+@@ -6,7 +6,7 @@
+   git describe --tags | sed 's/^v//'
+ }
  build() {
 -  arch-meson aml build
 +  artix-meson aml build
    meson compile -C build
  }
+ package() {

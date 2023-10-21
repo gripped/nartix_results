@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,7 +35,7 @@
+@@ -39,7 +39,7 @@
    CXXFLAGS+=" -g3"
    CFLAGS+=" -ffat-lto-objects"
    CXXFLAGS+=" -ffat-lto-objects"
@@ -23,4 +23,4 @@
 +  artix-meson glib build "${meson_options[@]}"
    meson compile -C build
  }
- package_glib2() {
+ check() {

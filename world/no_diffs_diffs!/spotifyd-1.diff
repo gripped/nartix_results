@@ -1,8 +1,0 @@
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -34,5 +34,4 @@
-   cd spotifyd-${pkgver}
-   cargo install --locked --root "${pkgdir}"/usr --path "${srcdir}"/${pkgbase}-${pkgver} --features pulseaudio_backend,dbus_mpris,dbus_keyring,rodio_backend
-   rm "${pkgdir}"/usr/{.crates.toml,.crates2.json}
--  install -Dm644 -t "${pkgdir}"/usr/lib/systemd/user/ "${srcdir}"/${pkgbase}-${pkgver}/contrib/spotifyd.service
- }

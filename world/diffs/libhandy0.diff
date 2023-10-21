@@ -31,12 +31,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,10 @@
+@@ -2,14 +2,14 @@
  depends=(glib2 gtk3)
  provides=(libhandy-0.0.so)
  prepare() {
 -  cd libhandy
 +  cd libhandy-${pkgver}
+ }
+ pkgver() {
+-  cd libhandy
++  cd libhandy-${pkgver}
+   git describe --tags | sed 's/^v//;s/-/+/g'
  }
  build() {
 -  arch-meson libhandy build \

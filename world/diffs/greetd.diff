@@ -32,3 +32,11 @@
  _archive="$pkgbase-$pkgver"
  prepare() {
  	cd "$_archive"
+@@ -25,7 +25,6 @@
+ 	        "etc/pam.d/$pkgbase")
+ 	cd "$_archive"
+ 	install -Dm0755 -t "$pkgdir/usr/bin/" "target/release/$pkgname"
+-	install -Dm0644 -t "$pkgdir/usr/lib/systemd/system/" "$pkgname.service"
+ 	install -Dm0644 -t "$pkgdir/etc/$pkgname/" config.toml
+ 	install -Dm0644 "../$pkgname.pam" "$pkgdir/etc/pam.d/$pkgname"
+ 	install -Dm0644 "../$pkgname.sysusers" "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"

@@ -49,3 +49,10 @@
  backup=('etc/minio/minio.conf')
  build() {
    cd minio
+@@ -25,6 +26,5 @@
+   install -dm750 -o 103 -g 103 "${pkgdir}/var/lib/minio"
+   install -Dm755 minio/minio "${pkgdir}/usr/bin/minio"
+   install -Dm600 "${srcdir}/minio.conf" "${pkgdir}/etc/minio/minio.conf"
+-  install -Dm644 "${srcdir}/minio.service" "${pkgdir}/usr/lib/systemd/system/minio.service"
+   install -Dm644 "${srcdir}/minio.sysusers" "${pkgdir}/usr/lib/sysusers.d/minio.conf"
+ }

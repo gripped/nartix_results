@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -10,7 +10,7 @@
    git apply -3 ../30.patch
  }
  build() {
@@ -32,4 +32,4 @@
 +  artix-meson librest build -D vapi=true
    meson compile -C build
  }
- _pick() {
+ check() {

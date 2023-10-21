@@ -17,6 +17,6 @@
 @@ -1,5 +1,6 @@
  pkgname=clutter-gst
  depends=(clutter gst-plugins-base-libs libxdamage libgudev gdk-pixbuf2)
- prepare() {
+ pkgver() {
    cd $pkgname
-   git apply -3 ../0001-video-sink-Remove-RGBx-BGRx-support.patch
+   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'

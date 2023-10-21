@@ -43,8 +43,8 @@
 -  tracker3
    wayland
  )
- prepare() {
-@@ -55,10 +54,9 @@
+ pkgver() {
+@@ -59,10 +58,9 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true
@@ -55,4 +55,13 @@
 +  artix-meson gtk build "${meson_options[@]}"
    meson compile -C build
  }
- package_gtk4() {
+ check() (
+@@ -71,7 +69,7 @@
+   weston --backend=headless-backend.so --socket=$WAYLAND_DISPLAY --idle-time=0 &
+   _w=$!
+   trap "kill $_w; wait" EXIT
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs --no-suite headless # skip these test for now
+ )
+ _pick() {
+   local p="$1" f d; shift

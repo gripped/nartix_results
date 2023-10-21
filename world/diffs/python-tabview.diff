@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ 
+ check() {
+   cd tabview-$pkgver
+-  unbuffer python -m unittest discover
++  TERM=xterm unbuffer python -m unittest discover
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ }
+ check() {
+   cd tabview-$pkgver
+-  unbuffer python -m unittest discover
++  TERM=xterm unbuffer python -m unittest discover
+ }
+ package() {
+   cd tabview-$pkgver

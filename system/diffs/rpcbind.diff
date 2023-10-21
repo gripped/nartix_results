@@ -74,7 +74,7 @@
    patch -Np1 -i ../CVE-2017-8779.diff
  }
  build() {
-@@ -14,6 +13,7 @@
+@@ -14,13 +13,13 @@
      --with-rpcuser=rpc \
      --enable-warmstarts \
      --with-statedir=/var/lib/rpcbind \
@@ -82,3 +82,10 @@
      --enable-rmtcalls
    make
  }
+ package() {
+   cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+-  install -D -m644 "$srcdir"/rpcbind.conf "$pkgdir"/etc/conf.d/rpcbind
+   install -m644 man/rpcinfo.8 "$pkgdir"/usr/share/man/man8/
+   install -Dm644 ../tmpfiles.d "${pkgdir}"/usr/lib/tmpfiles.d/rpcbind.conf
+   install -Dm644 ../sysusers.d "${pkgdir}"/usr/lib/sysusers.d/rpcbind.conf
