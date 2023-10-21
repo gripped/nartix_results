@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,10 @@
+@@ -1,10 +1,11 @@
  pkgname=gdk-pixbuf-xlib
  depends=(gdk-pixbuf2 libx11)
  prepare() {
@@ -34,3 +34,4 @@
 +  artix-meson $pkgname build -D gtk_doc=true
    meson compile -C build
  }
+ package() {

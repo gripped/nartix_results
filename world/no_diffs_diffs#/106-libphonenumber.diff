@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,6 +19,6 @@
+@@ -19,7 +19,7 @@
      -DUSE_STDMUTEX=ON
    )
    LDFLAGS+=" -Wl,-z,pack-relative-relocs"
@@ -23,3 +23,4 @@
 +  artix-cmake -S $pkgname/cpp -B build "${cmake_options[@]}"
    cmake --build build
  }
+ package() {

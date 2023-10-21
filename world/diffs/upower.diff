@@ -37,7 +37,7 @@
    usbmuxd
  )
  backup=(etc/UPower/UPower.conf)
-@@ -10,6 +9,6 @@
+@@ -10,7 +9,7 @@
    cd upower
  }
  build() {
@@ -45,3 +45,4 @@
 +  artix-meson -D systemdsystemunitdir=no upower build
    meson compile -C build
  }
+ package() {

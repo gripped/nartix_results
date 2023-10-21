@@ -18,7 +18,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,8 @@
+@@ -25,8 +25,9 @@
  build() {
    local meson_options=(
      -D tests_tap_protocol=true
@@ -28,3 +28,4 @@
 +  artix-meson tracker-miners build "${meson_options[@]}"
    meson compile -C build
  }
+ package() {

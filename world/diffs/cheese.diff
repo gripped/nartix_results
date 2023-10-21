@@ -48,7 +48,7 @@
  prepare() {
    cd cheese
  }
-@@ -25,7 +26,7 @@
+@@ -25,12 +26,12 @@
    local meson_options=(
      -D tests=true
    )
@@ -56,4 +56,10 @@
 +  artix-meson cheese build "${meson_options[@]}"
    meson compile -C build
  }
- package_libcheese() {
+ package_cheese() {
+   depends+=("libcheese=$pkgver-$pkgrel")
+-  groups=(gnome-extra)
++  groups=(gnome)
+   meson install -C build --destdir "$pkgdir"
+   cd "$pkgdir"
+   _pick libs usr/include

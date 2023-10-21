@@ -43,6 +43,8 @@ caja-audio-video-properties
 catatonit
 cdparanoia
 cgmanager
+cheese
+libcheese
 chromium-bsu
 chrony
 clamav
@@ -117,9 +119,11 @@ flatbuffers
 python-flatbuffers
 flatpak
 flatpak-docs
+fluidsynth
 folks
 fop
 fprintd
+freerdp
 fwupd-efi
 fwupd
 gala
@@ -342,6 +346,11 @@ linux-zen-headers
 linux-zen-docs
 lm_sensors
 lowdown
+luaexpat
+lua-expat
+lua51-expat
+lua52-expat
+lua53-expat
 luajit
 luarocks
 lxc
@@ -535,6 +544,7 @@ python-pytest-benchmark
 python-pyudev
 python-requests
 python-sphinx-alabaster-theme
+qastools
 qemu
 qemu-common
 qemu-audio-alsa

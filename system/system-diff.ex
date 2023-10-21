@@ -16,7 +16,11 @@ lib32-glibc
 glibc-locales
 gssproxy
 inetutils
+iptables
+iptables-nft
 libarchive
+libcap-ng
+python-capng
 libnsl
 libusb
 linux-lts
@@ -44,6 +48,8 @@ pambase
 ppp
 procps-ng
 rpcbind
+sudo
+usbutils
 util-linux
 util-linux-libs
 xfsprogs

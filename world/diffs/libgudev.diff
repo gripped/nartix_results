@@ -33,7 +33,7 @@
  )
  prepare() {
    cd libgudev
-@@ -12,6 +12,6 @@
+@@ -12,7 +12,7 @@
    local meson_options=(
      -D gtk_doc=true
    )
@@ -41,3 +41,4 @@
 +  artix-meson libgudev build "${meson_options[@]}"
    meson compile -C build
  }
+ package() {

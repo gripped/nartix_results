@@ -44,7 +44,7 @@
  prepare() {
    cd libgdata
  }
-@@ -13,6 +15,6 @@
+@@ -13,8 +15,8 @@
      -D gtk_doc=true
      -D man=true
    )
@@ -53,3 +53,5 @@
 +  artix-meson libgdata build "${meson_options[@]}"
 +  ninja -C build
  }
+ package() {
+   depends+=(libsoup-2.4.so)

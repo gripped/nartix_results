@@ -38,3 +38,11 @@
    )
    cd $pkgname
    ./configure "${configure_options[@]}"
+@@ -53,7 +54,6 @@
+     libarchive libarchive.so
+     libsoup
+     openssl libcrypto.so
+-    systemd-libs libsystemd.so
+     xz liblzma.so
+   )
+   make DESTDIR="$pkgdir" install -C $pkgname

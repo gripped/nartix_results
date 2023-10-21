@@ -48,7 +48,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,22 +2,25 @@
+@@ -2,23 +2,26 @@
  depends=(
    dbus
    glib2
@@ -76,3 +76,4 @@
 +  artix-meson fprintd build "${meson_options[@]}"
    meson compile -C build
  }
+ package() {

@@ -18,3 +18,18 @@
    )
  
    DESTDIR="$pkgdir" cmake --install build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ package() {
+   depends+=(
+     alsa-lib libasound.so
+-    systemd-libs libudev.so
++    udev libudev.so
+   )
+   DESTDIR="$pkgdir" cmake --install build
+   install -vDm 644 $pkgname-v$pkgver/{CHANGELOG,README.md,TODO} -t "$pkgdir/usr/share/doc/$pkgname/"

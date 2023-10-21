@@ -119,3 +119,20 @@
    )
    cd dbus
    ./configure "${configure_options[@]}"
+@@ -41,7 +44,7 @@
+ package_dbus() {
+   depends+=(
+     libaudit.so
+-    libsystemd.so
++    libelogind.so
+   )
+   provides=(
+     libdbus
+@@ -53,7 +56,6 @@
+   rm -r "$pkgdir"/{etc,var}
+   echo 'u dbus 81 "System Message Bus"' |
+     install -Dm644 /dev/stdin "$pkgdir/usr/lib/sysusers.d/dbus.conf"
+-  install -Dt "$pkgdir/usr/share/libalpm/hooks" -m644 *.hook
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/doc
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 dbus/COPYING

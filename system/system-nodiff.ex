@@ -73,8 +73,6 @@ hwdata
 iana-etc
 icu
 iproute2
-iptables
-iptables-nft
 iputils
 iw
 jansson
@@ -89,8 +87,6 @@ less
 libaio
 libassuan
 libbpf
-libcap-ng
-python-capng
 libcap
 libedit
 libevent
@@ -188,7 +184,6 @@ sqlite-tcl
 sqlite-analyzer
 lemon
 sqlite-doc
-sudo
 sysfsutils
 syslinux
 tar
@@ -198,7 +193,6 @@ tpm2-tss
 traceroute
 tzdata
 unixodbc
-usbutils
 vi
 which
 wireless-regdb

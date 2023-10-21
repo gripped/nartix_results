@@ -242,8 +242,6 @@ check-jsonschema
 check
 check-docs
 checkbashisms
-cheese
-libcheese
 cherrytree
 chmlib
 chromaprint
@@ -497,7 +495,6 @@ flickcurl
 flite
 fltk
 fltk-docs
-fluidsynth
 fmt
 font-awesome
 ttf-font-awesome
@@ -517,7 +514,6 @@ freealut
 freecell-solver
 freeglut
 freeradius
-freerdp
 freetds
 freetype2
 freetype2-demos
@@ -1761,11 +1757,6 @@ lua
 lua51
 lua52
 lua53
-luaexpat
-lua-expat
-lua51-expat
-lua52-expat
-lua53-expat
 luajson
 lua52-luajson
 luasec
@@ -3855,7 +3846,6 @@ python-zopfli
 python-zstandard
 pyxdg
 qalculate-qt
-qastools
 qbe
 qbs
 qca

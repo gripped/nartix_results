@@ -48,7 +48,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,9 @@
+@@ -2,14 +2,15 @@
  depends=("java-runtime>=8" "bash")
  prepare(){
    cd "$srcdir/$pkgname-$pkgver"
@@ -58,4 +58,11 @@
    cd "$srcdir/$pkgname-$pkgver"
 -  gradle jar
 +  ant dist
+ }
+ package() {
+   depends+=("java-runtime")
+   install -m 755 -D "$pkgname.run" "$pkgdir/usr/bin/$pkgname"
+   cd "$srcdir/$pkgname-$pkgver"
+-  install -m 644 -D "build/libs/$pkgname-$pkgver.jar" "$pkgdir/usr/share/java/$pkgname/$pkgname.jar"
++  install -m 644 -D "$pkgname.jar" "$pkgdir/usr/share/java/$pkgname/$pkgname.jar"
  }

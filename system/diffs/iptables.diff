@@ -39,3 +39,16 @@
    install -Dm644 empty.rules "$pkgdir/etc/iptables/iptables.rules"
    install -Dm644 empty.rules "$pkgdir/etc/iptables/ip6tables.rules"
    install -Dt "$pkgdir/usr/share/iptables" -m644 *.rules
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,6 +31,5 @@
+   conflicts=(iptables arptables ebtables)
+   backup+=(etc/{arp,eb}tables.conf)
+   _package nft
+-  install -Dt "$pkgdir/usr/lib/systemd/system" -m644 {arp,eb}tables.service
+   touch "$pkgdir"/etc/{arp,eb}tables.conf
+ }

@@ -39,7 +39,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,14 +2,14 @@
+@@ -2,22 +2,21 @@
  depends=('pipewire>=0.3.39')
  provides=(pipewire-session-manager)
  conflicts=(wireplumber)
@@ -56,3 +56,11 @@
 +  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
+ package() {
+   depends+=(
+     libdbus-1.so
+     libpipewire-0.3.so
+-    libsystemd.so
+   )
+   meson install -C build --destdir "$pkgdir"
+   install -Dt "$pkgdir/usr/share/doc/$pkgname" -m644 $pkgname/{NEWS,README}*
