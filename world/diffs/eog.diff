@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   eog-docs
+ )
+ pkgver=45.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Eye of Gnome: An image viewing and cataloging program"
+ url="https://wiki.gnome.org/Apps/EyeOfGnome"
+ arch=(x86_64)
 @@ -35,7 +35,6 @@
    git
    gobject-introspection
@@ -17,6 +26,14 @@
    meson compile -C build
  }
  
+@@ -63,7 +62,6 @@
+ 
+ package_eog() {
+   optdepends=('eog-plugins: Additional features')
+-  groups=(gnome-extra)
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
 
 
 ############# Stripped diff below #################
@@ -31,7 +48,7 @@
    yelp-tools
  )
  build() {
-@@ -36,7 +35,7 @@
+@@ -36,11 +35,10 @@
      -D gtk_doc=true
      -D libportal=false
    )
@@ -40,3 +57,7 @@
    meson compile -C build
  }
  package_eog() {
+-  groups=(gnome-extra)
+   meson install -C build --destdir "$pkgdir"
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/gtk-doc
