@@ -63,6 +63,8 @@ connman
 containerd
 cppcheck
 crun
+cuda
+cuda-tools
 cups
 libcups
 cyrus-sasl
@@ -364,6 +366,8 @@ libmbim
 libmysofa
 libnvme
 libodfgen
+libpeas-2
+libpeas-2-docs
 libplacebo
 libpng
 libprocps
@@ -608,8 +612,10 @@ python-aiomysql
 python-cachy
 python-cairocffi
 python-cffi
+python-elasticsearch
 python-h5py
 python-hatch-nodejs-version
+python-html5lib
 python-jupyter-events
 python-ldap
 python-numpy
@@ -843,6 +849,7 @@ wlroots0.15
 woff2
 wpewebkit
 wpewebkit-docs
+xcb-util-cursor
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

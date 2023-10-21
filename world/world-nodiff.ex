@@ -309,8 +309,6 @@ cryptoplusplus
 cscope
 ctags
 ctpl
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -1455,8 +1453,6 @@ libpanel-docs
 libpano13
 libpaper
 libpciaccess
-libpeas-2
-libpeas-2-docs
 libpeas
 libpeas-demos
 libpeas-docs
@@ -2833,7 +2829,6 @@ python-editables
 python-editdistance-s
 python-editdistance
 python-editor
-python-elasticsearch
 python-elementpath
 python-email-validator
 python-emoji
@@ -2956,7 +2951,6 @@ python-hkdf
 python-hpack
 python-html2text
 python-html5-parser
-python-html5lib
 python-http-parser
 python-httpcore
 python-httplib2
@@ -4687,7 +4681,6 @@ xaw3d
 xbitmaps
 xcb-imdkit
 xcb-proto
-xcb-util-cursor
 xcb-util-errors
 xcb-util-image
 xcb-util-keysyms
