@@ -33,10 +33,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,9 @@
-              python-installer
-              python-setuptools
-              python-wheel)
+@@ -2,6 +2,9 @@
+ depends=(glibc
+          python)
+ replaces=(cython-dev)
 +prepare() {
 +  patch -d $pkgname-$pkgver -p1 < 26edfbc0.patch # Fix compilation regressions
 +}

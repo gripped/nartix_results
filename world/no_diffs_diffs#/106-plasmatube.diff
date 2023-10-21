@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ groups=(kde-applications kde-multimedia)
  depends=(kirigami-addons5 qt5-svg kcoreaddons5 kconfig5 ki18n5 mpv yt-dlp)
- makedepends=(extra-cmake-modules)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

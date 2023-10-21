@@ -25,9 +25,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,6 @@
+@@ -1,9 +1,6 @@
+ pkgname=containerd
  depends=('runc')
- makedepends=('go' 'git' 'btrfs-progs' 'libseccomp' 'containers-common' 'go-md2man')
  provides=('container-runtime')
 -prepare() {
 -  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service

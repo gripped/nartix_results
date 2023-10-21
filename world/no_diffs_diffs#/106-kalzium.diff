@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5 eigen ocaml facile python)
+@@ -2,7 +2,7 @@
+ depends=(kparts5 knewstuff5 kplotting5 kunitconversion5 qt5-script avogadrolibs-qt5 openbabel hicolor-icon-theme)
  groups=(kde-applications kde-education)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

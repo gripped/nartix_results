@@ -20,8 +20,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules)
+@@ -2,7 +2,7 @@
+ depends=(kdbusaddons5 ki18n5 kitemviews5 kcompletion5 kcoreaddons5 kxmlgui5)
  groups=(kde-applications kde-utilities)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

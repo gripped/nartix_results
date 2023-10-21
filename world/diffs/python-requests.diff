@@ -73,20 +73,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,21 @@
+@@ -1,9 +1,12 @@
  pkgname=python-requests
 -depends=('python-charset-normalizer' 'python-idna' 'python-urllib3')
--makedepends=(python-build python-installer python-setuptools python-wheel)
 +depends=('python-urllib3' 'python-chardet' 'python-idna')
-+makedepends=(
-+  python-build
-+  python-installer
-+  python-wheel
-+  python-setuptools
-+  python-chardet
-+  python-urllib3
-+  python-idna
-+)
  prepare() {
    cd requests-$pkgver
 -  sed -i '/certifi/d' setup.py

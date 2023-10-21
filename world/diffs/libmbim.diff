@@ -29,9 +29,9 @@
    glib2
 -  systemd
  )
- makedepends=(
-   bash-completion
-@@ -20,6 +19,6 @@
+ provides=(libmbim-glib.so)
+ prepare() {
+@@ -12,6 +11,6 @@
    local meson_options=(
      -D gtk_doc=true
    )

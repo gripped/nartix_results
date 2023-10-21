@@ -18,10 +18,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,10 @@
+@@ -1,5 +1,9 @@
+ pkgname=python-sphinx-alabaster-theme
  depends=('python')
- makedepends=('python-build' 'python-installer' 'python-setuptools'
-              'python-wheel')
 +prepare() {
 +  cd $_name-$pkgver
 +  sed -i '/app.require_sphinx("1.6")/d' alabaster/__init__.py

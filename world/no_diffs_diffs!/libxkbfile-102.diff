@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=libxkbfile
  depends=('libx11')
- makedepends=('xorg-util-macros')
  build() {
    cd ${pkgname}-${pkgver}
    ./configure --prefix=/usr --sysconfdir=/etc --disable-static

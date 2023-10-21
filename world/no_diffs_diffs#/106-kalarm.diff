@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5)
+@@ -2,7 +2,7 @@
+ depends=(phonon-qt5 kmime kidletime5 knotifyconfig5 pimcommon kmailtransport kholidays5 kcalutils)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

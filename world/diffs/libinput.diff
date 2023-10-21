@@ -24,11 +24,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  pkgname=libinput
 -depends=('mtdev' 'systemd' 'libevdev' 'libwacom' 'systemd-libs' 'glibc')
 +depends=('mtdev' 'libevdev' 'libwacom' 'udev' 'glibc')
- makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
  build() {
 -  arch-meson $pkgname-$pkgver build \
 +  artix-meson $pkgname-$pkgver build \

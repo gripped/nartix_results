@@ -33,16 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
-   'doxygen'
-   'python'
-   'samba'         # for libndr-nbt headers
--  'systemd'
-+  'udev'
-   'tevent'
-   'ldb'
-   'bc'
-@@ -52,16 +52,14 @@
+@@ -42,16 +42,14 @@
      --datadir=/usr/share                          \
      --enable-pammoddir=/usr/lib/security          \
      --enable-pac-responder                        \

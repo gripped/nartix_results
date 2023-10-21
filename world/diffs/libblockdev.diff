@@ -44,7 +44,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
+@@ -13,10 +13,13 @@
    'mdadm'
    'nss'
    'parted'
@@ -52,10 +52,6 @@
 +  'libudev'
    'util-linux-libs'
    'volume_key'
- )
-@@ -25,6 +25,9 @@
-   'python'
-   'util-linux'
  )
 +prepare() {
 +  patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-3.0.3-memory_allocation_for_device_ioctls.patch

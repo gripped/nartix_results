@@ -47,9 +47,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,10 +4,6 @@
+@@ -3,10 +3,6 @@
+         'etc/dns-over-https/doh-server.conf')
  provides=('dns-over-https-client' 'dns-over-https-server')
- makedepends=('go' 'git')
  options=('!lto')
 -prepare(){
 -  cd "$pkgname-$pkgver"

@@ -83,7 +83,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,8 @@
+@@ -6,10 +6,12 @@
  depends=(
    audit
    expat
@@ -91,24 +91,13 @@
 +  libelogind
 +  libx11
  )
- makedepends=(
-   autoconf-archive
-@@ -14,12 +15,13 @@
-   doxygen
-   git
-   python
--  systemd
-+  elogind
-   xmlto
-   yelp-tools
- )
  prepare() {
    cd dbus
 +  patch -Np 1 -i ../dbus-enable-elogind.patch
    NOCONFIGURE=1 ./autogen.sh
  }
  build() {
-@@ -33,16 +35,17 @@
+@@ -23,16 +25,17 @@
      --with-dbus-user=dbus
      --with-system-pid-file=/run/dbus/pid
      --with-system-socket=/run/dbus/system_bus_socket

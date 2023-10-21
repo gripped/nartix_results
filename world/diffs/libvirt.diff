@@ -46,10 +46,10 @@
 -depends=('libpciaccess' 'yajl' 'fuse3' 'gnutls' 'parted' 'libssh' 'libxml2' 'numactl' 'polkit')
 +depends=('libpciaccess' 'yajl' 'fuse3' 'gnutls' 'parted' 'libssh' 'libxml2'
 +'numactl' 'polkit' 'libnbd')
- makedepends=('meson' 'libxslt' 'python-docutils' 'lvm2' 'open-iscsi' 'libiscsi' 'glusterfs'
-              'bash-completion' 'rpcsvc-proto' 'dnsmasq' 'iproute2' 'qemu-base')
  backup=(
-@@ -67,7 +68,7 @@
+   'etc/libvirt/libvirt-admin.conf'
+   'etc/libvirt/libvirt.conf'
+@@ -65,7 +66,7 @@
  }
  build() {
    cd "$pkgname-$pkgver"

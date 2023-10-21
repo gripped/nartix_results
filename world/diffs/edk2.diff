@@ -84,28 +84,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,8 @@
+@@ -1,9 +1,9 @@
  _brotli_ver=1.0.9
  _openssl_ver=3.0.9
  pkgbase=edk2
 -pkgname=(edk2-arm edk2-aarch64 edk2-shell edk2-ovmf)
 +pkgname=(edk2-shell edk2-ovmf)
- makedepends=(
--  aarch64-linux-gnu-gcc
--  arm-none-eabi-gcc
-   acpica
-   git
-   util-linux-libs
-@@ -13,7 +11,7 @@
-   seabios
- )
  options=(!makeflags)
 -_arch_list=(ARM AARCH64 IA32 X64)
 +_arch_list=(IA32 X64)
  _build_type=RELEASE
  _build_plugin=GCC5
  prepare() {
-@@ -65,8 +63,6 @@
+@@ -55,8 +55,6 @@
    cd $pkgbase
    export GCC5_IA32_PREFIX="x86_64-linux-gnu-"
    export GCC5_X64_PREFIX="x86_64-linux-gnu-"

@@ -24,7 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,6 +19,7 @@
+@@ -11,6 +11,7 @@
    patch -d $pkgname-$pkgver -p1 < 2e62ef1e.patch # Fix cmake config compatibility mode
    patch -d $pkgbase-$pkgver -p1 < soversion.patch # Restore soversion
    sed -e 's|c++14|c++17|' -i $pkgbase-$pkgver/python/setup.py

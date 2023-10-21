@@ -51,11 +51,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  pkgname=nrpe
 -depends=('glibc' 'openssl')
 +depends=('openssl')
- makedepends=('procps-ng')
  install=$pkgname.install
 -backup=('etc/nrpe/nrpe.cfg')
 +backup=('etc/nrpe/nrpe.cfg' 'etc/xinetd.d/nrpe')

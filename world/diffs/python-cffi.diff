@@ -67,11 +67,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,13 @@
+@@ -1,6 +1,12 @@
  pkgname=python-cffi
  depends=('python-pycparser')
--makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
-+makedepends=('python-setuptools')
 +prepare() {
 +  cd cffi-v$pkgver
 +  patch -p1 -i ../$pkgname-remove-py-test-usage.patch

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=libgexiv2
  depends=(exiv2 glib2)
- makedepends=(gobject-introspection meson python-gobject vala)
  build() {
 -  arch-meson gexiv2-gexiv2-$pkgver build -D gtk_doc=true
 +  artix-meson gexiv2-gexiv2-$pkgver build -D gtk_doc=true

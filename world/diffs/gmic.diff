@@ -77,23 +77,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,6 @@
- pkgbase=gmic
- pkgname=(gmic gimp-plugin-gmic)
--makedepends=(cmake
--             eigen
--             fftw
--             gimp
--             graphicsmagick
--             opencv
--             openexr
--             qt5-base
--             qt5-tools)
-+makedepends=(cmake gimp qt5-base fftw openexr opencv eigen graphicsmagick qt5-tools)
- prepare() {
-   mv CMakeLists.txt gmic-$pkgver
-   mkdir -p gmic-$pkgver/cmake
-@@ -39,19 +31,7 @@
+@@ -30,19 +30,7 @@
    cmake --build build-gimp
  }
  package_gmic() {
@@ -114,7 +98,7 @@
    conflicts=(cimg)
    DESTDIR="$pkgdir" cmake --install build
    install -Dm644 gmic-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
-@@ -59,17 +39,7 @@
+@@ -50,17 +38,7 @@
    install -Dm644 gmic-$pkgver/resources/gmic_cluts.gmz -t "$pkgdir"/usr/share/gmic
  }
  package_gimp-plugin-gmic() {

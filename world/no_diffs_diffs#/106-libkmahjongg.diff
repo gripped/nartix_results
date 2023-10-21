@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=libkmahjongg
  depends=(kconfigwidgets5 kcompletion5 qt5-svg)
- makedepends=(extra-cmake-modules)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

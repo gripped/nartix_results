@@ -69,10 +69,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,9 @@
+@@ -1,7 +1,9 @@
+ pkgname=inetutils
  depends=('glibc' 'pam' 'libcap' 'readline' 'ncurses' 'libxcrypt'
  	     libpam.so libcrypt.so libreadline.so libncursesw.so)
- makedepends=('help2man')
 -backup=('etc/pam.d/rlogin' 'etc/pam.d/rsh')
 +backup=('etc/xinetd.d/telnet' 'etc/xinetd.d/talk'
 +        'etc/xinetd.d/rlogin' 'etc/xinetd.d/rsh'

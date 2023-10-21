@@ -40,16 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   libpcap          lib32-libpcap
-   desktop-file-utils
- )
--makedepends=(autoconf bison perl flex mingw-w64-gcc
-+makedepends=(autoconf bison perl flex
-   giflib                lib32-giflib
-   gnutls                lib32-gnutls
-   libxinerama           lib32-libxinerama
-@@ -48,10 +48,10 @@
+@@ -23,10 +23,10 @@
    mkdir $pkgname-{32,64}-build
    cd $pkgname
    ../wine-staging-$_pkgbasever/staging/patchinstall.py --all

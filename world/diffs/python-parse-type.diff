@@ -42,11 +42,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=python-parse-type
+@@ -2,5 +2,5 @@
  depends=('python-parse' 'python-six')
--makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
-+makedepends=('python-setuptools')
  build() {
    cd parse_type-$pkgver
 -  python -m build -nw

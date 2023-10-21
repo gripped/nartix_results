@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,7 @@
-              extra-cmake-modules
-              qt5-tools)
+@@ -13,7 +13,7 @@
+          sonnet5
+          syntax-highlighting5)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

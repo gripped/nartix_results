@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=cherrytree
  depends=('fmt' 'gspell' 'gtksourceviewmm' 'libxml++2.6' 'uchardet' 'vte3')
- makedepends=('cmake' 'python' 'spdlog')
  build() {
 -  cmake -B build -S "${pkgname}_${pkgver}" \
 +  artix-cmake -B build -S "${pkgname}_${pkgver}" \

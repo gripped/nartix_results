@@ -56,15 +56,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,5 @@
+@@ -1,5 +1,5 @@
  pkgname=stunnel
 -depends=('openssl' 'perl' 'libnsl' 'systemd-libs')
--makedepends=('systemd')
 +depends=('openssl' 'perl' 'libnsl')
  prepare() {
    cd "$pkgname-$pkgver"
    patch -p0 <"$srcdir/Makefile.patch"
-@@ -15,6 +14,7 @@
+@@ -14,6 +14,7 @@
      --sysconfdir=/etc \
      --localstatedir=/var \
      --enable-ipv6 \

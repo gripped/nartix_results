@@ -32,15 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,6 @@
-   python-dbus
-   python-gobject
-   python-tappy
--  systemd
-   vala
- )
- prepare() {
-@@ -36,8 +35,9 @@
+@@ -21,8 +21,9 @@
  build() {
    local meson_options=(
      -D tests_tap_protocol=true

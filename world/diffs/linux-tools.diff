@@ -65,7 +65,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -151,8 +151,6 @@
+@@ -150,8 +150,6 @@
      install install-man
    popd
    install -Dm 644 $pkgname.default "$pkgdir/etc/default/$pkgname"
@@ -74,7 +74,7 @@
  }
  package_x86_energy_perf_policy() {
    depends=('glibc')
-@@ -161,13 +159,12 @@
+@@ -160,13 +158,12 @@
    install -Dm 644 x86_energy_perf_policy.8 "$pkgdir/usr/share/man/man8/x86_energy_perf_policy.8"
  }
  package_usbip() {
@@ -89,7 +89,7 @@
  }
  package_tmon() {
    depends=('glibc' 'ncurses')
-@@ -189,7 +186,6 @@
+@@ -188,7 +185,6 @@
    cd linux/tools/hv
    for _p in hv_fcopy_daemon hv_kvp_daemon hv_vss_daemon; do
      install -Dm755 "$_p" "$pkgdir/usr/bin/$_p"

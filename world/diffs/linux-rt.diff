@@ -226,20 +226,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,10 +12,11 @@
-   python-sphinx
-   tar
-   texlive-latexextra
-+  xmlto
-   xz
- )
+@@ -1,6 +1,6 @@
+ pkgbase=linux-rt
  options=(!strip)
 -export KBUILD_BUILD_HOST=archlinux
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  _make() {
-@@ -47,8 +48,7 @@
+@@ -32,8 +32,7 @@
  }
  build() {
    cd $pkgbase
@@ -249,7 +244,7 @@
  }
  _package() {
    depends=(
-@@ -67,42 +67,11 @@
+@@ -52,42 +51,11 @@
    install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
    echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
    echo "Installing modules..."
@@ -293,7 +288,7 @@
    depends=(pahole)
    cd $pkgbase
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
-@@ -159,9 +128,6 @@
+@@ -144,9 +112,6 @@
    echo "Adding symlink..."
    mkdir -p "$pkgdir/usr/src"
    ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"

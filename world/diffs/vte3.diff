@@ -65,19 +65,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,10 +17,9 @@
-   gtk4
-   meson
-   pcre2
--  systemd
-   vala
+@@ -5,7 +5,7 @@
+   vte4
+   vte-docs
  )
 -options=!lto
 +options=!lto
  prepare() {
    cd vte
  }
-@@ -28,8 +27,9 @@
+@@ -13,8 +13,9 @@
    local meson_options=(
      -D b_lto=false
      -D docs=true
@@ -88,7 +85,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -71,7 +71,6 @@
+@@ -56,7 +57,6 @@
      gnutls
      gtk3
      pcre2
@@ -96,7 +93,7 @@
      vte-common
    )
    provides+=(libvte-2.91.so)
-@@ -85,7 +84,6 @@
+@@ -70,7 +70,6 @@
      gnutls
      gtk4
      pcre2

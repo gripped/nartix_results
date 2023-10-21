@@ -28,7 +28,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,7 +1,7 @@
  pkgname=xscreensaver
  depends=(
    'gtk3' 'glu' 'xorg-appres' 'libglvnd' 'libjpeg-turbo' 'libjpeg.so'
@@ -37,12 +37,7 @@
    'libxinerama' 'libxmu' 'libxrandr' 'libxt' 'libxxf86vm' 'perl-libwww' 'pam'
    'libpam.so' 'glibc' 'glib2' 'gdk-pixbuf2'
  )
--makedepends=('bc' 'intltool' 'libxpm' 'gdm' 'systemd' 'systemd-libs')
-+makedepends=('bc' 'intltool' 'libxpm' 'gdm')
- backup=('etc/pam.d/xscreensaver')
- build() {
-   cd ${pkgname}-${pkgver}
-@@ -22,7 +22,6 @@
+@@ -21,7 +21,6 @@
      --without-gle \
      --with-pixbuf \
      --with-jpeg \

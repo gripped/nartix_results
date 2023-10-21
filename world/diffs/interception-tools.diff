@@ -26,15 +26,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,9 @@
+@@ -2,7 +2,7 @@
  depends=(
      'libevdev' 'libevdev.so'
      'yaml-cpp' 'libyaml-cpp.so'
 -    'systemd-libs' 'libudev.so'
 +    'libudev' 'libudev.so'
  )
--makedepends=('cmake' 'systemd' 'boost')
-+makedepends=('cmake' 'boost')
  build() {
      cmake -B build \
-           -S "tools-v${pkgver}" \

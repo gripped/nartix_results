@@ -57,16 +57,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- _boost_ver=1.77.0
- _
- _myver=${pkgver/_rel*}
--makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
-+makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
-              'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'protobuf' 'libfido2') # 'boost'
- prepare() {
- 	cd $pkgbase-$_pkgver
-@@ -12,12 +12,6 @@
+@@ -10,12 +10,6 @@
  	sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
  	       -e s@lib64/mysql@lib/mysql@ \
  	       -i cmake/install_layout.cmake
@@ -79,7 +70,7 @@
  }
  build() {
  	mkdir -p build
-@@ -31,6 +25,8 @@
+@@ -29,6 +23,8 @@
  		-DBUILD_CONFIG=mysql_release \
  		-DREPRODUCIBLE_BUILD=ON \
  		-DCMAKE_INSTALL_PREFIX=/usr \
@@ -88,7 +79,7 @@
  		-DSYSCONFDIR=/etc/mysql \
  		-DMYSQL_DATADIR=/var/lib/mysql \
  		-DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
-@@ -74,7 +70,7 @@
+@@ -72,7 +68,7 @@
  		-DDEBUG_EXTNAME=OFF \
  		-DBUILD_TESTING=OFF \
  		-DWITH_UNIT_TESTS=OFF \
@@ -97,7 +88,7 @@
  		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
  		-DWITH_NUMA=ON \
  		-DWITH_BOOST="../boost_${_boost_ver//./_}"
-@@ -107,7 +103,7 @@
+@@ -105,7 +101,7 @@
  }
  package_percona-server() {
  	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf')

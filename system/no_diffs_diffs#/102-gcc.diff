@@ -15,10 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
-   python
-   zstd
- )
+@@ -1,6 +1,6 @@
+ pkgname=(gcc gcc-libs lib32-gcc-libs gcc-ada gcc-d gcc-fortran gcc-go gcc-objc lto-dump libgccjit)
+ _majorver=${pkgver%%.*}
 -options=!emptydirs!lto
 +options=!emptydirs!lto
  _libdir=usr/lib/gcc/$CHOST/${pkgver%%+*}

@@ -33,15 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,6 @@
-   qt5-base
-   qt5-tools
-   sdl2
--  systemd
-   texlive-core
- )
- _pick() {
-@@ -48,7 +47,7 @@
+@@ -26,7 +26,7 @@
      -D tracing=disabled
      -D test=true
    )
@@ -50,7 +42,7 @@
    meson compile -C build
  }
  package_libcamera() {
-@@ -60,8 +59,8 @@
+@@ -38,8 +38,8 @@
      libelf
      libunwind
      libyaml

@@ -58,22 +58,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,18 @@
+@@ -1,7 +1,10 @@
  pkgname=ayatana-ido
 -depends=(gtk3)
--makedepends=(cmake gobject-introspection vala gtest)
 +changelog=Changelog.txt
 +depends=(
 +	"gtk3>=3.24"
 +	"glib2>=2.58"
-+)
-+makedepends=(
-+	"gcc"
-+	"make"
-+	"pkgconf"
-+	"cmake>=3.13"
-+	"gobject-introspection"
-+	"vala"
 +)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

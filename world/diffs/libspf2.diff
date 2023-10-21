@@ -52,11 +52,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,10 @@
- pkgname=libspf2
+@@ -2,10 +2,8 @@
  depends=('glibc' 'libnsl')
--makedepends=('libmilter' 'git')
-+makedepends=('libmilter' 'git' 'autoconf')
  prepare() {
    cd "$pkgname"
 -  patch -p1 -i "$srcdir/$pkgname-remove-libreplace.patch"

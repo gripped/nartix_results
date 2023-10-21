@@ -53,19 +53,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,10 +16,11 @@
-   libseccomp
-   libxkbcommon
-   meson
--  systemd
-+  elogind
-   xkeyboard-config
-   yelp-tools
+@@ -4,6 +4,7 @@
+   gnome-desktop
+   gnome-desktop-4
  )
  prepare() {
    cd $pkgbase
  }
-@@ -27,8 +28,9 @@
+@@ -11,8 +12,9 @@
    local meson_options=(
      -D debug_tools=false
      -D gtk_doc=true
@@ -76,7 +71,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -48,7 +50,7 @@
+@@ -32,7 +34,7 @@
      iso-codes
      libseccomp
      libxkbcommon

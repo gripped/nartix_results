@@ -58,6 +58,6 @@
 -  'python-mutagen'
 -)
 +depends=('python' 'python-mutagen' 'python-cairo' 'python-gobject' 'gdk-pixbuf2' 'poppler-glib' 'librsvg' 'perl-image-exiftool' 'mailcap')
- makedepends=('python-setuptools')
  build() {
    cd ${pkgname}-${pkgver}
+   python setup.py build

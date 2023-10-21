@@ -25,10 +25,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ _pkgbasename=libxrandr
  pkgname=lib32-$_pkgbasename
  depends=('lib32-libxext' 'lib32-libxrender' $_pkgbasename)
- makedepends=('xorg-util-macros')
  build() {
    export CC="gcc -m32"
    export CXX="g++ -m32"

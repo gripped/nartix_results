@@ -88,15 +88,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,23 @@
+@@ -1,21 +1,18 @@
  pkgname=github-cli
 -depends=("glibc" "mailcap")
--makedepends=("go" "git")
-+makedepends=(
-+	"go"
-+	"gcc"
-+	"make"
-+)
  prepare() {
 -    cd "cli-${pkgver}"
 -    rm pkg/cmd/auth/login/login_test.go

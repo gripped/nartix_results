@@ -25,10 +25,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,7 @@
+@@ -1,8 +1,7 @@
+ pkgname=tepl
  depends=('libgedit-amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas'
           'gtk3' 'libgedit-gtksourceview' 'icu' 'pango')
- makedepends=('gobject-introspection' 'gtk-doc' 'meson')
 -provides=('libtepl-6.so')
  build() {
 -  arch-meson $pkgname-$pkgver build -D gtk_doc=true

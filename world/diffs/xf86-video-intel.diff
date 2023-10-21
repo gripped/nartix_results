@@ -20,6 +20,6 @@
  install=$pkgname.install
 -depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9' 'systemd-libs')
 +depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9' 'libudev.so')
- makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=25.2' 'libx11' 'libxrender' 'libxv'
-              'libxrandr' 'libxinerama' 'libxcursor' 'libxtst' 'libxss'
-              'git') # 'meson' 'valgrind')
+ replaces=('xf86-video-intel-uxa' 'xf86-video-intel-sna')
+ provides=('xf86-video-intel-uxa' 'xf86-video-intel-sna')
+ conflicts=('xorg-server<21.1.1' 'X-ABI-VIDEODRV_VERSION<25' 'X-ABI-VIDEODRV_VERSION>=26'

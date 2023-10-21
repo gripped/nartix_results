@@ -15,10 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=js91
  depends=(gcc-libs readline zlib sh)
- makedepends=(zip autoconf2.13 python-setuptools python-psutil rustup llvm clang lld)
 -options=!lto
 +options=!lto
  _relver=${pkgver}esr

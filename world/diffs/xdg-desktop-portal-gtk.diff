@@ -72,13 +72,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,17 +6,24 @@
- )
- makedepends=(
-   git
--  meson
-   python
- )
+@@ -7,11 +7,19 @@
  provides=(xdg-desktop-portal-impl)
  prepare() {
    cd $pkgname

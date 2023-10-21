@@ -49,11 +49,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- pkgname=libmysofa
- depends=('zlib')
--makedepends=('cmake' 'cunit')
-+makedepends=('cmake' 'cunit' 'ninja')
+@@ -3,9 +3,9 @@
  provides=('libmysofa.so')
  build() {
      cmake \

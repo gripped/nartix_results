@@ -25,17 +25,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgname=dovecot
  depends=('krb5' 'openssl' 'sqlite' 'mariadb-libs' 'libsodium'
 -         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam' 'systemd-libs')
--makedepends=('libcap' 'libldap' 'lua53' 'xz' 'clucene' 'systemd')
 +         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam')
-+makedepends=('libcap' 'libldap' 'lua53' 'xz' 'clucene')
  provides=('imap-server' 'pop3-server')
  backup=('etc/pam.d/dovecot')
  options=('!emptydirs' '!lto')
-@@ -20,6 +20,7 @@
+@@ -19,6 +19,7 @@
      --libexecdir=/usr/lib \
      --with-rundir=/run/dovecot \
      --with-moduledir=/usr/lib/dovecot/modules \

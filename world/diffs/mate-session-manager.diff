@@ -23,12 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=mate-session-manager
 -depends=('dbus-glib' 'gettext' 'gtk3' 'libsm' 'mate-desktop')
--makedepends=('xtrans' 'systemd' 'python')
 +depends=('dbus-glib' 'gettext' 'gtk3' 'libsm' 'mate-desktop' 'elogind')
-+makedepends=('xtrans' 'udev' 'python')
  groups=('mate')
  conflicts=('mate-session-manager-gtk3')
  replaces=('mate-session-manager-gtk3')

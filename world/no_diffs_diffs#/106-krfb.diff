@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5 plasma-wayland-protocols)
+@@ -2,7 +2,7 @@
+ depends=(kdnssd5 kxmlgui5 kwallet5 libvncserver kwayland5 xdg-desktop-portal kpipewire)
  groups=(kde-applications kde-network)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

@@ -46,20 +46,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,10 +6,10 @@
+@@ -6,7 +6,7 @@
           'libmpeg2' 'xcb-util-keysyms' 'libtar' 'libxinerama' 'libsecret'
           'libupnp' 'libixml.so' 'libupnp.so' 'libarchive' 'qt5-base'
           'qt5-x11extras' 'qt5-svg' 'freetype2' 'fribidi' 'harfbuzz'
 -         'fontconfig' 'libxml2' 'gnutls' 'libplacebo' 'aribb24')
 +         'fontconfig' 'libxml2' 'gnutls' 'libplacebo5' 'aribb24')
- makedepends=('gst-plugins-base-libs' 'live-media' 'libnotify' 'libbluray'
-              'flac' 'libdc1394' 'libavc1394' 'libcaca' 'gtk3'
--             'librsvg' 'libgme' 'xosd' 'twolame' 'aalib' 'avahi' 'systemd-libs'
-+             'librsvg' 'libgme' 'xosd' 'twolame' 'aalib' 'avahi' 'libudev'
-              'libmtp' 'libmicrodns' 'libdvdcss' 'smbclient'
-              'vcdimager' 'libssh2' 'mesa' 'protobuf' 'libnfs' 'mpg123'
-              'libdvdread' 'libdvdnav' 'libogg' 'libshout' 'libmodplug' 'libvpx'
-@@ -78,14 +78,14 @@
+ '
+             'lua-socket: http interface'
+             'libdvdread: DVD input module'
+@@ -67,14 +67,14 @@
  }
  build() {
    cd ${pkgname}-${_vlcver}

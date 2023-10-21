@@ -53,11 +53,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,15 @@
- pkgname=usbmuxd
- depends=('libimobiledevice' 'libusb' 'libplist')
--makedepends=('git' 'systemd')
-+makedepends=('git')
+@@ -3,10 +3,12 @@
  prepare() {
    cd $pkgname
    git apply -3 ../libplist-2.3.0.diff

@@ -59,15 +59,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,14 +2,15 @@
+@@ -2,13 +2,14 @@
  depends=(
    'python-docstring-to-markdown'
    'python-jedi'
 +  'python-pydantic'
    'python-pygls'
  )
--makedepends=('git' 'python-build' 'python-installer' 'python-poetry-core')
-+makedepends=('python-build' 'python-installer' 'python-poetry-core')
  prepare() {
 -  cd $pkgname
 +  cd $pkgname-$pkgver

@@ -53,17 +53,9 @@
    ppp
 -  systemd
  )
- makedepends=(
-   bash-completion
-@@ -19,6 +18,7 @@
-   gtk-doc
-   meson
-   vala
-+  elogind
- )
  prepare() {
    cd ModemManager
-@@ -28,10 +28,13 @@
+@@ -20,10 +19,13 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
@@ -78,7 +70,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -50,7 +53,7 @@
+@@ -42,7 +44,7 @@
      libmbim-glib.so
      libmm-glib.so
      libqmi-glib.so

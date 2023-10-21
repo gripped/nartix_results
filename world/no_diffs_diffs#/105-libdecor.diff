@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=libdecor
  depends=('wayland' 'pango' 'dbus' 'gtk3')
- makedepends=('cmake' 'ninja' 'meson' 'wayland-protocols')
  build() {
 -  arch-meson -Ddemo=false build "${pkgname}-${pkgver}"
 +  artix-meson -Ddemo=false build "${pkgname}-${pkgver}"

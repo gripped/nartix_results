@@ -22,9 +22,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=libkolabxml
  depends=('xerces-c' 'boost-libs')
- makedepends=('cmake' 'boost' 'xsd' 'swig')
  build() {
 -  cmake -B build -S $pkgname-$pkgname-$pkgver \
 +  cmake -B build -S $pkgname-$pkgver \

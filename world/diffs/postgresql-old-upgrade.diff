@@ -49,18 +49,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  pkgname=postgresql-old-upgrade
  _majorver=${pkgver%.*}
  depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl>=1.0.0' 'pam'
 -         'zlib' 'icu' 'systemd-libs' 'libldap' 'krb5' 'llvm15-libs')
--makedepends=('python' 'perl' 'tcl>=8.6.0' 'systemd' 'llvm15' 'clang15')
 +         'zlib' 'icu' 'libldap' 'krb5' 'llvm15-libs')
-+makedepends=('python' 'perl' 'tcl>=8.6.0' 'llvm15' 'clang15')
  build() {
    cd postgresql-${pkgver}
    local configure_options=(
-@@ -18,10 +18,12 @@
+@@ -17,10 +17,12 @@
      --with-system-tzdata=/usr/share/zoneinfo
      --with-uuid=e2fs
      --with-icu

@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,8 @@
+@@ -1,7 +1,8 @@
+ pkgname=libdazzle
  depends=(gtk3)
- makedepends=(git meson vala gobject-introspection gtk-doc)
  provides=(libdazzle-1.0.so)
  build() {
 -  arch-meson $pkgname build -D enable_gtk_doc=true

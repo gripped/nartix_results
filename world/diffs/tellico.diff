@@ -27,16 +27,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  pkgname=tellico
 -depends=('exempi' 'hicolor-icon-theme' 'kio5' 'libksane' 'libkcddb'
 -         'libcdio' 'kfilemetadata5' 'knewstuff5' 'kxmlgui5' 'kitemmodels5'
 -         'perl-text-bibtex' 'python' 'solid5' 'yaz' 'taglib' 'poppler-qt5' 'qt5-base' 'qt5-charts' 'qt5-webengine')
--makedepends=('cmake' 'extra-cmake-modules' 'kdoctools5')
 +depends=('exempi' 'hicolor-icon-theme' 'kio' 'libksane' 'libkcddb'
 +         'libcdio' 'kfilemetadata' 'knewstuff' 'kxmlgui' 'kitemmodels'
 +         'perl-text-bibtex' 'python' 'solid' 'yaz' 'taglib' 'poppler-qt5' 'qt5-base' 'qt5-charts' 'qt5-webengine')
-+makedepends=('cmake' 'extra-cmake-modules' 'kdoctools')
  changelog=$pkgname.changelog
  build() {
    cmake -B build -S $pkgname-$pkgver \

@@ -54,15 +54,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,11 +1,11 @@
  pkgname=libplacebo
  depends=('vulkan-icd-loader' 'libvulkan.so' 'glslang' 'lcms2' 'liblcms2.so' 'shaderc' 'libshaderc_shared.so'
 -         'glibc' 'gcc-libs' 'libunwind' 'libdovi.so')
 +         'glibc' 'gcc-libs' 'libunwind' 'libdovi.so' 'xxhash')
- makedepends=(
-   'meson' 'ninja' 'vulkan-headers' 'glad' 'nuklear'
-   'python' 'python-setuptools' 'python-mako' 'python-markupsafe' 'python-jinja'
-@@ -9,7 +9,7 @@
+ provides=('libplacebo.so')
  build() {
    cd ${pkgbase}-v${pkgver}
    CXXFLAGS+=" -I/usr/include/glslang"
@@ -71,7 +68,7 @@
      -D tests=true \
      -D vulkan=enabled \
      -D glslang=enabled \
-@@ -18,5 +18,5 @@
+@@ -14,5 +14,5 @@
      -D d3d11=disabled \
      -D libdovi=enabled \
      -D demos=false

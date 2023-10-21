@@ -35,12 +35,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,11 @@
+@@ -1,12 +1,10 @@
  pkgname=gssproxy
 -depends=('libverto-module-base' 'popt' 'ding-libs' 'systemd-libs')
--makedepends=('libxslt' 'systemd' 'docbook-xsl' 'doxygen'  'po4a')
 +depends=('libverto-module-base' 'popt' 'ding-libs')
-+makedepends=('libxslt' 'docbook-xsl' 'doxygen'  'po4a')
  options=('emptydirs' 'makeflags')
  backup=(etc/gssproxy/{gssproxy,24-nfs-server,80-httpd,99-network-fs-clients}.conf
          etc/gss/mech.d/proxymech.conf)
@@ -51,7 +49,7 @@
    autoreconf -vfi
  }
  build() {
-@@ -18,7 +16,7 @@
+@@ -17,7 +15,7 @@
      --sbindir=/usr/bin \
      --localstatedir=/var \
      --without-selinux \

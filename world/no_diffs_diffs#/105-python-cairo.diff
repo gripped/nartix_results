@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=(python-cairo python-cairo-docs)
  depends=(cairo python)
- makedepends=(meson python-sphinx python-sphinx_rtd_theme)
  build() {
 -  arch-meson pycairo-$pkgver build
 +  artix-meson pycairo-$pkgver build

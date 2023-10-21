@@ -58,14 +58,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,10 +14,8 @@
+@@ -14,7 +14,6 @@
    python-requests
    python-typing-extensions
    sudo
 -  systemd
  )
- makedepends=(
--  netplan
-   python-build
-   python-installer
-   python-setuptools
+ backup=(
+   etc/cloud/cloud.cfg

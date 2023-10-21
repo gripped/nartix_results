@@ -19,9 +19,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
+@@ -1,8 +1,8 @@
  pkgname=fwupd-efi
- makedepends=('meson' 'gnu-efi' 'python-pefile')
  build() {
 -  arch-meson ${pkgname}-${pkgver} build  \
 -    -D efi_sbat_distro_id='arch' \

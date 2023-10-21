@@ -23,14 +23,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,6 +19,7 @@
-   serd
-   sord
- )
+@@ -1,5 +1,6 @@
+ pkgbase=lv2
+ pkgname=(lv2 lv2-docs lv2-example-plugins)
  _pick() {
    local p="$1" f d; shift
    for f; do
-@@ -29,7 +30,7 @@
+@@ -10,7 +11,7 @@
    done
  }
  build() {

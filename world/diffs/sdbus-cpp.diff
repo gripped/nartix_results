@@ -19,16 +19,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,10 @@
+@@ -1,7 +1,7 @@
  pkgbase=sdbus-cpp
  pkgname=($pkgbase $pkgbase-doc)
  depends=(expat
 -         systemd-libs)
 +	 libelogind)
- makedepends=(cmake
-              doxygen
--             systemd)
-+             elogind)
  _archive="$pkgbase-$pkgver"
  build() {
  	cmake -B build -S "$_archive" \

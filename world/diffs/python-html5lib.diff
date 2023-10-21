@@ -72,10 +72,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,17 +2,15 @@
+@@ -1,17 +1,15 @@
+ pkgname=python-html5lib
  _deps=('six' 'webencodings')
  depends=("${_deps[@]/#/python-}")
- makedepends=('python-setuptools' "${_deps[@]/#/python-}")
 -_checkdeps=('pytest' 'pytest-expect')
 +_checkdeps=('pytest' 'pytest-expect' 'mock')
  _test

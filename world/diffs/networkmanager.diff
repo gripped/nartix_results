@@ -109,15 +109,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,23 +34,25 @@
-   polkit
-   ppp
-   python-gobject
--  systemd
-+  elogind
-   vala
-   vala
-   wpa_supplicant
+@@ -6,16 +6,18 @@
  )
  prepare() {
    cd NetworkManager
@@ -138,7 +130,7 @@
      -D iwd=true
      -D teamdctl=true
      -D bluez5_dun=true
-@@ -67,7 +69,7 @@
+@@ -32,7 +34,7 @@
    )
    CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
    CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
@@ -147,7 +139,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -84,6 +86,7 @@
+@@ -49,6 +51,7 @@
      audit
      bluez-libs
      curl
@@ -155,7 +147,7 @@
      iproute2
      jansson
      libmm-glib
-@@ -101,6 +104,9 @@
+@@ -66,6 +69,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -165,7 +157,7 @@
  END
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
  [connectivity]
-@@ -115,15 +121,13 @@
+@@ -80,15 +86,13 @@
    _pick libnm usr/share/gtk-doc/html/libnm
    _pick libnm usr/share/vala/vapi/libnm.*
    _pick cloud usr/lib/**/*nm-cloud-setup*

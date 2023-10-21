@@ -58,18 +58,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,8 +17,8 @@
-          'php-tidy'
-          'php-xsl')
- makedepends=('apache' 'aspell' 'enchant' 'gd' 'gmp' 'icu' 'libsodium' 'libxslt' 'libzip' 'net-snmp'
--             'postgresql-libs' 'sqlite' 'systemd' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2'
--             'oniguruma')
-+             'postgresql-libs' 'sqlite' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2'
-+             'oniguruma' 'argon2')
- _interpreter=${pkgver%.*}
- prepare() {
- 	cd "${srcdir}/${pkgbase}-${pkgver}"
-@@ -102,7 +102,7 @@
+@@ -99,7 +99,7 @@
  	./configure ${_phpconfig} \
  		--enable-cgi \
  		--enable-fpm \
@@ -78,7 +67,7 @@
  		--with-fpm-acl \
  		--with-fpm-user=http \
  		--with-fpm-group=http \
-@@ -150,17 +150,16 @@
+@@ -147,17 +147,16 @@
  	install -D -m644 "${srcdir}/apache.conf" "${pkgdir}/etc/httpd/conf/extra/php_module.conf"
  }
  package_php-fpm() {

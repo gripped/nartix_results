@@ -62,7 +62,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,14 @@
+@@ -1,31 +1,27 @@
  pkgname=udisks2
  depends=(
    'acl'
@@ -79,8 +79,7 @@
 +  'libelogind'
    'util-linux-libs'
  )
- makedepends=(
-@@ -21,15 +19,13 @@
+ backup=('etc/udisks2/udisks2.conf')
  build() {
    local configure_options=(
      --disable-static

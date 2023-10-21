@@ -44,10 +44,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=pacrunner
  depends=(glib2 dbus curl duktape)
- makedepends=(git)
  prepare() {
    cd $pkgname
    git apply -3 ../duktape-shared.diff

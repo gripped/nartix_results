@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
-              extra-cmake-modules
-              qt5-tools)
+@@ -6,7 +6,7 @@
+          qt5-base
+          qt5-location)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

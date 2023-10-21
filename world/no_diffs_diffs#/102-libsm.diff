@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=libsm
  depends=('libice' 'util-linux-libs')
- makedepends=('xorg-util-macros' 'xtrans' 'xorgproto')
  build() {
    cd libSM-${pkgver}
    ./configure --prefix=/usr --sysconfdir=/etc

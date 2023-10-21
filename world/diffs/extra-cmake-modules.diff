@@ -34,9 +34,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,9 @@
+@@ -1,6 +1,9 @@
+ pkgname=extra-cmake-modules
  depends=(cmake)
- makedepends=(python-sphinx python-requests qt5-tools)
  groups=(kf5)
 +prepare() {
 +  patch -d $pkgname-$pkgver -Np1 -i ../artix.patch

@@ -28,16 +28,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=pcsclite
 -depends=('libsystemd.so' 'libudev.so' 'libpolkit-gobject-1.so')
--makedepends=('systemd' 'polkit')
 +depends=('libudev.so' 'libpolkit-gobject-1.so')
-+makedepends=('polkit')
  provides=('libpcsclite.so' 'libpcscspy.so')
  build() {
    cd "pcsc-lite-$pkgver"
-@@ -13,7 +13,7 @@
+@@ -12,7 +12,7 @@
      --enable-ipcdir=/run/pcscd \
      --enable-libudev \
      --enable-usbdropdir=/usr/lib/pcsc/drivers \

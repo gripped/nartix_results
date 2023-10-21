@@ -23,11 +23,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=clutter
 -depends=(gtk3 cogl libinput)
 +depends=(gtk3 cogl libinput json-glib)
- makedepends=(gobject-introspection gtk-doc git)
  prepare() {
    cd $pkgname
    NOCONFIGURE=1 ./autogen.sh

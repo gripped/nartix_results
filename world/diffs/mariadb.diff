@@ -79,15 +79,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
- pkgbase=mariadb
- pkgname=('mariadb-libs' 'mariadb-clients' 'mariadb' 'mytop')
- makedepends=('boost' 'bzip2' 'cmake' 'cracklib' 'curl' 'jemalloc' 'judy' 'krb5' 'liburing'
--             'libxcrypt' 'libxml2' 'lz4' 'openssl' 'pcre2' 'systemd' 'zlib' 'zstd' 'xz')
-+             'libxcrypt' 'libxml2' 'lz4' 'openssl' 'pcre2' 'zlib' 'zstd' 'xz')
- prepare() {
-   cd $pkgbase-$pkgver/
-   patch -Np1 < ../0001-arch-specific.patch
+@@ -6,7 +6,7 @@
  }
  build() {
    local _cmake_options=(
@@ -96,7 +88,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
      -DINSTALL_SYSCONFDIR=/etc
-@@ -18,7 +18,7 @@
+@@ -16,7 +16,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -105,7 +97,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=/usr/lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=/usr/lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -41,7 +41,7 @@
+@@ -39,7 +39,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -114,7 +106,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -93,7 +93,7 @@
+@@ -91,7 +91,7 @@
            'etc/my.cnf.d/spider.cnf'
            'etc/security/user_map.conf')
    install=mariadb.install
@@ -123,7 +115,7 @@
     computation engine'
                'perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission'
                'python-mysqlclient: for myrocks_hotbackup'
-@@ -104,6 +104,8 @@
+@@ -102,6 +102,8 @@
    cd build
    make DESTDIR="$pkgdir" install
    cd "$pkgdir"
@@ -132,7 +124,7 @@
    rm -r etc/logrotate.d
    rm usr/bin/rcmysql
    rm usr/share/mysql/{binary-configure,mysql{,d_multi}.server}
-@@ -113,8 +115,6 @@
+@@ -111,8 +113,6 @@
    install -d {etc,usr/lib}/security
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/

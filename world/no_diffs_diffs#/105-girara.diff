@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
- makedepends=('meson' 'ninja' 'doxygen' 'check')
+@@ -5,7 +5,7 @@
+ depends=('gtk3' 'glib2' 'json-glib' 'pango')
  build() {
    cd girara-$pkgver
 -  arch-meson build

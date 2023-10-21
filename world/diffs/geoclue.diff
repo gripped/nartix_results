@@ -37,16 +37,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,7 @@
-   gtk-doc
-   libnotify
-   meson
--  systemd
-+  udev
-   vala
- )
- provides=("geoclue2=$pkgver-$pkgrel")
-@@ -25,8 +25,9 @@
+@@ -16,8 +16,9 @@
  build() {
    local meson_options=(
      -D dbus-srv-user=geoclue

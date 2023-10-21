@@ -26,18 +26,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,8 @@
+@@ -2,7 +2,7 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
           fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
 -         openssl webrtc-audio-processing systemd-libs libarchive)
--makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio systemd meson)
 +         openssl webrtc-audio-processing libudev libarchive)
-+makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio meson)
  _pjprojectver=e4b83585a0bdf1523e808a4fc1946ec82ac733d0
  noextract=(pjproject-${_pjprojectver}.tar.gz)
  prepare() {
-@@ -22,7 +22,7 @@
+@@ -21,7 +21,7 @@
        --enable-pjproject
    make DEPS_pjproject=
    cd "${srcdir}"

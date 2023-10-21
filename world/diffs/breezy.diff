@@ -31,16 +31,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,11 +18,14 @@
-   python-setuptools
-   python-setuptools-gettext
-   python-setuptools-rust
-+  python-wheel
-+  python-build
-+  python-installer
- )
- provides=(bzr)
- conflicts=(bzr)
+@@ -13,5 +13,5 @@
  replaces=(bzr)
  build() {
    cd breezy

@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules)
+@@ -2,7 +2,7 @@
+ depends=(kdepim-runtime mailcommon eventviews qqc2-desktop-style kirigami-addons)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

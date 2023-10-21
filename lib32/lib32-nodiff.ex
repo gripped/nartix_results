@@ -56,6 +56,7 @@ lib32-libdatrie
 lib32-libdrm
 lib32-libdv
 lib32-libelf
+lib32-libepoxy
 lib32-libffi
 lib32-libgcrypt
 lib32-libglvnd

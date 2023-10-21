@@ -23,7 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,6 +23,7 @@
+@@ -6,6 +6,7 @@
  build() {
    cmake -B build -S $_pkgfn -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \
@@ -31,7 +31,7 @@
      -DQT_HOST_PATH=/usr \
      -DINSTALL_BINDIR=lib/qt6/bin \
      -DINSTALL_DOCDIR=share/doc/qt6 \
-@@ -31,7 +32,7 @@
+@@ -14,7 +15,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \

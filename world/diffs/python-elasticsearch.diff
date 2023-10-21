@@ -34,7 +34,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,6 @@
+@@ -3,7 +3,6 @@
  prepare() {
    cd elasticsearch-py-$pkgver
    patch -Np1 -F3 -i ../python310.patch

@@ -40,15 +40,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,7 +28,6 @@
-   git
-   gobject-introspection
-   meson
--  systemd
-   yelp-tools
- )
- build() {
-@@ -36,11 +35,10 @@
+@@ -28,11 +28,10 @@
      -D gtk_doc=true
      -D libportal=false
    )

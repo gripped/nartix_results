@@ -31,7 +31,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,17 @@
+@@ -1,6 +1,6 @@
  pkgname=xorg-xwayland
  groups=('xorg')
 -depends=('nettle' 'libepoxy' 'systemd-libs' 'libxfont2'
@@ -39,11 +39,7 @@
           'pixman' 'xorg-server-common' 'libxcvt' 'mesa'
           'libglvnd' 'libxau' 'wayland' 'libdrm' 'libtirpc'
           'libxshmfence' 'glibc')
- makedepends=('meson' 'xorgproto' 'xtrans' 'libxkbfile' 'dbus'
-              'xorg-font-util' 'wayland-protocols' 'mesa-libgl'
--             'systemd' 'egl-wayland')
-+             'elogind' 'egl-wayland')
- provides=('xorg-server-xwayland')
+@@ -8,7 +8,7 @@
  conflicts=('xorg-server-xwayland')
  replaces=('xorg-server-xwayland')
  build() {

@@ -62,14 +62,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,11 @@
+@@ -1,15 +1,11 @@
  pkgname=xsd
 -depends=(gcc-libs
 -         glibc
 -         libcutl
 -         libxsd-frontend
 -         xerces-c)
--makedepends=(build2)
 +_
 +depends=(xerces-c)
 +prepare() {

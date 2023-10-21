@@ -30,14 +30,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,6 @@
+@@ -1,6 +1,5 @@
  pkgname=python-hatch-nodejs-version
 -depends=(python
 -         python-hatchling)
--makedepends=(python-build
--             python-installer)
 +depends=(python-hatchling)
-+makedepends=(python-build python-installer)
  build() {
    cd hatch-nodejs-version-$pkgver
    python -m build --wheel --no-isolation

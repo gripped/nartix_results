@@ -14,10 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgbase=libevent
  pkgname=(libevent libevent-docs)
  depends=(openssl)
- makedepends=(cmake ninja python zlib doxygen)
  prepare() {
    cd libevent-$pkgver-stable
    patch -Np1 -i ../EVENT__SIZEOF_TIME_T.patch

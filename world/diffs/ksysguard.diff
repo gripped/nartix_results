@@ -42,7 +42,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,6 @@
+@@ -1,23 +1,5 @@
  pkgname=ksysguard
 -depends=(gcc-libs
 -         glibc
@@ -63,10 +63,7 @@
 -         libksysguard
 -         lm_sensors
 -         qt5-base)
--makedepends=(extra-cmake-modules
--             kdoctools5)
 +depends=(ksystemstats)
-+makedepends=(extra-cmake-modules kdoctools)
  build() {
    cmake -B build -S $pkgname-$pkgver \
      -DBUILD_TESTING=OFF

@@ -30,8 +30,8 @@
 -  systemd
    upower
  )
- makedepends=(
-@@ -24,6 +23,6 @@
+ provides=(libgnome-bluetooth{,-ui}-3.0.so)
+@@ -17,6 +16,6 @@
    local meson_options=(
      -D gtk_doc=true
    )

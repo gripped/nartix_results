@@ -36,15 +36,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,6 @@
-   bash-completion
-   gtk-doc
-   meson
--  systemd
- )
- prepare() {
-   cd p11-kit-$pkgver
-@@ -24,8 +23,9 @@
+@@ -18,8 +18,9 @@
      -D gtk_doc=true
      -D man=true
      -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source
@@ -55,7 +47,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -42,9 +42,7 @@
+@@ -36,9 +37,7 @@
      "libp11-kit=$pkgver-$pkgrel"
      coreutils
      libp11-kit.so

@@ -48,11 +48,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,11 @@
- pkgname=plantuml
+@@ -2,8 +2,9 @@
  depends=("java-runtime>=8" "bash")
--makedepends=("gradle" "java-environment>=8")
-+makedepends=("apache-ant" "java-environment>=8")
  prepare(){
    cd "$srcdir/$pkgname-$pkgver"
 +    sed 's/target="1.6"/target="1.7"/g;s/

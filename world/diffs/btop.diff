@@ -53,18 +53,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,13 @@
+@@ -1,7 +1,7 @@
  pkgname=btop
 -depends=(gcc-libs)
 -_archive="$pkgname-$pkgver"
 +changelog=Changelog.txt
 +depends=("gcc-libs")
-+makedepends=(
-+	"gcc>=10.0.0"
-+	"make"
-+	"sed"
-+	"coreutils"
-+)
  build() {
 -	cd "$_archive"
 -	make all

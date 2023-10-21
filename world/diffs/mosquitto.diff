@@ -63,12 +63,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,11 +11,11 @@
-   cmake
-   docbook-xsl
-   libwebsockets
--  systemd
-   uthash
+@@ -8,6 +8,7 @@
  )
  backup=("etc/$pkgname/$pkgname.conf")
  prepare() {
@@ -76,7 +71,7 @@
    sed '/02-subscribe-qos1/d' -i $pkgname-$pkgver/test/lib/{Makefile,test.py}
    sed '/client test/d' -i $pkgname-$pkgver/test/Makefile
  }
-@@ -28,7 +28,6 @@
+@@ -20,7 +21,6 @@
      -D CMAKE_INSTALL_SYSCONFDIR=/etc
      -D WITH_BUNDLED_DEPS=OFF
      -D WITH_SRV=ON

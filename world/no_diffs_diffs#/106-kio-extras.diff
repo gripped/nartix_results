@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5 gperf taglib libappimage openexr kactivities-stats5)
+@@ -2,7 +2,7 @@
+ depends=(kio5 kdnssd5 libssh smbclient libmtp libkexiv2 phonon-qt5 syntax-highlighting5 kdsoap-ws-discovery-client libxcursor)
  groups=(kde-applications kde-network)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5)
+@@ -2,7 +2,7 @@
+ depends=(knotifications5 kxmlgui5 solid5 kcompletion5 hicolor-icon-theme)
  groups=(kde-applications kde-multimedia)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

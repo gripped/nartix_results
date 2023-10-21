@@ -87,13 +87,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -63,14 +62,12 @@
-   ninja
-   python
-   ruby
--  systemd
-   unifdef
-   wayland-protocols
+@@ -54,8 +53,7 @@
  )
  prepare() {
    cd webkitgtk-$pkgver
@@ -103,7 +97,7 @@
  }
  build() {
    local cmake_options=(
-@@ -82,6 +79,8 @@
+@@ -67,6 +65,8 @@
      -DCMAKE_SKIP_RPATH=ON
      -DUSE_AVIF=ON
      -DUSE_SOUP2=ON
@@ -112,7 +106,7 @@
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
    )
-@@ -89,7 +88,7 @@
+@@ -74,7 +74,7 @@
    LDFLAGS+=" -fuse-ld=lld"
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'

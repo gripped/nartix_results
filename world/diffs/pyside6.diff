@@ -80,7 +80,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,6 @@
+@@ -1,17 +1,13 @@
  pkgbase=pyside6
 -pkgname=(pyside6
 -         pyside6-tools
@@ -89,18 +89,6 @@
 +pkgname=(shiboken6 pyside6 pyside6-tools)
 +_qtver=6.5.3
  _clangver=16.0.6
- makedepends=(clang
-              cmake
-@@ -14,7 +12,6 @@
-              qt6-charts
-              qt6-connectivity
-              qt6-datavis3d
--             qt6-graphs
-              qt6-httpserver
-              qt6-location
-              qt6-multimedia
-@@ -35,12 +32,10 @@
-              qt6-websockets)
  _pkgfn=pyside-setup-everywhere-src-$_qtver
  prepare() {
 -  patch -d ${_pkgfn%.*} -p1 < designer-plugin-install-dir.patch # Fix designer plugin install dir
@@ -114,7 +102,7 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_BUILD_TYPE=None \
      -DSHIBOKEN_PYTHON_LIBRARIES=`pkgconf python3-embed --libs` \
-@@ -61,7 +56,7 @@
+@@ -32,7 +28,7 @@
    DESTDIR="$pkgdir" cmake --install build/sources/shiboken6
    export PATH="/usr/lib/qt6/bin:$PATH"
    export SETUPTOOLS_USE_DISTUTILS=stdlib
@@ -123,7 +111,7 @@
    python setup.py egg_info --build-type=shiboken6
    python setup.py egg_info --build-type=shiboken6-generator
    _pythonpath=`python -c "from sysconfig import get_path; print(get_path('platlib'))"`
-@@ -76,7 +71,7 @@
+@@ -47,7 +43,7 @@
             shiboken6)
    DESTDIR="$pkgdir" cmake --install build/sources/pyside6
    export PATH="/usr/lib/qt6/bin:$PATH"

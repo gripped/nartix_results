@@ -25,6 +25,6 @@
  pkgname=mate-applets
 -depends=('cpupower' 'gtksourceview3' 'libgtop' 'libnotify' 'mate-panel' 'polkit' 'upower' 'wireless_tools')
 +depends=('cpupower' 'gtksourceview3' 'libgtop' 'libnotify' 'mate-panel' 'polkit' 'upower' 'wireless_tools' 'libnl')
- makedepends=('intltool' 'itstool' 'gucharmap' 'yelp-tools')
  groups=('mate-extra')
  conflicts=('mate-applets-gtk3' 'mate-netspeed' 'mate-netspeed-gtk3')
+ replaces=('mate-applets-gtk3' 'mate-netspeed' 'mate-netspeed-gtk3')

@@ -120,13 +120,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,12 @@
- pkgname=('postgresql-libs' 'postgresql-docs' 'postgresql')
+@@ -3,8 +3,8 @@
  _majorver=${pkgver%.*}
- makedepends=('krb5' 'libxml2' 'python' 'perl' 'tcl>=8.6.0' 'openssl>=1.0.0'
--             'pam' 'zlib' 'icu' 'systemd' 'libldap' 'llvm15' 'clang15' 'libxslt'
-+             'pam' 'zlib' 'icu' 'libldap' 'llvm15' 'clang15' 'libxslt'
-              'util-linux')
  prepare() {
    cd postgresql-${pkgver}
 -  patch -p1 < ../postgresql-run-socket.patch
@@ -136,7 +131,7 @@
  }
  build() {
    cd postgresql-${pkgver}
-@@ -27,7 +27,7 @@
+@@ -24,7 +24,7 @@
      --with-system-tzdata=/usr/share/zoneinfo
      --with-uuid=e2fs
      --with-icu
@@ -145,7 +140,7 @@
      --with-ldap
      --with-llvm
      --with-libxslt
-@@ -46,8 +46,8 @@
+@@ -43,8 +43,8 @@
  check() {
    export LANG=C
    cd postgresql-${pkgver}
@@ -156,7 +151,7 @@
  }
  package_postgresql-libs() {
    depends=('krb5' 'openssl>=1.0.0' 'readline>=6.0' 'zlib' 'libldap')
-@@ -78,7 +78,7 @@
+@@ -75,7 +75,7 @@
  package_postgresql() {
    backup=('etc/pam.d/postgresql' 'etc/logrotate.d/postgresql')
    depends=("postgresql-libs>=${pkgver}" 'krb5' 'libxml2' 'readline>=6.0'
@@ -165,7 +160,7 @@
             'libxslt' 'lz4' 'zstd')
    options+=('staticlibs')
    install=postgresql.install
-@@ -98,7 +98,6 @@
+@@ -95,7 +95,6 @@
    install -Dm 755 postgresql-check-db-dir -t "${pkgdir}/usr/bin"
    install -Dm 644 ${pkgname}.pam "${pkgdir}/etc/pam.d/${pkgname}"
    install -Dm 644 ${pkgname}.logrotate "${pkgdir}/etc/logrotate.d/${pkgname}"

@@ -7,7 +7,6 @@ lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
 lib32-jack2
-lib32-libepoxy
 lib32-libgudev
 lib32-libpulse
 lib32-librsvg

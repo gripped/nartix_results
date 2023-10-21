@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- makedepends=(extra-cmake-modules)
+@@ -3,7 +3,7 @@
+          kitemmodels5 kunitconversion5 kfilemetadata5 kirigami-addons5 libquotient)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

@@ -80,17 +80,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,3 +1,7 @@
+@@ -1,9 +1,13 @@
 +_ver=6.5.7
 +_rel=1
 +_
 +_artix=artix${_rel}
  pkgbase=linux
- makedepends=(
-   bc
-@@ -15,10 +19,10 @@
-   texlive-latexextra
- )
  options=('!strip')
 -_srcname=linux-${pkgver%.*}
 -_srctag=v${pkgver%.*}-${pkgver##*.}
@@ -102,7 +97,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-@@ -35,6 +39,7 @@
+@@ -20,6 +24,7 @@
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
@@ -110,7 +105,7 @@
    echo "Setting config..."
    cp ../config .config
    make olddefconfig
-@@ -59,8 +64,8 @@
+@@ -44,8 +49,8 @@
      WIREGUARD-MODULE
    )
    replaces=(

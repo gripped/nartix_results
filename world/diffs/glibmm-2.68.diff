@@ -57,7 +57,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,13 @@
+@@ -1,21 +1,12 @@
  pkgbase=glibmm-2.68
 -pkgname=(
 -  glibmm-2.68
@@ -67,16 +67,8 @@
 -  glib2
 -  libsigc++-3.0
 -)
--makedepends=(
--  clang
--  git
--  meson
--  mm-common
--  perl-xml-parser
--)
 +pkgname=(glibmm-2.68 glibmm-2.68-docs)
 +depends=(glib2 libsigc++-3.0)
-+makedepends=(git meson mm-common perl-xml-parser clang)
  options=(!emptydirs)
  prepare() {
    cd glibmm

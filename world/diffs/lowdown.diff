@@ -22,10 +22,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
+@@ -1,6 +1,5 @@
  pkgname=lowdown
  depends=('glibc' 'libmd')
- makedepends=('git')
 -provides=('liblowdown.so')
  build () {
    cd "$pkgname"

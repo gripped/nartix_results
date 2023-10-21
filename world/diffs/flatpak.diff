@@ -55,15 +55,7 @@
    xdg-dbus-proxy
    xdg-utils
  )
-@@ -26,6 +25,7 @@
-   gtk-doc
-   meson
-   python-pyparsing
-+  socat
-   xmlto
- )
- prepare() {
-@@ -46,8 +46,9 @@
+@@ -37,8 +36,9 @@
      -D selinux_module=disabled
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy

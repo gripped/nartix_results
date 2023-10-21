@@ -54,15 +54,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,20 +13,16 @@
+@@ -13,18 +13,14 @@
    'openssl'
    'pcre2'
    'protobuf'
 -  'systemd-libs'
  )
- makedepends=('libxslt' 'mongo-c-driver' 'librabbitmq-c' 'python' 'libesmtp' 'hiredis'
--             'libdbi' 'libmaxminddb' 'net-snmp' 'librdkafka' 'systemd')
-+             'libdbi' 'libmaxminddb' 'net-snmp' 'librdkafka')
  conflicts=('eventlog')
  replaces=('eventlog')
  backup=('etc/syslog-ng/scl.conf'
@@ -77,7 +74,7 @@
  }
  build() {
    cd $pkgname-$pkgver
-@@ -46,7 +42,7 @@
+@@ -44,7 +40,7 @@
    ./configure --prefix=/usr --sysconfdir=/etc/syslog-ng --libexecdir=/usr/lib \
      --sbindir=/usr/bin --localstatedir=/var/lib/syslog-ng --datadir=/usr/share \
      --with-pidfile-dir=/run --enable-spoof-source --enable-ipv6 \

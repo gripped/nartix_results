@@ -36,13 +36,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
+@@ -1,11 +1,12 @@
  pkgname=crun
  provides=('oci-runtime')
 -depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu')
--makedepends=('libtool' 'python' 'go-md2man' 'systemd' 'git')
 +depends=('yajl' 'libudev' 'libcap' 'libseccomp' 'criu')
-+makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git')
  build() {
      cd "$pkgname-$pkgver"
      ./autogen.sh

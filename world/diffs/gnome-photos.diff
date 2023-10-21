@@ -34,16 +34,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,8 @@
-   python
-   yelp-tools
+@@ -14,7 +14,8 @@
+   librsvg
+   tracker3-miners
  )
 -groups=(gnome-extra)
 +groups=(gnome)
  prepare() {
    cd $pkgname
    git submodule init
-@@ -32,6 +33,6 @@
+@@ -25,6 +26,6 @@
    local meson_options=(
      -D manuals=true
    )

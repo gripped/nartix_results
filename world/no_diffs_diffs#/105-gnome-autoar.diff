@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,6 +12,7 @@
-   vala
+@@ -5,6 +5,7 @@
+   libarchive
  )
  provides=(libgnome-autoar{,-gtk}-${pkgver%%.*}.so)
  prepare() {
    cd $pkgname
  }
-@@ -21,6 +22,6 @@
+@@ -14,6 +15,6 @@
      -D tests=true
      -D vapi=true
    )

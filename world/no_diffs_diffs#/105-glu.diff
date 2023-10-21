@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=glu
  depends=('libgl' 'gcc-libs' 'glibc')
- makedepends=('meson')
  build() {
 -  arch-meson glu-$pkgver build \
 +  artix-meson glu-$pkgver build \

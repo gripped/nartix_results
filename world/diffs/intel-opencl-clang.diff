@@ -54,13 +54,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,19 @@
+@@ -1,13 +1,18 @@
  _srcname=opencl-clang
  pkgname=intel-${_srcname}
 -depends=(clang llvm-libs spirv-llvm-translator)
--makedepends=(cmake llvm git)
 +depends=(clang14 llvm14-libs spirv-llvm-translator-14)
-+makedepends=(cmake llvm14 git)
 +prepare() {
 +  cd ${_srcname}
 +  patch -Np1 -i ../intel-opencl-use-clang14.patch

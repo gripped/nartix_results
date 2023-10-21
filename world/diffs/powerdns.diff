@@ -27,18 +27,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,6 +1,6 @@
  pkgname=powerdns
  depends=('boost-libs' 'gnutls' 'libcurl.so' 'libsodium' 'lmdb' 'luajit'
 -         'openssl' 'sqlite' 'systemd-libs')
 +         'openssl' 'sqlite' 'esysusers')
- makedepends=('boost' 'geoip' 'libldap' 'mariadb-libs' 'curl' 'libmaxminddb'
--             'postgresql-libs' 'systemd' 'tinycdb' 'unixodbc' 'yaml-cpp')
-+             'postgresql-libs' 'tinycdb' 'unixodbc' 'yaml-cpp')
  provides=('pdns')
  conflicts=('pdns')
  backup=('etc/powerdns/pdns.conf')
-@@ -27,7 +27,7 @@
+@@ -25,7 +25,7 @@
      --disable-silent-rules \
      --enable-reproducible \
      --enable-unit-tests \

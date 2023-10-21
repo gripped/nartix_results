@@ -23,14 +23,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,6 +16,7 @@
-   python-sphinx
-   python-sphinx_rtd_theme
+@@ -8,6 +8,7 @@
+   libsoup3
+   libxml2
  )
  prepare() {
    cd dLeyna
  }
-@@ -23,7 +24,7 @@
+@@ -15,7 +16,7 @@
    local meson_options=(
      -D log_type=glib
    )

@@ -50,8 +50,8 @@
 +  lib32-elogind
    polkit
  )
- makedepends=(
-@@ -21,12 +21,13 @@
+ provides=(libpolkit-gobject-1.so)
+@@ -15,12 +15,13 @@
      -D introspection=false
      -D libs-only=true
      -D os_type=redhat

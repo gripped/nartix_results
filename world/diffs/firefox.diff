@@ -53,7 +53,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,8 +41,6 @@
+@@ -17,8 +17,6 @@
    !makeflags
    !strip
  )
@@ -62,7 +62,7 @@
  prepare() {
    mkdir mozbuild
    cd firefox-$pkgver
-@@ -63,14 +61,11 @@
+@@ -39,14 +37,11 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release

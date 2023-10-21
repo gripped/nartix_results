@@ -45,6 +45,6 @@
 -         woff2
 -         zlib)
 +depends=(texlive-bin woff2 ghostscript)
- makedepends=(python)
  build() {
    cd $pkgname-$pkgver
+   ./configure \

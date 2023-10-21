@@ -32,6 +32,6 @@
  depends=('python' 'python-jsonschema' 'python-openapi-schema-validator'
 -         'python-jsonschema-spec' 'python-lazy-object-proxy')
 +         'python-jsonschema-path' 'python-lazy-object-proxy')
- makedepends=('python-build' 'python-installer' 'python-poetry-core')
  prepare() {
    cd openapi-spec-validator-$pkgver
+   sed -i '/--cov/d' pyproject.toml

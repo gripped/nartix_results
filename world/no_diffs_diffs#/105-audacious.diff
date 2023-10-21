@@ -24,9 +24,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ depends=('qt5-base' 'qt5-svg' 'qt5-imageformats' 'glib2' 'hicolor-icon-theme'
           'desktop-file-utils')
- makedepends=('meson')
  build() {
 -  arch-meson $pkgname-$pkgver build \
 +  artix-meson $pkgname-$pkgver build \

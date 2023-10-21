@@ -37,7 +37,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,6 @@
+@@ -1,12 +1,5 @@
  pkgname=pdfarranger
 -depends=(ghostscript
 -         gtk3
@@ -47,12 +47,7 @@
 -         python-dateutil
 -         python-gobject
 -         python-pikepdf)
--makedepends=(python-build
--             python-installer
--             python-setuptools
--             python-wheel)
 +depends=(gtk3 python-gobject python-cairo python-pikepdf python-dateutil ghostscript poppler-glib)
-+makedepends=(python-build python-installer python-setuptools python-wheel)
  build () {
    cd $pkgname-$pkgver
    python -m build --wheel --no-isolation

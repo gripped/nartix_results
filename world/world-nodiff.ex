@@ -44,6 +44,7 @@ amfora
 aml
 amtk
 analitza
+android-file-transfer
 android-tools
 android-udev
 angelfish
@@ -127,6 +128,7 @@ avogadro-molecules
 avogadrolibs
 avogadrolibs-qt5
 awesome-terminal-fonts
+awesome
 aws-c-auth
 aws-c-cal
 aws-c-common
@@ -495,6 +497,7 @@ flickcurl
 flite
 fltk
 fltk-docs
+fluidsynth
 fmt
 font-awesome
 ttf-font-awesome
@@ -514,6 +517,7 @@ freealut
 freecell-solver
 freeglut
 freeradius
+freerdp
 freetds
 freetype2
 freetype2-demos
@@ -524,6 +528,7 @@ fstrm
 ftgl
 ftjam
 fuse-overlayfs
+fuse2
 fuse3
 fuse-common
 futuresql
@@ -534,6 +539,7 @@ fzf
 gajim
 galculator
 gamescope
+gammastep
 garcon
 gavl
 gcab
@@ -950,6 +956,7 @@ kcrash
 kcrash5
 kcron
 kdav
+kdav5
 kdbusaddons
 kdbusaddons5
 kde-applications-meta
@@ -1078,6 +1085,7 @@ kitty-terminfo
 kitty-shell-integration
 kjobwidgets
 kjobwidgets5
+kjs
 kjumpingcube
 kldap
 kleopatra
@@ -1257,6 +1265,9 @@ libaec
 libalkimia
 libao
 libappimage
+libappindicator
+libappindicator-gtk2
+libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
@@ -1299,6 +1310,9 @@ libdbi-docs
 libdbusmenu-qt
 libdbusmenu-qt5
 libdbusmenu-qt6
+libdbusmenu
+libdbusmenu-gtk2
+libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
@@ -1323,6 +1337,8 @@ libdwarf
 libe-book
 libebml
 libebur128
+libepoxy
+libepoxy-docs
 libepubgen
 libesmtp
 libetebase
@@ -1486,6 +1502,7 @@ libnotify
 libnotify-docs
 libnumbertext
 liboauth
+libodfgen
 libofa
 libofx
 libofx-doc
@@ -1594,6 +1611,7 @@ libtermkey
 libtg_owt
 libthai
 libtheora
+libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -1611,6 +1629,7 @@ libupnp
 liburcu
 liburing
 libusb-compat
+libutempter
 libutf8proc
 libutp
 libuv
@@ -1692,6 +1711,7 @@ libyuv
 libzen
 libzip
 libzmf
+liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
@@ -1701,6 +1721,7 @@ lilv-docs
 lilypond
 linux-atm
 liquidctl
+lirc
 litehtml
 live-media
 lksctp-tools
@@ -1766,6 +1787,7 @@ lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
+lxd
 lxde-common
 lxde-icon-theme
 lxdm
@@ -1878,6 +1900,7 @@ mate-netbook
 mate-notification-daemon
 mate-polkit
 mate-power-manager
+mate-screensaver
 mate-sensors-applet
 mate-settings-daemon
 mate-terminal
@@ -1967,6 +1990,7 @@ mtdev
 mtools
 mtr
 mtr-gtk
+muffin
 mujs
 muparser
 mupdf
@@ -1991,6 +2015,7 @@ nawk
 nbd
 nccl
 ncdu
+ncftp
 ncompress
 neatvnc
 nemo-extensions
@@ -2006,6 +2031,7 @@ nemo-share
 nemo-terminal
 nemo
 neochat
+neofetch
 neomutt
 neon
 neovim-qt
@@ -2117,6 +2143,7 @@ opensp
 openvdb
 openvkl
 openvr
+openvswitch
 openxr
 optipng
 opus-tools
@@ -2165,6 +2192,7 @@ patchutils
 pavucontrol-qt
 pavucontrol
 pbzip2
+pc-ble-driver
 pcaudiolib
 pcmanfm-gtk3
 pcmanfm-qt
@@ -2738,8 +2766,10 @@ python-cached-property
 python-cachelib
 python-cachetools
 python-cacheyou
+python-cachy
 python-cairo
 python-cairo-docs
+python-cairocffi
 python-cairosvg
 python-caja
 python-calmjs.parse
@@ -2995,6 +3025,7 @@ python-greenlet
 python-gssapi
 python-h11
 python-h2
+python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3108,6 +3139,7 @@ python-lark-parser
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
+python-ldap
 python-ldap3
 python-levenshtein
 python-lexicon
@@ -3382,6 +3414,7 @@ python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
 python-pymongo
+python-pymupdf
 python-pymysql
 python-pynacl
 python-pynamodb
@@ -3822,6 +3855,7 @@ python-zopfli
 python-zstandard
 pyxdg
 qalculate-qt
+qastools
 qbe
 qbs
 qca
@@ -3922,6 +3956,7 @@ qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
+qtqr
 qtxdg-tools
 quadrapassel
 quilt
@@ -3976,6 +4011,7 @@ ropper
 rpcsvc-proto
 rpm-tools
 rpmextract
+rrdtool
 rssguard
 rssguard-lite
 rst2pdf
@@ -4266,6 +4302,7 @@ serd
 serd-docs
 serf
 setconf
+sfml
 sfsexp
 sg3_utils
 sgml-common
@@ -4292,8 +4329,10 @@ slirp4netns
 slock
 slop
 slurp
+smb4k
 smpeg
 smplayer
+snapper
 snappy
 sndio
 snorenotify
@@ -4614,6 +4653,7 @@ twolame
 txt2man
 typescript
 uchardet
+udftools
 udiskie
 udpxy
 ufmt
@@ -4640,8 +4680,10 @@ libunrar
 unrealircd
 unrtf
 unzip
+uptimed
 upx
 uriparser
+usb_modeswitch
 usbredir
 usort
 utf8cpp

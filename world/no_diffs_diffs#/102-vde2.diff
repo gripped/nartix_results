@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=vde2
  depends=(bash glibc)
- makedepends=(libpcap wolfssl)
  provides=(libvdehist.so libvdemgmt.so libvdeplug.so libvdesnmp.so)
  prepare() {
    cd $_name-$pkgver

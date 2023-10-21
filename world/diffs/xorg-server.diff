@@ -69,16 +69,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
-              'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
-              'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
-              'xcb-util' 'xcb-util-image' 'xcb-util-renderutil' 'xcb-util-wm' 'xcb-util-keysyms'
--             'libxshmfence' 'libunwind' 'systemd' 'meson' 'git')
-+             'libxshmfence' 'libunwind' 'elogind' 'meson' 'git')
-  <office@who-t.net>
-               '67DC86F2623FC5FD4BB5225D14706DBE1E4B4540'  # Olivier Fourdan <fourdan@xfce.org>
-               'FD0004A26EADFE43A4C3F249C6F7AE200374452D') # Povilas Kanapickas <povilas@radix.lt>
-@@ -20,7 +20,7 @@
+@@ -14,7 +14,7 @@
    export CFLAGS=${CFLAGS/-fno-plt}
    export CXXFLAGS=${CXXFLAGS/-fno-plt}
    export LDFLAGS=${LDFLAGS/,-z,now}
@@ -87,7 +78,7 @@
      -D ipv6=true \
      -D xvfb=true \
      -D xnest=true \
-@@ -50,7 +50,7 @@
+@@ -44,7 +44,7 @@
    done
  }
  package_xorg-server-common() {
@@ -96,7 +87,7 @@
    _install fakeinstall/usr/lib/xorg/protocol.txt
    _install fakeinstall/usr/share/man/man1/Xserver.1
    install -m644 -Dt "${pkgdir}/var/lib/xkb/" "${pkgbase}-${pkgver}"/xkb/README.compiled
-@@ -58,7 +58,7 @@
+@@ -52,7 +52,7 @@
  }
  package_xorg-server() {
    depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
@@ -105,7 +96,7 @@
             libpciaccess libdrm libxshmfence libxcvt) # FS#52949
    provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
    conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
-@@ -75,7 +75,7 @@
+@@ -69,7 +69,7 @@
    install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
  }
  package_xorg-server-xephyr() {
@@ -114,7 +105,7 @@
             xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
             nettle libtirpc)
    _install fakeinstall/usr/bin/Xephyr
-@@ -84,7 +84,7 @@
+@@ -78,7 +78,7 @@
  }
  package_xorg-server-xvfb() {
    depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
@@ -123,7 +114,7 @@
    _install fakeinstall/usr/bin/Xvfb
    _install fakeinstall/usr/share/man/man1/Xvfb.1
    install -m755 "${srcdir}/xvfb-run" "${pkgdir}/usr/bin/"
-@@ -92,7 +92,7 @@
+@@ -86,7 +86,7 @@
    install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
  }
  package_xorg-server-xnest() {

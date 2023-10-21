@@ -15,10 +15,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=gnome-code-assistance
  depends=(libgee python-dbus python-gobject python-pylint python-pyflakes python-pycodestyle
           python-lxml python-simplejson ruby-dbus ruby-sass)
- makedepends=(intltool gobject-introspection llvm clang gjs go gnome-common git)
 -options=!lto
 +options=!lto
  prepare() {

@@ -264,32 +264,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,8 +35,8 @@
-   glusterfs
-   gnutls
-   gtk3
-+  keyutils
-   jack
--  keyutils
-   libaio
-   libbpf
-   libcacard
-@@ -76,7 +76,6 @@
-   snappy
-   spice-protocol
-   spice
--  systemd
-   usbredir
-   vde2
-   virglrenderer
-@@ -84,6 +83,7 @@
-   zlib
-   zstd
+@@ -20,6 +20,7 @@
+   qemu-vhost-user-gpu
+   qemu-{base,desktop,emulators-full,full}
  )
  _qemu_system_deps=(
    capstone
    dtc
-@@ -142,11 +142,10 @@
+@@ -78,11 +79,10 @@
    done
  }
  prepare() {
@@ -302,7 +284,7 @@
    mkdir -vp build
    mkdir -vp build-static
  }
-@@ -205,7 +204,7 @@
+@@ -141,7 +141,7 @@
      --disable-zstd
      --static
    )
@@ -311,7 +293,7 @@
      cd build-static
      ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
      ninja
-@@ -445,14 +444,12 @@
+@@ -381,14 +381,12 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-guest-agent() {
@@ -328,7 +310,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -491,15 +488,15 @@
+@@ -427,15 +425,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-aarch64() {
@@ -347,7 +329,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-avr() {
-@@ -511,11 +508,11 @@
+@@ -447,11 +445,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-hppa() {
@@ -361,7 +343,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-m68k() {
-@@ -527,7 +524,7 @@
+@@ -463,7 +461,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-mips() {
@@ -370,7 +352,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-nios2() {
-@@ -535,15 +532,15 @@
+@@ -471,15 +469,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-or1k() {
@@ -389,7 +371,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-rx() {
-@@ -551,15 +548,15 @@
+@@ -487,15 +485,15 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-s390x() {
@@ -408,7 +390,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-tricore() {
-@@ -567,11 +564,11 @@
+@@ -503,11 +501,11 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-system-x86() {
@@ -422,7 +404,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-hw-usb-host() {
-@@ -591,9 +588,8 @@
+@@ -527,9 +525,8 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-pr-helper() {
@@ -434,7 +416,7 @@
  }
  package_qemu-tests() {
    depends=(qemu-common=$pkgver-$pkgrel)
-@@ -666,7 +662,7 @@
+@@ -602,7 +599,7 @@
    mv -v $pkgname/* "$pkgdir"
  }
  package_qemu-user-static-binfmt() {

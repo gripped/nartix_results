@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
+@@ -3,7 +3,7 @@
+ depends=(kirigami-addons5 qt5-svg qtkeychain-qt5 syndication5 threadweaver5 ki18n5 kcoreaddons5
           kconfig5 networkmanager-qt5 taglib qt5-multimedia vlc)
- makedepends=(extra-cmake-modules)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgname=jose
  depends=('jansson' 'openssl' 'zlib')
- makedepends=('git' 'asciidoc' 'meson')
  build() {
  	cd "$pkgname"
  	meson --prefix=/usr --buildtype=plain build

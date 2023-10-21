@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- makedepends=(extra-cmake-modules corrosion)
+@@ -3,7 +3,7 @@
+ depends=(kirigami-addons5 purpose5 qqc2-desktop-style5 qt5-webengine qt5-svg qt5-feedback futuresql-qt5 qcoro-qt5)
  options=(!lto)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

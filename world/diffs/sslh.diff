@@ -53,15 +53,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,5 @@
+@@ -1,5 +1,5 @@
  pkgname=sslh
--makedepends=('systemd')
 -depends=('glibc' 'libcap' 'libconfig' 'pcre2' 'systemd-libs' 'libev' 'libbsd')
 +depends=('glibc' 'libcap' 'libconfig' 'pcre2' 'libev' 'libbsd')
  backup=('etc/sslh.cfg')
  install=$pkgname.install
  prepare() {
-@@ -19,7 +18,6 @@
+@@ -18,7 +18,6 @@
    make \
      VERSION=\"$pkgver-$pkgrel\" \
      USELIBCAP=1 \

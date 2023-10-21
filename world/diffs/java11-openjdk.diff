@@ -38,5 +38,5 @@
 +_securityver=20.1
 +_updatever=1
  _git
- makedepends=('java-environment>=10' 'java-environment<12' 'cpio' 'unzip' 'zip' 'libelf' 'libcups' 'libx11'
-              'libxrender' 'libxtst' 'libxt' 'libxext' 'libxrandr' 'alsa-lib' 'pandoc'
+ options=(!lto)
+ case "${CARCH}" in

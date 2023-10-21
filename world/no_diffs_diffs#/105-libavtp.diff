@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- makedepends=(cmocka meson)
+@@ -1,6 +1,6 @@
+ pkgname=libavtp
  provides=(libavtp.so)
  build() {
 -  arch-meson build $pkgname-$pkgver

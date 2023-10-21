@@ -14,7 +14,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
+@@ -5,6 +5,7 @@
    sed -i 's/-Werror=/-W/g;s/-Werror//g' $pkgname-$pkgver/CMakeLists.txt
    cd $pkgbase-$pkgver
    sed -i 's#${test_dir}/../flatc#${test_dir}/../../build/flatc#' tests/PythonTest.sh

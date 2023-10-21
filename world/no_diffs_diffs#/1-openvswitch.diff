@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,19 +8,16 @@
+ arch=(x86_64)
+ install=openvswitch.install
+ source=("http://openvswitch.org/releases/openvswitch-$pkgver.tar.gz"
+-	openvswitch.tmpfiles
+-	ovsdb-server.service
+-	ovs-vswitchd.service)
++	openvswitch.tmpfiles)
+ depends=('openssl' 'libcap-ng')
+-makedepends=('python-six')
++makedepends=('python-six' 'groff')
+ optdepends=('python-six')
+ sha256sums=('ce917e78cc0addff834af3c4f6b8d2d5071a407ecc553a71ad532d4e015914c4'
+-            'e8dc21e50fc886bfd6aa55991bdb3cb66907e11b071045452bb12de01a3ecbd9'
+-            'fa2412b81c77921418131a4f6fd38956f50ffcc7b908ec91f94d3607a05d060b'
+-            '412a8d9a2d71f61b915d5e29c0ba44baae7770f564d885f99460b27a4cf1d398')
++            'e8dc21e50fc886bfd6aa55991bdb3cb66907e11b071045452bb12de01a3ecbd9')
+ 
+ prepare() {
+   cd "$srcdir/$pkgname-$pkgver"
++
+   sed -i \
+     -e 's|$(sysconfdir)/bash_completion.d|/usr/share/bash-completion/completions|g' \
+     -e '/if grep warning:/d' \
+@@ -45,8 +42,6 @@
+   cd "$srcdir/$pkgname-$pkgver"
+   make DESTDIR="$pkgdir" install
+   install -Dm0644 "$srcdir"/openvswitch.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/openvswitch.conf"
+-  install -Dm0644 "$srcdir"/ovsdb-server.service "$pkgdir/usr/lib/systemd/system/ovsdb-server.service"
+-  install -Dm0644 "$srcdir"/ovs-vswitchd.service "$pkgdir/usr/lib/systemd/system/ovs-vswitchd.service"
+   install -dm0755 "$pkgdir/etc/openvswitch"
+   rm -rf "$pkgdir"/run
+ }

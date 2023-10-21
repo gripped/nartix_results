@@ -46,8 +46,8 @@
 +  libelogind.so
    polkit
  )
- makedepends=(
-@@ -16,10 +16,10 @@
+ provides=(
+@@ -12,10 +12,10 @@
  )
  build() {
    export CFLAGS+=' -Wno-implicit-function-declaration'

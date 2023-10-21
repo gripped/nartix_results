@@ -180,15 +180,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,6 @@
-   python-gevent
-   python-greenlet
-   ruby
--  systemd
-   util-linux
-   zlib
- )
-@@ -53,40 +52,32 @@
+@@ -32,40 +32,32 @@
  }
  package_uwsgi() {
    depends=(glibc jansson libcap.so libcrypt.so libpam.so libxml2
@@ -230,7 +222,7 @@
  }
  package_uwsgi-plugin-python() {
    local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
-@@ -97,7 +88,6 @@
+@@ -76,7 +68,6 @@
    install -vDm 644 uwsgidecorators.py -t "${pkgdir}${site_packages}"
    python -m compileall "${pkgdir}${site_packages}"
    python -O -m compileall "${pkgdir}${site_packages}"
@@ -238,7 +230,7 @@
  }
  package_uwsgi-plugin-pypy() {
    pkgdesc+=" (PyPy plugin)"
-@@ -107,28 +97,24 @@
+@@ -86,28 +77,24 @@
    install -vDm 644 uwsgidecorators.py -t "$pkgdir"/opt/pypy/site-packages/
    pypy -m compileall "$pkgdir"/opt/pypy/site-packages/
    pypy -O -m compileall "$pkgdir"/opt/pypy/site-packages/
@@ -267,7 +259,7 @@
  }
  package_uwsgi-plugin-mono() {
    pkgdesc+=" (mono plugin)"
-@@ -136,26 +122,22 @@
+@@ -115,26 +102,22 @@
    cd $pkgbase-$pkgver
    install -vDm 755 plugins/mono/uwsgi.dll -t "$pkgdir"/usr/lib/mono/2.0/
    install -vDm 755 mono_plugin.so -t "$pkgdir"/usr/lib/uwsgi/

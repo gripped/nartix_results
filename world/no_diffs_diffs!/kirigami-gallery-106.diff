@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ groups=(kde-applications kdesdk)
  depends=(kirigami2 kitemmodels5 qt5-svg)
- makedepends=(extra-cmake-modules qt5-tools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

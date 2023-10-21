@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://github.com/NordicSemiconductor/pc-ble-driver"
+ license=(custom)
+ depends=(gcc-libs glibc)
+-makedepends=(asio catch2 cmake fmt git spdlog systemd)
++makedepends=(asio catch2 cmake fmt git spdlog udev)
+ provides=(
+   libnrf-ble-driver-sd_api_v2.so
+   libnrf-ble-driver-sd_api_v3.so

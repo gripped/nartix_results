@@ -30,8 +30,8 @@
 -  systemd
    upower
  )
- makedepends=(
-@@ -37,6 +36,6 @@
+ groups=(gnome)
+@@ -29,6 +28,6 @@
    git -c protocol.file.allow=always submodule update
  }
  build() {

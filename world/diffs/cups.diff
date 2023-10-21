@@ -32,16 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgbase="cups"
- pkgname=('libcups' 'cups')
- makedepends=('acl' 'pam' 'gnutls' 'cups-filters' 'colord'
--             'libusb' 'avahi'  'systemd' 'libpaper')
-+             'libusb' 'avahi' 'libpaper')
- prepare() {
-   cd "${pkgbase}"-${pkgver}
-   patch -Np1 -i "${srcdir}"/cups-2.4.0-statedir.patch
-@@ -31,6 +31,7 @@
+@@ -29,6 +29,7 @@
       --with-dbusdir=/usr/share/dbus-1 \
       --enable-relro \
       --enable-libpaper \
@@ -49,7 +40,7 @@
       --with-optim="$CFLAGS" #--help
    make
  }
-@@ -53,7 +54,7 @@
+@@ -51,7 +52,7 @@
          etc/logrotate.d/cups
          etc/pam.d/cups)
  depends=('acl' 'pam' "libcups>=${pkgver}" 'cups-filters'

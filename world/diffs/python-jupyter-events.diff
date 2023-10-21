@@ -54,7 +54,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,7 @@
+@@ -1,13 +1,6 @@
  _pipname=jupyter_events
  pkgname=python-jupyter-events
 -depends=(python
@@ -65,11 +65,7 @@
 -         python-rich
 -         python-traitlets
 -         python-yaml)
--makedepends=(python-build
--             python-hatchling
--             python-installer)
 +depends=(python-jsonschema python-json-logger python-traitlets python-yaml python-click python-rich)
-+makedepends=(python-build python-installer python-hatchling)
  build() {
    cd $_pipname-$pkgver
    python -m build --wheel --no-isolation

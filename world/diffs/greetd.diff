@@ -29,6 +29,6 @@
           glibc
 -         systemd)
 +         udev)
- makedepends=(cargo
-              scdoc)
  _archive="$pkgbase-$pkgver"
+ prepare() {
+ 	cd "$_archive"

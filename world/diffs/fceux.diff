@@ -44,9 +44,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,18 +2,18 @@
+@@ -1,18 +1,18 @@
+ pkgname=fceux
  depends=(gd lua minizip qt5-base sdl2)
- makedepends=(cmake git glu mesa-libgl ninja setconf scons)
  prepare() {
 -  cd $pkgname
 +  cd $pkgname-$pkgver

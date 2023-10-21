@@ -96,22 +96,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,21 +3,18 @@
-   bc
-   cpio
-   gettext
-+  git
-   libelf
-   pahole
-   perl
-   python
-   tar
-   xz
--  graphviz
--  imagemagick
--  python-sphinx
--  texlive-latexextra
- )
+@@ -2,7 +2,7 @@
  options=('!strip')
  _srcname=linux-${pkgver%.*}
  _srctag=${pkgver%.*}-${pkgver##*.}
@@ -120,7 +105,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-@@ -29,7 +26,6 @@
+@@ -14,7 +14,6 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -128,7 +113,7 @@
      [[ $src = *.patch ]] || continue
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
-@@ -43,10 +39,7 @@
+@@ -28,10 +27,7 @@
  }
  build() {
    cd $_srcname
@@ -139,7 +124,7 @@
  }
  _package() {
    depends=(
-@@ -58,8 +51,6 @@
+@@ -43,8 +39,6 @@
      KSMBD-MODULE
      VIRTUALBOX-GUEST-MODULES
      WIREGUARD-MODULE

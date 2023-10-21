@@ -55,7 +55,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,6 +10,7 @@
+@@ -9,6 +9,7 @@
          etc/nginx/uwsgi_params
          etc/nginx/win-utf
          etc/logrotate.d/nginx)
@@ -63,7 +63,7 @@
  _common_flags=(
    --with-compat
    --with-debug
-@@ -45,8 +46,6 @@
+@@ -44,8 +45,6 @@
  )
  prepare() {
    cp -r $pkgbase-$pkgver{,-src}
@@ -72,7 +72,7 @@
  }
  build() {
    cd $pkgbase-$pkgver
-@@ -88,7 +87,6 @@
+@@ -87,7 +86,6 @@
    install -d "$pkgdir"/usr/share/nginx
    mv "$pkgdir"/etc/nginx/html/ "$pkgdir"/usr/share/nginx
    install -Dm644 ../logrotate "$pkgdir"/etc/logrotate.d/nginx

@@ -33,7 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,9 +1,11 @@
  pkgname=libgdata
  depends=(
    gcr
@@ -41,14 +41,10 @@
    libgoa
    libsoup
  )
-@@ -11,6 +12,7 @@
-   meson
-   vala
- )
  prepare() {
    cd libgdata
  }
-@@ -20,6 +22,6 @@
+@@ -13,6 +15,6 @@
      -D gtk_doc=true
      -D man=true
    )

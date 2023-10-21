@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ groups=(kde-applications kde-multimedia)
  depends=(qt5-networkauth knewstuff5 knotifyconfig5 kfilemetadata5 purpose5 mlt breeze-icons frei0r-plugins)
- makedepends=(extra-cmake-modules kdoctools5 v4l-utils doxygen qt5-tools)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

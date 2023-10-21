@@ -52,22 +52,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
- )
- makedepends=(
-   doxygen
-+  elogind
-   git
-   glib2
-   gobject-introspection
-@@ -13,18 +14,18 @@
-   meson
-   pipewire
-   python-lxml
--  systemd
- )
- prepare() {
-   cd $pkgbase
+@@ -8,11 +8,12 @@
  }
  build() {
    local meson_options=(
@@ -82,7 +67,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -40,13 +41,11 @@
+@@ -28,13 +29,11 @@
  package_wireplumber() {
    depends=(
      "libwireplumber=$pkgver-$pkgrel"

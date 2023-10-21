@@ -42,15 +42,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,6 @@
-     'glslang'
-     'meson'
-     'ninja'
--    'systemd'
-     'vulkan-headers'
-     'wayland-protocols'
-     'xorg-xwayland'
-@@ -32,9 +31,11 @@
+@@ -23,9 +23,11 @@
  )
  prepare() {
      cd "${pkgname}-${pkgver}"

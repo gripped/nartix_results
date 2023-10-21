@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
-   xorg-xcursorgen
- )
+@@ -2,7 +2,7 @@
+ groups=(pantheon)
+ depends=(hicolor-icon-theme)
  build() {
 -  arch-meson elementary-icon-theme build \
 +  artix-meson elementary-icon-theme build \

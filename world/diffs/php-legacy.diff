@@ -58,18 +58,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,8 +17,8 @@
-          'php-legacy-tidy'
-          'php-legacy-xsl')
- makedepends=('apache' 'aspell' 'gdbm' 'enchant' 'gd' 'gmp' 'icu' 'libsodium' 'libxslt' 'libzip' 'net-snmp'
--             'postgresql-libs' 'sqlite' 'systemd' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2' 'libnsl'
--             'oniguruma' 'patchelf')
-+             'postgresql-libs' 'sqlite' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2' 'libnsl'
-+             'oniguruma' 'patchelf' 'argon2')
- _interpreter=${pkgver%.*}
- prepare() {
- 	cd "${srcdir}/php-${pkgver}"
-@@ -108,7 +108,7 @@
+@@ -105,7 +105,7 @@
  	./configure ${_phpconfig} \
  		--enable-cgi \
  		--enable-fpm \
@@ -78,7 +67,7 @@
  		--with-fpm-acl \
  		--with-fpm-user=http \
  		--with-fpm-group=http \
-@@ -157,18 +157,16 @@
+@@ -154,18 +154,16 @@
  	install -D -m644 "${srcdir}/apache.conf" "${pkgdir}/etc/httpd/conf/extra/php-legacy_module.conf"
  }
  package_php-legacy-fpm() {

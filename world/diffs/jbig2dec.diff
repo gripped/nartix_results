@@ -56,10 +56,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
+@@ -1,11 +1,12 @@
  pkgname=jbig2dec
 -depends=('libpng' 'glibc')
--makedepends=('git')
 +_gsver=gs9530
 +depends=('libpng')
  prepare() {

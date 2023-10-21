@@ -35,9 +35,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,6 @@
-   'python-wheel'
- )
+@@ -1,6 +1,6 @@
+ pkgname=python-dulwich
+ depends=('python-urllib3')
  build() {
 -  cd "$_name"
 +  cd "dulwich-dulwich-$pkgver"

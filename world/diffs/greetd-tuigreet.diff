@@ -53,7 +53,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
+@@ -1,16 +1,17 @@
  pkgname=greetd-tuigreet
  _pkgname=${pkgname#*-}
 -depends=(gcc-libs
@@ -61,9 +61,6 @@
 -         systemd)
 +depends=(gcc-libs greetd)
  provides=(greetd-greeter)
--makedepends=(cargo
--             scdoc)
-+makedepends=(cargo scdoc)
  _archive="$_pkgname-$pkgver"
  prepare() {
  	cd "$_archive"

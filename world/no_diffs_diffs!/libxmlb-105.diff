@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=libxmlb
  depends=(glib2 libstemmer xz zstd)
- makedepends=(meson gobject-introspection gtk-doc)
  build() {
 -  arch-meson ${pkgname}-${pkgver} build -D stemmer=true
 +  artix-meson ${pkgname}-${pkgver} build -D stemmer=true

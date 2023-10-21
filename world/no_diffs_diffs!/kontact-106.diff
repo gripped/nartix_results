@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5)
+@@ -2,7 +2,7 @@
+ depends=(kontactinterface kmail-account-wizard)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

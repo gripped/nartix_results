@@ -33,9 +33,9 @@
    pixman
 -  systemd
  )
- makedepends=(
-   git
-@@ -24,6 +23,6 @@
+ provides=(libfprint-2.so)
+ groups=(fprint)
+@@ -16,6 +15,6 @@
      -D drivers=all
      -D installed-tests=false
    )

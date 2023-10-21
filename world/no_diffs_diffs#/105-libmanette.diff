@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -1,6 +1,6 @@
+ pkgname=libmanette
  depends=('gcc-libs' 'glib2' 'glibc' 'libevdev' 'libgudev')
- makedepends=('gobject-introspection' 'meson' 'vala')
  build() {
 -  arch-meson $pkgname-$pkgver build -D doc=true
 +  artix-meson $pkgname-$pkgver build -D doc=true

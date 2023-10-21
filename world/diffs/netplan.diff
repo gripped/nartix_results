@@ -118,7 +118,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,8 +11,7 @@
+@@ -11,16 +11,16 @@
    'python-netifaces'
    'python-rich'
    'iproute2'
@@ -126,17 +126,6 @@
 -  'systemd-libs'
 +  'libelogind'
    'util-linux-libs'
- )
- makedepends=(
-@@ -20,6 +19,7 @@
-   'cmocka'
-   'meson'
-   'pandoc'
-+  'elogind'
-   'python-coverage'
-   'python-pycodestyle'
-   'python-pyflakes'
-@@ -28,10 +28,11 @@
  )
  provides=(libnetplan.so)
  prepare() {

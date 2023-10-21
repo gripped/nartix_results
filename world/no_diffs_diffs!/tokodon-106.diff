@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ groups=(kde-applications kde-network)
  depends=(qqc2-desktop-style5 kirigami-addons5 kdbusaddons5 knotifications5 kitemmodels5 kio5 qtkeychain-qt5 qt5-websockets mpv purpose5)
- makedepends=(extra-cmake-modules)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

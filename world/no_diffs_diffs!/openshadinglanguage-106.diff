@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- makedepends=('boost' 'cmake' 'python' 'llvm15' 'ninja')
+@@ -3,7 +3,7 @@
+          'libtiff' 'zlib' 'ncurses' 'clang15')
  build() {
    cd OpenShadingLanguage-$pkgver
 -  cmake \

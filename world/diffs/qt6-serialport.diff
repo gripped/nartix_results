@@ -24,14 +24,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,13 @@
+@@ -3,11 +3,11 @@
  depends=(gcc-libs
           glibc
           qt6-base
 -         systemd-libs)
 +         udev)
- makedepends=(cmake
-              ninja)
  groups=(qt6)
  _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
  build() {

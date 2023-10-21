@@ -46,7 +46,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,6 @@
+@@ -27,7 +27,6 @@
  )
  makedepends+=(
    libcap
@@ -54,7 +54,7 @@
    zeroc-ice
  )
  prepare() {
-@@ -68,9 +67,9 @@
+@@ -59,9 +58,9 @@
      -D client=OFF
      -B build-server
    )

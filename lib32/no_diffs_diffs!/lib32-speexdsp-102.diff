@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=lib32-speexdsp
  depends=(lib32-gcc-libs speexdsp)
- makedepends=(git)
  provides=(libspeexdsp.so)
  prepare() {
    cd speexdsp

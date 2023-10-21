@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
+@@ -3,7 +3,7 @@
+ depends=(qqc2-desktop-style5 kirigami-addons5 kquickcharts5 qt5-location
           libquotient kquickimageeditor kitemmodels5 kio5 syntax-highlighting5 cmark hicolor-icon-theme)
- makedepends=(extra-cmake-modules qcoro-qt5 kdoctools5)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

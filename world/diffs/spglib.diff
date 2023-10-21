@@ -30,12 +30,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  pkgname=spglib
 -depends=(gcc-libs)
--makedepends=(cmake)
 +depends=(glibc)
-+makedepends=(cmake gtest)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

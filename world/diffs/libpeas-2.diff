@@ -55,7 +55,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,20 +4,19 @@
+@@ -4,7 +4,10 @@
    libpeas-2-docs
  )
  depends=(
@@ -65,22 +65,9 @@
 +  lua51
 +  python
  )
- makedepends=(
-   gi-docgen
-   git
--  gjs
-   glade
-   gobject-introspection
--  js115
--  lua51
-   lua51-lgi
-   luajit
-   meson
--  python
-   python-gobject
-   vala
- )
-@@ -29,7 +28,7 @@
+ prepare() {
+   cd libpeas
+@@ -14,7 +17,7 @@
      -D gtk_doc=true
      -D vapi=true
    )

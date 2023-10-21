@@ -62,7 +62,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,10 @@
+@@ -1,15 +1,16 @@
  pkgname=polkit
  depends=(
    duktape
@@ -72,9 +72,7 @@
    pam
 -  systemd
  )
- makedepends=(
-   git
-@@ -16,6 +16,7 @@
+ provides=(libpolkit-{agent,gobject}-1.so)
  backup=(etc/pam.d/polkit-1)
  prepare() {
    cd polkit
@@ -82,7 +80,7 @@
  }
  build() {
    local meson_options=(
-@@ -23,9 +24,9 @@
+@@ -17,9 +18,9 @@
      -D gtk_doc=true
      -D man=true
      -D os_type=redhat

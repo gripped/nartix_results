@@ -20,8 +20,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5 qcoro-qt5)
+@@ -2,7 +2,7 @@
+ depends=(kirigami2 ki18n5 kcoreaddons5 qt5-svg futuresql-qt5)
  groups=(kde-applications kde-accessibility)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

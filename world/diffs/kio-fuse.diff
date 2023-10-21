@@ -37,6 +37,6 @@
 -         kio5
 -         qt5-base)
 +depends=(kio fuse3)
- makedepends=(extra-cmake-modules)
  build() {
    cmake -B build -S $pkgname-$pkgver \
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \

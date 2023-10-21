@@ -50,10 +50,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,8 @@
+@@ -1,12 +1,7 @@
  pkgname=lm_sensors
 -depends=('bash' 'glibc')
- makedepends=('rrdtool' 'perl' 'git')
  provides=('libsensors.so')
  backup=('etc/sensors3.conf' 'etc/healthd.conf' 'etc/conf.d/sensord')
 -prepare() {

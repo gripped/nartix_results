@@ -14,9 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
+@@ -2,6 +2,7 @@
+ pkgname=lib32-$_pkgbasename
  depends=('lib32-glibc' $_pkgbasename)
- makedepends=('pkgconf' 'xorgproto')
  provides=('libXau.so')
  build() {
    cd "${srcdir}/libXau-${pkgver}"

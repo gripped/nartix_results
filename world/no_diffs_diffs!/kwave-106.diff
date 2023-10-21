@@ -15,8 +15,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- makedepends=(extra-cmake-modules kdoctools5 doxygen librsvg opus)
+@@ -2,7 +2,7 @@
+ depends=(kio5 audiofile libmad libsamplerate hicolor-icon-theme id3lib fftw)
  groups=(kde-applications kde-multimedia)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

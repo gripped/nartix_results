@@ -14,10 +14,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,6 +1,7 @@
+ pkgbase=phonon
  pkgname=(phonon-qt5)
  depends=(libpulse qt5-base)
- makedepends=(extra-cmake-modules qt5-tools)
  build() {
    cmake -B build -S $pkgbase-$pkgver
    cmake --build build

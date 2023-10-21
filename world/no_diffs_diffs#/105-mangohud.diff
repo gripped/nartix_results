@@ -15,7 +15,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
+@@ -11,7 +11,7 @@
      sed -i "s/cmocka_dep = cmocka.get_variable('cmocka_dep')/cmocka_dep = dependency('cmocka')/g" meson.build
  }
  build() {

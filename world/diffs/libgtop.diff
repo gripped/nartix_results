@@ -32,11 +32,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,8 @@
- pkgname=libgtop
+@@ -2,8 +2,6 @@
  depends=('glib2' 'glibc' 'libxau')
--makedepends=('gobject-introspection' 'gtk-doc')
-+makedepends=('gobject-introspection')
  build() {
    cd $pkgname-$pkgver
 -  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \

@@ -34,12 +34,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,10 +1,10 @@
  pkgname=iio-sensor-proxy
 -depends=('systemd' 'libgudev' 'glib2' 'polkit')
--makedepends=('gtk3' 'meson')
 +depends=('libgudev' 'gtk3' 'polkit')
-+makedepends=('meson')
  build() {
    mkdir $pkgname-$pkgver/build
    cd $pkgname-$pkgver/build

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=kdepim-runtime
  depends=(libkolabxml kdav5 akonadi-calendar knotifyconfig5 kmbox akonadi-notes akonadi qca-qt5 qt5-networkauth)
- makedepends=(extra-cmake-modules kdoctools5 libetebase boost kholidays5)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

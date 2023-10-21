@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
+@@ -3,6 +3,6 @@
+ depends=('dconf' 'gcc-libs' 'glib2' 'glibc' 'gtk3' 'hicolor-icon-theme' 'libcanberra' 'libgudev'
           'libgusb' 'polkit' 'udisks2')
- makedepends=('appstream-glib' 'docbook-sgml' 'docbook-utils'  'meson' 'perl-sgmls')
  build() {
 -  arch-meson $pkgname-$pkgver build
 +  artix-meson $pkgname-$pkgver build

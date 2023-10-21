@@ -70,15 +70,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,6 @@
-   'rust'
-   'spirv-llvm-translator'
-   'spirv-tools'
--  'systemd'
-   'vulkan-icd-loader'
-   'wayland'
-   'xcb-util-keysyms'
-@@ -62,6 +61,8 @@
+@@ -22,6 +22,8 @@
  }
  build() {
    local meson_options=(
@@ -87,7 +79,7 @@
      -D android-libbacktrace=disabled
      -D b_ndebug=true
      -D dri3=enabled
-@@ -96,7 +97,9 @@
+@@ -56,7 +58,9 @@
    )
    CFLAGS+=' -g1'
    CXXFLAGS+=' -g1'
@@ -98,7 +90,7 @@
    meson configure build # Print config
    meson compile -C build
    DESTDIR="${srcdir}/fakeinstall" meson install -C build
-@@ -167,7 +170,6 @@
+@@ -127,7 +131,6 @@
      'libdrm'
      'libx11'
      'libxshmfence'
@@ -106,7 +98,7 @@
      'wayland'
      'xcb-util-keysyms'
      'zstd'
-@@ -184,7 +186,6 @@
+@@ -144,7 +147,6 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -114,7 +106,7 @@
      'wayland'
      'xcb-util-keysyms'
      'zstd'
-@@ -202,7 +203,6 @@
+@@ -162,7 +164,6 @@
      'libx11'
      'libxshmfence'
      'llvm-libs'
@@ -122,7 +114,7 @@
      'wayland'
      'xcb-util-keysyms'
      'zstd'
-@@ -219,7 +219,6 @@
+@@ -179,7 +180,6 @@
      'libdrm'
      'libx11'
      'libxshmfence'

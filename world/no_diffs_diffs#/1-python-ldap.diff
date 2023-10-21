@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('MIT')
+ depends=('python-pyasn1' 'python-pyasn1-modules' 'libldap')
+-makedepends=('python-setuptools' 'python-coverage' 'python-pytest')
++makedepends=('python-setuptools' 'python-coverage')
+ checkdepends=('openldap' 'python-pyasn1' 'python-pyasn1-modules')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/python-ldap/python-ldap/archive/${pkgname}-${pkgver}.tar.gz")
+ sha256sums=('0f59a692a4761f70aff6629125a2574dd12f6660316bbac211325fed7a898f48')
+@@ -25,9 +25,7 @@
+ 
+ check(){
+   cd "$pkgbase-$pkgbase-$pkgver"
+-  local python_version=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
+-
+-  PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-${python_version}" pytest .
++  python -m unittest discover -vs Tests
+ }
+ 
+ package() {

@@ -22,9 +22,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=tailscale
- makedepends=("git" "go")
 -depends=("glibc")
 +depends=("glibc" "iptables")
  backup=("etc/default/tailscaled")

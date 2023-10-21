@@ -33,13 +33,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,13 +10,13 @@
-   meson
-   python-dbus
-   python-dbusmock
--  systemd
- )
- build() {
+@@ -8,7 +8,8 @@
    local meson_options=(
      -D gtk_doc=true
      -D tests=true

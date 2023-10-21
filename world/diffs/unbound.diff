@@ -38,16 +38,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,5 @@
  pkgname=unbound
 -depends=(dnssec-anchors fstrm hiredis ldns libnghttp2 libsodium)
--makedepends=(expat libevent openssl protobuf-c python swig systemd)
 +depends=(dnssec-anchors fstrm hiredis ldns libnghttp2 libsodium esysusers etmpfiles)
-+makedepends=(expat libevent openssl protobuf-c python swig)
  provides=(libunbound.so)
  backup=(etc/$pkgname/$pkgname.conf)
  prepare() {
-@@ -20,7 +20,7 @@
+@@ -19,7 +19,7 @@
      --enable-pie
      --enable-relro-now
      --enable-subnet

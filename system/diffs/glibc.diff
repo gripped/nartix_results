@@ -24,16 +24,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  pkgbase=glibc
  pkgname=(glibc lib32-glibc glibc-locales)
- makedepends=(git gd lib32-gcc-libs python)
 -options=staticlibs!lto
 +options=staticlibs!lto
  prepare() {
    mkdir -p glibc-build lib32-glibc-build
    [[ -d glibc-$pkgver ]] && ln -s glibc-$pkgver glibc
-@@ -78,7 +78,7 @@
+@@ -77,7 +77,7 @@
    rm -f "${pkgdir}"/etc/ld.so.cache
    rm -f "${pkgdir}"/usr/bin/{tzselect,zdump,zic}
    cd glibc

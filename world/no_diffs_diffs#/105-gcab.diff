@@ -23,9 +23,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,10 +8,11 @@
-   vala
- )
+@@ -1,10 +1,11 @@
+ pkgname=gcab
+ depends=(glib2)
  provides=(libgcab-1.0.so)
  prepare() {
    cd gcab

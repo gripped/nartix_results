@@ -23,15 +23,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=iwd
- depends=('glibc' 'readline' 'libreadline.so' 'ell' 'gcc-libs')
--makedepends=('python-docutils' 'dbus' 'systemd')
-+makedepends=('python-docutils' 'dbus' 'udev')
- changelog=ChangeLog
- install=iwd.install
- build() {
-@@ -13,6 +13,7 @@
+@@ -12,6 +12,7 @@
  	--enable-wired \
  	--enable-ofono \
  	--enable-hwsim \

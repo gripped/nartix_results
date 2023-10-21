@@ -75,12 +75,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,12 @@
+@@ -1,12 +1,11 @@
  pkgname=dracut
  depends=('bash' 'coreutils' 'cpio' 'filesystem' 'findutils' 'grep' 'gzip'
 -         'kmod' 'pkgconf' 'procps-ng' 'sed' 'systemd' 'util-linux' 'xz')
 +         'kmod' 'pkgconf' 'procps-ng' 'sed' 'udev' 'util-linux' 'xz')
- makedepends=('asciidoc' 'bash-completion' 'git')
  provides=('initramfs')
  backup=('etc/dracut.conf')
  prepare() {
@@ -92,7 +91,7 @@
  }
  build() {
    local prefix=/usr sysconfdir=/etc
-@@ -16,7 +15,7 @@
+@@ -15,7 +14,7 @@
      --sysconfdir=${sysconfdir} \
      --prefix=${prefix} \
      --libdir=${prefix}/lib \

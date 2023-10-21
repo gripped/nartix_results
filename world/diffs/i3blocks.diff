@@ -47,7 +47,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,10 @@
+@@ -3,6 +3,10 @@
  depends=('glibc')
  backup=('etc/i3blocks.conf')
  install=i3blocks.install
@@ -58,7 +58,7 @@
  build () {
    cd "${pkgname}-${pkgver}"
    ./autogen.sh
-@@ -13,4 +17,6 @@
+@@ -12,4 +16,6 @@
  package () {
    cd "${pkgname}-${pkgver}"
    make VERSION="${pkgver}" DESTDIR="${pkgdir}" install

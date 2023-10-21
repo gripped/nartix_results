@@ -32,10 +32,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,6 @@
+@@ -1,10 +1,6 @@
+ pkgname=xfconf
  groups=('xfce4')
  depends=('libxfce4util')
- makedepends=('intltool' 'gobject-introspection' 'vala')
 -prepare() {
 -  cd $pkgname-$pkgver
 -  patch -Np1 -i ../$pkgname-fix-uncached-value.patch

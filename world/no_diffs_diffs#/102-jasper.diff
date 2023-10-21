@@ -14,10 +14,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
+@@ -1,5 +1,6 @@
  pkgbase=jasper
  pkgname=('jasper' 'jasper-doc')
- makedepends=('glibc' 'libjpeg' 'freeglut' 'libxmu' 'glu' 'cmake' 'doxygen')
  prepare() {
    cd ${pkgbase}-version-${pkgver}
    patch -p1 < "${srcdir}/jasper-1.900.1-fix-filename-buffer-overflow.patch"

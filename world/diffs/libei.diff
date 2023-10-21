@@ -38,9 +38,9 @@
    libevdev
 -  systemd
  )
- makedepends=(
-   git
-@@ -22,6 +22,6 @@
+ provides=(
+   lib{ei,eis,oeffis}.so
+@@ -11,6 +11,6 @@
    ln -sr ../munit subprojects/munit
  }
  build() {

@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,7 @@
+ pkgname=akonadi-contacts
  depends=(libakonadi kcontacts5 kmime prison5 grantleetheme)
- makedepends=(extra-cmake-modules qt5-tools doxygen)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

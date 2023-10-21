@@ -30,9 +30,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- makedepends=('python-build' 'python-installer' 'python-wheel'
-              'python-setuptools' 'python-setuptools-scm')
+@@ -2,7 +2,7 @@
+ pkgname=python-$_pkgname
+ depends=('python' 'python-pymysql')
  prepare() {
 -  sed -e '/setuptools_scm_git_archive/d' -e 's/, < 7//' -i $_pkgname-$pkgver/pyproject.toml
 +  sed -e '/setuptools_scm_git_archive/d' -i $_pkgname-$pkgver/pyproject.toml

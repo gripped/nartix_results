@@ -39,13 +39,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,9 @@
+@@ -1,7 +1,8 @@
  pkgname=minio
 -_timever=T04-13-43Z
 +_timever=T07-02-29Z
  _
  depends=('glibc')
- makedepends=('go' 'git')
 +options=!strip
  backup=('etc/minio/minio.conf')
  build() {

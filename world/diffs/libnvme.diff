@@ -39,10 +39,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,9 @@
+@@ -1,11 +1,8 @@
  pkgname=libnvme
--makedepends=('systemd' 'meson' 'asciidoc' 'python' 'swig')
-+makedepends=('udev' 'meson' 'asciidoc' 'python' 'swig')
  depends=('json-c' 'openssl' 'keyutils' 'dbus')
 -prepare() {
 -	patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-1.6-allocate_aligned_payloads.patch
