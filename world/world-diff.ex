@@ -162,9 +162,12 @@ gnome-system-monitor
 gnome-taquin
 gnome-user-share
 gnome-video-effects
+gnuplot
+gnuplot-demos
 go-bindata
 go-licenses
 godot
+gperftools
 gpsd
 greetd-tuigreet
 greetd
@@ -539,6 +542,7 @@ python-html5lib
 python-jupyter-events
 python-numpy
 python-openapi-spec-validator
+python-paramiko
 python-parse-type
 python-pytest-benchmark
 python-pyudev
@@ -669,6 +673,7 @@ squid
 sshguard
 sslh
 sssd
+strawberry
 strongswan
 stubby
 stunnel

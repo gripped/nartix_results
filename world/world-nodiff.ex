@@ -643,8 +643,6 @@ gnu-efi
 gnu-free-fonts
 gnu-netcat
 gnugo
-gnuplot
-gnuplot-demos
 gnustep-base
 gnustep-make
 go-bindata-assetfs
@@ -662,7 +660,6 @@ google-glog
 gox
 gparted
 gperf
-gperftools
 gpicview
 gptfdisk
 gradle
@@ -3268,7 +3265,6 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
-python-paramiko
 python-parse
 python-parsedatetime
 python-parso
@@ -4377,7 +4373,6 @@ stk
 stk-docs
 stoken
 strace
-strawberry
 strip-nondeterminism
 sugar-datastore
 suil
