@@ -5,7 +5,7 @@
  _updatever=35
  pkgver=${_majorver}.u${_updatever}
 -pkgrel=3
-+pkgrel=5
++pkgrel=6
  _git_tag=jdk-${_majorver}+${_updatever}
  arch=('x86_64')
  url='https://openjdk.java.net/'
@@ -25,7 +25,7 @@
  
  build() {
    cd ${_jdkdir}
-@@ -105,9 +102,7 @@
+@@ -105,11 +102,10 @@
  
  package_jre-openjdk-headless() {
    pkgdesc="OpenJDK Java ${_majorver} headless runtime environment"
@@ -35,8 +35,11 @@
 +  depends=("${_commondeps[@]}")
    optdepends=('java-rhino: for some JavaScript support')
    provides=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jdk-openjdk" "jre-openjdk")
    backup=(etc/${pkgbase}/logging.properties
-@@ -128,24 +123,14 @@
+           etc/${pkgbase}/management/jmxremote.access
+           etc/${pkgbase}/management/jmxremote.password.template
+@@ -128,24 +124,14 @@
  
    cd ${_imgdir}/jre
  
@@ -65,7 +68,7 @@
  
    install -dm 755 "${pkgdir}/etc"
    cp -r conf "${pkgdir}/etc/${pkgbase}"
-@@ -169,31 +154,91 @@
+@@ -169,31 +155,89 @@
  
  package_jre-openjdk() {
    pkgdesc="OpenJDK Java ${_majorver} full runtime environment"
@@ -78,7 +81,7 @@
 -  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}")
 +  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
 +            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
-+  conflicts=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jdk-openjdk" "jre-openjdk-headless")
 +  backup=(etc/${pkgbase}/logging.properties
 +          etc/${pkgbase}/management/jmxremote.access
 +          etc/${pkgbase}/management/jmxremote.password.template
@@ -145,9 +148,7 @@
 +  provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}"
 +            "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
 +            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
-+  conflicts=("jre-openjdk" "jre-openjdk-headless"
-+             "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
-+             "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jre-openjdk" "jre-openjdk-headless")
 +  backup=(etc/${pkgbase}/logging.properties
 +          etc/${pkgbase}/management/jmxremote.access
 +          etc/${pkgbase}/management/jmxremote.password.template
@@ -165,7 +166,7 @@
    install=install_jdk-openjdk.sh
  
    cd ${_imgdir}/jdk
-@@ -205,28 +250,24 @@
+@@ -205,28 +249,24 @@
  
    rm "${pkgdir}${_jvmdir}/lib/src.zip"
  
@@ -225,7 +226,7 @@
  build() {
    cd ${_jdkdir}
    NUM_PROC_OPT=''
-@@ -67,9 +65,7 @@
+@@ -67,10 +65,9 @@
    find "../${_imgdir}" -iname '*.so' -exec chmod +x {} \;
  }
  package_jre-openjdk-headless() {
@@ -234,9 +235,11 @@
 -           'glibc' 'gcc-libs')
 +  depends=("${_commondeps[@]}")
    provides=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jdk-openjdk" "jre-openjdk")
    backup=(etc/${pkgbase}/logging.properties
            etc/${pkgbase}/management/jmxremote.access
-@@ -87,19 +83,12 @@
+           etc/${pkgbase}/management/jmxremote.password.template
+@@ -87,19 +84,12 @@
            etc/${pkgbase}/sound.properties)
    install=install_jre-openjdk-headless.sh
    cd ${_imgdir}/jre
@@ -259,7 +262,7 @@
    install -dm 755 "${pkgdir}/etc"
    cp -r conf "${pkgdir}/etc/${pkgbase}"
    ln -s /etc/${pkgbase} "${pkgdir}/${_jvmdir}/conf"
-@@ -117,47 +106,95 @@
+@@ -117,47 +107,93 @@
    ln -sf /etc/ssl/certs/java/cacerts "${pkgdir}${_jvmdir}/lib/security/cacerts"
  }
  package_jre-openjdk() {
@@ -269,7 +272,7 @@
 +  depends=("${_commondeps[@]}" 'giflib' 'libgif.so' 'libpng')
 +  provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
 +            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
-+  conflicts=("java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jdk-openjdk" "jre-openjdk-headless")
 +  backup=(etc/${pkgbase}/logging.properties
 +          etc/${pkgbase}/management/jmxremote.access
 +          etc/${pkgbase}/management/jmxremote.password.template
@@ -322,9 +325,7 @@
 +  provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}"
 +            "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
 +            "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
-+  conflicts=("jre-openjdk" "jre-openjdk-headless"
-+             "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
-+             "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
++  conflicts=("jre-openjdk" "jre-openjdk-headless")
 +  backup=(etc/${pkgbase}/logging.properties
 +          etc/${pkgbase}/management/jmxremote.access
 +          etc/${pkgbase}/management/jmxremote.password.template

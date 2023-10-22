@@ -1,17 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,9 @@
- pkgbase=qt5-base
- pkgname=(qt5-base qt5-xcb-private-headers)
- _basever=5.15.11
--pkgver=5.15.11+kde+r138
-+pkgver=5.15.11+kde+r136
- pkgrel=1
--_commit=ea7a183732c17005f08ca14fd70cdd305c90396d
-+_commit=f97da619eda7bb22c51fb0606ba1d33e6604fdc0
- arch=('x86_64')
- url='https://www.qt.io'
- license=('GPL3' 'LGPL3' 'FDL' 'custom')
 @@ -65,7 +65,7 @@
      -no-rpath \
      -dbus-linked \

@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=unrealircd
--pkgver=6.1.2.3
--pkgrel=1
-+pkgver=6.1.1.1
-+pkgrel=3
- pkgdesc="Open Source IRC Server"
- arch=('x86_64')
- url="https://www.unrealircd.org"
 @@ -13,14 +13,12 @@
  install=unrealircd.install
  validpgpkeys=('1D2D2B03A0B68ED11D68A24BA7A21B0A108FF4A9')
@@ -19,8 +9,7 @@
  	unrealircd.sysusers.d
  	install.pl
  	source-date-epoch.patch)
--sha256sums=('ac7c735178a268d0767ad14ae1098a4a4d314d4fc4753345ae826a91892139ae'
-+sha256sums=('0c8e4164f499f0f6a72ed6032acb034bd7e9bd10308f556a0d919a00c2eeb334'
+ sha256sums=('ac7c735178a268d0767ad14ae1098a4a4d314d4fc4753345ae826a91892139ae'
              'SKIP'
 -            '5bb6016c379e6f040d8c625e3339c096ff66c4450aa024ca5b13ad3dec47c38e'
              '91b5e1d623b51ffd4734d73e35cead09be596460c41b9440406f92c9e2b4b9b1'

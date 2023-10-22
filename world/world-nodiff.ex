@@ -199,6 +199,7 @@ broadcom-wl
 bspwm
 bubblewrap
 bubblewrap-suid
+build2
 bullet
 bullet-dp
 bullet-docs
@@ -242,6 +243,8 @@ check-jsonschema
 check
 check-docs
 checkbashisms
+cheese
+libcheese
 cherrytree
 chmlib
 chromaprint
@@ -318,6 +321,7 @@ cups-filters
 cups-pdf
 cups-pk-helper
 cython-dev
+cython
 cython0
 d-spy
 darkhttpd
@@ -392,6 +396,7 @@ dune
 duplicity
 dvd-rw-tools
 dvdauthor
+dvisvgm
 dzen2
 easytag
 ebook-tools
@@ -419,6 +424,8 @@ enet
 engrampa
 enscript
 entr
+eog
+eog-docs
 eom
 epiphany
 erlang-nox
@@ -625,6 +632,7 @@ gnome-multi-writer
 gnome-music
 gnome-nettool
 gnome-panel
+gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
@@ -643,6 +651,8 @@ gnu-efi
 gnu-free-fonts
 gnu-netcat
 gnugo
+gnuplot
+gnuplot-demos
 gnustep-base
 gnustep-make
 go-bindata-assetfs
@@ -830,6 +840,7 @@ intltool
 inxi
 ipset
 ipython
+irssi
 iso-codes
 isodate
 python-isodate
@@ -850,6 +861,25 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-xmlgraphics-commons
+java11-openjdk
+jre11-openjdk-headless
+jre11-openjdk
+jdk11-openjdk
+openjdk11-src
+openjdk11-doc
+java17-openjdk
+jre17-openjdk-headless
+jre17-openjdk
+jdk17-openjdk
+openjdk17-src
+openjdk17-doc
+java8-openjdk
+jre8-openjdk-headless
+jre8-openjdk
+jdk8-openjdk
+openjdk8-src
+openjdk8-doc
+jbig2dec
 jbigkit
 jemalloc
 jenkins
@@ -880,6 +910,7 @@ jupyter-notebook-shim
 jupyter-notebook
 jupyter-server-fileid
 jupyter-server-ydoc
+jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab
@@ -1059,9 +1090,11 @@ kinfocenter
 kinit
 kio-admin
 kio-extras
+kio-fuse
 kio-gdrive
 kio-zeroconf
 kio
+kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
@@ -1174,6 +1207,7 @@ kspaceduel
 ksquares
 ksshaskpass
 ksudoku
+ksysguard
 ksystemlog
 ksystemstats
 kteatime
@@ -1197,6 +1231,7 @@ kvantum
 kvirc
 kwallet-pam
 kwallet
+kwallet5
 kwalletmanager
 kwave
 kwayland-integration
@@ -1296,6 +1331,7 @@ libcryptui
 libcuckoo
 libcue
 libcupsfilters
+libcutl
 libdatrie
 libdazzle
 libdbi
@@ -1382,6 +1418,7 @@ libgphoto2
 libgpod
 libgravatar
 libgrss
+libgtop
 libgusb
 libgweather-4
 libgweather-4-docs
@@ -1409,7 +1446,6 @@ libisoburn
 libisofs
 libixion
 libjcat
-libjpeg-turbo
 libjxl
 libjxl-doc
 libkate
@@ -1494,6 +1530,7 @@ libnma-gtk4
 libnotify
 libnotify-docs
 libnumbertext
+libnvme
 liboauth
 libodfgen
 libofa
@@ -1504,6 +1541,7 @@ libolm
 libomxil-bellagio
 libopenmpt
 libopenraw
+libopensmtpd
 libopusenc
 liborcus
 libosinfo
@@ -1516,6 +1554,8 @@ libpanel-docs
 libpano13
 libpaper
 libpciaccess
+libpeas-2
+libpeas-2-docs
 libpeas
 libpeas-demos
 libpeas-docs
@@ -1580,6 +1620,7 @@ libslirp
 libsm
 libsmbios
 libsndfile
+libsodium
 libsonic
 libsoup
 libsoup-docs
@@ -1588,6 +1629,7 @@ libsoup3-docs
 libsoxr
 libspatialite
 libspectre
+libspf2
 libspiro
 libsquish
 libsrtp
@@ -1689,6 +1731,7 @@ libxpresent
 libxrandr
 libxrender
 libxres
+libxsd-frontend
 libxshmfence
 libxslt
 libxslt-docs
@@ -1754,6 +1797,7 @@ lua
 lua51
 lua52
 lua53
+luajit
 luajson
 lua52-luajson
 luasec
@@ -1775,7 +1819,6 @@ lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
-lxd
 lxde-common
 lxde-icon-theme
 lxdm
@@ -1875,6 +1918,7 @@ ruby-marisa
 markdownpart
 marked-man
 marked
+mat2
 mate-backgrounds
 mate-calc
 mate-common
@@ -2082,6 +2126,7 @@ ocaml-compiler-libs
 ocamlbuild
 ocl-icd
 odt2txt
+okteta
 okular
 onetbb
 onevpl
@@ -2118,7 +2163,6 @@ openjpeg2
 openlibm
 openmp
 openmpi
-openntpd
 openpmix
 openpmix-docs
 openrct2
@@ -2126,10 +2170,11 @@ openscenegraph
 openshadinglanguage
 opensips
 openslide
+opensmtpd-filter-dkimsign
+opensmtpd-filter-rspamd
+opensmtpd-filter-senderscore
 opensmtpd
 opensp
-openvdb
-openvkl
 openvr
 openvswitch
 openxr
@@ -2631,6 +2676,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -2647,6 +2695,7 @@ python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
+python-aiohttp
 python-aioitertools
 python-aiopg
 python-aioquic
@@ -2772,6 +2821,7 @@ python-cchardet
 python-celery
 python-cerberus
 python-certifi
+python-cffi
 python-cfgv
 python-cfn-lint
 python-cftime
@@ -3017,6 +3067,7 @@ python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
+python-hatch-nodejs-version
 python-hatch-vcs
 python-hatchling
 python-heapdict
@@ -3104,6 +3155,7 @@ python-jsonschema
 python-junit-xml
 python-jupyter-client
 python-jupyter-core
+python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyter-ydoc
@@ -3230,6 +3282,7 @@ python-nspektr
 python-ntlm-auth
 python-numba
 python-numexpr
+python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -3265,6 +3318,7 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
+python-parse-type
 python-parse
 python-parsedatetime
 python-parso
@@ -3556,6 +3610,7 @@ python-requests-oauthlib
 python-requests-toolbelt
 python-requests-unixsocket
 python-requests-wsgi-adapter
+python-requests
 python-requestsexceptions
 python-resolvelib
 python-responses
@@ -3904,6 +3959,7 @@ qt6-charts
 qt6-connectivity
 qt6-datavis3d
 qt6-declarative
+qt6-graphs
 qt6-grpc
 qt6-httpserver
 qt6-imageformats
@@ -4783,6 +4839,7 @@ xclip
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
+xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk
@@ -4839,6 +4896,7 @@ xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
+xfconf
 xfdesktop
 xfwm4-themes
 xfwm4
@@ -4892,11 +4950,13 @@ xorg-xsetroot
 xorg-xwininfo
 xorgproto
 xosd
+xournalpp
 xpdf
 xpra
 xreader
 xsane
 xsane-gimp
+xsd
 xsel
 xsettingsd
 xsimd
@@ -4926,8 +4986,10 @@ yubico-c
 z3
 python-z3-solver
 zanshin
+zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
+zathura-pdf-poppler
 zathura-ps
 zathura
 zbar

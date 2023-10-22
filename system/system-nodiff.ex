@@ -13,7 +13,6 @@ ca-certificates
 ca-certificates-utils
 coreutils
 cracklib
-cronie
 cryptsetup
 curl
 libcurl-compat

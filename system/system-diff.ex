@@ -5,6 +5,7 @@ base-devel
 base
 bash
 btrfs-progs
+cronie
 dbus
 dbus-docs
 dhcpcd

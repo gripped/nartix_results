@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=strawberry
--pkgver=1.0.21
-+pkgver=1.0.20
- pkgrel=1
- pkgdesc='A music player aimed at audio enthusiasts and music collectors'
- arch=(x86_64)
 @@ -19,7 +19,6 @@
           gst-plugins-good
           gstreamer
@@ -16,15 +8,6 @@
           libcdio
           libgpod
           libmtp
-@@ -37,7 +36,7 @@
-             'gst-plugins-bad: additional codecs'
-             'gst-plugins-ugly: additional codecs')
- source=(https://github.com/strawberrymusicplayer/strawberry/releases/download/$pkgver/$pkgname-$pkgver.tar.xz)
--sha256sums=('d0cc7c3390ad3a4ebb0195171df45583d8e447530bb8536f33a87de5fca27163')
-+sha256sums=('e27afd4b70cdbb1c88af868cafc3abcb526c825c53e413df326f008322413194')
- 
- build() {
-   cmake -B build -S $pkgname-$pkgver \
 
 
 ############# Stripped diff below #################

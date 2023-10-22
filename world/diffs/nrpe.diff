@@ -1,17 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,20 @@
- 
- pkgname=nrpe
- pkgver=4.1.0
--pkgrel=3
-+pkgrel=2
- pkgdesc="Nagios Remote Plugin Executor"
- arch=('x86_64')
--license=('GPL-2.0-or-later')
--depends=('glibc' 'openssl')
-+license=('GPL')
-+depends=('openssl')
+@@ -9,7 +9,7 @@
  optdepends=("monitoring-plugins: common tools for monitoring using $pkgname")
  makedepends=('procps-ng')
  install=$pkgname.install
@@ -20,13 +9,6 @@
  url="https://github.com/NagiosEnterprises/nrpe"
  source=(https://github.com/NagiosEnterprises/nrpe/releases/download/$pkgname-$pkgver/$pkgname-$pkgver.tar.gz
          nrpe.sysusers)
--sha256sums=('a1f14aa8aaf935b576cc55ab5d77b7cb9c920d7702aff44c9d18c4c841ef8ecc'
--            '9430d6c7ccf9817f9c66eda8e2126b0b0fdad93fa17dee9227627c35a4101ad3')
-+md5sums=('ace32f8d41e9b9138ea5d40b8beed274'
-+         '079d1f8c06598303be95151a8985927b')
- 
- build() {
-   cd $pkgname-$pkgver
 @@ -36,8 +36,7 @@
    make DESTDIR="$pkgdir" install
  
@@ -37,14 +19,15 @@
    install -Dm644 startup/tmpfile.conf "$pkgdir"/usr/lib/tmpfiles.d/nrpe.conf
    install -Dm644 "$srcdir"/nrpe.sysusers "$pkgdir"/usr/lib/sysusers.d/nrpe.conf
  
-@@ -46,7 +45,6 @@
+@@ -46,8 +45,6 @@
    install -Dm644 SECURITY.md "$pkgdir"/usr/share/doc/$pkgname/SECURITY.md
    install -Dm644 LEGAL "$pkgdir"/usr/share/licenses/$pkgname/LEGAL
  
 -  sed -i 's/=31$/=nrpe/g' "$pkgdir"/etc/nrpe/nrpe.cfg "$pkgdir"/usr/lib/systemd/system/nrpe.service
- 
+-
    chmod -R 755 "$pkgdir"/usr/lib/monitoring-plugins
    chown -R root:root "$pkgdir"/usr/lib/monitoring-plugins
+   rm -f "$pkgdir"/usr/bin/nrpe-uninstall
 
 
 ############# Stripped diff below #################
@@ -53,8 +36,7 @@
 +++ Artix PKGBUILD
 @@ -1,7 +1,7 @@
  pkgname=nrpe
--depends=('glibc' 'openssl')
-+depends=('openssl')
+ depends=('glibc' 'openssl')
  install=$pkgname.install
 -backup=('etc/nrpe/nrpe.cfg')
 +backup=('etc/nrpe/nrpe.cfg' 'etc/xinetd.d/nrpe')

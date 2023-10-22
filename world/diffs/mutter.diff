@@ -1,23 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   mutter
-   mutter-docs
- )
--pkgver=45.0+r49+g8d3d8b86e5
-+pkgver=45.0
- pkgrel=1
- pkgdesc="Window manager and compositor for GNOME"
- url="https://gitlab.gnome.org/GNOME/mutter"
-@@ -50,7 +50,7 @@
-   wireplumber
-   zenity
- )
--_commit=8d3d8b86e517c97accf11eb243078faf31dd72bb  # main
-+_commit=4f6c91847088d7d6476b88575b3a6601b819b443  # tags/45.0^0
- source=(
-   "git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit"
- )
 @@ -71,13 +71,14 @@
      -D egl_device=true
      -D installed_tests=false

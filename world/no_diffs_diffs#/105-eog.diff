@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,6 @@
+   git
+   gobject-introspection
+   meson
+-  systemd
+   yelp-tools
+ )
+ _commit=26c1df864bb29b0ab6f0d249236df2d0db66eb8d  # tags/45.1^0
+@@ -53,7 +52,7 @@
+     -D libportal=false
+   )
+ 
+-  arch-meson eog build "${meson_options[@]}"
++  artix-meson eog build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+     -D gtk_doc=true
+     -D libportal=false
+   )
+-  arch-meson eog build "${meson_options[@]}"
++  artix-meson eog build "${meson_options[@]}"
+   meson compile -C build
+ }
+ package_eog() {
