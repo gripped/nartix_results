@@ -1,25 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,8 +22,8 @@
+@@ -22,7 +22,6 @@
    libvncserver
    libxkbcommon
    pipewire
 -  systemd
    tpm2-tss
-+  wireplumber
  )
  makedepends=(
-   asciidoc
-@@ -37,7 +37,7 @@
-   mutter
-   python-dbus
-   python-gobject
--  wireplumber
-+  pipewire-alsa
- )
- groups=(gnome)
- _commit=a7c4f2dd87fe09389dd93268b0ce3e32a6ceb6eb  # tags/45.0^0
-@@ -55,15 +55,16 @@
+@@ -55,15 +54,16 @@
  
  build() {
    local meson_options=(
@@ -44,17 +33,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,8 +15,8 @@
+@@ -15,7 +15,6 @@
    libvncserver
    libxkbcommon
    pipewire
 -  systemd
    tpm2-tss
-+  wireplumber
  )
  groups=(gnome)
- prepare() {
-@@ -24,8 +24,9 @@
+@@ -24,8 +23,9 @@
  }
  build() {
    local meson_options=(

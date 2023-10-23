@@ -800,7 +800,6 @@ hunspell
 hwinfo
 hy
 hypercorn
-hyperkitty
 hyperscan
 hyphen
 hyphen-en
@@ -817,7 +816,6 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
-imagemagick
 imake
 imath
 img2pdf
@@ -1518,7 +1516,6 @@ libmythes
 libnatpmp
 libnbd
 libndp
-libnet
 libnewt
 libnfs
 libnice
@@ -1797,7 +1794,6 @@ lua
 lua51
 lua52
 lua53
-luajit
 luajson
 lua52-luajson
 luasec
@@ -1871,9 +1867,7 @@ mailcap
 mailcommon
 mailgraph
 mailimporter
-mailman-web
 mailman3-hyperkitty
-mailman3
 maim
 malcontent
 libmalcontent
@@ -1968,6 +1962,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -1975,7 +1970,6 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
-micro
 microsoft-gsl
 milou
 mimalloc
@@ -2926,7 +2920,6 @@ python-django-filter
 python-django-gravatar
 python-django-guardian
 python-django-haystack
-python-django-mailman3
 python-django-picklefield
 python-django-q
 python-django-rest-framework
@@ -2955,6 +2948,7 @@ python-editables
 python-editdistance-s
 python-editdistance
 python-editor
+python-elasticsearch
 python-elementpath
 python-email-validator
 python-emoji
@@ -3079,6 +3073,7 @@ python-hkdf
 python-hpack
 python-html2text
 python-html5-parser
+python-html5lib
 python-http-parser
 python-httpcore
 python-httplib2
@@ -3318,6 +3313,7 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
+python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
@@ -4828,6 +4824,7 @@ xaw3d
 xbitmaps
 xcb-imdkit
 xcb-proto
+xcb-util-cursor
 xcb-util-errors
 xcb-util-image
 xcb-util-keysyms

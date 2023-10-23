@@ -210,12 +210,14 @@ haproxy
 haveged
 hidapi
 hwloc
+hyperkitty
 hyprland
 i3blocks
 ibus
 libibus
 igsc
 iio-sensor-proxy
+imagemagick
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -268,6 +270,7 @@ libksysguard
 libldm
 libmbim
 libmysofa
+libnet
 libplacebo
 libpng
 libprocps
@@ -315,10 +318,13 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
+luajit
 luarocks
 lxc
 lxcfs
 lxd
+mailman-web
+mailman3
 mako
 mariadb
 mariadb-libs
@@ -341,7 +347,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-meson
+micro
 minio
 modemmanager
 libmm-glib
@@ -493,10 +499,8 @@ pyqt5
 python-pyqt5
 pyqt6
 python-aiomysql
-python-elasticsearch
-python-html5lib
+python-django-mailman3
 python-openapi-spec-validator
-python-paramiko
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -710,7 +714,6 @@ wlroots0.15
 woff2
 wpewebkit
 wpewebkit-docs
-xcb-util-cursor
 xdg-desktop-portal-gnome
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
