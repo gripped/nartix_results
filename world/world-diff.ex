@@ -67,6 +67,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 dbus-broker
+ddclient
 ddcutil
 dhcp
 dhclient
@@ -158,7 +159,6 @@ gnome-video-effects
 go-bindata
 go-licenses
 godot
-gperftools
 gpsd
 greetd-tuigreet
 greetd
@@ -240,6 +240,9 @@ js78
 json-glib
 json-glib-docs
 kismet
+kitty
+kitty-terminfo
+kitty-shell-integration
 knot
 libatasmart
 libayatana-appindicator
@@ -279,6 +282,7 @@ libudev0-shim
 libusbmuxd
 libusbsio
 python-libusbsio
+libutf8proc
 libvirt-glib
 libvirt
 libwacom
@@ -361,6 +365,7 @@ mutter
 mutter-docs
 ndctl
 ndisc6
+neovim-qt
 netplan
 network-manager-applet
 nm-connection-editor
@@ -499,6 +504,7 @@ pyqt5
 python-pyqt5
 pyqt6
 python-aiomysql
+python-deepdiff
 python-django-mailman3
 python-openapi-spec-validator
 python-pytest-benchmark
@@ -597,6 +603,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+rapidfuzz-cpp
 redis
 redshift
 refind
@@ -743,3 +750,4 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
+dhcpcd

@@ -5,7 +5,6 @@ base-devel
 base
 bash
 btrfs-progs
-cronie
 dbus
 dbus-docs
 dhcpcd
@@ -16,6 +15,7 @@ glibc
 lib32-glibc
 glibc-locales
 gssproxy
+iana-etc
 inetutils
 iptables
 iptables-nft

@@ -13,6 +13,7 @@ ca-certificates
 ca-certificates-utils
 coreutils
 cracklib
+cronie
 cryptsetup
 curl
 libcurl-compat
@@ -69,7 +70,6 @@ guile
 gzip
 hdparm
 hwdata
-iana-etc
 icu
 iproute2
 iputils

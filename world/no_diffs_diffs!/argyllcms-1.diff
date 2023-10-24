@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=argyllcms
--pkgver=3.0.1
+-pkgver=3.0.2
 +pkgver=3.0.0
  pkgrel=1
  pkgdesc="An ICC compatible color management system with support for different colorimeter hardware"
@@ -12,7 +12,7 @@
  depends=(libpng libtiff libxss libxinerama libxxf86vm libxrandr zlib openssl)
  makedepends=(ftjam zip unzip)
  source=("https://www.argyllcms.com/Argyll_V${pkgver}_src.zip")
--sha256sums=('6b0d17bc81304d8c0d9c80dce8a0097dfa49ff85cea3aba89b45d94e51d8546a')
+-sha256sums=('b31ba4c055445be01d3a560cbc3a5a38c62fbd676e38d7495dc6ffc9aa3c964c')
 +sha256sums=('f3f8932f311a8c0c1239baf475e069d645ed6aa991e1e8d822bae361e1764651')
  
  prepare() {

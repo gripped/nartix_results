@@ -337,7 +337,6 @@ dbus-python
 dbus-python-docs
 dconf-editor
 dconf
-ddclient
 debootstrap
 default-cursors
 dejagnu
@@ -670,6 +669,7 @@ google-glog
 gox
 gparted
 gperf
+gperftools
 gpicview
 gptfdisk
 gradle
@@ -1104,9 +1104,6 @@ kitemviews
 kitemviews5
 kiten
 kitinerary
-kitty
-kitty-terminfo
-kitty-shell-integration
 kjobwidgets
 kjobwidgets5
 kjs
@@ -1662,7 +1659,6 @@ liburcu
 liburing
 libusb-compat
 libutempter
-libutf8proc
 libutp
 libuv
 libva-intel-driver
@@ -2060,7 +2056,6 @@ neochat
 neofetch
 neomutt
 neon
-neovim-qt
 neovim
 net-snmp
 netavark
@@ -2892,7 +2887,6 @@ python-ddt
 python-debtcollector
 python-debugpy
 python-decorator
-python-deepdiff
 python-deepmerge
 python-defusedxml
 python-deprecated
@@ -4008,7 +4002,6 @@ raft
 ragel
 range-v3
 ranger
-rapidfuzz-cpp
 rapidjson
 raptor
 rasqal
