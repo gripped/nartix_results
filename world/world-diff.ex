@@ -269,7 +269,6 @@ libhandy0
 libinput
 libjpeg-turbo
 libkolabxml
-libksysguard
 libldm
 libmbim
 libmysofa
@@ -504,9 +503,9 @@ pyqt5
 python-pyqt5
 pyqt6
 python-aiomysql
-python-deepdiff
 python-django-mailman3
 python-openapi-spec-validator
+python-pooch
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -603,7 +602,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-rapidfuzz-cpp
 redis
 redshift
 refind

@@ -1,24 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=v2ray
--pkgver=5.8.0
--_commit=2f60dec37b82f5aa54dac27497739a6069f7fdb8
-+pkgver=5.7.0
-+_commit=2ac0188d6f3072bb02de4432217b0e0077705b3d
- pkgrel=1
- pkgdesc="A platform for building proxies to bypass network restrictions"
- arch=('x86_64')
-@@ -15,7 +15,6 @@
- 
- prepare() {
-   cd v2ray-core
+@@ -12,11 +12,6 @@
+ backup=(etc/v2ray/config.json)
+ source=("git+https://github.com/v2fly/v2ray-core.git#commit=$_commit")
+ sha512sums=('SKIP')
+-
+-prepare() {
+-  cd v2ray-core
 -  sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' release/config/systemd/system/*.service
- }
+-}
  
  build() {
-@@ -35,8 +34,6 @@
+   cd v2ray-core
+@@ -35,8 +30,6 @@
  package() {
    cd v2ray-core
    install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/v2ray/
@@ -33,11 +27,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,6 @@
+@@ -1,10 +1,6 @@
+ pkgname=v2ray
+ depends=('glibc' 'v2ray-domain-list-community' 'v2ray-geoip')
  backup=(etc/v2ray/config.json)
- prepare() {
-   cd v2ray-core
+-prepare() {
+-  cd v2ray-core
 -  sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' release/config/systemd/system/*.service
- }
+-}
  build() {
    cd v2ray-core
+   export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external"

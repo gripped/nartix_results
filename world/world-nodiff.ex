@@ -1460,6 +1460,7 @@ libkomparediff2
 libksane
 libkscreen
 libksieve
+libksysguard
 libktorrent
 liblangtag
 liblas
@@ -2887,6 +2888,7 @@ python-ddt
 python-debtcollector
 python-debugpy
 python-decorator
+python-deepdiff
 python-deepmerge
 python-defusedxml
 python-deprecated
@@ -3362,7 +3364,6 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
-python-pooch
 python-portend
 python-pprofile
 python-prance
@@ -4002,6 +4003,7 @@ raft
 ragel
 range-v3
 ranger
+rapidfuzz-cpp
 rapidjson
 raptor
 rasqal
