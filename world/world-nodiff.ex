@@ -285,7 +285,6 @@ coin-or-asl
 coin-or-cbc
 coin-or-cgl
 coin-or-clp
-coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
@@ -672,9 +671,6 @@ gperf
 gperftools
 gpicview
 gptfdisk
-gradle
-gradle-doc
-gradle-src
 grafana
 granatier
 granite
@@ -1654,12 +1650,12 @@ libtracefs
 libtracefs-docs
 libunibreak
 libuninameslist
-libunwind
 libupnp
 liburcu
 liburing
 libusb-compat
 libutempter
+libutf8proc
 libutp
 libuv
 libva-intel-driver
@@ -2163,7 +2159,6 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
-opensmtpd
 opensp
 openvr
 openvswitch
@@ -2615,6 +2610,8 @@ projectm
 projectm-sdl
 projectm-pulseaudio
 protobuf-c
+protobuf
+python-protobuf
 psutils
 publicsuffix-list
 pugixml
@@ -3031,7 +3028,6 @@ python-geopandas
 python-geopy
 python-gevent-websocket
 python-gevent
-python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
@@ -3093,7 +3089,6 @@ python-ijson
 python-imagesize
 python-immutabledict
 python-importlib-metadata
-python-importlib_resources
 python-incremental
 python-inflect
 python-ini2toml
@@ -3255,7 +3250,6 @@ python-nbxmpp
 python-ndg-httpsclient
 python-nest-asyncio
 python-netaddr
-python-netcdf4
 python-netifaces
 python-networkx
 python-nine
@@ -3364,6 +3358,7 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
+python-pooch
 python-portend
 python-pprofile
 python-prance
@@ -5006,3 +5001,4 @@ zug
 zvbi
 zxing-cpp
 zziplib
+python-pytest-mypy-testing

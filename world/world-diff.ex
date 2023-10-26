@@ -49,6 +49,7 @@ clamav
 cloud-init
 clutter
 cmake
+coin-or-coinutils
 colord
 colord-sane
 libcolord
@@ -160,6 +161,9 @@ go-bindata
 go-licenses
 godot
 gpsd
+gradle
+gradle-doc
+gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -278,10 +282,10 @@ libpng
 libprocps
 libsidplay
 libudev0-shim
+libunwind
 libusbmuxd
 libusbsio
 python-libusbsio
-libutf8proc
 libvirt-glib
 libvirt
 libwacom
@@ -393,6 +397,7 @@ opendht
 opendoas
 openfire
 openntpd
+opensmtpd
 openvdb
 openvkl
 openvpn
@@ -488,8 +493,6 @@ powerdns-recursor
 powerdns
 prometheus
 prosody
-protobuf
-python-protobuf
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -504,8 +507,10 @@ python-pyqt5
 pyqt6
 python-aiomysql
 python-django-mailman3
+python-gitdb
+python-importlib_resources
+python-netcdf4
 python-openapi-spec-validator
-python-pooch
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme

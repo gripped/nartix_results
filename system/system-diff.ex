@@ -11,9 +11,15 @@ dhcpcd
 elfutils
 debuginfod
 libelf
+glib2
+glib2-docs
 glibc
 lib32-glibc
 glibc-locales
+gpgme
+qgpgme-qt5
+qgpgme-qt6
+python-gpgme
 gssproxy
 iana-etc
 inetutils
@@ -22,7 +28,6 @@ iptables-nft
 libarchive
 libcap-ng
 python-capng
-libnsl
 libusb
 linux-lts
 linux-lts-headers
@@ -54,3 +59,5 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
+zlib
+minizip

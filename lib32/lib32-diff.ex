@@ -9,6 +9,7 @@ lib32-libjpeg-turbo
 lib32-libpulse
 lib32-librsvg
 lib32-libudev0-shim
+lib32-libunwind
 lib32-libusb
 lib32-mesa
 lib32-vulkan-mesa-layers

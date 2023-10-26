@@ -53,15 +53,9 @@ lto-dump
 libgccjit
 gdbm
 gettext
-glib2
-glib2-docs
 gmp
 gnupg
 gnutls
-gpgme
-qgpgme-qt5
-qgpgme-qt6
-python-gpgme
 gpm
 grep
 groff
@@ -106,6 +100,7 @@ libnfnetlink
 libnftnl
 libnghttp2
 libnl
+libnsl
 libpcap
 libpipeline
 libpsl
@@ -197,6 +192,4 @@ which
 wireless-regdb
 wpa_supplicant
 xz
-zlib
-minizip
 zstd

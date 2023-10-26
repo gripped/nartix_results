@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=librdkafka
+-pkgver=2.3.0
++pkgver=2.2.0
+ pkgrel=1
+ pkgdesc='The Apache Kafka C/C++ library'
+ arch=(x86_64)
+@@ -18,7 +18,7 @@
+ )
+ makedepends=(python rapidjson)
+ source=(librdkafka-$pkgver.tar.gz::https://github.com/edenhill/librdkafka/archive/v$pkgver.tar.gz)
+-sha256sums=('2d49c35c77eeb3d42fa61c43757fcbb6a206daa560247154e60642bcdcc14d12')
++sha256sums=('af9a820cbecbc64115629471df7c7cecd40403b6c34bfdbb9223152677a47226')
+ 
+ build() {
+   cd $pkgname-$pkgver
