@@ -282,7 +282,6 @@ codespell
 coffeescript
 cogl
 coin-or-asl
-coin-or-cbc
 coin-or-cgl
 coin-or-clp
 coin-or-data-sample
@@ -1259,7 +1258,6 @@ laszip2
 layer-shell-qt
 lcms2
 ldb
-ldc
 leafpad
 leatherman
 lensfun
@@ -1954,7 +1952,6 @@ mercurial
 merkuro
 mesa-demos
 mesa-utils
-meson-python
 meson
 messagelib
 metalog
@@ -1972,7 +1969,6 @@ minidlna
 minisign
 miniupnpc
 python-miniupnpc
-minizip-ng
 minuet
 mitmproxy
 mjpegtools
@@ -2159,6 +2155,7 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
+opensmtpd
 opensp
 openvr
 openvswitch
@@ -3250,6 +3247,7 @@ python-nbxmpp
 python-ndg-httpsclient
 python-nest-asyncio
 python-netaddr
+python-netcdf4
 python-netifaces
 python-networkx
 python-nine
@@ -4361,7 +4359,6 @@ smb4k
 smpeg
 smplayer
 snapper
-snappy
 sndio
 snorenotify
 snowball

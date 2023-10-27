@@ -1,14 +1,47 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,6 @@
+@@ -5,8 +5,8 @@
+   libp11-kit
+   p11-kit-docs
+ )
+-pkgver=0.25.0
+-pkgrel=2
++pkgver=0.25.1
++pkgrel=1
+ pkgdesc="Loads and enumerates PKCS#11 modules"
+ url="https://p11-glue.freedesktop.org"
+ arch=(x86_64)
+@@ -20,15 +20,15 @@
    bash-completion
    gtk-doc
    meson
 -  systemd
++)
++checkdepends=(
++  gnutls
  )
  source=(
    https://github.com/p11-glue/p11-kit/releases/download/$pkgver/p11-kit-$pkgver.tar.xz{,.sig}
-@@ -46,9 +45,10 @@
+-  0001-Fix-probing-of-C_GetInterface.patch
+ )
+-b2sums=('6ffce977f86c516a327afe50f4cc5a36e86ba7f43c6cb555db419d9e4ba7543a9f1847ba83da348cd6d7bbebe55dfa26cfe3a3aaa3e1d5420a4b8dc6cbbff088'
+-        'SKIP'
+-        '7d93f7bf86840e256480d6fa3efb5c933f8081fe7f64d803d44670724bc8171515474fe43f089e772a1207ba675149a040a8c07a3ba4dfe79bb9effd8e524648')
++b2sums=('6704ef2ada20765bfbbbfc6f92ec2e934be34b482e1b6a94a7a15ab4718efcaecf943ce06b6c352b8c638fe2b1f0bc7c953c6b0dcf0590e5695c1d6724272ebb'
++        'SKIP')
+ validpgpkeys=(
+   C0F67099B808FB063E2C81117BFB1108D92765AF  # Stef Walter <stef@thewalter.net>
+   462225C3B46F34879FC8496CD605848ED7E69871  # Daiki Ueno <ueno@unixuser.org>
+@@ -37,8 +37,6 @@
+ 
+ prepare() {
+   cd p11-kit-$pkgver
+-
+-  patch -Np1 -i ../0001-Fix-probing-of-C_GetInterface.patch
+ }
+ 
+ build() {
+@@ -46,9 +44,10 @@
      -D gtk_doc=true
      -D man=true
      -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source
@@ -20,7 +53,7 @@
    meson compile -C build
  }
  
-@@ -71,9 +71,7 @@
+@@ -71,9 +70,7 @@
      "libp11-kit=$pkgver-$pkgrel"
      coreutils
      libp11-kit.so
@@ -36,7 +69,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,8 +18,9 @@
+@@ -11,15 +11,15 @@
+ )
+ prepare() {
+   cd p11-kit-$pkgver
+-  patch -Np1 -i ../0001-Fix-probing-of-C_GetInterface.patch
+ }
+ build() {
+   local meson_options=(
      -D gtk_doc=true
      -D man=true
      -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source
@@ -47,7 +87,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -36,9 +37,7 @@
+@@ -36,9 +36,7 @@
      "libp11-kit=$pkgver-$pkgrel"
      coreutils
      libp11-kit.so

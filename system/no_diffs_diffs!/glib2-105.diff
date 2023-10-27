@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -73,7 +73,7 @@
-   CFLAGS+=" -g3"
-   CXXFLAGS+=" -g3"
+@@ -82,7 +82,7 @@
+   CFLAGS+=" -ffat-lto-objects"
+   CXXFLAGS+=" -ffat-lto-objects"
  
 -  arch-meson glib build "${meson_options[@]}"
 +  artix-meson glib build "${meson_options[@]}"
@@ -15,12 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
-   CXXFLAGS+=" -mstackrealign"
-   CFLAGS+=" -g3"
+@@ -34,7 +34,7 @@
    CXXFLAGS+=" -g3"
+   CFLAGS+=" -ffat-lto-objects"
+   CXXFLAGS+=" -ffat-lto-objects"
 -  arch-meson glib build "${meson_options[@]}"
 +  artix-meson glib build "${meson_options[@]}"
    meson compile -C build
  }
- package_lib32-glib2() {
+ package_glib2() {

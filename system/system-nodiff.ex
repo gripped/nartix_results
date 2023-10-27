@@ -53,6 +53,8 @@ lto-dump
 libgccjit
 gdbm
 gettext
+glib2
+glib2-docs
 gmp
 gnupg
 gnutls
@@ -136,7 +138,6 @@ lz4
 lzo
 m4
 make
-man-pages
 mkinitcpio-busybox
 mkinitcpio-nfs-utils
 mlocate
@@ -192,4 +193,6 @@ which
 wireless-regdb
 wpa_supplicant
 xz
+zlib
+minizip
 zstd

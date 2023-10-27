@@ -11,8 +11,6 @@ dhcpcd
 elfutils
 debuginfod
 libelf
-glib2
-glib2-docs
 glibc
 lib32-glibc
 glibc-locales
@@ -39,6 +37,7 @@ logrotate
 lvm2
 device-mapper
 man-db
+man-pages
 mdadm
 mkinitcpio
 nfs-utils
@@ -59,5 +58,3 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
-zlib
-minizip

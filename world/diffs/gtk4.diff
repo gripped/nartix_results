@@ -8,7 +8,7 @@
    wayland
  )
  makedepends=(
-@@ -104,11 +103,10 @@
+@@ -108,11 +107,10 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true
@@ -21,12 +21,12 @@
    meson compile -C build
  }
  
-@@ -121,7 +119,7 @@
+@@ -125,7 +123,7 @@
  
    trap "kill $_w; wait" EXIT
  
 -  meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs --no-suite headless # skip these test for now
++  meson test -C build --print-errorlogs --no-suite headless # skip these tests for now
  )
  
  _pick() {
@@ -44,7 +44,7 @@
    wayland
  )
  prepare() {
-@@ -55,10 +54,9 @@
+@@ -56,10 +55,9 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true

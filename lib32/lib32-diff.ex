@@ -8,6 +8,7 @@ lib32-libgudev
 lib32-libjpeg-turbo
 lib32-libpulse
 lib32-librsvg
+lib32-libsoup3
 lib32-libudev0-shim
 lib32-libunwind
 lib32-libusb

@@ -49,6 +49,7 @@ clamav
 cloud-init
 clutter
 cmake
+coin-or-cbc
 coin-or-coinutils
 colord
 colord-sane
@@ -248,6 +249,7 @@ kitty
 kitty-terminfo
 kitty-shell-integration
 knot
+ldc
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -354,8 +356,10 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+meson-python
 micro
 minio
+minizip-ng
 modemmanager
 libmm-glib
 mosquitto
@@ -397,7 +401,6 @@ opendht
 opendoas
 openfire
 openntpd
-opensmtpd
 openvdb
 openvkl
 openvpn
@@ -509,7 +512,6 @@ python-aiomysql
 python-django-mailman3
 python-gitdb
 python-importlib_resources
-python-netcdf4
 python-openapi-spec-validator
 python-pytest-benchmark
 python-pyudev
@@ -631,6 +633,7 @@ shairport-sync
 sharutils
 signon-plugin-oauth2
 smartmontools
+snappy
 solr
 spglib
 spice-gtk
