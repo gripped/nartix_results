@@ -58,6 +58,10 @@ glib2-docs
 gmp
 gnupg
 gnutls
+gpgme
+qgpgme-qt5
+qgpgme-qt6
+python-gpgme
 gpm
 grep
 groff
@@ -66,6 +70,7 @@ guile
 gzip
 hdparm
 hwdata
+iana-etc
 icu
 iproute2
 iputils
@@ -138,6 +143,7 @@ lz4
 lzo
 m4
 make
+man-pages
 mkinitcpio-busybox
 mkinitcpio-nfs-utils
 mlocate

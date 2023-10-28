@@ -5,12 +5,9 @@ lib32-fluidsynth
 lib32-gamemode
 lib32-jack2
 lib32-libgudev
-lib32-libjpeg-turbo
 lib32-libpulse
 lib32-librsvg
-lib32-libsoup3
 lib32-libudev0-shim
-lib32-libunwind
 lib32-libusb
 lib32-mesa
 lib32-vulkan-mesa-layers

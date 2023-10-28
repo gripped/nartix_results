@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-persistent
+-pkgver=5.1
++pkgver=5.0
+ pkgrel=1
+ pkgdesc="Translucent persistent objects"
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ makedepends=('python-setuptools')
+ checkdepends=('python-zope-testrunner' 'python-manuel')
+ source=("https://github.com/zopefoundation/persistent/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha512sums=('1dfeefa0437d37b075b9fdbec7a2e7cc8e7bb665b46e384204bf922fe13fc4280a6e0b419d97c9899725db478ac8589ed7f22887f267e58f418baa26f921e318')
++sha512sums=('561c339574817f70d1e5b091d77e3cd7a876a49742938591cfffdf4ec5a6ae23b4a7b4e7ff7d90d15763ce9485c093ff019699364952974e9ffe4da88bcf293f')
+ 
+ build() {
+   cd persistent-$pkgver

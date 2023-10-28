@@ -14,12 +14,7 @@ libelf
 glibc
 lib32-glibc
 glibc-locales
-gpgme
-qgpgme-qt5
-qgpgme-qt6
-python-gpgme
 gssproxy
-iana-etc
 inetutils
 iptables
 iptables-nft
@@ -37,7 +32,6 @@ logrotate
 lvm2
 device-mapper
 man-db
-man-pages
 mdadm
 mkinitcpio
 nfs-utils

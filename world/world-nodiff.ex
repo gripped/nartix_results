@@ -510,6 +510,7 @@ foomatic-db
 foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
+fop
 four-in-a-row
 fractal
 frameworkintegration
@@ -628,7 +629,6 @@ gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
-gnome-panel
 gnome-photos
 gnome-recipes
 gnome-robots
@@ -1648,6 +1648,7 @@ libtracefs
 libtracefs-docs
 libunibreak
 libuninameslist
+libunwind
 libupnp
 liburcu
 liburing
@@ -2155,7 +2156,6 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
-opensmtpd
 opensp
 openvr
 openvswitch
@@ -3113,7 +3113,6 @@ python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
 python-jaraco.text
-python-jedi
 python-jeepney
 python-jellyfish
 python-jinja-time
@@ -3275,7 +3274,6 @@ python-openapi-core
 python-openapi-schema-validator
 python-openid
 python-openpyxl
-python-openstacksdk
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -3531,7 +3529,6 @@ python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
-python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
 python-pytest-trio
@@ -4390,6 +4387,7 @@ speech-dispatcher
 libspeechd
 speex
 speexdsp
+spglib
 spice-protocol
 spice
 spirv-headers

@@ -70,6 +70,7 @@ lib32-libid3tag
 lib32-libidn2
 lib32-libiec61883
 lib32-libinstpatch
+lib32-libjpeg-turbo
 lib32-libldap
 lib32-libltdl
 lib32-libmodplug
@@ -89,6 +90,7 @@ lib32-libshout
 lib32-libsm
 lib32-libsndfile
 lib32-libsoup
+lib32-libsoup3
 lib32-libssh2
 lib32-libtasn1
 lib32-libthai
@@ -96,6 +98,7 @@ lib32-libtheora
 lib32-libtiff
 lib32-libtirpc
 lib32-libunistring
+lib32-libunwind
 lib32-libva
 lib32-libvdpau
 lib32-libvisual

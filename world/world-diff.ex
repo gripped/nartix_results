@@ -118,7 +118,6 @@ flatpak
 flatpak-docs
 fluidsynth
 folks
-fop
 fprintd
 freerdp
 fwupd-efi
@@ -150,6 +149,7 @@ gnome-keyring
 gnome-nibbles
 gnome-online-accounts
 libgoa
+gnome-panel
 gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
@@ -284,7 +284,6 @@ libpng
 libprocps
 libsidplay
 libudev0-shim
-libunwind
 libusbmuxd
 libusbsio
 python-libusbsio
@@ -401,6 +400,7 @@ opendht
 opendoas
 openfire
 openntpd
+opensmtpd
 openvdb
 openvkl
 openvpn
@@ -512,8 +512,11 @@ python-aiomysql
 python-django-mailman3
 python-gitdb
 python-importlib_resources
+python-jedi
 python-openapi-spec-validator
+python-openstacksdk
 python-pytest-benchmark
+python-pytest-timeout
 python-pyudev
 python-sphinx-alabaster-theme
 qastools
@@ -635,7 +638,6 @@ signon-plugin-oauth2
 smartmontools
 snappy
 solr
-spglib
 spice-gtk
 spice-vdagent
 squid
@@ -757,3 +759,4 @@ yubikey-personalization
 zeromq
 znc
 dhcpcd
+step-cli
