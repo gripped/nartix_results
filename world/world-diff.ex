@@ -8,7 +8,6 @@ appstream-glib
 appstream
 appstream-qt
 archivetools
-ardour
 aspell-uk
 at-spi2-core
 at-spi2-core-docs
@@ -49,8 +48,6 @@ clamav
 cloud-init
 clutter
 cmake
-coin-or-cbc
-coin-or-coinutils
 colord
 colord-sane
 libcolord
@@ -222,7 +219,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-imagemagick
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -245,9 +241,6 @@ js78
 json-glib
 json-glib-docs
 kismet
-kitty
-kitty-terminfo
-kitty-shell-integration
 knot
 ldc
 libatasmart
@@ -355,7 +348,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-meson-python
 micro
 minio
 minizip-ng
@@ -380,6 +372,7 @@ libnm
 nm-cloud-setup
 nginx
 nginx-src
+node-gyp
 nrpe
 nsd
 nvidia-open
@@ -413,7 +406,6 @@ pacman-contrib
 paprefs
 passim
 pcsclite
-pdfarranger
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -512,11 +504,9 @@ python-aiomysql
 python-django-mailman3
 python-gitdb
 python-importlib_resources
-python-jedi
 python-openapi-spec-validator
-python-openstacksdk
+python-pygls
 python-pytest-benchmark
-python-pytest-timeout
 python-pyudev
 python-sphinx-alabaster-theme
 qastools
@@ -682,6 +672,7 @@ udisks2
 umockdev
 unbound
 upower
+upx
 usbguard
 usbmuxd
 uwsgi

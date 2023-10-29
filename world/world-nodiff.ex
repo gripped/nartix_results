@@ -68,6 +68,7 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
+ardour
 argyllcms
 aria2
 arianna
@@ -282,8 +283,10 @@ codespell
 coffeescript
 cogl
 coin-or-asl
+coin-or-cbc
 coin-or-cgl
 coin-or-clp
+coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
@@ -811,6 +814,7 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
+imagemagick
 imake
 imath
 img2pdf
@@ -1099,6 +1103,9 @@ kitemviews
 kitemviews5
 kiten
 kitinerary
+kitty
+kitty-terminfo
+kitty-shell-integration
 kjobwidgets
 kjobwidgets5
 kjs
@@ -1953,6 +1960,7 @@ mercurial
 merkuro
 mesa-demos
 mesa-utils
+meson-python
 meson
 messagelib
 metalog
@@ -2066,7 +2074,6 @@ ninja
 nload
 nlohmann-json
 nmap
-node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-hydrogen
@@ -2213,6 +2220,7 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 pdal
+pdfarranger
 pdfjs
 pdfmixtool
 pdnsd
@@ -3113,6 +3121,7 @@ python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
 python-jaraco.text
+python-jedi
 python-jeepney
 python-jellyfish
 python-jinja-time
@@ -3274,6 +3283,7 @@ python-openapi-core
 python-openapi-schema-validator
 python-openid
 python-openpyxl
+python-openstacksdk
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -3418,7 +3428,6 @@ python-pygame-sdl2
 python-pygame
 python-pygeos
 python-pygit2
-python-pygls
 python-pygments
 python-pyhamcrest
 python-pyhcl
@@ -3529,6 +3538,7 @@ python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
+python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
 python-pytest-trio
@@ -4703,7 +4713,6 @@ unrealircd
 unrtf
 unzip
 uptimed
-upx
 uriparser
 usb_modeswitch
 usbredir
