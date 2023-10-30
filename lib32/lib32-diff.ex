@@ -1,3 +1,4 @@
+lib32-brotli
 lib32-clang
 lib32-colord
 lib32-dbus

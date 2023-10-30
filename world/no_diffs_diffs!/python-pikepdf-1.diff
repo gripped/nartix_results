@@ -1,19 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=python-pikepdf
--pkgver=8.5.3
-+pkgver=8.5.2
- pkgrel=1
- pkgdesc='Read and write PDFs with Python, powered by qpdf'
- arch=(x86_64)
 @@ -23,7 +23,7 @@
                python-psutil
                python-pytest-xdist)
  source=(https://github.com/pikepdf/pikepdf/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
 -sha256sums=('925c148402dfbe1e848adaa3e40392dee6271a764044e573e3d5f9bac6b5cb08')
-+sha256sums=('ea84b2cbf94d0ff19c87e6f937b8ae09217d96b4a80af96b5832f275ba6cb101')
++sha256sums=('43f8333628d1d2128c7ad969d62c72f67f42990b6686b25830ade31d0499843d')
  
  build() {
    cd pikepdf-$pkgver

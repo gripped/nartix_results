@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -1,15 +1,15 @@
+ 
+ pkgname=ddcutil
+-pkgver=2.0.0
++pkgver=1.4.1
+ pkgrel=1
+ pkgdesc='Query and change Linux monitor settings using DDC/CI and USB.'
  url='http://ddcutil.com/'
  arch=('x86_64')
  license=('GPL2')
@@ -9,8 +15,11 @@
 +depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'libxrandr' 'dkms')
 +makedepends=('libudev')
  source=(https://github.com/rockowitz/ddcutil/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
- sha512sums=('e53820662c12cd3a91b1182e02ad74841238117c129e88c8bcdede42d4e0dec22a9c1ec37a7b1e1dd512f2cf7ef410e737d9fdba62d95ea48e5912e43e6d3857')
+-sha512sums=('e1880cf0e3e724f6ac88f807a867a34f451422b58ce7d23bee7b2fc40b253ef8de13df7706749e0c8242fe5de6db8da91784d16fbf008bb5161732a598c3b9e7')
++sha512sums=('e53820662c12cd3a91b1182e02ad74841238117c129e88c8bcdede42d4e0dec22a9c1ec37a7b1e1dd512f2cf7ef410e737d9fdba62d95ea48e5912e43e6d3857')
  
+ prepare() {
+   cd $pkgname-$pkgver
 
 
 ############# Stripped diff below #################

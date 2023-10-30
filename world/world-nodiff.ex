@@ -126,8 +126,6 @@ autopep8
 avisynthplus
 avogadro-crystals
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt5
 awesome-terminal-fonts
 awesome
 aws-c-auth
@@ -212,6 +210,14 @@ cairomm-1.16
 cairomm-1.16-docs
 cairomm
 cairomm-docs
+caja-extensions
+caja-extensions-common
+caja-image-converter
+caja-open-terminal
+caja-sendto
+caja-share
+caja-wallpaper
+caja-xattr-tags
 caja
 calc
 calcurse
@@ -796,14 +802,12 @@ hunspell-nl
 hunspell-ru
 hunspell
 hwinfo
-hy
 hypercorn
 hyperscan
 hyphen
 hyphen-en
 i2c-tools
 i2pd
-i3-wm
 i3lock
 i3status
 iagno
@@ -926,7 +930,6 @@ kalarm
 kalendar
 kalgebra
 kalk
-kalzium
 kamera
 kamoso
 kanagram
@@ -2017,10 +2020,6 @@ mtr-gtk
 muffin
 mujs
 muparser
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
 musepack
 musepack-tools
 libmpcdec
@@ -3428,6 +3427,7 @@ python-pygame-sdl2
 python-pygame
 python-pygeos
 python-pygit2
+python-pygls
 python-pygments
 python-pyhamcrest
 python-pyhcl
@@ -3446,12 +3446,10 @@ python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
 python-pymongo
-python-pymupdf
 python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
-python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
@@ -5006,3 +5004,4 @@ zvbi
 zxing-cpp
 zziplib
 python-pytest-mypy-testing
+python-pipx

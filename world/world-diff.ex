@@ -13,6 +13,8 @@ at-spi2-core
 at-spi2-core-docs
 at
 avahi
+avogadrolibs
+avogadrolibs-qt5
 ayatana-ido
 bftpd
 blackbox
@@ -30,15 +32,6 @@ brltty-udev-generic
 btop
 bumblebee
 c-ares
-caja-extensions
-caja-extensions-common
-caja-image-converter
-caja-open-terminal
-caja-sendto
-caja-share
-caja-wallpaper
-caja-xattr-tags
-caja-audio-video-properties
 catatonit
 cdparanoia
 cgmanager
@@ -212,8 +205,10 @@ haproxy
 haveged
 hidapi
 hwloc
+hy
 hyperkitty
 hyprland
+i3-wm
 i3blocks
 ibus
 libibus
@@ -240,6 +235,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
+kalzium
 kismet
 knot
 ldc
@@ -359,6 +355,10 @@ mpv
 multipath-tools
 mumble
 mumble-server
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
 mutter
 mutter-docs
 ndctl
@@ -505,7 +505,8 @@ python-django-mailman3
 python-gitdb
 python-importlib_resources
 python-openapi-spec-validator
-python-pygls
+python-pymupdf
+python-pynitrokey
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme

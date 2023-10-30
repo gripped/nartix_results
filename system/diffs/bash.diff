@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,12 +3,12 @@
- _basever=5.2
- _patchlevel=015
- pkgver=${_basever}.${_patchlevel}
--pkgrel=4
-+pkgrel=5
- pkgdesc='The GNU Bourne Again shell'
+@@ -8,7 +8,7 @@
  arch=(x86_64)
  license=(GPL)
  url='https://www.gnu.org/software/bash/bash.html'
@@ -25,21 +19,7 @@
  validpgpkeys=('7C0135FB088AAF6C66C650B9BB5869F064EA74AB') # Chet Ramey
  
  if [[ $((10#${_patchlevel})) -gt 0 ]]; then
-@@ -30,9 +31,11 @@
- prepare() {
-   cd $pkgname-$_basever
- 
-+  msg "Applying patches..."
-   for (( _p=1; _p<=$((10#${_patchlevel})); _p++ )); do
--    echo "applying patch bash${_basever//.}-$(printf "%03d" $_p)"
--    patch -p0 -i ../bash${_basever//.}-$(printf "%03d" $_p)
-+    local patch="bash${_basever//.}-$(printf "%03d" $_p)"
-+    msg2 "applying patch ${patch}"
-+    patch -Np0 -i ../"${patch}"
-   done
- }
- 
-@@ -41,8 +44,8 @@
+@@ -43,8 +44,8 @@
  
    _bashconfig=(-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/bin\"\'
                 -DSTANDARD_UTILS_PATH=\'\"/usr/bin\"\'
@@ -50,7 +30,7 @@
                 -DNON_INTERACTIVE_LOGIN_SHELLS)
    export CFLAGS="${CFLAGS} ${_bashconfig[@]}"
  
-@@ -64,22 +67,24 @@
+@@ -66,22 +67,24 @@
    ln -s bash "$pkgdir/usr/bin/sh"
    ln -s bash "$pkgdir/usr/bin/rbash"
  
@@ -95,20 +75,7 @@
  depends=(readline libreadline.so glibc ncurses)
  provides=('sh')
  install=bash.install
-@@ -12,17 +12,19 @@
- fi
- prepare() {
-   cd $pkgname-$_basever
-+  msg "Applying patches..."
-   for (( _p=1; _p<=$((10#${_patchlevel})); _p++ )); do
--    echo "applying patch bash${_basever//.}-$(printf "%03d" $_p)"
--    patch -p0 -i ../bash${_basever//.}-$(printf "%03d" $_p)
-+    local patch="bash${_basever//.}-$(printf "%03d" $_p)"
-+    msg2 "applying patch ${patch}"
-+    patch -Np0 -i ../"${patch}"
-   done
- }
- build() {
+@@ -23,8 +23,8 @@
    cd $pkgname-$_basever
    _bashconfig=(-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/bin\"\'
                 -DSTANDARD_UTILS_PATH=\'\"/usr/bin\"\'
