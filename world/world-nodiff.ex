@@ -359,7 +359,6 @@ diffstat
 diffuse
 digikam
 directx-headers
-directx-shader-compiler
 discount
 discover
 distcc
@@ -546,7 +545,6 @@ $pkgbase-qt5
 $pkgbase-qt6
 fwknop
 fzf
-gajim
 galculator
 gamescope
 gammastep
@@ -840,7 +838,6 @@ intel-ucode
 intltool
 inxi
 ipset
-ipython
 irssi
 iso-codes
 isodate
@@ -2653,16 +2650,6 @@ pyqt5-purchasing
 python-pyqt5-purchasing
 pyqt5-webengine
 python-pyqt5-webengine
-pyqt6-3d
-python-pyqt6-3d
-pyqt6-charts
-python-pyqt6-charts
-pyqt6-datavisualization
-python-pyqt6-datavisualization
-pyqt6-networkauth
-python-pyqt6-networkauth
-pyqt6-webengine
-python-pyqt6-webengine
 pyside2
 shiboken2
 python-shiboken2
@@ -2706,7 +2693,6 @@ python-ansicolors
 python-ansiwrap
 python-anyio
 python-anyjson
-python-anytree
 python-apipkg
 python-apispec-webframeworks
 python-apispec
@@ -4715,7 +4701,6 @@ uriparser
 usb_modeswitch
 usbredir
 usort
-utf8cpp
 uthash
 uvicorn
 v2ray-domain-list-community

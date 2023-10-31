@@ -63,6 +63,7 @@ ddclient
 ddcutil
 dhcp
 dhclient
+directx-shader-compiler
 dns-over-https
 docker
 dolphin-emu
@@ -112,6 +113,7 @@ fprintd
 freerdp
 fwupd-efi
 fwupd
+gajim
 gala
 gamemode
 gcr-4
@@ -217,6 +219,7 @@ iio-sensor-proxy
 intel-opencl-clang
 intel-undervolt
 interception-tools
+ipython
 iwd
 jack2
 jack2-dbus
@@ -499,8 +502,19 @@ pulseaudio-rtp
 puppet
 pyqt5
 python-pyqt5
+pyqt6-3d
+python-pyqt6-3d
+pyqt6-charts
+python-pyqt6-charts
+pyqt6-datavisualization
+python-pyqt6-datavisualization
+pyqt6-networkauth
+python-pyqt6-networkauth
+pyqt6-webengine
+python-pyqt6-webengine
 pyqt6
 python-aiomysql
+python-anytree
 python-django-mailman3
 python-gitdb
 python-importlib_resources
@@ -676,6 +690,7 @@ upower
 upx
 usbguard
 usbmuxd
+utf8cpp
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

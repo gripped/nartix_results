@@ -18,13 +18,15 @@
          '8a2882e4cd59eb3304acae9dfa71252c2024a8251e61cd1e75e6b84a84ec8c636e70d6702c03d7b7d0e2f7fa60d2466c6eed4f4f80f1834585185deaf7157eee')
  
  pkgver() {
-@@ -144,19 +140,20 @@
- 
- prepare() {
-   cd rspamd
--  sed 's/_rspamd/rspamd/g' -i rspamd.service
+@@ -142,21 +138,18 @@
+   git describe --tags
  }
  
+-prepare() {
+-  cd rspamd
+-  sed 's/_rspamd/rspamd/g' -i rspamd.service
+-}
+-
  build() {
    cmake -S rspamd -B build -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \
@@ -41,7 +43,7 @@
      -DENABLE_HYPERSCAN=ON \
      -DENABLE_JEMALLOC=ON \
      -DENABLE_OPTIMIZATION=ON
-@@ -169,8 +166,6 @@
+@@ -169,8 +162,6 @@
    install -Dm 644 rspamd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/rspamd.conf
    install -Dm 644 rspamd.sysusers "${pkgdir}"/usr/lib/sysusers.d/rspamd.conf
    install -Dm 644 rspamd.logrotate "${pkgdir}"/etc/logrotate.d/rspamd
@@ -56,12 +58,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -102,18 +102,19 @@
+@@ -100,20 +100,18 @@
+   etc/rspamd/worker-proxy.inc
+ )
  install=rspamd.install
- prepare() {
-   cd rspamd
+-prepare() {
+-  cd rspamd
 -  sed 's/_rspamd/rspamd/g' -i rspamd.service
- }
+-}
  build() {
    cmake -S rspamd -B build -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \

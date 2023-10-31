@@ -22,6 +22,16 @@ libarchive
 libcap-ng
 python-capng
 libusb
+linux-firmware
+linux-firmware-whence
+amd-ucode
+linux-firmware-nfp
+linux-firmware-mellanox
+linux-firmware-marvell
+linux-firmware-qcom
+linux-firmware-liquidio
+linux-firmware-qlogic
+linux-firmware-bnx2x
 linux-lts
 linux-lts-headers
 linux-lts-docs
