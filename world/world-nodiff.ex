@@ -322,6 +322,8 @@ cryptoplusplus
 cscope
 ctags
 ctpl
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -545,6 +547,7 @@ $pkgbase-qt5
 $pkgbase-qt6
 fwknop
 fzf
+gajim
 galculator
 gamescope
 gammastep
@@ -750,7 +753,6 @@ foomatic-db-gutenprint-ppds
 gv
 gwenhywfar
 gwenview
-gyp
 handbrake
 harfbuzz
 harfbuzz-cairo
@@ -801,6 +803,7 @@ hunspell-ru
 hunspell
 hwinfo
 hypercorn
+hyperkitty
 hyperscan
 hyphen
 hyphen-en
@@ -838,6 +841,7 @@ intel-ucode
 intltool
 inxi
 ipset
+ipython
 irssi
 iso-codes
 isodate
@@ -1866,7 +1870,9 @@ mailcap
 mailcommon
 mailgraph
 mailimporter
+mailman-web
 mailman3-hyperkitty
+mailman3
 maim
 malcontent
 libmalcontent
@@ -2587,7 +2593,6 @@ portmidi
 portsmf
 postgis
 postgrey
-postorius
 potrace
 powerdevil
 powerline
@@ -2650,6 +2655,16 @@ pyqt5-purchasing
 python-pyqt5-purchasing
 pyqt5-webengine
 python-pyqt5-webengine
+pyqt6-3d
+python-pyqt6-3d
+pyqt6-charts
+python-pyqt6-charts
+pyqt6-datavisualization
+python-pyqt6-datavisualization
+pyqt6-networkauth
+python-pyqt6-networkauth
+pyqt6-webengine
+python-pyqt6-webengine
 pyside2
 shiboken2
 python-shiboken2
@@ -2903,6 +2918,7 @@ python-django-filter
 python-django-gravatar
 python-django-guardian
 python-django-haystack
+python-django-mailman3
 python-django-picklefield
 python-django-q
 python-django-rest-framework
@@ -3018,6 +3034,7 @@ python-geopandas
 python-geopy
 python-gevent-websocket
 python-gevent
+python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
@@ -3079,6 +3096,7 @@ python-ijson
 python-imagesize
 python-immutabledict
 python-importlib-metadata
+python-importlib_resources
 python-incremental
 python-inflect
 python-ini2toml
@@ -3436,12 +3454,12 @@ python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
+python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
 python-pyopencl
 pyopencl-headers
-python-pyopenssl
 python-pypandoc
 python-pyparsing
 python-pyperclip
@@ -3979,7 +3997,6 @@ quadrapassel
 quilt
 quota-tools
 qutebrowser
-r
 r8168
 radeontop
 radicale
@@ -4990,3 +5007,11 @@ zxing-cpp
 zziplib
 python-pytest-mypy-testing
 python-pipx
+curator
+python-elasticsearch-curator
+python-cx-freeze
+python-loguru
+python-nethsm-sdk-py
+python-requests-aws4auth
+python-saml
+python-sentry_sdk

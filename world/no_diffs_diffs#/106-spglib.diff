@@ -1,26 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
- sha256sums=('31bca273a1bc54e1cff4058eebe7c0a35d5f9b489579e84667d8e005c73dcc13')
+@@ -24,7 +24,7 @@
+ }
  
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \
-     -DCMAKE_INSTALL_PREFIX=/usr
-   cmake --build build
- }
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DSPGLIB_WITH_Fortran=ON \
+     -DSPGLIB_WITH_Python=ON
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=spglib
- depends=(glibc)
+@@ -4,7 +4,7 @@
+   patch -d $pkgname-$pkgver -p1 < fix-duplicate-libs.patch # Don't duplicate shared libs in python tree
+ }
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \
-     -DCMAKE_INSTALL_PREFIX=/usr
-   cmake --build build
- }
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DSPGLIB_WITH_Fortran=ON \
+     -DSPGLIB_WITH_Python=ON
