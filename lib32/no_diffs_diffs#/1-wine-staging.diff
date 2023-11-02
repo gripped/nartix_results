@@ -1,23 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
-   libpcap         lib32-libpcap
+@@ -37,7 +37,7 @@
    desktop-file-utils
  )
+ 
 -makedepends=(autoconf bison perl flex mingw-w64-gcc
-+makedepends=(autoconf bison perl gcc
++makedepends=(autoconf bison perl flex
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
-@@ -73,7 +73,6 @@
-   samba           dosbox
- )
- makedepends=(${makedepends[@]} ${depends[@]})
--install=wine.install
- 
- prepare() {
-   mv $pkgname-$_pkgbasever $pkgname
-@@ -137,8 +136,5 @@
+@@ -151,8 +151,5 @@
    install -m644 "$srcdir/30-win32-aliases.conf" "$pkgdir/usr/share/fontconfig/conf.avail"
    ln -s ../conf.avail/30-win32-aliases.conf "$pkgdir/usr/share/fontconfig/conf.default/30-win32-aliases.conf"
    install -Dm 644 "$srcdir/wine-binfmt.conf" "$pkgdir/usr/lib/binfmt.d/wine.conf"
@@ -26,17 +18,3 @@
 -  x86_64-w64-mingw32-strip --strip-unneeded "$pkgdir"/usr/lib/wine/x86_64-windows/*.dll
  }
  
-
-
-############# Stripped diff below #################
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -12,7 +12,6 @@
-   libpcap         lib32-libpcap
-   desktop-file-utils
- )
--install=wine.install
- prepare() {
-   mv $pkgname-$_pkgbasever $pkgname
-   export CFLAGS="${CFLAGS/-fno-plt/} -ffat-lto-objects"

@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=sqlcipher
+-pkgver=4.5.5
++pkgver=4.5.4
+ pkgrel=1
+ pkgdesc="SQLite extension that provides transparent 256-bit AES encryption of database files"
+ arch=('x86_64')
+@@ -9,14 +9,11 @@
+ depends=('openssl' 'sqlite' 'tcl' 'readline' 'zlib')
+ source=(https://www.zetetic.net/$pkgname/verify/$pkgver/$pkgname-$pkgver.zip{,.sig})
+ validpgpkeys=('D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2') # Zetetic LLC <support@zetetic.net>
+-sha256sums=('dc2a64b84104073bf68d62a6a904a9c2e07bee7c288062431d2f7326eb99fa69'
++sha256sums=('bb333b1dfa58d66634f263328a81d07d96395ca17f4e147ede4b723ea83ce5f8'
+             'SKIP')
+ 
+ build() {
+   cd "${srcdir}"/$pkgname-$pkgver
+-
+-  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+-  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ 
+   export CPPFLAGS="$CPPFLAGS \
+     -DSQLITE_ENABLE_COLUMN_METADATA=1 \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,8 +2,6 @@
+ depends=('openssl' 'sqlite' 'tcl' 'readline' 'zlib')
+ build() {
+   cd "${srcdir}"/$pkgname-$pkgver
+-  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+-  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   export CPPFLAGS="$CPPFLAGS \
+     -DSQLITE_ENABLE_COLUMN_METADATA=1 \
+     -DSQLITE_ENABLE_UNLOCK_NOTIFY \

@@ -1,16 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,23 +1,22 @@
  
  pkgname=minio
--pkgver=2023.10.25
--_timever=T06-33-25Z
+-pkgver=2023.11.01
+-_timever=T18-37-25Z
 +pkgver=2023.09.30
 +_timever=T07-02-29Z
  _pkgver="${pkgver//./-}${_timever//:/-}"
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='Object storage server compatible with Amazon S3'
-@@ -10,14 +10,13 @@
+ arch=('x86_64')
+ url='https://minio.io'
  license=('AGPL3')
  depends=('glibc')
  makedepends=('go' 'git')
@@ -41,7 +43,7 @@
 +++ Artix PKGBUILD
 @@ -1,7 +1,8 @@
  pkgname=minio
--_timever=T06-33-25Z
+-_timever=T18-37-25Z
 +_timever=T07-02-29Z
  _
  depends=('glibc')

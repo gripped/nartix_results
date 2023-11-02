@@ -61,6 +61,7 @@ ddclient
 ddcutil
 dhcp
 dhclient
+dhcpcd
 directx-shader-compiler
 dns-over-https
 docker
@@ -276,7 +277,6 @@ libusbmuxd
 libusbsio
 python-libusbsio
 libvirt-glib
-libvirt
 libwacom
 libwhereami
 light-locker
@@ -352,10 +352,6 @@ mpv
 multipath-tools
 mumble
 mumble-server
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
 mutter
 mutter-docs
 ndctl
@@ -394,7 +390,6 @@ opensmtpd
 openvdb
 openvkl
 openvpn
-osinfo-db
 ospray
 ostree
 packagekit
@@ -501,8 +496,6 @@ pyqt6
 python-aiomysql
 python-anytree
 python-openapi-spec-validator
-python-pymupdf
-python-pyopenssl
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -609,6 +602,7 @@ rspamd
 rsync
 rtkit
 ruby-faraday-patron
+rust-bindgen
 salt
 samba
 libwbclient
@@ -628,10 +622,12 @@ snappy
 solr
 spice-gtk
 spice-vdagent
+sqlcipher
 squid
 sshguard
 sslh
 sssd
+step-cli
 strawberry
 strongswan
 stubby
@@ -748,5 +744,3 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
-dhcpcd
-step-cli

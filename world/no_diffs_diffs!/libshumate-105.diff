@@ -1,5 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   libshumate
+   libshumate-docs
+ )
+-pkgver=1.1.2
++pkgver=1.1.1
+ pkgrel=1
+ pkgdesc="Map widget for GTK 4"
+ url="https://wiki.gnome.org/Projects/libshumate"
+@@ -25,7 +25,7 @@
+   vala
+ )
+ checkdepends=(xorg-server-xvfb)
+-_commit=eeb257ab8cfca9133ec2e7da739d3ce815be7067  # tags/1.1.2^0
++_commit=07ca1e45c3deea741ef3f46717adf8949e06ec03  # tags/1.1.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/libshumate.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
 @@ -43,7 +43,7 @@
      -D demos=true
    )

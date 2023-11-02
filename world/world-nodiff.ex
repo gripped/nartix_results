@@ -329,6 +329,8 @@ cunit
 cups-filters
 cups-pdf
 cups-pk-helper
+curator
+python-elasticsearch-curator
 cython-dev
 cython
 cython0
@@ -1098,6 +1100,7 @@ kio
 kio5
 kirigami-addons
 kirigami-addons5
+kirigami-addons5
 kirigami-gallery
 kirigami2
 kiriki
@@ -1675,6 +1678,7 @@ libva
 libvdpau
 libvips
 libvirt-python
+libvirt
 libvisio
 libvisual
 libvncserver
@@ -2023,6 +2027,10 @@ mtr-gtk
 muffin
 mujs
 muparser
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
 musepack
 musepack-tools
 libmpcdec
@@ -2178,6 +2186,7 @@ orc
 orca
 os-prober
 osinfo-db-tools
+osinfo-db
 osm-gps-map
 oxygen-icons
 oxygen-icons-svg
@@ -2876,6 +2885,7 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
+python-cx-freeze
 python-cycler
 python-cython-test-exception-raiser
 python-cytoolz
@@ -3192,6 +3202,7 @@ python-lmdb
 python-locket
 python-lockfile
 python-logbook
+python-loguru
 python-logutils
 python-looseversion
 python-lsp-black
@@ -3259,6 +3270,7 @@ python-ndg-httpsclient
 python-nest-asyncio
 python-netaddr
 python-netcdf4
+python-nethsm-sdk-py
 python-netifaces
 python-networkx
 python-nine
@@ -3356,6 +3368,7 @@ python-pint
 python-pip-run
 python-pip
 python-pipreqs
+python-pipx
 python-pkgconfig
 python-pkginfo
 python-platformdirs
@@ -3450,6 +3463,7 @@ python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
 python-pymongo
+python-pymupdf
 python-pymysql
 python-pynacl
 python-pynamodb
@@ -3460,6 +3474,7 @@ python-pyocd
 python-pyogrio
 python-pyopencl
 pyopencl-headers
+python-pyopenssl
 python-pypandoc
 python-pyparsing
 python-pyperclip
@@ -3517,6 +3532,7 @@ python-pytest-localserver
 python-pytest-metadata
 python-pytest-mock
 python-pytest-mpi
+python-pytest-mypy-testing
 python-pytest-mypy
 python-pytest-ordering
 python-pytest-pacman
@@ -3592,6 +3608,7 @@ python-regex
 python-rencode
 python-reportlab
 python-repoze.lru
+python-requests-aws4auth
 python-requests-credssp
 python-requests-file
 python-requests-ftp
@@ -3625,6 +3642,7 @@ python-ruamel-yaml
 python-ruamel.yaml.clib
 python-rx
 python-s3transfer
+python-saml
 python-sarif-om
 python-schema
 python-scikit-build
@@ -3640,6 +3658,7 @@ python-semantic-version
 python-semver
 python-send2trash
 python-sentinels
+python-sentry_sdk
 python-serpent
 python-service-identity
 python-setproctitle
@@ -4287,7 +4306,6 @@ rubygems
 ruff
 python-ruff
 runc
-rust-bindgen
 rust
 lib32-rust-libs
 rust-musl
@@ -4406,7 +4424,6 @@ spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
-sqlcipher
 squashfs-tools
 squashfuse
 sratom
@@ -4651,6 +4668,7 @@ tl-expected
 tldp-howtos-txt
 tldr
 tokodon
+torbrowser-launcher
 totem-pl-parser
 totem
 towncrier
@@ -5005,13 +5023,3 @@ zug
 zvbi
 zxing-cpp
 zziplib
-python-pytest-mypy-testing
-python-pipx
-curator
-python-elasticsearch-curator
-python-cx-freeze
-python-loguru
-python-nethsm-sdk-py
-python-requests-aws4auth
-python-saml
-python-sentry_sdk
