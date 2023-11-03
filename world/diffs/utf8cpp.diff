@@ -1,21 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=utf8cpp
--pkgver=4.0.1
-+pkgver=3.2.3
- pkgrel=1
- pkgdesc="UTF-8 with C++ in a Portable Way"
- arch=(any)
-@@ -8,12 +8,13 @@
- license=(custom:BSL)
- makedepends=(cmake)
- source=(${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
--sha256sums=('9014342a716258da00b97bf8c201a2edc4d72d2025cd8d62f0650ac627038f95')
-+sha256sums=('3ba9b0dbbff08767bdffe8f03b10e596ca351228862722e4c9d4d126d2865250')
- 
- build() {
+@@ -14,6 +14,7 @@
    cmake -B build -S ${pkgname/8}-${pkgver} \
      -DCMAKE_BUILD_TYPE=None \
      -DCMAKE_INSTALL_PREFIX=/usr \

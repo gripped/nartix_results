@@ -9,6 +9,7 @@ appstream
 appstream-qt
 archivetools
 aspell-uk
+assimp
 at-spi2-core
 at-spi2-core-docs
 at
@@ -64,6 +65,7 @@ dhclient
 dhcpcd
 directx-shader-compiler
 dns-over-https
+dnscrypt-proxy
 docker
 dolphin-emu
 dovecot
@@ -74,14 +76,12 @@ dropbear-scp
 dtc
 dunst
 earlyoom
-editline
 edk2
 edk2-shell
 edk2-ovmf
 element.io
 element-web
 element-desktop
-elixir
 emacs
 emacs-nativecomp
 emacs-nox
@@ -152,14 +152,13 @@ go-bindata
 go-licenses
 godot
 gpsd
-gradle
-gradle-doc
-gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
 $pkgbase-agreety
 grim
+gssdp
+gssdp-docs
 gstreamer
 gst-plugins-bad-libs
 #
@@ -193,6 +192,8 @@ gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
 gunicorn
+gupnp
+gupnp-docs
 gvfs
 gvfs-smb
 gvfs-afc
@@ -214,6 +215,8 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-metee
+intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -238,6 +241,8 @@ json-glib-docs
 kalzium
 kismet
 knot
+kquickimageeditor
+kuserfeedback
 ldc
 libatasmart
 libayatana-appindicator
@@ -271,6 +276,7 @@ libnet
 libplacebo
 libpng
 libprocps
+libqaccessibilityclient
 libsidplay
 libudev0-shim
 libusbmuxd
@@ -308,13 +314,11 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lm_sensors
-lowdown
 luaexpat
 lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
-luajit
 luarocks
 lxc
 lxcfs
@@ -341,9 +345,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-micro
 minio
-minizip-ng
 modemmanager
 libmm-glib
 mosquitto
@@ -365,7 +367,6 @@ libnm
 nm-cloud-setup
 nginx
 nginx-src
-node-gyp
 nrpe
 nsd
 nvidia-open
@@ -403,6 +404,8 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
+phonon-vlc
+phonon-qt5-vlc
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -590,7 +593,6 @@ qt6-tools
 quazip
 quazip-qt5
 quazip-qt6
-r
 rabbitmq
 rabbitmqadmin
 redis
@@ -618,11 +620,8 @@ shairport-sync
 sharutils
 signon-plugin-oauth2
 smartmontools
-snappy
-solr
 spice-gtk
 spice-vdagent
-sqlcipher
 squid
 sshguard
 sslh

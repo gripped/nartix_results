@@ -96,7 +96,6 @@ aspell-pt
 aspell-ru
 aspell-sv
 aspell
-assimp
 astromenace
 astyle
 atftp
@@ -377,7 +376,6 @@ dmd-docs
 libphobos
 dmenu
 dmidecode
-dnscrypt-proxy
 dnsmasq
 docbook-dsssl
 docbook-sgml
@@ -411,6 +409,7 @@ easytag
 ebook-tools
 eclipse-ecj
 ecryptfs-utils
+editline
 editorconfig-core-c
 egl-wayland
 eglexternalplatform
@@ -421,6 +420,7 @@ electrum
 elementary-icon-theme
 elinks
 elisa
+elixir
 ell
 embree3
 emovix
@@ -682,6 +682,9 @@ gperf
 gperftools
 gpicview
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
@@ -713,8 +716,6 @@ gsmartcontrol
 gsoap
 gsound
 gspell
-gssdp
-gssdp-docs
 gst-python
 gtest
 gtk-doc
@@ -748,8 +749,6 @@ gumbo-parser
 gupnp-av
 gupnp-dlna
 gupnp-igd
-gupnp
-gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
@@ -837,8 +836,6 @@ intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
-intel-metee
-intel-metee-doc
 intel-ucode
 intltool
 inxi
@@ -1184,7 +1181,6 @@ kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
-kquickimageeditor
 krdc
 krecorder
 krename
@@ -1230,7 +1226,6 @@ kturtle
 kubrick
 kunitconversion
 kunitconversion5
-kuserfeedback
 kvantum
 kvirc
 kwallet-pam
@@ -1579,7 +1574,6 @@ libpst
 libpst-docs
 libptytty
 libpwquality
-libqaccessibilityclient
 libqalculate
 libqb
 libqmi
@@ -1774,6 +1768,7 @@ lmdb
 log4cplus
 lokalize
 lolcat
+lowdown
 lpeg
 lua-lpeg
 lua51-lpeg
@@ -1801,6 +1796,7 @@ lua
 lua51
 lua52
 lua53
+luajit
 luajson
 lua52-luajson
 luasec
@@ -1979,6 +1975,7 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
+micro
 microsoft-gsl
 milou
 mimalloc
@@ -1988,6 +1985,7 @@ minidlna
 minisign
 miniupnpc
 python-miniupnpc
+minizip-ng
 minuet
 mitmproxy
 mjpegtools
@@ -2084,6 +2082,7 @@ ninja
 nload
 nlohmann-json
 nmap
+node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-hydrogen
@@ -2539,10 +2538,9 @@ perl-yaml
 persepolis
 phonon-gstreamer
 phonon-qt5-gstreamer
-phonon-vlc
-phonon-qt5-vlc
 phonon
 phonon-qt5
+phonon-qt6
 picard
 picmi
 picom
@@ -4016,6 +4014,7 @@ quadrapassel
 quilt
 quota-tools
 qutebrowser
+r
 r8168
 radeontop
 radicale
@@ -4385,6 +4384,7 @@ smb4k
 smpeg
 smplayer
 snapper
+snappy
 sndio
 snorenotify
 snowball
@@ -4396,6 +4396,7 @@ sof-tools
 softhsm
 solid
 solid5
+solr
 sonivox
 sonnet
 sonnet5
@@ -4424,6 +4425,7 @@ spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
+sqlcipher
 squashfs-tools
 squashfuse
 sratom
@@ -5023,3 +5025,4 @@ zug
 zvbi
 zxing-cpp
 zziplib
+python-sphinxygen

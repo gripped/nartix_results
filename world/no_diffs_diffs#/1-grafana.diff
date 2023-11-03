@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=grafana
--pkgver=10.2.0
-+pkgver=10.1.2
- pkgrel=1
- pkgdesc='Gorgeous metric viz, dashboards & editors for Graphite, InfluxDB & OpenTSDB'
- url='https://grafana.com/'
 @@ -10,13 +10,11 @@
  makedepends=('git' 'go' 'npm' 'grunt-cli' 'python' 'nodejs-lts-hydrogen' 'yarn')
  backup=('etc/grafana.ini')

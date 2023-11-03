@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+ license=('GPL3')
+ depends=('http-parser' 'jose')
+ makedepends=('git' 'asciidoc' 'meson')
+-checkdepends=('systemd')
+ source=("git+$url.git?signed#commit=$_commit"
+         'tang.sysusers.conf'
+         'tang.tmpfiles.conf')
+@@ -36,6 +35,7 @@
+ package() {
+ 	cd "$pkgname"
+ 	DESTDIR="$pkgdir" meson install -C build
++	rm -rf "$pkgdir"/usr/lib/systemd
+ 	mkdir -pm700 "$pkgdir/var/db/tang"
+ 	install -Dm644 "$srcdir/tang.sysusers.conf" "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+ 	install -Dm644 "$srcdir/tang.tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"

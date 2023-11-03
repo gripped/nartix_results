@@ -5,8 +5,9 @@
  pkgbase=gmic
  pkgname=(gmic gimp-plugin-gmic)
 -pkgver=3.3.1
+-pkgrel=2
 +pkgver=3.3.0
- pkgrel=1
++pkgrel=1
  arch=(x86_64)
  url='https://gmic.eu/'
  license=(custom:CeCILL)
@@ -31,7 +32,7 @@
              '10664d810be3994c062c260fc6b92ba2d1cc2e76c9619e632ef0feb8f9e7b98f'
              '5ad1b499cb0a9e3d9fff6a851346d6f356dfc592442183d6330726a29ee25384'
              '83e4635a6fd101511381bc865255f4de88834da51911ce3eb45ddac2558cabcc'
-@@ -61,19 +50,7 @@
+@@ -61,25 +50,12 @@
  
  package_gmic() {
    pkgdesc="GREYC's Magic Image Converter: image processing framework"
@@ -52,7 +53,13 @@
    optdepends=('qt5-base: for the Qt UI')
    conflicts=(cimg)
  
-@@ -87,17 +64,7 @@
+   DESTDIR="$pkgdir" cmake --install build
+   install -Dm644 gmic-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+-  install -Dm644 gmic-$pkgver/src/gmic.cpp -t "$pkgdir"/usr/include
+ 
+   DESTDIR="$pkgdir" cmake --install build-qt
+ 
+@@ -88,17 +64,7 @@
  
  package_gimp-plugin-gmic() {
    pkgdesc="Gimp plugin for the G'MIC image processing framework"
@@ -77,7 +84,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -30,19 +30,7 @@
+@@ -30,38 +30,15 @@
    cmake --build build-gimp
  }
  package_gmic() {
@@ -98,7 +105,8 @@
    conflicts=(cimg)
    DESTDIR="$pkgdir" cmake --install build
    install -Dm644 gmic-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
-@@ -50,17 +38,7 @@
+-  install -Dm644 gmic-$pkgver/src/gmic.cpp -t "$pkgdir"/usr/include
+   DESTDIR="$pkgdir" cmake --install build-qt
    install -Dm644 gmic-$pkgver/resources/gmic_cluts.gmz -t "$pkgdir"/usr/share/gmic
  }
  package_gimp-plugin-gmic() {

@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-matplotlib
+ pkgver=3.8.1
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A python plotting library, making publication quality plots"
+ arch=(x86_64)
+ url="https://matplotlib.org"
+@@ -33,10 +33,10 @@
                python-pyqt6 pyside6 python-tornado python-wxpython tk
                jupyter-nbconvert jupyter-nbformat python-ipykernel
                python-pandas python-pikepdf python-pytz python-xarray
@@ -8,4 +17,8 @@
 +              noto-fonts-cjk wqy-zenhei)
  _tag=babc9d1892ea4b223ab1dd1ff3c035471500b42e # git rev-parse v${pkgver}
  _ftver=2.13.1
- source=(git+https://github.com/matplotlib/matplotlib.git#tag=${_tag}?signed
+-source=(git+https://github.com/matplotlib/matplotlib.git#tag=${_tag}?signed
++source=(git+https://github.com/matplotlib/matplotlib.git#tag=${_tag}
+         https://github.com/QuLogic/mpl-images/archive/v${pkgver}-with-freetype-${_ftver}/mpl-images-${pkgver}-ft${_ftver}.tar.gz
+         freetype.patch)
+ b2sums=('SKIP'
