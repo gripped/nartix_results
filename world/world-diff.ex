@@ -13,6 +13,8 @@ assimp
 at-spi2-core
 at-spi2-core-docs
 at
+audacity
+audacity-docs
 avahi
 avogadrolibs
 avogadrolibs-qt5
@@ -122,7 +124,6 @@ gdm
 libgdm
 genxrdpattern
 geoclue
-git
 github-cli
 glibmm-2.68
 glibmm-2.68-docs
@@ -150,7 +151,6 @@ gnome-user-share
 gnome-video-effects
 go-bindata
 go-licenses
-godot
 gpsd
 greetd-tuigreet
 greetd
@@ -243,7 +243,6 @@ kismet
 knot
 kquickimageeditor
 kuserfeedback
-ldc
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -285,10 +284,14 @@ python-libusbsio
 libvirt-glib
 libwacom
 libwhereami
+libxdg-basedir
 light-locker
 lightdm
 liblightdm-qt5
 lighttpd
+lilv
+lilv-docs
+python-lilv
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -345,7 +348,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-minio
 modemmanager
 libmm-glib
 mosquitto
@@ -404,8 +406,6 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
-phonon-vlc
-phonon-qt5-vlc
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -499,6 +499,8 @@ pyqt6
 python-aiomysql
 python-anytree
 python-openapi-spec-validator
+python-poetry-core
+python-poetry
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -604,7 +606,6 @@ rspamd
 rsync
 rtkit
 ruby-faraday-patron
-rust-bindgen
 salt
 samba
 libwbclient
@@ -616,13 +617,18 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+serf
 shairport-sync
 sharutils
 signon-plugin-oauth2
 smartmontools
+sord
+sord-docs
 spice-gtk
 spice-vdagent
 squid
+sratom
+sratom-docs
 sshguard
 sslh
 sssd
@@ -632,6 +638,8 @@ strongswan
 stubby
 stunnel
 subversion
+suil
+suil-docs
 supermin
 svt-hevc
 sway
@@ -665,7 +673,6 @@ udisks2
 umockdev
 unbound
 upower
-upx
 usbguard
 usbmuxd
 utf8cpp

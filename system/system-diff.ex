@@ -47,11 +47,6 @@ pambase
 ppp
 procps-ng
 rpcbind
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 sudo
 usbutils
 util-linux

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=zeromq
- pkgver=4.3.5
--pkgrel=2
-+pkgrel=1
- pkgdesc='Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.'
- arch=('x86_64')
- url='http://www.zeromq.org'
 @@ -50,6 +50,8 @@
      -B build \
      -D CMAKE_BUILD_TYPE=None \
@@ -18,24 +9,6 @@
      -D CMAKE_CURRENT_BINARY_DIR=/usr \
      -D BUILD_SHARED=ON \
      -D BUILD_STATIC=OFF \
-@@ -58,8 +60,6 @@
-     -D WITH_OPENPGM=ON \
-     -D OPENPGM_PKGCONFIG_NAME=openpgm-5.3 \
-     -D WITH_LIBBSD=ON \
--    -D WITH_LIBSODIUM=ON \
--    -D ENABLE_CURVE=ON \
-     -D WITH_DOC=ON \
-     -W no-dev
- 
-@@ -83,7 +83,7 @@
-     --test-dir build \
-     --output-on-failure \
-     -j1 \
--    -E "test_(diffserv|zmq|ppoll_fd|zmq_poll_fd|connect_rid|heartbeats|radio_dish)"
-+    -E "test_(diffserv|security_curve|zmq_poll_fd|connect_rid|heartbeats|radio_dish)"
- }
- 
- package() {
 
 
 ############# Stripped diff below #################
@@ -51,12 +24,3 @@
      -D CMAKE_CURRENT_BINARY_DIR=/usr \
      -D BUILD_SHARED=ON \
      -D BUILD_STATIC=OFF \
-@@ -26,8 +28,6 @@
-     -D WITH_OPENPGM=ON \
-     -D OPENPGM_PKGCONFIG_NAME=openpgm-5.3 \
-     -D WITH_LIBBSD=ON \
--    -D WITH_LIBSODIUM=ON \
--    -D ENABLE_CURVE=ON \
-     -D WITH_DOC=ON \
-     -W no-dev
-   cmake --build build

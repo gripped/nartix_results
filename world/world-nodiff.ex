@@ -111,8 +111,6 @@ aubio
 python-aubio
 audacious-plugins
 audacious
-audacity
-audacity-docs
 audiocd-kio
 audiofile
 audiotube
@@ -593,6 +591,7 @@ gifski
 gimp
 girara
 git-lfs
+git
 gitea
 gjs
 gl2ps
@@ -674,6 +673,7 @@ go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
+godot
 gom
 google-glog
 gox
@@ -1267,6 +1267,7 @@ laszip2
 layer-shell-qt
 lcms2
 ldb
+ldc
 leafpad
 leatherman
 lensfun
@@ -1701,7 +1702,6 @@ libxcomposite
 libxcursor
 libxcvt
 libxdamage
-libxdg-basedir
 libxdmcp
 libxext
 libxfce4ui
@@ -1750,8 +1750,6 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 lightsoff
-lilv
-lilv-docs
 lilypond
 linux-atm
 liquidctl
@@ -1982,6 +1980,7 @@ mimalloc
 mimetic
 minicom
 minidlna
+minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2538,6 +2537,9 @@ perl-yaml
 persepolis
 phonon-gstreamer
 phonon-qt5-gstreamer
+phonon-vlc
+phonon-qt5-vlc
+phonon-qt6-vlc
 phonon
 phonon-qt5
 phonon-qt6
@@ -3374,10 +3376,8 @@ python-plette
 python-pluggy
 python-plumbum
 python-ply
-python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
-python-poetry
 python-pooch
 python-portend
 python-pprofile
@@ -4305,6 +4305,7 @@ rubygems
 ruff
 python-ruff
 runc
+rust-bindgen
 rust
 lib32-rust-libs
 rust-musl
@@ -4351,7 +4352,6 @@ sequoia-sq
 sequoia-sqv
 serd
 serd-docs
-serf
 setconf
 sfml
 sfsexp
@@ -4400,8 +4400,6 @@ solr
 sonivox
 sonnet
 sonnet5
-sord
-sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
@@ -4428,8 +4426,6 @@ spotifyd
 sqlcipher
 squashfs-tools
 squashfuse
-sratom
-sratom-docs
 srt
 sshfs
 sshpass
@@ -4442,8 +4438,6 @@ stoken
 strace
 strip-nondeterminism
 sugar-datastore
-suil
-suil-docs
 suitesparse
 sushi
 svgpart
@@ -4734,6 +4728,7 @@ unrealircd
 unrtf
 unzip
 uptimed
+upx
 uriparser
 usb_modeswitch
 usbredir
@@ -5026,3 +5021,4 @@ zvbi
 zxing-cpp
 zziplib
 python-sphinxygen
+python-nh3
