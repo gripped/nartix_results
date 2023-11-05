@@ -35,7 +35,6 @@ brltty-udev-generic
 btop
 bumblebee
 c-ares
-catatonit
 cdparanoia
 cgmanager
 chromium-bsu
@@ -53,6 +52,8 @@ connman
 containerd
 cppcheck
 crun
+cuda
+cuda-tools
 cups
 libcups
 cyrus-sasl
@@ -60,7 +61,6 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 dbus-broker
-ddclient
 ddcutil
 dhcp
 dhclient
@@ -69,7 +69,6 @@ directx-shader-compiler
 dns-over-https
 dnscrypt-proxy
 docker
-dolphin-emu
 dovecot
 dracut
 drkonqi
@@ -202,7 +201,6 @@ gvfs-goa
 gvfs-mtp
 gvfs-nfs
 gvfs-google
-gyp
 haproxy
 haveged
 hidapi
@@ -225,16 +223,9 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
-jedi-language-server
 js78
 json-glib
 json-glib-docs
@@ -259,7 +250,6 @@ libfdk-aac
 libfido2
 libfprint
 libgdata
-libgsf
 libgudev
 libguestfs
 libhandy
@@ -271,7 +261,6 @@ libkolabxml
 libldm
 libmbim
 libmysofa
-libnet
 libplacebo
 libpng
 libprocps
@@ -284,7 +273,6 @@ python-libusbsio
 libvirt-glib
 libwacom
 libwhereami
-libxdg-basedir
 light-locker
 lightdm
 liblightdm-qt5
@@ -502,6 +490,7 @@ python-openapi-spec-validator
 python-poetry-core
 python-poetry
 python-pytest-benchmark
+python-pytest-django
 python-pyudev
 python-sphinx-alabaster-theme
 qastools
@@ -704,6 +693,7 @@ vte3
 vte-common
 vte4
 vte-docs
+vtk
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

@@ -16,6 +16,7 @@ lib32-glibc
 glibc-locales
 gssproxy
 inetutils
+iproute2
 iptables
 iptables-nft
 libarchive

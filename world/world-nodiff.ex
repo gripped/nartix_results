@@ -228,6 +228,7 @@ capstone
 python-capstone
 cargo-c
 caribou
+catatonit
 catch2
 catdoc
 catfish
@@ -319,8 +320,6 @@ cryptoplusplus
 cscope
 ctags
 ctpl
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -345,6 +344,7 @@ dbus-python
 dbus-python-docs
 dconf-editor
 dconf
+ddclient
 debootstrap
 default-cursors
 dejagnu
@@ -384,6 +384,7 @@ docbook-xsl
 docbook2x
 docker-compose
 docx2txt
+dolphin-emu
 dolphin-plugins
 dolphin
 dontpanic
@@ -754,6 +755,7 @@ foomatic-db-gutenprint-ppds
 gv
 gwenhywfar
 gwenview
+gyp
 handbrake
 harfbuzz
 harfbuzz-cairo
@@ -861,6 +863,12 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-xmlgraphics-commons
 java11-openjdk
 jre11-openjdk-headless
@@ -882,6 +890,7 @@ openjdk8-src
 openjdk8-doc
 jbig2dec
 jbigkit
+jedi-language-server
 jemalloc
 jenkins
 jitterentropy
@@ -1417,6 +1426,7 @@ libgphoto2
 libgpod
 libgravatar
 libgrss
+libgsf
 libgtop
 libgusb
 libgweather-4
@@ -1518,6 +1528,7 @@ libmythes
 libnatpmp
 libnbd
 libndp
+libnet
 libnewt
 libnfs
 libnice
@@ -1702,6 +1713,7 @@ libxcomposite
 libxcursor
 libxcvt
 libxdamage
+libxdg-basedir
 libxdmcp
 libxext
 libxfce4ui
@@ -3510,7 +3522,6 @@ python-pytest-console-scripts
 python-pytest-cov
 python-pytest-datadir
 python-pytest-dependency
-python-pytest-django
 python-pytest-enabler
 python-pytest-env
 python-pytest-examples
@@ -4775,7 +4786,6 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

@@ -1,7 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,8 +4,8 @@
- pkgrel=2
+@@ -1,11 +1,11 @@
+ 
+ pkgname=btrfs-progs
+-pkgver=6.5.3
+-pkgrel=2
++pkgver=6.6
++pkgrel=1
  pkgdesc='Btrfs filesystem utilities'
  arch=('x86_64')
 -makedepends=('git' 'asciidoc' 'xmlto' 'systemd' 'python' 'python-setuptools' 'e2fsprogs' 'reiserfsprogs' 'python-sphinx')
@@ -11,8 +16,11 @@
  optdepends=('python: libbtrfsutil python bindings'
              'e2fsprogs: btrfs-convert'
              'reiserfsprogs: btrfs-convert')
-@@ -19,8 +19,6 @@
-         "https://github.com/kdave/btrfs-progs/commit/eaaa576f16735905f30523cdabd0d2ead419b5da.patch"
+@@ -16,21 +16,15 @@
+ license=('GPL-2.0-only')
+ validpgpkeys=('F2B41200C54EFB30380C1756C565D5F9D76D583B')
+ source=("https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$pkgver.tar."{sign,xz}
+-        "https://github.com/kdave/btrfs-progs/commit/eaaa576f16735905f30523cdabd0d2ead419b5da.patch"
          'initcpio-install-btrfs'
          'initcpio-hook-btrfs'
 -        'btrfs-scrub@.service'
@@ -20,9 +28,10 @@
        )
  install=btrfs-progs.install
  options=(!staticlibs)
-@@ -28,9 +26,7 @@
-             'fce7cb3f920e615e63faf265a4cd9f2bf39d4adcaa66211c987697da85a2eedd'
-             '55961505a5b1324d890ee55c4f67500421c1179dbc042e6b68d1a7962d06cc6a'
+ sha256sums=('SKIP'
+-            'fce7cb3f920e615e63faf265a4cd9f2bf39d4adcaa66211c987697da85a2eedd'
+-            '55961505a5b1324d890ee55c4f67500421c1179dbc042e6b68d1a7962d06cc6a'
++            '96792995eefb2eaae051c2ce3b5609b7e9bb2c1a5cb83fe69f92f1101b54b869'
              'bbe60b35d1b1e2efc1308a8f54f1fdc6808240a81c5f5b4d75321b7ee86e41f4'
 -            '35efeee8590d6d60c711ae9cdc918e4841ab61d10cb02359e65e36ebff95ffc5'
 -            'eaa7af92d28bfa8940bb551560fd7be777f9f175292eaa72b5f6ef00fb240252'
@@ -31,7 +40,7 @@
  
  prepare() {
    cd $pkgname-v$pkgver
-@@ -64,8 +60,5 @@
+@@ -64,8 +58,5 @@
    cd "$srcdir"
    install -Dm644 initcpio-install-btrfs "$pkgdir/usr/lib/initcpio/install/btrfs"
    install -Dm644 initcpio-hook-btrfs "$pkgdir/usr/lib/initcpio/hooks/btrfs"

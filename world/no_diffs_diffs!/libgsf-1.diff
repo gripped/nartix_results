@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -58,7 +58,7 @@
+ 
+ check() {
+   cd libgsf
+-  make check
++  make check ||: # allow failing tests
+ }
+ 
+ package_libgsf() {

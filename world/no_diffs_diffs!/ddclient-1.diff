@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,16 +26,11 @@
+   make
+ }
+ 
+-check() {
+-  cd ${pkgname}
+-  make VERBOSE=1 check
+-}
+ 
+ package() {
+   cd ${pkgname}
+   make DESTDIR="${pkgdir}" install
+ 
+-  install -Dm644 sample-etc_systemd.service "$pkgdir"/usr/lib/systemd/system/ddclient.service
+   install -d "$pkgdir"/var/cache/ddclient
+ 
+   install -Dm644 README.cisco "$pkgdir"/usr/share/doc/ddclient/README.cisco

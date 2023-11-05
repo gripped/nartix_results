@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -83,10 +83,6 @@
+   git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
+ }
+ 
+-pkgver() {
+-  cd dolphin-emu
+-  git describe | sed 's/-/.r/; s/-g/./'
+-}
+ 
+ build() {
+   cmake -S dolphin-emu -B build -G Ninja \
