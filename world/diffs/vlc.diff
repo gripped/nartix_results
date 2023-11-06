@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ _vlcver=3.0.20
+ _vlcfixupver=
+ pkgver=${_vlcver}${_vlcfixupver//-/.r}
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Multi-platform MPEG, VCD/DVD, and DivX player'
+ url='https://www.videolan.org/vlc/'
+ arch=('x86_64')
 @@ -13,10 +13,10 @@
           'libmpeg2' 'xcb-util-keysyms' 'libtar' 'libxinerama' 'libsecret'
           'libupnp' 'libixml.so' 'libupnp.so' 'libarchive' 'qt5-base'

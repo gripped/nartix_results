@@ -72,6 +72,7 @@ hdparm
 hwdata
 iana-etc
 icu
+iproute2
 iputils
 iw
 jansson

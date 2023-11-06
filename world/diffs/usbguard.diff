@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=usbguard
+ pkgver=1.1.2
+-pkgrel=5
++pkgrel=6
+ pkgdesc='Software framework for implementing USB device authorization policies'
+ url='https://github.com/USBGuard/usbguard'
+ arch=('x86_64')
 @@ -9,7 +9,7 @@
  depends=('glibc' 'libqb' 'libqb.so' 'libsodium' 'libcap-ng' 'protobuf' 'polkit' 'dbus-glib'
           'audit' 'libaudit.so' 'libseccomp' 'libseccomp.so' 'libcap-ng.so' 'libgio-2.0.so'

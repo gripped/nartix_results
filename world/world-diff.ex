@@ -52,8 +52,6 @@ connman
 containerd
 cppcheck
 crun
-cuda
-cuda-tools
 cups
 libcups
 cyrus-sasl
@@ -156,6 +154,12 @@ greetd
 $pkgbase
 $pkgbase-agreety
 grim
+grpc
+python-grpcio
+python-grpcio-tools
+php-grpc
+php-legacy-grpc
+grpc-cli
 gssdp
 gssdp-docs
 gstreamer
@@ -280,6 +284,7 @@ lighttpd
 lilv
 lilv-docs
 python-lilv
+lilypond
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -489,8 +494,8 @@ python-anytree
 python-openapi-spec-validator
 python-poetry-core
 python-poetry
+python-pygit2
 python-pytest-benchmark
-python-pytest-django
 python-pyudev
 python-sphinx-alabaster-theme
 qastools
@@ -622,7 +627,6 @@ sshguard
 sslh
 sssd
 step-cli
-strawberry
 strongswan
 stubby
 stunnel
@@ -693,7 +697,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vtk
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

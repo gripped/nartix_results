@@ -320,6 +320,8 @@ cryptoplusplus
 cscope
 ctags
 ctpl
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -700,12 +702,6 @@ graphviz
 grilo-plugins
 grilo
 groovy
-grpc
-python-grpcio
-python-grpcio-tools
-php-grpc
-php-legacy-grpc
-grpc-cli
 grub-customizer
 grunt-cli
 gsasl
@@ -1762,7 +1758,6 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 lightsoff
-lilypond
 linux-atm
 liquidctl
 lirc
@@ -3453,7 +3448,6 @@ python-pygaljs
 python-pygame-sdl2
 python-pygame
 python-pygeos
-python-pygit2
 python-pygls
 python-pygments
 python-pyhamcrest
@@ -3522,6 +3516,7 @@ python-pytest-console-scripts
 python-pytest-cov
 python-pytest-datadir
 python-pytest-dependency
+python-pytest-django
 python-pytest-enabler
 python-pytest-env
 python-pytest-examples
@@ -4447,6 +4442,7 @@ stk
 stk-docs
 stoken
 strace
+strawberry
 strip-nondeterminism
 sugar-datastore
 suitesparse
@@ -4786,6 +4782,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -5032,3 +5029,4 @@ zxing-cpp
 zziplib
 python-sphinxygen
 python-nh3
+kdsingleapplication
