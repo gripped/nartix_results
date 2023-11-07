@@ -347,6 +347,7 @@ dbus-python-docs
 dconf-editor
 dconf
 ddclient
+ddcutil
 debootstrap
 default-cursors
 dejagnu
@@ -376,6 +377,7 @@ dmd-docs
 libphobos
 dmenu
 dmidecode
+dnscrypt-proxy
 dnsmasq
 docbook-dsssl
 docbook-sgml
@@ -454,7 +456,6 @@ exempi
 exfat-utils
 exfatprogs
 exim
-exiv2
 exo
 expac
 expect
@@ -702,6 +703,12 @@ graphviz
 grilo-plugins
 grilo
 groovy
+grpc
+python-grpcio
+python-grpcio-tools
+php-grpc
+php-legacy-grpc
+grpc-cli
 grub-customizer
 grunt-cli
 gsasl
@@ -746,6 +753,8 @@ gumbo-parser
 gupnp-av
 gupnp-dlna
 gupnp-igd
+gupnp
+gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
@@ -801,6 +810,7 @@ hunspell-nl
 hunspell-ru
 hunspell
 hwinfo
+hy
 hypercorn
 hyperkitty
 hyperscan
@@ -1520,6 +1530,7 @@ libmusicbrainz5
 libmwaw
 libmwaw-docs
 libmypaint
+libmysofa
 libmythes
 libnatpmp
 libnbd
@@ -1758,6 +1769,7 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 lightsoff
+lilypond
 linux-atm
 liquidctl
 lirc
@@ -2072,6 +2084,7 @@ neochat
 neofetch
 neomutt
 neon
+neovim-qt
 neovim
 net-snmp
 netavark
@@ -2563,6 +2576,7 @@ pimcommon
 pixman
 pkcs11-helper
 plank
+plantuml
 plasma-browser-integration
 plasma-desktop
 plasma-disks
@@ -2707,7 +2721,6 @@ python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiopg
-python-aioquic
 python-aioresponses
 python-aiorpcx
 python-aiosignal
@@ -2864,7 +2877,6 @@ python-cogapp
 python-colorama
 python-colored-traceback
 python-colorlog
-python-comm
 python-commentjson
 python-commonmark
 python-configargparse
@@ -3301,7 +3313,6 @@ python-oauthlib
 python-objgraph
 python-odfpy
 python-omemo-dr
-python-openapi-core
 python-openapi-schema-validator
 python-openid
 python-openpyxl
@@ -3416,7 +3427,6 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
-python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -3448,6 +3458,7 @@ python-pygaljs
 python-pygame-sdl2
 python-pygame
 python-pygeos
+python-pygit2
 python-pygls
 python-pygments
 python-pyhamcrest
@@ -4075,7 +4086,6 @@ rssguard-lite
 rst2pdf
 rtaudio
 rtaudio-docs
-rtl-sdr
 rtmpdump
 rtorrent
 rubberband
@@ -5030,3 +5040,4 @@ zziplib
 python-sphinxygen
 python-nh3
 kdsingleapplication
+lxqt-menu-data

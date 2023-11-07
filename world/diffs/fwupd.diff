@@ -27,6 +27,13 @@
  }
  
  package() {
+@@ -97,6 +99,4 @@
+   rm -r "${pkgdir}"/usr/share/installed-tests/
+   mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
+   mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
+-  rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
+-  rmdir "${pkgdir}"/usr/lib/modules-load.d
+ }
 
 
 ############# Stripped diff below #################

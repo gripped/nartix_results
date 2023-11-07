@@ -1,10 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,6 @@
+@@ -33,7 +33,7 @@
  
  check() {
      cd $pkgname-v$pkgver
 -    make check
++    make check || :
  }
  
  package() {

@@ -59,13 +59,11 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 dbus-broker
-ddcutil
 dhcp
 dhclient
 dhcpcd
 directx-shader-compiler
 dns-over-https
-dnscrypt-proxy
 docker
 dovecot
 dracut
@@ -90,6 +88,7 @@ erlang
 erlang-unixodbc
 espeakup
 etherwall
+exiv2
 extra-cmake-modules
 facter
 fail2ban
@@ -154,12 +153,6 @@ greetd
 $pkgbase
 $pkgbase-agreety
 grim
-grpc
-python-grpcio
-python-grpcio-tools
-php-grpc
-php-legacy-grpc
-grpc-cli
 gssdp
 gssdp-docs
 gstreamer
@@ -195,8 +188,6 @@ gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
 gunicorn
-gupnp
-gupnp-docs
 gvfs
 gvfs-smb
 gvfs-afc
@@ -209,7 +200,6 @@ haproxy
 haveged
 hidapi
 hwloc
-hy
 hyprland
 i3-wm
 i3blocks
@@ -264,7 +254,6 @@ libjpeg-turbo
 libkolabxml
 libldm
 libmbim
-libmysofa
 libplacebo
 libpng
 libprocps
@@ -284,7 +273,6 @@ lighttpd
 lilv
 lilv-docs
 python-lilv
-lilypond
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -353,7 +341,6 @@ mutter
 mutter-docs
 ndctl
 ndisc6
-neovim-qt
 netplan
 network-manager-applet
 nm-connection-editor
@@ -450,7 +437,6 @@ pipewire-zeroconf
 pipewire-v4l2
 pipewire-x11-bell
 pkgfile
-plantuml
 plasma-meta
 plasma-workspace
 plasma-wayland-session
@@ -490,11 +476,14 @@ pyqt5
 python-pyqt5
 pyqt6
 python-aiomysql
+python-aioquic
 python-anytree
+python-comm
+python-openapi-core
 python-openapi-spec-validator
 python-poetry-core
 python-poetry
-python-pygit2
+python-pyarrow
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -599,6 +588,7 @@ rng-tools
 rspamd
 rsync
 rtkit
+rtl-sdr
 ruby-faraday-patron
 salt
 samba

@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,17 @@
+ 
+ _pyname=comm
+ pkgname=python-$_pyname
+-pkgver=0.2.0
++pkgver=0.1.4
+ pkgrel=1
+ pkgdesc='Python Comm implementation for the Jupyter kernel protocol'
+ arch=(any)
+ url='https://pypi.org/project/comm/'
+ license=(BSD)
+-depends=(python
+-         python-traitlets)
+-makedepends=(python-build
+-             python-hatchling
+-             python-installer)
++depends=(python-traitlets)
++makedepends=(python-build python-installer python-hatchling)
+ checkdepends=(python-pytest)
+ source=(https://github.com/ipython/$_pyname/archive/v$pkgver/$_pyname-$pkgver.tar.gz)
+-sha256sums=('5977e098e586b62b45759c9fb016529e38b9bbe96923cf29b4546b2a49cace6a')
++sha256sums=('4b7c0b56439d6835c1f4abf31b81c931fd6a6eba9e38f11f74ac80d1a720bed7')
+ 
+ build() {
+   cd $_pyname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ _pyname=comm
+ pkgname=python-$_pyname
+-depends=(python
+-         python-traitlets)
++depends=(python-traitlets)
+ build() {
+   cd $_pyname-$pkgver
+   python -m build --wheel --no-isolation

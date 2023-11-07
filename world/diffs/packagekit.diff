@@ -1,38 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- pkgbase='packagekit'
- pkgname=('packagekit' 'libpackagekit-glib')
--pkgver=1.2.7
--pkgrel=1
-+pkgver=1.2.6
-+pkgrel=2
- pkgdesc='A system designed to make installation and updates of packages easier'
- arch=('x86_64')
- url='https://www.freedesktop.org/software/PackageKit/'
-@@ -14,8 +14,8 @@
-               'EC60AABDF42AAE8FB062640480858FA38F62AF74')       # Kalev Lember <klember@redhat.com>
- source=("https://www.freedesktop.org/software/PackageKit/releases/PackageKit-${pkgver}.tar.xz"
-         '0001-build-fix-overall-sysconfdir-handling-so-it-can-work.patch')
--sha256sums=('230fbac33ad6699e3571a1d3973b1911716b7640eda7d13d06563fd4aaafb308'
--            '7ac67a8cb38133e4a0ea97bd47d38d8539bc1314aa82ac1f9074f1f98ce176ac')
-+sha256sums=('1a0cf173065ce9232c6d5fb044bf6b606147a8702dc6ff4753c2a08331c52e51'
-+            '31bda312a0320bdf4b084a89cd6b13f1366b50d5c1cf7c9a77a1e1024eca30ea')
- 
- prepare() {
-   for _patch in *.patch; do
-@@ -26,14 +26,16 @@
- build() {
-         local _meson_options=(
-                 -Dcron=false
-+                -Ddbus_sys=/usr/share/dbus-1/system.d
-                 -Dgstreamer_plugin=false
+@@ -30,10 +30,11 @@
                  -Dgtk_doc=false
                  -Dgtk_module=false
                  -Dpackaging_backend=alpm
 -                -Dsystemd=true
-+                -Dsystemd=false \
++                -Dsystemd=false
 +                -Doffline_update=false
          )
  
@@ -47,17 +20,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,13 +9,15 @@
- build() {
-         local _meson_options=(
-                 -Dcron=false
-+                -Ddbus_sys=/usr/share/dbus-1/system.d
-                 -Dgstreamer_plugin=false
+@@ -13,9 +13,10 @@
                  -Dgtk_doc=false
                  -Dgtk_module=false
                  -Dpackaging_backend=alpm
 -                -Dsystemd=true
-+                -Dsystemd=false \
++                -Dsystemd=false
 +                -Doffline_update=false
          )
 -        arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"

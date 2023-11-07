@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -55,7 +55,7 @@
-   CXXFLAGS="${CXXFLAGS/-O2/-O3} -fno-semantic-interposition"
-   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+@@ -51,7 +51,7 @@
+     -D installed_tests=false
+   )
  
 -  arch-meson gjs build "${meson_options[@]}"
 +  artix-meson gjs build "${meson_options[@]}"
@@ -15,10 +15,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,7 +23,7 @@
-   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
-   CXXFLAGS="${CXXFLAGS/-O2/-O3} -fno-semantic-interposition"
-   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+@@ -20,7 +20,7 @@
+   local meson_options=(
+     -D installed_tests=false
+   )
 -  arch-meson gjs build "${meson_options[@]}"
 +  artix-meson gjs build "${meson_options[@]}"
    meson compile -C build
