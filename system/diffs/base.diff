@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,9 +1,12 @@
 +
-+_v=1.1
++_v=1.6.1
 +_url=https://gitea.artixlinux.org/artix/alpm-hooks
  
  pkgname=base
@@ -10,13 +10,13 @@
 -pkgrel=2
 -pkgdesc='Minimal package set to define a basic Arch Linux installation'
 -url='https://www.archlinux.org'
-+pkgrel=1
++pkgrel=1.6
 +pkgdesc='Minimal package set to define a basic Artix Linux installation'
 +url='https://www.artixlinux.org'
  arch=('any')
  license=('GPL')
  depends=(
-@@ -13,11 +16,18 @@
+@@ -13,11 +16,20 @@
  
    'gettext' 'pciutils' 'psmisc' 'shadow' 'util-linux' 'bzip2' 'gzip' 'xz'
  
@@ -30,10 +30,12 @@
 -)
 +optdepends=('linux: bare metal support')
 +source=("alpm-hooks-$_v.tar.gz::$_url/archive/$_v.tar.gz")
-+sha256sums=('6d08e6853a7b66f5bcfb5df9c37428f410981ed8ca52f65e2923f8f74276f327')
++sha256sums=('caaadba463ab9e9177aa209dd259cb86405eafbe3c8251efe92d77f03ab1caa1')
  
 +package() {
 +    make -C alpm-hooks DESTDIR="${pkgdir}" install_base
++
++    make -C alpm-hooks DESTDIR="${pkgdir}" install_wrapper
 +
 +    install -d "${pkgdir}"/usr/bin
 +    ln -svf openrc-init "${pkgdir}"/usr/bin/init
@@ -46,7 +48,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -1,8 +1,10 @@
-+_v=1.1
++_v=1.6.1
 +_
  pkgname=base
  depends=(

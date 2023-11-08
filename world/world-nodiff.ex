@@ -560,8 +560,6 @@ gavl
 gcab
 gcc12
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -869,12 +867,6 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-xmlgraphics-commons
 java11-openjdk
 jre11-openjdk-headless
@@ -919,7 +911,6 @@ julia
 junit
 jupyter-console
 jupyter-nbclassic
-jupyter-nbclient
 jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
@@ -1050,8 +1041,6 @@ kdnssd
 kdnssd5
 kdoctools
 kdoctools5
-kdsoap-ws-discovery-client
-kdsoap
 keditbookmarks
 keepassxc
 kemoticons
@@ -1104,7 +1093,6 @@ kimap
 kinfocenter
 kinit
 kio-admin
-kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
@@ -2092,6 +2080,8 @@ netcdf-fortran
 netcdf
 netcf
 netpbm
+network-manager-applet
+nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
@@ -2721,6 +2711,7 @@ python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiopg
+python-aioquic
 python-aioresponses
 python-aiorpcx
 python-aiosignal
@@ -2877,6 +2868,7 @@ python-cogapp
 python-colorama
 python-colored-traceback
 python-colorlog
+python-comm
 python-commentjson
 python-commonmark
 python-configargparse
@@ -3313,6 +3305,7 @@ python-oauthlib
 python-objgraph
 python-odfpy
 python-omemo-dr
+python-openapi-core
 python-openapi-schema-validator
 python-openid
 python-openpyxl
@@ -3427,6 +3420,7 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
+python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -4745,7 +4739,6 @@ unrealircd
 unrtf
 unzip
 uptimed
-upx
 uriparser
 usb_modeswitch
 usbredir
@@ -5041,3 +5034,28 @@ python-sphinxygen
 python-nh3
 kdsingleapplication
 lxqt-menu-data
+certbot-dns-cloudflare
+certbot-dns-digitalocean
+certbot-dns-dnsimple
+certbot-dns-dnsmadeeasy
+certbot-dns-gehirn
+certbot-dns-google
+certbot-dns-linode
+certbot-dns-luadns
+certbot-dns-nsone
+certbot-dns-ovh
+certbot-dns-rfc2136
+certbot-dns-route53
+certbot-dns-sakuracloud
+dns-lexicon
+python-cloudflare
+python-digitalocean
+python-guzzle-sphinx-theme
+python-jsonlines
+python-localzone
+python-pyotp
+python-pytest-httpx
+python-softlayer-zeep
+python-softlayer
+python-tldextract
+python-zeep

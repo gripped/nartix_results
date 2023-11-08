@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -250,7 +250,7 @@
+ 
+   install -dm 755 "${pkgdir}${_jvmdir}"
+ 
+-  cp -a bin demo include jmods lib release\
++  cp -a bin demo include jmods lib release \
+     "${pkgdir}${_jvmdir}"
+ 
+   rm "${pkgdir}${_jvmdir}/lib/src.zip"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -181,7 +181,7 @@
+   install=install_jdk-openjdk.sh
+   cd ${_imgdir}/jdk
+   install -dm 755 "${pkgdir}${_jvmdir}"
+-  cp -a bin demo include jmods lib release\
++  cp -a bin demo include jmods lib release \
+     "${pkgdir}${_jvmdir}"
+   rm "${pkgdir}${_jvmdir}/lib/src.zip"
+   install -dm 755 "${pkgdir}/etc"

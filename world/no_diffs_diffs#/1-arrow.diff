@@ -1,24 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=arrow
--pkgver=14.0.0
--pkgrel=1
-+pkgver=13.0.0
-+pkgrel=7
- pkgdesc="Columnar in-memory analytics layer for big data."
- arch=(x86_64)
- url="https://arrow.apache.org"
-@@ -14,7 +14,7 @@
- source=(https://archive.apache.org/dist/${pkgname}/${pkgname}-${pkgver}/apache-${pkgname}-${pkgver}.tar.gz{,.asc}
-         git+https://github.com/apache/parquet-testing.git
-         git+https://github.com/apache/arrow-testing.git)
--sha512sums=('9e1f8179e37279a47baa3587c66d8b385362478d998601b5f0a8bb2f360ec8cdb954705f397dac413ac1411e72d4dd740e3785823cc063ca35eb80585d2eedf2'
-+sha512sums=('3314d79ef20ac2cfc63f2c16fafb30c3f6187c10c6f5ea6ff036f6db766621d7c65401d85bf1e979bd0ecf831fbb0a785467642792d6bf77016f9807243c064e'
-             'SKIP'
-             'SKIP'
-             'SKIP')
 @@ -59,7 +59,7 @@
  check(){
    PARQUET_TEST_DATA="${srcdir}"/parquet-testing/data \

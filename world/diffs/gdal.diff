@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,8 @@
+ build() {
+   cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+     -DCMAKE_CXX_STANDARD=17 \
+     -DENABLE_IPO=ON \
+     -DBUILD_PYTHON_BINDINGS=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,8 @@
+ build() {
+   cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+     -DCMAKE_CXX_STANDARD=17 \
+     -DENABLE_IPO=ON \
+     -DBUILD_PYTHON_BINDINGS=ON \
