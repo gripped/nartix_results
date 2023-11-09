@@ -88,8 +88,8 @@ erlang
 erlang-unixodbc
 espeakup
 etherwall
-exiv2
 extra-cmake-modules
+faad2
 facter
 fail2ban
 fceux
@@ -231,7 +231,6 @@ java-openjfx-src
 js78
 json-glib
 json-glib-docs
-jupyter-nbclient
 kalzium
 kdsoap-ws-discovery-client
 kdsoap
@@ -272,6 +271,7 @@ libprocps
 libqaccessibilityclient
 libsidplay
 libudev0-shim
+liburing
 libusbmuxd
 libusbsio
 python-libusbsio
@@ -341,6 +341,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+minio
 modemmanager
 libmm-glib
 mosquitto
@@ -488,8 +489,6 @@ pyqt6
 python-aiomysql
 python-anytree
 python-openapi-spec-validator
-python-poetry-core
-python-poetry
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme

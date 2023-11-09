@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -10,13 +10,20 @@
- depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
+ depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback5 kio5 gdb python-distro python-psutil qt5-tools)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
 -source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
@@ -31,7 +31,7 @@
 +++ Artix PKGBUILD
 @@ -2,6 +2,10 @@
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback kio5 gdb python-distro python-psutil qt5-tools)
+ depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback5 kio5 gdb python-distro python-psutil qt5-tools)
  groups=(plasma)
 +prepare() {
 +  cd $pkgname-$pkgver

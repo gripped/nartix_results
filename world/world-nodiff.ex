@@ -456,12 +456,12 @@ exempi
 exfat-utils
 exfatprogs
 exim
+exiv2
 exo
 expac
 expect
 f2fs-tools
 faac
-faad2
 facile
 fakechroot
 falkon
@@ -911,6 +911,7 @@ julia
 junit
 jupyter-console
 jupyter-nbclassic
+jupyter-nbclient
 jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
@@ -1666,7 +1667,6 @@ libuninameslist
 libunwind
 libupnp
 liburcu
-liburing
 libusb-compat
 libutempter
 libutf8proc
@@ -1987,7 +1987,6 @@ mimalloc
 mimetic
 minicom
 minidlna
-minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -3387,8 +3386,10 @@ python-plette
 python-pluggy
 python-plumbum
 python-ply
+python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
+python-poetry
 python-pooch
 python-portend
 python-pprofile
@@ -5059,3 +5060,5 @@ python-softlayer-zeep
 python-softlayer
 python-tldextract
 python-zeep
+kuserfeedback5
+python-pytest-snapshot
