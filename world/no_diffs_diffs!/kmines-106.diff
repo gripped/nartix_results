@@ -1,6 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kmines
+-pkgver=23.08.3
++pkgver=23.08.2
+ pkgrel=1
+ pkgdesc='The classic Minesweeper game'
+ url='https://apps.kde.org/kmines/'
+@@ -10,14 +10,14 @@
+ depends=(libkdegames hicolor-icon-theme)
+ makedepends=(extra-cmake-modules kdoctools5)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('d260a39fd6b478c6b96b63e316a1227206ab136ede9f7d6eb9c03b503a13393c'
++sha256sums=('b71d20c8064509d0b5ec8e2cadc5207c7bfd7f5058c88435df73a75e3b6f5d5c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

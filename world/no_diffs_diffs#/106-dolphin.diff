@@ -22,7 +22,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,7 +2,7 @@
- depends=(baloo-widgets knewstuff5 kio-extras kcmutils5 kparts5 kactivities5 kuserfeedback)
+ depends=(baloo-widgets knewstuff5 kio-extras kcmutils5 kparts5 kactivities5 kuserfeedback5)
  groups=(kde-applications kde-system)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

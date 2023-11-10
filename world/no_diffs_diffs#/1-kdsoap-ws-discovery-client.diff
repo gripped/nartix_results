@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+              extra-cmake-modules
+              qt6-doc
+              qt6-tools)
+-source=(https://download.kde.org/unstable/kdsoap-ws-discover-client/$pkgname-$pkgver.tar.xz{,.sig})
++source=(https://download.kde.org/unstable/$pkgname/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('5007747f1ce607639bb63244f8894c03a15194c0a891b8d85e10d76dbdf79188'
+             'SKIP')
+ validpgpkeys=(E0A3EB202F8E57528E13E72FD7574483BB57B18D) # Jonathan Esk-Riddell <jr@jriddell.org>

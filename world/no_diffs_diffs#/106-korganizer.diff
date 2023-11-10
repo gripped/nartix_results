@@ -16,7 +16,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,7 +2,7 @@
- depends=(kdepim-runtime kontactinterface incidenceeditor kuserfeedback)
+ depends=(kdepim-runtime kontactinterface incidenceeditor kuserfeedback5)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

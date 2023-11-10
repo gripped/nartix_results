@@ -16,7 +16,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,7 +2,7 @@
- depends=(kontactinterface messagelib knotifyconfig5 kuserfeedback)
+ depends=(kontactinterface messagelib knotifyconfig5 kuserfeedback5)
  groups=(kde-applications kde-pim)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

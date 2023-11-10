@@ -1,6 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ktouch
+-pkgver=23.08.3
++pkgver=23.08.2
+ pkgrel=1
+ pkgdesc='Touch Typing Tutor'
+ url='https://apps.kde.org/ktouch/'
+@@ -10,14 +10,14 @@
+ depends=(kqtquickcharts libxkbfile kcmutils5 hicolor-icon-theme qt5-quickcontrols2 qt5-graphicaleffects qt5-xmlpatterns)
+ makedepends=(extra-cmake-modules kdoctools5)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('a95a4c2d404ffbcfd587c2dc56b8c0a96cebd4adfb4f55cd7e93af4d1de55a7f'
++sha256sums=('28fb2599bdf7b50bdaa0f25a2ff6271c3b365127f9ace4bb3f2a592fce8679ec'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ 
+ pkgname=python-oslo-concurrency
+-pkgver=5.1.0
+-_commit=d1f07ad353986e5dcd24821941ac0a079f31484b
++pkgver=5.0.1
+ pkgrel=1
+ pkgdesc="OpenStack library for all concurrency-related code"
+ arch=('any')
+@@ -9,27 +8,25 @@
+ license=('Apache')
+ depends=('python-pbr' 'python-oslo-config' 'python-oslo-i18n' 'python-oslo-utils'
+          'python-fasteners')
+-makedepends=('git' 'python-setuptools')
+-checkdepends=('python-oslotest' 'python-stestr' 'python-eventlet')
+-source=("git+https://github.com/openstack/oslo.concurrency.git#commit=$_commit")
+-sha512sums=('SKIP')
++makedepends=('python-setuptools')
++checkdepends=('python-oslotest' 'python-eventlet')
++source=("https://github.com/openstack/oslo.concurrency/archive/$pkgver/$pkgname-$pkgver.tar.gz")
++sha512sums=('e9f072b814c1e961110cb3da0c327ee9b1eb510780dcc0772b97cf8fc633577d7667e96b8f91b0741b47403dfbce50f12f76b97854e28f0d6c95a9c13a2a924d')
++
++export PBR_VERSION=$pkgver
+ 
+ build() {
+-  cd oslo.concurrency
++  cd oslo.concurrency-$pkgver
+   python setup.py build
+ }
+ 
+ check() {
+-  cd oslo.concurrency
+-  python setup.py install --root="tmp_install" --optimize=1
+-  PYTHONPATH="$PWD/tmp_install/usr/lib/python3.11/site-packages" PATH="$PWD/tmp_install/usr/bin:$PATH" \
+-    TEST_EVENTLET=0 lockutils-wrapper stestr run --exclude-regex oslo_concurrency.tests.unit.test_processutils.PrlimitTestCase.test_core_size
+-  PYTHONPATH="$PWD/tmp_install/usr/lib/python3.11/site-packages" PATH="$PWD/tmp_install/usr/bin:$PATH" \
+-    TEST_EVENTLET=1 lockutils-wrapper stestr run --exclude-regex oslo_concurrency.tests.unit.test_processutils.PrlimitTestCase.test_core_size
++  cd oslo.concurrency-$pkgver
++  stestr run || : # "1 failure about raising rlimit"
+ }
+ 
+ package() {
+-  cd oslo.concurrency
++  cd oslo.concurrency-$pkgver
+   python setup.py install --root="$pkgdir" --optimize=1
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ pkgname=python-oslo-concurrency
+ depends=('python-pbr' 'python-oslo-config' 'python-oslo-i18n' 'python-oslo-utils'
+          'python-fasteners')
++export PBR_VERSION=$pkgver
+ build() {
+-  cd oslo.concurrency
++  cd oslo.concurrency-$pkgver
+   python setup.py build
+ }

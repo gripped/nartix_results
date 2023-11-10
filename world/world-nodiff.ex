@@ -123,6 +123,8 @@ autopep8
 avisynthplus
 avogadro-crystals
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt5
 awesome-terminal-fonts
 awesome
 aws-c-auth
@@ -937,6 +939,7 @@ kalarm
 kalendar
 kalgebra
 kalk
+kalzium
 kamera
 kamoso
 kanagram
@@ -1042,6 +1045,10 @@ kdnssd
 kdnssd5
 kdoctools
 kdoctools5
+kdsoap-ws-discovery-client
+kdsoap
+kdsoap-qt5
+kdsoap-qt6
 keditbookmarks
 keepassxc
 kemoticons
@@ -1094,6 +1101,7 @@ kimap
 kinfocenter
 kinit
 kio-admin
+kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
@@ -1987,6 +1995,7 @@ mimalloc
 mimetic
 minicom
 minidlna
+minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2237,7 +2246,6 @@ pcaudiolib
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
-pdal
 pdfarranger
 pdfjs
 pdfmixtool
@@ -2725,7 +2733,6 @@ python-ansi2html
 python-ansible-compat
 python-ansicolors
 python-ansiwrap
-python-anyio
 python-anyjson
 python-apipkg
 python-apispec-webframeworks
@@ -3094,7 +3101,6 @@ python-html2text
 python-html5-parser
 python-html5lib
 python-http-parser
-python-httpcore
 python-httplib2
 python-httpretty
 python-httptools
@@ -3315,14 +3321,11 @@ python-orjson
 python-os-client-config
 python-os-service-types
 python-oscrypto
-python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
 python-oslo-log
-python-oslo-serialization
-python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
@@ -3707,7 +3710,6 @@ python-speg
 python-sphinx-argparse-cli
 python-sphinx-argparse
 python-sphinx-autobuild
-python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
@@ -4419,7 +4421,6 @@ spamassassin
 spandsp
 spandsp-docs
 spatialindex
-spdlog
 speakup-utils
 spectacle
 speech-dispatcher
@@ -5060,5 +5061,5 @@ python-softlayer-zeep
 python-softlayer
 python-tldextract
 python-zeep
-kuserfeedback5
 python-pytest-snapshot
+aws-cli-v2

@@ -16,8 +16,6 @@ at
 audacity
 audacity-docs
 avahi
-avogadrolibs
-avogadrolibs-qt5
 ayatana-ido
 bftpd
 blackbox
@@ -231,10 +229,6 @@ java-openjfx-src
 js78
 json-glib
 json-glib-docs
-kalzium
-kdsoap-ws-discovery-client
-kdsoap
-kio-extras
 kismet
 knot
 kquickimageeditor
@@ -341,7 +335,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-minio
 modemmanager
 libmm-glib
 mosquitto
@@ -392,6 +385,7 @@ pacman-contrib
 paprefs
 passim
 pcsclite
+pdal
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -487,11 +481,17 @@ pyqt5
 python-pyqt5
 pyqt6
 python-aiomysql
+python-anyio
 python-anytree
+python-httpcore
 python-openapi-spec-validator
+python-oslo-concurrency
+python-oslo-serialization
+python-oslo-utils
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
+python-sphinx-autodoc-typehints
 qastools
 qemu
 qemu-common
@@ -613,6 +613,7 @@ signon-plugin-oauth2
 smartmontools
 sord
 sord-docs
+spdlog
 spice-gtk
 spice-vdagent
 squid
@@ -739,3 +740,4 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
+kuserfeedback5
