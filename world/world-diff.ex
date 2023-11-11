@@ -13,8 +13,6 @@ assimp
 at-spi2-core
 at-spi2-core-docs
 at
-audacity
-audacity-docs
 avahi
 ayatana-ido
 bftpd
@@ -484,6 +482,8 @@ python-aiomysql
 python-anyio
 python-anytree
 python-httpcore
+python-magic-wormhole-mailbox-server
+python-magic-wormhole-transit-relay
 python-openapi-spec-validator
 python-oslo-concurrency
 python-oslo-serialization
@@ -492,6 +492,7 @@ python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
 python-sphinx-autodoc-typehints
+python-terminado
 qastools
 qemu
 qemu-common
@@ -740,4 +741,3 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
-kuserfeedback5

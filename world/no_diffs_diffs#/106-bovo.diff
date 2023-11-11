@@ -1,22 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=bovo
--pkgver=23.08.3
-+pkgver=23.08.2
- pkgrel=1
- pkgdesc='A Gomoku like game for two players'
- url='https://apps.kde.org/bovo/'
-@@ -10,14 +10,14 @@
- depends=(libkdegames hicolor-icon-theme)
- makedepends=(extra-cmake-modules kdoctools5)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('2fd913ebe44d2eb874b319947894c94da989767dceb323f43e338507c6474ba5'
-+sha256sums=('bab0d819aba946dd64a670959b1efa5ec265d7afc183e8abcbc349320551e9ee'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+@@ -17,7 +17,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   audacity
+   audacity-docs
+ )
+-pkgver=3.4.1
++pkgver=3.4.0
+ pkgrel=1
+ epoch=1
+ pkgdesc="A program that lets you manipulate digital audio waveforms"
+@@ -59,10 +59,10 @@
+   https://github.com/audacity/audacity/archive/refs/tags/$_name-$pkgver.tar.gz
+   https://github.com/$pkgbase/$pkgbase/releases/download/$_name-$pkgver/$pkgbase-manual-$pkgver.zip
+ )
+-sha512sums=('d87813c48ff48ea2b0556939ecb3b916c6cfcefe03987e47ff0912f2c001db9a71faff72b1e0ba8ec6ecd27f5906ece4329d5b28fc73c150e414bb6ac31245d8'
+-            'c4fd63c015da8886cf65eedf2e2d70cc833ff0bca24a1833e866e72016bbb15c3413fa54d9b652497ff70b048d9ebe19ab098dd822570e59a7607537c15d86cd')
+-b2sums=('8eb0584b71ab2bb425699ed505ce252aed1e60d078a2ab51d0aacb35687f126c47e869ee033ca9c7dbf102bc0b3361633116fd0c96e6053465b45022dfee79a4'
+-        'c52e858038a895fd18ec39c2e07d37ac83987f8a3f5ab947cc58a6505c96712cd5b8a3722d3618a4aa11b5e975b8aa37ade48d3179b077363f6a2572e3d6ae0d')
++sha512sums=('1fff66d3199591fed24a7b7a7ea3cb8b2a381c4f16d15a67949f2631a2e5ff2cac28a599b3ce28b0812de70f4984dfa51d37b3bed4e8f75deb4d5006817998d4'
++            '731b13854a7cc110145aec68fe3862c57e2962ca059e5ddbb6bbd2806d4381a6520edcf54b2f9666400229da78ce39a3efd5dffa4175eb9c375d21e097cf2c60')
++b2sums=('63f56548bee617dd20554cffe1ccf70f395441388273a1267bf030627787900018f58679da90807faf0fba83c3e79f9198d40a22c7a8c5cc220d80ea82181c95'
++        '7c21fb78f70446a2fdd3563a2f8a7c51671882bce6b191996975c66d7b059c8a6cde0401e3fe9c12100ef4363a5c16627449ce0b8316b3b0a47117ce4da8e852')
+ 
+ build() {
+   local cmake_options=(

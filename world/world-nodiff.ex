@@ -111,6 +111,8 @@ aubio
 python-aubio
 audacious-plugins
 audacious
+audacity
+audacity-docs
 audiocd-kio
 audiofile
 audiotube
@@ -3230,8 +3232,6 @@ python-lxml
 python-lxml-docs
 python-lz4
 python-m2crypto
-python-magic-wormhole-mailbox-server
-python-magic-wormhole-transit-relay
 python-magic
 python-mailmanclient
 python-mako
@@ -3766,7 +3766,6 @@ python-tempita
 python-tempora
 python-tenacity
 python-termcolor
-python-terminado
 python-termstyle
 python-testfixtures
 python-testing.common.database
@@ -5061,5 +5060,7 @@ python-softlayer-zeep
 python-softlayer
 python-tldextract
 python-zeep
+kuserfeedback5
 python-pytest-snapshot
 aws-cli-v2
+docker-buildx

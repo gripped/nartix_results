@@ -1,22 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=kdiamond
--pkgver=23.08.3
-+pkgver=23.08.2
- pkgrel=1
- pkgdesc='A single player puzzle game'
- url='https://apps.kde.org/kdiamond/'
-@@ -10,14 +10,14 @@
- depends=(libkdegames knotifyconfig5 hicolor-icon-theme)
- makedepends=(extra-cmake-modules kdoctools5)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('40d747c27f0426417e9af971e2194b3f508bd4ee141017974b7263ad70b9e48f'
-+sha256sums=('88cb220a938d0f7a0f7bbd1b5a7e058a7bec7e93276e15e346c4c214c281ef8b'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+@@ -17,7 +17,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

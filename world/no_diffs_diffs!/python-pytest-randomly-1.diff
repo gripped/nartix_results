@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-pytest-randomly
+-pkgver=3.14.0
++pkgver=3.13.0
+ pkgrel=1
+ pkgdesc='Pytest plugin to randomly order tests and control random.seed'
+ arch=('any')
+@@ -10,7 +10,7 @@
+ makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+ checkdepends=('python-factory-boy' 'python-faker' 'python-numpy' 'python-pytest-xdist')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/pytest-dev/pytest-randomly/archive/$pkgver.tar.gz")
+-sha512sums=('c088a4c4ef469fdbc1f75b9e8a0014d92256e03d4debdafcc031517c647ef16c20d5563cb0d3c4a53843f87da48c22be053ec31b1f726a3562d6ca3841002b41')
++sha512sums=('d9b6b965ad03fb504005f55cd1f4db9e733ea2412bb6456e846da8a0366123c4e537c6fea72e341e3f4bbe5fd3b78fce26599100623f26b634c97bf8519f1498')
+ 
+ build() {
+   cd pytest-randomly-$pkgver
+@@ -19,10 +19,7 @@
+ 
+ check() {
+   cd pytest-randomly-$pkgver
+-  python -m installer -d tmp_install dist/*.whl
+-  PYTHONPATH="$PWD/tmp_install/usr/lib/python3.11/site-packages" \
+-    pytest --deselect tests/test_pytest_randomly.py::test_model_bakery \
+-           --deselect tests/test_pytest_randomly.py::test_entrypoint_injection
++  PYTHONPATH="$PWD/src" pytest --deselect tests/test_pytest_randomly.py::test_entrypoint_injection
+ }
+ 
+ package() {

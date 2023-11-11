@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=liborcus
+-pkgver=0.19.2
++pkgver=0.19.1
+ pkgrel=1
+ pkgdesc="File import filter library for spreadsheet documents."
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ makedepends=('boost' 'mdds')
+ optdepends=('python-requests: in tool bugzilla')
+ source=(https://kohei.us/files/orcus/src/${pkgname}-${pkgver}.tar.xz)
+-sha256sums=('69ed26a00d4aaa7688e62a6e003cbc81928521a45e96605e53365aa499719e39')
++sha256sums=('6c9a8c03e8187f2749a84f2786d86a88ae45c99ed3a2d5fea36ba556b40c342d')
+ 
+ build() {
+     cd "${pkgname}"-${pkgver}
