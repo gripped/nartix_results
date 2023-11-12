@@ -376,9 +376,6 @@ djvulibre
 dkms
 dleyna
 dleyna-docs
-dmd
-dmd-docs
-libphobos
 dmenu
 dmidecode
 dnscrypt-proxy
@@ -616,6 +613,8 @@ glm
 glpk
 glslang
 glu
+gmic
+gimp-plugin-gmic
 gmime3
 gn
 gnome-applets
@@ -1299,9 +1298,6 @@ lib2geom
 libabw
 libaccounts-glib
 libaccounts-qt
-libadwaita
-libadwaita-demos
-libadwaita-docs
 libaec
 libalkimia
 libao
@@ -4755,7 +4751,6 @@ vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
 vcdimager
-vde2
 vdpauinfo
 veracrypt
 vice
@@ -4826,9 +4821,9 @@ wpebackend-fdo
 wqy-zenhei
 wtype
 wxwidgets
+wxwidgets-common
 wxwidgets-gtk3
 wxwidgets-qt5
-wxwidgets-common
 x11-ssh-askpass
 x11vnc
 x264

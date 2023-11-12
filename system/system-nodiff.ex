@@ -56,7 +56,6 @@ gettext
 glib2
 glib2-docs
 gmp
-gnupg
 gnutls
 gpgme
 qgpgme-qt5

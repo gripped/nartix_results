@@ -6,7 +6,8 @@ apache
 apcupsd
 appstream-glib
 appstream
-appstream-qt
+appstream-qt5
+appstream-qt6
 archivetools
 aspell-uk
 assimp
@@ -59,6 +60,9 @@ dhcp
 dhclient
 dhcpcd
 directx-shader-compiler
+dmd
+dmd-docs
+libphobos
 dns-over-https
 docker
 dovecot
@@ -122,8 +126,6 @@ github-cli
 glibmm-2.68
 glibmm-2.68-docs
 glusterfs
-gmic
-gimp-plugin-gmic
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -231,6 +233,9 @@ kismet
 knot
 kquickimageeditor
 kuserfeedback
+libadwaita
+libadwaita-demos
+libadwaita-docs
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -682,6 +687,7 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
+vde2
 verdict
 virtualbox
 virtualbox-sdk
@@ -741,3 +747,4 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
+senpai

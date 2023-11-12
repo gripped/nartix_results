@@ -1,0 +1,146 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,66 +1,36 @@
+-
+ pkgname=senpai
+ pkgver=0.2.0
+-pkgrel=3
+-pkgdesc='A modern terminal IRC client'
+-arch=('x86_64')
+-url='https://git.sr.ht/~taiite/senpai'
+-license=('ISC')
+-depends=('glibc')
+-makedepends=('git' 'go' 'scdoc')
+-options=('!lto')
+-_commit='1318e784bd2bba3765aee97811a3f0053d3a6723'
+-source=("$pkgname::git+$url#commit=$_commit")
+-b2sums=('SKIP')
+-
+-pkgver() {
+-  cd "$pkgname"
+-
+-  git describe --tags | sed 's/^v//'
+-}
+-
+-prepare() {
+-  cd "$pkgname"
+-
+-  export GOPATH="${srcdir}"
+-  go mod download
+-}
++pkgrel=1
++pkgdesc="A modern terminal IRC client."
++arch=("x86_64")
++url="https://sr.ht/~taiite/senpai"
++license=("MIT" "ISC")
++depends=("glibc")
++makedepends=("go" "gcc" "scdoc" "make")
++source=(
++	"https://git.sr.ht/~taiite/senpai/archive/v$pkgver.tar.gz"
++)
++sha256sums=(
++	"9786fd83f3e1067549c3c88455a1f66ec66d993fe597cee334d217a5d1cf4803"
++)
+ 
+ build() {
+-  cd "$pkgname"
+-
+-  export CGO_CPPFLAGS="${CPPFLAGS}"
+-  export CGO_CFLAGS="${CFLAGS}"
+-  export CGO_CXXFLAGS="${CXXFLAGS}"
+-  export GOPATH="${srcdir}"
+-
+-  go build -v \
+-    -buildmode=pie \
+-    -mod=readonly \
+-    -modcacherw \
+-    -ldflags "-compressdwarf=false \
+-    -linkmode external \
+-    -extldflags ${LDFLAGS}" \
+-    ./cmd/senpai
+-
+-  make doc/senpai.{1,5}
+-
+-  local _commit_date=$(git show --no-patch --format=%cd --date=format:%Y-%m-%d)
+-  sed \
+-    -i doc/*.{1,5} \
+-    -e "s/\"[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\"/\"$_commit_date\"/"
+-}
+-
+-check() {
+-  cd "$pkgname"
+-
+-  go test -v ./...
++	cd "$pkgname-v$pkgver"
++	export CGO_CFLAGS="$CFLAGS" CGO_LDFLAGS="$LDFLAGS" \
++		GOPATH=/tmp/go GOCACHE=/tmp/go
++	go build \
++		-buildmode pie \
++		-trimpath \
++		-ldflags "-linkmode=external" \
++		-mod readonly \
++		-modcacherw \
++		-buildvcs=false \
++		-o $pkgname ./cmd/senpai
++	make doc/senpai.1 doc/senpai.5
+ }
+ 
+ package() {
+-  cd "$pkgname"
+-
+-  make DESTDIR="$pkgdir" PREFIX=/usr install
+-
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
++	cd "$pkgname-v$pkgver"
++	install -Dm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
++	make install PREFIX="$pkgdir/usr"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,16 @@
+ pkgname=senpai
+-depends=('glibc')
+-options=!lto
+-prepare() {
+-  cd "$pkgname"
+-  export GOPATH="${srcdir}"
+-  go mod download
++depends=("glibc")
++build() {
++	cd "$pkgname-v$pkgver"
++	export CGO_CFLAGS="$CFLAGS" CGO_LDFLAGS="$LDFLAGS" \
++		GOPATH=/tmp/go GOCACHE=/tmp/go
++	go build \
++		-buildmode pie \
++		-trimpath \
++		-ldflags "-linkmode=external" \
++		-mod readonly \
++		-modcacherw \
++		-buildvcs=false \
++		-o $pkgname ./cmd/senpai
++	make doc/senpai.1 doc/senpai.5
+ }
+-build() {
+-  cd "$pkgname"
+-  export CGO_CPPFLAGS="${CPPFLAGS}"
+-  export CGO_CFLAGS="${CFLAGS}"
+-  export CGO_CXXFLAGS="${CXXFLAGS}"
+-  export GOPATH="${srcdir}"
+-  go build -v \
+-    -buildmode=pie \
+-    -mod=readonly \
+-    -modcacherw \
+-    -ldflags "-compressdwarf=false \
+-    -linkmode external \
+-    -extldflags ${LDFLAGS}" \
+-    ./cmd/senpai
+-  make doc/senpai.{1,5}
+-  local _commit_date=$(git show --no-patch --format=%cd --date=format:%Y-%m-%d)
+-  sed \
+-    -i doc/*.{1,5} \
+-    -e "s/\"[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\"/\"$_commit_date\"/"
+-}

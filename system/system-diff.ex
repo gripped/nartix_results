@@ -14,6 +14,7 @@ libelf
 glibc
 lib32-glibc
 glibc-locales
+gnupg
 gssproxy
 inetutils
 iptables

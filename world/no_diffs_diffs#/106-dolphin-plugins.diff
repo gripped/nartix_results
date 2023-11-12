@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
-               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+@@ -24,7 +24,7 @@
+ }
  
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(dolphin)
- groups=(kde-applications kdesdk)
+@@ -5,7 +5,7 @@
+   patch -d $pkgname-$pkgver -p1 < aec8511a.patch # Fix mount ISO plugin with shared-mime-info 2.3
+ }
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \
