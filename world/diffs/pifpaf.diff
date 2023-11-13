@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,17 +2,17 @@
+ pkgname=pifpaf
+ pkgver=3.1.5
+ _commit=d5e33872c3c2ef3067da6e1150c3f050f4a7b620
+-pkgrel=7
++pkgrel=6
+ pkgdesc='Suite of tools and fixtures to manage daemons for testing'
+ arch=('any')
+ license=('Apache')
+ url='https://github.com/jd/pifpaf'
+ depends=('python-daiquiri' 'python-click' 'python-pbr' 'python-jinja' 'python-fixtures'
+-         'python-psutil' 'python-xattr' 'python-setuptools')
++         'python-psutil' 'python-xattr')
+ provides=("python-pifpaf=$pkgver")
+ conflicts=('python-pifpaf')
+ replaces=('python-pifpaf')
+-makedepends=('git')
++makedepends=('git' 'python-setuptools')
+ checkdepends=('python-testrepository' 'python-requests' 'python-testtools' 'python-oslotest'
+               'memcached' 'percona-server' 'percona-server-clients' 'postgresql' 'redis'
+               'consul' 'couchdb' 'httpbin' 'rabbitmq')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=pifpaf
+ depends=('python-daiquiri' 'python-click' 'python-pbr' 'python-jinja' 'python-fixtures'
+-         'python-psutil' 'python-xattr' 'python-setuptools')
++         'python-psutil' 'python-xattr')
+ provides=("python-pifpaf=$pkgver")
+ conflicts=('python-pifpaf')
+ replaces=('python-pifpaf')

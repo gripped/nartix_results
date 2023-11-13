@@ -529,7 +529,6 @@ fop
 four-in-a-row
 fractal
 frameworkintegration
-frameworkintegration5
 freealut
 freecell-solver
 freeglut
@@ -650,7 +649,6 @@ gnome-recipes
 gnome-robots
 gnome-screenshot
 gnome-shell-extensions
-gnome-software
 gnome-sound-recorder
 gnome-sudoku
 gnome-terminal
@@ -898,7 +896,6 @@ jitterentropy
 jose
 jp2a
 jq
-jrnl
 jruby
 js102
 js115
@@ -1194,6 +1191,8 @@ kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
+kquickimageeditor
+kquickimageeditor5
 krdc
 krecorder
 krename
@@ -1289,7 +1288,6 @@ level-zero
 level-zero-headers
 level-zero-loader
 leveldb
-lftp
 lgi
 lua-lgi
 lua51-lgi
@@ -1885,8 +1883,6 @@ mailman-web
 mailman3-hyperkitty
 mailman3
 maim
-malcontent
-libmalcontent
 maliit-framework
 maliit-keyboard
 mallard-ducktype
@@ -2562,7 +2558,6 @@ picard
 picmi
 picom
 pidgin
-pifpaf
 pigeonhole
 pigz
 pim-data-exporter
@@ -3228,6 +3223,8 @@ python-lxml
 python-lxml-docs
 python-lz4
 python-m2crypto
+python-magic-wormhole-mailbox-server
+python-magic-wormhole-transit-relay
 python-magic
 python-mailmanclient
 python-mako
@@ -3317,11 +3314,14 @@ python-orjson
 python-os-client-config
 python-os-service-types
 python-oscrypto
+python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
 python-oslo-log
+python-oslo-serialization
+python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
@@ -3706,6 +3706,7 @@ python-speg
 python-sphinx-argparse-cli
 python-sphinx-argparse
 python-sphinx-autobuild
+python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
@@ -3762,6 +3763,7 @@ python-tempita
 python-tempora
 python-tenacity
 python-termcolor
+python-terminado
 python-termstyle
 python-testfixtures
 python-testing.common.database
@@ -4751,6 +4753,7 @@ vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
 vcdimager
+vde2
 vdpauinfo
 veracrypt
 vice
@@ -5043,7 +5046,6 @@ certbot-dns-ovh
 certbot-dns-rfc2136
 certbot-dns-route53
 certbot-dns-sakuracloud
-dns-lexicon
 python-cloudflare
 python-digitalocean
 python-guzzle-sphinx-theme
@@ -5059,3 +5061,4 @@ kuserfeedback5
 python-pytest-snapshot
 aws-cli-v2
 docker-buildx
+python-osc-lib

@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=v2ray
--pkgver=5.10.1
--_commit=f8d27415bc5c4b77562e161b0ad623ebd331585c
-+pkgver=5.9.0
-+_commit=be8e8accb82d4dcffe7e35f17d9e0e5ce1fa6d53
- pkgrel=1
- pkgdesc="A platform for building proxies to bypass network restrictions"
- arch=('x86_64')
 @@ -12,11 +12,6 @@
  backup=(etc/v2ray/config.json)
  source=("git+https://github.com/v2fly/v2ray-core.git#commit=$_commit")

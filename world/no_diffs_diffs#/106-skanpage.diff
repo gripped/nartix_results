@@ -16,7 +16,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,7 +2,7 @@
- depends=(ksanecore kirigami2 purpose5 tesseract kquickimageeditor)
+ depends=(ksanecore kirigami2 purpose5 tesseract kquickimageeditor5)
  groups=(kde-applications kde-utilities)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

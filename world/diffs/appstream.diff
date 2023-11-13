@@ -8,13 +8,13 @@
 -pkgrel=1
 +pkgname=(appstream
 +         appstream-qt5
-+         appstream-qt6)
++         appstream-qt)
 +pkgver=1.0.0
-+pkgrel=2
++pkgrel=4
  pkgdesc='Provides a standard for creating app stores across distributions'
  arch=(x86_64)
  url='https://distributions.freedesktop.org/wiki/AppStream'
-@@ -21,18 +23,19 @@
+@@ -21,49 +23,79 @@
           libxmlb
           libyaml
           pango
@@ -32,13 +32,22 @@
               vala
               xmlto)
  source=(https://www.freedesktop.org/software/appstream/releases/AppStream-$pkgver.tar.xz{,.asc}
-         update-appstream-cache.hook)
+-        update-appstream-cache.hook)
 -sha256sums=('d4f722d79c6a2f29d9dc5c6f464927469543353f386581c778c9bed7c60a54ed'
++        update-appstream-cache.hook
++        fix-qt5-link-target.patch)
 +sha256sums=('ef23477a380e8b525e92cfa87687f1146b9cef74c641349a1ae11250be5401d0'
              'SKIP'
-             '3a96a1479cfd18dad36c2ca3181aabe46af9bf772c00b965d86ec5f55cd0e0eb')
+-            '3a96a1479cfd18dad36c2ca3181aabe46af9bf772c00b965d86ec5f55cd0e0eb')
++            '3a96a1479cfd18dad36c2ca3181aabe46af9bf772c00b965d86ec5f55cd0e0eb'
++            'eac31f15d1e33968ab5ca678fc32fc0cd4c09c30ecbc457cbd490a00959d4c04')
  validpgpkeys=(D33A3F0CA16B0ACC51A60738494C8A5FBF4DECEB) # Matthias Klumpp <matthias@tenstral.net>
-@@ -41,29 +44,52 @@
++
++prepare() {
++  patch -d AppStream-$pkgver -p1 < fix-qt5-link-target.patch
++}
+ 
+ build() {
    meson build AppStream-$pkgver \
      --prefix=/usr \
      --libexecdir=lib \
@@ -74,8 +83,8 @@
             glib2
             glibc
             qt5-base)
-+  conflicts=(appstream-qt)
-+  replaces=(appstream-qt)
++  conflicts=('appstream-qt<1')
++  replaces=('appstream-qt<1')
  
    meson install --destdir "$pkgdir" -C build
  
@@ -83,7 +92,7 @@
 +  rm -r "$pkgdir"/usr/{bin,include/appstream{,-compose},lib/{appstreamcli-compose,girepository-1.0,libappstream*,pkgconfig},share}
  }
 +
-+package_appstream-qt6() {
++package_appstream-qt() {
 +  pkgdesc='Qt6 interface for AppStream'
 +  depends=(appstream
 +           gcc-libs
@@ -106,16 +115,19 @@
 -pkgname=(appstream appstream-qt)
 +pkgname=(appstream
 +         appstream-qt5
-+         appstream-qt6)
++         appstream-qt)
  depends=(cairo
           curl
           fontconfig
-@@ -14,22 +16,40 @@
+@@ -14,22 +16,43 @@
           libxmlb
           libyaml
           pango
 -         systemd-libs)
 +         zstd)
++prepare() {
++  patch -d AppStream-$pkgver -p1 < fix-qt5-link-target.patch
++}
  build() {
    meson build AppStream-$pkgver \
      --prefix=/usr \
@@ -132,26 +144,27 @@
 +    -Dsystemd=false \
 +    -Dqt=true
 +  meson compile -C build6
- }
--package_appstream-qt() {
++}
 +package_appstream-qt5() {
-   depends=(appstream
-            gcc-libs
-            glib2
-            glibc
-            qt5-base)
-+  conflicts=(appstream-qt)
-+  replaces=(appstream-qt)
-   meson install --destdir "$pkgdir" -C build
--  rm -r "$pkgdir"{/etc,/usr/{bin,include/appstream{,-compose},lib/{appstreamcli-compose,girepository-1.0,libappstream*,pkgconfig},share}}
-+  rm -r "$pkgdir"/usr/{bin,include/appstream{,-compose},lib/{appstreamcli-compose,girepository-1.0,libappstream*,pkgconfig},share}
- }
-+package_appstream-qt6() {
 +  depends=(appstream
 +           gcc-libs
 +           glib2
 +           glibc
++           qt5-base)
++  conflicts=('appstream-qt<1')
++  replaces=('appstream-qt<1')
++  meson install --destdir "$pkgdir" -C build
++  rm -r "$pkgdir"/usr/{bin,include/appstream{,-compose},lib/{appstreamcli-compose,girepository-1.0,libappstream*,pkgconfig},share}
+ }
+ package_appstream-qt() {
+   depends=(appstream
+            gcc-libs
+            glib2
+            glibc
+-           qt5-base)
+-  meson install --destdir "$pkgdir" -C build
+-  rm -r "$pkgdir"{/etc,/usr/{bin,include/appstream{,-compose},lib/{appstreamcli-compose,girepository-1.0,libappstream*,pkgconfig},share}}
 +           qt6-base)
 +  meson install --destdir "$pkgdir" -C build6
 +  rm -r "$pkgdir"/usr/{bin,include/appstream,lib/{girepository-1.0,libappstream*,pkgconfig},share}
-+}
+ }

@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,11 @@
+ 
+ pkgbase=malcontent
+-pkgname=(malcontent libmalcontent)
++pkgname=(
++  malcontent
++  libmalcontent
++)
+ pkgver=0.11.1
+-pkgrel=2
++pkgrel=3
+ pkgdesc="Parental control support for applications"
+ url="https://gitlab.freedesktop.org/pwithnall/malcontent"
+ arch=(x86_64)
+@@ -40,7 +43,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,8 @@
+ pkgbase=malcontent
+-pkgname=(malcontent libmalcontent)
++pkgname=(
++  malcontent
++  libmalcontent
++)
+ depends=(
+   accountsservice
+   appstream
+@@ -15,7 +18,7 @@
+   cd $pkgname
+ }
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ _pick() {

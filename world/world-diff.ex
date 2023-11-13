@@ -7,7 +7,7 @@ apcupsd
 appstream-glib
 appstream
 appstream-qt5
-appstream-qt6
+appstream-qt
 archivetools
 aspell-uk
 assimp
@@ -107,6 +107,7 @@ flatpak-docs
 fluidsynth
 folks
 fprintd
+frameworkintegration5
 freerdp
 fwupd-efi
 fwupd
@@ -141,6 +142,7 @@ gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
 gnome-shell
+gnome-software
 gnome-system-monitor
 gnome-taquin
 gnome-user-share
@@ -226,13 +228,14 @@ openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
+jrnl
 js78
 json-glib
 json-glib-docs
 kismet
 knot
-kquickimageeditor
 kuserfeedback
+lftp
 libadwaita
 libadwaita-demos
 libadwaita-docs
@@ -317,6 +320,8 @@ lxc
 lxcfs
 lxd
 mako
+malcontent
+libmalcontent
 mariadb
 mariadb-libs
 mariadb-clients
@@ -428,6 +433,7 @@ php-snmp
 php-sqlite
 php-tidy
 php-xsl
+pifpaf
 pipewire-media-session
 pipewire
 libpipewire
@@ -487,17 +493,10 @@ python-aiomysql
 python-anyio
 python-anytree
 python-httpcore
-python-magic-wormhole-mailbox-server
-python-magic-wormhole-transit-relay
 python-openapi-spec-validator
-python-oslo-concurrency
-python-oslo-serialization
-python-oslo-utils
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
-python-sphinx-autodoc-typehints
-python-terminado
 qastools
 qemu
 qemu-common
@@ -687,7 +686,6 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
-vde2
 verdict
 virtualbox
 virtualbox-sdk
@@ -747,4 +745,6 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
+dns-lexicon
 senpai
+umurmur

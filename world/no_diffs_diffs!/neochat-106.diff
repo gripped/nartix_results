@@ -17,7 +17,7 @@
 +++ Artix PKGBUILD
 @@ -3,7 +3,7 @@
  depends=(qqc2-desktop-style5 kirigami-addons5 kquickcharts5 qt5-location
-          libquotient kquickimageeditor kitemmodels5 kio5 syntax-highlighting5 cmark hicolor-icon-theme)
+          libquotient kquickimageeditor5 kitemmodels5 kio5 syntax-highlighting5 cmark hicolor-icon-theme)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \
