@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=rustup
+ pkgver=1.26.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc="The Rust toolchain installer"
+ arch=('x86_64')
+ url="https://github.com/rust-lang/rustup.rs"
+@@ -36,7 +36,7 @@
+ 
+   ln -s /usr/bin/rustup "${pkgdir}/usr/lib/$pkgname/bin/rust-analyzer"
+ 
+-  install -Dm644 "$srcdir/$pkgname-profile.sh" "$pkgdir/etc/profile.d/$pkgname.sh"
++  install -Dm755 "$srcdir/$pkgname-profile.sh" "$pkgdir/etc/profile.d/$pkgname.sh"
+ 
+   mkdir -p "$pkgdir/usr/share/bash-completion/completions"
+   "$pkgdir"/usr/bin/rustup completions bash > "$pkgdir/usr/share/bash-completion/completions/rustup"

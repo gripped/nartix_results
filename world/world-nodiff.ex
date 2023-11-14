@@ -324,8 +324,6 @@ cryptoplusplus
 cscope
 ctags
 ctpl
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -368,7 +366,6 @@ diffuse
 digikam
 directx-headers
 discount
-discover
 distcc
 django
 python-django
@@ -923,7 +920,6 @@ jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab
 jupyterlab_pygments
-k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -1007,7 +1003,6 @@ kdevelop-meta
 kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
-kde-development-environment-meta
 kde-gtk-config
 kde-inotify-survey
 kdebugsettings
@@ -1458,7 +1453,6 @@ libjxl
 libjxl-doc
 libkate
 libkate-docs
-libkcddb
 libkcompactdisc
 libkdcraw
 libkdegames
@@ -1683,7 +1677,6 @@ libva
 libvdpau
 libvips
 libvirt-python
-libvirt
 libvisio
 libvisual
 libvncserver
@@ -1989,7 +1982,6 @@ mimalloc
 mimetic
 minicom
 minidlna
-minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2793,7 +2785,6 @@ python-bitstring
 python-black
 python-bleach
 python-blessed
-python-blinker
 python-blosc
 python-boolean.py
 python-boto
@@ -3065,8 +3056,6 @@ python-gnupg
 python-gnupginterface
 python-google-api-core
 python-google-api-python-client
-python-google-auth-httplib2
-python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -3318,8 +3307,6 @@ python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
-python-oslo-i18n
-python-oslo-log
 python-oslo-serialization
 python-oslo-utils
 python-oslotest
@@ -3371,7 +3358,6 @@ python-pg8000
 python-phonenumbers
 python-piccata
 python-pickleshare
-python-pikepdf
 python-pillow
 python-pint
 python-pip-run
@@ -3632,7 +3618,6 @@ python-requests-wsgi-adapter
 python-requests
 python-requestsexceptions
 python-resolvelib
-python-responses
 python-retrying
 python-rfc3339-validator
 python-rfc3986-validator
@@ -4362,6 +4347,7 @@ sequoia-sq
 sequoia-sqv
 serd
 serd-docs
+serf
 setconf
 sfml
 sfsexp
@@ -5046,6 +5032,7 @@ certbot-dns-ovh
 certbot-dns-rfc2136
 certbot-dns-route53
 certbot-dns-sakuracloud
+dns-lexicon
 python-cloudflare
 python-digitalocean
 python-guzzle-sphinx-theme
