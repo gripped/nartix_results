@@ -25,6 +25,7 @@ bluez-cups
 bluez-hid2hci
 bluez-plugins
 bolt
+box2d
 breezy
 brightnessctl
 brltty
@@ -49,8 +50,6 @@ connman
 containerd
 cppcheck
 crun
-cuda
-cuda-tools
 cups
 libcups
 cyrus-sasl
@@ -204,6 +203,7 @@ gvfs-google
 haproxy
 haveged
 hidapi
+hugin
 hwloc
 hyprland
 i3-wm
@@ -235,8 +235,6 @@ jrnl
 js78
 json-glib
 json-glib-docs
-k3b
-kde-development-environment-meta
 kismet
 knot
 kuserfeedback
@@ -267,10 +265,10 @@ libhandy-docs
 libhandy0
 libinput
 libjpeg-turbo
-libkcddb
 libkolabxml
 libldm
 libmbim
+libnbd
 libplacebo
 libpng
 libprocps
@@ -282,7 +280,6 @@ libusbmuxd
 libusbsio
 python-libusbsio
 libvirt-glib
-libvirt
 libwacom
 libwhereami
 light-locker
@@ -500,17 +497,10 @@ pyqt6
 python-aiomysql
 python-anyio
 python-anytree
-python-blinker
-python-google-auth-httplib2
-python-google-auth
 python-httpcore
 python-openapi-spec-validator
-python-oslo-i18n
-python-oslo-log
-python-pikepdf
 python-pytest-benchmark
 python-pyudev
-python-responses
 python-sphinx-alabaster-theme
 qastools
 qemu

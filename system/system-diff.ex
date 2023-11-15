@@ -47,6 +47,8 @@ pam
 pambase
 ppp
 procps-ng
+python
+python-tests
 rpcbind
 sudo
 usbutils

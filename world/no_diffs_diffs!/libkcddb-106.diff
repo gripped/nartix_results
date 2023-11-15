@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
+@@ -20,7 +20,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {
--  cmake -B build -S $pkgname-$pkgver \
-+  artix-cmake -B build -S $pkgname-$pkgver \
+-  cmake -B build -S $_name-$pkgver \
++  artix-cmake -B build -S $_name-$pkgver \
      -DBUILD_TESTING=OFF
    cmake --build build
  }
@@ -15,12 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(kcmutils5 libkcddb5 libkcompactdisc lame)
- groups=(kde-applications kde-multimedia)
+@@ -4,7 +4,7 @@
+ conflicts=('libkcddb<23.08.3-2')
+ replaces=('libkcddb<23.08.3-2')
  build() {
--  cmake -B build -S $pkgname-$pkgver \
-+  artix-cmake -B build -S $pkgname-$pkgver \
+-  cmake -B build -S $_name-$pkgver \
++  artix-cmake -B build -S $_name-$pkgver \
      -DBUILD_TESTING=OFF
    cmake --build build
  }

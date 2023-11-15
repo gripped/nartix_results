@@ -188,7 +188,6 @@ botan
 botan2
 bovo
 bower
-box2d
 breeze-gtk
 breeze-icons
 breeze-plymouth
@@ -324,6 +323,8 @@ cryptoplusplus
 cscope
 ctags
 ctpl
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -788,7 +789,6 @@ htop
 http-parser
 httpbin
 hub
-hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -920,6 +920,7 @@ jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab
 jupyterlab_pygments
+k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -1003,6 +1004,7 @@ kdevelop-meta
 kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
+kde-development-environment-meta
 kde-gtk-config
 kde-inotify-survey
 kdebugsettings
@@ -1453,6 +1455,7 @@ libjxl
 libjxl-doc
 libkate
 libkate-docs
+libkcddb
 libkcompactdisc
 libkdcraw
 libkdegames
@@ -1520,7 +1523,6 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
-libnbd
 libndp
 libnet
 libnewt
@@ -1677,6 +1679,7 @@ libva
 libvdpau
 libvips
 libvirt-python
+libvirt
 libvisio
 libvisual
 libvncserver
@@ -2785,6 +2788,7 @@ python-bitstring
 python-black
 python-bleach
 python-blessed
+python-blinker
 python-blosc
 python-boolean.py
 python-boto
@@ -3056,6 +3060,8 @@ python-gnupg
 python-gnupginterface
 python-google-api-core
 python-google-api-python-client
+python-google-auth-httplib2
+python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -3307,6 +3313,8 @@ python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
+python-oslo-i18n
+python-oslo-log
 python-oslo-serialization
 python-oslo-utils
 python-oslotest
@@ -3358,6 +3366,7 @@ python-pg8000
 python-phonenumbers
 python-piccata
 python-pickleshare
+python-pikepdf
 python-pillow
 python-pint
 python-pip-run
@@ -3618,6 +3627,7 @@ python-requests-wsgi-adapter
 python-requests
 python-requestsexceptions
 python-resolvelib
+python-responses
 python-retrying
 python-rfc3339-validator
 python-rfc3986-validator
