@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkg=h5py
+ pkgname=python-${_pkg}
+ pkgver=3.10.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="General-purpose Python bindings for the HDF5 library"
+ arch=(x86_64)
+ url="https://www.h5py.org/"
+@@ -11,10 +11,8 @@
+ makedepends=(cython0 python-pkgconfig python-setuptools)
+ checkdepends=(python-pytest python-pytest-mpi python-pytables)
+ conflicts=(hdf5-openmpi)
+-source=(https://files.pythonhosted.org/packages/source/h/${_pkg}/${_pkg}-${pkgver}.tar.gz
+-        remove-version-check.patch)
+-sha256sums=('d93adc48ceeb33347eb24a634fb787efc7ae4644e6ea4ba733d099605045c049'
+-            '621f108e5e95dc250047501447d0dc633fbf3f8bf19e4c4b4c4d5a286864664c')
++source=(https://files.pythonhosted.org/packages/source/h/${_pkg}/${_pkg}-${pkgver}.tar.gz)
++sha256sums=('d93adc48ceeb33347eb24a634fb787efc7ae4644e6ea4ba733d099605045c049')
+ validpgpkeys=(AC47F71DB275ECD0B3DA46E857FA4540DD4EFCF7  # Thomas A Caswell (Brookhaven National Lab) <tcaswell@bnl.gov>
+               96B7334D7610EE3E68AFFE589E027116943D6A8B) # Thomas A Caswell <tcaswell@bnl.gov> (new key)
+ 
+@@ -22,7 +20,6 @@
+   cd ${_pkg}-${pkgver}
+   sed -i 's/numpy ==/numpy >=/g' setup.py
+   sed -i "s/settings\\['runtime_library_dirs'\\] = settings\\['library_dirs'\\]/pass/" setup_build.py
+-  patch -p1 -i ../remove-version-check.patch
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+   cd ${_pkg}-${pkgver}
+   sed -i 's/numpy ==/numpy >=/g' setup.py
+   sed -i "s/settings\\['runtime_library_dirs'\\] = settings\\['library_dirs'\\]/pass/" setup_build.py
+-  patch -p1 -i ../remove-version-check.patch
+ }
+ build() {
+   cd ${_pkg}-${pkgver}

@@ -1466,6 +1466,7 @@ libkeybinder3
 libkgapi
 libkleo
 libkmahjongg
+libkolabxml
 libkomparediff2
 libksane
 libkscreen
@@ -1523,6 +1524,7 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
+libnbd
 libndp
 libnet
 libnewt
@@ -3071,7 +3073,6 @@ python-greenlet
 python-gssapi
 python-h11
 python-h2
-python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -5056,6 +5057,16 @@ python-tldextract
 python-zeep
 kuserfeedback5
 python-pytest-snapshot
-aws-cli-v2
 docker-buildx
 python-osc-lib
+0ad-data
+0ad
+analitza5
+ansible-language-server
+ansible-lint
+chatblade
+gloox
+libxsd
+python-noiseprotocol
+python-openai
+python-tiktoken

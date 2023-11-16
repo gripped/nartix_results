@@ -17,7 +17,7 @@
 +++ Artix PKGBUILD
 @@ -2,7 +2,7 @@
  groups=(kde-applications kde-education)
- depends=(analitza kio5 qt5-webengine)
+ depends=(analitza5 kio5 qt5-webengine)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

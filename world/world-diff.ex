@@ -265,10 +265,8 @@ libhandy-docs
 libhandy0
 libinput
 libjpeg-turbo
-libkolabxml
 libldm
 libmbim
-libnbd
 libplacebo
 libpng
 libprocps
@@ -497,6 +495,7 @@ pyqt6
 python-aiomysql
 python-anyio
 python-anytree
+python-h5py
 python-httpcore
 python-openapi-spec-validator
 python-pytest-benchmark
@@ -749,5 +748,6 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
+aws-cli-v2
 senpai
 umurmur

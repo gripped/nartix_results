@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-openstacksdk
+-pkgver=1.3.1
+-_commit=2da00af16014e16d447e28940742e381a0c9c1a6
++pkgver=1.3.0
++_commit=377d734de09f3ce3f0a413dd4d4e452e3c248562
+ pkgrel=1
+ pkgdesc="An SDK for building applications to work with OpenStack"
+ arch=('any')
+@@ -26,7 +26,7 @@
+   export OS_LOG_CAPTURE=true OS_STDOUT_CAPTURE=true OS_STDERR_CAPTURE=true
+ 
+   cd openstacksdk
+-  stestr run --exclude-regex "openstack.tests.unit.test_stats.TestStats"
++  stestr run || echo "Tests failed"
+ }
+ 
+ package() {
