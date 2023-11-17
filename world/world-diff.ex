@@ -317,6 +317,7 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
+luajit
 luarocks
 lxc
 lxcfs
@@ -495,7 +496,6 @@ pyqt6
 python-aiomysql
 python-anyio
 python-anytree
-python-h5py
 python-httpcore
 python-openapi-spec-validator
 python-pytest-benchmark
@@ -748,6 +748,5 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
-aws-cli-v2
 senpai
 umurmur

@@ -24,6 +24,8 @@ libarchive
 libcap-ng
 python-capng
 libusb
+libxml2
+libxml2-docs
 linux-lts
 linux-lts-headers
 linux-lts-docs

@@ -121,12 +121,10 @@ lib32-libxi
 lib32-libxinerama
 lib32-libxkbcommon
 lib32-libxkbcommon-x11
-lib32-libxml2
 lib32-libxmu
 lib32-libxrandr
 lib32-libxrender
 lib32-libxshmfence
-lib32-libxslt
 lib32-libxss
 lib32-libxt
 lib32-libxtst

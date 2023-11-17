@@ -1803,7 +1803,6 @@ lua
 lua51
 lua52
 lua53
-luajit
 luajson
 lua52-luajson
 luasec
@@ -3073,6 +3072,7 @@ python-greenlet
 python-gssapi
 python-h11
 python-h2
+python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -5057,6 +5057,7 @@ python-tldextract
 python-zeep
 kuserfeedback5
 python-pytest-snapshot
+aws-cli-v2
 docker-buildx
 python-osc-lib
 0ad-data
@@ -5070,3 +5071,6 @@ libxsd
 python-noiseprotocol
 python-openai
 python-tiktoken
+python-prawcore
+python-sphinxcontrib-autoprogram
+python-testflo
