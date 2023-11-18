@@ -62,9 +62,6 @@ dhclient
 dhcpcd
 directx-shader-compiler
 discover
-dmd
-dmd-docs
-libphobos
 dns-over-https
 docker
 dovecot
@@ -203,6 +200,7 @@ gvfs-google
 haproxy
 haveged
 hidapi
+hplip
 hugin
 hwloc
 hyprland
@@ -317,7 +315,6 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
-luajit
 luarocks
 lxc
 lxcfs
@@ -357,6 +354,7 @@ mumble
 mumble-server
 mutter
 mutter-docs
+nccl
 ndctl
 ndisc6
 netplan
@@ -381,6 +379,10 @@ onboard
 open-iscsi
 opencc
 opencc-doc
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendht
 opendoas
 openfire
@@ -493,6 +495,9 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+pyside6
+pyside6-tools
+shiboken6
 python-aiomysql
 python-anyio
 python-anytree
@@ -750,3 +755,4 @@ zeromq
 znc
 senpai
 umurmur
+python-pipenv-to-requirements

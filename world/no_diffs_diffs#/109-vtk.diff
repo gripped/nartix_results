@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -137,6 +137,7 @@
+@@ -139,6 +139,7 @@
    export JAVA_HOME=/usr/lib/jvm/default
    local _tkver=$(echo 'puts $tcl_version' | tclsh)
    cmake -B build -S ${pkgname^^}-${pkgver} \
@@ -14,7 +14,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,6 +21,7 @@
+@@ -17,6 +17,7 @@
    export JAVA_HOME=/usr/lib/jvm/default
    local _tkver=$(echo 'puts $tcl_version' | tclsh)
    cmake -B build -S ${pkgname^^}-${pkgver} \

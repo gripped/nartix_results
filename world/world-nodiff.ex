@@ -374,6 +374,9 @@ djvulibre
 dkms
 dleyna
 dleyna-docs
+dmd
+dmd-docs
+libphobos
 dmenu
 dmidecode
 dnscrypt-proxy
@@ -782,7 +785,6 @@ hitori
 hivex
 hostapd
 hotdoc
-hplip
 hspell
 hunspell-he
 htop
@@ -1803,6 +1805,7 @@ lua
 lua51
 lua52
 lua53
+luajit
 luajson
 lua52-luajson
 luasec
@@ -2049,7 +2052,6 @@ libnautilus-extension-docs
 nauty
 nawk
 nbd
-nccl
 ncdu
 ncftp
 ncompress
@@ -2155,10 +2157,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
 opendbx
 openexr
 openfec
@@ -2685,9 +2683,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -5074,3 +5069,16 @@ python-tiktoken
 python-prawcore
 python-sphinxcontrib-autoprogram
 python-testflo
+fast_float
+freeimage
+jxrlib
+opencascade
+python-fastapi
+python-furl
+python-geoip2
+python-maxminddb
+python-mocket
+python-pipenv
+python-pook
+python-update-checker
+python-virtualenv-clone
