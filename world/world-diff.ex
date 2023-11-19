@@ -15,6 +15,8 @@ at-spi2-core
 at-spi2-core-docs
 at
 avahi
+avogadrolibs
+avogadrolibs-qt5
 ayatana-ido
 bftpd
 blackbox
@@ -61,7 +63,6 @@ dhcp
 dhclient
 dhcpcd
 directx-shader-compiler
-discover
 dns-over-https
 docker
 dovecot
@@ -106,7 +107,6 @@ flatpak-docs
 fluidsynth
 folks
 fprintd
-frameworkintegration5
 freerdp
 fwupd-efi
 fwupd
@@ -141,7 +141,6 @@ gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
 gnome-shell
-gnome-software
 gnome-system-monitor
 gnome-taquin
 gnome-user-share
@@ -184,10 +183,6 @@ gstreamer-docs
 gtk3
 gtk3-demos
 gtk3-docs
-gtk4
-gtk4-demos
-gtk4-docs
-gtk-update-icon-cache
 gunicorn
 gvfs
 gvfs-smb
@@ -210,6 +205,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -237,9 +233,6 @@ kismet
 knot
 kuserfeedback
 lftp
-libadwaita
-libadwaita-demos
-libadwaita-docs
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -320,8 +313,6 @@ lxc
 lxcfs
 lxd
 mako
-malcontent
-libmalcontent
 mariadb
 mariadb-libs
 mariadb-clients
@@ -379,10 +370,6 @@ onboard
 open-iscsi
 opencc
 opencc-doc
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
 opendht
 opendoas
 openfire
@@ -495,13 +482,11 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
-pyside6
-pyside6-tools
-shiboken6
 python-aiomysql
 python-anyio
 python-anytree
 python-httpcore
+python-jupyterlab-server
 python-openapi-spec-validator
 python-pytest-benchmark
 python-pyudev

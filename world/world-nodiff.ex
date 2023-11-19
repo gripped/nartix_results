@@ -125,8 +125,6 @@ autopep8
 avisynthplus
 avogadro-crystals
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt5
 awesome-terminal-fonts
 awesome
 aws-c-auth
@@ -367,6 +365,7 @@ diffuse
 digikam
 directx-headers
 discount
+discover
 distcc
 django
 python-django
@@ -530,6 +529,7 @@ fop
 four-in-a-row
 fractal
 frameworkintegration
+frameworkintegration5
 freealut
 freecell-solver
 freeglut
@@ -650,6 +650,7 @@ gnome-recipes
 gnome-robots
 gnome-screenshot
 gnome-shell-extensions
+gnome-software
 gnome-sound-recorder
 gnome-sudoku
 gnome-terminal
@@ -730,6 +731,10 @@ gtk-sharp-2
 gtk-vnc
 gtk2-compat
 gtk2
+gtk4
+gtk4-demos
+gtk4-docs
+gtk-update-icon-cache
 gtkmm-4.0
 gtkmm-4.0-docs
 gtkmm
@@ -834,7 +839,6 @@ imlib2
 immer
 incidenceeditor
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1295,6 +1299,9 @@ lib2geom
 libabw
 libaccounts-glib
 libaccounts-qt
+libadwaita
+libadwaita-demos
+libadwaita-docs
 libaec
 libalkimia
 libao
@@ -1883,6 +1890,8 @@ mailman-web
 mailman3-hyperkitty
 mailman3
 maim
+malcontent
+libmalcontent
 maliit-framework
 maliit-keyboard
 mallard-ducktype
@@ -2157,6 +2166,10 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendbx
 openexr
 openfec
@@ -2683,6 +2696,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3163,7 +3179,6 @@ python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyter-ydoc
-python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
 python-k5test

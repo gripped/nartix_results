@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -74,20 +74,22 @@
+@@ -61,20 +61,22 @@
  validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
  
  build() {
@@ -26,22 +26,25 @@
 +    meson test -C build || :
  }
  
- package() {
-@@ -97,6 +99,4 @@
+ _pick() {
+@@ -107,9 +109,6 @@
    rm -r "${pkgdir}"/usr/share/installed-tests/
    mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
    mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
 -  rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
 -  rmdir "${pkgdir}"/usr/lib/modules-load.d
+-
+   _pick docs "${pkgdir}"/usr/share/doc/{,fwupd/}{libfwupdplugin,libfwupd}
  }
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,14 +36,16 @@
-   'etc/fwupd/remotes.d/vendor.conf'
+@@ -26,15 +26,17 @@
+   tpm2-tss
  )
  build() {
 -  arch-meson ${pkgname}-${pkgver} build \
@@ -60,3 +63,13 @@
 +    -D efi_binary=false
    meson compile -C build
  }
+ _pick() {
+@@ -62,8 +64,6 @@
+   rm -r "${pkgdir}"/usr/share/installed-tests/
+   mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
+   mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
+-  rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
+-  rmdir "${pkgdir}"/usr/lib/modules-load.d
+   _pick docs "${pkgdir}"/usr/share/doc/{,fwupd/}{libfwupdplugin,libfwupd}
+ }
+ package_fwupd-docs() {

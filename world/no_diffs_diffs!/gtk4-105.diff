@@ -1,18 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -49,7 +49,6 @@
-   libxrender
-   pango
-   shared-mime-info
--  tracker3
-   wayland
- )
- makedepends=(
-@@ -108,11 +107,10 @@
-     -D colord=enabled
-     -D documentation=true
-     -D man-pages=true
--    -D tracker=enabled
+@@ -110,7 +110,7 @@
    )
  
    CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
@@ -21,7 +9,7 @@
    meson compile -C build
  }
  
-@@ -125,7 +123,7 @@
+@@ -123,7 +123,7 @@
  
    trap "kill $_w; wait" EXIT
  
@@ -36,19 +24,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,7 +41,6 @@
-   libxrender
-   pango
-   shared-mime-info
--  tracker3
-   wayland
- )
- prepare() {
-@@ -56,10 +55,9 @@
-     -D colord=enabled
-     -D documentation=true
-     -D man-pages=true
--    -D tracker=enabled
+@@ -58,7 +58,7 @@
+     -D tracker=enabled
    )
    CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
 -  arch-meson gtk build "${meson_options[@]}"

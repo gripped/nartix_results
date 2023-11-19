@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -110,7 +110,7 @@
+   )
+ 
+   CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-  arch-meson gtk build "${meson_options[@]}"
++  artix-meson gtk build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -123,7 +123,7 @@
+ 
+   trap "kill $_w; wait" EXIT
+ 
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs --no-suite headless # skip these tests for now
+ )
+ 
+ _pick() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -58,7 +58,7 @@
+     -D tracker=enabled
+   )
+   CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-  arch-meson gtk build "${meson_options[@]}"
++  artix-meson gtk build "${meson_options[@]}"
+   meson compile -C build
+ }
+ package_gtk4() {
