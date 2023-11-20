@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,7 @@
+@@ -19,7 +19,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {
--  cmake -B build -S $pkgname-$pkgver \
-+  artix-cmake -B build -S $pkgname-$pkgver \
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
      -DBUILD_TESTING=OFF
    cmake --build build
  }
@@ -15,12 +15,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=libkdcraw
- depends=(qt5-base libraw)
+@@ -4,7 +4,7 @@
+ conflicts=('libkdcraw<24')
+ replaces=('libkdcraw<24')
  build() {
--  cmake -B build -S $pkgname-$pkgver \
-+  artix-cmake -B build -S $pkgname-$pkgver \
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
      -DBUILD_TESTING=OFF
    cmake --build build
  }

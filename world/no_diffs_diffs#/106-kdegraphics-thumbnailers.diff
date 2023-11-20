@@ -16,7 +16,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,7 +2,7 @@
- depends=(libkexiv2 libkdcraw kio5 ghostscript kdegraphics-mobipocket)
+ depends=(libkexiv2 libkdcraw5 kio5 ghostscript kdegraphics-mobipocket)
  groups=(kde-applications kde-graphics)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \

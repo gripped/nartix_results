@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=m17n-db
+-pkgver=1.8.4
++pkgver=1.8.3
+ pkgrel=1
+ pkgdesc='Multilingual text processing library (database)'
+ url='https://www.nongnu.org/m17n/'
+@@ -8,7 +8,7 @@
+ license=('GPL')
+ depends=('glibc') # not because of compiling, but because of /usr/share/i18n/charmaps/ files that glibc provides
+ source=("https://download.savannah.gnu.org/releases/m17n/${pkgname}-${pkgver}.tar.gz")
+-sha256sums=('b72cf4daa57518bad1582d5c8008908494580d3f1c7164d429809068623b6751')
++sha256sums=('e5d7b967c4529dbf1f9efaa7817a15a88df6aef48b3f652af7e8e13325942d3f')
+ 
+ build() {
+   cd ${pkgname}-${pkgver}

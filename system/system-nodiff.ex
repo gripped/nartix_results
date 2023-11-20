@@ -56,6 +56,7 @@ gettext
 glib2
 glib2-docs
 gmp
+gnutls
 gpgme
 qgpgme-qt5
 qgpgme-qt6
@@ -122,6 +123,8 @@ libunistring
 libverto
 libxcrypt
 libxcrypt-compat
+libxml2
+libxml2-docs
 licenses
 links
 linux-api-headers

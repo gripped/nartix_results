@@ -15,7 +15,6 @@ glibc
 lib32-glibc
 glibc-locales
 gnupg
-gnutls
 gssproxy
 inetutils
 iptables
@@ -24,8 +23,6 @@ libarchive
 libcap-ng
 python-capng
 libusb
-libxml2
-libxml2-docs
 linux-lts
 linux-lts-headers
 linux-lts-docs

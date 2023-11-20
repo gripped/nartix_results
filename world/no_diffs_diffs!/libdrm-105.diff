@@ -6,7 +6,7 @@
  build() {
 -  arch-meson $pkgname-$pkgver build \
 +  artix-meson $pkgname-$pkgver build \
-     -D udev=false \
+     -D udev=true \
      -D etnaviv=disabled \
      -D freedreno=disabled \
 
@@ -21,6 +21,6 @@
  build() {
 -  arch-meson $pkgname-$pkgver build \
 +  artix-meson $pkgname-$pkgver build \
-     -D udev=false \
+     -D udev=true \
      -D etnaviv=disabled \
      -D freedreno=disabled \

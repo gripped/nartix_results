@@ -674,3 +674,5 @@ znc-dinit
 znc-openrc
 znc-runit
 znc-s6
+greetd-runit
+vault-runit

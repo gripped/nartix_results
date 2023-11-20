@@ -75,3 +75,4 @@ vscodium
 wireplumber-dinit
 xcursor-breeze
 xcursor-premium
+firedragon

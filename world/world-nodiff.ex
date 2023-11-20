@@ -790,6 +790,7 @@ hitori
 hivex
 hostapd
 hotdoc
+hplip
 hspell
 hunspell-he
 htop
@@ -821,6 +822,7 @@ hyphen
 hyphen-en
 i2c-tools
 i2pd
+i3-wm
 i3lock
 i3status
 iagno
@@ -839,6 +841,7 @@ imlib2
 immer
 incidenceeditor
 iniparser
+inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1467,6 +1470,7 @@ libkate-docs
 libkcddb
 libkcompactdisc
 libkdcraw
+libkdcraw5
 libkdegames
 libkdepim
 libkeduvocdocument
@@ -3179,6 +3183,7 @@ python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyter-ydoc
+python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
 python-k5test
@@ -3311,6 +3316,7 @@ python-odfpy
 python-omemo-dr
 python-openapi-core
 python-openapi-schema-validator
+python-openapi-spec-validator
 python-openid
 python-openpyxl
 python-openstacksdk
@@ -3459,7 +3465,6 @@ python-pygame-sdl2
 python-pygame
 python-pygeos
 python-pygit2
-python-pygls
 python-pygments
 python-pyhamcrest
 python-pyhcl
@@ -3842,7 +3847,6 @@ python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
-python-versioningit
 python-vine
 python-virtualenv
 python-vistir
@@ -4011,7 +4015,6 @@ qt6-speech
 qt6-svg
 qt6-translations
 qt6-virtualkeyboard
-qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
@@ -4025,7 +4028,6 @@ qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
-qtqr
 qtxdg-tools
 quadrapassel
 quilt
@@ -4791,7 +4793,6 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -5097,3 +5098,9 @@ python-pipenv
 python-pook
 python-update-checker
 python-virtualenv-clone
+python-betamax-matchers
+python-betamax-serializers
+python-jsonschema-path
+python-praw
+python-pytest-order
+sopel

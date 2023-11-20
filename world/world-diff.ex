@@ -195,17 +195,14 @@ gvfs-google
 haproxy
 haveged
 hidapi
-hplip
 hugin
 hwloc
 hyprland
-i3-wm
 i3blocks
 ibus
 libibus
 igsc
 iio-sensor-proxy
-inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -486,11 +483,11 @@ python-aiomysql
 python-anyio
 python-anytree
 python-httpcore
-python-jupyterlab-server
-python-openapi-spec-validator
+python-pygls
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
+python-versioningit
 qastools
 qemu
 qemu-common
@@ -579,6 +576,8 @@ qt6-doc
 qt6-examples
 qt6-serialport
 qt6-tools
+qt6-wayland
+qtqr
 quazip
 quazip-qt5
 quazip-qt6
@@ -692,6 +691,7 @@ vte3
 vte-common
 vte4
 vte-docs
+vtk
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -741,3 +741,5 @@ znc
 senpai
 umurmur
 python-pipenv-to-requirements
+python-hvac
+vault
