@@ -3,6 +3,10 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
+lib32-gstreamer
+lib32-gst-plugins-base-libs
+lib32-gst-plugins-base
+lib32-gst-plugins-good
 lib32-jack2
 lib32-libelf
 lib32-libgudev

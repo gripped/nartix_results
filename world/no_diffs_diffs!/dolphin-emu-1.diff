@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -83,10 +83,6 @@
+@@ -89,10 +89,6 @@
    git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
  }
  
@@ -10,4 +10,4 @@
 -}
  
  build() {
-   cmake -S dolphin-emu -B build -G Ninja \
+   export CFLAGS+=' -I/usr/include/mbedtls2'

@@ -69,7 +69,6 @@ guile
 gzip
 hdparm
 hwdata
-iana-etc
 icu
 iproute2
 iputils

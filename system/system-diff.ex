@@ -16,6 +16,7 @@ lib32-glibc
 glibc-locales
 gnupg
 gssproxy
+iana-etc
 inetutils
 iptables
 iptables-nft

@@ -39,6 +39,7 @@ cdparanoia
 cgmanager
 chromium-bsu
 chrony
+cinnamon-session
 clamav
 cloud-init
 clutter
@@ -153,8 +154,6 @@ greetd
 $pkgbase
 $pkgbase-agreety
 grim
-gssdp
-gssdp-docs
 gstreamer
 gst-plugins-bad-libs
 #
@@ -275,6 +274,7 @@ lighttpd
 lilv
 lilv-docs
 python-lilv
+lilypond
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -337,11 +337,13 @@ libmm-glib
 mosquitto
 mpd
 mpv
+muffin
 multipath-tools
 mumble
 mumble-server
 mutter
 mutter-docs
+nauty
 nccl
 ndctl
 ndisc6
@@ -363,6 +365,7 @@ nvidia
 nvme-cli
 ocaml-ctypes
 ocaml-findlib
+ocaml-integers
 onboard
 open-iscsi
 opencc
@@ -383,7 +386,6 @@ pacman-contrib
 paprefs
 passim
 pcsclite
-pdal
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -483,11 +485,9 @@ python-aiomysql
 python-anyio
 python-anytree
 python-httpcore
-python-pygls
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
-python-versioningit
 qastools
 qemu
 qemu-common
@@ -655,6 +655,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+typescript
 udisks2
 umockdev
 unbound
@@ -691,7 +692,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vtk
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -741,5 +741,4 @@ znc
 senpai
 umurmur
 python-pipenv-to-requirements
-python-hvac
 vault

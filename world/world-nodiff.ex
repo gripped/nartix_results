@@ -261,7 +261,6 @@ cinnamon-control-center
 cinnamon-desktop
 cinnamon-menus
 cinnamon-screensaver
-cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
@@ -390,6 +389,7 @@ docbook2x
 docker-compose
 docx2txt
 dolphin-emu
+dolphin-emu-tool
 dolphin-plugins
 dolphin
 dontpanic
@@ -721,6 +721,8 @@ gsmartcontrol
 gsoap
 gsound
 gspell
+gssdp
+gssdp-docs
 gst-python
 gtest
 gtk-doc
@@ -1772,7 +1774,6 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 lightsoff
-lilypond
 linux-atm
 liquidctl
 lirc
@@ -2042,7 +2043,6 @@ mtdev
 mtools
 mtr
 mtr-gtk
-muffin
 mujs
 muparser
 mupdf
@@ -2062,7 +2062,6 @@ nasm
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
-nauty
 nawk
 nbd
 ncdu
@@ -2137,7 +2136,6 @@ obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
-ocaml-integers
 ocaml-pp
 ocaml-result
 ocaml-stdlib-shims
@@ -2251,6 +2249,7 @@ pcaudiolib
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
+pdal
 pdfarranger
 pdfjs
 pdfmixtool
@@ -3465,6 +3464,7 @@ python-pygame-sdl2
 python-pygame
 python-pygeos
 python-pygit2
+python-pygls
 python-pygments
 python-pyhamcrest
 python-pyhcl
@@ -3847,6 +3847,7 @@ python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
+python-versioningit
 python-vine
 python-virtualenv
 python-vistir
@@ -4717,7 +4718,6 @@ tumbler
 twine
 twolame
 txt2man
-typescript
 uchardet
 udftools
 udiskie
@@ -4793,6 +4793,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -5100,6 +5101,7 @@ python-update-checker
 python-virtualenv-clone
 python-betamax-matchers
 python-betamax-serializers
+python-hvac
 python-jsonschema-path
 python-praw
 python-pytest-order
