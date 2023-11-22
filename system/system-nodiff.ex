@@ -69,6 +69,7 @@ guile
 gzip
 hdparm
 hwdata
+iana-etc
 icu
 iproute2
 iputils
@@ -169,6 +170,8 @@ pkgconf
 popt
 pptpclient
 psmisc
+python
+python-tests
 readline
 reiserfsprogs
 run-parts

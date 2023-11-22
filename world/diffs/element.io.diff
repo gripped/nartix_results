@@ -6,7 +6,7 @@
 +_electron=electron24
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--pkgver=1.11.45
+-pkgver=1.11.49
 +pkgver=1.11.33
  pkgrel=1
  pkgdesc="Glossy Matrix collaboration client — "
@@ -22,14 +22,23 @@
          autolaunch.patch
          io.element.Element.desktop
          element-desktop.sh)
--sha256sums=('d08b1b9ed1df11e516ad43a0e3a4fa2ba55bcf41e4881b906b772e6efebc336c'
+-sha256sums=('3d663c2bef164d284f2a7b29ec74b89b5a86063b85100089906708eb07b484e9'
 +sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
              'SKIP'
--            '9055ac78bd9cd16fa38fb34fad3d7d1663dbaee9b95d44f7f12f6e344ddd54a5'
+-            'a675717f5267907a5f4e2fa1746b35fdee30e09b8aa9a15253b8fcdc8f3b4434'
 +            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
              'SKIP'
              '268485f35103d00a89be7f5c84703e3d393350c71f4f90932f7bcb5ea2fd094f'
              '0103f28a32fe31f698836516783c1c70a76a0117b5df7fd0af5c422c224220f9'
+@@ -42,7 +42,7 @@
+ build() {
+   export NODE_OPTIONS=--openssl-legacy-provider
+   cd element-web-${pkgver}
+-  VERSION=${pkgver} yarn build
++  VERSION=${pkgver} yarn build --offline
+ 
+   cd ../element-desktop-${pkgver}
+   export SQLCIPHER_BUNDLED=1
 
 
 ############# Stripped diff below #################
@@ -42,3 +51,12 @@
  pkgbase=element.io
  pkgname=(element-web element-desktop)
  _
+@@ -15,7 +15,7 @@
+ build() {
+   export NODE_OPTIONS=--openssl-legacy-provider
+   cd element-web-${pkgver}
+-  VERSION=${pkgver} yarn build
++  VERSION=${pkgver} yarn build --offline
+   cd ../element-desktop-${pkgver}
+   export SQLCIPHER_BUNDLED=1
+   export CFLAGS+=" -ffat-lto-objects"

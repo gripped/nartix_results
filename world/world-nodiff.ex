@@ -258,7 +258,6 @@ chrono-date
 chrpath
 cifs-utils
 cinnamon-control-center
-cinnamon-desktop
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-settings-daemon
@@ -2136,6 +2135,7 @@ obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
+ocaml-integers
 ocaml-pp
 ocaml-result
 ocaml-stdlib-shims
@@ -2936,7 +2936,6 @@ python-distributed
 python-distro
 python-distutils-extra
 python-django-allauth
-python-django-appconf
 python-django-classy-tags
 python-django-compressor
 python-django-crispy-forms
@@ -3330,7 +3329,6 @@ python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
-python-oslo-log
 python-oslo-serialization
 python-oslo-utils
 python-oslotest
@@ -3589,7 +3587,6 @@ python-pytest
 python-python-multipart
 python-python-pkcs11
 python-python-socks
-python-pythonfinder
 python-pythran
 python-pytoml
 python-pytoolconfig
@@ -3844,7 +3841,6 @@ python-urwid
 python-uvloop
 python-validate-email
 python-validate-pyproject
-python-validators
 python-vcrpy
 python-versioneer
 python-versioningit
@@ -5106,3 +5102,5 @@ python-jsonschema-path
 python-praw
 python-pytest-order
 sopel
+dmg2img
+libspng

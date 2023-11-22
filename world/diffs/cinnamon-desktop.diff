@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,11 +23,13 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}/build
+-  arch-meson ..
++  artix-meson -D systemduserunitdir=/usr/lib/systemd ..
+   samu
+ }
+ 
+ package() {
+   cd ${pkgname}-${pkgver}/build
+   DESTDIR="${pkgdir}" samu install
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ }
+ build() {
+   cd ${pkgname}-${pkgver}/build
+-  arch-meson ..
++  artix-meson -D systemduserunitdir=/usr/lib/systemd ..
+   samu
+ }

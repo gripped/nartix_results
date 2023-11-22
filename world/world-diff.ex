@@ -39,6 +39,7 @@ cdparanoia
 cgmanager
 chromium-bsu
 chrony
+cinnamon-desktop
 cinnamon-session
 clamav
 cloud-init
@@ -365,7 +366,6 @@ nvidia
 nvme-cli
 ocaml-ctypes
 ocaml-findlib
-ocaml-integers
 onboard
 open-iscsi
 opencc
@@ -484,10 +484,14 @@ pyqt6
 python-aiomysql
 python-anyio
 python-anytree
+python-django-appconf
 python-httpcore
+python-oslo-log
 python-pytest-benchmark
+python-pythonfinder
 python-pyudev
 python-sphinx-alabaster-theme
+python-validators
 qastools
 qemu
 qemu-common
