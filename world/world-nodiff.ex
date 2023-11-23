@@ -75,7 +75,6 @@ arianna
 aribb24
 aribb25
 ark
-armagetronad
 arrow
 artikulate
 asciidoc
@@ -260,6 +259,7 @@ cifs-utils
 cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
+cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
@@ -462,6 +462,7 @@ expac
 expect
 f2fs-tools
 faac
+faad2
 facile
 fakechroot
 falkon
@@ -553,7 +554,6 @@ fwknop
 fzf
 gajim
 galculator
-gamescope
 gammastep
 garcon
 gavl
@@ -672,7 +672,6 @@ go-bindata-hashicorp
 go-ethereum
 go-md2man
 go-tools
-go-yq
 go
 gobject-introspection
 gobject-introspection-runtime
@@ -1442,7 +1441,6 @@ libgweather-4
 libgweather-4-docs
 libgxps
 libharu
-libheif
 libical
 libice
 libiconv
@@ -2042,6 +2040,7 @@ mtdev
 mtools
 mtr
 mtr-gtk
+muffin
 mujs
 muparser
 mupdf
@@ -2839,7 +2838,6 @@ python-case
 python-cattrs
 python-cbor2
 python-cchardet
-python-celery
 python-cerberus
 python-certifi
 python-cffi
@@ -2936,6 +2934,7 @@ python-distributed
 python-distro
 python-distutils-extra
 python-django-allauth
+python-django-appconf
 python-django-classy-tags
 python-django-compressor
 python-django-crispy-forms
@@ -3329,6 +3328,7 @@ python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
+python-oslo-log
 python-oslo-serialization
 python-oslo-utils
 python-oslotest
@@ -3587,6 +3587,7 @@ python-pytest
 python-python-multipart
 python-python-pkcs11
 python-python-socks
+python-pythonfinder
 python-pythran
 python-pytoml
 python-pytoolconfig
@@ -3717,7 +3718,6 @@ python-sphinx-autobuild
 python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
-python-sphinx-furo
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -3841,6 +3841,7 @@ python-urwid
 python-uvloop
 python-validate-email
 python-validate-pyproject
+python-validators
 python-vcrpy
 python-versioneer
 python-versioningit
@@ -4714,6 +4715,7 @@ tumbler
 twine
 twolame
 txt2man
+typescript
 uchardet
 udftools
 udiskie
@@ -5104,3 +5106,5 @@ python-pytest-order
 sopel
 dmg2img
 libspng
+python-scs
+rdfind

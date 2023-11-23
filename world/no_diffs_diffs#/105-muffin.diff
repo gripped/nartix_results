@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,14 +8,14 @@
+ license=(GPL)
+ depends=(cinnamon-desktop gobject-introspection-runtime libcanberra libinput
+          libsm libxkbcommon-x11 startup-notification zenity graphene pipewire xorg-xwayland)
+-makedepends=(meson intltool gobject-introspection wayland-protocols)
++makedepends=(meson intltool gobject-introspection wayland-protocols json-glib)
+ options=(!emptydirs)
+ source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
+ sha256sums=('dc05d10020fc92063eae70558d80f3ae9e82bf00d2f8ee1ecf2c1b9cef9479cd')
+ b2sums=('ee789d799e44765e05f193974c42d8bbe5146e42f90ef1566040ce876281b18ba2365a7c1cda58f3a1fee18fa962af9f99edfb35a0e9f1043eace7d537a35bba')
+ 
+ build() {
+-  arch-meson build ${pkgname}-${pkgver}
++  artix-meson build ${pkgname}-${pkgver}
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+          libsm libxkbcommon-x11 startup-notification zenity graphene pipewire xorg-xwayland)
+ options=(!emptydirs)
+ build() {
+-  arch-meson build ${pkgname}-${pkgver}
++  artix-meson build ${pkgname}-${pkgver}
+   meson compile -C build
+ }

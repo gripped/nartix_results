@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=go-yq
+-pkgver=4.40.3
++pkgver=4.40.2
+ pkgrel=1
+ pkgdesc='Portable command-line YAML processor'
+ arch=('x86_64')
+@@ -23,7 +23,7 @@
+   export CGO_CFLAGS="$CFLAGS"
+   export CGO_CXXFLAGS="$CXXFLAGS"
+   export CGO_LDFLAGS="$LDFLAGS"
+-  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
++  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -modcacherw"
+   go build .
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+   export CGO_CFLAGS="$CFLAGS"
+   export CGO_CXXFLAGS="$CXXFLAGS"
+   export CGO_LDFLAGS="$LDFLAGS"
+-  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
++  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -modcacherw"
+   go build .
+ }

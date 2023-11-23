@@ -1,25 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
-          nemo-seahorse
-          nemo-share
-          nemo-terminal)
--pkgver=6.0.0
-+pkgver=5.8.0
- pkgrel=1
- pkgdesc="Various extensions for Nemo"
- arch=(x86_64)
-@@ -24,8 +24,8 @@
- makedepends+=("${_preview_deps[@]}" "${_python_deps[@]}" "${_seahorse_deps[@]}")
- options=(!emptydirs)
- source=("${url}/archive/${pkgver}/${pkgbase}-${pkgver}.tar.gz")
--sha256sums=('e87ab3fc803c2d0f7bee4bbbbf9074382469352774caeafc88a10b969097cf82')
--b2sums=('85361e3b4450f701478663eb0276ec25c747ee877ad6216e7d845a15bcbe3d341b265c3f6010a2c62ee8566b7bb05bea24fc638a3fe15177d4b5f34fedaa473c')
-+sha256sums=('66140a8d7365c1333f219d3012bf51c9462df4f8b1187d08716c9c577a77af28')
-+b2sums=('e43433d1ac720d9dfb5d190f3b8d4e5f482caaffa29bfb2249cb4f51fa76e911c9e14237b08970f7910b70c328e35047271ad7f21521ed49a98979489e98f72a')
- 
- prepare() {
-   cd $pkgbase-$pkgver
 @@ -39,7 +39,7 @@
      if [[ -f ${_dir}/meson.build ]]; then
        mkdir -p ${_dir}/build

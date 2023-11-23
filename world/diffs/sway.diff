@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,10 +22,9 @@
+@@ -2,7 +2,7 @@
+ pkgname=sway
+ pkgver=1.8.1
+ epoch=1
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Tiling Wayland compositor and replacement for the i3 window manager'
+ arch=(x86_64)
+ url='https://swaywm.org/'
+@@ -15,17 +15,16 @@
+   'libjson-c.so'
+   'libudev.so'
+   'libwayland-server.so'
+-  'libwlroots.so=11'
++  'libwlroots.so'
+   'libxcb'
+   'libxkbcommon.so'
+   'pango'
    'pcre2'
    'ttf-font'
  )
@@ -26,9 +43,11 @@
              '156719e93d0213d1b54ce6e3a9b2dcc9246da5689dd2d3281546f9c042cbc69072f99b087e112fe777dcd786d2b9d1be1e1c9200feddffb5e2d16f8dfb27515d'
              '091a205bca875b6a78150b5b14ffaca996b7c7c3d6f68910e5891e5409ca070d27b3307e8c4916c1562a998d5bcb94406e961bf376d86e64c8ddf5afe5b41f76')
  validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48'  # Simon Ser
-@@ -66,14 +63,13 @@
+@@ -65,16 +62,14 @@
+ }
  
  build() {
+-  export PKG_CONFIG_PATH='/usr/lib/wlroots0.16/pkgconfig'
    mkdir -p build
 -  arch-meson build "$pkgname-$pkgver" -D sd-bus-provider=libsystemd -D werror=false -D b_ndebug=true
 +  artix-meson build "$pkgname-$pkgver" -D sd-bus-provider=libelogind -D werror=false -D b_ndebug=true
@@ -48,6 +67,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+   'libjson-c.so'
+   'libudev.so'
+   'libwayland-server.so'
+-  'libwlroots.so=11'
++  'libwlroots.so'
+   'libxcb'
+   'libxkbcommon.so'
+   'pango'
 @@ -16,7 +16,6 @@
  )
  backup=(
@@ -56,9 +84,11 @@
  )
  install=sway.install
  prepare() {
-@@ -26,6 +25,6 @@
+@@ -25,8 +24,7 @@
+   sed -i "s/branch \\\'@1@\\\'/Arch Linux/g" meson.build
  }
  build() {
+-  export PKG_CONFIG_PATH='/usr/lib/wlroots0.16/pkgconfig'
    mkdir -p build
 -  arch-meson build "$pkgname-$pkgver" -D sd-bus-provider=libsystemd -D werror=false -D b_ndebug=true
 +  artix-meson build "$pkgname-$pkgver" -D sd-bus-provider=libelogind -D werror=false -D b_ndebug=true

@@ -9,6 +9,7 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
+armagetronad
 aspell-uk
 assimp
 at-spi2-core
@@ -40,7 +41,6 @@ cgmanager
 chromium-bsu
 chrony
 cinnamon-desktop
-cinnamon-session
 clamav
 cloud-init
 clutter
@@ -91,7 +91,6 @@ erlang-unixodbc
 espeakup
 etherwall
 extra-cmake-modules
-faad2
 facter
 fail2ban
 fceux
@@ -114,6 +113,7 @@ fwupd-efi
 fwupd
 gala
 gamemode
+gamescope
 gcr-4
 gcr-4-docs
 gcr
@@ -149,6 +149,7 @@ gnome-user-share
 gnome-video-effects
 go-bindata
 go-licenses
+go-yq
 gpsd
 greetd-tuigreet
 greetd
@@ -251,6 +252,7 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
+libheif
 libinput
 libjpeg-turbo
 libldm
@@ -338,7 +340,6 @@ libmm-glib
 mosquitto
 mpd
 mpv
-muffin
 multipath-tools
 mumble
 mumble-server
@@ -484,14 +485,12 @@ pyqt6
 python-aiomysql
 python-anyio
 python-anytree
-python-django-appconf
+python-celery
 python-httpcore
-python-oslo-log
 python-pytest-benchmark
-python-pythonfinder
 python-pyudev
 python-sphinx-alabaster-theme
-python-validators
+python-sphinx-furo
 qastools
 qemu
 qemu-common
@@ -659,7 +658,6 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
-typescript
 udisks2
 umockdev
 unbound
