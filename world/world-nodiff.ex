@@ -75,6 +75,7 @@ arianna
 aribb24
 aribb25
 ark
+armagetronad
 arrow
 artikulate
 asciidoc
@@ -610,7 +611,6 @@ glibmm
 glibmm-docs
 glm
 glpk
-glslang
 glu
 gmic
 gimp-plugin-gmic
@@ -1441,6 +1441,7 @@ libgweather-4
 libgweather-4-docs
 libgxps
 libharu
+libheif
 libical
 libice
 libiconv
@@ -2175,7 +2176,6 @@ opendbx
 openexr
 openfec
 openimagedenoise
-openimageio
 openjade
 openjpeg2
 openlibm
@@ -2449,7 +2449,6 @@ perl-pegex
 perl-perl-critic
 perl-perl-minimumversion
 perl-perl4-corelibs
-perl-pkgconfig-libpkgconf
 perl-pkgconfig
 perl-pod-coverage
 perl-pod-parser
@@ -4018,8 +4017,6 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
-qtcreator
-qtcreator-devel
 qterminal
 qtermwidget
 qtkeychain
@@ -4086,6 +4083,7 @@ rssguard-lite
 rst2pdf
 rtaudio
 rtaudio-docs
+rtl-sdr
 rtmpdump
 rtorrent
 rubberband
@@ -4434,7 +4432,6 @@ speexdsp
 spglib
 spice-protocol
 spice
-spirv-headers
 spirv-llvm-translator
 spirv-tools
 splint

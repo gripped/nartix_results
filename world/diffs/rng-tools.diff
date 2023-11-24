@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,15 @@
- 
- pkgname=rng-tools
- pkgver=6.16
--pkgrel=1
-+pkgrel=2
- pkgdesc="Random number generator related utilities"
- arch=('x86_64')
- url="https://github.com/nhorman/rng-tools"
+@@ -8,13 +8,8 @@
  license=('GPL')
  depends=('curl' 'libxml2' 'sysfsutils' 'jitterentropy' 'libp11' 'jansson' 'rtl-sdr')
  optdepends=('opensc: PKCS11 entropy engine to gather entropy from smart card readers')

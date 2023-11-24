@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,8 +23,8 @@
+@@ -17,28 +17,32 @@
+          'php-legacy-sqlite'
+          'php-legacy-tidy'
+          'php-legacy-xsl')
+-pkgver=8.1.26
++pkgver=8.1.25
+ pkgrel=1
+ arch=('x86_64')
  license=('PHP')
  url='https://www.php.net/'
  makedepends=('apache' 'aspell' 'gdbm' 'enchant' 'gd' 'gmp' 'icu' 'libsodium' 'libxslt' 'libzip' 'net-snmp'
@@ -9,9 +16,42 @@
 +             'postgresql-libs' 'sqlite' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2' 'libnsl'
 +             'oniguruma' 'patchelf' 'argon2')
  checkdepends=('procps-ng')
- source=(
-   "https://php.net/distributions/php-${pkgver}.tar.xz"{,.asc}
-@@ -142,7 +142,7 @@
+-source=("https://php.net/distributions/php-${pkgver}.tar.xz"{,.asc}
+-        'apache.conf'  'php-fpm.tmpfiles'  'apache.patch'  'php-fpm.patch'  'php.ini.patch'  'php-legacy.patch'
+-        'libxml2.patch')
+-
+-sha256sums=('17f87133596449327451ad4b8d9911bfaea59ff5109f3a6f2bb679f967a8ea0f'
++source=(
++  "https://php.net/distributions/php-${pkgver}.tar.xz"{,.asc}
++  'apache.conf'
++  'php-fpm.tmpfiles'
++  'apache.patch'
++  'php-fpm.patch'
++  'php.ini.patch'
++  'php-legacy.patch'
++)
++sha256sums=('66fdba064aa119b1463a7969571d42f4642690275d8605ab5149bcc5107e2484'
+             'SKIP'
+             '2173046ac22ac50c7a6721306d3f79b2086f66a7a6ff5d8af249a474763197a1'
+             'f3236ca866095d5e42e51e3fa600082ccd0afcfb7f1aecbeb286ef9d4f0dd564'
+             '702b163c66c65af92dcad8d79f41bda84bcd5d863235fcf1497c33a86db9e4ca'
+             '7322cc296780908b55fe6d601d403b0e506a2a7ce5359141cb4132f84778243d'
+             '99a8bea56335941a645efce4a22917b7147b070686f34b9f3e56d8c238d785fa'
+-            'a1859005c9fad835079470e6fb3c0721b9bd024c8f3ae1f34cb082ec41c63194'
+-            '5066d4d3f68df7fa3f46582c757d646056e85401699758ec721767236568ca08')
++            'a1859005c9fad835079470e6fb3c0721b9bd024c8f3ae1f34cb082ec41c63194')
+ validpgpkeys=('F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+               '39B641343D8C104B2B146DC3F9C39DC0B9698544'
+               '2C16C765DBE54A088130F1BC4B9B5F600B55F3B4')
+@@ -51,7 +55,6 @@
+ 	patch -p0 -i "${srcdir}/php-fpm.patch"
+ 	patch -p0 -i "${srcdir}/php.ini.patch"
+ 	patch -p0 -i "${srcdir}/php-legacy.patch"
+-	patch -p1 -i "${srcdir}/libxml2.patch"
+ 	autoconf
+ 
+ 	rm tests/output/stream_isatty_*.phpt
+@@ -139,7 +142,7 @@
  	./configure ${_phpconfig} \
  		--enable-cgi \
  		--enable-fpm \
@@ -20,7 +60,7 @@
  		--with-fpm-acl \
  		--with-fpm-user=http \
  		--with-fpm-group=http \
-@@ -168,7 +168,6 @@
+@@ -165,7 +168,6 @@
  check() {
  	cd "${srcdir}/build"
  
@@ -28,7 +68,7 @@
  
  	export REPORT_EXIT_STATUS=1
  	export NO_INTERACTION=1
-@@ -221,21 +220,19 @@
+@@ -218,21 +220,19 @@
  
  package_php-legacy-fpm() {
  	pkgdesc='FastCGI Process Manager for PHP'
@@ -58,7 +98,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -105,7 +105,7 @@
+@@ -23,7 +23,6 @@
+ 	patch -p0 -i "${srcdir}/php-fpm.patch"
+ 	patch -p0 -i "${srcdir}/php.ini.patch"
+ 	patch -p0 -i "${srcdir}/php-legacy.patch"
+-	patch -p1 -i "${srcdir}/libxml2.patch"
+ 	autoconf
+ 	rm tests/output/stream_isatty_*.phpt
+ 	rm Zend/tests/arginfo_zpp_mismatch*.phpt
+@@ -106,7 +105,7 @@
  	./configure ${_phpconfig} \
  		--enable-cgi \
  		--enable-fpm \
@@ -67,7 +115,7 @@
  		--with-fpm-acl \
  		--with-fpm-user=http \
  		--with-fpm-group=http \
-@@ -154,18 +154,16 @@
+@@ -155,18 +154,16 @@
  	install -D -m644 "${srcdir}/apache.conf" "${pkgdir}/etc/httpd/conf/extra/php-legacy_module.conf"
  }
  package_php-legacy-fpm() {

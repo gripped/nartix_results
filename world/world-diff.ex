@@ -9,7 +9,6 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
-armagetronad
 aspell-uk
 assimp
 at-spi2-core
@@ -127,6 +126,7 @@ geoclue
 github-cli
 glibmm-2.68
 glibmm-2.68-docs
+glslang
 glusterfs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -252,7 +252,6 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
-libheif
 libinput
 libjpeg-turbo
 libldm
@@ -374,6 +373,7 @@ opencc-doc
 opendht
 opendoas
 openfire
+openimageio
 openntpd
 opensmtpd
 openvdb
@@ -390,6 +390,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-pkgconfig-libpkgconf
 pgbouncer
 phodav
 php-legacy
@@ -580,6 +581,8 @@ qt6-examples
 qt6-serialport
 qt6-tools
 qt6-wayland
+qtcreator
+qtcreator-devel
 qtqr
 quazip
 quazip-qt5
@@ -594,7 +597,6 @@ rng-tools
 rspamd
 rsync
 rtkit
-rtl-sdr
 ruby-faraday-patron
 salt
 samba
@@ -616,6 +618,7 @@ sord-docs
 spdlog
 spice-gtk
 spice-vdagent
+spirv-headers
 squid
 sratom
 sratom-docs

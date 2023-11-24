@@ -48,7 +48,6 @@ pambase
 pkgconf
 ppp
 procps-ng
-readline
 rpcbind
 sudo
 usbutils
