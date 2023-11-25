@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,10 +14,10 @@
+          kde-utilities-meta
+          kdevelop-meta)
+ pkgver=23.08
+-pkgrel=1
++pkgrel=1.1
+ arch=(any)
+ license=(None)
+-url='https://www.archlinux.org/'
++url='https://www.artixlinux.org/'
+ 
+ package_kde-applications-meta() {
+   pkgdesc='Meta package for KDE Applications'
+@@ -225,7 +225,6 @@
+            kde-inotify-survey
+            khelpcenter
+            kio-admin
+-           kjournald
+            ksystemlog
+            partitionmanager)
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -197,7 +197,6 @@
+            kde-inotify-survey
+            khelpcenter
+            kio-admin
+-           kjournald
+            ksystemlog
+            partitionmanager)
+ }

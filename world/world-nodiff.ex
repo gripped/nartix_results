@@ -588,7 +588,6 @@ ghex-docs
 ghostscript
 ghostxps
 ghostpcl
-gi-docgen
 giflib
 gifski
 gimp
@@ -997,19 +996,6 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
-kde-applications-meta
-kde-accessibility-meta
-kde-education-meta
-kde-games-meta
-kde-graphics-meta
-kde-multimedia-meta
-kde-network-meta
-kde-office-meta
-kde-pim-meta
-kde-sdk-meta
-kde-system-meta
-kde-utilities-meta
-kdevelop-meta
 kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
@@ -1271,15 +1257,6 @@ ladspa
 lager
 lame
 languagetool
-lapack
-blas
-cblas
-lapacke
-lapack64
-blas64
-cblas64
-lapacke64
-lapack-doc
 laszip
 laszip2
 layer-shell-qt
@@ -1340,7 +1317,6 @@ libchamplain
 libchewing
 libclc
 libcloudproviders
-libcmis
 libconfig
 libcroco
 libcryptui
@@ -1682,6 +1658,7 @@ libuninameslist
 libunwind
 libupnp
 liburcu
+liburing
 libusb-compat
 libutempter
 libutf8proc
@@ -2550,7 +2527,6 @@ perl-xml-simple
 perl-xml-writer
 perl-xml-xpath
 perl-yaml-libyaml
-perl-yaml-pp
 perl-yaml-tiny
 perl-yaml
 persepolis
@@ -3683,7 +3659,6 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
-python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely
@@ -4017,6 +3992,8 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
+qtcreator
+qtcreator-devel
 qterminal
 qtermwidget
 qtkeychain
@@ -4818,9 +4795,6 @@ whois
 wildmidi
 wireguard-tools
 wireless_tools
-wireshark
-wireshark-cli
-wireshark-qt
 wl-clipboard
 wolfssl
 words
