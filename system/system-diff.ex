@@ -45,7 +45,6 @@ p11-kit-docs
 pacman
 pam
 pambase
-pkgconf
 ppp
 procps-ng
 rpcbind

@@ -1,5 +1,9 @@
 accountsservice
 adios2
+akonadi-contacts
+akonadi-notes
+akonadi
+libakonadi
 alsa-utils
 amule
 apache
@@ -63,6 +67,7 @@ dbus-broker
 dhcp
 dhclient
 dhcpcd
+digikam
 directx-shader-compiler
 dns-over-https
 docker
@@ -89,6 +94,7 @@ erlang
 erlang-unixodbc
 espeakup
 etherwall
+eventviews
 extra-cmake-modules
 facter
 fail2ban
@@ -150,8 +156,8 @@ gnome-user-share
 gnome-video-effects
 go-bindata
 go-licenses
-go-yq
 gpsd
+grantleetheme
 greetd-tuigreet
 greetd
 $pkgbase
@@ -241,8 +247,14 @@ kde-sdk-meta
 kde-system-meta
 kde-utilities-meta
 kdevelop-meta
+kidentitymanagement
 kismet
+kmime
+kmymoney
 knot
+kontactinterface
+kpimtextedit
+ktextaddons
 kuserfeedback
 lapack
 blas
@@ -291,14 +303,12 @@ libusbsio
 python-libusbsio
 libvirt-glib
 libwacom
+libwebsockets
 libwhereami
 light-locker
 lightdm
 liblightdm-qt5
 lighttpd
-lilv
-lilv-docs
-python-lilv
 lilypond
 linux-hardened
 linux-hardened-headers
@@ -356,7 +366,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-minio
+mlt
 modemmanager
 libmm-glib
 mosquitto
@@ -413,8 +423,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-pkgconfig-libpkgconf
-perl-yaml-pp
 pgbouncer
 phodav
 php-legacy
@@ -636,15 +644,11 @@ shairport-sync
 sharutils
 signon-plugin-oauth2
 smartmontools
-sord
-sord-docs
 spdlog
 spice-gtk
 spice-vdagent
 spirv-headers
 squid
-sratom
-sratom-docs
 sshguard
 sslh
 sssd
@@ -653,8 +657,6 @@ strongswan
 stubby
 stunnel
 subversion
-suil
-suil-docs
 supermin
 svt-hevc
 sway
@@ -773,3 +775,4 @@ senpai
 umurmur
 python-pipenv-to-requirements
 vault
+modest

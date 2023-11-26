@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=kmime
+ pkgver=23.08.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Library for handling mail messages and newsgroup articles'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+ license=(LGPL)
+ depends=(ki18n5 kcodecs5)
+ makedepends=(extra-cmake-modules doxygen qt5-tools)
+-provides=(kmime5)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('1a51c80c885df34bce2122c24e949d2f354ee0d840de91deaf93feca029f33b1'
+             'SKIP')
+@@ -17,7 +16,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,7 @@
+ pkgname=kmime
+ depends=(ki18n5 kcodecs5)
+-provides=(kmime5)
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build

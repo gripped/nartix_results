@@ -19,13 +19,9 @@ afpfs-ng
 aha
 akonadi-calendar-tools
 akonadi-calendar
-akonadi-contacts
 akonadi-import-wizard
 akonadi-mime
-akonadi-notes
 akonadi-search
-akonadi
-libakonadi
 akonadiconsole
 akregator
 alacarte
@@ -361,7 +357,6 @@ devil
 dht
 diffstat
 diffuse
-digikam
 directx-headers
 discount
 discover
@@ -444,7 +439,6 @@ epiphany
 erlang-nox
 espeak-ng
 ethtool
-eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -671,6 +665,7 @@ go-bindata-hashicorp
 go-ethereum
 go-md2man
 go-tools
+go-yq
 go
 gobject-introspection
 gobject-introspection-runtime
@@ -692,7 +687,6 @@ granatier
 granite
 grantlee-editor
 grantlee
-grantleetheme
 graphene
 graphicsmagick
 graphite
@@ -1077,7 +1071,6 @@ kiconthemes5
 kid3
 kid3-common
 kid3-qt
-kidentitymanagement
 kidletime
 kidletime5
 kig
@@ -1128,13 +1121,11 @@ kmail
 kmailtransport
 kmbox
 kmenuedit
-kmime
 kmines
 kmix
 kmousetool
 kmouth
 kmplot
-kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1155,7 +1146,6 @@ konqueror
 konquest
 konsole
 kontact
-kontactinterface
 kontrast
 konversation
 kopeninghours
@@ -1171,7 +1161,6 @@ kpat
 kpeople
 kpeople5
 kpeoplevcard
-kpimtextedit
 kpipewire
 kpkpass
 kplotting
@@ -1215,7 +1204,6 @@ ksysguard
 ksystemlog
 ksystemstats
 kteatime
-ktextaddons
 ktexteditor
 ktexteditor5
 ktextwidgets
@@ -1680,7 +1668,6 @@ libvorbis
 libvpx
 libvterm
 libwebp
-libwebsockets
 libwhich
 libwlocate
 libwmf
@@ -1749,6 +1736,9 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 lightsoff
+lilv
+lilv-docs
+python-lilv
 linux-atm
 liquidctl
 lirc
@@ -1978,6 +1968,7 @@ mimalloc
 mimetic
 minicom
 minidlna
+minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -1986,7 +1977,6 @@ minuet
 mitmproxy
 mjpegtools
 mktorrent
-mlt
 mm-common
 mmtf-cpp
 mobile-broadband-provider-info
@@ -2426,6 +2416,7 @@ perl-pegex
 perl-perl-critic
 perl-perl-minimumversion
 perl-perl4-corelibs
+perl-pkgconfig-libpkgconf
 perl-pkgconfig
 perl-pod-coverage
 perl-pod-parser
@@ -2527,6 +2518,7 @@ perl-xml-simple
 perl-xml-writer
 perl-xml-xpath
 perl-yaml-libyaml
+perl-yaml-pp
 perl-yaml-tiny
 perl-yaml
 persepolis
@@ -4392,6 +4384,8 @@ solr
 sonivox
 sonnet
 sonnet5
+sord
+sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
@@ -4416,6 +4410,8 @@ spotifyd
 sqlcipher
 squashfs-tools
 squashfuse
+sratom
+sratom-docs
 srt
 sshfs
 sshpass
@@ -4429,6 +4425,8 @@ strace
 strawberry
 strip-nondeterminism
 sugar-datastore
+suil
+suil-docs
 suitesparse
 sushi
 svgpart

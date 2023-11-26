@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=kontactinterface
+ pkgver=23.08.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Kontact Plugin Interface Library'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+ license=(LGPL)
+ depends=(kparts5)
+ makedepends=(extra-cmake-modules doxygen qt5-tools)
+-provides=(kontactinterface5)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('f4211c7131c597eb38e6735095ad8337551aad4dd238e79c6450bce68e95177b'
+             'SKIP')
+@@ -17,7 +16,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,7 @@
+ pkgname=kontactinterface
+ depends=(kparts5)
+-provides=(kontactinterface5)
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
