@@ -1,7 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,11 +23,9 @@
- _tag=ccf89569e9db592457f1d36edc7d45179a0fb2b0 # git rev-parse v${pkgver}
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gitea
+-pkgver=1.21.1
++pkgver=1.21.0
+ pkgrel=1
+ pkgdesc="Painless self-hosted Git service, community managed."
+ arch=(x86_64)
+@@ -20,14 +20,12 @@
+ checkdepends=(openssh)
+ options=(!lto)
+ backup=('etc/gitea/app.ini')
+-_tag=66b82277d43bc96be58c8660bfc0488b3a09dc98 # git rev-parse v${pkgver}
++_tag=ccf89569e9db592457f1d36edc7d45179a0fb2b0 # git rev-parse v${pkgver}
  source=(git+https://github.com/go-gitea/gitea.git#tag=${_tag}?signed
          gitea.tmpfiles
 -        gitea.service

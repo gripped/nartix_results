@@ -118,7 +118,6 @@ fwupd-efi
 fwupd
 gala
 gamemode
-gamescope
 gcr-4
 gcr-4-docs
 gcr
@@ -129,11 +128,9 @@ gdm
 libgdm
 genxrdpattern
 geoclue
-gi-docgen
 github-cli
 glibmm-2.68
 glibmm-2.68-docs
-glslang
 glusterfs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -211,6 +208,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -276,7 +274,6 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 libcanberra
-libcmis
 libdaemon
 libei
 libfdk-aac
@@ -290,6 +287,7 @@ libhandy-docs
 libhandy0
 libinput
 libjpeg-turbo
+liblangtag
 libldm
 libmbim
 libplacebo
@@ -624,6 +622,7 @@ redis
 redshift
 refind
 refind-docs
+ripgrep
 rng-tools
 rspamd
 rsync
@@ -647,7 +646,6 @@ smartmontools
 spdlog
 spice-gtk
 spice-vdagent
-spirv-headers
 squid
 sshguard
 sslh
@@ -737,11 +735,14 @@ libwireplumber
 wireshark
 wireshark-cli
 wireshark-qt
-wlroots
 wlroots0.15
 woff2
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
@@ -769,6 +770,7 @@ xorg-xlogo
 xorg-xwayland
 xscreensaver
 yubikey-personalization
+zeitgeist
 zeromq
 znc
 senpai

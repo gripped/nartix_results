@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -73,7 +73,7 @@
+ }
+ 
+ build() {
+-  arch-meson gamescope build \
++  artix-meson gamescope build \
+     -Dforce_fallback_for=stb \
+     -Dpipewire=enabled
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+   patch -Np1 < ../wlroots0.17.patch
+ }
+ build() {
+-  arch-meson gamescope build \
++  artix-meson gamescope build \
+     -Dforce_fallback_for=stb \
+     -Dpipewire=enabled
+   meson compile -C build

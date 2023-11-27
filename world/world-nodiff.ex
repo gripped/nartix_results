@@ -549,6 +549,7 @@ fwknop
 fzf
 gajim
 galculator
+gamescope
 gammastep
 garcon
 gavl
@@ -582,6 +583,7 @@ ghex-docs
 ghostscript
 ghostxps
 ghostpcl
+gi-docgen
 giflib
 gifski
 gimp
@@ -604,6 +606,7 @@ glibmm
 glibmm-docs
 glm
 glpk
+glslang
 glu
 gmic
 gimp-plugin-gmic
@@ -834,7 +837,6 @@ imlib2
 immer
 incidenceeditor
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1305,6 +1307,7 @@ libchamplain
 libchewing
 libclc
 libcloudproviders
+libcmis
 libconfig
 libcroco
 libcryptui
@@ -1450,7 +1453,6 @@ libkscreen
 libksieve
 libksysguard
 libktorrent
-liblangtag
 liblas
 liblc3
 libldac
@@ -4033,7 +4035,6 @@ rhino
 java-rhino
 rhino-javadoc
 rinutils
-ripgrep
 ristretto
 rkcommon
 rnnoise
@@ -4403,6 +4404,7 @@ speexdsp
 spglib
 spice-protocol
 spice
+spirv-headers
 spirv-llvm-translator
 spirv-tools
 splint
@@ -4794,15 +4796,12 @@ wildmidi
 wireguard-tools
 wireless_tools
 wl-clipboard
+wlroots
 wolfssl
 words
 wpebackend-fdo
 wqy-zenhei
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264
@@ -4984,7 +4983,6 @@ zathura-pdf-poppler
 zathura-ps
 zathura
 zbar
-zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
