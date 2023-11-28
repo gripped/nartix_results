@@ -2686,11 +2686,9 @@ python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
-python-aiohttp
 python-aioitertools
 python-aiopg
 python-aioquic
-python-aioresponses
 python-aiorpcx
 python-aiosignal
 python-aiosmtpd
@@ -3081,7 +3079,6 @@ python-hyperframe
 python-hyperlink
 python-hypothesis-auto
 python-hypothesis-fspaths
-python-hypothesis
 python-hypothesmith
 python-ibm-db-sa
 python-icecream
@@ -3299,7 +3296,6 @@ python-oslo-db
 python-oslo-i18n
 python-oslo-log
 python-oslo-serialization
-python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides

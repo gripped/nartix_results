@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,14 @@
+ 
+ pkgname=python-oslo-utils
+-pkgver=6.3.0
+-_commit=505d80e557631b8d78bd372fcec5832cfd916360
++pkgver=6.2.1
++_commit=a5941e8f845534e3604dacf2dfa9a87d224eeef8
+ pkgrel=1
+ pkgdesc="Oslo Utility library"
+ arch=('any')
+ url="https://pypi.python.org/pypi/oslo.utils/$pkgver"
+ license=('Apache')
+ depends=('python-iso8601' 'python-oslo-i18n' 'python-pytz' 'python-netaddr'
+-         'python-netifaces' 'python-debtcollector' 'python-pyparsing' 'python-packaging'
+-         'python-yaml')
++         'python-netifaces' 'python-debtcollector' 'python-pyparsing' 'python-packaging')
+ makedepends=('git' 'python-setuptools')
+ checkdepends=('python-eventlet' 'python-testscenarios' 'python-testtools' 'python-oslotest'
+               'python-ddt' 'python-stestr')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ pkgname=python-oslo-utils
+ depends=('python-iso8601' 'python-oslo-i18n' 'python-pytz' 'python-netaddr'
+-         'python-netifaces' 'python-debtcollector' 'python-pyparsing' 'python-packaging'
+-         'python-yaml')
++         'python-netifaces' 'python-debtcollector' 'python-pyparsing' 'python-packaging')
+ prepare() {
+   cd oslo.utils
+   sed -i '/tzdata/d' requirements.txt

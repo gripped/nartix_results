@@ -513,11 +513,15 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+python-aiohttp
 python-aiomysql
+python-aioresponses
 python-anyio
 python-anytree
 python-celery
 python-httpcore
+python-hypothesis
+python-oslo-utils
 python-pytest-benchmark
 python-pyudev
 python-setuptools

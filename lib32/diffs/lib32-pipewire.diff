@@ -1,6 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,9 +19,7 @@
+@@ -6,9 +6,8 @@
+   lib32-pipewire-jack
+   lib32-pipewire-v4l2
+ )
+-_commit=4debdcd40b055b3eaa83a8f4443aa990ea566bfe  # tags/1.0.0
+-pkgver=1.0.0
+-_so_ver=0.3
++_commit=7db1e7f643a454056327999b2d8e35d8097b5593  # tags/0.3.85
++pkgver=0.3.85
+ pkgrel=1
+ epoch=1
+ pkgdesc="Low-latency audio/video router and processor - 32-bit"
+@@ -20,9 +19,7 @@
    lib32-alsa-lib
    lib32-dbus
    lib32-glib2
@@ -10,7 +22,7 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit"
-@@ -61,6 +59,7 @@
+@@ -62,6 +59,7 @@
      -D libmysofa=disabled
      -D libpulse=disabled
      -D libusb=disabled
@@ -18,7 +30,7 @@
      -D lv2=disabled
      -D man=disabled
      -D opus=disabled
-@@ -85,7 +84,7 @@
+@@ -86,7 +84,7 @@
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
  
@@ -27,21 +39,89 @@
    meson compile -C build
  }
  
-@@ -114,7 +113,6 @@
+@@ -104,6 +102,8 @@
+   done
+ }
+ 
++_ver=${pkgver:0:3}
++
+ package_lib32-pipewire() {
+   depends=(
+     lib32-gcc-libs
+@@ -112,8 +112,7 @@
+     libasound.so
      libdbus-1.so
      libglib-2.0.so
-     libpipewire-$_ver.so
+-    libpipewire-$_so_ver.so
 -    libsystemd.so
++    libpipewire-$_ver.so
      pipewire
    )
    optdepends=(
+@@ -126,13 +125,13 @@
+   (
+     cd "$pkgdir"
+ 
+-    _pick lib usr/lib32/libpipewire-$_so_ver.so*
+-    _pick lib usr/lib32/pkgconfig/lib{pipewire-$_so_ver,spa-0.2}.pc
++    _pick lib usr/lib32/libpipewire-$_ver.so*
++    _pick lib usr/lib32/pkgconfig/lib{pipewire-$_ver,spa-0.2}.pc
+ 
+     _pick jack usr/lib32/libjack*
+     _pick jack usr/lib32/pkgconfig/jack.pc
+ 
+-    _pick v4l2 usr/lib32/pipewire-$_so_ver/v4l2
++    _pick v4l2 usr/lib32/pipewire-$_ver/v4l2
+ 
+     rm -r usr/{bin,include,lib,share}
+   )
+@@ -147,7 +146,7 @@
+     lib32-glibc
+     libpipewire
+   )
+-  provides=(libpipewire-$_so_ver.so)
++  provides=(libpipewire-$_ver.so)
+ 
+   mv lib/* "$pkgdir"
+ 
+@@ -156,11 +155,11 @@
+ 
+ package_lib32-pipewire-jack() {
+   pkgdesc+=" - JACK support"
+-  license+=(GPL-2.0-only)  # libjackserver
++  license+=(GPL2)  # libjackserver
+   depends=(
+     lib32-glibc
+     lib32-pipewire
+-    libpipewire-$_so_ver.so
++    libpipewire-$_ver.so
+     pipewire-jack
+   )
+   conflicts=(
+@@ -181,7 +180,7 @@
+   depends=(
+     lib32-glibc
+     lib32-pipewire
+-    libpipewire-$_so_ver.so
++    libpipewire-$_ver.so
+     pipewire-v4l2
+   )
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,6 +32,7 @@
+@@ -5,7 +5,6 @@
+   lib32-pipewire-jack
+   lib32-pipewire-v4l2
+ )
+-_so_ver=0.3
+ prepare() {
+   cd pipewire
+ }
+@@ -33,6 +32,7 @@
      -D libmysofa=disabled
      -D libpulse=disabled
      -D libusb=disabled
@@ -49,7 +129,7 @@
      -D lv2=disabled
      -D man=disabled
      -D opus=disabled
-@@ -54,7 +55,7 @@
+@@ -55,7 +55,7 @@
    export CC="gcc -m32"
    export CXX="g++ -m32"
    export PKG_CONFIG="i686-pc-linux-gnu-pkg-config"
@@ -58,11 +138,64 @@
    meson compile -C build
  }
  _pick() {
-@@ -76,7 +77,6 @@
+@@ -67,6 +67,7 @@
+     rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+   done
+ }
++_ver=${pkgver:0:3}
+ package_lib32-pipewire() {
+   depends=(
+     lib32-gcc-libs
+@@ -75,18 +76,17 @@
+     libasound.so
      libdbus-1.so
      libglib-2.0.so
-     libpipewire-$_ver.so
+-    libpipewire-$_so_ver.so
 -    libsystemd.so
++    libpipewire-$_ver.so
      pipewire
    )
    meson install -C build --destdir "$pkgdir"
+   (
+     cd "$pkgdir"
+-    _pick lib usr/lib32/libpipewire-$_so_ver.so*
+-    _pick lib usr/lib32/pkgconfig/lib{pipewire-$_so_ver,spa-0.2}.pc
++    _pick lib usr/lib32/libpipewire-$_ver.so*
++    _pick lib usr/lib32/pkgconfig/lib{pipewire-$_ver,spa-0.2}.pc
+     _pick jack usr/lib32/libjack*
+     _pick jack usr/lib32/pkgconfig/jack.pc
+-    _pick v4l2 usr/lib32/pipewire-$_so_ver/v4l2
++    _pick v4l2 usr/lib32/pipewire-$_ver/v4l2
+     rm -r usr/{bin,include,lib,share}
+   )
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
+@@ -98,17 +98,17 @@
+     lib32-glibc
+     libpipewire
+   )
+-  provides=(libpipewire-$_so_ver.so)
++  provides=(libpipewire-$_ver.so)
+   mv lib/* "$pkgdir"
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
+ }
+ package_lib32-pipewire-jack() {
+   pkgdesc+=" - JACK support"
+-  license+=(GPL-2.0-only)  # libjackserver
++  license+=(GPL2)  # libjackserver
+   depends=(
+     lib32-glibc
+     lib32-pipewire
+-    libpipewire-$_so_ver.so
++    libpipewire-$_ver.so
+     pipewire-jack
+   )
+   conflicts=(
+@@ -126,7 +126,7 @@
+   depends=(
+     lib32-glibc
+     lib32-pipewire
+-    libpipewire-$_so_ver.so
++    libpipewire-$_ver.so
+     pipewire-v4l2
+   )
+   mv v4l2/* "$pkgdir"
