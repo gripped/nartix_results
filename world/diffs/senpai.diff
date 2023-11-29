@@ -3,8 +3,9 @@
 @@ -1,66 +1,36 @@
 -
  pkgname=senpai
- pkgver=0.2.0
--pkgrel=3
+-pkgver=0.3.0
++pkgver=0.2.0
+ pkgrel=1
 -pkgdesc='A modern terminal IRC client'
 -arch=('x86_64')
 -url='https://git.sr.ht/~taiite/senpai'
@@ -12,7 +13,7 @@
 -depends=('glibc')
 -makedepends=('git' 'go' 'scdoc')
 -options=('!lto')
--_commit='1318e784bd2bba3765aee97811a3f0053d3a6723'
+-_commit='e92997b9edd0a4882e1e318ccdc2a579f0abb09b'
 -source=("$pkgname::git+$url#commit=$_commit")
 -b2sums=('SKIP')
 -
@@ -28,7 +29,6 @@
 -  export GOPATH="${srcdir}"
 -  go mod download
 -}
-+pkgrel=1
 +pkgdesc="A modern terminal IRC client."
 +arch=("x86_64")
 +url="https://sr.ht/~taiite/senpai"

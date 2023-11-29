@@ -107,8 +107,6 @@ aubio
 python-aubio
 audacious-plugins
 audacious
-audacity
-audacity-docs
 audiocd-kio
 audiofile
 audiotube
@@ -522,7 +520,6 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 four-in-a-row
-fractal
 frameworkintegration
 frameworkintegration5
 freealut
@@ -2204,7 +2201,6 @@ parley
 parole
 parted
 partitionmanager
-pass
 pastebinit
 pasystray
 patchelf
@@ -2217,7 +2213,6 @@ pcaudiolib
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
-pdal
 pdfarranger
 pdfjs
 pdfmixtool
@@ -3041,7 +3036,6 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
-python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -4759,8 +4753,6 @@ python-volume_key
 volumeicon
 vorbis-tools
 vsftpd
-vst3sdk
-vst3sdk-docs
 vtk
 vulkan-docs
 vulkan-html-docs

@@ -18,6 +18,8 @@ assimp
 at-spi2-core
 at-spi2-core-docs
 at
+audacity
+audacity-docs
 avahi
 avogadrolibs
 avogadrolibs-qt5
@@ -113,6 +115,7 @@ flatpak-docs
 fluidsynth
 folks
 fprintd
+fractal
 freerdp
 fwupd-efi
 fwupd
@@ -416,8 +419,10 @@ packagekit
 libpackagekit-glib
 pacman-contrib
 paprefs
+pass
 passim
 pcsclite
+pdal
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -519,6 +524,7 @@ python-aioresponses
 python-anyio
 python-anytree
 python-celery
+python-google-auth
 python-httpcore
 python-hypothesis
 python-oslo-utils
@@ -720,6 +726,8 @@ virtualbox-guest-utils-nox
 virtualbox-ext-vnc
 vlc
 vpnc
+vst3sdk
+vst3sdk-docs
 vte3
 vte-common
 vte4
