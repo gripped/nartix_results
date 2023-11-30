@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=qt6-serialport
+-_qtver=6.6.1
++_qtver=6.6.0
+ pkgver=${_qtver/-/}
+ pkgrel=1
+ arch=(x86_64)
+@@ -10,16 +10,16 @@
  depends=(gcc-libs
           glibc
           qt6-base
@@ -9,8 +17,10 @@
  makedepends=(cmake
               ninja)
  groups=(qt6)
-@@ -19,7 +19,7 @@
- sha256sums=('ecfcbbf1c47a67ff599a409bf7682fed416f797860c01c934f5a78c336da4065')
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+ source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
+-sha256sums=('96fc233d5cbcac5048c6020dcfbd6cec8a6a8334eed0a283b33d58afc6d2aed8')
++sha256sums=('ecfcbbf1c47a67ff599a409bf7682fed416f797860c01c934f5a78c336da4065')
  
  build() {
 -  cmake -B build -S $_pkgfn -G Ninja \
@@ -24,7 +34,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,11 +3,11 @@
+@@ -1,13 +1,13 @@
+ pkgname=qt6-serialport
+-_qtver=6.6.1
++_qtver=6.6.0
  depends=(gcc-libs
           glibc
           qt6-base

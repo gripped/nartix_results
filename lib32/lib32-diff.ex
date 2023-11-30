@@ -34,3 +34,4 @@ lib32-polkit
 lib32-spirv-llvm-translator
 lib32-v4l-utils
 wine
+winetricks

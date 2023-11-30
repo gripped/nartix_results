@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=img2pdf
+-pkgver=0.5.1
++pkgver=0.5.0
+ pkgrel=1
+ pkgdesc="Losslessly convert raster images to PDF"
+ arch=(any)
+@@ -11,7 +11,7 @@
+ checkdepends=(python-pytest python-numpy python-scipy python-lxml
+               colord ghostscript imagemagick mupdf-tools openjpeg2 poppler perl-image-exiftool netpbm)
+ source=(https://files.pythonhosted.org/packages/source/i/${pkgname}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('73847e47242f4b5bd113c70049e03e03212936c2727cd2a8bf564229a67d0b95')
++sha256sums=('ae6c19731bde2551356c178bf356ca118ac32a232c737a14b423f8039df3c24b')
+ 
+ build() {
+     cd ${pkgname}-${pkgver}

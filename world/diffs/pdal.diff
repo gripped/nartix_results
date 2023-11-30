@@ -1,12 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=pdal
 -pkgver=2.6.1
+-pkgrel=2
 +pkgver=2.6.0
- pkgrel=1
++pkgrel=1
  pkgdesc="A C++ library for translating and manipulating point cloud data"
  arch=('x86_64')
+ url="http://www.pdal.io"
 @@ -11,20 +11,13 @@
              'sqlite: for the sqlite plugin'
              'postgresql-libs: for the postgresql plugin')

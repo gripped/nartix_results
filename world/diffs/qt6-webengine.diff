@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=qt6-webengine
+-_qtver=6.6.1
++_qtver=6.6.0
+ pkgver=${_qtver/-/}
+ pkgrel=1
+ arch=(x86_64)
+@@ -64,17 +64,11 @@
+ optdepends=('pipewire: WebRTC desktop sharing under Wayland')
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+-source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
+-        libxml-2.12.patch)
+-sha256sums=('7a6ea228214bd66029ca90549b29021f30f7544abff997b7f831ceac2ce73691'
+-            'bfae9e773edfd0ddbc617777fdd4c0609cba2b048be7afe40f97768e4eb6117e')
+-
+-prepare() {
+-  patch -d $_pkgfn/src/3rdparty/chromium -p1 < libxml-2.12.patch
+-}
++source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
++sha256sums=('d5dc9ff05a2c57adbf99cbf0c7cb6f19527f67216caf627b0cc160a1d253b780')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+     -DCMAKE_TOOLCHAIN_FILE=/usr/lib/cmake/Qt6/qt.toolchain.cmake \
+     -DQT_FEATURE_webengine_system_ffmpeg=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=qt6-webengine
+-_qtver=6.6.1
++_qtver=6.6.0
+ depends=(alsa-lib
+          dbus
+          expat
+@@ -45,11 +45,8 @@
+          zlib)
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+-prepare() {
+-  patch -d $_pkgfn/src/3rdparty/chromium -p1 < libxml-2.12.patch
+-}
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+     -DCMAKE_TOOLCHAIN_FILE=/usr/lib/cmake/Qt6/qt.toolchain.cmake \
+     -DQT_FEATURE_webengine_system_ffmpeg=ON \
