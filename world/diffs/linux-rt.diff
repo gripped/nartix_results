@@ -3,7 +3,7 @@
 @@ -1,10 +1,11 @@
  
  pkgbase=linux-rt
--pkgver=6.5.2.8.realtime1
+-pkgver=6.6.0.15.realtime1
 -pkgrel=1
 +pkgver=6.3.3.15.realtime2
 +pkgrel=4
@@ -26,10 +26,10 @@
    config
  )
  sha512sums=('SKIP'
--            '4b970ba8e9048e1cb4060d4ab70c10c716c88b649dd1e60b6a66f28180b7e75a2f132e27125643964dd837384e3a8272c0b2c5397390771f78cd533cc09468e2')
+-            '1aa63ffa9c31c4b2aef12cbf71e36f3d3fb5e2a3c82118c01176dcec6ef06ff15032d70a826052ca8a7df796a0713a4cefcec238b1a4600039f77341f3e2ced8')
 +            'b3c946dfd1fd4da68f21fc4d3c60fb316ba03517667aaa738ccc76afda3dcc59357cd9aa09a6e0844465181d5076408095736a32271d24ab98706a2322be6e5a')
  b2sums=('SKIP'
--        '0c113d1d39dfc10d1550f2636232bd490618f1e1b436eebfd1bdec12deb2622ba57172c031f9e374b7849f0d2e53a48e6c54edc91fdc9e5829d55f4b9aa06d84')
+-        '36a00585b166e799064d89ab3703fe021ef4c41ab171c23c72ccc2dd35f013f00552faf8038f6f4786050fdaa2aca46eb6278d7652c8af62603646720a5dce96')
 +        '6eb8b75e062c1e847b13885847d83d992eca818ac38eff08c7afd22b15b5f9aef3645738cdac34683525e95062a27e01144b3b468ddbdd73e2e66654edd941ad')
  validpgpkeys=(
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman <gregkh@kernel.org>
@@ -43,7 +43,17 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -75,56 +77,11 @@
+@@ -52,8 +54,7 @@
+   echo "-$pkgrel" > localversion.10-pkgrel
+   echo "${pkgbase#linux}" > localversion.20-pkgname
+   make defconfig
+-  local kernelrelease=$(make -s kernelrelease)
+-  echo "${kernelrelease/-g*/}" > version
++  make -s kernelrelease > version
+   make mrproper
+ 
+   local src
+@@ -76,56 +77,11 @@
  
  build() {
    cd $pkgbase
@@ -101,7 +111,7 @@
    depends=(
      coreutils
      initramfs
-@@ -149,70 +106,14 @@
+@@ -150,70 +106,14 @@
    echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
  
    echo "Installing modules..."
@@ -109,11 +119,12 @@
 +  _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
      DEPMOD=/doesnt/exist modules_install  # Suppress depmod
  
-   rm "$modulesdir"/{source,build}
+-  rm "$modulesdir"/build
 -
 -  install -vDm 644 LICENSES/deprecated/{GPL-1.0,ISC,Linux-OpenIB,X11,Zlib} -t "$pkgdir/usr/share/licenses/$pkgname/"
 -  install -vDm 644 LICENSES/preferred/{BSD,MIT}* -t "$pkgdir/usr/share/licenses/$pkgname/"
 -  install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
++  rm "$modulesdir"/{source,build}
  }
  
  _package-headers() {
@@ -173,7 +184,7 @@
    depends=(pahole)
  
    cd $pkgbase
-@@ -286,36 +187,10 @@
+@@ -287,36 +187,10 @@
    echo "Adding symlink..."
    mkdir -p "$pkgdir/usr/src"
    ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
@@ -210,7 +221,7 @@
  
    cd $pkgbase
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
-@@ -331,9 +206,6 @@
+@@ -332,9 +206,6 @@
    echo "Adding symlink..."
    mkdir -p "$pkgdir/usr/share/doc"
    ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
@@ -234,7 +245,17 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  _make() {
-@@ -32,8 +32,7 @@
+@@ -13,8 +13,7 @@
+   echo "-$pkgrel" > localversion.10-pkgrel
+   echo "${pkgbase#linux}" > localversion.20-pkgname
+   make defconfig
+-  local kernelrelease=$(make -s kernelrelease)
+-  echo "${kernelrelease/-g*/}" > version
++  make -s kernelrelease > version
+   make mrproper
+   local src
+   for src in "${source[@]}"; do
+@@ -33,8 +32,7 @@
  }
  build() {
    cd $pkgbase
@@ -244,17 +265,18 @@
  }
  _package() {
    depends=(
-@@ -52,42 +51,11 @@
+@@ -53,42 +51,11 @@
    install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
    echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
    echo "Installing modules..."
 -  ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
 +  _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
      DEPMOD=/doesnt/exist modules_install  # Suppress depmod
-   rm "$modulesdir"/{source,build}
+-  rm "$modulesdir"/build
 -  install -vDm 644 LICENSES/deprecated/{GPL-1.0,ISC,Linux-OpenIB,X11,Zlib} -t "$pkgdir/usr/share/licenses/$pkgname/"
 -  install -vDm 644 LICENSES/preferred/{BSD,MIT}* -t "$pkgdir/usr/share/licenses/$pkgname/"
 -  install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
++  rm "$modulesdir"/{source,build}
  }
  _package-headers() {
 -   AND MIT'
@@ -288,7 +310,7 @@
    depends=(pahole)
    cd $pkgbase
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
-@@ -144,9 +112,6 @@
+@@ -145,9 +112,6 @@
    echo "Adding symlink..."
    mkdir -p "$pkgdir/usr/src"
    ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"

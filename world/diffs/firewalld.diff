@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=firewalld
+-pkgver=2.0.2
++pkgver=2.0.1
+ pkgrel=1
+ pkgdesc='Firewall daemon with D-Bus interface'
+ arch=(any)
+@@ -32,7 +32,7 @@
+   etc/conf.d/firewalld
+   etc/firewalld/firewalld.conf
+ )
+-_tag=beae05f82959050b7bca8b1e44e0f599cfe5d250
++_tag=b90bd33c35aa73974e7e276707e9d47c3ab92583
+ source=(
+   git+https://github.com/firewalld/firewalld.git#tag=${_tag}
+   firewalld-sysconfigdir.patch
 @@ -60,6 +60,7 @@
      --sbindir=/usr/bin \
      --sysconfdir=/etc \

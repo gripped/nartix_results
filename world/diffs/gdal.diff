@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgbase=gdal
  pkgname=(gdal python-gdal)
 -pkgver=3.8.0
+-pkgrel=3
 +pkgver=3.7.3
- pkgrel=2
++pkgrel=2
  pkgdesc="A translator library for raster and vector geospatial data formats"
  arch=(x86_64)
+ url="https://gdal.org/"
 @@ -11,24 +11,21 @@
               proj arrow blosc cfitsio curl crypto++ libdeflate expat libfreexl
               libgeotiff geos giflib libheif hdf5 libjpeg-turbo json-c libjxl xz
@@ -60,6 +62,15 @@
    optdepends=('arrow: Arrow/Parquet support'
                'cfitsio: FITS support'
                'hdf5: HDF5 support'
+@@ -89,7 +88,7 @@
+               'netcdf: netCDF support'
+               'openexr: EXR support'
+               'openjpeg2: JP2 support'
+-              'podofo: PDF support'
++              'podofo-0.9: PDF support'
+               'poppler: PDF support'
+               'postgresql-libs: PostgreSQL support'
+               'libwebp: WebP support')
 
 
 ############# Stripped diff below #################

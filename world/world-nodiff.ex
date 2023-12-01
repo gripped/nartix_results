@@ -257,7 +257,6 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
-cinnamon
 cjs
 cjson
 clang
@@ -301,7 +300,6 @@ consul
 containers-common
 convertlit
 coordgen
-corrosion
 coturn
 couchdb
 cpio
@@ -4304,7 +4302,6 @@ signon-kwallet-extension
 signon-ui
 signond
 simple-scan
-sip
 skanlite
 skanpage
 slang

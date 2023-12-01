@@ -4,7 +4,7 @@
  _name=PyMuPDF
  pkgname=python-pymupdf
  pkgver=1.23.6
--pkgrel=3
+-pkgrel=4
 +pkgrel=2
  pkgdesc="Python bindings for MuPDF's rendering library"
  arch=(x86_64)
@@ -18,3 +18,11 @@
  )
  checkdepends=(
    python-fonttools
+@@ -77,7 +77,6 @@
+   local pytest_options=(
+     -vv
+     --deselect tests/test_pixmap.py::test_color_count
+-    --deselect tests/test_2548.py::test_2548
+   )
+   local _site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+ 

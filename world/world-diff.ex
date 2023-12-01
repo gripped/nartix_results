@@ -46,6 +46,7 @@ cgmanager
 chromium-bsu
 chrony
 cinnamon-desktop
+cinnamon
 clamav
 cloud-init
 clutter
@@ -57,6 +58,7 @@ conky
 conmon
 connman
 containerd
+corrosion
 cppcheck
 crun
 cups
@@ -693,6 +695,7 @@ shaderc
 shairport-sync
 sharutils
 signon-plugin-oauth2
+sip
 smartmontools
 spdlog
 spice-gtk
