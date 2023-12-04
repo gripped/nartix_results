@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+   mkdir build
+   cd build
+ 
+-  cmake ../ \
++  artix-cmake ../ \
+     -DENABLE_WEBENGINE=ON \
+     -DCMAKE_SKIP_RPATH=YES \
+     -Wno-dev
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+   cd "${srcdir}"/$pkgname-$pkgver
+   mkdir build
+   cd build
+-  cmake ../ \
++  artix-cmake ../ \
+     -DENABLE_WEBENGINE=ON \
+     -DCMAKE_SKIP_RPATH=YES \
+     -Wno-dev

@@ -19,9 +19,13 @@ afpfs-ng
 aha
 akonadi-calendar-tools
 akonadi-calendar
+akonadi-contacts
 akonadi-import-wizard
 akonadi-mime
+akonadi-notes
 akonadi-search
+akonadi
+libakonadi
 akonadiconsole
 akregator
 alacarte
@@ -107,6 +111,8 @@ aubio
 python-aubio
 audacious-plugins
 audacious
+audacity
+audacity-docs
 audiocd-kio
 audiofile
 audiotube
@@ -163,6 +169,7 @@ bigsh0t
 bin86
 bind
 black-hole-solver
+blackbox
 blinken
 blockdiag
 blosc
@@ -257,6 +264,7 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
+cinnamon
 cjs
 cjson
 clang
@@ -300,6 +308,7 @@ consul
 containers-common
 convertlit
 coordgen
+corrosion
 coturn
 couchdb
 cpio
@@ -353,6 +362,7 @@ devil
 dht
 diffstat
 diffuse
+digikam
 directx-headers
 discount
 discover
@@ -379,8 +389,6 @@ docbook-xsl
 docbook2x
 docker-compose
 docx2txt
-dolphin-emu
-dolphin-emu-tool
 dolphin-plugins
 dolphin
 dontpanic
@@ -435,6 +443,7 @@ epiphany
 erlang-nox
 espeak-ng
 ethtool
+eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -518,6 +527,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 four-in-a-row
+fractal
 frameworkintegration
 frameworkintegration5
 freealut
@@ -544,13 +554,14 @@ fwknop
 fzf
 gajim
 galculator
-gamescope
 gammastep
 garcon
 gavl
 gcab
 gcc12
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -586,7 +597,6 @@ girara
 git-lfs
 git
 gitea
-gjs
 gl2ps
 glad
 glade
@@ -639,8 +649,6 @@ gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
-gnome-shell-extensions
-gnome-software
 gnome-sound-recorder
 gnome-sudoku
 gnome-terminal
@@ -677,11 +685,15 @@ gperf
 gperftools
 gpicview
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
 grantlee-editor
 grantlee
+grantleetheme
 graphene
 graphicsmagick
 graphite
@@ -785,6 +797,7 @@ htop
 http-parser
 httpbin
 hub
+hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -811,6 +824,7 @@ hyphen-en
 i2c-tools
 i2pd
 i3-wm
+i3blocks
 i3lock
 i3status
 iagno
@@ -829,10 +843,10 @@ imlib2
 immer
 incidenceeditor
 iniparser
+inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -884,11 +898,11 @@ jbig2dec
 jbigkit
 jedi-language-server
 jemalloc
-jenkins
 jitterentropy
 jose
 jp2a
 jq
+jrnl
 jruby
 js102
 js115
@@ -1064,6 +1078,7 @@ kiconthemes5
 kid3
 kid3-common
 kid3-qt
+kidentitymanagement
 kidletime
 kidletime5
 kig
@@ -1114,11 +1129,13 @@ kmail
 kmailtransport
 kmbox
 kmenuedit
+kmime
 kmines
 kmix
 kmousetool
 kmouth
 kmplot
+kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1139,6 +1156,7 @@ konqueror
 konquest
 konsole
 kontact
+kontactinterface
 kontrast
 konversation
 kopeninghours
@@ -1154,6 +1172,7 @@ kpat
 kpeople
 kpeople5
 kpeoplevcard
+kpimtextedit
 kpipewire
 kpkpass
 kplotting
@@ -1197,6 +1216,7 @@ ksysguard
 ksystemlog
 ksystemstats
 kteatime
+ktextaddons
 ktexteditor
 ktexteditor5
 ktextwidgets
@@ -1238,6 +1258,15 @@ ladspa
 lager
 lame
 languagetool
+lapack
+blas
+cblas
+lapacke
+blas64
+cblas64
+lapack64
+lapacke64
+lapack-doc
 laszip
 laszip2
 layer-shell-qt
@@ -1252,6 +1281,7 @@ level-zero
 level-zero-headers
 level-zero-loader
 leveldb
+lftp
 lgi
 lua-lgi
 lua51-lgi
@@ -1961,7 +1991,6 @@ mimalloc
 mimetic
 minicom
 minidlna
-minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -5019,3 +5048,6 @@ dmg2img
 libspng
 python-scs
 rdfind
+bpython
+copr-cli
+kdiagram5

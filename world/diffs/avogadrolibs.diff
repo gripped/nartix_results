@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=avogadrolibs
- pkgname=(avogadrolibs avogadrolibs-qt5)
- pkgver=1.98.1
--pkgrel=4
-+pkgrel=2
- pkgdesc='Libraries that provide 3D rendering, visualization, analysis and data processing useful in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas'
- arch=(x86_64)
- url='https://www.openchemistry.org/'
-@@ -24,7 +24,6 @@
-              qt5-tools
-              spglib
-              tbb
--             verdict
-              vtk)
- source=(https://github.com/OpenChemistry/avogadrolibs/archive/$pkgver/$pkgname-$pkgver.tar.gz)
- sha256sums=('cb1d2c83a7f2c89c46ad46fdecace0d6f4de76c0898708ad52cf1e5a0aad1fb6')
-@@ -37,7 +36,8 @@
+@@ -37,7 +37,8 @@
    cmake -B build -S $pkgname-$pkgver \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects" \
@@ -27,16 +10,6 @@
      -DENABLE_TRANSLATIONS=ON \
      -DUSE_HDF5=ON \
      -DUSE_VTK=ON \
-@@ -58,8 +58,7 @@
-            libglvnd
-            molequeue
-            pugixml
--           spglib
--           verdict)
-+           spglib)
-   optdepends=('avogadrolibs-qt5: For the VTK and Qt plugins')
- 
-   DESTDIR="$pkgdir" cmake --install build
 
 
 ############# Stripped diff below #################
@@ -53,13 +26,3 @@
      -DENABLE_TRANSLATIONS=ON \
      -DUSE_HDF5=ON \
      -DUSE_VTK=ON \
-@@ -27,8 +28,7 @@
-            libglvnd
-            molequeue
-            pugixml
--           spglib
--           verdict)
-+           spglib)
-   DESTDIR="$pkgdir" cmake --install build
-   rm -r "$pkgdir"/usr/lib/libAvogadroQt* \
-         "$pkgdir"/usr/lib/libAvogadroMoleQueue* \

@@ -56,6 +56,7 @@ gettext
 glib2
 glib2-docs
 gmp
+gnupg
 gnutls
 gpgme
 qgpgme-qt5
@@ -164,6 +165,7 @@ patch
 pciutils
 pcre
 pcre2
+perl
 pinentry
 pkgconf
 popt
@@ -178,6 +180,11 @@ s-nail
 sdparm
 sed
 shadow
+sqlite
+sqlite-tcl
+sqlite-analyzer
+lemon
+sqlite-doc
 sysfsutils
 syslinux
 tar

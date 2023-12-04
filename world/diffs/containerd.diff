@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=containerd
+-pkgver=1.7.9
++pkgver=1.7.10
+ pkgrel=1
+ pkgdesc='An open and reliable container runtime'
+ url='https://containerd.io/'
 @@ -12,10 +12,6 @@
  source=("git+https://github.com/containerd/containerd.git#tag=v${pkgver}?signed")
  validpgpkeys=("8C7A111C21105794B0E8A27BF58C5D0A4405ACDB") # Derek McGowan

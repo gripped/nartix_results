@@ -1,19 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,11 +4,11 @@
-          appstream-qt5
-          appstream-qt)
- pkgver=1.0.0
--pkgrel=5
-+pkgrel=4
- pkgdesc='Provides a standard for creating app stores across distributions'
- arch=(x86_64)
- url='https://distributions.freedesktop.org/wiki/AppStream'
--license=(LGPL-2.1-or-later)
-+license=(GPL)
- depends=(cairo
-          curl
-          fontconfig
 @@ -23,7 +23,6 @@
           libxmlb
           libyaml
@@ -22,32 +8,7 @@
           zstd)
  makedepends=(gi-docgen
               gobject-introspection
-@@ -36,22 +35,15 @@
-              xmlto)
- source=(https://www.freedesktop.org/software/appstream/releases/AppStream-$pkgver.tar.xz{,.asc}
-         update-appstream-cache.hook
--        fix-qt5-link-target.patch
--        $pkgname-1.0.0-demote_developer_name_tag_deprecated.patch
--        $pkgname-1.0.0-content_rating.patch
--)
-+        fix-qt5-link-target.patch)
- sha256sums=('ef23477a380e8b525e92cfa87687f1146b9cef74c641349a1ae11250be5401d0'
-             'SKIP'
-             '3a96a1479cfd18dad36c2ca3181aabe46af9bf772c00b965d86ec5f55cd0e0eb'
--            'eac31f15d1e33968ab5ca678fc32fc0cd4c09c30ecbc457cbd490a00959d4c04'
--            '71a252c9929af42bd78915bb6898084c9bcb040398fa115eba4f95eb4637b99f'
--            'b9d0f18fc9e62a45161e66e1461bf98c226244143faf7ccf680c3249814f57fe')
-+            'eac31f15d1e33968ab5ca678fc32fc0cd4c09c30ecbc457cbd490a00959d4c04')
- validpgpkeys=(D33A3F0CA16B0ACC51A60738494C8A5FBF4DECEB) # Matthias Klumpp <matthias@tenstral.net>
- 
- prepare() {
-   patch -d AppStream-$pkgver -p1 < fix-qt5-link-target.patch
--  patch -Np1 -d AppStream-$pkgver -i ../$pkgname-1.0.0-demote_developer_name_tag_deprecated.patch
--  patch -Np1 -d AppStream-$pkgver -i ../$pkgname-1.0.0-content_rating.patch
- }
- 
- build() {
-@@ -60,12 +52,14 @@
+@@ -60,12 +59,14 @@
      --libexecdir=lib \
      -Dqt5=true \
      -Dvapi=true \
@@ -68,7 +29,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,12 +16,9 @@
+@@ -16,7 +16,6 @@
           libxmlb
           libyaml
           pango
@@ -76,12 +37,7 @@
           zstd)
  prepare() {
    patch -d AppStream-$pkgver -p1 < fix-qt5-link-target.patch
--  patch -Np1 -d AppStream-$pkgver -i ../$pkgname-1.0.0-demote_developer_name_tag_deprecated.patch
--  patch -Np1 -d AppStream-$pkgver -i ../$pkgname-1.0.0-content_rating.patch
- }
- build() {
-   meson build AppStream-$pkgver \
-@@ -29,11 +26,13 @@
+@@ -29,11 +28,13 @@
      --libexecdir=lib \
      -Dqt5=true \
      -Dvapi=true \

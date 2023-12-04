@@ -1,16 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,18 @@
+@@ -1,32 +1,32 @@
  
  pkgname=libwacom
 -pkgver=2.9.0
+-pkgrel=2
 +pkgver=2.8.0
- pkgrel=1
++pkgrel=1
  pkgdesc="Library to identify Wacom tablets and their features"
  arch=('x86_64')
  url="https://github.com/linuxwacom/libwacom/wiki"
  license=('MIT')
--depends=('glib2' 'libgudev' 'glibc')
+-depends=('glib2' 'libevdev' 'libgudev' 'glibc')
 +depends=('glib2' 'libgudev' 'libudev'  'glibc')
  makedepends=('libxml2' 'meson')
  checkdepends=('python-pytest' 'python-libevdev' 'python-pyudev')
@@ -24,25 +25,39 @@
  validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') # "Peter Hutterer (Who-T) <office@who-t.net>"
  
  build() {
-@@ -24,7 +23,7 @@
+-  arch-meson $pkgname-$pkgver build
++  meson build $pkgname-$pkgver \
++    --prefix=/usr
+   meson configure build
+-  meson compile -C build
++  ninja -C build
  }
  
  check() {
--  ninja test -C build
+-  meson test -C build --print-errorlogs
 +  ninja test -C build || :
  }
  
  package() {
+-  meson install -C build --destdir "$pkgdir"
++  DESTDIR="$pkgdir" ninja install -C build
+   install -D -m644 $pkgname-$pkgver/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+ }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,7 +1,8 @@
  pkgname=libwacom
--depends=('glib2' 'libgudev' 'glibc')
+-depends=('glib2' 'libevdev' 'libgudev' 'glibc')
 +depends=('glib2' 'libgudev' 'libudev'  'glibc')
  build() {
-   meson build $pkgname-$pkgver \
-     --prefix=/usr
+-  arch-meson $pkgname-$pkgver build
++  meson build $pkgname-$pkgver \
++    --prefix=/usr
+   meson configure build
+-  meson compile -C build
++  ninja -C build
+ }

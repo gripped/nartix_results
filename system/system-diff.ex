@@ -14,7 +14,6 @@ libelf
 glibc
 lib32-glibc
 glibc-locales
-gnupg
 gssproxy
 inetutils
 iptables
@@ -45,15 +44,9 @@ p11-kit-docs
 pacman
 pam
 pambase
-perl
 ppp
 procps-ng
 rpcbind
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 sudo
 usbutils
 util-linux

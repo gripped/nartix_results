@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -84,7 +84,7 @@
+ }
+ 
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_TESTING=OFF \
+     -DENABLE_KFILEMETADATASUPPORT=ON \
+     -DENABLE_MEDIAPLAYER=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -62,7 +62,7 @@
+   patch -d $pkgname-$_pkgver -p1 < akonadi-contacts.patch
+ }
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_TESTING=OFF \
+     -DENABLE_KFILEMETADATASUPPORT=ON \
+     -DENABLE_MEDIAPLAYER=ON \
