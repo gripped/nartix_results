@@ -23,20 +23,19 @@
  
  check() {
 -  meson test -C build
-+    meson test -C build || :
++  meson test -C build || :
  }
  
  _pick() {
-@@ -107,9 +109,6 @@
+@@ -107,8 +109,6 @@
    rm -r "${pkgdir}"/usr/share/installed-tests/
    mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
    mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
 -  rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
 -  rmdir "${pkgdir}"/usr/lib/modules-load.d
--
+ 
    _pick docs "${pkgdir}"/usr/share/doc/{,fwupd/}{libfwupdplugin,libfwupd}
  }
- 
 
 
 ############# Stripped diff below #################

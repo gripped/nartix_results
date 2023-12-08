@@ -1,24 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=neatvnc
--pkgver=0.7.1
--pkgrel=1
-+pkgver=0.6.0
-+pkgrel=2
- pkgdesc='Fast and neat VNC server library'
- arch=(x86_64)
- url=https://github.com/any1/neatvnc
-@@ -23,7 +23,7 @@
-   ninja
- )
- provides=(libneatvnc.so)
--_tag=b5b330b22c6a0fdeb718a9e7ee0732cc406863fa
-+_tag=8b3dc1ae6099dcfa73aec3ae11df2fdc58540d14
- source=(git+https://github.com/any1/neatvnc.git#tag=${_tag})
- b2sums=(SKIP)
- 
 @@ -33,7 +33,7 @@
  }
  

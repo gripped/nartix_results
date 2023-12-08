@@ -1,14 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-bluetooth-3.0
+ pkgver=42.7
+-pkgrel=1
++pkgrel=2
+ pkgdesc="GNOME Bluetooth Subsystem"
+ url="https://wiki.gnome.org/Projects/GnomeBluetooth"
+ arch=(x86_64)
+@@ -15,8 +15,6 @@
+   gtk4
    libadwaita
    libnotify
-   pulseaudio-bluetooth
+-  pulseaudio-bluetooth
 -  systemd
    upower
  )
  makedepends=(
-@@ -46,7 +45,7 @@
+@@ -46,7 +44,7 @@
      -D gtk_doc=true
    )
  
@@ -23,15 +33,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,6 @@
+@@ -5,8 +5,6 @@
+   gtk4
    libadwaita
    libnotify
-   pulseaudio-bluetooth
+-  pulseaudio-bluetooth
 -  systemd
    upower
  )
  provides=(libgnome-bluetooth{,-ui}-3.0.so)
-@@ -17,6 +16,6 @@
+@@ -17,6 +15,6 @@
    local meson_options=(
      -D gtk_doc=true
    )

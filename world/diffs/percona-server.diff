@@ -2,14 +2,21 @@
 +++ Artix PKGBUILD
 @@ -7,7 +7,7 @@
  _myver=${pkgver/_rel*}
- pkgrel=6
+ pkgrel=1
  arch=('x86_64')
 -makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
 +makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
               'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'protobuf' 'libfido2') # 'boost'
  license=('GPL')
  url="https://www.percona.com/software/mysql-database/percona-server"
-@@ -33,14 +33,6 @@
+@@ -27,20 +27,11 @@
+ prepare() {
+ 	cd $pkgbase-$_pkgver
+ 	rm -v sql/sql_yacc.{cc,h}
+-
+-        patch -p1 -i ../protobuf-23.patch
++	patch -p1 -i ../protobuf-23.patch
+ 
  	sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
  	       -e s@lib64/mysql@lib/mysql@ \
  	       -i cmake/install_layout.cmake
@@ -24,7 +31,7 @@
  }
  
  build() {
-@@ -56,6 +48,8 @@
+@@ -56,6 +47,8 @@
  		-DBUILD_CONFIG=mysql_release \
  		-DREPRODUCIBLE_BUILD=ON \
  		-DCMAKE_INSTALL_PREFIX=/usr \
@@ -33,7 +40,7 @@
  		-DSYSCONFDIR=/etc/mysql \
  		-DMYSQL_DATADIR=/var/lib/mysql \
  		-DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
-@@ -99,7 +93,7 @@
+@@ -99,7 +92,7 @@
  		-DDEBUG_EXTNAME=OFF \
  		-DBUILD_TESTING=OFF \
  		-DWITH_UNIT_TESTS=OFF \
@@ -42,7 +49,7 @@
  		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
  		-DWITH_NUMA=ON \
  		-DWITH_BOOST="../boost_${_boost_ver//./_}"
-@@ -147,7 +141,7 @@
+@@ -147,7 +140,7 @@
  package_percona-server() {
  	pkgdesc='Drop-in replacement for MySQL that provides improved performance, diagnostics, instrumentation and MyRocks storage engine'
  	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf')
@@ -57,7 +64,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,12 +10,6 @@
+@@ -6,16 +6,10 @@
+ prepare() {
+ 	cd $pkgbase-$_pkgver
+ 	rm -v sql/sql_yacc.{cc,h}
+-        patch -p1 -i ../protobuf-23.patch
++	patch -p1 -i ../protobuf-23.patch
  	sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
  	       -e s@lib64/mysql@lib/mysql@ \
  	       -i cmake/install_layout.cmake

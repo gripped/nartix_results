@@ -3,14 +3,26 @@
 @@ -1,7 +1,7 @@
  
  pkgname=python-setuptools
--pkgver=68.2.0
--_commit=c95ddc47a4b63488fdb003528bc6dbece85be1e2
+-pkgver=68.2.2
+-_commit=2255e6366c70b9813d115ae0a0bba329affbd0ac
 +pkgver=68.0.0
 +_commit=49fec9fafb0e23e0dde52d3c4c410d23a2de9b0d
  pkgrel=1
  epoch=1
  pkgdesc="Easily download, build, install, upgrade, and uninstall Python packages"
-@@ -19,12 +19,10 @@
+@@ -11,20 +11,18 @@
+ depends=('python-jaraco.text' 'python-more-itertools' 'python-ordered-set' 'python-packaging'
+          'python-platformdirs' 'python-tomli' 'python-validate-pyproject')
+ makedepends=('git' 'python-setuptools')
+-checkdepends=('python-jaraco.envs' 'python-jaraco.path' 'python-pip' 'python-pytest-fixture-config'
+-              'python-pytest-virtualenv' 'python-wheel' 'python-pytest-enabler' 'python-pytest-mypy'
+-              'python-pytest-timeout' 'python-sphinx' 'python-build' 'python-ini2toml'
+-              'python-tomli-w')
++checkdepends=('python-jaraco.envs' 'python-jaraco.path' 'python-pip' 'python-pip-run'
++              'python-pytest-fixture-config' 'python-pytest-virtualenv' 'python-wheel'
++              'python-pytest-enabler' 'python-pytest-mypy' 'python-pytest-timeout' 'python-sphinx'
++              'python-build' 'python-ini2toml' 'python-tomli-w')
+ provides=('python-distribute')
  replaces=('python-distribute')
  source=("git+https://github.com/pypa/setuptools.git#commit=$_commit"
          system-validate-pyproject.patch

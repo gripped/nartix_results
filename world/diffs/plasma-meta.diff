@@ -1,13 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
+@@ -1,8 +1,7 @@
  
  pkgname=plasma-meta
  pkgver=5.27
 -_dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=3
+-pkgrel=4
++pkgrel=3
  pkgdesc='Meta package to install KDE Plasma'
  arch=(any)
+ license=(None)
+@@ -31,7 +30,7 @@
+          plasma-welcome
+          kwayland-integration
+          kwallet-pam
+-         kgamma
++         kgamma5
+          sddm-kcm
+          breeze-gtk
+          powerdevil
 
 
 ############# Stripped diff below #################
@@ -20,3 +31,12 @@
  depends=(bluedevil
           drkonqi
           kde-gtk-config
+@@ -24,7 +23,7 @@
+          plasma-welcome
+          kwayland-integration
+          kwallet-pam
+-         kgamma
++         kgamma5
+          sddm-kcm
+          breeze-gtk
+          powerdevil

@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,18 +2,22 @@
- pkgbase=mariadb
- pkgname=('mariadb-libs' 'mariadb-clients' 'mariadb' 'mytop')
- pkgdesc='Fast SQL database server, derived from MySQL'
--pkgver=11.2.2
-+pkgver=11.1.2
- pkgrel=1
- arch=('x86_64')
+@@ -8,12 +8,16 @@
  license=('GPL')
  url='https://mariadb.org/'
  makedepends=('boost' 'bzip2' 'cmake' 'cracklib' 'curl' 'jemalloc' 'judy' 'krb5' 'liburing'
@@ -18,8 +11,7 @@
 +        'mariadb.sysusers.conf'
 +        'mariadb.tmpfiles.conf'
          '0001-arch-specific.patch')
--sha256sums=('faedbd8790c7ee65b348c0169706b4bae91eb6ce7335a76b27dbd8813c42e21b'
-+sha256sums=('19a9e980e57fa332931f643b48ad7390528c889ff6ea8b0e16fd306aa3088238'
+ sha256sums=('faedbd8790c7ee65b348c0169706b4bae91eb6ce7335a76b27dbd8813c42e21b'
              'SKIP'
 +            'd21fa98b57b3f44d1731551ac441bf24b75662fb26393757aa22f9cb92d470cd'
 +            '65dfade5bfa2338ec201e3fdcddd819ee87a94a27e1c7c293e890927f4ac7555'
@@ -44,7 +36,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=/usr/lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=/usr/lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -60,13 +64,10 @@
+@@ -60,7 +64,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -53,13 +45,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
--
--  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
- 
-   mkdir build
-   cd build
-@@ -139,7 +140,7 @@
+@@ -139,7 +143,7 @@
            'etc/my.cnf.d/spider.cnf'
            'etc/security/user_map.conf')
    install=mariadb.install
@@ -68,16 +54,17 @@
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
                'galera: for MariaDB cluster with Galera WSREP'
-@@ -157,6 +158,8 @@
+@@ -157,6 +161,9 @@
  
    cd "$pkgdir"
  
 +  install -Dm644 "$srcdir"/mariadb.sysusers.conf usr/lib/sysusers.d/mariadb.conf
 +  install -Dm644 "$srcdir"/mariadb.tmpfiles.conf usr/lib/tmpfiles.d/mariadb.conf
++
    rm -r etc/logrotate.d
    rm usr/bin/rcmysql
    rm usr/share/mysql/{binary-configure,mysql{,d_multi}.server}
-@@ -169,9 +172,6 @@
+@@ -169,9 +176,6 @@
    install -d {etc,usr/lib}/security
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
@@ -111,7 +98,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=/usr/lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=/usr/lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -39,12 +39,10 @@
+@@ -39,7 +39,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -120,12 +107,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
--  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
--  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
-   mkdir build
-   cd build
-   cmake ../"$pkgbase-$pkgver" "${_cmake_options[@]}"
-@@ -93,7 +91,7 @@
+@@ -93,7 +93,7 @@
            'etc/my.cnf.d/spider.cnf'
            'etc/security/user_map.conf')
    install=mariadb.install
@@ -134,7 +116,7 @@
     computation engine'
                'perl-dbd-mariadb: for mariadb-hotcopy, mariadb-convert-table-format and mariadb-setpermission'
                'python-mysqlclient: for myrocks_hotbackup'
-@@ -104,6 +102,8 @@
+@@ -104,6 +104,8 @@
    cd build
    make DESTDIR="$pkgdir" install
    cd "$pkgdir"
@@ -143,7 +125,7 @@
    rm -r etc/logrotate.d
    rm usr/bin/rcmysql
    rm usr/share/mysql/{binary-configure,mysql{,d_multi}.server}
-@@ -113,8 +113,6 @@
+@@ -113,8 +115,6 @@
    install -d {etc,usr/lib}/security
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/

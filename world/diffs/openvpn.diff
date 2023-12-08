@@ -1,19 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,16 @@
- 
- pkgname=openvpn
--_tag='d1a5fef390c038b0c61ee7bce0d53b90a56a567f' # git rev-parse v${pkgver}
--pkgver=2.6.8
-+_tag='29e5246b5b9d048a77e05160d032a91167900fe1' # git rev-parse v${pkgver}
-+pkgver=2.6.6
- pkgrel=1
- pkgdesc='An easy-to-use, robust and highly configurable VPN (Virtual Private Network)'
+@@ -7,11 +7,10 @@
  arch=('x86_64')
  url='https://openvpn.net/index.php/open-source.html'
  license=('custom')
 -depends=('openssl' 'lzo' 'lz4' 'systemd-libs' 'libsystemd.so' 'pkcs11-helper' 'libpkcs11-helper.so')
-+depends=('openssl' 'lzo' 'lz4' 'pkcs11-helper' 'libnl'  'libpkcs11-helper.so')
++depends=('openssl' 'lzo' 'lz4' 'pkcs11-helper' 'libnl' 'libpkcs11-helper.so')
  optdepends=('easy-rsa: easy CA and certificate handling'
              'pam: authenticate via PAM')
 -makedepends=('git' 'systemd' 'python-docutils')
@@ -41,7 +33,7 @@
  pkgname=openvpn
 -depends=('openssl' 'lzo' 'lz4' 'systemd-libs' 'libsystemd.so' 'pkcs11-helper' 'libpkcs11-helper.so')
 -install=openvpn.install
-+depends=('openssl' 'lzo' 'lz4' 'pkcs11-helper' 'libnl'  'libpkcs11-helper.so')
++depends=('openssl' 'lzo' 'lz4' 'pkcs11-helper' 'libnl' 'libpkcs11-helper.so')
  prepare() {
    cd "${srcdir}"/${pkgname}
    sed -i '/^CONFIGURE_DEFINES=/s/set/env/g' configure.ac

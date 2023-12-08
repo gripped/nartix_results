@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=python-prompt_toolkit
+-pkgver=3.0.41
++pkgver=3.0.39
+ pkgrel=1
+ pkgdesc='Library for building powerful interactive command lines in Python'
+ arch=('any')
+-url='https://github.com/prompt-toolkit/python-prompt-toolkit'
++url='https://github.com/jonathanslenders/python-prompt-toolkit'
+ license=('BSD')
+ depends=(
+   'python'
+@@ -19,7 +19,7 @@
+   'python-setuptools'
+ )
+ checkdepends=('python-pytest')
+-_commit='b1cb8fad68844495a219afc8747a1efc89eb17dc'
++_commit='490cf900188df357611cdc9358256be0e5ce2e16'
+ source=("$pkgname::git+$url#commit=$_commit")
+ b2sums=('SKIP')
+ 

@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,48 +1,34 @@
+@@ -1,49 +1,34 @@
  
 -pkgbase=libqaccessibilityclient
 -pkgname=(libqaccessibilityclient-qt5
 -         libqaccessibilityclient-qt6)
--pkgver=0.5.0
+-pkgver=0.6.0
+-pkgrel=1
 +pkgname=libqaccessibilityclient
 +pkgver=0.4.1
- pkgrel=2
++pkgrel=2
  arch=(x86_64)
 -pkgdesc='Helper library to make writing accessibility tools easier'
 +pkgdesc="Helper library to make writing accessibility tools easier"
@@ -20,7 +21,7 @@
 -             qt5-base
 -             qt6-base)
 -source=(https://download.kde.org/stable/$pkgbase/$pkgbase-$pkgver.tar.xz{,.sig})
--sha256sums=('704772543a3b005b94061a53eaf9f9d64944e6818b04c59c0fb0a503c81ac4a0'
+-sha256sums=('4c50c448622dc9c5041ed10da7d87b3e4e71ccb49d4831a849211d423c5f5d33'
 +depends=(qt5-base)
 +makedepends=(extra-cmake-modules)
 +conflicts=(libkdeaccessibilityclient)
@@ -28,7 +29,8 @@
 +sha256sums=('1c768b4f4314fcae2a07cb7de7cb2ae0522b5f02b4173af3eed8bfb2a4d83429'
              'SKIP')
  validpgpkeys=(FB25861861063C64C97B89AE125C53EB96EC0C92  # Frederik Gladhorn <frederik@gladhorn.de>
--              E0A3EB202F8E57528E13E72FD7574483BB57B18D) # Jonathan Esk-Riddell <jr@jriddell.org>
+-              E0A3EB202F8E57528E13E72FD7574483BB57B18D  # Jonathan Esk-Riddell <jr@jriddell.org>
+-              39FFA93CAE9C6AFC212AD00202325448204E452A) # Carl Schwan <carl@carlschwan.eu>
 +              2D1D5B0588357787DE9EE225EC94D18F7F05997E) # Jonathan Riddell <jr@jriddell.org>
 +
 +prepare() {

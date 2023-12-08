@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,6 @@
+@@ -23,7 +23,6 @@
+   libwacom
    nss
-   pulseaudio
-   pulseaudio-alsa
+   pulse-native-provider
 -  systemd
    upower
  )
  makedepends=(
-@@ -64,7 +63,7 @@
+@@ -63,7 +62,7 @@
  }
  
  build() {
@@ -23,15 +23,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,6 @@
+@@ -16,7 +16,6 @@
+   libwacom
    nss
-   pulseaudio
-   pulseaudio-alsa
+   pulse-native-provider
 -  systemd
    upower
  )
  groups=(gnome)
-@@ -29,6 +28,6 @@
+@@ -28,6 +27,6 @@
    git -c protocol.file.allow=always submodule update
  }
  build() {

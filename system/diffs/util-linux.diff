@@ -33,8 +33,8 @@
 +            '7423aaaa09fee7f47baa83df9ea6fef525ff9aec395c8cbd9fe848ceb2643f37')
  
  _backports=(
-   '00f115d81146599324c454f6756db6491855f430'
-@@ -83,9 +80,10 @@
+ )
+@@ -81,9 +78,10 @@
      -Dbuild-newgrp=enabled
      -Dbuild-vipw=enabled
      -Dbuild-write=enabled
@@ -46,7 +46,7 @@
  
    meson compile -C build
  }
-@@ -94,8 +92,8 @@
+@@ -92,8 +90,8 @@
    conflicts=('rfkill' 'hardlink')
    provides=('rfkill' 'hardlink')
    replaces=('rfkill' 'hardlink')
@@ -57,7 +57,7 @@
             'libmagic.so' 'libncursesw.so' 'readline' 'zlib')
    optdepends=('words: default dictionary for look')
    backup=(etc/pam.d/chfn
-@@ -124,8 +122,6 @@
+@@ -122,8 +120,6 @@
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su-l"
  
@@ -66,7 +66,7 @@
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/pkgconfig util-linux-libs/lib/pkgconfig
-@@ -139,11 +135,6 @@
+@@ -137,11 +133,6 @@
  
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"
@@ -84,7 +84,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,16 +35,17 @@
+@@ -33,16 +33,17 @@
      -Dbuild-newgrp=enabled
      -Dbuild-vipw=enabled
      -Dbuild-write=enabled
@@ -105,7 +105,7 @@
             'libmagic.so' 'libncursesw.so' 'readline' 'zlib')
    backup=(etc/pam.d/chfn
            etc/pam.d/chsh
-@@ -66,7 +67,6 @@
+@@ -64,7 +65,6 @@
    install -m0644 pam-runuser "${pkgdir}/etc/pam.d/runuser-l"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su-l"
@@ -113,7 +113,7 @@
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/pkgconfig util-linux-libs/lib/pkgconfig
-@@ -78,10 +78,6 @@
+@@ -76,10 +76,6 @@
      "${pkgdir}/usr/lib/sysusers.d/util-linux.conf"
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"

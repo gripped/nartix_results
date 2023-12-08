@@ -5,8 +5,8 @@
  pkgname=minio
 -pkgver=2023.12.02
 -_timever=T10-51-33Z
-+pkgver=2023.11.20
-+_timever=T22-40-07Z
++pkgver=2023.12.06
++_timever=T09-09-22Z
  _pkgver="${pkgver//./-}${_timever//:/-}"
  pkgrel=1
  pkgdesc='Object storage server compatible with Amazon S3'
@@ -39,7 +39,7 @@
 @@ -1,5 +1,5 @@
  pkgname=minio
 -_timever=T10-51-33Z
-+_timever=T22-40-07Z
++_timever=T09-09-22Z
  _
  depends=('glibc')
  backup=('etc/minio/minio.conf')

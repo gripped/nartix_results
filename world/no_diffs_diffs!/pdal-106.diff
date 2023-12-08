@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+ build() {
+   cd "PDAL-$pkgver-src/"
+ 
+-  cmake \
++  artix-cmake \
+       -Bbuild \
+       -GNinja \
+       -DCMAKE_INSTALL_PREFIX=/usr \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ }
+ build() {
+   cd "PDAL-$pkgver-src/"
+-  cmake \
++  artix-cmake \
+       -Bbuild \
+       -GNinja \
+       -DCMAKE_INSTALL_PREFIX=/usr \

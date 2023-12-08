@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,7 @@
-   pulseaudio-rtp
- )
- pkgver=16.1
--pkgrel=7
-+pkgrel=6
- pkgdesc="A featureful, general-purpose sound server"
- url="https://www.freedesktop.org/wiki/Software/PulseAudio/"
- arch=(x86_64)
 @@ -25,6 +25,7 @@
    check
    dbus
@@ -30,8 +21,8 @@
  build() {
    local meson_options=(
 -    -D elogind=disabled
-     -D pulsedsp-location='/usr/\$LIB/pulseaudio'
 +    -D elogind=enabled
+     -D pulsedsp-location='/usr/\$LIB/pulseaudio'
      -D stream-restore-clear-old-devices=true
      -D tcpwrap=disabled
 +    -D systemd=disabled
@@ -43,14 +34,7 @@
    meson compile -C build
  }
  
-@@ -117,14 +118,11 @@
-     'pulseaudio-rtp: RTP and RAOP support'
-     'pulseaudio-zeroconf: Zeroconf support'
-   )
--  provides=(pulse-native-provider)
--  conflicts=(pipewire-pulse)
-   backup=(
-     etc/pulse/daemon.conf
+@@ -124,7 +125,6 @@
      etc/pulse/default.pa
      etc/pulse/system.pa
    )
@@ -58,7 +42,7 @@
    replaces=(
      'pulseaudio-gconf<=11.1'
      'pulseaudio-xen<=9.0'
-@@ -134,7 +132,7 @@
+@@ -134,7 +134,7 @@
  
    cd "$pkgdir"
  
@@ -67,16 +51,7 @@
        -i etc/pulse/client.conf
  
    sed -e 's|/usr/bin/pactl load-module module-x11-cork-request|#&|' \
-@@ -142,8 +140,6 @@
- 
-   sed -e '/Load several protocols/aload-module module-dbus-protocol' \
-       -i etc/pulse/default.pa
--
--  mkdir -p etc/pulse/{default,system}.pa.d
- 
-   rm -r etc/dbus-1
- 
-@@ -188,14 +184,11 @@
+@@ -188,9 +188,9 @@
    depends=(
      dbus
      libasyncns
@@ -84,16 +59,9 @@
      libsndfile
      libxcb
 -    systemd
--  )
--  optdepends=(
--    'glib2: mainloop integration'
--    'pulse-native-provider: PulseAudio backend'
--  )
-+  )
-+  optdepends=('glib2: mainloop integration')
-   provides=(
-     libpulse-mainloop-glib.so
-     libpulse-simple.so
+   )
+   optdepends=(
+     'glib2: mainloop integration'
 
 
 ############# Stripped diff below #################
@@ -105,8 +73,8 @@
  build() {
    local meson_options=(
 -    -D elogind=disabled
-     -D pulsedsp-location='/usr/\$LIB/pulseaudio'
 +    -D elogind=enabled
+     -D pulsedsp-location='/usr/\$LIB/pulseaudio'
      -D stream-restore-clear-old-devices=true
      -D tcpwrap=disabled
 +    -D systemd=disabled
@@ -117,14 +85,7 @@
    meson compile -C build
  }
  _pick() {
-@@ -57,27 +58,23 @@
-     'pulseaudio-rtp: RTP and RAOP support'
-     'pulseaudio-zeroconf: Zeroconf support'
-   )
--  provides=(pulse-native-provider)
--  conflicts=(pipewire-pulse)
-   backup=(
-     etc/pulse/daemon.conf
+@@ -64,14 +65,13 @@
      etc/pulse/default.pa
      etc/pulse/system.pa
    )
@@ -140,13 +101,7 @@
        -i etc/pulse/client.conf
    sed -e 's|/usr/bin/pactl load-module module-x11-cork-request|#&|' \
        -i usr/bin/start-pulseaudio-x11
-   sed -e '/Load several protocols/aload-module module-dbus-protocol' \
-       -i etc/pulse/default.pa
--  mkdir -p etc/pulse/{default,system}.pa.d
-   rm -r etc/dbus-1
-   _pick libpulse etc/pulse/client.conf
-   _pick libpulse usr/bin/pa{cat,ctl,dsp,mon,play,rec,record}
-@@ -111,9 +108,9 @@
+@@ -111,9 +111,9 @@
    depends=(
      dbus
      libasyncns

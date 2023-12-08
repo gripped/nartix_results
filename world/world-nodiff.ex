@@ -53,8 +53,6 @@ ansible
 ant
 ant-doc
 anthy
-aom
-aom-docs
 apache-orc
 apitrace
 apparmor
@@ -231,7 +229,6 @@ python-capstone
 cargo-c
 caribou
 catatonit
-catch2
 catdoc
 catfish
 cbatticon
@@ -262,7 +259,6 @@ cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
-cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
@@ -649,6 +645,7 @@ gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
+gnome-software
 gnome-sound-recorder
 gnome-sudoku
 gnome-terminal
@@ -1472,7 +1469,6 @@ libkomparediff2
 libksane
 libkscreen
 libksieve
-libksysguard
 libktorrent
 liblas
 liblc3
@@ -1690,7 +1686,9 @@ libvoikko
 libvorbis
 libvpx
 libvterm
+libwacom
 libwebp
+libwebsockets
 libwhich
 libwlocate
 libwmf
@@ -1762,6 +1760,7 @@ lightsoff
 lilv
 lilv-docs
 python-lilv
+lilypond
 linux-atm
 liquidctl
 lirc
@@ -2023,6 +2022,7 @@ mpdecimal
 mpg123
 mplayer
 mencoder
+mpv
 msgpack-c
 msgpack-cxx
 msmtp
@@ -2051,8 +2051,10 @@ nasm
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
+nauty
 nawk
 nbd
+nccl
 ncdu
 ncftp
 ncompress
@@ -2076,11 +2078,9 @@ neon
 neovim-qt
 neovim
 net-snmp
-netavark
 netcdf-fortran
 netcdf
 netcf
-netpbm
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
@@ -2117,7 +2117,6 @@ nuitka
 nuklear
 numactl
 numlockx
-nuspell
 nvchecker
 oath-toolkit
 obconf-qt
@@ -2138,7 +2137,6 @@ odt2txt
 okteta
 okular
 onetbb
-onevpl
 oniguruma
 onionshare
 opam
@@ -2166,6 +2164,7 @@ opendbx
 openexr
 openfec
 openimagedenoise
+openimageio
 openjade
 openjpeg2
 openlibm
@@ -2218,6 +2217,7 @@ pangomm-2.48-docs
 pangomm
 pangomm-docs
 papirus-icon-theme
+epapirus-icon-theme
 par2cmdline
 parallel
 parallel-docs
@@ -2225,11 +2225,11 @@ parley
 parole
 parted
 partitionmanager
+pass
 pastebinit
 pasystray
 patchelf
 patchutils
-pavucontrol-qt
 pavucontrol
 pbzip2
 pc-ble-driver
@@ -2237,6 +2237,7 @@ pcaudiolib
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
+pdal
 pdfarranger
 pdfjs
 pdfmixtool
@@ -2555,6 +2556,7 @@ picard
 picmi
 picom
 pidgin
+pifpaf
 pigeonhole
 pigz
 pim-data-exporter
@@ -2572,7 +2574,6 @@ plasma-framework
 plasma-framework5
 plasma-integration
 plasma-nm
-plasma-pa
 plasma-pass
 plasma-sdk
 plasma-systemmonitor
@@ -2685,9 +2686,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3624,7 +3622,6 @@ python-resolvelib
 python-responses
 python-retrying
 python-rfc3339-validator
-python-rfc3986-validator
 python-rfc3986
 python-rfc3987
 python-rich
@@ -3979,7 +3976,6 @@ qutebrowser
 r
 r8168
 radeontop
-radicale
 raft
 ragel
 range-v3
@@ -4810,7 +4806,6 @@ xdg-utils
 xdotool
 xdp-tools
 libxdp
-xed
 xerces-c
 xf86-input-elographics
 xf86-input-libinput
@@ -5051,3 +5046,6 @@ rdfind
 bpython
 copr-cli
 kdiagram5
+catch2-v2
+nodejs-lts-iron
+openipmi

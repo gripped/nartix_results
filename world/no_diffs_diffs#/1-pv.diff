@@ -1,12 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=pv
+-pkgver=1.8.5
++pkgver=1.8.0
+ pkgrel=1
+ pkgdesc='A terminal-based tool for monitoring the progress of data through a pipeline'
+ arch=(x86_64)
 @@ -8,10 +8,8 @@
  license=('custom:Artistic 2.0')
  depends=(glibc)
  _archive="$pkgname-$pkgver"
 -source=("${url%/*}/sources/$_archive.tar.gz"
 -        "$_archive.tar.gz.sig::${url%/*}/sources/$_archive.tar.gz.txt")
--sha256sums=('5cec4f737826a0eddab471dd3b75a587bd29a2e7cfa30068d57f29439a251fdf'
+-sha256sums=('d22948d06be06a5be37336318de540a2215be10ab0163f8cd23a20149647b780'
 -            'SKIP')
 +source=("${url%/*}/sources/$_archive.tar.gz")
 +sha256sums=('5cec4f737826a0eddab471dd3b75a587bd29a2e7cfa30068d57f29439a251fdf')

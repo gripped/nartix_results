@@ -1,15 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=matrix-synapse
 -_tag=5fa1309c2cf78d6fc2b53e0bc5a6777be807037a
 -pkgver=1.95.1
-+_tag=192470f089d60952f0af6163514bd06f8c535f23
-+pkgver=1.95.0
- pkgrel=1
+-pkgrel=1
++_tag=d75d6d65d1681889db05b077e97fc2ddf123b757
++pkgver=1.97.0
++pkgrel=0.9
  pkgdesc="Matrix reference homeserver"
  url="https://github.com/matrix-org/synapse"
+ arch=('x86_64')
 @@ -11,13 +11,12 @@
           'python-pyopenssl' 'python-yaml' 'python-pyasn1' 'python-pynacl'
           'python-bcrypt' 'python-immutabledict'
@@ -25,7 +27,7 @@
  makedepends=(git python-build python-installer python-wheel python-poetry-core python-setuptools-rust)
  checkdepends=('python-pip' 'python-authlib' 'python-pyjwt' 'python-lxml' 'python-parameterized'
                'python-txredisapi' 'python-hiredis' 'postgresql' 'python-pyicu')
-@@ -32,35 +31,18 @@
+@@ -32,36 +31,17 @@
              'python-authlib: OpenID SSO support')
  source=("$pkgname::git+https://github.com/matrix-org/synapse.git#tag=$_tag"
          'generic_worker.yaml.example'
@@ -44,8 +46,8 @@
              'aadfdd78fe73e6eb325ee4299b8db8b97bfa2f4e7df953aa8477f442598a7ec5'
 -            '65588c8c64dfb84cab831cd8d028a295d753cf7322dd63053e8488466047b45f'
 -            'd8e6b2a43a8a7d8f09c643f32e789a7ffeeb2d20bb07ee88ddc6923e1ab3b0e6')
+-backup=('etc/synapse/log_config.yaml')
 +            '65588c8c64dfb84cab831cd8d028a295d753cf7322dd63053e8488466047b45f')
- backup=('etc/synapse/log_config.yaml')
  install=synapse.install
 -validpgpkeys=('02450A9EDDFEE3E0C730B786A7E4A57880C3A4A9'
 -              '053191DFF4670330465227F7A542E4ED1B0FAC09'
@@ -60,11 +62,12 @@
  prepare() {
  	cd $pkgname
 -	sed 's/poetry-core>=1.1.0,<=1.7.0/poetry-core>=1.0.0/' -i pyproject.toml
-+	sed 's/poetry-core>=1.1.0,<=1.6.0/poetry-core>=1.0.0/' -i pyproject.toml
- 	sed 's/setuptools_rust>=1.3,<=1.6.0/setuptools_rust>=1.3.0/' -i pyproject.toml
+-	sed 's/setuptools_rust>=1.3,<=1.6.0/setuptools_rust>=1.3.0/' -i pyproject.toml
++	sed 's/poetry-core>=1.1.0,<=1.7.0/poetry-core>=1.8.0/' -i pyproject.toml
  }
  
-@@ -86,12 +68,8 @@
+ build() {
+@@ -86,12 +66,8 @@
  	python -m installer --destdir="$pkgdir" dist/*.whl
  
  	install -vdm755 -o 198 -g 198 "$pkgdir"/etc/synapse
@@ -83,7 +86,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,18 +3,17 @@
+@@ -3,19 +3,16 @@
           'python-pyopenssl' 'python-yaml' 'python-pyasn1' 'python-pynacl'
           'python-bcrypt' 'python-immutabledict'
           'python-pillow' 'python-pysaml2'
@@ -94,13 +97,14 @@
           'python-attrs' 'python-netaddr' 'python-sortedcontainers'
           'python-treq' 'python-idna' 'python-jinja' 'python-matrix-common'
 -         'python-bleach' 'python-typing_extensions' 'systemd')
+-backup=('etc/synapse/log_config.yaml')
 +         'python-bleach' 'python-typing_extensions')
- backup=('etc/synapse/log_config.yaml')
  install=synapse.install
  prepare() {
  	cd $pkgname
 -	sed 's/poetry-core>=1.1.0,<=1.7.0/poetry-core>=1.0.0/' -i pyproject.toml
-+	sed 's/poetry-core>=1.1.0,<=1.6.0/poetry-core>=1.0.0/' -i pyproject.toml
- 	sed 's/setuptools_rust>=1.3,<=1.6.0/setuptools_rust>=1.3.0/' -i pyproject.toml
+-	sed 's/setuptools_rust>=1.3,<=1.6.0/setuptools_rust>=1.3.0/' -i pyproject.toml
++	sed 's/poetry-core>=1.1.0,<=1.7.0/poetry-core>=1.8.0/' -i pyproject.toml
  }
  build() {
+ 	cd $pkgname
