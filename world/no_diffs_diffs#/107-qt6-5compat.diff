@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-5compat
+ _qtver=6.6.1
+ pkgver=${_qtver/-/}
+-pkgrel=1
++pkgrel=1.1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -23,7 +23,7 @@
+ sha256sums=('0e1d15b6eda4172383208109d957257c8fa26a8a881f2901a4e9f347a31bc1f2')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }

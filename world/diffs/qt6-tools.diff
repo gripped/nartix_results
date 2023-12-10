@@ -1,28 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
+@@ -2,7 +2,7 @@
  pkgname=qt6-tools
--_qtver=6.6.1
-+_qtver=6.6.0
+ _qtver=6.6.1
  pkgver=${_qtver/-/}
- pkgrel=1
+-pkgrel=1
++pkgrel=1.2
  arch=(x86_64)
-@@ -20,15 +20,20 @@
-             'qt6-declarative: for qdoc and lupdate')
- groups=(qt6)
- _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
--source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz)
--sha256sums=('4939105a7345ab4e19e7caee8654a836e65bd41910359623e0f233f3aff0914a')
-+source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/submodules/$_pkgfn.tar.xz
-+        zstd-target.patch)
-+sha256sums=('4e9feebc142bbb6e453e1dc3277e09ec45c8ef081b5ee2a029e6684b5905ba99'
-+            '876b46461670d21b07d0e6a2ea53311d3c16be9e6fc3746f52b74e687f4eac8b')
- 
- prepare() {
-   sed -e '/qt_internal_set_exceptions_flags/d' -e '/qt_disable_warnings/d' -i $_pkgfn/src/assistant/CMakeLists.txt
-+  patch -d $_pkgfn -p1 < zstd-target.patch
- }
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -29,6 +29,8 @@
  
  build() {
    cmake -B build -S $_pkgfn -G Ninja \
@@ -37,18 +24,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- pkgname=qt6-tools
--_qtver=6.6.1
-+_qtver=6.6.0
- depends=(gcc-libs
-          glibc
-          qt6-base
-@@ -8,9 +8,12 @@
- _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
- prepare() {
-   sed -e '/qt_internal_set_exceptions_flags/d' -e '/qt_disable_warnings/d' -i $_pkgfn/src/assistant/CMakeLists.txt
-+  patch -d $_pkgfn -p1 < zstd-target.patch
+@@ -11,6 +11,8 @@
  }
  build() {
    cmake -B build -S $_pkgfn -G Ninja \

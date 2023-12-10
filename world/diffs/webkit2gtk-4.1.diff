@@ -25,15 +25,6 @@
    )
  
    export CC=clang CXX=clang++
-@@ -120,7 +120,7 @@
-   CFLAGS+=' -g1'
-   CXXFLAGS+=' -g1'
- 
--  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-+  artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-   cmake --build build
- }
- 
 
 
 ############# Stripped diff below #################
@@ -48,7 +39,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -69,12 +68,14 @@
+@@ -69,6 +68,8 @@
      -DUSE_SOUP2=OFF
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
@@ -57,10 +48,3 @@
    )
    export CC=clang CXX=clang++
    LDFLAGS+=" -fuse-ld=lld"
-   CFLAGS+=' -g1'
-   CXXFLAGS+=' -g1'
--  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-+  artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-   cmake --build build
- }
- package_webkit2gtk-4.1() {

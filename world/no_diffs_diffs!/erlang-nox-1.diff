@@ -17,8 +17,8 @@
 +b2sums=('2eed8963d425fe5ff3cd02eeacfd0eb86051225578613e374b71818a91e4f0b6953c4297a06ee59803d9421730c93871660ce66150a13d808f122a6f84f74f2a'
          'SKIP')
  
- build() {
-@@ -42,10 +36,6 @@
+ prepare() {
+@@ -47,10 +41,6 @@
  package() {
    make -C otp DESTDIR="$pkgdir" DOC_TARGETS=chunks install install-docs
  

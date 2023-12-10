@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-websockets
+ _qtver=6.6.1
+ pkgver=${_qtver/-/}
+-pkgrel=1
++pkgrel=1.1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -20,7 +20,7 @@
+ sha256sums=('787514349876d87e046504e5f64886d886bd2993a53fa795598ea07ecc7b0643')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }

@@ -1,9 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -1,44 +1,39 @@
-+pkgname=step-cli
-+pkgver=0.25.0
-+pkgrel=1
+-
+ pkgname=step-cli
+ pkgver=0.25.1
+ pkgrel=1
+-pkgdesc="A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc."
+-url="https://github.com/smallstep/cli"
+-arch=(x86_64)
+-license=(Apache)
+-depends=(glibc)
+-makedepends=(go)
+-optdepends=("step-ca: setup CA/SSO/ACME server")
+-source=($pkgname-$pkgver.tar.gz::https://github.com/smallstep/cli/archive/refs/tags/v${pkgver}.tar.gz)
+-sha512sums=('fd9e277b254a58d456595f8a7ff14a943381b87fc4ba8ca594e71d5076a9d91eda6463034b4a99761eca5697e2e9391ec625aacb3e665bce3bda2b73349316a7')
 +pkgdesc="Zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc."
 +arch=("x86_64")
 +url="https://smallstep.com/cli"
@@ -15,22 +25,9 @@
 +	"https://github.com/smallstep/cli/archive/refs/tags/v$pkgver.tar.gz"
 +)
 +sha256sums=(
-+	"f46cb7432110ffb099745aa53bad30663aba679f6bfde294482621ba46c24ca3"
++	"72629aa3a4a6ec9d3e8488277253e2d23f25eae63bf2e5e1947843a53c05f1aa"
 +)
  
--pkgname=step-cli
--pkgver=0.25.1
--pkgrel=1
--pkgdesc="A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc."
--url="https://github.com/smallstep/cli"
--arch=(x86_64)
--license=(Apache)
--depends=(glibc)
--makedepends=(go)
--optdepends=("step-ca: setup CA/SSO/ACME server")
--source=($pkgname-$pkgver.tar.gz::https://github.com/smallstep/cli/archive/refs/tags/v${pkgver}.tar.gz)
--sha512sums=('fd9e277b254a58d456595f8a7ff14a943381b87fc4ba8ca594e71d5076a9d91eda6463034b4a99761eca5697e2e9391ec625aacb3e665bce3bda2b73349316a7')
--
 -prepare() {
 -  cd cli-${pkgver}
 -  sed -i "s/step/${pkgname}/g" "autocomplete/zsh_autocomplete"

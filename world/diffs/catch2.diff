@@ -5,16 +5,17 @@
  pkgname=catch2
 -_gitcommit=62fd660583d3ae7a7886930b413c3c570e89786c
 -pkgver=2.13.9
+-pkgrel=1
 +_gitcommit=6e79e682b726f524310d55dec8ddac4e9c52fb5f
 +pkgver=3.4.0
- pkgrel=1
++pkgrel=2
  pkgdesc="Modern, C++-native, header-only, test framework for unit-tests, TDD and BDD"
 -arch=('any')
 +arch=('x86_64')
  url="https://github.com/catchorg/catch2"
  license=('Boost')
  makedepends=('git' 'cmake' 'python') # python seems to be necessary for building tests (FS#60273)
-@@ -21,27 +21,23 @@
+@@ -21,27 +21,24 @@
  }
  
  build() {
@@ -22,6 +23,7 @@
 -  export CFLAGS+=" ${CPPFLAGS}"
 -  export CXXFLAGS+=" ${CPPFLAGS}"
 -  cmake -B build \
++  unset CXXFLAGS
 +
 +  cmake -B "${pkgname}"/build \
 +    -S "${pkgname}" \
@@ -59,7 +61,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,14 @@
+@@ -1,16 +1,15 @@
  pkgname=catch2
 -_gitcommit=62fd660583d3ae7a7886930b413c3c570e89786c
 +_gitcommit=6e79e682b726f524310d55dec8ddac4e9c52fb5f
@@ -68,6 +70,7 @@
 -  export CFLAGS+=" ${CPPFLAGS}"
 -  export CXXFLAGS+=" ${CPPFLAGS}"
 -  cmake -B build \
++  unset CXXFLAGS
 +  cmake -B "${pkgname}"/build \
 +    -S "${pkgname}" \
      -DCMAKE_INSTALL_PREFIX=/usr \

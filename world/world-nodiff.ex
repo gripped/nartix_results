@@ -43,7 +43,6 @@ amf-headers
 amfora
 aml
 amtk
-analitza
 android-file-transfer
 android-tools
 android-udev
@@ -361,7 +360,6 @@ diffuse
 digikam
 directx-headers
 discount
-discover
 distcc
 django
 python-django
@@ -385,7 +383,6 @@ docbook-xsl
 docbook2x
 docker-compose
 docx2txt
-dolphin-plugins
 dolphin
 dontpanic
 dos2unix
@@ -593,6 +590,7 @@ girara
 git-lfs
 git
 gitea
+gjs
 gl2ps
 glad
 glade
@@ -844,6 +842,7 @@ inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1346,7 +1345,6 @@ libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
-libdecor
 libdeflate
 libdex
 libdex-docs
@@ -2117,6 +2115,7 @@ nuitka
 nuklear
 numactl
 numlockx
+nuspell
 nvchecker
 oath-toolkit
 obconf-qt
@@ -2124,8 +2123,8 @@ obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
+ocaml-ctypes
 ocaml-integers
-ocaml-pp
 ocaml-result
 ocaml-stdlib-shims
 ocaml-topkg
@@ -2610,6 +2609,7 @@ portmidi
 portsmf
 postgis
 postgrey
+postorius
 potrace
 powerdevil
 powerline
@@ -2686,6 +2686,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -2695,16 +2698,17 @@ python-aafigure
 python-absl
 python-acme
 python-adblock
-python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
+python-aiohttp
 python-aioitertools
 python-aiopg
 python-aioquic
+python-aioresponses
 python-aiorpcx
 python-aiosignal
 python-aiosmtpd
@@ -2751,6 +2755,7 @@ python-asynctest
 python-atomicwrites
 python-atpublic
 python-attrdict
+python-attrs
 python-augeas
 python-authheaders
 python-authlib
@@ -2852,7 +2857,6 @@ python-clint
 python-cloudpickle
 python-cmarkgfm
 python-cmd2
-python-cmsis-pack-manager
 python-cogapp
 python-colorama
 python-colored-traceback
@@ -2982,6 +2986,7 @@ python-fastbencode
 python-fasteners
 python-fastimport
 python-fastjsonschema
+python-fastnumbers
 python-fastparquet
 python-fastpbkdf2
 python-faust-cchardet
@@ -3055,6 +3060,7 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
+python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -3092,6 +3098,7 @@ python-hyperframe
 python-hyperlink
 python-hypothesis-auto
 python-hypothesis-fspaths
+python-hypothesis
 python-hypothesmith
 python-ibm-db-sa
 python-icecream
@@ -3158,7 +3165,6 @@ python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
-python-jupyter-ydoc
 python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
@@ -3309,6 +3315,7 @@ python-oslo-db
 python-oslo-i18n
 python-oslo-log
 python-oslo-serialization
+python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
@@ -3622,6 +3629,7 @@ python-resolvelib
 python-responses
 python-retrying
 python-rfc3339-validator
+python-rfc3986-validator
 python-rfc3986
 python-rfc3987
 python-rich
@@ -3661,6 +3669,7 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
+python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely
@@ -3694,6 +3703,7 @@ python-sphinx-autobuild
 python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
+python-sphinx-furo
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -3958,7 +3968,37 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
-qt6-graphs
+qt6-5compat
+qt6-charts
+qt6-connectivity
+qt6-datavis3d
+qt6-declarative
+qt6-httpserver
+qt6-imageformats
+qt6-languageserver
+qt6-lottie
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
+qt6-networkauth
+qt6-quick3d
+qt6-quick3dphysics
+qt6-quickeffectmaker
+qt6-quicktimeline
+qt6-remoteobjects
+qt6-scxml
+qt6-sensors
+qt6-serialbus
+qt6-shadertools
+qt6-speech
+qt6-svg
+qt6-translations
+qt6-virtualkeyboard
+qt6-wayland
+qt6-webchannel
+qt6-webengine
+qt6-websockets
+qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
@@ -4008,6 +4048,7 @@ rhino
 java-rhino
 rhino-javadoc
 rinutils
+ripgrep
 ristretto
 rkcommon
 rnnoise
@@ -4026,7 +4067,6 @@ rssguard-lite
 rst2pdf
 rtaudio
 rtaudio-docs
-rtl-sdr
 rtmpdump
 rtorrent
 rubberband
@@ -4315,6 +4355,7 @@ sfml
 sfsexp
 sg3_utils
 sgml-common
+shaderc
 shairplay
 shapelib
 shared-color-targets
@@ -4327,6 +4368,7 @@ signon-kwallet-extension
 signon-ui
 signond
 simple-scan
+sip
 skanlite
 skanpage
 slang
@@ -4366,6 +4408,7 @@ spamassassin
 spandsp
 spandsp-docs
 spatialindex
+spdlog
 speakup-utils
 spectacle
 speech-dispatcher
@@ -4456,6 +4499,7 @@ telepathy-logger
 telepathy-mission-control
 telepathy-qt
 telepathy-salut
+tellico
 telly-skout
 template-glib
 terminator
@@ -4690,6 +4734,7 @@ unrealircd
 unrtf
 unzip
 uptimed
+upx
 uriparser
 usb_modeswitch
 usbredir
@@ -4708,6 +4753,7 @@ vcdimager
 vde2
 vdpauinfo
 veracrypt
+verdict
 vice
 vid.stab
 viewnior
@@ -4734,7 +4780,8 @@ python-volume_key
 volumeicon
 vorbis-tools
 vsftpd
-vtk
+vst3sdk
+vst3sdk-docs
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -4764,6 +4811,9 @@ whois
 wildmidi
 wireguard-tools
 wireless_tools
+wireshark
+wireshark-cli
+wireshark-qt
 wl-clipboard
 wlroots
 wolfssl
@@ -4771,6 +4821,10 @@ words
 wpebackend-fdo
 wqy-zenhei
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264
@@ -4806,6 +4860,7 @@ xdg-utils
 xdotool
 xdp-tools
 libxdp
+xed
 xerces-c
 xf86-input-elographics
 xf86-input-libinput
@@ -5049,3 +5104,19 @@ kdiagram5
 catch2-v2
 nodejs-lts-iron
 openipmi
+libgssglue
+python-copr
+python-curtsies
+python-cwcwidth
+python-libtmux
+python-libvcs
+python-regress
+python-requests-gssapi
+ruby-rubocop-performance
+ruby-rubocop-rake
+ruby-rubocop-rspec
+ruby-stackprof
+ruby-test-queue
+tmuxp
+vcspull
+wlroots0.16

@@ -16,24 +16,15 @@
    unifdef
    wayland-protocols
  )
-@@ -110,6 +108,8 @@
-     -DCMAKE_SKIP_RPATH=ON
-     -DUSE_AVIF=ON
+@@ -112,6 +110,8 @@
      -DUSE_SOUP2=ON
-+    -DUSE_SYSTEMD=OFF
-+    -DENABLE_JOURNALD_LOG=OFF
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
++    -DUSE_SYSTEMD=OFF
++    -DENABLE_JOURNALD_LOG=OFF
    )
-@@ -120,7 +120,7 @@
-   CFLAGS+=' -g1'
-   CXXFLAGS+=' -g1'
  
--  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-+  artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-   cmake --build build
- }
- 
+   export CC=clang CXX=clang++
 
 
 ############# Stripped diff below #################
@@ -48,21 +39,12 @@
    libtasn1
    libwebp
    libwpe
-@@ -67,6 +66,8 @@
-     -DCMAKE_SKIP_RPATH=ON
-     -DUSE_AVIF=ON
+@@ -69,6 +68,8 @@
      -DUSE_SOUP2=ON
-+    -DUSE_SYSTEMD=OFF
-+    -DENABLE_JOURNALD_LOG=OFF
      -DENABLE_DOCUMENTATION=ON
      -DENABLE_MINIBROWSER=ON
++    -DUSE_SYSTEMD=OFF
++    -DENABLE_JOURNALD_LOG=OFF
    )
-@@ -74,7 +75,7 @@
+   export CC=clang CXX=clang++
    LDFLAGS+=" -fuse-ld=lld"
-   CFLAGS+=' -g1'
-   CXXFLAGS+=' -g1'
--  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-+  artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-   cmake --build build
- }
- package_webkit2gtk() {

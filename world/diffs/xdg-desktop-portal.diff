@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=xdg-desktop-portal
--pkgver=1.18.2
-+pkgver=1.18.1
- pkgrel=1
- pkgdesc="Desktop integration portals for sandboxed apps"
- url="https://flatpak.github.io/xdg-desktop-portal/"
 @@ -13,7 +13,6 @@
    glib2
    pipewire
@@ -16,15 +8,6 @@
  )
  makedepends=(
    docbook-xsl
-@@ -29,7 +28,7 @@
-   xmlto
- )
- optdepends=('xdg-desktop-portal-impl: Portal backends')
--_commit=fa8d41a2f9a5d30a1e41568b6fb53b046dce14dc  # tags/1.18.2
-+_commit=37a6f7c8b8e08b9861f05e172cd4e0d07a832c4d  # tags/1.18.1
- source=("git+https://github.com/flatpak/xdg-desktop-portal#commit=$_commit")
- b2sums=('SKIP')
- 
 @@ -43,7 +42,7 @@
  }
  

@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=rtl-sdr
+ pkgver=2.0.1
+-pkgrel=2
++pkgrel=3
+ epoch=1
+ pkgdesc='Driver for Realtek RTL2832U, allowing general purpose software defined radio (SDR)'
+ arch=('x86_64')
+@@ -14,9 +14,11 @@
+ source=(
+   "$pkgname::git+https://gitea.osmocom.org/sdr/rtl-sdr#commit=$_commit"
+   'fix-udev-directory.patch'
++  "$pkgname.sysusers"
+ )
+ b2sums=('SKIP'
+-        '2356582926b8bb0b1b7bbf22dd046ae9c55855a925818730d8e9558e4620f8f6599663aec50e0bdb5c1e7f1242e8f170d2f9eecb0808e42f53d06ea6a812ec64')
++        '2356582926b8bb0b1b7bbf22dd046ae9c55855a925818730d8e9558e4620f8f6599663aec50e0bdb5c1e7f1242e8f170d2f9eecb0808e42f53d06ea6a812ec64'
++        'ff6d84a21f23ea3da8771cbf6f6344d7ac7a52a0987b6f8974bc083efee3389250402e861b233460228439fb8c7e35c4f98cf91254ecc5d956742158fd565cc3')
+ 
+ pkgver() {
+   cd "$pkgname"
+@@ -29,7 +31,7 @@
+ 
+   patch -p1 -i "$srcdir/fix-udev-directory.patch"
+ 
+-  sed -e 's/GROUP="plugdev"/TAG+="uaccess"/' -i rtl-sdr.rules
++  sed -e 's/GROUP="plugdev"/GROUP="rtlsdr", TAG+="uaccess"/' -i rtl-sdr.rules
+ }
+ 
+ build() {
+@@ -48,6 +50,8 @@
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+ 
++  install -vDm644 $pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
++
+   cd "$pkgname"
+ 
+   install -vDm644 debian/rtl-sdr-blacklist.conf "$pkgdir/usr/lib/modprobe.d/rtlsdr.conf"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ prepare() {
+   cd "$pkgname"
+   patch -p1 -i "$srcdir/fix-udev-directory.patch"
+-  sed -e 's/GROUP="plugdev"/TAG+="uaccess"/' -i rtl-sdr.rules
++  sed -e 's/GROUP="plugdev"/GROUP="rtlsdr", TAG+="uaccess"/' -i rtl-sdr.rules
+ }
+ build() {
+   cmake \

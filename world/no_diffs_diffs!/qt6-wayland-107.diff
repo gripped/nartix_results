@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-wayland
+ _qtver=6.6.1
+ pkgver=${_qtver/-/}
+-pkgrel=1
++pkgrel=1.1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -28,7 +28,7 @@
+ }
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+   patch -d $_pkgfn -p1 < qtbug-119110.patch
+ }
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }

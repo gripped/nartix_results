@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-lottie
+ _qtver=6.6.1
+ pkgver=${_qtver/-/}
+-pkgrel=1
++pkgrel=1.1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -20,7 +20,7 @@
+ sha256sums=('49cb059364f78936c09fb0f53dad23363ba8ae29d931cd8380cbdff4bda09fc8')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
