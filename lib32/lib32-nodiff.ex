@@ -2,7 +2,6 @@ lib32-aalib
 lib32-acl
 lib32-alsa-lib
 lib32-alsa-plugins
-lib32-amdvlk
 lib32-at-spi2-core
 lib32-attr
 lib32-brotli
@@ -38,7 +37,6 @@ lib32-gtk3
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
-lib32-icu
 lib32-imlib2
 lib32-json-glib
 lib32-keyutils
@@ -134,7 +132,6 @@ lib32-lz4
 lib32-mpg123
 lib32-ncurses
 lib32-nettle
-lib32-nspr
 lib32-nss
 lib32-ocl-icd
 lib32-openal
@@ -171,4 +168,4 @@ lib32-zlib
 lib32-zstd
 multilib-devel
 steam
-wine-staging
+winetricks

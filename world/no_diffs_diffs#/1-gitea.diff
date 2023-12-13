@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -23,11 +23,9 @@
- _tag=66b82277d43bc96be58c8660bfc0488b3a09dc98 # git rev-parse v${pkgver}
+ _tag=ba082b2ccb637c8207237c4ee708bda263560dc2 # git rev-parse v${pkgver}
  source=(git+https://github.com/go-gitea/gitea.git#tag=${_tag}?signed
          gitea.tmpfiles
 -        gitea.service

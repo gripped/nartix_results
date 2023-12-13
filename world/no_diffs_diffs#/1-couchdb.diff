@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=couchdb
+ pkgver=3.3.2
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Document-oriented database that can be queried and indexed in a MapReduce fashion using JSON"
+ arch=(x86_64)
+ url="https://couchdb.apache.org"
 @@ -18,7 +18,6 @@
          erlang-26.patch
          erlang-26-compatibilty.patch
@@ -16,7 +25,7 @@
              '3ed1ad2a37a068ce194b03fb72eb35285d60fa7faf2d2c2bb710703d229108a8'
              '7331b9675e3668c5f0d632bee5d154c061cc3e60d451bef3dc0d0ab2dadfa006')
  
-@@ -64,7 +62,6 @@
+@@ -64,11 +62,10 @@
  
    cd "${srcdir}"
    install -Dm644 ${pkgname}.default "${pkgdir}"/etc/default/${pkgname}
@@ -24,3 +33,8 @@
    install -Dm644 ${pkgname}.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/${pkgname}.conf
    install -Dm644 ${pkgname}.sysusers "${pkgdir}"/usr/lib/sysusers.d/${pkgname}.conf
  
+-  rm -r "${pkgdir}"/usr/lib/couchdb/erts-14.0.1/{doc,include,lib,man,src}
++  rm -r "${pkgdir}"/usr/lib/couchdb/erts-*/{doc,include,lib,man,src}
+   rm -rv "${pkgdir}"/usr/lib/couchdb/etc/
+   rm -rv "${pkgdir}"/usr/lib/couchdb/lib/couch-${pkgver}/priv/couch_{ejson_compare,js}
+ }

@@ -154,7 +154,6 @@ net-tools
 nettle
 nilfs-utils
 npth
-nspr
 nss
 ca-certificates-mozilla
 openresolv

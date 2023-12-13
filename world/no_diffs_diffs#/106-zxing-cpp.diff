@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
- sha256sums=('6d54e403592ec7a143791c6526c1baafddf4c0897bb49b1af72b70a0f0c4a3fe')
+@@ -14,7 +14,7 @@
+ sha256sums=('02078ae15f19f9d423a441f205b1d1bee32349ddda7467e2c84e8f08876f8635')
  
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=zxing-cpp
- depends=(gcc-libs)
+@@ -2,7 +2,7 @@
+ depends=(gcc-libs
+          glibc)
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

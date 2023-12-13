@@ -7,7 +7,7 @@
 -source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
 +source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
 +		no-systemd.patch)
- sha256sums=('55c397f8758b998cb3fd1da9f105d5d956714cb032045382618d95ff260fdd12'
+ sha256sums=('a3ea4794ca1d8e31cacfe78301884419cfd9daaf939c5d843718372b65657fd0'
 -            'SKIP')
 +            'SKIP'
 +            'b529848e4d4d41675578748e6c8a87bfd875a8ac9af53c988ea5bebcea3de1b5')

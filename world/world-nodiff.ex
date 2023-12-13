@@ -43,6 +43,8 @@ amf-headers
 amfora
 aml
 amtk
+analitza
+analitza5
 android-file-transfer
 android-tools
 android-udev
@@ -52,6 +54,8 @@ ansible
 ant
 ant-doc
 anthy
+aom
+aom-docs
 apache-orc
 apitrace
 apparmor
@@ -228,6 +232,7 @@ python-capstone
 cargo-c
 caribou
 catatonit
+catch2
 catdoc
 catfish
 cbatticon
@@ -258,6 +263,7 @@ cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
+cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
@@ -360,6 +366,7 @@ diffuse
 digikam
 directx-headers
 discount
+discover
 distcc
 django
 python-django
@@ -383,6 +390,7 @@ docbook-xsl
 docbook2x
 docker-compose
 docx2txt
+dolphin-plugins
 dolphin
 dontpanic
 dos2unix
@@ -439,9 +447,6 @@ ethtool
 eventviews
 evince
 evince-lib-docs
-evolution-data-server
-libedataserverui4
-evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
@@ -547,6 +552,7 @@ fwknop
 fzf
 gajim
 galculator
+gamescope
 gammastep
 garcon
 gavl
@@ -643,6 +649,7 @@ gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
+gnome-shell-extensions
 gnome-software
 gnome-sound-recorder
 gnome-sudoku
@@ -659,7 +666,6 @@ gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
-gnustep-base
 gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
@@ -1317,7 +1323,6 @@ libcbor
 libcddb
 libcdio-paranoia
 libcdio
-libcdr
 libcerf
 libcgif
 libchamplain
@@ -1345,6 +1350,7 @@ libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
+libdecor
 libdeflate
 libdex
 libdex-docs
@@ -1562,7 +1568,6 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpgm
-libphonenumber
 libpinyin
 libplist
 libpng12
@@ -1586,7 +1591,6 @@ libqtxdg
 libquotient
 libquvi-scripts
 libquvi
-libqxp
 librabbitmq-c
 libraqm
 libraw
@@ -1677,7 +1681,6 @@ libvdpau
 libvips
 libvirt-python
 libvirt
-libvisio
 libvisual
 libvncserver
 libvoikko
@@ -1749,7 +1752,6 @@ libytnef
 libyuv
 libzen
 libzip
-libzmf
 liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -1988,6 +1990,7 @@ mimalloc
 mimetic
 minicom
 minidlna
+minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2136,6 +2139,7 @@ odt2txt
 okteta
 okular
 onetbb
+onevpl
 oniguruma
 onionshare
 opam
@@ -2229,6 +2233,7 @@ pastebinit
 pasystray
 patchelf
 patchutils
+pavucontrol-qt
 pavucontrol
 pbzip2
 pc-ble-driver
@@ -2572,7 +2577,9 @@ plasma-firewall
 plasma-framework
 plasma-framework5
 plasma-integration
+plasma-meta
 plasma-nm
+plasma-pa
 plasma-pass
 plasma-sdk
 plasma-systemmonitor
@@ -2698,6 +2705,7 @@ python-aafigure
 python-absl
 python-acme
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -2857,6 +2865,7 @@ python-clint
 python-cloudpickle
 python-cmarkgfm
 python-cmd2
+python-cmsis-pack-manager
 python-cogapp
 python-colorama
 python-colored-traceback
@@ -2992,7 +3001,6 @@ python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
-python-feedparser
 python-fido2
 python-fields
 python-filebytes
@@ -3164,7 +3172,7 @@ python-jupyter-client
 python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
-python-jupyter-server-terminals
+python-jupyter-ydoc
 python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
@@ -3912,6 +3920,7 @@ python-zopfli
 python-zstandard
 pyxdg
 qalculate-qt
+qastools
 qbe
 qbs
 qca
@@ -3960,7 +3969,6 @@ qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
 qt5-webchannel
-qt5-webengine
 qt5-webglplugin
 qt5-websockets
 qt5-webview
@@ -3968,7 +3976,6 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
-qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
@@ -3992,11 +3999,9 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4016,13 +4021,13 @@ qutebrowser
 r
 r8168
 radeontop
+radicale
 raft
 ragel
 range-v3
 ranger
 rapidfuzz-cpp
 rapidjson
-raptor
 rasqal
 rav1e
 rawtherapee
@@ -4067,6 +4072,7 @@ rssguard-lite
 rst2pdf
 rtaudio
 rtaudio-docs
+rtl-sdr
 rtmpdump
 rtorrent
 rubberband
@@ -4381,7 +4387,6 @@ slurp
 smb4k
 smpeg
 smplayer
-snapper
 snappy
 sndio
 snorenotify
@@ -4771,7 +4776,6 @@ virtiofsd
 virtualbox-guest-iso
 virtualgl
 vkd3d
-vmaf
 vncdotool
 vnstat
 volatility3
@@ -4782,6 +4786,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -4815,7 +4820,6 @@ wireshark
 wireshark-cli
 wireshark-qt
 wl-clipboard
-wlroots
 wolfssl
 words
 wpebackend-fdo
@@ -5006,6 +5010,7 @@ zathura-pdf-poppler
 zathura-ps
 zathura
 zbar
+zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
@@ -5120,3 +5125,8 @@ ruby-test-queue
 tmuxp
 vcspull
 wlroots0.16
+kgamma
+python-pycrdt-websocket
+python-pycrdt
+zix
+zix-docs

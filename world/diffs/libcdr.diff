@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=libcdr
+ pkgver=0.1.7
+-pkgrel=6
++pkgrel=7
+ pkgdesc="CorelDraw file format importer library for LibreOffice"
+ arch=('x86_64')
+ url="https://wiki.documentfoundation.org/DLP/Libraries/libcdr"
+ license=('GPL2' 'LGPL2.1' 'MPL')
+-depends=('libwpd' 'lcms2' 'icu' 'librevenge')
++depends=('lcms2' 'icu' 'librevenge'
++         'zlib' 'gcc-libs' 'glibc')
+ makedepends=('libwpg' 'boost' 'doxygen' 'cppunit')
+ source=(https://dev-www.libreoffice.org/src/$pkgname/$pkgname-$pkgver.tar.xz)
+ sha256sums=('5666249d613466b9aa1e987ea4109c04365866e9277d80f6cd9663e86b8ecdd4')
+@@ -14,6 +15,7 @@
+ build() {
+   cd $pkgname-$pkgver
+   ./configure --prefix=/usr
++  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,9 @@
+ pkgname=libcdr
+-depends=('libwpd' 'lcms2' 'icu' 'librevenge')
++depends=('lcms2' 'icu' 'librevenge'
++         'zlib' 'gcc-libs' 'glibc')
+ build() {
+   cd $pkgname-$pkgver
+   ./configure --prefix=/usr
++  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }

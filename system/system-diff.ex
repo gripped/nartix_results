@@ -36,6 +36,7 @@ mdadm
 mkinitcpio
 nfs-utils
 nfsidmap
+nspr
 openldap
 libldap
 p11-kit

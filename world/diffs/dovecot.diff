@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=dovecot
+ pkgver=2.3.20
+-pkgrel=3
++pkgrel=4
+ 
+ pkgdesc="An IMAP and POP3 server written with security primarily in mind"
+ url="https://dovecot.org/"
 @@ -10,8 +10,8 @@
  license=("LGPL")
  
@@ -11,7 +20,27 @@
  optdepends=('libldap: ldap plugin'
              'lua53: LUA auth and push support'
              'clucene: alternative FTS indexer')
-@@ -60,6 +60,7 @@
+@@ -43,14 +43,17 @@
+ )
+ 
+ prepare() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
++  cd "${pkgname}-${pkgver}"
+   patch -Np1 -i ../dovecot-2.3.14-opensslv3.patch
+ 
+   sed -i 's:OPENSSLCONFIG=${OPENSSLCONFIG-dovecot-openssl.cnf}:OPENSSLCONFIG=${OPENSSLCONFIG- /etc/ssl/dovecot-openssl.cnf}:' doc/mkcert.sh
+ }
+ 
+ build() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
++  cd "${pkgname}-${pkgver}"
++
++  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ 
+   ./configure \
+     --prefix=/usr \
+@@ -60,6 +63,7 @@
      --libexecdir=/usr/lib \
      --with-rundir=/run/dovecot \
      --with-moduledir=/usr/lib/dovecot/modules \
@@ -19,13 +48,29 @@
      --disable-static \
      --with-nss \
      --with-pam \
+@@ -88,13 +92,13 @@
+ }
+ 
+ check() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
++  cd "${pkgname}-${pkgver}"
+   make check
+ }
+ 
+ package() {
+ 
+-  cd "${srcdir}/${pkgname}-${pkgver}"
++  cd "${pkgname}-${pkgver}"
+   make DESTDIR="$pkgdir" install
+   install -Dm644 "${srcdir}/dovecot.sysusersd" \
+     "${pkgdir}/usr/lib/sysusers.d/dovecot.conf"
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,16 +1,18 @@
  pkgname=dovecot
  depends=('krb5' 'openssl' 'sqlite' 'mariadb-libs' 'libsodium'
 -         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam' 'systemd-libs')
@@ -33,7 +78,21 @@
  provides=('imap-server' 'pop3-server')
  backup=('etc/pam.d/dovecot')
  options=('!emptydirs' '!lto')
-@@ -19,6 +19,7 @@
+ prepare() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
++  cd "${pkgname}-${pkgver}"
+   patch -Np1 -i ../dovecot-2.3.14-opensslv3.patch
+   sed -i 's:OPENSSLCONFIG=${OPENSSLCONFIG-dovecot-openssl.cnf}:OPENSSLCONFIG=${OPENSSLCONFIG- /etc/ssl/dovecot-openssl.cnf}:' doc/mkcert.sh
+ }
+ build() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
++  cd "${pkgname}-${pkgver}"
++  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   ./configure \
+     --prefix=/usr \
+     --sbindir=/usr/bin \
+@@ -19,6 +21,7 @@
      --libexecdir=/usr/lib \
      --with-rundir=/run/dovecot \
      --with-moduledir=/usr/lib/dovecot/modules \

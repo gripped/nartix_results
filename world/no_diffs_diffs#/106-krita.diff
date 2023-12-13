@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -78,7 +78,7 @@
-               '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
+@@ -87,7 +87,7 @@
+ }
  
  build() {
 -  cmake -B build -S $pkgname-$_pkgver \
@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -42,7 +42,7 @@
-  <dimula73@gmail.com>
-               '064182440C674D9F8D0F6F8B4DA79EDA231C852B') # Stichting Krita Foundation <foundation@krita.org>
+@@ -46,7 +46,7 @@
+   patch -d $pkgname-$_pkgver -p1 < xsimd-12.patch
+ }
  build() {
 -  cmake -B build -S $pkgname-$_pkgver \
 +  artix-cmake -B build -S $pkgname-$_pkgver \

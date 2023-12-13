@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -70,7 +70,7 @@
+ }
+ 
+ build() {
+-  arch-meson gamescope build \
++  artix-meson gamescope build \
+     -Dforce_fallback_for=stb \
+     -Dpipewire=enabled
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,7 @@
+   git -c protocol.file.allow=always submodule update
+ }
+ build() {
+-  arch-meson gamescope build \
++  artix-meson gamescope build \
+     -Dforce_fallback_for=stb \
+     -Dpipewire=enabled
+   meson compile -C build

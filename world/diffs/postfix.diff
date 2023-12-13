@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   postfix-{cdb,ldap,lmdb,mysql,pcre,pgsql,sqlite}
+ )
+ pkgver=3.8.3
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Fast, easy to administer, secure mail server"
+ arch=(x86_64)
+ url="https://www.postfix.org/"
 @@ -33,20 +33,17 @@
    https://de.postfix.org/ftpmirror/official/$pkgbase-$pkgver.tar.gz
    $pkgbase-$pkgver.tar.gz.sig::https://de.postfix.org/ftpmirror/official/$pkgbase-$pkgver.tar.gz.gpg2

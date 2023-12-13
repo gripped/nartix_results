@@ -76,3 +76,13 @@ wireplumber-dinit
 xcursor-breeze
 xcursor-premium
 firedragon
+act-runner-openrc
+act-runner
+box2d
+doctest
+firefox
+libe-book
+liblangtag
+libmspub
+signal-desktop
+telegram-desktop

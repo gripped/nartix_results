@@ -1,24 +1,49 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -54,6 +54,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=waybar
+ pkgver=0.9.24
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors'
+ arch=('x86_64')
+ url="https://github.com/Alexays/Waybar/"
+@@ -54,17 +54,12 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
 +          -Dsystemd=disabled \
            -Dexperimental=true \
            -Dcava=disabled \
-           -Dtests=disabled \
+-          -Dtests=enabled \
++          -Dtests=disabled \
+           build
+     ninja -C build
+-}
+-
+-check() {
+-    cd "Waybar-$pkgver"
+-    meson test -C build --no-rebuild --suite waybar
+-
+ }
+ 
+ package() {
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,6 +34,7 @@
+@@ -34,9 +34,10 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
 +          -Dsystemd=disabled \
            -Dexperimental=true \
            -Dcava=disabled \
-           -Dtests=disabled \
+-          -Dtests=enabled \
++          -Dtests=disabled \
+           build
+     ninja -C build
+ }

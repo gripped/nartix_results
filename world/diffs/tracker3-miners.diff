@@ -1,10 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -56,9 +56,10 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=tracker3-miners
+ pkgver=3.6.2
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Filesystem indexer and metadata extractor"
+ url="https://tracker.gnome.org/"
+ arch=(x86_64)
+@@ -55,10 +55,11 @@
+ 
  build() {
    local meson_options=(
-     -D tests_tap_protocol=true
 +    -D systemd_user_services=false
+     -D tests_tap_protocol=true
    )
  
 -  arch-meson tracker-miners build "${meson_options[@]}"
@@ -18,11 +28,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,8 +25,9 @@
+@@ -24,9 +24,10 @@
+ }
  build() {
    local meson_options=(
-     -D tests_tap_protocol=true
 +    -D systemd_user_services=false
+     -D tests_tap_protocol=true
    )
 -  arch-meson tracker-miners build "${meson_options[@]}"
 +  artix-meson tracker-miners build "${meson_options[@]}"
