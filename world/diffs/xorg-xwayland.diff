@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,13 +7,13 @@
+@@ -1,21 +1,21 @@
+ 
+ pkgname=xorg-xwayland
+-pkgver=23.2.3
++pkgver=23.2.2
+ pkgrel=1
+ arch=('x86_64')
+ license=('custom')
  groups=('xorg')
  url="https://xorg.freedesktop.org"
  pkgdesc="run X clients under wayland"
@@ -14,8 +21,11 @@
 -             'systemd' 'egl-wayland')
 +             'elogind' 'egl-wayland')
  source=(https://xorg.freedesktop.org/archive/individual/xserver/xwayland-$pkgver.tar.xz{,.sig})
- sha512sums=('f5b319fdace7d7c078544730ecd26afeb63b1a0c779fb097455147945df85af32d9e91501ebdb70209d48e8a3ead3b23be31e9d5118358ac17e699abb4b6ac07'
+-sha512sums=('37198aa2f06313a0cb2add51cc78f81b26a42f2c9d55a0d3eecf958777107ea5560961c128f2d0af055f7460ba10fadb1b9050251c2c50f2251b40ab517e79cd'
++sha512sums=('f5b319fdace7d7c078544730ecd26afeb63b1a0c779fb097455147945df85af32d9e91501ebdb70209d48e8a3ead3b23be31e9d5118358ac17e699abb4b6ac07'
              'SKIP')
+ provides=('xorg-server-xwayland')
+ conflicts=('xorg-server-xwayland')
 @@ -25,7 +25,7 @@
  
  

@@ -9,6 +9,7 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
+argyllcms
 aspell-uk
 assimp
 at-spi2-core
@@ -357,7 +358,6 @@ mutter-docs
 ndctl
 ndisc6
 netavark
-netpbm
 netplan
 networkmanager
 libnm
@@ -495,9 +495,7 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
-python-feedparser
 python-httpcore
-python-jupyter-server-terminals
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -747,6 +745,7 @@ xorg-xlogo
 xorg-xwayland
 xscreensaver
 yubikey-personalization
+zenity
 zeromq
 znc
 senpai

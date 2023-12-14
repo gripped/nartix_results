@@ -14,6 +14,7 @@ libelf
 glibc
 lib32-glibc
 glibc-locales
+grub
 gssproxy
 inetutils
 iptables
@@ -39,6 +40,7 @@ nfsidmap
 nspr
 openldap
 libldap
+openresolv
 p11-kit
 libp11-kit
 p11-kit-docs

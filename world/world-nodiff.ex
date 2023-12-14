@@ -70,7 +70,6 @@ arc-icon-theme
 archey3
 archlinux-appstream-data
 ardour
-argyllcms
 aria2
 arianna
 aribb24
@@ -2082,6 +2081,7 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
+netpbm
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
@@ -3001,6 +3001,7 @@ python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
+python-feedparser
 python-fido2
 python-fields
 python-filebytes
@@ -3172,6 +3173,7 @@ python-jupyter-client
 python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
+python-jupyter-server-terminals
 python-jupyter-ydoc
 python-jupyterlab-server
 python-jupyterlab_server
@@ -5011,7 +5013,6 @@ zathura-ps
 zathura
 zbar
 zeitgeist
-zenity
 zeroc-ice
 zeroc-ice-java
 zfp
