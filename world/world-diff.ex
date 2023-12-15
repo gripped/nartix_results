@@ -112,7 +112,6 @@ flatpak-docs
 fluidsynth
 folks
 fprintd
-freerdp
 fwupd-efi
 fwupd
 gala
@@ -136,7 +135,6 @@ gnome-desktop-4
 gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
-gnome-nibbles
 gnome-online-accounts
 libgoa
 gnome-panel
@@ -213,6 +211,8 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+jasper
+jasper-doc
 java-openjdk
 jre-openjdk-headless
 jre-openjdk
@@ -260,6 +260,7 @@ libfdk-aac
 libfido2
 libfprint
 libgdata
+libgnome-games-support
 libgudev
 libguestfs
 libhandy
@@ -346,6 +347,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+minio
 modemmanager
 libmm-glib
 mosquitto
@@ -366,6 +368,7 @@ nginx
 nginx-src
 nrpe
 nsd
+nuitka
 nvidia-open
 nvidia-settings
 nvidia-utils-dinit
@@ -745,11 +748,12 @@ xorg-xlogo
 xorg-xwayland
 xscreensaver
 yubikey-personalization
-zenity
 zeromq
 znc
 senpai
 umurmur
+python-geoip2
 python-pipenv-to-requirements
 vault
 modest
+libgnome-games-support-2

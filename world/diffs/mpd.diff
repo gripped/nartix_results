@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mpd
+ pkgver=0.23.14
+-pkgrel=2
++pkgrel=3
+ pkgdesc="Flexible, powerful, server-side application for playing music"
+ arch=(x86_64)
+ url="https://www.musicpd.org/"
 @@ -67,7 +67,6 @@
    libpipewire
    python-sphinx
@@ -20,11 +29,12 @@
    ninja -C build
  }
  
-@@ -153,14 +153,12 @@
+@@ -153,14 +153,13 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
 -    systemd-libs libsystemd.so
++    udev
      twolame libtwolame.so
      yajl libyajl.so
    )
@@ -52,11 +62,12 @@
    ninja -C build
  }
  package() {
-@@ -71,13 +72,11 @@
+@@ -71,13 +72,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
 -    systemd-libs libsystemd.so
++    udev
      twolame libtwolame.so
      yajl libyajl.so
    )

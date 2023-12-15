@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pytest-asyncio
+-pkgver=0.23.0
+-_commit=0b34e8e55bfe7037515df95db5f8f5c180be6699
++pkgver=0.22.0
++_commit=a950f553681a2fbc2a026372021f944a35cf5cee
+ pkgrel=1
+ pkgdesc="Pytest support for asyncio."
+ arch=('any')
+@@ -9,7 +9,7 @@
+ url="https://github.com/pytest-dev/pytest-asyncio/"
+ depends=('python-pytest')
+ makedepends=('git' 'python-build' 'python-installer' 'python-setuptools-scm' 'python-wheel')
+-checkdepends=('python-hypothesis')
++checkdepends=('python-flaky' 'python-hypothesis' 'python-pytest-trio')
+ source=("git+https://github.com/pytest-dev/pytest-asyncio.git#commit=$_commit")
+ sha512sums=('SKIP')
+ 

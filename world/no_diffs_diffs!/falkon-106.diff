@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
-               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+@@ -31,7 +31,7 @@
+ }
  
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
@@ -15,9 +15,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(qt5-webengine qt5-x11extras qt5-svg karchive5)
- groups=(kde-applications kde-network)
+@@ -7,7 +7,7 @@
+   patch -Np1 -i ../bfba0a5.patch
+ }
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \

@@ -1,5 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=minio
+-pkgver=2023.12.13
+-_timever=T23-28-55Z
++pkgver=2023.12.09
++_timever=T18-17-51Z
+ _pkgver="${pkgver//./-}${_timever//:/-}"
+ pkgrel=1
+ pkgdesc='Object storage server compatible with Amazon S3'
 @@ -12,12 +12,10 @@
  makedepends=('go' 'git')
  source=(git+https://github.com/minio/minio.git#tag=RELEASE.${_pkgver}
@@ -20,3 +30,16 @@
 -  install -Dm644 "${srcdir}/minio.service" "${pkgdir}/usr/lib/systemd/system/minio.service"
    install -Dm644 "${srcdir}/minio.sysusers" "${pkgdir}/usr/lib/sysusers.d/minio.conf"
  }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=minio
+-_timever=T23-28-55Z
++_timever=T18-17-51Z
+ _
+ depends=('glibc')
+ backup=('etc/minio/minio.conf')

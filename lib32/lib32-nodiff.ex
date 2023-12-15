@@ -132,6 +132,7 @@ lib32-lz4
 lib32-mpg123
 lib32-ncurses
 lib32-nettle
+lib32-nspr
 lib32-nss
 lib32-ocl-icd
 lib32-openal

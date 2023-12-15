@@ -65,6 +65,7 @@ python-gpgme
 gpm
 grep
 groff
+grub
 guile
 gzip
 hdparm

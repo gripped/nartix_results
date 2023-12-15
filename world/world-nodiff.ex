@@ -531,6 +531,7 @@ freealut
 freecell-solver
 freeglut
 freeradius
+freerdp
 freetds
 freetype2
 freetype2-demos
@@ -644,6 +645,7 @@ gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
+gnome-nibbles
 gnome-photos
 gnome-recipes
 gnome-robots
@@ -866,8 +868,6 @@ isync
 itinerary
 itstool
 iucode-tool
-jasper
-jasper-doc
 java-avalon-framework
 java-batik
 java-common
@@ -1412,7 +1412,6 @@ libgit2
 libglib-testing
 libglvnd
 libgme
-libgnome-games-support
 libgnome-keyring
 libgnomekbd
 libgnt
@@ -1989,7 +1988,6 @@ mimalloc
 mimetic
 minicom
 minidlna
-minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2114,7 +2112,6 @@ npm
 nss-mdns
 ntfs-3g
 ntp
-nuitka
 nuklear
 numactl
 numlockx
@@ -5013,6 +5010,7 @@ zathura-ps
 zathura
 zbar
 zeitgeist
+zenity
 zeroc-ice
 zeroc-ice-java
 zfp
@@ -5086,7 +5084,6 @@ jxrlib
 opencascade
 python-fastapi
 python-furl
-python-geoip2
 python-maxminddb
 python-mocket
 python-pipenv
