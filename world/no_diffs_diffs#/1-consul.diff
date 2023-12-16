@@ -1,5 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=consul
+-_commit=9bcafa2495399acb52c65fc5759d1981dca633ce
+-pkgver=1.17.1
++_commit=5e08e229dbdaed5adf3ca99afe9df247c51507da
++pkgver=1.15.2
+ pkgrel=1
+ pkgdesc="A tool for service discovery, monitoring and configuration."
+ arch=('x86_64')
 @@ -10,7 +10,6 @@
  depends=('glibc')
  makedepends=('git' 'go' 'gox' 'go-tools')

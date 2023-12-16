@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=FreeRDP
+ pkgname=freerdp
+ pkgver=2.11.3
+-pkgrel=1
++pkgrel=2.1
+ epoch=2
+ pkgdesc="Free implementation of the Remote Desktop Protocol (RDP)"
+ arch=(x86_64)
+@@ -38,7 +38,6 @@
+   libusb
+   openssl
+   pam
+-  systemd
+   xmlto
+   xorgproto
+ )
+@@ -112,7 +111,6 @@
+     libusb libusb-1.0.so
+     openssl libcrypto.so libssl.so
+     pam libpam.so
+-    systemd-libs libsystemd.so
+   )
+ 
+   DESTDIR="$pkgdir" cmake --install build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -68,7 +68,6 @@
+     libusb libusb-1.0.so
+     openssl libcrypto.so libssl.so
+     pam libpam.so
+-    systemd-libs libsystemd.so
+   )
+   DESTDIR="$pkgdir" cmake --install build
+   install -vDm 644 $_name-$pkgver/{ChangeLog,README.md} -t "$pkgdir/usr/share/doc/$pkgname/"

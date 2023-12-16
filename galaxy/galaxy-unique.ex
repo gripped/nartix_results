@@ -86,3 +86,8 @@ liblangtag
 libmspub
 signal-desktop
 telegram-desktop
+fceux
+openrct2
+pysolfc-cardsets
+pysolfc
+python-pysol_cards

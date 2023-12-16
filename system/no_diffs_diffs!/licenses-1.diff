@@ -6,6 +6,6 @@
  license=(custom:none)
 -url="https://www.archlinux.org/"
 +url="https://www.artixlinux.org/"
- source=(
-   $_upstream_name-$_upstream_version.tar.gz::https://github.com/spdx/$_upstream_name/archive/refs/tags/v$_upstream_version.tar.gz
-   https://www.gnu.org/licenses/agpl-3.0.txt
+ makedepends=(
+   jq
+ )

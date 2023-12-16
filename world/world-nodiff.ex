@@ -505,7 +505,6 @@ flac-doc
 flake8
 flameshot
 flashrom
-flatpak-builder
 flatpak-kcm
 flickcurl
 flite
@@ -531,7 +530,6 @@ freealut
 freecell-solver
 freeglut
 freeradius
-freerdp
 freetds
 freetype2
 freetype2-demos
@@ -1412,6 +1410,7 @@ libgit2
 libglib-testing
 libglvnd
 libgme
+libgnome-games-support
 libgnome-keyring
 libgnomekbd
 libgnt
@@ -1988,6 +1987,7 @@ mimalloc
 mimetic
 minicom
 minidlna
+minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2112,6 +2112,7 @@ npm
 nss-mdns
 ntfs-3g
 ntp
+nuitka
 nuklear
 numactl
 numlockx
@@ -2195,8 +2196,6 @@ os-prober
 osinfo-db-tools
 osinfo-db
 osm-gps-map
-oxygen-icons
-oxygen-icons-svg
 oxygen-sounds
 oxygen
 p7zip
@@ -4024,7 +4023,6 @@ radicale
 raft
 ragel
 range-v3
-ranger
 rapidfuzz-cpp
 rapidjson
 rasqal
@@ -5065,7 +5063,6 @@ aws-cli-v2
 docker-buildx
 python-osc-lib
 0ad-data
-0ad
 analitza5
 ansible-language-server
 ansible-lint
@@ -5084,6 +5081,7 @@ jxrlib
 opencascade
 python-fastapi
 python-furl
+python-geoip2
 python-maxminddb
 python-mocket
 python-pipenv
@@ -5128,3 +5126,4 @@ python-pycrdt-websocket
 python-pycrdt
 zix
 zix-docs
+libgnome-games-support-2

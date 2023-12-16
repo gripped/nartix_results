@@ -4,7 +4,7 @@
  pkgname=(
    lib32-librsvg
  )
--pkgver=2.57.0
+-pkgver=2.57.1
 -pkgrel=1
 +pkgver=2.56.3
 +pkgrel=1.1
@@ -15,7 +15,7 @@
    rust
  )
  checkdepends=(ttf-dejavu)
--_commit=cd2e29d85df4e09f2af7d24e4254220a051f090d  # tags/2.57.0^0
+-_commit=34cc425b40bb6299868157fe98c945c30bbc3b71  # tags/2.57.1^0
 +_commit=312c4b8c28c99b9051ee6de6fa966cf977b0f7b4  # tags/2.56.3^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/librsvg.git#commit=$_commit"

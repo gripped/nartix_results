@@ -107,11 +107,13 @@ firefox
 firewalld
 flatbuffers
 python-flatbuffers
+flatpak-builder
 flatpak
 flatpak-docs
 fluidsynth
 folks
 fprintd
+freerdp
 fwupd-efi
 fwupd
 gala
@@ -260,7 +262,6 @@ libfdk-aac
 libfido2
 libfprint
 libgdata
-libgnome-games-support
 libgudev
 libguestfs
 libhandy
@@ -347,7 +348,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-minio
 modemmanager
 libmm-glib
 mosquitto
@@ -368,7 +368,6 @@ nginx
 nginx-src
 nrpe
 nsd
-nuitka
 nvidia-open
 nvidia-settings
 nvidia-utils-dinit
@@ -393,6 +392,8 @@ openvkl
 openvpn
 ospray
 ostree
+oxygen-icons
+oxygen-icons-svg
 packagekit
 libpackagekit-glib
 pacman-contrib
@@ -604,6 +605,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+ranger
 raptor
 redis
 redshift
@@ -752,8 +754,7 @@ zeromq
 znc
 senpai
 umurmur
-python-geoip2
+0ad
 python-pipenv-to-requirements
 vault
 modest
-libgnome-games-support-2
