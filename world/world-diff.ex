@@ -107,7 +107,6 @@ firefox
 firewalld
 flatbuffers
 python-flatbuffers
-flatpak-builder
 flatpak
 flatpak-docs
 fluidsynth
@@ -499,10 +498,13 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
+python-cx-freeze
 python-httpcore
 python-pytest-benchmark
 python-pyudev
+python-rsa
 python-sphinx-alabaster-theme
+python-sympy
 qemu
 qemu-common
 qemu-audio-alsa
@@ -674,6 +676,7 @@ libtransmission
 udisks2
 umockdev
 unbound
+unittestpp
 upower
 usbguard
 usbmuxd
@@ -706,6 +709,7 @@ vte3
 vte-common
 vte4
 vte-docs
+warpinator
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

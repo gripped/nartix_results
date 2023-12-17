@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=warpinator
+-pkgver=1.8.1
++pkgver=1.6.4
+ pkgrel=1
+ pkgdesc='LAN file sender, send and receive files across the network'
+ arch=('any')
+@@ -12,7 +12,7 @@
+ makedepends=('meson' 'polkit')
+ optdepends=('ufw: Open a firewall port for Warpinator')
+ source=("https://github.com/linuxmint/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('8aabdfe1fe93088a7c9eaf99fbe347d678e44095ddded66f8315f4cd717b6687')
++sha256sums=('718fbaa3227f5ffed0666c7b2f10b2a89a4c32c92741fd7dc31f27ee6f0b4673')
+ 
+ prepare() {
+   cd $pkgname-$pkgver
+@@ -20,10 +20,11 @@
+   sed -i 's|libexec/warpinator|lib/warpinator|' \
+     bin/warpinator.in \
+     data/org.x.warpinator.policy.in.in
++  sed -i 's/libexec/lib/' install-scripts/download_zeroconf.py
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D bundle-zeroconf=false -D bundle-grpc=false
++  artix-meson $pkgname-$pkgver build -D bundle-zeroconf=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,9 @@
+   sed -i 's|libexec/warpinator|lib/warpinator|' \
+     bin/warpinator.in \
+     data/org.x.warpinator.policy.in.in
++  sed -i 's/libexec/lib/' install-scripts/download_zeroconf.py
+ }
+ build() {
+-  arch-meson $pkgname-$pkgver build -D bundle-zeroconf=false -D bundle-grpc=false
++  artix-meson $pkgname-$pkgver build -D bundle-zeroconf=false
+   meson compile -C build
+ }

@@ -505,6 +505,7 @@ flac-doc
 flake8
 flameshot
 flashrom
+flatpak-builder
 flatpak-kcm
 flickcurl
 flite
@@ -2894,7 +2895,6 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
-python-cx-freeze
 python-cycler
 python-cython-test-exception-raiser
 python-cytoolz
@@ -3645,7 +3645,6 @@ python-rope
 python-routes
 python-rpds-py
 python-rpyc
-python-rsa
 python-rtree
 python-ruamel-yaml
 python-ruamel.yaml.clib
@@ -3753,7 +3752,6 @@ python-subunit
 python-sure
 python-svglib
 python-sybil
-python-sympy
 python-tabulate
 python-tabview
 python-tappy
@@ -4728,7 +4726,6 @@ unicorn
 python-unicorn
 ruby-unicorn-engine
 unifdef
-unittestpp
 unoconv
 unrar
 libunrar
@@ -4792,7 +4789,6 @@ vulkan-tools
 vulkan-validation-layers
 w3m
 waf
-warpinator
 wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus

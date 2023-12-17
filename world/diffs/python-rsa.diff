@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-rsa
+ pkgver=4.9
+-pkgrel=3
++pkgrel=2
+ _libname=rsa
+ pkgdesc="Pure-Python RSA implementation"
+ arch=(any)
+@@ -9,16 +9,19 @@
+ license=('BSD')
+ source=(https://files.pythonhosted.org/packages/source/${_libname:0:1}/$_libname/$_libname-$pkgver.tar.gz)
+ depends=(python-pyasn1)
+-makedepends=(python-poetry python-build python-installer python-wheel)
++makedepends=(python-setuptools)
+ sha256sums=('e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21')
+ 
+ build() {
+ 	cd "$srcdir/$_libname-$pkgver"
+-	python -m build --wheel --no-isolation
++
++	rm -rf ../buildpy3; mkdir ../buildpy3
++	python setup.py build -b ../buildpy3
+ }
+ 
+ package() {
+ 	cd "$srcdir/$_libname-$pkgver"
+-	python -m installer --destdir="$pkgdir" dist/*.whl
++	rm -rf build; ln -s ../buildpy3 build
++	python setup.py install --skip-build -O1 --root="$pkgdir"
+ 	install -m0644 -D "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,5 +3,6 @@
+ depends=(python-pyasn1)
+ build() {
+ 	cd "$srcdir/$_libname-$pkgver"
+-	python -m build --wheel --no-isolation
++	rm -rf ../buildpy3; mkdir ../buildpy3
++	python setup.py build -b ../buildpy3
+ }
