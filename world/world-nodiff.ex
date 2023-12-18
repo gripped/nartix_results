@@ -1398,7 +1398,6 @@ libfreexl
 libftdi
 libgadu
 libgdiplus
-libgedit-amtk
 libgedit-gtksourceview
 libgee
 libgeotiff
@@ -4005,9 +4004,6 @@ qtcreator
 qtcreator-devel
 qterminal
 qtermwidget
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 qtox
 qtxdg-tools
 quadrapassel

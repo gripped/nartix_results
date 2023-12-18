@@ -261,6 +261,7 @@ libfdk-aac
 libfido2
 libfprint
 libgdata
+libgedit-amtk
 libgudev
 libguestfs
 libhandy
@@ -601,6 +602,9 @@ qt6-serialport
 qt6-tools
 qt6-translations
 qt6-webengine
+qtkeychain
+qtkeychain-qt5
+qtkeychain-qt6
 qtqr
 quazip
 quazip-qt5
