@@ -8,7 +8,6 @@ lib32-gstreamer
 lib32-gst-plugins-base-libs
 lib32-gst-plugins-base
 lib32-gst-plugins-good
-lib32-icu
 lib32-jack2
 lib32-libelf
 lib32-libgudev
@@ -26,6 +25,7 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
+lib32-nss
 lib32-nvidia-utils
 lib32-p11-kit
 lib32-pipewire

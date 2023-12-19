@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=xfsprogs
- pkgver=6.5.0
--pkgrel=1
-+pkgrel=2
- pkgdesc="XFS filesystem utilities"
- arch=('x86_64')
- license=('LGPL')
 @@ -24,7 +24,7 @@
    make configure
    export OPTIMIZER="-march=${CARCH/_/-} -O1"

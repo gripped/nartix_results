@@ -147,9 +147,6 @@ baloo5
 bamf
 banner
 baobab
-bash-bats-assert
-bash-bats-support
-bash-bats
 bash-completion
 bazel
 bbswitch
@@ -335,7 +332,6 @@ cython
 cython0
 d-spy
 darkhttpd
-darktable
 dart
 darts
 dav1d
@@ -446,6 +442,9 @@ ethtool
 eventviews
 evince
 evince-lib-docs
+evolution-data-server
+libedataserverui4
+evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
@@ -666,6 +665,7 @@ gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
+gnustep-base
 gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
@@ -823,7 +823,6 @@ hyperscan
 hyphen
 hyphen-en
 i2c-tools
-i2pd
 i3-wm
 i3blocks
 i3lock
@@ -1321,6 +1320,7 @@ libcbor
 libcddb
 libcdio-paranoia
 libcdio
+libcdr
 libcerf
 libcgif
 libchamplain
@@ -1366,7 +1366,6 @@ libdvdcss
 libdvdnav
 libdvdread
 libdwarf
-libe-book
 libebml
 libebur128
 libepoxy
@@ -1398,6 +1397,7 @@ libfreexl
 libftdi
 libgadu
 libgdiplus
+libgedit-amtk
 libgedit-gtksourceview
 libgee
 libgeotiff
@@ -1511,7 +1511,6 @@ libmpd
 libmpdclient
 libmpeg2
 libmspack
-libmspub
 libmsym
 libmtp
 libmusicbrainz5
@@ -1565,6 +1564,7 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpgm
+libphonenumber
 libpinyin
 libplist
 libpng12
@@ -1588,6 +1588,7 @@ libqtxdg
 libquotient
 libquvi-scripts
 libquvi
+libqxp
 librabbitmq-c
 libraqm
 libraw
@@ -1636,8 +1637,6 @@ libspiro
 libsquish
 libsrtp
 libsrtp-docs
-libssh
-libssh-docs
 libstaroffice
 libstatgrab
 libsysstat
@@ -1678,6 +1677,7 @@ libvdpau
 libvips
 libvirt-python
 libvirt
+libvisio
 libvisual
 libvncserver
 libvoikko
@@ -1749,6 +1749,7 @@ libytnef
 libyuv
 libzen
 libzip
+libzmf
 liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -1930,15 +1931,11 @@ mate-control-center
 mate-desktop
 mate-icon-theme-faenza
 mate-icon-theme
-mate-media
-mate-menus
 mate-netbook
-mate-notification-daemon
 mate-polkit
 mate-power-manager
 mate-screensaver
 mate-sensors-applet
-mate-settings-daemon
 mate-terminal
 mate-themes
 mate-user-guide
@@ -2117,7 +2114,6 @@ nuklear
 numactl
 numlockx
 nuspell
-nvchecker
 oath-toolkit
 obconf-qt
 obs-studio
@@ -2146,10 +2142,6 @@ openal
 openal-examples
 openbabel
 python-openbabel
-openblas
-openblas64
-blas-openblas
-blas64-openblas
 openbox
 openbsd-netcat
 opencl-clhpp
@@ -3030,7 +3022,6 @@ python-flufl.i18n
 python-flufl.testing
 python-fluidity
 python-flup
-python-fonttools
 python-fqdn
 python-freezegun
 python-frozendict
@@ -3165,7 +3156,6 @@ python-jsonschema-specifications
 python-jsonschema
 python-junit-xml
 python-jupyter-client
-python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
@@ -3376,7 +3366,6 @@ python-pint
 python-pip-run
 python-pip
 python-pipreqs
-python-pipx
 python-pkgconfig
 python-pkginfo
 python-platformdirs
@@ -3600,7 +3589,6 @@ python-qrcode
 python-qtpy
 python-quart
 python-railroad-diagrams
-python-random2
 python-rapidfuzz
 python-rapidjson
 python-rcssmin
@@ -3644,6 +3632,7 @@ python-rope
 python-routes
 python-rpds-py
 python-rpyc
+python-rsa
 python-rtree
 python-ruamel-yaml
 python-ruamel.yaml.clib
@@ -3964,6 +3953,7 @@ qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
 qt5-webchannel
+qt5-webengine
 qt5-webglplugin
 qt5-websockets
 qt5-webview
@@ -4019,6 +4009,7 @@ ragel
 range-v3
 rapidfuzz-cpp
 rapidjson
+raptor
 rasqal
 rav1e
 rawtherapee
@@ -4722,6 +4713,7 @@ unicorn
 python-unicorn
 ruby-unicorn-engine
 unifdef
+unittestpp
 unoconv
 unrar
 libunrar
@@ -4766,6 +4758,7 @@ virtiofsd
 virtualbox-guest-iso
 virtualgl
 vkd3d
+vmaf
 vncdotool
 vnstat
 volatility3
@@ -5055,6 +5048,7 @@ aws-cli-v2
 docker-buildx
 python-osc-lib
 0ad-data
+0ad
 analitza5
 ansible-language-server
 ansible-lint

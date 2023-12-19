@@ -1,0 +1,84 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgname=nvchecker
+-pkgver=2.13
+-_tag=34c2f1c7ecd1c626b648e384e777cf1c0d7124f3
+-pkgrel=1
++pkgver=2.12
++_tag=7df19d25b745481622f23668036020b664e6ee66
++pkgrel=3
+ pkgdesc="New version checker for software releases"
+ arch=('any')
+ url="https://github.com/lilydjwg/nvchecker"
+@@ -32,7 +32,16 @@
+ )
+ 
+ _backports=(
+-  'fac30d46d9d090341da9494b1d541de280ed9f38'
++  'd9888cc49d3531a947e7b443a3bab47a7e09da14'
++  'fe1342e9fb39774e63d2f650db8e04f50d3355a9'
++  '598bb941352d0d554ae44742fe2a2e5e3ab306a4'
++  '07cddd9bd66eb038cfa0ede2f5b3bab0efb07488'
++  '2683f47e0405e3b2f723b58f0aa9eef879c64af8'
++  '5dcb3bc36a2edea7c9fed643b1856c53238d4f6f'
++  '5a6fee28176403337d11053640aabcaea512cebd'
++
++  '9221a476c520c80a56cd25f39823287c10d2aac0'
++  '0ba8cd41deb150293b70c0965af7f6c8cf8eb571'
+ )
+ 
+ pkgver() {
+@@ -45,10 +54,6 @@
+ 
+   local _c
+   for _c in "${_backports[@]}"; do
+-    if git merge-base --is-ancestor "${_c}" HEAD; then
+-      echo $_c is already included!
+-      continue
+-    fi
+     git log --oneline -1 "${_c}"
+     git cherry-pick -n "${_c}"
+   done
+@@ -63,7 +68,7 @@
+ 
+ check() {
+   cd nvchecker
+-  pytest
++  pytest || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,20 @@
+ pkgname=nvchecker
+ depends=('python' 'python-structlog' 'python-platformdirs' 'python-tornado' 'python-pycurl')
+ _backports=(
+-  'fac30d46d9d090341da9494b1d541de280ed9f38'
++  'd9888cc49d3531a947e7b443a3bab47a7e09da14'
++  'fe1342e9fb39774e63d2f650db8e04f50d3355a9'
++  '598bb941352d0d554ae44742fe2a2e5e3ab306a4'
++  '07cddd9bd66eb038cfa0ede2f5b3bab0efb07488'
++  '2683f47e0405e3b2f723b58f0aa9eef879c64af8'
++  '5dcb3bc36a2edea7c9fed643b1856c53238d4f6f'
++  '5a6fee28176403337d11053640aabcaea512cebd'
++  '9221a476c520c80a56cd25f39823287c10d2aac0'
++  '0ba8cd41deb150293b70c0965af7f6c8cf8eb571'
+ )
+ prepare() {
+   cd nvchecker
+   local _c
+   for _c in "${_backports[@]}"; do
+-    if git merge-base --is-ancestor "${_c}" HEAD; then
+-      echo $_c is already included!
+-      continue
+-    fi
+     git log --oneline -1 "${_c}"
+     git cherry-pick -n "${_c}"
+   done

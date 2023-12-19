@@ -37,6 +37,7 @@ lib32-gtk3
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
+lib32-icu
 lib32-imlib2
 lib32-json-glib
 lib32-keyutils
@@ -133,7 +134,6 @@ lib32-mpg123
 lib32-ncurses
 lib32-nettle
 lib32-nspr
-lib32-nss
 lib32-ocl-icd
 lib32-openal
 lib32-openssl

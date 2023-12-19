@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,20 +3,19 @@
- pkgname=('postgresql-libs' 'postgresql-docs' 'postgresql')
- pkgver=16.1
- _majorver=${pkgver%.*}
--pkgrel=1
-+pkgrel=2
- pkgdesc='Sophisticated object-relational DBMS'
- url='https://www.postgresql.org/'
+@@ -9,14 +9,13 @@
  arch=('x86_64')
  license=('custom:PostgreSQL')
  makedepends=('krb5' 'libxml2' 'python' 'perl' 'tcl>=8.6.0' 'openssl>=1.0.0'
