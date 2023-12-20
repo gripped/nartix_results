@@ -50,7 +50,6 @@ android-tools
 android-udev
 angelfish
 ansible-core
-ansible
 ant
 ant-doc
 anthy
@@ -70,6 +69,7 @@ arc-icon-theme
 archey3
 archlinux-appstream-data
 ardour
+argyllcms
 aria2
 arianna
 aribb24
@@ -332,6 +332,7 @@ cython
 cython0
 d-spy
 darkhttpd
+darktable
 dart
 darts
 dav1d
@@ -823,6 +824,7 @@ hyperscan
 hyphen
 hyphen-en
 i2c-tools
+i2pd
 i3-wm
 i3blocks
 i3lock
@@ -843,7 +845,6 @@ imlib2
 immer
 incidenceeditor
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -866,6 +867,8 @@ isync
 itinerary
 itstool
 iucode-tool
+jasper
+jasper-doc
 java-avalon-framework
 java-batik
 java-common
@@ -922,7 +925,6 @@ jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
 jupyter-notebook
-jupyter-server-fileid
 jupyter-server-ydoc
 jupyter-server
 jupyter-widgetsnbextension
@@ -1591,7 +1593,6 @@ libquvi
 libqxp
 librabbitmq-c
 libraqm
-libraw
 libraw1394
 librdkafka
 libreplaygain
@@ -1637,6 +1638,8 @@ libspiro
 libsquish
 libsrtp
 libsrtp-docs
+libssh
+libssh-docs
 libstaroffice
 libstatgrab
 libsysstat
@@ -1798,7 +1801,6 @@ lua-mpack
 lua51-mpack
 lua52-mpack
 lua53-mpack
-lua
 lua51
 lua52
 lua53
@@ -5006,7 +5008,6 @@ zita-resampler-docs
 zopfli
 zsh-autosuggestions
 zsh-completions
-zsh-syntax-highlighting
 zsh
 zsh-doc
 zug
@@ -5113,3 +5114,7 @@ python-pycrdt
 zix
 zix-docs
 libgnome-games-support-2
+bats-assert
+bats-support
+bats
+perl-file-fcntllock

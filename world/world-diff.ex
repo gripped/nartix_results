@@ -2,6 +2,7 @@ accountsservice
 adios2
 alsa-utils
 amule
+ansible
 apache
 apcupsd
 appstream-glib
@@ -9,7 +10,6 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
-argyllcms
 aspell-uk
 assimp
 at-spi2-core
@@ -62,7 +62,6 @@ cyrus-sasl
 cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
-darktable
 dbus-broker
 dhcp
 dhclient
@@ -198,11 +197,11 @@ haveged
 hidapi
 hwloc
 hyprland
-i2pd
 ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -213,8 +212,6 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-jasper
-jasper-doc
 java-openjdk
 jre-openjdk-headless
 jre-openjdk
@@ -228,6 +225,7 @@ jenkins
 js78
 json-glib
 json-glib-docs
+jupyter-server-fileid
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -278,9 +276,8 @@ libplacebo
 libpng
 libprocps
 libqaccessibilityclient
+libraw
 libsidplay
-libssh
-libssh-docs
 libudev0-shim
 libusbmuxd
 libusbsio
@@ -316,6 +313,7 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lm_sensors
+lua
 luaexpat
 lua-expat
 lua51-expat
@@ -767,8 +765,16 @@ xscreensaver
 yubikey-personalization
 zeromq
 znc
+zsh-syntax-highlighting
 senpai
 umurmur
 python-pipenv-to-requirements
 vault
 modest
+zabbix
+zabbix-server
+zabbix-agent
+zabbix-agent2
+zabbix-proxy
+zabbix-frontend-php
+zabbix-web-service

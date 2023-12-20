@@ -677,3 +677,4 @@ znc-s6
 greetd-runit
 vault-runit
 tipidee
+artix-branding-base
