@@ -3,8 +3,9 @@
 @@ -1,7 +1,7 @@
  
  pkgname=gamemode
- pkgver=1.7
+-pkgver=1.8.1
 -pkgrel=1
++pkgver=1.7
 +pkgrel=1.1
  pkgdesc='A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS'
  arch=(x86_64)
@@ -18,16 +19,26 @@
    polkit
  )
  makedepends=(
-@@ -33,11 +33,11 @@
+@@ -22,7 +22,7 @@
+   libgamemode.so
+   libgamemodeauto.so
+ )
+-_tag=5180d89e66830d87f69687b95fb86f622552b94b
++_tag=4dc99dff76218718763a6b07fc1900fa6d1dafd9
+ source=(git+https://github.com/FeralInteractive/gamemode.git#tag=${_tag})
+ b2sums=(SKIP)
+ 
+@@ -32,9 +32,12 @@
+ }
  
  build() {
-   export CFLAGS+=' -Wno-implicit-function-declaration'
 -  arch-meson gamemode build \
++  export CFLAGS+=' -Wno-implicit-function-declaration'
 +  artix-meson gamemode build \
      --libexecdir /usr/lib/gamemode \
-     -Dwith-examples=false \
-     -Dwith-pam-group=gamemode \
--    -Dwith-systemd-user-unit-dir=/usr/lib/systemd/user
+-    -Dwith-examples=false
++    -Dwith-examples=false \
++    -Dwith-pam-group=gamemode \
 +    -Dwith-sd-bus-provider=elogind
    meson compile -C build
  }
@@ -47,16 +58,17 @@
    polkit
  )
  provides=(
-@@ -12,10 +12,10 @@
+@@ -11,8 +11,11 @@
+   libgamemodeauto.so
  )
  build() {
-   export CFLAGS+=' -Wno-implicit-function-declaration'
 -  arch-meson gamemode build \
++  export CFLAGS+=' -Wno-implicit-function-declaration'
 +  artix-meson gamemode build \
      --libexecdir /usr/lib/gamemode \
-     -Dwith-examples=false \
-     -Dwith-pam-group=gamemode \
--    -Dwith-systemd-user-unit-dir=/usr/lib/systemd/user
+-    -Dwith-examples=false
++    -Dwith-examples=false \
++    -Dwith-pam-group=gamemode \
 +    -Dwith-sd-bus-provider=elogind
    meson compile -C build
  }

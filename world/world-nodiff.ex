@@ -1986,7 +1986,6 @@ mimalloc
 mimetic
 minicom
 minidlna
-minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2038,7 +2037,6 @@ mupdf-tools
 musepack
 musepack-tools
 libmpcdec
-musescore
 musl
 mutt
 mypaint-brushes1
@@ -3468,7 +3466,6 @@ python-pynacl
 python-pynamodb
 python-pynetbox
 python-pynitrokey
-python-pynvim
 python-pyocd
 python-pyogrio
 python-pyopencl
@@ -3613,7 +3610,6 @@ python-requests-ftp
 python-requests-futures
 python-requests-kerberos
 python-requests-mock
-python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
 python-requests-unixsocket
@@ -3785,7 +3781,6 @@ python-traitlets
 python-transaction
 python-treq
 python-trio-asyncio
-python-trio
 python-trove-classifiers
 python-trustme
 python-twisted

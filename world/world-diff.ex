@@ -349,6 +349,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+minio
 modemmanager
 libmm-glib
 mosquitto
@@ -356,6 +357,7 @@ mpd
 multipath-tools
 mumble
 mumble-server
+musescore
 mutter
 mutter-docs
 ndctl
@@ -510,11 +512,14 @@ python-fonttools
 python-httpcore
 python-jupyter-core
 python-pipx
+python-pynvim
 python-pytest-benchmark
 python-pyudev
 python-random2
+python-requests-ntlm
 python-sphinx-alabaster-theme
 python-sympy
+python-trio
 qemu
 qemu-common
 qemu-audio-alsa

@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=lib32-gamemode
+-pkgver=1.8.1
++pkgver=1.7
+ pkgrel=1
+ pkgdesc='A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS'
+ arch=(x86_64)
 @@ -9,7 +9,7 @@
  depends=(
    lib32-dbus
@@ -9,20 +17,29 @@
  )
  makedepends=(
    git
-@@ -33,12 +33,11 @@
+@@ -20,7 +20,7 @@
+   libgamemode.so
+   libgamemodeauto.so
+ )
+-_tag=5180d89e66830d87f69687b95fb86f622552b94b
++_tag=4dc99dff76218718763a6b07fc1900fa6d1dafd9
+ source=(git+https://github.com/FeralInteractive/gamemode.git#tag=${_tag})
+ b2sums=(SKIP)
+ 
+@@ -31,10 +31,12 @@
+ 
+ build() {
    export CC='gcc -m32'
-   export CFLAGS+=' -Wno-implicit-function-declaration'
++  export CFLAGS+=' -Wno-implicit-function-declaration'
    export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
 -  arch-meson gamemode build \
 +  artix-meson gamemode build \
      --libdir /usr/lib32 \
      -Dwith-examples=false \
-     -Dwith-pam-group=gamemode \
++    -Dwith-pam-group=gamemode \
      -Dwith-sd-bus-provider=no-daemon \
--    -Dwith-systemd-user-unit-dir=/usr/lib/systemd/user \
      -Dwith-util=false
    meson compile -C build
- }
 
 
 ############# Stripped diff below #################
@@ -38,17 +55,17 @@
  )
  provides=(
    libgamemode.so
-@@ -12,12 +12,11 @@
+@@ -10,10 +10,12 @@
+ )
+ build() {
    export CC='gcc -m32'
-   export CFLAGS+=' -Wno-implicit-function-declaration'
++  export CFLAGS+=' -Wno-implicit-function-declaration'
    export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
 -  arch-meson gamemode build \
 +  artix-meson gamemode build \
      --libdir /usr/lib32 \
      -Dwith-examples=false \
-     -Dwith-pam-group=gamemode \
++    -Dwith-pam-group=gamemode \
      -Dwith-sd-bus-provider=no-daemon \
--    -Dwith-systemd-user-unit-dir=/usr/lib/systemd/user \
      -Dwith-util=false
    meson compile -C build
- }

@@ -1,61 +1,419 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -62,22 +62,22 @@
+@@ -1,62 +1,49 @@
+ 
+ pkgbase=lib32-gstreamer
+-pkgname=(
+-  lib32-gstreamer
+-  lib32-gst-plugins-base-libs
+-  lib32-gst-plugins-base
+-  lib32-gst-plugins-good
+-)
+-pkgver=1.22.8
++pkgname=(lib32-gstreamer lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good)
++pkgver=1.22.7
+ pkgrel=1
+ pkgdesc="Multimedia graph framework (32-bit)"
+ url="https://gstreamer.freedesktop.org/"
+ arch=(x86_64)
+-license=(LGPL-2.1-or-later)
+-makedepends=(
+-  git meson
+-
+-  lib32-gtk3 lib32-libcap lib32-libelf lib32-libunwind
+-
+-  lib32-alsa-lib lib32-cdparanoia lib32-libdrm lib32-libglvnd lib32-libgudev
+-  lib32-libjpeg lib32-libpng lib32-libtheora lib32-libx11 lib32-libxi
+-  lib32-libxv lib32-opus lib32-orc lib32-pango lib32-sdl2 lib32-wayland
+-  lib32-zlib wayland-protocols
+-
+-  lib32-aalib lib32-cairo lib32-flac lib32-gdk-pixbuf2 lib32-jack2
+-  lib32-libavc1394 lib32-libcaca lib32-libdv lib32-libiec61883 lib32-libpulse
+-  lib32-libraw1394 lib32-libshout lib32-libsoup3 lib32-libvpx lib32-mpg123
+-  lib32-nettle lib32-taglib lib32-twolame lib32-v4l-utils lib32-wavpack
+-  lib32-libvpx lib32-libxdamage lib32-mpg123 lib32-speex lib32-taglib
+-  lib32-twolame lib32-v4l-utils lib32-wavpack
+-)
++license=(LGPL)
++makedepends=(meson git wayland-protocols lib32-glib2 lib32-libunwind lib32-gtk3 lib32-libelf
++             lib32-alsa-lib lib32-cdparanoia lib32-libtheora lib32-libvisual lib32-libxv lib32-opus lib32-orc lib32-pango lib32-sdl2
++             lib32-aalib lib32-cairo lib32-flac lib32-gdk-pixbuf2 lib32-jack lib32-libavc1394 lib32-libcaca lib32-libdv lib32-libgudev lib32-libiec61883
++             lib32-libpulse lib32-libraw1394 lib32-libshout lib32-libsoup3 lib32-libvpx lib32-libxdamage lib32-mpg123 lib32-speex lib32-taglib lib32-twolame lib32-v4l-utils lib32-wavpack)
+ checkdepends=(xorg-server-xvfb)
+ source=(
+   "git+https://gitlab.freedesktop.org/gstreamer/gstreamer.git?signed#tag=$pkgver"
+-  0001-HACK-meson-Disable-broken-tests.patch
++  0002-HACK-meson-Disable-broken-tests.patch
+ )
+-b2sums=('SKIP'
+-        '1887212e956a617130469c6afbd387a555d388dc36b467505b3e5248d0e6a273886fd0500d0977b714075604c61fe149a77ea05ce785cfe27e3eae0999eecb3f')
+-validpgpkeys=(
+-  D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim Müller <tim@gstreamer-foundation.org>
+-)
++sha256sums=('SKIP'
++            '9fda6342fb1cbb29dab7ac46e277eee7272b119efee770e72e7d972621fc1e7e')
++validpgpkeys=(D637032E45B8C6585B9456565D2EEE6F6F349D7C) # Tim Müller <tim@gstreamer-foundation.org>
++
++pkgver() {
++  cd gstreamer
++  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++}
+ 
+ prepare() {
+   cd gstreamer
+ 
+-  git apply -3 ../0001-HACK-meson-Disable-broken-tests.patch
++  git apply -3 ../0002-HACK-meson-Disable-broken-tests.patch
+ }
+ 
+ build() {
++  export CC='gcc -m32'
++  export CXX='g++ -m32'
++  export PKG_CONFIG='i686-pc-linux-gnu-pkg-config'
++
+   local meson_options=(
+-    --cross-file lib32
+-    --libexecdir lib32
+-
++    --libdir=lib32
++    --libexecdir=lib32
+     -D bad=disabled
+     -D devtools=disabled
+     -D doc=disabled
+     -D examples=disabled
+     -D ges=disabled
+-    -D gobject-cast-checks=disabled
+     -D gpl=enabled
+     -D gst-examples=disabled
+     -D introspection=disabled
+@@ -64,7 +51,6 @@
+     -D libnice=disabled
+     -D omx=disabled
+     -D orc-source=system
+-    -D package-origin="https://www.archlinux.org/"
+     -D python=disabled
+     -D qt5=disabled
+     -D rs=disabled
+@@ -72,30 +58,32 @@
+     -D sharp=disabled
+     -D ugly=disabled
+     -D vaapi=disabled
+-
+-    -D gstreamer:package-name="Arch Linux lib32-gstreamer $pkgver-$pkgrel"
+-    -D gst-plugins-base:package-name="Arch Linux lib32-gst-plugins-base $pkgver-$pkgrel"
+-    -D gst-plugins-good:package-name="Arch Linux lib32-gst-plugins-good $pkgver-$pkgrel"
+-
+     -D gstreamer:bash-completion=disabled
      -D gstreamer:dbghelp=disabled
-     -D gstreamer:gobject-cast-checks=disabled
-     -D gstreamer:package-name="Arch Linux lib32-gstreamer $pkgver-$pkgrel"
--    -D gstreamer:package-origin="https://www.archlinux.org/"
++    -D gstreamer:gobject-cast-checks=disabled
++    -D gstreamer:package-name="Arch Linux lib32-gstreamer $pkgver-$pkgrel"
 +    -D gstreamer:package-origin="https://www.artixlinux.org/"
      -D gstreamer:ptp-helper-permissions=capabilities
      -D gst-plugins-base:gl-graphene=disabled
-     -D gst-plugins-base:gobject-cast-checks=disabled
-     -D gst-plugins-base:package-name="Arch Linux lib32-gst-plugins-base $pkgver-$pkgrel"
--    -D gst-plugins-base:package-origin="https://www.archlinux.org/"
+-    -D gst-plugins-base:libvisual=disabled
++    -D gst-plugins-base:gobject-cast-checks=disabled
++    -D gst-plugins-base:package-name="Arch Linux lib32-gst-plugins-base $pkgver-$pkgrel"
 +    -D gst-plugins-base:package-origin="https://www.artixlinux.org/"
      -D gst-plugins-base:tremor=disabled
-     -D gst-plugins-good:gobject-cast-checks=disabled
++    -D gst-plugins-good:gobject-cast-checks=disabled
      -D gst-plugins-good:lame=disabled
-     -D gst-plugins-good:package-name="Arch Linux lib32-gst-plugins-good $pkgver-$pkgrel"
--    -D gst-plugins-good:package-origin="https://www.archlinux.org/"
++    -D gst-plugins-good:package-name="Arch Linux lib32-gst-plugins-good $pkgver-$pkgrel"
 +    -D gst-plugins-good:package-origin="https://www.artixlinux.org/"
      -D gst-plugins-good:qt6=disabled
      -D gst-plugins-good:rpicamsrc=disabled
    )
  
 -  arch-meson gstreamer build "${meson_options[@]}"
+-  meson configure build  # Print config
 +  artix-meson gstreamer build "${meson_options[@]}"
    meson compile -C build
  }
  
+ check() (
+-  export XDG_RUNTIME_DIR="$PWD/runtime-dir"
+-  mkdir -p -m 700 "$XDG_RUNTIME_DIR"
++  mkdir -p -m 700 "${XDG_RUNTIME_DIR:=$PWD/runtime-dir}"
++  export XDG_RUNTIME_DIR
+ 
+   xvfb-run -s '-nolisten local' \
+     meson test -C build --print-errorlogs || :
+@@ -112,14 +100,10 @@
+ 
+ package_lib32-gstreamer() {
+   pkgdesc+=" - core"
+-  depends=(
+-    lib32-glib2 lib32-libcap lib32-libelf lib32-libunwind lib32-libxml2
+-    gstreamer
+-  )
+-  optdepends=()
++  depends=(lib32-libxml2 lib32-glib2 lib32-libunwind lib32-gtk3 lib32-libelf gstreamer)
+   install=lib32-gstreamer.install
+ 
+-  meson install -C build --destdir "$srcdir/root"
++  DESTDIR="$srcdir/root" meson install -C build
+ 
+   rm -R "$srcdir"/root/usr/{share,include}
+ 
+@@ -132,7 +116,8 @@
+     usr/lib32/pkgconfig/gstreamer{,-base,-check,-controller,-net}-1.0.pc
+ 
+     usr/lib32/gstreamer-1.0/gst-ptp-helper
+-    usr/lib32/gstreamer-1.0/gst-plugin-scanner
++    usr/lib32/gstreamer-1.0/gst-{hotdoc-plugins,plugin}-scanner
++    usr/lib32/gstreamer-1.0/gst-plugins-doc-cache-generator
+     usr/lib32/gstreamer-1.0/libgstcoreelements.so
+     usr/lib32/gstreamer-1.0/libgstcoretracers.so
+ 
+@@ -142,12 +127,7 @@
+ 
+ package_lib32-gst-plugins-base-libs() {
+   pkgdesc+=" - base"
+-  depends=(
+-    "lib32-gstreamer=$pkgver"
+-    lib32-libgl lib32-libgudev lib32-libxi lib32-libxv lib32-mesa lib32-orc
+-    lib32-wayland
+-    gst-plugins-base-libs
+-  )
++  depends=(lib32-gstreamer lib32-orc lib32-libxv)
+ 
+   cd root; local files=(
+     usr/lib32/libgst{allocators,app,audio,fft,gl,pbutils,riff,rtp,rtsp,sdp,tag,video}-1.0.so*
+@@ -184,17 +164,14 @@
+ }
+ 
+ package_lib32-gst-plugins-base() {
+-  pkgdesc+=" - base plugins"
+-  depends=(
+-    "lib32-gst-plugins-base-libs=$pkgver"
+-    lib32-alsa-lib lib32-cdparanoia lib32-libjpeg lib32-libpng lib32-libtheora
+-    lib32-libvorbis lib32-opus lib32-pango
+-    gst-plugins-base
+-  )
++  pkgdesc+=" - base"
++  depends=(lib32-gst-plugins-base-libs=$pkgver lib32-alsa-lib lib32-cdparanoia lib32-libvisual lib32-libvorbis
++           lib32-libtheora lib32-pango lib32-opus)
+ 
+   cd root; local files=(
+     usr/lib32/gstreamer-1.0/libgstalsa.so
+     usr/lib32/gstreamer-1.0/libgstcdparanoia.so
++    usr/lib32/gstreamer-1.0/libgstlibvisual.so
+     usr/lib32/gstreamer-1.0/libgstogg.so
+     usr/lib32/gstreamer-1.0/libgstopengl.so
+     usr/lib32/gstreamer-1.0/libgstopus.so
+@@ -206,21 +183,15 @@
+ 
+ package_lib32-gst-plugins-good() {
+   pkgdesc+=" - good plugins"
+-  depends=(
+-    "lib32-gst-plugins-base-libs=$pkgver"
+-    lib32-aalib lib32-cairo lib32-flac lib32-gdk-pixbuf2 lib32-libavc1394
+-    lib32-libcaca lib32-libdv lib32-libgudev lib32-libiec61883 lib32-libpulse
+-    lib32-libraw1394 lib32-libshout lib32-libsoup3 lib32-libvpx lib32-libxdamage
+-    lib32-mpg123 lib32-nettle lib32-speex lib32-taglib lib32-twolame
+-    lib32-v4l-utils lib32-wavpack
+-    libjack.so
+-    gst-plugins-good
+-  )
++  depends=(lib32-libpulse lib32-jack lib32-libsoup3 lib32-gst-plugins-base-libs lib32-wavpack
++           lib32-aalib lib32-taglib lib32-libdv lib32-libshout lib32-libvpx lib32-gdk-pixbuf2
++           lib32-libcaca lib32-libavc1394 lib32-libiec61883 lib32-libxdamage lib32-v4l-utils
++           lib32-cairo lib32-libgudev lib32-speex lib32-flac lib32-libraw1394 lib32-mpg123
++           lib32-twolame gst-plugins-good)
+ 
+   cd root; local files=(
+     usr/lib32/gstreamer-1.0/libgst1394.so
+     usr/lib32/gstreamer-1.0/libgstaasink.so
+-    usr/lib32/gstreamer-1.0/libgstadaptivedemux2.so
+     usr/lib32/gstreamer-1.0/libgstalaw.so
+     usr/lib32/gstreamer-1.0/libgstalpha.so
+     usr/lib32/gstreamer-1.0/libgstalphacolor.so
+@@ -287,7 +258,6 @@
+     usr/lib32/gstreamer-1.0/libgstwavpack.so
+     usr/lib32/gstreamer-1.0/libgstwavparse.so
+     usr/lib32/gstreamer-1.0/libgstximagesrc.so
+-    usr/lib32/gstreamer-1.0/libgstxingmux.so
+     usr/lib32/gstreamer-1.0/libgsty4menc.so
+   ); _install
+ }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,21 +34,21 @@
+@@ -1,24 +1,21 @@
+ pkgbase=lib32-gstreamer
+-pkgname=(
+-  lib32-gstreamer
+-  lib32-gst-plugins-base-libs
+-  lib32-gst-plugins-base
+-  lib32-gst-plugins-good
+-)
++pkgname=(lib32-gstreamer lib32-gst-plugins-base-libs lib32-gst-plugins-base lib32-gst-plugins-good)
+ prepare() {
+   cd gstreamer
+-  git apply -3 ../0001-HACK-meson-Disable-broken-tests.patch
++  git apply -3 ../0002-HACK-meson-Disable-broken-tests.patch
+ }
+ build() {
++  export CC='gcc -m32'
++  export CXX='g++ -m32'
++  export PKG_CONFIG='i686-pc-linux-gnu-pkg-config'
+   local meson_options=(
+-    --cross-file lib32
+-    --libexecdir lib32
++    --libdir=lib32
++    --libexecdir=lib32
+     -D bad=disabled
+     -D devtools=disabled
+     -D doc=disabled
+     -D examples=disabled
+     -D ges=disabled
+-    -D gobject-cast-checks=disabled
+     -D gpl=enabled
+     -D gst-examples=disabled
+     -D introspection=disabled
+@@ -26,7 +23,6 @@
+     -D libnice=disabled
+     -D omx=disabled
+     -D orc-
+-    -D package-origin="https://www.archlinux.org/"
+     -D python=disabled
+     -D qt5=disabled
+     -D rs=disabled
+@@ -34,31 +30,45 @@
+     -D sharp=disabled
+     -D ugly=disabled
+     -D vaapi=disabled
+-    -D gstreamer:package-name="Arch Linux lib32-gstreamer $pkgver-$pkgrel"
+-    -D gst-plugins-base:package-name="Arch Linux lib32-gst-plugins-base $pkgver-$pkgrel"
+-    -D gst-plugins-good:package-name="Arch Linux lib32-gst-plugins-good $pkgver-$pkgrel"
+     -D gstreamer:bash-completion=disabled
      -D gstreamer:dbghelp=disabled
-     -D gstreamer:gobject-cast-checks=disabled
-     -D gstreamer:package-name="Arch Linux lib32-gstreamer $pkgver-$pkgrel"
--    -D gstreamer:package-origin="https://www.archlinux.org/"
++    -D gstreamer:gobject-cast-checks=disabled
++    -D gstreamer:package-name="Arch Linux lib32-gstreamer $pkgver-$pkgrel"
 +    -D gstreamer:package-origin="https://www.artixlinux.org/"
      -D gstreamer:ptp-helper-permissions=capabilities
      -D gst-plugins-base:gl-graphene=disabled
-     -D gst-plugins-base:gobject-cast-checks=disabled
-     -D gst-plugins-base:package-name="Arch Linux lib32-gst-plugins-base $pkgver-$pkgrel"
--    -D gst-plugins-base:package-origin="https://www.archlinux.org/"
+-    -D gst-plugins-base:libvisual=disabled
++    -D gst-plugins-base:gobject-cast-checks=disabled
++    -D gst-plugins-base:package-name="Arch Linux lib32-gst-plugins-base $pkgver-$pkgrel"
 +    -D gst-plugins-base:package-origin="https://www.artixlinux.org/"
      -D gst-plugins-base:tremor=disabled
-     -D gst-plugins-good:gobject-cast-checks=disabled
++    -D gst-plugins-good:gobject-cast-checks=disabled
      -D gst-plugins-good:lame=disabled
-     -D gst-plugins-good:package-name="Arch Linux lib32-gst-plugins-good $pkgver-$pkgrel"
--    -D gst-plugins-good:package-origin="https://www.archlinux.org/"
++    -D gst-plugins-good:package-name="Arch Linux lib32-gst-plugins-good $pkgver-$pkgrel"
 +    -D gst-plugins-good:package-origin="https://www.artixlinux.org/"
      -D gst-plugins-good:qt6=disabled
      -D gst-plugins-good:rpicamsrc=disabled
    )
 -  arch-meson gstreamer build "${meson_options[@]}"
+-  meson configure build  # Print config
 +  artix-meson gstreamer build "${meson_options[@]}"
    meson compile -C build
++}
++"
++  export XDG_RUNTIME_DIR
++  xvfb-run -s '-nolisten local' \
++    meson test -C build --print-errorlogs || :
++)
++_install() {
++  local src dir
++  for src in "${files[@]}"; do
++    dir="$pkgdir/$(dirname "$src")"
++    mkdir -p "$dir"
++    mv -v "$src" "$dir"
++  done
  }
- "
+ package_lib32-gstreamer() {
+   pkgdesc+=" - core"
+-  depends=(
+-    lib32-glib2 lib32-libcap lib32-libelf lib32-libunwind lib32-libxml2
+-    gstreamer
+-  )
++  depends=(lib32-libxml2 lib32-glib2 lib32-libunwind lib32-gtk3 lib32-libelf gstreamer)
+   install=lib32-gstreamer.install
+-  meson install -C build --destdir "$srcdir/root"
++  DESTDIR="$srcdir/root" meson install -C build
+   rm -R "$srcdir"/root/usr/{share,include}
+   for _i in "$srcdir"/root/usr/bin/*; do
+     mv "${_i}" "${_i}-32"
+@@ -67,7 +77,8 @@
+     usr/lib32/libgst{reamer,base,check,controller,net}-1.0.so*
+     usr/lib32/pkgconfig/gstreamer{,-base,-check,-controller,-net}-1.0.pc
+     usr/lib32/gstreamer-1.0/gst-ptp-helper
+-    usr/lib32/gstreamer-1.0/gst-plugin-scanner
++    usr/lib32/gstreamer-1.0/gst-{hotdoc-plugins,plugin}-scanner
++    usr/lib32/gstreamer-1.0/gst-plugins-doc-cache-generator
+     usr/lib32/gstreamer-1.0/libgstcoreelements.so
+     usr/lib32/gstreamer-1.0/libgstcoretracers.so
+     usr/bin/gst-{inspect,launch,stats,tester,typefind}-1.0-32
+@@ -75,12 +86,7 @@
+ }
+ package_lib32-gst-plugins-base-libs() {
+   pkgdesc+=" - base"
+-  depends=(
+-    "lib32-gstreamer=$pkgver"
+-    lib32-libgl lib32-libgudev lib32-libxi lib32-libxv lib32-mesa lib32-orc
+-    lib32-wayland
+-    gst-plugins-base-libs
+-  )
++  depends=(lib32-gstreamer lib32-orc lib32-libxv)
+   cd root; local files=(
+     usr/lib32/libgst{allocators,app,audio,fft,gl,pbutils,riff,rtp,rtsp,sdp,tag,video}-1.0.so*
+     usr/lib32/pkgconfig/gstreamer-{allocators,app,audio,fft,gl{,-egl,-prototypes,-wayland,-x11},pbutils,riff,rtp,rtsp,sdp,tag,video}-1.0.pc
+@@ -113,16 +119,13 @@
+   ); _install
+ }
+ package_lib32-gst-plugins-base() {
+-  pkgdesc+=" - base plugins"
+-  depends=(
+-    "lib32-gst-plugins-base-libs=$pkgver"
+-    lib32-alsa-lib lib32-cdparanoia lib32-libjpeg lib32-libpng lib32-libtheora
+-    lib32-libvorbis lib32-opus lib32-pango
+-    gst-plugins-base
+-  )
++  pkgdesc+=" - base"
++  depends=(lib32-gst-plugins-base-libs=$pkgver lib32-alsa-lib lib32-cdparanoia lib32-libvisual lib32-libvorbis
++           lib32-libtheora lib32-pango lib32-opus)
+   cd root; local files=(
+     usr/lib32/gstreamer-1.0/libgstalsa.so
+     usr/lib32/gstreamer-1.0/libgstcdparanoia.so
++    usr/lib32/gstreamer-1.0/libgstlibvisual.so
+     usr/lib32/gstreamer-1.0/libgstogg.so
+     usr/lib32/gstreamer-1.0/libgstopengl.so
+     usr/lib32/gstreamer-1.0/libgstopus.so
+@@ -133,20 +136,14 @@
+ }
+ package_lib32-gst-plugins-good() {
+   pkgdesc+=" - good plugins"
+-  depends=(
+-    "lib32-gst-plugins-base-libs=$pkgver"
+-    lib32-aalib lib32-cairo lib32-flac lib32-gdk-pixbuf2 lib32-libavc1394
+-    lib32-libcaca lib32-libdv lib32-libgudev lib32-libiec61883 lib32-libpulse
+-    lib32-libraw1394 lib32-libshout lib32-libsoup3 lib32-libvpx lib32-libxdamage
+-    lib32-mpg123 lib32-nettle lib32-speex lib32-taglib lib32-twolame
+-    lib32-v4l-utils lib32-wavpack
+-    libjack.so
+-    gst-plugins-good
+-  )
++  depends=(lib32-libpulse lib32-jack lib32-libsoup3 lib32-gst-plugins-base-libs lib32-wavpack
++           lib32-aalib lib32-taglib lib32-libdv lib32-libshout lib32-libvpx lib32-gdk-pixbuf2
++           lib32-libcaca lib32-libavc1394 lib32-libiec61883 lib32-libxdamage lib32-v4l-utils
++           lib32-cairo lib32-libgudev lib32-speex lib32-flac lib32-libraw1394 lib32-mpg123
++           lib32-twolame gst-plugins-good)
+   cd root; local files=(
+     usr/lib32/gstreamer-1.0/libgst1394.so
+     usr/lib32/gstreamer-1.0/libgstaasink.so
+-    usr/lib32/gstreamer-1.0/libgstadaptivedemux2.so
+     usr/lib32/gstreamer-1.0/libgstalaw.so
+     usr/lib32/gstreamer-1.0/libgstalpha.so
+     usr/lib32/gstreamer-1.0/libgstalphacolor.so
+@@ -213,7 +210,6 @@
+     usr/lib32/gstreamer-1.0/libgstwavpack.so
+     usr/lib32/gstreamer-1.0/libgstwavparse.so
+     usr/lib32/gstreamer-1.0/libgstximagesrc.so
+-    usr/lib32/gstreamer-1.0/libgstxingmux.so
+     usr/lib32/gstreamer-1.0/libgsty4menc.so
+   ); _install
+ }
