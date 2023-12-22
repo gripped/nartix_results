@@ -4284,8 +4284,6 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
-ruff
-python-ruff
 runc
 rust-bindgen
 rust

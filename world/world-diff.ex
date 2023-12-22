@@ -634,6 +634,8 @@ rspamd
 rsync
 rtkit
 ruby-faraday-patron
+ruff
+python-ruff
 salt
 samba
 libwbclient
