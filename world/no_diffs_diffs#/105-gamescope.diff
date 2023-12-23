@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gamescope
--pkgver=3.13.19
-+pkgver=3.13.17
- pkgrel=1
- pkgdesc='SteamOS session compositing window manager'
- arch=(x86_64)
-@@ -44,7 +44,7 @@
-   vulkan-headers
-   wayland-protocols
- )
--_tag=3e14ef9c37266b19ba77fbef467d1b8a77d827f2
-+_tag=9894245aa7a98063bf99fc78269d5d7a6f0a358b
- source=(
-   git+https://github.com/ValveSoftware/gamescope.git#tag=${_tag}
-   git+https://github.com/Joshua-Ashton/reshade.git
-@@ -70,15 +70,14 @@
+@@ -70,7 +70,7 @@
  }
  
  build() {
@@ -26,15 +9,6 @@
      -Dforce_fallback_for=stb \
      -Dpipewire=enabled
    meson compile -C build
- }
- 
- package() {
--  DESTDIR="${pkgdir}" meson install -C build \
--    --skip-subprojects
-+  DESTDIR="${pkgdir}" meson install -C build
-   install -Dm 644 gamescope/LICENSE -t "${pkgdir}"/usr/share/licenses/gamescope/
- }
- 
 
 
 ############# Stripped diff below #################

@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,10 +24,6 @@
+   cmake --build build
+ }
+ 
+-check() {
+-  xvfb-run build/run_tests_with_x_1
+-  xvfb-run build/run_tests_with_x_2
+-}
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build

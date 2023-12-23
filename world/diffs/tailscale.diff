@@ -1,21 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,51 +1,50 @@
- 
- pkgname=tailscale
--pkgver=1.56.1
-+pkgver=1.56.0
- pkgrel=1
- pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
- arch=("x86_64")
+@@ -7,45 +7,44 @@
  url="https://tailscale.com"
  license=("MIT")
  makedepends=("git" "go")
 -depends=("glibc")
 +depends=("glibc" "iptables")
  backup=("etc/default/tailscaled")
--_commit=906f85d10c0b7b653116db19913ebeab85ee01ec #  git rev-parse tags/v1.56.1
-+_commit=f10be754cff7224afda35acdf580a808e0838538 #  git rev-parse tags/v1.56.0
+ _commit=906f85d10c0b7b653116db19913ebeab85ee01ec #  git rev-parse tags/v1.56.1
  source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}")
  sha256sums=('SKIP')
  

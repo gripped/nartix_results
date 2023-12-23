@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,16 +1,16 @@
+ 
+ pkgname=python-ldap
+-pkgver=3.4.4
+-pkgrel=1
++pkgver=3.4.3
++pkgrel=3
+ pkgdesc="LDAP client API for Python"
+ url="https://python-ldap.readthedocs.io/"
  arch=('x86_64')
  license=('MIT')
  depends=('python-pyasn1' 'python-pyasn1-modules' 'libldap')
@@ -8,7 +16,11 @@
 +makedepends=('python-setuptools' 'python-coverage')
  checkdepends=('openldap' 'python-pyasn1' 'python-pyasn1-modules')
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/python-ldap/python-ldap/archive/${pkgname}-${pkgver}.tar.gz")
- sha256sums=('0f59a692a4761f70aff6629125a2574dd12f6660316bbac211325fed7a898f48')
+-sha256sums=('98c03c14724636351964606a307bf946fa6248630c2d6b89938a6911b6b84c99')
++sha256sums=('0f59a692a4761f70aff6629125a2574dd12f6660316bbac211325fed7a898f48')
+ 
+ prepare() {
+   cd "$pkgbase-$pkgbase-$pkgver"
 @@ -25,9 +25,7 @@
  
  check(){

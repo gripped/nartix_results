@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,13 @@
+ 
+ pkgname=mercurial
+ pkgver=6.6.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A scalable distributed SCM tool'
+ arch=(x86_64)
+ url="https://www.mercurial-scm.org/"
+ license=(GPL)
+ depends=(python)
+-makedepends=(python-{build,installer,wheel}
+-             python-setuptools
+-             python-docutils)
++makedepends=(python-docutils)
+ optdepends=('tk: for the hgk GUI')
+ 
+ 
+@@ -26,7 +24,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-  python -m build -wn
++  python setup.py build
+   make -C contrib/chg
+ }
+ 
+@@ -36,7 +34,7 @@
+ 
+ package() {
+   cd $pkgname-$pkgver
+-  python -m installer -d "$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --skip-build --optimize=1
+   make DESTDIR="${pkgdir}" PREFIX=/usr install
+ 
+   install -m644 -D contrib/zsh_completion "$pkgdir/usr/share/zsh/site-functions/_hg"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ backup=(etc/mercurial/hgrc)
+ build() {
+   cd $pkgname-$pkgver
+-  python -m build -wn
++  python setup.py build
+   make -C contrib/chg
+ }

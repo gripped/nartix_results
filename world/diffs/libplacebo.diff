@@ -6,7 +6,7 @@
 -pkgver=5.264.1
 -pkgrel=4
 +pkgver=6.338.1
-+pkgrel=1
++pkgrel=1.1
  pkgdesc='Reusable library for GPU-accelerated video/image rendering primitives'
  url='https://github.com/haasn/libplacebo'
  arch=('x86_64')
@@ -26,14 +26,15 @@
 +b2sums=('4f8df9c6f052eeb3b23cf9d22814cf6b244197d6b9c3ec529c89be3411d22b7d29ff0c9ee14af7a86f830ecfba7b1be308251dca96824f1a1eb74c3a0a3f84b3')
  
  build() {
-   cd ${pkgbase}-v${pkgver}
+-  cd ${pkgbase}-v${pkgver}
++  cd ${pkgname}-v${pkgver}
    CXXFLAGS+=" -I/usr/include/glslang"
 -  arch-meson build \
 +  artix-meson build \
      -D tests=true \
      -D vulkan=enabled \
      -D glslang=enabled \
-@@ -29,12 +29,12 @@
+@@ -29,16 +29,16 @@
      -D d3d11=disabled \
      -D libdovi=enabled \
      -D demos=false
@@ -42,12 +43,18 @@
  }
  
  check() {
-   cd ${pkgbase}-v${pkgver}
+-  cd ${pkgbase}-v${pkgver}
 -  ninja -C build test
++  cd ${pkgname}-v${pkgver}
 +  meson test -C build
  }
  
  package() {
+-  cd ${pkgbase}-v${pkgver}
++  cd ${pkgname}-v${pkgver}
+   DESTDIR="${pkgdir}" ninja -C build install
+   install -Dm 644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+ }
 
 
 ############# Stripped diff below #################
@@ -61,7 +68,8 @@
 +         'glibc' 'gcc-libs' 'libunwind' 'libdovi.so' 'xxhash')
  provides=('libplacebo.so')
  build() {
-   cd ${pkgbase}-v${pkgver}
+-  cd ${pkgbase}-v${pkgver}
++  cd ${pkgname}-v${pkgver}
    CXXFLAGS+=" -I/usr/include/glslang"
 -  arch-meson build \
 +  artix-meson build \

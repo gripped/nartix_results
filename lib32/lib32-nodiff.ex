@@ -33,6 +33,7 @@ lib32-gmp
 lib32-gnutls
 lib32-gpm
 lib32-gtk2
+lib32-gtk3
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
@@ -79,6 +80,7 @@ lib32-libpng12
 lib32-libproxy
 lib32-libpsl
 lib32-libraw1394
+lib32-librsvg
 lib32-libsamplerate
 lib32-libshout
 lib32-libsm
@@ -133,6 +135,7 @@ lib32-mpg123
 lib32-ncurses
 lib32-nettle
 lib32-nspr
+lib32-nss
 lib32-ocl-icd
 lib32-openal
 lib32-openssl
@@ -152,6 +155,7 @@ lib32-sdl2
 lib32-speex
 lib32-speexdsp
 lib32-spirv-tools
+lib32-sqlite
 lib32-taglib
 lib32-tdb
 lib32-twolame

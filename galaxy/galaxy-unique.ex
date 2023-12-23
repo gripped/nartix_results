@@ -126,3 +126,5 @@ mozo
 pluma
 scribus
 thunderbird
+tesseract-data
+tesseract

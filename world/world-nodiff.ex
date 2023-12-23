@@ -845,6 +845,7 @@ imlib2
 immer
 incidenceeditor
 iniparser
+inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -925,6 +926,7 @@ jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
 jupyter-notebook
+jupyter-server-fileid
 jupyter-server-ydoc
 jupyter-server
 jupyter-widgetsnbextension
@@ -1510,7 +1512,6 @@ libmodplug
 libmp4v2
 libmpack
 libmpd
-libmpdclient
 libmpeg2
 libmspack
 libmsym
@@ -1536,7 +1537,6 @@ libnma-gtk4
 libnotify
 libnotify-docs
 libnumbertext
-libnvme
 liboauth
 libodfgen
 libofa
@@ -1582,6 +1582,9 @@ libpst
 libpst-docs
 libptytty
 libpwquality
+libqaccessibilityclient
+libqaccessibilityclient-qt5
+libqaccessibilityclient-qt6
 libqalculate
 libqb
 libqmi
@@ -1593,6 +1596,7 @@ libquvi
 libqxp
 librabbitmq-c
 libraqm
+libraw
 libraw1394
 librdkafka
 libreplaygain
@@ -1966,7 +1970,6 @@ memtest86+-efi
 memtest86+-iso
 menu-cache
 menumaker
-mercurial
 merkuro
 mesa-demos
 mesa-utils
@@ -1986,6 +1989,7 @@ mimalloc
 mimetic
 minicom
 minidlna
+minio
 minisign
 miniupnpc
 python-miniupnpc
@@ -2018,7 +2022,6 @@ mpdecimal
 mpg123
 mplayer
 mencoder
-mpv
 msgpack-c
 msgpack-cxx
 msmtp
@@ -2037,6 +2040,7 @@ mupdf-tools
 musepack
 musepack-tools
 libmpcdec
+musescore
 musl
 mutt
 mypaint-brushes1
@@ -2142,6 +2146,10 @@ openal
 openal-examples
 openbabel
 python-openbabel
+openblas
+openblas64
+blas-openblas
+blas64-openblas
 openbox
 openbsd-netcat
 opencl-clhpp
@@ -2188,6 +2196,8 @@ os-prober
 osinfo-db-tools
 osinfo-db
 osm-gps-map
+oxygen-icons
+oxygen-icons-svg
 oxygen-sounds
 oxygen
 p7zip
@@ -2886,6 +2896,7 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
+python-cx-freeze
 python-cycler
 python-cython-test-exception-raiser
 python-cytoolz
@@ -2893,7 +2904,6 @@ python-daemonize
 python-daiquiri
 python-dask
 python-databases
-python-dateutil
 python-dbus-deviation
 python-dbusmock
 python-ddt
@@ -3022,6 +3032,7 @@ python-flufl.i18n
 python-flufl.testing
 python-fluidity
 python-flup
+python-fonttools
 python-fqdn
 python-freezegun
 python-frozendict
@@ -3083,6 +3094,7 @@ python-html2text
 python-html5-parser
 python-html5lib
 python-http-parser
+python-httpcore
 python-httplib2
 python-httpretty
 python-httptools
@@ -3156,6 +3168,7 @@ python-jsonschema-specifications
 python-jsonschema
 python-junit-xml
 python-jupyter-client
+python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
@@ -3366,6 +3379,7 @@ python-pint
 python-pip-run
 python-pip
 python-pipreqs
+python-pipx
 python-pkgconfig
 python-pkginfo
 python-platformdirs
@@ -3588,6 +3602,7 @@ python-qrcode
 python-qtpy
 python-quart
 python-railroad-diagrams
+python-random2
 python-rapidfuzz
 python-rapidjson
 python-rcssmin
@@ -3738,6 +3753,7 @@ python-subunit
 python-sure
 python-svglib
 python-sybil
+python-sympy
 python-tabulate
 python-tabview
 python-tappy
@@ -3991,6 +4007,9 @@ qtcreator
 qtcreator-devel
 qterminal
 qtermwidget
+qtkeychain
+qtkeychain-qt5
+qtkeychain-qt6
 qtox
 qtxdg-tools
 quadrapassel
@@ -4416,8 +4435,6 @@ sshpass
 startup-notification
 step
 stfl
-stk
-stk-docs
 stoken
 strace
 strawberry
@@ -4751,7 +4768,6 @@ virt-install
 virt-what
 virtiofsd
 virtualbox-guest-iso
-virtualgl
 vkd3d
 vmaf
 vncdotool
@@ -4773,6 +4789,7 @@ vulkan-tools
 vulkan-validation-layers
 w3m
 waf
+warpinator
 wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
@@ -4898,7 +4915,6 @@ xinetd
 xkeyboard-config
 xl2tpd
 xmldiff
-xmlsec
 xmlstarlet
 xmlto
 xmltoman
@@ -5111,3 +5127,5 @@ bats-assert
 bats-support
 bats
 perl-file-fcntllock
+libsixel
+python-pytest-datafiles

@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=weston
--pkgver=13.0.0
-+pkgver=12.0.2
- pkgrel=1
- pkgdesc='Reference implementation of a Wayland compositor'
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url='https://wayland.freedesktop.org/'
  license=('MIT')
  depends=('glibc' 'wayland' 'libxkbcommon' 'libinput' 'libunwind' 'pixman'
@@ -16,15 +9,6 @@
           'mesa' 'libegl' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
           'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
           'gstreamer' 'gst-plugins-base-libs')
-@@ -23,7 +23,7 @@
-               'C7223EBE4EF66513B892598911A30156E0E67611' # Bryce Harrington
-               'C0066D7DB8E9AC6844D728715E54498E697F11D7') # Derek Foreman
- source=("https://gitlab.freedesktop.org/wayland/weston/-/releases/$pkgver/downloads/weston-$pkgver.tar.xz"{,.sig})
--sha256sums=('52ff1d4aa2394a2e416c85a338b627ce97fa71d43eb762fd4aaf145d36fc795a'
-+sha256sums=('eb686a7cf00992a23b17f192fca9a887313e92c346ee35d8575196983d656b4a'
-             'SKIP')
- 
- prepare() {
 @@ -39,8 +39,8 @@
  }
  

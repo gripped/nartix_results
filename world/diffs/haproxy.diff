@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,28 +1,23 @@
  
  pkgname=haproxy
--pkgver=2.9.1
-+pkgver=2.9.0
- pkgrel=1
+ pkgver=2.9.1
+-pkgrel=2
++pkgrel=1
  
  pkgdesc='Reliable, high performance TCP/HTTP load balancer'
-@@ -8,19 +8,16 @@
+ url='https://www.haproxy.org/'
  arch=('x86_64')
  license=('GPL')
  
@@ -17,20 +17,29 @@
 +depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua')
  
  backup=('etc/haproxy/haproxy.cfg')
--
--install=haproxy.install
  
+-install=haproxy.install
+-
  source=(https://www.haproxy.org/download/${pkgver%.*}/src/haproxy-$pkgver.tar.gz
+-        haproxy-stconn-Disable-zero-copy.patch::https://github.com/haproxy/haproxy/commit/123a9e7d83213bcc0478840bab2270113275fb0a.patch
          haproxy.cfg
          haproxy.sysusers
          0001-Use-CFLAGS-and-LDFLAGS-when-building-admin.patch)
  
--sha256sums=('d5801c772aab9c43f40964b7b33b4388d14b5b45750be4d2671785863cdb9f1c'
-+sha256sums=('fba18acd1a46337fe20ae07c816c2496c8602b80a1bc9ff3768d4caa5fb80eab'
+ sha256sums=('d5801c772aab9c43f40964b7b33b4388d14b5b45750be4d2671785863cdb9f1c'
+-            'bcb1a784181e486b66ea41a4cfbf1293bb38fab1f3ebe94ba2b054a9c9c85c39'
              'f6babef513b99a3fa0e50f2b144c73c980f1b78b119874ffa2580af1e651e7a9'
              'b02b4088205039f0979aef0ef3e22957f493dd54eabefaee7011f2d795303b3e'
              'a1e3a1c2923465081383eb431bae55ff9841d89909469311cdba4b394ec4a998')
-@@ -46,7 +43,6 @@
+@@ -31,7 +26,6 @@
+   cd haproxy-$pkgver
+ 
+   patch -p1 <"$srcdir"/0001-Use-CFLAGS-and-LDFLAGS-when-building-admin.patch
+-  patch -Np1 < ../haproxy-stconn-Disable-zero-copy.patch
+ }
+ 
+ build() {
+@@ -49,7 +43,6 @@
      USE_OPENSSL=1 \
      USE_PCRE2=1 USE_PCRE2_JIT=1 \
      USE_PROMEX=1 \
@@ -38,7 +47,7 @@
      USE_ZLIB=1
  
      make \
-@@ -55,9 +51,6 @@
+@@ -58,9 +51,6 @@
        CFLAGS="$CFLAGS" \
        LDFLAGS="$LDFLAGS" \
        admin/{halog/halog,iprange/ip{,6}range}
@@ -48,7 +57,7 @@
  }
  
  package() {
-@@ -74,8 +67,6 @@
+@@ -77,8 +67,6 @@
  
    install -D -m0644 ../haproxy.sysusers "$pkgdir"/usr/lib/sysusers.d/haproxy.conf
    install -D -m0644 ../haproxy.cfg "$pkgdir"/etc/haproxy/haproxy.cfg
@@ -63,7 +72,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
+@@ -1,11 +1,9 @@
  pkgname=haproxy
 -depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua' 'systemd-libs')
 +depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua')
@@ -72,7 +81,11 @@
  prepare() {
    cd haproxy-$pkgver
    patch -p1 <"$srcdir"/0001-Use-CFLAGS-and-LDFLAGS-when-building-admin.patch
-@@ -19,7 +18,6 @@
+-  patch -Np1 < ../haproxy-stconn-Disable-zero-copy.patch
+ }
+ build() {
+   cd haproxy-$pkgver
+@@ -20,7 +18,6 @@
      USE_OPENSSL=1 \
      USE_PCRE2=1 USE_PCRE2_JIT=1 \
      USE_PROMEX=1 \
@@ -80,7 +93,7 @@
      USE_ZLIB=1
      make \
        SBINDIR=/usr/bin \
-@@ -27,7 +25,4 @@
+@@ -28,7 +25,4 @@
        CFLAGS="$CFLAGS" \
        LDFLAGS="$LDFLAGS" \
        admin/{halog/halog,iprange/ip{,6}range}
