@@ -681,3 +681,4 @@ artix-branding-base
 artix-breeze-sddm
 artix-netinstall-presets
 artix-wallpapers
+artix-live

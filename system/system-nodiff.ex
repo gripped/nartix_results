@@ -1,6 +1,5 @@
 argon2
 attr
-autoconf
 automake
 b43-fwcutter
 binutils
@@ -73,7 +72,6 @@ hwdata
 iana-etc
 icu
 iproute2
-iputils
 iw
 jansson
 jfsutils

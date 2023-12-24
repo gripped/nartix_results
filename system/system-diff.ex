@@ -1,6 +1,7 @@
 acl
 audit
 python-audit
+autoconf
 base-devel
 base
 bash
@@ -18,6 +19,7 @@ gssproxy
 inetutils
 iptables
 iptables-nft
+iputils
 libarchive
 libcap-ng
 python-capng

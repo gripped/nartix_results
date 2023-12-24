@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -16,7 +16,7 @@
- b2sums=('0812940d7865e85ae0cd5b5dfe802c3774cd85bddf7b05709e8cd71876e02c3aed2c0e2da681abe9537c908d34363d54a72f24ecacd75c2412d72adc78cfb9d0')
+ b2sums=('1249c29fbc844e0bce90853723dabaf878e6bdc552fa52daf3f1e4519c59b0232a5508e8a0600651bd3898240458e958b4d50b93b5ae4647171c4f5ac8f9c6e1')
  
  build() {
 -  arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}

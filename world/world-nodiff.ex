@@ -76,7 +76,6 @@ aribb24
 aribb25
 ark
 armagetronad
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -228,7 +227,6 @@ python-capstone
 cargo-c
 caribou
 catatonit
-catch2
 catdoc
 catfish
 cbatticon
@@ -1296,7 +1294,6 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
-libaec
 libalkimia
 libao
 libappimage
@@ -1891,28 +1888,6 @@ libmalcontent
 maliit-framework
 maliit-keyboard
 mallard-ducktype
-man-pages-l10n
-man-pages-cs
-man-pages-da
-man-pages-de
-man-pages-el
-man-pages-es
-man-pages-fi
-man-pages-fr
-man-pages-hu
-man-pages-id
-man-pages-it
-man-pages-mk
-man-pages-nb
-man-pages-nl
-man-pages-pl
-man-pages-pt_br
-man-pages-ro
-man-pages-ru
-man-pages-sv
-man-pages-sr
-man-pages-uk
-man-pages-vi
 man2html
 mandoc
 mandown
@@ -1970,6 +1945,7 @@ memtest86+-efi
 memtest86+-iso
 menu-cache
 menumaker
+mercurial
 merkuro
 mesa-demos
 mesa-utils
@@ -2080,7 +2056,6 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
-netpbm
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
@@ -3422,7 +3397,6 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
-python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -4303,6 +4277,8 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
+ruff
+python-ruff
 runc
 rust-bindgen
 rust
@@ -5054,7 +5030,6 @@ python-tldextract
 python-zeep
 kuserfeedback5
 python-pytest-snapshot
-aws-cli-v2
 docker-buildx
 python-osc-lib
 0ad-data

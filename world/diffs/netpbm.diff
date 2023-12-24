@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=netpbm
+ pkgver=10.86.39
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A toolkit for manipulation of graphic images"
+ arch=('x86_64')
+ license=('custom' 'BSD' 'GPL' 'LGPL')
+@@ -51,7 +51,7 @@
+   echo 'JBIGLIB = /usr/lib/libjbig.a' >> config.mk
+ 
+   sed -i 's|misc|share/netpbm|' common.mk
+-  sed -e 's|/sharedlink|/lib|' -e 's|/staticlink|/lib|' -i lib/Makefile
++  sed -i 's|/link|/lib|' lib/Makefile
+   sed -i 's|install.manwebmain install.manweb install.man|install.man|' GNUmakefile
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+   echo 'ZLIB = libz.so' >> config.mk
+   echo 'JBIGLIB = /usr/lib/libjbig.a' >> config.mk
+   sed -i 's|misc|share/netpbm|' common.mk
+-  sed -e 's|/sharedlink|/lib|' -e 's|/staticlink|/lib|' -i lib/Makefile
++  sed -i 's|/link|/lib|' lib/Makefile
+   sed -i 's|install.manwebmain install.manweb install.man|install.man|' GNUmakefile
+ }
+ build() {

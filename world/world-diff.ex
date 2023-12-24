@@ -10,6 +10,7 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
+arrow
 aspell-uk
 assimp
 at-spi2-core
@@ -38,6 +39,7 @@ brltty-udev-generic
 btop
 bumblebee
 c-ares
+catch2
 cdparanoia
 cgmanager
 chromium-bsu
@@ -241,6 +243,7 @@ kdiagram
 kismet
 knot
 kuserfeedback
+libaec
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -322,6 +325,28 @@ lxc
 lxcfs
 lxd
 mako
+man-pages-l10n
+man-pages-cs
+man-pages-da
+man-pages-de
+man-pages-el
+man-pages-es
+man-pages-fi
+man-pages-fr
+man-pages-hu
+man-pages-id
+man-pages-it
+man-pages-mk
+man-pages-nb
+man-pages-nl
+man-pages-pl
+man-pages-pt_br
+man-pages-ro
+man-pages-ru
+man-pages-sv
+man-pages-sr
+man-pages-uk
+man-pages-vi
 mariadb
 mariadb-libs
 mariadb-clients
@@ -337,7 +362,6 @@ mate-system-monitor
 matrix-synapse
 media-player-info
 memcached
-mercurial
 mesa
 vulkan-mesa-layers
 opencl-clover-mesa
@@ -361,6 +385,7 @@ mutter-docs
 ndctl
 ndisc6
 netavark
+netpbm
 netplan
 networkmanager
 libnm
@@ -500,6 +525,7 @@ python-anyio
 python-anytree
 python-celery
 python-dateutil
+python-pyarrow
 python-pynvim
 python-pytest-benchmark
 python-pyudev
@@ -617,8 +643,6 @@ rspamd
 rsync
 rtkit
 ruby-faraday-patron
-ruff
-python-ruff
 salt
 samba
 libwbclient
@@ -759,6 +783,7 @@ yubikey-personalization
 zeromq
 znc
 zsh-syntax-highlighting
+aws-cli-v2
 senpai
 umurmur
 python-pipenv-to-requirements
