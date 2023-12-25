@@ -76,6 +76,7 @@ aribb24
 aribb25
 ark
 armagetronad
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -163,7 +164,6 @@ bemenu-wayland
 benchmark
 bigsh0t
 bin86
-bind
 black-hole-solver
 blackbox
 blinken
@@ -688,7 +688,6 @@ gptfdisk
 gradle
 gradle-doc
 gradle-src
-grafana
 granatier
 granite
 grantlee-editor
@@ -766,7 +765,6 @@ gv
 gwenhywfar
 gwenview
 gyp
-handbrake
 harfbuzz
 harfbuzz-cairo
 harfbuzz-icu
@@ -2056,6 +2054,7 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
+netpbm
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
@@ -2879,6 +2878,7 @@ python-daemonize
 python-daiquiri
 python-dask
 python-databases
+python-dateutil
 python-dbus-deviation
 python-dbusmock
 python-ddt
@@ -3334,7 +3334,6 @@ python-pc-ble-driver-py
 python-pdfrw
 python-pdm-backend
 python-pdm-pep517
-python-pdm
 python-pecan
 python-peewee
 python-pefile
@@ -3397,6 +3396,7 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
+python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -3454,6 +3454,7 @@ python-pynacl
 python-pynamodb
 python-pynetbox
 python-pynitrokey
+python-pynvim
 python-pyocd
 python-pyogrio
 python-pyopencl
@@ -3599,6 +3600,7 @@ python-requests-ftp
 python-requests-futures
 python-requests-kerberos
 python-requests-mock
+python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
 python-requests-unixsocket
@@ -3771,6 +3773,7 @@ python-traitlets
 python-transaction
 python-treq
 python-trio-asyncio
+python-trio
 python-trove-classifiers
 python-trustme
 python-twisted
@@ -4175,7 +4178,6 @@ ruby-nio4r
 ruby-nokogiri
 ruby-oedipus_lex
 ruby-open-uri
-ruby-optimist
 ruby-packetfu
 ruby-paint
 ruby-parallel
@@ -4969,8 +4971,6 @@ youtube-dl
 yt-dlp
 yubico-c-client
 yubico-c
-z3
-python-z3-solver
 zanshin
 zathura-cb
 zathura-djvu
@@ -5030,6 +5030,7 @@ python-tldextract
 python-zeep
 kuserfeedback5
 python-pytest-snapshot
+aws-cli-v2
 docker-buildx
 python-osc-lib
 0ad-data
@@ -5104,3 +5105,7 @@ bats
 perl-file-fcntllock
 libsixel
 python-pytest-datafiles
+python-dep-logic
+python-expandvars
+python-truststore
+ruby-test-unit-ruby-core

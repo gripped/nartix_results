@@ -20,6 +20,7 @@ inetutils
 iptables
 iptables-nft
 iputils
+krb5
 libarchive
 libcap-ng
 python-capng

@@ -10,7 +10,6 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
-arrow
 aspell-uk
 assimp
 at-spi2-core
@@ -24,6 +23,7 @@ bash-bats-assert
 bash-bats-support
 bash-bats
 bftpd
+bind
 bluez
 bluez-utils
 bluez-libs
@@ -152,6 +152,7 @@ gnome-video-effects
 go-bindata
 go-licenses
 gpsd
+grafana
 greetd-tuigreet
 greetd
 $pkgbase
@@ -194,6 +195,7 @@ gvfs-goa
 gvfs-mtp
 gvfs-nfs
 gvfs-google
+handbrake
 haproxy
 haveged
 hidapi
@@ -385,7 +387,6 @@ mutter-docs
 ndctl
 ndisc6
 netavark
-netpbm
 netplan
 networkmanager
 libnm
@@ -524,14 +525,10 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
-python-dateutil
-python-pyarrow
-python-pynvim
+python-pdm
 python-pytest-benchmark
 python-pyudev
-python-requests-ntlm
 python-sphinx-alabaster-theme
-python-trio
 qemu
 qemu-common
 qemu-audio-alsa
@@ -643,6 +640,7 @@ rspamd
 rsync
 rtkit
 ruby-faraday-patron
+ruby-optimist
 salt
 samba
 libwbclient
@@ -780,10 +778,11 @@ xorg-xlogo
 xorg-xwayland
 xscreensaver
 yubikey-personalization
+z3
+python-z3-solver
 zeromq
 znc
 zsh-syntax-highlighting
-aws-cli-v2
 senpai
 umurmur
 python-pipenv-to-requirements

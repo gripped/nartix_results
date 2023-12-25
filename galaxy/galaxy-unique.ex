@@ -128,3 +128,5 @@ scribus
 thunderbird
 tesseract-data
 tesseract
+copyq
+package-query
