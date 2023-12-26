@@ -172,3 +172,5 @@ lib32-zstd
 multilib-devel
 steam
 winetricks
+lib32-json-c
+lib32-libbpf

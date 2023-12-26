@@ -1,5 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=salt
+-pkgver=3006.5
+-pkgrel=1
++pkgver=3006.1
++pkgrel=2
+ pkgdesc='Central system and configuration manager'
+ arch=('any')
+ url='http://saltstack.org/'
 @@ -21,7 +21,6 @@
  
           'python-pyzmq'
@@ -8,6 +18,15 @@
           'python-importlib-metadata'
           'python-pycryptodomex')
  makedepends=('python-setuptools')
+@@ -33,7 +32,7 @@
+ install=salt.install
+ source=("https://pypi.io/packages/source/s/salt/salt-$pkgver.tar.gz"
+         salt.logrotate)
+-sha256sums=('6f9687f2542ddc8084b17cb47f0a4cafd48940123ba3ed5731f6aa81fe7f973e'
++sha256sums=('95587bd611dea6affb6908d0ec2686cb7edb84c14144b4851776f127a60ec5b9'
+             'abecc3c1be124c4afffaaeb3ba32b60dfee8ba6dc32189edfa2ad154ecb7a215')
+ 
+ prepare() {
 @@ -59,9 +58,6 @@
    install -v -Dm644 conf/master "$pkgdir/etc/salt/master"
    install -v -Dm644 conf/minion "$pkgdir/etc/salt/minion"

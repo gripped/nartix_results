@@ -683,3 +683,5 @@ artix-netinstall-presets
 artix-wallpapers
 artix-live
 greetd-openrc
+artixlinux-appstream-data
+ckbcomp

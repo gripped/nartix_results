@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=newsboat
+-pkgver=2.34
++pkgver=2.33
+ pkgrel=1
+ pkgdesc="RSS/Atom feed reader for text terminals"
+ arch=('x86_64')
+@@ -17,7 +17,7 @@
+ options=('!makeflags' '!lto')
+ changelog=$pkgname.changelog
+ source=("https://newsboat.org/releases/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc})
+-sha256sums=('73d7b539b0c906f6843a1542e1904a02ae430e79d6be4d6f9e2e2034eac2434e'
++sha256sums=('179d0d5e608337f14e5e670c0a6b144129ed4e504621ca2a117d188894cb34fa'
+             'SKIP')
+ validpgpkeys=('B8B1756A0DDBF0760CE67CCF4ED6CD61932B9EBE') # Newsboat project <newsboat@googlegroups.com>
+ 

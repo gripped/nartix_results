@@ -95,7 +95,6 @@ aspell-pl
 aspell-pt
 aspell-ru
 aspell-sv
-aspell
 astromenace
 astyle
 atftp
@@ -820,7 +819,6 @@ hyperscan
 hyphen
 hyphen-en
 i2c-tools
-i2pd
 i3-wm
 i3blocks
 i3lock
@@ -2683,7 +2681,6 @@ python-aiofiles
 python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
-python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiopg
@@ -2760,7 +2757,6 @@ python-beniget
 python-betamax
 python-bidict
 python-big-o
-python-billiard
 python-binaryornot
 python-bincopy
 python-biopython
@@ -3506,7 +3502,6 @@ python-pytest-flake8
 python-pytest-forked
 python-pytest-freezegun
 python-pytest-freezer
-python-pytest-html
 python-pytest-httpbin
 python-pytest-httpserver
 python-pytest-ignore-flaky
@@ -4255,7 +4250,6 @@ ruby-test-unit-rr
 ruby-test-unit
 ruby-test_declarative
 ruby-thread-local
-ruby-tilt
 ruby-time
 ruby-timers
 ruby-tins
@@ -4744,7 +4738,6 @@ virglrenderer
 virt-manager
 virt-install
 virt-what
-virtiofsd
 virtualbox-guest-iso
 vkd3d
 vmaf
@@ -5109,3 +5102,5 @@ python-dep-logic
 python-expandvars
 python-truststore
 ruby-test-unit-ruby-core
+ruby-minitest-proveit
+ruby-warning

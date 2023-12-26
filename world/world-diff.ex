@@ -11,6 +11,7 @@ appstream-qt5
 appstream-qt
 archivetools
 aspell-uk
+aspell
 assimp
 at-spi2-core
 at-spi2-core-docs
@@ -201,6 +202,7 @@ haveged
 hidapi
 hwloc
 hyprland
+i2pd
 ibus
 libibus
 igsc
@@ -521,12 +523,15 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+python-aiohttp-socks
 python-aiomysql
 python-anyio
 python-anytree
+python-billiard
 python-celery
 python-pdm
 python-pytest-benchmark
+python-pytest-html
 python-pyudev
 python-sphinx-alabaster-theme
 qemu
@@ -641,6 +646,7 @@ rsync
 rtkit
 ruby-faraday-patron
 ruby-optimist
+ruby-tilt
 salt
 samba
 libwbclient
@@ -720,6 +726,7 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
+virtiofsd
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms
