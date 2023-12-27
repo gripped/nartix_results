@@ -130,3 +130,5 @@ tesseract-data
 tesseract
 copyq
 package-query
+libmateweather
+vice

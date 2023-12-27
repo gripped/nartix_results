@@ -40,7 +40,6 @@ brltty-udev-generic
 btop
 bumblebee
 c-ares
-catch2
 cdparanoia
 cgmanager
 chromium-bsu
@@ -523,17 +522,16 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
-python-aiohttp-socks
 python-aiomysql
 python-anyio
 python-anytree
-python-billiard
 python-celery
 python-pdm
 python-pytest-benchmark
-python-pytest-html
 python-pyudev
+python-reflink
 python-sphinx-alabaster-theme
+python-trio-asyncio
 qemu
 qemu-common
 qemu-audio-alsa
@@ -646,7 +644,6 @@ rsync
 rtkit
 ruby-faraday-patron
 ruby-optimist
-ruby-tilt
 salt
 samba
 libwbclient
@@ -662,6 +659,7 @@ shairport-sync
 sharutils
 signon-plugin-oauth2
 smartmontools
+smplayer
 snapper
 spice-gtk
 spice-vdagent
@@ -773,7 +771,6 @@ xf86-video-intel
 xf86-video-nouveau
 xf86-video-openchrome
 xf86-video-vmware
-xmlsec
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

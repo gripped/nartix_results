@@ -5,10 +5,21 @@
  depends=('http-parser' 'jose')
  makedepends=('git' 'asciidoc' 'meson')
 -checkdepends=('systemd')
- source=("git+$url.git?signed#commit=$_commit"
+ source=("git+$url.git#commit=$_commit"
          'tang.sysusers.conf'
          'tang.tmpfiles.conf')
-@@ -36,6 +35,7 @@
+@@ -17,10 +16,6 @@
+             '48c3026b37ce3fe180633facb99a194e1fcb0ff860f6dff33541b6216b441572c1de0620102ce25e36c06f3c769b3149cb595f5aa4e355416c680b1c6f73e957')
+ validpgpkeys=('7CE2CB3D2AF59FE1EA22F551D0D219ED1F7E762C') # Sergio Correia <scorreia@redhat.com>
+ 
+-pkgver() {
+-	cd "$pkgname"
+-	git describe --tags | sed 's/^v//;s/\([^-]*-\)g/r\1/;s/-/./g'
+-}
+ 
+ build() {
+ 	cd "$pkgname"
+@@ -35,6 +30,7 @@
  package() {
  	cd "$pkgname"
  	DESTDIR="$pkgdir" meson install -C build

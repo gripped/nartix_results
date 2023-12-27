@@ -226,6 +226,7 @@ python-capstone
 cargo-c
 caribou
 catatonit
+catch2
 catdoc
 catfish
 cbatticon
@@ -2681,6 +2682,7 @@ python-aiofiles
 python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
+python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiopg
@@ -2757,6 +2759,7 @@ python-beniget
 python-betamax
 python-bidict
 python-big-o
+python-billiard
 python-binaryornot
 python-bincopy
 python-biopython
@@ -3502,6 +3505,7 @@ python-pytest-flake8
 python-pytest-forked
 python-pytest-freezegun
 python-pytest-freezer
+python-pytest-html
 python-pytest-httpbin
 python-pytest-httpserver
 python-pytest-ignore-flaky
@@ -3583,7 +3587,6 @@ python-readme-renderer
 python-recommonmark
 python-redis
 python-referencing
-python-reflink
 python-regex
 python-rencode
 python-reportlab
@@ -3767,7 +3770,6 @@ python-trailrunner
 python-traitlets
 python-transaction
 python-treq
-python-trio-asyncio
 python-trio
 python-trove-classifiers
 python-trustme
@@ -4250,6 +4252,7 @@ ruby-test-unit-rr
 ruby-test-unit
 ruby-test_declarative
 ruby-thread-local
+ruby-tilt
 ruby-time
 ruby-timers
 ruby-tins
@@ -4354,7 +4357,6 @@ slop
 slurp
 smb4k
 smpeg
-smplayer
 snappy
 sndio
 snorenotify
@@ -4886,6 +4888,7 @@ xinetd
 xkeyboard-config
 xl2tpd
 xmldiff
+xmlsec
 xmlstarlet
 xmlto
 xmltoman
@@ -5104,3 +5107,4 @@ python-truststore
 ruby-test-unit-ruby-core
 ruby-minitest-proveit
 ruby-warning
+python-assertpy

@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-trio-asyncio
+ pkgver=0.13.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A re-implementation of the asyncio mainloop on top of Trio'
+ arch=(any)
+ url=https://github.com/python-trio/trio-asyncio
+@@ -18,14 +18,11 @@
+ makedepends=(
+   git
+   python-setuptools
++  python-pytest-runner
+ )
+ _tag=b3b9ddef2ebc29e4cdbf869d792da91dbd46a2af
+ source=(git+https://github.com/python-trio/trio-asyncio.git#tag=${_tag})
+ sha256sums=(SKIP)
+-
+-prepare() {
+-  sed '/pytest-runner/d' -i trio-asyncio/setup.py
+-}
+ 
+ pkgver() {
+   cd trio-asyncio
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,9 +5,6 @@
+   python-outcome
+   python-trio
+ )
+-prepare() {
+-  sed '/pytest-runner/d' -i trio-asyncio/setup.py
+-}
+ build() {
+   cd trio-asyncio
+   python setup.py build

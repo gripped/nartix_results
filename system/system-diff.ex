@@ -19,7 +19,6 @@ gssproxy
 inetutils
 iptables
 iptables-nft
-krb5
 libarchive
 libcap-ng
 python-capng

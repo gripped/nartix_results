@@ -1,0 +1,12 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,8 @@
+ check() {
+   cd dateutil
+   pytest -W ignore::pytest.PytestUnknownMarkWarning \
+-    --deselect dateutil/test/test_internals.py::test_parser_parser_private_not_warns
++    --deselect dateutil/test/test_internals.py::test_parser_parser_private_not_warns \
++    --deselect dateutil/test/test_tz.py::test_tzlocal_local_time_trim_colon
+ }
+ 
+ package() {

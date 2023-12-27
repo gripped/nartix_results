@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-reflink
+ pkgver=0.2.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Reflink support for Python'
+ arch=(x86_64)
+ url=https://gitlab.com/rubdos/pyreflink
+@@ -13,16 +13,13 @@
+ )
+ makedepends=(
+   git
++  python-pytest-runner
+   python-setuptools
+   python-wheel
+ )
+ _tag=f49e834dea6be63c7eb7d31e344232820514880d
+ source=(git+https://gitlab.com/rubdos/pyreflink.git#tag=${_tag})
+ b2sums=(SKIP)
+-
+-prepare() {
+-  sed '/pytest-runner/d' -i pyreflink/setup.py
+-}
+ 
+ pkgver() {
+   cd pyreflink
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,9 +4,6 @@
+   python
+   python-cffi
+ )
+-prepare() {
+-  sed '/pytest-runner/d' -i pyreflink/setup.py
+-}
+ build() {
+   cd pyreflink
+   python setup.py build
