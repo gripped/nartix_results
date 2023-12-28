@@ -4,40 +4,73 @@
  
  pkgname=python-trio-asyncio
  pkgver=0.13.0
--pkgrel=2
-+pkgrel=1
+-pkgrel=3
++pkgrel=2
  pkgdesc='A re-implementation of the asyncio mainloop on top of Trio'
  arch=(any)
  url=https://github.com/python-trio/trio-asyncio
-@@ -18,14 +18,11 @@
+@@ -11,18 +11,13 @@
+ )
+ depends=(
+   python
+-  python-attrs
+-  python-exceptiongroup
++  python-async_generator
+   python-outcome
+-  python-sniffio
+   python-trio
+ )
  makedepends=(
    git
+-  python-build
+-  python-installer
    python-setuptools
-+  python-pytest-runner
+-  python-wheel
  )
  _tag=b3b9ddef2ebc29e4cdbf869d792da91dbd46a2af
  source=(git+https://github.com/python-trio/trio-asyncio.git#tag=${_tag})
- sha256sums=(SKIP)
--
--prepare() {
--  sed '/pytest-runner/d' -i trio-asyncio/setup.py
--}
+@@ -39,14 +34,15 @@
  
- pkgver() {
+ build() {
    cd trio-asyncio
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ package() {
+-  python -m installer --destdir="${pkgdir}" trio-asyncio/dist/*.whl
++  cd trio-asyncio
++  python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   rm -rf "${pkgdir}"${site_packages}/tests
+-  install -Dm 644 trio-asyncio/LICENSE -t "${pkgdir}"/usr/share/licenses/python-trio-asyncio/
+-  install -Dm 644 trio-asyncio/LICENSE.MIT -t "${pkgdir}"/usr/share/licenses/python-trio-asyncio/
++  install -Dm 644 LICENSE -t "${pkgdir}"/usr/share/licenses/python-trio-asyncio/
++  install -Dm 644 LICENSE.MIT -t "${pkgdir}"/usr/share/licenses/python-trio-asyncio/
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,9 +5,6 @@
+@@ -1,10 +1,8 @@
+ pkgname=python-trio-asyncio
+ depends=(
+   python
+-  python-attrs
+-  python-exceptiongroup
++  python-async_generator
    python-outcome
+-  python-sniffio
    python-trio
  )
--prepare() {
--  sed '/pytest-runner/d' -i trio-asyncio/setup.py
--}
+ prepare() {
+@@ -12,5 +10,5 @@
+ }
  build() {
    cd trio-asyncio
-   python setup.py build
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }

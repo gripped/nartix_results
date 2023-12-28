@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,13 @@
+ 
+ pkgname=python-setuptools-gettext
+ pkgver=0.1.8
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Setuptools plugin for building .mo files'
+ arch=(any)
+ url=https://github.com/breezy-team/setuptools-gettext
+ license=(GPL2)
+-depends=(
+-  python
+-  python-setuptools
+-  python-tomli
+-)
+-makedepends=(
+-  git
+-  python-build
+-  python-installer
+-  python-wheel
+-)
++depends=(python-setuptools)
++makedepends=(git)
+ _tag=580829c3d7b398e58f60751549028b33afa58119
+ source=(git+https://github.com/breezy-team/setuptools-gettext.git#tag=${_tag})
+ b2sums=(SKIP)
+@@ -29,10 +20,11 @@
+ 
+ build() {
+   cd setuptools-gettext
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ package() {
+-  python -m installer --destdir="${pkgdir}" setuptools-gettext/dist/*.whl
++  cd setuptools-gettext
++  python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,6 @@
+ pkgname=python-setuptools-gettext
+-depends=(
+-  python
+-  python-setuptools
+-  python-tomli
+-)
++depends=(python-setuptools)
+ build() {
+   cd setuptools-gettext
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }

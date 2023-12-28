@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   gtk3-docs
- )
- pkgver=3.24.39
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="GObject-based multi-platform GUI toolkit"
- url="https://www.gtk.org/"
 @@ -45,7 +45,6 @@
    libxrender
    pango
@@ -17,16 +8,7 @@
    wayland
  )
  makedepends=(
-@@ -72,8 +71,6 @@
- 
- prepare() {
-   cd gtk
--
--  git cherry-pick -n 26336c401a39cbd8a7b8128fac7029077c6e1dd0
- }
- 
- build() {
-@@ -84,11 +81,10 @@
+@@ -84,11 +83,10 @@
      -D gtk_doc=true
      -D introspection=true
      -D man=true
@@ -45,7 +27,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,12 +37,10 @@
+@@ -37,7 +37,6 @@
    libxrender
    pango
    shared-mime-info
@@ -53,12 +35,7 @@
    wayland
  )
  prepare() {
-   cd gtk
--  git cherry-pick -n 26336c401a39cbd8a7b8128fac7029077c6e1dd0
- }
- build() {
-   local meson_options=(
-@@ -52,10 +50,9 @@
+@@ -52,10 +51,9 @@
      -D gtk_doc=true
      -D introspection=true
      -D man=true

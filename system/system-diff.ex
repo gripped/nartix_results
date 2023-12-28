@@ -32,6 +32,7 @@ linux-docs
 logrotate
 lvm2
 device-mapper
+lz4
 man-db
 mdadm
 mkinitcpio

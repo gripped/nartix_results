@@ -1,6 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -52,6 +52,8 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=nvchecker
+-pkgver=2.13.1
+-_tag=7da0a64a765d5960aedc708ce02eccb67f595c3e
++pkgver=2.13
++_tag=34c2f1c7ecd1c626b648e384e777cf1c0d7124f3
+ pkgrel=1
+ pkgdesc="New version checker for software releases"
+ arch=('any')
+@@ -32,6 +32,7 @@
+ )
+ 
+ _backports=(
++  'fac30d46d9d090341da9494b1d541de280ed9f38'
+ )
+ 
+ pkgver() {
+@@ -51,6 +52,8 @@
      git log --oneline -1 "${_c}"
      git cherry-pick -n "${_c}"
    done
@@ -9,7 +27,7 @@
  }
  
  build() {
-@@ -63,7 +65,7 @@
+@@ -62,7 +65,7 @@
  
  check() {
    cd nvchecker
@@ -24,7 +42,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,6 +14,7 @@
+@@ -1,6 +1,7 @@
+ pkgname=nvchecker
+ depends=('python' 'python-structlog' 'python-platformdirs' 'python-tornado' 'python-pycurl')
+ _backports=(
++  'fac30d46d9d090341da9494b1d541de280ed9f38'
+ )
+ prepare() {
+   cd nvchecker
+@@ -13,6 +14,7 @@
      git log --oneline -1 "${_c}"
      git cherry-pick -n "${_c}"
    done

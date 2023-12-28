@@ -186,6 +186,7 @@ breeze-gtk
 breeze-icons
 breeze-plymouth
 breeze
+breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -765,6 +766,7 @@ gv
 gwenhywfar
 gwenview
 gyp
+handbrake
 harfbuzz
 harfbuzz-cairo
 harfbuzz-icu
@@ -3085,7 +3087,6 @@ python-ibm-db-sa
 python-icecream
 python-identify
 python-idna
-python-ifaddr
 python-ijson
 python-imagesize
 python-immutabledict
@@ -3418,7 +3419,6 @@ python-pydrive
 python-pyee
 python-pyelftools
 python-pyenchant
-python-pyfakefs
 python-pyflakes
 python-pyftdi
 python-pyftpdlib
@@ -3543,7 +3543,6 @@ python-pytest-testinfra
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
-python-pytest-trio
 python-pytest-twisted
 python-pytest-vcr
 python-pytest-xdist
@@ -3587,6 +3586,7 @@ python-readme-renderer
 python-recommonmark
 python-redis
 python-referencing
+python-reflink
 python-regex
 python-rencode
 python-reportlab
@@ -3645,7 +3645,6 @@ python-sentry_sdk
 python-serpent
 python-service-identity
 python-setproctitle
-python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
@@ -3666,7 +3665,6 @@ python-smartypants
 python-smbprotocol
 python-smmap
 python-snappy
-python-sniffio
 python-snowballstemmer
 python-socketio
 python-socketpool
@@ -3770,7 +3768,6 @@ python-trailrunner
 python-traitlets
 python-transaction
 python-treq
-python-trio
 python-trove-classifiers
 python-trustme
 python-twisted
@@ -3803,7 +3800,6 @@ python-uritemplate
 python-urllib3
 python-urllib3-doc
 python-urwid
-python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
@@ -4740,6 +4736,7 @@ virglrenderer
 virt-manager
 virt-install
 virt-what
+virtiofsd
 virtualbox-guest-iso
 vkd3d
 vmaf
@@ -5108,3 +5105,4 @@ ruby-test-unit-ruby-core
 ruby-minitest-proveit
 ruby-warning
 python-assertpy
+llvm-julia

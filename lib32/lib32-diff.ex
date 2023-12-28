@@ -9,7 +9,6 @@ lib32-gst-plugins-base-libs
 lib32-gst-plugins-base
 lib32-gst-plugins-good
 lib32-jack2
-lib32-krb5
 lib32-libelf
 lib32-libgudev
 lib32-libpulse

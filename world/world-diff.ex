@@ -33,7 +33,6 @@ bluez-hid2hci
 bluez-plugins
 bolt
 box2d
-breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -195,7 +194,6 @@ gvfs-goa
 gvfs-mtp
 gvfs-nfs
 gvfs-google
-handbrake
 haproxy
 haveged
 hidapi
@@ -526,12 +524,18 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
+python-ifaddr
 python-pdm
+python-pyfakefs
 python-pytest-benchmark
+python-pytest-trio
 python-pyudev
-python-reflink
+python-setuptools-gettext
+python-sniffio
 python-sphinx-alabaster-theme
 python-trio-asyncio
+python-trio
+python-uvloop
 qemu
 qemu-common
 qemu-audio-alsa
@@ -724,7 +728,6 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
-virtiofsd
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms
