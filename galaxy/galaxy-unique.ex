@@ -132,3 +132,4 @@ copyq
 package-query
 libmateweather
 vice
+libsidplayfp

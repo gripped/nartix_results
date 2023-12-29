@@ -273,7 +273,6 @@ libksysguard
 liblangtag
 libldm
 libmbim
-libmpdclient
 libmspub
 libnvme
 libplacebo
@@ -526,6 +525,7 @@ python-anytree
 python-celery
 python-ifaddr
 python-pdm
+python-pexpect
 python-pyfakefs
 python-pytest-benchmark
 python-pytest-trio
@@ -535,6 +535,7 @@ python-sniffio
 python-sphinx-alabaster-theme
 python-trio-asyncio
 python-trio
+python-uritemplate
 python-uvloop
 qemu
 qemu-common
@@ -638,6 +639,7 @@ quazip-qt6
 rabbitmq
 rabbitmqadmin
 ranger
+rapidfuzz-cpp
 redis
 redshift
 refind

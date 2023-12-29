@@ -1508,6 +1508,7 @@ libmodplug
 libmp4v2
 libmpack
 libmpd
+libmpdclient
 libmpeg2
 libmspack
 libmsym
@@ -3342,7 +3343,6 @@ python-pep440
 python-pep621
 python-perf
 python-persistent
-python-pexpect
 python-pg8000
 python-phonenumbers
 python-piccata
@@ -3796,7 +3796,6 @@ python-unidiff
 python-unittest-mixins
 python-unpaddedbase64
 python-uri-template
-python-uritemplate
 python-urllib3
 python-urllib3-doc
 python-urwid
@@ -3993,7 +3992,6 @@ radicale
 raft
 ragel
 range-v3
-rapidfuzz-cpp
 rapidjson
 raptor
 rasqal
