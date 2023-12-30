@@ -73,6 +73,8 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
+doxygen
+doxygen-docs
 dracut
 drkonqi
 dropbear
@@ -244,6 +246,7 @@ kdiagram
 kismet
 knot
 kuserfeedback
+leptonica
 libaec
 libatasmart
 libayatana-appindicator
@@ -274,7 +277,6 @@ liblangtag
 libldm
 libmbim
 libmspub
-libnvme
 libplacebo
 libpng
 libprocps
@@ -411,6 +413,7 @@ opencc-doc
 opendht
 opendoas
 openfire
+openmpi
 openntpd
 opensmtpd
 openvdb
@@ -523,20 +526,11 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
-python-ifaddr
+python-deepmerge
 python-pdm
-python-pexpect
-python-pyfakefs
 python-pytest-benchmark
-python-pytest-trio
 python-pyudev
-python-setuptools-gettext
-python-sniffio
 python-sphinx-alabaster-theme
-python-trio-asyncio
-python-trio
-python-uritemplate
-python-uvloop
 qemu
 qemu-common
 qemu-audio-alsa
@@ -639,7 +633,6 @@ quazip-qt6
 rabbitmq
 rabbitmqadmin
 ranger
-rapidfuzz-cpp
 redis
 redshift
 refind
@@ -755,7 +748,6 @@ webkitgtk-6.0-docs
 weston
 wireplumber
 libwireplumber
-wlroots
 wlroots0.15
 woff2
 wpewebkit

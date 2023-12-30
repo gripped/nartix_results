@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,17 @@
- 
- pkgname=nvme-cli
--pkgver=2.7.1
-+pkgver=2.6
- pkgrel=1
- pkgdesc="NVM-Express user space tooling for Linux"
+@@ -6,8 +6,8 @@
  arch=('x86_64')
  url="https://github.com/linux-nvme/nvme-cli"
  license=('GPL')
@@ -17,26 +11,16 @@
  options=(strip)
  install=nvme-cli.install
  source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
--sha256sums=('4c69d0f3c8b553110d0f63f5876d56627abd2d9f5d3904e2480cedd03cb15654')
-+sha256sums=('7e2f11eb7a9c1b9343d537a32ae5c78f51de20cd4a6cdddb2bc2459c259b33d6')
- 
- build() {
- 	cd "${pkgname}-${pkgver}"
-@@ -24,7 +24,6 @@
+@@ -24,8 +24,8 @@
  	--auto-features enabled \
  	-D b_lto=true -D b_pie=true \
  	-D docs=man -D docs-build=true \
 -	-D systemddir=lib/systemd/system/ \
  	-D udevrulesdir=lib/udev/rules.d \
++	-D systemddir=no \
  	.build
  }
-@@ -33,4 +32,6 @@
- package() {
- 	cd "${pkgname}-${pkgver}"
- 	DESTDIR="$pkgdir" meson install -C .build
-+
-+	rm -r "$pkgdir"/usr/lib/systemd
- }
+ 
 
 
 ############# Stripped diff below #################
@@ -50,11 +34,12 @@
  options=(strip)
  install=nvme-cli.install
  build() {
-@@ -13,7 +13,6 @@
+@@ -13,7 +13,7 @@
  	--auto-features enabled \
  	-D b_lto=true -D b_pie=true \
  	-D docs=man -D docs-build=true \
 -	-D systemddir=lib/systemd/system/ \
  	-D udevrulesdir=lib/udev/rules.d \
++	-D systemddir=no \
  	.build
  }

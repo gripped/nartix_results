@@ -392,8 +392,6 @@ dos2unix
 dosbox
 dotconf
 double-conversion
-doxygen
-doxygen-docs
 dqlite
 dragon
 duktape
@@ -1276,7 +1274,6 @@ ldc
 leafpad
 leatherman
 lensfun
-leptonica
 level-zero
 level-zero-headers
 level-zero-loader
@@ -1534,6 +1531,7 @@ libnma-gtk4
 libnotify
 libnotify-docs
 libnumbertext
+libnvme
 liboauth
 libodfgen
 libofa
@@ -2146,7 +2144,6 @@ openjade
 openjpeg2
 openlibm
 openmp
-openmpi
 openpmix
 openpmix-docs
 openrct2
@@ -2888,7 +2885,6 @@ python-debtcollector
 python-debugpy
 python-decorator
 python-deepdiff
-python-deepmerge
 python-defusedxml
 python-deprecated
 python-deprecation
@@ -3088,6 +3084,7 @@ python-ibm-db-sa
 python-icecream
 python-identify
 python-idna
+python-ifaddr
 python-ijson
 python-imagesize
 python-immutabledict
@@ -3343,6 +3340,7 @@ python-pep440
 python-pep621
 python-perf
 python-persistent
+python-pexpect
 python-pg8000
 python-phonenumbers
 python-piccata
@@ -3419,6 +3417,7 @@ python-pydrive
 python-pyee
 python-pyelftools
 python-pyenchant
+python-pyfakefs
 python-pyflakes
 python-pyftdi
 python-pyftpdlib
@@ -3543,6 +3542,7 @@ python-pytest-testinfra
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
+python-pytest-trio
 python-pytest-twisted
 python-pytest-vcr
 python-pytest-xdist
@@ -3645,6 +3645,7 @@ python-sentry_sdk
 python-serpent
 python-service-identity
 python-setproctitle
+python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
@@ -3665,6 +3666,7 @@ python-smartypants
 python-smbprotocol
 python-smmap
 python-snappy
+python-sniffio
 python-snowballstemmer
 python-socketio
 python-socketpool
@@ -3768,6 +3770,8 @@ python-trailrunner
 python-traitlets
 python-transaction
 python-treq
+python-trio-asyncio
+python-trio
 python-trove-classifiers
 python-trustme
 python-twisted
@@ -3796,9 +3800,11 @@ python-unidiff
 python-unittest-mixins
 python-unpaddedbase64
 python-uri-template
+python-uritemplate
 python-urllib3
 python-urllib3-doc
 python-urwid
+python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
@@ -3992,6 +3998,7 @@ radicale
 raft
 ragel
 range-v3
+rapidfuzz-cpp
 rapidjson
 raptor
 rasqal
@@ -4782,6 +4789,7 @@ wireshark
 wireshark-cli
 wireshark-qt
 wl-clipboard
+wlroots
 wolfssl
 words
 wpebackend-fdo
@@ -5104,3 +5112,4 @@ ruby-minitest-proveit
 ruby-warning
 python-assertpy
 llvm-julia
+pngplusplus

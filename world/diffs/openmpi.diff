@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=openmpi
+-pkgver=4.1.6
+-pkgrel=1
++pkgver=4.1.5
++pkgrel=5
+ pkgdesc='High performance message passing library (MPI)'
+ arch=(x86_64)
+ url='https://www.open-mpi.org'
+@@ -42,9 +42,10 @@
+   libopen-rte.so
+ )
+ source=(
+-  https://www.open-mpi.org/software/ompi/v${pkgver%.*}/downloads/$pkgname-$pkgver.tar.bz2)
+-sha256sums=('f740994485516deb63b5311af122c265179f5328a0d857a567b85db00b11e415')
+-b2sums=('4f119e1ed9b8787f0f860295ab1721fe2fd5300b8e182230a9eba3a864680b02bbd30618cc6d798a693a121626fc0ad5f447144d9ba91becb734f1a530d7a23a')
++  https://www.open-mpi.org/software/ompi/v${pkgver%.*}/downloads/$pkgname-$pkgver.tar.bz2
++)
++sha256sums=('a640986bc257389dd379886fdae6264c8cfa56bc98b71ce3ae3dfbd8ce61dbe3')
++b2sums=('135a8373ed6173b7a94def18e3b964c6b6050c909382e0dbb1898a6d261ae428931358121ef6d325d303f4f510017a94970f7c66b280a5fc460365821f36dece')
+ 
+ build() {
+   local configure_options=(
+@@ -64,7 +65,7 @@
+   )
+   cd $pkgname-$pkgver
+ 
+-  ac_cv_func_sem_open=no ./configure "${configure_options[@]}"
++  ./configure "${configure_options[@]}"
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make V=1
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,7 +40,7 @@
+     --with-valgrind
+   )
+   cd $pkgname-$pkgver
+-  ac_cv_func_sem_open=no ./configure "${configure_options[@]}"
++  ./configure "${configure_options[@]}"
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make V=1
+ }

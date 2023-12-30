@@ -1,20 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=libaec
--pkgver=1.1.2
-+pkgver=1.0.6
- pkgrel=1
- pkgdesc="Adaptive Entropy Coding library"
- arch=(x86_64)
-@@ -9,11 +9,12 @@
- depends=(glibc)
- makedepends=(cmake)
- source=(${url}/-/archive/v${pkgver}/${pkgname}-v${pkgver}.tar.bz2)
--sha256sums=('bdad8c7923537c3695327aa85afdcd714fb3d30a5f956a27ba2971ef98c043ac')
-+sha256sums=('31fb65b31e835e1a0f3b682d64920957b6e4407ee5bbf42ca49549438795a288')
- 
+@@ -14,6 +14,7 @@
  build() {
    cmake -B build -S ${pkgname}-v${pkgver} \
      -DCMAKE_INSTALL_PREFIX=/usr \

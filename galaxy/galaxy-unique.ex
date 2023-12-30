@@ -133,3 +133,12 @@ package-query
 libmateweather
 vice
 libsidplayfp
+libretro-beetle-psx
+libretro-core-info
+libretro-mesen
+libretro-mgba
+libretro-overlays
+libretro-pcsx2
+libretro-shaders-slang
+retroarch-assets
+retroarch
