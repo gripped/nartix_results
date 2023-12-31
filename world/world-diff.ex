@@ -88,6 +88,7 @@ edk2-ovmf
 element.io
 element-web
 element-desktop
+elinks
 emacs
 emacs-nativecomp
 emacs-nox
@@ -528,8 +529,10 @@ python-anytree
 python-celery
 python-deepmerge
 python-pdm
+python-pymongo
 python-pytest-benchmark
 python-pyudev
+python-socksio
 python-sphinx-alabaster-theme
 qemu
 qemu-common

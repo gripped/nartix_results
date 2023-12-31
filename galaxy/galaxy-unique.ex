@@ -142,3 +142,14 @@ libretro-pcsx2
 libretro-shaders-slang
 retroarch-assets
 retroarch
+libretro-dolphin
+libretro-gambatte
+libretro-mesen-s
+libretro-mupen64plus-next
+libretro-parallel-n64
+libretro-ppsspp
+libretro-sameboy
+libretro-snes9x
+ppsspp
+rgbds
+scummvm

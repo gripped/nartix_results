@@ -415,7 +415,6 @@ ejabberd
 electron
 electrum
 elementary-icon-theme
-elinks
 elisa
 elixir
 ell
@@ -3445,7 +3444,6 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
-python-pymongo
 python-pymupdf
 python-pymysql
 python-pynacl
@@ -3670,7 +3668,6 @@ python-sniffio
 python-snowballstemmer
 python-socketio
 python-socketpool
-python-socksio
 python-sortedcollections
 python-sortedcontainers
 python-soupsieve
@@ -5113,3 +5110,4 @@ ruby-warning
 python-assertpy
 llvm-julia
 pngplusplus
+sdl2_net
