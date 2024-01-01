@@ -2,7 +2,6 @@ accountsservice
 adios2
 alsa-utils
 amule
-ansible
 apache
 apcupsd
 appstream-glib
@@ -63,6 +62,7 @@ cyrus-sasl
 cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
+darktable
 dbus-broker
 dhcp
 dhclient
@@ -354,6 +354,7 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+mat2
 mate-applets
 mate-media
 mate-menus
@@ -414,7 +415,6 @@ opencc-doc
 opendht
 opendoas
 openfire
-openmpi
 openntpd
 opensmtpd
 openvdb
@@ -491,6 +491,7 @@ plasma-workspace
 plasma-wayland-session
 plocate
 plymouth
+pmbootstrap
 podman
 podman-docker
 polkit
@@ -527,12 +528,11 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
-python-deepmerge
+python-crc32c
+python-flask-httpauth
 python-pdm
-python-pymongo
 python-pytest-benchmark
 python-pyudev
-python-socksio
 python-sphinx-alabaster-theme
 qemu
 qemu-common
@@ -657,11 +657,11 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+sequoia-sq
 shairport-sync
 sharutils
 signon-plugin-oauth2
 smartmontools
-smplayer
 snapper
 spice-gtk
 spice-vdagent
@@ -726,6 +726,7 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
+vigra
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms

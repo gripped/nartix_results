@@ -50,6 +50,7 @@ android-tools
 android-udev
 angelfish
 ansible-core
+ansible
 ant
 ant-doc
 anthy
@@ -331,7 +332,6 @@ cython
 cython0
 d-spy
 darkhttpd
-darktable
 dart
 darts
 dav1d
@@ -1901,7 +1901,6 @@ ruby-marisa
 markdownpart
 marked-man
 marked
-mat2
 mate-backgrounds
 mate-calc
 mate-common
@@ -2143,6 +2142,7 @@ openjade
 openjpeg2
 openlibm
 openmp
+openmpi
 openpmix
 openpmix-docs
 openrct2
@@ -2563,7 +2563,6 @@ plasmatube
 playerctl
 pluma
 plymouth-kcm
-pmbootstrap
 po4a
 poco
 podofo-0.9
@@ -2855,7 +2854,6 @@ python-coverage
 python-cppy
 python-cramjam
 python-crashtest
-python-crc32c
 python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
@@ -2884,6 +2882,7 @@ python-debtcollector
 python-debugpy
 python-decorator
 python-deepdiff
+python-deepmerge
 python-defusedxml
 python-deprecated
 python-deprecation
@@ -2986,7 +2985,6 @@ python-flake8-docstrings
 python-flaky
 python-flasgger
 python-flask-cors
-python-flask-httpauth
 python-flask-jwt
 python-flask-login
 python-flask-restful
@@ -3444,6 +3442,7 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
+python-pymongo
 python-pymupdf
 python-pymysql
 python-pynacl
@@ -3668,6 +3667,7 @@ python-sniffio
 python-snowballstemmer
 python-socketio
 python-socketpool
+python-socksio
 python-sortedcollections
 python-sortedcontainers
 python-soupsieve
@@ -4320,7 +4320,6 @@ seabios
 seabios-docs
 seahorse
 semver
-sequoia-sq
 sequoia-sqv
 serd
 serd-docs
@@ -4355,6 +4354,7 @@ slop
 slurp
 smb4k
 smpeg
+smplayer
 snappy
 sndio
 snorenotify
@@ -4729,7 +4729,6 @@ vice
 vid.stab
 viewnior
 vifm
-vigra
 vim
 gvim
 vim-runtime

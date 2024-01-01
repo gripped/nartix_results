@@ -685,3 +685,4 @@ artix-live
 greetd-openrc
 artixlinux-appstream-data
 ckbcomp
+calamares-extensions
