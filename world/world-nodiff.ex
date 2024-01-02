@@ -4278,11 +4278,6 @@ ruff
 python-ruff
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
@@ -4320,6 +4315,7 @@ seabios
 seabios-docs
 seahorse
 semver
+sequoia-sq
 sequoia-sqv
 serd
 serd-docs
@@ -4407,6 +4403,8 @@ sshpass
 startup-notification
 step
 stfl
+stk
+stk-docs
 stoken
 strace
 strawberry

@@ -20,8 +20,6 @@ inetutils
 iptables
 iptables-nft
 libarchive
-libcap-ng
-python-capng
 libusb
 linux-lts
 linux-lts-headers
@@ -32,7 +30,6 @@ linux-docs
 logrotate
 lvm2
 device-mapper
-lz4
 man-db
 mdadm
 mkinitcpio

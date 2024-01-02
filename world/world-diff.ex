@@ -534,6 +534,7 @@ python-pdm
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
+python-tzdata
 qemu
 qemu-common
 qemu-audio-alsa
@@ -646,6 +647,11 @@ rsync
 rtkit
 ruby-faraday-patron
 ruby-optimist
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 salt
 samba
 libwbclient
@@ -657,7 +663,6 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
-sequoia-sq
 shairport-sync
 sharutils
 signon-plugin-oauth2
@@ -670,8 +675,6 @@ sshguard
 sslh
 sssd
 step-cli
-stk
-stk-docs
 strongswan
 stubby
 stunnel

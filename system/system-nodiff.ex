@@ -86,6 +86,8 @@ less
 libaio
 libassuan
 libbpf
+libcap-ng
+python-capng
 libcap
 libedit
 libevent
@@ -138,6 +140,7 @@ linux-firmware-qcom
 linux-firmware-liquidio
 linux-firmware-qlogic
 linux-firmware-bnx2x
+lz4
 lzo
 m4
 make

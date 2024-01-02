@@ -444,7 +444,6 @@ prosody-openrc
 prosody-runit
 prosody-s6
 python-pytz-deprecation-shim
-python-tzdata
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
 qemu-guest-agent-runit
