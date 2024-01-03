@@ -1901,6 +1901,7 @@ ruby-marisa
 markdownpart
 marked-man
 marked
+mat2
 mate-backgrounds
 mate-calc
 mate-common
@@ -2563,6 +2564,7 @@ plasmatube
 playerctl
 pluma
 plymouth-kcm
+pmbootstrap
 po4a
 poco
 podofo-0.9
@@ -2854,6 +2856,7 @@ python-coverage
 python-cppy
 python-cramjam
 python-crashtest
+python-crc32c
 python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
@@ -2985,6 +2988,7 @@ python-flake8-docstrings
 python-flaky
 python-flasgger
 python-flask-cors
+python-flask-httpauth
 python-flask-jwt
 python-flask-login
 python-flask-restful
@@ -3329,10 +3333,10 @@ python-pc-ble-driver-py
 python-pdfrw
 python-pdm-backend
 python-pdm-pep517
+python-pdm
 python-pecan
 python-peewee
 python-pefile
-python-pendulum
 python-pep440
 python-pep621
 python-perf
@@ -4278,6 +4282,11 @@ ruff
 python-ruff
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
@@ -5065,7 +5074,6 @@ libspng
 python-scs
 rdfind
 bpython
-copr-cli
 kdiagram5
 catch2-v2
 nodejs-lts-iron
@@ -5108,3 +5116,4 @@ python-assertpy
 llvm-julia
 pngplusplus
 sdl2_net
+python-ulid-transform

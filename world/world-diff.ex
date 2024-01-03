@@ -354,7 +354,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-mat2
 mate-applets
 mate-media
 mate-menus
@@ -491,7 +490,6 @@ plasma-workspace
 plasma-wayland-session
 plocate
 plymouth
-pmbootstrap
 podman
 podman-docker
 polkit
@@ -528,9 +526,7 @@ python-aiomysql
 python-anyio
 python-anytree
 python-celery
-python-crc32c
-python-flask-httpauth
-python-pdm
+python-pendulum
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
@@ -647,11 +643,6 @@ rsync
 rtkit
 ruby-faraday-patron
 ruby-optimist
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 salt
 samba
 libwbclient
@@ -796,6 +787,7 @@ umurmur
 python-pipenv-to-requirements
 vault
 modest
+copr-cli
 zabbix
 zabbix-server
 zabbix-agent
