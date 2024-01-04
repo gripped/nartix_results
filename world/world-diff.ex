@@ -523,14 +523,12 @@ pyqt5
 python-pyqt5
 pyqt6
 python-aiomysql
-python-anyio
 python-anytree
 python-celery
 python-pendulum
 python-pytest-benchmark
 python-pyudev
 python-sphinx-alabaster-theme
-python-tzdata
 qemu
 qemu-common
 qemu-audio-alsa
@@ -648,6 +646,7 @@ samba
 libwbclient
 smbclient
 sane
+scribus
 sdbus-cpp
 $pkgbase
 $pkgbase-doc
@@ -680,6 +679,7 @@ sysprof
 libsysprof-capture
 system-config-printer
 tailscale
+telegram-desktop
 tepl
 thunderbird
 tigervnc
@@ -787,7 +787,6 @@ umurmur
 python-pipenv-to-requirements
 vault
 modest
-copr-cli
 zabbix
 zabbix-server
 zabbix-agent

@@ -153,3 +153,5 @@ libretro-snes9x
 ppsspp
 rgbds
 scummvm
+nushell
+wireshark

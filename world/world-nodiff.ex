@@ -2701,6 +2701,7 @@ python-ansi2html
 python-ansible-compat
 python-ansicolors
 python-ansiwrap
+python-anyio
 python-anyjson
 python-apipkg
 python-apispec-webframeworks
@@ -3785,6 +3786,7 @@ python-typeguard
 python-typing_extensions
 python-typing_inspect
 python-typogrify
+python-tzdata
 python-tzlocal
 python-u-msgpack
 python-ubjson
@@ -4307,7 +4309,6 @@ scons
 scour
 screen
 screengrab
-scribus
 scrot
 sddm-kcm
 sdl12-compat
@@ -4452,7 +4453,6 @@ tcsh
 tdb
 tea
 tecla
-telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
@@ -5074,6 +5074,7 @@ libspng
 python-scs
 rdfind
 bpython
+copr-cli
 kdiagram5
 catch2-v2
 nodejs-lts-iron
@@ -5117,3 +5118,6 @@ llvm-julia
 pngplusplus
 sdl2_net
 python-ulid-transform
+nushell
+python-ulid
+tomlplusplus

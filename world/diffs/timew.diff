@@ -1,11 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -1,30 +1,41 @@
-+pkgname=timew
-+pkgver=1.7.0
+-
+ pkgname=timew
+ pkgver=1.7.0
 +_ver_c="1882058c5ee1e8b6cbcd5335536b1efca8935823"
 +_libshared_c="35e6ec09595c80bc744a27eda50e4dd34d6c7303"
-+pkgrel=1
+ pkgrel=1
+-pkgdesc="Timewarrior, A command line time tracking application"
+-arch=('x86_64')
+-url="https://timewarrior.net/"
+-license=('MIT')
+-makedepends=('cmake' 'gcc-libs' 'asciidoctor')
+-optdepends=('task: Taskwarrior integration'
+-            'python: Holiday refresh script')
+-install=$pkgname.install
+-source=("https://github.com/GothenburgBitFactory/timewarrior/releases/download/v${pkgver}/timew-${pkgver}.tar.gz")
+-sha256sums=('fd7433bf6964b3aab22c0f9542a14b4182dbcba092bd214e03d57d326d2bc8b2')
 +pkgdesc="Commandline Time Tracking and Reporting"
 +arch=("x86_64")
 +url="https://timewarrior.net"
@@ -26,20 +37,7 @@
 +	"e1b61a178c00cad4432100a2d3be2e2afe0b94a0a515bae4c2d4c278cac6e114"
 +	"1cf21842b917ac5440d4f5ba0477a097df816f6570372bbc90e043b3ec238fd3"
 +)
- 
--pkgname=timew
--pkgver=1.6.0
--pkgrel=1
--pkgdesc="Timewarrior, A command line time tracking application"
--arch=('x86_64')
--url="https://timewarrior.net/"
--license=('MIT')
--makedepends=('cmake' 'gcc-libs' 'asciidoctor')
--optdepends=('task: Taskwarrior integration'
--            'python: Holiday refresh script')
--install=$pkgname.install
--source=("https://github.com/GothenburgBitFactory/timewarrior/releases/download/v${pkgver}/timew-${pkgver}.tar.gz")
--sha256sums=('cd1aa610ed50558bb2cf141022fa7b41523091ac3ae5fbb9c2d459cfe1afc782')
++
 +prepare() {
 +	rm -rf "timewarrior-$_ver_c/src/libshared"
 +	ln -sr "libshared-$_libshared_c" "timewarrior-$_ver_c/src/libshared"

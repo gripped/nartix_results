@@ -1,28 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,12 +13,15 @@
-             'mlocate: for pacdiff --locate'
-             'sudo: privilege elevation for several scripts'
-             'vim: default merge program for pacdiff')
+@@ -15,12 +15,15 @@
+   'sudo: privilege elevation for several scripts'
+   'vim: default merge program for pacdiff'
+ )
 -source=("git+$url.git#tag=v$pkgver")
 -b2sums=('SKIP')
 +source=("git+$url.git#tag=v$pkgver"
-+        rankmirrors-artix.patch)
++        'pacman-contrib-artix.patch')
 +b2sums=('SKIP'
-+        'ca5d31cdd7a386241ba75a67e517bbd087f77f8740f0d7b5b53b26e2418516e395f01b7b43d09fff2430d214387e8386db679dfd2b226b1403d02135d349e469')
++        '7697cb9e94eba48792210f6c0b47917e5c3fb81dc9a28b21013781061ec4a327c8b302f3ce4722b9fba9b887e40b0e736285c537eaabb9cc0130df8cb9dfff36')
  validpgpkeys=('04DC3FB1445FECA813C27EFAEA4F7B321A906AD9') # Daniel M. Capella <polyzen@archlinux.org>
  
  prepare() {
    cd $pkgname
-+  patch -Np 1 -i ../rankmirrors-artix.patch
++  patch -Np 1 -i ../pacman-contrib-artix.patch
    ./autogen.sh
- }
- 
-@@ -39,5 +42,6 @@
- package() {
-   cd $pkgname
-   make DESTDIR="$pkgdir" install
-+  rm -fr ${pkgdir}/usr/lib/systemd
  }
  
 
@@ -35,7 +28,7 @@
  depends=('fakeroot' 'pacman' 'perl')
  prepare() {
    cd $pkgname
-+  patch -Np 1 -i ../rankmirrors-artix.patch
++  patch -Np 1 -i ../pacman-contrib-artix.patch
    ./autogen.sh
  }
  build() {
