@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=hypercorn
+-pkgver=0.16.0
++pkgver=0.15.0
+ pkgrel=1
+ pkgdesc='An ASGI Server based on Hyper libraries and inspired by Gunicorn'
+ url=https://github.com/pgjones/hypercorn
+@@ -31,7 +31,7 @@
+   python-trio
+ )
+ optdepends=('python-trio: trio support')
+-_tag=f8e4e5de3aec7f8eb986535163c3d5b4f424465c
++_tag=2724ad6c307239f6ee7854c7d1794a625f66f7d4
+ source=(git+https://github.com/pgjones/hypercorn.git#tag=${_tag})
+ sha256sums=(SKIP)
+ 

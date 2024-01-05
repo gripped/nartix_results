@@ -155,3 +155,4 @@ rgbds
 scummvm
 nushell
 wireshark
+libexttextcat

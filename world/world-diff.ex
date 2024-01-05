@@ -38,7 +38,6 @@ brltty-udev-generic
 btop
 bumblebee
 c-ares
-cdparanoia
 cgmanager
 chromium-bsu
 chrony
@@ -681,6 +680,9 @@ system-config-printer
 tailscale
 telegram-desktop
 tepl
+texlive-texmf
+texlive-doc
+texlive-meta
 thunderbird
 tigervnc
 timew

@@ -1,4 +1,3 @@
-lib32-amdvlk
 lib32-clang
 lib32-colord
 lib32-dbus

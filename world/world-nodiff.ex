@@ -234,6 +234,7 @@ catfish
 cbatticon
 cbindgen
 ccache
+cdparanoia
 cdrdao
 cdrtools
 certbot-apache
@@ -4622,9 +4623,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5
