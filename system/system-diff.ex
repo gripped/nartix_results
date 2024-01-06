@@ -1,7 +1,6 @@
 acl
 audit
 python-audit
-autoconf
 base-devel
 base
 bash

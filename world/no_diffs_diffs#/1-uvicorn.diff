@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=uvicorn
+-pkgver=0.25.0
++pkgver=0.24.0
+ pkgrel=1
+ pkgdesc='The lightning-fast ASGI server'
+ arch=(any)
+@@ -21,7 +21,7 @@
+   python-hatchling
+   python-installer
+ )
+-_tag=b52f3f97842dfa59cbef2e1e6f6606d8ea21e4c2
++_tag=5f142a884ed52790a38b8e34df7060a0c3c6c760
+ source=(git+https://github.com/encode/uvicorn#tag=${_tag})
+ b2sums=(SKIP)
+ 

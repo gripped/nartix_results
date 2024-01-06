@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=jupyterlab
+ _pipname=jupyterlab
+-pkgver=4.0.10
++pkgver=4.0.9
+ pkgrel=1
+ pkgdesc='JupyterLab computational environment'
+ arch=(any)
+@@ -29,7 +29,7 @@
+               python-pytest-jupyter
+               python-pytest-tornasync)
+ source=(https://pypi.io/packages/source/${_pipname:0:1}/$_pipname/$_pipname-$pkgver.tar.gz)
+-sha256sums=('46177eb8ede70dc73be922ac99f8ef943bdc2dfbc6a31b353c4bde848a35dee1')
++sha256sums=('9ebada41d52651f623c0c9f069ddb8a21d6848e4c887d8e5ddc0613166ed5c0b')
+ 
+ build() {
+   cd $pkgname-$pkgver

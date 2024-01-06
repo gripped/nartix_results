@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gnome-software
+-pkgver=45.3
++pkgver=45.2
+ pkgrel=1
+ pkgdesc="GNOME Software Tools"
+ url="https://wiki.gnome.org/Apps/Software/"
+@@ -33,7 +33,7 @@
+   'malcontent: Parental control plugin'
+ )
+ groups=(gnome)
+-_commit=f027ac3fc839c0c0fe68006cea1acc757461c128  # tags/45.3^0
++_commit=4048cbc7fc3aa5d2b37f80734cabdf28658c1ca4  # tags/45.2^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit"
+   "git+https://gitlab.gnome.org/mwleeds/gnome-pwa-list.git"
 @@ -62,7 +62,7 @@
      -D packagekit=false
    )

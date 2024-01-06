@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=zenity
+-pkgver=4.0.1
++pkgver=4.0.0
+ pkgrel=1
+ pkgdesc="Display graphical dialog boxes from shell scripts"
+ url="https://gitlab.gnome.org/GNOME/zenity"
+@@ -16,7 +16,7 @@
+   util-linux
+   yelp-tools
+ )
+-_commit=34366d85f2d408e5f74cb688a392fd85cd22548c  # tags/4.0.1^0
++_commit=4e750f1aa1068d03156b80dfb0471b619156d638  # tags/4.0.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/zenity.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
 @@ -33,7 +33,7 @@
    local meson_options=(
    )

@@ -1,6 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libxmlb
+-pkgver=0.3.15
++pkgver=0.3.14
+ pkgrel=1
+ pkgdesc="Library to help create and query binary XML blobs"
+ arch=(x86_64)
+@@ -10,12 +10,12 @@
+ makedepends=(meson gobject-introspection gtk-doc)
+ checkdepends=(shared-mime-info)
+ source=("https://github.com/hughsie/libxmlb/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc})
+-sha256sums=('4cf605965d0e669db737da6443314664ea471807f2719a84550f2490670beea9'
++sha256sums=('a2f0056eed14ff791aee2b08b1514a0f1b6cf215f0579138a8cae8c45a0d3b0f'
+             'SKIP')
  validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
  
  build() {

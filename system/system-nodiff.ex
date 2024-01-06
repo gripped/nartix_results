@@ -1,5 +1,6 @@
 argon2
 attr
+autoconf
 automake
 b43-fwcutter
 binutils
