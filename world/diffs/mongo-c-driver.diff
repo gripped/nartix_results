@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,25 +1,31 @@
+ 
+ pkgname=mongo-c-driver
+-pkgver=1.25.4
+-pkgrel=1
++pkgver=1.24.4
++pkgrel=2
+ pkgdesc='A client library written in C for MongoDB'
+ arch=('x86_64')
+ url='https://www.mongodb.org/display/DOCS/C+Language+Center'
+ license=('Apache')
+-depends=('libsasl' 'snappy' 'zstd')
++depends=('libsasl' 'icu' 'snappy' 'zlib' 'zstd')
+ makedepends=('cmake')
+ provides=('libbson' 'libmongoc')
+ conflicts=('libbson' 'libmongoc')
+ replaces=('libbson' 'libmongoc')
+-source=("https://github.com/mongodb/mongo-c-driver/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha512sums=('a80e20917edb752ac5eb42534beaa0122a383037f83a554ee00ce37ae690be68521eaa282b4a5802a5440b61038bcd5414356e16a2ce729ba1193d0738a6ce1c')
++source=("https://github.com/mongodb/mongo-c-driver/releases/download/$pkgver/$pkgname-$pkgver.tar.gz")
++sha512sums=('3563c061565d17a76581e188f6e184d7e41f2729812c8815afd34e03ebe6c1d25d7498a2cb1b599a09d24f6268c36473ef5113a14c7585a1532c9abf2e56e936')
++
++prepare() {
++  mkdir -p build
++}
+ 
+ build() {
+-  cmake -B build -S mongo-c-driver-$pkgver \
++  cd build
++  cmake ../mongo-c-driver-$pkgver \
++    -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DBUILD_VERSION="$pkgver" \
++    -DCMAKE_INSTALL_LIBDIR=lib \
+     -DENABLE_STATIC=OFF -DENABLE_TESTS=OFF
+-  cmake --build build
++  make
+ }
+ 
+ check() {
+@@ -27,5 +33,6 @@
+ }
+ 
+ package() {
+-  DESTDIR="$pkgdir/" cmake --install build
++  cd build
++  make DESTDIR="$pkgdir/" install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,17 @@
+ pkgname=mongo-c-driver
+-depends=('libsasl' 'snappy' 'zstd')
++depends=('libsasl' 'icu' 'snappy' 'zlib' 'zstd')
+ provides=('libbson' 'libmongoc')
+ conflicts=('libbson' 'libmongoc')
+ replaces=('libbson' 'libmongoc')
++prepare() {
++  mkdir -p build
++}
+ build() {
+-  cmake -B build -S mongo-c-driver-$pkgver \
++  cd build
++  cmake ../mongo-c-driver-$pkgver \
++    -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DBUILD_VERSION="$pkgver" \
++    -DCMAKE_INSTALL_LIBDIR=lib \
+     -DENABLE_STATIC=OFF -DENABLE_TESTS=OFF
+-  cmake --build build
++  make
+ }

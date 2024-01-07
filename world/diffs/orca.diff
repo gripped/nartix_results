@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=orca
+-pkgver=45.2
++pkgver=45.1
+ pkgrel=1
+ pkgdesc="Screen reader for individuals who are blind or visually impaired"
+ url="https://wiki.gnome.org/Projects/Orca"
+ arch=(any)
+-license=(LGPL-2.1-or-later)
++license=(LGPL)
+ depends=(
+   at-spi2-core
+   brltty
+@@ -34,7 +34,7 @@
+   yelp-tools
+ )
+ groups=(gnome)
+-_commit=cd1c1f25fbea6b6d815ce4403364e78e635919be  # tags/ORCA_45_2^0
++_commit=9e77d1baf9bd24b78d7499ad9b2e8bb80c9a0c81  # tags/ORCA_45_1^0
+ source=("git+https://gitlab.gnome.org/GNOME/orca.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -49,14 +49,8 @@
+ }
+ 
+ build() {
+-  local configure_options=(
+-    --prefix=/usr
+-    --sysconfdir=/etc
+-    --localstatedir=/var
+-  )
+-
+   cd orca
+-  ./configure "${configure_options[@]}"
++  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,12 +27,7 @@
+   NOCONFIGURE=1 ./autogen.sh
+ }
+ build() {
+-  local configure_options=(
+-    --prefix=/usr
+-    --sysconfdir=/etc
+-    --localstatedir=/var
+-  )
+   cd orca
+-  ./configure "${configure_options[@]}"
++  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+   make
+ }

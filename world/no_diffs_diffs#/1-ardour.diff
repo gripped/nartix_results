@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -100,10 +100,6 @@
+         '73845adce9a48938cd7aef5fbc65f492e470de316620d278365d247c80caef44531e850fbd3d2f5de65a8562e67aabfd982c938439bd3670726a27bc003be017'
+         'b3c1257d26eb89193b255c773b6a19de247056282dfffdf1d3c450600baab5671b0a7a3010870ac219e744250fedca742d9fde8b510b454730d4c4cbfa876502')
+ 
+-pkgver() {
+-  cd $pkgname
+-  git describe --tags --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+-}
+ 
+ prepare() {
+   patch -Np1 -d $pkgname -i ../$pkgname-7.0-re-vendor_qm-dsp.patch
