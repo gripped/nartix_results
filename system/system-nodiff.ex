@@ -72,6 +72,7 @@ hdparm
 hwdata
 iana-etc
 icu
+inetutils
 iproute2
 iputils
 iw
@@ -114,8 +115,6 @@ libpcap
 libpipeline
 libpsl
 libsasl
-libseccomp
-python-libseccomp
 libsecret
 libsecret-docs
 libssh2

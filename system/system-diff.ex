@@ -15,10 +15,11 @@ glibc
 lib32-glibc
 glibc-locales
 gssproxy
-inetutils
 iptables
 iptables-nft
 libarchive
+libseccomp
+python-libseccomp
 libusb
 linux-lts
 linux-lts-headers

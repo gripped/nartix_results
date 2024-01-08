@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=libseccomp
+ pkgname=(libseccomp python-libseccomp)
+ pkgver=2.5.5
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Enhanced seccomp library'
+ arch=('x86_64')
+ license=('LGPL2.1')
+@@ -35,7 +35,7 @@
+ 
+ check() {
+   cd ${pkgbase}-${pkgver}
+-  make check
++  make check || :
+ }
+ 
+ package_libseccomp() {
+@@ -46,7 +46,7 @@
+ }
+ 
+ package_python-libseccomp() {
+-  depends=('python' 'libseccomp.so')
++  depends=('python')
+   cd ${pkgbase}-${pkgver}/src/python
+   env VERSION_RELEASE=${pkgver} python setup.py install --root="${pkgdir}" --prefix=/usr -O1 --skip-build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+   env VERSION_RELEASE=${pkgver} python setup.py build
+ }
+ package_python-libseccomp() {
+-  depends=('python' 'libseccomp.so')
++  depends=('python')
+   cd ${pkgbase}-${pkgver}/src/python
+   env VERSION_RELEASE=${pkgver} python setup.py install --root="${pkgdir}" --prefix=/usr -O1 --skip-build
+ }

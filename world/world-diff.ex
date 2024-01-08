@@ -62,6 +62,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 darktable
+dblatex
 dbus-broker
 dhcp
 dhclient
@@ -79,6 +80,7 @@ dropbear-scp
 dtc
 dunst
 earlyoom
+easytag
 edk2
 edk2-shell
 edk2-ovmf
@@ -152,6 +154,7 @@ gnuplot
 gnuplot-demos
 go-bindata
 go-licenses
+gperftools
 gpsd
 greetd-tuigreet
 greetd
@@ -355,7 +358,6 @@ libmm-glib
 mongo-c-driver
 mosquitto
 mpd
-mpv
 multipath-tools
 mumble
 mumble-server
@@ -501,16 +503,12 @@ python-atspi
 pyqt5
 python-pyqt5
 pyqt6
-pyside2
-shiboken2
-python-shiboken2
-pyside2-tools
 python-aiomysql
 python-anytree
+python-asn1crypto
 python-celery
-python-cx-freeze
 python-docker-pycreds
-python-fastpbkdf2
+python-oscrypto
 python-pysol_cards
 python-pytest-benchmark
 python-pyudev
@@ -742,6 +740,8 @@ xdg-desktop-portal-xapp
 xdg-desktop-portal
 xdg-user-dirs
 xdg-utils-cxx
+xdp-tools
+libxdp
 xf86-input-evdev
 xf86-input-vmmouse
 xf86-input-wacom

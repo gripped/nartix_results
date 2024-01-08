@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ epoch=1
+ _tag='807b9343ef911d138950411cdb83c16a151d2018' # git rev-parse v${pkgver}
+ pkgver=0.37.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='a free, open source, and cross-platform media player'
+ arch=('x86_64')
+ license=('GPL3')
+@@ -42,7 +42,7 @@
+     -Dopenal=enabled
+   )
+ 
+-  arch-meson "${pkgname}" build "${_meson_options[@]}"
++  artix-meson "${pkgname}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,6 +22,6 @@
+     -Dlibarchive=enabled
+     -Dopenal=enabled
+   )
+-  arch-meson "${pkgname}" build "${_meson_options[@]}"
++  artix-meson "${pkgname}" build "${_meson_options[@]}"
+   meson compile -C build
+ }

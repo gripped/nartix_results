@@ -337,7 +337,6 @@ dart
 darts
 dav1d
 dav1d-doc
-dblatex
 dbus-cplusplus
 dbus-glib
 dbus-python
@@ -405,7 +404,6 @@ dvd-rw-tools
 dvdauthor
 dvisvgm
 dzen2
-easytag
 ebook-tools
 eclipse-ecj
 ecryptfs-utils
@@ -681,7 +679,6 @@ google-glog
 gox
 gparted
 gperf
-gperftools
 gpicview
 gptfdisk
 gradle
@@ -2019,6 +2016,7 @@ mpdecimal
 mpg123
 mplayer
 mencoder
+mpv
 msgpack-c
 msgpack-cxx
 msmtp
@@ -2681,6 +2679,10 @@ pyqt6-networkauth
 python-pyqt6-networkauth
 pyqt6-webengine
 python-pyqt6-webengine
+pyside2
+shiboken2
+python-shiboken2
+pyside2-tools
 pyside6
 pyside6-tools
 shiboken6
@@ -2737,7 +2739,6 @@ python-arpeggio
 python-arpy
 python-arrow
 python-asgiref
-python-asn1crypto
 python-aspectlib
 python-asteval
 python-astor
@@ -2887,6 +2888,7 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
+python-cx-freeze
 python-cycler
 python-cython-test-exception-raiser
 python-cytoolz
@@ -2984,6 +2986,7 @@ python-fastimport
 python-fastjsonschema
 python-fastnumbers
 python-fastparquet
+python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
@@ -3304,7 +3307,6 @@ python-orderedmultidict
 python-orjson
 python-os-client-config
 python-os-service-types
-python-oscrypto
 python-oslo-concurrency
 python-oslo-config
 python-oslo-context
@@ -4850,8 +4852,6 @@ xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk
 xdg-utils
 xdotool
-xdp-tools
-libxdp
 xed
 xerces-c
 xf86-input-elographics
@@ -5134,3 +5134,4 @@ python-ulid-transform
 nushell
 python-ulid
 tomlplusplus
+python-watchfiles
