@@ -550,9 +550,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
-ghostxps
-ghostpcl
 gi-docgen
 giflib
 gifski

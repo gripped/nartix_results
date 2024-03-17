@@ -1,25 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,12 +4,12 @@
-   libxml2
-   libxml2-docs
+@@ -3,7 +3,7 @@
+ pkgname=(
+   lib32-libxml2
  )
--pkgver=2.12.2
+-pkgver=2.12.5
 +pkgver=2.12.6
  pkgrel=1
- pkgdesc="XML C parser and toolkit"
+ pkgdesc="XML C parser and toolkit (32-bit)"
  url="https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home"
- arch=(x86_64)
--license=(custom:MIT)
-+license=(MIT)
- depends=(
-   icu
-   ncurses
-@@ -21,7 +21,7 @@
+@@ -19,7 +19,7 @@
    git
    python
  )
--_commit=4d8fa5b292fc902268217fa0f7031e77e5437b5a  # tags/v2.12.2^0
+-_commit=e189e9945317ad4c8603fa2300d11d11f5e2e335  # tags/v2.12.5^0
 +_commit=505e2e872e767405be565aa9d47ae9d6d5677f79  # tags/v2.12.6^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/libxml2.git#commit=$_commit"

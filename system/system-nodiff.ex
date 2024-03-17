@@ -63,7 +63,6 @@ python-gpgme
 gpm
 grep
 groff
-grub
 guile
 gzip
 hdparm
@@ -154,7 +153,6 @@ pciutils
 pcre
 perl
 pinentry
-pkgconf
 popt
 pptpclient
 readline

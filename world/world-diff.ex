@@ -200,6 +200,9 @@ gdm
 libgdm
 genxrdpattern
 geoclue
+ghostscript
+ghostxps
+ghostpcl
 github-cli
 glslang
 gnome-bluetooth-3.0
@@ -1456,3 +1459,4 @@ zanshin
 zeromq
 zig
 znc
+proxytunnel

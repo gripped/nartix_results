@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=pkgconf
+-pkgver=2.1.0
+-pkgrel=2
++pkgver=2.1.1
++pkgrel=1
+ pkgdesc="Package compiler and linker metadata toolkit"
+ url="https://gitea.treehouse.systems/ariadne/pkgconf"
+-license=(custom:ISC)
++license=(ISC)
+ arch=(x86_64)
+ depends=(
+   glibc
+@@ -21,7 +21,7 @@
+ )
+ conflicts=(pkg-config)
+ replaces=(pkg-config)
+-_commit=61d39ad899867713e73752cf23c40f0275bf71c3  # tags/pkgconf-2.1.0
++_commit=b6e04e2d47b4ca093632b9efde6303a137ea0634  # tags/pkgconf-2.1.1
+ source=(
+   "git+$url#commit=$_commit"
+   {x86_64,i686}-pc-linux-gnu.personality
+@@ -37,8 +37,6 @@
+ 
+ prepare() {
+   cd pkgconf
+-
+-  git revert -n 97d907ba93b7e4eef67e4c0a80939421ad3183f0
+ }
+ 
+ build() {
+@@ -46,7 +44,7 @@
+     -D tests=disabled  # Tests need kyua
+   )
+ 
+-  arch-meson pkgconf build "${meson_options[@]}"
++  artix-meson pkgconf build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,12 +12,11 @@
+ replaces=(pkg-config)
+ prepare() {
+ cd pkgconf
+-git revert -n 97d907ba93b7e4eef67e4c0a80939421ad3183f0
+ }
+ build() {
+ local meson_options=(
+ -D tests=disabled  # Tests need kyua
+ )
+-arch-meson pkgconf build "${meson_options[@]}"
++artix-meson pkgconf build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -15,6 +15,7 @@ debuginfod
 glibc
 lib32-glibc
 glibc-locales
+grub
 gssproxy
 iana-etc
 iptables
@@ -57,6 +58,7 @@ pacman
 pam
 pambase
 pcre2
+pkgconf
 ppp
 procps-ng
 psmisc
