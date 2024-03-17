@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=freeradius
+ pkgver=3.2.3
+-pkgrel=5
++pkgrel=6
+ pkgdesc='The premier open source RADIUS server'
+ arch=('x86_64')
+ url='https://freeradius.org/'
 @@ -26,15 +26,13 @@
          '0001-python-3-10.patch'
          '0002-Use-accessor-function-for-PyFrameObject-members.patch'
@@ -18,13 +27,15 @@
  
  prepare() {
    cd "$srcdir"/freeradius-server-$pkgver
-@@ -63,12 +61,11 @@
- package() {
-   cd "$srcdir"/freeradius-server-$pkgver
- 
--  make install R="$pkgdir" PACKAGE='archlinux'
-+  make install R="$pkgdir" PACKAGE='artixlinux'
-   chmod o+r "$pkgdir"/etc/raddb/*
+@@ -54,6 +52,7 @@
+     --localstatedir=/var \
+     --enable-heimdal-krb5 \
+     --enable-reproducible-builds \
++    --with-regex=false \
+     --with-system-libltdl \
+     --with-system-libtool \
+     --with-udpfromto
+@@ -68,7 +67,6 @@
    mv "$pkgdir"/etc/raddb "$pkgdir"/etc/raddb.default
    rm -rf "$pkgdir"/var/run
  
@@ -32,3 +43,17 @@
    install -D -m0644 "$srcdir"/$pkgname-sysusers.conf "$pkgdir"/usr/lib/sysusers.d/$pkgname.conf
    install -D -m0644 "$srcdir"/$pkgname-tmpfiles.conf "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
  }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+ --localstatedir=/var \
+ --enable-heimdal-krb5 \
+ --enable-reproducible-builds \
++--with-regex=false \
+ --with-system-libltdl \
+ --with-system-libtool \
+ --with-udpfromto

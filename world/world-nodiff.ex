@@ -133,7 +133,6 @@ bash-completion
 bats-assert
 bats-support
 bats
-bazel
 bbswitch
 bbswitch-dkms
 bc
@@ -481,7 +480,6 @@ flite
 fltk
 fltk-docs
 fmt
-folks
 font-awesome
 ttf-font-awesome
 otf-font-awesome
@@ -500,7 +498,6 @@ freealut
 freecell-solver
 freeglut
 freeimage
-freeradius
 freetds
 freetype2
 freetype2-demos
@@ -1758,7 +1755,6 @@ neomutt
 neon
 neovim-qt
 neovim
-net-snmp
 netcdf-fortran
 netcdf
 netcf
@@ -3584,7 +3580,6 @@ quadrapassel
 quota-tools
 qutebrowser
 r
-r8168
 radeontop
 radicale
 raft

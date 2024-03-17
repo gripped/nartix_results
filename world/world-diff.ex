@@ -46,6 +46,7 @@ baloo
 bash-bats-assert
 bash-bats-support
 bash-bats
+bazel
 bftpd
 bind
 blinken
@@ -181,8 +182,10 @@ flatpak-kcm
 flatpak
 flatpak-docs
 fluidsynth
+folks
 fprintd
 frameworkintegration
+freeradius
 freerdp
 fwupd-efi
 fwupd
@@ -781,6 +784,7 @@ nbd
 ndctl
 ndisc6
 neochat
+net-snmp
 netavark
 netplan
 networkmanager-qt
@@ -1231,6 +1235,7 @@ quazip
 quazip-qt5
 quazip-qt6
 quilt
+r8168
 rabbitmq
 rabbitmqadmin
 rapidfuzz-cpp

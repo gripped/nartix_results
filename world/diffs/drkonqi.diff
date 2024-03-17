@@ -1,12 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,31 +1,66 @@
+@@ -1,17 +1,43 @@
  
  pkgname=drkonqi
 -pkgver=5.27.10
-+pkgver=6.0.1
++pkgver=6.0.2
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=1
++pkgrel=3
  pkgdesc='The KDE crash handler'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
@@ -31,6 +32,7 @@
 +         kwallet
 +         kwidgetsaddons
 +         kwindowsystem
++         libelogind
 +         polkit-qt6
 +         python
 +         python-psutil
@@ -41,24 +43,15 @@
 +         syntax-highlighting)
  makedepends=(extra-cmake-modules)
  groups=(plasma)
--source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
 -sha256sums=('a3ea4794ca1d8e31cacfe78301884419cfd9daaf939c5d843718372b65657fd0'
--            'SKIP')
-+source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
-+        no-systemd.patch)
-+sha256sums=('5f660543c30a79effb48900d1ebad9f9e5620514daabde9bdabc2b5f01b2026d'
-+            'SKIP'
-+            'e25815f79a85ac28c46a426fc68839e6988f091ce0877e93e27031f3853f123b')
++sha256sums=('4b81c794319e04c570a9487f09dda02f18881e248547ba856aa84a6ede70c314'
+             'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
                '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
-               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
+@@ -19,13 +45,17 @@
                '1FA881591C26B276D7A5518EEAAF29B42A678C20') # Marco Martin <notmart@gmail.com>
  
-+prepare() {
-+  cd $pkgname-$pkgver
-+  patch -Np1 -i ../no-systemd.patch
-+}
-+
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  cmake -B build  -S $pkgname-$pkgver \
@@ -66,7 +59,8 @@
      -DBUILD_TESTING=OFF \
 -    -DWITH_GDB12=ON
 +    -DWITH_GDB12=ON \
-+    -DWITH_PYTHON_VENDORING=OFF
++    -DWITH_PYTHON_VENDORING=OFF \
++    -DCMAKE_DISABLE_FIND_PACKAGE_Systemd=ON
    cmake --build build
  }
  
@@ -81,7 +75,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,41 @@
+@@ -1,11 +1,39 @@
  pkgname=drkonqi
  _dirver=$(echo $pkgver | cut -d. -f1-3)
 -depends=(kidletime5 syntax-highlighting5 kirigami2 kitemmodels5 kuserfeedback5 kio5 gdb python-distro python-psutil qt5-tools)
@@ -103,6 +97,7 @@
 +kwallet
 +kwidgetsaddons
 +kwindowsystem
++libelogind
 +polkit-qt6
 +python
 +python-psutil
@@ -112,10 +107,6 @@
 +qt6-declarative
 +syntax-highlighting)
  groups=(plasma)
-+prepare() {
-+cd $pkgname-$pkgver
-+patch -Np1 -i ../no-systemd.patch
-+}
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 +cmake -B build  -S $pkgname-$pkgver \
@@ -123,6 +114,7 @@
  -DBUILD_TESTING=OFF \
 --DWITH_GDB12=ON
 +-DWITH_GDB12=ON \
-+-DWITH_PYTHON_VENDORING=OFF
++-DWITH_PYTHON_VENDORING=OFF \
++-DCMAKE_DISABLE_FIND_PACKAGE_Systemd=ON
  cmake --build build
  }
