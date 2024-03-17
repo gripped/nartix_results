@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-tools
+ _qtver=6.6.2
+ pkgver=${_qtver/-/}
+-pkgrel=1
++pkgrel=2
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -29,6 +29,8 @@
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \
++    -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
+     -DINSTALL_PUBLICBINDIR=usr/bin \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,8 @@
+ }
+ build() {
+ cmake -B build -S $_pkgfn -G Ninja \
++-DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_PREFIX_PATH=/usr \
+ -DINSTALL_PUBLICBINDIR=usr/bin \
+ -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+ cmake --build build

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D gtk_doc=true
++  artix-meson $pkgname build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build -D gtk_doc=true
++artix-meson $pkgname build -D gtk_doc=true
+ meson compile -C build
+ }
+ package() {

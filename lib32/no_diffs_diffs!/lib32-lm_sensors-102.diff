@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,7 @@
+ makedepends=('git')
+ depends=('lm_sensors' 'lib32-glibc')
+ provides=('libsensors.so')
++options=('debug')
+ source=("git+https://github.com/groeck/lm-sensors.git#commit=${_commit}")
+ sha256sums=('SKIP')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=lib32-lm_sensors
+ depends=('lm_sensors' 'lib32-glibc')
+ provides=('libsensors.so')
+ prepare() {
+ cd "${srcdir}"/lm-sensors*
+ sed -i 's/CC := gcc/CC := gcc -m32/' Makefile

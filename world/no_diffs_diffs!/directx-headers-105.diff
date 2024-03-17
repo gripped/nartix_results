@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ build() {
+   export CXXFLAGS="$CXXFLAGS -fno-lto"
+ 
+-  arch-meson DirectX-Headers-$pkgver build \
++  artix-meson DirectX-Headers-$pkgver build \
+     -Dbuild-test=false
+   ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=directx-headers
+ build() {
+ export CXXFLAGS="$CXXFLAGS -fno-lto"
+-arch-meson DirectX-Headers-$pkgver build \
++artix-meson DirectX-Headers-$pkgver build \
+ -Dbuild-test=false
+ ninja -C build
+ }

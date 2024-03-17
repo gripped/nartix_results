@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+   local meson_options=(
+   )
+ 
+-  arch-meson zenity build "${meson_options[@]}"
++  artix-meson zenity build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ build() {
+ local meson_options=(
+ )
+-arch-meson zenity build "${meson_options[@]}"
++artix-meson zenity build "${meson_options[@]}"
+ meson compile -C build
+ }

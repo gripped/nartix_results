@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -51,7 +51,7 @@
+     -D autobahn=disabled
+   )
+ 
+-  arch-meson libsoup build "${meson_options[@]}"
++  artix-meson libsoup build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ local meson_options=(
+ -D autobahn=disabled
+ )
+-arch-meson libsoup build "${meson_options[@]}"
++artix-meson libsoup build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_libsoup3() {

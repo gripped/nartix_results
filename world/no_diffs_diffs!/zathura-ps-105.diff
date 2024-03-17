@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zathura-ps
+ pkgver=0.2.7
+-pkgrel=4
++pkgrel=4.1
+ 
+ pkgdesc="Adds ps support to zathura by using the libspectre library"
+ url="https://pwmt.org/projects/zathura-ps"
+@@ -17,7 +17,7 @@
+ 
+ build(){
+   cd zathura-ps-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('libspectre' 'zathura' 'desktop-file-utils')
+ build(){
+ cd zathura-ps-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

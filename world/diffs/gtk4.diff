@@ -1,0 +1,104 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+   gtk4-docs
+   gtk-update-icon-cache
+ )
+-pkgver=4.12.5
+-pkgrel=1
++pkgver=4.13.5
++pkgrel=1.2
+ epoch=1
+ pkgdesc="GObject-based multi-platform GUI toolkit"
+ url="https://www.gtk.org/"
+@@ -49,7 +49,6 @@
+   libxrender
+   pango
+   shared-mime-info
+-  tracker3
+   wayland
+ )
+ makedepends=(
+@@ -62,6 +61,7 @@
+   python-gobject
+   sassc
+   shaderc
++  vulkan-headers
+   wayland-protocols
+ )
+ checkdepends=(
+@@ -71,10 +71,11 @@
+   noto-fonts
+   pipewire
+   python-pydbus
++  vulkan-swrast
+   weston
+   wireplumber
+ )
+-_commit=48f6ffad7fef92c93c61166d882f6933adaab5aa  # tags/4.12.5^0
++_commit=a45b66e1cac48e2c6cae63a36a037d38a6dfcd54  # tags/4.13.5^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gtk.git#commit=$_commit"
+   gtk-update-icon-cache.{hook,script}
+@@ -106,11 +107,10 @@
+     -D colord=enabled
+     -D documentation=true
+     -D man-pages=true
+-    -D tracker=enabled
+   )
+ 
+   CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-  arch-meson gtk build "${meson_options[@]}"
++  artix-meson gtk build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -123,7 +123,8 @@
+ 
+   trap "kill $_w; wait" EXIT
+ 
+-  meson test -C build --print-errorlogs
++  sed -i "s/{ 'name': 'templates' }/#{ 'name': 'templates' }/g" gtk/testsuite/gtk/meson.build
++  meson test -C build --print-errorlogs --no-suite=headless --timeout-multiplier=3 ||:
+ )
+ 
+ _pick() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,6 @@
+ libxrender
+ pango
+ shared-mime-info
+-tracker3
+ wayland
+ )
+ prepare() {
+@@ -55,11 +54,22 @@
+ -D colord=enabled
+ -D documentation=true
+ -D man-pages=true
+--D tracker=enabled
+ )
+ CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-arch-meson gtk build "${meson_options[@]}"
++artix-meson gtk build "${meson_options[@]}"
+ meson compile -C build
++}
++/#{ 'name': 'templates' }/g" gtk/testsuite/gtk/meson.build
++meson test -C build --print-errorlogs --no-suite=headless --timeout-multiplier=3 ||:
++)
++_pick() {
++local p="$1" f d; shift
++for f; do
++d="$srcdir/$p/${f#$pkgdir/}"
++mkdir -p "$(dirname "$d")"
++mv "$f" "$d"
++rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
++done
+ }
+ package_gtk4() {
+ depends+=(gtk-update-icon-cache)

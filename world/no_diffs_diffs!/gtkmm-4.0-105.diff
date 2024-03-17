@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,6 +23,7 @@
+   pangomm-2.48-docs
+ )
+ checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=14b326c168198b0c88d4514b78cc7c954f9d12c8  # tags/4.12.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gtkmm.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -37,7 +38,7 @@
+ }
+ 
+ build() {
+-  arch-meson gtkmm build -D maintainer-mode=true
++  artix-meson gtkmm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,11 +7,12 @@
+ gtk4
+ pangomm-2.48
+ )
+ prepare() {
+ cd gtkmm
+ }
+ build() {
+-arch-meson gtkmm build -D maintainer-mode=true
++artix-meson gtkmm build -D maintainer-mode=true
+ meson compile -C build
+ }
+ _pick() {

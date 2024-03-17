@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha256sums=('c3bc5025d7db380587f9c8eb800c611f6b5a16d6b4b78fcff93f62876a677f17')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D gtk_doc=true
++  artix-meson $pkgname-$pkgver build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=libmediaart
+ depends=('gdk-pixbuf2' 'glib2' 'glibc')
+ build() {
+-arch-meson $pkgname-$pkgver build -D gtk_doc=true
++artix-meson $pkgname-$pkgver build -D gtk_doc=true
+ meson compile -C build
+ }

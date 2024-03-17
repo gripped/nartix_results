@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ arch=(x86_64)
+ url="https://github.com/lunarmodules/$pkgbase"
+ license=(MIT)
++options=(debug)
+ makedepends=(lua
+              lua51
+              lua52
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgbase=luasocket
+ pkgname=(lua-socket lua51-socket lua52-socket lua53-socket)
+ _rockrel=1
+ _archive="$pkgbase-$pkgver"
+ _rock="$_archive-$_rockrel.linux-$CARCH.rock"
+ build() {

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+ }
+ 
+ build() {
+-  arch-meson WPEBackend-fdo build
++  artix-meson WPEBackend-fdo build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ cd WPEBackend-fdo
+ }
+ build() {
+-arch-meson WPEBackend-fdo build
++artix-meson WPEBackend-fdo build
+ meson compile -C build
+ }
+ package() {

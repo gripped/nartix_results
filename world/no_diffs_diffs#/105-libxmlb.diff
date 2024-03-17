@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build -D stemmer=true
++  artix-meson ${pkgname}-${pkgver} build -D stemmer=true
+   ninja -v -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=libxmlb
+ depends=(glib2 libstemmer xz zstd)
+ build() {
+-arch-meson ${pkgname}-${pkgver} build -D stemmer=true
++artix-meson ${pkgname}-${pkgver} build -D stemmer=true
+ ninja -v -C build
+ }

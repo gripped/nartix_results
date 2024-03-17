@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url='https://gitlab.freedesktop.org/hadess/iio-sensor-proxy/'
+ license=('GPL2')
+-depends=('systemd' 'libgudev' 'glib2' 'polkit')
++depends=('libgudev' 'glib2' 'polkit')
+ makedepends=('gtk3' 'meson')
+ checkdepends=('python-gobject' 'python-dbusmock' 'python-psutil' 'umockdev')
+ source=("$url/-/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+@@ -16,8 +16,8 @@
+   mkdir $pkgname-$pkgver/build
+   cd $pkgname-$pkgver/build
+ 
+-  arch-meson .. \
+-    -Dsystemdsystemunitdir=/usr/lib/systemd/system \
++  artix-meson .. \
++    -Dsystemdsystemunitdir='' \
+     -Dudevrulesdir=/usr/lib/udev/rules.d \
+     -Dsysconfdir=/usr/share
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ pkgname=iio-sensor-proxy
+-depends=('systemd' 'libgudev' 'glib2' 'polkit')
++depends=('libgudev' 'glib2' 'polkit')
+ build() {
+ mkdir $pkgname-$pkgver/build
+ cd $pkgname-$pkgver/build
+-arch-meson .. \
+--Dsystemdsystemunitdir=/usr/lib/systemd/system \
++artix-meson .. \
++-Dsystemdsystemunitdir='' \
+ -Dudevrulesdir=/usr/lib/udev/rules.d \
+ -Dsysconfdir=/usr/share
+ ninja

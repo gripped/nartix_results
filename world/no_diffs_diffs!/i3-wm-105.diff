@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+ 
+ build() {
+   cd i3-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ backup=('etc/i3/config')
+ build() {
+ cd i3-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

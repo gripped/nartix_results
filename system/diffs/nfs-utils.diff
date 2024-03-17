@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+     --enable-ipv6 \
+     --enable-libmount-mount \
+     --enable-mountconfig \
+-    --with-systemd
++    --without-systemd
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+@@ -67,7 +67,6 @@
+   install -D -m 644 nfs.conf "$pkgdir"/etc/nfs.conf
+ 
+   install -d -m 755 "$pkgdir"/usr/share/doc/$pkgname
+-  install -D -m 644 systemd/README "$pkgdir"/usr/share/doc/$pkgname/README.systemd
+ 
+   install -m 644 {NEWS,README} "$pkgdir"/usr/share/doc/$pkgname/
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ --enable-ipv6 \
+ --enable-libmount-mount \
+ --enable-mountconfig \
+---with-systemd
++--without-systemd
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }
+@@ -35,7 +35,6 @@
+ install -D -m 644 utils/mount/nfsmount.conf "$pkgdir"/etc/nfsmount.conf
+ install -D -m 644 nfs.conf "$pkgdir"/etc/nfs.conf
+ install -d -m 755 "$pkgdir"/usr/share/doc/$pkgname
+-install -D -m 644 systemd/README "$pkgdir"/usr/share/doc/$pkgname/README.systemd
+ install -m 644 {NEWS,README} "$pkgdir"/usr/share/doc/$pkgname/
+ install -D -m 644 ../exports "$pkgdir"/etc/exports
+ install -D -m 644 utils/nfsidmap/id_resolver.conf "$pkgdir"/etc/request-key.d/id_resolver.conf

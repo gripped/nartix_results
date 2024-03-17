@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   libgtk-3.so
+   libpango-1.0.so
+   libpangocairo-1.0.so
+-  libsystemd.so
++  libelogind.so
+   libx11
+   libxext
+   libxss
+@@ -33,8 +33,10 @@
+ )
+ optdepends=('upower: Power management support')
+ _tag=7a96e9f87dc95c794cd45fd0378a62f45308ea87
+-source=(git+https://github.com/the-cavalry/light-locker.git#tag=${_tag})
+-sha256sums=(SKIP)
++source=("git+https://github.com/the-cavalry/light-locker.git#tag=${_tag}"
++        "0001-remove-systemd.patch")
++sha256sums=('SKIP'
++            '97256d217b9a28dbc3890bca8112c8e7edda3cba40522c8ab9609873c0d73833')
+ 
+ pkgver() {
+   cd light-locker
+@@ -49,10 +51,11 @@
+   git cherry-pick -n 366fdbfe284efacf39d887a0512d38030af7ff16
+   git cherry-pick -n 6224184e2677d76c7904d488b0e9295886fa9ee3
+   git cherry-pick -n 8e03981e83fd03920e8e68145d0eb933dddb4c3c
++  patch -Np1 -i ../0001-remove-systemd.patch
+ }
+ 
+ build () {
+-  arch-meson light-locker build
++  artix-meson -Dsystemd=false light-locker build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ libgtk-3.so
+ libpango-1.0.so
+ libpangocairo-1.0.so
+-libsystemd.so
++libelogind.so
+ libx11
+ libxext
+ libxss
+@@ -22,8 +22,9 @@
+ git cherry-pick -n 366fdbfe284efacf39d887a0512d38030af7ff16
+ git cherry-pick -n 6224184e2677d76c7904d488b0e9295886fa9ee3
+ git cherry-pick -n 8e03981e83fd03920e8e68145d0eb933dddb4c3c
++patch -Np1 -i ../0001-remove-systemd.patch
+ }
+ build () {
+-arch-meson light-locker build
++artix-meson -Dsystemd=false light-locker build
+ ninja -C build
+ }

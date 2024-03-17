@@ -1,0 +1,211 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,8 +19,8 @@
+   pipewire-session-manager
+   pulse-native-provider
+ )
+-_commit=6ab86209f23a841de7eac6bc0c1009aceb9ffd87  # tags/1.0.3
+-pkgver=1.0.3
++_commit=f2874ad1c2f7f0b9a1da05cc4f402b3ea3761ee6  # tags/1.0.4
++pkgver=1.0.4
+ _so_ver=0.3
+ pkgrel=1
+ epoch=1
+@@ -62,7 +62,6 @@
+   rtkit
+   sbc
+   sdl2
+-  systemd
+   valgrind
+   webrtc-audio-processing-1
+ )
+@@ -96,9 +95,10 @@
+     -D selinux=disabled
+     -D session-managers=[]
+     -D udevrulesdir=/usr/lib/udev/rules.d
+-  )
+-
+-  arch-meson pipewire build "${meson_options[@]}"
++    -D systemd=disabled
++  )
++
++  artix-meson pipewire build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -129,7 +129,6 @@
+     libncursesw.so
+     libpipewire-$_so_ver.so
+     libreadline.so
+-    libsystemd.so
+     libudev.so
+   )
+   optdepends=(
+@@ -149,7 +148,6 @@
+     'realtime-privileges: realtime privileges with rt module'
+     'rtkit: realtime privileges with rtkit module'
+   )
+-  install=pipewire.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+@@ -180,15 +178,16 @@
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-fallback-sink.so
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-filter-chain*.so
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-loopback.so
+-    _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-netjack2-*.so
++    _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-netjack2*.so
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-pipe-tunnel.so
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-simple.so
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-rtp-{sap,sink,source}.so
+-    _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban-{recv,send}.so
++    _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban*.so
+     _pick audio usr/lib/spa-0.2/{aec,alsa,audio*,avb,bluez5}
+-    _pick audio usr/lib/systemd/user/filter-chain.service
+     _pick audio usr/share/alsa
+     _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
++    _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
++    _pick audio usr/share/man/man5/pipewire-filter-chain.conf.5
+     _pick audio usr/share/man/man7/libpipewire-module-{avb,echo-cancel,fallback-sink,filter-chain*,loopback,netjack2*,pipe-tunnel,protocol-simple,rtp-{sap,sink,source},vban*}.7
+     _pick audio usr/share/pipewire/filter-chain*
+     _pick audio usr/share/pipewire/pipewire-{aes67,avb}.conf
+@@ -206,12 +205,12 @@
+     _pick jack usr/lib/libjack*
+     _pick jack usr/lib/pkgconfig/jack.pc
+     _pick jack usr/share/man/man1/pw-jack.1
++    _pick jack usr/share/man/man5/pipewire-jack.conf.5
+     _pick jack usr/share/pipewire/jack.conf
+ 
+     _pick pulse usr/bin/pipewire-pulse
+     _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-pulse.so
+     _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-pulse-tunnel.so
+-    _pick pulse usr/lib/systemd/user/pipewire-pulse.*
+     _pick pulse usr/share/man/man1/pipewire-pulse.1
+     _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
+     _pick pulse usr/share/man/man7/pipewire-pulse*.7
+@@ -228,6 +227,7 @@
+     _pick zeroconf usr/share/man/man7/libpipewire-module-{raop-*,rtp-session,zeroconf*}.7
+ 
+     _pick v4l2 usr/bin/pw-v4l2 usr/lib/pipewire-$_so_ver/v4l2
++    _pick v4l2 usr/share/man/man1/pw-v4l2.1
+ 
+     _pick x11-bell usr/lib/pipewire-$_so_ver/libpipewire-module-x11-bell.so
+     _pick x11-bell usr/share/man/man7/libpipewire-module-x11-bell.7
+@@ -289,7 +289,6 @@
+     libusb-1.0.so
+     libwebrtc-audio-processing-1.so
+     pipewire
+-    systemd-libs
+   )
+ 
+   mv audio/* "$pkgdir"
+@@ -391,7 +390,6 @@
+     pipewire
+     pipewire-audio
+     pipewire-session-manager
+-    systemd-libs
+   )
+   provides=(
+     pulse-native-provider
+@@ -402,7 +400,6 @@
+     pulseaudio
+     pulseaudio-bluetooth
+   )
+-  install=pipewire-pulse.install
+ 
+   mv pulse/* "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,8 +34,9 @@
+ -D selinux=disabled
+ -D session-managers=[]
+ -D udevrulesdir=/usr/lib/udev/rules.d
+-)
+-arch-meson pipewire build "${meson_options[@]}"
++-D systemd=disabled
++)
++artix-meson pipewire build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {
+@@ -60,10 +61,8 @@
+ libncursesw.so
+ libpipewire-$_so_ver.so
+ libreadline.so
+-libsystemd.so
+ libudev.so
+ )
+-install=pipewire.install
+ meson install -C build --destdir "$pkgdir"
+ (
+ cd "$pkgdir"
+@@ -87,15 +86,16 @@
+ _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-fallback-sink.so
+ _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-filter-chain*.so
+ _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-loopback.so
+-_pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-netjack2-*.so
++_pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-netjack2*.so
+ _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-pipe-tunnel.so
+ _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-simple.so
+ _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-rtp-{sap,sink,source}.so
+-_pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban-{recv,send}.so
++_pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban*.so
+ _pick audio usr/lib/spa-0.2/{aec,alsa,audio*,avb,bluez5}
+-_pick audio usr/lib/systemd/user/filter-chain.service
+ _pick audio usr/share/alsa
+ _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
++_pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
++_pick audio usr/share/man/man5/pipewire-filter-chain.conf.5
+ _pick audio usr/share/man/man7/libpipewire-module-{avb,echo-cancel,fallback-sink,filter-chain*,loopback,netjack2*,pipe-tunnel,protocol-simple,rtp-{sap,sink,source},vban*}.7
+ _pick audio usr/share/pipewire/filter-chain*
+ _pick audio usr/share/pipewire/pipewire-{aes67,avb}.conf
+@@ -110,11 +110,11 @@
+ _pick jack usr/lib/libjack*
+ _pick jack usr/lib/pkgconfig/jack.pc
+ _pick jack usr/share/man/man1/pw-jack.1
++_pick jack usr/share/man/man5/pipewire-jack.conf.5
+ _pick jack usr/share/pipewire/jack.conf
+ _pick pulse usr/bin/pipewire-pulse
+ _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-pulse.so
+ _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-pulse-tunnel.so
+-_pick pulse usr/lib/systemd/user/pipewire-pulse.*
+ _pick pulse usr/share/man/man1/pipewire-pulse.1
+ _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
+ _pick pulse usr/share/man/man7/pipewire-pulse*.7
+@@ -127,6 +127,7 @@
+ _pick zeroconf usr/lib/pipewire-$_so_ver/libpipewire-module-rtp-session.so
+ _pick zeroconf usr/share/man/man7/libpipewire-module-{raop-*,rtp-session,zeroconf*}.7
+ _pick v4l2 usr/bin/pw-v4l2 usr/lib/pipewire-$_so_ver/v4l2
++_pick v4l2 usr/share/man/man1/pw-v4l2.1
+ _pick x11-bell usr/lib/pipewire-$_so_ver/libpipewire-module-x11-bell.so
+ _pick x11-bell usr/share/man/man7/libpipewire-module-x11-bell.7
+ mkdir -p etc/pipewire/{client-rt,client,minimal,pipewire}.conf.d
+@@ -166,7 +167,6 @@
+ libusb-1.0.so
+ libwebrtc-audio-processing-1.so
+ pipewire
+-systemd-libs
+ )
+ mv audio/* "$pkgdir"
+ mkdir -p "$pkgdir/etc/alsa/conf.d"
+@@ -248,7 +248,6 @@
+ pipewire
+ pipewire-audio
+ pipewire-session-manager
+-systemd-libs
+ )
+ provides=(
+ pulse-native-provider
+@@ -259,7 +258,6 @@
+ pulseaudio
+ pulseaudio-bluetooth
+ )
+-install=pipewire-pulse.install
+ mv pulse/* "$pkgdir"
+ mkdir -p "$pkgdir/etc/pipewire/pipewire-pulse.conf.d"
+ install -Dm644 /dev/null \

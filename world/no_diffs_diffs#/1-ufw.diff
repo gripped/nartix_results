@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,11 +16,9 @@
+         'etc/ufw/sysctl.conf'
+         'etc/default/ufw'
+         'etc/ufw/user6.rules')
+-source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.gz"{,.asc}
+-        "service")
++source=("${url}/${pkgver%.*}/${pkgver}/+download/${pkgname}-${pkgver}.tar.gz"{,.asc})
+ sha256sums=('2a57a99eecef6b44db3537ed2520b30bae3759f8465456e22e404cd643838bf5'
+-            'SKIP'
+-            'fdface6f4690e4748fbbd5661c02e1967a8750fdb23581d35516174017a3fe39')
++            'SKIP')
+ validpgpkeys=('4C20C06B5D8BDE688854D28A51DBDC58CC559573')
+ 
+ prepare() {
+@@ -40,6 +38,5 @@
+   python3 setup.py install --root="$pkgdir"
+ 
+   install -Dm644 shell-completion/bash "$pkgdir/usr/share/bash-completion/completions/ufw"
+-  install -Dm644 "$srcdir/service" "$pkgdir/usr/lib/systemd/system/ufw.service"
+   chmod 644 "$pkgdir/etc/ufw/"*.rules
+ }

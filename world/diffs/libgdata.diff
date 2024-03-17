@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=(GPL)
+ depends=(
+   gcr
++  json-glib
+   libgoa
+   libsoup
+ )
+@@ -19,6 +20,7 @@
+   vala
+ )
+ _commit=eb7db048e5445ad567817dced344c47a20c6ea6b  # tags/0.18.1^0
++options=(debug)
+ source=("git+https://gitlab.gnome.org/GNOME/libgdata.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -39,8 +41,8 @@
+     -D man=true
+   )
+ 
+-  arch-meson libgdata build "${meson_options[@]}"
+-  meson compile -C build
++  artix-meson libgdata build "${meson_options[@]}"
++  ninja -C build
+ }
+ 
+ check() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,11 @@
+ pkgname=libgdata
+ depends=(
+ gcr
++json-glib
+ libgoa
+ libsoup
+ )
+ prepare() {
+ cd libgdata
+ }
+@@ -13,8 +15,8 @@
+ -D gtk_doc=true
+ -D man=true
+ )
+-arch-meson libgdata build "${meson_options[@]}"
+-meson compile -C build
++artix-meson libgdata build "${meson_options[@]}"
++ninja -C build
+ }
+ package() {
+ depends+=(libsoup-2.4.so)

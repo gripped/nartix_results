@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,13 +10,14 @@
+ depends=(webkit2gtk-4.1)
+ makedepends=(git appstream-glib gobject-introspection meson yelp-tools
+              gi-docgen)
++options=(debug)
+ _commit=f4e68f3f0134becbdd737eaac85caaa0a8e43a66  # tags/43.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/devhelp.git#commit=$_commit")
+ sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd devhelp
+-  git describe --tags | sed 's/\.alpha/alpha/;s/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed 's/\.alpha/alpha/;s/-/+/g'
+ }
+ 
+ prepare() {
+@@ -31,7 +32,7 @@
+     -D plugin_vim=true
+   )
+ 
+-  arch-meson devhelp build "${meson_options[@]}"
++  artix-meson devhelp build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgbase=devhelp
+ pkgname=(devhelp devhelp-docs)
+ depends=(webkit2gtk-4.1)
+ prepare() {
+ cd devhelp
+ }
+@@ -11,7 +12,7 @@
+ -D plugin_gedit=true
+ -D plugin_vim=true
+ )
+-arch-meson devhelp build "${meson_options[@]}"
++artix-meson devhelp build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_devhelp-docs() {

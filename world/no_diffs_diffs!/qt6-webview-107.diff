@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ sha256sums=('8b171236406d7a8e0c384513d9d140d1a3953e2f8d6f05e1c86d3c6fc40b777c')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+ build() {
+-cmake -B build -S $_pkgfn -G Ninja \
++cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+ cmake --build build
+ }

@@ -1,0 +1,82 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   gnome-desktop-4
+ )
+ pkgver=44.0
+-pkgrel=1
++pkgrel=1.1
+ epoch=1
+ pkgdesc="Library with common API for various GNOME modules"
+ url="https://gitlab.gnome.org/GNOME/gnome-desktop"
+@@ -27,11 +27,12 @@
+   libseccomp
+   libxkbcommon
+   meson
+-  systemd
++  elogind
+   xkeyboard-config
+   yelp-tools
+ )
+ checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=97c0344b3ba955bb6f6fe74ca03cc399a81acaa5  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-desktop.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -49,9 +50,10 @@
+   local meson_options=(
+     -D debug_tools=false
+     -D gtk_doc=true
++    -D systemd=disabled
+   )
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -78,9 +80,10 @@
+     iso-codes
+     libseccomp
+     libxkbcommon
+-    systemd
++    elogind
+     xkeyboard-config
+   )
++
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,7 @@
+ gnome-desktop
+ gnome-desktop-4
+ )
+ prepare() {
+ cd $pkgbase
+ }
+@@ -11,8 +12,9 @@
+ local meson_options=(
+ -D debug_tools=false
+ -D gtk_doc=true
++-D systemd=disabled
+ )
+-arch-meson $pkgbase build "${meson_options[@]}"
++artix-meson $pkgbase build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {
+@@ -32,7 +34,7 @@
+ iso-codes
+ libseccomp
+ libxkbcommon
+-systemd
++elogind
+ xkeyboard-config
+ )
+ meson install -C build --destdir "$pkgdir"

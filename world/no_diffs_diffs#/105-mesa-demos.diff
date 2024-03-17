@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ 
+ build() {
+ 
+-  arch-meson mesa-demos-$pkgver build \
++  artix-meson mesa-demos-$pkgver build \
+     -D gles1=disabled \
+     -D with-system-data-files=true
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgbase=mesa-demos
+ pkgname=('mesa-demos' 'mesa-utils')
+ build() {
+-arch-meson mesa-demos-$pkgver build \
++artix-meson mesa-demos-$pkgver build \
+ -D gles1=disabled \
+ -D with-system-data-files=true
+ meson configure build

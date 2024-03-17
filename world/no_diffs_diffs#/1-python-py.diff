@@ -1,0 +1,12 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -80,8 +80,8 @@
+     --deselect 'testing/io_/test_capture.py::test_capturing_and_logging_fundamentals[StdCapture]'
+     --deselect 'testing/io_/test_capture.py::test_capturing_and_logging_fundamentals[StdCaptureFD]'
+   )
++
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+-
+   cd py
+   python -m installer --destdir=test_dir dist/*.whl
+   export PYTHONPATH="test_dir/$site_packages:$PYTHONPATH"

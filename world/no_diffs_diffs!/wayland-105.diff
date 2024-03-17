@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+             'SKIP')
+ 
+ build() {
+-  arch-meson $pkgbase-$pkgver build
++  artix-meson $pkgbase-$pkgver build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=(wayland wayland-docs)
+ depends=('glibc' 'libffi' 'expat' 'libxml2' 'default-cursors')
+ build() {
+-arch-meson $pkgbase-$pkgver build
++artix-meson $pkgbase-$pkgver build
+ meson compile -C build
+ }
+ package_wayland-docs() {

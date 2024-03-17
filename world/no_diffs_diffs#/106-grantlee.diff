@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ validpgpkeys=(FCA530E51EE4331C2DF16637D264C7B1D02D6509) # Stephen Kelly <steveire@gmail.com>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_TESTS=OFF
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=grantlee
+ depends=(qt5-declarative)
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_TESTS=OFF
+ cmake --build build

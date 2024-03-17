@@ -1,0 +1,82 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,11 +6,10 @@
+ url='http://smartmontools.sourceforge.net'
+ license=('GPL')
+ arch=('x86_64')
+-depends=('gcc-libs' 'libcap-ng' 'bash' 'systemd-libs')
+-makedepends=('systemd')
++depends=('gcc-libs' 'libcap-ng' 'bash' 'libudev.so')
++makedepends=('udev')
+ optdepends=('s-nail: to get mail alerts to work')
+-backup=('etc/smartd.conf'
+-        'etc/conf.d/smartd')
++backup=('etc/smartd.conf')
+ validpgpkeys=('0C9577FD2C4CFCB4B9A599640A30812EFF3AEFF5') # Smartmontools Signing Key (through 2025) <smartmontools-support@listi.jpberlin.de>
+ source=("https://downloads.sourceforge.net/sourceforge/${pkgname}/${pkgname}-${pkgver}.tar.gz"{,.asc}
+         'smartd.conf')
+@@ -22,8 +21,6 @@
+   cd "${srcdir}/${pkgname}-${pkgver}"
+ 
+   sed -i "/^os_hostname/c os_hostname=\"'uname -n'\"" configure.ac
+-
+-  sed -i '/^StandardOutput=/d' smartd.service.in
+ 
+   autoreconf -fi
+ }
+@@ -37,9 +34,8 @@
+     --sysconfdir=/etc \
+     --with-drivedbdir \
+     --with-libcap-ng=yes \
+-    --with-libsystemd=yes \
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system \
+-    --with-systemdenvfile=/etc/conf.d/smartd \
++    --with-libsystemd=no \
++    --with-systemdsystemunitdir=no \
+     --with-smartdscriptdir=/usr/share/smartmontools \
+     --with-smartdplugindir=/usr/share/smartmontools/smartd_warning.d
+ 
+@@ -49,11 +45,7 @@
+ package() {
+   cd "${srcdir}/${pkgname}-${pkgver}"
+ 
+-  sed -i -e "s:sysconfig/smartmontools:conf.d/smartd:g" smartd.service
+-  sed -i -e "s:smartd_opts:SMARTD_ARGS:g" smartd.service
+-
+   make DESTDIR="${pkgdir}" install
+ 
+   rm -rf "${pkgdir}"/etc/rc.d
+-  install -D -m0644 "${srcdir}"/smartd.conf "${pkgdir}/etc/conf.d/smartd"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,9 @@
+ pkgname=smartmontools
+-depends=('gcc-libs' 'libcap-ng' 'bash' 'systemd-libs')
+-backup=('etc/smartd.conf'
+-'etc/conf.d/smartd')
++depends=('gcc-libs' 'libcap-ng' 'bash' 'libudev.so')
++backup=('etc/smartd.conf')
+ prepare() {
+ cd "${srcdir}/${pkgname}-${pkgver}"
+ sed -i "/^os_hostname/c os_hostname=\"'uname -n'\"" configure.ac
+-sed -i '/^StandardOutput=/d' smartd.service.in
+ autoreconf -fi
+ }
+ build() {
+@@ -16,9 +14,8 @@
+ --sysconfdir=/etc \
+ --with-drivedbdir \
+ --with-libcap-ng=yes \
+---with-libsystemd=yes \
+---with-systemdsystemunitdir=/usr/lib/systemd/system \
+---with-systemdenvfile=/etc/conf.d/smartd \
++--with-libsystemd=no \
++--with-systemdsystemunitdir=no \
+ --with-smartdscriptdir=/usr/share/smartmontools \
+ --with-smartdplugindir=/usr/share/smartmontools/smartd_warning.d
+ make

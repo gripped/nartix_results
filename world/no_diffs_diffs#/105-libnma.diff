@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,6 +21,7 @@
+   mobile-broadband-provider-info
+   vala
+ )
++options=(debug)
+ _commit=3e324b69d0d74c8693fb58b9ee66efe0bad6cb34  # tags/1.10.6^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/libnma.git#commit=$_commit"
+@@ -41,7 +42,7 @@
+     -D libnma_gtk4=true
+   )
+ 
+-  arch-meson libnma build "${meson_options[@]}"
++  artix-meson libnma build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ pkgbase=libnma
+ pkgname=(libnma-common libnma libnma-gtk4)
+ prepare() {
+ cd libnma
+ }
+@@ -7,7 +8,7 @@
+ local meson_options=(
+ -D libnma_gtk4=true
+ )
+-arch-meson libnma build "${meson_options[@]}"
++artix-meson libnma build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

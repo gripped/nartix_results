@@ -1,0 +1,103 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,22 @@
+ 
+ _bldtype=Release
+-_mozc_commit=ca82d39
++_mozc_commit=d359f60
+ 
+-_abseil_cpp_commit=0f3bb46
++_abseil_cpp_commit=2151058
+ _breakpad_commit=216cea7
+ _gtest_commit=703bd9c
+ _gyp_commit=caa6002
+ _japanese_usage_dictionary_commit=e5b3425
+ _jsoncpp_commit=11086dd
+-_protobuf_commit=fde7cf7
++_protobuf_commit=cc7b1b5
+ 
+-_zipcode_rel=202104
++_zipcode_rel=202110
+ 
+ _pkgbase=mozc
+ pkgname=fcitx-mozc
+ pkgdesc="Fcitx Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)"
+-pkgver=2.26.4360.102.gca82d39
+-pkgrel=2
++pkgver=2.26.4666.102.gd359f60
++pkgrel=1
+ arch=('x86_64')
+ url="https://github.com/google/mozc"
+ license=('custom')
+@@ -34,24 +34,21 @@
+         git+https://github.com/open-source-parsers/jsoncpp.git#commit=${_jsoncpp_commit}
+         git+https://github.com/google/protobuf.git#commit=${_protobuf_commit}
+         git+https://github.com/abseil/abseil-cpp.git#commit=${_abseil_cpp_commit}
++        0001-fix-collections-usage-for-python-3.10.patch
+ 	)
+ sha512sums=('SKIP'
+-            'cadb43138597371d13d21a2766ba38f0940a73bd961a1142f3713f700d1b8e75bdb6ccc0600ea57518ad5bf1931eed329cd11faeb87b191aa460e379ed1fed93'
+-            'b473bda282e12c448ec10522306035b10b566d7ebfb051602e287a7890405db9189ce60189ed47cc130d15a196cd8c7440c6cbb2aaacc7e8cd62b90e50bcb1d9'
++            '606f45d48a9dad0e80a566cab0001910de3c6b2f634ec52c6ef6f44745b55ae8e181b3e3cdf90525a08be1f180eb35900672c90c6ab4f43679a178e863378bbc'
++            'dec6479b42ddc1355cd882d17824cd874d8f103ad7767bac3f490f04551059d65b2806fa9e3f39a50ced2ecfdd37b75c9ed4536d9ad3bcef9e8c5ae1ec10e302'
+             'SKIP'
+             'SKIP'
+             'SKIP'
+             'SKIP'
+             'SKIP'
+             'SKIP'
+-            'SKIP')
++            'SKIP'
++            '166960611a0bd09f68c727b9362588e92498ab90b73717e846ef9c3ae231a780bb36666a79e813b61d529f29291ff264d39bb94fc36399a39d76312955b0811a')
+ validpgpkeys=('2CC8A0609AD2A479C65B6D5C8E8B898CBF2412F9')  # Weng Xuetian
+ 
+-pkgver(){
+-  cd mozc
+-  _bzr_ver=$(sed 's/ //g;$ a echo $MAJOR.$MINOR.$BUILD.102' src/data/version/mozc_version_template.bzl | source /dev/stdin)
+-  printf "%s.g%s" "${_bzr_ver}" "${_mozc_commit}"
+-}
+ 
+ prepare() {
+   cd "$srcdir/mozc"
+@@ -74,11 +71,8 @@
+ 
+   sed "/stdlib=libc++/d;/-lc++/d" -i gyp/common.gypi
+ 
+-  cd third_party/gyp
+-  git cherry-pick -n bc83cdacf5428ab6ddcc92fd0b0fc494cc9a4d4f
+-
+-  cd ../abseil-cpp
+-  git checkout 5bf048b8425cc0a342e4647932de19e25ffd6ad7
++  cd "$srcdir/mozc/src/third_party/gyp"
++  patch -Np1 -i "$srcdir/0001-fix-collections-usage-for-python-3.10.patch"
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ _japanese_usage_dictionary
+ _jsoncpp
+ _protobuf
+-_zipcode_rel=202104
++_zipcode_rel=202110
+ _pkgbase=mozc
+ pkgname=fcitx-mozc
+ depends=('qt5-base' 'fcitx')
+@@ -30,10 +30,8 @@
+ echo "Done."
+ rm unix/fcitx5/fcitx5.gyp
+ sed "/stdlib=libc++/d;/-lc++/d" -i gyp/common.gypi
+-cd third_party/gyp
+-git cherry-pick -n bc83cdacf5428ab6ddcc92fd0b0fc494cc9a4d4f
+-cd ../abseil-cpp
+-git checkout 5bf048b8425cc0a342e4647932de19e25ffd6ad7
++cd "$srcdir/mozc/src/third_party/gyp"
++patch -Np1 -i "$srcdir/0001-fix-collections-usage-for-python-3.10.patch"
+ }
+ build() {
+ CFLAGS="${CFLAGS} -fvisibility=hidden"

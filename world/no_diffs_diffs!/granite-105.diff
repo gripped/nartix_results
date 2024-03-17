@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,12 +28,11 @@
+ 
+ pkgver() {
+   cd granite
+-
+   git describe --tags
+ }
+ 
+ build() {
+-  arch-meson granite build \
++  artix-meson granite build \
+     -D b_pie=false
+   ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ )
+ provides=(libgranite.so)
+ build() {
+-arch-meson granite build \
++artix-meson granite build \
+ -D b_pie=false
+ ninja -C build
+ }

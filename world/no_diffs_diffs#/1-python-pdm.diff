@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -60,6 +60,7 @@
+ 
+ check() {
+   local pytest_options=(
++    --deselect tests/test_utils.py::test_find_python_in_path
+     -vv
+     --deselect tests/test_project.py::test_access_index_with_auth
+   )

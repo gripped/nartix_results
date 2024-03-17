@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=quazip
+ pkgname=(quazip-qt5 quazip-qt6)
+ pkgver=1.4
+-pkgrel=1
++pkgrel=1.2
+ pkgdesc='C++ wrapper for the ZIP/UNZIP C package'
+ url='https://stachenov.github.io/quazip/'
+ license=(LGPL)
+@@ -13,7 +13,9 @@
+ 
+ build() {
+   cmake -B build5 -S $pkgbase-$pkgver \
+-    -DCMAKE_INSTALL_PREFIX=/usr
++    -DCMAKE_INSTALL_PREFIX=/usr \
++    -DQT_DIR=/usr/lib/cmake/Qt5 \
++    -DCMAKE_QT_MAJOR_VERSION=5
+   cmake --build build5
+ 
+   cmake -B build6 -S $pkgbase-$pkgver \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,9 @@
+ pkgname=(quazip-qt5 quazip-qt6)
+ build() {
+ cmake -B build5 -S $pkgbase-$pkgver \
+--DCMAKE_INSTALL_PREFIX=/usr
++-DCMAKE_INSTALL_PREFIX=/usr \
++-DQT_DIR=/usr/lib/cmake/Qt5 \
++-DCMAKE_QT_MAJOR_VERSION=5
+ cmake --build build5
+ cmake -B build6 -S $pkgbase-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \

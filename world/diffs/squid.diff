@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=squid
+-pkgver=6.7
++pkgver=6.8
+ pkgrel=1
+ pkgdesc='Full-featured Web proxy cache server'
+ arch=('x86_64')
+ url='http://www.squid-cache.org'
+ depends=('openssl' 'pam' 'perl' 'libltdl' 'libcap' 'nettle' 'gnutls' 'libnsl' 'libxml2'
+-	'tdb' 'systemd-libs')
+-makedepends=('krb5' 'libldap' 'systemd')
++	'tdb')
++makedepends=('krb5' 'libldap')
+ optdepends=('libldap')
+ license=('GPL')
+ options=('emptydirs')
+@@ -26,10 +26,8 @@
+         "https://github.com/squid-cache/squid/commit/c11ee3d0812e7041f395073cf3b2f368f1caf26d.patch"
+         'squid.pam'
+         'squid.tmpfiles'
+-        'squid.sysusers'
+-        'squid-rotate.service'
+-        'squid-rotate.timer')
+-sha256sums=('e14daa4eae41925d1ae3f08e64439a6aaa3011bdced686628b8de697d5ab8428'
++        'squid.sysusers')
++sha256sums=('11cc5650b51809d99483ccfae24744a2e51cd16199f5ff0c917e84fce695870f'
+             'SKIP'
+             '01f92f6d4dcc1d52f992064bdb007dc44aac91c51556a607a3992964f9f12fb9'
+             '3e1992502ce51497e5ccee50e1a19fdd81f1f7226ed14b73c6207b5389af3b88'
+@@ -38,13 +36,10 @@
+             'c32034504aa744bb3896819dac58a2efcb5dc19d4950355f53512ffa8a55d52b'
+             '11fb388f8679fd6461e0de006810ea608a3686fffda16904b0ed71f412be499c'
+             '495f54e51f6ec1e4dce87090d76718aea1eb37559c4439d876dd39598163062a'
+-            'c903eb86e6968b9d3bd0a9ad3335e8ce76a718b6217251e9dd7e66d5cf1ac94a'
+-            '3a97aa6bf6dcdc427e73bb2f36afdeaaf2bbf7dd2c0bbb7f1a948850198a8b7c'
+-            '8bc77fa1f653a17a4956feac042be9577ba30a8a43480b443fbd67640ae711ee')
++            'c903eb86e6968b9d3bd0a9ad3335e8ce76a718b6217251e9dd7e66d5cf1ac94a')
+ 
+ prepare() {
+   cd "$srcdir/$pkgname-$pkgver"
+-  sed -i 's|/var/run/|/run/|g' tools/systemd/squid.service
+   for p in ${source[@]}; do
+     test "${p:(-5)}" == "patch" && patch -p1 -i ../${p:(-46)} || true
+   done
+@@ -105,12 +100,7 @@
+   install -Dm644 "$srcdir/squid.pam" "$pkgdir/usr/lib/pam.d/squid"
+   install -Dm644 "$srcdir/squid.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/squid.conf"
+   install -Dm644 "$srcdir/squid.sysusers" "$pkgdir/usr/lib/sysusers.d/squid.conf"
+-  install -Dm644 "$pkgname-$pkgver/tools/systemd/squid.service" \
+-    "$pkgdir/usr/lib/systemd/system/squid.service"
+-  install -Dm644 "$srcdir/squid-rotate.service" \
+-    "$pkgdir/usr/lib/systemd/system/squid-rotate.service"
+-  install -Dm644 "$srcdir/squid-rotate.timer" \
+-    "$pkgdir/usr/lib/systemd/system/squid-rotate.timer"
++
+   rm -rf "$pkgdir/run" "$pkgdir"/var/{cache,log,run}
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=squid
+ depends=('openssl' 'pam' 'perl' 'libltdl' 'libcap' 'nettle' 'gnutls' 'libnsl' 'libxml2'
+-'tdb' 'systemd-libs')
++'tdb')
+ options=('emptydirs')
+ backup=('etc/squid/squid.conf'
+ 'etc/squid/cachemgr.conf'
+@@ -8,7 +8,6 @@
+ 'etc/squid/mime.conf')
+ prepare() {
+ cd "$srcdir/$pkgname-$pkgver"
+-sed -i 's|/var/run/|/run/|g' tools/systemd/squid.service
+ for p in ${source[@]}; do
+ test "${p:(-5)}" == "patch" && patch -p1 -i ../${p:(-46)} || true
+ done

@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=gnome-maps
+-pkgver=45.2
++pkgver=45.5
+ pkgrel=1
+ pkgdesc="A simple GNOME 3 maps application"
+ url="https://wiki.gnome.org/Apps/Maps"
+ arch=(x86_64)
+-license=(GPL)
++license=(GPL-2.0-or-later)
+ depends=(
+   dconf
+   hicolor-icon-theme
+@@ -28,13 +28,13 @@
+   yelp-tools
+ )
+ groups=(gnome)
+-_commit=39be1983f1c7cc4e4d02adb9491bafd949d1a635  # tags/v45.2^0
++_commit=6fdafcf605057ecb035ca04def0132c74a947c8f  # tags/v45.5^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgname
+-  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed -r 's/^v//;s/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+ }
+ 
+ prepare() {
+@@ -42,7 +42,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,6 @@
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

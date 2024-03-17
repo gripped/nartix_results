@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,14 +13,12 @@
+ install=unrealircd.install
+ validpgpkeys=('1D2D2B03A0B68ED11D68A24BA7A21B0A108FF4A9')
+ source=(https://www.unrealircd.org/unrealircd4/unrealircd-$pkgver.tar.gz{,.asc}
+-	unrealircd.service
+ 	unrealircd.tmpfiles.d
+ 	unrealircd.sysusers.d
+ 	install.pl
+ 	source-date-epoch.patch)
+ sha256sums=('628892362345bfe27fc40e4c0c775d879c2200f134b8f401b4ca633005928809'
+             'SKIP'
+-            '5bb6016c379e6f040d8c625e3339c096ff66c4450aa024ca5b13ad3dec47c38e'
+             '91b5e1d623b51ffd4734d73e35cead09be596460c41b9440406f92c9e2b4b9b1'
+             '9e595176e63b301476982b1456d6ed065c479ff913b6743417ab8a9efdda0e3a'
+             '43f07093ada8eb5c954f9e2e189610575906c690c0953fec041d4f2d31210d85'
+@@ -67,7 +65,6 @@
+   cp "$pkgdir"/etc/unrealircd/examples/example.conf "$pkgdir"/etc/unrealircd/unrealircd.conf
+   rm -rf "$pkgdir"/tmp
+ 
+-  install -Dm0644 "$srcdir"/unrealircd.service "$pkgdir"/usr/lib/systemd/system/unrealircd.service
+   install -Dm0644 "$srcdir"/unrealircd.tmpfiles.d "$pkgdir"/usr/lib/tmpfiles.d/unrealircd.conf
+   install -Dm0644 "$srcdir"/unrealircd.sysusers.d "$pkgdir"/usr/lib/sysusers.d/unrealircd.conf
+ }

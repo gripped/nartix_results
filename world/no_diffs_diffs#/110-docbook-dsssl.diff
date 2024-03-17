@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ 
+ prepare() {
+   cd "${pkgname}-${pkgver}"
+-  cp "${srcdir}"/docbook-style-dsssl.Makefile Makefile
++  cp ${srcdir}/docbook-style-dsssl.Makefile Makefile
+ }
+ 
+ package(){
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,5 +3,5 @@
+ install=${pkgname}.install
+ prepare() {
+ cd "${pkgname}-${pkgver}"
+-cp "${srcdir}"/docbook-style-dsssl.Makefile Makefile
++cp ${srcdir}/docbook-style-dsssl.Makefile Makefile
+ }

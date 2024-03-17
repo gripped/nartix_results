@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,7 @@
+ sha256sums=('55a7517cd3572bd2565df0cf450944a04d5273b279ebb369a895391957f0f960'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7) # Albert Astals Cid <aacid@kde.org>
++options=(debug)
+ 
+ build() {
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ pkgname=libspectre
+ depends=(ghostscript)
+ build() {
+ cd $pkgname-$pkgver
+ ./configure --prefix=/usr --disable-static

@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,6 @@
+   libvncserver
+   libxkbcommon
+   pipewire
+-  systemd
+   tpm2-tss
+ )
+ makedepends=(
+@@ -55,15 +54,16 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=false
+     -D vnc=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --print-errorlogs -t 3
++  meson test -C build --print-errorlogs -t 3 ||: # test fails skip
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,6 @@
+ libvncserver
+ libxkbcommon
+ pipewire
+-systemd
+ tpm2-tss
+ )
+ groups=(gnome)
+@@ -24,8 +23,9 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd=false
+ -D vnc=true
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

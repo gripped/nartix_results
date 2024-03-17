@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgbase build
++  artix-meson $pkgbase build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ git cherry-pick -n 32affe610606b3a550c2953993a72063eb2b7381
+ }
+ build() {
+-arch-meson $pkgbase build
++artix-meson $pkgbase build
+ meson compile -C build
+ }
+ package_adwaita-icon-theme() {

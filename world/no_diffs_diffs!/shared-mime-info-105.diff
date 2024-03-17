@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ }
+ 
+ build() {
+-  arch-meson ${pkgname} build \
++  artix-meson ${pkgname} build \
+     -D update-mimedb=false \
+     -D xdgmime-path=${srcdir}/xdgmime
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ CFLAGS= make -C xdgmime
+ }
+ build() {
+-arch-meson ${pkgname} build \
++artix-meson ${pkgname} build \
+ -D update-mimedb=false \
+ -D xdgmime-path=${srcdir}/xdgmime
+ meson configure build

@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+          phonon-qt6)
+ pkgdesc='The multimedia framework by KDE'
+ pkgver=4.12.0
+-pkgrel=3
++pkgrel=4
+ arch=(x86_64)
+ url='https://community.kde.org/Phonon'
+ license=(LGPL)
+@@ -27,13 +27,13 @@
+ build() {
+   cmake -B build5 -S $pkgbase-$pkgver \
+     -DCMAKE_BUILD_TYPE=None \
+-    -DPHONON_BUILD_QT6=OFF
++    -DPHONON_BUILD_QT6=OFF \
++    -DPHONON_BUILD_SETTINGS=OFF
+   cmake --build build5
+ 
+   cmake -B build6 -S $pkgbase-$pkgver \
+     -DCMAKE_BUILD_TYPE=None \
+-    -DPHONON_BUILD_QT5=OFF \
+-    -DPHONON_BUILD_SETTINGS=OFF
++    -DPHONON_BUILD_QT5=OFF
+   cmake --build build6
+ }
+ 
+@@ -43,6 +43,7 @@
+   optdepends+=('qt5-tools: Designer plugin')
+ 
+   DESTDIR="$pkgdir" cmake --install build5
++  rm -r "$pkgdir"/usr/share # Conflicts with phonon-qt6
+ }
+ 
+ package_phonon-qt6(){
+@@ -52,5 +53,4 @@
+   optdepends+=('qt6-tools: Designer plugin')
+ 
+   DESTDIR="$pkgdir" cmake --install build6
+-  rm -r "$pkgdir"/usr/share # Conflicts with phonon-qt5
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,12 +7,12 @@
+ build() {
+ cmake -B build5 -S $pkgbase-$pkgver \
+ -DCMAKE_BUILD_TYPE=None \
+--DPHONON_BUILD_QT6=OFF
++-DPHONON_BUILD_QT6=OFF \
++-DPHONON_BUILD_SETTINGS=OFF
+ cmake --build build5
+ cmake -B build6 -S $pkgbase-$pkgver \
+ -DCMAKE_BUILD_TYPE=None \
+--DPHONON_BUILD_QT5=OFF \
+--DPHONON_BUILD_SETTINGS=OFF
++-DPHONON_BUILD_QT5=OFF
+ cmake --build build6
+ }
+ package_phonon-qt5(){
+@@ -20,6 +20,7 @@
+ qt5-base)
+ optdepends+=('qt5-tools: Designer plugin')
+ DESTDIR="$pkgdir" cmake --install build5
++rm -r "$pkgdir"/usr/share # Conflicts with phonon-qt6
+ }
+ package_phonon-qt6(){
+ depends+=(phonon-qt6-backend
+@@ -27,5 +28,4 @@
+ qt6-base)
+ optdepends+=('qt6-tools: Designer plugin')
+ DESTDIR="$pkgdir" cmake --install build6
+-rm -r "$pkgdir"/usr/share # Conflicts with phonon-qt5
+ }

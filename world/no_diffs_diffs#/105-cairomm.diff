@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,7 @@
+     -D maintainer-mode=true
+   )
+ 
+-  arch-meson cairomm build "${meson_options[@]}"
++  artix-meson cairomm build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ local meson_options=(
+ -D maintainer-mode=true
+ )
+-arch-meson cairomm build "${meson_options[@]}"
++artix-meson cairomm build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_cairomm() {

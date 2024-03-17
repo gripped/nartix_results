@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+     -Dlibdir=lib
+   )
+ 
+-  arch-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
++  artix-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ -Dslp=disabled
+ -Dlibdir=lib
+ )
+-arch-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
++artix-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
+ meson compile -C build
+ }

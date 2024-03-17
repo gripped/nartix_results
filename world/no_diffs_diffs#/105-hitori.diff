@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,7 @@
+   yelp-tools
+ )
+ groups=(gnome-extra)
++options=(debug)
+ _commit=53db1397d6a711862023d7a3070e785235a98c87  # tags/44.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/hitori.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -28,7 +29,7 @@
+ }
+ 
+ build() {
+-  arch-meson hitori build
++  artix-meson hitori build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ pkgname=hitori
+ depends=(gtk3)
+ groups=(gnome-extra)
+ prepare() {
+ cd hitori
+ }
+ build() {
+-arch-meson hitori build
++artix-meson hitori build
+ meson compile -C build
+ }

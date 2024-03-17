@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ url='https://github.com/BlackIkeEagle/par2cmdline'
+ license=('GPL2')
+ arch=('x86_64')
++options=(debug)
+ depends=('gcc-libs')
+ source=("https://github.com/Parchive/$pkgname/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz"
+         "https://github.com/Parchive/$pkgname/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz.sig")
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ pkgname=par2cmdline
+ depends=('gcc-libs')
+ build() {
+ cd "$pkgname-$pkgver"

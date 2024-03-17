@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ build() {
+   cd $pkgname-$pkgver
+ 
+-  cmake . \
++  artix-cmake . \
+       -Bbuild \
+       -DCMAKE_INSTALL_PREFIX=/usr
+   make -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=robin-map
+ build() {
+ cd $pkgname-$pkgver
+-cmake . \
++artix-cmake . \
+ -Bbuild \
+ -DCMAKE_INSTALL_PREFIX=/usr
+ make -C build

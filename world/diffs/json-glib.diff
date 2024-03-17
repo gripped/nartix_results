@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+ }
+ 
+ prepare() {
+-  cd json-glib
++  cd $pkgname
+ }
+ 
+ build() {
+@@ -38,7 +38,7 @@
+     -D man=true
+   )
+ 
+-  arch-meson json-glib build "${meson_options[@]}"
++  artix-meson json-glib build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,13 +7,13 @@
+ glib2
+ )
+ prepare() {
+-cd json-glib
++cd $pkgname
+ }
+ build() {
+ local meson_options=(
+ -D man=true
+ )
+-arch-meson json-glib build "${meson_options[@]}"
++artix-meson json-glib build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_json-glib() {

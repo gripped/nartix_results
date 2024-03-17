@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mate-power-manager
+-pkgver=1.26.1
+-pkgrel=1
++pkgver=1.26.0
++pkgrel=1.1
+ pkgdesc="Power management tool for the MATE desktop"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+@@ -11,7 +11,7 @@
+ optdepends=('mate-panel: Set brightness and inhibit power management from the panel')
+ source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
+ groups=('mate-extra')
+-sha256sums=('20cd9d22ed04babf98bb50e71a0ec5d78a8a476287723278f87da76cabfb1042')
++sha256sums=('26b603ccf077366414a41e91ca6aa4c4c227a8e9fb6925a8ec5ca147c4e67b79')
+ 
+ build() {
+     	cd "${pkgname}-${pkgver}"

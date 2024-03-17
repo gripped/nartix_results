@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url="https://github.com/martinpitt/umockdev/"
+ license=('LGPL')
+-depends=('systemd' 'libgudev' 'libpcap')
++depends=('udev' 'libgudev' 'libpcap')
+ makedepends=('meson' 'gobject-introspection' 'gtk-doc' 'vala')
+ source=(https://github.com/martinpitt/umockdev/releases/download/$pkgver/$pkgname-$pkgver.tar.xz)
+ sha256sums=('466ad3e0c715e56f50ea6a965165823d073a84137acb8a1e39b66573648a985f')
+@@ -14,7 +14,7 @@
+ build() {
+   cd $pkgname-$pkgver
+ 
+-  arch-meson -Dgtk_doc=true ../build
++  artix-meson -Dgtk_doc=true ../build
+   ninja -v -C ../build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=umockdev
+-depends=('systemd' 'libgudev' 'libpcap')
++depends=('udev' 'libgudev' 'libpcap')
+ build() {
+ cd $pkgname-$pkgver
+-arch-meson -Dgtk_doc=true ../build
++artix-meson -Dgtk_doc=true ../build
+ ninja -v -C ../build
+ }

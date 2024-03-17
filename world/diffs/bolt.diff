@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url="https://gitlab.freedesktop.org/bolt/bolt"
+ license=('LGPL-2.1-or-later')
+-depends=('polkit' 'systemd')
++depends=('polkit' 'udev')
+ makedepends=('asciidoc' 'meson' 'python-setuptools' 'patch')
+ checkdepends=('umockdev')
+ source=(https://gitlab.freedesktop.org/$pkgname/$pkgname/-/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+@@ -15,7 +15,7 @@
+ build() {
+   cd $pkgname-$pkgver
+ 
+-  arch-meson ../build
++  artix-meson ../build
+   meson compile -v -C ../build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=bolt
+-depends=('polkit' 'systemd')
++depends=('polkit' 'udev')
+ build() {
+ cd $pkgname-$pkgver
+-arch-meson ../build
++artix-meson ../build
+ meson compile -v -C ../build
+ }

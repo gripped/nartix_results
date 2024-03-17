@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=mbedtls2
+-pkgver=2.28.7
++pkgver=2.28.6
+ pkgrel=1
+ pkgdesc='An open source, portable, easy to use, readable and flexible TLS library'
+ arch=(x86_64)
+@@ -19,7 +19,7 @@
+   libmbedx509.so
+ )
+ options=(staticlibs)
+-_tag=53d3363c1f44576efa13f6bd9392dbaf79302415
++_tag=3a91dad9dceb484eea8b41f8941facafc4520021
+ source=(git+https://github.com/ARMmbed/mbedtls.git#tag=${_tag})
+ b2sums=(SKIP)
+ 

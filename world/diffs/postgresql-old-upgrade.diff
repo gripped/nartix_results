@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,14 +2,14 @@
+ pkgname=postgresql-old-upgrade
+ pkgver=15.5
+ _majorver=${pkgver%.*}
+-pkgrel=4
++pkgrel=5
+ pkgdesc='PostgreSQL build for migrating between major versions with pg_upgrade'
+ url='https://www.postgresql.org/'
+ arch=('x86_64')
+ license=('custom:PostgreSQL')
+ depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl' 'pam' 'zlib' 'icu'
+-         'systemd-libs' 'libldap' 'krb5' 'llvm-libs')
+-makedepends=('python' 'perl' 'tcl' 'systemd' 'llvm' 'clang')
++         'libldap' 'krb5' 'llvm-libs')
++makedepends=('python' 'perl' 'tcl' 'llvm' 'clang')
+ optdepends=('python: for PL/Python 3 support'
+             'perl: for PL/Perl support'
+             'tcl: for PL/Tcl support')
+@@ -48,7 +48,7 @@
+     --with-system-tzdata=/usr/share/zoneinfo
+     --with-uuid=e2fs
+     --with-icu
+-    --with-systemd
++    --without-systemd
+     --with-ldap
+     --with-llvm
+     --without-libxslt
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=postgresql-old-upgrade
+ _majorver=${pkgver%.*}
+ depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl' 'pam' 'zlib' 'icu'
+-'systemd-libs' 'libldap' 'krb5' 'llvm-libs')
++'libldap' 'krb5' 'llvm-libs')
+ prepare() {
+ cd postgresql-${pkgver}
+ patch -p1 -F3 < ../libxml2-2.12.patch
+@@ -22,7 +22,7 @@
+ --with-system-tzdata=/usr/share/zoneinfo
+ --with-uuid=e2fs
+ --with-icu
+---with-systemd
++--without-systemd
+ --with-ldap
+ --with-llvm
+ --without-libxslt

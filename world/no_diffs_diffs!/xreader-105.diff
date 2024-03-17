@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ b2sums=('5d91299c082cdac7516b59cb5547387033b65e9e16af5725df64ea513a8fa9ab88a206101985e3222d90539e28a724050248afc4cbc67928eb02eab636f257e2')
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build \
++  artix-meson ${pkgname}-${pkgver} build \
+     --libexecdir=lib/${pkgname} \
+     -Dmathjax-directory=/usr/share/mathjax2 \
+     -Dcomics=true \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ groups=(x-apps)
+ depends=(poppler-glib webkit2gtk-4.1 xapp)
+ build() {
+-arch-meson ${pkgname}-${pkgver} build \
++artix-meson ${pkgname}-${pkgver} build \
+ --libexecdir=lib/${pkgname} \
+ -Dmathjax-directory=/usr/share/mathjax2 \
+ -Dcomics=true \

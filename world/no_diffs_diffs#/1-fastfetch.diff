@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=fastfetch
+-pkgver=2.8.6
++pkgver=2.8.9
+ pkgrel=1
+ pkgdesc="Like Neofetch, but much faster because written in C"
+ arch=('x86_64')
+@@ -49,7 +49,7 @@
+   'libdrm: Displays detection'
+ )
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+-sha256sums=('f21cb61227f9a72382f5ab21fc9ef8bd3b424514ea27bd48036b53e4c6ba33bc')
++sha256sums=('36211738354869a274c8b9c145258b86a9156573586e2fba0c5e8410d5a8c469')
+ 
+ build() {
+ 	cmake -B build -S "${pkgname}-${pkgver}" \

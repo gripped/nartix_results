@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+   export CXX='g++ -m32'
+   export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+ 
+-  arch-meson libpsl-$pkgver build \
++  artix-meson libpsl-$pkgver build \
+     --libdir=/usr/lib32 \
+     -Dbuiltin=true \
+     -Druntime=libidn2 \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ export CC='gcc -m32'
+ export CXX='g++ -m32'
+ export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+-arch-meson libpsl-$pkgver build \
++artix-meson libpsl-$pkgver build \
+ --libdir=/usr/lib32 \
+ -Dbuiltin=true \
+ -Druntime=libidn2 \

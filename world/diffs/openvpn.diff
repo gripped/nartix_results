@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,12 +12,10 @@
+          'lz4'
+          'lzo' 'liblzo2.so'
+          'openssl' 'libcrypto.so' 'libssl.so'
+-         'pkcs11-helper' 'libpkcs11-helper.so'
+-         'systemd-libs' 'libsystemd.so')
++         'pkcs11-helper' 'libpkcs11-helper.so')
+ optdepends=('easy-rsa: easy CA and certificate handling'
+             'pam: authenticate via PAM')
+-makedepends=('git' 'systemd' 'python-docutils')
+-install=openvpn.install
++makedepends=('git' 'python-docutils')
+ validpgpkeys=('F554A3687412CFFEBDEFE0A312F5F7B42F2B01E7'  # OpenVPN - Security Mailing List <security@openvpn.net>
+               'B62E6A2B4E56570B7BDC6BE01D829EFECA562812') # Gert Doering <gert@v6.de>
+ source=("git+https://github.com/OpenVPN/openvpn.git#tag=${_tag}?signed"
+@@ -48,7 +46,7 @@
+     --sbindir=/usr/bin \
+     --enable-pkcs11 \
+     --enable-plugins \
+-    --enable-systemd \
++    --disable-systemd \
+     --enable-x509-alt-username
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,9 +4,7 @@
+ 'lz4'
+ 'lzo' 'liblzo2.so'
+ 'openssl' 'libcrypto.so' 'libssl.so'
+-'pkcs11-helper' 'libpkcs11-helper.so'
+-'systemd-libs' 'libsystemd.so')
+-install=openvpn.install
++'pkcs11-helper' 'libpkcs11-helper.so')
+ prepare() {
+ cd "${srcdir}"/${pkgname}
+ sed -i '/^CONFIGURE_DEFINES=/s/set/env/g' configure.ac
+@@ -21,7 +19,7 @@
+ --sbindir=/usr/bin \
+ --enable-pkcs11 \
+ --enable-plugins \
+---enable-systemd \
++--disable-systemd \
+ --enable-x509-alt-username
+ make
+ }

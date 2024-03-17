@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=(LGPL)
+ depends=(gtk3 startup-notification libxres)
+ makedepends=(gobject-introspection gtk-doc git meson)
++options=(debug)
+ _commit=6147abd0c1fe35b96e1fbb63fa94d23f91fb2934  # tags/43.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/libwnck.git#commit=$_commit"
+         0001-handle-avoid-segfault-in-invalidate_icons.patch
+@@ -39,7 +40,7 @@
+ }
+ 
+ build() {
+-  arch-meson libwnck build -D gtk_doc=true
++  artix-meson libwnck build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ pkgname=libwnck3
+ depends=(gtk3 startup-notification libxres)
+ prepare() {
+ cd libwnck
+ git apply -3 ../0001-handle-avoid-segfault-in-invalidate_icons.patch
+@@ -9,6 +10,6 @@
+ git apply -3 ../0005-xutils-check-if-XRes-is-available-before-using-XResQ.patch
+ }
+ build() {
+-arch-meson libwnck build -D gtk_doc=true
++artix-meson libwnck build -D gtk_doc=true
+ meson compile -C build
+ }

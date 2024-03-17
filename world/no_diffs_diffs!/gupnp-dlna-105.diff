@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=(LGPL)
+ depends=(gst-plugins-base-libs)
+ makedepends=(gobject-introspection gtk-doc vala meson git)
++options=(debug)
+ _commit=cc09daae47ef0e030895edbeba58636c76f53b3d  # tags/gupnp-dlna-0.12.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gupnp-dlna.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -22,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D gtk_doc=true
++  artix-meson $pkgname build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ pkgname=gupnp-dlna
+ depends=(gst-plugins-base-libs)
+ prepare() {
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build -D gtk_doc=true
++artix-meson $pkgname build -D gtk_doc=true
+ meson compile -C build
+ }
+ package() {

@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=kwallet
+ pkgname=${_name}5
+ pkgver=5.115.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Secure and unified container for user passwords'
+ arch=(x86_64)
+ url='https://community.kde.org/Frameworks'
+@@ -23,7 +23,8 @@
+ build() {
+   cmake -B build -S $_name-$pkgver \
+     -DBUILD_TESTING=OFF \
+-    -DBUILD_QCH=ON
++    -DBUILD_QCH=ON \
++    -DBUILD_KWALLET_QUERY=OFF
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ build() {
+ cmake -B build -S $_name-$pkgver \
+ -DBUILD_TESTING=OFF \
+--DBUILD_QCH=ON
++-DBUILD_QCH=ON \
++-DBUILD_KWALLET_QUERY=OFF
+ cmake --build build
+ }

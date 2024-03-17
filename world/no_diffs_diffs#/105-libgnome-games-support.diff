@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+ }
+ 
+ build() {
+-  arch-meson libgnome-games-support build
++  artix-meson libgnome-games-support build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ cd libgnome-games-support
+ }
+ build() {
+-arch-meson libgnome-games-support build
++artix-meson libgnome-games-support build
+ meson compile -C build
+ }

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+     -D install-examples=true
+   )
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ local meson_options=(
+ -D install-examples=true
+ )
+-arch-meson $pkgbase build "${meson_options[@]}"
++artix-meson $pkgbase build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_libpanel-docs() {

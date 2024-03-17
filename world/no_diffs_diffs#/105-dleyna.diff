@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,6 +23,7 @@
+   python-sphinx
+   python-sphinx_rtd_theme
+ )
++options=(debug)
+ _commit=9444b8eb9e48a3985340c7f7e0d3a63d2b352302  # tags/v0.8.2^0
+ source=("git+https://gitlab.gnome.org/World/dLeyna.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -41,7 +42,7 @@
+     -D log_type=glib
+   )
+ 
+-  arch-meson dLeyna build "${meson_options[@]}"
++  artix-meson dLeyna build "${meson_options[@]}"
+   meson compile -C build
+   meson compile -C build docs
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ libsoup3
+ libxml2
+ )
+ prepare() {
+ cd dLeyna
+ }
+@@ -15,7 +16,7 @@
+ local meson_options=(
+ -D log_type=glib
+ )
+-arch-meson dLeyna build "${meson_options[@]}"
++artix-meson dLeyna build "${meson_options[@]}"
+ meson compile -C build
+ meson compile -C build docs
+ }

@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(clutter-gtk librsvg libgnome-games-support libgee)
+ makedepends=(yelp-tools appstream-glib vala git meson)
+ groups=(gnome-extra)
++options=(debug)
+ _commit=f89d9cfe7c4b73ae37cf5ed0a6bdc9060365e55d  # tags/41.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/swell-foop.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -23,7 +24,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ pkgname=swell-foop
+ depends=(clutter-gtk librsvg libgnome-games-support libgee)
+ groups=(gnome-extra)
+ prepare() {
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

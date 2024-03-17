@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -66,7 +66,7 @@
+     -D freetype2:default_library=shared
+   )
+ 
+-  arch-meson ft2demos-$pkgver build "${meson_options[@]}"
++  artix-meson ft2demos-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ local meson_options=(
+ -D freetype2:default_library=shared
+ )
+-arch-meson ft2demos-$pkgver build "${meson_options[@]}"
++artix-meson ft2demos-$pkgver build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

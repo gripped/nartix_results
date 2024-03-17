@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+ }
+ 
+ build() {
+-  arch-meson pavucontrol build
++  artix-meson pavucontrol build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,6 @@
+ cd pavucontrol
+ }
+ build() {
+-arch-meson pavucontrol build
++artix-meson pavucontrol build
+ meson compile -C build
+ }

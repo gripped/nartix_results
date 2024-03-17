@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ depends=('python' 'python-sqlalchemy' 'python-anyjson' 'python-babel'
+          'python-arrow' 'python-intervals' 'python-phonenumbers' 'python-passlib'
+          'python-colour' 'python-dateutil' 'python-furl' 'python-cryptography'
+-         'python-pendulum' 'python-importlib-metadata')
++         'python-pendulum')
+ checkdepends=('python-pytest' 'python-flexmock' 'python-jinja')
+ makedepends=('python' 'python-setuptools' 'python-build' 'python-installer' 'python-wheel')
+ license=('BSD')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=('python' 'python-sqlalchemy' 'python-anyjson' 'python-babel'
+ 'python-arrow' 'python-intervals' 'python-phonenumbers' 'python-passlib'
+ 'python-colour' 'python-dateutil' 'python-furl' 'python-cryptography'
+-'python-pendulum' 'python-importlib-metadata')
++'python-pendulum')
+ build() {
+ cd ${_name}-${pkgver}
+ python -m build --wheel --no-isolation

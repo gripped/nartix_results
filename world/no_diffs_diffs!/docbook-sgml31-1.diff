@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,11 +5,11 @@
+ pkgrel=5
+ pkgdesc="Legacy docbook-sgml"
+ arch=('any')
+-url='https://www.docbook.org/sgml/'
++url='http://www.docbook.org/sgml/'
+ license=('MIT')
+ depends=('sgml-common')
+ install=$pkgname.install
+-source=("https://www.docbook.org/sgml/${pkgver}/docbk31.zip")
++source=("http://www.docbook.org/sgml/${pkgver}/docbk31.zip")
+ sha256sums=('20261d2771b9a052abfa3d8fab1aa62be05791a010281c566f9073bf0e644538')
+ 
+ build() {

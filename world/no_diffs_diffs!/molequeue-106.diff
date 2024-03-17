@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ 
+ build() {
+   cd build
+-  cmake ../$pkgname-$pkgver \
++  artix-cmake ../$pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ }
+ build() {
+ cd build
+-cmake ../$pkgname-$pkgver \
++artix-cmake ../$pkgname-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr
+ make
+ }

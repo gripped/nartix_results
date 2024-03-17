@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url='https://0pointer.de/blog/projects/being-smart.html'
+ license=('LGPL')
+-depends=('glibc' 'systemd-libs')
++depends=('glibc' 'libudev')
+ source=("https://0pointer.de/public/$pkgname-$pkgver.tar.xz"
+         '0001-Dont-test-undefined-bits.patch'
+         '0002-Drop-our-own-many-bad-sectors-heuristic.patch')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=libatasmart
+-depends=('glibc' 'systemd-libs')
++depends=('glibc' 'libudev')
+ prepare() {
+ cd $pkgname-$pkgver
+ patch -Np1 -i ../0001-Dont-test-undefined-bits.patch

@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,17 +1,17 @@
+ 
+ pkgname=iwd
+-pkgver=2.15
++pkgver=2.16
+ pkgrel=1
+ pkgdesc='Internet Wireless Daemon'
+ arch=('x86_64')
+ url='https://git.kernel.org/cgit/network/wireless/iwd.git/'
+ license=('LGPL-2.1-or-later')
+ depends=('glibc' 'readline' 'libreadline.so' 'ell' 'gcc-libs')
+-makedepends=('python-docutils' 'dbus' 'systemd')
++makedepends=('python-docutils' 'dbus' 'udev')
+ optdepends=('qrencode: for displaying QR code after DPP is started')
+ source=(https://www.kernel.org/pub/linux/network/wireless/iwd-${pkgver}.tar{.xz,.sign}
+         0001-use-network-group-for-unprivileged-access.diff)
+-sha256sums=('bac5d236ac0a0dc3c576e8f362d64b7467e9d5c4b94c1a33a4c8ce5d325a82f1'
++sha256sums=('c1a82032e994861e794cf3b5a16d07ae1aa03a6674f716c73408ffeae2a233ba'
+             'SKIP'
+             'd5fb4fb864b7a0632117aa2039df535ab5c1d024ae618a1f09e34dfab8ee0cc7')
+ validpgpkeys=('E932D120BC2AEC444E558F0106CA9F5D1DCF2659')
+@@ -35,6 +35,7 @@
+ 	--enable-wired \
+ 	--enable-ofono \
+ 	--enable-hwsim \
++        --disable-systemd-service \
+ 	--disable-tools
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+ --enable-wired \
+ --enable-ofono \
+ --enable-hwsim \
++--disable-systemd-service \
+ --disable-tools
+ make
+ }

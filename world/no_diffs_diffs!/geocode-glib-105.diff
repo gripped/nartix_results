@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,8 +40,8 @@
+     -D enable-installed-tests=false
+   )
+ 
+-  arch-meson geocode-glib build2 "${meson_options[@]}" -D soup2=true
+-  arch-meson geocode-glib build3 "${meson_options[@]}" -D soup2=false
++  artix-meson geocode-glib build2 "${meson_options[@]}" -D soup2=true
++  artix-meson geocode-glib build3 "${meson_options[@]}" -D soup2=false
+   meson compile -C build2
+   meson compile -C build3
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,8 +11,8 @@
+ local meson_options=(
+ -D enable-installed-tests=false
+ )
+-arch-meson geocode-glib build2 "${meson_options[@]}" -D soup2=true
+-arch-meson geocode-glib build3 "${meson_options[@]}" -D soup2=false
++artix-meson geocode-glib build2 "${meson_options[@]}" -D soup2=true
++artix-meson geocode-glib build3 "${meson_options[@]}" -D soup2=false
+ meson compile -C build2
+ meson compile -C build3
+ }

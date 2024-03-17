@@ -1,0 +1,101 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,10 +8,10 @@
+ arch=(x86_64)
+ url="https://github.com/jackaudio/jack2"
+ license=(GPL2)
+-makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus systemd waf)
++makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus waf)
+ options=(!lto)
+ source=(
+-  git+$url#tag=$_commit?signed
++  _$pkgbase::git+$url#tag=$_commit?signed
+   $pkgbase-1.9.22-db-5.3.patch
+ )
+ validpgpkeys=('62B11043D2F6EB6672D93103CDBAA37ABC74FBA0') # falkTX <falktx@falktx.com>
+@@ -29,9 +29,9 @@
+ }
+ 
+ prepare() {
+-  patch -Np1 -d $pkgbase -i ../$pkgbase-1.9.22-db-5.3.patch
++  patch -Np1 -d _$pkgbase -i ../$pkgbase-1.9.22-db-5.3.patch
+ 
+-  rm -rv $pkgbase/waflib
++  rm -rv _$pkgbase/waflib
+ }
+ 
+ build() {
+@@ -40,12 +40,11 @@
+     --htmldir=/usr/share/doc/$pkgbase/html
+     --autostart=none
+     --doxygen=yes
+-    --systemd-unit
+     --classic
+     --dbus
+   )
+ 
+-  cd $pkgbase
++  cd _$pkgbase
+   export CXXFLAGS="$CXXFLAGS -I/usr/include/db5.3"
+   export LDFLAGS="$LDFLAGS -ldb-5.3"
+   export LINKFLAGS="$LDFLAGS"
+@@ -64,7 +63,6 @@
+     glibc
+     libsamplerate libsamplerate.so
+     opus libopus.so
+-    systemd-libs libsystemd.so
+   )
+   optdepends=(
+     'a2jmidid: for ALSA MIDI to JACK MIDI bridging'
+@@ -77,7 +75,7 @@
+   conflicts=(jack)
+   provides=(jack libjack.so libjacknet.so libjackserver.so)
+ 
+-  cd $pkgbase
++  cd _$pkgbase
+   export PYTHONPATH="$PWD:$PYTHONPATH"
+   waf install --destdir="$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,8 +11,8 @@
+ done
+ }
+ prepare() {
+-patch -Np1 -d $pkgbase -i ../$pkgbase-1.9.22-db-5.3.patch
+-rm -rv $pkgbase/waflib
++patch -Np1 -d _$pkgbase -i ../$pkgbase-1.9.22-db-5.3.patch
++rm -rv _$pkgbase/waflib
+ }
+ build() {
+ local waf_options=(
+@@ -20,11 +20,10 @@
+ --htmldir=/usr/share/doc/$pkgbase/html
+ --autostart=none
+ --doxygen=yes
+---systemd-unit
+ --classic
+ --dbus
+ )
+-cd $pkgbase
++cd _$pkgbase
+ export CXXFLAGS="$CXXFLAGS -I/usr/include/db5.3"
+ export LDFLAGS="$LDFLAGS -ldb-5.3"
+ export LINKFLAGS="$LDFLAGS"
+@@ -42,11 +41,10 @@
+ glibc
+ libsamplerate libsamplerate.so
+ opus libopus.so
+-systemd-libs libsystemd.so
+ )
+ conflicts=(jack)
+ provides=(jack libjack.so libjacknet.so libjackserver.so)
+-cd $pkgbase
++cd _$pkgbase
+ export PYTHONPATH="$PWD:$PYTHONPATH"
+ waf install --destdir="$pkgdir"
+ (

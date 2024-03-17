@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ sha256sums=('b1afe764798f8948bedb95c7ab31bd78529ac5cb481c41f7a7777f264de54bd8')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  artix-meson $pkgname-$pkgver build -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ 'libnma-gtk4' 'libpwquality' 'librest' 'libsecret' 'malcontent' 'pango' 'polkit' 'tecla'
+ 'webkitgtk-6.0')
+ build() {
+-arch-meson $pkgname-$pkgver build
++artix-meson $pkgname-$pkgver build -Dsystemd=false
+ meson compile -C build
+ }

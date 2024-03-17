@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ 
+ build() {
+   CXXFLAGS="${CXXFLAGS} -fcf-protection=none" \
+-  cmake \
++  artix-cmake \
+     -Wno-dev \
+     -S "$_dirname" \
+     -B build \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
+ build() {
+ CXXFLAGS="${CXXFLAGS} -fcf-protection=none" \
+-cmake \
++artix-cmake \
+ -Wno-dev \
+ -S "$_dirname" \
+ -B build \

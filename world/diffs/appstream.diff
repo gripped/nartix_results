@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,6 @@
+          libxmlb
+          libyaml
+          pango
+-         systemd-libs
+          zstd)
+ makedepends=(gi-docgen
+              gobject-introspection
+@@ -47,6 +46,7 @@
+     --libexecdir=lib \
+     -Dqt=true \
+     -Dqt-versions=5,6 \
++    -Dsystemd=false \
+     -Dvapi=true \
+     -Dcompose=true
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,6 @@
+ libxmlb
+ libyaml
+ pango
+-systemd-libs
+ zstd)
+ build() {
+ meson build AppStream-$pkgver \
+@@ -24,6 +23,7 @@
+ --libexecdir=lib \
+ -Dqt=true \
+ -Dqt-versions=5,6 \
++-Dsystemd=false \
+ -Dvapi=true \
+ -Dcompose=true
+ meson compile -C build

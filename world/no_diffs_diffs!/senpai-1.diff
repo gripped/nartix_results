@@ -1,0 +1,14 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,11 +13,7 @@
+ source=("$pkgname::git+$url#commit=$_commit")
+ b2sums=('SKIP')
+ 
+-pkgver() {
+-  cd "$pkgname"
+ 
+-  git describe --tags | sed 's/^v//'
+-}
+ 
+ prepare() {
+   cd "$pkgname"

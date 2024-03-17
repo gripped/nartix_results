@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,6 @@
+   librsvg-2.so
+   libsm
+   sqlite libsqlite3.so
+-  libsystemd.so
+   libtiff.so
+   libtree-sitter.so
+   libwebp.so
+@@ -66,7 +65,7 @@
+     --with-cairo \
+     --disable-build-details \
+     --with-harfbuzz \
+-    --with-libsystemd \
++    --with-libsystemd=no \
+     --with-modules"
+ 
+   export ac_cv_lib_gif_EGifPutExtensionLast=yes
+@@ -137,7 +136,6 @@
+     libdbus-1.so
+     libgpm.so
+     libncursesw.so
+-    libsystemd.so
+     libtree-sitter.so
+     libxml2.so
+     zlib
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,6 @@
+ librsvg-2.so
+ libsm
+ sqlite libsqlite3.so
+-libsystemd.so
+ libtiff.so
+ libtree-sitter.so
+ libwebp.so
+@@ -52,7 +51,7 @@
+ --with-cairo \
+ --disable-build-details \
+ --with-harfbuzz \
+---with-libsystemd \
++--with-libsystemd=no \
+ --with-modules"
+ export ac_cv_lib_gif_EGifPutExtensionLast=yes
+ cd ${pkgname}-${pkgver}
+@@ -99,7 +98,6 @@
+ libdbus-1.so
+ libgpm.so
+ libncursesw.so
+-libsystemd.so
+ libtree-sitter.so
+ libxml2.so
+ zlib

@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+   fmt
+   git
+   spdlog
+-  systemd
++  udev
+ )
+ provides=(
+   libnrf-ble-driver-sd_api_v2.so
+@@ -55,7 +55,7 @@
+     -W no-dev
+   )
+ 
+-  cmake "${cmake_options[@]}"
++  artix-cmake "${cmake_options[@]}"
+   cmake --build build --verbose
+ }
+ 
+@@ -67,7 +67,7 @@
+   depends+=(
+     fmt libfmt.so
+     spdlog libspdlog.so
+-    systemd-libs libudev.so
++    libudev.so
+   )
+ 
+   DESTDIR="$pkgdir" cmake --install build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,14 +25,14 @@
+ -S $pkgname-$pkgver
+ -W no-dev
+ )
+-cmake "${cmake_options[@]}"
++artix-cmake "${cmake_options[@]}"
+ cmake --build build --verbose
+ }
+ package() {
+ depends+=(
+ fmt libfmt.so
+ spdlog libspdlog.so
+-systemd-libs libudev.so
++libudev.so
+ )
+ DESTDIR="$pkgdir" cmake --install build
+ install -vDm 644 $pkgname-$pkgver/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"

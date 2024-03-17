@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   lib32-json-glib
+ )
+ pkgver=1.8.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="JSON library built on GLib (32-bit)"
+ url="https://wiki.gnome.org/Projects/JsonGlib"
+ arch=(x86_64)
+@@ -37,7 +37,7 @@
+     -D introspection=disabled
+   )
+ 
+-  arch-meson json-glib build "${meson_options[@]}"
++  artix-meson json-glib build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ -D gtk_doc=disabled
+ -D introspection=disabled
+ )
+-arch-meson json-glib build "${meson_options[@]}"
++artix-meson json-glib build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_lib32-json-glib() {

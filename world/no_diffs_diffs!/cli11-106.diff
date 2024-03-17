@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cli11
+-pkgver=2.3.2
++pkgver=2.4.1
+ pkgrel=1
+ pkgdesc="Command line parser for C++11"
+ arch=(any)
+@@ -8,10 +8,10 @@
+ license=(BSD)
+ makedepends=(cmake)
+ source=(${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('aac0ab42108131ac5d3344a9db0fdf25c4db652296641955720a4fbe52334e22')
++sha256sums=('73b7ec52261ce8fe980a29df6b4ceb66243bb0b779451dbd3d014cfec9fdbb58')
+ 
+ build() {
+-  cmake -B build -S ${pkgname^^}-${pkgver} \
++  artix-cmake -B build -S ${pkgname^^}-${pkgver} \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCLI11_BUILD_TESTS=OFF \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=cli11
+ build() {
+-cmake -B build -S ${pkgname^^}-${pkgver} \
++artix-cmake -B build -S ${pkgname^^}-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DCLI11_BUILD_TESTS=OFF \

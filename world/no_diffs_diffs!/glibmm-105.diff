@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+ }
+ 
+ build() {
+-  arch-meson glibmm build -D maintainer-mode=true
++  artix-meson glibmm build -D maintainer-mode=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ cd glibmm
+ }
+ build() {
+-arch-meson glibmm build -D maintainer-mode=true
++artix-meson glibmm build -D maintainer-mode=true
+ meson compile -C build
+ }
+ package_glibmm() {

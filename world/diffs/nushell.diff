@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=nushell
+-pkgver=0.90.1
+-_commit=c2992d5d8b8541b64e9fc1440ed2917fc9b757f7
++pkgver=0.88.1
++_commit=fd56768fdcc1acbebcb75745600fc7419f72833d
+ pkgrel=1
+ pkgdesc='A new type of shell'
+ arch=('x86_64')
+@@ -28,7 +28,7 @@
+ prepare() {
+   cd "$pkgname"
+ 
+-  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
++  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ install=nushell.install
+ prepare() {
+ cd "$pkgname"
+-cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
++cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ build() {
+ cd "$pkgname"

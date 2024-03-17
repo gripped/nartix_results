@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,10 +47,6 @@
+   NOCONFIGURE=true ./autogen.sh
+ }
+ 
+-pkgver() {
+-  cd firewalld
+-  git describe --tags | sed 's/^v//'
+-}
+ 
+ build() {
+   cd firewalld
+@@ -60,6 +56,7 @@
+     --sbindir=/usr/bin \
+     --sysconfdir=/etc \
+     --disable-schemas-compile \
++    --disable-systemd \
+     --disable-sysconfig
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,6 +25,7 @@
+ --sbindir=/usr/bin \
+ --sysconfdir=/etc \
+ --disable-schemas-compile \
++--disable-systemd \
+ --disable-sysconfig
+ make
+ }

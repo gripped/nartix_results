@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ validpgpkeys=('57551DE15B968F6341C248F68D8E31AFC32428A6') # Eric Engestrom <eric@engestrom.ch>
+ 
+ build() {
+-  arch-meson glu-$pkgver build \
++  artix-meson glu-$pkgver build \
+     -D default_library=shared
+ 
+   meson configure build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=glu
+ depends=('libgl' 'gcc-libs' 'glibc')
+ build() {
+-arch-meson glu-$pkgver build \
++artix-meson glu-$pkgver build \
+ -D default_library=shared
+ meson configure build
+ meson compile -C build

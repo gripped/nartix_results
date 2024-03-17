@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('MIT')
+ provides=('xdg-desktop-portal-impl')
+-depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih')
++depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih' 'libelogind')
+ makedepends=('meson' 'wayland-protocols' 'wayland' 'scdoc')
+ optdepends=(
+     'slurp: to choose which output to screencast using slurp'
+@@ -21,7 +21,7 @@
+ 
+ build() {
+     cd "${pkgname}-${pkgver}"
+-    arch-meson -Dsd-bus-provider=libsystemd build
++    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ pkgname=xdg-desktop-portal-wlr
+ provides=('xdg-desktop-portal-impl')
+-depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih')
++depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih' 'libelogind')
+ build() {
+ cd "${pkgname}-${pkgver}"
+-arch-meson -Dsd-bus-provider=libsystemd build
++artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
+ ninja -C build
+ }

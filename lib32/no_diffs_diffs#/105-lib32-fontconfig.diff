@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+     -D doc=disabled
+   )
+ 
+-  arch-meson fontconfig build "${meson_options[@]}"
++  artix-meson fontconfig build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ --cross-file lib32
+ -D doc=disabled
+ )
+-arch-meson fontconfig build "${meson_options[@]}"
++artix-meson fontconfig build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package() {

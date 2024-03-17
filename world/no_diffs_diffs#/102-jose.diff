@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=('APACHE')
+ depends=('jansson' 'openssl' 'zlib')
+ makedepends=('git' 'asciidoc' 'meson')
++options=('debug')
+ source=("git+$url.git?signed#commit=$_commit")
+ sha512sums=('SKIP')
+ validpgpkeys=('7CE2CB3D2AF59FE1EA22F551D0D219ED1F7E762C') # Sergio Correia <scorreia@redhat.com>
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ pkgname=jose
+ depends=('jansson' 'openssl' 'zlib')
+ build() {
+ cd "$pkgname"
+ meson --prefix=/usr --buildtype=plain build

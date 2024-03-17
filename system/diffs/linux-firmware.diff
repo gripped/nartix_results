@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,16 +3,16 @@
+ pkgname=(linux-firmware-whence linux-firmware amd-ucode
+          linux-firmware-{nfp,mellanox,marvell,qcom,liquidio,qlogic,bnx2x}
+ )
+-_tag=20231211
+-pkgver=20231211.f2e52a1c
++_tag=20240312
++pkgver=20240312.3b128b60
+ pkgrel=1
+ pkgdesc="Firmware files for Linux"
+-url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
++url="https://gitlab.com/kernel-firmware/linux-firmware"
+ license=('GPL2' 'GPL3' 'custom')
+ arch=('any')
+ makedepends=('git' 'rdfind')
+ options=(!strip)
+-source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git#tag=${_tag}?signed")
++source=("git+$url.git?signed#tag=${_tag}")
+ sha256sums=('SKIP')
+ validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
+ 
+@@ -77,6 +77,8 @@
+ 
+   rm usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw_arm64-v4.1.img.zst
+ 
++  _pick amd-ucode usr/lib/firmware/amd-ucode
++
+   _pick linux-firmware-nfp usr/lib/firmware/netronome
+   _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
+ 
+@@ -100,6 +102,8 @@
+ package_amd-ucode() {
+   pkgdesc="Microcode update image for AMD CPUs"
+   license=(custom)
++
++  mv -v $pkgname/* "$pkgdir"
+ 
+   install -Dt "${pkgdir}/boot" -m644 amd-ucode.img
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,6 +39,7 @@
+ install -Dt "${pkgdir}/usr/share/licenses/${pkgname}" -m644 LICEN*
+ cd "${pkgdir}"
+ rm usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw_arm64-v4.1.img.zst
++_pick amd-ucode usr/lib/firmware/amd-ucode
+ _pick linux-firmware-nfp usr/lib/firmware/netronome
+ _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
+ _pick linux-firmware-mellanox usr/lib/firmware/mellanox

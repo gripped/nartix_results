@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ arch=(x86_64)
+ depends=(gdk-pixbuf2 librsvg libarchive libxml2)
+ makedepends=(git meson)
++options=(debug)
+ _commit=24829a20630ee5a004f00b5fdd3b6830f593503f  # tags/1.7^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-epub-thumbnailer.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -22,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,10 @@
+ pkgname=gnome-epub-thumbnailer
+ depends=(gdk-pixbuf2 librsvg libarchive libxml2)
+ prepare() {
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

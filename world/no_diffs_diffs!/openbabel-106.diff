@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ }
+ 
+ build() {
+-  cmake -B build -S openbabel-$pkgver \
++  artix-cmake -B build -S openbabel-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DRUN_SWIG=ON \
+     -DPYTHON_BINDINGS=ON
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ patch -d openbabel-$pkgver -p1 < c0570bfe.patch # Fix build with GCC 12
+ }
+ build() {
+-cmake -B build -S openbabel-$pkgver \
++artix-cmake -B build -S openbabel-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DRUN_SWIG=ON \
+ -DPYTHON_BINDINGS=ON

@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://www.rrdtool.org"
+ license=('GPL' 'custom')
+ depends=('libxml2' 'pango' 'ttf-dejavu')
+-makedepends=('intltool' 'ruby' 'python-setuptools' 'tcl' 'lua51' 'systemd')
++makedepends=('intltool' 'ruby' 'python-setuptools' 'tcl' 'lua51' 'udev')
+ optdepends=('perl: to use corresponding binding'
+             'tcl: to use corresponding binding'
+             'python: to use corresponding binding'

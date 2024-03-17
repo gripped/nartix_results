@@ -1,0 +1,116 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,11 +5,11 @@
+   gvfs-{smb,afc,gphoto2,goa,mtp,nfs,google}
+ )
+ pkgver=1.52.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Virtual filesystem implementation for GIO"
+ url="https://wiki.gnome.org/Projects/gvfs"
+ arch=(x86_64)
+-license=(LGPL-2.0-only)
++license=(LGPL)
+ depends=(
+   avahi
+   dconf
+@@ -61,7 +61,9 @@
+ }
+ 
+ build() {
+-  arch-meson gvfs build -D man=true
++  artix-meson gvfs build -D man=true \
++    -D systemduserunitdir=no \
++    -D tmpfilesdir=/usr/lib/tmpfiles.d
+   meson compile -C build
+ }
+ 
+@@ -104,28 +106,24 @@
+ 
+     _pick afc \
+       usr/lib/gvfs{-afc-volume-monitor,d-afc} \
+-      usr/lib/systemd/user/gvfs-afc-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
+       usr/share/gvfs/mounts/afc.mount \
+       usr/share/gvfs/remote-volume-monitors/afc.monitor
+ 
+     _pick gphoto2 \
+       usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \
+-      usr/lib/systemd/user/gvfs-gphoto2-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service \
+       usr/share/gvfs/mounts/gphoto2.mount \
+       usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+ 
+     _pick mtp \
+       usr/lib/gvfs{-mtp-volume-monitor,d-mtp} \
+-      usr/lib/systemd/user/gvfs-mtp-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service \
+       usr/share/gvfs/mounts/mtp.mount \
+       usr/share/gvfs/remote-volume-monitors/mtp.monitor
+ 
+     _pick goa \
+       usr/lib/gvfs-goa-volume-monitor \
+-      usr/lib/systemd/user/gvfs-goa-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
+       usr/share/gvfs/remote-volume-monitors/goa.monitor
+ 
+@@ -136,6 +134,8 @@
+     _pick google \
+       usr/lib/gvfsd-google \
+       usr/share/gvfs/mounts/google.mount
++
++    install -d -o root -g 102 -m 750 usr/share/polkit-1/rules.d
+   )
+ 
+   install -Dt "$pkgdir/usr/share/libalpm/hooks" -m644 *.hook
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,9 @@
+ cd gvfs
+ }
+ build() {
+-arch-meson gvfs build -D man=true
++artix-meson gvfs build -D man=true \
++-D systemduserunitdir=no \
++-D tmpfilesdir=/usr/lib/tmpfiles.d
+ meson compile -C build
+ }
+ _pick() {
+@@ -54,25 +56,21 @@
+ usr/share/gvfs/mounts/smb{,-browse}.mount
+ _pick afc \
+ usr/lib/gvfs{-afc-volume-monitor,d-afc} \
+-usr/lib/systemd/user/gvfs-afc-volume-monitor.service \
+ usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
+ usr/share/gvfs/mounts/afc.mount \
+ usr/share/gvfs/remote-volume-monitors/afc.monitor
+ _pick gphoto2 \
+ usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \
+-usr/lib/systemd/user/gvfs-gphoto2-volume-monitor.service \
+ usr/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service \
+ usr/share/gvfs/mounts/gphoto2.mount \
+ usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+ _pick mtp \
+ usr/lib/gvfs{-mtp-volume-monitor,d-mtp} \
+-usr/lib/systemd/user/gvfs-mtp-volume-monitor.service \
+ usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service \
+ usr/share/gvfs/mounts/mtp.mount \
+ usr/share/gvfs/remote-volume-monitors/mtp.monitor
+ _pick goa \
+ usr/lib/gvfs-goa-volume-monitor \
+-usr/lib/systemd/user/gvfs-goa-volume-monitor.service \
+ usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
+ usr/share/gvfs/remote-volume-monitors/goa.monitor
+ _pick nfs \
+@@ -81,6 +79,7 @@
+ _pick google \
+ usr/lib/gvfsd-google \
+ usr/share/gvfs/mounts/google.mount
++install -d -o root -g 102 -m 750 usr/share/polkit-1/rules.d
+ )
+ install -Dt "$pkgdir/usr/share/libalpm/hooks" -m644 *.hook
+ }

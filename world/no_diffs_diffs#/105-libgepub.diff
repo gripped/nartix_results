@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+ }
+ 
+ build() {
+-  arch-meson libgepub build
++  artix-meson libgepub build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+ cd libgepub
+ }
+ build() {
+-arch-meson libgepub build
++artix-meson libgepub build
+ meson compile -C build
+ }

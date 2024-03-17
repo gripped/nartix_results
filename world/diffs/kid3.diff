@@ -1,0 +1,114 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,23 +2,29 @@
+ pkgbase=kid3
+ pkgname=('kid3-common' 'kid3-qt' 'kid3')
+ pkgver=3.9.5
+-pkgrel=1
++pkgrel=3
+ pkgdesc="An MP3, Ogg/Vorbis and FLAC tag editor"
+ arch=('x86_64')
+ url="https://kid3.kde.org/"
+ license=('GPL')
+-depends=('chromaprint' 'flac' 'id3lib' 'kxmlgui5' 'libmp4v2'
+-         'qt5-declarative' 'qt5-multimedia' 'taglib' 'kio5')
+-makedepends=('cmake' 'docbook-xsl' 'extra-cmake-modules' 'kdoctools5' 'python' 'qt5-tools')
++depends=('chromaprint' 'flac' 'id3lib' 'kxmlgui' 'libmp4v2'
++         'qt6-declarative' 'qt6-multimedia' 'taglib' 'kio')
++makedepends=('cmake' 'docbook-xsl' 'extra-cmake-modules' 'kdoctools' 'python' 'qt6-tools' 'clang')
+ changelog=$pkgbase.changelog
+-source=(https://prdownloads.sourceforge.net/$pkgbase/$pkgbase-$pkgver.tar.gz{,.sig})
++source=(https://prdownloads.sourceforge.net/$pkgbase/$pkgbase-$pkgver.tar.gz{,.sig}
++        https://invent.kde.org/multimedia/kid3/-/commit/b3c65a8c.patch)
+ validpgpkeys=('7D09794C2812F62194B081C14CAD34426E354DD2') # Urs Fleisch
+ sha256sums=('d68f6e1d7b794b991b57bf976edb8e22d3457911db654ad1fb9b124cc62057f9'
+-            'SKIP')
++            'SKIP'
++            'd5502567094c6331b5192775e58920ce0d92235f9de3c72d3736af7abd082523')
++
++prepare() {
++  patch -d $pkgbase-$pkgver -p1 < b3c65a8c.patch # Fix rc install dir
++}
+ 
+ build() {
+   export CXXFLAGS+=' -DNDEBUG' # FS#69904
+-  cmake -B build -S ${pkgbase}-${pkgver} \
++  artix-cmake -B build -S ${pkgbase}-${pkgver} \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DWITH_APPS="CLI;Qt;KDE" \
+     -DWITH_MP4V2=ON \
+@@ -30,9 +36,9 @@
+ 
+ package_kid3-common() {
+   pkgdesc="An MP3, Ogg/Vorbis and FLAC tag editor, CLI version and common files"
+-  depends=('chromaprint' 'flac' 'id3lib' 'libmp4v2' 'libvorbis' 'qt5-base' 'taglib')
+-  optdepends=('qt5-declarative: GUI support library'
+-              'qt5-multimedia: GUI support library')
++  depends=('chromaprint' 'flac' 'id3lib' 'libmp4v2' 'libvorbis' 'qt6-base' 'taglib')
++  optdepends=('qt6-declarative: GUI support library'
++              'qt6-multimedia: GUI support library')
+ 
+   make -C build DESTDIR="${pkgdir}" install
+ 
+@@ -42,14 +48,14 @@
+ 
+ package_kid3-qt() {
+   pkgdesc="An MP3, Ogg/Vorbis and FLAC tag editor, Qt version"
+-  depends=("kid3-common=$pkgver" 'qt5-declarative' 'qt5-multimedia')
++  depends=("kid3-common=$pkgver" 'qt6-declarative' 'qt6-multimedia')
+ 
+   make -C build/src/app/qt DESTDIR="${pkgdir}" install
+ }
+ 
+ package_kid3() {
+   pkgdesc="An MP3, Ogg/Vorbis and FLAC tag editor, KDE version"
+-  depends=("kid3-common=$pkgver" 'kxmlgui5' 'qt5-declarative' 'qt5-multimedia' 'kio5')
++  depends=("kid3-common=$pkgver" 'kxmlgui' 'qt6-declarative' 'qt6-multimedia' 'kio')
+ 
+   make -C build/src/app DESTDIR="${pkgdir}" install
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,14 @@
+ pkgbase=kid3
+ pkgname=('kid3-common' 'kid3-qt' 'kid3')
+-depends=('chromaprint' 'flac' 'id3lib' 'kxmlgui5' 'libmp4v2'
+-'qt5-declarative' 'qt5-multimedia' 'taglib' 'kio5')
++depends=('chromaprint' 'flac' 'id3lib' 'kxmlgui' 'libmp4v2'
++'qt6-declarative' 'qt6-multimedia' 'taglib' 'kio')
+ changelog=$pkgbase.changelog
++prepare() {
++patch -d $pkgbase-$pkgver -p1 < b3c65a8c.patch # Fix rc install dir
++}
+ build() {
+ export CXXFLAGS+=' -DNDEBUG' # FS#69904
+-cmake -B build -S ${pkgbase}-${pkgver} \
++artix-cmake -B build -S ${pkgbase}-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DWITH_APPS="CLI;Qt;KDE" \
+ -DWITH_MP4V2=ON \
+@@ -15,17 +18,17 @@
+ cmake --build build
+ }
+ package_kid3-common() {
+-depends=('chromaprint' 'flac' 'id3lib' 'libmp4v2' 'libvorbis' 'qt5-base' 'taglib')
++depends=('chromaprint' 'flac' 'id3lib' 'libmp4v2' 'libvorbis' 'qt6-base' 'taglib')
+ make -C build DESTDIR="${pkgdir}" install
+ rm -r "$pkgdir"/usr/bin/kid3{,-qt} \
+ "$pkgdir"/usr/share/{applications,icons,kxmlgui5,metainfo}
+ }
+ package_kid3-qt() {
+-depends=("kid3-common=$pkgver" 'qt5-declarative' 'qt5-multimedia')
++depends=("kid3-common=$pkgver" 'qt6-declarative' 'qt6-multimedia')
+ make -C build/src/app/qt DESTDIR="${pkgdir}" install
+ }
+ package_kid3() {
+-depends=("kid3-common=$pkgver" 'kxmlgui5' 'qt5-declarative' 'qt5-multimedia' 'kio5')
++depends=("kid3-common=$pkgver" 'kxmlgui' 'qt6-declarative' 'qt6-multimedia' 'kio')
+ make -C build/src/app DESTDIR="${pkgdir}" install
+ rm -r "$pkgdir"/usr/bin/kid3-{cli,qt} \
+ "$pkgdir"/usr/share/applications/org.kde.kid3-qt.desktop \

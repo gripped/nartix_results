@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,6 +38,7 @@
+     --no-make \
+     --qmake=/usr/bin/qmake6 \
+     --api-dir /usr/share/qt6/qsci/api/python \
++    --scripts-dir=/usr/bin \
+     --pep484-pyi
+   cd build
+   make
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ --no-make \
+ --qmake=/usr/bin/qmake6 \
+ --api-dir /usr/share/qt6/qsci/api/python \
++--scripts-dir=/usr/bin \
+ --pep484-pyi
+ cd build
+ make

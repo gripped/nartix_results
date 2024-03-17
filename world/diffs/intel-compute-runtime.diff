@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,7 @@
+ build() {
+   CXXFLAGS+=' -DSANITIZER_BUILD=1'
+   CFLAGS+=' -DSANITIZER_BUILD=1'
++  export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+   cmake -B build -S compute-runtime-${pkgver} \
+     -G 'Unix Makefiles' \
+     -DCMAKE_BUILD_TYPE=Release \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ build() {
+ CXXFLAGS+=' -DSANITIZER_BUILD=1'
+ CFLAGS+=' -DSANITIZER_BUILD=1'
++export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+ cmake -B build -S compute-runtime-${pkgver} \
+ -G 'Unix Makefiles' \
+ -DCMAKE_BUILD_TYPE=Release \

@@ -1,0 +1,148 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=brltty
+ pkgname=(brltty brltty-udev-generic)
+ pkgver=6.6
+-pkgrel=5
++pkgrel=6
+ pkgdesc="Braille display driver for Linux/Unix"
+ arch=(x86_64)
+ url="https://brltty.app"
+@@ -27,6 +27,7 @@
+   java-environment
+   libcap
+   liblouis
++  libelogind
+   libspeechd
+   libxaw
+   ncurses
+@@ -37,25 +38,23 @@
+   python-setuptools
+   speech-dispatcher
+   strip-nondeterminism
+-  systemd-libs
+   tcl
+ )
+-options=(!emptydirs)
++options=(debug !emptydirs)
+ source=(
+   https://brltty.app/archive/$pkgname-$pkgver.tar.bz2
+-  $pkgname-6.2-systemd_sysusers_groups.patch
+-  $pkgname-6.4-x11_autostart.patch
+-)
++  "${pkgname}-6.4-x11_autostart.patch"
++  "0001-brlapi-use-elogind-instead-of-systemd.patch")
+ sha512sums=('a253efe9b53c97e670bb6dc5041a007944b220d88393a6df825ac95f3e0857ce3ba940b67b9723a03e18cdc962092ce937f38bdbf28816eceda168242c3682fd'
+-            '32ba91271e2247b4a330cd213ed75b591268cb99a79c2efd9ae675804faee027c6b2f782768cb2329a65fc914ca2400b2901f35ce1fc2522c6691b343799eb02'
+-            '4871512affefbc178f4204a1b285fc2b5a05ea2d181163195d695b760e9729b3d2d00b5f052abd71379df609c3859d7cbd64128bdefd16e898bbc4368500a9a0')
++            '4871512affefbc178f4204a1b285fc2b5a05ea2d181163195d695b760e9729b3d2d00b5f052abd71379df609c3859d7cbd64128bdefd16e898bbc4368500a9a0'
++            'f0f99df714ceb7b9b1c57cc9c3a1c47b360fc0ff23bb7b183d8e57015d00801bbb4c6ec4395f0b06fd386d7047c9b16e16161d700655fe17cf324aaaf6c3b2d8')
+ b2sums=('28e2593aac014f67f09d4e77c0e63f591c5bc1537ecc292370ac9f51689b722f6f4064cc8e185ba9bf0bbfbd28d3097be15e587ca35ea2018eab9538fdf8da7a'
+-        '036e36d558594bb06af1eb41ff5fc9ae52ccf4bad54556c3f4f81a5e2f31f574039835e5e756455527c327a73d563a3db54a9f32e3478545a2a22c2725aaeee2'
+-        '4ebc07a725ef8362233a83118e93901e78943e8dae08f9358b668ff13ab88a65eb9e87c49d106a8c3d87eb62007b230e199107eacb01f92dc683335076c01309')
++        '4ebc07a725ef8362233a83118e93901e78943e8dae08f9358b668ff13ab88a65eb9e87c49d106a8c3d87eb62007b230e199107eacb01f92dc683335076c01309'
++        '8868137c75067087e8da6ce46ad2d75e30da9e6e2bc3a965d5003af9f3c06358413d706efea9810ba50db90ffc7d8a41ce5aa5a653e49365592e3e6fa77c3a88')
+ 
+ prepare() {
+   cd $pkgbase-$pkgver
+-  patch -Np1 -i ../$pkgbase-6.2-systemd_sysusers_groups.patch
++  patch -Np1 -i ../0001-brlapi-use-elogind-instead-of-systemd.patch
+   patch -Np1 -i ../$pkgbase-6.4-x11_autostart.patch
+   ./autogen
+ }
+@@ -72,7 +71,9 @@
+     --with-writable-directory=/run/brltty
+     --enable-gpm
+     --disable-stripping
++    --without-service-package
+   )
++
+   CFLAGS+=" -ffat-lto-objects"
+ 
+   cd $pkgbase-$pkgver
+@@ -93,11 +94,11 @@
+     icu libicuuc.so
+     libcap
+     liblouis
++    libelogind libelogind.so
+     libspeechd
+     ncurses libncursesw.so
+     pcre2
+     polkit
+-    systemd-libs libsystemd.so
+   )
+   optdepends=(
+     'at-spi2-core: X11/GNOME Apps accessibility'
+@@ -124,11 +125,15 @@
+ 
+   cd $pkgbase-$pkgver
+   make -j1 INSTALL_ROOT="$pkgdir" install
+-  make -j1 INSTALL_ROOT="$pkgdir" install-systemd
+   make -j1 INSTALL_ROOT="$pkgdir" install-udev
+   make -j1 INSTALL_ROOT="$pkgdir" install-dracut
+   make -j1 INSTALL_ROOT="$pkgdir" install-polkit
+   install -vDm 644 Documents/$pkgbase.conf -t "$pkgdir/etc/"
++
++  mkdir -p "$pkgdir/usr/lib/sysusers.d/"
++  mkdir -p "$pkgdir/usr/lib/tmpfiles.d/"
++  install -vDm 644 Autostart/Systemd/sysusers "$pkgdir/usr/lib/sysusers.d/"
++  install -vDm 644 Autostart/Systemd/tmpfiles "$pkgdir/usr/lib/tmpfiles.d/"
+ 
+   mv -v "$pkgdir/usr/lib/udev/rules.d/90-brltty-usb-generic.rules" ../
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ pkgbase=brltty
+ pkgname=(brltty brltty-udev-generic)
+-options=!emptydirs
++options=!emptydirs
+ prepare() {
+ cd $pkgbase-$pkgver
+-patch -Np1 -i ../$pkgbase-6.2-systemd_sysusers_groups.patch
++patch -Np1 -i ../0001-brlapi-use-elogind-instead-of-systemd.patch
+ patch -Np1 -i ../$pkgbase-6.4-x11_autostart.patch
+ ./autogen
+ }
+@@ -19,6 +19,7 @@
+ --with-writable-directory=/run/brltty
+ --enable-gpm
+ --disable-stripping
++--without-service-package
+ )
+ CFLAGS+=" -ffat-lto-objects"
+ cd $pkgbase-$pkgver
+@@ -38,11 +39,11 @@
+ icu libicuuc.so
+ libcap
+ liblouis
++libelogind libelogind.so
+ libspeechd
+ ncurses libncursesw.so
+ pcre2
+ polkit
+-systemd-libs libsystemd.so
+ )
+ provides=(libbrlapi.so)
+ backup=(
+@@ -52,11 +53,14 @@
+ install=brltty.install
+ cd $pkgbase-$pkgver
+ make -j1 INSTALL_ROOT="$pkgdir" install
+-make -j1 INSTALL_ROOT="$pkgdir" install-systemd
+ make -j1 INSTALL_ROOT="$pkgdir" install-udev
+ make -j1 INSTALL_ROOT="$pkgdir" install-dracut
+ make -j1 INSTALL_ROOT="$pkgdir" install-polkit
+ install -vDm 644 Documents/$pkgbase.conf -t "$pkgdir/etc/"
++mkdir -p "$pkgdir/usr/lib/sysusers.d/"
++mkdir -p "$pkgdir/usr/lib/tmpfiles.d/"
++install -vDm 644 Autostart/Systemd/sysusers "$pkgdir/usr/lib/sysusers.d/"
++install -vDm 644 Autostart/Systemd/tmpfiles "$pkgdir/usr/lib/tmpfiles.d/"
+ mv -v "$pkgdir/usr/lib/udev/rules.d/90-brltty-usb-generic.rules" ../
+ }
+ package_brltty-udev-generic() {

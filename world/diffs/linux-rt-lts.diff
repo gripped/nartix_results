@@ -1,0 +1,425 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,62 +1,50 @@
+ 
+ pkgbase=linux-rt-lts
+-pkgver=6.6.15.22.realtime1
+-pkgrel=1
++pkgver=6.1.38.12.realtime1
++pkgrel=4
+ pkgdesc='Linux RT LTS'
+ arch=(x86_64)
+ url="https://gitlab.archlinux.org/archlinux/packaging/upstream/linux-rt-lts/-/commits/v$pkgver"
++license=(GPL2)
+ makedepends=(
+   bc
+-  cpio
+-  gettext
+   git
+   graphviz
+   imagemagick
++  kmod
+   libelf
+   pahole
+-  perl
+   python-sphinx
+-  tar
+   texlive-latexextra
+-  xz
++  xmlto
+ )
+ options=(!strip)
+ source=(
+   git+https://gitlab.archlinux.org/archlinux/packaging/upstream/linux-rt-lts.git/#tag=v$pkgver?signed
+   config
+-  0005-fix-doc-build.patch
+ )
+ sha512sums=('SKIP'
+-            '742af73514e930805fcae2746fde587b9878ea04ec8a3b8c7d7f0b98848b6d37473ffe34140ca09dffc4d8ef25db2b9a9a9534f6a84c6880c582451cb07ec235'
+-            '7a34f36e7cb19a4af93883cd2a06092227d0d49bc3b93b4b5537657c32d89e1fb048b091e21f341797a9704ceff2818d9752495b9bf7ed6efcb62ae47a99c48e')
++            '2d509753b9313af638d43b9d0d3ecd04a9f2ca94d05d8787d497cff4b55afc8ae78254107db1947c00e78868a2efdb5fd8240fed53e44cdc097fd61854315258')
+ b2sums=('SKIP'
+-        'abafd37aa925846fcf8a0e1b5c2d0a40e0d5a77f7180337c879be35b846358001bd7ad9b1e7feb49a66d89a224f047a6b357918b475ee25143885e0fc5ac5e3c'
+-        '55a20d84c052c9de3e36514a36689238f970f7956e679a425efbff6ef668fbc56ea096ff2b000f3629ea8ec32cdbcbafc44acd27e4a9dffaa885237811ddc558')
++        '63b6f1a8e4724cc50c22b1523bf4845b89b094499523d1cf26159f9124a6ef4a56dd099307925f19b2add663edc0570d9a2910c913eec1fc08ceb2d9c9b7fcaa')
+ validpgpkeys=(
+   '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+   '5ED9A48FC54C0A22D1D0804CEBC26CDB5A56DE73'  # Steven Rostedt (Der Hacker) <rostedt@goodmis.org>
++  'C7E7849466FE2358343588377258734B41C31549'  # David Runge <dvzrv@archlinux.org>
+   '991F6E3F0765CF6295888586139B09DA5BF0D338'  # David Runge <dvzrv@archlinux.org>
+ )
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+-
+-_make() {
+-  test -s version
+-  make KERNELRELEASE="$(<version)" "$@"
+-}
+ 
+ prepare() {
+   cd $pkgbase
+ 
+   echo "Setting version..."
++  scripts/setlocalversion --save-scmversion
+   echo "-$pkgrel" > localversion.10-pkgrel
+   echo "${pkgbase#linux}" > localversion.20-pkgname
+-  make defconfig
+-  local kernelrelease=$(make -s kernelrelease)
+-  echo "${kernelrelease/-g*/}" > version
+-  make mrproper
+ 
+   local src
+   for src in "${source[@]}"; do
+@@ -70,152 +58,42 @@
+ 
+   echo "Setting config..."
+   cp ../config .config
+-  _make olddefconfig
+-  diff -u ../config .config || :
++  make olddefconfig
+ 
++  make -s kernelrelease > version
+   echo "Prepared $pkgbase version $(<version)"
+ }
+ 
+ build() {
+   cd $pkgbase
+-  _make all
+-  _make htmldocs
++  make htmldocs all
+ }
+ 
+ _package() {
+   pkgdesc="The $pkgdesc kernel and modules"
+-  license=(
+-    'Apache-2.0 OR MIT'
+-
+-    'BSD-2-Clause OR GPL-2.0-or-later'
+-
+-    BSD-3-Clause
+-    'BSD-3-Clause OR GPL-2.0-only'
+-    'BSD-3-Clause OR GPL-2.0-or-later'
+-    BSD-3-Clause-Clear
+-
+-    GPL-1.0-or-later
+-    'GPL-1.0-or-later OR BSD-3-Clause'
+-
+-    GPL-2.0-only
+-    'GPL-2.0-only OR Apache-2.0'
+-    'GPL-2.0-only OR BSD-2-Clause'
+-    'GPL-2.0-only OR BSD-3-Clause'
+-    'GPL-2.0-only OR CDDL-1.0'
+-    'GPL-2.0-only OR Linux-OpenIB'
+-    'GPL-2.0-only OR MIT'
+-    'GPL-2.0-only OR MPL-1.1'
+-    'GPL-2.0-only OR X11'
+-    'GPL-2.0-only WITH Linux-syscall-note'
+-
+-    GPL-2.0-or-later
+-    'GPL-2.0-or-later OR BSD-2-Clause'
+-    'GPL-2.0-or-later OR BSD-3-Clause'
+-    'GPL-2.0-or-later OR MIT'
+-    'GPL-2.0-or-later OR X11'
+-    'GPL-2.0-or-later WITH GCC-exception-2.0'
+-
+-    ISC
+-
+-    LGPL-2.0-or-later
+-    'LGPL-2.1-only'
+-    'LGPL-2.1-only OR BSD-2-Clause'
+-
+-    LGPL-2.1-or-later
+-
+-    MIT
+-    MPL-1.1
+-    X11
+-    Zlib
+-  )
+-  depends=(
+-    coreutils
+-    initramfs
+-    kmod
+-  )
+-  optdepends=(
+-    'wireless-regdb: to set the correct wireless channels of your country'
+-    'linux-firmware: firmware images needed for some devices'
+-  )
+-  provides=(
+-    KSMBD-MODULE
+-    VIRTUALBOX-GUEST-MODULES
+-    WIREGUARD-MODULE
+-  )
++  depends=(coreutils initramfs kmod)
++  optdepends=('wireless-regdb: to set the correct wireless channels of your country'
++              'linux-firmware: firmware images needed for some devices')
++  provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE KSMBD-MODULE)
+ 
+   cd $pkgbase
+-  local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
++  local kernver="$(<version)"
++  local modulesdir="$pkgdir/usr/lib/modules/$kernver"
+ 
+   echo "Installing boot image..."
+-  install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
++  install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
+ 
+   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
+ 
+   echo "Installing modules..."
+-  ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
++  make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
+     DEPMOD=/doesnt/exist modules_install  # Suppress depmod
+ 
+-  rm "$modulesdir"/build
+-
+-  install -vDm 644 LICENSES/deprecated/{GPL-1.0,ISC,Linux-OpenIB,X11,Zlib} -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm 644 LICENSES/preferred/{BSD,MIT}* -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
++  rm "$modulesdir"/{source,build}
+ }
+ 
+ _package-headers() {
+   pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
+-  license=(
+-    BSD-3-Clause
+-    'BSD-3-Clause OR GPL-2.0-only'
+-
+-    GPL-1.0-or-later
+-    'GPL-1.0-or-later WITH Linux-syscall-note'
+-
+-    GPL-2.0-only
+-    'GPL-2.0-only OR Apache-2.0'
+-    'GPL-2.0-only OR BSD-2-Clause'
+-    'GPL-2.0-only OR BSD-3-Clause'
+-    'GPL-2.0-only OR CDDL-1.0'
+-    'GPL-2.0-only OR Linux-OpenIB'
+-    'GPL-2.0-only OR Linux-OpenIB OR BSD-2-Clause'
+-    'GPL-2.0-only OR MIT'
+-    'GPL-2.0-only OR MPL-1.1'
+-    'GPL-2.0-only OR X11'
+-    'GPL-2.0-only WITH Linux-syscall-note'
+-    '(GPL-2.0-only WITH Linux-syscall-note) AND MIT'
+-    '(GPL-2.0-only WITH Linux-syscall-note) OR BSD-2-Clause'
+-    '(GPL-2.0-only WITH Linux-syscall-note) OR BSD-3-Clause'
+-    '(GPL-2.0-only WITH Linux-syscall-note) OR CDDL-1.0'
+-    '(GPL-2.0-only WITH Linux-syscall-note) OR Linux-OpenIB'
+-    '(GPL-2.0-only WITH Linux-syscall-note) OR MIT'
+-
+-    GPL-2.0-or-later
+-    'GPL-2.0-or-later OR BSD-2-Clause'
+-    'GPL-2.0-or-later OR BSD-3-Clause'
+-    'GPL-2.0-or-later OR MIT'
+-    'GPL-2.0-or-later WITH Linux-syscall-note'
+-    '(GPL-2.0-or-later WITH Linux-syscall-note) OR BSD-3-Clause'
+-    '(GPL-2.0-or-later WITH Linux-syscall-note) OR MIT'
+-    'LGPL-2.0-or-later OR BSD-2-Clause'
+-    'LGPL-2.0-or-later WITH Linux-syscall-note'
+-
+-    ISC
+-
+-    'LGPL-2.0-or-later WITH Linux-syscall-note'
+-    'LGPL-2.0-or-later OR BSD-2-Clause'
+-
+-    LGPL-2.1-only
+-    'LGPL-2.1-only OR BSD-2-Clause'
+-    'LGPL-2.1-only OR MIT'
+-    'LGPL-2.1-only WITH Linux-syscall-note'
+-
+-    LGPL-2.1-or-later
+-    'LGPL-2.1-or-later OR BSD-2-Clause'
+-    'LGPL-2.1-or-later WITH Linux-syscall-note'
+-
+-    MIT
+-    Zlib
+-  )
+   depends=(pahole)
+ 
+   cd $pkgbase
+@@ -289,36 +167,10 @@
+   echo "Adding symlink..."
+   mkdir -p "$pkgdir/usr/src"
+   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
+-
+-  install -vDm 644 LICENSES/deprecated/{ISC,Linux-OpenIB,X11,Zlib} -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm 644 LICENSES/preferred/{BSD*,MIT} -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
+ 
+ _package-docs() {
+   pkgdesc="Documentation for the $pkgdesc kernel"
+-  license=(
+-    BSD-3-Clause
+-
+-    GFDL-1.1-no-invariants-or-later
+-
+-    GPL-2.0-only
+-    'GPL-2.0-only OR BSD-2-Clause'
+-    'GPL-2.0-only OR BSD-3-Clause'
+-    'GPL-2.0-only OR GFDL-1.1-no-invariants-or-later'
+-    'GPL-2.0-only OR GFDL-1.2-no-invariants-only'
+-    'GPL-2.0-only OR MIT'
+-
+-    GPL-2.0-or-later
+-    'GPL-2.0-or-later OR BSD-2-Clause'
+-    'GPL-2.0-or-later OR CC-BY-4.0'
+-    'GPL-2.0-or-later OR MIT'
+-    'GPL-2.0-or-later OR X11'
+-
+-    'LGPL-2.1-only OR BSD-2-Clause'
+-
+-    MIT
+-  )
+ 
+   cd $pkgbase
+   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
+@@ -334,16 +186,9 @@
+   echo "Adding symlink..."
+   mkdir -p "$pkgdir/usr/share/doc"
+   ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
+-
+-  install -vDm 644 LICENSES/deprecated/X11 -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm 644 LICENSES/preferred/{BSD*,MIT} -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
+ 
+-pkgname=(
+-  "$pkgbase"
+-  "$pkgbase-headers"
+-  "$pkgbase-docs"
+-)
++pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
+ for _p in "${pkgname[@]}"; do
+   eval "package_$_p() {
+     $(declare -f "_package${_p#$pkgbase}")
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,18 @@
+ pkgbase=linux-rt-lts
+ options=(!strip)
+ <rostedt@goodmis.org>
++'C7E7849466FE2358343588377258734B41C31549'  # David Runge <dvzrv@archlinux.org>
+ '991F6E3F0765CF6295888586139B09DA5BF0D338'  # David Runge <dvzrv@archlinux.org>
+ )
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+-_make() {
+-test -s version
+-make KERNELRELEASE="$(<version)" "$@"
+-}
+ prepare() {
+ cd $pkgbase
+ echo "Setting version..."
++scripts/setlocalversion --save-scmversion
+ echo "-$pkgrel" > localversion.10-pkgrel
+ echo "${pkgbase#linux}" > localversion.20-pkgname
+-make defconfig
+-local kernelrelease=$(make -s kernelrelease)
+-echo "${kernelrelease/-g*/}" > version
+-make mrproper
+ local src
+ for src in "${source[@]}"; do
+ src="${src%%::*}"
+@@ -30,68 +24,29 @@
+ done
+ echo "Setting config..."
+ cp ../config .config
+-_make olddefconfig
+-diff -u ../config .config || :
++make olddefconfig
++make -s kernelrelease > version
+ echo "Prepared $pkgbase version $(<version)"
+ }
+ build() {
+ cd $pkgbase
+-_make all
+-_make htmldocs
++make htmldocs all
+ }
+ _package() {
+-depends=(
+-coreutils
+-initramfs
+-kmod
+-)
+-provides=(
+-KSMBD-MODULE
+-VIRTUALBOX-GUEST-MODULES
+-WIREGUARD-MODULE
+-)
++depends=(coreutils initramfs kmod)
++provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE KSMBD-MODULE)
+ cd $pkgbase
+-local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
++local kernver="$(<version)"
++local modulesdir="$pkgdir/usr/lib/modules/$kernver"
+ echo "Installing boot image..."
+-install -Dm644 "$(_make -s image_name)" "$modulesdir/vmlinuz"
++install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
+ echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
+ echo "Installing modules..."
+-ZSTD_CLEVEL=19 _make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
++make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
+ DEPMOD=/doesnt/exist modules_install  # Suppress depmod
+-rm "$modulesdir"/build
+-install -vDm 644 LICENSES/deprecated/{GPL-1.0,ISC,Linux-OpenIB,X11,Zlib} -t "$pkgdir/usr/share/licenses/$pkgname/"
+-install -vDm 644 LICENSES/preferred/{BSD,MIT}* -t "$pkgdir/usr/share/licenses/$pkgname/"
+-install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
++rm "$modulesdir"/{source,build}
+ }
+ _package-headers() {
+-AND MIT'
+-'(GPL-2.0-only WITH Linux-syscall-note) OR BSD-2-Clause'
+-'(GPL-2.0-only WITH Linux-syscall-note) OR BSD-3-Clause'
+-'(GPL-2.0-only WITH Linux-syscall-note) OR CDDL-1.0'
+-'(GPL-2.0-only WITH Linux-syscall-note) OR Linux-OpenIB'
+-'(GPL-2.0-only WITH Linux-syscall-note) OR MIT'
+-GPL-2.0-or-later
+-'GPL-2.0-or-later OR BSD-2-Clause'
+-'GPL-2.0-or-later OR BSD-3-Clause'
+-'GPL-2.0-or-later OR MIT'
+-'GPL-2.0-or-later WITH Linux-syscall-note'
+-'(GPL-2.0-or-later WITH Linux-syscall-note) OR BSD-3-Clause'
+-'(GPL-2.0-or-later WITH Linux-syscall-note) OR MIT'
+-'LGPL-2.0-or-later OR BSD-2-Clause'
+-'LGPL-2.0-or-later WITH Linux-syscall-note'
+-ISC
+-'LGPL-2.0-or-later WITH Linux-syscall-note'
+-'LGPL-2.0-or-later OR BSD-2-Clause'
+-LGPL-2.1-only
+-'LGPL-2.1-only OR BSD-2-Clause'
+-'LGPL-2.1-only OR MIT'
+-'LGPL-2.1-only WITH Linux-syscall-note'
+-LGPL-2.1-or-later
+-'LGPL-2.1-or-later OR BSD-2-Clause'
+-'LGPL-2.1-or-later WITH Linux-syscall-note'
+-MIT
+-Zlib
+-)
+ depends=(pahole)
+ cd $pkgbase
+ local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
+@@ -148,15 +103,8 @@
+ echo "Adding symlink..."
+ mkdir -p "$pkgdir/usr/src"
+ ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
+-install -vDm 644 LICENSES/deprecated/{ISC,Linux-OpenIB,X11,Zlib} -t "$pkgdir/usr/share/licenses/$pkgname/"
+-install -vDm 644 LICENSES/preferred/{BSD*,MIT} -t "$pkgdir/usr/share/licenses/$pkgname/"
+-install -vDm 644 LICENSES/exceptions/* -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
+-pkgname=(
+-"$pkgbase"
+-"$pkgbase-headers"
+-"$pkgbase-docs"
+-)
++pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
+ for _p in "${pkgname[@]}"; do
+ eval "package_$_p() {
+ $(declare -f "_package${_p#$pkgbase}")

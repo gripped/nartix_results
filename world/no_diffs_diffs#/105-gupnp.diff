@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,12 +41,12 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson gupnp build "${meson_options[@]}"
++  artix-meson gupnp build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs || :
+ }
+ 
+ _pick() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ local meson_options=(
+ -D gtk_doc=true
+ )
+-arch-meson gupnp build "${meson_options[@]}"
++artix-meson gupnp build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

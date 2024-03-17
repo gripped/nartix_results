@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=catch2
+-_gitcommit=05e10dfccc28c7f973727c54f850237d07d5e10f
+-pkgver=3.5.2
++_gitcommit=8ac8190e494a381072c89f5e161b92a08d98b37b
++pkgver=3.5.3
+ pkgrel=1
+ pkgdesc="Modern, C++-native, header-only, test framework for unit-tests, TDD and BDD"
+ arch=('x86_64')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=catch2
+-_gitcommit=05e10dfccc28c7f973727c54f850237d07d5e10f
++_gitcommit=8ac8190e494a381072c89f5e161b92a08d98b37b
+ conflicts=('catch2-v2')
+ build() {
+ unset CXXFLAGS

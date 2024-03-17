@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ b2sums=('1e2fb92b976196c2e9f36e322656ee40252e4c358a13361a054ead88e6fa3df35a53f1b0ee594df4189a68c1739c4a040558fac533ace095536fcc1dca76954b')
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build \
++  artix-meson ${pkgname}-${pkgver} build \
+     --buildtype=debugoptimized
+   samu -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ conflicts=(xapps)
+ replaces=(xapps)
+ build() {
+-arch-meson ${pkgname}-${pkgver} build \
++artix-meson ${pkgname}-${pkgver} build \
+ --buildtype=debugoptimized
+ samu -C build
+ }

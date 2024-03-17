@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,7 @@
+   CFLAGS="${CFLAGS/-fexceptions/}"
+   CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+ 
+-  arch-meson harfbuzz build "${meson_options[@]}"
++  artix-meson harfbuzz build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ )
+ CFLAGS="${CFLAGS/-fexceptions/}"
+ CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+-arch-meson harfbuzz build "${meson_options[@]}"
++artix-meson harfbuzz build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

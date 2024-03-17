@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,6 +29,7 @@
+   apache
+   php-apache
+ )
++options=(debug)
+ _commit=4a6b9178ded85e269872ffedfb2b18f2754a75d9  # tags/2.74.3^0
+ source=("git+https://gitlab.gnome.org/GNOME/libsoup.git#commit=$_commit"
+         disable-flaky-test.diff)
+@@ -50,7 +51,7 @@
+   local meson_options=(
+     -D gtk_doc=true
+   )
+-  arch-meson libsoup build "${meson_options[@]}"
++  artix-meson libsoup build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ libxml2
+ sqlite
+ )
+ prepare() {
+ cd libsoup
+ git apply -3 ../disable-flaky-test.diff
+@@ -18,7 +19,7 @@
+ local meson_options=(
+ -D gtk_doc=true
+ )
+-arch-meson libsoup build "${meson_options[@]}"
++artix-meson libsoup build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_libsoup() {

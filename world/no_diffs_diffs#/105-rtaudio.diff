@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,7 +43,7 @@
+     -D install_docs=true
+   )
+ 
+-  arch-meson $pkgbase-$pkgver build "${meson_options[@]}"
++  artix-meson $pkgbase-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ -D docs=true
+ -D install_docs=true
+ )
+-arch-meson $pkgbase-$pkgver build "${meson_options[@]}"
++artix-meson $pkgbase-$pkgver build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_rtaudio() {

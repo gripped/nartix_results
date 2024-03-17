@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ license=('PerlArtistic')
+ options=('staticlibs')
+ source=($url/files/$pkgname-$pkgver.tar.gz)
+-sha256sums=('bae94335124efa6fcc2f0a55cabd68c9c90be935bcdb8054d7e5188e0d5da679')
++md5sums=('caf24206354296e8a48771aea1f47fbd')
+ 
+ build() {
+   cd $pkgname-$pkgver

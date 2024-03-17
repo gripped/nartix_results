@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,7 @@
+ makedepends=(intltool gobject-introspection vala gtk-doc autoconf-archive
+              yelp-tools git)
+ checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=73e57b5787ac60776c57032e05a4cc32207f9cf6  # gnome-3-24
+ source=("git+https://gitlab.gnome.org/GNOME/gtksourceview.git#commit=$_commit")
+ sha256sums=('SKIP')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ pkgname=gtksourceview3
+ depends=(gtk3 libxml2)
+ prepare() {
+ cd gtksourceview
+ find . -name Makefile.am -exec sed -i '/@CODE_COVERAGE_RULES@/d' {} +

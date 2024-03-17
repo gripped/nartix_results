@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ build() {
+   cd OpenXR-SDK-Source-release-${pkgver}
+ 
+-  cmake \
++  artix-cmake \
+     -GNinja \
+     -Bbuild \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=('jsoncpp' 'libx11' 'vulkan-icd-loader' 'libglvnd' 'libxrandr' 'libxxf86vm')
+ build() {
+ cd OpenXR-SDK-Source-release-${pkgver}
+-cmake \
++artix-cmake \
+ -GNinja \
+ -Bbuild \
+ -DCMAKE_INSTALL_PREFIX=/usr \

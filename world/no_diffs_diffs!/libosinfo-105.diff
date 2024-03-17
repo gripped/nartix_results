@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+     -D with-pci-ids-path=/usr/share/hwdata/pci.ids
+   )
+ 
+-  arch-meson $pkgname-$pkgver build "${meson_options[@]}"
++  artix-meson $pkgname-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ -D with-usb-ids-path=/usr/share/hwdata/usb.ids
+ -D with-pci-ids-path=/usr/share/hwdata/pci.ids
+ )
+-arch-meson $pkgname-$pkgver build "${meson_options[@]}"
++artix-meson $pkgname-$pkgver build "${meson_options[@]}"
+ meson compile -C build
+ }

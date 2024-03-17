@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ license=('BSD-3-Clause' 'GPL-2.0-or-later')
+ url="https://github.com/iputils/iputils"
+ depends=('libcap' 'libidn2')
+-makedepends=('perl-sgmls' 'git' 'docbook-xsl' 'meson' 'systemd' 'iproute')
++makedepends=('perl-sgmls' 'git' 'docbook-xsl' 'meson' 'iproute')
+ conflicts=('netkit-base' 'arping')
+ replaces=('netkit-base')
+ source=("git+https://github.com/iputils/iputils.git#tag=${pkgver}?signed")
+@@ -19,7 +19,7 @@
+   mkdir -p build
+   cd build
+ 
+-  arch-meson ../$pkgname
++  artix-meson ../$pkgname
+   ninja
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ build() {
+ mkdir -p build
+ cd build
+-arch-meson ../$pkgname
++artix-meson ../$pkgname
+ ninja
+ }

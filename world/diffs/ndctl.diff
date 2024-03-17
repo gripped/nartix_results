@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,9 +6,9 @@
+ arch=('x86_64')
+ url="https://github.com/pmem/ndctl"
+ license=('LGPL')
+-depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'systemd-libs'
++depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'libudev'
+          'util-linux-libs')
+-makedepends=('asciidoctor' 'bash-completion' 'cmake' 'meson' 'systemd' 'xmlto')
++makedepends=('asciidoctor' 'bash-completion' 'cmake' 'meson' 'udev' 'xmlto')
+ source=("https://github.com/pmem/ndctl/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+ sha512sums=('ad217dd45c8d6bbd0089a88c46e1e04813b65e97c8817aaddeca967b20ce948e76c4b7ede5517c45d0b645b5c3dc61aac95cc944e8e5fc60100e45b41f13f2a0')
+ 
+@@ -17,7 +17,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  artix-meson $pkgname-$pkgver build -Dsystemd=disabled
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ pkgname=ndctl
+-depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'systemd-libs'
++depends=('iniparser' 'json-c' 'keyutils' 'kmod' 'libtraceevent' 'libtracefs' 'libudev'
+ 'util-linux-libs')
+ prepare() {
+ sed -i "s|^modprobedatadir =.*|modprobedatadir = '/usr/lib/modprobe.d/'|" $pkgname-$pkgver/contrib/meson.build
+ }
+ build() {
+-arch-meson $pkgname-$pkgver build
++artix-meson $pkgname-$pkgver build -Dsystemd=disabled
+ meson compile -C build
+ }

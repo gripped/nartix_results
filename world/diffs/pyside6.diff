@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,9 +4,9 @@
+          pyside6-tools
+          shiboken6)
+ _qtver=6.6.2
+-_clangver=16.0.6
++_clangver=17.0.6
+ pkgver=${_qtver/-/}
+-pkgrel=1
++pkgrel=2
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(LGPL)
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pyside6-tools
+ shiboken6)
+ _qtver=6.6.2
+-_clangver=16.0.6
++_clangver=17.0.6
+ _pkgfn=pyside-setup-everywhere-src-$_qtver
+ prepare() {
+ patch -d $_pkgfn -p1 < fix-build.patch

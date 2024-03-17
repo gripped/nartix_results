@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+ }
+ 
+ build() {
+-  arch-meson sushi build
++  artix-meson sushi build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,6 @@
+ cd sushi
+ }
+ build() {
+-arch-meson sushi build
++artix-meson sushi build
+ meson compile -C build
+ }

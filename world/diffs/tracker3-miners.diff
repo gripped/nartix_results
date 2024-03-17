@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,10 +55,11 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd_user_services=false
+     -D tests_tap_protocol=true
+   )
+ 
+-  arch-meson tracker-miners build "${meson_options[@]}"
++  artix-meson tracker-miners build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,9 +24,10 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd_user_services=false
+ -D tests_tap_protocol=true
+ )
+-arch-meson tracker-miners build "${meson_options[@]}"
++artix-meson tracker-miners build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package() {

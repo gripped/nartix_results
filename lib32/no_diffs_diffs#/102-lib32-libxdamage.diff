@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ license=('custom')
+ depends=('lib32-libxfixes>=4.0.4' $_pkgbasename)
+ makedepends=('xorgproto')
++options=('debug')
+ source=(${url}/releases/individual/lib/libXdamage-${pkgver}.tar.xz)
+ sha256sums=('52733c1f5262fca35f64e7d5060c6fcd81a880ba8e1e65c9621cf0727afb5d11')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ _pkgbasename=libxdamage
+ pkgname=lib32-$_pkgbasename
+ depends=('lib32-libxfixes>=4.0.4' $_pkgbasename)
+ build() {
+ export CC="gcc -m32"
+ export CXX="g++ -m32"

@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,7 +47,7 @@
+ build() {
+   CFLAGS+=" -ffat-lto-objects"
+ 
+-  arch-meson sysprof build
++  artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
+   meson compile -C build
+ }
+ 
+@@ -78,6 +78,8 @@
+   _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
++
++  rm -r "$pkgdir"/usr/lib/systemd
+ }
+ 
+ package_libsysprof-capture() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ }
+ build() {
+ CFLAGS+=" -ffat-lto-objects"
+-arch-meson sysprof build
++artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
+ meson compile -C build
+ }
+ _pick() {
+@@ -44,6 +44,7 @@
+ _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
+ _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
+ _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
++rm -r "$pkgdir"/usr/lib/systemd
+ }
+ package_libsysprof-capture() {
+ pkgdesc+=" - capture library"

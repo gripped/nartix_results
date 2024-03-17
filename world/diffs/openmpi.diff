@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,8 +21,6 @@
+   libfabric
+   libnl
+   openpmix
+-  openucc
+-  openucx
+   prrte
+   valgrind
+   zlib
+@@ -63,13 +61,11 @@
+     --with-pmix=external
+     --with-prrte=external
+     --with-valgrind
+-    --with-ucc=/usr
+-    --with-ucx=/usr
+     --with-cuda=/opt/cuda
+     --with-cuda-libdir=/usr/lib
+     --with-rocm=/opt/rocm
+-    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm,coll_ucc,scoll_ucc
+-    --with-show-load-errors='^accelerator,rcache,coll/ucc'
++    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm
++    --with-show-load-errors='^accelerator,rcache'
+   )
+   cd $pkgbase-$pkgver
+ 
+@@ -94,7 +90,6 @@
+     libfabric
+     libnl
+     openpmix libpmix.so
+-    openucx
+     prrte libprrte.so
+     zlib
+   )
+@@ -103,7 +98,6 @@
+     'hip-runtime-amd: ROCm support'
+     'gcc-fortran: fortran support'
+     'openssh: for execution on remote hosts via plm_ssh_agent'
+-    'openucc: for UCC accelerated collectives'
+   )
+   provides=(
+     libmpi.so
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,13 +32,11 @@
+ --with-pmix=external
+ --with-prrte=external
+ --with-valgrind
+---with-ucc=/usr
+---with-ucx=/usr
+ --with-cuda=/opt/cuda
+ --with-cuda-libdir=/usr/lib
+ --with-rocm=/opt/rocm
+---enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm,coll_ucc,scoll_ucc
+---with-show-load-errors='^accelerator,rcache,coll/ucc'
++--enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm
++--with-show-load-errors='^accelerator,rcache'
+ )
+ cd $pkgbase-$pkgver
+ export HOSTNAME=buildhost
+@@ -56,7 +54,6 @@
+ libfabric
+ libnl
+ openpmix libpmix.so
+-openucx
+ prrte libprrte.so
+ zlib
+ )

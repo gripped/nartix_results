@@ -1,0 +1,405 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,8 +21,8 @@
+   qemu-vhost-user-gpu
+   qemu-{base,desktop,emulators-full,full}
+ )
+-pkgver=8.2.1
+-pkgrel=2
++pkgver=8.2.2
++pkgrel=1
+ pkgdesc="A generic and open source machine emulator and virtualizer"
+ arch=(x86_64)
+ url="https://www.qemu.org/"
+@@ -62,8 +62,8 @@
+   glusterfs
+   gnutls
+   gtk3
++  keyutils
+   jack
+-  keyutils
+   libaio
+   libbpf
+   libcacard
+@@ -104,7 +104,6 @@
+   snappy
+   spice-protocol
+   spice
+-  systemd
+   usbredir
+   vde2
+   virglrenderer
+@@ -112,6 +111,7 @@
+   zlib
+   zstd
+ )
++options=(debug)
+ source=(
+   https://download.qemu.org/qemu-$pkgver.tar.xz{,.sig}
+   bridge.conf
+@@ -121,7 +121,7 @@
+   99-qemu-guest-agent.rules
+   $pkgbase-8.1.1-static_regression.patch
+ )
+-sha512sums=('e72d3e13339c03e8d371ca060ac700c45af2ca37523cddb6b02dcaf8430d75c8cef194cf496df9816440b281f368457def1126677db757928805d93ceca2f9af'
++sha512sums=('dfd2e1305f9e51bfbc90a7738c69336d5f805481a626ea527b971bdfb6dbe6867e5df7461d48d1c22b79be2dc18e057ea9fa36ef593127cd8b262a5c33f1aa41'
+             'SKIP'
+             '7b412ffa5dcda47b0a4ec9e2c5e5e1d9eaaaf0a087b7ea3ead3e706ba4c9cafb919beadd088a0299b6f7aab753b81a5eafb545b4842ee5f26646d16544dd02a7'
+             '6e838773d63ae0ffdffe2b891bf611d8f5f3c67a9bc4cbbedf8363c150c2c9971c8e44d92270bc581af40eb0ece02192760bcdd6aee229fff55635f3a4825afa'
+@@ -129,7 +129,7 @@
+             'bdf05f99407491e27a03aaf845b7cc8acfa2e0e59968236f10ffc905e5e3d5e8569df496fd71c887da2b5b8d1902494520c7da2d3a8258f7fd93a881dd610c99'
+             '93b905046fcea8a0a89513b9259c222494ab3b91319dde23baebcb40dc17376a56661b159b99785d6e816831974a0f3cbd7b2f7d89e5fc3c258f88f4492f3839'
+             'c7d086a951e9a378434ea95a843a4b01f0eb2ae430135a81365147cf6806a7ba1b49014a3aa66904970853ba84a4a28dbaded7bccb99a0bc3730572c80fb8b12')
+-b2sums=('af5b03fecd41c376daece7598c01755c458d38e045486f33e2915cc7d4856f23b4478a2c1a32a7eb600c4fc675c24df55007840c8a3c6d1fd2d585c74848f02e'
++b2sums=('ceecbae945d9ac1bd85935266c33b91aedbc201796b38a9cb721d778ba8b35f07d01af8c5ce572e68e637ae94455c70ddcf9087579231613f92828bccafa93f4'
+         'SKIP'
+         'b1eca364aa60f130ff5e649f5d004d3fcb75356d3421a4542efdfc410d39b40d9434d15e1dd7bbdbd315cb72b5290d3ea5f77f9c41961a5601cd28ef7bbe72e8'
+         '2102e4a34e11e406e9606c97e026e7b92e887e296a7f77b9cede1b37119d0df33735f3588628167b2b8e32244c196c491bfab623e2caddac9014d445aa2a6d98'
+@@ -274,8 +274,6 @@
+ 
+   sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
+ 
+-  sed -e 's/multi-user.target/sockets.target/g' -i $pkgbase-$pkgver/contrib/systemd/qemu-pr-helper.socket
+-
+   mkdir -vp build
+   mkdir -vp build-static
+ }
+@@ -336,7 +334,7 @@
+     --static
+   )
+ 
+-  (
++ (
+     cd build-static
+     ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
+     ninja
+@@ -350,7 +348,6 @@
+     ../$pkgbase-$pkgver/configure "${configure_options[@]}"
+     ninja
+   )
+-
+ }
+ 
+ package_qemu-common() {
+@@ -696,14 +693,12 @@
+ 
+ package_qemu-guest-agent() {
+   pkgdesc="QEMU Guest Agent"
+-  depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc liburing liburing.so numactl libnuma.so sh systemd-libs libudev.so)
++  depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc liburing liburing.so numactl libnuma.so sh libudev libudev.so)
+   backup=(
+     etc/$pkgbase/$pkgbase-ga.conf
+     etc/$pkgbase/fsfreeze-hook
+   )
+-  install=$pkgname.install
+-  mv -v $pkgname/* "$pkgdir"
+-  install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.service -t "$pkgdir/usr/lib/systemd/system/"
++  mv -v $pkgname/* "$pkgdir"
+   install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
+   install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
+   install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
+@@ -769,14 +764,14 @@
+ 
+ package_qemu-system-aarch64() {
+   pkgdesc="QEMU system emulator for AARCH64"
+-  depends=("${_qemu_system_deps[@]}" edk2-aarch64 systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" edk2-armvirt libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+ 
+ package_qemu-system-alpha() {
+   pkgdesc="QEMU system emulator for Alpha"
+-  depends=("${_qemu_system_deps[@]}" qemu-system-alpha-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-alpha-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -790,7 +785,7 @@
+ 
+ package_qemu-system-arm() {
+   pkgdesc="QEMU system emulator for ARM"
+-  depends=("${_qemu_system_deps[@]}" edk2-arm qemu-system-arm-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-arm-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -818,7 +813,7 @@
+ 
+ package_qemu-system-hppa() {
+   pkgdesc="QEMU system emulator for HPPA"
+-  depends=("${_qemu_system_deps[@]}" qemu-system-hppa-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-hppa-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -832,7 +827,7 @@
+ 
+ package_qemu-system-loongarch64() {
+   pkgdesc="QEMU system emulator for LoongArch64"
+-  depends=("${_qemu_system_deps[@]}" systemd-libs)
++  depends=("${_qemu_system_deps[@]}" libudev)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -860,7 +855,7 @@
+ 
+ package_qemu-system-mips() {
+   pkgdesc="QEMU system emulator for MIPS"
+-  depends=("${_qemu_system_deps[@]}" systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -874,14 +869,14 @@
+ 
+ package_qemu-system-or1k() {
+   pkgdesc="QEMU system emulator for OpenRisc32"
+-  depends=("${_qemu_system_deps[@]}" systemd-libs)
++  depends=("${_qemu_system_deps[@]}" libudev)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+ 
+ package_qemu-system-ppc() {
+   pkgdesc="QEMU system emulator for PPC"
+-  depends=("${_qemu_system_deps[@]}" qemu-system-ppc-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-ppc-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -895,7 +890,7 @@
+ 
+ package_qemu-system-riscv() {
+   pkgdesc="QEMU system emulator for RISC-V"
+-  depends=("${_qemu_system_deps[@]}" qemu-system-riscv-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-riscv-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -916,7 +911,7 @@
+ 
+ package_qemu-system-s390x() {
+   pkgdesc="QEMU system emulator for S390"
+-  depends=("${_qemu_system_deps[@]}" qemu-system-s390x-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-s390x-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -930,14 +925,14 @@
+ 
+ package_qemu-system-sh4() {
+   pkgdesc="QEMU system emulator for SH4"
+-  depends=("${_qemu_system_deps[@]}" systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+ 
+ package_qemu-system-sparc() {
+   pkgdesc="QEMU system emulator for SPARC"
+-  depends=("${_qemu_system_deps[@]}" qemu-system-sparc-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" qemu-system-sparc-firmware=$pkgver-$pkgrel libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -958,7 +953,7 @@
+ 
+ package_qemu-system-x86() {
+   pkgdesc="QEMU system emulator for x86"
+-  depends=("${_qemu_system_deps[@]}" edk2-ovmf qemu-system-x86-firmware=$pkgver-$pkgrel seabios systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" edk2-ovmf qemu-system-x86-firmware=$pkgver-$pkgrel seabios libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -972,7 +967,7 @@
+ 
+ package_qemu-system-xtensa() {
+   pkgdesc="QEMU system emulator for Xtensa"
+-  depends=("${_qemu_system_deps[@]}" systemd-libs libudev.so)
++  depends=("${_qemu_system_deps[@]}" libudev libudev.so)
+   mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+@@ -1007,9 +1002,8 @@
+ 
+ package_qemu-pr-helper() {
+   pkgdesc="QEMU persistent reservation utility"
+-  depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so multipath-tools numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel systemd-libs)
+-  mv -v $pkgname/* "$pkgdir"
+-  install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
++  depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so multipath-tools numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel libudev)
++  mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+ 
+@@ -1126,7 +1120,7 @@
+ 
+ package_qemu-user-static-binfmt() {
+   pkgdesc="Binary format rules for QEMU static user mode emulation"
+-  depends=(qemu-user-static=$pkgver-$pkgrel)
++  depends=(qemu-user=$pkgver-$pkgrel)
+   provides=(qemu-user-binfmt-provider)
+   conflicts=(qemu-user-binfmt-provider)
+   mv -v $pkgname/* "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,6 +20,7 @@
+ qemu-vhost-user-gpu
+ qemu-{base,desktop,emulators-full,full}
+ )
+ _qemu_system_deps=(
+ capstone
+ dtc
+@@ -90,7 +91,6 @@
+ sed -n '1,23p' $pkgbase-$pkgver/tcg/tci/tcg-target.h > tci.LICENSE.MIT.txt
+ sed -n '2,4p' $pkgbase-$pkgver/audio/sndioaudio.c > audio.LICENSE.ISC.txt
+ sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
+-sed -e 's/multi-user.target/sockets.target/g' -i $pkgbase-$pkgver/contrib/systemd/qemu-pr-helper.socket
+ mkdir -vp build
+ mkdir -vp build-static
+ }
+@@ -405,14 +405,12 @@
+ _install_licenses
+ }
+ package_qemu-guest-agent() {
+-depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc liburing liburing.so numactl libnuma.so sh systemd-libs libudev.so)
++depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc liburing liburing.so numactl libnuma.so sh libudev libudev.so)
+ backup=(
+ etc/$pkgbase/$pkgbase-ga.conf
+ etc/$pkgbase/fsfreeze-hook
+ )
+-install=$pkgname.install
+-mv -v $pkgname/* "$pkgdir"
+-install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.service -t "$pkgdir/usr/lib/systemd/system/"
++mv -v $pkgname/* "$pkgdir"
+ install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
+ install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
+ install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
+@@ -460,17 +458,17 @@
+ _install_licenses
+ }
+ package_qemu-system-aarch64() {
+-depends=("${_qemu_system_deps[@]}" edk2-aarch64 systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" edk2-armvirt libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-alpha() {
+-depends=("${_qemu_system_deps[@]}" qemu-system-alpha-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-alpha-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-arm() {
+-depends=("${_qemu_system_deps[@]}" edk2-arm qemu-system-arm-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-arm-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+@@ -485,12 +483,12 @@
+ _install_licenses
+ }
+ package_qemu-system-hppa() {
+-depends=("${_qemu_system_deps[@]}" qemu-system-hppa-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-hppa-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-loongarch64() {
+-depends=("${_qemu_system_deps[@]}" systemd-libs)
++depends=("${_qemu_system_deps[@]}" libudev)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+@@ -505,7 +503,7 @@
+ _install_licenses
+ }
+ package_qemu-system-mips() {
+-depends=("${_qemu_system_deps[@]}" systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+@@ -515,17 +513,17 @@
+ _install_licenses
+ }
+ package_qemu-system-or1k() {
+-depends=("${_qemu_system_deps[@]}" systemd-libs)
++depends=("${_qemu_system_deps[@]}" libudev)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-ppc() {
+-depends=("${_qemu_system_deps[@]}" qemu-system-ppc-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-ppc-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-riscv() {
+-depends=("${_qemu_system_deps[@]}" qemu-system-riscv-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-riscv-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+@@ -535,17 +533,17 @@
+ _install_licenses
+ }
+ package_qemu-system-s390x() {
+-depends=("${_qemu_system_deps[@]}" qemu-system-s390x-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-s390x-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-sh4() {
+-depends=("${_qemu_system_deps[@]}" systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-sparc() {
+-depends=("${_qemu_system_deps[@]}" qemu-system-sparc-firmware=$pkgver-$pkgrel systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" qemu-system-sparc-firmware=$pkgver-$pkgrel libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+@@ -555,12 +553,12 @@
+ _install_licenses
+ }
+ package_qemu-system-x86() {
+-depends=("${_qemu_system_deps[@]}" edk2-ovmf qemu-system-x86-firmware=$pkgver-$pkgrel seabios systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" edk2-ovmf qemu-system-x86-firmware=$pkgver-$pkgrel seabios libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-system-xtensa() {
+-depends=("${_qemu_system_deps[@]}" systemd-libs libudev.so)
++depends=("${_qemu_system_deps[@]}" libudev libudev.so)
+ mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+@@ -585,9 +583,8 @@
+ _install_licenses
+ }
+ package_qemu-pr-helper() {
+-depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so multipath-tools numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel systemd-libs)
+-mv -v $pkgname/* "$pkgdir"
+-install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
++depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so multipath-tools numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel libudev)
++mv -v $pkgname/* "$pkgdir"
+ _install_licenses
+ }
+ package_qemu-tests() {
+@@ -674,7 +671,7 @@
+ _install_licenses
+ }
+ package_qemu-user-static-binfmt() {
+-depends=(qemu-user-static=$pkgver-$pkgrel)
++depends=(qemu-user=$pkgver-$pkgrel)
+ provides=(qemu-user-binfmt-provider)
+ conflicts=(qemu-user-binfmt-provider)
+ mv -v $pkgname/* "$pkgdir"

@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,6 @@
+   libgusb
+   nss
+   pixman
+-  systemd
+ )
+ makedepends=(
+   git
+@@ -47,7 +46,7 @@
+     -D installed-tests=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,6 @@
+ libgusb
+ nss
+ pixman
+-systemd
+ )
+ provides=(libfprint-2.so)
+ groups=(fprint)
+@@ -16,6 +15,6 @@
+ -D drivers=all
+ -D installed-tests=false
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

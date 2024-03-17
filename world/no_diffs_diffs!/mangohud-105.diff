@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+ }
+ 
+ build() {
+-    arch-meson "$_pkgname-v$pkgver" build \
++    artix-meson "$_pkgname-v$pkgver" build \
+         -Dmangoapp=true \
+         -Dmangohudctl=true \
+         -Dmangoapp_layer=true
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ sed -i "s/cmocka_dep = cmocka.get_variable('cmocka_dep')/cmocka_dep = dependency('cmocka')/g" meson.build
+ }
+ build() {
+-arch-meson "$_pkgname-v$pkgver" build \
++artix-meson "$_pkgname-v$pkgver" build \
+ -Dmangoapp=true \
+ -Dmangohudctl=true \
+ -Dmangoapp_layer=true

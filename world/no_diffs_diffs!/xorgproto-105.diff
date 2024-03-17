@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ }
+ 
+ build() {
+-  arch-meson "$pkgname"-$pkgver build
++  artix-meson "$pkgname"-$pkgver build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ mkdir build
+ }
+ build() {
+-arch-meson "$pkgname"-$pkgver build
++artix-meson "$pkgname"-$pkgver build
+ ninja -C build
+ }

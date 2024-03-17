@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,7 @@
+     -D default_library=shared
+   )
+ 
+-  arch-meson freetype-$pkgver build "${meson_options[@]}"
++  artix-meson freetype-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,6 +21,6 @@
+ --cross-file lib32
+ -D default_library=shared
+ )
+-arch-meson freetype-$pkgver build "${meson_options[@]}"
++artix-meson freetype-$pkgver build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -Dgtk=false
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ patch -d $pkgname-$pkgver -Np1 -i ../sidplay-rom-paths.patch
+ }
+ build() {
+-arch-meson $pkgname-$pkgver build \
++artix-meson $pkgname-$pkgver build \
+ -Dgtk=false
+ meson compile -C build
+ }

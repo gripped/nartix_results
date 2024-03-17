@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,24 +6,14 @@
+ url="https://freedesktop.org/software/pulseaudio/paprefs/"
+ license=(GPL2)
+ arch=(x86_64)
+-depends=(gtkmm3 libsigc++ 'pulseaudio>=12.0')
++depends=(gtkmm3 libsigc++ pulseaudio)
+ makedepends=(meson lynx tidy git)
+-conflicts=(pipewire-pulse)
+ _commit=d70f061e1703c53aa327d3e836222e47dde86204  # tags/v1.2^0
+-source=("git+https://gitlab.freedesktop.org/pulseaudio/paprefs.git#commit=$_commit")
+-sha512sums=('SKIP')
+-
+-pkgver() {
+-  cd paprefs
+-  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
+-}
+-
+-prepare() {
+-  cd paprefs
+-}
++source=("https://gitlab.freedesktop.org/pulseaudio/paprefs/-/archive/v${pkgver}/paprefs-v${pkgver}.tar.gz")
++sha512sums=('3b711cf51bf6f7036dd8a7bcee68edb253d8ed8ad8d6b1bacc980bb1bcfa747cf67ecf44b55861ab277d12b0860c608ccfe9c5b0350bc5aa8364e0efa6dd0c68')
+ 
+ build() {
+-  arch-meson paprefs build -D lynx=true
++  artix-meson paprefs-v${pkgver} build -D lynx=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,6 @@
+ pkgname=paprefs
+-depends=(gtkmm3 libsigc++ 'pulseaudio>=12.0')
+-conflicts=(pipewire-pulse)
+-prepare() {
+-cd paprefs
+-}
++depends=(gtkmm3 libsigc++ pulseaudio)
+ build() {
+-arch-meson paprefs build -D lynx=true
++artix-meson paprefs-v${pkgver} build -D lynx=true
+ meson compile -C build
+ }

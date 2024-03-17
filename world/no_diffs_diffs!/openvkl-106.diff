@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=openvkl
+-pkgver=2.0.0
++pkgver=2.0.1
+ pkgrel=1
+ pkgdesc="Intel® Open Volume Kernel Library"
+ arch=(x86_64)
+@@ -11,10 +11,10 @@
+ source=(
+   https://github.com/openvkl/openvkl/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz
+ )
+-sha256sums=('469c3fba254c4fcdd84f8a9763d2e1aaa496dc123b5a9d467cc0a561e284c4e6')
++sha256sums=('0c7faa9582a93e93767afdb15a6c9c9ba154af7ee83a6b553705797be5f8af62')
+ 
+ build() {
+-  cmake -B build -S ${pkgname}-${pkgver} \
++  artix-cmake -B build -S ${pkgname}-${pkgver} \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_EXAMPLES=OFF \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=openvkl
+ depends=(embree gcc-libs glibc onetbb openvdb rkcommon)
+ build() {
+-cmake -B build -S ${pkgname}-${pkgver} \
++artix-cmake -B build -S ${pkgname}-${pkgver} \
+ -DCMAKE_BUILD_TYPE=None \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_EXAMPLES=OFF \

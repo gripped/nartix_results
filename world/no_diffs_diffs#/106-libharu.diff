@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha512sums=('422210b09f89643cb25808559aeea109db5cce8a71c779d51f87222cdd50434f4f0f92322ebe429fca8f85ad73592bcabb14c3e36cd0bea19b6ec4c729220522')
+ 
+ build() {
+-  cmake -B build -S ${pkgname}-${pkgver} \
++  artix-cmake -B build -S ${pkgname}-${pkgver} \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DLIBHPDF_STATIC=OFF
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=libharu
+ depends=('libpng' 'zlib')
+ build() {
+-cmake -B build -S ${pkgname}-${pkgver} \
++artix-cmake -B build -S ${pkgname}-${pkgver} \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DLIBHPDF_STATIC=OFF

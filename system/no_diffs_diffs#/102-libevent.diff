@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ license=(BSD)
+ depends=(openssl)
+ makedepends=(cmake ninja python zlib doxygen)
++options=(debug)
+ source=(
+   https://github.com/libevent/libevent/releases/download/release-$pkgver-stable/libevent-$pkgver-stable.tar.gz{,.asc}
+   EVENT__SIZEOF_TIME_T.patch
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgbase=libevent
+ pkgname=(libevent libevent-docs)
+ depends=(openssl)
+ prepare() {
+ cd libevent-$pkgver-stable
+ patch -Np1 -i ../EVENT__SIZEOF_TIME_T.patch

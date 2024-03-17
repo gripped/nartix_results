@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,19 +10,19 @@
+ depends=('perl-text-charwidth')
+ options=('!emptydirs')
+ source=("https://search.cpan.org/CPAN/authors/id/K/KU/KUBOTA/${_realname}-${pkgver}.tar.gz")
+-sha256sums=('4bd29a17f0c2c792d12c1005b3c276f2ab0fae39c00859ae1741d7941846a488')
++md5sums=('0799c16a00926e6c18d400c2e2861d5f')
+ 
+ build() {
+-  cd ${_realname}-${pkgver}
++  cd ${srcdir}/${_realname}-${pkgver}
+   perl Makefile.PL INSTALLDIRS=vendor
+   make
+   make test
+ }
+ 
+ package() {
+-  cd  ${_realname}-${pkgver}
+-  make DESTDIR="${pkgdir}" install
++  cd  ${srcdir}/${_realname}-${pkgver}
++  make DESTDIR=${pkgdir} install
+ 
+-  find "${pkgdir}" -name '.packlist' -delete
+-  find "${pkgdir}" -name 'perllocal.pod' -delete
++  find ${pkgdir} -name '.packlist' -delete
++  find ${pkgdir} -name 'perllocal.pod' -delete
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ depends=('perl-text-charwidth')
+ options=('!emptydirs')
+ build() {
+-cd ${_realname}-${pkgver}
++cd ${srcdir}/${_realname}-${pkgver}
+ perl Makefile.PL INSTALLDIRS=vendor
+ make
+ make test

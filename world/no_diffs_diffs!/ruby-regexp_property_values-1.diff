@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,6 @@
+ license=(MIT)
+ depends=(ruby)
+ makedepends=(git)
+-checkdepends=(ruby-character_set ruby-rake ruby-rake-compiler ruby-range_compressor ruby-rspec)
+ options=(!emptydirs)
+ source=(git+https://github.com/jaynetics/regexp_property_values.git#commit=$_commit)
+ sha256sums=('SKIP')
+@@ -50,7 +49,6 @@
+ check() {
+   local _gemdir="$(gem env gemdir)"
+   cd regexp_property_values
+-  GEM_HOME="tmp_install/$_gemdir" rspec
+ }
+ 
+ package() {

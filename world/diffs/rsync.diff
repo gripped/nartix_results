@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,8 @@
+          'zlib' 'zstd')
+ optdepends=('python: for rrsync')
+ makedepends=('git' 'python-commonmark')
+-backup=('etc/rsyncd.conf')
++backup=('etc/rsyncd.conf'
++        'etc/xinetd.d/rsync')
+ validpgpkeys=('0048C8B026D4C96F0E589C2F6C859FB14B96A8C5') # Wayne Davison <wayned@users.sourceforge.net>
+ source=("git+https://github.com/WayneD/rsync#tag=${_tag}?signed"
+         'rsyncd.conf')
+@@ -47,7 +48,6 @@
+ 
+   ./configure \
+     --prefix=/usr \
+-    --enable-ipv6 \
+     --disable-debug \
+     --with-rrsync \
+     --with-included-popt=no \
+@@ -58,11 +58,6 @@
+ check() {
+   cd ${pkgname}
+ 
+-  if rsync -V | grep -q 'no IPv6'; then
+-    echo 'Built without IPv6 support!' >&2
+-    exit 1
+-  fi
+-
+   make test
+ }
+ 
+@@ -71,7 +66,5 @@
+ 
+   make DESTDIR="$pkgdir" install
+   install -Dm0644 ../rsyncd.conf "$pkgdir/etc/rsyncd.conf"
+-  install -Dm0644 packaging/systemd/rsync.service "$pkgdir/usr/lib/systemd/system/rsyncd.service"
+-  install -Dm0644 packaging/systemd/rsync.socket "$pkgdir/usr/lib/systemd/system/rsyncd.socket"
+-  install -Dm0644 packaging/systemd/rsync@.service "$pkgdir/usr/lib/systemd/system/rsyncd@.service"
++  install -Dm0644 packaging/lsb/rsync.xinetd "$pkgdir/etc/xinetd.d/rsync"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ pkgname=rsync
+ depends=('acl' 'libacl.so' 'lz4' 'openssl' 'popt' 'xxhash' 'libxxhash.so'
+ 'zlib' 'zstd')
+-backup=('etc/rsyncd.conf')
++backup=('etc/rsyncd.conf'
++'etc/xinetd.d/rsync')
+ _backports=(
+ )
+ _reverts=(
+@@ -26,7 +27,6 @@
+ cd ${pkgname}
+ ./configure \
+ --prefix=/usr \
+---enable-ipv6 \
+ --disable-debug \
+ --with-rrsync \
+ --with-included-popt=no \

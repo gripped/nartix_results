@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+ }
+ 
+ build() {
+-  arch-meson meld build
++  artix-meson meld build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,6 @@
+ cd meld
+ }
+ build() {
+-arch-meson meld build
++artix-meson meld build
+ meson compile -C build
+ }

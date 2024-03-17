@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D enable_gtk_doc=true
++  artix-meson $pkgname build -D enable_gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build -D enable_gtk_doc=true
++artix-meson $pkgname build -D enable_gtk_doc=true
+ meson compile -C build
+ }
+ package_jsonrpc-glib-docs() {

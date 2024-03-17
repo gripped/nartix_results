@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ 
+ build() {
+   cd wtype-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('libxkbcommon' 'wayland')
+ build() {
+ cd wtype-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

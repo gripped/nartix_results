@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ validpgpkeys=('DA98F25C0871C49A59EAFF2C4DE8FF2A63C7CC90')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D doc=true
++  artix-meson $pkgname-$pkgver build -D doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=(dbus-python dbus-python-docs)
+ depends=('dbus' 'glib2' 'glibc' 'python')
+ build() {
+-arch-meson $pkgname-$pkgver build -D doc=true
++artix-meson $pkgname-$pkgver build -D doc=true
+ meson compile -C build
+ }
+ package_dbus-python-docs() {

@@ -1,0 +1,103 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+   gnome-shell
+   libcanberra
+   libxdmcp
+-  systemd
++  elogind
+   upower
+   xorg-server
+   xorg-xhost
+@@ -34,9 +34,11 @@
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gdm.git#commit=$_commit"
+   0001-Xsession-Don-t-start-ssh-agent-by-default.patch
++  0002-meson-allow-building-with-elogind.patch
+ )
+ b2sums=('SKIP'
+-        'f7e868fdd7cc121433de1572583eb728f4d186cd4f52c6d6c8f2ccf4a3cf781144ff71f704f13571ddb97a1ff4ec55cfa3df25d38737ad19da21e84ddc2d3ee4')
++        'f7e868fdd7cc121433de1572583eb728f4d186cd4f52c6d6c8f2ccf4a3cf781144ff71f704f13571ddb97a1ff4ec55cfa3df25d38737ad19da21e84ddc2d3ee4'
++        '8732ca7741bc65931c3953102e036399520840064c04a7198c766a5399c917fe89c24ad4360c93efa08db418587aebff1dc3e5c6c8979023f4f4e6d8735d13ab')
+ 
+ pkgver() {
+   cd gdm
+@@ -47,6 +49,8 @@
+   cd gdm
+ 
+   git apply -3 ../0001-Xsession-Don-t-start-ssh-agent-by-default.patch
++
++  git apply -3 ../0002-meson-allow-building-with-elogind.patch
+ }
+ 
+ build() {
+@@ -58,9 +62,13 @@
+     -D ipv6=true
+     -D run-dir=/run/gdm
+     -D selinux=disabled
++    -D logind-provider=elogind
++    -D systemd-journal=false
++    -D systemdsystemunitdir=no
++    -D systemduserunitdir=no
+   )
+ 
+-  arch-meson gdm build "${meson_options[@]}"
++  artix-meson gdm build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -125,7 +133,7 @@
+ 
+ package_libgdm() {
+   pkgdesc+=" - support library"
+-  depends=(libsystemd.so libg{lib,object,io}-2.0.so)
++  depends=(libelogind.so libg{lib,object,io}-2.0.so)
+   provides=(libgdm.so)
+ 
+   mv libgdm/* "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ gnome-shell
+ libcanberra
+ libxdmcp
+-systemd
++elogind
+ upower
+ xorg-server
+ xorg-xhost
+@@ -17,6 +17,7 @@
+ prepare() {
+ cd gdm
+ git apply -3 ../0001-Xsession-Don-t-start-ssh-agent-by-default.patch
++git apply -3 ../0002-meson-allow-building-with-elogind.patch
+ }
+ build() {
+ local meson_options=(
+@@ -27,8 +28,12 @@
+ -D ipv6=true
+ -D run-dir=/run/gdm
+ -D selinux=disabled
++-D logind-provider=elogind
++-D systemd-journal=false
++-D systemdsystemunitdir=no
++-D systemduserunitdir=no
+ )
+-arch-meson gdm build "${meson_options[@]}"
++artix-meson gdm build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {
+@@ -79,7 +84,7 @@
+ }
+ package_libgdm() {
+ pkgdesc+=" - support library"
+-depends=(libsystemd.so libg{lib,object,io}-2.0.so)
++depends=(libelogind.so libg{lib,object,io}-2.0.so)
+ provides=(libgdm.so)
+ mv libgdm/* "$pkgdir"
+ }

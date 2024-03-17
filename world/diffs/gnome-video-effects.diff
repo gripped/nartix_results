@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+   meson
+ )
+ _commit=e4ae5aa3ee136333c6481469ed1d8869307ef5e4  # tags/0.6.0^0
++groups=(gnome)
+ source=("git+$url.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -30,7 +31,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,10 +4,11 @@
+ gst-plugins-bad
+ gst-plugins-good
+ )
++groups=(gnome)
+ prepare() {
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

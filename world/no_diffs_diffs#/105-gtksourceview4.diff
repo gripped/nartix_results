@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ makedepends=(gobject-introspection vala gtk-doc glade yelp-tools git meson)
+ checkdepends=(xorg-server-xvfb)
+ provides=(libgtksourceview-${pkgver%%.*}.so)
++options=(debug)
+ _commit=7fd3adb3134bbec167167bb6400e018e4f781eb9  # tags/4.8.4^0
+ source=("git+https://gitlab.gnome.org/GNOME/gtksourceview.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -29,7 +30,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson gtksourceview build "${meson_options[@]}"
++  artix-meson gtksourceview build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=gtksourceview4
+ depends=(gtk3 libxml2)
+ provides=(libgtksourceview-${pkgver%%.*}.so)
+ prepare() {
+ cd gtksourceview
+ }
+@@ -9,6 +10,6 @@
+ -D glade_catalog=true
+ -D gtk_doc=true
+ )
+-arch-meson gtksourceview build "${meson_options[@]}"
++artix-meson gtksourceview build "${meson_options[@]}"
+ meson compile -C build
+ }

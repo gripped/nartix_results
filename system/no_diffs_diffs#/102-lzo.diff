@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=('GPL')
+ depends=('glibc')
+ provides=('liblzo2.so' 'libminilzo.so')
++options=('debug')
+ source=(https://www.oberhumer.com/opensource/lzo/download/lzo-${pkgver}.tar.gz)
+ sha256sums=('c0f892943208266f9b6543b3ae308fab6284c5c90e627931446fb49b4221a072')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=lzo
+ depends=('glibc')
+ provides=('liblzo2.so' 'libminilzo.so')
+ build() {
+ cd lzo-${pkgver}
+ ./configure --prefix=/usr --enable-shared

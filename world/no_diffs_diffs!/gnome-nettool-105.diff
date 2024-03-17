@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,6 +25,7 @@
+   'net-tools: Network statistics'
+   'nmap: Port scanning'
+ )
++options=(debug)
+ _commit=5748c0fa632c9caad9e46377ca1aa330dec4b757  # tags/gnome-nettool-42-0^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-nettool.git#commit=$_commit"
+@@ -45,7 +46,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,11 +5,12 @@
+ libgtop
+ whois
+ )
+ prepare() {
+ cd $pkgname
+ git apply -3 ../fix-build.diff
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

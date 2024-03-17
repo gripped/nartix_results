@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ 
+ build() {
+     cd "${srcdir}/playerctl-${pkgver}"
+-    arch-meson build -D bash-completions=true -D zsh-completions=true
++    artix-meson build -D bash-completions=true -D zsh-completions=true
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ }
+ build() {
+ cd "${srcdir}/playerctl-${pkgver}"
+-arch-meson build -D bash-completions=true -D zsh-completions=true
++artix-meson build -D bash-completions=true -D zsh-completions=true
+ ninja -C build
+ }

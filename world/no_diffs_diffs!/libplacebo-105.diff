@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ build() {
+   cd ${pkgname}-v${pkgver}
+   CXXFLAGS+=" -I/usr/include/glslang"
+-  arch-meson build \
++  artix-meson build \
+     -D tests=true \
+     -D vulkan=enabled \
+     -D glslang=enabled \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ build() {
+ cd ${pkgname}-v${pkgver}
+ CXXFLAGS+=" -I/usr/include/glslang"
+-arch-meson build \
++artix-meson build \
+ -D tests=true \
+ -D vulkan=enabled \
+ -D glslang=enabled \

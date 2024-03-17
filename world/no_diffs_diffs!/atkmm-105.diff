@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+     -D maintainer-mode=true
+   )
+ 
+-  arch-meson atkmm build "${meson_options[@]}"
++  artix-meson atkmm build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ local meson_options=(
+ -D maintainer-mode=true
+ )
+-arch-meson atkmm build "${meson_options[@]}"
++artix-meson atkmm build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_atkmm() {

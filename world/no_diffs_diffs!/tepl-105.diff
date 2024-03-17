@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ sha256sums=('46e6e5f1bfdbc52e5956f06add575e9c7697c673d53d3803dfe768f490b560f0')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D gtk_doc=true
++  artix-meson $pkgname-$pkgver build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('libgedit-amtk' 'cairo' 'glib2' 'glibc' 'gsettings-desktop-schemas' 'gtk3' 'icu'
+ 'libgedit-gtksourceview' 'pango')
+ build() {
+-arch-meson $pkgname-$pkgver build -D gtk_doc=true
++artix-meson $pkgname-$pkgver build -D gtk_doc=true
+ meson compile -C build
+ }

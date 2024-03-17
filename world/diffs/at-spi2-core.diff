@@ -1,0 +1,94 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,12 +4,12 @@
+   at-spi2-core
+   at-spi2-core-docs
+ )
+-pkgver=2.50.1
++pkgver=2.50.2
+ pkgrel=1
+ pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
+ url="https://gitlab.gnome.org/GNOME/at-spi2-core"
+ arch=(x86_64)
+-license=(GPL2)
++license=(LGPL-2.1-or-later)
+ depends=(
+   dbus
+   glib2
+@@ -17,7 +17,6 @@
+   libx11
+   libxml2
+   libxtst
+-  systemd
+   xorg-xprop
+ )
+ makedepends=(
+@@ -31,7 +30,7 @@
+ checkdepends=(
+   at-spi2-core
+ )
+-_commit=ee07a30c836137d7653cdb26921ef966a3b47e1d  # tags/AT_SPI2_CORE_2_50_1^0
++_commit=f09f09517732e02af3cc6d62477b024ed9672896  # tags/AT_SPI2_CORE_2_50_2^0
+ source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -48,14 +47,15 @@
+   local meson_options=(
+     -D default_bus=dbus-broker
+     -D docs=true
++    -D use_systemd=false
+   )
+ 
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  dbus-run-session meson test -C build --print-errorlogs
++  dbus-run-session meson test -C build --print-errorlogs ||:
+ }
+ 
+ package_at-spi2-core() {
+@@ -78,6 +78,8 @@
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
++  rm -r "$pkgdir"/usr/lib/systemd
++
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/doc
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,6 @@
+ libx11
+ libxml2
+ libxtst
+-systemd
+ xorg-xprop
+ )
+ prepare() {
+@@ -20,8 +19,9 @@
+ local meson_options=(
+ -D default_bus=dbus-broker
+ -D docs=true
++-D use_systemd=false
+ )
+-arch-meson at-spi2-core build "${meson_options[@]}"
++artix-meson at-spi2-core build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_at-spi2-core() {
+@@ -41,6 +41,7 @@
+ 'atk<=2.38.0-2'
+ )
+ meson install -C build --destdir "$pkgdir"
++rm -r "$pkgdir"/usr/lib/systemd
+ mkdir -p doc/usr/share
+ mv {"$pkgdir",doc}/usr/share/doc
+ }

@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url="http://www.draisberghof.de/usb_modeswitch/"
+ license=('GPL')
+ depends=('libusb' 'tcl')
+-makedepends=('gcc' 'make' 'systemd')
++makedepends=('gcc' 'make')
+ backup=("etc/$pkgname.conf")
+ source=("http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-${pkgver}.tar.bz2"
+ 	"http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-data-${_pkgdata}.tar.bz2"

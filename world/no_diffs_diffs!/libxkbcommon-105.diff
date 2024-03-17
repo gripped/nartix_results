@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+ }
+ 
+ build() {
+-  arch-meson libxkbcommon build
++  artix-meson libxkbcommon build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ cd libxkbcommon
+ }
+ build() {
+-arch-meson libxkbcommon build
++artix-meson libxkbcommon build
+ meson compile -C build
+ }
+ _pick() {

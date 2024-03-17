@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,9 +9,9 @@
+ depends=(
+     'libevdev' 'libevdev.so'
+     'yaml-cpp' 'libyaml-cpp.so'
+-    'systemd-libs' 'libudev.so'
++    'libudev' 'libudev.so'
+ )
+-makedepends=('cmake' 'systemd' 'boost')
++makedepends=('cmake' 'boost')
+ source=(
+     "$pkgname-$pkgver.tar.gz::https://gitlab.com/interception/linux/tools/-/archive/v$pkgver/tools-v$pkgver.tar.gz"
+ )
+@@ -28,7 +28,6 @@
+ 
+ package() {
+     install -dm755 "$pkgdir/etc/interception/udevmon.d"
+-    install -Dm644 "tools-v$pkgver/udevmon.service" -t "$pkgdir/usr/lib/systemd/system"
+     install -Dm644 "tools-v$pkgver/README.md" -t "$pkgdir/usr/share/doc/$pkgname"
+ 
+     cd build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=(
+ 'libevdev' 'libevdev.so'
+ 'yaml-cpp' 'libyaml-cpp.so'
+-'systemd-libs' 'libudev.so'
++'libudev' 'libudev.so'
+ )
+ build() {
+ cmake -B build \

@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mate-media
+-pkgver=1.26.2
+-pkgrel=1
++pkgver=1.26.0
++pkgrel=1.1
+ url="https://mate-desktop.org"
+ pkgdesc="MATE Media Tools"
+ arch=('x86_64')
+@@ -11,19 +11,19 @@
+ groups=('mate-extra')
+ conflicts=('mate-media-gtk3')
+ replaces=('mate-media-gtk3')
+-sha256sums=('af46639574cc388513089ca10bb141ffc3e6d1ac33e730e4208db5759642850f')
++sha256sums=('8b731b203fd8219ccc2f2ced40e4301823a17f7940acf3cec72b4494a3fe3c3a')
+ 
+ build() {
+-    cd "${pkgname}-${pkgver}"
+-    ./configure \
+-                --prefix=/usr \
+-                --sysconfdir=/etc \
+-                --libexecdir=/usr/lib/${pkgname} \
+-                --localstatedir=/var
+-    make
++    	cd "${pkgname}-${pkgver}"
++    	./configure \
++        	--prefix=/usr \
++       		 --sysconfdir=/etc \
++        	--libexecdir=/usr/lib/${pkgname} \
++        	--localstatedir=/var
++    	make
+ }
+ 
+ package() {
+-    cd "${pkgname}-${pkgver}"
+-    make DESTDIR="${pkgdir}" install
++    	cd "${pkgname}-${pkgver}"
++    	make DESTDIR="${pkgdir}" install
+ }

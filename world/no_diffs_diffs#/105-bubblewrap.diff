@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgbase build -D selinux=disabled
++  artix-meson $pkgbase build -D selinux=disabled
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ cd $pkgbase
+ }
+ build() {
+-arch-meson $pkgbase build -D selinux=disabled
++artix-meson $pkgbase build -D selinux=disabled
+ meson compile -C build
+ }

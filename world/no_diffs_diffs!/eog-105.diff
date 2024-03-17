@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   eog
+   eog-docs
+ )
+-pkgver=45.2
++pkgver=45.3
+ pkgrel=1
+ pkgdesc="Eye of Gnome: An image viewing and cataloging program"
+ url="https://wiki.gnome.org/Apps/EyeOfGnome"
+@@ -35,10 +35,9 @@
+   git
+   gobject-introspection
+   meson
+-  systemd
+   yelp-tools
+ )
+-_commit=12616fa866e9e42824d255f5d22dfc2105f6f637  # tags/45.2^0
++_commit=b8a7922f82d7935dc7e76cd3d30f22d872c09908  # tags/45.3^0
+ source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+@@ -53,7 +52,7 @@
+     -D libportal=false
+   )
+ 
+-  arch-meson eog build "${meson_options[@]}"
++  artix-meson eog build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ -D gtk_doc=true
+ -D libportal=false
+ )
+-arch-meson eog build "${meson_options[@]}"
++artix-meson eog build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_eog() {

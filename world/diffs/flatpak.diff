@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,6 @@
+   ostree
+   polkit
+   python
+-  systemd
+   wayland
+   xdg-dbus-proxy
+   xdg-utils
+@@ -90,9 +89,10 @@
+     -D selinux_module=disabled
+     -D system_bubblewrap=bwrap
+     -D system_dbus_proxy=xdg-dbus-proxy
++    -D systemd=disabled
+   )
+ 
+-  arch-meson flatpak build "${meson_options[@]}"
++  artix-meson flatpak build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,6 @@
+ ostree
+ polkit
+ python
+-systemd
+ wayland
+ xdg-dbus-proxy
+ xdg-utils
+@@ -39,8 +38,9 @@
+ -D selinux_module=disabled
+ -D system_bubblewrap=bwrap
+ -D system_dbus_proxy=xdg-dbus-proxy
++-D systemd=disabled
+ )
+-arch-meson flatpak build "${meson_options[@]}"
++artix-meson flatpak build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

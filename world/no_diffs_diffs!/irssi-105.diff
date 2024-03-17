@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
+-  arch-meson Build \
++  artix-meson Build \
+     -Dwith-perl-lib=vendor \
+     -Dwith-proxy=yes \
+     -Dwith-otr=yes \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ backup=('etc/irssi.conf')
+ build() {
+ cd ${pkgname}-${pkgver}
+-arch-meson Build \
++artix-meson Build \
+ -Dwith-perl-lib=vendor \
+ -Dwith-proxy=yes \
+ -Dwith-otr=yes \

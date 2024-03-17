@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+   export LINKFLAGS="${LDFLAGS}"
+   _pythonpath=`python -c "from sysconfig import get_path; print(get_path('platlib'))"`
+   scons prefix=/usr \
+-        systemd=yes \
++        systemd=no\
+         gpsd_group=uucp \
+         python_libdir=$_pythonpath \
+         sbindir=/usr/bin \
+@@ -54,7 +54,6 @@
+   sed -e 's|/local||' -i packaging/X11/*.desktop
+   install -Dm644 packaging/X11/*.desktop -t "${pkgdir}"/usr/share/applications/
+ 
+-  install -Dm644 gpsd-$pkgver/systemd/{gpsd.service,gpsd.socket,gpsdctl@.service} -t "${pkgdir}"/usr/lib/systemd/system/
+ 
+   install -Dm644 COPYING "${pkgdir}"/usr/share/licenses/$pkgname/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ export LINKFLAGS="${LDFLAGS}"
+ _pythonpath=`python -c "from sysconfig import get_path; print(get_path('platlib'))"`
+ scons prefix=/usr \
+-systemd=yes \
++systemd=no\
+ gpsd_group=uucp \
+ python_libdir=$_pythonpath \
+ sbindir=/usr/bin \

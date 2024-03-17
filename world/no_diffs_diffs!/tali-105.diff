@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(gtk3 librsvg libgnome-games-support)
+ makedepends=(meson gobject-introspection yelp-tools appstream-glib git)
+ groups=(gnome-extra)
++options=(debug)
+ _commit=cfe92305315f7850fdf83aaf0dffd628fa8d64ed  # tags/40.9^0
+ source=("git+https://gitlab.gnome.org/GNOME/tali.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -23,7 +24,7 @@
+ }
+ 
+ build() {
+-  arch-meson tali build
++  artix-meson tali build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ pkgname=tali
+ depends=(gtk3 librsvg libgnome-games-support)
+ groups=(gnome-extra)
+ prepare() {
+ cd tali
+ }
+ build() {
+-arch-meson tali build
++artix-meson tali build
+ meson compile -C build
+ }

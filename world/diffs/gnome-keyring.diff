@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,6 @@
+ )
+ provides=(org.freedesktop.secrets)
+ groups=(gnome)
+-install=gnome-keyring.install
+ _commit=4e173494bf15795a1ebab6e2bbd9377fac456240  # tags/46.1^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-keyring.git#commit=$_commit"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ )
+ provides=(org.freedesktop.secrets)
+ groups=(gnome)
+-install=gnome-keyring.install
+ prepare() {
+ cd $pkgname
+ git apply -3 ../0001-daemon-Add-Cinnamon-to-autostart-files.patch

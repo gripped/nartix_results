@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ arch=(x86_64)
+ depends=(glib2 dbus)
+ makedepends=(git meson gtk-doc)
++options=(debug)
+ _commit=e326f73a7139c5e54fcf926896ae6e4cc899a1a7  # tags/0.1.1^0
+ source=("git+https://gitlab.gnome.org/pwithnall/libglib-testing.git#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -22,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ pkgname=libglib-testing
+ depends=(glib2 dbus)
+ prepare() {
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }
+ package() {

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ 
+ build() {
+   cd Viewnior-viewnior-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ }
+ build() {
+ cd Viewnior-viewnior-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

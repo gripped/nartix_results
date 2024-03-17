@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ build() {
+ 
+ 
+-  ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran cmake -B build -S $_pkgname-$pkgver \
++  ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran artix-cmake -B build -S $_pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_SHARED_LIBS=ON \
+     -DBUILD_TESTING=OFF \
+@@ -29,7 +29,7 @@
+     -DDYNAMIC_ARCH=ON
+   cmake --build build
+ 
+-  ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran cmake -B build64 -S $_pkgname-$pkgver \
++  ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran artix-cmake -B build64 -S $_pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_SHARED_LIBS=ON \
+     -DBUILD_TESTING=OFF \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ _blasver=3.12.0
+ depends=('gcc-libs')
+ build() {
+-ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran cmake -B build -S $_pkgname-$pkgver \
++ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran artix-cmake -B build -S $_pkgname-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_SHARED_LIBS=ON \
+ -DBUILD_TESTING=OFF \
+@@ -15,7 +15,7 @@
+ -DNUM_THREADS=64 \
+ -DDYNAMIC_ARCH=ON
+ cmake --build build
+-ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran cmake -B build64 -S $_pkgname-$pkgver \
++ASMFLAGS=$CFLAGS FFLAGS=${CFLAGS/ -Wformat -Werror=format-security/} FC=gfortran artix-cmake -B build64 -S $_pkgname-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_SHARED_LIBS=ON \
+ -DBUILD_TESTING=OFF \

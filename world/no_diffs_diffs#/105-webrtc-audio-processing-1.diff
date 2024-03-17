@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+     -D cpp_std=c++17
+   )
+ 
+-  arch-meson webrtc-audio-processing build "${meson_options[@]}"
++  artix-meson webrtc-audio-processing build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+ local meson_options=(
+ -D cpp_std=c++17
+ )
+-arch-meson webrtc-audio-processing build "${meson_options[@]}"
++artix-meson webrtc-audio-processing build "${meson_options[@]}"
+ meson compile -C build
+ }

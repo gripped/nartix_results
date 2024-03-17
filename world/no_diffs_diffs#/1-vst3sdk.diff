@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,10 +42,6 @@
+         'a7cf564f31c471440310c3e3a11eac143ad1df100c8bb7bde9096b83711846878b4842742b050cc293b337b6284d28959ef3446d2be5337a74faac7bfcf74206'
+         'e39e1353fdc22f7d93b6f89f8242fafddd56422a03df1cb26e81a3874456c49029a3726b43223fe21231eff6fe240e1216f3dca36a0e5297c9c0d43ab390bcd9')
+ 
+-pkgver() {
+-  cd $pkgname
+-  git describe --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/v//g'
+-}
+ 
+ prepare() {
+   sed -e "s/VERSION/$pkgver/" -i $pkgname.pc

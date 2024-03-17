@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,16 @@
+ 
+ pkgname=liblangtag
+-pkgver=0.6.7
++pkgver=0.6.4
+ pkgrel=1
+ pkgdesc="interface library to access/deal with tags for identifying languages"
+ arch=('x86_64')
+ url="https://bitbucket.org/tagoh/liblangtag/wiki/Home"
+-license=('LGPL3' 'MPL2')
+-depends=('libxml2' 'glib2' 'glibc')
++license=('LGPL3' 'MPL') # actually MPL2.0
++depends=('libxml2' 'glib2')
+ makedepends=('gobject-introspection')
+ optdepends=('gobject-introspection-runtime: use with liblangtag-gobject')
+ source=(https://bitbucket.org/tagoh/liblangtag/downloads/$pkgname-$pkgver.tar.bz2)
+-sha256sums=('5ed6bcd4ae3f3c05c912e62f216cd1a44123846147f729a49fb5668da51e030e')
++sha256sums=('5701062c17d3e73ddaa49956cbfa5d47d2f8221988dec561c0af2118c1c8a564')
+ 
+ build() {
+   cd "$pkgname-$pkgver"
+@@ -21,7 +21,7 @@
+ 
+ check() {
+   cd "$pkgname-$pkgver"
+-  make check
++  make -k check
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=liblangtag
+-depends=('libxml2' 'glib2' 'glibc')
++depends=('libxml2' 'glib2')
+ build() {
+ cd "$pkgname-$pkgver"
+ ./configure --prefix=/usr

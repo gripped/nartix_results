@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=fastjar
+ pkgver=0.98
+-pkgrel=6
++pkgrel=6.1
+ pkgdesc="Sun java jar compatible archiver"
+ arch=('x86_64')
+ url='https://savannah.nongnu.org/projects/fastjar'
+@@ -11,12 +11,12 @@
+ sha256sums=('f156abc5de8658f22ee8f08d7a72c88f9409ebd8c7933e9466b0842afeb2f145')
+ 
+ build() {
+-  cd ${pkgname}-${pkgver}
++  cd ${srcdir}/${pkgname}-${pkgver}
+   ./configure --prefix=/usr
+   make
+ }
+ 
+ package() {
+-  cd ${pkgname}-${pkgver}
+-  make DESTDIR="${pkgdir}" install
++  cd ${srcdir}/${pkgname}-${pkgver}
++  make DESTDIR=${pkgdir} install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=fastjar
+ depends=('zlib' 'texinfo')
+ build() {
+-cd ${pkgname}-${pkgver}
++cd ${srcdir}/${pkgname}-${pkgver}
+ ./configure --prefix=/usr
+ make
+ }

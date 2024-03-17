@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ conflicts=('libv4l')
+ backup=(etc/rc_maps.cfg)
+ license=('LGPL')
+-depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'systemd-libs' 'json-c')
++depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo' 'libudev' 'json-c')
+ makedepends=('qt5-base' 'alsa-lib' 'meson' 'clang' 'doxygen' 'libbpf')
+ optdepends=('qt5-base: for qv4l2 and qvidcap' 'alsa-lib: for qv4l2')
+ source=(https://linuxtv.org/downloads/v4l-utils/${pkgname}-${pkgver}.tar.xz{,.asc})
+@@ -23,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson -Dgconv=disabled "${pkgname}-${pkgver}" build
++  artix-meson -Dgconv=disabled "${pkgname}-${pkgver}" build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,12 +3,12 @@
+ replaces=('libv4l')
+ conflicts=('libv4l')
+ backup=(etc/rc_maps.cfg)
+-depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'systemd-libs' 'json-c')
++depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo' 'libudev' 'json-c')
+ prepare() {
+ cd "${pkgname}-${pkgver}"
+ sed -i 's/sbin/bin/' utils/v4l2-dbg/meson.build
+ }
+ build() {
+-arch-meson -Dgconv=disabled "${pkgname}-${pkgver}" build
++artix-meson -Dgconv=disabled "${pkgname}-${pkgver}" build
+ meson compile -C build
+ }

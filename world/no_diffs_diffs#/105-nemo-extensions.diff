@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+     if [[ -f ${_dir}/meson.build ]]; then
+       mkdir -p ${_dir}/build
+       pushd ${_dir}/build
+-      arch-meson --libexecdir=lib/${_dir} ..
++      artix-meson --libexecdir=lib/${_dir} ..
+       samu
+       popd
+     fi
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+ if [[ -f ${_dir}/meson.build ]]; then
+ mkdir -p ${_dir}/build
+ pushd ${_dir}/build
+-arch-meson --libexecdir=lib/${_dir} ..
++artix-meson --libexecdir=lib/${_dir} ..
+ samu
+ popd
+ fi

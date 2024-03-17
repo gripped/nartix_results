@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+ )
+ 
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ )
+ backup=('etc/pam.d/swaylock')
+ build() {
+-arch-meson "$pkgname-$pkgver" build
++artix-meson "$pkgname-$pkgver" build
+ ninja -C build
+ }

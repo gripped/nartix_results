@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+   cd OpenColorIO-$pkgver
+ 
+   CXXFLAGS+=" -ffat-lto-objects"
+-  cmake \
++  artix-cmake \
+     -GNinja \
+     -Bbuild \
+     -DCMAKE_BUILD_TYPE=Release \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ build() {
+ cd OpenColorIO-$pkgver
+ CXXFLAGS+=" -ffat-lto-objects"
+-cmake \
++artix-cmake \
+ -GNinja \
+ -Bbuild \
+ -DCMAKE_BUILD_TYPE=Release \

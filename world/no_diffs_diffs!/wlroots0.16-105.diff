@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,6 @@
+     'glslang'
+     'meson'
+     'ninja'
+-    'systemd'
+     'vulkan-headers'
+     'wayland-protocols'
+     'xorg-xwayland'
+@@ -57,7 +56,7 @@
+ }
+ 
+ build() {
+-    arch-meson \
++    artix-meson \
+       --includedir    /usr/include/wlroots0.16 \
+       --libdir        /usr/lib/wlroots0.16 \
+       wlroots-"${pkgver}" build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ patch -Np1 -i "${srcdir}/Revert-layer-shell-error-on-0-dimension-without-anch.patch"
+ }
+ build() {
+-arch-meson \
++artix-meson \
+ --includedir    /usr/include/wlroots0.16 \
+ --libdir        /usr/lib/wlroots0.16 \
+ wlroots-"${pkgver}" build

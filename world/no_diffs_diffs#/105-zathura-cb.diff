@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zathura-cb
+ pkgver=0.1.10
+-pkgrel=4
++pkgrel=4.1
+ 
+ pkgdesc="Adds comic book support to zathura"
+ url="https://pwmt.org/projects/zathura-cb/"
+@@ -17,7 +17,7 @@
+ 
+ build() {
+   cd zathura-cb-$pkgver
+-  arch-meson build
++  artix-meson build
+ 
+   cd build
+   ninja
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=('zathura' 'libarchive' 'desktop-file-utils')
+ build() {
+ cd zathura-cb-$pkgver
+-arch-meson build
++artix-meson build
+ cd build
+ ninja
+ }

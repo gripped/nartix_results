@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ 
+ build() {
+   cd ${pkgname}
+-  cmake -B build \
++  artix-cmake -B build \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=None \
+     -DPEGTL_INSTALL_DOC_DIR=share/doc/${pkgname} \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _gitcommit=cf639f7f4ee125f68e1ccfba8d99ebc0de57b9fe
+ build() {
+ cd ${pkgname}
+-cmake -B build \
++artix-cmake -B build \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=None \
+ -DPEGTL_INSTALL_DOC_DIR=share/doc/${pkgname} \

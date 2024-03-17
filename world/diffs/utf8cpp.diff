@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,7 @@
+   cmake -B build -S ${pkgname/8}-${pkgver} \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_INSTALL_LIBDIR=lib \
+     -DUTF8_TESTS=OFF
+   make -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ cmake -B build -S ${pkgname/8}-${pkgver} \
+ -DCMAKE_BUILD_TYPE=None \
+ -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_INSTALL_LIBDIR=lib \
+ -DUTF8_TESTS=OFF
+ make -C build
+ }

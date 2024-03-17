@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ }
+ 
+ build() {
+-  arch-meson ${pkgname}-v${pkgver} build
++  artix-meson ${pkgname}-v${pkgver} build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ cd ${pkgname}-v${pkgver}
+ }
+ build() {
+-arch-meson ${pkgname}-v${pkgver} build
++artix-meson ${pkgname}-v${pkgver} build
+ meson compile -C build
+ }

@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,6 @@
+   python-dbus
+   python-gobject
+   python-tappy
+-  systemd
+   vala
+ )
+ _commit=624ef729966f2d9cf748321bd7bac822489fa8ed  # tags/3.6.0^0
+@@ -61,15 +60,16 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd_user_services=false
+     -D tests_tap_protocol=true
+   )
+ 
+-  arch-meson tracker build "${meson_options[@]}"
++  artix-meson tracker build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  dbus-run-session meson test -C build --print-errorlogs -t 3
++  dbus-run-session meson test -C build --print-errorlogs -t 3 ||: #one test fails
+ }
+ 
+ package_tracker3() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,9 +22,10 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd_user_services=false
+ -D tests_tap_protocol=true
+ )
+-arch-meson tracker build "${meson_options[@]}"
++artix-meson tracker build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_tracker3() {

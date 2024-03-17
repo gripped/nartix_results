@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -68,7 +68,7 @@
+     -D require_all_tests=true
+   )
+ 
+-  arch-meson gedit build "${meson_options[@]}"
++  artix-meson gedit build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,6 +34,6 @@
+ -D gtk_doc=true
+ -D require_all_tests=true
+ )
+-arch-meson gedit build "${meson_options[@]}"
++artix-meson gedit build "${meson_options[@]}"
+ meson compile -C build
+ }

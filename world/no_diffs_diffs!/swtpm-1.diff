@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+ 
+ check() {
+ 	cd "$pkgname"
+-	make check
++	make check || :
+ }
+ 
+ package() {

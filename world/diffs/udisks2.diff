@@ -1,0 +1,154 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=udisks2
+ pkgname=(udisks2 udisks2-{btrfs,lvm2})
+ pkgver=2.10.1
+-pkgrel=3
++pkgrel=4
+ pkgdesc="Daemon, tools and libraries to access and manipulate disks, storage devices and technologies"
+ arch=('x86_64')
+ url="https://www.freedesktop.org/wiki/Software/udisks/"
+@@ -28,11 +28,10 @@
+   'libblockdev-nvme'
+   'libblockdev-part'
+   'libblockdev-swap'
+-  'libblockdev-utils'
+   'libgudev'
+   'lvm2'
+   'polkit'
+-  'systemd-libs'
++  'libelogind'
+   'util-linux-libs'
+ )
+ source=("https://github.com/storaged-project/udisks/releases/download/udisks-$pkgver/udisks-$pkgver.tar.bz2")
+@@ -60,7 +59,8 @@
+     --prefix=/usr
+     --sbindir=/usr/bin
+     --sysconfdir=/etc
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --with-systemdsystemunitdir=no
++    --with-tmpfilesdir=/usr/lib/tmpfiles.d
+   )
+ 
+   cd udisks-$pkgver
+@@ -82,7 +82,7 @@
+     glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+     glibc
+     libatasmart
+-    libblockdev libblockdev.so
++    libblockdev libbd_utils.so libblockdev.so
+     libblockdev-crypto  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-fs  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-mdraid  # dynamically loaded by libblockdev.so, required for default operation
+@@ -90,10 +90,9 @@
+     libblockdev-nvme  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-part  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-swap  # dynamically loaded by libblockdev.so, required for default operation
+-    libblockdev-utils libbd_utils.so
+     libgudev libgudev-1.0.so
+     polkit libpolkit-agent-1.so libpolkit-gobject-1.so
+-    systemd-libs libsystemd.so
++    libelogind libelogind.so
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+   optdepends=(
+@@ -135,12 +134,11 @@
+     glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+     glibc
+     libatasmart
+-    libblockdev libblockdev.so
++    libblockdev libbd_utils.so libblockdev.so
+     libblockdev-btrfs  # dynamically loaded by libblockdev.so
+-    libblockdev-utils libbd_utils.so
+     libgudev libgudev-1.0.so
+     polkit libpolkit-gobject-1.so
+-    systemd-libs libsystemd.so
++    libelogind libelogind.so
+     udisks2 libudisks2.so
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+@@ -156,13 +154,12 @@
+     glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+     glibc
+     libatasmart
+-    libblockdev libblockdev.so
++    libblockdev libbd_utils.so libblockdev.so
+     libblockdev-lvm  # dynamically loaded by libblockdev.so
+-    libblockdev-utils libbd_utils.so
+     libgudev libgudev-1.0.so
+     lvm2
+     polkit libpolkit-gobject-1.so
+-    systemd-libs libsystemd.so
++    libelogind libelogind.so
+     udisks2 libudisks2.so
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,8 @@
+ --prefix=/usr
+ --sbindir=/usr/bin
+ --sysconfdir=/etc
+---with-systemdsystemunitdir=/usr/lib/systemd/system
++--with-systemdsystemunitdir=no
++--with-tmpfilesdir=/usr/lib/tmpfiles.d
+ )
+ cd udisks-$pkgver
+ ./configure "${configure_options[@]}"
+@@ -35,7 +36,7 @@
+ glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+ glibc
+ libatasmart
+-libblockdev libblockdev.so
++libblockdev libbd_utils.so libblockdev.so
+ libblockdev-crypto  # dynamically loaded by libblockdev.so, required for default operation
+ libblockdev-fs  # dynamically loaded by libblockdev.so, required for default operation
+ libblockdev-mdraid  # dynamically loaded by libblockdev.so, required for default operation
+@@ -43,10 +44,9 @@
+ libblockdev-nvme  # dynamically loaded by libblockdev.so, required for default operation
+ libblockdev-part  # dynamically loaded by libblockdev.so, required for default operation
+ libblockdev-swap  # dynamically loaded by libblockdev.so, required for default operation
+-libblockdev-utils libbd_utils.so
+ libgudev libgudev-1.0.so
+ polkit libpolkit-agent-1.so libpolkit-gobject-1.so
+-systemd-libs libsystemd.so
++libelogind libelogind.so
+ util-linux-libs libblkid.so libmount.so libuuid.so
+ )
+ provides=(libudisks2.so)
+@@ -71,12 +71,11 @@
+ glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+ glibc
+ libatasmart
+-libblockdev libblockdev.so
++libblockdev libbd_utils.so libblockdev.so
+ libblockdev-btrfs  # dynamically loaded by libblockdev.so
+-libblockdev-utils libbd_utils.so
+ libgudev libgudev-1.0.so
+ polkit libpolkit-gobject-1.so
+-systemd-libs libsystemd.so
++libelogind libelogind.so
+ udisks2 libudisks2.so
+ util-linux-libs libblkid.so libmount.so libuuid.so
+ )
+@@ -90,13 +89,12 @@
+ glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+ glibc
+ libatasmart
+-libblockdev libblockdev.so
++libblockdev libbd_utils.so libblockdev.so
+ libblockdev-lvm  # dynamically loaded by libblockdev.so
+-libblockdev-utils libbd_utils.so
+ libgudev libgudev-1.0.so
+ lvm2
+ polkit libpolkit-gobject-1.so
+-systemd-libs libsystemd.so
++libelogind libelogind.so
+ udisks2 libudisks2.so
+ util-linux-libs libblkid.so libmount.so libuuid.so
+ )

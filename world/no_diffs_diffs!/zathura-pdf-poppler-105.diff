@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zathura-pdf-poppler
+ pkgver=0.3.2
+-pkgrel=2
++pkgrel=2.1
+ 
+ pkgdesc="Adds pdf support to zathura by using the poppler engine"
+ url="https://pwmt.org/projects/zathura-pdf-poppler/"
+@@ -17,7 +17,7 @@
+ 
+ build() {
+   cd zathura-pdf-poppler-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('poppler-glib' 'zathura' 'desktop-file-utils')
+ build() {
+ cd zathura-pdf-poppler-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

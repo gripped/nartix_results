@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ sha256sums=('SKIP')
+ 
+ build() {
+-  arch-meson hexchat build \
++  artix-meson hexchat build \
+     -Dwith-lua='lua' \
+     -Dtext-frontend='true'
+   ninja -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ depends=('dbus-glib' 'desktop-file-utils' 'gdk-pixbuf2' 'glib2' 'gtk2'
+ 'libcanberra' 'openssl' 'pango' 'pciutils')
+ build() {
+-arch-meson hexchat build \
++artix-meson hexchat build \
+ -Dwith-lua='lua' \
+ -Dtext-frontend='true'
+ ninja -C build

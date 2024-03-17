@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha256sums=('a8d80f67d1b9be6e23b9651cb747f4a3200132e7d878a285119c86bf44568e36')
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=maeparser
+ depends=(boost-libs)
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr
+ cmake --build build
+ }

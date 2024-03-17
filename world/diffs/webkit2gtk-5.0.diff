@@ -1,0 +1,68 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,6 @@
+   libseccomp
+   libsecret
+   libsoup3
+-  libsystemd
+   libtasn1
+   libwebp
+   libwpe
+@@ -66,7 +65,6 @@
+   ninja
+   python
+   ruby
+-  systemd
+   wayland-protocols
+ )
+ source=(
+@@ -91,6 +89,8 @@
+     -DCMAKE_INSTALL_LIBDIR=lib
+     -DCMAKE_INSTALL_LIBEXECDIR=lib
+     -DCMAKE_SKIP_RPATH=ON
++    -DUSE_SYSTEMD=OFF
++    -DENABLE_JOURNALD_LOG=OFF
+     -DUSE_AVIF=ON
+     -DUSE_GTK4=ON
+     -DENABLE_DOCUMENTATION=ON
+@@ -100,7 +100,7 @@
+   CFLAGS+=' -g1'
+   CXXFLAGS+=' -g1'
+ 
+-  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
++  artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,6 @@
+ libseccomp
+ libsecret
+ libsoup3
+-libsystemd
+ libtasn1
+ libwebp
+ libwpe
+@@ -61,6 +60,8 @@
+ -DCMAKE_INSTALL_LIBDIR=lib
+ -DCMAKE_INSTALL_LIBEXECDIR=lib
+ -DCMAKE_SKIP_RPATH=ON
++-DUSE_SYSTEMD=OFF
++-DENABLE_JOURNALD_LOG=OFF
+ -DUSE_AVIF=ON
+ -DUSE_GTK4=ON
+ -DENABLE_DOCUMENTATION=ON
+@@ -68,7 +69,7 @@
+ )
+ CFLAGS+=' -g1'
+ CXXFLAGS+=' -g1'
+-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
++artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
+ cmake --build build
+ }
+ package_webkit2gtk-5.0() {

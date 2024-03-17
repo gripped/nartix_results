@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgname=qt5-webengine
+-_basever=5.15.12
++_basever=5.15.13
+ pkgver=5.15.16
+-pkgrel=3
++pkgrel=5
+ arch=('x86_64')
+ url='https://www.qt.io'
+ license=('LGPL3' 'LGPL2.1' 'BSD')
+@@ -49,6 +49,9 @@
+ }
+ 
+ build() {
++  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++
+   cd build
+   qmake ../${_pkgfqn} CONFIG+=force_debug_info -- \
+     -proprietary-codecs \
+@@ -62,6 +65,9 @@
+ }
+ 
+ package() {
++  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++
+   cd build
+   make INSTALL_ROOT="$pkgdir" install
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=qt5-webengine
+-_basever=5.15.12
++_basever=5.15.13
+ depends=('qt5-webchannel' 'qt5-location' 'libxcomposite' 'libxrandr' 'pciutils' 'libxss' 'libxkbfile'
+ 'libevent' 'snappy' 'nss' 'libxslt' 'minizip' 'ffmpeg' 'libvpx' 'libxtst' 'ttf-font')
+ groups=('qt5')
+@@ -19,6 +19,8 @@
+ patch -p1 -d src/3rdparty/chromium -i "$srcdir"/qt5-webengine-icu-74.patch # Fix build with ICU 74 - patch from Alpine
+ }
+ build() {
++export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ cd build
+ qmake ../${_pkgfqn} CONFIG+=force_debug_info -- \
+ -proprietary-codecs \

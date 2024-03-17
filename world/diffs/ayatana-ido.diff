@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,38 @@
+-
+ pkgname=ayatana-ido
+ pkgver=0.10.1
+ pkgrel=1
+-pkgdesc='Ayatana Indicator Display Objects'
+-arch=(x86_64)
+-url='https://github.com/AyatanaIndicators/ayatana-ido'
+-license=(LGPL2.1 LGPL3)
+-depends=(gtk3)
+-makedepends=(cmake gobject-introspection vala gtest)
+-source=(https://github.com/AyatanaIndicators/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('26187915a6f3402195e2c78d9e8a54549112a3cd05bb2fbe2059d3e78fc0e071')
++pkgdesc="Ayatana Indicator Display Objects"
++arch=("x86_64")
++url="https://github.com/AyatanaIndicators/ayatana-ido"
++changelog=Changelog.txt
++license=("LGPL3")
++depends=(
++	"gtk3>=3.24"
++	"glib2>=2.58"
++)
++makedepends=(
++	"gcc"
++	"make"
++	"pkgconf"
++
++	"cmake>=3.13"
++	"gobject-introspection"
++	"vala"
++
++)
++source=(
++	"https://github.com/AyatanaIndicators/$pkgname/archive/refs/tags/$pkgver.tar.gz"
++)
++sha256sums=(
++	"26187915a6f3402195e2c78d9e8a54549112a3cd05bb2fbe2059d3e78fc0e071"
++)
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
+-    -DCMAKE_INSTALL_PREFIX=/usr
+-  cmake --build build
++	cd "$pkgname-$pkgver"
++	cmake -D CMAKE_INSTALL_PREFIX="/usr" .
+ }
+ 
+ package() {
+-  DESTDIR="$pkgdir" cmake --install build
++	cd "$pkgname-$pkgver"
++	make install DESTDIR="$pkgdir"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,10 @@
+ pkgname=ayatana-ido
+-depends=(gtk3)
++changelog=Changelog.txt
++depends=(
++"gtk3>=3.24"
++"glib2>=2.58"
++)
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
+--DCMAKE_INSTALL_PREFIX=/usr
+-cmake --build build
++cd "$pkgname-$pkgver"
++cmake -D CMAKE_INSTALL_PREFIX="/usr" .
+ }

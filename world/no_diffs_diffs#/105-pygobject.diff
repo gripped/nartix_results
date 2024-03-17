@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+ }
+ 
+ build() {
+-  arch-meson pygobject build
++  artix-meson pygobject build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ cd pygobject
+ }
+ build() {
+-arch-meson pygobject build
++artix-meson pygobject build
+ meson compile -C build
+ }
+ package_python-gobject-docs() {

@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(glib2)
+ makedepends=(vala dbus git gtk-doc python meson bash-completion)
+ provides=(libdconf.so)
++options=(debug)
+ install=dconf.install
+ _commit=4c0a26052efafae923eba42d14c5cb88da745de2  # tags/0.40.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/dconf.git#commit=$_commit"
+@@ -27,7 +28,7 @@
+ }
+ 
+ build() {
+-  arch-meson dconf build -D gtk_doc=true
++  artix-meson dconf build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+@@ -42,5 +43,7 @@
+   install -Dt "$pkgdir/usr/share/libalpm/scripts" dconf-update
+ 
+   install -Dm644 /dev/null "$pkgdir/etc/dconf/db/.placeholder"
++
++  rm -r "$pkgdir/usr/lib/systemd"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,12 @@
+ pkgname=dconf
+ depends=(glib2)
+ provides=(libdconf.so)
+ install=dconf.install
+ prepare() {
+ cd dconf
+ }
+ build() {
+-arch-meson dconf build -D gtk_doc=true
++artix-meson dconf build -D gtk_doc=true
+ meson compile -C build
+ }

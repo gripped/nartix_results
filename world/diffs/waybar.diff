@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -54,6 +54,7 @@
+           --buildtype=plain \
+           --auto-features=enabled \
+           --wrap-mode=nodownload \
++          -Dsystemd=disabled \
+           -Dexperimental=true \
+           -Dcava=disabled \
+           -Dtests=enabled \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,6 +34,7 @@
+ --buildtype=plain \
+ --auto-features=enabled \
+ --wrap-mode=nodownload \
++-Dsystemd=disabled \
+ -Dexperimental=true \
+ -Dcava=disabled \
+ -Dtests=enabled \

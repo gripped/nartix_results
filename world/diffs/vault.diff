@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,16 @@
+ 
+ pkgname=vault
+ pkgdesc='A tool for managing secrets'
+-pkgver=1.15.5
++pkgver=1.15.6
+ pkgrel=1
+ url="https://vaultproject.io/"
+ license=('BUSL-1.1')
+ arch=('x86_64')
+-depends=('glibc')
++depends=('glibc' 'esysusers' 'etmpfiles')
+ makedepends=('go' 'git' 'yarn' 'bower' 'nodejs-lts-iron' 'npm' 'zip' 'gox' 'go-tools')
+ install=vault.install
+ backup=('etc/vault.hcl' 'etc/default/vault')
+-_vault_commit='0d8b67ef63815f20421c11fe9152d435af3403e6'
++_vault_commit='615cf6f1dce9aa91bc2035ce33b9f689952218f0'
+ source=("git+https://github.com/hashicorp/vault#commit=${_vault_commit}"
+   'vault.sysusers'
+   'vault.tmpfiles'
+@@ -23,12 +23,6 @@
+ pkgver() {
+   cd vault
+   git describe --tags --match 'v*' | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+-}
+-
+-prepare() {
+-  cd vault
+-  sed -i 's|/etc/vault.d/vault.hcl|/etc/vault.hcl|g' .release/linux/package/usr/lib/systemd/system/vault.service
+-  sed -i 's|/etc/vault.d/vault.env|/etc/default/vault|g' .release/linux/package/usr/lib/systemd/system/vault.service
+ }
+ 
+ build() {
+@@ -63,7 +57,6 @@
+   cd "${srcdir}/vault"
+ 
+   install -Dm644 ".release/linux/package/etc/vault.d/vault.env" "${pkgdir}/etc/default/vault"
+-  install -Dm644 ".release/linux/package/usr/lib/systemd/system/vault.service" "${pkgdir}/usr/lib/systemd/system/vault.service"
+ 
+   install -Dm755 "dist/vault" "${pkgdir}/usr/bin/vault"
+   install -Dm644 "LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,8 @@
+ pkgname=vault
+-depends=('glibc')
++depends=('glibc' 'esysusers' 'etmpfiles')
+ install=vault.install
+ backup=('etc/vault.hcl' 'etc/default/vault')
+ _vault
+-prepare() {
+-cd vault
+-sed -i 's|/etc/vault.d/vault.hcl|/etc/vault.hcl|g' .release/linux/package/usr/lib/systemd/system/vault.service
+-sed -i 's|/etc/vault.d/vault.env|/etc/default/vault|g' .release/linux/package/usr/lib/systemd/system/vault.service
+-}
+ build() {
+ mkdir -p "${srcdir}/vault/http/web_ui"
+ cd "${srcdir}/vault/ui"

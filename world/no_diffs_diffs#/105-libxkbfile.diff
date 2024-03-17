@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libxkbfile
+ pkgver=1.1.3
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="X11 keyboard file manipulation library"
+ arch=('x86_64')
+ license=('LicenseRef-libxkbfile')
+@@ -14,7 +14,7 @@
+ validpgpkeys=('4A193C06D35E7C670FA4EF0BA2FB9E081F2D130E') #Alan Coopersmith <alan.coopersmith@oracle.com>
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  artix-meson $pkgname-$pkgver build
+   meson configure build
+   ninja -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=libxkbfile
+ depends=('libx11' 'xorgproto' 'glibc')
+ build() {
+-arch-meson $pkgname-$pkgver build
++artix-meson $pkgname-$pkgver build
+ meson configure build
+ ninja -C build
+ }

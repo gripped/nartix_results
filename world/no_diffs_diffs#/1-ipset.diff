@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,10 +9,8 @@
+ makedepends=('git')
+ depends=('glibc' 'libmnl')
+ backup=("etc/$pkgname.conf")
+-source=("git://git.netfilter.org/ipset.git#tag=v$pkgver"
+-        "$pkgname.service")
+-sha256sums=('SKIP'
+-            '5a0e326a80fd5ab2d9545faa1189b647cc866c9568ab6a9dd0833ba5863f39ce')
++source=("git://git.netfilter.org/ipset.git#tag=v$pkgver")
++sha256sums=('SKIP')
+ 
+ prepare() {
+   cd $pkgname
+@@ -40,8 +38,6 @@
+   install -m644 README UPGRADE ChangeLog "$pkgdir/usr/share/doc/$pkgname"
+   install -Dm644 lib/libipset.pc "$pkgdir/usr/lib/pkgconfig/libipset.pc"
+   popd
+-  install -Dm 644 $pkgname.service \
+-    "$pkgdir/usr/lib/systemd/system/$pkgname.service"
+   install -Dm 644 /dev/null "$pkgdir/etc/$pkgname.conf"
+   install -Dm 644 ipset/utils/ipset_bash_completion/ipset \
+     "$pkgdir/usr/share/bash-completion/completions/ipset"

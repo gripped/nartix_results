@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ b2sums=('400e507f88ea3d14420e2dc43ceedf961ab23b91cc5a2f5671c4d876ecfb7437af14ee75b501d2baf5a3eb319afaf81b1c6f699c1c62fa7b8d211603364bf14a')
+ 
+ build() {
+-  arch-meson gexiv2-gexiv2-$pkgver build -D gtk_doc=true
++  artix-meson gexiv2-gexiv2-$pkgver build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=libgexiv2
+ depends=(exiv2 glib2)
+ build() {
+-arch-meson gexiv2-gexiv2-$pkgver build -D gtk_doc=true
++artix-meson gexiv2-gexiv2-$pkgver build -D gtk_doc=true
+ meson compile -C build
+ }
+ package() {

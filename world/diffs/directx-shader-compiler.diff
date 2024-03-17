@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,6 +25,8 @@
+ 
+   cmake .. -G Ninja \
+     -C ../cmake/caches/PredefinedParams.cmake \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+     -DCMAKE_BUILD_TYPE=Debug \
+     -DLLVM_ENABLE_LTO=False
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,8 @@
+ cd "${pkgname}-${pkgver}"/build
+ cmake .. -G Ninja \
+ -C ../cmake/caches/PredefinedParams.cmake \
++-DCMAKE_PREFIX_PATH=/usr \
++-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+ -DCMAKE_BUILD_TYPE=Debug \
+ -DLLVM_ENABLE_LTO=False
+ ninja

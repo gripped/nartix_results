@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -71,7 +71,7 @@
+     -D profile=release
+   )
+ 
+-  arch-meson geary build "${meson_options[@]}"
++  artix-meson geary build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,6 +40,6 @@
+ local meson_options=(
+ -D profile=release
+ )
+-arch-meson geary build "${meson_options[@]}"
++artix-meson geary build "${meson_options[@]}"
+ meson compile -C build
+ }

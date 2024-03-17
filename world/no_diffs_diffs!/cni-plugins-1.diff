@@ -1,0 +1,8 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -49,5 +49,4 @@
+   strip "$pkgdir/opt/cni/bin/"*
+   install -vdm755 "$pkgdir/etc/cni/net.d/"
+   install -vDm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+-  install -vDm644 plugins/ipam/dhcp/systemd/* -t "$pkgdir/usr/lib/systemd/system/"
+ }

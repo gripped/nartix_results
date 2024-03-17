@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ url="https://wayland.freedesktop.org/libinput/doc/$pkgver/"
+ arch=(x86_64)
+ license=(MIT)
+-depends=('mtdev' 'systemd' 'libevdev' 'libwacom' 'systemd-libs' 'glibc')
++depends=('mtdev' 'libevdev' 'libwacom' 'udev' 'glibc')
+ makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
+ checkdepends=('python-pytest')
+ optdepends=('gtk4: libinput debug-gui'
+@@ -17,7 +17,7 @@
+ sha256sums=('193bd592298bd9e369c0ef3e5d83a6a9d68ddc4cd3dfc84bbe77920a8d0d57df')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -D udev-dir=/usr/lib/udev \
+     -D documentation=false
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=libinput
+-depends=('mtdev' 'systemd' 'libevdev' 'libwacom' 'systemd-libs' 'glibc')
++depends=('mtdev' 'libevdev' 'libwacom' 'udev' 'glibc')
+ build() {
+-arch-meson $pkgname-$pkgver build \
++artix-meson $pkgname-$pkgver build \
+ -D udev-dir=/usr/lib/udev \
+ -D documentation=false
+ meson configure build

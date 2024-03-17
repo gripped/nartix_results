@@ -1,0 +1,88 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,21 +1,25 @@
+ 
+ pkgname=plasma-meta
+-pkgver=5.27
++pkgver=6.0
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=4
++pkgrel=2
+ pkgdesc='Meta package to install KDE Plasma'
+ arch=(any)
+ license=(None)
+ url='https://kde.org/plasma-desktop/'
+ depends=(bluedevil
++         breeze-gtk
++         discover
+          drkonqi
+          kde-gtk-config
+          kdeplasma-addons
+-         khotkeys
++         kgamma
+          kinfocenter
+          kscreen
+          ksshaskpass
++         kwallet-pam
+          kwrited
++         ocean-sound-theme
+          oxygen
+          oxygen-sounds
+          plasma-browser-integration
+@@ -29,13 +33,9 @@
+          plasma-thunderbolt
+          plasma-vault
+          plasma-welcome
+-         kwayland-integration
+-         kwallet-pam
+-         kgamma
++         powerdevil
++         print-manager
+          sddm-kcm
+-         breeze-gtk
+-         powerdevil
+-         discover
+          xdg-desktop-portal-kde
+ )
+ optdepends=('breeze-grub: Breeze theme for GRUB'
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,18 @@
+ pkgname=plasma-meta
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ depends=(bluedevil
++breeze-gtk
++discover
+ drkonqi
+ kde-gtk-config
+ kdeplasma-addons
+-khotkeys
++kgamma
+ kinfocenter
+ kscreen
+ ksshaskpass
++kwallet-pam
+ kwrited
++ocean-sound-theme
+ oxygen
+ oxygen-sounds
+ plasma-browser-integration
+@@ -22,12 +26,8 @@
+ plasma-thunderbolt
+ plasma-vault
+ plasma-welcome
+-kwayland-integration
+-kwallet-pam
+-kgamma
++powerdevil
++print-manager
+ sddm-kcm
+-breeze-gtk
+-powerdevil
+-discover
+ xdg-desktop-portal-kde
+ )

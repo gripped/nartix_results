@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=librest
+ pkgname=(librest librest-docs librest-demos)
+ pkgver=0.9.1
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="Library for accessing RESTful web services"
+ url="https://gitlab.gnome.org/GNOME/librest"
+ arch=(x86_64)
+@@ -28,7 +28,7 @@
+ }
+ 
+ build() {
+-  arch-meson librest build -D vapi=true
++  artix-meson librest build -D vapi=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ git apply -3 ../30.patch
+ }
+ build() {
+-arch-meson librest build -D vapi=true
++artix-meson librest build -D vapi=true
+ meson compile -C build
+ }
+ _pick() {

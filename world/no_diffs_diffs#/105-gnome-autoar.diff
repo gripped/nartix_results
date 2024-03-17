@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,7 @@
+   vala
+ )
+ provides=(libgnome-autoar{,-gtk}-${pkgver%%.*}.so)
++options=(debug)
+ _commit=b387c2482d2a5c8efdfc8c7498f13cd3881685c0  # tags/0.4.4^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-autoar.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -39,7 +40,7 @@
+     -D vapi=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+ libarchive
+ )
+ provides=(libgnome-autoar{,-gtk}-${pkgver%%.*}.so)
+ prepare() {
+ cd $pkgname
+ }
+@@ -14,6 +15,6 @@
+ -D tests=true
+ -D vapi=true
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

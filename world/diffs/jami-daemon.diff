@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,8 @@
+ groups=(jami)
+ depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
+          fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
+-         openssl webrtc-audio-processing systemd-libs libarchive)
+-makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio systemd meson)
++         openssl webrtc-audio-processing libudev libarchive)
++makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio udev meson)
+ checkdepends=(cppunit)
+ _commit=8c1c74f0f3dff84361302d65e724c899eb708f91
+ _pjprojectver=311bd018fc07aaf62d4c2d2494e08b5ee97e6846
+@@ -46,7 +46,7 @@
+   make DEPS_pjproject= DEPS_dhtnet=pjproject
+ 
+   cd "${srcdir}"
+-  arch-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
++  artix-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
+                               $( ((CHECKFUNC)) && echo -D tests=true) \
+                               -D pkg_config_path="${PWD}/${pkgname}/contrib/$(cc -dumpmachine)/lib/pkgconfig"
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ groups=(jami)
+ depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
+ fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
+-openssl webrtc-audio-processing systemd-libs libarchive)
++openssl webrtc-audio-processing libudev libarchive)
+ _pjprojectver=311bd018fc07aaf62d4c2d2494e08b5ee97e6846
+ _dhtnetver=fe79669b400d5e6a521fd1408dae02e0d4e50a5b
+ noextract=(pjproject-${_pjprojectver}.tar.gz
+@@ -22,7 +22,7 @@
+ --enable-dhtnet
+ make DEPS_pjproject= DEPS_dhtnet=pjproject
+ cd "${srcdir}"
+-arch-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
++artix-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
+ $( ((CHECKFUNC)) && echo -D tests=true) \
+ -D pkg_config_path="${PWD}/${pkgname}/contrib/$(cc -dumpmachine)/lib/pkgconfig"
+ meson compile -C build

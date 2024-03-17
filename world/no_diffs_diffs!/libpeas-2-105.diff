@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,7 +48,7 @@
+     -D vapi=true
+   )
+ 
+-  arch-meson libpeas build "${meson_options[@]}"
++  artix-meson libpeas build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ -D gtk_doc=true
+ -D vapi=true
+ )
+-arch-meson libpeas build "${meson_options[@]}"
++artix-meson libpeas build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

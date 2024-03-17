@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(ncurses)
+ makedepends=(nasm)
+ provides=(libmp3lame.so)
++options=(debug)
+ source=(
+   https://downloads.sourceforge.net/$pkgname/$pkgname-$pkgver.tar.gz
+   $pkgname.pc.in
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ pkgname=lame
+ depends=(ncurses)
+ provides=(libmp3lame.so)
+ prepare() {
+ sed -e "s/VERSION/$pkgver/" $pkgname.pc.in > $pkgname.pc
+ }

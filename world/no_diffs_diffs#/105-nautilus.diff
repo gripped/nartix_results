@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   libnautilus-extension
+   libnautilus-extension-docs
+ )
+-pkgver=45.2
++pkgver=45.2.1
+ pkgrel=1
+ pkgdesc="Default file manager for GNOME"
+ url="https://wiki.gnome.org/Apps/Files"
+@@ -40,7 +40,7 @@
+   tracker3-miners
+ )
+ checkdepends=(python-gobject)
+-_commit=5e84f663e7e01314a8e364fba50451e011938b7a  # tags/45.2^0
++_commit=46c13f34bf1008ad79bf5f52d772afd296a58c94  # tags/45.2.1^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
+ )
+@@ -61,7 +61,7 @@
+     -D packagekit=false
+   )
+ 
+-  arch-meson nautilus build "${meson_options[@]}"
++  artix-meson nautilus build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,7 @@
+ -D docs=true
+ -D packagekit=false
+ )
+-arch-meson nautilus build "${meson_options[@]}"
++artix-meson nautilus build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

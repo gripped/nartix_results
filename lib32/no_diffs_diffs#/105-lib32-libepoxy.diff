@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,9 @@
+ arch=(x86_64)
+ license=(MIT)
+ depends=(lib32-glibc)
+-makedepends=(git meson lib32-libgl lib32-systemd)
++makedepends=('git' 'lib32-libgl' 'lib32-elogind' 'meson')
+ checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=c84bc9459357a40e46e2fec0408d04fbdde2c973  # tags/1.5.10^0
+ source=("git+https://github.com/anholt/libepoxy#commit=$_commit")
+ sha256sums=('SKIP')
+@@ -27,7 +28,7 @@
+   export CC='gcc -m32'
+   export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
+ 
+-  arch-meson libepoxy build --libdir=/usr/lib32
++  artix-meson libepoxy build --libdir=/usr/lib32
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,12 @@
+ pkgname=lib32-libepoxy
+ depends=(lib32-glibc)
+ prepare() {
+ cd libepoxy
+ }
+ build() {
+ export CC='gcc -m32'
+ export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
+-arch-meson libepoxy build --libdir=/usr/lib32
++artix-meson libepoxy build --libdir=/usr/lib32
+ meson compile -C build
+ }

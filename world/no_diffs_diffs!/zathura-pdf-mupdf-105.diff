@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=zathura-pdf-mupdf
+ pkgver=0.4.1
+-pkgrel=16
++pkgrel=12.1
+ 
+ pkgdesc="PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)"
+ url="https://pwmt.org/projects/zathura-pdf-mupdf/"
+ arch=('x86_64')
+-license=('Zlib')
++license=('zlib')
+ 
+ conflicts=('zathura-pdf-poppler')
+ 
+@@ -26,7 +26,7 @@
+ 
+ build() {
+   cd zathura-pdf-mupdf-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ }
+ build() {
+ cd zathura-pdf-mupdf-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

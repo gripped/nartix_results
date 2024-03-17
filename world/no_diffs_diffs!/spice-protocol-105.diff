@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,12 +8,12 @@
+ license=('BSD' 'LGPL2.1')
+ makedepends=('meson')
+ source=(https://gitlab.freedesktop.org/spice/spice-protocol/-/archive/v$pkgver/spice-protocol-v$pkgver.tar.gz)
+-sha256sums=('9c31fa533ad531d1b816ffd0c24b4785d133e7bb397f72d35f7a6d59bcd7d53a')
++md5sums=('e4c4651efba3bed061ec2e874aa22f21')
+ 
+ build() {
+   mkdir build
+   cd "$srcdir/$pkgname-v$pkgver"
+-  arch-meson ../build
++  artix-meson ../build
+   ninja -v -C ../build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ build() {
+ mkdir build
+ cd "$srcdir/$pkgname-v$pkgver"
+-arch-meson ../build
++artix-meson ../build
+ ninja -v -C ../build
+ }

@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ arch=('x86_64')
+ url='https://tox.chat'
+ license=('GPL3')
+-depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
++depends=('esysusers' 'etmpfiles' 'libconfig' 'libsodium' 'libvpx' 'opus')
+ makedepends=('check' 'cmake')
+ conflicts=("tox")
+ provides=("tox")
+@@ -35,7 +35,6 @@
+ 
+ prepare() {
+   cd $_pkgname-$pkgver
+-  sed -i "s|/usr/local|/usr|" other/bootstrap_daemon/tox-bootstrapd.service
+   sed -i "/Rpath/d;/RPATH/d" CMakeLists.txt
+ }
+ 
+@@ -60,6 +59,5 @@
+   make DESTDIR="$pkgdir" install
+   install -Dm644 "$srcdir/toxcore.conf" "$pkgdir/usr/lib/sysusers.d/toxcore.conf"
+   install -Dm644 "$srcdir/toxcore.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/toxcore.conf"
+-  install -Dm644 ../other/bootstrap_daemon/tox-bootstrapd.service "$pkgdir/usr/lib/systemd/system/tox-bootstrapd.service"
+   install -Dm644 ../other/bootstrap_daemon/tox-bootstrapd.conf "$pkgdir/etc/tox-bootstrapd.conf"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,11 @@
+ pkgname=toxcore
+ _pkgname=c-toxcore
+-depends=('systemd' 'libconfig' 'libsodium' 'libvpx' 'opus')
++depends=('esysusers' 'etmpfiles' 'libconfig' 'libsodium' 'libvpx' 'opus')
+ conflicts=("tox")
+ provides=("tox")
+ backup=('etc/tox-bootstrapd.conf')
+ prepare() {
+ cd $_pkgname-$pkgver
+-sed -i "s|/usr/local|/usr|" other/bootstrap_daemon/tox-bootstrapd.service
+ sed -i "/Rpath/d;/RPATH/d" CMakeLists.txt
+ }
+ build() {

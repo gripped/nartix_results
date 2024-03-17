@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $_pkgname-$pkgver \
++  artix-cmake -B build -S $_pkgname-$pkgver \
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \
+     -DBUILD_TESTING=OFF
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ groups=(kde-applications kde-network telepathy-kde)
+ depends=(telepathy-kde-common-internals kemoticons)
+ build() {
+-cmake -B build -S $_pkgname-$pkgver \
++artix-cmake -B build -S $_pkgname-$pkgver \
+ -DCMAKE_INSTALL_LIBEXECDIR=lib \
+ -DBUILD_TESTING=OFF
+ cmake --build build

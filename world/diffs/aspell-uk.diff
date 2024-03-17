@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url="http://ispell-uk.sourceforge.net/"
+ license=('GPL' 'LGPL' 'MPL')
+ depends=('aspell')
+-source=(https://ftp.gnu.org/gnu/aspell/dict/uk/aspell6-uk-${_ftpver}-0.tar.bz2
++source=(ftp://ftp.gnu.org/gnu/aspell/dict/uk/aspell6-uk-${_ftpver}-0.tar.bz2
+         https://downloads.sourceforge.net/project/ispell-uk/spell-uk/$pkgver/spell-uk-$pkgver.tgz
+         aspell-uk-perl-5.26.patch)
+ sha256sums=('35f9a7e840c1272706bc6dd172bc9625cbd843d021094da8598a6abba525f18c'
+@@ -21,17 +21,17 @@
+ }
+ 
+ build() {
+-  cd "${srcdir}"/spell-uk-$pkgver
++  cd ${srcdir}/spell-uk-$pkgver
+   make
+ 
+-  cd "${srcdir}"/aspell6-uk-${_ftpver}-0
++  cd ${srcdir}/aspell6-uk-${_ftpver}-0
+   ./configure
+   make
+ 
+ }
+ 
+ package() {
+-  cd "${srcdir}"/aspell6-uk-${_ftpver}-0
++  cd ${srcdir}/aspell6-uk-${_ftpver}-0
+ 
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,9 +6,9 @@
+ patch -p1 -i ../aspell-uk-perl-5.26.patch # Fix build with perl 5.26
+ }
+ build() {
+-cd "${srcdir}"/spell-uk-$pkgver
++cd ${srcdir}/spell-uk-$pkgver
+ make
+-cd "${srcdir}"/aspell6-uk-${_ftpver}-0
++cd ${srcdir}/aspell6-uk-${_ftpver}-0
+ ./configure
+ make
+ }

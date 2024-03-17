@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,11 +23,9 @@
+ _tag=2a06dba108f789ff40bda019edb00df16392cf6d # git rev-parse v${pkgver}
+ source=(git+https://github.com/go-gitea/gitea.git#tag=${_tag}?signed
+         gitea.tmpfiles
+-        gitea.service
+         gitea.sysusers)
+ sha256sums=('SKIP'
+             '1521fd7edc3830c695698ffe9835709f1408040b5ec989f07410972c894fa8ba'
+-            'b16d02a9f32a17cc14dfa46a980bad795a4ed744627e6342248f60236dc2be43'
+             '7e7b798b8ce035c1fb55993ece41c5efb6cad5922708866804fa50ada0cf9fa5')
+ validpgpkeys=(
+   B56E3C7437A49E136862F5DE9D8A57ADAA232E95  # Matti Ranta <matti@mdranta.net>, retrieved from https://github.com/techknowlogick.gpg
+@@ -69,7 +67,6 @@
+ package() {
+   install -Dm755 ${pkgname}/${pkgname} -t "${pkgdir}"/usr/bin/
+   install -Dm644 ${pkgname}/LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
+-  install -Dm644 ${pkgname}.service -t "${pkgdir}"/usr/lib/systemd/system/
+   install -Dm644 ${pkgname}.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/${pkgname}.conf
+   install -Dm644 ${pkgname}.sysusers "${pkgdir}"/usr/lib/sysusers.d/${pkgname}.conf
+   install -Dm644 ${pkgname}/custom/conf/app.example.ini "${pkgdir}"/etc/gitea/app.ini

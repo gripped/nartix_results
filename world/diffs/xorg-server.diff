@@ -1,0 +1,107 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,9 +5,7 @@
+ pkgver=21.1.11
+ pkgrel=1
+ arch=('x86_64')
+-license=('LicenseRef-Adobe-Display-PostScript AND BSD-3-Clause AND LicenseRef-DEC-3-Clause AND HPND AND
+-LicenseRef-HPND-sell-MIT-disclaimer-xserver AND HPND-sell-variant AND ICU AND ISC AND MIT AND MIT-open-group AND NTP AND
+-SGI-B-2.0 AND SMLNJ AND X11 AND X11-distribute-modifications-variant')
++license=('MIT')
+ groups=('xorg')
+ url="https://xorg.freedesktop.org"
+ makedepends=('xorgproto' 'pixman' 'libx11' 'mesa' 'mesa-libgl' 'xtrans'
+@@ -15,7 +13,7 @@
+              'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
+              'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
+              'xcb-util' 'xcb-util-image' 'xcb-util-renderutil' 'xcb-util-wm' 'xcb-util-keysyms'
+-             'libxshmfence' 'libunwind' 'systemd' 'meson' 'git')
++             'libxshmfence' 'libunwind' 'elogind' 'meson' 'git')
+ source=(https://xorg.freedesktop.org/releases/individual/xserver/${pkgbase}-${pkgver}.tar.xz{,.sig}
+         xvfb-run # with updates from FC master
+         xvfb-run.1
+@@ -33,11 +31,8 @@
+ }
+ 
+ build() {
+-  export CFLAGS=${CFLAGS/-fno-plt}
+-  export CXXFLAGS=${CXXFLAGS/-fno-plt}
+-  export LDFLAGS=${LDFLAGS/,-z,now}
+ 
+-  arch-meson ${pkgbase}-$pkgver build \
++  artix-meson ${pkgbase}-$pkgver build \
+     -D ipv6=true \
+     -D xvfb=true \
+     -D xnest=true \
+@@ -106,7 +101,7 @@
+ 
+ package_xorg-server-xephyr() {
+   pkgdesc="A nested X server that runs as an X application"
+-  depends=(libxfont2 libgl libepoxy libunwind systemd-libs libxv pixman xorg-server-common
++  depends=(libxfont2 libgl libepoxy libunwind libelogind libxv pixman xorg-server-common
+            xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
+            nettle libtirpc)
+ 
+@@ -119,7 +114,7 @@
+ package_xorg-server-xvfb() {
+   pkgdesc="Virtual framebuffer X server"
+   depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
+-           libgl nettle libtirpc systemd-libs)
++           libgl nettle libtirpc libelogind)
+ 
+   _install fakeinstall/usr/bin/Xvfb
+   _install fakeinstall/usr/share/man/man1/Xvfb.1
+@@ -132,7 +127,7 @@
+ 
+ package_xorg-server-xnest() {
+   pkgdesc="A nested X server that runs as an X application"
+-  depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc systemd-libs)
++  depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc libelogind)
+ 
+   _install fakeinstall/usr/bin/Xnest
+   _install fakeinstall/usr/share/man/man1/Xnest.1
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,10 +9,7 @@
+ cd ${pkgbase}-$pkgver
+ }
+ build() {
+-export CFLAGS=${CFLAGS/-fno-plt}
+-export CXXFLAGS=${CXXFLAGS/-fno-plt}
+-export LDFLAGS=${LDFLAGS/,-z,now}
+-arch-meson ${pkgbase}-$pkgver build \
++artix-meson ${pkgbase}-$pkgver build \
+ -D ipv6=true \
+ -D xvfb=true \
+ -D xnest=true \
+@@ -67,7 +64,7 @@
+ install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ package_xorg-server-xephyr() {
+-depends=(libxfont2 libgl libepoxy libunwind systemd-libs libxv pixman xorg-server-common
++depends=(libxfont2 libgl libepoxy libunwind libelogind libxv pixman xorg-server-common
+ xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
+ nettle libtirpc)
+ _install fakeinstall/usr/bin/Xephyr
+@@ -76,7 +73,7 @@
+ }
+ package_xorg-server-xvfb() {
+ depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
+-libgl nettle libtirpc systemd-libs)
++libgl nettle libtirpc libelogind)
+ _install fakeinstall/usr/bin/Xvfb
+ _install fakeinstall/usr/share/man/man1/Xvfb.1
+ install -m755 "${srcdir}/xvfb-run" "${pkgdir}/usr/bin/"
+@@ -84,7 +81,7 @@
+ install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ package_xorg-server-xnest() {
+-depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc systemd-libs)
++depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle libtirpc libelogind)
+ _install fakeinstall/usr/bin/Xnest
+ _install fakeinstall/usr/share/man/man1/Xnest.1
+ install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING

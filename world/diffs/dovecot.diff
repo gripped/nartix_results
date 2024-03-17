@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,8 +10,8 @@
+ license=("LGPL")
+ 
+ depends=('krb5' 'openssl' 'sqlite' 'mariadb-libs' 'libsodium'
+-         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam' 'systemd-libs')
+-makedepends=('libcap' 'libldap' 'lua53' 'xz' 'clucene' 'systemd')
++         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam')
++makedepends=('libcap' 'libldap' 'lua53' 'xz' 'clucene')
+ optdepends=('libldap: ldap plugin'
+             'lua53: LUA auth and push support'
+             'clucene: alternative FTS indexer')
+@@ -63,6 +63,7 @@
+     --libexecdir=/usr/lib \
+     --with-rundir=/run/dovecot \
+     --with-moduledir=/usr/lib/dovecot/modules \
++    --with-systemdsystemunitdir=no \
+     --disable-static \
+     --with-nss \
+     --with-pam \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=dovecot
+ depends=('krb5' 'openssl' 'sqlite' 'mariadb-libs' 'libsodium'
+-'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam' 'systemd-libs')
++'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam')
+ provides=('imap-server' 'pop3-server')
+ backup=('etc/pam.d/dovecot')
+ options=('!emptydirs' '!lto')
+@@ -21,6 +21,7 @@
+ --libexecdir=/usr/lib \
+ --with-rundir=/run/dovecot \
+ --with-moduledir=/usr/lib/dovecot/modules \
++--with-systemdsystemunitdir=no \
+ --disable-static \
+ --with-nss \
+ --with-pam \

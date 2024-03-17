@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zathura-djvu
+ pkgver=0.2.9
+-pkgrel=4
++pkgrel=4.1
+ 
+ pkgdesc="DjVu support for Zathura"
+ url="https://pwmt.org/projects/zathura-djvu/"
+@@ -17,7 +17,7 @@
+ 
+ build(){
+   cd zathura-djvu-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('djvulibre' 'zathura' 'desktop-file-utils')
+ build(){
+ cd zathura-djvu-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ license=('custom')
+ install=$pkgname.install
+ pkgdesc="X.org Intel i810/i830/i915/945G/G965+ video drivers"
+-depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9' 'systemd-libs')
++depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9' 'libudev.so')
+ makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=25.2' 'libx11' 'libxrender' 'libxv'
+              'libxrandr' 'libxinerama' 'libxcursor' 'libxtst' 'libxss'
+              'git') # 'meson' 'valgrind')
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=xf86-video-intel
+ install=$pkgname.install
+-depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9' 'systemd-libs')
++depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9' 'libudev.so')
+ replaces=('xf86-video-intel-uxa' 'xf86-video-intel-sna')
+ provides=('xf86-video-intel-uxa' 'xf86-video-intel-sna')
+ conflicts=('xorg-server<21.1.1' 'X-ABI-VIDEODRV_VERSION<25' 'X-ABI-VIDEODRV_VERSION>=26'

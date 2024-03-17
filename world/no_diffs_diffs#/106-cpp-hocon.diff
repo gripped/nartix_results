@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ build() {
+   cd "$pkgname-$pkgver"
+ 
+-  cmake \
++  artix-cmake \
+     -B build \
+     -DCMAKE_BUILD_TYPE=None \
+     -DENABLE_CXX_WERROR=OFF \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ }
+ build() {
+ cd "$pkgname-$pkgver"
+-cmake \
++artix-cmake \
+ -B build \
+ -DCMAKE_BUILD_TYPE=None \
+ -DENABLE_CXX_WERROR=OFF \
