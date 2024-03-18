@@ -209,6 +209,7 @@ gnome-bluetooth-3.0
 gnome-builder
 gnome-builder-clang
 gnome-builder-flatpak
+gnome-control-center
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
