@@ -4,8 +4,9 @@
  
  pkgname=bazel
 -pkgver=7.0.2
+-pkgrel=1
 +pkgver=7.1.0
- pkgrel=1
++pkgrel=2
  pkgdesc='Correct, reproducible, and fast builds for everyone'
  arch=('x86_64')
 -license=('Apache')
@@ -13,11 +14,12 @@
  url='https://bazel.build/'
  depends=('java-environment=11' 'libarchive' 'zip' 'unzip')
  makedepends=('git' 'protobuf' 'python')
- options=('!distcc' '!strip')
+-options=('!distcc' '!strip')
 -source=("https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"
 -        "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip.sig")
 -b2sums=('fb3f1d0c35b242f15dd9680cb7b6addf0473aa291b3d6b09af0f4709e454e8dd91f88dc74f82768b560e199e4974a0cb11523b08369baa5a1117c0a9a020a1cf'
 -        'SKIP')
++options=('!debug' '!strip')
 +source=(
 +  "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"{,.sig}
 +  $pkgname-7.0.2-python_312.patch
@@ -42,7 +44,8 @@
 @@ -1,6 +1,9 @@
  pkgname=bazel
  depends=('java-environment=11' 'libarchive' 'zip' 'unzip')
- options=('!distcc' '!strip')
+-options=!distcc!strip
++options=!!strip
 +prepare() {
 +patch -Np1 -i $pkgname-7.0.2-python_312.patch
 +}

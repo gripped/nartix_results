@@ -1,14 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,28 +6,21 @@
+@@ -1,33 +1,26 @@
+ 
+ pkgname=rpcbind
+ pkgver=1.2.6
+-pkgrel=3
++pkgrel=4
+ pkgdesc="portmap replacement which supports RPC over various protocols"
  arch=(x86_64)
  url="http://rpcbind.sourceforge.net"
- license=('custom')
+-license=('custom')
 -backup=('etc/conf.d/rpcbind')
 -depends=('bash' 'glibc' 'libtirpc' 'systemd-libs')
 -makedepends=('systemd')
-+depends=('bash' 'glibc' 'libtirpc')
-+options=('debug')
++license=('BSD-3-Clause')
++depends=('glibc' 'libtirpc')
++makedepends=('udev')
  replaces=('portmap')
  source=(https://downloads.sourceforge.net/sourceforge/$pkgname/$pkgname-$pkgver.tar.bz2
          rpcbind-sunrpc.patch
@@ -61,11 +68,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,10 @@
+@@ -1,11 +1,9 @@
  pkgname=rpcbind
 -backup=('etc/conf.d/rpcbind')
 -depends=('bash' 'glibc' 'libtirpc' 'systemd-libs')
-+depends=('bash' 'glibc' 'libtirpc')
++depends=('glibc' 'libtirpc')
  replaces=('portmap')
  prepare() {
  cd $pkgname-$pkgver
@@ -74,7 +81,7 @@
  patch -Np1 -i ../CVE-2017-8779.diff
  }
  build() {
-@@ -14,6 +13,7 @@
+@@ -14,6 +12,7 @@
  --with-rpcuser=rpc \
  --enable-warmstarts \
  --with-statedir=/var/lib/rpcbind \

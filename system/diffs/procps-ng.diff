@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=procps-ng
+ pkgver=4.0.4
+-pkgrel=2
++pkgrel=3
+ pkgdesc='Utilities for monitoring your system and its processes'
  url='https://gitlab.com/procps-ng/procps'
  license=(GPL LGPL)
  arch=(x86_64)
@@ -11,12 +17,11 @@
  conflicts=(procps sysvinit-tools)
  provides=(procps sysvinit-tools libproc2.so)
  replaces=(procps sysvinit-tools)
-@@ -43,7 +43,8 @@
+@@ -43,7 +43,7 @@
      --bindir=/usr/bin \
      --sbindir=/usr/bin \
      --enable-watch8bit \
 -    --with-systemd \
-+    --without-systemd \
 +    --with-elogind \
      --disable-modern-top \
      --disable-kill
@@ -34,12 +39,11 @@
  conflicts=(procps sysvinit-tools)
  provides=(procps sysvinit-tools libproc2.so)
  replaces=(procps sysvinit-tools)
-@@ -21,7 +21,8 @@
+@@ -21,7 +21,7 @@
  --bindir=/usr/bin \
  --sbindir=/usr/bin \
  --enable-watch8bit \
 ---with-systemd \
-+--without-systemd \
 +--with-elogind \
  --disable-modern-top \
  --disable-kill

@@ -736,7 +736,6 @@ harfbuzz-cairo
 harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
-hddtemp
 hdf5
 helix
 help2man
@@ -4227,7 +4226,6 @@ tinycompress
 tinyprog
 tinyxml
 tinyxml2
-tk
 tl-expected
 tldp-howtos-txt
 tldr
@@ -4376,10 +4374,6 @@ words
 wpebackend-fdo
 wqy-zenhei
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264
@@ -4562,8 +4556,6 @@ zopfli
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
-zsh
-zsh-doc
 zug
 zvbi
 zxing-cpp

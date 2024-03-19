@@ -284,6 +284,7 @@ gvfs-google
 gwenview
 haproxy
 haveged
+hddtemp
 hidapi
 hwloc
 hyprland
@@ -1325,6 +1326,7 @@ thunderbird
 tigervnc
 timew
 tinyproxy
+tk
 tlp
 tlp-rdw
 tmux
@@ -1406,6 +1408,10 @@ wlroots0.15
 woff2
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 xapian-core
 xapian-core-docs
 xaw3d
@@ -1460,4 +1466,6 @@ zanshin
 zeromq
 zig
 znc
+zsh
+zsh-doc
 proxytunnel
