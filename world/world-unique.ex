@@ -725,3 +725,5 @@ znc-openrc
 znc-runit
 znc-s6
 run-parts
+hyprcursor
+python-objsize

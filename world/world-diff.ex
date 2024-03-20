@@ -1,3 +1,5 @@
+a2ps
+accerciser
 accounts-qml-module
 accountsservice
 akonadi-calendar-tools
@@ -965,6 +967,7 @@ print-manager
 prison
 prometheus
 prosody
+psutils
 pulseaudio-qt
 pulseaudio
 libpulse
@@ -1013,6 +1016,7 @@ python-dateutil
 python-debugpy
 python-deprecated
 python-django-mailman3
+python-django-rest-framework
 python-docker-pycreds
 python-elasticsearch
 python-feedgen
@@ -1057,6 +1061,7 @@ python-pyaml
 python-pycountry
 python-pyicu
 python-pykka
+python-pynitrokey
 python-pyopencl
 pyopencl-headers
 python-pyrfc3339

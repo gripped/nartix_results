@@ -1,10 +1,8 @@
 0ad-data
 0ad
-a2ps
 a52dec
 aalib
 abseil-cpp
-accerciser
 acme-tiny
 acpi
 acpi_call-dkms
@@ -2277,7 +2275,6 @@ protobuf
 python-protobuf
 prrte
 prrte-docs
-psutils
 publicsuffix-list
 pugixml
 putty
@@ -2561,7 +2558,6 @@ python-django-guardian
 python-django-haystack
 python-django-picklefield
 python-django-q
-python-django-rest-framework
 python-django-sekizai
 python-dkim
 python-dnspython
@@ -3086,7 +3082,6 @@ python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
-python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
