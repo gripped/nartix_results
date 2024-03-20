@@ -278,7 +278,6 @@ colord-gtk
 colord-gtk-common
 colord-gtk4
 colordiff
-comgr
 compiler-rt14
 compiler-rt15
 confuse
@@ -746,15 +745,12 @@ hiera
 highlight
 highlight-gui
 highway
-hip-runtime-amd
 hiredis
 hitori
 hivex
 hostapd
 hotdoc
 hplip
-hsa-rocr
-hsakmt-roct
 hspell
 hunspell-he
 htop
@@ -2803,7 +2799,6 @@ python-lazy-object-proxy
 python-ldap
 python-ldap3
 python-lexicon
-python-libarchive-c
 python-libcst
 python-libevdev
 python-librabbitmq
@@ -3414,7 +3409,6 @@ python-ukpostcodeparser
 python-ulid-transform
 python-ulid
 python-uncertainties
-python-unearth
 python-unicodedata2
 python-unidecode
 python-unidiff
@@ -3609,13 +3603,6 @@ robin-map
 roc-toolkit
 rocblas
 rocfft
-rocm-cmake
-rocm-core
-rocm-device-libs
-rocm-llvm
-rocm-opencl-runtime
-rocminfo
-rocprim
 rocrand
 rocsparse
 rocthrust

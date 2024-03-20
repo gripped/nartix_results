@@ -14,6 +14,7 @@ lib32-libnghttp2
 lib32-libpciaccess
 lib32-libpulse
 lib32-libudev0-shim
+lib32-libunwind
 lib32-libusb
 lib32-libxcb
 lib32-llvm

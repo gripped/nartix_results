@@ -100,6 +100,7 @@ colord-kde
 colord
 colord-sane
 libcolord
+comgr
 compiler-rt
 conky
 conmon
@@ -288,6 +289,9 @@ haproxy
 haveged
 hddtemp
 hidapi
+hip-runtime-amd
+hsa-rocr
+hsakmt-roct
 hwloc
 hyprland
 i2pd
@@ -1038,6 +1042,7 @@ python-jose
 python-kaitaistruct
 python-kiwisolver
 python-levenshtein
+python-libarchive-c
 python-libtmux
 python-logbook
 python-lsp-black
@@ -1097,6 +1102,7 @@ python-starlette
 python-text-unidecode
 python-tpm2-pytss
 python-txtorcon
+python-unearth
 python-unittest-mixins
 python-urwid
 python-vine
@@ -1258,6 +1264,13 @@ refind
 refind-docs
 rkcommon
 rng-tools
+rocm-cmake
+rocm-core
+rocm-device-libs
+rocm-llvm
+rocm-opencl-runtime
+rocminfo
+rocprim
 rocs
 rspamd
 rsync

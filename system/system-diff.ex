@@ -20,6 +20,7 @@ gssproxy
 iana-etc
 iptables
 iptables-nft
+libcap
 libnghttp2
 libusb
 linux-firmware

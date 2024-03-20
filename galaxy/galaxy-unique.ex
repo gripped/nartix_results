@@ -219,3 +219,4 @@ zathura-pdf-mupdf
 zathura-pdf-poppler
 zathura-ps
 zathura
+libtg_owt
