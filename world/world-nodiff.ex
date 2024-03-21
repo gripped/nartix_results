@@ -4180,7 +4180,6 @@ testdisk
 tevent
 tex-gyre-fonts
 texi2html
-texlive-bin
 texlive-core
 texlive-fontsextra
 texlive-formatsextra
@@ -4188,9 +4187,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver5
 thrift

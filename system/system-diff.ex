@@ -15,6 +15,7 @@ debuginfod
 glibc
 lib32-glibc
 glibc-locales
+gnutls
 grub
 gssproxy
 iana-etc

@@ -1339,6 +1339,10 @@ telegram-desktop
 tellico
 telly-skout
 template-glib
+texlive-bin
+texlive-texmf
+texlive-doc
+texlive-meta
 threadweaver
 thunderbird
 tigervnc
