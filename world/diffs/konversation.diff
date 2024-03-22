@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,66 @@
+@@ -1,24 +1,60 @@
  
  pkgname=konversation
 -pkgver=23.08.5
--pkgrel=1
-+pkgver=24.02.0
-+pkgrel=3
++pkgver=24.02.1
+ pkgrel=1
  pkgdesc='A user-friendly and fully-featured IRC client'
  arch=(x86_64)
  url='https://apps.kde.org/konversation/'
@@ -15,9 +14,6 @@
 -makedepends=(extra-cmake-modules kdoctools5)
 -license=(GPL2 FDL)
 -groups=(kde-applications kde-network)
--source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('60576f16773789596b612969bbbf3a2762ef1cbab21bc19565483310e63d25be'
--            'SKIP')
 +license=(GPL-2.0-or-later)
 +depends=(gcc-libs
 +         glibc
@@ -59,19 +55,14 @@
 +             kdoctools)
 +groups=(kde-applications
 +        kde-network)
-+source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
-+        https://invent.kde.org/network/konversation/-/commit/1d554cb2.patch)
-+sha256sums=('c8d754a18ff1f6894ad581c97b94c3263e4be238a17e32f9c28c96064b8182e9'
-+            'SKIP'
-+            '5790d1df335fd77f1e261551b83b108f627a07b334fe8548dc2e888cd29c78b3')
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('60576f16773789596b612969bbbf3a2762ef1cbab21bc19565483310e63d25be'
++sha256sums=('cc61dfd056680c3e06a0da74dc02d319d12dcbad1c2c7835e00415e938866c0d'
+             'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
-+prepare() {
-+  patch -d $pkgname-$pkgver -p1 < 1d554cb2.patch # Fix closing the application when system tray is enabled
-+}
-+
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \
@@ -84,7 +75,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,45 @@
+@@ -1,8 +1,42 @@
  pkgname=konversation
 -depends=(knotifyconfig5 kparts5 kidletime5 knewstuff5 qca-qt5 hicolor-icon-theme perl)
 -groups=(kde-applications kde-network)
@@ -124,9 +115,6 @@
 +sh)
 +groups=(kde-applications
 +kde-network)
-+prepare() {
-+patch -d $pkgname-$pkgver -p1 < 1d554cb2.patch # Fix closing the application when system tray is enabled
-+}
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 +artix-cmake -B build -S $pkgname-$pkgver \

@@ -23,6 +23,7 @@ lib32-vulkan-mesa-layers
 lib32-opencl-clover-mesa
 lib32-opencl-rusticl-mesa
 lib32-vulkan-intel
+lib32-vulkan-nouveau
 lib32-vulkan-radeon
 lib32-vulkan-swrast
 lib32-vulkan-virtio

@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,32 +1,78 @@
+@@ -1,32 +1,72 @@
  
  pkgname=kdenlive
 -pkgver=23.08.5
--pkgrel=1
-+pkgver=24.02.0
-+pkgrel=2
++pkgver=24.02.1
+ pkgrel=1
  pkgdesc='A non-linear video editor for Linux using the MLT video framework'
  arch=(x86_64)
  url='https://apps.kde.org/kdenlive/'
@@ -68,27 +67,19 @@
 -            'bigsh0t: VR360 effects'
 -            'mediainfo: for technical clip information'
 -            'noise-suppression-for-voice: noise suppression effect')
--source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('9ae96458e6a257c323f9845341410a140740260f3f8971ce35004de5161a83db'
--            'SKIP')
 +            'python: for scripts'
 +            'qt6-imageformats: support for tiff, webp, and more image formats'
 +            'recordmydesktop: for screen capture')
 +groups=(kde-applications
 +        kde-multimedia)
-+source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
-+        https://invent.kde.org/multimedia/kdenlive/-/commit/56cb0ef5.patch)
-+sha256sums=('135a91e9918eb631feb822b678625f3557e95b6a5e86bde1d3ac1df634015146'
-+            'SKIP'
-+            '5fbad0c4cec97724d789640be2595e0d7f4e2220bc8c4386bdacdbe862b1c578')
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('9ae96458e6a257c323f9845341410a140740260f3f8971ce35004de5161a83db'
++sha256sums=('1f77475259a82c5ba2d94ee975f4aeaa9b0c0db125504c13ef718b1408575056'
+             'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
-+prepare() {
-+  patch -d $pkgname-$pkgver -p1 < 56cb0ef5.patch # Fix crashes due to thumbnailer loading Qt5 mlt plugins
-+}
-+
  build() {
 -  cmake -B build -S $pkgname-$pkgver \
 +  artix-cmake -B build -S $pkgname-$pkgver \
@@ -101,7 +92,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,45 @@
+@@ -1,8 +1,42 @@
  pkgname=kdenlive
 -groups=(kde-applications kde-multimedia)
 -depends=(qt5-networkauth knewstuff5 knotifyconfig5 kfilemetadata5 purpose5 mlt breeze-icons frei0r-plugins)
@@ -141,9 +132,6 @@
 +solid)
 +groups=(kde-applications
 +kde-multimedia)
-+prepare() {
-+patch -d $pkgname-$pkgver -p1 < 56cb0ef5.patch # Fix crashes due to thumbnailer loading Qt5 mlt plugins
-+}
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 +artix-cmake -B build -S $pkgname-$pkgver \

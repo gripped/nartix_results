@@ -761,6 +761,7 @@ vulkan-mesa-layers
 opencl-clover-mesa
 opencl-rusticl-mesa
 vulkan-intel
+vulkan-nouveau
 vulkan-radeon
 vulkan-swrast
 vulkan-virtio
@@ -1426,6 +1427,7 @@ webp-pixbuf-loader
 weston
 wireplumber
 libwireplumber
+wireplumber-docs
 wlroots0.15
 woff2
 wpewebkit

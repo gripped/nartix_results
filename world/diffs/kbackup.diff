@@ -4,7 +4,7 @@
  
  pkgname=kbackup
 -pkgver=23.08.5
-+pkgver=24.02.0
++pkgver=24.02.1
  pkgrel=1
  pkgdesc='A program that lets you back up any directories or files'
  arch=(x86_64)
@@ -38,7 +38,7 @@
 +        kde-utilities)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
 -sha256sums=('a16c4d5a67ea6c4cb7c7580f0b3551a34879f5e9db94700ec406a72aecc6be5f'
-+sha256sums=('eb30cef79442ec3d43a7d9ab018b5175eb9ecfc3c32a69bae4fa4d765c5e92bd'
++sha256sums=('ab5afe6f3f68537ccf0c82c877d2a2ce6d276bdd1ad303511f727f0aaf2f4b7e'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

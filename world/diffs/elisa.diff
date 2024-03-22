@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,44 @@
+@@ -1,23 +1,45 @@
  
  pkgname=elisa
 -pkgver=23.08.5
-+pkgver=24.02.0
++pkgver=24.02.1
  pkgrel=1
  pkgdesc='A simple music player aiming to provide a nice experience for its users'
  url='https://apps.kde.org/elisa/'
@@ -13,7 +13,7 @@
 -groups=(kde-applications kde-multimedia)
 -depends=(baloo5 kirigami2 vlc) # upnp-player-qt
 -makedepends=(extra-cmake-modules kdoctools5)
-+license=(LGPL-2.0-or-later3)
++license=(LGPL-2.0-or-later)
 +depends=(gcc-libs
 +         glibc
 +         kcolorscheme
@@ -30,6 +30,7 @@
 +         kitemviews
 +         kxmlgui
 +         qqc2-desktop-style
++         qt6-5compat
 +         qt6-base
 +         qt6-declarative
 +         qt6-multimedia
@@ -40,7 +41,7 @@
 +        kde-multimedia)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
 -sha256sums=('872cc4f1be3177c92906bf1b47d7f36729e3c4a741099c7a62d8b170eb02b4c2'
-+sha256sums=('ecb670005aa3bb1dd0f407c2ac0331c703194cfb2b1346492ffc3361b840b8b4'
++sha256sums=('5985d1b5ae850a279a603a7d3ae9724e4a8b69b11d131790154e016e6927a80e'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
@@ -58,7 +59,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,28 @@
+@@ -1,8 +1,29 @@
  pkgname=elisa
 -groups=(kde-applications kde-multimedia)
 -depends=(baloo5 kirigami2 vlc) # upnp-player-qt
@@ -78,6 +79,7 @@
 +kitemviews
 +kxmlgui
 +qqc2-desktop-style
++qt6-5compat
 +qt6-base
 +qt6-declarative
 +qt6-multimedia
