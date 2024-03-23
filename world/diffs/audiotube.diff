@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,45 @@
+@@ -1,24 +1,46 @@
  
  pkgname=audiotube
 -pkgver=23.08.5
-+pkgver=24.02.0
++pkgver=24.02.1
  pkgrel=1
  pkgdesc='Client for YouTube Music'
  url='https://apps.kde.org/audiotube/'
@@ -20,6 +20,7 @@
 +         kcoreaddons
 +         kcrash
 +         ki18n
++         kirigami
 +         kirigami-addons
 +         kwindowsystem
 +         purpose
@@ -39,7 +40,7 @@
 +        kde-multimedia)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
 -sha256sums=('21258bedaf876cb80323177001553fd35deadb10c7ed33520a9fa0f3f5427d19'
-+sha256sums=('5ed6dc3c1f6917d35a6ded90c479538263d3c51943b3a73af4a54660277b9545'
++sha256sums=('59fe321505a5be1aca9003290a4e01275f454fd9f53b6dc2ba18b98f0ad2ce99'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
@@ -60,7 +61,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,27 @@
+@@ -1,8 +1,28 @@
  pkgname=audiotube
 -groups=(kde-applications kde-multimedia)
 -depends=(kirigami-addons5 qt5-imageformats qt5-multimedia qt5-svg ki18n5 kcrash5 kwindowsystem5 yt-dlp python-ytmusicapi futuresql-qt5 purpose5)
@@ -70,6 +71,7 @@
 +kcoreaddons
 +kcrash
 +ki18n
++kirigami
 +kirigami-addons
 +kwindowsystem
 +purpose

@@ -2,7 +2,6 @@
 0ad
 a52dec
 aalib
-abseil-cpp
 acme-tiny
 acpi
 acpi_call-dkms
@@ -443,7 +442,6 @@ fcitx5-mozc
 feh
 festival
 ffcall
-ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
 ffnvcodec-headers
@@ -754,7 +752,6 @@ hplip
 hspell
 hunspell-he
 htop
-http-parser
 httpbin
 hub
 hugin
@@ -1139,7 +1136,6 @@ libgweather-4
 libgweather-4-docs
 libgxps
 libharu
-libheif
 libhubbub
 libical
 libice
@@ -1688,7 +1684,6 @@ molequeue
 mongo-c-driver
 mopidy
 moreutils
-mosh
 motion
 mousepad
 movit
@@ -1747,7 +1742,6 @@ neovim
 netcdf-fortran
 netcdf
 netcf
-netpbm
 netsurf-buildsystem
 network-manager-applet
 nm-connection-editor
@@ -1830,10 +1824,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
 opendbx
 openexr
 openfec
@@ -3569,7 +3559,6 @@ radicale
 raft
 ragel
 range-v3
-ranger
 rapidjson
 raptor
 rav1e
@@ -4015,7 +4004,6 @@ talloc
 tang
 task
 tcc
-tcl
 tclap
 tcsh
 tdb
@@ -4539,3 +4527,4 @@ zvbi
 zxing-cpp
 zziplib
 simde
+ctwm

@@ -1,4 +1,5 @@
 a2ps
+abseil-cpp
 accerciser
 accounts-qml-module
 accountsservice
@@ -176,6 +177,7 @@ fcitx5-configtool
 fcitx5-qt
 fcitx5
 fcron
+ffmpeg
 ffmpegthumbs
 filelight
 firefox
@@ -292,6 +294,7 @@ hidapi
 hip-runtime-amd
 hsa-rocr
 hsakmt-roct
+http-parser
 hwloc
 hyprland
 i2pd
@@ -637,6 +640,7 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
+libheif
 libid3tag
 libinput
 libjpeg-turbo
@@ -777,6 +781,7 @@ modemmanager
 libmm-glib
 modest
 mono
+mosh
 mosquitto
 mpd
 mpdecimal
@@ -798,6 +803,7 @@ ndisc6
 neochat
 net-snmp
 netavark
+netpbm
 netplan
 networkmanager-qt
 networkmanager
@@ -824,6 +830,10 @@ onboard
 open-iscsi
 opencc
 opencc-doc
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendht
 opendoas
 openfire
@@ -1255,6 +1265,7 @@ quilt
 r8168
 rabbitmq
 rabbitmqadmin
+ranger
 rapidfuzz-cpp
 rasqal
 rdma-core
@@ -1336,6 +1347,7 @@ sysprof
 libsysprof-capture
 system-config-printer
 systemsettings
+tcl
 telegram-desktop
 tellico
 telly-skout

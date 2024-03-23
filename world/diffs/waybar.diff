@@ -1,6 +1,92 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -54,6 +54,7 @@
+@@ -1,34 +1,37 @@
+ 
+ pkgname=waybar
+-pkgver=0.9.24
+-pkgrel=3
++pkgver=0.10.0
++pkgrel=2
+ pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors'
+ arch=('x86_64')
+ url="https://github.com/Alexays/Waybar/"
+ license=('MIT')
+ depends=(
++    'fmt'
++    'gtk-layer-shell'
+     'gtkmm3'
++    'jack' 'libjack.so'
++    'libatkmm-1.6.so'
++    'libcairomm-1.0.so'
++    'libdbusmenu-gtk3'
++    'libevdev'
++    'libgtk-3.so'
++    'libinput'
+     'libjsoncpp.so'
++    'libmpdclient'
++    'libnl'
++    'libpipewire-0.3.so'
++    'libpulse'
+     'libsigc++'
+-    'fmt'
+-    'jack' 'libjack.so'
++    'libsndio.so'
++    'libspdlog.so'
++    'libudev.so'
++    'libupower-glib.so'
++    'libwireplumber'
++    'libxkbcommon'
++    'playerctl'
++    'upower'
+     'wayland'
+-    'libdate-tz.so'
+-    'libspdlog.so'
+-    'gtk-layer-shell'
+-    'libupower-glib.so'
+-    'upower'
+-    'libevdev'
+-    'libinput'
+-    'libpulse'
+-    'libnl'
+-    'libappindicator-gtk3'
+-    'libdbusmenu-gtk3'
+-    'libmpdclient'
+-    'libsndio.so'
+-    'libxkbcommon'
+-    'libwireplumber'
+-    'playerctl'
+ )
+ makedepends=(
+     'cmake'
+@@ -38,14 +41,24 @@
+     'wayland-protocols'
+ )
+ backup=(
+-    etc/xdg/waybar/config
++    etc/xdg/waybar/config.jsonc
+     etc/xdg/waybar/style.css
+ )
+ optdepends=(
+     'otf-font-awesome: Icons in the default configuration'
+ )
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/Alexays/Waybar/archive/$pkgver.tar.gz")
+-b2sums=('15774a78f2f7bb85d497e7f80a968b775bb42d285d0950e8e384962c6b947ea895eea2b30c0aba7ca671595ce59acd65e66cf8b67f2478ecad7564de50e4bfe6')
++source=(
++    "$pkgname-$pkgver.tar.gz::https://github.com/Alexays/Waybar/archive/$pkgver.tar.gz"
++    0001-Update-Wireplumber-API-to-0.5.patch
++)
++b2sums=('f27a61662444cb0d91ecb5c860271939ba81813af4d005a3297f9996fab5edd54df2e4a126aa33edf9049e2d91d301a03f6352e25eb9c86ffb003b0b238e9015'
++        '83e5d2cd97643b63a53b1ac1042321cc7540cfb34666e5a1bb0f3ab483d970c806bc04a5c2d062130a3fed8de3ea2f85621f0b4c4a7ca6813c6022092266d633')
++
++prepare() {
++    cd "Waybar-$pkgver"
++
++    patch -Np1 -i ../0001-Update-Wireplumber-API-to-0.5.patch
++}
+ 
+ build() {
+     cd "Waybar-$pkgver"
+@@ -54,6 +67,7 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
@@ -14,7 +100,66 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,6 +34,7 @@
+@@ -1,32 +1,39 @@
+ pkgname=waybar
+ depends=(
++'fmt'
++'gtk-layer-shell'
+ 'gtkmm3'
++'jack' 'libjack.so'
++'libatkmm-1.6.so'
++'libcairomm-1.0.so'
++'libdbusmenu-gtk3'
++'libevdev'
++'libgtk-3.so'
++'libinput'
+ 'libjsoncpp.so'
++'libmpdclient'
++'libnl'
++'libpipewire-0.3.so'
++'libpulse'
+ 'libsigc++'
+-'fmt'
+-'jack' 'libjack.so'
++'libsndio.so'
++'libspdlog.so'
++'libudev.so'
++'libupower-glib.so'
++'libwireplumber'
++'libxkbcommon'
++'playerctl'
++'upower'
+ 'wayland'
+-'libdate-tz.so'
+-'libspdlog.so'
+-'gtk-layer-shell'
+-'libupower-glib.so'
+-'upower'
+-'libevdev'
+-'libinput'
+-'libpulse'
+-'libnl'
+-'libappindicator-gtk3'
+-'libdbusmenu-gtk3'
+-'libmpdclient'
+-'libsndio.so'
+-'libxkbcommon'
+-'libwireplumber'
+-'playerctl'
+ )
+ backup=(
+-etc/xdg/waybar/config
++etc/xdg/waybar/config.jsonc
+ etc/xdg/waybar/style.css
+ )
++prepare() {
++cd "Waybar-$pkgver"
++patch -Np1 -i ../0001-Update-Wireplumber-API-to-0.5.patch
++}
+ build() {
+ cd "Waybar-$pkgver"
+ CXXFLAGS+=" -std=c++20" \
+@@ -34,6 +41,7 @@
  --buildtype=plain \
  --auto-features=enabled \
  --wrap-mode=nodownload \
