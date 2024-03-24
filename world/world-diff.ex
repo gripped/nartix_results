@@ -19,7 +19,6 @@ alsa-utils
 amule
 analitza
 android-file-transfer
-android-tools
 angelfish
 ansible-core
 apache
@@ -982,6 +981,8 @@ print-manager
 prison
 prometheus
 prosody
+protobuf
+python-protobuf
 psutils
 pulseaudio-qt
 pulseaudio
@@ -1271,9 +1272,15 @@ rasqal
 rdma-core
 re2
 redis
+redland
+redland-storage-mysql
+redland-storage-postgresql
+redland-storage-virtuoso
+redland-storage-sqlite
 redshift
 refind
 refind-docs
+remmina
 rkcommon
 rng-tools
 rocm-cmake

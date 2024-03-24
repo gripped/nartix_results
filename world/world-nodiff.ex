@@ -31,6 +31,7 @@ amfora
 aml
 amtk
 analitza5
+android-tools
 android-udev
 ansible-language-server
 ansible-lint
@@ -2257,8 +2258,6 @@ projectm
 projectm-sdl
 projectm-pulseaudio
 protobuf-c
-protobuf
-python-protobuf
 prrte
 prrte-docs
 publicsuffix-list
@@ -3570,12 +3569,6 @@ re2c
 rebar
 recode
 recordmydesktop
-redland
-redland-storage-mysql
-redland-storage-postgresql
-redland-storage-virtuoso
-redland-storage-sqlite
-remmina
 reptyr
 rest
 restinio
