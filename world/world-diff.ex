@@ -83,6 +83,7 @@ calendarsupport
 cantor
 capstone
 python-capstone
+cargo-c
 catch2
 cervisia
 cgmanager
@@ -213,6 +214,7 @@ gnome-bluetooth-3.0
 gnome-builder
 gnome-builder-clang
 gnome-builder-flatpak
+gnome-connections
 gnome-control-center
 gnome-desktop
 gnome-desktop-common
@@ -1512,3 +1514,4 @@ znc
 zsh
 zsh-doc
 proxytunnel
+alacritty

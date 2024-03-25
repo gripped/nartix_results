@@ -196,7 +196,6 @@ camlp-streams
 camlp4
 cantarell-fonts
 capnproto
-cargo-c
 caribou
 catatonit
 catch2-v2
@@ -593,7 +592,6 @@ gnome-clocks
 gnome-code-assistance
 gnome-color-manager
 gnome-common
-gnome-connections
 gnome-console
 gnome-contacts
 gnome-devel-docs

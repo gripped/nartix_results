@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,21 +1,21 @@
  
  pkgname=fwupd-efi
 -pkgver=1.4
+-pkgrel=1
 +pkgver=1.5
- pkgrel=1
++pkgrel=2
  pkgdesc='EFI Application used by uefi-capsule plugin in fwupd'
  arch=('x86_64')
-@@ -8,14 +8,14 @@
+ url='https://github.com/fwupd/fwupd-efi'
  license=('LGPL')
  makedepends=('meson' 'gnu-efi' 'python-pefile')
  source=("https://people.freedesktop.org/~hughsient/releases/${pkgname}-${pkgver}.tar.xz"{,.asc})

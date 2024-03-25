@@ -27,7 +27,6 @@ lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
-lib32-glib-networking
 lib32-glib2
 lib32-glu
 lib32-gmp
@@ -155,7 +154,6 @@ lib32-speexdsp
 lib32-spirv-tools
 lib32-tdb
 lib32-twolame
-lib32-util-linux
 lib32-vkd3d
 lib32-vulkan-icd-loader
 lib32-vulkan-validation-layers

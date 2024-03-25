@@ -727,3 +727,4 @@ znc-s6
 run-parts
 hyprcursor
 python-objsize
+freerdp2

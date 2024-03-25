@@ -3,6 +3,7 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
+lib32-glib-networking
 lib32-gstreamer
 lib32-gst-plugins-base-libs
 lib32-gst-plugins-base
@@ -43,6 +44,7 @@ lib32-readline
 lib32-spirv-llvm-translator
 lib32-sqlite
 lib32-taglib
+lib32-util-linux
 lib32-v4l-utils
 wine-staging
 wine
