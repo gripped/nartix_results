@@ -1301,6 +1301,8 @@ libsamplerate
 libsass
 libsecp256k1
 libshout
+libshumate
+libshumate-docs
 libsidplayfp
 libsigcplusplus-3.0
 libsigc++-3.0-docs
@@ -1746,7 +1748,6 @@ network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt5
-newsboat
 nftables
 ninja
 nload

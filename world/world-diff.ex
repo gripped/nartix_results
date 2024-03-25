@@ -680,8 +680,6 @@ libplist
 libprocps
 libquotient
 libsbsms
-libshumate
-libshumate-docs
 libsidplay
 libsodium
 libsrtp
@@ -811,6 +809,7 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+newsboat
 nginx
 nginx-src
 nrpe
