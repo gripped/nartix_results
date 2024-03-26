@@ -1,0 +1,126 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=orca
+-pkgver=45.2
++pkgver=46.0
+ pkgrel=1
+ pkgdesc="Screen reader for individuals who are blind or visually impaired"
+ url="https://wiki.gnome.org/Projects/Orca"
+@@ -9,6 +9,7 @@
+ depends=(
+   at-spi2-core
+   brltty
++  glib2
+   gobject-introspection-runtime
+   gsettings-desktop-schemas
+   gstreamer
+@@ -20,9 +21,9 @@
+   libwnck3
+   pango
+   python
+-  python-atspi
+   python-cairo
+   python-gobject
++  python-psutil
+   python-setproctitle
+   speech-dispatcher
+   xorg-xkbcomp
+@@ -31,37 +32,39 @@
+ makedepends=(
+   git
+   itstool
++  meson
+   yelp-tools
+ )
+ groups=(gnome)
+-_commit=cd1c1f25fbea6b6d815ce4403364e78e635919be  # tags/ORCA_45_2^0
++_commit=4819fd6bf69415ff3815f4b8737b7d8eeaca0850  # tags/ORCA_46_0^0
+ source=("git+https://gitlab.gnome.org/GNOME/orca.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+ pkgver() {
+   cd orca
+-  git describe --tags | sed 's/ORCA_//;s/_/\./g;s/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags \
++    | tr '[:upper:]' '[:lower:]' \
++    | sed -r 's/orca_//;s/_/\./g;s/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+ }
+ 
+ prepare() {
+   cd orca
+-  NOCONFIGURE=1 ./autogen.sh
+ }
+ 
+ build() {
+-  local configure_options=(
+-    --prefix=/usr
+-    --sysconfdir=/etc
+-    --localstatedir=/var
++  local meson_options=(
++    -D spiel=false
+   )
+ 
+-  cd orca
+-  ./configure "${configure_options[@]}"
+-  make
++  artix-meson orca build "${meson_options[@]}"
++  meson compile -C build
++}
++
++check() {
++  meson test -C build --print-errorlogs
+ }
+ 
+ package() {
+-  cd orca
+-  make DESTDIR="$pkgdir" install
++  meson install -C build --destdir "$pkgdir"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,7 @@
+ depends=(
+ at-spi2-core
+ brltty
++glib2
+ gobject-introspection-runtime
+ gsettings-desktop-schemas
+ gstreamer
+@@ -13,9 +14,9 @@
+ libwnck3
+ pango
+ python
+-python-atspi
+ python-cairo
+ python-gobject
++python-psutil
+ python-setproctitle
+ speech-dispatcher
+ xorg-xkbcomp
+@@ -24,15 +25,11 @@
+ groups=(gnome)
+ prepare() {
+ cd orca
+-NOCONFIGURE=1 ./autogen.sh
+ }
+ build() {
+-local configure_options=(
+---prefix=/usr
+---sysconfdir=/etc
+---localstatedir=/var
++local meson_options=(
++-D spiel=false
+ )
+-cd orca
+-./configure "${configure_options[@]}"
+-make
++artix-meson orca build "${meson_options[@]}"
++meson compile -C build
+ }

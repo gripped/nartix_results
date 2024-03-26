@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gnome-bluetooth-3.0
+-pkgver=42.8
++pkgver=46.0
+ pkgrel=1
+ pkgdesc="GNOME Bluetooth Subsystem"
+ url="https://wiki.gnome.org/Projects/GnomeBluetooth"
 @@ -12,7 +12,6 @@
    gtk4
    libadwaita
@@ -8,7 +16,28 @@
    upower
  )
  makedepends=(
-@@ -42,7 +41,7 @@
+@@ -21,16 +20,18 @@
+   gobject-introspection
+   gtk-doc
+   meson
++  python
++  python-packaging
+ )
+ checkdepends=(python-dbusmock)
+ provides=(libgnome-bluetooth{,-ui}-3.0.so)
+-_commit=3e8e011699ef652e2618fa5c155105512b91c3ff  # tags/42.8^0
++_commit=eb400a17173e0c5e32f8bcc47a5001409628dcc6  # tags/46.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-bluetooth.git#commit=$_commit")
+ b2sums=('SKIP')
+ 
+ pkgver() {
+   cd gnome-bluetooth
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+ }
+ 
+ prepare() {
+@@ -42,7 +43,7 @@
      -D gtk_doc=true
    )
  

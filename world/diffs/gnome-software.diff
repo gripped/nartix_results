@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=gnome-software
+-pkgver=45.3
++pkgver=46.0
+ pkgrel=1
+ pkgdesc="GNOME Software Tools"
+ url="https://wiki.gnome.org/Apps/Software/"
+ arch=(x86_64)
+-license=(GPL)
++license=(GPL-2.0-or-later)
+ depends=(
+   appstream
+   gsettings-desktop-schemas
+@@ -26,6 +26,7 @@
+   libglib-testing
+   malcontent
+   meson
++  python-packaging
+ )
+ optdepends=(
+   'flatpak: Flatpak support plugin'
+@@ -33,7 +34,7 @@
+   'malcontent: Parental control plugin'
+ )
+ groups=(gnome)
+-_commit=f027ac3fc839c0c0fe68006cea1acc757461c128  # tags/45.3^0
++_commit=9dec134914268d135a6f5251ddd624fef2de3c10  # tags/46.0^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit"
+   "git+https://gitlab.gnome.org/mwleeds/gnome-pwa-list.git"
+@@ -43,14 +44,11 @@
+ 
+ pkgver() {
+   cd $pkgname
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+ }
+ 
+ prepare() {
+   cd $pkgname
+-
+-  git cherry-pick -n 0655f358ed0e8455e12d9634f60bc4dbaee434e3 \
+-                     e431ab003f3fabf616b6eb7dc93f8967bc9473e5
+ 
+   git submodule init
+   git submodule set-url subprojects/gnome-pwa-list "$srcdir/gnome-pwa-list"
+@@ -62,7 +60,7 @@
+     -D packagekit=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,8 +12,6 @@
+ groups=(gnome)
+ prepare() {
+ cd $pkgname
+-git cherry-pick -n 0655f358ed0e8455e12d9634f60bc4dbaee434e3 \
+-e431ab003f3fabf616b6eb7dc93f8967bc9473e5
+ git submodule init
+ git submodule set-url subprojects/gnome-pwa-list "$srcdir/gnome-pwa-list"
+ git -c protocol.file.allow=always submodule update
+@@ -22,6 +20,6 @@
+ local meson_options=(
+ -D packagekit=false
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

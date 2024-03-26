@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gjs
+-pkgver=1.78.3
++pkgver=1.80.1
+ pkgrel=1
+ epoch=2
+ pkgdesc="Javascript Bindings for GNOME"
+@@ -10,7 +10,9 @@
+ depends=(
+   cairo
+   dconf
++  gcc-libs
+   glib2
++  glibc
+   gobject-introspection-runtime
+   js115
+   libffi
+@@ -31,9 +33,9 @@
+   xorg-server-xvfb
+ )
+ provides=(libgjs.so)
+-_commit=383df72a6fdbed92a2a3a2d7133eb6f31d40c526  # tags/1.78.3^0
++_commit=7d6c340f566379fadb582bd2082f214e23603f73  # tags/1.80.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
+-b2sums=('SKIP')
++b2sums=('ba2a35b1d71fe6561b67564c66e8569bed953ae2d4e87decc6183ff64d6e8144e6c80734cb88addc7b111d2fac340a6f1c131a27d019dd32caafed65e84fb14e')
+ 
+ pkgver() {
+   cd gjs
+@@ -49,7 +51,7 @@
+     -D installed_tests=false
+   )
+ 
+-  arch-meson gjs build "${meson_options[@]}"
++  artix-meson gjs build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,9 @@
+ depends=(
+ cairo
+ dconf
++gcc-libs
+ glib2
++glibc
+ gobject-introspection-runtime
+ js115
+ libffi
+@@ -19,7 +21,7 @@
+ local meson_options=(
+ -D installed_tests=false
+ )
+-arch-meson gjs build "${meson_options[@]}"
++artix-meson gjs build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package() {

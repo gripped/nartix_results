@@ -12,6 +12,8 @@ efibootmgr
 elfutils
 libelf
 debuginfod
+glib2
+glib2-docs
 glibc
 lib32-glibc
 glibc-locales

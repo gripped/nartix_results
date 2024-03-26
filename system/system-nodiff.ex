@@ -51,8 +51,6 @@ lto-dump
 libgccjit
 gdbm
 gettext
-glib2
-glib2-docs
 gmp
 gnupg
 gpgme

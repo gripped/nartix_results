@@ -3,15 +3,16 @@
 @@ -1,15 +1,19 @@
  
 -pkgname=gnome-builder
+-pkgver=45.0
+-pkgrel=3
 +pkgbase=gnome-builder
 +pkgname=(
 +  gnome-builder
 +  gnome-builder-clang
 +  gnome-builder-flatpak
 +)
- pkgver=45.0
--pkgrel=3
-+pkgrel=5
++pkgver=46.0
++pkgrel=1
  pkgdesc="An IDE for writing GNOME-based software"
  url="https://wiki.gnome.org/Apps/Builder"
  arch=(x86_64)
@@ -24,16 +25,21 @@
    cmark
    ctags
    d-spy
-@@ -18,8 +22,6 @@
+@@ -18,11 +22,11 @@
    devhelp
    editorconfig-core-c
    enchant
 -  flatpak
 -  flatpak-builder
++  gcc-libs
    gdk-pixbuf2
    gjs
    glib2
-@@ -53,6 +55,8 @@
++  glibc
+   gobject-introspection-runtime
+   gtk4
+   gtksourceview5
+@@ -53,6 +57,8 @@
  )
  makedepends=(
    appstream-glib
@@ -42,22 +48,30 @@
    git
    gobject-introspection
    llvm
-@@ -67,12 +71,12 @@
+@@ -62,18 +68,17 @@
+   yelp-tools
+ )
+ checkdepends=(weston)
+-_commit=82b055c8cc4dbcf171f8236e2a7d15cd19225fe1  # tags/45.0^0
++_commit=6e7b8bb8cfa9d0fb7fc1fbd6f1bb54912443cabf  # tags/46.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
  b2sums=('SKIP')
  
  pkgver() {
 -  cd $pkgname
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 +  cd $pkgbase
-   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
  }
  
  prepare() {
 -  cd $pkgname
+-  git cherry-pick -n 7aaaecefc2ea8a37eaeae8b4d726d119d4eb8fa3 # Fix build
 +  cd $pkgbase
-   git cherry-pick -n 7aaaecefc2ea8a37eaeae8b4d726d119d4eb8fa3 # Fix build
  }
  
-@@ -81,7 +85,7 @@
+ build() {
+@@ -81,7 +86,7 @@
      -D help=true
    )
  
@@ -66,7 +80,7 @@
    meson compile -C build
  }
  
-@@ -98,14 +102,49 @@
+@@ -98,14 +103,51 @@
    dbus-run-session meson test -C build --print-errorlogs
  )
  
@@ -94,6 +108,7 @@
 +    clang
 +    gcc-libs
 +    glib2
++    glibc
 +    gtk4
 +    gtksourceview5
 +    jsonrpc-glib
@@ -111,6 +126,7 @@
 +    flatpak
 +    gcc-libs
 +    glib2
++    glibc
 +  )
 +  groups=(gnome-extra)
 +
@@ -138,22 +154,27 @@
  cmark
  ctags
  d-spy
-@@ -11,8 +15,6 @@
+@@ -11,11 +15,11 @@
  devhelp
  editorconfig-core-c
  enchant
 -flatpak
 -flatpak-builder
++gcc-libs
  gdk-pixbuf2
  gjs
  glib2
-@@ -45,14 +47,14 @@
++glibc
+ gobject-introspection-runtime
+ gtk4
+ gtksourceview5
+@@ -45,14 +49,13 @@
  webkitgtk-6.0
  )
  prepare() {
 -cd $pkgname
+-git cherry-pick -n 7aaaecefc2ea8a37eaeae8b4d726d119d4eb8fa3 # Fix build
 +cd $pkgbase
- git cherry-pick -n 7aaaecefc2ea8a37eaeae8b4d726d119d4eb8fa3 # Fix build
  }
  build() {
  local meson_options=(
@@ -164,7 +185,7 @@
  meson compile -C build
  }
  check() (
-@@ -64,8 +66,36 @@
+@@ -64,8 +67,38 @@
  trap "kill $_w; wait" EXIT
  dbus-run-session meson test -C build --print-errorlogs
  )
@@ -183,6 +204,7 @@
 +clang
 +gcc-libs
 +glib2
++glibc
 +gtk4
 +gtksourceview5
 +jsonrpc-glib
@@ -198,6 +220,7 @@
 +flatpak
 +gcc-libs
 +glib2
++glibc
 +)
 +groups=(gnome-extra)
 +mv flatpak/* "$pkgdir"

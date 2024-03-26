@@ -4,7 +4,7 @@
  
  pkgname=docker
 -pkgver=25.0.2
-+pkgver=25.0.4
++pkgver=26.0.0
  pkgrel=1
  epoch=1
  pkgdesc='Pack, ship and run any application as a lightweight container'
@@ -19,6 +19,28 @@
  optdepends=('btrfs-progs: btrfs backend support'
              'pigz: parallel gzip compressor support'
              'docker-scan: vulnerability scanner'
+@@ -20,9 +20,9 @@
+         "git+https://github.com/moby/moby.git#tag=v$pkgver"
+         "git+https://github.com/krallin/tini.git#commit=$_TINI_COMMIT"
+         "$pkgname.sysusers")
+-sha256sums=('SKIP'
+-            'SKIP'
+-            'SKIP'
++sha256sums=('3c93a0aa0fddf6af16db6a48c185f237221f3524049fbb95d58b63d548e333ac'
++            '52340a477edd8b4b80231816dc832ef54e36648ad0676346aea0ba1bd5347529'
++            '28a6641d508f60d47315efb3c85d97360188750a45bd6d3c8737d3f1a2b44121'
+             '541826011a9836d05a2f42293d5f1beadf2ca8d89fb604487d61a013505678eb')
+ 
+ _fake_gopath_pushd() {
+@@ -55,7 +55,7 @@
+   export CGO_CXXFLAGS="${CXXFLAGS}"
+   export CGO_LDFLAGS="${LDFLAGS}"
+   export LDFLAGS=''
+-  export GOFLAGS='-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external'
++  export GOFLAGS='-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external -ldflags=-compressdwarf=false -ldflags=-B=gobuildid'
+   export GO111MODULE=off
+   export DISABLE_WARN_OUTSIDE_CONTAINER=1
+ 
 @@ -68,7 +68,7 @@
    echo 'Building daemon'
    _fake_gopath_pushd moby github.com/docker/docker
@@ -50,6 +72,15 @@
  'libseccomp' 'libtool' 'runc' 'containerd')
  options=(!lto)
  _TINI_COMMIT=de40ad007797e0dcd8b7126f27bb87401d224240
+@@ -30,7 +30,7 @@
+ export CGO_CXXFLAGS="${CXXFLAGS}"
+ export CGO_LDFLAGS="${LDFLAGS}"
+ export LDFLAGS=''
+-export GOFLAGS='-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external'
++export GOFLAGS='-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external -ldflags=-compressdwarf=false -ldflags=-B=gobuildid'
+ export GO111MODULE=off
+ export DISABLE_WARN_OUTSIDE_CONTAINER=1
+ echo 'Building cli'
 @@ -41,7 +41,7 @@
  echo 'Building daemon'
  _fake_gopath_pushd moby github.com/docker/docker

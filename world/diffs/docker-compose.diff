@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=docker-compose
+-pkgver=2.24.6
++pkgver=2.26.0
+ pkgrel=1
+ pkgdesc="Fast, isolated development environments using Docker"
+ arch=('x86_64')
+@@ -9,7 +9,7 @@
+ makedepends=('go')
+ checkdepends=('docker')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/docker/compose/archive/v$pkgver.tar.gz")
+-b2sums=('a2386be9031fdd27f670858070731017d7f6d8318aa02650a8ce5ec1b08d5f1e46cf80a352d7067cb64b8f3647fcd4ba863ce7477b88745df3720892b3083201')
++b2sums=('0367f1fa043de1cb6c3044994f707f61d095fdaa91ff915a1fd60be1050074344eb9f4db8160cb557f9d69c39ac03110f452f6be5f90c1a3b56429ae600e6e9f')
+ 
+ build() {
+   cd "compose-$pkgver"
+@@ -17,14 +17,15 @@
+   export CGO_CFLAGS="${CFLAGS}"
+   export CGO_CXXFLAGS="${CXXFLAGS}"
+   export CGO_LDFLAGS="${LDFLAGS}"
+-  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/docker/compose/v2/internal.Version=${pkgver} -mod=readonly -modcacherw"
+-  CGO_ENABLED=0 go build -trimpath -tags "e2e,kube" -o compose ./cmd
++  export GOPATH="${srcdir}"
++  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/docker/compose/v2/internal.Version=${pkgver} -mod=readonly -modcacherw -ldflags=-compressdwarf=false"
++  go build -trimpath -tags "e2e,kube" -o compose ./cmd
+ }
+ 
+ check(){
+   cd "compose-$pkgver"
+   rm pkg/compose/ps_test.go
+-  CGO_ENABLED=0 go test -tags "e2e,kube" -v $(go list -tags "e2e,kube" ./... | grep -vE 'e2e')
++  go test -tags "e2e,kube" -v $(go list -tags "e2e,kube" ./... | grep -vE 'e2e')
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+ export CGO_CFLAGS="${CFLAGS}"
+ export CGO_CXXFLAGS="${CXXFLAGS}"
+ export CGO_LDFLAGS="${LDFLAGS}"
+-export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/docker/compose/v2/internal.Version=${pkgver} -mod=readonly -modcacherw"
+-CGO_ENABLED=0 go build -trimpath -tags "e2e,kube" -o compose ./cmd
++export GOPATH="${srcdir}"
++export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/docker/compose/v2/internal.Version=${pkgver} -mod=readonly -modcacherw -ldflags=-compressdwarf=false"
++go build -trimpath -tags "e2e,kube" -o compose ./cmd
+ }

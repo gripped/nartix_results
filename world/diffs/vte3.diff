@@ -1,16 +1,63 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,6 @@
+@@ -6,31 +6,43 @@
+   vte4
+   vte-docs
+ )
+-pkgver=0.74.2
+-pkgrel=1
++pkgver=0.76.0
++pkgrel=2
+ pkgdesc="Virtual Terminal Emulator widget"
+ url="https://wiki.gnome.org/Apps/Terminal/VTE"
+ arch=(x86_64)
+-license=(LGPL)
+-makedepends=(
++license=(
++  LGPL-3.0-or-later
++  GPL-3.0-or-later
++)
++depends=(
+   cairo
+   fribidi
++  gcc-libs
++  gdk-pixbuf2
++  glib2
++  glibc
++  gnutls
++  icu
++  lz4
++  pango
++  pcre2
++)
++makedepends=(
++  at-spi2-core
+   gi-docgen
+   git
+-  gnutls
+   gobject-introspection
+   gperf
+   gtk3
    gtk4
    meson
-   pcre2
+-  pcre2
 -  systemd
    vala
  )
  options=(!lto)
-@@ -45,9 +44,10 @@
+-_commit=3f66edbf598129bafde3baa91ccfb345056418c3  # tags/0.74.2^0
++_commit=3c29bfef30c34afec4982ba5ec37f944cfacbba2  # tags/0.76.0^0
+ source=("git+https://gitlab.gnome.org/GNOME/vte.git#commit=$_commit")
+-b2sums=('SKIP')
++b2sums=('9732a9261ae2a7b769e77e1a95da4b7b0b19532f0452f02135b8d650e0204ebaf8eb2956061c31369a7273a6732bd7e11351deab55940a0f9d6a72e22c0cf537')
+ 
+ pkgver() {
+   cd vte
+@@ -43,11 +55,11 @@
+ 
+ build() {
    local meson_options=(
-     -D b_lto=false
+-    -D b_lto=false
      -D docs=true
 +    -D _systemd=false
    )
@@ -20,31 +67,84 @@
    meson compile -C build
  }
  
-@@ -102,7 +102,6 @@
-     gnutls
+@@ -67,7 +79,7 @@
+ 
+ package_vte-common() {
+   pkgdesc+=" (common files)"
+-  depends=(sh)
++  depends=(glibc)
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+@@ -96,13 +108,9 @@
+ 
+ package_vte3() {
+   pkgdesc+=" (GTK3)"
+-  depends=(
+-    cairo
+-    fribidi
+-    gnutls
++  depends+=(
++    at-spi2-core
      gtk3
-     pcre2
+-    pcre2
 -    systemd
      vte-common
    )
    provides+=(libvte-2.91.so)
-@@ -118,7 +117,6 @@
-     gnutls
+@@ -112,13 +120,8 @@
+ 
+ package_vte4() {
+   pkgdesc+=" (GTK4)"
+-  depends=(
+-    cairo
+-    fribidi
+-    gnutls
++  depends+=(
      gtk4
-     pcre2
+-    pcre2
 -    systemd
      vte-common
    )
    provides+=(libvte-2.91-gtk4.so)
+@@ -128,6 +131,7 @@
+ 
+ package_vte-docs() {
+   pkgdesc+=" (documentation)"
++  depends=()
+ 
+   mv docs/* "$pkgdir"
+ }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,8 +13,9 @@
+@@ -5,16 +5,29 @@
+ vte4
+ vte-docs
+ )
++depends=(
++cairo
++fribidi
++gcc-libs
++gdk-pixbuf2
++glib2
++glibc
++gnutls
++icu
++lz4
++pango
++pcre2
++)
+ options=(!lto)
+ prepare() {
+ cd vte
+ }
+ build() {
  local meson_options=(
- -D b_lto=false
+--D b_lto=false
  -D docs=true
 +-D _systemd=false
  )
@@ -53,19 +153,50 @@
  meson compile -C build
  }
  _pick() {
-@@ -56,7 +57,6 @@
- gnutls
+@@ -28,7 +41,7 @@
+ }
+ package_vte-common() {
+ pkgdesc+=" (common files)"
+-depends=(sh)
++depends=(glibc)
+ meson install -C build --destdir "$pkgdir"
+ cd "$pkgdir"
+ _pick gtk3 usr/bin/vte-2.91
+@@ -50,13 +63,9 @@
+ }
+ package_vte3() {
+ pkgdesc+=" (GTK3)"
+-depends=(
+-cairo
+-fribidi
+-gnutls
++depends+=(
++at-spi2-core
  gtk3
- pcre2
+-pcre2
 -systemd
  vte-common
  )
  provides+=(libvte-2.91.so)
-@@ -70,7 +70,6 @@
- gnutls
+@@ -64,15 +73,15 @@
+ }
+ package_vte4() {
+ pkgdesc+=" (GTK4)"
+-depends=(
+-cairo
+-fribidi
+-gnutls
++depends+=(
  gtk4
- pcre2
+-pcre2
 -systemd
  vte-common
  )
  provides+=(libvte-2.91-gtk4.so)
+ mv gtk4/* "$pkgdir"
+ }
++package_vte-docs() {
++pkgdesc+=" (documentation)"
++depends=()
++mv docs/* "$pkgdir"
++}

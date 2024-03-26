@@ -1,6 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -42,12 +42,12 @@
+@@ -4,7 +4,7 @@
+   libdex
+   libdex-docs
+ )
+-pkgver=0.4.3
++pkgver=0.6.0
+ pkgrel=1
+ pkgdesc="A library supporting 'Deferred Execution'"
+ url="https://gitlab.gnome.org/GNOME/libdex"
+@@ -23,9 +23,9 @@
+   meson
+   vala
+ )
+-_commit=df95dddf3e7df8b5264cb54e2221eee0350a0d09  # tags/0.4.3^0
++_commit=7a5757ea1b702e7fcf8312bcfe7a373ee89c787a  # tags/0.6.0^0
+ source=("git+$url.git#commit=$_commit")
+-b2sums=('SKIP')
++b2sums=('12103636f413d169216532380cb693ccad8b317e90cebe5ebc83a46c299164acced58421a7365b4149cb19baae71db0ffaaea34fcb0cf40e9af1a4df87efcd99')
+ 
+ pkgver() {
+   cd libdex
+@@ -42,7 +42,7 @@
      -D sysprof=true
    )
  
@@ -9,12 +30,6 @@
    meson compile -C build
  }
  
- check() (
--  meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs || :
- )
- 
- package_libdex() {
 
 
 ############# Stripped diff below #################

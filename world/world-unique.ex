@@ -728,3 +728,5 @@ run-parts
 hyprcursor
 python-objsize
 freerdp2
+msgraph
+mutter45

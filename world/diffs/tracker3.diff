@@ -1,19 +1,66 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,6 @@
+@@ -4,19 +4,24 @@
+   tracker3
+   tracker3-docs
+ )
+-pkgver=3.6.0
+-pkgrel=3
++pkgver=3.7.0
++pkgrel=1
+ pkgdesc="SQLite-based RDF triplestore database with SPARQL interface"
+ url="https://tracker.gnome.org/"
+ arch=(x86_64)
+ license=(LGPL-2.1-or-later)
+ depends=(
++  avahi
++  bash
++  gcc-libs
+   glib2
++  glibc
+   icu
+   json-glib
+   libsoup3
+   libstemmer
+   libxml2
++  python
+   sqlite
+ )
+ makedepends=(
+@@ -31,10 +36,9 @@
    python-dbus
    python-gobject
    python-tappy
 -  systemd
    vala
  )
- _commit=624ef729966f2d9cf748321bd7bac822489fa8ed  # tags/3.6.0^0
-@@ -61,15 +60,16 @@
+-_commit=624ef729966f2d9cf748321bd7bac822489fa8ed  # tags/3.6.0^0
++_commit=86ebd86cb4e51dfd9ab702911dd2e99f7128046b  # tags/3.7.0^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit"
+   "git+https://gitlab.gnome.org/GNOME/gvdb.git"
+@@ -44,15 +48,11 @@
  
+ pkgver() {
+   cd tracker
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+ }
+ 
+ prepare() {
+   cd tracker
+-
+-  git cherry-pick -n f7393d61803815b19a1f210b197cce423ae3cc01
+-
+-  git cherry-pick -n -m 1 02b7ae6e2fa005d84d5a55ba3500c10a84acb7de
+ 
+   git submodule init
+   git submodule set-url subprojects/gvdb "$srcdir/gvdb"
+@@ -62,14 +62,15 @@
  build() {
    local meson_options=(
-+    -D systemd_user_services=false
      -D tests_tap_protocol=true
++    -D systemd_user_services=false
    )
  
 -  arch-meson tracker build "${meson_options[@]}"
@@ -23,7 +70,7 @@
  
  check() {
 -  dbus-run-session meson test -C build --print-errorlogs -t 3
-+  dbus-run-session meson test -C build --print-errorlogs -t 3 ||: #one test fails
++  dbus-run-session meson test -C build --print-errorlogs -t 3 ||: # one test times out
  }
  
  package_tracker3() {
@@ -33,12 +80,35 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,9 +22,10 @@
- }
+@@ -4,18 +4,21 @@
+ tracker3-docs
+ )
+ depends=(
++avahi
++bash
++gcc-libs
+ glib2
++glibc
+ icu
+ json-glib
+ libsoup3
+ libstemmer
+ libxml2
++python
+ sqlite
+ )
+ prepare() {
+ cd tracker
+-git cherry-pick -n f7393d61803815b19a1f210b197cce423ae3cc01
+-git cherry-pick -n -m 1 02b7ae6e2fa005d84d5a55ba3500c10a84acb7de
+ git submodule init
+ git submodule set-url subprojects/gvdb "$srcdir/gvdb"
+ git -c protocol.file.allow=always submodule update
+@@ -23,8 +26,9 @@
  build() {
  local meson_options=(
-+-D systemd_user_services=false
  -D tests_tap_protocol=true
++-D systemd_user_services=false
  )
 -arch-meson tracker build "${meson_options[@]}"
 +artix-meson tracker build "${meson_options[@]}"

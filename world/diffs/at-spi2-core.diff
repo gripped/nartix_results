@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,12 +4,12 @@
+@@ -4,20 +4,24 @@
    at-spi2-core
    at-spi2-core-docs
  )
 -pkgver=2.50.1
-+pkgver=2.50.2
++pkgver=2.52.0
  pkgrel=1
  pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
  url="https://gitlab.gnome.org/GNOME/at-spi2-core"
@@ -13,28 +13,36 @@
 -license=(GPL2)
 +license=(LGPL-2.1-or-later)
  depends=(
++  bash
    dbus
    glib2
-@@ -17,7 +17,6 @@
++  glibc
+   gsettings-desktop-schemas
++  libei
    libx11
++  libxi
++  libxkbcommon
    libxml2
    libxtst
 -  systemd
    xorg-xprop
  )
  makedepends=(
-@@ -31,7 +30,7 @@
+@@ -31,7 +35,7 @@
  checkdepends=(
    at-spi2-core
  )
 -_commit=ee07a30c836137d7653cdb26921ef966a3b47e1d  # tags/AT_SPI2_CORE_2_50_1^0
-+_commit=f09f09517732e02af3cc6d62477b024ed9672896  # tags/AT_SPI2_CORE_2_50_2^0
++_commit=46c8de80022d28eef2da58f1054b5bff745ed7e0  # tags/AT_SPI2_CORE_2_52_0^0
  source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
  b2sums=('SKIP')
  
-@@ -48,14 +47,15 @@
+@@ -46,11 +50,12 @@
+ 
+ build() {
    local meson_options=(
-     -D default_bus=dbus-broker
+-    -D default_bus=dbus-broker
++    -D default_bus=dbus-daemon
      -D docs=true
 +    -D use_systemd=false
    )
@@ -44,13 +52,7 @@
    meson compile -C build
  }
  
- check() {
--  dbus-run-session meson test -C build --print-errorlogs
-+  dbus-run-session meson test -C build --print-errorlogs ||:
- }
- 
- package_at-spi2-core() {
-@@ -78,6 +78,8 @@
+@@ -78,6 +83,8 @@
  
    meson install -C build --destdir "$pkgdir"
  
@@ -65,17 +67,31 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,6 @@
+@@ -4,13 +4,17 @@
+ at-spi2-core-docs
+ )
+ depends=(
++bash
+ dbus
+ glib2
++glibc
+ gsettings-desktop-schemas
++libei
  libx11
++libxi
++libxkbcommon
  libxml2
  libxtst
 -systemd
  xorg-xprop
  )
  prepare() {
-@@ -20,8 +19,9 @@
+@@ -18,10 +22,11 @@
+ }
+ build() {
  local meson_options=(
- -D default_bus=dbus-broker
+--D default_bus=dbus-broker
++-D default_bus=dbus-daemon
  -D docs=true
 +-D use_systemd=false
  )
@@ -84,7 +100,7 @@
  meson compile -C build
  }
  package_at-spi2-core() {
-@@ -41,6 +41,7 @@
+@@ -41,6 +46,7 @@
  'atk<=2.38.0-2'
  )
  meson install -C build --destdir "$pkgdir"
