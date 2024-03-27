@@ -1,16 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -6,7 +6,7 @@
    lib32-gst-plugins-base
    lib32-gst-plugins-good
  )
 -pkgver=1.22.10
--pkgrel=1
-+pkgver=1.24.0
-+pkgrel=2
++pkgver=1.24.1
+ pkgrel=1
  pkgdesc="Multimedia graph framework (32-bit)"
  url="https://gstreamer.freedesktop.org/"
- arch=(x86_64)
 @@ -15,7 +15,7 @@
  makedepends=(
    git meson
@@ -20,7 +18,7 @@
  
    lib32-alsa-lib lib32-cdparanoia lib32-libdrm lib32-libglvnd lib32-libgudev
    lib32-libjpeg lib32-libpng lib32-libtheora lib32-libx11 lib32-libxi
-@@ -26,8 +26,8 @@
+@@ -26,16 +26,16 @@
    lib32-libavc1394 lib32-libcaca lib32-libdv lib32-libiec61883 lib32-libpulse
    lib32-libraw1394 lib32-libshout lib32-libsoup3 lib32-libvpx lib32-mpg123
    lib32-nettle lib32-taglib lib32-twolame lib32-v4l-utils lib32-wavpack
@@ -31,12 +29,13 @@
  )
  checkdepends=(xorg-server-xvfb)
  source=(
-@@ -35,7 +35,7 @@
+   "git+https://gitlab.freedesktop.org/gstreamer/gstreamer.git?signed#tag=$pkgver"
    0001-HACK-meson-Disable-broken-tests.patch
  )
- b2sums=('SKIP'
+-b2sums=('SKIP'
 -        'b1a3e4473c03a5f4f394d7e00d98efae1e026a740fda8a0d8cdc8a55a833666002a9c4d3c15504d201323643736f34208d2e948d1f9425a38faa6d1b0d9286cb')
-+        'afe47af956fe50ab2d77dba5d1e84649f63443a816ad7a0d0c0a37f2f46e1da3473472bd1183843b37dd3c0c61ee496b3d246df5de35e5df960a09bcac7eb48f')
++b2sums=('a91e46cf3757a825a060f75fcfd974ec65fcb0d24c96039ce79b481b1ea93e82a6e226f45fd0fae6421ccd2eb356871db670c93b32b3df2cba8b105d4e00cf19'
++        'c32a423b7675881f795d3858b12d90bc87da42ddc03773d113f692cc0c0dfbd502c28b89bd90fbaec5a352cbd96baa3605fac1542a32dd71d20102987bb37a2c')
  validpgpkeys=(
    D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim Müller <tim@gstreamer-foundation.org>
  )
@@ -76,7 +75,7 @@
  
    xvfb-run -s '-nolisten local' \
 -    meson test -C build --print-errorlogs || :
-+    meson test -C build --print-errorlogs -t 3 || :
++    meson test -C build --print-errorlogs -t 5 || :
  )
  
  _install() {

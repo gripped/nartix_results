@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=neovim
+ pkgver=0.9.5
+-pkgrel=2
++pkgrel=3
+ pkgdesc='Fork of Vim aiming to improve user experience, plugins, and GUIs'
+ arch=('x86_64')
+ url='https://neovim.io'
+@@ -14,6 +14,12 @@
+   'luajit'
+   'msgpack-c'
+   'tree-sitter'
++  'tree-sitter-bash'
++  'tree-sitter-c'
++  'tree-sitter-lua'
++  'tree-sitter-markdown'
++  'tree-sitter-python'
++  'tree-sitter-vimdoc'
+   'unibilium'
+ )
+ makedepends=('cmake' 'git' 'ninja' 'lua51-mpack' 'lua51-lpeg' 'unzip')
+@@ -60,6 +66,8 @@
+   cd ${pkgname}-${pkgver}
+   DESTDIR="$pkgdir" cmake --install build
+ 
++  ln -s /usr/lib/tree_sitter "$pkgdir"/usr/share/nvim/runtime/parser
++
+   install -Dm644 LICENSE.txt -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+   install -Dm644 runtime/nvim.desktop -t "${pkgdir}/usr/share/applications/"
+   install -Dm644 runtime/nvim.appdata.xml -t "${pkgdir}/usr/share/metainfo/"
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,12 @@
+ 'luajit'
+ 'msgpack-c'
+ 'tree-sitter'
++'tree-sitter-bash'
++'tree-sitter-c'
++'tree-sitter-lua'
++'tree-sitter-markdown'
++'tree-sitter-python'
++'tree-sitter-vimdoc'
+ 'unibilium'
+ )
+ '

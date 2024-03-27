@@ -5,23 +5,25 @@
  pkgname=python-pytest-ruff
 -pkgver=0.2.1
 -_commit=2098829cfb8f95c2885c6dec3e229ed3092e2c1e
-+pkgver=0.3
-+_commit=37b8e736063f61ca4b5118ac499ee63fb3943b17
++pkgver=0.3.1
++_commit=9efc242a519f8c7648bc732a170079864b592521
  pkgrel=1
  pkgdesc="Pytest plugin to check ruff requirements"
  url="https://github.com/businho/pytest-ruff"
-@@ -14,11 +14,6 @@
+@@ -12,12 +12,7 @@
+              'python-poetry-dynamic-versioning')
+ checkdepends=('python-pytest-mock')
  source=("git+https://github.com/businho/pytest-ruff.git#commit=$_commit")
- sha512sums=('SKIP')
- 
+-sha512sums=('SKIP')
+-
 -prepare() {
 -  cd pytest-ruff
 -  sed 's/--cov --cov-report term --cov-report xml//' -i pyproject.toml
 -}
--
++sha512sums=('cbf271f2b5cf711e3323abc7d0c4a5c9e8f814b0bde951ec4624f8d6687692122fd22bbae65457b45a60ecf721de1d1ca1210264d53d3f7e28531feb8d2d093c')
+ 
  build() {
    cd pytest-ruff
-   python -m build -nw
 @@ -27,7 +22,8 @@
  check() {
    cd pytest-ruff

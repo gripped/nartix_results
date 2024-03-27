@@ -730,3 +730,10 @@ python-objsize
 freerdp2
 msgraph
 mutter45
+tailscale-runit
+tree-sitter-bash
+tree-sitter-c
+tree-sitter-lua
+tree-sitter-markdown
+tree-sitter-python
+tree-sitter-vimdoc

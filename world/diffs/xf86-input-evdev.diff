@@ -1,11 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,12 +1,12 @@
+ 
+ pkgname=xf86-input-evdev
+ pkgver=2.10.6
+-pkgrel=3
++pkgrel=4
+ pkgdesc="X.org evdev input driver"
  arch=(x86_64)
  url="https://xorg.freedesktop.org/"
- license=('custom')
+-license=('custom')
 -depends=('systemd-libs' 'mtdev' 'libevdev')
-+depends=('libudev.so' 'mtdev' 'libevdev')
++license=('HPND-sell-variant AND MIT')
++depends=('libudev' 'mtdev' 'libevdev' 'glibc')
  makedepends=('xorg-server-devel' 'X-ABI-XINPUT_VERSION=24.4' 'xorgproto')
  conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
  options=('!makeflags')
@@ -18,7 +25,7 @@
 @@ -1,5 +1,5 @@
  pkgname=xf86-input-evdev
 -depends=('systemd-libs' 'mtdev' 'libevdev')
-+depends=('libudev.so' 'mtdev' 'libevdev')
++depends=('libudev' 'mtdev' 'libevdev' 'glibc')
  conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
  options=('!makeflags')
  groups=('xorg-drivers')

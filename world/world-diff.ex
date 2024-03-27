@@ -18,6 +18,7 @@ akonadiconsole
 akregator
 alligator
 alsa-utils
+amfora
 amule
 analitza
 android-file-transfer
@@ -846,6 +847,8 @@ nbd
 ndctl
 ndisc6
 neochat
+neomutt
+neovim
 net-snmp
 netavark
 netpbm
@@ -1019,6 +1022,7 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
+potrace
 power-profiles-daemon
 powerdevil
 powerdns-recursor
@@ -1027,6 +1031,7 @@ poxml
 pqiv
 print-manager
 prison
+privoxy
 prometheus
 prosody
 protobuf
@@ -1085,6 +1090,7 @@ python-deprecated
 python-django-mailman3
 python-django-rest-framework
 python-docker-pycreds
+python-docutils
 python-elasticsearch
 python-feedgen
 python-fire
@@ -1100,7 +1106,9 @@ python-ini2toml
 python-ipdb
 python-ipykernel
 python-ipywidgets
+python-jaraco.collections
 python-jaraco.envs
+python-jaraco.test
 python-jose
 python-kaitaistruct
 python-kiwisolver
@@ -1109,10 +1117,13 @@ python-libarchive-c
 python-libtmux
 python-logbook
 python-lsp-black
+python-lupa
 python-lxml
 python-lxml-docs
 python-marshmallow
+python-mongomock
 python-more-itertools
+python-multidict
 python-nodeenv
 python-objgraph
 python-parsedatetime
@@ -1129,6 +1140,7 @@ python-pyaml
 python-pycountry
 python-pyicu
 python-pykka
+python-pymupdf
 python-pynitrokey
 python-pyopencl
 pyopencl-headers
@@ -1155,20 +1167,29 @@ python-retrying
 python-rfc3339-validator
 python-rope
 python-schema
+python-scrypt
+python-secretstorage
 python-sentinels
 python-setuptools-git
+python-sh
+python-softlayer-zeep
 python-sortedcontainers
 python-sphinxcontrib-autoprogram
 python-sqlalchemy-utils
 python-sqlparse
 python-starlette
+python-tenacity
+python-testflo
 python-text-unidecode
 python-tpm2-pytss
+python-trove-classifiers
 python-txtorcon
 python-unearth
 python-unittest-mixins
 python-urwid
 python-vine
+python-vistir
+python-vobject
 python-webob
 python-webob-docs
 python-wsproto
@@ -1407,6 +1428,8 @@ sysprof
 libsysprof-capture
 system-config-printer
 systemsettings
+tailscale
+task
 tcl
 tecla
 telegram-desktop
@@ -1488,6 +1511,7 @@ vtk
 wasi-libcplusplus
 wasi-libc++abi
 waybar
+wayland-protocols
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
 webkit2gtk-5.0
@@ -1525,9 +1549,11 @@ xf86-input-vmmouse
 xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-ati
+xf86-video-fbdev
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-openchrome
+xf86-video-sisusb
 xf86-video-vmware
 xfce4-taskmanager
 xfce4-terminal
@@ -1567,3 +1593,4 @@ zsh
 zsh-doc
 proxytunnel
 alacritty
+passt

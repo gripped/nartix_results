@@ -1,6 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,11 +18,11 @@
+@@ -1,8 +1,7 @@
+ 
+ pkgbase=podman
+ pkgname=(podman podman-docker)
+-pkgver=4.9.3
+-_commit=bd1b4a96544e6199f369feef8cb19c2e8f803b1f	#refs/tags/v4.9.3
++pkgver=5.0.0
+ pkgrel=1
+ pkgdesc='Tool and library for running OCI-based containers in pods'
+ arch=(x86_64)
+@@ -18,11 +17,11 @@
    go-md2man
    gpgme
    libseccomp
@@ -10,11 +20,25 @@
  options=(!lto)
  source=(
 -  git+$url#tag=$_commit?signed
-+  git+$url#tag=$_commit
++  "git+$url#tag=v$pkgver?signed"
    $pkgname-4.6.0-defaultinitpath.patch
  )
  validpgpkeys=(
-@@ -43,7 +43,7 @@
+@@ -30,20 +29,15 @@
+   7CE1E6F8C90CB53E7E4D8F2D502E08DB0BBF8EEE  # Ashley Cui <acui@redhat.com>
+   9E33DD8704CC03E2DEB84D9A1C1EDD7CC7C3A0DD  # Lokesh Mandvekar <lsm5@redhat.com>
+ )
+-sha256sums=('SKIP'
++sha256sums=('d47363ad333e75ba8d3fa6c75245e8270d25a7cfeb59586409ac5ad4132a0f23'
+             'eeacf654707b9b8d6a6c08453b5625d9cf31010d666f82f4851aa34433b97700')
+-
+-pkgver() {
+-  cd $pkgname
+-  git describe --tags | sed 's/^v//;s/-/+/g'
+-}
+ 
+ prepare() {
+   patch -Np1 -d $pkgname -i ../$pkgname-4.6.0-defaultinitpath.patch
  }
  
  build() {
@@ -23,7 +47,22 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -80,6 +80,8 @@
+@@ -67,19 +61,21 @@
+     device-mapper libdevmapper.so
+     gpgme libgpgme.so
+     libseccomp libseccomp.so
+-    slirp4netns
++    passt
+   )
+   optdepends=(
+     'apparmor: for AppArmor support'
+     'btrfs-progs: support btrfs backend devices'
+     'cni-plugins: for an alternative container-network-stack implementation'
+     'fuse-overlayfs: for storage driver in rootless environment'
+-    'passt: for alternative rootless network support'
++    'slirp4netns: for alternative rootless network support'
+     'podman-compose: for docker-compose compatibility'
+     'podman-docker: for Docker-compatible CLI'
    )
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -32,7 +71,7 @@
  }
  
  package_podman-docker() {
-@@ -92,4 +94,6 @@
+@@ -92,4 +88,6 @@
    provides=(docker)
  
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
@@ -54,8 +93,12 @@
  export CGO_CPPFLAGS="${CPPFLAGS}"
  export CGO_CFLAGS="${CFLAGS}"
  export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -30,6 +30,7 @@
- slirp4netns
+@@ -27,9 +27,10 @@
+ device-mapper libdevmapper.so
+ gpgme libgpgme.so
+ libseccomp libseccomp.so
+-slirp4netns
++passt
  )
  make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
 +rm -rvf "$pkgdir"/usr/lib/systemd

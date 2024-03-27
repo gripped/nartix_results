@@ -25,7 +25,6 @@ alsa-topology-conf
 alsa-ucm-conf
 amdvlk
 amf-headers
-amfora
 aml
 amtk
 analitza5
@@ -1692,10 +1691,8 @@ nemo-share
 nemo-terminal
 nemo
 neofetch
-neomutt
 neon
 neovim-qt
-neovim
 netcdf-fortran
 netcdf
 netcf
@@ -2194,7 +2191,6 @@ portsmf
 postgis
 postgrey
 postorius
-potrace
 powerline
 python-powerline
 powerline-common
@@ -2205,7 +2201,6 @@ pps-tools
 pptpd
 presage
 prison5
-privoxy
 procinfo-ng
 proj
 projectm
@@ -2503,7 +2498,6 @@ python-docopt
 python-docstring-to-markdown
 python-doctest-ignore-unicode
 python-docutils-stubs
-python-docutils
 python-dogpile.cache
 python-dotenv
 python-doublex-expects
@@ -2681,12 +2675,10 @@ python-isoduration
 python-isort
 python-itsdangerous
 python-jaraco.classes
-python-jaraco.collections
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.itertools
 python-jaraco.path
-python-jaraco.test
 python-jaraco.text
 python-jedi
 python-jeepney
@@ -2760,7 +2752,6 @@ python-looseversion
 python-lsp-jsonrpc
 python-lsp-server
 python-lsprotocol
-python-lupa
 python-lz4
 python-m2crypto
 python-magic-wormhole-mailbox-server
@@ -2793,7 +2784,6 @@ python-mitmproxy-wireguard
 python-mock
 python-mocket
 python-mongoengine
-python-mongomock
 python-monotonic
 python-moreorless
 python-moto
@@ -2803,7 +2793,6 @@ python-mpmath
 python-msgpack
 python-mss
 python-mujson
-python-multidict
 python-multipart
 python-munch
 python-munkres
@@ -3012,7 +3001,6 @@ python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
 python-pymongo
-python-pymupdf
 python-pymysql
 python-pynacl
 python-pynamodb
@@ -3183,10 +3171,8 @@ python-scikit-learn
 python-scipy
 python-scramp
 python-scripttest
-python-scrypt
 python-scs
 python-seaborn
-python-secretstorage
 python-seedir
 python-semantic-version
 python-semver
@@ -3200,7 +3186,6 @@ python-setuptools-rust
 python-setuptools-scm
 python-setuptools
 python-sgmllib3k
-python-sh
 python-shapely
 python-shellingham
 python-should-dsl
@@ -3220,7 +3205,6 @@ python-snowballstemmer
 python-socketio
 python-socketpool
 python-socksio
-python-softlayer-zeep
 python-softlayer
 python-sortedcollections
 python-soupsieve
@@ -3286,12 +3270,10 @@ python-tblib
 python-teamcity-messages
 python-tempita
 python-tempora
-python-tenacity
 python-termcolor
 python-terminado
 python-termstyle
 python-testfixtures
-python-testflo
 python-testing.common.database
 python-testing.postgresql
 python-testpath
@@ -3325,7 +3307,6 @@ python-transaction
 python-treq
 python-trio-asyncio
 python-trio
-python-trove-classifiers
 python-trustme
 python-truststore
 python-twisted
@@ -3368,8 +3349,6 @@ python-versioneer
 python-versioningit
 python-virtualenv-clone
 python-virtualenv
-python-vistir
-python-vobject
 python-volatile
 python-voluptuous
 python-waitress
@@ -3940,11 +3919,9 @@ t1lib
 t1utils
 taglib
 taglib1
-tailscale
 tali
 talloc
 tang
-task
 tcc
 tclap
 tcsh
@@ -4256,7 +4233,6 @@ warpinator
 wasi-compiler-rt
 wasi-libc
 wavpack
-wayland-protocols
 wayland-utils
 wayland
 wayland-docs
@@ -4319,8 +4295,6 @@ xf86-input-elographics
 xf86-input-libinput
 xf86-input-synaptics
 xf86-video-dummy
-xf86-video-fbdev
-xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo
 xfburn

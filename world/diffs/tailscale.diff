@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=tailscale
+-pkgver=1.60.0
++pkgver=1.62.1
+ pkgrel=1
+ pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
+ arch=("x86_64")
+@@ -9,14 +9,8 @@
+ makedepends=("git" "go")
+ depends=("glibc")
+ backup=("etc/default/tailscaled")
+-_commit=b36943c9b3cfc9f917b202025bfde002b076fc87
+-source=("git+https://github.com/tailscale/tailscale.git#commit=${_commit}")
+-sha256sums=('SKIP')
+-
+-pkgver() {
+-  cd "${pkgname}"
+-  git describe --tags | sed 's/^[vV]//;s/-/+/g'
+-}
++source=("git+https://github.com/tailscale/tailscale.git#tag=v${pkgver}")
++sha256sums=('611a7f470978a81ff111a869ce8555e51ef66459a7c0e2f97e3a8b48b33575d6')
+ 
+ prepare() {
+     cd "${pkgname}"
+@@ -35,7 +29,7 @@
+         -linkmode=external \
+         -X tailscale.com/version.longStamp=${pkgver} \
+         -X tailscale.com/version.shortStamp=$(cut -d+ -f1 <<< "${pkgver}") \
+-        -X tailscale.com/version.gitCommitStamp=${_commit}"
++        -X tailscale.com/version.gitCommitStamp=$(git rev-parse v"${pkgver}")"
+     for cmd in ./cmd/tailscale ./cmd/tailscaled; do
+         go build -v -tags xversion -ldflags "$GO_LDFLAGS" "$cmd"
+     done
+@@ -46,6 +40,5 @@
+     cd "${pkgname}"
+     install -Dm755 tailscale tailscaled -t "$pkgdir/usr/bin"
+     install -Dm644 cmd/tailscaled/tailscaled.defaults "$pkgdir/etc/default/tailscaled"
+-    install -Dm644 cmd/tailscaled/tailscaled.service -t "$pkgdir/usr/lib/systemd/system"
+     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ -linkmode=external \
+ -X tailscale.com/version.longStamp=${pkgver} \
+ -X tailscale.com/version.shortStamp=$(cut -d+ -f1 <<< "${pkgver}") \
+--X tailscale.com/version.gitCommitStamp=${_commit}"
++-X tailscale.com/version.gitCommitStamp=$(git rev-parse v"${pkgver}")"
+ for cmd in ./cmd/tailscale ./cmd/tailscaled; do
+ go build -v -tags xversion -ldflags "$GO_LDFLAGS" "$cmd"
+ done

@@ -221,3 +221,4 @@ zathura-ps
 zathura
 libtg_owt
 chromium-bsu
+libfoo

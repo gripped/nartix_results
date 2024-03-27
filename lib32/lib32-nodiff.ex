@@ -3,7 +3,6 @@ lib32-acl
 lib32-alsa-lib
 lib32-alsa-plugins
 lib32-amdvlk
-lib32-at-spi2-core
 lib32-attr
 lib32-brotli
 lib32-bzip2

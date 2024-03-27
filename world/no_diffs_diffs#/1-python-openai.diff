@@ -5,7 +5,7 @@
  pkgname=python-openai
  _name=openai-python
 -pkgver=1.13.2
-+pkgver=1.14.2
++pkgver=1.14.3
  pkgrel=1
  pkgdesc="Python client library for the OpenAI API"
  arch=('any')
@@ -14,7 +14,7 @@
              'python-scipy: embeddings')
  source=("${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 -sha256sums=('f5b2f4b2e0eccad745b9b68434f065c067e721f6784afdc990cd1f9dd8a945cb')
-+sha256sums=('08e8ba2c3e9388054033b33f674a0b6be67d954d4bad5d55ae49db7594aee121')
++sha256sums=('f9acead581edd4ae9a79e1425ff9ba36b35da13237abebca7cc6581c164ce4c9')
  
  build() {
    cd "${_name}-${pkgver}"
