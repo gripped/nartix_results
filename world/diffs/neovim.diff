@@ -5,11 +5,11 @@
  pkgname=neovim
  pkgver=0.9.5
 -pkgrel=2
-+pkgrel=3
++pkgrel=4
  pkgdesc='Fork of Vim aiming to improve user experience, plugins, and GUIs'
  arch=('x86_64')
  url='https://neovim.io'
-@@ -14,6 +14,12 @@
+@@ -14,6 +14,13 @@
    'luajit'
    'msgpack-c'
    'tree-sitter'
@@ -18,11 +18,12 @@
 +  'tree-sitter-lua'
 +  'tree-sitter-markdown'
 +  'tree-sitter-python'
++  'tree-sitter-query'
 +  'tree-sitter-vimdoc'
    'unibilium'
  )
  makedepends=('cmake' 'git' 'ninja' 'lua51-mpack' 'lua51-lpeg' 'unzip')
-@@ -60,6 +66,8 @@
+@@ -60,6 +67,8 @@
    cd ${pkgname}-${pkgver}
    DESTDIR="$pkgdir" cmake --install build
  
@@ -37,7 +38,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,6 +7,12 @@
+@@ -7,6 +7,13 @@
  'luajit'
  'msgpack-c'
  'tree-sitter'
@@ -46,6 +47,7 @@
 +'tree-sitter-lua'
 +'tree-sitter-markdown'
 +'tree-sitter-python'
++'tree-sitter-query'
 +'tree-sitter-vimdoc'
  'unibilium'
  )

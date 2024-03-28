@@ -41,6 +41,8 @@ at-spi2-core
 at-spi2-core-docs
 at
 attica
+audacity
+audacity-docs
 audiocd-kio
 audiotube
 avahi
@@ -149,6 +151,7 @@ drkonqi
 dropbear
 dropbear-scp
 dtc
+dump_syms
 dunst
 earlyoom
 edk2
@@ -735,6 +738,9 @@ libvirt-glib
 libwhereami
 libxaw
 libxcursor
+libxkbcommon
+libxkbcommon-x11
+libxkbcommon-doc
 libxmu
 light-locker
 lightdm
@@ -1465,6 +1471,7 @@ transmission-qt
 libtransmission
 tree-sitter
 tree-sitter-cli
+udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2

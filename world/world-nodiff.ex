@@ -89,8 +89,6 @@ aubio
 python-aubio
 audacious-plugins
 audacious
-audacity
-audacity-docs
 audiofile
 augeas
 auth-tarball-from-git
@@ -363,7 +361,6 @@ doxygen
 doxygen-docs
 dqlite
 duktape
-dump_syms
 dune
 duplicity
 dvd-rw-tools
@@ -1367,9 +1364,6 @@ libxfont2
 libxft
 libxi
 libxinerama
-libxkbcommon
-libxkbcommon-x11
-libxkbcommon-doc
 libxkbfile
 libxklavier
 libxmlb
@@ -4148,7 +4142,6 @@ twolame
 txt2man
 typescript
 uchardet
-udftools
 udiskie
 udpxy
 ufmt

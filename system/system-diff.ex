@@ -5,6 +5,9 @@ base
 bash
 btrfs-progs
 cryptsetup
+curl
+libcurl-compat
+libcurl-gnutls
 dbus
 dbus-docs
 dhcpcd
@@ -23,6 +26,7 @@ gssproxy
 iana-etc
 iptables
 iptables-nft
+libassuan
 libcap
 libnghttp2
 libusb

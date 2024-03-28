@@ -5,7 +5,7 @@
  pkgname=tracker3-miners
 -pkgver=3.6.2
 -pkgrel=2
-+pkgver=3.7.0
++pkgver=3.7.1
 +pkgrel=1
  pkgdesc="Filesystem indexer and metadata extractor"
  url="https://tracker.gnome.org/"
@@ -28,7 +28,7 @@
    libcue
    libexif
    libgexiv2
-@@ -17,28 +26,27 @@
+@@ -17,36 +26,35 @@
    libgsf
    libgxps
    libiptcdata
@@ -60,11 +60,12 @@
  )
  groups=(gnome)
 -_commit=c3f8ef3d7b4ec57b948992ddd8137db02f9d25b7  # tags/3.6.2^0
-+_commit=1f7efc261174de97e5616d3a85e78c1cfada964b  # tags/3.7.0^0
++_commit=eae431ef23ddbf0910bc716f36b5f7512c783752  # tags/3.7.1^0
  source=(
    "git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit"
  )
-@@ -46,7 +54,7 @@
+-b2sums=('SKIP')
++b2sums=('ada10b31b18dcfcbaffff8d2aa9b9cafdeb715ab5741dc8afee67011873f661abfb80c12fa6c38b63ee4866a259a964cad6bd9b6241965b96c3433268da9e62e')
  
  pkgver() {
    cd tracker-miners

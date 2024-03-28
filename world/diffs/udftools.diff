@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=udftools
+ pkgver=2.3
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Linux tools for UDF filesystems and DVD/CD-R(W) drives'
+ url='https://github.com/pali/udftools'
+ arch=('x86_64')
+ license=('GPL')
+-depends=('ncurses' 'readline')
+-makedepends=('systemd')
++depends=('readline')
++makedepends=('udev')
+ source=("https://github.com/pali/$pkgname/releases/download/$pkgver/$pkgname-${pkgver}.tar.gz")
+ sha256sums=('750dcf5c797765eb42265e0a56d1a99f97f94b7f6f4534263a5410503f0caf59')
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=udftools
+-depends=('ncurses' 'readline')
++depends=('readline')
+ prepare() {
+ cd "$srcdir/$pkgname-$pkgver"
+ sed -i 's|/lib/|$(libdir)/|' pktsetup/Makefile.am

@@ -737,3 +737,4 @@ tree-sitter-lua
 tree-sitter-markdown
 tree-sitter-python
 tree-sitter-vimdoc
+tree-sitter-query
