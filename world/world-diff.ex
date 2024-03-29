@@ -268,6 +268,7 @@ gnome-user-share
 gnome-video-effects
 go-bindata
 go-licenses
+go-md2man
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -1098,11 +1099,13 @@ python-django-rest-framework
 python-docker-pycreds
 python-docutils
 python-elasticsearch
+python-evdev
 python-feedgen
 python-fire
 python-flaky
 python-flask-login
 python-flask-sqlalchemy
+python-flexmock
 python-genty
 python-google-auth
 python-hatch-jupyter-builder

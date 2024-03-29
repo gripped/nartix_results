@@ -5,6 +5,7 @@ lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
 lib32-glib-networking
+lib32-glib2
 lib32-gstreamer
 lib32-gst-plugins-base-libs
 lib32-gst-plugins-base
@@ -19,6 +20,8 @@ lib32-libudev0-shim
 lib32-libunwind
 lib32-libusb
 lib32-libxcb
+lib32-libxkbcommon
+lib32-libxkbcommon-x11
 lib32-llvm
 lib32-mesa
 lib32-vulkan-mesa-layers

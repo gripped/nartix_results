@@ -603,7 +603,6 @@ gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
-go-md2man
 go-tools
 go-yq
 go
@@ -2515,7 +2514,6 @@ python-entrypoint2
 python-entrypoints
 python-ephemeral-port-reserve
 python-et-xmlfile
-python-evdev
 python-eventlet
 python-exceptiongroup
 python-execnet
@@ -2558,7 +2556,6 @@ python-flask-restful
 python-flask-socketio
 python-flask
 python-flex
-python-flexmock
 python-flit-core
 python-flit-scm
 python-flit

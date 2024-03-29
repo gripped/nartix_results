@@ -26,7 +26,6 @@ lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
-lib32-glib2
 lib32-glu
 lib32-gmp
 lib32-gnutls
@@ -113,8 +112,6 @@ lib32-libxfixes
 lib32-libxft
 lib32-libxi
 lib32-libxinerama
-lib32-libxkbcommon
-lib32-libxkbcommon-x11
 lib32-libxml2
 lib32-libxmu
 lib32-libxrandr
