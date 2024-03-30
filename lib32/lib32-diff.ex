@@ -1,6 +1,9 @@
 lib32-at-spi2-core
 lib32-clang
 lib32-colord
+lib32-curl
+lib32-libcurl-compat
+lib32-libcurl-gnutls
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
@@ -50,5 +53,7 @@ lib32-sqlite
 lib32-taglib
 lib32-util-linux
 lib32-v4l-utils
+lib32-xz
+steam
 wine-staging
 wine

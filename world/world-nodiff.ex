@@ -384,7 +384,6 @@ elixir
 ell
 embree3
 emovix
-enblend-enfuse
 enca
 encfs
 enchant
@@ -521,7 +520,6 @@ geany-plugins
 geany
 geary
 gedit-plugins
-gedit
 gegl
 gendesk
 gengetopt
@@ -876,7 +874,6 @@ kdsoap
 kdsoap-qt5
 kdsoap-qt6
 kemoticons
-kexec-tools
 keybinder2
 libkeybinder2
 keychain
@@ -4187,7 +4184,6 @@ vice
 vid.stab
 viewnior
 vifm
-vigra
 vim
 gvim
 vim-runtime

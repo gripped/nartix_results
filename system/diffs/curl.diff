@@ -1,31 +1,47 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,8 @@
+@@ -1,9 +1,7 @@
  
  pkgbase=curl
  pkgname=(curl libcurl-compat libcurl-gnutls)
 -_tag='8cd1397d3c5c9b1526c8d74530266a7a9a22294b' # git rev-parse v${_tag_name}
 -_tag_name='8_6_0'
 -pkgver="${_tag_name//_/.}"
--pkgrel=3
-+pkgver=8.6.0
-+pkgrel=4
++pkgver=8.7.1
+ pkgrel=3
  pkgdesc='command line tool and library for transferring data with URLs'
  arch=('x86_64')
- url='https://curl.se/'
-@@ -21,8 +19,8 @@
+@@ -20,15 +18,20 @@
+          'zlib' 'libz.so'
           'zstd' 'libzstd.so')
  makedepends=('git' 'patchelf')
++options=(debug)
++checkdepends=('valgrind')
  validpgpkeys=('27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2') # Daniel Stenberg
 -source=("git+https://github.com/curl/curl.git#tag=${_tag}?signed")
 -sha512sums=('SKIP')
-+source=("git+https://github.com/curl/curl.git#tag=curl-${pkgver//./_}?signed")
-+sha512sums=('82f32401391b92ae71ea1ebef9058c0f99d9a42f6e8d3c5465b0e16040d022f04fff0b096b015371e57cf08515557cb84f70de32fa8e65b003025470b4f7ba8b')
++source=("git+https://github.com/curl/curl.git#tag=curl-${pkgver//./_}?signed"
++        '0001-bump-version-to-match-last-tag.patch'
++        '0002-brotli-and-others-simply-pass-through-0-length-writes.patch')
++sha512sums=('38b55dc916a64a1fd40a8af3e9a694ae918f8efb714430834491ebbe0ceeee4b58ba804afa15da966cbcf9cd7100ce373aed7b2101dff56f742996072caaf09a'
++            '51df4903eff9f1a15b1317ea4a8ee2b8537f347984f2524f42213b09344cd6109c621a4b81b37d2fcf2027387bb81cf0a744a48e96b86c4e268c43261ff86845'
++            '6bb9bf70eacef55a91ed0cec5edd8887af9a7ef6e6d819624c6c532360fe1f524aa9b2417496fcdca54e1ede22bc542c6581d420b068b5c24da932ea03426106')
  
  _backports=(
  )
-@@ -50,7 +48,7 @@
  
+ _reverts=(
+-    '9a90c9dd64d2f03601833a70786d485851bd1b53'
+ )
+ 
+ prepare() {
+@@ -48,9 +51,12 @@
+     git revert -n "${_c}"
+   done
+ 
++  patch -Np1 < ../0001-bump-version-to-match-last-tag.patch
++  patch -Np1 < ../0002-brotli-and-others-simply-pass-through-0-length-writes.patch
++
    sed -i \
      -e "/\WLIBCURL_VERSION\W/c #define LIBCURL_VERSION \"${pkgver}\"" \
 -    -e "/\WLIBCURL_TIMESTAMP\W/c #define LIBCURL_TIMESTAMP \"$(git log -1 --format=%cs "${_tag}")\"" \
@@ -33,27 +49,73 @@
      include/curl/curlver.h
  
    autoreconf -fi
-@@ -106,6 +104,12 @@
-   patchelf --set-soname 'libcurl-gnutls.so.4' ./lib/.libs/libcurl.so
- }
+@@ -77,9 +83,11 @@
  
-+check() {
-+  cd "${srcdir}"/build-curl
-+
-+  make test
+   "${srcdir}/${pkgbase}"/configure \
+     "${_configure_options[@]}" \
++    --enable-versioned-symbols \
++    --with-fish-functions-dir=/usr/share/fish/vendor_completions.d/ \
+     --with-openssl \
+     --with-openssl-quic \
+-    --enable-versioned-symbols
++    --with-zsh-functions-dir=/usr/share/zsh/site-functions/
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ 
+@@ -87,9 +95,9 @@
+ 
+   "${srcdir}/${pkgbase}"/configure \
+     "${_configure_options[@]}" \
++    --disable-versioned-symbols \
+     --with-openssl \
+-    --with-openssl-quic \
+-    --disable-versioned-symbols
++    --with-openssl-quic
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make -C lib
+   patchelf --set-soname 'libcurl-compat.so.4' ./lib/.libs/libcurl.so
+@@ -99,11 +107,16 @@
+   "${srcdir}/${pkgbase}"/configure \
+     "${_configure_options[@]}" \
+     --disable-versioned-symbols \
+-    --without-openssl \
+-    --with-gnutls
++    --with-gnutls \
++    --without-openssl
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make -C lib
+   patchelf --set-soname 'libcurl-gnutls.so.4' ./lib/.libs/libcurl.so
 +}
 +
++check() {
++  cd build-curl
++  make TFLAGS="-v -a -k -p -j$(nproc) !433" test-nonflaky
+ }
+ 
  package_curl() {
-   depends+=('openssl' 'libcrypto.so' 'libssl.so')
-   provides=('libcurl.so')
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
+@@ -10,10 +10,10 @@
+ 'libssh2' 'libssh2.so'
+ 'zlib' 'libz.so'
+ 'zstd' 'libzstd.so')
+ _backports=(
+ )
+ _reverts=(
+-'9a90c9dd64d2f03601833a70786d485851bd1b53'
+ )
+ prepare() {
+ cd "$pkgbase"
+@@ -30,9 +30,11 @@
+ git log --oneline -1 "${_c}"
+ git revert -n "${_c}"
  done
++patch -Np1 < ../0001-bump-version-to-match-last-tag.patch
++patch -Np1 < ../0002-brotli-and-others-simply-pass-through-0-length-writes.patch
  sed -i \
  -e "/\WLIBCURL_VERSION\W/c #define LIBCURL_VERSION \"${pkgver}\"" \
 --e "/\WLIBCURL_TIMESTAMP\W/c #define LIBCURL_TIMESTAMP \"$(git log -1 --format=%cs "${_tag}")\"" \
@@ -61,3 +123,37 @@
  include/curl/curlver.h
  autoreconf -fi
  }
+@@ -54,17 +56,19 @@
+ cd "${srcdir}"/build-curl
+ "${srcdir}/${pkgbase}"/configure \
+ "${_configure_options[@]}" \
++--enable-versioned-symbols \
++--with-fish-functions-dir=/usr/share/fish/vendor_completions.d/ \
+ --with-openssl \
+ --with-openssl-quic \
+---enable-versioned-symbols
++--with-zsh-functions-dir=/usr/share/zsh/site-functions/
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ cd "${srcdir}"/build-curl-compat
+ "${srcdir}/${pkgbase}"/configure \
+ "${_configure_options[@]}" \
++--disable-versioned-symbols \
+ --with-openssl \
+---with-openssl-quic \
+---disable-versioned-symbols
++--with-openssl-quic
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make -C lib
+ patchelf --set-soname 'libcurl-compat.so.4' ./lib/.libs/libcurl.so
+@@ -72,8 +76,8 @@
+ "${srcdir}/${pkgbase}"/configure \
+ "${_configure_options[@]}" \
+ --disable-versioned-symbols \
+---without-openssl \
+---with-gnutls
++--with-gnutls \
++--without-openssl
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make -C lib
+ patchelf --set-soname 'libcurl-gnutls.so.4' ./lib/.libs/libcurl.so

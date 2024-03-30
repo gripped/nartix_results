@@ -9,9 +9,6 @@ lib32-bzip2
 lib32-cairo
 lib32-cdparanoia
 lib32-cmocka
-lib32-curl
-lib32-libcurl-compat
-lib32-libcurl-gnutls
 lib32-dconf
 lib32-duktape
 lib32-e2fsprogs
@@ -156,9 +153,7 @@ lib32-vulkan-validation-layers
 lib32-wavpack
 lib32-wayland
 lib32-xcb-util-keysyms
-lib32-xz
 lib32-zlib
 lib32-zstd
 multilib-devel
-steam
 winetricks

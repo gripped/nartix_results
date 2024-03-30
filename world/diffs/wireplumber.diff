@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,105 +1,131 @@
+@@ -1,105 +1,135 @@
  
  pkgbase=wireplumber
  pkgname=(
@@ -12,9 +12,10 @@
  )
 -_commit=d3eb77b292655cef333a8f4cab4e861415bc37c2  # tags/0.4.17
 -pkgver=0.4.17
+-pkgrel=1
 +_commit=59d190a2bd400f3b093f99b16fc0fb06f6cb2cfe # tags/0.5.0
 +pkgver=0.5.0
- pkgrel=1
++pkgrel=2
  pkgdesc="Session / policy manager implementation for PipeWire"
  url="https://pipewire.pages.freedesktop.org/wireplumber/"
  arch=(x86_64)
@@ -30,7 +31,6 @@
 -  pipewire
 -  python-lxml
 -  systemd
-+	elogind
 +	doxygen
 +	gcc-libs
 +	git
@@ -62,6 +62,8 @@
  prepare() {
 -  cd $pkgbase
 +	cd $pkgbase
++
++	git cherry-pick -n 428462ddf3f812a1da63d0b499e105c6391abbf4
  }
  
  build() {
@@ -78,6 +80,9 @@
  
 -  arch-meson $pkgbase build "${meson_options[@]}"
 -  meson compile -C build
++	artix-meson $pkgbase build "${meson_options[@]}"
++	meson compile -C build
++
 +	artix-meson $pkgbase build "${meson_options[@]}"
 +	meson compile -C build
  }
@@ -199,7 +204,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,21 +2,23 @@
+@@ -2,21 +2,26 @@
  pkgname=(
  wireplumber
  libwireplumber
@@ -207,6 +212,7 @@
  )
  prepare() {
  cd $pkgbase
++git cherry-pick -n 428462ddf3f812a1da63d0b499e105c6391abbf4
  }
  build() {
  local meson_options=(
@@ -218,6 +224,8 @@
  )
 -arch-meson $pkgbase build "${meson_options[@]}"
 +artix-meson $pkgbase build "${meson_options[@]}"
++meson compile -C build
++artix-meson $pkgbase build "${meson_options[@]}"
  meson compile -C build
  }
  _pick() {
@@ -227,7 +235,7 @@
  for f; do
  d="$srcdir/$p/${f#$pkgdir/}"
  mkdir -p "$(dirname "$d")"
-@@ -28,13 +30,16 @@
+@@ -28,13 +33,16 @@
  package_wireplumber() {
  depends=(
  "libwireplumber=$pkgver-$pkgrel"
@@ -246,7 +254,7 @@
  meson install -C build --destdir "$pkgdir"
  (
  cd "$pkgdir"
-@@ -43,6 +48,7 @@
+@@ -43,6 +51,7 @@
  _pick libw usr/lib/pkgconfig
  _pick libw usr/include
  _pick libw usr/share/gir-1.0
@@ -254,7 +262,7 @@
  )
  install -Dt "$pkgdir/usr/share/doc/$pkgname" -m644 $pkgbase/{NEWS,README}*
  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 $pkgbase/LICENSE
-@@ -50,6 +56,8 @@
+@@ -50,6 +59,8 @@
  package_libwireplumber() {
  pkgdesc+=" - client library"
  depends=(

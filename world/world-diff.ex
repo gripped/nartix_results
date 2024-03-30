@@ -167,6 +167,7 @@ emacs-nativecomp
 emacs-nox
 emacs-wayland
 embree
+enblend-enfuse
 epiphany
 erlang-nox
 erlang
@@ -213,6 +214,7 @@ gcr
 gcr-docs
 gdm
 libgdm
+gedit
 genxrdpattern
 geoclue
 ghex
@@ -470,6 +472,7 @@ kdnssd
 kdoctools
 keditbookmarks
 keepassxc
+kexec-tools
 keysmith
 kfilemetadata
 kfind
@@ -1505,6 +1508,8 @@ vala
 vault
 vc-intrinsics
 veracrypt
+vigra
+python-vigra
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms
