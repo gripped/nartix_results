@@ -1,115 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,10 @@
- 
--pkgname=gnome-shell
--pkgver=45.4
-+pkgbase=gnome-shell
-+pkgname=(
-+  gnome-shell
-+  gnome-shell-docs
-+)
-+pkgver=46.0
- pkgrel=1
- epoch=1
- pkgdesc="Next generation desktop shell"
-@@ -9,22 +13,44 @@
- license=(GPL-3.0-or-later)
- depends=(
-   accountsservice
-+  at-spi2-core
-+  bash
-+  cairo
-+  dconf
-+  gcc-libs
-   gcr-4
-+  gdk-pixbuf2
-   gjs
-+  glib2
-+  glibc
-   gnome-autoar
-+  gnome-desktop-4
-   gnome-session
-   gnome-settings-daemon
-+  graphene
-   gsettings-desktop-schemas
-   gtk4
-+  hicolor-icon-theme
-+  json-glib
-   libadwaita
-   libcanberra-pulse
-   libgdm
-+  libgirepository
-+  libglvnd
-   libgweather-4
-   libibus
-+  libical
-+  libnm
-   libnma-gtk4
-+  libpipewire
-+  libpulse
-   libsecret
-   libsoup3
-+  libx11
-+  libxfixes
+@@ -51,7 +51,6 @@
    mutter
-+  pango
-+  polkit
+   pango
+   polkit
+-  systemd-libs
    unzip
    upower
  )
-@@ -32,10 +58,10 @@
-   asciidoc
-   bash-completion
-   evolution-data-server
-+  gi-docgen
-   git
-   gnome-control-center
-   gobject-introspection
--  gtk-doc
-   meson
-   sassc
- )
-@@ -44,33 +70,21 @@
-   python-dbusmock
-   xorg-server-xvfb
- )
--optdepends=(
--  'evolution-data-server: Evolution calendar integration'
--  'gnome-bluetooth-3.0: Bluetooth support'
--  'gnome-control-center: System settings'
--  'gnome-disk-utility: Mount with keyfiles'
--  'gst-plugin-pipewire: Screen recording'
--  'gst-plugins-good: Screen recording'
--  'power-profiles-daemon: Power profile switching'
--  'python-gobject: gnome-shell-test-tool performance tester'
--  'switcheroo-control: Multi-GPU support'
--)
--groups=(gnome)
--_commit=58522920b5ae96d2b95dad0371ce13eb4bd955ce  # tags/45.4^0
-+_commit=0463511457612ca87f7426b3b01356d1d85bee9b  # tags/46.0^0
- source=(
-   "git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
-   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
- )
--b2sums=('SKIP'
-+b2sums=('8684414294c781bd02f89eb76ae04a51a701c51e00966f227989c0a41d161f34e4bfb7e9609f0a902a565aa4ea22f9d9c740d043b668bc132ed6d7471b8d7119'
-         'SKIP')
- 
- pkgver() {
--  cd $pkgname
--  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-+  cd $pkgbase
-+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
- }
- 
- prepare() {
--  cd $pkgname
-+  cd $pkgbase
- 
-   git submodule init
-   git submodule set-url subprojects/gvc "$srcdir/libgnome-volume-control"
-@@ -80,31 +94,52 @@
+@@ -95,12 +94,13 @@
  build() {
    local meson_options=(
      -D gtk_doc=true
@@ -119,56 +18,9 @@
    CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
    LDFLAGS+=" -Wl,-Bsymbolic-functions"
  
--  arch-meson $pkgname build "${meson_options[@]}"
+-  arch-meson $pkgbase build "${meson_options[@]}"
 +  artix-meson $pkgbase build "${meson_options[@]}"
    meson compile -C build
- }
- 
--_check() (
-+check() (
-   export XDG_RUNTIME_DIR="$PWD/rdir"
-   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
- 
-   export NO_AT_BRIDGE=1 GTK_A11Y=none
- 
--  meson test -C build --print-errorlogs -t 3
-+  dbus-run-session -- xvfb-run -s '-nolisten local +iglx -noreset' \
-+    meson test -C build --no-rebuild --print-errorlogs -t 2 || :
- )
- 
--check() {
--  dbus-run-session xvfb-run -s '-nolisten local +iglx -noreset' \
--    bash -c "$(declare -f _check); _check"
-+package_gnome-shell() {
-+  depends+=(libmutter-14.so)
-+  optdepends=(
-+    'evolution-data-server: Evolution calendar integration'
-+    'gnome-bluetooth-3.0: Bluetooth support'
-+    'gnome-control-center: System settings'
-+    'gnome-disk-utility: Mount with keyfiles'
-+    'gst-plugin-pipewire: Screen recording'
-+    'gst-plugins-good: Screen recording'
-+    'power-profiles-daemon: Power profile switching'
-+    'python-gobject: gnome-shell-test-tool performance tester'
-+    'python-simplejson: gnome-shell-test-tool performance tester'
-+    'switcheroo-control: Multi-GPU support'
-+  )
-+  groups=(gnome)
-+
-+  meson install -C build --destdir "$pkgdir"
-+
-+  mkdir -p doc/usr/share
-+  mv {"$pkgdir",doc}/usr/share/doc
- }
- 
--package() {
--  depends+=(libmutter-13.so)
--  meson install -C build --destdir "$pkgdir"
-+package_gnome-shell-docs() {
-+  pkgdesc+=" (API documentation)"
-+  depends=()
-+
-+  mv doc/* "$pkgdir"
  }
  
 
@@ -177,64 +29,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,53 @@
--pkgname=gnome-shell
-+pkgbase=gnome-shell
-+pkgname=(
-+gnome-shell
-+gnome-shell-docs
-+)
- depends=(
- accountsservice
-+at-spi2-core
-+bash
-+cairo
-+dconf
-+gcc-libs
- gcr-4
-+gdk-pixbuf2
- gjs
-+glib2
-+glibc
- gnome-autoar
-+gnome-desktop-4
- gnome-session
- gnome-settings-daemon
-+graphene
- gsettings-desktop-schemas
- gtk4
-+hicolor-icon-theme
-+json-glib
- libadwaita
- libcanberra-pulse
- libgdm
-+libgirepository
-+libglvnd
- libgweather-4
- libibus
-+libical
-+libnm
- libnma-gtk4
-+libpipewire
-+libpulse
- libsecret
- libsoup3
-+libx11
-+libxfixes
+@@ -43,7 +43,6 @@
  mutter
-+pango
-+polkit
+ pango
+ polkit
+-systemd-libs
  unzip
  upower
  )
--groups=(gnome)
- prepare() {
--cd $pkgname
-+cd $pkgbase
- git submodule init
- git submodule set-url subprojects/gvc "$srcdir/libgnome-volume-control"
- git -c protocol.file.allow=always submodule update
-@@ -30,14 +55,29 @@
+@@ -56,10 +55,11 @@
  build() {
  local meson_options=(
  -D gtk_doc=true
@@ -242,29 +45,8 @@
  )
  CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
  LDFLAGS+=" -Wl,-Bsymbolic-functions"
--arch-meson $pkgname build "${meson_options[@]}"
+-arch-meson $pkgbase build "${meson_options[@]}"
 +artix-meson $pkgbase build "${meson_options[@]}"
  meson compile -C build
  }
--_
--package() {
--depends+=(libmutter-13.so)
-+check() (
-+export XDG_RUNTIME_DIR="$PWD/rdir"
-+mkdir -p -m 700 "$XDG_RUNTIME_DIR"
-+export NO_AT_BRIDGE=1 GTK_A11Y=none
-+dbus-run-session -- xvfb-run -s '-nolisten local +iglx -noreset' \
-+meson test -C build --no-rebuild --print-errorlogs -t 2 || :
-+)
-+package_gnome-shell() {
-+depends+=(libmutter-14.so)
-+groups=(gnome)
- meson install -C build --destdir "$pkgdir"
-+mkdir -p doc/usr/share
-+mv {"$pkgdir",doc}/usr/share/doc
- }
-+package_gnome-shell-docs() {
-+pkgdesc+=" (API documentation)"
-+depends=()
-+mv doc/* "$pkgdir"
-+}
+ check() (

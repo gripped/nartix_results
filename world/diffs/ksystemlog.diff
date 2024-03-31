@@ -1,47 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,42 @@
- 
- pkgname=ksystemlog
--pkgver=23.08.5
-+pkgver=24.02.1
- pkgrel=1
- pkgdesc='System log viewer tool'
- url='https://apps.kde.org/ksystemlog/'
- arch=(x86_64)
--license=(GPL LGPL FDL)
--groups=(kde-applications kde-system)
--depends=(kio5)
--makedepends=(extra-cmake-modules kdoctools5)
-+license=(GPL-2.0-or-later LGPL-2.0-or-later)
-+depends=(audit
-+         gcc-libs
-+         glibc
-+         karchive
-+         kcolorscheme
-+         kcompletion
-+         kconfig
-+         kconfigwidgets
-+         kcoreaddons
-+         ki18n
-+         kio
-+         kitemviews
-+         ktextwidgets
-+         kwidgetsaddons
-+         kxmlgui
-+         qt6-5compat
-+         qt6-base
+@@ -23,7 +23,7 @@
+          kxmlgui
+          qt6-5compat
+          qt6-base
+-         systemd-libs)
 +         libelogind)
-+makedepends=(extra-cmake-modules
-+             kdoctools)
-+groups=(kde-applications
-+        kde-system)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('80e6036510a76f7521cd01cebe67e4b7d7f7d251c18b2c388cfabcf28635c356'
-+sha256sums=('80a986f9f011c4e3eac5f27528c9c38b1e14826887b8400925112da9b408804e'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+ makedepends=(extra-cmake-modules
+              kdoctools)
+ groups=(kde-applications
+@@ -36,7 +36,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {
@@ -56,30 +24,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,26 @@
- pkgname=ksystemlog
--groups=(kde-applications kde-system)
--depends=(kio5)
-+depends=(audit
-+gcc-libs
-+glibc
-+karchive
-+kcolorscheme
-+kcompletion
-+kconfig
-+kconfigwidgets
-+kcoreaddons
-+ki18n
-+kio
-+kitemviews
-+ktextwidgets
-+kwidgetsaddons
-+kxmlgui
-+qt6-5compat
-+qt6-base
+@@ -16,11 +16,11 @@
+ kxmlgui
+ qt6-5compat
+ qt6-base
+-systemd-libs)
 +libelogind)
-+groups=(kde-applications
-+kde-system)
+ groups=(kde-applications
+ kde-system)
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 +artix-cmake -B build -S $pkgname-$pkgver \

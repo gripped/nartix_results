@@ -1,43 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,20 +4,24 @@
-   at-spi2-core
-   at-spi2-core-docs
- )
--pkgver=2.50.1
-+pkgver=2.52.0
- pkgrel=1
- pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
- url="https://gitlab.gnome.org/GNOME/at-spi2-core"
- arch=(x86_64)
--license=(GPL2)
-+license=(LGPL-2.1-or-later)
- depends=(
-+  bash
-   dbus
-   glib2
-+  glibc
-   gsettings-desktop-schemas
-+  libei
-   libx11
-+  libxi
-+  libxkbcommon
+@@ -22,8 +22,6 @@
+   libxkbcommon
    libxml2
    libxtst
 -  systemd
+-  systemd-libs
    xorg-xprop
  )
  makedepends=(
-@@ -31,7 +35,7 @@
- checkdepends=(
-   at-spi2-core
- )
--_commit=ee07a30c836137d7653cdb26921ef966a3b47e1d  # tags/AT_SPI2_CORE_2_50_1^0
-+_commit=46c8de80022d28eef2da58f1054b5bff745ed7e0  # tags/AT_SPI2_CORE_2_52_0^0
- source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
- b2sums=('SKIP')
- 
-@@ -46,11 +50,12 @@
+@@ -52,11 +50,12 @@
  
  build() {
    local meson_options=(
@@ -52,7 +24,7 @@
    meson compile -C build
  }
  
-@@ -78,6 +83,8 @@
+@@ -84,6 +83,8 @@
  
    meson install -C build --destdir "$pkgdir"
  
@@ -67,26 +39,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,13 +4,17 @@
- at-spi2-core-docs
- )
- depends=(
-+bash
- dbus
- glib2
-+glibc
- gsettings-desktop-schemas
-+libei
- libx11
-+libxi
-+libxkbcommon
+@@ -15,8 +15,6 @@
+ libxkbcommon
  libxml2
  libxtst
 -systemd
+-systemd-libs
  xorg-xprop
  )
  prepare() {
-@@ -18,10 +22,11 @@
+@@ -24,10 +22,11 @@
  }
  build() {
  local meson_options=(
@@ -100,7 +62,7 @@
  meson compile -C build
  }
  package_at-spi2-core() {
-@@ -41,6 +46,7 @@
+@@ -47,6 +46,7 @@
  'atk<=2.38.0-2'
  )
  meson install -C build --destdir "$pkgdir"

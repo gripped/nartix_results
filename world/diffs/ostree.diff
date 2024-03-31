@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
- 
- pkgname=ostree
--_commit=2d2e0bddf3d4b662ef7f9a3eddb7814b57716cee  # tags/v2024.4^{}
--pkgver=2024.4
-+pkgver=2024.5
- pkgrel=1
- pkgdesc="Operating system and container binary deployment and upgrades"
- url="https://ostreedev.github.io/ostree/"
-@@ -34,7 +33,6 @@
+@@ -33,7 +33,6 @@
    mkinitcpio
    openssl
    python
@@ -17,33 +8,7 @@
    xz
  )
  checkdepends=(
-@@ -47,18 +45,23 @@
- )
- provides=(libostree-1.so)
- source=(
--  git+https://github.com/ostreedev/ostree#commit=$_commit
-+  git+https://github.com/ostreedev/ostree#tag=v$pkgver
-   git+https://github.com/containers/composefs.git
-   git+https://github.com/mendsley/bsdiff
-   git+https://gitlab.gnome.org/GNOME/libglnx.git
-   $pkgname-2023.1-use_fuse3.patch
- )
--b2sums=('SKIP'
-+b2sums=('25dd16ad1356ec22807242a210f60482d28893250f9c23f861887406e5ba947fc2f41dfba2082dce7cbb3ea675f3b799a58dfda141c5ae8b537bd1393d942f47'
-         'SKIP'
-         'SKIP'
-         'SKIP'
-         'cfff162120f70995e18ec56454711501391b97456e2a0f34643c9d2a9c2b50b4d76afc2e2fc50ea28e8a773c618215d6cb855b96663f69dc5cc93bc5766f3f28')
- validpgpkeys=('1CEC7A9DF7DA85ABEF843DC0A866D7CCAE087291') # Colin Walters <walters@redhat.com>
-+
-+pkgver() {
-+  cd $pkgname
-+  git describe --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/v//g'
-+}
- 
- prepare() {
-   cd $pkgname
-@@ -91,6 +94,7 @@
+@@ -95,6 +94,7 @@
      --with-mkinitcpio
      --with-modern-grub
      --with-openssl
@@ -51,7 +16,7 @@
    )
  
    cd $pkgname
-@@ -100,7 +104,7 @@
+@@ -104,7 +104,7 @@
  }
  
  check() {
@@ -60,7 +25,7 @@
  }
  
  package() {
-@@ -112,7 +116,6 @@
+@@ -116,7 +116,6 @@
      libarchive libarchive.so
      libsoup
      openssl libcrypto.so

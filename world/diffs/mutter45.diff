@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,7 +59,6 @@
+   pixman
+   python
+   startup-notification
+-  systemd-libs
+   wayland
+   xorg-xwayland
+ )
+@@ -96,13 +95,14 @@
+     -D egl_device=true
+     -D installed_tests=false
+     -D libdisplay_info=true
++    -D systemd=false
+     -D wayland_eglstream=true
+   )
+ 
+   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
+   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+ 
+-  arch-meson mutter build "${meson_options[@]}"
++  artix-meson mutter build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,6 @@
+ pixman
+ python
+ startup-notification
+-systemd-libs
+ wayland
+ xorg-xwayland
+ )
+@@ -66,10 +65,11 @@
+ -D egl_device=true
+ -D installed_tests=false
+ -D libdisplay_info=true
++-D systemd=false
+ -D wayland_eglstream=true
+ )
+ CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
+ LDFLAGS+=" -Wl,-Bsymbolic-functions"
+-arch-meson mutter build "${meson_options[@]}"
++artix-meson mutter build "${meson_options[@]}"
+ meson compile -C build
+ }

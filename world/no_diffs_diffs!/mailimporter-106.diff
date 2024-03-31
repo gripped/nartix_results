@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_QCH=ON
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ pimcommon
+ qt6-base)
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DBUILD_TESTING=OFF \
+ -DBUILD_QCH=ON
+ cmake --build build

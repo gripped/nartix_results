@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+ }
+ 
+ build() {
+-  arch-meson d-spy build
++  artix-meson d-spy build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+ provides=(libdspy-1.so)
+ groups=(gnome-extra)
+ build() {
+-arch-meson d-spy build
++artix-meson d-spy build
+ meson compile -C build
+ }

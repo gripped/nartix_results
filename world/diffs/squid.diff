@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=squid
--pkgver=6.7
-+pkgver=6.8
- pkgrel=1
- pkgdesc='Full-featured Web proxy cache server'
+@@ -6,8 +6,8 @@
  arch=('x86_64')
  url='http://www.squid-cache.org'
  depends=('openssl' 'pam' 'perl' 'libltdl' 'libcap' 'nettle' 'gnutls' 'libnsl' 'libxml2'
@@ -17,19 +11,17 @@
  optdepends=('libldap')
  license=('GPL')
  options=('emptydirs')
-@@ -26,10 +26,8 @@
+@@ -26,9 +26,7 @@
          "https://github.com/squid-cache/squid/commit/c11ee3d0812e7041f395073cf3b2f368f1caf26d.patch"
          'squid.pam'
          'squid.tmpfiles'
 -        'squid.sysusers'
 -        'squid-rotate.service'
 -        'squid-rotate.timer')
--sha256sums=('e14daa4eae41925d1ae3f08e64439a6aaa3011bdced686628b8de697d5ab8428'
 +        'squid.sysusers')
-+sha256sums=('11cc5650b51809d99483ccfae24744a2e51cd16199f5ff0c917e84fce695870f'
+ sha256sums=('11cc5650b51809d99483ccfae24744a2e51cd16199f5ff0c917e84fce695870f'
              'SKIP'
              '01f92f6d4dcc1d52f992064bdb007dc44aac91c51556a607a3992964f9f12fb9'
-             '3e1992502ce51497e5ccee50e1a19fdd81f1f7226ed14b73c6207b5389af3b88'
 @@ -38,13 +36,10 @@
              'c32034504aa744bb3896819dac58a2efcb5dc19d4950355f53512ffa8a55d52b'
              '11fb388f8679fd6461e0de006810ea608a3686fffda16904b0ed71f412be499c'

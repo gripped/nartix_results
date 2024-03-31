@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D python2=false
++  artix-meson $pkgname-$pkgver build -D python2=false
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ mv -v $pkgname-$pkgver{-dev,}
+ }
+ build() {
+-arch-meson $pkgname-$pkgver build -D python2=false
++artix-meson $pkgname-$pkgver build -D python2=false
+ ninja -C build
+ }

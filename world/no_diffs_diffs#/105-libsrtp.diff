@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,7 @@
+     -D crypto-library-kdf=disabled
+   )
+ 
+-  arch-meson libsrtp build "${meson_options[@]}"
++  artix-meson libsrtp build "${meson_options[@]}"
+   meson compile -C build
+   meson compile -C build doc
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ -D crypto-library=nss
+ -D crypto-library-kdf=disabled
+ )
+-arch-meson libsrtp build "${meson_options[@]}"
++artix-meson libsrtp build "${meson_options[@]}"
+ meson compile -C build
+ meson compile -C build doc
+ }

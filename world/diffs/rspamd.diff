@@ -3,18 +3,19 @@
 @@ -1,7 +1,7 @@
  
  pkgname=rspamd
--pkgver=3.8.1
+-pkgver=3.8.4
 -pkgrel=1
 +pkgver=3.7.5
 +pkgrel=3
  epoch=
  pkgdesc='Fast, free and open-source spam filtering system'
  arch=(x86_64)
-@@ -119,22 +119,18 @@
+@@ -119,23 +119,18 @@
    etc/rspamd/worker-proxy.inc
  )
  install=rspamd.install
--_tag=b8a2d79eeaefc18b044ca0b5c22858f0400fecd9
+-options=(!lto)
+-_tag=93fa4f6dc67f67fa1b7ce14aeb8f0841b4b0369e
 +_tag=8c86c16763af854f19f2fb6eae289814feab8f28
  source=(
    git+https://github.com/rspamd/rspamd.git#tag=${_tag}
@@ -35,7 +36,7 @@
          '8a2882e4cd59eb3304acae9dfa71252c2024a8251e61cd1e75e6b84a84ec8c636e70d6702c03d7b7d0e2f7fa60d2466c6eed4f4f80f1834585185deaf7157eee')
  
  pkgver() {
-@@ -142,13 +138,8 @@
+@@ -143,14 +138,8 @@
    git describe --tags
  }
  
@@ -45,12 +46,13 @@
 -}
 -
  build() {
+-  export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
 -  cmake -S rspamd -B build -G Ninja \
 +  artix-cmake -S rspamd -B build -G Ninja \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DCONFDIR=/etc/rspamd \
      -DDBDIR=/var/lib/rspamd \
-@@ -156,7 +147,7 @@
+@@ -158,7 +147,7 @@
      -DRUNDIR=/run/rspamd \
      -DRSPAMD_USER=rspamd \
      -DNO_SHARED=ON \
@@ -59,7 +61,7 @@
      -DENABLE_HYPERSCAN=ON \
      -DENABLE_JEMALLOC=ON \
      -DENABLE_OPTIMIZATION=ON
-@@ -169,8 +160,6 @@
+@@ -171,8 +160,6 @@
    install -Dm 644 rspamd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/rspamd.conf
    install -Dm 644 rspamd.sysusers "${pkgdir}"/usr/lib/sysusers.d/rspamd.conf
    install -Dm 644 rspamd.logrotate "${pkgdir}"/etc/logrotate.d/rspamd
@@ -74,21 +76,23 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -100,12 +100,8 @@
+@@ -100,14 +100,8 @@
  etc/rspamd/worker-proxy.inc
  )
  install=rspamd.install
+-options=!lto
 -prepare() {
 -cd rspamd
 -sed 's/_rspamd/rspamd/g' -i rspamd.service
 -}
  build() {
+-export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
 -cmake -S rspamd -B build -G Ninja \
 +artix-cmake -S rspamd -B build -G Ninja \
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DCONFDIR=/etc/rspamd \
  -DDBDIR=/var/lib/rspamd \
-@@ -113,7 +109,7 @@
+@@ -115,7 +109,7 @@
  -DRUNDIR=/run/rspamd \
  -DRSPAMD_USER=rspamd \
  -DNO_SHARED=ON \

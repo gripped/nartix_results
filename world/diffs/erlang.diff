@@ -1,17 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,18 @@
- 
- pkgbase=erlang
- pkgname=(erlang erlang-unixodbc)
--pkgver=26.2.2
-+pkgver=26.2.3
- pkgrel=1
- _docver=26.1
--_commit=b83df13eec5446beab06dd24315d37a5b0633fd2 # OTP-26.2.2
-+_commit=928d03e6da416208fce7b9a7dbbfbb4f25d26c37 # OTP-26.2.3
- arch=(x86_64)
- url='https://erlang.org'
+@@ -10,15 +10,9 @@
  license=(Apache)
  makedepends=(fop git glu java-environment libxslt lksctp-tools mesa perl unixodbc wxwidgets-gtk3)
  options=(staticlibs)
@@ -29,45 +18,23 @@
          'SKIP')
  
  prepare() {
-@@ -37,8 +31,8 @@
-     --enable-ssl=dynamic-ssl-lib \
-     --prefix=/usr \
-     --with-odbc
--  make DOC_TARGETS=chunks all
--  make DOC_TARGETS=chunks docs
-+  DOC_TARGETS=chunks make all
-+  DOC_TARGETS=chunks make docs
- }
- 
- package_erlang() {
-@@ -55,10 +49,6 @@
- 
+@@ -56,10 +50,6 @@
    mkdir -p unixodbc
    mv "$pkgdir/usr/lib/erlang/lib/odbc"* "$srcdir/unixodbc/"
--
+ 
 -  install -Dm644 epmd.service "$pkgdir/usr/lib/systemd/system/epmd.service"
 -  install -Dm644 epmd.socket "$pkgdir/usr/lib/systemd/system/epmd.socket"
 -  install -Dm644 epmd.conf "$pkgdir/etc/conf.d/epmd"
- 
+-
    install -Dm644 otp/README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
    install -Dm644 otp/LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+   install -Dm644 otp/CONTRIBUTING.md "$pkgdir/usr/share/doc/$pkgname/CONTRIBUTING.md"
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,8 +16,8 @@
- --enable-ssl=dynamic-ssl-lib \
- --prefix=/usr \
- --with-odbc
--make DOC_TARGETS=chunks all
--make DOC_TARGETS=chunks docs
-+DOC_TARGETS=chunks make all
-+DOC_TARGETS=chunks make docs
- }
- package_erlang() {
- depends=(glu ncurses openssl webkit2gtk wxwidgets-gtk3)
 @@ -27,9 +27,6 @@
  make -C otp DESTDIR="$pkgdir" DOC_TARGETS=chunks install install-docs
  mkdir -p unixodbc

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha256sums=('61ce5e8e036043f9d0e78c1596a621788e879c52aedf72ab5e78a8c44849411a')
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build
++  artix-meson ${pkgname}-${pkgver} build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=webp-pixbuf-loader
+ depends=(gdk-pixbuf2 libwebp)
+ build() {
+-arch-meson ${pkgname}-${pkgver} build
++artix-meson ${pkgname}-${pkgver} build
+ ninja -C build
+ }

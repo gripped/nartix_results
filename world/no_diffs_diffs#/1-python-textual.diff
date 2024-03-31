@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _base=textual
+ pkgname=python-${_base}
+-pkgver=0.54.0
++pkgver=0.52.1
+ pkgrel=1
+ pkgdesc="Modern Text User Interface framework"
+ arch=(any)
+@@ -14,7 +14,7 @@
+             'python-tree-sitter-languages: for custom languages support'
+             'python-textual-dev: tools for developers')
+ source=(${_base}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz)
+-sha512sums=('c0a2dace41a5d37eb048b73b95ae04e60f821e77743d73f90644561eb6e2800fe6f2be16ad0c8c0371a8305eb428162e280d4785fa7980d91fedefd3624a6e3a')
++sha512sums=('7eb8d54e7e18fab3d4013004d68c629b0f6a72258dc8e2c879c4ed54d32ca0e94594a992e25687d39356f61bd6a64372f67064d8888706bfa48df2e8ccce833d')
+ 
+ build() {
+   cd ${_base}-${pkgver}

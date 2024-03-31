@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,16 @@
+@@ -1,6 +1,11 @@
 +
 +_ver=6.8.2
 +_rel=1
@@ -8,30 +8,20 @@
 +_artix=artix${_rel}
  
  pkgbase=linux
--pkgver=6.7.6.arch1
+-pkgver=6.8.2.arch2
 +pkgver=${_ver}.${_artix}
  pkgrel=1
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
- arch=(x86_64)
--license=(GPL2)
-+license=(GPL-2.0-only)
- makedepends=(
-   bc
-   cpio
-@@ -20,13 +25,16 @@
-   graphviz
-   imagemagick
-   python-sphinx
-+  python-yaml
+@@ -24,13 +29,12 @@
    texlive-latexextra
  )
--options=('!strip')
+ options=(
+-  !debug
+   !strip
+ )
 -_srcname=linux-${pkgver%.*}
 -_srctag=v${pkgver%.*}-${pkgver##*.}
-+options=(
-+  !strip
-+)
 +_srcname=linux-${_ver}
 +_srctag=v${_ver}-${_arch}
  source=(
@@ -40,25 +30,21 @@
    $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
    config  # the main kernel config file
  )
-@@ -35,18 +43,18 @@
-   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
-   83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
+@@ -41,16 +45,16 @@
  )
--sha256sums=('e489ec0e1370d089b446d565aded7a698093d2b7c4122a18f21edb6ef93d37d3'
-+sha256sums=('9ac322d85bcf98a04667d929f5c2666b15bd58c6c2d68dd512c72acbced07d04'
+ sha256sums=('9ac322d85bcf98a04667d929f5c2666b15bd58c6c2d68dd512c72acbced07d04'
              'SKIP'
--            'c7a8e85778cb0f1df815531a7f86094f70a8035f5756dcb881f2156d7e328d72'
+-            '2d5fa7f4177ba1c40575d57282438ff28cdfc3729e0689eddf650616c8a93b65'
 +            '9ccb26c046bacf04777617e96cad5b33d3d048b30bb4840a3b5ac2cdf40a3aba'
              'SKIP'
--            'd0e840aa2ae6d9552e741b195b8bb3c1830cc227e8e2a601419f9530c65ff3ba')
--b2sums=('51d6e2304e7a9188a0fec5714276589cb46948157c76a2f4ed3f5e0bf634d94a89ea75251229a86e018767a3367328c16b610d631c78d82663dcd1d904b73385'
+-            'ad11e6d5b3ae88d5b52c8bf4b7d6f700ac23200fb870091290cb25b744b914dc')
 +            '7016339c6a905b3faa950937f437ba6c8b8c88c8ddc93c28cf59bc0c4238041b')
-+b2sums=('f057c2512040600fbf0df67cf9c7200aee0c06b82b3cf749be8c5685844d2662a585ce17685c7af880c0d9dbbbd81302e5a1fa41c3dbd39869123121a0e82dc2'
+ b2sums=('f057c2512040600fbf0df67cf9c7200aee0c06b82b3cf749be8c5685844d2662a585ce17685c7af880c0d9dbbbd81302e5a1fa41c3dbd39869123121a0e82dc2'
          'SKIP'
--        '1bc6c87ec30f1dfb6cb8c9a92328b2b4ae192590fa5998b8aff3645496638ce38c681794496319e81e99727a3c68efd35808dfe720e6a3d991c991c42d8a5a27'
+-        'a6f2e7fed48d7c8427097314637d0c25a8ab35ca1bec7fc23156af26609667115d9584190a13b45e03389145205b1bfca78cdaeea6443975d70b65f9d7ec5ea7'
 +        '053c6239c5b800c4e25c6369328e238f63d634ea6fab2dae629884495c2c0e5fb204bde44d6cc2e21d8dd52f9752e6887fed5ce2a2c25b8b0ff0de21a2f80344'
          'SKIP'
--        '6a247b934eb2c177ea1d7f62d5e882c9820cfb9988a2d7a14d9efba44fd2182d800e681325ed07a21277f208f3678a9ff91f5b9252af2da39528311fe550d772')
+-        '47b48c2ad671e5a2e2f11f8b0c3f52c50118a9a88513245f07125a7481c4e19bb02053c99f5eece7c2672a63c545936cce56e301635244bf2af6e5ccf87edb24')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        'ca1ae6ab531848a035fedd93ad011a10bef949be3b2adfaa025accb4e4845422719a59376818bfeeb796859fa200942b6e3e36a781a589516dfbb2994348fb25')
@@ -67,7 +53,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -67,6 +75,8 @@
+@@ -71,6 +75,8 @@
      patch -Np1 < "../$src"
    done
  
@@ -76,7 +62,7 @@
    echo "Setting config..."
    cp ../config .config
    make olddefconfig
-@@ -100,8 +110,8 @@
+@@ -104,8 +110,8 @@
      WIREGUARD-MODULE
    )
    replaces=(
@@ -93,26 +79,27 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,15 @@
+@@ -1,12 +1,15 @@
 +_ver=6.8.2
 +_rel=1
 +_
 +_artix=artix${_rel}
  pkgbase=linux
--options=!strip
+ options=(
+-!debug
+ !strip
+ )
 -_srcname=linux-${pkgver%.*}
 -_srctag=v${pkgver%.*}-${pkgver##*.}
-+!strip
- )
--export KBUILD_BUILD_HOST=archlinux
 +_srcname=linux-${_ver}
 +_srctag=v${_ver}-${_arch}
-+)
+ )
+-export KBUILD_BUILD_HOST=archlinux
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  prepare() {
-@@ -20,6 +26,7 @@
+@@ -23,6 +26,7 @@
  echo "Applying patch $src..."
  patch -Np1 < "../$src"
  done
@@ -120,7 +107,7 @@
  echo "Setting config..."
  cp ../config .config
  make olddefconfig
-@@ -45,8 +52,8 @@
+@@ -48,8 +52,8 @@
  WIREGUARD-MODULE
  )
  replaces=(

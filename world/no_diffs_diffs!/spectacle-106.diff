@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,12 +48,13 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+    -DBUILD_TESTING=OFF
+   cmake --build build
+ }
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+ groups=(kde-applications
+ kde-graphics)
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DBUILD_TESTING=OFF
+ cmake --build build
+ }

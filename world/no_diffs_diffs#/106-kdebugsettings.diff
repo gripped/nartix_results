@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DCMAKE_INSTALL_LIBEXECDIR=lib
+   cmake --build build
+ }
+@@ -35,4 +35,3 @@
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ groups=(kde-applications
+ kde-utilities)
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DCMAKE_INSTALL_LIBEXECDIR=lib
+ cmake --build build
+ }

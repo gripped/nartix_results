@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+     -D tests=disabled  # Tests need kyua
+   )
+ 
+-  arch-meson pkgconf build "${meson_options[@]}"
++  artix-meson pkgconf build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,6 @@
+ local meson_options=(
+ -D tests=disabled  # Tests need kyua
+ )
+-arch-meson pkgconf build "${meson_options[@]}"
++artix-meson pkgconf build "${meson_options[@]}"
+ meson compile -C build
+ }

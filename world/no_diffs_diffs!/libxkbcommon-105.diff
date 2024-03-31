@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,7 @@
+     -D enable-docs=true
+   )
+ 
+-  arch-meson libxkbcommon build "${meson_options[@]}"
++  artix-meson libxkbcommon build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ local meson_options=(
+ -D enable-docs=true
+ )
+-arch-meson libxkbcommon build "${meson_options[@]}"
++artix-meson libxkbcommon build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

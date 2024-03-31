@@ -1,16 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,7 +1,8 @@
  
  pkgname=nushell
--pkgver=0.90.1
--_commit=c2992d5d8b8541b64e9fc1440ed2917fc9b757f7
+-pkgver=0.91.0
+-pkgrel=2
 +pkgver=0.88.1
 +_commit=fd56768fdcc1acbebcb75745600fc7419f72833d
- pkgrel=1
++pkgrel=1
  pkgdesc='A new type of shell'
  arch=('x86_64')
-@@ -28,7 +28,7 @@
+ url='https://www.nushell.sh'
+@@ -15,13 +16,19 @@
+ )
+ makedepends=('cargo' 'git')
+ install=nushell.install
+-source=("git+https://github.com/nushell/nushell.git#tag=$pkgver")
+-sha256sums=('94f04621bd230b2c816ff98c6a81f784dcc67dcd966f7653b2908ad5044e182e')
++source=("git+https://github.com/nushell/nushell.git#commit=$_commit")
++sha256sums=('SKIP')
++
++pkgver() {
++  cd "$pkgname"
++
++  git describe --tags | sed 's/^v//'
++}
+ 
  prepare() {
    cd "$pkgname"
  

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=libguestfs
- pkgver=1.52.0
--pkgrel=1
-+pkgrel=3
- pkgdesc="Access and modify virtual machine disk images"
- arch=(x86_64)
- url="https://libguestfs.org/"
 @@ -41,7 +41,6 @@
    squashfs-tools
    strace
@@ -26,11 +17,16 @@
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -144,9 +143,6 @@
+@@ -144,14 +143,6 @@
    make
  }
  
 -check() {
+-  export SKIP_TEST_BTRFS_QGROUP_ASSIGN_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_CREATE_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_DESTROY_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_REMOVE_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_SHOW_0=1
 -  LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
 -}
  

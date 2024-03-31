@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,13 +29,13 @@
+ }
+ 
+ build() {
+-  cmake -B build -S kImageAnnotator-$pkgver \
++  artix-cmake -B build -S kImageAnnotator-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_SHARED_LIBS=ON \
+     -DBUILD_WITH_QT6=ON
+   cmake --build build
+ 
+-  cmake -B build5 -S kImageAnnotator-qt5-$pkgver \
++  artix-cmake -B build5 -S kImageAnnotator-qt5-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_SHARED_LIBS=ON
+   cmake --build build5
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,12 +9,12 @@
+ patch -d kImageAnnotator-qt5-$pkgver -p1 < rename-qt5-version.patch # Make Qt5 and Qt6 versions coinstallable
+ }
+ build() {
+-cmake -B build -S kImageAnnotator-$pkgver \
++artix-cmake -B build -S kImageAnnotator-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_SHARED_LIBS=ON \
+ -DBUILD_WITH_QT6=ON
+ cmake --build build
+-cmake -B build5 -S kImageAnnotator-qt5-$pkgver \
++artix-cmake -B build5 -S kImageAnnotator-qt5-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_SHARED_LIBS=ON
+ cmake --build build5

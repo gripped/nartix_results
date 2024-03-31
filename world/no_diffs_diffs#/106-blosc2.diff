@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ b2sums=('1bf9826e6eb1babacb0fe6f7f90c5ca6617cf1cf4df269af95c94e175d0a1cc2015905b9cf6a48107f0b10431feb646ec5de095e00dc29f3bab8d53564e7d4fe')
+ 
+ build() {
+-  cmake -B build -S $_name-$pkgver \
++  artix-cmake -B build -S $_name-$pkgver \
+     -D CMAKE_BUILD_TYPE=None \
+     -D CMAKE_INSTALL_PREFIX=/usr \
+     -D PREFER_EXTERNAL_LZ4=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=blosc2
+ depends=(glibc lz4 zlib zstd)
+ build() {
+-cmake -B build -S $_name-$pkgver \
++artix-cmake -B build -S $_name-$pkgver \
+ -D CMAKE_BUILD_TYPE=None \
+ -D CMAKE_INSTALL_PREFIX=/usr \
+ -D PREFER_EXTERNAL_LZ4=ON \

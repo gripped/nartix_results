@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+ }
+ 
+ build() {
+-  arch-meson tecla build
++  artix-meson tecla build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,6 +15,6 @@
+ cd tecla
+ }
+ build() {
+-arch-meson tecla build
++artix-meson tecla build
+ meson compile -C build
+ }

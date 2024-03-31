@@ -1,35 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=znc
- pkgver=1.9.0
--pkgrel=1
-+pkgrel=3
- pkgdesc='An IRC bouncer with modules & scripts support'
- url='https://wiki.znc.in/'
- license=('Apache-2.0')
-@@ -10,6 +10,7 @@
-     'libsasl'
-     'icu'
-     'boost-libs'
-+    'argon2'
- )
- makedepends=(
-     'tcl'
-@@ -44,11 +45,11 @@
-   cmake ../$pkgname-$pkgver \
-     -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -47,10 +47,9 @@
      -DCMAKE_INSTALL_LIBDIR=lib \
--    -DWANT_PYTHON=ON \
--    -DWANT_PERL=ON \
--    -DWANT_TCL=ON \
--    -DWANT_SYSTEMD=ON \
--    -DSYSTEMD_DIR=/usr/lib/systemd/system
-+    -DWANT_PYTHON=YES \
-+    -DWANT_PERL=YES \
+     -DWANT_PYTHON=YES \
+     -DWANT_PERL=YES \
+-    -DWANT_TCL=YES \
+-    -DWANT_SYSTEMD=YES \
 +    -DWANT_TCL=YES  \
-+    -DWANT_ARGON=YES \
+     -DWANT_ARGON=YES \
+-    -DSYSTEMD_DIR=/usr/lib/systemd/system
 +    -DWANT_SYSTEMD=NO
    make
  }
@@ -40,27 +19,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
- 'libsasl'
- 'icu'
- 'boost-libs'
-+'argon2'
- )
- install=$pkgname.install
- prepare() {
-@@ -13,10 +14,10 @@
- cmake ../$pkgname-$pkgver \
- -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -16,9 +16,8 @@
  -DCMAKE_INSTALL_LIBDIR=lib \
---DWANT_PYTHON=ON \
---DWANT_PERL=ON \
---DWANT_TCL=ON \
---DWANT_SYSTEMD=ON \
---DSYSTEMD_DIR=/usr/lib/systemd/system
-+-DWANT_PYTHON=YES \
-+-DWANT_PERL=YES \
+ -DWANT_PYTHON=YES \
+ -DWANT_PERL=YES \
+--DWANT_TCL=YES \
+--DWANT_SYSTEMD=YES \
 +-DWANT_TCL=YES  \
-+-DWANT_ARGON=YES \
+ -DWANT_ARGON=YES \
+--DSYSTEMD_DIR=/usr/lib/systemd/system
 +-DWANT_SYSTEMD=NO
  make
  }

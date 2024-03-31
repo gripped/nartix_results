@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+     -D enable-osce=true
+   )
+ 
+-  arch-meson opus build "${meson_options[@]}"
++  artix-meson opus build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ -D enable-dred=true
+ -D enable-osce=true
+ )
+-arch-meson opus build "${meson_options[@]}"
++artix-meson opus build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_opus-docs() {

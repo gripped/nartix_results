@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_SYSCONFDIR=/etc \
+     -DCMAKE_CXX_STANDARD=17 \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ marble-maps
+ marble-qt)
+ build() {
+-cmake -B build -S $pkgbase-$pkgver \
++artix-cmake -B build -S $pkgbase-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_INSTALL_SYSCONFDIR=/etc \
+ -DCMAKE_CXX_STANDARD=17 \

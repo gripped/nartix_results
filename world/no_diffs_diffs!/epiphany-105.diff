@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -65,7 +65,7 @@
+ }
+ 
+ build() {
+-  arch-meson epiphany build
++  artix-meson epiphany build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,6 +30,6 @@
+ cd epiphany
+ }
+ build() {
+-arch-meson epiphany build
++artix-meson epiphany build
+ meson compile -C build
+ }

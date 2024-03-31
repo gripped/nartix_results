@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,7 +59,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-kde-$pkgver \
++  artix-cmake -B build -S $pkgname-kde-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \
+     -DBLUETOOTH_ENABLED=OFF # https://bugs.kde.org/show_bug.cgi?id=481870
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,7 @@
+ groups=(kde-applications
+ kde-network)
+ build() {
+-cmake -B build -S $pkgname-kde-$pkgver \
++artix-cmake -B build -S $pkgname-kde-$pkgver \
+ -DBUILD_TESTING=OFF \
+ -DCMAKE_INSTALL_LIBEXECDIR=lib \
+ -DBLUETOOTH_ENABLED=OFF # https://bugs.kde.org/show_bug.cgi?id=481870

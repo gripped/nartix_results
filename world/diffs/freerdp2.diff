@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,6 @@
+   libusb
+   openssl
+   pam
+-  systemd
+   xmlto
+   xorgproto
+ )
+@@ -100,7 +99,6 @@
+     libusb libusb-1.0.so
+     openssl libcrypto.so libssl.so
+     pam libpam.so
+-    systemd-libs libsystemd.so
+   )
+ 
+   DESTDIR="$pkgdir" cmake --install build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -64,7 +64,6 @@
+ libusb libusb-1.0.so
+ openssl libcrypto.so libssl.so
+ pam libpam.so
+-systemd-libs libsystemd.so
+ )
+ DESTDIR="$pkgdir" cmake --install build
+ install -vDm 644 $_name-$pkgver/{ChangeLog,README.md} -t "$pkgdir/usr/share/doc/$pkgname/"

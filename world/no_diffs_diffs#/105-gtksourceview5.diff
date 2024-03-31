@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+ }
+ 
+ build() {
+-  arch-meson gtksourceview build -D documentation=true
++  artix-meson gtksourceview build -D documentation=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ cd gtksourceview
+ }
+ build() {
+-arch-meson gtksourceview build -D documentation=true
++artix-meson gtksourceview build -D documentation=true
+ meson compile -C build
+ }
+ package_gtksourceview5-docs() {

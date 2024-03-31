@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,21 @@
+ 
+ pkgname=lightsoff
+-pkgver=46.0
++pkgver=40.0.1
+ pkgrel=1
+ pkgdesc="Turn off all the lights"
+ url="https://wiki.gnome.org/Apps/Lightsoff"
+ arch=(x86_64)
+-license=(GPL-2.0-or-later)
+-depends=(
+-  gtk3
+-  librsvg
+-)
+-makedepends=(
+-  git
+-  meson
+-  vala
+-  yelp-tools
+-)
++license=(GPL)
++depends=(gtk3 librsvg)
++makedepends=(yelp-tools vala git meson)
+ groups=(gnome-extra)
+-_commit=b383e33570b957b823036b0d7813d4d9d70c1aa8  # tags/46.0^0
++_commit=ca05a49ff447a6d7fdfadd1921288e2d720f5c09  # tags/40.0.1^0
+ source=("git+https://gitlab.gnome.org/GNOME/lightsoff.git#commit=$_commit")
+-b2sums=('SKIP')
++sha256sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgname
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++  git describe --tags | sed 's/-/+/g'
+ }
+ 
+ prepare() {
+@@ -40,6 +32,5 @@
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  DESTDIR="$pkgdir" meson install -C build
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,5 @@
+ pkgname=lightsoff
+-depends=(
+-gtk3
+-librsvg
+-)
++depends=(gtk3 librsvg)
+ groups=(gnome-extra)
+ prepare() {
+ cd $pkgname

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -53,7 +53,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson libgweather build "${meson_options[@]}"
++  artix-meson libgweather build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ local meson_options=(
+ -D gtk_doc=true
+ )
+-arch-meson libgweather build "${meson_options[@]}"
++artix-meson libgweather build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_libgweather-4-docs() {

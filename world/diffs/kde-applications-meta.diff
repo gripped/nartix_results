@@ -1,13 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,11 +13,11 @@
-          kde-system-meta
-          kde-utilities-meta
-          kdevelop-meta)
--pkgver=23.08
--pkgrel=1
-+pkgver=24.02
-+pkgrel=2
+@@ -17,7 +17,7 @@
+ pkgrel=2
  arch=(any)
  license=(None)
 -url='https://www.archlinux.org/'
@@ -15,15 +9,7 @@
  
  package_kde-applications-meta() {
    pkgdesc='Meta package for KDE Applications'
-@@ -166,7 +166,6 @@
-            kio-zeroconf
-            konqueror
-            konversation
--           kopete
-            krdc
-            krfb
-            ktorrent
-@@ -225,7 +224,6 @@
+@@ -224,7 +224,6 @@
             kde-inotify-survey
             khelpcenter
             kio-admin
@@ -31,37 +17,13 @@
             ksystemlog
             partitionmanager)
  }
-@@ -235,6 +233,7 @@
-   replaces=(kdeutils-meta)
-   depends=(ark
-            filelight
-+           isoimagewriter
-            kalk
-            kate
-            kbackup
-@@ -257,7 +256,6 @@
-            kwalletmanager
-            kweather
-            markdownpart
--           print-manager
-            skanpage
-            sweeper
-            telly-skout
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -146,7 +146,6 @@
- kio-zeroconf
- konqueror
- konversation
--kopete
- krdc
- krfb
- ktorrent
-@@ -197,7 +196,6 @@
+@@ -196,7 +196,6 @@
  kde-inotify-survey
  khelpcenter
  kio-admin
@@ -69,19 +31,3 @@
  ksystemlog
  partitionmanager)
  }
-@@ -205,6 +203,7 @@
- replaces=(kdeutils-meta)
- depends=(ark
- filelight
-+isoimagewriter
- kalk
- kate
- kbackup
-@@ -227,7 +226,6 @@
- kwalletmanager
- kweather
- markdownpart
--print-manager
- skanpage
- sweeper
- telly-skout

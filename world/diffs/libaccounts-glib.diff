@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,15 @@
+ 
+ pkgname=libaccounts-glib
+-pkgver=1.27
+-pkgrel=1
++pkgver=1.26
++pkgrel=2
+ pkgdesc='Glib-based client library for accessing the online accounts database'
+ arch=(x86_64)
+ url='https://gitlab.com/accounts-sso/libaccounts-glib'
+-license=(LGPL-2.1-or-later)
+-depends=(glib2
+-         glibc
+-         libxml2
+-         sqlite)
+-makedepends=(check
+-             gobject-introspection
+-             meson
+-             python-gobject
+-             python-packaging
+-             vala)
++license=(LGPL)
++depends=(glib2 libxml2 sqlite)
++makedepends=(python-gobject gobject-introspection vala meson check)
+ source=(https://gitlab.com/accounts-sso/libaccounts-glib/-/archive/VERSION_$pkgver/libaccounts-glib-VERSION_$pkgver.tar.gz)
+-sha256sums=('a8407a5897a2e425ea1aa955ecf88485dd2fd417919de275b27c781a5d0637a5')
++sha256sums=('8bc05c4f4a9b0412a8a70b5ddd3b80e5f4fa2d38455a5ebe638599668a287393')
+ 
+ build() {
+   meson $pkgname-VERSION_$pkgver build \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,5 @@
+ pkgname=libaccounts-glib
+-depends=(glib2
+-glibc
+-libxml2
+-sqlite)
++depends=(glib2 libxml2 sqlite)
+ build() {
+ meson $pkgname-VERSION_$pkgver build \
+ -Dprefix=/usr

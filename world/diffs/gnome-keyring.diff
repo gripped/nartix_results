@@ -1,29 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gnome-keyring
- pkgver=46.1
--pkgrel=1
-+pkgrel=2
- epoch=1
- pkgdesc="Stores passwords and encryption keys"
- url="https://wiki.gnome.org/Projects/GnomeKeyring"
-@@ -11,9 +11,12 @@
-   LGPL-2.1-or-later
- )
- depends=(
-+  dconf
-   gcr
-   gcr-4
--  openssh
-+  glib2
-+  glibc
-+  libgcrypt
+@@ -18,7 +18,6 @@
+   glibc
+   libgcrypt
    pam
+-  systemd-libs
  )
  makedepends=(
-@@ -24,7 +27,6 @@
+   docbook-xsl
+@@ -28,7 +27,6 @@
  )
  provides=(org.freedesktop.secrets)
  groups=(gnome)
@@ -37,17 +22,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,15 @@
- pkgname=gnome-keyring
- depends=(
-+dconf
- gcr
- gcr-4
--openssh
-+glib2
-+glibc
-+libgcrypt
+@@ -7,11 +7,9 @@
+ glibc
+ libgcrypt
  pam
+-systemd-libs
  )
  provides=(org.freedesktop.secrets)
  groups=(gnome)

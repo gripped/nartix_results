@@ -1,227 +1,40 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,74 +1,103 @@
- 
- pkgname=waybar
--pkgver=0.9.24
-+pkgver=0.10.0
- pkgrel=3
- pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors'
- arch=('x86_64')
- url="https://github.com/Alexays/Waybar/"
- license=('MIT')
- depends=(
-+    'atkmm'
-+    'cairomm'
-+    'fmt'
-+    'gcc-libs'
-+    'glib2'
-+    'glibc'
-+    'glibmm'
-+    'gtk-layer-shell'
-+    'gtk3'
-     'gtkmm3'
--    'libjsoncpp.so'
--    'libsigc++'
--    'fmt'
--    'jack' 'libjack.so'
--    'wayland'
--    'libdate-tz.so'
--    'libspdlog.so'
--    'gtk-layer-shell'
--    'libupower-glib.so'
--    'upower'
-+    'jack'
-+    'jsoncpp'
-+    'libdbusmenu-gtk3'
-     'libevdev'
-     'libinput'
-+    'libmpdclient'
-+    'libnl'
-+    'libpipewire'
-     'libpulse'
--    'libnl'
--    'libappindicator-gtk3'
--    'libdbusmenu-gtk3'
--    'libmpdclient'
--    'libsndio.so'
-+    'libsigc++'
-+    'libwireplumber'
-     'libxkbcommon'
--    'libwireplumber'
+@@ -32,7 +32,6 @@
      'playerctl'
-+    'sndio'
-+    'spdlog'
-+    'upower'
-+    'wayland'
+     'sndio'
+     'spdlog'
+-    'systemd-libs'
+     'upower'
+     'wayland'
  )
- makedepends=(
-+    'catch2'
-     'cmake'
--    'catch2'
-     'meson'
-+    'python-packaging' # gdbus-codegen
-     'scdoc' # For generating manpages
-     'wayland-protocols'
- )
- backup=(
--    etc/xdg/waybar/config
-+    etc/xdg/waybar/config.jsonc
-     etc/xdg/waybar/style.css
- )
- optdepends=(
-     'otf-font-awesome: Icons in the default configuration'
- )
--source=("$pkgname-$pkgver.tar.gz::https://github.com/Alexays/Waybar/archive/$pkgver.tar.gz")
--b2sums=('15774a78f2f7bb85d497e7f80a968b775bb42d285d0950e8e384962c6b947ea895eea2b30c0aba7ca671595ce59acd65e66cf8b67f2478ecad7564de50e4bfe6')
-+source=(
-+    "$pkgname-$pkgver.tar.gz::https://github.com/Alexays/Waybar/archive/$pkgver.tar.gz"
-+    0001-Update-Wireplumber-API-to-0.5.patch
-+)
-+b2sums=('f27a61662444cb0d91ecb5c860271939ba81813af4d005a3297f9996fab5edd54df2e4a126aa33edf9049e2d91d301a03f6352e25eb9c86ffb003b0b238e9015'
-+        'eb745507d5547e8af63a52f801c1329f905363283ffcc754b841368e84f5b5d3f407b063b86811768e3bcaa27451589216ba4f8a44dde693465dc7a7ef956126')
-+
-+prepare() {
-+    cd "Waybar-$pkgver"
-+
-+    patch -Np1 -i ../0001-Update-Wireplumber-API-to-0.5.patch
-+}
- 
- build() {
-     cd "Waybar-$pkgver"
--    CXXFLAGS+=" -std=c++20" \
-     meson --prefix=/usr \
+@@ -70,6 +69,7 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
 +          -Dsystemd=disabled \
-+          -Dcpp_std=c++20 \
+           -Dcpp_std=c++20 \
            -Dexperimental=true \
            -Dcava=disabled \
-           -Dtests=enabled \
-           build
--    ninja -C build
-+    meson compile -C build
- }
- 
- check() {
-     cd "Waybar-$pkgver"
--    meson test -C build --no-rebuild --suite waybar
--
-+    meson test -C build --print-errorlogs --no-rebuild --suite waybar
- }
- 
- package() {
-+    depends+=(
-+      'libatkmm-1.6.so'
-+      'libcairomm-1.0.so'
-+      'libgtk-3.so'
-+      'libjack.so'
-+      'libjsoncpp.so'
-+      'libpipewire-0.3.so'
-+      'libsndio.so'
-+      'libspdlog.so'
-+      'libudev.so'
-+      'libupower-glib.so'
-+    )
-+
-     cd "Waybar-$pkgver"
--    DESTDIR="$pkgdir" ninja -C build install
-+    meson install -C build --destdir "$pkgdir"
-     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
- }
 
 
 ############# Stripped diff below #################
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,42 +1,69 @@
- pkgname=waybar
- depends=(
-+'atkmm'
-+'cairomm'
-+'fmt'
-+'gcc-libs'
-+'glib2'
-+'glibc'
-+'glibmm'
-+'gtk-layer-shell'
-+'gtk3'
- 'gtkmm3'
--'libjsoncpp.so'
--'libsigc++'
--'fmt'
--'jack' 'libjack.so'
--'wayland'
--'libdate-tz.so'
--'libspdlog.so'
--'gtk-layer-shell'
--'libupower-glib.so'
--'upower'
-+'jack'
-+'jsoncpp'
-+'libdbusmenu-gtk3'
- 'libevdev'
- 'libinput'
-+'libmpdclient'
-+'libnl'
-+'libpipewire'
- 'libpulse'
--'libnl'
--'libappindicator-gtk3'
--'libdbusmenu-gtk3'
--'libmpdclient'
--'libsndio.so'
-+'libsigc++'
-+'libwireplumber'
- 'libxkbcommon'
--'libwireplumber'
+@@ -25,7 +25,6 @@
  'playerctl'
-+'sndio'
-+'spdlog'
-+'upower'
-+'wayland'
+ 'sndio'
+ 'spdlog'
+-'systemd-libs'
+ 'upower'
+ 'wayland'
  )
- backup=(
--etc/xdg/waybar/config
-+etc/xdg/waybar/config.jsonc
- etc/xdg/waybar/style.css
- )
-+prepare() {
-+cd "Waybar-$pkgver"
-+patch -Np1 -i ../0001-Update-Wireplumber-API-to-0.5.patch
-+}
- build() {
- cd "Waybar-$pkgver"
--CXXFLAGS+=" -std=c++20" \
- meson --prefix=/usr \
+@@ -43,6 +42,7 @@
  --buildtype=plain \
  --auto-features=enabled \
  --wrap-mode=nodownload \
 +-Dsystemd=disabled \
-+-Dcpp_std=c++20 \
+ -Dcpp_std=c++20 \
  -Dexperimental=true \
  -Dcava=disabled \
- -Dtests=enabled \
- build
--ninja -C build
-+meson compile -C build
- }
-+package() {
-+depends+=(
-+'libatkmm-1.6.so'
-+'libcairomm-1.0.so'
-+'libgtk-3.so'
-+'libjack.so'
-+'libjsoncpp.so'
-+'libpipewire-0.3.so'
-+'libsndio.so'
-+'libspdlog.so'
-+'libudev.so'
-+'libupower-glib.so'
-+)
-+cd "Waybar-$pkgver"
-+meson install -C build --destdir "$pkgdir"
-+install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
-+}

@@ -1,0 +1,12 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,8 @@
+ 
+ check() {
+   cd dateutil
+-  PYTHONPATH=src pytest -W ignore::pytest.PytestUnknownMarkWarning .
++  PYTHONPATH=src pytest -W ignore::pytest.PytestUnknownMarkWarning \
++    --deselect tests/test_tz.py::test_tzlocal_local_time_trim_colon .
+ }
+ 
+ package() {

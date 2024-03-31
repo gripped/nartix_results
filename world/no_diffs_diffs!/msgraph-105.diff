@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,7 @@
+ }
+ 
+ build() {
+-  arch-meson msgraph build
++  artix-meson msgraph build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ cd msgraph
+ }
+ build() {
+-arch-meson msgraph build
++artix-meson msgraph build
+ meson compile -C build
+ }
+ package_msgraph-docs() {

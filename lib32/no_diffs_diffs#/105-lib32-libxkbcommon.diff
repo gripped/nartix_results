@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,7 +45,7 @@
+     -D enable-tools=false
+   )
+ 
+-  arch-meson libxkbcommon build "${meson_options[@]}"
++  artix-meson libxkbcommon build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ -D enable-bash-completion=false
+ -D enable-tools=false
+ )
+-arch-meson libxkbcommon build "${meson_options[@]}"
++artix-meson libxkbcommon build "${meson_options[@]}"
+ meson compile -C build
+ }
+ _pick() {

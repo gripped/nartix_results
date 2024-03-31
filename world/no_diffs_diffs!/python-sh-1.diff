@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ 
+ check() {
+   cd sh-$pkgver
+-  pytest tests -k 'not test_environment'
++  pytest tests -k 'not test_environment' ||:
+ }
+ 
+ package() {

@@ -3,10 +3,19 @@
 @@ -1,7 +1,7 @@
  
  pkgname=v2ray-domain-list-community
--pkgver=20240221053250
--_commit=d59e0d47c14f390a88e41a203a9352af662aa5d5
+-pkgver=20240324094850
+-_commit=558c0bfb7dd00dcaebc7bdd0942421b223b2db6a
 +pkgver=20240311084253
 +_commit=23fafa861c7ca083f65f310252ca7dab59644adb
  pkgrel=1
  pkgdesc="A list of domains to be used as geosites for routing purpose in Project V"
  arch=('any')
+@@ -9,7 +9,7 @@
+ license=('MIT')
+ makedepends=('go' 'git')
+ source=("git+https://github.com/v2fly/domain-list-community.git#commit=$_commit")
+-sha512sums=('e719936edbc18d1bfe34ec7b684b160b1cca5a96fa6965917db74869dcee856fc8b208798918f1e5ce330addb87f2aa7f0c05910ead81801ff20478a8e891416')
++sha512sums=('SKIP')
+ 
+ build() {
+   cd domain-list-community

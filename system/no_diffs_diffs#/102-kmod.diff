@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,6 @@
+ 
+   ./configure \
+     --sysconfdir=/etc \
+-    --with-module-directory=/usr/lib/modules \
+     --with-xz \
+     --with-zlib \
+     --with-zstd \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+ cd "$pkgname-$pkgver"
+ ./configure \
+ --sysconfdir=/etc \
+---with-module-directory=/usr/lib/modules \
+ --with-xz \
+ --with-zlib \
+ --with-zstd \

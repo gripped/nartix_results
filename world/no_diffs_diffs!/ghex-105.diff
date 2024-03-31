@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,7 @@
+     -D vapi=true
+   )
+ 
+-  arch-meson ghex build "${meson_options[@]}"
++  artix-meson ghex build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ -D gtk_doc=true
+ -D vapi=true
+ )
+-arch-meson ghex build "${meson_options[@]}"
++artix-meson ghex build "${meson_options[@]}"
+ meson compile -C build
+ }
+ package_ghex-docs() {

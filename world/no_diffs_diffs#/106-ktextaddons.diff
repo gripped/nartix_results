@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,14 +47,14 @@
+ sha256sums=('64b80602e84b25e9164620af3f6341fa865b85e826ab8f5e02061ae24a277b20')
+ 
+ build() {
+-  cmake -B build -S $pkgbase-$pkgver \
++  artix-cmake -B build -S $pkgbase-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_DESIGNERPLUGIN=ON \
+     -DBUILD_QCH=ON \
+     -DQT_MAJOR_VERSION=6
+   cmake --build build
+ 
+-  cmake -B build5 -S $pkgbase-$pkgver \
++  artix-cmake -B build5 -S $pkgbase-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DBUILD_DESIGNERPLUGIN=ON \
+     -DBUILD_QCH=ON
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,13 +4,13 @@
+ depends=(gcc-libs
+ glibc)
+ build() {
+-cmake -B build -S $pkgbase-$pkgver \
++artix-cmake -B build -S $pkgbase-$pkgver \
+ -DBUILD_TESTING=OFF \
+ -DBUILD_DESIGNERPLUGIN=ON \
+ -DBUILD_QCH=ON \
+ -DQT_MAJOR_VERSION=6
+ cmake --build build
+-cmake -B build5 -S $pkgbase-$pkgver \
++artix-cmake -B build5 -S $pkgbase-$pkgver \
+ -DBUILD_TESTING=OFF \
+ -DBUILD_DESIGNERPLUGIN=ON \
+ -DBUILD_QCH=ON

@@ -1,49 +1,44 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,19 @@
+@@ -1,6 +1,6 @@
  
  pkgname=gnome-remote-desktop
- pkgver=45.1
--pkgrel=1
-+pkgrel=2
+-pkgver=46.0
++pkgver=45.1
+ pkgrel=2
  pkgdesc="GNOME Remote Desktop server"
  url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
- arch=(x86_64)
--license=(GPL2)
-+license=(GPL-2.0-or-later)
+@@ -9,7 +9,7 @@
  depends=(
    cairo
    dconf
 -  freerdp
 +  freerdp2
    fuse3
-+  gcc-libs
+   gcc-libs
    glib2
-+  glibc
-   libdrm
-   libei
-   libepoxy
-@@ -21,8 +23,9 @@
-   libsecret
-   libvncserver
-   libxkbcommon
-+  opus
+@@ -26,8 +26,6 @@
+   opus
    pipewire
+   polkit
 -  systemd
-+  polkit
+-  systemd-libs
    tpm2-tss
  )
  makedepends=(
-@@ -42,7 +45,7 @@
+@@ -45,9 +43,9 @@
+   wireplumber
+ )
  groups=(gnome)
- _commit=df66c0e99a749058e0ee7dcee36bd97e018a3bb8  # tags/45.1^0
+-_commit=9040533be31d11cd5a5174c86bfdc1f39c1c3599  # tags/46.0^0
++_commit=df66c0e99a749058e0ee7dcee36bd97e018a3bb8  # tags/45.1^0
  source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
--b2sums=('SKIP')
+-b2sums=('b0ce3579ce888f84c30d0e86e514d64b42eb9c0bfa59d46e8e1f2efce83c8c9f666a8b3ec3a37f7c88911378d6d581ec960295125cfe7fea26250314653f8f07')
 +b2sums=('1f93c905d2ed2ce821c17c3773f6e8229cead225597e24edaab606ff17d2dd9f2adebf4672c82a6f1d3e1e8d3086baf774153d171abe525ec4fc481b1f6591ea')
  
  pkgver() {
    cd $pkgname
-@@ -55,15 +58,16 @@
+@@ -60,15 +58,16 @@
  
  build() {
    local meson_options=(
@@ -68,31 +63,25 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,11 @@
+@@ -2,7 +2,7 @@
  depends=(
  cairo
  dconf
 -freerdp
 +freerdp2
  fuse3
-+gcc-libs
+ gcc-libs
  glib2
-+glibc
- libdrm
- libei
- libepoxy
-@@ -14,8 +16,9 @@
- libsecret
- libvncserver
- libxkbcommon
-+opus
+@@ -19,8 +19,6 @@
+ opus
  pipewire
+ polkit
 -systemd
-+polkit
+-systemd-libs
  tpm2-tss
  )
  groups=(gnome)
-@@ -24,8 +27,9 @@
+@@ -29,8 +27,9 @@
  }
  build() {
  local meson_options=(

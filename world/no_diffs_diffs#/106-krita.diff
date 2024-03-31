@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -93,7 +93,7 @@
+ }
+ 
+ build() {
+-  cmake -B build -S $pkgname-$_pkgver \
++  artix-cmake -B build -S $pkgname-$_pkgver \
+     -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
+     -DBUILD_TESTING=OFF
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,7 +48,7 @@
+ patch -d $pkgname-$_pkgver -p1 < 5dfe4918.patch # Fix global menu on Plasma 6
+ }
+ build() {
+-cmake -B build -S $pkgname-$_pkgver \
++artix-cmake -B build -S $pkgname-$_pkgver \
+ -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
+ -DBUILD_TESTING=OFF
+ cmake --build build

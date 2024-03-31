@@ -4,7 +4,7 @@
  _name=hypothesis
  _alt_name=$_name-python
  pkgname=python-hypothesis
--pkgver=6.98.13
+-pkgver=6.99.11
 +pkgver=6.99.2
  _version=$_alt_name-$pkgver
  pkgrel=1
@@ -13,18 +13,10 @@
    'python-rich: for CLI'
  )
  source=($_name-$_version.tar.gz::$_url/archive/$_version.tar.gz)
--sha512sums=('4a512e2feea13968327913df601be284bf42f94f7cfc574db6e2107b991d83f5c81734a43df31a19f30e1ea57f610916d611270fb9c9f5df353db7c2645b6428')
--b2sums=('93de2e3548c10167e3f1d66dafe8a1f4bb221b79da6de71055753413778657260aac88ac6321d78a06934d2e5c649478b8f7704a79d7d93bcb655d866b3c89d5')
+-sha512sums=('bac29bec1718b66de9168630db51e73068d44dfa5bae4022f341476fc7838a16e848241035fce292832a9b695066626994f9aee03ffcfabed182154adc4f9a08')
+-b2sums=('272f794344d9747033ad67af666ba9c807e77239a09a70df713f8c9157ae65d47b7f1756dc57441537dfa367827433ee9464d24fc49e2ed6437df48a0d290bd4')
 +sha512sums=('ad833e8e4e5a228d06723ba76e80b7e88b849b51b298c2c0b58e82e9409961a212f85530a8e3f06e9e09ca2ebcc8ebd2e1e4992e50a37ba9f692a398aef699fa')
 +b2sums=('0e7b99ee43ae84b4536f687324c334d7846766ec3422712cc0e215ebed113a3ed270b2fee70322edd5931e6a57c04092566846846e8a2df8587a2d6bd7f33e34')
  
  build() {
    cd $_name-$_version/$_alt_name
-@@ -68,6 +68,7 @@
-     --ignore tests/patching/test_patching.py
-     --ignore tests/ghostwriter/test_expected_output.py
-     --ignore tests/cover/test_error_in_draw.py
-+    --ignore tests/redis/test_redis_exampledatabase.py
-   )
-   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
- 

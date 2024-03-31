@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,12 +33,12 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+     -DQT_MAJOR_VERSION=6
+   cmake --build build
+ 
+-  cmake -B build5 -S $pkgname-$pkgver \
++  artix-cmake -B build5 -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF
+   cmake --build build5
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,11 +14,11 @@
+ qt6-base)
+ conflicts=('libkcddb5<24')
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DBUILD_TESTING=OFF \
+ -DQT_MAJOR_VERSION=6
+ cmake --build build
+-cmake -B build5 -S $pkgname-$pkgver \
++artix-cmake -B build5 -S $pkgname-$pkgver \
+ -DBUILD_TESTING=OFF
+ cmake --build build5
+ }

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+ 
+ build() {
+   export CXXFLAGS+=' -DNDEBUG' # FS#69904
+-  cmake -B build -S ${pkgbase}-${pkgver} \
++  artix-cmake -B build -S ${pkgbase}-${pkgver} \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DWITH_APPS="CLI;Qt;KDE" \
+     -DWITH_MP4V2=ON \
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ }
+ build() {
+ export CXXFLAGS+=' -DNDEBUG' # FS#69904
+-cmake -B build -S ${pkgbase}-${pkgver} \
++artix-cmake -B build -S ${pkgbase}-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DWITH_APPS="CLI;Qt;KDE" \
+ -DWITH_MP4V2=ON \
