@@ -103,28 +103,3 @@
 -lib32-systemd
  meson
  polkit
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
- prepare() {
- cd polkit
-+patch -Np1 -i ../0001-fix-sysusers-d.patch
- }
- build() {
- local meson_options=(
-@@ -7,11 +8,12 @@
- -D introspection=false
- -D libs-only=true
- -D os_type=redhat
-+-D session_tracking=libelogind
-+-D systemdsystemunitdir=no
- -D polkitd_uid=102
- -D polkitd_user=polkitd
---D session_tracking=libsystemd-login
- -D tests=true
- )
--arch-meson polkit build "${meson_options[@]}"
-+artix-meson polkit build "${meson_options[@]}"
- meson compile -C build
- }

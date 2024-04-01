@@ -83,15 +83,3 @@
  lib32-glibc
 -lib32-systemd
  meson
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- build() {
- export CC='gcc -m32'
- export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
--arch-meson gamemode build \
-+artix-meson gamemode build \
- --libdir /usr/lib32 \
- -Dwith-examples=false \
- -Dwith-sd-bus-provider=no-daemon \

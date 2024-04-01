@@ -71,15 +71,3 @@
  lib32-vulkan-icd-loader
  lib32-wayland
  lib32-xcb-util-keysyms
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -42,7 +42,7 @@
- CXXFLAGS+=' -g1'
- export MESON_PACKAGE_CACHE_DIR="$srcdir"
- export BINDGEN_EXTRA_CLANG_ARGS="-m32"
--arch-meson mesa-$pkgver build "${meson_options[@]}"
-+artix-meson mesa-$pkgver build "${meson_options[@]}"
- meson configure build # Print config
- meson compile -C build
- DESTDIR="${srcdir}/fakeinstall" meson install -C build

@@ -33,14 +33,3 @@
  lib32-libgl
 -lib32-systemd
  meson
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- build() {
- export CC='gcc -m32'
- export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
--arch-meson libepoxy build --libdir=/usr/lib32
-+artix-meson libepoxy build --libdir=/usr/lib32
- meson compile -C build
- }

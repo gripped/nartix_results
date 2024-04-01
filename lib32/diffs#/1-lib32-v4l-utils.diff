@@ -47,15 +47,3 @@
 +lib32-udev
  meson
  v4l-utils
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
- export CC="gcc -m32"
- export CXX="g++ -m32"
- export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
--arch-meson  -Dgconv=disabled -Ddoxygen-doc=disabled -Dqv4l2=disabled -Dqvidcap=disabled \
-+artix-meson  -Dgconv=disabled -Ddoxygen-doc=disabled -Dqv4l2=disabled -Dqvidcap=disabled \
- "${_pkgbasename}-${pkgver}" build --libdir=/usr/lib32
- meson compile -C build
- }
