@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mate-user-share
+-pkgver=1.28.0
+-pkgrel=1
++pkgver=1.26.0
++pkgrel=1.1
+ pkgdesc="User level public file sharing via WebDAV for MATE"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+@@ -13,22 +13,22 @@
+ conflicts=('mate-user-share-gtk3')
+ replaces=('mate-user-share-gtk3')
+ source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
+-sha256sums=('8985609999179651348e497ef08f350b86081b97b1a4a7304077eeae5739ae38')
++sha256sums=('f04e01d7631951c89860e8bb3e20a3b49b9c96e49712f2f4a1f7f3c2315900f2')
+ 
+ build() {
+-	cd "${pkgname}-${pkgver}"
+-	./configure \
+-	            --prefix=/usr \
+-            	--libexec=/usr/lib/${pkgname} \
+-            	--sysconfdir=/etc \
+-	            --disable-bluetooth
++    	cd "${pkgname}-${pkgver}"
++    	PYTHON=/usr/bin/python2 ./configure \
++        	--prefix=/usr \
++        	--libexec=/usr/lib/${pkgname} \
++        	--sysconfdir=/etc \
++        	--disable-bluetooth
+ 
+-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++    	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ 
+-	make
++    	make
+ }
+ 
+ package() {
+-	cd "${pkgname}-${pkgver}"
+-	make  DESTDIR="${pkgdir}" install
++    	cd "${pkgname}-${pkgver}"
++    	make  DESTDIR="${pkgdir}" install
+ }
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ replaces=('mate-user-share-gtk3')
+ build() {
+ cd "${pkgname}-${pkgver}"
+-./configure \
++PYTHON=/usr/bin/python2 ./configure \
+ --prefix=/usr \
+ --libexec=/usr/lib/${pkgname} \
+ --sysconfdir=/etc \

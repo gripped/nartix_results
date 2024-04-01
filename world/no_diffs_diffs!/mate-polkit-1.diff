@@ -3,9 +3,46 @@
 @@ -1,7 +1,7 @@
  
  pkgname=mate-polkit
- pkgver=1.26.1
+-pkgver=1.28.1
 -pkgrel=1
++pkgver=1.26.1
 +pkgrel=1.1
  pkgdesc="PolicyKit integration for the MATE desktop"
  url="https://mate-desktop.org"
  arch=('x86_64')
+@@ -12,23 +12,23 @@
+ conflicts=('mate-polkit-gtk3')
+ replaces=('mate-polkit-gtk3')
+ source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
+-sha256sums=('350a1dd0a8ed6a2c9c183cff2a21f394299e968fcc6ae2e8c93c565dae604ae8')
++sha256sums=('f5b7b0b5dfc53302c40403245998eb9121af3f50e71666a09ab73bb254520357')
+ 
+ build() {
+-    cd "${pkgname}-${pkgver}"
+-    ./configure \
+-                --prefix=/usr \
+-                --libexecdir=/usr/lib/${pkgname} \
+-                --sysconfdir=/etc \
+-                --localstatedir=/var \
+-                --enable-introspection
++    	cd "${pkgname}-${pkgver}"
++    	./configure \
++        	--prefix=/usr \
++        	--libexecdir=/usr/lib/${pkgname} \
++        	--sysconfdir=/etc \
++        	--localstatedir=/var \
++        	--enable-introspection
+ 
+-    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++    	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ 
+-    make
++    	make
+ }
+ 
+ package() {
+-    cd "${pkgname}-${pkgver}"
+-    make DESTDIR="${pkgdir}" install
++    	cd "${pkgname}-${pkgver}"
++    	make DESTDIR="${pkgdir}" install
+ }

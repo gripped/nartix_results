@@ -1,13 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,6 +35,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=qt6-doc
+ pkgname=(qt6-doc qt6-examples)
+-_qtver=6.6.2
++_qtver=6.6.3
+ pkgver=${_qtver/-/}
+ pkgrel=1
+ arch=('any')
+@@ -31,11 +31,12 @@
+ groups=(qt6)
+ _pkgfn=qt-everywhere-src-$_qtver
+ source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/single/$_pkgfn.tar.xz)
+-sha256sums=('3c1e42b3073ade1f7adbf06863c01e2c59521b7cc2349df2f74ecd7ebfcb922d')
++sha256sums=('69d0348fef415da98aa890a34651e9cfb232f1bffcee289b7b4e21386bf36104')
  
  build() {
    cmake -B build -S $_pkgfn -G Ninja \
-+    -DCMAKE_PREFIX_PATH=/usr \
      -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
      -DQT_HOST_PATH=/usr \
      -DINSTALL_BINDIR=lib/qt6/bin \
+     -DINSTALL_DOCDIR=share/doc/qt6 \
 @@ -44,7 +45,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
@@ -23,14 +38,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
+@@ -1,11 +1,12 @@
+ pkgbase=qt6-doc
+ pkgname=(qt6-doc qt6-examples)
+-_qtver=6.6.2
++_qtver=6.6.3
+ groups=(qt6)
  _pkgfn=qt-everywhere-src-$_qtver
  build() {
  cmake -B build -S $_pkgfn -G Ninja \
-+-DCMAKE_PREFIX_PATH=/usr \
  -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_PREFIX_PATH=/usr \
  -DQT_HOST_PATH=/usr \
  -DINSTALL_BINDIR=lib/qt6/bin \
+ -DINSTALL_DOCDIR=share/doc/qt6 \
 @@ -14,7 +15,7 @@
  -DINSTALL_INCLUDEDIR=include/qt6 \
  -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \

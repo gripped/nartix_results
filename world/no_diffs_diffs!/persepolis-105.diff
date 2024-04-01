@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ sha256sums=('194e5a97a9781710a6cce0a0a704b9c0a9802c294cee87b66b561f2dd358c334')
+ 
+ build() {
+-  arch-meson build $pkgname-$pkgver
++  artix-meson build $pkgname-$pkgver
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ depends=('aria2' 'ffmpeg' 'libnotify' 'libpulse' 'python-psutil' 'pyside6' 'python-requests'
+ 'python-setproctitle' 'qt6-svg' 'sound-theme-freedesktop' 'yt-dlp')
+ build() {
+-arch-meson build $pkgname-$pkgver
++artix-meson build $pkgname-$pkgver
+ meson compile -C build
+ }

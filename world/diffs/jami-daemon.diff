@@ -9,8 +9,8 @@
 +         openssl webrtc-audio-processing libudev libarchive)
 +makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio udev meson)
  checkdepends=(cppunit)
- _commit=8c1c74f0f3dff84361302d65e724c899eb708f91
- _pjprojectver=311bd018fc07aaf62d4c2d2494e08b5ee97e6846
+ _commit=32f39e65483cb22729eb922d72434013b337f2c9
+ _pjprojectver=e12ea3bfa81cc4f46031599f80707e81133f1353
 @@ -46,7 +46,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  
@@ -32,8 +32,8 @@
  fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
 -openssl webrtc-audio-processing systemd-libs libarchive)
 +openssl webrtc-audio-processing libudev libarchive)
- _pjprojectver=311bd018fc07aaf62d4c2d2494e08b5ee97e6846
- _dhtnetver=fe79669b400d5e6a521fd1408dae02e0d4e50a5b
+ _pjprojectver=e12ea3bfa81cc4f46031599f80707e81133f1353
+ _dhtnetver=024c46fb1f14276d4adf15764ed97b733890826e
  noextract=(pjproject-${_pjprojectver}.tar.gz
 @@ -22,7 +22,7 @@
  --enable-dhtnet
