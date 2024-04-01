@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=('glibc' 'libegl' 'libgl' 'glu')
+ optdepends=('libx11: for glxewinfo and visualinfo')
+ provides=('libGLEW.so')
++options=('debug')
+ source=(https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tgz
+         glew-install.patch
+         egl+glx.patch)

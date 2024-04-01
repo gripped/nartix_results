@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=(x-apps)
- depends=(poppler-glib webkit2gtk-4.1 xapp)
+@@ -1,5 +1,5 @@
  build() {
 -arch-meson ${pkgname}-${pkgver} build \
 +artix-meson ${pkgname}-${pkgver} build \

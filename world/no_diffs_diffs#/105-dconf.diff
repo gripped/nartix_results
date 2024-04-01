@@ -29,14 +29,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=dconf
- depends=(glib2)
- provides=(libdconf.so)
- install=dconf.install
- prepare() {
+@@ -2,6 +2,6 @@
  cd dconf
  }
  build() {

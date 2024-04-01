@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,6 @@
+   git
+   gobject-introspection
+   meson
+-  systemd
+   yelp-tools
+ )
+ _commit=b8a7922f82d7935dc7e76cd3d30f22d872c09908  # tags/45.3^0
+@@ -53,7 +52,7 @@
+     -D libportal=false
+   )
+ 
+-  arch-meson eog build "${meson_options[@]}"
++  artix-meson eog build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -19,7 +19,6 @@
+ librsvg
+ libx11
+ meson
+-systemd
+ webp-pixbuf-loader
+ yelp-tools
+ zlib

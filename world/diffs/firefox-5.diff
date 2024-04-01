@@ -1,0 +1,222 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,17 @@
+ 
+ pkgname=firefox
+-pkgver=124.0.1
++pkgver=120.0
+ pkgrel=1
+ pkgdesc="Standalone web browser from mozilla.org"
+ url="https://www.mozilla.org/firefox/"
+ arch=(x86_64)
+-license=(MPL-2.0)
++license=(
++  GPL
++  LGPL
++  MPL
++)
+ depends=(
+-  dbus
++  dbus-glib
+   ffmpeg
+   gtk3
+   libpulse
+@@ -21,6 +25,7 @@
+   cbindgen
+   clang
+   diffutils
++  dump_syms
+   imake
+   inetutils
+   jack
+@@ -49,9 +54,11 @@
+   'xdg-desktop-portal: Screensharing with Wayland'
+ )
+ options=(
++  !debug
+   !emptydirs
+   !lto
+   !makeflags
++  !strip
+ )
+ source=(
+   https://archive.mozilla.org/pub/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz{,.asc}
+@@ -61,18 +68,16 @@
+ validpgpkeys=(
+   14F26682D0916CDD81E37B6D61B7B526D98F0353
+ )
+-sha256sums=('ddac16aea855e057ff6be3c143f7155cc20f452e1f45eb6288ff27e9346ab843'
++sha256sums=('e710058701074eda53ca9f5fd52c57254858a027984f735bdcd58d6906f6b574'
+             'SKIP'
+             '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
+             'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
+-b2sums=('b986833fbf28ebcb5588a68367054ca7a2f51f69685349ba65d25e118c90ded55c6e626842bbda8f00717ee55aa784c808e8f09855de423234a592ad23d9e9bf'
++b2sums=('06f11d9d6f705c13c3288f1757d68c7c910e258b3efa643f0f0168fba0d585f758082af3905c951e227894df0c092965663f52196ee1fc3477195748e0049767'
+         'SKIP'
+         'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
+         '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34')
+ 
+-_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+-
+-_mozilla_api_key=e05d56db0a694edc8b5aaebda3f2db6a
++
+ 
+ prepare() {
+   mkdir mozbuild
+@@ -91,22 +96,18 @@
+ ac_add_options --enable-optimize
+ ac_add_options --enable-rust-simd
+ ac_add_options --enable-linker=lld
+-ac_add_options --disable-install-strip
+ ac_add_options --disable-elf-hack
+ ac_add_options --disable-bootstrap
+ ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
+ 
+ ac_add_options --enable-official-branding
+ ac_add_options --enable-update-channel=release
+-ac_add_options --with-distribution-id=org.archlinux
++ac_add_options --with-distribution-id=org.artixlinux
+ ac_add_options --with-unsigned-addon-scopes=app,system
+ ac_add_options --allow-addon-sideload
+ export MOZILLA_OFFICIAL=1
+ export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+ 
+-ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
+ 
+ ac_add_options --with-system-nspr
+ ac_add_options --with-system-nss
+@@ -122,10 +123,10 @@
+ build() {
+   cd firefox-$pkgver
+ 
++  export MOZ_NOSPAM=1
++  export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
++  export MOZ_ENABLE_FULL_SYMBOLS=1
+   export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
+-  export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
+-  export MOZ_BUILD_DATE="$(date -u${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH} +%Y%m%d%H%M%S)"
+-  export MOZ_NOSPAM=1
+ 
+   CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+@@ -162,6 +163,9 @@
+ ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
+ END
+   ./mach build
++
++  echo "Building symbol archive..."
++  ./mach buildsymbols
+ }
+ 
+ package() {
+@@ -189,14 +193,14 @@
+   local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
+   install -Dvm644 /dev/stdin "$distini" <<END
+ [Global]
+-id=archlinux
++id=artixlinux
+ version=1.0
+-about=Mozilla Firefox for Arch Linux
++about=Mozilla Firefox for Artix Linux
+ 
+ [Preferences]
+-app.distributor=archlinux
++app.distributor=artixlinux
+ app.distributor.channel=$pkgname
+-app.partner.archlinux=archlinux
++app.partner.artixlinux=artixlinux
+ END
+ 
+   local i theme=official
+@@ -214,7 +218,7 @@
+     "$pkgdir/usr/share/icons/hicolor/symbolic/apps/$pkgname-symbolic.svg"
+ 
+   install -Dvm644 ../$pkgname.desktop \
+-    "$pkgdir/usr/share/applications/${pkgname//-/}.desktop"
++    "$pkgdir/usr/share/applications/$pkgname.desktop"
+ 
+   install -Dvm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<END
+ exec /usr/lib/$pkgname/firefox "\$@"
+@@ -230,10 +234,17 @@
+   local sprovider="$pkgdir/usr/share/gnome-shell/search-providers/$pkgname.search-provider.ini"
+   install -Dvm644 /dev/stdin "$sprovider" <<END
+ [Shell Search Provider]
+-DesktopId=${pkgname//-/}.desktop
++DesktopId=$pkgname.desktop
+ BusName=org.mozilla.${pkgname//-/}.SearchProvider
+ ObjectPath=/org/mozilla/${pkgname//-/}/SearchProvider
+ Version=2
+ END
++
++  export SOCORRO_SYMBOL_UPLOAD_TOKEN_FILE="$startdir/.crash-stats-api.token"
++  if [[ -f $SOCORRO_SYMBOL_UPLOAD_TOKEN_FILE ]]; then
++    make -C obj uploadsymbols
++  else
++    cp -fvt "$startdir" obj/dist/*crashreporter-symbols-full.tar.zst
++  fi
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,8 @@
+ cbindgen
+ clang
+-dbus
++dbus-glib
+ diffutils
++dump_syms
+ ffmpeg
+ gtk3
+ imake
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,20 +12,16 @@
+ ac_add_options --enable-optimize
+ ac_add_options --enable-rust-simd
+ ac_add_options --enable-linker=lld
+-ac_add_options --disable-install-strip
+ ac_add_options --disable-elf-hack
+ ac_add_options --disable-bootstrap
+ ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
+ ac_add_options --enable-official-branding
+ ac_add_options --enable-update-channel=release
+-ac_add_options --with-distribution-id=org.archlinux
++ac_add_options --with-distribution-id=org.artixlinux
+ ac_add_options --with-unsigned-addon-scopes=app,system
+ ac_add_options --allow-addon-sideload
+ export MOZILLA_OFFICIAL=1
+ export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+-ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
+ ac_add_options --with-system-nspr
+ ac_add_options --with-system-nss
+ ac_add_options --enable-alsa
+@@ -37,10 +33,10 @@
+ }
+ build() {
+ cd firefox-$pkgver
++export MOZ_NOSPAM=1
++export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
++export MOZ_ENABLE_FULL_SYMBOLS=1
+ export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
+-export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
+-export MOZ_BUILD_DATE="$(date -u${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH} +%Y%m%d%H%M%S)"
+-export MOZ_NOSPAM=1
+ CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ ulimit -n 4096
+@@ -69,4 +65,6 @@
+ ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
+ END
+ ./mach build
++echo "Building symbol archive..."
++./mach buildsymbols
+ }

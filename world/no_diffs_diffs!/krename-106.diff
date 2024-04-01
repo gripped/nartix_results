@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,7 @@
+@@ -5,7 +5,7 @@
  patch -d $pkgname-$pkgver -p1 < drop-kjs.patch # Drop kjs dependency
  }
  build() {

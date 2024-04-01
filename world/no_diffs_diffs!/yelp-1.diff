@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,6 +23,7 @@
+ optdepends=('man-db: View manual pages')
+ provides=(libyelp.so)
+ groups=(gnome)
++options=(debug)
+ _commit=9fd1a84e1eae23db21939ff76c7e96d5422d3b1a  # tags/42.2^0
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/yelp.git#commit=$_commit"

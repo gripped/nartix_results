@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=('dbus-glib' 'desktop-file-utils' 'gdk-pixbuf2' 'glib2' 'gtk2'
- 'libcanberra' 'openssl' 'pango' 'pciutils')
+@@ -1,5 +1,5 @@
  build() {
 -arch-meson hexchat build \
 +artix-meson hexchat build \

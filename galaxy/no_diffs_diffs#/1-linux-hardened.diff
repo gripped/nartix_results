@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,14 +39,14 @@
+             'SKIP'
+             'd0cdfa49fc63f5fd4fc6ae92fbad07702421ccc164f5ae2c9b0bb6709e2b5a50'
+             'SKIP'
+-            '9efc831639dea0f4b8a9f9879063c3c56f02fd57f6bd6551aaa8eec7c28eecda')
++            '40ed92c88d595e258204519e5494b0d1d9203866f0a47848c991b31cba219b63')
+ b2sums=('0f7319b641822f07d5bc9f0edaed7c918a73aa67df6a4aa74a5e8e38f2d15795a1c76e0c8c7ab99949165cb8a0ebb77f08e3a380184aa0accad26996a1d415c6'
+         'SKIP'
+         'd021988771d777bc25d8db3c58b1d62e880c788a50a9c7983569ed74462d65f8487a74a279cf69bcacc89824c9bf5d7960b124ae24585a5716bd3fa50df4dccf'
+         'SKIP'
+-        '30eda70776271d694d66c18e9411c6ea9a7b9652fe284eeb9d335ada5f0d05d907daf323e775f6dec9cebaff430ca8317a01319179f3088b461d12bf4655428f')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        'fc95b13a9e9a2ca4d3364855c98295799caded7a10800253343a241bd90063bbea2665f9015341297abbe8a6be228afc3ea98c3e9b53330773bd74c4444c3a96')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 

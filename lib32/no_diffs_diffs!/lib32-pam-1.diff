@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=lib32-pam
+-pkgver=1.6.0
++pkgver=1.5.3
+ pkgrel=1
+ pkgdesc='Pluggable Authentication Modules'
+ arch=(x86_64)
+@@ -9,7 +9,6 @@
+ depends=(
+   lib32-libtirpc
+   lib32-libxcrypt
+-  lib32-systemd
+   pam
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,5 @@
+ lib32-flex
+ lib32-libtirpc
+ lib32-libxcrypt
+-lib32-systemd
+ pam
+ w3m

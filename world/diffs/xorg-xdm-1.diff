@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,10 +7,10 @@
+ url="https://xorg.freedesktop.org/"
+ license=('MIT')
+ depends=('pam' 'libxaw' 'libxinerama' 'xorg-xrdb' 'xorg-sessreg' 'libxft'
+-         'systemd-libs' 'libxcrypt'
++         'elogind' 'libxcrypt'
+          'libxt' 'libxpm' 'libxrender' 'libxau' 'libx11' 'libxext' 'libxmu'
+          'libxdmcp' 'sh' 'glibc')
+-makedepends=('xorg-util-macros' 'xtrans' 'systemd')
++makedepends=('xorg-util-macros' 'xtrans')
+ backup=(etc/X11/xdm/Xaccess
+         etc/X11/xdm/Xresources
+         etc/X11/xdm/Xservers
+@@ -49,7 +49,6 @@
+   ./configure --prefix=/usr \
+       --disable-xdm-auth \
+       --disable-static \
+-      --with-systemd-daemon \
+       --with-xdmconfigdir=/etc/X11/xdm \
+       --with-xdmscriptdir=/etc/X11/xdm \
+       --with-pixmapdir=/usr/share/xdm/pixmaps \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++elogind
+ glibc
+ libx11
+ libxau
+@@ -13,8 +14,6 @@
+ libxt
+ pam
+ sh
+-systemd
+-systemd-libs
+ xorg-sessreg
+ xorg-util-macros
+ xorg-xrdb

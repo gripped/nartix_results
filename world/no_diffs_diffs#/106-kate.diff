@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -30,7 +30,7 @@
- provides=(kwrite)
- replaces=(kwrite)
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 +artix-cmake -B build -S $pkgname-$pkgver \

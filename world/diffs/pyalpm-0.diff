@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,7 @@
+ 
+ build() {
+   cd "${pkgname}"
++  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   python -m build --wheel --no-isolation
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,5 +3,6 @@
+ }
+ build() {
+ cd "${pkgname}"
++export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ python -m build --wheel --no-isolation
+ }

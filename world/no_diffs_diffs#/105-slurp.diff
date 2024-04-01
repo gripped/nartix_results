@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=slurp
- depends=('cairo' 'wayland' 'libxkbcommon')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson "$pkgname-$pkgver" build
 +artix-meson "$pkgname-$pkgver" build

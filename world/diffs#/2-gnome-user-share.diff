@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ url="https://gitlab.gnome.org/GNOME/gnome-user-share"
+ arch=(x86_64)
+ license=(GPL)
+-depends=(glib2 dconf mod_dnssd systemd)
++depends=(glib2 dconf mod_dnssd)
+ makedepends=(git meson)
+ groups=(gnome)
+ _commit=a0e790aa9494db9d1b1f48b4fc0d2f78e112044d  # tags/43.0^0
+@@ -26,9 +26,10 @@
+   local meson_options=(
+     -D httpd=/usr/bin/httpd
+     -D modules_path=/usr/lib/httpd/modules
++    -D systemduserunitdir=share/gnome
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -38,5 +39,7 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++
++  rm -r "$pkgdir"/usr/share/gnome
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,4 +3,3 @@
+ glib2
+ meson
+ mod_dnssd
+-systemd

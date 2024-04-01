@@ -21,16 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,6 +10,7 @@
- libxml2
- sqlite
- )
- prepare() {
- cd libsoup
- git apply -3 ../disable-flaky-test.diff
-@@ -18,7 +19,7 @@
+@@ -6,6 +6,6 @@
  local meson_options=(
  -D gtk_doc=true
  )
@@ -38,4 +33,3 @@
 +artix-meson libsoup build "${meson_options[@]}"
  meson compile -C build
  }
- package_libsoup() {

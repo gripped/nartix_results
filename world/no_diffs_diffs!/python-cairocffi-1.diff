@@ -13,3 +13,14 @@
  source=("https://github.com/Kozea/cairocffi/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
  sha512sums=('80d0d9ed838eb27f769ccc2065a8d4d6772009d5a73710afeb421781440bc546599c82c2ca09df71ed67c9451062e858cf3ef6724ad2e01e776dbc66c269924e')
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,4 +4,3 @@
+ python-cffi
+ python-flit-core
+ python-installer
+-python-xcffib

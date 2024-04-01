@@ -20,13 +20,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,11 @@
- pkgname=(phonon-qt5-gstreamer)
- depends=(gst-plugins-base qt5-x11extras phonon-qt5)
- provides=(phonon-qt5-backend)
- prepare() {
+@@ -2,6 +2,6 @@
  patch -d phonon-backend-gstreamer-$pkgver -p1 < bbbb160f.patch # Fix tearing on wayland
  }
  build() {

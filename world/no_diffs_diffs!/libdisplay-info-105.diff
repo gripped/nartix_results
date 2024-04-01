@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- provides=(libdisplay-info.so)
- _archive="$pkgname-$pkgver"
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson "$_archive" build
 +artix-meson "$_archive" build

@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+          kxmlgui
+          qt6-5compat
+          qt6-base
+-         systemd-libs)
++         libelogind)
+ makedepends=(extra-cmake-modules
+              kdoctools)
+ groups=(kde-applications
+@@ -36,7 +36,7 @@
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -15,6 +15,6 @@
+ ktextwidgets
+ kwidgetsaddons
+ kxmlgui
++libelogind
+ qt6-5compat
+ qt6-base
+-systemd-libs

@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ url='https://www.open-mpi.org/projects/hwloc/'
+ arch=('x86_64')
+ license=('BSD')
+-depends=('glibc' 'libtool' 'systemd-libs' 'libpciaccess')
+-makedepends=('cairo' 'libxml2' 'pciutils' 'systemd' 'libx11')
++depends=('glibc' 'libtool' 'libudev.so' 'libpciaccess')
++makedepends=('cairo' 'libxml2' 'pciutils' 'udev' 'libx11')
+ optdepends=('cairo' 'libxml2' 'pciutils' 'libx11')
+ options=('!docs')
+ source=(https://www.open-mpi.org/software/hwloc/v${pkgver%.*}/downloads/${pkgname}-${pkgver}.tar.bz2)
+@@ -26,7 +26,7 @@
+ 
+ check() {
+   cd hwloc-${pkgver}
+-  make check
++  make check || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,8 +2,8 @@
+ glibc
+ libpciaccess
+ libtool
++libudev.so
+ libx11
+ libxml2
+ pciutils
+-systemd
+-systemd-libs
++udev

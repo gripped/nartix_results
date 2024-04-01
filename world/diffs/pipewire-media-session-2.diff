@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,11 +13,9 @@
+   dbus
+   git
+   meson
+-  systemd
+ )
+ provides=(pipewire-session-manager)
+ conflicts=(wireplumber)
+-install=pipewire-media-session.install
+ _commit=80dae7e24bec02b2befe09a72fbac6e2b38ccb5c  # tags/0.4.2
+ source=("$pkgname::git+https://gitlab.freedesktop.org/pipewire/media-session.git#commit=$_commit")
+ b2sums=('SKIP')
+@@ -33,10 +31,11 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=disabled
+     -D with-module-sets=[]
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -48,7 +47,6 @@
+   depends+=(
+     libdbus-1.so
+     libpipewire-0.3.so
+-    libsystemd.so
+   )
+ 
+   meson install -C build --destdir "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,5 @@
+ git
+ libdbus-1.so
+ libpipewire-0.3.so
+-libsystemd.so
+ meson
+ pipewire>
+-systemd

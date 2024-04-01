@@ -14,9 +14,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,7 @@
+@@ -6,6 +6,7 @@
  cmake -B build -S $pkgname-$pkgver \
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DCMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects" \

@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,6 @@
+   python-setuptools
+   python-wheel
+   swig
+-  systemd
+ )
+ checkdepends=(
+   python-fonttools
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,4 +10,3 @@
+ python-setuptools
+ python-wheel
+ swig
+-systemd

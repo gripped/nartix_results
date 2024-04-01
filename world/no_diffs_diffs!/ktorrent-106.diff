@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -30,6 +30,6 @@
- groups=(kde-applications
- kde-network)
+@@ -1,4 +1,4 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver
 +artix-cmake -B build -S $pkgname-$pkgver

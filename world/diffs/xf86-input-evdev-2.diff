@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=(x86_64)
+ url="https://xorg.freedesktop.org/"
+ license=('HPND-sell-variant AND MIT')
+-depends=('systemd-libs' 'mtdev' 'libevdev' 'glibc')
++depends=('libudev' 'mtdev' 'libevdev' 'glibc')
+ makedepends=('xorg-server-devel' 'X-ABI-XINPUT_VERSION=24.4' 'xorgproto')
+ conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
+ options=('!makeflags')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ X-ABI-XINPUT_VERSION
+ glibc
+ libevdev
++libudev
+ mtdev
+-systemd-libs
+ xorg-server-devel
+ xorgproto

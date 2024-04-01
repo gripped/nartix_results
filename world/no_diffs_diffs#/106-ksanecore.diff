@@ -19,11 +19,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,11 +5,11 @@
- glibc
- sane)
+@@ -1,9 +1,9 @@
  build() {
 -cmake -B build -S $pkgbase-$pkgver \
 +artix-cmake -B build -S $pkgbase-$pkgver \

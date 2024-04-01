@@ -1,0 +1,113 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,32 +1,45 @@
+-
+ pkgname=libayatana-appindicator
+ pkgver=0.5.93
+ pkgrel=1
+-pkgdesc='Ayatana Application Indicators shared library'
+-arch=(x86_64)
+-url='https://github.com/AyatanaIndicators/libayatana-appindicator'
+-license=(LGPL2.1 LGPL3)
+-depends=(gcc-libs
+-         glib2
+-         glibc
+-         gtk3
+-         libayatana-indicator
+-         libdbusmenu-glib
+-         libdbusmenu-gtk3)
+-makedepends=(cmake
+-             gobject-introspection
+-             vala)
+-source=(https://github.com/AyatanaIndicators/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('cbefed7a918a227bf71286246e237fcd3a9c8499b3eaac4897811a869409edf0')
++pkgdesc="Ayatana Application Indicators Shared Library"
++arch=("x86_64")
++url="https://github.com/AyatanaIndicators/libayatana-appindicator"
++changelog=Changelog.txt
++license=("LGPL2.1" "LGPL3")
++depends=(
++	"gcc-libs"
++	"libayatana-indicator>=0.8.4"
++	"glib2>=2.58"
++	"gtk3>=3.24"
++	"libdbusmenu-gtk3>=0.4"
++)
++makedepends=(
++	"gcc"
++	"make"
++	"pkgconf"
++
++	"cmake>=3.13"
++	"vala"
++	"gobject-introspection"
++)
++source=(
++	"https://github.com/AyatanaIndicators/$pkgname/archive/refs/tags/$pkgver.tar.gz"
++)
++sha256sums=(
++	"cbefed7a918a227bf71286246e237fcd3a9c8499b3eaac4897811a869409edf0"
++)
+ 
+ build() {
+-  cmake -B build -S $pkgname-$pkgver \
+-    -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DENABLE_BINDINGS_MONO=OFF \
+-    -DENABLE_GTKDOC=ON
+-  cmake --build build
++	cd "$pkgname-$pkgver"
++	cmake -D CMAKE_BUILD_TYPE="MinSizeRel" \
++		-D CMAKE_INSTALL_PREFIX="/usr" \
++		-D ENABLE_BINDINGS_MONO=OFF \
++		.
++	make
+ }
+ 
+ package() {
+-  DESTDIR="$pkgdir" cmake --install build
++	cd "$pkgname-$pkgver"
++	make install DESTDIR="$pkgdir"
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,11 @@
+-cmake
++cmake>
++gcc
+ gcc-libs
+-glib2
+-glibc
++glib2>
+ gobject-introspection
+-gtk3
+-libayatana-indicator
+-libdbusmenu-glib
+-libdbusmenu-gtk3
++gtk3>
++libayatana-indicator>
++libdbusmenu-gtk3>
++make
++pkgconf
+ vala
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ build() {
+-cmake -B build -S $pkgname-$pkgver \
+--DCMAKE_INSTALL_PREFIX=/usr \
+--DENABLE_BINDINGS_MONO=OFF \
+--DENABLE_GTKDOC=ON
+-cmake --build build
++cd "$pkgname-$pkgver"
++cmake -D CMAKE_BUILD_TYPE="MinSizeRel" \
++-D CMAKE_INSTALL_PREFIX="/usr" \
++-D ENABLE_BINDINGS_MONO=OFF \
++.
++make
+ }

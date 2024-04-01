@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,6 +18,8 @@
+     -Bbuild \
+     -GNinja \
+     -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DASSIMP_BUILD_SAMPLES=OFF \
+     -DASSIMP_WARNINGS_AS_ERRORS=OFF \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,8 @@
+ -Bbuild \
+ -GNinja \
+ -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_PREFIX_PATH=/usr \
++-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DASSIMP_BUILD_SAMPLES=OFF \
+ -DASSIMP_WARNINGS_AS_ERRORS=OFF \

@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,10 +26,9 @@
+   cd shairport-sync-$pkgver
+ 
+   autoreconf -i -f
+-  ./configure --prefix=/usr --sysconfdir=/etc --with-alsa --with-pa --with-avahi --with-jack --with-stdout --with-pipe --with-ssl=openssl --with-soxr --with-dns_sd --with-pkg-config --with-systemd --with-configfiles --with-metadata --with-mqtt-client
++  ./configure --prefix=/usr --sysconfdir=/etc --with-alsa --with-pa --with-avahi --with-jack --with-stdout --with-pipe --with-ssl=openssl --with-soxr --with-dns_sd --with-pkg-config --without-systemd --with-configfiles --with-metadata --with-mqtt-client
+   make
+ 
+-  sed 's|/usr/local/bin/|/usr/bin/|' -i scripts/shairport-sync.service.in
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,6 @@
+ build() {
+ cd shairport-sync-$pkgver
+ autoreconf -i -f
+-./configure --prefix=/usr --sysconfdir=/etc --with-alsa --with-pa --with-avahi --with-jack --with-stdout --with-pipe --with-ssl=openssl --with-soxr --with-dns_sd --with-pkg-config --with-systemd --with-configfiles --with-metadata --with-mqtt-client
++./configure --prefix=/usr --sysconfdir=/etc --with-alsa --with-pa --with-avahi --with-jack --with-stdout --with-pipe --with-ssl=openssl --with-soxr --with-dns_sd --with-pkg-config --without-systemd --with-configfiles --with-metadata --with-mqtt-client
+ make
+-sed 's|/usr/local/bin/|/usr/bin/|' -i scripts/shairport-sync.service.in
+ }

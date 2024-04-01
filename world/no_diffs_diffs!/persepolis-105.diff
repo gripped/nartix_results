@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=('aria2' 'ffmpeg' 'libnotify' 'libpulse' 'python-psutil' 'pyside6' 'python-requests'
- 'python-setproctitle' 'qt6-svg' 'sound-theme-freedesktop' 'yt-dlp')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson build $pkgname-$pkgver
 +artix-meson build $pkgname-$pkgver

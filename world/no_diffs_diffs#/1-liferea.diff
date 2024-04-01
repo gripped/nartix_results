@@ -9,3 +9,16 @@
  optdepends=('libsecret: for keyring plugin support'
              'python-cairo: for the tray icon plugin'
  	    'gst-plugins-base: for media player plugin support'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ gobject-introspection
+ intltool
++json-glib
+ libpeas
+ python-gobject
+ webkit2gtk

@@ -13,14 +13,13 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
- done
- }
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgname-$pkgver build
 +artix-meson $pkgname-$pkgver build
  meson compile -C build
  }
- package_zix() {

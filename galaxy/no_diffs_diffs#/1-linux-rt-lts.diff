@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,16 +26,16 @@
+   config
+ )
+ sha512sums=('SKIP'
+-            'f9dd5f9e138df7867a8860c56ea022046c09491f6dc4bc4b8fa2868ce00c5ef7aae451be0d929112f1546b1bd10c1eb452be5b5da27873536a58f4cd173a4d77')
++            'cc78638d07e20fad5a54c24d6e39216cfe040f43874c116619fdeeb4ae767549862855beea2034a4e9184f8d7c0e3272eff8f26de57c8bb8867a0917686597a8')
+ b2sums=('SKIP'
+-        'e7aa13db352dc7223cc8d5f20884704a087c7c283fe7f67117f9196b927a0a187233f0292472e947b2e76af0655e7fc1b7c81d2a1f72ff7b2a592516a3d5bcd4')
++        '3e0fcf78aa43a6136e7ca12e9b3d79a7e498bd73bd5320bd7244d55c4fdd73d8aa21f382967acc18bedeeabaaaf87b069be441df53a59253a5a97230cf347321')
+ validpgpkeys=(
+   '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+   '5ED9A48FC54C0A22D1D0804CEBC26CDB5A56DE73'  # Steven Rostedt (Der Hacker) <rostedt@goodmis.org>
+   '991F6E3F0765CF6295888586139B09DA5BF0D338'  # David Runge <dvzrv@archlinux.org>
+ )
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 

@@ -27,11 +27,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- libgnomekbd libmm-glib nm-connection-editor)
- options=(!emptydirs)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson build ${pkgname}-${pkgver}
 +artix-meson build ${pkgname}-${pkgver}

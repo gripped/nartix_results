@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=libwacom
- depends=('glib2' 'libevdev' 'libgudev' 'glibc')
+@@ -1,5 +1,5 @@
  build() {
 -arch-meson $pkgname-$pkgver build
 +artix-meson $pkgname-$pkgver build

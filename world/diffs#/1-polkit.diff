@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,10 +8,11 @@
+ license=(LGPL-2.0-or-later)
+ depends=(
+   duktape
++  elogind libelogind.so
+   expat
++  glibc
+   glib2
+   pam
+-  systemd
+ )
+ makedepends=(
+   git
+@@ -26,10 +27,14 @@
+ _commit=82f0924dc0eb23b9df68e88dbaf9e07c81940a5a  # tags/124
+ source=(
+   "git+https://gitlab.freedesktop.org/polkit/polkit.git#commit=$_commit"
++  '99-artix.rules'
+   0001-meson-Pass-polkitd_uid-to-meson_post_install.py.patch
++  0001-fix-sysusers-d.patch
+ )
+ b2sums=('SKIP'
+-        '51200f8600e48fdec61403c2d16d499478dabcb8826d11bd388ab0f32a05531130b45566d4716769043695863dbd9a8e9b9f6b5222316d60bc2e1749ec93b20b')
++        'cacdece40f519ce2f2a4b06d31e75e92ed9496c18d4b1090b91a3c8d19f49aff41949b1bdda6e3c0b049b0ca74bbf164023044cf1ec8de6a24065bcda0d42d1f'
++        '51200f8600e48fdec61403c2d16d499478dabcb8826d11bd388ab0f32a05531130b45566d4716769043695863dbd9a8e9b9f6b5222316d60bc2e1749ec93b20b'
++        '360556ed06af2b8d69a9107ff91b7668b16e5bff0a1be165c60189c5631f2a4dd60341b7a409d98e978e698bb69138177d4d3dc49a5305d83fe89e2ffc79b9de')
+ 
+ pkgver() {
+   cd polkit
+@@ -39,6 +44,7 @@
+ prepare() {
+   cd polkit
+   git apply -3 ../0001-meson-Pass-polkitd_uid-to-meson_post_install.py.patch
++  git apply -3 ../0001-fix-sysusers-d.patch
+ }
+ 
+ build() {
+@@ -49,11 +55,11 @@
+     -D os_type=redhat
+     -D polkitd_uid=102
+     -D polkitd_user=polkitd
+-    -D session_tracking=libsystemd-login
++    -D session_tracking=libelogind
+     -D tests=true
+   )
+ 
+-  arch-meson polkit build "${meson_options[@]}"
++  artix-meson polkit build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -63,5 +69,7 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++
++  install -m0644 "${srcdir}"/99-artix.rules "${pkgdir}"/etc/polkit-1/rules.d
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,11 @@
+ duktape
++elogind
+ expat
+ git
+ glib2
++glibc
+ gobject-introspection
+ gtk-doc
++libelogind.so
+ meson
+ pam
+-systemd

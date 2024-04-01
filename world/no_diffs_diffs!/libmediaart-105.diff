@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libmediaart
- depends=('gdk-pixbuf2' 'glib2' 'glibc')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgname-$pkgver build -D gtk_doc=true
 +artix-meson $pkgname-$pkgver build -D gtk_doc=true

@@ -19,11 +19,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,11 +14,11 @@
- qt6-base)
- conflicts=('libkcddb5<24')
+@@ -1,9 +1,9 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 +artix-cmake -B build -S $pkgname-$pkgver \

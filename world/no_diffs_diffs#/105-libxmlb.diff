@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libxmlb
- depends=(glib2 libstemmer xz zstd)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson ${pkgname}-${pkgver} build -D stemmer=true
 +artix-meson ${pkgname}-${pkgver} build -D stemmer=true

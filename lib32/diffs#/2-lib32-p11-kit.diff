@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,9 +16,7 @@
+   libp11-kit
+ )
+ makedepends=(
+-  lib32-systemd
+   meson
+-  systemd
+ )
+ checkdepends=(
+   lib32-gnutls
+@@ -42,10 +40,11 @@
+   local meson_options=(
+     --cross-file lib32
+     -D bash_completion=disabled
++    -D systemd=disabled
+     -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source
+   )
+ 
+-  arch-meson p11-kit-$pkgver build "${meson_options[@]}"
++  artix-meson p11-kit-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ lib32-glibc
+ lib32-libffi
+ lib32-libtasn1
+-lib32-systemd
+ libp11-kit
+ meson
+-systemd

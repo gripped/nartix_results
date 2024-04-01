@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ license=(GPL3)
+ depends=(gcc-libs
+          glibc
+-         systemd)
++         udev)
+ makedepends=(cargo
+              scdoc)
+ _archive="$pkgbase-$pkgver"
+@@ -44,7 +44,6 @@
+ 	        "etc/pam.d/$pkgbase")
+ 	cd "$_archive"
+ 	install -Dm0755 -t "$pkgdir/usr/bin/" "target/release/$pkgname"
+-	install -Dm0644 -t "$pkgdir/usr/lib/systemd/system/" "$pkgname.service"
+ 	install -Dm0644 -t "$pkgdir/etc/$pkgname/" config.toml
+ 	install -Dm0644 "../$pkgname.pam" "$pkgdir/etc/pam.d/$pkgname"
+ 	install -Dm0644 "../$pkgname.sysusers" "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,4 +6,4 @@
+ greetd-greeter
+ pam
+ scdoc
+-systemd
++udev

@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,7 +45,6 @@
+   libxrender
+   pango
+   shared-mime-info
+-  tracker3
+   wayland
+ )
+ makedepends=(
+@@ -82,11 +81,10 @@
+     -D gtk_doc=true
+     -D introspection=true
+     -D man=true
+-    -D tracker3=true
+   )
+ 
+   CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-  arch-meson gtk build "${meson_options[@]}"
++  artix-meson gtk build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -39,6 +39,5 @@
+ pango
+ sassc
+ shared-mime-info
+-tracker3
+ wayland
+ wayland-protocols
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,9 +9,8 @@
+ -D gtk_doc=true
+ -D introspection=true
+ -D man=true
+--D tracker3=true
+ )
+ CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
+-arch-meson gtk build "${meson_options[@]}"
++artix-meson gtk build "${meson_options[@]}"
+ meson compile -C build
+ }

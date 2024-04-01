@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,7 @@
+ makedepends=(intltool gobject-introspection vala gtk-doc autoconf-archive
+              yelp-tools git)
+ checkdepends=(xorg-server-xvfb)
++options=(debug)
+ _commit=73e57b5787ac60776c57032e05a4cc32207f9cf6  # gnome-3-24
+ source=("git+https://gitlab.gnome.org/GNOME/gtksourceview.git#commit=$_commit")
+ sha256sums=('SKIP')

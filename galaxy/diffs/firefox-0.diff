@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -70,9 +70,7 @@
+         'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
+         '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34')
+ 
+-_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+-
+-_mozilla_api_key=e05d56db0a694edc8b5aaebda3f2db6a
++
+ 
+ prepare() {
+   mkdir mozbuild
+@@ -98,15 +96,12 @@
+ 
+ ac_add_options --enable-official-branding
+ ac_add_options --enable-update-channel=release
+-ac_add_options --with-distribution-id=org.archlinux
++ac_add_options --with-distribution-id=org.artixlinux
+ ac_add_options --with-unsigned-addon-scopes=app,system
+ ac_add_options --allow-addon-sideload
+ export MOZILLA_OFFICIAL=1
+ export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+ 
+-ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
+ 
+ ac_add_options --with-system-nspr
+ ac_add_options --with-system-nss
+@@ -189,14 +184,14 @@
+   local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
+   install -Dvm644 /dev/stdin "$distini" <<END
+ [Global]
+-id=archlinux
++id=artixlinux
+ version=1.0
+-about=Mozilla Firefox for Arch Linux
++about=Mozilla Firefox for Artix Linux
+ 
+ [Preferences]
+-app.distributor=archlinux
++app.distributor=artixlinux
+ app.distributor.channel=$pkgname
+-app.partner.archlinux=archlinux
++app.partner.artixlinux=artixlinux
+ END
+ 
+   local i theme=official
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,14 +18,11 @@
+ ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
+ ac_add_options --enable-official-branding
+ ac_add_options --enable-update-channel=release
+-ac_add_options --with-distribution-id=org.archlinux
++ac_add_options --with-distribution-id=org.artixlinux
+ ac_add_options --with-unsigned-addon-scopes=app,system
+ ac_add_options --allow-addon-sideload
+ export MOZILLA_OFFICIAL=1
+ export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+-ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
+-ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
+ ac_add_options --with-system-nspr
+ ac_add_options --with-system-nss
+ ac_add_options --enable-alsa

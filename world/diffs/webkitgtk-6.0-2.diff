@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,6 @@
+   libseccomp
+   libsecret
+   libsoup3
+-  libsystemd
+   libtasn1
+   libwebp
+   libwpe
+@@ -70,7 +69,6 @@
+   ninja
+   python
+   ruby
+-  systemd
+   unifdef
+   wayland-protocols
+ )
+@@ -103,6 +101,8 @@
+     -DUSE_SOUP2=OFF
+     -DENABLE_DOCUMENTATION=ON
+     -DENABLE_MINIBROWSER=ON
++    -DUSE_SYSTEMD=OFF
++    -DENABLE_JOURNALD_LOG=OFF
+   )
+ 
+   export CC=clang CXX=clang++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -36,7 +36,6 @@
+ libseccomp
+ libsecret
+ libsoup3
+-libsystemd
+ libtasn1
+ libwebp
+ libwpe
+@@ -53,7 +52,6 @@
+ python
+ ruby
+ sqlite
+-systemd
+ unifdef
+ wayland
+ wayland-protocols

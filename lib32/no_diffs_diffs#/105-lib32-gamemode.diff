@@ -1,0 +1,97 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,47 +7,47 @@
+ url=https://github.com/FeralInteractive/gamemode
+ license=(BSD)
+ depends=(
+-  lib32-dbus
+-  lib32-glibc
+-  lib32-systemd
++	lib32-dbus
++	lib32-glibc
++	lib32-elogind
+ )
+ makedepends=(
+-  git
+-  meson
++	git
++	meson
+ )
+ checkdepends=(appstream)
+ provides=(
+-  libgamemode.so
+-  libgamemodeauto.so
++	libgamemode.so
++	libgamemodeauto.so
+ )
+ _tag=5180d89e66830d87f69687b95fb86f622552b94b
+ source=(git+https://github.com/FeralInteractive/gamemode.git#tag=${_tag})
+ b2sums=(SKIP)
+ 
+ pkgver() {
+-  cd gamemode
+-  git describe --tags
++	cd gamemode
++	git describe --tags
+ }
+ 
+ build() {
+-  export CC='gcc -m32'
+-  export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+-  arch-meson gamemode build \
+-    --libdir /usr/lib32 \
+-    -Dwith-examples=false \
+-    -Dwith-sd-bus-provider=no-daemon \
+-    -Dwith-util=false
+-  meson compile -C build
++	export CC='gcc -m32'
++	export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
++	artix-meson gamemode build \
++		--libdir /usr/lib32 \
++		-Dwith-examples=false \
++		-Dwith-sd-bus-provider=no-daemon \
++		-Dwith-util=false
++	meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build
++	meson test -C build
+ }
+ 
+ package() {
+-  DESTDIR="${pkgdir}" meson install -C build
+-  rm -rf "${pkgdir}"/{etc,usr/include}
+-  install -dm 755 "${pkgdir}"/usr/share/licenses
+-  ln -s gamemode "${pkgdir}"/usr/share/licenses/lib32-gamemode
++	DESTDIR="${pkgdir}" meson install -C build
++	rm -rf "${pkgdir}"/{etc,usr/include}
++	install -dm 755 "${pkgdir}"/usr/share/licenses
++	ln -s gamemode "${pkgdir}"/usr/share/licenses/lib32-gamemode
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,5 @@
+ git
+ lib32-dbus
++lib32-elogind
+ lib32-glibc
+-lib32-systemd
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ build() {
+ export CC='gcc -m32'
+ export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+-arch-meson gamemode build \
++artix-meson gamemode build \
+ --libdir /usr/lib32 \
+ -Dwith-examples=false \
+ -Dwith-sd-bus-provider=no-daemon \

@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -7,6 +7,6 @@
  )
  CFLAGS="${CFLAGS/-fexceptions/}"
  CXXFLAGS="${CXXFLAGS/-fexceptions/}"
@@ -23,4 +25,3 @@
 +artix-meson harfbuzz build "${meson_options[@]}"
  meson compile -C build
  }
- _pick() {

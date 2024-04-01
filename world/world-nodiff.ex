@@ -66,6 +66,7 @@ apache-orc
 apitrace
 apparmor
 appmenu-gtk-module
+appstream-glib
 apr-util
 apr
 aqbanking
@@ -73,6 +74,7 @@ arandr
 arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme
+archey3
 archlinux-appstream-data
 ardour
 argyllcms
@@ -156,6 +158,8 @@ baloo5
 bamf
 banner
 baobab
+bash-bats-assert
+bash-bats-support
 bash-completion
 bats-assert
 bats-support
@@ -174,8 +178,10 @@ bemenu-ncurses
 bemenu-x11
 bemenu-wayland
 benchmark
+bftpd
 bigsh0t
 bin86
+bind
 black-hole-solver
 blackbox
 blinken
@@ -222,6 +228,15 @@ cairomm-1.16
 cairomm-1.16-docs
 cairomm
 cairomm-docs
+caja-extensions
+caja-extensions-common
+caja-image-converter
+caja-open-terminal
+caja-sendto
+caja-share
+caja-wallpaper
+caja-xattr-tags
+caja
 calc
 calcurse
 calendarsupport
@@ -286,6 +301,7 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
+clamav
 clang14
 clang15
 clang16
@@ -298,6 +314,7 @@ cln
 clucene
 clutter-gst
 clutter-gtk
+clutter
 cmark-gfm
 cmark
 cmocka
@@ -353,6 +370,10 @@ cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
+cyrus-sasl
+cyrus-sasl-gssapi
+cyrus-sasl-ldap
+cyrus-sasl-sql
 cython-dev
 cython
 cython0
@@ -371,8 +392,6 @@ dbus-python-docs
 dconf-editor
 dconf
 ddclient
-ddcutil
-debootstrap
 default-cursors
 dejagnu
 deluge
@@ -382,6 +401,8 @@ dev86
 devhelp
 devhelp-docs
 devil
+dhcp
+dhclient
 dht
 diffstat
 diffuse
@@ -426,6 +447,9 @@ doxygen
 doxygen-docs
 dqlite
 dragon
+dropbear
+dropbear-scp
+dtc
 duktape
 dump_syms
 dune
@@ -460,11 +484,11 @@ enet
 engrampa
 enscript
 entr
-eog
-eog-docs
 eom
 epiphany
 erlang-nox
+erlang
+erlang-unixodbc
 espeak-ng
 ethtool
 eventviews
@@ -488,6 +512,7 @@ f2fs-tools
 faac
 faad2
 facile
+fail2ban
 fakechroot
 falkon
 farstream
@@ -586,11 +611,9 @@ fzf
 gajim
 galculator
 gamescope
-gammastep
 garcon
 gavl
 gcab
-gcc12
 gd
 gdal
 python-gdal
@@ -626,9 +649,11 @@ giflib
 gifski
 gimp-help
 gimp
+girara
 git-lfs
 git
 gitea
+gjs
 gkrellm
 gl2ps
 glad
@@ -639,12 +664,12 @@ glibmm-2.68
 glibmm-2.68-docs
 glibmm
 glibmm-docs
-glm
 gloox
 glpk
 glslang
 glu
 glusterfs
+glycin
 gmic
 gimp-plugin-gmic
 gmime3
@@ -674,6 +699,7 @@ gnome-font-viewer
 gnome-games
 gnome-klotski
 gnome-mahjongg
+gnome-maps
 gnome-menus
 gnome-mines
 gnome-multi-writer
@@ -698,6 +724,7 @@ gnome-tour
 gnome-tweaks
 gnome-usage
 gnome-user-docs
+gnome-video-effects
 gnome-weather
 gnu-efi
 gnu-free-fonts
@@ -922,6 +949,12 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-xmlgraphics-commons
 java11-openjdk
 jre11-openjdk-headless
@@ -945,6 +978,7 @@ jbig2dec
 jbigkit
 jedi-language-server
 jemalloc
+jenkins
 jitterentropy
 jose
 jp2a
@@ -1047,6 +1081,19 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
+kde-applications-meta
+kde-accessibility-meta
+kde-education-meta
+kde-games-meta
+kde-graphics-meta
+kde-multimedia-meta
+kde-network-meta
+kde-office-meta
+kde-pim-meta
+kde-sdk-meta
+kde-system-meta
+kde-utilities-meta
+kdevelop-meta
 kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
@@ -1054,6 +1101,7 @@ kde-development-environment-meta
 kde-gtk-config
 kde-inotify-survey
 kdebugsettings
+kdeclarative
 kdeclarative5
 kdeconnect
 kdecoration
@@ -1184,6 +1232,7 @@ kmbox
 kmenuedit
 kmime
 kmime5
+kmines
 kmix
 kmousetool
 kmouth
@@ -1304,6 +1353,7 @@ kwayland-integration
 kwayland
 kwayland5
 kweather
+kweathercore
 kwidgetsaddons
 kwidgetsaddons5
 kwindowsystem
@@ -1432,8 +1482,6 @@ libdvdread
 libdwarf
 libebml
 libebur128
-libepoxy
-libepoxy-docs
 libepubgen
 libesmtp
 libetebase
@@ -1546,6 +1594,7 @@ libkscreen5
 libksieve
 libksysguard
 libktorrent
+liblangtag
 liblas
 liblc3
 libldac
@@ -1570,6 +1619,7 @@ libmatemixer
 libmateweather
 libmatroska
 libmaxminddb
+libmbim
 libmd
 libmediaart
 libmediainfo
@@ -1611,7 +1661,6 @@ libnma-gtk4
 libnotify
 libnotify-docs
 libnumbertext
-libnvme
 liboauth
 libodfgen
 libofa
@@ -1764,6 +1813,7 @@ libva-vdpau-driver
 libva
 libvdpau
 libvips
+libvirt-glib
 libvirt
 libvisio
 libvisual
@@ -1845,13 +1895,16 @@ liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
+lightsoff
 lilv
 lilv-docs
 python-lilv
 lilypond
 linux-atm
+linux-zen
+linux-zen-headers
+linux-zen-docs
 liquidctl
-lirc
 litehtml
 live-media
 lksctp-tools
@@ -2003,9 +2056,11 @@ markdownpart
 marked-man
 marked
 mat2
+mate-applets
 mate-backgrounds
 mate-calc
 mate-common
+mate-control-center
 mate-desktop
 mate-icon-theme-faenza
 mate-icon-theme
@@ -2015,7 +2070,6 @@ mate-netbook
 mate-notification-daemon
 mate-polkit
 mate-power-manager
-mate-screensaver
 mate-sensors-applet
 mate-settings-daemon
 mate-terminal
@@ -2126,6 +2180,9 @@ mypaint-brushes1
 mypy
 namcap
 nasm
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -2164,6 +2221,8 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
+nginx
+nginx-src
 ninja
 nload
 nlohmann-json
@@ -2188,6 +2247,7 @@ noto-fonts-emoji
 noto-fonts
 noto-fonts-extra
 npm
+nrpe
 nss-mdns
 nsxiv
 ntfs-3g
@@ -2201,6 +2261,9 @@ nvidia-open
 nvidia-open-dkms
 nvidia-settings
 libxnvctrl
+nvidia-utils
+opencl-nvidia
+nvidia-dkms
 nvidia
 oath-toolkit
 obconf-qt
@@ -2210,6 +2273,7 @@ ocaml-bigarray-compat
 ocaml-csexp
 ocaml-ctypes
 ocaml-integers
+ocaml-pp
 ocaml-result
 ocaml-stdlib-shims
 ocaml-topkg
@@ -2246,6 +2310,7 @@ opencore-amr
 opendbx
 openexr
 openfec
+openfire
 openimagedenoise
 openimageio
 openipmi
@@ -2253,8 +2318,10 @@ openjade
 openjpeg2
 openlibm
 openmp
+openntpd
 openpmix
 openpmix-docs
+openrct2
 openscenegraph
 openshadinglanguage
 opensips
@@ -2631,6 +2698,7 @@ perl-yaml-pp
 perl-yaml-tiny
 perl-yaml
 persepolis
+pgbouncer
 phonon-gstreamer
 phonon-qt5-gstreamer
 phonon-vlc
@@ -2703,6 +2771,14 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgis
 postgrey
 postorius
@@ -2727,6 +2803,7 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 protobuf-c
 protobuf
 python-protobuf
@@ -2779,7 +2856,6 @@ pyqt6-networkauth
 python-pyqt6-networkauth
 pyqt6-webengine
 python-pyqt6-webengine
-pyqt6
 pyside2
 shiboken2
 python-shiboken2
@@ -2824,6 +2900,7 @@ python-ansicolors
 python-ansiwrap
 python-anyio
 python-anyjson
+python-anysqlite
 python-apipkg
 python-apispec-webframeworks
 python-apispec
@@ -2931,6 +3008,7 @@ python-case
 python-cattrs
 python-cbor2
 python-cchardet
+python-celery
 python-cerberus
 python-certifi
 python-cffi
@@ -3015,6 +3093,7 @@ python-dbus-deviation
 python-dbusmock
 python-ddt
 python-debtcollector
+python-debugpy
 python-decorator
 python-deepdiff
 python-deepmerge
@@ -3053,6 +3132,7 @@ python-django-rest-framework
 python-django-sekizai
 python-dkim
 python-dnspython
+python-docker-pycreds
 python-docker
 python-dockerpty
 python-docopt
@@ -3132,6 +3212,7 @@ python-flask-socketio
 python-flask-sqlalchemy
 python-flask
 python-flex
+python-flexmock
 python-flit-core
 python-flit-scm
 python-flit
@@ -3200,6 +3281,7 @@ python-helpdev
 python-hexdump
 python-hidapi
 python-hiredis
+python-hishel
 python-hkdf
 python-hpack
 python-html2text
@@ -3232,6 +3314,7 @@ python-importlib-metadata
 python-importlib_resources
 python-incremental
 python-infinity
+python-inflect
 python-ini2toml
 python-iniconfig
 python-installer
@@ -3244,6 +3327,7 @@ python-ipdb
 python-ipykernel
 python-ipyparallel
 python-ipython-genutils
+python-ipywidgets
 python-iso8601
 python-isoduration
 python-isort
@@ -3481,6 +3565,7 @@ python-patsy
 python-paver
 python-pbkdf2
 python-pbr
+python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
 python-pdm-backend
@@ -3609,7 +3694,6 @@ python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
 python-pymongo
-python-pymupdf
 python-pymysql
 python-pynacl
 python-pynamodb
@@ -3644,6 +3728,7 @@ python-pysendfile
 python-pyserial
 python-pysmt
 python-pysocks
+python-pysol_cards
 python-pysolr
 python-pyspinel
 python-pyspnego
@@ -3886,6 +3971,7 @@ python-sphinxygen
 python-sphobjinv
 python-spsdk
 python-spur
+python-sqlalchemy-utils
 python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlparse
@@ -4085,7 +4171,6 @@ python-zopfli
 python-zstandard
 pyxdg
 qalculate-qt
-qastools
 qbe
 qbs
 qca
@@ -4142,14 +4227,38 @@ qt5-webview
 qt5-x11extras
 qt5-xmlpatterns
 qt5ct
+qt5pas
+qt6-3d
 qt6-5compat
 qt6-charts
+qt6-connectivity
+qt6-datavis3d
+qt6-declarative
+qt6-graphs
+qt6-httpserver
+qt6-imageformats
+qt6-languageserver
+qt6-location
 qt6-lottie
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
+qt6-networkauth
+qt6-positioning
+qt6-quick3d
+qt6-quick3dphysics
 qt6-quickeffectmaker
 qt6-quicktimeline
+qt6-remoteobjects
+qt6-scxml
 qt6-sensors
+qt6-serialbus
+qt6-shadertools
+qt6-speech
+qt6-svg
 qt6-virtualkeyboard
 qt6-wayland
+qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
@@ -4207,6 +4316,7 @@ rinutils
 ripgrep
 ristretto
 rkcommon
+rng-tools
 rnnoise
 robin-map
 roc-toolkit
@@ -4225,10 +4335,10 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
-rrdtool
 rssguard
 rssguard-lite
 rst2pdf
+rsync
 rtaudio
 rtaudio-docs
 rtl-sdr
@@ -4490,6 +4600,7 @@ rygel
 s2n-tls
 s3cmd
 s3fs-fuse
+salt
 samurai
 sassc
 sbc
@@ -4527,7 +4638,6 @@ serd
 serd-docs
 serf
 setconf
-sfml
 sfsexp
 sg3_utils
 sgml-common
@@ -4594,6 +4704,7 @@ libspeechd
 speex
 speexdsp
 spglib
+spice-gtk
 spice-protocol
 spice
 spirv-headers
@@ -4618,6 +4729,7 @@ stoken
 strace
 strawberry
 strip-nondeterminism
+stubby
 sugar-datastore
 suil
 suil-docs
@@ -4629,6 +4741,7 @@ svt-hevc
 swaybg
 swaylock
 sweeper
+swell-foop
 swig
 swtpm
 sxhkd
@@ -4656,6 +4769,7 @@ tcsh
 tdb
 tea
 tecla
+telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
@@ -4683,6 +4797,7 @@ telepathy-salut
 tellico
 telly-skout
 template-glib
+tepl
 terminator
 terminus-font
 tesseract-data
@@ -4817,6 +4932,7 @@ testdisk
 tevent
 tex-gyre-fonts
 texi2html
+texlive-bin
 texlive-core
 texlive-fontsextra
 texlive-formatsextra
@@ -4843,12 +4959,15 @@ tint2
 tinycdb
 tinycompress
 tinyprog
+tinyproxy
 tinyxml
 tinyxml2
 tk
 tl-expected
 tldp-howtos-txt
 tldr
+tlp
+tlp-rdw
 tmuxp
 tokodon
 tomlplusplus
@@ -4904,6 +5023,7 @@ uget
 uglify-js
 uhttpmock
 umbrello
+umurmur
 unarchiver
 unclutter
 unibilium
@@ -4922,11 +5042,8 @@ libunrar
 unrealircd
 unrtf
 unzip
-uptimed
 upx
 uriparser
-usb_modeswitch
-usbguard
 usbredir
 usort
 uthash
@@ -4963,6 +5080,12 @@ virt-install
 virt-what
 virtiofsd
 virtualbox-guest-iso
+virtualbox
+virtualbox-sdk
+virtualbox-host-dkms
+virtualbox-guest-utils
+virtualbox-guest-utils-nox
+virtualbox-ext-vnc
 virtualgl
 vkd3d
 vmaf
@@ -5011,8 +5134,7 @@ wireshark
 wireshark-cli
 wireshark-qt
 wl-clipboard
-wlroots
-wlroots0.16
+woff2
 wolfssl
 words
 wpebackend-fdo
@@ -5064,11 +5186,8 @@ xerces-c
 xf86-input-elographics
 xf86-input-libinput
 xf86-input-synaptics
-xf86-video-dummy
 xf86-video-fbdev
 xf86-video-sisusb
-xf86-video-vesa
-xf86-video-voodoo
 xfburn
 xfce4-appfinder
 xfce4-artwork
@@ -5168,6 +5287,7 @@ xpra
 xreader
 xsane
 xsane-gimp
+xscreensaver
 xsd
 xsel
 xsettingsd
@@ -5195,9 +5315,15 @@ youtube-dl
 yt-dlp
 yubico-c-client
 yubico-c
-yubikey-personalization
 z3
 python-z3-solver
+zabbix
+zabbix-server
+zabbix-agent
+zabbix-agent2
+zabbix-proxy
+zabbix-frontend-php
+zabbix-web-service
 zanshin
 zathura-cb
 zathura-djvu
@@ -5228,6 +5354,3 @@ zug
 zvbi
 zxing-cpp
 zziplib
-python-anysqlite
-python-hishel
-python-pbs-installer

@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,10 +47,9 @@
+     -DCMAKE_INSTALL_LIBDIR=lib \
+     -DWANT_PYTHON=YES \
+     -DWANT_PERL=YES \
+-    -DWANT_TCL=YES \
+-    -DWANT_SYSTEMD=YES \
++    -DWANT_TCL=YES  \
+     -DWANT_ARGON=YES \
+-    -DSYSTEMD_DIR=/usr/lib/systemd/system
++    -DWANT_SYSTEMD=NO
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,9 +8,8 @@
+ -DCMAKE_INSTALL_LIBDIR=lib \
+ -DWANT_PYTHON=YES \
+ -DWANT_PERL=YES \
+--DWANT_TCL=YES \
+--DWANT_SYSTEMD=YES \
++-DWANT_TCL=YES  \
+ -DWANT_ARGON=YES \
+--DSYSTEMD_DIR=/usr/lib/systemd/system
++-DWANT_SYSTEMD=NO
+ make
+ }

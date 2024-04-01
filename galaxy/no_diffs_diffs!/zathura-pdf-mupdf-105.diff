@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ 
+ build() {
+   cd zathura-pdf-mupdf-$pkgver
+-  arch-meson build
++  artix-meson build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ }
+ build() {
+ cd zathura-pdf-mupdf-$pkgver
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

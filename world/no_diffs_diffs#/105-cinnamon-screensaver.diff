@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- python-cairo python-gobject python-setproctitle python-xapp xapp xdotool)
- backup=(etc/pam.d/cinnamon-screensaver)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
 +artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}

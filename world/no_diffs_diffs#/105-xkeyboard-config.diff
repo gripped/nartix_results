@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- replaces=('xkbdata')
- conflicts=('xkbdata')
+@@ -1,5 +1,5 @@
  build() {
 -arch-meson ${pkgname}-${pkgver} build \
 +artix-meson ${pkgname}-${pkgver} build \

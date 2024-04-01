@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,6 +7,6 @@
- libvdpau.so
- )
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson libvdpau build --cross-file lib32
 +artix-meson libvdpau build --cross-file lib32

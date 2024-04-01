@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+   make configure
+   export OPTIMIZER="-march=${CARCH/_/-} -O1"
+   export DEBUG=-DNDEBUG
+-  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib --with-systemd-unit-dir=/usr/lib/systemd/system
++  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib --with-systemd-unit-dir=no
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ make configure
+ export OPTIMIZER="-march=${CARCH/_/-} -O1"
+ export DEBUG=-DNDEBUG
+-./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib --with-systemd-unit-dir=/usr/lib/systemd/system
++./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib --with-systemd-unit-dir=no
+ make
+ }

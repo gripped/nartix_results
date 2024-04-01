@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=(LGPL-2.1-or-later)
+ depends=(
+   curl
++  json-glib
+   gtk3
+   libstemmer
+   libyaml
+@@ -52,7 +53,7 @@
+     -D rpm=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,7 @@
+ gperf
+ gtk-doc
+ gtk3
++json-glib
+ libstemmer
+ libyaml
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ -D gtk-doc=true
+ -D rpm=false
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

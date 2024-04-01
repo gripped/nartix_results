@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
++  export CXXFLAGS="$CXXFLAGS -I/usr/include/leatherman/vendor"
+   cmake \
+     -B build \
+     -DCMAKE_BUILD_TYPE=None \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cd ${pkgname}-${pkgver}
++export CXXFLAGS="$CXXFLAGS -I/usr/include/leatherman/vendor"
+ cmake \
+ -B build \
+ -DCMAKE_BUILD_TYPE=None \

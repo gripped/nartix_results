@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('GPL' 'LGPL' 'MIT')
+ url='http://e2fsprogs.sourceforge.net'
+-makedepends=('systemd' 'util-linux' 'fuse')
++makedepends=('udev' 'util-linux' 'fuse')
+ validpgpkeys=('3AB057B7E78D945C8C5591FBD36F769BC11804F0') # Theodore Ts'o <tytso@mit.edu>
+ source=("https://www.kernel.org/pub/linux/kernel/people/tytso/${pkgbase}/v${pkgver}/${pkgbase}-${pkgver}.tar."{xz,sign}
+         'MIT-LICENSE')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ e2fsprogs
+ fuse
+ sh
+-systemd
++udev
+ util-linux
+ util-linux-libs

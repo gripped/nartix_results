@@ -21,16 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgname=gtksourceview4
- depends=(gtk3 libxml2)
- provides=(libgtksourceview-${pkgver%%.*}.so)
- prepare() {
- cd gtksourceview
- }
-@@ -9,6 +10,6 @@
+@@ -6,6 +6,6 @@
  -D glade_catalog=true
  -D gtk_doc=true
  )

@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,6 @@
+   gtk4
+   libadwaita
+   libnotify
+-  systemd
+   upower
+ )
+ makedepends=(
+@@ -44,7 +43,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson gnome-bluetooth build "${meson_options[@]}"
++  artix-meson gnome-bluetooth build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,5 +10,4 @@
+ meson
+ python
+ python-packaging
+-systemd
+ upower

@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
- groups=(kde-applications
- kdesdk)
+@@ -1,4 +1,4 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver
 +artix-cmake -B build -S $pkgname-$pkgver

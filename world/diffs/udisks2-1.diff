@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+   'libgudev'
+   'lvm2'
+   'polkit'
+-  'systemd-libs'
++  'libelogind'
+   'util-linux-libs'
+ )
+ source=("https://github.com/storaged-project/udisks/releases/download/udisks-$pkgver/udisks-$pkgver.tar.bz2")
+@@ -59,7 +59,8 @@
+     --prefix=/usr
+     --sbindir=/usr/bin
+     --sysconfdir=/etc
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --with-systemdsystemunitdir=no
++    --with-tmpfilesdir=/usr/lib/tmpfiles.d
+   )
+ 
+   cd udisks-$pkgver
+@@ -91,7 +92,7 @@
+     libblockdev-swap  # dynamically loaded by libblockdev.so, required for default operation
+     libgudev libgudev-1.0.so
+     polkit libpolkit-agent-1.so libpolkit-gobject-1.so
+-    systemd-libs libsystemd.so
++    libelogind libelogind.so
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+   optdepends=(
+@@ -137,7 +138,7 @@
+     libblockdev-btrfs  # dynamically loaded by libblockdev.so
+     libgudev libgudev-1.0.so
+     polkit libpolkit-gobject-1.so
+-    systemd-libs libsystemd.so
++    libelogind libelogind.so
+     udisks2 libudisks2.so
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+@@ -158,7 +159,7 @@
+     libgudev libgudev-1.0.so
+     lvm2
+     polkit libpolkit-gobject-1.so
+-    systemd-libs libsystemd.so
++    libelogind libelogind.so
+     udisks2 libudisks2.so
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -21,6 +21,8 @@
+ libblockdev-part
+ libblockdev-swap
+ libblockdev.so
++libelogind
++libelogind.so
+ libgio-2.0.so
+ libglib-2.0.so
+ libgmodule-2.0.so
+@@ -30,11 +32,9 @@
+ libmount.so
+ libpolkit-agent-1.so
+ libpolkit-gobject-1.so
+-libsystemd.so
+ libudisks2.so
+ libuuid.so
+ lvm2
+ polkit
+-systemd-libs
+ udisks2
+ util-linux-libs

@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
- )
- provides=(libtomlplusplus.so)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgname-$pkgver build
 +artix-meson $pkgname-$pkgver build

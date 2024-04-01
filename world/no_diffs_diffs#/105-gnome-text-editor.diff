@@ -13,11 +13,13 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,6 +22,6 @@
+@@ -5,6 +5,6 @@
  local meson_options=(
- -D bugreport_
+ -D bugreport_url="https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-text-editor/-/issues"
  )
 -arch-meson $pkgname build "${meson_options[@]}"
 +artix-meson $pkgname build "${meson_options[@]}"

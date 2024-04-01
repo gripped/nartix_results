@@ -17,11 +17,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libesmtp
- depends=('openssl')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson build libESMTP-${pkgver}
 +artix-meson build libESMTP-${pkgver}

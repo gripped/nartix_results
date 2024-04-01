@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mate-user-guide
+-pkgver=1.28.0
+-pkgrel=1
++pkgver=1.26.2
++pkgrel=1.1
+ pkgdesc="MATE User Guide"
+ groups=('mate')
+ url="https://mate-desktop.org"
+@@ -10,7 +10,7 @@
+ depends=('yelp' 'gettext')
+ makedepends=('itstool')
+ source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
+-sha256sums=('53ef0814f506544614ed61ab7be5221cc8d3a9f14f7ef9698c90fe7e46014b9e')
++sha256sums=('4d32b6e3564ac8f4eaab2b15482df7f9769750df8811abed837d0a2e7ee3808b')
+ 
+ build() {
+     	cd "${pkgname}-${pkgver}"

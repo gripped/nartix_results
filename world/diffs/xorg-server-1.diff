@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+              'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
+              'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
+              'xcb-util' 'xcb-util-image' 'xcb-util-renderutil' 'xcb-util-wm' 'xcb-util-keysyms'
+-             'libxshmfence' 'libunwind' 'systemd' 'meson' 'git')
++             'libxshmfence' 'libunwind' 'elogind' 'meson' 'git')
+ source=(https://xorg.freedesktop.org/releases/individual/xserver/${pkgbase}-${pkgver}.tar.xz{,.sig}
+         xvfb-run # with updates from FC master
+         xvfb-run.1
+@@ -50,7 +50,7 @@
+   export CXXFLAGS=${CXXFLAGS/-fno-plt}
+   export LDFLAGS=${LDFLAGS/-Wl,-z,now}
+ 
+-  arch-meson ${pkgbase}-$pkgver build \
++  artix-meson ${pkgbase}-$pkgver build \
+     -D ipv6=true \
+     -D xvfb=true \
+     -D xnest=true \
+@@ -98,7 +98,7 @@
+   pkgdesc="Xorg X server"
+   depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
+            dbus libgl xf86-input-libinput nettle
+-           libxdmcp sh glibc libxau systemd-libs libtirpc
++           libxdmcp sh glibc libxau libelogind libtirpc
+            libpciaccess libdrm libxshmfence libxcvt) # FS#52949
+   provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
+   conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
+@@ -120,7 +120,7 @@
+ 
+ package_xorg-server-xephyr() {
+   pkgdesc="A nested X server that runs as an X application"
+-  depends=(libxfont2 libgl libepoxy libunwind systemd-libs pixman xorg-server-common
++  depends=(libxfont2 libgl libepoxy libunwind libelogind pixman xorg-server-common
+            xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
+            nettle libtirpc
+            xcb-util libxdmcp libx11 libxau libxshmfence glibc)
+@@ -135,7 +135,7 @@
+   pkgdesc="Virtual framebuffer X server"
+   license=('MIT' 'GPL-2.0-only')
+   depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
+-           libgl nettle libtirpc systemd-libs
++           libgl nettle libtirpc libelogind
+            libxdmcp sh glibc libxau)
+ 
+   _install fakeinstall/usr/bin/Xvfb
+@@ -150,7 +150,7 @@
+ package_xorg-server-xnest() {
+   pkgdesc="A nested X server that runs as an X application"
+   depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle
+-           libtirpc systemd-libs
++           libtirpc libelogind
+            libxdmcp glibc libx11 libxau)
+ 
+   _install fakeinstall/usr/bin/Xnest
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,9 @@
+ dbus
++elogind
+ git
+ glibc
+ libdrm
++libelogind
+ libepoxy
+ libgl
+ libpciaccess
+@@ -28,8 +30,6 @@
+ nettle
+ pixman
+ sh
+-systemd
+-systemd-libs
+ xcb-util
+ xcb-util-image
+ xcb-util-keysyms

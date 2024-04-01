@@ -21,16 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- libsoup3
- libxml2
- )
- prepare() {
- cd dLeyna
- }
-@@ -15,7 +16,7 @@
+@@ -5,7 +5,7 @@
  local meson_options=(
  -D log_type=glib
  )

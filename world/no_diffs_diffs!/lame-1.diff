@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ depends=(ncurses)
+ makedepends=(nasm)
+ provides=(libmp3lame.so)
++options=(debug)
+ source=(
+   https://downloads.sourceforge.net/$pkgname/$pkgname-$pkgver.tar.gz
+   $pkgname.pc.in

@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ license=('GPL-3.0-or-later')
+ makedepends=('python' 'python-markdown' 'python-dnspython' 'docbook-xsl' 'pkg-config' 'libbsd' 'popt' 'libcups'
+              'readline' 'tevent' 'acl' 'libldap' 'libcap' 'ldb' 'krb5' 'pam'
+-             'systemd' 'gnutls' 'talloc' 'tdb' 'dbus'
++             'gnutls' 'talloc' 'tdb' 'dbus'
+              'perl-parse-yapp' 'libnsl' 'libtirpc' 'rpcsvc-proto' 'jansson'
+              'liburing' 'perl-json' 'glusterfs')
+ optdepends=(
+@@ -49,8 +49,7 @@
+               --with-ldap \
+               --with-winbind \
+               --with-acl-support \
+-              --with-systemd \
+-              --systemd-install-services \
++              --without-systemd \
+               --with-pam \
+               --with-pammodulesdir=/usr/lib/security \
+               --bundled-libraries=!tdb,!talloc,!pytalloc-util,!tevent,!popt,!ldb,!pyldb-util \
+@@ -158,10 +157,6 @@
+                "${pkgdir}"/usr/${script}
+     done
+ 
+-  sed -i -e '/^EnvironmentFile/ s/sysconfig/conf.d/' "${pkgdir}"/usr/lib/systemd/system/*.service
+-  install -d -m755  "${pkgdir}"/etc/conf.d
+-  install -m644 "${srcdir}"/samba-${pkgver}/packaging/systemd/samba.sysconfig "${pkgdir}"/etc/conf.d/samba
+-
+   install -D -m644 "${srcdir}"/samba.conf "${pkgdir}"/usr/lib/tmpfiles.d/samba.conf
+   install -d -m755 "${pkgdir}"/etc/samba
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -35,7 +35,6 @@
+ readline
+ rpcsvc-proto
+ smbclient>
+-systemd
+ talloc
+ tdb
+ tevent

@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -6,6 +6,6 @@
  -Dextra_include_dirs="/usr/lib/jvm/java-$java_major-openjdk/include,/usr/lib/jvm/java-$java_major-openjdk/include/linux"
  )
  export JAVA_HOME="/usr/lib/jvm/java-$java_major-openjdk"
@@ -23,4 +25,3 @@
 +artix-meson build $pkgbase-$pkgver "${meson_options[@]}"
  meson compile -C build
  }
- package_rubberband() {

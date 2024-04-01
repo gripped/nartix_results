@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   libgoa
- )
- pkgver=3.50.0
--pkgrel=2
-+pkgrel=3
- pkgdesc="Single sign-on framework for GNOME"
- url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
- arch=(x86_64)
-@@ -31,6 +31,7 @@
-   git
-   gobject-introspection
-   meson
-+  python-packaging
-   vala
- )
- _commit=05a2dc771e6645cb60ff3a9352af91e9572ce976  # tags/3.50.0^0
-@@ -52,7 +53,7 @@
+@@ -53,7 +53,7 @@
      -D man=true
    )
  
@@ -30,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,7 +28,7 @@
+@@ -6,6 +6,6 @@
  -D gtk_doc=true
  -D man=true
  )
@@ -40,4 +25,3 @@
 +artix-meson $pkgname build "${meson_options[@]}"
  meson compile -C build
  }
- _pick() {

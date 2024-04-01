@@ -13,10 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,5 +3,5 @@
- install=${pkgname}.install
+@@ -1,4 +1,4 @@
  prepare() {
  cd "${pkgname}-${pkgver}"
 -cp "${srcdir}"/docbook-style-dsssl.Makefile Makefile

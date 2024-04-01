@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,6 +11,6 @@
- qt6-5compat
- qt6-base)
+@@ -1,4 +1,4 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver
 +artix-cmake -B build -S $pkgname-$pkgver

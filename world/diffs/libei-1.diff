@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,8 @@
+ arch=(x86_64)
+ license=(MIT)
+ depends=(
++  libelogind
+   libevdev
+-  systemd
+ )
+ makedepends=(
+   git
+@@ -47,12 +47,12 @@
+ }
+ 
+ build() {
+-  arch-meson libei build
++  artix-meson libei build -Dsd-bus-provider=libelogind
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs ||: # skip failing test
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ git
++libelogind
+ libevdev
+ libxkbcommon
+ meson
+@@ -8,4 +9,3 @@
+ python-pytest
+ python-structlog
+ python-yaml
+-systemd

@@ -20,9 +20,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,12 +9,12 @@
+@@ -3,12 +3,12 @@
  patch -d kImageAnnotator-qt5-$pkgver -p1 < rename-qt5-version.patch # Make Qt5 and Qt6 versions coinstallable
  }
  build() {

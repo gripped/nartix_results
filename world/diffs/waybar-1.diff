@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,6 @@
+     'playerctl'
+     'sndio'
+     'spdlog'
+-    'systemd-libs'
+     'upower'
+     'wayland'
+ )
+@@ -70,6 +69,7 @@
+           --buildtype=plain \
+           --auto-features=enabled \
+           --wrap-mode=nodownload \
++          -Dsystemd=disabled \
+           -Dcpp_std=c++20 \
+           -Dexperimental=true \
+           -Dcava=disabled \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -38,7 +38,6 @@
+ scdoc
+ sndio
+ spdlog
+-systemd-libs
+ upower
+ wayland
+ wayland-protocols

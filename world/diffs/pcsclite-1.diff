@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ arch=('x86_64')
+ url='https://pcsclite.apdu.fr/'
+ license=('BSD')
+-depends=('libsystemd.so' 'libudev.so' 'libpolkit-gobject-1.so')
+-makedepends=('systemd' 'polkit')
++depends=('libudev.so' 'libpolkit-gobject-1.so')
++makedepends=('udev' 'polkit')
+ optdepends=(
+   'python: API call trace logging with the pcsc-spy'
+   'ccid: USB Chip/Smart Card Interface Devices driver'
+@@ -31,7 +31,7 @@
+     --enable-libudev \
+     --enable-usbdropdir=/usr/lib/pcsc/drivers \
+     --enable-polkit \
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --disable-libsystemd
+ 
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ libpolkit-gobject-1.so
+-libsystemd.so
+ libudev.so
+ polkit
+-systemd
++udev

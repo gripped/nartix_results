@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,14 +27,14 @@
+          kwindowsystem
+          kxmlgui
+          layer-shell-qt
++         libelogind
+          libkscreen
+          libplasma
+          libxcb
+          plasma-workspace
+          qt6-base
+          qt6-declarative
+-         solid
+-         systemd-libs)
++         solid)
+ makedepends=(extra-cmake-modules
+              kdoctools)
+ optdepends=('kinfocenter: for the Energy Information KCM'
+@@ -57,4 +57,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -fr "$pkgdir"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -19,6 +19,7 @@
+ kwindowsystem
+ kxmlgui
+ layer-shell-qt
++libelogind
+ libkscreen
+ libplasma
+ libxcb
+@@ -27,4 +28,3 @@
+ qt6-base
+ qt6-declarative
+ solid
+-systemd-libs

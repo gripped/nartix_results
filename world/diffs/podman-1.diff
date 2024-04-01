@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+   go-md2man
+   gpgme
+   libseccomp
+-  systemd
++  udev
+ )
+ options=(!lto)
+ source=(
+@@ -37,7 +37,7 @@
+ }
+ 
+ build() {
+-  export BUILDTAGS='apparmor seccomp systemd'
++  export BUILDTAGS='apparmor seccomp'
+   export CGO_CPPFLAGS="${CPPFLAGS}"
+   export CGO_CFLAGS="${CFLAGS}"
+   export CGO_CXXFLAGS="${CXXFLAGS}"
+@@ -74,6 +74,8 @@
+   )
+ 
+   make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
++
++  rm -rvf "$pkgdir"/usr/lib/systemd
+ }
+ 
+ package_podman-docker() {
+@@ -86,4 +88,6 @@
+   provides=(docker)
+ 
+   make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
++
++  rm -rvf "$pkgdir"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -19,4 +19,4 @@
+ passt
+ podman
+ sh
+-systemd
++udev

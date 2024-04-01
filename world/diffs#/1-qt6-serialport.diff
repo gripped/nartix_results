@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ depends=(gcc-libs
+          glibc
+          qt6-base
+-         systemd-libs)
++         libelogind)
+ makedepends=(cmake
+              ninja)
+ groups=(qt6)
+@@ -19,7 +19,7 @@
+ sha256sums=('e1656579e555da61cb81cbbb5ee6d31835cea110b3a5dd9e14b16fa71e55dc37')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ cmake
+ gcc-libs
+ glibc
++libelogind
+ ninja
+ qt6-base
+-systemd-libs

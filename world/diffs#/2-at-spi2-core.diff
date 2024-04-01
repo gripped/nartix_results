@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,8 +22,6 @@
+   libxkbcommon
+   libxml2
+   libxtst
+-  systemd
+-  systemd-libs
+   xorg-xprop
+ )
+ makedepends=(
+@@ -52,11 +50,12 @@
+ 
+ build() {
+   local meson_options=(
+-    -D default_bus=dbus-broker
++    -D default_bus=dbus-daemon
+     -D docs=true
++    -D use_systemd=false
+   )
+ 
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -84,6 +83,8 @@
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
++  rm -r "$pkgdir"/usr/lib/systemd
++
+   mkdir -p doc/usr/share
+   mv {"$pkgdir",doc}/usr/share/doc
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,6 +16,4 @@
+ libxtst
+ meson
+ python-sphinx
+-systemd
+-systemd-libs
+ xorg-xprop

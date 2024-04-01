@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,8 @@
+ arch=('x86_64')
+ url='https://github.com/opensvc/multipath-tools'
+ license=('GPL2')
+-depends=('libaio' 'device-mapper' 'json-c' 'liburcu' 'systemd-libs')
+-makedepends=('git' 'systemd')
++depends=('libaio' 'device-mapper' 'json-c' 'liburcu' 'libudev')
++makedepends=('git' 'udev')
+ source=("multipath-tools::git+https://github.com/opensvc/multipath-tools#tag=${_tag}")
+ sha256sums=('SKIP')
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,6 @@
+ git
+ json-c
+ libaio
++libudev
+ liburcu
+-systemd
+-systemd-libs
++udev

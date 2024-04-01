@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,16 +26,16 @@
+   config
+ )
+ sha512sums=('SKIP'
+-            '700bf0641282d1f4fc1bba66478805b3df590ce28db22c8e278badc3b7b52a842c5b5867c885af2fa2716a21fe95f4f7f1f6fdd4e29d1b0c3af0565dced9b5a9')
++            'a4683fa8ca688cabc4619eb5a05c28704b0f27bd45841d76e4692bd46e549ffdcdc43b85c3f6c5fb37e6b79d6205b951a1bb957bc80f13df3d53aaa59dde45a3')
+ b2sums=('SKIP'
+-        '3f114f2a10ce4d7f08ae255d1a865243326ee917451d7e27518c8d83481e88bb361620a3954b1094d7bb3e9f426b29c92bbcc0743a269e117f85d8c75c145acd')
++        'a3184b960219eb5188ed422a2d3b851a1c457561e2318335f91dcededa4b8733ad68790ea5aaccd6eba6a0618d698213fe690ea124ab618fe90411ff65b24366')
+ validpgpkeys=(
+   '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman <gregkh@kernel.org>
+   '64254695FFF0AA4466CC19E67B96E8162A8CF5D1'  # Sebastian Andrzej Siewior
+   '991F6E3F0765CF6295888586139B09DA5BF0D338'  # David Runge <dvzrv@archlinux.org>
+ )
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ build() {
+   cd $pkgname-$pkgver
+ 
+-  ./configure \
++  ./configure --disable-systemd \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --disable-debug
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ cd $pkgname-$pkgver
+-./configure \
++./configure --disable-systemd \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --disable-debug

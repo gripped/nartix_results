@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
- groups=(qt6)
- _pkgfn=${pkgname/6-/}-everywhere-src-$_qtver
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $_pkgfn -G Ninja \
 +cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \

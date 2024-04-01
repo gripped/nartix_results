@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url="https://launchpad.net/onboard"
+ license=('GPL')
+-depends=('gtk3' 'hunspell' 'iso-codes' 'libcanberra' 'libxkbfile' 'python-cairo' 'python-dbus' 'python-gobject' 'systemd')
++depends=('gtk3' 'hunspell' 'iso-codes' 'libcanberra' 'libxkbfile' 'python-cairo' 'python-dbus' 'python-gobject' 'udev')
+ makedepends=('python-distutils-extra')
+ optdepends=('mousetweaks: hover click with mouse')
+ source=(https://launchpad.net/$pkgname/${pkgver%.*}/$pkgver/+download/$pkgname-$pkgver.tar.gz{,.asc})
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,4 +7,4 @@
+ python-dbus
+ python-distutils-extra
+ python-gobject
+-systemd
++udev

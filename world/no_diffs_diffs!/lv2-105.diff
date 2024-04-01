@@ -21,20 +21,13 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
- pkgbase=lv2
- pkgname=(lv2 lv2-docs lv2-example-plugins)
- _pick() {
- local p="$1" f d; shift
- for f; do
-@@ -10,7 +11,7 @@
- done
- }
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgbase-$pkgver build
 +artix-meson $pkgbase-$pkgver build
  meson compile -C build
  }
- package_lv2() {

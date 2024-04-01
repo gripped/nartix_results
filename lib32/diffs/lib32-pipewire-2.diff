@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,9 +20,7 @@
+   lib32-alsa-lib
+   lib32-dbus
+   lib32-glib2
+-  lib32-systemd
+   meson
+-  systemd
+ )
+ source=(
+   "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit"
+@@ -74,15 +72,15 @@
+     -D selinux=disabled
+     -D session-managers=[]
+     -D sndfile=disabled
+-    -D systemd-user-service=disabled
+     -D tests=disabled
+     -D udevrulesdir=/usr/lib/udev/rules.d
+     -D v4l2=disabled
+     -D x11-xfixes=disabled
+     -D x11=disabled
++    -D systemd=disabled
+   )
+ 
+-  arch-meson pipewire build "${meson_options[@]}"
++  artix-meson pipewire build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -109,7 +107,6 @@
+     libdbus-1.so
+     libglib-2.0.so
+     libpipewire-$_so_ver.so
+-    libsystemd.so
+     pipewire
+   )
+   optdepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,15 +6,12 @@
+ lib32-glibc
+ lib32-libpipewire
+ lib32-pipewire
+-lib32-systemd
+ libasound.so
+ libdbus-1.so
+ libglib-2.0.so
+ libpipewire
+ libpipewire-0.3.so
+-libsystemd.so
+ meson
+ pipewire
+ pipewire-jack
+ pipewire-v4l2
+-systemd

@@ -13,10 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=directx-headers
+@@ -1,6 +1,6 @@
  build() {
  export CXXFLAGS="$CXXFLAGS -fno-lto"
 -arch-meson DirectX-Headers-$pkgver build \

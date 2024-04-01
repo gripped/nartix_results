@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,6 @@
+   protobuf-c
+   python
+   swig
+-  systemd
+ )
+ optdepends=(
+   'expat: for unbound-anchor'
+@@ -70,7 +69,7 @@
+     --enable-pie
+     --enable-relro-now
+     --enable-subnet
+-    --enable-systemd
++    --disable-systemd
+     --enable-tfo-client
+     --enable-tfo-server
+     --enable-cachedb
+@@ -98,11 +97,9 @@
+     libevent libevent-2.1.so
+     openssl libcrypto.so libssl.so
+     protobuf-c libprotobuf-c.so
+-    systemd-libs libsystemd.so
+   )
+ 
+   make DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+-  install -vDm 644 $pkgname-$pkgver/contrib/$pkgname.service -t "$pkgdir/usr/lib/systemd/system/"
+   install -vDm 644 $pkgname-$pkgver/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+   install -vDm 644 $pkgname-sysusers.conf "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+   install -vDm 644 $pkgname-tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,10 +11,7 @@
+ libprotobuf-c.so
+ libsodium
+ libssl.so
+-libsystemd.so
+ openssl
+ protobuf-c
+ python
+ swig
+-systemd
+-systemd-libs

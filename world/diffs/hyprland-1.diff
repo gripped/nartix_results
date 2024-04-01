@@ -1,0 +1,141 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,48 +1,46 @@
+ 
+ pkgname=hyprland
+-pkgver=0.37.1
++pkgver=0.35.0
+ pkgrel=2
+ pkgdesc='a highly customizable dynamic tiling Wayland compositor'
+ arch=(x86_64 aarch64)
+ url="https://github.com/hyprwm/${pkgname^}"
+-license=(BSD-3-Clause)
+-depends=(cairo # libcairo.so
+-         gcc-libs # libgcc_s.so libstdc++.so
+-         glibc # libc.so libm.so
+-         glib2 libgobject-2.0.so
++license=(BSD)
++depends=(cairo
++         gcc-libs
++         glibc
+          glslang
+-         hyprcursor libhyprcursor.so
+-         hyprlang libhyprlang.so
+-         libdisplay-info libdisplay-info.so
+-         libdrm # libdrm.so
+-         libglvnd libEGL.so libGLESv2.so libOpenGL.so
+-         libinput # libinput.so
+-         libliftoff libliftoff.so
++         libdisplay-info
++         libdrm
++         libglvnd
++         libinput
++         libliftoff
+          libx11
+-         libxcb # libxcb-dri3.so libxcb-present.so libxcb-render.so libxcb-res.so libxcb-shm.so libxcb.so libxcb-xfixes.so libxcb-xinput.so
+-         libxcomposite # libxcb-composite.so
++         libxcb
++         libxcomposite
+          libxfixes
+-         libxkbcommon libxkbcommon.so
++         libxkbcommon
+          libxrender
+-         mesa # libgbm.so
+          opengl-driver
+-         pango libpango-1.0.so libpangocairo-1.0.so
+-         pixman libpixman-1.so
+-         seatd libseat.so
+-         systemd-libs libsystemd.so
+-         tomlplusplus libtomlplusplus.so libudev.so
++         pango
++         pixman
++         polkit
++         seatd
++         libelogind
++         tomlplusplus
+          vulkan-icd-loader
+          vulkan-validation-layers
+-         wayland libwayland-client.so libwayland-server.so
++         wayland
+          wayland-protocols
+          xcb-proto
+          xcb-util
+-         xcb-util-errors # libxcb-errors.so
++         xcb-util-errors
+          xcb-util-keysyms
+-         xcb-util-renderutil # libxcb-render-util.so
+-         xcb-util-wm # libxcb-ewmh.so  libxcb-icccm.so
++         xcb-util-renderutil
++         xcb-util-wm
+          xorg-xinput
+          xorg-xwayland)
++depends+=(libdisplay-info.so)
+ makedepends=(cmake
+              gdb
+              meson
+@@ -54,7 +52,7 @@
+             'meson: to build and install plugins using hyprpm')
+ _archive="${pkgname^}-$pkgver"
+ source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
+-sha256sums=('bf3c33f7643218af3c44411c28e9a20fcd02225e56d732a8a4a446d9a298f862')
++sha256sums=('de53d764606131c8aacc209f8a3ad6e619fdcddd16a7cdf4d8ca343816bb8c1b')
+ 
+ prepare() {
+ 	ln -sf hyprland-source "$_archive"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,48 +2,28 @@
+ cmake
+ gcc-libs
+ gdb
+-glib2
+ glibc
+ glslang
+-hyprcursor
+-hyprlang
+-libEGL.so
+-libGLESv2.so
+-libOpenGL.so
+ libdisplay-info
+ libdisplay-info.so
+ libdrm
++libelogind
+ libglvnd
+-libgobject-2.0.so
+-libhyprcursor.so
+-libhyprlang.so
+ libinput
+ libliftoff
+-libliftoff.so
+-libpango-1.0.so
+-libpangocairo-1.0.so
+-libpixman-1.so
+-libseat.so
+-libsystemd.so
+-libtomlplusplus.so
+-libudev.so
+-libwayland-client.so
+-libwayland-server.so
+ libx11
+ libxcb
+ libxcomposite
+ libxfixes
+ libxkbcommon
+-libxkbcommon.so
+ libxrender
+-mesa
+ meson
+ ninja
+ opengl-driver
+ pango
+ pixman
++polkit
+ seatd
+-systemd-libs
+ tomlplusplus
+ vulkan-headers
+ vulkan-icd-loader

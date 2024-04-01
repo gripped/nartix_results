@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -68,6 +68,7 @@
+          kxmlgui
+          layer-shell-qt
+          libcanberra
++         libelogind
+          libice
+          libkexiv2
+          libksysguard
+@@ -97,7 +98,6 @@
+          qt6-wayland
+          sh
+          solid
+-         systemd-libs
+          wayland
+          xcb-util
+          xcb-util-image
+@@ -144,4 +144,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -fr "$pkgdir"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -62,6 +62,7 @@
+ kxmlgui
+ layer-shell-qt
+ libcanberra
++libelogind
+ libice
+ libkexiv2
+ libksysguard
+@@ -95,7 +96,6 @@
+ qt6-wayland
+ sh
+ solid
+-systemd-libs
+ wayland
+ xcb-util
+ xcb-util-image

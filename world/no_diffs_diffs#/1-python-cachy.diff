@@ -9,3 +9,15 @@
  _checkdeps=(flexmock pytest-mock memcached fakeredis)
  checkdepends=("${_checkdeps[@]/#/python-}"
                pifpaf
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,4 +2,5 @@
+ python-build
+ python-installer
+ python-poetry-core
++python-setuptools
+ python-wheel

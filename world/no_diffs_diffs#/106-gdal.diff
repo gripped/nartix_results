@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=(gdal python-gdal)
- changelog=$pkgbase.changelog
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $pkgbase-$pkgver \
 +artix-cmake -B build -S $pkgbase-$pkgver \

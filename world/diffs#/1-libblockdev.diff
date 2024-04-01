@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+   'nss'
+   'parted'
+   'python'
+-  'systemd-libs'
++  'libudev'
+   'util-linux'
+   'util-linux-libs'
+   'volume_key'
+@@ -77,7 +77,7 @@
+     glib2 libglib-2.0.so libgio-2.0.so libgobject-2.0.so
+     glibc
+     kmod libkmod.so
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+   optdepends=(
+     'libblockdev-btrfs: for BTRFS support'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -30,6 +30,7 @@
+ libkmod.so
+ libmount.so
+ libnvme
++libudev
+ libudev.so
+ libuuid.so
+ lvm2
+@@ -38,7 +39,6 @@
+ nss
+ parted
+ python
+-systemd-libs
+ util-linux
+ util-linux-libs
+ volume_key

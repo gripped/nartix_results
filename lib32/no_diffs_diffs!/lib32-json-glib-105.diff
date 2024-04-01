@@ -22,9 +22,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -7,6 +7,6 @@
  -D gtk_doc=disabled
  -D introspection=disabled
  )
@@ -32,4 +34,3 @@
 +artix-meson json-glib build "${meson_options[@]}"
  meson compile -C build
  }
- package_lib32-json-glib() {

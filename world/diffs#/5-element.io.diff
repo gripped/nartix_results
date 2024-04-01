@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,25 +1,25 @@
+ 
+-_electron=electron29
++_electron=electron24
+ pkgbase=element.io
+ pkgname=(element-web element-desktop)
+-pkgver=1.11.63
++pkgver=1.11.33
+ pkgrel=1
+ pkgdesc="Glossy Matrix collaboration client — "
+ arch=(x86_64)
+ url="https://element.io"
+ license=(Apache)
+-makedepends=(npm git yarn python rust tcl ${_electron} nodejs libxcrypt-compat)
++makedepends=(npm git yarn python rust tcl ${_electron} nodejs-lts-gallium libxcrypt-compat)
+ _url="https://github.com/vector-im/element"
+ source=(element-web-${pkgver}.tar.gz::${_url}-web/archive/v${pkgver}.tar.gz
+-        element-web-${pkgver}.tar.gz.asc::${_url}-web/releases/download/v${pkgver}/v${pkgver}.tar.gz.asc
++        element-web-${pkgver}.tar.gz.asc::${_url}-web/releases/download/v${pkgver}/v${pkgver}-src.tar.gz.asc
+         element-desktop-${pkgver}.tar.gz::${_url}-desktop/archive/v${pkgver}.tar.gz
+-        element-desktop-${pkgver}.tar.gz.asc::${_url}-desktop/releases/download/v${pkgver}/v${pkgver}.tar.gz.asc
++        element-desktop-${pkgver}.tar.gz.asc::${_url}-desktop/releases/download/v${pkgver}/v${pkgver}-src.tar.gz.asc
+         autolaunch.patch
+         io.element.Element.desktop
+         element-desktop.sh)
+-sha256sums=('8588fc6650a2df80a5e18d6982562d18f54e0a561ab19308c1712a0289fc1f7f'
++sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
+             'SKIP'
+-            '8a0d03a01ab76e00baeb0bcd5c501c8243664bd229963b7cd168eaa4b6a91fde'
++            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
+             'SKIP'
+             '268485f35103d00a89be7f5c84703e3d393350c71f4f90932f7bcb5ea2fd094f'
+             '0103f28a32fe31f698836516783c1c70a76a0117b5df7fd0af5c422c224220f9'
+@@ -42,7 +42,7 @@
+ build() {
+   export NODE_OPTIONS=--openssl-legacy-provider
+   cd element-web-${pkgver}
+-  VERSION=${pkgver} yarn build
++  VERSION=${pkgver} yarn build --offline
+ 
+   cd ../element-desktop-${pkgver}
+   export SQLCIPHER_BUNDLED=1
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-electron29
+-element-web
+-git
+-libsecret
+-libxcrypt-compat
+-nodejs
+-npm
+-python
+-rust
+-tcl
+-yarn
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ build() {
+ export NODE_OPTIONS=--openssl-legacy-provider
+ cd element-web-${pkgver}
+-VERSION=${pkgver} yarn build
++VERSION=${pkgver} yarn build --offline
+ cd ../element-desktop-${pkgver}
+ export SQLCIPHER_BUNDLED=1
+ export CFLAGS+=" -ffat-lto-objects"

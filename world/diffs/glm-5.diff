@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,20 @@
+ pkgname=glm
+ pkgver=1.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="C++ mathematics library for 3D software based on the OpenGL Shading Language (GLSL) specification"
+-arch=('x86_64')
++arch=('any')
+ license=('MIT')
+ url="http://glm.g-truc.net"
+-makedepends=('cmake' 'ninja')
++makedepends=('cmake')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/g-truc/glm/archive/refs/tags/${pkgver}.tar.gz")
+ sha512sums=('62e22002a6369a54e1f0ee2885a65f2780af7d2a446573e5387b81518f5dc7e8076053837cb99ae850a0166ce8b0f077bed009e8986d9884d01c456ce467553f')
+ 
+ build() {
++  cd ${pkgname}-${pkgver}
++
+   export CXXFLAGS+=" -ffat-lto-objects"
+-
+-  cmake -S ${pkgname}-${pkgver} -B build -G Ninja \
++  cmake \
++    -Bbuild \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -W no-dev
+@@ -20,13 +22,12 @@
+ }
+ 
+ package() {
++  cd ${pkgname}-${pkgver}
++
+   DESTDIR="$pkgdir" cmake --install build
+ 
+-  mkdir "$pkgdir"/usr/lib/cmake
+-  mv "$pkgdir"/usr/share/glm "$pkgdir"/usr/lib/cmake/glm
++  mkdir -p "$pkgdir"/usr/share/doc
++  cp -r doc "$pkgdir"/usr/share/doc/glm
+ 
+-  mkdir -p "$pkgdir"/usr/share/doc
+-  cp -r ${pkgname}-${pkgver}/doc "$pkgdir"/usr/share/doc/glm
+-
+-  install -vDm 644 ${pkgname}-${pkgver}/copying.txt -t "${pkgdir}/usr/share/licenses/${pkgname}"
++  install -vDm 644 copying.txt -t "${pkgdir}/usr/share/licenses/${pkgname}"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+ cmake
+-ninja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,8 @@
+ build() {
++cd ${pkgname}-${pkgver}
+ export CXXFLAGS+=" -ffat-lto-objects"
+-cmake -S ${pkgname}-${pkgver} -B build -G Ninja \
++cmake \
++-Bbuild \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -W no-dev

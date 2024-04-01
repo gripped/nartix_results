@@ -25,11 +25,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libva-utils
- depends=(libva)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson ${pkgname}-${pkgver} build
 +artix-meson ${pkgname}-${pkgver} build

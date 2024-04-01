@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,6 @@
+ backup=(etc/ethertypes etc/iptables/{ip,ip6}tables.rules)
+ source=(https://www.netfilter.org/projects/iptables/files/$pkgbase-$pkgver.tar.xz{,.sig}
+         empty.rules simple_firewall.rules empty-{filter,mangle,nat,raw,security}.rules
+-        {arp,eb,ip,ip6}tables.service iptables-{legacy,nft}-flush
+         iptables-apply-default-path.patch)
+ sha256sums=('5cc255c189356e317d070755ce9371eb63a1b783c34498fb8c30264f3cc59c9c'
+             'SKIP'
+@@ -24,12 +23,6 @@
+             '52bd70dff3e1e1a64127ad7ed86840834b79756c3bdb6947b7c6279ffe95dd48'
+             '5768a471c0559848635c39d270e456bfa5c43eda65f5f6f666fea2d277183a37'
+             '91161a73f323016a9efc5eabd16243d20f8ca2467995cf0eabfb95f845090121'
+-            'dd1a867085900eec1f1d4e12f97a1f44707c717246f6787ed42d4225343920d6'
+-            '82e09b4151d5c1dd0fc212189c670f8f29e8ec85e7e9cdc57f49dcea00d7e9ca'
+-            '78f090812b5bb9aec597ce2cf757da1c58ec772c60bf55f10267f06459aefd9b'
+-            'c37c69db5077a061fd72fc3b199712f1bed8688de8008f219223fadd6fa6c06f'
+-            '40680b3c877926a2bac698ea58f52d1d4b3ab152ee68ccd7fa7ca51aeedc3b2d'
+-            '6d3e7bdeebdaeaf83ed448f4d42a979c8c59fb5e919f6f860ed340c2c9afef1a'
+             '770ceaedce26d05eb1b9d0c4c65f5b8e92facd1dc0652a29c859336d6bc347f6')
+ validpgpkeys=('C09DB2063F1D7034BA6152ADAB4655A126D292E4'
+               '37D964ACC04981C75500FB9BD55D978A8A1420E4') # Netfilter Core Team
+@@ -74,7 +67,6 @@
+ 
+   _package nft
+ 
+-  install -Dt "$pkgdir/usr/lib/systemd/system" -m644 {arp,eb}tables.service
+   touch "$pkgdir"/etc/{arp,eb}tables.conf
+ }
+ 
+@@ -89,9 +81,6 @@
+     fi
+   done
+ 
+-  install -Dt "$pkgdir/usr/lib/systemd/system" -m644 {ip,ip6}tables.service
+-  install -D iptables-$1-flush "$pkgdir/usr/lib/systemd/scripts/iptables-flush"
+-
+   install -Dm644 empty.rules "$pkgdir/etc/iptables/iptables.rules"
+   install -Dm644 empty.rules "$pkgdir/etc/iptables/ip6tables.rules"
+   install -Dt "$pkgdir/usr/share/iptables" -m644 *.rules

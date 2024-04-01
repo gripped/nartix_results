@@ -21,16 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,7 @@
- libarchive
- )
- provides=(libgnome-autoar{,-gtk}-${pkgver%%.*}.so)
- prepare() {
- cd $pkgname
- }
-@@ -14,6 +15,6 @@
+@@ -7,6 +7,6 @@
  -D tests=true
  -D vapi=true
  )

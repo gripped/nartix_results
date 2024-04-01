@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,6 +48,7 @@
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_SBINDIR=/usr/bin \
+     -DCMAKE_INSTALL_LIBEXECDIR=/usr/bin \
++    -DINSTALL_SYSTEMD_UNITS=OFF \
+     -DBUILD_JAVA=TRUE
+   make
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_INSTALL_SBINDIR=/usr/bin \
+ -DCMAKE_INSTALL_LIBEXECDIR=/usr/bin \
++-DINSTALL_SYSTEMD_UNITS=OFF \
+ -DBUILD_JAVA=TRUE
+ make
+ cd unix/xserver

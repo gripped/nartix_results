@@ -19,9 +19,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -5,6 +5,6 @@
  local meson_options=(
  -D gtk_doc=true
  )
@@ -29,4 +31,3 @@
 +artix-meson gupnp build "${meson_options[@]}"
  meson compile -C build
  }
- _pick() {

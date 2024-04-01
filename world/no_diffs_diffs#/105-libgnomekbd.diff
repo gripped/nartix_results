@@ -21,14 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=libgnomekbd
- depends=(libxklavier gtk3 dconf)
- provides=(libgnomekbd{,ui}.so)
- prepare() {
- cd $pkgname
+@@ -3,6 +3,6 @@
  git apply -3 ../meson.diff
  }
  build() {

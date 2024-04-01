@@ -13,10 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=(python-cairo python-gobject)
+@@ -1,5 +1,5 @@
  build() {
  mkdir -p build
 -arch-meson build $pkgname -D b_ndebug=true

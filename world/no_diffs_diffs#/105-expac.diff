@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=expac
- depends=(pacman)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson "$pkgname" build
 +artix-meson "$pkgname" build

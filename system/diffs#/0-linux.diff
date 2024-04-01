@@ -1,0 +1,91 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,11 @@
++
++_ver=6.8.2
++_rel=1
++_arch=arch${_rel}
++_artix=artix${_rel}
+ 
+ pkgbase=linux
+-pkgver=6.8.2.arch2
++pkgver=${_ver}.${_artix}
+ pkgrel=1
+ pkgdesc='Linux'
+ url='https://github.com/archlinux/linux'
+@@ -24,13 +29,12 @@
+   texlive-latexextra
+ )
+ options=(
+-  !debug
+   !strip
+ )
+-_srcname=linux-${pkgver%.*}
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srcname=linux-${_ver}
++_srctag=v${_ver}-${_arch}
+ source=(
+-  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
++  https://cdn.kernel.org/pub/linux/kernel/v${_ver%%.*}.x/${_srcname}.tar.{xz,sign}
+   $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
+   config  # the main kernel config file
+ )
+@@ -41,16 +45,16 @@
+ )
+ sha256sums=('9ac322d85bcf98a04667d929f5c2666b15bd58c6c2d68dd512c72acbced07d04'
+             'SKIP'
+-            '2d5fa7f4177ba1c40575d57282438ff28cdfc3729e0689eddf650616c8a93b65'
++            '9ccb26c046bacf04777617e96cad5b33d3d048b30bb4840a3b5ac2cdf40a3aba'
+             'SKIP'
+-            'ad11e6d5b3ae88d5b52c8bf4b7d6f700ac23200fb870091290cb25b744b914dc')
++            '7016339c6a905b3faa950937f437ba6c8b8c88c8ddc93c28cf59bc0c4238041b')
+ b2sums=('f057c2512040600fbf0df67cf9c7200aee0c06b82b3cf749be8c5685844d2662a585ce17685c7af880c0d9dbbbd81302e5a1fa41c3dbd39869123121a0e82dc2'
+         'SKIP'
+-        'a6f2e7fed48d7c8427097314637d0c25a8ab35ca1bec7fc23156af26609667115d9584190a13b45e03389145205b1bfca78cdaeea6443975d70b65f9d7ec5ea7'
++        '053c6239c5b800c4e25c6369328e238f63d634ea6fab2dae629884495c2c0e5fb204bde44d6cc2e21d8dd52f9752e6887fed5ce2a2c25b8b0ff0de21a2f80344'
+         'SKIP'
+-        '47b48c2ad671e5a2e2f11f8b0c3f52c50118a9a88513245f07125a7481c4e19bb02053c99f5eece7c2672a63c545936cce56e301635244bf2af6e5ccf87edb24')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        'ca1ae6ab531848a035fedd93ad011a10bef949be3b2adfaa025accb4e4845422719a59376818bfeeb796859fa200942b6e3e36a781a589516dfbb2994348fb25')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -71,6 +75,8 @@
+     patch -Np1 < "../$src"
+   done
+ 
++  sed -i -r "s|EXTRAVERSION = -${_arch}|EXTRAVERSION = -${_artix}|" "Makefile"
++
+   echo "Setting config..."
+   cp ../config .config
+   make olddefconfig
+@@ -104,8 +110,8 @@
+     WIREGUARD-MODULE
+   )
+   replaces=(
+-    virtualbox-guest-modules-arch
+-    wireguard-arch
++    virtualbox-guest-modules-artix
++    wireguard-artix
+   )
+ 
+   cd $_srcname
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ echo "Applying patch $src..."
+ patch -Np1 < "../$src"
+ done
++sed -i -r "s|EXTRAVERSION = -${_arch}|EXTRAVERSION = -${_artix}|" "Makefile"
+ echo "Setting config..."
+ cp ../config .config
+ make olddefconfig

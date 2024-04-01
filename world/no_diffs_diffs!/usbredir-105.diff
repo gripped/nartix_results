@@ -13,10 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=('libusb' 'glib2')
+@@ -1,5 +1,5 @@
  build() {
  cd "$srcdir/$pkgname-$pkgver"
 -arch-meson . build

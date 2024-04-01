@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,8 +24,6 @@
+   libsigc++-3.0
+   pango
+   polkit
+-  systemd
+-  systemd-libs
+ )
+ makedepends=(
+   appstream-glib
+@@ -48,7 +46,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -18,6 +18,4 @@
+ meson
+ pango
+ polkit
+-systemd
+-systemd-libs
+ yelp-tools

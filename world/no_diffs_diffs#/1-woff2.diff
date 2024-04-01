@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,9 +6,10 @@
+ url="https://github.com/google/woff2"
+ arch=(x86_64)
+ license=(custom:MIT)
+-depends=(brotli gcc-libs)
++depends=(brotli)
+ makedepends=(git cmake ninja)
+ provides=(libwoff2{common,dec,enc}.so)
++options=(debug)
+ _commit=1bccf208bca986e53a647dfe4811322adb06ecf8  # tags/v1.0.2
+ source=("git+$url#commit=$_commit")
+ sha512sums=('SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ brotli
+ cmake
+-gcc-libs
+ git
+ ninja

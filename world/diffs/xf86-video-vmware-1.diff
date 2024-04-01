@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=xf86-video-vmware
+ pkgver=13.4.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="X.org vmware video driver"
+ arch=(x86_64)
+ url="https://xorg.freedesktop.org/"
+-license=('MIT AND X11')
+-depends=('mesa' 'systemd-libs' 'libxext' 'libx11' 'libdrm' 'glibc')
++license=('custom')
++depends=('mesa' 'libudev.so')
+ makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=25.2') # 'git')
+ conflicts=('xorg-server<21.1.1' 'X-ABI-VIDEODRV_VERSION<25' 'X-ABI-VIDEODRV_VERSION>=26')
+ groups=('xorg-drivers')
+@@ -21,7 +21,7 @@
+ 
+   export CFLAGS=${CFLAGS/-fno-plt}
+   export CXXFLAGS=${CXXFLAGS/-fno-plt}
+-  export LDFLAGS=${LDFLAGS/-Wl,,-z,now}
++  export LDFLAGS=${LDFLAGS/,-z,now}
+ 
+   ./configure --prefix=/usr --enable-vmwarectrl-client
+   make
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,4 @@
+ X-ABI-VIDEODRV_VERSION
+-glibc
+-libdrm
+-libx11
+-libxext
++libudev.so
+ mesa
+-systemd-libs
+ xorg-server-devel

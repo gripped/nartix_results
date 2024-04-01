@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- groups=('xorg-fonts' 'xorg')
- options=(!makeflags)
+@@ -1,5 +1,5 @@
  build() {
 -arch-meson encodings-$pkgver build
 +artix-meson encodings-$pkgver build

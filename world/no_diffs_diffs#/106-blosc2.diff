@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=blosc2
- depends=(glibc lz4 zlib zstd)
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $_name-$pkgver \
 +artix-cmake -B build -S $_name-$pkgver \

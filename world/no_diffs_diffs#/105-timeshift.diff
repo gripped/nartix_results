@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=('libgee' 'json-glib' 'gtk3' 'vte3' 'rsync' 'xapp' 'cronie' 'which')
- install="${pkgname}.install"
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson "${pkgname}-${pkgver}" build
 +artix-meson "${pkgname}-${pkgver}" build

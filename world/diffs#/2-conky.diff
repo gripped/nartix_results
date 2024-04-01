@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,6 @@
+   'lua'
+   'ncurses' libncursesw.so
+   'pango'
+-  'systemd-libs' libsystemd.so
+   'wayland'
+   'wireless_tools'
+ )
+@@ -87,7 +86,7 @@
+     -D BUILD_RSS=ON \
+     -D BUILD_NVIDIA=ON \
+     -D BUILD_PULSEAUDIO=ON \
+-    -D BUILD_JOURNAL=ON \
++    -D BUILD_JOURNAL=OFF \
+     -D BUILD_WAYLAND=ON \
+     -D CMAKE_INSTALL_PREFIX=/usr \
+     -Wno-dev \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,7 +16,6 @@
+ libncursesw.so
+ libpulse
+ libpulse.so
+-libsystemd.so
+ libx11
+ libxdamage
+ libxext
+@@ -33,7 +32,6 @@
+ pango
+ python-jinja
+ python-yaml
+-systemd-libs
+ wayland
+ wayland-protocols
+ wireless_tools

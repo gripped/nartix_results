@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -6,6 +6,6 @@
  -D docs=true
  -D sysprof=true
  )
@@ -23,4 +25,3 @@
 +artix-meson libdex build "${meson_options[@]}"
  meson compile -C build
  }
- package_libdex-docs() {

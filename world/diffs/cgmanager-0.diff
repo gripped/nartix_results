@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,8 +17,7 @@
+ 		--prefix=/usr \
+ 		--sbindir=/usr/bin \
+ 		--libdir=/usr/lib \
+-		--libexecdir=/usr/lib \
+-		--with-init-script=systemd
++		--libexecdir=/usr/lib
+ 	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,6 @@
+ --prefix=/usr \
+ --sbindir=/usr/bin \
+ --libdir=/usr/lib \
+---libexecdir=/usr/lib \
+---with-init-script=systemd
++--libexecdir=/usr/lib
+ make
+ }

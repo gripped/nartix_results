@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,14 +18,15 @@
+               python-isort
+               python-mccabe
+               umockdev)
+-source=(https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('b6d3ad1cdcdc0324d5ccaa86dd0ed465544c1e86360fdbd2b6b2b0723afb6dad')
++source=(https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/archive/$pkgver/$pkgname-$pkgver.tar.gz
++        power-profiles-daemon.tmpfiles)
++sha256sums=('b6d3ad1cdcdc0324d5ccaa86dd0ed465544c1e86360fdbd2b6b2b0723afb6dad'
++            'f6eeaf1b85f43c0a97480d1f1a578ef4a850850f66885ad9b6d90907df51ec1d')
++
+ 
+ build() {
+-  meson $pkgname-$pkgver build \
+-    --prefix /usr \
+-    --libexec lib \
+-    --sysconfdir /usr/share
++  artix-meson "$pkgname-$pkgver" build \
++    -Dsystemdsystemunitdir=''
+   meson compile -C build
+ }
+ 
+@@ -35,4 +36,5 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++  install -vDm 644 "$srcdir/$pkgname".tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/"$pkgname".conf
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,5 @@
+ build() {
+-meson $pkgname-$pkgver build \
+---prefix /usr \
+---libexec lib \
+---sysconfdir /usr/share
++artix-meson "$pkgname-$pkgver" build \
++-Dsystemdsystemunitdir=''
+ meson compile -C build
+ }

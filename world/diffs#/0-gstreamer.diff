@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -89,8 +89,8 @@
+     -D gst-examples=disabled
+     -D libnice=disabled
+     -D orc-source=system
+-    -D package-name="Arch Linux GStreamer ${epoch:+$epoch:}$pkgver-$pkgrel"
+-    -D package-origin="https://www.archlinux.org/"
++    -D package-name="Artix Linux GStreamer ${epoch:+$epoch:}$pkgver-$pkgrel"
++    -D package-origin="https://www.artixlinux.org/"
+     -D vaapi=enabled
+ 
+     -D gstreamer:dbghelp=disabled
+@@ -127,7 +127,7 @@
+ 
+   export GI_SCANNER_DISABLE_CACHE=1
+ 
+-  arch-meson gstreamer build "${meson_options[@]}"
++  artix-meson gstreamer build "${meson_options[@]}"
+   meson configure build  # Print config
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,8 +11,8 @@
+ -D gst-examples=disabled
+ -D libnice=disabled
+ -D orc-source=system
+--D package-name="Arch Linux GStreamer ${epoch:+$epoch:}$pkgver-$pkgrel"
+--D package-origin="https://www.archlinux.org/"
++-D package-name="Artix Linux GStreamer ${epoch:+$epoch:}$pkgver-$pkgrel"
++-D package-origin="https://www.artixlinux.org/"
+ -D vaapi=enabled
+ -D gstreamer:dbghelp=disabled
+ -D gstreamer:ptp-helper-permissions=capabilities
+@@ -46,7 +46,7 @@
+ -D gst-editing-services:validate=disabled
+ )
+ export GI_SCANNER_DISABLE_CACHE=1
+-arch-meson gstreamer build "${meson_options[@]}"
++artix-meson gstreamer build "${meson_options[@]}"
+ meson configure build  # Print config
+ meson compile -C build
+ }

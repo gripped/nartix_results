@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=vmaf
- depends=('gcc-libs')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson -Denable_avx512='false' "${pkgname}-${pkgver}/libvmaf" build
 +artix-meson -Denable_avx512='false' "${pkgname}-${pkgver}/libvmaf" build

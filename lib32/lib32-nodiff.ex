@@ -24,6 +24,7 @@ lib32-flex
 lib32-fontconfig
 lib32-freetype2
 lib32-fribidi
+lib32-gamemode
 lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
@@ -63,6 +64,7 @@ lib32-libffi
 lib32-libgcrypt
 lib32-libglvnd
 lib32-libgpg-error
+lib32-libgudev
 lib32-libgusb
 lib32-libice
 lib32-libid3tag
@@ -100,6 +102,7 @@ lib32-libtiff
 lib32-libtirpc
 lib32-libunistring
 lib32-libunwind
+lib32-libusb
 lib32-libva
 lib32-libvdpau
 lib32-libvisual
@@ -136,6 +139,17 @@ lib32-libxxf86vm
 lib32-llvm
 lib32-lm_sensors
 lib32-lz4
+lib32-mesa
+lib32-vulkan-mesa-layers
+lib32-opencl-clover-mesa
+lib32-opencl-rusticl-mesa
+lib32-vulkan-intel
+lib32-vulkan-nouveau
+lib32-vulkan-radeon
+lib32-vulkan-swrast
+lib32-vulkan-virtio
+lib32-libva-mesa-driver
+lib32-mesa-vdpau
 lib32-mpg123
 lib32-ncurses
 lib32-nettle
@@ -149,6 +163,7 @@ lib32-openal
 lib32-openssl
 lib32-opus
 lib32-orc
+lib32-pam
 lib32-pango
 lib32-pcre
 lib32-pcre2
@@ -166,6 +181,7 @@ lib32-sqlite
 lib32-tdb
 lib32-twolame
 lib32-util-linux
+lib32-v4l-utils
 lib32-vkd3d
 lib32-vulkan-icd-loader
 lib32-vulkan-validation-layers

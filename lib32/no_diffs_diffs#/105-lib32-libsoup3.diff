@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,7 @@
+@@ -11,6 +11,6 @@
  -D sysprof=disabled
  -D vapi=disabled
  )
@@ -23,4 +25,3 @@
 +artix-meson libsoup build "${meson_options[@]}"
  meson compile -C build
  }
- package_lib32-libsoup3() {

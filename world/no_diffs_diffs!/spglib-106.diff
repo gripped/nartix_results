@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
+@@ -2,7 +2,7 @@
  patch -d $pkgname-$pkgver -p1 < fix-duplicate-libs.patch # Don't duplicate shared libs in python tree
  }
  build() {

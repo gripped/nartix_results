@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -51,7 +51,6 @@
+   mutter
+   pango
+   polkit
+-  systemd-libs
+   unzip
+   upower
+ )
+@@ -95,12 +94,13 @@
+ build() {
+   local meson_options=(
+     -D gtk_doc=true
++    -D systemd=false
+   )
+ 
+   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
+   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -48,6 +48,5 @@
+ pango
+ polkit
+ sassc
+-systemd-libs
+ unzip
+ upower

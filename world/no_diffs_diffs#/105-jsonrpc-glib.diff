@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -2,6 +2,6 @@
  cd $pkgname
  }
  build() {
@@ -23,4 +25,3 @@
 +artix-meson $pkgname build -D enable_gtk_doc=true
  meson compile -C build
  }
- package_jsonrpc-glib-docs() {

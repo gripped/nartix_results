@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,8 +27,6 @@
+   lz4
+   pango
+   pcre2
+-  systemd
+-  systemd-libs
+ )
+ makedepends=(
+   at-spi2-core
+@@ -58,9 +56,10 @@
+ build() {
+   local meson_options=(
+     -D docs=true
++    -D _systemd=false
+   )
+ 
+-  arch-meson vte build "${meson_options[@]}"
++  artix-meson vte build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -18,7 +18,5 @@
+ meson
+ pango
+ pcre2
+-systemd
+-systemd-libs
+ vala
+ vte-common

@@ -13,9 +13,17 @@
 
 ############# Stripped diff below #################
 
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-git
+-gst-plugins-base-libs
+-meson
+-python-gobject
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
+@@ -3,6 +3,6 @@
  patch -Np3 -i ../0001-python-Avoid-treating-float-as-int.patch
  }
  build() {

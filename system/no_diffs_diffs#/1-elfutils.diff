@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -85,7 +85,7 @@
+ 
+   make DESTDIR="$pkgdir" install -C $pkgbase-$pkgver
+ 
+-  echo "https://debuginfod.archlinux.org" > "$pkgdir/etc/debuginfod/archlinux.urls"
++  echo "https://debuginfod.artixlinux.org" > "$pkgdir/etc/debuginfod/artixlinux.urls"
+ 
+   (
+     cd "$pkgdir"

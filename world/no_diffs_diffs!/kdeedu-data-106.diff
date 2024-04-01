@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=kdeedu-data
- depends=(hicolor-icon-theme)
+@@ -1,4 +1,4 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver
 +artix-cmake -B build -S $pkgname-$pkgver

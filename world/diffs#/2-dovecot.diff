@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,8 +10,8 @@
+ license=("LGPL")
+ 
+ depends=('krb5' 'openssl' 'sqlite' 'mariadb-libs' 'libsodium'
+-         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam' 'systemd-libs')
+-makedepends=('libcap' 'libldap' 'lua53' 'xz' 'clucene' 'systemd')
++         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam')
++makedepends=('libcap' 'libldap' 'lua53' 'xz' 'clucene')
+ optdepends=('libldap: ldap plugin'
+             'lua53: LUA auth and push support'
+             'clucene: alternative FTS indexer')
+@@ -63,6 +63,7 @@
+     --libexecdir=/usr/lib \
+     --with-rundir=/run/dovecot \
+     --with-moduledir=/usr/lib/dovecot/modules \
++    --with-systemdsystemunitdir=no \
+     --disable-static \
+     --with-nss \
+     --with-pam \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,6 +13,4 @@
+ pam
+ postgresql-libs
+ sqlite
+-systemd
+-systemd-libs
+ xz

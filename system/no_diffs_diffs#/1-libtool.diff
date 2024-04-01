@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,6 +15,7 @@
+ provides=("libltdl=$pkgver" "libtool-multilib=$pkgver")
+ conflicts=(libltdl libtool-multilib)
+ replaces=(libltdl libtool-multilib)
++options=(debug)
+ source=(git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
+         git+https://git.savannah.gnu.org/git/gnulib.git
+         gnulib-bootstrap::git+https://github.com/gnulib-modules/bootstrap.git

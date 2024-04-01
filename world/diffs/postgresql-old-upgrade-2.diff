@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,8 +8,8 @@
+ arch=('x86_64')
+ license=('custom:PostgreSQL')
+ depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl' 'pam' 'zlib' 'icu'
+-         'systemd-libs' 'libldap' 'krb5' 'llvm-libs')
+-makedepends=('python' 'perl' 'tcl' 'systemd' 'llvm' 'clang')
++         'libldap' 'krb5' 'llvm-libs')
++makedepends=('python' 'perl' 'tcl' 'llvm' 'clang')
+ optdepends=('python: for PL/Python 3 support'
+             'perl: for PL/Perl support'
+             'tcl: for PL/Tcl support')
+@@ -48,7 +48,7 @@
+     --with-system-tzdata=/usr/share/zoneinfo
+     --with-uuid=e2fs
+     --with-icu
+-    --with-systemd
++    --without-systemd
+     --with-ldap
+     --with-llvm
+     --without-libxslt
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,7 +10,5 @@
+ perl
+ postgresql-libs>
+ python
+-systemd
+-systemd-libs
+ tcl
+ zlib

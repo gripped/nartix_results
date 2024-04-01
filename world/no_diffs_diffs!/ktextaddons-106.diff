@@ -21,11 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,13 +4,13 @@
- depends=(gcc-libs
- glibc)
+@@ -1,11 +1,11 @@
  build() {
 -cmake -B build -S $pkgbase-$pkgver \
 +artix-cmake -B build -S $pkgbase-$pkgver \

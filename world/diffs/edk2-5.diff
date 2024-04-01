@@ -1,0 +1,105 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _brotli_ver=1.0.9
+ _openssl_ver=3.0.9
+ pkgbase=edk2
+-pkgname=(edk2-arm edk2-aarch64 edk2-shell edk2-ovmf)
++pkgname=(edk2-shell edk2-ovmf)
+ pkgver=202311
+ _commit=8736b8fdca85e02933cdb0a13309de14c9799ece  # refs/tags/edk2-stable202311
+ pkgrel=1
+@@ -15,8 +15,6 @@
+   MIT
+ )
+ makedepends=(
+-  aarch64-linux-gnu-gcc
+-  arm-none-eabi-gcc
+   acpica
+   git
+   util-linux-libs
+@@ -115,7 +113,7 @@
+   7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C  # Richard Levitte <richard@levitte.org>
+   A21FAB74B0088AA361152586B8EF1A6BA9DA2D5C  # Tomáš Mráz <tm@t8m.info>
+ )
+-_arch_list=(ARM AARCH64 IA32 X64)
++_arch_list=(IA32 X64)
+ _build_type=RELEASE
+ _build_plugin=GCC5
+ 
+@@ -181,8 +179,6 @@
+   cd $pkgbase
+   export GCC5_IA32_PREFIX="x86_64-linux-gnu-"
+   export GCC5_X64_PREFIX="x86_64-linux-gnu-"
+-  export GCC5_AARCH64_PREFIX="aarch64-linux-gnu-"
+-  export GCC5_ARM_PREFIX="arm-none-eabi-"
+   echo "Building base tools (AARCH64)"
+   ARCH=AARCH64 make -C BaseTools
+   echo "Building base tools (ARM)"
+@@ -355,41 +351,6 @@
+   done
+ }
+ 
+-package_edk2-aarch64() {
+-  local _arch=AARCH64
+-
+-  pkgdesc="Firmware for Virtual Machines (aarch64)"
+-  url="https://github.com/tianocore/tianocore.github.io/wiki/ArmVirtPkg"
+-  conflicts=('edk2-armvirt<202211')
+-  provides=(edk2-armvirt)
+-  replaces=('edk2-armvirt<202211')
+-
+-  cd $pkgbase
+-  install -vDm 644 Build/ArmVirtQemu-$_arch/${_build_type}_${_build_plugin}/FV/*.fd -t "$pkgdir/usr/share/$pkgbase/${_arch,,}/"
+-  install -vdm 755 "$pkgdir/usr/share/AAVMF"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_CODE.fd "$pkgdir/usr/share/AAVMF/AAVMF_CODE.fd"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_VARS.fd "$pkgdir/usr/share/AAVMF/AAVMF_VARS.fd"
+-  install -vDm 644 ../*$pkgname.json -t "$pkgdir/usr/share/qemu/firmware/"
+-  install -vDm 644 License.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+-
+-  ln -svf /usr/share/$pkgbase "$pkgdir/usr/share/$pkgbase-armvirt"
+-}
+-
+-package_edk2-arm() {
+-  local _arch=ARM
+-
+-  pkgdesc="Firmware for Virtual Machines (armv7)"
+-  url="https://github.com/tianocore/tianocore.github.io/wiki/ArmVirtPkg"
+-
+-  cd $pkgbase
+-  install -vDm 644 Build/ArmVirtQemu-$_arch/${_build_type}_$_build_plugin/FV/*.fd -t "$pkgdir/usr/share/$pkgbase/${_arch,,}/"
+-  install -vdm 755 "$pkgdir/usr/share/AAVMF"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_CODE.fd "$pkgdir/usr/share/AAVMF/AAVMF32_CODE.fd"
+-  ln -svf /usr/share/$pkgbase/${_arch,,}/QEMU_VARS.fd "$pkgdir/usr/share/AAVMF/AAVMF32_VARS.fd"
+-
+-  install -vDm 644 ../*$pkgname.json -t "$pkgdir/usr/share/qemu/firmware/"
+-  install -vDm 644 License.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+-}
+ 
+ package_edk2-shell() {
+   local _arch
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,4 @@
+-aarch64-linux-gnu-gcc
+ acpica
+-arm-none-eabi-gcc
+ git
+ nasm
+ python
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,8 +47,6 @@
+ cd $pkgbase
+ export GCC5_IA32_PREFIX="x86_64-linux-gnu-"
+ export GCC5_X64_PREFIX="x86_64-linux-gnu-"
+-export GCC5_AARCH64_PREFIX="aarch64-linux-gnu-"
+-export GCC5_ARM_PREFIX="arm-none-eabi-"
+ echo "Building base tools (AARCH64)"
+ ARCH=AARCH64 make -C BaseTools
+ echo "Building base tools (ARM)"

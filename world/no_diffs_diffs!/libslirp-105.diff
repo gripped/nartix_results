@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=(glib2)
- provides=('libslirp.so')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson "$pkgname-v${pkgver}" build
 +artix-meson "$pkgname-v${pkgver}" build

@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- groups=(kde-applications kde-network telepathy-kde)
- depends=(telepathy-qt kaccounts-providers)
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $_pkgname-$pkgver \
 +artix-cmake -B build -S $_pkgname-$pkgver \

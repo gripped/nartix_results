@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+   libxrandr       lib32-libxrandr
+   wayland         lib32-wayland
+ )
+-makedepends=(autoconf bison perl flex mingw-w64-gcc
++makedepends=(autoconf bison perl flex
+   alsa-lib              lib32-alsa-lib
+   gnutls                lib32-gnutls
+   gst-plugins-base-libs lib32-gst-plugins-base-libs
+@@ -89,7 +89,7 @@
+ build() {
+   mv $pkgname-$_pkgbasever $pkgname
+ 
+-  export CFLAGS="$CFLAGS -ffat-lto-objects"
++  export CFLAGS="${CFLAGS/-fno-plt/} -ffat-lto-objects"
+ 
+   msg2 "Building Wine-64..."
+   mkdir "$pkgname-64-build"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -49,7 +49,6 @@
+ libxxf86vm
+ mesa
+ mesa-libgl
+-mingw-w64-gcc
+ opencl-headers
+ opencl-icd-loader
+ pcsclite
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ mv $pkgname-$_pkgbasever $pkgname
+-export CFLAGS="$CFLAGS -ffat-lto-objects"
++export CFLAGS="${CFLAGS/-fno-plt/} -ffat-lto-objects"
+ msg2 "Building Wine-64..."
+ mkdir "$pkgname-64-build"
+ cd "$pkgname-64-build"

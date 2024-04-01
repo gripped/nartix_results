@@ -21,14 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,11 +5,12 @@
- libgtop
- whois
- )
- prepare() {
- cd $pkgname
+@@ -3,6 +3,6 @@
  git apply -3 ../fix-build.diff
  }
  build() {

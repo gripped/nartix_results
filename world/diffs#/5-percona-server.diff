@@ -1,0 +1,107 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ _myver=${pkgver/_rel*}
+ pkgrel=3
+ arch=('x86_64')
+-makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
++makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
+              'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'protobuf' 'libfido2') # 'boost'
+ license=('GPL')
+ url="https://www.percona.com/software/mysql-database/percona-server"
+@@ -27,20 +27,11 @@
+ prepare() {
+ 	cd $pkgbase-$_pkgver
+ 	rm -v sql/sql_yacc.{cc,h}
+-
+-        patch -p1 -i ../protobuf-23.patch
++	patch -p1 -i ../protobuf-23.patch
+ 
+ 	sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
+ 	       -e s@lib64/mysql@lib/mysql@ \
+ 	       -i cmake/install_layout.cmake
+-
+-	for svcfile in mysqld{,@}.service.in; do
+-		sed '/^PrivateTmp=/ a StateDirectory=mysql mysql-files\nRuntimeDirectory=mysqld' \
+-			-i scripts/systemd/$svcfile
+-	done
+-
+-	sed '/^PrivateTmp=/ a StateDirectory=mysqlrouter\nRuntimeDirectory=mysqlrouter' \
+-		-i scripts/systemd/mysqlrouter.service.in
+ }
+ 
+ build() {
+@@ -56,6 +47,8 @@
+ 		-DBUILD_CONFIG=mysql_release \
+ 		-DREPRODUCIBLE_BUILD=ON \
+ 		-DCMAKE_INSTALL_PREFIX=/usr \
++		-DCMAKE_PREFIX_PATH=/usr \
++		-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+ 		-DSYSCONFDIR=/etc/mysql \
+ 		-DMYSQL_DATADIR=/var/lib/mysql \
+ 		-DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
+@@ -99,7 +92,7 @@
+ 		-DDEBUG_EXTNAME=OFF \
+ 		-DBUILD_TESTING=OFF \
+ 		-DWITH_UNIT_TESTS=OFF \
+-		-DWITH_SYSTEMD=1 \
++		-DWITH_SYSTEMD=0 \
+ 		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
+ 		-DWITH_NUMA=ON \
+ 		-DWITH_BOOST="../boost_${_boost_ver//./_}"
+@@ -147,7 +140,7 @@
+ package_percona-server() {
+ 	pkgdesc='Drop-in replacement for MySQL that provides improved performance, diagnostics, instrumentation and MyRocks storage engine'
+ 	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf')
+-	depends=('libaio' 'systemd-tools' 'pam' 'jemalloc' 'numactl' 'lz4' 'zstd' 'openssl' 'libtirpc' 'curl'
++	depends=('libaio' 'pam' 'jemalloc' 'numactl' 'lz4' 'zstd' 'openssl' 'libtirpc' 'curl'
+ 	         'libevent' 'protobuf' 'icu') # 'boost-libs'
+ 	optdepends=('perl-dbd-mysql')
+ 	conflicts=('mysql')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,6 +16,5 @@
+ protobuf
+ readline
+ rpcsvc-proto
+-systemd-tools
+ zlib
+ zstd
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,12 +5,6 @@
+ sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
+ -e s@lib64/mysql@lib/mysql@ \
+ -i cmake/install_layout.cmake
+-for svcfile in mysqld{,@}.service.in; do
+-sed '/^PrivateTmp=/ a StateDirectory=mysql mysql-files\nRuntimeDirectory=mysqld' \
+--i scripts/systemd/$svcfile
+-done
+-sed '/^PrivateTmp=/ a StateDirectory=mysqlrouter\nRuntimeDirectory=mysqlrouter' \
+--i scripts/systemd/mysqlrouter.service.in
+ }
+ build() {
+ mkdir -p build
+@@ -24,6 +18,8 @@
+ -DBUILD_CONFIG=mysql_release \
+ -DREPRODUCIBLE_BUILD=ON \
+ -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_PREFIX_PATH=/usr \
++-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+ -DSYSCONFDIR=/etc/mysql \
+ -DMYSQL_DATADIR=/var/lib/mysql \
+ -DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
+@@ -67,7 +63,7 @@
+ -DDEBUG_EXTNAME=OFF \
+ -DBUILD_TESTING=OFF \
+ -DWITH_UNIT_TESTS=OFF \
+--DWITH_SYSTEMD=1 \
++-DWITH_SYSTEMD=0 \
+ -DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
+ -DWITH_NUMA=ON \
+ -DWITH_BOOST="../boost_${_boost_ver//./_}"

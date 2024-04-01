@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,6 @@
- )
- backup=('etc/pam.d/swaylock')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson "$pkgname-$pkgver" build
 +artix-meson "$pkgname-$pkgver" build

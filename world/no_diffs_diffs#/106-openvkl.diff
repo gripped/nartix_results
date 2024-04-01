@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=openvkl
- depends=(embree gcc-libs glibc onetbb openvdb rkcommon)
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S ${pkgname}-${pkgver} \
 +artix-cmake -B build -S ${pkgname}-${pkgver} \

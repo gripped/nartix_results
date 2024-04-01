@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ )
+ makedepends=(
+   libusb
+-  systemd
++  udev
+ )
+ optdepends=(
+   'coreutils: for lsusb.py usage'
+@@ -46,7 +46,7 @@
+ package() {
+   depends+=(
+     libusb libusb-1.0.so
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+ 
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ glibc
+ hwdata
++libudev
+ libudev.so
+ libusb
+ libusb-1.0.so
+-systemd
+-systemd-libs
++udev

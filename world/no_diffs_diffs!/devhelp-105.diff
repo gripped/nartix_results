@@ -29,16 +29,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,7 @@
- pkgbase=devhelp
- pkgname=(devhelp devhelp-docs)
- depends=(webkit2gtk-4.1)
- prepare() {
- cd devhelp
- }
-@@ -11,7 +12,7 @@
+@@ -8,6 +8,6 @@
  -D plugin_gedit=true
  -D plugin_vim=true
  )
@@ -46,4 +41,3 @@
 +artix-meson devhelp build "${meson_options[@]}"
  meson compile -C build
  }
- package_devhelp-docs() {

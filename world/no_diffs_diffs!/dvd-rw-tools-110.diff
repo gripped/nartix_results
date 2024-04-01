@@ -26,11 +26,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- pkgname=dvd+rw-tools
- depends=('cdrkit' 'gcc-libs')
+@@ -1,5 +1,5 @@
  build() {
 -cd ${pkgname}-${pkgver}
 +cd "${srcdir}/${pkgname}-${pkgver}"

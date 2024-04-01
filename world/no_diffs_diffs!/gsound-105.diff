@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=gsound
- depends=('glib2' 'glibc' 'libcanberra')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgname-$pkgver build -D gtk_doc=true
 +artix-meson $pkgname-$pkgver build -D gtk_doc=true

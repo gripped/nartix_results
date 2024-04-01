@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -65,7 +65,7 @@
+     -no-rpath \
+     -dbus-linked \
+     -system-harfbuzz \
+-    -journald \
++    -no-journald \
+     -libproxy \
+     -no-mimetype-database \
+     -no-use-gold-linker \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ -no-rpath \
+ -dbus-linked \
+ -system-harfbuzz \
+--journald \
++-no-journald \
+ -libproxy \
+ -no-mimetype-database \
+ -no-use-gold-linker \

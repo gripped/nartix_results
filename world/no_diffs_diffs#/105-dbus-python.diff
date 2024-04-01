@@ -13,14 +13,13 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=(dbus-python dbus-python-docs)
- depends=('dbus' 'glib2' 'glibc' 'python')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgname-$pkgver build -D doc=true
 +artix-meson $pkgname-$pkgver build -D doc=true
  meson compile -C build
  }
- package_dbus-python-docs() {

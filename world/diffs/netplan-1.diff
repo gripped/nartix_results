@@ -1,0 +1,146 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=netplan
+ pkgver=0.107
+-pkgrel=3
++pkgrel=1
+ pkgdesc="Network configuration abstraction renderer"
+ arch=('x86_64')
+ url="https://github.com/CanonicalLtd/netplan"
+@@ -18,8 +18,7 @@
+   'python-netifaces'
+   'python-rich'
+   'iproute2'
+-  'systemd'
+-  'systemd-libs'
++  'libelogind'
+   'util-linux-libs'
+ )
+ makedepends=(
+@@ -27,85 +26,38 @@
+   'cmocka'
+   'meson'
+   'pandoc'
++  'elogind'
+   'python-coverage'
+   'python-pycodestyle'
+   'python-pyflakes'
+   'python-pytest'
+   'python-pytest-cov'
+ )
+-checkdepends=(
+-  'openvswitch'
+-  'wireless-regdb'
+-)
+ provides=(libnetplan.so)
+ source=(
++  "0001-disable-systemd.patch"
+   "$pkgname-$pkgver.tar.gz::$url/archive/${pkgver}.tar.gz"
+   "$pkgname-0.107-disable_tests.patch"
+-  "$pkgname-0.107-use_lib.patch"
+ )
+-sha512sums=('6f6e3e4f179a2a74b46239cbd86919555a769d001b6fc8ba8daba3894b26415dbb8124f6a594de9afc14dc50d6979e58f195adfba2a53854b882d7cb6621fea7'
+-            '7f0b512a29c458e7e25f1387ce7f6730df47af48b35a5f2915a9f6a57fddf53a2c1d0690dfd81cd2dbbf40efa16f332bac63180ab3e589dcf5087f13775d040b'
+-            '64d6e97cb7c330fc2e28872a34e0be4190c6e75e5235de6ff97ef77c4c287f814b85503c798d959b88037fb53af0459c6a38768b7420f12aac79db64db127378')
+-b2sums=('8fcd3ae48e0f3e1eb0486cf4f7d76d17f61b3b8212363c9f00a1c1e6d265b1093cd7bc283e659091a44ef01c1346f47fc663d43387d72b95305ce2bb2c5b808a'
+-        'd8f5e36ef67fa43fa7c93eed2fbec54a4e934b9e994178820abda2473be646df009fc537ebc5fc067f8400c0ce3e28f66dfcf681b378cf2363f82acd79930149'
+-        '7ca1aa7b5449e23b310f32d16bf0f50525c4175d26eb591489143d0acef8cda7969502bff26402dbba10d3ea45c3c6768c28bf22c74b9f0a807bc953acf5871a')
++sha512sums=('f99bec0fbe4d93d58775e711a35078a3194dbe1a330dd4162215d09d4c03680621d0783872551208d1ab786087c19cfd87209276787fc8fcec410a6753c24120'
++            '6f6e3e4f179a2a74b46239cbd86919555a769d001b6fc8ba8daba3894b26415dbb8124f6a594de9afc14dc50d6979e58f195adfba2a53854b882d7cb6621fea7'
++            '7f0b512a29c458e7e25f1387ce7f6730df47af48b35a5f2915a9f6a57fddf53a2c1d0690dfd81cd2dbbf40efa16f332bac63180ab3e589dcf5087f13775d040b')
++b2sums=('36eb577d57697d55558aa863f6734b5d126026e54799c209f741e9097a86e4952a8f7f2d857b7369d20775f9061e40b53cb338962a13a763d5f2f44ca7f45fe2'
++        '8fcd3ae48e0f3e1eb0486cf4f7d76d17f61b3b8212363c9f00a1c1e6d265b1093cd7bc283e659091a44ef01c1346f47fc663d43387d72b95305ce2bb2c5b808a'
++        'd8f5e36ef67fa43fa7c93eed2fbec54a4e934b9e994178820abda2473be646df009fc537ebc5fc067f8400c0ce3e28f66dfcf681b378cf2363f82acd79930149')
+ 
+ prepare() {
++  patch -Np1 -d $pkgname-$pkgver -i ../0001-disable-systemd.patch
+   sed -e 's/pytest3/pytest/;s/pyflakes3/pyflakes/;s/coverage-3/coverage/' -i $pkgname-$pkgver/meson.build
+   patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-0.107-disable_tests.patch
+-  patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-0.107-use_lib.patch
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  artix-meson $pkgname-$pkgver build
+   meson compile -C build
+ }
+ 
+-check() {
+-  local pytest_options=(
+-    -vv
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_empty_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_no_configs
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_systemd_generator
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_systemd_generator_badcall
+-    --deselect $pkgname-$pkgver/tests/generator/test_args.py::TestConfigArgs::test_systemd_generator_noconf
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_auto_ovs_backend
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_lacp
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_mode_explicit_params
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_mode_implicit_params
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bond_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_auto_ovs_backend
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_controller
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_external_ids_other_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_non_default_parameters
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_non_ovs_bond
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_set_protocols
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_bridge_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_fake_vlan_bridge_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_external_ids_other_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_ports
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_set_protocols
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_global_ssl
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_implicit_fake_vlan_bridge_setup
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_interface_external_ids_other_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_invalid_device_type
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_missing_ssl
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_no_ovs_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_ovs_duplicates_when_parser_needs_second_pass
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_ovs_invalid_networkd_config
+-    --deselect $pkgname-$pkgver/tests/generator/test_ovs.py::TestOpenVSwitch::test_patch_ports
+-    --deselect $pkgname-$pkgver/tests/generator/test_wifis.py::TestNetworkManager::test_wifi_regdom
+-  )
+-
+-  meson test -C build
+-
+-  export PYTHONPATH="build/python-cffi:$pkgname-$pkgver:$PYTHONPATH"
+-  export NETPLAN_GENERATE_PATH="build/src/generate"
+-  export NETPLAN_DBUS_CMD="build/dbus/netplan-dbus"
+-  LD_LIBRARY_PATH="build/src" pytest "${pytest_options[@]}"
++package() {
++  rm "$pkgdir"/netplan
++  meson install -C build --destdir "$pkgdir"
+ }
+-
+-package() {
+-  meson install -C build --destdir "$pkgdir"
+-  rm -frv "$pkgdir/lib"
+-}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,12 @@
+ bash-completion
+ cmocka
+ dbus-python
++elogind
+ gcc-libs
+ glib2
+ glibc
+ iproute2
++libelogind
+ libyaml
+ meson
+ pandoc
+@@ -18,6 +20,4 @@
+ python-pytest-cov
+ python-rich
+ python-yaml
+-systemd
+-systemd-libs
+ util-linux-libs

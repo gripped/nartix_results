@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,7 @@
+ arch=(x86_64)
+ url="https://github.com/lunarmodules/$pkgbase"
+ license=(MIT)
++options=(debug)
+ makedepends=(lua
+              lua51
+              lua52

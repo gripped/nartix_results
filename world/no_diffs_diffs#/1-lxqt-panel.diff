@@ -9,3 +9,18 @@
  pkgdesc="The LXQt desktop panel"
  arch=("x86_64")
  groups=("lxqt")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,7 +10,7 @@
+ libxdamage
+ libxtst
+ lm_sensors
++lxmenu-data
+ lxqt-build-tools
+ lxqt-globalkeys
+-lxqt-menu-data
+ solid5

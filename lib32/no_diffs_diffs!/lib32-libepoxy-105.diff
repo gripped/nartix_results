@@ -24,14 +24,19 @@
 
 ############# Stripped diff below #################
 
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,5 @@
+ git
++lib32-elogind
+ lib32-glibc
+ lib32-libgl
+-lib32-systemd
+ meson
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
- pkgname=lib32-libepoxy
- depends=(lib32-glibc)
- prepare() {
- cd libepoxy
- }
+@@ -4,6 +4,6 @@
  build() {
  export CC='gcc -m32'
  export PKG_CONFIG=i686-pc-linux-gnu-pkg-config

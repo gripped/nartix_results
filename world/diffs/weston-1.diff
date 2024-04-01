@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url='https://wayland.freedesktop.org/'
+ license=('MIT')
+ depends=('fontconfig' 'glibc' 'wayland' 'libxkbcommon' 'libinput' 'libunwind' 'pixman'
+-         'libdrm' 'pam' 'systemd-libs' 'cairo' 'libpng' 'libjpeg-turbo' 'libwebp'
++         'libdrm' 'pam' 'libelogind' 'cairo' 'libpng' 'libjpeg-turbo' 'libwebp'
+          'mesa' 'libegl' 'libevdev' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
+          'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
+          'gstreamer' 'gst-plugins-base-libs')
+@@ -43,8 +43,8 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build \
+-    --libexec=lib/weston -D b_lto=false
++  artix-meson $pkgname-$pkgver build \
++    --libexec=lib/weston -D b_lto=false -Dsystemd=false
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,6 +10,7 @@
+ lcms2
+ libdrm
+ libegl
++libelogind
+ libevdev
+ libgles
+ libinput
+@@ -32,7 +33,6 @@
+ pango
+ pixman
+ seatd
+-systemd-libs
+ wayland
+ wayland-protocols
+ xcb-util-cursor

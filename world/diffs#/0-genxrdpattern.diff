@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,9 +26,7 @@
+   make Fox-nogui shared=0 -j1
+ 
+   cd "$srcdir"
+-  cmake -B build -S genXrdPattern-$pkgver-linux \
+-    -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DObjCryst_ROOT="$srcdir"/objcryst
++  artix-cmake -B build -S genXrdPattern-$pkgver-linux -DCMAKE_INSTALL_PREFIX=/usr -DObjCryst_ROOT="$srcdir"/objcryst
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,6 @@
+ cd objcryst/Fox
+ make Fox-nogui shared=0 -j1
+ cd "$srcdir"
+-cmake -B build -S genXrdPattern-$pkgver-linux \
+--DCMAKE_INSTALL_PREFIX=/usr \
+--DObjCryst_ROOT="$srcdir"/objcryst
++artix-cmake -B build -S genXrdPattern-$pkgver-linux -DCMAKE_INSTALL_PREFIX=/usr -DObjCryst_ROOT="$srcdir"/objcryst
+ cmake --build build
+ }

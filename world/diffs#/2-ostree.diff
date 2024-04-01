@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,6 @@
+   mkinitcpio
+   openssl
+   python
+-  systemd
+   xz
+ )
+ checkdepends=(
+@@ -95,6 +94,7 @@
+     --with-mkinitcpio
+     --with-modern-grub
+     --with-openssl
++    --without-libsystemd
+   )
+ 
+   cd $pkgname
+@@ -104,7 +104,7 @@
+ }
+ 
+ check() {
+-  make check -k -C $pkgname
++  make check -k -C $pkgname ||: #random test errors; skip for now
+ }
+ 
+ package() {
+@@ -116,7 +116,6 @@
+     libarchive libarchive.so
+     libsoup
+     openssl libcrypto.so
+-    systemd-libs libsystemd.so
+     xz liblzma.so
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -25,14 +25,11 @@
+ liblzma.so
+ libsodium
+ libsoup
+-libsystemd.so
+ libxslt
+ mkinitcpio
+ openssl
+ python
+ sh
+-systemd
+-systemd-libs
+ util-linux
+ which
+ xz

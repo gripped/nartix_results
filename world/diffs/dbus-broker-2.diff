@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,12 +13,10 @@
+   audit
+   libcap-ng
+   expat
+-  systemd-libs
+ )
+ makedepends=(
+   meson
+   python-docutils
+-  systemd
+ )
+ source=(
+   https://github.com/bus1/dbus-broker/releases/download/v$pkgver/$pkgbase-$pkgver.tar.xz{,.asc}
+@@ -40,11 +38,12 @@
+   local meson_options=(
+     -D audit=true
+     -D docs=true
++    -D launcher=false
+     -D linux-4-17=true
+     -D system-console-users=gdm,sddm,lightdm,lxdm
+   )
+ 
+-  arch-meson $pkgbase-$pkgver build "${meson_options[@]}"
++  artix-meson $pkgbase-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -57,7 +56,6 @@
+     libaudit.so
+     libcap-ng.so
+     libexpat.so
+-    libsystemd.so
+   )
+ 
+   meson install -C build --destdir "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,8 +4,5 @@
+ libcap-ng
+ libcap-ng.so
+ libexpat.so
+-libsystemd.so
+ meson
+ python-docutils
+-systemd
+-systemd-libs

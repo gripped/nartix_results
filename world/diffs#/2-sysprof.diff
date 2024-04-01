@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,6 @@
+   libunwind
+   pango
+   polkit
+-  systemd-libs
+ )
+ makedepends=(
+   git
+@@ -50,7 +49,7 @@
+ build() {
+   CFLAGS+=" -ffat-lto-objects"
+ 
+-  arch-meson sysprof build
++  artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
+   meson compile -C build
+ }
+ 
+@@ -81,6 +80,8 @@
+   _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
+   _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
++
++  rm -r "$pkgdir"/usr/lib/systemd
+ }
+ 
+ package_libsysprof-capture() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,5 +16,4 @@
+ meson
+ pango
+ polkit
+-systemd-libs
+ yelp-tools

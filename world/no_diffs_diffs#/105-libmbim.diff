@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,6 @@
+ depends=(
+   bash
+   glib2
+-  systemd
+ )
+ makedepends=(
+   bash-completion
+@@ -38,7 +37,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson libmbim build "${meson_options[@]}"
++  artix-meson libmbim build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ local meson_options=(
+ -D gtk_doc=true
+ )
+-arch-meson libmbim build "${meson_options[@]}"
++artix-meson libmbim build "${meson_options[@]}"
+ meson compile -C build
+ }

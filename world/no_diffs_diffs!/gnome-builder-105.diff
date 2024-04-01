@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -55,7 +55,7 @@
+@@ -5,6 +5,6 @@
  local meson_options=(
  -D help=true
  )
@@ -23,4 +25,3 @@
 +artix-meson $pkgbase build "${meson_options[@]}"
  meson compile -C build
  }
- check() (

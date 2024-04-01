@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libavtp
- provides=(libavtp.so)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson build $pkgname-$pkgver
 +artix-meson build $pkgname-$pkgver

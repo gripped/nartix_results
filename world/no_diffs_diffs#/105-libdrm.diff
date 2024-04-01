@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=('libpciaccess' 'glibc')
- replaces=('libdrm-new' 'libdrm-nouveau')
+@@ -1,5 +1,5 @@
  build() {
 -arch-meson $pkgname-$pkgver build \
 +artix-meson $pkgname-$pkgver build \

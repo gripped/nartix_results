@@ -30,11 +30,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- depends=('perl-text-charwidth')
- options=('!emptydirs')
+@@ -1,5 +1,5 @@
  build() {
 -cd ${_realname}-${pkgver}
 +cd ${srcdir}/${_realname}-${pkgver}

@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ _git_tag=jdk-${_majorver}+${_updatever}
+ arch=('x86_64')
+ url='https://openjdk.java.net/'
+-license=('LicenseRef-Java')
++license=('custom')
+ makedepends=('java-environment>=17' 'cpio' 'unzip' 'zip' 'libelf' 'libcups' 'libx11'
+              'libxrender' 'libxtst' 'libxt' 'libxext' 'libxrandr' 'alsa-lib' 'pandoc'
+              'graphviz' 'freetype2' 'libjpeg-turbo' 'giflib' 'libpng' 'lcms2'
+@@ -256,7 +256,7 @@
+ 
+   install -dm 755 "${pkgdir}${_jvmdir}"
+ 
+-  cp -a bin demo include jmods lib release\
++  cp -a bin demo include jmods lib release \
+     "${pkgdir}${_jvmdir}"
+ 
+   rm "${pkgdir}${_jvmdir}/lib/src.zip"

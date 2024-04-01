@@ -29,10 +29,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(libftdi pciutils libusb)
+@@ -1,6 +1,6 @@
  build() {
  cd ${pkgname}-v${pkgver}
 -arch-meson ../build

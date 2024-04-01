@@ -1,0 +1,103 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -63,7 +63,6 @@
+   rtkit
+   sbc
+   sdl2
+-  systemd
+   valgrind
+   webrtc-audio-processing-1
+ )
+@@ -102,9 +101,10 @@
+     -D selinux=disabled
+     -D session-managers=[]
+     -D udevrulesdir=/usr/lib/udev/rules.d
+-  )
+-
+-  arch-meson pipewire build "${meson_options[@]}"
++    -D systemd=disabled
++  )
++
++  artix-meson pipewire build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -135,7 +135,6 @@
+     libncursesw.so
+     libpipewire-$_so_ver.so
+     libreadline.so
+-    libsystemd.so
+     libudev.so
+   )
+   optdepends=(
+@@ -155,7 +154,6 @@
+     'realtime-privileges: realtime privileges with rt module'
+     'rtkit: realtime privileges with rtkit module'
+   )
+-  install=pipewire.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+@@ -192,7 +190,6 @@
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-rtp-{sap,sink,source}.so
+     _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban*.so
+     _pick audio usr/lib/spa-0.2/{aec,alsa,audio*,avb,bluez5}
+-    _pick audio usr/lib/systemd/user/filter-chain.service
+     _pick audio usr/share/alsa
+     _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
+     _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
+@@ -220,7 +217,6 @@
+     _pick pulse usr/bin/pipewire-pulse
+     _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-pulse.so
+     _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-pulse-tunnel.so
+-    _pick pulse usr/lib/systemd/user/pipewire-pulse.*
+     _pick pulse usr/share/man/man1/pipewire-pulse.1
+     _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
+     _pick pulse usr/share/man/man7/pipewire-pulse*.7
+@@ -299,7 +295,6 @@
+     libusb-1.0.so
+     libwebrtc-audio-processing-1.so
+     pipewire
+-    systemd-libs
+   )
+ 
+   mv audio/* "$pkgdir"
+@@ -401,7 +396,6 @@
+     pipewire
+     pipewire-audio
+     pipewire-session-manager
+-    systemd-libs
+   )
+   provides=(
+     pulse-native-provider
+@@ -412,7 +406,6 @@
+     pulseaudio
+     pulseaudio-bluetooth
+   )
+-  install=pipewire-pulse.install
+ 
+   mv pulse/* "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -49,7 +49,6 @@
+ libsbc.so
+ libsndfile
+ libsndfile.so
+-libsystemd.so
+ libudev.so
+ libusb
+ libusb-1.0.so
+@@ -73,8 +72,6 @@
+ sbc
+ sdl2
+ sh
+-systemd
+-systemd-libs
+ valgrind
+ webrtc-audio-processing-1
+ wireplumber

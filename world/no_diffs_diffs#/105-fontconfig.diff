@@ -13,9 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -9,6 +9,6 @@
  -D doc-pdf=disabled
  -D doc-txt=disabled
  )
@@ -23,4 +25,3 @@
 +artix-meson fontconfig build "${meson_options[@]}"
  meson compile -C build
  }
- package() {

@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,6 @@
+   libsecret
+   openssh
+   p11-kit
+-  systemd
+ )
+ makedepends=(
+   gi-docgen
+@@ -40,7 +39,7 @@
+ }
+ 
+ build() {
+-  arch-meson gcr build
++  artix-meson gcr build -Dsystemd=disabled
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,5 +9,4 @@
+ meson
+ openssh
+ p11-kit
+-systemd
+ vala

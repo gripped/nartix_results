@@ -21,15 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
- pkgname=libwnck3
- depends=(gtk3 startup-notification libxres)
- prepare() {
- cd libwnck
- git apply -3 ../0001-handle-avoid-segfault-in-invalidate_icons.patch
-@@ -9,6 +10,6 @@
+@@ -7,6 +7,6 @@
  git apply -3 ../0005-xutils-check-if-XRes-is-available-before-using-XResQ.patch
  }
  build() {

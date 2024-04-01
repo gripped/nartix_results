@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- depends=('dconf' 'gcc-libs' 'glib2' 'glibc' 'gtk3' 'hicolor-icon-theme' 'libcanberra' 'libgudev'
- 'libgusb' 'polkit' 'udisks2')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson $pkgname-$pkgver build
 +artix-meson $pkgname-$pkgver build

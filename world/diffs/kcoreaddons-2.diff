@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ depends=(gcc-libs
+          glibc
+          qt6-base
+-         systemd-libs)
++         libudev)
+ makedepends=(doxygen
+              extra-cmake-modules
+              qt6-declarative
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,8 +2,8 @@
+ extra-cmake-modules
+ gcc-libs
+ glibc
++libudev
+ qt6-base
+ qt6-declarative
+ qt6-doc
+ qt6-tools
+-systemd-libs

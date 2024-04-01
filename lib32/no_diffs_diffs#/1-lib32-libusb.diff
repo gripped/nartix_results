@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,9 +9,9 @@
+ _url="https://github.com/libusb/libusb"
+ license=(LGPL-2.1-or-later)
+ depends=(
+-  lib32-glibc
+-  lib32-systemd
+-  libusb=$pkgver
++	lib32-glibc
++	lib32-elogind
++	libusb=$pkgver
+ )
+ makedepends=(gcc-multilib)
+ provides=(libusb-1.0.so)
+@@ -20,28 +20,28 @@
+ b2sums=('bec2eb053159ffa719c794d234f8e99b895a4fae336b862a3197b88deb3d307a53ebb98d2aa993a2f390f14264f796b96ac47274c19f56db30440484ee336c8a')
+ 
+ prepare() {
+-  cd $_name-$pkgver
+-  autoreconf -fiv
++	cd $_name-$pkgver
++	autoreconf -fiv
+ }
+ 
+ build() {
+-  local configure_options=(
+-    --prefix=/usr
+-    --libdir=/usr/lib32
+-    --disable-static
+-  )
++	local configure_options=(
++		--prefix=/usr
++		--libdir=/usr/lib32
++		--disable-static
++	)
+ 
+-  export CC="gcc -m32"
+-  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
++	export CC="gcc -m32"
++	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+ 
+-  cd $_name-$pkgver
+-  ./configure "${configure_options[@]}"
+-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+-  make
++	cd $_name-$pkgver
++	./configure "${configure_options[@]}"
++	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++	make
+ }
+ 
+-package () {
+-  make DESTDIR="$pkgdir" install -C $_name-$pkgver
+-  rm -rf "$pkgdir"/usr/include
+-  install -vDm 644 $_name-$pkgver/{AUTHORS,ChangeLog,NEWS,README,TODO} -t "$pkgdir/usr/share/doc/$pkgname/"
++package() {
++	make DESTDIR="$pkgdir" install -C $_name-$pkgver
++	rm -rf "$pkgdir"/usr/include
++	install -vDm 644 $_name-$pkgver/{AUTHORS,ChangeLog,NEWS,README,TODO} -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+ gcc-multilib
++lib32-elogind
+ lib32-glibc
+-lib32-systemd
+ libusb

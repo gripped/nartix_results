@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,6 @@
+   squashfs-tools
+   strace
+   syslinux
+-  systemd-sysvcompat
+   vim
+   xfsprogs
+   yara
+@@ -134,7 +133,7 @@
+     --prefix=/usr
+     --sbindir=/usr/bin
+     --sysconfdir=/etc
+-    --with-extra-packages="libldm systemd-sysvcompat openssh qemu"
++    --with-extra-packages="libldm openssh qemu"
+     --with-guestfs-path=/usr/lib/guestfs
+   )
+ 
+@@ -144,14 +143,6 @@
+   make
+ }
+ 
+-check() {
+-  export SKIP_TEST_BTRFS_QGROUP_ASSIGN_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_CREATE_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_DESTROY_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_REMOVE_0=1
+-  export SKIP_TEST_BTRFS_QGROUP_SHOW_0=1
+-  LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
+-}
+ 
+ package() {
+   make INSTALLDIRS=vendor DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -68,7 +68,6 @@
+ strace
+ supermin
+ syslinux
+-systemd-sysvcompat
+ vala
+ vim
+ xfsprogs

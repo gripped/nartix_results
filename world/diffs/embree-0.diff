@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,8 @@
+       -G Ninja \
+       -S ${pkgname}-${pkgver} \
+       -DCMAKE_INSTALL_PREFIX=/usr \
++      -DCMAKE_PREFIX_PATH=/usr \
++      -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+       -DCMAKE_BUILD_TYPE=Release \
+       -DEMBREE_ISPC_SUPPORT=ON \
+       -DEMBREE_TUTORIALS=OFF \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,8 @@
+ -G Ninja \
+ -S ${pkgname}-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_PREFIX_PATH=/usr \
++-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DEMBREE_ISPC_SUPPORT=ON \
+ -DEMBREE_TUTORIALS=OFF \

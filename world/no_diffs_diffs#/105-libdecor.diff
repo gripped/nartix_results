@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=libdecor
- depends=('wayland' 'pango' 'dbus')
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson -Ddemo=false build "${pkgname}-${pkgver}"
 +artix-meson -Ddemo=false build "${pkgname}-${pkgver}"

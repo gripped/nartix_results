@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,14 +2,15 @@
+ pkgname=libtg_owt
+ _commit=592b14d13bf9103226e90a83571e24c49f6bfdcd
+ pkgver=0.git24.${_commit:0:7}
+-pkgrel=2
++pkgrel=2.2
+ pkgdesc='WebRTC library'
+ arch=('x86_64')
+ url='https://github.com/desktop-app/tg_owt'
+ license=('BSD')
+ depends=('libdrm')
+ makedepends=('git' 'ninja' 'unzip' 'cmake' 'protobuf' 'libxrandr' 'libxcomposite' 'openssl' 'glibc'
+-             'ffmpeg' 'libva' 'opus' 'yasm' 'libjpeg-turbo' 'pipewire' 'libxtst' 'libepoxy')
++             'ffmpeg' 'libva' 'opus' 'yasm' 'libjpeg-turbo' 'pipewire' 'libxtst' 'libepoxy'
++             'libxdamage')
+ options=('staticlibs')
+ source=("git+${url}.git#commit=${_commit}"
+         "git+https://chromium.googlesource.com/libyuv/libyuv/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,6 +7,7 @@
+ libjpeg-turbo
+ libva
+ libxcomposite
++libxdamage
+ libxrandr
+ libxtst
+ ninja

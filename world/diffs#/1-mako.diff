@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,11 +4,11 @@
+ pkgrel=1
+ license=('MIT')
+ pkgdesc='Lightweight notification daemon for Wayland'
+-makedepends=("meson" "scdoc" "systemd" "wayland-protocols")
++makedepends=("meson" "scdoc" "wayland-protocols" "elogind")
+ depends=(
+ 	"gdk-pixbuf2"
+ 	"pango"
+-	"systemd-libs"
++	"libelogind"
+ 	"wayland"
+ )
+ optdepends=("jq: support for 'makoctl menu'")
+@@ -29,11 +29,11 @@
+ }
+ 
+ build() {
+-	arch-meson \
++	artix-meson \
+ 		-Dbash-completions=true \
+ 		-Dfish-completions=true \
+ 		-Dzsh-completions=true \
+-		-Dsd-bus-provider=libsystemd \
++		-Dsd-bus-provider=libelogind \
+ 		"$pkgname-$pkgver" build
+ 	ninja -C build
+ }
+@@ -41,5 +41,4 @@
+ package() {
+ 	DESTDIR="$pkgdir" ninja -C build install
+ 	install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" "$pkgname-$pkgver/LICENSE"
+-	install -Dm644 -t "$pkgdir/usr/lib/systemd/user/" "$pkgname-$pkgver/contrib/systemd/mako.service"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,8 @@
++elogind
+ gdk-pixbuf2
++libelogind
+ meson
+ pango
+ scdoc
+-systemd
+-systemd-libs
+ wayland
+ wayland-protocols

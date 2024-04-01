@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- depends=(glibc)
- provides=(libmpdclient.so)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson build $pkgname-$pkgver
 +artix-meson build $pkgname-$pkgver

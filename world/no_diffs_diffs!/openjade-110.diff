@@ -50,10 +50,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
- provides=('jade')
+@@ -1,6 +1,6 @@
  prepare() {
  cd ${pkgname}-$pkgver
 -patch -Np1 -i "$srcdir"/${pkgname}1.3_${pkgver}-${_debpatch}.diff

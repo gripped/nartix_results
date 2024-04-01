@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,14 +25,12 @@
+ source=("https://prosody.im/downloads/source/prosody-$pkgver.tar.gz"{,.asc}
+         'prosody.tmpfile.d'
+         'prosody.logrotated'
+-        'sysuser.conf'
+-        'prosody.service')
++	      'sysuser.conf')
+ sha256sums=('47d712273c2f29558c412f6cdaec073260bbc26b7dda243db580330183d65856'
+             'SKIP'
+             '0753bd9260f1cfdce6e18e01a61e320b396acfe9fca8ccf3250653bfa6af997e'
+             '5a2466b73bd069fb73be97a4e23b24e4c8dd1adb7db871cb8f5ab4094c1f967f'
+-            'e5c30ffbb066f0ed3444475b3313490c535d8c9df018726f6cecf9e3ddfd2e48'
+-            'e9d6abc4c53bd9e7b1d2acc56c7513416751f9436bf382ed52d703d29b13bfaa')
++            'e5c30ffbb066f0ed3444475b3313490c535d8c9df018726f6cecf9e3ddfd2e48')
+ 
+ prepare() {
+   cd prosody-$pkgver
+@@ -41,15 +39,6 @@
+   sed -i s/"error = "/"-- error = "/g prosody.cfg.lua.dist
+   sed -i s/"--\ \"\*syslog\"\;"/"info = \"*syslog\"\;"/g prosody.cfg.lua.dist
+ 
+-  mv prosody.cfg.lua.dist prosody.cfg.lua.old
+-
+-  echo --Important for systemd >> prosody.cfg.lua.dist
+-  echo -- daemonize is important for systemd. if you set this to false the systemd startup will freeze. >> prosody.cfg.lua.dist
+-  echo daemonize = true >> prosody.cfg.lua.dist
+-  echo 'pidfile = "/run/prosody/prosody.pid"'>> prosody.cfg.lua.dist
+-  echo "" >> prosody.cfg.lua.dist
+-  cat prosody.cfg.lua.old >> prosody.cfg.lua.dist
+-  rm prosody.cfg.lua.old
+ 
+ }
+ 
+@@ -74,9 +63,8 @@
+   make DESTDIR="${pkgdir}" install
+   make DESTDIR="${pkgdir}" install -C tools/migration
+ 
+-  install -Dm644 "${srcdir}"/prosody.tmpfile.d "${pkgdir}"/usr/lib/tmpfiles.d/prosody.conf
+-  install -Dm644 "${srcdir}"/prosody.service "${pkgdir}"/usr/lib/systemd/system/prosody.service
+-  install -Dm644 "${srcdir}"/sysuser.conf "${pkgdir}"/usr/lib/sysusers.d/prosody.conf
++  install -Dm 0644 "$srcdir"/prosody.tmpfile.d "${pkgdir}"/usr/lib/tmpfiles.d/prosody.conf
++  install -Dm644 "$srcdir"/sysuser.conf "$pkgdir"/usr/lib/sysusers.d/prosody.conf
+ 
+   for i in tools/*.lua; do
+     install -Dm644 "${i}" "${pkgdir}/usr/share/prosody/${i}"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,14 +3,6 @@
+ sed -i s/"info = "/"-- info = "/g prosody.cfg.lua.dist
+ sed -i s/"error = "/"-- error = "/g prosody.cfg.lua.dist
+ sed -i s/"--\ \"\*syslog\"\;"/"info = \"*syslog\"\;"/g prosody.cfg.lua.dist
+-mv prosody.cfg.lua.dist prosody.cfg.lua.old
+-echo --Important for systemd >> prosody.cfg.lua.dist
+-echo -- daemonize is important for systemd. if you set this to false the systemd startup will freeze. >> prosody.cfg.lua.dist
+-echo daemonize = true >> prosody.cfg.lua.dist
+-echo 'pidfile = "/run/prosody/prosody.pid"'>> prosody.cfg.lua.dist
+-echo "" >> prosody.cfg.lua.dist
+-cat prosody.cfg.lua.old >> prosody.cfg.lua.dist
+-rm prosody.cfg.lua.old
+ }
+ build() {
+ cd "prosody-${pkgver}"

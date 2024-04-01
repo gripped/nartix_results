@@ -13,14 +13,13 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=(python-cairo python-cairo-docs)
- depends=(cairo python)
+@@ -1,4 +1,4 @@
  build() {
 -arch-meson pycairo-$pkgver build
 +artix-meson pycairo-$pkgver build
  meson compile -C build
  }
- package_python-cairo-docs() {

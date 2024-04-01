@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ pkgrel=2
+ arch=(any)
+ license=(None)
+-url='https://www.archlinux.org/'
++url='https://www.artixlinux.org/'
+ 
+ package_kde-applications-meta() {
+   pkgdesc='Meta package for KDE Applications'
+@@ -224,7 +224,6 @@
+            kde-inotify-survey
+            khelpcenter
+            kio-admin
+-           kjournald
+            ksystemlog
+            partitionmanager)
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -105,7 +105,6 @@
+ kirigami-gallery
+ kiriki
+ kiten
+-kjournald
+ kjumpingcube
+ kleopatra
+ klettres

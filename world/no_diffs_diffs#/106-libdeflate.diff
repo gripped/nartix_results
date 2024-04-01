@@ -13,11 +13,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- depends=(glibc)
- provides=(libdeflate.so)
+@@ -1,5 +1,5 @@
  build() {
 -cmake -S libdeflate -B build -G Ninja \
 +artix-cmake -S libdeflate -B build -G Ninja \

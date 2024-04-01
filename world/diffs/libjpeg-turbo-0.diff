@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,6 +37,7 @@
+     -B build
+     -D CMAKE_INSTALL_PREFIX=/usr
+     -D CMAKE_INSTALL_LIBDIR=/usr/lib
++    -D CMAKE_PREFIX_PATH=/usr
+     -D CMAKE_BUILD_TYPE=None
+     -D ENABLE_STATIC=OFF
+     -D WITH_JAVA=ON
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,7 @@
+ -B build
+ -D CMAKE_INSTALL_PREFIX=/usr
+ -D CMAKE_INSTALL_LIBDIR=/usr/lib
++-D CMAKE_PREFIX_PATH=/usr
+ -D CMAKE_BUILD_TYPE=None
+ -D ENABLE_STATIC=OFF
+ -D WITH_JAVA=ON

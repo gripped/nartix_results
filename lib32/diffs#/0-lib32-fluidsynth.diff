@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=lib32-fluidsynth
+ _name=fluidsynth
+ pkgver=2.3.4
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='A real-time software synthesizer based on the SoundFont 2 specifications'
+ arch=(x86_64)
+ url="https://www.fluidsynth.org/"
+@@ -15,7 +15,6 @@
+   lib32-libpulse
+   lib32-readline
+   lib32-sdl2
+-  lib32-systemd
+ )
+ makedepends=(
+   cmake
+@@ -42,6 +41,7 @@
+     -D enable-ladspa=ON
+     -D enable-portaudio=ON
+     -W no-dev
++    -D enable-systemd=off
+     -S $_name-$pkgver
+   )
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ -D enable-ladspa=ON
+ -D enable-portaudio=ON
+ -W no-dev
++-D enable-systemd=off
+ -S $_name-$pkgver
+ )
+ export CC='gcc -m32'

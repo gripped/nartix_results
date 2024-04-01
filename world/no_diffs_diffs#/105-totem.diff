@@ -21,16 +21,11 @@
 
 ############# Stripped diff below #################
 
+
+
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
- conflicts=(totem-plugin)
- replaces=(totem-plugin)
- groups=(gnome)
- prepare() {
- cd totem
- git submodule init
-@@ -16,6 +17,6 @@
+@@ -8,6 +8,6 @@
  local meson_options=(
  -D enable-gtk-doc=true
  )
