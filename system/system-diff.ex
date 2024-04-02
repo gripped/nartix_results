@@ -11,6 +11,7 @@ dhcpcd
 e2fsprogs
 fuse2fs
 fakeroot
+filesystem
 gcc
 gcc-libs
 lib32-gcc-libs

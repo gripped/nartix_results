@@ -35,7 +35,6 @@ libelf
 debuginfod
 expat
 file
-filesystem
 findutils
 flex
 gawk

@@ -1939,10 +1939,6 @@ lsscsi
 lua-bitop
 lua51-bitop
 lua52-bitop
-lua-filesystem
-lua51-filesystem
-lua52-filesystem
-lua53-filesystem
 lua-mpack
 lua51-mpack
 lua52-mpack
@@ -4325,6 +4321,7 @@ rocm-core
 rocm-device-libs
 rocm-llvm
 rocm-opencl-runtime
+rocm-smi-lib
 rocminfo
 rocprim
 rocs
@@ -5337,6 +5334,7 @@ zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
+zfp
 zig
 zimg
 zip

@@ -1,14 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,6 @@
+@@ -2,7 +2,7 @@
+ BUILDENV+=(!check)
+ 
+ pkgname=('syncthing' 'syncthing-discosrv' 'syncthing-relaysrv')
+-pkgver=1.27.5
++pkgver=1.27.4
+ pkgrel=1
+ pkgdesc='Open Source Continuous Replication / Cluster Synchronization Thing'
+ arch=('x86_64')
+@@ -13,17 +13,14 @@
  source=(https://github.com/syncthing/syncthing/releases/download/v$pkgver/syncthing-source-v${pkgver}.tar.gz{,.asc}
          syncthing-{disco,relay}srv.sysusers
          syncthing-{disco,relay}srv.tmpfiles
 -        syncthing-{disco,relay}srv.service
          gcc-pie-segfaults-race.patch)
  validpgpkeys=('37C84554E7E0A261E4F76E1ED26E6ED000654A3E') # Syncthing Release Management
- sha256sums=('6ce00ab281ee5eb0dc73c3664f36235137ca22b2911e375b8feead0038fb80a1'
-@@ -22,8 +21,6 @@
+-sha256sums=('4bb5811e5ddb5c4078f989f08cd3a10994c0a72194c0215dd5ca06aed5248d66'
++sha256sums=('6ce00ab281ee5eb0dc73c3664f36235137ca22b2911e375b8feead0038fb80a1'
+             'SKIP'
+             'f6e704dd7b10127b1642c889a29e95468daa75d895493b235ce1ed5e97155b70'
              '6ab96a5949e223d315d49663734ad27b70c72469c691a61ac198cb7794cb5eaa'
              'a05a66efbbd13f20b5c3af56692fe219fadc967dba4eedb71494827795d2c140'
              'f899998985f2d374af57f17ef6362c37a305467858195b74d1c1def71d97273f'

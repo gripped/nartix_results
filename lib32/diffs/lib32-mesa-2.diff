@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   'lib32-mesa'
- )
- pkgver=24.0.4
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Open-source OpenGL drivers - 32-bit"
- url="https://www.mesa3d.org/"
 @@ -44,7 +44,6 @@
    'lib32-rust-libs'
    'lib32-spirv-llvm-translator'
@@ -17,15 +8,7 @@
    'lib32-vulkan-icd-loader'
    'lib32-wayland'
    'lib32-xcb-util-keysyms'
-@@ -128,7 +127,6 @@
-     -D glx=dri
-     -D intel-clc=enabled
-     -D intel-xe-kmd=enabled
--    -D libunwind=disabled
-     -D llvm=enabled
-     -D lmsensors=enabled
-     -D microsoft-clc=disabled
-@@ -148,7 +146,7 @@
+@@ -148,7 +147,7 @@
  
    export BINDGEN_EXTRA_CLANG_ARGS="-m32"
  
@@ -34,7 +17,7 @@
    meson configure build # Print config
    meson compile -C build
  
-@@ -256,7 +254,6 @@
+@@ -256,7 +255,6 @@
      'lib32-libx11'
      'lib32-libxcb'
      'lib32-libxshmfence'
@@ -42,7 +25,7 @@
      'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-@@ -284,7 +281,6 @@
+@@ -284,7 +282,6 @@
      'lib32-libx11'
      'lib32-libxcb'
      'lib32-libxshmfence'
@@ -50,7 +33,7 @@
      'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-@@ -314,7 +310,6 @@
+@@ -314,7 +311,6 @@
      'lib32-libxcb'
      'lib32-libxshmfence'
      'lib32-llvm-libs'
@@ -58,7 +41,7 @@
      'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-@@ -344,7 +339,6 @@
+@@ -344,7 +340,6 @@
      'lib32-libxcb'
      'lib32-libxshmfence'
      'lib32-llvm-libs'
@@ -66,7 +49,7 @@
      'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-@@ -374,7 +368,6 @@
+@@ -374,7 +369,6 @@
      'lib32-libx11'
      'lib32-libxcb'
      'lib32-libxshmfence'

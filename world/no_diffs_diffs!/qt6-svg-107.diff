@@ -5,7 +5,7 @@
  
  build() {
 -  cmake -B build -S $_pkgfn -G Ninja \
-+  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
++  cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr  -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
    cmake --build build
  }
@@ -20,7 +20,7 @@
 @@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $_pkgfn -G Ninja \
-+cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr \
++cmake -B build -S $_pkgfn -G Ninja  -DCMAKE_INSTALL_PREFIX=/usr  -DCMAKE_INSTALL_PREFIX=/usr \
  -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
  cmake --build build
  }

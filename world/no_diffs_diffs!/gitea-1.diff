@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gitea
- pkgver=1.21.10
--pkgrel=2
-+pkgrel=1
- pkgdesc="Painless self-hosted Git service, community managed."
- arch=(x86_64)
- url="https://gitea.io"
 @@ -22,11 +22,9 @@
  backup=('etc/gitea/app.ini')
  source=(git+https://github.com/go-gitea/gitea.git#tag=v${pkgver}?signed

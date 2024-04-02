@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(util-linux util-linux-libs)
+ _tag='2.40'
+ pkgver="${_tag/-/}"
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Miscellaneous system utilities for Linux'
+ url='https://github.com/util-linux/util-linux'
+ arch=('x86_64')
 @@ -11,11 +11,13 @@
               'bash-completion'
               'git'

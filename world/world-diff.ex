@@ -301,6 +301,7 @@ usbip
 x86_energy_perf_policy
 lirc
 lm_sensors
+lua-filesystem
 luarocks
 lxc
 lxcfs
@@ -738,5 +739,4 @@ xorg-xwayland
 yubikey-personalization
 zathura
 zeromq
-zfp
 znc

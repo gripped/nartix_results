@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url='https://rocm.docs.amd.com/projects/rocm_smi_lib/en/latest'
+ license=('NCSA')
+-depends=('rocm-core' 'glibc' 'gcc-libs' 'hsa-rocr' 'python')
++depends=('glibc' 'gcc-libs' 'python')
+ makedepends=('cmake')
+ _git='https://github.com/ROCm/rocm_smi_lib'
+ source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,4 @@
+ cmake
+ gcc-libs
+ glibc
+-hsa-rocr
+ python
+-rocm-core

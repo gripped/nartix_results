@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,487 +1,480 @@
+@@ -1,17 +1,17 @@
  
  pkgbase=mesa
  pkgname=(
@@ -28,11 +28,8 @@
 +	'mesa'
  )
  pkgver=24.0.4
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Open-source OpenGL drivers"
- url="https://www.mesa3d.org/"
+ pkgrel=2
+@@ -21,467 +21,461 @@
  arch=('x86_64')
  license=('MIT AND BSD-3-Clause AND SGI-B-2.0')
  makedepends=(
@@ -263,6 +260,7 @@
 +		-D glx=dri
 +		-D intel-clc=enabled
 +		-D intel-xe-kmd=enabled
++		-D libunwind=disabled
 +		-D llvm=enabled
 +		-D lmsensors=enabled
 +		-D microsoft-clc=disabled
