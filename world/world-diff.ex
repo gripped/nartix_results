@@ -57,7 +57,6 @@ cups
 libcups
 dbus-broker
 ddcutil
-debootstrap
 dhcpcd
 directx-shader-compiler
 dns-over-https
@@ -117,7 +116,6 @@ libgdm
 genxrdpattern
 geoclue
 github-cli
-glances
 glfw
 glfw-x11
 glfw-wayland
@@ -191,6 +189,7 @@ gvfs-onedrive
 haproxy
 haveged
 hidapi
+hip-runtime-amd
 hwloc
 hyprland
 i2pd
@@ -307,6 +306,7 @@ lxc
 lxcfs
 lxd
 mako
+mallard-ducktype
 man-pages-l10n
 man-pages-cs
 man-pages-da
@@ -682,6 +682,7 @@ uwsgi-plugin-mono
 uwsgi-plugin-webdav
 uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
+v2ray-domain-list-community
 v2ray
 v4l-utils
 vault
@@ -721,13 +722,10 @@ xf86-input-vmmouse
 xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-ati
-xf86-video-dummy
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-openchrome
-xf86-video-vesa
 xf86-video-vmware
-xf86-video-voodoo
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

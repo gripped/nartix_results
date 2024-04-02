@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=gjs
 -pkgver=1.78.3
+-pkgrel=1
 +pkgver=1.80.2
- pkgrel=1
++pkgrel=2
  epoch=2
  pkgdesc="Javascript Bindings for GNOME"
+ url="https://wiki.gnome.org/Projects/Gjs"
 @@ -10,7 +10,9 @@
  depends=(
    cairo
@@ -18,19 +20,27 @@
    gobject-introspection-runtime
    js115
    libffi
-@@ -31,9 +33,9 @@
+@@ -31,14 +33,11 @@
    xorg-server-xvfb
  )
  provides=(libgjs.so)
 -_commit=383df72a6fdbed92a2a3a2d7133eb6f31d40c526  # tags/1.78.3^0
-+_commit=46a4ae6d484af6161bc05c05e179290f7a847951  # tags/1.80.2^0
- source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
+-source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
 -b2sums=('SKIP')
+-
+-pkgver() {
+-  cd gjs
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+-}
++source=("git+https://gitlab.gnome.org/GNOME/gjs.git?signed#tag=$pkgver")
 +b2sums=('40fc19481e1c8ad8dc6c7d122cd8b71254f3b76e2483fd7bbc13a2cbfafecb3d1fbadbb375f343850332065e4f901b182e10c2e26c0269660addc33d2781b8ae')
++validpgpkeys=(
++  53C0524AD3AE115F69C47D2D0E9D857756977391 # Philip Chimento (Signing Key for GNOME Releases) <philip.chimento@gmail.com>
++)
  
- pkgver() {
+ prepare() {
    cd gjs
-@@ -49,7 +51,7 @@
+@@ -49,7 +48,7 @@
      -D installed_tests=false
    )
  

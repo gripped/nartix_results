@@ -392,6 +392,7 @@ dbus-python-docs
 dconf-editor
 dconf
 ddclient
+debootstrap
 default-cursors
 dejagnu
 deluge
@@ -658,6 +659,7 @@ gkrellm
 gl2ps
 glad
 glade
+glances
 glew
 glib-networking
 glibmm-2.68
@@ -853,7 +855,6 @@ hiera
 highlight
 highlight-gui
 highway
-hip-runtime-amd
 hiredis
 hitori
 hivex
@@ -2038,7 +2039,6 @@ malcontent
 libmalcontent
 maliit-framework
 maliit-keyboard
-mallard-ducktype
 man2html
 mandoc
 mandown
@@ -5051,7 +5051,6 @@ uv
 $pkgbase
 python-$pkgbase
 uvicorn
-v2ray-domain-list-community
 v2ray-geoip
 vala
 valabind
@@ -5186,8 +5185,11 @@ xerces-c
 xf86-input-elographics
 xf86-input-libinput
 xf86-input-synaptics
+xf86-video-dummy
 xf86-video-fbdev
 xf86-video-sisusb
+xf86-video-vesa
+xf86-video-voodoo
 xfburn
 xfce4-appfinder
 xfce4-artwork

@@ -9,3 +9,20 @@
  pkgdesc='Show information about binary files and find gadgets to build rop chains for different architectures'
  url='https://github.com/sashs/Ropper'
  arch=('any')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-python
+-python-archinfo
+-python-build
+-python-capstone
+-python-filebytes
+-python-installer
+-python-pyvex
+-python-setuptools
+-python-wheel
+-python-z3-solver

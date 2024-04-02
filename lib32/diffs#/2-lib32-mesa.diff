@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -40,7 +40,6 @@
+@@ -14,7 +14,7 @@
+   'lib32-mesa'
+ )
+ pkgver=24.0.4
+-pkgrel=2
++pkgrel=1
+ epoch=1
+ pkgdesc="Open-source OpenGL drivers - 32-bit"
+ url="https://www.mesa3d.org/"
+@@ -44,7 +44,6 @@
    'lib32-rust-libs'
    'lib32-spirv-llvm-translator'
    'lib32-spirv-tools'
@@ -8,7 +17,15 @@
    'lib32-vulkan-icd-loader'
    'lib32-wayland'
    'lib32-xcb-util-keysyms'
-@@ -148,7 +147,7 @@
+@@ -128,7 +127,6 @@
+     -D glx=dri
+     -D intel-clc=enabled
+     -D intel-xe-kmd=enabled
+-    -D libunwind=disabled
+     -D llvm=enabled
+     -D lmsensors=enabled
+     -D microsoft-clc=disabled
+@@ -148,7 +146,7 @@
  
    export BINDGEN_EXTRA_CLANG_ARGS="-m32"
  
@@ -17,53 +34,53 @@
    meson configure build # Print config
    meson compile -C build
  
-@@ -241,7 +240,6 @@
-     'lib32-libdrm'
+@@ -256,7 +254,6 @@
      'lib32-libx11'
+     'lib32-libxcb'
      'lib32-libxshmfence'
 -    'lib32-systemd'
+     'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-     'lib32-zstd'
-@@ -263,7 +261,6 @@
-     'lib32-libdrm'
+@@ -284,7 +281,6 @@
      'lib32-libx11'
+     'lib32-libxcb'
      'lib32-libxshmfence'
 -    'lib32-systemd'
+     'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-     'lib32-zstd'
-@@ -287,7 +284,6 @@
-     'lib32-libx11'
-     'lib32-libxshmfence'
-     'lib32-llvm-libs'
--    'lib32-systemd'
-     'lib32-wayland'
-     'lib32-xcb-util-keysyms'
-     'lib32-zstd'
-@@ -312,7 +308,6 @@
-     'lib32-libx11'
+@@ -314,7 +310,6 @@
+     'lib32-libxcb'
      'lib32-libxshmfence'
      'lib32-llvm-libs'
 -    'lib32-systemd'
+     'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-     'lib32-zstd'
-@@ -336,7 +331,6 @@
-     'lib32-libdrm'
+@@ -344,7 +339,6 @@
+     'lib32-libxcb'
+     'lib32-libxshmfence'
+     'lib32-llvm-libs'
+-    'lib32-systemd'
+     'lib32-vulkan-icd-loader'
+     'lib32-wayland'
+     'lib32-xcb-util-keysyms'
+@@ -374,7 +368,6 @@
      'lib32-libx11'
+     'lib32-libxcb'
      'lib32-libxshmfence'
 -    'lib32-systemd'
+     'lib32-vulkan-icd-loader'
      'lib32-wayland'
      'lib32-xcb-util-keysyms'
-     'lib32-zstd'
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -23,7 +23,6 @@
+@@ -25,7 +25,6 @@
  lib32-rust-libs
  lib32-spirv-llvm-translator
  lib32-spirv-tools

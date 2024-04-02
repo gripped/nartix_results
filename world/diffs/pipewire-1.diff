@@ -1,6 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -63,7 +63,6 @@
+@@ -19,9 +19,10 @@
+   pipewire-session-manager
+   pulse-native-provider
+ )
++_commit=f2874ad1c2f7f0b9a1da05cc4f402b3ea3761ee6  # tags/1.0.4
+ pkgver=1.0.4
+ _so_ver=0.3
+-pkgrel=4
++pkgrel=3
+ epoch=1
+ pkgdesc="Low-latency audio/video router and processor"
+ url="https://pipewire.org"
+@@ -62,7 +63,6 @@
    rtkit
    sbc
    sdl2
@@ -8,7 +20,16 @@
    valgrind
    webrtc-audio-processing-1
  )
-@@ -102,9 +101,10 @@
+@@ -71,7 +71,7 @@
+   openal
+ )
+ source=(
+-  "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
++  "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#commit=$_commit"
+ )
+ b2sums=('a1a9905ec4b09fe7d24bdf08164d96a1b2ee285576b53b941b6c245bf4c63991295398cb14e22555e4ba2bdff8d16523ef27fa05f81a336df3991f2ac9d911e1')
+ 
+@@ -101,9 +101,10 @@
      -D selinux=disabled
      -D session-managers=[]
      -D udevrulesdir=/usr/lib/udev/rules.d
@@ -22,7 +43,7 @@
    meson compile -C build
  }
  
-@@ -135,7 +135,6 @@
+@@ -134,7 +135,6 @@
      libncursesw.so
      libpipewire-$_so_ver.so
      libreadline.so
@@ -30,7 +51,7 @@
      libudev.so
    )
    optdepends=(
-@@ -155,7 +154,6 @@
+@@ -154,7 +154,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
    )
@@ -38,7 +59,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -192,7 +190,6 @@
+@@ -191,7 +190,6 @@
      _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban*.so
      _pick audio usr/lib/spa-0.2/{aec,alsa,audio*,avb,bluez5}
@@ -46,7 +67,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
      _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
-@@ -220,7 +217,6 @@
+@@ -219,7 +217,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-pulse-tunnel.so
@@ -54,7 +75,7 @@
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
      _pick pulse usr/share/man/man7/pipewire-pulse*.7
-@@ -299,7 +295,6 @@
+@@ -298,7 +295,6 @@
      libusb-1.0.so
      libwebrtc-audio-processing-1.so
      pipewire
@@ -62,7 +83,7 @@
    )
  
    mv audio/* "$pkgdir"
-@@ -401,7 +396,6 @@
+@@ -400,7 +396,6 @@
      pipewire
      pipewire-audio
      pipewire-session-manager
@@ -70,7 +91,7 @@
    )
    provides=(
      pulse-native-provider
-@@ -412,7 +406,6 @@
+@@ -411,7 +406,6 @@
      pulseaudio
      pulseaudio-bluetooth
    )

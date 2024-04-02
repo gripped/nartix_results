@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,6 @@
-   ostree
+@@ -35,8 +35,6 @@
    polkit
    python
+   python-gobject
 -  systemd
+-  systemd-libs
    wayland
    xdg-dbus-proxy
    xdg-utils
-@@ -90,9 +89,10 @@
+@@ -97,9 +95,10 @@
      -D selinux_module=disabled
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
@@ -26,11 +27,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,7 +20,6 @@
- polkit
- python
+@@ -29,8 +29,6 @@
+ python-gobject
+ python-packaging
  python-pyparsing
 -systemd
+-systemd-libs
  wayland
  wayland-protocols
  xdg-dbus-proxy

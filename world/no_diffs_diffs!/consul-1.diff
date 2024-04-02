@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=consul
+ _commit=98cb473cc11f2de0ccb61106381b0c7e92819c58
+ pkgver=1.18.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A tool for service discovery, monitoring and configuration."
+ arch=('x86_64')
+ url="https://www.consul.io"
 @@ -11,7 +11,6 @@
  makedepends=('git' 'go' 'gox' 'go-tools')
  makedepends+=('procps-ng' 'zip' 'yarn' 'nodejs-lts-hydrogen' 'npm')  # makedepends for the UI

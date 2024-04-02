@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,24 @@
+ 
+ pkgname=mate-panel
+-pkgver=1.28.0
+-pkgrel=2
++pkgver=1.26.3
++pkgrel=1.1
+ pkgdesc="The MATE Panel"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+ license=('GPL')
+-depends=('dbus-glib' 'libwnck3' 'libcanberra' 'libmateweather' 'libsm' 'mate-menus' 'mate-desktop' 'gettext' 'gtk-layer-shell' 'dconf-editor')
++depends=('dbus-glib' 'libwnck3' 'libcanberra' 'libmateweather' 'libsm' 'mate-menus' 'mate-desktop' 'gettext' 'gtk-layer-shell')
+ makedepends=('itstool' 'gobject-introspection' 'mate-common' 'yelp-tools' 'autoconf-archive')
+ source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
+ groups=('mate')
+ conflicts=('mate-panel-gtk3')
+ replaces=('mate-panel-gtk3')
+-sha256sums=('b3bd04a094d0eb5bd7dc3380ef6f0c49d9a9d5209733d7ccd7b46d066a208cba')
++sha256sums=('f33f10d527450ba7e98cc70ab255ac481330aa9e66dbcc7c511b6baa171de029')
++
++prepare() {
++  cd "${pkgname}-${pkgver}"
++  sed -i 's/--keyword Name/--keyword=Name/' libmate-panel-applet/Makefile.in
++  sed -i 's/--keyword Description/--keyword=Description/' libmate-panel-applet/Makefile.in
++}
+ 
+ build() {
+     cd "${pkgname}-${pkgver}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ autoconf-archive
+ dbus-glib
+-dconf-editor
+ gettext
+ gobject-introspection
+ gtk-layer-shell
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,8 @@
++prepare() {
++cd "${pkgname}-${pkgver}"
++sed -i 's/--keyword Name/--keyword=Name/' libmate-panel-applet/Makefile.in
++sed -i 's/--keyword Description/--keyword=Description/' libmate-panel-applet/Makefile.in
++}
+ build() {
+ cd "${pkgname}-${pkgver}"
+ ./configure \

@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,19 @@
+ 
+ pkgname=v2ray-domain-list-community
+-pkgver=20240331083526
++pkgver=20240311084253
++_commit=23fafa861c7ca083f65f310252ca7dab59644adb
+ pkgrel=1
+ pkgdesc="A list of domains to be used as geosites for routing purpose in Project V"
+ arch=('any')
+ url="https://github.com/v2fly/domain-list-community"
+ license=('MIT')
+ makedepends=('go' 'git')
+-source=("git+https://github.com/v2fly/domain-list-community.git#tag=$pkgver")
+-sha512sums=('45fb71ac61d4a80541c131bde504dada3f7abbdfe681edd9b1e46ee2425a2b8cdd9a84e67d4a4367bd8115fd15fa81dc814a29da229a3e9c215b99c253b27a81')
++source=("git+https://github.com/v2fly/domain-list-community.git#commit=$_commit")
++sha512sums=('SKIP')
+ 
+ build() {
+   cd domain-list-community
+-  go run main.go
++  ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18 go run main.go
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd domain-list-community
+-go run main.go
++ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18 go run main.go
+ }
