@@ -193,6 +193,7 @@ hip-runtime-amd
 hwloc
 hyprland
 i2pd
+i3-wm
 ibus
 libibus
 igsc
@@ -267,11 +268,14 @@ libldm
 libmspub
 libnvme
 libprocps
+libretls
 libsidplay
 libtg_owt
+libtiff
 libudev0-shim
 libusbsio
 python-libusbsio
+libuv
 libvirt-python
 libwhereami
 light-locker
@@ -376,6 +380,7 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+newsboat
 nsd
 nushell
 nvchecker
@@ -497,6 +502,7 @@ python-colour
 python-pipenv-to-requirements
 python-pymupdf
 python-pyudev
+python-spsdk
 qastools
 qemu
 qemu-common
@@ -609,6 +615,7 @@ rspamd
 rtkit
 ruby-faraday-patron
 ruby-optimist
+s3cmd
 samba
 libwbclient
 smbclient
@@ -623,6 +630,8 @@ seatd
 sfml
 shairport-sync
 signal-desktop
+signify
+slock
 smartmontools
 snapper
 solid
@@ -662,6 +671,7 @@ udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
+ufw
 umockdev
 unbound
 upower

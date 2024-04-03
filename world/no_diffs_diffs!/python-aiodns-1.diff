@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-aiodns
+ _name=${pkgname#python-}
+-pkgver=3.2.0
++pkgver=3.1.1
+ pkgrel=1
+ pkgdesc='Simple DNS resolver for asyncio'
+ arch=('any')
+@@ -15,9 +15,9 @@
+   'python-setuptools'
+   'python-wheel'
+ )
+-checkdepends=('python-pytest' 'python-uvloop')
++checkdepends=('python-pytest')
+ source=("git+$url.git#tag=v$pkgver")
+-b2sums=('12331eaf680527878fdf143bb57099affb3bb70e64c264f3214ef9f4a2156f7a51eb60f898e42c3bcd753f9d2fe8e95165299dbc31ad3b745e33a11742a1fe40')
++b2sums=('SKIP')
+ 
+ build() {
+   cd "$_name"

@@ -25,24 +25,3 @@
    install -d -o 182 -g 182 -m 755 "$pkgdir/var/lib/spamassassin"
  
    echo 'u spamd 182 - /var/lib/spamassassin' |
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1,14 @@
-+openssl
-+perl-crypt-ssleay
-+perl-dbi
-+perl-http-message
-+perl-io-socket-inet6
-+perl-io-socket-ssl
-+perl-libwww
-+perl-mail-dkim
-+perl-mail-spf
-+perl-net-dns
-+perl-net-http
-+razor
-+re2c
-+zlib

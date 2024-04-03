@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,28 @@
+ 
+ pkgname=slock
+ pkgver=1.5
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A simple screen locker for X"
+ arch=('x86_64')
+ url="https://tools.suckless.org/slock"
+ license=('MIT')
+-makedepends=('git')
+ depends=('libxext' 'libxrandr')
+-source=("git+https://git.suckless.org/slock#tag=${pkgver}")
+-sha256sums=('b5517afa598992f0d90e6847a2aec2837679f3b41468298e56235528c8baf934')
++source=("https://dl.suckless.org/tools/$pkgname-$pkgver.tar.gz")
++sha256sums=('aee1e3fbf6a277fb625a3838073b979b6483e7baca4ce82f56de1ff192db0e4d')
+ 
+ prepare() {
+-  cd $pkgname
++  cd "$srcdir/slock-$pkgver"
+   sed -i 's|static const char \*group = "nogroup";|static const char *group = "nobody";|' config.def.h
+   sed -ri 's/((CPP|C|LD)FLAGS) =/\1 +=/g' config.mk
+ }
+ 
+ build() {
+-  cd $pkgname
++  cd "$srcdir/slock-$pkgver"
+   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd "$srcdir/slock-$pkgver"
+   make PREFIX=/usr DESTDIR="$pkgdir" install
+   install -m644 -D LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-git
+ libxext
+ libxrandr
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd $pkgname
++cd "$srcdir/slock-$pkgver"
+ sed -i 's|static const char \*group = "nogroup";|static const char *group = "nobody";|' config.def.h
+ sed -ri 's/((CPP|C|LD)FLAGS) =/\1 +=/g' config.mk
+ }
+ build() {
+-cd $pkgname
++cd "$srcdir/slock-$pkgver"
+ make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+ }

@@ -13,6 +13,7 @@ caja-sendto
 caja-share
 caja-wallpaper
 caja-xattr-tags
+caja-audio-video-properties
 caja
 certbot-apache
 certbot-dns-cloudflare
@@ -159,7 +160,6 @@ mate-applets
 mate-backgrounds
 mate-calc
 mate-common
-mate-control-center
 mate-desktop
 mate-icon-theme-faenza
 mate-icon-theme
@@ -175,6 +175,7 @@ mate-settings-daemon
 mate-terminal
 mate-themes
 mate-user-guide
+mate-user-share
 mate-utils
 mgba
 libmgba

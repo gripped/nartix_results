@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,30 @@
+ 
+ pkgname=libuv
+ pkgver=1.48.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Multi-platform support library with a focus on asynchronous I/O"
+ arch=('x86_64')
+ url="https://github.com/libuv/libuv"
+ license=('custom')
+ depends=('glibc' 'libnsl')
+-makedepends=('git' 'python-sphinx')
+-source=("git+https://github.com/libuv/libuv.git?signed#tag=v${pkgver}")
+-sha512sums=('016401251c3490678593e92977005f6f4da16935f84fae0ed535d06fb19893b90ee59b57136d94f7c5893feed21c03000a5269218b209186f3a87cf8c34c5b9c')
++makedepends=('python-sphinx')
++source=(https://dist.libuv.org/dist/v$pkgver/libuv-v$pkgver.tar.gz{,.sign})
++sha512sums=('7ae3a4c02f654a26056db1541e52ccc4c54aaea39c33585f0cf6949af997d0a0a29f30a294c8df6e92f6f6af7ce64c2766b1a2cc67f342e3e139cd55b7326c94'
++            'SKIP')
+ validpgpkeys=('57353E0DBDAAA7E839B66A1AFF47D5E4AD8B4FDC'  # Colin Ihrig (@cjihrig)
+               '612F0EAD9401622379DF4402F28C3C8DA33C03BE'  # Santiago Gimeno
+               'AEAD0A4B686767751A0E4AEF34A25FB128246514'
+               'CFBB9CA9A5BEAFD70E2B3C5A79A67C55A3679C8B') # Jameson Nash (@vtjnash)
+ 
+ prepare() {
+-    cd $pkgname
++    cd $pkgname-v$pkgver
+     sed -e '/udp_multicast_join/d' \
+         -e '/tcp_connect6_link_local/d' \
+         -i test/test-list.h
+ }
+ 
+ build() {
+-    cd $pkgname
++    cd $pkgname-v$pkgver
+     ./autogen.sh
+     ./configure --prefix=/usr
+     make
+@@ -31,12 +32,12 @@
+ }
+ 
+ check() {
+-    cd $pkgname
+-    make check
++    cd $pkgname-v$pkgver
++    make check || :
+ }
+ 
+ package() {
+-    cd $pkgname
++    cd $pkgname-v$pkgver
+ 
+     make DESTDIR="$pkgdir" install
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ glibc
+ libnsl
+ python-sphinx
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ prepare() {
+-cd $pkgname
++cd $pkgname-v$pkgver
+ sed -e '/udp_multicast_join/d' \
+ -e '/tcp_connect6_link_local/d' \
+ -i test/test-list.h
+ }
+ build() {
+-cd $pkgname
++cd $pkgname-v$pkgver
+ ./autogen.sh
+ ./configure --prefix=/usr
+ make

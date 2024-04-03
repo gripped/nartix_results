@@ -8,10 +8,10 @@ libreoffice-extension-writer2latex
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
-mate-user-share
 qbittorrent
 qbittorrent-nox
 tor

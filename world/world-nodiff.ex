@@ -896,7 +896,6 @@ hyphen-en
 hyprcursor
 hyprlang
 i2c-tools
-i3-wm
 i3blocks
 i3lock
 i3status
@@ -1734,7 +1733,6 @@ libressl
 librest
 librest-docs
 librest-demos
-libretls
 librevenge
 librsvg
 librsvg-docs
@@ -1785,7 +1783,6 @@ libteam-docs
 libtermkey
 libthai
 libtheora
-libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -1807,7 +1804,6 @@ libusbmuxd
 libutempter
 libutf8proc
 libutp
-libuv
 libva-intel-driver
 libva-utils
 libva-vdpau-driver
@@ -2215,7 +2211,6 @@ nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
-newsboat
 nftables
 nginx
 nginx-src
@@ -3965,7 +3960,6 @@ python-sphinxcontrib-trio
 python-sphinxext-opengraph
 python-sphinxygen
 python-sphobjinv
-python-spsdk
 python-spur
 python-sqlalchemy-utils
 python-sqlalchemy
@@ -4595,7 +4589,6 @@ rxvt-unicode
 rxvt-unicode-terminfo
 rygel
 s2n-tls
-s3cmd
 s3fs-fuse
 salt
 samurai
@@ -4646,7 +4639,6 @@ shared-mime-info
 sharutils
 shhmsg
 shhopt
-signify
 signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui
@@ -4660,7 +4652,6 @@ slang
 sleuthkit
 slimit
 slirp4netns
-slock
 slop
 slurp
 smb4k
@@ -5015,7 +5006,6 @@ uchardet
 udiskie
 udpxy
 ufmt
-ufw
 uget
 uglify-js
 uhttpmock
