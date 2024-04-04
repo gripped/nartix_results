@@ -1,24 +1,62 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,7 +28,7 @@
+@@ -2,8 +2,8 @@
+ pkgbase=xorg-server
+ pkgname=('xorg-server' 'xorg-server-xephyr' 'xorg-server-xvfb' 'xorg-server-xnest'
+          'xorg-server-common' 'xorg-server-devel')
+-pkgver=21.1.12
+-pkgrel=1
++pkgver=21.1.11
++pkgrel=2
+ arch=('x86_64')
+ license=('LicenseRef-Adobe-Display-PostScript'
+          'BSD-3-Clause'
+@@ -28,20 +28,21 @@
               'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
               'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
               'xcb-util' 'xcb-util-image' 'xcb-util-renderutil' 'xcb-util-wm' 'xcb-util-keysyms'
 -             'libxshmfence' 'libunwind' 'systemd' 'meson' 'git')
+-source=(${pkgbase}::git+https://gitlab.freedesktop.org/xorg/xserver.git?signed#tag=${pkgbase}-${pkgver}
 +             'libxshmfence' 'libunwind' 'elogind' 'meson' 'git')
- source=(https://xorg.freedesktop.org/releases/individual/xserver/${pkgbase}-${pkgver}.tar.xz{,.sig}
++source=(https://xorg.freedesktop.org/releases/individual/xserver/${pkgbase}-${pkgver}.tar.xz{,.sig}
          xvfb-run # with updates from FC master
          xvfb-run.1
-@@ -50,7 +50,7 @@
+ )
+ validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF'  # Peter Hutterer (Who-T) <office@who-t.net>
+               '67DC86F2623FC5FD4BB5225D14706DBE1E4B4540'  # Olivier Fourdan <fourdan@xfce.org>
+               'FD0004A26EADFE43A4C3F249C6F7AE200374452D') # Povilas Kanapickas <povilas@radix.lt>
+-sha512sums=('3a5c406debc694112ab4dd1b248c20e84aeefd1cf4417f6131beffcd02e4449129b9488ff17e46f47627d3e7f05b90d55db8096ebb1ab098bfd820afc2d3278d'
++sha512sums=('ad5edacbe8c7e2ebe6b4a690af94c7ea5ebc781d00b0e58ae2d273c78ceee2fa00b86d10479ad69da1b3233490619bae5a33db64c967c24bbfc5d5d39ddce1cb'
++            'SKIP'
+             '672375cb5028ba9cda286e317d17bd8c9a9039483e7f79c21f223fd08ba07655729e9f59a082f4b8f5d8de45a77a9e9affce1002fb8c6657e26ef1a490654e49'
+             'de5e2cb3c6825e6cf1f07ca0d52423e17f34d70ec7935e9dd24be5fb9883bf1e03b50ff584931bd3b41095c510ab2aa44d2573fd5feaebdcb59363b65607ff22')
+ 
+ prepare() {
+-  cd ${pkgbase}
++  cd ${pkgbase}-$pkgver
+ }
+ 
+ build() {
+@@ -49,7 +50,7 @@
    export CXXFLAGS=${CXXFLAGS/-fno-plt}
    export LDFLAGS=${LDFLAGS/-Wl,-z,now}
  
--  arch-meson ${pkgbase}-$pkgver build \
+-  arch-meson ${pkgbase} build \
 +  artix-meson ${pkgbase}-$pkgver build \
      -D ipv6=true \
      -D xvfb=true \
      -D xnest=true \
-@@ -98,7 +98,7 @@
+@@ -89,15 +90,15 @@
+   _install fakeinstall/usr/lib/xorg/protocol.txt
+   _install fakeinstall/usr/share/man/man1/Xserver.1
+ 
+-  install -m644 -Dt "${pkgdir}/var/lib/xkb/" "${pkgbase}"/xkb/README.compiled
+-  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}"/COPYING
++  install -m644 -Dt "${pkgdir}/var/lib/xkb/" "${pkgbase}-${pkgver}"/xkb/README.compiled
++  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ 
+ package_xorg-server() {
    pkgdesc="Xorg X server"
    depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
             dbus libgl xf86-input-libinput nettle
@@ -27,7 +65,13 @@
             libpciaccess libdrm libxshmfence libxcvt) # FS#52949
    provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
    conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
-@@ -120,7 +120,7 @@
+@@ -114,12 +115,12 @@
+ 
+   install -m755 -d "${pkgdir}/etc/X11/xorg.conf.d"
+ 
+-  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}"/COPYING
++  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
  
  package_xorg-server-xephyr() {
    pkgdesc="A nested X server that runs as an X application"
@@ -36,7 +80,15 @@
             xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
             nettle libtirpc
             xcb-util libxdmcp libx11 libxau libxshmfence glibc)
-@@ -135,7 +135,7 @@
+@@ -127,14 +128,14 @@
+   _install fakeinstall/usr/bin/Xephyr
+   _install fakeinstall/usr/share/man/man1/Xephyr.1
+ 
+-  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}"/COPYING
++  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ 
+ package_xorg-server-xvfb() {
    pkgdesc="Virtual framebuffer X server"
    license=('MIT' 'GPL-2.0-only')
    depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
@@ -45,7 +97,14 @@
             libxdmcp sh glibc libxau)
  
    _install fakeinstall/usr/bin/Xvfb
-@@ -150,7 +150,7 @@
+@@ -143,19 +144,19 @@
+   install -m755 "${srcdir}/xvfb-run" "${pkgdir}/usr/bin/"
+   install -m644 "${srcdir}/xvfb-run.1" "${pkgdir}/usr/share/man/man1/" # outda
+ 
+-  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}"/COPYING
++  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ 
  package_xorg-server-xnest() {
    pkgdesc="A nested X server that runs as an X application"
    depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle
@@ -54,6 +113,22 @@
             libxdmcp glibc libx11 libxau)
  
    _install fakeinstall/usr/bin/Xnest
+   _install fakeinstall/usr/share/man/man1/Xnest.1
+ 
+-  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}"/COPYING
++  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ }
+ 
+ package_xorg-server-devel() {
+@@ -167,7 +168,7 @@
+   _install fakeinstall/usr/lib/pkgconfig/xorg-server.pc
+   _install fakeinstall/usr/share/aclocal/xorg-server.m4
+ 
+-  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}"/COPYING
++  install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" "${pkgbase}-${pkgver}"/COPYING
+ 
+   find fakeinstall -depth -print0 | xargs -0 rmdir
+ }
 
 
 ############# Stripped diff below #################

@@ -461,6 +461,7 @@ dvisvgm
 dzen2
 easytag
 ebook-tools
+eclipse-ecj
 ecryptfs-utils
 editline
 editorconfig-core-c
@@ -896,6 +897,7 @@ hyphen-en
 hyprcursor
 hyprlang
 i2c-tools
+i3-wm
 i3blocks
 i3lock
 i3status
@@ -1733,6 +1735,7 @@ libressl
 librest
 librest-docs
 librest-demos
+libretls
 librevenge
 librsvg
 librsvg-docs
@@ -1804,6 +1807,7 @@ libusbmuxd
 libutempter
 libutf8proc
 libutp
+libuv
 libva-intel-driver
 libva-utils
 libva-vdpau-driver
@@ -2211,6 +2215,7 @@ nm-connection-editor
 networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
+newsboat
 nftables
 nginx
 nginx-src
@@ -2299,6 +2304,7 @@ opencolorio
 openconnect
 opencore-amr
 opendbx
+opendoas
 openexr
 openfec
 openfire
@@ -2824,7 +2830,6 @@ python-opengl
 pyprof2calltree
 pypy
 pypy3
-pyqt-builder
 pyqt5-3d
 python-pyqt5-3d
 pyqt5-chart
@@ -3489,7 +3494,6 @@ python-nose-show-skipped
 python-nose
 python-nose2
 python-nosexcover
-python-notify2
 python-nptyping
 python-nrfutil
 python-nspektr
@@ -3960,6 +3964,7 @@ python-sphinxcontrib-trio
 python-sphinxext-opengraph
 python-sphinxygen
 python-sphobjinv
+python-spsdk
 python-spur
 python-sqlalchemy-utils
 python-sqlalchemy
@@ -4652,6 +4657,7 @@ slang
 sleuthkit
 slimit
 slirp4netns
+slock
 slop
 slurp
 smb4k
@@ -5006,6 +5012,7 @@ uchardet
 udiskie
 udpxy
 ufmt
+ufw
 uget
 uglify-js
 uhttpmock
