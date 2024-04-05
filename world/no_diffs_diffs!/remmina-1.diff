@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=remmina
+ epoch=1
+ pkgver=1.4.35
+-pkgrel=3
++pkgrel=2
+ pkgdesc="remote desktop client written in GTK+"
+ url="https://www.remmina.org/"
+ arch=('x86_64')
+@@ -25,7 +25,6 @@
+   'libx11'
+   'openssl'
+   'pango'
+-  'python'
+   'vte3'
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -23,7 +23,6 @@
+ ninja
+ openssl
+ pango
+-python
+ spice-gtk
+ spice-protocol
+ vte3

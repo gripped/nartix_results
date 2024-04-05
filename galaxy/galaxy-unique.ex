@@ -26,6 +26,7 @@ gitea-tea
 grub-theme
 htpdate
 iso-profiles
+kotatogram-desktop-git
 lib32-artix-archlinux-support
 libfoo
 libpamac

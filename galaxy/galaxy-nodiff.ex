@@ -57,7 +57,6 @@ fluxbox
 fpc-src
 fpc
 garcon
-girara
 gpicview
 lazarus
 lazarus-gtk2
@@ -405,9 +404,4 @@ xfconf
 xfdesktop
 xfwm4-themes
 xfwm4
-zathura-cb
-zathura-djvu
 zathura-pdf-mupdf
-zathura-pdf-poppler
-zathura-ps
-zathura

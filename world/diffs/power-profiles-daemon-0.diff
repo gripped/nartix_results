@@ -1,11 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=power-profiles-daemon
+-pkgver=0.21
++pkgver=0.20
+ pkgrel=1
+ pkgdesc='Makes power profiles handling available over D-Bus'
+ url='https://gitlab.freedesktop.org/upower/power-profiles-daemon'
 @@ -18,14 +18,15 @@
                python-isort
                python-mccabe
                umockdev)
 -source=(https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/archive/$pkgver/$pkgname-$pkgver.tar.gz)
--sha256sums=('b6d3ad1cdcdc0324d5ccaa86dd0ed465544c1e86360fdbd2b6b2b0723afb6dad')
+-sha256sums=('c15a368a59f2cae1474bdfccdd9357f06b0abc9eb7638a87f68c091aaf570349')
 +source=(https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/archive/$pkgver/$pkgname-$pkgver.tar.gz
 +        power-profiles-daemon.tmpfiles)
 +sha256sums=('b6d3ad1cdcdc0324d5ccaa86dd0ed465544c1e86360fdbd2b6b2b0723afb6dad'

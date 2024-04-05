@@ -1,0 +1,177 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=mupdf
+ pkgname=(libmupdf mupdf mupdf-gl mupdf-tools python-mupdf)
+-pkgver=1.24.1
++pkgver=1.24.0
+ pkgrel=1
+ pkgdesc='Lightweight PDF and XPS viewer'
+ arch=('x86_64')
+@@ -13,7 +13,6 @@
+   'desktop-file-utils'
+   'freeglut'
+   'freetype2'
+-  'git'
+   'glu'
+   'gumbo-parser'
+   'harfbuzz'
+@@ -32,47 +31,25 @@
+ )
+ options=('staticlibs')
+ source=(
+-  git+https://github.com/ArtifexSoftware/mupdf.git#tag=$pkgver
+-  git+https://github.com/ArtifexSoftware/mujs.git
+-  git+https://github.com/ArtifexSoftware/thirdparty-lcms2.git
+-  git+https://github.com/ArtifexSoftware/extract.git
++  "https://mupdf.com/downloads/archive/$pkgbase-${pkgver/_/}-source.tar.gz"
+   $pkgbase.desktop
+   $pkgbase.xpm
+   $pkgbase-1.23.9-cpp_ldflags.patch
+   $pkgbase-1.23.9-install_targets.patch
+ )
+-sha256sums=('bba6c0b3f808a5233807f3777eb98f03d7740aa2125c1dd6c412180f4cd8a0b2'
+-            'SKIP'
+-            'SKIP'
+-            'SKIP'
++sha256sums=('52f63003a6f4d89f234e9edfb4b4c83d216b83aaeb323cfda6047cb754599ae0'
+             'ccff66979249bd4ab4ba8918660f194eb90eb0ae231b16e36a6cecdcf471883f'
+             'a435f44425f5432c074dee745d8fbaeb879038ec1f1ec64f037c74662f09aca8'
+             '152222c0bc066404d9e38be7abbba20748b0a4bbc9cb30403d19e3b176ab257f'
+             'ceb2b16a12bf193d514969f995dfca4c2d12d489c2690928db2db4afe09f6c8c')
+ 
+ prepare() {
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+ 
+   patch -Np1 -i ../$pkgbase-1.23.9-cpp_ldflags.patch
+   patch -Np1 -i ../$pkgbase-1.23.9-install_targets.patch
+ 
+-  git submodule init
+-  rm -rvf thirdparty/{curl,freeglut,freetype,gumbo-parser,harfbuzz,jbig2dec,leptonica,libjpeg,openjpeg,tesseract,zlib}
+-  git submodule deinit thirdparty/curl
+-  git submodule deinit thirdparty/freeglut
+-  git submodule deinit thirdparty/freetype
+-  git submodule deinit thirdparty/gumbo-parser
+-  git submodule deinit thirdparty/harfbuzz
+-  git submodule deinit thirdparty/jbig2dec
+-  git submodule deinit thirdparty/leptonica
+-  git submodule deinit thirdparty/libjpeg
+-  git submodule deinit thirdparty/openjpeg
+-  git submodule deinit thirdparty/tesseract
+-  git submodule deinit thirdparty/zlib
+-  git config submodule.thirdparty/mujs.url "$srcdir/mujs" # is hardcoded and needs a patch to debundle
+-  git config submodule.thirdparty/lcms2.url "$srcdir/thirdparty-lcms2" # requires fork (not the version we are packaging)
+-  git config submodule.thirdparty/extract.url "$srcdir/extract" # we do not package this one
+-  git -c protocol.file.allow=always submodule update
++  rm -rf thirdparty/{curl,freeglut,freetype,gumbo-parser,harfbuzz,jbig2dec,leptonica,libjpeg,openjpeg,tesseract,zlib}
+ 
+   {
+     printf "LINUX_OR_OPENBSD := yes\n"  # required so that Makefile sets soname symlink
+@@ -96,7 +73,7 @@
+ }
+ 
+ build() {
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+   make -j1 VENV_FLAG= shared=yes build=release libs apps c++ python
+ }
+ 
+@@ -116,7 +93,7 @@
+     'zlib'
+   )
+ 
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+   make prefix=/usr DESTDIR="$pkgdir" SO_INSTALL_MODE=755 install-shared-c install-shared-c++
+ }
+ 
+@@ -129,7 +106,7 @@
+     'python'
+   )
+ 
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+   make prefix=/usr DESTDIR="$pkgdir" SO_INSTALL_MODE=755 install-shared-python
+ }
+ 
+@@ -143,7 +120,7 @@
+     'libxext'
+   )
+ 
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+ 
+   install -vDm 0755 build/shared-release/$pkgbase-x11 "$pkgdir"/usr/bin/$pkgbase
+ 
+@@ -168,7 +145,7 @@
+     'openssl'
+   )
+ 
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+ 
+   install -vDm 0755 build/shared-release/$pkgbase-gl "$pkgdir"/usr/bin/$pkgbase
+ 
+@@ -188,7 +165,7 @@
+     'openssl'
+   )
+ 
+-  cd $pkgbase
++  cd $pkgbase-${pkgver/_/}-source
+ 
+   install -vDm 0755 build/shared-release/{mutool,muraster} -t "$pkgdir"/usr/bin/
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,7 +4,6 @@
+ freeglut
+ freetype2
+ gcc-libs
+-git
+ glibc
+ glu
+ glut
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,8 @@
+ prepare() {
+-cd $pkgbase
++cd $pkgbase-${pkgver/_/}-source
+ patch -Np1 -i ../$pkgbase-1.23.9-cpp_ldflags.patch
+ patch -Np1 -i ../$pkgbase-1.23.9-install_targets.patch
+-git submodule init
+-rm -rvf thirdparty/{curl,freeglut,freetype,gumbo-parser,harfbuzz,jbig2dec,leptonica,libjpeg,openjpeg,tesseract,zlib}
+-git submodule deinit thirdparty/curl
+-git submodule deinit thirdparty/freeglut
+-git submodule deinit thirdparty/freetype
+-git submodule deinit thirdparty/gumbo-parser
+-git submodule deinit thirdparty/harfbuzz
+-git submodule deinit thirdparty/jbig2dec
+-git submodule deinit thirdparty/leptonica
+-git submodule deinit thirdparty/libjpeg
+-git submodule deinit thirdparty/openjpeg
+-git submodule deinit thirdparty/tesseract
+-git submodule deinit thirdparty/zlib
+-git config submodule.thirdparty/mujs.url "$srcdir/mujs" # is hardcoded and needs a patch to debundle
+-git config submodule.thirdparty/lcms2.url "$srcdir/thirdparty-lcms2" # requires fork (not the version we are packaging)
+-git config submodule.thirdparty/extract.url "$srcdir/extract" # we do not package this one
+-git -c protocol.file.allow=always submodule update
++rm -rf thirdparty/{curl,freeglut,freetype,gumbo-parser,harfbuzz,jbig2dec,leptonica,libjpeg,openjpeg,tesseract,zlib}
+ {
+ printf "LINUX_OR_OPENBSD := yes\n"  # required so that Makefile sets soname symlink
+ printf "USE_SYSTEM_CURL := yes\n"
+@@ -40,6 +24,6 @@
+ } > user.make
+ }
+ build() {
+-cd $pkgbase
++cd $pkgbase-${pkgver/_/}-source
+ make -j1 VENV_FLAG= shared=yes build=release libs apps c++ python
+ }

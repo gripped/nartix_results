@@ -3,6 +3,7 @@ cinnamon-desktop
 fceux
 firefox
 font-manager
+girara
 libetonyek
 libreoffice-extension-writer2latex
 libretro-dolphin
@@ -23,3 +24,8 @@ transmission-qt
 libtransmission
 xdg-desktop-portal-xapp
 xfce4-notifyd
+zathura-cb
+zathura-djvu
+zathura-pdf-poppler
+zathura-ps
+zathura
