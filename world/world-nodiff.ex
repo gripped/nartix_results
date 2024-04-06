@@ -246,6 +246,8 @@ camlp4
 cantarell-fonts
 cantor
 capnproto
+capstone
+python-capstone
 cargo-c
 caribou
 catatonit
@@ -2117,8 +2119,6 @@ menu-cache
 menumaker
 mercurial
 merkuro
-mesa-demos
-mesa-utils
 meson-python
 meson
 messagelib
@@ -2182,6 +2182,11 @@ mtr-gtk
 muffin
 mujs
 muparser
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
+python-mupdf
 musepack
 musepack-tools
 libmpcdec
@@ -2395,7 +2400,6 @@ pass
 passt
 pastebinit
 pasystray
-patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
@@ -2929,7 +2933,6 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
-python-arrow
 python-asgiref
 python-asn1crypto
 python-aspectlib
@@ -3560,7 +3563,6 @@ python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
-python-parso
 python-partd
 python-parver
 python-passlib

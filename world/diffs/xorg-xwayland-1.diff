@@ -1,16 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=xorg-xwayland
--pkgver=23.2.5
--pkgrel=1
-+pkgver=23.2.4
-+pkgrel=2
- arch=('x86_64')
- license=(
-     LicenseRef-Adobe-Display-PostScript
-@@ -23,15 +23,15 @@
+@@ -23,13 +23,13 @@
  groups=('xorg')
  url="https://xorg.freedesktop.org"
  pkgdesc="run X clients under wayland"
@@ -24,11 +14,8 @@
 -             'systemd' 'egl-wayland')
 +             'elogind' 'egl-wayland')
  source=(https://xorg.freedesktop.org/archive/individual/xserver/xwayland-$pkgver.tar.xz{,.sig})
--sha512sums=('8cf90d51db7c4c7e8191b5919e6529fe577bc735bb1d00fbc0139cb67ef95d30eb56c2026f3b2f639745c6a621b33bbd60f9ebabdd12175148dd192393ce1169'
-+sha512sums=('ac3ff208cbef5bbe4637c335cfda226489c93b0a3768f2f4fb0201c588485ede38262fbce77ef1425b3d2a0be61b6580df53341c7b95e6072c8b6371ad29d187'
+ sha512sums=('8cf90d51db7c4c7e8191b5919e6529fe577bc735bb1d00fbc0139cb67ef95d30eb56c2026f3b2f639745c6a621b33bbd60f9ebabdd12175148dd192393ce1169'
              'SKIP')
- provides=('xorg-server-xwayland')
- conflicts=('xorg-server-xwayland')
 @@ -41,7 +41,7 @@
  
  

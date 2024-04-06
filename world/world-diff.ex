@@ -34,8 +34,6 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
-capstone
-python-capstone
 cgmanager
 chromium-bsu
 chrony
@@ -322,6 +320,8 @@ matrix-synapse
 matterbridge
 media-player-info
 memcached
+mesa-demos
+mesa-utils
 mesa
 vulkan-mesa-layers
 opencl-clover-mesa
@@ -343,11 +343,6 @@ mpv
 multipath-tools
 mumble
 mumble-server
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
-python-mupdf
 mutter
 mutter-docs
 mutter45
@@ -387,6 +382,7 @@ libpackagekit-glib
 pacman-contrib
 paprefs
 passim
+patchelf
 pc-ble-driver
 pcsclite
 percona-server
@@ -478,9 +474,11 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
+python-arrow
 python-colour
 python-fasteners
 python-notify2
+python-parso
 python-pipenv-to-requirements
 python-precis_i18n
 python-profilestats
