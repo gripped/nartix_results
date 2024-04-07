@@ -1,19 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=mbedtls2
--pkgver=2.28.7
+-pkgver=2.28.8
+-pkgrel=2
 +pkgver=2.28.6
- pkgrel=1
++pkgrel=1
  pkgdesc='An open source, portable, easy to use, readable and flexible TLS library'
  arch=(x86_64)
+ url=https://tls.mbed.org
 @@ -19,7 +19,7 @@
    libmbedx509.so
  )
  options=(staticlibs)
--_tag=53d3363c1f44576efa13f6bd9392dbaf79302415
+-_tag=19cd99c38606b827bafa99bc9b790e78476a4b95
 +_tag=3a91dad9dceb484eea8b41f8941facafc4520021
  source=(git+https://github.com/ARMmbed/mbedtls.git#tag=${_tag})
  b2sums=(SKIP)
  
+@@ -50,7 +50,7 @@
+   DESTDIR="${pkgdir}" cmake --install build
+   rm -rf "${pkgdir}"/usr/lib/{cmake,*.so}
+   install -dm 755 "${pkgdir}"/usr/{include,lib}/mbedtls2
+-  mv "${pkgdir}"/usr/include/{everest,mbedtls,psa} "${pkgdir}"/usr/include/mbedtls2/
++  mv "${pkgdir}"/usr/include/{mbedtls,psa} "${pkgdir}"/usr/include/mbedtls2/
+   ln -s ../libmbedcrypto.so.7 "${pkgdir}"/usr/lib/mbedtls2/libmbedcrypto.so
+   ln -s ../libmbedtls.so.14 "${pkgdir}"/usr/lib/mbedtls2/libmbedtls.so
+   ln -s ../libmbedx509.so.1 "${pkgdir}"/usr/lib/mbedtls2/libmbedx509.so

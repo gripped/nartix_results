@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=soundtouch
+-pkgver=2.3.3
++pkgver=2.3.2
+ pkgrel=1
+ pkgdesc='An audio processing library'
+ arch=(x86_64)
+@@ -12,7 +12,7 @@
+   git
+   ninja
+ )
+-_tag=e83424d5928ab8513d2d082779c275765dee31b9
++_tag=29fba832a7920a04eab956b3990c50e13d8c93f9
+ source=(
+   git+https://codeberg.org/soundtouch/soundtouch.git#tag=${_tag}
+   soundtouch-cmake.patch

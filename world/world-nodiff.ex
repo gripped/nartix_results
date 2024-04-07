@@ -857,6 +857,7 @@ hiera
 highlight
 highlight-gui
 highway
+hip-runtime-amd
 hiredis
 hitori
 hivex
@@ -1787,6 +1788,7 @@ libteam-docs
 libtermkey
 libthai
 libtheora
+libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -2036,6 +2038,7 @@ malcontent
 libmalcontent
 maliit-framework
 maliit-keyboard
+mallard-ducktype
 man-pages-l10n
 man-pages-cs
 man-pages-da
@@ -3002,7 +3005,6 @@ python-breathe
 python-brotlicffi
 python-btchip
 python-btrees
-python-build
 python-cachecontrol
 python-cached-property
 python-cachelib
@@ -3983,7 +3985,6 @@ python-sphobjinv
 python-spsdk
 python-spur
 python-sqlalchemy-utils
-python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlparse
 python-sshpubkeys
@@ -4341,6 +4342,7 @@ rocm-smi-lib
 rocminfo
 rocprim
 rocs
+rocthrust
 rofi
 ropgadget
 ropper

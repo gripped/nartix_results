@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,15 +2,14 @@
+ _pkgname=build
+ pkgname=python-$_pkgname
+ pkgver=1.2.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc='A simple, correct Python build frontend'
+ arch=('any')
+ url='https://github.com/pypa/build'
+ license=('MIT')
+-depends=('python-packaging' 'python-pyproject-hooks')
++depends=('python' 'python-packaging' 'python-pyproject-hooks')
+ makedepends=(
+   'git' 'python-build' 'python-flit-core' 'python-installer'
+-  'python-sphinx' 'python-sphinx-argparse-cli' 'python-sphinx-autodoc-typehints' 'python-sphinx-furo' 'python-sphinx-issues'
+ )
+ checkdepends=(
+   'python-pytest' 'python-pytest-mock' 'python-pytest-rerunfailures'
+@@ -31,8 +30,6 @@
+   cd $pkgname
+ 
+   python -m build --wheel --skip-dependency-check --no-isolation
+-
+-  PYTHONPATH=src sphinx-build -b dirhtml -v docs docs-output
+ }
+ 
+ check() {
+@@ -46,9 +43,6 @@
+ 
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ 
+-  install -d "$pkgdir"/usr/share/doc/$pkgname
+-  cp -r docs-output/* "$pkgdir"/usr/share/doc/$pkgname
+-
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   install -d "$pkgdir"/usr/share/licenses/$pkgname
+   ln -s "$site_packages"/$_pkgname-$pkgver.dist-info/LICENSE \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,7 @@
+ git
++python
+ python-build
+ python-flit-core
+ python-installer
+ python-packaging
+ python-pyproject-hooks
+-python-sphinx
+-python-sphinx-argparse-cli
+-python-sphinx-autodoc-typehints
+-python-sphinx-furo
+-python-sphinx-issues
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,4 @@
+ build() {
+ cd $pkgname
+ python -m build --wheel --skip-dependency-check --no-isolation
+-PYTHONPATH=src sphinx-build -b dirhtml -v docs docs-output
+ }

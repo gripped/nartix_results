@@ -187,7 +187,6 @@ gvfs-onedrive
 haproxy
 haveged
 hidapi
-hip-runtime-amd
 hwloc
 hyprland
 i2pd
@@ -267,7 +266,6 @@ libnvme
 libprocps
 libsidplay
 libtg_owt
-libtiff
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -306,7 +304,6 @@ lxc
 lxcfs
 lxd
 mako
-mallard-ducktype
 mariadb
 mariadb-libs
 mariadb-clients
@@ -475,6 +472,7 @@ python-pyqt5
 pyqt6
 python-anytree
 python-arrow
+python-build
 python-colour
 python-fasteners
 python-notify2
@@ -484,6 +482,7 @@ python-precis_i18n
 python-profilestats
 python-pymupdf
 python-pyudev
+python-sqlalchemy
 qastools
 qemu
 qemu-common
@@ -590,7 +589,6 @@ rocblas
 rocfft
 rocrand
 rocsparse
-rocthrust
 rrdtool
 rspamd
 rtkit
