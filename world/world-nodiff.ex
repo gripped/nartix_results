@@ -1710,8 +1710,6 @@ libportal-gtk4
 libportal-qt5
 libportal-docs
 libppd
-libproxy
-libproxy-docs
 libpst
 libpst-docs
 libptytty
@@ -2794,6 +2792,15 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mongodb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgis
 postgrey
 postorius
@@ -4657,6 +4664,7 @@ shared-mime-info
 sharutils
 shhmsg
 shhopt
+signify
 signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui

@@ -1,39 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=fprintd
- pkgver=1.94.2
--pkgrel=2
-+pkgrel=2.1
- pkgdesc="D-Bus service to access fingerprint readers"
- url="https://fprint.freedesktop.org/"
- arch=(x86_64)
-@@ -9,9 +9,9 @@
- depends=(
-   dbus
-   glib2
-+  libelogind
+@@ -14,8 +14,7 @@
    libfprint
+   pam
    polkit
 -  systemd
+-  systemd-libs
++  libelogind
  )
  makedepends=(
    git
-@@ -42,16 +42,20 @@
-   git cherry-pick -n 3633dbaa630d4734f3c63721eecbf935315cb80d \
-                      ae04fa989720279e5558c3b8ff9ebe1959b1cf36
- 
-+  git cherry-pick -n 1be0810b695a88407bca084a12063b78a719345e
-+
-   git apply -3 ../tests.diff
- }
+@@ -46,11 +45,13 @@
  
  build() {
    local meson_options=(
-     -D gtk_doc=true
 +    -D libsystemd=libelogind
 +    -D systemd=false
+     -D gtk_doc=true
      -D pam_modules_dir=/usr/lib/security
    )
  
@@ -48,16 +31,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,6 +2,7 @@
- git
+@@ -4,6 +4,7 @@
  glib2
+ glibc
  gtk-doc
 +libelogind
  libfprint
  libfprint-2.so
  meson
-@@ -10,4 +11,3 @@
- python-cairo
+@@ -14,5 +15,3 @@
  python-dbus
  python-dbusmock
+ python-packaging
 -systemd
+-systemd-libs

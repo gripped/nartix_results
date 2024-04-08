@@ -9,13 +9,3 @@
  pkgdesc="Verifies code hasn't left circular references"
  arch=('any')
  url="https://metacpan.org/release/${_perl_namespace}-${_perl_module}"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1,3 @@
-+perl-cgi
-+perl-devel-cycle
-+perl-padwalker

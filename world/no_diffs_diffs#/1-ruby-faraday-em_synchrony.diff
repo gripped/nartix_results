@@ -19,12 +19,3 @@
  package() {
  cd "${srcdir}/${_gemname}-${pkgver}"
    local _gemdir="$(gem env gemdir)"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,2 +0,0 @@
--ruby
--ruby-rspec

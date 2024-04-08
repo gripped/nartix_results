@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=krecorder
+ pkgver=24.02.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Audio recorder for Plasma Mobile and other platforms'
+ url='https://apps.kde.org/krecorder/'
+ arch=(x86_64)
+@@ -12,7 +12,6 @@
+          ki18n
+          kirigami
+          kirigami-addons
+-         qqc2-desktop-style
+          qt6-base
+          qt6-declarative
+          qt6-multimedia
+@@ -28,7 +27,7 @@
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {
@@ -13,7 +30,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -5,7 +5,6 @@
+ ki18n
+ kirigami
+ kirigami-addons
+-qqc2-desktop-style
+ qt6-base
+ qt6-declarative
+ qt6-multimedia
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

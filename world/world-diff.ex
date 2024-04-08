@@ -263,6 +263,8 @@ libldm
 libmspub
 libnvme
 libprocps
+libproxy
+libproxy-docs
 libsidplay
 libtg_owt
 libudev0-shim
@@ -443,14 +445,6 @@ plymouth
 podman
 podman-docker
 polkit
-postfix
-postfix-cdb
-postfix-ldap
-postfix-lmdb
-postfix-mysql
-postfix-pcre
-postfix-pgsql
-postfix-sqlite
 postgresql-old-upgrade
 postgresql
 postgresql-libs
@@ -615,7 +609,6 @@ seatd
 sfml
 shairport-sync
 signal-desktop
-signify
 smartmontools
 snapper
 solid
