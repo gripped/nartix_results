@@ -221,7 +221,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-libaccounts-qt
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -379,7 +378,6 @@ libpackagekit-glib
 pacman-contrib
 paprefs
 passim
-patchelf
 pc-ble-driver
 pcsclite
 percona-server
@@ -445,6 +443,14 @@ plymouth
 podman
 podman-docker
 polkit
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgresql-old-upgrade
 postgresql
 postgresql-libs

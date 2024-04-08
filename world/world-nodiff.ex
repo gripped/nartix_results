@@ -1404,6 +1404,7 @@ lua53-lgi
 lib2geom
 libabw
 libaccounts-glib
+libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
@@ -2403,6 +2404,7 @@ pass
 passt
 pastebinit
 pasystray
+patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
@@ -2792,14 +2794,6 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
-postfix
-postfix-cdb
-postfix-ldap
-postfix-lmdb
-postfix-mysql
-postfix-pcre
-postfix-pgsql
-postfix-sqlite
 postgis
 postgrey
 postorius

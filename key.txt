@@ -1,0 +1,24 @@
+No diffs
+
+1.  No diff after stripping
+2.  No diff after removing debug
+4.  Only two sha256sum's differ (Useless now, remove)
+5.  artix-meson vs arch-meson
+6.  artix-cmake vs cmake
+7.  DCMAKE_INSTALL_PREFIX=/usr  (Lots of Qt pkgs. Prefix is /usr anyway)
+8.  echo vs msg2
+9.  DCMAKE_PREFIX_PATH=/usr
+10. srcdir semantics
+11. License file diff 
+
+100 added where debug is stripped from options
+
+The following sections are removed from the PKGBUILD's before the above processing
+All except prepare() and build()
+
+Diffs
+0. 'depends' match
+1. 'udev', 'libudev.so', 'elogind', 'libelogind', 'lib32-elogind', 'lib32-udev' in depends
+2. 'systemd-libs', 'libsystemd.so', 'systemd', 'systemd-sysvcompat', 'lib32-systemd' in depends if 1. didn't match
+5. 'depends' don't match and neither 1. or 2.
+

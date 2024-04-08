@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,6 +59,7 @@
+         --disable-memconf \
+         --enable-ui \
+         --disable-python2 \
++		--disable-systemd-services \
+         --with-python=python3 \
+         --with-ucd-dir=/usr/share/unicode/
+     sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ --disable-memconf \
+ --enable-ui \
+ --disable-python2 \
++--disable-systemd-services \
+ --with-python=python3 \
+ --with-ucd-dir=/usr/share/unicode/
+ sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

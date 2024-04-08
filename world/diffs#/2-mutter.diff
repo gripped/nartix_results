@@ -8,14 +8,15 @@
    wayland
    xorg-xwayland
  )
-@@ -104,13 +103,14 @@
+@@ -102,6 +101,7 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=false
+     -D docs=true
      -D egl_device=true
      -D installed_tests=false
-     -D libdisplay_info=enabled
-+    -D systemd=false
-     -D wayland_eglstream=true
-   )
- 
+@@ -112,7 +112,7 @@
    CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
    LDFLAGS+=" -Wl,-Bsymbolic-functions"
  
