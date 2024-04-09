@@ -668,6 +668,7 @@ glibmm-2.68
 glibmm-2.68-docs
 glibmm
 glibmm-docs
+glm
 gloox
 glpk
 glslang
@@ -1710,6 +1711,8 @@ libportal-gtk4
 libportal-qt5
 libportal-docs
 libppd
+libproxy
+libproxy-docs
 libpst
 libpst-docs
 libptytty
@@ -2100,6 +2103,7 @@ mate-utils
 materia-kde
 kvantum-theme-materia
 mathjax2
+matterbridge
 maturin
 python-maturin
 maven

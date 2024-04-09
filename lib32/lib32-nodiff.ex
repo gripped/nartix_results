@@ -81,6 +81,7 @@ lib32-libpcap
 lib32-libpciaccess
 lib32-libpng
 lib32-libpng12
+lib32-libproxy
 lib32-libpsl
 lib32-libraw1394
 lib32-librsvg

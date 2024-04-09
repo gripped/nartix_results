@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,6 @@
- depends=(
-   libgudev
-   libimobiledevice
+@@ -24,7 +24,7 @@
+   gtk-doc
+   meson
+   python
 -  systemd
++  udev
    usbmuxd
  )
- makedepends=(
-@@ -42,12 +41,12 @@
+ checkdepends=(
+@@ -43,7 +43,7 @@
  }
  
  build() {
@@ -17,21 +18,16 @@
    meson compile -C build
  }
  
- check() {
--  meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs || :
- }
- 
- package() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -9,5 +9,4 @@
- libimobiledevice
+@@ -13,5 +13,5 @@
+ libplist
  meson
  python
 -systemd
++udev
  usbmuxd

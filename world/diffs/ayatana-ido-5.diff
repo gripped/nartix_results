@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,38 @@
+@@ -1,22 +1,39 @@
 -
  pkgname=ayatana-ido
- pkgver=0.10.1
+ pkgver=0.10.2
  pkgrel=1
 -pkgdesc='Ayatana Indicator Display Objects'
 -arch=(x86_64)
@@ -12,7 +12,7 @@
 -depends=(gtk3)
 -makedepends=(cmake gobject-introspection vala gtest)
 -source=(https://github.com/AyatanaIndicators/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz)
--sha256sums=('26187915a6f3402195e2c78d9e8a54549112a3cd05bb2fbe2059d3e78fc0e071')
+-sha256sums=('0daf8a2e5bba51225bc3724c0e53c3b569269f28ac3a14f6bed9920b44ecc856')
 +pkgdesc="Ayatana Indicator Display Objects"
 +arch=("x86_64")
 +url="https://github.com/AyatanaIndicators/ayatana-ido"
@@ -36,7 +36,7 @@
 +	"https://github.com/AyatanaIndicators/$pkgname/archive/refs/tags/$pkgver.tar.gz"
 +)
 +sha256sums=(
-+	"26187915a6f3402195e2c78d9e8a54549112a3cd05bb2fbe2059d3e78fc0e071"
++	"0daf8a2e5bba51225bc3724c0e53c3b569269f28ac3a14f6bed9920b44ecc856"
 +)
  
  build() {
@@ -44,6 +44,7 @@
 -    -DCMAKE_INSTALL_PREFIX=/usr
 -  cmake --build build
 +	cd "$pkgname-$pkgver"
++	export HOME=/tmp
 +	cmake -D CMAKE_INSTALL_PREFIX="/usr" .
  }
  
@@ -73,11 +74,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $pkgname-$pkgver \
 --DCMAKE_INSTALL_PREFIX=/usr
 -cmake --build build
 +cd "$pkgname-$pkgver"
++export HOME=/tmp
 +cmake -D CMAKE_INSTALL_PREFIX="/usr" .
  }

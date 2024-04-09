@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,7 @@
+     -D vapi=false
+   )
+ 
+-  arch-meson libproxy build "${meson_options[@]}"
++  artix-meson libproxy build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,6 @@
+ -D release=true
+ -D vapi=false
+ )
+-arch-meson libproxy build "${meson_options[@]}"
++artix-meson libproxy build "${meson_options[@]}"
+ meson compile -C build
+ }

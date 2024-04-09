@@ -118,7 +118,6 @@ glfw
 glfw-x11
 glfw-wayland
 glfw-doc
-glm
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -263,8 +262,6 @@ libldm
 libmspub
 libnvme
 libprocps
-libproxy
-libproxy-docs
 libsidplay
 libtg_owt
 libudev0-shim
@@ -315,7 +312,6 @@ mate-session-manager
 mate-system-monitor
 mate-user-share
 matrix-synapse
-matterbridge
 media-player-info
 memcached
 mesa-demos

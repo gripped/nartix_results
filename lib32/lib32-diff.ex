@@ -10,7 +10,6 @@ lib32-gst-plugins-good
 lib32-jack2
 lib32-libepoxy
 lib32-libgudev
-lib32-libproxy
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb

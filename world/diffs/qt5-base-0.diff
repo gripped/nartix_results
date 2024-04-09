@@ -1,52 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,9 @@
- pkgbase=qt5-base
- pkgname=(qt5-base qt5-xcb-private-headers)
- _basever=5.15.13
--pkgver=5.15.13+kde+r145
-+pkgver=5.15.13+kde+r142
- pkgrel=1
--_commit=8d30c21cfb529edbdcfd32a928f97b4f861d20e2
-+_commit=2b71429330544809ff5f95111a020e7ceec643fd
- arch=('x86_64')
- url='https://www.qt.io'
- license=('GPL3' 'LGPL3' 'FDL' 'custom')
-@@ -26,29 +26,29 @@
- conflicts=('qtchooser')
- groups=('qt5')
- _pkgfqn=${pkgbase/5-/}
--source=(kde-$_pkgfqn::git+https://invent.kde.org/qt/qt/$_pkgfqn#commit=$_commit
-+source=(git+https://invent.kde.org/qt/qt/$_pkgfqn#commit=$_commit
-         work-around-pyside2-brokenness.patch
-         qmake-cflags.patch
-         qmake-config.patch)
--sha256sums=('4f73f7214737f8d50b5a4bfeb80717b9ff2399ae4b065f3de028677d139b38b2'
-+sha256sums=('SKIP'
-             '6a4ec2bfcf4e7cff73346762b252cc28be5ca0ed79fde5e69350efe229b43adc'
-             '5411edbe215c24b30448fac69bd0ba7c882f545e8cf05027b2b6e2227abc5e78'
-             '4abc22150fa3e06b2fdcec32146abc9be4e316692aa4d5bd5aa53b4b726783fa')
- 
- pkgver() {
--  cd kde-$_pkgfqn
-+  cd $_pkgfqn
-   echo "$_basever+kde+r"`git rev-list --count v$_basever-lts-lgpl..$_commit` | sed -e 's|+kde+r0||'
- }
- 
- prepare() {
--  cd kde-$_pkgfqn
-+  cd ${_pkgfqn}
-   patch -p1 < ../work-around-pyside2-brokenness.patch
-   patch -p1 < ../qmake-cflags.patch # Use system CFLAGS in qmake
-   patch -p1 < ../qmake-config.patch # Don't strip binaries with qmake and use -ltcg, cf. QTBUG-73834
- }
- 
- build() {
--  cd kde-$_pkgfqn
-+  cd ${_pkgfqn}
- 
-   ./configure -confirm-license -opensource -v \
-     -prefix /usr \
 @@ -65,7 +65,7 @@
      -no-rpath \
      -dbus-linked \
@@ -56,24 +9,6 @@
      -libproxy \
      -no-mimetype-database \
      -no-use-gold-linker \
-@@ -80,7 +80,7 @@
-   pkgdesc='A cross-platform application and UI framework'
-   depends+=(qt5-translations)
- 
--  cd kde-$_pkgfqn
-+  cd ${_pkgfqn}
-   make INSTALL_ROOT="${pkgdir}" install
- 
-   install -Dm644 LICENSE* -t "$pkgdir"/usr/share/licenses/$pkgbase
-@@ -104,7 +104,7 @@
-   groups=()
-   conflicts=()
- 
--  cd kde-$_pkgfqn
-+  cd ${_pkgfqn}
-   install -d -m755 "$pkgdir"/usr/include/qtxcb-private
-   cp -r src/plugins/platforms/xcb/*.h "$pkgdir"/usr/include/qtxcb-private/
- }
 
 
 ############# Stripped diff below #################
@@ -82,20 +17,6 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
- prepare() {
--cd kde-$_pkgfqn
-+cd ${_pkgfqn}
- patch -p1 < ../work-around-pyside2-brokenness.patch
- patch -p1 < ../qmake-cflags.patch # Use system CFLAGS in qmake
- patch -p1 < ../qmake-config.patch # Don't strip binaries with qmake and use -ltcg, cf. QTBUG-73834
- }
- build() {
--cd kde-$_pkgfqn
-+cd ${_pkgfqn}
- ./configure -confirm-license -opensource -v \
- -prefix /usr \
- -docdir /usr/share/doc/qt \
 @@ -21,7 +21,7 @@
  -no-rpath \
  -dbus-linked \
