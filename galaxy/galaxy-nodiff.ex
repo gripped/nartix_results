@@ -57,6 +57,7 @@ fluxbox
 fpc-src
 fpc
 garcon
+girara
 gpicview
 lazarus
 lazarus-gtk2

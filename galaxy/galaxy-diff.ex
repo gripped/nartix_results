@@ -3,7 +3,6 @@ cinnamon-desktop
 fceux
 firefox
 font-manager
-girara
 libetonyek
 libreoffice-extension-writer2latex
 libretro-dolphin

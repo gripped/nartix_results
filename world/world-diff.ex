@@ -193,6 +193,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+imagemagick
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -272,7 +273,6 @@ libwhereami
 light-locker
 lightdm
 liblightdm-qt5
-lighttpd
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs

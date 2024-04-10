@@ -4,7 +4,7 @@
  BUILDENV+=(!check)
  
  pkgname=('syncthing' 'syncthing-discosrv' 'syncthing-relaysrv')
--pkgver=1.27.5
+-pkgver=1.27.6
 +pkgver=1.27.4
  pkgrel=1
  pkgdesc='Open Source Continuous Replication / Cluster Synchronization Thing'
@@ -16,7 +16,7 @@
 -        syncthing-{disco,relay}srv.service
          gcc-pie-segfaults-race.patch)
  validpgpkeys=('37C84554E7E0A261E4F76E1ED26E6ED000654A3E') # Syncthing Release Management
--sha256sums=('4bb5811e5ddb5c4078f989f08cd3a10994c0a72194c0215dd5ca06aed5248d66'
+-sha256sums=('88466d7b7329dce69138c096bfaca91a9ae2b49aac99817d9210b91d9d61883f'
 +sha256sums=('6ce00ab281ee5eb0dc73c3664f36235137ca22b2911e375b8feead0038fb80a1'
              'SKIP'
              'f6e704dd7b10127b1642c889a29e95468daa75d895493b235ce1ed5e97155b70'

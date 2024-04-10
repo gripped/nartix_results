@@ -912,7 +912,6 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
-imagemagick
 imake
 imath
 img2pdf
@@ -1902,6 +1901,7 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 lightsoff
+lighttpd
 lilv
 lilv-docs
 python-lilv
