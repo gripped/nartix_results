@@ -1,14 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,37 +1,29 @@
  
  pkgbase=linux-hardened
--pkgver=6.7.11.hardened1
+-pkgver=6.8.4.hardened1
 +pkgver=6.4.14.hardened1
  pkgrel=1
  pkgdesc='Security-Hardened Linux'
  url='https://github.com/anthraxx/linux-hardened'
-@@ -10,24 +10,20 @@
+ arch=(x86_64)
+-license=(GPL-2.0-only)
++license=(GPL2)
+ makedepends=(
    bc
    cpio
    gettext
@@ -23,9 +26,15 @@
 -  graphviz
 -  imagemagick
 -  python-sphinx
+-  python-yaml
 -  texlive-latexextra
- )
- options=('!strip')
+-)
+-options=(
+-  !debug
+-  !strip
+-)
++)
++options=('!strip')
  _srcname=linux-${pkgver%.*}
  _srctag=${pkgver%.*}-${pkgver##*.}
  source=(
@@ -36,22 +45,22 @@
    config  # the main kernel config file
  )
  validpgpkeys=(
-@@ -35,18 +31,13 @@
+@@ -39,18 +31,13 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
--sha256sums=('2c6497c971632fd9d056941a8a31369d36ef07baa755e4c1cdcc326acb090b4a'
+-sha256sums=('d5dec495fc00605fa9e04114df547fbc92b33d9ea7a4a2b7073c589590e79e63'
 -            'SKIP'
--            'd0cdfa49fc63f5fd4fc6ae92fbad07702421ccc164f5ae2c9b0bb6709e2b5a50'
+-            '74f51a4113a19ef738e1ccbbf673ef619b0ce077cbd486326291453cbae8ea49'
 -            'SKIP'
--            '9efc831639dea0f4b8a9f9879063c3c56f02fd57f6bd6551aaa8eec7c28eecda')
--b2sums=('0f7319b641822f07d5bc9f0edaed7c918a73aa67df6a4aa74a5e8e38f2d15795a1c76e0c8c7ab99949165cb8a0ebb77f08e3a380184aa0accad26996a1d415c6'
+-            '5ec00df4d4f8d8791a3d0280197ddb3af2598aebc566b83821b1709857a6adff')
+-b2sums=('cf58732397bfa11988b79901092887d53c3367d09f63da51ebdcc83518be3a7e9a638fbbb1ff080cd7abed633fadff03d1d7a3928b772de57b14e46e552f9462'
 +b2sums=('f81dabaef7e31b743aeb75d0dbb0a337e747d1d743fb0b38cb314498200d8d459d82f5f8bb34d6ad688842f3617fd53fd35b1b518654c845a6781580531ab1b2'
          'SKIP'
--        'd021988771d777bc25d8db3c58b1d62e880c788a50a9c7983569ed74462d65f8487a74a279cf69bcacc89824c9bf5d7960b124ae24585a5716bd3fa50df4dccf'
+-        'fe898a256bbe9a77c5e3b4d1e2fc3820a511af88faecd75009b49c4eb31505f4609b020be90197486a296b4bf3f8f3b83ea3c0d803dabf9a9b6f5b6a4a14e656'
 +        'd12ff8cbb4dc171167050a198a783e8341df51aa1c3579d3c3f20b9d28025847e6cae9575fc2a37dda2e0f96a10d0306ec4293edaa53ebdfe15a21892c6d2a5f'
          'SKIP'
--        '30eda70776271d694d66c18e9411c6ea9a7b9652fe284eeb9d335ada5f0d05d907daf323e775f6dec9cebaff430ca8317a01319179f3088b461d12bf4655428f')
+-        '145793bc1c69625055303d88dc3311fc54a6b79e153c210a8ff791a77808f8e181ee9b9279ebc9f613d552bafa25997dd939bab671db4950eb0c614e56051665')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        'f60be61e60a36d8c8fd186ddb2ac7514a6439c413a0a563d8c3d13593aaa5e34e20a3ddeba2d0b868fffdd515678320ddda1fe843e24f90369c1d4d0c4019306')
@@ -60,7 +69,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -61,7 +52,6 @@
+@@ -65,7 +52,6 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -68,7 +77,7 @@
      [[ $src = *.patch ]] || continue
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
-@@ -78,12 +68,7 @@
+@@ -82,12 +68,7 @@
  
  build() {
    cd $_srcname
@@ -81,7 +90,7 @@
  }
  
  _package() {
-@@ -103,8 +88,6 @@
+@@ -107,8 +88,6 @@
      VIRTUALBOX-GUEST-MODULES
      WIREGUARD-MODULE
    )
@@ -90,7 +99,7 @@
  
    cd $_srcname
    local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-@@ -118,7 +101,7 @@
+@@ -122,7 +101,7 @@
    ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
      DEPMOD=/doesnt/exist modules_install  # Suppress depmod
  
@@ -99,13 +108,22 @@
  }
  
  _package-headers() {
+@@ -134,7 +113,7 @@
+ 
+   echo "Installing build files..."
+   install -Dt "$builddir" -m644 .config Makefile Module.symvers System.map \
+-    localversion.* version vmlinux # tools/bpf/bpftool/vmlinux.h
++    localversion.* version vmlinux
+   install -Dt "$builddir/kernel" -m644 kernel/Makefile
+   install -Dt "$builddir/arch/x86" -m644 arch/x86/Makefile
+   cp -t "$builddir" -a scripts
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -2,15 +2,12 @@
+@@ -2,16 +2,12 @@
  coreutils
  cpio
  gettext
@@ -119,6 +137,7 @@
  perl
  python
 -python-sphinx
+-python-yaml
  tar
 -texlive-latexextra
  xz

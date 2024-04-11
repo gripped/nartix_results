@@ -912,6 +912,7 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
+imagemagick
 imake
 imath
 img2pdf
@@ -3069,6 +3070,7 @@ python-cogapp
 python-colorama
 python-colored-traceback
 python-colorlog
+python-colour
 python-comm
 python-commentjson
 python-commonmark
@@ -3822,6 +3824,7 @@ python-pytest-xdist
 python-pytest-xprocess
 python-pytest-xvfb
 python-pytest
+python-pytest7
 python-python-multipart
 python-python-pkcs11
 python-python-socks

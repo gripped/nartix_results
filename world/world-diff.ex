@@ -193,7 +193,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-imagemagick
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -469,7 +468,6 @@ pyqt6
 python-anytree
 python-arrow
 python-build
-python-colour
 python-fasteners
 python-notify2
 python-parso
