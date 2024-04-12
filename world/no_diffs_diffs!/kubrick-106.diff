@@ -1,6 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kubrick
+-pkgver=24.02.2
++pkgver=24.02.1
+ pkgrel=1
+ pkgdesc="Based on the famous Rubik's Cube"
+ url='https://apps.kde.org/kubrick/'
+@@ -25,14 +25,14 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('c7804e726ed70f5575fd2f10785bfb59b7dc67cc5ee1d2261eb28a5b14bf3eb1'
++sha256sums=('035c9fb6d9fc528f4928e6432b135cacf718dfbe4701f00d5e63540a96c5680b'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

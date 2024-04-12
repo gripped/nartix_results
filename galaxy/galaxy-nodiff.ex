@@ -187,7 +187,6 @@ mousepad
 mozo
 muffin
 nemo
-nushell
 obconf-qt
 onionshare
 openbox

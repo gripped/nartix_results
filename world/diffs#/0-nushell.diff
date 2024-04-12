@@ -3,18 +3,18 @@
 @@ -1,6 +1,7 @@
  
  pkgname=nushell
--pkgver=0.92.1
+-pkgver=0.92.2
 +pkgver=0.88.1
 +_commit=fd56768fdcc1acbebcb75745600fc7419f72833d
  pkgrel=1
  pkgdesc='A new type of shell'
  arch=('x86_64')
-@@ -15,13 +16,19 @@
+@@ -15,15 +16,19 @@
  )
  makedepends=('cargo' 'git')
  install=nushell.install
 -source=("git+https://github.com/nushell/nushell.git#tag=$pkgver")
--sha256sums=('18438453763af22a1a39e3bb7346c57bf5fb2d7ecfa4e42a55324253a34147e2')
+-sha256sums=('60e8a6338f7603dc880649fbf7ec8f6835b7943371d0d2c210e89b4fc1374dff')
 +source=("git+https://github.com/nushell/nushell.git#commit=$_commit")
 +sha256sums=('SKIP')
 +
@@ -27,6 +27,8 @@
  prepare() {
    cd "$pkgname"
  
+-  sed -i -e '/^rust-version/s/1.77.2/1.77.1/' Cargo.toml
+-
 -  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
 +  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
  }
@@ -40,9 +42,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,6 @@
  prepare() {
  cd "$pkgname"
+-sed -i -e '/^rust-version/s/1.77.2/1.77.1/' Cargo.toml
 -cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
 +cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
  }

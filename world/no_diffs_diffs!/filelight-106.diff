@@ -1,6 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=filelight
+-pkgver=24.02.2
++pkgver=24.02.1
+ pkgrel=1
+ pkgdesc='View disk usage information'
+ url='https://apps.kde.org/filelight/'
+@@ -25,14 +25,14 @@
+ groups=(kde-applications
+         kde-utilities)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('1551bdfde7fc7e4234c6653d5a6138f9efefc9e8bdedaaaa683354728368bb8e'
++sha256sums=('9d326f73b8ec946d67da0b841284847197f6d099e851968d70aba8ce1887b777'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {

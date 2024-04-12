@@ -1,6 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kdesdk-thumbnailers
+-pkgver=24.02.2
++pkgver=24.02.1
+ pkgrel=1
+ pkgdesc='Plugins for the thumbnailing system'
+ url='https://www.kde.org/'
+@@ -17,14 +17,14 @@
+ groups=(kde-applications
+         kdesdk)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ba27d6dca3ece9401406ea031f7f08e85b35fec9d6bb48512cb633ded5c406f2'
++sha256sums=('93d7fbfc0a005a14ad1f093a20fb96393d9eac25523176e9aa975fc4583e2b83'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
  
  build() {
