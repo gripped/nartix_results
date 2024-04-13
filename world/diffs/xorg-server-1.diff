@@ -9,7 +9,7 @@
  source=(${pkgbase}::git+https://gitlab.freedesktop.org/xorg/xserver.git?signed#tag=${pkgbase}-${pkgver}
          xvfb-run # with updates from FC master
          xvfb-run.1
-@@ -49,7 +49,7 @@
+@@ -50,7 +50,7 @@
    export CXXFLAGS=${CXXFLAGS/-fno-plt}
    export LDFLAGS=${LDFLAGS/-Wl,-z,now}
  
@@ -18,7 +18,7 @@
      -D ipv6=true \
      -D xvfb=true \
      -D xnest=true \
-@@ -97,7 +97,7 @@
+@@ -98,7 +98,7 @@
    pkgdesc="Xorg X server"
    depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
             dbus libgl xf86-input-libinput nettle
@@ -27,7 +27,7 @@
             libpciaccess libdrm libxshmfence libxcvt) # FS#52949
    provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
    conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
-@@ -119,7 +119,7 @@
+@@ -120,7 +120,7 @@
  
  package_xorg-server-xephyr() {
    pkgdesc="A nested X server that runs as an X application"
@@ -36,7 +36,7 @@
             xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
             nettle libtirpc
             xcb-util libxdmcp libx11 libxau libxshmfence glibc)
-@@ -134,7 +134,7 @@
+@@ -135,7 +135,7 @@
    pkgdesc="Virtual framebuffer X server"
    license=('MIT' 'GPL-2.0-only')
    depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
@@ -45,7 +45,7 @@
             libxdmcp sh glibc libxau)
  
    _install fakeinstall/usr/bin/Xvfb
-@@ -149,7 +149,7 @@
+@@ -150,7 +150,7 @@
  package_xorg-server-xnest() {
    pkgdesc="A nested X server that runs as an X application"
    depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle

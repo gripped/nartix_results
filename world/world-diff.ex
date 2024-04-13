@@ -217,7 +217,6 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
-kmix
 knot
 kopeninghours
 ksnip
@@ -355,6 +354,8 @@ networkmanager-docs
 nsd
 nushell
 nvchecker
+nvidia-open
+nvidia-open-dkms
 nvme-cli
 nvtop
 ocaml-findlib
@@ -646,7 +647,6 @@ signal-desktop
 smartmontools
 snapper
 solid
-spglib
 spice-vdagent
 squid
 sshguard

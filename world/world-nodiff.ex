@@ -1236,6 +1236,7 @@ kmenuedit
 kmime
 kmime5
 kmines
+kmix
 kmousetool
 kmouth
 kmplot
@@ -2277,8 +2278,6 @@ nuklear
 numactl
 numlockx
 nuspell
-nvidia-open
-nvidia-open-dkms
 nvidia-settings
 libxnvctrl
 nvidia-utils
@@ -4685,6 +4684,7 @@ speech-dispatcher
 libspeechd
 speex
 speexdsp
+spglib
 spice-gtk
 spice-protocol
 spice

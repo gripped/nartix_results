@@ -16,15 +16,15 @@
    unifdef
    wayland-protocols
  )
-@@ -103,6 +101,8 @@
-     -DUSE_SOUP2=OFF
-     -DENABLE_DOCUMENTATION=ON
-     -DENABLE_MINIBROWSER=ON
+@@ -92,6 +90,8 @@
+ 
+ build() {
+   local cmake_options=(
 +    -DUSE_SYSTEMD=OFF
 +    -DENABLE_JOURNALD_LOG=OFF
-   )
- 
-   export CC=clang CXX=clang++
+     -DPORT=GTK
+     -DCMAKE_BUILD_TYPE=Release
+     -DCMAKE_INSTALL_PREFIX=/usr
 
 
 ############# Stripped diff below #################
