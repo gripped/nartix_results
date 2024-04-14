@@ -92,6 +92,7 @@ fcitx5
 fcron
 firefox
 firewalld
+fish
 flatpak
 flatpak-docs
 fluidsynth
@@ -186,7 +187,6 @@ gvfs-onedrive
 haproxy
 haveged
 hidapi
-hotdoc
 hwloc
 hyprland
 i2pd

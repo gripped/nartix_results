@@ -557,7 +557,6 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
-fish
 five-or-more
 flac
 flac-doc
@@ -863,6 +862,7 @@ hiredis
 hitori
 hivex
 hostapd
+hotdoc
 hplip
 hsa-rocr
 hsakmt-roct
