@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
+@@ -1,136 +1,130 @@
  
  pkgbase=wireplumber
  pkgname=(
@@ -12,8 +12,10 @@
 +	wireplumber-docs
  )
  pkgver=0.5.1
- pkgrel=1
-@@ -12,122 +12,119 @@
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Session / policy manager implementation for PipeWire"
+ url="https://pipewire.pages.freedesktop.org/wireplumber/"
  arch=(x86_64)
  license=(MIT)
  makedepends=(
@@ -51,8 +53,12 @@
 +	python-sphinx_rtd_theme
  )
  checkdepends=(pipewire-audio)
- source=("git+https://gitlab.freedesktop.org/pipewire/$pkgbase.git#tag=$pkgver")
- b2sums=('df10e5be79c85c8b2979ddac32f78633dceaeb1764dc64040cd3d6206570bed9141d9edfd5dc401f59e0d585eae5a88739db85b6199df7a735805dd94d97f3d6')
+-source=("git+https://gitlab.freedesktop.org/pipewire/$pkgbase.git#tag=$pkgver"
+-        "sphinx-no-parallel.patch")
+-b2sums=('df10e5be79c85c8b2979ddac32f78633dceaeb1764dc64040cd3d6206570bed9141d9edfd5dc401f59e0d585eae5a88739db85b6199df7a735805dd94d97f3d6'
+-        '771ea16e3c5c5ebcce0b451a2e9aa5d4e4098191a6a23c42350116d37fc756631cff71a5d3fb1226ed944e9953736d8a220187627cfe36ec453315c20b1032c8')
++source=("git+https://gitlab.freedesktop.org/pipewire/$pkgbase.git#tag=$pkgver")
++b2sums=('df10e5be79c85c8b2979ddac32f78633dceaeb1764dc64040cd3d6206570bed9141d9edfd5dc401f59e0d585eae5a88739db85b6199df7a735805dd94d97f3d6')
  
  pkgver() {
 -  cd $pkgbase
@@ -65,6 +71,7 @@
 -  cd $pkgbase
 +	cd $pkgbase
  
+-  patch -Np1 < "$srcdir/sphinx-no-parallel.patch"
  }
  
  build() {

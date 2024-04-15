@@ -356,6 +356,7 @@ thunar
 thunderbird
 timeshift
 tinyxxd
+torbrowser-launcher
 tumbler
 vice
 wireshark

@@ -1440,6 +1440,7 @@ libcdr
 libcerf
 libcgif
 libchamplain
+libchewing
 libclc
 libcloudproviders
 libcmis
@@ -2305,7 +2306,6 @@ odt2txt
 okteta
 okular
 okularpart5
-onetbb
 onevpl
 oniguruma
 opam

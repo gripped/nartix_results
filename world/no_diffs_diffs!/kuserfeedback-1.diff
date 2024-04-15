@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,6 +20,7 @@
+             'qt6-svg: Feedback console')
+ conflicts=(kuserfeedback5)
+ replaces=(kuserfeedback5)
++groups=(kf6)
+ source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('cdfa46fd02773f25820d5a8017d6ca9746d1054cf44e3ae33fff691eb266bc5f'
+             'SKIP')

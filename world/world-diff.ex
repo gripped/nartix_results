@@ -245,7 +245,6 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 libcanberra
-libchewing
 libdaemon
 libe-book
 libei
@@ -360,6 +359,7 @@ nvme-cli
 nvtop
 ocaml-findlib
 onboard
+onetbb
 onionshare
 open-iscsi
 opencc
