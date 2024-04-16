@@ -386,7 +386,6 @@ dart
 darts
 dav1d
 dav1d-doc
-dblatex
 dbus-cplusplus
 dbus-glib
 dbus-python
@@ -2005,7 +2004,6 @@ lxqt-openssh-askpass
 lxqt-panel
 lxqt-policykit
 lxqt-powermanagement
-lxqt-qtplugin
 lxqt-runner
 lxqt-session
 lxqt-sudo
@@ -2163,6 +2161,7 @@ molecule
 molequeue
 mongo-c-driver
 mono
+mopidy
 moreutils
 mosh
 motion
@@ -2306,6 +2305,7 @@ odt2txt
 okteta
 okular
 okularpart5
+onetbb
 onevpl
 oniguruma
 opam
@@ -2880,9 +2880,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -2910,7 +2907,6 @@ python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
-python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
@@ -3292,6 +3288,7 @@ python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
 python-hatch-vcs
+python-hatch
 python-hatchling
 python-heapdict
 python-helpdev
@@ -3711,7 +3708,6 @@ python-pymongo
 python-pymysql
 python-pynacl
 python-pynamodb
-python-pynetbox
 python-pynitrokey
 python-pynvim
 python-pyocd
@@ -4098,6 +4094,7 @@ python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
+python-vcrpy
 python-versioneer
 python-versioningit
 python-vine
@@ -4141,7 +4138,6 @@ python-xapian
 python-xapp
 python-xarray
 python-xattr
-python-xkbcommon
 python-xlib
 python-xlrd
 python-xlsxwriter
@@ -4297,7 +4293,6 @@ ripgrep
 ristretto
 rkcommon
 rng-tools
-rnnoise
 robin-map
 roc-toolkit
 rocm-cmake
@@ -4580,6 +4575,7 @@ rxvt-unicode
 rxvt-unicode-terminfo
 rygel
 s2n-tls
+s3cmd
 s3fs-fuse
 salt
 samurai

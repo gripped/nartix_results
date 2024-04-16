@@ -53,6 +53,7 @@ cppzmq
 crun
 cups
 libcups
+dblatex
 dbus-broker
 ddcutil
 dhcpcd
@@ -302,6 +303,7 @@ luarocks
 lxc
 lxcfs
 lxd
+lxqt-qtplugin
 mako
 mariadb
 mariadb-libs
@@ -331,7 +333,6 @@ mesa-vdpau
 modemmanager
 libmm-glib
 modest
-mopidy
 mosquitto
 mpd
 mpv
@@ -359,7 +360,6 @@ nvme-cli
 nvtop
 ocaml-findlib
 onboard
-onetbb
 onionshare
 open-iscsi
 opencc
@@ -470,6 +470,10 @@ pyqt-builder
 pyqt5
 python-pyqt5
 pyqt6
+pyside6
+pyside6-tools
+shiboken6
+python-alembic
 python-anytree
 python-arrow
 python-build
@@ -481,9 +485,10 @@ python-pipenv-to-requirements
 python-precis_i18n
 python-profilestats
 python-pymupdf
+python-pynetbox
 python-pyudev
 python-sqlalchemy
-python-vcrpy
+python-xkbcommon
 qastools
 qemu
 qemu-common
@@ -620,6 +625,7 @@ redis
 redshift
 refind
 refind-docs
+rnnoise
 rocblas
 rocfft
 rocrand
@@ -629,7 +635,6 @@ rspamd
 rtkit
 ruby-faraday-patron
 ruby-optimist
-s3cmd
 samba
 libwbclient
 smbclient

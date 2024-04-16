@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -51,7 +51,6 @@
+   install -Dm644 "${srcdir}/mopidy.conf" "${pkgdir}/etc/mopidy/mopidy.conf"
+   install -Dm644 "${srcdir}/logging.conf" "${pkgdir}/etc/mopidy/logging.conf"
+ 
+-  install -Dm644 "extra/systemd/mopidy.service" "${pkgdir}/usr/lib/systemd/system/mopidy.service"
+   install -Dm644 "extra/desktop/mopidy.desktop" "${pkgdir}/usr/share/applications/mopidy.desktop"
+ 
+   install -dm755 -g 46 -o 46 "${pkgdir}/var/cache/mopidy"

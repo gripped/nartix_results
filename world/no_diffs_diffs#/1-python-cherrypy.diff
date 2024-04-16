@@ -1,34 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,9 +10,6 @@
- depends=('python' 'python-cheroot' 'python-portend' 'python-jaraco.collections'
- 'python-more-itertools' 'python-zc.lockfile')
- makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-setuptools-scm' 'python-wheel')
--checkdepends=('python-objgraph' 'python-path' 'python-pytest'
--'python-pytest-forked' 'python-pytest-services' 'python-pytest-sugar'
--'python-requests-toolbelt')
- optdepends=(
-   'python-flup: for xcgi support'
-   'python-memcached: for memcached session support'
-@@ -50,21 +47,6 @@
-   python -m build --wheel --no-isolation
- }
+@@ -2,7 +2,7 @@
+ pkgname='python-cherrypy'
+ _pkgname="${pkgname#python-}"
+ pkgver=18.9.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc='A pythonic, object-oriented web development framework'
+ arch=('any')
+ url='https://cherrypy.dev'
+@@ -50,6 +50,7 @@
+     -vv
+     -o addopts=''  # we are not interested in coverage
+     -o filterwarnings=''  # we don't want to fail on warnings
++    --deselect cherrypy/test/test_states.py::test_safe_wait_INADDR_ANY
+   )
  
--check() {
--  cd ${_pkgname}-${pkgver}
--  pytest -vv \
--    -k "not testConfig \
--        and not testCustomNamespaces \
--        and not testHandlerToolConfigOverride \
--        and not testHandlerToolConfigOverride \
--        and not testRespNamespaces \
--        and not testUnrepr \
--        and not test_request_body_namespace \
--        and not test_gc \
--        and not test_config \
--        and not test_call_with_kwargs \
--        and not test_call_with_literal_dict"
--}
- 
- package() {
    cd ${_pkgname}-${pkgver}

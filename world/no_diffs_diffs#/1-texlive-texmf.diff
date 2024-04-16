@@ -1,11 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
+@@ -5,9 +5,9 @@
+ for _coll in ${_collections[@]}; do
+   pkgname+=(texlive-$_coll)
+ done
+-_rev=70897
+-pkgver=2024.2
+-pkgrel=1
++_rev=70639
++pkgver=2024.0
++pkgrel=3
+ pkgdesc='TeX Live - '
+ license=(GPL)
  arch=(any)
- depends=(texlive-bin)
- makedepends=(subversion)
--url='http://tug.org/texlive/'
-+url='https://tug.org/texlive/'
- source=(texmf-dist-$pkgver::svn://tug.org/texlive/tags/texlive-$pkgver/Master/texmf-dist#revision=$_rev
-         tlpkg-$pkgver::svn://tug.org/texlive/tags/texlive-$pkgver/Master/tlpkg#revision=$_rev
-         x86_64-linux-$pkgver::svn://tug.org/texlive/tags/texlive-$pkgver/Master/bin/x86_64-linux#revision=$_rev
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-subversion
+-texlive-bin
