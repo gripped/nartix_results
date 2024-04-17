@@ -104,6 +104,7 @@ aspell-pt
 aspell-ru
 aspell-sv
 aspell
+assimp
 astromenace
 astyle
 atftp
@@ -386,6 +387,7 @@ dart
 darts
 dav1d
 dav1d-doc
+dblatex
 dbus-cplusplus
 dbus-glib
 dbus-python
@@ -415,7 +417,6 @@ discover
 distcc
 django
 python-django
-djvulibre
 dkms
 dleyna
 dleyna-docs
@@ -520,7 +521,6 @@ fakechroot
 falkon
 farstream
 fast_float
-fastfetch
 fastjar
 faudio
 fcgi
@@ -2880,6 +2880,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3708,6 +3711,7 @@ python-pymongo
 python-pymysql
 python-pynacl
 python-pynamodb
+python-pynetbox
 python-pynitrokey
 python-pynvim
 python-pyocd
@@ -4138,6 +4142,7 @@ python-xapian
 python-xapp
 python-xarray
 python-xattr
+python-xkbcommon
 python-xlib
 python-xlrd
 python-xlsxwriter
@@ -4293,6 +4298,7 @@ ripgrep
 ristretto
 rkcommon
 rng-tools
+rnnoise
 robin-map
 roc-toolkit
 rocm-cmake

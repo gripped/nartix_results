@@ -51,7 +51,6 @@ engrampa
 eom
 exo
 ext4magic
-fastfetch
 firefox-i18n
 fluxbox
 fpc-src

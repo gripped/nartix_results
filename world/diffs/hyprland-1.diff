@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,48 +1,46 @@
+@@ -1,49 +1,46 @@
  
  pkgname=hyprland
--pkgver=0.38.1
+-pkgver=0.39.1
 -pkgrel=1
 +pkgver=0.35.0
 +pkgrel=2
@@ -62,6 +62,7 @@
           xcb-proto
           xcb-util
 -         xcb-util-errors # libxcb-errors.so
+-         xcb-util-image
 +         xcb-util-errors
           xcb-util-keysyms
 -         xcb-util-renderutil # libxcb-render-util.so
@@ -74,15 +75,36 @@
  makedepends=(cmake
               gdb
               meson
-@@ -54,7 +52,7 @@
+@@ -55,7 +52,7 @@
              'meson: to build and install plugins using hyprpm')
  _archive="${pkgname^}-$pkgver"
  source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
--sha256sums=('1a86365cc006fca4bc96c6c41347d0bde048b6463c516e09b9c54cff58fb73ab')
+-sha256sums=('48d1c58fd8db365635a56d76e05e6ea2d99fa20c020a061ee88a20407cfde787')
 +sha256sums=('de53d764606131c8aacc209f8a3ad6e619fdcddd16a7cdf4d8ca343816bb8c1b')
  
  prepare() {
  	ln -sf hyprland-source "$_archive"
+@@ -71,10 +68,10 @@
+ package() {
+ 	cd "$_archive"
+ 	find src \( -name '*.h' -o -name '*.hpp' \) -exec install -Dm0644 {} "$pkgdir/usr/include/hyprland/{}" \;
+-	pushd subprojects/wlroots-hyprland/include
++	pushd subprojects/wlroots/include
+ 	find . -name '*.h' -exec install -Dm0644 {} "$pkgdir/usr/include/hyprland/wlroots/{}" \;
+ 	popd
+-	pushd subprojects/wlroots-hyprland/build/include
++	pushd subprojects/wlroots/build/include
+ 	find . -name '*.h' -exec install -Dm0644 {} "$pkgdir/usr/include/hyprland/wlroots/{}" \;
+ 	popd
+ 	mkdir -p "$pkgdir/usr/include/hyprland/protocols"
+@@ -89,6 +86,6 @@
+ 	install -Dm0644 -t "$pkgdir/usr/share/wayland-sessions/" "example/$pkgname.desktop"
+ 	install -Dm0644 -t "$pkgdir/usr/share/$pkgname/" "example/$pkgname.conf"
+ 	install -Dm0644 -t "$pkgdir/usr/share/licenses/$pkgname/" LICENSE
+-        find subprojects/wlroots-hyprland/build -name 'libwlroots.so.*' -type f -execdir \
++        find subprojects/wlroots/build -name 'libwlroots.so.*' -type f -execdir \
+                 install -Dm0755 -t "$pkgdir/usr/lib/" {} \;
+ }
 
 
 ############# Stripped diff below #################
@@ -140,3 +162,11 @@
  tomlplusplus
  vulkan-headers
  vulkan-icd-loader
+@@ -53,7 +33,6 @@
+ xcb-proto
+ xcb-util
+ xcb-util-errors
+-xcb-util-image
+ xcb-util-keysyms
+ xcb-util-renderutil
+ xcb-util-wm

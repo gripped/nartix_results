@@ -10,7 +10,6 @@ appstream-qt5
 appstream-qt
 archivetools
 aspell-uk
-assimp
 at-spi2-core
 at-spi2-core-docs
 at
@@ -53,11 +52,11 @@ cppzmq
 crun
 cups
 libcups
-dblatex
 dbus-broker
 ddcutil
 dhcpcd
 directx-shader-compiler
+djvulibre
 dns-over-https
 docker
 dolphin-emu
@@ -85,6 +84,7 @@ espeakup
 etherwall
 extra-cmake-modules
 facter
+fastfetch
 fceux
 fcgiwrap
 fcitx-configtool
@@ -470,9 +470,6 @@ pyqt-builder
 pyqt5
 python-pyqt5
 pyqt6
-pyside6
-pyside6-tools
-shiboken6
 python-alembic
 python-anytree
 python-arrow
@@ -485,10 +482,8 @@ python-pipenv-to-requirements
 python-precis_i18n
 python-profilestats
 python-pymupdf
-python-pynetbox
 python-pyudev
 python-sqlalchemy
-python-xkbcommon
 qastools
 qemu
 qemu-common
@@ -625,7 +620,6 @@ redis
 redshift
 refind
 refind-docs
-rnnoise
 rocblas
 rocfft
 rocrand
