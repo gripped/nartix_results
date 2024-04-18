@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,7 +34,7 @@
+@@ -37,7 +37,7 @@
  }
  
  build() {
@@ -9,11 +9,6 @@
    meson compile -C build
  }
  
-@@ -45,4 +45,3 @@
- package() {
-   meson install -C build --destdir "$pkgdir"
- }
--
 
 
 ############# Stripped diff below #################

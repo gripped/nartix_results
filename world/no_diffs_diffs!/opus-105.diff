@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,7 @@
-     -D enable-osce=true
+@@ -37,7 +37,7 @@
+     -D osce=enabled
    )
  
 -  arch-meson opus build "${meson_options[@]}"
@@ -18,8 +18,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -10,6 +10,6 @@
- -D enable-dred=true
- -D enable-osce=true
+ -D dred=enabled
+ -D osce=enabled
  )
 -arch-meson opus build "${meson_options[@]}"
 +artix-meson opus build "${meson_options[@]}"

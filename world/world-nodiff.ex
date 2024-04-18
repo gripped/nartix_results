@@ -952,12 +952,6 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-xmlgraphics-commons
 java11-openjdk
 jre11-openjdk-headless
@@ -1648,7 +1642,6 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
-libnbd
 libndp
 libnet
 libnewt
@@ -1828,7 +1821,6 @@ libvpx
 libvterm
 libwacom
 libwapcaplet
-libwebp
 libwebsockets
 libwhich
 libwlocate
@@ -2278,6 +2270,8 @@ nuklear
 numactl
 numlockx
 nuspell
+nvidia-open
+nvidia-open-dkms
 nvidia-settings
 libxnvctrl
 nvidia-utils

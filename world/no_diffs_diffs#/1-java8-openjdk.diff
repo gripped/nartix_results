@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -173,7 +173,7 @@
+   )
+   optdepends=('icedtea-web: web browser plugin + Java Web Start'
+               'alsa-lib: for basic sound support'
+-              'gtk2: for the Gtk+ look and feel - desktop usage'
++              'gtk3: for the Gtk+ look and feel - desktop usage'
+               'java8-openjfx: for JavaFX GUI components support')
+   provides=('java-runtime=8' 'java-runtime-openjdk=8')
+   install=install_jre8-openjdk.sh

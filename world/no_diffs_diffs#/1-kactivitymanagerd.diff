@@ -5,5 +5,5 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
 +
-+  rm -fr $pkgdir/usr/lib/systemd
++  rm -fr "$pkgdir"/usr/lib/systemd
  }

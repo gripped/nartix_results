@@ -205,6 +205,12 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -263,6 +269,7 @@ libinput
 libjpeg-turbo
 libldm
 libmspub
+libnbd
 libnvme
 libprocps
 libsidplay
@@ -271,6 +278,7 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvirt-python
+libwebp
 libwhereami
 light-locker
 lightdm
@@ -354,8 +362,6 @@ networkmanager-docs
 nsd
 nushell
 nvchecker
-nvidia-open
-nvidia-open-dkms
 nvme-cli
 nvtop
 ocaml-findlib

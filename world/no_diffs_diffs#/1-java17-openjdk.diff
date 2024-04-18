@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -167,7 +167,6 @@
+   pkgdesc="OpenJDK Java ${_majorver} full runtime environment"
+   depends=("${_commondeps[@]}" 'giflib' 'libgif.so' 'libpng')
+   optdepends=('alsa-lib: for basic sound support'
+-              'gtk2: for the Gtk+ 2 look and feel - desktop usage'
+               'gtk3: for the Gtk+ 3 look and feel - desktop usage')
+   provides=("java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"
+             "java-runtime-headless=${_majorver}" "java-runtime-headless-openjdk=${_majorver}" "jre${_majorver}-openjdk-headless=${pkgver}-${pkgrel}")
+@@ -234,7 +233,6 @@
+            'libharfbuzz.so')
+   optdepends=('java-rhino: for some JavaScript support'
+               'alsa-lib: for basic sound support'
+-              'gtk2: for the Gtk+ 2 look and feel - desktop usage'
+               'gtk3: for the Gtk+ 3 look and feel - desktop usage')
+   provides=("java-environment=${_majorver}" "java-environment-openjdk=${_majorver}" "jdk${_majorver}-openjdk=${pkgver}-${pkgrel}"
+             "java-runtime=${_majorver}" "java-runtime-openjdk=${_majorver}" "jre${_majorver}-openjdk=${pkgver}-${pkgrel}"

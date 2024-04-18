@@ -6,10 +6,10 @@
  replaces=('geth')
 -source=("git+https://github.com/ethereum/go-ethereum.git#commit=${_commit}"
 -        'geth-user.service')
--sha256sums=('SKIP'
+-sha256sums=('1ff9f7c30cd823259343b6e391d8cd7ae5b6a35136863edc661fa47361fadc78'
 -            '806ab43221f0c203e663a78afced694786a5adb033f06fab07d07904384d7645')
 +source=("git+https://github.com/ethereum/go-ethereum.git#commit=${_commit}")
-+sha256sums=('SKIP')
++sha256sums=('1ff9f7c30cd823259343b6e391d8cd7ae5b6a35136863edc661fa47361fadc78')
  
  build() {
      cd ${pkgname}

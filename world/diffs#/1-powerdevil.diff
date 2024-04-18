@@ -1,19 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,14 +27,14 @@
-          kwindowsystem
-          kxmlgui
-          layer-shell-qt
-+         libelogind
-          libkscreen
-          libplasma
-          libxcb
-          plasma-workspace
+@@ -34,7 +34,7 @@
           qt6-base
           qt6-declarative
--         solid
+          solid
 -         systemd-libs)
-+         solid)
++         libelogind)
  makedepends=(extra-cmake-modules
               kdoctools)
  optdepends=('kinfocenter: for the Energy Information KCM'
