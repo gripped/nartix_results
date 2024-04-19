@@ -56,7 +56,6 @@ dbus-broker
 ddcutil
 dhcpcd
 directx-shader-compiler
-djvulibre
 dns-over-https
 docker
 dolphin-emu
@@ -278,7 +277,6 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvirt-python
-libwebp
 libwhereami
 light-locker
 lightdm
@@ -343,7 +341,6 @@ libmm-glib
 modest
 mosquitto
 mpd
-mpv
 multipath-tools
 mumble
 mumble-server

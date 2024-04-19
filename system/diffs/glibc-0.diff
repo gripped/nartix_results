@@ -18,7 +18,22 @@
        --enable-bind-now
        --enable-fortify-source
        --enable-kernel=4.4
-@@ -135,7 +135,7 @@
+@@ -101,11 +101,13 @@
+ check() (
+   cd glibc-build
+ 
++  export CFLAGS=${CFLAGS/-D_FORTIFY_SOURCE=3/-D_FORTIFY_SOURCE=2}
++
+   sed -i '/FORTIFY/d' configparms                                     # failure to build testsuite
+   sed -i 's/-Werror=format-security/-Wformat-security/' config.make   # failure to build testsuite
+   sed -i '/CFLAGS/s/-fno-plt//' config.make                           # 16 failures
+   sed -i '/CFLAGS/s/-fexceptions//' config.make                       # 1 failure
+-  LDFLAGS=${LDFLAGS/-Wl,-z,now/}                                         # 10 failures
++  sed -i '/CFLAGS/s/-D_FORTIFY_SOURCE=3/-D_FORTIFY_SOURCE=2/' config.make
+ 
+   _skip_test test-errno-linux        sysdeps/unix/sysv/linux/Makefile
+   _skip_test tst-mlock2              sysdeps/unix/sysv/linux/Makefile
+@@ -135,7 +137,7 @@
  
    cd glibc
  

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,7 @@
+     -Dopenal=enabled
+   )
+ 
+-  arch-meson "${pkgname}" build "${_meson_options[@]}"
++  artix-meson "${pkgname}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,6 @@
+ -Dlibarchive=enabled
+ -Dopenal=enabled
+ )
+-arch-meson "${pkgname}" build "${_meson_options[@]}"
++artix-meson "${pkgname}" build "${_meson_options[@]}"
+ meson compile -C build
+ }

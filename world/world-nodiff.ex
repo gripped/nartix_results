@@ -417,6 +417,7 @@ discover
 distcc
 django
 python-django
+djvulibre
 dkms
 dleyna
 dleyna-docs
@@ -1821,6 +1822,7 @@ libvpx
 libvterm
 libwacom
 libwapcaplet
+libwebp
 libwebsockets
 libwhich
 libwlocate
@@ -2164,6 +2166,7 @@ mpdecimal
 mpg123
 mplayer
 mencoder
+mpv
 mpvqt
 msgpack-c
 msgpack-cxx

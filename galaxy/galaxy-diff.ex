@@ -13,6 +13,7 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
+mpd
 nushell
 qbittorrent
 qbittorrent-nox

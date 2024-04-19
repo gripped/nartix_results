@@ -41,7 +41,6 @@ gawk
 gc
 gdbm
 gettext
-gmp
 gnupg
 gnutls
 gpgme

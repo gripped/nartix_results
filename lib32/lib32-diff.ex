@@ -24,7 +24,6 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
-lib32-opus
 lib32-p11-kit
 lib32-pam
 lib32-pcsclite

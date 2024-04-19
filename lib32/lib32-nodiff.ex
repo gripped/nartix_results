@@ -146,6 +146,7 @@ lib32-opencl-nvidia
 lib32-ocl-icd
 lib32-openal
 lib32-openssl
+lib32-opus
 lib32-orc
 lib32-pango
 lib32-pcre

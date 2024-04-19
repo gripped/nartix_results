@@ -27,6 +27,7 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
+gmp
 gssproxy
 iputils
 libusb

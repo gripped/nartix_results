@@ -9,11 +9,15 @@
    wayland
    xdg-dbus-proxy
    xdg-utils
-@@ -97,9 +95,10 @@
+@@ -90,13 +88,14 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=disabled
+     -D dbus_config_dir=/usr/share/dbus-1/system.d
      -D selinux_module=disabled
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
-+    -D systemd=disabled
    )
  
 -  arch-meson flatpak build "${meson_options[@]}"
