@@ -623,8 +623,6 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
-gdk-pixbuf2
-gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -1632,7 +1630,6 @@ libmp4v2
 libmpack
 libmpd
 libmpdclient
-libmpeg2
 libmspack
 libmsym
 libmtp

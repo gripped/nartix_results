@@ -1,6 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -2,8 +2,8 @@
+ 
+ pkgname=binutils
+ pkgver=2.42
+-_commit=6224493e457e72b11818c87cdc112bdb0fee5f81
+-pkgrel=3
++_commit=48942a586ebc056bd059d3f63a5eed3a2fa46ab3
++pkgrel=2
+ pkgdesc='A set of programs to assemble and manipulate binary and object files'
+ arch=(x86_64)
+ url='https://www.gnu.org/software/binutils/'
+@@ -20,10 +20,10 @@
    libsframe.so
  )
  backup=('etc/gprofng.rc')
@@ -8,12 +19,16 @@
 +options=(staticlibs !distcc !ccache debug)
  source=(git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
          gold-warn-unsupported.patch)
- sha256sums=('SKIP'
+-sha256sums=('a36780f5918bf383520f44374b2daa2bc737f55aa2601458b9b35d576b4aa7df'
++sha256sums=('SKIP'
+             '2d430b66f84a19c154725ec535280c493be1d34f1a90f95208dce02fecd0e4e4')
+ validpgpkeys=(3A24BC1E8FB409FA9F14371813FCEF89DD9E3C4F)
+ 
 @@ -45,7 +45,7 @@
      --prefix=/usr \
      --sysconfdir="${pkgdir}"/etc \
      --with-lib-path=/usr/lib:/usr/local/lib \
--    --with-bugurl=https://bugs.archlinux.org/ \
+-    --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/binutils/-/issues \
 +    --with-bugurl=https://gitea.artixlinux.org/packages/binutils/issues \
      --enable-cet \
      --enable-colored-disassembly \
@@ -30,7 +45,7 @@
  --prefix=/usr \
  --sysconfdir="${pkgdir}"/etc \
  --with-lib-path=/usr/lib:/usr/local/lib \
----with-bugurl=https://bugs.archlinux.org/ \
+---with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/binutils/-/issues \
 +--with-bugurl=https://gitea.artixlinux.org/packages/binutils/issues \
  --enable-cet \
  --enable-colored-disassembly \

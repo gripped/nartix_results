@@ -109,6 +109,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdm
 libgdm
 genxrdpattern
@@ -267,6 +269,7 @@ libhandy0
 libinput
 libjpeg-turbo
 libldm
+libmpeg2
 libmspub
 libnbd
 libnvme

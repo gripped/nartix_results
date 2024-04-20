@@ -15,6 +15,7 @@ caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
 caja
+catfish
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean

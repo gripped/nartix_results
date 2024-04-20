@@ -1,6 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,6 @@
+@@ -1,19 +1,16 @@
+ 
+ pkgname=accountsservice
+ pkgver=23.13.9
+-pkgrel=2
++pkgrel=1
+ pkgdesc="D-Bus interface for user account query and manipulation"
+ url="https://gitlab.freedesktop.org/accountsservice/accountsservice"
+ arch=(x86_64)
+-license=(GPL-3.0-or-later)
++license=(GPL3)
+ depends=(
+-  gcc-libs
+   glib2
+-  glibc
    libxcrypt
    polkit
    shadow
@@ -8,7 +22,38 @@
  )
  makedepends=(
    docbook-xsl
-@@ -44,12 +43,14 @@
+@@ -21,21 +18,24 @@
+   gobject-introspection
+   gtk-doc
+   meson
+-  python-packaging
+   vala
+   xmlto
+ )
+ checkdepends=(
+-  glibc-locales
+   python-dbusmock
+   python-gobject
+ )
++_commit=57e491f5e6f3da2d5a949f4f8747c8f4e8ed799d  # tags/23.13.9^0
+ source=(
+-  "git+$url.git#tag=$pkgver"
+-  accounts-daemon-restart.hook
++  "git+https://gitlab.freedesktop.org/accountsservice/accountsservice.git#commit=$_commit"
+ )
+-b2sums=('d0e2166dc7232a9cc9f6b37b69bc8651486a85b5a98f98a9fdd39958142fec480cfc19e300c7fcc4becf9436282bd8b2f0141523347c748ee074a4bfec0029c4'
+-        'ac1892d814c9efca38daec5b34efdee6289089df515ceeb0f675794263879506e2b59894eef6a85f52570db3bd8e62cdf15a7d980538195c5af7cba016d6a533')
++b2sums=('SKIP')
++
++pkgver() {
++  cd $pkgname
++  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++}
++
+ 
+ prepare() {
+   cd $pkgname
+@@ -43,30 +43,28 @@
  
  build() {
    local meson_options=(
@@ -24,7 +69,12 @@
    meson compile -C build
  }
  
-@@ -61,7 +62,6 @@
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs || :
+ }
+ 
+ package() {
    depends+=(
      libcrypt.so
      libg{lib,object,io}-2.0.so
@@ -32,13 +82,27 @@
    )
    provides+=(libaccountsservice.so)
  
+   meson install -C build --destdir "$pkgdir"
+-
+-  install -Dt "$pkgdir/usr/share/libalpm/hooks" -m644 *.hook
+-  install -d "$pkgdir/usr/share/accountsservice/interfaces"
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -7,11 +7,9 @@
+@@ -1,20 +1,15 @@
+ docbook-xsl
+-gcc-libs
+ git
+ glib2
+-glibc
+ gobject-introspection
+ gtk-doc
+ libcrypt.so
  libgio-2.0.so
  libglib-2.0.so
  libgobject-2.0.so
@@ -46,6 +110,7 @@
  libxcrypt
  meson
  polkit
+-python-packaging
  shadow
 -systemd
  vala
