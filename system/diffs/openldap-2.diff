@@ -1,11 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,11 @@
- pkgbase=openldap
- pkgname=('openldap' 'libldap')
- pkgver=2.6.7
--pkgrel=2
-+pkgrel=1
+@@ -6,7 +6,7 @@
  arch=('x86_64')
  url="https://www.openldap.org/"
  license=('custom')
@@ -23,7 +18,15 @@
  }
  
  build() {
-@@ -105,7 +103,7 @@
+@@ -62,6 +60,7 @@
+     --disable-wt \
+     --enable-overlays=mod \
+     --with-cyrus-sasl \
++    --with-systemd=no \
+     --with-threads
+ 
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+@@ -105,7 +104,7 @@
  
  package_openldap() {
    pkgdesc="Lightweight Directory Access Protocol (LDAP) client and server"

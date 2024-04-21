@@ -4,7 +4,7 @@
  
  pkgname=gnome-maps
 -pkgver=45.2
-+pkgver=46.0
++pkgver=46.10
  pkgrel=1
  pkgdesc="A simple GNOME 3 maps application"
  url="https://wiki.gnome.org/Apps/Maps"
@@ -34,23 +34,25 @@
  )
  makedepends=(
    git
-@@ -28,13 +34,13 @@
+@@ -28,21 +34,17 @@
    yelp-tools
  )
  groups=(gnome)
 -_commit=39be1983f1c7cc4e4d02adb9491bafd949d1a635  # tags/v45.2^0
-+_commit=8333905cec2c980fcc4fc9aabded80ecec4c776e  # tags/v46.0^0
- source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
- b2sums=('SKIP')
- 
- pkgver() {
-   cd $pkgname
+-source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
+-b2sums=('SKIP')
+-
+-pkgver() {
+-  cd $pkgname
 -  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
-+  git describe --tags | sed -r 's/^v//;s/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
- }
+-}
++source=(
++  "git+https://gitlab.gnome.org/GNOME/gnome-maps.git#tag=v${pkgver/[a-z]/.&}"
++)
++b2sums=('5e7945259f1c0b4d3065778b7fe0a42b18942e3ded1375c0ebc4fcea88794282ed282f5e82d0ad70388c3ac551498f17b760e50f1f8ca8a5ae2e9b9eb29b6986')
  
  prepare() {
-@@ -42,7 +48,7 @@
+   cd $pkgname
  }
  
  build() {

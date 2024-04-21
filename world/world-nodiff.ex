@@ -557,6 +557,7 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+fish
 five-or-more
 flac
 flac-doc
@@ -623,6 +624,8 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -1630,6 +1633,7 @@ libmp4v2
 libmpack
 libmpd
 libmpdclient
+libmpeg2
 libmspack
 libmsym
 libmtp
