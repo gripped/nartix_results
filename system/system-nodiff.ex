@@ -144,7 +144,6 @@ mkinitcpio-nfs-utils
 mlocate
 mpfr
 nano
-ncurses
 net-tools
 nettle
 nilfs-utils

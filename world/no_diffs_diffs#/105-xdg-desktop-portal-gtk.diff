@@ -9,6 +9,14 @@
    meson compile -C build
  }
  
+@@ -51,5 +51,7 @@
+ [preferred]
+ default=gtk
+ END
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
 
 
 ############# Stripped diff below #################

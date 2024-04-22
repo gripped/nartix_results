@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,8 +27,6 @@
+@@ -29,8 +29,6 @@
    lz4
    pango
    pcre2
@@ -9,11 +9,12 @@
  )
  makedepends=(
    at-spi2-core
-@@ -58,9 +56,10 @@
+@@ -53,10 +51,11 @@
+ 
  build() {
    local meson_options=(
-     -D docs=true
 +    -D _systemd=false
+     -D docs=true
    )
  
 -  arch-meson vte build "${meson_options[@]}"

@@ -1,3 +1,4 @@
+artix-cgroups
 artix-keyring
 artix-mirrorlist
 audit-dinit

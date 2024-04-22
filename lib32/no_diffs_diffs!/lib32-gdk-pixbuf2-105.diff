@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -51,7 +51,7 @@
+     -D others=enabled
+   )
+ 
+-  arch-meson gdk-pixbuf build "${meson_options[@]}"
++  artix-meson gdk-pixbuf build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,6 @@
+ -D man=false
+ -D others=enabled
+ )
+-arch-meson gdk-pixbuf build "${meson_options[@]}"
++artix-meson gdk-pixbuf build "${meson_options[@]}"
+ meson compile -C build
+ }

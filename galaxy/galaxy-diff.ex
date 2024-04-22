@@ -26,8 +26,3 @@ transmission-qt
 libtransmission
 xdg-desktop-portal-xapp
 xfce4-notifyd
-zathura-cb
-zathura-djvu
-zathura-pdf-poppler
-zathura-ps
-zathura

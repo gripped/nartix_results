@@ -39,6 +39,7 @@ device-mapper
 man-db
 mdadm
 mkinitcpio
+ncurses
 nfs-utils
 nfsidmap
 nspr

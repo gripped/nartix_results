@@ -193,6 +193,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+imagemagick
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -203,12 +204,6 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -346,6 +341,9 @@ mumble-server
 mutter
 mutter-docs
 mutter45
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
@@ -357,7 +355,6 @@ nm-cloud-setup
 networkmanager-docs
 nsd
 nushell
-nvchecker
 nvme-cli
 nvtop
 ocaml-findlib
@@ -468,7 +465,6 @@ pulseaudio-rtp
 puppet
 pyalpm
 pyprof2calltree
-pyqt-builder
 pyqt5
 python-pyqt5
 pyqt6
@@ -615,6 +611,7 @@ qtqr
 quazip
 quazip-qt5
 quazip-qt6
+r8168
 rabbitmq
 rabbitmqadmin
 rdma-core

@@ -912,7 +912,6 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
-imagemagick
 imake
 imath
 img2pdf
@@ -954,6 +953,12 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-xmlgraphics-commons
 java11-openjdk
 jre11-openjdk-headless
@@ -2197,9 +2202,6 @@ mypaint-brushes1
 mypy
 namcap
 nasm
-nautilus
-libnautilus-extension
-libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -2274,6 +2276,7 @@ nuklear
 numactl
 numlockx
 nuspell
+nvchecker
 nvidia-open
 nvidia-open-dkms
 nvidia-settings
@@ -2852,6 +2855,7 @@ pyopengl
 python-opengl
 pypy
 pypy3
+pyqt-builder
 pyqt5-3d
 python-pyqt5-3d
 pyqt5-chart
@@ -3366,6 +3370,7 @@ python-jmespath
 python-joblib
 python-jose
 python-josepy
+python-jq
 python-js2py
 python-jschema-to-python
 python-json-logger
@@ -4256,7 +4261,6 @@ quilt
 quota-tools
 qutebrowser
 r
-r8168
 radeontop
 radicale
 raft

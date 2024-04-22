@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ arch=('x86_64')
+ url='https://openjdk.java.net/'
+ license=('LicenseRef-Java')
+-makedepends=('java-environment=21' 'cpio' 'unzip' 'zip' 'libelf' 'libcups' 'libx11'
++makedepends=('java-environment=22' 'cpio' 'unzip' 'zip' 'libelf' 'libcups' 'libx11'
+              'libxrender' 'libxtst' 'libxt' 'libxext' 'libxrandr' 'alsa-lib' 'pandoc'
+              'graphviz' 'freetype2' 'libjpeg-turbo' 'giflib' 'libpng' 'lcms2'
+              'libnet' 'bash' 'harfbuzz' 'gcc-libs' 'glibc')
+@@ -98,7 +98,6 @@
+     --with-native-debug-symbols=internal \
+     --enable-unlimited-crypto \
+     --disable-warnings-as-errors \
+-    --with-vendor-name="Arch Linux" \
+     ${NUM_PROC_OPT}
+ 
+   make images legacy-jre-image docs
+@@ -258,7 +257,7 @@
+ 
+   install -dm 755 "${pkgdir}${_jvmdir}"
+ 
+-  cp -a bin demo include jmods lib release\
++  cp -a bin demo include jmods lib release \
+     "${pkgdir}${_jvmdir}"
+ 
+   rm "${pkgdir}${_jvmdir}/lib/src.zip"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,7 +43,6 @@
+ --with-native-debug-symbols=internal \
+ --enable-unlimited-crypto \
+ --disable-warnings-as-errors \
+---with-vendor-name="Arch Linux" \
+ ${NUM_PROC_OPT}
+ make images legacy-jre-image docs
+ find "${srcdir}/${_imgdir}" -iname '*.so' -exec chmod +x {} \;
