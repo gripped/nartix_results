@@ -59,6 +59,7 @@ fpc
 garcon
 girara
 gpicview
+incron
 lazarus
 lazarus-gtk2
 lazarus-gtk3
@@ -66,6 +67,7 @@ lazarus-qt5
 lazarus-qt6
 libe-book
 libexttextcat
+libfm-qt
 liblangtag
 liblxqt
 libmatekbd
@@ -75,6 +77,7 @@ libmspub
 libopenshot-audio
 libopenshot-audio-docs
 libopenshot
+libqtxdg
 libreoffice-extension-texmaths
 libreoffice-fresh-i18n
 libreoffice-fresh
@@ -97,6 +100,7 @@ libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
 libsidplayfp
+libsysstat
 libtg_owt
 libxfce4ui
 libxfce4util
@@ -208,6 +212,7 @@ qt5ct
 qt5pas
 qt6pas
 qterminal
+qtxdg-tools
 retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone

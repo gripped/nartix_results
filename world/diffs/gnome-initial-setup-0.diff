@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -60,7 +60,7 @@
-   cd $pkgname
+@@ -56,7 +56,7 @@
  }
+ 
  build() {
 -  arch-meson $pkgname build
 +  artix-meson $pkgname build -Dsystemd=false

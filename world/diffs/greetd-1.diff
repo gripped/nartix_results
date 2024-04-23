@@ -5,7 +5,7 @@
  depends=(gcc-libs
           glibc
 -         systemd)
-+         udev)
++         elogind)
  makedepends=(cargo
               scdoc)
  _archive="$pkgbase-$pkgver"
@@ -23,9 +23,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,4 +6,4 @@
+@@ -1,4 +1,5 @@
+ cargo
++elogind
+ gcc-libs
+ glibc
+ greetd
+@@ -6,4 +7,3 @@
  greetd-greeter
  pam
  scdoc
 -systemd
-+udev

@@ -193,7 +193,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-imagemagick
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -474,6 +473,7 @@ python-arrow
 python-build
 python-docutils
 python-fasteners
+python-jupyterlab-server
 python-notify2
 python-parso
 python-pipenv-to-requirements

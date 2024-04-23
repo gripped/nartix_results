@@ -912,6 +912,7 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
+imagemagick
 imake
 imath
 img2pdf
@@ -3393,7 +3394,6 @@ python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyter-ydoc
-python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
 python-k5test
