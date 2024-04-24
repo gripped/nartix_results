@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,7 +46,7 @@
- sha256sums=('67eeb5e989294958b25c397cfc5615ff65f44315c700010f0b9e336e6f3407cb')
+@@ -64,7 +64,7 @@
+ }
  
  build() {
--  arch-meson $pkgname-$pkgver build
-+  artix-meson $pkgname-$pkgver build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -17,9 +17,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
+@@ -5,6 +5,6 @@
+ git -c protocol.file.allow=always -c protocol.allow=never submodule update
+ }
  build() {
--arch-meson $pkgname-$pkgver build
-+artix-meson $pkgname-$pkgver build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

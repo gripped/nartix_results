@@ -697,7 +697,6 @@ gnome-common
 gnome-connections
 gnome-console
 gnome-contacts
-gnome-control-center
 gnome-devel-docs
 gnome-epub-thumbnailer
 gnome-font-viewer
@@ -3421,7 +3420,6 @@ python-libarchive-c
 python-libcst
 python-libevdev
 python-librabbitmq
-python-libtmux
 python-libusb1
 python-libvcs
 python-license-expression

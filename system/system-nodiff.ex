@@ -144,6 +144,7 @@ mkinitcpio-nfs-utils
 mlocate
 mpfr
 nano
+ncurses
 net-tools
 nettle
 nilfs-utils
@@ -172,7 +173,6 @@ run-parts
 s-nail
 sdparm
 sed
-shadow
 sqlite
 sqlite-tcl
 sqlite-analyzer

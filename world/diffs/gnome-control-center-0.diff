@@ -1,6 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -113,7 +113,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-control-center
+ pkgver=46.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="GNOME's main interface to configure various aspects of the desktop"
+ url="https://gitlab.gnome.org/GNOME/gnome-control-center"
+ license=(GPL-2.0-or-later)
+@@ -110,11 +110,10 @@
+ build() {
+   local meson_options=(
+     -D documentation=true
+-    -D location-services=enabled
      -D malcontent=true
    )
  
@@ -17,8 +30,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,6 @@
+@@ -7,9 +7,8 @@
+ build() {
+ local meson_options=(
  -D documentation=true
+--D location-services=enabled
  -D malcontent=true
  )
 -arch-meson $pkgname build "${meson_options[@]}"

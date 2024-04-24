@@ -119,6 +119,7 @@ glfw-x11
 glfw-wayland
 glfw-doc
 gnome-bluetooth-3.0
+gnome-control-center
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -474,6 +475,7 @@ python-build
 python-docutils
 python-fasteners
 python-jupyterlab-server
+python-libtmux
 python-notify2
 python-parso
 python-pipenv-to-requirements

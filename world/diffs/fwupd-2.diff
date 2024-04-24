@@ -1,0 +1,181 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,35 +1,26 @@
+ 
+-pkgbase=fwupd
+-pkgname=(
+-  fwupd
+-  fwupd-docs
+-)
+-pkgver=1.9.18
++pkgname=(fwupd fwupd-docs)
++pkgver=1.9.15
+ pkgrel=1
+ pkgdesc="Simple daemon to allow session software to update firmware"
+ arch=(x86_64)
+ url='https://github.com/fwupd/fwupd'
+ license=(LGPL-2.1-or-later)
+ depends=(
+-  bash
+   bluez
+   curl
+   efivar
+   flashrom
+   fwupd-efi
+   gcab
+-  gcc-libs
+-  glib2
+-  glibc
+   gnutls
+   hicolor-icon-theme
+-  json-glib
+   libarchive
+   libcbor
+   libgudev
+   libgusb
+   libjcat
+-  libmbim
++  json-glib
+   libmm-glib
+   libqmi
+   libsmbios
+@@ -39,11 +30,7 @@
+   protobuf-c
+   python
+   shared-mime-info
+-  sqlite
+-  systemd-libs
+   tpm2-tss
+-  xz
+-  zlib
+ )
+ makedepends=(
+   bash-completion
+@@ -55,7 +42,6 @@
+   noto-fonts-cjk
+   pandoc
+   python-cairo
+-  python-dbus
+   python-gobject
+   python-pillow
+   vala
+@@ -66,31 +52,31 @@
+   "https://github.com/fwupd/fwupd/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc}
+   fwupd.sysusers
+ )
+-sha512sums=('d5e0f3a8c741240f389628e2ed81f1e6ec21689bdcd39f692222114a2d495925a0f0720b10fbb0087362c0b734f4f0abfd8e105eff4695e41e645395e5587a50'
++sha512sums=('3b5c696510f44e800dad683903eda5a18ff39774093587df7246b1fec7d243471e72b46a34c0dd721cf63e3f88f072432d8e87a85be17b19ebce7a58a9550724'
+             'SKIP'
+             '637203080b55eda74a659f58c853a9a723a2dad5da70915b2b0e036c6145a649468ebec700cc83975d9cb5378b9dced8b3a3b26bdbcc75ddc774837355e75deb')
+-b2sums=('7dd1691e2db600085a61a545961730a14d74e3f8b3a66fd90092658e19336a8e11861202db063d64c936cac9ab12ebf7dcdd3a8dcd7ff01b05f0a860d8b4ba68'
++b2sums=('05cfe77b8fa3037411482f3b3a9ece02aa1a5b6c8de366127200c4b8466398a0fcc243aadde819887d51ae06e64921f481d93b106a403cfa9f4d3fb1ebbd2fec'
+         'SKIP'
+         'e65ca7da22a20a40882cfc1fe4479643f9a38c90a4f2c3e71e6e5e3de1d6db212a0f17d600097619fe3cdb0a9b860422f8b0b9a9d45441518e51a7eb12a918bb')
+ validpgpkeys=(163EB50119225DB3DF8F49EA17ACBA8DFA970E17) # Richard Hughes <richard@hughsie.com>
+ 
+ build() {
+-  local meson_options=(
+-    -D docs=enabled
++  artix-meson ${pkgname}-${pkgver} build \
++    -D b_lto=false \
++    -D docs=enabled \
++    -D plugin_amdgpu=disabled \
++    -D launchd=disabled \
++    -D plugin_intel_spi=true \
++    -D supported_build=enabled \
++    -D systemd=disabled \
++    -D offline=disabled \
++    -D elogind=enabled \
+     -D efi_binary=false
+-    -D launchd=disabled
+-    -D plugin_amdgpu=disabled
+-    -D plugin_intel_spi=true
+-    -D supported_build=enabled
+-    -D systemd_unit_user=fwupd
+-  )
+-
+-  arch-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs || :
+ }
+ 
+ _pick() {
+@@ -116,25 +102,23 @@
+     libqmi-glib.so
+   )
+   optdepends=(
+-    'python-dbus: Firmware packaging tools'
+-    'python-gobject: Firmware packaging tools'
+     'udisks2: UEFI firmware upgrade support'
+   )
+   provides=(libfwupd.so)
+   backup=(
+     'etc/fwupd/fwupd.conf'
++    'etc/fwupd/remotes.d/fwupd-tests.conf'
+     'etc/fwupd/remotes.d/lvfs-testing.conf'
+     'etc/fwupd/remotes.d/lvfs.conf'
+     'etc/fwupd/remotes.d/vendor-directory.conf'
++    'etc/fwupd/remotes.d/vendor.conf'
+   )
+ 
+   meson install -C build --destdir "${pkgdir}"
+   install -D -m644 fwupd.sysusers "${pkgdir}"/usr/lib/sysusers.d/fwupd.conf
+-  rm -r "${pkgdir}"/usr/{lib,share}/installed-tests/
++  rm -r "${pkgdir}"/usr/share/installed-tests/
+   mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
+   mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
+-  rm "${pkgdir}"/usr/lib/modules-load.d/fwupd-msr.conf
+-  rmdir "${pkgdir}"/usr/lib/modules-load.d
+ 
+   _pick docs "${pkgdir}"/usr/share/doc/{,fwupd/}{libfwupdplugin,libfwupd}
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ 
+-bash
+ bash-completion
+ bluez
+ curl
+@@ -7,10 +6,7 @@
+ flashrom
+ fwupd-efi
+ gcab
+-gcc-libs
+ gi-docgen
+-glib2
+-glibc
+ gnu-efi-libs
+ gnutls
+ gobject-introspection
+@@ -26,7 +22,6 @@
+ libgusb
+ libjcat
+ libjson-glib-1.0.so
+-libmbim
+ libmm-glib
+ libmm-glib.so
+ libpassim.so
+@@ -44,14 +39,9 @@
+ protobuf-c
+ python
+ python-cairo
+-python-dbus
+ python-gobject
+ python-pillow
+ shared-mime-info
+-sqlite
+-systemd-libs
+ tpm2-tss
+ vala
+ valgrind
+-xz
+-zlib

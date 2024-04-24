@@ -39,7 +39,6 @@ device-mapper
 man-db
 mdadm
 mkinitcpio
-ncurses
 nfs-utils
 nfsidmap
 nspr
@@ -54,6 +53,7 @@ pambase
 ppp
 procps-ng
 rpcbind
+shadow
 usbutils
 util-linux
 util-linux-libs
