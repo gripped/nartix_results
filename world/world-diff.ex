@@ -119,7 +119,6 @@ glfw-x11
 glfw-wayland
 glfw-doc
 gnome-bluetooth-3.0
-gnome-control-center
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -353,6 +352,8 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+nginx
+nginx-src
 nsd
 nushell
 nvme-cli

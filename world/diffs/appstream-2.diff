@@ -7,7 +7,7 @@
 -         systemd-libs
           zstd)
  makedepends=(gi-docgen
-              gobject-introspection
+              git
 @@ -47,6 +46,7 @@
      --libexecdir=lib \
      -Dqt=true \
@@ -22,7 +22,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -22,7 +22,6 @@
+@@ -23,7 +23,6 @@
  qt5-tools
  qt6-base
  qt6-tools

@@ -8,7 +8,7 @@
    vala
  )
  source=(
-@@ -56,15 +55,16 @@
+@@ -56,10 +55,11 @@
  
  build() {
    local meson_options=(
@@ -21,12 +21,6 @@
    meson compile -C build
  }
  
- check() {
--  dbus-run-session meson test -C build --print-errorlogs -t 3
-+  dbus-run-session meson test -C build --print-errorlogs -t 3 ||: # one test times out
- }
- 
- package_tracker3() {
 
 
 ############# Stripped diff below #################

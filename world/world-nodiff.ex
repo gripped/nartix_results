@@ -697,6 +697,7 @@ gnome-common
 gnome-connections
 gnome-console
 gnome-contacts
+gnome-control-center
 gnome-devel-docs
 gnome-epub-thumbnailer
 gnome-font-viewer
@@ -2240,8 +2241,6 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
-nginx
-nginx-src
 ninja
 nload
 nlohmann-json
