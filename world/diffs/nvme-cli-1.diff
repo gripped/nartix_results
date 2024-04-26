@@ -26,13 +26,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +0,0 @@
--asciidoc
--git
--libnvme
+@@ -1,9 +1,9 @@
+ asciidoc
+ git
+ libnvme
 -libsystemd
--meson
--swig
++libudev
+ meson
+ swig
 -systemd
--util-linux
--xmlto
++udev
+ util-linux
+ xmlto

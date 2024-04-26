@@ -267,6 +267,7 @@ libprocps
 libsidplay
 libtg_owt
 libudev0-shim
+libupnp
 libusbsio
 python-libusbsio
 libvirt-python
@@ -352,8 +353,6 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-nginx
-nginx-src
 nsd
 nushell
 nvme-cli
@@ -466,6 +465,7 @@ pulseaudio-rtp
 puppet
 pyalpm
 pyprof2calltree
+pyqt-builder
 pyqt5
 python-pyqt5
 pyqt6
@@ -482,6 +482,7 @@ python-parso
 python-pipenv-to-requirements
 python-precis_i18n
 python-profilestats
+python-pycrdt-websocket
 python-pymupdf
 python-pyudev
 python-sqlalchemy

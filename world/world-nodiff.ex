@@ -1802,7 +1802,6 @@ libtracefs-docs
 libunibreak
 libuninameslist
 libunwind
-libupnp
 liburcu
 liburing
 libusb-compat
@@ -2241,6 +2240,8 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
+nginx
+nginx-src
 ninja
 nload
 nlohmann-json
@@ -2854,7 +2855,6 @@ pyopengl
 python-opengl
 pypy
 pypy3
-pyqt-builder
 pyqt5-3d
 python-pyqt5-3d
 pyqt5-chart
@@ -3661,7 +3661,6 @@ python-pycares
 python-pycodestyle
 python-pycountry
 python-pycparser
-python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome
 python-pycryptodomex

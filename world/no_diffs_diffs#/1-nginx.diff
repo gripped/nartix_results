@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,6 @@
+         etc/logrotate.d/nginx)
+ source=($url/download/nginx-$pkgver.tar.gz{,.asc}
+         hg+https://hg.nginx.org/nginx-tests
+-        nginx.service
+         logrotate)
+ validpgpkeys=('B0F4253373F8F6F510D42178520A9993A1C052F8'  # Maxim Dounin <mdounin@mdounin.ru>
+               '43387825DDB1BB97EC36BA5D007C8D7C15D87369'  # Roman Arutyunyan <r.arutyunyan@f5.com>
+@@ -29,7 +28,6 @@
+ sha512sums=('1f604a4a29f1b74eb56de7f1d8b0e5610fa055280b4ad2d3550c56926460de24da81b17485cffb358d8814061d4a9db1e0e5079af7921f1dc329e283e2775791'
+             'SKIP'
+             'SKIP'
+-            'ca7d8666177d31b6c4924e9ab44ddf3d5b596b51da04d38da002830b03bd176d49354bbdd2a496617d57f44111ad59833296af87d03ffe3fca6b99327a7b4c3c'
+             '2f4dfcfa711b8bcbc5918ba635f5e430ef7132e66276261ade62bb1cba016967432c8dce7f84352cb8b07dc7c6b18f09177aa3eb92c8e358b2a106c8ca142fe9')
+ 
+ _common_flags=(
+@@ -128,7 +126,6 @@
+   mv "$pkgdir"/etc/nginx/html/ "$pkgdir"/usr/share/nginx
+ 
+   install -Dm644 ../logrotate "$pkgdir"/etc/logrotate.d/nginx
+-  install -Dm644 ../nginx.service "$pkgdir"/usr/lib/systemd/system/nginx.service
+   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgbase/LICENSE
+ 
+   rmdir "$pkgdir"/run

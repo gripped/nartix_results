@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=pyqt-builder
+-pkgver=1.16.2
++pkgver=1.16.1
+ pkgrel=1
+ pkgdesc='The PEP 517 compliant PyQt build system'
+ arch=(any)
+@@ -9,22 +9,20 @@
+ depends=(python
+          python-packaging
+          sip)
+-makedepends=(git
+-             python-build
++makedepends=(python-build
+              python-installer
+              python-setuptools-scm
+              python-wheel)
+-source=(git+https://github.com/Python-PyQt/PyQt-builder#tag=$pkgver)
+-sha256sums=('fcf4a53feb248aa0c8d93092bae9dadcd892860a3cbcc110b09ee926e305f908')
++source=(https://github.com/Python-PyQt/PyQt-builder/archive/$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('9032e622f88c1b65ad75e7a768106cbb0bf2ed71795eb089be418f48b3605cfa')
+ 
+ build() {
+-  cd PyQt-builder
++  cd PyQt-builder-$pkgver
+   SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver \
+   python -m build --wheel --no-isolation
+ }
+ 
+ package() {
+-  cd PyQt-builder
++  cd PyQt-builder-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ python
+ python-build
+ python-installer
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd PyQt-builder
++cd PyQt-builder-$pkgver
+ SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver \
+ python -m build --wheel --no-isolation
+ }

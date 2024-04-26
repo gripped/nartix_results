@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -13,9 +13,6 @@
  validpgpkeys=("8C7A111C21105794B0E8A27BF58C5D0A4405ACDB") # Derek McGowan
- sha256sums=('1a166e01f7b5efbb9497e10caef500901471b3649df928631781e7a3b940ff75')
+ sha256sums=('c26d6cbb7df0fe7842160e5cd8bcc9bce6770f5b5bcd41e21630ad3768adafae')
  
 -prepare() {
 -  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service
