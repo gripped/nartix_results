@@ -114,10 +114,6 @@ genxrdpattern
 geoclue
 girara
 github-cli
-glfw
-glfw-x11
-glfw-wayland
-glfw-doc
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -465,7 +461,6 @@ pulseaudio-rtp
 puppet
 pyalpm
 pyprof2calltree
-pyqt-builder
 pyqt5
 python-pyqt5
 pyqt6
@@ -482,7 +477,6 @@ python-parso
 python-pipenv-to-requirements
 python-precis_i18n
 python-profilestats
-python-pycrdt-websocket
 python-pymupdf
 python-pyudev
 python-sqlalchemy

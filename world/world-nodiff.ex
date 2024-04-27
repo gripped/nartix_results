@@ -663,6 +663,7 @@ glad
 glade
 glances
 glew
+glfw
 glib-networking
 glibmm-2.68
 glibmm-2.68-docs
@@ -2855,6 +2856,7 @@ pyopengl
 python-opengl
 pypy
 pypy3
+pyqt-builder
 pyqt5-3d
 python-pyqt5-3d
 pyqt5-chart
@@ -3310,6 +3312,7 @@ python-httpcore
 python-httplib2
 python-httpretty
 python-httptools
+python-httpx-ws
 python-httpx
 python-humanfriendly
 python-humanize
@@ -3661,6 +3664,7 @@ python-pycares
 python-pycodestyle
 python-pycountry
 python-pycparser
+python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome
 python-pycryptodomex
@@ -3987,6 +3991,7 @@ python-spsdk
 python-spur
 python-sqlalchemy-utils
 python-sqlalchemy1.3
+python-sqlite-anyio
 python-sqlparse
 python-sshpubkeys
 python-stack-data
