@@ -7,7 +7,7 @@
 -pkgver=2.78.4
 -pkgrel=1
 +pkgver=2.80.0
-+pkgrel=2
++pkgrel=3
  pkgdesc="Low level core library"
  url="https://gitlab.gnome.org/GNOME/glib"
  license=(LGPL-2.1-or-later)
@@ -26,16 +26,16 @@
    shared-mime-info
    util-linux
  )
-@@ -36,7 +39,7 @@
+@@ -36,25 +39,21 @@
    debug
    staticlibs
  )
 -_commit=00edb7f7453a43cff343f9e99d49f2e421e4345c  # tags/2.78.4^0
-+_commit=763cc3b238398614c20069fd67642730e3a6519b  # tags/2.80.0^0
  source=(
-   "git+https://gitlab.gnome.org/GNOME/glib.git#commit=$_commit"
+-  "git+https://gitlab.gnome.org/GNOME/glib.git#commit=$_commit"
++  "git+https://gitlab.gnome.org/GNOME/glib.git?signed#tag=$pkgver"
    "git+https://gitlab.gnome.org/GNOME/gvdb.git"
-@@ -44,7 +47,7 @@
+   0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
    gio-querymodules.hook
    glib-compile-schemas.hook
  )
@@ -44,7 +44,21 @@
          'SKIP'
          '94c73ca7070c239494873dd52d6ee09382bbb5b1201f7afd737cfa140b1a2fb0744b2c2831baf3943d1d072550c35888d21ce6f19f89481ff9d1a60d9a0b30e0'
          '14c9211c0557f6d8d9a914f1b18b7e0e23f79f4abde117cb03ab119b95bf9fa9d7a712aa0a29beb266468aeb352caa3a9e4540503cfc9fe0bbaf764371832a96'
-@@ -70,8 +73,9 @@
+-        'd30d349b4cb4407839d9074ce08f5259b8a5f3ca46769aabc621f17d15effdb89c4bf19bd23603f6df3d59f8d1adaded0f4bacd0333afcab782f2d048c882858')
+-
+-
+-pkgver() {
+-  cd glib
+-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+-}
++        'acc2f474139e535f4bdd70ac22a9150f786b3395e679b14d0d3fbb9361d511bb1b5069d95b2a7ac9c0f3d901b03a0c037eb273446ba00764191b30a777bd2bc9')
++validpgpkeys=(
++  923B7025EE03C1C59F42684CF0942E894B2EAFA0 # Philip Withnall <pwithnall@gnome.org>
++)
+ 
+ prepare() {
+   cd glib
+@@ -70,8 +69,9 @@
    local meson_options=(
      --default-library both
      -D glib_debug=disabled
@@ -56,7 +70,7 @@
      -D selinux=disabled
      -D sysprof=enabled
    )
-@@ -82,7 +86,7 @@
+@@ -82,7 +82,7 @@
    CFLAGS+=" -ffat-lto-objects"
    CXXFLAGS+=" -ffat-lto-objects"
  
@@ -65,7 +79,7 @@
    meson compile -C build
  }
  
-@@ -95,11 +99,12 @@
+@@ -95,11 +95,12 @@
      libffi.so
      libmount.so
    )
@@ -79,7 +93,7 @@
    )
  
    meson install -C build --destdir "$pkgdir"
-@@ -113,7 +118,7 @@
+@@ -113,7 +114,7 @@
      "$pkgdir/usr/share/glib-2.0/codegen"
  
    mkdir -p docs/usr/share

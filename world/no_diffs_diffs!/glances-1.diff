@@ -25,14 +25,12 @@
  
  build() {
    cd "glances-${pkgver}"
-@@ -30,8 +27,6 @@
- 
+@@ -31,7 +28,5 @@
  package() {
    cd "glances-${pkgver}"
--  python -m installer --destdir="$pkgdir" dist/*.whl
+   python -m installer --destdir="$pkgdir" dist/*.whl
 -  install -Dm644 "${srcdir}"/glances.service \
 -    "${pkgdir}"/usr/lib/systemd/system/glances.service
-+    python -m installer --destdir="$pkgdir" dist/*.whl
  }
  
 

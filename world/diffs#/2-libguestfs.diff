@@ -17,11 +17,12 @@
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -149,9 +148,6 @@
+@@ -149,10 +148,6 @@
    make
  }
  
 -check() {
+-  export SKIP_TEST_DISCARD_PL=1  # https://github.com/libguestfs/libguestfs/issues/140
 -  LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
 -}
  

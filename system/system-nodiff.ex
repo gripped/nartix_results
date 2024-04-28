@@ -45,7 +45,6 @@ gmp
 gnupg
 gnutls
 gpgme
-qgpgme-qt5
 qgpgme-qt6
 python-gpgme
 gpm
@@ -73,6 +72,7 @@ krb5
 ldns
 less
 libaio
+libarchive
 libassuan
 libbpf
 libcap-ng

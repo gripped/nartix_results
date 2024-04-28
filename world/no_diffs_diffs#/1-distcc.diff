@@ -1,11 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,14 +11,12 @@
- optdepends=('gtk3: for distccmon')
- backup=(etc/conf.d/distccd
+@@ -13,12 +13,10 @@
          etc/distcc/hosts)
--source=("git+$url?signed#tag=v$pkgver"
-+source=("git+$url#tag=v$pkgver"
+ source=("git+$url?signed#tag=v$pkgver"
          distccd.conf.d
 -        distccd.service
          sysusers.conf

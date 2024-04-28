@@ -12,7 +12,7 @@
  checkdepends=('python-nose' 'python-ply')
  optdepends=('logrotate: for rotating log files'
              'libdbi: for the SQL plugin'
-@@ -40,18 +39,15 @@
+@@ -40,8 +39,7 @@
  replaces=('eventlog')
  backup=('etc/syslog-ng/scl.conf'
          'etc/syslog-ng/syslog-ng.conf'
@@ -21,10 +21,8 @@
 +        'etc/logrotate.d/syslog-ng')
  source=(https://github.com/balabit/syslog-ng/releases/download/syslog-ng-$pkgver/$pkgname-$pkgver.tar.gz
          syslog-ng.conf syslog-ng.logrotate)
- sha512sums=('1cf18c43321e523d0f49b25a4839fd10ec301b207da1b2c407df5167dba557ac0a7781b07f1c1e5d18241376966b8099d9e41dffa55030f6a8052388139c4107'
--            'cbcc5f6e6d0ed75add8a38bf35a5bee9f0cce487e0eda76d34bf807e1fe1f49bd86db707c7457205e502f0c7de78f44c5b9cb8a8e993880095089e75248906c2'
-+            '599d9d1d00a11e2d75958b314848ee31b3da9d91016e0a0e8a002346d8b969d9759bb10b631ca22e37716078c6850e638573eff24a9b20703f79cbb8b788ef0c'
-             'cd39f545a6a855c866a466bf846e33940b2c2dd1fc2eaf50cce29c68e1a5753c7c4b56411e4f01c152f32e155104a98dd755a96319767f47c73a8853f720b2cc')
+ sha512sums=('7c4fbf1ac5377240afa7a1db8d72772399d2c62657fffc3c59e82b2dea6f12031f02320c4f567f981311bd1d8bbfd98962aeb59720ca857867a51b6bf83afb4b'
+@@ -50,8 +48,6 @@
  
  prepare() {
    cd $pkgname-$pkgver

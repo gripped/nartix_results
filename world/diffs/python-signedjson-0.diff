@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,10 +6,10 @@
+ pkgdesc='Sign JSON with Ed25519 signatures'
+ url='https://pypi.python.org/pypi/signedjson/'
+ arch=('any')
+-license=('Apache-2.0')
++license=('Apache')
+ 
+ depends=('python' 'python-canonicaljson' 'python-unpaddedbase64' 'python-pynacl')
+-makedepends=('python-setuptools' 'python-setuptools-scm' 'python-wheel' 'python-build' 'python-installer')
++makedepends=('python-setuptools' 'python-setuptools-scm' 'python-wheel')
+ 
+ source=("https://files.pythonhosted.org/packages/source/s/signedjson/signedjson-$pkgver.tar.gz")
+ 
+@@ -17,11 +17,11 @@
+ 
+ build() {
+ 	cd signedjson-$pkgver
+-	python -m build --wheel --no-isolation
++	python setup.py build
+ }
+ 
+ package() {
+ 	cd signedjson-$pkgver
+-	python -m installer --destdir="$pkgdir" dist/*.whl
++	python setup.py install --root="$pkgdir" --optimize=1 --skip-build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd signedjson-$pkgver
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

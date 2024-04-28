@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd $pkgname
+@@ -3,6 +3,6 @@
+ git cherry-pick -n 4e5744ccbec430b82f8b16c469d8b1bd5c7edf78 # Fix build
  }
  build() {
 -arch-meson $pkgname build

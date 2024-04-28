@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -89,8 +89,8 @@
+@@ -92,8 +92,8 @@
      -D gst-examples=disabled
      -D libnice=disabled
      -D orc-source=system
@@ -11,7 +11,7 @@
      -D vaapi=enabled
  
      -D gstreamer:dbghelp=disabled
-@@ -127,7 +127,7 @@
+@@ -130,7 +130,7 @@
  
    export GI_SCANNER_DISABLE_CACHE=1
  
@@ -20,6 +20,15 @@
    meson configure build  # Print config
    meson compile -C build
  }
+@@ -142,7 +142,7 @@
+   export NO_AT_BRIDGE=1 GTK_A11Y=none
+ 
+   xvfb-run -s '-nolisten local' \
+-    meson test -C build --print-errorlogs -t 5
++    meson test -C build --print-errorlogs -t 5 ||:
+ )
+ 
+ _install() {
 
 
 ############# Stripped diff below #################
@@ -28,7 +37,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,8 +11,8 @@
+@@ -10,8 +10,8 @@
  -D gst-examples=disabled
  -D libnice=disabled
  -D orc-source=system
@@ -39,8 +48,8 @@
  -D vaapi=enabled
  -D gstreamer:dbghelp=disabled
  -D gstreamer:ptp-helper-permissions=capabilities
-@@ -46,7 +46,7 @@
- -D gst-editing-services:validate=disabled
+@@ -45,7 +45,7 @@
+ -D gst-devtools:debug_viewer=enabled
  )
  export GI_SCANNER_DISABLE_CACHE=1
 -arch-meson gstreamer build "${meson_options[@]}"

@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -48,7 +48,7 @@
+@@ -7,7 +7,7 @@
+ pkgver=3.48.2
+ pkgrel=1
+ pkgdesc="Python bindings for GLib/GObject/GIO/GTK"
+-url="https://pygobject.gnome.org/"
++url="https://wiki.gnome.org/Projects/PyGObject"
+ arch=(x86_64)
+ license=(LGPL-2.1-or-later)
+ depends=(
+@@ -40,7 +40,7 @@
  }
  
  build() {
@@ -17,8 +26,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- git apply -3 ../304.patch
+@@ -2,6 +2,6 @@
+ cd pygobject
  }
  build() {
 -arch-meson pygobject build

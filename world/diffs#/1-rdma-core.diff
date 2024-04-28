@@ -1,32 +1,38 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
- arch=('x86_64')
- url="https://github.com/linux-rdma/rdma-core"
- license=('GPL2' 'custom:OpenIB.org BSD (MIT variant)')
--depends=('libnl' 'ethtool' 'perl' 'systemd-libs')
--makedepends=('git' 'cmake' 'systemd' 'ninja' 'pandoc' 'libdrm' 'cython0' 'python' 'python-docutils' 'valgrind')
-+depends=('libnl' 'ethtool' 'perl' 'udev')
-+makedepends=('git' 'cmake' 'ninja' 'pandoc' 'libdrm' 'cython0' 'python' 'python-docutils' 'valgrind')
- _provides=('rdma' 'ibacm' 'libiwpm' 'libibcm' 'libibumad' 'libibverbs'
-            'librdmacm' 'libcxgb3' 'libcxgb4' 'libmlx4' 'libmlx5' 'libmthca' 'libnes' 'libocrdma'
-            'srptools' 'infiniband-diags' 'libibmad')
-@@ -55,7 +55,7 @@
-     cd build
-     DESTDIR="$pkgdir" ninja install
+@@ -20,7 +20,7 @@
+   glibc
+   libnl
+   perl
+-  systemd-libs
++  udev
+ )
+ makedepends=(
+   cmake
+@@ -31,7 +31,6 @@
+   pandoc
+   python
+   python-docutils
+-  systemd
+   valgrind
+ )
+ _provides=(
+@@ -90,7 +89,7 @@
+ package() {
+     DESTDIR="$pkgdir" cmake --install build
  
 -    rm -vr "$pkgdir"/etc/init.d
 +    rm -vr "$pkgdir"/etc/init.d "$pkgdir/usr/lib/systemd/"
+     rm -vr "$pkgdir"/usr/share/doc/$pkgname/tests
  
-     cd "$srcdir"/rdma-core-$pkgver/redhat
-     install -D --mode=0644 rdma.conf "$pkgdir"/etc/rdma/rdma.conf
+     cd "$srcdir"/$pkgname-$pkgver/redhat
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -9,6 +9,5 @@
+@@ -10,6 +10,5 @@
  perl
  python
  python-docutils

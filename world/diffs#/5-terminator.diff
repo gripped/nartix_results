@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,10 +5,10 @@
+ pkgdesc='Terminal emulator that supports tabs and grids'
+ arch=('any')
+ url='https://github.com/gnome-terminator/terminator'
+-license=('GPL-2.0-only')
++license=('GPL2')
+ depends=('gsettings-desktop-schemas' 'libkeybinder3' 'libnotify' 'python-cairo' 'python-configobj'
+          'python-dbus' 'python-psutil' 'python-gobject' 'vte3' 'xdg-utils')
+-makedepends=('intltool' 'python-setuptools' 'python-build' 'python-installer' 'python-wheel')
++makedepends=('intltool' 'python-pytest-runner' 'python-setuptools' 'python-wheel')
+ source=(${url}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz{,.asc}
+         0001-fixed-validate-module-import-for-newer-version-of-co.patch
+         https://github.com/gnome-terminator/terminator/commit/8ae6f93f.patch)
+@@ -29,19 +29,18 @@
+ 
+     patch -Np1 < $srcdir/0001-fixed-validate-module-import-for-newer-version-of-co.patch
+     patch -p1 < ../8ae6f93f.patch
+-    sed -i '/pytest-runner/d' setup.py
+ }
+ 
+ build() {
+     cd "${pkgname}-${pkgver}"
+ 
+-    python -m build --wheel --no-isolation
++    python setup.py build
+ }
+ 
+ package() {
+     cd "${pkgname}-${pkgver}"
+ 
+-    python -m installer --destdir="$pkgdir" dist/*.whl
++    python setup.py install --skip-build --root="${pkgdir}" --optimize=1
+ 
+     rm -f "${pkgdir}/usr/share/icons/hicolor/icon-theme.cache"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,13 +2,12 @@
+ intltool
+ libkeybinder3
+ libnotify
+-python-build
+ python-cairo
+ python-configobj
+ python-dbus
+ python-gobject
+-python-installer
+ python-psutil
++python-pytest-runner
+ python-setuptools
+ python-wheel
+ vte3
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd "${pkgname}-${pkgver}"
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url="https://github.com/jamielennox/requests-mock"
+ license=('Apache')
+ depends=('python-requests' 'python-six')
+-makedepends=('git' 'python-pbr')
++makedepends=('git' 'python-pbr' 'python-setuptools')
+ checkdepends=('python-purl' 'python-pytest' 'python-requests-futures' 'python-testtools' 'python-fixtures')
+ source=("git+https://github.com/jamielennox/requests-mock.git#commit=$_commit")
+ sha512sums=('SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ git
+ python-pbr
+ python-requests
++python-setuptools
+ python-six

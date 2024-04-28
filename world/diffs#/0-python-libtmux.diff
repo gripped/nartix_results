@@ -1,14 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,9 +1,9 @@
  
  _name=libtmux
  pkgname=python-libtmux
 -pkgver=0.37.0
 +pkgver=0.32.0
  _pkgver=${pkgver/.post0/post0}
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc="Python api for tmux"
+ arch=(any)
+ url="https://libtmux.git-pull.com/"
 @@ -28,8 +28,13 @@
  )
  optdepends=('python-pytest: for pytest plugin')

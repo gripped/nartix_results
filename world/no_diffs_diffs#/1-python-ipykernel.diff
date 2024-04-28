@@ -1,16 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  
  _pyname=ipykernel
  pkgname=python-$_pyname
 -pkgver=6.29.4
--pkgrel=1
 +pkgver=6.29.3
-+pkgrel=2
+ pkgrel=2
  pkgdesc='The ipython kernel for Jupyter'
  arch=(any)
- url='https://pypi.org/project/ipykernel/'
 @@ -29,7 +29,7 @@
                python-pytest-timeout)
  optdepends=('python-debugpy: debugger support')

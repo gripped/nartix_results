@@ -421,6 +421,7 @@ djvulibre
 dkms
 dleyna
 dleyna-docs
+python-dleyna
 dmd
 dmd-docs
 libphobos
@@ -751,7 +752,6 @@ gobject-introspection
 gobject-introspection-runtime
 libgirepository
 godot
-gom
 google-glog
 gox
 gparted
@@ -982,7 +982,6 @@ openjdk8-src
 openjdk8-doc
 jbig2dec
 jbigkit
-jedi-language-server
 jemalloc
 jenkins
 jitterentropy
@@ -1523,8 +1522,6 @@ libgeotiff
 libgepub
 libgexiv2
 libgig
-libgit2-glib
-libgit2-glib-docs
 libgit2
 libglib-testing
 libglvnd
@@ -1651,6 +1648,7 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
+libnbd
 libndp
 libnet
 libnewt
@@ -1818,6 +1816,7 @@ libva
 libvdpau
 libvips
 libvirt-glib
+libvirt-python
 libvirt
 libvisio
 libvisual
@@ -2328,6 +2327,10 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2353,6 +2356,8 @@ opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
+opentimelineio
+openvdb
 openvkl
 openvr
 openvswitch
@@ -2734,7 +2739,6 @@ picard
 picmi
 picom
 pidgin
-pifpaf
 pigeonhole
 pigz
 pim-data-exporter
@@ -2842,6 +2846,7 @@ purpose5
 putty
 pv
 pwndbg
+pyalpm
 pyatspi
 python-atspi
 pybind11
@@ -2854,6 +2859,7 @@ python-gobject-docs
 pylama
 pyopengl
 python-opengl
+pyprof2calltree
 pypy
 pypy3
 pyqt-builder
@@ -2891,6 +2897,7 @@ python-pysmbc
 pysolfc-cardsets
 pysolfc
 pystring
+python-aaf2
 python-aafigure
 python-absl
 python-acme
@@ -2913,6 +2920,7 @@ python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
+python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
@@ -2939,6 +2947,7 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
+python-arrow
 python-asgiref
 python-asn1crypto
 python-aspectlib
@@ -3008,6 +3017,7 @@ python-breathe
 python-brotlicffi
 python-btchip
 python-btrees
+python-build
 python-cachecontrol
 python-cached-property
 python-cachelib
@@ -3160,6 +3170,7 @@ python-docopt
 python-docstring-to-markdown
 python-doctest-ignore-unicode
 python-docutils-stubs
+python-docutils
 python-dogpile.cache
 python-dotenv
 python-doublex-expects
@@ -3198,6 +3209,7 @@ python-fakeredis
 python-falcon
 python-fastapi
 python-fastbencode
+python-fasteners
 python-fastimport
 python-fastjsonschema
 python-fastnumbers
@@ -3244,7 +3256,6 @@ python-flup
 python-fonttools
 python-fqdn
 python-freezegun
-python-frozendict
 python-frozenlist
 python-fs
 python-fsspec
@@ -3284,7 +3295,6 @@ python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
-python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
@@ -3339,7 +3349,6 @@ python-inflect
 python-ini2toml
 python-iniconfig
 python-installer
-python-intelhex
 python-intervals
 python-intervaltree
 python-invoke
@@ -3348,7 +3357,6 @@ python-ipdb
 python-ipykernel
 python-ipyparallel
 python-ipython-genutils
-python-ipywidgets
 python-iso8601
 python-isoduration
 python-isort
@@ -3395,6 +3403,7 @@ python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
 python-jupyter-ydoc
+python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
 python-k5test
@@ -3519,6 +3528,7 @@ python-nose-show-skipped
 python-nose
 python-nose2
 python-nosexcover
+python-notify2
 python-nptyping
 python-nrfutil
 python-nspektr
@@ -3569,6 +3579,7 @@ python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
+python-parso
 python-partd
 python-parver
 python-passlib
@@ -3608,6 +3619,7 @@ python-pillow
 python-pint
 python-pip-run
 python-pip
+python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
 python-pipx
@@ -3630,10 +3642,12 @@ python-prance
 python-praw
 python-prawcore
 python-pre-commit
+python-precis_i18n
 python-pretend
 python-prettytable
 python-priority
 python-process-tests
+python-profilestats
 python-prometheus_client
 python-promise
 python-prompt_toolkit
@@ -3691,7 +3705,6 @@ python-pygame-sdl2
 python-pygame
 python-pygdbmi
 python-pygeos
-python-pygit2
 python-pygls
 python-pygments
 python-pyhamcrest
@@ -3722,7 +3735,6 @@ python-pyogrio
 python-pyopencl
 pyopencl-headers
 python-pyopenssl
-python-pyotp
 python-pypandoc
 python-pyparsing
 python-pypdf
@@ -3801,6 +3813,7 @@ python-pytest-qt
 python-pytest-randomly
 python-pytest-regressions
 python-pytest-relaxed
+python-pytest-repeat
 python-pytest-rerunfailures
 python-pytest-ruff
 python-pytest-runner
@@ -3932,7 +3945,6 @@ python-shapely
 python-shellingham
 python-should-dsl
 python-shtab
-python-signedjson
 python-simplejson
 python-six
 python-slip
@@ -3990,6 +4002,7 @@ python-sphobjinv
 python-spsdk
 python-spur
 python-sqlalchemy-utils
+python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlite-anyio
 python-sqlparse
@@ -4001,7 +4014,6 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
-python-stone
 python-straight.plugin
 python-strict-rfc3339
 python-structlog
@@ -4015,8 +4027,6 @@ python-syrupy
 python-tabulate
 python-tabview
 python-tappy
-python-tblib
-python-teamcity-messages
 python-tempita
 python-tempora
 python-tenacity
@@ -4061,7 +4071,6 @@ python-treq
 python-trio-asyncio
 python-trio
 python-trove-classifiers
-python-trustme
 python-truststore
 python-twisted
 python-txaio
@@ -4076,7 +4085,6 @@ python-typogrify
 python-tzdata
 python-tzlocal
 python-u-msgpack
-python-ubjson
 python-uc-micro-py
 python-ufolib2
 python-ujson
@@ -4094,8 +4102,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
-python-urllib3-doc
 python-urwid
 python-userpath
 python-uvloop
@@ -4112,7 +4118,6 @@ python-vistir
 python-vobject
 python-volatile
 python-voluptuous
-python-waitress
 python-wand
 python-warlock
 python-watchdog
@@ -4184,8 +4189,6 @@ python-zope-location
 python-zope-proxy
 python-zope-schema
 python-zope-security
-python-zope-testing
-python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4256,12 +4259,14 @@ qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
+qtqr
 qtxdg-tools
 quadrapassel
 quilt
 quota-tools
 qutebrowser
 r
+r8168
 radeontop
 radicale
 raft
@@ -4716,6 +4721,7 @@ strace
 strawberry
 strip-nondeterminism
 stubby
+subversion
 sugar-datastore
 suil
 suil-docs
@@ -4728,6 +4734,7 @@ swaybg
 swaylock
 sweeper
 swell-foop
+swig
 swtpm
 sxhkd
 sxiv
@@ -4783,7 +4790,6 @@ tellico
 telly-skout
 template-glib
 tepl
-terminator
 terminus-font
 tesseract-data
 tesseract
@@ -5142,7 +5148,6 @@ xarchiver-gtk2
 xautolock
 xaw3d
 xbitmaps
-xcb-imdkit
 xcb-proto
 xcb-util-cursor
 xcb-util-errors

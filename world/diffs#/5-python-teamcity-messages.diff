@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,30 +4,30 @@
+ pkgrel=3
+ pkgdesc="Send test results to TeamCity continuous integration server from unittest, nose, py.test, twisted trial, behave"
+ url="https://github.com/JetBrains/teamcity-messages"
+-license=('Apache-2.0')
++license=('Apache')
+ arch=('any')
+ depends=('python')
+-makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++makedepends=('python-setuptools')
+ checkdepends=('python-pytest' 'python-virtualenv')
+ source=("https://github.com/JetBrains/teamcity-messages/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+ sha512sums=('b9733edb1e2aef4ca69773070e927a2b6162b34d8bea4b4fd22c5d7858de2d6416dcc39102aa718b4858635900519cfd7e02016143ac6a19fa82d1fd6780c0a3')
+ 
+ prepare() {
+   cd teamcity-messages-$pkgver
+-  sed -i "s/virtualenv_version = 'virtualenv==20.16.5'/virtualenv_version = 'virtualenv'/" setup.py
++  sed -i "s/virtualenv_version = 'virtualenv==20.7.2'/virtualenv_version = 'virtualenv'/" setup.py
+ }
+ 
+ build() {
+   cd teamcity-messages-$pkgver
+-  python -m build --wheel --skip-dependency-check --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+   cd teamcity-messages-$pkgver
+-  PYTHONPATH="$PWD" pytest tests/unit-tests*
++  python setup.py test || echo "Tests failed"
+ }
+ 
+ package() {
+   cd teamcity-messages-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,2 @@
+ python
+-python-build
+-python-installer
+ python-setuptools
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ prepare() {
+ cd teamcity-messages-$pkgver
+-sed -i "s/virtualenv_version = 'virtualenv==20.16.5'/virtualenv_version = 'virtualenv'/" setup.py
++sed -i "s/virtualenv_version = 'virtualenv==20.7.2'/virtualenv_version = 'virtualenv'/" setup.py
+ }
+ build() {
+ cd teamcity-messages-$pkgver
+-python -m build --wheel --skip-dependency-check --no-isolation
++python setup.py build
+ }

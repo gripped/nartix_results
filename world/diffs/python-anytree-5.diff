@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,29 @@
+@@ -1,32 +1,29 @@
  
  pkgname=python-anytree
 -pkgver=2.12.1
--pkgrel=1
+-pkgrel=2
 -pkgdesc="Simple, lightweight and extensible Tree data structure."
 -arch=('any')
 +pkgver=2.8.0
@@ -15,20 +15,20 @@
 -depends=('python-six')
 -makedepends=('python-build' 'python-installer' 'python-poetry-core' 'python-wheel' 'git')
 -checkdepends=('python-pytest' 'graphviz')
--_commit=65a5d09ce0a592a80918f094ec3fa48b7faca250
+-source=("$pkgname::git+https://github.com/c0fec0de/anytree#tag=$pkgver")
+-b2sums=('997f4611bf6e9b9bce01393d887743e395fb30a8a0fe5c8666847dd04edda8a2480c2d773b5508fa8539ad690d2cf2dd21852d6983d2939825f3d0ca9227c13e')
 +arch=(any)
 +license=(Apache)
 +depends=(python-six)
 +makedepends=(python-setuptools git)
 +_commit=75c0198636f8997967ba00df5077cd21350f68ce  # tags/2.8.0
- source=("$pkgname::git+https://github.com/c0fec0de/anytree#commit=$_commit")
- sha256sums=('SKIP')
- 
- pkgver() {
--  cd "$pkgname"
++source=("$pkgname::git+https://github.com/c0fec0de/anytree#commit=$_commit")
++sha256sums=('SKIP')
++
++pkgver() {
 +  cd $pkgname
-   git describe --tags | sed 's/^v//;s/-/+/g'
- }
++  git describe --tags | sed 's/^v//;s/-/+/g'
++}
  
  build() {
 -  cd "$pkgname"
@@ -37,7 +37,7 @@
 -
 -check() {
 -  cd "$pkgname"
--
+-  mkdir -p tests/dotexport
 -  python -m pytest
 +  cd $pkgname
 +  python setup.py build

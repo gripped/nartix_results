@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+          nemo-share
+          nemo-terminal)
+ pkgver=6.0.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Various extensions for Nemo"
+ arch=(x86_64)
+ license=(GPL2)
 @@ -39,7 +39,7 @@
      if [[ -f ${_dir}/meson.build ]]; then
        mkdir -p ${_dir}/build

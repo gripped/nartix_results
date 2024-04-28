@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,15 +7,15 @@
+ arch=('x86_64')
+ license=('ISC')
+ depends=('python' 'python-decorator' 'krb5')
+-makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel' 'cython')
++makedepends=('python-setuptools' 'cython')
+ checkdepends=('python-parameterized' 'python-k5test')
+-source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
++source=("https://github.com/pythongssapi/python-gssapi/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+ sha512sums=('63e6981977cb3f90c734a0f2089fc0628a86709f120814629b85576abe326f2602cfe4c351d7b3fc08cf3999e2b2f0091f829b1f1f9f1a784496bf39a781ddde')
+ b2sums=('a3238112f66b7cce61ec95e5da9fb65e2983b334111a398b1ac52d6c56141d2ed548be82242e4c3f83f562476b5193585842638041c08f720b0faabd9f9b0ca9')
+ 
+ build() {
+   cd "${pkgname}-${pkgver}"
+-  python -m build --wheel --skip-dependency-check --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -25,12 +25,8 @@
+ 
+ package() {
+   cd "${pkgname}-${pkgver}"
+-  python -m installer --destdir="${pkgdir}" dist/*.whl
++  python setup.py install -O1 --root="${pkgdir}" --skip-build
+   install -Dm 644 README.txt -t "${pkgdir}/usr/share/doc/${pkgname}"
+-
+-  local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+-  install -d "${pkgdir}/usr/share/licenses/${pkgname}"
+-  ln -s "${site_packages}/${pkgname#python-}-${pkgver}.dist-info/LICENSE.txt" \
+-    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.txt"
++  install -Dm 644 LICENSE.txt -t "${pkgdir}/usr/share/licenses/${pkgname}"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,5 @@
+ cython
+ krb5
+ python
+-python-build
+ python-decorator
+-python-installer
+ python-setuptools
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd "${pkgname}-${pkgver}"
+-python -m build --wheel --skip-dependency-check --no-isolation
++python setup.py build
+ }

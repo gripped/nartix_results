@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=catfish
+ pkgver=4.18.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Versatile file searching tool'
+ arch=('any')
+ url='https://docs.xfce.org/apps/catfish/start'
+ license=('GPL')
+ depends=('dbus-python' 'gtk3' 'python-cairo' 'python-gobject' 'python-pexpect' 'xdg-utils'
+          'xfconf' 'which')
+-makedepends=('intltool' 'python-distutils-extra' 'python-setuptools')
++makedepends=('intltool' 'python-distutils-extra')
+ optdepends=('mlocate: search in locate index'
+             'zeitgeist: search in zeitgeist index')
+ source=("https://archive.xfce.org/src/apps/catfish/${pkgver%.*}/$pkgname-$pkgver.tar.bz2")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,7 +5,6 @@
+ python-distutils-extra
+ python-gobject
+ python-pexpect
+-python-setuptools
+ which
+ xdg-utils
+ xfconf

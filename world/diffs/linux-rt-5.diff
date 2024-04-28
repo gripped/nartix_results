@@ -4,7 +4,7 @@
  
  pkgbase=linux-rt
 -pkgver=6.7.0.6.realtime1
--pkgrel=1
+-pkgrel=2
 +pkgver=6.3.3.15.realtime2
 +pkgrel=4
  pkgdesc='Linux RT'
@@ -14,7 +14,7 @@
  makedepends=(
    bc
    cpio
-@@ -18,6 +19,7 @@
+@@ -18,27 +19,26 @@
    python-sphinx
    tar
    texlive-latexextra
@@ -22,14 +22,21 @@
    xz
  )
  options=(!strip)
-@@ -26,16 +28,17 @@
+ source=(
+   git+https://gitlab.archlinux.org/archlinux/packaging/upstream/linux-rt#tag=v$pkgver?signed
    config
- )
- sha512sums=('SKIP'
--            '700bf0641282d1f4fc1bba66478805b3df590ce28db22c8e278badc3b7b52a842c5b5867c885af2fa2716a21fe95f4f7f1f6fdd4e29d1b0c3af0565dced9b5a9')
+-  0006-docutils.patch
+- )
+-sha512sums=('a38a91f53f33c88b6a32234f7fb019a77b7361441480244eb46d5a5840f4cc9582916d74288335037d77a1f48242f83d834484ce9772543d264dd1252dbfc803'
+-            '700bf0641282d1f4fc1bba66478805b3df590ce28db22c8e278badc3b7b52a842c5b5867c885af2fa2716a21fe95f4f7f1f6fdd4e29d1b0c3af0565dced9b5a9'
+-            'a5a2cdefc964803354f1acf5a61a7847e7f566bcf4471650504254fecc8d343bc65f06f7f8ee662b0b26fe2e24854e187e5c73c375d9e6522022a1a08369960b')
+-b2sums=('1aeaab5f267dc04e7f9e70323fd48370e872b16ac0d035a152a26549529e0e05294691947a2cbb0a206fbcefc75e0e4366f9eafac9172698eb8443628373db90'
+-        '3f114f2a10ce4d7f08ae255d1a865243326ee917451d7e27518c8d83481e88bb361620a3954b1094d7bb3e9f426b29c92bbcc0743a269e117f85d8c75c145acd'
+-        '0bb42a22c110f06a45e59a9adc194184a51ff97e5584d6ffabca0aa37e1e65ccaf44f43dc744eaa3861d6f6b00e299d4662bcf0c0d94478af9352b4c4f6b0ffd')
++)
++sha512sums=('SKIP'
 +            'b3c946dfd1fd4da68f21fc4d3c60fb316ba03517667aaa738ccc76afda3dcc59357cd9aa09a6e0844465181d5076408095736a32271d24ab98706a2322be6e5a')
- b2sums=('SKIP'
--        '3f114f2a10ce4d7f08ae255d1a865243326ee917451d7e27518c8d83481e88bb361620a3954b1094d7bb3e9f426b29c92bbcc0743a269e117f85d8c75c145acd')
++b2sums=('SKIP'
 +        '6eb8b75e062c1e847b13885847d83d992eca818ac38eff08c7afd22b15b5f9aef3645738cdac34683525e95062a27e01144b3b468ddbdd73e2e66654edd941ad')
  validpgpkeys=(
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman <gregkh@kernel.org>
@@ -43,7 +50,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -51,8 +54,7 @@
+@@ -54,8 +54,7 @@
    echo "-$pkgrel" > localversion.10-pkgrel
    echo "${pkgbase#linux}" > localversion.20-pkgname
    make defconfig
@@ -53,7 +60,7 @@
    make mrproper
  
    local src
-@@ -75,56 +77,11 @@
+@@ -78,56 +77,11 @@
  
  build() {
    cd $pkgbase
@@ -111,7 +118,7 @@
    depends=(
      coreutils
      initramfs
-@@ -149,70 +106,14 @@
+@@ -152,70 +106,14 @@
    echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
  
    echo "Installing modules..."
@@ -184,7 +191,7 @@
    depends=(pahole)
  
    cd $pkgbase
-@@ -286,36 +187,10 @@
+@@ -289,36 +187,10 @@
    echo "Adding symlink..."
    mkdir -p "$pkgdir/usr/src"
    ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
@@ -221,7 +228,7 @@
  
    cd $pkgbase
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
-@@ -331,9 +206,6 @@
+@@ -334,9 +206,6 @@
    echo "Adding symlink..."
    mkdir -p "$pkgdir/usr/share/doc"
    ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"

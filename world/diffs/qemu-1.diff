@@ -1,58 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -62,8 +62,8 @@
-   glusterfs
-   gnutls
-   gtk3
-+  keyutils
-   jack
--  keyutils
-   libaio
-   libbpf
-   libcacard
-@@ -104,7 +104,6 @@
+@@ -104,7 +104,7 @@
    snappy
    spice-protocol
    spice
 -  systemd
++  udev
    usbredir
    vde2
    virglrenderer
-@@ -112,6 +111,7 @@
-   zlib
-   zstd
- )
-+options=(debug)
- source=(
-   https://download.qemu.org/qemu-$pkgver.tar.xz{,.sig}
-   bridge.conf
-@@ -274,8 +274,6 @@
+@@ -274,7 +274,6 @@
  
    sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
  
 -  sed -e 's/multi-user.target/sockets.target/g' -i $pkgbase-$pkgver/contrib/systemd/qemu-pr-helper.socket
--
+ 
    mkdir -vp build
    mkdir -vp build-static
- }
-@@ -336,7 +334,7 @@
-     --static
-   )
- 
--  (
-+ (
-     cd build-static
-     ../$pkgbase-$pkgver/configure "${configure_static_options[@]}"
-     ninja
-@@ -350,7 +348,6 @@
-     ../$pkgbase-$pkgver/configure "${configure_options[@]}"
-     ninja
-   )
--
- }
- 
- package_qemu-common() {
-@@ -696,14 +693,12 @@
+@@ -696,14 +695,13 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -62,19 +27,18 @@
      etc/$pkgbase/$pkgbase-ga.conf
      etc/$pkgbase/fsfreeze-hook
    )
--  install=$pkgname.install
--  mv -v $pkgname/* "$pkgdir"
+   install=$pkgname.install
+   mv -v $pkgname/* "$pkgdir"
 -  install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.service -t "$pkgdir/usr/lib/systemd/system/"
-+  mv -v $pkgname/* "$pkgdir"
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -769,14 +764,14 @@
+@@ -769,14 +767,14 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
 -  depends=("${_qemu_system_deps[@]}" edk2-aarch64 systemd-libs libudev.so)
-+  depends=("${_qemu_system_deps[@]}" edk2-armvirt libudev libudev.so)
++  depends=("${_qemu_system_deps[@]}" libudev libudev.so)
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
@@ -86,7 +50,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -790,7 +785,7 @@
+@@ -790,7 +788,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -95,7 +59,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -818,7 +813,7 @@
+@@ -818,7 +816,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -104,7 +68,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -832,7 +827,7 @@
+@@ -832,7 +830,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -113,7 +77,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -860,7 +855,7 @@
+@@ -860,7 +858,7 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -122,7 +86,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -874,14 +869,14 @@
+@@ -874,14 +872,14 @@
  
  package_qemu-system-or1k() {
    pkgdesc="QEMU system emulator for OpenRisc32"
@@ -139,7 +103,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -895,7 +890,7 @@
+@@ -895,7 +893,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -148,7 +112,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -916,7 +911,7 @@
+@@ -916,7 +914,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -157,7 +121,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -930,14 +925,14 @@
+@@ -930,14 +928,14 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -174,7 +138,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -958,7 +953,7 @@
+@@ -958,7 +956,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
@@ -183,7 +147,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -972,7 +967,7 @@
+@@ -972,7 +970,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -192,7 +156,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -1007,9 +1002,8 @@
+@@ -1007,9 +1005,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -204,32 +168,22 @@
    _install_licenses
  }
  
-@@ -1126,7 +1120,7 @@
- 
- package_qemu-user-static-binfmt() {
-   pkgdesc="Binary format rules for QEMU static user mode emulation"
--  depends=(qemu-user-static=$pkgver-$pkgrel)
-+  depends=(qemu-user=$pkgver-$pkgrel)
-   provides=(qemu-user-binfmt-provider)
-   conflicts=(qemu-user-binfmt-provider)
-   mv -v $pkgname/* "$pkgdir"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -5,8 +5,7 @@
+@@ -5,8 +5,6 @@
  capstone
  curl
  dtc
 -edk2-aarch64
 -edk2-arm
-+edk2-armvirt
  edk2-ovmf
  fuse3
  gcc-libs
-@@ -60,6 +59,7 @@
+@@ -60,6 +58,7 @@
  libspice-server.so
  libssh
  libssh.so
@@ -237,20 +191,13 @@
  libudev.so
  liburing
  liburing.so
-@@ -164,7 +164,6 @@
- qemu-ui-spice-app
- qemu-ui-spice-core
- qemu-user
--qemu-user-static
- qemu-vhost-user-gpu
- sdl2
- sdl2_image
-@@ -173,8 +172,6 @@
+@@ -173,8 +172,7 @@
  snappy
  spice
  spice-protocol
 -systemd
 -systemd-libs
++udev
  usbredir
  vde2
  virglrenderer

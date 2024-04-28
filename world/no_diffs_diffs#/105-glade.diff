@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,7 +34,7 @@
+@@ -36,7 +36,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- git apply -3 ../fix-build.diff
+@@ -4,6 +4,6 @@
+ sed -i 's/webkit2gtk-4.0/webkit2gtk-4.1/' meson.build
  }
  build() {
 -arch-meson glade build -D gtk_doc=true

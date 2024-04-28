@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,12 +17,13 @@
+ checkdepends=(
+   python-coverage
+   python-pytest
++  python-pytest-runner
+ )
+ source=($url/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+ sha256sums=('f39e20a282eebe38ea44438f807d55762fc8dcd704cc56774944646a471f60d6')
+ 
+ prepare() {
+-  sed -e '/pytest-runner/d' -i $_name-$pkgver/setup.py # Remove pytest-runner from setup_requires
++  sed -e 's|== 5\.3\.2|>= 5.2.0|' -i $_name-$pkgver/setup.py # Unpin pytest-runner version
+ 
+   sed -e 's/getargspec/getfullargspec/' -i $_name-$pkgver/$_name/frontend/ir_generator.py
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ prepare() {
+-sed -e '/pytest-runner/d' -i $_name-$pkgver/setup.py # Remove pytest-runner from setup_requires
++sed -e 's|== 5\.3\.2|>= 5.2.0|' -i $_name-$pkgver/setup.py # Unpin pytest-runner version
+ sed -e 's/getargspec/getfullargspec/' -i $_name-$pkgver/$_name/frontend/ir_generator.py
+ }
+ build() {

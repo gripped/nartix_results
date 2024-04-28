@@ -4,8 +4,8 @@
  url='https://github.com/pyudev/pyudev'
  license=('LGPL')
  pkgdesc='Python bindings to libudev'
--depends=('python-six' 'systemd')
-+depends=('python-six' 'udev')
+-depends=('systemd')
++depends=('udev')
  makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel' 'python-sphinx')
  checkdepends=('python-pytest' 'python-docutils' 'python-hypothesis' 'python-pip')
  optdepends=('python-pyqt5: PyQt integration'
@@ -15,8 +15,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,4 +4,4 @@
- python-six
+@@ -3,4 +3,4 @@
+ python-setuptools
  python-sphinx
  python-wheel
 -systemd

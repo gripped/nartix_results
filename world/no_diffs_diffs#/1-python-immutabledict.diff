@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=python-immutabledict
 -pkgver=4.1.0
+-pkgrel=2
 +pkgver=3.0.0
- pkgrel=1
++pkgrel=1
  pkgdesc="Immutable wrapper around dictionaries (a fork of frozendict)"
  arch=('any')
+ url=https://github.com/corenting/immutabledict
 @@ -10,7 +10,7 @@
  checkdepends=('python-pytest')
  makedepends=('python-build' 'python-installer' 'python-wheel' 'python-poetry-core')

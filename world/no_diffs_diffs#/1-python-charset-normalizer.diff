@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+ 
+ check() {
+   cd $_name
+-  pytest --override-ini="addopts="
++  pytest -c /dev/null
+ }
+ 
+ package() {

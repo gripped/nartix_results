@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,6 +18,7 @@
+              python-installer
+              python-setuptools
+              python-wheel)
++checkdepends=(python-pytest)
+ source=(https://github.com/serge-sans-paille/pythran/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+ sha256sums=('082b80649a014e75dbdcde2220be47f5446d649362cc8cf9b14f611117a01550')
+ 

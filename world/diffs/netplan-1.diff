@@ -4,7 +4,7 @@
  
  pkgname=netplan
  pkgver=0.107
--pkgrel=3
+-pkgrel=4
 +pkgrel=1
  pkgdesc="Network configuration abstraction renderer"
  arch=('x86_64')
@@ -19,7 +19,7 @@
    'util-linux-libs'
  )
  makedepends=(
-@@ -27,85 +26,38 @@
+@@ -27,86 +26,38 @@
    'cmocka'
    'meson'
    'pandoc'
@@ -28,12 +28,13 @@
    'python-pycodestyle'
    'python-pyflakes'
    'python-pytest'
+-  'python-setuptools'
    'python-pytest-cov'
- )
+-)
 -checkdepends=(
 -  'openvswitch'
 -  'wireless-regdb'
--)
+ )
  provides=(libnetplan.so)
  source=(
 +  "0001-disable-systemd.patch"
@@ -137,9 +138,11 @@
  libyaml
  meson
  pandoc
-@@ -18,6 +20,4 @@
+@@ -17,8 +19,5 @@
+ python-pytest
  python-pytest-cov
  python-rich
+-python-setuptools
  python-yaml
 -systemd
 -systemd-libs

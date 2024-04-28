@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,16 +5,15 @@
+ pkgdesc="Zope testing helpers"
+ arch=('any')
+ url="https://github.com/zopefoundation/zope.testing"
+-license=('ZPL-2.1')
++license=('ZPL')
+ depends=('python-setuptools' 'python-zope-interface' 'python-zope-exceptions')
+-makedepends=('python-build' 'python-installer' 'python-wheel')
+ checkdepends=('python-nose')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/zopefoundation/zope.testing/archive/$pkgver.tar.gz")
+ sha512sums=('169ddd82d67f54988cac6cea719095ea7b1a0e59a1b51f63ab6bf15e785877fa060bac5c0786c26244a7630ec1b97011d0bb336c9177a8e6a911ccdb673eebba')
+ 
+ build() {
+   cd zope.testing-$pkgver
+-  python -m build --wheel --skip-dependency-check --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -24,6 +23,6 @@
+ 
+ package() {
+   cd zope.testing-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,3 @@
+-python-build
+-python-installer
+ python-setuptools
+-python-wheel
+ python-zope-exceptions
+ python-zope-interface
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd zope.testing-$pkgver
+-python -m build --wheel --skip-dependency-check --no-isolation
++python setup.py build
+ }

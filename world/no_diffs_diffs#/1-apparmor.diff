@@ -1,12 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -121,5 +121,9 @@
-   rm -rv "${pkgdir}"/usr/lib/perl5/*/core_perl
+@@ -122,4 +122,6 @@
    mv -v "$pkgdir/usr/lib/ruby/"{site,vendor}_ruby
    cd "$pkgdir"
-+
-+  if [ -d "$pkgdir"/usr/lib/systemd ]; then
-+    rm -r $pkgdir/usr/lib/systemd
-+  fi
    [[ /usr/bin/true ]] && backup=( ${backup[@]} $(find "etc/$pkgname.d/" -type f | LC_ALL=C sort) )
++
++  rm -r $pkgdir/usr/lib/systemd
  }

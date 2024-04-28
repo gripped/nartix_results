@@ -67,7 +67,13 @@
  
    meson compile -C build
  }
-@@ -103,12 +103,13 @@
+@@ -99,17 +99,18 @@
+   conflicts=('rfkill' 'hardlink')
+   provides=('rfkill' 'hardlink')
+   replaces=('rfkill' 'hardlink')
+-  depends=("util-linux-libs=${pkgver}"
+-           'coreutils'
++  depends=('coreutils'
             'file' 'libmagic.so'
             'glibc'
             'libcap-ng'
@@ -79,9 +85,10 @@
             'shadow'
 -           'systemd-libs' 'libsystemd.so' 'libudev.so'
 +           'libudev'
-            'util-linux-libs'
++           'util-linux-libs'
             'zlib')
    optdepends=('words: default dictionary for look')
+   backup=(etc/pam.d/chfn
 @@ -138,8 +139,6 @@
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su-l"

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -20,7 +20,7 @@
    python-installer
    python-setuptools
    python-wheel
@@ -9,7 +9,7 @@
  )
  source=(https://www.nxp.com/downloads/en/libraries/$pkgbase-$pkgver-src.zip)
  sha512sums=('200717be44cdb2bb7cc7eeba29afb6aed8a88a72e7664377c1abf8c1d1f88f7de1ed05c9a7d6c960ae53e4b9420889c252d51fd807b1534396430004138518a0')
-@@ -42,7 +42,7 @@
+@@ -45,7 +45,7 @@
  package_libusbsio() {
    depends=(
      glibc

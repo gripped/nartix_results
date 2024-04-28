@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
- url='https://www.devicetree.org/'
- arch=(x86_64)
- license=(GPL2)
--depends=(bash glibc libyaml python)
-+depends=(libyaml)
- makedepends=(meson swig python-setuptools-scm)
- checkdepends=(valgrind)
- source=(https://www.kernel.org/pub/software/utils/dtc/dtc-$pkgver.tar.xz
-@@ -30,7 +30,7 @@
+@@ -33,7 +33,7 @@
  }
  
  build() {
@@ -22,21 +13,12 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,7 +1,4 @@
--bash
--glibc
- libyaml
- meson
--python
- python-setuptools-scm
- swig
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,6 +7,6 @@
- sed -i "s/@VERSION@/$pkgver/" setup.py
+@@ -8,6 +8,6 @@
+ patch -Np1 -i ../fix-tests-for-Python3.12.patch # Debian patch
  }
  build() {
 -arch-meson dtc-$pkgver build

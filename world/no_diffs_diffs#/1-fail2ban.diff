@@ -1,17 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -6,7 +6,7 @@
+ arch=('any')
  url='https://www.fail2ban.org/'
  license=('GPL')
- arch=('any')
--depends=('python-pyinotify' 'whois' 'sqlite' 'python-systemd')
-+depends=('python-pyinotify' 'whois' 'sqlite')
- makedepends=('python-setuptools')
- optdepends=(
-   'firewalld: for a firewall backend'
-@@ -38,8 +38,6 @@
-   cd $pkgname-$pkgver
-   python setup.py install --root "$pkgdir" --optimize=1
+-depends=('python-pyinotify' 'python-systemd' 'sqlite' 'whois')
++depends=('python-pyinotify' 'sqlite' 'whois')
+ makedepends=(
+   'git'
+   'python-build'
+@@ -49,8 +49,6 @@
+   cd $pkgname
+   python -m installer --destdir="$pkgdir" dist/*.whl
  
 -  install -Dm644 build/fail2ban.service \
 -    "$pkgdir"/usr/lib/systemd/system/$pkgname.service
@@ -24,9 +24,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
+@@ -3,7 +3,6 @@
+ python-installer
  python-pyinotify
  python-setuptools
 -python-systemd
+ python-wheel
  sqlite
  whois

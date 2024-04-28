@@ -1,7 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,13 +13,10 @@
+@@ -11,21 +11,12 @@
+ optdepends=('perl-term-readkey: for snmpcheck application'
+             'perl-tk: for snmpcheck and tkmib applications'
              'python: for the python modules')
+-provides=('libnetsnmpagent.so'
+-          'libnetsnmphelpers.so'
+-          'libnetsnmpmibs.so'
+-          'libnetsnmp.so'
+-          'libnetsnmptrapd.so'
+-          'libsnmp.so')
  options=('!emptydirs' '!makeflags')
  source=(https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.gz{,.asc}
 -        0001-pcre2.patch
@@ -16,7 +24,7 @@
  validpgpkeys=('27CAA4A32E371383A33ED0587D5F9576E0F81533'
                '6E6718AEF1EB5C65C32D1B2A356BC0B552D53CAB'
                '8AAA779B597B405BBC329B6376CF47B8A77C5329'
-@@ -54,7 +51,5 @@
+@@ -60,7 +51,5 @@
    cd ${pkgname}-${pkgver}
    sed -i -e "s:install --basedir=\$\$dir:install --basedir=\$\$dir --root=${pkgdir}:" Makefile
    make DESTDIR="${pkgdir}" INSTALL_PREFIX="${pkgdir}" INSTALLDIRS=vendor install

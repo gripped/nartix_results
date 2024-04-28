@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url='https://www.freedesktop.org/software/PackageKit/'
+ license=('GPL-2.0-or-later')
+ makedepends=('polkit' 'sqlite' 'gobject-introspection' 'intltool'
+-             'bash-completion' 'vala' 'meson' 'python-setuptools')
++             'bash-completion' 'vala' 'meson')
+ options=('!emptydirs')
+ validpgpkeys=('163EB50119225DB3DF8F49EA17ACBA8DFA970E17'        # Richard Hughes <richard@hughsie.com>
+               'EC60AABDF42AAE8FB062640480858FA38F62AF74')       # Kalev Lember <klember@redhat.com>
+@@ -29,10 +29,11 @@
+                 -Dgtk_doc=false
+                 -Dgtk_module=false
+                 -Dpackaging_backend=alpm
+-                -Dsystemd=true
++                -Dsystemd=false
++                -Doffline_update=false
+         )
+ 
+-        arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
++        artix-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
+ 
+         meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,6 +6,5 @@
+ meson
+ pacman>
+ polkit
+-python-setuptools
+ sqlite
+ vala
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,9 @@
+ -Dgtk_doc=false
+ -Dgtk_module=false
+ -Dpackaging_backend=alpm
+--Dsystemd=true
++-Dsystemd=false
++-Doffline_update=false
+ )
+-arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
++artix-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
+ meson compile -C build
+ }

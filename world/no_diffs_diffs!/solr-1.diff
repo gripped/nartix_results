@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=solr
+ pkgver=9.5.0
+-pkgrel=3
++pkgrel=3.1
+ pkgdesc="Open source enterprise search platform built on Apache Lucene"
+ arch=(any)
+ url="https://lucene.apache.org/solr/"
 @@ -19,8 +19,7 @@
    etc/$pkgname/zoo.cfg
  )
@@ -28,7 +37,22 @@
          '60ff37059a4ab8362551518d56ee105e7d19199727605d5ad6f3236bd31dde1cc5fa37ffa37009820ee3115da36ae64df4754454cef1db51d1c13cac039245cb'
          '37ab5d9af1da1178fcc58ce39654fdecb842b24d4e2264a2eec95c10223e7d003f27a6b2957a267a17ce0fa72258d96642d5b909963576a5a7d13e4e05c47a51'
          'f9a7922b200942d0cf42920ffe9b39180dd7d370074c8d41c89d7096baac3dacd9ce4eb00d36f698ed5d27ef0e75e822c722029c93c22fd8c68a38bfe64ac42a'
-@@ -128,7 +123,6 @@
+@@ -88,14 +83,6 @@
+   tar -xf "$pkgname/distribution/build/release/$pkgname-$pkgver.tgz" --strip 1 -C "$srcdir/$pkgname-$pkgver/dist"
+ }
+ 
+-check() {
+-  cd $pkgname-$pkgver
+-
+-  ./gradlew \
+-    -Dversion.release=$pkgver \
+-    test \
+-    -Prefguide.include=false
+-}
+ 
+ package() {
+   local config
+@@ -128,7 +115,6 @@
    install -vdm 750 "$pkgdir/var/log/$pkgname/"
    install -vDm 644 dist/{CHANGES,NOTICE}.txt -t "$pkgdir/usr/share/doc/$pkgname/"
    install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"

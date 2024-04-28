@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- _name=pdm
- pkgname=python-pdm
- pkgver=2.14.0
--pkgrel=1
-+pkgrel=2
- pkgdesc="A modern Python package manager with PEP 582 support"
- arch=(any)
- url="https://github.com/pdm-project/pdm"
 @@ -71,7 +71,7 @@
    cd $_name-$pkgver
    python -m installer --destdir=test_dir dist/*.whl

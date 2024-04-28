@@ -1,14 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,9 +2,9 @@
  _name=hypothesis
  _alt_name=$_name-python
  pkgname=python-hypothesis
 -pkgver=6.100.1
 +pkgver=6.99.2
  _version=$_alt_name-$pkgver
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc="Advanced Quickcheck style testing library for Python"
+ arch=(any)
+ license=(MPL-2.0)
 @@ -54,8 +54,8 @@
    'python-rich: for CLI'
  )
