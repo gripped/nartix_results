@@ -943,7 +943,6 @@ ispc
 ispell
 isync
 itinerary
-itstool
 iucode-tool
 jasper
 jasper-doc
@@ -1801,6 +1800,7 @@ libtracefs-docs
 libunibreak
 libuninameslist
 libunwind
+libupnp
 liburcu
 liburing
 libusb-compat
@@ -4014,6 +4014,7 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
+python-stone
 python-straight.plugin
 python-strict-rfc3339
 python-structlog
@@ -4102,6 +4103,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4790,6 +4792,7 @@ tellico
 telly-skout
 template-glib
 tepl
+terminator
 terminus-font
 tesseract-data
 tesseract
@@ -5045,7 +5048,6 @@ uvicorn
 v2ray-geoip
 vala
 valabind
-valgrind
 vamp-plugin-sdk
 vapoursynth
 vc-intrinsics

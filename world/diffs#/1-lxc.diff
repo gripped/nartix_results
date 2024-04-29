@@ -1,22 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -7,8 +7,8 @@
  arch=('x86_64')
  url="https://linuxcontainers.org"
  depends=('bash' 'perl' 'libseccomp' 'libcap' 'python' 'rsync' 'wget')
 -makedepends=('docbook2x' 'systemd' 'meson' 'lua' 'python-setuptools' 'apparmor')
+-optdepends=('dnsmasq: lxc-net.service'
 +makedepends=('docbook2x' 'elogind' 'meson' 'lua' 'python-setuptools' 'apparmor')
- optdepends=('dnsmasq: lxc-net.service'
++optdepends=('dnsmasq'
  	    'lua'
  	    'lua-filesystem: lxc-top'
-@@ -18,14 +18,10 @@
- 	'etc/default/lxc')
+ 	    'lua-alt-getopt: lxc-top')
+@@ -19,13 +19,10 @@
  validpgpkeys=('602F567663E593BCBD14F338C638974D64792D67')
  source=("https://linuxcontainers.org/downloads/lxc/$pkgname-${pkgver}.tar.gz"{,.asc}
--	"lxc.tmpfiles.d"
+ 	"lxc.tmpfiles.d"
 -	"lxc.service"
 -	"lxc-auto.service")
-+	"lxc.tmpfiles.d")
++)
  sha256sums=('3f6981c61ff39f9e550a18cf22d6e26792cde5dd34f9d3c93badfeaaee8814b2'
              'SKIP'
 -            '10e4f661872f773bf3122a2f9f2cb13344fea86a4ab72beecb4213be4325c479'
@@ -26,19 +27,16 @@
  
  
  prepare() {
-@@ -35,7 +31,10 @@
+@@ -35,7 +32,7 @@
  
  build() {
    cd "$pkgname-${pkgver/_/-}"
--  arch-meson build
-+  local options=(
-+    -Dinit-script=sysvinit
-+  )
-+  artix-meson ${options[@]} build
+-  arch-meson build -Dtools=true -Dtools-multicall=false
++  artix-meson build -Dinit-script=sysvinit -Dtools=true -Dtools-multicall=false
    meson compile -C build -v
  }
  
-@@ -46,8 +45,6 @@
+@@ -46,8 +43,6 @@
  
    install -d -m755 "$pkgdir/var/lib/lxc"
    install -d -m755 "$pkgdir/usr/lib/lxc/rootfs/dev"

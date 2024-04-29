@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   'x86_energy_perf_policy'
- )
- pkgver=6.7
--pkgrel=3
-+pkgrel=2
- license=('GPL2')
- arch=('x86_64')
- url='https://www.kernel.org'
 @@ -32,25 +32,13 @@
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"
@@ -36,6 +27,15 @@
  
  prepare() {
    cd linux
+@@ -76,7 +64,7 @@
+     prefix=/usr \
+     lib=lib/perf \
+     perfexecdir=lib/perf \
+-    EXTRA_CFLAGS=' -Wno-error=bad-function-cast -Wno-error=declaration-after-statement -Wno-error=switch-enum' \
++    WERROR=0 \
+     NO_SDT=1 \
+     BUILD_BPF_SKEL=1 \
+     PYTHON=python \
 @@ -198,8 +186,6 @@
      install install-man
    popd

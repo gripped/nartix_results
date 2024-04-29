@@ -4,12 +4,12 @@
  arch=('any')
  url='https://www.fail2ban.org/'
  license=('GPL')
--depends=('python-pyinotify' 'python-systemd' 'sqlite' 'whois')
-+depends=('python-pyinotify' 'sqlite' 'whois')
+-depends=('python-pyinotify' 'python-setuptools' 'python-systemd' 'sqlite' 'whois')
++depends=('python-pyinotify' 'python-setuptools' 'sqlite' 'whois')
  makedepends=(
    'git'
    'python-build'
-@@ -49,8 +49,6 @@
+@@ -48,8 +48,6 @@
    cd $pkgname
    python -m installer --destdir="$pkgdir" dist/*.whl
  

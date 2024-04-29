@@ -198,6 +198,7 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
+itstool
 iwd
 jack2
 jack2-dbus
@@ -269,7 +270,6 @@ libprocps
 libsidplay
 libtg_owt
 libudev0-shim
-libupnp
 libusbsio
 python-libusbsio
 libwhereami
@@ -474,12 +474,10 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
-python-stone
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
@@ -660,7 +658,6 @@ syslog-ng
 sysprof
 libsysprof-capture
 system-config-printer
-terminator
 thunderbird
 tigervnc
 timew
@@ -704,6 +701,7 @@ uwsgi-plugin-notfound
 v2ray-domain-list-community
 v2ray
 v4l-utils
+valgrind
 vault
 vice
 vlc
