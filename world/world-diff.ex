@@ -211,6 +211,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
+jupyter-nbconvert
 kcoreaddons
 keepassxc
 kgamma
@@ -318,8 +319,6 @@ mate-user-share
 matrix-synapse
 media-player-info
 memcached
-mesa-demos
-mesa-utils
 mesa
 vulkan-mesa-layers
 opencl-clover-mesa
@@ -346,6 +345,7 @@ nautilus
 libnautilus-extension
 libnautilus-extension-docs
 nbd
+ncdu
 ndctl
 ndisc6
 netavark
@@ -464,6 +464,7 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
+python-debugpy
 python-frozendict
 python-gssapi
 python-intelhex
@@ -478,6 +479,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
@@ -642,6 +644,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+solr
 spice-vdagent
 squid
 sshguard
@@ -653,6 +656,7 @@ stunnel
 supermin
 sway
 swayidle
+swig
 switcheroo-control
 syslog-ng
 sysprof
@@ -701,7 +705,6 @@ uwsgi-plugin-notfound
 v2ray-domain-list-community
 v2ray
 v4l-utils
-valgrind
 vault
 vice
 vlc
@@ -761,4 +764,5 @@ zathura-pdf-poppler
 zathura-ps
 zathura
 zeromq
+zig
 znc

@@ -1004,7 +1004,6 @@ junit
 jupyter-console
 jupyter-nbclassic
 jupyter-nbclient
-jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
 jupyter-notebook
@@ -2122,6 +2121,8 @@ menu-cache
 menumaker
 mercurial
 merkuro
+mesa-demos
+mesa-utils
 meson-python
 meson
 messagelib
@@ -2205,7 +2206,6 @@ nasm
 nauty
 nawk
 nccl
-ncdu
 ncftp
 ncompress
 neatvnc
@@ -3124,7 +3124,6 @@ python-dbus-deviation
 python-dbusmock
 python-ddt
 python-debtcollector
-python-debugpy
 python-decorator
 python-deepdiff
 python-deepmerge
@@ -4103,7 +4102,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4674,7 +4672,6 @@ sof-firmware
 sof-tools
 softhsm
 solid5
-solr
 sonivox
 sonnet
 sonnet5
@@ -4736,7 +4733,6 @@ swaybg
 swaylock
 sweeper
 swell-foop
-swig
 swtpm
 sxhkd
 sxiv
@@ -5048,6 +5044,7 @@ uvicorn
 v2ray-geoip
 vala
 valabind
+valgrind
 vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
@@ -5325,7 +5322,6 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zfp
-zig
 zimg
 zip
 ziproxy
