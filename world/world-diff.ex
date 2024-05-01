@@ -193,12 +193,13 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-compute-runtime
+intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
-itstool
 iwd
 jack2
 jack2-dbus
@@ -211,7 +212,6 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
-jupyter-nbconvert
 kcoreaddons
 keepassxc
 kgamma
@@ -479,7 +479,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner

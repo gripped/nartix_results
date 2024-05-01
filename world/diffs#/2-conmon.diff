@@ -7,19 +7,8 @@
 -depends=(glibc glib2 systemd)
 +depends=(glibc glib2)
  makedepends=(git)
- _commit=2dcd736e46ded79a53339462bc251694b150f870
  source=(
-@@ -15,10 +15,6 @@
- )
- b2sums=('SKIP')
- 
--pkgver() {
--  cd $pkgname
--  git describe --tags | sed 's/^v//;s/-/+/g'
--}
- 
- build() {
-   cd conmon
+   "git+https://github.com/containers/conmon#commit=v${pkgver}"
 
 
 ############# Stripped diff below #################

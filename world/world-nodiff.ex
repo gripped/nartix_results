@@ -923,9 +923,7 @@ incidenceeditor
 iniparser
 inkscape
 innoextract
-intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -943,6 +941,7 @@ ispc
 ispell
 isync
 itinerary
+itstool
 iucode-tool
 jasper
 jasper-doc
@@ -1004,6 +1003,7 @@ junit
 jupyter-console
 jupyter-nbclassic
 jupyter-nbclient
+jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
 jupyter-notebook
@@ -3379,6 +3379,7 @@ python-jmespath
 python-joblib
 python-jose
 python-josepy
+python-joserfc
 python-jq
 python-js2py
 python-jschema-to-python
@@ -4102,6 +4103,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop

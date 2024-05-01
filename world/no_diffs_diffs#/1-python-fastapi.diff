@@ -4,21 +4,57 @@
  
  _name=fastapi
  pkgname=python-$_name
--pkgver=0.110.2
+-pkgver=0.110.3
 -pkgrel=2
 +pkgver=0.110.0
 +pkgrel=1
  pkgdesc='FastAPI framework, high performance, easy to learn, fast to code, ready for production'
  arch=(any)
  url="https://github.com/tiangolo/fastapi"
+@@ -21,7 +21,7 @@
+ makedepends=(
+   python-build
+   python-installer
+-  python-pdm-backend
++  python-hatchling
+   python-wheel
+ )
+ checkdepends=(
 @@ -62,8 +62,8 @@
    'uvicorn: for Uvicorn as ASGI server'
  )
  source=($_name-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz)
--sha512sums=('dc183c2986d33dc0d71f7e695969403eac7dccd1fc5ec3350318369423c3cca96e180aaa48774862cd1f0ff487cd64bef0d1a44a10b8b309accc483c9e7256c4')
--b2sums=('1d7015e4a5cceb8650ee6e4598b191ad0fad94debd6b75c5a1ed53d7ae0d31ef89195cf9e22d127cdcdf923c29ca3eb63f468dd201e63793c2e3460101e65e08')
+-sha512sums=('1b00c54f349e299fd0eec279c6edfaadf1581fdeee3d96749e814e7da305926b9fb179d003d619afe1aaa36b461c843a10b6acea9f7830512d7474ead6ac0e01')
+-b2sums=('d6724ad6fcf54fbcd703fc10736a8d9561c1d7c45a41daa4e78d3688f996e8e2a8bae575b37794c29fa9efdbccd0543e8ee4fb57c20161865d31591ffbdc7c5a')
 +sha512sums=('41b86829ee562e922efabdb0f175015d1312ce935b5723f084ce4ee8b1626a6c00a8a51b4a19f352e0584db259f967160558fd79833e84e040a1c8c174d6d9ef')
 +b2sums=('02dfc9c44585a6b4a8da077fe782c6694a0710dc58bfb63240d5c50ddc5177afaee650bbaa07cfaabba068ea25d253c43121f469db776a2c2b1dae56d79e55aa')
  
  prepare() {
    cd $_name-$pkgver
+@@ -79,10 +79,6 @@
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   local pytest_options=(
+     -vv
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_root[asyncio]
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_async_testing[asyncio]
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_root[trio]
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_async_testing[trio]
+   )
+ 
+   cd $_name-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,8 +2,8 @@
+ python-anyio
+ python-build
+ python-dirty-equals
++python-hatchling
+ python-installer
+-python-pdm-backend
+ python-pydantic
+ python-pydantic-core
+ python-pydantic-extra-types

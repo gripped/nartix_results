@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ provides=(opencl-driver level-zero-driver)
+ options=(!lto)
+ source=(https://github.com/intel/compute-runtime/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+-        https://github.com/KhronosGroup/OpenCL-Headers/archive/v${_cl_header_ver}/opencl-headers-${_cl_headers_ver}.tar.gz
++        https://github.com/KhronosGroup/OpenCL-Headers/archive/v${_cl_headers_ver}/opencl-headers-${_cl_headers_ver}.tar.gz
+         010-intel-compute-runtime-disable-werror.patch)
+ sha256sums=('96b2331ee98e800e6b6666f9ab0803a9d16430f8781f3cac1b3f2b81235dfd95'
+             '407d5e109a70ec1b6cd3380ce357c21e3d3651a91caae6d0d8e1719c69a1791d'
+@@ -25,6 +25,9 @@
+ }
+ 
+ build() {
++  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++
+   CXXFLAGS+=' -DSANITIZER_BUILD=1'
+   CFLAGS+=' -DSANITIZER_BUILD=1'
+   cmake -B build -S compute-runtime-${pkgver} \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,8 @@
+ patch -d compute-runtime-${pkgver} -Np1 -i "${srcdir}/010-intel-compute-runtime-disable-werror.patch"
+ }
+ build() {
++export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ CXXFLAGS+=' -DSANITIZER_BUILD=1'
+ CFLAGS+=' -DSANITIZER_BUILD=1'
+ cmake -B build -S compute-runtime-${pkgver} \

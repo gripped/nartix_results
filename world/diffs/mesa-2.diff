@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   'mesa'
- )
- pkgver=24.0.6
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Open-source OpenGL drivers"
- url="https://www.mesa3d.org/"
 @@ -44,7 +44,6 @@
    'rust'
    'spirv-llvm-translator'
@@ -17,15 +8,7 @@
    'vulkan-icd-loader'
    'wayland'
    'xcb-util-keysyms'
-@@ -58,7 +57,6 @@
-   'libclc'
-   'meson'
-   'python-mako'
--  'python-packaging'
-   'python-ply'
-   'rust-bindgen'
-   'wayland-protocols'
-@@ -151,7 +149,7 @@
+@@ -151,7 +150,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -34,7 +17,7 @@
    meson configure build # Print config
    meson compile -C build
  
-@@ -259,7 +257,6 @@
+@@ -259,7 +258,6 @@
      'libx11'
      'libxcb'
      'libxshmfence'
@@ -42,7 +25,7 @@
      'vulkan-icd-loader'
      'wayland'
      'xcb-util-keysyms'
-@@ -285,7 +282,6 @@
+@@ -285,7 +283,6 @@
      'libx11'
      'libxcb'
      'libxshmfence'
@@ -50,7 +33,7 @@
      'vulkan-icd-loader'
      'wayland'
      'xcb-util-keysyms'
-@@ -313,7 +309,6 @@
+@@ -313,7 +310,6 @@
      'libxcb'
      'libxshmfence'
      'llvm-libs'
@@ -58,7 +41,7 @@
      'vulkan-icd-loader'
      'wayland'
      'xcb-util-keysyms'
-@@ -341,7 +336,6 @@
+@@ -341,7 +337,6 @@
      'libxcb'
      'libxshmfence'
      'llvm-libs'
@@ -66,7 +49,7 @@
      'vulkan-icd-loader'
      'wayland'
      'xcb-util-keysyms'
-@@ -369,7 +363,6 @@
+@@ -369,7 +364,6 @@
      'libx11'
      'libxcb'
      'libxshmfence'
@@ -80,13 +63,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -27,13 +27,11 @@
- meson
- python
- python-mako
--python-packaging
- python-ply
- rust
+@@ -33,7 +33,6 @@
  rust-bindgen
  spirv-llvm-translator
  spirv-tools

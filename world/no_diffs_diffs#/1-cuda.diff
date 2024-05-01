@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+-
+ pkgname=(cuda cuda-tools)
+ pkgbase=cuda
+ pkgver=12.4.1
+ _driverver=550.54.15
+-pkgrel=2
++pkgrel=1
+ pkgdesc="NVIDIA's GPU programming toolkit"
+ arch=('x86_64')
+ url="https://developer.nvidia.com/cuda-zone"
+ license=(LicenseRef-NVIDIA-CUDA)
+-depends=('opencl-nvidia' 'python' 'gcc')
++depends=('opencl-nvidia' 'nvidia-utils' 'python' 'gcc')
+ options=(!strip staticlibs)
+ install=cuda.install
+ source=(https://developer.download.nvidia.com/compute/cuda/${pkgver}/local_installers/cuda_${pkgver}_${_driverver}_linux.run
+@@ -126,7 +125,6 @@
+   provides=('cuda-toolkit' 'cuda-sdk' 'libcudart.so' 'libcublas.so' 'libcusolver.so' 'libcusparse.so')
+   optdepends=('gdb: for cuda-gdb'
+               'glu: required for some profiling tools in CUPTI'
+-              'nvidia-utils: for NVIDIA drivers (not needed in CDI containers)'
+               'rdma-core: for GPUDirect Storage (libcufile_rdma.so)')
+ 
+   local _prepdir="${srcdir}/prep"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,5 +2,6 @@
+ gcc
+ java-runtime
+ nss
++nvidia-utils
+ opencl-nvidia
+ python
