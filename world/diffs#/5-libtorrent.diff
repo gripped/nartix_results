@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,22 @@
+ 
+ pkgname=libtorrent
+ pkgver=0.13.8
+-pkgrel=4
++pkgrel=3
+ pkgdesc='BitTorrent library with a focus on high performance and good code'
+ url='https://rakshasa.github.io/rtorrent/'
+ arch=('x86_64')
+ license=('GPL')
+-makedepends=('git')
+ depends=('openssl')
+-source=("git+https://github.com/rakshasa/libtorrent.git#tag=v${pkgver}")
+-sha256sums=('71e09b1b878ba463b3698968afd94412623b793b95a6c06967b405c1b7f584f3')
++source=("https://github.com/rakshasa/rtorrent/releases/download/v0.9.${pkgver##*.}/${pkgname}-${pkgver}.tar.gz")
++sha256sums=('ed115a28f4ae8cfcd33b94a597c076ca74fd549867a26e4fac9505c27288e983')
+ 
+ prepare() {
+-	cd ${pkgname}
++	cd "${srcdir}/${pkgname}-${pkgver}"
+ 	./autogen.sh
+ }
+ 
+ build() {
+-	cd ${pkgname}
++	cd "${srcdir}/${pkgname}-${pkgver}"
+ 	export CXXFLAGS+=' -fno-strict-aliasing'
+ 	./configure \
+ 		--prefix=/usr \
+@@ -27,6 +26,6 @@
+ }
+ 
+ package() {
+-	cd ${pkgname}
++	cd "${srcdir}/${pkgname}-${pkgver}"
+ 	make DESTDIR="${pkgdir}" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+-git
+ openssl
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd ${pkgname}
++cd "${srcdir}/${pkgname}-${pkgver}"
+ ./autogen.sh
+ }
+ build() {
+-cd ${pkgname}
++cd "${srcdir}/${pkgname}-${pkgver}"
+ export CXXFLAGS+=' -fno-strict-aliasing'
+ ./configure \
+ --prefix=/usr \

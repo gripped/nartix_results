@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=corrosion
+-pkgver=0.4.9
++pkgver=0.4.8
+ pkgrel=1
+ pkgdesc='Tool for integrating Rust into an existing CMake project'
+ arch=(any)
+@@ -8,12 +8,11 @@
+ license=(MIT)
+ depends=(cmake
+          rust)
+-makedepends=(git)
+-source=(git+https://github.com/corrosion-rs/corrosion#tag=v$pkgver)
+-sha256sums=('9e6a2a7a80ee956bcbf665849b389ae637413ad7ce171dd6676579b990b83b02')
++source=(https://github.com/corrosion-rs/corrosion/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('6b9090647d372adec2b09ac7a553458b6e39004238967f9a25e9dd8c1d77584d')
+ 
+ build() {
+-  cmake -B build -S $pkgname \
++  artix-cmake -B build -S $pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \
+     -DCORROSION_BUILD_TESTS=OFF
+@@ -22,5 +21,5 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+-  install -Dm644 $pkgname/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
++  install -Dm644 $pkgname-$pkgver/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ cmake
+-git
+ rust
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cmake -B build -S $pkgname \
++artix-cmake -B build -S $pkgname-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_INSTALL_LIBEXECDIR=lib \
+ -DCORROSION_BUILD_TESTS=OFF

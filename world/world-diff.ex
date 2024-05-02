@@ -14,6 +14,8 @@ at-spi2-core
 at-spi2-core-docs
 at
 avahi
+avogadrolibs
+avogadrolibs-qt5
 ayatana-ido
 babl
 bash-bats
@@ -47,6 +49,7 @@ conky
 conmon
 connman
 containerd
+corrosion
 cppcheck
 cppzmq
 crun
@@ -79,6 +82,7 @@ emacs-wayland
 embree
 eog
 eog-docs
+erlang
 espeakup
 etherwall
 extra-cmake-modules
@@ -98,6 +102,7 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
+fribidi
 fwupd-efi
 fwupd
 gala
@@ -110,6 +115,7 @@ gcr
 gcr-docs
 gdm
 libgdm
+gendesk
 genxrdpattern
 geoclue
 girara
@@ -212,6 +218,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
+julia
 kcoreaddons
 keepassxc
 kgamma
@@ -270,6 +277,7 @@ libnvme
 libprocps
 libsidplay
 libtg_owt
+libtorrent
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -624,6 +632,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+rtorrent
 ruby-faraday-patron
 ruby-optimist
 samba
@@ -655,7 +664,6 @@ stunnel
 supermin
 sway
 swayidle
-swig
 switcheroo-control
 syslog-ng
 sysprof

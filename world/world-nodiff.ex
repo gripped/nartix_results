@@ -135,8 +135,6 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt5
 awesome-terminal-fonts
 awesome
 aws-c-auth
@@ -350,7 +348,6 @@ containers-common
 convertlit
 coordgen
 copr-cli
-corrosion
 coturn
 couchdb
 cpio
@@ -493,8 +490,6 @@ entr
 eom
 epiphany
 erlang-nox
-erlang
-erlang-unixodbc
 espeak-ng
 ethtool
 eventviews
@@ -600,7 +595,6 @@ freetype2
 freetype2-demos
 freetype2-docs
 frei0r-plugins
-fribidi
 fstrm
 ftgl
 ftjam
@@ -634,7 +628,6 @@ geary
 gedit-plugins
 gedit
 gegl
-gendesk
 gengetopt
 geocode-glib
 geocode-glib-common
@@ -998,7 +991,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1790,7 +1782,6 @@ libtiger
 libtomcrypt
 libtommath
 libtorrent-rasterbar
-libtorrent
 libtpms
 libtraceevent
 libtraceevent-docs
@@ -4336,7 +4327,6 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
-rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2
@@ -4735,6 +4725,7 @@ swaybg
 swaylock
 sweeper
 swell-foop
+swig
 swtpm
 sxhkd
 sxiv

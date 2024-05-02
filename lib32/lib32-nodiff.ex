@@ -23,7 +23,6 @@ lib32-flac
 lib32-flex
 lib32-fontconfig
 lib32-freetype2
-lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mitmproxy
+ pkgver=10.2.4
+-pkgrel=3
++pkgrel=2
+ pkgdesc='SSL-capable man-in-the-middle HTTP proxy'
+ arch=('any')
+ url='https://mitmproxy.org'
+@@ -34,6 +34,7 @@
+   'python-ruamel-yaml'
+   'python-sortedcontainers'
+   'python-tornado'
++  'python-typing_extensions'
+   'python-urwid'
+   'python-werkzeug'
+   'python-wsproto'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -28,6 +28,7 @@
+ python-setuptools
+ python-sortedcontainers
+ python-tornado
++python-typing_extensions
+ python-urwid
+ python-werkzeug
+ python-wheel

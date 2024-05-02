@@ -20,15 +20,6 @@
    meson configure build  # Print config
    meson compile -C build
  }
-@@ -142,7 +142,7 @@
-   export NO_AT_BRIDGE=1 GTK_A11Y=none
- 
-   xvfb-run -s '-nolisten local' \
--    meson test -C build --print-errorlogs -t 5
-+    meson test -C build --print-errorlogs -t 5 ||:
- )
- 
- _install() {
 
 
 ############# Stripped diff below #################

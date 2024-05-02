@@ -30,7 +30,7 @@
      libnl
      openpmix libpmix.so
 -    openucx
-     prrte libprrte.so
+     prrte
      zlib
    )
 @@ -103,7 +98,6 @@
@@ -47,9 +47,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,8 +12,6 @@
+@@ -11,8 +11,6 @@
+ libnl
  libpmix.so
- libprrte.so
  openpmix
 -openucc
 -openucx
