@@ -1,6 +1,7 @@
 0ad-data
 0ad
 atril
+audacious
 avidemux
 avidemux-cli
 avidemux-qt

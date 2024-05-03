@@ -8,13 +8,13 @@
 +         'pango' 'glib2' 'libcups' 'libudev' 'glibc'
           'gdk-pixbuf2' 'sh')
  makedepends=('xmlto' 'docbook-xsl' 'desktop-file-utils' 'libsecret'
-              'python-setuptools')
-@@ -26,7 +26,7 @@
+              'python-setuptools' 'autoconf-archive')
+@@ -33,7 +33,7 @@
    ./configure --prefix=/usr \
      --sbindir=/usr/bin \
      --sysconfdir=/etc \
 -    --with-systemdsystemunitdir=/usr/lib/systemd/system \
-+    --with-systemdsystemunitdir=no \
++    --with-udevsystemunitdir=no \
      --with-udevdir=/usr/lib/udev \
      --with-udev-rules \
      --with-cups-serverbin-dir=/usr/lib/cups
@@ -24,7 +24,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,6 +7,7 @@
+@@ -8,6 +8,7 @@
  libcups
  libnotify
  libsecret
@@ -32,7 +32,7 @@
  libusb
  pango
  python-cairo
-@@ -15,5 +16,4 @@
+@@ -16,5 +17,4 @@
  python-pycups
  python-setuptools
  sh

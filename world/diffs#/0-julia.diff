@@ -1,16 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  
  pkgname=julia
  epoch=2
 -pkgver=1.10.3
--pkgrel=1
 +pkgver=1.10.2
-+pkgrel=2
+ pkgrel=2
  arch=(x86_64)
  pkgdesc='High-level, high-performance, dynamic programming language'
- url='https://julialang.org/'
 @@ -30,17 +30,15 @@
  source=(https://github.com/JuliaLang/julia/releases/download/v$pkgver/$pkgname-$pkgver-full.tar.gz{,.asc}
          c12e8515.patch

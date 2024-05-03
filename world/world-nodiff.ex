@@ -585,7 +585,6 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 four-in-a-row
-fractal
 frameworkintegration
 frameworkintegration5
 freealut
@@ -628,6 +627,7 @@ gdl
 geany-plugins
 geany
 geary
+gedit-plugins
 gedit
 gegl
 gengetopt
@@ -1515,6 +1515,8 @@ libgeotiff
 libgepub
 libgexiv2
 libgig
+libgit2-glib
+libgit2-glib-docs
 libgit2
 libglib-testing
 libglvnd
@@ -2096,7 +2098,6 @@ mathjax2
 matterbridge
 maturin
 python-maturin
-maven
 mbedtls
 mbedtls2
 mbox-importer
@@ -2132,7 +2133,6 @@ milou
 mimalloc
 mimetic
 mimetreeparser
-minicom
 minidlna
 minio
 minisign
@@ -3698,6 +3698,7 @@ python-pygame-sdl2
 python-pygame
 python-pygdbmi
 python-pygeos
+python-pygit2
 python-pygls
 python-pygments
 python-pyhamcrest
@@ -4096,7 +4097,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4667,6 +4667,7 @@ sof-firmware
 sof-tools
 softhsm
 solid5
+solr
 sonivox
 sonnet
 sonnet5

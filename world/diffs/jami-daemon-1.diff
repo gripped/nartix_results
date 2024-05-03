@@ -1,16 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,16 @@
- 
- pkgname=jami-daemon
- pkgver=20240322
--pkgrel=1
-+pkgrel=1.1
- pkgdesc="Free and universal communication platform which preserves the users’ privacy and freedoms (daemon component)"
- arch=(x86_64)
- url="https://jami.net"
--license=(GPL3)
-+license=(GPL-3.0-or-later)
+@@ -9,8 +9,8 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
           fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
@@ -21,7 +11,7 @@
  checkdepends=(cppunit)
  _commit=32f39e65483cb22729eb922d72434013b337f2c9
  _pjprojectver=e12ea3bfa81cc4f46031599f80707e81133f1353
-@@ -46,7 +46,7 @@
+@@ -50,7 +50,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  
    cd "${srcdir}"

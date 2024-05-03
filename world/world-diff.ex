@@ -97,6 +97,7 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
+fractal
 freerdp
 freerdp2
 fribidi
@@ -112,7 +113,6 @@ gcr
 gcr-docs
 gdm
 libgdm
-gedit-plugins
 gendesk
 genxrdpattern
 geoclue
@@ -261,8 +261,6 @@ libepoxy-docs
 libfido2
 libfprint
 libgdata
-libgit2-glib
-libgit2-glib-docs
 libgudev
 libguestfs
 libhandy
@@ -324,6 +322,7 @@ mate-session-manager
 mate-system-monitor
 mate-user-share
 matrix-synapse
+maven
 media-player-info
 memcached
 mesa
@@ -337,6 +336,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+minicom
 mobile-broadband-provider-info
 modemmanager
 libmm-glib
@@ -478,7 +478,6 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
-python-pygit2
 python-pymupdf
 python-pyotp
 python-pyudev
@@ -487,6 +486,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
@@ -651,7 +651,6 @@ signal-desktop
 smartmontools
 snapper
 solid
-solr
 spice-vdagent
 squid
 sshguard
