@@ -8,21 +8,21 @@
  )
  makedepends=(
    git
-@@ -50,7 +49,7 @@
+@@ -45,7 +44,7 @@
  build() {
    CFLAGS+=" -ffat-lto-objects"
  
 -  arch-meson sysprof build
-+  artix-meson sysprof build -D systemdunitdir=/usr/lib/systemd
++  artix-meson sysprof build -Dsystemdunitdir=/usr/lib/systemd
    meson compile -C build
  }
  
-@@ -81,6 +80,8 @@
+@@ -76,6 +75,8 @@
    _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
    _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
    _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
 +
-+  rm -r "$pkgdir"/usr/lib/systemd
++  rm -r $pkgdir/usr/lib/systemd
  }
  
  package_libsysprof-capture() {
@@ -32,9 +32,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -16,5 +16,4 @@
- meson
+@@ -17,5 +17,4 @@
  pango
  polkit
+ python-packaging
 -systemd-libs
  yelp-tools

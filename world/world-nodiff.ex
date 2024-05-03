@@ -50,6 +50,7 @@ aml
 amtk
 analitza
 analitza5
+android-file-transfer
 android-tools
 android-udev
 angelfish
@@ -348,6 +349,7 @@ containers-common
 convertlit
 coordgen
 copr-cli
+corrosion
 coturn
 couchdb
 cpio
@@ -490,6 +492,7 @@ entr
 eom
 epiphany
 erlang-nox
+erlang
 espeak-ng
 ethtool
 eventviews
@@ -625,7 +628,6 @@ gdl
 geany-plugins
 geany
 geary
-gedit-plugins
 gedit
 gegl
 gengetopt
@@ -1414,7 +1416,6 @@ libavif
 libavtp
 libb2
 libb64
-libblastrampoline
 libbluray
 libbobcat
 libbs2b
@@ -1506,7 +1507,9 @@ libftdi
 libgadu
 libgdiplus
 libgedit-amtk
+libgedit-gfls
 libgedit-gtksourceview
+libgedit-tepl
 libgee
 libgeotiff
 libgepub
@@ -2143,7 +2146,6 @@ mktorrent
 mlt
 mm-common
 mmtf-cpp
-mobile-broadband-provider-info
 mod_dnssd
 modem-manager-gui
 modemmanager-qt
@@ -4243,6 +4245,7 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
+qt6-positioning
 qt6ct
 qtcreator
 qtcreator-devel
@@ -4945,6 +4948,7 @@ tinyprog
 tinyproxy
 tinyxml
 tinyxml2
+tinyxxd
 tk
 tl-expected
 tldp-howtos-txt

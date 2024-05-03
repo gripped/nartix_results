@@ -7,7 +7,7 @@
 -pkgver=2.78.4
 -pkgrel=1
 +pkgver=2.80.0
-+pkgrel=3
++pkgrel=4
  pkgdesc="Low level core library"
  url="https://gitlab.gnome.org/GNOME/glib"
  license=(LGPL-2.1-or-later)
@@ -26,10 +26,14 @@
    shared-mime-info
    util-linux
  )
-@@ -36,25 +39,21 @@
-   debug
-   staticlibs
+@@ -32,29 +35,21 @@
+   desktop-file-utils
+   glib2
  )
+-options=(
+-  debug
+-  staticlibs
+-)
 -_commit=00edb7f7453a43cff343f9e99d49f2e421e4345c  # tags/2.78.4^0
  source=(
 -  "git+https://gitlab.gnome.org/GNOME/glib.git#commit=$_commit"
@@ -58,7 +62,7 @@
  
  prepare() {
    cd glib
-@@ -70,8 +69,9 @@
+@@ -70,8 +65,9 @@
    local meson_options=(
      --default-library both
      -D glib_debug=disabled
@@ -70,7 +74,7 @@
      -D selinux=disabled
      -D sysprof=enabled
    )
-@@ -82,7 +82,7 @@
+@@ -82,7 +78,7 @@
    CFLAGS+=" -ffat-lto-objects"
    CXXFLAGS+=" -ffat-lto-objects"
  
@@ -79,7 +83,7 @@
    meson compile -C build
  }
  
-@@ -95,11 +95,12 @@
+@@ -95,12 +91,14 @@
      libffi.so
      libmount.so
    )
@@ -91,9 +95,11 @@
      'python: gdbus-codegen, glib-genmarshal, glib-mkenums, gtester-report'
 +    'python-packaging: gdbus-codegen'
    )
++  options=(staticlibs)
  
    meson install -C build --destdir "$pkgdir"
-@@ -113,7 +114,7 @@
+ 
+@@ -113,7 +111,7 @@
      "$pkgdir/usr/share/glib-2.0/codegen"
  
    mkdir -p docs/usr/share

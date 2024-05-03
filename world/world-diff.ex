@@ -2,7 +2,6 @@ accountsservice
 alacritty
 alsa-utils
 amule
-android-file-transfer
 apache
 apcupsd
 appstream
@@ -49,7 +48,6 @@ conky
 conmon
 connman
 containerd
-corrosion
 cppcheck
 cppzmq
 crun
@@ -82,7 +80,6 @@ emacs-wayland
 embree
 eog
 eog-docs
-erlang
 espeakup
 etherwall
 extra-cmake-modules
@@ -115,6 +112,7 @@ gcr
 gcr-docs
 gdm
 libgdm
+gedit-plugins
 gendesk
 genxrdpattern
 geoclue
@@ -234,6 +232,7 @@ kwin
 libatasmart
 libayatana-appindicator
 libayatana-indicator
+libblastrampoline
 libblockdev
 libblockdev-btrfs
 libblockdev-crypto
@@ -338,6 +337,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+mobile-broadband-provider-info
 modemmanager
 libmm-glib
 modest
@@ -594,7 +594,6 @@ qt6-multimedia
 qt6-multimedia-ffmpeg
 qt6-multimedia-gstreamer
 qt6-networkauth
-qt6-positioning
 qt6-quick3d
 qt6-quick3dphysics
 qt6-quickeffectmaker
