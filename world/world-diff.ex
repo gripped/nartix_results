@@ -336,7 +336,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-minicom
 mobile-broadband-provider-info
 modemmanager
 libmm-glib
@@ -353,7 +352,6 @@ nautilus
 libnautilus-extension
 libnautilus-extension-docs
 nbd
-ncdu
 ndctl
 ndisc6
 netavark
@@ -486,7 +484,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner

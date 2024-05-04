@@ -2133,6 +2133,7 @@ milou
 mimalloc
 mimetic
 mimetreeparser
+minicom
 minidlna
 minio
 minisign
@@ -2199,6 +2200,7 @@ nasm
 nauty
 nawk
 nccl
+ncdu
 ncftp
 ncompress
 neatvnc
@@ -4097,6 +4099,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop

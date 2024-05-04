@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-settings-daemon
+ pkgver=46.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="GNOME Settings Daemon"
+ url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
+ arch=(x86_64)
+@@ -44,8 +44,8 @@
+   pango
+   polkit
+   pulse-native-provider
+-  systemd
+-  systemd-libs
++  elogind
++  libelogind
+   upower
+   wayland
+ )
+@@ -83,6 +83,9 @@
+ prepare() {
+   cd $pkgname
+ 
++  git cherry-pick -n 46f998d7308cb18832666bc34ee54b1d9c27739f
++  git cherry-pick -n 1a4d50f4ee611bdede6072c0bfd2a1b2e327c5fc
++
+   git apply -3 ../0001-subprojects-Update-gvc-to-latest-commit.patch
+ 
+   git submodule init
+@@ -91,7 +94,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Delogind=true -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,7 @@
+ cairo
+ dconf
+ docbook-xsl
++elogind
+ fontconfig
+ gcc-libs
+ gcr-4
+@@ -17,6 +18,7 @@
+ libcanberra-pulse
+ libcolord
+ libcups
++libelogind
+ libgudev
+ libgweather-4
+ libmm-glib
+@@ -38,8 +40,6 @@
+ pulse-native-provider
+ python
+ python-packaging
+-systemd
+-systemd-libs
+ upower
+ usbguard
+ wayland

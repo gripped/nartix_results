@@ -2,22 +2,22 @@
 +++ Artix PKGBUILD
 @@ -1,7 +1,7 @@
  
- pkgname=audacious
+ pkgname=audacious-plugins
  pkgver=4.3.1
--pkgrel=1
-+pkgrel=1.4
- pkgdesc="Lightweight, advanced audio player focused on audio quality"
+-pkgrel=3
++pkgrel=3.2
+ pkgdesc="Plugins for Audacious"
  arch=('x86_64')
  url="https://audacious-media-player.org/"
-@@ -14,7 +14,7 @@
- sha256sums=('85e9e26841505b51e342ee72a2d05f19bef894f567a029ebb3f3e0c1adb42042')
+@@ -31,7 +31,7 @@
+ }
  
  build() {
 -  arch-meson $pkgname-$pkgver build \
 +  artix-meson $pkgname-$pkgver build \
-     -Dgtk=false \
-     -Dbuildstamp='Arch Linux'
+     -Dgtk=false
    meson compile -C build
+ }
 
 
 ############# Stripped diff below #################
@@ -26,10 +26,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -5,7 +5,7 @@
+ patch -Np1 -i ../sidplay-rom-paths.patch
+ }
  build() {
 -arch-meson $pkgname-$pkgver build \
 +artix-meson $pkgname-$pkgver build \
- -Dgtk=false \
- -Dbuildstamp='Arch Linux'
+ -Dgtk=false
  meson compile -C build
+ }

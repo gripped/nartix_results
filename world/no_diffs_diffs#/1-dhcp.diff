@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- 
- _realver=4.4.3-P1
- pkgver=${_realver/-/.}
--pkgrel=3
-+pkgrel=2
- arch=('x86_64')
- license=('custom:isc-dhcp')
- url='https://www.isc.org/dhcp/'
 @@ -14,18 +14,12 @@
  source=("https://downloads.isc.org/isc/${pkgbase}/${_realver}/${pkgbase}-${_realver}.tar.gz"{,.asc}
          '0001-99-replace-hostname-with-uname-n.patch'
