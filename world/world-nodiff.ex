@@ -993,6 +993,7 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
+julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -4254,9 +4255,6 @@ qtcreator
 qtcreator-devel
 qterminal
 qtermwidget
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
@@ -4577,11 +4575,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

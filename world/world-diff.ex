@@ -66,6 +66,7 @@ dracut
 drkonqi
 dunst
 earlyoom
+ed
 edk2
 edk2-shell
 edk2-ovmf
@@ -216,7 +217,6 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
-julia
 kcoreaddons
 keepassxc
 kgamma
@@ -611,6 +611,9 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
+qtkeychain
+qtkeychain-qt5
+qtkeychain-qt6
 quazip
 quazip-qt5
 quazip-qt6
@@ -631,6 +634,11 @@ rtkit
 rtorrent
 ruby-faraday-patron
 ruby-optimist
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 smbclient

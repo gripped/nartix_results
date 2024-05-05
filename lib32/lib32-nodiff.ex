@@ -63,7 +63,6 @@ lib32-libglvnd
 lib32-libgpg-error
 lib32-libgusb
 lib32-libice
-lib32-libid3tag
 lib32-libidn2
 lib32-libiec61883
 lib32-libinstpatch
@@ -91,7 +90,6 @@ lib32-libsndfile
 lib32-libsoup
 lib32-libsoup3
 lib32-libssh2
-lib32-libtasn1
 lib32-libthai
 lib32-libtheora
 lib32-libtiff
