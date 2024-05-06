@@ -11,9 +11,7 @@ lib32-gst-plugins-good
 lib32-jack2
 lib32-libepoxy
 lib32-libgudev
-lib32-libid3tag
 lib32-libpulse
-lib32-libtasn1
 lib32-libudev0-shim
 lib32-libusb
 lib32-mesa
@@ -36,8 +34,6 @@ lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
-lib32-spirv-tools
-lib32-taglib
 lib32-v4l-utils
 wine-staging
 wine

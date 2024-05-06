@@ -466,6 +466,7 @@ easytag
 ebook-tools
 eclipse-ecj
 ecryptfs-utils
+ed
 editline
 editorconfig-core-c
 egl-wayland
@@ -1291,7 +1292,6 @@ krdc
 krecorder
 krename
 kreversi
-krfb
 krita
 kross
 kruler
@@ -2288,6 +2288,7 @@ ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
 ocaml-ctypes
+ocaml-findlib
 ocaml-integers
 ocaml-pp
 ocaml-result
@@ -3950,7 +3951,6 @@ python-sly
 python-smartypants
 python-smbprotocol
 python-smmap
-python-snappy
 python-sniffio
 python-snowballstemmer
 python-socketio
@@ -4100,7 +4100,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4575,6 +4574,11 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

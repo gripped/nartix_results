@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,10 +7,10 @@
+ url=http://linux-pam.org
+ license=(GPL2)
+ depends=(
+-  lib32-libnsl
+   lib32-libtirpc
+   lib32-libxcrypt
+-  lib32-systemd
++  lib32-libnsl
++  libelogind
+   pam
+ )
+ makedepends=(
+@@ -19,11 +19,12 @@
+   git
+   lib32-flex
+   w3m
++  elogind
+ )
+ _tag=v$pkgver
+-source=(git+https://github.com/linux-pam/linux-pam.git?signed#tag=${_tag})
++source=(git+https://github.com/linux-pam/linux-pam.git?#tag=${_tag})
+ validpgpkeys=(296D6F29A020808E8717A8842DB5BD89A340AEB7) # Dimitry V. Levin <ldv@altlinux.org>
+-b2sums=('12891f9064ce7f00d22452d8ff39c14af87c24f9fbf3eab65e475a7d2a592d2b1c1d585f3718b2fa72f277a8ad1faa17149fe0a911bfabdaa4a2957c32e29fe3')
++b2sums=('SKIP')
+ options=(!emptydirs)
+ 
+ pkgver() {
+@@ -48,7 +49,7 @@
+     --prefix=/usr \
+     --libdir=/usr/lib32 \
+     --sbindir=/usr/bin \
+-    --enable-logind \
++    --enable-logind=elogind \
+     --disable-db \
+     --disable-doc
+   make
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,11 @@
+ docbook-xml
+ docbook-xsl
++elogind
+ git
+ lib32-flex
+ lib32-libnsl
+ lib32-libtirpc
+ lib32-libxcrypt
+-lib32-systemd
++libelogind
+ pam
+ w3m

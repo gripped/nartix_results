@@ -66,7 +66,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-ed
 edk2
 edk2-shell
 edk2-ovmf
@@ -226,6 +225,7 @@ kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
+krfb
 ksnip
 ksystemlog
 kwin
@@ -364,7 +364,6 @@ nsd
 nushell
 nvme-cli
 nvtop
-ocaml-findlib
 onboard
 onionshare
 open-iscsi
@@ -480,10 +479,12 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
+python-snappy
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
@@ -634,11 +635,6 @@ rtkit
 rtorrent
 ruby-faraday-patron
 ruby-optimist
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 smbclient
