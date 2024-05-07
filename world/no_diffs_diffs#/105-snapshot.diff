@@ -4,8 +4,8 @@
  }
  
  build() {
--  arch-meson ${pkgname} build
-+  artix-meson ${pkgname} build
+-  arch-meson snapshot build
++  artix-meson snapshot build
    meson compile -C build
  }
  
@@ -18,10 +18,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,6 +2,6 @@
- cd ${pkgname}
+ cd snapshot
  }
  build() {
--arch-meson ${pkgname} build
-+artix-meson ${pkgname} build
+-arch-meson snapshot build
++artix-meson snapshot build
  meson compile -C build
  }

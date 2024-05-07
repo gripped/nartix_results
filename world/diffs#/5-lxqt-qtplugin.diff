@@ -3,7 +3,7 @@
 @@ -1,24 +1,27 @@
  
  pkgname=lxqt-qtplugin
--pkgver=1.4.1
+-pkgver=2.0.0
 -pkgrel=1
 +pkgver=1.4.0
 +pkgrel=1.1
@@ -12,15 +12,16 @@
  groups=("lxqt")
  url="https://github.com/lxqt/$pkgname"
 -license=("LGPL-2.1-or-later")
-+license=("LGPL2.1")
- depends=("libdbusmenu-qt5" "libqtxdg" "qt5-x11extras" "libfm-qt" "libQt5XdgIconLoader.so")
+-depends=("libdbusmenu-lxqt" "libqtxdg" "libfm-qt" "libQt6XdgIconLoader.so")
 -makedepends=("git" "lxqt-build-tools")
++license=("LGPL2.1")
++depends=("libdbusmenu-qt5" "libqtxdg" "qt5-x11extras" "libfm-qt" "libQt5XdgIconLoader.so")
 +makedepends=("lxqt-build-tools")
  source=(
 -	"git+https://github.com/lxqt/$pkgname?signed#tag=$pkgver"
 +	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc}
  )
--sha256sums=('022d1eacc98ac0b089dacef65f265c27bd7a6caed404112b2d3a34a1e2c75e35')
+-sha256sums=('db313a48a2db7bc66999258241bd678e28ff2890e1d21d0a8e0ccb6ce2fa807a')
 +sha256sums=('2afd9af1de8cc07b276c160e9831bde6fbc9b65a367df8227a3aa7df5e856eae'
 +            'SKIP')
  validpgpkeys=(
@@ -41,11 +42,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,6 +1,6 @@
 -git
- libQt5XdgIconLoader.so
- libdbusmenu-qt5
+-libQt6XdgIconLoader.so
+-libdbusmenu-lxqt
++libQt5XdgIconLoader.so
++libdbusmenu-qt5
  libfm-qt
+ libqtxdg
+ lxqt-build-tools
++qt5-x11extras
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

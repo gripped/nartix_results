@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libtiff
+ pkgver=4.6.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc='Library for manipulation of TIFF images'
+ url='http://www.simplesystems.org/libtiff/'
+ arch=('x86_64')
+@@ -21,7 +21,6 @@
+ prepare() {
+   cd libtiff
+   git cherry-pick -n 5320c9d89c054fa805d037d84c57da874470b01a
+-  git cherry-pick -n 51558511bdbbcffdce534db21dbaf5d54b31638a
+   autoreconf -fiv
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd libtiff
+ git cherry-pick -n 5320c9d89c054fa805d037d84c57da874470b01a
+-git cherry-pick -n 51558511bdbbcffdce534db21dbaf5d54b31638a
+ autoreconf -fiv
+ }
+ build() {

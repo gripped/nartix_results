@@ -20,6 +20,13 @@
  	-D udevrulesdir=lib/udev/rules.d \
  	.build
  }
+@@ -41,4 +41,6 @@
+ 	export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ 
+ 	DESTDIR="$pkgdir" meson install -C .build
++
++	rm -fr $pkgdir/usr/lib/systemd
+ }
 
 
 ############# Stripped diff below #################

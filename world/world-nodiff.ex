@@ -1292,6 +1292,7 @@ krdc
 krecorder
 krename
 kreversi
+krfb
 krita
 kross
 kruler
@@ -1783,7 +1784,6 @@ libteam-docs
 libtermkey
 libthai
 libtheora
-libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -1992,18 +1992,14 @@ lxqt-about
 lxqt-admin
 lxqt-archiver
 lxqt-build-tools
-lxqt-config
 lxqt-globalkeys
 lxqt-menu-data
 lxqt-notificationd
 lxqt-openssh-askpass
-lxqt-panel
 lxqt-policykit
 lxqt-powermanagement
 lxqt-runner
-lxqt-session
 lxqt-sudo
-lxqt-themes
 lxrandr
 lxrandr-gtk3
 lxsession
@@ -2197,6 +2193,7 @@ mutt
 mypaint-brushes1
 mypy
 namcap
+nanosvg
 nasm
 nauty
 nawk
@@ -4190,7 +4187,6 @@ python-zope-security
 python-zopfli
 python-zstandard
 pyxdg
-qalculate-qt
 qbe
 qbs
 qca

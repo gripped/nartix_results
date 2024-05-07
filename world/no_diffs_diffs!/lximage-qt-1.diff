@@ -1,11 +1,49 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,23 +1,23 @@
  
  pkgname=lximage-qt
- pkgver=1.4.0
+-pkgver=2.0.1
 -pkgrel=1
++pkgver=1.4.0
 +pkgrel=1.1
  pkgdesc="The LXQt image viewer and screenshot tool"
  arch=("x86_64")
  groups=("lxqt")
+ url="https://github.com/lxqt/$pkgname"
+-license=("GPL-2.0-or-later")
+-depends=("lxqt-themes" "libfm-qt" "qt6-svg" "libexif" "libxfixes" "libfm-qt6.so")
++license=("GPL2")
++depends=("lxqt-themes" "libfm-qt" "qt5-svg" "libexif" "libxfixes" "libfm-qt.so")
+ optdepends=(
+-	"qt6-imageformats: support for additional image formats (WEBP, TIFF, etc.)"
+-	"kimageformats: support for additional image formats (PCX, XCF, HEIF, etc.)"
++	"qt5-imageformats: support for additional image formats (WEBP, TIFF, etc.)"
++	"kimageformats5: support for additional image formats (PCX, XCF, HEIF, etc.)"
+ )
+ makedepends=("lxqt-build-tools")
+ source=(
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz.asc"
+ )
+-sha256sums=('55ca3bb14f58cda3abe364f820de011aeddb4b2840e3ae4467190c1097c40f8e'
++sha256sums=('0857650bdb32c5ba5befbd726fbff62137e45d2cf26bc88b0d32622e718cd34e'
+             'SKIP')
+ validpgpkeys=(
+ 	"169704C6FB490C6892C7F23C37E0AF1FDA48F373"  # Jerome Leclanche <jerome@leclan.ch>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ libexif
+ libfm-qt
+-libfm-qt6.so
++libfm-qt.so
+ libxfixes
+ lxqt-build-tools
+ lxqt-themes
+-qt6-svg
++qt5-svg

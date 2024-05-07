@@ -225,7 +225,6 @@ kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
-krfb
 ksnip
 ksystemlog
 kwin
@@ -274,6 +273,7 @@ libnvme
 libprocps
 libsidplay
 libtg_owt
+libtiff
 libtorrent
 libudev0-shim
 libusbsio
@@ -310,7 +310,11 @@ luarocks
 lxc
 lxcfs
 lxd
+lxqt-config
+lxqt-panel
 lxqt-qtplugin
+lxqt-session
+lxqt-themes
 mako
 mariadb
 mariadb-libs
@@ -488,6 +492,7 @@ python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
+qalculate-qt
 qastools
 qemu
 qemu-common

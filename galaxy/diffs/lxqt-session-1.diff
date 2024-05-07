@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=lxqt-session
+-pkgver=2.0.0
++pkgver=1.4.0
+ pkgrel=1
+ pkgdesc="The LXQt session manager"
+ arch=("x86_64")
+ groups=("lxqt")
+ url="https://github.com/lxqt/$pkgname"
+ license=("LGPL2.1")
+-depends=("liblxqt" "qtxdg-tools" "xdg-user-dirs"  "libx11" "udev" "kwindowsystem" "libQt6Xdg.so" "procps-ng" "layer-shell-qt")
+-makedepends=("cmake" "lxqt-build-tools")
++depends=("liblxqt" "qtxdg-tools" "xdg-user-dirs"  "libx11" "udev" "kwindowsystem5" "libQt5Xdg.so" "procps-ng")
++makedepends=("cmake" "lxqt-build-tools" "qtxdg-tools")
+ optdepends=(
+ 	"breeze-icons: Default icon theme"
+ 	"oxygen-icons: Alternative icon theme"
+@@ -17,7 +17,7 @@
+ source=(
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc}
+ )
+-sha256sums=('74ea3b998fecb50834b8b09952c31a1bf128fde9f7cfdd31284f7397665cb428'
++sha256sums=('9dcdc846601f1972d01429f2203d36976088edcca5c166eef2b21ad73fcef656'
+             'SKIP')
+ validpgpkeys=(
+ 	"169704C6FB490C6892C7F23C37E0AF1FDA48F373"  # Jerome Leclanche <jerome@leclan.ch>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ cmake
+-kwindowsystem
+-layer-shell-qt
+-libQt6Xdg.so
++kwindowsystem5
++libQt5Xdg.so
+ liblxqt
+ libx11
+ lxqt-build-tools
