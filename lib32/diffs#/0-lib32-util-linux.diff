@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,20 @@
+ 
+ _pkgbasename=util-linux
+ pkgname=lib32-${_pkgbasename}
+-_tag='2.40.1'
++_tag='2.40'
+ pkgver="${_tag/-/}"
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Miscellaneous system utilities for Linux (32-bit)'
+ url='https://github.com/util-linux/util-linux'
+ arch=('x86_64')
+ makedepends=('git' 'meson' 'lib32-libxcrypt' 'lib32-ncurses')
+-depends=("util-linux-libs=${pkgver}" 'lib32-glibc')
++depends=('lib32-glibc' 'util-linux-libs')
+ provides=('libuuid.so' 'libblkid.so' 'libfdisk.so' 'libmount.so' 'libsmartcols.so')
+ license=('GPL2')
+ options=('!emptydirs')
+ validpgpkeys=('B0C64D14301CC6EFAEDF60E4E4B71D5EEC39C284')  # Karel Zak
+-source=("git+https://github.com/util-linux/util-linux#tag=v${_tag}?signed"
+-        '0001-fix-build.patch')
+-sha256sums=('c08ac20cf4fb061a0aa0d318a245b269acdfd14f7abf1f272476358878e6862a'
+-            '07b42d50b8450ecd1ef7e939d579d20526388036926e33a2927818e24a8e180c')
++source=("git+https://github.com/util-linux/util-linux#tag=v${_tag}?signed")
++sha256sums=('153ae22d30a04e8c3ef1edbac63081f21b2d7622467dd7bf324f7f45e45b343d')
+ 
+ _backports=(
+ )
+@@ -38,8 +36,6 @@
+     git log --oneline "${_l}" "${_c}"
+     git revert --mainline 1 --no-commit "${_c}"
+   done
+-
+-  patch -Np1 < ../0001-fix-build.patch
+ 
+   sed -i '/dirty=/c dirty=' tools/git-version-gen
+ }
+@@ -65,7 +61,7 @@
+     -Dncursesw=enabled
+   )
+ 
+-  arch-meson "${_pkgbasename}" build "${_meson_options[@]}"
++  artix-meson "${_pkgbasename}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,6 @@
+ git log --oneline "${_l}" "${_c}"
+ git revert --mainline 1 --no-commit "${_c}"
+ done
+-patch -Np1 < ../0001-fix-build.patch
+ sed -i '/dirty=/c dirty=' tools/git-version-gen
+ }
+ build() {
+@@ -30,6 +29,6 @@
+ -Dncurses=disabled
+ -Dncursesw=enabled
+ )
+-arch-meson "${_pkgbasename}" build "${_meson_options[@]}"
++artix-meson "${_pkgbasename}" build "${_meson_options[@]}"
+ meson compile -C build
+ }

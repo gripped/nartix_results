@@ -164,7 +164,6 @@ lib32-sqlite
 lib32-taglib
 lib32-tdb
 lib32-twolame
-lib32-util-linux
 lib32-vkd3d
 lib32-vulkan-icd-loader
 lib32-vulkan-validation-layers

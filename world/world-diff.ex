@@ -13,8 +13,6 @@ at-spi2-core
 at-spi2-core-docs
 at
 avahi
-avogadrolibs
-avogadrolibs-qt5
 ayatana-ido
 babl
 bash-bats
@@ -273,7 +271,6 @@ libnvme
 libprocps
 libsidplay
 libtg_owt
-libtiff
 libtorrent
 libudev0-shim
 libusbsio
@@ -483,7 +480,6 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
-python-snappy
 python-tblib
 python-teamcity-messages
 python-trustme
@@ -492,7 +488,6 @@ python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
-qalculate-qt
 qastools
 qemu
 qemu-common

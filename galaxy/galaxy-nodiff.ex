@@ -67,6 +67,7 @@ lazarus-gtk2
 lazarus-gtk3
 lazarus-qt5
 lazarus-qt6
+libdbusmenu-lxqt
 libe-book
 libexttextcat
 libfm-qt
@@ -141,14 +142,17 @@ lxqt-about
 lxqt-admin
 lxqt-archiver
 lxqt-build-tools
+lxqt-config
 lxqt-globalkeys
 lxqt-menu-data
 lxqt-notificationd
 lxqt-openssh-askpass
+lxqt-panel
 lxqt-policykit
 lxqt-powermanagement
 lxqt-qtplugin
 lxqt-runner
+lxqt-session
 lxqt-sudo
 lxrandr
 lxrandr-gtk3

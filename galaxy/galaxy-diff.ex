@@ -9,9 +9,6 @@ libreoffice-extension-writer2latex
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-lxqt-config
-lxqt-panel
-lxqt-session
 lxqt-themes
 mate-control-center
 mate-screensaver

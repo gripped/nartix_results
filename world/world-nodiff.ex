@@ -136,6 +136,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt5
 awesome-terminal-fonts
 awesome
 aws-c-auth
@@ -1784,6 +1786,7 @@ libteam-docs
 libtermkey
 libthai
 libtheora
+libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -3948,6 +3951,7 @@ python-sly
 python-smartypants
 python-smbprotocol
 python-smmap
+python-snappy
 python-sniffio
 python-snowballstemmer
 python-socketio
@@ -4187,6 +4191,7 @@ python-zope-security
 python-zopfli
 python-zstandard
 pyxdg
+qalculate-qt
 qbe
 qbs
 qca
