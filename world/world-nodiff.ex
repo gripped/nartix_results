@@ -87,7 +87,6 @@ ark
 armagetronad
 arrow
 artikulate
-asciidoc
 asciidoctor
 asio
 aspell-ca
@@ -365,8 +364,6 @@ cscope
 ctags
 ctpl
 ctwm
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -413,6 +410,7 @@ diffstat
 diffuse
 digikam
 directx-headers
+directx-shader-compiler
 discount
 discover
 distcc
@@ -588,6 +586,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 four-in-a-row
+fractal
 frameworkintegration
 frameworkintegration5
 freealut
@@ -633,6 +632,7 @@ geary
 gedit-plugins
 gedit
 gegl
+gendesk
 gengetopt
 geocode-glib
 geocode-glib-common
@@ -1791,6 +1791,7 @@ libtiger
 libtomcrypt
 libtommath
 libtorrent-rasterbar
+libtorrent
 libtpms
 libtraceevent
 libtraceevent-docs
@@ -2147,6 +2148,7 @@ mktorrent
 mlt
 mm-common
 mmtf-cpp
+mobile-broadband-provider-info
 mod_dnssd
 modem-manager-gui
 modemmanager-qt
@@ -4331,6 +4333,7 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
+rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2

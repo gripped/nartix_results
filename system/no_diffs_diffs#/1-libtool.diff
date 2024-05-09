@@ -5,6 +5,6 @@
  conflicts=(libltdl libtool-multilib)
  replaces=(libltdl libtool-multilib)
 +options=(debug)
- source=(git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
-         git+https://git.savannah.gnu.org/git/gnulib.git
-         gnulib-bootstrap::git+https://github.com/gnulib-modules/bootstrap.git
+ source=(
+   git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
+   git+https://git.savannah.gnu.org/git/gnulib.git

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ 
+ pkgname=(gcc gcc-libs lib32-gcc-libs gcc-ada gcc-d gcc-fortran gcc-go gcc-m2 gcc-objc gcc-rust lto-dump libgccjit)
+-pkgver=14.1.1+r1+g43b730b9134
++pkgver=14.1.1+r1+g43b730b9134a
+ _commit=43b730b9134af60a8f1c5b107d625f7127ff23c5
+ pkgrel=1
+ pkgdesc='The GNU Compiler Collection'
 @@ -29,7 +29,7 @@
    python-pytest
    tcl
@@ -9,7 +18,19 @@
  _libdir=usr/lib/gcc/$CHOST/${pkgver%%+*}
  source=(git+https://sourceware.org/git/gcc.git#commit=${_commit}
          c89 c99
-@@ -69,7 +69,7 @@
+@@ -43,10 +43,7 @@
+             'de48736f6e4153f03d0a5d38ceb6c6fdb7f054e8f47ddd6af0a3dbf14f27b931'
+             '2513c6d9984dd0a2058557bf00f06d8d5181734e41dcfe07be7ed86f2959622a'
+             '1773f5137f08ac1f48f0f7297e324d5d868d55201c03068670ee4602babdef2f')
+-pkgver() {
+-  cd gcc
+-  echo "$(cat gcc/BASE-VER)+$(git describe --tags | sed 's/[^-]*-[^-]*-//;s/[^-]*-/r&/;s/-/+/g;s/_/./')"
+-}
++
+ 
+ prepare() {
+   [[ ! -d gcc ]] && ln -s gcc-${pkgver/+/-} gcc
+@@ -69,7 +66,7 @@
        --libexecdir=/usr/lib
        --mandir=/usr/share/man
        --infodir=/usr/share/info
@@ -26,7 +47,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
+@@ -14,7 +14,7 @@
  --libexecdir=/usr/lib
  --mandir=/usr/share/man
  --infodir=/usr/share/info

@@ -1,15 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -9,8 +9,8 @@
  url='https://www.gnu.org/software/libc'
  license=(GPL-2.0-or-later LGPL-2.1-or-later)
  makedepends=(git gd lib32-gcc-libs python)
 -options=(staticlibs !lto)
+-source=("git+https://sourceware.org/git/glibc.git#commit=${_commit}"
 +options=(staticlibs !lto debug)
- source=(git+https://sourceware.org/git/glibc.git#commit=${_commit}
++source=(git+https://sourceware.org/git/glibc.git#commit=${_commit}
          locale.gen.txt
          locale-gen
-@@ -37,7 +37,7 @@
+         lib32-glibc.conf
+@@ -42,7 +42,7 @@
    local _configure_flags=(
        --prefix=/usr
        --with-headers=/usr/include
@@ -18,6 +20,42 @@
        --enable-bind-now
        --enable-fortify-source
        --enable-kernel=4.4
+@@ -54,8 +54,6 @@
+       --disable-werror
+   )
+ 
+-  CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
+-
+   (
+     cd glibc-build
+ 
+@@ -63,6 +61,8 @@
+     echo "rtlddir=/usr/lib" >> configparms
+     echo "sbindir=/usr/bin" >> configparms
+     echo "rootsbindir=/usr/bin" >> configparms
++
++    CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
+ 
+     "${srcdir}"/glibc/configure \
+         --libdir=/usr/lib \
+@@ -103,14 +103,15 @@
+ _skip_test() {
+   test=${1}
+   file=${2}
+-  sed -i "/\b${test} /d" "${srcdir}/glibc/${file}"
++  sed -i "/\b${test} /d" "${srcdir}"/glibc/${file}
+ }
+ 
+ check() (
+   cd glibc-build
+ 
++  sed -i '/FORTIFY/d' configparms                                     # failure to build testsuite
+   sed -i 's/-Werror=format-security/-Wformat-security/' config.make   # failure to build testsuite
+-  sed -i '/CFLAGS/s/-fno-plt//' config.make                           # 27 failures
++  sed -i '/CFLAGS/s/-fno-plt//' config.make                           # 16 failures
+   sed -i '/CFLAGS/s/-fexceptions//' config.make                       # 1 failure
+ 
+   _skip_test test-errno-linux        sysdeps/unix/sysv/linux/Makefile
 
 
 ############# Stripped diff below #################
@@ -35,3 +73,18 @@
  --enable-bind-now
  --enable-fortify-source
  --enable-kernel=4.4
+@@ -18,13 +18,13 @@
+ --disable-profile
+ --disable-werror
+ )
+-CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
+ (
+ cd glibc-build
+ echo "slibdir=/usr/lib" >> configparms
+ echo "rtlddir=/usr/lib" >> configparms
+ echo "sbindir=/usr/bin" >> configparms
+ echo "rootsbindir=/usr/bin" >> configparms
++CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
+ "${srcdir}"/glibc/configure \
+ --libdir=/usr/lib \
+ --libexecdir=/usr/lib \

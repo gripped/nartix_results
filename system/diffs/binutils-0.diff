@@ -9,7 +9,7 @@
  source=(git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
          gold-warn-unsupported.patch)
  sha256sums=('a36780f5918bf383520f44374b2daa2bc737f55aa2601458b9b35d576b4aa7df'
-@@ -45,7 +45,7 @@
+@@ -50,7 +50,7 @@
      --prefix=/usr \
      --sysconfdir="${pkgdir}"/etc \
      --with-lib-path=/usr/lib:/usr/local/lib \

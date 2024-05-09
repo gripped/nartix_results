@@ -8,6 +8,7 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
+asciidoc
 aspell-uk
 at-spi2-core
 at-spi2-core-docs
@@ -49,12 +50,13 @@ containerd
 cppcheck
 cppzmq
 crun
+cuda
+cuda-tools
 cups
 libcups
 dbus-broker
 ddcutil
 dhcpcd
-directx-shader-compiler
 dns-over-https
 docker
 dolphin-emu
@@ -95,7 +97,6 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
-fractal
 freerdp
 freerdp2
 fribidi
@@ -111,7 +112,6 @@ gcr
 gcr-docs
 gdm
 libgdm
-gendesk
 genxrdpattern
 geoclue
 girara
@@ -271,7 +271,6 @@ libnvme
 libprocps
 libsidplay
 libtg_owt
-libtorrent
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -337,7 +336,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-mobile-broadband-provider-info
 modemmanager
 libmm-glib
 modest
@@ -632,7 +630,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-rtorrent
 ruby-faraday-patron
 ruby-optimist
 samba
