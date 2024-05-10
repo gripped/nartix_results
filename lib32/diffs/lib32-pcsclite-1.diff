@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,86 +1,74 @@
- 
- _pkgname=pcsclite
- pkgname=lib32-$_pkgname
--pkgver=2.2.0
-+pkgver=2.1.0
- pkgrel=1
- pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
+@@ -7,80 +7,78 @@
  arch=('x86_64')
  url='https://pcsclite.apdu.fr/'
  license=(
@@ -20,46 +13,47 @@
 +	'BSD-2-Clause'     # src/auth.c, src/auth.h
 +	'0BSD'             # src/simclist.c, src/simclist.h
  )
--depends=(
+ depends=(
 -  'libsystemd.so'
 -  'libudev.so'
 -  'libpolkit-gobject-1.so'
 -  $_pkgname
--)
--makedepends=(
++	'libudev.so'
++	'libpolkit-gobject-1.so'
++	$_pkgname
+ )
+ makedepends=(
 -  'autoconf-archive'
 -  'git'
 -  'lib32-systemd'
 -  'lib32-polkit'
--)
-+depends=('libudev.so' 'libpolkit-gobject-1.so' $_pkgname)
-+makedepends=('lib32-polkit' 'autoconf-archive')
++	'autoconf-archive'
++	'git'
++	'lib32-polkit'
+ )
  provides=('libpcsclite.so' 'libpcsclite_real.so' 'libpcscspy.so')
  validpgpkeys=('F5E11B9FFE911146F41D953D78A1B4DFE8F9C57E') # Ludovic Rousseau <rousseau@debian.org>
--source=("git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
+ source=("git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
 -        "program-suffix.patch"
 -        "systemd-unit-conflicts.diff")
--sha256sums=('6888231cfb24d8283f0617fa01824eacda005d38c4324bd5327a39e63ac335d2'
--            'c63d6525a8514a30816f550b79fa1d269f1504951efc198ce4e503ab5f48a9c6'
--            'e77aa9d0b6431d0de6a80d96bfd57e31b3c99e9ddcadf72990fe625b5cb128af')
-+source=("https://pcsclite.apdu.fr/files/pcsc-lite-${pkgver}.tar.bz2"{,.asc}
 +	"program-suffix.patch"
 +	"systemd-unit-conflicts.diff")
-+sha256sums=('85cab61cc744c81e2bc432656863293b8428d0136f079e3b12a84b335b5b35aa'
-+	'SKIP'
+ sha256sums=('6888231cfb24d8283f0617fa01824eacda005d38c4324bd5327a39e63ac335d2'
+-            'c63d6525a8514a30816f550b79fa1d269f1504951efc198ce4e503ab5f48a9c6'
+-            'e77aa9d0b6431d0de6a80d96bfd57e31b3c99e9ddcadf72990fe625b5cb128af')
 +	'c63d6525a8514a30816f550b79fa1d269f1504951efc198ce4e503ab5f48a9c6'
 +	'e77aa9d0b6431d0de6a80d96bfd57e31b3c99e9ddcadf72990fe625b5cb128af')
  
  prepare() {
 -  cd PCSC
--
++	cd PCSC
+ 
 -  patch -Np1 -i ../program-suffix.patch
 -  patch -Np1 -i ../systemd-unit-conflicts.diff
 -  ./bootstrap
-+	cd "pcsc-lite-$pkgver"
 +	patch -Np1 -i ../program-suffix.patch
 +	patch -Np1 -i ../systemd-unit-conflicts.diff
-+	autoreconf -ifv
++	./bootstrap
  }
  
  build() {
@@ -72,24 +66,10 @@
 +	export LDFLAGS+=" -m32"
 +	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
  
-+	cd "pcsc-lite-$pkgver"
  
-+	./configure \
-+		--prefix=/usr \
-+		--sbindir=/usr/bin \
-+		--libdir=/usr/lib32 \
-+		--program-suffix="-32" \
-+		--sysconfdir=/etc \
-+		--disable-static \
-+		--enable-filter \
-+		--enable-ipcdir=/run/pcscd \
-+		--enable-libudev \
-+		--enable-usbdropdir=/usr/lib32/pcsc/drivers \
-+		--enable-polkit \
-+		--disable-libsystemd
  
 -  cd PCSC
-+	make
++	cd PCSC
  
 -  ./configure \
 -    --prefix=/usr \
@@ -104,9 +84,23 @@
 -    --enable-usbdropdir=/usr/lib32/pcsc/drivers \
 -    --enable-polkit \
 -    --with-systemdsystemunitdir=/usr/lib/systemd/system
--
++	./configure \
++		--prefix=/usr \
++		--sbindir=/usr/bin \
++		--libdir=/usr/lib32 \
++		--program-suffix="-32" \
++		--sysconfdir=/etc \
++		--disable-static \
++		--enable-filter \
++		--enable-ipcdir=/run/pcscd \
++		--enable-libudev \
++		--enable-usbdropdir=/usr/lib32/pcsc/drivers \
++		--enable-polkit \
++		--disable-libsystemd
+ 
 -  make
--
++	make
+ 
 -  awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' COPYING > LICENSE.BSD-3-Clause
 -  awk '/GNU GPL v3/    {flag=1} /auth.c/     {flag=0} flag' COPYING > LICENSE.GPL-3.0-or-later
 -  awk '/auth.c/        {flag=1} /simclist.c/ {flag=0} flag' COPYING > LICENSE.BSD-2-Clause
@@ -120,7 +114,7 @@
  package() {
 -  cd PCSC
 -  make DESTDIR="$pkgdir" install
-+	cd "pcsc-lite-$pkgver"
++	cd PCSC
 +	make DESTDIR="$pkgdir" install
  
 -  rm -rv "$pkgdir"/{usr/include,usr/share}
@@ -140,9 +134,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,5 @@
+@@ -1,8 +1,6 @@
  autoconf-archive
--git
+ git
  lib32-polkit
 -lib32-systemd
  libpolkit-gobject-1.so

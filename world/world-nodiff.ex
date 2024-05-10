@@ -902,6 +902,7 @@ hyphen
 hyphen-en
 hyprcursor
 hyprlang
+hyprwayland-scanner
 i2c-tools
 i3-wm
 i3blocks

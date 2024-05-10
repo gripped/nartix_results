@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,49 +1,46 @@
+@@ -1,52 +1,48 @@
  
  pkgname=hyprland
--pkgver=0.39.1
--pkgrel=5
+-pkgver=0.40.0
+-pkgrel=1
 +pkgver=0.35.0
 +pkgrel=2
  pkgdesc='a highly customizable dynamic tiling Wayland compositor'
@@ -74,17 +74,34 @@
 +depends+=(libdisplay-info.so)
  makedepends=(cmake
               gdb
+-             hyprwayland-scanner
               meson
-@@ -55,7 +52,7 @@
+              ninja
+              vulkan-headers
+@@ -55,20 +51,13 @@
+             'cpio: to build and install plugins using hyprpm'
              'meson: to build and install plugins using hyprpm')
  _archive="${pkgname^}-$pkgver"
- source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
--sha256sums=('48d1c58fd8db365635a56d76e05e6ea2d99fa20c020a061ee88a20407cfde787')
+-source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz"
+-        741ed28391f035658e2410934a88ea60e1c5cbe8.patch
+-        ec092bd601d9d351ff6ca34bd97f12055b2a4dd9.patch)
+-sha256sums=('0995fe7924a60e3d81428b3fa03ab15d8065958d6285443225afbafa31d29038'
+-            'd0719d5f1df0ed9b8cd92169aab4819457078c046e4253e752ff7ce5ad9e44d8'
+-            'a4ab9aad0aeba3aa1f806f5716b01745ef1ea24bae1349b1d2fe3ab29fee5e1c')
++source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
 +sha256sums=('de53d764606131c8aacc209f8a3ad6e619fdcddd16a7cdf4d8ca343816bb8c1b')
  
  prepare() {
  	ln -sf hyprland-source "$_archive"
-@@ -71,11 +68,11 @@
+ 	cd "$_archive"
+ 	sed -i -e '/^release:/{n;s/-D/-DCMAKE_SKIP_RPATH=ON -D/}' Makefile
+-
+-	patch -d subprojects/wlroots-hyprland/ -p1 -i "${srcdir}"/741ed28391f035658e2410934a88ea60e1c5cbe8.patch
+-	patch -p1 -i "${srcdir}"/ec092bd601d9d351ff6ca34bd97f12055b2a4dd9.patch
+ }
+ 
+ build() {
+@@ -79,11 +68,11 @@
  package() {
  	cd "$_archive"
  	find src \( -name '*.h' -o -name '*.hpp' \) -exec install -Dm0644 {} "$pkgdir/usr/include/hyprland/{}" \;
@@ -100,7 +117,7 @@
  	popd
  	mkdir -p "$pkgdir/usr/include/hyprland/protocols"
  	cp protocols/*-protocol.h "$pkgdir/usr/include/hyprland/protocols"
-@@ -84,16 +81,11 @@
+@@ -92,16 +81,11 @@
  	popd
  	install -Dm0644 -t "$pkgdir/usr/share/pkgconfig" build/hyprland.pc
  	install -Dm0644 -t "$pkgdir/usr/share/man/man1" docs/{Hyprland,hyprctl}.1
@@ -124,7 +141,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,48 +2,28 @@
+@@ -2,49 +2,28 @@
  cmake
  gcc-libs
  gdb
@@ -133,6 +150,7 @@
  glslang
 -hyprcursor
 -hyprlang
+-hyprwayland-scanner
 -libEGL.so
 -libGLESv2.so
 -libOpenGL.so
@@ -175,7 +193,7 @@
  tomlplusplus
  vulkan-headers
  vulkan-icd-loader
-@@ -53,7 +33,6 @@
+@@ -54,7 +33,6 @@
  xcb-proto
  xcb-util
  xcb-util-errors

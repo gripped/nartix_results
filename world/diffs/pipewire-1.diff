@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
-   pipewire-session-manager
-   pulse-native-provider
- )
--pkgver=1.0.6
-+pkgver=1.0.5
- _so_ver=0.3
- pkgrel=1
- epoch=1
 @@ -62,7 +62,6 @@
    rtkit
    sbc
@@ -17,41 +8,7 @@
    valgrind
    webrtc-audio-processing-1
  )
-@@ -72,16 +71,8 @@
- )
- source=(
-   "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
--  0001-gst-Add-support-for-DMA_DRM-explicit-modifiers.patch
--  0002-gst-Sanitize-caps-before-translating.patch
--  0003-gst-Fix-sanitization-of-non-writable-caps.patch
--  0004-gst-Re-enable-handling-of-single-long-modifiers.patch
- )
--b2sums=('77e01e262df0b0159cc4bbc79387268798d01c6fe035e779e85937e53f486412b210f94454fb6ed78c8f073e9cb1ea4cda551f57e1129cdd30020254e4be778b'
--        'a32e85e5535664d960ad2452638703885e488ad8cf02e6df8378fd4bb9ff8b3c851645fa47ba2037cf597bbfe4b048c33a82977d551df9c3746e175edbd208b3'
--        '5aca6a491907cabeee40765ef6591448bfd5a684327db5f0ffe0b59c99e23bd7cc13994f8aa42b8f5ae9c1bbd8cd69c487c4b04c6fa1dd98e9934bc4b80a17cb'
--        '902effec51d1c40191a0a5a8e5dcf54e24062f7228c8de1e25dae5ab622a3adcbbc8156d398fa14ea74a0c8e8fc489144771fbead86f91a79f4435c08f419767'
--        '87dc2c9e67121311cd960aae0751ac77652cacd6e27b70be71d0738d356d0675e731f0dad3a82f6e71b9ada2a458a13ebb572fccba3d33f88be4dc350cd5e8b3')
-+b2sums=('46f2e8e0206077590af8e3accd338c84ed66c954955b01bb316f1dd723f4c75d111078b845a0e682c5ca7a8ff398023a9c2d0074530ff85f87ac0c2dee1a6c34')
- 
- pkgver() {
-   cd pipewire
-@@ -91,10 +82,11 @@
- prepare() {
-   cd pipewire
- 
--  git apply -3 ../0001-gst-Add-support-for-DMA_DRM-explicit-modifiers.patch
--  git apply -3 ../0002-gst-Sanitize-caps-before-translating.patch
--  git apply -3 ../0003-gst-Fix-sanitization-of-non-writable-caps.patch
--  git apply -3 ../0004-gst-Re-enable-handling-of-single-long-modifiers.patch
-+  git cherry-pick -n \
-+    f1b75fc6f803f866d2ed0f7d1366f56ef96f0610 \
-+    8a271a87b77e4508bb698f9b9e9fe3624884bfa6 \
-+    1a6bb994a502d95434e326a35a83a1fb5f4ebad8 \
-+    8848c7e7920618b97016243912bcb20c69a71960
- }
- 
- build() {
-@@ -108,9 +100,10 @@
+@@ -108,9 +107,10 @@
      -D selinux=disabled
      -D session-managers=[]
      -D udevrulesdir=/usr/lib/udev/rules.d
@@ -65,7 +22,7 @@
    meson compile -C build
  }
  
-@@ -141,7 +134,6 @@
+@@ -141,7 +141,6 @@
      libncursesw.so
      libpipewire-$_so_ver.so
      libreadline.so
@@ -73,7 +30,7 @@
      libudev.so
    )
    optdepends=(
-@@ -161,7 +153,6 @@
+@@ -161,7 +160,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
    )
@@ -81,7 +38,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -198,7 +189,6 @@
+@@ -198,7 +196,6 @@
      _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/pipewire-$_so_ver/libpipewire-module-vban*.so
      _pick audio usr/lib/spa-0.2/{aec,alsa,audio*,avb,bluez5}
@@ -89,7 +46,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
      _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
-@@ -226,7 +216,6 @@
+@@ -226,7 +223,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/pipewire-$_so_ver/libpipewire-module-pulse-tunnel.so
@@ -97,7 +54,7 @@
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
      _pick pulse usr/share/man/man7/pipewire-pulse*.7
-@@ -305,7 +294,6 @@
+@@ -305,7 +301,6 @@
      libusb-1.0.so
      libwebrtc-audio-processing-1.so
      pipewire
@@ -105,7 +62,7 @@
    )
  
    mv audio/* "$pkgdir"
-@@ -407,7 +395,6 @@
+@@ -407,7 +402,6 @@
      pipewire
      pipewire-audio
      pipewire-session-manager
@@ -113,7 +70,7 @@
    )
    provides=(
      pulse-native-provider
-@@ -418,7 +405,6 @@
+@@ -418,7 +412,6 @@
      pulseaudio
      pulseaudio-bluetooth
    )
