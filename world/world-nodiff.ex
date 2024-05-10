@@ -87,6 +87,7 @@ ark
 armagetronad
 arrow
 artikulate
+asciidoc
 asciidoctor
 asio
 aspell-ca
@@ -364,6 +365,8 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -617,6 +620,7 @@ gamescope
 garcon
 gavl
 gcab
+gcc13
 gd
 gdal
 python-gdal
@@ -2000,6 +2004,7 @@ lxqt-globalkeys
 lxqt-menu-data
 lxqt-notificationd
 lxqt-openssh-askpass
+lxqt-panel
 lxqt-policykit
 lxqt-powermanagement
 lxqt-runner

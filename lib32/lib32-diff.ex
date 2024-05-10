@@ -35,7 +35,6 @@ lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
-lib32-util-linux
 lib32-v4l-utils
 wine-staging
 wine

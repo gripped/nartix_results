@@ -7,7 +7,6 @@ btrfs-progs
 cryptsetup
 dbus
 dbus-docs
-debugedit
 dhcpcd
 e2fsprogs
 fuse2fs

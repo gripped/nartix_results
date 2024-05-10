@@ -8,7 +8,6 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
-asciidoc
 aspell-uk
 at-spi2-core
 at-spi2-core-docs
@@ -50,8 +49,6 @@ containerd
 cppcheck
 cppzmq
 crun
-cuda
-cuda-tools
 cups
 libcups
 dbus-broker
@@ -307,7 +304,6 @@ lxc
 lxcfs
 lxd
 lxqt-config
-lxqt-panel
 lxqt-qtplugin
 lxqt-session
 lxqt-themes

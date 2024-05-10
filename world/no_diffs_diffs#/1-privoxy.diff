@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=privoxy
- pkgver=3.0.34
--pkgrel=3
-+pkgrel=2
- pkgdesc='A web proxy with advanced filtering capabilities.'
- arch=('x86_64')
- url='https://www.privoxy.org'
 @@ -12,13 +12,11 @@
  source=("https://downloads.sourceforge.net/ijbswa/${pkgname}-${pkgver}-stable-src.tar.gz"
          '53748ca8ca3c893025be34dd4f104546fcbd0602.patch::https://www.privoxy.org/gitweb/?p=privoxy.git;a=patch;h=53748ca8ca3c893025be34dd4f104546fcbd0602'

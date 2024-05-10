@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,78 +1,71 @@
+@@ -1,79 +1,71 @@
  
  pkgname=scribus
 -pkgver=1.6.1
--pkgrel=3
+-pkgrel=4
 +pkgver=1.5.8
 +pkgrel=24
  pkgdesc="Desktop publishing software"
@@ -74,6 +74,7 @@
  prepare() {
 -    cd "$_archive"
 -    patch -Np1 -i ../scribus-1.6.1-poppler-24.03.patch
+-    sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
 +  cd ${pkgname}-${pkgver}
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
@@ -87,7 +88,7 @@
 -		-D CMAKE_INSTALL_PREFIX=/usr \
 -		-D CMAKE_BUILD_TYPE=None \
 -		-D CMAKE_SKIP_RPATH=On \
--		-D WANT_CPP17=On \
+-		-D WANT_CPP20=On \
 -		-D WANT_HUNSPELL=On \
 -		-D WITH_PODOFO=On \
 -		-D WANT_GRAPHICSMAGICK=On
@@ -155,10 +156,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,21 @@
+@@ -1,16 +1,21 @@
  prepare() {
 -cd "$_archive"
 -patch -Np1 -i ../scribus-1.6.1-poppler-24.03.patch
+-sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
 +cd ${pkgname}-${pkgver}
 +patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
@@ -171,7 +173,7 @@
 --D CMAKE_INSTALL_PREFIX=/usr \
 --D CMAKE_BUILD_TYPE=None \
 --D CMAKE_SKIP_RPATH=On \
---D WANT_CPP17=On \
+--D WANT_CPP20=On \
 --D WANT_HUNSPELL=On \
 --D WITH_PODOFO=On \
 --D WANT_GRAPHICSMAGICK=On

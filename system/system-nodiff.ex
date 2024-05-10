@@ -20,6 +20,7 @@ libcurl-gnutls
 dash
 db
 db5.3
+debugedit
 dialog
 diffutils
 ding-libs
