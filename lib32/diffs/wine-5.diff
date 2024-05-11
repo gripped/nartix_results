@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,14 +6,14 @@
+@@ -1,19 +1,19 @@
+ 
+ pkgname=wine
+ pkgver=9.8
+-pkgrel=2
++pkgrel=1
+ 
  _pkgbasever=${pkgver/rc/-rc}
  
  source=(https://dl.winehq.org/wine/source/9.x/$pkgname-$_pkgbasever.tar.xz{,.sign}
@@ -21,7 +27,7 @@
  
  pkgdesc="A compatibility layer for running Windows programs"
  url="https://www.winehq.org"
-@@ -21,128 +21,128 @@
+@@ -21,132 +21,128 @@
  options=(staticlibs !lto)
  license=(LGPL-2.1-or-later)
  depends=(
@@ -155,16 +161,9 @@
 -  export CFLAGS="$CFLAGS -ffat-lto-objects"
 +	export CFLAGS="$CFLAGS -ffat-lto-objects -fPIC"
  
--  msg2 "Building Wine-64..."
--  mkdir "$pkgname-64-build"
--  cd "$pkgname-64-build"
--  ../$pkgname/configure \
--    --prefix=/usr \
--    --libdir=/usr/lib \
--    --with-x \
--    --with-wayland \
--    --with-gstreamer \
--    --enable-win64
+-  export CROSSCFLAGS="${CFLAGS/-Werror=format-security/}"
+-  export CROSSCXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
+-  export CROSSLDFLAGS="${LDFLAGS//-Wl,-z*([^[:space:]])/}"
 +	msg2 "Building Wine-64..."
 +	mkdir "$pkgname-64-build"
 +	cd "$pkgname-64-build"
@@ -176,33 +175,34 @@
 +		--with-gstreamer \
 +		--enable-win64
  
--  make
+-  msg2 "Building Wine-64..."
+-  mkdir "$pkgname-64-build"
+-  cd "$pkgname-64-build"
+-  ../$pkgname/configure \
+-    --prefix=/usr \
+-    --libdir=/usr/lib \
+-    --with-x \
+-    --with-wayland \
+-    --with-gstreamer \
+-    --enable-win64
 +	make
  
--  cd ..
+-  make
 +	cd ..
  
--  _wine32opts=(
--    --libdir=/usr/lib32
--    --with-wine64="$srcdir/$pkgname-64-build"
--  )
+-  cd ..
 +	_wine32opts=(
 +		--libdir=/usr/lib32
 +		--with-wine64="$srcdir/$pkgname-64-build"
 +	)
  
--  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+-  _wine32opts=(
+-    --libdir=/usr/lib32
+-    --with-wine64="$srcdir/$pkgname-64-build"
+-  )
 +	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
  
--  msg2 "Building Wine-32..."
--  mkdir "$pkgname-32-build"
--  cd "$pkgname-32-build"
--  ../$pkgname/configure \
--    --prefix=/usr \
--    --with-x \
--    --with-wayland \
--    --with-gstreamer \
--    "${_wine32opts[@]}"
+-  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
 +	msg2 "Building Wine-32..."
 +	mkdir "$pkgname-32-build"
 +	cd "$pkgname-32-build"
@@ -213,6 +213,16 @@
 +		--with-gstreamer \
 +		"${_wine32opts[@]}"
  
+-  msg2 "Building Wine-32..."
+-  mkdir "$pkgname-32-build"
+-  cd "$pkgname-32-build"
+-  ../$pkgname/configure \
+-    --prefix=/usr \
+-    --with-x \
+-    --with-wayland \
+-    --with-gstreamer \
+-    "${_wine32opts[@]}"
+-
 -  make
 +	make
  }
@@ -268,10 +278,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,9 +1,6 @@
  build() {
  mv $pkgname-$_pkgbasever $pkgname
 -export CFLAGS="$CFLAGS -ffat-lto-objects"
+-export CROSSCFLAGS="${CFLAGS/-Werror=format-security/}"
+-export CROSSCXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
+-export CROSSLDFLAGS="${LDFLAGS//-Wl,-z*([^[:space:]])/}"
 +export CFLAGS="$CFLAGS -ffat-lto-objects -fPIC"
  msg2 "Building Wine-64..."
  mkdir "$pkgname-64-build"

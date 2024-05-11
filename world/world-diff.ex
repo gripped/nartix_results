@@ -111,6 +111,7 @@ gdm
 libgdm
 genxrdpattern
 geoclue
+ghc-filesystem
 girara
 github-cli
 gnome-bluetooth-3.0
@@ -478,7 +479,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
@@ -664,6 +664,7 @@ system-config-printer
 thunderbird
 tigervnc
 timew
+tint2
 tmux
 tor
 torsocks
@@ -676,6 +677,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+twine
 udftools
 udisks2
 udisks2-btrfs

@@ -4109,6 +4109,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4952,7 +4953,6 @@ tidy
 time
 timeshift
 timezonemap
-tint2
 tinycdb
 tinycompress
 tinyprog
@@ -5008,7 +5008,6 @@ ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
 tumbler
-twine
 twolame
 txt2man
 typescript
