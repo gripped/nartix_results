@@ -227,7 +227,6 @@ kwin
 libatasmart
 libayatana-appindicator
 libayatana-indicator
-libblastrampoline
 libblockdev
 libblockdev-btrfs
 libblockdev-crypto
@@ -466,6 +465,7 @@ python-pyqt5
 pyqt6
 python-anytree
 python-debugpy
+python-filebytes
 python-frozendict
 python-gssapi
 python-intelhex
@@ -479,6 +479,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner

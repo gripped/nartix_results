@@ -1,15 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,14 +1,14 @@
  
  pkgname=cinnamon
  pkgver=6.0.4
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
  arch=(x86_64)
  url="https://github.com/linuxmint/cinnamon"
-@@ -51,7 +51,7 @@
+ license=(GPL2)
+ depends=(accountsservice caribou cinnamon-control-center cinnamon-menus cinnamon-screensaver
+          cinnamon-session cinnamon-settings-daemon cjs gnome-backgrounds gsound
+-         gstreamer libgnomekbd libkeybinder3 librsvg muffin
++         gstreamer libcroco libgnomekbd libkeybinder3 librsvg muffin
+          network-manager-applet nemo polkit-gnome python-cairo python-dbus
+          python-gobject python-pam python-pexpect python-pillow python-pyinotify
+          python-pytz python-tinycss2 python-xapp python-requests timezonemap xapps xdg-desktop-portal-xapp)
+@@ -18,6 +18,7 @@
+             'metacity: fallback mode'
+             'system-config-printer: printer settings'
+             'wget: cover download support in audio applet'
++            'gnome-themes-extra: GTK2 themes'
+             'gnome-terminal: X terminal emulator'
+             'touchegg: touch gestures'
+             'switcheroo-control: GPU offloading')
+@@ -50,7 +51,7 @@
  }
  
  build() {
@@ -22,7 +38,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -11,6 +11,7 @@
+ gsound
+ gstreamer
+ intltool
++libcroco
+ libgnomekbd
+ libkeybinder3
+ librsvg
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

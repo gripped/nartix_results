@@ -1425,6 +1425,7 @@ libavif
 libavtp
 libb2
 libb64
+libblastrampoline
 libbluray
 libbobcat
 libbs2b
@@ -3225,7 +3226,6 @@ python-feedgenerator
 python-feedparser
 python-fido2
 python-fields
-python-filebytes
 python-filelock
 python-findpython
 python-fiona
@@ -4109,7 +4109,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
