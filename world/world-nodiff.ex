@@ -391,8 +391,6 @@ dav1d-doc
 dblatex
 dbus-cplusplus
 dbus-glib
-dbus-python
-dbus-python-docs
 dconf-editor
 dconf
 ddclient
@@ -1704,7 +1702,6 @@ libphonenumber
 libpinyin
 libplacebo
 libplasma
-libplist
 libpng
 libpng12
 libportal
@@ -3226,6 +3223,7 @@ python-feedgenerator
 python-feedparser
 python-fido2
 python-fields
+python-filebytes
 python-filelock
 python-findpython
 python-fiona
@@ -4263,6 +4261,9 @@ qtcreator
 qtcreator-devel
 qterminal
 qtermwidget
+qtkeychain
+qtkeychain-qt5
+qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
@@ -5328,6 +5329,7 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zfp
+zig
 zimg
 zip
 ziproxy

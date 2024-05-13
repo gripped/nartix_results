@@ -52,6 +52,8 @@ crun
 cups
 libcups
 dbus-broker
+dbus-python
+dbus-python-docs
 ddcutil
 dhcpcd
 dns-over-https
@@ -265,6 +267,7 @@ libjpeg-turbo
 libldm
 libmspub
 libnvme
+libplist
 libprocps
 libsidplay
 libtg_owt
@@ -465,7 +468,6 @@ python-pyqt5
 pyqt6
 python-anytree
 python-debugpy
-python-filebytes
 python-frozendict
 python-gssapi
 python-intelhex
@@ -607,9 +609,6 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 quazip
 quazip-qt5
 quazip-qt6
@@ -766,5 +765,4 @@ zathura-pdf-poppler
 zathura-ps
 zathura
 zeromq
-zig
 znc
