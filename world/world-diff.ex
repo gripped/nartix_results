@@ -34,7 +34,6 @@ btop
 bumblebee
 cgmanager
 chromium-bsu
-chrony
 cinnamon-desktop
 clang
 cloud-init
@@ -225,6 +224,7 @@ knot
 kopeninghours
 ksnip
 ksystemlog
+ktexteditor
 kwin
 libatasmart
 libayatana-appindicator
@@ -343,6 +343,9 @@ mpd
 multipath-tools
 mumble
 mumble-server
+musepack
+musepack-tools
+libmpcdec
 mutter
 mutter-docs
 mutter45
@@ -481,7 +484,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testing
 python-zope-testrunner
@@ -732,6 +734,10 @@ wlroots0.15
 wlroots0.16
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 xcb-imdkit
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr

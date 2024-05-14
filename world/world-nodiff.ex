@@ -294,6 +294,7 @@ cherrytree
 chmlib
 chromaprint
 chrono-date
+chrony
 chrpath
 cifs-utils
 cinnamon-control-center
@@ -1327,7 +1328,6 @@ ksystemstats
 kteatime
 ktextaddons
 ktextaddons5
-ktexteditor
 ktexteditor5
 ktexttemplate
 ktextwidgets
@@ -2193,9 +2193,6 @@ libmupdf
 mupdf-gl
 mupdf-tools
 python-mupdf
-musepack
-musepack-tools
-libmpcdec
 musescore
 musl
 mutt
@@ -4107,6 +4104,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -5136,10 +5134,6 @@ words
 wpebackend-fdo
 wqy-zenhei
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264

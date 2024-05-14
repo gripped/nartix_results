@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=PyMuPDF
+ pkgname=python-pymupdf
+ pkgver=1.24.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Python bindings for MuPDF's rendering library"
+ arch=(x86_64)
+ url="https://github.com/pymupdf/PyMuPDF"
 @@ -22,7 +22,7 @@
    python-setuptools
    python-wheel
@@ -9,6 +18,14 @@
  )
  checkdepends=(
    python-fonttools
+@@ -88,6 +88,7 @@
+     --deselect tests/test_flake8.py::test_flake8
+     --deselect tests/test_pylint.py::test_pylint
+     --deselect tests/test_textbox.py::test_textbox3
++    --deselect tests/test_balance_count.py::test_q_count
+   )
+   local _site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+ 
 
 
 ############# Stripped diff below #################
