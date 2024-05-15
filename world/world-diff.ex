@@ -97,7 +97,6 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
-fribidi
 fwupd-efi
 fwupd
 gala
@@ -216,6 +215,7 @@ json-glib-docs
 kcoreaddons
 keepassxc
 kgamma
+kio
 kismet
 kitty
 kitty-terminfo
@@ -267,7 +267,6 @@ libjpeg-turbo
 libldm
 libmspub
 libnvme
-libplist
 libprocps
 libsidplay
 libtg_owt
@@ -627,6 +626,8 @@ rocrand
 rocsparse
 rrdtool
 rspamd
+rssguard
+rssguard-lite
 rtkit
 ruby-faraday-patron
 ruby-optimist
@@ -734,11 +735,6 @@ wlroots0.15
 wlroots0.16
 wpewebkit
 wpewebkit-docs
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
-xcb-imdkit
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

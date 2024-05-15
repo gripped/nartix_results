@@ -601,6 +601,7 @@ freetype2
 freetype2-demos
 freetype2-docs
 frei0r-plugins
+fribidi
 fstrm
 ftgl
 ftjam
@@ -1203,7 +1204,6 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
-kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1702,6 +1702,7 @@ libphonenumber
 libpinyin
 libplacebo
 libplasma
+libplist
 libpng
 libpng12
 libportal
@@ -4330,8 +4331,6 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
-rssguard
-rssguard-lite
 rst2pdf
 rsync
 rtaudio
@@ -5134,6 +5133,10 @@ words
 wpebackend-fdo
 wqy-zenhei
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264
@@ -5148,6 +5151,7 @@ xarchiver-gtk2
 xautolock
 xaw3d
 xbitmaps
+xcb-imdkit
 xcb-proto
 xcb-util-cursor
 xcb-util-errors

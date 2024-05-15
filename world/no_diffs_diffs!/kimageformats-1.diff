@@ -24,3 +24,20 @@
  
  build() {
    cmake -B build -S $pkgname-$pkgver \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-karchive
+-libavif
+-libheif
+-libjxl
+-libraw
+-openexr
+-qt6-base

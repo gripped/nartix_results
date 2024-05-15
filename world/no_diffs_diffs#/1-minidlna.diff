@@ -24,3 +24,18 @@
    install -Dm644 "$srcdir"/$pkgname/minidlna.conf.5 "$pkgdir"/usr/share/man/man5/minidlna.conf.5
    install -Dm644 "$srcdir"/$pkgname/minidlnad.8 "$pkgdir"/usr/share/man/man8/minidlnad.8
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -0,0 +1,8 @@
++ffmpeg
++flac
++git
++libexif
++libid3tag
++libjpeg
++libvorbis
++sqlite

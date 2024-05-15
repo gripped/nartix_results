@@ -46,21 +46,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +0,0 @@
--asciidoc
--e2fsprogs
--git
--glibc
--libgcrypt
--lzo
--python
--python-setuptools
--python-sphinx
--python-sphinx_rtd_theme
--reiserfsprogs
+@@ -3,14 +3,14 @@
+ git
+ glibc
+ libgcrypt
++libudev
+ lzo
+ python
+ python-setuptools
+ python-sphinx
+ python-sphinx_rtd_theme
+ reiserfsprogs
 -systemd
 -systemd-libs
--util-linux-libs
--xmlto
--zlib
--zstd
++udev
+ util-linux-libs
+ xmlto
+ zlib

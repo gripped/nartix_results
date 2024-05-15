@@ -1,21 +1,86 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,17 +1,18 @@
  
  pkgname=python-trio-asyncio
+-_name=${pkgname#python-}
 -pkgver=0.14.0
--pkgrel=2
 +pkgver=0.13.0
-+pkgrel=3
+ pkgrel=3
  pkgdesc='A re-implementation of the asyncio mainloop on top of Trio'
  arch=(any)
  url=https://github.com/python-trio/trio-asyncio
-@@ -24,7 +24,7 @@
+ license=(
+-  'Apache-2.0 OR MIT'
++  APACHE
++  MIT
+ )
+ depends=(
+   python
+-  python-greenlet
++  python-attrs
++  python-exceptiongroup
+   python-outcome
+   python-sniffio
+   python-trio
+@@ -23,36 +24,22 @@
    python-setuptools
    python-wheel
  )
--_tag=6c8b8056a3846ebafa2f4d079243baf30de964bb
+-checkdepends=(
+-  python-pytest
+-  python-pytest-timeout
+-  python-pytest-trio
+-  python-tests
+-)
+-source=(git+$url.git#tag=v$pkgver)
+-sha256sums=('7c3dac6670f2f1ded5b710e704ce67d30bda95ec9e8ca633a27c364dc8efb898')
 +_tag=b3b9ddef2ebc29e4cdbf869d792da91dbd46a2af
- source=(git+https://github.com/python-trio/trio-asyncio.git#tag=${_tag})
- sha256sums=(SKIP)
++source=(git+https://github.com/python-trio/trio-asyncio.git#tag=${_tag})
++sha256sums=(SKIP)
  
+ prepare() {
+   sed '/pytest-runner/d' -i trio-asyncio/setup.py
+ }
+ 
++pkgver() {
++  cd trio-asyncio
++  git describe --tags | sed 's/^v//'
++}
++
+ build() {
+   cd trio-asyncio
+   python -m build --wheel --no-isolation
+-}
+-
+-check() {
+-  local pytest_options=(
+-    -vv
+-    --deselect tests/interop/test_calls.py::TestCalls::test_trio_asyncio_cancel_direct
+-    --deselect tests/test_misc.py::test_keyboard_interrupt_teardown
+-    --deselect tests/test_misc.py::test_cancel_loop[True]
+-    --deselect tests/test_misc.py::test_run_trio_task_errors
+-    --deselect tests/test_trio_asyncio.py::test_cancel_loop_with_tasks[True-False]
+-    --deselect tests/test_trio_asyncio.py::test_cancel_loop_with_tasks[True-True]
+-  )
+-  cd $_name
+-  pytest "${pytest_options[@]}"
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,8 @@
+ git
+ python
++python-attrs
+ python-build
+-python-greenlet
++python-exceptiongroup
+ python-installer
+ python-outcome
+ python-setuptools

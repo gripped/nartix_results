@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,21 @@
+ 
+ pkgname=mypy
+ pkgver=1.10.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Optional static typing for Python 2 and 3 (PEP484)'
+ url="http://www.mypy-lang.org/"
+ arch=('any')
+ license=('MIT')
+-depends=('python' 'python-mypy_extensions' 'python-typing_extensions')
++depends=('python-psutil' 'python-mypy_extensions' 'python-typing_extensions'
++'python-tomli')
+ makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+-checkdepends=('python-attrs' 'python-psutil' 'python-pytest' 'python-pytest-xdist')
++checkdepends=('python-pytest' 'python-attrs' 'python-pytest-xdist')
+ optdepends=(
+   'python-lxml: for reports'
+   'python-pip: for installing missing types'
+-  'python-psutil: for dmypy'
+-  'python-setuptools: for mypyc'
+ )
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/python/mypy/archive/refs/tags/v$pkgver.tar.gz")
+-sha256sums=('5550f427e9492de27e734ed182f9418f41bc632863b47470c6aab56420a0e661')
++source=("$pkgname-$pkgver.tar.gz::https://pypi.org/packages/source/m/$pkgname/$pkgname-$pkgver.tar.gz")
++sha256sums=('3d087fcbec056c4ee34974da493a826ce316947485cef3901f511848e687c131')
+ 
+ prepare() {
+     cd "$pkgname-$pkgver"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,8 @@
+-python
+ python-build
+ python-installer
+ python-mypy_extensions
++python-psutil
+ python-setuptools
++python-tomli
+ python-typing_extensions
+ python-wheel
