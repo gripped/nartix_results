@@ -1,6 +1,5 @@
 alacritty
 cinnamon-desktop
-fastfetch
 fceux
 firefox
 font-manager

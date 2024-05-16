@@ -2,6 +2,7 @@ accountsservice
 alacritty
 alsa-utils
 amule
+ansible-lint
 apache
 apcupsd
 appstream
@@ -107,6 +108,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdm
 libgdm
 genxrdpattern
@@ -626,8 +629,6 @@ rocrand
 rocsparse
 rrdtool
 rspamd
-rssguard
-rssguard-lite
 rtkit
 ruby-faraday-patron
 ruby-optimist

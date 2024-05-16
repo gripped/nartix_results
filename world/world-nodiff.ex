@@ -56,7 +56,6 @@ android-udev
 angelfish
 ansible-core
 ansible-language-server
-ansible-lint
 ansible
 ant
 ant-doc
@@ -627,8 +626,6 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
-gdk-pixbuf2
-gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -4331,6 +4328,8 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
+rssguard
+rssguard-lite
 rst2pdf
 rsync
 rtaudio
