@@ -6,8 +6,8 @@
  )
 -_tag=20231211
 -pkgver=20231211.f2e52a1c
-+_tag=20240410
-+pkgver=20240409.1addd7dc
++_tag=20240513
++pkgver=20240510.b9d2bf23
  pkgrel=1
  pkgdesc="Firmware files for Linux"
 -url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
@@ -19,7 +19,7 @@
 -source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git#tag=${_tag}?signed")
 -sha256sums=('SKIP')
 +source=("git+$url.git?signed#tag=${_tag}")
-+sha256sums=('60e129b4b0deecc59542487bbff6afde580db47333a01ea34e51421f3b962fc2')
++sha256sums=('9e4f49de5dcca55f47d76b0a1c8177471ec1b9cf222f69ddd802c37627328eff')
  validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
  
  _backports=(

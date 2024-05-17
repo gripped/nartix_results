@@ -626,6 +626,8 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -4190,6 +4192,7 @@ python-zope-location
 python-zope-proxy
 python-zope-schema
 python-zope-security
+python-zope-testing
 python-zopfli
 python-zstandard
 pyxdg
@@ -5131,6 +5134,7 @@ wolfssl
 words
 wpebackend-fdo
 wqy-zenhei
+wsdd
 wtype
 wxwidgets
 wxwidgets-common

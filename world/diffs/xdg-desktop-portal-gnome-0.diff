@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=xdg-desktop-portal-gnome
- pkgver=46.1
--pkgrel=2
-+pkgrel=1
- pkgdesc="A backend implementation for xdg-desktop-portal for the GNOME desktop environment"
- url="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
- arch=(x86_64)
-@@ -15,6 +15,7 @@
-   glib2
-   glibc
-   gnome-desktop-4
-+  gnome-keyring
-   graphene
-   gtk4
-   libadwaita
-@@ -41,7 +42,7 @@
+@@ -41,7 +41,7 @@
  }
  
  build() {
@@ -26,7 +9,7 @@
    meson compile -C build
  }
  
-@@ -51,5 +52,7 @@
+@@ -51,5 +51,7 @@
  
  package() {
    meson install -C build --destdir "$pkgdir"
@@ -38,16 +21,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -7,6 +7,7 @@
- glib2
- glibc
- gnome-desktop-4
-+gnome-keyring
- graphene
- gtk4
- libadwaita
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

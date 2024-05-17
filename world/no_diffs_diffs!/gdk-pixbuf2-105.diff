@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -47,7 +47,7 @@
+@@ -55,7 +55,7 @@
      -D others=enabled
    )
  
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,6 +11,6 @@
- -D man=false
+@@ -10,6 +10,6 @@
+ -D man=true
  -D others=enabled
  )
 -arch-meson gdk-pixbuf build "${meson_options[@]}"

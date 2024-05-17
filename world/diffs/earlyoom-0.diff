@@ -1,20 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=earlyoom
--pkgver=1.8.2
-+pkgver=1.8.1
- pkgrel=1
- pkgdesc="Early OOM Daemon for Linux"
- arch=('x86_64')
-@@ -11,22 +11,21 @@
- optdepends=('systembus-notify: desktop notifications')
- backup=("etc/default/earlyoom")
- source=("https://github.com/rfjakob/$pkgname/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
--sha256sums=('13869413dc0d973e454854077be7a2049d350f77a97f6911b654e88dc4b20346')
-+sha256sums=('d7d180353216c064a99619e20e3071ac838e6642221d197fd685e6a0cc8bb032')
- 
+@@ -16,17 +16,16 @@
  prepare() {
      cd "$pkgname-$pkgver"
      sed "/systemctl|chcon/d" -ri Makefile

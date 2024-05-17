@@ -1,38 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gnome-session
- pkgver=46.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="The GNOME Session Handler"
- url="https://gitlab.gnome.org/GNOME/gnome-session"
- arch=(x86_64)
-@@ -9,11 +9,11 @@
- depends=(
-   bash
-   dconf
-+  elogind
-   gcc-libs
-   glib2
-   glibc
-   gnome-desktop
--  gnome-keyring
-   gsettings-desktop-schemas
-   gtk3
-   json-glib
-@@ -24,9 +24,6 @@
+@@ -24,8 +24,7 @@
    libx11
    libxcomposite
    libxtst
 -  systemd
 -  systemd-libs
--  xdg-desktop-portal-gnome
++  libelogind
+   xdg-desktop-portal-gnome
  )
  makedepends=(
-   docbook-xsl
-@@ -41,8 +38,10 @@
+@@ -41,8 +40,10 @@
  )
  groups=(gnome)
  _commit=2437153bfd7cbebe62c73926bb85f88076313963  # tags/46.0^0
@@ -45,7 +23,7 @@
  
  pkgver() {
    cd $pkgname
-@@ -51,10 +50,11 @@
+@@ -51,10 +52,11 @@
  
  prepare() {
    cd $pkgname
@@ -64,26 +42,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,12 @@
- bash
- dconf
- docbook-xsl
-+elogind
- gcc-libs
- git
- glib2
- glibc
- gnome-desktop
--gnome-keyring
- gsettings-desktop-schemas
+@@ -11,6 +11,7 @@
  gtk-doc
  gtk3
-@@ -22,8 +22,5 @@
+ json-glib
++libelogind
+ libepoxy
+ libgl
+ libice
+@@ -22,8 +23,6 @@
  meson
  python
  python-packaging
 -systemd
 -systemd-libs
--xdg-desktop-portal-gnome
+ xdg-desktop-portal-gnome
  xmlto
  xtrans

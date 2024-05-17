@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=weston
--pkgver=13.0.1
--pkgrel=1
-+pkgver=13.0.0
-+pkgrel=2
- pkgdesc='Reference implementation of a Wayland compositor'
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url='https://wayland.freedesktop.org/'
  license=('MIT')
  depends=('fontconfig' 'glibc' 'wayland' 'libxkbcommon' 'libinput' 'libunwind' 'pixman'
@@ -17,15 +9,6 @@
           'mesa' 'libegl' 'libevdev' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
           'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
           'gstreamer' 'gst-plugins-base-libs')
-@@ -26,7 +26,7 @@
-   "https://gitlab.freedesktop.org/wayland/weston/-/releases/$pkgver/downloads/weston-$pkgver.tar.xz"{,.sig}
-   $pkgname-13.0.0-neatvnc0.8.patch  # https://gitlab.freedesktop.org/wayland/weston/-/issues/890
- )
--sha256sums=('ea1566ab4f5ffce7e9fd4f7a1fca5b30caae4d50023bf459213994094e02b29a'
-+sha256sums=('52ff1d4aa2394a2e416c85a338b627ce97fa71d43eb762fd4aaf145d36fc795a'
-             'SKIP'
-             'c33085a00bddd2be1227e5f7a8b7d90e67c9f0b9fab39819490255cbcbc534ae')
- 
 @@ -43,8 +43,8 @@
  }
  
@@ -33,7 +16,7 @@
 -  arch-meson $pkgname-$pkgver build \
 -    --libexec=lib/weston -D b_lto=false
 +  artix-meson $pkgname-$pkgver build \
-+    --libexec=lib/weston -D b_lto=false -Dsystemd=false
++    --libexec=lib/weston -D b_lto=false -D systemd=false
    ninja -C build
  }
  

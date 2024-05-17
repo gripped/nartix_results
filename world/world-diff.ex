@@ -108,8 +108,6 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdk-pixbuf2
-gdk-pixbuf2-docs
 gdm
 libgdm
 genxrdpattern
@@ -178,14 +176,16 @@ gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
 gvfs
-gvfs-smb
 gvfs-afc
-gvfs-gphoto2
+gvfs-dnssd
 gvfs-goa
+gvfs-google
+gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
-gvfs-google
 gvfs-onedrive
+gvfs-smb
+gvfs-wsdd
 haproxy
 haveged
 hidapi
@@ -487,7 +487,6 @@ python-teamcity-messages
 python-trustme
 python-ubjson
 python-waitress
-python-zope-testing
 python-zope-testrunner
 qastools
 qemu

@@ -1,56 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=duplicity
--pkgver=2.2.3
--pkgrel=1
-+pkgver=2.1.4
-+pkgrel=2
- pkgdesc='A utility for encrypted, bandwidth-efficient backups using the rsync algorithm'
- arch=('x86_64')
- url='https://duplicity.gitlab.io/'
-@@ -11,6 +11,7 @@
-   'librsync'
-   'python-paramiko'
-   'python-fasteners'
-+  'python-future'
- )
- makedepends=(
-   'git'
-@@ -33,18 +34,15 @@
-   'python-requests-oauthlib: OneDrive backend'
-   'rsync: rsync backend'
- )
-+_commit='f1ab57ac5f3cf2ec2c7178b88154d9451e8283ed'
- source=(
--  "$pkgname::git+https://gitlab.com/duplicity/duplicity#tag=rel.$pkgver"
-+  "$pkgname::git+https://gitlab.com/duplicity/duplicity#commit=$_commit"
-   'fix-documentation-directory.patch'
- )
--b2sums=('2e5547833bbbd174f5ae4de3306fe33ce66e4c25f103881cb2014155c8280f66994f1829faa76b38325c08597299fe479ed7731a360e336f7480f867c98a9919'
-+b2sums=('SKIP'
+@@ -40,11 +40,6 @@
+ b2sums=('2e5547833bbbd174f5ae4de3306fe33ce66e4c25f103881cb2014155c8280f66994f1829faa76b38325c08597299fe479ed7731a360e336f7480f867c98a9919'
          '04dad8ce369f4fb78e2b3239e30d63410d8e8c33b5e05717b5b62ba54c624c2e931220b950bad507deab60a07086c434949f0766bc3ae2eb771d62e1919cbecd')
  
 -pkgver() {
 -  cd "$pkgname"
- 
+-
 -  git describe --tags | sed 's/^rel\.//'
 -}
  
  prepare() {
    cd "$pkgname"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -3,6 +3,7 @@
- librsync
- python-build
- python-fasteners
-+python-future
- python-installer
- python-paramiko
- python-setuptools
