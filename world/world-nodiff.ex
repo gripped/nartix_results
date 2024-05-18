@@ -1439,7 +1439,6 @@ libcdr
 libcerf
 libcgif
 libchamplain
-libchewing
 libclc
 libcloudproviders
 libcmis
@@ -4104,7 +4103,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4722,7 +4720,6 @@ stfl
 stk
 stk-docs
 stoken
-strace
 strawberry
 strip-nondeterminism
 stubby

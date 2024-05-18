@@ -252,6 +252,7 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 libcanberra
+libchewing
 libdaemon
 libe-book
 libei
@@ -486,6 +487,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -654,6 +656,7 @@ sshguard
 sslh
 sssd
 step-cli
+strace
 strongswan
 stunnel
 supermin
