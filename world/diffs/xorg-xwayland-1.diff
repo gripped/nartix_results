@@ -1,20 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,13 +23,13 @@
- groups=('xorg')
- url="https://xorg.freedesktop.org"
- pkgdesc="run X clients under wayland"
--depends=('nettle' 'libepoxy' 'systemd-libs' 'libxfont2'
-+depends=('nettle' 'libepoxy' 'libelogind' 'libxfont2'
-          'pixman' 'xorg-server-common' 'libxcvt' 'mesa'
-          'libglvnd' 'libxau' 'wayland' 'libdrm' 'libtirpc'
+@@ -29,7 +29,7 @@
           'libei' 'libxshmfence' 'glibc')
  makedepends=('meson' 'xorgproto' 'xtrans' 'libxkbfile' 'dbus'
               'xorg-font-util' 'wayland-protocols' 'mesa-libgl'
--             'systemd' 'egl-wayland')
-+             'elogind' 'egl-wayland')
+-             'systemd')
++             'elogind')
  source=(https://xorg.freedesktop.org/archive/individual/xserver/xwayland-$pkgver.tar.xz{,.sig})
- sha512sums=('d78bd1ffed5a8149c55b453a464e46d2d658169bb814a96b8b75119349ba5506bb9d5c131c3ff28d94b4a27db894963b8f039b89843a0164d4463d7015d74c1b'
+ sha512sums=('7592609ad112652cb870761f938f280802d7d3b4bbc82acc7bf741a763d862aa97bbbd7f78250c63a961d76be73fb55555832045514092d89e406839564f0003'
              'SKIP')
 @@ -41,7 +41,7 @@
  
@@ -31,23 +24,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,10 @@
+@@ -1,4 +1,5 @@
  dbus
- egl-wayland
 +elogind
  glibc
  libdrm
  libei
-+libelogind
- libepoxy
- libglvnd
- libtirpc
-@@ -16,8 +18,6 @@
+@@ -15,7 +16,6 @@
  meson
  nettle
  pixman
 -systemd
--systemd-libs
  wayland
  wayland-protocols
  xorg-font-util

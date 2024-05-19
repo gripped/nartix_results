@@ -345,6 +345,7 @@ compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
+composefs
 confuse
 consul
 containers-common
@@ -778,12 +779,6 @@ graphviz
 grilo-plugins
 grilo
 groovy
-grpc
-python-grpcio
-python-grpcio-tools
-php-grpc
-php-legacy-grpc
-grpc-cli
 grsync
 grub-customizer
 grunt-cli
@@ -2916,7 +2911,6 @@ python-aioquic
 python-aioresponses
 python-aiorpcx
 python-aiosignal
-python-aiosmtpd
 python-aiosqlite
 python-aiounittest
 python-alembic
@@ -4256,7 +4250,6 @@ qt6-positioning
 qt6ct
 qtcreator
 qtcreator-devel
-qterminal
 qtermwidget
 qtkeychain
 qtkeychain-qt5

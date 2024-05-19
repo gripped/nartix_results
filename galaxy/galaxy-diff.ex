@@ -17,6 +17,7 @@ mpd
 nushell
 qbittorrent
 qbittorrent-nox
+qterminal
 tor
 torsocks
 transmission

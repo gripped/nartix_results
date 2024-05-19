@@ -141,6 +141,12 @@ greetd
 $pkgbase
 $pkgbase-agreety
 grim
+grpc
+python-grpcio
+python-grpcio-tools
+php-grpc
+php-legacy-grpc
+grpc-cli
 gstreamer
 gst-plugins-bad-libs
 #
@@ -472,6 +478,7 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+python-aiosmtpd
 python-anytree
 python-debugpy
 python-frozendict
@@ -614,6 +621,7 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
+qterminal
 quazip
 quazip-qt5
 quazip-qt6
