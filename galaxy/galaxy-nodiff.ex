@@ -1,5 +1,4 @@
 0ad-data
-0ad
 atril
 audacious-plugins
 audacious
@@ -214,6 +213,8 @@ python-pysol_cards
 qt5ct
 qt5pas
 qt6pas
+qterminal
+qtermwidget
 qtxdg-tools
 retroarch-assets
 retroarch-assets-glui
@@ -412,6 +413,7 @@ xfconf
 xfdesktop
 xfwm4-themes
 xfwm4
+yyjson
 zathura-cb
 zathura-djvu
 zathura-pdf-mupdf

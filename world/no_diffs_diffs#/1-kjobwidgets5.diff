@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _name=kjobwidgets
+ pkgname=${_name}5
+-pkgver=5.116.0
++pkgver=5.115.0
+ pkgrel=1
+ pkgdesc='Widgets for tracking KJob instances'
+ arch=(x86_64)
+@@ -13,7 +13,7 @@
+ replaces=("$_name<5.111")
+ groups=(kf5)
+ source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$_name-$pkgver.tar.xz{,.sig})
+-sha256sums=('eac37f7d02183f8d4347ab1d86608ee66007a3482a061169e4808caf853dbe87'
++sha256sums=('cee37be8d309cc572ecf572214d9138183fd07e6aee2af77fb60f37ebe4e3061'
+             'SKIP')
+ validpgpkeys=(53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB) # David Faure <faure@kde.org>
+ 

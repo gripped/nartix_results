@@ -1,8 +1,8 @@
+0ad
 accountsservice
 alacritty
 alsa-utils
 amule
-ansible-lint
 apache
 apcupsd
 appstream
@@ -113,9 +113,13 @@ libgdm
 genxrdpattern
 geoclue
 ghc-filesystem
+ghostscript
+ghostxps
+ghostpcl
 girara
 github-cli
 gnome-bluetooth-3.0
+gnome-builder
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -258,7 +262,6 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 libcanberra
-libchewing
 libdaemon
 libe-book
 libei
@@ -382,6 +385,7 @@ opencc-doc
 opendht
 openmpi
 openmpi-docs
+openrct2
 opensmtpd
 openvpn
 ostree
@@ -478,7 +482,6 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
-python-aiosmtpd
 python-anytree
 python-debugpy
 python-frozendict
@@ -490,6 +493,7 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
+python-stone
 python-tblib
 python-teamcity-messages
 python-trustme
@@ -581,7 +585,6 @@ qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
 qt6-3d
-qt6-5compat
 qt6-base
 qt6-xcb-private-headers
 qt6-charts
@@ -618,7 +621,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qterminal
@@ -627,6 +629,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+radicale
 rdma-core
 redis
 redshift
@@ -664,7 +667,6 @@ sshguard
 sslh
 sssd
 step-cli
-strace
 strongswan
 stunnel
 supermin
@@ -691,7 +693,6 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
-twine
 udftools
 udisks2
 udisks2-btrfs

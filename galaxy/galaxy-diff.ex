@@ -1,3 +1,4 @@
+0ad
 alacritty
 cinnamon-desktop
 fceux
@@ -17,7 +18,6 @@ mpd
 nushell
 qbittorrent
 qbittorrent-nox
-qterminal
 tor
 torsocks
 transmission

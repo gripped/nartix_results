@@ -2,14 +2,14 @@
 +++ Artix PKGBUILD
 @@ -7,7 +7,7 @@
  _myver=${pkgver/_rel*}
- pkgrel=1
+ pkgrel=2
  arch=('x86_64')
 -makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
 +makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
               'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'libfido2') # 'boost'
  license=('GPL')
  url="https://www.percona.com/software/mysql-database/percona-server"
-@@ -29,14 +29,6 @@
+@@ -31,15 +31,6 @@
  	sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
  	       -e s@lib64/mysql@lib/mysql@ \
  	       -i cmake/install_layout.cmake
@@ -21,10 +21,11 @@
 -
 -	sed '/^PrivateTmp=/ a StateDirectory=mysqlrouter\nRuntimeDirectory=mysqlrouter' \
 -		-i scripts/systemd/mysqlrouter.service.in
+-
+         patch -p1 -i ../gcc-14.patch # Fix build with GCC 14
  }
  
- build() {
-@@ -52,6 +44,8 @@
+@@ -56,6 +47,8 @@
  		-DBUILD_CONFIG=mysql_release \
  		-DREPRODUCIBLE_BUILD=ON \
  		-DCMAKE_INSTALL_PREFIX=/usr \
@@ -33,7 +34,7 @@
  		-DSYSCONFDIR=/etc/mysql \
  		-DMYSQL_DATADIR=/var/lib/mysql \
  		-DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
-@@ -94,7 +88,7 @@
+@@ -98,7 +91,7 @@
  		-DDEBUG_EXTNAME=OFF \
  		-DBUILD_TESTING=OFF \
  		-DWITH_UNIT_TESTS=OFF \
@@ -42,7 +43,7 @@
  		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
  		-DWITH_NUMA=ON \
  		-DWITH_BOOST="../boost_${_boost_ver//./_}"
-@@ -142,7 +136,7 @@
+@@ -146,7 +139,7 @@
  package_percona-server() {
  	pkgdesc='Drop-in replacement for MySQL that provides improved performance, diagnostics, instrumentation and MyRocks storage engine'
  	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf')
@@ -77,10 +78,10 @@
 -done
 -sed '/^PrivateTmp=/ a StateDirectory=mysqlrouter\nRuntimeDirectory=mysqlrouter' \
 --i scripts/systemd/mysqlrouter.service.in
+ patch -p1 -i ../gcc-14.patch # Fix build with GCC 14
  }
  build() {
- mkdir -p build
-@@ -23,6 +17,8 @@
+@@ -24,6 +18,8 @@
  -DBUILD_CONFIG=mysql_release \
  -DREPRODUCIBLE_BUILD=ON \
  -DCMAKE_INSTALL_PREFIX=/usr \
@@ -89,7 +90,7 @@
  -DSYSCONFDIR=/etc/mysql \
  -DMYSQL_DATADIR=/var/lib/mysql \
  -DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
-@@ -65,7 +61,7 @@
+@@ -66,7 +62,7 @@
  -DDEBUG_EXTNAME=OFF \
  -DBUILD_TESTING=OFF \
  -DWITH_UNIT_TESTS=OFF \

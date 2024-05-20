@@ -1,5 +1,4 @@
 0ad-data
-0ad
 a2ps
 a52dec
 aalib
@@ -56,6 +55,7 @@ android-udev
 angelfish
 ansible-core
 ansible-language-server
+ansible-lint
 ansible
 ant
 ant-doc
@@ -648,9 +648,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
-ghostxps
-ghostpcl
 gi-docgen
 giflib
 gifski
@@ -687,9 +684,6 @@ gnome-applets
 gnome-autoar
 gnome-backgrounds
 gnome-boxes
-gnome-builder
-gnome-builder-clang
-gnome-builder-flatpak
 gnome-calculator
 gnome-calendar
 gnome-characters
@@ -1434,6 +1428,7 @@ libcdr
 libcerf
 libcgif
 libchamplain
+libchewing
 libclc
 libcloudproviders
 libcmis
@@ -2341,7 +2336,6 @@ openmp
 openntpd
 openpmix
 openpmix-docs
-openrct2
 openscenegraph
 openshadinglanguage
 opensips
@@ -2911,6 +2905,7 @@ python-aioquic
 python-aioresponses
 python-aiorpcx
 python-aiosignal
+python-aiosmtpd
 python-aiosqlite
 python-aiounittest
 python-alembic
@@ -4008,7 +4003,6 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
-python-stone
 python-straight.plugin
 python-strict-rfc3339
 python-structlog
@@ -4246,7 +4240,9 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
+qt6-5compat
 qt6-positioning
+qt6-webengine
 qt6ct
 qtcreator
 qtcreator-devel
@@ -4264,7 +4260,6 @@ qutebrowser
 r
 r8168
 radeontop
-radicale
 raft
 ragel
 range-v3
@@ -4713,6 +4708,7 @@ stfl
 stk
 stk-docs
 stoken
+strace
 strawberry
 strip-nondeterminism
 stubby
@@ -4997,6 +4993,7 @@ ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
 tumbler
+twine
 twolame
 txt2man
 typescript
