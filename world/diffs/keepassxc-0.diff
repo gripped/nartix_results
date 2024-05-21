@@ -29,6 +29,16 @@
    cmake -S keepassxc-$pkgver -B build \
      -DCMAKE_BUILD_TYPE=Release \
      -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -31,9 +34,6 @@
+   cmake --build build
+ }
+ 
+-check() {
+-  xvfb-run --auto-servernum cmake --build build --target test
+-}
+ 
+ package() {
+   cmake --build build --target install -- DESTDIR="$pkgdir"
 
 
 ############# Stripped diff below #################

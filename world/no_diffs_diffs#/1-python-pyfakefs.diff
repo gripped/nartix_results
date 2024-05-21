@@ -1,19 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=python-pyfakefs
--pkgver=5.3.5
+-pkgver=5.5.0
+-pkgrel=1
 +pkgver=5.3.2
- pkgrel=2
++pkgrel=2
  pkgdesc='pyfakefs implements a fake file system that mocks the Python file system modules'
  url=https://github.com/jmcgeheeiv/pyfakefs/
-@@ -19,7 +19,7 @@
+ license=(APACHE)
+@@ -19,9 +19,9 @@
    python-xlrd
    python-openpyxl
  )
--_tag=78292a2db8d7965c4f494f049ffe032fda693a83
+-_tag=353ad03e91ab7d306a7d5d10a370ba90f20b3ff4
 +_tag=dc6517f6af6f799636c9ac9d95c18d39474d24ad
  source=(git+https://github.com/jmcgeheeiv/pyfakefs.git#tag=${_tag})
- b2sums=(SKIP)
+-b2sums=('b6f29a62eaaa7e1a9d5c880a62301d804ef4b4c4c99868f85976d52c33e9f119f480d16f666f49cfb7ea6f46d881424a3ee8c30486117e1357bf223ea7bdbefd')
++b2sums=(SKIP)
  
+ pkgver() {
+   cd pyfakefs

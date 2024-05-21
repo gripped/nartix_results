@@ -1,5 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=lib32-libgusb
+-pkgver=0.4.9
++pkgver=0.4.8
+ pkgrel=1
+ pkgdesc='GObject wrapper for libusb1'
+ url=https://github.com/hughsie/libgusb
+@@ -16,9 +16,9 @@
+   git
+   meson
+ )
+-_tag=ed31c8134d80d006bd45450e84180be2a7c0742e
++_tag=ea074426660eb78199106767d826db9ea0fc8734
+ source=(git+https://github.com/hughsie/libgusb.git#tag=${_tag})
+-sha256sums=('27ac4dd41aa0279416bc74f8d195339d439bd9fc0a9f6a0dc9745a07d251c942')
++sha256sums=(SKIP)
+ 
+ pkgver() {
+   cd libgusb
 @@ -28,7 +28,7 @@
  build() {
    export CC='gcc -m32'

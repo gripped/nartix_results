@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,28 @@
+ 
+ 
+ pkgname=lib32-libltdl
+-pkgver=2.5.0+1+g38c166c8
+-_commit=38c166c89b02a8bc95cc51fca89d15949c4d8956
+-pkgrel=1
+-_gccver=14.1.1
++pkgver=2.4.7
++pkgrel=3
++_gccver=12.1.0
+ pkgdesc='A generic library support script (32-bit)'
+ arch=(x86_64)
+ url='https://www.gnu.org/software/libtool'
+-license=('LGPL-2.0-or-later WITH Libtool-exception')
++license=(GPL)
+ depends=(sh tar lib32-glibc libtool)
+ makedepends=("gcc>=$_gccver" git help2man)
+ checkdepends=()
+ provides=("lib32-libtool=$pkgver")
+ conflicts=(lib32-libtool)
+ replaces=(lib32-libtool)
+-source=(
+-  git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
+-  git+https://git.savannah.gnu.org/git/gnulib.git
+-  gnulib-bootstrap::git+https://github.com/gnulib-modules/bootstrap.git
+-)
+-b2sums=('0f6a653d74479c538128ea4a76b607a76e6812297c71888356770b90846c351ed7019f86b89e8e66ec28fbcf4a085e7345929de22eacc1ce54968fc999296f73'
+-        'SKIP'
+-        'SKIP')
++_commit=6d7ce133ce54898cf28abd89d167cccfbc3c9b2b
++source=(git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
++        git+https://git.savannah.gnu.org/git/gnulib.git
++        gnulib-bootstrap::git+https://github.com/gnulib-modules/bootstrap.git
++        no_hostname.patch)
++sha256sums=('SKIP'
++            'SKIP'
++            'SKIP'
++            '693aabb24a6e7ce21fe0b5d14394e19edcb8476663b5afa4463f9fa0df24d946')
+ 
+ pkgver() {
+   cd libtool
+@@ -32,9 +32,11 @@
+ prepare() {
+   cd libtool
+ 
++  patch -Np1 -i ${srcdir}/no_hostname.patch
++
+   git submodule init
+-  git config --local submodule.gnulib.url "${srcdir}"/gnulib
+-  git config --local submodule.gl-mod/bootstrap.url "${srcdir}"/gnulib-bootstrap
++  git config --local submodule.gnulib.url "$srcdir/gnulib"
++  git config --local submodule.gl-mod/bootstrap.url "$srcdir/gnulib-bootstrap"
+   git -c protocol.file.allow=always submodule update
+ 
+   ./bootstrap
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,9 @@
+ prepare() {
+ cd libtool
++patch -Np1 -i ${srcdir}/no_hostname.patch
+ git submodule init
+-git config --local submodule.gnulib.url "${srcdir}"/gnulib
+-git config --local submodule.gl-mod/bootstrap.url "${srcdir}"/gnulib-bootstrap
++git config --local submodule.gnulib.url "$srcdir/gnulib"
++git config --local submodule.gl-mod/bootstrap.url "$srcdir/gnulib-bootstrap"
+ git -c protocol.file.allow=always submodule update
+ ./bootstrap
+ }

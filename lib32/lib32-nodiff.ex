@@ -69,7 +69,6 @@ lib32-libiec61883
 lib32-libinstpatch
 lib32-libjpeg-turbo
 lib32-libldap
-lib32-libltdl
 lib32-libmodplug
 lib32-libnghttp2
 lib32-libnghttp3

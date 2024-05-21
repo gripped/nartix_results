@@ -1,27 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
- pkgname=(
-   'bootconfig'
-   'bpf'
-+  'cgroup_event_listener'
-   'cpupower'
-   'hyperv'
-   'linux-tools-meta'
-@@ -12,9 +13,9 @@
-   'usbip'
-   'x86_energy_perf_policy'
- )
--pkgver=6.9
--pkgrel=1
--license=('GPL-2.0-only')
-+pkgver=6.7
-+pkgrel=3
-+license=('GPL2')
- arch=('x86_64')
- url='https://www.kernel.org'
- options=('!strip' '!lto')
-@@ -31,25 +32,13 @@
+@@ -31,25 +31,13 @@
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"
          'cpupower.default'
@@ -36,7 +15,7 @@
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
  )
--sha256sums=('0ac1ad026d8eba3a745239e50259b8c4b78892b3c30d742cb1ed5b6988512519'
+ sha256sums=('0ac1ad026d8eba3a745239e50259b8c4b78892b3c30d742cb1ed5b6988512519'
 -            '4fa509949d6863d001075fa3e8671eff2599c046d20c98bb4a70778595cd1c3f'
 -            'b692f4859ed3fd9831a058a450a84d8c409bf7e3e45aac1c2896a14bb83f3d7a'
 -            '42d2ec9f1d9cc255ee7945a27301478364ef482f5a6ddfc960189f03725ccec2'
@@ -44,12 +23,11 @@
 -            '16855c197d2334f820cb190312a5a7fffe9165189db01344a957e582e39e17d8'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
-+sha256sums=('SKIP'
 +            '4fa509949d6863d001075fa3e8671eff2599c046d20c98bb4a70778595cd1c3f')
  
  prepare() {
    cd linux
-@@ -75,7 +64,7 @@
+@@ -75,7 +63,7 @@
      prefix=/usr \
      lib=lib/perf \
      perfexecdir=lib/perf \
@@ -58,27 +36,7 @@
      NO_SDT=1 \
      BUILD_BPF_SKEL=1 \
      PYTHON=python \
-@@ -103,6 +92,11 @@
- 
-   echo ':: tmon'
-   pushd linux/tools/thermal/tmon
-+  make
-+  popd
-+
-+  echo ':: cgroup_event_listener'
-+  pushd linux/tools/cgroup
-   make
-   popd
- 
-@@ -134,6 +128,7 @@
-   depends=(
-     'bootconfig'
-     'bpf'
-+    'cgroup_event_listener'
-     'cpupower'
-     'hyperv'
-     'perf'
-@@ -191,8 +186,6 @@
+@@ -191,8 +179,6 @@
      install install-man
    popd
    install -Dm 644 $pkgname.default "$pkgdir/etc/default/$pkgname"
@@ -87,7 +45,7 @@
  }
  
  package_x86_energy_perf_policy() {
-@@ -206,14 +199,13 @@
+@@ -206,14 +192,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -103,22 +61,7 @@
  }
  
  package_tmon() {
-@@ -224,6 +216,14 @@
-   make install INSTALL_ROOT="$pkgdir"
- }
- 
-+package_cgroup_event_listener() {
-+  pkgdesc='Simple listener of cgroup events'
-+  depends=('glibc')
-+
-+  cd linux/tools/cgroup
-+  install -Dm755 cgroup_event_listener "$pkgdir/usr/bin/cgroup_event_listener"
-+}
-+
- package_turbostat() {
-   pkgdesc='Report processor frequency and idle statistics'
-   depends=('glibc' 'libcap')
-@@ -239,7 +239,6 @@
+@@ -239,7 +224,6 @@
    cd linux/tools/hv
    for _p in hv_fcopy_daemon hv_kvp_daemon hv_vss_daemon; do
      install -Dm755 "$_p" "$pkgdir/usr/bin/$_p"
@@ -132,15 +75,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,6 +4,7 @@
- binutils
- bootconfig
- bpf
-+cgroup_event_listener
- clang
- coreutils
- cpupower
-@@ -16,6 +17,7 @@
+@@ -16,6 +16,7 @@
  libelf
  libsframe.so
  libtraceevent
@@ -148,7 +83,7 @@
  libunwind
  llvm
  llvm-libs
-@@ -31,7 +33,6 @@
+@@ -31,7 +32,6 @@
  readline
  slang
  sysfsutils

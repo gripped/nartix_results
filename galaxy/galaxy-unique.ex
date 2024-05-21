@@ -52,6 +52,7 @@ pix
 pure-ftpd-openrc
 pure-ftpd
 qpdfview
+qt-sudo
 qt5-styleplugins
 qt6gtk2
 qtermwidget-qt6

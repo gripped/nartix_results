@@ -648,6 +648,9 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
+ghostxps
+ghostpcl
 gi-docgen
 giflib
 gifski
@@ -684,6 +687,7 @@ gnome-applets
 gnome-autoar
 gnome-backgrounds
 gnome-boxes
+gnome-builder
 gnome-calculator
 gnome-calendar
 gnome-characters
@@ -1192,6 +1196,7 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
+kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1316,6 +1321,7 @@ ksystemstats
 kteatime
 ktextaddons
 ktextaddons5
+ktexteditor
 ktexteditor5
 ktexttemplate
 ktextwidgets
@@ -4003,6 +4009,7 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
+python-stone
 python-straight.plugin
 python-strict-rfc3339
 python-structlog
@@ -4260,6 +4267,7 @@ qutebrowser
 r
 r8168
 radeontop
+radicale
 raft
 ragel
 range-v3

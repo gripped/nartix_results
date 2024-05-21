@@ -113,13 +113,9 @@ libgdm
 genxrdpattern
 geoclue
 ghc-filesystem
-ghostscript
-ghostxps
-ghostpcl
 girara
 github-cli
 gnome-bluetooth-3.0
-gnome-builder
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -228,7 +224,6 @@ json-glib-docs
 kcoreaddons
 keepassxc
 kgamma
-kio
 kismet
 kitty
 kitty-terminfo
@@ -237,7 +232,6 @@ knot
 kopeninghours
 ksnip
 ksystemlog
-ktexteditor
 kwin
 libatasmart
 libayatana-appindicator
@@ -302,7 +296,6 @@ linux-rt-docs
 linux-tools
 bootconfig
 bpf
-cgroup_event_listener
 cpupower
 hyperv
 linux-tools-meta
@@ -493,7 +486,6 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
-python-stone
 python-tblib
 python-teamcity-messages
 python-trustme
@@ -629,7 +621,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-radicale
 rdma-core
 redis
 redshift
