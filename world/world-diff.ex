@@ -49,8 +49,6 @@ containerd
 cppcheck
 cppzmq
 crun
-cuda
-cuda-tools
 cups
 libcups
 dbus-broker
@@ -693,6 +691,7 @@ udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
+uhttpmock
 umockdev
 unbound
 upower

@@ -17,12 +17,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--X-ABI-VIDEODRV_VERSION
--git
--libdrm
--libxv
--libxvmc
+@@ -1,8 +1,8 @@
+ X-ABI-VIDEODRV_VERSION
+ git
+ libdrm
++libudev
+ libxv
+ libxvmc
 -systemd
 -systemd-libs
--xorg-server-devel
++udev
+ xorg-server-devel

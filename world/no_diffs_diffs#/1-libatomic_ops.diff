@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libatomic_ops
+-pkgver=7.8.2
++pkgver=7.8.0
+ pkgrel=1
+ pkgdesc='Provides semi-portable access to hardware provided atomic memory operations'
+ arch=(x86_64)
+@@ -9,7 +9,7 @@
+ license=(GPL2 MIT)
+ options=(!docs)
+ source=($url/releases/download/v$pkgver/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('d305207fe207f2b3fb5cb4c019da12b44ce3fcbc593dfd5080d867b1a2419b51')
++sha256sums=('15676e7674e11bda5a7e50a73f4d9e7d60452271b8acf6fd39a71fefdf89fa31')
+ 
+ build() {
+   cd $pkgname-$pkgver

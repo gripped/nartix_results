@@ -366,6 +366,8 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -5007,7 +5009,6 @@ ufmt
 ufw
 uget
 uglify-js
-uhttpmock
 umbrello
 umurmur
 unarchiver

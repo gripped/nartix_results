@@ -1,25 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,8 +4,8 @@
-   msgraph
-   msgraph-docs
- )
--pkgver=0.2.1
--pkgrel=3
-+pkgver=0.2.2
-+pkgrel=1
- pkgdesc="A shared library for accessing MS Graph API"
- url="https://gitlab.gnome.org/GNOME/msgraph"
- arch=(x86_64)
-@@ -27,14 +27,14 @@
-   uhttpmock
- )
- source=("git+https://gitlab.gnome.org/GNOME/msgraph.git#tag=$pkgver")
--b2sums=('ecdc92424c477d512ff2b9de1c61c6bf8fd2a3dcedc4ec2c9a9a20d2e43e4316c107d50037781185f73b86b55c389b7a53f72ebd52be0d6a76ded0572ac6109a')
-+b2sums=('10e795148d2f2a497d0ebce1d3b9cdd62d02c0549f091179c4d07d373e868588148563f49b13395dc4cffd06ea7bfac08f60e64ff34bfc9215e82aebf484a909')
- 
- prepare() {
-   cd msgraph
+@@ -34,7 +34,7 @@
  }
  
  build() {
