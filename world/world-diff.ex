@@ -49,6 +49,8 @@ containerd
 cppcheck
 cppzmq
 crun
+cuda
+cuda-tools
 cups
 libcups
 dbus-broker
@@ -98,6 +100,7 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
+fribidi
 fwupd-efi
 fwupd
 gala
@@ -113,9 +116,9 @@ libgdm
 genxrdpattern
 geoclue
 ghc-filesystem
-girara
 github-cli
 gnome-bluetooth-3.0
+gnome-builder
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -202,6 +205,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+iniparser
 intel-compute-runtime
 intel-graphics-compiler
 intel-metee
@@ -490,7 +494,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -576,6 +579,8 @@ qhull
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
+qt5-script
+qt5-webengine
 qt6-3d
 qt6-base
 qt6-xcb-private-headers
