@@ -687,6 +687,7 @@ gnome-applets
 gnome-autoar
 gnome-backgrounds
 gnome-boxes
+gnome-builder
 gnome-calculator
 gnome-calendar
 gnome-characters
@@ -5094,7 +5095,6 @@ vulkan-tools
 vulkan-validation-layers
 w3m
 wacomtablet
-waf
 warpinator
 wasi-compiler-rt
 wasi-libc

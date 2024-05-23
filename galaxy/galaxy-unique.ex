@@ -29,6 +29,7 @@ iso-profiles
 kotatogram-desktop-git
 lib32-artix-archlinux-support
 libfoo
+liboctopi
 libpamac
 librewolf
 libtree

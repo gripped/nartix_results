@@ -116,7 +116,6 @@ geoclue
 ghc-filesystem
 github-cli
 gnome-bluetooth-3.0
-gnome-builder
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -724,6 +723,7 @@ vte3
 vte-common
 vte4
 vte-docs
+waf
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
