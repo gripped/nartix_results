@@ -1,4 +1,3 @@
-0ad
 alacritty
 cinnamon-desktop
 fceux

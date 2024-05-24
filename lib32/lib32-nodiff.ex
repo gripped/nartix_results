@@ -10,9 +10,6 @@ lib32-bzip2
 lib32-cairo
 lib32-cdparanoia
 lib32-cmocka
-lib32-curl
-lib32-libcurl-compat
-lib32-libcurl-gnutls
 lib32-dconf
 lib32-duktape
 lib32-e2fsprogs
@@ -23,6 +20,7 @@ lib32-flac
 lib32-flex
 lib32-fontconfig
 lib32-freetype2
+lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
@@ -135,7 +133,6 @@ lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123
-lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss
@@ -173,7 +170,6 @@ lib32-wayland
 lib32-xcb-util-keysyms
 lib32-xz
 lib32-zlib
-lib32-zstd
 multilib-devel
 steam
 winetricks

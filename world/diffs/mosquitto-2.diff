@@ -60,15 +60,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -5,11 +5,8 @@
- gcc-libs
- glibc
- libcares.so
+@@ -1,15 +0,0 @@
+-c-ares
+-cjson
+-cmake
+-docbook-xsl
+-gcc-libs
+-glibc
+-libcares.so
 -libsystemd.so
- libwebsockets
- libwebsockets.so
- openssl
+-libwebsockets
+-libwebsockets.so
+-openssl
 -systemd
 -systemd-libs
- uthash
- util-linux-libs
+-uthash
+-util-linux-libs

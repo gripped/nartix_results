@@ -202,7 +202,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-iniparser
 intel-compute-runtime
 intel-graphics-compiler
 intel-metee
@@ -486,11 +485,13 @@ python-libtmux
 python-pymupdf
 python-pyotp
 python-pyudev
+python-pywlroots
 python-signedjson
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -576,8 +577,6 @@ qhull
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
-qt5-script
-qt5-webengine
 qt6-3d
 qt6-base
 qt6-xcb-private-headers
@@ -623,6 +622,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+rawtherapee
 rdma-core
 redis
 redshift
@@ -717,13 +717,13 @@ v2ray
 v4l-utils
 vault
 vice
+virglrenderer
 vlc
 vpnc
 vte3
 vte-common
 vte4
 vte-docs
-waf
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -767,11 +767,6 @@ xorg-xdm
 xorg-xlogo
 xorg-xwayland
 yubikey-personalization
-zathura-cb
-zathura-djvu
 zathura-pdf-mupdf
-zathura-pdf-poppler
-zathura-ps
-zathura
 zeromq
 znc

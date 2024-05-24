@@ -915,6 +915,7 @@ img2pdf
 imlib2
 immer
 incidenceeditor
+iniparser
 inkscape
 innoextract
 intel-gmmlib
@@ -3847,7 +3848,6 @@ python-pyvirtualdisplay
 python-pywal
 python-pywayland
 python-pywinrm
-python-pywlroots
 python-pyxbe
 python-pyzmq
 python-qdarkstyle
@@ -4097,7 +4097,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4227,6 +4226,7 @@ qt5-quickcontrols
 qt5-quickcontrols2
 qt5-quicktimeline
 qt5-remoteobjects
+qt5-script
 qt5-scxml
 qt5-sensors
 qt5-serialbus
@@ -4238,6 +4238,7 @@ qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
 qt5-webchannel
+qt5-webengine
 qt5-webglplugin
 qt5-websockets
 qt5-webview
@@ -4275,7 +4276,6 @@ rapidjson
 raptor
 rasqal
 rav1e
-rawtherapee
 razor
 rclone
 rdfind
@@ -5061,7 +5061,6 @@ vim
 gvim
 vim-runtime
 vimiv
-virglrenderer
 virt-manager
 virt-install
 virt-what
@@ -5095,6 +5094,7 @@ vulkan-tools
 vulkan-validation-layers
 w3m
 wacomtablet
+waf
 warpinator
 wasi-compiler-rt
 wasi-libc
@@ -5315,6 +5315,11 @@ zabbix-proxy
 zabbix-frontend-php
 zabbix-web-service
 zanshin
+zathura-cb
+zathura-djvu
+zathura-pdf-poppler
+zathura-ps
+zathura
 zbar
 zeitgeist
 zenity

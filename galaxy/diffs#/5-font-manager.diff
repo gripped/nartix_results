@@ -1,5 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,17 +1,17 @@
+ 
+ pkgname=font-manager
+-pkgver=0.8.9
++pkgver=0.8.8
+ pkgrel=1
+ pkgdesc='A simple font management application for GTK+ Desktop Environments'
+ url=https://fontmanager.github.io
+ arch=(x86_64 i686)
+-license=(GPL-3.0-only)
++license=(GPL)
+ depends=(gtk3
+          json-glib
+          libsoup
+          libxml2
+          sqlite
+-         webkit2gtk-4.1)
++         webkit2gtk)
+ optdepends=(file-roller
+             libnautilus-extension)
+ makedepends=(gobject-introspection
 @@ -20,15 +20,16 @@
               nautilus
               ninja
@@ -10,7 +31,8 @@
  _archive="$pkgname-$pkgver"
  _url="https://github.com/FontManager/font-manager"
  source=("$_url/releases/download/$pkgver/$_archive.tar.xz")
- sha256sums=('b6b6e7c62ce7a407f4151beb890b4dabfb1b2e446ff51f087f1b4fab986f8e79')
+-sha256sums=('4e17df355d2390aa8ac6833599c886bc64ad412193e020be081a077cc723a0df')
++sha256sums=('b6b6e7c62ce7a407f4151beb890b4dabfb1b2e446ff51f087f1b4fab986f8e79')
  
  build() {
 -	arch-meson "$_archive" build \
@@ -26,21 +48,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -0,0 +1,14 @@
-+gobject-introspection
-+gtk3
-+intltool
-+json-glib
+@@ -2,6 +2,7 @@
+ gtk3
+ intltool
+ json-glib
 +libnautilus-extension
-+libsoup
-+libxml2
-+meson
-+nautilus
-+ninja
-+sqlite
-+vala
+ libsoup
+ libxml2
+ meson
+@@ -9,5 +10,5 @@
+ ninja
+ sqlite
+ vala
+-webkit2gtk-4.1
 +webkit2gtk
-+yelp-tools
+ yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

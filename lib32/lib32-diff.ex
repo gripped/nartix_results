@@ -1,8 +1,10 @@
 lib32-clang
 lib32-colord
+lib32-curl
+lib32-libcurl-compat
+lib32-libcurl-gnutls
 lib32-dbus
 lib32-fluidsynth
-lib32-fribidi
 lib32-gamemode
 lib32-gstreamer
 lib32-gst-plugins-base-libs
@@ -25,6 +27,7 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
+lib32-ncurses
 lib32-p11-kit
 lib32-pam
 lib32-pcsclite
@@ -35,5 +38,6 @@ lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
 lib32-v4l-utils
+lib32-zstd
 wine-staging
 wine
