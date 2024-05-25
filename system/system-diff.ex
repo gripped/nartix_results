@@ -5,9 +5,6 @@ bash
 binutils
 btrfs-progs
 cryptsetup
-curl
-libcurl-compat
-libcurl-gnutls
 dbus
 dbus-docs
 dhcpcd

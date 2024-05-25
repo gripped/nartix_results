@@ -17,6 +17,7 @@ avahi
 ayatana-ido
 babl
 bash-bats
+benchmark
 bluedevil
 bluez
 bluez-utils
@@ -221,6 +222,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
+jupyterlab
 kcoreaddons
 keepassxc
 kgamma
@@ -270,7 +272,6 @@ libhandy
 libhandy-docs
 libhandy0
 libinput
-libjpeg-turbo
 libldm
 libmspub
 libnvme
@@ -482,6 +483,7 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
+python-netaddr
 python-pymupdf
 python-pyotp
 python-pyudev
@@ -491,7 +493,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -622,7 +623,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-rawtherapee
 rdma-core
 redis
 redshift

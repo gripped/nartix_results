@@ -13,6 +13,7 @@ cryptsetup-dinit
 cryptsetup-openrc
 cryptsetup-runit
 cryptsetup-s6
+cryptsetup-scripts
 dbus-dinit
 dbus-openrc
 dbus-s6

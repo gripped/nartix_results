@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,7 +37,7 @@
+@@ -21,7 +21,7 @@
  }
  
  build() {
--  arch-meson pavucontrol build
-+  artix-meson pavucontrol build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -18,10 +18,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,6 +2,6 @@
- cd pavucontrol
+ cd $pkgname
  }
  build() {
--arch-meson pavucontrol build
-+artix-meson pavucontrol build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

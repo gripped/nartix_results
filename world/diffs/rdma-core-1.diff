@@ -16,8 +16,8 @@
 -  systemd
    valgrind
  )
- _provides=(
-@@ -90,7 +89,7 @@
+ optdepends=(
+@@ -93,7 +92,7 @@
  package() {
      DESTDIR="$pkgdir" cmake --install build
  

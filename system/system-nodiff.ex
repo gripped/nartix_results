@@ -14,6 +14,9 @@ ca-certificates-utils
 coreutils
 cracklib
 cronie
+curl
+libcurl-compat
+libcurl-gnutls
 dash
 db
 db5.3

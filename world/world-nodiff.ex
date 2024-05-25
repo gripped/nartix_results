@@ -178,7 +178,6 @@ bemenu
 bemenu-ncurses
 bemenu-x11
 bemenu-wayland
-benchmark
 bftpd
 bigsh0t
 bin86
@@ -1007,7 +1006,6 @@ jupyter-server-ydoc
 jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
-jupyterlab
 jupyterlab_pygments
 jxrlib
 k3b
@@ -1566,6 +1564,7 @@ libisoburn
 libisofs
 libixion
 libjcat
+libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
@@ -3507,7 +3506,6 @@ python-nbxmpp
 python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
-python-netaddr
 python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
@@ -4097,6 +4095,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4276,6 +4275,7 @@ rapidjson
 raptor
 rasqal
 rav1e
+rawtherapee
 razor
 rclone
 rdfind
