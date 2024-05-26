@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=drkonqi
+-pkgver=6.0.5
++pkgver=6.0.4
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='The KDE crash handler'
+@@ -33,11 +33,11 @@
+          qt6-base
+          qt6-declarative
+          syntax-highlighting
+-         systemd-libs)
++         libelogind)
+ makedepends=(extra-cmake-modules)
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('1015f9ad734cc4e50b10ad2436a60661d74b0dec748725be908210333302985d'
++sha256sums=('e0ee7aeebcc518808d4e27f19afe959eecef2d54a6d0c876de74b19365ec3710'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+@@ -49,10 +49,13 @@
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \
+     -DBUILD_TESTING=OFF \
+     -DWITH_GDB12=ON \
+-    -DWITH_PYTHON_VENDORING=OFF
++    -DWITH_PYTHON_VENDORING=OFF \
++    -DCMAKE_DISABLE_FIND_PACKAGE_Systemd=ON
+   cmake --build build
+ }
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -fr "$pkgdir"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -17,6 +17,7 @@
+ kwallet
+ kwidgetsaddons
+ kwindowsystem
++libelogind
+ polkit-qt6
+ python
+ python-psutil
+@@ -25,4 +26,3 @@
+ qt6-base
+ qt6-declarative
+ syntax-highlighting
+-systemd-libs

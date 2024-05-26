@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kubrick
+-pkgver=24.05.0
++pkgver=24.02.2
+ pkgrel=1
+ pkgdesc="Based on the famous Rubik's Cube"
+ url='https://apps.kde.org/kubrick/'
+@@ -13,7 +13,6 @@
+          kconfigwidgets
+          kcoreaddons
+          kcrash
+-         kdbusaddons
+          ki18n
+          kwidgetsaddons
+          kxmlgui
+@@ -26,7 +25,7 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('e2c05213435231746bf5462827ea207cacbc20666535d77e1b68a4bce5eb3f6d'
++sha256sums=('c7804e726ed70f5575fd2f10785bfb59b7dc67cc5ee1d2261eb28a5b14bf3eb1'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,7 +6,6 @@
+ kconfigwidgets
+ kcoreaddons
+ kcrash
+-kdbusaddons
+ kdoctools
+ ki18n
+ kwidgetsaddons

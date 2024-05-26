@@ -1,16 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,8 @@
+ 
  pkgname=qt6-grpc
- _qtver=6.7.0
- pkgver=${_qtver/-/}
+-pkgver=6.7.1
 -pkgrel=1
++_qtver=6.7.0
++pkgver=${_qtver/-/}
 +pkgrel=1.2
  arch=(x86_64)
  url='https://www.qt.io'
  license=(GPL3 LGPL3 FDL custom)
-@@ -22,7 +22,7 @@
- sha256sums=('78ed3c9780f91b688549e92082d07d0f7773d80a656b041c99a3f459443cc7a2')
+@@ -18,10 +19,10 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver)
+-sha256sums=('be621d9d6758b906c8fdba38efd6b57dc4a1acf433470f61a0026e403d53c29e')
++sha256sums=('78ed3c9780f91b688549e92082d07d0f7773d80a656b041c99a3f459443cc7a2')
  
  build() {
 -  cmake -B build -S $_pkgfn -G Ninja \

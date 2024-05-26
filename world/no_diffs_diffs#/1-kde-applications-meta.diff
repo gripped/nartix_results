@@ -1,7 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
- pkgrel=2
+@@ -13,11 +13,11 @@
+          kde-system-meta
+          kde-utilities-meta
+          kdevelop-meta)
+-pkgver=24.05
+-pkgrel=1
++pkgver=24.02
++pkgrel=2
  arch=(any)
  license=(None)
 -url='https://www.archlinux.org/'
@@ -9,7 +15,37 @@
  
  package_kde-applications-meta() {
    pkgdesc='Meta package for KDE Applications'
-@@ -224,7 +224,6 @@
+@@ -38,8 +38,7 @@
+ package_kde-accessibility-meta() {
+   pkgdesc='Meta package for KDE accessibility applications'
+   replaces=(kdeaccessibility-meta)
+-  depends=(accessibility-inspector
+-           kmag
++  depends=(kmag
+            kmousetool
+            kmouth
+            kontrast)
+@@ -113,8 +112,7 @@
+            kubrick
+            lskat
+            palapeli
+-           picmi
+-           skladnik)
++           picmi)
+ }
+ 
+ package_kde-graphics-meta() {
+@@ -139,8 +137,7 @@
+ package_kde-multimedia-meta() {
+   pkgdesc='Meta package for KDE multimedia applications'
+   replaces=(kdemultimedia-meta)
+-  depends=(audex
+-           audiocd-kio
++  depends=(audiocd-kio
+            audiotube
+            dragon
+            elisa
+@@ -227,7 +224,6 @@
             kde-inotify-survey
             khelpcenter
             kio-admin
@@ -17,13 +53,53 @@
             ksystemlog
             partitionmanager)
  }
+@@ -237,10 +233,8 @@
+   replaces=(kdeutils-meta)
+   depends=(ark
+            filelight
+-           francis
+            isoimagewriter
+            kalk
+-           kalm
+            kate
+            kbackup
+            kcalc
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -105,7 +105,6 @@
+@@ -1,4 +1,3 @@
+-accessibility-inspector
+ akonadi-calendar-tools
+ akonadiconsole
+ akregator
+@@ -7,7 +6,6 @@
+ arianna
+ ark
+ artikulate
+-audex
+ audiocd-kio
+ audiotube
+ blinken
+@@ -23,7 +21,6 @@
+ falkon
+ ffmpegthumbs
+ filelight
+-francis
+ ghostwriter
+ granatier
+ grantlee-editor
+@@ -37,7 +34,6 @@
+ kalarm
+ kalgebra
+ kalk
+-kalm
+ kalzium
+ kamera
+ kamoso
+@@ -109,7 +105,6 @@
  kirigami-gallery
  kiriki
  kiten
@@ -31,3 +107,11 @@
  kjumpingcube
  kleopatra
  klettres
+@@ -182,7 +177,6 @@
+ rocs
+ skanlite
+ skanpage
+-skladnik
+ spectacle
+ step
+ svgpart

@@ -1,16 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,7 +1,8 @@
+ 
  pkgname=qt6-lottie
- _qtver=6.7.0
- pkgver=${_qtver/-/}
+-pkgver=6.7.1
 -pkgrel=1
++_qtver=6.7.0
++pkgver=${_qtver/-/}
 +pkgrel=1.1
  arch=(x86_64)
  url='https://www.qt.io'
  license=(GPL3 LGPL3 FDL custom)
-@@ -21,7 +21,7 @@
- sha256sums=('d4e78a088707de2c4ca484d9c4b7e4bd6e926c53b852ab00d1f51c8b5bb6e4e8')
+@@ -17,10 +18,10 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver)
+-sha256sums=('633f87538cb1e29666311ba575625a13857e536ad94f56dccd7575226c705f2e')
++sha256sums=('d4e78a088707de2c4ca484d9c4b7e4bd6e926c53b852ab00d1f51c8b5bb6e4e8')
  
  build() {
 -  cmake -B build -S $_pkgfn -G Ninja \

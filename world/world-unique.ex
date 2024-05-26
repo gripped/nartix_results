@@ -261,6 +261,7 @@ intel-undervolt-runit
 intel-undervolt-s6
 interception-tools-dinit
 interception-tools-s6
+ipset-dinit
 iptables-runit
 iso-initcpio
 iso-profiles
@@ -313,6 +314,7 @@ lxdm-s6
 mailgraph-openrc
 mailman-openrc
 mailman-s6
+mailman3-dinit
 mariadb-dinit
 mariadb-openrc
 mariadb-runit

@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=qt6-quickeffectmaker
+-pkgver=6.7.1
+-pkgrel=1
++_qtver=6.7.0
++pkgver=${_qtver/-/}
++pkgrel=1.1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -18,10 +19,10 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver)
+-sha256sums=('eb4e31db772087f56e150328c7745cd4f4387b5c368361723e332538defc25c5')
++sha256sums=('fc45315aaa7b2217a1abc7d99baa57d0e594a3f18b48614dffa2c2616649da0b')
+ 
+ build() {
+-  cmake -B build -S $_pkgfn -G Ninja \
++  cmake -B build -S $_pkgfn -G Ninja -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+     -DINSTALL_PUBLICBINDIR=usr/bin
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cmake -B build -S $_pkgfn -G Ninja \
++cmake -B build -S $_pkgfn -G Ninja -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+ -DINSTALL_PUBLICBINDIR=usr/bin
+ cmake --build build

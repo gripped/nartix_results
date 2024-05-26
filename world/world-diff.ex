@@ -37,6 +37,7 @@ bumblebee
 cgmanager
 chromium-bsu
 cinnamon-desktop
+clamav
 clang
 cloud-init
 cmake
@@ -61,6 +62,7 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
+dolphin
 dovecot
 dracut
 drkonqi
@@ -222,16 +224,20 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
-jupyterlab
+jupyter-nbclassic
 kcoreaddons
+kdevelop-python
 keepassxc
 kgamma
 kismet
+kitinerary
 kitty
 kitty-terminfo
 kitty-shell-integration
 knot
+konqueror
 kopeninghours
+krfb
 ksnip
 ksystemlog
 kwin
@@ -393,6 +399,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-sub-override
 phodav
 php-legacy
 php-legacy-cgi
@@ -476,6 +483,9 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+pyside6
+pyside6-tools
+shiboken6
 python-anytree
 python-debugpy
 python-frozendict
@@ -483,7 +493,6 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
-python-netaddr
 python-pymupdf
 python-pyotp
 python-pyudev
@@ -648,6 +657,7 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+sequoia-sqv
 sfml
 shairport-sync
 signal-desktop

@@ -33,6 +33,7 @@ liboctopi
 libpamac
 librewolf
 libtree
+lxdm-dinit
 lxqt-build-tools-qt6
 mcomix
 mint-themes-legacy

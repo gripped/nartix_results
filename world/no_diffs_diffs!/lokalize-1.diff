@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=lokalize
+-pkgver=24.05.0
++pkgver=24.02.2
+ pkgrel=1
+ pkgdesc='Computer-Aided Translation System'
+ url='https://apps.kde.org/lokalize/'
+@@ -32,7 +32,7 @@
+ groups=(kde-applications
+         kdesdk)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('1276f8a369255db16f2d01c9b378bd93c2d6680fa3f529fc5a4489accaad24ad'
++sha256sums=('e19ba8314af637bc9573f9a400aaa92f136dbdf7f3687f1b920e0dca71e9af7c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

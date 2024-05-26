@@ -10,17 +10,23 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
-@@ -73,15 +71,15 @@
+@@ -62,21 +60,20 @@
+     -D pw-cat=disabled
+     -D raop=disabled
+     -D readline=disabled
+-    -D rlimits-install=false
+     -D roc=disabled
+     -D sdl2=disabled
      -D selinux=disabled
      -D session-managers=[]
      -D sndfile=disabled
 -    -D systemd-user-service=disabled
      -D tests=disabled
      -D udevrulesdir=/usr/lib/udev/rules.d
++    -D systemd=disabled
      -D v4l2=disabled
      -D x11-xfixes=disabled
      -D x11=disabled
-+    -D systemd=disabled
    )
  
 -  arch-meson pipewire build "${meson_options[@]}"
@@ -28,7 +34,7 @@
    meson compile -C build
  }
  
-@@ -108,7 +106,6 @@
+@@ -103,7 +100,6 @@
      libdbus-1.so
      libglib-2.0.so
      libpipewire-$_so_ver.so

@@ -304,7 +304,6 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
-clamav
 clang14
 clang15
 clang16
@@ -442,7 +441,6 @@ docker-buildx
 docker-compose
 docx2txt
 dolphin-plugins
-dolphin
 dontpanic
 dos2unix
 dosbox
@@ -995,7 +993,6 @@ juk
 julia
 junit
 jupyter-console
-jupyter-nbclassic
 jupyter-nbclient
 jupyter-nbconvert
 jupyter-nbformat
@@ -1006,6 +1003,7 @@ jupyter-server-ydoc
 jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
+jupyterlab
 jupyterlab_pygments
 jxrlib
 k3b
@@ -1120,7 +1118,6 @@ kdesu
 kdesu5
 kdevelop-pg-qt
 kdevelop-php
-kdevelop-python
 kdevelop
 kdf
 kdiagram
@@ -1208,7 +1205,6 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
-kitinerary
 kjobwidgets
 kjobwidgets5
 kjs
@@ -1249,7 +1245,6 @@ kollision
 kolourpaint
 kompare
 kongress
-konqueror
 konquest
 konsole
 konsolepart5
@@ -1289,7 +1284,6 @@ krdc
 krecorder
 krename
 kreversi
-krfb
 krita
 kross
 kruler
@@ -2647,7 +2641,6 @@ perl-sub-identify
 perl-sub-info
 perl-sub-install
 perl-sub-name
-perl-sub-override
 perl-sub-quote
 perl-sub-uplevel
 perl-super
@@ -2882,9 +2875,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3506,6 +3496,7 @@ python-nbxmpp
 python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
+python-netaddr
 python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
@@ -4621,7 +4612,6 @@ seahorse
 semver
 senpai
 sequoia-sq
-sequoia-sqv
 serd
 serd-docs
 serf
