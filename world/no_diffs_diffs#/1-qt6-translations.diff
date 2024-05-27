@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ makedepends=(cmake
+              git
+              ninja
+-             qt6-tools)
++             qt6-base)
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+ cmake
+ git
+ ninja
+-qt6-tools
++qt6-base

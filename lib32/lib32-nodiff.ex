@@ -136,6 +136,7 @@ lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123
+lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss
@@ -173,6 +174,7 @@ lib32-wayland
 lib32-xcb-util-keysyms
 lib32-xz
 lib32-zlib
+lib32-zstd
 multilib-devel
 steam
 winetricks

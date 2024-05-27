@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -63,7 +63,7 @@
+@@ -62,7 +62,7 @@
           qt6-sensors
           qt6-tools
           qt6-wayland
@@ -9,12 +9,12 @@
           wayland
           xcb-util-cursor
           xcb-util-keysyms
-@@ -95,4 +95,6 @@
+@@ -94,4 +94,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
 +
-+  rm -fr "$pkgdir"/usr/lib/systemd
++  rm -r $pkgdir/usr/lib/systemd
  }
 
 

@@ -1,37 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,9 @@
- 
+@@ -2,7 +2,7 @@
  pkgbase=qt6-doc
  pkgname=(qt6-doc qt6-examples)
--pkgver=6.7.1
+ pkgver=6.7.1
 -pkgrel=1
-+_qtver=6.7.0
-+pkgver=${_qtver/-/}
-+pkgrel=1.2
++pkgrel=1.1
  arch=('any')
  url='https://www.qt.io'
  license=(GPL3 LGPL3 FDL custom)
-@@ -28,13 +29,13 @@
-              unixodbc
+@@ -29,8 +29,15 @@
               vulkan-headers)
  groups=(qt6)
--_pkgfn=qt-everywhere-src-$pkgver
+ _pkgfn=qt-everywhere-src-$pkgver
 -source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/${pkgver/-/}/single/$_pkgfn.tar.xz)
 -sha256sums=('38dbf2768776e875ed5cdea8cccf1a240512a29769768084430914c4a33bedc4')
-+_pkgfn=qt-everywhere-src-$_qtver
-+source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/$_qtver/single/$_pkgfn.tar.xz)
-+sha256sums=('bf5089912364f99cf9baf6c109de76a3172eec6267f148c69800575c47f90087')
++source=(https://download.qt.io/official_releases/qt/${pkgver%.*}/${pkgver/-/}/single/$_pkgfn.tar.xz
++zstd.patch)
++sha256sums=('38dbf2768776e875ed5cdea8cccf1a240512a29769768084430914c4a33bedc4'
++            '37b38e1bf85b83b84d6885853a1e66a9a3ef081d804bd9e099c7e25466911bca')
++
++prepare() {
++  cd $_pkgfn
++  patch -Np1 -i $srcdir/zstd.patch
++}
  
  build() {
--  cmake -B build -S $_pkgfn -G Ninja \
--    -DCMAKE_INSTALL_PREFIX=/usr \
-+  cmake -B build -S $_pkgfn -G Ninja -DCMAKE_INSTALL_PREFIX=/usr \
-+    -DCMAKE_PREFIX_PATH=/usr \
-     -DQT_HOST_PATH=/usr \
-     -DINSTALL_BINDIR=lib/qt6/bin \
-     -DINSTALL_DOCDIR=share/doc/qt6 \
-@@ -43,7 +44,7 @@
+   cmake -B build -S $_pkgfn -G Ninja \
+@@ -43,7 +50,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
@@ -48,16 +44,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,3 +1,7 @@
++prepare() {
++cd $_pkgfn
++patch -Np1 -i $srcdir/zstd.patch
++}
  build() {
--cmake -B build -S $_pkgfn -G Ninja \
---DCMAKE_INSTALL_PREFIX=/usr \
-+cmake -B build -S $_pkgfn -G Ninja -DCMAKE_INSTALL_PREFIX=/usr \
-+-DCMAKE_PREFIX_PATH=/usr \
- -DQT_HOST_PATH=/usr \
- -DINSTALL_BINDIR=lib/qt6/bin \
- -DINSTALL_DOCDIR=share/doc/qt6 \
-@@ -9,7 +9,7 @@
+ cmake -B build -S $_pkgfn -G Ninja \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+@@ -9,7 +13,7 @@
  -DINSTALL_INCLUDEDIR=include/qt6 \
  -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
  -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \

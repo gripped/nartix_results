@@ -24,7 +24,6 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
-lib32-ncurses
 lib32-p11-kit
 lib32-pam
 lib32-pcsclite
@@ -35,6 +34,5 @@ lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
 lib32-v4l-utils
-lib32-zstd
 wine-staging
 wine

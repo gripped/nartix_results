@@ -1,6 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -6,9 +6,9 @@
+   libcamera-ipa
+   libcamera-tools
+   gst-plugin-libcamera
+-  python-libcamera
+ )
+-pkgver=0.3.0
++pkgver=0.2.0
++_commit=a3690f601bf9a90e1a936d9f361aebd789e3b073  # refs/tags/v0.2.0
+ pkgrel=1
+ pkgdesc="A complex camera support library for Linux, Android, and ChromeOS"
+ arch=(x86_64)
+@@ -26,7 +26,6 @@
+   libtiff
+   libyaml
+   meson
+-  pybind11
+   python-jinja
+   python-ply
+   python-sphinx
+@@ -34,14 +33,14 @@
    qt5-base
    qt5-tools
    sdl2
@@ -9,7 +29,17 @@
    texlive-core
  )
  source=(
-@@ -70,7 +70,7 @@
+-  "git+$_url#tag=v$pkgver"
++  "git+$_url#tag=$_commit"
+ )
+-sha512sums=('4b9502074c1d1aaa8d02ebf237623d7bd706fe7d208052c671322d49e5c6519c0324946dbe6422114424c39bbcbfd4e4546e12c4fb649df76d62a7e9bea731bf')
+-b2sums=('39374df08f5d863ae1685de8204f290aedfac82bb6715b26868d2168e6d328e605675b34a6a841de2a7ef5ef49ca331b1cf2c24485971fdadb94e5b0d1a47be1')
++sha512sums=('SKIP')
++b2sums=('SKIP')
+ 
+ _pick() {
+   local p="$1" f d; shift
+@@ -71,7 +70,7 @@
      -D test=true
    )
  
@@ -18,7 +48,7 @@
    meson compile -C build
  }
  
-@@ -97,7 +97,7 @@
+@@ -98,7 +97,7 @@
      libunwind
      libyaml
      sh
@@ -27,13 +57,41 @@
    )
    optdepends=(
      'gst-plugin-libcamera: GStreamer plugin'
+@@ -116,7 +115,6 @@
+     _pick $pkgbase-ipa usr/lib/libcamera/
+     _pick $pkgbase-tools usr/bin/{cam,qcam,lc-compliance}
+     _pick gst-plugin-$pkgbase usr/lib/gstreamer-*
+-    _pick python-$pkgbase usr/lib/python*
+   )
+ }
+ 
+@@ -202,19 +200,3 @@
+ 
+   mv -v $pkgname/* "$pkgdir"
+ }
+-
+-package_python-libcamera() {
+-  pkgdesc+=" - Python integration"
+-  license=(
+-    CC0-1.0
+-    LGPL-2.1-or-later
+-  )
+-  depends=(
+-    gcc-libs
+-    glibc
+-    libcamera
+-    python
+-  )
+-
+-  mv -v $pkgname/* "$pkgdir"
+-}
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -24,6 +24,7 @@
+@@ -24,12 +24,11 @@
  libjpeg.so
  libtiff
  libtiff.so
@@ -41,7 +99,13 @@
  libudev.so
  libunwind
  libyaml
-@@ -36,6 +37,5 @@
+ meson
+-pybind11
+-python
+ python-jinja
+ python-ply
+ python-pyyaml
+@@ -38,6 +37,5 @@
  qt5-tools
  sdl2
  sh

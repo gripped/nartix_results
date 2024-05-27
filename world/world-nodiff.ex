@@ -4,6 +4,7 @@ a52dec
 aalib
 abseil-cpp
 accerciser
+accessibility-inspector
 accounts-qml-module
 acme-tiny
 acpi
@@ -65,7 +66,6 @@ aom-docs
 apache-orc
 apitrace
 apparmor
-appmenu-gtk-module
 appstream-glib
 apr-util
 apr
@@ -122,6 +122,7 @@ audacious-plugins
 audacious
 audacity
 audacity-docs
+audex
 audiocd-kio
 audiofile
 audiotube
@@ -292,7 +293,6 @@ cherrytree
 chmlib
 chromaprint
 chrono-date
-chrony
 chrpath
 cifs-utils
 cinnamon-control-center
@@ -441,6 +441,7 @@ docker-buildx
 docker-compose
 docx2txt
 dolphin-plugins
+dolphin
 dontpanic
 dos2unix
 dosbox
@@ -588,6 +589,7 @@ four-in-a-row
 fractal
 frameworkintegration
 frameworkintegration5
+francis
 freealut
 freecell-solver
 freeglut
@@ -697,6 +699,7 @@ gnome-connections
 gnome-console
 gnome-contacts
 gnome-control-center
+gnome-keybindings
 gnome-devel-docs
 gnome-epub-thumbnailer
 gnome-font-viewer
@@ -915,7 +918,9 @@ incidenceeditor
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -928,7 +933,6 @@ irssi
 iso-codes
 isodate
 python-isodate
-isoimagewriter
 ispc
 ispell
 isync
@@ -1020,6 +1024,7 @@ kalarm
 kalendar
 kalgebra
 kalk
+kalm
 kalzium
 kamera
 kamoso
@@ -1118,6 +1123,7 @@ kdesu
 kdesu5
 kdevelop-pg-qt
 kdevelop-php
+kdevelop-python
 kdevelop
 kdf
 kdiagram
@@ -1205,6 +1211,7 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
+kitinerary
 kjobwidgets
 kjobwidgets5
 kjs
@@ -1245,6 +1252,7 @@ kollision
 kolourpaint
 kompare
 kongress
+konqueror
 konquest
 konsole
 konsolepart5
@@ -1284,6 +1292,7 @@ krdc
 krecorder
 krename
 kreversi
+krfb
 krita
 kross
 kruler
@@ -2181,6 +2190,9 @@ libmupdf
 mupdf-gl
 mupdf-tools
 python-mupdf
+musepack
+musepack-tools
+libmpcdec
 musescore
 musl
 mutt
@@ -2875,6 +2887,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -4236,9 +4251,41 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
+qt6-3d
 qt6-5compat
+qt6-charts
+qt6-connectivity
+qt6-datavis3d
+qt6-declarative
+qt6-graphs
+qt6-grpc
+qt6-httpserver
+qt6-imageformats
+qt6-languageserver
+qt6-location
+qt6-lottie
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
+qt6-networkauth
 qt6-positioning
-qt6-webengine
+qt6-quick3d
+qt6-quick3dphysics
+qt6-quickeffectmaker
+qt6-quicktimeline
+qt6-remoteobjects
+qt6-scxml
+qt6-sensors
+qt6-serialbus
+qt6-shadertools
+qt6-speech
+qt6-svg
+qt6-translations
+qt6-virtualkeyboard
+qt6-wayland
+qt6-webchannel
+qt6-websockets
+qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
@@ -4637,6 +4684,7 @@ simple-scan
 sip
 skanlite
 skanpage
+skladnik
 slang
 sleuthkit
 slimit

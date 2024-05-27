@@ -1,0 +1,97 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,11 @@
+ pkgbase=qbittorrent
+ pkgname=(qbittorrent
+          qbittorrent-nox)
+-pkgver=4.6.5
++pkgver=4.6.4
+ pkgrel=1
+ arch=(x86_64)
+ url='https://www.qbittorrent.org'
+-license=(GPL-2.0-or-later
+-         GPL-3.0-or-later)
++license=(custom GPL)
+ depends=(gcc-libs
+          glibc
+          libtorrent-rasterbar
+@@ -16,25 +15,25 @@
+          zlib)
+ makedepends=(boost
+              cmake
+-             git
+              qt6-svg
+              qt6-tools)
+ optdepends=('python: needed for torrent search tab')
+-source=(git+https://github.com/qbittorrent/qBittorrent/#tag=release-$pkgver?signed)
+-sha256sums=('fa6d9624d204fbb5fde1c652134b91be87b798a57491dcae78ec4c57f8827a72')
++source=(https://downloads.sourceforge.net/sourceforge/qbittorrent/${pkgname}-${pkgver}.tar.xz{,.asc})
++sha256sums=('8e62a24145582a0b36e8268a2e574c5d61a396d28a7d02b899ca59f2244a8913'
++            'SKIP')
+ validpgpkeys=('D8F3DA77AAC6741053599C136E4A2D025B7CC9A2') # sledgehammer999 <sledgehammer999@qbittorrent.org>
+ 
+ build() {
+-  cmake -B build -S qBittorrent \
++  cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DQT6=ON
+   cmake --build build
+ 
+-  cmake -B build-nox -S qBittorrent \
++  cmake -B build-nox -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DQT6=ON \
+     -DGUI=OFF \
+-    -DSYSTEMD=ON
++    -DSYSTEMD=OFF
+   cmake --build build-nox
+ }
+ 
+@@ -43,12 +42,12 @@
+   depends+=(qt6-svg hicolor-icon-theme)
+ 
+   DESTDIR="$pkgdir" cmake --install build
+-  install -Dm644 qBittorrent/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname
++  install -Dm644 $pkgbase-$pkgver/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname
+ }
+ 
+ package_qbittorrent-nox() {
+   pkgdesc='An advanced BitTorrent client programmed in C++, based on Qt toolkit and libtorrent-rasterbar, w/o gui'
+ 
+   DESTDIR="$pkgdir" cmake --install build-nox
+-  install -Dm644 qBittorrent/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname
++  install -Dm644 $pkgbase-$pkgver/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ boost
+ cmake
+ gcc-libs
+-git
+ glibc
+ hicolor-icon-theme
+ libtorrent-rasterbar
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ build() {
+-cmake -B build -S qBittorrent \
++cmake -B build -S $pkgbase-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DQT6=ON
+ cmake --build build
+-cmake -B build-nox -S qBittorrent \
++cmake -B build-nox -S $pkgbase-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DQT6=ON \
+ -DGUI=OFF \
+--DSYSTEMD=ON
++-DSYSTEMD=OFF
+ cmake --build build-nox
+ }
