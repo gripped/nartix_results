@@ -32,21 +32,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -0,0 +1,5 @@
-+fcron
-+pam
-+run-parts
-+smtp-forwarder
-+vim
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
- --datadir=/usr/share \
- --with-docdir=/usr/share/doc \
- --localstatedir=/var \
----with-systemdsystemunitdir=/usr/lib/systemd/system \
-+--with-systemdsystemunitdir=no \
- --with-piddir=/run \
- --with-editor=/usr/bin/vim \
- --with-sendmail=/usr/bin/sendmail
+@@ -2,5 +2,4 @@
+ pam
+ run-parts
+ smtp-forwarder
+-systemd
+ vim

@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -30,7 +30,7 @@
+@@ -20,7 +20,7 @@
  }
  
  build() {
--  arch-meson libgnome-games-support build
-+  artix-meson libgnome-games-support build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -18,10 +18,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,6 +2,6 @@
- cd libgnome-games-support
+ cd $pkgname
  }
  build() {
--arch-meson libgnome-games-support build
-+artix-meson libgnome-games-support build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

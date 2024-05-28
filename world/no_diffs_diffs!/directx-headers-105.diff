@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
- build() {
-   export CXXFLAGS="$CXXFLAGS -fno-lto"
+@@ -15,7 +15,7 @@
+ b2sums=('6bfbdf319090c5f42f248bc0861397a6b2d81c7de37cf8cf66a2e62a70173f23b4af49ac011270a58b9f138b3cacdd86e009c75be074be0a7761611b73779a69')
  
--  arch-meson DirectX-Headers-$pkgver build \
-+  artix-meson DirectX-Headers-$pkgver build \
-     -Dbuild-test=false
-   ninja -C build
+ build() {
+-  arch-meson $pkgname build -D build-test=false
++  artix-meson $pkgname build -D build-test=false
+   meson compile -C build
  }
+ 
 
 
 ############# Stripped diff below #################
@@ -17,11 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,4 +1,4 @@
  build() {
- export CXXFLAGS="$CXXFLAGS -fno-lto"
--arch-meson DirectX-Headers-$pkgver build \
-+artix-meson DirectX-Headers-$pkgver build \
- -Dbuild-test=false
- ninja -C build
+-arch-meson $pkgname build -D build-test=false
++artix-meson $pkgname build -D build-test=false
+ meson compile -C build
  }

@@ -16,8 +16,8 @@
 -  export CFLAGS="$CFLAGS -ffat-lto-objects"
 +  export CFLAGS="$CFLAGS -ffat-lto-objects -fPIC"
  
-   export CROSSCFLAGS="${CFLAGS/-Werror=format-security/}"
-   export CROSSCXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
+   export CROSSCFLAGS="-O2 -pipe"
+   export CROSSCXXFLAGS="-O2 -pipe"
 
 
 ############# Stripped diff below #################
@@ -40,6 +40,6 @@
  mv $pkgname-$_pkgbasever $pkgname
 -export CFLAGS="$CFLAGS -ffat-lto-objects"
 +export CFLAGS="$CFLAGS -ffat-lto-objects -fPIC"
- export CROSSCFLAGS="${CFLAGS/-Werror=format-security/}"
- export CROSSCXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
- export CROSSLDFLAGS="${LDFLAGS//-Wl,-z*([^[:space:]])/}"
+ export CROSSCFLAGS="-O2 -pipe"
+ export CROSSCXXFLAGS="-O2 -pipe"
+ export CROSSLDFLAGS="-Wl,-O1"

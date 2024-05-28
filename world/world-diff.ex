@@ -5,7 +5,6 @@ alsa-utils
 amule
 apache
 apcupsd
-appmenu-gtk-module
 appstream
 appstream-qt5
 appstream-qt
@@ -211,6 +210,7 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
+ipython
 isoimagewriter
 iwd
 jack2

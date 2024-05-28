@@ -16,6 +16,7 @@ acpilight
 adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
+adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
 afpfs-ng
@@ -66,6 +67,7 @@ aom-docs
 apache-orc
 apitrace
 apparmor
+appmenu-gtk-module
 appstream-glib
 apr-util
 apr
@@ -928,7 +930,6 @@ intel-ucode
 intltool
 inxi
 ipset
-ipython
 irssi
 iso-codes
 isodate
