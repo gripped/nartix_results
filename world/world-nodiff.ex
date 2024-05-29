@@ -181,6 +181,7 @@ bemenu
 bemenu-ncurses
 bemenu-x11
 bemenu-wayland
+benchmark
 bftpd
 bigsh0t
 bin86
@@ -295,6 +296,7 @@ cherrytree
 chmlib
 chromaprint
 chrono-date
+chrony
 chrpath
 cifs-utils
 cinnamon-control-center
@@ -930,6 +932,7 @@ intel-ucode
 intltool
 inxi
 ipset
+ipython
 irssi
 iso-codes
 isodate
@@ -998,6 +1001,7 @@ juk
 julia
 junit
 jupyter-console
+jupyter-nbclassic
 jupyter-nbclient
 jupyter-nbconvert
 jupyter-nbformat
@@ -1051,7 +1055,6 @@ kbruch
 kcachegrind
 kcachegrind-common
 qcachegrind
-kcalc
 kcalendarcore
 kcalendarcore5
 kcalutils
@@ -2654,6 +2657,8 @@ perl-sub-identify
 perl-sub-info
 perl-sub-install
 perl-sub-name
+perl-sub-override
+perl-sub-prototype
 perl-sub-quote
 perl-sub-uplevel
 perl-super
@@ -5049,6 +5054,7 @@ ufmt
 ufw
 uget
 uglify-js
+uhttpmock
 umbrello
 umurmur
 unarchiver

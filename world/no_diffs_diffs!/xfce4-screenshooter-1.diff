@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=xfce4-screenshooter
+-pkgver=1.10.6
++pkgver=1.10.5
+ pkgrel=1
+ pkgdesc="An application to take screenshots"
+ arch=('x86_64')
+@@ -9,9 +9,9 @@
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel' 'libsoup3' 'curl' 'jq' 'zenity' 'xclip'
+          'hicolor-icon-theme')
+-makedepends=('python')
++makedepends=('intltool' 'python')
+ source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
+-sha256sums=('992066cfecfb44a68681340bfd55d524d40410aac3da6ef25c6c6cb2150a5965')
++sha256sums=('fa711f2a6a5517f575f2e129fe48c2678e836bd4ede5433075f3076d7670621c')
+ 
+ prepare() {
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ curl
+ hicolor-icon-theme
++intltool
+ jq
+ libsoup3
+ python

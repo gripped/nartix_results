@@ -17,7 +17,6 @@ avahi
 ayatana-ido
 babl
 bash-bats
-benchmark
 bluedevil
 bluez
 bluez-utils
@@ -36,7 +35,6 @@ btop
 bumblebee
 cgmanager
 chromium-bsu
-chrony
 cinnamon-desktop
 clamav
 clang
@@ -210,7 +208,6 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
-ipython
 isoimagewriter
 iwd
 jack2
@@ -224,7 +221,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
-jupyter-nbclassic
+kcalc
 kcoreaddons
 keepassxc
 kgamma
@@ -259,6 +256,7 @@ libcamera-docs
 libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
+python-libcamera
 libcanberra
 libdaemon
 libe-book
@@ -392,7 +390,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-sub-override
 phodav
 php-legacy
 php-legacy-cgi
@@ -658,7 +655,6 @@ udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
-uhttpmock
 umockdev
 unbound
 upower

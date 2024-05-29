@@ -20,3 +20,17 @@
  
  build() {
    cd $_name-$_version/$_alt_name
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-python
+-python-attrs
+-python-build
+-python-installer
+-python-setuptools
+-python-sortedcontainers
+-python-wheel

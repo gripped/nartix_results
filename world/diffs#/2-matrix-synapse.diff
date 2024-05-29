@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=matrix-synapse
+-pkgver=1.107.0
++pkgver=1.106.0
+ pkgrel=1
+ pkgdesc="Matrix reference homeserver"
+ url="https://github.com/element-hq/synapse"
 @@ -10,13 +10,13 @@
           'python-pyopenssl' 'python-yaml' 'python-pyasn1' 'python-pynacl'
           'python-bcrypt' 'python-immutabledict'
@@ -26,8 +34,9 @@
          'sysusers-synapse.conf'
 -        'tmpfiles-synapse.conf'
 -        'override-hardened.conf')
+-sha256sums=('a86861417e045bfd5a5c03565f4a532563eadd91b929602d02b5b68bf726e7dd'
 +        'tmpfiles-synapse.conf')
- sha256sums=('5570c12ddae3e17569f14b1166255b4925dddc8eddad500cc9ee55f3f238172e'
++sha256sums=('5570c12ddae3e17569f14b1166255b4925dddc8eddad500cc9ee55f3f238172e'
              'f67334856609997eac26939d77cfc520e78e98d3755543ab730d83a0f362a35e'
 -            '74af0bc2f57e5ced1a44f2438922d420cbb7defedae784cac02ef125f276a2ed'
 -            '408527271e1250beb20531f140b91201ed464e42f7eb3f47f02967a2ac23a661'
@@ -55,45 +64,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,41 +0,0 @@
--gcc-libs
--git
--glibc
--libwebp
--python
--python-attrs
--python-bcrypt
--python-bleach
--python-build
--python-canonicaljson
--python-idna
--python-ijson
--python-immutabledict
--python-installer
--python-jinja
--python-jsonschema
--python-matrix-common
--python-msgpack
--python-netaddr
--python-phonenumbers
--python-pillow
--python-poetry-core
--python-prometheus_client
--python-pyasn1
--python-pydantic
--python-pymacaroons
--python-pynacl
--python-pyopenssl
--python-pysaml2
--python-service-identity
--python-setuptools-rust
--python-signedjson
--python-sortedcontainers
+@@ -31,11 +31,9 @@
+ python-setuptools-rust
+ python-signedjson
+ python-sortedcontainers
 -python-systemd
--python-treq
--python-twisted
--python-typing_extensions
--python-unpaddedbase64
--python-wheel
--python-yaml
+ python-treq
+ python-twisted
+ python-typing_extensions
+ python-unpaddedbase64
+ python-wheel
+ python-yaml
 -systemd

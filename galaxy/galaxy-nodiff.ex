@@ -108,6 +108,7 @@ libsysstat
 libtg_owt
 libxfce4ui
 libxfce4util
+lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
