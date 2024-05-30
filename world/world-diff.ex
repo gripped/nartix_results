@@ -13,6 +13,8 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
+audacity
+audacity-docs
 avahi
 ayatana-ido
 babl
@@ -473,6 +475,7 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
+python-anyio
 python-anytree
 python-debugpy
 python-frozendict
@@ -483,12 +486,12 @@ python-libtmux
 python-pymupdf
 python-pyotp
 python-pyudev
-python-pywlroots
 python-signedjson
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -574,6 +577,7 @@ qhull
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
+qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
 qt6-doc

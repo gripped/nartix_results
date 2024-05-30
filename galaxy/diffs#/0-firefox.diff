@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -73,9 +73,7 @@
+@@ -92,9 +92,7 @@
          '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
          '6b8b6fe5d658fd76844fc1d9f47b3892bcb5a59a8d10baabf7d52fb4f7c9e8f4858576859390e6d4c542d46cabb335cd06f8c4a80a7d5dde0868b29cd048d308')
  
@@ -11,7 +11,7 @@
  
  prepare() {
    mkdir mozbuild
-@@ -103,15 +101,12 @@
+@@ -122,15 +120,12 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -20,7 +20,7 @@
  ac_add_options --with-unsigned-addon-scopes=app,system
  ac_add_options --allow-addon-sideload
  export MOZILLA_OFFICIAL=1
- export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+ export MOZ_APP_REMOTINGNAME=$pkgname
  
 -ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
 -ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
@@ -28,7 +28,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -194,14 +189,14 @@
+@@ -216,14 +211,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -64,7 +64,7 @@
  ac_add_options --with-unsigned-addon-scopes=app,system
  ac_add_options --allow-addon-sideload
  export MOZILLA_OFFICIAL=1
- export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+ export MOZ_APP_REMOTINGNAME=$pkgname
 -ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
 -ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
 -ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key

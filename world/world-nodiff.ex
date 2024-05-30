@@ -122,8 +122,6 @@ aubio
 python-aubio
 audacious-plugins
 audacious
-audacity
-audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -2932,7 +2930,6 @@ python-ansi2html
 python-ansible-compat
 python-ansicolors
 python-ansiwrap
-python-anyio
 python-anyjson
 python-anysqlite
 python-apipkg
@@ -3858,6 +3855,7 @@ python-pyvirtualdisplay
 python-pywal
 python-pywayland
 python-pywinrm
+python-pywlroots
 python-pyxbe
 python-pyzmq
 python-qdarkstyle
@@ -4107,7 +4105,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4219,7 +4216,6 @@ qrencode
 qt5-3d
 qt5-charts
 qt5-connectivity
-qt5-datavis3d
 qt5-declarative
 qt5-doc
 qt5-examples
