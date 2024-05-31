@@ -1,8 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,10 +23,6 @@
- source=(git+$url#tag=$_commit)
- sha256sums=('SKIP')
+@@ -1,6 +1,7 @@
+ 
+ pkgname=netavark
+-pkgver=1.11.0
++_commit=4396bdc7ba879c9d5365bb29f6129983b9decc02  # refs/tags/v1.10.3
++pkgver=1.10.3
+ pkgrel=1
+ pkgdesc="Container network stack"
+ arch=(x86_64)
+@@ -19,13 +20,9 @@
+ )
+ optdepends=('aardvark-dns: for authorative DNS server')
+ provides=(container-network-stack=2)
+-source=(git+$url#tag=v$pkgver)
+-sha256sums=('b99bc743c3e0f66425fb59e2aa122e52336b6369685d910a01ef143c1ed970f1')
++source=(git+$url#tag=$_commit)
++sha256sums=('SKIP')
  
 -pkgver() {
 -  cd $pkgname
@@ -11,7 +25,7 @@
  
  prepare() {
    cd $pkgname
-@@ -39,7 +35,6 @@
+@@ -38,7 +35,6 @@
  
    cd $pkgname
    mandown docs/$pkgname.1.md > $pkgname.1
@@ -19,7 +33,7 @@
    cargo build --frozen --release --all-features
  }
  
-@@ -54,6 +49,5 @@
+@@ -53,6 +49,5 @@
    cd $pkgname
    install -vDm 755 target/release/$pkgname -t "$pkgdir/usr/lib/podman/"
    install -vDm 644 $pkgname.1 -t "$pkgdir/usr/share/man/man1/"

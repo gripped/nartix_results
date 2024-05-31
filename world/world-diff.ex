@@ -13,8 +13,6 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
-audacity
-audacity-docs
 avahi
 ayatana-ido
 babl
@@ -35,6 +33,7 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
+cbindgen
 cgmanager
 chromium-bsu
 cinnamon-desktop
@@ -343,6 +342,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+meson
 modemmanager
 libmm-glib
 modest

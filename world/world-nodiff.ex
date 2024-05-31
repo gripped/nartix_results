@@ -122,6 +122,8 @@ aubio
 python-aubio
 audacious-plugins
 audacious
+audacity
+audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -258,7 +260,6 @@ catch2
 catdoc
 catfish
 cbatticon
-cbindgen
 ccache
 cdparanoia
 cdrdao
@@ -2123,7 +2124,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard

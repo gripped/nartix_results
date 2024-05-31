@@ -131,6 +131,7 @@ darkhttpd-dinit
 darkhttpd-openrc
 darkhttpd-runit
 darkhttpd-s6
+dbus-dinit-user
 dbus-runit
 ddclient-dinit
 ddclient-openrc
@@ -356,6 +357,7 @@ motion-dinit
 motion-openrc
 motion-runit
 motion-s6
+mpd-dinit-user
 mpd-dinit
 mpd-openrc
 mpd-runit
@@ -410,6 +412,7 @@ openvpn-openrc
 openvpn-runit
 openvpn-s6
 pam_rundir
+pambase-turnstile
 pandoc-bin
 pcsclite-dinit
 pcsclite-openrc
@@ -423,6 +426,7 @@ php-fpm-dinit
 php-fpm-openrc
 php-fpm-runit
 php-fpm-s6
+pipewire-dinit
 postfix-dinit
 postfix-openrc
 postfix-runit
@@ -629,6 +633,8 @@ trojan-dinit
 trojan-openrc
 trojan-runit
 trojan-s6
+turnstile-openrc
+turnstile
 udpxy-dinit
 udpxy-openrc
 udpxy-runit
@@ -674,6 +680,7 @@ wireguard-dinit
 wireguard-openrc
 wireguard-runit
 wireguard-s6
+wireplumber-dinit
 wpa_supplicant-runit
 xcursor-breeze
 xcursor-premium

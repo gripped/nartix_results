@@ -15,7 +15,7 @@
  
 -  arch-meson gstreamer build "${meson_options[@]}"
 +  artix-meson gstreamer build "${meson_options[@]}"
-   meson configure build  # Print config
+   meson configure build --no-pager # Print config
    meson compile -C build
  }
 
@@ -41,6 +41,6 @@
  )
 -arch-meson gstreamer build "${meson_options[@]}"
 +artix-meson gstreamer build "${meson_options[@]}"
- meson configure build  # Print config
+ meson configure build --no-pager # Print config
  meson compile -C build
  }
