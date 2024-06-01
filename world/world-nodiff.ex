@@ -931,7 +931,6 @@ intel-ucode
 intltool
 inxi
 ipset
-ipython
 irssi
 iso-codes
 isodate
@@ -1008,7 +1007,6 @@ jupyter-notebook-shim
 jupyter-notebook
 jupyter-server-fileid
 jupyter-server-ydoc
-jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab
@@ -2124,6 +2122,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -2930,6 +2929,7 @@ python-ansi2html
 python-ansible-compat
 python-ansicolors
 python-ansiwrap
+python-anyio
 python-anyjson
 python-anysqlite
 python-apipkg
@@ -3615,7 +3615,6 @@ python-pg8000
 python-phonenumbers
 python-piccata
 python-pickleshare
-python-pikepdf
 python-pillow
 python-pint
 python-pip-run
@@ -4105,6 +4104,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4661,6 +4661,7 @@ seahorse
 semver
 senpai
 sequoia-sq
+sequoia-sqv
 serd
 serd-docs
 serf
@@ -5102,6 +5103,7 @@ vim
 gvim
 vim-runtime
 vimiv
+virglrenderer
 virt-manager
 virt-install
 virt-what

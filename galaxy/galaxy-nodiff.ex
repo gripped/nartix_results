@@ -6,6 +6,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
+blueman
 box2d
 caja-extensions
 caja-extensions-common
@@ -57,6 +58,7 @@ ext4magic
 fastfetch
 firefox-i18n
 fluxbox
+font-manager
 fpc-src
 fpc
 garcon

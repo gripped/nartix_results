@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -67,7 +67,7 @@
+   https://github.com/mesonbuild/meson/releases/download/$pkgver/meson-$pkgver.tar.gz{,.asc}
+   meson-reference-$pkgver.3::https://github.com/mesonbuild/meson/releases/download/$pkgver/meson-reference.3
+   meson-reference-$pkgver.json::https://github.com/mesonbuild/meson/releases/download/$pkgver/reference_manual.json
+-  arch-meson
++  artix-meson
+   cross-lib32
+   native-clang
+   0001-Skip-broken-tests.patch
+@@ -118,7 +118,8 @@
+   install -Dm644 ../meson-reference-$pkgver.3    "$pkgdir/usr/share/man/man3/meson-reference.3"
+   install -Dm644 ../meson-reference-$pkgver.json "$pkgdir/usr/share/doc/$pkgname/reference_manual.json"
+ 
+-  install -D ../arch-meson -t "$pkgdir/usr/bin"
++  install -D ../artix-meson -t "${pkgdir}/usr/bin"
++  ln -sfv artix-meson "${pkgdir}"/usr/bin/arch-meson
+ 
+   install -Dm644 ../cross-lib32 "$pkgdir/usr/share/meson/cross/lib32"
+   install -Dm644 ../native-clang "$pkgdir/usr/share/meson/native/clang"

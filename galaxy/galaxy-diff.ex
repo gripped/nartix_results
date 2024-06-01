@@ -2,7 +2,6 @@ alacritty
 cinnamon-desktop
 fceux
 firefox
-font-manager
 libetonyek
 libreoffice-extension-writer2latex
 libretro-dolphin

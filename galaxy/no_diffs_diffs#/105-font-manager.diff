@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+ sha256sums=('4e17df355d2390aa8ac6833599c886bc64ad412193e020be081a077cc723a0df')
+ 
+ build() {
+-	arch-meson "$_archive" build \
++	artix-meson "$_archive" build \
+ 		-Dnautilus=true \
+ 		-Dreproducible=true
+ 	ninja -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson "$_archive" build \
++artix-meson "$_archive" build \
+ -Dnautilus=true \
+ -Dreproducible=true
+ ninja -C build

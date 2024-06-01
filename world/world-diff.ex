@@ -209,6 +209,7 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
+ipython
 isoimagewriter
 iwd
 jack2
@@ -222,6 +223,7 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
+jupyter-server
 kcalc
 kcoreaddons
 keepassxc
@@ -342,7 +344,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-meson
 modemmanager
 libmm-glib
 modest
@@ -475,7 +476,6 @@ puppet
 pyqt5
 python-pyqt5
 pyqt6
-python-anyio
 python-anytree
 python-debugpy
 python-frozendict
@@ -483,6 +483,7 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
+python-pikepdf
 python-pymupdf
 python-pyotp
 python-pyudev
@@ -491,7 +492,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -616,7 +616,6 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
-sequoia-sqv
 sfml
 shairport-sync
 signal-desktop
@@ -685,7 +684,6 @@ v2ray
 v4l-utils
 vault
 vice
-virglrenderer
 vlc
 vpnc
 vte3
