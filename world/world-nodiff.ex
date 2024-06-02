@@ -511,7 +511,6 @@ evolution-spamassassin
 exempi
 exfat-utils
 exfatprogs
-exim
 exiv2
 exo
 expac
@@ -2142,7 +2141,6 @@ minio
 minisign
 miniupnpc
 python-miniupnpc
-minizip-ng
 minuet
 mitmproxy
 mjpegtools
@@ -4018,7 +4016,6 @@ python-stevedore
 python-stone
 python-straight.plugin
 python-strict-rfc3339
-python-structlog
 python-subprocess-tee
 python-subunit
 python-sure
@@ -4104,7 +4101,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop

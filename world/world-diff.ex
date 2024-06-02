@@ -83,6 +83,7 @@ eog
 eog-docs
 espeakup
 etherwall
+exim
 extra-cmake-modules
 facter
 fastfetch
@@ -344,6 +345,7 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+minizip-ng
 modemmanager
 libmm-glib
 modest
@@ -488,10 +490,12 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
+python-structlog
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
