@@ -450,8 +450,6 @@ dos2unix
 dosbox
 dotconf
 double-conversion
-doxygen
-doxygen-docs
 dqlite
 dragon
 dropbear
@@ -511,6 +509,7 @@ evolution-spamassassin
 exempi
 exfat-utils
 exfatprogs
+exim
 exiv2
 exo
 expac
@@ -596,7 +595,6 @@ freealut
 freecell-solver
 freeglut
 freeimage
-freeradius
 freetds
 freetype2
 freetype2-demos
@@ -3613,6 +3611,7 @@ python-pg8000
 python-phonenumbers
 python-piccata
 python-pickleshare
+python-pikepdf
 python-pillow
 python-pint
 python-pip-run
@@ -3668,7 +3667,6 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
-python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -4016,6 +4014,7 @@ python-stevedore
 python-stone
 python-straight.plugin
 python-strict-rfc3339
+python-structlog
 python-subprocess-tee
 python-subunit
 python-sure

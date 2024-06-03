@@ -1,24 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,21 @@
- 
- pkgname=libevdev
--pkgver=1.13.2
-+pkgver=1.13.1
- pkgrel=1
- pkgdesc="Wrapper library for evdev devices"
- arch=(x86_64)
- url="https://www.freedesktop.org/wiki/Software/libevdev/"
--license=('MIT')
-+license=(custom:MIT)
- depends=('glibc')
--makedepends=('python' 'check' 'valgrind' 'meson')
-+makedepends=('python' 'check' 'valgrind' 'doxygen' 'meson')
- provides=('libevdev.so')
- source=(https://freedesktop.org/software/$pkgname/$pkgname-$pkgver.tar.xz{,.sig})
--sha512sums=('558267df0e45d8641a58dddb9fe30e2235ce247d96710189b09512d19d691afbd25189d188bb26bb5092fbbe249fbc7ca60a9e6af4fab535a946d5a3e030a21f'
-+sha512sums=('9b75bad4bc13948854c8dff7a7a46aca6c06d1410ccb000f881bf76055ccac040595c3b24fb1a574be875b5c262eb86820b9ec3383752641bc2047135e5a412f'
-             'SKIP')
+@@ -15,7 +15,7 @@
  validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') # Peter Hutterer (Who-T) <office@who-t.net>
  
  build() {
@@ -31,14 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,4 +1,5 @@
- check
-+doxygen
- glibc
- meson
- python
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

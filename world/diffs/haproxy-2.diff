@@ -1,20 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,12 +8,9 @@
+@@ -8,8 +8,8 @@
  arch=('x86_64')
  license=('GPL')
  
 -depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua' 'systemd-libs')
--makedepends=('systemd')
+-makedepends=('git' 'systemd')
 +depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua')
++makedepends=('git')
  
  backup=('etc/haproxy/haproxy.cfg')
--
--install=haproxy.install
  
- source=(https://www.haproxy.org/download/${pkgver%.*}/src/haproxy-$pkgver.tar.gz
-         haproxy.cfg
-@@ -46,7 +43,6 @@
+@@ -47,7 +47,6 @@
      USE_OPENSSL=1 \
      USE_PCRE2=1 USE_PCRE2_JIT=1 \
      USE_PROMEX=1 \
@@ -22,7 +19,7 @@
      USE_ZLIB=1
  
      make \
-@@ -55,9 +51,6 @@
+@@ -56,9 +55,6 @@
        CFLAGS="$CFLAGS" \
        LDFLAGS="$LDFLAGS" \
        admin/{halog/halog,iprange/ip{,6}range}
@@ -32,7 +29,7 @@
  }
  
  package() {
-@@ -74,8 +67,6 @@
+@@ -76,8 +72,6 @@
  
    install -D -m0644 ../haproxy.sysusers "$pkgdir"/usr/lib/sysusers.d/haproxy.conf
    install -D -m0644 ../haproxy.cfg "$pkgdir"/etc/haproxy/haproxy.cfg
@@ -47,7 +44,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,4 @@
+@@ -4,6 +4,4 @@
  lua
  openssl
  pcre2

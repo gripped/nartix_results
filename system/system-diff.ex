@@ -29,7 +29,6 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
-libedit
 libusb
 linux
 linux-headers

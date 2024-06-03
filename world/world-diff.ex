@@ -63,6 +63,8 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
+doxygen
+doxygen-docs
 dracut
 drkonqi
 dunst
@@ -83,7 +85,6 @@ eog
 eog-docs
 espeakup
 etherwall
-exim
 extra-cmake-modules
 facter
 fastfetch
@@ -99,6 +100,7 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
+freeradius
 freerdp
 freerdp2
 fribidi
@@ -485,12 +487,11 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
-python-pikepdf
+python-pyarrow
 python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
-python-structlog
 python-tblib
 python-teamcity-messages
 python-trustme
