@@ -9,7 +9,7 @@
  source=(https://github.com/OpenPrinting/cups/releases/download/v${pkgver}/cups-${pkgver}-source.tar.gz{,.sig}
          cups.logrotate
          cups.pam
-@@ -64,6 +64,7 @@
+@@ -68,6 +68,7 @@
       --with-dbusdir=/usr/share/dbus-1 \
       --enable-relro \
       --enable-libpaper \
@@ -17,7 +17,7 @@
       --with-optim="$CFLAGS" #--help
    make
  }
-@@ -93,7 +94,7 @@
+@@ -97,7 +98,7 @@
          etc/logrotate.d/cups
          etc/pam.d/cups)
  depends=('acl' 'pam' "libcups>=${pkgver}" 'cups-filters'

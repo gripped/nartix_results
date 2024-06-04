@@ -164,7 +164,6 @@ banner
 baobab
 bash-bats-assert
 bash-bats-support
-bash-completion
 bats-assert
 bats-support
 bats
@@ -450,6 +449,8 @@ dos2unix
 dosbox
 dotconf
 double-conversion
+doxygen
+doxygen-docs
 dqlite
 dragon
 dropbear
@@ -595,6 +596,7 @@ freealut
 freecell-solver
 freeglut
 freeimage
+freeradius
 freetds
 freetype2
 freetype2-demos
@@ -608,8 +610,6 @@ fuse2
 fuse3
 fuse-common
 futuresql
-$pkgbase-qt5
-$pkgbase-qt6
 fwknop
 fzf
 gajim
@@ -928,6 +928,7 @@ intel-ucode
 intltool
 inxi
 ipset
+ipython
 irssi
 iso-codes
 isodate
@@ -2723,7 +2724,6 @@ perl-yaml-pp
 perl-yaml-tiny
 perl-yaml
 persepolis
-pgbouncer
 phonon-gstreamer
 phonon-qt5-gstreamer
 phonon-vlc
@@ -3181,6 +3181,7 @@ python-editables
 python-editdistance-s
 python-editdistance
 python-editor
+python-elastic-transport
 python-elasticsearch
 python-elementpath
 python-email-validator
@@ -3892,6 +3893,7 @@ python-requests
 python-requestsexceptions
 python-resolvelib
 python-responses
+python-respx
 python-retrying
 python-rfc3339-validator
 python-rfc3986-validator
@@ -4991,6 +4993,7 @@ tk
 tl-expected
 tldp-howtos-txt
 tldr
+tllist
 tlp
 tlp-rdw
 tmuxp

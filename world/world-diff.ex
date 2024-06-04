@@ -17,6 +17,7 @@ avahi
 ayatana-ido
 babl
 bash-bats
+bash-completion
 bluedevil
 bluez
 bluez-utils
@@ -63,8 +64,6 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
-doxygen
-doxygen-docs
 dracut
 drkonqi
 dunst
@@ -100,7 +99,6 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
-freeradius
 freerdp
 freerdp2
 fribidi
@@ -212,7 +210,6 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
-ipython
 isoimagewriter
 iwd
 jack2
@@ -397,6 +394,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+pgbouncer
 phodav
 php-legacy
 php-legacy-cgi

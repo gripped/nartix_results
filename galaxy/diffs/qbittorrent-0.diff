@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DQT6=ON \
+     -DGUI=OFF \
+-    -DSYSTEMD=ON
++    -DSYSTEMD=OFF
+   cmake --build build-nox
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DQT6=ON \
+ -DGUI=OFF \
+--DSYSTEMD=ON
++-DSYSTEMD=OFF
+ cmake --build build-nox
+ }
