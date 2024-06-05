@@ -9,7 +9,7 @@
           'xcb-imdkit' 'xcb-util-wm' 'libxkbfile' 'gdk-pixbuf2')
  makedepends=('git' 'extra-cmake-modules' 'ninja' 'wayland-protocols' 'fmt')
  source=("git+https://github.com/fcitx/fcitx5.git#tag=$pkgver?signed"
-@@ -27,6 +27,7 @@
+@@ -28,6 +28,7 @@
    cd $pkgname
  
    cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib \

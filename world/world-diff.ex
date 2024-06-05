@@ -66,6 +66,7 @@ dolphin-emu-tool
 dovecot
 dracut
 drkonqi
+dump_syms
 dunst
 earlyoom
 edk2
@@ -223,7 +224,6 @@ jedi-language-server
 js78
 json-glib
 json-glib-docs
-jupyter-server
 kcalc
 kcoreaddons
 keepassxc
@@ -344,7 +344,6 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
-minizip-ng
 modemmanager
 libmm-glib
 modest
@@ -480,6 +479,7 @@ python-pyqt5
 pyqt6
 python-anytree
 python-debugpy
+python-emoji
 python-frozendict
 python-gssapi
 python-intelhex
@@ -488,13 +488,14 @@ python-libtmux
 python-pyarrow
 python-pymupdf
 python-pyotp
+python-pytest-isort
 python-pyudev
 python-signedjson
+python-sphinx-autodoc-typehints
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools

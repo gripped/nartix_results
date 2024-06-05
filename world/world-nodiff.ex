@@ -457,7 +457,6 @@ dropbear
 dropbear-scp
 dtc
 duktape
-dump_syms
 dune
 duplicity
 dvd-rw-tools
@@ -1005,6 +1004,7 @@ jupyter-notebook-shim
 jupyter-notebook
 jupyter-server-fileid
 jupyter-server-ydoc
+jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
 jupyterlab
@@ -2140,6 +2140,7 @@ minio
 minisign
 miniupnpc
 python-miniupnpc
+minizip-ng
 minuet
 mitmproxy
 mjpegtools
@@ -3185,7 +3186,6 @@ python-elastic-transport
 python-elasticsearch
 python-elementpath
 python-email-validator
-python-emoji
 python-engineio
 python-enrich
 python-entrypoint2
@@ -3787,7 +3787,6 @@ python-pytest-httpbin
 python-pytest-httpserver
 python-pytest-httpx
 python-pytest-ignore-flaky
-python-pytest-isort
 python-pytest-jupyter
 python-pytest-lazy-fixture
 python-pytest-lazy-fixtures
@@ -3970,7 +3969,6 @@ python-sphinx-alabaster-theme
 python-sphinx-argparse-cli
 python-sphinx-argparse
 python-sphinx-autobuild
-python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
@@ -4102,6 +4100,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop

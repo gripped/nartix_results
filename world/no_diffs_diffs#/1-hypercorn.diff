@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,10 +35,6 @@
+ source=(git+https://github.com/pgjones/hypercorn.git#tag=${_tag})
+ sha256sums=('8702202c855ae5e8978a36eee7d6bc3cb5fdeb795351e53672a4f3d4445152f7')
+ 
+-pkgver() {
+-  cd hypercorn
+-  git describe --tags
+-}
+ 
+ build() {
+   cd hypercorn
