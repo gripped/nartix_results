@@ -66,7 +66,6 @@ dolphin-emu-tool
 dovecot
 dracut
 drkonqi
-dump_syms
 dunst
 earlyoom
 edk2
@@ -76,6 +75,7 @@ element.io
 element-web
 element-desktop
 elinks
+ell
 emacs
 emacs-nativecomp
 emacs-nox
@@ -484,6 +484,7 @@ python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
+python-libcst
 python-libtmux
 python-pyarrow
 python-pymupdf

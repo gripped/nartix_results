@@ -23,11 +23,3 @@
 -  install -Dm644 "$srcdir"/xinetd.service "$pkgdir"/usr/lib/systemd/system/xinetd.service
    install -Dm644 COPYRIGHT "$pkgdir"/usr/share/licenses/$pkgname/COPYRIGHT
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1 @@
-+libtirpc

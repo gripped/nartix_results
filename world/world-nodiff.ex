@@ -457,6 +457,7 @@ dropbear
 dropbear-scp
 dtc
 duktape
+dump_syms
 dune
 duplicity
 dvd-rw-tools
@@ -479,7 +480,6 @@ electrum
 elementary-icon-theme
 elisa
 elixir
-ell
 embree3
 emovix
 enblend-enfuse
@@ -3426,7 +3426,6 @@ python-ldap3
 python-levenshtein
 python-lexicon
 python-libarchive-c
-python-libcst
 python-libevdev
 python-librabbitmq
 python-libusb1
@@ -3909,6 +3908,7 @@ python-rsa
 python-rtree
 python-ruamel-yaml
 python-ruamel.yaml.clib
+python-ruff-api
 python-rx
 python-s3transfer
 python-saml

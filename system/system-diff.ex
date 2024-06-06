@@ -50,6 +50,7 @@ libp11-kit
 p11-kit-docs
 pam
 pambase
+pciutils
 ppp
 procps-ng
 rpcbind
