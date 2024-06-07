@@ -479,6 +479,8 @@ python-pyqt5
 pyqt6
 python-anytree
 python-debugpy
+python-django-haystack
+python-docker
 python-emoji
 python-frozendict
 python-gssapi
@@ -486,6 +488,7 @@ python-intelhex
 python-ipywidgets
 python-libcst
 python-libtmux
+python-pooch
 python-pyarrow
 python-pymupdf
 python-pyotp
@@ -596,6 +599,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+radicale
 rdma-core
 redis
 redshift

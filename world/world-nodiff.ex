@@ -3152,7 +3152,6 @@ python-django-fake-model
 python-django-filter
 python-django-gravatar
 python-django-guardian
-python-django-haystack
 python-django-mailman3
 python-django-picklefield
 python-django-q
@@ -3161,7 +3160,6 @@ python-django-sekizai
 python-dkim
 python-dnspython
 python-docker-pycreds
-python-docker
 python-dockerpty
 python-docopt
 python-docstring-to-markdown
@@ -3631,7 +3629,6 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
-python-pooch
 python-pook
 python-portend
 python-pprofile
@@ -4301,7 +4298,6 @@ qutebrowser
 r
 r8168
 radeontop
-radicale
 raft
 ragel
 range-v3

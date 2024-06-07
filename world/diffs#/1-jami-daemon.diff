@@ -26,35 +26,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,31 +0,0 @@
--alsa-lib
--asio
--cmake
--ffmpeg
--fmt
--git
--glibc
--gnutls
--jack
--jsoncpp
--libarchive
--libgit2
--libnatpmp
--libpulse
--libsecp256k1
--libsecp256k1.so
--libupnp
--meson
--msgpack-c
--msgpack-cxx
--nettle
--opendht
--openssl
--perl
--restinio
--speexdsp
+@@ -14,6 +14,7 @@
+ libpulse
+ libsecp256k1
+ libsecp256k1.so
++libudev
+ libupnp
+ meson
+ msgpack-c
+@@ -24,8 +25,7 @@
+ perl
+ restinio
+ speexdsp
 -systemd
 -systemd-libs
--webrtc-audio-processing
--yaml-cpp
--zlib
++udev
+ webrtc-audio-processing
+ yaml-cpp
+ zlib

@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,21 +1,21 @@
+ 
+ pkgname=bolt
+-pkgver=0.9.8
+-pkgrel=1
++pkgver=0.9.7
++pkgrel=2
+ pkgdesc="Thunderbolt 3 device manager"
  arch=('x86_64')
  url="https://gitlab.freedesktop.org/bolt/bolt"
  license=('LGPL-2.1-or-later')
@@ -9,7 +16,9 @@
  makedepends=('asciidoc' 'meson' 'python-setuptools' 'patch')
  checkdepends=('umockdev')
  source=(https://gitlab.freedesktop.org/$pkgname/$pkgname/-/archive/$pkgver/$pkgname-$pkgver.tar.gz)
-@@ -15,7 +15,7 @@
+-sha256sums=('5a4306aa21ee398e1e9f2a5072748c9469c9360bf5edc7dcec2f12fc17be122e')
++sha256sums=('593c7e7d0ecebd7b9e2c3efabe33f8fec5501ff02ffd6d8563cfc14a91c31c1c')
+ 
  build() {
    cd $pkgname-$pkgver
  

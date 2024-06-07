@@ -1,21 +1,34 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,34 @@
+@@ -1,39 +1,34 @@
  
  pkgname=cmake
--pkgver=3.29.4
+-pkgver=3.29.5
+-pkgrel=2
 +pkgver=3.29.3
- pkgrel=1
++pkgrel=1
  pkgdesc='A cross-platform open-source make system'
  arch=('x86_64')
  url="https://www.cmake.org/"
  license=('custom')
- depends=('curl' 'libarchive' 'hicolor-icon-theme' 'jsoncpp' 'libjsoncpp.so' 'libuv' 'rhash' 'cppdap')
+-depends=(cppdap
+-         curl
+-         expat
+-         gcc-libs
+-         glibc
+-         hicolor-icon-theme
+-         jsoncpp
+-         libarchive
+-         libuv
+-         ncurses
+-         rhash
+-         zlib)
 -makedepends=(emacs
 -             git
 -             nlohmann-json
 -             python-sphinx
 -             qt6-base)
++depends=('curl' 'libarchive' 'hicolor-icon-theme' 'jsoncpp' 'libjsoncpp.so' 'libuv' 'rhash' 'cppdap')
 +makedepends=('qt6-base' 'python-sphinx' 'emacs' 'nlohmann-json')
  optdepends=(
    'make: for unix Makefile generator'
@@ -23,7 +36,7 @@
    'qt6-base: cmake-gui'
  )
 -source=(git+https://gitlab.kitware.com/cmake/cmake#tag=v$pkgver?signed)
--sha512sums=('8fea53a1cd5f62f6dcc85b8b0b1b61587a5d3657e4256024d2af462c9b5647ed9c2d7b7ebf843532637d859d28f89d81c0b1cb29521c6c3db78457471b076621')
+-sha512sums=('4f961a5c85fd7b96f6b367247f3f83e6afb3eefbb4d9a7242c8920fcdba5cd7ec69a49b84cf1445d112fc45a1f9904b816d0f56f918cf2421841d2d09e9a8d49')
 +source=("https://www.cmake.org/files/v${pkgver%.*}/${pkgname}-${pkgver}.tar.gz"
 +        "https://www.cmake.org/files/v${pkgver%.*}/${pkgname}-${pkgver}-SHA-256.txt"{,.asc}
 +        artix-cmake.patch)
@@ -44,7 +57,7 @@
    ./bootstrap --prefix=/usr \
      --mandir=/share/man \
      --docdir=/share/doc/cmake \
-@@ -36,7 +42,7 @@
+@@ -47,7 +42,7 @@
  }
  
  package() {
@@ -59,14 +72,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,6 @@
+@@ -1,17 +1,12 @@
  cppdap
  curl
  emacs
+-expat
+-gcc-libs
 -git
+-glibc
  hicolor-icon-theme
  jsoncpp
  libarchive
++libjsoncpp.so
+ libuv
+-ncurses
+ nlohmann-json
+ python-sphinx
+ qt6-base
+ rhash
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

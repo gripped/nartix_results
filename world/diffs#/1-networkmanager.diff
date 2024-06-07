@@ -1,22 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,6 +18,7 @@
+@@ -19,6 +19,7 @@
    dhclient
    dhcpcd
    dnsmasq
 +  elogind
+   gcc-libs
    git
-   glib2-docs
-   gobject-introspection
-@@ -41,7 +42,6 @@
-   polkit
-   ppp
+   glib2
+@@ -47,9 +48,6 @@
    python-gobject
+   python-packaging
+   readline
 -  systemd
-   vala
+-  systemd-libs
+-  vala
    vala
    wpa_supplicant
-@@ -73,9 +73,14 @@
+ )
+@@ -82,9 +80,13 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -24,7 +26,6 @@
 +    -D suspend_resume=elogind
      -D modify_system=true
      -D selinux=false
-+    -D selinux=false
 +    -D systemdsystemunitdir=no
 +    -D session_tracking=elogind
 +    -D systemd_journal=false
@@ -32,24 +33,32 @@
  
      -D iwd=true
      -D teamdctl=true
-@@ -96,7 +101,7 @@
-   CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
-   CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+@@ -102,7 +104,7 @@
+     -D qt=false
+   )
  
 -  arch-meson NetworkManager build "${meson_options[@]}"
 +  artix-meson NetworkManager build "${meson_options[@]}"
    meson compile -C build
  }
  
-@@ -118,6 +123,7 @@
+@@ -124,6 +126,7 @@
    depends=(
      audit
      curl
 +    elogind
-     iproute2
-     jansson
-     libmm-glib
-@@ -155,6 +161,9 @@
+     gcc-libs
+     glib2
+     glibc
+@@ -139,7 +142,6 @@
+     nspr
+     nss
+     readline
+-    systemd-libs
+     wpa_supplicant
+   )
+   optdepends=(
+@@ -168,6 +170,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -59,7 +68,7 @@
  END
  
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -176,7 +185,6 @@
+@@ -189,7 +194,6 @@
    _pick cloud usr/lib/**/*nm-cloud-setup*
    _pick cloud usr/share/man/*/nm-cloud-setup*
  
@@ -67,9 +76,9 @@
  
    install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
-@@ -186,7 +194,7 @@
-   depends=(
-     glib2
+@@ -202,7 +206,7 @@
+     glibc
+     nspr
      nss
 -    systemd-libs
 +    libelogind
@@ -82,15 +91,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,6 +4,7 @@
+@@ -5,6 +5,7 @@
  dhclient
  dhcpcd
  dnsmasq
 +elogind
+ gcc-libs
  git
  glib2
- glib2-docs
-@@ -13,6 +14,7 @@
+@@ -15,6 +16,7 @@
  iptables
  iwd
  jansson
@@ -98,10 +107,10 @@
  libmm-glib
  libndp
  libnewt
-@@ -31,8 +33,6 @@
- polkit
- ppp
+@@ -36,8 +38,6 @@
  python-gobject
+ python-packaging
+ readline
 -systemd
 -systemd-libs
  util-linux-libs
