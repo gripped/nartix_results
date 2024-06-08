@@ -601,6 +601,7 @@ freetype2
 freetype2-demos
 freetype2-docs
 frei0r-plugins
+fribidi
 fstrm
 ftgl
 ftjam

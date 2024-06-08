@@ -102,7 +102,6 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
-fribidi
 fwupd-efi
 fwupd
 gala
