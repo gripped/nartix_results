@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,31 +1,26 @@
+ 
+ _pkg=pyogrio
+ pkgname=python-${_pkg}
+-pkgver=0.8.0
+-pkgrel=1
++pkgver=0.6.0
++pkgrel=4
+ pkgdesc="Vectorized vector I/O using OGR"
+ arch=(x86_64)
+ url="https://pyogrio.readthedocs.io/"
+ license=(MIT)
+ depends=(gdal python-certifi python-numpy)
+-makedepends=(cython python-build python-installer python-setuptools python-versioneer python-wheel)
++makedepends=(cython python-setuptools python-versioneer)
+ checkdepends=(python-pytest)
+ source=(https://files.pythonhosted.org/packages/source/${_pkg::1}/${_pkg}/${_pkg}-${pkgver}.tar.gz)
+-sha256sums=('459ec590c3c1cda451f3f73c88a678c32b127de783bf54c41ea6ad708969f020')
+-
+-prepare() {
+-  sed -e '/oldest-supported-numpy/d' -e '/versioneer\[toml\]==0.28/d' \
+-    -i ${_pkg}-${pkgver}/pyproject.toml
+-}
++sha256sums=('4b8f0666701766a7ac3774b6f1c5f8dd5d72f1ed18cb319790835d8f8d073ce5')
+ 
+ build() {
+   cd ${_pkg}-${pkgver}
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ 
+ package() {
+   cd ${_pkg}-${pkgver}
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
+   install -Dm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,6 @@
+ cython
+ gdal
+-python-build
+ python-certifi
+-python-installer
+ python-numpy
+ python-setuptools
+ python-versioneer
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,4 @@
+-prepare() {
+-sed -e '/oldest-supported-numpy/d' -e '/versioneer\[toml\]==0.28/d' \
+--i ${_pkg}-${pkgver}/pyproject.toml
+-}
+ build() {
+ cd ${_pkg}-${pkgver}
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

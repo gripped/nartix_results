@@ -112,6 +112,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 genxrdpattern
@@ -225,7 +227,6 @@ json-glib
 json-glib-docs
 kcalc
 kcoreaddons
-keepassxc
 kgamma
 kismet
 kitty
@@ -478,20 +479,16 @@ python-pyqt5
 pyqt6
 python-anytree
 python-debugpy
-python-django-haystack
-python-docker
-python-emoji
+python-fiona
 python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
-python-libcst
 python-libtmux
-python-pooch
 python-pyarrow
 python-pymupdf
+python-pyogrio
 python-pyotp
-python-pytest-isort
 python-pyudev
 python-signedjson
 python-sphinx-autodoc-typehints
@@ -499,6 +496,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -593,6 +591,7 @@ qt6-serialport
 qt6-tools
 qt6-webengine
 qterminal
+qtermwidget
 quazip
 quazip-qt5
 quazip-qt6

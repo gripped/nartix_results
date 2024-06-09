@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
+@@ -1,13 +1,14 @@
+ 
+ pkgname=xwallpaper
+ pkgver=0.7.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Wallpaper setting utility for X'
+ url='https://github.com/stoeckmann/xwallpaper'
+ arch=('x86_64')
  license=('ISC')
  depends=('pixman' 'libpng' 'libxpm' 'xcb-util' 'xcb-util-image' 'libjpeg-turbo'
           'libseccomp' libseccomp.so libpixman-1.so libjpeg.so)

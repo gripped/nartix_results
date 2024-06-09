@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,23 @@
+@@ -1,17 +1,23 @@
  
  pkgname=bash-completion
 -pkgver=2.14.0
--pkgrel=1
+-pkgrel=2
 +pkgver=2.11
 +pkgrel=3
  pkgdesc='Programmable completion for the bash shell'
@@ -14,6 +14,7 @@
 +license=(GPL2)
  depends=(bash)
  options=(!emptydirs !makeflags)
+-backup=('etc/bash_completion.d/000_bash_completion_compat.bash')
 -source=($url/releases/download/$pkgver/$pkgname-$pkgver.tar.xz)
 +source=($url/releases/download/$pkgver/$pkgname-$pkgver.tar.xz
 +        $pkgname-drill.patch::https://github.com/scop/bash-completion/commit/cbec56cfd543.patch)

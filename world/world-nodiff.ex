@@ -620,8 +620,6 @@ gavl
 gcab
 gcc13
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1140,6 +1138,7 @@ kdsoap
 kdsoap-qt5
 kdsoap-qt6
 keditbookmarks
+keepassxc
 kemoticons
 kexec-tools
 keybinder2
@@ -3153,6 +3152,7 @@ python-django-fake-model
 python-django-filter
 python-django-gravatar
 python-django-guardian
+python-django-haystack
 python-django-mailman3
 python-django-picklefield
 python-django-q
@@ -3161,6 +3161,7 @@ python-django-sekizai
 python-dkim
 python-dnspython
 python-docker-pycreds
+python-docker
 python-dockerpty
 python-docopt
 python-docstring-to-markdown
@@ -3185,6 +3186,7 @@ python-elastic-transport
 python-elasticsearch
 python-elementpath
 python-email-validator
+python-emoji
 python-engineio
 python-enrich
 python-entrypoint2
@@ -3220,7 +3222,6 @@ python-fields
 python-filebytes
 python-filelock
 python-findpython
-python-fiona
 python-fire
 python-first
 python-fissix
@@ -3425,6 +3426,7 @@ python-ldap3
 python-levenshtein
 python-lexicon
 python-libarchive-c
+python-libcst
 python-libevdev
 python-librabbitmq
 python-libusb1
@@ -3630,6 +3632,7 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
+python-pooch
 python-pook
 python-portend
 python-pprofile
@@ -3726,7 +3729,6 @@ python-pynetbox
 python-pynitrokey
 python-pynvim
 python-pyocd
-python-pyogrio
 python-pyopencl
 pyopencl-headers
 python-pyopenssl
@@ -3784,6 +3786,7 @@ python-pytest-httpbin
 python-pytest-httpserver
 python-pytest-httpx
 python-pytest-ignore-flaky
+python-pytest-isort
 python-pytest-jupyter
 python-pytest-lazy-fixture
 python-pytest-lazy-fixtures
@@ -4098,7 +4101,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4285,7 +4287,6 @@ qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
-qtermwidget
 qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6

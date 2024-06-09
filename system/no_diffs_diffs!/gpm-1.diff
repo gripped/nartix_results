@@ -25,13 +25,3 @@
  
    cd "${pkgdir}/usr/lib/"
    ln -s libgpm.so.2.* libgpm.so
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1,3 @@
-+bash
-+git
-+procps-ng
