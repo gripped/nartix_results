@@ -185,6 +185,7 @@ ejabberd-runit
 ejabberd-s6
 elogind-runit
 erlang-s6
+esettingsd
 espeakup-dinit
 espeakup-openrc
 espeakup-runit

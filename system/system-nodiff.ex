@@ -155,6 +155,7 @@ openssl-1.1
 openssl
 pacman
 patch
+pciutils
 pcre
 pcre2
 perl

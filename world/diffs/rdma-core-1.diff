@@ -1,16 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- pkgname=rdma-core
- pkgdesc="RDMA core userspace libraries and daemons"
--pkgver=52.0
--pkgrel=1
-+pkgver=51.0
-+pkgrel=2
- arch=(x86_64)
- url="https://github.com/linux-rdma/rdma-core"
- license=(
 @@ -20,7 +20,7 @@
    glibc
    libnl
@@ -28,15 +17,6 @@
    valgrind
  )
  optdepends=(
-@@ -61,7 +60,7 @@
- replaces=("${_provides[@]}")
- backup=(etc/rdma/{rdma.conf,mlx4.conf})
- source=("https://github.com/linux-rdma/rdma-core/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
--sha512sums=('aae49f8b30d96902e3bb49d74168061e1e318876460a713ca7758455a049770e1f15139583a8bb5112856c5843155afd352a9d3122a6525070b1fea2c1286eae')
-+sha512sums=('28b01671c5878608e55780a701fc6de07c5369e3c1a64cacbc9ca4681c4e420e9df44bda410adbddda15e92dfde572917b720ea35599b0e97b43703ff5d1ae19')
- 
- prepare() {
-     cd $pkgname-$pkgver
 @@ -93,7 +92,7 @@
  package() {
      DESTDIR="$pkgdir" cmake --install build

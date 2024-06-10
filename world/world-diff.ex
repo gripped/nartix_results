@@ -34,7 +34,6 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
-cbindgen
 cgmanager
 chromium-bsu
 cinnamon-desktop
@@ -112,8 +111,6 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdal
-python-gdal
 gdm
 libgdm
 genxrdpattern
@@ -278,6 +275,7 @@ libinput
 libldm
 libmspub
 libnvme
+libotr
 libprocps
 libsidplay
 libtg_owt
@@ -485,6 +483,7 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
+python-passlib
 python-pyarrow
 python-pymupdf
 python-pyogrio

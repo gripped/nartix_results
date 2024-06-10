@@ -259,6 +259,7 @@ catch2
 catdoc
 catfish
 cbatticon
+cbindgen
 ccache
 cdparanoia
 cdrdao
@@ -620,6 +621,8 @@ gavl
 gcab
 gcc13
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1678,7 +1681,6 @@ libopusenc
 liborcus
 libosinfo
 libotf
-libotr
 libp11
 libpagemaker
 libpanel
@@ -3580,7 +3582,6 @@ python-parsedatetime
 python-parso
 python-partd
 python-parver
-python-passlib
 python-paste
 python-pastedeploy
 python-pastel
@@ -5320,6 +5321,7 @@ xsd
 xsel
 xsettingsd
 xsimd
+xsimd12
 xterm
 xtrans
 xvidcore
