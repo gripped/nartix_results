@@ -11,19 +11,16 @@
  optdepends=('libldap')
  license=('GPL')
  options=('emptydirs')
-@@ -26,9 +26,7 @@
-         "https://github.com/squid-cache/squid/commit/c11ee3d0812e7041f395073cf3b2f368f1caf26d.patch"
+@@ -21,20 +21,15 @@
+ source=("http://www.squid-cache.org/Versions/v6/$pkgname-$pkgver.tar.xz"{,.asc}
          'squid.pam'
          'squid.tmpfiles'
 -        'squid.sysusers'
 -        'squid-rotate.service'
 -        'squid-rotate.timer')
 +        'squid.sysusers')
- sha256sums=('1ad72d46e1cb556e9561214f0fb181adb87c7c47927ef69bc8acd68a03f61882'
+ sha256sums=('0b07b187e723f04770dd25beb89aec12030a158696aa8892d87c8b26853408a7'
              'SKIP'
-             '01f92f6d4dcc1d52f992064bdb007dc44aac91c51556a607a3992964f9f12fb9'
-@@ -38,13 +36,10 @@
-             'c32034504aa744bb3896819dac58a2efcb5dc19d4950355f53512ffa8a55d52b'
              '11fb388f8679fd6461e0de006810ea608a3686fffda16904b0ed71f412be499c'
              '495f54e51f6ec1e4dce87090d76718aea1eb37559c4439d876dd39598163062a'
 -            'c903eb86e6968b9d3bd0a9ad3335e8ce76a718b6217251e9dd7e66d5cf1ac94a'
@@ -37,7 +34,7 @@
    for p in ${source[@]}; do
      test "${p:(-5)}" == "patch" && patch -p1 -i ../${p:(-46)} || true
    done
-@@ -105,12 +100,7 @@
+@@ -95,12 +90,7 @@
    install -Dm644 "$srcdir/squid.pam" "$pkgdir/usr/lib/pam.d/squid"
    install -Dm644 "$srcdir/squid.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/squid.conf"
    install -Dm644 "$srcdir/squid.sysusers" "$pkgdir/usr/lib/sysusers.d/squid.conf"

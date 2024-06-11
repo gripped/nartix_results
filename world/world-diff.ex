@@ -57,6 +57,8 @@ dbus-broker
 dbus-python
 dbus-python-docs
 ddcutil
+deluge
+deluge-gtk
 dhcpcd
 dns-over-https
 docker
@@ -225,6 +227,7 @@ json-glib-docs
 kcalc
 kcoreaddons
 kgamma
+kio
 kismet
 kitty
 kitty-terminfo
@@ -261,8 +264,6 @@ libcanberra
 libdaemon
 libe-book
 libei
-libepoxy
-libepoxy-docs
 libfido2
 libfprint
 libgdata

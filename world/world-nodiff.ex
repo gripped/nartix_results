@@ -2,6 +2,7 @@
 a2ps
 a52dec
 aalib
+aardvark-dns
 abseil-cpp
 accerciser
 accessibility-inspector
@@ -399,8 +400,6 @@ ddclient
 debootstrap
 default-cursors
 dejagnu
-deluge
-deluge-gtk
 desktop-file-utils
 dev86
 devhelp
@@ -1199,7 +1198,6 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
-kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1483,6 +1481,8 @@ libdvdread
 libdwarf
 libebml
 libebur128
+libepoxy
+libepoxy-docs
 libepubgen
 libesmtp
 libetebase
