@@ -63,8 +63,6 @@ ansible
 ant
 ant-doc
 anthy
-aom
-aom-docs
 apache-orc
 apitrace
 apparmor
@@ -165,6 +163,7 @@ banner
 baobab
 bash-bats-assert
 bash-bats-support
+bash-completion
 bats-assert
 bats-support
 bats
@@ -400,6 +399,8 @@ ddclient
 debootstrap
 default-cursors
 dejagnu
+deluge
+deluge-gtk
 desktop-file-utils
 dev86
 devhelp
@@ -459,7 +460,6 @@ dtc
 duktape
 dump_syms
 dune
-duplicity
 dvd-rw-tools
 dvdauthor
 dvisvgm
@@ -480,6 +480,7 @@ electrum
 elementary-icon-theme
 elisa
 elixir
+ell
 embree3
 emovix
 enblend-enfuse
@@ -1481,8 +1482,6 @@ libdvdread
 libdwarf
 libebml
 libebur128
-libepoxy
-libepoxy-docs
 libepubgen
 libesmtp
 libetebase
@@ -2386,8 +2385,6 @@ packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
-pahole
-ostra-cg
 palapeli
 pam_wrapper
 pango
@@ -3224,6 +3221,7 @@ python-fields
 python-filebytes
 python-filelock
 python-findpython
+python-fiona
 python-fire
 python-first
 python-fissix
@@ -3582,6 +3580,7 @@ python-parsedatetime
 python-parso
 python-partd
 python-parver
+python-passlib
 python-paste
 python-pastedeploy
 python-pastel
@@ -3669,6 +3668,7 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
+python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -3730,6 +3730,7 @@ python-pynetbox
 python-pynitrokey
 python-pynvim
 python-pyocd
+python-pyogrio
 python-pyopencl
 pyopencl-headers
 python-pyopenssl

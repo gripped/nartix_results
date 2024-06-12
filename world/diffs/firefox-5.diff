@@ -3,10 +3,11 @@
 @@ -1,46 +1,31 @@
  
  pkgname=firefox
--pkgver=126.0.1
+-pkgver=127.0
 +pkgver=120.0
  pkgrel=1
- pkgdesc="Standalone web browser from mozilla.org"
+-pkgdesc="Fast, Private & Safe Web Browser"
++pkgdesc="Standalone web browser from mozilla.org"
  url="https://www.mozilla.org/firefox/"
  arch=(x86_64)
 -license=(MPL-2.0)
@@ -55,7 +56,7 @@
    imake
    inetutils
    jack
-@@ -64,43 +49,39 @@
+@@ -64,37 +49,35 @@
    'hunspell-en_US: Spell checking, American English'
    'libnotify: Notification integration'
    'networkmanager: Location detection via available WiFi networks'
@@ -72,26 +73,27 @@
  )
  source=(
    https://archive.mozilla.org/pub/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz{,.asc}
+-  $pkgname-symbolic.svg
    $pkgname.desktop
-   identity-icons-brand.svg
--  0001-Bug-1882209-Update-encoding_rs-to-0.8.34-to-deal-wit.patch
+-  org.mozilla.$pkgname.metainfo.xml
++  identity-icons-brand.svg
  )
  validpgpkeys=(
    14F26682D0916CDD81E37B6D61B7B526D98F0353
  )
--sha256sums=('f63026359f678a5d45cea4c7744fcef512abbb58a5b016bbbb1c6ace723a263b'
+-sha256sums=('ea6b089ff046ca503978fdaf11ea123c64f66bbcdc4a968bed8f7c93e9994321'
 +sha256sums=('e710058701074eda53ca9f5fd52c57254858a027984f735bdcd58d6906f6b574'
              'SKIP'
-             '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
 -            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9'
--            '22c030ef8a047802ae56d20b1c2a6a3830e9a5ac4e5399163a2b57a1c09a20b2')
--b2sums=('b5d381bbf3ac7d63561dc4c8f8955faeb08fe41e57a05b39585f01054a5348d68d6fc50d9c00d151c211d26ba2d0fb21843868e4cfc1445e4c637ac5756af161'
+             '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
+-            '58d78ce57b3ee936bc966458d6b20ab142d02a897bbe924b3f26717af0c5bee1')
+-b2sums=('78fe92863389763759ce6e25dccc8adb19b8c35b59e591f40982fe5cd3b5511fee8f809567fa5aade68fcf3b40c1860f5e63aabdef0421c94b803d30d32d4988'
 +            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
 +b2sums=('06f11d9d6f705c13c3288f1757d68c7c910e258b3efa643f0f0168fba0d585f758082af3905c951e227894df0c092965663f52196ee1fc3477195748e0049767'
          'SKIP'
-         'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
 -        '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
--        '6b8b6fe5d658fd76844fc1d9f47b3892bcb5a59a8d10baabf7d52fb4f7c9e8f4858576859390e6d4c542d46cabb335cd06f8c4a80a7d5dde0868b29cd048d308')
+         'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
+-        '2ce33432f8a73a4f1a412b7a065d3c124e1ca9f6bdf3fad0407e897efc0840f8ef43eeeb1b9bef4a102d9fac0b2c4a2ef205726b817f83fe9c3742d076778b14')
 -
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 -
@@ -102,13 +104,7 @@
  
  prepare() {
    mkdir mozbuild
-   cd firefox-$pkgver
--
--  patch -Np1 -i ../0001-Bug-1882209-Update-encoding_rs-to-0.8.34-to-deal-wit.patch
- 
-   echo -n "$_google_api_key" >google-api-key
-   echo -n "$_mozilla_api_key" >mozilla-api-key
-@@ -115,22 +96,18 @@
+@@ -113,22 +96,18 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -134,7 +130,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -146,16 +123,13 @@
+@@ -144,16 +123,13 @@
  build() {
    cd firefox-$pkgver
  
@@ -154,7 +150,7 @@
  
    ulimit -n 4096
  
-@@ -163,7 +137,7 @@
+@@ -161,7 +137,7 @@
    cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-profile-generate=cross
  END
@@ -163,7 +159,7 @@
  
    echo "Profiling instrumented browser..."
    ./mach package
-@@ -179,7 +153,7 @@
+@@ -177,7 +153,7 @@
    test -s jarlog
  
    echo "Removing instrumented browser..."
@@ -172,7 +168,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
-@@ -188,7 +162,10 @@
+@@ -186,7 +162,10 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END
@@ -184,7 +180,7 @@
  }
  
  package() {
-@@ -216,14 +193,14 @@
+@@ -214,14 +193,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -203,7 +199,23 @@
  END
  
    local i theme=official
-@@ -258,9 +235,16 @@
+@@ -235,10 +214,11 @@
+     "$pkgdir/usr/share/icons/hicolor/384x384/apps/$pkgname.png"
+   install -Dvm644 browser/branding/$theme/content/about-logo.svg \
+     "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
+-
+-  install -Dvm644 ../$pkgname-symbolic.svg -t "$pkgdir/usr/share/icons/hicolor/symbolic/apps"
+-  install -Dvm644 ../$pkgname.desktop -t "$pkgdir/usr/share/applications"
+-  install -Dvm644 ../org.mozilla.$pkgname.metainfo.xml -t "$pkgdir/usr/share/metainfo"
++  install -Dvm644 ../identity-icons-brand.svg \
++    "$pkgdir/usr/share/icons/hicolor/symbolic/apps/$pkgname-symbolic.svg"
++
++  install -Dvm644 ../$pkgname.desktop \
++    "$pkgdir/usr/share/applications/$pkgname.desktop"
+ 
+   install -Dvm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<END
+ exec /usr/lib/$pkgname/firefox "\$@"
+@@ -255,9 +235,16 @@
    install -Dvm644 /dev/stdin "$sprovider" <<END
  [Shell Search Provider]
  DesktopId=$pkgname.desktop
@@ -275,15 +287,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
- prepare() {
- mkdir mozbuild
- cd firefox-$pkgver
--patch -Np1 -i ../0001-Bug-1882209-Update-encoding_rs-to-0.8.34-to-deal-wit.patch
- echo -n "$_google_api_key" >google-api-key
- echo -n "$_mozilla_api_key" >mozilla-api-key
- cat >../mozconfig <<END
-@@ -13,20 +12,16 @@
+@@ -12,20 +12,16 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -306,7 +310,7 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
-@@ -38,20 +33,18 @@
+@@ -37,20 +33,18 @@
  }
  build() {
  cd firefox-$pkgver
@@ -331,7 +335,7 @@
  echo "Profiling instrumented browser..."
  ./mach package
  LLVM_PROFDATA=llvm-profdata \
-@@ -63,7 +56,7 @@
+@@ -62,7 +56,7 @@
  stat -c "Jar log found (%s bytes)" jarlog
  test -s jarlog
  echo "Removing instrumented browser..."
@@ -340,7 +344,7 @@
  echo "Building optimized browser..."
  cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-lto=cross,full
-@@ -71,5 +64,7 @@
+@@ -70,5 +64,7 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END

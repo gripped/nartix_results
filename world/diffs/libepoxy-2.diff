@@ -24,24 +24,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -0,0 +1,9 @@
-+
-+doxygen
-+git
-+glibc
-+graphviz
-+libglvnd
-+libx11
-+mesa-libgl
-+meson
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd libepoxy
- }
- build() {
--arch-meson libepoxy build -D docs=true
-+artix-meson libepoxy build -D docs=true
- meson compile -C build
- }
+@@ -7,4 +7,3 @@
+ libx11
+ mesa-libgl
+ meson
+-systemd

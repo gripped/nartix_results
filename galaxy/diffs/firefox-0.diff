@@ -1,8 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=firefox
+ pkgver=127.0
+ pkgrel=1
+-pkgdesc="Fast, Private & Safe Web Browser"
++pkgdesc="Standalone web browser from mozilla.org"
+ url="https://www.mozilla.org/firefox/"
+ arch=(x86_64)
+ license=(MPL-2.0)
 @@ -92,9 +92,7 @@
-         '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
-         '6b8b6fe5d658fd76844fc1d9f47b3892bcb5a59a8d10baabf7d52fb4f7c9e8f4858576859390e6d4c542d46cabb335cd06f8c4a80a7d5dde0868b29cd048d308')
+         'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
+         '2ce33432f8a73a4f1a412b7a065d3c124e1ca9f6bdf3fad0407e897efc0840f8ef43eeeb1b9bef4a102d9fac0b2c4a2ef205726b817f83fe9c3742d076778b14')
  
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 -
@@ -11,7 +20,7 @@
  
  prepare() {
    mkdir mozbuild
-@@ -122,15 +120,12 @@
+@@ -120,15 +118,12 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -28,7 +37,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -216,14 +211,14 @@
+@@ -214,14 +209,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -55,7 +64,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,14 +19,11 @@
+@@ -18,14 +18,11 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release

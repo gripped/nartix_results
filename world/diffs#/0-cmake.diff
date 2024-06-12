@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,9 +28,15 @@
+   'ninja: for ninja generator'
+   'qt6-base: cmake-gui'
+ )
+-source=(git+https://gitlab.kitware.com/cmake/cmake#tag=v$pkgver?signed)
+-sha512sums=('4f961a5c85fd7b96f6b367247f3f83e6afb3eefbb4d9a7242c8920fcdba5cd7ec69a49b84cf1445d112fc45a1f9904b816d0f56f918cf2421841d2d09e9a8d49')
++source=(git+https://gitlab.kitware.com/cmake/cmake#tag=v$pkgver?signed
++        artix-cmake.patch)
++sha512sums=('4f961a5c85fd7b96f6b367247f3f83e6afb3eefbb4d9a7242c8920fcdba5cd7ec69a49b84cf1445d112fc45a1f9904b816d0f56f918cf2421841d2d09e9a8d49'
++            'b9dc162136cb3038c63ae2235c665167ac6f7770927fe6c2bf4a4a86b0a995efa1d42e80bee762c77bc690115060b635ea5028a4b3ce4428d24ea851e94b34f6')
+ validpgpkeys=(CBA23971357C2E6590D9EFD3EC8FEF3A7BFB4EDA) # Brad King <brad.king@kitware.com>
++
++prepare() {
++    git -C "${pkgname}" apply  ../artix-cmake.patch
++}
+ 
+ build() {
+   cd ${pkgname}
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,6 @@
++prepare() {
++git -C "${pkgname}" apply  ../artix-cmake.patch
++}
+ build() {
+ cd ${pkgname}
+ ./bootstrap --prefix=/usr \

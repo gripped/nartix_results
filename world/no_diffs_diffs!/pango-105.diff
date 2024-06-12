@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -42,7 +42,7 @@
-     -D gtk_doc=true
+@@ -45,7 +45,7 @@
+     -D sysprof=enabled
    )
  
 -  arch-meson pango build "${meson_options[@]}"
@@ -17,9 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
- local meson_options=(
- -D gtk_doc=true
+@@ -6,6 +6,6 @@
+ -D documentation=true
+ -D sysprof=enabled
  )
 -arch-meson pango build "${meson_options[@]}"
 +artix-meson pango build "${meson_options[@]}"

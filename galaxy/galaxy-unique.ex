@@ -43,6 +43,7 @@ mint-y-icons
 mintlocale
 mkinitcpio-openswap
 mpd-dinit-user
+mpd-dinit
 nvidia-390xx-utils
 nvm
 octopi

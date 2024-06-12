@@ -3,6 +3,8 @@ accountsservice
 alacritty
 alsa-utils
 amule
+aom
+aom-docs
 apache
 apcupsd
 appstream
@@ -17,7 +19,6 @@ avahi
 ayatana-ido
 babl
 bash-bats
-bash-completion
 bluedevil
 bluez
 bluez-utils
@@ -57,8 +58,6 @@ dbus-broker
 dbus-python
 dbus-python-docs
 ddcutil
-deluge
-deluge-gtk
 dhcpcd
 dns-over-https
 docker
@@ -68,6 +67,7 @@ dovecot
 dracut
 drkonqi
 dunst
+duplicity
 earlyoom
 edk2
 edk2-shell
@@ -76,7 +76,6 @@ element.io
 element-web
 element-desktop
 elinks
-ell
 emacs
 emacs-nativecomp
 emacs-nox
@@ -264,6 +263,8 @@ libcanberra
 libdaemon
 libe-book
 libei
+libepoxy
+libepoxy-docs
 libfido2
 libfprint
 libgdata
@@ -385,6 +386,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+pahole
+ostra-cg
 paprefs
 passim
 pc-ble-driver
@@ -478,16 +481,12 @@ python-pyqt5
 pyqt6
 python-anytree
 python-debugpy
-python-fiona
 python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
-python-passlib
-python-pyarrow
 python-pymupdf
-python-pyogrio
 python-pyotp
 python-pyudev
 python-signedjson
