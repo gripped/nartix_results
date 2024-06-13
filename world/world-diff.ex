@@ -3,8 +3,6 @@ accountsservice
 alacritty
 alsa-utils
 amule
-aom
-aom-docs
 apache
 apcupsd
 appstream
@@ -220,6 +218,7 @@ java-openjfx
 java-openjfx-doc
 java-openjfx-src
 jedi-language-server
+jitterentropy
 js78
 json-glib
 json-glib-docs
@@ -386,8 +385,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-pahole
-ostra-cg
 paprefs
 passim
 pc-ble-driver
@@ -497,6 +494,7 @@ python-trustme
 python-ubjson
 python-urllib3
 python-waitress
+python-wurlitzer
 python-zope-testrunner
 qastools
 qemu
@@ -596,7 +594,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-radicale
 rdma-core
 redis
 redshift

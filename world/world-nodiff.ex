@@ -63,6 +63,8 @@ ansible
 ant
 ant-doc
 anthy
+aom
+aom-docs
 apache-orc
 apitrace
 apparmor
@@ -979,7 +981,6 @@ jbig2dec
 jbigkit
 jemalloc
 jenkins
-jitterentropy
 jose
 jp2a
 jq
@@ -2385,6 +2386,8 @@ packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
+pahole
+ostra-cg
 palapeli
 pam_wrapper
 pango
@@ -3612,6 +3615,7 @@ python-pg8000
 python-phonenumbers
 python-piccata
 python-pickleshare
+python-pika
 python-pikepdf
 python-pillow
 python-pint
@@ -4145,7 +4149,6 @@ python-wsaccel
 python-wsgiproxy2
 python-wsproto
 python-wstools
-python-wurlitzer
 python-wxpython
 python-xapian-haystack
 python-xapian
@@ -4302,6 +4305,7 @@ qutebrowser
 r
 r8168
 radeontop
+radicale
 raft
 ragel
 range-v3

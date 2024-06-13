@@ -4,12 +4,12 @@
  
  pkgname=qt6-tools
  pkgver=6.7.1
--pkgrel=2
+-pkgrel=3
 +pkgrel=2.1
  arch=(x86_64)
  url='https://www.qt.io'
  license=(GPL3 LGPL3 FDL custom)
-@@ -23,15 +23,18 @@
+@@ -23,17 +23,18 @@
  groups=(qt6)
  _pkgfn=${pkgname/6-/}
  source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver
@@ -26,6 +26,8 @@
    git submodule init
    git submodule set-url src/assistant/qlitehtml "$srcdir"/qlitehtml
    git -c protocol.file.allow=always submodule update
+-
+-  git cherry-pick -n 46ffaed90df8c14d67b4b16fdf5e0b87ab227c88 # Fix crash in Designer
 +  patch -Np1 -i $srcdir/zstd.patch
  }
  
@@ -38,10 +40,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,7 @@
+@@ -3,7 +3,7 @@
  git submodule init
  git submodule set-url src/assistant/qlitehtml "$srcdir"/qlitehtml
  git -c protocol.file.allow=always submodule update
+-git cherry-pick -n 46ffaed90df8c14d67b4b16fdf5e0b87ab227c88 # Fix crash in Designer
 +patch -Np1 -i $srcdir/zstd.patch
  }
  build() {
