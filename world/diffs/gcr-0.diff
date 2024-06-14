@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,10 +46,11 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=disabled
+     -D ssh_agent=false
+   )
+ 
+-  arch-meson gcr build "${meson_options[@]}"
++  artix-meson gcr build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -62,7 +63,6 @@
+     libgck-1.so
+     libgcr-{base,ui}-3.so
+   )
+-  install=gcr.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,8 +3,9 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd=disabled
+ -D ssh_agent=false
+ )
+-arch-meson gcr build "${meson_options[@]}"
++artix-meson gcr build "${meson_options[@]}"
+ meson compile -C build
+ }

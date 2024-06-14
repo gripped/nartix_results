@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=signon-kwallet-extension
+-pkgver=24.05.1
++pkgver=24.05.0
+ pkgrel=1
+ pkgdesc='KWallet integration for signon framework'
+ arch=(x86_64)
+@@ -15,7 +15,7 @@
+ groups=(kde-applications
+         kde-network)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ed7f30a6249f27e61fb294b7c805c4824055694a2b051d3b7a6152beed1b53fc'
++sha256sums=('b22e062c73de3f8707c08db9388415e27c40c05e70f5258c4b5fedd04ed8afc7'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

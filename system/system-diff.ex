@@ -23,6 +23,7 @@ gcc-objc
 lto-dump
 libgccjit
 glib2
+glib2-devel
 glib2-docs
 glibc
 lib32-glibc

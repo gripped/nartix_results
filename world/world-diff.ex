@@ -13,6 +13,7 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
+audiotube
 avahi
 ayatana-ido
 babl
@@ -67,6 +68,7 @@ drkonqi
 dunst
 duplicity
 earlyoom
+editorconfig-core-c
 edk2
 edk2-shell
 edk2-ovmf
@@ -218,14 +220,12 @@ java-openjfx
 java-openjfx-doc
 java-openjfx-src
 jedi-language-server
-jitterentropy
 js78
 json-glib
 json-glib-docs
 kcalc
 kcoreaddons
 kgamma
-kio
 kismet
 kitty
 kitty-terminfo
@@ -492,7 +492,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-wurlitzer
 python-zope-testrunner
@@ -585,7 +584,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
 qt6-webengine
 qterminal
 qtermwidget

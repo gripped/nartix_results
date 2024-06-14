@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kaddressbook
+-pkgver=24.05.1
++pkgver=24.05.0
+ pkgrel=1
+ pkgdesc='KDE contact manager'
+ arch=(x86_64)
+@@ -35,7 +35,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('e4ddf148819d85305003130a7fb0c47d607ff20b4f12d84b3d90d3443478bcd8'
++sha256sums=('b1d27df875f5ac17b996bdc668af340582dc235852b358a475f002f185241351'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,26 +0,0 @@
+-akonadi-contacts
+-akonadi-search
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-grantleetheme
+-kcmutils
+-kcolorscheme
+-kconfig
+-kconfigwidgets
+-kcontacts
+-kcoreaddons
+-kcrash
+-kdepim-runtime
+-kdoctools
+-ki18n
+-kitemmodels
+-kontactinterface
+-kparts
+-kuserfeedback
+-kwidgetsaddons
+-kxmlgui
+-libakonadi
+-libkdepim
+-pimcommon
+-qt6-base

@@ -128,7 +128,6 @@ audacity-docs
 audex
 audiocd-kio
 audiofile
-audiotube
 augeas
 auth-tarball-from-git
 autoconf-archive
@@ -472,7 +471,6 @@ eclipse-ecj
 ecryptfs-utils
 ed
 editline
-editorconfig-core-c
 egl-wayland
 eglexternalplatform
 eigen
@@ -981,6 +979,7 @@ jbig2dec
 jbigkit
 jemalloc
 jenkins
+jitterentropy
 jose
 jp2a
 jq
@@ -1200,6 +1199,7 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
+kio
 kio5-extras
 kio5
 kirigami-addons
@@ -4107,6 +4107,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4283,6 +4284,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland

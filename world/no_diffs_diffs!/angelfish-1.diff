@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=angelfish
+-pkgver=24.05.1
++pkgver=24.05.0
+ pkgrel=1
+ pkgdesc='Web browser for Plasma Mobile'
+ url='https://apps.kde.org/angelfish/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(futuresql
++depends=(futuresql-qt6
+          gcc-libs
+          glibc
+          kconfig
+@@ -29,7 +29,7 @@
+ groups=(kde-applications
+         kde-network)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('000b8bbc782e98dc4fad2e412fab149b32f3359a821c2db71728ad45ff50b7bf'
++sha256sums=('ca5b4315fb4f3f6562b045f2f31241ce8ff5c7bbe0cab80c534942dfcd380a7c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ corrosion
+ extra-cmake-modules
+-futuresql
++futuresql-qt6
+ gcc-libs
+ glibc
+ kconfig
