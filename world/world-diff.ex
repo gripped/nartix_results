@@ -13,7 +13,6 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
-audiotube
 avahi
 ayatana-ido
 babl
@@ -197,6 +196,7 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
+hexchat
 hidapi
 hwloc
 hyprland
@@ -220,10 +220,10 @@ java-openjfx
 java-openjfx-doc
 java-openjfx-src
 jedi-language-server
+js115
 js78
 json-glib
 json-glib-docs
-kcalc
 kcoreaddons
 kgamma
 kismet
@@ -490,10 +490,10 @@ python-signedjson
 python-sphinx-autodoc-typehints
 python-tblib
 python-teamcity-messages
+python-textual
 python-trustme
 python-ubjson
 python-waitress
-python-wurlitzer
 python-zope-testrunner
 qastools
 qemu

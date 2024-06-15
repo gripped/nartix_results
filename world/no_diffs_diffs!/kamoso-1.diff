@@ -1,44 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=kamoso
--pkgver=24.05.1
-+pkgver=24.05.0
- pkgrel=1
- pkgdesc='A webcam recorder from KDE community'
- url='https://apps.kde.org/kamoso/'
-@@ -25,13 +25,12 @@
-          qt5-declarative
-          qt5-graphicaleffects)
- makedepends=(extra-cmake-modules
--             glib2-devel
-              kdoctools5
-              python)
- groups=(kde-applications
-         kde-multimedia)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('1c2ab9f865a482fdb2547cb95b7e2108825ae8f68d045b4a2430e33c3d859a8a'
-+sha256sums=('011243de1aefa203f78510d75eb5128c1bdee435d45117a642efe26f99a2090e'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
-@@ -47,4 +46,3 @@
+@@ -47,4 +47,3 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  }
 -
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,7 +1,6 @@
- extra-cmake-modules
- gcc-libs
- glib2
--glib2-devel
- glibc
- gst-plugins-bad
- gst-plugins-base-libs

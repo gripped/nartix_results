@@ -8,19 +8,3 @@
  _commit=63c0e78d84ecbfcf8accd8bac04404427899053b  # tags/v3.4.0
  source=("git+https://github.com/FreeGLUTProject/freeglut#commit=$_commit")
  b2sums=('SKIP')
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,9 +0,0 @@
--cmake
--git
--glu
--libgl
--libxi
--libxrandr
--libxxf86vm
--mesa
--ninja

@@ -108,6 +108,7 @@ libretro-snes9x
 libsidplayfp
 libsysstat
 libtg_owt
+libwnck
 libxfce4ui
 libxfce4util
 lightdm-gtk-greeter

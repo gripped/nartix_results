@@ -128,6 +128,7 @@ audacity-docs
 audex
 audiocd-kio
 audiofile
+audiotube
 augeas
 auth-tarball-from-git
 autoconf-archive
@@ -847,7 +848,6 @@ helix
 help2man
 herbstluftwm
 hevea
-hexchat
 hexer-hobu
 hicolor-icon-theme
 hiera
@@ -986,7 +986,6 @@ jq
 jrnl
 jruby
 js102
-js115
 js91
 jshon
 jsoncpp
@@ -1052,6 +1051,7 @@ kbruch
 kcachegrind
 kcachegrind-common
 qcachegrind
+kcalc
 kcalendarcore
 kcalendarcore5
 kcalutils
@@ -4048,7 +4048,6 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
-python-textual
 python-threadpoolctl
 python-tiktoken
 python-time-machine
@@ -4150,6 +4149,7 @@ python-wsaccel
 python-wsgiproxy2
 python-wsproto
 python-wstools
+python-wurlitzer
 python-wxpython
 python-xapian-haystack
 python-xapian
