@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
- 
+@@ -14,7 +14,7 @@
  build() {
+   sed -i "s/'appdata'/'metainfo'/g" $pkgname/data/meson.build
    mkdir -p build
 -  arch-meson build $pkgname -D b_ndebug=true
 +  artix-meson build $pkgname -D b_ndebug=true
@@ -17,8 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  build() {
+ sed -i "s/'appdata'/'metainfo'/g" $pkgname/data/meson.build
  mkdir -p build
 -arch-meson build $pkgname -D b_ndebug=true
 +artix-meson build $pkgname -D b_ndebug=true

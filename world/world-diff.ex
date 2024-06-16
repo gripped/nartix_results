@@ -99,6 +99,7 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
+freeglut
 freerdp
 freerdp2
 fwupd-efi
@@ -220,7 +221,6 @@ java-openjfx
 java-openjfx-doc
 java-openjfx-src
 jedi-language-server
-js115
 js78
 json-glib
 json-glib-docs
@@ -346,6 +346,7 @@ mesa-vdpau
 modemmanager
 libmm-glib
 modest
+mosh
 mosquitto
 mpd
 multipath-tools

@@ -595,7 +595,6 @@ frameworkintegration5
 francis
 freealut
 freecell-solver
-freeglut
 freeimage
 freeradius
 freetds
@@ -895,6 +894,7 @@ hyphen
 hyphen-en
 hyprcursor
 hyprlang
+hyprutils
 hyprwayland-scanner
 i2c-tools
 i3-wm
@@ -986,6 +986,7 @@ jq
 jrnl
 jruby
 js102
+js115
 js91
 jshon
 jsoncpp
@@ -2162,7 +2163,6 @@ mongo-c-driver
 mono
 mopidy
 moreutils
-mosh
 motion
 mousepad
 movit

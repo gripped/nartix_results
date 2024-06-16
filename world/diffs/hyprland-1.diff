@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,52 +1,48 @@
+@@ -1,53 +1,48 @@
  
  pkgname=hyprland
--pkgver=0.41.0
+-pkgver=0.41.1
 -pkgrel=1
 +pkgver=0.35.0
 +pkgrel=2
@@ -22,6 +22,7 @@
           glslang
 -         hyprcursor libhyprcursor.so
 -         hyprlang libhyprlang.so
+-         hyprutils
 -         libdisplay-info libdisplay-info.so
 -         libdrm # libdrm.so
 -         libglvnd libEGL.so libGLESv2.so libOpenGL.so
@@ -78,16 +79,16 @@
               meson
               ninja
               vulkan-headers
-@@ -56,7 +52,7 @@
+@@ -57,7 +52,7 @@
              'meson: to build and install plugins using hyprpm')
  _archive="${pkgname^}-$pkgver"
  source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
--sha256sums=('36c84bf0deeae01c73b9ed831c7716de3b33fa966a619d996a102cce1c6cdce1')
+-sha256sums=('4572e3990a18de602410b422ae9232233f2a699b3d0132b90a6e1c25f7369a75')
 +sha256sums=('de53d764606131c8aacc209f8a3ad6e619fdcddd16a7cdf4d8ca343816bb8c1b')
  
  prepare() {
  	ln -sf hyprland-source "$_archive"
-@@ -72,11 +68,11 @@
+@@ -73,11 +68,11 @@
  package() {
  	cd "$_archive"
  	find src \( -name '*.h' -o -name '*.hpp' \) -exec install -Dm0644 {} "$pkgdir/usr/include/hyprland/{}" \;
@@ -103,7 +104,7 @@
  	popd
  	mkdir -p "$pkgdir/usr/include/hyprland/protocols"
  	cp protocols/*-protocol.h "$pkgdir/usr/include/hyprland/protocols"
-@@ -85,16 +81,11 @@
+@@ -86,16 +81,11 @@
  	popd
  	install -Dm0644 -t "$pkgdir/usr/share/pkgconfig" build/hyprland.pc
  	install -Dm0644 -t "$pkgdir/usr/share/man/man1" docs/{Hyprland,hyprctl}.1
@@ -127,7 +128,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,49 +2,28 @@
+@@ -2,50 +2,28 @@
  cmake
  gcc-libs
  gdb
@@ -136,6 +137,7 @@
  glslang
 -hyprcursor
 -hyprlang
+-hyprutils
 -hyprwayland-scanner
 -libEGL.so
 -libGLESv2.so
@@ -179,7 +181,7 @@
  tomlplusplus
  vulkan-headers
  vulkan-icd-loader
-@@ -54,7 +33,6 @@
+@@ -55,7 +33,6 @@
  xcb-proto
  xcb-util
  xcb-util-errors

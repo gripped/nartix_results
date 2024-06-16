@@ -61,6 +61,7 @@ fluxbox
 font-manager
 fpc-src
 fpc
+freecell-solver
 garcon
 girara
 gpicview
