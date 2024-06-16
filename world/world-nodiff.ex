@@ -462,6 +462,7 @@ dtc
 duktape
 dump_syms
 dune
+duplicity
 dvd-rw-tools
 dvdauthor
 dvisvgm
@@ -1558,7 +1559,6 @@ libidn
 libiec61883
 libieee1284
 libimagequant
-libimobiledevice-glue
 libimobiledevice
 libindicator
 libindicator-gtk2
@@ -2163,6 +2163,7 @@ mongo-c-driver
 mono
 mopidy
 moreutils
+mosh
 motion
 mousepad
 movit
@@ -2277,14 +2278,6 @@ numactl
 numlockx
 nuspell
 nvchecker
-nvidia-open
-nvidia-open-dkms
-nvidia-settings
-libxnvctrl
-nvidia-utils
-opencl-nvidia
-nvidia-dkms
-nvidia
 oath-toolkit
 obconf-qt
 obs-studio
@@ -3729,7 +3722,6 @@ python-pymacaroons
 python-pymongo
 python-pymysql
 python-pynacl
-python-pynamodb
 python-pynetbox
 python-pynitrokey
 python-pynvim
@@ -3945,7 +3937,6 @@ python-setuptools-rust
 python-setuptools-scm
 python-setuptools
 python-sgmllib3k
-python-sh
 python-shapely
 python-shellingham
 python-should-dsl
@@ -4106,7 +4097,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop

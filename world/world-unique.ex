@@ -386,9 +386,6 @@ ntp-dinit
 ntp-openrc
 ntp-runit
 ntp-s6
-nvidia-utils-dinit
-nvidia-utils-openrc
-nvidia-utils-s6
 openfire-dinit
 openfire-openrc
 openfire-runit

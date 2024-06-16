@@ -31,6 +31,8 @@ glibc-locales
 gssproxy
 iputils
 libusb
+libxml2
+libxml2-docs
 linux
 linux-headers
 linux-docs

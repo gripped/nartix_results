@@ -121,12 +121,10 @@ lib32-libxi
 lib32-libxinerama
 lib32-libxkbcommon
 lib32-libxkbcommon-x11
-lib32-libxml2
 lib32-libxmu
 lib32-libxrandr
 lib32-libxrender
 lib32-libxshmfence
-lib32-libxslt
 lib32-libxss
 lib32-libxt
 lib32-libxtst
@@ -140,9 +138,6 @@ lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss
-lib32-nvidia-utils
-lib32-nvidia-utils
-lib32-opencl-nvidia
 lib32-ocl-icd
 lib32-openal
 lib32-openssl

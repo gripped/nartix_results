@@ -14,6 +14,7 @@ mate-session-manager
 mate-system-monitor
 mpd
 nushell
+nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
 tor

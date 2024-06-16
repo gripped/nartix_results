@@ -65,7 +65,6 @@ dovecot
 dracut
 drkonqi
 dunst
-duplicity
 earlyoom
 editorconfig-core-c
 edk2
@@ -272,6 +271,7 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
+libimobiledevice-glue
 libinput
 libldm
 libmspub
@@ -346,7 +346,6 @@ mesa-vdpau
 modemmanager
 libmm-glib
 modest
-mosh
 mosquitto
 mpd
 multipath-tools
@@ -369,6 +368,13 @@ nm-cloud-setup
 networkmanager-docs
 nsd
 nushell
+nvidia-open
+nvidia-settings
+nvidia-utils-dinit
+nvidia-utils-openrc
+nvidia-utils-s6
+nvidia-utils
+nvidia
 nvme-cli
 nvtop
 onboard
@@ -485,8 +491,10 @@ python-intelhex
 python-ipywidgets
 python-libtmux
 python-pymupdf
+python-pynamodb
 python-pyotp
 python-pyudev
+python-sh
 python-signedjson
 python-sphinx-autodoc-typehints
 python-tblib
@@ -494,6 +502,7 @@ python-teamcity-messages
 python-textual
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools

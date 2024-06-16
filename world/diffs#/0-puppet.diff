@@ -1,13 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,6 +32,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=puppet
+-pkgver=7.31.0
+-pkgrel=2
++pkgver=7.30.0
++pkgrel=0
+ pkgdesc='Server automation framework and application'
+ arch=('any')
+ url='https://www.puppet.com/community/open-source'
+@@ -32,8 +32,9 @@
          "yumrepo_core::git+https://github.com/puppetlabs/puppetlabs-yumrepo_core#commit=${_yumrepo_commit}"
          "zfs_core::git+https://github.com/puppetlabs/puppetlabs-zfs_core#commit=${_zfs_commit}"
          "zone_core::git+https://github.com/puppetlabs/puppetlabs-zone_core#commit=${_zone_commit}"
 +        "artix.patch::https://github.com/puppetlabs/puppet/commit/b31d40b687c05ef6f6350b29f727144285b7aaab.patch"
          )
- sha512sums=('44dc5c790dafcbbf29a1f07845215f601247307b6134217ef90abd4e14a7ee917b6f554f1db7b327c3a68e04449f5d87d37ae72497d00c24560bc41219b2eb93'
+-sha512sums=('2b67f69fbc0b80ae7ccadc2e361ce54326610aba14433bb178be69e697b8d2ba5b201878c4fce490dff3a1218988e765e338fa71265bfb436fe9c0eb266d6e62'
++sha512sums=('44dc5c790dafcbbf29a1f07845215f601247307b6134217ef90abd4e14a7ee917b6f554f1db7b327c3a68e04449f5d87d37ae72497d00c24560bc41219b2eb93'
              '6ebc4603db2e702623070f1703d3e82a25c689b8c149c3328660ab43d74bfa49c5853aa14d267b48c9f91d12bd4a96579bcf3184f8881a57748763484892bf90'
+             '584093f64216becfeeb45514c9308c7df6819b39b93489790656f6e206c52abb7ed7077a9630c3f0aa2a6b9a6e57502f84cb1a862c03df325f2d97772773c4ce'
+             '2bcb93ea1d9d6312205aa1975b1e233414d7bd9c713fb2e59a04f2f3ca436b89dde5b3070b3899fc0a3b5259866c6f3039c06517041d56d73dba08926e7afbec'
 @@ -42,14 +43,15 @@
              '9d458354a95206b998a148bf9b459c8a792051ddaf03672f0ea4c161721ac405c00523ecc065e6acfa610cb9b61e7940a1611b08bb2395c8d3d5a620c6c3662a'
              '6203781a13142747827ee658db3e428ed97732abf356f88224a7f780bfa046ddafcdd69f1e551b3dbe1ad5b00d9a78248a1ba7e97c58fbac636500a95c5e3b7e'
@@ -26,15 +39,24 @@
  }
  
  check() {
-@@ -71,8 +73,6 @@
+@@ -61,7 +63,7 @@
+ 
+   local _gemdir="$(gem env gemdir)"
+ 
+-  install -Dm644 puppet.gemspec "${pkgdir}/${_gemdir}/specifications/puppet-${pkgver}.gemspec"
++  install -Dm644 .gemspec "${pkgdir}/${_gemdir}/specifications/puppet-${pkgver}.gemspec"
+ 
+ 
+   ruby install.rb --destdir="$pkgdir" --sitelibdir="$( ruby -e 'puts RbConfig::CONFIG["vendorlibdir"]' )"
+@@ -70,8 +72,6 @@
+ 
    echo 'u puppet 52 "Puppet" /var/lib/puppet' > "$pkgdir"/usr/lib/sysusers.d/$pkgname.conf
    echo "d /run/puppetlabs 0755 $pkgname $pkgname -" > "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
- 
--  install -Dm644 "${srcdir}/$pkgname-${pkgver}/ext/systemd/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
 -
+-  install -Dm644 "${srcdir}/$pkgname-${pkgver}/ext/systemd/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+ 
    install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
  
-   install -dm775 "$pkgdir"/var/lib/puppet
 
 
 ############# Stripped diff below #################

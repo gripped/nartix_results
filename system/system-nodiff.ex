@@ -115,8 +115,6 @@ libunistring
 libverto
 libxcrypt
 libxcrypt-compat
-libxml2
-libxml2-docs
 licenses
 links
 linux-api-headers

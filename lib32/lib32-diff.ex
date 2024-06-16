@@ -13,6 +13,8 @@ lib32-libgudev
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
+lib32-libxml2
+lib32-libxslt
 lib32-mesa
 lib32-vulkan-mesa-layers
 lib32-opencl-clover-mesa
@@ -24,6 +26,7 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
+lib32-nvidia-utils
 lib32-p11-kit
 lib32-pam
 lib32-pcsclite
