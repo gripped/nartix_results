@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,8 +15,8 @@
+ arch=(x86_64)
+ url="https://github.com/tesseract-ocr/tesseract"
+ license=('APACHE')
+-depends=(gcc-libs curl libarchive leptonica)
+-makedepends=(icu pango asciidoc)
++depends=(cairo gcc-libs curl libarchive leptonica)
++makedepends=(automake icu pango asciidoc)
+ optdepends=('icu: for text2image'
+             'pango: for text2image')
+ for _lang in "${_langs[@]}"; do
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,6 @@
+ asciidoc
++automake
++cairo
+ curl
+ gcc-libs
+ icu

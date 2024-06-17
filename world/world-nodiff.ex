@@ -904,7 +904,6 @@ i3lock
 i3status
 iagno
 ibm-sw-tpm2
-icewm
 icmake
 icon-naming-utils
 icoutils
@@ -2373,9 +2372,6 @@ oxygen-sounds
 oxygen
 oxygen5
 p7zip
-packagekit-qt
-packagekit-qt5
-packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
@@ -3722,6 +3718,7 @@ python-pymacaroons
 python-pymongo
 python-pymysql
 python-pynacl
+python-pynamodb
 python-pynetbox
 python-pynitrokey
 python-pynvim
@@ -3937,6 +3934,7 @@ python-setuptools-rust
 python-setuptools-scm
 python-setuptools
 python-sgmllib3k
+python-sh
 python-shapely
 python-shellingham
 python-should-dsl
@@ -4097,6 +4095,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop

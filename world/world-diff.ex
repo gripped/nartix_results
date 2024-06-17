@@ -203,6 +203,7 @@ hyprland
 i2pd
 ibus
 libibus
+icewm
 igsc
 iio-sensor-proxy
 intel-metee
@@ -389,6 +390,9 @@ openrct2
 opensmtpd
 openvpn
 ostree
+packagekit-qt
+packagekit-qt5
+packagekit-qt6
 packagekit
 libpackagekit-glib
 pacman-contrib
@@ -491,10 +495,8 @@ python-intelhex
 python-ipywidgets
 python-libtmux
 python-pymupdf
-python-pynamodb
 python-pyotp
 python-pyudev
-python-sh
 python-signedjson
 python-sphinx-autodoc-typehints
 python-tblib
@@ -502,7 +504,6 @@ python-teamcity-messages
 python-textual
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools

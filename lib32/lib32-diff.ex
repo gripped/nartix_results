@@ -13,8 +13,6 @@ lib32-libgudev
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
-lib32-libxml2
-lib32-libxslt
 lib32-mesa
 lib32-vulkan-mesa-layers
 lib32-opencl-clover-mesa
