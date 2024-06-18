@@ -3,34 +3,26 @@
 @@ -6,8 +6,8 @@
  url='https://developers.yubico.com/libfido2/'
  arch=('x86_64')
- license=('BSD')
+ license=('BSD-2-Clause')
 -depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'systemd-libs'  'libudev.so' 'zlib')
 -makedepends=('cmake' 'systemd')
-+depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'libudev.so' 'zlib')
++depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'libudev' 'zlib')
 +makedepends=('cmake' 'udev')
  provides=('libfido2.so')
  source=("https://developers.yubico.com/libfido2/Releases/libfido2-${pkgver}.tar.gz"{,.sig})
- sha512sums=('83454b0db0cc8546f377d0dd59f95785fe6b73cf28e499a6182a6ece4b7bce17c3e750155262adf71f339ec0b3b6c3d3d64a07b01c8428b4b91de97ae768f0e6'
-@@ -23,6 +23,10 @@
- 
- build() {
-   cd ${pkgname}-${pkgver}
-+
-+  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
-+  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
-+
-   cmake -B build \
-     -DCMAKE_INSTALL_PREFIX=/usr \
-     -DCMAKE_INSTALL_LIBDIR=lib \
+ sha512sums=('cca142e3b3b7e216289934785fcad6be3bcd344001445f04fcecf01d4f568523b949c7204eec2f32faf12605a98c7496b9f64bb34d6a312342fa997689e61635'
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -5,6 +5,5 @@
+@@ -3,8 +3,7 @@
+ hidapi
+ libcbor
  libcbor.so
- libudev.so
+-libudev.so
++libudev
  openssl
 -systemd
 -systemd-libs

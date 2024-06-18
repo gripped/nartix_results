@@ -34,6 +34,7 @@ brltty-udev-generic
 btop
 bumblebee
 cgmanager
+chafa
 chromium-bsu
 cinnamon-desktop
 clamav
@@ -98,7 +99,6 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
-freeglut
 freerdp
 freerdp2
 fwupd-efi
@@ -272,12 +272,10 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
-libimobiledevice-glue
 libinput
 libldm
 libmspub
 libnvme
-libotr
 libprocps
 libsidplay
 libtg_owt
@@ -501,9 +499,9 @@ python-signedjson
 python-sphinx-autodoc-typehints
 python-tblib
 python-teamcity-messages
-python-textual
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools

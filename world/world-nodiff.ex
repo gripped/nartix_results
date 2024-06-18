@@ -285,7 +285,6 @@ certbot
 cervisia
 cfitsio
 cgns
-chafa
 chatblade
 check-jsonschema
 check
@@ -596,6 +595,7 @@ frameworkintegration5
 francis
 freealut
 freecell-solver
+freeglut
 freeimage
 freeradius
 freetds
@@ -1558,6 +1558,7 @@ libidn
 libiec61883
 libieee1284
 libimagequant
+libimobiledevice-glue
 libimobiledevice
 libindicator
 libindicator-gtk2
@@ -1681,6 +1682,7 @@ libopusenc
 liborcus
 libosinfo
 libotf
+libotr
 libp11
 libpagemaker
 libpanel
@@ -4037,6 +4039,7 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
+python-textual
 python-threadpoolctl
 python-tiktoken
 python-time-machine
@@ -4095,7 +4098,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop

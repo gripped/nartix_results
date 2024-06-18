@@ -3,7 +3,7 @@
 @@ -1,21 +1,18 @@
  
  pkgname=editorconfig-core-c
--pkgver=0.12.8
+-pkgver=0.12.9
 +pkgver=0.12.7
  pkgrel=1
  pkgdesc='EditorConfig core code written in C (for use by plugins supporting EditorConfig parsing)'
@@ -16,7 +16,7 @@
 -             doxygen
 -             git)
 -source=(git+https://github.com/editorconfig/$pkgname#tag=v$pkgver)
--sha256sums=('dfd36aebdfd1130690bcfd04be8c232c9aded81b55090a28562cd04ce00af394')
+-sha256sums=('d18aa56df9b9839b47e310d5dcf5b118fe2ae4e4b79ce09c17793fd8f452a1c5')
 +license=(BSD)
 +depends=(pcre2)
 +makedepends=(cmake doxygen)
