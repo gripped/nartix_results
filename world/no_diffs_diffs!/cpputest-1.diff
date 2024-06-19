@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=cpputest
+ pkgver=4.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc="Unit testing and mocking framework for C/C++"
+ arch=(x86_64)
+ url="https://github.com/cpputest/cpputest"
+-license=(BSD-3-Clause)
++license=(BSD)
+ makedepends=(cmake)
+ options=(
+   !strip

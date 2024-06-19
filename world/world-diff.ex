@@ -34,7 +34,6 @@ brltty-udev-generic
 btop
 bumblebee
 cgmanager
-chafa
 chromium-bsu
 cinnamon-desktop
 clamav
@@ -49,7 +48,6 @@ conmon
 connman
 containerd
 cppcheck
-cppzmq
 crun
 cups
 libcups
@@ -275,6 +273,7 @@ libhandy0
 libinput
 libldm
 libmspub
+libndp
 libnvme
 libprocps
 libsidplay
@@ -486,11 +485,14 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
+python-argcomplete
 python-debugpy
+python-django-compressor
 python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
+python-jaraco.text
 python-libtmux
 python-pymupdf
 python-pyotp
@@ -501,7 +503,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -633,6 +634,7 @@ smartmontools
 snapper
 solid
 spice-vdagent
+spirv-tools
 squid
 sshguard
 sslh
@@ -668,6 +670,7 @@ udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
+uhttpmock
 umockdev
 unbound
 upower

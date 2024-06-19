@@ -409,6 +409,7 @@ openvpn-dinit
 openvpn-openrc
 openvpn-runit
 openvpn-s6
+openvswitch-dinit
 pam_rundir
 pambase-turnstile
 pandoc-bin

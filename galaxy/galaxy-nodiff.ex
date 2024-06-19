@@ -190,6 +190,7 @@ mate-themes
 mate-user-guide
 mate-user-share
 mate-utils
+mednafen
 mgba
 libmgba
 mgba-sdl

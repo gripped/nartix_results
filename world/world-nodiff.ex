@@ -285,6 +285,7 @@ certbot
 cervisia
 cfitsio
 cgns
+chafa
 chatblade
 check-jsonschema
 check
@@ -362,6 +363,7 @@ cpp-hocon
 cppdap
 cppunit
 cpputest
+cppzmq
 criu
 cryptoplusplus
 cscope
@@ -1651,7 +1653,6 @@ libmysofa
 libmythes
 libnatpmp
 libnbd
-libndp
 libnet
 libnewt
 libnfs
@@ -2930,7 +2931,6 @@ python-apscheduler
 python-apsw
 python-archinfo
 python-aresponses
-python-argcomplete
 python-argh
 python-argon2-cffi-bindings
 python-argon2_cffi
@@ -3136,7 +3136,6 @@ python-distutils-extra
 python-django-allauth
 python-django-appconf
 python-django-classy-tags
-python-django-compressor
 python-django-crispy-forms
 python-django-debug-toolbar
 python-django-environ
@@ -3361,7 +3360,6 @@ python-jaraco.functools
 python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
-python-jaraco.text
 python-jedi
 python-jeepney
 python-jellyfish
@@ -4098,6 +4096,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4731,7 +4730,6 @@ spice-protocol
 spice
 spirv-headers
 spirv-llvm-translator
-spirv-tools
 splint
 spotifyd
 sqlcipher
@@ -5045,7 +5043,6 @@ ufmt
 ufw
 uget
 uglify-js
-uhttpmock
 umbrello
 umurmur
 unarchiver
