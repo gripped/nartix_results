@@ -1,6 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -62,7 +62,7 @@
+@@ -1,8 +1,8 @@
+ 
+ pkgname=kwin
+-pkgver=6.1.0
++pkgver=6.0.5
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=1
++pkgrel=2
+ pkgdesc='An easy to use, but flexible, composited Window Manager'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+@@ -42,7 +42,6 @@
+          lcms2
+          libdisplay-info
+          libdrm
+-         libei
+          libepoxy
+          libinput
+          libpipewire
+@@ -63,7 +62,7 @@
           qt6-sensors
           qt6-tools
           qt6-wayland
@@ -9,7 +28,31 @@
           wayland
           xcb-util-cursor
           xcb-util-keysyms
-@@ -100,4 +100,6 @@
+@@ -77,14 +76,20 @@
+              xorg-xwayland)
+ optdepends=('maliit-keyboard: virtual keyboard for kwin-wayland')
+ groups=(plasma)
+-source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
++source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
++        https://invent.kde.org/plasma/$pkgname/-/commit/711c5bb4.patch)
+ install=$pkgname.install
+-sha256sums=('50affd6c5c23cc2c6a8c23d741a66b06f6679c82c7fd3cafea66a6b0643b4f2f'
+-            'SKIP')
++sha256sums=('242e7d210529ec631bc5fe3fe0a117a3d1d4edb1dd3a644aafd5089312f8b0d7'
++            'SKIP'
++            '1254b34e7088871af2f2f2b6a5b267fa29f8b30c3b7055336296e24f91f4a405')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
+               '1FA881591C26B276D7A5518EEAAF29B42A678C20') # Marco Martin <notmart@gmail.com>
++
++prepare() {
++  patch -d $pkgname-$pkgver -p1 < 711c5bb4.patch # Fix drag and drop to Chromium
++}
+ 
+ build() {
+   cmake -B build  -S $pkgname-$pkgver \
+@@ -95,4 +100,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
@@ -22,15 +65,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -35,6 +35,7 @@
+@@ -35,7 +35,7 @@
  lcms2
  libdisplay-info
  libdrm
+-libei
 +libelogind
  libepoxy
  libinput
  libpipewire
-@@ -58,7 +59,6 @@
+@@ -59,7 +59,6 @@
  qt6-sensors
  qt6-tools
  qt6-wayland

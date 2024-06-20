@@ -1651,6 +1651,7 @@ libmysofa
 libmythes
 libnatpmp
 libnbd
+libndp
 libnet
 libnewt
 libnfs
@@ -1882,8 +1883,6 @@ libxres
 libxsd-frontend
 libxsd
 libxshmfence
-libxslt
-libxslt-docs
 libxss
 libxt
 libxtst
@@ -2336,6 +2335,7 @@ openimageio
 openipmi
 openjade
 openjpeg2
+openlibm
 openmp
 openntpd
 openpmix

@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=plasma-meta
+-pkgver=6.1
+-pkgrel=1
++pkgver=6.0
++_dirver=$(echo $pkgver | cut -d. -f1-3)
++pkgrel=2
+ pkgdesc='Meta package to install KDE Plasma'
+ arch=(any)
+ license=(None)
+@@ -14,7 +15,6 @@
+          kdeplasma-addons
+          kgamma
+          kinfocenter
+-         krdp
+          kscreen
+          ksshaskpass
+          kwallet-pam
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,7 +6,6 @@
+ kdeplasma-addons
+ kgamma
+ kinfocenter
+-krdp
+ kscreen
+ ksshaskpass
+ kwallet-pam

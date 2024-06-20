@@ -276,7 +276,6 @@ libhandy0
 libinput
 libldm
 libmspub
-libndp
 libnvme
 libprocps
 libsidplay
@@ -285,6 +284,8 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libwhereami
+libxslt
+libxslt-docs
 light-locker
 lightdm
 liblightdm-qt5
@@ -384,7 +385,6 @@ open-iscsi
 opencc
 opencc-doc
 opendht
-openlibm
 openmpi
 openmpi-docs
 openrct2
