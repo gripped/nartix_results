@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -27,7 +27,7 @@
  }
  
  build() {
--  arch-meson msgraph build
-+  artix-meson msgraph build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -18,10 +18,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -2,6 +2,6 @@
- cd msgraph
+ cd $pkgname
  }
  build() {
--arch-meson msgraph build
-+artix-meson msgraph build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

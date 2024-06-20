@@ -13,6 +13,7 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
+autossh
 avahi
 ayatana-ido
 babl
@@ -32,6 +33,7 @@ brightnessctl
 brltty
 brltty-udev-generic
 btop
+build2
 bumblebee
 cgmanager
 chromium-bsu
@@ -231,6 +233,7 @@ kitty-shell-integration
 knot
 kopeninghours
 ksnip
+ksvg
 ksystemlog
 kwin
 libatasmart
@@ -381,6 +384,7 @@ open-iscsi
 opencc
 opencc-doc
 opendht
+openlibm
 openmpi
 openmpi-docs
 openrct2
@@ -485,14 +489,11 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
-python-argcomplete
 python-debugpy
-python-django-compressor
 python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
-python-jaraco.text
 python-libtmux
 python-pymupdf
 python-pyotp
@@ -503,6 +504,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -634,7 +636,6 @@ smartmontools
 snapper
 solid
 spice-vdagent
-spirv-tools
 squid
 sshguard
 sslh
@@ -670,7 +671,6 @@ udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
-uhttpmock
 umockdev
 unbound
 upower

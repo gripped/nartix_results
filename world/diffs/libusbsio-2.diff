@@ -24,17 +24,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,6 @@
- glibc
- hidapi
-+libudev
- libudev.so
- libusb
- libusbsio
-@@ -8,5 +9,4 @@
- python-installer
- python-setuptools
- python-wheel
+@@ -1,12 +0,0 @@
+-glibc
+-hidapi
+-libudev.so
+-libusb
+-libusbsio
+-python
+-python-build
+-python-installer
+-python-setuptools
+-python-wheel
 -systemd
 -systemd-libs
-+udev
