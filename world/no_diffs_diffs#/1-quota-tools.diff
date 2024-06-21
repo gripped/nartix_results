@@ -9,3 +9,14 @@
  
  build() {
    cd quota-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -0,0 +1,4 @@
++dbus
++libnl
++libtirpc
++rpcsvc-proto

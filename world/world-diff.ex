@@ -117,6 +117,7 @@ genxrdpattern
 geoclue
 ghc-filesystem
 github-cli
+gmime3
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -203,7 +204,6 @@ hyprland
 i2pd
 ibus
 libibus
-icewm
 igsc
 iio-sensor-proxy
 intel-metee
@@ -233,7 +233,6 @@ kitty-shell-integration
 knot
 kopeninghours
 ksnip
-ksvg
 ksystemlog
 kwin
 libatasmart
@@ -284,8 +283,6 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libwhereami
-libxslt
-libxslt-docs
 light-locker
 lightdm
 liblightdm-qt5
@@ -391,9 +388,6 @@ openrct2
 opensmtpd
 openvpn
 ostree
-packagekit-qt
-packagekit-qt5
-packagekit-qt6
 packagekit
 libpackagekit-glib
 pacman-contrib
@@ -504,7 +498,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools

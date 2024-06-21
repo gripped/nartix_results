@@ -372,8 +372,10 @@ thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher
+ttf-jetbrains-mono
 tumbler
 vice
+wezterm
 wireshark
 wireshark-cli
 wireshark-qt

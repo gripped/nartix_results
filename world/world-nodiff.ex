@@ -683,7 +683,6 @@ glusterfs
 glycin
 gmic
 gimp-plugin-gmic
-gmime3
 gn
 gnome-applets
 gnome-autoar
@@ -905,6 +904,7 @@ i3lock
 i3status
 iagno
 ibm-sw-tpm2
+icewm
 icmake
 icon-naming-utils
 icoutils
@@ -970,6 +970,12 @@ jre17-openjdk
 jdk17-openjdk
 openjdk17-src
 openjdk17-doc
+java21-openjdk
+jre21-openjdk-headless
+jre21-openjdk
+jdk21-openjdk
+openjdk21-src
+openjdk21-doc
 java8-openjdk
 jre8-openjdk-headless
 jre8-openjdk
@@ -1320,6 +1326,7 @@ ksquares
 ksshaskpass
 kstatusnotifieritem
 ksudoku
+ksvg
 ksysguard
 ksystemstats
 kteatime
@@ -1883,6 +1890,8 @@ libxres
 libxsd-frontend
 libxsd
 libxshmfence
+libxslt
+libxslt-docs
 libxss
 libxt
 libxtst
@@ -2372,6 +2381,9 @@ oxygen-sounds
 oxygen
 oxygen5
 p7zip
+packagekit-qt
+packagekit-qt5
+packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
@@ -4096,6 +4108,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
