@@ -119,8 +119,6 @@ atop
 atril
 attica
 attica5
-aubio
-python-aubio
 audacious-plugins
 audacious
 audacity
@@ -294,7 +292,6 @@ cheese
 libcheese
 cherrytree
 chmlib
-chromaprint
 chrono-date
 chrony
 chrpath
@@ -539,8 +536,6 @@ fcitx5-qt
 feh
 festival
 ffcall
-ffmpeg
-ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -636,7 +631,6 @@ geany
 geary
 gedit-plugins
 gedit
-gegl
 gendesk
 gengetopt
 geocode-glib
@@ -654,7 +648,6 @@ ghostxps
 ghostpcl
 gi-docgen
 giflib
-gifski
 gimp-help
 gimp
 girara
@@ -683,6 +676,7 @@ glusterfs
 glycin
 gmic
 gimp-plugin-gmic
+gmime3
 gn
 gnome-applets
 gnome-autoar
@@ -2110,7 +2104,6 @@ mathjax2
 matterbridge
 maturin
 python-maturin
-mbedtls
 mbedtls2
 mbox-importer
 mc
@@ -2135,10 +2128,6 @@ meson
 messagelib
 metalog
 mgard
-mgba
-libmgba
-mgba-sdl
-mgba-qt
 micro
 microsoft-gsl
 milou
@@ -2329,10 +2318,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2358,7 +2343,6 @@ opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
 opentimelineio
-openvdb
 openvkl
 openvr
 openvswitch
@@ -4291,6 +4275,7 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4572,6 +4557,7 @@ ruby-sassc
 ruby-scanf
 ruby-semantic_puppet
 ruby-sequel
+ruby-set
 ruby-shadow
 ruby-simplecov-html
 ruby-simplecov
@@ -4688,7 +4674,6 @@ signon-ui
 signond
 simde
 simple-scan
-sip
 skanlite
 skanpage
 skladnik

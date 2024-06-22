@@ -13,6 +13,8 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
+aubio
+python-aubio
 autossh
 avahi
 ayatana-ido
@@ -36,6 +38,7 @@ btop
 build2
 bumblebee
 cgmanager
+chromaprint
 chromium-bsu
 cinnamon-desktop
 clamav
@@ -93,6 +96,8 @@ fcitx-configtool
 fcitx-mozc
 fcitx5
 fcron
+ffmpeg
+ffmpeg4.4
 firefox
 firewalld
 flatpak
@@ -113,11 +118,12 @@ gcr
 gcr-docs
 gdm
 libgdm
+gegl
 genxrdpattern
 geoclue
 ghc-filesystem
+gifski
 github-cli
-gmime3
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -329,6 +335,7 @@ mate-system-monitor
 mate-user-share
 matrix-synapse
 maven
+mbedtls
 media-player-info
 memcached
 mesa
@@ -342,6 +349,10 @@ vulkan-swrast
 vulkan-virtio
 libva-mesa-driver
 mesa-vdpau
+mgba
+libmgba
+mgba-sdl
+mgba-qt
 modemmanager
 libmm-glib
 modest
@@ -381,11 +392,16 @@ onionshare
 open-iscsi
 opencc
 opencc-doc
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendht
 openmpi
 openmpi-docs
 openrct2
 opensmtpd
+openvdb
 openvpn
 ostree
 packagekit
@@ -589,7 +605,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-webengine
 qterminal
 qtermwidget
 quazip
@@ -625,6 +640,7 @@ seatd
 sfml
 shairport-sync
 signal-desktop
+sip
 smartmontools
 snapper
 solid

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,31 +9,31 @@
+@@ -9,11 +9,11 @@
  depends=(gd lua minizip qt5-base sdl2)
  makedepends=(cmake git glu mesa-libgl ninja setconf scons)
  optdepends=('ffmpeg: for recording')
@@ -14,13 +14,7 @@
    sed -i 's/-interim git//g' src/version.h
    setconf scripts/genGitHdr.sh GIT_URL "'""${source:4:34}""'"
    setconf scripts/genGitHdr.sh GIT_REV "${source#*=}"
- }
- 
- build() {
--  cmake \
-+  artix-cmake \
-     -B build \
-     -D CMAKE_C_FLAGS="$CFLAGS -fPIC -w" \
+@@ -26,14 +26,14 @@
      -D CMAKE_CXX_FLAGS="$CXXFLAGS -fPIC -w" \
      -D CMAKE_INSTALL_PREFIX=/usr \
      -G Ninja \
@@ -46,19 +40,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,16 @@
+@@ -1,5 +1,5 @@
  prepare() {
 -cd $pkgname
 +cd $pkgname-$pkgver
  sed -i 's/-interim git//g' src/version.h
  setconf scripts/genGitHdr.sh GIT_URL "'""${source:4:34}""'"
  setconf scripts/genGitHdr.sh GIT_REV "${source#*=}"
- }
- build() {
--cmake \
-+artix-cmake \
- -B build \
- -D CMAKE_C_FLAGS="$CFLAGS -fPIC -w" \
+@@ -11,6 +11,6 @@
  -D CMAKE_CXX_FLAGS="$CXXFLAGS -fPIC -w" \
  -D CMAKE_INSTALL_PREFIX=/usr \
  -G Ninja \

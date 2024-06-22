@@ -4,7 +4,7 @@
  
  pkgname=python-sphinx-autodoc-typehints
  _pyname=${pkgname/python-/}
--pkgver=2.1.1
+-pkgver=2.2.1
 +_commit=d2955c6c1750cdee28b05a2bfe35a5c5c0f8a043
 +pkgver=1.25.3
  pkgrel=1
@@ -44,7 +44,7 @@
  )
  optdepends=('python-nptyping: for numpydoc support')
 -source=("git+$url.git#tag=$pkgver")
--b2sums=('52ae69598a91d0175f7d7aab87d48507a31f741635782e7c5ada9fea98d6d9e618a4d4339b25ba6f2b20ef621b1b85ad8203faaaab4e16e1c155a8f4d013eb77')
+-b2sums=('f58712a584e3d48d7891380b74aec027367c11d57168327b9074f97189126ef3776a141ea7b109aade9a977d86c1c92755d9d9b65532e3c4ae263c45ac1bdfc5')
 +source=("git+$url.git#commit=${_commit}")
 +sha512sums=('SKIP')
  
