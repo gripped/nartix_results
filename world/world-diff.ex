@@ -3,6 +3,7 @@ accountsservice
 alacritty
 alsa-utils
 amule
+apache-orc
 apache
 apcupsd
 appstream
@@ -13,8 +14,7 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
-aubio
-python-aubio
+audacious-plugins
 autossh
 avahi
 ayatana-ido
@@ -38,7 +38,6 @@ btop
 build2
 bumblebee
 cgmanager
-chromaprint
 chromium-bsu
 cinnamon-desktop
 clamav
@@ -97,7 +96,6 @@ fcitx-mozc
 fcitx5
 fcron
 ffmpeg
-ffmpeg4.4
 firefox
 firewalld
 flatpak
@@ -118,7 +116,6 @@ gcr
 gcr-docs
 gdm
 libgdm
-gegl
 genxrdpattern
 geoclue
 ghc-filesystem
@@ -392,10 +389,6 @@ onionshare
 open-iscsi
 opencc
 opencc-doc
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
 opendht
 openmpi
 openmpi-docs
@@ -499,6 +492,7 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
+python-curtsies
 python-debugpy
 python-frozendict
 python-gssapi

@@ -1,4 +1,5 @@
 alacritty
+audacious-plugins
 cinnamon-desktop
 fceux
 firefox

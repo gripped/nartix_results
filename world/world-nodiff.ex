@@ -65,7 +65,6 @@ ant-doc
 anthy
 aom
 aom-docs
-apache-orc
 apitrace
 apparmor
 appmenu-gtk-module
@@ -119,7 +118,8 @@ atop
 atril
 attica
 attica5
-audacious-plugins
+aubio
+python-aubio
 audacious
 audacity
 audacity-docs
@@ -292,6 +292,7 @@ cheese
 libcheese
 cherrytree
 chmlib
+chromaprint
 chrono-date
 chrony
 chrpath
@@ -536,6 +537,7 @@ fcitx5-qt
 feh
 festival
 ffcall
+ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -631,6 +633,7 @@ geany
 geary
 gedit-plugins
 gedit
+gegl
 gendesk
 gengetopt
 geocode-glib
@@ -2318,6 +2321,10 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3093,7 +3100,6 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
-python-curtsies
 python-cwcwidth
 python-cx-freeze
 python-cycler

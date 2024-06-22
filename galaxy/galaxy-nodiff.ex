@@ -1,7 +1,6 @@
 0ad-data
 0ad
 atril
-audacious-plugins
 audacious
 avidemux
 avidemux-cli

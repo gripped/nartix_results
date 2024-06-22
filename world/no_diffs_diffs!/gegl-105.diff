@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+ build() {
+   mkdir -p build
+   cd build
+-  arch-meson ../"${pkgname}" \
++  artix-meson ../"${pkgname}" \
+     -Dworkshop=true \
+     -Dmrg=disabled \
+     -Dmaxflow=disabled
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ build() {
+ mkdir -p build
+ cd build
+-arch-meson ../"${pkgname}" \
++artix-meson ../"${pkgname}" \
+ -Dworkshop=true \
+ -Dmrg=disabled \
+ -Dmaxflow=disabled
