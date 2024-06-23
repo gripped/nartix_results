@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   libshumate-docs
- )
- pkgver=1.2.2
--pkgrel=2
-+pkgrel=1
- pkgdesc="Map widget for GTK 4"
- url="https://wiki.gnome.org/Projects/libshumate"
- license=(LGPL-2.1-or-later)
-@@ -28,7 +28,6 @@
- makedepends=(
-   gi-docgen
-   git
--  glib2-devel
-   gobject-introspection
-   gperf
-   meson
-@@ -53,7 +52,7 @@
+@@ -53,7 +53,7 @@
      -D demos=true
    )
  
@@ -30,16 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -5,7 +5,6 @@
- gi-docgen
- git
- glib2
--glib2-devel
- glibc
- gobject-introspection
- gperf
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

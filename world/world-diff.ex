@@ -3,7 +3,7 @@ accountsservice
 alacritty
 alsa-utils
 amule
-apache-orc
+android-tools
 apache
 apcupsd
 appstream
@@ -38,6 +38,7 @@ btop
 build2
 bumblebee
 cgmanager
+cgns
 chromium-bsu
 cinnamon-desktop
 clamav
@@ -108,6 +109,7 @@ fwupd-efi
 fwupd
 gala
 gamemode
+gamescope
 gammastep
 gcc12
 gcr-4
@@ -200,6 +202,7 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
+hdf5
 hexchat
 hidapi
 hwloc

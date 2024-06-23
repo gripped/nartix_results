@@ -1,0 +1,82 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gamescope
+-pkgver=3.14.18
+-pkgrel=2
++pkgver=3.14.22
++pkgrel=1
+ pkgdesc='SteamOS session compositing window manager'
+ arch=(x86_64)
+ url=https://github.com/ValveSoftware/gamescope
+@@ -12,7 +12,6 @@
+   libavif
+   libcap.so
+   libdecor
+-  libdisplay-info.so
+   libdrm
+   libinput
+   libpipewire-0.3.so
+@@ -59,7 +58,7 @@
+ prepare() {
+   cd gamescope
+ 
+-  git rm subprojects/{libdisplay-info,openvr}
++  git rm subprojects/openvr
+ 
+   meson subprojects download
+   git submodule init src/reshade
+@@ -69,14 +68,10 @@
+   git -c protocol.file.allow=always submodule update
+ }
+ 
+-pkgver() {
+-  cd gamescope
+-  git describe --tags | sed 's/-//'
+-}
+ 
+ build() {
+-  arch-meson gamescope build \
+-    -Dforce_fallback_for=wlroots,libliftoff,vkroots,glm,stb \
++  artix-meson gamescope build \
++    -Dforce_fallback_for=wlroots,libliftoff,vkroots,glm,stb,libdisplay-info \
+     -Dpipewire=enabled
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,7 +6,6 @@
+ libavif
+ libcap.so
+ libdecor
+-libdisplay-info.so
+ libdrm
+ libinput
+ libpipewire-0.3.so
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd gamescope
+-git rm subprojects/{libdisplay-info,openvr}
++git rm subprojects/openvr
+ meson subprojects download
+ git submodule init src/reshade
+ git config submodule.src/reshade.url ../reshade
+@@ -9,8 +9,8 @@
+ git -c protocol.file.allow=always submodule update
+ }
+ build() {
+-arch-meson gamescope build \
+--Dforce_fallback_for=wlroots,libliftoff,vkroots,glm,stb \
++artix-meson gamescope build \
++-Dforce_fallback_for=wlroots,libliftoff,vkroots,glm,stb,libdisplay-info \
+ -Dpipewire=enabled
+ meson compile -C build
+ }

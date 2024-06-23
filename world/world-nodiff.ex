@@ -53,7 +53,6 @@ amtk
 analitza
 analitza5
 android-file-transfer
-android-tools
 android-udev
 angelfish
 ansible-core
@@ -65,6 +64,7 @@ ant-doc
 anthy
 aom
 aom-docs
+apache-orc
 apitrace
 apparmor
 appmenu-gtk-module
@@ -281,7 +281,6 @@ certbot-nginx
 certbot
 cervisia
 cfitsio
-cgns
 chafa
 chatblade
 check-jsonschema
@@ -614,7 +613,6 @@ fwknop
 fzf
 gajim
 galculator
-gamescope
 garcon
 gavl
 gcab
@@ -840,7 +838,6 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
-hdf5
 helix
 help2man
 herbstluftwm
@@ -1296,6 +1293,7 @@ kquickcharts5
 kquickimageeditor
 kquickimageeditor5
 krdc
+krdp
 krecorder
 krename
 kreversi

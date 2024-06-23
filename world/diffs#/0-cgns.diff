@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkgname=CGNS
+ pkgname=cgns
+ pkgver=4.4.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Standard for recording and recovering computer data associated with the numerical solution of fluid dynamics equations"
+ arch=(x86_64)
+ url="https://cgns.github.io/"
+@@ -15,7 +15,6 @@
+ 
+ 
+ build() {
+-    CFLAGS+=" -Wno-implicit-function-declaration -Wno-incompatible-pointer-types" \
+     cmake -B build -S ${_pkgname}-${pkgver} \
+         -DCGNS_BUILD_CGNSTOOLS=ON \
+         -DCGNS_BUILD_SHARED=ON \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,4 @@
+ build() {
+-CFLAGS+=" -Wno-implicit-function-declaration -Wno-incompatible-pointer-types" \
+ cmake -B build -S ${_pkgname}-${pkgver} \
+ -DCGNS_BUILD_CGNSTOOLS=ON \
+ -DCGNS_BUILD_SHARED=ON \
