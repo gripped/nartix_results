@@ -2882,9 +2882,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -2905,13 +2902,11 @@ python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiomysql
-python-aiopg
 python-aioquic
 python-aioresponses
 python-aiorpcx
 python-aiosignal
 python-aiosmtpd
-python-aiosqlite
 python-aiounittest
 python-alembic
 python-amqp
@@ -3251,7 +3246,6 @@ python-fqdn
 python-freezegun
 python-frozenlist
 python-fs
-python-fsspec
 python-func-timeout
 python-funcparserlib
 python-furl
@@ -3302,7 +3296,6 @@ python-hatchling
 python-heapdict
 python-helpdev
 python-hexdump
-python-hidapi
 python-hiredis
 python-hishel
 python-hkdf
@@ -4101,9 +4094,9 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
-python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
@@ -4160,7 +4153,6 @@ python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
-python-yaml
 python-yara
 python-yarg
 python-yarl

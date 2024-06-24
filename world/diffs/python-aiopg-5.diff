@@ -1,0 +1,88 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,39 +1,36 @@
+ 
+-pkgname=python-aiopg
+-_pkgname=${pkgname#python-}
++_pkgname=aiopg
++pkgname=python-$_pkgname
+ pkgver=1.4.0
+-pkgrel=4
+-pkgdesc="Library for accessing a PostgreSQL database from the asyncio"
+-arch=(any)
+-url="https://github.com/aio-libs/aiopg"
+-license=(BSD-2-Clause)
+-depends=(
+-  python
+-  python-async-timeout
+-  python-psycopg2
+-)
+-makedepends=(
+-  python-build
+-  python-installer
+-  python-setuptools
+-  python-wheel
+-)
++pkgrel=3
++pkgdesc='library for accessing a PostgreSQL database from the asyncio'
++arch=('any')
++url='https://github.com/aio-libs/aiopg'
++license=('BSD')
++depends=('python' 'python-psycopg2' 'python-async-timeout')
++makedepends=('python-build' 'python-installer' 'python-wheel'
++             'python-setuptools' 'python-setuptools-scm')
+ optdepends=('python-sqlalchemy: SQLAlchemy support')
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+-sha256sums=('1b1c2ae3449640fa8fbaa95fe893c83df6ee5195b7018ce5c1b4427f95979509')
++sha512sums=('cbb28b0b15eb89fa3162e59e3e88dac18bddbad3d95458b5c3eb487d15767c26810e941f83c3478cac8a8a085b23723690c8d294bf6aac433a14c3defcef1138')
+ 
+-_archive=$_pkgname-$pkgver
++
++prepare() {
++  sed -i 's|install_requires = \["psycopg2-binary|install_requires = \["psycopg2|' $_pkgname-$pkgver/setup.py
++}
+ 
+ build() {
+-  cd "$_archive"
++  cd $_pkgname-$pkgver
+ 
+-  python -m build --wheel --no-isolation
++  python -m build
+ }
+ 
+ 
+ package() {
+-  cd "$_archive"
++  cd $_pkgname-$pkgver
+ 
+   python -m installer -d "$pkgdir" dist/*.whl
+-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
++
++  install -Dm 644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,4 +4,5 @@
+ python-installer
+ python-psycopg2
+ python-setuptools
++python-setuptools-scm
+ python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,7 @@
++prepare() {
++sed -i 's|install_requires = \["psycopg2-binary|install_requires = \["psycopg2|' $_pkgname-$pkgver/setup.py
++}
+ build() {
+-cd "$_archive"
+-python -m build --wheel --no-isolation
++cd $_pkgname-$pkgver
++python -m build
+ }
