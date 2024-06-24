@@ -281,6 +281,7 @@ certbot-nginx
 certbot
 cervisia
 cfitsio
+cgns
 chafa
 chatblade
 check-jsonschema
@@ -321,7 +322,6 @@ clutter
 cmark-gfm
 cmark
 cmocka
-cmus
 cni-plugins
 codespell
 coffeescript
@@ -838,6 +838,7 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
+hdf5
 helix
 help2man
 herbstluftwm
@@ -2199,6 +2200,7 @@ mutt
 mypaint-brushes1
 mypy
 namcap
+nanobind
 nanosvg
 nasm
 nauty
@@ -2348,6 +2350,7 @@ opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
 opentimelineio
+openvdb
 openvkl
 openvr
 openvswitch
@@ -3098,6 +3101,7 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
+python-curtsies
 python-cwcwidth
 python-cx-freeze
 python-cycler
@@ -3754,7 +3758,7 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
-python-pytables
+python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
@@ -3910,6 +3914,7 @@ python-s3transfer
 python-saml
 python-sarif-om
 python-schema
+python-scikit-build-core
 python-scikit-build
 python-scikit-learn
 python-scipy
@@ -4096,7 +4101,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4996,7 +5000,6 @@ tmuxp
 tokodon
 tomlplusplus
 torbrowser-launcher
-totem-pl-parser
 totem
 towncrier
 toxic

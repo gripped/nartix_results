@@ -38,13 +38,13 @@ btop
 build2
 bumblebee
 cgmanager
-cgns
 chromium-bsu
 cinnamon-desktop
 clamav
 clang
 cloud-init
 cmake
+cmus
 colord
 colord-sane
 libcolord
@@ -202,7 +202,6 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
-hdf5
 hexchat
 hidapi
 hwloc
@@ -397,7 +396,6 @@ openmpi
 openmpi-docs
 openrct2
 opensmtpd
-openvdb
 openvpn
 ostree
 packagekit
@@ -495,7 +493,6 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
-python-curtsies
 python-debugpy
 python-frozendict
 python-gssapi
@@ -504,6 +501,7 @@ python-ipywidgets
 python-libtmux
 python-pymupdf
 python-pyotp
+python-pytables
 python-pyudev
 python-signedjson
 python-sphinx-autodoc-typehints
@@ -511,6 +509,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -664,6 +663,7 @@ tint2
 tmux
 tor
 torsocks
+totem-pl-parser
 toxcore
 tracker3-miners
 tracker3

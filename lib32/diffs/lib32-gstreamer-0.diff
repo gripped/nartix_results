@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -117,7 +117,7 @@
+     -D libnice=disabled
+     -D orc-source=system
+     -D package-name="Arch Linux Lib32 GStreamer ${epoch:+$epoch:}$pkgver-$pkgrel"
+-    -D package-origin="https://www.archlinux.org/"
++    -D package-origin="https://www.artixlinux.org/"
+     -D python=disabled
+     -D qt5=disabled
+     -D qt6=disabled
+@@ -130,7 +130,7 @@
+ 
+   export GI_SCANNER_DISABLE_CACHE=1
+ 
+-  arch-meson gstreamer build "${meson_options[@]}"
++  artix-meson gstreamer build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+ -D libnice=disabled
+ -D orc-source=system
+ -D package-name="Arch Linux Lib32 GStreamer ${epoch:+$epoch:}$pkgver-$pkgrel"
+--D package-origin="https://www.archlinux.org/"
++-D package-origin="https://www.artixlinux.org/"
+ -D python=disabled
+ -D qt5=disabled
+ -D qt6=disabled
+@@ -40,6 +40,6 @@
+ -D vaapi=disabled
+ )
+ export GI_SCANNER_DISABLE_CACHE=1
+-arch-meson gstreamer build "${meson_options[@]}"
++artix-meson gstreamer build "${meson_options[@]}"
+ meson compile -C build
+ }

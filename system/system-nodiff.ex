@@ -130,9 +130,6 @@ linux-firmware-qcom
 linux-firmware-liquidio
 linux-firmware-qlogic
 linux-firmware-bnx2x
-linux-lts
-linux-lts-headers
-linux-lts-docs
 lz4
 lzo
 m4

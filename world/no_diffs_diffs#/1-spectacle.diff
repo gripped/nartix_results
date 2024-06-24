@@ -1,19 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=spectacle
- pkgver=24.05.1
--pkgrel=2
-+pkgrel=1
- pkgdesc='KDE screenshot capture utility'
- arch=(x86_64)
- url='https://apps.kde.org/spectacle/'
-@@ -57,5 +57,6 @@
+@@ -57,5 +57,7 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
--
+ 

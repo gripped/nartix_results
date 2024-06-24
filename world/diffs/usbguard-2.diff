@@ -1,15 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
- depends=('glibc' 'libqb' 'libqb.so' 'libsodium' 'libcap-ng' 'protobuf' 'polkit' 'dbus-glib'
-          'audit' 'libaudit.so' 'libseccomp' 'libseccomp.so' 'libcap-ng.so' 'libgio-2.0.so'
-          'libglib-2.0.so' 'libprotobuf.so')
--makedepends=('catch2-v2' 'pegtl' 'libxslt' 'libxml2' 'asciidoc' 'systemd' 'glib2-devel')
-+makedepends=('catch2-v2' 'pegtl' 'libxslt' 'libxml2' 'asciidoc' 'glib2-devel')
- provides=('libusbguard.so')
- backup=(etc/usbguard/usbguard-daemon.conf
-         etc/usbguard/rules.conf)
-@@ -34,7 +34,6 @@
+@@ -33,7 +33,6 @@
+   libxml2
+   libxslt
+   pegtl
+-  systemd
+ )
+ provides=(
+   libusbguard.so
+@@ -63,7 +62,6 @@
      --sys=/etc \
      --sbindir=/usr/bin \
      --libdir=/usr/lib \
@@ -23,7 +22,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,4 +20,3 @@
+@@ -22,4 +22,3 @@
  pegtl
  polkit
  protobuf

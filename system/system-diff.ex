@@ -31,6 +31,9 @@ glibc-locales
 gssproxy
 iputils
 libusb
+linux-lts
+linux-lts-headers
+linux-lts-docs
 linux
 linux-headers
 linux-docs

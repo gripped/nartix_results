@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=qtermwidget
+ pkgver=2.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A terminal widget for Qt, used by QTerminal"
+ arch=("x86_64")
+ url="https://github.com/lxqt/$pkgname"
+@@ -33,7 +33,7 @@
+   make
+ 
+   cd "$srcdir/$pkgname-$pkgver"/pyqt
+-  CXXFLAGS="$CXXFLAGS -I$PWD/../lib -I$PWD/../../build/lib" LDFLAGS="$LDFLAGS -L$PWD/../../build" sip-wheel --verbose --qmake /usr/bin/qmake6
++  CXXFLAGS="-I$PWD/../lib -I$PWD/../../build/lib" LDFLAGS="-L$PWD/../../build" sip-wheel --verbose --qmake /usr/bin/qmake6
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-lxqt-build-tools
+-pyqt-builder
+-python-installer
+-python-pyqt6
+-qt6-base
+-sip
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,5 +5,5 @@
+ -DCMAKE_INSTALL_PREFIX=/usr
+ make
+ cd "$srcdir/$pkgname-$pkgver"/pyqt
+-CXXFLAGS="$CXXFLAGS -I$PWD/../lib -I$PWD/../../build/lib" LDFLAGS="$LDFLAGS -L$PWD/../../build" sip-wheel --verbose --qmake /usr/bin/qmake6
++CXXFLAGS="-I$PWD/../lib -I$PWD/../../build/lib" LDFLAGS="-L$PWD/../../build" sip-wheel --verbose --qmake /usr/bin/qmake6
+ }
