@@ -35,7 +35,6 @@ brightnessctl
 brltty
 brltty-udev-generic
 btop
-build2
 bumblebee
 cgmanager
 chromium-bsu
@@ -44,7 +43,6 @@ clamav
 clang
 cloud-init
 cmake
-cmus
 colord
 colord-sane
 libcolord
@@ -70,7 +68,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-editorconfig-core-c
 edk2
 edk2-shell
 edk2-ovmf
@@ -478,6 +475,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+procinfo-ng
 prosody
 proxytunnel
 pulseaudio
@@ -495,14 +493,10 @@ pyqt6
 pyside6
 pyside6-tools
 shiboken6
-python-aiopg
-python-aiosqlite
 python-anytree
 python-debugpy
 python-frozendict
-python-fsspec
 python-gssapi
-python-hidapi
 python-intelhex
 python-ipywidgets
 python-libtmux
@@ -516,9 +510,8 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-uvloop
+python-urllib3
 python-waitress
-python-yaml
 python-zope-testrunner
 qastools
 qemu
@@ -644,7 +637,6 @@ seatd
 sfml
 shairport-sync
 signal-desktop
-sip
 smartmontools
 snapper
 solid

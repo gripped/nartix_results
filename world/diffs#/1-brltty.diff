@@ -1,23 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=brltty
- pkgname=(brltty brltty-udev-generic)
- pkgver=6.6
--pkgrel=10
-+pkgrel=9
- pkgdesc="Braille display driver for Linux/Unix"
- arch=(x86_64)
- url="https://brltty.app"
-@@ -13,7 +13,7 @@
-   at-spi2-core
-   atk
-   bluez-libs
--  cython
-+  cython0
-   dbus
-   dracut
-   espeak-ng
 @@ -37,25 +37,25 @@
    python-setuptools
    speech-dispatcher
@@ -89,15 +71,6 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,7 @@
- atk
- bluez-libs
- brltty
--cython
-+cython0
- dbus
- dracut
- espeak-ng
 @@ -19,6 +19,8 @@
  libasound.so
  libcap

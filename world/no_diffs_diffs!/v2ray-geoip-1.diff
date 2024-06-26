@@ -3,7 +3,7 @@
 @@ -1,13 +1,13 @@
  
  pkgname=v2ray-geoip
--pkgver=202406130042
+-pkgver=202406200042
 +pkgver=202403070031
  pkgrel=1
  pkgdesc="GeoIP List for V2Ray"
@@ -11,7 +11,7 @@
  url="https://github.com/v2fly/geoip"
  license=('CCPL:by-sa')
  source=("geoip-$pkgver.dat::https://github.com/v2fly/geoip/releases/download/$pkgver/geoip.dat")
--sha512sums=('a92894ba65c03bd249d233bb3d7e5930e6a017d76caeaa38574f6fd4631237d4be8841af9608c7d047da876398d672bd4c3dcebf189b717b076e8ca4f6f49686')
+-sha512sums=('d962b0211a1153b36b77cf005745ba93e07622a8f68f47125ed52f4fce98ecddb5d150ba2e6fef21fa16eff8d3e669df6e7e25163a2b3872bddec1ce49063fce')
 +sha512sums=('f42af9e8b8a54ea23d32408138ec0ad4dc8835b3190ea9460b404f55aa9f720b4fb9e44db58947368bd053b43bddcbfd8c3813e207f2afc3417e2267a62cabe5')
  
  package() {
