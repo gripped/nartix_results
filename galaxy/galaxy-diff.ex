@@ -7,6 +7,7 @@ libreoffice-extension-writer2latex
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+libsidplayfp
 lxqt-themes
 mate-control-center
 mate-screensaver

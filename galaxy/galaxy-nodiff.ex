@@ -106,7 +106,6 @@ libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
-libsidplayfp
 libsysstat
 libtg_owt
 libwnck

@@ -198,7 +198,6 @@ bogofilter
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -219,10 +218,6 @@ bspwm
 bubblewrap
 bubblewrap-suid
 build2
-bullet
-bullet-dp
-bullet-docs
-python-pybullet
 c-ares
 cabextract
 cairo
@@ -1302,7 +1297,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -2995,7 +2989,6 @@ python-bleach
 python-blessed
 python-blinker
 python-blosc
-python-blosc2
 python-boolean.py
 python-boto
 python-boto3
@@ -3152,7 +3145,6 @@ python-django-picklefield
 python-django-q
 python-django-rest-framework
 python-django-sekizai
-python-dkim
 python-dnspython
 python-docker-pycreds
 python-docker
@@ -3507,7 +3499,6 @@ python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
 python-netaddr
-python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
 python-networkx
@@ -3565,7 +3556,6 @@ python-packaging
 python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
-python-pandas
 python-pandocfilters
 python-parameterized
 python-paramiko
@@ -3664,7 +3654,6 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
-python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -3676,7 +3665,6 @@ python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome
 python-pycryptodomex
-python-pycuda
 python-pycurl
 python-pydantic-core
 python-pydantic-extra-types
@@ -3939,7 +3927,6 @@ python-setuptools-scm
 python-setuptools
 python-sgmllib3k
 python-sh
-python-shapely
 python-shellingham
 python-should-dsl
 python-shtab
@@ -4006,7 +3993,6 @@ python-sqlparse
 python-sshpubkeys
 python-stack-data
 python-starlette
-python-statsmodels
 python-stdlibs
 python-stem
 python-stestr
@@ -4286,8 +4272,6 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
-qtcreator
-qtcreator-devel
 qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
@@ -5151,7 +5135,6 @@ webrtc-audio-processing-1
 webrtc-audio-processing
 weechat
 wf-recorder
-wget
 whois
 wildmidi
 wireguard-tools
@@ -5267,7 +5250,6 @@ xl2tpd
 xmldiff
 xmlsec
 xmlstarlet
-xmlto
 xmltoman
 xmms2
 xonsh
