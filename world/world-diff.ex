@@ -14,6 +14,8 @@ aspell-uk
 at-spi2-core
 at-spi2-core-docs
 at
+aubio
+python-aubio
 audacious-plugins
 autossh
 avahi

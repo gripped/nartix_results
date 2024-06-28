@@ -118,8 +118,6 @@ atop
 atril
 attica
 attica5
-aubio
-python-aubio
 audacious
 audacity
 audacity-docs
