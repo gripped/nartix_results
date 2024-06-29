@@ -91,6 +91,9 @@ eog
 eog-docs
 espeakup
 etherwall
+evolution
+evolution-bogofilter
+evolution-spamassassin
 extra-cmake-modules
 facter
 fastfetch
@@ -502,6 +505,8 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-awscrt
+python-beniget
 python-blosc2
 python-debugpy
 python-dkim

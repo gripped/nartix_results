@@ -499,9 +499,6 @@ evince-lib-docs
 evolution-data-server
 libedataserverui4
 evolution-data-server-docs
-evolution
-evolution-bogofilter
-evolution-spamassassin
 exempi
 exfat-utils
 exfatprogs
@@ -2961,7 +2958,6 @@ python-autopage
 python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
-python-awscrt
 python-axolotl-curve25519
 python-axolotl
 python-babel
@@ -2970,7 +2966,6 @@ python-bcrypt
 python-beaker
 python-beautifulsoup4
 python-behave
-python-beniget
 python-betamax-matchers
 python-betamax-serializers
 python-betamax
@@ -3285,6 +3280,7 @@ python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
+python-hatch-requirements-txt
 python-hatch-vcs
 python-hatch
 python-hatchling

@@ -1,18 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,10 +24,9 @@
+@@ -2,7 +2,7 @@
+ pkgname=sway
+ pkgver=1.9
+ epoch=1
+-pkgrel=3
++pkgrel=4
+ pkgdesc='Tiling Wayland compositor and replacement for the i3 window manager'
+ arch=(x86_64)
+ url='https://swaywm.org/'
+@@ -24,10 +24,10 @@
    'ttf-font'
    'xcb-util-wm'
  )
 -makedepends=(meson ninja scdoc setconf wayland-protocols)
 +makedepends=(meson ninja scdoc setconf wayland-protocols libelogind)
++provides=('wayland-compositor')
  backup=(
    etc/sway/config
 -  etc/sway/config.d/50-systemd-user.conf
  )
  optdepends=(
    'dmenu: dmenu_path support (used alongside wmenu in default $menu)'
-@@ -47,12 +46,10 @@
+@@ -47,12 +47,10 @@
  )
  source=("https://github.com/swaywm/sway/releases/download/$pkgver/sway-$pkgver.tar.gz"
          "https://github.com/swaywm/sway/releases/download/$pkgver/sway-$pkgver.tar.gz.sig"
@@ -25,7 +35,7 @@
              '4f9576b7218aef8152eb60e646985e96b13540b7a4fd34ba68fdc490199cf7a7b46bbee85587e41bffe81fc730222cf408d5712e6251edc85a0a0b0408c1a2df')
  validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48'  # Simon Ser
                '9DDA3B9FA5D58DD5392C78E652CB6609B22DA89A') # Drew DeVault
-@@ -64,14 +61,13 @@
+@@ -64,14 +62,13 @@
  
  build() {
    mkdir -p build
