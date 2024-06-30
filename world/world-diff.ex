@@ -50,6 +50,9 @@ clamav
 clang
 cloud-init
 cmake
+colord-gtk
+colord-gtk-common
+colord-gtk4
 colord
 colord-sane
 libcolord
@@ -516,6 +519,7 @@ python-intelhex
 python-ipywidgets
 python-libtmux
 python-netcdf4
+python-openpyxl
 python-pandas
 python-pyarrow
 python-pycuda

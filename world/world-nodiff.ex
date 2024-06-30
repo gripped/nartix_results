@@ -329,9 +329,6 @@ coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
-colord-gtk
-colord-gtk-common
-colord-gtk4
 colord-kde
 colordiff
 comgr
@@ -3525,7 +3522,6 @@ python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
-python-openpyxl
 python-openstacksdk
 python-ordered-set
 python-orderedmultidict
