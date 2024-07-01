@@ -1309,6 +1309,7 @@ ksnakeduel
 kspaceduel
 ksquares
 ksshaskpass
+kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -1337,7 +1338,6 @@ kuserfeedback5
 kvantum
 kvantum-qt5
 kvirc
-kwallet-pam
 kwallet
 kwallet5
 kwalletmanager
@@ -1409,7 +1409,6 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
-libavif
 libavtp
 libb2
 libb64
@@ -1552,6 +1551,7 @@ libieee1284
 libimagequant
 libimobiledevice-glue
 libimobiledevice
+libindi
 libindicator
 libindicator-gtk2
 libindicator-gtk3
@@ -1657,6 +1657,7 @@ libnma-common
 libnma-gtk4
 libnotify
 libnotify-docs
+libnova
 libnumbertext
 liboauth
 libodfgen
@@ -1854,6 +1855,7 @@ libxfont2
 libxft
 libxi
 libxinerama
+libxisf
 libxkbcommon
 libxkbcommon-x11
 libxkbcommon-doc
@@ -2459,7 +2461,6 @@ perl-datetime-format-w3cdtf
 perl-datetime-locale
 perl-datetime-timezone
 perl-datetime
-perl-dbd-mysql
 perl-dbi
 perl-devel-checkcompiler
 perl-devel-checklib
@@ -2694,7 +2695,6 @@ perl-uri
 perl-user-identity
 perl-variable-magic
 perl-www-robotrules
-perl-xml-libxml
 perl-xml-namespacesupport
 perl-xml-parser
 perl-xml-rss
@@ -3361,7 +3361,6 @@ python-js2py
 python-jschema-to-python
 python-json-logger
 python-json5
-python-jsondiff
 python-jsonlines
 python-jsonmerge
 python-jsonpatch
@@ -4721,6 +4720,7 @@ srt
 sshfs
 sshpass
 startup-notification
+stellarsolver
 step
 stfl
 stk
@@ -4963,7 +4963,6 @@ tinyproxy
 tinyxml
 tinyxml2
 tinyxxd
-tk
 tl-expected
 tldp-howtos-txt
 tldr
@@ -5119,6 +5118,7 @@ wayland-protocols
 wayland-utils
 wayland
 wayland-docs
+wcslib
 webhook
 webp-pixbuf-loader
 webrtc-audio-processing-1

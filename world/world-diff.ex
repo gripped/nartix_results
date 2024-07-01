@@ -250,8 +250,10 @@ kopeninghours
 krita
 ksnip
 ksystemlog
+kwallet-pam
 kwin
 libatasmart
+libavif
 libayatana-appindicator
 libayatana-indicator
 libblockdev
@@ -419,6 +421,8 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-dbd-mysql
+perl-xml-libxml
 pgbouncer
 phodav
 php-legacy
@@ -517,6 +521,7 @@ python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
+python-jsondiff
 python-libtmux
 python-netcdf4
 python-openpyxl
@@ -687,6 +692,7 @@ thunderbird
 tigervnc
 timew
 tint2
+tk
 tmux
 tor
 torsocks

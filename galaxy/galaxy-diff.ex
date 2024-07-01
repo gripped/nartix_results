@@ -18,6 +18,8 @@ nushell
 nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
+qterminal
+qtermwidget
 tor
 torsocks
 transmission

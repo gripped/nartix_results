@@ -219,8 +219,6 @@ python-pysol_cards
 qt5ct
 qt5pas
 qt6pas
-qterminal
-qtermwidget
 qtxdg-tools
 retroarch-assets
 retroarch-assets-glui

@@ -421,6 +421,8 @@ pdnsd-dinit
 pdnsd-openrc
 pdnsd-runit
 pdnsd-s6
+perl-cpan-meta-requirements
+perl-cpan-requirements-dynamic
 php-fpm-dinit
 php-fpm-openrc
 php-fpm-runit

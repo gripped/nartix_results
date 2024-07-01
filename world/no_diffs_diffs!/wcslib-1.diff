@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ depends=(cfitsio
+          glibc)
+ makedepends=(gcc-fortran)
+-source=(ftp://ftp.atnf.csiro.au/pub/software/$pkgname/$pkgname-$pkgver.tar.bz2)
++source=(http://www.atnf.csiro.au/people/mcalabre/WCS/$pkgname-$pkgver.tar.bz2)
+ sha256sums=('6298220ae817f4e5522643ac4c3da2623be70a3484b1a4f37060bee3e4bd7833')
+ 
+ build() {
