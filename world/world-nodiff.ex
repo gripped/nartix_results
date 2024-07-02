@@ -738,7 +738,6 @@ go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
-godot
 google-glog
 gox
 gparted
@@ -1901,7 +1900,6 @@ lilv
 lilv-docs
 python-lilv
 lilypond
-linux-atm
 linux-zen
 linux-zen-headers
 linux-zen-docs
@@ -2392,7 +2390,6 @@ partitionmanager
 pass
 passt
 pastebinit
-pasystray
 patchelf
 patchutils
 pavucontrol-qt
@@ -3256,7 +3253,6 @@ python-gitlab
 python-gitpython
 python-glanceclient
 python-glob2
-python-gmpy2
 python-gnupg
 python-gnupginterface
 python-google-api-core

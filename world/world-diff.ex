@@ -151,6 +151,7 @@ gnome-taquin
 gnome-user-share
 go-bindata
 go-licenses
+godot
 gom
 gom-docs
 gpsd
@@ -304,6 +305,7 @@ libwhereami
 light-locker
 lightdm
 liblightdm-qt5
+linux-atm
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -416,6 +418,7 @@ libpackagekit-glib
 pacman-contrib
 paprefs
 passim
+pasystray
 pc-ble-driver
 pcsclite
 percona-server
@@ -518,6 +521,7 @@ python-blosc2
 python-debugpy
 python-dkim
 python-frozendict
+python-gmpy2
 python-gssapi
 python-intelhex
 python-ipywidgets
