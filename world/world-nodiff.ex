@@ -483,7 +483,6 @@ endeavour
 enet
 engrampa
 enscript
-entr
 eom
 epiphany
 erlang-nox
@@ -559,7 +558,6 @@ python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
-flite
 fltk
 fltk-docs
 fmt
@@ -980,6 +978,8 @@ js102
 js115
 js91
 jshon
+json-glib
+json-glib-docs
 jsoncpp
 jsoncpp-doc
 jsonrpc-glib
@@ -1380,9 +1380,6 @@ leafpad
 leatherman
 lensfun
 leptonica
-level-zero
-level-zero-headers
-level-zero-loader
 leveldb
 lftp
 lgi
@@ -1812,13 +1809,11 @@ libvdpau
 libvips
 libvirt-glib
 libvirt-python
-libvirt
 libvisio
 libvisual
 libvncserver
 libvoikko
 libvorbis
-libvpl
 libvpx
 libvterm
 libwacom
@@ -5312,6 +5307,7 @@ yelp
 yodl
 youtube-dl
 yt-dlp
+ytfzf
 yubico-c-client
 yubico-c
 z3

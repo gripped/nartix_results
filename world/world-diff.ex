@@ -90,6 +90,7 @@ emacs-nativecomp
 emacs-nox
 emacs-wayland
 embree
+entr
 eog
 eog-docs
 espeakup
@@ -111,6 +112,7 @@ firefox
 firewalld
 flatpak
 flatpak-docs
+flite
 fluidsynth
 fprintd
 freerdp
@@ -238,8 +240,6 @@ java-openjfx-doc
 java-openjfx-src
 jedi-language-server
 js78
-json-glib
-json-glib-docs
 kcoreaddons
 kgamma
 kismet
@@ -253,6 +253,9 @@ ksnip
 ksystemlog
 kwallet-pam
 kwin
+level-zero
+level-zero-headers
+level-zero-loader
 libatasmart
 libavif
 libayatana-appindicator
@@ -301,6 +304,8 @@ libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
+libvirt
+libvpl
 libwhereami
 light-locker
 lightdm

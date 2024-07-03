@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libvpl
+-pkgver=2.11.0
++pkgver=2.12.0
+ pkgrel=1
+ pkgdesc='Intel Video Processing Library'
+ arch=('x86_64')
+@@ -15,9 +15,12 @@
+ replaces=('onevpl')
+ options=('!emptydirs')
+ source=("https://github.com/intel/libvpl/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+-sha256sums=('3e322ba6b3593da03e1cfdb8062f9f1545f6d9b1de39e36876de5934b26737d2')
++sha256sums=('efc19e5a8544704100f814753eb5e09e85a68e3386508b164042c1f1f761bae8')
+ 
+ build() {
++    export CFLAGS="${CFLAGS/-Wp,-D_FORTIFY_SOURCE=?/}"
++    export CXXFLAGS="${CXXFLAGS/-Wp,-D_FORTIFY_SOURCE=?/}"
++
+     export CFLAGS+=' -DNDEBUG'
+     export CXXFLAGS+=' -DNDEBUG'
+     cmake -B build -S "libvpl-${pkgver}" \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,6 @@
+ build() {
++export CFLAGS="${CFLAGS/-Wp,-D_FORTIFY_SOURCE=?/}"
++export CXXFLAGS="${CXXFLAGS/-Wp,-D_FORTIFY_SOURCE=?/}"
+ export CFLAGS+=' -DNDEBUG'
+ export CXXFLAGS+=' -DNDEBUG'
+ cmake -B build -S "libvpl-${pkgver}" \
