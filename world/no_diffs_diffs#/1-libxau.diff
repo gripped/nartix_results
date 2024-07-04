@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=libxau
+ pkgver=1.0.11
+-pkgrel=3
++pkgrel=2
+ pkgdesc="X11 authorisation library"
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
+-license=('MIT-open-group')
++license=('custom')
+ depends=('glibc' 'xorgproto')
+ provides=('libXau.so')
+ source=(${url}/releases/individual/lib/libXau-${pkgver}.tar.xz{,.sig})

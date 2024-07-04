@@ -1,7 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- license=('GPL')
+@@ -1,13 +1,14 @@
+ 
+ pkgname=libxshmfence
+ pkgver=1.3.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="a library that exposes a event API on top of Linux futexes"
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
+-license=('HPND-sell-variant')
++license=('GPL')
  depends=('glibc')
  makedepends=('xorg-util-macros' 'xorgproto')
 +options=('debug')

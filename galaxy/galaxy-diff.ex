@@ -1,13 +1,12 @@
 alacritty
 cinnamon-desktop
+fastfetch
 fceux
 firefox
-libetonyek
 libreoffice-extension-writer2latex
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libsidplayfp
 lxqt-themes
 mate-control-center
 mate-screensaver
@@ -18,8 +17,6 @@ nushell
 nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
-qterminal
-qtermwidget
 tor
 torsocks
 transmission

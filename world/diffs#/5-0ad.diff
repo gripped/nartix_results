@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,34 +1,28 @@
+@@ -1,36 +1,28 @@
  pkgname=0ad
  pkgver=a26
  _pkgver=0.0.26-alpha
--pkgrel=14
+-pkgrel=15
 +pkgrel=12
  pkgdesc="Cross-platform, 3D and historically-based real-time strategy game"
  arch=('x86_64')
@@ -24,7 +24,8 @@
          https://github.com/0ad/0ad/commit/839edc3a.patch
          https://github.com/0ad/0ad/commit/093e1eb2.patch
 -        https://github.com/0ad/0ad/commit/d2426312.patch
--        fix_gcc_14_ftbfs.patch)
+-        fix_gcc_14_ftbfs.patch
+-        miniupnpc-2.2.8.patch)
 -validpgpkeys=('A035C8C19219BA821ECEA86B64E628F8D684696D')  # Pablo Galindo Salgado <pablogsal@gmail.com>
 +        https://github.com/0ad/0ad/commit/d2426312.patch)
  sha512sums=('aaf647d5d8454c244015d2a198beeaaebc571a5bc96446f3acff8dbd05f9843029c500bf4162651a5e1fcdb42bd5fb5b4f5c512c78372479fbd8565dd093f272'
@@ -35,16 +36,18 @@
              '1dfc8a0c6ac29040f72d9bbf6b631a74cbdec444b9078a015345139228666354d9b5059f85b640ce3afc0f590bcbe8afd5e158509a0c95751e1cd69fece46876'
              'a7fd1454385f56b7c8cb0fc6ac001761d4419df4aeec570ba846c7df4eb327d25b9ff1a7946cb334315109fa90ca2c1820583619f4e1ec5d53805afa08e10093'
 -            '5f32d47f01d845e07b2f919c9b04ac5e50dc9977fa97f981eba4a53677a29d797d0d76bc385ac047dd7c7d24af7d95cd8256d433bd43ce1a6606763c0ea736cb'
--            'b991b27168b0bfb13fe27aea1dd1f2759b6f243dba62a169612ebc28d601a84d06d3f3a44f3af6dd79ccf8b71f9eacd3fcdb9cb5de9fce7684614afb4ad91851')
+-            'b991b27168b0bfb13fe27aea1dd1f2759b6f243dba62a169612ebc28d601a84d06d3f3a44f3af6dd79ccf8b71f9eacd3fcdb9cb5de9fce7684614afb4ad91851'
+-            'cb858c31d7748e99b3332f28dddb00ac264b7352f59a4e9eddca21b92d1cf4c5a8b47d2be29aa4c1960a73fe47ef9772a2e7abae45fe297ef55c2eee1cc498ed')
 +            '5f32d47f01d845e07b2f919c9b04ac5e50dc9977fa97f981eba4a53677a29d797d0d76bc385ac047dd7c7d24af7d95cd8256d433bd43ce1a6606763c0ea736cb')
  
  prepare() {
    cd "$pkgname-$_pkgver"
-@@ -38,17 +32,9 @@
+@@ -40,18 +32,9 @@
    patch -p1 -i ../839edc3a.patch # Fix build with fmt 10
    patch -p1 -i ../093e1eb2.patch # Fix build with GCC 13
    patch -p1 -i ../d2426312.patch # Fix build with libxml2 2.12
 -  patch -p1 -i ../fix_gcc_14_ftbfs.patch # Fix build with GCC 14
+-  patch -p1 -i ../miniupnpc-2.2.8.patch # Fix build with miniupnpc 2.2.8
  }
  
  build() {
@@ -76,11 +79,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,15 +5,8 @@
+@@ -5,16 +5,8 @@
  patch -p1 -i ../839edc3a.patch # Fix build with fmt 10
  patch -p1 -i ../093e1eb2.patch # Fix build with GCC 13
  patch -p1 -i ../d2426312.patch # Fix build with libxml2 2.12
 -patch -p1 -i ../fix_gcc_14_ftbfs.patch # Fix build with GCC 14
+-patch -p1 -i ../miniupnpc-2.2.8.patch # Fix build with miniupnpc 2.2.8
  }
  build() {
 -cd Python-3.11.9

@@ -3,19 +3,16 @@
 @@ -1,6 +1,6 @@
  
  pkgname=python-tenacity
--pkgver=8.3.0
+-pkgver=8.4.2
 +pkgver=8.4.1
  pkgrel=1
  pkgdesc='Retry code until it succeeeds'
  arch=('any')
-@@ -9,9 +9,9 @@
- depends=('python')
- optdepends=('python-tornado: for Tornado coroutines support')
+@@ -11,7 +11,7 @@
  makedepends=('git' 'python-setuptools-scm' 'python-setuptools' 'python-wheel' 'python-build' 'python-installer')
--checkdepends=('python-pytest' 'python-tornado' 'python-typeguard')
-+checkdepends=('python-pytest' 'python-tornado' 'python-trio' 'python-typeguard')
+ checkdepends=('python-pytest' 'python-tornado' 'python-trio' 'python-typeguard')
  source=("git+https://github.com/jd/tenacity.git#tag=$pkgver")
--sha512sums=('d7698bfd78cb7749e10270eda95e908e1b1fe4d04f8aeb4b18020816ab2015a2095b20c0b889bb5db3f07351a75197ddffedb856ac4ebc45ca6b76b3a88d8150')
+-sha512sums=('13d9815e657e93c8be17fa576e905ce108ca8fc6ddb1a55d0f87b883baa9e8cba8b409ff01668791bdda67b0469507caee700680ce1ad070e07f133339fa1026')
 +sha512sums=('b71ed641325eb338247994374fe7cebd4524a9aaf37aee68ff2eecf01b3d3ef316002753397539ca243efdb054139f7b00f083ec1a9fb07c140066c819a39430')
  
  build() {

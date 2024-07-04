@@ -21,7 +21,6 @@ adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
 afpfs-ng
-aha
 akonadi-calendar-tools
 akonadi-calendar
 akonadi-contacts
@@ -118,6 +117,8 @@ atop
 atril
 attica
 attica5
+aubio
+python-aubio
 audacious
 audacity
 audacity-docs
@@ -196,6 +197,7 @@ bogofilter
 boinc
 boinc-nox
 bomber
+boost
 booster
 botan
 botan2
@@ -216,6 +218,10 @@ bspwm
 bubblewrap
 bubblewrap-suid
 build2
+bullet
+bullet-dp
+bullet-docs
+python-pybullet
 c-ares
 cabextract
 cairo
@@ -303,7 +309,6 @@ cjson
 clang14
 clang15
 clang16
-clazy
 clevis
 cli11
 clinfo
@@ -326,9 +331,11 @@ coin-or-cbc
 coin-or-cgl
 coin-or-clp
 coin-or-coinutils
-coin-or-data-sample
 coin-or-mp
 coin-or-osi
+colord-gtk
+colord-gtk-common
+colord-gtk4
 colord-kde
 colordiff
 comgr
@@ -340,15 +347,12 @@ composefs
 confuse
 consul
 containers-common
-convertlit
-coordgen
 copr-cli
 corrosion
 coturn
 couchdb
 cpio
 cpp-hocon
-cppdap
 cppunit
 cpputest
 cppzmq
@@ -440,7 +444,6 @@ dontpanic
 dos2unix
 dosbox
 dotconf
-double-conversion
 doxygen
 doxygen-docs
 dqlite
@@ -457,7 +460,6 @@ dvdauthor
 dvisvgm
 dzen2
 easytag
-ebook-tools
 eclipse-ecj
 ecryptfs-utils
 ed
@@ -466,7 +468,6 @@ editorconfig-core-c
 egl-wayland
 eglexternalplatform
 eigen
-ejabberd
 electron
 electrum
 elementary-icon-theme
@@ -483,6 +484,7 @@ endeavour
 enet
 engrampa
 enscript
+entr
 eom
 epiphany
 erlang-nox
@@ -495,6 +497,9 @@ evince-lib-docs
 evolution-data-server
 libedataserverui4
 evolution-data-server-docs
+evolution
+evolution-bogofilter
+evolution-spamassassin
 exempi
 exfat-utils
 exfatprogs
@@ -558,6 +563,7 @@ python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
+flite
 fltk
 fltk-docs
 fmt
@@ -622,6 +628,7 @@ gedit
 gegl
 gendesk
 gengetopt
+genxrdpattern
 geocode-glib
 geocode-glib-common
 geocode-glib-2
@@ -890,7 +897,6 @@ icewm
 icmake
 icon-naming-utils
 icoutils
-id3lib
 ijs
 imagemagick
 imake
@@ -1288,6 +1294,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1337,6 +1344,7 @@ kuserfeedback5
 kvantum
 kvantum-qt5
 kvirc
+kwallet-pam
 kwallet
 kwallet5
 kwalletmanager
@@ -1380,6 +1388,9 @@ leafpad
 leatherman
 lensfun
 leptonica
+level-zero
+level-zero-headers
+level-zero-loader
 leveldb
 lftp
 lgi
@@ -1397,7 +1408,6 @@ libaec
 libakonadi5
 libalkimia
 libao
-libappimage
 libappindicator
 libappindicator-gtk2
 libappindicator-gtk3
@@ -1405,8 +1415,8 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
+libavif
 libavtp
-libb2
 libb64
 libblastrampoline
 libbluray
@@ -1474,7 +1484,6 @@ libebur128
 libepubgen
 libesmtp
 libetebase
-libetonyek
 libev
 libevdev
 libewf
@@ -1506,7 +1515,6 @@ libgedit-tepl
 libgee
 libgeotiff
 libgepub
-libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
@@ -1740,7 +1748,6 @@ libsecp256k1
 libshout
 libshumate
 libshumate-docs
-libsidplayfp
 libsigcplusplus-3.0
 libsigc++-3.0-docs
 libsigcplusplus
@@ -1809,11 +1816,13 @@ libvdpau
 libvips
 libvirt-glib
 libvirt-python
+libvirt
 libvisio
 libvisual
 libvncserver
 libvoikko
 libvorbis
+libvpl
 libvpx
 libvterm
 libwacom
@@ -1895,6 +1904,7 @@ lilv
 lilv-docs
 python-lilv
 lilypond
+linux-atm
 linux-zen
 linux-zen-headers
 linux-zen-docs
@@ -2385,6 +2395,7 @@ partitionmanager
 pass
 passt
 pastebinit
+pasystray
 patchelf
 patchutils
 pavucontrol-qt
@@ -2434,6 +2445,8 @@ perl-config-autoconf
 perl-config-tiny
 perl-cpan-changes
 perl-cpan-meta-check
+perl-cpan-meta-requirements
+perl-cpan-requirements-dynamic
 perl-crypt-openssl-bignum
 perl-crypt-openssl-dsa
 perl-crypt-openssl-guess
@@ -2453,6 +2466,7 @@ perl-datetime-format-w3cdtf
 perl-datetime-locale
 perl-datetime-timezone
 perl-datetime
+perl-dbd-mysql
 perl-dbi
 perl-devel-checkcompiler
 perl-devel-checklib
@@ -2687,6 +2701,7 @@ perl-uri
 perl-user-identity
 perl-variable-magic
 perl-www-robotrules
+perl-xml-libxml
 perl-xml-namespacesupport
 perl-xml-parser
 perl-xml-rss
@@ -2806,8 +2821,6 @@ projectm-sdl
 projectm-pulseaudio
 prometheus
 protobuf-c
-protobuf
-python-protobuf
 prrte
 prrte-docs
 psutils
@@ -2947,6 +2960,7 @@ python-autopage
 python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
+python-awscrt
 python-axolotl-curve25519
 python-axolotl
 python-babel
@@ -2955,6 +2969,7 @@ python-bcrypt
 python-beaker
 python-beautifulsoup4
 python-behave
+python-beniget
 python-betamax-matchers
 python-betamax-serializers
 python-betamax
@@ -2971,6 +2986,7 @@ python-bleach
 python-blessed
 python-blinker
 python-blosc
+python-blosc2
 python-boolean.py
 python-boto
 python-boto3
@@ -3127,6 +3143,7 @@ python-django-picklefield
 python-django-q
 python-django-rest-framework
 python-django-sekizai
+python-dkim
 python-dnspython
 python-docker-pycreds
 python-docker
@@ -3248,6 +3265,7 @@ python-gitlab
 python-gitpython
 python-glanceclient
 python-glob2
+python-gmpy2
 python-gnupg
 python-gnupginterface
 python-google-api-core
@@ -3352,6 +3370,7 @@ python-js2py
 python-jschema-to-python
 python-json-logger
 python-json5
+python-jsondiff
 python-jsonlines
 python-jsonmerge
 python-jsonpatch
@@ -3480,6 +3499,7 @@ python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
 python-netaddr
+python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
 python-networkx
@@ -3494,7 +3514,6 @@ python-nose
 python-nose2
 python-nosexcover
 python-notify2
-python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
@@ -3512,6 +3531,7 @@ python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
+python-openpyxl
 python-openstacksdk
 python-ordered-set
 python-orderedmultidict
@@ -3536,6 +3556,7 @@ python-packaging
 python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
+python-pandas
 python-pandocfilters
 python-parameterized
 python-paramiko
@@ -3589,7 +3610,6 @@ python-pipreqs
 python-pipx
 python-pkgconfig
 python-pkginfo
-python-platformdirs
 python-plette
 python-pluggy
 python-plumbum
@@ -3634,6 +3654,7 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
+python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyaxmlparser
@@ -3645,6 +3666,7 @@ python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome
 python-pycryptodomex
+python-pycuda
 python-pycurl
 python-pydantic-core
 python-pydantic-extra-types
@@ -3691,7 +3713,6 @@ python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
-python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
@@ -3725,6 +3746,7 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
+python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
@@ -3907,6 +3929,7 @@ python-setuptools-scm
 python-setuptools
 python-sgmllib3k
 python-sh
+python-shapely
 python-shellingham
 python-should-dsl
 python-shtab
@@ -3973,6 +3996,7 @@ python-sqlparse
 python-sshpubkeys
 python-stack-data
 python-starlette
+python-statsmodels
 python-stdlibs
 python-stem
 python-stestr
@@ -4066,6 +4090,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4252,6 +4277,8 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
+qtcreator
+qtcreator-devel
 qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
@@ -4302,10 +4329,8 @@ rinutils
 ripgrep
 ristretto
 rkcommon
-rng-tools
 rnnoise
 robin-map
-roc-toolkit
 rocm-cmake
 rocm-core
 rocm-device-libs
@@ -4593,7 +4618,6 @@ salt
 samurai
 sassc
 sbc
-sbsigntools
 scdoc
 schedtool
 schroedinger
@@ -4954,6 +4978,7 @@ tinyproxy
 tinyxml
 tinyxml2
 tinyxxd
+tk
 tl-expected
 tldp-howtos-txt
 tldr
@@ -5116,6 +5141,7 @@ webrtc-audio-processing-1
 webrtc-audio-processing
 weechat
 wf-recorder
+wget
 whois
 wildmidi
 wireguard-tools
@@ -5231,6 +5257,7 @@ xl2tpd
 xmldiff
 xmlsec
 xmlstarlet
+xmlto
 xmltoman
 xmms2
 xonsh
@@ -5284,7 +5311,6 @@ xscreensaver
 xsd
 xsel
 xsettingsd
-xsimd
 xsimd12
 xterm
 xtrans
@@ -5340,6 +5366,7 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
+zlib-ng
 zopfli
 zsh-autosuggestions
 zsh-completions

@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,11 +2,11 @@
+ pkgname=sbsigntools
+ pkgver=0.9.5
+ _commit=8445b18f64e60137408a4867fbcbb9ba112c583a  # refs/tags/v0.9.5
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Tools to add signatures to EFI binaries and Drivers"
+ arch=(x86_64)
+ url="https://git.kernel.org/pub/scm/linux/kernel/git/jejb/sbsigntools.git/about"
+-license=(GPL-3.0-or-later)
++license=(GPL3)
+ depends=(
+   glibc
+   openssl
+@@ -16,13 +16,12 @@
+   gnu-efi
+   help2man
+   util-linux
+-  sed
+ )
+ source=(
+   git+https://git.kernel.org/pub/scm/linux/kernel/git/jejb/sbsigntools.git#tag=$_commit?signed
+   git+https://git.ozlabs.org/ccan
+ )
+-sha256sums=('18d476d5497cab8f7f8acb8710481bdd3de887f6109f2deeed9e6bd2571d3f9d'
++sha256sums=('SKIP'
+             'SKIP')
+ validpgpkeys=('D5606E73C8B46271BEAD9ADF814AE47C214854D6') # James Bottomley <jejb@kernel.org>
+ 
+@@ -45,7 +44,7 @@
+   )
+ 
+   cd $pkgname
+-  CFLAGS="${CFLAGS} -Wno-error" ./configure "${configure_options[@]}"
++  ./configure "${configure_options[@]}"
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,5 @@
+ help2man
+ libuuid.so
+ openssl
+-sed
+ util-linux
+ util-linux-libs
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,6 +15,6 @@
+ --sysconfdir=/etc
+ )
+ cd $pkgname
+-CFLAGS="${CFLAGS} -Wno-error" ./configure "${configure_options[@]}"
++./configure "${configure_options[@]}"
+ make
+ }

@@ -1,5 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=glu
+ pkgver=9.0.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Mesa OpenGL utility library"
+ arch=('x86_64')
+ url="https://gitlab.freedesktop.org/mesa/glu"
+-license=('SGI-B-2.0' 'MIT')
++license=('LGPL')
+ depends=('libgl' 'gcc-libs' 'glibc')
+ makedepends=('meson')
+ source=(https://mesa.freedesktop.org/archive/glu/glu-$pkgver.tar.xz{,.sig})
 @@ -14,7 +14,7 @@
  validpgpkeys=('57551DE15B968F6341C248F68D8E31AFC32428A6') # Eric Engestrom <eric@engestrom.ch>
  

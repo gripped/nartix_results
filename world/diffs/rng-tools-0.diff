@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,19 @@
+ 
+ pkgname=rng-tools
+-pkgver=6.17
+-pkgrel=1
++pkgver=6.16
++pkgrel=2
+ pkgdesc="Random number generator related utilities"
+ arch=('x86_64')
+ url="https://github.com/nhorman/rng-tools"
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ depends=('curl' 'libxml2' 'sysfsutils' 'jitterentropy' 'libp11' 'jansson' 'rtl-sdr')
+ optdepends=('opensc: PKCS11 entropy engine to gather entropy from smart card readers')
+-backup=(etc/conf.d/rngd)
+-source=(https://github.com/nhorman/rng-tools/archive/v$pkgver/$pkgname-$pkgver.tar.gz
+-        rngd.conf
+-        rngd.service)
+-sha256sums=('4aa50994232da74499b60b3ebf79118e30a1943be375b7d931dcf18df5442fd3'
+-            'f4fd197dd682cdab07ddeabe8d3b73b1bc2e1cf322237be238a26b49a7dcb047'
+-            '733733457a2470da0d09a5a4e6d98fb0a773d3acf0722d16258caa2997a3fd4b')
++source=(https://github.com/nhorman/rng-tools/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('17666c4745fb635d91df293be188daf94b9e465d51d8503c0195fa3beb390894')
+ 
+ prepare() {
+ 	cd $pkgname-$pkgver
+ 	mv README{.md,}
+-
+-	sed s/rngtestjitter.sh// -i tests/Makefile.am
+ 
+ 	libtoolize --force
+ 	aclocal
+@@ -35,14 +28,7 @@
+ 	make
+ }
+ 
+-check() {
+-	cd $pkgname-$pkgver
+-	make check
+-}
+-
+ package() {
+ 	cd $pkgname-$pkgver
+ 	make DESTDIR="$pkgdir" install
+-	install -Dm644 ../rngd.service "$pkgdir"/usr/lib/systemd/system/rngd.service
+-	install -Dm644 ../rngd.conf "$pkgdir"/etc/conf.d/rngd
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd $pkgname-$pkgver
+ mv README{.md,}
+-sed s/rngtestjitter.sh// -i tests/Makefile.am
+ libtoolize --force
+ aclocal
+ autoheader

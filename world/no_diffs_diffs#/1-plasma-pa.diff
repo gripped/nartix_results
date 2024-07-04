@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-pa
--pkgver=6.1.0
+-pkgver=6.1.1
 +pkgver=6.0.1
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -27,7 +27,7 @@
               kdoctools)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('e2caae1910bbf3de80247bd465458d3d7988e6ce6034eb63da9763ef1aad2639'
+-sha256sums=('4da9327fbaa1cf9803e528c6952f9979aa447b8062644f8007dbc29082d4c879'
 +sha256sums=('2728ecd9f1c5106fe8bc07f0b03bda316036adc5d03a3ac001511f7543c337c7'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

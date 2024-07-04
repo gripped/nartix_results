@@ -1,10 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
+@@ -1,12 +1,14 @@
+ 
+ pkgname=libxxf86vm
+ pkgver=1.1.5
+-pkgrel=2
++pkgrel=1
+ pkgdesc="X11 XFree86 video mode extension library"
+ arch=('x86_64')
+-license=('X11-distribute-modifications-variant')
++license=('custom')
  url="https://xorg.freedesktop.org/"
- depends=('libxext')
- makedepends=('xorg-util-macros' 'xorgproto')
+-depends=('libxext' 'libx11' 'glibc' 'xorgproto')
++depends=('libxext')
++makedepends=('xorg-util-macros' 'xorgproto')
 +options=('debug')
  source=(${url}/releases/individual/lib/libXxf86vm-${pkgver}.tar.xz{,.sig})
  sha512sums=('68226fcb9773a583ea417ab413146203dd7db6ff8a4d388285da972353355e11e179861a77c9fa284aefac025bb3bbf5a9537fa0bf246c782e0116a667c9d9b6'
              'SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-glibc
+-libx11
+ libxext
++xorg-util-macros
+ xorgproto

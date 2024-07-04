@@ -1,10 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- license=('custom')
- depends=('libxext')
- makedepends=('xorg-util-macros' 'xorgproto')
+@@ -1,13 +1,14 @@
+ 
+ pkgname=libxinerama
+ pkgver=1.1.5
+-pkgrel=2
++pkgrel=1
+ pkgdesc="X11 Xinerama extension library"
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
+-license=('MIT' 'MIT-open-group' 'X11')
+-depends=('libxext' 'libx11' 'glibc' 'xorgproto')
+-makedepends=('xorg-util-macros')
++license=('custom')
++depends=('libxext')
++makedepends=('xorg-util-macros' 'xorgproto')
 +options=('debug')
  source=("${url}"/archive/individual/lib/libXinerama-${pkgver}.tar.xz{,.sig})
  sha512sums=('735b5320de4782005b379e409bf2f976131c17d496b297d33a0e127ca1443034778586b6b25c077b2ad73a4ab34d440d7510475e0041f38202bb40f15fb08ff7'
              'SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,3 @@
+-glibc
+-libx11
+ libxext
+ xorg-util-macros
+ xorgproto

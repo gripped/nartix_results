@@ -1,10 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- license=('custom')
- depends=('libxext' 'libxi' 'libxfixes')
- makedepends=('xorg-util-macros' 'xorgproto')
+@@ -1,17 +1,14 @@
+ 
+ pkgname=libxtst
+ pkgver=1.2.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc="X11 Testing -- Resource extension library"
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
+-license=('MIT-open-group'
+-         'HPND-sell-variant'
+-         'X11'
+-         'HPND-doc'
+-         'HPND-doc-sell')
+-depends=('libxext' 'libxi' 'libx11' 'glibc' 'xorgproto')
+-makedepends=('xorg-util-macros')
++license=('custom')
++depends=('libxext' 'libxi' 'libxfixes')
++makedepends=('xorg-util-macros' 'xorgproto')
 +options=('debug')
  source=(${url}/releases/individual/lib/libXtst-${pkgver}.tar.xz{,.sig})
  sha512sums=('f2f4e01239b892b8e26284cede90feb4fe7738beb243bca0f6adb349029f8bf87b5a482911edcd2401733c92ef78eec07fcd455b92e5b8c4828374769e60098d'
              'SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+-glibc
+-libx11
+ libxext
++libxfixes
+ libxi
+ xorg-util-macros
+ xorgproto

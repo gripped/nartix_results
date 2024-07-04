@@ -55,7 +55,6 @@ engrampa
 eom
 exo
 ext4magic
-fastfetch
 firefox-i18n
 fluxbox
 font-manager
@@ -73,6 +72,7 @@ lazarus-qt5
 lazarus-qt6
 libdbusmenu-lxqt
 libe-book
+libetonyek
 libexttextcat
 libfm-qt
 liblangtag
@@ -106,6 +106,7 @@ libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
+libsidplayfp
 libsysstat
 libtg_owt
 libwnck
@@ -219,6 +220,8 @@ python-pysol_cards
 qt5ct
 qt5pas
 qt6pas
+qterminal
+qtermwidget
 qtxdg-tools
 retroarch-assets
 retroarch-assets-glui

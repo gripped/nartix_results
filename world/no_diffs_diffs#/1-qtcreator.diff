@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,12 +12,15 @@
+ depends=(clang=$_clangver
+          clazy
+          gcc-libs
++         glib2
+          glibc
++         libelf
+          litehtml
+          qt6-5compat
+          qt6-base
+          qt6-declarative
+          qt6-quick3d
++         qt6-quicktimeline
+          qt6-tools
+          qt6-serialport
+          qt6-svg
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,9 @@
+ cmake
+ gcc-libs
+ git
++glib2
+ glibc
++libelf
+ litehtml
+ llvm
+ python
+@@ -11,6 +13,7 @@
+ qt6-base
+ qt6-declarative
+ qt6-quick3d
++qt6-quicktimeline
+ qt6-serialport
+ qt6-svg
+ qt6-tools

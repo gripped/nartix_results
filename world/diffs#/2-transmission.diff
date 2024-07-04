@@ -8,8 +8,8 @@
 +	etmpfiles esysusers
  )
  source=(https://github.com/transmission/transmission/releases/download/$pkgver/transmission-$pkgver.tar.xz
-         transmission-cli.sysusers
-@@ -76,7 +76,7 @@
+         febfe49c.patch
+@@ -83,7 +83,7 @@
  
  package_transmission-cli() {
    pkgdesc='Fast, easy, and free BitTorrent client (CLI tools, daemon and web client)'
@@ -18,7 +18,7 @@
  
    cd $pkgbase-$pkgver
  
-@@ -87,8 +87,6 @@
+@@ -94,8 +94,6 @@
    install -d "$pkgdir"/usr/share/transmission
    cp -a build/web/public_html/ "$pkgdir"/usr/share/transmission
  

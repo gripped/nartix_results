@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,21 @@
+ 
+ pkgname=aha
+ pkgver=0.5.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Ansi HTML Adapter: convert ANSI escape sequences to HTML'
+ arch=(x86_64)
+ url='https://github.com/theZiz/aha'
+-license=(MPL-1.1
+-         LGPL-2.0-or-later)
++license=(MPL LGPL)
+ depends=(glibc)
+-makedepends=(git)
+-source=(git+https://github.com/theZiz/aha#tag=$pkgver)
+-sha256sums=('ca2576468fa5b7e34ec7d3e74e31444346eae5617f24f33859a1d21383d5e749')
++source=(https://github.com/theZiz/aha/archive/$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('6aea13487f6b5c3e453a447a67345f8095282f5acd97344466816b05ebd0b3b1')
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make PREFIX="$pkgdir/usr" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+-git
+ glibc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ make
+ }

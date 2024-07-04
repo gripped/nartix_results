@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,12 @@
+ 
+ pkgname=libxt
+ pkgver=1.3.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="X11 toolkit intrinsics library"
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
+-license=('MIT'
+-         'HPND-sell-variant'
+-         'SMLNJ'
+-         'MIT-open-group'
+-         'X11')
+-depends=('libsm' 'libx11' 'libice' 'glibc' 'xorgproto')
++license=('custom')
++depends=('libsm' 'libx11')
+ makedepends=('xorg-util-macros')
+ source=(${url}/releases/individual/lib/libXt-${pkgver}.tar.xz{,.sig})
+ sha512sums=('64c5978655135b925c3aaad86b1aa6a3f3b57ad8b3592bf142be616b8aa339a02c2fc7badfab9564ea8076ea8f37acfe31709ed528f5a1d251f2d116aa074118'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,3 @@
+-glibc
+-libice
+ libsm
+ libx11
+ xorg-util-macros
+-xorgproto

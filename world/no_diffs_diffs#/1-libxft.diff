@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=libxft
+ pkgver=2.3.8
+-pkgrel=2
++pkgrel=1
+ pkgdesc="FreeType-based font drawing library for X"
+ arch=('x86_64')
+-license=('HPND-sell-variant')
++license=('custom')
+ url="https://xorg.freedesktop.org/"
+-depends=('fontconfig' 'libxrender' 'libx11' 'freetype2' 'glibc' 'xorgproto')
++depends=('fontconfig' 'libxrender')
++makedepends=('pkgconfig')
+ source=(${url}/releases/individual/lib/libXft-${pkgver}.tar.xz{,.sig})
+ sha512sums=('fc385d73e1acb701942c154ffb5a283d17891f21d3ac598c4a3fb375a7d6082734593062368c15cad67c1a94177dd15deed878ec5ea852188393b52e92c372c8'
+             'SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,3 @@
+ fontconfig
+-freetype2
+-glibc
+-libx11
+ libxrender
+-xorgproto
++pkgconfig
