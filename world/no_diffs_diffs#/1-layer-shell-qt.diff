@@ -3,7 +3,7 @@
 @@ -1,8 +1,8 @@
  
  pkgname=layer-shell-qt
--pkgver=6.1.1
+-pkgver=6.1.2
 +pkgver=6.1.0
  _dirver=$(echo $pkgver | cut -d. -f1-3)
 -pkgrel=1
@@ -15,7 +15,7 @@
  optdepends=('qt6-declarative: QML bindings')
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('7c60e37301e8f343ef4965494b60186fda82798dd29aadbb35712daf62e34f53'
+-sha256sums=('17e8668cc783969a02fe087c1db685e0af29d720eaa58c39d60f36f9f776f509'
 +sha256sums=('55bd8e819a279b059fe29dbf463f8f15f833707379c719153ec750b7b50821d8'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

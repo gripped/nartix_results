@@ -86,6 +86,7 @@ libopenshot-audio-docs
 libopenshot
 libqtxdg
 libreoffice-extension-texmaths
+libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
 libreoffice-fresh
 libreoffice-fresh-sdk

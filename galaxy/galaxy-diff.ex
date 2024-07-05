@@ -3,7 +3,6 @@ cinnamon-desktop
 fastfetch
 fceux
 firefox
-libreoffice-extension-writer2latex
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=acpid
+ pkgver=2.0.34
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A daemon for delivering ACPI power management events with netlink support'
+ arch=('x86_64')
+ url='https://sourceforge.net/projects/acpid2/'
 @@ -11,11 +11,9 @@
  replaces=('acpid2')
  backup=('etc/acpi/handler.sh' 'etc/acpi/events/anything')

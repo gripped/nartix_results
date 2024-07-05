@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=klickety
+-pkgver=24.05.2
++pkgver=24.05.1
+ pkgrel=1
+ pkgdesc='An adaptation of the Clickomania game'
+ url='https://apps.kde.org/klickety/'
+@@ -25,7 +25,7 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('6a6ac411aaa5b3bdfad9fa4ad50d7b156399f256868e8fa0cec824bf45586326'
++sha256sums=('2d9dfb741d0aa339b2ad4c64814ca4c2ca22506f618844be36f9c90f439a382d'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

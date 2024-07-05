@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,18 @@
+ 
+ pkgname=iproute2
+ pkgver=6.9.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='IP Routing Utilities'
+ arch=('x86_64')
+ license=('GPL2')
+ url='https://git.kernel.org/pub/scm/network/iproute2/iproute2.git'
+-depends=('glibc'
+-         'libxtables.so' # from iptables or iptables-nft
+-         'libcap' 'libcap.so'
+-         'libelf'
+-         'libbpf' 'libbpf.so')
++depends=('glibc' 'iptables' 'libcap' 'libelf' 'libbpf')
+ makedepends=('db5.3')
+ optdepends=('db5.3: userspace arp daemon'
+             'linux-atm: ATM support'
+             'python: for routel')
+ provides=('iproute')
+-makedepends=('linux-atm' 'iptables')
++makedepends=('linux-atm')
+ options=('staticlibs')
+ validpgpkeys=('9F6FC345B05BE7E766B83C8F80A77F6095CDE47E') # Stephen Hemminger
+ source=("https://www.kernel.org/pub/linux/utils/net/${pkgname}/${pkgname}-${pkgver}.tar."{xz,sign}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,6 @@
+ glibc
+ iptables
+ libbpf
+-libbpf.so
+ libcap
+-libcap.so
+ libelf
+-libxtables.so
+ linux-atm

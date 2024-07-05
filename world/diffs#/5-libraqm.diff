@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,18 @@
+ 
+ pkgname=libraqm
+ pkgver=0.10.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A library that encapsulates the logic for complex text layout'
+ arch=(x86_64)
+ url='https://github.com/HOST-Oman/libraqm/'
+ license=(MIT)
+-depends=(freetype2
+-         fribidi
+-         glibc
+-         harfbuzz)
+-makedepends=(git
+-             gtk-doc
+-             meson)
+-source=(git+https://github.com/HOST-Oman/libraqm#tag=v$pkgver)
+-sha256sums=('3ffc828da549a7f77216236c6d9bfdb9c21cbd151adbf5dac54fa8480d9f7b03')
++depends=(freetype2 fribidi)
++makedepends=(meson gtk-doc)
++source=(https://github.com/HOST-Oman/libraqm/releases/download/v$pkgver/raqm-$pkgver.tar.xz)
++sha256sums=('4d76a358358d67c5945684f2f10b3b08fb80e924371bf3ebf8b15cd2e321d05d')
+ 
+ build() {
+-  meson build libraqm \
++  meson build raqm-$pkgver \
+     --prefix=/usr \
+     -D docs=true
+   meson compile -C build
+@@ -26,5 +21,5 @@
+ package() {
+   meson install -C build --destdir "$pkgdir"
+ 
+-  install -D -m644 libraqm/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
++  install -D -m644 raqm-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,4 @@
+ freetype2
+ fribidi
+-git
+-glibc
+ gtk-doc
+-harfbuzz
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-meson build libraqm \
++meson build raqm-$pkgver \
+ --prefix=/usr \
+ -D docs=true
+ meson compile -C build

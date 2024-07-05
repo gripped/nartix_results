@@ -54,7 +54,6 @@ conmon
 connman
 containerd
 convertlit
-coordgen
 cppcheck
 cppdap
 crun
@@ -75,7 +74,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-ebook-tools
 edk2
 edk2-shell
 edk2-ovmf
@@ -235,6 +233,7 @@ java-openjfx-src
 jedi-language-server
 js78
 kcoreaddons
+kdenlive
 kgamma
 kismet
 kitty
@@ -244,8 +243,8 @@ knot
 kopeninghours
 ksnip
 ksystemlog
+kwallet-pam
 kwin
-libappimage
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -277,10 +276,10 @@ libei
 libepoxy
 libepoxy-docs
 libetonyek
+libffado
 libfido2
 libfprint
 libgdata
-libgexiv2
 libgudev
 libguestfs
 libhandy
@@ -288,16 +287,22 @@ libhandy-docs
 libhandy0
 libinput
 libldm
+libmng
 libmspub
+libmtp
 libnvme
 libprocps
+libraqm
 libsidplay
 libsidplayfp
+libspectre
 libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
 libwhereami
+libwhich
+libwlocate
 light-locker
 lightdm
 liblightdm-qt5
@@ -323,6 +328,7 @@ usbip
 x86_energy_perf_policy
 lirc
 lm_sensors
+lpsolve
 lua-filesystem
 luarocks
 lxc
@@ -674,6 +680,7 @@ switcheroo-control
 syslog-ng
 sysprof
 libsysprof-capture
+sysstat
 system-config-printer
 thunderbird
 tigervnc
@@ -773,5 +780,6 @@ xorg-xwayland
 xsimd
 yubikey-personalization
 zathura-pdf-mupdf
+zenity
 zeromq
 znc

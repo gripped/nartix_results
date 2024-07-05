@@ -3,9 +3,10 @@
 @@ -1,12 +1,12 @@
  
  pkgname=fastfetch
--pkgver=2.17.1
+-pkgver=2.17.2
+-pkgrel=1
 +pkgver=2.8.10
- pkgrel=2
++pkgrel=2
  pkgdesc="Like Neofetch, but much faster because written in C"
  arch=('x86_64')
  url="https://github.com/fastfetch-cli/fastfetch"
@@ -35,7 +36,7 @@
    'libdrm: Displays detection'
  )
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('a38969ebb757070db5dace8a42f874d8898a7232da64c73fc86c60a2c9da9be0')
+-sha256sums=('f41322a9d9601a5a5a74f67a3253c7e8631e6241053094d050cf02bbade8cbcd')
 +sha256sums=('e3ea8388d79cc02ed1a6e45b8e5fec4068507ca03923386bdc9a7b3ff02d2a52')
  
  build() {

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=skanlite
+-pkgver=24.05.2
++pkgver=24.05.1
+ pkgrel=1
+ pkgdesc='Image Scanning Application'
+ arch=(x86_64)
+@@ -23,7 +23,7 @@
+ groups=(kde-applications
+         kde-graphics)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('a39b30205e90f9002ab65b6c7f3fcbbc6a04e383560e6b029baabc0ee1cb1950'
++sha256sums=('0c3be2bd88e4d64332056d7d00082eeb23d5ab1084f3cad94d240ba2ea63b43f'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

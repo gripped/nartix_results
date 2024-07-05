@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,22 +3,23 @@
+ _origname=lp_solve
+ pkgver=5.5.2.11
+ _mainver=5.5
+-pkgrel=3
++pkgrel=2
+ pkgdesc="a Mixed Integer Linear Programming (MILP) solver"
+ arch=('x86_64')
+ url="http://lpsolve.sourceforge.net/" # no https
+-license=('LGPL-2.1-or-later'
+-         'GPL-2.0-or-later WITH Bison-exception-2.2'
+-         'BSD-3-Clause')
++license=('LGPL2.1')
+ depends=('glibc')
++options=('debug')
+ source=(https://downloads.sourceforge.net/project/lpsolve/lpsolve/${pkgver}/lp_solve_${pkgver}_source.tar.gz
+-        lpsolve-5.5.2.11-misc.patch)
++        flags.patch)
++sha1sums=('c0ffa7b8d49938ba213b4d3e894d56b3aba4e983'
++          '6fb51fcc2d821f3ca16b0da9e93cf211abafcde2')
+ sha256sums=('6d4abff5cc6aaa933ae8e6c17a226df0fc0b671c438f69715d41d09fe81f902f'
+-            'ac1fc22a94318189c53c83fd728bd2a6c97ae2680308a852880842f78a0536c5')
++            '2d374f905a31c17769f52ca57d0e41f39bbe71e84a28f7ab972a63cf380bf14b')
+ 
+ prepare() {
+   cd ${_origname}_${_mainver}
+-  patch -Np1 -i "$srcdir"/lpsolve-5.5.2.11-misc.patch
++  patch -Np1 -i "$srcdir"/flags.patch
+ }
+ 
+ build() {
+@@ -26,8 +27,6 @@
+ 
+   cd lpsolve55
+   sh -x ccc
+-  rm bin/ux*/liblpsolve55.a
+-
+   cd ../lp_solve
+   sh -x ccc
+ }
+@@ -39,6 +38,4 @@
+   install -m755 lp_solve/bin/ux*/lp_solve "${pkgdir}"/usr/bin/
+   install -m755 lpsolve55/bin/ux*/liblpsolve55.so "${pkgdir}"/usr/lib/
+   install -m644 lp*.h "${pkgdir}"/usr/include/lpsolve/
+-
+-  install -D -m644 README.txt -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,11 @@
+ prepare() {
+ cd ${_origname}_${_mainver}
+-patch -Np1 -i "$srcdir"/lpsolve-5.5.2.11-misc.patch
++patch -Np1 -i "$srcdir"/flags.patch
+ }
+ build() {
+ cd ${_origname}_${_mainver}
+ cd lpsolve55
+ sh -x ccc
+-rm bin/ux*/liblpsolve55.a
+ cd ../lp_solve
+ sh -x ccc
+ }

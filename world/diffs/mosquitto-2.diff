@@ -1,23 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=mosquitto
- pkgver=2.0.18
--pkgrel=2
-+pkgrel=1
- pkgdesc="An Open Source MQTT Broker"
- arch=(x86_64)
- url="https://mosquitto.org/"
-@@ -21,7 +21,6 @@
+@@ -21,7 +21,7 @@
    cmake
    docbook-xsl
    libwebsockets
 -  systemd
++
    uthash
  )
  checkdepends=(
-@@ -31,13 +30,11 @@
+@@ -31,13 +31,11 @@
  )
  source=(
    https://mosquitto.org/files/source/mosquitto-$pkgver.tar.gz{,.asc}
@@ -31,7 +23,7 @@
              '21848b890c2db258138795ec21a009e022b6a8369217eb31939f976ad434229dd9f61d33e8109ade7bc001e8668e9d42b59c1ab079753860417961e102356f0e')
  validpgpkeys=('A0D6EEA1DCAE49A635A3B2F0779B22DFB3E717B7')
  
-@@ -58,7 +55,7 @@
+@@ -58,7 +56,7 @@
      -D CMAKE_INSTALL_SYSCONFDIR=/etc
      -D WITH_BUNDLED_DEPS=OFF
      -D WITH_SRV=ON
@@ -40,11 +32,12 @@
      -D WITH_WEBSOCKETS=ON
      -S $pkgname-$pkgver
      -W no-dev
-@@ -87,12 +84,10 @@
+@@ -87,12 +85,11 @@
    depends+=(
      c-ares libcares.so
      libwebsockets libwebsockets.so
 -    systemd-libs libsystemd.so
++
    )
  
    DESTDIR="$pkgdir" cmake --install build

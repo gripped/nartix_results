@@ -347,6 +347,7 @@ composefs
 confuse
 consul
 containers-common
+coordgen
 copr-cli
 corrosion
 coturn
@@ -460,6 +461,7 @@ dvdauthor
 dvisvgm
 dzen2
 easytag
+ebook-tools
 eclipse-ecj
 ecryptfs-utils
 ed
@@ -1111,7 +1113,6 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
-kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1344,7 +1345,6 @@ kuserfeedback5
 kvantum
 kvantum-qt5
 kvirc
-kwallet-pam
 kwallet
 kwallet5
 kwalletmanager
@@ -1408,6 +1408,7 @@ libaec
 libakonadi5
 libalkimia
 libao
+libappimage
 libappindicator
 libappindicator-gtk2
 libappindicator-gtk3
@@ -1494,7 +1495,6 @@ libfakekey
 libfaketime
 libfbclient
 libfdk-aac
-libffado
 libfilezilla
 libfm-qt
 libfm
@@ -1515,6 +1515,7 @@ libgedit-tepl
 libgee
 libgeotiff
 libgepub
+libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
@@ -1629,7 +1630,6 @@ libmicrodns
 libmikmod
 libmilter
 libmms
-libmng
 libmodplug
 libmp4v2
 libmpack
@@ -1638,7 +1638,6 @@ libmpdclient
 libmpeg2
 libmspack
 libmsym
-libmtp
 libmusicbrainz5
 libmwaw
 libmwaw-docs
@@ -1726,7 +1725,6 @@ libquvi-scripts
 libquvi
 libqxp
 librabbitmq-c
-libraqm
 libraw
 libraw1394
 librdkafka
@@ -1767,7 +1765,6 @@ libsoup3
 libsoup3-docs
 libsoxr
 libspatialite
-libspectre
 libspf2
 libspiro
 libspng
@@ -1829,8 +1826,6 @@ libwacom
 libwapcaplet
 libwebp
 libwebsockets
-libwhich
-libwlocate
 libwmf
 libwnck
 libwnck3
@@ -1932,7 +1927,6 @@ lua-lpeg
 lua51-lpeg
 lua52-lpeg
 lua53-lpeg
-lpsolve
 lrzip
 lsb-release
 lshw
@@ -4767,6 +4761,7 @@ syndication
 syndication5
 syntax-highlighting
 syntax-highlighting5
+sysfsutils
 systemsettings
 sz
 t1lib
@@ -5353,7 +5348,6 @@ zathura-ps
 zathura
 zbar
 zeitgeist
-zenity
 zeroc-ice
 zeroc-ice-java
 zfp
