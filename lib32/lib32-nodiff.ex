@@ -132,7 +132,6 @@ lib32-libxt
 lib32-libxtst
 lib32-libxv
 lib32-libxxf86vm
-lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123
@@ -162,7 +161,6 @@ lib32-sqlite
 lib32-taglib
 lib32-tdb
 lib32-twolame
-lib32-util-linux
 lib32-vkd3d
 lib32-vulkan-icd-loader
 lib32-vulkan-validation-layers

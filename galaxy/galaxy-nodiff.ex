@@ -168,7 +168,6 @@ lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
-ly
 marco
 mate-applets
 mate-backgrounds

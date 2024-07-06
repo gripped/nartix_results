@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -88,7 +88,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-builder
+ pkgver=46.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="An IDE for writing GNOME-based software"
+ url="https://wiki.gnome.org/Apps/Builder"
+ arch=(x86_64)
+@@ -55,7 +55,6 @@
+ makedepends=(
+   appstream-glib
+   git
+-  glib2-devel
+   gobject-introspection
+   llvm
+   mm-common
+@@ -89,7 +88,7 @@
      -D help=true
    )
  
@@ -13,7 +30,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -16,7 +16,6 @@
+ git
+ gjs
+ glib2
+-glib2-devel
+ glibc
+ gobject-introspection
+ gobject-introspection-runtime
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

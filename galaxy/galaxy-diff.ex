@@ -7,6 +7,7 @@ libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 lxqt-themes
+ly
 mate-control-center
 mate-screensaver
 mate-session-manager

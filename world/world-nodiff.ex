@@ -1826,6 +1826,7 @@ libwacom
 libwapcaplet
 libwebp
 libwebsockets
+libwlocate
 libwmf
 libwnck
 libwnck3
@@ -1907,7 +1908,6 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
-lld
 lld16
 lldb
 llvm-julia
@@ -2026,7 +2026,6 @@ mailman3
 maim
 malcontent
 libmalcontent
-maliit-framework
 maliit-keyboard
 mallard-ducktype
 man-pages-l10n
@@ -2090,7 +2089,6 @@ mate-user-guide
 mate-utils
 materia-kde
 kvantum-theme-materia
-mathjax2
 matterbridge
 maturin
 python-maturin
@@ -2137,15 +2135,12 @@ mjpegtools
 mktorrent
 mlt
 mm-common
-mmtf-cpp
 mobile-broadband-provider-info
 mod_dnssd
 modem-manager-gui
 modemmanager-qt
 modemmanager-qt5
 mold
-molecule
-molequeue
 mongo-c-driver
 mono
 mopidy
@@ -2322,7 +2317,6 @@ openh264
 openimagedenoise
 openimageio
 openipmi
-openjade
 openjpeg2
 openlibm
 openmp
@@ -3589,7 +3583,6 @@ python-perf
 python-persistent
 python-pexpect
 python-pg8000
-python-phonenumbers
 python-piccata
 python-pickleshare
 python-pika
@@ -4596,11 +4589,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
@@ -5121,9 +5109,6 @@ wacomtablet
 waf
 warpinator
 wasi-compiler-rt
-wasi-libc
-wasi-libcplusplus
-wasi-libc++abi
 wavpack
 wayland-protocols
 wayland-utils
@@ -5348,10 +5333,10 @@ zathura-ps
 zathura
 zbar
 zeitgeist
+zenity
 zeroc-ice
 zeroc-ice-java
 zfp
-zig
 zimg
 zip
 ziproxy

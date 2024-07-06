@@ -1,15 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
+@@ -3,9 +3,10 @@
  pkgname=(pyside6
           pyside6-tools
           shiboken6)
 -_qtver=6.7.2
 +_qtver=6.7.1
- _clangver=17.0.6
++_clangver=17.0.6
  pkgver=${_qtver/-/}
- pkgrel=1
-@@ -41,14 +41,17 @@
+-pkgrel=3
++pkgrel=1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(LGPL)
+@@ -40,14 +41,17 @@
               qt6-webengine
               qt6-websockets)
  source=(git+https://code.qt.io/pyside/pyside-setup#tag=v$pkgver
@@ -30,6 +34,15 @@
  }
  
  build() {
+@@ -65,7 +69,7 @@
+ 
+ package_shiboken6() {
+   pkgdesc='Generates bindings for C++ libraries using CPython source code'
+-  depends=(clang
++  depends=(clang=$_clangver
+            gcc-libs
+            glibc
+            libxml2
 
 
 ############# Stripped diff below #################

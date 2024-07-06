@@ -1,14 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,12 +1,13 @@
  
  pkgname=kdevelop
 -pkgver=24.05.2
+-pkgrel=2
 +pkgver=24.05.1
- _clangver=17.0.6
- pkgrel=1
++_clangver=17.0.6
++pkgrel=1
  pkgdesc='C++ IDE using KDE technologies'
-@@ -82,7 +82,7 @@
+ arch=(x86_64)
+ url='http://www.kdevelop.org/'
+ license=(GPL-2.0-or-later)
+-depends=(clang
++depends=(clang=$_clangver
+          gcc-libs
+          glibc
+          grantlee
+@@ -81,7 +82,7 @@
  groups=(kde-applications
          kdevelop)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})

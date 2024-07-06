@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,10 +2,10 @@
+ pkgname=ttf-carlito
+ pkgver=20230509
+ _commit=3a810cab78ebd6e2e4eed42af9e8453c4f9b850a
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Google's Carlito font"
+ arch=(any)
+-license=('LicenseRef-OFL')
++license=(custom:OFL)
+ url='https://fonts.google.com/specimen/Carlito'
+ makedepends=('git')
+ provides=(google-crosextra-carlito-fonts)

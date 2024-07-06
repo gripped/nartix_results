@@ -302,7 +302,6 @@ libusbsio
 python-libusbsio
 libwhereami
 libwhich
-libwlocate
 light-locker
 lightdm
 liblightdm-qt5
@@ -327,6 +326,7 @@ turbostat
 usbip
 x86_energy_perf_policy
 lirc
+lld
 lm_sensors
 lpsolve
 lua-filesystem
@@ -339,6 +339,7 @@ lxqt-qtplugin
 lxqt-session
 lxqt-themes
 mako
+maliit-framework
 mariadb
 mariadb-libs
 mariadb-clients
@@ -348,6 +349,7 @@ mate-screensaver
 mate-session-manager
 mate-system-monitor
 mate-user-share
+mathjax2
 matrix-synapse
 maven
 mbedtls
@@ -368,9 +370,12 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
+mmtf-cpp
 modemmanager
 libmm-glib
 modest
+molecule
+molequeue
 mosquitto
 mpd
 multipath-tools
@@ -408,6 +413,7 @@ open-iscsi
 opencc
 opencc-doc
 opendht
+openjade
 openmpi
 openmpi-docs
 openrct2
@@ -522,6 +528,7 @@ python-intelhex
 python-ipywidgets
 python-libtmux
 python-nptyping
+python-phonenumbers
 python-platformdirs
 python-pymupdf
 python-pynitrokey
@@ -647,6 +654,11 @@ rspamd
 rtkit
 ruby-faraday-patron
 ruby-optimist
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 smbclient
@@ -735,6 +747,9 @@ vte3
 vte-common
 vte4
 vte-docs
+wasi-libc
+wasi-libcplusplus
+wasi-libc++abi
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -780,6 +795,6 @@ xorg-xwayland
 xsimd
 yubikey-personalization
 zathura-pdf-mupdf
-zenity
 zeromq
+zig
 znc

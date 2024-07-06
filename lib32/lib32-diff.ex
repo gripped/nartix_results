@@ -13,6 +13,7 @@ lib32-libgudev
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
+lib32-llvm
 lib32-mesa
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
@@ -34,6 +35,7 @@ lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
+lib32-util-linux
 lib32-v4l-utils
 wine-staging
 wine

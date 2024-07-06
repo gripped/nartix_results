@@ -51,6 +51,7 @@ libp11-kit
 p11-kit-docs
 pam
 pambase
+pinentry
 ppp
 procps-ng
 rpcbind
