@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ pkgrel=1
+ arch=('x86_64')
+ url="https://llvm.org/"
+-license=('Apache-2.0 WITH LLVM-exception')
++license=('custom:Apache 2.0 with LLVM Exception')
+ makedepends=('cmake' 'ninja' 'lib32-libffi' 'lib32-zlib' 'lib32-zstd' 'python'
+              'gcc-multilib' 'lib32-libxml2')
+ options=('staticlibs' '!lto') # tools/llvm-shlib/typeids.test fails with LTO

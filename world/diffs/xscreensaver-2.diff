@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,11 +8,11 @@
+ license=('BSD')
+ depends=(
+   'gtk3' 'glu' 'xorg-appres' 'libglvnd' 'libjpeg-turbo' 'libjpeg.so'
+-  'libsystemd.so' 'libx11' 'libxcrypt' 'libcrypt.so' 'libxext' 'libxft' 'libxi'
++  'libx11' 'libxcrypt' 'libcrypt.so' 'libxext' 'libxft' 'libxi'
+   'libxinerama' 'libxmu' 'libxrandr' 'libxt' 'libxxf86vm' 'perl-libwww' 'pam'
+   'libpam.so' 'glibc' 'glib2' 'gdk-pixbuf2'
+ )
+-makedepends=('bc' 'intltool' 'libxpm' 'gdm' 'systemd' 'systemd-libs')
++makedepends=('bc' 'intltool' 'libxpm' 'gdm')
+ optdepends=('gdm: for login manager support')
+ backup=('etc/pam.d/xscreensaver')
+ source=(https://www.jwz.org/xscreensaver/${pkgname}-${pkgver}.tar.gz
+@@ -37,7 +37,6 @@
+     --without-gle \
+     --with-pixbuf \
+     --with-jpeg \
+-    --with-systemd \
+     --enable-pam-check-account-type
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,7 +11,6 @@
+ libjpeg-turbo
+ libjpeg.so
+ libpam.so
+-libsystemd.so
+ libx11
+ libxcrypt
+ libxext
+@@ -25,6 +24,4 @@
+ libxxf86vm
+ pam
+ perl-libwww
+-systemd
+-systemd-libs
+ xorg-appres

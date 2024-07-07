@@ -41,7 +41,6 @@ cgmanager
 chromium-bsu
 cinnamon-desktop
 clamav
-clang
 clazy
 cloud-init
 cmake
@@ -326,7 +325,6 @@ turbostat
 usbip
 x86_energy_perf_policy
 lirc
-lld
 lm_sensors
 lpsolve
 lua-filesystem
@@ -370,7 +368,6 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
-mmtf-cpp
 modemmanager
 libmm-glib
 modest
@@ -540,6 +537,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -747,9 +745,6 @@ vte3
 vte-common
 vte4
 vte-docs
-wasi-libc
-wasi-libcplusplus
-wasi-libc++abi
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -792,9 +787,9 @@ xorg-server-devel
 xorg-xdm
 xorg-xlogo
 xorg-xwayland
+xscreensaver
 xsimd
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zig
 znc

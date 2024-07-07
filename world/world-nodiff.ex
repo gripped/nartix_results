@@ -306,6 +306,7 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
+clang
 clang14
 clang15
 clang16
@@ -1908,6 +1909,7 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
+lld
 lld16
 lldb
 llvm-julia
@@ -2135,6 +2137,7 @@ mjpegtools
 mktorrent
 mlt
 mm-common
+mmtf-cpp
 mobile-broadband-provider-info
 mod_dnssd
 modem-manager-gui
@@ -4077,7 +4080,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -5109,6 +5111,9 @@ wacomtablet
 waf
 warpinator
 wasi-compiler-rt
+wasi-libc
+wasi-libcplusplus
+wasi-libc++abi
 wavpack
 wayland-protocols
 wayland-utils
@@ -5287,7 +5292,6 @@ xpra
 xreader
 xsane
 xsane-gimp
-xscreensaver
 xsd
 xsel
 xsettingsd
@@ -5337,6 +5341,7 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zfp
+zig
 zimg
 zip
 ziproxy

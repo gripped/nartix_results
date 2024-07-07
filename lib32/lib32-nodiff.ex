@@ -9,6 +9,7 @@ lib32-brotli
 lib32-bzip2
 lib32-cairo
 lib32-cdparanoia
+lib32-clang
 lib32-cmocka
 lib32-curl
 lib32-libcurl-compat
@@ -132,6 +133,7 @@ lib32-libxt
 lib32-libxtst
 lib32-libxv
 lib32-libxxf86vm
+lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123

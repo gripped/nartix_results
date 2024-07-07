@@ -1,45 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,29 +2,27 @@
- _basepkgname=libudev0-shim
- pkgname=lib32-${_basepkgname}
- pkgver=1
--_commit='dbaa13dd5cbcebb6aea6c652402c67f156548935'
--pkgrel=7
-+pkgrel=6
- pkgdesc='libudev.so.0 compatibility library for systems with newer udev versions (32 bit)'
- url='https://github.com/archlinux/libudev0-shim'
- arch=('x86_64')
--license=('LGPL-2.1-or-later')
-+license=('GPL')
+@@ -10,8 +10,8 @@
+ license=('LGPL-2.1-or-later')
  provides=('lib32-libudev0')
  conflicts=('lib32-libudev0')
 -depends=('lib32-systemd' 'libudev0-shim')
 -makedepends=('git')
--source=("git+https://github.com/archlinux/libudev0-shim.git#commit=${_commit}")
--sha512sums=('37fdb46a6b0bd9c34e393ad4daf99d3d9c9568e06b295324d3508dba59758b1bd088859931b76966d5451a3c81cf3864abb45125e3268709de21dbc3a047fff1')
 +depends=('lib32-udev' 'libudev0-shim')
-+makedepends=('udev')
-+source=(${_basepkgname}.tar.gz::https://github.com/archlinux/libudev0-shim/archive/v${pkgver}.tar.gz)
-+sha512sums=('794810b20be6391cb6af53c2c49705f8bd884dd6eb5d1fd5b659481a01490205cc60e0f1904c020fb0e59e984583762ba6775f977a78b95a40ba82eb93965387')
- 
- build() {
--  cd "${_basepkgname}"
--
-+  cd ${_basepkgname}-${pkgver}
-+  unset LDFLAGS
-   make CC="gcc -m32"
- }
- 
- package() {
--  cd "${_basepkgname}"
--
--  install -Dm 0755 libudev.so.0.13.9999 -t "${pkgdir}/usr/lib32"
--  ln -s libudev.so.0.13.9999 "${pkgdir}/usr/lib32/libudev.so.0"
-+  cd ${_basepkgname}-${pkgver}
-+  install -Dm 755 libudev.so.0.0.9999 -t "${pkgdir}/usr/lib32"
-+  ln -s libudev.so.0.0.9999 "${pkgdir}/usr/lib32/libudev.so.0"
- }
++makedepends=('git' 'udev')
+ source=("git+https://github.com/archlinux/libudev0-shim.git#commit=${_commit}")
+ sha512sums=('37fdb46a6b0bd9c34e393ad4daf99d3d9c9568e06b295324d3508dba59758b1bd088859931b76966d5451a3c81cf3864abb45125e3268709de21dbc3a047fff1')
  
 
 
@@ -47,8 +17,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,3 +1,3 @@
--git
+@@ -1,3 +1,4 @@
+ git
 -lib32-systemd
 +lib32-udev
  libudev0-shim

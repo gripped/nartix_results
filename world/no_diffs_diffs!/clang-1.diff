@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ pkgdesc="C language family frontend for LLVM"
+ arch=('x86_64')
+ url="https://clang.llvm.org/"
+-license=('Apache-2.0 WITH LLVM-exception')
++license=('custom:Apache 2.0 with LLVM Exception')
+ depends=('llvm-libs' 'gcc' 'compiler-rt')
+ makedepends=('llvm' 'cmake' 'ninja' 'python-sphinx' 'python-myst-parser')
+ optdepends=('openmp: OpenMP support in clang with -fopenmp'

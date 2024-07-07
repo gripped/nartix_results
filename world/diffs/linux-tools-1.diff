@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
-   'x86_energy_perf_policy'
- )
- pkgver=6.9
--pkgrel=2
-+pkgrel=1
- license=('GPL-2.0-only')
- arch=('x86_64')
- url='https://www.kernel.org'
 @@ -31,25 +31,13 @@
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"

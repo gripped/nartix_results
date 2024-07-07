@@ -1,4 +1,3 @@
-lib32-clang
 lib32-colord
 lib32-dbus
 lib32-fluidsynth
@@ -13,7 +12,6 @@ lib32-libgudev
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
-lib32-llvm
 lib32-mesa
 lib32-libva-mesa-driver
 lib32-mesa-vdpau
