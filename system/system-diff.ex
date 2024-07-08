@@ -30,6 +30,7 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
+json-c
 libusb
 linux
 linux-headers

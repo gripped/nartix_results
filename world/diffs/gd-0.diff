@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gd
+ pkgver=2.3.3
+-pkgrel=8
++pkgrel=7
+ pkgdesc="Library for the dynamic creation of images by programmers"
+ arch=('x86_64')
+ url="https://libgd.github.io/"
+@@ -18,10 +18,6 @@
+   cd libgd-${pkgname}-${pkgver}
+ 
+   patch -p1 -R -i "$srcdir/bdc281eadb1d58d5c0c7bbc1125ee4674256df08.patch"
+-
+-  for f in tests/tiff/{tiff_read_bw,tiff_im2im,tiff_dpi}.c; do
+-    echo 'int main() { return 0; }' > $f
+-  done
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,6 @@
+ prepare() {
+ cd libgd-${pkgname}-${pkgver}
+ patch -p1 -R -i "$srcdir/bdc281eadb1d58d5c0c7bbc1125ee4674256df08.patch"
+-for f in tests/tiff/{tiff_read_bw,tiff_im2im,tiff_dpi}.c; do
+-echo 'int main() { return 0; }' > $f
+-done
+ }
+ build() {
+ cd libgd-${pkgname}-${pkgver}

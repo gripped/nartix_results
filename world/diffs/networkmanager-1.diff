@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   nm-cloud-setup
-   networkmanager-docs
- )
--pkgver=1.48.4
-+pkgver=1.48.2
- pkgrel=1
- pkgdesc="Network connection manager and user applications"
- url="https://networkmanager.dev/"
 @@ -19,6 +19,7 @@
    dhclient
    dhcpcd
@@ -27,16 +18,7 @@
    vala
    wpa_supplicant
  )
-@@ -60,7 +58,7 @@
- source=(
-   "git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git?signed#tag=$pkgver"
- )
--b2sums=('323cff19f9d4afb5d3773d74928fc0e6ec819d11ebb30b555e86fdde0e2dc95361d34b60e2ebf3417d9ef1bcf8321658510dda745df0203916a05942c803206e')
-+b2sums=('9a728c000cebbb35cbbf1e2ab5d827f4d748165bd3c3dc6401cd4163152556d91b0f04306b074374a6e37e5a23f0f4aa1b1fff86d03e56b1f1cb10893c567c61')
- validpgpkeys=(
-   3D10AD045AB4AAFF8E8F36AF9B980AC2FB874FEB # Ana Cabral <acabral@redhat.com>
-   F07F7C1EABD382F81CBFBA3B998D4828CD7E1656 # Beniamino Galvani <bgalvani@redhat.com>
-@@ -82,9 +80,13 @@
+@@ -82,9 +80,12 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -47,11 +29,10 @@
 +    -D systemdsystemunitdir=no
 +    -D session_tracking=elogind
 +    -D systemd_journal=false
-+
  
      -D iwd=true
      -D teamdctl=true
-@@ -102,7 +104,7 @@
+@@ -102,7 +103,7 @@
      -D qt=false
    )
  
@@ -60,7 +41,7 @@
    meson compile -C build
  }
  
-@@ -124,6 +126,7 @@
+@@ -124,6 +125,7 @@
    depends=(
      audit
      curl
@@ -68,7 +49,7 @@
      gcc-libs
      glib2
      glibc
-@@ -139,7 +142,6 @@
+@@ -139,7 +141,6 @@
      nspr
      nss
      readline
@@ -76,7 +57,7 @@
      wpa_supplicant
    )
    optdepends=(
-@@ -168,6 +170,9 @@
+@@ -168,6 +169,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -86,7 +67,7 @@
  END
  
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -189,7 +194,6 @@
+@@ -189,7 +193,6 @@
    _pick cloud usr/lib/**/*nm-cloud-setup*
    _pick cloud usr/share/man/*/nm-cloud-setup*
  
@@ -94,7 +75,7 @@
  
    install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
-@@ -202,7 +206,7 @@
+@@ -202,7 +205,7 @@
      glibc
      nspr
      nss

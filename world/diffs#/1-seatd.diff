@@ -1,29 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=seatd
- pkgver=0.8.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="A minimal seat management daemon, and a universal seat management library"
- arch=(x86_64)
- url="https://sr.ht/~kennylevinsen/seatd/"
-@@ -12,11 +12,9 @@
+@@ -12,10 +12,10 @@
      'meson'
      'ninja'
      'scdoc'
 -    'systemd'
 +    'elogind'
  )
--depends=(
+ depends=(
 -    'systemd-libs'
--)
-+depends=('libelogind')
++		'libelogind'
+ )
  source=(
      "$pkgname-$pkgver.tar.gz::https://git.sr.ht/~kennylevinsen/seatd/archive/$pkgver.tar.gz"
-     "sysuser.conf"
-@@ -29,7 +27,7 @@
+@@ -29,7 +29,7 @@
            --buildtype=plain \
            -Dexamples="disabled" \
            -Dserver="enabled" \
@@ -32,7 +22,7 @@
            -Dman-pages="enabled" \
            "seatd-$pkgver" \
            build
-@@ -44,7 +42,5 @@
+@@ -44,7 +44,5 @@
      DESTDIR="$pkgdir/" ninja -C build install
      install -Dm644 "seatd-$pkgver/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname/"
  

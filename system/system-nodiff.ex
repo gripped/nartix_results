@@ -64,7 +64,6 @@ iptables-nft
 iw
 jansson
 jfsutils
-json-c
 kbd
 keyutils
 kmod

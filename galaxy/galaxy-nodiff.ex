@@ -381,7 +381,6 @@ wireshark-cli
 wireshark-qt
 xapp
 xdg-desktop-portal-lxqt
-xdg-desktop-portal-xapp
 xfburn
 xfce4-appfinder
 xfce4-artwork

@@ -563,7 +563,6 @@ flameshot
 flashrom
 flatbuffers
 python-flatbuffers
-flatpak-builder
 flatpak-kcm
 flickcurl
 flite
@@ -614,7 +613,6 @@ garcon
 gavl
 gcab
 gcc13
-gd
 gdal
 python-gdal
 gdb
@@ -677,7 +675,6 @@ gmic
 gimp-plugin-gmic
 gmime3
 gn
-gnome-applets
 gnome-autoar
 gnome-backgrounds
 gnome-boxes
@@ -1419,6 +1416,7 @@ libatomic_ops
 libavc1394
 libavif
 libavtp
+libb2
 libb64
 libblastrampoline
 libbluray
@@ -1449,6 +1447,7 @@ libcuckoo
 libcue
 libcupsfilters
 libcutl
+libdaemon
 libdatachannel
 libdatrie
 libdazzle
@@ -1496,6 +1495,7 @@ libfakekey
 libfaketime
 libfbclient
 libfdk-aac
+libffado
 libfilezilla
 libfm-qt
 libfm
@@ -1631,6 +1631,7 @@ libmicrodns
 libmikmod
 libmilter
 libmms
+libmng
 libmodplug
 libmp4v2
 libmpack
@@ -1639,6 +1640,7 @@ libmpdclient
 libmpeg2
 libmspack
 libmsym
+libmtp
 libmusicbrainz5
 libmwaw
 libmwaw-docs
@@ -1677,7 +1679,6 @@ libopenraw
 libopensmtpd
 libopusenc
 liborcus
-libosinfo
 libotf
 libotr
 libp11
@@ -2144,6 +2145,7 @@ modem-manager-gui
 modemmanager-qt
 modemmanager-qt5
 mold
+molequeue
 mongo-c-driver
 mono
 mopidy
@@ -2177,9 +2179,6 @@ libmupdf
 mupdf-gl
 mupdf-tools
 python-mupdf
-musepack
-musepack-tools
-libmpcdec
 musescore
 musl
 mutt
@@ -4080,6 +4079,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop

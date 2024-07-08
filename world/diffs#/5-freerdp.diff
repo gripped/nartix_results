@@ -1,0 +1,89 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,13 +3,14 @@
+ pkgname=freerdp
+ pkgver=3.6.2
+ _libver=${pkgver/.*/}
+-pkgrel=2
++pkgrel=1
+ epoch=2
+ pkgdesc="Free implementation of the Remote Desktop Protocol (RDP)"
+ arch=(x86_64)
+ url="https://www.freerdp.com/"
+ license=(Apache-2.0)
+ depends=(
++  cjson
+   fuse3
+   gcc-libs
+   glibc
+@@ -39,7 +40,6 @@
+   glib2
+   gtk3
+   icu
+-  json-c
+   krb5
+   libjpeg-turbo
+   libp11
+@@ -103,7 +103,7 @@
+     -D WITH_PULSE=ON
+     -D WITH_SERVER=ON
+     -D WITH_SERVER_CHANNELS=ON
+-    -D WITH_SYSTEMD=ON
++    -D WITH_SYSTEMD=OFF
+     -D WITH_SWSCALE=ON
+     -D WITH_WAYLAND=ON
+     -D WITH_WINPR_TOOLS=ON
+@@ -131,11 +131,10 @@
+     glib2 libglib-2.0.so libgobject-2.0.so
+     gtk3 libgtk-3.so
+     icu libicuuc.so
+-    json-c libjson-c.so
+     krb5 libk5crypto.so libkrb5.so
++    libpulse libpulse.so
++    libpng libpng16.so
+     libjpeg-turbo libjpeg.so
+-    libpng libpng16.so
+-    libpulse libpulse.so
+     libusb libusb-1.0.so
+     libwebp libwebp.so
+     openssl libcrypto.so libssl.so
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ alsa-lib
++cjson
+ cmake
+ docbook-xsl
+ e2fsprogs
+@@ -9,7 +10,6 @@
+ glibc
+ gtk3
+ icu
+-json-c
+ krb5
+ libasound.so
+ libavcodec.so
+@@ -24,7 +24,6 @@
+ libjavascriptcoregtk-4.1.so
+ libjpeg-turbo
+ libjpeg.so
+-libjson-c.so
+ libk5crypto.so
+ libkrb5.so
+ libp11
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ -D WITH_PULSE=ON
+ -D WITH_SERVER=ON
+ -D WITH_SERVER_CHANNELS=ON
+--D WITH_SYSTEMD=ON
++-D WITH_SYSTEMD=OFF
+ -D WITH_SWSCALE=ON
+ -D WITH_WAYLAND=ON
+ -D WITH_WINPR_TOOLS=ON
