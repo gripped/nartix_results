@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=cracklib
+ pkgver=2.9.11
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Password Checking Library"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ url="https://github.com/cracklib/cracklib"
+ depends=('glibc' 'zlib')
+ source=(https://github.com/cracklib/cracklib/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz)

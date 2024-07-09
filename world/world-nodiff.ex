@@ -563,6 +563,7 @@ flameshot
 flashrom
 flatbuffers
 python-flatbuffers
+flatpak-builder
 flatpak-kcm
 flickcurl
 flite
@@ -675,6 +676,7 @@ gmic
 gimp-plugin-gmic
 gmime3
 gn
+gnome-applets
 gnome-autoar
 gnome-backgrounds
 gnome-boxes
@@ -1343,6 +1345,7 @@ kuserfeedback5
 kvantum
 kvantum-qt5
 kvirc
+kwallet-pam
 kwallet
 kwallet5
 kwalletmanager
@@ -1679,6 +1682,7 @@ libopenraw
 libopensmtpd
 libopusenc
 liborcus
+libosinfo
 libotf
 libotr
 libp11
@@ -1818,7 +1822,6 @@ libvirt-python
 libvirt
 libvisio
 libvisual
-libvncserver
 libvoikko
 libvorbis
 libvpl
@@ -2179,6 +2182,9 @@ libmupdf
 mupdf-gl
 mupdf-tools
 python-mupdf
+musepack
+musepack-tools
+libmpcdec
 musescore
 musl
 mutt
@@ -2805,6 +2811,7 @@ print-manager
 prison
 prison5
 privoxy
+procinfo-ng
 proj
 projectm
 projectm-sdl
@@ -2933,7 +2940,6 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
-python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3066,7 +3072,6 @@ python-copr
 python-coverage
 python-cppheaderparser
 python-cppy
-python-cramjam
 python-crashtest
 python-crc32c
 python-crcmod
@@ -3105,7 +3110,6 @@ python-dep-logic
 python-deprecated
 python-deprecation
 python-devtools
-python-diff-cover
 python-digitalocean
 python-dill
 python-dirty-equals
@@ -3411,7 +3415,6 @@ python-libvcs
 python-license-expression
 python-linetable
 python-linkify-it-py
-python-littleutils
 python-livereload
 python-llvmlite
 python-lmdb
@@ -3486,7 +3489,6 @@ python-myst-parser
 python-natsort
 python-nbxmpp
 python-ndg-httpsclient
-python-ndindex
 python-nest-asyncio
 python-netaddr
 python-netcdf4
@@ -3626,7 +3628,6 @@ python-promise
 python-prompt_toolkit
 python-proxmoxer
 python-proxy.py
-python-psutil
 python-psycopg2
 python-pt
 python-ptrace
@@ -3671,7 +3672,6 @@ python-pyenchant
 python-pyfakefs
 python-pyflakes
 python-pyftdi
-python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
@@ -3697,7 +3697,6 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
-python-pymongo
 python-pymysql
 python-pynacl
 python-pynamodb

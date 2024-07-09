@@ -102,7 +102,6 @@ fcron
 ffmpeg
 firefox
 firewalld
-flatpak-builder
 flatpak
 flatpak-docs
 fluidsynth
@@ -127,7 +126,6 @@ geoclue
 ghc-filesystem
 gifski
 github-cli
-gnome-applets
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -245,7 +243,6 @@ knot
 kopeninghours
 ksnip
 ksystemlog
-kwallet-pam
 kwin
 libatasmart
 libayatana-appindicator
@@ -288,7 +285,6 @@ libinput
 libldm
 libmspub
 libnvme
-libosinfo
 libprocps
 libraqm
 libsidplay
@@ -298,6 +294,7 @@ libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
+libvncserver
 libwhereami
 libwhich
 light-locker
@@ -376,9 +373,6 @@ mpd
 multipath-tools
 mumble
 mumble-server
-musepack
-musepack-tools
-libmpcdec
 mutter
 mutter-docs
 mutter45
@@ -498,7 +492,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-procinfo-ng
 prosody
 protobuf
 python-protobuf
@@ -519,15 +512,23 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-asyncpg
+python-cramjam
 python-debugpy
+python-diff-cover
 python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
+python-littleutils
+python-ndindex
 python-nptyping
 python-phonenumbers
 python-platformdirs
+python-psutil
+python-pyftpdlib
+python-pymongo
 python-pymupdf
 python-pynitrokey
 python-pyotp
