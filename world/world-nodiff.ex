@@ -503,6 +503,7 @@ evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
+evtest
 exempi
 exfat-utils
 exfatprogs
@@ -1113,6 +1114,7 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
+kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1276,7 +1278,6 @@ kpeople5
 kpeoplevcard
 kpimtextedit
 kpimtextedit5
-kpipewire
 kpkpass
 kplotting
 kplotting5
@@ -4078,7 +4079,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop

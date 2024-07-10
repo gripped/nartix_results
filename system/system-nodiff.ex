@@ -90,7 +90,6 @@ libisl
 libksba
 libmicrohttpd
 libmnl
-libmpc
 libnetfilter_conntrack
 libnfnetlink
 libnftnl

@@ -31,6 +31,7 @@ glibc-locales
 gssproxy
 iputils
 json-c
+libmpc
 libusb
 linux
 linux-headers

@@ -233,7 +233,6 @@ java-openjfx-src
 jedi-language-server
 js78
 kcoreaddons
-kdenlive
 kgamma
 kismet
 kitty
@@ -241,6 +240,7 @@ kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
+kpipewire
 ksnip
 ksystemlog
 kwin
@@ -539,6 +539,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
