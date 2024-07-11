@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -63,7 +63,7 @@
+@@ -63,12 +63,12 @@
      -D fuse=3
    )
  
@@ -9,6 +9,12 @@
    meson compile -C build
  }
  
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs || :
+ }
+ 
+ package() {
 
 
 ############# Stripped diff below #################

@@ -35,14 +35,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,10 +12,7 @@
- libprotobuf-c.so
- libsodium
- libssl.so
+@@ -1,21 +0,0 @@
+-dnssec-anchors
+-expat
+-fstrm
+-git
+-glibc
+-hiredis
+-ldns
+-libcrypto.so
+-libevent
+-libevent-2.1.so
+-libnghttp2
+-libprotobuf-c.so
+-libsodium
+-libssl.so
 -libsystemd.so
- openssl
- protobuf-c
- python
- swig
+-openssl
+-protobuf-c
+-python
+-swig
 -systemd
 -systemd-libs

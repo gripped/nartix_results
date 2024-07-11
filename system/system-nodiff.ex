@@ -64,6 +64,7 @@ iptables-nft
 iw
 jansson
 jfsutils
+json-c
 kbd
 keyutils
 kmod
@@ -90,6 +91,7 @@ libisl
 libksba
 libmicrohttpd
 libmnl
+libmpc
 libnetfilter_conntrack
 libnfnetlink
 libnftnl
@@ -157,6 +159,7 @@ pciutils
 pcre
 pcre2
 perl
+pinentry
 pkgconf
 popt
 pptpclient

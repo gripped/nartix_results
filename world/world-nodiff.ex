@@ -414,8 +414,6 @@ directx-shader-compiler
 discount
 discover
 distcc
-django
-python-django
 djvulibre
 dkms
 dleyna
@@ -516,7 +514,6 @@ f2fs-tools
 faac
 faad2
 facile
-fail2ban
 fakechroot
 falkon
 farstream
@@ -2941,6 +2938,7 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
+python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3073,6 +3071,7 @@ python-copr
 python-coverage
 python-cppheaderparser
 python-cppy
+python-cramjam
 python-crashtest
 python-crc32c
 python-crcmod
@@ -3111,6 +3110,7 @@ python-dep-logic
 python-deprecated
 python-deprecation
 python-devtools
+python-diff-cover
 python-digitalocean
 python-dill
 python-dirty-equals
@@ -3416,6 +3416,7 @@ python-libvcs
 python-license-expression
 python-linetable
 python-linkify-it-py
+python-littleutils
 python-livereload
 python-llvmlite
 python-lmdb
@@ -3490,6 +3491,7 @@ python-myst-parser
 python-natsort
 python-nbxmpp
 python-ndg-httpsclient
+python-ndindex
 python-nest-asyncio
 python-netaddr
 python-netcdf4
@@ -3507,6 +3509,7 @@ python-nose
 python-nose2
 python-nosexcover
 python-notify2
+python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
@@ -3588,6 +3591,7 @@ python-perf
 python-persistent
 python-pexpect
 python-pg8000
+python-phonenumbers
 python-piccata
 python-pickleshare
 python-pika
@@ -3602,6 +3606,7 @@ python-pipreqs
 python-pipx
 python-pkgconfig
 python-pkginfo
+python-platformdirs
 python-plette
 python-pluggy
 python-plumbum
@@ -3629,6 +3634,7 @@ python-promise
 python-prompt_toolkit
 python-proxmoxer
 python-proxy.py
+python-psutil
 python-psycopg2
 python-pt
 python-ptrace
@@ -3698,10 +3704,12 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
+python-pymongo
 python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
+python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
@@ -4313,7 +4321,6 @@ rhash
 rhino
 java-rhino
 rhino-javadoc
-rinutils
 ripgrep
 ristretto
 rkcommon
@@ -4590,6 +4597,11 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

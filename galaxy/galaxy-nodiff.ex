@@ -203,7 +203,6 @@ nemo
 obconf-qt
 onionshare
 openbox
-openrct2
 openshot
 parole
 pavucontrol-qt
@@ -233,7 +232,6 @@ ristretto
 screengrab
 scribus
 scummvm
-signal-desktop
 telegram-desktop
 terminus-font
 tesseract-data

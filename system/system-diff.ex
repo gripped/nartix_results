@@ -30,8 +30,6 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
-json-c
-libmpc
 libusb
 linux
 linux-headers
@@ -53,7 +51,6 @@ libp11-kit
 p11-kit-docs
 pam
 pambase
-pinentry
 ppp
 procps-ng
 rpcbind
