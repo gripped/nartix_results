@@ -414,6 +414,8 @@ directx-shader-compiler
 discount
 discover
 distcc
+django
+python-django
 djvulibre
 dkms
 dleyna
@@ -514,6 +516,7 @@ f2fs-tools
 faac
 faad2
 facile
+fail2ban
 fakechroot
 falkon
 farstream
@@ -710,7 +713,6 @@ libgoa
 gnome-photos
 gnome-recipes
 gnome-robots
-gnome-screenshot
 gnome-shell-extensions
 gnome-software
 gnome-sound-recorder
@@ -743,6 +745,8 @@ go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
+gom
+gom-docs
 google-glog
 gox
 gparted
@@ -897,6 +901,7 @@ icewm
 icmake
 icon-naming-utils
 icoutils
+id3lib
 ijs
 imagemagick
 imake
@@ -1415,7 +1420,6 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
-libavif
 libavtp
 libb2
 libb64
@@ -1544,7 +1548,6 @@ libgweather-4
 libgweather-4-docs
 libgxps
 libharu
-libheif
 libhubbub
 libical
 libice
@@ -1704,11 +1707,6 @@ libplasma
 libplist
 libpng
 libpng12
-libportal
-libportal-gtk3
-libportal-gtk4
-libportal-qt5
-libportal-docs
 libppd
 libproxy
 libproxy-docs

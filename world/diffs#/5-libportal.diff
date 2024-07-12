@@ -1,0 +1,85 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,15 +8,16 @@
+   libportal-docs
+ )
+ pkgver=0.7.1
+-pkgrel=2
++pkgrel=3
+ pkgdesc="GIO-style async APIs for most Flatpak portals"
+ url="https://github.com/flatpak/libportal"
+ arch=(x86_64)
+-license=(LGPL3)
++license=(LGPL-3.0-only)
+ makedepends=(
+   gi-docgen
+   git
+   gjs
++  glib2-devel
+   gobject-introspection
+   gtk3
+   gtk4
+@@ -24,7 +25,6 @@
+   qt5-base
+   qt5-x11extras
+   vala
+-  xdg-desktop-portal
+ )
+ checkdepends=(
+   python-dbusmock
+@@ -42,10 +42,12 @@
+ 
+ prepare() {
+   cd libportal
++
++  git cherry-pick -n 6cd7c2ab82575b76f876ee2bd2d31f6cb77f022f
+ }
+ 
+ build() {
+-  arch-meson libportal build
++  artix-meson libportal build
+   meson compile -C build
+ }
+ 
+@@ -67,8 +69,8 @@
+ package_libportal() {
+   depends=(
+     libg{lib,object,io}-2.0.so
+-    xdg-desktop-portal
+   )
++  optdepends=('xdg-desktop-portal: Portal service')
+   provides=(libportal.so)
+ 
+   meson install -C build --destdir "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ gi-docgen
+ git
+ gjs
++glib2-devel
+ gobject-introspection
+ gtk3
+ gtk4
+@@ -15,4 +16,3 @@
+ qt5-base
+ qt5-x11extras
+ vala
+-xdg-desktop-portal
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ prepare() {
+ cd libportal
++git cherry-pick -n 6cd7c2ab82575b76f876ee2bd2d31f6cb77f022f
+ }
+ build() {
+-arch-meson libportal build
++artix-meson libportal build
+ meson compile -C build
+ }

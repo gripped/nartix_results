@@ -63,8 +63,6 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
-django
-python-django
 dns-over-https
 docker
 dolphin-emu
@@ -94,7 +92,6 @@ espeakup
 etherwall
 extra-cmake-modules
 facter
-fail2ban
 fastfetch
 fceux
 fcgiwrap
@@ -138,6 +135,7 @@ gnome-initial-setup
 gnome-keyring
 gnome-panel
 gnome-remote-desktop
+gnome-screenshot
 gnome-session
 gnome-settings-daemon
 gnome-shell
@@ -148,8 +146,6 @@ gnome-user-share
 go-bindata
 go-licenses
 godot
-gom
-gom-docs
 gpsd
 greetd-tuigreet
 greetd
@@ -216,7 +212,6 @@ hyprland
 i2pd
 ibus
 libibus
-id3lib
 igsc
 iio-sensor-proxy
 intel-metee
@@ -248,6 +243,7 @@ ksnip
 ksystemlog
 kwin
 libatasmart
+libavif
 libayatana-appindicator
 libayatana-indicator
 libblockdev
@@ -284,10 +280,16 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
+libheif
 libinput
 libldm
 libmspub
 libnvme
+libportal
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-docs
 libprocps
 libraqm
 libsidplay

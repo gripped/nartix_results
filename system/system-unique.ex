@@ -51,6 +51,7 @@ lvm2-s6
 mdadm-dinit
 mdadm-openrc
 mdadm-s6
+mdevd
 netifrc
 nfs-utils-dinit
 nfs-utils-openrc

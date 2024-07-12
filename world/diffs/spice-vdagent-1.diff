@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- 
- pkgname=spice-vdagent
- pkgver=0.22.1
--pkgrel=4
-+pkgrel=3
- pkgdesc="Spice agent for Linux guests"
+@@ -6,7 +6,7 @@
  arch=('x86_64')
  url="https://www.spice-space.org/"
  license=('GPL')
@@ -15,22 +9,16 @@
  makedepends=('spice-protocol' 'git')
  checkdepends=('procps-ng')
  backup=('etc/conf.d/spice-vdagentd')
-@@ -23,7 +23,7 @@
+@@ -22,8 +22,7 @@
+ 
  build() {
    cd $pkgname-$pkgver
-   ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin \
+-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin \
 -              --with-session-info=systemd --with-init-script=systemd
-+              --with-session-info=systemd
++  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin
    make
  }
  
-@@ -35,6 +35,4 @@
-   cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
-   rm -r "$pkgdir/var"
--  install -dm755 "$pkgdir/etc/conf.d/"
--  echo 'SPICE_VDAGENTD_EXTRA_ARGS=""' > "$pkgdir/etc/conf.d/spice-vdagentd"
- }
 
 
 ############# Stripped diff below #################

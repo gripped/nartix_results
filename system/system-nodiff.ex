@@ -68,7 +68,6 @@ json-c
 kbd
 keyutils
 kmod
-krb5
 ldns
 less
 libaio
