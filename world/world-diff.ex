@@ -41,7 +41,6 @@ cgmanager
 chromium-bsu
 cinnamon-desktop
 clamav
-clazy
 cloud-init
 cmake
 coin-or-data-sample
@@ -147,6 +146,9 @@ go-bindata
 go-licenses
 godot
 gpsd
+gradle
+gradle-doc
+gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -231,6 +233,7 @@ java-openjfx-src
 jedi-language-server
 js78
 kcoreaddons
+kdeconnect
 kgamma
 kismet
 kitty
@@ -291,17 +294,14 @@ libportal-gtk4
 libportal-qt5
 libportal-docs
 libprocps
-libraqm
 libsidplay
 libsidplayfp
-libspectre
 libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
 libvncserver
 libwhereami
-libwhich
 light-locker
 lightdm
 liblightdm-qt5
@@ -365,6 +365,7 @@ vulkan-nouveau
 vulkan-radeon
 vulkan-swrast
 vulkan-virtio
+meson
 mgba
 libmgba
 mgba-sdl
@@ -427,6 +428,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-mail-spf
 pgbouncer
 phodav
 php-legacy

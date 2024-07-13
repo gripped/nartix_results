@@ -1,14 +1,34 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
+@@ -1,16 +1,23 @@
+ 
+ pkgname=libglib-testing
+ pkgver=0.1.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Test harnesses and mock classes for GLib"
+ url="https://gitlab.gnome.org/pwithnall/libglib-testing"
+ license=(LGPL2.1)
  arch=(x86_64)
- depends=(glib2 dbus)
- makedepends=(git meson gtk-doc)
-+options=(debug)
+-depends=(glib2 dbus)
+-makedepends=(git meson gtk-doc)
++depends=(
++  dbus
++  glib2
++)
++makedepends=(
++  git
++  gtk-doc
++  meson
++)
  _commit=e326f73a7139c5e54fcf926896ae6e4cc899a1a7  # tags/0.1.1^0
  source=("git+https://gitlab.gnome.org/pwithnall/libglib-testing.git#commit=$_commit")
- sha256sums=('SKIP')
-@@ -22,7 +23,7 @@
+-sha256sums=('SKIP')
++b2sums=('SKIP')
+ 
+ pkgver() {
+   cd $pkgname
+@@ -22,7 +29,7 @@
  }
  
  build() {
@@ -17,6 +37,11 @@
    meson compile -C build
  }
  
+@@ -36,3 +43,4 @@
+ 
+   meson install -C build --destdir "$pkgdir"
+ }
++
 
 
 ############# Stripped diff below #################

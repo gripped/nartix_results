@@ -47,6 +47,7 @@ cjs
 copyq
 cvs
 doctest
+dosbox
 doublecmd
 doublecmd-gtk2
 doublecmd-qt5
@@ -55,6 +56,7 @@ engrampa
 eom
 exo
 ext4magic
+fastfetch
 firefox-i18n
 fluxbox
 font-manager
@@ -81,6 +83,7 @@ libmatekbd
 libmatemixer
 libmateweather
 libmspub
+libodfgen
 libopenshot-audio
 libopenshot-audio-docs
 libopenshot

@@ -1,15 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -6,8 +6,8 @@
+   lib32-pipewire-jack
    lib32-pipewire-v4l2
  )
- pkgver=1.2.0
+-pkgver=1.2.0
 -pkgrel=1
++pkgver=1.2.1
 +pkgrel=1.1
  epoch=1
  pkgdesc="Low-latency audio/video router and processor - 32-bit"
  url="https://pipewire.org"
-@@ -18,9 +18,7 @@
+@@ -18,14 +18,12 @@
    lib32-alsa-lib
    lib32-dbus
    lib32-glib2
@@ -19,22 +21,21 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
-@@ -61,22 +59,22 @@
-     -D pw-cat=disabled
-     -D raop=disabled
-     -D readline=disabled
--    -D rlimits-install=false
-     -D roc=disabled
-     -D sdl2=disabled
-     -D selinux=disabled
+ )
+-b2sums=('a8601fcb9fcd1408ccde0de8baca110dbd494800003274ee65b39dd47db6b9a6a88ea0936941c83232440633b3a8ff4aa9c7f239b66a39989cf5bb6099f9805a')
++b2sums=('c956faaa5caeb95ea9c802744c0584f25b251f3f7d5460f938aafe75def298df136824a9aff5ce7ecaad6241db51e88a19f39a89aa9e30e2256bd8cee21dbcbb')
+ 
+ prepare() {
+   cd pipewire
+@@ -68,15 +66,16 @@
      -D session-managers=[]
      -D snap=disabled
      -D sndfile=disabled
 -    -D systemd-user-service=disabled
      -D tests=disabled
      -D udevrulesdir=/usr/lib/udev/rules.d
-+    -D rlimits-install=false
 +    -D systemd=disabled
++    -D rlimits-install=false
      -D v4l2=disabled
      -D x11-xfixes=disabled
      -D x11=disabled
@@ -45,7 +46,7 @@
    meson compile -C build
  }
  
-@@ -106,7 +104,6 @@
+@@ -106,7 +105,6 @@
      libasound.so
      libdbus-1.so
      libglib-2.0.so

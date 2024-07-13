@@ -1,11 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,10 +36,10 @@
+@@ -1,7 +1,7 @@
  
- build() {
-   cd libcanberra
--  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-+  ./configure --sysconfdir=/etc --prefix=/usr --localstatedir=/var \
+ pkgname=libcanberra
+ pkgver=0.30+r2+gc0620e4
+-pkgrel=3
++pkgrel=4
+ epoch=1
+ pkgdesc="A small and lightweight implementation of the XDG Sound Theme Specification"
+ url="https://0pointer.net/lennart/projects/libcanberra/"
+@@ -39,7 +39,7 @@
+   ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
        --disable-static --with-builtin=dso --enable-null --disable-oss \
        --enable-alsa --enable-pulse \
 -      --with-systemdsystemunitdir=/usr/lib/systemd/system --enable-gtk-doc
@@ -21,12 +26,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,10 +5,10 @@
- }
- build() {
- cd libcanberra
--./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-+./configure --sysconfdir=/etc --prefix=/usr --localstatedir=/var \
+@@ -8,7 +8,7 @@
+ ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
  --disable-static --with-builtin=dso --enable-null --disable-oss \
  --enable-alsa --enable-pulse \
 ---with-systemdsystemunitdir=/usr/lib/systemd/system --enable-gtk-doc

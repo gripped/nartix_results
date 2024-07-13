@@ -1,16 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=podman
+ pkgname=(podman podman-docker)
+-pkgver=5.1.1
++pkgver=5.1.2
+ pkgrel=1
+ pkgdesc='Tool and library for running OCI-based containers in pods'
+ arch=(x86_64)
+@@ -17,27 +17,22 @@
    go-md2man
    gpgme
    libseccomp
 -  systemd
++  man-db
 +  udev
  )
  options=(!lto)
  source=(
-@@ -37,7 +37,7 @@
- }
+   "git+$url?signed#tag=v$pkgver"
+-  $pkgname-4.6.0-defaultinitpath.patch
+ )
+ validpgpkeys=(
+   B7DBDCA456F7335E91F1C25CD3624C551D0515C4  # Matthew Heon <mheon@redhat.com>
+   7CE1E6F8C90CB53E7E4D8F2D502E08DB0BBF8EEE  # Ashley Cui <acui@redhat.com>
+   9E33DD8704CC03E2DEB84D9A1C1EDD7CC7C3A0DD  # Lokesh Mandvekar <lsm5@redhat.com>
+ )
+-sha256sums=('9b5df94be8a54a69158e2cfcf63f7d5ba5bd1b6529172889e57394a23ffa746c'
+-            'eeacf654707b9b8d6a6c08453b5625d9cf31010d666f82f4851aa34433b97700')
+-
+-prepare() {
+-  patch -Np1 -d $pkgname -i ../$pkgname-4.6.0-defaultinitpath.patch
+-}
++sha256sums=('f72ba1bbd8999c925a3c9d0c14cd797cfb455ec07eac8ff93739e072d8e59ddd')
  
  build() {
 -  export BUILDTAGS='apparmor seccomp systemd'
@@ -18,7 +41,16 @@
    export CGO_CPPFLAGS="${CPPFLAGS}"
    export CGO_CFLAGS="${CFLAGS}"
    export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -74,6 +74,8 @@
+@@ -54,7 +49,7 @@
+     catatonit
+     conmon
+     containers-common
+-    crun
++    oci-runtime
+     gcc-libs
+     glibc
+     iptables
+@@ -74,6 +69,8 @@
    )
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -27,7 +59,7 @@
  }
  
  package_podman-docker() {
-@@ -86,4 +88,6 @@
+@@ -86,4 +83,6 @@
    provides=(docker)
  
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
@@ -40,7 +72,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,4 +19,4 @@
+@@ -3,7 +3,6 @@
+ catatonit
+ conmon
+ containers-common
+-crun
+ device-mapper
+ gcc-libs
+ git
+@@ -16,7 +15,9 @@
+ libgpgme.so
+ libseccomp
+ libseccomp.so
++man-db
++oci-runtime
  passt
  podman
  sh

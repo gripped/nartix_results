@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- license=(LGPL)
- depends=(clutter)
- makedepends=(gobject-introspection gtk-doc git meson)
-+options=(debug)
- _commit=77483ba46384adde76f6c4599eae77eeec852c56  # tags/1.8.4^0
- source=("git+https://gitlab.gnome.org/GNOME/clutter-gtk.git#commit=$_commit")
- sha256sums=('SKIP')
-@@ -22,7 +23,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=clutter-gtk
+ pkgver=1.8.4
+-pkgrel=3
++pkgrel=4
+ pkgdesc="Clutter integration with GTK+"
+ url="https://gitlab.gnome.org/GNOME/clutter-gtk"
+ arch=(x86_64)
+@@ -22,7 +22,7 @@
  }
  
  build() {

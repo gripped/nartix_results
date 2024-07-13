@@ -310,6 +310,7 @@ clang
 clang14
 clang15
 clang16
+clazy
 clevis
 cli11
 clinfo
@@ -754,9 +755,6 @@ gperf
 gperftools
 gpicview
 gptfdisk
-gradle
-gradle-doc
-gradle-src
 grafana
 granatier
 granite
@@ -1106,7 +1104,6 @@ kde-inotify-survey
 kdebugsettings
 kdeclarative
 kdeclarative5
-kdeconnect
 kdecoration
 kdecoration5
 kded
@@ -1727,6 +1724,7 @@ libquvi-scripts
 libquvi
 libqxp
 librabbitmq-c
+libraqm
 libraw
 libraw1394
 librdkafka
@@ -1767,6 +1765,7 @@ libsoup3
 libsoup3-docs
 libsoxr
 libspatialite
+libspectre
 libspf2
 libspiro
 libspng
@@ -1827,6 +1826,7 @@ libwacom
 libwapcaplet
 libwebp
 libwebsockets
+libwhich
 libwlocate
 libwmf
 libwnck
@@ -2114,7 +2114,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard
@@ -2553,7 +2552,6 @@ perl-mail-authenticationresults
 perl-mail-box
 perl-mail-dkim
 perl-mail-message
-perl-mail-spf
 perl-mailtools
 perl-math-random-isaac
 perl-math-round
