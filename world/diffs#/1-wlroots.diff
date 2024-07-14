@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,6 @@
+@@ -29,7 +29,6 @@
      'glslang'
      'meson'
      'ninja'
@@ -8,8 +8,8 @@
      'vulkan-headers'
      'wayland-protocols'
      'xorg-xwayland'
-@@ -61,7 +60,7 @@
- }
+@@ -53,7 +52,7 @@
+ )
  
  build() {
 -    arch-meson "$pkgname-$pkgver" build
@@ -23,7 +23,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,7 +13,6 @@
+@@ -15,7 +15,6 @@
  meson
  ninja
  opengl-driver

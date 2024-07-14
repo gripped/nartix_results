@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=powertop
+ pkgver=2.15
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A tool to diagnose issues with power consumption and power management'
+ arch=('x86_64')
+-url='https://github.com/fenrus75/powertop/'
++url='https://01.org/powertop/'
+ license=('GPL2')
+ depends=('gcc-libs' 'libnl' 'ncurses' 'pciutils')
+ makedepends=('autoconf-archive' 'patch')

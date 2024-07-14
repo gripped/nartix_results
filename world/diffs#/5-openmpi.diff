@@ -1,22 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,13 +5,14 @@
-   openmpi-docs
- )
- pkgver=5.0.3
--pkgrel=1
-+pkgrel=2
- pkgdesc='High performance message passing library (MPI)'
- arch=(x86_64)
- url='https://www.open-mpi.org'
- license=('BSD-3-Clause AND LicenseRef-MPICH')
- makedepends=(
-   cuda
-+  nvidia-utils  # for libcuda.so
-   gcc-fortran
-   gcc-libs
-   glibc
-@@ -21,8 +22,6 @@
+@@ -22,8 +22,6 @@
    libfabric
    libnl
    openpmix
@@ -25,7 +9,7 @@
    prrte
    valgrind
    zlib
-@@ -63,13 +62,11 @@
+@@ -64,13 +62,11 @@
      --with-pmix=external
      --with-prrte=external
      --with-valgrind
@@ -41,7 +25,7 @@
    )
    cd $pkgbase-$pkgver
  
-@@ -94,7 +91,6 @@
+@@ -95,7 +91,6 @@
      libfabric
      libnl
      openpmix libpmix.so
@@ -49,7 +33,7 @@
      prrte
      zlib
    )
-@@ -103,7 +99,6 @@
+@@ -104,7 +99,6 @@
      'hip-runtime-amd: ROCm support'
      'gcc-fortran: fortran support'
      'openssh: for execution on remote hosts via plm_ssh_agent'
@@ -63,11 +47,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -10,9 +10,8 @@
- libfabric
- libnl
+@@ -12,8 +12,6 @@
  libpmix.so
-+nvidia-utils
+ nvidia-utils
  openpmix
 -openucc
 -openucx

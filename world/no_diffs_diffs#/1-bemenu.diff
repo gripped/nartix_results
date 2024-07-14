@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,100 +1,68 @@
+@@ -1,98 +1,68 @@
  
  pkgbase=bemenu
 -pkgname=(
@@ -8,25 +8,32 @@
 -  bemenu-ncurses
 -  bemenu-wayland
 -  bemenu-x11
--)
 +pkgname=(bemenu bemenu-ncurses bemenu-x11 bemenu-wayland)
- pkgver=0.6.21
- pkgrel=1
--pkgdesc="Dynamic menu library and client program inspired by dmenu"
--url="https://github.com/Cloudef/bemenu"
++pkgver=0.6.21
++pkgrel=1
 +
 +pkgdesc='Dynamic menu library and client program inspired by dmenu'
 +url='https://github.com/Cloudef/bemenu'
- arch=(x86_64)
--license=(
--  GPL-3.0-or-later
--  LGPL-3.0-or-later
++arch=(x86_64)
 +license=(GPL3 LGPL3)
 +
 +makedepends=(
 +	git ncurses scdoc
 +	libxinerama libxkbcommon pango
 +	wayland wayland-protocols wlroots
+ )
+-pkgver=0.6.22
+-pkgrel=3
+-pkgdesc="Dynamic menu library and client program inspired by dmenu"
+-url="https://github.com/Cloudef/bemenu"
+-arch=(x86_64)
+-license=(
+-  GPL-3.0-or-later
+-  LGPL-3.0-or-later
++
++source=(
++	"bemenu-$pkgver.tar.gz::https://github.com/Cloudef/bemenu/releases/download/$pkgver/bemenu-$pkgver.tar.gz"
++	"bemenu-$pkgver.tar.gz.asc::https://github.com/Cloudef/bemenu/releases/download/$pkgver/bemenu-$pkgver.tar.gz.asc"
  )
 -makedepends=(
 -  libxinerama
@@ -36,24 +43,17 @@
 -  scdoc
 -  wayland
 -  wayland-protocols
--  wlroots
-+
-+source=(
-+	"bemenu-$pkgver.tar.gz::https://github.com/Cloudef/bemenu/releases/download/$pkgver/bemenu-$pkgver.tar.gz"
-+	"bemenu-$pkgver.tar.gz.asc::https://github.com/Cloudef/bemenu/releases/download/$pkgver/bemenu-$pkgver.tar.gz.asc"
- )
+-  wlroots0.17
+-)
 -source=(
 -  "$url/releases/download/$pkgver/$pkgbase-$pkgver.tar.gz"
 -  "$url/releases/download/$pkgver/$pkgbase-$pkgver.tar.gz.asc"
 -)
--sha256sums=(
--  '86af530620ecf6db3ebc196656b76f0f15350028c9c5a137e975f085dafdfe6e'
--  'SKIP'
--)
--validpgpkeys=(16B6B7CACAF339DECE9F154729317348D687B86B) # Bemenu Upstream
+-sha256sums=('2bd579c37986797bb1bcc8f475cae4cd4c7d59eec479fdb1ae680493fdd34abb'
 +
 +sha256sums=('86af530620ecf6db3ebc196656b76f0f15350028c9c5a137e975f085dafdfe6e'
-+            'SKIP')
+             'SKIP')
+-validpgpkeys=(16B6B7CACAF339DECE9F154729317348D687B86B) # Bemenu Upstream
 +validpgpkeys=(16B6B7CACAF339DECE9F154729317348D687B86B)
  
  build() {
@@ -161,3 +161,9 @@
  libxinerama
  libxkbcommon
  ncurses
+@@ -11,4 +8,4 @@
+ scdoc
+ wayland
+ wayland-protocols
+-wlroots0.17
++wlroots

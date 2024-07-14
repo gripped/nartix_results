@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pyqt5-sip
+-pkgver=12.15.0
+-pkgrel=1
++pkgver=12.13.0
++pkgrel=2
+ arch=(x86_64)
+ pkgdesc='The sip module support for PyQt5'
+ url='https://riverbankcomputing.com/software/pyqt/intro'
+@@ -13,7 +13,7 @@
+              python-setuptools
+              python-wheel)
+ source=(https://pypi.python.org/packages/source/P/PyQt5-sip/PyQt5_sip-$pkgver.tar.gz)
+-sha256sums=('d23fdfcf363b5cedd9d39f8a9c5710e7d52804f5b08a58e91c638b36eafcb702')
++sha256sums=('7f321daf84b9c9dbca61b80e1ef37bdaffc0e93312edae2cd7da25b953971d91')
+ 
+ build() {
+   cd PyQt5_sip-$pkgver

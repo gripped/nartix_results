@@ -30,7 +30,6 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
-krb5
 libusb
 linux
 linux-headers

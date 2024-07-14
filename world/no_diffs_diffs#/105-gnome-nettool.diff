@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,6 +25,7 @@
-   'net-tools: Network statistics'
-   'nmap: Port scanning'
- )
-+options=(debug)
- _commit=5748c0fa632c9caad9e46377ca1aa330dec4b757  # tags/gnome-nettool-42-0^0
- source=(
-   "git+https://gitlab.gnome.org/GNOME/gnome-nettool.git#commit=$_commit"
-@@ -45,7 +46,7 @@
+@@ -45,7 +45,7 @@
  }
  
  build() {

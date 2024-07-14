@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -1,14 +1,14 @@
+ 
+ pkgname=shhmsg
+ pkgver=1.4.2
+-pkgrel=6
++pkgrel=5
+ pkgdesc="Library for displaying messages"
+ arch=('x86_64')
+ url="https://shh.thathost.com/pub-unix"
  license=('PerlArtistic')
  options=('staticlibs')
  source=($url/files/$pkgname-$pkgver.tar.gz)

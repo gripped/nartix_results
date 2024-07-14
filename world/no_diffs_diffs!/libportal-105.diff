@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,7 +47,7 @@
+ }
+ 
+ build() {
+-  arch-meson libportal build
++  artix-meson libportal build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ git cherry-pick -n 6cd7c2ab82575b76f876ee2bd2d31f6cb77f022f
+ }
+ build() {
+-arch-meson libportal build
++artix-meson libportal build
+ meson compile -C build
+ }

@@ -9,11 +9,13 @@
  makedepends=(git meson)
  groups=(gnome)
  _commit=a0e790aa9494db9d1b1f48b4fc0d2f78e112044d  # tags/43.0^0
-@@ -26,9 +26,10 @@
+@@ -24,11 +24,12 @@
+ 
+ build() {
    local meson_options=(
++    -D systemduserunitdir=/usr/lib/systemd
      -D httpd=/usr/bin/httpd
      -D modules_path=/usr/lib/httpd/modules
-+    -D systemduserunitdir=share/gnome
    )
  
 -  arch-meson $pkgname build "${meson_options[@]}"
@@ -26,7 +28,7 @@
  package() {
    meson install -C build --destdir "$pkgdir"
 +
-+  rm -r "$pkgdir"/usr/share/gnome
++  rm -r $pkgdir/usr/lib/systemd
  }
  
 

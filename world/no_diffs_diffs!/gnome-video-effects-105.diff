@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,6 +17,7 @@
-   meson
- )
- _commit=e4ae5aa3ee136333c6481469ed1d8869307ef5e4  # tags/0.6.0^0
-+groups=(gnome)
- source=("git+$url.git#commit=$_commit")
- b2sums=('SKIP')
- 
-@@ -30,7 +31,7 @@
+@@ -30,7 +30,7 @@
  }
  
  build() {
@@ -21,14 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1,5 @@
-+frei0r-plugins
-+git
-+gst-plugins-bad
-+gst-plugins-good
-+meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

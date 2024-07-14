@@ -1,12 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,13 +6,13 @@
+@@ -6,21 +6,23 @@
    gtk4-docs
    gtk-update-icon-cache
  )
 -pkgver=4.12.5
+-pkgrel=1
 +pkgver=4.14.4
- pkgrel=1
++pkgrel=2
  epoch=1
  pkgdesc="GObject-based multi-platform GUI toolkit"
  url="https://www.gtk.org/"
@@ -15,8 +16,10 @@
 +license=(LGPL-2.1-or-later)
  depends=(
    adwaita-icon-theme
++  at-spi2-core
    cairo
-@@ -21,6 +21,7 @@
+   cantarell-fonts
+   dconf
    desktop-file-utils
    fontconfig
    fribidi
@@ -24,7 +27,7 @@
    gdk-pixbuf2
    glib2
    graphene
-@@ -49,7 +50,6 @@
+@@ -49,19 +51,21 @@
    libxrender
    pango
    shared-mime-info
@@ -32,7 +35,14 @@
    wayland
  )
  makedepends=(
-@@ -62,6 +62,7 @@
+   docbook-xsl
+   gi-docgen
+   git
++  glib2-devel
+   gobject-introspection
++  libsysprof-capture
+   meson
+   python-docutils
    python-gobject
    sassc
    shaderc
@@ -40,7 +50,7 @@
    wayland-protocols
  )
  checkdepends=(
-@@ -71,27 +72,22 @@
+@@ -71,27 +75,22 @@
    noto-fonts
    pipewire
    python-pydbus
@@ -72,11 +82,12 @@
  
  prepare() {
    cd gtk
-@@ -106,11 +102,10 @@
+@@ -106,11 +105,11 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true
 -    -D tracker=enabled
++    -D sysprof=enabled
    )
  
    CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
@@ -85,7 +96,7 @@
    meson compile -C build
  }
  
-@@ -123,7 +118,9 @@
+@@ -123,7 +122,9 @@
  
    trap "kill $_w; wait" EXIT
  
@@ -96,7 +107,7 @@
  )
  
  _pick() {
-@@ -137,7 +134,14 @@
+@@ -137,7 +138,14 @@
  }
  
  package_gtk4() {
@@ -108,11 +119,11 @@
 +    gstreamer
 +    gtk-update-icon-cache
 +    vulkan-icd-loader
-+    )
++  )
    optdepends=('evince: Default print preview command')
    provides=(libgtk-4.so)
  
-@@ -166,13 +170,24 @@
+@@ -166,13 +174,24 @@
  
    _pick guic usr/bin/gtk4-update-icon-cache
    _pick guic usr/share/man/man1/gtk4-update-icon-cache.1
@@ -136,11 +147,11 @@
 +    libepoxy
 +    librsvg
 +    pango
-+    )
++  )
    mv demo/* "$pkgdir"
  }
  
-@@ -184,7 +199,14 @@
+@@ -184,7 +203,14 @@
  
  package_gtk-update-icon-cache() {
    pkgdesc="GTK icon cache updater"
@@ -152,7 +163,7 @@
 +    glibc
 +    hicolor-icon-theme
 +    librsvg
-+    )
++  )
  
    mv guic/* "$pkgdir"
    ln -s gtk4-update-icon-cache "$pkgdir/usr/bin/gtk-update-icon-cache"
@@ -162,14 +173,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,6 @@
+@@ -1,5 +1,7 @@
  
  adwaita-icon-theme
++at-spi2-core
 +bash
  cairo
  cantarell-fonts
  dconf
-@@ -7,13 +8,17 @@
+@@ -7,13 +9,18 @@
  docbook-xsl
  fontconfig
  fribidi
@@ -178,6 +190,7 @@
  gi-docgen
  git
  glib2
++glib2-devel
 +glibc
  gobject-introspection
  graphene
@@ -187,7 +200,15 @@
  gtk-update-icon-cache
  gtk4
  harfbuzz
-@@ -46,6 +51,7 @@
+@@ -28,6 +35,7 @@
+ libjpeg
+ libpng
+ librsvg
++libsysprof-capture
+ libtiff
+ libx11
+ libxcursor
+@@ -46,6 +54,7 @@
  sassc
  shaderc
  shared-mime-info
@@ -199,11 +220,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,9 +9,8 @@
+@@ -9,9 +9,9 @@
  -D colord=enabled
  -D documentation=true
  -D man-pages=true
 --D tracker=enabled
++-D sysprof=enabled
  )
  CFLAGS+=" -DG_DISABLE_CAST_CHECKS"
 -arch-meson gtk build "${meson_options[@]}"

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=tali
+ pkgver=40.9
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Beat the odds in a poker-style dice game"
+ url="https://wiki.gnome.org/Apps/Tali"
+ arch=(x86_64)
 @@ -9,6 +9,7 @@
  depends=(gtk3 librsvg libgnome-games-support)
  makedepends=(meson gobject-introspection yelp-tools appstream-glib git)

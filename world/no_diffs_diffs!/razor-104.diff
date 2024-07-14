@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=razor
+ pkgver=2.85
+-pkgrel=20
++pkgrel=19
+ pkgdesc="A distributed, collaborative, spam detection and filtering network"
+ arch=('x86_64')
+ url="http://razor.sourceforge.net"
 @@ -26,7 +26,7 @@
  build() {
    cd ${pkgname}-agents-${pkgver}

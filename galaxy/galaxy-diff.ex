@@ -14,10 +14,8 @@ mate-system-monitor
 mpd
 nushell
 nvidia-390xx-utils
-openrct2
 qbittorrent
 qbittorrent-nox
-signal-desktop
 tor
 torsocks
 transmission

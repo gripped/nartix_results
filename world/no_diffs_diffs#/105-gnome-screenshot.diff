@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ patch -Np1 -i ../0001-Fix-various-fallback-paths.patch
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

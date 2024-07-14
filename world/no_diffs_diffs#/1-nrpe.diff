@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=nrpe
+ pkgver=4.1.0
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Nagios Remote Plugin Executor"
+ arch=('x86_64')
+ license=('GPL-2.0-or-later')
 @@ -9,7 +9,7 @@
  optdepends=("monitoring-plugins: common tools for monitoring using $pkgname")
  makedepends=('procps-ng')

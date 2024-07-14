@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=prosody
+ epoch=1
+ pkgver=0.12.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Lightweight and extensible Jabber/XMPP server written in Lua"
+ arch=('x86_64')
+ url="https://prosody.im/"
 @@ -25,14 +25,12 @@
  source=("https://prosody.im/downloads/source/prosody-$pkgver.tar.gz"{,.asc}
          'prosody.tmpfile.d'

@@ -11,7 +11,7 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
-aspell-uk
+ark
 at-spi2-core
 at-spi2-core-docs
 at
@@ -43,6 +43,7 @@ cinnamon-desktop
 clamav
 cloud-init
 cmake
+codespell
 coin-or-data-sample
 colord
 colord-sane
@@ -66,7 +67,6 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
-double-conversion
 dovecot
 dracut
 drkonqi
@@ -107,6 +107,7 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
+fuse2
 fwupd-efi
 fwupd
 gala
@@ -134,21 +135,16 @@ gnome-initial-setup
 gnome-keyring
 gnome-panel
 gnome-remote-desktop
-gnome-screenshot
 gnome-session
 gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-system-monitor
-gnome-taquin
 gnome-user-share
 go-bindata
 go-licenses
 godot
 gpsd
-gradle
-gradle-doc
-gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -233,7 +229,6 @@ java-openjfx-src
 jedi-language-server
 js78
 kcoreaddons
-kdeconnect
 kgamma
 kismet
 kitty
@@ -246,7 +241,6 @@ ksnip
 ksystemlog
 kwin
 libatasmart
-libavif
 libayatana-appindicator
 libayatana-indicator
 libblockdev
@@ -283,16 +277,10 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
-libheif
 libinput
 libldm
 libmspub
 libnvme
-libportal
-libportal-gtk3
-libportal-gtk4
-libportal-qt5
-libportal-docs
 libprocps
 libsidplay
 libsidplayfp
@@ -301,7 +289,6 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvncserver
-libwhereami
 light-locker
 lightdm
 liblightdm-qt5
@@ -365,7 +352,6 @@ vulkan-nouveau
 vulkan-radeon
 vulkan-swrast
 vulkan-virtio
-meson
 mgba
 libmgba
 mgba-sdl
@@ -414,13 +400,14 @@ opendht
 openjade
 openmpi
 openmpi-docs
-openrct2
 opensmtpd
 openvpn
 ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+pahole
+ostra-cg
 paprefs
 passim
 pc-ble-driver
@@ -428,7 +415,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-mail-spf
 pgbouncer
 phodav
 php-legacy
@@ -499,6 +485,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+presage
 prosody
 protobuf
 python-protobuf
@@ -529,6 +516,8 @@ python-pyftpdlib
 python-pymupdf
 python-pyotp
 python-pyudev
+python-pywlroots
+python-setuptools
 python-signedjson
 python-sphinx-autodoc-typehints
 python-tblib
@@ -632,6 +621,7 @@ qtermwidget
 quazip
 quazip-qt5
 quazip-qt6
+quota-tools
 rabbitmq
 rabbitmqadmin
 rdma-core
@@ -639,7 +629,6 @@ redis
 redshift
 refind
 refind-docs
-rinutils
 rng-tools
 roc-toolkit
 rocblas
@@ -651,6 +640,8 @@ rspamd
 rtkit
 ruby-faraday-patron
 ruby-optimist
+rxvt-unicode
+rxvt-unicode-terminfo
 samba
 libwbclient
 smbclient
@@ -669,6 +660,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+spamassassin
 spice-vdagent
 squid
 sshguard
@@ -740,6 +732,7 @@ vte-common
 vte4
 vte-docs
 waybar
+wayland-utils
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
 webkit2gtk-5.0
@@ -755,9 +748,11 @@ wireplumber-docs
 wlroots
 wlroots0.15
 wlroots0.16
+wlroots0.17
 wpewebkit
 wpewebkit-docs
 xdg-desktop-portal-gnome
+xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal

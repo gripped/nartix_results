@@ -83,7 +83,6 @@ aria2
 arianna
 aribb24
 aribb25
-ark
 armagetronad
 arrow
 artikulate
@@ -104,6 +103,7 @@ aspell-pl
 aspell-pt
 aspell-ru
 aspell-sv
+aspell-uk
 aspell
 assimp
 astromenace
@@ -325,7 +325,6 @@ cmark
 cmocka
 cmus
 cni-plugins
-codespell
 coffeescript
 cogl
 coin-or-asl
@@ -447,6 +446,7 @@ dontpanic
 dos2unix
 dosbox
 dotconf
+double-conversion
 doxygen
 doxygen-docs
 dqlite
@@ -604,7 +604,6 @@ fstrm
 ftgl
 ftjam
 fuse-overlayfs
-fuse2
 fuse3
 fuse-common
 futuresql
@@ -714,10 +713,12 @@ libgoa
 gnome-photos
 gnome-recipes
 gnome-robots
+gnome-screenshot
 gnome-shell-extensions
 gnome-software
 gnome-sound-recorder
 gnome-sudoku
+gnome-taquin
 gnome-terminal
 gnome-tetravex
 gnome-text-editor
@@ -755,6 +756,9 @@ gperf
 gperftools
 gpicview
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
@@ -1104,6 +1108,7 @@ kde-inotify-survey
 kdebugsettings
 kdeclarative
 kdeclarative5
+kdeconnect
 kdecoration
 kdecoration5
 kded
@@ -1417,6 +1422,7 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
+libavif
 libavtp
 libb2
 libb64
@@ -1545,6 +1551,7 @@ libgweather-4
 libgweather-4-docs
 libgxps
 libharu
+libheif
 libhubbub
 libical
 libice
@@ -1704,6 +1711,11 @@ libplasma
 libplist
 libpng
 libpng12
+libportal
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-docs
 libppd
 libproxy
 libproxy-docs
@@ -1826,6 +1838,7 @@ libwacom
 libwapcaplet
 libwebp
 libwebsockets
+libwhereami
 libwhich
 libwlocate
 libwmf
@@ -2114,6 +2127,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -2326,6 +2340,7 @@ openmp
 openntpd
 openpmix
 openpmix-docs
+openrct2
 openscenegraph
 openshadinglanguage
 opensips
@@ -2364,8 +2379,6 @@ packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
-pahole
-ostra-cg
 palapeli
 pam_wrapper
 pango
@@ -2552,6 +2565,7 @@ perl-mail-authenticationresults
 perl-mail-box
 perl-mail-dkim
 perl-mail-message
+perl-mail-spf
 perl-mailtools
 perl-math-random-isaac
 perl-math-round
@@ -2800,7 +2814,6 @@ poxml
 pps-tools
 pptpd
 pqiv
-presage
 print-manager
 prison
 prison5
@@ -3831,7 +3844,6 @@ python-pyvirtualdisplay
 python-pywal
 python-pywayland
 python-pywinrm
-python-pywlroots
 python-pyxbe
 python-pyzmq
 python-qdarkstyle
@@ -3919,7 +3931,6 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
-python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely
@@ -4279,7 +4290,6 @@ qtqr
 qtxdg-tools
 quadrapassel
 quilt
-quota-tools
 qutebrowser
 r
 r8168
@@ -4317,6 +4327,7 @@ rhash
 rhino
 java-rhino
 rhino-javadoc
+rinutils
 ripgrep
 ristretto
 rkcommon
@@ -4599,8 +4610,6 @@ rust-musl
 rust-wasm
 rust-src
 rustup
-rxvt-unicode
-rxvt-unicode-terminfo
 rygel
 s2n-tls
 s3cmd
@@ -4697,7 +4706,6 @@ sound-theme-freedesktop
 soundtouch
 source-highlight
 sox
-spamassassin
 spandsp
 spandsp-docs
 spatialindex
@@ -5123,7 +5131,6 @@ wasi-libcplusplus
 wasi-libc++abi
 wavpack
 wayland-protocols
-wayland-utils
 wayland
 wayland-docs
 wcslib
@@ -5182,7 +5189,6 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk

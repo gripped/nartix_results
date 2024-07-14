@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=pcaudiolib
+ pkgver=1.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Portable C Audio Library'
+ url=https://github.com/espeak-ng/pcaudiolib
+ arch=('x86_64')
 @@ -25,3 +25,4 @@
    cd $pkgname-$pkgver
    make DESTDIR="$pkgdir" install

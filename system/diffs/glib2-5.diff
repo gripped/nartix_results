@@ -8,9 +8,8 @@
    glib2-docs
  )
 -pkgver=2.78.4
--pkgrel=1
-+pkgver=2.80.3
-+pkgrel=2
++pkgver=2.80.4
+ pkgrel=1
  pkgdesc="Low level core library"
  url="https://gitlab.gnome.org/GNOME/glib"
  license=(LGPL-2.1-or-later)
@@ -39,7 +38,7 @@
    shared-mime-info
    util-linux
  )
-@@ -32,46 +39,42 @@
+@@ -32,29 +39,21 @@
    desktop-file-utils
    glib2
  )
@@ -57,7 +56,7 @@
    glib-compile-schemas.hook
  )
 -b2sums=('SKIP'
-+b2sums=('3b54c7e41124e26bc50c8d44ee3d960017d72332e3fbedc505221686f60690ac033410e9202d713f40dd95259fa6a6effd292bfacbe26e9f429f94980c0d4865'
++b2sums=('ec233c9dd6836fb362e45092cd8122757e9faaff2ed910818ecc9e88359777a5935a93f6ed26a649437c9014354bad1cc122716462c92335a280d685cf3ffc71'
          'SKIP'
          '94c73ca7070c239494873dd52d6ee09382bbb5b1201f7afd737cfa140b1a2fb0744b2c2831baf3943d1d072550c35888d21ce6f19f89481ff9d1a60d9a0b30e0'
          '14c9211c0557f6d8d9a914f1b18b7e0e23f79f4abde117cb03ab119b95bf9fa9d7a712aa0a29beb266468aeb352caa3a9e4540503cfc9fe0bbaf764371832a96'
@@ -75,11 +74,7 @@
  
  prepare() {
    cd glib
-+
-+  git cherry-pick -n df2c5d925ac4b8f1708bafa5ac1d35acada05d55 \
-+                     7a7137838e79e5a98e6f4eab6898e2a0dc6392cd
- 
-   git apply -3 ../0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
+@@ -63,15 +62,16 @@
  
    git submodule init
    git submodule set-url subprojects/gvdb "$srcdir/gvdb"
@@ -99,7 +94,7 @@
      -D selinux=disabled
      -D sysprof=enabled
    )
-@@ -82,7 +85,7 @@
+@@ -82,7 +82,7 @@
    CFLAGS+=" -ffat-lto-objects"
    CXXFLAGS+=" -ffat-lto-objects"
  
@@ -108,7 +103,7 @@
    meson compile -C build
  }
  
-@@ -90,17 +93,28 @@
+@@ -90,17 +90,28 @@
    meson test -C build --no-suite flaky --no-suite slow --print-errorlogs
  }
  
@@ -140,7 +135,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -112,8 +126,37 @@
+@@ -112,8 +123,37 @@
    python -O -m compileall -d /usr/share/glib-2.0/codegen \
      "$pkgdir/usr/share/glib-2.0/codegen"
  
@@ -180,7 +175,7 @@
  }
  
  package_glib2-docs() {
-@@ -121,7 +164,7 @@
+@@ -121,7 +161,7 @@
    depends=()
    license+=(LicenseRef-Public-Domain)
  
@@ -222,11 +217,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,19 @@
- prepare() {
- cd glib
-+git cherry-pick -n df2c5d925ac4b8f1708bafa5ac1d35acada05d55 \
-+7a7137838e79e5a98e6f4eab6898e2a0dc6392cd
+@@ -3,14 +3,15 @@
  git apply -3 ../0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
  git submodule init
  git submodule set-url subprojects/gvdb "$srcdir/gvdb"
@@ -245,7 +236,7 @@
  -D selinux=disabled
  -D sysprof=enabled
  )
-@@ -18,6 +21,6 @@
+@@ -18,6 +19,6 @@
  CXXFLAGS+=" -g3"
  CFLAGS+=" -ffat-lto-objects"
  CXXFLAGS+=" -ffat-lto-objects"

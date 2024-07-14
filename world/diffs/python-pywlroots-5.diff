@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=pywlroots
+ pkgname=python-pywlroots
+ pkgver=0.17.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Python binding to the wlroots library using cffi"
+ arch=(x86_64)
+ url="https://github.com/flacjacket/pywlroots"
+@@ -13,7 +13,7 @@
+   python-cffi
+   python-pywayland
+   python-xkbcommon
+-  wlroots0.17
++  wlroots
+ )
+ makedepends=(
+   python-build
+@@ -30,8 +30,6 @@
+ b2sums=('8e73b3e15f93b85e32e298664dae90870c095a674ef5db2730cbf1c0cd18e27911ac96a3988ef7b7fcc77758d23f7370f2e07469b096de372475654a91c9cd17')
+ 
+ build() {
+-  export CFLAGS="$CFLAGS -I/usr/include/wlroots0.17"
+-  export LDFLAGS="$LDFLAGS -L/usr/lib/wlroots0.17"
+   cd $_name-$pkgver
+   python wlroots/ffi_build.py
+   python -m build --wheel --no-isolation
+@@ -47,7 +45,6 @@
+ }
+ 
+ package() {
+-  depends+=(libwlroots.so=12)
+   cd $_name-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm 644 README.rst -t "$pkgdir/usr/share/doc/$pkgname"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ glibc
+-libwlroots.so
+ python
+ python-build
+ python-cffi
+@@ -8,4 +7,4 @@
+ python-setuptools
+ python-wheel
+ python-xkbcommon
+-wlroots0.17
++wlroots
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,4 @@
+ build() {
+-export CFLAGS="$CFLAGS -I/usr/include/wlroots0.17"
+-export LDFLAGS="$LDFLAGS -L/usr/lib/wlroots0.17"
+ cd $_name-$pkgver
+ python wlroots/ffi_build.py
+ python -m build --wheel --no-isolation

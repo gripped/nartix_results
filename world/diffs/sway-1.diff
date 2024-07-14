@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -24,11 +24,10 @@
-   'ttf-font'
+   'wlroots0.17'
    'xcb-util-wm'
  )
 -makedepends=(meson ninja scdoc setconf wayland-protocols)
@@ -26,9 +26,9 @@
              '4f9576b7218aef8152eb60e646985e96b13540b7a4fd34ba68fdc490199cf7a7b46bbee85587e41bffe81fc730222cf408d5712e6251edc85a0a0b0408c1a2df')
  validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48'  # Simon Ser
                '9DDA3B9FA5D58DD5392C78E652CB6609B22DA89A') # Drew DeVault
-@@ -65,14 +62,13 @@
- 
+@@ -66,14 +63,13 @@
  build() {
+   export PKG_CONFIG_PATH='/usr/lib/wlroots0.17/pkgconfig'
    mkdir -p build
 -  arch-meson build "$pkgname-$pkgver" -D sd-bus-provider=libsystemd -D werror=false -D b_ndebug=true
 +  artix-meson build "$pkgname-$pkgver" -D sd-bus-provider=libelogind -D werror=false -D b_ndebug=true

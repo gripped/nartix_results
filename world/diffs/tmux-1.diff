@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=tmux
- pkgver=3.4
--pkgrel=8
-+pkgrel=9
- pkgdesc='Terminal multiplexer'
- url='https://github.com/tmux/tmux/wiki'
- arch=('x86_64')
 @@ -9,8 +9,8 @@
  depends=('libevent' 'libevent_core-2.1.so'
           'libutempter'
@@ -20,15 +11,7 @@
  source=("git+https://github.com/tmux/tmux.git#tag=${pkgver}")
  sha256sums=('71387cf05585836da88d9b481f98e89be5bc8f09a203600187b22aa0e00c52b0')
  
-@@ -18,6 +18,7 @@
- 	cd "$pkgname"
- 
- 	git revert -n 43e5e80343185e69a1b864fc48095ede0b898180
-+        git cherry-pick -n aa17f0e0c1c8b3f1d6fc8617613c74f07de66fae
- 	sh autogen.sh
- }
- 
-@@ -27,7 +28,7 @@
+@@ -28,7 +28,7 @@
  	./configure \
  		--prefix=/usr \
  		--enable-sixel \
