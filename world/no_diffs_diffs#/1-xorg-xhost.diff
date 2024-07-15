@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xorg-xhost
+ pkgver=1.0.9
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Server access control program for X"
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
 @@ -9,6 +9,7 @@
  depends=('libx11' 'libxmu')
  makedepends=('xorg-util-macros')

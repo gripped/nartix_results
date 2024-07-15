@@ -83,6 +83,7 @@ aria2
 arianna
 aribb24
 aribb25
+ark
 armagetronad
 arrow
 artikulate
@@ -325,6 +326,7 @@ cmark
 cmocka
 cmus
 cni-plugins
+codespell
 coffeescript
 cogl
 coin-or-asl
@@ -3708,7 +3710,6 @@ python-pykka
 python-pylast
 python-pylev
 python-pylibmc
-python-pylink-square
 python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
@@ -4094,6 +4095,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4623,7 +4625,6 @@ schedtool
 schroedinger
 scim
 scite
-scons
 scour
 screen
 screengrab
@@ -5189,9 +5190,11 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk
+xdg-utils-cxx
 xdg-utils
 xdotool
 xdp-tools

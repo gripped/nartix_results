@@ -11,7 +11,6 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
-ark
 at-spi2-core
 at-spi2-core-docs
 at
@@ -43,7 +42,6 @@ cinnamon-desktop
 clamav
 cloud-init
 cmake
-codespell
 coin-or-data-sample
 colord
 colord-sane
@@ -513,6 +511,7 @@ python-intelhex
 python-ipywidgets
 python-libtmux
 python-pyftpdlib
+python-pylink-square
 python-pymupdf
 python-pyotp
 python-pyudev
@@ -524,7 +523,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -647,6 +645,7 @@ libwbclient
 smbclient
 sane
 sbsigntools
+scons
 scribus
 sdbus-cpp
 $pkgbase
@@ -752,12 +751,10 @@ wlroots0.17
 wpewebkit
 wpewebkit-docs
 xdg-desktop-portal-gnome
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal
 xdg-user-dirs
-xdg-utils-cxx
 xf86-input-evdev
 xf86-input-vmmouse
 xf86-input-wacom

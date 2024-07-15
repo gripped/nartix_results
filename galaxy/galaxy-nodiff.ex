@@ -66,6 +66,7 @@ freecell-solver
 garcon
 girara
 gpicview
+grub-btrfs
 incron
 lazarus
 lazarus-gtk2

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=unoconv
+ pkgver=0.9
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Libreoffice-based document converter"
+ url="http://dag.wiee.rs/home-made/unoconv"
+-depends=(python python-setuptools libreoffice)
++depends=(python libreoffice)
+ makedepends=(asciidoc git)
+ arch=(any)
+ license=(GPL2)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,4 +2,3 @@
+ git
+ libreoffice
+ python
+-python-setuptools

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,6 +36,7 @@
+ 	  --sbindir=/usr/bin \
+ 	  --sysconfdir=/etc \
+ 	  --disable-schemas-compile \
++	  --disable-systemd \
+ 	  --disable-sysconfig
+ 	make
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,7 @@
+ --sbindir=/usr/bin \
+ --sysconfdir=/etc \
+ --disable-schemas-compile \
++--disable-systemd \
+ --disable-sysconfig
+ make
+ }
