@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,59 +1,47 @@
+@@ -1,60 +1,47 @@
  
 -pkgbase=fwupd
 -pkgname=(
@@ -8,7 +8,7 @@
 -  fwupd-docs
 -)
 -pkgver=1.9.21
--pkgrel=2
+-pkgrel=3
 +pkgname=(fwupd fwupd-docs)
 +pkgver=1.9.15
 +pkgrel=1
@@ -28,6 +28,7 @@
 -  glibc
 +  gcab
    gnutls
+-  gsettings-desktop-schemas
    hicolor-icon-theme
 -  json-glib
    libarchive
@@ -67,7 +68,7 @@
    python-gobject
    python-pillow
    vala
-@@ -64,29 +52,31 @@
+@@ -65,29 +52,31 @@
    "https://github.com/fwupd/fwupd/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc}
    fwupd.sysusers
  )
@@ -110,7 +111,7 @@
  }
  
  _pick() {
-@@ -112,25 +102,23 @@
+@@ -113,25 +102,23 @@
      libqmi-glib.so
    )
    optdepends=(
@@ -145,7 +146,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +1,12 @@
+@@ -1,18 +1,15 @@
  
 -bash
  bash-completion
@@ -162,7 +163,11 @@
  gnu-efi-libs
  gnutls
  gobject-introspection
-@@ -19,19 +17,18 @@
+-gsettings-desktop-schemas
+ hicolor-icon-theme
+ json-glib
+ libarchive
+@@ -20,19 +17,18 @@
  libcbor
  libcbor.so
  libcurl.so
@@ -183,7 +188,7 @@
  libxmlb
  meson
  noto-fonts
-@@ -42,14 +39,9 @@
+@@ -43,14 +39,9 @@
  protobuf-c
  python
  python-cairo

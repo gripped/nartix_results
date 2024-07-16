@@ -1,12 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -28,7 +28,7 @@
  }
  
  build() {
 -  arch-meson glib-networking build
 +  artix-meson glib-networking build
    meson compile -C build
+ }
+ 
+@@ -38,5 +38,7 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++
++  rm -r $pkgdir/usr/lib/systemd
  }
  
 

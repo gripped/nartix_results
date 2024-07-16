@@ -20,14 +20,3 @@
 -  install -Dm 644 "${srcdir}/fwknopd.service" "${pkgdir}/usr/lib/systemd/system/fwknopd.service"
  }
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +0,0 @@
--gpgme
--iptables
--libpcap
--wget

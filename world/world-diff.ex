@@ -228,6 +228,8 @@ jedi-language-server
 js78
 kcoreaddons
 kgamma
+kimageformats
+kio
 kismet
 kitty
 kitty-terminfo
@@ -238,6 +240,9 @@ kpipewire
 ksnip
 ksystemlog
 kwin
+libappindicator
+libappindicator-gtk2
+libappindicator-gtk3
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -363,6 +368,7 @@ mpd
 multipath-tools
 mumble
 mumble-server
+musl
 mutter
 mutter-docs
 mutter45
@@ -523,6 +529,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-urllib3
 python-waitress
 python-zope-testrunner
 qastools
@@ -666,6 +673,7 @@ sshguard
 sslh
 sssd
 step-cli
+strawberry
 strongswan
 stunnel
 supermin

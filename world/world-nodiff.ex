@@ -1195,7 +1195,6 @@ kigo
 killbots
 kimageannotator
 kimageannotator-qt5
-kimageformats
 kimageformats5
 kimagemapeditor
 kimap
@@ -1206,7 +1205,6 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
-kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1417,9 +1415,6 @@ libakonadi5
 libalkimia
 libao
 libappimage
-libappindicator
-libappindicator-gtk2
-libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
@@ -2197,7 +2192,6 @@ musepack
 musepack-tools
 libmpcdec
 musescore
-musl
 mutt
 mypaint-brushes1
 mypy
@@ -4095,7 +4089,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4742,7 +4735,6 @@ stk
 stk-docs
 stoken
 strace
-strawberry
 strip-nondeterminism
 stubby
 subversion
