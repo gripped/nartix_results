@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,11 +2,11 @@
+ _pkgname=0ad
+ pkgver=a26
+ _pkgver=0.0.26-alpha
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Cross-platform, 3D and historically-based real-time strategy game (data files)"
+ arch=('any')
+ url="http://play0ad.com/"
+-license=('GPL-2.0-or-later' 'CCPL')
++license=('GPL2' 'CCPL')
+ source=("https://releases.wildfiregames.com/0ad-${_pkgver}-unix-data.tar.xz")
+ sha512sums=('8fe29fce68737d5b7001c8c2a7198766583b22556129cd2d927823da9b2c58f224fb1207f35bd03abea9380cf24d00ab6257b0dba86ce3ad1f357d7006f051d6')
+ 

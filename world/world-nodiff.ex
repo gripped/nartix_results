@@ -923,6 +923,9 @@ intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
+intel-oneapi-compiler-shared-runtime
+"$_pkgname
+"$_pkgname
 intel-ucode
 intltool
 inxi
