@@ -11,6 +11,7 @@ appstream
 appstream-qt5
 appstream-qt
 archivetools
+asciidoc
 at-spi2-core
 at-spi2-core-docs
 at
@@ -29,6 +30,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -515,6 +517,7 @@ python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
+python-jsonpointer
 python-libtmux
 python-pyftpdlib
 python-pylink-square
@@ -522,7 +525,6 @@ python-pymupdf
 python-pyotp
 python-pyudev
 python-pywlroots
-python-setuptools
 python-signedjson
 python-sphinx-autodoc-typehints
 python-tblib

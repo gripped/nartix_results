@@ -19,3 +19,14 @@
 -  install -Dm644 "../gkrellm.service" "$pkgdir/usr/lib/systemd/system/gkrellm.service"
  }
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-gettext
+-gtk2
+-libsm
+-lm_sensors

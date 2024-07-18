@@ -87,7 +87,6 @@ ark
 armagetronad
 arrow
 artikulate
-asciidoc
 asciidoctor
 asio
 aspell-ca
@@ -194,7 +193,6 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -923,9 +921,11 @@ intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
+intel-oneapi-common
 intel-oneapi-compiler-shared-runtime
 "$_pkgname
 "$_pkgname
+intel-oneapi-dev-utilities
 intel-ucode
 intltool
 inxi
@@ -3378,7 +3378,6 @@ python-jsonlines
 python-jsonmerge
 python-jsonpatch
 python-jsonpickle
-python-jsonpointer
 python-jsonrpclib-pelix
 python-jsonschema-path
 python-jsonschema-spec
@@ -3773,6 +3772,7 @@ python-pytest-flake8
 python-pytest-forked
 python-pytest-freezegun
 python-pytest-freezer
+python-pytest-home
 python-pytest-html
 python-pytest-httpbin
 python-pytest-httpserver
@@ -3929,6 +3929,7 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
+python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely
