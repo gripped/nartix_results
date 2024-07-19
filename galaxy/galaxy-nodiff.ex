@@ -112,6 +112,9 @@ libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
 libsidplayfp
+libsignal-protocol-c
+libstrophe
+libstrophe-doc
 libsysstat
 libtg_owt
 libwnck
@@ -217,6 +220,8 @@ pcmanfm
 pluma
 ppsspp
 ppsspp-assets
+profanity
+profanity-gtk
 pysolfc-cardsets
 pysolfc
 python-caja

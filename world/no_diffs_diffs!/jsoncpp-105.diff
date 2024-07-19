@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=jsoncpp
- pkgname=('jsoncpp' 'jsoncpp-doc')
- pkgver=1.9.5
--pkgrel=3
-+pkgrel=2
- pkgdesc='C++ library for interacting with JSON'
- url='https://github.com/open-source-parsers/jsoncpp'
- arch=('x86_64')
 @@ -21,12 +21,12 @@
  build() {
    cd ${pkgbase}-${pkgver}
