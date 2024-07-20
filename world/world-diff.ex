@@ -58,6 +58,7 @@ cppdap
 crun
 cups
 libcups
+darktable
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -399,6 +400,7 @@ nvme-cli
 nvtop
 onboard
 onionshare
+opam
 open-iscsi
 opencc
 opencc-doc

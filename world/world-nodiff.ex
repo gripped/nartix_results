@@ -382,7 +382,6 @@ cython
 cython0
 d-spy
 darkhttpd
-darktable
 dart
 darts
 dav1d
@@ -2302,7 +2301,6 @@ okularpart5
 onetbb
 onevpl
 oniguruma
-opam
 open-isns
 openal
 openal-examples
