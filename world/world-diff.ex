@@ -16,11 +16,15 @@ at-spi2-core
 at-spi2-core-docs
 at
 audacious-plugins
+audacity
+audacity-docs
 autossh
 avahi
 ayatana-ido
 babl
 bash-bats
+bear
+benchmark
 bluedevil
 bluez
 bluez-utils
@@ -58,7 +62,6 @@ cppdap
 crun
 cups
 libcups
-darktable
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -232,14 +235,12 @@ js78
 kcoreaddons
 kgamma
 kimageformats
-kio
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
-kpipewire
 ksnip
 ksystemlog
 kwin
@@ -286,6 +287,7 @@ libhandy0
 libinput
 libldm
 libmspub
+libmusicbrainz5
 libnvme
 libprocps
 libsidplay
@@ -400,7 +402,6 @@ nvme-cli
 nvtop
 onboard
 onionshare
-opam
 open-iscsi
 opencc
 opencc-doc
@@ -507,6 +508,7 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 puppet
+pybind11
 pyqt5
 python-pyqt5
 pyqt6
@@ -521,6 +523,7 @@ python-intelhex
 python-ipywidgets
 python-jsonpointer
 python-libtmux
+python-pint
 python-pyftpdlib
 python-pylink-square
 python-pymupdf
@@ -529,11 +532,14 @@ python-pyudev
 python-pywlroots
 python-signedjson
 python-sphinx-autodoc-typehints
+python-sphinx
+python-starlette
 python-tblib
 python-teamcity-messages
+python-tornado
 python-trustme
 python-ubjson
-python-urllib3
+python-uncertainties
 python-waitress
 python-zope-testrunner
 qastools
@@ -649,6 +655,8 @@ rspamd
 rtkit
 ruby-faraday-patron
 ruby-optimist
+ruff
+python-ruff
 rxvt-unicode
 rxvt-unicode-terminfo
 samba
@@ -712,6 +720,7 @@ udisks2-btrfs
 udisks2-lvm2
 umockdev
 unbound
+unrealircd
 upower
 uptimed
 usb_modeswitch
@@ -742,6 +751,8 @@ vte3
 vte-common
 vte4
 vte-docs
+wasi-libcplusplus
+wasi-libc++abi
 waybar
 wayland-utils
 webkit2gtk-4.1

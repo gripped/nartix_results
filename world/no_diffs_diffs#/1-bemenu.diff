@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,98 +1,68 @@
+@@ -1,97 +1,68 @@
  
  pkgbase=bemenu
 -pkgname=(
@@ -23,7 +23,7 @@
 +	wayland wayland-protocols wlroots
  )
 -pkgver=0.6.22
--pkgrel=3
+-pkgrel=4
 -pkgdesc="Dynamic menu library and client program inspired by dmenu"
 -url="https://github.com/Cloudef/bemenu"
 -arch=(x86_64)
@@ -43,7 +43,6 @@
 -  scdoc
 -  wayland
 -  wayland-protocols
--  wlroots0.17
 -)
 -source=(
 -  "$url/releases/download/$pkgver/$pkgbase-$pkgver.tar.gz"
@@ -161,9 +160,8 @@
  libxinerama
  libxkbcommon
  ncurses
-@@ -11,4 +8,4 @@
+@@ -11,3 +8,4 @@
  scdoc
  wayland
  wayland-protocols
--wlroots0.17
 +wlroots

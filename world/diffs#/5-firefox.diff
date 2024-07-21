@@ -4,9 +4,10 @@
  
  pkgname=firefox
 -pkgver=128.0
-+pkgver=120.0
- pkgrel=1
+-pkgrel=2
 -pkgdesc="Fast, Private & Safe Web Browser"
++pkgver=120.0
++pkgrel=1
 +pkgdesc="Standalone web browser from mozilla.org"
  url="https://www.mozilla.org/firefox/"
  arch=(x86_64)
@@ -56,7 +57,7 @@
    imake
    inetutils
    jack
-@@ -64,37 +49,35 @@
+@@ -64,54 +49,39 @@
    'hunspell-en_US: Spell checking, American English'
    'libnotify: Notification integration'
    'networkmanager: Location detection via available WiFi networks'
@@ -76,6 +77,9 @@
 -  $pkgname-symbolic.svg
    $pkgname.desktop
 -  org.mozilla.$pkgname.metainfo.xml
+-  0001-Bug-1898476-Wayland-Move-MozContainerSurfaceLock-fro.patch
+-  0002-Bug-1898476-Wayland-Provide-surface-lock-by-GtkCompo.patch
+-  0003-Bug-1898476-Wayland-Lock-Wayland-surface-before-Swap.patch
 +  identity-icons-brand.svg
  )
  validpgpkeys=(
@@ -86,14 +90,20 @@
              'SKIP'
 -            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9'
              '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
--            '58d78ce57b3ee936bc966458d6b20ab142d02a897bbe924b3f26717af0c5bee1')
+-            '58d78ce57b3ee936bc966458d6b20ab142d02a897bbe924b3f26717af0c5bee1'
+-            'f4e1db05768325bce5f38b67263c47b3aa4038cfadbdbf8a9e0cbec061a58c57'
+-            '37d70141e9bb9f118cfc74d4f50e7d7f5be4eee6273818a491892da926941519'
+-            'cbe19f6c95d27d50e3b6664907f8d084784162ea35d5d98fadbb91dbb77ef700')
 -b2sums=('a50c7ded69d86c9d45475e701f83295ab6ccfc4eb59d9c91379504bc35dd0e7e1fb59e8c7737684709fe62969b9762e2960fa90607c83f9e8d637b78e60f56b3'
 +            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
 +b2sums=('06f11d9d6f705c13c3288f1757d68c7c910e258b3efa643f0f0168fba0d585f758082af3905c951e227894df0c092965663f52196ee1fc3477195748e0049767'
          'SKIP'
 -        '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
          'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
--        '2ce33432f8a73a4f1a412b7a065d3c124e1ca9f6bdf3fad0407e897efc0840f8ef43eeeb1b9bef4a102d9fac0b2c4a2ef205726b817f83fe9c3742d076778b14')
+-        '2ce33432f8a73a4f1a412b7a065d3c124e1ca9f6bdf3fad0407e897efc0840f8ef43eeeb1b9bef4a102d9fac0b2c4a2ef205726b817f83fe9c3742d076778b14'
+-        '2d4c421aec450c85c25554a8f312df8b74bb184e13fdd631ec7b34abbc3e5b1015fdef8d7ee637638c916f8bdd9cecfcb9c2713055471feb863888fd238e288e'
+-        '15eba129138c13241556522c79e6fd68bb01ff465d45fbf8a13626b827906e5e59df7fd787c6f799ffee098da1cef01302f27d8eaf4550e30f85ca7147e2fb3d'
+-        'b649c5c3edc4a0319d012ff0c12dbc97f3bb244220c9db5334a921864f57e05506943f50ccd7ee832b881ace642ce294892e25eaa555716d2dcc726f4790c605')
 -
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 -
@@ -104,7 +114,15 @@
  
  prepare() {
    mkdir mozbuild
-@@ -113,22 +96,18 @@
+   cd firefox-$pkgver
+-
+-  patch -Np1 -i ../0001-Bug-1898476-Wayland-Move-MozContainerSurfaceLock-fro.patch
+-  patch -Np1 -i ../0002-Bug-1898476-Wayland-Provide-surface-lock-by-GtkCompo.patch
+-  patch -Np1 -i ../0003-Bug-1898476-Wayland-Lock-Wayland-surface-before-Swap.patch
+ 
+   echo -n "$_google_api_key" >google-api-key
+   echo -n "$_mozilla_api_key" >mozilla-api-key
+@@ -126,22 +96,18 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -130,7 +148,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -144,16 +123,13 @@
+@@ -157,16 +123,13 @@
  build() {
    cd firefox-$pkgver
  
@@ -150,7 +168,7 @@
  
    ulimit -n 4096
  
-@@ -161,7 +137,7 @@
+@@ -174,7 +137,7 @@
    cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-profile-generate=cross
  END
@@ -159,7 +177,7 @@
  
    echo "Profiling instrumented browser..."
    ./mach package
-@@ -177,7 +153,7 @@
+@@ -190,7 +153,7 @@
    test -s jarlog
  
    echo "Removing instrumented browser..."
@@ -168,7 +186,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
-@@ -186,7 +162,10 @@
+@@ -199,7 +162,10 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END
@@ -180,7 +198,7 @@
  }
  
  package() {
-@@ -214,14 +193,14 @@
+@@ -227,14 +193,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -199,7 +217,7 @@
  END
  
    local i theme=official
-@@ -235,10 +214,11 @@
+@@ -248,10 +214,11 @@
      "$pkgdir/usr/share/icons/hicolor/384x384/apps/$pkgname.png"
    install -Dvm644 browser/branding/$theme/content/about-logo.svg \
      "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
@@ -215,7 +233,7 @@
  
    install -Dvm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<END
  exec /usr/lib/$pkgname/firefox "\$@"
-@@ -255,9 +235,16 @@
+@@ -268,9 +235,16 @@
    install -Dvm644 /dev/stdin "$sprovider" <<END
  [Shell Search Provider]
  DesktopId=$pkgname.desktop
@@ -287,7 +305,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,20 +12,16 @@
+@@ -1,9 +1,6 @@
+ prepare() {
+ mkdir mozbuild
+ cd firefox-$pkgver
+-patch -Np1 -i ../0001-Bug-1898476-Wayland-Move-MozContainerSurfaceLock-fro.patch
+-patch -Np1 -i ../0002-Bug-1898476-Wayland-Provide-surface-lock-by-GtkCompo.patch
+-patch -Np1 -i ../0003-Bug-1898476-Wayland-Lock-Wayland-surface-before-Swap.patch
+ echo -n "$_google_api_key" >google-api-key
+ echo -n "$_mozilla_api_key" >mozilla-api-key
+ cat >../mozconfig <<END
+@@ -15,20 +12,16 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -310,7 +338,7 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
-@@ -37,20 +33,18 @@
+@@ -40,20 +33,18 @@
  }
  build() {
  cd firefox-$pkgver
@@ -335,7 +363,7 @@
  echo "Profiling instrumented browser..."
  ./mach package
  LLVM_PROFDATA=llvm-profdata \
-@@ -62,7 +56,7 @@
+@@ -65,7 +56,7 @@
  stat -c "Jar log found (%s bytes)" jarlog
  test -s jarlog
  echo "Removing instrumented browser..."
@@ -344,7 +372,7 @@
  echo "Building optimized browser..."
  cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-lto=cross,full
-@@ -70,5 +64,7 @@
+@@ -73,5 +64,7 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END

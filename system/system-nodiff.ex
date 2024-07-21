@@ -151,7 +151,6 @@ npth
 nss
 ca-certificates-mozilla
 openssh
-openssl-1.1
 openssl
 pacman
 patch
@@ -177,7 +176,6 @@ sqlite-tcl
 sqlite-analyzer
 lemon
 sqlite-doc
-sudo
 sysfsutils
 syslinux
 tar

@@ -120,8 +120,6 @@ attica5
 aubio
 python-aubio
 audacious
-audacity
-audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -172,14 +170,12 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
-bear
 bearssl
 beep
 bemenu
 bemenu-ncurses
 bemenu-x11
 bemenu-wayland
-benchmark
 bftpd
 bigsh0t
 bin86
@@ -382,6 +378,7 @@ cython
 cython0
 d-spy
 darkhttpd
+darktable
 dart
 darts
 dav1d
@@ -1207,6 +1204,7 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
+kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1284,6 +1282,7 @@ kpeople5
 kpeoplevcard
 kpimtextedit
 kpimtextedit5
+kpipewire
 kpkpass
 kplotting
 kplotting5
@@ -1648,7 +1647,6 @@ libmpeg2
 libmspack
 libmsym
 libmtp
-libmusicbrainz5
 libmwaw
 libmwaw-docs
 libmypaint
@@ -2301,6 +2299,7 @@ okularpart5
 onetbb
 onevpl
 oniguruma
+opam
 open-isns
 openal
 openal-examples
@@ -2836,7 +2835,6 @@ pwndbg
 pyalpm
 pyatspi
 python-atspi
-pybind11
 pycups
 python-pycups
 pyenv
@@ -3602,7 +3600,6 @@ python-pickleshare
 python-pika
 python-pikepdf
 python-pillow
-python-pint
 python-pip-run
 python-pip
 python-pipenv-to-requirements
@@ -3970,7 +3967,6 @@ python-sphinx-lv2-theme
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
-python-sphinx
 python-sphinx_rtd_theme
 python-sphinxcontrib-apidoc
 python-sphinxcontrib-applehelp
@@ -3996,7 +3992,6 @@ python-sqlite-anyio
 python-sqlparse
 python-sshpubkeys
 python-stack-data
-python-starlette
 python-statsmodels
 python-stdlibs
 python-stem
@@ -4048,7 +4043,6 @@ python-tomli
 python-tomlkit
 python-toolz
 python-toposort
-python-tornado
 python-tox-current-env
 python-tox
 python-tpm2-pytss
@@ -4081,7 +4075,6 @@ python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
-python-uncertainties
 python-unearth
 python-unicodedata2
 python-unidecode
@@ -4091,6 +4084,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4596,8 +4590,6 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
-ruff
-python-ruff
 run-parts
 runc
 rust-bindgen
@@ -5050,7 +5042,6 @@ unittestpp
 unoconv
 unrar
 libunrar
-unrealircd
 unrtf
 unzip
 upx
@@ -5122,8 +5113,6 @@ waf
 warpinator
 wasi-compiler-rt
 wasi-libc
-wasi-libcplusplus
-wasi-libc++abi
 wavpack
 wayland-protocols
 wayland

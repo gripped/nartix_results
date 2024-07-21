@@ -46,6 +46,7 @@ nspr
 openldap
 libldap
 openresolv
+openssl-1.1
 p11-kit
 libp11-kit
 p11-kit-docs
@@ -55,6 +56,7 @@ ppp
 procps-ng
 rpcbind
 shadow
+sudo
 usbutils
 util-linux
 util-linux-libs

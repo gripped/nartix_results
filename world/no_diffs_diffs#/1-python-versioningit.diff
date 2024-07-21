@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-versioningit
+-pkgver=3.1.2
++pkgver=3.1.1
+ pkgrel=1
+ pkgdesc='Versioning It with your Version In Git'
+ arch=('any')
+@@ -9,6 +9,7 @@
+ depends=(
+   'python'
+   'python-packaging'
++  'python-tomli'
+ )
+ makedepends=(
+   'python-build'
+@@ -25,7 +26,7 @@
+   'python-pytest-mock'
+ )
+ source=("${pkgname#*n-}-${pkgver}.tar.gz::${url}/releases/download/v${pkgver}/${pkgname#*n-}-${pkgver}.tar.gz")
+-sha256sums=('4db83ed99f56b07d83940bee3445ca46ca120d13b6b304cdb5fb44e5aa4edec0')
++sha256sums=('b0ba586e5af08b87dbe3354082910a1d0502c36202d496e1ae60ef3b41ee29c1')
+ 
+ build() {
+   cd ${pkgname#*n-}-${pkgver}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,4 +3,5 @@
+ python-installer
+ python-packaging
+ python-setuptools
++python-tomli
+ python-wheel

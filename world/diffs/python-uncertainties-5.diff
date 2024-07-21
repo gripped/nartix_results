@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,30 +1,30 @@
+ 
+ pkgname=python-uncertainties
+-pkgver=3.2.0
+-pkgrel=1
++pkgver=3.1.7
++pkgrel=3
+ pkgdesc="Transparent calculations with uncertainties on the quantities involved (aka error propagation); fast calculation of derivatives."
+ arch=('any')
+ license=('BSD')
+-url="https://github.com/lmfit/uncertainties"
+-depends=('python')
++url="https://github.com/lebigot/uncertainties"
++depends=('python-future')
+ optdepends=('python-numpy: additional support for NumPy arrays and matrices')
+-makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+-checkdepends=('python-pytest' 'python-numpy')
+-source=("git+https://github.com/lmfit/uncertainties.git#tag=$pkgver")
+-sha512sums=('716599c1ac9e0f1c11bb1cf2c7b9f8b8a76d21ef8d3accd93c476bb0e020b2958397a794914e5b7fe2950b704c8dba6890ea9fdce6e490db5f74d3f09d87e8d7')
++makedepends=('python-setuptools')
++checkdepends=('python-nose' 'python-numpy' 'python-tests')
++source=("$pkgname-$pkgver.tar.gz::https://github.com/lebigot/uncertainties/archive/$pkgver.tar.gz")
++sha512sums=('debfa1bcad4d6785f8a26c92f9de1032e40c7672a61763a65f0c1eaed2f4b572394c7db4e45a411ea43239e3a311a2defa7d6a7f4b0cb4368cfcfbc4f050886e')
+ 
+ build() {
+-  cd uncertainties
+-  python -m build -nw
++  cd uncertainties-$pkgver
++  python setup.py build
+ }
+ 
+ check() {
+-  cd uncertainties
+-  python -m pytest
++  cd uncertainties-$pkgver
++  nosetests
+ }
+ 
+ package() {
+-  cd uncertainties
+-  python -m installer -d "$pkgdir" dist/*.whl
+-  install -Dm644 LICENSE.txt -t "$pkgdir"/usr/share/licenses/$pkgname/
++  cd uncertainties-$pkgver
++  python setup.py install --root="$pkgdir" --optimize=1
++  install -D -m644 LICENSE.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE.txt
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,2 @@
+-git
+-python
+-python-build
+-python-installer
++python-future
+ python-setuptools
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd uncertainties
+-python -m build -nw
++cd uncertainties-$pkgver
++python setup.py build
+ }
