@@ -174,8 +174,8 @@ bearssl
 beep
 bemenu
 bemenu-ncurses
-bemenu-x11
 bemenu-wayland
+bemenu-x11
 bftpd
 bigsh0t
 bin86
@@ -877,7 +877,6 @@ hunspell-it
 hunspell-nl
 hunspell-ru
 hunspell
-hwinfo
 hy
 hypercorn
 hyperkitty

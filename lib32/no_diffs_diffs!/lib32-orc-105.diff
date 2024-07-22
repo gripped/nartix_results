@@ -1,6 +1,40 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
+@@ -1,13 +1,12 @@
+ 
+ pkgname=lib32-orc
+-pkgver=0.4.39
++pkgver=0.4.38
+ pkgrel=1
+ pkgdesc="Optimized Inner Loop Runtime Compiler (32-bit)"
+ url="https://gstreamer.freedesktop.org/modules/orc.html"
+ arch=(x86_64)
+ license=(BSD-3-Clause)
+ depends=(
+-  lib32-gcc-libs
+   lib32-glibc
+   orc
+ )
+@@ -18,18 +17,21 @@
+   valgrind
+ )
+ provides=(liborc{,-test}-${pkgver%.*}.so)
+-source=("git+https://gitlab.freedesktop.org/gstreamer/orc.git?signed#tag=$pkgver")
+-b2sums=('cd93b7a29c0240d299752338f7e87569cfb4f5b7e9dfca40005d1e4c6509236ac2a499050db01d94004b7061faed5b78dd8b4f3d358ffe90fbf65964d38e5c4d')
+-validpgpkeys=(
+-  D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim-Philipp Müller <tim@centricular.com>
+-)
++_commit=f071d3a14f28c7c5acff5ff0b5a67ecd3f785ef3  # tags/0.4.38^0
++source=("git+https://gitlab.freedesktop.org/gstreamer/orc.git#commit=$_commit")
++b2sums=('SKIP')
++
++pkgver() {
++  cd orc
++  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++}
+ 
+ prepare() {
+   cd orc
  }
  
  build() {
@@ -13,7 +47,15 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ git
+ gtk-doc
+-lib32-gcc-libs
+ lib32-glibc
+ meson
+ orc
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

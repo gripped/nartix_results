@@ -3,7 +3,7 @@
 @@ -1,9 +1,9 @@
  pkgname=dracut
 -pkgver=103
--pkgrel=1
+-pkgrel=2
 +pkgver=059
 +pkgrel=6
  pkgdesc="An event driven initramfs infrastructure"
@@ -13,7 +13,7 @@
  license=('GPL-2.0-or-later')
  depends=(
    'bash'
-@@ -17,7 +17,7 @@
+@@ -17,14 +17,13 @@
    'pkgconf'
    'procps-ng'
    'sed'
@@ -22,7 +22,14 @@
    'util-linux'
  )
  makedepends=(
-@@ -67,28 +67,54 @@
+   'asciidoc'
+   'bash-completion'
+   'git'
+-  'rust'
+ )
+ optdepends=(
+   'binutils: --uefi option support'
+@@ -68,29 +67,54 @@
  )
  provides=('initramfs')
  backup=('etc/dracut.conf')
@@ -69,8 +76,10 @@
      --prefix=${prefix} \
      --libdir=${prefix}/lib \
 -    --systemdsystemunitdir=${prefix}/lib/systemd/system \
+-    --bashcompletiondir=$(pkg-config --variable=completionsdir bash-completion) \
+-    --enable-dracut-cpio
 +    --systemdsystemunitdir=no \
-     --bashcompletiondir=$(pkg-config --variable=completionsdir bash-completion)
++    --bashcompletiondir=$(pkg-config --variable=completionsdir bash-completion)
    make
  }
  
@@ -91,9 +100,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,5 +12,5 @@
+@@ -11,7 +11,6 @@
+ kmod
  pkgconf
  procps-ng
+-rust
  sed
 -systemd
 +udev

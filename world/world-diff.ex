@@ -209,6 +209,7 @@ haproxy
 haveged
 hexchat
 hidapi
+hwinfo
 hwloc
 hyprland
 i2pd

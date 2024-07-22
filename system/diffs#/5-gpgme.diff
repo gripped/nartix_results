@@ -1,0 +1,113 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,18 +2,13 @@
+ pkgbase=gpgme
+ pkgname=(gpgme qgpgme-qt6 python-gpgme)
+ pkgver=1.23.2
+-pkgrel=6
++pkgrel=4
+ pkgdesc='A C wrapper library for GnuPG'
+ arch=('x86_64')
+ url='https://www.gnupg.org/related_software/gpgme/'
+-license=(
+-  GPL-2.0-or-later
+-  LGPL-2.0-or-later
+-  LGPL-2.1-or-later
+-)
++license=('LGPL')
+ makedepends=(
+   'gnupg'
+-  'libassuan'
+   'libgpg-error'
+   'python'
+   'python-build'
+@@ -44,8 +39,6 @@
+     --disable-fd-passing \
+     --disable-static \
+     --disable-gpgsm-test
+-
+-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ 
+   (
+@@ -63,18 +56,10 @@
+ }
+ 
+ package_gpgme() {
+-  depends=(
+-    'gcc-libs'
+-    'glib2'
+-    'glibc'
+-    'libassuan'
+-    'libgpg-error'
+-    'gnupg>=2'
+-  )
++  depends=('libgpg-error' 'gnupg>=2')
+   options+=('!emptydirs')
+   provides=('libgpgme.so'
+             'libgpgmepp.so')
+-  license+=(MIT)
+ 
+   cd ${pkgbase}-${pkgver}
+ 
+@@ -82,18 +67,11 @@
+ 
+   rm -r "${pkgdir}"/usr/lib/{cmake/QGpgmeQt6/,libqgpgmeqt6.*}
+   rm -r "${pkgdir}"/usr/lib/python*
+-  install -vDm 644 LICENSES "$pkgdir/usr/share/licenses/$pkgname/MIT.txt"
+ }
+ 
+ package_qgpgme-qt6() {
+   pkgdesc="Qt6 bindings for GPGme"
+-  depends=(
+-    'gcc-libs'
+-    'glibc'
+-    'gpgme'
+-    'libgpg-error'
+-    'qt6-base'
+-  )
++  depends=('gpgme' 'qt6-base')
+ 
+   cd ${pkgbase}-${pkgver}/lang/qt
+ 
+@@ -103,11 +81,7 @@
+ 
+ package_python-gpgme() {
+   pkgdesc="Python bindings for GPGme"
+-  depends=(
+-    'glibc'
+-    'gpgme'
+-    'python'
+-  )
++  depends=('gpgme' 'python')
+ 
+   cd ${pkgbase}-${pkgver}/lang/python
+   python -m installer --destdir="$pkgdir" dist/*.whl
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,6 @@
+-gcc-libs
+-glib2
+-glibc
+ gnupg
+ gnupg>
+ gpgme
+-libassuan
+ libgpg-error
+ python
+ python-build
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,6 @@
+ --disable-fd-passing \
+ --disable-static \
+ --disable-gpgsm-test
+-sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ (
+ cd lang/python/
