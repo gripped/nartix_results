@@ -2,10 +2,15 @@ alacritty
 cinnamon-desktop
 fceux
 firefox
+gpicview
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+lxpanel
 lxqt-themes
+lxsession
+lxsession-gtk3
+lxterminal
 ly
 mate-control-center
 mate-screensaver

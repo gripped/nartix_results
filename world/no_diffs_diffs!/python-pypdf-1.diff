@@ -4,7 +4,7 @@
  
  _pyname=pypdf
  pkgname=python-$_pyname
--pkgver=4.3.0
+-pkgver=4.3.1
 -pkgrel=1
 +pkgver=4.2.0
 +pkgrel=2
@@ -15,7 +15,7 @@
              python-pillow)
  _archive="$_pyname-$pkgver"
  source=("$url/archive/$pkgver/$_archive.tar.gz")
--sha256sums=('3a7745e7925780211fa05c125360c088126386b54d2fa52962bf81478f3b16a4')
+-sha256sums=('c7d6c9ddb6587ffd13ed3678d74842decf2aa209cba97c661830296c0e2c33bd')
 +sha256sums=('4096459bdb19df0231360617f2266d8068a40b9eb202bbea9c54274a320f0c55')
  
  build() {

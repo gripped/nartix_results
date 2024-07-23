@@ -33,6 +33,7 @@ qgpgme-qt6
 python-gpgme
 gssproxy
 iputils
+libnl
 libusb
 linux
 linux-headers

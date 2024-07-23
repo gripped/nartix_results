@@ -55,7 +55,6 @@ android-file-transfer
 android-udev
 angelfish
 ansible-core
-ansible-language-server
 ansible-lint
 ansible
 ant
@@ -120,6 +119,8 @@ attica5
 aubio
 python-aubio
 audacious
+audacity
+audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -3188,7 +3189,6 @@ python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
-python-fastapi
 python-fastbencode
 python-fasteners
 python-fastimport
@@ -3674,7 +3674,6 @@ python-pydbus
 python-pydocstyle
 python-pydot
 python-pydrive
-python-pyee
 python-pyelftools
 python-pyenchant
 python-pyfakefs
@@ -3689,7 +3688,6 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
-python-pyhamcrest
 python-pyhcl
 python-pyicu
 python-pyinotify
@@ -4388,7 +4386,6 @@ ruby-cgi
 ruby-chronic
 ruby-concurrent
 ruby-connection_pool
-ruby-console
 ruby-covered
 ruby-crack
 ruby-crass
@@ -4728,13 +4725,13 @@ stk
 stk-docs
 stoken
 strace
+strawberry
 strip-nondeterminism
 stubby
 subversion
 sugar-datastore
 suil
 suil-docs
-suitesparse
 sushi
 svgpart
 svt-av1
@@ -5172,7 +5169,6 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk
@@ -5273,6 +5269,7 @@ xorg-xinit
 xorg-xinput
 xorg-xkbcomp
 xorg-xkill
+xorg-xlogo
 xorg-xmessage
 xorg-xmodmap
 xorg-xprop

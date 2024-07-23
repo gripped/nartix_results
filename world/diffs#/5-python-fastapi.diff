@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _name=fastapi
+ pkgname=python-$_name
+-pkgver=0.111.1
++pkgver=0.110.0
+ pkgrel=1
+ pkgdesc='FastAPI framework, high performance, easy to learn, fast to code, ready for production'
+ arch=(any)
+@@ -21,7 +21,7 @@
+ makedepends=(
+   python-build
+   python-installer
+-  python-pdm-backend
++  python-hatchling
+   python-wheel
+ )
+ checkdepends=(
+@@ -46,7 +46,7 @@
+ 
+   python-bcrypt
+   python-cryptography
+-  python-pyjwt
++  python-jose
+   python-passlib
+ )
+ optdepends=(
+@@ -62,13 +62,12 @@
+   'uvicorn: for Uvicorn as ASGI server'
+ )
+ source=($_name-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz)
+-sha512sums=('5a20171199e9664a9c649f580ac49ebffa436936254598a41023b67ca5b05444d40fa3f464d0a9541ae3ef6164ac94ac20e4379bbfee8d750454daa86bd9c7c4')
+-b2sums=('0cfc49c24b9492266b961d42a8cead0682744b8ebb94e31ad25373a717c758e2941f67804ec514a9cfd2c5e2b9ed402c2e6545a870c0b6f2d57d4e0fad664c2d')
++sha512sums=('41b86829ee562e922efabdb0f175015d1312ce935b5723f084ce4ee8b1626a6c00a8a51b4a19f352e0584db259f967160558fd79833e84e040a1c8c174d6d9ef')
++b2sums=('02dfc9c44585a6b4a8da077fe782c6694a0710dc58bfb63240d5c50ddc5177afaee650bbaa07cfaabba068ea25d253c43121f469db776a2c2b1dae56d79e55aa')
+ 
+ prepare() {
+   cd $_name-$pkgver
+   sed -i 's|starlette.*"|starlette"|' pyproject.toml
+-  sed -i '/"error"/d' pyproject.toml
+ }
+ 
+ build() {
+@@ -80,10 +79,6 @@
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+   local pytest_options=(
+     -vv
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_root[asyncio]
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_async_testing[asyncio]
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_root[trio]
+-    --deselect tests/test_tutorial/test_async_tests/test_main.py::test_async_testing[trio]
+   )
+ 
+   cd $_name-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,8 +2,8 @@
+ python-anyio
+ python-build
+ python-dirty-equals
++python-hatchling
+ python-installer
+-python-pdm-backend
+ python-pydantic
+ python-pydantic-core
+ python-pydantic-extra-types
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd $_name-$pkgver
+ sed -i 's|starlette.*"|starlette"|' pyproject.toml
+-sed -i '/"error"/d' pyproject.toml
+ }
+ build() {
+ cd $_name-$pkgver

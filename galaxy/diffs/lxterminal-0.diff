@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=lxterminal
+ pkgver=0.4.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="VTE-based terminal emulator (part of LXDE)"
+ arch=('x86_64')
+ url="https://lxde.org/"
+@@ -15,6 +15,7 @@
+ sha256sums=('9db8748923b3fa09a82ae2210ed1fa4cdb4c45312009da9caed103d48f8e9be7')
+ 
+ build() {
++  export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
+   cd $pkgname-$pkgver
+   ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+   make
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ build() {
++export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
+ cd $pkgname-$pkgver
+ ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+ make

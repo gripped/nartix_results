@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,6 +26,7 @@
+ }
+ 
+ build() {
++  export CFLAGS="$CFLAGS -Wno-return-mismatch"
+   cd $pkgname-$pkgver
+   ./configure --prefix=/usr --enable-gtk3
+   make
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,7 @@
+ sed -i '/^Categories=/ s/Utility;//' gpicview.desktop.in
+ }
+ build() {
++export CFLAGS="$CFLAGS -Wno-return-mismatch"
+ cd $pkgname-$pkgver
+ ./configure --prefix=/usr --enable-gtk3
+ make

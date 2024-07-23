@@ -5,6 +5,7 @@ alacritty
 alsa-utils
 amule
 android-tools
+ansible-language-server
 apache
 apcupsd
 appstream
@@ -16,8 +17,6 @@ at-spi2-core
 at-spi2-core-docs
 at
 audacious-plugins
-audacity
-audacity-docs
 autossh
 avahi
 ayatana-ido
@@ -518,6 +517,7 @@ pyside6-tools
 shiboken6
 python-anytree
 python-debugpy
+python-fastapi
 python-frozendict
 python-gssapi
 python-intelhex
@@ -525,7 +525,9 @@ python-ipywidgets
 python-jsonpointer
 python-libtmux
 python-pint
+python-pyee
 python-pyftpdlib
+python-pyhamcrest
 python-pylink-square
 python-pymupdf
 python-pyotp
@@ -654,6 +656,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-console
 ruby-faraday-patron
 ruby-optimist
 ruff
@@ -686,9 +689,9 @@ sshguard
 sslh
 sssd
 step-cli
-strawberry
 strongswan
 stunnel
+suitesparse
 supermin
 sway
 swayidle
@@ -775,6 +778,7 @@ wlroots0.17
 wpewebkit
 wpewebkit-docs
 xdg-desktop-portal-gnome
+xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal
@@ -795,7 +799,6 @@ xorg-server-xnest
 xorg-server-common
 xorg-server-devel
 xorg-xdm
-xorg-xlogo
 xorg-xwayland
 xscreensaver
 xsimd

@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,30 +1,30 @@
+@@ -1,31 +1,30 @@
  
  pkgname=python-uncertainties
--pkgver=3.2.0
+-pkgver=3.2.2
 -pkgrel=1
 +pkgver=3.1.7
 +pkgrel=3
@@ -15,10 +15,10 @@
 +url="https://github.com/lebigot/uncertainties"
 +depends=('python-future')
  optdepends=('python-numpy: additional support for NumPy arrays and matrices')
--makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+-makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-setuptools-scm' 'python-wheel')
 -checkdepends=('python-pytest' 'python-numpy')
 -source=("git+https://github.com/lmfit/uncertainties.git#tag=$pkgver")
--sha512sums=('716599c1ac9e0f1c11bb1cf2c7b9f8b8a76d21ef8d3accd93c476bb0e020b2958397a794914e5b7fe2950b704c8dba6890ea9fdce6e490db5f74d3f09d87e8d7')
+-sha512sums=('048200d7b7a1f2b78e3c5cdbb8e607f4e6f5c434a9218877edb62dc0cff108010f84b9c29bcc4ec575eade44838690854214374eb070fe5aae869deee9a90de8')
 +makedepends=('python-setuptools')
 +checkdepends=('python-nose' 'python-numpy' 'python-tests')
 +source=("$pkgname-$pkgver.tar.gz::https://github.com/lebigot/uncertainties/archive/$pkgver.tar.gz")
@@ -26,6 +26,7 @@
  
  build() {
 -  cd uncertainties
+-  export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver
 -  python -m build -nw
 +  cd uncertainties-$pkgver
 +  python setup.py build
@@ -52,20 +53,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,2 @@
+@@ -1,7 +1,2 @@
 -git
 -python
 -python-build
 -python-installer
 +python-future
  python-setuptools
+-python-setuptools-scm
 -python-wheel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,4 @@
  build() {
 -cd uncertainties
+-export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver
 -python -m build -nw
 +cd uncertainties-$pkgver
 +python setup.py build

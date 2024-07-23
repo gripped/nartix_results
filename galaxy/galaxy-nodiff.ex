@@ -65,7 +65,6 @@ fpc
 freecell-solver
 garcon
 girara
-gpicview
 grub-btrfs
 incron
 lazarus
@@ -151,7 +150,6 @@ lxlauncher-gtk3
 lxmenu-data
 lxmusic
 lxpanel-gtk3
-lxpanel
 lxqt-about
 lxqt-admin
 lxqt-archiver
@@ -170,11 +168,8 @@ lxqt-session
 lxqt-sudo
 lxrandr
 lxrandr-gtk3
-lxsession
-lxsession-gtk3
 lxtask
 lxtask-gtk3
-lxterminal
 marco
 mate-applets
 mate-backgrounds
