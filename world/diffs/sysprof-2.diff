@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,6 @@
+@@ -5,7 +5,7 @@
+   libsysprof-capture
+ )
+ pkgver=46.0
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Kernel based performance profiler"
+ url="https://wiki.gnome.org/Apps/Sysprof"
+ license=(GPL-3.0-or-later)
+@@ -25,12 +25,11 @@
    libunwind
    pango
    polkit
@@ -8,6 +17,12 @@
  )
  makedepends=(
    git
+   meson
+-  glib2-devel
++  python-packaging
+   yelp-tools
+ )
+ source=(
 @@ -45,7 +44,7 @@
  build() {
    CFLAGS+=" -ffat-lto-objects"
@@ -32,9 +47,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -17,5 +17,4 @@
+@@ -3,7 +3,6 @@
+ gcc-libs
+ git
+ glib2
+-glib2-devel
+ glibc
+ graphene
+ gtk4
+@@ -17,5 +16,5 @@
+ meson
  pango
  polkit
- python-packaging
 -systemd-libs
++python-packaging
  yelp-tools

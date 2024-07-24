@@ -1,0 +1,87 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,36 +1,28 @@
+ 
+ pkgname=espeak-ng
+ pkgver=1.51.1
+-pkgrel=4
++pkgrel=2
+ pkgdesc='Multi-lingual software speech synthesizer'
+ url=https://github.com/espeak-ng/espeak-ng
+-arch=(x86_64)
+-license=(GPL-3.0-or-later)
+-depends=(
+-  pcaudiolib
+-  libsonic
+-)
+-makedepends=(
+-  git
+-  ruby-ronn-ng
+-)
+-replaces=(espeak-ng-espeak)
+-provides=(espeak-ng-espeak)
+-conflicts=(
+-  espeak-ng-espeak
+-  espeak
+-)
+-source=("git+$url.git#tag=$pkgver")
+-b2sums=('4095798ad873282403226f8c28208f3b0ab3d5d0883678d88f63b9a4c5312c9c31fcf5c4355d5f0083b4635d5326aeceaa631d5fb4eb1b7c8ba388e410f57307')
++arch=('x86_64')
++license=('GPL3')
++depends=('pcaudiolib' 'libsonic')
++makedepends=('ruby-ronn-ng')
++replaces=('espeak-ng-espeak')
++provides=('espeak-ng-espeak')
++conflicts=('espeak-ng-espeak' 'espeak')
++options=(debug)
++source=("$url/archive/$pkgver/espeak-ng-$pkgver.tar.gz")
++b2sums=('7b5a9d0613636942374b2b414fa5cffcbefe18083dc9aa79a6ac08cc3737cbef06808bf90f0c846ec33acf481797329fb6d2f013b6f67abd6a2dfcda0d3f9343')
+ 
+ prepare() {
+-  cd $pkgname
++  cd espeak-ng-$pkgver
+   ./autogen.sh
+ }
+ 
+ 
+ build() {
+-  cd $pkgname
++  cd espeak-ng-$pkgver
+   ./configure --prefix=/usr
+   make src/espeak-ng src/speak-ng
+   make
+@@ -38,7 +30,7 @@
+ 
+ 
+ package() {
+-  cd $pkgname
++  cd espeak-ng-$pkgver
+   make DESTDIR="$pkgdir" install
+   mv "$pkgdir"/usr/share/vim/{addons,vimfiles}
+   rm -r "$pkgdir"/usr/{include/espeak,share/vim/registry}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ libsonic
+ pcaudiolib
+ ruby-ronn-ng
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd $pkgname
++cd espeak-ng-$pkgver
+ ./autogen.sh
+ }
+ build() {
+-cd $pkgname
++cd espeak-ng-$pkgver
+ ./configure --prefix=/usr
+ make src/espeak-ng src/speak-ng
+ make

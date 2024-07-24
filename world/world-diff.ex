@@ -24,6 +24,7 @@ babl
 bash-bats
 bear
 benchmark
+bind
 bluedevil
 bluez
 bluez-utils
@@ -36,6 +37,7 @@ bluez-obex
 bogofilter
 bolt
 box2d
+breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -90,6 +92,7 @@ emacs-wayland
 embree
 eog
 eog-docs
+espeak-ng
 espeakup
 etherwall
 extra-cmake-modules
@@ -193,6 +196,8 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gtksourceviewmm
+gtksourceviewmm-docs
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -518,6 +523,7 @@ shiboken6
 python-anytree
 python-debugpy
 python-fastapi
+python-fastbencode
 python-frozendict
 python-gssapi
 python-intelhex
@@ -526,13 +532,11 @@ python-jsonpointer
 python-libtmux
 python-pint
 python-pyee
-python-pyftpdlib
 python-pyhamcrest
 python-pylink-square
 python-pymupdf
 python-pyotp
 python-pyudev
-python-pywlroots
 python-signedjson
 python-sphinx-autodoc-typehints
 python-sphinx
@@ -647,6 +651,7 @@ redis
 redshift
 refind
 refind-docs
+retro-gtk
 rng-tools
 roc-toolkit
 rocblas
@@ -724,7 +729,6 @@ udisks2-btrfs
 udisks2-lvm2
 umockdev
 unbound
-unrealircd
 upower
 uptimed
 usb_modeswitch

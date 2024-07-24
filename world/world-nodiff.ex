@@ -180,7 +180,6 @@ bemenu-x11
 bftpd
 bigsh0t
 bin86
-bind
 black-hole-solver
 blackbox
 blinken
@@ -206,7 +205,6 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
-breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -490,7 +488,6 @@ eom
 epiphany
 erlang-nox
 erlang
-espeak-ng
 ethtool
 eventviews
 evince
@@ -805,8 +802,6 @@ gtksourceview3
 gtksourceview4
 gtksourceview5
 gtksourceview5-docs
-gtksourceviewmm
-gtksourceviewmm-docs
 gtkspell
 gtkspell3
 gts
@@ -3189,7 +3184,6 @@ python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
-python-fastbencode
 python-fasteners
 python-fastimport
 python-fastjsonschema
@@ -3679,6 +3673,7 @@ python-pyenchant
 python-pyfakefs
 python-pyflakes
 python-pyftdi
+python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
@@ -3834,6 +3829,7 @@ python-pyvirtualdisplay
 python-pywal
 python-pywayland
 python-pywinrm
+python-pywlroots
 python-pyxbe
 python-pyzmq
 python-qdarkstyle
@@ -3985,6 +3981,7 @@ python-spur
 python-sqlalchemy-utils
 python-sqlalchemy
 python-sqlalchemy1.3
+python-sqlalchemy1.4
 python-sqlite-anyio
 python-sqlparse
 python-sshpubkeys
@@ -4310,7 +4307,6 @@ remmina
 reptyr
 rest
 restinio
-retro-gtk
 rhash
 rhino
 java-rhino
@@ -5038,6 +5034,7 @@ unittestpp
 unoconv
 unrar
 libunrar
+unrealircd
 unrtf
 unzip
 upx
