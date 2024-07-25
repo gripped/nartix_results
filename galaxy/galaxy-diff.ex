@@ -21,6 +21,7 @@ nushell
 nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
+thunderbird
 tor
 torsocks
 transmission

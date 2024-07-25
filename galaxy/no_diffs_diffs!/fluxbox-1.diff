@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
+@@ -1,8 +1,7 @@
  
  pkgname=fluxbox
 -_commit='9d8202f32338a3f08d3fa39057dc5eec5d97be4e'
 -pkgver=1.3.7+211+g9d8202f3
+-pkgrel=2
 +pkgver=1.3.7+212+g0f95d62b
- pkgrel=1
++pkgrel=1
  pkgdesc='A lightweight and highly-configurable window manager'
  arch=('x86_64')
+ url='http://www.fluxbox.org/'
 @@ -12,7 +11,7 @@
  makedepends=('git')
  optdepends=('xorg-xmessage: for using the fbsetbg and fluxbox-generate_menu utilities')
@@ -18,20 +20,3 @@
          'fluxbox.desktop')
  sha256sums=('SKIP'
              '2148a90aca653b596e9632264dbdbd8c7e673d732e4b04eee66a8ac1e68b3c5d')
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1,10 @@
-+fontconfig
-+fribidi
-+git
-+imlib2
-+libfontconfig.so
-+libfribidi.so
-+libxft
-+libxinerama
-+libxpm
-+libxrandr

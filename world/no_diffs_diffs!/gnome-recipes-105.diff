@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
- sha256sums=('b30e96985f66fe138a17189c77af44d34d0b4c859b304ebdb52033bc2cd3ffed')
+@@ -58,7 +58,7 @@
+ }
  
  build() {
--  arch-meson $pkgname-$pkgver build
-+  artix-meson $pkgname-$pkgver build
+-  arch-meson recipes build
++  artix-meson recipes build
    meson compile -C build
  }
  
@@ -17,9 +17,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
+@@ -9,6 +9,6 @@
+ git apply -3 ../gnome-recipes-window-icon.patch
+ }
  build() {
--arch-meson $pkgname-$pkgver build
-+artix-meson $pkgname-$pkgver build
+-arch-meson recipes build
++artix-meson recipes build
  meson compile -C build
  }

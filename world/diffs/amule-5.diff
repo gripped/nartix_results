@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,43 +2,43 @@
+@@ -2,44 +2,43 @@
  pkgname=amule
  epoch=1
  pkgver=2.3.3
--pkgrel=8
+-pkgrel=9
 +pkgrel=7
  pkgdesc='An eMule-like client for ed2k p2p network'
  arch=(x86_64)
@@ -57,6 +57,7 @@
 -  git cherry-pick -n d22e057 # Fix build
 -  git cherry-pick -n 9e1d9eb
 -  git cherry-pick -n a667c61 # Install icons
+-  rm -fr .git
 +  patch -d aMule-$pkgver -p1 < 9bcd201.patch # Fix translations install
 +  patch -d aMule-$pkgver -p1 < 8085232.patch
 +  patch -d aMule-$pkgver -p1 < f186b3a.patch
@@ -71,7 +72,7 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DBUILD_ALC=ON \
      -DBUILD_ALCC=ON \
-@@ -49,6 +49,7 @@
+@@ -50,6 +49,7 @@
      -DBUILD_WEBSERVER=ON \
      -DBUILD_WXCAS=ON \
      -DBUILD_FILEVIEW=ON \
@@ -79,7 +80,7 @@
      -DENABLE_IP2COUNTRY=ON \
      -DENABLE_NLS=ON
    cmake --build build
-@@ -57,8 +58,6 @@
+@@ -58,8 +58,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  
@@ -104,7 +105,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,13 @@
+@@ -1,15 +1,13 @@
  prepare() {
 -cd $pkgname
 -git cherry-pick -n 9bcd201 # Fix translations install
@@ -113,6 +114,7 @@
 -git cherry-pick -n d22e057 # Fix build
 -git cherry-pick -n 9e1d9eb
 -git cherry-pick -n a667c61 # Install icons
+-rm -fr .git
 +patch -d aMule-$pkgver -p1 < 9bcd201.patch # Fix translations install
 +patch -d aMule-$pkgver -p1 < 8085232.patch
 +patch -d aMule-$pkgver -p1 < f186b3a.patch
@@ -126,7 +128,7 @@
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DBUILD_ALC=ON \
  -DBUILD_ALCC=ON \
-@@ -19,6 +18,7 @@
+@@ -20,6 +18,7 @@
  -DBUILD_WEBSERVER=ON \
  -DBUILD_WXCAS=ON \
  -DBUILD_FILEVIEW=ON \

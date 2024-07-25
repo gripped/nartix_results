@@ -1,42 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,15 +2,15 @@
- 
- pkgbase=glibc
- pkgname=(glibc lib32-glibc glibc-locales)
--pkgver=2.40
--_commit=3d1aed874918c466a4477af1da35983ab036690e
-+pkgver=2.39+r52+gf8e4623421
-+_commit=f8e462342189525e4605cf233b8f798d1c7f398d
- pkgrel=1
- arch=(x86_64)
+@@ -9,7 +9,7 @@
  url='https://www.gnu.org/software/libc'
  license=(GPL-2.0-or-later LGPL-2.1-or-later)
  makedepends=(git gd lib32-gcc-libs python)
 -options=(staticlibs !lto)
--source=("git+https://sourceware.org/git/glibc.git#commit=${_commit}"
 +options=(staticlibs !lto debug)
-+source=(git+https://sourceware.org/git/glibc.git#commit=${_commit}
+ source=("git+https://sourceware.org/git/glibc.git#commit=${_commit}"
          locale.gen.txt
          locale-gen
-         lib32-glibc.conf
-@@ -18,7 +18,7 @@
- )
- validpgpkeys=(7273542B39962DF7B299931416792B4EA25340F8 # Carlos O'Donell
-               BC7C7372637EC10C57D7AA6579C43DFBF1CF2187) # Siddhesh Poyarekar
--b2sums=('b68f571cdedb6c9cdb5cd041aa3575ad74b78e2fb4d4f8867c1d1c1a03cfd0bc641b5d446224d3448099fdfad3fc8a109c97b04d57bc4718a2e31ad6421b4b6d'
-+b2sums=('a37822e85d99b01b289950bbc3a6ba3c9f88cf2aafe6510a4e3aa9666c35ab4279377b8c706976545a04d94aae888e48e084da54ae117b5f1220cea50e5092bb'
-         'c859bf2dfd361754c9e3bbd89f10de31f8e81fd95dc67b77d10cb44e23834b096ba3caa65fbc1bd655a8696c6450dfd5a096c476b3abf5c7e125123f97ae1a72'
-         '04fbb3b0b28705f41ccc6c15ed5532faf0105370f22133a2b49867e790df0491f5a1255220ff6ebab91a462f088d0cf299491b3eb8ea53534cb8638a213e46e3'
-         '7c265e6d36a5c0dff127093580827d15519b6c7205c2e1300e82f0fb5b9dd00b6accb40c56581f18179c4fbbc95bd2bf1b900ace867a83accde0969f7b609f8a'
-@@ -35,13 +35,14 @@
- 
-   [[ -d glibc-$pkgver ]] && ln -s glibc-$pkgver glibc
-   cd glibc
-+
- }
- 
- build() {
+@@ -41,7 +41,7 @@
    local _configure_flags=(
        --prefix=/usr
        --with-headers=/usr/include
@@ -45,42 +18,6 @@
        --enable-bind-now
        --enable-fortify-source
        --enable-kernel=4.4
-@@ -53,8 +54,6 @@
-       --disable-werror
-   )
- 
--  CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
--
-   (
-     cd glibc-build
- 
-@@ -62,6 +61,8 @@
-     echo "rtlddir=/usr/lib" >> configparms
-     echo "sbindir=/usr/bin" >> configparms
-     echo "rootsbindir=/usr/bin" >> configparms
-+
-+    CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
- 
-     "${srcdir}"/glibc/configure \
-         --libdir=/usr/lib \
-@@ -102,14 +103,15 @@
- _skip_test() {
-   test=${1}
-   file=${2}
--  sed -i "/\b${test} /d" "${srcdir}/glibc/${file}"
-+  sed -i "/\b${test} /d" "${srcdir}"/glibc/${file}
- }
- 
- check() (
-   cd glibc-build
- 
-+  sed -i '/FORTIFY/d' configparms                                     # failure to build testsuite
-   sed -i 's/-Werror=format-security/-Wformat-security/' config.make   # failure to build testsuite
--  sed -i '/CFLAGS/s/-fno-plt//' config.make                           # 27 failures
-+  sed -i '/CFLAGS/s/-fno-plt//' config.make                           # 16 failures
-   sed -i '/CFLAGS/s/-fexceptions//' config.make                       # 1 failure
- 
-   _skip_test test-errno-linux        sysdeps/unix/sysv/linux/Makefile
 
 
 ############# Stripped diff below #################
@@ -98,18 +35,3 @@
  --enable-bind-now
  --enable-fortify-source
  --enable-kernel=4.4
-@@ -18,13 +18,13 @@
- --disable-profile
- --disable-werror
- )
--CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
- (
- cd glibc-build
- echo "slibdir=/usr/lib" >> configparms
- echo "rtlddir=/usr/lib" >> configparms
- echo "sbindir=/usr/bin" >> configparms
- echo "rootsbindir=/usr/bin" >> configparms
-+CFLAGS=${CFLAGS/-Wp,-D_FORTIFY_SOURCE=3/}
- "${srcdir}"/glibc/configure \
- --libdir=/usr/lib \
- --libexecdir=/usr/lib \

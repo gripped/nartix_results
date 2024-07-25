@@ -126,6 +126,8 @@ gcr-4-docs
 gcr
 gcr-docs
 gd
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
@@ -196,8 +198,6 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
-gtksourceviewmm
-gtksourceviewmm-docs
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -226,6 +226,7 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
+ipset
 isoimagewriter
 iwd
 jack2
@@ -239,7 +240,6 @@ jedi-language-server
 js78
 kcoreaddons
 kgamma
-kimageformats
 kismet
 kitty
 kitty-terminfo
@@ -504,6 +504,7 @@ prosody
 protobuf
 python-protobuf
 proxytunnel
+psutils
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -528,18 +529,16 @@ python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
-python-jsonpointer
 python-libtmux
 python-pint
 python-pyee
 python-pyhamcrest
-python-pylink-square
 python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
+python-sphinx-argparse
 python-sphinx-autodoc-typehints
-python-sphinx
 python-starlette
 python-tblib
 python-teamcity-messages
@@ -651,7 +650,6 @@ redis
 redshift
 refind
 refind-docs
-retro-gtk
 rng-tools
 roc-toolkit
 rocblas
@@ -696,7 +694,6 @@ sssd
 step-cli
 strongswan
 stunnel
-suitesparse
 supermin
 sway
 swayidle
@@ -754,11 +751,13 @@ v4l-utils
 vault
 vice
 vlc
+vorbis-tools
 vpnc
 vte3
 vte-common
 vte4
 vte-docs
+vtk
 wasi-libcplusplus
 wasi-libc++abi
 waybar
@@ -782,7 +781,6 @@ wlroots0.17
 wpewebkit
 wpewebkit-docs
 xdg-desktop-portal-gnome
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal

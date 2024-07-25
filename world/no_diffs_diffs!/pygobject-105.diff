@@ -1,35 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,17 +5,13 @@
-   python-gobject-docs
- )
- pkgver=3.48.2
--pkgrel=2
-+pkgrel=1
- pkgdesc="Python bindings for GLib/GObject/GIO/GTK"
--url="https://pygobject.gnome.org/"
-+url="https://wiki.gnome.org/Projects/PyGObject"
- arch=(x86_64)
- license=(LGPL-2.1-or-later)
- depends=(
--  glib2
--  glibc
-   gobject-introspection-runtime
--  libffi
--  libgirepository
-   python
- )
- makedepends=(
-@@ -32,7 +28,7 @@
-   python-pytest
-   xorg-server-xvfb
- )
--optdepends=('python-cairo: Cairo bindings')
-+optdepends=('cairo: Cairo bindings')
- source=("git+https://gitlab.gnome.org/GNOME/pygobject.git?signed#tag=$pkgver")
- b2sums=('6cd9fd5022fec4c93d844079e3cc0c124f8aed52d390a6b46c536a097b79be8452590a31ba5ce03fb77e3dc0dc2c744fd9efa1135d878c81935c8cd58f4df8b3')
- validpgpkeys=(
-@@ -44,7 +40,7 @@
+@@ -44,7 +44,7 @@
  }
  
  build() {
@@ -42,20 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,11 +1,7 @@
- 
- git
--glib2
--glibc
- gobject-introspection
- gobject-introspection-runtime
--libffi
--libgirepository
- meson
- python
- python-cairo
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

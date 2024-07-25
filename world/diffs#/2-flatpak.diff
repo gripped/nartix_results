@@ -9,7 +9,7 @@
    wayland
    xdg-dbus-proxy
    xdg-utils
-@@ -90,13 +88,14 @@
+@@ -76,13 +74,14 @@
  
  build() {
    local meson_options=(
@@ -25,13 +25,22 @@
    meson compile -C build
  }
  
+@@ -113,6 +112,8 @@
+   install -Dt "$pkgdir/etc/flatpak/remotes.d" flathub.flatpakrepo
+ 
+   _pick docs "$pkgdir"/usr/share/{doc,gtk-doc}
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+ package_flatpak-docs() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -29,8 +29,6 @@
+@@ -30,8 +30,6 @@
  python-gobject
  python-packaging
  python-pyparsing

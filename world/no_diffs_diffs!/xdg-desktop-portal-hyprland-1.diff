@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+ }
+ 
+ build() {
+-    export PKG_CONFIG_PATH='/usr/lib/wlroots0.17/pkgconfig'
++	export PKG_CONFIG_PATH='/usr/lib/wlroots0.17/pkgconfig'
+ 	cd "$_archive"
+ 	cmake -B build \
+ 		-D CMAKE_INSTALL_PREFIX=/usr \

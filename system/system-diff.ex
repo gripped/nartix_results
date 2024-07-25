@@ -4,6 +4,7 @@ base
 bash
 binutils
 btrfs-progs
+cryptsetup
 dbus
 dbus-docs
 dhcpcd
@@ -34,6 +35,7 @@ gssproxy
 iputils
 libnl
 libusb
+links
 linux
 linux-headers
 linux-docs
@@ -63,4 +65,5 @@ sudo
 usbutils
 util-linux
 util-linux-libs
+wpa_supplicant
 xfsprogs

@@ -14,7 +14,6 @@ ca-certificates-utils
 coreutils
 cracklib
 cronie
-cryptsetup
 curl
 libcurl-compat
 libcurl-gnutls
@@ -115,7 +114,6 @@ libxcrypt-compat
 libxml2
 libxml2-docs
 licenses
-links
 linux-api-headers
 linux-firmware
 linux-firmware-whence
@@ -185,7 +183,6 @@ unixodbc
 vi
 which
 wireless-regdb
-wpa_supplicant
 xz
 zlib
 minizip

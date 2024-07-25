@@ -609,8 +609,6 @@ garcon
 gavl
 gcab
 gcc13
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -802,6 +800,8 @@ gtksourceview3
 gtksourceview4
 gtksourceview5
 gtksourceview5-docs
+gtksourceviewmm
+gtksourceviewmm-docs
 gtkspell
 gtkspell3
 gts
@@ -880,6 +880,7 @@ hyperscan
 hyphen
 hyphen-en
 hyprcursor
+hypridle
 hyprlang
 hyprutils
 hyprwayland-scanner
@@ -920,7 +921,6 @@ intel-oneapi-dev-utilities
 intel-ucode
 intltool
 inxi
-ipset
 ipython
 irssi
 iso-codes
@@ -1189,6 +1189,7 @@ kigo
 killbots
 kimageannotator
 kimageannotator-qt5
+kimageformats
 kimageformats5
 kimagemapeditor
 kimap
@@ -2818,7 +2819,6 @@ prometheus
 protobuf-c
 prrte
 prrte-docs
-psutils
 publicsuffix-list
 pugixml
 pulseaudio-qt
@@ -3367,6 +3367,7 @@ python-jsonlines
 python-jsonmerge
 python-jsonpatch
 python-jsonpickle
+python-jsonpointer
 python-jsonrpclib-pelix
 python-jsonschema-path
 python-jsonschema-spec
@@ -3693,6 +3694,7 @@ python-pykka
 python-pylast
 python-pylev
 python-pylibmc
+python-pylink-square
 python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
@@ -3948,7 +3950,6 @@ python-spec
 python-speg
 python-sphinx-alabaster-theme
 python-sphinx-argparse-cli
-python-sphinx-argparse
 python-sphinx-autobuild
 python-sphinx-basic-ng
 python-sphinx-copybutton
@@ -3960,6 +3961,7 @@ python-sphinx-lv2-theme
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
+python-sphinx
 python-sphinx_rtd_theme
 python-sphinxcontrib-apidoc
 python-sphinxcontrib-applehelp
@@ -4307,6 +4309,7 @@ remmina
 reptyr
 rest
 restinio
+retro-gtk
 rhash
 rhino
 java-rhino
@@ -4728,6 +4731,8 @@ subversion
 sugar-datastore
 suil
 suil-docs
+suitesparse
+suitesparse-graphblas
 sushi
 svgpart
 svt-av1
@@ -5089,11 +5094,9 @@ volatility3
 volume_key
 python-volume_key
 volumeicon
-vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -5166,6 +5169,7 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk

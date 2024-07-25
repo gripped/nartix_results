@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
- sha256sums=('b7fe3667e23402ee1d5b01c5d271dd6475a79e4a70843f0e3c97f5dca4fc6f1f')
+@@ -45,7 +45,7 @@
+ }
  
  build() {
--  arch-meson $pkgname-$pkgver build
-+  artix-meson $pkgname-$pkgver build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -17,9 +17,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
+@@ -3,6 +3,6 @@
+ git apply -3 ../gnome-multi-writer-window-icon.patch
+ }
  build() {
--arch-meson $pkgname-$pkgver build
-+artix-meson $pkgname-$pkgver build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

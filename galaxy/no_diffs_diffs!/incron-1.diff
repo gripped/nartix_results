@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=incron
- pkgver=0.5.12
--pkgrel=6
-+pkgrel=5
- _commit=f45c2f5ac4baea99b48e99a713d1f4ec1854aa76
- pkgdesc="Like the regular cron but is driven by filesystem events instead of time periods"
- arch=('x86_64')
 @@ -13,13 +13,11 @@
  source=("git+https://github.com/ar-/incron.git#commit=${_commit}"
          '0001-GetSafePath.patch'

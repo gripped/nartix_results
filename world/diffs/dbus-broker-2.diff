@@ -7,7 +7,7 @@
 -pkgver=35
 -pkgrel=1
 +pkgver=36
-+pkgrel=2
++pkgrel=4
  pkgdesc="Linux D-Bus Message Broker"
  url="https://github.com/bus1/dbus-broker/wiki"
  arch=(x86_64)
@@ -60,7 +60,7 @@
    meson compile -C build
  }
  
-@@ -52,14 +55,16 @@
+@@ -52,14 +55,17 @@
    meson test -C build --print-errorlogs
  }
  
@@ -77,6 +77,7 @@
 +
  }
  
++
 +
 
 

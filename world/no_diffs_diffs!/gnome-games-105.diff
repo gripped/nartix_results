@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,7 +46,7 @@
+@@ -80,7 +80,7 @@
  }
  
  build() {
--  arch-meson $pkgname-$pkgver build
-+  artix-meson $pkgname-$pkgver build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -17,11 +17,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,6 +10,6 @@
+@@ -12,6 +12,6 @@
  flatpak/libretro-cores/mednafen_psx.libretro
  }
  build() {
--arch-meson $pkgname-$pkgver build
-+artix-meson $pkgname-$pkgver build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

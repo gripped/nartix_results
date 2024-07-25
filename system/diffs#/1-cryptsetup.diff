@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url='https://gitlab.com/cryptsetup/cryptsetup/'
+ depends=('device-mapper' 'libdevmapper.so' 'openssl' 'popt' 'util-linux-libs'
+          'libuuid.so' 'json-c' 'libjson-c.so' 'argon2' 'libargon2.so')
+-makedepends=('util-linux' 'asciidoctor')
++makedepends=('util-linux' 'asciidoctor' 'udev')
+ conflicts=('mkinitcpio<38-1')
+ provides=('libcryptsetup.so')
+ options=('!emptydirs')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,5 +8,6 @@
+ libuuid.so
+ openssl
+ popt
++udev
+ util-linux
+ util-linux-libs
