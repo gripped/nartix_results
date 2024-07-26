@@ -138,7 +138,6 @@ avogadro-molecules
 avogadrolibs
 avogadrolibs-qt5
 awesome-terminal-fonts
-awesome
 aws-c-auth
 aws-c-cal
 aws-c-common
@@ -168,7 +167,6 @@ bats
 bazel
 bbswitch
 bbswitch-dkms
-bc
 bcg729
 beanshell
 bearssl
@@ -609,6 +607,8 @@ garcon
 gavl
 gcab
 gcc13
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -967,12 +967,6 @@ jre21-openjdk
 jdk21-openjdk
 openjdk21-src
 openjdk21-doc
-java8-openjdk
-jre8-openjdk-headless
-jre8-openjdk
-jdk8-openjdk
-openjdk8-src
-openjdk8-doc
 jbig2dec
 jbigkit
 jemalloc
@@ -2830,6 +2824,7 @@ pwndbg
 pyalpm
 pyatspi
 python-atspi
+pybind11
 pycups
 python-pycups
 pyenv
@@ -3184,6 +3179,7 @@ python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
+python-fastbencode
 python-fasteners
 python-fastimport
 python-fastjsonschema
@@ -3218,7 +3214,9 @@ python-flask-socketio
 python-flask-sqlalchemy
 python-flask
 python-flex
+python-flexcache
 python-flexmock
+python-flexparser
 python-flit-core
 python-flit-scm
 python-flit
@@ -3594,6 +3592,7 @@ python-pickleshare
 python-pika
 python-pikepdf
 python-pillow
+python-pint
 python-pip-run
 python-pip
 python-pipenv-to-requirements
@@ -3669,6 +3668,7 @@ python-pydbus
 python-pydocstyle
 python-pydot
 python-pydrive
+python-pyee
 python-pyelftools
 python-pyenchant
 python-pyfakefs
@@ -3684,6 +3684,7 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
+python-pyhamcrest
 python-pyhcl
 python-pyicu
 python-pyinotify
@@ -3695,7 +3696,6 @@ python-pylast
 python-pylev
 python-pylibmc
 python-pylink-square
-python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
@@ -3775,6 +3775,7 @@ python-pytest-localserver
 python-pytest-metadata
 python-pytest-mock
 python-pytest-mpi
+python-pytest-mpl
 python-pytest-mypy-testing
 python-pytest-mypy
 python-pytest-order
@@ -4039,6 +4040,7 @@ python-tomli
 python-tomlkit
 python-toolz
 python-toposort
+python-tornado
 python-tox-current-env
 python-tox
 python-tpm2-pytss
@@ -4071,6 +4073,7 @@ python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
+python-uncertainties
 python-unearth
 python-unicodedata2
 python-unidecode
@@ -5097,6 +5100,7 @@ volumeicon
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -5144,7 +5148,6 @@ x11-ssh-askpass
 x11vnc
 x264
 x265
-xa
 xalan-c
 xapian-core
 xapian-core-docs

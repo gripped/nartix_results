@@ -6,7 +6,6 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
-blueman
 box2d
 caja-extensions
 caja-extensions-common
@@ -115,7 +114,6 @@ libsignal-protocol-c
 libstrophe
 libstrophe-doc
 libsysstat
-libtg_owt
 libwnck
 libxfce4ui
 libxfce4util
@@ -372,6 +370,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
+thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher

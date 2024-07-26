@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,6 @@
+              docbook-xsl
+              doxygen
+              imagemagick
+-             ldoc
+              ttf-font
+              xmlto)
+ optdepends=('rlwrap: readline support for awesome-client'
+@@ -56,6 +55,7 @@
+ 		-DCMAKE_BUILD_TYPE=RELEASE \
+ 		-DCMAKE_INSTALL_PREFIX=/usr \
+ 		-DSYSCONFDIR=/etc \
++		-DGENERATE_DOC=OFF \
+ 		-DLUA_LIBRARY=/usr/lib/liblua5.3.so \
+ 		-DLUA_INCLUDE_DIR=/usr/include/lua5.3
+ 	make -C build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,7 +7,6 @@
+ gdk-pixbuf2
+ imagemagick
+ imlib2
+-ldoc
+ libxdg-basedir
+ libxkbcommon
+ libxkbcommon-x11
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ -DCMAKE_BUILD_TYPE=RELEASE \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DSYSCONFDIR=/etc \
++-DGENERATE_DOC=OFF \
+ -DLUA_LIBRARY=/usr/lib/liblua5.3.so \
+ -DLUA_INCLUDE_DIR=/usr/include/lua5.3
+ make -C build

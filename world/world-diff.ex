@@ -19,9 +19,11 @@ at
 audacious-plugins
 autossh
 avahi
+awesome
 ayatana-ido
 babl
 bash-bats
+bc
 bear
 benchmark
 bind
@@ -126,8 +128,6 @@ gcr-4-docs
 gcr
 gcr-docs
 gd
-gdal
-python-gdal
 gdm
 libgdm
 geoclue
@@ -236,6 +236,12 @@ jami-daemon
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
+java8-openjdk
+jre8-openjdk-headless
+jre8-openjdk
+jdk8-openjdk
+openjdk8-src
+openjdk8-doc
 jedi-language-server
 js78
 kcoreaddons
@@ -514,7 +520,6 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 puppet
-pybind11
 pyqt5
 python-pyqt5
 pyqt6
@@ -524,15 +529,12 @@ shiboken6
 python-anytree
 python-debugpy
 python-fastapi
-python-fastbencode
 python-frozendict
 python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
-python-pint
-python-pyee
-python-pyhamcrest
+python-pylint
 python-pymupdf
 python-pyotp
 python-pyudev
@@ -542,10 +544,8 @@ python-sphinx-autodoc-typehints
 python-starlette
 python-tblib
 python-teamcity-messages
-python-tornado
 python-trustme
 python-ubjson
-python-uncertainties
 python-waitress
 python-zope-testrunner
 qastools
@@ -757,7 +757,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vtk
 wasi-libcplusplus
 wasi-libc++abi
 waybar
@@ -780,6 +779,7 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
+xa
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
