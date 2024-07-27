@@ -35,6 +35,7 @@ libakonadi
 akonadiconsole
 akregator
 alacarte
+alembic
 alligator
 alsa-firmware
 alsa-lib
@@ -443,6 +444,7 @@ double-conversion
 doxygen
 doxygen-docs
 dqlite
+draco
 dragon
 dropbear
 dropbear-scp
@@ -914,10 +916,19 @@ intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
+intel-oneapi-compiler-dpcpp-cpp-runtime
+"$_pkgname
+"$_pkgname
 intel-oneapi-compiler-shared-runtime
 "$_pkgname
 "$_pkgname
+intel-oneapi-compiler-shared
 intel-oneapi-dev-utilities
+intel-oneapi-dpcpp-cpp
+intel-oneapi-dpcpp-debugger
+intel-oneapi-openmp
+intel-oneapi-tbb
+intel-oneapi-tcm
 intel-ucode
 intltool
 inxi
@@ -961,12 +972,6 @@ jre17-openjdk
 jdk17-openjdk
 openjdk17-src
 openjdk17-doc
-java21-openjdk
-jre21-openjdk-headless
-jre21-openjdk
-jdk21-openjdk
-openjdk21-src
-openjdk21-doc
 jbig2dec
 jbigkit
 jemalloc
@@ -1767,6 +1772,7 @@ libspatialite
 libspectre
 libspf2
 libspiro
+libspnav
 libspng
 libsquish
 libsrtp
@@ -2008,7 +2014,6 @@ lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
-ly
 lynx
 lzip
 lzop
@@ -2091,6 +2096,7 @@ mate-user-guide
 mate-utils
 materia-kde
 kvantum-theme-materia
+materialx
 matterbridge
 maturin
 python-maturin
@@ -2324,6 +2330,7 @@ openjpeg2
 openlibm
 openmp
 openntpd
+openpgl
 openpmix
 openpmix-docs
 openrct2
@@ -2813,6 +2820,7 @@ prometheus
 protobuf-c
 prrte
 prrte-docs
+ptex
 publicsuffix-list
 pugixml
 pulseaudio-qt
@@ -3696,6 +3704,7 @@ python-pylast
 python-pylev
 python-pylibmc
 python-pylink-square
+python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
@@ -3951,6 +3960,7 @@ python-spec
 python-speg
 python-sphinx-alabaster-theme
 python-sphinx-argparse-cli
+python-sphinx-argparse
 python-sphinx-autobuild
 python-sphinx-basic-ng
 python-sphinx-copybutton
@@ -5048,6 +5058,8 @@ unzip
 upx
 uriparser
 usbredir
+usd
+usd-extras
 usort
 uthash
 uv

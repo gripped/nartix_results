@@ -121,6 +121,7 @@ lib32-libxi
 lib32-libxinerama
 lib32-libxkbcommon
 lib32-libxkbcommon-x11
+lib32-libxml2
 lib32-libxmu
 lib32-libxrandr
 lib32-libxrender

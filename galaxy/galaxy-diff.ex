@@ -1,5 +1,4 @@
 alacritty
-blueman
 cinnamon-desktop
 fceux
 firefox
@@ -7,7 +6,6 @@ gpicview
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libtg_owt
 lxpanel
 lxqt-themes
 lxsession

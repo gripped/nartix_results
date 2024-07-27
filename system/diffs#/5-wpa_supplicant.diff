@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,89 +1,73 @@
+@@ -1,92 +1,73 @@
  
  pkgname=wpa_supplicant
 -pkgver=2.11
--pkgrel=1
+-pkgrel=2
 +pkgver=2.10
 +pkgrel=8
  epoch=2
@@ -45,6 +45,8 @@
 -  0005-Add-IgnoreOnIsolate-yes-to-keep-wpa-supplicant-runni.patch
 -
 -  0006-Add-reload-support-to-the-systemd-unit-files.patch
+-
+-  0007-nl80211-add-extra-ies-only-if-allowed-by-driver.patch
 +  wpa_supplicant_tls.patch
 +  wpa_supplicant_dbus_service_syslog.patch
 +  wpa_supplicant_service_ignore-on-isolate.patch
@@ -61,7 +63,8 @@
 -        'aaa7604faf1fede451582c8b981579cc86724a66c783d8368d1c122e0c381b75842d83bd85a982c1d4461d65bc74e62d34768762d15b4005a24a17e1392a109a'
 -        '7175e7aab682370aef1b3358eaa839dcb009e12940aa2b9949c8c3254406341433e84af09d09ad670bf41f5201d979af02095c87a368b76465a952b1be9de049'
 -        '6472d571f18c3ee718315888b9c756c4579a4b411e8c6994002f9a79fb0a36fbebe8b3d419af0f9ea881dd1bc439d03dbe3c6d6661e670f16575197c31f0bd7a'
--        'c1ce2e8d6f42cbc8181aeb2bdc19d4a22bff804c18f6e505d8315a294c67c936e90135046812ec37765be3d0f433e31554604deb1d7b160549d7e3284610a22b')
+-        'c1ce2e8d6f42cbc8181aeb2bdc19d4a22bff804c18f6e505d8315a294c67c936e90135046812ec37765be3d0f433e31554604deb1d7b160549d7e3284610a22b'
+-        '28bf078147cc2f3395d3f907d6d900c7976dbd9948a9513f1d7ef32a40b89fee55e243c9302d24eda62dc1f813857fa09ae79e6faf52881e463a163acb437380')
 -validpgpkeys=(
 -  EC4AA0A991A5F2464582D52D2B6EF432EFC895FA # Jouni Malinen <j@w1.fi>
 -)
@@ -138,7 +141,7 @@
  
    install -Dm755 eapol_test "$pkgdir/usr/bin/eapol_test"
  
-@@ -99,9 +83,4 @@
+@@ -102,9 +83,4 @@
    install -Dm644 doc/docbook/*.5 -t "$pkgdir/usr/share/man/man5"
    install -Dm644 doc/docbook/*.8 -t "$pkgdir/usr/share/man/man8"
    rm "$pkgdir"/usr/share/man/man8/wpa_{priv,gui}.8

@@ -1,6 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -1,11 +1,11 @@
+ 
+ pkgname=clang
+ pkgver=18.1.8
+-pkgrel=2
++pkgrel=1
  pkgdesc="C language family frontend for LLVM"
  arch=('x86_64')
  url="https://clang.llvm.org/"
@@ -9,3 +14,13 @@
  depends=('llvm-libs' 'gcc' 'compiler-rt')
  makedepends=('llvm' 'cmake' 'ninja' 'python-sphinx' 'python-myst-parser')
  optdepends=('openmp: OpenMP support in clang with -fopenmp'
+@@ -41,6 +41,9 @@
+   ninja -t targets | grep -Po 'install-\K.*(?=-stripped:)' | while read -r target; do
+     case $target in
+       clang-libraries|distribution)
++        continue
++        ;;
++      clang-tidy-headers)
+         continue
+         ;;
+       clang|clangd|clang-*)

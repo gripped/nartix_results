@@ -236,6 +236,12 @@ jami-daemon
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
+java21-openjdk
+jre21-openjdk-headless
+jre21-openjdk
+jdk21-openjdk
+openjdk21-src
+openjdk21-doc
 java8-openjdk
 jre8-openjdk-headless
 jre8-openjdk
@@ -343,6 +349,7 @@ lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
+ly
 mako
 maliit-framework
 mariadb
@@ -416,11 +423,13 @@ onionshare
 open-iscsi
 opencc
 opencc-doc
+opencollada
 opendht
 openjade
 openmpi
 openmpi-docs
 opensmtpd
+opensubdiv
 openvpn
 ostree
 packagekit
@@ -534,12 +543,10 @@ python-gssapi
 python-intelhex
 python-ipywidgets
 python-libtmux
-python-pylint
 python-pymupdf
 python-pyotp
 python-pyudev
 python-signedjson
-python-sphinx-argparse
 python-sphinx-autodoc-typehints
 python-starlette
 python-tblib
