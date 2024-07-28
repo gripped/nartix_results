@@ -5,7 +5,6 @@ alacritty
 alsa-utils
 amule
 android-tools
-ansible-language-server
 apache
 apcupsd
 appstream
@@ -24,7 +23,6 @@ ayatana-ido
 babl
 bash-bats
 bc
-bear
 benchmark
 bind
 bluedevil
@@ -45,6 +43,7 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
+cdrtools
 cgmanager
 chromium-bsu
 cinnamon-desktop
@@ -213,6 +212,7 @@ haproxy
 haveged
 hexchat
 hidapi
+hotdoc
 hwinfo
 hwloc
 hyprland
@@ -544,6 +544,8 @@ python-intelhex
 python-ipywidgets
 python-libtmux
 python-pymupdf
+python-pyopencl
+pyopencl-headers
 python-pyotp
 python-pyudev
 python-signedjson
@@ -764,8 +766,6 @@ vte3
 vte-common
 vte4
 vte-docs
-wasi-libcplusplus
-wasi-libc++abi
 waybar
 wayland-utils
 webkit2gtk-4.1

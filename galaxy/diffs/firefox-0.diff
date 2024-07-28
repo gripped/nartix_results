@@ -11,7 +11,7 @@
  
  prepare() {
    mkdir mozbuild
-@@ -133,15 +131,12 @@
+@@ -133,24 +131,30 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -28,7 +28,36 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -227,14 +222,14 @@
+ 
+ ac_add_options --enable-alsa
++ac_add_options --enable-av1
++ac_add_options --enable-eme=widevine
+ ac_add_options --enable-jack
+-ac_add_options --enable-crashreporter
++ac_add_options --enable-jxl
++ac_add_options --enable-pulseaudio
++ac_add_options --enable-raw
++ac_add_options --enable-sandbox
++ac_add_options --enable-webrtc
++ac_add_options --disable-crashreporter
++ac_add_options --disable-default-browser-agent
++ac_add_options --disable-parental-controls
++ac_add_options --disable-tests
+ ac_add_options --disable-updater
+-ac_add_options --disable-tests
+ END
+ }
+ 
+@@ -194,7 +198,7 @@
+ 
+   echo "Building optimized browser..."
+   cat >.mozconfig ../mozconfig - <<END
+-ac_add_options --enable-lto=cross,full
++ac_add_options --enable-lto=cross
+ ac_add_options --enable-profile-use=cross
+ ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
+ ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
+@@ -227,14 +231,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -55,7 +84,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,14 +21,11 @@
+@@ -21,21 +21,27 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -71,3 +100,30 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
++ac_add_options --enable-av1
++ac_add_options --enable-eme=widevine
+ ac_add_options --enable-jack
+-ac_add_options --enable-crashreporter
++ac_add_options --enable-jxl
++ac_add_options --enable-pulseaudio
++ac_add_options --enable-raw
++ac_add_options --enable-sandbox
++ac_add_options --enable-webrtc
++ac_add_options --disable-crashreporter
++ac_add_options --disable-default-browser-agent
++ac_add_options --disable-parental-controls
++ac_add_options --disable-tests
+ ac_add_options --disable-updater
+-ac_add_options --disable-tests
+ END
+ }
+ build() {
+@@ -68,7 +74,7 @@
+ ./mach clobber objdir
+ echo "Building optimized browser..."
+ cat >.mozconfig ../mozconfig - <<END
+-ac_add_options --enable-lto=cross,full
++ac_add_options --enable-lto=cross
+ ac_add_options --enable-profile-use=cross
+ ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
+ ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog

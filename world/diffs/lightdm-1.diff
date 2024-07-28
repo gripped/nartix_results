@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   liblightdm-qt5
+ )
+ pkgver=1.32.0
+-pkgrel=6
++pkgrel=6.1
+ epoch=1
+ pkgdesc='A lightweight display manager'
+ arch=(x86_64)
 @@ -14,6 +14,7 @@
    'GPL-3.0-or-later AND (LGPL-2.0-only OR LGPL-3.0-only)'
  )
@@ -35,6 +44,15 @@
          'c376a6426bfd9c8eddcd9cdd9fcde9d137ba297e467b6c3b24a0ca155accf9530d6f526f0338da22559e1e151e238192d3c47752d70e899f11eec1a768d1a822')
  
  prepare() {
+@@ -114,7 +115,7 @@
+     etc/pam.d/lightdm-autologin
+     etc/pam.d/lightdm-greeter
+   )
+-
++  provides=(display-manager)
+   cd lightdm
+ 
+   make DESTDIR="${pkgdir}" install
 @@ -125,12 +126,12 @@
  
    install -m 644 ../lightdm.pam "${pkgdir}"/etc/pam.d/lightdm

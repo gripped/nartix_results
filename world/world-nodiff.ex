@@ -56,6 +56,7 @@ android-file-transfer
 android-udev
 angelfish
 ansible-core
+ansible-language-server
 ansible-lint
 ansible
 ant
@@ -170,6 +171,7 @@ bbswitch
 bbswitch-dkms
 bcg729
 beanshell
+bear
 bearssl
 beep
 bemenu
@@ -255,7 +257,6 @@ cbindgen
 ccache
 cdparanoia
 cdrdao
-cdrtools
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -773,6 +774,7 @@ grub-customizer
 grunt-cli
 gsasl
 gsettings-desktop-schemas
+gsettings-system-schemas
 gsfonts
 gsl
 gsm
@@ -848,7 +850,6 @@ hiredis
 hitori
 hivex
 hostapd
-hotdoc
 hplip
 hsa-rocr
 hsakmt-roct
@@ -3582,6 +3583,7 @@ python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
 python-pdm-backend
+python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
@@ -3717,8 +3719,6 @@ python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
-python-pyopencl
-pyopencl-headers
 python-pyopenssl
 python-pypandoc
 python-pyparsing
@@ -5125,6 +5125,8 @@ waf
 warpinator
 wasi-compiler-rt
 wasi-libc
+wasi-libcplusplus
+wasi-libc++abi
 wavpack
 wayland-protocols
 wayland
