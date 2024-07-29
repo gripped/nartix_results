@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,8 +4,8 @@
+   libretro-beetle-psx
+   libretro-beetle-psx-hw
+ )
+-pkgver=2725
+-pkgrel=1
++pkgver=2708
++pkgrel=2
+ pkgdesc='Sony PlayStation core'
+ arch=(x86_64)
+ url=https://github.com/libretro/beetle-psx-libretro
+@@ -21,9 +21,9 @@
+   mesa
+   vulkan-icd-loader
+ )
+-_commit=38d74b0b769e3a72e8ea574389b9cc80994e9cc8
++_commit=382e3ffce6880e89a8786f5c25a173f25d03df58
+ source=(libretro-beetle-psx::git+https://github.com/libretro/beetle-psx-libretro.git#commit=${_commit})
+-sha256sums=('ea088317bce41baf1314340dbf28e40c46e8c3df275ccc65f4b7975c03714a08')
++sha256sums=(SKIP)
+ 
+ pkgver() {
+   cd libretro-beetle-psx

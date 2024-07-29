@@ -41,6 +41,7 @@ breezy
 brightnessctl
 brltty
 brltty-udev-generic
+bspwm
 btop
 bumblebee
 cdrtools
@@ -119,7 +120,6 @@ fwupd-efi
 fwupd
 gala
 gamemode
-gamescope
 gammastep
 gcc12
 gcr-4
@@ -437,6 +437,7 @@ libpackagekit-glib
 pacman-contrib
 pahole
 ostra-cg
+pam_wrapper
 paprefs
 passim
 pc-ble-driver

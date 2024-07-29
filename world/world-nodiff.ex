@@ -209,7 +209,6 @@ breeze5
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
-bspwm
 bubblewrap
 bubblewrap-suid
 build2
@@ -606,6 +605,7 @@ fwknop
 fzf
 gajim
 galculator
+gamescope
 garcon
 gavl
 gcab
@@ -2374,7 +2374,6 @@ pacmanlogviewer
 pacrunner
 pacutils
 palapeli
-pam_wrapper
 pango
 pango-docs
 pangomm-2.48

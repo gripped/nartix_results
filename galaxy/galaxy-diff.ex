@@ -1,4 +1,5 @@
 alacritty
+blender
 cinnamon-desktop
 fceux
 firefox

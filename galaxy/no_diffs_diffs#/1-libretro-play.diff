@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libretro-play
+-pkgver=8292
+-pkgrel=1
++pkgver=8218
++pkgrel=2
+ pkgdesc='Sony PlayStation 2 core'
+ arch=(x86_64)
+ url=https://github.com/jpd002/Play-
+@@ -22,7 +22,7 @@
+   git
+   libglvnd
+ )
+-_commit=922caaadd4a30820e294d1a94885e39f0941a63a
++_commit=ca98a3ca28a863469861400da2b220aa45cb1243
+ source=(
+   libretro-play::git+https://github.com/jpd002/Play-.git#commit=${_commit}
+   play-CodeGen::git+https://github.com/jpd002/Play--CodeGen.git
+@@ -35,16 +35,18 @@
+   git+https://github.com/Cyan4973/xxHash.git
+   git+https://github.com/facebook/zstd.git
+ )
+-b2sums=('9918c8a9b7b7459973168a5157c46db73f95823140d2ef21633f1265305f3caa30e6c27f6ea8d9d157a109a5d40b299393b9e36030d2e323401db01efd982591'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP'
+-        'SKIP')
++b2sums=(
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++  SKIP
++)
+ 
+ pkgver() {
+   cd libretro-play
