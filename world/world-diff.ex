@@ -22,9 +22,7 @@ awesome
 ayatana-ido
 babl
 bash-bats
-bc
 benchmark
-bind
 bluedevil
 bluez
 bluez-utils
@@ -69,6 +67,7 @@ dbus-broker
 dbus-python
 dbus-python-docs
 ddcutil
+debootstrap
 dhcpcd
 dns-over-https
 docker
@@ -115,7 +114,6 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
-fuse2
 fwupd-efi
 fwupd
 gala
@@ -213,7 +211,6 @@ haveged
 hexchat
 hidapi
 hotdoc
-hwinfo
 hwloc
 hyprland
 i2pd
@@ -391,7 +388,6 @@ mpd
 multipath-tools
 mumble
 mumble-server
-musl
 mutter
 mutter-docs
 mutter45

@@ -169,6 +169,7 @@ bats
 bazel
 bbswitch
 bbswitch-dkms
+bc
 bcg729
 beanshell
 bear
@@ -181,6 +182,7 @@ bemenu-x11
 bftpd
 bigsh0t
 bin86
+bind
 black-hole-solver
 blackbox
 blinken
@@ -387,7 +389,6 @@ dbus-glib
 dconf-editor
 dconf
 ddclient
-debootstrap
 default-cursors
 dejagnu
 deluge
@@ -598,6 +599,7 @@ fstrm
 ftgl
 ftjam
 fuse-overlayfs
+fuse2
 fuse3
 fuse-common
 futuresql
@@ -757,6 +759,7 @@ gradle-src
 grafana
 granatier
 granite
+granite7
 grantlee-editor
 grantlee
 grantleetheme
@@ -876,6 +879,7 @@ hunspell-it
 hunspell-nl
 hunspell-ru
 hunspell
+hwinfo
 hy
 hypercorn
 hyperkitty
@@ -2189,6 +2193,9 @@ musepack
 musepack-tools
 libmpcdec
 musescore
+musl
+musl-aarch64
+musl-riscv64
 mutt
 mypaint-brushes1
 mypy

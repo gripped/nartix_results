@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=ibus
- pkgname=(ibus libibus)
- pkgver=1.5.30
--pkgrel=3
-+pkgrel=2
- pkgdesc="Intelligent input bus for Linux/Unix"
- arch=('x86_64')
- url="https://github.com/ibus/ibus/wiki"
 @@ -57,6 +57,7 @@
          --disable-memconf \
          --enable-ui \
@@ -17,22 +8,6 @@
          --with-python=python3 \
          --with-ucd-dir=/usr/share/unicode/
      sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-@@ -69,7 +70,6 @@
-     cd ibus-${pkgver}
-     make DESTDIR="$pkgdir" install
-     make -C src DESTDIR="$pkgdir" uninstall
--    make -C src DESTDIR="$pkgdir" install-dictDATA install-unicodeDATA
-     make -C bindings DESTDIR="$pkgdir" uninstall
-     make DESTDIR="$pkgdir" uninstall-pkgconfigDATA
- }
-@@ -82,7 +82,6 @@
- 
-     cd ibus-${pkgver}
-     make -C src DESTDIR="$pkgdir" install
--    make -C src DESTDIR="$pkgdir" uninstall-dictDATA uninstall-unicodeDATA
-     make -C bindings DESTDIR="$pkgdir" install
-     make DESTDIR="$pkgdir" install-pkgconfigDATA
- }
 
 
 ############# Stripped diff below #################

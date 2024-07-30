@@ -1,68 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,32 +1,40 @@
- 
- pkgname=gala
--pkgver=7.1.3.r184.48249e8e
-+pkgver=7.1.3.r68.5644c667
- pkgrel=1
- pkgdesc='The Pantheon Window Manager'
- arch=(x86_64)
- url=https://github.com/elementary/gala
--license=(GPL-3.0-only)
-+license=(GPL-3.0-or-later)
- groups=(pantheon)
- depends=(
-+  atk
-+  bamf
-   cairo
--  dconf
-   gdk-pixbuf2
-   glib2
--  glibc
-   gnome-desktop
--  graphene
-   gtk3
--  gtk4
-+  json-glib
-   libcanberra
-+  libdrm
-   libgee
-+  libgexiv2
-   libgl
-   libgranite.so
--  libgranite-7.so
-   libhandy-1.so
-+  libx11
-+  libxcomposite
-+  libxdamage
-+  libxext
+@@ -26,7 +26,6 @@
    libxfixes
-+  libxi
-+  libxrandr
-+  libxtst
-+  mesa
    mutter
--  sqlite
+   sqlite
 -  systemd-libs
-+  pango
-+  plank
    wayland
  )
  makedepends=(
-@@ -38,9 +46,9 @@
-   vala
- )
- provides=(libgala.so)
--_commit=48249e8efc18ba9b057dbdbc8cc8d622638d3cb1
-+_commit=5644c66724a70983c5abed0a28cfb21733d0e11a
- source=(git+https://github.com/elementary/gala.git#commit=${_commit})
--b2sums=('4392067affe536dadd16e87c810fcedf9a755d85e8473444e2ec036a3a8685d3d390306d81f266fd25b7b7a799b8bfa5b69b3f4e76e709d7af182bfd6395824f')
-+b2sums=('SKIP')
- 
- pkgver() {
-   cd gala
-@@ -48,7 +56,7 @@
+@@ -48,7 +47,7 @@
  }
  
  build() {
@@ -77,45 +23,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,26 +1,34 @@
-+atk
-+bamf
- cairo
- cmake
--dconf
- gdk-pixbuf2
- git
- glib2
--glibc
- gnome-common
- gnome-desktop
--graphene
- gtk3
--gtk4
- intltool
-+json-glib
- libcanberra
-+libdrm
- libgee
-+libgexiv2
- libgl
--libgranite-7.so
- libgranite.so
- libhandy-1.so
-+libx11
-+libxcomposite
-+libxdamage
-+libxext
- libxfixes
-+libxi
-+libxrandr
-+libxtst
-+mesa
+@@ -21,6 +21,5 @@
  meson
  mutter
--sqlite
+ sqlite
 -systemd-libs
-+pango
-+plank
  vala
  wayland
