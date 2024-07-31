@@ -22,7 +22,6 @@ awesome
 ayatana-ido
 babl
 bash-bats
-benchmark
 bluedevil
 bluez
 bluez-utils
@@ -149,6 +148,7 @@ gnome-user-share
 go-bindata
 go-licenses
 godot
+google-glog
 gpsd
 greetd-tuigreet
 greetd
@@ -293,6 +293,8 @@ libetonyek
 libfido2
 libfprint
 libgdata
+libgme
+libgpod
 libgudev
 libguestfs
 libhandy
@@ -757,7 +759,6 @@ v4l-utils
 vault
 vice
 vlc
-vorbis-tools
 vpnc
 vte3
 vte-common

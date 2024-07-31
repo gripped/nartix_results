@@ -53,6 +53,7 @@ pipewire-dinit
 pix
 pure-ftpd-openrc
 pure-ftpd
+qbittorrent-openrc
 qpdfview
 qt-sudo
 qt5-styleplugins

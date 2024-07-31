@@ -15,16 +15,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +0,0 @@
--argon2
--asciidoctor
--device-mapper
--json-c
--libargon2.so
--libdevmapper.so
--libjson-c.so
--libuuid.so
--openssl
--popt
--util-linux
--util-linux-libs
+@@ -8,5 +8,6 @@
+ libuuid.so
+ openssl
+ popt
++udev
+ util-linux
+ util-linux-libs

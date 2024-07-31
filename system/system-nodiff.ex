@@ -14,7 +14,6 @@ ca-certificates-utils
 coreutils
 cracklib
 cronie
-cryptsetup
 curl
 libcurl-compat
 libcurl-gnutls
@@ -147,6 +146,7 @@ npth
 nss
 ca-certificates-mozilla
 openssh
+openssl-1.1
 openssl
 pacman
 patch

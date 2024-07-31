@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=git
+-pkgver=2.46.0
++pkgver=2.45.2
+ pkgrel=1
+ pkgdesc='the fast distributed version control system'
+ arch=('x86_64')
 @@ -27,13 +27,9 @@
  install=git.install
  validpgpkeys=('96E07AF25771955980DAD10020D04E5A713660A7') # Junio C Hamano
@@ -7,7 +15,8 @@
 -        'git-daemon@.service'
 -        'git-daemon.socket'
          'git-sysusers.conf')
- sha256sums=('51bfe87eb1c02fed1484051875365eeab229831d30d0cec5d89a14f9e40e9adb'
+-sha256sums=('7f123462a28b7ca3ebe2607485f7168554c2b10dfc155c7ec46300666ac27f95'
++sha256sums=('51bfe87eb1c02fed1484051875365eeab229831d30d0cec5d89a14f9e40e9adb'
              'SKIP'
 -            '14c0b67cfe116b430645c19d8c4759419657e6809dfa28f438c33a005245ad91'
 -            'ac4c90d62c44926e6d30d18d97767efc901076d4e0283ed812a349aece72f203'

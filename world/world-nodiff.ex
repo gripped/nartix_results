@@ -179,6 +179,7 @@ bemenu
 bemenu-ncurses
 bemenu-wayland
 bemenu-x11
+benchmark
 bftpd
 bigsh0t
 bin86
@@ -746,7 +747,6 @@ gobject-introspection-runtime
 libgirepository
 gom
 gom-docs
-google-glog
 gox
 gparted
 gperf
@@ -1529,7 +1529,6 @@ libgit2-glib-docs
 libgit2
 libglib-testing
 libglvnd
-libgme
 libgnome-games-support-2
 libgnome-games-support
 libgnome-keyring
@@ -1538,7 +1537,6 @@ libgnt
 libgoom2
 libgovirt
 libgphoto2
-libgpod
 libgravatar
 libgrss
 libgsf
@@ -5115,6 +5113,7 @@ volatility3
 volume_key
 python-volume_key
 volumeicon
+vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs

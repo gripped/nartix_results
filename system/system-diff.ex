@@ -4,6 +4,7 @@ base
 bash
 binutils
 btrfs-progs
+cryptsetup
 dbus
 dbus-docs
 dhcpcd
@@ -50,7 +51,6 @@ nspr
 openldap
 libldap
 openresolv
-openssl-1.1
 p11-kit
 libp11-kit
 p11-kit-docs

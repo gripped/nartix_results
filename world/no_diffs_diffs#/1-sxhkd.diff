@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=sxhkd
+ pkgver=0.6.2
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Simple X hotkey daemon'
+ arch=(x86_64)
+ url='https://github.com/baskerville/sxhkd'
+-license=(BSD-2-Clause)
++license=(custom:BSD)
+ depends=(xcb-util-keysyms)
+ makedepends=(git xcb-util)
+ source=("git+$url#commit=fe241b0d2d70c9c483b23cf3cd14f1383f0953a2") # tag: 0.6.2
+-b2sums=('dc0cda44d4d25a4497216abe46c5044bd716b7fa820e89bb759bd15038926e5dae0cfb7071d5223c9e44e60fd766442941868b9744d8b6c39053201d86035ee8')
++md5sums=('SKIP')
+ 
+ build() {
+   CFLAGS+=' -fcommon' # https://wiki.gentoo.org/wiki/Gcc_10_porting_notes/fno_common
+@@ -20,3 +20,4 @@
+   make -C $pkgname PREFIX=/usr DESTDIR="$pkgdir" install
+   install -Dm644 $pkgname/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
++

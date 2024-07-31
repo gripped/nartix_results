@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=zopfli
- pkgver=1.0.3
--pkgrel=4
-+pkgrel=3
- pkgdesc="Compression algorithm library"
- arch=(x86_64)
- url="https://github.com/google/zopfli"
+@@ -41,4 +41,3 @@
+   DESTDIR="$pkgdir" cmake --install build
+   install -vDm 644 $pkgname-$pkgname-$pkgver/README* -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
+-

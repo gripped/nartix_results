@@ -3,7 +3,7 @@
 @@ -1,6 +1,7 @@
  
  pkgname=nushell
--pkgver=0.96.0
+-pkgver=0.96.1
 +pkgver=0.88.1
 +_commit=fd56768fdcc1acbebcb75745600fc7419f72833d
  pkgrel=1
@@ -14,7 +14,7 @@
  makedepends=('cargo' 'git')
  install=nushell.install
 -source=("git+https://github.com/nushell/nushell.git#tag=$pkgver")
--sha256sums=('9a65d6e6afcf3bc60044f92b51ffa6242a3f9bd0c69c452f34d8a28b5b8c2fbb')
+-sha256sums=('cc2ab75aad14251026de3c4d5385fd1ae16c8a34fd132e19f8664f4d05273e01')
 +source=("git+https://github.com/nushell/nushell.git#commit=$_commit")
 +sha256sums=('SKIP')
 +
