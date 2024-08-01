@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=qastools
+ pkgver=1.4.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A collection of desktop applications for the Linux sound system ALSA."
+ arch=(x86_64)
+ url="https://gitlab.com/sebholt/qastools"
 @@ -18,7 +18,7 @@
    alsa-lib
    cmake
@@ -9,17 +18,30 @@
  )
  source=($url/-/archive/v$pkgver/$pkgname-v$pkgver.tar.gz)
  sha512sums=('eced94ce0c796148d3dae79f8b687d481b2adb34466de41ad0c6ecf3b820562297720d8052332c3f1ba422a856dbc7742f1bdb2a32b6bb1c43eaad9cba256946')
+@@ -44,7 +44,7 @@
+ package() {
+   depends+=(
+     alsa-lib libasound.so
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+ 
+   DESTDIR="$pkgdir" cmake --install build
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,7 @@
+@@ -3,9 +3,10 @@
  gcc-libs
  glibc
  hicolor-icon-theme
 +kvirc
  libasound.so
++libudev
  libudev.so
  qt6-base
+ qt6-svg
+ qt6-tools
+-systemd-libs

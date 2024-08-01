@@ -148,7 +148,6 @@ gnome-user-share
 go-bindata
 go-licenses
 godot
-google-glog
 gpsd
 greetd-tuigreet
 greetd
@@ -670,8 +669,6 @@ rtkit
 ruby-console
 ruby-faraday-patron
 ruby-optimist
-ruff
-python-ruff
 rxvt-unicode
 rxvt-unicode-terminfo
 samba

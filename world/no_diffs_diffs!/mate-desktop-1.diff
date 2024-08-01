@@ -17,3 +17,15 @@
  
  build() {
  	cd "$pkgname-$pkgver"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-gobject-introspection
+-gtk3
+-intltool
+-iso-codes
+-startup-notification

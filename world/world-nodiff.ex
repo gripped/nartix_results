@@ -747,6 +747,7 @@ gobject-introspection-runtime
 libgirepository
 gom
 gom-docs
+google-glog
 gox
 gparted
 gperf
@@ -4602,6 +4603,8 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
+ruff
+python-ruff
 run-parts
 runc
 rust-bindgen

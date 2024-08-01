@@ -128,7 +128,6 @@ linux-firmware-bnx2x
 linux-lts
 linux-lts-headers
 linux-lts-docs
-lz4
 lzo
 m4
 make
