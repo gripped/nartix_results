@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -2,13 +2,13 @@
+ pkgbase=samba
+ pkgname=('libwbclient' 'smbclient' 'samba')
+ pkgver=4.20.2
+-pkgrel=2
++pkgrel=1
+ arch=(x86_64)
+ url="https://www.samba.org"
  license=('GPL-3.0-or-later')
  makedepends=('python' 'python-markdown' 'python-dnspython' 'docbook-xsl' 'pkg-config' 'libbsd' 'popt' 'libcups'
               'readline' 'tevent' 'acl' 'libldap' 'libcap' 'ldb' 'krb5' 'pam'

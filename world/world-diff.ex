@@ -263,6 +263,7 @@ libappindicator-gtk3
 libatasmart
 libayatana-appindicator
 libayatana-indicator
+libblastrampoline
 libblockdev
 libblockdev-btrfs
 libblockdev-crypto
@@ -546,6 +547,7 @@ python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
+python-pywinrm
 python-signedjson
 python-sphinx-autodoc-typehints
 python-starlette
@@ -553,6 +555,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-uvloop
 python-waitress
 python-zope-testrunner
 qastools
@@ -708,6 +711,9 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
+telepathy-glib
+telepathy-logger
+telepathy-mission-control
 thunderbird
 tigervnc
 timew
@@ -736,6 +742,8 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
+usd-extras
 utf8cpp
 uwsgi
 uwsgi-plugin-rack

@@ -2,10 +2,9 @@
 +++ Artix PKGBUILD
 @@ -1,22 +1,21 @@
  pkgname=telegram-desktop
--pkgver=5.2.3
--pkgrel=2
+-pkgver=5.3.0
 +pkgver=4.11.8
-+pkgrel=1
+ pkgrel=1
  pkgdesc='Official Telegram Desktop client'
  arch=('x86_64')
  url="https://desktop.telegram.org/"
@@ -14,7 +13,7 @@
 +depends=('hunspell' 'ffmpeg' 'hicolor-icon-theme' 'lz4' 'minizip' 'openal' 'ttf-opensans'
           'qt6-imageformats' 'qt6-svg' 'qt6-wayland' 'xxhash'
 -         'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'libxcomposite' 'libxdamage' 'abseil-cpp' 'libdispatch'
--         'openssl' 'protobuf' 'glib2' 'libsigc++-3.0' 'kcoreaddons')
+-         'openssl' 'protobuf' 'glib2' 'libsigc++-3.0' 'kcoreaddons' 'openh264')
 +         'rnnoise' 'pipewire' 'libxtst' 'libxrandr' 'libxcomposite' 'jemalloc' 'abseil-cpp' 'libdispatch'
 +         'openssl' 'protobuf' 'glib2' 'libsigc++-3.0' 'glibmm-2.68')
  makedepends=('cmake' 'git' 'ninja' 'python' 'range-v3' 'tl-expected' 'microsoft-gsl' 'meson'
@@ -25,7 +24,7 @@
  optdepends=('webkit2gtk: embedded browser features'
              'xdg-desktop-portal: desktop integration')
  source=("https://github.com/telegramdesktop/tdesktop/releases/download/v${pkgver}/tdesktop-${pkgver}-full.tar.gz")
--sha512sums=('5d5bf1f5c35af11b2adf7db075832e7cca5768c2c5f82d9fc5054b9d45f964a3520eb88864aefc3de593ce1359534b210b1e5d89495819e7386f6ca15fd4a15c')
+-sha512sums=('f681c6ee31fad435d08150669c7ffc4e834f6f8361b514b628ccd5c216c64e2ee65a9c2393dbe93b4ebf48043d5e6853b67f7f5168af29c1a8e8404bc858c3d3')
 +sha512sums=('dc5802fe4fc02542ba795a25fa86ab9bee3aa9daa3e82fc8bc4087ed90fde320f4f6b4dca38b55c460e5d33e7ca333f68163880116c6ee97259483f2c3cb2eac')
  
  build() {
@@ -55,7 +54,14 @@
  libxrandr
  libxtst
  lz4
-@@ -31,12 +30,12 @@
+@@ -25,19 +24,18 @@
+ mm-common
+ ninja
+ openal
+-openh264
+ openssl
+ perl-xml-parser
+ pipewire
  plasma-wayland-protocols
  protobuf
  python

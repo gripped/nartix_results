@@ -1425,7 +1425,6 @@ libavif
 libavtp
 libb2
 libb64
-libblastrampoline
 libbluray
 libbobcat
 libbs2b
@@ -3845,7 +3844,6 @@ python-pyvex
 python-pyvirtualdisplay
 python-pywal
 python-pywayland
-python-pywinrm
 python-pywlroots
 python-pyxbe
 python-pyzmq
@@ -4101,7 +4099,6 @@ python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
-python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
@@ -4794,7 +4791,6 @@ telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
 telepathy-gabble
-telepathy-glib
 telepathy-haze
 telepathy-idle
 telepathy-kde-accounts-kcm
@@ -4810,8 +4806,6 @@ telepathy-kde-integration-module
 telepathy-kde-send-file
 telepathy-kde-text-ui
 telepathy-logger-qt
-telepathy-logger
-telepathy-mission-control
 telepathy-qt
 telepathy-salut
 tellico
@@ -5065,8 +5059,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
-usd-extras
 usort
 uthash
 uv
