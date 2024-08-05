@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,36 +1,47 @@
+@@ -1,29 +1,47 @@
  
  pkgname=ly
--pkgver=1.0.1
+-pkgver=1.0.2
 +pkgver=0.6.0
  pkgrel=1
 +_tag=1c2be475ad09af18e632609c779d508e7fb866f9
@@ -20,7 +20,7 @@
              'libxcb: for X server sessions')
  backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
 -source=("git+$url.git#tag=v${pkgver}")
--b2sums=('6735af4944bac5b259f2da064c8f0ca57df908e21315a16af846d28650c6372476b633ce2d5449aca29e7077728e0b40205bce9f47def5924f1755f60bf07025')
+-b2sums=('39738a0a00cddf2c986a33e78f28d6f241a1d4b342aca59a8e723fd005f079a34e5da19b3a870bfdb2739f4f7e1b04eace2f3187db310c92cdf71a6f89962035')
 +source=("git+$url.git#tag=$_tag"
 +        "git+https://github.com/nullgemm/argoat.git"
 +        "git+https://github.com/nullgemm/configator.git"
@@ -31,12 +31,9 @@
 +        'SKIP'
 +        'SKIP'
 +        'SKIP')
- 
- prepare() {
-     cd "$pkgname"
--    git cherry-pick -n e4abf79ad5d5548d64981293409efbde2bb3219d \
--                       dc8d143fac5b1a621f2b13f16c56f7a68d0065ff \
--                       3dc148260373c7bae47341d88bf8a1601aea2576
++
++prepare() {
++    cd "$pkgname"
 +    git submodule init
 +
 +    git config submodule.sub/argoat.url "$srcdir/argoat"
@@ -45,7 +42,7 @@
 +    git config submodule.sub/termbox_next.url "$srcdir/termbox_next"
 +
 +    git -c protocol.file.allow=always submodule update
- }
++}
  
  build() {
 -    cd "$pkgname"
@@ -77,19 +74,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,12 @@
- prepare() {
- cd "$pkgname"
--git cherry-pick -n e4abf79ad5d5548d64981293409efbde2bb3219d \
--dc8d143fac5b1a621f2b13f16c56f7a68d0065ff \
--3dc148260373c7bae47341d88bf8a1601aea2576
+@@ -1,4 +1,12 @@
++prepare() {
++cd "$pkgname"
 +git submodule init
 +git config submodule.sub/argoat.url "$srcdir/argoat"
 +git config submodule.sub/configator.url "$srcdir/configator"
 +git config submodule.sub/dragonfail.url "$srcdir/dragonfail"
 +git config submodule.sub/termbox_next.url "$srcdir/termbox_next"
 +git -c protocol.file.allow=always submodule update
- }
++}
  build() {
 -cd "$pkgname"
 -zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe

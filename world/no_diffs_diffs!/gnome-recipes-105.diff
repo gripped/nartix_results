@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -71,7 +71,7 @@
+@@ -79,7 +79,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,6 +13,6 @@
- patch -Np1 -i ../gnome-recipes-optional-todoist.patch
+@@ -15,6 +15,6 @@
+ git apply -3 ../gnome-recipes-details-activated.patch
  }
  build() {
 -arch-meson recipes build

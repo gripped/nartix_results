@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ 
+ pkgname=nawk
+-pkgver=20240728
++pkgver=20240422
+ pkgrel=1
+ pkgdesc='The one, true implementation of AWK'
+ url="https://github.com/onetrueawk/awk"
+@@ -12,7 +12,7 @@
+ makedepends=(git)
+ source=("git+$url.git#commit=${_commit:-$pkgver}"
+         'manpage-naming.patch')
+-sha256sums=('d17c49197fc2ac0d5d06e40e8d9328c32d4e38ccb75c8cd2e810cc5d29ed4357'
++sha256sums=('784e2860d16c96366a26b4288fc11b0e9983f75910aa1ee6260566334ea690f0'
+             'fa1bade363896033a50fbdadc8fa2f490f85a044d11afcd537f317067c70d3b5')
+ 
+ pkgver() {

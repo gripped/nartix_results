@@ -3,7 +3,7 @@
 @@ -1,12 +1,12 @@
  
  pkgname=fastfetch
--pkgver=2.20.0
+-pkgver=2.21.0
 -pkgrel=1
 +pkgver=2.8.10
 +pkgrel=2
@@ -16,7 +16,14 @@
  makedepends=(
    'chafa'
    'cmake'
-@@ -22,6 +22,7 @@
+@@ -15,12 +15,14 @@
+   'ddcutil'
+   'directx-headers'
+   'imagemagick'
++  'libnm'
+   'libpulse'
+   'libxcb'
+   'libxrandr'
    'mesa'
    'ocl-icd'
    'opencl-headers'
@@ -24,7 +31,12 @@
    'vulkan-headers'
    'vulkan-icd-loader'
    'wayland'
-@@ -41,24 +42,25 @@
+@@ -35,28 +37,30 @@
+   'directx-headers: GPU detection in WSL'
+   'glib2: Output for values that are only stored in GSettings'
+   'imagemagick: Image output using sixel or kitty graphics protocol'
++  'libnm: Wifi detection'
+   'libpulse: Sound detection'
    'mesa: Needed by the OpenGL module for gl context creation.'
    'libxrandr: Multi monitor support'
    'ocl-icd: OpenCL module'
@@ -36,7 +48,7 @@
    'libdrm: Displays detection'
  )
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('461f64bda6ab4a33085b1b75afd01e72a7d0556b678852b95fbea4916ceec2a8')
+-sha256sums=('21d085a612b6bd9ab0f4e7bffe2632e313e6f67d432251cfd5a7f877b7194733')
 +sha256sums=('e3ea8388d79cc02ed1a6e45b8e5fec4068507ca03923386bdc9a7b3ff02d2a52')
  
  build() {
@@ -60,7 +72,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,9 +13,9 @@
+@@ -6,15 +6,16 @@
+ directx-headers
+ glibc
+ imagemagick
++libnm
+ libpulse
+ libxcb
+ libxrandr
  mesa
  ocl-icd
  opencl-headers

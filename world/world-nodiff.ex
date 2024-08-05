@@ -2,6 +2,10 @@
 a2ps
 a52dec
 aalib
+aarch64-linux-gnu-binutils
+aarch64-linux-gnu-gcc
+aarch64-linux-gnu-glibc
+aarch64-linux-gnu-linux-api-headers
 aardvark-dns
 abseil-cpp
 accerciser
@@ -650,7 +654,6 @@ gimp
 girara
 git-lfs
 git
-gitea
 gjs
 gkrellm
 gl2ps
@@ -745,8 +748,6 @@ go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
-gom
-gom-docs
 google-glog
 gox
 gparted
@@ -789,7 +790,6 @@ gspell
 gssdp
 gssdp-docs
 gst-python
-gtest
 gtk-doc
 gtk-engine-murrine
 gtk-engines
@@ -2314,6 +2314,8 @@ blas64-openblas
 openbox
 openbsd-netcat
 opencascade
+opencc
+opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -2387,6 +2389,7 @@ pangomm
 pangomm-docs
 papirus-icon-theme
 epapirus-icon-theme
+paprefs
 par2cmdline
 parallel
 parallel-docs
@@ -2823,6 +2826,8 @@ projectm-sdl
 projectm-pulseaudio
 prometheus
 protobuf-c
+protobuf
+python-protobuf
 prrte
 prrte-docs
 ptex
@@ -2891,6 +2896,7 @@ python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
+python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
@@ -3698,6 +3704,7 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
+python-pygraphviz
 python-pyhamcrest
 python-pyhcl
 python-pyicu
@@ -3844,6 +3851,7 @@ python-pyvex
 python-pyvirtualdisplay
 python-pywal
 python-pywayland
+python-pywinrm
 python-pywlroots
 python-pyxbe
 python-pyzmq
@@ -4099,6 +4107,7 @@ python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
+python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
@@ -4331,6 +4340,10 @@ java-rhino
 rhino-javadoc
 rinutils
 ripgrep
+riscv64-linux-gnu-binutils
+riscv64-linux-gnu-gcc
+riscv64-linux-gnu-glibc
+riscv64-linux-gnu-linux-api-headers
 ristretto
 rkcommon
 rnnoise

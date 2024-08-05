@@ -129,6 +129,7 @@ libgdm
 geoclue
 ghc-filesystem
 gifski
+gitea
 github-cli
 gnome-bluetooth-3.0
 gnome-desktop
@@ -148,6 +149,8 @@ gnome-user-share
 go-bindata
 go-licenses
 godot
+gom
+gom-docs
 gpsd
 greetd-tuigreet
 greetd
@@ -187,6 +190,7 @@ gst-editing-services
 gstreamer-vaapi
 gst-python
 gstreamer-docs
+gtest
 gtk3
 gtk3-demos
 gtk3-docs
@@ -419,8 +423,6 @@ nvtop
 onboard
 onionshare
 open-iscsi
-opencc
-opencc-doc
 opencollada
 opendht
 openjade
@@ -436,7 +438,6 @@ pacman-contrib
 pahole
 ostra-cg
 pam_wrapper
-paprefs
 passim
 pc-ble-driver
 pcsclite
@@ -515,8 +516,6 @@ powerdns-recursor
 powerdns
 presage
 prosody
-protobuf
-python-protobuf
 proxytunnel
 psutils
 pulseaudio
@@ -547,7 +546,6 @@ python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
-python-pywinrm
 python-signedjson
 python-sphinx-autodoc-typehints
 python-starlette
@@ -555,7 +553,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-uvloop
 python-waitress
 python-zope-testrunner
 qastools

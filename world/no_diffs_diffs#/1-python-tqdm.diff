@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -9,7 +9,7 @@
  depends=('python')
  optdepends=('python-requests: telegram')
  makedepends=('git' 'python-setuptools-scm' 'python-toml' 'python-build' 'python-installer' 'python-wheel')
 -checkdepends=('python-pytest' 'python-pytest-asyncio' 'python-pytest-timeout' 'python-numpy' 'python-pandas' 'python-rich' 'python-dask' 'tk' 'python-keras')
 +checkdepends=('python-pytest' 'python-pytest-asyncio' 'python-pytest-timeout' 'python-numpy' 'python-pandas' 'python-rich' 'python-dask' 'tk')
- source=("git+https://github.com/tqdm/tqdm.git#commit=${_commit}")
- sha512sums=('092e2925f9fbca26080610f139308c29b79c446972fc08528853841e6a532404154c77698c8542aa6b7893ae345ed86f7d8b1e7d010f1a317b7358ac7819a11b')
+ source=("git+https://github.com/tqdm/tqdm.git#commit=v${pkgver}")
+ sha512sums=('10e2481f0a388dd17a6bbaee8891ac2e186e29fddc7fe4fae7e84b5a5ddaaffbb6b0d09ef3d7b835a92b3761788eed98ece5c88883f026b1e2830cd4b257ce57')
  

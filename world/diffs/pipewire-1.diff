@@ -69,18 +69,14 @@
    )
  
    mv audio/* "$pkgdir"
-@@ -426,7 +423,6 @@
+@@ -424,11 +421,9 @@
      pipewire
      pipewire-audio
      pipewire-session-manager
 -    systemd-libs
    )
-   provides=(
-     pulse-native-provider
-@@ -437,7 +433,6 @@
-     pulseaudio
-     pulseaudio-bluetooth
-   )
+   provides=(pulse-native-provider)
+   conflicts=(pulseaudio)
 -  install=pipewire-pulse.install
  
    mv pulse/* "$pkgdir"
