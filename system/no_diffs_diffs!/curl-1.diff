@@ -1,15 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgbase=curl
  pkgname=(curl libcurl-compat libcurl-gnutls)
 -pkgver=8.9.1
+-pkgrel=2
 +pkgver=8.8.0
- pkgrel=1
++pkgrel=1
  pkgdesc='command line tool and library for transferring data with URLs'
  arch=('x86_64')
-@@ -18,10 +18,11 @@
+ url='https://curl.se/'
+@@ -18,13 +18,13 @@
           'zlib' 'libz.so'
           'zstd' 'libzstd.so')
  makedepends=('git' 'patchelf')
@@ -21,4 +23,7 @@
 +sha512sums=('743cac6059697b8aec637cb0ca94bc0606a9bbcf274f77847a1ceb9bbadc0259a9fbf30133323af2543d8df65ec6cd3e396cd999aca8fe73dde794a9c3dcbf6c')
  
  _backports=(
+-  '3eec5afbd0b6377eca893c392569b2faf094d970' # https://github.com/curl/curl/issues/14344
  )
+ 
+ _reverts=(
