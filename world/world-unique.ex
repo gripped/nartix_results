@@ -281,11 +281,13 @@ knot-openrc
 knot-runit
 knot-s6
 krb5-runit
+libnl
 libplacebo5
 libvirt-dinit
 libvirt-openrc
 libvirt-runit
 libvirt-s6
+libxcrypt
 lightdm-dinit
 lightdm-openrc
 lightdm-runit
@@ -313,6 +315,7 @@ lxdm-dinit
 lxdm-openrc
 lxdm-runit
 lxdm-s6
+lz4
 mailgraph-openrc
 mailman-openrc
 mailman-s6

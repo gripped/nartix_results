@@ -3,7 +3,7 @@
 @@ -1,12 +1,12 @@
  
  pkgname=fastfetch
--pkgver=2.21.0
+-pkgver=2.21.1
 -pkgrel=1
 +pkgver=2.8.10
 +pkgrel=2
@@ -31,10 +31,11 @@
    'vulkan-headers'
    'vulkan-icd-loader'
    'wayland'
-@@ -35,28 +37,30 @@
+@@ -35,29 +37,30 @@
    'directx-headers: GPU detection in WSL'
    'glib2: Output for values that are only stored in GSettings'
    'imagemagick: Image output using sixel or kitty graphics protocol'
+-  'libelf: st term font detection and fast path of systemd version detection'
 +  'libnm: Wifi detection'
    'libpulse: Sound detection'
    'mesa: Needed by the OpenGL module for gl context creation.'
@@ -48,7 +49,7 @@
    'libdrm: Displays detection'
  )
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('21d085a612b6bd9ab0f4e7bffe2632e313e6f67d432251cfd5a7f877b7194733')
+-sha256sums=('67afc33bc1ad321cecf9e4c6f22b09d85020d0beacb10c31008d1111a6a72b70')
 +sha256sums=('e3ea8388d79cc02ed1a6e45b8e5fec4068507ca03923386bdc9a7b3ff02d2a52')
  
  build() {

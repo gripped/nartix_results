@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -55,7 +55,7 @@
+@@ -51,7 +51,7 @@
  }
  
  build() {
--  arch-meson $pkgname build -D webkitgtk=disabled
-+  artix-meson $pkgname build -Dsystemd=false -D webkitgtk=disabled
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build -Dsystemd=false \
+     -D webkitgtk=disabled
    meson compile -C build
  }
- 
 
 
 ############# Stripped diff below #################
@@ -17,11 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
+@@ -2,7 +2,7 @@
  cd $pkgname
  }
  build() {
--arch-meson $pkgname build -D webkitgtk=disabled
-+artix-meson $pkgname build -Dsystemd=false -D webkitgtk=disabled
+-arch-meson $pkgname build \
++artix-meson $pkgname build -Dsystemd=false \
+ -D webkitgtk=disabled
  meson compile -C build
  }

@@ -1,18 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,12 +3,13 @@
- pkgver=3.0.5
- _ewnodecommit=dcc3d76f833a9be47a094e46a0ffa7503e28d007
- _trezorcommit=db106e8f2766155bc72802e4dc3f9f59c90d9c3e
--pkgrel=7
-+pkgrel=6
- pkgdesc="Ethereum GUI Wallet (Qt5)"
+@@ -8,7 +8,7 @@
  arch=('x86_64')
  url="https://etherwall.com"
  license=('GPL3')
 -depends=('qt5-declarative' 'qt5-graphicaleffects' 'qt5-quickcontrols' 'qt5-quickcontrols2' 'qt5-websockets' 'geth' 'protobuf' 'libhidapi-libusb.so' 'libusb' 'systemd-libs')
-+depends=('qt5-base' 'qt5-declarative' 'qt5-graphicaleffects' 'qt5-quickcontrols' 'qt5-quickcontrols2' 'qt5-websockets' 'geth' 'protobuf'
-+        'libhidapi-libusb.so' 'libusb' 'libudev' 'abseil-cpp' 'glibc' 'gcc-libs')
++depends=('qt5-declarative' 'qt5-graphicaleffects' 'qt5-quickcontrols' 'qt5-quickcontrols2' 'qt5-websockets' 'geth' 'protobuf' 'libhidapi-libusb.so' 'libusb' 'libudev')
  makedepends=('hidapi')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/almindor/${pkgname}/archive/v$pkgver.tar.gz"
          "ew-node-$_ewnodecommit.tar.gz::https://github.com/almindor/ew-node/archive/$_ewnodecommit.tar.gz"
@@ -22,19 +15,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +1,15 @@
-+abseil-cpp
-+gcc-libs
+@@ -1,6 +1,7 @@
  geth
-+glibc
  hidapi
  libhidapi-libusb.so
 +libudev
  libusb
  protobuf
-+qt5-base
  qt5-declarative
- qt5-graphicaleffects
+@@ -8,4 +9,3 @@
  qt5-quickcontrols
  qt5-quickcontrols2
  qt5-websockets

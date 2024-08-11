@@ -1,11 +1,13 @@
 0ad-data
 0ad
+ada
 atril
 audacious-plugins
 audacious
 avidemux
 avidemux-cli
 avidemux-qt
+blender
 blueman
 box2d
 caja-extensions
@@ -227,6 +229,13 @@ qt6pas
 qterminal
 qtermwidget
 qtxdg-tools
+quassel
+quassel-core
+quassel-client
+quassel-client-qt
+quassel-monolithic
+quassel-monolithic-qt
+quassel-common
 retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
@@ -378,6 +387,7 @@ tinyxxd
 torbrowser-launcher
 ttf-jetbrains-mono
 tumbler
+unoconv
 vice
 wezterm
 wireshark

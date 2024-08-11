@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=sshguard
- pkgver=2.4.3
--pkgrel=2
-+pkgrel=1
- pkgdesc="Brute force detector for SSH, Exim, VSFTPD and more. Blocks by ip with iptables"
- arch=('x86_64')
- url="https://www.sshguard.net/"
 @@ -10,15 +10,9 @@
  backup=('etc/sshguard.conf')
  source=("https://downloads.sourceforge.net/sourceforge/sshguard/sshguard-$pkgver.tar.gz"

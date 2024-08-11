@@ -1,22 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,14 @@
- 
- pkgname=pacrunner
- pkgver=0.19
--pkgrel=3
-+pkgrel=2
- pkgdesc="Proxy configuration daemon"
- arch=(x86_64)
- url="https://git.kernel.org/pub/scm/network/connman/pacrunner.git"
- license=(GPL2 LGPL2.1)
- depends=(glib2 dbus curl duktape)
- makedepends=(git)
-+options=(debug)
- _commit=bb888a1f99cc05d63bd61b65cad7026feea92a4e  # tags/0.19^0
- source=("git+https://git.kernel.org/pub/scm/network/connman/pacrunner.git#commit=$_commit"
-         duktape-shared.diff)
-@@ -45,28 +46,6 @@
+@@ -45,28 +45,4 @@
  package() {
    cd $pkgname
    make DESTDIR="$pkgdir" install
@@ -43,6 +27,5 @@
 -User=root
 -SystemdService=pacrunner.service
 -END
-+  rm -rf "$pkgdir/usr/share/dbus-1"
  }
- 
+-

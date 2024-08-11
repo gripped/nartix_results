@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=postgrey
- pkgver=1.37
--pkgrel=6
-+pkgrel=5.1
- pkgdesc="a Postfix policy server implementing greylisting"
- arch=('any')
- url="https://postgrey.schweikert.ch/"
 @@ -14,12 +14,10 @@
  backup=(etc/postfix/postgrey_whitelist_recipients
  	etc/postfix/postgrey_whitelist_clients)

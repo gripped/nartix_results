@@ -1,24 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=rspamd
--pkgver=3.9.1
--pkgrel=1
-+pkgver=3.7.5
-+pkgrel=3
- epoch=
- pkgdesc='Fast, free and open-source spam filtering system'
- arch=(x86_64)
-@@ -119,23 +119,18 @@
-   etc/rspamd/worker-proxy.inc
- )
- install=rspamd.install
--options=(!lto)
--_tag=82f43560fe9d76f787391cb04c7711a0c3a1729a
-+_tag=8c86c16763af854f19f2fb6eae289814feab8f28
- source=(
-   git+https://github.com/rspamd/rspamd.git#tag=${_tag}
+@@ -126,16 +126,12 @@
    rspamd.tmpfiles
    rspamd.sysusers
    rspamd.logrotate
@@ -26,8 +8,7 @@
 -  rspamd-dmarc-report.timer
    rspamd-hyperscan.hook
  )
--b2sums=('0d3fe2f6b0a303f8255a61c80c7d5105316dd726fefcfd6ab038d441ee52a2d307296c7b1f01e22c37547ac27a51c8b5df65ed953cbe1a52f9a166fad2af6632'
-+b2sums=('SKIP'
+ b2sums=('0d3fe2f6b0a303f8255a61c80c7d5105316dd726fefcfd6ab038d441ee52a2d307296c7b1f01e22c37547ac27a51c8b5df65ed953cbe1a52f9a166fad2af6632'
          '6b1b4220444d382d01fe981acf51580c397363a873507fdb508fd5109adae2609c03e629ecdd6e48c13f068d0c3530be4d0fb55b3084c33522619dd29f70a40c'
          '5b4db27d87158609519bb0e59700ac627d447e4627b70600a70638f81a39361ad416c4784dafc392e9f9bc7b69211587ae64cbab7bec98668e75df5c4fba46ea'
 -        '25c2253c7ecd9fba215cb6a1df93d76fab98e98ffeec380f828d7a612a78e0c4822dacc838ca37c2ceec452e54e7fc06c4c4df3290c8a6e8ee5ae869bbbb449e'
@@ -37,7 +18,7 @@
          '8a2882e4cd59eb3304acae9dfa71252c2024a8251e61cd1e75e6b84a84ec8c636e70d6702c03d7b7d0e2f7fa60d2466c6eed4f4f80f1834585185deaf7157eee')
  
  pkgver() {
-@@ -143,14 +138,8 @@
+@@ -143,10 +139,6 @@
    git describe --tags
  }
  
@@ -45,15 +26,10 @@
 -  cd rspamd
 -  sed 's/_rspamd/rspamd/g' -i rspamd.service
 -}
--
+ 
  build() {
--  export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
--  cmake -S rspamd -B build -G Ninja \
-+  artix-cmake -S rspamd -B build -G Ninja \
-     -DCMAKE_INSTALL_PREFIX=/usr \
-     -DCONFDIR=/etc/rspamd \
-     -DDBDIR=/var/lib/rspamd \
-@@ -158,7 +147,7 @@
+   export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
+@@ -158,7 +150,7 @@
      -DRUNDIR=/run/rspamd \
      -DRSPAMD_USER=rspamd \
      -DNO_SHARED=ON \
@@ -62,7 +38,7 @@
      -DENABLE_HYPERSCAN=ON \
      -DENABLE_JEMALLOC=ON \
      -DENABLE_OPTIMIZATION=ON
-@@ -171,8 +160,6 @@
+@@ -171,8 +163,6 @@
    install -Dm 644 rspamd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/rspamd.conf
    install -Dm 644 rspamd.sysusers "${pkgdir}"/usr/lib/sysusers.d/rspamd.conf
    install -Dm 644 rspamd.logrotate "${pkgdir}"/etc/logrotate.d/rspamd
@@ -79,19 +55,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,5 @@
+@@ -1,7 +1,3 @@
 -prepare() {
 -cd rspamd
 -sed 's/_rspamd/rspamd/g' -i rspamd.service
 -}
  build() {
--export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
--cmake -S rspamd -B build -G Ninja \
-+artix-cmake -S rspamd -B build -G Ninja \
- -DCMAKE_INSTALL_PREFIX=/usr \
- -DCONFDIR=/etc/rspamd \
- -DDBDIR=/var/lib/rspamd \
-@@ -12,7 +7,7 @@
+ export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
+ cmake -S rspamd -B build -G Ninja \
+@@ -12,7 +8,7 @@
  -DRUNDIR=/run/rspamd \
  -DRSPAMD_USER=rspamd \
  -DNO_SHARED=ON \

@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -101,9 +101,7 @@
-         '15eba129138c13241556522c79e6fd68bb01ff465d45fbf8a13626b827906e5e59df7fd787c6f799ffee098da1cef01302f27d8eaf4550e30f85ca7147e2fb3d'
+         '884183ba979c844a2119dbb28cb1bbe64228b1a1a6b020abea9dfb5bd60487853a1da1012e157b8149f3e89b3d35c76042aa143b28fd55b0120edb03c63f9a81'
          'b649c5c3edc4a0319d012ff0c12dbc97f3bb244220c9db5334a921864f57e05506943f50ccd7ee832b881ace642ce294892e25eaa555716d2dcc726f4790c605')
  
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
@@ -11,7 +11,7 @@
  
  prepare() {
    mkdir mozbuild
-@@ -133,24 +131,30 @@
+@@ -133,22 +131,28 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -42,12 +42,9 @@
 +ac_add_options --disable-crashreporter
 +ac_add_options --disable-default-browser-agent
 +ac_add_options --disable-parental-controls
-+ac_add_options --disable-tests
  ac_add_options --disable-updater
--ac_add_options --disable-tests
+ ac_add_options --disable-tests
  END
- }
- 
 @@ -194,7 +198,7 @@
  
    echo "Building optimized browser..."
@@ -84,7 +81,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,21 +21,27 @@
+@@ -21,19 +21,25 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -112,12 +109,9 @@
 +ac_add_options --disable-crashreporter
 +ac_add_options --disable-default-browser-agent
 +ac_add_options --disable-parental-controls
-+ac_add_options --disable-tests
  ac_add_options --disable-updater
--ac_add_options --disable-tests
+ ac_add_options --disable-tests
  END
- }
- build() {
 @@ -68,7 +74,7 @@
  ./mach clobber objdir
  echo "Building optimized browser..."
