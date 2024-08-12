@@ -4,7 +4,7 @@
  
  pkgname=ejabberd
  pkgver=24.07
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Jabber server written in Erlang"
  arch=('x86_64')
@@ -18,24 +18,28 @@
              '68de8fd4df6e4f0e21a241dcd2b7075bdff495876646dd726c7054bf5780e3c6')
  
  prepare() {
-@@ -114,7 +114,6 @@
+@@ -112,12 +112,8 @@
+     -e "s|Group=.*|Group=jabber|g" \
+     -e "s|User=.*|User=jabber|g" \
      ejabberd.service
-   sed -i -e "s|$pkgdir||g" "$pkgdir"/usr/bin/ejabberdctl
+-  sed -i \
+-    -e "s|$pkgdir||g" \
+-    -e "s|INSTALLUSER=\"\"|INSTALLUSER=\"jabber\"|g" \
+-    "$pkgdir"/usr/bin/ejabberdctl
++  sed -i -e "s|$pkgdir||g" "$pkgdir"/usr/bin/ejabberdctl
  
 -  install -Dm0644 ejabberd.service "$pkgdir"/usr/lib/systemd/system/ejabberd.service
  
    install -d "$pkgdir/var/lib/$pkgname"
    install -D -m0644 "$srcdir/$pkgname.logrotate" "$pkgdir/etc/logrotate.d/$pkgname"
-@@ -125,12 +124,7 @@
+@@ -127,9 +123,8 @@
+   install -Dm644 "$srcdir"/sysuser.conf "$pkgdir"/usr/lib/sysusers.d/ejabberd.conf
    install -Dm644 tools/ejabberdctl.bc "$pkgdir"/usr/share/bash-completion/completions/ejabberdctl
  
- 
 -  cat <<EOF >>"$pkgdir"/etc/ejabberd/ejabberdctl.cfg
--
--INSTALLUSER=jabber
--
 -HOME=/var/lib/ejabberd
 -EOF
++
 +  echo -e "\n\n# home dir workaround\nHOME=/var/lib/ejabberd" >>"$pkgdir"/etc/ejabberd/ejabberdctl.cfg
  
    (cd "$pkgdir"/usr/lib/ && ln -s ejabberd-* ejabberd)

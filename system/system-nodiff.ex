@@ -175,7 +175,6 @@ sysfsutils
 syslinux
 tar
 texinfo
-thin-provisioning-tools
 tpm2-tss
 traceroute
 tzdata

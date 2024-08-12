@@ -201,6 +201,7 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -863,7 +864,6 @@ herbstluftwm
 hevea
 hexer-hobu
 hicolor-icon-theme
-hiera
 highlight
 highlight-gui
 highway
@@ -1168,7 +1168,6 @@ kdsoap-qt6
 keditbookmarks
 keepassxc
 kemoticons
-kexec-tools
 keybinder2
 libkeybinder2
 keychain
@@ -1806,8 +1805,6 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
-libssh
-libssh-docs
 libstaroffice
 libstatgrab
 libsysstat

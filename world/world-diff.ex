@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 breezy
@@ -200,6 +199,7 @@ haproxy
 haveged
 hexchat
 hidapi
+hiera
 hostapd
 hotdoc
 hwloc
@@ -238,6 +238,7 @@ openjdk8-doc
 jedi-language-server
 js78
 kcoreaddons
+kexec-tools
 kgamma
 kismet
 kitty
@@ -292,6 +293,8 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
+libssh
+libssh-docs
 libtg_owt
 libudev0-shim
 libusbsio

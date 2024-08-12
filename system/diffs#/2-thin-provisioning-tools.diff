@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,24 @@
+ 
+ pkgname=thin-provisioning-tools
+-pkgver=1.1.0
++pkgver=1.0.13
+ pkgrel=1
+ pkgdesc='Suite of tools for manipulating the metadata of the dm-thin device-mapper target'
+ arch=('x86_64')
+ url='https://github.com/jthornber/thin-provisioning-tools'
+ license=('GPL3')
+-depends=('gcc-libs' 'systemd-libs')
+-makedepends=('git' 'cargo' 'clang' 'device-mapper')
+-source=("git+https://github.com/jthornber/thin-provisioning-tools#tag=v${pkgver}")
+-sha256sums=('652db5ebaa80e9b44ba62ba327aba7e237b12de37e130fee7c3f4fd817e1f103')
++depends=('gcc-libs')
++makedepends=('cargo')
++source=("${pkgname}-${pkgver}.tar.gz::https://github.com/jthornber/${pkgname}/archive/v${pkgver}.tar.gz")
++sha256sums=('48444caefd00c23f5240dd01f8b2a51cfded952f078b2a5318929137e00fbd3f')
+ 
+ build() {
+-  cd "${srcdir}/${pkgname}"
++  cd "${srcdir}/${pkgname}-${pkgver}"
+ 
+   cargo build --release
+ }
+ 
+ package() {
+-  cd "${srcdir}/${pkgname}"
++  cd "${srcdir}/${pkgname}-${pkgver}"
+ 
+   make \
+     DESTDIR="${pkgdir}"/usr \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,2 @@
+ cargo
+-clang
+-device-mapper
+ gcc-libs
+-git
+-systemd-libs
