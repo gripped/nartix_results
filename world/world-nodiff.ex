@@ -201,7 +201,6 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -458,8 +457,6 @@ dos2unix
 dosbox
 dotconf
 double-conversion
-doxygen
-doxygen-docs
 dqlite
 draco
 dragon
@@ -864,6 +861,7 @@ herbstluftwm
 hevea
 hexer-hobu
 hicolor-icon-theme
+hiera
 highlight
 highlight-gui
 highway
@@ -929,6 +927,7 @@ img2pdf
 imlib2
 immer
 incidenceeditor
+indent
 iniparser
 inkscape
 innoextract
@@ -1805,6 +1804,8 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
+libssh
+libssh-docs
 libstaroffice
 libstatgrab
 libsysstat
@@ -2964,6 +2965,7 @@ python-apscheduler
 python-apsw
 python-archinfo
 python-aresponses
+python-argcomplete
 python-argh
 python-argon2-cffi-bindings
 python-argon2_cffi
@@ -3749,6 +3751,7 @@ python-pyhcl
 python-pyicu
 python-pyinotify
 python-pyjsparser
+python-pyjwt
 python-pykerberos
 python-pykka
 python-pylast
@@ -4874,6 +4877,7 @@ strace
 strawberry
 strip-nondeterminism
 stubby
+subversion
 sugar-datastore
 suil
 suil-docs
@@ -5178,6 +5182,9 @@ unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
 unicode-emoji
+unicorn
+python-unicorn
+ruby-unicorn-engine
 unifdef
 unittestpp
 unoconv

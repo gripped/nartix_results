@@ -1,4 +1,5 @@
 acl
+argon2
 attr
 autoconf
 automake

@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 breezy
@@ -65,6 +66,8 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
+doxygen
+doxygen-docs
 dpkg
 dracut
 drkonqi
@@ -199,7 +202,6 @@ haproxy
 haveged
 hexchat
 hidapi
-hiera
 hostapd
 hotdoc
 hwloc
@@ -275,6 +277,7 @@ python-libcamera
 libcanberra
 libe-book
 libei
+libei-docs
 libepoxy
 libepoxy-docs
 libetonyek
@@ -293,8 +296,6 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
-libssh
-libssh-docs
 libtg_owt
 libudev0-shim
 libusbsio
@@ -507,10 +508,8 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
-python-argcomplete
 python-gssapi
 python-intelhex
-python-pyjwt
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -655,7 +654,6 @@ sssd
 step-cli
 strongswan
 stunnel
-subversion
 supermin
 sway
 swayidle
@@ -688,9 +686,6 @@ udisks2-btrfs
 udisks2-lvm2
 umockdev
 unbound
-unicorn
-python-unicorn
-ruby-unicorn-engine
 upower
 uptimed
 usb_modeswitch
