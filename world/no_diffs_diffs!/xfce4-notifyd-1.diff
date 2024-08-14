@@ -3,18 +3,22 @@
 @@ -1,7 +1,7 @@
  
  pkgname=xfce4-notifyd
--pkgver=0.9.4
+-pkgver=0.9.5
 -pkgrel=1
 +pkgver=0.9.3
 +pkgrel=1.1
  pkgdesc="Notification daemon for the Xfce desktop"
  arch=('x86_64')
  url="https://docs.xfce.org/apps/notifyd/start"
-@@ -12,7 +12,7 @@
- makedepends=('intltool' 'python' 'xfce4-panel' 'xfce4-dev-tools')
+@@ -9,10 +9,10 @@
+ groups=('xfce4-goodies')
+ depends=('libxfce4ui' 'libxfce4util' 'libnotify' 'xfconf' 'sqlite' 'libcanberra'
+          'hicolor-icon-theme')
+-makedepends=('intltool' 'glib2-devel' 'xfce4-panel' 'xfce4-dev-tools')
++makedepends=('intltool' 'python' 'xfce4-panel' 'xfce4-dev-tools')
  provides=('notification-daemon')
  source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
--sha256sums=('ae6c128c055c44bd07202f73ae69ad833c5e4754f3530696965136e4d9ea7818')
+-sha256sums=('0dbe28ca765f1d845cde39476f01fd11571a078c498187a6776a83d8afd3cfa2')
 +sha256sums=('79ee4701e2f8715a700de2431aa33682933cab18d76938bb18e2820302bbe030')
  
  build() {
@@ -27,3 +31,21 @@
 +  rm -r $pkgdir/usr/lib/systemd
  }
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,10 @@
+-glib2-devel
+ hicolor-icon-theme
+ intltool
+ libcanberra
+ libnotify
+ libxfce4ui
+ libxfce4util
++python
+ sqlite
+ xfce4-dev-tools
+ xfce4-panel

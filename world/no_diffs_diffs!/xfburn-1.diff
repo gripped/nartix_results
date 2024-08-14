@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=xfburn
--pkgver=0.7.1
+-pkgver=0.7.2
 +pkgver=0.7.0
  pkgrel=1
  pkgdesc="A simple CD/DVD burning tool based on libburnia libraries"
@@ -14,7 +14,7 @@
           'libgudev' 'desktop-file-utils')
 +makedepends=('intltool')
  source=(https://archive.xfce.org/src/apps/xfburn/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
--sha256sums=('7ca161b2c9c558e5161f02f69d0418a37eba15eab4d3a8651f6c97d3a9d5dc16')
+-sha256sums=('c2bb01d9f7335e487f91db40ebddeea30d071364c1c3b56838466fd3367a9925')
 +sha256sums=('ba960ea79a044b93e513f7c32bca1a599472d687ed0e0184bde8c84aeebb1f45')
  
  build() {

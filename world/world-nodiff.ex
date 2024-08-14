@@ -457,6 +457,7 @@ dos2unix
 dosbox
 dotconf
 double-conversion
+dpkg
 dqlite
 draco
 dragon
@@ -4208,7 +4209,6 @@ python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
-python-yaml
 python-yara
 python-yarg
 python-yarl

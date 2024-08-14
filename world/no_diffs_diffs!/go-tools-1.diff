@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=go-tools
  epoch=4
 -pkgver=0.24.0
+-pkgrel=2
 +pkgver=0.23.0
- pkgrel=1
++pkgrel=1
  pkgdesc='Developer tools for the Go programming language'
  arch=(x86_64)
+ url='https://golang.org/'
 @@ -10,7 +10,7 @@
  depends=(glibc)
  makedepends=(git go)

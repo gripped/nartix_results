@@ -68,7 +68,6 @@ dolphin-emu-tool
 dovecot
 doxygen
 doxygen-docs
-dpkg
 dracut
 drkonqi
 dunst
@@ -520,6 +519,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-yaml
 python-zope-testrunner
 qastools
 qemu
