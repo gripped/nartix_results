@@ -10,7 +10,7 @@
  options=(!lto)
  source=(
 @@ -32,7 +32,7 @@
- sha256sums=('cfd66b5fccd1613627e885f22488b2020c77cb0f2408aabd8bfbcf4623559648')
+ sha256sums=('8851e17a716d10da588dd2885478fc677fa3ba3a14f2385b973af01e4c65243a')
  
  build() {
 -  export BUILDTAGS='apparmor seccomp systemd'
@@ -23,7 +23,7 @@
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
 +
-+  rm -rvf "$pkgdir"/usr/lib/systemd
++  rm -r $pkgdir/usr/lib/systemd
  }
  
  package_podman-docker() {
@@ -32,7 +32,7 @@
  
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
 +
-+  rm -rvf "$pkgdir"/usr/lib/systemd
++  rm -r $pkgdir/usr/lib/systemd
  }
 
 

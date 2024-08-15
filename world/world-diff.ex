@@ -105,6 +105,9 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
+freetype2
+freetype2-demos
+freetype2-docs
 fwupd-efi
 fwupd
 fwupd-docs
@@ -519,7 +522,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-yaml
 python-zope-testrunner
 qastools
 qemu

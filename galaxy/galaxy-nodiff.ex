@@ -247,6 +247,7 @@ screengrab
 scribus
 scummvm
 signal-desktop
+stalonetray
 telegram-desktop
 terminus-font
 tesseract-data

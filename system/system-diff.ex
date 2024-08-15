@@ -4,7 +4,6 @@ base
 bash
 binutils
 btrfs-progs
-cryptsetup
 dbus
 dbus-docs
 dhcpcd
@@ -28,21 +27,15 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-gpgme
-qgpgme-qt6
-python-gpgme
 gssproxy
 iputils
-libnl
 libusb
-links
 linux
 linux-headers
 linux-docs
 logrotate
 lvm2
 device-mapper
-lz4
 man-db
 mdadm
 mkinitcpio
@@ -66,5 +59,4 @@ thin-provisioning-tools
 usbutils
 util-linux
 util-linux-libs
-wpa_supplicant
 xfsprogs

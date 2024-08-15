@@ -22,6 +22,7 @@ dbus-dinit-user
 extundelete
 firedragon
 firefox-esr
+fvwm3
 gitea-tea
 grub-theme
 htpdate

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -9,7 +9,7 @@
  license=('GPL')
  url='https://mariadb.org/'
  makedepends=('git' 'boost' 'bzip2' 'cmake' 'cracklib' 'curl' 'jemalloc' 'judy' 'krb5' 'liburing'
@@ -9,17 +9,17 @@
  validpgpkeys=('177F4010FE56CA3336300305F1656F24C74CD1D8') # MariaDB Signing Key <signing-key@mariadb.org>
  source=("mariadb::git+https://github.com/MariaDB/server.git#tag=mariadb-${pkgver}?signed"
          'git+https://github.com/MariaDB/mariadb-connector-c.git'
-@@ -17,7 +17,8 @@
+@@ -18,7 +18,8 @@
          'git+https://github.com/wolfSSL/wolfssl.git'
          'git+https://github.com/mariadb-corporation/libmarias3.git'
          'git+https://github.com/mariadb-corporation/mariadb-columnstore-engine.git'
 -        '0001-arch-specific.patch')
 +        '0001-arch-specific.patch'
 +'mariadb.sysusers.conf' 'mariadb.tmpfiles.conf')
- sha256sums=('da69b2dee70ebf567cb5ff241a07bac2d45076ddf7465da85d1c17589f4b886d'
+ sha256sums=('3f182bc2011b7419df613308cb969374389b9ca8aa81539c515e3ba9c8695d07'
              'SKIP'
              'SKIP'
-@@ -25,7 +26,9 @@
+@@ -26,7 +27,9 @@
              'SKIP'
              'SKIP'
              'SKIP'
@@ -30,7 +30,7 @@
  
  prepare() {
    cd mariadb/
-@@ -44,7 +47,7 @@
+@@ -45,7 +48,7 @@
  
  build() {
    local _cmake_options=(
@@ -39,7 +39,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
  
-@@ -55,7 +58,7 @@
+@@ -56,7 +59,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -48,7 +48,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=/usr/lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=/usr/lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -80,7 +83,7 @@
+@@ -81,7 +84,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -57,16 +57,16 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -158,7 +161,7 @@
-           'etc/my.cnf.d/spider.cnf'
+@@ -160,7 +163,7 @@
            'etc/security/user_map.conf')
    install=mariadb.install
--  depends=("mariadb-clients=${pkgver}" 'bzip2' 'libxml2' 'lz4' 'systemd-libs' 'libxml2' 'zstd')
-+  depends=("mariadb-clients=${pkgver}" 'bzip2' 'libxml2' 'lz4' 'libxml2' 'zstd')
+   depends=("mariadb-clients=${pkgver}" 'bzip2' 'coreutils' 'libxml2' 'lz4'
+-           'systemd-libs' 'zstd')
++           'zstd')
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
                'galera: for MariaDB cluster with Galera WSREP'
-@@ -189,8 +192,8 @@
+@@ -191,8 +194,8 @@
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
  
@@ -83,7 +83,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,8 +20,6 @@
+@@ -21,8 +21,6 @@
  perl
  perl-dbd-mariadb
  perl-term-readkey

@@ -607,9 +607,6 @@ freeglut
 freeimage
 freeradius
 freetds
-freetype2
-freetype2-demos
-freetype2-docs
 frei0r-plugins
 fribidi
 fstrm
@@ -3148,6 +3145,7 @@ python-dask
 python-databases
 python-dateutil
 python-dbus-deviation
+python-dbus-next
 python-dbusmock
 python-ddt
 python-debtcollector
@@ -3410,6 +3408,7 @@ python-jeepney
 python-jellyfish
 python-jinja-time
 python-jinja
+python-jiter
 python-jmespath
 python-joblib
 python-jose
@@ -4209,6 +4208,7 @@ python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
+python-yaml
 python-yara
 python-yarg
 python-yarl
@@ -5231,6 +5231,7 @@ vimiv
 virglrenderer
 virt-manager
 virt-install
+virt-viewer
 virt-what
 virtiofsd
 virtualbox-guest-iso

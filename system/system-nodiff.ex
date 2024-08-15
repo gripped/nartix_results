@@ -15,6 +15,7 @@ ca-certificates-utils
 coreutils
 cracklib
 cronie
+cryptsetup
 curl
 libcurl-compat
 libcurl-gnutls
@@ -45,6 +46,9 @@ gettext
 gmp
 gnupg
 gnutls
+gpgme
+qgpgme-qt6
+python-gpgme
 gpm
 grep
 groff
@@ -95,6 +99,7 @@ libnfnetlink
 libnftnl
 libnghttp2
 libnghttp3
+libnl
 libnsl
 libpcap
 libpipeline
@@ -115,6 +120,7 @@ libxcrypt-compat
 libxml2
 libxml2-docs
 licenses
+links
 linux-api-headers
 linux-firmware
 linux-firmware-whence
@@ -129,6 +135,7 @@ linux-firmware-bnx2x
 linux-lts
 linux-lts-headers
 linux-lts-docs
+lz4
 lzo
 m4
 make
@@ -183,6 +190,7 @@ unixodbc
 vi
 which
 wireless-regdb
+wpa_supplicant
 xz
 zlib
 minizip

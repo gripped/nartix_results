@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,6 @@
+@@ -61,7 +61,6 @@
    libpng
    libseccomp
    libsoup3
@@ -8,25 +8,15 @@
    libtasn1
    libwebp
    libwpe
-@@ -60,7 +59,6 @@
-   ninja
+@@ -88,7 +87,6 @@
    python
    ruby
+   ruby-stdlib
 -  systemd
    unifdef
    wayland-protocols
  )
-@@ -72,8 +70,8 @@
- b2sums=('763340adf2031f512137982e4cded0214dff90652571ae32e8badcda0c108d83b8a35588a3050c161ab0bf5cee94a7ba91c9953a22cc87450826bfbf4ac2d012'
-         'SKIP')
- validpgpkeys=(
-+  D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3 # Carlos Garcia Campos <cgarcia@igalia.com>
-   5AA3BC334FD7E3369E7C77B291C559DBE4C9123B # Adrián Pérez de Castro <aperez@igalia.com>
--  013A0127AC9C65B34FFA62526C1009B693975393 # Carlos Garcia Campos <cgarcia@igalia.com>
- )
- 
- prepare() {
-@@ -82,6 +80,8 @@
+@@ -113,6 +111,8 @@
  
  build() {
    local cmake_options=(
@@ -41,7 +31,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -28,7 +28,6 @@
+@@ -31,7 +31,6 @@
  libpng
  libseccomp
  libsoup3
@@ -49,9 +39,9 @@
  libtasn1
  libwebp
  libwpe
-@@ -43,7 +42,6 @@
- python
+@@ -46,7 +45,6 @@
  ruby
+ ruby-stdlib
  sqlite
 -systemd
  unifdef

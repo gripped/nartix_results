@@ -1,22 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,7 +41,6 @@
+@@ -70,7 +70,6 @@
    libseccomp
    libsecret
    libsoup3
 -  libsystemd
    libtasn1
    libwebp
-   libwpe
-@@ -70,7 +69,6 @@
-   ninja
+   libx11
+@@ -96,7 +95,6 @@
    python
    ruby
+   ruby-stdlib
 -  systemd
    unifdef
    wayland-protocols
  )
-@@ -92,6 +90,8 @@
+@@ -121,6 +119,8 @@
  
  build() {
    local cmake_options=(
@@ -31,17 +31,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -36,7 +36,6 @@
+@@ -39,7 +39,6 @@
  libseccomp
  libsecret
  libsoup3
 -libsystemd
  libtasn1
  libwebp
- libwpe
+ libx11
 @@ -53,7 +52,6 @@
- python
  ruby
+ ruby-stdlib
  sqlite
 -systemd
  unifdef

@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=chatblade
+ pkgdesc="A CLI Swiss Army Knife for ChatGPT"
+-pkgver=0.6.2
++pkgver=0.5.0
+ pkgrel=1
+ arch=("any")
+ url="https://github.com/npiv/chatblade"
+@@ -37,7 +37,7 @@
+ 	"python-installer"
+ )
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+-sha256sums=('90b34945758bbfe66f746a35dc38953836ab261e51f7059219d8e977ea047d56')
++sha256sums=('ef28bbd4acb7059db02c3ff9b130f122565b08d54932c205d54ec0f557ca241c')
+ 
+ prepare() {
+ 	cd "${srcdir}/${pkgname}-${pkgver}"
