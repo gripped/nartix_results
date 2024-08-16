@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 breezy
@@ -105,9 +104,6 @@ fluidsynth
 fprintd
 freerdp
 freerdp2
-freetype2
-freetype2-demos
-freetype2-docs
 fwupd-efi
 fwupd
 fwupd-docs

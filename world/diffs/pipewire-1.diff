@@ -1,15 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -5,7 +5,6 @@
+   libpipewire
+   alsa-card-profiles
+   pipewire-docs
+-  pipewire-libcamera
+   pipewire-audio
+   pipewire-alsa
+   pipewire-ffado
+@@ -21,7 +20,7 @@
    pulse-native-provider
  )
  pkgver=1.2.2
--pkgrel=1
+-pkgrel=2
 +pkgrel=1.1
  epoch=1
  pkgdesc="Low-latency audio/video router and processor"
  url="https://pipewire.org"
-@@ -56,12 +56,12 @@
+@@ -57,12 +56,12 @@
    ncurses
    opus
    python-docutils
@@ -23,7 +31,7 @@
    valgrind
    webrtc-audio-processing-1
  )
-@@ -90,9 +90,11 @@
+@@ -91,9 +90,11 @@
      -D session-managers=[]
      -D snap=disabled
      -D udevrulesdir=/usr/lib/udev/rules.d
@@ -38,7 +46,13 @@
    meson compile -C build
  }
  
-@@ -128,7 +130,6 @@
+@@ -123,11 +124,12 @@
+     gcc-libs
+     glibc
+     lib$_pwname.so
++    libcamera-base.so
++    libcamera.so
+     libdbus-1.so
      libglib-2.0.so
      libncursesw.so
      libreadline.so
@@ -46,6 +60,14 @@
      libudev.so
    )
    optdepends=(
+@@ -138,7 +140,6 @@
+     'pipewire-ffado: FireWire support'
+     'pipewire-jack-client: PipeWire as JACK client'
+     'pipewire-jack: JACK replacement'
+-    'pipewire-libcamera: Libcamera support'
+     'pipewire-pulse: PulseAudio replacement'
+     'pipewire-roc: ROC streaming'
+     'pipewire-session-manager: Session manager'
 @@ -148,7 +149,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
@@ -54,7 +76,16 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -187,7 +187,6 @@
+@@ -168,8 +168,6 @@
+     _pick acp usr/share/alsa-card-profile
+ 
+     _pick docs usr/share/doc
+-
+-    _pick libcamera usr/lib/$_spaname/libcamera
+ 
+     _pick audio usr/bin/pipewire-{aes67,avb}
+     _pick audio usr/bin/pw-{cat,loopback,mididump}
+@@ -189,7 +187,6 @@
      _pick audio usr/lib/$_pwname/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/$_pwname/libpipewire-module-vban*.so
      _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5}
@@ -62,7 +93,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
      _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
-@@ -225,7 +224,6 @@
+@@ -227,7 +224,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/$_pwname/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/$_pwname/libpipewire-module-pulse-tunnel.so
@@ -70,7 +101,29 @@
      _pick pulse usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
-@@ -308,7 +306,6 @@
+@@ -283,21 +279,6 @@
+   pkgdesc+=" - documentation"
+ 
+   mv docs/* "$pkgdir"
+-
+-  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
+-}
+-
+-package_pipewire-libcamera() {
+-  pkgdesc+=" - Libcamera support"
+-  depends=(
+-    gcc-libs
+-    glibc
+-    libcamera-base.so
+-    libcamera.so
+-    pipewire
+-  )
+-
+-  mv libcamera/* "$pkgdir"
+ 
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
+ }
+@@ -325,7 +306,6 @@
      libusb-1.0.so
      libwebrtc-audio-processing-1.so
      pipewire
@@ -78,7 +131,7 @@
    )
  
    mv audio/* "$pkgdir"
-@@ -424,11 +421,9 @@
+@@ -441,11 +421,9 @@
      pipewire
      pipewire-audio
      pipewire-session-manager

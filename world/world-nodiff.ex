@@ -201,6 +201,7 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -607,6 +608,9 @@ freeglut
 freeimage
 freeradius
 freetds
+freetype2
+freetype2-demos
+freetype2-docs
 frei0r-plugins
 fribidi
 fstrm
@@ -4018,6 +4022,7 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
+python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -4061,6 +4066,7 @@ python-stevedore
 python-stone
 python-straight.plugin
 python-strict-rfc3339
+python-strictyaml
 python-structlog
 python-subprocess-tee
 python-subunit

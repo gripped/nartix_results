@@ -3,7 +3,7 @@
 @@ -1,7 +1,7 @@
  
  pkgname=xfce4-notifyd
--pkgver=0.9.5
+-pkgver=0.9.6
 -pkgrel=1
 +pkgver=0.9.3
 +pkgrel=1.1
@@ -18,7 +18,7 @@
 +makedepends=('intltool' 'python' 'xfce4-panel' 'xfce4-dev-tools')
  provides=('notification-daemon')
  source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
--sha256sums=('0dbe28ca765f1d845cde39476f01fd11571a078c498187a6776a83d8afd3cfa2')
+-sha256sums=('9e53265cca7d835c31b3c2c0d3ae961704870839ef583dcca3e4cc98ae3d2671')
 +sha256sums=('79ee4701e2f8715a700de2431aa33682933cab18d76938bb18e2820302bbe030')
  
  build() {

@@ -7,8 +7,8 @@
 -makedepends=('systemd' 'po4a')
 +makedepends=('udev' 'po4a')
  checkdepends=('sharutils')
- source=("https://deb.debian.org/debian/pool/main/f/$pkgname/${pkgname}_${pkgver}.orig.tar.gz")
- sha256sums=('e5a427b4ab1eb4a2158b3312547a4155aede58735cd5c2910421988834b440a4')
+ source=("https://deb.debian.org/debian/pool/main/f/${pkgname}/${pkgname}_${pkgver}.orig.tar.gz"
+         '0001-Cast-uint8_t-pointers.patch')
 
 
 ############# Stripped diff below #################
