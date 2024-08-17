@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
- arch=('x86_64')
- license=('MIT')
- provides=('xdg-desktop-portal-impl')
--depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih')
-+depends=('xdg-desktop-portal' 'pipewire' 'pipewire-session-manager' 'libinih' 'libelogind')
- makedepends=('meson' 'wayland-protocols' 'wayland' 'scdoc')
- optdepends=(
-     'slurp: to choose which output to screencast using slurp'
-@@ -21,7 +21,7 @@
+@@ -15,7 +15,7 @@
+     'mesa'
+     'pipewire'
+     'pipewire-session-manager'
+-    'systemd-libs'
++    'libelogind'
+     'wayland'
+     'xdg-desktop-portal'
+ )
+@@ -36,7 +36,7 @@
  
  build() {
      cd "${pkgname}-${pkgver}"
@@ -24,8 +24,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,3 +1,4 @@
+@@ -1,5 +1,6 @@
+ glibc
+ libdrm
 +libelogind
  libinih
- meson
+ libpipewire
+ mesa
+@@ -7,7 +8,6 @@
  pipewire
+ pipewire-session-manager
+ scdoc
+-systemd-libs
+ wayland
+ wayland-protocols
+ xdg-desktop-portal

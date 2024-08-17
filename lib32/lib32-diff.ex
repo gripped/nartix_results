@@ -1,6 +1,5 @@
 lib32-colord
 lib32-dbus
-lib32-fakeroot
 lib32-fluidsynth
 lib32-gamemode
 lib32-gstreamer

@@ -201,7 +201,6 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -290,7 +289,6 @@ cervisia
 cfitsio
 cgns
 chafa
-chatblade
 check-jsonschema
 check
 check-docs
@@ -1464,7 +1462,6 @@ libcdr
 libcerf
 libcgif
 libchamplain
-libchewing
 libclc
 libcloudproviders
 libcmis
@@ -1806,8 +1803,6 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
-libssh
-libssh-docs
 libstaroffice
 libstatgrab
 libsysstat
@@ -2873,7 +2868,6 @@ pugixml
 pulseaudio-qt
 purpose
 purpose5
-putty
 pv
 pwndbg
 pyalpm
@@ -3145,6 +3139,7 @@ python-cytoolz
 python-d2to1
 python-daemonize
 python-daiquiri
+python-dask-expr
 python-dask
 python-databases
 python-dateutil

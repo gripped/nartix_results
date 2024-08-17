@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 breezy
@@ -37,6 +38,7 @@ brltty-udev-generic
 btop
 bumblebee
 cgmanager
+chatblade
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -273,6 +275,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libchewing
 libe-book
 libei
 libei-docs
@@ -294,6 +297,8 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
+libssh
+libssh-docs
 libtg_owt
 libudev0-shim
 libusbsio
@@ -461,6 +466,7 @@ pipewire
 libpipewire
 alsa-card-profiles
 pipewire-docs
+pipewire-libcamera
 pipewire-audio
 pipewire-alsa
 pipewire-ffado
@@ -499,6 +505,7 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 puppet
+putty
 pyqt5
 python-pyqt5
 pyqt6
