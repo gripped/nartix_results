@@ -38,7 +38,6 @@ brltty-udev-generic
 btop
 bumblebee
 cgmanager
-chatblade
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -505,7 +504,6 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 puppet
-putty
 pyqt5
 python-pyqt5
 pyqt6

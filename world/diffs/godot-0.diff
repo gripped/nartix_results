@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver-stable
+-  export BUILD_NAME=arch_linux
++  export BUILD_NAME=artix_linux
+   scons -j$(nproc --all) \
+     CFLAGS="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+     CXXFLAGS="$CXXFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ }
+ build() {
+ cd $pkgname-$pkgver-stable
+-export BUILD_NAME=arch_linux
++export BUILD_NAME=artix_linux
+ scons -j$(nproc --all) \
+ CFLAGS="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+ CXXFLAGS="$CXXFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \

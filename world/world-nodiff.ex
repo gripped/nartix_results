@@ -289,6 +289,7 @@ cervisia
 cfitsio
 cgns
 chafa
+chatblade
 check-jsonschema
 check
 check-docs
@@ -2868,6 +2869,7 @@ pugixml
 pulseaudio-qt
 purpose
 purpose5
+putty
 pv
 pwndbg
 pyalpm
@@ -3754,6 +3756,7 @@ python-pyjwt
 python-pykerberos
 python-pykka
 python-pylast
+python-pylatexenc
 python-pylev
 python-pylibmc
 python-pylink-square
