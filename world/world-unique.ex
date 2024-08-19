@@ -315,6 +315,9 @@ lxdm-dinit
 lxdm-openrc
 lxdm-runit
 lxdm-s6
+ly-dinit
+ly-openrc
+ly-runit
 lz4
 mailgraph-openrc
 mailman-openrc

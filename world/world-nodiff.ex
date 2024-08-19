@@ -201,6 +201,7 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -2428,6 +2429,7 @@ parole
 parted
 partitionmanager
 pass
+passff-host
 passt
 pastebinit
 pasystray
@@ -4366,6 +4368,7 @@ raptor
 rasqal
 rav1e
 rawtherapee
+razor
 rclone
 rdfind
 re2
@@ -4652,6 +4655,7 @@ ruby-rspec-files
 ruby-rspec-its
 ruby-rspec-memory
 ruby-rspec-mocks
+ruby-rspec-rerun
 ruby-rspec-support
 ruby-rspec
 ruby-rss

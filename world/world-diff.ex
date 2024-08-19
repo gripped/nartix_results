@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 breezy
@@ -619,7 +618,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-razor
 rdma-core
 redis
 redshift

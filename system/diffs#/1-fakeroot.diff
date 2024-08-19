@@ -4,18 +4,18 @@
  url='https://tracker.debian.org/pkg/fakeroot'
  install=fakeroot.install
  depends=('glibc' 'filesystem' 'sed' 'util-linux' 'sh')
--makedepends=('systemd' 'po4a')
-+makedepends=('udev' 'po4a')
+-makedepends=('git' 'systemd' 'po4a')
++makedepends=('git' 'udev' 'po4a')
  checkdepends=('sharutils')
- source=("https://deb.debian.org/debian/pool/main/f/${pkgname}/${pkgname}_${pkgver}.orig.tar.gz"
-         '0001-Cast-uint8_t-pointers.patch')
+ source=("git+https://salsa.debian.org/clint/fakeroot.git#tag=upstream/${pkgver}")
+ sha256sums=('6cf5ddf3fdb4d2ece465e4dc51b4d0b1a265c241bdaf2858f0a1519a9b4e8c63')
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -3,5 +3,5 @@
+@@ -4,5 +4,5 @@
  po4a
  sed
  sh

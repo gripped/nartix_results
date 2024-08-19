@@ -1,10 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- 
- pkgname=btrfs-progs
--pkgver=6.10.1
-+pkgver=6.10
+@@ -4,9 +4,9 @@
  pkgrel=1
  pkgdesc='Btrfs filesystem utilities'
  arch=('x86_64')
@@ -26,8 +22,7 @@
 -install=btrfs-progs.install
  options=(!staticlibs)
  sha256sums=('SKIP'
--            '25684696bc5b5d07c98f19d4bf7a48b53ab94870ca4c468a68af3df9e2c8a35e'
-+            '3382a84e3fcfe1ffdea07a61ab3f4e86665d38fa35f1f34548d5df867423e0df'
+             '25684696bc5b5d07c98f19d4bf7a48b53ab94870ca4c468a68af3df9e2c8a35e'
              'bbe60b35d1b1e2efc1308a8f54f1fdc6808240a81c5f5b4d75321b7ee86e41f4'
 -            '35efeee8590d6d60c711ae9cdc918e4841ab61d10cb02359e65e36ebff95ffc5'
 -            'eaa7af92d28bfa8940bb551560fd7be777f9f175292eaa72b5f6ef00fb240252'
