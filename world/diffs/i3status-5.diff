@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,30 @@
+ 
+ pkgname=i3status
+-pkgver=2.15
+-pkgrel=1
++pkgver=2.14
++pkgrel=2
+ pkgdesc='Generates status bar to use with i3bar, dzen2 or xmobar'
+ arch=('x86_64')
+ url='https://i3wm.org/i3status/'
+ license=('BSD')
+ groups=('i3')
+ depends=('alsa-lib' 'confuse' 'libnl' 'libpulse' 'yajl')
+-makedepends=('asciidoc' 'git' 'meson' 'xmlto')
++makedepends=('asciidoc' 'xmlto' 'meson')
+ backup=('etc/i3status.conf')
+ options=('docs')
+-source=("git+https://github.com/i3/i3status.git?signed#tag=${pkgver}")
+-sha256sums=('e37cbaa1f2d5b7f98e31709414f9ff67307e9f56d6056c7fe01edb0c82772ccd')
++source=("$url/$pkgname-$pkgver.tar.xz"{,.asc})
++sha256sums=('5c4d0273410f9fa3301fd32065deda32e9617fcae8b3cb34793061bf21644924'
++            'SKIP')
+ validpgpkeys=('424E14D703E7C6D43D9D6F364E7160ED4AC8EE1D') # Michael Stapelberg
+ 
+ build() {
+-  cd $pkgname/meson
+-  arch-meson -Dmans=true .. build
++  cd $pkgname-$pkgver/meson
++
++  meson --prefix=/usr --buildtype=plain -Dmans=true .. build
+   meson compile -C build
+ }
+ 
+ package() {
+-  cd $pkgname/meson
++  cd $pkgname-$pkgver/meson
+   meson install -C build --destdir "$pkgdir"
+   install -Dm644 -t "$pkgdir"/usr/share/licenses/$pkgname ../LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ alsa-lib
+ asciidoc
+ confuse
+-git
+ libnl
+ libpulse
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd $pkgname/meson
+-arch-meson -Dmans=true .. build
++cd $pkgname-$pkgver/meson
++meson --prefix=/usr --buildtype=plain -Dmans=true .. build
+ meson compile -C build
+ }

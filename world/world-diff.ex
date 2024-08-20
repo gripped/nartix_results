@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 breezy
@@ -205,6 +206,7 @@ hotdoc
 hwloc
 hyprland
 i2pd
+i3status
 ibus
 libibus
 igsc
@@ -266,6 +268,7 @@ libblockdev-nvme
 libblockdev-part
 libblockdev-swap
 python-libblockdev
+libbluray
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -295,8 +298,6 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
-libssh
-libssh-docs
 libtg_owt
 libudev0-shim
 libusbsio

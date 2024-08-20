@@ -201,7 +201,6 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -913,7 +912,6 @@ i2c-tools
 i3-wm
 i3blocks
 i3lock
-i3status
 iagno
 ibm-sw-tpm2
 icewm
@@ -1448,7 +1446,6 @@ libavtp
 libb2
 libb64
 libblastrampoline
-libbluray
 libbobcat
 libbs2b
 libbsd
@@ -1805,6 +1802,8 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
+libssh
+libssh-docs
 libstaroffice
 libstatgrab
 libsysstat

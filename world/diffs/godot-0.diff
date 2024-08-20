@@ -7,8 +7,8 @@
 -  export BUILD_NAME=arch_linux
 +  export BUILD_NAME=artix_linux
    scons -j$(nproc --all) \
-     CFLAGS="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
-     CXXFLAGS="$CXXFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+     cflags="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+     cxxflags="$CXXFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
 
 
 ############# Stripped diff below #################
@@ -24,5 +24,5 @@
 -export BUILD_NAME=arch_linux
 +export BUILD_NAME=artix_linux
  scons -j$(nproc --all) \
- CFLAGS="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
- CXXFLAGS="$CXXFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+ cflags="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \
+ cxxflags="$CXXFLAGS -fPIC -Wl,-z,relro,-z,now -w -I/usr/include/mbedtls" \

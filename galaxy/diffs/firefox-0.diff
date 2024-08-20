@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=firefox
+ pkgver=129.0.1
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="Fast, Private & Safe Web Browser"
+ url="https://www.mozilla.org/firefox/"
+ arch=(x86_64)
 @@ -104,7 +104,7 @@
          'b649c5c3edc4a0319d012ff0c12dbc97f3bb244220c9db5334a921864f57e05506943f50ccd7ee832b881ace642ce294892e25eaa555716d2dcc726f4790c605'
          'eb84ee67ce049351e07cfd02f7bd024fb31e041f839c105e3bc15a904632b6c668bca494aa721f0c092172dc45ad2d576c9f6d45f15877f7189e15ab403a45c5')
@@ -9,7 +18,7 @@
  
  prepare() {
    mkdir mozbuild
-@@ -135,21 +135,28 @@
+@@ -135,21 +135,27 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -35,14 +44,13 @@
 +ac_add_options --enable-pulseaudio
 +ac_add_options --enable-raw
 +ac_add_options --enable-sandbox
-+ac_add_options --disable-webrtc
 +ac_add_options --disable-crashreporter
 +ac_add_options --disable-default-browser-agent
 +ac_add_options --disable-parental-controls
  ac_add_options --disable-updater
  ac_add_options --disable-tests
  END
-@@ -195,7 +202,7 @@
+@@ -195,7 +201,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
@@ -51,7 +59,7 @@
  ac_add_options --enable-profile-use=cross
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-@@ -228,14 +235,14 @@
+@@ -228,14 +234,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -78,7 +86,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,18 +21,25 @@
+@@ -21,18 +21,24 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -101,14 +109,13 @@
 +ac_add_options --enable-pulseaudio
 +ac_add_options --enable-raw
 +ac_add_options --enable-sandbox
-+ac_add_options --disable-webrtc
 +ac_add_options --disable-crashreporter
 +ac_add_options --disable-default-browser-agent
 +ac_add_options --disable-parental-controls
  ac_add_options --disable-updater
  ac_add_options --disable-tests
  END
-@@ -67,7 +74,7 @@
+@@ -67,7 +73,7 @@
  ./mach clobber objdir
  echo "Building optimized browser..."
  cat >.mozconfig ../mozconfig - <<END
