@@ -201,6 +201,7 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -381,10 +382,6 @@ cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
-cyrus-sasl
-cyrus-sasl-gssapi
-cyrus-sasl-ldap
-cyrus-sasl-sql
 cython-dev
 cython
 cython0
@@ -870,6 +867,7 @@ hip-runtime-amd
 hiredis
 hitori
 hivex
+hostapd
 hplip
 hsa-rocr
 hsakmt-roct
@@ -1581,7 +1579,6 @@ libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
-libimobiledevice
 libindi
 libindicator
 libindicator-gtk2
@@ -1859,7 +1856,6 @@ libwebsockets
 libwhereami
 libwhich
 libwlocate
-libwmf
 libwnck
 libwnck3
 libwpd
@@ -2859,8 +2855,6 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
-protobuf
-python-protobuf
 prrte
 prrte-docs
 psutils

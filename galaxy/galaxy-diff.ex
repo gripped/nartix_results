@@ -1,5 +1,10 @@
 alacritty
 cinnamon-desktop
+ecrire
+efl
+elementary-icon-theme
+ephoto
+evisum
 fceux
 firefox
 gpicview
@@ -21,6 +26,8 @@ nushell
 nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
+rage
+terminology
 tor
 torsocks
 transmission

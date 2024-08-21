@@ -1,0 +1,79 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,28 @@
+ 
+ pkgname=terminology
+-pkgver=1.13.0
+-pkgrel=2
++pkgver=1.13.1
++pkgrel=3.1
+ pkgdesc="EFL based terminal emulator"
+ arch=('x86_64')
+-url="https://www.enlightenment.org/about-terminology"
++url="http://www.enlightenment.org/p.php?p=about/terminology"
+ license=('BSD')
+-depends=('efl')
+-makedepends=('meson')
+-source=("https://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${pkgver}.tar.xz")
+-sha256sums=('16a37fecd7bbd63ec9de3ec6c0af331cee77d6dfda838a1b1573d6f298474da5')
++depends=('efl>=1.26' 'openssl-1.1' 'libsndfile' 'libpulse')
++makedepends=('git' 'meson' 'cmake')
++source=("git+http://git.enlightenment.org/enlightenment/$pkgname.git")
++
++sha256sums=('SKIP')
+ 
+ build() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
+-
+-  export CFLAGS="${CFLAGS} -fvisibility=hidden"
+-  meson builddir --prefix=/usr
+-  ninja -C builddir
++  cd "$pkgname"
++  export CFLAGS="$CFLAGS -fvisibility=hidden"
++  meson --prefix=/usr . build
++  meson configure build
++  ninja -C build
+ }
+ 
+ package(){
+-  cd "${srcdir}/${pkgname}-${pkgver}"
+-
+-  DESTDIR="${pkgdir}" ninja -C builddir install
+-
+-  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/COPYING" \
+-        "${pkgdir}/usr/share/licenses/${pkgname}/COPYING"
++  cd "$pkgname"
++  DESTDIR="$pkgdir" ninja -C build install
++  install -Dm644 -t"$pkgdir/usr/share/doc/$pkgname/" ChangeLog NEWS README.md
++  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" AUTHORS COPYING
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1,7 @@
+-efl
++cmake
++efl>
++git
++libpulse
++libsndfile
+ meson
++openssl-1.1
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ build() {
+-cd "${srcdir}/${pkgname}-${pkgver}"
+-export CFLAGS="${CFLAGS} -fvisibility=hidden"
+-meson builddir --prefix=/usr
+-ninja -C builddir
++cd "$pkgname"
++export CFLAGS="$CFLAGS -fvisibility=hidden"
++meson --prefix=/usr . build
++meson configure build
++ninja -C build
+ }

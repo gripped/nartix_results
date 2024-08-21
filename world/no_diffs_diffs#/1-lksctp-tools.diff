@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=lksctp-tools
+-pkgver=1.0.20
+-pkgrel=1
++pkgver=1.0.19
++pkgrel=2
+ pkgdesc='An implementation of the SCTP protocol'
+ arch=('x86_64')
+ url='https://github.com/sctp/lksctp-tools'
+-license=('GPL-2.0-or-later' 'LGPL-2.1-only')
++license=('GPL2' 'LGPL2.1')
+ makedepends=('git')
+-depends=('glibc' 'bash')
++depends=('bash')
+ source=("git+https://github.com/sctp/lksctp-tools.git#tag=v$pkgver")
+-sha256sums=('91c118f63d53d00b4f5eae9277aace9d9a52fdee5025ae4789abd675f47388eb')
++sha256sums=('SKIP')
+ 
+ build() {
+   cd $pkgname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ bash
+ git
+-glibc

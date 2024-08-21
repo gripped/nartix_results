@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 breezy
@@ -56,6 +55,10 @@ cppcheck
 crun
 cups
 libcups
+cyrus-sasl
+cyrus-sasl-gssapi
+cyrus-sasl-ldap
+cyrus-sasl-sql
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -201,7 +204,6 @@ haproxy
 haveged
 hexchat
 hidapi
-hostapd
 hotdoc
 hwloc
 hyprland
@@ -291,6 +293,7 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
+libimobiledevice
 libinput
 libldm
 libmspub
@@ -303,6 +306,7 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvncserver
+libwmf
 libytnef
 light-locker
 lightdm
@@ -494,6 +498,8 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+protobuf
+python-protobuf
 proxytunnel
 pulseaudio
 libpulse
