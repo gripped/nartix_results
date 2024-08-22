@@ -69,8 +69,6 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
-doxygen
-doxygen-docs
 dracut
 drkonqi
 dunst
@@ -130,6 +128,7 @@ gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
+gnome-desktop-docs
 gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
@@ -204,11 +203,9 @@ haproxy
 haveged
 hexchat
 hidapi
-hotdoc
 hwloc
 hyprland
 i2pd
-i3status
 ibus
 libibus
 igsc
@@ -227,6 +224,18 @@ jami-daemon
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
+java11-openjdk
+jre11-openjdk-headless
+jre11-openjdk
+jdk11-openjdk
+openjdk11-src
+openjdk11-doc
+java17-openjdk
+jre17-openjdk-headless
+jre17-openjdk
+jdk17-openjdk
+openjdk17-src
+openjdk17-doc
 java21-openjdk
 jre21-openjdk-headless
 jre21-openjdk
@@ -242,7 +251,6 @@ openjdk8-doc
 jedi-language-server
 js78
 kcoreaddons
-kexec-tools
 kgamma
 kismet
 kitty
@@ -270,7 +278,6 @@ libblockdev-nvme
 libblockdev-part
 libblockdev-swap
 python-libblockdev
-libbluray
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -278,7 +285,6 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
-libchewing
 libe-book
 libei
 libei-docs
@@ -293,7 +299,6 @@ libguestfs
 libhandy
 libhandy-docs
 libhandy0
-libimobiledevice
 libinput
 libldm
 libmspub
@@ -306,7 +311,6 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvncserver
-libwmf
 libytnef
 light-locker
 lightdm
@@ -498,8 +502,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-protobuf
-python-protobuf
 proxytunnel
 pulseaudio
 libpulse
@@ -765,6 +767,7 @@ xorg-server-common
 xorg-server-devel
 xorg-xdm
 xorg-xwayland
+xournalpp
 xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf

@@ -48,6 +48,7 @@ cinnamon
 cjs
 copyq
 cvs
+dillo
 doctest
 dosbox
 doublecmd

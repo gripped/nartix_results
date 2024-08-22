@@ -454,6 +454,8 @@ dos2unix
 dosbox
 dotconf
 double-conversion
+doxygen
+doxygen-docs
 dpkg
 dqlite
 draco
@@ -868,6 +870,7 @@ hiredis
 hitori
 hivex
 hostapd
+hotdoc
 hplip
 hsa-rocr
 hsakmt-roct
@@ -910,6 +913,7 @@ i2c-tools
 i3-wm
 i3blocks
 i3lock
+i3status
 iagno
 ibm-sw-tpm2
 icewm
@@ -982,18 +986,6 @@ jdk-openjdk
 openjdk-src
 openjdk-doc
 java-xmlgraphics-commons
-java11-openjdk
-jre11-openjdk-headless
-jre11-openjdk
-jdk11-openjdk
-openjdk11-src
-openjdk11-doc
-java17-openjdk
-jre17-openjdk-headless
-jre17-openjdk
-jdk17-openjdk
-openjdk17-src
-openjdk17-doc
 jbig2dec
 jbigkit
 jemalloc
@@ -1165,6 +1157,7 @@ kdsoap-qt6
 keditbookmarks
 keepassxc
 kemoticons
+kexec-tools
 keybinder2
 libkeybinder2
 keychain
@@ -1444,6 +1437,7 @@ libavtp
 libb2
 libb64
 libblastrampoline
+libbluray
 libbobcat
 libbs2b
 libbsd
@@ -1459,6 +1453,7 @@ libcdr
 libcerf
 libcgif
 libchamplain
+libchewing
 libclc
 libcloudproviders
 libcmis
@@ -1579,6 +1574,7 @@ libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
+libimobiledevice
 libindi
 libindicator
 libindicator-gtk2
@@ -1856,6 +1852,7 @@ libwebsockets
 libwhereami
 libwhich
 libwlocate
+libwmf
 libwnck
 libwnck3
 libwpd
@@ -2855,6 +2852,9 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 prrte
 prrte-docs
 psutils
@@ -2862,6 +2862,7 @@ ptex
 publicsuffix-list
 pugixml
 pulseaudio-qt
+pulsemixer
 purpose
 purpose5
 putty
@@ -4874,6 +4875,7 @@ stfl
 stk
 stk-docs
 stoken
+stow
 strace
 strawberry
 strip-nondeterminism
@@ -5444,7 +5446,6 @@ xorg-xsetroot
 xorg-xwininfo
 xorgproto
 xosd
-xournalpp
 xpdf
 xpra
 xreader

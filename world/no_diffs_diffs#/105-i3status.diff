@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
- }
+@@ -17,7 +17,7 @@
  
  build() {
--  arch-meson $pkgname build
-+  artix-meson $pkgname build
+   cd $pkgname/meson
+-  arch-meson -Dmans=true .. build
++  artix-meson -Dmans=true .. build
    meson compile -C build
  }
  
@@ -17,11 +17,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd $pkgname
- }
+@@ -1,5 +1,5 @@
  build() {
--arch-meson $pkgname build
-+artix-meson $pkgname build
+ cd $pkgname/meson
+-arch-meson -Dmans=true .. build
++artix-meson -Dmans=true .. build
  meson compile -C build
  }
