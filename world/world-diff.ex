@@ -28,9 +28,9 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
-breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -55,10 +55,6 @@ cppcheck
 crun
 cups
 libcups
-cyrus-sasl
-cyrus-sasl-gssapi
-cyrus-sasl-ldap
-cyrus-sasl-sql
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -123,7 +119,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-gitea
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -467,7 +462,6 @@ php-snmp
 php-sqlite
 php-tidy
 php-xsl
-pifpaf
 pipewire-media-session
 pipewire
 libpipewire
@@ -519,7 +513,6 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
-python-gssapi
 python-intelhex
 python-pymupdf
 python-pyopencl

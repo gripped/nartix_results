@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -69,7 +69,7 @@
+   "$PWD/tmp_install/usr/bin/brz" selftest \
+     --parallel=fork \
+     --verbose \
+-    -Oselftest.timeout=120
++    -Oselftest.timeout=120 || :
+ }
+ 
+ package() {

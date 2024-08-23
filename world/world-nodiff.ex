@@ -201,7 +201,7 @@ blosc2
 blueman
 bluez-qt
 bluez-qt5
-bogofilter
+bmake
 boinc
 boinc-nox
 bomber
@@ -218,6 +218,7 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
+breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -229,6 +230,7 @@ bullet
 bullet-dp
 bullet-docs
 python-pybullet
+byacc
 c-ares
 cabextract
 cairo
@@ -322,12 +324,14 @@ cli11
 clinfo
 clisp
 cln
+cloc
 clucene
 clutter-gst
 clutter-gtk
 clutter
 cmark-gfm
 cmark
+cmatrix
 cmocka
 cmus
 cni-plugins
@@ -347,6 +351,7 @@ colord-gtk-common
 colord-gtk4
 colord-kde
 colordiff
+colorgcc
 comgr
 compiler-rt
 compiler-rt14
@@ -382,6 +387,11 @@ cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
+cxxopts
+cyrus-sasl
+cyrus-sasl-gssapi
+cyrus-sasl-ldap
+cyrus-sasl-sql
 cython-dev
 cython
 cython0
@@ -397,7 +407,9 @@ dbus-cplusplus
 dbus-glib
 dconf-editor
 dconf
+dcraw
 ddclient
+ddrescue
 debootstrap
 default-cursors
 dejagnu
@@ -595,6 +607,7 @@ foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
+fossil
 four-in-a-row
 fractal
 frameworkintegration
@@ -665,6 +678,7 @@ gimp
 girara
 git-lfs
 git
+gitea
 github-cli
 gjs
 gkrellm
@@ -767,6 +781,7 @@ gox
 gparted
 gperf
 gperftools
+gphoto2
 gpicview
 gptfdisk
 gradle
@@ -859,6 +874,7 @@ helix
 help2man
 herbstluftwm
 hevea
+hexedit
 hexer-hobu
 hicolor-icon-theme
 hiera
@@ -866,6 +882,7 @@ highlight
 highlight-gui
 highway
 hip-runtime-amd
+hipify-clang
 hiredis
 hitori
 hivex
@@ -950,12 +967,17 @@ intel-oneapi-compiler-shared
 intel-oneapi-dev-utilities
 intel-oneapi-dpcpp-cpp
 intel-oneapi-dpcpp-debugger
+intel-oneapi-mkl
+"$pkgbase
+"$pkgbase
 intel-oneapi-openmp
 intel-oneapi-tbb
 intel-oneapi-tcm
 intel-ucode
 intltool
 inxi
+iperf
+iperf3
 ipset
 ipython
 irssi
@@ -968,6 +990,7 @@ isync
 itinerary
 itstool
 iucode-tool
+iverilog
 j4-dmenu-desktop
 jasper
 jasper-doc
@@ -979,6 +1002,7 @@ java-environment-common
 java-commons-io
 java-commons-logging
 java-hamcrest
+java-jline
 java-openjdk
 jre-openjdk-headless
 jre-openjdk
@@ -1324,6 +1348,7 @@ kscreenlocker5
 kseexpr
 kservice
 kservice5
+ksh
 kshisen
 ksirk
 ksmtp
@@ -2420,6 +2445,7 @@ parley
 parole
 parted
 partitionmanager
+pass-otp
 pass
 passff-host
 passt
@@ -2627,6 +2653,7 @@ perl-package-stash-xs
 perl-package-stash
 perl-padwalker
 perl-par-dist
+perl-parallel-forkmanager
 perl-params-util
 perl-params-validate
 perl-params-validationcompiler
@@ -2652,6 +2679,7 @@ perl-probe-perl
 perl-readonly
 perl-ref-util-xs
 perl-ref-util
+perl-regexp-common
 perl-return-multilevel
 perl-role-tiny
 perl-scalar-list-utils
@@ -2757,6 +2785,7 @@ picard
 picmi
 picom
 pidgin
+pifpaf
 pigeonhole
 pigz
 pim-data-exporter
@@ -2948,6 +2977,7 @@ python-ansi2html
 python-ansible-compat
 python-ansicolors
 python-ansiwrap
+python-antlr4
 python-anyio
 python-anyjson
 python-anysqlite
@@ -3322,6 +3352,7 @@ python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
+python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
@@ -3376,6 +3407,7 @@ python-infinity
 python-inflect
 python-ini2toml
 python-iniconfig
+python-inline-snapshot
 python-installer
 python-intervals
 python-intervaltree
@@ -3420,6 +3452,7 @@ python-jsondiff
 python-jsonlines
 python-jsonmerge
 python-jsonpatch
+python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
@@ -4392,6 +4425,7 @@ riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
 ristretto
 rkcommon
+rlwrap
 rng-tools
 rnnoise
 robin-map
