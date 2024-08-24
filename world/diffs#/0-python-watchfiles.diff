@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-watchfiles
+ _name=${pkgname#python-}
+ pkgver=0.23.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Simple, modern and high performance file watching and code reload in python'
+ arch=(x86_64)
+ url='https://github.com/samuelcolvin/watchfiles'
+@@ -33,9 +33,6 @@
+ 
+ build() {
+   cd $_name-$pkgver
+-
+-  VERSION=$pkgver python .github/set_version.py
+-
+   python -m build --wheel --no-isolation
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,5 @@
+ }
+ build() {
+ cd $_name-$pkgver
+-VERSION=$pkgver python .github/set_version.py
+ python -m build --wheel --no-isolation
+ }

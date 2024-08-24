@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,24 @@
+ 
+ pkgname=coin-or-coinutils
+-pkgver=2.11.12
++pkgver=2.11.11
+ pkgrel=1
+ pkgdesc='COIN-OR collection of utility classes'
+ arch=(x86_64)
+ url='https://github.com/coin-or/CoinUtils'
+-license=(EPL-2.0)
+-depends=(blas
+-         bzip2
++license=(EPL)
++depends=(bzip2
+          coin-or-data-sample
+-         gcc-libs
+-         glibc
+          glpk
+          lapack
+          zlib)
+ makedepends=(doxygen
+-             gcc-fortran
+-             git)
++             gcc-fortran)
+ groups=(coin-or)
+-source=(git+https://github.com/coin-or/CoinUtils#tag=releases/$pkgver)
+-sha256sums=('eb3ef8bfbf913a0af35915c49410182be5a7e21e17754295eb4a3c23762706ba')
++source=($pkgname-$pkgver.tar.gz::https://github.com/coin-or/CoinUtils/archive/refs/tags/releases/$pkgver.tar.gz)
++sha256sums=('27da344479f38c82112d738501643dcb229e4ee96a5f87d4f406456bdc1b2cb4')
+ 
+ build() {
+-  cd CoinUtils
++  cd CoinUtils-releases-$pkgver
+   ./configure \
+     --prefix=/usr \
+     --with-blas-lib='-lblas' \
+@@ -33,11 +29,11 @@
+ }
+ 
+ check() {
+-  cd CoinUtils
++  cd CoinUtils-releases-$pkgver
+   make test
+ }
+ 
+ package() {
+-  cd CoinUtils
++  cd CoinUtils-releases-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,7 @@
+-blas
+ bzip2
+ coin-or-data-sample
+ doxygen
+ gcc-fortran
+-gcc-libs
+-git
+-glibc
+ glpk
+ lapack
+ zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd CoinUtils
++cd CoinUtils-releases-$pkgver
+ ./configure \
+ --prefix=/usr \
+ --with-blas-lib='-lblas' \

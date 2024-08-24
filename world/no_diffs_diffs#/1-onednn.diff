@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ replaces=('intel-dnnl' 'mkl-dnn')
+ provides=('intel-dnnl' 'mkl-dnn')
+ url=https://github.com/oneapi-src/oneDNN
+-license=('APACHE')
++license=('Apache-2.0')
+ depends=('gcc-libs')
+ makedepends=('cmake' 'ninja')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/oneapi-src/oneDNN/archive/v${pkgver}.tar.gz")
