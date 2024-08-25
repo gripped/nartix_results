@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=vice
+ pkgver=3.8
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Versatile Commodore Emulator'
+ arch=(x86_64)
+ license=(GPL-2.0-only)
+ url='https://vice-emu.sourceforge.io/'
+ depends=(alsa-lib giflib glew gtk3 libjpeg-turbo libpng libpulse python sdl2 sdl2_image)
+-makedepends=(dos2unix glib2-devel libpcap libxaw xa xorg-bdftopcf xorg-mkfontscale)
++makedepends=(dos2unix libpcap libxaw xa xorg-bdftopcf xorg-mkfontdir)
+ source=("https://downloads.sourceforge.net/project/vice-emu/releases/$pkgname-${pkgver%.0}.tar.gz"
+         disable-fc-cache.patch)
+ b2sums=('709fd6eda874de542e5770a328b0c0308d04f755e3bf1fceba5147156eb894a95ce6f14e9f8848ca6992d4f958082f83a198d2176c1fe54e87027c7dfac8849c'
+@@ -24,7 +24,8 @@
+ build() {
+   cd $pkgname-$pkgver
+   export CFLAGS="$CFLAGS -w -Wl,--allow-multiple-definition"
+-  PKG_CONFIG_PATH='/usr/lib/ffmpeg/pkgconfig' ./configure \
++  PKG_CONFIG_PATH="/usr/lib/ffmpeg/pkgconfig" \
++  ./configure \
+     --disable-ffmpeg \
+     --enable-gtk3ui \
+     --enable-sdl2ui \
+@@ -35,5 +36,8 @@
+ }
+ 
+ package() {
+-  make -C $pkgname-$pkgver DESTDIR="$pkgdir" realdocdir=/usr/share/doc/vice install
++  make -C $pkgname-$pkgver \
++    DESTDIR="$pkgdir" \
++    realdocdir=/usr/share/doc/vice \
++    install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ dos2unix
+ giflib
+ glew
+-glib2-devel
+ gtk3
+ libjpeg-turbo
+ libpcap
+@@ -14,4 +13,4 @@
+ sdl2_image
+ xa
+ xorg-bdftopcf
+-xorg-mkfontscale
++xorg-mkfontdir
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,8 @@
+ build() {
+ cd $pkgname-$pkgver
+ export CFLAGS="$CFLAGS -w -Wl,--allow-multiple-definition"
+-PKG_CONFIG_PATH='/usr/lib/ffmpeg/pkgconfig' ./configure \
++PKG_CONFIG_PATH="/usr/lib/ffmpeg/pkgconfig" \
++./configure \
+ --disable-ffmpeg \
+ --enable-gtk3ui \
+ --enable-sdl2ui \

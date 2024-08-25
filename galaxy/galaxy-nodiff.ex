@@ -457,7 +457,6 @@ torbrowser-launcher
 ttf-jetbrains-mono
 tumbler
 unoconv
-vice
 wezterm
 wireshark
 wireshark-cli

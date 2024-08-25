@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,29 +1,42 @@
+@@ -1,29 +1,43 @@
 -
  pkgname=libayatana-indicator
  pkgver=0.9.4
@@ -27,14 +27,13 @@
 +depends=(
 +	"gtk3>=3.24"
 +	"glib2>=2.37"
-+
 +	"ayatana-ido"
 +)
 +makedepends=(
 +	"gcc"
 +	"make"
 +	"pkgconf"
-+
++        "glib2-devel"
 +	"cmake>=3.13"
 +	"vala"
 +	"gobject-introspection"
@@ -62,6 +61,8 @@
 -  DESTDIR="$pkgdir" cmake --install build
 +	cd "$pkgname-$pkgver"
 +	make install DESTDIR="$pkgdir"
++        mv "${pkgdir}/usr/libexec/libayatana-indicator" "${pkgdir}/usr/lib/"
++        rmdir "${pkgdir}/usr/libexec"
  }
 
 
@@ -69,7 +70,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,9 @@
+@@ -1,8 +1,10 @@
  ayatana-ido
 -cmake
 -gdk-pixbuf2
@@ -77,6 +78,7 @@
 -glibc
 +cmake>
 +gcc
++glib2-devel
 +glib2>
  gobject-introspection
 -gtk3

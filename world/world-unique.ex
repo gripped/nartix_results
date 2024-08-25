@@ -318,6 +318,7 @@ lxdm-s6
 ly-dinit
 ly-openrc
 ly-runit
+ly-s6
 lz4
 mailgraph-openrc
 mailman-openrc

@@ -43,11 +43,6 @@ cinnamon-desktop
 clamav
 cloud-init
 cmake
-coin-or-cbc
-coin-or-cgl
-coin-or-clp
-coin-or-coinutils
-coin-or-osi
 colord
 colord-sane
 libcolord
@@ -73,6 +68,7 @@ dovecot
 dracut
 drkonqi
 dunst
+dvd-rw-tools
 earlyoom
 edk2
 edk2-shell
@@ -291,6 +287,7 @@ libei-docs
 libepoxy
 libepoxy-docs
 libetonyek
+libewf
 libfido2
 libfprint
 libgdata
@@ -428,6 +425,7 @@ pacman-contrib
 passim
 pc-ble-driver
 pcsclite
+pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -519,19 +517,16 @@ pyside6-tools
 shiboken6
 python-anytree
 python-intelhex
-python-ipywidgets
 python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
-python-scipy
 python-signedjson
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-watchfiles
 python-zope-testrunner
 qastools
 qemu
@@ -769,6 +764,7 @@ xorg-server-devel
 xorg-xdm
 xorg-xwayland
 xournalpp
+xpra
 xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf

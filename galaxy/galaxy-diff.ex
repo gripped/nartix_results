@@ -35,5 +35,6 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+vice
 xdg-desktop-portal-xapp
 xfce4-notifyd

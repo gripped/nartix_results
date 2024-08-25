@@ -339,8 +339,13 @@ codespell
 coffeescript
 cogl
 coin-or-asl
+coin-or-cbc
+coin-or-cgl
+coin-or-clp
+coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
+coin-or-osi
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -352,6 +357,7 @@ compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
+composable-kernel
 composefs
 confuse
 consul
@@ -453,6 +459,7 @@ docbook-xsl
 docbook2x
 docker-buildx
 docker-compose
+doctest
 docx2txt
 dolphin-plugins
 dolphin
@@ -474,7 +481,6 @@ duktape
 dump_syms
 dune
 duplicity
-dvd-rw-tools
 dvdauthor
 dvisvgm
 dzen2
@@ -619,9 +625,11 @@ freetype2-demos
 freetype2-docs
 frei0r-plugins
 fribidi
+frugally-deep
 fstrm
 ftgl
 ftjam
+functional-plus
 fuse-overlayfs
 fuse2
 fuse3
@@ -878,6 +886,7 @@ highlight-gui
 highway
 hip-runtime-amd
 hipblas
+hipcub
 hipfft
 hipify-clang
 hiprand
@@ -1422,6 +1431,7 @@ laszip
 laszip2
 layer-shell-qt
 layer-shell-qt5
+lbzip2
 lcms2
 ldb
 ldc
@@ -1530,7 +1540,6 @@ libesmtp
 libetebase
 libev
 libevdev
-libewf
 libexif
 libexttextcat
 libfabric
@@ -2184,6 +2193,7 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
+miopen-hip
 mitmproxy
 mjpegtools
 mktorrent
@@ -3422,6 +3432,7 @@ python-ipdb
 python-ipykernel
 python-ipyparallel
 python-ipython-genutils
+python-ipywidgets
 python-iso8601
 python-isoduration
 python-isort
@@ -3996,6 +4007,7 @@ python-schema
 python-scikit-build-core
 python-scikit-build
 python-scikit-learn
+python-scipy
 python-scramp
 python-scripttest
 python-scrypt
@@ -4204,6 +4216,7 @@ python-waitress
 python-wand
 python-warlock
 python-watchdog
+python-watchfiles
 python-watchgod
 python-wcag-contrast-ratio
 python-wcmatch
@@ -5495,7 +5508,6 @@ xorg-xwininfo
 xorgproto
 xosd
 xpdf
-xpra
 xreader
 xsane
 xsane-gimp
