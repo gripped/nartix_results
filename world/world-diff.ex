@@ -36,6 +36,7 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
+cdrdao
 cgmanager
 chromium-bsu
 chrony
@@ -274,6 +275,7 @@ libblockdev-nvme
 libblockdev-part
 libblockdev-swap
 python-libblockdev
+libcacard
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -308,6 +310,7 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvncserver
+libwebp
 libytnef
 light-locker
 lightdm
@@ -388,6 +391,7 @@ mutter45
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
+nauty
 nbd
 ndctl
 ndisc6
@@ -732,6 +736,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wf-recorder
 wireplumber
 libwireplumber
 wireplumber-docs

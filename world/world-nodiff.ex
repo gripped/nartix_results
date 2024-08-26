@@ -270,7 +270,6 @@ cbatticon
 cbindgen
 ccache
 cdparanoia
-cdrdao
 cdrtools
 certbot-apache
 certbot-dns-cloudflare
@@ -1479,7 +1478,6 @@ libbsd
 libburn
 libbytesize
 libcaca
-libcacard
 libcbor
 libcddb
 libcdio-paranoia
@@ -1851,6 +1849,7 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
+libultrahdr
 libunibreak
 libuninameslist
 libunwind
@@ -1881,7 +1880,6 @@ libvpx
 libvterm
 libwacom
 libwapcaplet
-libwebp
 libwebsockets
 libwhereami
 libwhich
@@ -2255,7 +2253,6 @@ namcap
 nanobind
 nanosvg
 nasm
-nauty
 nawk
 nccl
 ncdu
@@ -2872,6 +2869,7 @@ postgis
 postgrey
 postorius
 potrace
+povray
 powerline
 python-powerline
 powerline-common
@@ -4417,6 +4415,7 @@ rdfind
 re2
 re2c
 rebar
+recastnavigation
 recode
 recordmydesktop
 redland
@@ -4948,6 +4947,7 @@ suil-docs
 suitesparse
 suitesparse-graphblas
 sushi
+svgcleaner
 svgpart
 svt-av1
 svt-hevc
@@ -5344,7 +5344,6 @@ webp-pixbuf-loader
 webrtc-audio-processing-1
 webrtc-audio-processing
 weechat
-wf-recorder
 wget
 whois
 wildmidi

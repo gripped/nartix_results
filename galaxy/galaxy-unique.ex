@@ -54,6 +54,7 @@ mintlocale
 mkinitcpio-openswap
 moksha-arandr
 moksha-artix
+moksha-background-artix-classic
 moksha-efl-programs
 moksha-help
 moksha-icon-themes
