@@ -1,4 +1,5 @@
 alacritty
+box2d
 cinnamon-desktop
 ecrire
 efl

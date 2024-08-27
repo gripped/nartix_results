@@ -9,7 +9,6 @@ avidemux-cli
 avidemux-qt
 blender
 blueman
-box2d
 caja-extensions
 caja-extensions-common
 caja-image-converter

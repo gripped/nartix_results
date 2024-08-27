@@ -310,7 +310,6 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libvncserver
-libwebp
 libytnef
 light-locker
 lightdm
@@ -622,11 +621,13 @@ qt6-examples
 qt6-serialport
 qterminal
 qtermwidget
+quadrapassel
 quazip
 quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+rawtherapee
 rdma-core
 redis
 redshift
@@ -639,6 +640,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-ronn-ng
 samba
 libwbclient
 smbclient
@@ -718,7 +720,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
-vice
 vlc
 vpnc
 vte3

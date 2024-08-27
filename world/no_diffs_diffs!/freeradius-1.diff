@@ -7,7 +7,7 @@
 -        'freeradius-tmpfiles.conf'
 -        'freeradius.service')
 +        'freeradius-tmpfiles.conf')
- sha256sums=('0fe4f57b28b942c5e5955f48a88769817ca287a830b939d7120ffcff3fcdba88'
+ sha256sums=('18bbb2318448f13918897ae7a38b36afd3db7dd5c66f78ad24d2e0051269d9b2'
              'SKIP'
              '8ecaca94c7d0f4806b326685312dd4e543ce9c6c183d3d7ad01c1a0197bdfb94'
 -            'f536a9aa972e3e42a6b1a6d8ee17166eb721c7cba2e80f60473811497c7bd8bc'
@@ -16,17 +16,7 @@
  
  build() {
    cd "$srcdir"/freeradius-server-$pkgver
-@@ -43,9 +41,7 @@
-     --localstatedir=/var \
-     --enable-heimdal-krb5 \
-     --enable-reproducible-builds \
--    --without-rlm_python \
-     --with-regex=false \
--    --with-rlm_python3 \
-     --with-system-libltdl \
-     --with-system-libtool \
-     --with-udpfromto
-@@ -60,7 +56,6 @@
+@@ -60,7 +58,6 @@
    mv "$pkgdir"/etc/raddb "$pkgdir"/etc/raddb.default
    rm -rf "$pkgdir"/var/run
  
@@ -34,21 +24,3 @@
    install -D -m0644 "$srcdir"/$pkgname-sysusers.conf "$pkgdir"/usr/lib/sysusers.d/$pkgname.conf
    install -D -m0644 "$srcdir"/$pkgname-tmpfiles.conf "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
  }
-
-
-############# Stripped diff below #################
-
-
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -8,9 +8,7 @@
- --localstatedir=/var \
- --enable-heimdal-krb5 \
- --enable-reproducible-builds \
----without-rlm_python \
- --with-regex=false \
----with-rlm_python3 \
- --with-system-libltdl \
- --with-system-libtool \
- --with-udpfromto

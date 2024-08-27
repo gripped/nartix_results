@@ -1209,6 +1209,7 @@ kglobalaccel5
 kglobalacceld
 kgoldrunner
 kgpg
+kgraphviewer
 kguiaddons
 kguiaddons5
 khangman
@@ -1880,6 +1881,7 @@ libvpx
 libvterm
 libwacom
 libwapcaplet
+libwebp
 libwebsockets
 libwhereami
 libwhich
@@ -2124,6 +2126,7 @@ ruby-marisa
 markdownpart
 marked-man
 marked
+massif-visualizer
 mat2
 mate-applets
 mate-backgrounds
@@ -4390,7 +4393,6 @@ qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
-quadrapassel
 quilt
 quota-tools
 qutebrowser
@@ -4407,7 +4409,6 @@ rapidjson
 raptor
 rasqal
 rav1e
-rawtherapee
 razor
 rccl
 rclone
@@ -4701,7 +4702,6 @@ ruby-regexp_parser
 ruby-regexp_property_values
 ruby-reline
 ruby-rexml
-ruby-ronn-ng
 ruby-rr
 ruby-rspec-core
 ruby-rspec-expectations
@@ -5283,6 +5283,7 @@ vde2
 vdpauinfo
 veracrypt
 verdict
+vice
 vid.stab
 viewnior
 vifm
