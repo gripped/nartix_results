@@ -317,6 +317,7 @@ signal-desktop
 stalonetray
 telegram-desktop
 terminus-font
+termshark
 tesseract-data
 tesseract
 tesseract-data-afr

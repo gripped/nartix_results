@@ -1,50 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,35 @@
- 
- pkgbase=jsonrpc-glib
--pkgname=(
--  jsonrpc-glib
--  jsonrpc-glib-docs
--)
--pkgver=3.44.1
-+pkgname=(jsonrpc-glib jsonrpc-glib-docs)
-+pkgver=3.44.0
- pkgrel=1
--pkgdesc="JSON-RPC / GVariant RPC library for GLib"
-+pkgdesc="A JSON-RPC library for GLib"
- url="https://gitlab.gnome.org/GNOME/jsonrpc-glib"
- arch=(x86_64)
--license=(LGPL-2.1-or-later)
--depends=(
--  gcc-libs
--  glib2
--  glibc
--  json-glib
--)
-+license=(LGPL)
-+depends=(json-glib)
- makedepends=(
-   gi-docgen
-   git
--  glib2-devel
-   gobject-introspection
-   meson
-   vala
- )
--source=("git+https://gitlab.gnome.org/GNOME/jsonrpc-glib.git#tag=$pkgver")
--b2sums=('a7a1f74165bf8f8124f15f10b30d67cf9be724662d687e73a5320a4e1b82ebd29453898b0de6614b6ca8a227769f26ab5de8dbaf8a4c2071e10299224fd047ea')
-+_commit=89f25f9789b8323c6c06ac086d1fba2836113f16  # tags/3.44.0^0
-+source=("git+https://gitlab.gnome.org/GNOME/jsonrpc-glib.git#commit=$_commit")
-+b2sums=('SKIP')
-+
-+pkgver() {
-+  cd $pkgname
-+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-+}
- 
- prepare() {
-   cd $pkgname
+@@ -32,7 +32,7 @@
  }
  
  build() {
@@ -57,19 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,10 +1,6 @@
- 
--gcc-libs
- gi-docgen
- git
--glib2
--glib2-devel
--glibc
- gobject-introspection
- json-glib
- meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

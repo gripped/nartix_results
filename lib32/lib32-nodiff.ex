@@ -175,4 +175,5 @@ lib32-zlib
 lib32-zstd
 multilib-devel
 steam
+wine-staging
 winetricks

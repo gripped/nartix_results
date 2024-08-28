@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,36 +1,33 @@
+ pkgname=cpio
+ pkgver=2.15
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A tool to copy files into or out of a cpio or tar archive"
+ arch=(x86_64)
+ license=('GPL-3.0-or-later')
+ url="https://www.gnu.org/software/cpio"
+ depends=('glibc')
+-makedepends=('git' 'rsync' 'wget')
+-source=(git+https://git.savannah.gnu.org/git/cpio.git?signed#tag=v${pkgver})
+-b2sums=('SKIP')
++source=(https://ftp.gnu.org/gnu/cpio/cpio-${pkgver}.tar.gz{,.sig})
++sha256sums=('efa50ef983137eefc0a02fdb51509d624b5e3295c980aa127ceee4183455499e'
++            'SKIP')
+ validpgpkeys=('325F650C4C2B6AD58807327A3602B07F55D0C732') # Sergey Poznyakoff <gray@gnu.org>
+ 
+-prepare() {
+-  cd "${pkgname}"
+-  ./bootstrap
+-}
+-
+ build() {
+-  cd "${pkgname}"
++  cd ${pkgname}-${pkgver}
+   CFLAGS+=' -fcommon' # https://wiki.gentoo.org/wiki/Gcc_10_porting_notes/fno_common
+   ./configure --prefix=/usr --mandir=/usr/share/man
+   make
+ }
+ 
+ check() {
+-  cd "${pkgname}"
++  cd ${pkgname}-${pkgver}
+   make check
+ }
+ 
+ package() {
+-  cd "${pkgname}"
++  cd ${pkgname}-${pkgver}
+   make DESTDIR="${pkgdir}" install
+-  rm -r "${pkgdir}"/usr/libexec
+-  rm -r "${pkgdir}"/usr/share/man/man8
++  rm -f "${pkgdir}/usr/bin/mt" "${pkgdir}/pkg/usr/share/man/man1/mt.1"
++  rm -rf "${pkgdir}/usr/libexec"
++  rm -f "${pkgdir}/usr/share/man/man8/rmt.8"
++  rm "$pkgdir/usr/share/info/dir"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1 @@
+-git
+ glibc
+-rsync
+-wget
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,5 @@
+-prepare() {
+-cd "${pkgname}"
+-./bootstrap
+-}
+ build() {
+-cd "${pkgname}"
++cd ${pkgname}-${pkgver}
+ CFLAGS+=' -fcommon' # https://wiki.gentoo.org/wiki/Gcc_10_porting_notes/fno_common
+ ./configure --prefix=/usr --mandir=/usr/share/man
+ make

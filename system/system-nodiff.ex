@@ -28,6 +28,7 @@ diffutils
 ding-libs
 dmraid
 dnssec-anchors
+dosfstools
 ed
 efibootmgr
 efivar

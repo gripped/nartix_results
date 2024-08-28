@@ -57,6 +57,8 @@ moksha-artix
 moksha-background-artix-classic
 moksha-efl-programs
 moksha-help
+moksha-icon-themes-basic
+moksha-icon-themes-extra
 moksha-icon-themes
 moksha-menu
 moksha-module-alarm

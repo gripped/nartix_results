@@ -50,8 +50,8 @@ libcolord
 conky
 conmon
 connman
-containerd
 convertlit
+cpio
 cppcheck
 crun
 cups
@@ -390,7 +390,6 @@ mutter45
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
-nauty
 nbd
 ndctl
 ndisc6
@@ -627,7 +626,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-rawtherapee
 rdma-core
 redis
 redshift
@@ -640,7 +638,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-ronn-ng
 samba
 libwbclient
 smbclient
@@ -666,6 +663,7 @@ sssd
 step-cli
 strongswan
 stunnel
+subversion
 supermin
 sway
 swayidle

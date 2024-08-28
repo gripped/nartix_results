@@ -7,7 +7,6 @@ btrfs-progs
 dbus
 dbus-docs
 dhcpcd
-dosfstools
 e2fsprogs
 fuse2fs
 fakeroot

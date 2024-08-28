@@ -360,13 +360,13 @@ composable-kernel
 composefs
 confuse
 consul
+containerd
 containers-common
 coordgen
 copr-cli
 corrosion
 coturn
 couchdb
-cpio
 cpp-hocon
 cppdap
 cppunit
@@ -2256,6 +2256,7 @@ namcap
 nanobind
 nanosvg
 nasm
+nauty
 nawk
 nccl
 ncdu
@@ -4409,6 +4410,7 @@ rapidjson
 raptor
 rasqal
 rav1e
+rawtherapee
 razor
 rccl
 rclone
@@ -4603,6 +4605,7 @@ ruby-json-schema
 ruby-json
 ruby-jwt
 ruby-kpeg
+ruby-kramdown-parser-gfm
 ruby-kramdown
 ruby-lemon
 ruby-locale
@@ -4702,6 +4705,7 @@ ruby-regexp_parser
 ruby-regexp_property_values
 ruby-reline
 ruby-rexml
+ruby-ronn-ng
 ruby-rr
 ruby-rspec-core
 ruby-rspec-expectations
@@ -4940,7 +4944,6 @@ strace
 strawberry
 strip-nondeterminism
 stubby
-subversion
 sugar-datastore
 suil
 suil-docs
@@ -5183,6 +5186,7 @@ tllist
 tlp
 tlp-rdw
 tmuxp
+tnftp
 tokodon
 tomlplusplus
 torbrowser-launcher
@@ -5311,6 +5315,7 @@ vkd3d
 vmaf
 vncdotool
 vnstat
+vokoscreen
 volatility3
 volume_key
 python-volume_key
