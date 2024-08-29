@@ -200,7 +200,6 @@ libmgba
 mgba-sdl
 mgba-qt
 mimalloc
-mokutil
 mousepad
 mozo
 muffin

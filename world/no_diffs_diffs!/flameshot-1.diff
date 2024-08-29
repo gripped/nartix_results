@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=flameshot
+ pkgver=12.1.0
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Powerful yet simple to use screenshot software"
+ arch=('x86_64')
+ url="https://github.com/flameshot-org/flameshot"
+-license=('GPL-3.0-or-later')
++license=('GPL')
+ depends=('qt5-svg' 'hicolor-icon-theme' 'kguiaddons5')
+-makedepends=('qt5-tools' 'cmake')
++makedepends=('make' 'qt5-tools' 'cmake')
+ optdepends=(
+     'gnome-shell-extension-appindicator: for system tray icon if you are using Gnome'
+     'grim: for wlroots wayland support'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ cmake
+ hicolor-icon-theme
+ kguiaddons5
++make
+ qt5-svg
+ qt5-tools

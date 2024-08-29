@@ -22,6 +22,7 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
+mokutil
 mpd
 nushell
 nvidia-390xx-utils

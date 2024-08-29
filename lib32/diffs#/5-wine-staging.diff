@@ -1,0 +1,88 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+   desktop-file-utils
+ )
+ 
+-makedepends=(autoconf bison perl flex mingw-w64-gcc
++makedepends=(autoconf bison perl flex
+   giflib                lib32-giflib
+   gnutls                lib32-gnutls
+   libxinerama           lib32-libxinerama
+@@ -100,7 +100,7 @@
+ }
+ 
+ build() {
+-  export CFLAGS="$CFLAGS -ffat-lto-objects -Wno-error=incompatible-pointer-types"
++  export CLFAGS="$CFLAGS -fPIC -ffat-lto-objects -Wno-error=incompatible-pointer-types"
+ 
+   export CROSSCFLAGS="-O2 -pipe"
+   export CROSSCXXFLAGS="-O2 -pipe"
+@@ -120,7 +120,7 @@
+     --enable-win64 \
+     --with-xattr
+ 
+-  make
++  make CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
+ 
+   msg2 "Building Wine-32..."
+ 
+@@ -135,7 +135,7 @@
+     --libdir=/usr/lib32 \
+     --with-wine64="$srcdir/$pkgname-64-build"
+ 
+-  make
++  make CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
+ }
+ 
+ package() {
+@@ -157,7 +157,5 @@
+   ln -s ../conf.avail/30-win32-aliases.conf "$pkgdir/usr/share/fontconfig/conf.default/30-win32-aliases.conf"
+   install -Dm 644 "$srcdir/wine-binfmt.conf" "$pkgdir/usr/lib/binfmt.d/wine.conf"
+ 
+-  i686-w64-mingw32-strip --strip-unneeded "$pkgdir"/usr/lib32/wine/i386-windows/*.dll
+-  x86_64-w64-mingw32-strip --strip-unneeded "$pkgdir"/usr/lib/wine/x86_64-windows/*.dll
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -52,7 +52,6 @@
+ libxxf86vm
+ mesa
+ mesa-libgl
+-mingw-w64-gcc
+ opencl-headers
+ opencl-icd-loader
+ perl
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ ../wine-staging-$_pkgbasever/staging/patchinstall.py --all
+ }
+ build() {
+-export CFLAGS="$CFLAGS -ffat-lto-objects -Wno-error=incompatible-pointer-types"
++export CLFAGS="$CFLAGS -fPIC -ffat-lto-objects -Wno-error=incompatible-pointer-types"
+ export CROSSCFLAGS="-O2 -pipe"
+ export CROSSCXXFLAGS="-O2 -pipe"
+ export CROSSLDFLAGS="-Wl,-O1"
+@@ -21,7 +21,7 @@
+ --with-gstreamer \
+ --enable-win64 \
+ --with-xattr
+-make
++make CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
+ msg2 "Building Wine-32..."
+ export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+ cd "$srcdir/$pkgname-32-build"
+@@ -33,5 +33,5 @@
+ --with-xattr \
+ --libdir=/usr/lib32 \
+ --with-wine64="$srcdir/$pkgname-64-build"
+-make
++make CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
+ }

@@ -1189,7 +1189,6 @@ kdsoap-qt6
 keditbookmarks
 keepassxc
 kemoticons
-kexec-tools
 keybinder2
 libkeybinder2
 keychain
@@ -4414,7 +4413,6 @@ rawtherapee
 razor
 rccl
 rclone
-rdfind
 re2
 re2c
 rebar

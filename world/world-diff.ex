@@ -248,6 +248,7 @@ openjdk8-doc
 jedi-language-server
 js78
 kcoreaddons
+kexec-tools
 kgamma
 kismet
 kitty
@@ -626,6 +627,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+rdfind
 rdma-core
 redis
 redshift
