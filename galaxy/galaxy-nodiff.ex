@@ -9,6 +9,7 @@ avidemux-cli
 avidemux-qt
 blender
 blueman
+box2d
 caja-extensions
 caja-extensions-common
 caja-image-converter
@@ -125,12 +126,6 @@ lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
-linux-rt-lts
-linux-rt-lts-headers
-linux-rt-lts-docs
-linux-rt
-linux-rt-headers
-linux-rt-docs
 linux-zen
 linux-zen-headers
 linux-zen-docs
@@ -200,6 +195,7 @@ libmgba
 mgba-sdl
 mgba-qt
 mimalloc
+mokutil
 mousepad
 mozo
 muffin

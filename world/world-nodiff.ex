@@ -270,6 +270,8 @@ cbatticon
 cbindgen
 ccache
 cdparanoia
+cdrdao
+gcdmaster
 cdrtools
 certbot-apache
 certbot-dns-cloudflare
@@ -367,6 +369,7 @@ copr-cli
 corrosion
 coturn
 couchdb
+cpio
 cpp-hocon
 cppdap
 cppunit
@@ -456,6 +459,7 @@ docbook-utils
 docbook-xml
 docbook-xsl
 docbook2x
+docbook5-xml
 docker-buildx
 docker-compose
 doctest
@@ -480,6 +484,7 @@ duktape
 dump_syms
 dune
 duplicity
+dvd-rw-tools
 dvdauthor
 dvisvgm
 dzen2
@@ -1189,6 +1194,7 @@ kdsoap-qt6
 keditbookmarks
 keepassxc
 kemoticons
+kexec-tools
 keybinder2
 libkeybinder2
 keychain
@@ -1478,6 +1484,7 @@ libbsd
 libburn
 libbytesize
 libcaca
+libcacard
 libcbor
 libcddb
 libcdio-paranoia
@@ -1538,6 +1545,7 @@ libesmtp
 libetebase
 libev
 libevdev
+libewf
 libexif
 libexttextcat
 libfabric
@@ -1838,7 +1846,6 @@ libteam-docs
 libtermkey
 libthai
 libtheora
-libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -2873,11 +2880,6 @@ postgrey
 postorius
 potrace
 povray
-powerline
-python-powerline
-powerline-common
-powerline-vim
-powerline-fonts
 powertop
 poxml
 pps-tools
@@ -4286,6 +4288,7 @@ python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
+python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4413,6 +4416,7 @@ rawtherapee
 razor
 rccl
 rclone
+rdfind
 re2
 re2c
 rebar
@@ -4942,6 +4946,7 @@ strace
 strawberry
 strip-nondeterminism
 stubby
+subversion
 sugar-datastore
 suil
 suil-docs
@@ -5348,6 +5353,7 @@ webp-pixbuf-loader
 webrtc-audio-processing-1
 webrtc-audio-processing
 weechat
+wf-recorder
 wget
 whois
 wildmidi

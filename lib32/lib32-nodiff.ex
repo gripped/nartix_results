@@ -96,7 +96,6 @@ lib32-libssh2
 lib32-libtasn1
 lib32-libthai
 lib32-libtheora
-lib32-libtiff
 lib32-libtirpc
 lib32-libunistring
 lib32-libunwind

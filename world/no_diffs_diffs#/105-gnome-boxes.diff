@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -64,7 +64,7 @@
+@@ -66,7 +66,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
- git -c protocol.file.allow=always -c protocol.allow=never submodule update
+@@ -7,6 +7,6 @@
+ git apply -3 ../gnome-boxes-derived-from.patch
  }
  build() {
 -arch-meson $pkgname build

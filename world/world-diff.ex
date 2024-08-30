@@ -36,7 +36,6 @@ brltty
 brltty-udev-generic
 btop
 bumblebee
-cdrdao
 cgmanager
 chromium-bsu
 chrony
@@ -51,7 +50,6 @@ conky
 conmon
 connman
 convertlit
-cpio
 cppcheck
 crun
 cups
@@ -69,7 +67,6 @@ dovecot
 dracut
 drkonqi
 dunst
-dvd-rw-tools
 earlyoom
 edk2
 edk2-shell
@@ -248,7 +245,6 @@ openjdk8-doc
 jedi-language-server
 js78
 kcoreaddons
-kexec-tools
 kgamma
 kismet
 kitty
@@ -276,7 +272,6 @@ libblockdev-nvme
 libblockdev-part
 libblockdev-swap
 python-libblockdev
-libcacard
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -290,7 +285,6 @@ libei-docs
 libepoxy
 libepoxy-docs
 libetonyek
-libewf
 libfido2
 libfprint
 libgdata
@@ -307,6 +301,7 @@ libprocps
 libsidplay
 libsidplayfp
 libtg_owt
+libtiff
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -373,6 +368,7 @@ vulkan-nouveau
 vulkan-radeon
 vulkan-swrast
 vulkan-virtio
+mesa-docs
 mgba
 libmgba
 mgba-sdl
@@ -502,6 +498,11 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+powerline
+python-powerline
+powerline-common
+powerline-vim
+powerline-fonts
 proxytunnel
 pulseaudio
 libpulse
@@ -530,7 +531,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-zope-testrunner
 qastools
 qemu
 qemu-common
@@ -627,7 +627,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-rdfind
 rdma-core
 redis
 redshift
@@ -665,7 +664,6 @@ sssd
 step-cli
 strongswan
 stunnel
-subversion
 supermin
 sway
 swayidle
@@ -737,7 +735,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wf-recorder
 wireplumber
 libwireplumber
 wireplumber-docs

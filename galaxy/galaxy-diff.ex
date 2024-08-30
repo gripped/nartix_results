@@ -1,5 +1,4 @@
 alacritty
-box2d
 cinnamon-desktop
 ecrire
 efl
@@ -12,6 +11,12 @@ gpicview
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
+linux-rt
+linux-rt-headers
+linux-rt-docs
 lxpanel
 lxqt-themes
 lxsession
@@ -22,7 +27,6 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
-mokutil
 mpd
 nushell
 nvidia-390xx-utils

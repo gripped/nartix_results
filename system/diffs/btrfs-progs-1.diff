@@ -1,37 +1,35 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -4,9 +4,9 @@
- pkgrel=1
+ pkgrel=2
  pkgdesc='Btrfs filesystem utilities'
  arch=('x86_64')
 -makedepends=('git' 'asciidoc' 'xmlto' 'systemd' 'python' 'python-setuptools' 'e2fsprogs'
 +makedepends=('git' 'asciidoc' 'xmlto' 'udev' 'python' 'python-setuptools' 'e2fsprogs'
-              'reiserfsprogs' 'python-sphinx' 'python-sphinx_rtd_theme')
+              'python-sphinx' 'python-sphinx_rtd_theme')
 -depends=('glibc' 'util-linux-libs' 'lzo' 'zlib' 'zstd' 'libgcrypt' 'systemd-libs')
 +depends=('glibc' 'util-linux-libs' 'lzo' 'zlib' 'zstd' 'libgcrypt' 'libudev')
  optdepends=('python: libbtrfsutil python bindings'
-             'e2fsprogs: btrfs-convert'
-             'reiserfsprogs: btrfs-convert')
-@@ -19,17 +19,12 @@
- source=("https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$pkgver.tar."{sign,xz}
+             'e2fsprogs: btrfs-convert')
+ url='https://btrfs.readthedocs.io'
+@@ -18,15 +18,10 @@
+ source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git?signed#tag=v${pkgver}"
          'initcpio-install-btrfs'
          'initcpio-hook-btrfs'
 -        'btrfs-scrub@.service'
 -        'btrfs-scrub@.timer'
        )
 -install=btrfs-progs.install
- options=(!staticlibs)
- sha256sums=('SKIP'
-             '25684696bc5b5d07c98f19d4bf7a48b53ab94870ca4c468a68af3df9e2c8a35e'
-             'bbe60b35d1b1e2efc1308a8f54f1fdc6808240a81c5f5b4d75321b7ee86e41f4'
--            '35efeee8590d6d60c711ae9cdc918e4841ab61d10cb02359e65e36ebff95ffc5'
--            'eaa7af92d28bfa8940bb551560fd7be777f9f175292eaa72b5f6ef00fb240252'
--            '9a0b6cc23f7bd97b83b6c38dd2b4e4373fead8bd3ccfb82a47c72971e9d6f8ad')
-+            '35efeee8590d6d60c711ae9cdc918e4841ab61d10cb02359e65e36ebff95ffc5')
+ b2sums=('2704650efc795e8e01670306959781cf10d9837da227ffb15ffcd81d09751c8070e01edd834287c65fcb25dd0889a5060c36fc033affd32160b37c27270e137c'
+         '75659665a24f92bba1175a2fcae942d9851495c9cff88570b88a98dced4eb98fcc9879de044bfc7d560dbe1c71a20d7ae51ca4b7c2649f90d646b414e0864b6e'
+-        '0d3c25d0cb6fdb8e8777723b5e199835fac25573bc8f7fcb248ccfeea7268752b7100dd2c8284529812f0b1d3943eceb5785f119959f89bffedcf30472a915db'
+-        '4408d0f81634c99f874a2dde8fc289f61d9e00d5c2d2efd465bcc90db69112604ec987a46858f48c0c2ce1cb4499de1355ad4baf847a74b40c148f8d7a516d22'
+-        '9601b31936e1c4b69e6be517f545c6520302fa946eb3203e2d50bd85e918c87a9512e3b40d4e8cee6b9ae4a3fe9fbde26052305beec10fa2c49732a08d1f6753')
++        '0d3c25d0cb6fdb8e8777723b5e199835fac25573bc8f7fcb248ccfeea7268752b7100dd2c8284529812f0b1d3943eceb5785f119959f89bffedcf30472a915db')
  
  prepare() {
-   cd $pkgname-v$pkgver
-@@ -64,7 +59,5 @@
+   cd $pkgname
+@@ -62,7 +57,5 @@
    install -Dm644 initcpio-install-btrfs "$pkgdir/usr/lib/initcpio/install/btrfs"
    install -Dm644 initcpio-hook-btrfs "$pkgdir/usr/lib/initcpio/hooks/btrfs"
  
@@ -45,7 +43,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,14 +3,14 @@
+@@ -3,13 +3,13 @@
  git
  glibc
  libgcrypt
@@ -55,7 +53,6 @@
  python-setuptools
  python-sphinx
  python-sphinx_rtd_theme
- reiserfsprogs
 -systemd
 -systemd-libs
 +udev
