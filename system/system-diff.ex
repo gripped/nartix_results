@@ -27,7 +27,6 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-groff
 gssproxy
 iputils
 libusb
@@ -51,7 +50,6 @@ libp11-kit
 p11-kit-docs
 pam
 pambase
-pciutils
 ppp
 procps-ng
 rpcbind

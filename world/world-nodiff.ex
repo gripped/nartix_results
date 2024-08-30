@@ -1835,8 +1835,6 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
-libssh
-libssh-docs
 libstaroffice
 libstatgrab
 libsysstat
@@ -2161,6 +2159,7 @@ mathjax2
 matterbridge
 maturin
 python-maturin
+maven
 mbedtls
 mbedtls2
 mbox-importer
@@ -2880,6 +2879,11 @@ postgrey
 postorius
 potrace
 povray
+powerline
+python-powerline
+powerline-common
+powerline-vim
+powerline-fonts
 powertop
 poxml
 pps-tools
@@ -5293,7 +5297,6 @@ verdict
 vice
 vid.stab
 viewnior
-vifm
 vigra
 python-vigra
 vim
@@ -5342,6 +5345,7 @@ wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
 wasi-libc++abi
+wasm-component-ld
 wavpack
 wayland-protocols
 wayland-utils

@@ -300,6 +300,8 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
+libssh
+libssh-docs
 libtg_owt
 libtiff
 libudev0-shim
@@ -354,7 +356,6 @@ mate-session-manager
 mate-system-monitor
 mate-user-share
 matrix-synapse
-maven
 media-player-info
 memcached
 mesa
@@ -498,11 +499,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-powerline
-python-powerline
-powerline-common
-powerline-vim
-powerline-fonts
 proxytunnel
 pulseaudio
 libpulse
@@ -718,13 +714,13 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
+vifm
 vlc
 vpnc
 vte3
 vte-common
 vte4
 vte-docs
-wasm-component-ld
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
