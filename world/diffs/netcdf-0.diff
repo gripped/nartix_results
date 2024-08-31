@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=netcdf
+ pkgver=4.9.2
+-pkgrel=5
++pkgrel=4
+ pkgdesc="network Common Data Form interface for array-oriented data access and corresponding library"
+ arch=(x86_64)
+ url="https://www.unidata.ucar.edu/software/netcdf/"
+@@ -23,7 +23,6 @@
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_LIBDIR=lib \
+     -DCMAKE_BUILD_TYPE=Release \
+-    -DPLUGIN_INSTALL_DIR=/usr/lib/hdf5/plugin \
+     -DENABLE_BYTERANGE=ON \
+     -DENABLE_CDF5=ON \
+     -DENABLE_DAP_LONG_TESTS=ON \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_INSTALL_LIBDIR=lib \
+ -DCMAKE_BUILD_TYPE=Release \
+--DPLUGIN_INSTALL_DIR=/usr/lib/hdf5/plugin \
+ -DENABLE_BYTERANGE=ON \
+ -DENABLE_CDF5=ON \
+ -DENABLE_DAP_LONG_TESTS=ON \

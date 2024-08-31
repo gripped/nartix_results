@@ -3,7 +3,7 @@
 @@ -1,9 +1,9 @@
  
  
- pkgname=libtool
+ pkgname=lib32-libltdl
 -pkgver=2.5.2+r1+g2fe3a3e2
 -_commit=2fe3a3e2a954adcbfb1139d780bec47b85ef6077
 -pkgrel=1
@@ -11,16 +11,9 @@
 +_commit=1354176bbbc939a7d07a0dcf9b2d92e2ac6bcfef
 +pkgrel=2
  _gccver=14.2.1
- pkgdesc='A generic library support script'
+ pkgdesc='A generic library support script (32-bit)'
  arch=(x86_64)
-@@ -15,20 +15,21 @@
- provides=("libltdl=$pkgver" "libtool-multilib=$pkgver")
- conflicts=(libltdl libtool-multilib)
- replaces=(libltdl libtool-multilib)
-+options=(debug)
- source=(
-   git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
-   git+https://git.savannah.gnu.org/git/gnulib.git
+@@ -21,7 +21,7 @@
    gnulib-bootstrap::git+https://github.com/gnulib-modules/bootstrap.git
    disable-lto-link-order2.patch
  )
@@ -29,11 +22,3 @@
          'SKIP'
          'SKIP'
          '9d1e0460b9ef56ba33ac498814b409d1b1d7c3e8ed41a3aed2a86d86341ed7051ca88a5adfa92bd87da968460514230058c3d490b58537d95722e68d7d1687ff')
- 
- pkgver() {
-   cd libtool
--  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
-+  git describe --tags | sed 's/-/+/g;s/^v//'
- }
- 
- prepare() {

@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-aws-xray-sdk
+ _pkgname=aws-xray-sdk-python
+ pkgver=2.14.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='AWS X-Ray SDK for Python'
+ arch=(any)
+ url='https://github.com/aws/aws-xray-sdk-python'
+@@ -10,7 +10,8 @@
+ depends=(python python-botocore python-wrapt)
+ _optdepends_tested=(python-aiobotocore python-bottle
+                     python-flask python-mysql-connector
+-                    python-psycopg2 python-pymongo)
++                    python-psycopg2 python-pymongo
++                    python-sqlalchemy)
+ _optdepends_untested=(python-aiohttp python-django python-httpx python-pymysql python-pynamodb python-requests)
+ optdepends=(${_optdepends_tested[@]} ${_optdepends_untested[@]})
+ makedepends=(git python-build python-installer python-setuptools python-wheel)
+@@ -72,7 +73,6 @@
+     --ignore tests/ext/sqlalchemy_core
+     --ignore tests/ext/django
+     --ignore tests/ext/pynamodb
+-    --ignore tests/ext/sqlalchemy
+   )
+ 
+   pytest -v tests ${_pytest_common_flags[@]} ${_pytest_core_flags[@]}

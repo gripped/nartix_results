@@ -104,6 +104,7 @@ freerdp2
 fwupd-efi
 fwupd
 fwupd-docs
+gajim
 gala
 gamemode
 gamescope
@@ -395,6 +396,7 @@ nbd
 ndctl
 ndisc6
 netavark
+netcdf
 netplan
 networkmanager
 libnm
@@ -520,7 +522,9 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-dask
 python-intelhex
+python-pandas
 python-pymupdf
 python-pyopencl
 pyopencl-headers

@@ -641,7 +641,6 @@ fuse-common
 futuresql
 fwknop
 fzf
-gajim
 galculator
 garcon
 gcab
@@ -2285,7 +2284,6 @@ neovim-qt
 neovim
 net-snmp
 netcdf-fortran
-netcdf
 netcf
 netpbm
 netsurf-buildsystem
@@ -3186,7 +3184,6 @@ python-d2to1
 python-daemonize
 python-daiquiri
 python-dask-expr
-python-dask
 python-databases
 python-dateutil
 python-dbus-deviation
@@ -3655,7 +3652,6 @@ python-packaging
 python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
-python-pandas
 python-pandocfilters
 python-parameterized
 python-paramiko

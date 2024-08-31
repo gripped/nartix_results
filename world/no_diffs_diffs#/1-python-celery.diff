@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,12 +1,12 @@
+ 
+ pkgname=python-celery
+-pkgver=5.4.0
+-pkgrel=1
++pkgver=5.3.6
++pkgrel=2
+ pkgdesc='Distributed Asynchronous Task Queue'
  arch=('any')
  url='http://celeryproject.org/'
  license=('BSD-3-Clause')
@@ -19,12 +26,21 @@
 -        celery@.service celery.tmpfiles.d)
 +         celery.tmpfiles.d)
  options=('!emptydirs')
- sha512sums=('169fa01c72f4d4932a255f4e7a547d1cc24f6899540414950c37e487163127bd3681b9ad741e9b1375c8a0b2b566b7467448e4523c77b34d29b3873007fb6885'
+-sha512sums=('e59b62878f7da0af79be13df816e899c948f71f1063643baaabc1244dd44fd3114a5b3d724c010307ca8091c6b4343a4322213bc6154b843b79893b8f772476c'
 -            '3c6c9dbdacca2de12d49c03526b34797fd867c14d04115af0d1fda64d2848a5d3f64ceb6d284be319a81d932dc86e69c157b6f5f859f2fa213fc2f43a6052c65'
++sha512sums=('169fa01c72f4d4932a255f4e7a547d1cc24f6899540414950c37e487163127bd3681b9ad741e9b1375c8a0b2b566b7467448e4523c77b34d29b3873007fb6885'
              '67279b75c3b44d065811c9c90aee006296164000912d5bb97c74956b26ee4ad4f0847e846052a896d379848b869c849300367e676d3f689cf29e3a0c7ae5310b')
  
  build() {
-@@ -49,7 +48,6 @@
+@@ -42,7 +41,6 @@
+   python -m pytest \
+     --deselect t/unit/apps/test_multi.py \
+     --deselect t/unit/bin/test_multi.py \
+-    --ignore t/unit/backends/test_gcs.py \
+     --deselect t/unit/backends/test_mongodb.py \
+     --deselect t/unit/concurrency/test_eventlet.py
+ }
+@@ -50,7 +48,6 @@
  package() {
    cd celery-$pkgver
    python -m installer --destdir="$pkgdir" dist/*.whl
