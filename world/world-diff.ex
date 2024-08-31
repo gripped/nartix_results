@@ -244,6 +244,8 @@ openjdk8-src
 openjdk8-doc
 jedi-language-server
 js78
+json-glib
+json-glib-docs
 kcoreaddons
 kgamma
 kismet
@@ -295,6 +297,7 @@ libhandy-docs
 libhandy0
 libinput
 libldm
+liblqr
 libmspub
 libnvme
 libprocps
@@ -490,6 +493,7 @@ plocate
 plymouth
 podman
 podman-docker
+polari
 polkit
 postgresql-old-upgrade
 postgresql
@@ -714,7 +718,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
-vifm
 vlc
 vpnc
 vte3

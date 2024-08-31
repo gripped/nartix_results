@@ -1037,8 +1037,6 @@ js102
 js115
 js91
 jshon
-json-glib
-json-glib-docs
 jsoncpp
 jsoncpp-doc
 jsonrpc-glib
@@ -1663,7 +1661,6 @@ libliftoff
 liblo
 liblo-docs
 liblouis
-liblqr
 liblrdf
 libltc
 libluv
@@ -2850,7 +2847,6 @@ poco
 podofo-0.9
 podofo
 podofo-tools
-polari
 polkit-gnome
 polkit-kde-agent
 polkit-qt
@@ -5297,6 +5293,7 @@ verdict
 vice
 vid.stab
 viewnior
+vifm
 vigra
 python-vigra
 vim

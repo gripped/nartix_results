@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,25 @@
+ 
+ pkgname=liblqr
+-pkgver=0.4.3
+-pkgrel=1
++pkgver=0.4.2
++pkgrel=4
+ pkgdesc='A seam-carving C/C++ library called Liquid Rescale'
+ arch=(x86_64)
+ url='https://liblqr.wikidot.com/'
+ license=(GPL-3.0-or-later)
+ depends=(glib2
+          glibc)
+-makedepends=(git)
+-source=(git+https://github.com/carlobaldassi/liblqr#tag=v$pkgver)
+-sha256sums=('1b1d26ab3138b0ec34062c3f1b8cd808d5c7a85e37fdbb9c6fd6722f52b2122d')
++source=(https://liblqr.wikidot.com/local--files/en:download-page/$pkgname-1-$pkgver.tar.bz2)
++sha256sums=('173a822efd207d72cda7d7f4e951c5000f31b10209366ff7f0f5972f7f9ff137')
+ options=(!emptydirs)
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-1-$pkgver
+   ./configure \
+     --prefix=/usr
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-1-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-git
+ glib2
+ glibc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd $pkgname
++cd $pkgname-1-$pkgver
+ ./configure \
+ --prefix=/usr
+ make

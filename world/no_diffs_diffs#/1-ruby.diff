@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
-   ruby-stdlib
- )
- pkgver=3.2.4
--pkgrel=1
-+pkgrel=1.2
- pkgdesc='An object-oriented language for quick and easy programming'
- url='https://www.ruby-lang.org/en/'
- arch=(x86_64)
-@@ -46,7 +46,6 @@
+@@ -41,7 +41,6 @@
  _bootstrap=0
  _rubyver="${pkgver:0:3}.0"
  _bundled_gems=(
@@ -17,7 +8,7 @@
    matrix
    minitest
    net-ftp
-@@ -331,6 +330,7 @@
+@@ -318,6 +317,7 @@
    replaces=(ruby-bundledgems)
    conflicts=(ruby-bundledgems)
    depends=("${_bundled_gems[@]/#/ruby-}")
