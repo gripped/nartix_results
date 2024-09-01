@@ -202,6 +202,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -641,6 +642,7 @@ fuse-common
 futuresql
 fwknop
 fzf
+gajim
 galculator
 garcon
 gcab
@@ -1660,6 +1662,7 @@ libliftoff
 liblo
 liblo-docs
 liblouis
+liblqr
 liblrdf
 libltc
 libluv
@@ -1831,6 +1834,8 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
+libssh
+libssh-docs
 libstaroffice
 libstatgrab
 libsysstat
@@ -2284,6 +2289,7 @@ neovim-qt
 neovim
 net-snmp
 netcdf-fortran
+netcdf
 netcf
 netpbm
 netsurf-buildsystem
@@ -2845,6 +2851,7 @@ poco
 podofo-0.9
 podofo
 podofo-tools
+polari
 polkit-gnome
 polkit-kde-agent
 polkit-qt
@@ -3184,7 +3191,7 @@ python-d2to1
 python-daemonize
 python-daiquiri
 python-dask-expr
-python-databases
+python-dask
 python-dateutil
 python-dbus-deviation
 python-dbus-next
@@ -3594,7 +3601,6 @@ python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
 python-netaddr
-python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
 python-networkx
@@ -3652,6 +3658,7 @@ python-packaging
 python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
+python-pandas
 python-pandocfilters
 python-parameterized
 python-paramiko
@@ -4243,7 +4250,6 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
-python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -5186,7 +5192,6 @@ tlp
 tlp-rdw
 tmuxp
 tnftp
-tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser

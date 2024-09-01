@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -104,7 +103,6 @@ freerdp2
 fwupd-efi
 fwupd
 fwupd-docs
-gajim
 gala
 gamemode
 gamescope
@@ -298,14 +296,11 @@ libhandy-docs
 libhandy0
 libinput
 libldm
-liblqr
 libmspub
 libnvme
 libprocps
 libsidplay
 libsidplayfp
-libssh
-libssh-docs
 libtg_owt
 libtiff
 libudev0-shim
@@ -396,7 +391,6 @@ nbd
 ndctl
 ndisc6
 netavark
-netcdf
 netplan
 networkmanager
 libnm
@@ -495,7 +489,6 @@ plocate
 plymouth
 podman
 podman-docker
-polari
 polkit
 postgresql-old-upgrade
 postgresql
@@ -522,9 +515,9 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
-python-dask
+python-databases
 python-intelhex
-python-pandas
+python-netcdf4
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -535,6 +528,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-xarray
 qastools
 qemu
 qemu-common
@@ -683,6 +677,7 @@ tigervnc
 timew
 tint2
 tmux
+tokodon
 tor
 torsocks
 toxcore

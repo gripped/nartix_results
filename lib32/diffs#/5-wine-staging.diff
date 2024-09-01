@@ -5,19 +5,10 @@
  )
  
 -makedepends=(autoconf bison perl flex mingw-w64-gcc
-+makedepends=(autoconf bison perl flex
++depends=(autoconf bison perl flex
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
-@@ -100,7 +100,7 @@
- }
- 
- build() {
--  export CFLAGS="$CFLAGS -ffat-lto-objects -Wno-error=incompatible-pointer-types"
-+  export CLFAGS="$CFLAGS -fPIC -ffat-lto-objects -Wno-error=incompatible-pointer-types"
- 
-   export CROSSCFLAGS="-O2 -pipe"
-   export CROSSCXXFLAGS="-O2 -pipe"
 @@ -120,7 +120,7 @@
      --enable-win64 \
      --with-xattr
@@ -27,7 +18,7 @@
  
    msg2 "Building Wine-32..."
  
-@@ -135,7 +135,7 @@
+@@ -135,20 +135,20 @@
      --libdir=/usr/lib32 \
      --with-wine64="$srcdir/$pkgname-64-build"
  
@@ -36,6 +27,21 @@
  }
  
  package() {
+   msg2 "Packaging Wine-32..."
+   cd "$srcdir/$pkgname-32-build"
+ 
+-  make prefix="$pkgdir/usr" \
++  make CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC" prefix="$pkgdir/usr" \
+     libdir="$pkgdir/usr/lib32" \
+     dlldir="$pkgdir/usr/lib32/wine" install
+ 
+   msg2 "Packaging Wine-64..."
+   cd "$srcdir/$pkgname-64-build"
+-  make prefix="$pkgdir/usr" \
++  make CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC" prefix="$pkgdir/usr" \
+     libdir="$pkgdir/usr/lib" \
+     dlldir="$pkgdir/usr/lib/wine" install
+ 
 @@ -157,7 +157,5 @@
    ln -s ../conf.avail/30-win32-aliases.conf "$pkgdir/usr/share/fontconfig/conf.default/30-win32-aliases.conf"
    install -Dm 644 "$srcdir/wine-binfmt.conf" "$pkgdir/usr/lib/binfmt.d/wine.conf"
@@ -50,7 +56,56 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -52,7 +52,6 @@
+@@ -1,37 +1,22 @@
+ alsa-lib
+-attr
+ autoconf
+ bison
+-desktop-file-utils
+ ffmpeg
+ flex
+-fontconfig
+-freetype2
+-gcc-libs
+-gettext
+ giflib
+ gnutls
+ gst-plugins-base-libs
+ gtk3
+ lib32-alsa-lib
+-lib32-attr
+-lib32-fontconfig
+-lib32-freetype2
+-lib32-gcc-libs
+-lib32-gettext
+ lib32-giflib
+ lib32-gnutls
+ lib32-gst-plugins-base-libs
+ lib32-gtk3
+ lib32-libcups
+-lib32-libpcap
+ lib32-libpulse
+ lib32-libva
+ lib32-libxcomposite
+-lib32-libxcursor
+-lib32-libxi
+ lib32-libxinerama
+-lib32-libxrandr
+ lib32-libxxf86vm
+ lib32-mesa
+ lib32-mesa-libgl
+@@ -41,18 +26,13 @@
+ lib32-vulkan-icd-loader
+ libcups
+ libgphoto2
+-libpcap
+ libpulse
+ libva
+ libxcomposite
+-libxcursor
+-libxi
+ libxinerama
+-libxrandr
  libxxf86vm
  mesa
  mesa-libgl
@@ -61,15 +116,6 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
- ../wine-staging-$_pkgbasever/staging/patchinstall.py --all
- }
- build() {
--export CFLAGS="$CFLAGS -ffat-lto-objects -Wno-error=incompatible-pointer-types"
-+export CLFAGS="$CFLAGS -fPIC -ffat-lto-objects -Wno-error=incompatible-pointer-types"
- export CROSSCFLAGS="-O2 -pipe"
- export CROSSCXXFLAGS="-O2 -pipe"
- export CROSSLDFLAGS="-Wl,-O1"
 @@ -21,7 +21,7 @@
  --with-gstreamer \
  --enable-win64 \

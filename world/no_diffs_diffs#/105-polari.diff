@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,7 @@
+ }
+ 
+ build() {
+-  arch-meson polari build
++  artix-meson polari build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ git apply -3 ../polari-pointer-device.patch
+ }
+ build() {
+-arch-meson polari build
++artix-meson polari build
+ meson compile -C build
+ }
