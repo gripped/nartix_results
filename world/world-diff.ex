@@ -13,6 +13,8 @@ at-spi2-core
 at-spi2-core-docs
 at
 audacious-plugins
+audacity
+audacity-docs
 autossh
 avahi
 awesome
@@ -28,6 +30,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -36,6 +39,7 @@ brltty-udev-generic
 btop
 bumblebee
 cgmanager
+chatblade
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -255,6 +259,7 @@ knot
 kopeninghours
 ksnip
 ksystemlog
+kwalletmanager
 kwin
 libatasmart
 libayatana-appindicator
@@ -677,7 +682,6 @@ tigervnc
 timew
 tint2
 tmux
-tokodon
 tor
 torsocks
 toxcore

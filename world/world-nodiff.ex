@@ -129,8 +129,6 @@ attica5
 aubio
 python-aubio
 audacious
-audacity
-audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -202,7 +200,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -294,7 +291,6 @@ cervisia
 cfitsio
 cgns
 chafa
-chatblade
 check-jsonschema
 check
 check-docs
@@ -1401,7 +1397,6 @@ kvirc
 kwallet-pam
 kwallet
 kwallet5
-kwalletmanager
 kwave
 kwayland-integration
 kwayland
@@ -5192,6 +5187,7 @@ tlp
 tlp-rdw
 tmuxp
 tnftp
+tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser

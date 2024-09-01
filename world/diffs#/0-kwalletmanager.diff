@@ -2,37 +2,39 @@
 +++ Artix PKGBUILD
 @@ -1,7 +1,7 @@
  
- pkgname=tokodon
+ pkgname=kwalletmanager
  pkgver=24.08.0
 -pkgrel=2
 +pkgrel=1
- pkgdesc='A Mastodon client for Plasma'
- url='https://apps.kde.org/tokodon/'
+ pkgdesc='Wallet management tool'
  arch=(x86_64)
-@@ -32,21 +32,12 @@
- makedepends=(extra-cmake-modules)
+ url='https://apps.kde.org/kwalletmanager5/'
+@@ -31,18 +31,12 @@
+              kdoctools)
  groups=(kde-applications
-         kde-network)
+         kde-utilities)
 -source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
--        https://invent.kde.org/network/tokodon/-/commit/5950882c.patch
--        https://invent.kde.org/network/tokodon/-/commit/469ee232.patch)
+-        https://invent.kde.org/utilities/kwalletmanager/-/commit/9b25d58f.patch)
 +source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
- sha256sums=('24d42173986608608277f17f5687cc25f6c93968c0923945cca27da13ae4078a'
+ sha256sums=('08f900f9ef770b2bc9208781e5dcdb7e0c43f0c7a47a1515b1888f24756542f7'
 -            'SKIP'
--            '29372b75a5d4554363646949e60e2e4b054ce9b2708e3744b0cab3c3bf612378'
--            'c8aef66de6b62cdbaeefec1489bbbeb7c9fe6e9deb78a0d2cc716e815109f5e3')
+-            '461d8d224d0983e521c324e867894c663b0d9ee321eecf2c25304d1ec1770895')
 +            'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
                D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
 -
 -prepare() {
--  patch -d $pkgname-$pkgver -p1 < 5950882c.patch
--  patch -d $pkgname-$pkgver -p1 < 469ee232.patch
+-  patch -d $pkgname-$pkgver -p1 < 9b25d58f.patch # Fix starting application
 -}
  
  build() {
    cmake -B build -S $pkgname-$pkgver \
+@@ -53,4 +47,3 @@
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+ }
+-
 
 
 ############# Stripped diff below #################
@@ -41,10 +43,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,3 @@
+@@ -1,6 +1,3 @@
 -prepare() {
--patch -d $pkgname-$pkgver -p1 < 5950882c.patch
--patch -d $pkgname-$pkgver -p1 < 469ee232.patch
+-patch -d $pkgname-$pkgver -p1 < 9b25d58f.patch # Fix starting application
 -}
  build() {
  cmake -B build -S $pkgname-$pkgver \
