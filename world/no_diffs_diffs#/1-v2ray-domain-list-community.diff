@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=v2ray-domain-list-community
--pkgver=20240829063032
+-pkgver=20240831202649
 +pkgver=20240826041130
  pkgrel=1
  pkgdesc="A list of domains to be used as geosites for routing purpose in Project V"
@@ -12,7 +12,7 @@
  license=('MIT')
  makedepends=('go' 'git')
  source=("git+https://github.com/v2fly/domain-list-community.git#tag=$pkgver")
--sha512sums=('dcd974a46b9c774b6765a6e17410c15d67cbb620eae9ca65d72a3f73be4f1052ba15a9576c0becc0e6cbaed4e6e935a438fc4db78fd534944cebc9e7ac60a812')
+-sha512sums=('e4204eb676ae1c74c8bb61c03d1374c39645072a44026c1ef31d17808c3863b32fcc3e88d3d4d5c97dbde16ef5541f9a016bd27ee2f555472acc34eb5724c76c')
 +sha512sums=('ee111fd2b6cc8d8d02588a8da16410406334e613e7601247ad523ecbf68e6761dcd94b5b5f5b0546e74ee3da6320b0b1d4ca0d957acbfb8791ef6fec9690c435')
  
  build() {

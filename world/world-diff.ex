@@ -521,6 +521,7 @@ pyside6-tools
 shiboken6
 python-anytree
 python-databases
+python-idna
 python-intelhex
 python-netcdf4
 python-pymupdf

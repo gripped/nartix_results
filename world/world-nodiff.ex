@@ -2876,10 +2876,8 @@ postorius
 potrace
 povray
 powerline
-python-powerline
-powerline-common
-powerline-vim
 powerline-fonts
+vim-powerline
 powertop
 poxml
 pps-tools
@@ -3412,7 +3410,6 @@ python-hypothesmith
 python-ibm-db-sa
 python-icecream
 python-identify
-python-idna
 python-ifaddr
 python-ijson
 python-imagesize
