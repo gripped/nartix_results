@@ -32,6 +32,7 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
+boost
 box2d
 brightnessctl
 brltty
@@ -200,6 +201,7 @@ haproxy
 haveged
 hexchat
 hidapi
+hugin
 hwloc
 hyprland
 i2pd
@@ -207,6 +209,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+innoextract
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -259,7 +262,6 @@ knot
 kopeninghours
 ksnip
 ksystemlog
-kwalletmanager
 kwin
 libatasmart
 libayatana-appindicator
@@ -285,6 +287,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libcmis
 libe-book
 libei
 libei-docs
@@ -301,6 +304,7 @@ libhandy-docs
 libhandy0
 libinput
 libldm
+liblouis
 libmspub
 libnvme
 libprocps
@@ -519,8 +523,8 @@ pyqt6
 pyside6
 pyside6-tools
 shiboken6
+python-aioitertools
 python-anytree
-python-databases
 python-idna
 python-intelhex
 python-netcdf4
@@ -643,6 +647,8 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-hoe
+ruby-sinatra
 samba
 libwbclient
 smbclient

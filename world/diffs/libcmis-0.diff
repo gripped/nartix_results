@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libcmis
+ pkgver=0.6.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="a C/C++ client library for the CMIS protocol"
+ arch=('x86_64')
+ url="https://github.com/tdf/libcmis"
+@@ -9,16 +9,13 @@
+ depends=('boost-libs' 'curl' 'libxml2' 'gcc-libs' 'glibc')
+ makedepends=('docbook2x' 'cppunit' 'boost')
+ source=("https://github.com/tdf/libcmis/releases/download/v${pkgver}/$pkgname-$pkgver.tar.xz"
+-        libxml2-2.12.patch
+-        boost-1.86.0.patch)
++        libxml2-2.12.patch)
+ sha256sums=('1b5c2d7258ff93eb5f9958ff0e4dfd7332dc75a071bb717dde2217a26602a644'
+-            'ac3f846139ce8548256711304d85fa56bb7531a45582883cfcfa560601461588'
+-            'ab89f91f2f61cc3a3f63bb51296d3333182b5a41811368d734a26d9d73f7a45e')
++            'ac3f846139ce8548256711304d85fa56bb7531a45582883cfcfa560601461588')
+ 
+ prepare() {
+   cd "$pkgname-$pkgver"
+   patch -Np1 -i ../libxml2-2.12.patch
+-  patch -Np1 -i ../boost-1.86.0.patch
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd "$pkgname-$pkgver"
+ patch -Np1 -i ../libxml2-2.12.patch
+-patch -Np1 -i ../boost-1.86.0.patch
+ }
+ build() {
+ cd "$pkgname-$pkgver"

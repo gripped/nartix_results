@@ -203,7 +203,6 @@ bmake
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -907,7 +906,6 @@ htop
 http-parser
 httpbin
 hub
-hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -959,7 +957,6 @@ incidenceeditor
 indent
 iniparser
 inkscape
-innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
@@ -1397,6 +1394,7 @@ kvirc
 kwallet-pam
 kwallet
 kwallet5
+kwalletmanager
 kwave
 kwayland-integration
 kwayland
@@ -1490,7 +1488,6 @@ libchamplain
 libchewing
 libclc
 libcloudproviders
-libcmis
 libconfig
 libcroco
 libcryptui
@@ -1656,7 +1653,6 @@ libldac
 libliftoff
 liblo
 liblo-docs
-liblouis
 liblqr
 liblrdf
 libltc
@@ -2974,7 +2970,6 @@ python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aiohttp
-python-aioitertools
 python-aiomysql
 python-aiopg
 python-aioquic
@@ -3185,6 +3180,7 @@ python-daemonize
 python-daiquiri
 python-dask-expr
 python-dask
+python-databases
 python-dateutil
 python-dbus-deviation
 python-dbus-next
@@ -4585,7 +4581,6 @@ ruby-haml
 ruby-hashdiff
 ruby-hitimes
 ruby-hocon
-ruby-hoe
 ruby-http-cookie
 ruby-httpclient
 ruby-i18n
@@ -4741,7 +4736,6 @@ ruby-shadow
 ruby-simplecov-html
 ruby-simplecov
 ruby-simplecov_json_formatter
-ruby-sinatra
 ruby-sorted_set
 ruby-sqlite3
 ruby-stackprof

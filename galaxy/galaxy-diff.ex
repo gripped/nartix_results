@@ -1,3 +1,4 @@
+0ad
 alacritty
 cinnamon-desktop
 ecrire
