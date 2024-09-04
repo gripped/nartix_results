@@ -1,4 +1,3 @@
-0ad
 alacritty
 cinnamon-desktop
 ecrire
@@ -7,6 +6,7 @@ elementary-icon-theme
 ephoto
 evisum
 fceux
+firefox-i18n
 firefox
 gpicview
 libretro-dolphin

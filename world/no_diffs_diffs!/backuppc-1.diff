@@ -24,23 +24,3 @@
    install -D -m 644 $pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
    install -D -m 644 $pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
    install -D -m 755 $pkgname.profile.sh "$pkgdir/etc/profile.d/$pkgname.sh"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,13 +0,0 @@
--git
--glibc
--par2cmdline
--perl
--perl-archive-zip
--perl-cgi
--perl-file-listing
--perl-io-dirent
--perl-json-xs
--perl-time-modules
--perl-xml-rss
--popt
--smtp-forwarder

@@ -32,7 +32,6 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
-boost
 box2d
 brightnessctl
 brltty
@@ -209,7 +208,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-innoextract
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -250,8 +248,6 @@ openjdk8-src
 openjdk8-doc
 jedi-language-server
 js78
-json-glib
-json-glib-docs
 kcoreaddons
 kgamma
 kismet
@@ -287,7 +283,6 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
-libcmis
 libe-book
 libei
 libei-docs
@@ -304,7 +299,6 @@ libhandy-docs
 libhandy0
 libinput
 libldm
-liblouis
 libmspub
 libnvme
 libprocps
@@ -523,11 +517,8 @@ pyqt6
 pyside6
 pyside6-tools
 shiboken6
-python-aioitertools
 python-anytree
-python-idna
 python-intelhex
-python-netcdf4
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -538,7 +529,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-xarray
 qastools
 qemu
 qemu-common
@@ -647,8 +637,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-hoe
-ruby-sinatra
+ruby-rspec-support
 samba
 libwbclient
 smbclient
@@ -728,6 +717,8 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
+vigra
+python-vigra
 vlc
 vpnc
 vte3

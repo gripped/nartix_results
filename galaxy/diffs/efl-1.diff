@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,85 +1,62 @@
+@@ -1,85 +1,65 @@
  
 -pkgbase=efl
 -pkgname=('efl' 'efl-docs')
@@ -52,8 +52,10 @@
 -
 -
 +            'libreoffice: Office document thumbnails')
-+source=("git+https://git.enlightenment.org/enlightenment/$pkgname.git#commit=$_commit")
-+sha256sums=('bb70b7c1c92e150a6676199ede30f74c13b61bc6c59bfa8924ae345085baf7cf')
++source=("git+https://git.enlightenment.org/enlightenment/$pkgname.git#commit=$_commit"
++        "git+https://gitea.artixlinux.org/artix/moksha-artix.git")
++sha256sums=('bb70b7c1c92e150a6676199ede30f74c13b61bc6c59bfa8924ae345085baf7cf'
++            'SKIP')
  
  build() {
 -  cd "${srcdir}/${pkgname}-${pkgver}"
@@ -104,6 +106,7 @@
 -    "${pkgdir}/usr/share/licenses/${pkgname}/COPYING.BSD"
 -  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/licenses/COPYING.SMALL" \
 -    "${pkgdir}/usr/share/licenses/${pkgname}/COPYING.SMALL"
++  install -Dm644 -t "$pkgdir/usr/share/elementary/config/standard/" "$srcdir/moksha-artix/defaults/base.cfg"
 +  install -Dm644 -t "$pkgdir/usr/share/doc/$pkgname/" README.md
 +  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" AUTHORS COMPLIANCE COPYING
  }

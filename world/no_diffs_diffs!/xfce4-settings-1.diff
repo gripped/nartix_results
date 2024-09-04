@@ -17,3 +17,22 @@
              'ca1c7562e209d9ab791b02f2a886c61a9ed705a912d9575f590734eff21d6e5c')
  prepare() {
    cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-colord
+-elementary-icon-theme
+-exo
+-garcon
+-gnome-themes-extra
+-intltool
+-libcanberra
+-libnotify
+-libxfce4ui
+-libxklavier
+-xf86-input-libinput
+-xfconf

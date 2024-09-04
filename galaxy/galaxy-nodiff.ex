@@ -1,4 +1,5 @@
 0ad-data
+0ad
 ada
 atril
 audacious-plugins
@@ -59,7 +60,6 @@ eom
 exo
 ext4magic
 fastfetch
-firefox-i18n
 fluxbox
 font-manager
 fpc-src

@@ -203,6 +203,7 @@ bmake
 boinc
 boinc-nox
 bomber
+boost
 booster
 botan
 botan2
@@ -222,6 +223,7 @@ broadcom-wl
 bspwm
 bubblewrap
 bubblewrap-suid
+buf
 build2
 bullet
 bullet-dp
@@ -397,6 +399,7 @@ cython0
 d-spy
 darkhttpd
 darktable
+dart-sass
 dart
 darts
 dav1d
@@ -957,6 +960,7 @@ incidenceeditor
 indent
 iniparser
 inkscape
+innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
@@ -1031,6 +1035,8 @@ js102
 js115
 js91
 jshon
+json-glib
+json-glib-docs
 jsoncpp
 jsoncpp-doc
 jsonrpc-glib
@@ -1260,6 +1266,7 @@ kiten
 kitinerary
 kjobwidgets
 kjobwidgets5
+kjots
 kjs
 kjumpingcube
 kldap
@@ -1488,6 +1495,7 @@ libchamplain
 libchewing
 libclc
 libcloudproviders
+libcmis
 libconfig
 libcroco
 libcryptui
@@ -1653,6 +1661,7 @@ libldac
 libliftoff
 liblo
 liblo-docs
+liblouis
 liblqr
 liblrdf
 libltc
@@ -2122,6 +2131,7 @@ ruby-marisa
 markdownpart
 marked-man
 marked
+marknote
 massif-visualizer
 mat2
 mate-applets
@@ -2970,6 +2980,7 @@ python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aiohttp
+python-aioitertools
 python-aiomysql
 python-aiopg
 python-aioquic
@@ -3026,6 +3037,7 @@ python-atomicwrites
 python-atpublic
 python-attrdict
 python-attrs
+python-auditwheel
 python-augeas
 python-authheaders
 python-authlib
@@ -3406,6 +3418,7 @@ python-hypothesmith
 python-ibm-db-sa
 python-icecream
 python-identify
+python-idna
 python-ifaddr
 python-ijson
 python-imagesize
@@ -3589,6 +3602,7 @@ python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
 python-netaddr
+python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
 python-networkx
@@ -3699,9 +3713,11 @@ python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
 python-pipx
+python-pixelmatch
 python-pkgconfig
 python-pkginfo
 python-platformdirs
+python-playwright
 python-plette
 python-pluggy
 python-plumbum
@@ -3883,6 +3899,7 @@ python-pytest-order
 python-pytest-ordering
 python-pytest-pacman
 python-pytest-param-files
+python-pytest-playwright
 python-pytest-plugins
 python-pytest-fixture-config
 python-pytest-shutil
@@ -4238,6 +4255,7 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
+python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -4490,12 +4508,14 @@ ruby-ansi
 ruby-ast
 ruby-async-container
 ruby-async-dns
+ruby-async-http-cache
 ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
 ruby-async-rest
 ruby-async-rspec
+ruby-async-websocket
 ruby-async
 ruby-atk
 ruby-augeas
@@ -4510,6 +4530,7 @@ ruby-benchmark-ips
 ruby-benchmark
 ruby-bigdecimal
 ruby-brass
+ruby-build-environment
 ruby-build-files
 ruby-builder
 ruby-bump
@@ -4536,6 +4557,7 @@ ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
+ruby-daemons
 ruby-date
 ruby-dbus
 ruby-debug
@@ -4553,6 +4575,7 @@ ruby-erubi
 ruby-etc
 ruby-eventmachine
 ruby-facets
+ruby-falcon
 ruby-faraday-em_http
 ruby-faraday-em_synchrony
 ruby-faraday-excon
@@ -4581,6 +4604,7 @@ ruby-haml
 ruby-hashdiff
 ruby-hitimes
 ruby-hocon
+ruby-hoe
 ruby-http-cookie
 ruby-httpclient
 ruby-i18n
@@ -4661,10 +4685,13 @@ ruby-permessage_deflate
 ruby-pkg-config
 ruby-power_assert
 ruby-prime
+ruby-process-metrics
 ruby-protocol-hpack
 ruby-protocol-http
 ruby-protocol-http1
 ruby-protocol-http2
+ruby-protocol-rack
+ruby-protocol-websocket
 ruby-pry
 ruby-psych
 ruby-public_suffix
@@ -4705,7 +4732,6 @@ ruby-rspec-its
 ruby-rspec-memory
 ruby-rspec-mocks
 ruby-rspec-rerun
-ruby-rspec-support
 ruby-rspec
 ruby-rss
 ruby-rubocop-ast
@@ -4723,6 +4749,7 @@ ruby-rugged
 ruby-safe_yaml
 ruby-samovar
 ruby-samus
+ruby-sass-embedded
 ruby-sass-listen
 ruby-sass
 ruby-sassc
@@ -4736,10 +4763,12 @@ ruby-shadow
 ruby-simplecov-html
 ruby-simplecov
 ruby-simplecov_json_formatter
+ruby-sinatra
 ruby-sorted_set
 ruby-sqlite3
 ruby-stackprof
 ruby-stringio
+ruby-sus-fixtures-async-http
 ruby-sus-fixtures-async
 ruby-sus
 ruby-sync
@@ -4753,6 +4782,7 @@ ruby-test-unit-rr
 ruby-test-unit-ruby-core
 ruby-test-unit
 ruby-test_declarative
+ruby-thin
 ruby-thor
 ruby-thread-local
 ruby-tilt
@@ -5282,8 +5312,6 @@ vice
 vid.stab
 viewnior
 vifm
-vigra
-python-vigra
 vim
 gvim
 vim-runtime

@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=facter
- pkgver=3.14.24
--pkgrel=9
-+pkgrel=8
- pkgdesc="Collect and display system facts"
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url="https://puppetlabs.com/${pkgname}"
  license=('Apache-2.0')
  depends=('yaml-cpp' 'boost-libs' 'curl' 'libwhereami' 'libwhereami.so' 'cpp-hocon' 'libcpp-hocon.so'
