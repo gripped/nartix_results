@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,24 @@
+ 
+ pkgname=eglexternalplatform
+-pkgver=1.2
+-pkgrel=1
++pkgver=1.1
++pkgrel=3
+ pkgdesc="EGL External Platform interface"
+ url=https://github.com/NVIDIA/eglexternalplatform
+ arch=(any)
+ license=(MIT)
+ depends=(libegl)
+-makedepends=(
+-  git
+-  meson
+-)
++makedepends=(git)
+ source=("git+$url#tag=$pkgver")
+-b2sums=('9da96c07158ad5e22720ebe25f675bcb11bc87f081622a04d12af2f4406984836b2c2078f89e5a0b441ceea2052073b614356abfe2000173f7a0bfaa9fc2c325')
++b2sums=('c35e594e42ace1a298c2cdc17f4429c7397d5e338519498bb0432a686573e5695d2897833bf72056456e546b5529ad58e654a6b108a53b27a1a8f2569a631a16')
+ 
+ prepare() {
+-  arch-meson $pkgname build --includedir /usr/include/EGL
+-}
+-
+-check() {
+-  meson test -C build --print-errorlogs
++  cd $pkgname
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
+-  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 $pkgname/COPYING
++  cd $pkgname
++  install -Dt "$pkgdir/usr/include/EGL" -m644 interface/*
++  install -Dt "$pkgdir/usr/share/pkgconfig" -m644 *.pc
++  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 COPYING
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ git
+ libegl
+-meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,3 @@
+ prepare() {
+-arch-meson $pkgname build --includedir /usr/include/EGL
++cd $pkgname
+ }

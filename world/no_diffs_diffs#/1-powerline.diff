@@ -1,7 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -118,3 +118,4 @@
-     powerline/bindings/vim/plugin/powerline.vim
-   install -vDm644 -t "$pkgdir/usr/share/licenses/vim-powerline" LICENSE
- }
-+
+@@ -7,7 +7,7 @@
+   vim-powerline
+ )
+ pkgver=2.8.4
+-pkgrel=2
++pkgrel=2.2
+ pkgdesc="Statuslines and prompts for several applications including vim, zsh, bash, tmux, IPython, Awesome, i3 and Qtile"
+ arch=(x86_64)
+ url="https://github.com/powerline/powerline"
+@@ -76,6 +76,10 @@
+     powerline-common
+     python-powerline
+   )
++  conflicts=(
++    powerline-common
++    python-powerline
++  )
+ 
+   cd $_pkgname-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl

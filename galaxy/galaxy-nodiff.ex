@@ -60,6 +60,7 @@ eom
 exo
 ext4magic
 fastfetch
+firefox-i18n
 fluxbox
 font-manager
 fpc-src

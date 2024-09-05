@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=perl-net-dns-sec
+-pkgver=1.26
++pkgver=1.24
+ pkgrel=1
+ pkgdesc="DNSSEC extensions to Net::DNS"
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ url='https://search.mcpan.org/dist/Net-DNS-SEC'
+ options=('!emptydirs')
+ source=("https://search.mcpan.org/CPAN/authors/id/N/NL/NLNETLABS/Net-DNS-SEC-$pkgver.tar.gz")
+-sha512sums=('f53416c28488edfff248c79570d87599e3785d8ae0cd30746dfbc6468bce68421bf95be405685d8d9dd8e3a69a6634da17617fb48d8c3bd755944dd2e038aaf9')
++sha512sums=('8814f8093cffd975910905a8152b764e049f60f7c531bcec1875cd3a1efc4186bf2633c268ace57dea9f6a9e019b2750f5f7a22b53595925196896a9556dadad')
+ _distdir="Net-DNS-SEC-$pkgver"
+ 
+ build() {

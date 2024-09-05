@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=aardvark-dns
+-pkgver=1.12.2
++pkgver=1.12.1
+ pkgrel=1
+ pkgdesc="Authoritative dns server for A/AAAA container records"
+ arch=(x86_64)
+@@ -16,7 +16,7 @@
+   libgit2
+ )
+ source=(git+$url#tag=v$pkgver)
+-sha256sums=('34e6c1352866524c7ec829be371984faac0d88d35997ee14d0b4c391e519570e')
++sha256sums=('9671bf8901a1c33081faf930c1f64ee3ce28da8ed1a888af8da99a79c7e48e8d')
+ 
+ prepare() {
+   cd $pkgname

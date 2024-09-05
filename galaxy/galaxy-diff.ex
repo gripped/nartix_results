@@ -6,7 +6,6 @@ elementary-icon-theme
 ephoto
 evisum
 fceux
-firefox-i18n
 firefox
 gpicview
 libretro-dolphin

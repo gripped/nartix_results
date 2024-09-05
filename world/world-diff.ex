@@ -20,6 +20,7 @@ avahi
 awesome
 ayatana-ido
 babl
+backuppc
 bash-bats
 bluedevil
 bluez
@@ -74,6 +75,7 @@ earlyoom
 edk2
 edk2-shell
 edk2-ovmf
+eglexternalplatform
 element.io
 element-web
 element-desktop
@@ -250,6 +252,7 @@ jedi-language-server
 js78
 kcoreaddons
 kgamma
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -259,6 +262,9 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+level-zero
+level-zero-headers
+level-zero-loader
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -304,11 +310,12 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
+libspiro
 libtg_owt
-libtiff
 libudev0-shim
 libusbsio
 python-libusbsio
+libvirt
 libvncserver
 libytnef
 light-locker
@@ -431,6 +438,9 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-dbi
+perl-digest-nilsimsa
+perl-term-readline-gnu
 pgbouncer
 phodav
 php-legacy
@@ -637,7 +647,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-rspec-support
 samba
 libwbclient
 smbclient

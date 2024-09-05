@@ -159,7 +159,6 @@ aws-c-sdkutils
 aws-checksums
 aws-cli-v2
 aws-cli
-backuppc
 baloo-widgets
 baloo
 baloo5
@@ -495,7 +494,6 @@ ed
 editline
 editorconfig-core-c
 egl-wayland
-eglexternalplatform
 eigen
 ejabberd
 electron
@@ -1255,7 +1253,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1443,9 +1440,6 @@ leafpad
 leatherman
 lensfun
 leptonica
-level-zero
-level-zero-headers
-level-zero-loader
 leveldb
 lftp
 lgi
@@ -1632,7 +1626,6 @@ libjxl-doc
 libkate
 libkate-docs
 libkcddb
-libkcddb5
 libkcompactdisc
 libkdcraw
 libkdcraw5
@@ -1828,7 +1821,6 @@ libsoxr
 libspatialite
 libspectre
 libspf2
-libspiro
 libspnav
 libspng
 libsquish
@@ -1845,6 +1837,7 @@ libteam-docs
 libtermkey
 libthai
 libtheora
+libtiff
 libtiger
 libtomcrypt
 libtommath
@@ -1876,7 +1869,6 @@ libvdpau
 libvips
 libvirt-glib
 libvirt-python
-libvirt
 libvisio
 libvisual
 libvoikko
@@ -2544,7 +2536,6 @@ perl-datetime-locale
 perl-datetime-timezone
 perl-datetime
 perl-dbd-mysql
-perl-dbi
 perl-devel-checkcompiler
 perl-devel-checklib
 perl-devel-cycle
@@ -2553,7 +2544,6 @@ perl-devel-stacktrace
 perl-devel-symdump
 perl-digest-bubblebabble
 perl-digest-hmac
-perl-digest-nilsimsa
 perl-digest-sha1
 perl-dist-checkconflicts
 perl-encode-locale
@@ -2730,7 +2720,6 @@ perl-super
 perl-task-weaken
 perl-template-toolkit
 perl-term-readkey
-perl-term-readline-gnu
 perl-term-table
 perl-term-ui
 perl-test-base
@@ -4732,6 +4721,7 @@ ruby-rspec-its
 ruby-rspec-memory
 ruby-rspec-mocks
 ruby-rspec-rerun
+ruby-rspec-support
 ruby-rspec
 ruby-rss
 ruby-rubocop-ast
@@ -4785,6 +4775,7 @@ ruby-test_declarative
 ruby-thin
 ruby-thor
 ruby-thread-local
+ruby-thread_order
 ruby-tilt
 ruby-time
 ruby-timers

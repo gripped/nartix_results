@@ -7,11 +7,9 @@ lib32-gst-plugins-base-libs
 lib32-gst-plugins-base
 lib32-gst-plugins-good
 lib32-jack2
-lib32-json-glib
 lib32-libepoxy
 lib32-libgudev
 lib32-libpulse
-lib32-libtiff
 lib32-libudev0-shim
 lib32-libusb
 lib32-mesa

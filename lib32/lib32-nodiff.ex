@@ -42,6 +42,7 @@ lib32-harfbuzz-icu
 lib32-icu
 lib32-imlib2
 lib32-json-c
+lib32-json-glib
 lib32-keyutils
 lib32-krb5
 lib32-ladspa
@@ -95,6 +96,7 @@ lib32-libssh2
 lib32-libtasn1
 lib32-libthai
 lib32-libtheora
+lib32-libtiff
 lib32-libtirpc
 lib32-libunistring
 lib32-libunwind
