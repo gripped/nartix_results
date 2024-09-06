@@ -159,6 +159,7 @@ aws-c-sdkutils
 aws-checksums
 aws-cli-v2
 aws-cli
+backuppc
 baloo-widgets
 baloo
 baloo5
@@ -1753,11 +1754,6 @@ libplasma
 libplist
 libpng
 libpng12
-libportal
-libportal-gtk3
-libportal-gtk4
-libportal-qt5
-libportal-docs
 libppd
 libproxy
 libproxy-docs
@@ -2536,6 +2532,7 @@ perl-datetime-locale
 perl-datetime-timezone
 perl-datetime
 perl-dbd-mysql
+perl-dbi
 perl-devel-checkcompiler
 perl-devel-checklib
 perl-devel-cycle
@@ -2544,6 +2541,7 @@ perl-devel-stacktrace
 perl-devel-symdump
 perl-digest-bubblebabble
 perl-digest-hmac
+perl-digest-nilsimsa
 perl-digest-sha1
 perl-dist-checkconflicts
 perl-encode-locale
@@ -2720,6 +2718,7 @@ perl-super
 perl-task-weaken
 perl-template-toolkit
 perl-term-readkey
+perl-term-readline-gnu
 perl-term-table
 perl-term-ui
 perl-test-base
@@ -2960,7 +2959,6 @@ python-aafigure
 python-absl
 python-acme
 python-adblock
-python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -5212,11 +5210,8 @@ tpm2-tools
 transcode
 transmageddon
 tre
-tree-sitter-bash
-tree-sitter-c
 tree-sitter-lua
 tree-sitter-markdown
-tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc

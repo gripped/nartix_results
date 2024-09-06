@@ -5,11 +5,16 @@
  pkgname=libguestfs
  pkgver=1.52.2
 -pkgrel=2
-+pkgrel=1
++pkgrel=3
  pkgdesc="Access and modify virtual machine disk images"
  arch=(x86_64)
  url="https://libguestfs.org/"
-@@ -41,7 +41,6 @@
+@@ -36,12 +36,10 @@
+   pciutils
+   procps-ng
+   psmisc
+-  reiserfsprogs
+   rsync
    squashfs-tools
    strace
    syslinux
@@ -17,7 +22,7 @@
    vim
    xfsprogs
    yara
-@@ -135,7 +134,7 @@
+@@ -135,7 +133,7 @@
      --prefix=/usr
      --sbindir=/usr/bin
      --sysconfdir=/etc
@@ -26,7 +31,7 @@
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -145,10 +144,6 @@
+@@ -145,10 +143,6 @@
    make
  }
  
@@ -43,7 +48,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -68,7 +68,6 @@
+@@ -57,7 +57,6 @@
+ python
+ qemu
+ readline
+-reiserfsprogs
+ rsync
+ ruby
+ ruby-rake
+@@ -68,7 +67,6 @@
  strace
  supermin
  syslinux

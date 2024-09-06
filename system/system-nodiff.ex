@@ -35,6 +35,7 @@ efivar
 elfutils
 libelf
 debuginfod
+expat
 file
 findutils
 flex
@@ -159,6 +160,7 @@ patch
 pciutils
 pcre
 pcre2
+perl
 pinentry
 pkgconf
 popt

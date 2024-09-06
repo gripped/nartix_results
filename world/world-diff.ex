@@ -20,7 +20,6 @@ avahi
 awesome
 ayatana-ido
 babl
-backuppc
 bash-bats
 bluedevil
 bluez
@@ -307,6 +306,12 @@ libinput
 libldm
 libmspub
 libnvme
+libportal
+libportal-docs
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-qt6
 libprocps
 libsidplay
 libsidplayfp
@@ -438,9 +443,6 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-dbi
-perl-digest-nilsimsa
-perl-term-readline-gnu
 pgbouncer
 phodav
 php-legacy
@@ -527,6 +529,7 @@ pyqt6
 pyside6
 pyside6-tools
 shiboken6
+python-aiobotocore
 python-anytree
 python-intelhex
 python-pymupdf
@@ -698,10 +701,14 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+tree-sitter-bash
+tree-sitter-c
+tree-sitter-python
 udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
+udisks2-docs
 umockdev
 unbound
 upower

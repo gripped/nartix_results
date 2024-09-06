@@ -9,7 +9,6 @@ dbus-docs
 dhcpcd
 e2fsprogs
 fuse2fs
-expat
 fakeroot
 filesystem
 gcc
@@ -51,7 +50,6 @@ libp11-kit
 p11-kit-docs
 pam
 pambase
-perl
 ppp
 procps-ng
 rpcbind

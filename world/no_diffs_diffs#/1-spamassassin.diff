@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=spamassassin
- pkgver=4.0.1
--pkgrel=2
-+pkgrel=1
- pkgdesc="A mail filter to identify spam."
- arch=('x86_64')
- license=('APACHE')
 @@ -30,13 +30,12 @@
          "https://www.apache.org/dist/${pkgname}/source/Mail-SpamAssassin-${pkgver}.tar.gz.asc"
          fix-tests.patch

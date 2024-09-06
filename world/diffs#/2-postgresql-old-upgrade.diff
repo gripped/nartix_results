@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,14 +2,14 @@
- pkgname=postgresql-old-upgrade
- pkgver=15.7
- _majorver=${pkgver%.*}
--pkgrel=3
-+pkgrel=2
- pkgdesc='PostgreSQL build for migrating between major versions with pg_upgrade'
- url='https://www.postgresql.org/'
+@@ -8,8 +8,8 @@
  arch=('x86_64')
  license=('custom:PostgreSQL')
  depends=("postgresql-libs>=${_majorver}" 'libxml2' 'openssl' 'pam' 'zlib' 'icu'
