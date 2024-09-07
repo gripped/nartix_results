@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+   cd $_pkgname
+ 
+   export PYTHONPATH="$PWD"
+-  pytest -m moto tests \
++  pytest -m moto tests -k "not test_fail_proxy_request" \
+       --ignore=tests/test_lambda.py
+ }
+ 

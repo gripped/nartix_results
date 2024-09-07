@@ -24,7 +24,6 @@ adobe-source-sans-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
-afpfs-ng
 aha
 akonadi-calendar-tools
 akonadi-calendar
@@ -129,6 +128,8 @@ attica5
 aubio
 python-aubio
 audacious
+audacity
+audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -203,7 +204,6 @@ bmake
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -688,7 +688,6 @@ github-cli
 gjs
 gkrellm
 gl2ps
-glad
 glade
 glances
 glew
@@ -767,7 +766,6 @@ gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
-gnustep-base
 gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
@@ -1441,6 +1439,9 @@ leafpad
 leatherman
 lensfun
 leptonica
+level-zero
+level-zero-headers
+level-zero-loader
 leveldb
 lftp
 lgi
@@ -1754,6 +1755,12 @@ libplasma
 libplist
 libpng
 libpng12
+libportal
+libportal-docs
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-qt6
 libppd
 libproxy
 libproxy-docs
@@ -1851,7 +1858,6 @@ libunwind
 libupnp
 liburcu
 liburing
-libusb-compat
 libusbmuxd
 libutempter
 libutf8proc
@@ -2248,7 +2254,6 @@ mutt
 mypaint-brushes1
 mypy
 namcap
-nanobind
 nanosvg
 nasm
 nauty
@@ -2959,6 +2964,7 @@ python-aafigure
 python-absl
 python-acme
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3716,7 +3722,6 @@ python-poetry
 python-pooch
 python-pook
 python-portend
-python-pprofile
 python-prance
 python-praw
 python-prawcore
@@ -4619,6 +4624,7 @@ ruby-mapping
 ruby-markly
 ruby-maruku
 ruby-matrix
+ruby-memoist
 ruby-memory_profiler
 ruby-metaclass
 ruby-method_source
@@ -4636,6 +4642,7 @@ ruby-minitest-retry
 ruby-minitest-sprint
 ruby-minitest-stub-const
 ruby-minitest
+ruby-mkmf-lite
 ruby-mocha
 ruby-msgpack
 ruby-multi_json
@@ -4681,6 +4688,7 @@ ruby-protocol-rack
 ruby-protocol-websocket
 ruby-pry
 ruby-psych
+ruby-ptools
 ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
@@ -4807,11 +4815,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
@@ -5210,8 +5213,11 @@ tpm2-tools
 transcode
 transmageddon
 tre
+tree-sitter-bash
+tree-sitter-c
 tree-sitter-lua
 tree-sitter-markdown
+tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc

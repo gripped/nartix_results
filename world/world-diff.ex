@@ -1,5 +1,6 @@
 0ad
 accountsservice
+afpfs-ng
 alacritty
 alsa-utils
 apache
@@ -13,8 +14,6 @@ at-spi2-core
 at-spi2-core-docs
 at
 audacious-plugins
-audacity
-audacity-docs
 autossh
 avahi
 awesome
@@ -32,6 +31,7 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
+boost
 box2d
 brightnessctl
 brltty
@@ -122,6 +122,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+glad
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -138,6 +139,7 @@ gnome-shell
 gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
+gnustep-base
 go-bindata
 go-licenses
 godot
@@ -261,9 +263,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-level-zero
-level-zero-headers
-level-zero-loader
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -306,18 +305,13 @@ libinput
 libldm
 libmspub
 libnvme
-libportal
-libportal-docs
-libportal-gtk3
-libportal-gtk4
-libportal-qt5
-libportal-qt6
 libprocps
 libsidplay
 libsidplayfp
 libspiro
 libtg_owt
 libudev0-shim
+libusb-compat
 libusbsio
 python-libusbsio
 libvirt
@@ -399,6 +393,7 @@ mumble-server
 mutter
 mutter-docs
 mutter45
+nanobind
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
@@ -529,9 +524,9 @@ pyqt6
 pyside6
 pyside6-tools
 shiboken6
-python-aiobotocore
 python-anytree
 python-intelhex
+python-pprofile
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -650,6 +645,12 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 smbclient
@@ -701,9 +702,6 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
-tree-sitter-bash
-tree-sitter-c
-tree-sitter-python
 udftools
 udisks2
 udisks2-btrfs

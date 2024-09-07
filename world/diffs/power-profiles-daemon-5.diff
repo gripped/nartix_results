@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=power-profiles-daemon
 -pkgver=0.22
+-pkgrel=2
 +pkgver=0.21
- pkgrel=1
++pkgrel=1
  pkgdesc='Makes power profiles handling available over D-Bus'
  url='https://gitlab.freedesktop.org/upower/power-profiles-daemon'
-@@ -13,21 +13,29 @@
+ license=(GPL-3.0-only)
+@@ -13,25 +13,29 @@
           polkit
           upower)
  optdepends=('python-gobject: for powerprofilesctl')
@@ -28,8 +30,12 @@
 +sha256sums=('c15a368a59f2cae1474bdfccdd9357f06b0abc9eb7638a87f68c091aaf570349'
 +            'f6eeaf1b85f43c0a97480d1f1a578ef4a850850f66885ad9b6d90907df51ec1d'
 +            'a7da5c1272ab0bab2896025b500f43eec5923abdf5694a228f7ec541cf15ff37')
-+
  
+-prepare() {
+-  cd $pkgname
+-  git cherry-pick -n 21b58819edcbbd87fc161474d1501debfd9b84b7
+-}
++
  build() {
 -  meson $pkgname build \
 -    --prefix /usr \
@@ -47,7 +53,7 @@
    meson compile -C build
  }
  
-@@ -37,4 +45,6 @@
+@@ -41,4 +45,6 @@
  
  package() {
    meson install -C build --destdir "$pkgdir"
@@ -71,7 +77,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,12 @@
+@@ -1,11 +1,12 @@
+-prepare() {
+-cd $pkgname
+-git cherry-pick -n 21b58819edcbbd87fc161474d1501debfd9b84b7
+-}
  build() {
 -meson $pkgname build \
 ---prefix /usr \

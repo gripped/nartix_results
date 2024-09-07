@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,7 +43,7 @@
+@@ -41,7 +41,7 @@
  
  	patch -Rp1 -i "$srcdir/ca-dir.patch"
  
 -	make HARNESS_JOBS=$(nproc) test
-+	make HARNESS_JOBS=$(nproc) test || :
++	make HARNESS_JOBS=$(nproc) test ||:
  
  	patch -Np1 -i "$srcdir/ca-dir.patch"
  	make apps/CA.pl

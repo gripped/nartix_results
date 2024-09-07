@@ -60,6 +60,7 @@ eom
 exo
 ext4magic
 fastfetch
+featherpad
 firefox-i18n
 fluxbox
 font-manager
