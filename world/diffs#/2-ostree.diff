@@ -1,21 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=ostree
- pkgver=2024.7
--pkgrel=2
-+pkgrel=1
- pkgdesc="Operating system and container binary deployment and upgrades"
- url="https://ostreedev.github.io/ostree/"
- arch=(x86_64)
-@@ -30,12 +30,11 @@
-   gpgme
-   gtk-doc
-   libarchive
--  libsoup3
-+  libsoup
-   libxslt
+@@ -35,7 +35,6 @@
    mkinitcpio
    openssl
    python
@@ -31,11 +16,9 @@
      --disable-static
      --enable-experimental-api
      --enable-gtk-doc
-@@ -112,8 +112,8 @@
-     glib2 libgio-2.0.so libglib-2.0.so libgobject-2.0.so
+@@ -113,7 +113,6 @@
      gpgme libgpgme.so
      libarchive libarchive.so
-+    libsoup
      openssl libcrypto.so
 -    systemd-libs libsystemd.so
      xz liblzma.so
@@ -47,13 +30,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -26,15 +26,12 @@
- libgpgme.so
+@@ -27,14 +27,11 @@
  liblzma.so
  libsodium
--libsoup3
+ libsoup3
 -libsystemd.so
-+libsoup
  libxslt
  mkinitcpio
  openssl

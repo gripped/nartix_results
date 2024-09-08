@@ -4,15 +4,16 @@
  
  pkgname=clutter
  pkgver=1.26.4
--pkgrel=2
+-pkgrel=3
 +pkgrel=2.1
  pkgdesc="A toolkit for creating fast, portable, compelling dynamic UIs"
  url="https://blogs.gnome.org/clutter/"
  arch=(x86_64)
  license=(LGPL)
 -depends=(gtk3 cogl libinput)
+-makedepends=(gobject-introspection gtk-doc git glib2-devel)
 +depends=(gtk3 cogl libinput json-glib)
- makedepends=(gobject-introspection gtk-doc git)
++makedepends=(gobject-introspection gtk-doc git)
 +options=(debug)
  _commit=fd85623d34a54b3f5607011086cf19cb2c756a6a  # tags/1.26.4^0
  source=("git+https://gitlab.gnome.org/GNOME/clutter.git#commit=$_commit")
@@ -23,7 +24,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,7 @@
+@@ -1,9 +1,9 @@
+ cogl
+ git
+-glib2-devel
  gobject-introspection
  gtk-doc
  gtk3

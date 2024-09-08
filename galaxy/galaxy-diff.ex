@@ -3,6 +3,7 @@ cinnamon-desktop
 ecrire
 efl
 elementary-icon-theme
+engrampa
 ephoto
 evisum
 fceux

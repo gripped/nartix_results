@@ -55,7 +55,6 @@ doublecmd
 doublecmd-gtk2
 doublecmd-qt5
 doublecmd-qt6
-engrampa
 eom
 exo
 ext4magic

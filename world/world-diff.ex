@@ -1,6 +1,5 @@
 0ad
 accountsservice
-afpfs-ng
 alacritty
 alsa-utils
 apache
@@ -31,7 +30,6 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
-boost
 box2d
 brightnessctl
 brltty
@@ -84,6 +82,7 @@ emacs-nativecomp
 emacs-nox
 emacs-wayland
 embree
+engrampa
 eog
 eog-docs
 espeakup
@@ -122,7 +121,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-glad
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -646,11 +644,6 @@ rrdtool
 rspamd
 rtkit
 ruby-sys-filesystem
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 smbclient

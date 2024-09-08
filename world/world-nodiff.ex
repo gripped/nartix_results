@@ -24,6 +24,7 @@ adobe-source-sans-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
+afpfs-ng
 aha
 akonadi-calendar-tools
 akonadi-calendar
@@ -204,6 +205,7 @@ bmake
 boinc
 boinc-nox
 bomber
+boost
 booster
 botan
 botan2
@@ -511,7 +513,6 @@ encfs
 enchant
 endeavour
 enet
-engrampa
 enscript
 entr
 eom
@@ -688,6 +689,7 @@ github-cli
 gjs
 gkrellm
 gl2ps
+glad
 glade
 glances
 glew
@@ -4815,6 +4817,11 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

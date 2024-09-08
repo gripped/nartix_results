@@ -41,6 +41,7 @@ lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
 lib32-icu
 lib32-imlib2
+lib32-jack2
 lib32-json-c
 lib32-json-glib
 lib32-keyutils
