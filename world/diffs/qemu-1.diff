@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -105,7 +105,7 @@
+@@ -106,7 +106,7 @@
    snappy
    spice-protocol
    spice
@@ -9,15 +9,15 @@
    usbredir
    vde2
    virglrenderer
-@@ -275,7 +275,6 @@
+@@ -276,7 +276,6 @@
  
    sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
  
--  sed -e 's/multi-user.target/sockets.target/g' -i $pkgbase-$pkgver/contrib/systemd/qemu-pr-helper.socket
+-  sed -e 's/multi-user.target/sockets.target/g' -i $pkgbase-$pkgver/contrib/systemd/*.socket
  
    mkdir -vp build
    mkdir -vp build-static
-@@ -697,14 +696,13 @@
+@@ -700,14 +699,13 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -33,7 +33,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -770,14 +768,14 @@
+@@ -773,14 +771,14 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
@@ -50,7 +50,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -791,7 +789,7 @@
+@@ -794,7 +792,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -59,7 +59,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -819,7 +817,7 @@
+@@ -822,7 +820,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -68,7 +68,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -833,7 +831,7 @@
+@@ -836,7 +834,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -77,7 +77,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -861,7 +859,7 @@
+@@ -864,21 +862,21 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -86,7 +86,6 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -875,14 +873,14 @@
  
  package_qemu-system-or1k() {
    pkgdesc="QEMU system emulator for OpenRisc32"
@@ -103,7 +102,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -896,7 +894,7 @@
+@@ -892,7 +890,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -112,7 +111,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -917,7 +915,7 @@
+@@ -913,7 +911,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -121,7 +120,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -931,14 +929,14 @@
+@@ -927,14 +925,14 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -138,7 +137,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -959,7 +957,7 @@
+@@ -955,7 +953,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
@@ -147,7 +146,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -973,7 +971,7 @@
+@@ -969,7 +967,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -156,7 +155,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -1008,9 +1006,8 @@
+@@ -1004,9 +1002,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -165,6 +164,14 @@
 -  install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
 +  depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so multipath-tools numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel libudev)
 +  mv -v $pkgname/* "$pkgdir"
+   _install_licenses
+ }
+ 
+@@ -1141,7 +1138,6 @@
+   pkgdesc="QEMU persistent reservation utility"
+   depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel)
+   mv -v $pkgname/* "$pkgdir"
+-  install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
    _install_licenses
  }
  

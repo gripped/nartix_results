@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,32 +1,32 @@
+ 
+ pkgname=vulkan-headers
+ _pkgname=Vulkan-Headers
+-pkgver=1.3.295
++pkgver=1.3.285
+ pkgrel=1
+ epoch=1
+ pkgdesc="Vulkan header files"
+ arch=(any)
+ url="https://www.khronos.org/vulkan/"
+ license=('Apache-2.0' 'MIT')
+-makedepends=(cmake ninja git)
++makedepends=(cmake git)
+ provides=("vulkan-hpp=${pkgver}")
+ groups=(vulkan-devel)
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/KhronosGroup/Vulkan-Headers/archive/v${pkgver}.tar.gz")
+-sha256sums=('b4568b984be4b8a317343cc14d854669e258705079a16cabef3fb92302f55561')
++sha256sums=('212455eeab2cef5d93b1b991e548afe184f294428118f747989a97677e19ab2a')
+ 
+ build() {
+   cd Vulkan-Headers*
+ 
+-  cmake . -Bbuild \
+-    -GNinja \
+-    -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DCMAKE_BUILD_TYPE=Release
+-  ninja -C build
++  rm -rf build ; mkdir build ; cd build
++  cmake -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_BUILD_TYPE=Release \
++    ..
++  make
+ }
+ 
+ package() {
+-  cd Vulkan-Headers*
++  cd Vulkan-Headers*/build
+ 
+-  DESTDIR="$pkgdir" ninja -C build install
++  make DESTDIR="${pkgdir}" install
+   install -Dm644 "${srcdir}"/Vulkan-Headers*/LICENSES/*.txt -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ cmake
+ git
+-ninja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ build() {
+ cd Vulkan-Headers*
+-cmake . -Bbuild \
+--GNinja \
+--DCMAKE_INSTALL_PREFIX=/usr \
+--DCMAKE_BUILD_TYPE=Release
+-ninja -C build
++rm -rf build ; mkdir build ; cd build
++cmake -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_BUILD_TYPE=Release \
++..
++make
+ }

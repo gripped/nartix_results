@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=snapper
+-pkgver=0.11.2
+-pkgrel=1
++pkgver=0.11.1
++pkgrel=2
+ pkgdesc="A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping."
+ arch=('x86_64')
  url="http://snapper.io"
  license=('GPL2')
  depends=('btrfs-progs' 'libxml2' 'dbus' 'boost-libs' 'acl' 'json-c')
@@ -9,6 +17,15 @@
  optdepends=('pam: pam_snapper')
  backup=('etc/conf.d/snapper')
  source=("https://github.com/openSUSE/snapper/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
+@@ -15,7 +15,7 @@
+         "cron-rename.patch"
+         "drift-file-path.patch"
+         "usr-paths.patch")
+-sha256sums=('d2a33935f94f30b22aecbdfdecccf651b3616fa698aec266646a9d06043bfd6f'
++sha256sums=('5e7ade21e83593cdaab083f6705384f36b64f059829fd428b0f0b1c62d607083'
+             '527fc127eb0569eea9dcb888833e0b1f54302bfcb3a88f0101ae32837771bc61'
+             'a78fea96638cd686cb727316b68d0c44e6e3154e72947025774fc0e58c7dce35'
+             '093c7993e466a0cf9c0794a971825f5f1b40047512857bc124ed0d63dbb306d6'
 @@ -42,7 +42,8 @@
                --with-conf=/etc/conf.d \
                --with-pam-security=/usr/lib/security \

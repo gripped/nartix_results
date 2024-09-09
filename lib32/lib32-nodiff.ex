@@ -167,7 +167,6 @@ lib32-twolame
 lib32-util-linux
 lib32-vkd3d
 lib32-vulkan-icd-loader
-lib32-vulkan-validation-layers
 lib32-wavpack
 lib32-wayland
 lib32-xcb-util-keysyms

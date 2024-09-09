@@ -55,6 +55,7 @@ doublecmd
 doublecmd-gtk2
 doublecmd-qt5
 doublecmd-qt6
+engrampa
 eom
 exo
 ext4magic
@@ -109,7 +110,6 @@ libretro-mgba
 libretro-overlays
 libretro-parallel-n64
 libretro-play
-libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x

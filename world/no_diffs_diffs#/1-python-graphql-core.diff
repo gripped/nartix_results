@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-graphql-core
+-pkgver=3.2.4
+-pkgrel=1
++pkgver=3.2.3
++pkgrel=5
+ pkgdesc='GraphQL base implementation for Python'
+ url=https://github.com/graphql-python/graphql-core
+ arch=(any)
+@@ -22,14 +22,8 @@
+   python-pytest-asyncio
+   python-pytest-benchmark
+ )
+-_tag=a2d71e22fa600933779f3a37fa0a759cf0628bc5
+-source=(git+https://github.com/graphql-python/graphql-core.git#tag=${_tag})
+-sha256sums=('3801a8f268d9938ce51e6ee00ec3613436de2018cdf6fe59a6b67fc27f84e6f0')
+-
+-pkgver() {
+-  cd graphql-core
+-  git describe --tags | sed 's/^v//'
+-}
++source=(git+$url.git#tag=v$pkgver)
++sha256sums=('ddd4812fb7d3bdcf5904e0381d995d82e2afc2770cb78103eebdddae4cd53b43')
+ 
+ build() {
+   cd graphql-core

@@ -59,7 +59,6 @@ amule
 analitza
 analitza5
 android-file-transfer
-android-tools
 android-udev
 angelfish
 ansible-core
@@ -480,7 +479,6 @@ draco
 dragon
 dropbear
 dropbear-scp
-dtc
 duktape
 dump_syms
 dune
@@ -2200,6 +2198,8 @@ minuet
 miopen-hip
 mitmproxy
 mjpegtools
+mkdocs-get-deps
+mkdocs
 mktorrent
 mlt
 mm-common
@@ -2540,7 +2540,6 @@ perl-datetime-timezone
 perl-datetime
 perl-dbd-mysql
 perl-dbi
-perl-devel-checkcompiler
 perl-devel-checklib
 perl-devel-cycle
 perl-devel-globaldestruction
@@ -3351,6 +3350,7 @@ python-geopandas
 python-geopy
 python-gevent-websocket
 python-gevent
+python-ghp-import
 python-gitdb
 python-github3py
 python-gitlab
@@ -3562,6 +3562,7 @@ python-mediafile
 python-memcached
 python-memory-profiler
 python-merge3
+python-mergedeep
 python-mimeparse
 python-minidump
 python-mistune
@@ -3724,6 +3725,7 @@ python-poetry
 python-pooch
 python-pook
 python-portend
+python-pprofile
 python-prance
 python-praw
 python-prawcore
@@ -3946,6 +3948,7 @@ python-pywayland
 python-pywinrm
 python-pywlroots
 python-pyxbe
+python-pyyaml-env-tag
 python-pyzmq
 python-qdarkstyle
 python-qrcode
@@ -5345,10 +5348,8 @@ vst3sdk-docs
 vtk
 vulkan-docs
 vulkan-html-docs
-vulkan-headers
 vulkan-icd-loader
 vulkan-tools
-vulkan-validation-layers
 w3m
 wacomtablet
 waf

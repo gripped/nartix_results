@@ -2,6 +2,7 @@
 accountsservice
 alacritty
 alsa-utils
+android-tools
 apache
 apcupsd
 appstream
@@ -67,6 +68,7 @@ dolphin-emu-tool
 dovecot
 dracut
 drkonqi
+dtc
 dunst
 earlyoom
 edk2
@@ -436,6 +438,7 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-devel-checkcompiler
 pgbouncer
 phodav
 php-legacy
@@ -524,7 +527,6 @@ pyside6-tools
 shiboken6
 python-anytree
 python-intelhex
-python-pprofile
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -577,7 +579,6 @@ qemu-system-loongarch64
 qemu-system-m68k
 qemu-system-microblaze
 qemu-system-mips
-qemu-system-nios2
 qemu-system-or1k
 qemu-system-ppc
 qemu-system-riscv
@@ -610,6 +611,7 @@ qemu-ui-core
 qemu-user
 qemu-user-static
 qemu-vhost-user-gpu
+qemu-vmsr-helper
 qemu-base
 qemu-desktop
 qemu-emulators-full
@@ -732,6 +734,8 @@ vte3
 vte-common
 vte4
 vte-docs
+vulkan-headers
+vulkan-validation-layers
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
