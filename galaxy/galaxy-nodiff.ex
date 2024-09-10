@@ -276,6 +276,7 @@ pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
+pinentry-bemenu
 pluma
 ppsspp
 ppsspp-assets

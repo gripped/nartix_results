@@ -40,7 +40,6 @@ file
 findutils
 flex
 gawk
-gc
 gdbm
 gettext
 gmp

@@ -1,30 +1,43 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,17 +3,17 @@
+@@ -3,17 +3,28 @@
  pkgname=(linux-firmware-whence linux-firmware amd-ucode
           linux-firmware-{nfp,mellanox,marvell,qcom,liquidio,qlogic,bnx2x}
  )
 -_tag=20231211
 -pkgver=20231211.f2e52a1c
-+_tag=20240811
-+pkgver=20240809.59460076
++_tag=20240909
++pkgver=20240909.552ed9b8
  pkgrel=1
  pkgdesc="Firmware files for Linux"
 -url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
+-license=('GPL2' 'GPL3' 'custom')
 +url="https://gitlab.com/kernel-firmware/linux-firmware"
- license=('GPL2' 'GPL3' 'custom')
++license=(
++  GPL-2.0-only
++  GPL-2.0-or-later
++  GPL-3.0-only
++  custom
++)
  arch=('any')
- makedepends=('git' 'rdfind')
+-makedepends=('git' 'rdfind')
 -options=(!strip)
 -source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git#tag=${_tag}?signed")
 -sha256sums=('SKIP')
-+options=(!strip !debug)
++makedepends=(
++  git
++  rdfind
++)
++options=(
++  !strip
++  !debug
++)
 +source=("git+$url.git?signed#tag=${_tag}")
-+sha256sums=('2ff3645681d23658fa5e6ca5f9b8b383b5510c2ff46532679b8e95d693a3f0eb')
++b2sums=('1578c2a2fc4696a21d463f03745dc5bf2fe1266001e3ceac698f52c4b891c1d045c788c6ac57555182f8cf78b6dd973e84fed34884092dc36850c63643d067f9')
  validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
  
  _backports=(
-@@ -77,6 +77,8 @@
+@@ -77,6 +88,8 @@
  
    rm usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw_arm64-v4.1.img.zst
  
@@ -33,7 +46,7 @@
    _pick linux-firmware-nfp usr/lib/firmware/netronome
    _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
  
-@@ -100,6 +102,8 @@
+@@ -100,6 +113,8 @@
  package_amd-ucode() {
    pkgdesc="Microcode update image for AMD CPUs"
    license=(custom)

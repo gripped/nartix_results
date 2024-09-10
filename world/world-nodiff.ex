@@ -59,6 +59,7 @@ amule
 analitza
 analitza5
 android-file-transfer
+android-tools
 android-udev
 angelfish
 ansible-core
@@ -140,6 +141,7 @@ autoconf-archive
 autoconf2.13
 autogen
 autopep8
+autossh
 avisynthplus
 avogadro-crystals
 avogadro-fragments
@@ -201,6 +203,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -403,6 +406,7 @@ darktable
 dart-sass
 dart
 darts
+dateutils
 dav1d
 dav1d-doc
 dblatex
@@ -479,6 +483,7 @@ draco
 dragon
 dropbear
 dropbear-scp
+dtc
 duktape
 dump_syms
 dune
@@ -2540,6 +2545,7 @@ perl-datetime-timezone
 perl-datetime
 perl-dbd-mysql
 perl-dbi
+perl-devel-checkcompiler
 perl-devel-checklib
 perl-devel-cycle
 perl-devel-globaldestruction
@@ -5225,7 +5231,6 @@ transmageddon
 tre
 tree-sitter-bash
 tree-sitter-c
-tree-sitter-lua
 tree-sitter-markdown
 tree-sitter-python
 tree-sitter-query
@@ -5348,8 +5353,10 @@ vst3sdk-docs
 vtk
 vulkan-docs
 vulkan-html-docs
+vulkan-headers
 vulkan-icd-loader
 vulkan-tools
+vulkan-validation-layers
 w3m
 wacomtablet
 waf

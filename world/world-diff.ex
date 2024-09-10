@@ -2,7 +2,6 @@
 accountsservice
 alacritty
 alsa-utils
-android-tools
 apache
 apcupsd
 appstream
@@ -14,7 +13,6 @@ at-spi2-core
 at-spi2-core-docs
 at
 audacious-plugins
-autossh
 avahi
 awesome
 ayatana-ido
@@ -29,7 +27,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -68,7 +65,6 @@ dolphin-emu-tool
 dovecot
 dracut
 drkonqi
-dtc
 dunst
 earlyoom
 edk2
@@ -438,7 +434,6 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-devel-checkcompiler
 pgbouncer
 phodav
 php-legacy
@@ -697,6 +692,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+tree-sitter-lua
 udftools
 udisks2
 udisks2-btrfs
@@ -734,8 +730,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vulkan-headers
-vulkan-validation-layers
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

@@ -6,6 +6,8 @@ lib32-gstreamer
 lib32-gst-plugins-base-libs
 lib32-gst-plugins-base
 lib32-gst-plugins-good
+lib32-gtk2
+lib32-gtk3
 lib32-libepoxy
 lib32-libgudev
 lib32-libpulse
@@ -33,6 +35,5 @@ lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
 lib32-v4l-utils
-lib32-vulkan-validation-layers
 wine-staging
 wine

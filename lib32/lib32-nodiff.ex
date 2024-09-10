@@ -34,8 +34,6 @@ lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-gpm
-lib32-gtk2
-lib32-gtk3
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
@@ -167,6 +165,7 @@ lib32-twolame
 lib32-util-linux
 lib32-vkd3d
 lib32-vulkan-icd-loader
+lib32-vulkan-validation-layers
 lib32-wavpack
 lib32-wayland
 lib32-xcb-util-keysyms

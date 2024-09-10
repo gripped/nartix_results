@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
- license=(LGPL-2.1-or-later)
- depends=(
-   adwaita-icon-theme
--  at-spi2-core
-+  atk
-   cairo
-   cantarell-fonts
-   dconf
-@@ -46,10 +46,10 @@
+@@ -46,7 +46,6 @@
    libxrender
    pango
    shared-mime-info
@@ -17,11 +8,7 @@
    wayland
  )
  makedepends=(
-+  at-spi2-core
-   git
-   glib2-devel
-   gobject-introspection
-@@ -81,12 +81,10 @@
+@@ -85,12 +84,10 @@
      -D gtk_doc=true
      -D introspection=true
      -D man=true
@@ -41,15 +28,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,7 @@
- 
- adwaita-icon-theme
- at-spi2-core
-+atk
- cairo
- cantarell-fonts
- dconf
-@@ -41,6 +42,5 @@
+@@ -41,6 +41,5 @@
  pango
  sassc
  shared-mime-info
@@ -59,7 +38,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,10 +10,8 @@
+@@ -11,10 +11,8 @@
  -D gtk_doc=true
  -D introspection=true
  -D man=true
