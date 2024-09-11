@@ -203,7 +203,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -3338,7 +3337,6 @@ python-freezegun
 python-frozendict
 python-frozenlist
 python-fs
-python-fsspec
 python-func-timeout
 python-funcparserlib
 python-furl
@@ -3792,7 +3790,6 @@ python-pyenchant
 python-pyfakefs
 python-pyflakes
 python-pyftdi
-python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
@@ -4767,7 +4764,6 @@ ruby-semantic_puppet
 ruby-sequel
 ruby-set
 ruby-shadow
-ruby-simplecov-html
 ruby-simplecov
 ruby-simplecov_json_formatter
 ruby-sinatra
@@ -5231,7 +5227,7 @@ transmageddon
 tre
 tree-sitter-bash
 tree-sitter-c
-tree-sitter-markdown
+tree-sitter-lua
 tree-sitter-python
 tree-sitter-query
 tree-sitter-vim

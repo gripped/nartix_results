@@ -27,6 +27,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -521,7 +522,9 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-fsspec
 python-intelhex
+python-pyftpdlib
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -640,9 +643,11 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-simplecov-html
 ruby-sys-filesystem
 samba
 libwbclient
+ldb
 smbclient
 sane
 scribus
@@ -692,7 +697,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
-tree-sitter-lua
+tree-sitter-markdown
 udftools
 udisks2
 udisks2-btrfs

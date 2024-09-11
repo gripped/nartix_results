@@ -1,11 +1,52 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=python-elastic-transport
+ _pkgname=elastic-transport-python
+ pkgver=8.15.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Transport classes and utilities shared among Python Elastic client libraries"
+ arch=(any)
+ url="https://github.com/elastic/elastic-transport-python"
+@@ -14,6 +14,7 @@
+   python-httpx
+   python-orjson
+   python-requests
++  python-typing_extensions
+   python-urllib3
+ )
+ makedepends=(
+@@ -26,7 +27,6 @@
+   python-pytest
+   python-pytest-asyncio
+   python-pytest-httpserver
+-  python-pytest-rerunfailures
+   python-respx
    python-trustme
  )
- source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
--sha256sums=('a9d8b250bf646252de7ada32c96e289ed8853fb72a28f9bec64ba78220d11539')
-+sha256sums=('55ae88fe51aa9698b71dcfa9d00ca2653d7b0c3f6e2bb160a8db0738499cf676')
+@@ -40,10 +40,7 @@
  
- build() {
+ check() {
    cd $_pkgname-$pkgver
+-  pytest --override-ini="addopts=" \
+-    --reruns 1 \
+-    --reruns-delay 1 \
+-    --ignore tests/test_otel.py
++  pytest --override-ini="addopts=" --ignore tests/test_otel.py
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,5 +7,6 @@
+ python-orjson
+ python-requests
+ python-setuptools
++python-typing_extensions
+ python-urllib3
+ python-wheel

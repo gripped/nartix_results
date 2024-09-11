@@ -11,7 +11,6 @@ gpicview
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libretro-ppsspp
 linux-rt-lts
 linux-rt-lts-headers
 linux-rt-lts-docs

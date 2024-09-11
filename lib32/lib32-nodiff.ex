@@ -34,6 +34,8 @@ lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-gpm
+lib32-gtk2
+lib32-gtk3
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu
