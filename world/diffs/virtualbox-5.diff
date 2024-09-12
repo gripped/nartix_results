@@ -1,0 +1,159 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+          'virtualbox-guest-utils'
+          'virtualbox-guest-utils-nox'
+          'virtualbox-ext-vnc')
+-pkgver=7.1.0
++pkgver=7.0.20
+ _tarver=${pkgver}
+ pkgrel=1
+ arch=('x86_64')
+@@ -40,9 +40,9 @@
+              'mesa'
+              'python'
+              'python-setuptools'
+-             'qt6-base'
+-             'qt6-scxml'
+-             'qt6-tools'
++             'qt5-base'
++             'qt5-tools'
++             'qt5-x11extras'
+              'sdl'
+              'sdl_ttf'
+              'vde2'
+@@ -56,11 +56,6 @@
+         '60-vboxdrv.rules'
+         '60-vboxguest.rules'
+         'LocalConfig.kmk'
+-        'vboxservice.service'
+-        'vboxservice-nox.service'
+-        'vboxdrmclient.path'
+-        'vboxdrmclient.service'
+-        'vboxweb.service'
+         'vboxreload'
+         '001-disable-update.patch'
+         '004-drop-Wno-format.patch'
+@@ -70,26 +65,21 @@
+         '013-support-building-from-dkms.patch'
+         '018-upate-xclient-script.patch'
+         '020-python-3-12.patch')
+-sha256sums=('3bd333fa18889949a1d93d423143eeccdb45d238b33183d66c628c327d23f0b7'
++sha256sums=('5cf5979bef66ebab3fcd495796b215a940e8a07c469d4bc56d064de44222dd02'
+             '76d98ea062fcad9e5e3fa981d046a6eb12a3e718a296544a68b66f4b65cb56db'
+             '2101ebb58233bbfadf3aa74381f22f7e7e508559d2b46387114bc2d8e308554c'
+             'da4c49f6ca94e047e196cdbcba2c321199f4760056ea66e0fbc659353e128c9e'
+             'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
+             '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
+             '476202f87a4a461af6b73a7709e91f868a65ff7306494227e0d7b264fa3f919e'
+-            'c41a801fe344a4471a7b61a4764d1d857c403e4fb96e2ba6bc89c77a35f2be7a'
+-            '01dbb921bd57a852919cc78be5b73580a564f28ebab2fe8d6c9b8301265cbfce'
+-            '83d8f24bff25bb925083cf39b3195236c6136105e62417712cc3f25b92e14b47'
+-            '2beab8de525220fa418c9873f9e0d657ddbad4ff9e4a46d7053e6cd9bc4ce95e'
+-            'e6e875ef186578b53106d7f6af48e426cdaf1b4e86834f01696b8ef1c685787f'
+             '4001b5927348fe669a541e80526d4f9ea91b883805f102f7d571edbb482a9b9d'
+             '483a043ddfe32c4c5001a8de0a94a0ea884f34d3dbd817b492b9c97fba3ab5e0'
+-            'ffd30d1d5c41909518571da02c797102d459ba6dec22fe335b4778db264275e1'
++            '7675f87d31ad3137f057dc3ee3d4a2c5b2cfe8cd362adba130ddbf7a65069516'
+             'd0ca7e240b7bc19b4630998d943d095c733cbdb27b343269f2f602a8f1088974'
+-            'd76b52d955215a72c296aa36d173897bcaa357528bf5a73347c52ccec8654ced'
++            '570070eb6004301170f084d4c29a4c544f51b2a895d4395e9d5e3caf25262683'
+             '8c64b3617e597390dd25cf85c9afac0ebbe369d620349d7f5c8056d834acb6c6'
+             '00f68b86d32a1fada900c2da8dad2ab4215106cd58004f049bded99727cda2ff'
+-            '73ed7ef243c975227660b9bbe7c576018f2c0216b3a3b5efcc4cc56c44c90914'
++            '87dddfd9047480e4c2b73367facf5dd3702148418c2efcd606af17c07da90fe0'
+             'ddb2092a5a000aa6ef854796f39dcdf86e72c06d53b24bac3835350571182df6')
+ 
+ prepare() {
+@@ -102,6 +92,8 @@
+             patch -p1 -N -i "${srcdir}/${filename##*/}"
+         fi
+     done
++
++    sed -i '/cstring/a #include <cstdint>' src/libs/dxvk-native-1.9.2a/src/util/util_bit.h
+ 
+     echo 'Applying local config'
+     cp "${srcdir}/LocalConfig.kmk" .
+@@ -133,7 +125,7 @@
+     pkgdesc='Powerful x86 virtualization for enterprise as well as home use'
+     depends=('curl' 'gcc-libs' 'glibc' 'liblzf' 'libpng' 'libtpms' 'libvpx' 'libx11' 'libxcursor'
+              'libxext' 'libxinerama' 'libxml2' 'libxmu' 'libxt' 'openssl' 'procps-ng' 'python'
+-             'qt6-base' 'qt6-scxml' 'qt6-tools' 'sdl' 'shared-mime-info' 'zlib'
++             'qt5-base' 'qt5-tools' 'qt5-x11extras' 'sdl' 'shared-mime-info' 'zlib'
+              'VIRTUALBOX-HOST-MODULES')
+     optdepends=('vde2: Virtual Distributed Ethernet support'
+                 'virtualbox-guest-iso: Guest Additions CD image'
+@@ -150,7 +142,7 @@
+     install -m0755 *.so -t "${pkgdir}/usr/lib/virtualbox"
+     install -m0644 *.r0 VBoxEFI*.fd -t "${pkgdir}/usr/lib/virtualbox"
+     install -m4755 VirtualBoxVM VBoxSDL VBoxHeadless VBoxNetAdpCtl VBoxNetDHCP VBoxNetNAT -t "${pkgdir}/usr/lib/virtualbox"
+-    install -m0755 VirtualBox VBoxManage VBoxSVC VBoxExtPackHelperApp VBoxBalloonCtrl vbox-img vboximg-mount vboxwebsrv webtest -t "${pkgdir}/usr/lib/virtualbox"
++    install -m0755 VirtualBox VBoxManage VBoxSVC VBoxExtPackHelperApp VBoxXPCOMIPCD VBoxTestOGL VBoxBalloonCtrl vbox-img vboximg-mount vboxwebsrv webtest -t "${pkgdir}/usr/lib/virtualbox"
+ 
+     install -d -m0755 "${pkgdir}/usr/bin"
+     install -m0755 VBox.sh "${pkgdir}/usr/bin/VBox"
+@@ -195,7 +187,6 @@
+     install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
+ 
+     install -D -m0644 60-vboxdrv.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxdrv.rules"
+-    install -D -m0644 vboxweb.service "${pkgdir}/usr/lib/systemd/system/vboxweb.service"
+     install -D -m0644 virtualbox.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox.conf"
+ 
+     install -D -m0755 vboxreload "${pkgdir}/usr/bin"
+@@ -212,7 +203,7 @@
+     cd "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/bin"
+ 
+     install -D -m0755 vboxshell.py "${pkgdir}/usr/lib/virtualbox/vboxshell.py"
+-    pushd sdk/installer/python
++    pushd sdk/installer
+     VBOX_INSTALL_PATH="/usr/lib/virtualbox" python vboxapisetup.py install --root "${pkgdir}"
+     popd
+     cp -r sdk "${pkgdir}/usr/lib/virtualbox"
+@@ -273,9 +264,6 @@
+     install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
+     popd
+     install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
+-    install -D -m0644 vboxdrmclient.path "${pkgdir}/usr/lib/systemd/system/vboxdrmclient.path"
+-    install -D -m0644 vboxdrmclient.service "${pkgdir}/usr/lib/systemd/system/vboxdrmclient.service"
+-    install -D -m0644 vboxservice.service "${pkgdir}/usr/lib/systemd/system/vboxservice.service"
+     install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
+     install -D -m0644 VirtualBox-${pkgver}/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
+@@ -295,7 +283,6 @@
+     install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
+     popd
+     install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
+-    install -D -m0644 vboxservice-nox.service "${pkgdir}/usr/lib/systemd/system/vboxservice.service"
+     install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
+     install -D -m0644 "${srcdir}/VirtualBox-${pkgver}/COPYING" \
+         "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -42,9 +42,9 @@
+ procps-ng
+ python
+ python-setuptools
+-qt6-base
+-qt6-scxml
+-qt6-tools
++qt5-base
++qt5-tools
++qt5-x11extras
+ sdl
+ sdl_ttf
+ shared-mime-info
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,7 @@
+ patch -p1 -N -i "${srcdir}/${filename##*/}"
+ fi
+ done
++sed -i '/cstring/a #include <cstdint>' src/libs/dxvk-native-1.9.2a/src/util/util_bit.h
+ echo 'Applying local config'
+ cp "${srcdir}/LocalConfig.kmk" .
+ echo 'Use our CFLAGS'

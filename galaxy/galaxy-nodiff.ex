@@ -255,6 +255,7 @@ pysolfc-cardsets
 pysolfc
 python-caja
 python-pysol_cards
+qgis
 qt5ct
 qt5pas
 qt6pas

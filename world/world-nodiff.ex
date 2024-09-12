@@ -201,6 +201,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -730,7 +731,6 @@ gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
-gnome-nibbles
 gnome-online-accounts
 libgoa
 gnome-photos
@@ -4287,6 +4287,11 @@ qqc2-desktop-style
 qqc2-desktop-style5
 qqwing
 qrencode
+qscintilla
+qscintilla-qt5
+python-qscintilla-qt5
+qscintilla-qt6
+python-qscintilla-qt6
 qt5-3d
 qt5-charts
 qt5-connectivity
@@ -4376,6 +4381,7 @@ qtxdg-tools
 quilt
 quota-tools
 qutebrowser
+qwt
 r
 r8168
 radeontop
@@ -4694,6 +4700,7 @@ ruby-redcarpet
 ruby-regexp_parser
 ruby-regexp_property_values
 ruby-reline
+ruby-rexml
 ruby-ronn-ng
 ruby-rr
 ruby-rspec-core
@@ -4783,6 +4790,7 @@ ruby-websocket-extensions
 ruby-x25519
 ruby-yard
 ruby-zeitwerk
+ruby
 ruby2.7
 rubygems
 ruff
@@ -5295,12 +5303,6 @@ virt-viewer
 virt-what
 virtiofsd
 virtualbox-guest-iso
-virtualbox
-virtualbox-sdk
-virtualbox-host-dkms
-virtualbox-guest-utils
-virtualbox-guest-utils-nox
-virtualbox-ext-vnc
 virtualgl
 vkd3d
 vmaf

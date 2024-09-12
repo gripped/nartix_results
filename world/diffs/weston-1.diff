@@ -9,7 +9,7 @@
           'mesa' 'libegl' 'libevdev' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
           'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
           'gstreamer' 'gst-plugins-base-libs')
-@@ -43,8 +43,8 @@
+@@ -40,8 +40,8 @@
  }
  
  build() {
@@ -26,15 +26,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -10,6 +10,7 @@
- lcms2
+@@ -11,6 +11,7 @@
+ libdisplay-info
  libdrm
  libegl
 +libelogind
  libevdev
  libgles
  libinput
-@@ -32,7 +33,6 @@
+@@ -33,7 +34,6 @@
  pango
  pixman
  seatd

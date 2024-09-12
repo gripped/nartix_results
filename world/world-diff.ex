@@ -29,7 +29,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -140,6 +139,7 @@ gnome-desktop-docs
 gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
+gnome-nibbles
 gnome-panel
 gnome-remote-desktop
 gnome-session
@@ -677,9 +677,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-rexml
 ruby-sys-filesystem
-ruby
 samba
 libwbclient
 ldb
@@ -763,6 +761,12 @@ v4l-utils
 vault
 vigra
 python-vigra
+virtualbox
+virtualbox-sdk
+virtualbox-host-dkms
+virtualbox-guest-utils
+virtualbox-guest-utils-nox
+virtualbox-ext-vnc
 vlc
 vpnc
 vte3
