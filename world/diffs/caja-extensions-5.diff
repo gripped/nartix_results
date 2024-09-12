@@ -1,0 +1,90 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,21 +1,16 @@
+ 
+ pkgbase=caja-extensions
+-pkgname=(caja-extensions-common caja-image-converter caja-open-terminal caja-sendto caja-share caja-wallpaper caja-xattr-tags caja-audio-video-properties)
+-pkgver=1.28.0
++pkgname=(caja-extensions-common caja-image-converter caja-open-terminal caja-sendto caja-share caja-wallpaper caja-xattr-tags)
++pkgver=1.26.1
+ pkgrel=2
+-pkgdesc="Set of extensions for Caja, the MATE file manager"
++pkgdesc="Caja extensions"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ depends=('caja' 'gettext' 'dbus-glib' 'imagemagick' 'samba')
+-makedepends=('autoconf-archive' 'glib2-devel' 'mate-common' 'python' 'gst-plugins-base')
+-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/mate-desktop/caja-extensions/archive/refs/tags/v${pkgver}.tar.gz")
+-sha256sums=('4c63786d5c9f995a3e1f9bf89dd0532993aa964afab2a1a3c6370b8a32382f1a')
+-
+-prepare() {
+-    cd ${pkgbase}-${pkgver}
+-    ./autogen.sh
+-}
++makedepends=('python')
++source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/$pkgbase-$pkgver.tar.xz")
++sha256sums=('589c19e3fa10242d6239a5ccb9585598436a56ebe94d2eb2a50b5950cce1d520')
+ 
+ build() {
+     cd ${pkgbase}-${pkgver}
+@@ -25,6 +20,9 @@
+         --prefix=/usr \
+         --disable-upnp \
+         --disable-gksu
++
++    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++
+     make
+ }
+ 
+@@ -101,12 +99,3 @@
+     cd ${pkgbase}-${pkgver}
+     make -C xattr-tags DESTDIR="${pkgdir}" install
+ }
+-
+-package_caja-audio-video-properties() {
+-    pkgdesc="A Caja extension to see information about audio or video files"
+-    depends=('caja' 'caja-extensions-common' 'gst-plugins-base')
+-    groups=('mate-extra')
+-
+-    cd ${pkgbase}-${pkgver}
+-    make -C audio-video-properties DESTDIR="${pkgdir}" install
+-}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +1,8 @@
+ 
+-autoconf-archive
+ caja
+ caja-extensions-common
+ dbus-glib
+ gettext
+-glib2-devel
+-gst-plugins-base
+ imagemagick
+-mate-common
+ python
+ samba
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,9 @@
+-prepare() {
+-cd ${pkgbase}-${pkgver}
+-./autogen.sh
+-}
+ build() {
+ cd ${pkgbase}-${pkgver}
+ ./configure \
+ --prefix=/usr \
+ --disable-upnp \
+ --disable-gksu
++sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

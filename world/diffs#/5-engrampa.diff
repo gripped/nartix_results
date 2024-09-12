@@ -4,7 +4,7 @@
  
  pkgname=engrampa
 -pkgver=1.28.2
--pkgrel=1
+-pkgrel=2
 -pkgdesc="A file archiver for MATE"
 +pkgver=1.26.1
 +pkgrel=1.1
@@ -19,7 +19,7 @@
  optdepends=('caja: Caja support'
              'p7zip: 7Z and ARJ archive support'
              'unace: ACE archive support'
-@@ -18,34 +18,22 @@
+@@ -18,29 +18,22 @@
  groups=('mate-extra')
  conflicts=("engrampa-gtk3")
  replaces=("engrampa-gtk3")
@@ -52,11 +52,6 @@
      	make
  }
  
--check() {
--	cd "${pkgname}"
--	make check
--}
--
  package() {
 -	cd "${pkgname}"
 +    	cd "${pkgname}-${pkgver}"

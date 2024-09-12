@@ -93,7 +93,6 @@ aribb24
 aribb25
 ark
 armagetronad
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -123,7 +122,6 @@ atkmm-2.36-docs
 atkmm
 atkmm-docs
 atop
-atril
 attica
 attica5
 aubio
@@ -241,15 +239,6 @@ cairomm-1.16
 cairomm-1.16-docs
 cairomm
 cairomm-docs
-caja-extensions
-caja-extensions-common
-caja-image-converter
-caja-open-terminal
-caja-sendto
-caja-share
-caja-wallpaper
-caja-xattr-tags
-caja
 calc
 calcurse
 calendarsupport
@@ -517,7 +506,6 @@ endeavour
 enet
 enscript
 entr
-eom
 epiphany
 erlang-nox
 erlang
@@ -1256,6 +1244,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -2121,7 +2110,6 @@ marble
 marble-common
 marble-maps
 marble-qt
-marco
 marisa
 perl-marisa
 python-marisa
@@ -2132,26 +2120,6 @@ marked
 marknote
 massif-visualizer
 mat2
-mate-applets
-mate-backgrounds
-mate-calc
-mate-common
-mate-control-center
-mate-desktop
-mate-icon-theme-faenza
-mate-icon-theme
-mate-media
-mate-menus
-mate-netbook
-mate-notification-daemon
-mate-polkit
-mate-power-manager
-mate-sensors-applet
-mate-settings-daemon
-mate-terminal
-mate-themes
-mate-user-guide
-mate-utils
 materia-kde
 kvantum-theme-materia
 materialx
@@ -2202,8 +2170,11 @@ minuet
 miopen-hip
 mitmproxy
 mjpegtools
+mkdocs-autorefs
 mkdocs-get-deps
+mkdocs-material
 mkdocs
+mkdocstrings
 mktorrent
 mlt
 mm-common
@@ -2224,7 +2195,6 @@ mosh
 motion
 mousepad
 movit
-mozo
 mpdecimal
 mpg123
 mplayer
@@ -2842,7 +2812,6 @@ plasma5-applets-thermal-monitor
 plasma5support
 plasmatube
 playerctl
-pluma
 plymouth-kcm
 pmbootstrap
 pngplusplus
@@ -4725,7 +4694,6 @@ ruby-redcarpet
 ruby-regexp_parser
 ruby-regexp_property_values
 ruby-reline
-ruby-rexml
 ruby-ronn-ng
 ruby-rr
 ruby-rspec-core
@@ -4764,6 +4732,7 @@ ruby-semantic_puppet
 ruby-sequel
 ruby-set
 ruby-shadow
+ruby-simplecov-html
 ruby-simplecov
 ruby-simplecov_json_formatter
 ruby-sinatra
@@ -4814,7 +4783,6 @@ ruby-websocket-extensions
 ruby-x25519
 ruby-yard
 ruby-zeitwerk
-ruby
 ruby2.7
 rubygems
 ruff
@@ -5228,6 +5196,7 @@ tre
 tree-sitter-bash
 tree-sitter-c
 tree-sitter-lua
+tree-sitter-markdown
 tree-sitter-python
 tree-sitter-query
 tree-sitter-vim

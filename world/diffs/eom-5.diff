@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,18 @@
+ 
+ pkgname=eom
+-pkgver=1.28.0
+-pkgrel=2
+-pkgdesc="An image viewer for MATE"
++pkgver=1.26.0
++pkgrel=1.1
++pkgdesc="An image viewing and cataloging program for MATE"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ depends=('dbus-glib' 'gobject-introspection-runtime' 'gettext' 'exempi' 'lcms2' 'libexif' 'libjpeg-turbo' 'mate-desktop' 'libpeas')
+-makedepends=('autoconf-archive' 'glib2-devel' 'gobject-introspection' 'mate-common' 'itstool' 'yelp-tools')
+-optdepends=('webp-pixbuf-loader: webp image format support')
++makedepends=('gobject-introspection' 'itstool')
+ groups=('mate-extra')
+ conflicts=('eom-gtk3')
+ replaces=('eom-gtk3')
+-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/mate-desktop/eom/archive/refs/tags/v${pkgver}.tar.gz")
+-sha256sums=('095ab4ae210662b0f2c9b4b8099962cd50f7ca8d4c59b01fe118686ab617a3a9')
+-
+-prepare() {
+-    	cd "${pkgname}-${pkgver}"
+-	./autogen.sh
+-}
++source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
++sha256sums=('27f169aa396ddbc75740bf802bef1c0251771ca0747b5a727ff985c03dc067db')
+ 
+ build() {
+     	cd "${pkgname}-${pkgver}"
+@@ -26,6 +20,9 @@
+         	--prefix=/usr \
+         	--localstatedir=/var \
+         	--with-librsvg
++
++    	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++
+     	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+-autoconf-archive
+ dbus-glib
+ exempi
+ gettext
+-glib2-devel
+ gobject-introspection
+ gobject-introspection-runtime
+ itstool
+@@ -10,6 +8,4 @@
+ libexif
+ libjpeg-turbo
+ libpeas
+-mate-common
+ mate-desktop
+-yelp-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,9 @@
+-prepare() {
+-cd "${pkgname}-${pkgver}"
+-./autogen.sh
+-}
+ build() {
+ cd "${pkgname}-${pkgver}"
+ ./configure \
+ --prefix=/usr \
+ --localstatedir=/var \
+ --with-librsvg
++sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

@@ -1,0 +1,113 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,51 +1,36 @@
+ 
+ pkgname=caja
+ pkgver=1.28.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="File manager for the MATE desktop"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later AND LGPL-2.0-or-later')
++license=('GPL')
+ depends=('exempi' 'gvfs' 'libexif' 'libsm' 'mate-desktop' 'libnotify' 'gtk-layer-shell')
+-makedepends=('autoconf-archive' 'git' 'glib2-devel' 'gobject-introspection' 'intltool' 'mate-common' 'python-packaging')
++makedepends=('gobject-introspection' 'intltool' 'python-packaging')
+ optdepends=('gstreamer: automatic media playback when mouseover')
+ groups=('mate')
+ conflicts=('caja-gtk3')
+ replaces=('caja-gtk3')
+-source=("git+https://github.com/mate-desktop/caja.git#tag=v${pkgver}"
+-        git+https://github.com/mate-desktop/mate-submodules.git)
+-sha256sums=('1d3387cdf0acc9d7c01a563143ab91e097e8201a183a0fcece37beb03e0009f6'
+-            'SKIP')
+-
+-
+-prepare() {
+-	cd "${pkgname}"
+-	git submodule init
+-	git config submodule.mate-submodules.url "${srcdir}/mate-submodules"
+-	git -c protocol.file.allow=always submodule update
+-	./autogen.sh --prefix=/usr
+-}
+-
++source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/$pkgname-$pkgver.tar.xz")
++sha256sums=('1e3014ce1455817ec2ef74d09efdfb6835d8a372ed9a16efb5919ef7b821957a')
+ 
+ build() {
+-	cd "${pkgname}"
++	cd "$pkgname-$pkgver"
+     	./configure \
+         	--prefix=/usr \
+-		--libexecdir="/usr/lib/${pkgname}" \
++        	--libexecdir=/usr/lib/$pkgname \
+         	--enable-introspection \
+-		--disable-update-mimedb \
+-		--disable-self-check # self-check only checks for eel in make check, requires Xorg server
++        	--disable-update-mimedb
++
++    	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++
+     	make
+ }
+ 
+-check() {
+-	cd "${pkgname}"
+-	make check
+-}
+-
+ package() {
+-	cd "${pkgname}"
++    	cd "$pkgname-$pkgver"
+     	make DESTDIR="${pkgdir}" install
+ 
+-	rm -r "${pkgdir}/usr/share/dbus-1/"
++    	rm -r "$pkgdir/usr/share/dbus-1/"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,4 @@
+-autoconf-archive
+ exempi
+-git
+-glib2-devel
+ gobject-introspection
+ gtk-layer-shell
+ gvfs
+@@ -9,6 +6,5 @@
+ libexif
+ libnotify
+ libsm
+-mate-common
+ mate-desktop
+ python-packaging
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,17 +1,10 @@
+-prepare() {
+-cd "${pkgname}"
+-git submodule init
+-git config submodule.mate-submodules.url "${srcdir}/mate-submodules"
+-git -c protocol.file.allow=always submodule update
+-./autogen.sh --prefix=/usr
+-}
+ build() {
+-cd "${pkgname}"
++cd "$pkgname-$pkgver"
+ ./configure \
+ --prefix=/usr \
+---libexecdir="/usr/lib/${pkgname}" \
++--libexecdir=/usr/lib/$pkgname \
+ --enable-introspection \
+---disable-update-mimedb \
+---disable-self-check # self-check only checks for eel in make check, requires Xorg server
++--disable-update-mimedb
++sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }
