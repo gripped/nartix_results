@@ -1,6 +1,7 @@
 0ad-data
 0ad
 ada
+atril
 audacious-plugins
 audacious
 avidemux
@@ -54,6 +55,7 @@ doublecmd-gtk2
 doublecmd-qt5
 doublecmd-qt6
 engrampa
+eom
 exo
 ext4magic
 fastfetch

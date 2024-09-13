@@ -1,11 +1,9 @@
 alacritty
-atril
 caja
 cinnamon-desktop
 ecrire
 efl
 elementary-icon-theme
-eom
 ephoto
 evisum
 fceux

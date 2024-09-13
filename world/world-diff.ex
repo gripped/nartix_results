@@ -9,7 +9,7 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-arrow
+arianna
 at-spi2-core
 at-spi2-core-docs
 at
@@ -20,6 +20,7 @@ awesome
 ayatana-ido
 babl
 bash-bats
+bear
 bluedevil
 bluez
 bluez-utils
@@ -29,6 +30,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -139,7 +141,6 @@ gnome-desktop-docs
 gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
-gnome-nibbles
 gnome-panel
 gnome-remote-desktop
 gnome-session
@@ -395,6 +396,7 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
+merkuro
 mesa
 libva-mesa-driver
 mesa-vdpau
@@ -450,6 +452,7 @@ nvtop
 onboard
 onionshare
 open-iscsi
+opencascade
 opencollada
 opendht
 openmpi
@@ -465,6 +468,7 @@ passim
 pc-ble-driver
 pcsclite
 pdfgrep
+pdnsd
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -539,6 +543,9 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+protobuf
+python-protobuf
+ruby-google-protobuf
 proxytunnel
 pulseaudio
 libpulse
@@ -556,7 +563,6 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
-python-fsspec
 python-intelhex
 python-pyftpdlib
 python-pymupdf
@@ -719,6 +725,7 @@ tigervnc
 timew
 tint2
 tmux
+tokodon
 tor
 torsocks
 toxcore

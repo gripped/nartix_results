@@ -88,11 +88,11 @@ archlinux-appstream-data
 ardour
 argyllcms
 aria2
-arianna
 aribb24
 aribb25
 ark
 armagetronad
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -179,7 +179,6 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
-bear
 bearssl
 beep
 bemenu
@@ -201,7 +200,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -731,6 +729,7 @@ gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
+gnome-nibbles
 gnome-online-accounts
 libgoa
 gnome-photos
@@ -2145,7 +2144,6 @@ memtest86+-iso
 menu-cache
 menumaker
 mercurial
-merkuro
 mesa-demos
 mesa-utils
 meson-python
@@ -2348,7 +2346,6 @@ blas-openblas
 blas64-openblas
 openbox
 openbsd-netcat
-opencascade
 opencc
 opencc-doc
 opencl-clhpp
@@ -2455,7 +2452,6 @@ pdal
 pdfarranger
 pdfjs
 pdfmixtool
-pdnsd
 pegtl
 pelican
 perl-acme-alien-dontpanic
@@ -2870,9 +2866,6 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 prrte
 prrte-docs
 psutils
@@ -3306,6 +3299,7 @@ python-freezegun
 python-frozendict
 python-frozenlist
 python-fs
+python-fsspec
 python-func-timeout
 python-funcparserlib
 python-furl
@@ -3734,6 +3728,7 @@ python-pyaml
 python-pyarrow
 python-pyasn1-modules
 python-pyasn1
+python-pyasyncore
 python-pyaxmlparser
 python-pycares
 python-pycodestyle
@@ -3786,6 +3781,7 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
+python-pymdown-extensions
 python-pymongo
 python-pymysql
 python-pynacl
@@ -5188,7 +5184,6 @@ tlp
 tlp-rdw
 tmuxp
 tnftp
-tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser
@@ -5465,6 +5460,7 @@ xmlstarlet
 xmlto
 xmltoman
 xmms2
+xmrig
 xonsh
 xorg-appres
 xorg-bdftopcf

@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,22 +1,21 @@
  pkgname=telegram-desktop
--pkgver=5.5.1
+-pkgver=5.5.4
 +pkgver=4.11.8
  pkgrel=1
  pkgdesc='Official Telegram Desktop client'
@@ -25,7 +25,7 @@
  optdepends=('webkit2gtk: embedded browser features'
              'xdg-desktop-portal: desktop integration')
  source=("https://github.com/telegramdesktop/tdesktop/releases/download/v${pkgver}/tdesktop-${pkgver}-full.tar.gz")
--sha512sums=('c8aadf6d2ad739523e714774c1b69be6792f805fb83d7f16a716c688cc800c54c5f13595742bd26d8b84f26342d89e21c668c8a79ed2a0607782a8421a40844a')
+-sha512sums=('f88de70468e382393562c913690faf074f8e049036840bded61b5200e43ec9620b171b80b1a8131aaeee36153c3909a88400abaf7d9b7ab7d281afe2226edc72')
 +sha512sums=('dc5802fe4fc02542ba795a25fa86ab9bee3aa9daa3e82fc8bc4087ed90fde320f4f6b4dca38b55c460e5d33e7ca333f68163880116c6ee97259483f2c3cb2eac')
  
  build() {

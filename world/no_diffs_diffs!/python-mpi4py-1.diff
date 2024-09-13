@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _pkg=mpi4py
+ pkgname=python-${_pkg}
+-pkgver=4.0.0
+-pkgrel=1
++pkgver=3.1.5
++pkgrel=5
+ pkgdesc="Python bindings for the Message Passing Interface (MPI) standard"
+ arch=(x86_64)
+ url="https://github.com/mpi4py/mpi4py"
+@@ -17,7 +17,7 @@
+ )
+ checkdepends=(inetutils)
+ source=(https://files.pythonhosted.org/packages/source/${_pkg::1}/${_pkg}/${_pkg}-${pkgver}.tar.gz)
+-sha256sums=('820d31ae184d69c17d9b5d55b1d524d56be47d2e6cb318ea4f3e7007feff2ccc')
++sha256sums=('a706e76db9255135c2fb5d1ef54cb4f7b0e4ad9e33cbada7de27626205f2a153')
+ 
+ build() {
+     cd ${_pkg}-${pkgver}

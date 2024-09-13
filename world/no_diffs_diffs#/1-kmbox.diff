@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kmbox
+-pkgver=24.08.1
++pkgver=24.08.0
+ pkgrel=1
+ pkgdesc='Library for accessing mail storages in MBox format'
+ arch=(x86_64)
+@@ -15,7 +15,7 @@
+              qt6-doc
+              qt6-tools)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('9328c393038c198be5547c7436ca1aaf7cdf41466dccc32c8edf92ac33eaf08f'
++sha256sums=('5023414d70111305957879d9657eda6c79eaa6bdd0f48995bbb1f489334102e3'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
