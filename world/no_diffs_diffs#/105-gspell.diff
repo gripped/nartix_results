@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,7 @@
+     -D install_tests=false
+   )
+ 
+-  arch-meson gspell build "${meson_options[@]}"
++  artix-meson gspell build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ local meson_options=(
+ -D install_tests=false
+ )
+-arch-meson gspell build "${meson_options[@]}"
++artix-meson gspell build "${meson_options[@]}"
+ meson compile -C build
+ }

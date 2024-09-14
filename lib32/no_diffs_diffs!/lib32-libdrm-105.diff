@@ -1,6 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,7 @@
+@@ -1,7 +1,7 @@
+ 
+ _pkgbasename=libdrm
+ pkgname=lib32-$_pkgbasename
+-pkgver=2.4.123
++pkgver=2.4.122
+ pkgrel=1
+ pkgdesc="Userspace interface to kernel DRM services (32-bit)"
+ url="https://dri.freedesktop.org/"
+@@ -11,10 +11,9 @@
+ makedepends=('meson')
+ checkdepends=('lib32-cairo')
+ source=(https://dri.freedesktop.org/${_pkgbasename}/${_pkgbasename}-${pkgver}.tar.xz{,.sig})
+-sha512sums=('d3e6ba26bbd609fd87ca131690547eeb6a903c0a8c28b7f5cd5d0947619da09f31daf7bf4b6c38bf5e5dc173e2ccba476338ef682d8cf06d6b71ba73fc9b948d'
++sha512sums=('ea6bac94416d4ba0e9805e142ae62904236bc49f803d4fc10c92968a4df64c818dd42524ad7a4e988062836783a148e27094050bb2754f751a368627f794ad13'
+             'SKIP')
+-validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48'  # Simon Ser <contact@emersion.fr>
+-              '3BB639E56F861FA2E86505690FDD682D974CA72A') # Matt Turner <mattst88@gmail.com>
++validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48') # Simon Ser <contact@emersion.fr>
+ 
+ prepare() {
+   cd $_pkgbasename-$pkgver
+@@ -26,7 +25,7 @@
    export CXX="g++ -m32"
    export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
  

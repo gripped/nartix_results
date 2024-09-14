@@ -178,6 +178,7 @@ sqlite-tcl
 sqlite-analyzer
 lemon
 sqlite-doc
+sudo
 sysfsutils
 syslinux
 tar

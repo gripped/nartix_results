@@ -10,6 +10,7 @@ appstream-qt
 aquamarine
 archivetools
 arianna
+astromenace
 at-spi2-core
 at-spi2-core-docs
 at
@@ -108,6 +109,7 @@ fcitx-mozc
 fcitx5
 fcron
 ffmpeg
+ffmpegthumbnailer
 firefox
 firewalld
 flatpak
@@ -226,6 +228,7 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
+iso-codes
 isoimagewriter
 iwd
 jack2
@@ -307,8 +310,6 @@ libfprint
 libgdata
 libgudev
 libguestfs
-libhandy
-libhandy-docs
 libhandy0
 libinput
 libldm
@@ -452,7 +453,6 @@ nvtop
 onboard
 onionshare
 open-iscsi
-opencascade
 opencollada
 opendht
 openmpi
@@ -729,6 +729,7 @@ tokodon
 tor
 torsocks
 toxcore
+tpm2-tools
 tracker3-miners
 tracker3
 tracker3-docs
@@ -768,12 +769,6 @@ v4l-utils
 vault
 vigra
 python-vigra
-virtualbox
-virtualbox-sdk
-virtualbox-host-dkms
-virtualbox-guest-utils
-virtualbox-guest-utils-nox
-virtualbox-ext-vnc
 vlc
 vpnc
 vte3

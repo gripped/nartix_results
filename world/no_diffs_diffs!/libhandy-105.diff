@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,7 +43,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson libhandy build "${meson_options[@]}"
++  artix-meson libhandy build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ local meson_options=(
+ -D gtk_doc=true
+ )
+-arch-meson libhandy build "${meson_options[@]}"
++artix-meson libhandy build "${meson_options[@]}"
+ meson compile -C build
+ }

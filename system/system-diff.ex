@@ -55,7 +55,6 @@ ppp
 procps-ng
 rpcbind
 shadow
-sudo
 thin-provisioning-tools
 usbutils
 util-linux

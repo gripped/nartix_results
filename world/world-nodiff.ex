@@ -114,7 +114,6 @@ aspell-sv
 aspell-uk
 aspell
 assimp
-astromenace
 astyle
 atftp
 atkmm-2.36
@@ -552,7 +551,6 @@ feh
 festival
 ffcall
 ffmpeg4.4
-ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
@@ -811,6 +809,7 @@ gsmartcontrol
 gsoap
 gsound
 gspell
+gspell-docs
 gssdp
 gssdp-docs
 gst-python
@@ -980,7 +979,6 @@ iperf3
 ipset
 ipython
 irssi
-iso-codes
 isodate
 python-isodate
 ispc
@@ -1587,6 +1585,8 @@ libgusb
 libgweather-4
 libgweather-4-docs
 libgxps
+libhandy
+libhandy-docs
 libharu
 libheif
 libhubbub
@@ -2346,6 +2346,7 @@ blas-openblas
 blas64-openblas
 openbox
 openbsd-netcat
+opencascade
 opencc
 opencc-doc
 opencl-clhpp
@@ -5192,7 +5193,6 @@ towncrier
 toxic
 tp_smapi
 tpm2-abrmd
-tpm2-tools
 transcode
 transmageddon
 tre
@@ -5298,6 +5298,12 @@ virt-viewer
 virt-what
 virtiofsd
 virtualbox-guest-iso
+virtualbox
+virtualbox-sdk
+virtualbox-host-dkms
+virtualbox-guest-utils
+virtualbox-guest-utils-nox
+virtualbox-ext-vnc
 virtualgl
 vkd3d
 vmaf
