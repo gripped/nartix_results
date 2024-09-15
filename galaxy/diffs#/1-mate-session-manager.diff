@@ -1,74 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,43 +1,33 @@
- 
- pkgname=mate-session-manager
- pkgver=1.28.0
--pkgrel=2
-+pkgrel=1.1
- pkgdesc="The MATE Session Handler"
- url="https://mate-desktop.org"
+@@ -7,7 +7,7 @@
  arch=('x86_64')
--license=('GPL-2.0-or-later')
-+license=('GPL')
+ license=('GPL-2.0-or-later')
  depends=('dbus-glib' 'gettext' 'gtk3' 'libsm' 'mate-desktop')
 -makedepends=('autoconf-archive' 'git' 'glib2-devel' 'mate-common' 'xtrans' 'systemd' 'python')
-+makedepends=('xtrans' 'elogind' 'python')
++makedepends=('autoconf-archive' 'git' 'glib2-devel' 'mate-common' 'xtrans' 'elogind' 'python')
  optdepends=('gnome-keyring: keyring support'
              'xdg-user-dirs-gtk: manage user directories')
  groups=('mate')
- conflicts=('mate-session-manager-gtk3')
- replaces=('mate-session-manager-gtk3')
--source=("git+https://github.com/mate-desktop/mate-session-manager.git#tag=v${pkgver}"
--        git+https://github.com/mate-desktop/mate-submodules.git)
--sha256sums=('3e9d2aafdf0119f04187aa65ab2f7098441a31bf3d50c01f0e934bb30e74c108'
--            'SKIP')
--
--prepare() {
--	cd "${pkgname}"
--	git submodule init
--	git config submodule.mate-submodules.url "${srcdir}/mate-submodules"
--	git -c protocol.file.allow=always submodule update
--	./autogen.sh
--}
-+source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
-+sha256sums=('d32ce4595ba1da65290777203f2bc82bd973b214a3a04080a1ef5c68990a2d7b')
- 
- build() {
--	cd "${pkgname}"
-+	cd "${pkgname}-${pkgver}"
- 	./configure \
- 	            --prefix=/usr \
--	            --libexecdir="/usr/lib/${pkgname}" \
-+	            --libexecdir=/usr/lib/${pkgname} \
+@@ -33,7 +33,8 @@
+ 	            --libexecdir="/usr/lib/${pkgname}" \
  	            --sysconfdir=/etc \
  	            --localstatedir=/var \
 -	            --disable-upower
++	            --disable-upower \
 +	            --with-elogind=yes
  	make
  }
  
- package() {
--	cd "${pkgname}"
-+	cd "${pkgname}-${pkgver}"
- 	make DESTDIR="${pkgdir}" install
- }
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,8 @@
--autoconf-archive
+@@ -1,5 +1,6 @@
+ autoconf-archive
  dbus-glib
 +elogind
  gettext
--git
--glib2-devel
- gtk3
- libsm
--mate-common
+ git
+ glib2-devel
+@@ -8,5 +9,4 @@
+ mate-common
  mate-desktop
  python
 -systemd

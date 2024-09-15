@@ -49,6 +49,7 @@ openresolv
 p11-kit
 libp11-kit
 p11-kit-docs
+pacman
 pam
 pambase
 ppp

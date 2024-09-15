@@ -154,7 +154,6 @@ ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl
-pacman
 patch
 pciutils
 pcre

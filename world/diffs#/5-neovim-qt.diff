@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=neovim-qt
+ pkgver=0.2.18
+-pkgrel=4
++pkgrel=2
+ pkgdesc='GUI for Neovim'
+ arch=(x86_64)
+ url='https://github.com/equalsraf/neovim-qt'
+ license=(ISC)
+-depends=(hicolor-icon-theme neovim qt5-svg)
+-makedepends=(cmake git ninja)
++depends=(neovim qt5-svg hicolor-icon-theme)
++makedepends=(cmake git)
+ source=("git+$url#commit=1854bdc2b481a90a7845c2f17e5da0519bf16f48") # tag: v0.2.18
+-b2sums=('08aba78fd332819d771fd4ddc2303f97db63affec400595a27fed91cd8408d743953bfefafc22aa3c873eabfac4565a57c719c95c9c5b11df1acca8b83740dbf')
++b2sums=('SKIP')
+ 
+ build() {
+   cmake \
+@@ -21,12 +21,11 @@
+     -D CMAKE_INSTALL_LIBDIR=lib \
+     -D CMAKE_INSTALL_PREFIX=/usr \
+     -D USE_SYSTEM_MSGPACK=on \
+-    -G Ninja \
+     -S $pkgname
+-  ninja -C build
++  make -C build
+ }
+ 
+ package() {
+-  DESTDIR="$pkgdir" ninja -C build install
+-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" $pkgname/LICENSE
++  DESTDIR="$pkgdir" make -C build install
++  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" "$pkgname/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,5 +2,4 @@
+ git
+ hicolor-icon-theme
+ neovim
+-ninja
+ qt5-svg
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+ -D CMAKE_INSTALL_LIBDIR=lib \
+ -D CMAKE_INSTALL_PREFIX=/usr \
+ -D USE_SYSTEM_MSGPACK=on \
+--G Ninja \
+ -S $pkgname
+-ninja -C build
++make -C build
+ }

@@ -199,6 +199,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1302,7 +1303,6 @@ kontrast
 konversation
 kopete
 korganizer
-kosmindoormap
 kotlin
 kpackage
 kpackage5
@@ -2253,7 +2253,6 @@ neochat
 neofetch
 neomutt
 neon
-neovim-qt
 neovim
 net-snmp
 netcdf-fortran
@@ -2867,6 +2866,9 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 prrte
 prrte-docs
 psutils

@@ -18,14 +18,6 @@
    ./autogen.sh
  }
  
-@@ -43,5 +46,7 @@
- package() {
-   cd $pkgname
-   make DESTDIR="$pkgdir" install
-+
-+  rm -fr $pkgdir/usr/lib/systemd
- }
- 
 
 
 ############# Stripped diff below #################

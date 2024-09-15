@@ -31,7 +31,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -272,6 +271,7 @@ kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
+kosmindoormap
 ksnip
 ksystemlog
 kwin
@@ -433,6 +433,7 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
+neovim-qt
 netavark
 netplan
 networkmanager
@@ -543,9 +544,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-protobuf
-python-protobuf
-ruby-google-protobuf
 proxytunnel
 pulseaudio
 libpulse
@@ -770,6 +768,7 @@ vault
 vigra
 python-vigra
 vlc
+libvlc
 vpnc
 vte3
 vte-common
