@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libplacebo
+ pkgver=7.349.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Reusable library for GPU-accelerated video/image rendering primitives'
+ url='https://github.com/haasn/libplacebo'
+ arch=('x86_64')
 @@ -21,7 +21,7 @@
  build() {
    cd ${pkgname}-v${pkgver}

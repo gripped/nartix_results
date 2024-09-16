@@ -9,9 +9,9 @@
 +         openssl webrtc-audio-processing libudev libarchive)
 +makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio udev meson)
  checkdepends=(cppunit)
- _commit=32f39e65483cb22729eb922d72434013b337f2c9
- _pjprojectver=e12ea3bfa81cc4f46031599f80707e81133f1353
-@@ -60,7 +60,7 @@
+ _commit=cbf8f0af6d49d1e95cf7fc85487c9c876d49878c
+ _pjprojectver=8fc165b833eea6e3c88d67a541385424b129fd3f
+@@ -58,7 +58,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  
    cd "${srcdir}"

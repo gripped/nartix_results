@@ -199,7 +199,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -552,6 +551,7 @@ feh
 festival
 ffcall
 ffmpeg4.4
+ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
@@ -671,7 +671,6 @@ gimp-help
 gimp
 girara
 git-lfs
-git
 gitea
 github-cli
 gjs
@@ -1961,6 +1960,7 @@ lksctp-tools
 lld
 lld16
 lldb
+llhttp
 llvm-julia
 llvm
 llvm14
@@ -2253,6 +2253,7 @@ neochat
 neofetch
 neomutt
 neon
+neovim-qt
 neovim
 net-snmp
 netcdf-fortran
@@ -3731,6 +3732,7 @@ python-pyaml
 python-pyarrow
 python-pyasn1-modules
 python-pyasn1
+python-pyasynchat
 python-pyasyncore
 python-pyaxmlparser
 python-pycares
@@ -3757,6 +3759,7 @@ python-pyenchant
 python-pyfakefs
 python-pyflakes
 python-pyftdi
+python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
@@ -4413,7 +4416,6 @@ redland-storage-sqlite
 remmina
 reptyr
 rest
-restinio
 retro-gtk
 rhash
 rhino
@@ -4813,7 +4815,6 @@ salt
 samurai
 sassc
 sbc
-sbsigntools
 scdoc
 schedtool
 schroedinger

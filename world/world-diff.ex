@@ -31,6 +31,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -108,7 +109,6 @@ fcitx-mozc
 fcitx5
 fcron
 ffmpeg
-ffmpegthumbnailer
 firefox
 firewalld
 flatpak
@@ -134,6 +134,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+git
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -433,7 +434,6 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
-neovim-qt
 netavark
 netplan
 networkmanager
@@ -562,7 +562,6 @@ pyside6-tools
 shiboken6
 python-anytree
 python-intelhex
-python-pyftpdlib
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -674,6 +673,7 @@ redis
 redshift
 refind
 refind-docs
+restinio
 rocblas
 rocfft
 rocrand
@@ -687,6 +687,7 @@ libwbclient
 ldb
 smbclient
 sane
+sbsigntools
 scribus
 sdbus-cpp
 $pkgbase
