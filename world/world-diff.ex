@@ -134,7 +134,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-git
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -266,6 +265,7 @@ jedi-language-server
 js78
 kcoreaddons
 kgamma
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -673,7 +673,6 @@ redis
 redshift
 refind
 refind-docs
-restinio
 rocblas
 rocfft
 rocrand

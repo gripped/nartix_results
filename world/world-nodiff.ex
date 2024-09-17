@@ -527,6 +527,7 @@ exiv2
 exo
 expac
 expect
+expected-lite
 f2fs-tools
 faac
 faad2
@@ -671,6 +672,7 @@ gimp-help
 gimp
 girara
 git-lfs
+git
 gitea
 github-cli
 gjs
@@ -1241,7 +1243,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1985,6 +1986,7 @@ lshw
 lskat
 lsof
 lsscsi
+lttng-ust2.12
 lua-bitop
 lua51-bitop
 lua52-bitop
@@ -4416,6 +4418,7 @@ redland-storage-sqlite
 remmina
 reptyr
 rest
+restinio
 retro-gtk
 rhash
 rhino
@@ -5211,6 +5214,7 @@ tree-sitter
 tree-sitter-cli
 tree
 trojan
+ts-node
 tslib
 ttf-bitstream-vera
 ttf-carlito
