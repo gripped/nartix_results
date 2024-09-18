@@ -31,7 +31,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -434,6 +433,7 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
+neovim
 netavark
 netplan
 networkmanager
@@ -686,7 +686,6 @@ libwbclient
 ldb
 smbclient
 sane
-sbsigntools
 scribus
 sdbus-cpp
 $pkgbase

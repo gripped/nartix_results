@@ -199,6 +199,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1021,6 +1022,7 @@ jrnl
 jruby
 js102
 js115
+js128
 js91
 jshon
 json-glib
@@ -2256,7 +2258,6 @@ neofetch
 neomutt
 neon
 neovim-qt
-neovim
 net-snmp
 netcdf-fortran
 netcdf
@@ -4818,6 +4819,7 @@ salt
 samurai
 sassc
 sbc
+sbsigntools
 scdoc
 schedtool
 schroedinger

@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=ziproxy
+ pkgver=3.3.2
+-pkgrel=7
++pkgrel=6
+ pkgdesc="forwarding, non-caching, compressing HTTP proxy server"
+ arch=('x86_64')
+ url="http://ziproxy.sourceforge.net/"
+ license=('GPL-2.0-or-later')
+-depends=('giflib' 'glibc' 'libpng' 'libjpeg-turbo' 'zlib' 'jasper' 'libsasl')
++depends=('giflib' 'glibc' 'libpng' 'libjpeg' 'zlib' 'jasper' 'libsasl')
+ backup=(etc/ziproxy/ziproxy.conf
+   etc/ziproxy/bo_exception.list
+   etc/ziproxy/http.passwd
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ giflib
+ glibc
+ jasper
+-libjpeg-turbo
++libjpeg
+ libpng
+ libsasl
+ zlib

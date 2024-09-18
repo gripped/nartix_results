@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=v2ray-domain-list-community
+-pkgver=20240914091803
++pkgver=20240907043125
+ pkgrel=1
+ pkgdesc="A list of domains to be used as geosites for routing purpose in Project V"
+ arch=('any')
+@@ -8,7 +8,7 @@
+ license=('MIT')
+ makedepends=('go' 'git')
+ source=("git+https://github.com/v2fly/domain-list-community.git#tag=$pkgver")
+-sha512sums=('d88fa2ad3436c80ffa0caba934887e51fbd845276844738f0fae4999e93661631e10624667f4f00ba23edbcc43e446c54b4fa7bbbd44b375d2dae84ebcb53390')
++sha512sums=('84821496fead07c85f11069578fb4577e73d8b424a4cc4bbe3367e4bb9d08da4f2be394f53cc4c01ab9df848934131b3486d6ccb56f0d7fb579584ebf5939ace')
+ 
+ build() {
+   cd domain-list-community
