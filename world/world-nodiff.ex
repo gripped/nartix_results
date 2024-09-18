@@ -21,7 +21,6 @@ acpilight
 adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
-adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
 afpfs-ng
@@ -76,8 +75,6 @@ apitrace
 apparmor
 appmenu-gtk-module
 appstream-glib
-apr-util
-apr
 aqbanking
 arandr
 arc-gtk-theme
@@ -114,6 +111,7 @@ aspell-sv
 aspell-uk
 aspell
 assimp
+astromenace
 astyle
 atftp
 atkmm-2.36
@@ -199,7 +197,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -663,9 +660,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
-ghostxps
-ghostpcl
 gi-docgen
 giflib
 gifski
@@ -2258,6 +2252,7 @@ neofetch
 neomutt
 neon
 neovim-qt
+neovim
 net-snmp
 netcdf-fortran
 netcdf
@@ -3929,7 +3924,6 @@ python-pyyaml-env-tag
 python-pyzmq
 python-qdarkstyle
 python-qrcode
-python-qtpy
 python-quart
 python-railroad-diagrams
 python-random2
@@ -5273,9 +5267,6 @@ usd
 usd-extras
 usort
 uthash
-uv
-$pkgbase
-python-$pkgbase
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip

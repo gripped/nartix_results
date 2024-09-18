@@ -1,5 +1,6 @@
 0ad
 accountsservice
+adwaita-icon-theme-legacy
 alacritty
 alsa-utils
 apache
@@ -7,10 +8,11 @@ apcupsd
 appstream
 appstream-qt5
 appstream-qt
+apr-util
+apr
 aquamarine
 archivetools
 arianna
-astromenace
 at-spi2-core
 at-spi2-core-docs
 at
@@ -31,6 +33,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -133,6 +136,9 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
+ghostxps
+ghostpcl
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -433,7 +439,6 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
-neovim
 netavark
 netplan
 networkmanager
@@ -567,6 +572,7 @@ python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
+python-qtpy
 python-signedjson
 python-tblib
 python-teamcity-messages
@@ -748,6 +754,9 @@ usb_modeswitch
 usbguard
 usbmuxd
 utf8cpp
+uv
+$pkgbase
+python-$pkgbase
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
