@@ -21,6 +21,7 @@ acpilight
 adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
+adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
 afpfs-ng
@@ -75,6 +76,8 @@ apitrace
 apparmor
 appmenu-gtk-module
 appstream-glib
+apr-util
+apr
 aqbanking
 arandr
 arc-gtk-theme
@@ -197,6 +200,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -280,6 +284,7 @@ cervisia
 cfitsio
 cgns
 chafa
+chatblade
 check-jsonschema
 check
 check-docs
@@ -484,6 +489,7 @@ ed
 editline
 editorconfig-core-c
 egl-wayland
+eglexternalplatform
 eigen
 ejabberd
 electron
@@ -893,6 +899,7 @@ htop
 http-parser
 httpbin
 hub
+hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -976,6 +983,7 @@ iperf3
 ipset
 ipython
 irssi
+iso-codes
 isodate
 python-isodate
 ispc
@@ -1812,6 +1820,7 @@ libsoxr
 libspatialite
 libspectre
 libspf2
+libspiro
 libspnav
 libspng
 libsquish
@@ -1846,6 +1855,7 @@ libunwind
 libupnp
 liburcu
 liburing
+libusb-compat
 libusbmuxd
 libutempter
 libutf8proc
@@ -2226,6 +2236,7 @@ mutt
 mypaint-brushes1
 mypy
 namcap
+nanobind
 nanosvg
 nasm
 nauty
@@ -2844,6 +2855,7 @@ postgrey
 postorius
 potrace
 povray
+power-profiles-daemon
 powerline
 powerline-fonts
 vim-powerline
@@ -5195,6 +5207,7 @@ towncrier
 toxic
 tp_smapi
 tpm2-abrmd
+tpm2-tools
 transcode
 transmageddon
 tre
@@ -5287,6 +5300,8 @@ vice
 vid.stab
 viewnior
 vifm
+vigra
+python-vigra
 vim
 gvim
 vim-runtime

@@ -1,4 +1,3 @@
-alacritty
 cinnamon-desktop
 ecrire
 efl

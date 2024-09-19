@@ -1,15 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,7 +37,7 @@
+@@ -37,7 +37,8 @@
    desktop-file-utils
  )
  
 -makedepends=(autoconf bison perl flex mingw-w64-gcc
++CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
 +depends=(autoconf bison perl flex
    giflib                lib32-giflib
    gnutls                lib32-gnutls
    libxinerama           lib32-libxinerama
-@@ -120,7 +120,7 @@
+@@ -120,7 +121,7 @@
      --enable-win64 \
      --with-xattr
  
@@ -18,7 +19,7 @@
  
    msg2 "Building Wine-32..."
  
-@@ -135,20 +135,20 @@
+@@ -135,20 +136,20 @@
      --libdir=/usr/lib32 \
      --with-wine64="$srcdir/$pkgname-64-build"
  
@@ -42,7 +43,7 @@
      libdir="$pkgdir/usr/lib" \
      dlldir="$pkgdir/usr/lib/wine" install
  
-@@ -157,7 +157,5 @@
+@@ -157,7 +158,5 @@
    ln -s ../conf.avail/30-win32-aliases.conf "$pkgdir/usr/share/fontconfig/conf.default/30-win32-aliases.conf"
    install -Dm 644 "$srcdir/wine-binfmt.conf" "$pkgdir/usr/lib/binfmt.d/wine.conf"
  

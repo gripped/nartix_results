@@ -1,6 +1,5 @@
 0ad
 accountsservice
-adwaita-icon-theme-legacy
 alacritty
 alsa-utils
 apache
@@ -8,8 +7,6 @@ apcupsd
 appstream
 appstream-qt5
 appstream-qt
-apr-util
-apr
 aquamarine
 archivetools
 arianna
@@ -33,7 +30,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -51,7 +47,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 cgmanager
-chatblade
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -86,7 +81,6 @@ earlyoom
 edk2
 edk2-shell
 edk2-ovmf
-eglexternalplatform
 element.io
 element-web
 element-desktop
@@ -219,7 +213,6 @@ haproxy
 haveged
 hexchat
 hidapi
-hugin
 hwloc
 hyprland
 i2pd
@@ -232,7 +225,6 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
-iso-codes
 isoimagewriter
 iwd
 jack2
@@ -324,10 +316,8 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
-libspiro
 libtg_owt
 libudev0-shim
-libusb-compat
 libusbsio
 python-libusbsio
 libvirt
@@ -432,7 +422,6 @@ mumble-server
 mutter
 mutter-docs
 mutter45
-nanobind
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
@@ -545,7 +534,6 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
-power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
@@ -732,7 +720,6 @@ tokodon
 tor
 torsocks
 toxcore
-tpm2-tools
 tracker3-miners
 tracker3
 tracker3-docs
@@ -773,8 +760,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
-vigra
-python-vigra
 vlc
 libvlc
 vpnc

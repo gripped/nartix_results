@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build --includedir /usr/include/EGL
++  artix-meson $pkgname build --includedir /usr/include/EGL
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ git cherry-pick -n 70cd612f7da99449ba0c9bbbbc0ef1b3bef43f19
+ }
+ build() {
+-arch-meson $pkgname build --includedir /usr/include/EGL
++artix-meson $pkgname build --includedir /usr/include/EGL
+ meson compile -C build
+ }

@@ -1,6 +1,7 @@
 0ad-data
 0ad
 ada
+alacritty
 atril
 audacious-plugins
 audacious
@@ -70,6 +71,8 @@ freecell-solver
 garcon
 girara
 grub-btrfs
+gstreamermm
+gstreamermm-docs
 incron
 libdbusmenu-lxqt
 libe-book
@@ -308,6 +311,7 @@ scribus
 scummvm
 signal-desktop
 stalonetray
+subtitleeditor
 telegram-desktop
 terminus-font
 termshark
