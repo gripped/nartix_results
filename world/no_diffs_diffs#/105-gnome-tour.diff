@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,7 +23,7 @@
+@@ -36,7 +36,7 @@
  }
  
  build() {
@@ -17,7 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
+@@ -4,6 +4,6 @@
+ cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
  build() {
 -arch-meson $pkgname build
 +artix-meson $pkgname build

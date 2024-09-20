@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -47,7 +47,7 @@
+@@ -45,7 +45,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,6 @@
- git apply -3 ../seahorse-ssh-return-type.patch
+@@ -2,6 +2,6 @@
+ cd seahorse
  }
  build() {
 -arch-meson seahorse build -D manpage=true

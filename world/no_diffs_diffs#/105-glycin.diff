@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -58,12 +58,12 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=glycin
+ pkgver=1.1.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Sandboxed and extendable image decoding"
+ arch=(x86_64)
+ url="https://gitlab.gnome.org/sophie-h/glycin"
+@@ -68,12 +68,12 @@
      -D test_skip_install=false
    )
  
@@ -10,8 +19,8 @@
  }
  
  check() {
--  RUST_BACKTRACE=full meson test -v -C build --print-errorlogs
-+  RUST_BACKTRACE=full meson test -v -C build --print-errorlogs || :
+-  RUST_BACKTRACE=full meson test -v -C build --print-errorlogs --no-rebuild
++  RUST_BACKTRACE=full meson test -v -C build --print-errorlogs --no-rebuild ||:
  }
  
  package() {
@@ -23,7 +32,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,6 @@
+@@ -10,6 +10,6 @@
  local meson_options=(
  -D test_skip_install=false
  )

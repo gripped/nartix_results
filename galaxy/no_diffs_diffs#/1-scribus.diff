@@ -1,11 +1,41 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,11 +1,11 @@
  
  pkgname=scribus
  pkgver=1.6.2
--pkgrel=3
+-pkgrel=4
 +pkgrel=3.1
  pkgdesc="Desktop publishing software"
  arch=(x86_64)
  url="https://www.scribus.net/"
+-license=(GPL-2.0-or-later)
++license=(GPL)
+ depends=(cairo
+          fontconfig
+          freetype2
+@@ -16,7 +16,7 @@
+          libcdr
+          libcups
+          libfreehand
+-         libjpeg-turbo libjpeg.so
++         libjpeg
+          libmspub
+          libpagemaker
+          libpng
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,8 +10,7 @@
+ libcups
+ libfreehand
+ libicuuc.so
+-libjpeg-turbo
+-libjpeg.so
++libjpeg
+ libmspub
+ libpagemaker
+ libpng

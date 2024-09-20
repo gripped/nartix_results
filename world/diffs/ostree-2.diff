@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,7 +34,6 @@
+@@ -35,7 +35,6 @@
    mkinitcpio
    openssl
    python
@@ -8,7 +8,7 @@
    xz
  )
  checkdepends=(
-@@ -77,6 +76,7 @@
+@@ -80,6 +79,7 @@
  
  build() {
    local configure_options=(
@@ -16,7 +16,7 @@
      --disable-static
      --enable-experimental-api
      --enable-gtk-doc
-@@ -111,7 +111,6 @@
+@@ -115,7 +115,6 @@
      gpgme libgpgme.so
      libarchive libarchive.so
      openssl libcrypto.so
@@ -30,7 +30,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -25,14 +25,11 @@
+@@ -27,14 +27,11 @@
  liblzma.so
  libsodium
  libsoup3

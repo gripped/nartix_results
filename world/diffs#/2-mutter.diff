@@ -8,7 +8,7 @@
    wayland
    xorg-xwayland
  )
-@@ -88,6 +87,7 @@
+@@ -90,6 +89,7 @@
  
  build() {
    local meson_options=(
@@ -16,9 +16,9 @@
      -D docs=true
      -D egl_device=true
      -D installed_tests=false
-@@ -99,7 +99,7 @@
-   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
-   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+@@ -103,7 +103,7 @@
+ 
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
 -  arch-meson mutter build "${meson_options[@]}"
 +  artix-meson mutter build "${meson_options[@]}"

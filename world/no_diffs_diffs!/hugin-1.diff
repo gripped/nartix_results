@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=hugin
+ pkgver=2023.0.0
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Panorama photo stitcher"
+ arch=(x86_64)
+ url="http://hugin.sourceforge.net/"
+-license=(GPL-2.0-only)
++license=(GPL)
+ depends=(boost-libs
+          enblend-enfuse
+          exiv2
+@@ -15,7 +15,7 @@
+          lapack
+          lcms2
+          lensfun
+-         libjpeg-turbo libjpeg.so
++         libjpeg
+          libpano13
+          libpng
+          libtiff
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,8 +10,7 @@
+ lapack
+ lcms2
+ lensfun
+-libjpeg-turbo
+-libjpeg.so
++libjpeg
+ libpano13
+ libpng
+ libtiff

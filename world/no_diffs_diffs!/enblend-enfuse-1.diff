@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,11 +3,11 @@
+ 
+ pkgname=enblend-enfuse
+ pkgver=4.2.r1546+hb66125418f7d
+-pkgrel=5
++pkgrel=4
+ pkgdesc='Intelligent blend tool for overlapping picture'
+ arch=(x86_64)
+ url='http://enblend.sourceforge.net'
+-license=(GPL-2.0-only)
++license=(GPL-2.0-onnly)
+ depends=(exiv2
+          gcc-libs # libgcc_s.so libgomp.so libstdc++.so
+          glibc # libc.so libm.so
+@@ -17,7 +17,7 @@
+          vigra) # libvigraimpex.so
+ makedepends=(boost
+              help2man
+-             libjpeg-turbo libjpeg.so
++             libjpeg
+              libpng
+              mercurial
+              openexr
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,8 +5,7 @@
+ gsl
+ help2man
+ lcms2
+-libjpeg-turbo
+-libjpeg.so
++libjpeg
+ liblcms2.so
+ libpng
+ libtiff

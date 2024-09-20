@@ -30,6 +30,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -133,6 +134,7 @@ ghc-filesystem
 ghostscript
 ghostxps
 ghostpcl
+gjs
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -149,7 +151,6 @@ gnome-shell
 gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
-gnustep-base
 go-bindata
 go-licenses
 godot
@@ -348,6 +349,8 @@ usbip
 x86_energy_perf_policy
 lirc
 lm_sensors
+localsearch
+localsearch-testutils
 lua-filesystem
 luarocks
 lxc
@@ -422,6 +425,7 @@ mumble-server
 mutter
 mutter-docs
 mutter45
+mutter46
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
@@ -463,7 +467,6 @@ passim
 pc-ble-driver
 pcsclite
 pdfgrep
-pdnsd
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -534,6 +537,7 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
+power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
@@ -554,7 +558,9 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-h11
 python-intelhex
+python-moto
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -715,6 +721,8 @@ thunderbird
 tigervnc
 timew
 tint2
+tinysparql
+tinysparql-docs
 tmux
 tokodon
 tor

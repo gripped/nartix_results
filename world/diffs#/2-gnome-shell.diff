@@ -8,7 +8,7 @@
    unzip
    upower
    webkitgtk-6.0
-@@ -83,6 +82,7 @@
+@@ -84,6 +83,7 @@
  
  build() {
    local meson_options=(
@@ -16,7 +16,7 @@
      -D gtk_doc=true
      -D tests=false
    )
-@@ -92,7 +92,7 @@
+@@ -93,7 +93,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -31,9 +31,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -49,7 +49,6 @@
- pango
+@@ -50,7 +50,6 @@
  polkit
+ python-docutils
  sassc
 -systemd-libs
  unzip

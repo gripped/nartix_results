@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
+@@ -1,13 +1,14 @@
+ pkgname=jose
+ pkgver=11
+ _commit=145c41a4ec70c15f6f8aa12a915e16cb60f0991f # git rev-parse "v$pkgver^{}"
+-pkgrel=3
++pkgrel=2
+ pkgdesc='C-language implementation of Javascript Object Signing and Encryption'
+ arch=('x86_64')
+ url='https://github.com/latchset/jose'
  license=('APACHE')
  depends=('jansson' 'openssl' 'zlib')
  makedepends=('git' 'asciidoc' 'meson')

@@ -6,7 +6,7 @@
  )
 -pkgver=45.2
 -pkgrel=1
-+pkgver=46.2
++pkgver=47.0
 +pkgrel=2
  pkgdesc="Default file manager for GNOME"
 -url="https://wiki.gnome.org/Apps/Files"
@@ -30,14 +30,25 @@
    gtk4
    gvfs
    hicolor-icon-theme
-@@ -35,24 +38,26 @@
+@@ -28,31 +31,36 @@
+   libgexiv2
+   libportal
+   libportal-gtk4
++  libx11
++  localsearch
+   pango
+-  tracker3
++  tinysparql
++  wayland
+ )
+ makedepends=(
    appstream-glib
    gi-docgen
    git
 +  glib2-devel
    gobject-introspection
    meson
-   tracker3-miners
+-  tracker3-miners
  )
  checkdepends=(python-gobject)
 -_commit=5e84f663e7e01314a8e364fba50451e011938b7a  # tags/45.2^0
@@ -52,10 +63,11 @@
 -  cd nautilus
 -  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 -}
-+b2sums=('eb4731ec4236e9e385d0658ebc94ed56dcca6a3b4b425aedba8c0f9019b1be2e785b76a43a642c9d45e899712cfc0c935663153b2ea74716a1fed398340eb122'
-+        'c840dc4de2f7c23b49adb0ba88b88c13ddc59ba8b10818ed3ba5ed7cda93d69da9d47d7c7f8c39153d4535c9785ff7c0fd89992a87b09e7cc6e8a5492c2d9a7f')
++b2sums=('SKIP'
++        '1c81c3b736abdda0d59d5b798cd83dd5a794e64e7e052f65e1c1e27b2b1b52afbee06907fd9645950fb0acfb17c1f64c7a9e42ba59368720235e2fbd8df32fb5')
 +validpgpkeys=(
 +  6B211753AC950672287226800538577822AE4B17 # António Fernandes <antoniof@gnome.org>
++  550660707A6F40376B9B9F8D504A78811E6160CC # Corey Berla <corey@berla.me>
 +)
  
  prepare() {
@@ -65,7 +77,7 @@
  }
  
  build() {
-@@ -61,7 +66,7 @@
+@@ -61,7 +69,7 @@
      -D packagekit=false
    )
  
@@ -74,14 +86,17 @@
    meson compile -C build
  }
  
-@@ -82,7 +87,6 @@
+@@ -81,10 +89,6 @@
+ 
  package_nautilus() {
    depends+=(libnautilus-extension.so)
-   optdepends=(
+-  optdepends=(
 -    'nautilus-sendto: Send files via mail extension'
-     'tracker3-miners: Full text search and metadata-based renaming'
-   )
+-    'tracker3-miners: Full text search and metadata-based renaming'
+-  )
    groups=(gnome)
+ 
+   meson install -C build --destdir "$pkgdir"
 @@ -103,6 +107,7 @@
    depends=(
      gcc-libs
@@ -109,6 +124,18 @@
  gst-plugins-base-libs
  gstreamer
  gtk4
+@@ -21,7 +24,9 @@
+ libnautilus-extension.so
+ libportal
+ libportal-gtk4
++libx11
++localsearch
+ meson
+ pango
+-tracker3
+-tracker3-miners
++tinysparql
++wayland
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

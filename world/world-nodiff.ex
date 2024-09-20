@@ -200,7 +200,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -676,7 +675,6 @@ git-lfs
 git
 gitea
 github-cli
-gjs
 gkrellm
 gl2ps
 glad
@@ -700,6 +698,7 @@ gmic
 gimp-plugin-gmic
 gmime3
 gn
+gnome-app-list
 gnome-applets
 gnome-autoar
 gnome-backgrounds
@@ -758,6 +757,7 @@ gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
+gnustep-base
 gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
@@ -1819,6 +1819,8 @@ libsoup3-docs
 libsoxr
 libspatialite
 libspectre
+libspelling
+libspelling-docs
 libspf2
 libspiro
 libspnav
@@ -2462,6 +2464,7 @@ pdal
 pdfarranger
 pdfjs
 pdfmixtool
+pdnsd
 pegtl
 pelican
 perl-acme-alien-dontpanic
@@ -2855,7 +2858,6 @@ postgrey
 postorius
 potrace
 povray
-power-profiles-daemon
 powerline
 powerline-fonts
 vim-powerline
@@ -3353,7 +3355,6 @@ python-graphviz
 python-greenlet
 python-gssapi
 python-guzzle-sphinx-theme
-python-h11
 python-h2
 python-h5py
 python-hacking
@@ -3556,7 +3557,6 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
-python-moto
 python-mpd2
 python-mpi4py
 python-mpmath

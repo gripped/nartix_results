@@ -11,17 +11,7 @@
    upower
    wayland
    xorg-xrdb
-@@ -78,6 +78,9 @@
- prepare() {
-   cd $pkgname
- 
-+  git cherry-pick -n 46f998d7308cb18832666bc34ee54b1d9c27739f
-+  git cherry-pick -n 1a4d50f4ee611bdede6072c0bfd2a1b2e327c5fc
-+
-   git apply -3 ../0001-subprojects-Update-gvc-to-latest-commit.patch
- 
-   git submodule init
-@@ -86,7 +89,7 @@
+@@ -86,7 +86,7 @@
  }
  
  build() {

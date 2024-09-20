@@ -4,13 +4,13 @@
  
  pkgname=scribus
 -pkgver=1.6.2
--pkgrel=3
+-pkgrel=4
 +pkgver=1.5.8
 +pkgrel=24
  pkgdesc="Desktop publishing software"
  arch=(x86_64)
  url="https://www.scribus.net/"
- license=(GPL)
+-license=(GPL-2.0-or-later)
 -depends=(cairo
 -         fontconfig
 -         freetype2
@@ -21,7 +21,7 @@
 -         libcdr
 -         libcups
 -         libfreehand
--         libjpeg
+-         libjpeg-turbo libjpeg.so
 -         libmspub
 -         libpagemaker
 -         libpng
@@ -44,6 +44,7 @@
 -optdepends=('gdal: enable gdal plugin'
 -            'hyphen-lang: hyphenation patterns for desired languages'
 -            'tk: scripts based on tkinter')
++license=(GPL)
 +depends=(cairo fontconfig freetype2 harfbuzz-icu
 +         hunspell lcms2 libcdr libcups libfreehand libicuuc.so libjpeg libmspub
 +         libpagemaker libpng libqxp librevenge libtiff libvisio libxml2 libzmf
@@ -137,7 +138,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,6 @@
+@@ -4,14 +4,12 @@
  freetype2
  harfbuzz-icu
  hunspell
@@ -145,7 +146,15 @@
  lcms2
  libcdr
  libcups
-@@ -23,7 +22,7 @@
+ libfreehand
+ libicuuc.so
+-libjpeg-turbo
+-libjpeg.so
++libjpeg
+ libmspub
+ libpagemaker
+ libpng
+@@ -24,7 +22,7 @@
  mesa
  openscenegraph
  openssl

@@ -5,7 +5,7 @@
    gtk-update-icon-cache
  )
 -pkgver=4.12.5
-+pkgver=4.14.5
++pkgver=4.16.1
  pkgrel=1
  epoch=1
  pkgdesc="GObject-based multi-platform GUI toolkit"
@@ -26,11 +26,12 @@
    gdk-pixbuf2
    glib2
    graphene
-@@ -49,19 +51,21 @@
+@@ -49,19 +51,22 @@
    libxrender
    pango
    shared-mime-info
 -  tracker3
++  tinysparql
    wayland
  )
  makedepends=(
@@ -49,7 +50,7 @@
    wayland-protocols
  )
  checkdepends=(
-@@ -71,27 +75,22 @@
+@@ -71,27 +76,22 @@
    noto-fonts
    pipewire
    python-pydbus
@@ -66,7 +67,7 @@
    0001-HACK-Don-t-use-objcopy-for-resource-embedding.patch
  )
 -b2sums=('SKIP'
-+b2sums=('51e7731e0006dce39132921004d76177d9cf5a4b8ff1de0efdae79258acd0ed2c5791b059cde8801ec6746b6e6cfe2c896c0e3f5912a5f1d7bacba829eb327ea'
++b2sums=('a39b06dde6dfe3c7cccf21f9f2e75299ecf42196ff870f36521b40f27b4c9c35162cbc92d59c6c5aa6478deebdc6f5984fa7f309cd2d20ab3fdc10a0306a0bf3'
          '136bdb410c46daf769175e8e8837286576391797a4762b8cf388217e893dd6c5087c5c91c347cbdf7d3e9dcd2c978c2fb275b5af1f3425c9f7979fbc65a81324'
          '6bcd839ef82296d864587e0cc7acc0145bdea8e5235af304747cf3c0e564c2757cc67c0373dc044bec83dccfc57dc899546c2fccea96cff2bba22f09978a3814'
          'dd589bd1ad2b13f0e06f6899776a083f20a1aac24d4308d666ffd0d1cff38457b8257b8366f92e767b4233b3d86b6b54fa50339faf84c4801a824986366dce30'
@@ -77,11 +78,11 @@
 -  cd gtk
 -  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 -}
-+        'd4b7e6f0a3df65de5716af0267a95429f77bf8a750740cb1f660fb62bfe1aae527ef9f018be1ea4f6dc4a962230e4751fab96f3d0bf64d3ceda96484b52ee002')
++        'e240e0a064d6f2e5b2780c41c49b3b55e3e89b99dd4efb515a5a953bf06ed66a04342d81c987b34989650ead5a7797eada867328bb0f97be7e3040dc957543d9')
  
  prepare() {
    cd gtk
-@@ -106,11 +105,11 @@
+@@ -106,24 +106,27 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true
@@ -95,7 +96,16 @@
    meson compile -C build
  }
  
-@@ -123,7 +122,9 @@
+ check() (
+-  export XDG_RUNTIME_DIR="$PWD/runtime-dir" WAYLAND_DISPLAY=wayland-5
+-
++  export XDG_RUNTIME_DIR="$PWD/runtime-dir"
+   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
+-  weston --backend=headless-backend.so --socket=$WAYLAND_DISPLAY --idle-time=0 &
++
++  export WAYLAND_DISPLAY=wl-$pkgbase-$RANDOM
++  weston --backend=headless --socket=$WAYLAND_DISPLAY --idle-time=0 &
+   _w=$!
  
    trap "kill $_w; wait" EXIT
  
@@ -106,7 +116,7 @@
  )
  
  _pick() {
-@@ -137,7 +138,14 @@
+@@ -137,7 +140,14 @@
  }
  
  package_gtk4() {
@@ -122,7 +132,7 @@
    optdepends=('evince: Default print preview command')
    provides=(libgtk-4.so)
  
-@@ -166,13 +174,24 @@
+@@ -166,13 +176,24 @@
  
    _pick guic usr/bin/gtk4-update-icon-cache
    _pick guic usr/share/man/man1/gtk4-update-icon-cache.1
@@ -150,7 +160,7 @@
    mv demo/* "$pkgdir"
  }
  
-@@ -184,13 +203,22 @@
+@@ -184,13 +205,22 @@
  
  package_gtk-update-icon-cache() {
    pkgdesc="GTK icon cache updater"
@@ -220,11 +230,12 @@
  libtiff
  libx11
  libxcursor
-@@ -46,6 +54,7 @@
+@@ -46,6 +54,8 @@
  sassc
  shaderc
  shared-mime-info
 -tracker3
++tinysparql
 +vulkan-headers
 +vulkan-icd-loader
  wayland
