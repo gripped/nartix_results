@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=seahorse
+ pkgver=47.0.1
+-pkgrel=2
++pkgrel=1
+ epoch=1
+ pkgdesc="GNOME application for managing PGP keys."
+ url="https://wiki.gnome.org/Apps/Seahorse"
+@@ -42,12 +42,10 @@
+ 
+ prepare() {
+   cd seahorse
+-
+-  git cherry-pick -n c6fcd381425b638c16eeab7e5858bddf7de76b9f
+ }
+ 
+ build() {
+-  arch-meson seahorse build -D manpage=true
++  artix-meson seahorse build -D manpage=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,7 @@
+ prepare() {
+ cd seahorse
+-git cherry-pick -n c6fcd381425b638c16eeab7e5858bddf7de76b9f
+ }
+ build() {
+-arch-meson seahorse build -D manpage=true
++artix-meson seahorse build -D manpage=true
+ meson compile -C build
+ }

@@ -88,6 +88,7 @@ archlinux-appstream-data
 ardour
 argyllcms
 aria2
+arianna
 aribb24
 aribb25
 ark
@@ -179,6 +180,7 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
+bear
 bearssl
 beep
 bemenu
@@ -255,7 +257,6 @@ catatonit
 catch2-v2
 catch2
 catdoc
-catfish
 cbatticon
 cbindgen
 ccache
@@ -527,7 +528,6 @@ exfat-utils
 exfatprogs
 exim
 exiv2
-exo
 expac
 expect
 expected-lite
@@ -634,7 +634,6 @@ fwknop
 fzf
 gajim
 galculator
-garcon
 gcab
 gcc13
 gd
@@ -1247,6 +1246,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1307,6 +1307,7 @@ kontrast
 konversation
 kopete
 korganizer
+kosmindoormap
 kotlin
 kpackage
 kpackage5
@@ -1325,12 +1326,10 @@ kplotting5
 kpmcore
 kpty
 kpty5
-kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
 kquickimageeditor
-kquickimageeditor5
 krdc
 krdp
 krecorder
@@ -1702,7 +1701,6 @@ libnet
 libnewt
 libnfs
 libnghttp3
-libngtcp2
 libnice
 libnih
 libnitrokey
@@ -1850,7 +1848,6 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
-libultrahdr
 libunibreak
 libuninameslist
 libunwind
@@ -1889,7 +1886,6 @@ libwmf
 libwnck
 libwnck3
 libwpd
-libwpe
 libwpg
 libwps
 libwslay
@@ -1905,8 +1901,6 @@ libxdamage
 libxdg-basedir
 libxdmcp
 libxext
-libxfce4ui
-libxfce4util
 libxfixes
 libxfont2
 libxft
@@ -2154,6 +2148,7 @@ memtest86+-iso
 menu-cache
 menumaker
 mercurial
+merkuro
 mesa-demos
 mesa-utils
 meson-python
@@ -2201,7 +2196,6 @@ mopidy
 moreutils
 mosh
 motion
-mousepad
 movit
 mpdecimal
 mpg123
@@ -2442,7 +2436,6 @@ par2cmdline
 parallel
 parallel-docs
 parley
-parole
 parted
 partitionmanager
 pass-otp
@@ -4437,7 +4430,6 @@ riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
-ristretto
 rkcommon
 rlwrap
 rng-tools
@@ -4850,7 +4842,6 @@ sdl_sound
 sdl_ttf
 seabios
 seabios-docs
-seahorse
 semver
 senpai
 sequoia-sq
@@ -5175,10 +5166,6 @@ thermald
 threadweaver
 threadweaver5
 thrift
-thunar-archive-plugin
-thunar-media-tags-plugin
-thunar-volman
-thunar
 tidy
 time
 timeshift
@@ -5199,6 +5186,7 @@ tlp
 tlp-rdw
 tmuxp
 tnftp
+tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser
@@ -5240,7 +5228,6 @@ ttf-opensans
 ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
-tumbler
 twine
 twolame
 txt2man
@@ -5373,7 +5360,6 @@ wl-clipboard
 woff2
 wolfssl
 words
-wpebackend-fdo
 wqy-zenhei
 wsdd
 wtype
@@ -5429,49 +5415,9 @@ xf86-video-fbdev
 xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo
-xfburn
-xfce4-appfinder
 xfce4-artwork
-xfce4-battery-plugin
-xfce4-clipman-plugin
-xfce4-cpufreq-plugin
-xfce4-cpugraph-plugin
 xfce4-datetime-plugin
-xfce4-dev-tools
-xfce4-dict
-xfce4-diskperf-plugin
-xfce4-eyes-plugin
-xfce4-fsguard-plugin
-xfce4-genmon-plugin
-xfce4-mailwatch-plugin
-xfce4-mount-plugin
-xfce4-mpc-plugin
-xfce4-netload-plugin
-xfce4-notes-plugin
-xfce4-notifyd
-xfce4-panel
-xfce4-power-manager
-xfce4-pulseaudio-plugin
-xfce4-screensaver
-xfce4-screenshooter
-xfce4-sensors-plugin
-xfce4-session
-xfce4-settings
-xfce4-smartbookmark-plugin
-xfce4-systemload-plugin
-xfce4-taskmanager
-xfce4-terminal
-xfce4-time-out-plugin
-xfce4-timer-plugin
-xfce4-verve-plugin
-xfce4-wavelan-plugin
-xfce4-weather-plugin
-xfce4-whiskermenu-plugin
-xfce4-xkb-plugin
-xfconf
-xfdesktop
 xfwm4-themes
-xfwm4
 xinetd
 xkeyboard-config
 xl2tpd

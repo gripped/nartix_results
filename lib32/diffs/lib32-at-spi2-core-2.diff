@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,9 +23,9 @@
+   git
+   glib2-devel
+   lib32-libxml2
+-  lib32-systemd
++
+   meson
+-  systemd
++
+ )
+ checkdepends=(
+   at-spi2-core
+@@ -45,7 +45,7 @@
+     -D introspection=disabled
+   )
+ 
+-  arch-meson at-spi2-core build "${meson_options[@]}"
++  artix-meson at-spi2-core build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,6 +9,4 @@
+ lib32-libxi
+ lib32-libxml2
+ lib32-libxtst
+-lib32-systemd
+ meson
+-systemd

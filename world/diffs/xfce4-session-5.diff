@@ -1,0 +1,104 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,45 +1,45 @@
+ 
+ pkgname=xfce4-session
+-pkgver=4.18.4
+-pkgrel=2
++pkgver=4.18.3
++pkgrel=1.1
+ pkgdesc="Xfce's session manager"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/xfce4-session/start"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ groups=('xfce4')
+ depends=('libxfce4ui' 'libwnck3' 'xfconf' 'libsm' 'polkit' 'xorg-iceauth'
+          'xorg-xinit' 'xorg-xrdb' 'polkit-gnome' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools')
++makedepends=('intltool')
+ optdepends=('gnome-keyring: for keyring support when GNOME compatibility is enabled'
+             'xfce4-screensaver: for locking screen with xflock4'
+             'xscreensaver: for locking screen with xflock4'
+             'light-locker: for locking screen with xflock4')
+-source=("git+https://gitlab.xfce.org/xfce/xfce4-session.git#tag=$pkgname-$pkgver"
++source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2
+         source-system-xinitrc-scripts.patch
+         xfce-polkit-gnome-authentication-agent-1.desktop)
+-sha256sums=('fe898ab1a486111034faa00a565dd522edbe5f1452fd880e8a8362253235059b'
+-            '5706e37a8ca692d66d23f478bc462c96fe173b35945020b550be36c56f310fb2'
++sha256sums=('382f93e096ec6493098719cab8cc31b93ad9bb469c0715c0c5117d75fe7394ec'
++            '6f14d529e4c4f30cd547110bd444cee8dc70c90511a397de18acb6c1fd63ea3e'
+             '74c94c5f7893d714e04ec7d8b8520c978a5748757a0cdcf5128492f09f31b643')
+ 
+ prepare() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+ 
+   patch -Np1 -i ../source-system-xinitrc-scripts.patch
++}
+ 
+-  ./autogen.sh \
++build() {
++  cd $pkgname-$pkgver
++
++  ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --localstatedir=/var \
+     --disable-debug
+-}
+-
+-build() {
+-  cd $pkgname
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ 
+   install -d "$pkgdir/etc/xdg/autostart"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,3 @@
+-git
+-glib2-devel
+ hicolor-icon-theme
+ intltool
+ libsm
+@@ -7,7 +5,6 @@
+ libxfce4ui
+ polkit
+ polkit-gnome
+-xfce4-dev-tools
+ xfconf
+ xorg-iceauth
+ xorg-xinit
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ prepare() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ patch -Np1 -i ../source-system-xinitrc-scripts.patch
+-./autogen.sh \
++}
++build() {
++cd $pkgname-$pkgver
++./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --localstatedir=/var \
+ --disable-debug
+-}
+-build() {
+-cd $pkgname
+ make
+ }

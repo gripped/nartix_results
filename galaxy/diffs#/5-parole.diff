@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,28 @@
+ 
+ pkgname=parole
+ pkgver=4.18.1
+-pkgrel=3
+-pkgdesc="Modern media player based on the GStreamer framework"
++pkgrel=2
++pkgdesc='Modern media player based on the GStreamer framework'
+ arch=('x86_64')
+-url="https://docs.xfce.org/apps/parole/start"
+-license=('GPL-2.0-or-later')
++url='https://docs.xfce.org/apps/parole/start'
++license=('GPL')
+ groups=('xfce4-goodies')
+ depends=('dbus-glib' 'gst-plugins-base' 'gst-plugins-good' 'libnotify' 'libxfce4ui')
+-makedepends=('git' 'glib2-devel' 'intltool' 'python' 'xfce4-dev-tools')
++makedepends=('intltool' 'python')
+ optdepends=('gst-libav: Extra media codecs'
+ 	    'gst-plugins-bad: Extra media codecs'
+ 	    'gst-plugins-ugly: Extra media codecs')
+-source=("git+https://gitlab.xfce.org/apps/parole.git#tag=$pkgname-$pkgver")
+-sha256sums=('20806cc8fe54c3e626999958c19e7fdaf0158de64dbeea9771ff9882970ab8eb')
+-
+-prepare() {
+-  cd $pkgname
+-  ./autogen.sh \
+-    --prefix=/usr
+-}
++source=("https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2")
++sha256sums=('0c7364a484812f69cf2b20a2323864203334cc854fd8103d1d1131814ac55a66')
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
++  ./configure --prefix=/usr
++  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,7 @@
+ dbus-glib
+-git
+-glib2-devel
+ gst-plugins-base
+ gst-plugins-good
+ intltool
+ libnotify
+ libxfce4ui
+ python
+-xfce4-dev-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,6 @@
+-prepare() {
+-cd $pkgname
+-./autogen.sh \
+---prefix=/usr
+-}
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
++./configure --prefix=/usr
++sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,31 +1,28 @@
+ 
+ pkgname=xfce4-verve-plugin
+ pkgver=2.0.3
+-pkgrel=3
++pkgrel=1
+ pkgdesc="Command line plugin for the Xfce panel"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later')
+-url="https://docs.xfce.org/panel-plugins/xfce4-verve-plugin/start"
++license=('GPL2')
++url="https://docs.xfce.org/panel-plugins/xfce4-verve-plugin"
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel')
+-makedepends=('git' 'intltool' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-verve-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('98344add0c918d406034aa4f5e70a9e9e32b36635195c2ca9d94d683b2948e11')
++makedepends=('intltool')
++source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('e1bf121f1bf9cf2a199bf5c0f3aa802f503df9bea50724741e7a92fe6d9fe09e')
+ 
+-prepare() {
+-  cd $pkgname
+-  ./autogen.sh \
++build() {
++  cd $pkgname-$pkgver
++
++  ./configure \
+     --prefix=/usr \
+     --disable-debug
+-}
+-
+-build() {
+-  cd $pkgname
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,2 @@
+-git
+ intltool
+-xfce4-dev-tools
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,7 @@
+-prepare() {
+-cd $pkgname
+-./autogen.sh \
++build() {
++cd $pkgname-$pkgver
++./configure \
+ --prefix=/usr \
+ --disable-debug
+-}
+-build() {
+-cd $pkgname
+ make
+ }

@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,29 @@
+ 
+ pkgname=xfburn
+ pkgver=0.7.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A simple CD/DVD burning tool based on libburnia libraries"
+ arch=('x86_64')
+ url="https://docs.xfce.org/apps/xfburn/start"
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ groups=('xfce4-goodies')
+ depends=('libburn' 'libisofs' 'gtk3' 'libxfce4ui' 'exo' 'gst-plugins-base-libs'
+          'libgudev' 'desktop-file-utils')
+-makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/apps/xfburn.git#tag=$pkgname-$pkgver")
+-sha256sums=('17a9d51c1b768b0044d5651a2d1bca0763135013a28e0f9304cc531413fd38b5')
++source=(https://archive.xfce.org/src/apps/xfburn/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('c2bb01d9f7335e487f91db40ebddeea30d071364c1c3b56838466fd3367a9925')
+ 
+-prepare() {
+-  cd $pkgname
+-  ./autogen.sh \
++build() {
++  cd "$srcdir/$pkgname-$pkgver"
++
++  ./configure \
+     --prefix=/usr \
+     --enable-gstreamer \
+     --disable-debug
+-}
+-
+-build() {
+-  cd $pkgname
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,8 @@
+ desktop-file-utils
+ exo
+-git
+-glib2-devel
+ gst-plugins-base-libs
+ gtk3
+ libburn
+ libgudev
+ libisofs
+ libxfce4ui
+-xfce4-dev-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,8 @@
+-prepare() {
+-cd $pkgname
+-./autogen.sh \
++build() {
++cd "$srcdir/$pkgname-$pkgver"
++./configure \
+ --prefix=/usr \
+ --enable-gstreamer \
+ --disable-debug
+-}
+-build() {
+-cd $pkgname
+ make
+ }

@@ -1,14 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,8 +19,6 @@
+@@ -19,7 +19,6 @@
    libx11
    libxi
    libxtst
--  systemd
 -  systemd-libs
    xorg-xprop
  )
  makedepends=(
+@@ -31,7 +30,6 @@
+   libxml2
+   meson
+   python-sphinx
+-  systemd
+ )
+ checkdepends=(
+   at-spi2-core
 @@ -45,11 +43,12 @@
  
  build() {

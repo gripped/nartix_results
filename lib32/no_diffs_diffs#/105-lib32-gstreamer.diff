@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -130,7 +130,7 @@
+ 
+   export GI_SCANNER_DISABLE_CACHE=1
+ 
+-  arch-meson gstreamer build "${meson_options[@]}"
++  artix-meson gstreamer build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,6 +40,6 @@
+ -D vaapi=disabled
+ )
+ export GI_SCANNER_DISABLE_CACHE=1
+-arch-meson gstreamer build "${meson_options[@]}"
++artix-meson gstreamer build "${meson_options[@]}"
+ meson compile -C build
+ }

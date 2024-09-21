@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,14 @@
+ 
+ pkgname=libngtcp2
+ pkgver=1.7.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Implementation of IETF QUIC protocol'
+ url='https://github.com/ngtcp2/ngtcp2'
+ arch=('x86_64')
+ license=('MIT')
+-depends=(
+-  'glibc'
+-  'gnutls'
+-)
+-makedepends=(
+-  'brotli'
+-)
+-provides=(
+-  'libngtcp2.so'
+-  'libngtcp2_crypto_gnutls.so'
+-)
++depends=('glibc')
++makedepends=('brotli')
++provides=('libngtcp2.so')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/ngtcp2/ngtcp2/archive/refs/tags/v${pkgver}.tar.gz")
+ sha256sums=('dc9e6f65358de461ee6932b4a8375f68136bcd706067255410e13f92db46d2a7')
+ b2sums=('4504a11241bd48943a3501a6c4d239987a096fbb9a88584d70959ce50dcdf4b77b017db638da0be77aa15a70c9567f2b41cb5e0f6802e99709c597a0c632f421')
+@@ -31,15 +23,13 @@
+   ./configure \
+     --prefix=/usr \
+     --with-libbrotlienc \
+-    --with-libbrotlidec \
+-    --with-gnutls \
+-    --enable-lib-only
++    --with-libbrotlidec
+   make
+ }
+ 
+ package() {
+-  cd ngtcp2-${pkgver}
++  cd ngtcp2-${pkgver}/lib
+   make DESTDIR="${pkgdir}" install
+-  install -Dm644 ./COPYING -t "${pkgdir}/usr/share/licenses/${pkgname}"
++  install -Dm644 ../COPYING -t "${pkgdir}/usr/share/licenses/${pkgname}"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ brotli
+ glibc
+-gnutls
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,6 @@
+ ./configure \
+ --prefix=/usr \
+ --with-libbrotlienc \
+---with-libbrotlidec \
+---with-gnutls \
+---enable-lib-only
++--with-libbrotlidec
+ make
+ }

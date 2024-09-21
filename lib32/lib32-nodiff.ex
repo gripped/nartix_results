@@ -3,7 +3,6 @@ lib32-acl
 lib32-alsa-lib
 lib32-alsa-plugins
 lib32-amdvlk
-lib32-at-spi2-core
 lib32-attr
 lib32-brotli
 lib32-bzip2
@@ -34,6 +33,10 @@ lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-gpm
+lib32-gstreamer
+lib32-gst-plugins-base-libs
+lib32-gst-plugins-base
+lib32-gst-plugins-good
 lib32-gtk2
 lib32-gtk3
 lib32-harfbuzz

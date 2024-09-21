@@ -1,0 +1,89 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,21 @@
+ 
+ pkgname=xfce4-power-manager
+-pkgver=4.18.4
+-pkgrel=2
++pkgver=4.18.3
++pkgrel=1
+ pkgdesc="Power Manager for Xfce"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/xfce4-power-manager/start"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ groups=('xfce4')
+ depends=('libxfce4ui' 'upower' 'libnotify' 'xfce4-notifyd' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools' 'xfce4-panel')
+-source=("git+https://gitlab.xfce.org/xfce/xfce4-power-manager.git#tag=$pkgname-$pkgver")
+-sha256sums=('bbd3b3f584ec8838132fbd79b3815563cf3d478ba3895f7118203d1c7039f0dc')
++makedepends=('intltool' 'xfce4-panel')
++source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('0d79dd0f68b90d07b384366be4d2291a6d7815410eb0c20d3d8e8590c62e84f0')
+ 
+-prepare() {
+-  cd $pkgname
+-  ./autogen.sh \
++build() {
++  cd $pkgname-$pkgver
++
++  ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --sbindir=/usr/bin \
+@@ -22,15 +23,11 @@
+     --disable-network-manager \
+     --enable-polkit \
+     --disable-debug
+-}
+-
+-build() {
+-  cd $pkgname
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,7 @@
+-git
+-glib2-devel
+ hicolor-icon-theme
+ intltool
+ libnotify
+ libxfce4ui
+ upower
+-xfce4-dev-tools
+ xfce4-notifyd
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+-prepare() {
+-cd $pkgname
+-./autogen.sh \
++build() {
++cd $pkgname-$pkgver
++./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --sbindir=/usr/bin \
+@@ -8,8 +8,5 @@
+ --disable-network-manager \
+ --enable-polkit \
+ --disable-debug
+-}
+-build() {
+-cd $pkgname
+ make
+ }

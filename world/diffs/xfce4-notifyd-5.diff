@@ -1,0 +1,87 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,34 +1,33 @@
+ 
+ pkgname=xfce4-notifyd
+-pkgver=0.9.6
+-pkgrel=2
++pkgver=0.9.3
++pkgrel=1.1
+ pkgdesc="Notification daemon for the Xfce desktop"
+ arch=('x86_64')
+ url="https://docs.xfce.org/apps/notifyd/start"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ groups=('xfce4-goodies')
+ depends=('libxfce4ui' 'libxfce4util' 'libnotify' 'xfconf' 'sqlite' 'libcanberra'
+          'hicolor-icon-theme')
+-makedepends=('git' 'intltool' 'glib2-devel' 'xfce4-panel' 'xfce4-dev-tools')
++makedepends=('intltool' 'python' 'xfce4-panel' 'xfce4-dev-tools')
+ provides=('notification-daemon')
+-source=("git+https://gitlab.xfce.org/apps/xfce4-notifyd.git#tag=$pkgname-$pkgver")
+-sha256sums=('9b2923742de76258844073d9787b4b99769aac89b939029150e49ef5ac09f402')
++source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('79ee4701e2f8715a700de2431aa33682933cab18d76938bb18e2820302bbe030')
+ 
+-prepare() {
+-  cd $pkgname
+-  ./autogen.sh \
++build() {
++  cd $pkgname-$pkgver
++
++  ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --disable-debug
+-}
+-
+-build() {
+-  cd $pkgname
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,10 @@
+-git
+-glib2-devel
+ hicolor-icon-theme
+ intltool
+ libcanberra
+ libnotify
+ libxfce4ui
+ libxfce4util
++python
+ sqlite
+ xfce4-dev-tools
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,8 @@
+-prepare() {
+-cd $pkgname
+-./autogen.sh \
++build() {
++cd $pkgname-$pkgver
++./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --disable-debug
+-}
+-build() {
+-cd $pkgname
+ make
+ }

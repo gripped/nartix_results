@@ -1,0 +1,84 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,34 +1,31 @@
+ 
+ pkgname=xfdesktop
+ pkgver=4.18.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Xfce's desktop manager"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/xfdesktop/start"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ groups=('xfce4')
+ depends=('libxfce4ui' 'libwnck3' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/xfce/xfdesktop.git#tag=$pkgname-$pkgver")
+-sha256sums=('a67cae83863dc61fa994282fdf84f42abbcf2d727d41ae67f5bcb5282beeb516')
++makedepends=('intltool')
++source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('ef9268190c25877e22a9ff5aa31cc8ede120239cb0dfca080c174e7eed4ff756')
+ 
+-prepare() {
+-  cd $pkgname
+-  ./autogen.sh \
++build() {
++  cd $pkgname-$pkgver
++
++  ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --enable-thunarx \
+     --enable-notifications \
+     --disable-debug
+-}
+-
+-build() {
+-  cd $pkgname
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,7 @@
+ exo
+ garcon
+-git
+-glib2-devel
+ hicolor-icon-theme
+ intltool
+ libwnck3
+ libxfce4ui
+ thunar
+-xfce4-dev-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,10 @@
+-prepare() {
+-cd $pkgname
+-./autogen.sh \
++build() {
++cd $pkgname-$pkgver
++./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --enable-thunarx \
+ --enable-notifications \
+ --disable-debug
+-}
+-build() {
+-cd $pkgname
+ make
+ }
