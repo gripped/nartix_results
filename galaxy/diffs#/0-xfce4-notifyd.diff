@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ 
+ prepare() {
+   cd $pkgname
+-  ./autogen.sh \
++  ./autogen.sh --disable-systemd \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --disable-debug
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd $pkgname
+-./autogen.sh \
++./autogen.sh --disable-systemd \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --disable-debug

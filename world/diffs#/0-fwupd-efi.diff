@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,9 +17,9 @@
- validpgpkeys=('163EB50119225DB3DF8F49EA17ACBA8DFA970E17') # Richard Hughes <richard@hughsie.com>
+@@ -18,9 +18,9 @@
+               '0B0B6E494E9D5EFB39180D9A2D192CA624770276') # Mario Limonciello <superm1@gmail.com>
  
  build() {
 -  arch-meson ${pkgname} build  \
@@ -12,7 +12,7 @@
 +    -D efi_sbat_distro_summary='Artix Linux' \
      -D efi_sbat_distro_pkgname=${pkgname} \
      -D efi_sbat_distro_version=${pkgver} \
-     -D efi_sbat_distro_url="https://archlinux.org/packages/community/x86_64/${pkgname}/"
+     -D efi_sbat_distro_url="https://archlinux.org/packages/community/x86_64/${pkgname}/" \
 
 
 ############# Stripped diff below #################
@@ -31,4 +31,4 @@
 +-D efi_sbat_distro_summary='Artix Linux' \
  -D efi_sbat_distro_pkgname=${pkgname} \
  -D efi_sbat_distro_version=${pkgver} \
- -D efi_sbat_distro_url="https://archlinux.org/packages/community/x86_64/${pkgname}/"
+ -D efi_sbat_distro_url="https://archlinux.org/packages/community/x86_64/${pkgname}/" \

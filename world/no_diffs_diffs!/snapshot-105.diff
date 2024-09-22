@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,7 +46,7 @@
+@@ -53,7 +53,7 @@
  }
  
  build() {
@@ -17,7 +17,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
+@@ -5,6 +5,6 @@
  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
  }
  build() {

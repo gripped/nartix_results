@@ -105,7 +105,6 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
-ffmpeg
 firefox
 firewalld
 flatpak
@@ -313,19 +312,16 @@ libhandy0
 libinput
 libldm
 libmspub
-libngtcp2
 libnvme
 libprocps
 libsidplay
 libsidplayfp
 libtg_owt
 libudev0-shim
-libultrahdr
 libusbsio
 python-libusbsio
 libvirt
 libvncserver
-libwpe
 libxfce4ui
 libxfce4util
 libytnef
@@ -476,6 +472,7 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-common-sense
 pgbouncer
 phodav
 php-legacy
@@ -567,6 +564,8 @@ python-anytree
 python-h11
 python-intelhex
 python-moto
+python-multipart
+python-numba
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -699,7 +698,6 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
-seahorse
 seatd
 sfml
 shairport-sync
@@ -804,7 +802,6 @@ wlroots
 wlroots0.15
 wlroots0.16
 wlroots0.17
-wpebackend-fdo
 wpewebkit
 wpewebkit-docs
 xdg-desktop-portal-gnome
