@@ -116,7 +116,6 @@ aspell-uk
 aspell
 assimp
 astromenace
-astyle
 atftp
 atkmm-2.36
 atkmm-2.36-docs
@@ -202,6 +201,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -223,6 +223,7 @@ bridge-utils
 broadcom-wl-dkms
 broadcom-wl
 bspwm
+btop
 bubblewrap
 bubblewrap-suid
 buf
@@ -633,7 +634,6 @@ fuse-common
 futuresql
 fwknop
 fzf
-gajim
 galculator
 gcab
 gcc13
@@ -665,6 +665,9 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
+ghostxps
+ghostpcl
 gi-docgen
 giflib
 gifski
@@ -3396,6 +3399,7 @@ python-graphviz
 python-greenlet
 python-gssapi
 python-guzzle-sphinx-theme
+python-h11
 python-h2
 python-h5py
 python-hacking
@@ -3598,6 +3602,7 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
+python-moto
 python-mpd2
 python-mpi4py
 python-mpmath
@@ -3605,6 +3610,7 @@ python-msgpack
 python-mss
 python-mujson
 python-multidict
+python-multipart
 python-munch
 python-munkres
 python-musicbrainzngs
@@ -3638,6 +3644,7 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
+python-numba
 python-numexpr
 python-numpy
 python-oauth2client
@@ -3975,6 +3982,7 @@ python-pyyaml-env-tag
 python-pyzmq
 python-qdarkstyle
 python-qrcode
+python-qtpy
 python-quart
 python-railroad-diagrams
 python-random2
@@ -5314,6 +5322,9 @@ usd
 usd-extras
 usort
 uthash
+uv
+$pkgbase
+python-$pkgbase
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip

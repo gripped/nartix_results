@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=testdisk
+ pkgver=7.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
+ arch=('x86_64')
+ url="https://www.cgsecurity.org/index.html?testdisk.html"
+ license=('GPL-3.0-or-later')
+-depends=('libjpeg-turbo' 'openssl' 'ntfsprogs')
++depends=('libjpeg' 'openssl' 'ntfsprogs')
+ source=(https://www.cgsecurity.org/$pkgname-$pkgver.tar.bz2)
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,3 @@
+-libjpeg-turbo
++libjpeg
+ ntfsprogs
+ openssl

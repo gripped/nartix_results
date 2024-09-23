@@ -9,6 +9,7 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
+astyle
 at-spi2-core
 at-spi2-core-docs
 at
@@ -28,13 +29,11 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
 brltty
 brltty-udev-generic
-btop
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -116,6 +115,7 @@ freerdp2
 fwupd-efi
 fwupd
 fwupd-docs
+gajim
 gala
 gamemode
 gamescope
@@ -131,9 +131,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
-ghostxps
-ghostpcl
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -561,17 +558,12 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
-python-h11
 python-intelhex
-python-moto
-python-multipart
-python-numba
 python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
-python-qtpy
 python-signedjson
 python-tblib
 python-teamcity-messages
@@ -759,9 +751,6 @@ usb_modeswitch
 usbguard
 usbmuxd
 utf8cpp
-uv
-$pkgbase
-python-$pkgbase
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

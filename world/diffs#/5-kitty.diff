@@ -1,9 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,35 +3,37 @@
+@@ -2,36 +2,38 @@
+ pkgbase=kitty
  pkgname=(kitty kitty-terminfo kitty-shell-integration)
  pkgver=0.36.2
- pkgrel=1
+-pkgrel=1
 -pkgdesc="A modern, hackable, featureful, OpenGL-based terminal emulator"
 -arch=('x86_64')
 -url="https://github.com/kovidgoyal/kitty"
@@ -16,13 +17,14 @@
 -        "${pkgname}-${pkgver}.tar.xz.sig::https://github.com/kovidgoyal/${pkgbase}/releases/download/v${pkgver}/${pkgbase}-${pkgver}.tar.xz.sig")
 -b2sums=('ab7896c9b5f4a3b428a880663f000618cafff5e1837df693d56b0c7c5364aa7acfb8dd472886935594ecff05be30821c68e2fdc598a530ee36c55031956c2998'
 -        'SKIP')
++pkgrel=1.1
 +pkgdesc="Modern, hackable, featureful, OpenGL based terminal emulator"
 +arch=(x86_64)
 +url="https://sw.kovidgoyal.net/kitty/"
 +license=(GPL3)
 +depends=('python>=3.8' 'harfbuzz>=2.2.0' zlib libpng freetype2 fontconfig openssl libx11 libxi
-+         libgl libcanberra dbus lcms2 libxkbcommon-x11 librsync hicolor-icon-theme)
-+makedepends=(python-setuptools libxinerama libxcursor libxrandr libxkbcommon mesa
++         libgl libcanberra dbus lcms2 libxkbcommon-x11 librsync hicolor-icon-theme libxcursor)
++makedepends=(python-setuptools libxinerama libxrandr libxkbcommon mesa
 +             wayland-protocols python-sphinx python-sphinx-copybutton
 +             python-sphinx-inline-tabs python-sphinxext-opengraph python-sphinx-furo go
 +             ttf-roboto ttf-nerd-fonts-symbols-mono xxhash simde)

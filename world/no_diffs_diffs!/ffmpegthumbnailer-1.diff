@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=ffmpegthumbnailer
+ pkgver=2.2.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Lightweight video thumbnailer that can be used by file managers"
+ url="https://github.com/dirkvdb/ffmpegthumbnailer"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ arch=('x86_64')
+-depends=('ffmpeg' 'libjpeg-turbo' 'libpng')
++depends=('ffmpeg' 'libjpeg' 'libpng')
+ makedepends=('cmake')
+ optdepends=('gvfs: support for gio uris')
+ source=(https://github.com/dirkvdb/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+ cmake
+ ffmpeg
+-libjpeg-turbo
++libjpeg
+ libpng
