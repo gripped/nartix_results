@@ -116,6 +116,7 @@ aspell-uk
 aspell
 assimp
 astromenace
+astyle
 atftp
 atkmm-2.36
 atkmm-2.36-docs
@@ -672,7 +673,6 @@ gi-docgen
 giflib
 gifski
 gimp-help
-gimp
 girara
 git-lfs
 git
@@ -4998,7 +4998,6 @@ stk-docs
 stoken
 stow
 strace
-strawberry
 strip-nondeterminism
 stubby
 subversion

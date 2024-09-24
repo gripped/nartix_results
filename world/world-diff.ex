@@ -9,7 +9,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-astyle
 at-spi2-core
 at-spi2-core-docs
 at
@@ -131,6 +130,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+gimp
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -703,6 +703,7 @@ sshguard
 sslh
 sssd
 step-cli
+strawberry
 strongswan
 stunnel
 supermin

@@ -1,5 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=glances
+ pkgver=4.1.2.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='CLI curses-based monitoring tool'
+ arch=('any')
+ url='https://nicolargo.github.io/glances/'
+ license=('LGPL-3.0-or-later')
+ makedepends=('python-setuptools' 'python-build' 'python-installer' 'python-wheel')
+-depends=('python' 'python-psutil' 'python-defusedxml' 'python-orjson' 'python-pydantic' 'python-packaging')
++depends=('python' 'python-psutil' 'python-future' 'python-defusedxml' 'python-orjson' 'python-pydantic' 'python-packaging')
+ optdepends=('hddtemp: HDD temperature monitoring support'
+             'uvicorn: for WebUI / RestFull API'
+             'python-jinja: for WebUI / RestFull API'
 @@ -18,12 +18,9 @@
              'python-zeroconf: for the autodiscover mode'
              'python-pystache: templating engine'
@@ -24,3 +40,17 @@
 -    "${pkgdir}"/usr/lib/systemd/system/glances.service
  }
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ python
+ python-build
+ python-defusedxml
++python-future
+ python-installer
+ python-orjson
+ python-packaging

@@ -5,7 +5,7 @@
  )
  
 -makedepends=(autoconf bison perl flex mingw-w64-gcc
-+CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
++export CFLAGS+=" -Wno-error=incompatible-pointer-types -fPIC"
 +depends=(autoconf bison perl flex
    giflib                lib32-giflib
    gnutls                lib32-gnutls
