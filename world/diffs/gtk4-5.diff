@@ -5,8 +5,9 @@
    gtk-update-icon-cache
  )
 -pkgver=4.12.5
+-pkgrel=1
 +pkgver=4.16.1
- pkgrel=1
++pkgrel=2
  epoch=1
  pkgdesc="GObject-based multi-platform GUI toolkit"
  url="https://www.gtk.org/"
@@ -50,7 +51,7 @@
    wayland-protocols
  )
  checkdepends=(
-@@ -71,27 +76,22 @@
+@@ -71,30 +76,27 @@
    noto-fonts
    pipewire
    python-pydbus
@@ -82,7 +83,12 @@
  
  prepare() {
    cd gtk
-@@ -106,24 +106,27 @@
++
++  git cherry-pick -n 60b149609100038866fab29c391192fb82630663
+ 
+   git apply -3 ../0001-HACK-Don-t-use-objcopy-for-resource-embedding.patch
+ }
+@@ -106,24 +108,27 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true
@@ -116,7 +122,7 @@
  )
  
  _pick() {
-@@ -137,7 +140,14 @@
+@@ -137,7 +142,14 @@
  }
  
  package_gtk4() {
@@ -132,7 +138,7 @@
    optdepends=('evince: Default print preview command')
    provides=(libgtk-4.so)
  
-@@ -166,13 +176,24 @@
+@@ -166,13 +178,24 @@
  
    _pick guic usr/bin/gtk4-update-icon-cache
    _pick guic usr/share/man/man1/gtk4-update-icon-cache.1
@@ -160,7 +166,7 @@
    mv demo/* "$pkgdir"
  }
  
-@@ -184,13 +205,22 @@
+@@ -184,13 +207,22 @@
  
  package_gtk-update-icon-cache() {
    pkgdesc="GTK icon cache updater"
@@ -243,7 +249,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,9 +9,9 @@
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd gtk
++git cherry-pick -n 60b149609100038866fab29c391192fb82630663
+ git apply -3 ../0001-HACK-Don-t-use-objcopy-for-resource-embedding.patch
+ }
+ build() {
+@@ -9,9 +10,9 @@
  -D colord=enabled
  -D documentation=true
  -D man-pages=true

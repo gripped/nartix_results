@@ -73,7 +73,6 @@ krb5
 ldns
 less
 libaio
-libarchive
 libassuan
 libbpf
 libcap-ng

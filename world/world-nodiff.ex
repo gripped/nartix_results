@@ -202,7 +202,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -4998,6 +4997,7 @@ stk-docs
 stoken
 stow
 strace
+strawberry
 strip-nondeterminism
 stubby
 subversion

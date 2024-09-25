@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libarchive
+-pkgver=3.7.6
++pkgver=3.7.5
+ pkgrel=1
+ pkgdesc='Multi-format archive and compression library'
+ arch=('x86_64')
+@@ -14,20 +14,15 @@
+          'xz' 'liblzma.so'
+          'zlib' 'libz.so'
+          'zstd' 'libzstd.so')
+-makedepends=('git')
+ provides=('libarchive.so')
+ validpgpkeys=('A5A45B12AD92D964B89EEE2DEC560C81CEC2276E'  # Martin Matuska <mm@FreeBSD.org>
+               'DB2C7CF1B4C265FAEF56E3FC5848A18B8F14184B') # Martin Matuska <martin@matuska.org>
+-source=("git+https://github.com/${pkgname}/${pkgname}.git?signed#tag=v${pkgver}")
+-sha256sums=('470138d8382c760bc745d4d87579f946508432932311474c923ec7cdf603f7ce')
+-
+-prepare() {
+-  cd "${pkgname}"
+-  autoreconf -fiv
+-}
++source=("https://github.com/${pkgname}/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc})
++sha256sums=('ca74ff8f99dd40ab8a8274424d10a12a7ec3f4428dd35aee9fdda8bdb861b570'
++            'SKIP')
+ 
+ build() {
+-  cd "${pkgname}"
++  cd "${pkgname}-${pkgver}"
+ 
+   ./configure \
+       --prefix=/usr \
+@@ -37,13 +32,13 @@
+ }
+ 
+ check() {
+-  cd "${pkgname}"
++  cd "${pkgname}-${pkgver}"
+ 
+   make check
+ }
+ 
+ package() {
+-  cd "${pkgname}"
++  cd "${pkgname}-${pkgver}"
+ 
+   make DESTDIR="$pkgdir" install
+   install -Dm0644 COPYING "$pkgdir/usr/share/licenses/libarchive/COPYING"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ acl
+ bzip2
+-git
+ libacl.so
+ libbz2.so
+ libcrypto.so
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,5 @@
+-prepare() {
+-cd "${pkgname}"
+-autoreconf -fiv
+-}
+ build() {
+-cd "${pkgname}"
++cd "${pkgname}-${pkgver}"
+ ./configure \
+ --prefix=/usr \
+ --without-nettle \

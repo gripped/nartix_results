@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -703,7 +704,6 @@ sshguard
 sslh
 sssd
 step-cli
-strawberry
 strongswan
 stunnel
 supermin
