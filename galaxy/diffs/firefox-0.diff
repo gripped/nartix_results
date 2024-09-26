@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -92,7 +92,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=firefox
+ pkgver=130.0.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Fast, Private & Safe Web Browser"
+ url="https://www.mozilla.org/firefox/"
+ arch=(x86_64)
+@@ -42,6 +42,7 @@
+   clang
+   diffutils
+   imake
++  inetutils
+   jack
+   lld
+   llvm
+@@ -91,7 +92,7 @@
          '2c7936949ef922307fb593bd0480a13bde2eab8ae24fc89071d809d6659384705f9b7838b1ae8bc46b98a152ba01fcffad606d4c84796ad9bfaaf20166f0a0fd'
          '2ce33432f8a73a4f1a412b7a065d3c124e1ca9f6bdf3fad0407e897efc0840f8ef43eeeb1b9bef4a102d9fac0b2c4a2ef205726b817f83fe9c3742d076778b14')
  
@@ -9,7 +26,7 @@
  
  prepare() {
    mkdir mozbuild
-@@ -117,21 +117,27 @@
+@@ -116,21 +117,27 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -41,7 +58,7 @@
  ac_add_options --disable-updater
  ac_add_options --disable-tests
  END
-@@ -161,8 +167,8 @@
+@@ -160,8 +167,8 @@
  
    echo "Profiling instrumented browser..."
    ./mach package
@@ -52,7 +69,7 @@
      xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
      ./mach python build/pgo/profileserver.py
  
-@@ -177,7 +183,7 @@
+@@ -176,7 +183,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
@@ -61,16 +78,7 @@
  ac_add_options --enable-profile-use=cross
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-@@ -205,23 +211,19 @@
- 
- // Enable GNOME Shell search provider
- pref("browser.gnome-search-provider.enabled", true);
--
--// Use our own captive portal detection
--pref("captivedetect.canonicalURL", "http://ping.archlinux.org/nm-check.txt");
--pref("captivedetect.canonicalContent", "NetworkManager is online\\n");
- END
- 
+@@ -209,14 +216,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]

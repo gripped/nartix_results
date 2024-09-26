@@ -1,12 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,46 +1,31 @@
+@@ -1,47 +1,33 @@
  
  pkgname=firefox
 -pkgver=130.0.1
-+pkgver=120.0
- pkgrel=1
+-pkgrel=2
 -pkgdesc="Fast, Private & Safe Web Browser"
++pkgver=120.0
++pkgrel=1
 +pkgdesc="Standalone web browser from mozilla.org"
  url="https://www.mozilla.org/firefox/"
  arch=(x86_64)
@@ -54,9 +55,11 @@
    diffutils
 +  dump_syms
    imake
-   inetutils
++  inetutils
    jack
-@@ -64,41 +49,42 @@
+   lld
+   llvm
+@@ -63,41 +49,42 @@
    'hunspell-en_US: Spell checking, American English'
    'libnotify: Notification integration'
    'networkmanager: Location detection via available WiFi networks'
@@ -111,7 +114,7 @@
  
    cat >../mozconfig <<END
  ac_add_options --enable-application=browser
-@@ -110,21 +96,18 @@
+@@ -109,21 +96,18 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -136,7 +139,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -140,16 +123,13 @@
+@@ -139,16 +123,13 @@
  build() {
    cd firefox-$pkgver
  
@@ -156,7 +159,7 @@
  
    ulimit -n 4096
  
-@@ -157,12 +137,12 @@
+@@ -156,12 +137,12 @@
    cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-profile-generate=cross
  END
@@ -172,7 +175,7 @@
      xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
      ./mach python build/pgo/profileserver.py
  
-@@ -173,7 +153,7 @@
+@@ -172,7 +153,7 @@
    test -s jarlog
  
    echo "Removing instrumented browser..."
@@ -181,7 +184,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
-@@ -182,7 +162,10 @@
+@@ -181,7 +162,10 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END
@@ -193,16 +196,7 @@
  }
  
  package() {
-@@ -205,23 +188,19 @@
- 
- // Enable GNOME Shell search provider
- pref("browser.gnome-search-provider.enabled", true);
--
--// Use our own captive portal detection
--pref("captivedetect.canonicalURL", "http://ping.archlinux.org/nm-check.txt");
--pref("captivedetect.canonicalContent", "NetworkManager is online\\n");
- END
- 
+@@ -209,14 +193,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -221,7 +215,7 @@
  END
  
    local i theme=official
-@@ -235,10 +214,11 @@
+@@ -230,10 +214,11 @@
      "$pkgdir/usr/share/icons/hicolor/384x384/apps/$pkgname.png"
    install -Dvm644 browser/branding/$theme/content/about-logo.svg \
      "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
@@ -237,7 +231,7 @@
  
    install -Dvm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<END
  exec /usr/lib/$pkgname/firefox "\$@"
-@@ -255,9 +235,16 @@
+@@ -250,9 +235,16 @@
    install -Dvm644 /dev/stdin "$sprovider" <<END
  [Shell Search Provider]
  DesktopId=$pkgname.desktop

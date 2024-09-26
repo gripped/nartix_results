@@ -205,7 +205,6 @@ bmake
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -672,6 +671,7 @@ gi-docgen
 giflib
 gifski
 gimp-help
+gimp
 girara
 git-lfs
 git
@@ -1061,7 +1061,6 @@ java-xmlgraphics-commons
 jbig2dec
 jbigkit
 jemalloc
-jenkins
 jitterentropy
 jose
 jp2a
@@ -1826,7 +1825,6 @@ librabbitmq-c
 libraqm
 libraw
 libraw1394
-librdkafka
 libreplaygain
 libressl
 librest

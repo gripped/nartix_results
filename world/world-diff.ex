@@ -30,6 +30,7 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
+boost
 box2d
 brightnessctl
 brltty
@@ -131,7 +132,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-gimp
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -258,6 +258,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jedi-language-server
+jenkins
 js78
 kcoreaddons
 kgamma
@@ -312,6 +313,7 @@ libldm
 libmspub
 libnvme
 libprocps
+librdkafka
 libsidplay
 libsidplayfp
 libtg_owt
