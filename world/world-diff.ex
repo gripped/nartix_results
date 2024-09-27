@@ -30,7 +30,6 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
-boost
 box2d
 brightnessctl
 brltty
@@ -98,7 +97,6 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
-facter
 fastfetch
 fceux
 fcgiwrap
@@ -258,7 +256,6 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jedi-language-server
-jenkins
 js78
 kcoreaddons
 kgamma
@@ -312,6 +309,7 @@ libinput
 libldm
 libmspub
 libnvme
+libphonenumber
 libprocps
 librdkafka
 libsidplay
@@ -717,7 +715,11 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
+telegram-desktop
 telepathy-glib
+texlive-texmf
+texlive-doc
+texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

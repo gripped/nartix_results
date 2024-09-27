@@ -205,6 +205,7 @@ bmake
 boinc
 boinc-nox
 bomber
+boost
 booster
 botan
 botan2
@@ -366,6 +367,7 @@ cppdap
 cppunit
 cpputest
 cppzmq
+criterion
 criu
 cryptoplusplus
 cscope
@@ -535,6 +537,7 @@ f2fs-tools
 faac
 faad2
 facile
+facter
 fail2ban
 fakechroot
 falkon
@@ -1061,6 +1064,7 @@ java-xmlgraphics-commons
 jbig2dec
 jbigkit
 jemalloc
+jenkins
 jitterentropy
 jose
 jp2a
@@ -1789,7 +1793,6 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpgm
-libphonenumber
 libpinyin
 libplacebo
 libplasma
@@ -2282,6 +2285,7 @@ mypaint-brushes1
 mypy
 namcap
 nanobind
+nanomsg
 nanosvg
 nasm
 nauty
@@ -2988,6 +2992,7 @@ python-aaf2
 python-aafigure
 python-absl
 python-acme
+python-adal
 python-adblock
 python-aiobotocore
 python-aiodns
@@ -3184,6 +3189,7 @@ python-copr
 python-coverage
 python-cppheaderparser
 python-cppy
+python-cram
 python-cramjam
 python-crashtest
 python-crc32c
@@ -3525,6 +3531,7 @@ python-keyutils
 python-kiwisolver
 python-kombu
 python-krb5
+python-kubernetes
 python-lark-parser
 python-lazr.config
 python-lazr.delegates
@@ -5041,7 +5048,6 @@ tcsh
 tdb
 tea
 tecla
-telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
@@ -5211,9 +5217,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5
