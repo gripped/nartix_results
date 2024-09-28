@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ pkgname=('libreoffice-still-sdk' 'libreoffice-still')
+ _LOver=24.2.6.2
+ pkgver=24.2.6
+-pkgrel=5
++pkgrel=4
+ arch=('x86_64')
+ license=('MPL-2.0' 'LGPL-3.0-or-later')
+ url="https://www.libreoffice.org/"
+@@ -19,7 +19,7 @@
+     'gperf' 'gtk3' 'gtk4' 'cppunit' 'beanshell' 'clucene'
+     'qt5-base' 'qt5-x11extras'
+     'qt6-base' 'kio' 'kconfig' 'kcoreaddons' 'kwindowsystem' 'ki18n' 'kcoreaddons'
+-    'libmythes' 'libwpg'  'java-environment=17' 'postgresql-libs' 'mariadb-libs' 'libgl'
++    'junit' 'libmythes' 'libwpg'  'java-environment=17' 'postgresql-libs' 'mariadb-libs' 'libgl'
+     'bluez-libs' 'gdb' 'doxygen'  'libatomic_ops'  'mdds'
+     'ttf-liberation' 'ttf-dejavu' 'ttf-carlito' 'libxinerama' 'libpagemaker' 'glm'
+     'libabw' 'libmwaw' 'libe-book' 'coin-or-mp' 'liblangtag' 'liborcus'
+@@ -28,6 +28,7 @@
+     'libepubgen' 'libfreehand' 'libqxp' 'libstaroffice'  'boost' 'libnumbertext'
+     'abseil-cpp' 'clang' 'zxing-cpp'
+     'libffi' 'git' 'python-setuptools'
++  'java-hamcrest'
+ )
+ options=('!lto') # using --enable-lto (for parallel link-time optimization)
+ _mirror="https://download.documentfoundation.org/libreoffice/src/${pkgver}"
+@@ -235,7 +236,6 @@
+         --with-system-mythes \
+         --with-system-headers \
+         --without-system-hsqldb \
+-        --without-junit \
+         --with-system-clucene \
+         --without-system-box2d \
+         --without-system-dragonbox \
+@@ -388,3 +388,4 @@
+     'sid','sk','sl','sq','sv','ta','tg','tr','ug','uk','vi','zh-CN','zh-TW'])" \
+         > "${pkgdir}"/usr/lib/libreoffice/help/languages.js
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -37,6 +37,8 @@
+ hyphen
+ icu
+ java-environment
++java-hamcrest
++junit
+ kconfig
+ kcoreaddons
+ ki18n
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -106,7 +106,6 @@
+ --with-system-mythes \
+ --with-system-headers \
+ --without-system-hsqldb \
+---without-junit \
+ --with-system-clucene \
+ --without-system-box2d \
+ --without-system-dragonbox \

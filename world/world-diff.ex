@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -293,6 +292,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libcupsfilters
 libe-book
 libei
 libei-docs
@@ -311,7 +311,6 @@ libmspub
 libnvme
 libphonenumber
 libprocps
-librdkafka
 libsidplay
 libsidplayfp
 libtg_owt
@@ -559,6 +558,7 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-h5py
 python-intelhex
 python-pymupdf
 python-pyopencl
@@ -715,6 +715,7 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
+tcc
 telegram-desktop
 telepathy-glib
 texlive-texmf

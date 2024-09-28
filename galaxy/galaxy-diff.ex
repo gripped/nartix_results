@@ -47,5 +47,6 @@ transmission-gtk
 transmission-qt
 libtransmission
 vice
+wezterm
 xdg-desktop-portal-xapp
 xfce4-notifyd

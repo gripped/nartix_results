@@ -454,7 +454,6 @@ ttf-jetbrains-mono
 tumbler
 unoconv
 warpinator
-wezterm
 wireshark
 wireshark-cli
 wireshark-qt

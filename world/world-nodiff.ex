@@ -202,6 +202,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1541,7 +1542,6 @@ libcryptui
 libcss
 libcuckoo
 libcue
-libcupsfilters
 libcutl
 libdaemon
 libdatachannel
@@ -1828,6 +1828,7 @@ librabbitmq-c
 libraqm
 libraw
 libraw1394
+librdkafka
 libreplaygain
 libressl
 librest
@@ -3404,7 +3405,6 @@ python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
-python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -5041,7 +5041,6 @@ tali
 talloc
 tang
 task
-tcc
 tcl
 tclap
 tcsh

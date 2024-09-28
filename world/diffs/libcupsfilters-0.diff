@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,19 @@
+ 
+ pkgname=libcupsfilters
+ pkgver=2.0.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="OpenPrinting CUPS Filters - contains all the code of the filters of the former cups-filters package as library functions"
+ arch=('x86_64')
+ url="https://github.com/OpenPrinting/libcupsfilters"
+-license=('Apache-2.0 WITH LLVM-exception')
++license=('Apache')
+ depends=('libcups' 'libexif' 'qpdf' 'poppler'
+          'libjpeg-turbo' 'libpng' 'libtiff' 'lcms2' 'fontconfig' 'glibc' 'gcc-libs' 'dbus')
+ makedepends=(
+ 	'ghostscript'
+ )
+ checkdepends=('ttf-dejavu') # ttf-dejavu for make check
+-source=("https://github.com/OpenPrinting/libcupsfilters/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
+-        CVE-2024-47076.patch)
+-sha256sums=('542f2bfbc58136a4743c11dc8c86cee03c9aca705612654e36ac34aa0d9aa601'
+-            'c3d24aacad3c5641c12a4371697cc6ca602e30604aa79ab2a061f1c8bbb65cf7')
+-
+-prepare() {
+-  cd "$pkgname"-$pkgver
+-  patch -Np1 -i ../CVE-2024-47076.patch
+-}
++source=("https://github.com/OpenPrinting/libcupsfilters/releases/download/$pkgver/$pkgname-$pkgver.tar.xz")
++sha256sums=('542f2bfbc58136a4743c11dc8c86cee03c9aca705612654e36ac34aa0d9aa601')
+ 
+ build() {
+   cd "$pkgname"-$pkgver
+@@ -41,6 +34,4 @@
+ package() {
+   cd "$pkgname"-$pkgver
+   make DESTDIR="$pkgdir/" install
+-  mkdir -p "${pkgdir}"/usr/share/licenses/${pkgname}
+-  install -m644 "${srcdir}"/${pkgname}-${pkgver}/{COPYING,NOTICE} "${pkgdir}"/usr/share/licenses/${pkgname}/
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd "$pkgname"-$pkgver
+-patch -Np1 -i ../CVE-2024-47076.patch
+-}
+ build() {
+ cd "$pkgname"-$pkgver
+ ./configure --prefix=/usr  \
