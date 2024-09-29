@@ -202,7 +202,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -491,6 +490,7 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
+egl-gbm
 egl-wayland
 eglexternalplatform
 eigen
@@ -1793,6 +1793,7 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpgm
+libphonenumber
 libpinyin
 libplacebo
 libplasma
@@ -2243,7 +2244,6 @@ modemmanager-qt5
 mold
 molecule
 molequeue
-mongo-c-driver
 mono
 mopidy
 moreutils
@@ -5316,7 +5316,6 @@ unrtf
 unzip
 upx
 uriparser
-usbredir
 usd
 usd-extras
 usort

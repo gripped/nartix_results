@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -309,7 +310,6 @@ libinput
 libldm
 libmspub
 libnvme
-libphonenumber
 libprocps
 libsidplay
 libsidplayfp
@@ -413,6 +413,7 @@ mgba-qt
 modemmanager
 libmm-glib
 modest
+mongo-c-driver
 mosquitto
 mousepad
 mozo
@@ -756,6 +757,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usbredir
 utf8cpp
 uwsgi
 uwsgi-plugin-rack
