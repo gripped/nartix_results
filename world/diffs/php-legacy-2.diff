@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,8 +23,8 @@
+@@ -18,13 +18,13 @@
+          'php-legacy-tidy'
+          'php-legacy-xsl')
+ pkgver=8.2.24
+-pkgrel=2
++pkgrel=1
+ arch=('x86_64')
  license=('PHP-3.01')
  url='https://www.php.net/'
  makedepends=('apache' 'aspell' 'gdbm' 'enchant' 'gd' 'gmp' 'icu' 'libsodium' 'libxslt' 'libzip' 'net-snmp'
@@ -11,6 +17,22 @@
  checkdepends=('procps-ng')
  source=("https://php.net/distributions/php-${pkgver}.tar.xz"{,.asc}
          'apache.conf' 'php-fpm.tmpfiles' 'apache.patch' 'php-fpm.patch' 'php.ini.patch' 'php-legacy.patch')
+@@ -41,7 +41,6 @@
+               '39B641343D8C104B2B146DC3F9C39DC0B9698544'
+               'E60913E4DF209907D8E30D96659A97C9CF2A795A')
+ _interpreter=${pkgver%.*}
+-options=('!lto')
+ 
+ prepare() {
+ 	cd "${srcdir}/php-${pkgver}"
+@@ -73,6 +72,7 @@
+ 		--datadir=/usr/share/php-legacy \
+ 		--program-suffix=-legacy \
+ 		--includedir=/usr/include/php-legacy \
++		--disable-gcc-global-regs \
+ 		"
+ 
+ 	local _phpextensions="\
 @@ -136,7 +136,7 @@
  	./configure ${_phpconfig} \
  		--enable-cgi \

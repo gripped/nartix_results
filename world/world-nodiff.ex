@@ -2936,6 +2936,7 @@ publicsuffix-list
 pugixml
 pulseaudio-qt
 pulsemixer
+puppet
 purpose
 purpose5
 putty
@@ -3606,7 +3607,6 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
-python-moto
 python-mpd2
 python-mpi4py
 python-mpmath
@@ -5047,6 +5047,7 @@ tcsh
 tdb
 tea
 tecla
+telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream

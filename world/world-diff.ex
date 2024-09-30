@@ -551,7 +551,6 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-puppet
 pyqt5
 python-pyqt5
 pyqt6
@@ -561,6 +560,7 @@ shiboken6
 python-anytree
 python-h5py
 python-intelhex
+python-moto
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -717,7 +717,6 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
-telegram-desktop
 telepathy-glib
 texlive-texmf
 texlive-doc

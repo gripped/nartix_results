@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=syslog-ng
+ pkgver=4.8.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc="Next-generation syslogd with advanced networking and filtering capabilities"
+ arch=(x86_64)
+ url="https://github.com/syslog-ng/syslog-ng"
 @@ -24,7 +24,6 @@
    openssl
    pcre2
@@ -16,7 +25,14 @@
  )
  checkdepends=(
    criterion
-@@ -99,7 +97,6 @@
+@@ -93,14 +91,12 @@
+   "etc/logrotate.d/$pkgname"
+   "etc/default/$pkgname@default"
+ )
+-install=$pkgname.install
+ source=(
+   "git+$url.git#tag=$pkgname-$pkgver"
+   "git+https://github.com/buytenh/ivykis.git"
    "git+https://github.com/open-telemetry/opentelemetry-proto.git"
    "git+https://github.com/Thalhammer/jwt-cpp.git"
    "$pkgname.logrotate"
@@ -24,7 +40,7 @@
    "$pkgname-do-not-install-python-venv.patch"
    "$pkgname-config.patch"
  )
-@@ -108,7 +105,6 @@
+@@ -109,7 +105,6 @@
              'SKIP'
              'SKIP'
              '93c935eca56854011ea9e353b7a1da662ad40b2e8452954c5b4b5a1d5b2d5317'
@@ -32,7 +48,7 @@
              '7ca7f0d9fb203b3814fe2f609904af84df346b84591eeeb171bb2e5eb6393990'
              '1039550b091df1a50e8d30b624d52a7fd56c29d0ceec596b4b029a7cc92a3825')
  
-@@ -120,7 +116,6 @@
+@@ -121,7 +116,6 @@
    git config submodule.modules/cloud-auth/jwt-cpp.url "$srcdir/jwt-cpp"
    git -c protocol.file.allow=always submodule update
  
@@ -40,7 +56,7 @@
    patch -Np1 -i "$srcdir/$pkgname-do-not-install-python-venv.patch" # Don't install Python venv using pip.
    patch -Np1 -i "$srcdir/$pkgname-config.patch"                     # Add further distribution examples, disable default log file.
  
-@@ -133,6 +128,8 @@
+@@ -134,6 +128,8 @@
  build() {
    cd $pkgname
    local configure_options=(
@@ -49,7 +65,7 @@
      --datadir=/usr/share
      --disable-java
      --disable-java-modules
-@@ -142,7 +139,6 @@
+@@ -143,7 +139,6 @@
      --enable-ipv6
      --enable-manpages
      --enable-spoof-source
@@ -57,7 +73,7 @@
      --libexecdir=/usr/lib
      --localstatedir="/var/lib/$pkgname"
      --prefix=/usr
-@@ -151,7 +147,6 @@
+@@ -152,7 +147,6 @@
      --with-jsonc=system
      --with-pidfile-dir=/run
      --with-python-packages=system
@@ -65,7 +81,7 @@
    )
    ./configure "${configure_options[@]}"
  
-@@ -167,7 +162,6 @@
+@@ -168,7 +162,6 @@
  package() {
    cd $pkgname
    make DESTDIR="$pkgdir" install

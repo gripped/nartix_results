@@ -3,7 +3,7 @@
 @@ -1,12 +1,12 @@
  
  pkgname=fastfetch
--pkgver=2.25.0
+-pkgver=2.26.1
 -pkgrel=1
 -pkgdesc="An actively maintained, feature-rich and performance oriented, neofetch like system information tool"
 +pkgver=2.8.10
@@ -32,7 +32,7 @@
    'vulkan-headers'
    'vulkan-icd-loader'
    'wayland'
-@@ -35,44 +37,30 @@
+@@ -35,45 +37,30 @@
    'directx-headers: GPU detection in WSL'
    'glib2: Output for values that are only stored in GSettings'
    'imagemagick: Image output using sixel or kitty graphics protocol'
@@ -50,7 +50,7 @@
    'libdrm: Displays detection'
  )
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('17ea39fd062d5bccc9c608e868f593a665d569646bc9b447111b3a608b648783')
+-sha256sums=('4320d1c304df6880e8c944e6a36340d12a3340477be40b2ead42be308a7fcdaf')
 +sha256sums=('e3ea8388d79cc02ed1a6e45b8e5fec4068507ca03923386bdc9a7b3ff02d2a52')
  
  build() {
@@ -73,6 +73,7 @@
 -		-DPACKAGES_DISABLE_LPKG='ON' \
 -		-DPACKAGES_DISABLE_LPKGBUILD='ON' \
 -		-DPACKAGES_DISABLE_OPKG='ON' \
+-		-DPACKAGES_DISABLE_PACSTALL='ON' \
 -		-DPACKAGES_DISABLE_PALUDIS='ON' \
 -		-DPACKAGES_DISABLE_PKG='ON' \
 -		-DPACKAGES_DISABLE_PKGTOOL='ON' \
@@ -110,7 +111,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,27 +1,13 @@
+@@ -1,28 +1,13 @@
  build() {
  cmake -B build -S "${pkgname}-${pkgver}" \
 +-DCMAKE_BUILD_TYPE='None' \
@@ -131,6 +132,7 @@
 --DPACKAGES_DISABLE_LPKG='ON' \
 --DPACKAGES_DISABLE_LPKGBUILD='ON' \
 --DPACKAGES_DISABLE_OPKG='ON' \
+--DPACKAGES_DISABLE_PACSTALL='ON' \
 --DPACKAGES_DISABLE_PALUDIS='ON' \
 --DPACKAGES_DISABLE_PKG='ON' \
 --DPACKAGES_DISABLE_PKGTOOL='ON' \

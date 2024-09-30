@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=fastfetch
--pkgver=2.25.0
+-pkgver=2.26.1
 +pkgver=2.23.0
  pkgrel=1
  pkgdesc="An actively maintained, feature-rich and performance oriented, neofetch like system information tool"
@@ -12,12 +12,12 @@
    'libdrm: Displays detection'
  )
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('17ea39fd062d5bccc9c608e868f593a665d569646bc9b447111b3a608b648783')
+-sha256sums=('4320d1c304df6880e8c944e6a36340d12a3340477be40b2ead42be308a7fcdaf')
 +sha256sums=('3c92dd2cb15faf55d87846eda8d14456af2d0e0938998434144074c695c57529')
  
  build() {
  	cmake -B build -S "${pkgname}-${pkgver}" \
-@@ -58,21 +58,6 @@
+@@ -58,22 +58,6 @@
  		-DENABLE_RPM='OFF' \
  		-DENABLE_IMAGEMAGICK6='OFF' \
  		-DENABLE_SYSTEM_YYJSON='ON' \
@@ -30,6 +30,7 @@
 -		-DPACKAGES_DISABLE_LPKG='ON' \
 -		-DPACKAGES_DISABLE_LPKGBUILD='ON' \
 -		-DPACKAGES_DISABLE_OPKG='ON' \
+-		-DPACKAGES_DISABLE_PACSTALL='ON' \
 -		-DPACKAGES_DISABLE_PALUDIS='ON' \
 -		-DPACKAGES_DISABLE_PKG='ON' \
 -		-DPACKAGES_DISABLE_PKGTOOL='ON' \
@@ -47,7 +48,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,21 +7,6 @@
+@@ -7,22 +7,6 @@
  -DENABLE_RPM='OFF' \
  -DENABLE_IMAGEMAGICK6='OFF' \
  -DENABLE_SYSTEM_YYJSON='ON' \
@@ -60,6 +61,7 @@
 --DPACKAGES_DISABLE_LPKG='ON' \
 --DPACKAGES_DISABLE_LPKGBUILD='ON' \
 --DPACKAGES_DISABLE_OPKG='ON' \
+--DPACKAGES_DISABLE_PACSTALL='ON' \
 --DPACKAGES_DISABLE_PALUDIS='ON' \
 --DPACKAGES_DISABLE_PKG='ON' \
 --DPACKAGES_DISABLE_PKGTOOL='ON' \
