@@ -109,6 +109,7 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
+freealut
 freerdp
 freerdp2
 fwupd-efi
@@ -551,6 +552,7 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pwndbg
 pyqt5
 python-pyqt5
 pyqt6

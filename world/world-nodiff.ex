@@ -614,7 +614,6 @@ fractal
 frameworkintegration
 frameworkintegration5
 francis
-freealut
 freecell-solver
 freeglut
 freeimage
@@ -2941,7 +2940,6 @@ purpose
 purpose5
 putty
 pv
-pwndbg
 pyalpm
 pyatspi
 python-atspi

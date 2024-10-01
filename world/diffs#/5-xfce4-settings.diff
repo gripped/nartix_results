@@ -4,7 +4,7 @@
  
  pkgname=xfce4-settings
 -pkgver=4.18.6
--pkgrel=2
+-pkgrel=3
 +pkgver=4.18.4
 +pkgrel=1
  pkgdesc="Xfce's Configuration System"
@@ -18,8 +18,8 @@
 -makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools' 'xf86-input-libinput')
 -optdepends=('python: xfce4-compose-mail -- "mailto:" URI handling'
 -            'xiccd: for displays support in xfce4-color-settings'
--            'cupsd: for printers support in xfce4-color-settings'
--            'saned: for scanners support in xfce4-color-settings')
+-            'cups: for printers support in xfce4-color-settings'
+-            'sane: for scanners support in xfce4-color-settings')
 -source=("git+https://gitlab.xfce.org/xfce/xfce4-settings.git#tag=$pkgname-$pkgver"
 +makedepends=('intltool' 'xf86-input-libinput')
 +optdepends=('python: xfce4-compose-mail -- "mailto:" URI handling')
