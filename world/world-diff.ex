@@ -414,7 +414,6 @@ mgba-qt
 modemmanager
 libmm-glib
 modest
-mongo-c-driver
 mosquitto
 mousepad
 mozo
@@ -471,7 +470,6 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-common-sense
 pgbouncer
 phodav
 php-legacy
@@ -573,6 +571,7 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-vobject
 qastools
 qemu
 qemu-common

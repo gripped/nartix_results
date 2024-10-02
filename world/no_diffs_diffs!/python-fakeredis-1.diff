@@ -4,7 +4,7 @@
  
  _pyname=fakeredis
  pkgname=python-fakeredis
--pkgver=2.25.0
+-pkgver=2.25.1
 +pkgver=2.24.1
  pkgrel=1
  pkgdesc='Fake implementation of redis API (redis-py) for testing purposes'
@@ -13,7 +13,7 @@
              'python-lupa: for lua scripting support')
  _archive="$_pyname-$pkgver"
  source=("https://files.pythonhosted.org/packages/source/${_pyname::1}/$_pyname/$_archive.tar.gz")
--sha256sums=('d1f972b8d7ac14d3e93ab3673d4a628d7836a7abb9cf2d3c10fb0b08258f3b85')
+-sha256sums=('e9e73bacf412d1d942ee7f80525dc188182158e82d41be57eb9c4e71f7474ac8')
 +sha256sums=('4a52ab0edad53543ac5e3a41d761f91012613ed583344da54ae6473e05b0f6d0')
  
  build(){

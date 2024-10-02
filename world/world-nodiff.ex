@@ -1631,6 +1631,7 @@ libgpod
 libgravatar
 libgrss
 libgsf
+libgsf-docs
 libgssglue
 libgtop
 libgusb
@@ -2243,6 +2244,7 @@ modemmanager-qt5
 mold
 molecule
 molequeue
+mongo-c-driver
 mono
 mopidy
 moreutils
@@ -2541,6 +2543,7 @@ perl-class-method-modifiers
 perl-class-singleton
 perl-class-tiny
 perl-clone
+perl-common-sense
 perl-config-autoconf
 perl-config-tiny
 perl-cpan-changes
@@ -4249,7 +4252,6 @@ python-vine
 python-virtualenv-clone
 python-virtualenv
 python-vistir
-python-vobject
 python-volatile
 python-voluptuous
 python-waitress

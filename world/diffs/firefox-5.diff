@@ -3,11 +3,10 @@
 @@ -1,47 +1,33 @@
  
  pkgname=firefox
--pkgver=130.0.1
--pkgrel=2
--pkgdesc="Fast, Private & Safe Web Browser"
+-pkgver=131.0
 +pkgver=120.0
-+pkgrel=1
+ pkgrel=1
+-pkgdesc="Fast, Private & Safe Web Browser"
 +pkgdesc="Standalone web browser from mozilla.org"
  url="https://www.mozilla.org/firefox/"
  arch=(x86_64)
@@ -84,13 +83,13 @@
  validpgpkeys=(
    14F26682D0916CDD81E37B6D61B7B526D98F0353
  )
--sha256sums=('027225a1e9b074f0072e22c7264cf27b0d2364c675c3ca811aa6c25fb01b9f70'
+-sha256sums=('e4066ef47c65aac570aa16deefb8c3937c1c9b0755dbf2f760937c451174fb1d'
 +sha256sums=('e710058701074eda53ca9f5fd52c57254858a027984f735bdcd58d6906f6b574'
              'SKIP'
 -            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9'
 -            '71fe797430198ac8c00b538dce537284cf526e48be0496698cf5a980d70c16da'
 -            '58d78ce57b3ee936bc966458d6b20ab142d02a897bbe924b3f26717af0c5bee1')
--b2sums=('2d6496a4f476a5a276b70de43f5d58ce2a44007b754e05fcf757d4c1a1cdfcab910493f48e6a6e608b9719ab73cf56c066de56a4abc08ca42e83aa76f4f80c38'
+-b2sums=('ffb8c12ba76f8d06501287ba1c61279e9167f0684275d8cf7e2c3be0697326ded824ccd60f8e44ca7374b59e9e580b2dcba23d2dce4bb184d2e73faa86d9d5af'
 +            '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
 +            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
 +b2sums=('06f11d9d6f705c13c3288f1757d68c7c910e258b3efa643f0f0168fba0d585f758082af3905c951e227894df0c092965663f52196ee1fc3477195748e0049767'
@@ -256,7 +255,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,31 +1,14 @@
+@@ -1,30 +1,14 @@
 -alsa-lib
 -at-spi2-core
 -bash
@@ -277,7 +276,7 @@
  gtk3
 -hicolor-icon-theme
  imake
- inetutils
++inetutils
  jack
  libpulse
 -libx11
@@ -290,7 +289,7 @@
  libxss
  libxt
  lld
-@@ -34,9 +17,7 @@
+@@ -33,9 +17,7 @@
  mime-types
  nasm
  nodejs
