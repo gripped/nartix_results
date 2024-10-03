@@ -70,6 +70,7 @@ ddcutil
 dhcpcd
 dns-over-https
 docker
+doctest
 dolphin-emu
 dolphin-emu-tool
 dovecot
@@ -350,6 +351,11 @@ lirc
 lm_sensors
 localsearch
 localsearch-testutils
+lpeg
+lua-lpeg
+lua51-lpeg
+lua52-lpeg
+lua53-lpeg
 lua-filesystem
 luarocks
 lxc
@@ -393,6 +399,7 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+mcpp
 media-player-info
 memcached
 mesa
@@ -557,8 +564,12 @@ pyqt6
 pyside6
 pyside6-tools
 shiboken6
+python-aiogram
+python-aiorpcx
 python-anytree
+python-bitstring
 python-h5py
+python-hiredis
 python-intelhex
 python-moto
 python-pymupdf
@@ -566,6 +577,7 @@ python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
+python-redis
 python-signedjson
 python-tblib
 python-teamcity-messages

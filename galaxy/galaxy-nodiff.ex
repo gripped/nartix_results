@@ -50,7 +50,6 @@ cjs
 copyq
 cvs
 dillo
-doctest
 dosbox
 doublecmd
 doublecmd-gtk2

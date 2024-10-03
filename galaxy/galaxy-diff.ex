@@ -1,4 +1,5 @@
 cinnamon-desktop
+doctest
 ecrire
 efl
 elementary-icon-theme

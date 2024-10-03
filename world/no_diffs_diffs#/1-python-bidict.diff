@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-bidict
+ _name=${pkgname#python-}
+ pkgver=0.23.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Bidirectional mapping library for Python'
+ url='https://bidict.readthedocs.org/'
+ arch=('any')
+@@ -22,6 +22,7 @@
+   python-sphinx
+   python-sphinx-autodoc-typehints
+   python-pytest-benchmark
++  python-pytest-cov
+   python-pytest-xdist
+   python-hypothesis
+   python-py-cpuinfo

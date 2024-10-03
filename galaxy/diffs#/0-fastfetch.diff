@@ -1,15 +1,34 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=fastfetch
 -pkgver=2.26.1
+-pkgrel=2
 +pkgver=2.23.0
- pkgrel=1
++pkgrel=1
  pkgdesc="An actively maintained, feature-rich and performance oriented, neofetch like system information tool"
  arch=('x86_64')
-@@ -47,7 +47,7 @@
-   'libdrm: Displays detection'
+ url="https://github.com/fastfetch-cli/fastfetch"
+@@ -34,21 +34,20 @@
+   'ddcutil: Brightness detection of external displays'
+   'directx-headers: GPU detection in WSL'
+   'glib2: Output for values that are only stored in GSettings'
+-  'hwdata: GPU output'
+   'imagemagick: Image output using sixel or kitty graphics protocol'
+-  'libdrm: Displays detection'
+   'libelf: st term font detection and fast path of systemd version detection'
+   'libpulse: Sound detection'
++  'mesa: Needed by the OpenGL module for gl context creation.'
+   'libxrandr: Multi monitor support'
+-  'mesa: Needed by the OpenGL module for gl context creation.'
+   'ocl-icd: OpenCL module'
+-  'python: Needed for zsh and fish completions'
++  'hwdata: GPU output'
+   'vulkan-icd-loader: Vulkan module & fallback for GPU output'
+   'xfconf: Needed for XFWM theme and XFCE Terminal font'
+   'zlib: Faster image output when using kitty graphics protocol'
++  'libdrm: Displays detection'
  )
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 -sha256sums=('4320d1c304df6880e8c944e6a36340d12a3340477be40b2ead42be308a7fcdaf')
@@ -17,7 +36,7 @@
  
  build() {
  	cmake -B build -S "${pkgname}-${pkgver}" \
-@@ -58,22 +58,6 @@
+@@ -59,22 +58,6 @@
  		-DENABLE_RPM='OFF' \
  		-DENABLE_IMAGEMAGICK6='OFF' \
  		-DENABLE_SYSTEM_YYJSON='ON' \

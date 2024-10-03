@@ -3,7 +3,7 @@
 @@ -1,33 +1,30 @@
  
  pkgname=xfce4-dict
--pkgver=0.8.7
+-pkgver=0.8.8
 +pkgver=0.8.6
  pkgrel=1
  pkgdesc="A dictionary plugin for the Xfce panel"
@@ -15,7 +15,7 @@
  depends=('xfce4-panel' 'librsvg' 'hicolor-icon-theme')
 -makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/apps/xfce4-dict.git#tag=$pkgname-$pkgver")
--sha256sums=('00f90f132cc8d190cbc99c9d3435232a8b55334fdbf47ba4c5bfce3fbd4736df')
+-sha256sums=('641eb4da7db325f97f07d521330554e39e1e746bf0580887aad1ec745fb4b72b')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('ae5db7ca70354d3293fc08eaf7ca40cdbc91799a219f199d824684b39e6c0a41')

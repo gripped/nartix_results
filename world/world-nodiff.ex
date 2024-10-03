@@ -457,7 +457,6 @@ docbook2x
 docbook5-xml
 docker-buildx
 docker-compose
-doctest
 docx2txt
 dolphin-plugins
 dolphin
@@ -2030,11 +2029,6 @@ lokalize
 lolcat
 loupe
 lowdown
-lpeg
-lua-lpeg
-lua51-lpeg
-lua52-lpeg
-lua53-lpeg
 lpsolve
 lrzip
 lsb-release
@@ -2189,7 +2183,6 @@ mbedtls
 mbedtls2
 mbox-importer
 mc
-mcpp
 md4c
 mdds
 mediainfo
@@ -3000,7 +2993,6 @@ python-adblock
 python-aiobotocore
 python-aiodns
 python-aiofiles
-python-aiogram
 python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
@@ -3011,7 +3003,6 @@ python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
-python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
@@ -3095,7 +3086,6 @@ python-binaryornot
 python-bincopy
 python-biopython
 python-biscuits
-python-bitstring
 python-black
 python-bleach
 python-blessed
@@ -3419,7 +3409,6 @@ python-heapdict
 python-helpdev
 python-hexdump
 python-hidapi
-python-hiredis
 python-hishel
 python-hkdf
 python-hpack
@@ -3999,7 +3988,6 @@ python-re-assert
 python-reactivex
 python-readme-renderer
 python-recommonmark
-python-redis
 python-referencing
 python-reflink
 python-regex
