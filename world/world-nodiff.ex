@@ -794,7 +794,6 @@ grantlee-editor
 grantlee
 grantleetheme
 grantleetheme5
-graphene
 graphicsmagick
 graphite
 graphite-docs
@@ -1540,6 +1539,7 @@ libcryptui
 libcss
 libcuckoo
 libcue
+libcupsfilters
 libcutl
 libdaemon
 libdatachannel
@@ -2029,6 +2029,11 @@ lokalize
 lolcat
 loupe
 lowdown
+lpeg
+lua-$pkgbase
+lua51-$pkgbase
+lua52-$pkgbase
+lua53-$pkgbase
 lpsolve
 lrzip
 lsb-release
@@ -2993,6 +2998,7 @@ python-adblock
 python-aiobotocore
 python-aiodns
 python-aiofiles
+python-aiogram
 python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
@@ -3003,6 +3009,7 @@ python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
+python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
@@ -3086,6 +3093,7 @@ python-binaryornot
 python-bincopy
 python-biopython
 python-biscuits
+python-bitstring
 python-black
 python-bleach
 python-blessed
@@ -3397,6 +3405,7 @@ python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
+python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3409,6 +3418,7 @@ python-heapdict
 python-helpdev
 python-hexdump
 python-hidapi
+python-hiredis
 python-hishel
 python-hkdf
 python-hpack
@@ -3597,6 +3607,7 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
+python-moto
 python-mpd2
 python-mpi4py
 python-mpmath
@@ -3625,6 +3636,7 @@ python-netifaces
 python-networkx
 python-nh3
 python-nine
+python-nitrokey
 python-nkdfu
 python-nodeenv
 python-noiseprotocol
@@ -3988,6 +4000,7 @@ python-re-assert
 python-reactivex
 python-readme-renderer
 python-recommonmark
+python-redis
 python-referencing
 python-reflink
 python-regex
@@ -4240,6 +4253,7 @@ python-vine
 python-virtualenv-clone
 python-virtualenv
 python-vistir
+python-vobject
 python-volatile
 python-voluptuous
 python-waitress

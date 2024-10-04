@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-          'virtualbox-guest-utils'
-          'virtualbox-guest-utils-nox'
-          'virtualbox-ext-vnc')
--pkgver=7.1.2
-+pkgver=7.1.0
- _tarver=${pkgver}
- pkgrel=1
- arch=('x86_64')
 @@ -56,11 +56,6 @@
          '60-vboxdrv.rules'
          '60-vboxguest.rules'
@@ -21,15 +12,7 @@
          'vboxreload'
          '001-disable-update.patch'
          '004-drop-Wno-format.patch'
-@@ -70,18 +65,13 @@
-         '013-support-building-from-dkms.patch'
-         '018-upate-xclient-script.patch'
-         '020-python-3-12.patch')
--sha256sums=('d3f2d81ad04761939d67c578062b08de7b346f3cdb1c84eca84b8a20ea513274'
-+sha256sums=('3bd333fa18889949a1d93d423143eeccdb45d238b33183d66c628c327d23f0b7'
-             '76d98ea062fcad9e5e3fa981d046a6eb12a3e718a296544a68b66f4b65cb56db'
-             '2101ebb58233bbfadf3aa74381f22f7e7e508559d2b46387114bc2d8e308554c'
-             'da4c49f6ca94e047e196cdbcba2c321199f4760056ea66e0fbc659353e128c9e'
+@@ -77,11 +72,6 @@
              'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
              '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
              '476202f87a4a461af6b73a7709e91f868a65ff7306494227e0d7b264fa3f919e'
@@ -49,7 +32,17 @@
      install -D -m0644 virtualbox.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox.conf"
  
      install -D -m0755 vboxreload "${pkgdir}/usr/bin"
-@@ -273,9 +262,6 @@
+@@ -227,8 +216,7 @@
+     pkgdesc='VirtualBox Host kernel modules sources'
+     depends=('dkms' 'gcc' 'make')
+     replaces=('virtualbox-source'
+-              'virtualbox-host-source'
+-              'virtualbox-host-modules-lts')
++              'virtualbox-host-source')
+     conflicts=('virtualbox-source' 'virtualbox-host-source')
+     provides=('VIRTUALBOX-HOST-MODULES')
+     install=virtualbox-host-dkms.install
+@@ -273,9 +261,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
@@ -59,7 +52,7 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 VirtualBox-${pkgver}/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
-@@ -295,7 +281,6 @@
+@@ -295,7 +280,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"

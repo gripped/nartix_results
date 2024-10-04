@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mitmproxy
+ pkgver=10.4.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='SSL-capable man-in-the-middle HTTP proxy'
+ arch=('any')
+ url='https://mitmproxy.org'
+@@ -45,6 +45,7 @@
+   'python-hypothesis'
+   'python-parver'
+   'python-pytest-asyncio'
++  'python-pytest-cov'
+   'python-pytest-timeout'
+ )
+ provides=('pathod')

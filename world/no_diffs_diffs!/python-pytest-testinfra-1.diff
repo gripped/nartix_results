@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=pytest-testinfra
+ pkgname=python-pytest-testinfra
+ pkgver=10.1.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Testinfra test your infrastructures'
+ arch=(any)
+ url="https://github.com/pytest-dev/pytest-testinfra"
+@@ -21,6 +21,7 @@
+ checkdepends=(
+   ansible
+   python-paramiko
++  python-pytest-cov
+   python-pytest-xdist
+   python-pywinrm
+   python-tornado

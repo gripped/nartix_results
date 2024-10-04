@@ -3,7 +3,7 @@
 @@ -1,20 +1,20 @@
  
  pkgname=audacious
--pkgver=4.4
+-pkgver=4.4.1
 -pkgrel=1
 +pkgver=4.3.1
 +pkgrel=1.2
@@ -18,7 +18,7 @@
 +makedepends=('meson')
  optdepends=('unzip: zipped skins support')
  source=(https://distfiles.audacious-media-player.org/$pkgname-$pkgver.tar.bz2)
--sha256sums=('aadc5d26ea2954236a00153e424094d9e6eb55c5c324c08fd0491b7c2ae2f830')
+-sha256sums=('260d988d168e558f041bbb56692e24c535a96437878d60dfd01efdf6b1226416')
 +sha256sums=('85e9e26841505b51e342ee72a2d05f19bef894f567a029ebb3f3e0c1adb42042')
  
  build() {

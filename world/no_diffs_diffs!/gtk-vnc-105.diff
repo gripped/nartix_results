@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,7 @@
- depends=(libgcrypt gtk3 gnutls libpulse)
- makedepends=(vala gobject-introspection git perl-text-csv meson)
- provides=(libgtk-vnc-2.0.so libgvnc{,pulse}-1.0.so)
-+options=(debug)
- _commit=1ea35aa11bdf97916409504024bcd36a01abc64d  # tags/v1.3.1^0
- source=("git+https://gitlab.gnome.org/GNOME/gtk-vnc.git#commit=$_commit"
-         "git+https://gitlab.com/keycodemap/keycodemapdb.git")
-@@ -29,7 +30,7 @@
+@@ -50,7 +50,7 @@
  }
  
  build() {
@@ -26,7 +18,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -5,6 +5,6 @@
- git submodule update
+ git -c protocol.file.allow=always -c protocol.allow=never submodule update
  }
  build() {
 -arch-meson gtk-vnc build
