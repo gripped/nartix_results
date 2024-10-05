@@ -28,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -572,6 +571,9 @@ python-teamcity-messages
 python-trustme
 python-ubjson
 qastools
+qcoro
+qcoro-qt5
+qcoro-qt6
 qemu
 qemu-common
 qemu-audio-alsa

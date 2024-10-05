@@ -202,6 +202,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -3093,6 +3094,7 @@ python-binaryornot
 python-bincopy
 python-biopython
 python-biscuits
+python-bitarray
 python-bitstring
 python-black
 python-bleach
@@ -3571,6 +3573,7 @@ python-lxml
 python-lxml-docs
 python-lz4
 python-m2crypto
+python-magic-filter
 python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-magic
@@ -3608,6 +3611,7 @@ python-monotonic
 python-more-itertools
 python-moreorless
 python-moto
+python-motor
 python-mpd2
 python-mpi4py
 python-mpmath
@@ -3877,6 +3881,7 @@ python-pyrfc3339
 python-pyro
 python-pyrsistent
 python-pysaml2
+python-pyscard
 python-pyscreenshot
 python-pysendfile
 python-pyserial
@@ -4339,9 +4344,6 @@ qbs
 qca
 qca-qt5
 qca-qt6
-qcoro
-qcoro-qt5
-qcoro-qt6
 qgit
 qhull
 qpdf
