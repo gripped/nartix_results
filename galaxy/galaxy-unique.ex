@@ -18,6 +18,7 @@ artixnews
 birdtray
 calamares-branding
 calamares
+clawsker
 dbus-dinit-user
 edi
 entice

@@ -202,7 +202,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -429,7 +428,6 @@ directx-headers
 directx-shader-compiler
 discount
 discover
-distcc
 distro-info-data
 distro-info
 django
@@ -458,6 +456,7 @@ docbook2x
 docbook5-xml
 docker-buildx
 docker-compose
+doctest
 docx2txt
 dolphin-plugins
 dolphin
@@ -614,6 +613,7 @@ fractal
 frameworkintegration
 frameworkintegration5
 francis
+freealut
 freecell-solver
 freeglut
 freeimage
@@ -636,6 +636,7 @@ fuse-common
 futuresql
 fwknop
 fzf
+gajim
 galculator
 gcab
 gcc13
@@ -795,6 +796,8 @@ grantlee-editor
 grantlee
 grantleetheme
 grantleetheme5
+graphene
+graphene-docs
 graphicsmagick
 graphite
 graphite-docs
@@ -1819,6 +1822,7 @@ libqaccessibilityclient-qt6
 libqalculate
 libqb
 libqmi
+libqmi-docs
 libqrtr-glib
 libqtxdg
 libquotient
@@ -2189,6 +2193,7 @@ mbedtls
 mbedtls2
 mbox-importer
 mc
+mcpp
 md4c
 mdds
 mediainfo
@@ -2942,6 +2947,7 @@ purpose
 purpose5
 putty
 pv
+pwndbg
 pyalpm
 pyatspi
 python-atspi
@@ -4344,6 +4350,7 @@ qbs
 qca
 qca-qt5
 qca-qt6
+qcoro
 qgit
 qhull
 qpdf
@@ -5015,6 +5022,7 @@ suil
 suil-docs
 suitesparse
 suitesparse-graphblas
+supermin
 sushi
 svgcleaner
 svgpart
@@ -5221,6 +5229,9 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
+texlive-texmf
+texlive-doc
+texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5321,6 +5332,7 @@ unrtf
 unzip
 upx
 uriparser
+usbredir
 usd
 usd-extras
 usort

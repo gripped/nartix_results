@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -67,9 +68,9 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
+distcc
 dns-over-https
 docker
-doctest
 dolphin-emu
 dolphin-emu-tool
 dovecot
@@ -109,13 +110,11 @@ flatpak
 flatpak-docs
 fluidsynth
 fprintd
-freealut
 freerdp
 freerdp2
 fwupd-efi
 fwupd
 fwupd-docs
-gajim
 gala
 gamemode
 gamescope
@@ -152,7 +151,6 @@ go-bindata
 go-licenses
 godot
 gpsd
-graphene
 greetd-tuigreet
 greetd
 $pkgbase
@@ -393,7 +391,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-mcpp
 media-player-info
 memcached
 mesa
@@ -551,7 +548,6 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-pwndbg
 pyqt5
 python-pyqt5
 pyqt6
@@ -571,9 +567,6 @@ python-teamcity-messages
 python-trustme
 python-ubjson
 qastools
-qcoro
-qcoro-qt5
-qcoro-qt6
 qemu
 qemu-common
 qemu-audio-alsa
@@ -709,7 +702,6 @@ sssd
 step-cli
 strongswan
 stunnel
-supermin
 sway
 swayidle
 switcheroo-control
@@ -720,9 +712,6 @@ sysstat
 system-config-printer
 tcc
 telepathy-glib
-texlive-texmf
-texlive-doc
-texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -758,7 +747,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usbredir
 utf8cpp
 uwsgi
 uwsgi-plugin-rack

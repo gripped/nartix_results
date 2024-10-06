@@ -11,6 +11,7 @@ avidemux-qt
 blender
 blueman
 box2d
+cairo-perl
 caja-extensions
 caja-extensions-common
 caja-image-converter
@@ -47,6 +48,8 @@ cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
+claws-mail
+compface
 copyq
 cvs
 dillo
@@ -68,6 +71,7 @@ fpc
 freecell-solver
 garcon
 girara
+glib-perl
 grub-btrfs
 gstreamermm
 gstreamermm-docs
@@ -75,6 +79,7 @@ incron
 libdbusmenu-lxqt
 libe-book
 libetonyek
+libetpan
 libexttextcat
 libfm-qt
 liblangtag
@@ -273,6 +278,11 @@ pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
+perl-cairo-gobject
+perl-extutils-depends
+perl-extutils-pkgconfig
+perl-glib-object-introspection
+perl-gtk3
 pinentry-bemenu
 pluma
 ppsspp

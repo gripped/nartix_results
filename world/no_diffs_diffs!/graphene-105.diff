@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,7 +47,7 @@
+     -D installed_tests=false
+   )
+ 
+-  arch-meson graphene build "${meson_options[@]}"
++  artix-meson graphene build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,6 @@
+ -D gtk_doc=true
+ -D installed_tests=false
+ )
+-arch-meson graphene build "${meson_options[@]}"
++artix-meson graphene build "${meson_options[@]}"
+ meson compile -C build
+ }

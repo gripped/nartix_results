@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   lib32-gdk-pixbuf2
- )
- pkgver=2.42.12
--pkgrel=1
-+pkgrel=1.1
- pkgdesc="An image loading library (32-bit)"
- url="https://wiki.gnome.org/Projects/GdkPixbuf"
- arch=(x86_64)
-@@ -17,6 +17,7 @@
-   lib32-libpng
-   lib32-libtiff
-   shared-mime-info
-+  glib2-devel
- )
- makedepends=(
-   git
-@@ -47,7 +48,7 @@
+@@ -48,7 +48,7 @@
      -D others=enabled
    )
  
@@ -30,15 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,5 +1,6 @@
- gdk-pixbuf2
- git
-+glib2-devel
- lib32-glib2
- lib32-glibc
- lib32-libjpeg
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

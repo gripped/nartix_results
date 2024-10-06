@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=mesa-demos
- pkgname=('mesa-demos' 'mesa-utils')
- pkgver=9.0.0
--pkgrel=5
-+pkgrel=4
- arch=('x86_64')
- url="https://www.mesa3d.org/"
- license=('MIT')
 @@ -26,7 +26,7 @@
  
  build() {
@@ -18,17 +9,6 @@
      -D gles1=disabled \
      -D with-system-data-files=true
  
-@@ -47,9 +47,7 @@
- 
-   DESTDIR="$pkgdir" meson install -C build
- 
--  mv "$pkgdir"/usr/bin/identity "$pkgdir"/usr/bin/identity-mesa # conflicts with identity
--  mv "$pkgdir"/usr/bin/linktest "$pkgdir"/usr/bin/linktest-mesa # conflicts with haskell-tidal-link - FS#75919
--  mv "$pkgdir"/usr/bin/poly "$pkgdir"/usr/bin/poly-mesa         # conflicts with polyml
-+  mv "$pkgdir"/usr/bin/linktest "$pkgdir"/usr/bin/linktest-mesa
- 
-   rm "${pkgdir}"/usr/bin/{glxinfo,glxgears,\
- eglinfo,eglgears_wayland,eglgears_x11,\
 
 
 ############# Stripped diff below #################
