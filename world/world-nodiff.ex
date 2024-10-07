@@ -781,7 +781,6 @@ google-glog
 gox
 gparted
 gperf
-gperftools
 gphoto2
 gpicview
 gptfdisk
@@ -1069,7 +1068,6 @@ jemalloc
 jenkins
 jitterentropy
 jose
-jp2a
 jq
 jrnl
 jruby
@@ -4410,7 +4408,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver

@@ -8,8 +8,9 @@
    glib2-docs
  )
 -pkgver=2.78.4
+-pkgrel=1
 +pkgver=2.82.1
- pkgrel=1
++pkgrel=2
  pkgdesc="Low level core library"
  url="https://gitlab.gnome.org/GNOME/glib"
  license=(LGPL-2.1-or-later)
@@ -38,7 +39,7 @@
    shared-mime-info
    util-linux
  )
-@@ -32,29 +39,22 @@
+@@ -32,48 +39,46 @@
    desktop-file-utils
    glib2
  )
@@ -76,7 +77,10 @@
  
  prepare() {
    cd glib
-@@ -63,17 +63,20 @@
++
++  git revert -n 4e6dc4dee0e1c6407113597180d9616b4f275f94
+ 
+   git apply -3 ../0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
  
    git submodule init
    git submodule set-url subprojects/gvdb "$srcdir/gvdb"
@@ -100,7 +104,7 @@
    )
  
    CFLAGS+=" -g3"
-@@ -82,7 +85,7 @@
+@@ -82,7 +87,7 @@
    CFLAGS+=" -ffat-lto-objects"
    CXXFLAGS+=" -ffat-lto-objects"
  
@@ -109,7 +113,7 @@
    meson compile -C build
  }
  
-@@ -90,17 +93,28 @@
+@@ -90,17 +95,28 @@
    meson test -C build --no-suite flaky --no-suite slow --print-errorlogs
  }
  
@@ -141,7 +145,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -112,8 +126,37 @@
+@@ -112,8 +128,37 @@
    python -O -m compileall -d /usr/share/glib-2.0/codegen \
      "$pkgdir/usr/share/glib-2.0/codegen"
  
@@ -181,7 +185,7 @@
  }
  
  package_glib2-docs() {
-@@ -121,7 +164,7 @@
+@@ -121,7 +166,7 @@
    depends=()
    license+=(LicenseRef-Public-Domain)
  
@@ -223,7 +227,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,21 +3,24 @@
+@@ -1,23 +1,27 @@
+ prepare() {
+ cd glib
++git revert -n 4e6dc4dee0e1c6407113597180d9616b4f275f94
  git apply -3 ../0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
  git submodule init
  git submodule set-url subprojects/gvdb "$srcdir/gvdb"

@@ -150,6 +150,7 @@ gnome-user-share
 go-bindata
 go-licenses
 godot
+gperftools
 gpsd
 greetd-tuigreet
 greetd
@@ -256,6 +257,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jedi-language-server
+jp2a
 js78
 kcoreaddons
 kgamma
@@ -651,6 +653,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport

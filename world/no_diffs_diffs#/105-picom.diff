@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,7 @@
- 
+@@ -30,7 +30,7 @@
  build() {
-   mkdir -p build
--  arch-meson --buildtype=release -D with_docs=true build $pkgname
-+  artix-meson --buildtype=release -D with_docs=true build $pkgname
-   ninja -v -C build
+ 	cd "${pkgname}"
+ 	mkdir -p build
+-	arch-meson --buildtype=release -D with_docs=true build
++	artix-meson --buildtype=release -D with_docs=true build
+ 	ninja -v -C build
  }
  
 
@@ -17,11 +17,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,6 @@
- }
+@@ -8,6 +8,6 @@
  build() {
+ cd "${pkgname}"
  mkdir -p build
--arch-meson --buildtype=release -D with_docs=true build $pkgname
-+artix-meson --buildtype=release -D with_docs=true build $pkgname
+-arch-meson --buildtype=release -D with_docs=true build
++artix-meson --buildtype=release -D with_docs=true build
  ninja -v -C build
  }

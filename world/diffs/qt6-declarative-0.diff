@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=qt6-declarative
+ pkgver=6.7.3
+-pkgrel=3
++pkgrel=2
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL3 LGPL3 FDL custom)
+@@ -20,11 +20,6 @@
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver)
+ sha256sums=('229444a49d233ddbe3295574b549e2f765e4f414d618423c51c34d3dd48f56a9')
+-
+-prepare() {
+-  cd $_pkgfn
+-  git revert -n 89fc05faff1c993adbaa7893e57c94ce840a98a9 # https://bugreports.qt.io/browse/QTBUG-129622
+-}
+ 
+ build() {
+   export CXXFLAGS+=" -ffat-lto-objects"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd $_pkgfn
+-git revert -n 89fc05faff1c993adbaa7893e57c94ce840a98a9 # https://bugreports.qt.io/browse/QTBUG-129622
+-}
+ build() {
+ export CXXFLAGS+=" -ffat-lto-objects"
+ cmake -B build -S $_pkgfn -G Ninja \

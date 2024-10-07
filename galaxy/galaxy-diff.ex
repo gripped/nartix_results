@@ -5,7 +5,6 @@ efl
 elementary-icon-theme
 ephoto
 evisum
-fastfetch
 fceux
 firefox
 gpicview
