@@ -781,6 +781,7 @@ google-glog
 gox
 gparted
 gperf
+gperftools
 gphoto2
 gpicview
 gptfdisk
@@ -3602,7 +3603,6 @@ python-memcached
 python-memory-profiler
 python-merge3
 python-mergedeep
-python-mimeparse
 python-minidump
 python-mistune
 python-mitmproxy-rs
@@ -5056,7 +5056,6 @@ tcsh
 tdb
 tea
 tecla
-telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream

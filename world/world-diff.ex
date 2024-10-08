@@ -150,7 +150,6 @@ gnome-user-share
 go-bindata
 go-licenses
 godot
-gperftools
 gpsd
 greetd-tuigreet
 greetd
@@ -558,6 +557,7 @@ pyside6-tools
 shiboken6
 python-anytree
 python-intelhex
+python-mimeparse
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -714,6 +714,7 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
+telegram-desktop
 telepathy-glib
 thunar-archive-plugin
 thunar-media-tags-plugin

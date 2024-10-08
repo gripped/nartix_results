@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=hyprland
+-pkgver=0.44.0
++pkgver=0.43.0
+ pkgrel=1
+ pkgdesc='a highly customizable dynamic tiling Wayland compositor'
+ arch=(x86_64 aarch64)
 @@ -32,7 +32,7 @@
           pango libpango-1.0.so libpangocairo-1.0.so
           pixman libpixman-1.so
@@ -9,6 +17,15 @@
           tomlplusplus libtomlplusplus.so libudev.so
           vulkan-icd-loader
           vulkan-validation-layers
+@@ -59,7 +59,7 @@
+             'meson: to build and install plugins using hyprpm')
+ _archive="${pkgname^}-$pkgver"
+ source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
+-sha256sums=('c307e52d8f2554b02428926b87060c228472b09ca18fc0d928487aa92559104f')
++sha256sums=('fa2ce308f6f4524d1564163fd5ada2ccac919b4b48048b07f04e6b96aa0f1e6c')
+ 
+ prepare() {
+ 	ln -sf hyprland-source "$_archive"
 
 
 ############# Stripped diff below #################

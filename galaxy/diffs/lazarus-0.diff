@@ -1,10 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,17 +3,21 @@
+@@ -1,19 +1,23 @@
+ 
+ pkgbase=lazarus
  pkgname=('lazarus' 'lazarus-gtk2' 'lazarus-gtk3' 'lazarus-qt5' 'lazarus-qt6')
- _lazarus_tag=3_4
- pkgver=3.4
+-_lazarus_tag=3_6
+-pkgver=3.6
 -pkgrel=1
++_lazarus_tag=3_4
++pkgver=3.4
 +pkgrel=1.2
  url='http://www.lazarus.freepascal.org/'
  license=('GPL2' 'MPL' 'custom:modifiedLGPL')
@@ -12,7 +16,7 @@
  makedepends=('fpc' 'fpc-src' 'gtk2' 'gtk3' 'qt5pas' 'qt6pas' 'rsync')
  options=(!makeflags libtool staticlibs !strip)
 -source=("https://gitlab.com/freepascal.org/lazarus/lazarus/-/archive/lazarus_${_lazarus_tag}/lazarus-lazarus_${_lazarus_tag}.tar.bz2")
--sha512sums=('4cca953741f024fa6ca9a34491940937cc617ae8914606d300a4426c8dadbe9e71b9742a66f6aad9ae3176a4e6caf34a58ef594a179d573d7976e5894fa502d7')
+-sha512sums=('07caf0b16214f18be9e66c2caa7cc904c17acd55641757451d7eca3b494f6e4c8e2f2c784866a8a609625a2b838be6101e368159b636bd2ee4bd6b799839c2bf')
 +source=("https://gitlab.com/freepascal.org/lazarus/lazarus/-/archive/lazarus_${_lazarus_tag}/lazarus-lazarus_${_lazarus_tag}.tar.bz2"
 +        "paste-mimetype-check-fix.patch")
 +sha512sums=('4cca953741f024fa6ca9a34491940937cc617ae8914606d300a4426c8dadbe9e71b9742a66f6aad9ae3176a4e6caf34a58ef594a179d573d7976e5894fa502d7'
@@ -25,26 +29,6 @@
  
    make FPC=/usr/bin/fpc OPT='-gl -gw -Crtoi' LCL_PLATFORM=gtk2 clean bigide
    mv lazarus lazarus-gtk2
-@@ -36,8 +40,8 @@
-   pkgdesc='Delphi-like IDE for FreePascal common files'
-   depends=('fpc' 'fpc-src' 'gdb')
-   optdepends=(
--    'perl: to run some scirpts in the tools directory'
--    'gtk3: to compile gtk3 apps'
-+    'perl: to run some scripts in the tools directory'
-+    'gtk3: to compile GTK3 apps'
-     'qt5pas: to compile Qt5 apps'
-     'qt6pas: to compile Qt6 apps'
-   )
-@@ -97,7 +101,7 @@
- }
- 
- package_lazarus-gtk3() {
--  pkgdesc='Delphi-like IDE for FreePascal gtk3 version'
-+  pkgdesc='Delphi-like IDE for FreePascal GTK3 version'
-   depends=('lazarus' 'desktop-file-utils' 'gtk3')
-   conflicts=('lazarus-gtk2' 'lazarus-qt5' 'lazarus-qt6')
- 
 
 
 ############# Stripped diff below #################
