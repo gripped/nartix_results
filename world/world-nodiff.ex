@@ -3603,6 +3603,7 @@ python-memcached
 python-memory-profiler
 python-merge3
 python-mergedeep
+python-mimeparse
 python-minidump
 python-mistune
 python-mitmproxy-rs

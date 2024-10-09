@@ -557,7 +557,6 @@ pyside6-tools
 shiboken6
 python-anytree
 python-intelhex
-python-mimeparse
 python-pymupdf
 python-pyopencl
 pyopencl-headers
