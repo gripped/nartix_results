@@ -85,7 +85,6 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
-ardour
 argyllcms
 aria2
 arianna
@@ -1655,7 +1654,6 @@ libidn
 libiec61883
 libieee1284
 libimagequant
-libimobiledevice-glue
 libimobiledevice
 libindi
 libindicator
@@ -1906,7 +1904,6 @@ libultrahdr
 libunibreak
 libuninameslist
 libunwind
-libupnp
 liburcu
 liburing
 libusb-compat
@@ -3285,7 +3282,6 @@ python-doublex-expects
 python-doublex
 python-dpcontracts
 python-dropbox
-python-dulwich
 python-dunamai
 python-easyprocess
 python-ecdsa
@@ -3401,7 +3397,6 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
-python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -3610,7 +3605,6 @@ python-mitmproxy-rs
 python-mitmproxy-wireguard
 python-mock
 python-mocket
-python-mongoengine
 python-mongomock
 python-monotonic
 python-more-itertools
@@ -3621,7 +3615,6 @@ python-mpd2
 python-mpi4py
 python-mpmath
 python-msgpack
-python-mss
 python-mujson
 python-multidict
 python-multipart
@@ -3808,7 +3801,6 @@ python-pyasyncore
 python-pyaxmlparser
 python-pycares
 python-pycodestyle
-python-pycountry
 python-pycparser
 python-pycrdt-websocket
 python-pycrdt
@@ -3864,7 +3856,6 @@ python-pymysql
 python-pynacl
 python-pynamodb
 python-pynetbox
-python-pynitrokey
 python-pynvim
 python-pyocd
 python-pyogrio
@@ -3912,7 +3903,6 @@ python-pytest-datadir
 python-pytest-datafiles
 python-pytest-dependency
 python-pytest-django
-python-pytest-enabler
 python-pytest-env
 python-pytest-examples
 python-pytest-expect
@@ -4049,7 +4039,6 @@ python-routes
 python-rpds-py
 python-rpyc
 python-rsa
-python-rtree
 python-ruamel-yaml
 python-ruamel.yaml.clib
 python-ruff-api
@@ -4325,18 +4314,11 @@ python-zict
 python-zipp
 python-zipstream-ng
 python-zope-component
-python-zope-configuration
-python-zope-copy
-python-zope-deferredimport
 python-zope-deprecation
 python-zope-event
 python-zope-exceptions
-python-zope-hookable
-python-zope-i18nmessageid
 python-zope-interface
-python-zope-location
 python-zope-proxy
-python-zope-schema
 python-zope-security
 python-zope-testing
 python-zope-testrunner
@@ -5274,8 +5256,6 @@ tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc
-tree-sitter
-tree-sitter-cli
 tree
 trojan
 ts-node

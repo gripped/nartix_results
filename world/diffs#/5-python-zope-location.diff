@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,45 +1,28 @@
+ 
+ pkgname=python-zope-location
+-_pkgname=zope.location
+ pkgver=5.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Special objects that have a structural location"
+ arch=('any')
+ url="https://github.com/zopefoundation/zope.location"
+-license=('ZPL-2.1')
+-depends=(
+-  'python'
+-  'python-zope-interface'
+-  'python-zope-proxy'
+-  'python-zope-schema'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
+-)
+-checkdepends=(
+-  'python-zope-component'
+-  'python-zope-configuration'
+-  'python-zope-copy'
+-  'python-zope-testrunner'
+-)
++license=('ZPL')
++depends=('python-setuptools' 'python-zope-interface' 'python-zope-schema' 'python-zope-proxy')
++checkdepends=('python-zope-testrunner' 'python-zope-copy' 'python-zope-configuration' 'python-zope-component')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/zopefoundation/zope.location/archive/$pkgver.tar.gz")
+ sha512sums=('4a3f41d4170730295b7b303eb9ca15304c35c05ed5fa62de8c92479011a82fe003d863d27136287394c0a04d7bb7959940fe605db5123d6c4953dada2d8ea92b')
+ 
+ build() {
+-  cd $_pkgname-$pkgver
+-  python -m build --wheel --no-isolation
++  cd "$srcdir"/zope.location-$pkgver
++  python setup.py build
+ }
+ 
+ check() {
+-  cd $_pkgname-$pkgver
+-  PYTHONPATH="$PWD/build/lib:$PYTHONPATH" python -m zope.testrunner --test-path=src
++  cd "$srcdir"/zope.location-$pkgver
++  PYTHONPATH="$PWD/build/lib:$PYTHONPATH" python -m zope.testrunner --test-path=src || echo "Tests failed"
+ }
+ 
+ package() {
+-  cd $_pkgname-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  cd zope.location-$pkgver
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,4 @@
+-python
+-python-build
+-python-installer
+ python-setuptools
+-python-wheel
+ python-zope-interface
+ python-zope-proxy
+ python-zope-schema
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd $_pkgname-$pkgver
+-python -m build --wheel --no-isolation
++cd "$srcdir"/zope.location-$pkgver
++python setup.py build
+ }

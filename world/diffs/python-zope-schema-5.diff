@@ -1,0 +1,79 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,43 +1,28 @@
+ 
+ pkgname=python-zope-schema
+-_pkgname=zope.schema
+ pkgver=7.0.1
+-pkgrel=4
++pkgrel=3
+ pkgdesc="zope.interface extension for defining data schemas"
+ arch=('any')
+ url="https://github.com/zopefoundation/zope.schema"
+-license=('ZPL-2.1')
+-depends=(
+-  'python'
+-  'python-zope-event'
+-  'python-zope-interface'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
+-)
+-checkdepends=(
+-  'python-zope-i18nmessageid'
+-  'python-zope-testing'
+-  'python-zope-testrunner'
+-)
++license=('ZPL')
++depends=('python-setuptools' 'python-zope-interface' 'python-zope-event')
++checkdepends=('python-zope-testrunner' 'python-zope-testing' 'python-zope-i18nmessageid')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/zopefoundation/zope.schema/archive/$pkgver.tar.gz")
+ sha512sums=('35ef47aa059cecced52abaff9a7d5fb1070008ead2526fe1b3f6d11619c28e70c6f3e3a78c299af1a8a6503d510a363a1dded6d8e4dfde90cae45b9ea90bd89f')
+ 
+ build() {
+-  cd $_pkgname-$pkgver
+-  python -m build --wheel --no-isolation
++  cd "$srcdir"/zope.schema-$pkgver
++  python setup.py build
+ }
+ 
+ check() {
+-  cd $_pkgname-$pkgver
++  cd "$srcdir"/zope.schema-$pkgver
+   PYTHONPATH="$PWD/build/lib:$PYTHONPATH" python -m zope.testrunner --test-path=src
+ }
+ 
+ package() {
+-  cd $_pkgname-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  cd "$srcdir"/zope.schema-$pkgver
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,3 @@
+-python
+-python-build
+-python-installer
+ python-setuptools
+-python-wheel
+ python-zope-event
+ python-zope-interface
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd $_pkgname-$pkgver
+-python -m build --wheel --no-isolation
++cd "$srcdir"/zope.schema-$pkgver
++python setup.py build
+ }

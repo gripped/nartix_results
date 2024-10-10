@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-blessed
+ pkgver=1.20.0
+-pkgrel=6
++pkgrel=5
+ pkgdesc='A thin, practical wrapper around terminal styling, screen positioning, and keyboard input'
+ arch=(any)
+ url=https://github.com/jquast/blessed
+@@ -17,6 +17,7 @@
+ )
+ checkdepends=(
+   python-pytest
++  python-pytest-cov
+   python-pytest-rerunfailures
+   python-pytest-xdist
+ )
+@@ -36,7 +37,7 @@
+ 
+ check() {
+   cd blessed
+-  pytest --override-ini="addopts="
++  pytest
+ }
+ 
+ package() {

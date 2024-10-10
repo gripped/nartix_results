@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,38 +1,28 @@
+ 
+ pkgname=python-zope-deferredimport
+-_pkgname=zope.deferredimport
+ pkgver=5.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Allows you to perform imports names that will only be resolved when used in the code"
+ arch=('any')
+ url="https://github.com/zopefoundation/zope.deferredimport"
+-license=('ZPL-2.1')
+-depends=(
+-  'python'
+-  'python-zope-proxy'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
+-)
++license=('ZPL')
++depends=('python-setuptools' 'python-zope-proxy')
+ checkdepends=('python-zope-testrunner')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/zopefoundation/zope.deferredimport/archive/$pkgver.tar.gz")
+ sha512sums=('bbc840ed0e0c03c87840f2a2290710c149258d3f63eeef2d6192d57d9f7dea42e29ae91adfa8b80e90ce2301aedd73c5426700eee42cdd3282d33bb1c8b6855f')
+ 
+ build() {
+-  cd $_pkgname-$pkgver
+-  python -m build --wheel --no-isolation
++  cd "$srcdir"/zope.deferredimport-$pkgver
++  python setup.py build
+ }
+ 
+ check() {
+-  cd $_pkgname-$pkgver
++  cd "$srcdir"/zope.deferredimport-$pkgver
+   PYTHONPATH="$PWD/build/lib:$PYTHONPATH" python -m zope.testrunner --test-path=src
+ }
+ 
+ package() {
+-  cd $_pkgname-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  cd zope.deferredimport-$pkgver
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,2 @@
+-python
+-python-build
+-python-installer
+ python-setuptools
+-python-wheel
+ python-zope-proxy
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd $_pkgname-$pkgver
+-python -m build --wheel --no-isolation
++cd "$srcdir"/zope.deferredimport-$pkgver
++python setup.py build
+ }
