@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=hypercorn
- pkgver=0.17.3
--pkgrel=2
-+pkgrel=1
- pkgdesc='An ASGI Server based on Hyper libraries and inspired by Gunicorn'
- url=https://github.com/pgjones/hypercorn
- arch=(any)
-@@ -25,6 +25,7 @@
-   python-httpx
-   python-pytest
-   python-pytest-asyncio
-+  python-pytest-cov
-   python-pytest-sugar
-   python-pytest-trio
-   python-trio
-@@ -34,10 +35,6 @@
+@@ -34,10 +34,6 @@
  source=(git+https://github.com/pgjones/hypercorn.git#tag=${_tag})
  sha256sums=('8702202c855ae5e8978a36eee7d6bc3cb5fdeb795351e53672a4f3d4445152f7')
  
@@ -28,13 +11,3 @@
  
  build() {
    cd hypercorn
-@@ -46,8 +43,7 @@
- 
- check() {
-   cd hypercorn
--  PYTHONPATH="src:$PYTHONPATH" pytest \
--    --override-ini="addopts=" \
-+  PYTHONPATH="src:$PYTHONPATH" python -m pytest \
-     --ignore=tests/trio/test_lifespan.py
- }
- 

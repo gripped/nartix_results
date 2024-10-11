@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=angelfish
+-pkgver=24.08.2
++pkgver=24.08.1
+ pkgrel=1
+ pkgdesc='Web browser for Plasma Mobile'
+ url='https://apps.kde.org/angelfish/'
+@@ -18,7 +18,7 @@
+          knotifications
+          kwindowsystem
+          purpose
+-         qcoro
++         qcoro-qt6
+          qqc2-desktop-style
+          qt6-5compat
+          qt6-base
+@@ -29,7 +29,7 @@
+ groups=(kde-applications
+         kde-network)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('482ae7823509a1d0fb7a072a728106d880f5438251562af339da4548a654964b'
++sha256sums=('bd52b20fd7b610adc54a930f2725dde64b48a39972d604b5a146ce7a873352a3'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,7 +12,7 @@
+ knotifications
+ kwindowsystem
+ purpose
+-qcoro
++qcoro-qt6
+ qqc2-desktop-style
+ qt6-5compat
+ qt6-base

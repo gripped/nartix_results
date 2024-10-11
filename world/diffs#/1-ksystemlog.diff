@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ksystemlog
+-pkgver=24.08.2
++pkgver=24.08.1
+ pkgrel=1
+ pkgdesc='System log viewer tool'
+ url='https://apps.kde.org/ksystemlog/'
+@@ -22,13 +22,13 @@
           kwidgetsaddons
           kxmlgui
           qt6-base
@@ -9,6 +17,13 @@
  makedepends=(extra-cmake-modules
               kdoctools)
  groups=(kde-applications
+         kde-system)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('77b8e629cd9cc09fe583e99bbaffeafeb37d8eda1b2c6cb4082a9427faa6a96e'
++sha256sums=('a4c9d32215f83d849118e82f371bca6b3836bb50dbb6bc3afedeba310aaea99e'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
 
 
 ############# Stripped diff below #################

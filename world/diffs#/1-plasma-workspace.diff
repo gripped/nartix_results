@@ -1,6 +1,52 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -97,7 +97,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=plasma-workspace
+-pkgver=6.2.0
++pkgver=6.1.5
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='KDE Plasma Workspace'
+@@ -9,12 +9,13 @@
+ license=(LGPL-2.0-or-later)
+ depends=(accountsservice
+          appstream-qt
+-         dbus
+          fontconfig
+          freetype2
+          gcc-libs
+          glibc
+          icu
++         plasma-activities
++         plasma-activities-stats
+          kactivitymanagerd
+          karchive
+          kauth
+@@ -58,7 +59,6 @@
+          ksystemstats
+          ktexteditor
+          ktextwidgets
+-         kunitconversion
+          kuserfeedback
+          kwallet
+          kwayland
+@@ -85,21 +85,19 @@
+          milou
+          ocean-sound-theme
+          phonon-qt6
+-         plasma-activities
+-         plasma-activities-stats
+          plasma5support
+          prison
++         qcoro-qt6
+          qt6-5compat
+          qt6-base
+          qt6-declarative
+-         qt6-positioning
+          qt6-svg
+          qt6-tools # for qdbus
+          qt6-virtualkeyboard
           qt6-wayland
           sh
           solid
@@ -9,7 +55,26 @@
           wayland
           xcb-util
           xcb-util-image
-@@ -146,4 +146,6 @@
+@@ -114,8 +112,7 @@
+              kdoctools
+              kunitconversion
+              networkmanager-qt
+-             plasma-wayland-protocols
+-             qcoro)
++             plasma-wayland-protocols)
+ optdepends=('appmenu-gtk-module: global menu support for GTK2 and some GTK3 applications'
+             'baloo: Baloo search runner'
+             'discover: manage applications installation from the launcher'
+@@ -130,7 +127,7 @@
+ replaces=(plasma-wayland-session)
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('2d4268cbae757631be57d69d34fc02c8d0204762515370c9679ecb2aa2afdf33'
++sha256sums=('c29e15a3ed42446f997b7e1695864f85ebff084e2ece581c914a0d8a8e265ae7'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+@@ -149,4 +146,6 @@
    depends+=(plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
  
    DESTDIR="$pkgdir" cmake --install build
@@ -22,7 +87,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -62,6 +62,7 @@
+@@ -1,7 +1,6 @@
+ accountsservice
+ appstream-qt
+ baloo
+-dbus
+ extra-cmake-modules
+ fontconfig
+ freetype2
+@@ -63,6 +62,7 @@
  kxmlgui
  layer-shell-qt
  libcanberra
@@ -30,7 +103,19 @@
  libice
  libkexiv2
  libksysguard
-@@ -96,7 +97,6 @@
+@@ -87,18 +87,16 @@
+ plasma-wayland-protocols
+ plasma5support
+ prison
+-qcoro
++qcoro-qt6
+ qt6-5compat
+ qt6-base
+ qt6-declarative
+-qt6-positioning
+ qt6-svg
+ qt6-tools
+ qt6-virtualkeyboard
  qt6-wayland
  sh
  solid
