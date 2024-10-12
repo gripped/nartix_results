@@ -247,7 +247,6 @@ calf
 camlp-streams
 camlp4
 cantarell-fonts
-cantor
 capnproto
 capstone
 python-capstone
@@ -2019,7 +2018,6 @@ lld
 lld16
 lldb
 llhttp
-llvm-julia
 llvm
 llvm14
 llvm15
@@ -2361,6 +2359,7 @@ nsxiv
 nsync
 ntfs-3g
 ntp
+nuget
 nuitka
 nuklear
 numactl
@@ -2425,7 +2424,6 @@ openexr
 openfec
 openfire
 openh264
-openimagedenoise
 openimageio
 openipmi
 openjade
@@ -2462,7 +2460,6 @@ os-prober
 osinfo-db-tools
 osinfo-db
 osm-gps-map
-ospray
 oxygen-icons
 oxygen-icons-svg
 oxygen-sounds

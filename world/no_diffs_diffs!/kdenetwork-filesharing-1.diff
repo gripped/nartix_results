@@ -28,17 +28,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,13 +0,0 @@
--extra-cmake-modules
--gcc-libs
--glibc
--kauth
--kcoreaddons
--ki18n
--kio
--kirigami
--kwidgetsaddons
+@@ -7,7 +7,7 @@
+ kio
+ kirigami
+ kwidgetsaddons
 -qcoro
--qt6-base
--qt6-declarative
--samba
++qcoro-qt6
+ qt6-base
+ qt6-declarative
+ samba

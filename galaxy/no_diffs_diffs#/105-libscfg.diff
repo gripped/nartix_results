@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48')  # Simon Ser
+ 
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "$pkgname-$pkgver" build
++artix-meson "$pkgname-$pkgver" build
+ ninja -C build
+ }

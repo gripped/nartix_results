@@ -77,6 +77,7 @@ grub-btrfs
 gstreamermm
 gstreamermm-docs
 incron
+kanshi
 libdbusmenu-lxqt
 libe-book
 libetonyek
@@ -116,12 +117,14 @@ libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
+libscfg
 libsidplayfp
 libsignal-protocol-c
 libstrophe
 libstrophe-doc
 libsysstat
 libtg_owt
+libvarlink
 libwnck
 libxfce4ui
 libxfce4util
@@ -466,6 +469,9 @@ warpinator
 wireshark
 wireshark-cli
 wireshark-qt
+wlr-randr
+wlsunset
+wofi
 xapp
 xdg-desktop-portal-lxqt
 xfburn

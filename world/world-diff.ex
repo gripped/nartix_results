@@ -45,6 +45,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+cantor
 catfish
 cgmanager
 chromium-bsu
@@ -350,6 +351,7 @@ turbostat
 usbip
 x86_energy_perf_policy
 lirc
+llvm-julia
 lm_sensors
 localsearch
 localsearch-testutils
@@ -456,11 +458,13 @@ onionshare
 open-iscsi
 opencollada
 opendht
+openimagedenoise
 openmpi
 openmpi-docs
 opensmtpd
 opensubdiv
 openvpn
+ospray
 ostree
 packagekit
 libpackagekit-glib

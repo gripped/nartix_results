@@ -1,0 +1,113 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,8 @@
+ 
+-pkgname=(llvm-julia
+-         llvm-julia-libs)
+-_pkgver=16.0.6-3
++pkgname=('llvm-julia' 'llvm-julia-libs')
++_pkgver=15.0.7-10
+ pkgver=${_pkgver/-/.}
+-pkgrel=1
++pkgrel=2
+ arch=(x86_64)
+ url='https://julialang.org/'
+ license=('custom:Apache 2.0 with LLVM Exception')
+@@ -12,7 +11,6 @@
+          zlib
+          zstd)
+ makedepends=(cmake
+-             git
+              libedit
+              libffi
+              libxml2
+@@ -20,8 +18,8 @@
+              ninja
+              python)
+ options=(!lto) # https://github.com/llvm/llvm-project/issues/57740
+-source=(git+https://github.com/JuliaLang/llvm-project#tag=julia-$_pkgver)
+-sha256sums=('6591971f0e4bcff0255d99676c55f9495f3c22c078ea982d10c5211bb53b41f5')
++source=(https://github.com/JuliaLang/llvm-project/archive/julia-$_pkgver.tar.gz)
++sha256sums=('c1ff5c68ccf8cb0deacf476bf98a88db219e41124ddb918c597457136481e6b4')
+ 
+ _get_distribution_components() {
+   local target
+@@ -70,7 +68,7 @@
+     -DLLVM_SHLIB_SYMBOL_VERSION=$_symver
+   )
+ 
+-  cmake -B build -S llvm-project/llvm \
++  cmake -B build -S llvm-project-julia-$_pkgver/llvm \
+      "${cmake_args[@]}"
+   pushd build
+     local distribution_components=$(_get_distribution_components | paste -sd\;)
+@@ -78,7 +76,7 @@
+     cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
+   popd
+ 
+-  cmake -B build -S llvm-project/llvm \
++  cmake -B build -S llvm-project-julia-$_pkgver/llvm \
+     "${cmake_args[@]}"
+   cmake --build build
+ }
+@@ -89,10 +87,10 @@
+ 
+   DESTDIR="$pkgdir" cmake --build build --target install-distribution
+ 
+-  mv -f "$pkgdir"/usr/lib/llvm-julia/lib/libLLVM-{16,${pkgver%.*}}jl.so .
++  mv -f "$pkgdir"/usr/lib/llvm-julia/lib/libLLVM-{15,${pkgver%.*}}jl.so .
+   mv -f "$pkgdir"/usr/lib/llvm-julia/lib/LLVMgold.so "$srcdir/"
+ 
+-  install -Dm644 llvm-project/llvm/LICENSE.TXT "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
++  install -Dm644 llvm-project-julia-$_pkgver/llvm/LICENSE.TXT "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
+ 
+ package_llvm-julia-libs() {
+@@ -103,10 +101,10 @@
+             ncurses)
+ 
+   install -d "$pkgdir/usr/lib/llvm-julia/lib"
+-  cp -P libLLVM-{16,${pkgver%.*}}jl.so "$pkgdir"/usr/lib
+-  ln -s ../../libLLVM-16jl.so "$pkgdir/usr/lib/llvm-julia/lib/libLLVM-16jl.so"
+-  ln -s ../../libLLVM-16jl.so "$pkgdir/usr/lib/llvm-julia/lib/libLLVM-${pkgver}jl.so"
++  cp -P libLLVM-{15,${pkgver%.*}}jl.so "$pkgdir"/usr/lib
++  ln -s ../../libLLVM-15jl.so "$pkgdir/usr/lib/llvm-julia/lib/libLLVM-15jl.so"
++  ln -s ../../libLLVM-15jl.so "$pkgdir/usr/lib/llvm-julia/lib/libLLVM-${pkgver}jl.so"
+   cp -P LLVMgold.so "$pkgdir/usr/lib/llvm-julia/lib/"
+ 
+-  install -Dm644 llvm-project/llvm/LICENSE.TXT "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
++  install -Dm644 llvm-project-julia-$_pkgver/llvm/LICENSE.TXT "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
+ gcc-libs
+-git
+ glibc
+ libedit
+ libffi
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,14 +21,14 @@
+ -DLLVM_VERSION_SUFFIX=jl
+ -DLLVM_SHLIB_SYMBOL_VERSION=$_symver
+ )
+-cmake -B build -S llvm-project/llvm \
++cmake -B build -S llvm-project-julia-$_pkgver/llvm \
+ "${cmake_args[@]}"
+ pushd build
+ local distribution_components=$(_get_distribution_components | paste -sd\;)
+ test -n "$distribution_components"
+ cmake_args+=(-DLLVM_DISTRIBUTION_COMPONENTS="$distribution_components")
+ popd
+-cmake -B build -S llvm-project/llvm \
++cmake -B build -S llvm-project-julia-$_pkgver/llvm \
+ "${cmake_args[@]}"
+ cmake --build build
+ }

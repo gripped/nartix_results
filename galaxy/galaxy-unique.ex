@@ -132,6 +132,7 @@ pix
 pure-ftpd-openrc
 pure-ftpd
 python-efl
+python-wayfire
 qbittorrent-openrc
 qpdfview
 qt-sudo
@@ -163,6 +164,14 @@ turnstile
 ungoogled-chromium
 vertex-themes
 vscodium
+wayfire-plugins-extra
+wayfire
+wcm
+wf-config
+wf-shell
 wireplumber-dinit
+wlogout
+wlopm
+wlrctl
 xcursor-breeze
 xcursor-premium
