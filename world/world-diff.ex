@@ -458,7 +458,6 @@ onionshare
 open-iscsi
 opencollada
 opendht
-openimagedenoise
 openmpi
 openmpi-docs
 opensmtpd
@@ -564,8 +563,6 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
-python-dulwich
-python-google-auth
 python-intelhex
 python-pymupdf
 python-pyopencl
@@ -705,6 +702,7 @@ shairport-sync
 signal-desktop
 smartmontools
 snapper
+snapshot
 solid
 spice-vdagent
 squid
@@ -857,6 +855,7 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
+xmms2
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

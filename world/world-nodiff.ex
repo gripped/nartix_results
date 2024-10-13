@@ -2424,6 +2424,7 @@ openexr
 openfec
 openfire
 openh264
+openimagedenoise
 openimageio
 openipmi
 openjade
@@ -3280,6 +3281,7 @@ python-doublex-expects
 python-doublex
 python-dpcontracts
 python-dropbox
+python-dulwich
 python-dunamai
 python-easyprocess
 python-ecdsa
@@ -3395,6 +3397,7 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
+python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -4945,7 +4948,6 @@ smb4k
 smpeg
 smplayer
 snappy
-snapshot
 sndio
 snorenotify
 snowball
@@ -5491,7 +5493,6 @@ xmlsec
 xmlstarlet
 xmlto
 xmltoman
-xmms2
 xmrig
 xonsh
 xorg-appres

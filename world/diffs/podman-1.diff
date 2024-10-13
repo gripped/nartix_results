@@ -1,56 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgbase=podman
- pkgname=(podman podman-docker)
--pkgver=5.2.4
-+pkgver=5.2.3
- pkgrel=1
- pkgdesc='Tool and library for running OCI-based containers in pods'
- arch=(x86_64)
-@@ -11,14 +11,14 @@
-   apparmor
-   btrfs-progs
-   catatonit
-+  device-mapper
-   git
-   go
-   go-md2man
-   gpgme
+@@ -18,7 +18,7 @@
    libseccomp
    man-db
--  shadow
+   shadow
 -  systemd
 +  udev
  )
  options=(!lto)
  source=(
-@@ -29,9 +29,10 @@
-   7CE1E6F8C90CB53E7E4D8F2D502E08DB0BBF8EEE  # Ashley Cui <acui@redhat.com>
-   9E33DD8704CC03E2DEB84D9A1C1EDD7CC7C3A0DD  # Lokesh Mandvekar <lsm5@redhat.com>
- )
--sha256sums=('451288666ba5c607c53af6543b5eda352f84cd325a0a07db2dfa2e4e815e2c22')
-+sha256sums=('82a56e02906d9116fbf7a1017a6b54016a860bbe0e59aee985f9ad39bda92eeb')
- 
- build() {
-+  export BUILDTAGS='apparmor seccomp'
-   export CGO_CPPFLAGS="${CPPFLAGS}"
-   export CGO_CFLAGS="${CFLAGS}"
-   export CGO_CXXFLAGS="${CXXFLAGS}"
-@@ -52,10 +53,10 @@
-     gcc-libs
-     glibc
-     iptables
-+    device-mapper libdevmapper.so
-     gpgme libgpgme.so
-     libseccomp libseccomp.so
-     passt
--    shadow
-   )
-   optdepends=(
-     'apparmor: for AppArmor support'
-@@ -68,6 +69,8 @@
+@@ -68,6 +68,8 @@
    )
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -59,7 +18,7 @@
  }
  
  package_podman-docker() {
-@@ -80,4 +83,6 @@
+@@ -80,4 +82,6 @@
    provides=(docker)
  
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
@@ -72,26 +31,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,7 @@
- catatonit
- conmon
- containers-common
-+device-mapper
- gcc-libs
- git
- glibc
-@@ -10,6 +11,7 @@
- go-md2man
- gpgme
- iptables
-+libdevmapper.so
- libgpgme.so
- libseccomp
- libseccomp.so
-@@ -18,5 +20,4 @@
- passt
+@@ -19,4 +19,4 @@
  podman
  sh
--shadow
+ shadow
 -systemd
 +udev
