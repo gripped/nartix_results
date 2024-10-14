@@ -50,5 +50,8 @@ transmission-qt
 libtransmission
 vice
 wezterm
+wireshark
+wireshark-cli
+wireshark-qt
 xdg-desktop-portal-xapp
 xfce4-notifyd

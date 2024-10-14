@@ -201,6 +201,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -3275,7 +3276,6 @@ python-docstring-to-markdown
 python-doctest-ignore-unicode
 python-docutils-stubs
 python-docutils
-python-dogpile.cache
 python-dotenv
 python-doublex-expects
 python-doublex
@@ -3489,10 +3489,8 @@ python-jeepney
 python-jellyfish
 python-jinja-time
 python-jinja
-python-jiter
 python-jmespath
 python-joblib
-python-jose
 python-josepy
 python-joserfc
 python-jq
@@ -4948,6 +4946,7 @@ smb4k
 smpeg
 smplayer
 snappy
+snapshot
 sndio
 snorenotify
 snowball
@@ -5418,9 +5417,6 @@ whois
 wildmidi
 wireguard-tools
 wireless_tools
-wireshark
-wireshark-cli
-wireshark-qt
 wl-clipboard
 woff2
 wolfssl

@@ -29,7 +29,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -563,7 +562,10 @@ pyside6
 pyside6-tools
 shiboken6
 python-anytree
+python-dogpile.cache
 python-intelhex
+python-jiter
+python-jose
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -702,7 +704,6 @@ shairport-sync
 signal-desktop
 smartmontools
 snapper
-snapshot
 solid
 spice-vdagent
 squid
@@ -795,6 +796,9 @@ weston
 wireplumber
 libwireplumber
 wireplumber-docs
+wireshark
+wireshark-cli
+wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16

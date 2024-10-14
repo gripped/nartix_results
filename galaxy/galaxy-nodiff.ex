@@ -466,9 +466,6 @@ ttf-jetbrains-mono
 tumbler
 unoconv
 warpinator
-wireshark
-wireshark-cli
-wireshark-qt
 wlr-randr
 wlsunset
 wofi

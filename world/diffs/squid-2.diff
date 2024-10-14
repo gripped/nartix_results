@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=squid
--pkgver=6.12
-+pkgver=6.11
- pkgrel=1
- pkgdesc='Full-featured Web proxy cache server'
+@@ -6,8 +6,8 @@
  arch=('x86_64')
  url='http://www.squid-cache.org'
  depends=('openssl' 'pam' 'perl' 'libltdl' 'libcap' 'nettle' 'gnutls' 'libnsl' 'libxml2'
@@ -24,9 +18,8 @@
 -        'squid.sysusers'
 -        'squid-rotate.service'
 -        'squid-rotate.timer')
--sha256sums=('f3df3abb2603a513266f24a5d4699a9f0d76b9f554d1848b67f9c51cd3b3cb50'
 +        'squid.sysusers')
-+sha256sums=('b6e60c08429314287925331b3da6c03b7d3c35b7e03319f78edb8bad6fc68899'
+ sha256sums=('f3df3abb2603a513266f24a5d4699a9f0d76b9f554d1848b67f9c51cd3b3cb50'
              'SKIP'
              '11fb388f8679fd6461e0de006810ea608a3686fffda16904b0ed71f412be499c'
              '495f54e51f6ec1e4dce87090d76718aea1eb37559c4439d876dd39598163062a'
