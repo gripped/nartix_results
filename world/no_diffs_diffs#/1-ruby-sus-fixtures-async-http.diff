@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,8 @@
+   ruby-bundler
+   ruby-covered
+   ruby-decode
++  ruby-io-stream
++  ruby-io-endpoint
+ )
+ options=(!emptydirs)
+ source=("git+${url}.git#tag=v${pkgver}")

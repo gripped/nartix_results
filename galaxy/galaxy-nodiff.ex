@@ -132,6 +132,9 @@ lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
 linux-zen
 linux-zen-headers
 linux-zen-docs

@@ -85,6 +85,7 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
+ardour
 argyllcms
 aria2
 arianna
@@ -248,6 +249,7 @@ calf
 camlp-streams
 camlp4
 cantarell-fonts
+cantor
 capnproto
 capstone
 python-capstone
@@ -553,7 +555,6 @@ fcitx
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
-fcitx5-qt
 feh
 festival
 ffcall
@@ -1085,7 +1086,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1287,6 +1287,7 @@ kimap
 kinfocenter
 kinit
 kio-admin
+kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
@@ -1441,6 +1442,7 @@ kvirc
 kwallet-pam
 kwallet
 kwallet5
+kwalletmanager
 kwave
 kwayland-integration
 kwayland
@@ -1905,6 +1907,7 @@ libultrahdr
 libunibreak
 libuninameslist
 libunwind
+libupnp
 liburcu
 liburing
 libusb-compat
@@ -2019,6 +2022,7 @@ lld
 lld16
 lldb
 llhttp
+llvm-julia
 llvm
 llvm14
 llvm15
@@ -2171,6 +2175,7 @@ marisa
 perl-marisa
 python-marisa
 ruby-marisa
+markdownlint
 markdownpart
 marked-man
 marked
@@ -2462,6 +2467,7 @@ os-prober
 osinfo-db-tools
 osinfo-db
 osm-gps-map
+ospray
 oxygen-icons
 oxygen-icons-svg
 oxygen-sounds
@@ -3489,8 +3495,10 @@ python-jeepney
 python-jellyfish
 python-jinja-time
 python-jinja
+python-jiter
 python-jmespath
 python-joblib
+python-jose
 python-josepy
 python-joserfc
 python-jq
@@ -3658,7 +3666,6 @@ python-numexpr
 python-numpy
 python-oauth2client
 python-oauthlib
-python-objgraph
 python-objsize
 python-odfpy
 python-omemo-dr
@@ -4403,6 +4410,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4426,12 +4434,9 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
-qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4477,6 +4482,7 @@ redland-storage-postgresql
 redland-storage-virtuoso
 redland-storage-sqlite
 remmina
+renameutils
 reptyr
 rest
 restinio
@@ -4554,6 +4560,7 @@ ruby-async-pool
 ruby-async-process
 ruby-async-rest
 ruby-async-rspec
+ruby-async-service
 ruby-async-websocket
 ruby-async
 ruby-atk
@@ -4577,6 +4584,7 @@ ruby-bundler
 ruby-byebug
 ruby-cgi
 ruby-character_set
+ruby-chef-utils
 ruby-childprocess
 ruby-chronic
 ruby-coderay
@@ -4600,6 +4608,7 @@ ruby-daemons
 ruby-date
 ruby-dbus
 ruby-debug
+ruby-decode
 ruby-deep_merge
 ruby-delegate
 ruby-did_you_mean
@@ -4650,8 +4659,10 @@ ruby-i18n
 ruby-ice_nine
 ruby-introspection
 ruby-io-console
+ruby-io-endpoint
 ruby-io-event
 ruby-io-nonblock
+ruby-io-stream
 ruby-io-wait
 ruby-ipaddr
 ruby-irb
@@ -4666,6 +4677,7 @@ ruby-locale
 ruby-localhost
 ruby-logger
 ruby-loofah
+ruby-m
 ruby-manpages
 ruby-mapping
 ruby-markly
@@ -4675,6 +4687,7 @@ ruby-memoist
 ruby-memory_profiler
 ruby-metaclass
 ruby-method_source
+ruby-metrics
 ruby-mime-types-data
 ruby-mime-types
 ruby-mini_mime
@@ -4689,6 +4702,9 @@ ruby-minitest-retry
 ruby-minitest-sprint
 ruby-minitest-stub-const
 ruby-minitest
+ruby-mixlib-cli
+ruby-mixlib-config
+ruby-mixlib-shellout
 ruby-mkmf-lite
 ruby-mocha
 ruby-msgpack
@@ -4733,6 +4749,7 @@ ruby-protocol-http1
 ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-websocket
+ruby-pry-byebug
 ruby-pry
 ruby-psych
 ruby-ptools
@@ -4740,7 +4757,6 @@ ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
 ruby-qed
-ruby-racc
 ruby-rack-session
 ruby-rack-test
 ruby-rack
@@ -4761,6 +4777,7 @@ ruby-rbtree
 ruby-rdiscount
 ruby-rdoc
 ruby-redcarpet
+ruby-redcloth
 ruby-regexp_parser
 ruby-regexp_property_values
 ruby-reline
@@ -4803,16 +4820,20 @@ ruby-semantic_puppet
 ruby-sequel
 ruby-set
 ruby-shadow
+ruby-shoulda-context
 ruby-simplecov-html
 ruby-simplecov
 ruby-simplecov_json_formatter
 ruby-sinatra
+ruby-snowglobe
 ruby-sorted_set
 ruby-sqlite3
 ruby-stackprof
 ruby-stringio
 ruby-sus-fixtures-async-http
 ruby-sus-fixtures-async
+ruby-sus-fixtures-console
+ruby-sus-fixtures-openssl
 ruby-sus
 ruby-sync
 ruby-syntax
@@ -4834,6 +4855,8 @@ ruby-time
 ruby-timers
 ruby-tins
 ruby-tmpdir
+ruby-tomlrb
+ruby-tracer
 ruby-traces
 ruby-trenni
 ruby-typeprof
@@ -4847,6 +4870,7 @@ ruby-uri
 ruby-vcr
 ruby-vimrunner
 ruby-warning
+ruby-warnings_logger
 ruby-webmock
 ruby-webrick
 ruby-websocket-driver
@@ -5417,6 +5441,9 @@ whois
 wildmidi
 wireguard-tools
 wireless_tools
+wireshark
+wireshark-cli
+wireshark-qt
 wl-clipboard
 woff2
 wolfssl
@@ -5489,6 +5516,7 @@ xmlsec
 xmlstarlet
 xmlto
 xmltoman
+xmms2
 xmrig
 xonsh
 xorg-appres

@@ -17,9 +17,6 @@ libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 light
-linux-rt-lts
-linux-rt-lts-headers
-linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs

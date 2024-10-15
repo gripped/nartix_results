@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,18 @@
+ 
+ pkgname=ruby-byebug
+ pkgver=11.1.3
+-pkgrel=5
++pkgrel=4
+ pkgdesc='A simple to use and feature rich debugger for Ruby'
+ arch=(x86_64)
+ url='https://github.com/deivid-rodriguez/byebug'
+ license=(BSD)
+ depends=(
+   ruby
+-  ruby-irb
+ )
+ checkdepends=(
+   markdownlint
+   ruby-bundler
++  ruby-irb
+   ruby-minitest
+   ruby-pry
+   ruby-rake
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+ ruby
+-ruby-irb

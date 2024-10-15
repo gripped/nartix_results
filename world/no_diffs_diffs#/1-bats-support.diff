@@ -5,12 +5,3 @@
    install -Dm 644 README.md CHANGELOG.md -t "${pkgdir}/usr/share/doc/${pkgname}"
  }
 -
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,2 +0,0 @@
--bash
--bats

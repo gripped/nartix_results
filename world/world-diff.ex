@@ -9,7 +9,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-ardour
 at-spi2-core
 at-spi2-core-docs
 at
@@ -44,7 +43,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cantor
 catfish
 cgmanager
 chromium-bsu
@@ -102,6 +100,7 @@ fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
+fcitx5-qt
 fcitx5
 fcron
 firefox
@@ -259,9 +258,9 @@ openjdk8-doc
 jedi-language-server
 jp2a
 js78
+julia
 kcoreaddons
 kgamma
-kio-extras
 kismet
 kitty
 kitty-terminfo
@@ -270,7 +269,6 @@ knot
 kopeninghours
 ksnip
 ksystemlog
-kwalletmanager
 kwin
 libatasmart
 libayatana-appindicator
@@ -318,7 +316,6 @@ libsidplay
 libsidplayfp
 libtg_owt
 libudev0-shim
-libupnp
 libusbsio
 python-libusbsio
 libvirt
@@ -350,7 +347,6 @@ turbostat
 usbip
 x86_energy_perf_policy
 lirc
-llvm-julia
 lm_sensors
 localsearch
 localsearch-testutils
@@ -462,7 +458,6 @@ openmpi-docs
 opensmtpd
 opensubdiv
 openvpn
-ospray
 ostree
 packagekit
 libpackagekit-glib
@@ -564,8 +559,7 @@ shiboken6
 python-anytree
 python-dogpile.cache
 python-intelhex
-python-jiter
-python-jose
+python-objgraph
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -661,10 +655,12 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
+qt6-wayland
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -686,6 +682,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-racc
 ruby-sys-filesystem
 samba
 libwbclient
@@ -796,9 +793,6 @@ weston
 wireplumber
 libwireplumber
 wireplumber-docs
-wireshark
-wireshark-cli
-wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16
@@ -859,7 +853,6 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
-xmms2
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb
