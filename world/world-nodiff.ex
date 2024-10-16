@@ -202,7 +202,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -296,7 +295,6 @@ libcheese
 cherrytree
 chmlib
 chromaprint
-chrono-date
 chrpath
 cifs-utils
 cinnamon-control-center
@@ -355,7 +353,6 @@ composable-kernel
 composefs
 confuse
 consul
-containerd
 containers-common
 coordgen
 copr-cli
@@ -555,6 +552,7 @@ fcitx
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
+fcitx5-qt
 feh
 festival
 ffcall
@@ -1824,7 +1822,6 @@ libqb
 libqmi
 libqmi-docs
 libqrtr-glib
-libqtxdg
 libquotient
 libquvi-scripts
 libquvi
@@ -2022,7 +2019,6 @@ lld
 lld16
 lldb
 llhttp
-llvm-julia
 llvm
 llvm14
 llvm15
@@ -4415,7 +4411,6 @@ qt6-graphs
 qt6-grpc
 qt6-httpserver
 qt6-imageformats
-qt6-languageserver
 qt6-location
 qt6-lottie
 qt6-multimedia
@@ -4436,7 +4431,9 @@ qt6-speech
 qt6-svg
 qt6-translations
 qt6-virtualkeyboard
+qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -5075,6 +5072,7 @@ tcsh
 tdb
 tea
 tecla
+telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream

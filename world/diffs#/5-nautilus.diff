@@ -7,7 +7,7 @@
 -pkgver=45.2
 -pkgrel=1
 +pkgver=47.0
-+pkgrel=2
++pkgrel=3
  pkgdesc="Default file manager for GNOME"
 -url="https://wiki.gnome.org/Apps/Files"
 +url="https://apps.gnome.org/Nautilus/"
@@ -30,7 +30,7 @@
    gtk4
    gvfs
    hicolor-icon-theme
-@@ -28,31 +31,36 @@
+@@ -28,31 +31,39 @@
    libgexiv2
    libportal
    libportal-gtk4
@@ -40,6 +40,7 @@
 -  tracker3
 +  tinysparql
 +  wayland
++  xdg-user-dirs-gtk
  )
  makedepends=(
    appstream-glib
@@ -63,7 +64,7 @@
 -  cd nautilus
 -  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 -}
-+b2sums=('SKIP'
++b2sums=('01773ab8f39b700977a3798a4fd1de07b87d966083d6cfea6e9576065bcec958b17832f46ada17b84122aaba5b86871b11d51f17f0b89f6a1ec3ed301497528f'
 +        '1c81c3b736abdda0d59d5b798cd83dd5a794e64e7e052f65e1c1e27b2b1b52afbee06907fd9645950fb0acfb17c1f64c7a9e42ba59368720235e2fbd8df32fb5')
 +validpgpkeys=(
 +  6B211753AC950672287226800538577822AE4B17 # António Fernandes <antoniof@gnome.org>
@@ -74,10 +75,12 @@
    cd nautilus
 +
 +  git apply -3 ../0001-Disable-tracker-test.patch
++
++  git cherry-pick --no-commit 215eb277dbbf81ddde31295691f864e83ea8ea81
  }
  
  build() {
-@@ -61,7 +69,7 @@
+@@ -61,7 +72,7 @@
      -D packagekit=false
    )
  
@@ -86,7 +89,7 @@
    meson compile -C build
  }
  
-@@ -81,10 +89,6 @@
+@@ -81,10 +92,6 @@
  
  package_nautilus() {
    depends+=(libnautilus-extension.so)
@@ -97,7 +100,7 @@
    groups=(gnome)
  
    meson install -C build --destdir "$pkgdir"
-@@ -103,6 +107,7 @@
+@@ -103,6 +110,7 @@
    depends=(
      gcc-libs
      glib2
@@ -124,7 +127,7 @@
  gst-plugins-base-libs
  gstreamer
  gtk4
-@@ -21,7 +24,9 @@
+@@ -21,7 +24,10 @@
  libnautilus-extension.so
  libportal
  libportal-gtk4
@@ -136,13 +139,15 @@
 -tracker3-miners
 +tinysparql
 +wayland
++xdg-user-dirs-gtk
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,12 @@
+@@ -1,11 +1,13 @@
  prepare() {
  cd nautilus
 +git apply -3 ../0001-Disable-tracker-test.patch
++git cherry-pick --no-commit 215eb277dbbf81ddde31295691f864e83ea8ea81
  }
  build() {
  local meson_options=(

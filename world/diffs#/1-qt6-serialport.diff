@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,6 @@
- 
- pkgname=qt6-serialport
--_pkgver=6.8.0
--pkgver=6.8.0
-+pkgver=6.7.3
- pkgrel=1
- arch=(x86_64)
- url='https://www.qt.io'
-@@ -10,14 +9,14 @@
+@@ -10,7 +10,7 @@
  depends=(gcc-libs
           glibc
           qt6-base
@@ -18,15 +9,6 @@
  makedepends=(cmake
               git
               ninja)
- groups=(qt6)
- _pkgfn=${pkgname/6-/}
--source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
--sha256sums=('0882d679bd37de12b9e0b8615efa3953d6cdbfba4693e01c57e1ea93d5d2620d')
-+source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$pkgver)
-+sha256sums=('450109e3064c84b8b34933b461002ec7f05f6dd907bda91278a33ff7450e8a18')
- 
- build() {
-   cmake -B build -S $_pkgfn -G Ninja \
 
 
 ############# Stripped diff below #################

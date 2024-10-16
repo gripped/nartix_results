@@ -8,11 +8,6 @@ evisum
 fceux
 firefox
 gpicview
-lazarus
-lazarus-gtk2
-lazarus-gtk3
-lazarus-qt5
-lazarus-qt6
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -36,7 +31,6 @@ nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
 rage
-telegram-desktop
 terminology
 tor
 torsocks

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   fwupd-docs
- )
- pkgver=2.0.0
--pkgrel=1
-+pkgrel=1.1
- pkgdesc="Simple daemon to allow session software to update firmware"
- arch=(x86_64)
- url='https://github.com/fwupd/fwupd'
 @@ -36,7 +36,6 @@
    python
    shared-mime-info
@@ -17,29 +8,11 @@
    tpm2-tss
    xz
    zlib
-@@ -53,14 +52,12 @@
-   pandoc
-   python-cairo
-   python-dbus
-+  python-dbusmock
-   python-gobject
-   python-pillow
-+  umockdev
-   vala
-   valgrind
--)
--checkdepends=(
--  umockdev
--  python-dbusmock
- )
- source=(
-   "https://github.com/fwupd/fwupd/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz"{,.asc}
-@@ -84,19 +81,21 @@
+@@ -74,19 +73,20 @@
  
  build() {
    local meson_options=(
 +    -D systemd=disabled
-+    -D offline=disabled
 +    -D elogind=enabled
      -D docs=enabled
      -D efi_binary=false
@@ -59,7 +32,7 @@
  }
  
  _pick() {
-@@ -139,8 +138,8 @@
+@@ -129,8 +129,8 @@
    rm -r "${pkgdir}"/usr/{lib,share}/installed-tests/
    mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
    mv "${pkgdir}"/usr/share/man/man1/{,fwupd-}dbxtool.1
@@ -76,18 +49,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -42,12 +42,13 @@
- python
- python-cairo
- python-dbus
-+python-dbusmock
- python-gobject
+@@ -47,7 +47,6 @@
  python-pillow
  shared-mime-info
  sqlite
 -systemd-libs
  tpm2-tss
-+umockdev
+ umockdev
  vala
- valgrind
- xz

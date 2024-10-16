@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,36 +1,30 @@
+ 
+ pkgname=libqtxdg
+-pkgver=4.0.0
+-pkgrel=5
++pkgver=3.12.0
++pkgrel=3
+ pkgdesc="Library providing freedesktop.org XDG specs implementations for Qt"
+ arch=("x86_64")
+ url="https://github.com/lxqt/$pkgname"
+ license=("LGPL" "custom")
+-depends=("libsm" "libxkbcommon-x11" "qt6-base" "qt6-svg")
++depends=("libsm" "libxkbcommon-x11" "qt5-base" "qt5-svg")
+ makedepends=("cmake" "lxqt-build-tools")
+ checkdepends=("xorg-server-xvfb")
+ optdepends=(
+   'xterm: the default terminal for running .desktop files'
+ )
+-provides=("libQt6Xdg.so" "libQt6XdgIconLoader.so")
++provides=("libQt5Xdg.so" "libQt5XdgIconLoader.so")
+ source=(
+   "https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
+   "https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz.asc"
+-   qt-6.8.patch
+ )
+-sha256sums=('8c1b250de914b2e1fb451c213ee6f249b7b5729c85ac3283fd75615a47a66b62'
+-            'SKIP'
+-            'c0871facc5ec8a4254b06d6b82e42f199a4294dced5f6fdcf8de31a060878b41')
++sha256sums=('726856ff447220575c84461800b151328e784c6c326a5065ef3f9a7f9506d4dc'
++            'SKIP')
+ validpgpkeys=(
+   "169704C6FB490C6892C7F23C37E0AF1FDA48F373"  # Jerome Leclanche <jerome@leclan.ch>
+   "7C733BA5F585AAD669E4D23A42C9C8D3AF5EA5E3"  # Alf Gaida <agaida@siduction.org>
+   "19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # Pedram Pourang <tsujan2000@gmail.com>
+ )
+ 
+-prepare() {
+-  cd $pkgname-$pkgver
+-  patch -p1 -i ../qt-6.8.patch
+-}
+ 
+ build() {
+   mkdir -p build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,5 +2,5 @@
+ libsm
+ libxkbcommon-x11
+ lxqt-build-tools
+-qt6-base
+-qt6-svg
++qt5-base
++qt5-svg
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd $pkgname-$pkgver
+-patch -p1 -i ../qt-6.8.patch
+-}
+ build() {
+ mkdir -p build
+ cd build

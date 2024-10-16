@@ -78,6 +78,11 @@ gstreamermm
 gstreamermm-docs
 incron
 kanshi
+lazarus
+lazarus-gtk2
+lazarus-gtk3
+lazarus-qt5
+lazarus-qt6
 libdbusmenu-lxqt
 libe-book
 libetonyek
@@ -327,6 +332,7 @@ scummvm
 signal-desktop
 stalonetray
 subtitleeditor
+telegram-desktop
 terminus-font
 termshark
 tesseract-data

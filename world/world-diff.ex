@@ -28,6 +28,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -46,6 +47,7 @@ caja
 catfish
 cgmanager
 chromium-bsu
+chrono-date
 chrony
 cinnamon-desktop
 clamav
@@ -57,6 +59,7 @@ libcolord
 conky
 conmon
 connman
+containerd
 convertlit
 cppcheck
 crun
@@ -100,7 +103,6 @@ fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
-fcitx5-qt
 fcitx5
 fcron
 firefox
@@ -312,6 +314,7 @@ libldm
 libmspub
 libnvme
 libprocps
+libqtxdg
 libsidplay
 libsidplayfp
 libtg_owt
@@ -347,6 +350,7 @@ turbostat
 usbip
 x86_energy_perf_policy
 lirc
+llvm-julia
 lm_sensors
 localsearch
 localsearch-testutils
@@ -657,10 +661,9 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
+qt6-languageserver
 qt6-serialport
 qt6-tools
-qt6-wayland
-qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -719,7 +722,6 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
-telegram-desktop
 telepathy-glib
 thunar-archive-plugin
 thunar-media-tags-plugin
