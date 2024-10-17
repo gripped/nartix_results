@@ -281,6 +281,7 @@ knot-openrc
 knot-runit
 knot-s6
 krb5-runit
+kunifiedpush
 libnl
 libplacebo5
 libvirt-dinit

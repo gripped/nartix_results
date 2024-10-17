@@ -47,10 +47,10 @@ caja
 catfish
 cgmanager
 chromium-bsu
-chrono-date
 chrony
 cinnamon-desktop
 clamav
+clang
 cloud-init
 cmake
 colord
@@ -260,7 +260,6 @@ openjdk8-doc
 jedi-language-server
 jp2a
 js78
-julia
 kcoreaddons
 kgamma
 kismet
@@ -557,13 +556,8 @@ pulseaudio-rtp
 pyqt5
 python-pyqt5
 pyqt6
-pyside6
-pyside6-tools
-shiboken6
 python-anytree
-python-dogpile.cache
 python-intelhex
-python-objgraph
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -661,9 +655,7 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
-qt6-languageserver
 qt6-serialport
-qt6-tools
 qterminal
 qtermwidget
 quadrapassel
@@ -685,6 +677,8 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-async-rest
+ruby-io-endpoint
 ruby-racc
 ruby-sys-filesystem
 samba

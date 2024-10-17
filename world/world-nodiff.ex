@@ -295,6 +295,7 @@ libcheese
 cherrytree
 chmlib
 chromaprint
+chrono-date
 chrpath
 cifs-utils
 cinnamon-control-center
@@ -306,7 +307,6 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
-clang
 clang14
 clang15
 clang16
@@ -1084,6 +1084,7 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
+julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -2989,6 +2990,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3278,6 +3282,7 @@ python-docstring-to-markdown
 python-doctest-ignore-unicode
 python-docutils-stubs
 python-docutils
+python-dogpile.cache
 python-dotenv
 python-doublex-expects
 python-doublex
@@ -3662,6 +3667,7 @@ python-numexpr
 python-numpy
 python-oauth2client
 python-oauthlib
+python-objgraph
 python-objsize
 python-odfpy
 python-omemo-dr
@@ -4411,6 +4417,7 @@ qt6-graphs
 qt6-grpc
 qt6-httpserver
 qt6-imageformats
+qt6-languageserver
 qt6-location
 qt6-lottie
 qt6-multimedia
@@ -4429,6 +4436,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -4555,7 +4563,6 @@ ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
-ruby-async-rest
 ruby-async-rspec
 ruby-async-service
 ruby-async-websocket
@@ -4656,7 +4663,6 @@ ruby-i18n
 ruby-ice_nine
 ruby-introspection
 ruby-io-console
-ruby-io-endpoint
 ruby-io-event
 ruby-io-nonblock
 ruby-io-stream

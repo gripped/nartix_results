@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,6 @@
+@@ -11,7 +11,6 @@
  source=(https://github.com/syncthing/syncthing/releases/download/v$pkgver/syncthing-source-v${pkgver}.tar.gz{,.asc}
          syncthing-{disco,relay}srv.sysusers
          syncthing-{disco,relay}srv.tmpfiles
 -        syncthing-{disco,relay}srv.service
          gcc-pie-segfaults-race.patch)
  validpgpkeys=('37C84554E7E0A261E4F76E1ED26E6ED000654A3E') # Syncthing Release Management
- sha256sums=('5531f0e1bb81b824a2ab62f070e745c142e1328a15229de47b0cb596b5bae417'
-@@ -22,8 +21,6 @@
+ sha256sums=('73b4030f9fca381f58f4966db48cc135cd8232fe9e8853b5651de0f0bf4cfbf7'
+@@ -20,8 +19,6 @@
              '6ab96a5949e223d315d49663734ad27b70c72469c691a61ac198cb7794cb5eaa'
              'a05a66efbbd13f20b5c3af56692fe219fadc967dba4eedb71494827795d2c140'
              'f899998985f2d374af57f17ef6362c37a305467858195b74d1c1def71d97273f'
@@ -17,7 +17,7 @@
              '6a58227c09a18fc7049ec38351a0fd98195688d15821d67d5af4facda401cbba')
  
  _srcdir="src/github.com/syncthing"
-@@ -65,10 +62,6 @@
+@@ -63,10 +60,6 @@
    cd "$_srcdir/${pkgbase}"
    install -Dm755 ${pkgname} "${pkgdir}/usr/bin/${pkgname}"
    install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
@@ -28,7 +28,7 @@
  
    install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
  
-@@ -97,8 +90,6 @@
+@@ -95,8 +88,6 @@
    install -Dm644 man/stdiscosrv.1 \
      "${pkgdir}"/usr/share/man/man1/$pkgname.1
  
@@ -37,7 +37,7 @@
    install -Dm644 "${srcdir}/${pkgname}.tmpfiles" \
      "$pkgdir/usr/lib/tmpfiles.d/${pkgname}.conf"
    install -Dm644 "${srcdir}/${pkgname}.sysusers" \
-@@ -114,8 +105,6 @@
+@@ -112,8 +103,6 @@
    install -Dm644 man/strelaysrv.1 \
      "${pkgdir}"/usr/share/man/man1/$pkgname.1
  
