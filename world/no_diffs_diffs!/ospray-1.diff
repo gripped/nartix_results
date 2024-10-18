@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,10 +21,12 @@
+ makedepends=(
+   cmake
+   benchmark
++  git
+   glu
+   gtest
+   level-zero-headers
+   level-zero-loader
++  make
+ )
+ optdepends=('benchmark: benchmarks'
+             'gtest: tests suite')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,12 +2,14 @@
+ cmake
+ embree
+ gcc-libs
++git
+ glibc
+ glu
+ gtest
+ ispc
+ level-zero-headers
+ level-zero-loader
++make
+ onetbb
+ openimagedenoise
+ openmpi

@@ -307,6 +307,7 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
+clang
 clang14
 clang15
 clang16
@@ -1431,6 +1432,7 @@ ktrip
 ktuberling
 kturtle
 kubrick
+kunifiedpush
 kunitconversion
 kunitconversion5
 kuserfeedback
@@ -4563,6 +4565,7 @@ ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
+ruby-async-rest
 ruby-async-rspec
 ruby-async-service
 ruby-async-websocket
@@ -4663,6 +4666,7 @@ ruby-i18n
 ruby-ice_nine
 ruby-introspection
 ruby-io-console
+ruby-io-endpoint
 ruby-io-event
 ruby-io-nonblock
 ruby-io-stream
@@ -5565,6 +5569,7 @@ xorg-xwininfo
 xorgproto
 xosd
 xpdf
+xpra
 xreader
 xsane
 xsane-gimp

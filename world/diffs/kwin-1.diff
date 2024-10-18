@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=kwin
--pkgver=6.2.1.1
-+pkgver=6.2.1
- _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
- pkgdesc='An easy to use, but flexible, composited Window Manager'
 @@ -65,7 +65,7 @@
           qt6-svg
           qt6-tools
@@ -17,15 +9,6 @@
           wayland
           xcb-util-cursor
           xcb-util-keysyms
-@@ -81,7 +81,7 @@
- groups=(plasma)
- source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
- install=$pkgname.install
--sha256sums=('42a73aab6c84c6dfcd7613686a39a490320c69d6d593a3c4c24578c62a1921e8'
-+sha256sums=('478a65d2fdb178c1f1e24cf0cb9b290e2ae37c578fd89c078c3391c33f89539d'
-             'SKIP')
- validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
-               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
 @@ -97,4 +97,6 @@
  
  package() {

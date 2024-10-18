@@ -50,7 +50,6 @@ chromium-bsu
 chrony
 cinnamon-desktop
 clamav
-clang
 cloud-init
 cmake
 colord
@@ -677,8 +676,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-async-rest
-ruby-io-endpoint
 ruby-racc
 ruby-sys-filesystem
 samba
@@ -858,7 +855,6 @@ xorg-server-devel
 xorg-xdm
 xorg-xwayland
 xournalpp
-xpra
 xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
