@@ -553,7 +553,6 @@ fcitx
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
-fcitx5-qt
 feh
 festival
 ffcall

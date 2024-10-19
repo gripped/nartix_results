@@ -8,6 +8,7 @@ evisum
 fceux
 firefox
 gpicview
+greetd-regreet
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2

@@ -102,6 +102,7 @@ fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
+fcitx5-qt
 fcitx5
 fcron
 firefox

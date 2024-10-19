@@ -1,0 +1,94 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+-_pkgname=ReGreet
+-pkgname=greetd-${_pkgname,,}
++_orgname=ReGreet
++pkgname="greetd-${_orgname,,}"
+ pkgver=0.1.1
+ pkgrel=3
+ pkgdesc='Clean and customizable greeter for greetd'
+-url="https://github.com/rharish101/$_pkgname"
++url="https://github.com/rharish101/$_orgname"
+ license=(GPL-3.0-or-later)
+ arch=(x86_64)
+ depends=(wayland-compositor
+@@ -16,35 +16,38 @@
+          glibc
+          gtk4
+          pango)
++makedepends=(cargo)
+ provides=(greetd-greeter)
+-backup=("etc/greetd/${_pkgname,,}.toml")
+-makedepends=(cargo)
++backup=("etc/greetd/${_orgname,,}.toml")
+ install=$pkgname.install
+-_archive="$_pkgname-$pkgver"
+-source=("$url/archive/$pkgver/$_archive.tar.gz"
+-        "${_pkgname,,}.toml")
++source=("$url/archive/$pkgver/${pkgname}-${pkgver}.tar.gz"
++        "${_orgname,,}.toml")
+ sha256sums=('a658c91cdf242dfea814f0bfd0c4d877bd39e3af498d36e5024061e3d07ea76b'
+-            'b80b3eb31f8cc463d512c9db0eef899bdbe232d977429a8a12e95a3b6df2e387')
++            '7780028e5774347793e8073c86bde7f38b70a9736dc7c5b0566d93aa7f0c252b')
+ 
+ prepare() {
+-	cd "$_archive"
+-	cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
++  cd "${_orgname}-${pkgver}"
++  sed -i -e 's|systemctl|loginctl|' regreet.sample.toml
++  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ 
+ build() {
+-	cd "$_archive"
+-	cargo build --frozen --release --all-features
++  export REBOOT_CMD="loginctl reboot"
++  export POWEROFF_CMD="loginctl shutdown"
++  cd "${_orgname}-${pkgver}"
++  cargo build --frozen --release --all-features
+ }
+ 
+ check() {
+-	cd "$_archive"
+-	cargo test --frozen --all-features
++  cd "${_orgname}-${pkgver}"
++  cargo test --frozen --all-features
+ }
+ 
+ package() {
+-	cd "$_archive"
+-	install -Dm0755 -t "$pkgdir/usr/bin/" "target/release/${_pkgname,,}"
+-	install -Dm0644 -t "$pkgdir/etc/greetd/" ../"${_pkgname,,}.toml"
+-	install -Dm0644 -t "$pkgdir/usr/share/doc/$pkgname/" "${_pkgname,,}.sample.toml"
+-	install -Dm0644 systemd-tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/${_pkgname,,}.conf"
++  cd "${_orgname}-${pkgver}"
++  install -Dm0755 -t "$pkgdir/usr/bin/" "target/release/${_orgname,,}"
++  install -Dm0644 -t "$pkgdir/etc/greetd/" ../"${_orgname,,}.toml"
++  install -Dm0644 -t "$pkgdir/usr/share/doc/$_pkgname/" "${_orgname,,}.sample.toml"
++  install -Dm0644 systemd-tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/${_orgname,,}.conf"
+ }
++
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,11 @@
+ prepare() {
+-cd "$_archive"
++cd "${_orgname}-${pkgver}"
++sed -i -e 's|systemctl|loginctl|' regreet.sample.toml
+ cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ build() {
+-cd "$_archive"
++export REBOOT_CMD="loginctl reboot"
++export POWEROFF_CMD="loginctl shutdown"
++cd "${_orgname}-${pkgver}"
+ cargo build --frozen --release --all-features
+ }

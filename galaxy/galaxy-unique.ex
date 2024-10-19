@@ -44,6 +44,7 @@ liboctopi
 libpamac
 librewolf
 libtree
+libwireplumber-4.0-compat
 lxdm-dinit
 lxqt-build-tools-qt6
 mcomix
@@ -131,6 +132,7 @@ pipewire-dinit
 pix
 pure-ftpd-openrc
 pure-ftpd
+pwvucontrol
 python-efl
 python-wayfire
 qbittorrent-openrc
