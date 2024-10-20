@@ -46,6 +46,7 @@ caja-xattr-tags
 caja
 catfish
 cgmanager
+chatblade
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -60,6 +61,7 @@ conmon
 connman
 containerd
 convertlit
+copr-cli
 cppcheck
 crun
 cups
@@ -94,6 +96,7 @@ engrampa
 eog
 eog-docs
 eom
+erlang
 espeakup
 etherwall
 exo
@@ -102,7 +105,6 @@ fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
-fcitx5-qt
 fcitx5
 fcron
 firefox
@@ -305,6 +307,7 @@ libetonyek
 libfido2
 libfprint
 libgdata
+libgdiplus
 libgudev
 libguestfs
 libhandy0
@@ -656,6 +659,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel

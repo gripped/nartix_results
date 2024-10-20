@@ -285,7 +285,6 @@ cervisia
 cfitsio
 cgns
 chafa
-chatblade
 check-jsonschema
 check
 check-docs
@@ -356,7 +355,6 @@ confuse
 consul
 containers-common
 coordgen
-copr-cli
 corrosion
 coturn
 couchdb
@@ -512,7 +510,6 @@ enscript
 entr
 epiphany
 erlang-nox
-erlang
 espeak-ng
 ethtool
 eventviews
@@ -553,6 +550,7 @@ fcitx
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
+fcitx5-qt
 feh
 festival
 ffcall
@@ -1606,7 +1604,6 @@ libfreehand
 libfreexl
 libftdi
 libgadu
-libgdiplus
 libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
@@ -4442,7 +4439,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct

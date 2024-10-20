@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mkdocstrings
+-pkgver=0.26.2
+-pkgrel=1
++pkgver=0.26.1
++pkgrel=2
+ pkgdesc="Automatic documentation from sources, for MkDocs"
+ arch=(any)
+ url="https://github.com/mkdocstrings/mkdocstrings"
+@@ -30,7 +30,7 @@
+   python-pytest
+ )
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
+-sha256sums=('940aa13f7489289f6ed04dd05829ec019561df8b2342d51bfaa932fbd39efb6c')
++sha256sums=('4ccf2c1ae5a313cdc4938a3d0fa040cd70bd27aba79dd03c9f51165f77f3acbf')
+ 
+ build() {
+   cd $pkgname-$pkgver

@@ -9,6 +9,7 @@ fceux
 firefox
 gpicview
 greetd-regreet
+gtklock
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2

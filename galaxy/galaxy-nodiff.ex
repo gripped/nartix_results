@@ -76,6 +76,7 @@ glib-perl
 grub-btrfs
 gstreamermm
 gstreamermm-docs
+gtk-session-lock
 incron
 kanshi
 lazarus

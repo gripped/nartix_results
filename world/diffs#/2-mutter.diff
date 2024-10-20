@@ -8,7 +8,7 @@
    wayland
    xorg-xwayland
  )
-@@ -94,6 +93,7 @@
+@@ -90,6 +89,7 @@
  
  build() {
    local meson_options=(
@@ -16,7 +16,7 @@
      -D docs=true
      -D egl_device=true
      -D installed_tests=false
-@@ -107,7 +107,7 @@
+@@ -103,7 +103,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
