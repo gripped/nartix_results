@@ -57,6 +57,7 @@ procps-ng
 rpcbind
 shadow
 thin-provisioning-tools
+tpm2-tss
 usbutils
 util-linux
 util-linux-libs

@@ -7,6 +7,7 @@ ephoto
 evisum
 fceux
 firefox
+font-manager
 gpicview
 greetd-regreet
 gtklock

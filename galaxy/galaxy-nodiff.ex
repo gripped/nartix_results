@@ -66,7 +66,6 @@ fastfetch
 featherpad
 firefox-i18n
 fluxbox
-font-manager
 fpc-src
 fpc
 freecell-solver

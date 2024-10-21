@@ -8,7 +8,6 @@ appstream
 appstream-qt5
 appstream-qt
 aquamarine
-archivetools
 at-spi2-core
 at-spi2-core-docs
 at
@@ -46,7 +45,6 @@ caja-xattr-tags
 caja
 catfish
 cgmanager
-chatblade
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -64,6 +62,8 @@ convertlit
 copr-cli
 cppcheck
 crun
+cuda
+cuda-tools
 cups
 libcups
 dbus-broker
@@ -565,12 +565,14 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
+python-pytest-testinfra
 python-pyudev
 python-signedjson
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-validators
 qastools
 qemu
 qemu-common
@@ -659,7 +661,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -683,6 +684,11 @@ rspamd
 rtkit
 ruby-racc
 ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 ldb
@@ -859,7 +865,6 @@ xorg-server-common
 xorg-server-devel
 xorg-xdm
 xorg-xwayland
-xournalpp
 xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
