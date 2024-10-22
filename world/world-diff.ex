@@ -27,7 +27,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -62,8 +61,6 @@ convertlit
 copr-cli
 cppcheck
 crun
-cuda
-cuda-tools
 cups
 libcups
 dbus-broker
@@ -565,14 +562,12 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
-python-pytest-testinfra
 python-pyudev
 python-signedjson
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-validators
 qastools
 qemu
 qemu-common

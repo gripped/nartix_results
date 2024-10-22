@@ -203,6 +203,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -373,6 +374,8 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -3963,6 +3966,7 @@ python-pytest-socket
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
+python-pytest-testinfra
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
@@ -4255,6 +4259,7 @@ python-userpath
 python-uvloop
 python-validate-email
 python-validate-pyproject
+python-validators
 python-vcrpy
 python-versioneer
 python-versioningit
