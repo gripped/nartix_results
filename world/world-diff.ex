@@ -27,6 +27,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -93,7 +94,6 @@ engrampa
 eog
 eog-docs
 eom
-erlang
 espeakup
 etherwall
 exo

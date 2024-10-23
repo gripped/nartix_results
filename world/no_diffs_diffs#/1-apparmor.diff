@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -122,4 +122,6 @@
+@@ -123,4 +123,6 @@
    mv -v "$pkgdir/usr/lib/ruby/"{site,vendor}_ruby
    cd "$pkgdir"
    [[ /usr/bin/true ]] && backup=( ${backup[@]} $(find "etc/$pkgname.d/" -type f | LC_ALL=C sort) )

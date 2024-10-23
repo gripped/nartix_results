@@ -203,7 +203,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -513,6 +512,7 @@ enscript
 entr
 epiphany
 erlang-nox
+erlang
 espeak-ng
 ethtool
 eventviews
