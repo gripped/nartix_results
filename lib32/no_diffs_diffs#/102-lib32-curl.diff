@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=lib32-curl
+ pkgname=(lib32-curl lib32-libcurl-compat lib32-libcurl-gnutls)
+ pkgver=8.10.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='command line tool and library for transferring data with URLs (32-bit)'
+ arch=('x86_64')
+ url='https://curl.se/'
+@@ -66,7 +66,6 @@
+     --enable-ipv6
+     --enable-manual
+     --enable-threaded-resolver
+-    --enable-websockets
+     --with-gssapi
+     --with-random='/dev/urandom'
+     --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt'
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,6 @@
+ --enable-ipv6
+ --enable-manual
+ --enable-threaded-resolver
+---enable-websockets
+ --with-gssapi
+ --with-random='/dev/urandom'
+ --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt'

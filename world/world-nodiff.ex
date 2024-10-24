@@ -606,7 +606,6 @@ foomatic-db
 foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
-fop
 fossil
 four-in-a-row
 fractal
@@ -4892,6 +4891,11 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

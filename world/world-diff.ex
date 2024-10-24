@@ -109,6 +109,7 @@ firewalld
 flatpak
 flatpak-docs
 fluidsynth
+fop
 fprintd
 freerdp
 freerdp2
@@ -679,11 +680,6 @@ rspamd
 rtkit
 ruby-racc
 ruby-sys-filesystem
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 ldb
