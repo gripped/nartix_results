@@ -1,0 +1,100 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,49 +1,35 @@
+ 
+ pkgname="openbsd-netcat"
+ pkgver=1.226_1
+-_ver="${pkgver/_/-}"
+-pkgrel=3
++pkgrel=2
+ pkgdesc="TCP/IP swiss army knife. OpenBSD variant."
+ arch=('x86_64')
+ url="https://salsa.debian.org/debian/netcat-openbsd"
+-license=(
+-  'BSD-2-Clause'
+-  'BSD-3-Clause'
+-)
+-depends=(
+-  'glibc'
+-  'libbsd'
+-)
++license=('BSD')
++depends=('libbsd')
++makedepends=('gcc' 'make')
+ provides=('netcat')
+ conflicts=('gnu-netcat')
+ source=("https://salsa.debian.org/debian/netcat-openbsd/-/archive/debian/${pkgver/_/-}/netcat-openbsd-debian-${pkgver/_/-}.tar.gz")
+ sha256sums=('cd1c102e5954436184c3f7f3e7b649eed05ef38aa9592b55577ca28878b268d2')
+ b2sums=('a46a357352a9f86fe1f9f1e9d2d17cb6bb16f9c829ffa996711858fd21aed8d54df5834b55850aa2f67ccbcac6c6336379e7553118c8277c4da97278870e87ed')
+-_dir=netcat-openbsd-debian-$_ver
+-
+-prepare() {
+-  sed -n '40,59p' $_dir/debian/copyright > BSD-2-Clause.txt
+-  sed -n '62,83p' $_dir/debian/copyright > BSD-3-Clause.txt
+-
+-  cd $_dir
+-  while read patch; do
+-    printf "Applying %s...\n" "$patch"
+-    patch -Np1 -i debian/patches/$patch
+-  done < debian/patches/series
+-}
+ 
+ build() {
+-  cd $_dir
++  cd netcat-openbsd-debian-${pkgver/_/-}
++  for i in `cat debian/patches/series`; do
++	echo "** patch $i" 1>&2
++	cat "debian/patches/$i"
++  done | patch -p1
+   make \
+-  CFLAGS="$CFLAGS -DDEBIAN_VERSION=\"\\\"${pkgver/_/-}\\\"\" -I/usr/include/libbsd" \
+-  LDFLAGS="$LDFLAGS -lbsd"
++	CFLAGS="$CFLAGS -DDEBIAN_VERSION=\"\\\"${pkgver/_/-}\\\"\" -I/usr/include/libbsd" \
++	LDFLAGS="$LDFLAGS -lbsd"
+ }
+ 
+ package() {
+-  cd $_dir
++  cd netcat-openbsd-debian-${pkgver/_/-}
+   install -Dm0755 nc "$pkgdir"/usr/bin/nc
+   ln -s nc "$pkgdir"/usr/bin/netcat
+-  ln -s nc "$pkgdir"/usr/bin/nc.openbsd
+   install -Dm0644 nc.1 "$pkgdir"/usr/share/man/man1/nc.1
+-  install -vDm 644 ../*.txt -t "$pkgdir"/usr/share/licenses/$pkgname/
++  install -dm0755 "$pkgdir"/usr/share/licenses/$pkgname/
++  head -n28 netcat.c | tail -n+2 >"$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1,3 @@
+-glibc
++gcc
+ libbsd
++make
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,9 @@
+-prepare() {
+-sed -n '40,59p' $_dir/debian/copyright > BSD-2-Clause.txt
+-sed -n '62,83p' $_dir/debian/copyright > BSD-3-Clause.txt
+-cd $_dir
+-while read patch; do
+-printf "Applying %s...\n" "$patch"
+-patch -Np1 -i debian/patches/$patch
+-done < debian/patches/series
+-}
+ build() {
+-cd $_dir
++cd netcat-openbsd-debian-${pkgver/_/-}
++for i in `cat debian/patches/series`; do
++echo "** patch $i" 1>&2
++cat "debian/patches/$i"
++done | patch -p1
+ make \
+ CFLAGS="$CFLAGS -DDEBIAN_VERSION=\"\\\"${pkgver/_/-}\\\"\" -I/usr/include/libbsd" \
+ LDFLAGS="$LDFLAGS -lbsd"

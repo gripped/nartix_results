@@ -2408,7 +2408,6 @@ openblas64
 blas-openblas
 blas64-openblas
 openbox
-openbsd-netcat
 opencascade
 opencc
 opencc-doc

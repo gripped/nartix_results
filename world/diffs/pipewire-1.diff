@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
-   pulse-native-provider
- )
- pkgver=1.2.5
--pkgrel=1
-+pkgrel=1.1
- epoch=1
- pkgdesc="Low-latency audio/video router and processor"
- url="https://pipewire.org"
 @@ -57,12 +57,12 @@
    ncurses
    opus
@@ -30,8 +21,8 @@
 -  )
 -
 -  arch-meson pipewire build "${meson_options[@]}"
-+    -D logind-provider=libelogind
 +    -D systemd=disabled
++    -D logind-provider=libelogind
 +    -D rlimits-install=false
 +  )
 +
