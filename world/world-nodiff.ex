@@ -203,6 +203,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1617,7 +1618,6 @@ libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
-libgit2
 libglib-testing
 libglvnd
 libgme

@@ -27,7 +27,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -306,6 +305,7 @@ libfido2
 libfprint
 libgdata
 libgdiplus
+libgit2
 libgudev
 libguestfs
 libhandy0
