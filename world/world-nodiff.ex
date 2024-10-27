@@ -203,7 +203,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -1069,6 +1068,7 @@ jemalloc
 jenkins
 jitterentropy
 jose
+jp2a
 jq
 jrnl
 jruby
@@ -1823,7 +1823,6 @@ libqb
 libqmi
 libqmi-docs
 libqrtr-glib
-libquotient
 libquvi-scripts
 libquvi
 libqxp
@@ -2311,7 +2310,6 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 nemo
-neochat
 neofetch
 neomutt
 neon
@@ -2408,6 +2406,7 @@ openblas64
 blas-openblas
 blas64-openblas
 openbox
+openbsd-netcat
 opencascade
 opencc
 opencc-doc
@@ -3063,7 +3062,6 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
-python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3081,7 +3079,6 @@ python-autopage
 python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
-python-awscrt
 python-axolotl-curve25519
 python-axolotl
 python-babel
@@ -3252,7 +3249,6 @@ python-distlib
 python-distributed
 python-distro
 python-distutils-extra
-python-django-allauth
 python-django-appconf
 python-django-classy-tags
 python-django-compressor
@@ -3585,7 +3581,6 @@ python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-magic
 python-mailmanclient
-python-mako
 python-mamba
 python-manuel
 python-markdown-it-py
@@ -4335,13 +4330,11 @@ python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
-python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
-python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg

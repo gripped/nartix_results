@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-botocore
+-pkgver=1.35.36
++pkgver=1.35.23
+ pkgrel=1
+ pkgdesc='A low-level interface to a growing number of Amazon Web Services'
+ arch=('any')
+@@ -14,7 +14,7 @@
+ )
+ source=($pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz
+         tests-keep-env.diff)
+-sha256sums=('edda097ff15cda87d2a33935bba119a1214dc5eff6cd76b6924049ba2de8537a'
++sha256sums=('819611538e268873a7cf9e49f99b1076b33e54d8711d8dd4d317cc0d1435a559'
+             '15c588d3f4cfcc0ef26fc4ff367eb6dc12dc2f303e299cbe397288089ee52a11')
+ 
+ prepare() {

@@ -4,12 +4,20 @@
  
  pkgname=mpd
  pkgver=0.23.15
--pkgrel=6
+-pkgrel=8
 +pkgrel=2
  pkgdesc="Flexible, powerful, server-side application for playing music"
  arch=(x86_64)
  url="https://www.musicpd.org/"
-@@ -68,36 +68,28 @@
+@@ -32,6 +32,7 @@
+ )
+ makedepends=(
+   alsa-lib
++  audiofile
+   avahi
+   boost
+   bzip2
+@@ -67,49 +68,41 @@
    libpipewire
    python-sphinx
    sqlite
@@ -39,14 +47,17 @@
          'd7b587c25dd5830c27af475a8fdd8102139d7c8fdd6f04fe23b36be030e4411582e289f575c299255ff8183096f7d47247327276f9a24641cbd032d9675b837a'
          '753664445d7d5cc0b36f51ac66549beea403b9731cbcb81b0a782974a0a73d90559ba93e6afcaa470b6f2f5a844c09ef695bdf3b1e6dfee97aa080f41b7fe513')
  validpgpkeys=('0392335A78083894A4301C43236E8A58C6DB4512') # Max Kellermann <max@blarg.de>
--
+ 
 -prepare() {
 -  patch -d $pkgname -Np1 -i "$srcdir/fmt-v11.patch"
 -}
- 
+-
  build() {
    local _meson_options=(
-@@ -107,9 +99,10 @@
+     -D documentation=enabled
+     -D adplug=disabled
+-    -D audiofile=disabled
+     -D sndio=disabled
      -D shine=disabled
      -D tremor=disabled
      -D b_ndebug=true
@@ -58,7 +69,15 @@
    ninja -C build
  }
  
-@@ -152,14 +145,12 @@
+@@ -120,6 +113,7 @@
+ package() {
+   depends+=(
+     alsa-lib libasound.so
++    audiofile libaudiofile.so
+     avahi libavahi-{client,common}.so
+     bzip2 libbz2.so
+     chromaprint libchromaprint.so
+@@ -151,14 +145,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
@@ -79,7 +98,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -76,7 +76,6 @@
+@@ -1,4 +1,5 @@
+ alsa-lib
++audiofile
+ avahi
+ boost
+ bzip2
+@@ -22,6 +23,7 @@
+ libao
+ libao.so
+ libasound.so
++libaudiofile.so
+ libavahi-client.so
+ libavahi-common.so
+ libavcodec.so
+@@ -74,7 +76,6 @@
  libsndfile.so
  libsoxr
  libsqlite3.so
@@ -87,7 +120,7 @@
  libtwolame.so
  libupnp
  libupnp.so
-@@ -93,8 +92,6 @@
+@@ -91,8 +92,6 @@
  pcre2
  python-sphinx
  sqlite

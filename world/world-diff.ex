@@ -27,6 +27,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -257,7 +258,6 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jedi-language-server
-jp2a
 js78
 kcoreaddons
 kgamma
@@ -315,6 +315,7 @@ libmspub
 libnvme
 libprocps
 libqtxdg
+libquotient
 libsidplay
 libsidplayfp
 libtg_owt
@@ -435,6 +436,7 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
+neochat
 netavark
 netplan
 networkmanager
@@ -455,7 +457,6 @@ nvtop
 onboard
 onionshare
 open-iscsi
-openbsd-netcat
 opencollada
 opendht
 openmpi
@@ -559,7 +560,11 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
+python-asyncpg
+python-awscrt
+python-django-allauth
 python-intelhex
+python-mako
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -570,6 +575,8 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-zope-interface
+python-zope-testrunner
 qastools
 qemu
 qemu-common

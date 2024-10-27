@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,8 +19,15 @@
+   'doxygen'
+   'git'
+ )
++_commit=b32577dfaea0873ed811fe68ca420229fd7e3380 #refs/tags/v1.3.0
+ source=("git+https://github.com/Talinx/jp2a.git#tag=v${pkgver}")
+ sha256sums=('0e25ddb3a20cfefe3c4e9099e48ff785246bd4a394506e606b624fc143eebe74')
++validpgpkeys=("5FCAE86E581E73AD91CB3235E7DBBCF6B02920CC") # Christoph Raitzig
++
++pkgver() {
++  cd "${pkgname}"
++  git describe --tags | sed 's/v//'
++}
+ 
+ prepare() {
+   cd "${pkgname}"

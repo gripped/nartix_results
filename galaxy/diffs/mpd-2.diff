@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -68,7 +68,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mpd
+ pkgver=0.23.15
+-pkgrel=8
++pkgrel=6
+ pkgdesc="Flexible, powerful, server-side application for playing music"
+ arch=(x86_64)
+ url="https://www.musicpd.org/"
+@@ -32,6 +32,7 @@
+ )
+ makedepends=(
+   alsa-lib
++  audiofile
+   avahi
+   boost
+   bzip2
+@@ -67,7 +68,6 @@
    libpipewire
    python-sphinx
    sqlite
@@ -8,7 +25,12 @@
    twolame
    yajl
  )
-@@ -107,9 +106,10 @@
+@@ -102,14 +102,14 @@
+   local _meson_options=(
+     -D documentation=enabled
+     -D adplug=disabled
+-    -D audiofile=disabled
+     -D sndio=disabled
      -D shine=disabled
      -D tremor=disabled
      -D b_ndebug=true
@@ -20,7 +42,15 @@
    ninja -C build
  }
  
-@@ -152,14 +152,12 @@
+@@ -120,6 +120,7 @@
+ package() {
+   depends+=(
+     alsa-lib libasound.so
++    audiofile libaudiofile.so
+     avahi libavahi-{client,common}.so
+     bzip2 libbz2.so
+     chromaprint libchromaprint.so
+@@ -151,14 +152,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
@@ -41,7 +71,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -76,7 +76,6 @@
+@@ -1,4 +1,5 @@
+ alsa-lib
++audiofile
+ avahi
+ boost
+ bzip2
+@@ -22,6 +23,7 @@
+ libao
+ libao.so
+ libasound.so
++libaudiofile.so
+ libavahi-client.so
+ libavahi-common.so
+ libavcodec.so
+@@ -74,7 +76,6 @@
  libsndfile.so
  libsoxr
  libsqlite3.so
@@ -49,7 +93,7 @@
  libtwolame.so
  libupnp
  libupnp.so
-@@ -93,8 +92,6 @@
+@@ -91,8 +92,6 @@
  pcre2
  python-sphinx
  sqlite
