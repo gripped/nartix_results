@@ -58,7 +58,6 @@ lib32-libavtp
 lib32-libbpf
 lib32-libcaca
 lib32-libcanberra
-lib32-libcap
 lib32-libcups
 lib32-libdatrie
 lib32-libdrm

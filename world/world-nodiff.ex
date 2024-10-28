@@ -162,6 +162,7 @@ aws-c-sdkutils
 aws-checksums
 aws-cli-v2
 aws-cli
+babl
 backuppc
 baloo-widgets
 baloo
@@ -203,6 +204,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1823,6 +1825,7 @@ libqb
 libqmi
 libqmi-docs
 libqrtr-glib
+libqtxdg
 libquvi-scripts
 libquvi
 libqxp

@@ -16,7 +16,6 @@ audacious-plugins
 avahi
 awesome
 ayatana-ido
-babl
 bash-bats
 bluedevil
 bluez
@@ -27,7 +26,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -314,7 +312,6 @@ libldm
 libmspub
 libnvme
 libprocps
-libqtxdg
 libquotient
 libsidplay
 libsidplayfp
