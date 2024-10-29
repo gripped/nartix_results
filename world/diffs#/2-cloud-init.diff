@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=cloud-init
- pkgver=24.3.1
--pkgrel=2
-+pkgrel=1
- pkgdesc="Cloud instance initialization"
- arch=(any)
- url="https://cloud-init.io"
-@@ -10,7 +10,6 @@
- depends=(
-   bash
-   dhclient
--  openbsd-netcat
-   python
-   python-configobj
-   python-jinja
-@@ -23,10 +22,8 @@
+@@ -23,10 +23,8 @@
    python-requests
    python-typing_extensions
    sudo
@@ -28,7 +11,7 @@
    python-build
    python-installer
    python-setuptools
-@@ -42,7 +39,6 @@
+@@ -42,7 +40,6 @@
  )
  optdepends=(
    'cloud-guest-utils: for growpart'
@@ -36,7 +19,7 @@
    'python-passlib: for Azure and BSD support'
    'python-urllib3: for LXD and Scaleway data sources'
  )
-@@ -52,20 +48,13 @@
+@@ -52,20 +49,13 @@
  )
  source=(
    $_url/archive/$pkgver/$pkgname-$pkgver.tar.gz
@@ -60,7 +43,7 @@
  }
  
  check() {
-@@ -101,12 +90,4 @@
+@@ -101,12 +91,4 @@
    install -vDm 644 doc/man/*.1 -t "$pkgdir/usr/share/man/man1/"
    install -vDm 655 bash_completion/$pkgname -t "$pkgdir/usr/share/bash-completion/completions/"
    install -vDm 644 udev/*.rules -t "$pkgdir/usr/lib/udev/rules.d/"
@@ -79,15 +62,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,5 @@
+@@ -1,6 +1,5 @@
  bash
  dhclient
 -netplan
--openbsd-netcat
+ openbsd-netcat
  python
  python-build
- python-configobj
-@@ -18,4 +16,3 @@
+@@ -18,4 +17,3 @@
  python-typing_extensions
  python-wheel
  sudo

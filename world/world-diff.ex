@@ -26,6 +26,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -312,7 +313,6 @@ libldm
 libmspub
 libnvme
 libprocps
-libquotient
 libsidplay
 libsidplayfp
 libtg_owt
@@ -433,7 +433,6 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
-neochat
 netavark
 netplan
 networkmanager
@@ -562,6 +561,7 @@ python-awscrt
 python-django-allauth
 python-intelhex
 python-mako
+python-pillow
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -853,6 +853,7 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
+xmlsec
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

@@ -204,7 +204,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -1826,6 +1825,7 @@ libqmi
 libqmi-docs
 libqrtr-glib
 libqtxdg
+libquotient
 libquvi-scripts
 libquvi
 libqxp
@@ -2313,6 +2313,7 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 nemo
+neochat
 neofetch
 neomutt
 neon
@@ -3743,7 +3744,6 @@ python-piccata
 python-pickleshare
 python-pika
 python-pikepdf
-python-pillow
 python-pint
 python-pip-run
 python-pip
@@ -5513,7 +5513,6 @@ xinetd
 xkeyboard-config
 xl2tpd
 xmldiff
-xmlsec
 xmlstarlet
 xmlto
 xmltoman
