@@ -258,6 +258,7 @@ openjdk8-src
 openjdk8-doc
 jedi-language-server
 js78
+jupyter-server-ydoc
 kcoreaddons
 kgamma
 kismet
@@ -556,12 +557,7 @@ pyqt5
 python-pyqt5
 pyqt6
 python-anytree
-python-asyncpg
-python-awscrt
-python-django-allauth
 python-intelhex
-python-mako
-python-pillow
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -572,8 +568,6 @@ python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-zope-interface
-python-zope-testrunner
 qastools
 qemu
 qemu-common

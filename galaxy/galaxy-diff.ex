@@ -1,4 +1,5 @@
 cinnamon-desktop
+copyq
 doctest
 ecrire
 efl

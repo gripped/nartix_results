@@ -50,7 +50,6 @@ cinnamon
 cjs
 claws-mail
 compface
-copyq
 cvs
 dillo
 dosbox

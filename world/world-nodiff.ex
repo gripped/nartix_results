@@ -1096,7 +1096,6 @@ jupyter-nbformat
 jupyter-notebook-shim
 jupyter-notebook
 jupyter-server-fileid
-jupyter-server-ydoc
 jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
@@ -3066,6 +3065,7 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
+python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3083,6 +3083,7 @@ python-autopage
 python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
+python-awscrt
 python-axolotl-curve25519
 python-axolotl
 python-babel
@@ -3253,6 +3254,7 @@ python-distlib
 python-distributed
 python-distro
 python-distutils-extra
+python-django-allauth
 python-django-appconf
 python-django-classy-tags
 python-django-compressor
@@ -3585,6 +3587,7 @@ python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-magic
 python-mailmanclient
+python-mako
 python-mamba
 python-manuel
 python-markdown-it-py
@@ -3744,6 +3747,7 @@ python-piccata
 python-pickleshare
 python-pika
 python-pikepdf
+python-pillow
 python-pint
 python-pip-run
 python-pip
@@ -4333,11 +4337,13 @@ python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
+python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
+python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
