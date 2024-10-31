@@ -498,6 +498,7 @@ ejabberd
 electron
 electrum
 elementary-icon-theme
+elinks
 elisa
 elixir
 ell
@@ -1618,6 +1619,7 @@ libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
+libgit2
 libglib-testing
 libglvnd
 libgme

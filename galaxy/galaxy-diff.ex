@@ -16,9 +16,6 @@ libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 light
-linux-rt
-linux-rt-headers
-linux-rt-docs
 lxpanel
 lxqt-themes
 lxsession

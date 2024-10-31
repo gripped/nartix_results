@@ -83,7 +83,6 @@ edk2-ovmf
 element.io
 element-web
 element-desktop
-elinks
 emacs
 emacs-nativecomp
 emacs-nox
@@ -305,7 +304,6 @@ libfido2
 libfprint
 libgdata
 libgdiplus
-libgit2
 libgudev
 libguestfs
 libhandy0

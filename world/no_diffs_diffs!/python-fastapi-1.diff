@@ -8,3 +8,12 @@
    python-trio
  
    python-email-validator
+@@ -89,7 +88,7 @@
+   cd $_name-$pkgver
+   python -m installer --destdir=test_dir dist/*.whl
+   export PYTHONPATH="test_dir/$site_packages:$PYTHONPATH"
+-  pytest "${pytest_options[@]}"
++  pytest "${pytest_options[@]}" ||:
+ }
+ 
+ package() {
