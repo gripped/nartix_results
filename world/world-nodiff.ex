@@ -828,6 +828,7 @@ gst-webrtc-signalling-server
 gst-plugin-aws
 gst-plugin-cdg
 gst-plugin-claxon
+gst-plugin-dav1d
 gst-plugin-fallbackswitch
 gst-plugin-ffv1
 gst-plugin-fmp4
@@ -1645,7 +1646,6 @@ libgxps
 libhandy
 libhandy-docs
 libharu
-libheif
 libhubbub
 libical
 libice

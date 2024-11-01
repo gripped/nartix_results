@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,6 @@
-   gst-plugins-bad
+@@ -11,7 +11,6 @@
+   gst-libav
    gst-plugin-gtk
    gst-plugin-msdk
 -  gst-plugin-onnx
    gst-plugin-opencv
    gst-plugin-qml6
    gst-plugin-qmlgl
-@@ -125,7 +124,6 @@
+@@ -138,7 +137,6 @@
    nasm
    neon
    nettle
@@ -16,15 +16,15 @@
    openal
    opencore-amr
    opencv
-@@ -158,7 +156,6 @@
-   speex
+@@ -178,7 +176,6 @@
+   srt
    svt-av1
    svt-hevc
 -  systemd-libs
    taglib
    twolame
    v4l-utils
-@@ -204,6 +201,7 @@
+@@ -226,6 +223,7 @@
  
  build() {
    local meson_options=(
@@ -32,7 +32,7 @@
      -D examples=disabled
      -D gobject-cast-checks=disabled
      -D gpl=enabled
-@@ -239,14 +237,14 @@
+@@ -260,14 +258,14 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -49,7 +49,7 @@
    meson compile -C build
  }
  
-@@ -257,7 +255,7 @@
+@@ -278,7 +276,7 @@
    export NO_AT_BRIDGE=1 GTK_A11Y=none
  
    xvfb-run -s "-nolisten local" \
@@ -58,7 +58,7 @@
  )
  
  _install() {
-@@ -864,22 +862,6 @@
+@@ -916,23 +914,6 @@
    ); _install
  }
  
@@ -72,6 +72,7 @@
 -    glib2
 -    glibc
 -    onnxruntime
+-    openmpi
 -  )
 -
 -  cd root; local files=(
@@ -79,9 +80,9 @@
 -  ); _install
 -}
  
- package_gst-plugin-qml6() {
-   pkgdesc+=" - qml6 plugin"
-@@ -1158,7 +1140,6 @@
+ package_gst-plugin-opencv() {
+   pkgdesc+=" - opencv plugin"
+@@ -1182,7 +1163,6 @@
      libva
      libx11
      libxrandr
@@ -103,7 +104,7 @@
  openal
  opencore-amr
  opencv
-@@ -147,7 +146,6 @@
+@@ -149,7 +148,6 @@
  srt
  svt-av1
  svt-hevc

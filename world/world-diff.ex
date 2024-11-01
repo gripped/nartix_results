@@ -171,6 +171,8 @@ gst-plugins-base-libs
 gst-plugins-base
 gst-plugins-good
 gst-plugins-bad
+gst-plugins-ugly
+gst-libav
 gst-plugin-gtk
 gst-plugin-msdk
 gst-plugin-opencv
@@ -179,8 +181,6 @@ gst-plugin-qmlgl
 gst-plugin-qsv
 gst-plugin-va
 gst-plugin-wpe
-gst-plugins-ugly
-gst-libav
 gst-devtools-libs
 gst-devtools
 gst-rtsp-server
@@ -307,6 +307,7 @@ libgdiplus
 libgudev
 libguestfs
 libhandy0
+libheif
 libinput
 libldm
 libmspub
