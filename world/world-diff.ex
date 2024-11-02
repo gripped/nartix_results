@@ -307,7 +307,6 @@ libgdiplus
 libgudev
 libguestfs
 libhandy0
-libheif
 libinput
 libldm
 libmspub
@@ -557,12 +556,14 @@ python-pyqt5
 pyqt6
 python-anytree
 python-intelhex
+python-pdm-backend
 python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
 python-signedjson
+python-sphinx-hawkmoth
 python-tblib
 python-teamcity-messages
 python-trustme

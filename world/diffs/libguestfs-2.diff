@@ -8,7 +8,7 @@
    vim
    xfsprogs
    yara
-@@ -134,7 +133,7 @@
+@@ -139,7 +138,7 @@
      --prefix=/usr
      --sbindir=/usr/bin
      --sysconfdir=/etc
@@ -17,12 +17,13 @@
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -144,10 +143,6 @@
+@@ -149,11 +148,6 @@
    make
  }
  
 -check() {
 -  export SKIP_TEST_DISCARD_PL=1  # https://github.com/libguestfs/libguestfs/issues/140
+-  export SKIP_TEST_EXPAND_GPT_PL=1  # https://github.com/libguestfs/libguestfs/issues/155
 -  LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
 -}
  

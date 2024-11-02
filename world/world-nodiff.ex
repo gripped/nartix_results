@@ -1646,6 +1646,7 @@ libgxps
 libhandy
 libhandy-docs
 libharu
+libheif
 libhubbub
 libical
 libice
@@ -3730,7 +3731,6 @@ python-pbr
 python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
-python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
 python-pdm
@@ -4124,7 +4124,6 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
-python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -4330,6 +4329,7 @@ python-zeroconf
 python-zict
 python-zipp
 python-zipstream-ng
+python-zodbpickle
 python-zope-component
 python-zope-configuration
 python-zope-copy

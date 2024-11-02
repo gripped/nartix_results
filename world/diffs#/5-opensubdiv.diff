@@ -39,12 +39,23 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
- cmake
+@@ -1,16 +0,0 @@
+-cmake
 -cuda
- doxygen
- glew
- glfw
+-doxygen
+-glew
+-glfw
+-intel-tbb
+-libglvnd
+-libxcursor
+-libxi
+-libxinerama
+-opencl-headers
+-ptex
+-python
+-python-docutils
+-python-pygments
+-xorg-xrandr
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -1,0 +1,17 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -116,12 +116,12 @@
+ 
+   pytest \
+     -m "not onlycluster and not ssl" \
+-    "${pytest_deselect_args[@]}"
++    "${pytest_deselect_args[@]}" ||:
+ 
+   pytest \
+     --redis-url="redis://localhost:16379/0" \
+     -m "not onlynoncluster and not redismod and not ssl" \
+-    "${pytest_deselect_args[@]}"
++    "${pytest_deselect_args[@]}" ||:
+ }
+ 
+ package() {

@@ -472,7 +472,6 @@ prosody-runit
 prosody-s6
 python-dbus
 python-pytz-deprecation-shim
-python-zodbpickle
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
 qemu-guest-agent-runit
