@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,35 +1,32 @@
+@@ -1,37 +1,32 @@
  
  pkgname=mousepad
 -pkgver=0.6.3
+-pkgrel=2
 +pkgver=0.6.2
- pkgrel=1
++pkgrel=1
  pkgdesc="Simple text editor for Xfce"
  arch=('x86_64')
  url="https://docs.xfce.org/apps/mousepad/start"
@@ -19,24 +20,25 @@
              'libxfce4ui: shortcuts editor plugin')
 -source=("git+https://gitlab.xfce.org/apps/mousepad.git#tag=$pkgname-$pkgver")
 -sha256sums=('1f2ab5b7652d6289f2643b32b4e067dddb11b7065e48b6203aa1d2c19c131f21')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('e7cacb3b8cb1cd689e6341484691069e73032810ca51fc747536fc36eb18d19d')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
      --localstatedir=/var \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
+-    --disable-debug \
+-    --enable-maintainer-mode
++    --disable-debug
    make
  }
  
@@ -65,19 +67,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,9 @@
+@@ -1,14 +1,9 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
  --localstatedir=/var \
- --disable-debug
--}
--build() {
--cd $pkgname
+---disable-debug \
+---enable-maintainer-mode
++--disable-debug
  make
  }

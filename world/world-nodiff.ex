@@ -1781,7 +1781,6 @@ libopenraw
 libopensmtpd
 libopusenc
 liborcus
-libosinfo
 libotf
 libotr
 libp11
@@ -2465,7 +2464,6 @@ opusfile
 orc
 orca
 os-prober
-osinfo-db-tools
 osinfo-db
 osm-gps-map
 ospray
@@ -5351,7 +5349,6 @@ unittestpp
 unoconv
 unrar
 libunrar
-unrealircd
 unrtf
 unzip
 upx

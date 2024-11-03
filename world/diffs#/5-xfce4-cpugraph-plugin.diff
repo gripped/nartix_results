@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,33 +1,31 @@
+@@ -1,24 +1,20 @@
  
  pkgname=xfce4-cpugraph-plugin
  pkgver=1.2.10
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Graphical representation of the CPU load"
  arch=('x86_64')
@@ -17,26 +17,23 @@
 -makedepends=('git' 'intltool' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-cpugraph-plugin.git#tag=$pkgname-$pkgver")
 -sha256sums=('ae4c21fe73f1c9060a95312be49bd0100cc444c83f91fe253b7f3ced5e6720eb')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('37792dd052691712195658169b95fb6583f924485ce7a467b33d01e08775d915')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --localstatedir=/var \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
-   make
+@@ -28,7 +24,8 @@
  }
  
  package() {
@@ -61,19 +58,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,9 @@
+@@ -1,9 +1,5 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --localstatedir=/var \
- --disable-debug
--}
--build() {
--cd $pkgname
- make
- }

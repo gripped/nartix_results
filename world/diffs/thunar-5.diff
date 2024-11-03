@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,44 +1,46 @@
+@@ -1,31 +1,31 @@
  
  pkgname=thunar
 -pkgver=4.18.11
--pkgrel=2
+-pkgrel=3
 +pkgver=4.18.10
 +pkgrel=1
  pkgdesc="Modern, fast and easy-to-use file manager for Xfce"
@@ -30,26 +30,25 @@
  
  prepare() {
 -  cd $pkgname
--  ./autogen.sh \
+-  NOCONFIGURE=1 ./autogen.sh
 +  cd $pkgname-$pkgver
-+}
-+
-+build() {
+ }
+ 
+ build() {
+-  cd $pkgname
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --enable-gio-unix \
+@@ -33,14 +33,14 @@
      --enable-gudev \
      --enable-notifications \
      --enable-exif \
 -    --enable-gtk-doc \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
+-    --disable-debug \
+-    --enable-maintainer-mode
++    --disable-debug
    make
  }
  
@@ -84,25 +83,25 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,15 @@
+@@ -1,9 +1,8 @@
  prepare() {
 -cd $pkgname
--./autogen.sh \
+-NOCONFIGURE=1 ./autogen.sh
 +cd $pkgname-$pkgver
-+}
-+build() {
+ }
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --enable-gio-unix \
+@@ -11,8 +10,6 @@
  --enable-gudev \
  --enable-notifications \
  --enable-exif \
 ---enable-gtk-doc \
- --disable-debug
--}
--build() {
--cd $pkgname
+---disable-debug \
+---enable-maintainer-mode
++--disable-debug
  make
  }

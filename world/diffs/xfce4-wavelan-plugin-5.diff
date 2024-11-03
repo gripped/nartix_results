@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,40 +1,32 @@
+@@ -1,24 +1,20 @@
  
  pkgname=xfce4-wavelan-plugin
  pkgver=0.6.3
--pkgrel=3
+-pkgrel=4
 +pkgrel=1
  pkgdesc="Plugin to monitor wifi connectivity for the Xfce4 panel"
  arch=('x86_64')
@@ -17,27 +17,23 @@
 -makedepends=('git' 'intltool' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-wavelan-plugin.git#tag=$pkgname-$pkgver")
 -sha256sums=('be53ea5bdfad55cd22ad8004b7501fe9e4c0d4ea34e5f2839dfc71a662d88b7f')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('61c0c2f56cb70872d403b770dd76349df9ff24c0dbe905ee1b4f913c34d8f72b')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --libexecdir=/usr/lib \
-     --localstatedir=/var \
-     --disable-static \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
+@@ -29,13 +25,8 @@
    make
  }
  
@@ -66,21 +62,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,11 @@
+@@ -1,9 +1,5 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd "$srcdir/$pkgname-$pkgver"
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --libexecdir=/usr/lib \
- --localstatedir=/var \
- --disable-static \
- --disable-debug
--}
--build() {
--cd $pkgname
- make
- }

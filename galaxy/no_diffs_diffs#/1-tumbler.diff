@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -38,5 +38,7 @@
+@@ -39,5 +39,7 @@
  package() {
    cd $pkgname
    make DESTDIR="$pkgdir" install

@@ -311,6 +311,7 @@ libinput
 libldm
 libmspub
 libnvme
+libosinfo
 libprocps
 libsidplay
 libsidplayfp
@@ -459,6 +460,7 @@ openmpi-docs
 opensmtpd
 opensubdiv
 openvpn
+osinfo-db-tools
 ostree
 packagekit
 libpackagekit-glib
@@ -745,6 +747,7 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
+unrealircd
 upower
 uptimed
 usb_modeswitch

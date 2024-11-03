@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,21 @@
+@@ -1,24 +1,20 @@
  
  pkgname=xfce4-power-manager
 -pkgver=4.18.4
--pkgrel=2
+-pkgrel=3
 +pkgver=4.18.3
 +pkgrel=1
  pkgdesc="Power Manager for Xfce"
@@ -17,28 +17,29 @@
 -makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools' 'xfce4-panel')
 -source=("git+https://gitlab.xfce.org/xfce/xfce4-power-manager.git#tag=$pkgname-$pkgver")
 -sha256sums=('bbd3b3f584ec8838132fbd79b3815563cf3d478ba3895f7118203d1c7039f0dc')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool' 'xfce4-panel')
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('0d79dd0f68b90d07b384366be4d2291a6d7815410eb0c20d3d8e8590c62e84f0')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --sbindir=/usr/bin \
-@@ -22,15 +23,11 @@
+@@ -26,13 +22,12 @@
+     --localstatedir=/var \
      --disable-network-manager \
      --enable-polkit \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
+-    --disable-debug \
+-    --enable-maintainer-mode
++    --disable-debug
    make
  }
  
@@ -68,22 +69,23 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,9 +1,5 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --sbindir=/usr/bin \
-@@ -8,8 +8,5 @@
+@@ -11,7 +7,6 @@
+ --localstatedir=/var \
  --disable-network-manager \
  --enable-polkit \
- --disable-debug
--}
--build() {
--cd $pkgname
+---disable-debug \
+---enable-maintainer-mode
++--disable-debug
  make
  }

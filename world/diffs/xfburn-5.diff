@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,33 +1,30 @@
+@@ -1,35 +1,30 @@
  
  pkgname=xfburn
 -pkgver=0.7.2
--pkgrel=2
+-pkgrel=3
 +pkgver=0.7.0
 +pkgrel=1
  pkgdesc="A simple CD/DVD burning tool based on libburnia libraries"
@@ -18,24 +18,25 @@
 -makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/apps/xfburn.git#tag=$pkgname-$pkgver")
 -sha256sums=('17a9d51c1b768b0044d5651a2d1bca0763135013a28e0f9304cc531413fd38b5')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/apps/xfburn/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('ba960ea79a044b93e513f7c32bca1a599472d687ed0e0184bde8c84aeebb1f45')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --enable-gstreamer \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
+-    --disable-debug \
+-    --enable-maintainer-mode
++    --disable-debug
    make
  }
  
@@ -67,18 +68,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,8 @@
+@@ -1,13 +1,8 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd "$srcdir/$pkgname-$pkgver"
-+./configure \
+ ./configure \
  --prefix=/usr \
  --enable-gstreamer \
- --disable-debug
--}
--build() {
--cd $pkgname
+---disable-debug \
+---enable-maintainer-mode
++--disable-debug
  make
  }

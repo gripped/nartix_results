@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,43 +1,31 @@
+@@ -1,45 +1,31 @@
  
  pkgname=libxfce4ui
  pkgver=4.18.6
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Widgets library for the Xfce desktop environment"
  arch=('x86_64')
@@ -17,30 +17,31 @@
 -makedepends=('git' 'glib2-devel' 'intltool' 'gobject-introspection' 'vala' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/xfce/libxfce4ui.git#tag=$pkgname-$pkgver")
 -sha256sums=('ed51a4cffc40dc2688c949b87b55b0aef916f18c39f90565068fa0a9b2c366e3')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool' 'gobject-introspection' 'vala')
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('77dd99206cc8c6c7f69c269c83c7ee6a037bca9d4a89b1a6d9765e5a09ce30cd')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
++  cd $pkgname-$pkgver
++
+   ./configure \
 -    --build=$CBUILD \
 -    --host=$CHOST \
 -    --target=$CTARGET \
-+build() {
-+  cd $pkgname-$pkgver
-+
-+  ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
      --localstatedir=/var \
      --disable-debug \
 -    --enable-gtk-doc \
-     --with-vendor-info='Arch Linux'
--}
--
--build() {
--  cd $pkgname
+-    --with-vendor-info='Arch Linux' \
+-    --enable-maintainer-mode
++    --with-vendor-info='Arch Linux'
    make
  }
  
@@ -76,24 +77,25 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,10 @@
+@@ -1,19 +1,10 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ ./configure \
 ---build=$CBUILD \
 ---host=$CHOST \
 ---target=$CTARGET \
-+build() {
-+cd $pkgname-$pkgver
-+./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
  --localstatedir=/var \
  --disable-debug \
 ---enable-gtk-doc \
- --with-vendor-info='Arch Linux'
--}
--build() {
--cd $pkgname
+---with-vendor-info='Arch Linux' \
+---enable-maintainer-mode
++--with-vendor-info='Arch Linux'
  make
  }

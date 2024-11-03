@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,34 +1,31 @@
+@@ -1,24 +1,20 @@
  
  pkgname=xfce4-eyes-plugin
  pkgver=4.6.0
--pkgrel=3
+-pkgrel=4
 +pkgrel=1
  pkgdesc="A rolling eyes (following mouse pointer) plugin for the Xfce panel"
  arch=('x86_64')
@@ -17,27 +17,23 @@
 -makedepends=('git' 'intltool' 'perl-xml-parser' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin.git#tag=$pkgname-$pkgver")
 -sha256sums=('3e87397858ae4b5f6499f13cca28a0f1e6bd9db92b73d50c95fe691721c6c0aa')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool' 'perl-xml-parser')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('ad0ff05d88ba393b7c8922f8233edd33fc0a4e8b000b61de1f8f3a10c5ae5324')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --libexecdir=/usr/lib \
-     --localstatedir=/var \
-     --disable-static
--}
--
--build() {
--  cd $pkgname
-   make
+@@ -29,7 +25,7 @@
  }
  
  package() {
@@ -62,20 +58,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,10 @@
+@@ -1,9 +1,5 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd "$srcdir/$pkgname-$pkgver"
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --libexecdir=/usr/lib \
- --localstatedir=/var \
- --disable-static
--}
--build() {
--cd $pkgname
- make
- }

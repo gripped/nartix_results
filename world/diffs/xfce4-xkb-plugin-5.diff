@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,37 +1,35 @@
+@@ -1,26 +1,22 @@
  
  pkgname=xfce4-xkb-plugin
  pkgver=0.8.3
--pkgrel=3
+-pkgrel=4
 +pkgrel=1
  pkgdesc="Plugin to switch keyboard layouts for the Xfce4 panel"
  arch=('x86_64')
@@ -20,27 +20,22 @@
  install=$pkgname.install
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-xkb-plugin.git#tag=$pkgname-$pkgver")
 -sha256sums=('39c9c375d4ad91a7a0505fce260b1495321fa0d5e5e1d4d1e55d564b0ddd6166')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('f0bfe97875ef1ca0a3b6a6fac312663c9cada151cf1ac96071393d320cd04987')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --libexecdir=/usr/lib \
-     --localstatedir=/var \
-     --disable-static \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
-   make
+@@ -32,7 +28,8 @@
  }
  
  package() {
@@ -68,21 +63,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,11 @@
+@@ -1,9 +1,5 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd "$srcdir/$pkgname-$pkgver"
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --libexecdir=/usr/lib \
- --localstatedir=/var \
- --disable-static \
- --disable-debug
--}
--build() {
--cd $pkgname
- make
- }

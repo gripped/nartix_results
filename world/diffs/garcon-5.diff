@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,34 +1,30 @@
+@@ -1,35 +1,30 @@
  
  pkgname=garcon
  pkgver=4.18.2
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Freedesktop.org compliant menu library"
  arch=('x86_64')
@@ -16,26 +16,25 @@
 -makedepends=('git' 'glib2-devel' 'intltool' 'python' 'gobject-introspection' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/xfce/garcon.git#tag=$pkgname-$pkgver")
 -sha256sums=('488ff7e9631395cdf4a607b606fe87f1e8c6d9c16c465330379447bb28876269')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('intltool' 'python' 'gobject-introspection')
 +source=(https://archive.xfce.org/src/xfce/garcon/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('1b8c9292e131968fbfc8987bbc62c5ba47186dd45ef4e47c5d8c5088bb2d434d')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
      --localstatedir=/var \
 -    --enable-gtk-doc \
      --disable-debug
--}
--
--build() {
--  cd $pkgname
    make
  }
  
@@ -62,20 +61,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,9 @@
+@@ -1,14 +1,9 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
  --localstatedir=/var \
 ---enable-gtk-doc \
  --disable-debug
--}
--build() {
--cd $pkgname
  make
  }

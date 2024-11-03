@@ -4,7 +4,7 @@
  
  pkgname=tumbler
  pkgver=4.18.2
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Thumbnail service implementing the thumbnail management D-Bus specification"
  arch=('x86_64')
@@ -20,31 +20,30 @@
  optdepends=('ffmpegthumbnailer: video thumbnails'
              'poppler-glib: PDF thumbnails'
              'libgsf: ODF thumbnails'
-@@ -17,26 +17,24 @@
+@@ -17,27 +17,24 @@
              'libopenraw: RAW thumbnails'
              'freetype2: font thumbnails')
  backup=('etc/xdg/tumbler/tumbler.rc')
 -source=("git+https://gitlab.xfce.org/xfce/tumbler.git#tag=$pkgname-$pkgver")
 -sha256sums=('83eb70ba554f701883c1fab8b5d0d1a1b29d9f931717bab9391e92d028017d1c')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('b530eec635eac7f898c0d8d3a3ff79d76a145d3bed3e786d54b1ec058132be7a')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
      --disable-debug \
 -    --enable-gtk-doc \
      --disable-gstreamer-thumbnailer
--}
--
--build() {
--  cd $pkgname
    make
  }
  
@@ -79,20 +78,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,9 @@
+@@ -1,14 +1,9 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
  --disable-debug \
 ---enable-gtk-doc \
  --disable-gstreamer-thumbnailer
--}
--build() {
--cd $pkgname
  make
  }

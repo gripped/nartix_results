@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,40 +1,40 @@
+@@ -1,29 +1,28 @@
  
  pkgname=xfce4-smartbookmark-plugin
  pkgver=0.5.2
--pkgrel=3
+-pkgrel=4
 +pkgrel=2
  pkgdesc="Allows you to send requests directly to your browser and perform a custom search"
  arch=('x86_64')
@@ -29,24 +29,18 @@
 +  cd "$srcdir/$pkgname-$pkgver"
  
    patch -Np1 -i "$srcdir/xfce4-smartbookmark-plugin-archlinux.patch"
-+}
+-
+-  NOCONFIGURE=1 ./autogen.sh
+ }
  
--  ./autogen.sh \
-+build() {
+ build() {
+-  cd $pkgname
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --libexecdir=/usr/lib \
-     --localstatedir=/var \
-     --disable-static \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
-   make
+@@ -35,7 +34,7 @@
  }
  
  package() {
@@ -70,24 +64,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
+@@ -1,10 +1,9 @@
  prepare() {
 -cd $pkgname
 +cd "$srcdir/$pkgname-$pkgver"
  patch -Np1 -i "$srcdir/xfce4-smartbookmark-plugin-archlinux.patch"
--./autogen.sh \
-+}
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+ }
+ build() {
+-cd $pkgname
 +cd "$srcdir/$pkgname-$pkgver"
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --libexecdir=/usr/lib \
- --localstatedir=/var \
- --disable-static \
- --disable-debug
--}
--build() {
--cd $pkgname
- make
- }

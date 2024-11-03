@@ -4,11 +4,11 @@
  
  prepare() {
    cd $pkgname
--  ./autogen.sh \
-+  ./autogen.sh --disable-systemd \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-     --disable-debug
+-  NOCONFIGURE=1 ./autogen.sh
++  NOCONFIGURE=1 ./autogen.sh --disable-systemd
+ }
+ 
+ build() {
 
 
 ############# Stripped diff below #################
@@ -20,8 +20,8 @@
 @@ -1,6 +1,6 @@
  prepare() {
  cd $pkgname
--./autogen.sh \
-+./autogen.sh --disable-systemd \
- --prefix=/usr \
- --sysconfdir=/etc \
- --disable-debug
+-NOCONFIGURE=1 ./autogen.sh
++NOCONFIGURE=1 ./autogen.sh --disable-systemd
+ }
+ build() {
+ cd $pkgname

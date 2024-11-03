@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libxfce4util
+ pkgver=4.18.2
+-pkgrel=3
++pkgrel=2.1
+ pkgdesc="Basic utility non-GUI functions for Xfce"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/libxfce4util/start"
+@@ -13,19 +13,17 @@
+ 
+ prepare() {
+   cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
+-
+-build() {
+-  cd $pkgname
+-  ./configure \
++  ./autogen.sh \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+     --sbindir=/usr/bin \
+     --localstatedir=/var \
+     --enable-gtk-doc \
+-    --disable-debug \
+-    --enable-maintainer-mode
++    --disable-debug
++}
++
++build() {
++  cd $pkgname
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,14 @@
+ prepare() {
+ cd $pkgname
+-NOCONFIGURE=1 ./autogen.sh
+-}
+-build() {
+-cd $pkgname
+-./configure \
++./autogen.sh \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+ --sbindir=/usr/bin \
+ --localstatedir=/var \
+ --enable-gtk-doc \
+---disable-debug \
+---enable-maintainer-mode
++--disable-debug
++}
++build() {
++cd $pkgname
+ make
+ }

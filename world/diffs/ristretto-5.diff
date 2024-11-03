@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,33 +1,30 @@
+@@ -1,35 +1,30 @@
  
  pkgname=ristretto
  pkgver=0.13.2
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="A fast and lightweight picture viewer for Xfce"
  arch=('x86_64')
@@ -16,25 +16,26 @@
 -makedepends=('git' 'glib2-devel' 'python' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/apps/ristretto.git#tag=$pkgname-$pkgver")
 -sha256sums=('cbd9a16e170da48889d7067a33cb6ad92e77089d5529597e3b3b7145dc1e62b9')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
 +makedepends=('python')
 +source=("https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2")
 +sha256sums=('779f5ede3016019eec01d64a025583078d3936e35d4288ec2e8433494d757dd9')
  
--prepare() {
+ build() {
 -  cd $pkgname
--  ./autogen.sh \
-+build() {
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
      --localstatedir=/var \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
+-    --disable-debug \
+-    --enable-maintainer-mode
++    --disable-debug
    make
  }
  
@@ -63,19 +64,20 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,9 @@
+@@ -1,14 +1,9 @@
 -prepare() {
 -cd $pkgname
--./autogen.sh \
-+build() {
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
  --localstatedir=/var \
- --disable-debug
--}
--build() {
--cd $pkgname
+---disable-debug \
+---enable-maintainer-mode
++--disable-debug
  make
  }

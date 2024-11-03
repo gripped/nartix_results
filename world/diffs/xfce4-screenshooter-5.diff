@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,45 +1,36 @@
+@@ -1,35 +1,25 @@
  
  pkgname=xfce4-screenshooter
 -pkgver=1.11.1
--pkgrel=2
+-pkgrel=3
 +pkgver=1.10.5
 +pkgrel=1
  pkgdesc="An application to take screenshots"
@@ -36,24 +36,18 @@
 -  git submodule init
 -  git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
 -  git -c protocol.file.allow=always submodule update
--  ./autogen.sh \
+-  NOCONFIGURE=1 ./autogen.sh
 +  cd $pkgname-$pkgver
-+}
-+
-+build() {
+ }
+ 
+ build() {
+-  cd $pkgname
 +  cd $pkgname-$pkgver
 +
-+  ./configure \
+   ./configure \
      --prefix=/usr \
      --sysconfdir=/etc \
-     --libexecdir=/usr/lib \
-     --localstatedir=/var \
-     --disable-debug
--}
--
--build() {
--  cd $pkgname
-   make
+@@ -40,7 +30,7 @@
  }
  
  package() {
@@ -84,25 +78,18 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,13 @@
+@@ -1,12 +1,8 @@
  prepare() {
 -cd $pkgname
 -git submodule init
 -git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
 -git -c protocol.file.allow=always submodule update
--./autogen.sh \
+-NOCONFIGURE=1 ./autogen.sh
 +cd $pkgname-$pkgver
-+}
-+build() {
+ }
+ build() {
+-cd $pkgname
 +cd $pkgname-$pkgver
-+./configure \
+ ./configure \
  --prefix=/usr \
  --sysconfdir=/etc \
- --libexecdir=/usr/lib \
- --localstatedir=/var \
- --disable-debug
--}
--build() {
--cd $pkgname
- make
- }
