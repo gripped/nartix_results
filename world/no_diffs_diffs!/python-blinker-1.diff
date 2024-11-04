@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-blinker
+-pkgver=1.8.2
+-pkgrel=1
++pkgver=1.7.0
++pkgrel=2
+ pkgdesc="Fast, simple object-to-object and broadcast signaling"
+ arch=('any')
+ url="https://blinker.readthedocs.io"
+@@ -10,7 +10,7 @@
+ makedepends=('python-build' 'python-installer' 'python-flit-core')
+ checkdepends=('python-pytest-asyncio')
+ source=("https://files.pythonhosted.org/packages/source/b/blinker/blinker-$pkgver.tar.gz")
+-sha512sums=('037822e014974aaa9d6faf76805b09c06d697de9555cf4cd1265e639c52f72c5ed905e4698140b49a5e011806d91541636a7cf58082aabdd927c60dffd7df012')
++sha512sums=('b55dc104fd69bf9f682184202f9da7cb6925e7e863f38d5ad5b4b5988b2315aae02da6f4c9f0ec34238b8d5b9b6eec52b06258d93e14416cda3e2b718d9aa60c')
+ 
+ build() {
+   cd blinker-$pkgver
+@@ -26,5 +26,5 @@
+ package() {
+   cd blinker-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -Dm644 LICENSE.txt -t "$pkgdir"/usr/share/licenses/$pkgname/
++  install -Dm644 LICENSE.rst -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }

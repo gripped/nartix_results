@@ -68,6 +68,8 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
+django
+python-django
 dns-over-https
 docker
 dolphin-emu
@@ -311,7 +313,6 @@ libinput
 libldm
 libmspub
 libnvme
-libosinfo
 libprocps
 libsidplay
 libsidplayfp
@@ -460,7 +461,6 @@ openmpi-docs
 opensmtpd
 opensubdiv
 openvpn
-osinfo-db-tools
 ostree
 packagekit
 libpackagekit-glib
@@ -564,12 +564,14 @@ python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
+python-ruamel.yaml.clib
 python-signedjson
 python-sphinx-hawkmoth
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
+python-werkzeug
 qastools
 qemu
 qemu-common

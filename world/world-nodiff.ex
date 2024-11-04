@@ -93,6 +93,9 @@ arianna
 aribb24
 aribb25
 ark
+arm-none-eabi-binutils
+arm-none-eabi-gcc
+arm-none-eabi-newlib
 armagetronad
 arrow
 artikulate
@@ -431,8 +434,6 @@ discover
 distcc
 distro-info-data
 distro-info
-django
-python-django
 djvulibre
 dkms
 dleyna
@@ -1781,6 +1782,7 @@ libopenraw
 libopensmtpd
 libopusenc
 liborcus
+libosinfo
 libotf
 libotr
 libp11
@@ -2464,6 +2466,7 @@ opusfile
 orc
 orca
 os-prober
+osinfo-db-tools
 osinfo-db
 osm-gps-map
 ospray
@@ -4055,7 +4058,6 @@ python-rpyc
 python-rsa
 python-rtree
 python-ruamel-yaml
-python-ruamel.yaml.clib
 python-ruff-api
 python-rx
 python-s3transfer
@@ -4285,7 +4287,6 @@ python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
-python-werkzeug
 python-whatthepatch
 python-wheel
 python-wheezy-template

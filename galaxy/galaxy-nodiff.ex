@@ -130,6 +130,7 @@ libsysstat
 libtg_owt
 libvarlink
 libwnck
+libxfce4util
 lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers

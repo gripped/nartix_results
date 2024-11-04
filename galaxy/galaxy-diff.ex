@@ -16,7 +16,6 @@ libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
-libxfce4util
 light
 lxpanel
 lxqt-themes
