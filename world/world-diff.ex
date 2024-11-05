@@ -68,8 +68,6 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
-django
-python-django
 dns-over-https
 docker
 dolphin-emu
@@ -558,20 +556,16 @@ python-pyqt5
 pyqt6
 python-anytree
 python-intelhex
-python-pdm-backend
 python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
 python-pyudev
-python-ruamel.yaml.clib
 python-signedjson
-python-sphinx-hawkmoth
 python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
-python-werkzeug
 qastools
 qemu
 qemu-common
@@ -749,7 +743,6 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
-unrealircd
 upower
 uptimed
 usb_modeswitch

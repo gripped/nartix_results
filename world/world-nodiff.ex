@@ -434,6 +434,8 @@ discover
 distcc
 distro-info-data
 distro-info
+django
+python-django
 djvulibre
 dkms
 dleyna
@@ -3732,6 +3734,7 @@ python-pbr
 python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
+python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
 python-pdm
@@ -4058,6 +4061,7 @@ python-rpyc
 python-rsa
 python-rtree
 python-ruamel-yaml
+python-ruamel.yaml.clib
 python-ruff-api
 python-rx
 python-s3transfer
@@ -4124,6 +4128,7 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
+python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -4287,6 +4292,7 @@ python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
+python-werkzeug
 python-whatthepatch
 python-wheel
 python-wheezy-template
@@ -5350,6 +5356,7 @@ unittestpp
 unoconv
 unrar
 libunrar
+unrealircd
 unrtf
 unzip
 upx
