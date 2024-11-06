@@ -68,6 +68,7 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
+discover
 dns-over-https
 docker
 dolphin-emu
@@ -553,6 +554,16 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt5
 python-pyqt5
+pyqt6-3d
+python-pyqt6-3d
+pyqt6-charts
+python-pyqt6-charts
+pyqt6-datavisualization
+python-pyqt6-datavisualization
+pyqt6-networkauth
+python-pyqt6-networkauth
+pyqt6-webengine
+python-pyqt6-webengine
 pyqt6
 python-anytree
 python-intelhex
@@ -712,6 +723,7 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
+telegram-desktop
 telepathy-glib
 thunar-archive-plugin
 thunar-media-tags-plugin
