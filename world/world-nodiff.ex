@@ -2982,6 +2982,16 @@ pyqt5-purchasing
 python-pyqt5-purchasing
 pyqt5-webengine
 python-pyqt5-webengine
+pyqt6-3d
+python-pyqt6-3d
+pyqt6-charts
+python-pyqt6-charts
+pyqt6-datavisualization
+python-pyqt6-datavisualization
+pyqt6-networkauth
+python-pyqt6-networkauth
+pyqt6-webengine
+python-pyqt6-webengine
 pyside2
 shiboken2
 python-shiboken2
@@ -3470,7 +3480,6 @@ python-invoke
 python-iocapture
 python-ipdb
 python-ipykernel
-python-ipyparallel
 python-ipython-genutils
 python-ipywidgets
 python-iso8601
@@ -3539,7 +3548,6 @@ python-kiwisolver
 python-kombu
 python-krb5
 python-kubernetes
-python-lark-parser
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
@@ -5066,7 +5074,6 @@ t1lib
 t1utils
 taglib
 taglib1
-tailscale
 tali
 talloc
 tang

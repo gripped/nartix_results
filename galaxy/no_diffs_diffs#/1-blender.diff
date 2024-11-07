@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=blender
+ pkgver=4.2.3
+-pkgrel=4
++pkgrel=1
+ epoch=17
+ pkgdesc="A fully integrated 3D graphics creation suite"
+ arch=('x86_64')
+@@ -58,6 +58,7 @@
+   'materialx'
+   'onetbb'
+   'openal'
++  'opencollada'
+   'opencolorio'
+   'openexr'
+   'openimagedenoise'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -52,6 +52,7 @@
+ ninja
+ onetbb
+ openal
++opencollada
+ opencolorio
+ openexr
+ openimagedenoise
