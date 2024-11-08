@@ -2,22 +2,21 @@
 +++ Artix PKGBUILD
 @@ -1,34 +1,35 @@
  pkgname=rocsparse
--pkgver=6.0.2
--pkgrel=2
+-pkgver=6.2.2
 +pkgver=6.0.0
-+pkgrel=1
+ pkgrel=1
  pkgdesc='BLAS for sparse computation on top of ROCm'
  arch=('x86_64')
 -url='https://rocm.docs.amd.com/projects/rocSPARSE/en/latest/index.html'
 +url='https://rocsparse.readthedocs.io/en/master/'
  license=('MIT')
--depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocprim')
+-depends=('rocm-core' 'glibc' 'gcc-libs' 'hip-runtime-amd' 'rocprim')
 -makedepends=('cmake' 'rocm-cmake' 'gcc-fortran')
 +depends=('hip' 'rocprim')
 +makedepends=('rocm-cmake' 'gcc-fortran')
  _git='https://github.com/ROCmSoftwarePlatform/rocSPARSE'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('00292eb7efe5719a65960bdbe391ba8e0ce610487eea11397aad6a14b11e12cd')
+-sha256sums=('1498a9dd79b492d951fed0eef39c0ede1913d884404b0bb51b1f1e64ff3f05b0')
 +sha256sums=('bdc618677ec78830c6af315d61194d6ab8532345b8daeeb115aca96f274d4ca4')
  options=(!lto !buildflags)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
@@ -63,7 +62,8 @@
  gcc-fortran
 -gcc-libs
 -glibc
- hip
+-hip-runtime-amd
++hip
  rocm-cmake
 -rocm-core
  rocprim

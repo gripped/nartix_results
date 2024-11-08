@@ -1,12 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=telegram-desktop
 -pkgver=5.7.2
+-pkgrel=2
 +pkgver=5.6.2
- pkgrel=1
++pkgrel=1
  pkgdesc='Official Telegram Desktop client'
  arch=('x86_64')
+ url="https://desktop.telegram.org/"
 @@ -15,27 +15,22 @@
               'glib2-devel')
  optdepends=('webkit2gtk: embedded browser features'

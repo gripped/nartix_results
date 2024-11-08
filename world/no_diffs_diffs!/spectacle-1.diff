@@ -1,6 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -58,5 +58,6 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=spectacle
+-pkgver=24.08.3
++pkgver=24.08.2
+ pkgrel=1
+ pkgdesc='KDE screenshot capture utility'
+ arch=(x86_64)
+@@ -32,7 +32,6 @@
+          purpose
+          qt6-base
+          qt6-declarative
+-         qt6-imageformats
+          qt6-multimedia
+          qt6-wayland
+          wayland
+@@ -45,7 +44,7 @@
+ groups=(kde-applications
+         kde-graphics)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('447ab462a07ecd583cab879ce7118fbfc4635b370a00f10e14978b1f9ba66dfb'
++sha256sums=('3f90f8cfe3359ad94f5bb0025a9251805a092c5892cd2a891965c21a0984cbdf'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+@@ -59,5 +58,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
@@ -8,3 +33,17 @@
 +  rm -r $pkgdir/usr/lib/systemd
  }
 -
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -27,7 +27,6 @@
+ purpose
+ qt6-base
+ qt6-declarative
+-qt6-imageformats
+ qt6-multimedia
+ qt6-wayland
+ wayland

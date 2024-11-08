@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,36 +1,37 @@
  pkgname=rocrand
--pkgver=6.0.2
+-pkgver=6.2.2
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='Pseudo-random and quasi-random number generator on ROCm'
@@ -10,7 +10,7 @@
 -url='https://rocm.docs.amd.com/projects/rocRAND/en/latest/index.html'
 +url='https://rocrand.readthedocs.io/en/latest/'
  license=('MIT')
--depends=('rocm-core' 'hip' 'glibc' 'gcc-libs')
+-depends=('rocm-core' 'hip-runtime-amd' 'glibc' 'gcc-libs')
 +depends=('hip')
  makedepends=('rocm-cmake' 'gcc-fortran' 'python' 'git')
 -optdepends=('gcc-fortran: Use Fortran wrapper')
@@ -18,7 +18,7 @@
 +            'python: Use Python wrapper')
  _git='https://github.com/ROCmSoftwarePlatform/rocRAND'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('51d66c645987cbfb593aaa6be94109e87fe4cb7e9c70309eb3c159af0de292d7')
+-sha256sums=('aa0bf6fb8531046512cc154976f8acc94328a7e0bdb5fc7b16c97b0518de35c6')
 +sha256sums=('cee93231c088be524bb2cb0e6093ec47e62e61a55153486bebbc2ca5b3d49360')
  options=(!lto)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
@@ -65,7 +65,8 @@
 -gcc-libs
  git
 -glibc
- hip
+-hip-runtime-amd
++hip
  python
  rocm-cmake
 -rocm-core

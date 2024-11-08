@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=freerdp
+ pkgver=3.9.0
+ _libver=${pkgver/.*/}
+-pkgrel=4
++pkgrel=3
+ epoch=2
+ pkgdesc="Free implementation of the Remote Desktop Protocol (RDP)"
+ arch=(x86_64)
 @@ -101,7 +101,7 @@
      -D WITH_PULSE=ON
      -D WITH_SERVER=ON

@@ -42,6 +42,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+cantor
 catfish
 cgmanager
 chromium-bsu
@@ -53,6 +54,7 @@ cmake
 colord
 colord-sane
 libcolord
+composable-kernel
 conky
 conmon
 connman
@@ -78,9 +80,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-edk2
-edk2-shell
-edk2-ovmf
 element.io
 element-web
 element-desktop
@@ -103,6 +102,8 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+ffmpeg
+ffmpeg4.4
 firefox
 firewalld
 flatpak
@@ -130,6 +131,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+gifski
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -211,6 +213,9 @@ haproxy
 haveged
 hexchat
 hidapi
+hipify-clang
+hsa-rocr
+hsakmt-roct
 hwloc
 hyprland
 i2pd
@@ -433,6 +438,7 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
+neochat
 netavark
 netplan
 networkmanager
@@ -557,8 +563,6 @@ python-pyqt5
 pyqt6
 python-anytree
 python-intelhex
-python-ipyparallel
-python-lark-parser
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -673,6 +677,8 @@ refind-docs
 ristretto
 rocblas
 rocfft
+rocm-cmake
+rocm-llvm
 rocrand
 rocsparse
 rrdtool
@@ -726,6 +732,7 @@ thunderbird
 tigervnc
 timew
 tint2
+tinycompress
 tinysparql
 tinysparql-docs
 tmux
@@ -787,6 +794,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wf-recorder
 wireplumber
 libwireplumber
 wireplumber-docs

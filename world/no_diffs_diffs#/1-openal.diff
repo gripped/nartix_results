@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,14 +5,13 @@
+   openal-examples
+ )
+ pkgver=1.23.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Cross-platform 3D audio library, software implementation"
+ url="https://github.com/kcat/openal-soft"
+ arch=(x86_64)
+-license=(LGPL-2.0-or-later)
++license=(LGPL)
+ depends=(
+   gcc-libs
+-  glibc
+ )
+ makedepends=(
+   alsa-lib
+@@ -30,8 +29,19 @@
+   qt5-base
+   sdl2
+ )
+-source=("git+https://github.com/kcat/openal-soft#tag=$pkgver")
+-b2sums=('5bf1c0c39b65de526ea5b4cf7a28ec72605d6ab2c97b8be2da462d6bec057c891890c88a77c441cff2c33667de3307a5db1016e2b5de34911dcc5bc492517011')
++optdepends=(
++  'qt5-base: alsoft-config GUI Configurator'
++  'fluidsynth: MIDI rendering'
++  'libmysofa: makemhr tool'
++)
++_commit=d3875f333fb6abe2f39d82caca329414871ae53b  # tags/1.23.1
++source=("git+https://github.com/kcat/openal-soft#commit=$_commit")
++b2sums=('SKIP')
++
++pkgver() {
++  cd openal-soft
++  git describe --tags | sed 's/^openal-soft-//;s/[^-]*-g/r&/;s/-/+/g'
++}
+ 
+ prepare() {
+   cd openal-soft
+@@ -59,11 +69,6 @@
+ }
+ 
+ package_openal() {
+-  optdepends=(
+-    'qt5-base: alsoft-config GUI Configurator'
+-    'fluidsynth: MIDI rendering'
+-    'libmysofa: makemhr tool'
+-  )
+   provides+=(libopenal.so)
+ 
+   DESTDIR="$pkgdir" cmake --install build
+@@ -76,13 +81,8 @@
+ 
+ package_openal-examples() {
+   pkgdesc+=" (example programs)"
+-  depends+=(
+-    "openal=$pkgver-$pkgrel"
+-    ffmpeg
+-    libsndfile
+-    sdl2
+-  )
+-
++  depends=("openal=$pkgver-$pkgrel" sdl2 libsndfile ffmpeg)
++  optdepends=()
+   mv examples/* "$pkgdir"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,7 +4,6 @@
+ fluidsynth
+ gcc-libs
+ git
+-glibc
+ jack
+ libmysofa
+ libpulse

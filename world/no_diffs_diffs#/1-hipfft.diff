@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,16 @@
+ 
+ pkgname=hipfft
+-pkgver=6.2.2
++pkgver=6.0.2
+ pkgrel=1
+ pkgdesc='rocFFT marshalling library.'
+ arch=('x86_64')
+ url='https://rocm.docs.amd.com/projects/hipFFT/en/latest/index.html'
+ license=('MIT')
+-depends=('rocm-core' 'glibc' 'gcc-libs' 'hip-runtime-amd' 'rocfft')
++depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocfft')
+ makedepends=('cmake' 'rocm-cmake' 'git')
+ _git='https://github.com/ROCm/hipFFT'
+ source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
+-sha256sums=('eedc2a3f710985e32f8cb09ecbcb3a6da168f66f05199dd308ad6c7684fc144e')
++sha256sums=('c0a4bac5fa9a757a19a4995fa9571328b6ee0a71e93c66a880069794d65d284a')
+ options=(!lto)
+ _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,7 @@
+ gcc-libs
+ git
+ glibc
+-hip-runtime-amd
++hip
+ rocfft
+ rocm-cmake
+ rocm-core

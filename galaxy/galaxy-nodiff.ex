@@ -5,9 +5,6 @@ alacritty
 atril
 audacious-plugins
 audacious
-avidemux
-avidemux-cli
-avidemux-qt
 blender
 blueman
 box2d

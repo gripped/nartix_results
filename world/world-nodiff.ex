@@ -253,7 +253,6 @@ calf
 camlp-streams
 camlp4
 cantarell-fonts
-cantor
 capnproto
 capstone
 python-capstone
@@ -355,7 +354,6 @@ compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
-composable-kernel
 composefs
 confuse
 consul
@@ -492,6 +490,11 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
+edk2
+edk2-arm
+edk2-aarch64
+edk2-shell
+edk2-ovmf
 egl-gbm
 egl-wayland
 eglexternalplatform
@@ -561,8 +564,6 @@ fcitx5-qt
 feh
 festival
 ffcall
-ffmpeg
-ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -676,7 +677,6 @@ ghostxps
 ghostpcl
 gi-docgen
 giflib
-gifski
 gimp-help
 gimp
 girara
@@ -936,7 +936,6 @@ hip-runtime-amd
 hipblas
 hipcub
 hipfft
-hipify-clang
 hiprand
 hipsolver
 hipsparse
@@ -946,8 +945,6 @@ hivex
 hostapd
 hotdoc
 hplip
-hsa-rocr
-hsakmt-roct
 hspell
 hunspell-he
 htop
@@ -2317,7 +2314,6 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 nemo
-neochat
 neofetch
 neomutt
 neon
@@ -3480,6 +3476,7 @@ python-invoke
 python-iocapture
 python-ipdb
 python-ipykernel
+python-ipyparallel
 python-ipython-genutils
 python-ipywidgets
 python-iso8601
@@ -3548,6 +3545,7 @@ python-kiwisolver
 python-kombu
 python-krb5
 python-kubernetes
+python-lark-parser
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
@@ -4515,7 +4513,6 @@ robin-map
 roc-toolkit
 rocalution
 rocm-clang-ocl
-rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4525,7 +4522,6 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
@@ -5265,7 +5261,6 @@ time
 timeshift
 timezonemap
 tinycdb
-tinycompress
 tinyprog
 tinyproxy
 tinyxml
@@ -5444,7 +5439,6 @@ webp-pixbuf-loader
 webrtc-audio-processing-1
 webrtc-audio-processing
 weechat
-wf-recorder
 wget
 whois
 wildmidi
