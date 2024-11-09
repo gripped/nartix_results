@@ -5,6 +5,9 @@ alacritty
 atril
 audacious-plugins
 audacious
+avidemux
+avidemux-cli
+avidemux-qt
 blender
 blueman
 box2d
@@ -59,6 +62,7 @@ eom
 exo
 ext4magic
 fastfetch
+fceux
 featherpad
 firefox-i18n
 fluxbox

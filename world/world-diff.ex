@@ -102,8 +102,6 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
-ffmpeg
-ffmpeg4.4
 firefox
 firewalld
 flatpak
@@ -131,7 +129,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-gifski
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -214,8 +211,6 @@ haveged
 hexchat
 hidapi
 hipify-clang
-hsa-rocr
-hsakmt-roct
 hwloc
 hyprland
 i2pd
@@ -658,6 +653,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -677,8 +673,6 @@ refind-docs
 ristretto
 rocblas
 rocfft
-rocm-cmake
-rocm-llvm
 rocrand
 rocsparse
 rrdtool
@@ -724,6 +718,7 @@ tailscale
 tcc
 telegram-desktop
 telepathy-glib
+texlive-bin
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -794,7 +789,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wf-recorder
 wireplumber
 libwireplumber
 wireplumber-docs

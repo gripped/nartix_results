@@ -8,14 +8,14 @@
 +         libelogind libelogind.so
           tomlplusplus libtomlplusplus.so libudev.so
           vulkan-icd-loader
-          vulkan-validation-layers
+          wayland libwayland-client.so libwayland-server.so
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -17,6 +17,8 @@
+@@ -16,6 +16,8 @@
  libdisplay-info
  libdisplay-info.so
  libdrm
@@ -24,7 +24,7 @@
  libglvnd
  libgobject-2.0.so
  libhyprcursor.so
-@@ -29,7 +31,6 @@
+@@ -28,7 +30,6 @@
  libpangocairo-1.0.so
  libpixman-1.so
  libseat.so
@@ -32,7 +32,7 @@
  libtomlplusplus.so
  libudev.so
  libwayland-client.so
-@@ -49,7 +50,6 @@
+@@ -48,7 +49,6 @@
  pango
  pixman
  seatd

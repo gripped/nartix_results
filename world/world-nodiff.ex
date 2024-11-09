@@ -564,6 +564,8 @@ fcitx5-qt
 feh
 festival
 ffcall
+ffmpeg
+ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -677,6 +679,7 @@ ghostxps
 ghostpcl
 gi-docgen
 giflib
+gifski
 gimp-help
 gimp
 girara
@@ -933,6 +936,9 @@ highlight
 highlight-gui
 highway
 hip-runtime-amd
+hip-runtime
+hip-runtime-amd
+hip-runtime-nvidia
 hipblas
 hipcub
 hipfft
@@ -945,6 +951,8 @@ hivex
 hostapd
 hotdoc
 hplip
+hsa-rocr
+hsakmt-roct
 hspell
 hunspell-he
 htop
@@ -4415,7 +4423,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4513,6 +4520,7 @@ robin-map
 roc-toolkit
 rocalution
 rocm-clang-ocl
+rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4522,10 +4530,14 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
 rocprim
+rocprofiler-register
 rocs
 rocsolver
 rocthrust
@@ -5241,7 +5253,6 @@ testdisk
 tevent
 tex-gyre-fonts
 texi2html
-texlive-bin
 texlive-core
 texlive-fontsextra
 texlive-formatsextra
@@ -5439,6 +5450,7 @@ webp-pixbuf-loader
 webrtc-audio-processing-1
 webrtc-audio-processing
 weechat
+wf-recorder
 wget
 whois
 wildmidi

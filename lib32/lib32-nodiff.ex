@@ -16,7 +16,6 @@ lib32-libcurl-gnutls
 lib32-dconf
 lib32-duktape
 lib32-e2fsprogs
-lib32-expat
 lib32-fakeroot
 lib32-faudio
 lib32-flac

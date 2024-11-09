@@ -1,6 +1,3 @@
-avidemux
-avidemux-cli
-avidemux-qt
 cinnamon-desktop
 copyq
 doctest
@@ -9,7 +6,6 @@ efl
 elementary-icon-theme
 ephoto
 evisum
-fceux
 firefox
 font-manager
 gpicview
