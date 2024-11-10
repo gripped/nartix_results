@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=inkscape
+ pkgver=1.4
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Professional vector graphics editor'
+ url='https://inkscape.org/'
+ license=('GPL' 'LGPL')
+@@ -93,7 +93,9 @@
+         'inkscape-extras-extensions-gcodetools::git+https://gitlab.com/inkscape/extras/extensions-gcodetools.git'
+         'inkscape-extras-extension-manager::git+https://gitlab.com/inkscape/extras/extension-manager.git'
+         'inkscape-extras-inkscape-import-clipart::git+https://gitlab.com/inkscape/extras/inkscape-import-clipart.git'
+-        'inkscape-extras-extension-xaml::git+https://gitlab.com/inkscape/extras/extension-xaml.git')
++        'inkscape-extras-extension-xaml::git+https://gitlab.com/inkscape/extras/extension-xaml.git'
++        poppler-24.10.diff
++        poppler-24.11.diff)
+ sha256sums=('2aea5928ae8bd6cf74bdae533578765e869149d9fecb28aafb1353a2a7cbebbf'
+             'SKIP'
+             'SKIP'
+@@ -101,7 +103,9 @@
+             'SKIP'
+             'SKIP'
+             'SKIP'
+-            'SKIP')
++            'SKIP'
++            '2b6e576ccf062ea0ed724c38c6bd5d0f1001645c08d8a7d731cc124a74054410'
++            'edf797ab5e1e14216ce25a44b16f679d138179ed802dba23fe9dd7137f8c5afd')
+ 
+ _backports=(
+ )
+@@ -134,6 +138,9 @@
+     git log --oneline "${_l}" "${_c}"
+     git revert --mainline 1 --no-commit "${_c}"
+   done
++
++  patch -Np1 -i ../poppler-24.10.diff
++  patch -Np1 -i ../poppler-24.11.diff
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,6 +21,8 @@
+ git log --oneline "${_l}" "${_c}"
+ git revert --mainline 1 --no-commit "${_c}"
+ done
++patch -Np1 -i ../poppler-24.10.diff
++patch -Np1 -i ../poppler-24.11.diff
+ }
+ build() {
+ local cmake_options=(

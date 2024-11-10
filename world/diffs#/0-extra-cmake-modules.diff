@@ -1,14 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,14 +14,20 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=extra-cmake-modules
+-pkgver=6.8.0
+-pkgrel=1
++pkgver=6.7.0
++pkgrel=2
+ pkgdesc='Extra modules and scripts for CMake'
+ arch=(any)
+ url='https://community.kde.org/Frameworks'
+@@ -14,21 +14,26 @@
              'python-requests: to generate fastlane metadata for Android apps'
              'python-yaml: to generate fastlane metadata for Android apps')
  groups=(kf6)
 -source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ff8a0bf72285bec1768e3acd8f7c665a26d55a1527e96d73e35789dc9f0e3472'
+-            'SKIP')
 +source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig}
 +        artix.patch)
- sha256sums=('d81de82692d3d2bb77110332a65c8266252becc2c3f307ce814990ce5607b8dc'
--            'SKIP')
++sha256sums=('d81de82692d3d2bb77110332a65c8266252becc2c3f307ce814990ce5607b8dc'
 +            'SKIP'
 +            '65b541e9f4144adb7c7d3612071b66ebb811c59cef0a7712c1d92345044d618f')
  
@@ -16,13 +27,21 @@
                E0A3EB202F8E57528E13E72FD7574483BB57B18D # Jonathan Esk-Riddell <jr@jriddell.org>
                90A968ACA84537CC27B99EAF2C8DF587A6D4AAC1 # Nicolas Fella <nicolas.fella@kde.org>
                )
-+
+ 
 +prepare() {
 +  patch -d $pkgname-$pkgver -Np1 -i ../artix.patch
 +}
- 
++
  build() {
    cmake -B build -S $pkgname-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_HTML_DOCS=ON \
+-    -DBUILD_QTHELP_DOCS=ON \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_QTHELP_DOCS=ON
+   cmake --build build
+ }
+ 
 
 
 ############# Stripped diff below #################
@@ -31,10 +50,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,3 +1,6 @@
+@@ -1,8 +1,10 @@
 +prepare() {
 +patch -d $pkgname-$pkgver -Np1 -i ../artix.patch
 +}
  build() {
  cmake -B build -S $pkgname-$pkgver \
  -DCMAKE_INSTALL_PREFIX=/usr \
+ -DBUILD_HTML_DOCS=ON \
+--DBUILD_QTHELP_DOCS=ON \
+--DBUILD_TESTING=OFF
++-DBUILD_QTHELP_DOCS=ON
+ cmake --build build
+ }

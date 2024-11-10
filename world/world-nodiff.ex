@@ -207,6 +207,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1010,7 +1011,6 @@ immer
 incidenceeditor
 indent
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1233,7 +1233,6 @@ kdialog
 kdiamond
 kdnssd
 kdnssd5
-kdoctools
 kdoctools5
 kdsingleapplication
 kdsoap-ws-discovery-client
@@ -4423,6 +4422,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver

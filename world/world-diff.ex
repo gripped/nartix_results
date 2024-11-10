@@ -26,7 +26,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -218,6 +217,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -260,6 +260,7 @@ jedi-language-server
 js78
 jupyter-server-ydoc
 kcoreaddons
+kdoctools
 kgamma
 kismet
 kitty
@@ -653,7 +654,6 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
