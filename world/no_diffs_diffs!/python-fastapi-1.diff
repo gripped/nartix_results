@@ -1,30 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- _name=fastapi
- pkgname=python-$_name
- pkgver=0.115.4
--pkgrel=2
-+pkgrel=1
- pkgdesc='FastAPI framework, high performance, easy to learn, fast to code, ready for production'
- arch=(any)
- url="https://github.com/tiangolo/fastapi"
-@@ -27,6 +27,7 @@
- checkdepends=(
-   python-aiosqlite
-   python-anyio
-+  python-coverage
-   python-databases
-   python-flask
-   python-httpx
-@@ -34,7 +35,6 @@
-   python-peewee
-   python-pytest
-   python-sqlalchemy
--  python-sqlmodel
-   python-trio
- 
-   python-email-validator
 @@ -88,7 +88,7 @@
    cd $_name-$pkgver
    python -m installer --destdir=test_dir dist/*.whl

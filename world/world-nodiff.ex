@@ -207,7 +207,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -1804,7 +1803,6 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpgm
-libphonenumber
 libpinyin
 libplacebo
 libplasma
@@ -2926,6 +2924,7 @@ poxml
 pps-tools
 pptpd
 pqiv
+pre-commit
 presage
 print-manager
 prison
@@ -3620,6 +3619,7 @@ python-minidump
 python-mistune
 python-mitmproxy-rs
 python-mitmproxy-wireguard
+python-ml-dtypes
 python-mock
 python-mocket
 python-mongoengine
@@ -3687,6 +3687,8 @@ python-openapi-spec-validator
 python-openid
 python-openpyxl
 python-openstacksdk
+python-opt_einsum
+python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -3721,6 +3723,7 @@ python-parso
 python-partd
 python-parver
 python-passlib
+python-pasta
 python-paste
 python-pastedeploy
 python-pastel
@@ -4162,6 +4165,7 @@ python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlalchemy1.4
 python-sqlite-anyio
+python-sqlmodel
 python-sqlparse
 python-sshpubkeys
 python-stack-data
@@ -4186,6 +4190,7 @@ python-syrupy
 python-tabulate
 python-tabview
 python-tappy
+python-tblib
 python-tempita
 python-tempora
 python-tenacity
@@ -5118,6 +5123,14 @@ telepathy-salut
 tellico
 telly-skout
 template-glib
+tensorflow
+tensorflow-opt
+tensorflow-cuda
+tensorflow-opt-cuda
+python-tensorflow
+python-tensorflow-opt
+python-tensorflow-cuda
+python-tensorflow-opt-cuda
 tepl
 terminator
 terminus-font
@@ -5272,6 +5285,7 @@ time
 timeshift
 timezonemap
 tinycdb
+tinycompress
 tinyprog
 tinyproxy
 tinyxml

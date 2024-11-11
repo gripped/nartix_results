@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,9 +16,7 @@
+ )
+ makedepends=('python-setuptools')
+ checkdepends=(
+-    'cabal-install'
+     'git'
+-    'ghc'
+     'go'
+     'luarocks'
+     'nodejs'
+@@ -41,38 +39,6 @@
+   python setup.py build
+ }
+ 
+-check() {
+-  cd pre-commit-$pkgver
+-  git init
+-  git config user.email "pony@arch"
+-  git config user.name "Lucky Pony"
+-  git config --global protocol.file.allow always
+-  export GIT_AUTHOR_NAME="Lucky Pony"
+-  export GIT_COMMITTER_NAME="Lucky Pony"
+-  export GIT_AUTHOR_EMAIL="pony@arch"
+-  export GIT_COMMITTER_EMAIL="pony@arch"
+-  export VIRTUALENV_NO_DOWNLOAD=1
+-  export PRE_COMMIT_NO_CONCURRENCY=1
+-
+-  python -m venv --system-site-packages venv
+-  source "$PWD/venv/bin/activate"
+-  python setup.py develop
+-
+-  python -m pytest --deselect tests/languages/conda_test.py \
+-                   --deselect tests/languages/coursier_test.py \
+-                   --deselect tests/languages/dart_test.py \
+-                   --deselect tests/languages/docker_image_test.py \
+-                   --deselect tests/languages/docker_test.py \
+-                   --deselect tests/languages/dotnet_test.py \
+-                   --deselect tests/languages/haskell_test.py::test_run_dep \
+-                   --deselect tests/languages/haskell_test.py::test_run_example_executable \
+-                   --deselect tests/languages/swift_test.py \
+-                   --deselect tests/languages/ruby_test.py::test_install_ruby_with_version \
+-                   --deselect tests/languages/ruby_test.py::test_ruby_hook_language_version \
+-                   --deselect tests/languages/ruby_test.py::test_ruby_with_bundle_disable_shared_gems \
+-                   --deselect tests/languages/rust_test.py::test_language_version_with_rustup
+-  deactivate
+-}
+ 
+ package() {
+   cd pre-commit-$pkgver

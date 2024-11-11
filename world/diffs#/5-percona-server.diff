@@ -1,10 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,9 +4,9 @@
- pkgver=8.4.0_1
+@@ -1,12 +1,12 @@
+ 
+ pkgbase=percona-server
+ pkgname=('libperconaserverclient' 'percona-server-clients' 'percona-server')
+-pkgver=8.4.2_2
++pkgver=8.4.0_1
  _pkgver=${pkgver/_/-}
  _myver=${pkgver/_rel*}
--pkgrel=4
+-pkgrel=1
 +pkgrel=4.1
  arch=('x86_64')
 -makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
@@ -12,6 +16,15 @@
               'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'libfido2')
  license=('GPL')
  url="https://www.percona.com/software/mysql-database/percona-server"
+@@ -15,7 +15,7 @@
+         'my.cnf'
+         'mysql-user.conf'
+         'mysqlrouter-user.conf')
+-sha256sums=('29d685dbebd97d67fa7d6f075a2f9cf7b4875be5aa9a572974fcd45205fde046'
++sha256sums=('efa3d75ea4cd055b03ed15f6be1a7b472112885a492f4874cc6f6e70d7f2dee4'
+             'eeb9c6c8f70dd5eb05f735df0cdfc294365b393e5819f26029320e38714069a6'
+             'b467b04d6d06152b2abc33f2a6de63fef0fc922dd5119d2ee1d07d3c1a489731'
+             '5d7710fe88ec6d298175a309c0b776142397b119c468830b2865980292ed5da6'
 @@ -29,13 +29,7 @@
  	       -e s@lib64/mysql@lib/mysql@ \
  	       -i cmake/install_layout.cmake

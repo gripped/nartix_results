@@ -26,6 +26,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -313,6 +314,7 @@ libinput
 libldm
 libmspub
 libnvme
+libphonenumber
 libprocps
 libsidplay
 libsidplayfp
@@ -565,7 +567,6 @@ pyopencl-headers
 python-pyotp
 python-pyudev
 python-signedjson
-python-tblib
 python-teamcity-messages
 python-trustme
 python-ubjson
@@ -727,7 +728,6 @@ thunderbird
 tigervnc
 timew
 tint2
-tinycompress
 tinysparql
 tinysparql-docs
 tmux
