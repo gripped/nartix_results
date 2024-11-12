@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,28 @@
- 
- pkgname=iwd
--pkgver=3.1
-+pkgver=3.0
- pkgrel=1
- pkgdesc='Internet Wireless Daemon'
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url='https://git.kernel.org/cgit/network/wireless/iwd.git/'
  license=('LGPL-2.1-or-later')
  depends=('glibc' 'readline' 'libreadline.so' 'ell' 'gcc-libs')
@@ -15,26 +8,8 @@
 +makedepends=('python-docutils' 'dbus' 'udev')
  optdepends=('qrencode: for displaying QR code after DPP is started')
  source=(https://www.kernel.org/pub/linux/network/wireless/iwd-${pkgver}.tar{.xz,.sign}
--        0001-use-network-group-for-unprivileged-access.diff)
--sha256sums=('a2b6d21315fdd0e060d5f75f5a0cc55018ea9d112a080f2ccd6dae2e1d923ac5'
-+        0001-use-network-group-for-unprivileged-access.diff
-+        0002-fix-scan-segfault.patch)
-+sha256sums=('bd167ab368b6ba302b6c948a4f41f02d233a12e20d5094b1c0393325309f8a60'
-             'SKIP'
--            'd5fb4fb864b7a0632117aa2039df535ab5c1d024ae618a1f09e34dfab8ee0cc7')
-+            'd5fb4fb864b7a0632117aa2039df535ab5c1d024ae618a1f09e34dfab8ee0cc7'
-+            '4471026fb8816132e7f89327d2f0d72b63b6c8c64ffb1c449205dfe52bfec6ac')
- validpgpkeys=('E932D120BC2AEC444E558F0106CA9F5D1DCF2659')
- options=('!lto')
- 
- prepare() {
-   cd ${pkgname}-${pkgver}
-   patch -Np1 -i ../0001-use-network-group-for-unprivileged-access.diff
-+
- 
-   sed -i "s:unit/test-wsc::" Makefile.am
-   autoreconf -vfi
-@@ -35,6 +38,7 @@
+         0001-use-network-group-for-unprivileged-access.diff)
+@@ -35,6 +35,7 @@
  	--enable-wired \
  	--enable-ofono \
  	--enable-hwsim \

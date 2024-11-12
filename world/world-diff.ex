@@ -715,7 +715,6 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
-tailscale
 tcc
 telegram-desktop
 telepathy-glib
@@ -865,4 +864,5 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
+zlib-ng
 znc

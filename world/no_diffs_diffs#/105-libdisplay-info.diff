@@ -1,6 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
+@@ -1,7 +1,9 @@
++
++BUILDENV+=(!check)
+ 
+ pkgname=libdisplay-info
+ pkgver=0.2.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='EDID and DisplayID library'
+ url="https://gitlab.freedesktop.org/emersion/$pkgname"
+ arch=(x86_64)
+@@ -19,12 +21,12 @@
  validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48')
  
  build() {
@@ -9,6 +20,12 @@
  	ninja -C build
  }
  
+ check() {
+-	meson test -C build --no-rebuild --print-errorlogs
++	meson test -C build --no-rebeuild --print-errorlogs
+ }
+ 
+ package() {
 
 
 ############# Stripped diff below #################

@@ -3412,6 +3412,7 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
+python-google-auth-oauthlib
 python-google-auth
 python-googleapis-common-protos
 python-graphene
@@ -5087,6 +5088,7 @@ t1lib
 t1utils
 taglib
 taglib1
+tailscale
 tali
 talloc
 tang
@@ -5653,7 +5655,6 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
-zlib-ng
 zopfli
 zsh-autosuggestions
 zsh-completions
