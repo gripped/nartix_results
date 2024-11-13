@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=minizip-ng
+ pkgver=4.0.7
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Fork of the popular zip manipulation library found in the zlib distribution'
+ arch=(x86_64)
+ url='https://github.com/zlib-ng/minizip-ng'
+@@ -10,7 +10,7 @@
+          glibc
+          openssl
+          xz
+-         zlib-ng
++         zlib
+          zstd)
+ makedepends=(cmake
+              git)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,5 +4,5 @@
+ glibc
+ openssl
+ xz
+-zlib-ng
++zlib
+ zstd

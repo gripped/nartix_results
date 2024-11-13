@@ -26,7 +26,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -218,7 +217,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -701,6 +699,7 @@ snapper
 solid
 spice-vdagent
 squid
+srt
 sshguard
 sslh
 sssd
@@ -727,6 +726,7 @@ thunderbird
 tigervnc
 timew
 tint2
+tinycompress
 tinysparql
 tinysparql-docs
 tmux
@@ -807,6 +807,7 @@ xf86-input-vmmouse
 xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-ati
+xf86-video-fbdev
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-openchrome
@@ -864,5 +865,4 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zlib-ng
 znc

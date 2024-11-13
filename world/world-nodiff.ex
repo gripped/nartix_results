@@ -207,6 +207,7 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
 boinc
 boinc-nox
 bomber
@@ -1010,6 +1011,7 @@ immer
 incidenceeditor
 indent
 iniparser
+inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -5041,7 +5043,6 @@ squashfs-tools
 squashfuse
 sratom
 sratom-docs
-srt
 sshfs
 sshpass
 startup-notification
@@ -5287,7 +5288,6 @@ time
 timeshift
 timezonemap
 tinycdb
-tinycompress
 tinyprog
 tinyproxy
 tinyxml
@@ -5532,7 +5532,6 @@ xf86-input-elographics
 xf86-input-libinput
 xf86-input-synaptics
 xf86-video-dummy
-xf86-video-fbdev
 xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo
@@ -5655,6 +5654,7 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
+zlib-ng
 zopfli
 zsh-autosuggestions
 zsh-completions

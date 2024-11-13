@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,9 +14,6 @@
+@@ -15,9 +15,6 @@
                "910C28608D33DDE689C03290997C5A3CD3167CB5") # Samuel Karp
  sha256sums=('ec9309b87ceabceaf89de06f2783e01e3c1c001a2dfc4d866724db3a5c143e87')
  
@@ -10,7 +10,7 @@
  
  build() {
    cd "${pkgname}"
-@@ -33,7 +30,6 @@
+@@ -34,7 +31,6 @@
  package() {
    cd "${pkgname}"
    make PREFIX=/usr DESTDIR="$pkgdir/" install
