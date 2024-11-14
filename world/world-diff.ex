@@ -26,6 +26,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bogofilter
 bolt
 box2d
 brightnessctl
@@ -130,6 +131,7 @@ geoclue
 ghc-filesystem
 gjs
 gnome-bluetooth-3.0
+gnome-contacts
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -259,7 +261,6 @@ jedi-language-server
 js78
 jupyter-server-ydoc
 kcoreaddons
-kdoctools
 kgamma
 kismet
 kitty
@@ -536,6 +537,7 @@ pluma
 plymouth
 podman
 podman-docker
+polari
 polkit
 postgresql-old-upgrade
 postgresql
@@ -717,7 +719,6 @@ system-config-printer
 tcc
 telegram-desktop
 telepathy-glib
-texlive-bin
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

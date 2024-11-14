@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,15 @@
- 
- pkgname=knot
- pkgver=3.4.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="High-performance authoritative-only DNS server"
- arch=(x86_64)
+@@ -7,7 +7,7 @@
  url="https://www.knot-dns.cz/"
  license=(GPL3)
  depends=(libedit gnutls liburcu lmdb
@@ -15,11 +8,8 @@
 +         libidn2 libcap-ng
           fstrm protobuf-c libmaxminddb
           libbpf libxdp libnghttp2 libmnl)
--makedepends=(python-sphinx)
- backup=('etc/knot/knot.conf')
- source=("https://secure.nic.cz/files/knot-dns/${pkgname}-${pkgver}.tar.xz"{,.asc})
- sha256sums=('2730b11398944faa5151c51b0655cf26631090343c303597814f2a57df424736'
-@@ -50,7 +49,6 @@
+ makedepends=(python-sphinx)
+@@ -50,7 +50,6 @@
      rm "${pkgdir}"/etc/knot/example.com.zone
      mv "${pkgdir}"/etc/knot/{knot.sample.conf,knot.conf}
  
@@ -33,9 +23,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -11,5 +11,3 @@
- libxdp
+@@ -12,4 +12,3 @@
  lmdb
  protobuf-c
--python-sphinx
+ python-sphinx
 -systemd

@@ -207,7 +207,6 @@ blueman
 bluez-qt
 bluez-qt5
 bmake
-bogofilter
 boinc
 boinc-nox
 bomber
@@ -727,7 +726,6 @@ gnome-color-manager
 gnome-common
 gnome-connections
 gnome-console
-gnome-contacts
 gnome-control-center
 gnome-keybindings
 gnome-devel-docs
@@ -1234,6 +1232,7 @@ kdialog
 kdiamond
 kdnssd
 kdnssd5
+kdoctools
 kdoctools5
 kdsingleapplication
 kdsoap-ws-discovery-client
@@ -2889,7 +2888,6 @@ poco
 podofo-0.9
 podofo
 podofo-tools
-polari
 polkit-gnome
 polkit-kde-agent
 polkit-qt
@@ -5269,6 +5267,7 @@ testdisk
 tevent
 tex-gyre-fonts
 texi2html
+texlive-bin
 texlive-core
 texlive-fontsextra
 texlive-formatsextra
