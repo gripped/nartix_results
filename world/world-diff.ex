@@ -131,7 +131,6 @@ geoclue
 ghc-filesystem
 gjs
 gnome-bluetooth-3.0
-gnome-contacts
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -259,6 +258,7 @@ openjdk8-src
 openjdk8-doc
 jedi-language-server
 js78
+julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
@@ -318,6 +318,7 @@ libprocps
 libsidplay
 libsidplayfp
 libtg_owt
+libtpms
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -400,8 +401,6 @@ matrix-synapse
 media-player-info
 memcached
 mesa
-libva-mesa-driver
-mesa-vdpau
 opencl-clover-mesa
 opencl-rusticl-mesa
 vulkan-intel
@@ -537,7 +536,6 @@ pluma
 plymouth
 podman
 podman-docker
-polari
 polkit
 postgresql-old-upgrade
 postgresql
@@ -655,6 +653,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -679,6 +678,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-hashdiff
 ruby-racc
 ruby-sys-filesystem
 samba
@@ -711,6 +711,7 @@ stunnel
 sway
 swayidle
 switcheroo-control
+swtpm
 syslog-ng
 sysprof
 libsysprof-capture
@@ -734,6 +735,7 @@ tmux
 tor
 torsocks
 toxcore
+tpm2-abrmd
 tracker3-miners
 tracker3
 tracker3-docs

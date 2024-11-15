@@ -179,6 +179,7 @@ lxqt-qtplugin
 lxqt-runner
 lxqt-session
 lxqt-sudo
+lxqt-themes
 lxrandr
 lxrandr-gtk3
 lxtask

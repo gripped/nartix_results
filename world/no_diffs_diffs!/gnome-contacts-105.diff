@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -56,7 +56,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ git apply -3 ../gnome-contacts-cancel-action.patch
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

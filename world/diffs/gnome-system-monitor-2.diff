@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gnome-system-monitor
- pkgver=47.0
--pkgrel=3
-+pkgrel=2
- pkgdesc="View current processes and monitor system state"
- url="https://apps.gnome.org/SystemMonitor"
- arch=(x86_64)
 @@ -24,8 +24,6 @@
    libsigc++-3.0
    pango
@@ -18,12 +9,7 @@
  )
  makedepends=(
    appstream-glib
-@@ -40,12 +38,10 @@
- 
- prepare() {
-   cd $pkgname
--
--  git cherry-pick -n 714faa9fad2a41f6353a242d48e5cb59b6ecdaac
+@@ -45,7 +43,7 @@
  }
  
  build() {

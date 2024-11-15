@@ -10,8 +10,6 @@ lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
 lib32-mesa
-lib32-libva-mesa-driver
-lib32-mesa-vdpau
 lib32-opencl-clover-mesa
 lib32-opencl-rusticl-mesa
 lib32-vulkan-intel

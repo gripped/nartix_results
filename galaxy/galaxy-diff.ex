@@ -17,7 +17,6 @@ libretro-pcsx2
 libxfce4ui
 light
 lxpanel
-lxqt-themes
 lxsession
 lxsession-gtk3
 lxterminal

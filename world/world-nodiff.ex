@@ -726,6 +726,7 @@ gnome-color-manager
 gnome-common
 gnome-connections
 gnome-console
+gnome-contacts
 gnome-control-center
 gnome-keybindings
 gnome-devel-docs
@@ -1094,7 +1095,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1905,7 +1905,6 @@ libtomcrypt
 libtommath
 libtorrent-rasterbar
 libtorrent
-libtpms
 libtraceevent
 libtraceevent-docs
 libtracefs
@@ -2888,6 +2887,7 @@ poco
 podofo-0.9
 podofo
 podofo-tools
+polari
 polkit-gnome
 polkit-kde-agent
 polkit-qt
@@ -4428,7 +4428,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4673,7 +4672,6 @@ ruby-get_process_mem
 ruby-getoptlong
 ruby-glib2
 ruby-haml
-ruby-hashdiff
 ruby-hitimes
 ruby-hocon
 ruby-hoe
@@ -5072,7 +5070,6 @@ swaylock
 sweeper
 swell-foop
 swig
-swtpm
 sxhkd
 sxiv
 syncthing
@@ -5309,7 +5306,6 @@ totem
 towncrier
 toxic
 tp_smapi
-tpm2-abrmd
 tpm2-tools
 transcode
 transmageddon
