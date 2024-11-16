@@ -196,7 +196,6 @@ benchmark
 bftpd
 bigsh0t
 bin86
-bind
 black-hole-solver
 blackbox
 blinken
@@ -428,6 +427,7 @@ digikam
 directx-headers
 directx-shader-compiler
 discount
+discover
 distcc
 distro-info-data
 distro-info
@@ -923,7 +923,6 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
-hdf5
 helix
 help2man
 herbstluftwm
@@ -1497,7 +1496,6 @@ level-zero
 level-zero-headers
 level-zero-loader
 leveldb
-lftp
 lgi
 lua-lgi
 lua51-lgi
@@ -2140,7 +2138,6 @@ mailgraph
 mailimporter
 mailman-web
 mailman3-hyperkitty
-mailman3
 maim
 malcontent
 libmalcontent
@@ -2277,7 +2274,6 @@ mtdev
 mtools
 mtr
 mtr-gtk
-muffin
 mujs
 muparser
 mupdf
@@ -2319,6 +2315,7 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 nemo
+neochat
 neofetch
 neomutt
 neon
@@ -4428,6 +4425,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -5121,14 +5119,6 @@ telepathy-salut
 tellico
 telly-skout
 template-glib
-tensorflow
-tensorflow-opt
-tensorflow-cuda
-tensorflow-opt-cuda
-python-tensorflow
-python-tensorflow-opt
-python-tensorflow-cuda
-python-tensorflow-opt-cuda
 tepl
 terminator
 terminus-font
@@ -5424,7 +5414,6 @@ virtualgl
 vkd3d
 vmaf
 vncdotool
-vnstat
 vokoscreen
 volatility3
 volume_key
@@ -5527,6 +5516,7 @@ xf86-input-elographics
 xf86-input-libinput
 xf86-input-synaptics
 xf86-video-dummy
+xf86-video-fbdev
 xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo

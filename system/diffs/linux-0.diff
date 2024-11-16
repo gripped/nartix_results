@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,11 @@
+@@ -1,7 +1,12 @@
 +
 +_ver=6.11.7
 +_rel=1
@@ -8,11 +8,13 @@
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
--pkgver=6.11.7.arch1
+-pkgver=6.11.8.arch1
+-pkgrel=2
 +pkgver=${_ver}.${_artix}
- pkgrel=1
++pkgrel=1
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
+ arch=(x86_64)
 @@ -27,10 +32,10 @@
    !debug
    !strip
@@ -27,17 +29,25 @@
    $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
    config  # the main kernel config file
  )
-@@ -43,14 +48,14 @@
+@@ -39,18 +44,18 @@
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
+   83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
+ )
+-sha256sums=('aee8a844fe152420bece70ffae8525b9b23089aa4da31fa32f30e1859bf93c3d'
++sha256sums=('0bf5ec644817d7928920f763581311f5bf258a92759cf2f30985da743af3ebb2'
              'SKIP'
-             'e4da4d04fcab3feebd34a1a02e8a593131b083ac690c863605791633fd434271'
+-            'f1fc632a9ba819dd8aa019ddf59df554a906a5e17838566c9203b7a7582d8043'
++            'e4da4d04fcab3feebd34a1a02e8a593131b083ac690c863605791633fd434271'
              'SKIP'
--            'f5f3364c06ede1b448320c95fddbcad618a74c336d95411fa50517544e3cd5bf')
+-            '031a9b86734de040aa0bc46dcdbeef509d01de8ead9cc90355ea49757b7766e8')
+-b2sums=('2d3b56bf4fa3a3d20c5379856c9e2d2ce7220bc05320859e123053d08138dd380f9aa7a9d11df3a8fbe07583a28bafffc0ffd3ed9cf28ebf09d6af7e97a0ed5f'
 +            '279ba4630cfd25fdecf6934b9584c660398449593cff41de9fa8c8d3dc503832')
- b2sums=('4d1aec68c93f3159099ac02a6d4bbc46f207383079ea3117102b9d657964132d946b9579e4e8582a0cf9c79170de0b7a0c5fac2b6e1b36aabd5e66340bec3c18'
++b2sums=('4d1aec68c93f3159099ac02a6d4bbc46f207383079ea3117102b9d657964132d946b9579e4e8582a0cf9c79170de0b7a0c5fac2b6e1b36aabd5e66340bec3c18'
          'SKIP'
-         '933094ded4faddf05a96cf7a6c3c07b751c3d9bb59dcadd2a98428b813d38dd01b54073701d811089ce4eb8312b7b90b66a00905f4d6b471d1b30266bc1457f8'
+-        'd08d4aa2053a0b40c879aa7f6e1a58d271ea7d433dad9023eadedd0eeb2f67d2ea93d90137d84e0ce41d5104dfde1a8a20e0fb93f0faa124b6e44dda631b8024'
++        '933094ded4faddf05a96cf7a6c3c07b751c3d9bb59dcadd2a98428b813d38dd01b54073701d811089ce4eb8312b7b90b66a00905f4d6b471d1b30266bc1457f8'
          'SKIP'
--        '414392c94a717000449fb57790bd9d7222582c89588451cd7fac0a7f8c6980ef02c1fedb07ee40d3975488bc9b705721c74801081ac2e8437854116af6a1dd9f')
+-        '2af3ec4f6e4dd033856d5306ec37a1e02d804c96d55cae7ba64f6b4d7d2b0e14d9888618cc7f2af5211a76d106cc6cc1f41f5fc10e22584051067a1ef4e5c868')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        '9eb29510dff03ff12bdb393d6fab5958ca406ed01187245b388e84f16aa6ef44d6781f2899a5f6dc56c7d8a630443d603c34cc650ecb4e0d3bfb90acfb71770e')

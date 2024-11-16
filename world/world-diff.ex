@@ -17,6 +17,7 @@ avahi
 awesome
 ayatana-ido
 bash-bats
+bind
 bluedevil
 bluez
 bluez-utils
@@ -70,7 +71,6 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
-discover
 dns-over-https
 docker
 dolphin-emu
@@ -208,6 +208,7 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
+hdf5
 hexchat
 hidapi
 hipify-clang
@@ -271,6 +272,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+lftp
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -365,6 +367,7 @@ lxqt-qtplugin
 lxqt-session
 lxqt-themes
 ly
+mailman3
 mako
 maliit-framework
 marco
@@ -421,6 +424,7 @@ mosquitto
 mousepad
 mozo
 mpd
+muffin
 multipath-tools
 mumble
 mumble-server
@@ -434,7 +438,6 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
-neochat
 netavark
 netplan
 networkmanager
@@ -653,7 +656,6 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -720,6 +722,14 @@ system-config-printer
 tcc
 telegram-desktop
 telepathy-glib
+tensorflow
+tensorflow-opt
+tensorflow-cuda
+tensorflow-opt-cuda
+python-tensorflow
+python-tensorflow-opt
+python-tensorflow-cuda
+python-tensorflow-opt-cuda
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -776,6 +786,7 @@ v4l-utils
 vault
 vlc
 libvlc
+vnstat
 vpnc
 vte3
 vte-common
@@ -810,7 +821,6 @@ xf86-input-vmmouse
 xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-ati
-xf86-video-fbdev
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-openchrome

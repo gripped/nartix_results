@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(tensorflow tensorflow-opt tensorflow-cuda tensorflow-opt-cuda python-tensorflow python-tensorflow-opt python-tensorflow-cuda python-tensorflow-opt-cuda)
+ pkgver=2.18.0
+ _pkgver=2.18.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Library for computation using data flow graphs for scalable machine learning"
+ url="https://www.tensorflow.org/"
+ license=('APACHE')
+@@ -129,7 +129,7 @@
+ 
+   echo "Building with cuda and with non-x86-64 optimizations"
+   cd "${srcdir}"/tensorflow-${_pkgver}-opt-cuda
+-  export CC_OPT_FLAGS="-march=x86-64-v3 -O2"
++  export CC_OPT_FLAGS="-march=haswell -O2"
+   export TF_NEED_CUDA=1
+   ./configure
+   bazel \
+@@ -159,7 +159,7 @@
+ 
+   echo "Building without cuda and with non-x86-64 optimizations"
+   cd "${srcdir}"/tensorflow-${_pkgver}-opt
+-  export CC_OPT_FLAGS="-march=x86-64-v3 -O2"
++  export CC_OPT_FLAGS="-march=haswell -O2"
+   export TF_NEED_CUDA=0
+   ./configure
+   bazel \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -65,7 +65,7 @@
+ //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow
+ echo "Building with cuda and with non-x86-64 optimizations"
+ cd "${srcdir}"/tensorflow-${_pkgver}-opt-cuda
+-export CC_OPT_FLAGS="-march=x86-64-v3 -O2"
++export CC_OPT_FLAGS="-march=haswell -O2"
+ export TF_NEED_CUDA=1
+ ./configure
+ bazel \
+@@ -91,7 +91,7 @@
+ //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu
+ echo "Building without cuda and with non-x86-64 optimizations"
+ cd "${srcdir}"/tensorflow-${_pkgver}-opt
+-export CC_OPT_FLAGS="-march=x86-64-v3 -O2"
++export CC_OPT_FLAGS="-march=haswell -O2"
+ export TF_NEED_CUDA=0
+ ./configure
+ bazel \
