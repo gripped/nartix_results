@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -61,8 +61,8 @@
+ 
+ build() {
+   local configure_options=(
++    --enable-systemd=no
+     --enable-gssapi-krb5=yes
+-    --enable-systemd=yes
+     --enable-zos-remote
+     --libexecdir=/usr/lib/audit
+     --prefix=/usr
+@@ -125,6 +125,8 @@
+     cd "$pkgdir"
+     _pick python-audit usr/lib/python*
+   )
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+ package_python-audit() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +0,0 @@
+-apparmor
+-audit
+-glibc
+-krb5
+-libaudit.so
+-libauparse.so
+-libcap-ng
+-libcap-ng.so
+-libgssapi_krb5.so
+-libkrb5.so
+-libldap
+-linux-api-headers
+-python
+-swig
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ }
+ build() {
+ local configure_options=(
++--enable-systemd=no
+ --enable-gssapi-krb5=yes
+---enable-systemd=yes
+ --enable-zos-remote
+ --libexecdir=/usr/lib/audit
+ --prefix=/usr

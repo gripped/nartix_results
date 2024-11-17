@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-kombu
+ _pkgname=${pkgname#python-}
+ pkgver=5.4.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc="A messaging library for Python"
+ arch=(any)
+ url="https://github.com/celery/kombu"
+@@ -27,7 +27,7 @@
+   python-pymongo
+   python-pyro
+   python-pytest
+-  python-pytest-freezer
++  python-pytest-freezegun
+   python-pytest-sugar
+   python-pytz
+   python-redis
+@@ -59,8 +59,7 @@
+   cd "$_pkgname-$pkgver"
+   pytest -v \
+     --ignore t/unit/transport/test_azureservicebus.py \
+-    --ignore t/unit/transport/test_azurestoragequeues.py \
+-    --deselect t/unit/transport/test_redis.py::test_Channel::test_global_keyprefix_transaction
++    --ignore t/unit/transport/test_azurestoragequeues.py
+ }
+ 
+ package() {

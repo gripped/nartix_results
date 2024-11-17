@@ -3,9 +3,19 @@
 @@ -1,7 +1,7 @@
  
  pkgname=hugin
- pkgver=2023.0.0
--pkgrel=5
+-pkgver=2024.0.0
+-pkgrel=1
++pkgver=2023.0.0
 +pkgrel=4
  pkgdesc="Panorama photo stitcher"
  arch=(x86_64)
  url="http://hugin.sourceforge.net/"
+@@ -39,7 +39,7 @@
+             'rawtherapee: RAW import using rawtherapee')
+ _archive="$pkgname-$pkgver"
+ source=("https://downloads.sourceforge.net/$pkgname/$_archive.tar.bz2")
+-sha256sums=('d156fd109587da60d5da580d245f36d74dfba4d28f54ef5519ee43aff6092743')
++sha256sums=('04a39fccc6017e0544c639bd22309472c574d35b3455cbade1fc3870e631632b')
+ 
+ prepare() {
+   sed -e 's|copy_option::overwrite_if_exists|copy_options::overwrite_existing|' -i $_archive/src/hugin_base/hugin_utils/filesystem.h

@@ -490,11 +490,6 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
-edk2
-edk2-arm
-edk2-aarch64
-edk2-shell
-edk2-ovmf
 egl-gbm
 egl-wayland
 eglexternalplatform
@@ -3108,7 +3103,6 @@ python-bincopy
 python-biopython
 python-biscuits
 python-bitarray
-python-bitstring
 python-black
 python-bleach
 python-blessed
@@ -3161,8 +3155,6 @@ python-chardet
 python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
-python-cheroot
-python-cherrypy
 python-claripy
 python-cleo
 python-clevercsv
@@ -3548,7 +3540,6 @@ python-keyutils
 python-kiwisolver
 python-kombu
 python-krb5
-python-kubernetes
 python-lark-parser
 python-lazr.config
 python-lazr.delegates
@@ -3779,7 +3770,6 @@ python-poetry-plugin-export
 python-poetry
 python-pooch
 python-pook
-python-portend
 python-pprofile
 python-prance
 python-praw
@@ -3931,7 +3921,6 @@ python-pytest-examples
 python-pytest-expect
 python-pytest-flake8
 python-pytest-forked
-python-pytest-freezegun
 python-pytest-freezer
 python-pytest-home
 python-pytest-html
@@ -4190,7 +4179,6 @@ python-tabview
 python-tappy
 python-tblib
 python-tempita
-python-tempora
 python-tenacity
 python-termcolor
 python-terminado
@@ -4299,7 +4287,6 @@ python-websockets
 python-webtest
 python-werkzeug
 python-whatthepatch
-python-wheel
 python-wheezy-template
 python-whoosh
 python-wilderness

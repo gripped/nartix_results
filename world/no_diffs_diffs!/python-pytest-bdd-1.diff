@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-pytest-bdd
+-pkgver=8.0.0
++pkgver=7.3.0
+ pkgrel=1
+ pkgdesc='BDD library for the pytest runner'
+ arch=('any')
+@@ -8,7 +8,6 @@
+ url='https://github.com/pytest-dev/pytest-bdd'
+ depends=(
+   'python'
+-  'python-gherkin'
+   'python-mako'
+   'python-packaging'
+   'python-parse'
+@@ -25,7 +24,7 @@
+ )
+ checkdepends=('python-setuptools')
+ source=("git+$url.git#tag=$pkgver")
+-sha512sums=('39ebf30d41e00a27d943d232917fa0b8632445c28ca085f77f20aa730be4224164f29196b647bb9fc50760c0d1909251c84b4bbfbfe9f7efdf9a7e6d37b8caa5')
++sha512sums=('d253556e6e823287d6e229ed677c0a366e044ea46e0b9e8c29448797e6da10c8f7820d4eee4cbd798db88017db305f4a2b9a60c534eb439917ef502ffbaac116')
+ 
+ build() {
+   cd pytest-bdd
+@@ -45,3 +44,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ git
+ python
+ python-build
+-python-gherkin
+ python-installer
+ python-mako
+ python-packaging
