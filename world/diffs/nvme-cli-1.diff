@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,17 @@
- 
- pkgname=nvme-cli
--pkgver=2.11
-+pkgver=2.10.2
- pkgrel=1
- pkgdesc="NVM-Express user space tooling for Linux"
+@@ -6,8 +6,8 @@
  arch=('x86_64')
  url="https://github.com/linux-nvme/nvme-cli"
  license=('GPL')
@@ -17,11 +11,6 @@
  options=(strip)
  install=nvme-cli.install
  source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
--sha256sums=('5e4dc73dbb488c6b1e6ad1c78d0c62b624076fcb0c052bd9039674a1dbd6517b')
-+sha256sums=('b3c256959ff34124788aa96c8602c9cef00705d01cc3cb9322bf3269e00ae904')
- 
- build() {
- 	cd "${pkgname}-${pkgver}"
 @@ -28,7 +28,7 @@
  	--auto-features enabled \
  	-D b_lto=true -D b_pie=true \

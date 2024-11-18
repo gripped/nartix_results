@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,8 +4,8 @@
+   openal
+   openal-examples
+ )
+-pkgver=1.24.0
+-pkgrel=1
++pkgver=1.23.1
++pkgrel=3
+ pkgdesc="Cross-platform 3D audio library, software implementation"
+ url="https://github.com/kcat/openal-soft"
+ arch=(x86_64)
+@@ -31,7 +31,7 @@
+   sdl2
+ )
+ source=("git+https://github.com/kcat/openal-soft#tag=$pkgver")
+-b2sums=('557abe7c8ee739e236f36fa65db4a2a1ad5c3e92628c8ff822de1856f310a71a654398e7042c17b0dbceda73b773007e0982b9c5fb97be1bb3fc7da723a7b62b')
++b2sums=('5bf1c0c39b65de526ea5b4cf7a28ec72605d6ab2c97b8be2da462d6bec057c891890c88a77c441cff2c33667de3307a5db1016e2b5de34911dcc5bc492517011')
+ 
+ prepare() {
+   cd openal-soft
+@@ -70,8 +70,8 @@
+   install -Dt "$pkgdir/usr/share/doc/openal" -m644 openal-soft/docs/*
+ 
+   cd "$pkgdir"
+-  _pick examples usr/bin/al{direct,ffplay,hrtf,latency,loopback,multireverb}
+-  _pick examples usr/bin/al{debug,lafplay,play,record,reverb,stream,tonegen}
++  _pick examples usr/bin/al{ffplay,hrtf,latency,loopback,multireverb}
++  _pick examples usr/bin/al{play,record,reverb,stream,tonegen}
+ }
+ 
+ package_openal-examples() {

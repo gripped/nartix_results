@@ -1,5 +1,6 @@
 0ad
 accountsservice
+adios2
 alacritty
 alsa-utils
 apache
@@ -80,11 +81,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-edk2
-edk2-arm
-edk2-aarch64
-edk2-shell
-edk2-ovmf
 element.io
 element-web
 element-desktop
@@ -418,6 +414,7 @@ vulkan-radeon
 vulkan-swrast
 vulkan-virtio
 mesa-docs
+mgard
 mgba
 libmgba
 mgba-sdl

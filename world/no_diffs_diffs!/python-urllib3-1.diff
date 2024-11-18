@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=urllib3
+ pkgname=python-urllib3
+ pkgver=1.26.20
+-pkgrel=3
++pkgrel=1
+ pkgdesc="HTTP library with thread-safe connection pooling and file post support"
+ arch=("any")
+ url="https://github.com/urllib3/urllib3"
+@@ -25,7 +25,7 @@
+   'python-pyopenssl'
+   'python-pysocks'
+   'python-pytest'
+-  'python-pytest-freezer'
++  'python-pytest-freezegun'
+   'python-pytest-timeout'
+   'python-tornado'
+   'python-trustme'
+@@ -53,9 +53,6 @@
+ check() {
+   local pytest_options=(
+     -vv
+-    --deselect=test/contrib/test_pyopenssl.py::TestClientCerts::test_missing_client_certs_raises_error
+-    --deselect=test/contrib/test_pyopenssl.py::TestHTTPS::test_client_no_intermediate
+-    --deselect=test/contrib/test_pyopenssl.py::TestHTTPS_TLSv1_3::test_client_no_intermediate
+     --deselect=test/contrib/test_pyopenssl.py::TestSSL::test_ssl_read_timeout
+     --deselect=test/with_dummyserver/test_socketlevel.py::TestSSL::test_ssl_read_timeout
+   )
+@@ -70,5 +67,5 @@
+ package() {
+   cd $_name-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
++  install -Dm644 LICENSE.txt -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }

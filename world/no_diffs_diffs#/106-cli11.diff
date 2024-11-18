@@ -1,7 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,7 @@
- sha256sums=('73b7ec52261ce8fe980a29df6b4ceb66243bb0b779451dbd3d014cfec9fdbb58')
+@@ -1,17 +1,17 @@
+ 
+ pkgname=cli11
+-pkgver=2.4.2
++pkgver=2.4.1
+ pkgrel=1
+ pkgdesc="Command line parser for C++11"
+ arch=(any)
+ url="https://github.com/CLIUtils/CLI11"
+-license=(BSD-3-Clause)
++license=(BSD)
+ makedepends=(cmake)
+ source=(${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('f2d893a65c3b1324c50d4e682c0cdc021dd0477ae2c048544f39eed6654b699a')
++sha256sums=('73b7ec52261ce8fe980a29df6b4ceb66243bb0b779451dbd3d014cfec9fdbb58')
  
  build() {
 -  cmake -B build -S ${pkgname^^}-${pkgver} \

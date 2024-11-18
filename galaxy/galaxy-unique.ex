@@ -38,6 +38,7 @@ grub-theme
 htpdate
 iso-profiles
 kotatogram-desktop-git
+labwc
 lib32-artix-archlinux-support
 libfoo
 liboctopi

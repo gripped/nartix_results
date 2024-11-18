@@ -18,7 +18,6 @@ acpi_call
 acpica
 acpid
 acpilight
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-icon-theme-legacy
@@ -490,6 +489,11 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
+edk2
+edk2-arm
+edk2-aarch64
+edk2-shell
+edk2-ovmf
 egl-gbm
 egl-wayland
 eglexternalplatform
@@ -2211,7 +2215,6 @@ meson-python
 meson
 messagelib
 metalog
-mgard
 micro
 microsoft-gsl
 milou
