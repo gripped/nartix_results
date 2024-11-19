@@ -195,6 +195,7 @@ benchmark
 bftpd
 bigsh0t
 bin86
+bind
 black-hole-solver
 blackbox
 blinken
@@ -892,8 +893,6 @@ gtksourceview3
 gtksourceview4
 gtksourceview5
 gtksourceview5-docs
-gtksourceviewmm
-gtksourceviewmm-docs
 gtkspell
 gtkspell3
 gts
@@ -1495,6 +1494,7 @@ level-zero
 level-zero-headers
 level-zero-loader
 leveldb
+lftp
 lgi
 lua-lgi
 lua51-lgi
@@ -4592,9 +4592,7 @@ ruby-build-files
 ruby-builder
 ruby-bump
 ruby-bundler
-ruby-byebug
 ruby-cgi
-ruby-character_set
 ruby-chef-utils
 ruby-childprocess
 ruby-chronic
@@ -4690,7 +4688,6 @@ ruby-loofah
 ruby-m
 ruby-manpages
 ruby-mapping
-ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
@@ -4746,7 +4743,6 @@ ruby-paint
 ruby-parallel
 ruby-parser
 ruby-path_expander
-ruby-patron
 ruby-pcaprub
 ruby-permessage_deflate
 ruby-pkg-config
@@ -4786,8 +4782,6 @@ ruby-rbs
 ruby-rbtree
 ruby-rdiscount
 ruby-rdoc
-ruby-redcarpet
-ruby-redcloth
 ruby-regexp_parser
 ruby-regexp_property_values
 ruby-reline
@@ -4868,7 +4862,6 @@ ruby-tmpdir
 ruby-tomlrb
 ruby-tracer
 ruby-traces
-ruby-trenni
 ruby-typeprof
 ruby-tzinfo
 ruby-unf
@@ -4961,7 +4954,6 @@ shunit2
 signify
 signon-kwallet-extension
 signon-plugin-oauth2
-signon-ui
 signond
 simde
 simple-scan
@@ -5083,6 +5075,7 @@ tcsh
 tdb
 tea
 tecla
+telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
@@ -5264,6 +5257,7 @@ time
 timeshift
 timezonemap
 tinycdb
+tinycompress
 tinyprog
 tinyproxy
 tinyxml

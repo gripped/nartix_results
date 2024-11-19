@@ -18,7 +18,6 @@ avahi
 awesome
 ayatana-ido
 bash-bats
-bind
 bluedevil
 bluez
 bluez-utils
@@ -196,6 +195,8 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gtksourceviewmm
+gtksourceviewmm-docs
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -273,7 +274,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-lftp
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -690,9 +690,16 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-byebug
+ruby-character_set
 ruby-hashdiff
+ruby-markly
+ruby-patron
 ruby-racc
+ruby-redcarpet
+ruby-redcloth
 ruby-sys-filesystem
+ruby-trenni
 samba
 libwbclient
 ldb
@@ -708,6 +715,7 @@ seatd
 sfml
 shairport-sync
 signal-desktop
+signon-ui
 smartmontools
 snapper
 solid
@@ -730,7 +738,6 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
-telegram-desktop
 telepathy-glib
 tensorflow
 tensorflow-opt
@@ -748,7 +755,6 @@ thunderbird
 tigervnc
 timew
 tint2
-tinycompress
 tinysparql
 tinysparql-docs
 tmux
