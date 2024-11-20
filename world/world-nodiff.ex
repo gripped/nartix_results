@@ -248,7 +248,6 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
-calf
 camlp-streams
 camlp4
 cantarell-fonts
@@ -893,6 +892,8 @@ gtksourceview3
 gtksourceview4
 gtksourceview5
 gtksourceview5-docs
+gtksourceviewmm
+gtksourceviewmm-docs
 gtkspell
 gtkspell3
 gts
@@ -921,6 +922,7 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
+hdf5
 helix
 help2man
 herbstluftwm
@@ -1092,6 +1094,7 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
+julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1801,6 +1804,7 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpgm
+libphonenumber
 libpinyin
 libplacebo
 libplasma
@@ -4592,7 +4596,9 @@ ruby-build-files
 ruby-builder
 ruby-bump
 ruby-bundler
+ruby-byebug
 ruby-cgi
+ruby-character_set
 ruby-chef-utils
 ruby-childprocess
 ruby-chronic
@@ -4658,6 +4664,7 @@ ruby-get_process_mem
 ruby-getoptlong
 ruby-glib2
 ruby-haml
+ruby-hashdiff
 ruby-hitimes
 ruby-hocon
 ruby-hoe
@@ -4688,6 +4695,7 @@ ruby-loofah
 ruby-m
 ruby-manpages
 ruby-mapping
+ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
@@ -4743,6 +4751,7 @@ ruby-paint
 ruby-parallel
 ruby-parser
 ruby-path_expander
+ruby-patron
 ruby-pcaprub
 ruby-permessage_deflate
 ruby-pkg-config
@@ -4782,8 +4791,9 @@ ruby-rbs
 ruby-rbtree
 ruby-rdiscount
 ruby-rdoc
+ruby-redcarpet
+ruby-redcloth
 ruby-regexp_parser
-ruby-regexp_property_values
 ruby-reline
 ruby-rexml
 ruby-ronn-ng
@@ -4862,6 +4872,7 @@ ruby-tmpdir
 ruby-tomlrb
 ruby-tracer
 ruby-traces
+ruby-trenni
 ruby-typeprof
 ruby-tzinfo
 ruby-unf
@@ -4874,7 +4885,6 @@ ruby-vcr
 ruby-vimrunner
 ruby-warning
 ruby-warnings_logger
-ruby-webmock
 ruby-webrick
 ruby-websocket-driver
 ruby-websocket-extensions
@@ -5624,6 +5634,7 @@ zita-resampler-docs
 zix
 zix-docs
 zlib-ng
+zlib-ng-compat
 zopfli
 zsh-autosuggestions
 zsh-completions

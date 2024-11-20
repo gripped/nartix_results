@@ -44,6 +44,7 @@ libfoo
 liboctopi
 libpamac
 librewolf
+libsfdo
 libtree
 libwireplumber-4.0-compat
 lxdm-dinit

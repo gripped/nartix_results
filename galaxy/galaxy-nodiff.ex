@@ -335,6 +335,7 @@ scummvm
 signal-desktop
 stalonetray
 subtitleeditor
+telegram-desktop
 terminus-font
 termshark
 tesseract-data

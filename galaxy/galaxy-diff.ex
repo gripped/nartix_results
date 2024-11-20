@@ -32,7 +32,6 @@ nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
 rage
-telegram-desktop
 terminology
 tor
 torsocks

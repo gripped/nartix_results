@@ -43,6 +43,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calf
 cantor
 catfish
 cgmanager
@@ -195,8 +196,6 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
-gtksourceviewmm
-gtksourceviewmm-docs
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -210,7 +209,6 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
-hdf5
 hexchat
 hidapi
 hipify-clang
@@ -261,7 +259,6 @@ openjdk8-src
 openjdk8-doc
 jedi-language-server
 js78
-julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
@@ -316,7 +313,6 @@ libinput
 libldm
 libmspub
 libnvme
-libphonenumber
 libprocps
 libsidplay
 libsidplayfp
@@ -690,16 +686,10 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-byebug
-ruby-character_set
-ruby-hashdiff
-ruby-markly
-ruby-patron
 ruby-racc
-ruby-redcarpet
-ruby-redcloth
+ruby-regexp_property_values
 ruby-sys-filesystem
-ruby-trenni
+ruby-webmock
 samba
 libwbclient
 ldb
