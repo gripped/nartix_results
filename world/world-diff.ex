@@ -309,6 +309,7 @@ libgdiplus
 libgudev
 libguestfs
 libhandy0
+libieee1284
 libinput
 libldm
 libmspub
@@ -422,6 +423,7 @@ mosquitto
 mousepad
 mozo
 mpd
+msgpack-cxx
 muffin
 multipath-tools
 mumble
@@ -546,6 +548,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+prometheus
 proxytunnel
 pulseaudio
 libpulse
@@ -562,9 +565,11 @@ python-anytree
 python-bitstring
 python-cheroot
 python-cherrypy
+python-cryptography
 python-intelhex
 python-kubernetes
 python-portend
+python-pygit2
 python-pymupdf
 python-pyopencl
 pyopencl-headers
@@ -574,6 +579,7 @@ python-pyudev
 python-signedjson
 python-teamcity-messages
 python-tempora
+python-toolz
 python-trustme
 python-ubjson
 python-wheel
@@ -686,10 +692,10 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-minitest-retry
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-ruby-webmock
 samba
 libwbclient
 ldb

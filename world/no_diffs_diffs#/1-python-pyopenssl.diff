@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pyopenssl
+ pkgver=24.2.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Python wrapper around the OpenSSL library'
+ arch=('any')
+ url='https://pyopenssl.org/'
+@@ -27,9 +27,8 @@
+ 
+ check() {
+   cd "$pkgname"
+-  PYTHONPATH="$PWD"/build/lib pytest -v \
+-    --deselect tests/test_ssl.py::TestConnectionSendall::test_closed \
+-    --deselect tests/test_ssl.py::TestConnection::test_shutdown_closed
++
++  PYTHONPATH="$PWD"/build/lib pytest -v
+ }
+ 
+ package() {

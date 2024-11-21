@@ -1662,7 +1662,6 @@ libident
 libidl2
 libidn
 libiec61883
-libieee1284
 libimagequant
 libimobiledevice-glue
 libimobiledevice
@@ -2267,7 +2266,6 @@ mencoder
 mpv
 mpvqt
 msgpack-c
-msgpack-cxx
 msgraph
 msgraph-docs
 msmtp
@@ -2934,7 +2932,6 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
-prometheus
 prosody
 protobuf-c
 protobuf
@@ -3211,7 +3208,6 @@ python-crc32c
 python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
-python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -3847,7 +3843,6 @@ python-pygame-sdl2
 python-pygame
 python-pygdbmi
 python-pygeos
-python-pygit2
 python-pygls
 python-pygments
 python-pygraphviz
@@ -4214,7 +4209,6 @@ python-toml
 python-tomli-w
 python-tomli
 python-tomlkit
-python-toolz
 python-toposort
 python-tornado
 python-tox-current-env
@@ -4713,7 +4707,6 @@ ruby-minitest-hooks
 ruby-minitest-parallel_fork
 ruby-minitest-proveit
 ruby-minitest-reporters
-ruby-minitest-retry
 ruby-minitest-sprint
 ruby-minitest-stub-const
 ruby-minitest
@@ -4885,6 +4878,7 @@ ruby-vcr
 ruby-vimrunner
 ruby-warning
 ruby-warnings_logger
+ruby-webmock
 ruby-webrick
 ruby-websocket-driver
 ruby-websocket-extensions
