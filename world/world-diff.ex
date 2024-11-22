@@ -9,6 +9,7 @@ appstream
 appstream-qt5
 appstream-qt
 aquamarine
+arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -823,6 +824,7 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
+xclip
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

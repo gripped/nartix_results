@@ -96,7 +96,6 @@ arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -5484,7 +5483,6 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xcb-util
-xclip
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
