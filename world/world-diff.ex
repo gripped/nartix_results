@@ -314,6 +314,7 @@ libieee1284
 libinput
 libldm
 libmspub
+libnbd
 libnvme
 libprocps
 libsidplay
@@ -569,6 +570,7 @@ python-cherrypy
 python-cryptography
 python-intelhex
 python-kubernetes
+python-playwright
 python-portend
 python-pygit2
 python-pymupdf
@@ -672,6 +674,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-wayland
 qterminal
 qtermwidget
 quadrapassel

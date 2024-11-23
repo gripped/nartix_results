@@ -30,7 +30,7 @@
  
  prepare() {
    cd mariadb/
-@@ -45,7 +48,7 @@
+@@ -48,7 +51,7 @@
  
  build() {
    local _cmake_options=(
@@ -39,7 +39,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
  
-@@ -56,7 +59,7 @@
+@@ -59,7 +62,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -48,7 +48,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -81,7 +84,7 @@
+@@ -84,7 +87,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -57,7 +57,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -160,7 +163,7 @@
+@@ -163,7 +166,7 @@
            'etc/security/user_map.conf')
    install=mariadb.install
    depends=("mariadb-clients=${pkgver}" 'bzip2' 'coreutils' 'libxml2' 'lz4'
@@ -66,7 +66,7 @@
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
                'galera: for MariaDB cluster with Galera WSREP'
-@@ -191,8 +194,8 @@
+@@ -194,8 +197,8 @@
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
  

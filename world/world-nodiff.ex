@@ -1754,7 +1754,6 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
-libnbd
 libndp
 libnet
 libnewt
@@ -3761,7 +3760,6 @@ python-pixelmatch
 python-pkgconfig
 python-pkginfo
 python-platformdirs
-python-playwright
 python-plette
 python-pluggy
 python-plumbum
@@ -4439,7 +4437,6 @@ qt6-svg
 qt6-tools
 qt6-translations
 qt6-virtualkeyboard
-qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
