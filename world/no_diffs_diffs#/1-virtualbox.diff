@@ -1,6 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -56,11 +56,6 @@
+@@ -8,7 +8,7 @@
+          'virtualbox-ext-vnc')
+ pkgver=7.1.4
+ _tarver=${pkgver}
+-pkgrel=2
++pkgrel=1
+ arch=('x86_64')
+ url='https://virtualbox.org/'
+ license=('GPL' 'custom:CDDL')
+@@ -51,17 +51,11 @@
+              'yasm')
+ source=("https://download.virtualbox.org/virtualbox/${pkgver}/VirtualBox-${_tarver}.tar.bz2"
+         'virtualbox-host-dkms.conf'
+-        'virtualbox.modprobe'
+         'virtualbox.sysusers'
+         'virtualbox-guest-utils.sysusers'
          '60-vboxdrv.rules'
          '60-vboxguest.rules'
          'LocalConfig.kmk'
@@ -12,7 +27,13 @@
          'vboxreload'
          '001-disable-update.patch'
          '004-drop-Wno-format.patch'
-@@ -77,11 +72,6 @@
+@@ -73,17 +67,11 @@
+         '020-python-3-12.patch')
+ sha256sums=('872e7a42b41f8558abbf887f1bdc7aac932bb88b2764d07cbce270cab57e3b5e'
+             '76d98ea062fcad9e5e3fa981d046a6eb12a3e718a296544a68b66f4b65cb56db'
+-            '03ed7f65d8e2f91b17b81bdf2f0f634e62b95e71f7c6c1acaf22d8be97d10e59'
+             '2101ebb58233bbfadf3aa74381f22f7e7e508559d2b46387114bc2d8e308554c'
+             'da4c49f6ca94e047e196cdbcba2c321199f4760056ea66e0fbc659353e128c9e'
              'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
              '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
              '476202f87a4a461af6b73a7709e91f868a65ff7306494227e0d7b264fa3f919e'
@@ -24,7 +45,17 @@
              '4001b5927348fe669a541e80526d4f9ea91b883805f102f7d571edbb482a9b9d'
              '483a043ddfe32c4c5001a8de0a94a0ea884f34d3dbd817b492b9c97fba3ab5e0'
              'ffd30d1d5c41909518571da02c797102d459ba6dec22fe335b4778db264275e1'
-@@ -195,7 +185,6 @@
+@@ -141,8 +129,7 @@
+                 'virtualbox-guest-iso: Guest Additions CD image'
+                 'virtualbox-ext-vnc: VNC server support'
+                 'virtualbox-sdk: Developer kit')
+-    backup=('etc/modprobe.d/virtualbox.conf'
+-            'etc/vbox/vbox.cfg')
++    backup=('etc/vbox/vbox.cfg')
+     replaces=('virtualbox-ose')
+     conflicts=('virtualbox-ose')
+ 
+@@ -198,13 +185,10 @@
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
  
      install -D -m0644 60-vboxdrv.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxdrv.rules"
@@ -32,7 +63,22 @@
      install -D -m0644 virtualbox.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox.conf"
  
      install -D -m0755 vboxreload "${pkgdir}/usr/bin"
-@@ -272,9 +261,6 @@
+     ln -s vboxreload "${pkgdir}/usr/bin/rcvboxdrv"
+-
+-    install -D -m0644 virtualbox.modprobe "${pkgdir}/etc/modprobe.d/virtualbox.conf"
+ }
+ 
+ package_virtualbox-sdk() {
+@@ -269,7 +253,7 @@
+     source "VirtualBox-${pkgver}/env.sh"
+     pushd "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/bin/additions"
+     install -d "${pkgdir}/usr/bin"
+-    install -m0755 VBoxAudioTest VBoxClient VBoxControl VBoxDRMClient VBoxService vboxwl "${pkgdir}/usr/bin"
++    install -m0755 VBoxAudioTest VBoxClient VBoxControl VBoxDRMClient VBoxService "${pkgdir}/usr/bin"
+     install -m0755 -D "${srcdir}"/VirtualBox-${pkgver}/src/VBox/Additions/x11/Installer/98vboxadd-xclient \
+         "${pkgdir}"/usr/bin/VBoxClient-all
+     install -m0644 -D "${srcdir}"/VirtualBox-${pkgver}/src/VBox/Additions/x11/Installer/vboxclient.desktop \
+@@ -277,9 +261,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
@@ -42,7 +88,7 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 VirtualBox-${pkgver}/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
-@@ -294,7 +280,6 @@
+@@ -299,7 +280,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"

@@ -570,6 +570,8 @@ python-cherrypy
 python-cryptography
 python-intelhex
 python-kubernetes
+python-magic-wormhole-mailbox-server
+python-magic-wormhole-transit-relay
 python-playwright
 python-portend
 python-pygit2
@@ -577,12 +579,13 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
+python-pytest-celery
 python-pytest-freezegun
 python-pyudev
 python-signedjson
+python-smbprotocol
 python-teamcity-messages
 python-tempora
-python-toolz
 python-trustme
 python-ubjson
 python-wheel
@@ -696,7 +699,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-minitest-retry
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -728,6 +730,7 @@ sssd
 step-cli
 strongswan
 stunnel
+sugar-datastore
 sway
 swayidle
 switcheroo-control
@@ -802,7 +805,6 @@ v4l-utils
 vault
 vlc
 libvlc
-vnstat
 vpnc
 vte3
 vte-common

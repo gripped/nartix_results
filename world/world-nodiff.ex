@@ -3580,8 +3580,6 @@ python-lxml-docs
 python-lz4
 python-m2crypto
 python-magic-filter
-python-magic-wormhole-mailbox-server
-python-magic-wormhole-transit-relay
 python-magic
 python-mailmanclient
 python-mako
@@ -3906,7 +3904,6 @@ python-pytest-asyncio
 python-pytest-bdd
 python-pytest-benchmark
 python-pytest-black
-python-pytest-celery
 python-pytest-click
 python-pytest-console-scripts
 python-pytest-cov
@@ -4095,7 +4092,6 @@ python-slip
 python-slugify
 python-sly
 python-smartypants
-python-smbprotocol
 python-smmap
 python-snappy
 python-sniffio
@@ -4206,6 +4202,7 @@ python-toml
 python-tomli-w
 python-tomli
 python-tomlkit
+python-toolz
 python-toposort
 python-tornado
 python-tox-current-env
@@ -4703,6 +4700,7 @@ ruby-minitest-hooks
 ruby-minitest-parallel_fork
 ruby-minitest-proveit
 ruby-minitest-reporters
+ruby-minitest-retry
 ruby-minitest-sprint
 ruby-minitest-stub-const
 ruby-minitest
@@ -5034,7 +5032,6 @@ strawberry
 strip-nondeterminism
 stubby
 subversion
-sugar-datastore
 suil
 suil-docs
 suitesparse
@@ -5398,6 +5395,7 @@ virtualgl
 vkd3d
 vmaf
 vncdotool
+vnstat
 vokoscreen
 volatility3
 volume_key

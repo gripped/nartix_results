@@ -3,7 +3,7 @@
 @@ -1,12 +1,13 @@
  
  pkgname=strawberry
--pkgver=1.2.1
+-pkgver=1.2.2
 -pkgrel=1
 +pkgver=1.2.0
 +pkgrel=3
@@ -29,7 +29,7 @@
              'gst-plugins-bad: additional codecs'
              'gst-plugins-ugly: additional codecs')
  source=(git+https://github.com/strawberrymusicplayer/strawberry#tag=$pkgver)
--sha256sums=('72e6eb320c3ec505e84756dbf92b04adeb71000cbb2b700205f48260610f4631')
+-sha256sums=('fdb7742ff07cf3924a3350861b64f9941d3c19accaff507e9dddb88933549245')
 +sha256sums=('39b0a9f0710e6eb2a4f47df181dc6bbc26cdb06fee54ac9dc0f4c391371d9f31')
  
  build() {
