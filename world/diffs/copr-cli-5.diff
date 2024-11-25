@@ -1,22 +1,42 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,31 +1,30 @@
+@@ -1,47 +1,30 @@
  
  pkgname=copr-cli
- pkgver=1.105
--pkgrel=3
+-pkgver=2.0
+-pkgrel=1
++pkgver=1.105
 +pkgrel=2
  pkgdesc="CLI tool to run copr"
  url="https://github.com/fedora-copr/copr"
  license=('GPL-2.0-or-later')
  arch=('any')
- depends=('python-copr' 'python-humanize' 'python-simplejson' 'python-jinja' 'python-setuptools'
-          'python-future')
--makedepends=('git' 'asciidoc' 'python-build' 'python-installer' 'python-wheel')
+-depends=(
+-  'python'
+-  'python-copr'
+-  'python-humanize'
+-  'python-jinja'
+-  'python-requests'
+-  'python-setuptools'
+-  'python-six'
+-)
+-makedepends=(
+-  'asciidoc'
+-  'git'
+-  'python-build'
+-  'python-installer'
+-  'python-wheel'
+-)
+-checkdepends=(
+-  'python-pytest'
+-  'python-responses'
+-)
+-source=("git+$url.git#tag=copr-cli-$pkgver-1")
+-sha512sums=('142033867dc8c417db0ad0a577a7d8c4f7fc35b0fc1627e7908e4347fab3a8b75134c1a016ede311375deb8945558937a020cd59068c5f9fd6565aad5d15287c')
++depends=('python-copr' 'python-humanize' 'python-simplejson' 'python-jinja' 'python-setuptools'
++         'python-future')
 +makedepends=('python-build' 'python-installer' 'python-wheel')
- checkdepends=('python-pytest' 'python-responses')
--source=("git+https://github.com/fedora-copr/copr.git#tag=copr-cli-$pkgver-1")
--sha512sums=('690005b33cdf7bee6bc567914bb9acb7cd111059adfbb7b1ca94dc60af82df13c3a6660ac9dd3815481bc4e0ab1e2556d35bebc48bd53f5eb73f4d47fe259aa0')
++checkdepends=('python-pytest' 'python-responses')
 +source=("https://github.com/fedora-copr/copr/archive/copr-cli-$pkgver-1.tar.gz")
 +sha512sums=('76ce84a9300ac9f68732a0c8d4421d1e6007a4d92dacac4182b5687aa3f5c256a06dcc877a86d087ca737db29e53cafce470f62c8974b481f4e42cb30cb4e8ad')
  
@@ -37,7 +57,8 @@
 -  cd copr/cli
 +  cd copr-copr-cli-$pkgver-1/cli
    python -m installer --destdir="$pkgdir" dist/*.whl
-   install -Dm644 man/*.1 -t "$pkgdir"/usr/share/man/man1/
+-  install -vDm644 -t "$pkgdir/usr/share/man/man1" man/*.1
++  install -Dm644 man/*.1 -t "$pkgdir"/usr/share/man/man1/
  }
 
 
@@ -45,12 +66,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,3 @@
+@@ -1,12 +1,9 @@
 -asciidoc
 -git
+-python
  python-build
  python-copr
- python-future
++python-future
+ python-humanize
+ python-installer
+ python-jinja
+-python-requests
+ python-setuptools
+-python-six
++python-simplejson
+ python-wheel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

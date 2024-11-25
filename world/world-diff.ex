@@ -259,6 +259,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jedi-language-server
+jrnl
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -440,6 +441,7 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
+neon
 netavark
 netplan
 networkmanager
@@ -586,8 +588,10 @@ python-signedjson
 python-smbprotocol
 python-teamcity-messages
 python-tempora
+python-tpm2-pytss
 python-trustme
 python-ubjson
+python-uvloop
 python-wheel
 qastools
 qemu
@@ -694,6 +698,7 @@ refind-docs
 ristretto
 rocblas
 rocfft
+rocm-cmake
 rocrand
 rocsparse
 rrdtool
@@ -829,7 +834,6 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
-xclip
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

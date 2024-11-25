@@ -1,0 +1,106 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,53 +1,31 @@
+ 
+ pkgname=neon
+-pkgver=0.34.0
++pkgver=0.33.0
+ pkgrel=1
+ pkgdesc='HTTP/1.1 and WebDAV client library'
+-arch=(x86_64)
++arch=('x86_64')
+ url='https://notroj.github.io/neon/'
+-license=(LGPL-2.0-or-later)
+-depends=(
+-  ca-certificates
+-  expat
+-  glibc
+-  krb5
+-  openssl
+-  zlib
+-)
+-makedepends=(
+-  docbook-xsl
+-  git
+-  xmlto
+-)
+-source=("git+https://github.com/notroj/neon.git#tag=$pkgver")
+-b2sums=(a1ab23c037157cb5f4eb7b71c86217639dc692812ac8c1fd7e906d2be67297ec631286eb0b801f633001c27a322915bbf7313e3938bba83d403c0ec44045cd9b)
+-validpgpkeys=(190555472DCC589BEF01609C608A86DF9833CC49) # Joe Orton
+-
+-prepare() {
+-  cd $pkgname
+-  echo $pkgver > .version
+-  autoreconf -fi
+-}
++license=('LGPL-2.0-or-later')
++depends=('ca-certificates' 'expat' 'glibc' 'krb5' 'openssl' 'zlib')
++source=("https://notroj.github.io/neon/$pkgname-$pkgver.tar.gz")
++sha256sums=('659a5cc9cea05e6e7864094f1e13a77abbbdbab452f04d751a8c16a9447cf4b8')
++validpgpkeys=('190555472DCC589BEF01609C608A86DF9833CC49') # Joe Orton
+ 
+ build() {
+-  cd $pkgname
+-  ./configure \
+-    --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --localstatedir=/var \
++  cd $pkgname-$pkgver
++  ./configure --prefix=/usr \
+     --enable-shared \
+     --with-ssl=openssl \
+     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
+   make
+-  make docs compile-gmo
+ }
+ 
+ check() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make check
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,6 @@
+ ca-certificates
+-docbook-xsl
+ expat
+-git
+ glibc
+ krb5
+ openssl
+-xmlto
+ zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,17 +1,8 @@
+-prepare() {
+-cd $pkgname
+-echo $pkgver > .version
+-autoreconf -fi
+-}
+ build() {
+-cd $pkgname
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---localstatedir=/var \
++cd $pkgname-$pkgver
++./configure --prefix=/usr \
+ --enable-shared \
+ --with-ssl=openssl \
+ --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
+ make
+-make docs compile-gmo
+ }

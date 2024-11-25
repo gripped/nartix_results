@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,15 +1,15 @@
  pkgname=hipcub
--pkgver=6.2.2
+-pkgver=6.2.4
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='Header-only library on top of rocPRIM or CUB'
@@ -14,7 +14,7 @@
  makedepends=('cmake' 'rocm-cmake')
  _git='https://github.com/ROCm/hipCUB'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('b66a8ba7bb34e9cf533a9a081dee3e11cc6dd283f479bd855aae015b3dd66972')
+-sha256sums=('06f3655b110d3d2e2ecf0aca052d3ba3f2ef012c069e5d2d82f2b75d50555f46')
 +sha256sums=('3f912a23dc34510cf18d9097f6eda37e01d01724975c8149c92a64c92415968c')
  _dirname="$(basename $_git)-$(basename "${source[0]}" ".tar.gz")"
  

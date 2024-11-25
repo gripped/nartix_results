@@ -559,6 +559,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
 fcitx5-qt
+featherpad
 feh
 festival
 ffcall
@@ -1078,7 +1079,6 @@ jitterentropy
 jose
 jp2a
 jq
-jrnl
 jruby
 js102
 js115
@@ -2316,7 +2316,6 @@ nemo
 neochat
 neofetch
 neomutt
-neon
 neovim-qt
 neovim
 net-snmp
@@ -4207,7 +4206,6 @@ python-toposort
 python-tornado
 python-tox-current-env
 python-tox
-python-tpm2-pytss
 python-tqdm
 python-trailrunner
 python-traitlets
@@ -4250,7 +4248,6 @@ python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
-python-uvloop
 python-validate-email
 python-validate-pyproject
 python-validators
@@ -4504,7 +4501,6 @@ robin-map
 roc-toolkit
 rocalution
 rocm-clang-ocl
-rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -5478,6 +5474,7 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xcb-util
+xclip
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy
