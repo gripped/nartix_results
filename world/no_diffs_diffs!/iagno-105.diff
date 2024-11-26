@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=iagno
- pkgver=3.38.1+r57+gd147e1a
--pkgrel=2
-+pkgrel=1.1
- pkgdesc="Dominate the board in a classic version of Reversi"
- url="https://wiki.gnome.org/Apps/Iagno"
- arch=(x86_64)
-@@ -9,6 +9,7 @@
- depends=(gtk3 gsound librsvg)
- makedepends=(meson gobject-introspection yelp-tools appstream-glib vala git)
- groups=(gnome-extra)
-+options=(debug)
- _commit=d147e1a30189716d654e9b9e9aba2112d35b7dc6  # master
- source=("git+https://gitlab.gnome.org/GNOME/iagno.git#commit=$_commit")
- sha256sums=('SKIP')
-@@ -23,7 +24,7 @@
+@@ -23,7 +23,7 @@
  }
  
  build() {

@@ -17,7 +17,6 @@ atril
 audacious-plugins
 avahi
 awesome
-ayatana-ido
 bash-bats
 bluedevil
 bluez
@@ -63,7 +62,6 @@ conmon
 connman
 containerd
 convertlit
-copr-cli
 cppcheck
 crun
 cups
@@ -109,7 +107,6 @@ firewalld
 flatpak
 flatpak-docs
 fluidsynth
-fop
 fprintd
 freerdp
 freerdp2
@@ -149,7 +146,6 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
-go-licenses
 godot
 godot-mono
 gpsd
@@ -307,7 +303,6 @@ libetonyek
 libfido2
 libfprint
 libgdata
-libgdiplus
 libgudev
 libguestfs
 libhandy0
@@ -315,13 +310,11 @@ libieee1284
 libinput
 libldm
 libmspub
-libnbd
 libnvme
 libprocps
 libsidplay
 libsidplayfp
 libtg_owt
-libtpms
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -376,6 +369,7 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+mat2
 mate-applets
 mate-backgrounds
 mate-calc
@@ -414,7 +408,6 @@ vulkan-radeon
 vulkan-swrast
 vulkan-virtio
 mesa-docs
-mgard
 mgba
 libmgba
 mgba-sdl
@@ -441,7 +434,6 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
-neon
 netavark
 netplan
 networkmanager
@@ -565,9 +557,9 @@ pulseaudio-rtp
 pyqt5
 python-pyqt5
 pyqt6
+python-anyio
 python-anytree
 python-bitstring
-python-cheroot
 python-cherrypy
 python-cryptography
 python-intelhex
@@ -581,8 +573,8 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
-python-pytest-celery
 python-pytest-freezegun
+python-pytest-playwright
 python-pyudev
 python-signedjson
 python-smbprotocol
@@ -681,7 +673,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-wayland
 qterminal
 qtermwidget
 quadrapassel
@@ -698,7 +689,6 @@ refind-docs
 ristretto
 rocblas
 rocfft
-rocm-cmake
 rocrand
 rocsparse
 rrdtool
@@ -722,7 +712,6 @@ seatd
 sfml
 shairport-sync
 signal-desktop
-signon-ui
 smartmontools
 snapper
 solid
@@ -732,10 +721,8 @@ srt
 sshguard
 sslh
 sssd
-step-cli
 strongswan
 stunnel
-sugar-datastore
 sway
 swayidle
 switcheroo-control
@@ -769,7 +756,6 @@ tmux
 tor
 torsocks
 toxcore
-tpm2-abrmd
 tracker3-miners
 tracker3
 tracker3-docs
@@ -791,7 +777,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-utf8cpp
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

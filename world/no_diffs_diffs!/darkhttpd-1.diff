@@ -1,19 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,14 @@
- 
- pkgname=darkhttpd
- pkgver=1.16
--pkgrel=2
--pkgdesc='A small and secure static webserver'
-+pkgrel=1
-+pkgdesc="A small and secure static webserver"
- arch=('x86_64')
--url='https://unix4lyfe.org/darkhttpd/'
--license=('ISC')
--depends=('glibc')
-+url="https://unix4lyfe.org/darkhttpd/"
-+license=('BSD')
+@@ -8,12 +8,8 @@
+ license=('ISC')
+ depends=('glibc')
  backup=('etc/conf.d/mimetypes')
 -source=("${pkgname}-${pkgver}.tar.gz::https://github.com/emikulic/darkhttpd/archive/v${pkgver}.tar.gz"
 -        'darkhttpd.service'
@@ -26,23 +15,12 @@
  
  build() {
    cd "$srcdir/$pkgname-$pkgver"
-@@ -24,10 +19,8 @@
- package() {
-   cd "$srcdir/$pkgname-$pkgver"
+@@ -26,8 +22,6 @@
  
--  install -Dm0755 "$srcdir/$pkgname-$pkgver/darkhttpd" "$pkgdir/usr/bin/darkhttpd"
-+  install -Dm755 "$srcdir/$pkgname-$pkgver/darkhttpd" "$pkgdir/usr/bin/darkhttpd"
+   install -Dm0755 "$srcdir/$pkgname-$pkgver/darkhttpd" "$pkgdir/usr/bin/darkhttpd"
  
 -  install -Dm0644 "$srcdir/darkhttpd.service" "$pkgdir/usr/lib/systemd/system/darkhttpd.service"
 -  install -Dm0644 "$srcdir/darkhttpd@.service" "$pkgdir/usr/lib/systemd/system/darkhttpd@.service"
    install -dm0755 "$pkgdir"/etc/conf.d/
    touch "$pkgdir"/etc/conf.d/mimetypes
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1 +0,0 @@
--glibc

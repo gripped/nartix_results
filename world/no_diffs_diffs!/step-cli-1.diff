@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ makedepends=(go)
+ optdepends=("step-ca: setup CA/SSO/ACME server")
+ source=($pkgname-$pkgver.tar.gz::https://github.com/smallstep/cli/archive/refs/tags/v${pkgver}.tar.gz)
+-sha512sums=('549d59f048800b398068e7230c051faec80ac59d13a12dcbfb4f6557e15302f3c5f26dcdf454adb5dd239c020f1841003369bfd3c0ec70597e470f594067bbb4')
++sha512sums=('b82a82bf4eaedb8c9dbbbd7b11be93ca499f7e6ba84423492252fc300250169b63668515aec5f77ac3323458187fb9f6cab461e591d03d5731caccf6811134a7')
+ 
+ prepare() {
+   cd cli-${pkgver}

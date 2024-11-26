@@ -91,6 +91,7 @@ aria2
 arianna
 aribb24
 aribb25
+arj
 ark
 arm-none-eabi-binutils
 arm-none-eabi-gcc
@@ -163,6 +164,7 @@ aws-c-sdkutils
 aws-checksums
 aws-cli-v2
 aws-cli
+ayatana-ido
 babl
 backuppc
 baloo-widgets
@@ -236,6 +238,7 @@ bullet-dp
 bullet-docs
 python-pybullet
 byacc
+bzip3
 c-ares
 cabextract
 cairo
@@ -356,6 +359,7 @@ confuse
 consul
 containers-common
 coordgen
+copr-cli
 corrosion
 coturn
 couchdb
@@ -612,6 +616,7 @@ foomatic-db
 foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
+fop
 fossil
 four-in-a-row
 fractal
@@ -773,6 +778,7 @@ gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
+go-licenses
 go-md2man
 go-tools
 go-yq
@@ -1501,6 +1507,7 @@ lgi
 lua-lgi
 lua51-lgi
 lua53-lgi
+lhasa
 lib2geom
 libabw
 libaccounts-glib
@@ -1614,6 +1621,7 @@ libfreehand
 libfreexl
 libftdi
 libgadu
+libgdiplus
 libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
@@ -1754,6 +1762,7 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
+libnbd
 libndp
 libnet
 libnewt
@@ -1903,6 +1912,7 @@ libtomcrypt
 libtommath
 libtorrent-rasterbar
 libtorrent
+libtpms
 libtraceevent
 libtraceevent-docs
 libtracefs
@@ -2183,7 +2193,6 @@ marked-man
 marked
 marknote
 massif-visualizer
-mat2
 materia-kde
 kvantum-theme-materia
 materialx
@@ -2216,6 +2225,7 @@ meson-python
 meson
 messagelib
 metalog
+mgard
 micro
 microsoft-gsl
 milou
@@ -2316,6 +2326,7 @@ nemo
 neochat
 neofetch
 neomutt
+neon
 neovim-qt
 neovim
 net-snmp
@@ -3033,7 +3044,6 @@ python-ansible-compat
 python-ansicolors
 python-ansiwrap
 python-antlr4
-python-anyio
 python-anyjson
 python-anysqlite
 python-apipkg
@@ -3156,6 +3166,7 @@ python-chardet
 python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
+python-cheroot
 python-claripy
 python-cleo
 python-clevercsv
@@ -3903,6 +3914,7 @@ python-pytest-asyncio
 python-pytest-bdd
 python-pytest-benchmark
 python-pytest-black
+python-pytest-celery
 python-pytest-click
 python-pytest-console-scripts
 python-pytest-cov
@@ -3938,7 +3950,6 @@ python-pytest-order
 python-pytest-ordering
 python-pytest-pacman
 python-pytest-param-files
-python-pytest-playwright
 python-pytest-plugins
 python-pytest-fixture-config
 python-pytest-shutil
@@ -4431,6 +4442,7 @@ qt6-svg
 qt6-tools
 qt6-translations
 qt6-virtualkeyboard
+qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
@@ -4501,6 +4513,7 @@ robin-map
 roc-toolkit
 rocalution
 rocm-clang-ocl
+rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4948,6 +4961,7 @@ shunit2
 signify
 signon-kwallet-extension
 signon-plugin-oauth2
+signon-ui
 signond
 simde
 simple-scan
@@ -5017,6 +5031,7 @@ sshfs
 sshpass
 startup-notification
 stellarsolver
+step-cli
 step
 stfl
 stk
@@ -5028,6 +5043,7 @@ strawberry
 strip-nondeterminism
 stubby
 subversion
+sugar-datastore
 suil
 suil-docs
 suitesparse
@@ -5273,6 +5289,7 @@ totem
 towncrier
 toxic
 tp_smapi
+tpm2-abrmd
 tpm2-tools
 transcode
 transmageddon
@@ -5344,6 +5361,7 @@ usbredir
 usd
 usd-extras
 usort
+utf8cpp
 uthash
 uv
 $pkgbase

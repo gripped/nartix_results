@@ -1,3 +1,4 @@
+0ad
 cinnamon-desktop
 copyq
 doctest

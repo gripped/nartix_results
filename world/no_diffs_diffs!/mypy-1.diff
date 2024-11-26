@@ -1,11 +1,41 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,12 +1,12 @@
  
  pkgname=mypy
- pkgver=1.12.1
+-pkgver=1.13.0
 -pkgrel=1
++pkgver=1.12.1
 +pkgrel=1.1
  pkgdesc='Optional static typing for Python 2 and 3 (PEP484)'
  url="http://www.mypy-lang.org/"
  arch=('any')
+ license=('MIT')
+-depends=('python' 'python-mypy_extensions' 'python-typing_extensions' 'python-orjson')
++depends=('python' 'python-mypy_extensions' 'python-typing_extensions')
+ makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+ checkdepends=('python-attrs' 'python-psutil' 'python-pytest' 'python-pytest-xdist')
+ optdepends=(
+@@ -16,7 +16,7 @@
+   'python-setuptools: for mypyc'
+ )
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/python/mypy/archive/refs/tags/v$pkgver.tar.gz")
+-sha256sums=('c743798f6a9bdee87348cdb045fcd30846e1e3a4c4e751cc81e1aa1b04442c13')
++sha256sums=('04e81e89b1e80fed13d94e1ab6df554e0cfdf0accc70e1836fadfd881c6a84fd')
+ 
+ prepare() {
+     cd "$pkgname-$pkgver"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ python-build
+ python-installer
+ python-mypy_extensions
+-python-orjson
+ python-setuptools
+ python-typing_extensions
+ python-wheel

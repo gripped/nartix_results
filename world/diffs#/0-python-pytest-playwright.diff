@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _name=playwright-pytest
+ pkgname=python-pytest-playwright
+-pkgver=0.6.1
++pkgver=0.5.2
+ pkgrel=1
+ pkgdesc='Pytest plugin to write end-to-end browser tests with Playwright'
+ arch=(any)
+@@ -16,18 +16,18 @@
+              python-setuptools-scm
+              python-wheel)
+ source=(git+https://github.com/microsoft/$_name#tag=v$pkgver)
+-sha256sums=('25fa84943516b97e34a93424d4729f4854bfe9f6465e6fc78255bb775135cda6')
++sha256sums=('ed0e216685434d7c46f7fdcadea16bfb849ee774948f4a2d198ce1b178a95d12')
+ 
+ build() {
+-  cd $_name/pytest-playwright
+-  python -m build --wheel --no-isolation --skip-dependency-check
++  cd $_name
++  python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd $_name/pytest-playwright
++  cd $_name
+ }
+ 
+ package() {
+-  cd $_name/pytest-playwright
++  cd $_name
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd $_name/pytest-playwright
+-python -m build --wheel --no-isolation --skip-dependency-check
++cd $_name
++python -m build --wheel --no-isolation
+ }
