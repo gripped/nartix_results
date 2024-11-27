@@ -1,6 +1,5 @@
 0ad
 accountsservice
-adios2
 alacritty
 alsa-utils
 apache
@@ -9,7 +8,6 @@ appstream
 appstream-qt5
 appstream-qt
 aquamarine
-arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -544,7 +542,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-prometheus
 proxytunnel
 pulseaudio
 libpulse
@@ -563,7 +560,7 @@ python-bitstring
 python-cherrypy
 python-cryptography
 python-intelhex
-python-kubernetes
+python-json5
 python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-playwright
@@ -586,6 +583,8 @@ python-ubjson
 python-uvloop
 python-wheel
 qastools
+qbittorrent
+qbittorrent-nox
 qemu
 qemu-common
 qemu-audio-alsa

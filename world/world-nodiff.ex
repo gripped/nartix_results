@@ -18,6 +18,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-icon-theme-legacy
@@ -97,6 +98,7 @@ arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -2940,6 +2942,7 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 prosody
 protobuf-c
 protobuf
@@ -3515,7 +3518,6 @@ python-jq
 python-js2py
 python-jschema-to-python
 python-json-logger
-python-json5
 python-jsondiff
 python-jsonlines
 python-jsonmerge
@@ -3551,6 +3553,7 @@ python-keyutils
 python-kiwisolver
 python-kombu
 python-krb5
+python-kubernetes
 python-lark-parser
 python-lazr.config
 python-lazr.delegates

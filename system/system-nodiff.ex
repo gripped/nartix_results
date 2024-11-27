@@ -182,7 +182,6 @@ sysfsutils
 syslinux
 tar
 texinfo
-traceroute
 tzdata
 unixodbc
 vi

@@ -1,0 +1,77 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,18 @@
+ 
+ pkgname=cinnamon-desktop
+-pkgver=6.4.0
++pkgver=6.0.0
+ pkgrel=1
+ pkgdesc="Library with common API for various Cinnamon modules"
+ arch=(x86_64)
+ url="https://github.com/linuxmint/${pkgname}"
+ license=(GPL LGPL)
+ depends=(accountsservice gtk3 libxkbfile libpulse)
+-makedepends=(meson samurai gobject-introspection intltool glib2-devel)
++makedepends=(meson samurai gobject-introspection intltool)
+ source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+         config.patch)
+-sha256sums=('61d2fb8a8b2e9eac66522ff78ece2cdc63c6083895a4823642c6f3c06bf83c51'
++sha256sums=('17473083758acac9ca580849c88a2ac4bcc2fe715ee232fbecfa0baf2204bbb5'
+             'e70227c64eca6857fe9adc21c6aee851df40b3a54bf34a145e0dc4b9819a7b6a')
+-b2sums=('80d92c846b4099e258304bbb9cbe3717ea4da07ff332e0cc047db69dfb736fab44deaf533190949993b218db2a08e91a10825169488d2b2477c5ef0da148bfdd'
++b2sums=('908b53445327cdbb5560655700e6dfa829934714167f02dda2d9d31a02ae85fcf6565704e791f67f0725e9eb76ed65ef26944d3fac2a58e3091b2afd10bb70af'
+         '5ae28fca1f3fee35222569afdba3f6f2df00f2b27709d1135589f33a3b80546ca541c391f5ee02759467fcaffe380dc1cbc4117dffe3c10cdf7046fd8588e384')
+ 
+ prepare() {
+@@ -23,7 +23,17 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}/build
+-  arch-meson ..
++  meson setup \
++  --prefix        /usr \
++  --libexecdir    lib \
++  --sbindir       bin \
++  --buildtype     plain \
++  --wrap-mode     nodownload \
++  -D              alsa=true \
++  -D              b_lto=true \
++  -D              b_pie=true \
++  -D              python.bytecompile=1 \
++  ..
+   samu
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ accountsservice
+-glib2-devel
+ gobject-introspection
+ gtk3
+ intltool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,16 @@
+ }
+ build() {
+ cd ${pkgname}-${pkgver}/build
+-arch-meson ..
++meson setup \
++--prefix        /usr \
++--libexecdir    lib \
++--sbindir       bin \
++--buildtype     plain \
++--wrap-mode     nodownload \
++-D              alsa=true \
++-D              b_lto=true \
++-D              b_pie=true \
++-D              python.bytecompile=1 \
++..
+ samu
+ }

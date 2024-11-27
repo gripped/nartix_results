@@ -1,4 +1,5 @@
 0ad-data
+0ad
 ada
 alacritty
 atril

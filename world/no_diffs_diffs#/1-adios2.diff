@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+   libsodium libsodium.so
+   mgard
+   openmpi libmpi.so
+-  openucx libucp.so libucs.so
+   paraview-catalyst
+   pugixml
+   python
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -15,8 +15,6 @@
+ libsodium
+ libsodium.so
+ libsqlite3.so
+-libucp.so
+-libucs.so
+ libyaml-cpp.so
+ libz.so
+ libzmq.so
+@@ -24,7 +22,6 @@
+ ninja
+ nlohmann-json
+ openmpi
+-openucx
+ paraview-catalyst
+ pugixml
+ pybind11

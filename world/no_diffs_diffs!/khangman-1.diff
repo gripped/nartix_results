@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,6 +20,7 @@
+          qt6-declarative
+          qt6-multimedia)
+ makedepends=(extra-cmake-modules
++             kconfigwidgets
+              kdoctools)
+ groups=(kde-applications
+         kde-education)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ gcc-libs
+ glibc
+ kconfig
++kconfigwidgets
+ kcoreaddons
+ kcrash
+ kdoctools

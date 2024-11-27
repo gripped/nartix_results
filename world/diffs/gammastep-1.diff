@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -19,7 +19,7 @@
    glib2
    intltool
    python
@@ -8,14 +8,14 @@
 +  udev
  )
  optdepends=(
-   'python-gobject: for gammastep-indicator'
+   'geoclue: for automatic location based on GeoClue2'
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -11,5 +11,5 @@
+@@ -10,5 +10,5 @@
  libxcb
  libxxf86vm
  python
