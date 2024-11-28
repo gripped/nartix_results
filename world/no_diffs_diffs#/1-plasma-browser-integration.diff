@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=plasma-browser-integration
+-pkgver=6.2.4
++pkgver=6.2.3
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='Components necessary to integrate browsers into the Plasma Desktop'
+@@ -26,7 +26,7 @@
+ makedepends=(extra-cmake-modules)
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('504be1bb0cb22b1a13c0b7471351672fba3a46bdc8e5724d4ba4013e8f2d63cd'
++sha256sums=('fece70a306d43a215f37c9476d8318d5b3db05065299cca598613ad0208c34f0'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>

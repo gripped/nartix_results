@@ -4,6 +4,7 @@ alacritty
 alsa-utils
 apache
 apcupsd
+apitrace
 appstream
 appstream-qt5
 appstream-qt
@@ -417,7 +418,6 @@ mosquitto
 mousepad
 mozo
 mpd
-msgpack-cxx
 muffin
 multipath-tools
 mumble
@@ -432,6 +432,17 @@ libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
+nemo-extensions
+nemo-audio-tab
+nemo-emblems
+nemo-fileroller
+nemo-image-converter
+nemo-pastebin
+nemo-preview
+nemo-python
+nemo-seahorse
+nemo-share
+nemo-terminal
 netavark
 netplan
 networkmanager
@@ -564,6 +575,7 @@ python-json5
 python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-playwright
+python-pooch
 python-portend
 python-pygit2
 python-pymupdf
@@ -716,7 +728,6 @@ snapper
 solid
 spice-vdagent
 squid
-srt
 sshguard
 sslh
 sssd
@@ -725,7 +736,6 @@ stunnel
 sway
 swayidle
 switcheroo-control
-swtpm
 syslog-ng
 sysprof
 libsysprof-capture
@@ -872,7 +882,6 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
-xmlsec
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

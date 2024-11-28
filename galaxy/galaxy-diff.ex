@@ -1,3 +1,4 @@
+alsa-utils
 cinnamon-desktop
 copyq
 doctest

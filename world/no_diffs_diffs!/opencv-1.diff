@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,10 +3,9 @@
+ pkgname=(opencv
+          opencv-samples
+          python-opencv
+-         opencv-cuda
+-         python-opencv-cuda)
++         opencv-cuda)
+ pkgver=4.10.0
+-pkgrel=15
++pkgrel=14
+ pkgdesc='Open Source Computer Vision Library'
+ arch=(x86_64)
+ license=(Apache-2.0)
+@@ -185,22 +184,3 @@
+ 
+   rm -r "$pkgdir"/usr/lib/python3*
+ }
+-
+-package_python-opencv-cuda() {
+-  pkgdesc='Python bindings for OpenCV (with CUDA support)'
+-  depends=(fmt
+-           glew
+-           hdf5
+-           jsoncpp
+-           opencv-cuda
+-           openmpi
+-           pugixml
+-           python-numpy
+-           qt6-base
+-           vtk)
+-  conflicts=(python-opencv)
+-  provides=(python-opencv=$pkgver)
+-  unset optdepends
+-
+-  DESTDIR="$pkgdir" cmake --install build-cuda/modules/python3
+-}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -32,7 +32,6 @@
+ mesa
+ nlohmann-json
+ opencv
+-opencv-cuda
+ openexr
+ openjpeg2
+ openmpi

@@ -284,6 +284,7 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 obconf-qt
+octave
 onionshare
 openbox
 openrct2
@@ -309,6 +310,7 @@ pysolfc
 python-caja
 python-pysol_cards
 qgis
+qrupdate
 qt5ct
 qt5pas
 qt6pas
@@ -335,6 +337,7 @@ scummvm
 signal-desktop
 stalonetray
 subtitleeditor
+sundials
 telegram-desktop
 terminus-font
 termshark

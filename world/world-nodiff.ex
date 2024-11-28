@@ -72,7 +72,6 @@ anthy
 aom
 aom-docs
 apache-orc
-apitrace
 apparmor
 appmenu-gtk-module
 appstream-glib
@@ -98,6 +97,7 @@ arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
+arpack
 arrow
 artikulate
 asciidoc
@@ -2276,6 +2276,7 @@ mencoder
 mpv
 mpvqt
 msgpack-c
+msgpack-cxx
 msgraph
 msgraph-docs
 msmtp
@@ -2313,17 +2314,6 @@ ncdu
 ncftp
 ncompress
 neatvnc
-nemo-extensions
-nemo-audio-tab
-nemo-emblems
-nemo-fileroller
-nemo-image-converter
-nemo-pastebin
-nemo-preview
-nemo-python
-nemo-seahorse
-nemo-share
-nemo-terminal
 nemo
 neochat
 neofetch
@@ -2507,6 +2497,7 @@ paprefs
 par2cmdline
 parallel
 parallel-docs
+paraview-catalyst
 parley
 parted
 partitionmanager
@@ -3779,7 +3770,6 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
-python-pooch
 python-pook
 python-pprofile
 python-prance
@@ -5030,6 +5020,7 @@ squashfs-tools
 squashfuse
 sratom
 sratom-docs
+srt
 sshfs
 sshpass
 startup-notification
@@ -5062,6 +5053,7 @@ swaylock
 sweeper
 swell-foop
 swig
+swtpm
 sxhkd
 sxiv
 syncthing
@@ -5526,6 +5518,7 @@ xinetd
 xkeyboard-config
 xl2tpd
 xmldiff
+xmlsec
 xmlstarlet
 xmlto
 xmltoman
