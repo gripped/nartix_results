@@ -252,6 +252,7 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
+calf
 camlp-streams
 camlp4
 cantarell-fonts
@@ -494,11 +495,6 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
-edk2
-edk2-arm
-edk2-aarch64
-edk2-shell
-edk2-ovmf
 egl-gbm
 egl-wayland
 eglexternalplatform
@@ -3557,6 +3553,7 @@ python-libarchive-c
 python-libcst
 python-libevdev
 python-librabbitmq
+python-libsass
 python-libtmux
 python-libusb1
 python-libvcs
@@ -3700,7 +3697,6 @@ python-oslotest
 python-outcome
 python-overrides
 python-ovirt-engine-sdk
-python-packaging
 python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
@@ -4889,11 +4885,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

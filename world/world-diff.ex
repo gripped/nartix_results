@@ -42,7 +42,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calf
 cantor
 catfish
 cgmanager
@@ -79,6 +78,11 @@ dracut
 drkonqi
 dunst
 earlyoom
+edk2
+edk2-arm
+edk2-aarch64
+edk2-shell
+edk2-ovmf
 element.io
 element-web
 element-desktop
@@ -574,6 +578,7 @@ python-intelhex
 python-json5
 python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
+python-packaging
 python-playwright
 python-pooch
 python-portend
@@ -708,6 +713,11 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 ldb

@@ -3,7 +3,7 @@
 @@ -1,19 +1,19 @@
  
  pkgname=libetonyek
--pkgver=0.1.11
+-pkgver=0.1.12
 -pkgrel=1
 +pkgver=0.1.10
 +pkgrel=3
@@ -16,7 +16,7 @@
 +depends=('libxml2' 'zlib' 'libwpd' 'librevenge' 'liblangtag')
  makedepends=('boost' 'cppunit' 'gperf' 'doxygen' 'glm' 'mdds')
  source=(https://dev-www.libreoffice.org/src/$pkgname/$pkgname-$pkgver.tar.xz)
--sha256sums=('4bbce5aecbfc939e24a2c654efed561930c4605c270476df455fb3118b3ce3ce')
+-sha256sums=('b9fa82fbeb8cb7a701101060e4f3e1e4ef7c38f574b2859d3ecbe43604c21f83')
 +sha256sums=('b430435a6e8487888b761dc848b7981626eb814884963ffe25eb26a139301e9a')
  
  build() {
