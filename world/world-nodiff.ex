@@ -3333,6 +3333,7 @@ python-fido2
 python-fields
 python-filebytes
 python-filelock
+python-filetype
 python-findpython
 python-fiona
 python-fire
@@ -3766,6 +3767,7 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
+python-pooch
 python-pook
 python-pprofile
 python-prance
@@ -4316,7 +4318,6 @@ python-zc.lockfile
 python-zeep
 python-zeroconf
 python-zict
-python-zipp
 python-zipstream-ng
 python-zodbpickle
 python-zope-component
@@ -4346,6 +4347,7 @@ qca-qt5
 qca-qt6
 qcoro
 qgit
+qhexedit2
 qhull
 qpdf
 qpdf-docs

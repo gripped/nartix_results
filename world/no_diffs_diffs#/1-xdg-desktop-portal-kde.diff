@@ -24,3 +24,38 @@
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,28 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-kconfig
+-kcoreaddons
+-kcrash
+-kglobalaccel
+-ki18n
+-kiconthemes
+-kio
+-kio-fuse
+-kirigami
+-kitemviews
+-knotifications
+-kpipewire
+-kservice
+-kstatusnotifieritem
+-kwayland
+-kwindowsystem
+-libxkbcommon
+-plasma-wayland-protocols
+-plasma-workspace
+-qt6-base
+-qt6-declarative
+-qt6-wayland
+-wayland
+-wayland-protocols
+-xdg-desktop-portal

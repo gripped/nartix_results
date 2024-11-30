@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _npmname=nopt
+ pkgname=nodejs-$_npmname
+-pkgver=7.2.1
+-pkgrel=1
++pkgver=7.2.0
++pkgrel=2
+ pkgdesc="Node/npm Option Parsing library"
+ arch=('any')
+ url="https://github.com/npm/nopt"
+@@ -11,7 +11,7 @@
+ makedepends=('npm')
+ source=("https://registry.npmjs.org/$_npmname/-/$_npmname-$pkgver.tgz")
+ noextract=($_npmname-$pkgver.tgz)
+-sha256sums=('1abeca1ede32a6d0d6517a1dedee0bd1faefaac99364b5c519bc179ac921e44d')
++sha256sums=('bb53479b5329f2a66322c48f910ed6532c71bfe6f081b2b48fd2d62bfbe883a8')
+ options=("!strip")
+ 
+ package() {

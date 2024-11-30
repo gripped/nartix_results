@@ -335,6 +335,7 @@ screengrab
 scribus
 scummvm
 signal-desktop
+sqlitebrowser
 stalonetray
 subtitleeditor
 sundials

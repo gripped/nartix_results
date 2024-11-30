@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ )
+ makedepends=(git cmake ninja qt5-tools)
+ source=("git+https://github.com/sqlitebrowser/sqlitebrowser#tag=${_gitcommit}?signed")
+-sha256sums=('SKIP')
++sha256sums=('1ba86cb884c3dac5f2fb5fbbbd7334c6a1409c1f67ec02a8cdad4c036472c4d8')
+ validpgpkeys=(
+   '05E463FDB5802C3D00257F9C79EAD0AB3BD7DD2C' # Justin Clift (GPG key for signing git commits) <justin@postgresql.org>
+ )

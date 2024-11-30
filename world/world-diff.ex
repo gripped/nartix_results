@@ -580,7 +580,6 @@ python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-packaging
 python-playwright
-python-pooch
 python-portend
 python-pygit2
 python-pymupdf
@@ -599,9 +598,12 @@ python-trustme
 python-ubjson
 python-uvloop
 python-wheel
+python-zipp
 qastools
 qbittorrent
 qbittorrent-nox
+qcustomplot
+qcustomplot-doc
 qemu
 qemu-common
 qemu-audio-alsa
