@@ -5,8 +5,9 @@
  pkgbase=wireshark
  pkgname=('wireshark-cli' 'wireshark-qt')
 -pkgver=4.4.2
+-pkgrel=2
 +pkgver=4.4.0
- pkgrel=1
++pkgrel=1
  pkgdesc='Network traffic and protocol analyzer/sniffer'
  url='https://www.wireshark.org/'
  arch=('x86_64')
@@ -48,7 +49,7 @@
 -  'snappy'
 -  'spandsp'
 -  'speexdsp'
--  'zlib'
+-  'zlib-ng'
 -  'zstd'
 -)
 +makedepends=('glibc' 'cmake' 'ninja' 'c-ares' 'libmaxminddb' 'qt6-tools' 'qt6-svg'
@@ -168,6 +169,12 @@
  lz4
  minizip
  ninja
+@@ -48,5 +48,4 @@
+ wireshark-cli
+ xdg-utils
+ zlib
+-zlib-ng
+ zstd
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

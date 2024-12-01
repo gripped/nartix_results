@@ -4,11 +4,11 @@ alacritty
 alsa-utils
 apache
 apcupsd
-apitrace
 appstream
 appstream-qt5
 appstream-qt
 aquamarine
+archivetools
 at-spi2-core
 at-spi2-core-docs
 at
@@ -314,6 +314,7 @@ libinput
 libldm
 libmspub
 libnvme
+libplacebo
 libprocps
 libsidplay
 libsidplayfp
@@ -372,7 +373,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-mat2
 mate-applets
 mate-backgrounds
 mate-calc
@@ -574,6 +574,7 @@ python-anytree
 python-bitstring
 python-cherrypy
 python-cryptography
+python-enrich
 python-intelhex
 python-json5
 python-magic-wormhole-mailbox-server
@@ -715,11 +716,6 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-rust
-lib32-rust-libs
-rust-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 ldb
@@ -739,6 +735,7 @@ smartmontools
 snapper
 solid
 spice-vdagent
+spirv-tools
 squid
 sshguard
 sslh

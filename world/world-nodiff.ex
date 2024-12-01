@@ -72,6 +72,7 @@ anthy
 aom
 aom-docs
 apache-orc
+apitrace
 apparmor
 appmenu-gtk-module
 appstream-glib
@@ -83,7 +84,6 @@ arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme
 archey3
-archivetools
 archlinux-appstream-data
 ardour
 argyllcms
@@ -1810,7 +1810,6 @@ libpeas-docs
 libpgm
 libphonenumber
 libpinyin
-libplacebo
 libplasma
 libplist
 libpng
@@ -2191,6 +2190,7 @@ marked-man
 marked
 marknote
 massif-visualizer
+mat2
 materia-kde
 kvantum-theme-materia
 materialx
@@ -3300,7 +3300,6 @@ python-elementpath
 python-email-validator
 python-emoji
 python-engineio
-python-enrich
 python-entrypoint2
 python-entrypoints
 python-ephemeral-port-reserve
@@ -4887,6 +4886,11 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
@@ -5005,7 +5009,6 @@ spice-protocol
 spice
 spirv-headers
 spirv-llvm-translator
-spirv-tools
 splint
 spotifyd
 sqlcipher

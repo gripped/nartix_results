@@ -28,5 +28,6 @@ lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
+lib32-spirv-tools
 lib32-v4l-utils
 wine
