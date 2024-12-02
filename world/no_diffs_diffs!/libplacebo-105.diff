@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libplacebo
+ pkgver=7.349.0
+-pkgrel=3
++pkgrel=3.1
+ pkgdesc='Reusable library for GPU-accelerated video/image rendering primitives'
+ url='https://github.com/haasn/libplacebo'
+ arch=('x86_64')
+@@ -29,7 +29,7 @@
+ build() {
+   cd ${pkgname}-v${pkgver}
+   CXXFLAGS+=" -I/usr/include/glslang"
+-  arch-meson build \
++  artix-meson build \
+     -D tests=true \
+     -D vulkan=enabled \
+     -D glslang=enabled \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ build() {
+ cd ${pkgname}-v${pkgver}
+ CXXFLAGS+=" -I/usr/include/glslang"
+-arch-meson build \
++artix-meson build \
+ -D tests=true \
+ -D vulkan=enabled \
+ -D glslang=enabled \

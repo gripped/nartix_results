@@ -177,7 +177,6 @@ banner
 baobab
 bash-bats-assert
 bash-bats-support
-bash-completion
 bats-assert
 bats-support
 bats
@@ -495,6 +494,11 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
+edk2
+edk2-arm
+edk2-aarch64
+edk2-shell
+edk2-ovmf
 egl-gbm
 egl-wayland
 eglexternalplatform
@@ -1810,6 +1814,7 @@ libpeas-docs
 libpgm
 libphonenumber
 libpinyin
+libplacebo
 libplasma
 libplist
 libpng
@@ -5009,6 +5014,7 @@ spice-protocol
 spice
 spirv-headers
 spirv-llvm-translator
+spirv-tools
 splint
 spotifyd
 sqlcipher

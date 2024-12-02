@@ -1,6 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -44,7 +44,7 @@
+@@ -29,6 +29,11 @@
+         'c04583e19149c1035cb7777a59f0fbc4988b672d8e45105e33def3d0f9054464e33a400a3e7c7e8b99b334e4fe06aaa9d7e34662e806096d4374bd6b12d803db'
+         '94c8fd12b5f33611fd6dbeae03b20e72bcf2937e764766e2633b2fd4c14925860d57eee234016c81b0563a47b112ac9ef4a8b3bb9fa3fc0dd266f355bc156c58')
+ 
++pkgver() {
++  cd pkgconf
++  git describe --tags | sed 's/^pkgconf-//;s/[^-]*-g/r&/;s/-/+/g'
++}
++
+ prepare() {
+   cd pkgconf
+ }
+@@ -38,7 +43,7 @@
      -D tests=disabled  # Tests need kyua
    )
  
@@ -9,6 +21,11 @@
    meson compile -C build
  }
  
+@@ -61,3 +66,4 @@
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pkgconf/COPYING
+ }
+ 
++
 
 
 ############# Stripped diff below #################
