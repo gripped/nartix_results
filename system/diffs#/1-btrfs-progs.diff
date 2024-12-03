@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=btrfs-progs
+ pkgver=6.12
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Btrfs filesystem utilities'
+ arch=('x86_64')
+ makedepends=(
 @@ -12,14 +12,14 @@
    python-setuptools
    python-sphinx
@@ -25,7 +34,7 @@
 -  btrfs-scrub@.timer
  )
 -install=btrfs-progs.install
- b2sums=('d4088c8d55f642cae584b7c83e9c6e5d7358795844c2ccb66f7453c5fd93bd43812f4c80e3cbd0851080685a9dcff3c35f8a42c63aa1903042cd56f9d6aaba9c'
+ b2sums=('d177be360101c6d28f2fa1ac75a694d09171115ccc677b6833470a50fb86d9c0e783789b5c4dd03525e72352a03a57a08ddb9e2115b43a8dd1de67773b8fbb33'
          '75659665a24f92bba1175a2fcae942d9851495c9cff88570b88a98dced4eb98fcc9879de044bfc7d560dbe1c71a20d7ae51ca4b7c2649f90d646b414e0864b6e'
 -        '0d3c25d0cb6fdb8e8777723b5e199835fac25573bc8f7fcb248ccfeea7268752b7100dd2c8284529812f0b1d3943eceb5785f119959f89bffedcf30472a915db'
 -        '4408d0f81634c99f874a2dde8fc289f61d9e00d5c2d2efd465bcc90db69112604ec987a46858f48c0c2ce1cb4499de1355ad4baf847a74b40c148f8d7a516d22'
@@ -34,15 +43,6 @@
  
  prepare() {
    cd "${pkgname}"
-@@ -75,7 +70,7 @@
- check() {
-   cd "${pkgname}"
-   rm -r $(dirname $(rg -t sh -l -e SUDO_HELPER -e mount -e prepare_test) | rg 'tests/')
--  make -j1 -C tests test
-+  make -j1 -C tests test ||:
- }
- 
- package() {
 @@ -88,7 +83,5 @@
    install -Dm644 initcpio-install-btrfs "${pkgdir}/usr/lib/initcpio/install/btrfs"
    install -Dm644 initcpio-hook-btrfs "${pkgdir}/usr/lib/initcpio/hooks/btrfs"

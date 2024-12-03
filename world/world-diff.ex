@@ -314,6 +314,7 @@ libprocps
 libsidplay
 libsidplayfp
 libtg_owt
+libtorrent
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -572,6 +573,7 @@ python-cryptography
 python-enrich
 python-intelhex
 python-json5
+python-jupyter-ydoc
 python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-packaging
@@ -708,6 +710,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+rtorrent
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem

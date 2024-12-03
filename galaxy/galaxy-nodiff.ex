@@ -8,6 +8,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
+blender
 blueman
 box2d
 cairo-perl

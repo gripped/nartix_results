@@ -950,6 +950,7 @@ hipblas
 hipcub
 hipfft
 hiprand
+hiprt
 hipsolver
 hipsparse
 hiredis
@@ -1913,7 +1914,6 @@ libtiger
 libtomcrypt
 libtommath
 libtorrent-rasterbar
-libtorrent
 libtpms
 libtraceevent
 libtraceevent-docs
@@ -3528,7 +3528,6 @@ python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
-python-jupyter-ydoc
 python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
@@ -4545,7 +4544,6 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
-rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2

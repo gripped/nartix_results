@@ -1,5 +1,4 @@
 alsa-utils
-blender
 cinnamon-desktop
 copyq
 doctest

@@ -5,7 +5,7 @@
  pkgbase=wireshark
  pkgname=('wireshark-cli' 'wireshark-qt')
 -pkgver=4.4.2
--pkgrel=2
+-pkgrel=3
 +pkgver=4.4.0
 +pkgrel=1
  pkgdesc='Network traffic and protocol analyzer/sniffer'
@@ -109,7 +109,7 @@
 -    'snappy'
 -    'spandsp'
 -    'speexdsp'
--    'zlib'
+-    'zlib-ng'
 -    'zstd'
 -  )
 +  depends=('glibc' 'c-ares' 'libmaxminddb' 'krb5' 'libgcrypt' 'libcap' 'libpcap'
@@ -144,7 +144,7 @@
 -    'speexdsp'
 -    'wireshark-cli'
 -    'xdg-utils'
--    'zlib'
+-    'zlib-ng'
 -  )
 +  depends=('glibc' 'desktop-file-utils' 'qt6-multimedia' 'qt6-svg' 'qt6-5compat'
 +           'wireshark-cli' 'libwireshark.so' 'libwiretap.so' 'libwsutil.so'
@@ -169,11 +169,12 @@
  lz4
  minizip
  ninja
-@@ -48,5 +48,4 @@
+@@ -47,5 +47,5 @@
+ speexdsp
  wireshark-cli
  xdg-utils
- zlib
 -zlib-ng
++zlib
  zstd
 
 --- Arch PKGBUILD
