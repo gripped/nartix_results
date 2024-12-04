@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,11 @@
+ 
+ pkgname=qt6-quick3dphysics
+-_pkgver=6.8.1
+-pkgver=6.8.1
++_pkgver=6.8.0
++pkgver=6.8.0
+ pkgrel=1
+ arch=(x86_64)
+ url='https://www.qt.io'
+-license=(GPL-3.0-only
+-         LGPL-3.0-only
+-         LicenseRef-Qt-Commercial
+-         Qt-GPL-exception-1.0)
++license=(GPL3 LGPL3 FDL custom)
+ pkgdesc='Physics engine integration for Qt Quick 3D'
+ depends=(gcc-libs
+          glibc
+@@ -22,7 +19,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('e2c1176317ecc9c358ea35fc5e063a303e40c0bab188b0916124d977b939f54d')
++sha256sums=('7d76b4487f4e292e4e315198c024caf0b719d8df8d7ed51b45980609d3180704')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \

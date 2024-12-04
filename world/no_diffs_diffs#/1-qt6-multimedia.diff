@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,15 +3,12 @@
+ pkgname=(qt6-multimedia
+          qt6-multimedia-ffmpeg
+          qt6-multimedia-gstreamer)
+-_pkgver=6.8.1
+-pkgver=6.8.1
+-pkgrel=1
++_pkgver=6.8.0
++pkgver=6.8.0
++pkgrel=2
+ arch=(x86_64)
+ url='https://www.qt.io'
+-license=(GPL-3.0-only
+-         LGPL-3.0-only
+-         LicenseRef-Qt-Commercial
+-         Qt-GPL-exception-1.0)
++license=(GPL3 LGPL3 FDL custom)
+ pkgdesc='Classes for audio, video, radio and camera functionality'
+ depends=(gcc-libs
+          glibc
+@@ -20,18 +17,16 @@
+ makedepends=(cmake
+              ffmpeg
+              git
+-             gst-plugins-bad-libs
+              gst-plugins-base
+              libxrandr
+              ninja
+-             pipewire
+              qt6-declarative
+              qt6-quick3d
+              qt6-shadertools)
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('8e625b72b15f4272fe23a055a0f332ad52ae881ac18d6d8b114a54fa44124472')
++sha256sums=('a77fa14193f084d34c554ac53a6d91431bca973154b63d61a600849dd7a377c2')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \
+@@ -64,11 +59,9 @@
+   depends=(gcc-libs
+            glib2
+            glibc
+-           gst-plugins-bad-libs
+            gst-plugins-base
+            gstreamer
+            libglvnd
+-           libpulse
+            qt6-base
+            qt6-multimedia)
+   provides=(qt6-multimedia-backend)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,7 +4,6 @@
+ git
+ glib2
+ glibc
+-gst-plugins-bad-libs
+ gst-plugins-base
+ gstreamer
+ libglvnd
+@@ -13,7 +12,6 @@
+ libxext
+ libxrandr
+ ninja
+-pipewire
+ qt6-base
+ qt6-declarative
+ qt6-multimedia

@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,11 @@
+ 
+ pkgname=qt6-location
+-_pkgver=6.8.1
+-pkgver=6.8.1
++_pkgver=6.8.0
++pkgver=6.8.0
+ pkgrel=1
+ arch=(x86_64)
+ url='https://www.qt.io'
+-license=(GPL-3.0-only
+-         LGPL-3.0-only
+-         LicenseRef-Qt-Commercial
+-         Qt-GPL-exception-1.0)
++license=(GPL3 LGPL3 FDL custom)
+ pkgdesc='Helps you create viable mapping solutions using the data available from some of the popular location services'
+ depends=(gcc-libs
+          glibc
+@@ -21,7 +18,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('819dbdfcb7a24e4e3e6a52f564b8c32dcaa8b1d8b8e278d719509c73bfc7a208')
++sha256sums=('fd62836fc47a25d35f5d9ecdb82b4d79c980968ae62f901624cad770aef979a4')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \

@@ -177,6 +177,7 @@ banner
 baobab
 bash-bats-assert
 bash-bats-support
+bash-completion
 bats-assert
 bats-support
 bats
@@ -1914,6 +1915,7 @@ libtiger
 libtomcrypt
 libtommath
 libtorrent-rasterbar
+libtorrent
 libtpms
 libtraceevent
 libtraceevent-docs
@@ -3293,6 +3295,7 @@ python-dpcontracts
 python-dropbox
 python-dulwich
 python-dunamai
+python-durationpy
 python-easyprocess
 python-ecdsa
 python-editables
@@ -4409,7 +4412,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4436,9 +4438,7 @@ qt6-svg
 qt6-tools
 qt6-translations
 qt6-virtualkeyboard
-qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4544,6 +4544,7 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
+rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2

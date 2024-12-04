@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,11 @@
+ 
+ pkgname=qt6-quicktimeline
+-_pkgver=6.8.1
+-pkgver=6.8.1
++_pkgver=6.8.0
++pkgver=6.8.0
+ pkgrel=1
+ arch=(x86_64)
+ url='https://www.qt.io'
+-license=(GPL-3.0-only
+-         LGPL-3.0-only
+-         LicenseRef-Qt-Commercial
+-         Qt-GPL-exception-1.0)
++license=(GPL3 LGPL3 FDL custom)
+ pkgdesc='Qt module for keyframe-based timeline construction'
+ depends=(gcc-libs
+          glibc
+@@ -20,7 +17,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('6b820641e00ca87b6b5a4eff0861eddf98001a7f7eff3bb16cd2f374d0be64f5')
++sha256sums=('4159ed8048b922c646576f2181156cce56cbc770519aa530d6e6abd6d96a4c46')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \

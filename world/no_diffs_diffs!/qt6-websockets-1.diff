@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,11 @@
+ 
+ pkgname=qt6-websockets
+-_pkgver=6.8.1
+-pkgver=6.8.1
++_pkgver=6.8.0
++pkgver=6.8.0
+ pkgrel=1
+ arch=(x86_64)
+ url='https://www.qt.io'
+-license=(GPL-3.0-only
+-         LGPL-3.0-only
+-         LicenseRef-Qt-Commercial
+-         Qt-GPL-exception-1.0)
++license=(GPL3 LGPL3 FDL custom)
+ pkgdesc='Provides WebSocket communication compliant with RFC 6455'
+ depends=(gcc-libs
+          glibc
+@@ -21,7 +18,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('7def499b7ff8ad0374a769a1bea2d71113681ceac1eb01a614fe71aee8ee7eb4')
++sha256sums=('308aed1b1e7ac0bb616c4467204502bc5f3c158636f185f87765dc801d01b081')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \

@@ -17,7 +17,6 @@ audacious-plugins
 avahi
 awesome
 bash-bats
-bash-completion
 bluedevil
 bluez
 bluez-utils
@@ -314,7 +313,6 @@ libprocps
 libsidplay
 libsidplayfp
 libtg_owt
-libtorrent
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -686,9 +684,12 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-wayland
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -710,7 +711,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-rtorrent
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
