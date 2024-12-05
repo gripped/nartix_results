@@ -1362,6 +1362,7 @@ koko
 kolf
 kollision
 kolourpaint
+kommit
 kompare
 kongress
 konqueror
@@ -2428,6 +2429,7 @@ opencv
 opencv-samples
 python-opencv
 opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -4412,6 +4414,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4438,7 +4441,9 @@ qt6-svg
 qt6-tools
 qt6-translations
 qt6-virtualkeyboard
+qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4693,9 +4698,6 @@ ruby-memory_profiler
 ruby-metaclass
 ruby-method_source
 ruby-metrics
-ruby-mime-types-data
-ruby-mime-types
-ruby-mini_mime
 ruby-mini_portile
 ruby-mini_portile2
 ruby-minitest-global_expectations

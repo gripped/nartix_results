@@ -1,16 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,11 +1,14 @@
  
  pkgname=qt6-graphs
 -_qtver=6.6.0
 -pkgver=${_qtver/-/}
-+_pkgver=6.8.0
-+pkgver=6.8.0
++_pkgver=6.8.1
++pkgver=6.8.1
  pkgrel=1
  arch=(x86_64)
  url='https://www.qt.io'
-@@ -13,12 +13,13 @@
+-license=(GPL3 LGPL3 FDL custom)
++license=(GPL-3.0-only
++         LGPL-3.0-only
++         LicenseRef-Qt-Commercial
++         Qt-GPL-exception-1.0)
+ pkgdesc='Qt Graphs for data visualization'
+ depends=(gcc-libs
+          glibc
+@@ -13,12 +16,13 @@
           qt6-declarative
           qt6-quick3d)
  makedepends=(cmake
@@ -23,7 +31,7 @@
 -sha256sums=('56e147fc89031b77002a87da2970c1d6ebf3f595268d0cae52f5f71278e15e7f')
 +_pkgfn=${pkgname/6-/}
 +source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
-+sha256sums=('e12a922e7491eadedf1c918a9211954d9902526bc0d7344374b0639c8a498ae8')
++sha256sums=('c009a947b94e1c95365920be17e8f1f9a3e01871e66b91f2ea0f426786a90f0b')
  
  build() {
    cmake -B build -S $_pkgfn -G Ninja \
