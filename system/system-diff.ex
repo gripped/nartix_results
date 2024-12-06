@@ -28,6 +28,9 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
+gpgme
+qgpgme-qt6
+python-gpgme
 gssproxy
 iputils
 libusb

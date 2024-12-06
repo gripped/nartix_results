@@ -571,7 +571,6 @@ python-cryptography
 python-enrich
 python-intelhex
 python-json5
-python-jupyter-ydoc
 python-magic-wormhole-mailbox-server
 python-magic-wormhole-transit-relay
 python-packaging
@@ -808,6 +807,12 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
+virtualbox
+virtualbox-sdk
+virtualbox-host-dkms
+virtualbox-guest-utils
+virtualbox-guest-utils-nox
+virtualbox-ext-vnc
 vlc
 libvlc
 vpnc

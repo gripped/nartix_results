@@ -3533,6 +3533,7 @@ python-jupyter-core
 python-jupyter-events
 python-jupyter-packaging
 python-jupyter-server-terminals
+python-jupyter-ydoc
 python-jupyterlab-server
 python-jupyterlab_server
 python-jwcrypto
@@ -4232,6 +4233,7 @@ python-txrequests
 python-txtorcon
 python-typed-ast
 python-typeguard
+python-types-python-dateutil
 python-typing_extensions
 python-typing_inspect
 python-typogrify
@@ -5397,12 +5399,6 @@ virt-viewer
 virt-what
 virtiofsd
 virtualbox-guest-iso
-virtualbox
-virtualbox-sdk
-virtualbox-host-dkms
-virtualbox-guest-utils
-virtualbox-guest-utils-nox
-virtualbox-ext-vnc
 virtualgl
 vkd3d
 vmaf
