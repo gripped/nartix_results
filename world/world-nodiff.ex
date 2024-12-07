@@ -239,7 +239,6 @@ bullet
 bullet-dp
 bullet-docs
 python-pybullet
-byacc
 bzip3
 c-ares
 cabextract
@@ -2313,7 +2312,6 @@ nanosvg
 nasm
 nauty
 nawk
-nccl
 ncdu
 ncftp
 ncompress
@@ -4700,6 +4698,9 @@ ruby-memory_profiler
 ruby-metaclass
 ruby-method_source
 ruby-metrics
+ruby-mime-types-data
+ruby-mime-types
+ruby-mini_mime
 ruby-mini_portile
 ruby-mini_portile2
 ruby-minitest-global_expectations

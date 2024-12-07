@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ _srcver=3470100
+ _docver=${_srcver}
+ pkgver=3.47.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A C library that implements an SQL database engine"
+ arch=('x86_64')
+ license=('LicenseRef-Sqlite')
+@@ -54,7 +54,7 @@
+ 	TCLLIBDIR=/usr/lib/sqlite$pkgver
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+-  make showdb showjournal showstat4 showwal sqldiff sqlite3_analyzer sqlite3_rsync
++  make showdb showjournal showstat4 showwal sqldiff sqlite3_analyzer
+ }
+ 
+ package_sqlite() {
+@@ -67,7 +67,7 @@
+   cd sqlite-src-$_srcver
+   make DESTDIR="${pkgdir}" install
+ 
+-  install -m755 showdb showjournal showstat4 showwal sqldiff sqlite3_rsync "${pkgdir}"/usr/bin/
++  install -m755 showdb showjournal showstat4 showwal sqldiff "${pkgdir}"/usr/bin/
+ 
+   install -m755 -d "${pkgdir}"/usr/share/man/man1
+   install -m644 sqlite3.1 "${pkgdir}"/usr/share/man/man1/
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,5 +27,5 @@
+ TCLLIBDIR=/usr/lib/sqlite$pkgver
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+-make showdb showjournal showstat4 showwal sqldiff sqlite3_analyzer sqlite3_rsync
++make showdb showjournal showstat4 showwal sqldiff sqlite3_analyzer
+ }

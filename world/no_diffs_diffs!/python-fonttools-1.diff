@@ -1,11 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,8 +1,8 @@
+ 
  pkgname=python-fonttools
  _pyname=${pkgname#python-}
- pkgver=4.55.1
+-pkgver=4.55.2
 -pkgrel=1
++pkgver=4.55.1
 +pkgrel=1.1
  pkgdesc='A library to manipulate font files from Python'
  url="https://github.com/fonttools/$_pyname"
  license=(MIT)
+@@ -30,7 +30,7 @@
+             'python-zopfli: faster backend fom WOFF 1.0 web fonts compression')
+ _archive="$_pyname-$pkgver"
+ source=("$url/archive/$pkgver/$_archive.tar.gz")
+-sha256sums=('978500a811978c5ee32201c23b052e41453c072606362cfa3dab71ef9de8029e')
++sha256sums=('f9e03c47b58378ab48ec1b949938814b5a20b8591a98708e5a4b905b30768898')
+ 
+ build() {
+ 	cd "$_archive"

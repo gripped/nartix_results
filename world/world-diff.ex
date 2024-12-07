@@ -33,6 +33,7 @@ brightnessctl
 brltty
 brltty-udev-generic
 bumblebee
+byacc
 caja-extensions
 caja-extensions-common
 caja-image-converter
@@ -428,6 +429,7 @@ nautilus
 libnautilus-extension
 libnautilus-extension-docs
 nbd
+nccl
 ndctl
 ndisc6
 nemo-extensions
@@ -707,9 +709,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-mime-types-data
-ruby-mime-types
-ruby-mini_mime
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem

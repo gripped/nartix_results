@@ -169,11 +169,6 @@ run-parts
 s-nail
 sdparm
 sed
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 sudo
 sysfsutils
 syslinux
