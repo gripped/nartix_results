@@ -4302,7 +4302,6 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
-python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -4894,7 +4893,6 @@ ruff
 python-ruff
 run-parts
 runc
-rust-bindgen
 rust
 lib32-rust-libs
 rust-musl
@@ -5415,11 +5413,8 @@ vsftpd
 vst3sdk
 vst3sdk-docs
 vtk
-vulkan-docs
-vulkan-html-docs
 vulkan-headers
 vulkan-icd-loader
-vulkan-tools
 vulkan-validation-layers
 w3m
 wacomtablet

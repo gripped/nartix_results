@@ -595,6 +595,7 @@ python-trustme
 python-ubjson
 python-uvloop
 python-wheel
+python-xarray
 python-zipp
 qastools
 qbittorrent
@@ -712,6 +713,7 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+rust-bindgen
 samba
 libwbclient
 ldb
@@ -819,6 +821,9 @@ vte3
 vte-common
 vte4
 vte-docs
+vulkan-docs
+vulkan-html-docs
+vulkan-tools
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

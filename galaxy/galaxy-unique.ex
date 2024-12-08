@@ -87,6 +87,7 @@ moksha-module-photo
 moksha-module-productivity
 moksha-module-rain
 moksha-module-screenshot
+moksha-module-separator
 moksha-module-slideshow
 moksha-module-snow
 moksha-module-spellchecker

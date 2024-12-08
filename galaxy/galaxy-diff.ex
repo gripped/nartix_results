@@ -18,7 +18,6 @@ libretro-pcsx2
 libxfce4ui
 light
 lxpanel
-lxqt-wayland-session
 lxsession
 lxsession-gtk3
 lxterminal
