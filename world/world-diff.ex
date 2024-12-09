@@ -33,7 +33,6 @@ brightnessctl
 brltty
 brltty-udev-generic
 bumblebee
-byacc
 caja-extensions
 caja-extensions-common
 caja-image-converter
@@ -215,6 +214,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -780,6 +780,7 @@ transmission-gtk
 transmission-qt
 libtransmission
 tumbler
+twine
 udftools
 udisks2
 udisks2-btrfs
@@ -821,9 +822,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vulkan-docs
-vulkan-html-docs
-vulkan-tools
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

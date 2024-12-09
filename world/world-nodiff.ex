@@ -239,6 +239,7 @@ bullet
 bullet-dp
 bullet-docs
 python-pybullet
+byacc
 bzip3
 c-ares
 cabextract
@@ -1022,7 +1023,6 @@ inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -5322,7 +5322,6 @@ ttf-opensans
 ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
-twine
 twolame
 txt2man
 typescript
@@ -5413,8 +5412,11 @@ vsftpd
 vst3sdk
 vst3sdk-docs
 vtk
+vulkan-docs
+vulkan-html-docs
 vulkan-headers
 vulkan-icd-loader
+vulkan-tools
 vulkan-validation-layers
 w3m
 wacomtablet

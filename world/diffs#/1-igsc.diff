@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -1,21 +1,23 @@
+ 
+ pkgname=igsc
+-pkgver=0.9.5
+-pkgrel=1
++pkgver=0.9.3
++pkgrel=2
+ pkgdesc="Intel graphics system controller firmware update library"
  arch=(x86_64)
  url="https://github.com/intel/igsc/"
  license=(Apache-2.0)
@@ -9,9 +16,11 @@
 +depends=(intel-metee libudev)
 +makedepends=(cmake udev)
  source=(${url}/archive/V${pkgver}/${pkgname}-${pkgver}.tar.gz)
- sha256sums=('e657553ebe3dbb7196012bd9a234382f9053522c377651400268ce45b2a9e43a')
+-sha256sums=('516a099239ad0541598be87025556c878c0d11c6d43e09115d2bb2e24508b6ec')
++sha256sums=('e657553ebe3dbb7196012bd9a234382f9053522c377651400268ce45b2a9e43a')
  
-@@ -16,6 +16,8 @@
+ build() {
+   cmake -B build -S ${pkgname}-${pkgver} \
      -G 'Unix Makefiles' \
      -DCMAKE_BUILD_TYPE=None \
      -DCMAKE_INSTALL_PREFIX=/usr \
