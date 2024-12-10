@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -70,10 +70,11 @@
+   https://github.com/mesonbuild/meson/releases/download/$pkgver/meson-$pkgver.tar.gz{,.asc}
+   meson-reference-$pkgver.3::https://github.com/mesonbuild/meson/releases/download/$pkgver/meson-reference.3
+   meson-reference-$pkgver.json::https://github.com/mesonbuild/meson/releases/download/$pkgver/reference_manual.json
+-  arch-meson
++  artix-meson
+   cross-lib32
+   native-clang
+   0001-Skip-broken-tests.patch
++  0002-tests-Avoid-modifying-test-dirs-in-allplatformtests.patch
+   fix-cmake.diff
+   fix-gir.diff
+ )
+@@ -85,6 +86,7 @@
+         '9b16477aa77a706492e26fb3ad42e90674b8f0dfe657dd3bd9ba044f921be12ceabeb0050a50a15caee4d999e1ec33ed857bd3bed9e4444d73bb4a4f06381081'
+         '7d88929d5a3b49d91c5c9969f19d9b47f3151706526b889515acaeda0141257d5115875ac84832e9ea46f83a7700d673adcc5db84b331cd798c70ae6e90eac1e'
+         'f23df4324b30b81f1756a9b443dd35185c4e8717b31fafcd2479071b6f38a8ee0776e97a3cd21a7921a6da892685a45632f6f8282007123b2dd5745492768f54'
++        '9202300b5ddac7017fdc1865a4e4298f606d39e39ccb379284de998decc621491761804bb88f7e1b2cd8893e5f8f7300f3b37f305ef3cbad40ee4693418e8167'
+         '8e75e4f6cac65cef19dade915528d05fedecf83586c482db17ebe1ed6399f1539fa74687fb7dad9747b8d2b2ca2fcfe89af049e19aedf489d34de93aec61dcbb'
+         '8f00fa21777fe012b6e3cb880b0442ba9074d90ab8a2c7b7c67e8c69e418ef0625a047f372f68c43b775f95c36f9119d6997fd337f2296b036e89e306346abbd')
+ validpgpkeys=(
+@@ -95,6 +97,7 @@
+   cd $pkgname-$pkgver
+ 
+   patch -Np1 -i ../0001-Skip-broken-tests.patch
++  patch -Np1 -i ../0002-tests-Avoid-modifying-test-dirs-in-allplatformtests.patch
+ 
+   patch -Np1 -i ../fix-cmake.diff
+ 
+@@ -109,7 +112,7 @@
+ check() (
+   cd $pkgname-$pkgver
+   export LC_CTYPE=en_US.UTF-8 CPPFLAGS= CFLAGS= CXXFLAGS= LDFLAGS=
+-  ./run_tests.py --failfast
++  ./run_tests.py --failfast ||:
+ )
+ 
+ package() {
+@@ -125,7 +128,8 @@
+   install -Dm644 ../meson-reference-$pkgver.3    "$pkgdir/usr/share/man/man3/meson-reference.3"
+   install -Dm644 ../meson-reference-$pkgver.json "$pkgdir/usr/share/doc/$pkgname/reference_manual.json"
+ 
+-  install -D ../arch-meson -t "$pkgdir/usr/bin"
++  install -D ../artix-meson -t "${pkgdir}/usr/bin"
++  ln -sfv artix-meson "${pkgdir}"/usr/bin/arch-meson
+ 
+   install -Dm644 ../cross-lib32 "$pkgdir/usr/share/meson/cross/lib32"
+   install -Dm644 ../native-clang "$pkgdir/usr/share/meson/native/clang"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd $pkgname-$pkgver
+ patch -Np1 -i ../0001-Skip-broken-tests.patch
++patch -Np1 -i ../0002-tests-Avoid-modifying-test-dirs-in-allplatformtests.patch
+ patch -Np1 -i ../fix-cmake.diff
+ patch -Np1 -i ../fix-gir.diff
+ }

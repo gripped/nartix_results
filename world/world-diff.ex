@@ -214,7 +214,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -406,6 +405,7 @@ vulkan-radeon
 vulkan-swrast
 vulkan-virtio
 mesa-docs
+meson
 mgba
 libmgba
 mgba-sdl
@@ -904,6 +904,7 @@ xorg-server-devel
 xorg-xdm
 xorg-xwayland
 xscreensaver
+xsimd
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

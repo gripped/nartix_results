@@ -1023,6 +1023,7 @@ inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -2227,7 +2228,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard
@@ -5572,7 +5572,6 @@ xsane-gimp
 xsd
 xsel
 xsettingsd
-xsimd
 xsimd12
 xterm
 xtrans

@@ -5,9 +5,8 @@
    libnautilus-extension-docs
  )
 -pkgver=45.2
--pkgrel=1
-+pkgver=47.0
-+pkgrel=3
++pkgver=47.1
+ pkgrel=1
  pkgdesc="Default file manager for GNOME"
 -url="https://wiki.gnome.org/Apps/Files"
 +url="https://apps.gnome.org/Nautilus/"
@@ -30,7 +29,7 @@
    gtk4
    gvfs
    hicolor-icon-theme
-@@ -28,31 +31,39 @@
+@@ -28,31 +31,37 @@
    libgexiv2
    libportal
    libportal-gtk4
@@ -55,7 +54,7 @@
 -_commit=5e84f663e7e01314a8e364fba50451e011938b7a  # tags/45.2^0
  source=(
 -  "git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
-+  "git+https://gitlab.gnome.org/GNOME/nautilus.git?signed#tag=${pkgver/[a-z]/.&}"
++  "git+https://gitlab.gnome.org/GNOME/nautilus.git#tag=${pkgver/[a-z]/.&}"
 +  0001-Disable-tracker-test.patch
  )
 -b2sums=('SKIP')
@@ -64,8 +63,8 @@
 -  cd nautilus
 -  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 -}
-+b2sums=('01773ab8f39b700977a3798a4fd1de07b87d966083d6cfea6e9576065bcec958b17832f46ada17b84122aaba5b86871b11d51f17f0b89f6a1ec3ed301497528f'
-+        '1c81c3b736abdda0d59d5b798cd83dd5a794e64e7e052f65e1c1e27b2b1b52afbee06907fd9645950fb0acfb17c1f64c7a9e42ba59368720235e2fbd8df32fb5')
++b2sums=('abec4401ee2f599b9cb1bfbff6b111d2da965356da0c567f6c5bce97e1f6411862454400810a33424fd77afb50f8a3a70552b0e3bc57cfd4bee32462b83492a9'
++        '8befc868af7e4dc776c50c10d0c6852d237f41b1f4adf8c15e0c378a9ff035e38b2cd22926d313850babcd6c96b6dd2be95fa9e1299383e686ad5a0ff36b957f')
 +validpgpkeys=(
 +  6B211753AC950672287226800538577822AE4B17 # António Fernandes <antoniof@gnome.org>
 +  550660707A6F40376B9B9F8D504A78811E6160CC # Corey Berla <corey@berla.me>
@@ -75,12 +74,10 @@
    cd nautilus
 +
 +  git apply -3 ../0001-Disable-tracker-test.patch
-+
-+  git cherry-pick --no-commit 215eb277dbbf81ddde31295691f864e83ea8ea81
  }
  
  build() {
-@@ -61,7 +72,7 @@
+@@ -61,7 +70,7 @@
      -D packagekit=false
    )
  
@@ -89,7 +86,7 @@
    meson compile -C build
  }
  
-@@ -81,10 +92,6 @@
+@@ -81,10 +90,6 @@
  
  package_nautilus() {
    depends+=(libnautilus-extension.so)
@@ -100,7 +97,7 @@
    groups=(gnome)
  
    meson install -C build --destdir "$pkgdir"
-@@ -103,6 +110,7 @@
+@@ -103,6 +108,7 @@
    depends=(
      gcc-libs
      glib2
@@ -143,11 +140,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,13 @@
+@@ -1,11 +1,12 @@
  prepare() {
  cd nautilus
 +git apply -3 ../0001-Disable-tracker-test.patch
-+git cherry-pick --no-commit 215eb277dbbf81ddde31295691f864e83ea8ea81
  }
  build() {
  local meson_options=(
