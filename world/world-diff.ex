@@ -595,7 +595,6 @@ python-trustme
 python-ubjson
 python-uvloop
 python-wheel
-python-xarray
 python-zipp
 qastools
 qbittorrent
@@ -904,7 +903,6 @@ xorg-server-devel
 xorg-xdm
 xorg-xwayland
 xscreensaver
-xsimd
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

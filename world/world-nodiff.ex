@@ -4302,6 +4302,7 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
+python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -5572,6 +5573,7 @@ xsane-gimp
 xsd
 xsel
 xsettingsd
+xsimd
 xsimd12
 xterm
 xtrans

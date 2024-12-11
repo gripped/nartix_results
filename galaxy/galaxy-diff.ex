@@ -12,6 +12,7 @@ font-manager
 gpicview
 greetd-regreet
 gtklock
+lemurs
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
