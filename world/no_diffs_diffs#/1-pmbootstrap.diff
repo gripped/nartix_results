@@ -25,3 +25,16 @@
  
  build() {
    cd "${pkgname}-${pkgver}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-python
+-python-argcomplete
+-python-build
+-python-installer
+-python-setuptools
+-python-wheel

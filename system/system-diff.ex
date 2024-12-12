@@ -59,11 +59,6 @@ ppp
 procps-ng
 rpcbind
 shadow
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 thin-provisioning-tools
 tpm2-tss
 traceroute

@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -91,7 +91,6 @@
-         '2c7936949ef922307fb593bd0480a13bde2eab8ae24fc89071d809d6659384705f9b7838b1ae8bc46b98a152ba01fcffad606d4c84796ad9bfaaf20166f0a0fd'
-         '2ce33432f8a73a4f1a412b7a065d3c124e1ca9f6bdf3fad0407e897efc0840f8ef43eeeb1b9bef4a102d9fac0b2c4a2ef205726b817f83fe9c3742d076778b14')
+@@ -94,7 +94,6 @@
+         '1a7fc030b1051df00df1b2f5b247b8c658de6cdfba0788041c830da3aaaa6ac974ab684e05feb80672aa2d2c22294cacfa93a71dc664b3e60becdd65e879fcee'
+         '8a894b01e405b628877483e40e9b018647977cb053b6af02afc901ed24d6e1f767f3db8c321070e33aea4a05ba16f1eb47ae600e5299b5f9caad03d20ba38cf5')
  
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
  
  prepare() {
    mkdir mozbuild
-@@ -116,14 +115,12 @@
+@@ -121,14 +120,12 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -24,16 +24,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -176,7 +173,7 @@
- 
-   echo "Building optimized browser..."
-   cat >.mozconfig ../mozconfig - <<END
--ac_add_options --enable-lto=cross,full
-+ac_add_options --enable-lto=cross
- ac_add_options --enable-profile-use=cross
- ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
- ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-@@ -209,14 +206,14 @@
+@@ -214,14 +211,14 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -60,7 +51,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,13 +17,11 @@
+@@ -18,13 +18,11 @@
  ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -75,12 +66,3 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
-@@ -63,7 +61,7 @@
- ./mach clobber objdir
- echo "Building optimized browser..."
- cat >.mozconfig ../mozconfig - <<END
--ac_add_options --enable-lto=cross,full
-+ac_add_options --enable-lto=cross
- ac_add_options --enable-profile-use=cross
- ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
- ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog

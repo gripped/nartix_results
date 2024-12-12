@@ -594,6 +594,7 @@ python-tpm2-pytss
 python-trustme
 python-ubjson
 python-uvloop
+python-watchfiles
 python-wheel
 python-zipp
 qastools
@@ -712,7 +713,6 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-rust-bindgen
 samba
 libwbclient
 ldb

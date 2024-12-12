@@ -4275,7 +4275,6 @@ python-waitress
 python-wand
 python-warlock
 python-watchdog
-python-watchfiles
 python-watchgod
 python-wcag-contrast-ratio
 python-wcmatch
@@ -4894,6 +4893,7 @@ ruff
 python-ruff
 run-parts
 runc
+rust-bindgen
 rust
 lib32-rust-libs
 rust-musl
