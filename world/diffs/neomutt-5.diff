@@ -1,0 +1,85 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ pkgname=neomutt
+-pkgver=20241212
++pkgver=20241114
+ pkgrel=1
+ pkgdesc='A version of mutt with added features'
+ url='https://neomutt.org/'
+@@ -15,7 +15,7 @@
+     'libidn2'
+     'libsasl'
+     'lmdb'
+-    'lua'
++    'lua53'
+     'lz4'
+     'ncurses'
+     'notmuch-runtime'
+@@ -35,21 +35,24 @@
+     'libxslt'
+     'w3m'
+ )
++_github='https://github.com/neomutt/neomutt'
+ source=(
+-    "git+https://github.com/neomutt/neomutt.git#tag=${pkgver}"
++    "$pkgname-$pkgver.tar.gz::$_github/archive/$pkgver.tar.gz"
++    "$pkgname-$pkgver.tar.gz.sig::$_github/releases/download/$pkgver/$pkgver.tar.gz.sig"
+     "default-ca-certificates.patch"
+ )
+-sha256sums=('c913e660a75d1f15a32d9df11ff30d7e8bd10039a7d8a00901eca8e94de6ecbc'
++sha256sums=('044bb5a37d5095016569a1b505f7c2f7d8b93e90ff95c2edb82830313319ce9a'
++            'SKIP'
+             '571716b8979e9b43328416c3c56eff228b6c58355d7c080b8987ea89c6360776')
+ validpgpkeys=('86C2397270DD7A561263CA4E5FAF0A6EE7371805') # Richard Russon (flatcap) <rich@flatcap.org>
+ 
+ prepare() {
+-    cd "$pkgname"
++    cd "$pkgname-$pkgver"
+     patch -Np1 -i ../default-ca-certificates.patch
+ }
+ 
+ build() {
+-    cd "$pkgname"
++    cd "$pkgname-$pkgver"
+     ./configure \
+         --prefix=/usr \
+         --sysconfdir=/etc \
+@@ -77,6 +80,6 @@
+ }
+ 
+ package() {
+-    cd "$pkgname"
++    cd "$pkgname-$pkgver"
+     make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,7 +11,7 @@
+ libsasl
+ libxslt
+ lmdb
+-lua
++lua53
+ lz4
+ ncurses
+ notmuch-runtime
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd "$pkgname"
++cd "$pkgname-$pkgver"
+ patch -Np1 -i ../default-ca-certificates.patch
+ }
+ build() {
+-cd "$pkgname"
++cd "$pkgname-$pkgver"
+ ./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \

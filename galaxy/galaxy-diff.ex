@@ -1,6 +1,7 @@
 alsa-utils
 cinnamon-desktop
 copyq
+cvs
 doctest
 ecrire
 efl

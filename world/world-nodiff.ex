@@ -2298,7 +2298,6 @@ python-mupdf
 musepack
 musepack-tools
 libmpcdec
-musescore
 musl
 musl-aarch64
 musl-riscv64
@@ -2319,7 +2318,6 @@ neatvnc
 nemo
 neochat
 neofetch
-neomutt
 neon
 neovim-qt
 neovim
@@ -2350,7 +2348,6 @@ nodejs-lts-hydrogen
 nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3887,8 +3884,6 @@ python-pyproj
 python-pyproject-api
 python-pyproject-hooks
 python-pyproject-metadata
-python-pyqt5-sip
-python-pyqt6-sip
 python-pyquery
 python-pyrfc3339
 python-pyro

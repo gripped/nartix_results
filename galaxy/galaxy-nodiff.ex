@@ -50,7 +50,6 @@ cinnamon
 cjs
 claws-mail
 compface
-cvs
 dillo
 dosbox
 doublecmd

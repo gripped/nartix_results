@@ -421,6 +421,7 @@ muffin
 multipath-tools
 mumble
 mumble-server
+musescore
 mutter
 mutter-docs
 mutter45
@@ -443,12 +444,14 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
+neomutt
 netavark
 netplan
 networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+nodejs
 nsd
 nushell
 nvidia-open
@@ -583,6 +586,8 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
+python-pyqt5-sip
+python-pyqt6-sip
 python-pytest-freezegun
 python-pytest-playwright
 python-pyudev
