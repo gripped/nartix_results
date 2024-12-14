@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kdepim-runtime
+-pkgver=24.12.0
++pkgver=24.08.3
+ pkgrel=1
+ pkgdesc='Extends the functionality of kdepim'
+ arch=(x86_64)
+@@ -10,6 +10,7 @@
+          akonadi-calendar
+          akonadi-contacts
+          akonadi-mime
++         akonadi-notes
+          gcc-libs
+          glibc
+          kcalendarcore
+@@ -34,6 +35,7 @@
+          knotifyconfig
+          kservice
+          ktextaddons
++         ktextwidgets
+          kwallet
+          kwidgetsaddons
+          kwindowsystem
+@@ -53,7 +55,7 @@
+              libetebase)
+ optdepends=('libetebase: EteSync resource')
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('80f64309b75ab0be488eff3748143368ec661844f891ef28b3a916ac802a58a2'
++sha256sums=('6c419b575f87b6cf62ba5da06ac2842e805a80b9918b92b37cfbba4286fcde6f'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ akonadi-calendar
+ akonadi-contacts
+ akonadi-mime
++akonadi-notes
+ boost
+ extra-cmake-modules
+ gcc-libs
+@@ -29,6 +30,7 @@
+ knotifyconfig
+ kservice
+ ktextaddons
++ktextwidgets
+ kwallet
+ kwidgetsaddons
+ kwindowsystem

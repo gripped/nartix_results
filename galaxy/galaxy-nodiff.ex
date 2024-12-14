@@ -50,6 +50,7 @@ cinnamon
 cjs
 claws-mail
 compface
+cvs
 dillo
 dosbox
 doublecmd
@@ -179,7 +180,6 @@ lxqt-runner
 lxqt-session
 lxqt-sudo
 lxqt-themes
-lxqt-wayland-session
 lxrandr
 lxrandr-gtk3
 lxtask

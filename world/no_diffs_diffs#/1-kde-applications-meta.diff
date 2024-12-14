@@ -1,6 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -13,11 +13,11 @@
+          kde-system-meta
+          kde-utilities-meta
+          kdevelop-meta)
+-pkgver=24.12
++pkgver=24.08
  pkgrel=1
  arch=(any)
  license=(None)
@@ -9,7 +14,17 @@
  
  package_kde-applications-meta() {
    pkgdesc='Meta package for KDE Applications'
-@@ -228,7 +228,6 @@
+@@ -179,8 +179,7 @@
+ 
+ package_kde-office-meta() {
+   pkgdesc='Meta package for KDE office applications'
+-  depends=(calligra
+-           ghostwriter)
++  depends=(ghostwriter)
+ }
+ 
+ package_kde-pim-meta() {
+@@ -229,7 +228,6 @@
             kde-inotify-survey
             khelpcenter
             kio-admin
@@ -23,7 +38,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -110,7 +110,6 @@
+@@ -13,7 +13,6 @@
+ blinken
+ bomber
+ bovo
+-calligra
+ cantor
+ cervisia
+ colord-kde
+@@ -111,7 +110,6 @@
  kirigami-gallery
  kiriki
  kiten

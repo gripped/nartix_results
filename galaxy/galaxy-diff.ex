@@ -1,7 +1,6 @@
 alsa-utils
 cinnamon-desktop
 copyq
-cvs
 doctest
 ecrire
 efl
@@ -20,6 +19,7 @@ libretro-pcsx2
 libxfce4ui
 light
 lxpanel
+lxqt-wayland-session
 lxsession
 lxsession-gtk3
 lxterminal

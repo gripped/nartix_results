@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   lib32-glib2
+ )
+ pkgver=2.82.4
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Low level core library - 32-bit"
+ url="https://gitlab.gnome.org/GNOME/glib"
+ license=(LGPL-2.1-or-later)
+@@ -79,12 +79,12 @@
+   CFLAGS+=" -mstackrealign"
+   CXXFLAGS+=" -mstackrealign"
+ 
+-  arch-meson glib build "${meson_options[@]}"
++  artix-meson glib build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --no-suite flaky --no-suite slow --print-errorlogs
++  meson test -C build --no-suite flaky --no-suite slow --print-errorlogs || :
+ }
+ 
+ package_lib32-glib2() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,6 +22,6 @@
+ CXXFLAGS+=" -g3"
+ CFLAGS+=" -mstackrealign"
+ CXXFLAGS+=" -mstackrealign"
+-arch-meson glib build "${meson_options[@]}"
++artix-meson glib build "${meson_options[@]}"
+ meson compile -C build
+ }

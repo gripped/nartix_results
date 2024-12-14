@@ -16,6 +16,7 @@ atril
 audacious-plugins
 avahi
 awesome
+baloo-widgets
 bash-bats
 bluedevil
 bluez
@@ -90,6 +91,7 @@ engrampa
 eog
 eog-docs
 eom
+espeak-ng
 espeakup
 etherwall
 exo
@@ -258,12 +260,15 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kgamma
+kio-gdrive
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
+ksanecore
+ksanecore5
 ksnip
 ksystemlog
 kwin
@@ -306,6 +311,9 @@ libguestfs
 libhandy0
 libieee1284
 libinput
+libkcompactdisc
+libksane
+libksane5
 libldm
 libmspub
 libnvme
@@ -362,6 +370,10 @@ ly
 mailman3
 mako
 maliit-framework
+marble
+marble-common
+marble-maps
+marble-qt
 marco
 mariadb
 mariadb-libs
@@ -444,6 +456,7 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
+neochat
 neomutt
 netavark
 netplan
@@ -586,8 +599,6 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
-python-pyqt5-sip
-python-pyqt6-sip
 python-pytest-freezegun
 python-pytest-playwright
 python-pyudev

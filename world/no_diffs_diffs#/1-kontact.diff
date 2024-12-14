@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kontact
+-pkgver=24.12.0
+-pkgrel=2
++pkgver=24.08.3
++pkgrel=1
+ pkgdesc='KDE Personal Information Manager'
+ arch=(x86_64)
+ url='https://apps.kde.org/kontact/'
+@@ -33,13 +33,15 @@
+              kdoctools)
+ optdepends=(akregator
+             kaddressbook
++            kjots
+             kmail
++            knotes
+             korganizer
+             zanshin)
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('3c14a9533fe7968c6481883eb6a81e4fe8ef70ff0c5288514513b175a0a41733'
++sha256sums=('0a225708752745681bc7ba5d6c7e694dd164c01542afd1d0573b7b20c7b05886'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

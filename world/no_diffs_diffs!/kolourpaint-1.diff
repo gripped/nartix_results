@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kolourpaint
+-pkgver=24.12.0
++pkgver=24.08.3
+ pkgrel=1
+ pkgdesc='Paint Program'
+ url='https://apps.kde.org/kolourpaint/'
+@@ -11,10 +11,10 @@
+          kconfig
+          kconfigwidgets
+          kcoreaddons
+-         kcrash
+          kguiaddons
+          ki18n
+          kio
++         ktextwidgets
+          kwidgetsaddons
+          kxmlgui
+          libksane
+@@ -24,7 +24,7 @@
+ groups=(kde-applications
+         kde-graphics)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('7275709d94dc07558a23c5b3059af486fbd280591c6062d16ac9a0d2453c581c'
++sha256sums=('0ecff8f93e106becf92c653f155d063167c1ba146f92eca93cb2a1b936baf15b'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,11 +4,11 @@
+ kconfig
+ kconfigwidgets
+ kcoreaddons
+-kcrash
+ kdoctools
+ kguiaddons
+ ki18n
+ kio
++ktextwidgets
+ kwidgetsaddons
+ kxmlgui
+ libksane

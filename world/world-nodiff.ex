@@ -169,7 +169,6 @@ aws-cli
 ayatana-ido
 babl
 backuppc
-baloo-widgets
 baloo
 baloo5
 bamf
@@ -525,7 +524,6 @@ entr
 epiphany
 erlang-nox
 erlang
-espeak-ng
 ethtool
 eventviews
 evince
@@ -1306,7 +1304,6 @@ kinit
 kio-admin
 kio-extras
 kio-fuse
-kio-gdrive
 kio-zeroconf
 kio
 kio5-extras
@@ -1412,8 +1409,6 @@ kruler
 krunner
 krunner5
 krusader
-ksanecore
-ksanecore5
 kscreen
 kscreenlocker
 kscreenlocker5
@@ -1695,7 +1690,6 @@ libjxl-doc
 libkate
 libkate-docs
 libkcddb
-libkcompactdisc
 libkdcraw
 libkdcraw5
 libkdegames
@@ -1709,8 +1703,6 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
-libksane
-libksane5
 libkscreen
 libkscreen5
 libksieve
@@ -2184,10 +2176,6 @@ man2html
 mandoc
 mandown
 mangohud
-marble
-marble-common
-marble-maps
-marble-qt
 marisa
 perl-marisa
 python-marisa
@@ -2316,7 +2304,6 @@ ncftp
 ncompress
 neatvnc
 nemo
-neochat
 neofetch
 neon
 neovim-qt
@@ -3884,6 +3871,8 @@ python-pyproj
 python-pyproject-api
 python-pyproject-hooks
 python-pyproject-metadata
+python-pyqt5-sip
+python-pyqt6-sip
 python-pyquery
 python-pyrfc3339
 python-pyro

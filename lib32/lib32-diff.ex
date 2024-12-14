@@ -1,13 +1,9 @@
 lib32-at-spi2-core
 lib32-colord
-lib32-curl
-lib32-libcurl-compat
-lib32-libcurl-gnutls
 lib32-dbus
 lib32-expat
 lib32-fluidsynth
 lib32-gamemode
-lib32-glib2
 lib32-libepoxy
 lib32-libgudev
 lib32-libpulse

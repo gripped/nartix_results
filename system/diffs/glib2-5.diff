@@ -9,8 +9,8 @@
  )
 -pkgver=2.78.4
 -pkgrel=1
-+pkgver=2.82.3
-+pkgrel=3
++pkgver=2.82.4
++pkgrel=2
  pkgdesc="Low level core library"
  url="https://gitlab.gnome.org/GNOME/glib"
  license=(LGPL-2.1-or-later)
@@ -39,7 +39,7 @@
    shared-mime-info
    util-linux
  )
-@@ -32,48 +39,50 @@
+@@ -32,48 +39,46 @@
    desktop-file-utils
    glib2
  )
@@ -53,16 +53,14 @@
 +  "git+https://gitlab.gnome.org/GNOME/glib.git?signed#tag=$pkgver"
    "git+https://gitlab.gnome.org/GNOME/gvdb.git"
    0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
-+  0002-Revert-gdbus-Fix-leak-of-method-invocation-when-regi.patch
    gio-querymodules.hook
    glib-compile-schemas.hook
  )
 -b2sums=('SKIP'
-+b2sums=('9abb7878311f0df50affd3e308aa157ff711e8789e9f12b6b95f9cab198e3d662528fa1f8a48d5e489bfb1925886e9c5b1bcc5161d65e6323d04c5f3351df831'
++b2sums=('7611f78a903db16b954727124fb5d86dbacd5f89b6c672819d05cee3c012f3c23d3f1e1c1ebb63f176ca1b50e3d1a76390b7a7ea5552a74609f3acfad6abb16c'
          'SKIP'
 -        '94c73ca7070c239494873dd52d6ee09382bbb5b1201f7afd737cfa140b1a2fb0744b2c2831baf3943d1d072550c35888d21ce6f19f89481ff9d1a60d9a0b30e0'
 +        '47cd08ba7e4b3ca0cd19f6dc20e4d73e30cf90f2b78c3d620ee0c7a4d8a4b325a5e88ec2dcc3a63402c16cc1ce8061130afc313e3cbfcd220dff3e642b113a69'
-+        'bf1bc7b461724ab110249c677a8da6a2f71bcb3544a1256e462674af3a760b342df65ec4be37416997d3604cd424b5a9f3a2f653b53b12272d708d370264dfc5'
          '14c9211c0557f6d8d9a914f1b18b7e0e23f79f4abde117cb03ab119b95bf9fa9d7a712aa0a29beb266468aeb352caa3a9e4540503cfc9fe0bbaf764371832a96'
 -        'd30d349b4cb4407839d9074ce08f5259b8a5f3ca46769aabc621f17d15effdb89c4bf19bd23603f6df3d59f8d1adaded0f4bacd0333afcab782f2d048c882858')
 -
@@ -79,12 +77,10 @@
  
  prepare() {
    cd glib
- 
++
 +  git revert -n 4e6dc4dee0e1c6407113597180d9616b4f275f94
-+
+ 
    git apply -3 ../0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
-+
-+  git apply -3 ../0002-Revert-gdbus-Fix-leak-of-method-invocation-when-regi.patch
  
    git submodule init
    git submodule set-url subprojects/gvdb "$srcdir/gvdb"
@@ -108,7 +104,7 @@
    )
  
    CFLAGS+=" -g3"
-@@ -82,7 +91,7 @@
+@@ -82,7 +87,7 @@
    CFLAGS+=" -ffat-lto-objects"
    CXXFLAGS+=" -ffat-lto-objects"
  
@@ -117,7 +113,7 @@
    meson compile -C build
  }
  
-@@ -90,17 +99,28 @@
+@@ -90,17 +95,28 @@
    meson test -C build --no-suite flaky --no-suite slow --print-errorlogs
  }
  
@@ -149,7 +145,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -112,8 +132,37 @@
+@@ -112,8 +128,37 @@
    python -O -m compileall -d /usr/share/glib-2.0/codegen \
      "$pkgdir/usr/share/glib-2.0/codegen"
  
@@ -189,7 +185,7 @@
  }
  
  package_glib2-docs() {
-@@ -121,7 +170,7 @@
+@@ -121,7 +166,7 @@
    depends=()
    license+=(LicenseRef-Public-Domain)
  
@@ -231,12 +227,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,28 @@
+@@ -1,23 +1,27 @@
  prepare() {
  cd glib
 +git revert -n 4e6dc4dee0e1c6407113597180d9616b4f275f94
  git apply -3 ../0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
-+git apply -3 ../0002-Revert-gdbus-Fix-leak-of-method-invocation-when-regi.patch
  git submodule init
  git submodule set-url subprojects/gvdb "$srcdir/gvdb"
 -git -c protocol.file.allow=always submodule update

@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=baloo-widgets
+-pkgver=24.12.0
++pkgver=24.08.3
+ pkgrel=1
+ pkgdesc='Widgets for Baloo'
+ arch=(x86_64)
+@@ -20,7 +20,7 @@
+ makedepends=(extra-cmake-modules
+              kdoctools)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('98893290528c2d82d851c5c743e64a4b7d44a3805cd38a33b0c5e462e3eeb616'
++sha256sums=('78a56eac8a48f45ca9a9f645fb70b51b4b3df6a7500cc8443f4874bc6bc909de'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+@@ -28,7 +28,8 @@
+ 
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_TESTING=OFF \
++    -DBUILD_WITH_QT6=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+--DBUILD_TESTING=OFF
++-DBUILD_TESTING=OFF \
++-DBUILD_WITH_QT6=ON
+ cmake --build build
+ }

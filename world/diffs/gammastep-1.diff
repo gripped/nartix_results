@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+   glib2
+   intltool
+   python
+-  systemd
++  udev
+ )
+ optdepends=(
+   'geoclue: for automatic location based on GeoClue2'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,5 +10,5 @@
+ libxcb
+ libxxf86vm
+ python
+-systemd
++udev
+ wayland
