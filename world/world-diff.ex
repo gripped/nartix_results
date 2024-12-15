@@ -599,11 +599,13 @@ python-pymupdf
 python-pyopencl
 pyopencl-headers
 python-pyotp
+python-pyproj
 python-pytest-freezegun
 python-pytest-playwright
 python-pyudev
 python-signedjson
 python-smbprotocol
+python-starlette
 python-teamcity-messages
 python-tempora
 python-tpm2-pytss
@@ -718,6 +720,7 @@ redis
 redshift
 refind
 refind-docs
+ripgrep-all
 ristretto
 rocblas
 rocfft

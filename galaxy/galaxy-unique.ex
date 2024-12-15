@@ -164,6 +164,7 @@ tinydns-runit
 tinydns-s6
 tinydns
 trizen
+ttf-unifont
 turnstile-openrc
 turnstile
 ungoogled-chromium

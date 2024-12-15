@@ -3867,7 +3867,6 @@ python-pypdf
 python-pyperclip
 python-pypng
 python-pyppeteer
-python-pyproj
 python-pyproject-api
 python-pyproject-hooks
 python-pyproject-metadata
@@ -4143,7 +4142,6 @@ python-sqlmodel
 python-sqlparse
 python-sshpubkeys
 python-stack-data
-python-starlette
 python-statsmodels
 python-stdlibs
 python-stem

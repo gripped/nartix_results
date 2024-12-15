@@ -1,6 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -53,8 +53,6 @@
+@@ -1,11 +1,11 @@
+ 
+ pkgname=xpra
+ pkgver=6.2.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="multi-platform screen and application forwarding system screen for X11"
+ arch=('x86_64')
+ url='https://www.xpra.org'
+-license=(GPL-2.0-or-later)
++license=('GPL2')
+ depends=('gtk3' 'python' 'libxtst' 'python-cairo' 'python-gobject' 'python-pillow' 'python-lz4'
+          'ffmpeg' 'libvpx' 'xf86-video-dummy' 'libxkbfile' 'libxres'
+          'python-netifaces' 'python-rencode' 'python-opengl'
+@@ -58,8 +58,6 @@
    cd "${srcdir}/$pkgname-$pkgver"
    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
    sed -i 's|/build/xpra/pkg/xpra/etc/xpra/xorg.conf|/etc/xpra/xorg.conf|' "${pkgdir}"/etc/xpra/conf.d/55_server_x11.conf

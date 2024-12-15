@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,16 @@
+ 
+ pkgname=python-pyproj
+-pkgver=3.7.0
+-pkgrel=1
++pkgver=3.6.1
++pkgrel=2
+ pkgdesc="Python interfaces to PROJ.4 library"
+ arch=(x86_64)
+ url="https://github.com/pyproj4/pyproj"
+ license=(custom)
+ depends=(proj python-certifi)
+-makedepends=(python-setuptools python-wheel python-build python-installer cython)
++makedepends=(python-setuptools cython)
+ checkdepends=(python-pytest python-numpy python-pandas python-shapely python-xarray)
+ source=(https://github.com/pyproj4/pyproj/archive/$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('4e0bf878dff967d3aba107870ecb1551507e255bdf5b7bde122d54b63c32e1bc')
++sha256sums=('33b4f865d370e37d290591b13985016e98fa9038a1a5bde5d0c208307ed5221d')
+ 
+ prepare() {
+   sed -i 's/library_dirs if os.name.*/None/' pyproj-$pkgver/setup.py
+@@ -19,12 +19,12 @@
+ build() {
+   export PROJ_DIR=/usr
+   cd pyproj-$pkgver
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ 
+ package() {
+   cd pyproj-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1 --skip-build
+   install -Dm644 LICENSE_proj "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,4 @@
+ cython
+ proj
+-python-build
+ python-certifi
+-python-installer
+ python-setuptools
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,5 +4,5 @@
+ build() {
+ export PROJ_DIR=/usr
+ cd pyproj-$pkgver
+-python -m build --wheel --no-isolation
++python setup.py build
+ }
