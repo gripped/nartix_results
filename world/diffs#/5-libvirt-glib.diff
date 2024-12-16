@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,30 @@
+ 
+ pkgname=libvirt-glib
+ pkgver=5.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="GLib bindings for libvirt"
+ arch=('x86_64')
+ url="https://libvirt.org"
+-license=('LGPL-2.1-or-later')
+-depends=('glib2' 'glibc' 'libvirt' 'libxml2')
+-makedepends=('glib2-devel' 'gobject-introspection' 'meson' 'vala')
++license=('LGPL2.1')
++depends=('libvirt' 'libcap-ng' 'libnl')
++makedepends=('meson' 'intltool' 'gobject-introspection' 'vala' 'python')
++optdepends=('python: support for python')
+ source=("https://libvirt.org/sources/glib/$pkgname-$pkgver.tar.xz"{,'.asc'})
+ sha512sums=('bb09474c0d6d4bc00844e7a1ede882f0834d0810804b70b8f8607f2e764f72cc9da14883794e58dd53640433ffaecc13dd3c1c147b82e86fa2fdca6e5903933c'
+             'SKIP')
+ validpgpkeys=('DAF3A6FDB26B62912D0E8E3FBE86EBB415104FDF') # Daniel P. Berrange <dan@berrange.com>
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
+-  meson compile -C build
+-}
++  cd "$srcdir/$pkgname-$pkgver"
+ 
+-check() {
+-  meson test -C build --print-errorlogs
++  mkdir build
++  meson setup build --prefix=/usr --buildtype=plain
++  ninja -C build
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd "$srcdir/$pkgname-$pkgver/build"
++
++  DESTDIR="$pkgdir/" meson install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,8 @@
+-glib2
+-glib2-devel
+-glibc
+ gobject-introspection
++intltool
++libcap-ng
++libnl
+ libvirt
+-libxml2
+ meson
++python
+ vala
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,6 @@
+ build() {
+-arch-meson $pkgname-$pkgver build
+-meson compile -C build
++cd "$srcdir/$pkgname-$pkgver"
++mkdir build
++meson setup build --prefix=/usr --buildtype=plain
++ninja -C build
+ }

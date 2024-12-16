@@ -169,6 +169,7 @@ aws-cli
 ayatana-ido
 babl
 backuppc
+baloo-widgets
 baloo
 baloo5
 bamf
@@ -255,6 +256,7 @@ calf
 camlp-streams
 camlp4
 cantarell-fonts
+cantor
 capnproto
 capstone
 python-capstone
@@ -264,6 +266,7 @@ catatonit
 catch2-v2
 catch2
 catdoc
+cauchy
 cbatticon
 cbindgen
 ccache
@@ -399,7 +402,6 @@ d-spy
 darkhttpd
 darktable
 dart-sass
-dart
 darts
 dateutils
 dav1d
@@ -501,6 +503,7 @@ edk2-shell
 edk2-ovmf
 egl-gbm
 egl-wayland
+egl-x11
 eglexternalplatform
 eigen
 ejabberd
@@ -1060,7 +1063,6 @@ itinerary
 itstool
 iucode-tool
 iverilog
-j4-dmenu-desktop
 jasper
 jasper-doc
 java-avalon-framework
@@ -1230,7 +1232,6 @@ kdesu
 kdesu5
 kdevelop-pg-qt
 kdevelop-php
-kdevelop-python
 kdevelop
 kdf
 kdiagram
@@ -1304,6 +1305,7 @@ kinit
 kio-admin
 kio-extras
 kio-fuse
+kio-gdrive
 kio-zeroconf
 kio
 kio5-extras
@@ -1409,6 +1411,7 @@ kruler
 krunner
 krunner5
 krusader
+ksanecore
 kscreen
 kscreenlocker
 kscreenlocker5
@@ -1598,6 +1601,7 @@ libebur128
 libepubgen
 libesmtp
 libetebase
+libetonyek
 libev
 libevdev
 libewf
@@ -1690,6 +1694,7 @@ libjxl-doc
 libkate
 libkate-docs
 libkcddb
+libkcompactdisc
 libkdcraw
 libkdcraw5
 libkdegames
@@ -1703,6 +1708,7 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
+libksane
 libkscreen
 libkscreen5
 libksieve
@@ -1933,7 +1939,6 @@ libva-vdpau-driver
 libva
 libvdpau
 libvips
-libvirt-glib
 libvirt-python
 libvisio
 libvisual
@@ -2176,6 +2181,11 @@ man2html
 mandoc
 mandown
 mangohud
+marble
+marble-behaim
+marble-common
+marble-maps
+marble-qt
 marisa
 perl-marisa
 python-marisa
@@ -2304,6 +2314,7 @@ ncftp
 ncompress
 neatvnc
 nemo
+neochat
 neofetch
 neon
 neovim-qt

@@ -16,7 +16,6 @@ atril
 audacious-plugins
 avahi
 awesome
-baloo-widgets
 bash-bats
 bluedevil
 bluez
@@ -43,7 +42,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cantor
 catfish
 cgmanager
 chromium-bsu
@@ -65,6 +63,7 @@ cppcheck
 crun
 cups
 libcups
+dart
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -223,6 +222,7 @@ intel-undervolt
 interception-tools
 isoimagewriter
 iwd
+j4-dmenu-desktop
 jack2
 jack2-dbus
 jack2-docs
@@ -259,16 +259,14 @@ jrnl
 js78
 jupyter-server-ydoc
 kcoreaddons
+kdevelop-python
 kgamma
-kio-gdrive
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
-ksanecore
-ksanecore5
 ksnip
 ksystemlog
 kwin
@@ -302,7 +300,6 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
-libetonyek
 libfido2
 libfprint
 libgdata
@@ -311,9 +308,6 @@ libguestfs
 libhandy0
 libieee1284
 libinput
-libkcompactdisc
-libksane
-libksane5
 libldm
 libmspub
 libnvme
@@ -324,6 +318,7 @@ libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
+libvirt-glib
 libvirt
 libvncserver
 libxfce4ui
@@ -352,6 +347,7 @@ tmon
 turbostat
 usbip
 x86_energy_perf_policy
+intel-speed-select
 lirc
 llvm-julia
 lm_sensors
@@ -370,10 +366,6 @@ ly
 mailman3
 mako
 maliit-framework
-marble
-marble-common
-marble-maps
-marble-qt
 marco
 mariadb
 mariadb-libs
@@ -456,7 +448,6 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
-neochat
 neomutt
 netavark
 netplan
