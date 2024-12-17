@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,7 @@
+             'SKIP')
+ 
+ build() {
+-    arch-meson "$pkgname-r$pkgver" \
++    artix-meson "$pkgname-r$pkgver" \
+         -Dgenerate-shell-completions=disabled \
+         build
+     meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson "$pkgname-r$pkgver" \
++artix-meson "$pkgname-r$pkgver" \
+ -Dgenerate-shell-completions=disabled \
+ build
+ meson compile -C build

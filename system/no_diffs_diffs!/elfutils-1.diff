@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   debuginfod
+ )
+ pkgver=0.192
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="Handle ELF object files and DWARF debugging information"
+ arch=(x86_64)
+ url="https://sourceware.org/elfutils/"
+@@ -89,7 +89,7 @@
+ 
+   make DESTDIR="$pkgdir" install -C $pkgbase
+ 
+-  echo "https://debuginfod.archlinux.org" > "$pkgdir/etc/debuginfod/archlinux.urls"
++  echo "https://debuginfod.artixlinux.org" > "$pkgdir/etc/debuginfod/artixlinux.urls"
+ 
+   (
+     cd "$pkgdir"

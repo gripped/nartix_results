@@ -253,6 +253,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -402,6 +403,7 @@ d-spy
 darkhttpd
 darktable
 dart-sass
+dart
 darts
 dateutils
 dav1d
@@ -1063,6 +1065,7 @@ itinerary
 itstool
 iucode-tool
 iverilog
+j4-dmenu-desktop
 jasper
 jasper-doc
 java-avalon-framework
@@ -1812,6 +1815,7 @@ libpeas-2-docs
 libpeas
 libpeas-demos
 libpeas-docs
+libpfm
 libpgm
 libphonenumber
 libpinyin
@@ -1939,6 +1943,7 @@ libva-vdpau-driver
 libva
 libvdpau
 libvips
+libvirt-glib
 libvirt-python
 libvisio
 libvisual
@@ -2296,6 +2301,7 @@ python-mupdf
 musepack
 musepack-tools
 libmpcdec
+musescore
 musl
 musl-aarch64
 musl-riscv64
@@ -2316,6 +2322,7 @@ neatvnc
 nemo
 neochat
 neofetch
+neomutt
 neon
 neovim-qt
 neovim
@@ -2875,6 +2882,7 @@ plasma5-applets-thermal-monitor
 plasma5support
 plasmatube
 playerctl
+plotutils
 plymouth-kcm
 pmbootstrap
 pngplusplus
@@ -2939,6 +2947,7 @@ python-protobuf
 ruby-google-protobuf
 prrte
 prrte-docs
+pstoedit
 psutils
 ptex
 publicsuffix-list
@@ -5368,6 +5377,7 @@ valgrind
 vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
+vc
 vcdimager
 vcspull
 vde2

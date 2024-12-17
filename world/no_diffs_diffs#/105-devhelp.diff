@@ -1,22 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,13 +10,14 @@
+@@ -2,17 +2,23 @@
+ pkgbase=devhelp
+ pkgname=(devhelp devhelp-docs)
+ pkgver=43.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="API documentation browser for GNOME"
+-url="https://apps.gnome.org/Devhelp/"
++url="https://wiki.gnome.org/Apps/Devhelp"
+ arch=(x86_64)
+ license=(GPL)
  depends=(webkit2gtk-4.1)
  makedepends=(git appstream-glib gobject-introspection meson yelp-tools
-              gi-docgen)
+-             gi-docgen glib2-devel)
+-source=("git+https://gitlab.gnome.org/GNOME/devhelp.git?signed#tag=$pkgver")
+-sha256sums=('e7d1fac86c028c08418e70364615a0170c012f1a999a537bff574a3120e75bf2')
+-validpgpkeys=(53EF3DC3B63E2899271BD26322E8091EEA11BBB7) # Emmanuele Bassi (GNOME) <ebassi@gnome.org>
++             gi-docgen)
 +options=(debug)
- _commit=f4e68f3f0134becbdd737eaac85caaa0a8e43a66  # tags/43.0^0
- source=("git+https://gitlab.gnome.org/GNOME/devhelp.git#commit=$_commit")
- sha256sums=('SKIP')
- 
- pkgver() {
-   cd devhelp
--  git describe --tags | sed 's/\.alpha/alpha/;s/[^-]*-g/r&/;s/-/+/g'
++_commit=f4e68f3f0134becbdd737eaac85caaa0a8e43a66  # tags/43.0^0
++source=("git+https://gitlab.gnome.org/GNOME/devhelp.git#commit=$_commit")
++sha256sums=('SKIP')
++
++pkgver() {
++  cd devhelp
 +  git describe --tags | sed 's/\.alpha/alpha/;s/-/+/g'
- }
++}
  
  prepare() {
-@@ -31,7 +32,7 @@
+   cd devhelp
+@@ -26,7 +32,7 @@
      -D plugin_vim=true
    )
  
@@ -29,7 +43,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ appstream-glib
+ gi-docgen
+ git
+-glib2-devel
+ gobject-introspection
+ meson
+ webkit2gtk-4.1
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

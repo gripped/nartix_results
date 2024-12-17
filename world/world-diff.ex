@@ -63,7 +63,6 @@ cppcheck
 crun
 cups
 libcups
-dart
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -222,7 +221,6 @@ intel-undervolt
 interception-tools
 isoimagewriter
 iwd
-j4-dmenu-desktop
 jack2
 jack2-dbus
 jack2-docs
@@ -318,7 +316,6 @@ libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
-libvirt-glib
 libvirt
 libvncserver
 libxfce4ui
@@ -425,7 +422,6 @@ muffin
 multipath-tools
 mumble
 mumble-server
-musescore
 mutter
 mutter-docs
 mutter45
@@ -448,7 +444,6 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
-neomutt
 netavark
 netplan
 networkmanager
