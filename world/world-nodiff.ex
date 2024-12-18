@@ -1771,6 +1771,7 @@ libnatpmp
 libnbd
 libndp
 libnet
+libnetfilter_queue
 libnewt
 libnfs
 libnghttp3
@@ -2353,6 +2354,7 @@ nodejs-lts-hydrogen
 nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch

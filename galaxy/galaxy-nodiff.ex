@@ -39,6 +39,7 @@ certbot-dns-route53
 certbot-dns-sakuracloud
 certbot-nginx
 certbot
+chess-tui
 chromium-bsu
 cinnamon-control-center
 cinnamon-menus
@@ -132,6 +133,7 @@ libtg_owt
 libvarlink
 libwnck
 libxfce4util
+libxfce4windowing
 lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers

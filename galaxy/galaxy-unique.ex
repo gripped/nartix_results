@@ -154,6 +154,7 @@ ruby-fattr
 ruby-main
 ruby-map
 sddm-theme
+sfwbar
 simplescreenrecorder
 snooze
 socklog

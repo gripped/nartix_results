@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   fwupd-docs
- )
- pkgver=2.0.3
--pkgrel=2
-+pkgrel=1
- pkgdesc="Simple daemon to allow session software to update firmware"
- arch=(x86_64)
- url='https://github.com/fwupd/fwupd'
 @@ -37,7 +37,6 @@
    python
    shared-mime-info
@@ -41,17 +32,6 @@
  }
  
  _pick() {
-@@ -102,9 +102,9 @@
- package_fwupd() {
-   depends+=(
-     libarchive.so
--    libblkid.so
-     libcbor.so
-     libcurl.so
-+    libgudev-1.0.so
-     libjson-glib-1.0.so
-     libmm-glib.so
-     libpassim.so
 @@ -129,8 +129,8 @@
    rm -r "${pkgdir}"/usr/{lib,share}/installed-tests/
    mv "${pkgdir}"/usr/bin/{,fwupd-}dbxtool
@@ -69,19 +49,6 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -16,11 +16,11 @@
- json-glib
- libarchive
- libarchive.so
--libblkid.so
- libcbor
- libcbor.so
- libcurl.so
- libdrm
-+libgudev-1.0.so
- libjcat
- libjson-glib-1.0.so
- libmbim
 @@ -47,7 +47,6 @@
  python-pillow
  shared-mime-info

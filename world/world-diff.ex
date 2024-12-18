@@ -450,7 +450,6 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-nodejs
 nsd
 nushell
 nvidia-open
