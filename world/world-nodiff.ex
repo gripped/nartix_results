@@ -1531,6 +1531,7 @@ libappindicator-gtk2
 libappindicator-gtk3
 libass
 libasyncns
+libatasmart
 libatomic_ops
 libavc1394
 libavif

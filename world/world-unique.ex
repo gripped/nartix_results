@@ -253,6 +253,7 @@ hostapd-dinit
 hostapd-openrc
 hostapd-runit
 hostapd-s6
+hyprgraphics
 i2pd-dinit
 i2pd-openrc
 i2pd-runit

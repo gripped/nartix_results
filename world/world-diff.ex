@@ -268,7 +268,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-libatasmart
 libayatana-appindicator
 libayatana-indicator
 libblockdev
