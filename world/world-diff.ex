@@ -255,6 +255,7 @@ openjdk8-doc
 jedi-language-server
 jrnl
 js78
+jupyter-nbclient
 jupyter-server-ydoc
 kcoreaddons
 kdevelop-python
@@ -268,6 +269,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+libatasmart
 libayatana-appindicator
 libayatana-indicator
 libblockdev

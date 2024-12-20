@@ -1110,7 +1110,6 @@ julia
 junit
 jupyter-console
 jupyter-nbclassic
-jupyter-nbclient
 jupyter-nbconvert
 jupyter-nbformat
 jupyter-notebook-shim
@@ -1531,7 +1530,6 @@ libappindicator-gtk2
 libappindicator-gtk3
 libass
 libasyncns
-libatasmart
 libatomic_ops
 libavc1394
 libavif
