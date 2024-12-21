@@ -296,6 +296,7 @@ pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
+peek
 perl-cairo-gobject
 perl-extutils-depends
 perl-extutils-pkgconfig

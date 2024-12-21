@@ -62,15 +62,23 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,6 @@
- autoconf-archive
- enchant
- gettext
+@@ -1,16 +0,0 @@
+-autoconf-archive
+-enchant
+-gettext
 -git
 -glib2-devel
- gobject-introspection
- gtksourceview4
- iso-codes
+-gobject-introspection
+-gtksourceview4
+-iso-codes
+-itstool
+-libpeas
+-libsm
+-mate-common
+-mate-desktop
+-python
+-yelp-tools
+-zenity
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
