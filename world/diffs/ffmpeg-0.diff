@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ffmpeg
+ pkgver=7.1
+-pkgrel=3
++pkgrel=4
+ epoch=2
+ pkgdesc='Complete solution to record, convert and stream audio and video'
+ arch=(x86_64)
+@@ -125,6 +125,9 @@
+ prepare() {
+   cd ffmpeg
+   patch -Np1 -i ../add-av_stream_get_first_dts-for-chromium.patch # https://crbug.com/1251779
++
++  git cherry-pick -n bcfbf2bac8f9eeeedc407b40596f5c7aaa0d5b47
++  git cherry-pick -n d0facac679faf45d3356dff2e2cb382580d7a521
+ }
+ 
+ pkgver() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,8 @@
+ prepare() {
+ cd ffmpeg
+ patch -Np1 -i ../add-av_stream_get_first_dts-for-chromium.patch # https://crbug.com/1251779
++git cherry-pick -n bcfbf2bac8f9eeeedc407b40596f5c7aaa0d5b47
++git cherry-pick -n d0facac679faf45d3356dff2e2cb382580d7a521
+ }
+ build() {
+ export PKG_CONFIG_PATH='/usr/lib/mbedtls2/pkgconfig'

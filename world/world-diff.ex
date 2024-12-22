@@ -89,7 +89,6 @@ engrampa
 eog
 eog-docs
 eom
-espeak-ng
 espeakup
 etherwall
 exo
@@ -100,6 +99,7 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+ffmpeg
 firefox
 firewalld
 flatpak
@@ -351,6 +351,7 @@ llvm-julia
 lm_sensors
 localsearch
 localsearch-testutils
+lsb-release
 lua-filesystem
 luarocks
 lxc
@@ -423,6 +424,7 @@ muffin
 multipath-tools
 mumble
 mumble-server
+musescore
 mutter
 mutter-docs
 mutter45
@@ -434,6 +436,7 @@ nbd
 nccl
 ndctl
 ndisc6
+neatvnc
 nemo-extensions
 nemo-audio-tab
 nemo-emblems
@@ -551,11 +554,13 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
+povray
 power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
 proxytunnel
+psutils
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -714,6 +719,8 @@ rocrand
 rocsparse
 rrdtool
 rspamd
+rssguard
+rssguard-lite
 rtkit
 ruby-racc
 ruby-regexp_property_values

@@ -529,6 +529,7 @@ entr
 epiphany
 erlang-nox
 erlang
+espeak-ng
 ethtool
 eventviews
 evince
@@ -573,7 +574,6 @@ featherpad
 feh
 festival
 ffcall
-ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
@@ -2061,7 +2061,6 @@ lua52-$pkgbase
 lua53-$pkgbase
 lpsolve
 lrzip
-lsb-release
 lshw
 lskat
 lsof
@@ -2301,7 +2300,6 @@ python-mupdf
 musepack
 musepack-tools
 libmpcdec
-musescore
 musl
 musl-aarch64
 musl-riscv64
@@ -2318,7 +2316,6 @@ nawk
 ncdu
 ncftp
 ncompress
-neatvnc
 nemo
 neochat
 neofetch
@@ -2920,7 +2917,6 @@ postgis
 postgrey
 postorius
 potrace
-povray
 powerline
 powerline-fonts
 vim-powerline
@@ -2949,7 +2945,6 @@ ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
-psutils
 ptex
 publicsuffix-list
 pugixml
@@ -4543,8 +4538,6 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
-rssguard
-rssguard-lite
 rst2pdf
 rsync
 rtaudio
