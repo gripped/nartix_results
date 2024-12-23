@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=sqlalchemy-utils
+ pkgname=python-sqlalchemy-utils
+ pkgver=0.42.2
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Various utility functions, new data types and helpers for SQLAlchemy'
+ url='https://github.com/kvesteri/sqlalchemy-utils'
+ depends=('python' 'python-sqlalchemy' 'python-anyjson' 'python-babel'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,17 +0,0 @@
+-python
+-python-anyjson
+-python-arrow
+-python-babel
+-python-build
+-python-colour
+-python-cryptography
+-python-dateutil
+-python-furl
+-python-installer
+-python-intervals
+-python-passlib
+-python-pendulum
+-python-phonenumbers
+-python-setuptools
+-python-sqlalchemy
+-python-wheel

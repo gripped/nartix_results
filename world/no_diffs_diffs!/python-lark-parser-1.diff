@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-lark-parser
+ pkgver=1.2.2
+-pkgrel=1
++pkgrel=3
+ pkgdesc='A modern parsing library'
+ arch=('any')
+ url='https://github.com/lark-parser/lark'
+@@ -18,7 +18,6 @@
+   'python-wheel'
+ )
+ checkdepends=(
+-  'python-js2py'
+   'python-tzlocal'
+   'python-atomicwrites'
+   'python-regex'
+@@ -26,7 +25,6 @@
+ optdepends=(
+   'python-atomicwrites: for atomic_cache'
+   'python-regex: for regex support'
+-  'python-js2py: for nearley support'
+ )
+ provides=('python-lark')
+ source=(

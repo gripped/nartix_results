@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-treq
+ pkgver=24.9.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="A requests-like API built on top of twisted.web's Agent"
+ arch=('any')
+ license=('MIT')
+@@ -29,3 +29,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }
++

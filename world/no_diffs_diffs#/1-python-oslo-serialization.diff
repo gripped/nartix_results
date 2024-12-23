@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-oslo-serialization
+ pkgver=5.5.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Oslo Serialization library"
+ arch=('any')
+ url="https://docs.openstack.org/developer/oslo.serialization"
+@@ -32,3 +32,4 @@
+   python setup.py install --root="$pkgdir/" --optimize=1
+ }
+ 
++

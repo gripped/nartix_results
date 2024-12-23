@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pyname=flask-sqlalchemy
+ pkgname=python-flask-sqlalchemy
+ pkgver=3.1.1
+-pkgrel=2
++pkgrel=3
+ pkgdesc='Adds SQLAlchemy support to your Flask application'
+ url='http://flask-sqlalchemy.pocoo.org/'
+ arch=('any')
+@@ -23,6 +23,7 @@
+   cd ${_pyname}-${pkgver}
+   python -m build --wheel --no-isolation
+   python -m installer --destdir=tmp_install dist/*.whl
++  local python_version=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+   PYTHONPATH="$PWD"/tmp_install/`python -c "import site; print(site.getsitepackages()[0])"` \
+   make -j1 -C docs man text SPHINXBUILD=sphinx-build
+ }
+@@ -30,7 +31,7 @@
+ check() {
+   cd ${_pyname}-${pkgver}
+   PYTHONPATH="$PWD"/tmp_install/`python -c "import site; print(site.getsitepackages()[0])"` \
+-  py.test -vs -Wignore --disable-pytest-warnings
++  py.test -vs -Wignore --disable-pytest-warnings -k 'not test_explicit_table[db2] and not test_explicit_table[db4]'
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,7 @@
+ cd ${_pyname}-${pkgver}
+ python -m build --wheel --no-isolation
+ python -m installer --destdir=tmp_install dist/*.whl
++local python_version=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+ PYTHONPATH="$PWD"/tmp_install/`python -c "import site; print(site.getsitepackages()[0])"` \
+ make -j1 -C docs man text SPHINXBUILD=sphinx-build
+ }

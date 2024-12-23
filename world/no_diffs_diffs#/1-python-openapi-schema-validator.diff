@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-openapi-schema-validator
+ pkgver=0.6.2
+-pkgrel=2
++pkgrel=3
+ pkgdesc="OpenAPI schema validation for Python"
+ url="https://github.com/p1c2u/openapi-schema-validator"
+ license=('BSD-3-Clause')
+@@ -35,3 +35,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }
++

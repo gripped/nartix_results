@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-referencing
+ pkgver=0.35.1
+-pkgrel=1
++pkgrel=3
+ pkgdesc='An implementation-agnostic implementation of JSON reference resolution'
+ arch=('any')
+ url='https://referencing.readthedocs.io'
+@@ -58,3 +58,4 @@
+   ln -s "$site_packages/${pkgname#python-}-$pkgver.dist-info/licenses/COPYING" \
+     "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+ }
++

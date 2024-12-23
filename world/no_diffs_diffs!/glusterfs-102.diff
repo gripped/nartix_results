@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ epoch=1
+ pkgver=11.1
+ _major=${pkgver%%.*}
+-pkgrel=2
++pkgrel=3
+ pkgdesc='a cluster file-system capable of scaling to several peta-bytes.'
+ arch=(x86_64)
+ url='https://www.gluster.org/'
 @@ -40,7 +40,6 @@
      --localstatedir=/var \
      --mandir=/usr/share/man \

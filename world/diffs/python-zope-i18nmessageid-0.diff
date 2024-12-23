@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-zope-i18nmessageid
+ _pkgname=zope.i18nmessageid
+ pkgver=7.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Message Identifiers for internationalization"
+ arch=('x86_64')
+ url="https://github.com/zopefoundation/zope.i18nmessageid"
+@@ -23,7 +23,7 @@
+ 
+ build() {
+   cd $_pkgname-$pkgver
+-  python -m build --wheel --no-isolation
++  python -m build --wheel --no-isolation --skip-dependency-check
+ }
+ 
+ check() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd $_pkgname-$pkgver
+-python -m build --wheel --no-isolation
++python -m build --wheel --no-isolation --skip-dependency-check
+ }

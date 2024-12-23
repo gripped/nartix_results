@@ -1,19 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=python-cfn-lint
--pkgver=1.22.1
-+pkgver=1.18.3
- pkgrel=1
+ pkgver=1.22.1
+-pkgrel=1
++pkgrel=2
  pkgdesc='CloudFormation Linter'
  arch=(any)
-@@ -21,7 +21,7 @@
-   'python-sarif-om: for sarif formatter'
- )
- source=("git+https://github.com/aws-cloudformation/cfn-lint.git#tag=v$pkgver")
--sha256sums=('8cbd7b88a5d02147e7ecd35b588b3d0a3cf73b5d452c81c7fa34cd70cc9e7756')
-+sha256sums=('20357f90ac9372b936430a9910469a766f249367fefb5c1582a4ec926e50ac30')
- 
- build() {
-   cd cfn-lint
+ url='https://github.com/aws-cloudformation/cfn-lint'

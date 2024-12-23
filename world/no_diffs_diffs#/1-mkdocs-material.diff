@@ -4,49 +4,16 @@
  
  pkgname=mkdocs-material
 -pkgver=9.5.44
-+pkgver=9.5.37
++pkgver=9.5.49
  pkgrel=1
  pkgdesc="Documentation that simply works"
  arch=(any)
-@@ -10,11 +10,8 @@
-   mkdocs
-   python
-   python-babel
--  python-colorama
-   python-jinja
-   python-markdown
--  python-regex
--  python-requests
-   python-yaml
- )
- makedepends=(
-@@ -26,7 +23,7 @@
+@@ -26,7 +26,7 @@
    python-wheel
  )
  source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
 -sha256sums=('8b873fafddacbe9506c17718bd5755f52c2ce0408b84b8f73d6109ba52635fc3')
-+sha256sums=('5785017ed8a1828a63581b42dba8a9f4463f5c9b9addee1140ac8dce9b08aacc')
++sha256sums=('8825f5db75a02d3ba3ca828eddbfd410e0a356ea73af63321bd4adbd0d65ddbe')
  
  build() {
    cd $pkgname-$pkgver
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -2,14 +2,11 @@
- python
- python-babel
- python-build
--python-colorama
- python-hatch-nodejs-version
- python-hatch-requirements-txt
- python-hatchling
- python-installer
- python-jinja
- python-markdown
--python-regex
--python-requests
- python-wheel
- python-yaml

@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=lldb
+ pkgver=18.1.8
+-pkgrel=1
++pkgrel=2.1
  pkgdesc="Next generation, high-performance debugger"
  arch=('x86_64')
  url="https://lldb.llvm.org/"
--license=('Apache-2.0 WITH LLVM-exception')
-+license=('custom:Apache 2.0 with LLVM Exception')
- depends=('llvm-libs' 'clang' 'gcc-libs' 'zlib' 'xz' 'libedit' 'ncurses'
-          'libxml2' 'python')
- makedepends=('llvm' 'cmake' 'ninja' 'swig' 'python-sphinx')

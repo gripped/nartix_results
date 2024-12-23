@@ -5,15 +5,7 @@
  pkgname=python-pytest-httpserver
  pkgver=1.1.0
 -pkgrel=2
-+pkgrel=1
++pkgrel=3
  pkgdesc="Http server for pytest to test http clients"
  arch=(any)
  url="https://github.com/csernazs/pytest-httpserver"
-@@ -19,6 +19,7 @@
-   python-wheel
- )
- checkdepends=(
-+  python-ipdb
-   python-pytest
-   python-requests
- )

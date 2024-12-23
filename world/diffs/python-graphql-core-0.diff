@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-graphql-core
+ pkgver=3.2.4
+-pkgrel=1
++pkgrel=2
+ pkgdesc='GraphQL base implementation for Python'
+ url=https://github.com/graphql-python/graphql-core
+ arch=(any)
+@@ -31,6 +31,11 @@
+   git describe --tags | sed 's/^v//'
+ }
+ 
++prepare() {
++  cd graphql-core
++  sed -i 's/setuptools>=59,<70/setuptools/' pyproject.toml
++}
++
+ build() {
+   cd graphql-core
+   python -m build --wheel --no-isolation
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd graphql-core
++sed -i 's/setuptools>=59,<70/setuptools/' pyproject.toml
++}
+ build() {
+ cd graphql-core
+ python -m build --wheel --no-isolation

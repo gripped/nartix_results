@@ -1,11 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=libseccomp
+ pkgname=(libseccomp python-libseccomp)
+ pkgver=2.5.5
+-pkgrel=3
++pkgrel=4
+ pkgdesc='Enhanced seccomp library'
+ arch=('x86_64')
+ license=('LGPL2.1')
 @@ -35,7 +35,7 @@
  
  check() {
    cd ${pkgbase}-${pkgver}
 -  make check
-+  make check || :
++  make check ||:
  }
  
  package_libseccomp() {

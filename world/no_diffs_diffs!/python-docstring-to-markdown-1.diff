@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,7 +26,7 @@
- 
- check() {
-   cd "$_name"
--  PYTHONPATH="$PWD/$_name:$PYTHONPATH" pytest --override-ini="addopts="
-+  PYTHONPATH="$PWD/$_name:$PYTHONPATH" pytest -c /dev/null --pyargs tests
- }
- 
- package() {
+@@ -2,7 +2,7 @@
+ pkgname=python-docstring-to-markdown
+ _name=${pkgname#python-}
+ pkgver=0.15
+-pkgrel=2
++pkgrel=3
+ pkgdesc='On the fly conversion of Python docstrings to markdown'
+ arch=('any')
+ url=https://github.com/python-lsp/docstring-to-markdown

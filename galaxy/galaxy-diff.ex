@@ -13,12 +13,15 @@ gpicview
 greetd-regreet
 gtklock
 lemurs
+libreoffice-fresh
+libreoffice-fresh-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
 lxpanel
+lxqt-session
 lxqt-wayland-session
 lxsession
 lxsession-gtk3
@@ -34,6 +37,7 @@ nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
 rage
+scribus
 terminology
 tor
 torsocks

@@ -1,63 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,17 +2,24 @@
+@@ -2,7 +2,7 @@
  pkgname=python-aws-xray-sdk
  _pkgname=aws-xray-sdk-python
  pkgver=2.14.0
 -pkgrel=4
-+pkgrel=3
++pkgrel=5
  pkgdesc='AWS X-Ray SDK for Python'
  arch=(any)
  url='https://github.com/aws/aws-xray-sdk-python'
- license=('Apache-2.0')
- depends=(python python-botocore python-wrapt)
-+_optdepends_tested=(python-aiobotocore python-bottle
-+                    python-flask python-mysql-connector
-+                    python-psycopg2 python-pymongo)
-+_optdepends_untested=(python-aiohttp python-django python-httpx python-pymysql python-pynamodb python-requests)
-+optdepends=(${_optdepends_tested[@]} ${_optdepends_untested[@]})
- makedepends=(git python-build python-installer python-setuptools python-wheel)
- checkdepends=(
-   python-pytest
-   python-pytest-asyncio
-+  python-webtest
-   python-pytest-benchmark
-+  ${_optdepends_tested[@]}
- )
- source=("git+https://github.com/aws/aws-xray-sdk-python.git#tag=$pkgver")
- sha256sums=('c9f6b2d52e7a1b4b9cb8471b2dd3719debd9e53d1d390990e33ea42f3287a025')
-@@ -43,10 +50,33 @@
- check() {
-   cd $_pkgname
- 
-+  export DJANGO_SETTINGS_MODULE=tests.ext.django.app.settings
-   export AWS_SECRET_ACCESS_KEY=fake_key
-   export AWS_ACCESS_KEY_ID=fake_id
- 
--  pytest -v tests --ignore tests/ext
-+  local _pytest_common_flags=(
-+    --asyncio-mode=auto
-+  )
-+  local _pytest_core_flags=(
-+    --ignore tests/ext
-+  )
-+  local _pytest_ext_flags=(
-+    --ignore tests/ext/pymysql
-+    --ignore tests/ext/flask_sqlalchemy
-+    --ignore tests/ext/pg8000
-+    --ignore tests/ext/aiohttp
-+    --ignore tests/ext/httplib
-+    --ignore tests/ext/httpx
-+    --ignore tests/ext/requests
-+    --ignore tests/ext/psycopg2
-+    --ignore tests/ext/sqlalchemy_core
-+    --ignore tests/ext/django
-+    --ignore tests/ext/pynamodb
-+    --ignore tests/ext/sqlalchemy
-+  )
-+
-+  pytest -v tests ${_pytest_common_flags[@]} ${_pytest_core_flags[@]}
-+  pytest -v tests/ext ${_pytest_common_flags[@]} ${_pytest_ext_flags[@]}
- }
- 
- package() {

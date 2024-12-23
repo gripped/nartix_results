@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  _pyname=fakeredis
  pkgname=python-fakeredis
 -pkgver=2.26.1
+-pkgrel=1
 +pkgver=2.26.2
- pkgrel=1
++pkgrel=2
  pkgdesc='Fake implementation of redis API (redis-py) for testing purposes'
  arch=(any)
+ url="https://github.com/dsoftwareinc/${_pyname}-py"
 @@ -21,7 +21,7 @@
              'python-lupa: for lua scripting support')
  _archive="$_pyname-$pkgver"

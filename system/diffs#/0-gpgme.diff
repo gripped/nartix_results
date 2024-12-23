@@ -1,21 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -50,6 +50,7 @@
+@@ -2,7 +2,7 @@
+ pkgbase=gpgme
+ pkgname=(gpgme qgpgme-qt6 python-gpgme)
+ pkgver=1.24.1
+-pkgrel=1
++pkgrel=3
+ pkgdesc='A C wrapper library for GnuPG'
+ arch=('x86_64')
+ url='https://www.gnupg.org/related_software/gpgme/'
+@@ -25,12 +25,16 @@
+ )
+ validpgpkeys=('6DAA6E64A76D2840571B4902528897B826403ADA'  # Werner Koch (dist signing 2020)
+               'AC8E115BF73E2D8D47FA9908E98E9B2D19C6C8BD') # Niibe Yutaka (GnuPG Release Key)
+-source=("https://www.gnupg.org/ftp/gcrypt/${pkgbase}/${pkgbase}-${pkgver}.tar.bz2"{,.sig})
++source=("https://www.gnupg.org/ftp/gcrypt/${pkgbase}/${pkgbase}-${pkgver}.tar.bz2"{,.sig}
++        '0001-python-3-13.patch')
+ sha256sums=('ea05d0258e71061d61716584ec34cef59330a91340571edc46b78374973ba85f'
+-            'SKIP')
++            'SKIP'
++            'fa5e1a24e90bb6e4df8787cb14900c046fb6dc97f2a27c2d8b7474938261a413')
  
-   (
-     cd lang/python/
-+    ln -sv ./src gpg
-     top_builddir="$srcdir/$pkgbase-$pkgver" python -m build --wheel --no-isolation
-   )
- }
-@@ -81,7 +82,6 @@
-   make DESTDIR="${pkgdir}" install
+ prepare() {
+   cd ${pkgbase}-${pkgver}/
++
++  patch -Np1 < ../0001-python-3-13.patch
  
-   rm -r "${pkgdir}"/usr/lib/{cmake/QGpgmeQt6/,libqgpgmeqt6.*}
--  rm -r "${pkgdir}"/usr/lib/python*
-   rm -r "${pkgdir}"/usr/include/qgpgme-qt6/
-   install -vDm 644 LICENSES "$pkgdir/usr/share/licenses/$pkgname/MIT.txt"
- }
+   sed -i 's/-unknown//' autogen.sh
+   autoreconf -fi
 
 
 ############# Stripped diff below #################
@@ -24,11 +36,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,6 +14,7 @@
- make
- (
- cd lang/python/
-+ln -sv ./src gpg
- top_builddir="$srcdir/$pkgbase-$pkgver" python -m build --wheel --no-isolation
- )
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd ${pkgbase}-${pkgver}/
++patch -Np1 < ../0001-python-3-13.patch
+ sed -i 's/-unknown//' autogen.sh
+ autoreconf -fi
  }

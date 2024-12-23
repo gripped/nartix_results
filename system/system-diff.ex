@@ -57,6 +57,8 @@ pam
 pambase
 ppp
 procps-ng
+python
+python-tests
 rpcbind
 shadow
 thin-provisioning-tools

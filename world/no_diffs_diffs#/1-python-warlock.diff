@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-warlock
+ pkgver=2.0.1
+-pkgrel=3
++pkgrel=4
+ pkgdesc="Python object model built on JSON schema and JSON patch."
+ arch=('any')
+ license=('Apache')
+@@ -31,3 +31,4 @@
+   cd warlock-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
++

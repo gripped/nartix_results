@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=glances
+ pkgver=4.2.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc='CLI curses-based monitoring tool'
+ arch=('any')
+ url='https://nicolargo.github.io/glances/'
 @@ -18,12 +18,9 @@
              'python-zeroconf: for the autodiscover mode'
              'python-pystache: templating engine'

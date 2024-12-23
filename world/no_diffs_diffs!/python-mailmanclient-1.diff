@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=mailmanclient
+ pkgname=python-mailmanclient
+ pkgver=3.3.5
+-pkgrel=5
++pkgrel=6
+ pkgdesc="Official Python bindings for the GNU Mailman 3 REST API"
+ arch=(any)
+ url="https://gitlab.com/mailman/mailmanclient"
+@@ -38,7 +38,7 @@
+ 
+ check() {
+   cd $_name
+-  pytest -v -k 'not using.rst and not test_find_user_page and not test_find_users'
++  pytest -v -k 'not using.rst and not test_find_user_page and not test_find_users and not test_invite and not test_held_message_moderation and not test_member_paths_are_urlencoded and not test_list_ and not test_subscribe_with and not test_get_'
+ }
+ 
+ package() {

@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-oslotest
+ pkgver=5.0.0
+-pkgrel=2
++pkgrel=3
+ pkgdesc="Oslo test framework"
+ arch=('any')
+ url="https://github.com/openstack/oslotest"
+@@ -27,3 +27,4 @@
+   python setup.py install --root="$pkgdir/" --optimize=1
+ }
+ 
++

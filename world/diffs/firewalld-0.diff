@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=firewalld
+ pkgver=2.3.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Firewall daemon with D-Bus interface"
+ arch=('any')
+ url="https://firewalld.org"
 @@ -36,6 +36,7 @@
  	  --sbindir=/usr/bin \
  	  --sysconfdir=/etc \

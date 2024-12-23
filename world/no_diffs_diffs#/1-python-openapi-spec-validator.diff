@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-openapi-spec-validator
+ pkgver=0.7.1
+-pkgrel=2
++pkgrel=3
+ pkgdesc="OpenAPI 2.0 (aka Swagger) and OpenAPI 3 spec validator"
+ url="https://github.com/p1c2u/openapi-spec-validator"
+ license=('Apache')
+@@ -32,3 +32,4 @@
+   cd openapi-spec-validator-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
++

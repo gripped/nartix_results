@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=flufl.lock
+ pkgname=python-flufl-lock
+ pkgver=8.1.0
+-pkgrel=2
++pkgrel=3
+ pkgdesc="NFS-safe file locking with timeouts for POSIX systems for Python"
+ arch=(any)
+ url="https://gitlab.com/warsaw/flufl.lock"
+@@ -41,3 +41,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm 644 README.rst -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
++
