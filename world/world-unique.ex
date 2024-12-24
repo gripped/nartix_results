@@ -254,6 +254,7 @@ hostapd-openrc
 hostapd-runit
 hostapd-s6
 hyprgraphics
+hyprland-qtutils
 i2pd-dinit
 i2pd-openrc
 i2pd-runit

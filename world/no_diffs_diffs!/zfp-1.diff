@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zfp
+ pkgver=1.0.1
+-pkgrel=3
++pkgrel=4
+ pkgdesc="Compressed numerical arrays that support high-speed random access"
+ arch=(x86_64)
+ url="https://computing.llnl.gov/projects/floating-point-compression"
+@@ -23,7 +23,7 @@
+ 
+ check() {
+   cd build
+-  LD_LIBRARY_PATH="$(pwd)"/lib/ ctest -v --output-on-failure
++  LD_LIBRARY_PATH="$(pwd)"/lib/ ctest --output-on-failure
+ }
+ 
+ package() {

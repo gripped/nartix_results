@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
+@@ -1,7 +1,7 @@
  
  pkgname='vcspull'
  pkgver=1.31.0
@@ -9,23 +9,3 @@
  pkgdesc='Synchronize projects via yaml/json manifest. Built using `libvcs`'
  arch=('any')
  url='https://vcspull.git-pull.com/'
- license=('MIT')
- depends=('python' 'python-colorama' 'python-libvcs' 'python-shtab' 'python-yaml')
--makedepends=('python-build' 'python-installer' 'python-poetry-core')
-+makedepends=('python-build' 'python-installer' 'python-poetry-core' 'python-pyproject-hooks')
- checkdepends=('git' 'python-pytest' 'python-pytest-rerunfailures')
- optdepends=(
-   'bash-completion: for command line completion in bash'
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -4,5 +4,6 @@
- python-installer
- python-libvcs
- python-poetry-core
-+python-pyproject-hooks
- python-shtab
- python-yaml

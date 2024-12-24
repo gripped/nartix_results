@@ -4,10 +4,12 @@
  
 -_pkgname=ReGreet
 -pkgname=greetd-${_pkgname,,}
+-pkgver=0.1.1
+-pkgrel=3
 +_orgname=ReGreet
 +pkgname="greetd-${_orgname,,}"
- pkgver=0.1.1
- pkgrel=3
++pkgver=0.1.2
++pkgrel=1
  pkgdesc='Clean and customizable greeter for greetd'
 -url="https://github.com/rharish101/$_pkgname"
 +url="https://github.com/rharish101/$_orgname"
@@ -27,10 +29,11 @@
 -_archive="$_pkgname-$pkgver"
 -source=("$url/archive/$pkgver/$_archive.tar.gz"
 -        "${_pkgname,,}.toml")
+-sha256sums=('a658c91cdf242dfea814f0bfd0c4d877bd39e3af498d36e5024061e3d07ea76b'
+-            'b80b3eb31f8cc463d512c9db0eef899bdbe232d977429a8a12e95a3b6df2e387')
 +source=("$url/archive/$pkgver/${pkgname}-${pkgver}.tar.gz"
 +        "${_orgname,,}.toml")
- sha256sums=('a658c91cdf242dfea814f0bfd0c4d877bd39e3af498d36e5024061e3d07ea76b'
--            'b80b3eb31f8cc463d512c9db0eef899bdbe232d977429a8a12e95a3b6df2e387')
++sha256sums=('7358f5536d1fbbf36e0d9ba152a393d85d733ea5946bdc0c720f460de2c5e8e4'
 +            '7780028e5774347793e8073c86bde7f38b70a9736dc7c5b0566d93aa7f0c252b')
  
  prepare() {

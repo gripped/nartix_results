@@ -131,7 +131,6 @@ libtg_owt
 libvarlink
 libwnck
 libxfce4util
-libxfce4windowing
 lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers
@@ -506,14 +505,10 @@ xfce4-mount-plugin
 xfce4-mpc-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
-xfce4-panel
-xfce4-power-manager
 xfce4-pulseaudio-plugin
 xfce4-screensaver
 xfce4-screenshooter
 xfce4-sensors-plugin
-xfce4-session
-xfce4-settings
 xfce4-smartbookmark-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
@@ -526,7 +521,6 @@ xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfconf
-xfdesktop
 xfwm4-themes
 xfwm4
 yyjson

@@ -19,6 +19,7 @@ libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
+libxfce4windowing
 light
 lxpanel
 lxqt-session
@@ -38,6 +39,7 @@ qbittorrent
 qbittorrent-nox
 rage
 scribus
+sdcv
 terminology
 tor
 torsocks
@@ -53,3 +55,8 @@ wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
 xfce4-notifyd
+xfce4-panel
+xfce4-power-manager
+xfce4-session
+xfce4-settings
+xfdesktop

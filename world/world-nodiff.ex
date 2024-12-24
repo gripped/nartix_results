@@ -478,7 +478,6 @@ draco
 dragon
 dropbear
 dropbear-scp
-dtc
 duktape
 dump_syms
 dune
@@ -1269,7 +1268,6 @@ kglobalacceld
 kgoldrunner
 kgpg
 kgraphviewer
-kguiaddons
 kguiaddons5
 khangman
 khealthcertificate
@@ -1403,7 +1401,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -1669,6 +1666,7 @@ libident
 libidl2
 libidn
 libiec61883
+libieee1284
 libimagequant
 libimobiledevice-glue
 libimobiledevice
@@ -1677,7 +1675,6 @@ libindicator
 libindicator-gtk2
 libindicator-gtk3
 libinstpatch
-libiptcdata
 libiscsi
 libisoburn
 libisofs
@@ -3635,7 +3632,6 @@ python-openapi-spec-validator
 python-openid
 python-openpyxl
 python-openstacksdk
-python-opt_einsum
 python-ordered-set
 python-orderedmultidict
 python-orjson

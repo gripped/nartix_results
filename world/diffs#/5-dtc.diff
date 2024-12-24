@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,37 @@
+ 
+ pkgname=dtc
+ pkgver=1.7.2
+-pkgrel=1
++pkgrel=3
+ pkgdesc='Device Tree Compiler'
+ url='https://www.devicetree.org/'
+ arch=(x86_64)
+-license=(GPL2)
+-depends=(bash glibc libyaml python)
+-makedepends=(meson swig python-setuptools-scm)
++license=(GPL-2.0-or-later)
++depends=(
++  bash
++  glibc
++  libyaml
++)
++makedepends=(
++  git
++  meson
++  python-setuptools-scm
++  swig
++)
+ checkdepends=(valgrind)
+-source=(https://www.kernel.org/pub/software/utils/dtc/dtc-$pkgver.tar.xz
+-        pyscm.patch
+-        fix-tests-for-Python3.12.patch)
+-sha256sums=('92d8ca769805ae1f176204230438fe52808f4e1c7944053c9eec0e649b237539'
+-            '3198c9e41cbebb0bcd9caa5de0940ccaf02b3b3bcc00fbc19bfdf3cdb8a075bb'
+-            'c2786c6c4bbd7031394ab534ceca2fa6832142dd0cb3c74750388be9374b22fa')
++optdepends=('python: Python bindings')
++source=("git+git://git.kernel.org/pub/scm/utils/dtc/dtc.git#tag=v$pkgver")
++sha256sums=('3e28d3c2d3e069331d8e4799892933ab667ffec71164fdefd0b390d25a69e0b8')
++
++prepare() {
++  cd $pkgname
++  git config user.name builduser
++  git config user.email builduser@artixlinux
++
++  git cherry-pick 9a969f3b70b07bbf1c9df44a38d7f8d1d3a6e2a5
++}
+ 
+ build() {
+-  arch-meson dtc-$pkgver build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ bash
++git
+ glibc
+ libyaml
+ meson
+-python
+ python-setuptools-scm
+ swig
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,10 @@
++prepare() {
++cd $pkgname
++git config user.name builduser
++git config user.email builduser@artixlinux
++git cherry-pick 9a969f3b70b07bbf1c9df44a38d7f8d1d3a6e2a5
++}
+ build() {
+-arch-meson dtc-$pkgver build
++artix-meson $pkgname build
+ meson compile -C build
+ }

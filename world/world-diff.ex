@@ -79,6 +79,7 @@ dolphin-emu-tool
 dovecot
 dracut
 drkonqi
+dtc
 dunst
 earlyoom
 element.io
@@ -264,12 +265,14 @@ jupyter-server-ydoc
 kcoreaddons
 kdevelop-python
 kgamma
+kguiaddons
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
 knot
 kopeninghours
+krita
 ksnip
 ksystemlog
 kwin
@@ -311,8 +314,8 @@ libgdata
 libgudev
 libguestfs
 libhandy0
-libieee1284
 libinput
+libiptcdata
 libldm
 libmspub
 libnvme
@@ -633,6 +636,7 @@ python-munch
 python-nodeenv
 python-nose
 python-numba
+python-opt_einsum
 python-optree
 python-packaging
 python-paramiko

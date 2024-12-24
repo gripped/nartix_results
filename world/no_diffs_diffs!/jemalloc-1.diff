@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,12 @@
+ pkgname=jemalloc
+ epoch=1
+ pkgver=5.3.0
+-pkgrel=4
++pkgrel=5
+ pkgdesc='General-purpose scalable concurrent malloc implementation'
+ arch=('x86_64')
+ license=('BSD')
+-url='http://www.canonware.com/jemalloc/'
+-depends=('glibc')
++url='https://jemalloc.net/'
++depends=('gcc-libs' 'glibc')
+ makedepends=('clang')
+ options=('!lto')
+ provides=('libjemalloc.so')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1,3 @@
+ clang
++gcc-libs
+ glibc

@@ -1,16 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=hyprland
 -pkgver=0.45.2
--pkgrel=3
 +pkgver=0.46.2
-+pkgrel=1
+ pkgrel=3
  pkgdesc='a highly customizable dynamic tiling Wayland compositor'
  arch=(x86_64 aarch64)
- url="https://github.com/hyprwm/${pkgname^}"
-@@ -10,9 +10,10 @@
+@@ -10,9 +10,11 @@
           aquamarine libaquamarine.so
           gcc-libs # libgcc_s.so libstdc++.so
           glibc # libc.so libm.so
@@ -19,10 +17,11 @@
           glslang
           hyprcursor libhyprcursor.so
 +         hyprgraphics libhyprgraphics.so
++         hyprland-qtutils
           hyprlang libhyprlang.so
           hyprutils libhyprutils.so
           hyprwayland-scanner
-@@ -24,7 +25,7 @@
+@@ -24,7 +26,7 @@
           libx11
           libxcb # libxcb-dri3.so libxcb-present.so libxcb-render.so libxcb-res.so libxcb-shm.so libxcb.so libxcb-xfixes.so libxcb-xinput.so
           libxcomposite # libxcb-composite.so
@@ -31,7 +30,7 @@
           libxfixes
           libxkbcommon libxkbcommon.so
           libxrender
-@@ -32,9 +33,11 @@
+@@ -32,9 +34,11 @@
           opengl-driver
           pango libpango-1.0.so libpangocairo-1.0.so
           pixman libpixman-1.so
@@ -44,7 +43,7 @@
           vulkan-icd-loader
           wayland libwayland-client.so libwayland-server.so
           wayland-protocols
-@@ -57,7 +60,7 @@
+@@ -57,7 +61,7 @@
  provides=(wayland-compositor)
  _archive="${pkgname^}-$pkgver"
  source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
@@ -59,15 +58,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,6 +6,7 @@
+@@ -6,6 +6,8 @@
  glibc
  glslang
  hyprcursor
 +hyprgraphics
++hyprland-qtutils
  hyprlang
  hyprutils
  hyprwayland-scanner
-@@ -16,9 +17,13 @@
+@@ -16,9 +18,13 @@
  libdisplay-info
  libdisplay-info.so
  libdrm
@@ -81,7 +81,7 @@
  libhyprlang.so
  libhyprutils.so
  libinput
-@@ -27,10 +32,11 @@
+@@ -27,10 +33,11 @@
  libpango-1.0.so
  libpangocairo-1.0.so
  libpixman-1.so
@@ -94,7 +94,7 @@
  libwayland-client.so
  libwayland-server.so
  libx11
-@@ -47,9 +53,10 @@
+@@ -47,9 +54,10 @@
  opengl-driver
  pango
  pixman
