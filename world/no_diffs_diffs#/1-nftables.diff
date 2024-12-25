@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=nftables
+ epoch=1
+ pkgver=1.1.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Netfilter tables userspace tools'
+ arch=('x86_64')
+ url='https://netfilter.org/projects/nftables/'
 @@ -14,13 +14,11 @@
  backup=('etc/nftables.conf')
  validpgpkeys=('37D964ACC04981C75500FB9BD55D978A8A1420E4') # Netfilter Core Team

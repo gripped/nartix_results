@@ -129,6 +129,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
@@ -220,6 +222,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -259,6 +262,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 js78
+jshon
 jupyter-nbclassic
 jupyter-nbclient
 jupyter-server-ydoc
@@ -597,6 +601,7 @@ python-blosc2
 python-btrees
 python-build
 python-calmjs
+python-cloudflare
 python-colour
 python-comm
 python-commentjson
@@ -657,6 +662,7 @@ python-pyudev
 python-pyusb
 python-rapidfuzz
 python-rdflib
+python-recommonmark
 python-requests-file
 python-respx
 python-rpds-py
@@ -669,6 +675,7 @@ python-wrapt
 python-xmlschema
 python-xmlsec
 python-xmltodict
+python-xxhash
 python-zeep
 python-zope-configuration
 python-zope-hookable
@@ -676,6 +683,7 @@ python-zope-i18nmessageid
 python-zope-proxy
 python-zope-security
 python-zope-testrunner
+python-zstandard
 qastools
 qbittorrent
 qbittorrent-nox

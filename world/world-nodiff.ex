@@ -650,8 +650,6 @@ galculator
 gcab
 gcc13
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1016,7 +1014,6 @@ immer
 incidenceeditor
 indent
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1093,7 +1090,6 @@ js102
 js115
 js128
 js91
-jshon
 json-glib
 json-glib-docs
 jsoncpp
@@ -3159,7 +3155,6 @@ python-cliff
 python-cligj
 python-clikit
 python-clint
-python-cloudflare
 python-cloudpickle
 python-cmake-build-extension
 python-cmarkgfm
@@ -3954,7 +3949,6 @@ python-rcssmin
 python-re-assert
 python-reactivex
 python-readme-renderer
-python-recommonmark
 python-redis
 python-referencing
 python-reflink
@@ -4248,7 +4242,6 @@ python-xlib
 python-xlrd
 python-xlsxwriter
 python-xlwt
-python-xxhash
 python-y-py
 python-yaml
 python-yara
@@ -4275,7 +4268,6 @@ python-zope-location
 python-zope-schema
 python-zope-testing
 python-zopfli
-python-zstandard
 pyxdg
 qalculate-qt
 qbe
