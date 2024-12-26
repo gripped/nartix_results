@@ -17,19 +17,3 @@
  )
  source=($_name-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz)
  sha512sums=('4b5979894678907d4933ef6fa314cd279e93b2efb198360de968e68bd9bd22086beae106ea386bf9f44ef9ad21e6de82da84ee52b5e6af949cea4b3da44b2ddb')
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,9 +0,0 @@
--python
--python-build
--python-installer
--python-more-itertools
--python-setuptools-scm
--python-toml
--python-typeguard
--python-typing_extensions
--python-wheel
