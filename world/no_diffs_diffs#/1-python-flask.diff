@@ -1,11 +1,60 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,32 +1,20 @@
  
  pkgname=python-flask
- pkgver=2.3.3
--pkgrel=2
+-pkgver=3.1.0
+-pkgrel=1
++pkgver=2.3.3
 +pkgrel=3
  pkgdesc='Micro webdevelopment framework for Python'
  url='http://flask.pocoo.org/'
  arch=('any')
+-license=('BSD-3-Clause')
+-depends=(
+-  'python'
+-  'python-blinker'
+-  'python-click'
+-  'python-itsdangerous'
+-  'python-jinja'
+-  'python-werkzeug'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-flit-core'
+-  'python-installer'
+-  'python-wheel'
+-)
++license=('custom:BSD')
++depends=('python-werkzeug' 'python-jinja' 'python-itsdangerous' 'python-click' 'python-blinker')
++makedepends=('python-build' 'python-installer' 'python-wheel' 'python-flit-core')
+ checkdepends=('python-pytest')
+ optdepends=(
+   'python-asgiref: async functions and views'
+   'python-dotenv: loading env vars from files'
+ )
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/pallets/flask/archive/${pkgver}.tar.gz")
+-sha512sums=('b70efc2d8bf7de810b0b42dfd5a792c1958739dd84fdc533eae76cf6d805b5de311f9324327d12f00c0d596ca5d43e468f2f52b31f09e04f63a38997ce0a312f')
++sha512sums=('d4cd9ddbe2fc6155f099bbfb0a135f7bfc7f6061a1c0bad4a6db9d9707814894bcd641237d98889f24e035c02c5a08b667b85b2d0bf6c083049d149292734010')
+ 
+ build() {
+   cd "flask-$pkgver"
+@@ -43,6 +31,6 @@
+ package() {
+   cd "flask-$pkgver"
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
++  install -Dm644 LICENSE.rst "$pkgdir/usr/share/licenses/$pkgname/LICENSE.rst"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-python
+ python-blinker
+ python-build
+ python-click

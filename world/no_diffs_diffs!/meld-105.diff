@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,7 @@
+ }
+ 
+ build() {
+-  arch-meson meld build
++  artix-meson meld build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ git cherry-pick -n aa817dce6bb0667fc6ef38163c213803dc8b37b3
+ }
+ build() {
+-arch-meson meld build
++artix-meson meld build
+ meson compile -C build
+ }

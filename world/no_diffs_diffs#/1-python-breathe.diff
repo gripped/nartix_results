@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=python-breathe
- pkgver=4.35.0
--pkgrel=5
-+pkgrel=6
- pkgdesc="An extension to reStructuredText and Sphinx to be able to read and render Doxygen xml output"
- arch=('any')
- url="https://breathe.readthedocs.org/en/latest/"
 @@ -35,3 +35,4 @@
    python -m installer --destdir="$pkgdir" "breathe-${pkgver}/dist"/*.whl
    install -D -m644 "breathe-${pkgver}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}"

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=xfce4-power-manager
+ pkgver=4.20.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Power Manager for Xfce"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/xfce4-power-manager/start"
+ license=('GPL-2.0-or-later')
+ groups=('xfce4')
+ depends=('libxfce4ui' 'upower' 'libnotify' 'xfce4-notifyd' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'xfce4-dev-tools' 'xfce4-panel' 'wayland-protocols')
++makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools' 'xfce4-panel' 'wayland-protocols')
+ source=("git+https://gitlab.xfce.org/xfce/xfce4-power-manager.git#tag=$pkgname-$pkgver"
+         git+https://gitlab.freedesktop.org/wlroots/wlr-protocols.git)
+ sha256sums=('9798ac882a57b1752295d06151104b84741820d665dd0eab734279089bd912aa'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ git
+ glib2-devel
+ hicolor-icon-theme
++intltool
+ libnotify
+ libxfce4ui
+ upower

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=python-ndindex
- _pkgname=${pkgname#python-}
- pkgver=1.9.2
--pkgrel=1
-+pkgrel=2
- pkgdesc="Library for manipulating indices of ndarrays"
- arch=(x86_64)
- url="https://quansight-labs.github.io/ndindex/"
 @@ -48,3 +48,4 @@
    rm -r "$pkgdir/$site_packages/ndindex/tests"
    install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE

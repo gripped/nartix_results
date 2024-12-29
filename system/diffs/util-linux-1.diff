@@ -1,16 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,23 @@
-+
- 
- pkgbase=util-linux
- pkgname=(util-linux util-linux-libs)
- _tag='2.40.2'
- pkgver="${_tag/-/}"
--pkgrel=1
-+pkgrel=2
- pkgdesc='Miscellaneous system utilities for Linux'
- url='https://github.com/util-linux/util-linux'
+@@ -10,13 +10,14 @@
  arch=('x86_64')
  makedepends=('asciidoctor'
               'bash-completion'
@@ -26,7 +16,7 @@
  license=(
    'BSD-2-Clause'
    'BSD-3-Clause'
-@@ -34,8 +36,7 @@
+@@ -35,8 +36,7 @@
          pam-{login,common,remote,runuser,su}
          'util-linux.sysusers'
          '60-rfkill.rules'
@@ -36,7 +26,7 @@
  sha256sums=('ccae05afaddd61119bbf35173f7045d1c8e98cc42c1355f5e9072433ebc42ee1'
              '6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a'
              'ee917d55042f78b8bb03f5467e5233e3e2ddc2fe01e302bc53b218003fe22275'
-@@ -45,8 +46,7 @@
+@@ -46,8 +46,7 @@
              '3f54249ac2db44945d6d12ec728dcd0d69af0735787a8b078eacd2c67e38155b'
              '10b0505351263a099163c0d928132706e501dd0a008dac2835b052167b14abe3'
              '7423aaaa09fee7f47baa83df9ea6fef525ff9aec395c8cbd9fe848ceb2643f37'
@@ -46,7 +36,7 @@
  
  _backports=(
  )
-@@ -69,15 +69,16 @@
+@@ -70,15 +69,16 @@
      git revert --mainline 1 --no-commit "${_c}"
    done
  
@@ -65,7 +55,7 @@
      -Dncurses=disabled
      -Dncursesw=enabled
      -Deconf=disabled
-@@ -90,7 +91,7 @@
+@@ -91,7 +91,7 @@
      -Dbuild-write=enabled
    )
  
@@ -74,7 +64,7 @@
  
    meson compile -C build
  }
-@@ -109,7 +110,7 @@
+@@ -110,7 +110,7 @@
             'pam'
             'readline'
             'shadow'
@@ -83,7 +73,7 @@
             'zlib')
    optdepends=('words: default dictionary for look')
    backup=(etc/pam.d/chfn
-@@ -138,7 +139,6 @@
+@@ -139,7 +139,6 @@
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su-l"
  
@@ -91,7 +81,7 @@
  
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
-@@ -154,10 +154,6 @@
+@@ -155,10 +154,6 @@
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"
  

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-blosc2
+ pkgver=3.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Wrapper for the blosc2 compressor'
+ arch=('x86_64')
+ url='https://github.com/Blosc/python-blosc2'
+@@ -30,7 +30,6 @@
+ checkdepends=(
+   'python-psutil'
+   'python-pytest'
+-  'python-pytorch'
+ )
+ source=("$pkgname::git+$url#tag=v$pkgver")
+ sha512sums=('5df824a72b2a38e4ed63e623a8292d0fb8f3c02091313c817768cefec4df76b21d2bd2043dc5185f5549ae994ca69f4ed201f92628690d84419f28480e551127')

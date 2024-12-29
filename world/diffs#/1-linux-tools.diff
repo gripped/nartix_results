@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   'intel-speed-select'
- )
- pkgver=6.12
--pkgrel=7
-+pkgrel=9
- license=('GPL-2.0-only')
- arch=('x86_64')
- url='https://www.kernel.org'
-@@ -33,11 +33,7 @@
+@@ -33,11 +33,6 @@
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"
          'cpupower.default'
@@ -18,11 +9,10 @@
 -        'usbipd.service'
 -        'hv_kvp_daemon.service'
 -        'hv_vss_daemon.service'
-+        'fix-buildid.patch'
+         'fix-buildid.patch'
  )
  validpgpkeys=(
-   'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
-@@ -45,11 +41,7 @@
+@@ -46,11 +41,6 @@
  )
  sha256sums=('267bab84f30e3ce4a88b6441aeee777b114fd58041b43cabfe50fdf0c0a97321'
              '4fa509949d6863d001075fa3e8671eff2599c046d20c98bb4a70778595cd1c3f'
@@ -30,12 +20,11 @@
 -            '42d2ec9f1d9cc255ee7945a27301478364ef482f5a6ddfc960189f03725ccec2'
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
--            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
-+            'b0271b2757bb2cb05a1fd5560a732959cf28db82bb114aadcf7341b71ce127ea')
+-            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af'
+             'b0271b2757bb2cb05a1fd5560a732959cf28db82bb114aadcf7341b71ce127ea')
  
  prepare() {
-   cd linux
-@@ -201,8 +193,6 @@
+@@ -203,8 +193,6 @@
      install install-man
    popd
    install -Dm 644 $pkgname.default "$pkgdir/etc/default/$pkgname"
@@ -44,7 +33,7 @@
  }
  
  package_x86_energy_perf_policy() {
-@@ -216,14 +206,13 @@
+@@ -218,14 +206,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -60,7 +49,7 @@
  }
  
  package_tmon() {
-@@ -248,9 +237,6 @@
+@@ -250,9 +237,6 @@
  
    cd linux/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib

@@ -1,15 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -1,6 +1,6 @@
+ pkgname=v4l-utils
+ pkgver=1.28.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Userspace tools and conversion library for Video 4 Linux"
+ arch=('x86_64')
+ url="https://linuxtv.org/"
+@@ -9,27 +9,21 @@
  conflicts=('libv4l')
  backup=(etc/rc_maps.cfg)
  license=('LGPL')
--depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'systemd-libs' 'json-c')
+-depends=('hicolor-icon-theme' 'gcc-libs' 'libbpf' 'libjpeg-turbo'  'systemd-libs' 'json-c')
+-makedepends=('qt6-base' 'qt6-5compat' 'alsa-lib' 'meson' 'clang' 'doxygen')
+-optdepends=('qt6-base: for qv4l2 and qvidcap'
+-            'qt6-5compat: for qv4l2'
+-            'alsa-lib: for qv4l2')
+-source=(https://linuxtv.org/downloads/v4l-utils/${pkgname}-${pkgver}.tar.xz{,.asc}
+-        v4l-utils-qt-6.7-compat.patch)
 +depends=('hicolor-icon-theme' 'gcc-libs' 'libjpeg-turbo'  'libudev' 'json-c')
- makedepends=('qt5-base' 'alsa-lib' 'meson' 'clang' 'doxygen' 'libbpf')
- optdepends=('qt5-base: for qv4l2 and qvidcap' 'alsa-lib: for qv4l2' 'libbpf: for ir-keytable')
- source=(https://linuxtv.org/downloads/v4l-utils/${pkgname}-${pkgver}.tar.xz{,.asc})
-@@ -23,7 +23,7 @@
++makedepends=('qt5-base' 'alsa-lib' 'meson' 'clang' 'doxygen' 'libbpf')
++optdepends=('qt5-base: for qv4l2 and qvidcap' 'alsa-lib: for qv4l2' 'libbpf: for ir-keytable')
++source=(https://linuxtv.org/downloads/v4l-utils/${pkgname}-${pkgver}.tar.xz{,.asc})
+ sha256sums=('0fa075ce59b6618847af6ea191b6155565ccaa44de0504581ddfed795a328a82'
+-            'SKIP'
+-            '8f00f6af2ea090e472d1a4ac8c0aa824d8847894cdeb379a64b8bbef4c5d7ecc')
++            'SKIP')
+ validpgpkeys=('05D0169C26E41593418129DF199A64FADFB500FF') # Gregor Jasny <gjasny@googlemail.com>
+ 
+ prepare() {
+   cd "${pkgname}-${pkgver}"
+   sed -i 's/sbin/bin/' utils/v4l2-dbg/meson.build
+-
+-  patch -Np1 -i ../v4l-utils-qt-6.7-compat.patch
  }
  
  build() {
@@ -24,11 +48,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,6 +6,6 @@
+@@ -6,7 +6,6 @@
  json-c
  libbpf
  libjpeg-turbo
 +libudev
  meson
- qt5-base
+-qt6-5compat
+-qt6-base
 -systemd-libs
++qt5-base

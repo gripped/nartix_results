@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -10,8 +10,8 @@
           nemo-seahorse
           nemo-share
           nemo-terminal)
 -pkgver=6.4.0
+-pkgrel=2
 +pkgver=6.0.1
- pkgrel=1
++pkgrel=1
  pkgdesc="Various extensions for Nemo"
  arch=(x86_64)
+ license=(GPL2)
 @@ -20,19 +20,16 @@
  _preview_deps=(cjs clutter-gtk clutter-gst libmusicbrainz5 gtksourceview4 xreader webkit2gtk-4.1)
  _python_deps=(python-gobject python-setuptools)

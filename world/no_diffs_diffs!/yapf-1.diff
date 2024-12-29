@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=yapf
- pkgver=0.40.2
--pkgrel=2
-+pkgrel=3
- pkgdesc="Python style guide checker"
- arch=('any')
- url="https://github.com/google/yapf"
 @@ -33,3 +33,4 @@
    cd yapf-$pkgver
    python -m installer -d "$pkgdir" dist/*.whl

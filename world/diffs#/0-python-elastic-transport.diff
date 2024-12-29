@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-elastic-transport
+ _pkgname=elastic-transport-python
+ pkgver=8.15.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Transport classes and utilities shared among Python Elastic client libraries"
+ arch=(any)
+ url="https://github.com/elastic/elastic-transport-python"
+@@ -30,15 +30,8 @@
+   python-respx
+   python-trustme
+ )
+-source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
+-        'remove_tests_incompatible_with_httpcore_1.0.6.patch')
+-sha256sums=('9bc0aa1b94cc0761efeceac5f0ba1d7dd19bf8b5571d863ca49c6b2f212db75c'
+-            'c6e0f55c5ce4bd412a7644e1ab54b1b29dd2315fecdd5a0ed1a410942ba91798')
+-
+-prepare() {
+-  cd $_pkgname-$pkgver
+-  patch -Np1 -i $srcdir/remove_tests_incompatible_with_httpcore_1.0.6.patch
+-}
++source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
++sha256sums=('9bc0aa1b94cc0761efeceac5f0ba1d7dd19bf8b5571d863ca49c6b2f212db75c')
+ 
+ build() {
+   cd $_pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd $_pkgname-$pkgver
+-patch -Np1 -i $srcdir/remove_tests_incompatible_with_httpcore_1.0.6.patch
+-}
+ build() {
+ cd $_pkgname-$pkgver
+ python -m build --wheel --no-isolation

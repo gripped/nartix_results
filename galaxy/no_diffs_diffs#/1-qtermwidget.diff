@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=qtermwidget
- pkgver=2.1.0
--pkgrel=1
-+pkgrel=2
- pkgdesc="A terminal widget for Qt, used by QTerminal"
- arch=("x86_64")
- url="https://github.com/lxqt/qtermwidget"
 @@ -35,3 +35,4 @@
  
    python -m installer --destdir="$pkgdir" "$srcdir"/qtermwidget/pyqt/*.whl

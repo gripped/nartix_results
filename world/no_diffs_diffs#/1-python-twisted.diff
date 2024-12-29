@@ -1,11 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=python-twisted
- pkgver=24.3.0
--pkgrel=2
-+pkgrel=4
- pkgdesc="Asynchronous networking framework written in Python"
- arch=('any')
- url="https://twistedmatrix.com/"
+@@ -24,6 +24,7 @@
+   'python-wheel'
+ )
+ optdepends=(
++  'gobject-introspection-runtime: for GObject Introspection support'
+   'python-appdirs: for using conch'
+   'python-bcrypt: for using conch'
+   'python-cryptography: for using conch'

@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,19 @@
+ 
+ pkgname=rtorrent
+-pkgver=0.15.0
+-pkgrel=2
++pkgver=0.10.0
++pkgrel=1
+ pkgdesc='Ncurses BitTorrent client based on libTorrent'
+ url='https://rakshasa.github.io/rtorrent/'
+-license=('GPL-2.0-only')
++license=('GPL')
+ arch=('x86_64')
+ makedepends=('git')
+-depends=("libtorrent=0.15.${pkgver##*.}" 'curl' 'tinyxml2')
++depends=("libtorrent=0.14.${pkgver##*.}" 'curl' 'xmlrpc-c')
+ source=("git+https://github.com/rakshasa/rtorrent.git#tag=v${pkgver}")
+-sha256sums=('e59e8fdb70acad0b94dc5fcaff88533e9e42cd68c0d077b90b8508c5dbccac46')
++sha256sums=('9ab79dddd8498d2cc601804b3e3a48dded73c7926e631e64dd0e614875b76205')
+ 
+ prepare() {
+   cd ${pkgname}
++  git cherry-pick -n 38b39bdafc9edd7e7e72672e6fcbd397b6c2cab8
+   autoreconf -fiv
+ }
+ 
+@@ -22,7 +23,7 @@
+   ./configure \
+   --prefix=/usr \
+   --disable-debug \
+-  --with-xmlrpc-tinyxml2
++  --with-xmlrpc-c
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+ curl
+ git
+ libtorrent
+-tinyxml2
++xmlrpc-c
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd ${pkgname}
++git cherry-pick -n 38b39bdafc9edd7e7e72672e6fcbd397b6c2cab8
+ autoreconf -fiv
+ }
+ build() {
+@@ -8,6 +9,6 @@
+ ./configure \
+ --prefix=/usr \
+ --disable-debug \
+---with-xmlrpc-tinyxml2
++--with-xmlrpc-c
+ make
+ }

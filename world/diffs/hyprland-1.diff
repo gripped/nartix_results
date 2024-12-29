@@ -1,110 +1,42 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=hyprland
--pkgver=0.45.2
--pkgrel=3
-+pkgver=0.46.2
-+pkgrel=4
- pkgdesc='a highly customizable dynamic tiling Wayland compositor'
- arch=(x86_64 aarch64)
- url="https://github.com/hyprwm/${pkgname^}"
-@@ -10,9 +10,11 @@
-          aquamarine libaquamarine.so
-          gcc-libs # libgcc_s.so libstdc++.so
-          glibc # libc.so libm.so
--         glib2 libgobject-2.0.so
-+         glib2 libgio-2.0.so libgobject-2.0.so
-          glslang
-          hyprcursor libhyprcursor.so
-+         hyprgraphics libhyprgraphics.so
-+         hyprland-qtutils
-          hyprlang libhyprlang.so
-          hyprutils libhyprutils.so
-          hyprwayland-scanner
-@@ -24,7 +26,7 @@
-          libx11
-          libxcb # libxcb-dri3.so libxcb-present.so libxcb-render.so libxcb-res.so libxcb-shm.so libxcb.so libxcb-xfixes.so libxcb-xinput.so
-          libxcomposite # libxcb-composite.so
--         libxcursor
-+         libxcursor # libXcursor.so
-          libxfixes
-          libxkbcommon libxkbcommon.so
-          libxrender
-@@ -32,9 +34,11 @@
-          opengl-driver
-          pango libpango-1.0.so libpangocairo-1.0.so
+@@ -36,7 +36,7 @@
           pixman libpixman-1.so
-+         re2 libre2.so
+          re2 libre2.so
           seatd libseat.so
 -         systemd-libs libsystemd.so
 +         libelogind libelogind.so
           tomlplusplus libtomlplusplus.so libudev.so
-+         util-linux-libs libuuid.so
+          util-linux-libs libuuid.so
           vulkan-icd-loader
-          wayland libwayland-client.so libwayland-server.so
-          wayland-protocols
-@@ -57,7 +61,7 @@
- provides=(wayland-compositor)
- _archive="${pkgname^}-$pkgver"
- source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
--sha256sums=('d70231021f44980ef1c587e3adcb13471cface8ae580f0b503628b0391a716cb')
-+sha256sums=('d072b50ac0bc48aebea7d0bdb3a0188c62103dde42ff3127a9962437f599b0c1')
- 
- prepare() {
- 	ln -sf hyprland-source "$_archive"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -6,6 +6,8 @@
- glibc
- glslang
- hyprcursor
-+hyprgraphics
-+hyprland-qtutils
- hyprlang
- hyprutils
- hyprwayland-scanner
-@@ -16,9 +18,13 @@
+@@ -18,6 +18,8 @@
  libdisplay-info
  libdisplay-info.so
  libdrm
 +libelogind
 +libelogind.so
-+libgio-2.0.so
+ libgio-2.0.so
  libglvnd
  libgobject-2.0.so
- libhyprcursor.so
-+libhyprgraphics.so
- libhyprlang.so
- libhyprutils.so
- libinput
-@@ -27,10 +33,11 @@
- libpango-1.0.so
- libpangocairo-1.0.so
+@@ -33,7 +35,6 @@
  libpixman-1.so
-+libre2.so
+ libre2.so
  libseat.so
 -libsystemd.so
  libtomlplusplus.so
  libudev.so
-+libuuid.so
- libwayland-client.so
- libwayland-server.so
- libx11
-@@ -47,9 +54,10 @@
- opengl-driver
- pango
+ libuuid.so
+@@ -55,7 +56,6 @@
  pixman
-+re2
+ re2
  seatd
 -systemd-libs
  tomlplusplus
-+util-linux-libs
+ util-linux-libs
  vulkan-headers
- vulkan-icd-loader
- wayland

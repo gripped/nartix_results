@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,13 @@
+ _pyname=openapi-core
+ pkgname=python-$_pyname
+ pkgver=0.19.4
+-pkgrel=6
++pkgrel=3
+ pkgdesc='Client-side and server-side support for the OpenAPI Specification v3'
+ arch=(any)
+ url='https://github.com/p1c2u/openapi-core'
+-license=(BSD-3-Clause)
++license=(BSD)
+ depends=(python
++         python-asgiref
+          python-isodate
+          python-jsonschema
+          python-jsonschema-path
+@@ -47,6 +48,11 @@
+ source=(git+https://github.com/python-openapi/openapi-core#tag=$pkgver)
+ sha256sums=('f37c267b2154e97c5a5ac7a0c278b4871b4057a1a26001f2e4022ceb9f96fe0e')
+ 
++prepare() {
++  cd $_pyname
++  sed -i 's/--cov\S*//' pyproject.toml
++}
++
+ build() {
+   cd $_pyname
+   python -m build --wheel --no-isolation
+@@ -54,8 +60,7 @@
+ 
+ check() {
+   cd $_pyname
+-  PYTHONPATH="$PWD" pytest -v --override-ini="addopts=" \
+-    -W ignore::DeprecationWarning
++  PYTHONPATH="$PWD" pytest -v
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ git
+ python
++python-asgiref
+ python-build
+ python-installer
+ python-isodate
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd $_pyname
++sed -i 's/--cov\S*//' pyproject.toml
++}
+ build() {
+ cd $_pyname
+ python -m build --wheel --no-isolation

@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -2,13 +2,13 @@
+ pkgname=nanobind
+ pkgdesc="tiny and efficient C++/Python bindings"
+ pkgver=2.2.0
+-pkgrel=2
++pkgrel=1
+ arch=(any)
+ url="https://${pkgname}.readthedocs.io"
  license=(BSD-3-Clause)
  depends=(python)
  makedepends=(python-build python-installer python-scikit-build-core cmake eigen git)

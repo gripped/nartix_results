@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ristretto
+-pkgver=0.13.3
+-pkgrel=1
++pkgver=0.13.2
++pkgrel=3
+ pkgdesc="A fast and lightweight picture viewer for Xfce"
+ arch=('x86_64')
+ url="https://docs.xfce.org/apps/ristretto/start"
+@@ -10,7 +10,7 @@
+ depends=('libxfce4ui' 'xfconf' 'tumbler' 'libexif' 'file')
+ makedepends=('git' 'glib2-devel' 'python' 'xfce4-dev-tools')
+ source=("git+https://gitlab.xfce.org/apps/ristretto.git#tag=$pkgname-$pkgver")
+-sha256sums=('318568c0ca91db5e629a3a4f263fa4cb28383d2508e1e534bf9cf14a4789dedd')
++sha256sums=('cbd9a16e170da48889d7067a33cb6ad92e77089d5529597e3b3b7145dc1e62b9')
+ 
+ prepare() {
+   cd $pkgname

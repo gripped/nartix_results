@@ -253,8 +253,6 @@ hostapd-dinit
 hostapd-openrc
 hostapd-runit
 hostapd-s6
-hyprgraphics
-hyprland-qtutils
 i2pd-dinit
 i2pd-openrc
 i2pd-runit
@@ -473,8 +471,6 @@ prosody-openrc
 prosody-runit
 prosody-s6
 python-dbus
-python-deadlib
-python-legacy-cgi
 python-pytz-deprecation-shim
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc

@@ -1,15 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gedit-plugins
- pkgver=48.1
--pkgrel=1
-+pkgrel=2
- pkgdesc="Collection of plugins for the gedit Text Editor"
- url="https://gitlab.gnome.org/World/gedit/gedit-plugins"
- arch=(x86_64)
-@@ -43,7 +43,7 @@
+@@ -18,6 +18,7 @@
+   pango
+   python
+   python-cairo
++  python-dbus
+   python-gobject
+ )
+ makedepends=(
+@@ -42,7 +43,7 @@
  }
  
  build() {
@@ -22,7 +21,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -14,6 +14,7 @@
+ pango
+ python
+ python-cairo
++python-dbus
+ python-gobject
+ vte3
+ yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

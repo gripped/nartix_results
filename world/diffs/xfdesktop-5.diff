@@ -1,10 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,36 +1,31 @@
+@@ -1,38 +1,31 @@
  
  pkgname=xfdesktop
- pkgver=4.18.1
--pkgrel=4
+-pkgver=4.20.0
+-pkgrel=7
++pkgver=4.18.1
 +pkgrel=1
  pkgdesc="Xfce's desktop manager"
  arch=('x86_64')
@@ -12,15 +13,16 @@
 -license=('GPL-2.0-or-later')
 +license=('GPL2')
  groups=('xfce4')
- depends=('libxfce4ui' 'libwnck3' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
--makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools')
+-depends=('libxfce4ui' 'libxfce4windowing' 'libwnck3' 'libyaml' 'gtk-layer-shell' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/xfce/xfdesktop.git#tag=$pkgname-$pkgver")
--sha256sums=('a67cae83863dc61fa994282fdf84f42abbcf2d727d41ae67f5bcb5282beeb516')
+-sha256sums=('773b31c89fa822944979379c45724db50c167cd3110736a0cf4f12fb9b230c00')
 -
 -prepare() {
 -  cd $pkgname
 -  NOCONFIGURE=1 ./autogen.sh
 -}
++depends=('libxfce4ui' 'libwnck3' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('ef9268190c25877e22a9ff5aa31cc8ede120239cb0dfca080c174e7eed4ff756')
@@ -33,6 +35,8 @@
      --prefix=/usr \
      --sysconfdir=/etc \
      --enable-thunarx \
+-    --enable-x11 \
+-    --enable-wayland \
      --enable-notifications \
 -    --disable-debug \
 -    --enable-maintainer-mode
@@ -52,21 +56,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +1,7 @@
+@@ -1,12 +1,7 @@
  exo
  garcon
 -git
 -glib2-devel
+-gtk-layer-shell
  hicolor-icon-theme
- intltool
++intltool
  libwnck3
  libxfce4ui
+-libxfce4windowing
+-libyaml
  thunar
 -xfce4-dev-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,10 @@
+@@ -1,17 +1,10 @@
 -prepare() {
 -cd $pkgname
 -NOCONFIGURE=1 ./autogen.sh
@@ -78,6 +85,8 @@
  --prefix=/usr \
  --sysconfdir=/etc \
  --enable-thunarx \
+---enable-x11 \
+---enable-wayland \
  --enable-notifications \
 ---disable-debug \
 ---enable-maintainer-mode

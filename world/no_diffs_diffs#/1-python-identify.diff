@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- _name=identify
- pkgname=python-identify
- pkgver=2.5.35
--pkgrel=3
-+pkgrel=4
- pkgdesc="File identification library for Python"
- arch=(any)
- url="https://github.com/pre-commit/identify"
 @@ -41,3 +41,4 @@
    install -vDm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
    install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"

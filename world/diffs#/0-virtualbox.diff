@@ -4,7 +4,7 @@
           'virtualbox-ext-vnc')
  pkgver=7.1.4
  _tarver=${pkgver}
--pkgrel=2
+-pkgrel=4
 +pkgrel=3.2
  arch=('x86_64')
  url='https://virtualbox.org/'
@@ -21,20 +21,7 @@
          'vboxreload'
          '001-disable-update.patch'
          '004-drop-Wno-format.patch'
-@@ -70,20 +65,16 @@
-         '012-vbglR3GuestCtrlDetectPeekGetCancelSupport.patch'
-         '013-support-building-from-dkms.patch'
-         '018-upate-xclient-script.patch'
--        '020-python-3-12.patch')
-+        '020-python-3-12.patch'
-+        '021-python-3-13.patch')
- sha256sums=('872e7a42b41f8558abbf887f1bdc7aac932bb88b2764d07cbce270cab57e3b5e'
--            '76d98ea062fcad9e5e3fa981d046a6eb12a3e718a296544a68b66f4b65cb56db'
--            '03ed7f65d8e2f91b17b81bdf2f0f634e62b95e71f7c6c1acaf22d8be97d10e59'
-+            'f753501352054576c510aa81e83f4935079ea620e601057784b02b4d4d1eeb04'
-+            '07fe5c8b313cd7f01505eb9721357269a288ccd0c04e6467afb954038d6f46df'
-             '2101ebb58233bbfadf3aa74381f22f7e7e508559d2b46387114bc2d8e308554c'
-             'da4c49f6ca94e047e196cdbcba2c321199f4760056ea66e0fbc659353e128c9e'
+@@ -80,11 +75,6 @@
              'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
              '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
              '476202f87a4a461af6b73a7709e91f868a65ff7306494227e0d7b264fa3f919e'
@@ -46,13 +33,8 @@
              '4001b5927348fe669a541e80526d4f9ea91b883805f102f7d571edbb482a9b9d'
              '483a043ddfe32c4c5001a8de0a94a0ea884f34d3dbd817b492b9c97fba3ab5e0'
              'ffd30d1d5c41909518571da02c797102d459ba6dec22fe335b4778db264275e1'
-@@ -92,232 +83,226 @@
-             '8c64b3617e597390dd25cf85c9afac0ebbe369d620349d7f5c8056d834acb6c6'
-             '00f68b86d32a1fada900c2da8dad2ab4215106cd58004f049bded99727cda2ff'
-             '73ed7ef243c975227660b9bbe7c576018f2c0216b3a3b5efcc4cc56c44c90914'
--            'ddb2092a5a000aa6ef854796f39dcdf86e72c06d53b24bac3835350571182df6')
-+            'ddb2092a5a000aa6ef854796f39dcdf86e72c06d53b24bac3835350571182df6'
-+            '70245fc3abafbd3b191d87e2910f0f004050672f2d0d056db029a062e80e73bc')
+@@ -97,227 +87,222 @@
+             '70245fc3abafbd3b191d87e2910f0f004050672f2d0d056db029a062e80e73bc')
  
  prepare() {
 -    cd "VirtualBox-${pkgver}"
@@ -132,8 +114,7 @@
 -                'virtualbox-guest-iso: Guest Additions CD image'
 -                'virtualbox-ext-vnc: VNC server support'
 -                'virtualbox-sdk: Developer kit')
--    backup=('etc/modprobe.d/virtualbox.conf'
--            'etc/vbox/vbox.cfg')
+-    backup=('etc/vbox/vbox.cfg')
 -    replaces=('virtualbox-ose')
 -    conflicts=('virtualbox-ose')
 -
@@ -195,7 +176,7 @@
 -    install -D -m0755 vboxreload "${pkgdir}/usr/bin"
 -    ln -s vboxreload "${pkgdir}/usr/bin/rcvboxdrv"
 -
--    install -D -m0644 virtualbox.modprobe "${pkgdir}/etc/modprobe.d/virtualbox.conf"
+-    install -D -m0644 virtualbox.modprobe "${pkgdir}/usr/lib/modprobe.d/virtualbox.conf"
 +  pkgdesc='Powerful x86 virtualization for enterprise as well as home use'
 +  depends=('curl' 'gcc-libs' 'glibc' 'liblzf' 'libpng' 'libtpms' 'libvpx' 'libx11' 'libxcursor'
 +           'libxext' 'libxinerama' 'libxml2' 'libxmu' 'libxt' 'openssl' 'procps-ng' 'python'
@@ -315,7 +296,6 @@
 -              'virtualbox-host-source')
 -    conflicts=('virtualbox-source' 'virtualbox-host-source')
 -    provides=('VIRTUALBOX-HOST-MODULES')
--    install=virtualbox-host-dkms.install
 -
 -    install -d -m0755 "${pkgdir}/usr/src"
 -    source "VirtualBox-${pkgver}/env.sh"

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,6 @@
+   mkdir crystals fragments molecules # Dummy dirs to trick cmake, actually provided by avogadro-{crystals,fragments,molecules}
+   cd $pkgname
+   git cherry-pick -n 6e2e84dbb088a40d69117c1836f4306792f57acd # Fix wrong cmake variable name
+-  git cherry-pick -n d66a526472c60a960ff22f74fc2a76f23e3a6c97 # Fix build with VTK 9.4
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,6 @@
+ mkdir crystals fragments molecules # Dummy dirs to trick cmake, actually provided by avogadro-{crystals,fragments,molecules}
+ cd $pkgname
+ git cherry-pick -n 6e2e84dbb088a40d69117c1836f4306792f57acd # Fix wrong cmake variable name
+-git cherry-pick -n d66a526472c60a960ff22f74fc2a76f23e3a6c97 # Fix build with VTK 9.4
+ }
+ build() {
+ cmake -B build -S $pkgname \

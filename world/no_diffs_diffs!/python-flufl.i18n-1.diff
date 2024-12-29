@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- _name=flufl.i18n
- pkgname=python-flufl.i18n
- pkgver=5.1.0
--pkgrel=2
-+pkgrel=3
- pkgdesc="A high level API for internationalization"
- arch=(any)
- url="https://gitlab.com/warsaw/flufl.i18n"
 @@ -45,3 +45,4 @@
    python -m installer --destdir="$pkgdir" dist/*.whl
    install -vDm 644 README.rst -t "$pkgdir/usr/share/doc/$pkgname/"

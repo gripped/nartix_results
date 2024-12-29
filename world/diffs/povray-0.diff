@@ -1,39 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,12 +2,12 @@
- pkgname=povray
- epoch=2
- pkgver=3.7.0.10
--pkgrel=14
-+pkgrel=15
- _v=${pkgver%.*.*} # 3.7
- pkgdesc='Script based raytracer for creating 3D graphics'
- arch=(x86_64)
- license=(AGPL3)
--url='https://povray.org/'
-+url='https://www.povray.org/'
- depends=(boost-libs imath libpng libtiff openexr)
- makedepends=(boost git glu)
- backup=(etc/povray/$_v/povray.conf
-@@ -29,10 +29,10 @@
- build() {
-   cd $pkgname-$pkgver
+@@ -31,7 +31,7 @@
    ./configure \
--    LIBS="-lboost_system -lboost_thread" \
--    COMPILED_BY='Arch Linux' \
      --prefix=/usr \
--    --sysconfdir=/etc
-+    --sysconfdir=/etc \
+     --sysconfdir=/etc \
+-    COMPILED_BY='Arch Linux' \
 +    COMPILED_BY='Artix Linux' \
-+    LIBS="-lboost_system -lboost_thread"
+     LIBS="-lboost_system -lboost_thread"
    make CXXFLAGS+='-std=c++11 -lboost_system -lboost_thread -DBOOST_BIND_GLOBAL_PLACEHOLDERS=1 -w'
  }
- 
-@@ -46,4 +46,3 @@
-   install -Dm644 povray.ini "$pkgdir/etc/povray/$_v/povray.ini"
-   install -Dm644 povray.1 "$pkgdir/usr/share/man/man1/povray.1"
- }
--
 
 
 ############# Stripped diff below #################
@@ -42,16 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,9 +11,9 @@
- build() {
- cd $pkgname-$pkgver
+@@ -13,7 +13,7 @@
  ./configure \
--LIBS="-lboost_system -lboost_thread" \
--COMPILED_BY='Arch Linux' \
  --prefix=/usr \
----sysconfdir=/etc
-+--sysconfdir=/etc \
+ --sysconfdir=/etc \
+-COMPILED_BY='Arch Linux' \
 +COMPILED_BY='Artix Linux' \
-+LIBS="-lboost_system -lboost_thread"
+ LIBS="-lboost_system -lboost_thread"
  make CXXFLAGS+='-std=c++11 -lboost_system -lboost_thread -DBOOST_BIND_GLOBAL_PLACEHOLDERS=1 -w'
  }

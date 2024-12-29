@@ -4,16 +4,16 @@
  pkgname=python-cheroot
  pkgdesc="Highly-optimized, pure-python HTTP server"
  pkgver=10.0.1
--pkgrel=3
+-pkgrel=5
 +pkgrel=4
  arch=(any)
  url="https://github.com/cherrypy/cheroot"
  license=(BSD-3-Clause)
-@@ -59,6 +59,7 @@
-     --deselect cheroot/test/test_conn.py::test_remains_alive_post_unhandled_exception
-     --deselect cheroot/test/test_conn.py::test_unhandled_exception_in_request_handler
-     --deselect cheroot/test/test_ssl.py::test_https_over_http_error
-+     -p no:unraisableexception
-   )
-   pytest "${pytest_options[@]}"
- }
+@@ -53,7 +53,6 @@
+   local pytest_options=(
+     -vv
+     --override-ini="addopts="
+-    -W=ignore::DeprecationWarning
+     --ignore cheroot/test/test_server.py
+     --deselect cheroot/test/test_conn.py::test_broken_connection_during_http_communication_fallback
+     --deselect cheroot/test/test_conn.py::test_kb_int_from_http_handler

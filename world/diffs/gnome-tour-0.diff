@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-tour
+ pkgver=47.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Guided tour and greeter for GNOME"
+ url="https://apps.gnome.org/Tour/"
+ arch=(x86_64)
+@@ -33,12 +33,10 @@
+ 
+   CARGO_HOME="$srcdir/build/cargo-home" \
+     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+-
+-  git cherry-pick -n 6e4e8a7d90c76cd1aaa8efa8eb676f68e53c84b9
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,9 +2,8 @@
+ cd $pkgname
+ CARGO_HOME="$srcdir/build/cargo-home" \
+ cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+-git cherry-pick -n 6e4e8a7d90c76cd1aaa8efa8eb676f68e53c84b9
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=python-cairosvg
- _pkgname=CairoSVG
- pkgver=2.7.1
--pkgrel=3
-+pkgrel=4
- pkgdesc='SVG converter based on Cairo. It can export SVG files to PDF, PostScript and PNG files'
- arch=('any')
- url='https://cairosvg.org'
 @@ -38,3 +38,4 @@
  
    python -m installer --destdir="$pkgdir" dist/*.whl

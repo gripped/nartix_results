@@ -1,14 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,9 +27,10 @@
-   'aspell: spelling corrections'
-   'cabextract: ucab extfs'
-   'cdparanoia: audio extfs'
--  'cdrkit: iso9660 extfs'
-+  'cdrkit: alternative iso9660 extfs'
-   'cvs: CVS support'
-   'gawk: hp48+ extfs'
-+  'libisoburn: iso9660 extfs'
-   'mtools: a+ extfs'
-   'p7zip: support for 7zip archives'
-   'perl: needed by several extfs scripts'
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mc
+ pkgver=4.8.32
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A file manager that emulates Norton Commander'
+ arch=('x86_64')
+ url='https://midnight-commander.org/'
+@@ -39,7 +39,6 @@
+   'unarj: uarj extfs'
+   'unrar: urar extfs'
+   'unzip: open zip archives'
+-  'rpm-tools: open rpm packages'
+   'zip: uzip extfs'
+ )
+ backup=(

@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,13 +27,9 @@
+ source=(git+https://github.com/any1/neatvnc.git#tag=${_tag})
+ b2sums=('963b8a55fae4cb5417fe6e088fbe71c93224c782a654113ed3e3e78acfe4056df97e9cbc79d657e16509e9e3decb60c659e105ecccf157e9a44d022cb2a28f36')
+ 
+-pkgver() {
+-  cd neatvnc
+-  git describe --tags | sed 's/^v//'
+-}
+ 
+ build() {
+-  arch-meson neatvnc build \
++  artix-meson neatvnc build \
+     -Djpeg=enabled \
+     -Dtls=enabled
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson neatvnc build \
++artix-meson neatvnc build \
+ -Djpeg=enabled \
+ -Dtls=enabled
+ meson compile -C build

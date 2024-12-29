@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _name=starlette
+ pkgname=python-$_name
+-pkgver=0.44.0
+-pkgrel=1
++pkgver=0.42.0
++pkgrel=2
+ pkgdesc='The little ASGI framework that shines'
+ arch=(any)
+ url="https://github.com/encode/starlette"
+@@ -38,13 +38,17 @@
+   'python-pyyaml: for schema generator'
+   'python-httpx: for test client'
+ )
+-source=($_name-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz)
+-sha512sums=('052baac1a0f60354a35711e87de58b90b1c6fd13f6a2290746663dcc88d131840c340a2c95f8664b4b6347a7397639e26e547a1c353ca7b1911c3f5e3873868e')
+-b2sums=('f566f354b87379ba076b37ebb7366ffc8c209bf1318f8c49ffcdc2cb604b90d29ecb24071b17c551c7e2aa4d383393fae9bf2b3e8129095e7adcaf10956d3a9d')
++source=($_name-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz
++        fix_tests_with_httpx_0.27.patch)
++sha512sums=('d7b0da5333930d6ce9315387cc7e23fd22b4ed379d37c8f143cf6e6a07b5cb2d207d4c349616788633387fa54c6fc377feb28df6ccd1216b824e66a47c950f2b'
++            '673f1e3f714b2d7c962111e279d9086ee2868fab93e537f6363749c2043c92711db403460d5adfc8520cc8253417a47f55a2da4a1df4aa4abc0e662dad25875a')
++b2sums=('8c8d85288ad7a42b9771431377e5b6ecd98f6c6088fa913bddf496db2de1c7c1e471d1b9a0a6a17885acfe96e503391e066d1b8c6f612329afe69d8ca8743935'
++        'c3a2a1f340c912940a78ada3925729ee635ee58dde3b79391dc87cb266c72434fdcb67f04d1b3f77f7f2388dbcd9f1bf323bf819dcc3b7f5b3ff50fa0265f533')
+ 
+ prepare() {
+   cd $_name-$pkgver
+   sed -i '/"error"/d' pyproject.toml
++  patch -Np1 < $srcdir/fix_tests_with_httpx_0.27.patch
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd $_name-$pkgver
+ sed -i '/"error"/d' pyproject.toml
++patch -Np1 < $srcdir/fix_tests_with_httpx_0.27.patch
+ }
+ build() {
+ cd $_name-$pkgver

@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,47 +1,45 @@
+@@ -1,50 +1,45 @@
  
  pkgname=xfce4-session
--pkgver=4.18.4
--pkgrel=3
+-pkgver=4.20.0
+-pkgrel=5
 +pkgver=4.18.3
 +pkgrel=1.1
  pkgdesc="Xfce's session manager"
@@ -13,19 +13,23 @@
 -license=('GPL-2.0-or-later')
 +license=('GPL2')
  groups=('xfce4')
- depends=('libxfce4ui' 'libwnck3' 'xfconf' 'libsm' 'polkit' 'xorg-iceauth'
-          'xorg-xinit' 'xorg-xrdb' 'polkit-gnome' 'hicolor-icon-theme')
--makedepends=('git' 'glib2-devel' 'intltool' 'xfce4-dev-tools')
+-depends=('libxfce4ui' 'libwnck3' 'libxfce4windowing' 'xfconf' 'libsm' 'polkit' 'gtk-layer-shell'
+-         'xorg-iceauth' 'xorg-xinit' 'xorg-xrdb' 'polkit-gnome' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
++depends=('libxfce4ui' 'libwnck3' 'xfconf' 'libsm' 'polkit' 'xorg-iceauth'
++         'xorg-xinit' 'xorg-xrdb' 'polkit-gnome' 'hicolor-icon-theme')
 +makedepends=('intltool')
  optdepends=('gnome-keyring: for keyring support when GNOME compatibility is enabled'
              'xfce4-screensaver: for locking screen with xflock4'
              'xscreensaver: for locking screen with xflock4'
-             'light-locker: for locking screen with xflock4')
+-            'light-locker: for locking screen with xflock4'
+-            'labwc: recommended compositor for the experimental Wayland session')
 -source=("git+https://gitlab.xfce.org/xfce/xfce4-session.git#tag=$pkgname-$pkgver"
++            'light-locker: for locking screen with xflock4')
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2
          source-system-xinitrc-scripts.patch
          xfce-polkit-gnome-authentication-agent-1.desktop)
--sha256sums=('fe898ab1a486111034faa00a565dd522edbe5f1452fd880e8a8362253235059b'
+-sha256sums=('e909155f9cbbdc9115f05a1a1b1d1c64d6c714556fc8857ef65e668b6f14711e'
 -            '5706e37a8ca692d66d23f478bc462c96fe173b35945020b550be36c56f310fb2'
 +sha256sums=('382f93e096ec6493098719cab8cc31b93ad9bb469c0715c0c5117d75fe7394ec'
 +            '6f14d529e4c4f30cd547110bd444cee8dc70c90511a397de18acb6c1fd63ea3e'
@@ -48,6 +52,8 @@
      --prefix=/usr \
      --sysconfdir=/etc \
      --localstatedir=/var \
+-    --enable-x11 \
+-    --enable-wayland \
 -    --disable-debug \
 -    --enable-maintainer-mode
 +    --disable-debug
@@ -66,14 +72,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,3 @@
+@@ -1,14 +1,10 @@
 -git
 -glib2-devel
+-gtk-layer-shell
  hicolor-icon-theme
- intltool
++intltool
  libsm
-@@ -7,7 +5,6 @@
+ libwnck3
  libxfce4ui
+-libxfce4windowing
  polkit
  polkit-gnome
 -xfce4-dev-tools
@@ -83,7 +91,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,13 @@
+@@ -1,17 +1,13 @@
  prepare() {
 -cd $pkgname
 +cd $pkgname-$pkgver
@@ -97,6 +105,8 @@
  --prefix=/usr \
  --sysconfdir=/etc \
  --localstatedir=/var \
+---enable-x11 \
+---enable-wayland \
 ---disable-debug \
 ---enable-maintainer-mode
 +--disable-debug

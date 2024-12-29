@@ -8,6 +8,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
+blender
 blueman
 box2d
 cairo-perl
@@ -21,7 +22,6 @@ caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
 caja
-catfish
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -61,7 +61,6 @@ engrampa
 eom
 exo
 ext4magic
-fastfetch
 fceux
 featherpad
 firefox-i18n
@@ -103,9 +102,9 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
-libreoffice-still
-libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
@@ -130,6 +129,7 @@ libtg_owt
 libvarlink
 libwnck
 libxfce4util
+libxfce4windowing
 lightdm-gtk-greeter
 linux-hardened
 linux-hardened-headers
@@ -204,10 +204,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 mednafen
-mgba
-libmgba
-mgba-sdl
-mgba-qt
 mimalloc
 mokutil
 mousepad
@@ -330,6 +326,7 @@ retroarch
 rgbds
 ristretto
 screengrab
+scribus
 scummvm
 signal-desktop
 sqlitebrowser
@@ -504,11 +501,14 @@ xfce4-mount-plugin
 xfce4-mpc-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
+xfce4-panel
+xfce4-power-manager
 xfce4-pulseaudio-plugin
 xfce4-screensaver
 xfce4-screenshooter
 xfce4-sensors-plugin
-xfce4-smartbookmark-plugin
+xfce4-session
+xfce4-settings
 xfce4-systemload-plugin
 xfce4-taskmanager
 xfce4-terminal
@@ -520,6 +520,7 @@ xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfconf
+xfdesktop
 xfwm4-themes
 xfwm4
 yyjson

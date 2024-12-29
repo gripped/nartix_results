@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=python-fixtures
- pkgver=4.1.0
--pkgrel=3
-+pkgrel=5
- pkgdesc="Fixtures, reusable state for writing clean tests and more"
- arch=('any')
- license=('Apache')
 @@ -31,3 +31,4 @@
    cd fixtures-$pkgver
    python -m installer --destdir="$pkgdir" dist/*.whl

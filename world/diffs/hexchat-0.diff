@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=hexchat
- pkgver=2.16.2
--pkgrel=3
-+pkgrel=4
- pkgdesc='A popular and easy to use graphical IRC (chat) client'
- arch=('x86_64')
- url='https://hexchat.github.io/'
 @@ -17,8 +17,12 @@
  source=("git+https://github.com/hexchat/hexchat.git#tag=v${pkgver}")
  sha256sums=('5d9e457ba10ac756b96561db098bbb2bc7e63de4e1552be570f1b5175eddf313')

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+     -D default-hvs=qemu,lxc
+   )
+ 
+-  arch-meson ${pkgbase} build "${meson_options[@]}"
++  artix-meson ${pkgbase} build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ local meson_options=(
+ -D default-hvs=qemu,lxc
+ )
+-arch-meson ${pkgbase} build "${meson_options[@]}"
++artix-meson ${pkgbase} build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -1,60 +1,83 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
+@@ -1,62 +1,66 @@
  
  pkgname=fastfetch
--pkgver=2.31.0
+-pkgver=2.33.0
 -pkgrel=1
 -pkgdesc="A feature-rich and performance oriented neofetch like system information tool"
 +pkgver=2.8.10
 +pkgrel=2
 +pkgdesc="Like Neofetch, but much faster because written in C"
- arch=('x86_64')
++arch=('x86_64')
  url="https://github.com/fastfetch-cli/fastfetch"
+-arch=('x86_64')
  license=('MIT')
 -depends=('glibc' 'yyjson')
+-makedepends=('chafa' 'cmake' 'dbus' 'dconf' 'ddcutil' 'directx-headers' 'imagemagick' 'libpulse' 'libxcb' 'libxrandr'
+-             'mesa' 'ocl-icd' 'opencl-headers' 'vulkan-headers' 'vulkan-icd-loader' 'wayland' 'xfconf' 'zlib')
 +depends=('glibc')
- makedepends=(
-   'chafa'
-   'cmake'
-@@ -15,12 +15,14 @@
-   'ddcutil'
-   'directx-headers'
-   'imagemagick'
++makedepends=(
++  'chafa'
++  'cmake'
++  'dbus'
++  'dconf'
++  'ddcutil'
++  'directx-headers'
++  'imagemagick'
 +  'libnm'
-   'libpulse'
-   'libxcb'
-   'libxrandr'
-   'mesa'
-   'ocl-icd'
-   'opencl-headers'
++  'libpulse'
++  'libxcb'
++  'libxrandr'
++  'mesa'
++  'ocl-icd'
++  'opencl-headers'
 +  'pciutils'
-   'vulkan-headers'
-   'vulkan-icd-loader'
-   'wayland'
-@@ -34,47 +36,31 @@
-   'ddcutil: Brightness detection of external displays'
-   'directx-headers: GPU detection in WSL'
-   'glib2: Output for values that are only stored in GSettings'
--  'hwdata: GPU output'
-   'imagemagick: Image output using sixel or kitty graphics protocol'
--  'libdrm: Displays detection'
--  'libelf: st term font detection and fast path of systemd version detection'
++  'vulkan-headers'
++  'vulkan-icd-loader'
++  'wayland'
++  'xfconf'
++  'zlib'
++)
+ optdepends=(
+-	'chafa: Image output as ascii art'
+-	'dbus: Bluetooth, Player & Media detection'
+-	'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
+-	'ddcutil: Brightness detection of external displays'
+-	'directx-headers: GPU detection in WSL'
+-	'glib2: Output for values that are only stored in GSettings'
+-	'hwdata: GPU output'
+-	'imagemagick: Image output using sixel or kitty graphics protocol'
+-	'libdrm: Displays detection'
+-	'libelf: st term font detection and fast path of systemd version detection'
+-	'libpulse: Sound detection'
+-	'libxrandr: Multi monitor support'
+-	'mesa: Needed by the OpenGL module for gl context creation'
+-	'ocl-icd: OpenCL module'
+-	'python: Needed for zsh and fish completions'
+-	'vulkan-icd-loader: Vulkan module & fallback for GPU output'
+-	'xfconf: Needed for XFWM theme and XFCE Terminal font'
+-	'zlib: Faster image output when using kitty graphics protocol')
++  'chafa: Image output as ascii art'
++  'dbus: Bluetooth, Player & Media detection'
++  'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
++  'ddcutil: Brightness detection of external displays'
++  'directx-headers: GPU detection in WSL'
++  'glib2: Output for values that are only stored in GSettings'
++  'imagemagick: Image output using sixel or kitty graphics protocol'
 +  'libnm: Wifi detection'
-   'libpulse: Sound detection'
++  'libpulse: Sound detection'
 +  'mesa: Needed by the OpenGL module for gl context creation.'
-   'libxrandr: Multi monitor support'
--  'mesa: Needed by the OpenGL module for gl context creation.'
-   'ocl-icd: OpenCL module'
--  'python: Needed for zsh and fish completions'
++  'libxrandr: Multi monitor support'
++  'ocl-icd: OpenCL module'
 +  'pciutils: GPU output'
-   'vulkan-icd-loader: Vulkan module & fallback for GPU output'
-   'xfconf: Needed for XFWM theme and XFCE Terminal font'
-   'zlib: Faster image output when using kitty graphics protocol'
++  'vulkan-icd-loader: Vulkan module & fallback for GPU output'
++  'xfconf: Needed for XFWM theme and XFCE Terminal font'
++  'zlib: Faster image output when using kitty graphics protocol'
 +  'libdrm: Displays detection'
- )
++)
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('3036e34acc1355bf39619df1a2400f5f8316d188088f07d9a366a521bb30ad61')
+-sha256sums=('fa3b5c3c4fc7d2b6c4e24c15fb7cf3df94024227f2d24995f6ca0eaa95f39725')
 +sha256sums=('e3ea8388d79cc02ed1a6e45b8e5fec4068507ca03923386bdc9a7b3ff02d2a52')
  
  build() {
@@ -63,6 +86,7 @@
 +		-DCMAKE_INSTALL_PREFIX='/usr' \
  		-DCMAKE_BUILD_TYPE='RelWithDebInfo' \
 -		-DCMAKE_INSTALL_PREFIX='/usr' \
+-		-DBUILD_FLASHFETCH='OFF' \
  		-DBUILD_TESTS='ON' \
  		-DENABLE_SQLITE3='OFF' \
  		-DENABLE_RPM='OFF' \
@@ -115,13 +139,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,13 @@
+@@ -1,29 +1,13 @@
  build() {
  cmake -B build -S "${pkgname}-${pkgver}" \
 +-DCMAKE_BUILD_TYPE='None' \
 +-DCMAKE_INSTALL_PREFIX='/usr' \
  -DCMAKE_BUILD_TYPE='RelWithDebInfo' \
 --DCMAKE_INSTALL_PREFIX='/usr' \
+--DBUILD_FLASHFETCH='OFF' \
  -DBUILD_TESTS='ON' \
  -DENABLE_SQLITE3='OFF' \
  -DENABLE_RPM='OFF' \

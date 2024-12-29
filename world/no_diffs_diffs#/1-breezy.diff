@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -104,7 +104,7 @@
+     --parallel=fork \
+     --verbose \
+     "${excluded_tests[@]}" \
+-    -Oselftest.timeout=120
++    -Oselftest.timeout=120 ||:
+ }
+ 
+ package() {

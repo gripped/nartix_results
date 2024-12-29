@@ -38,13 +38,11 @@ grub-theme
 htpdate
 iso-profiles
 kotatogram-desktop-git
-labwc
 lib32-artix-archlinux-support
 libfoo
 liboctopi
 libpamac
 librewolf
-libsfdo
 libtree
 libwireplumber-4.0-compat
 lxdm-dinit

@@ -28,10 +28,8 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-gpgme
-qgpgme-qt6
-python-gpgme
 gssproxy
+icu
 iputils
 libusb
 linux
@@ -57,8 +55,6 @@ pam
 pambase
 ppp
 procps-ng
-python
-python-tests
 rpcbind
 shadow
 thin-provisioning-tools

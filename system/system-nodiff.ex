@@ -45,6 +45,9 @@ gettext
 gmp
 gnupg
 gnutls
+gpgme
+qgpgme-qt6
+python-gpgme
 gpm
 grep
 groff
@@ -54,7 +57,6 @@ gzip
 hdparm
 hwdata
 iana-etc
-icu
 inetutils
 iproute2
 iptables
@@ -161,6 +163,8 @@ pkgconf
 popt
 pptpclient
 psmisc
+python
+python-tests
 readline
 reiserfsprogs
 run-parts

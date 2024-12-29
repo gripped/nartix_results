@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=python-isoduration
- _pkgname="${pkgname#python-}"
- pkgver=20.11.0
--pkgrel=4
-+pkgrel=5
- pkgdesc='Operations with ISO 8601 durations'
- arch=('any')
- url='https://github.com/bolsote/isoduration'
 @@ -52,3 +52,4 @@
  
    install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
