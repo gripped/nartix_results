@@ -27,16 +27,3 @@
  validpgpkeys=('0338C8D8D9FDA62CF9C421BD7EC2DBB6F4DBF434') # The libjpeg-turbo Project (Signing key for official binaries) <information@libjpeg-turbo.org>
  
  build() {
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,6 +0,0 @@
--cmake
--lib32-expat
--lib32-glibc
--libjpeg-turbo
--nasm
--ninja

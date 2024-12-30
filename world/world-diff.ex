@@ -193,6 +193,7 @@ gst-editing-services
 gstreamer-vaapi
 gst-python
 gstreamer-docs
+gtk-doc
 gtk3
 gtk3-demos
 gtk3-docs
@@ -211,6 +212,7 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
+gyp
 haproxy
 haveged
 hexchat
@@ -582,6 +584,7 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 python-aiobotocore
+python-anyio
 python-anytree
 python-authlib
 python-bottle
@@ -597,6 +600,7 @@ python-pytest-freezegun
 python-pyudev
 python-rapidfuzz
 python-recommonmark
+python-requests-mock
 python-starlette
 python-werkzeug
 qastools

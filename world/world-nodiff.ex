@@ -877,7 +877,6 @@ gst-plugin-togglerecord
 gst-plugin-webrtchttp
 gst-python
 gtest
-gtk-doc
 gtk-engine-murrine
 gtk-engines
 gtk-layer-shell
@@ -916,7 +915,6 @@ foomatic-db-gutenprint-ppds
 gv
 gwenhywfar
 gwenview
-gyp
 half
 handbrake
 harfbuzz
@@ -3033,7 +3031,6 @@ python-ansible-compat
 python-ansicolors
 python-ansiwrap
 python-antlr4
-python-anyio
 python-anyjson
 python-anysqlite
 python-apipkg
@@ -4037,7 +4034,6 @@ python-requests-ftp
 python-requests-futures
 python-requests-gssapi
 python-requests-kerberos
-python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt

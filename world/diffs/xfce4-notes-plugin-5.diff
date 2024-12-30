@@ -3,9 +3,9 @@
 @@ -1,35 +1,30 @@
  
  pkgname=xfce4-notes-plugin
- pkgver=1.11.0
--pkgrel=5
-+pkgrel=1
+-pkgver=1.11.1
++pkgver=1.11.0
+ pkgrel=1
  pkgdesc="Notes plugin for the Xfce panel"
  arch=('x86_64')
 -license=('GPL-2.0-or-later')
@@ -13,15 +13,16 @@
 +license=('GPL2')
 +url="https://docs.xfce.org/panel-plugins/xfce4-notes-plugin"
  groups=('xfce4-goodies')
- depends=('xfce4-panel' 'hicolor-icon-theme')
--makedepends=('git' 'intltool' 'vala' 'xfce4-dev-tools')
+-depends=('xfce4-panel' 'gtksourceview4' 'hicolor-icon-theme')
+-makedepends=('git' 'vala' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-notes-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('418f90365e069b9318cf3bef21fd16d6121886453d723ff5ba1bb67ef2c537c4')
+-sha256sums=('7a3b0f68f6013edd5ae89bf737c4284a7afedf546c0bf1fb26d77e27b4fce6e5')
 -
 -prepare() {
 -  cd $pkgname
 -  NOCONFIGURE=1 ./autogen.sh
 -}
++depends=('xfce4-panel' 'hicolor-icon-theme')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('eb38246deb0fc89535fa9ff9b953c762cece232b5585d8210fab9abbf282aae3')
@@ -54,10 +55,11 @@
 +++ artix_depends
 @@ -1,6 +1,3 @@
 -git
+-gtksourceview4
  hicolor-icon-theme
- intltool
 -vala
 -xfce4-dev-tools
++intltool
  xfce4-panel
 
 --- Arch PKGBUILD
