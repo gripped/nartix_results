@@ -1,14 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=thunar
- pkgver=4.20.0
--pkgrel=2
-+pkgrel=1
+-pkgver=4.20.1
++pkgver=4.20.0
+ pkgrel=1
  pkgdesc="Modern, fast and easy-to-use file manager for Xfce"
  arch=('x86_64')
- url="https://docs.xfce.org/xfce/thunar/start"
 @@ -9,7 +9,7 @@
  groups=('xfce4')
  depends=('desktop-file-utils' 'libexif' 'hicolor-icon-theme' 'libnotify'
@@ -18,6 +17,15 @@
  optdepends=('catfish: file searching'
              'gvfs: trash support, mounting with udisk and remote filesystems'
              'tumbler: thumbnail previews'
+@@ -17,7 +17,7 @@
+             'thunar-archive-plugin: archive creation and extraction'
+             'thunar-media-tags-plugin: view/edit ID3/OGG tags')
+ source=("git+https://gitlab.xfce.org/xfce/thunar.git#tag=$pkgname-$pkgver")
+-sha256sums=('5df14eef47158fcfe253fcb4eef4e64613847265ddb28fc368b56e92b6566a4c')
++sha256sums=('b5e97ca9f601ad591c4524f616eea8359291ce17eeb530153af3c8bf9416690e')
+ 
+ prepare() {
+   cd $pkgname
 @@ -42,5 +42,7 @@
  package() {
    cd $pkgname

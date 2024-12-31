@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,14 @@
+ 
+ pkgname=python-discogs-client
+ pkgver=2.7
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Python Client for the Discogs API'
+ arch=(any)
+ url=https://github.com/joalla/discogs_client
+ license=(BSD)
+ depends=(
+   python-dateutil
++  python-six
+   python-requests
+   python-oauthlib
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,3 +3,4 @@
+ python-oauthlib
+ python-requests
+ python-setuptools
++python-six

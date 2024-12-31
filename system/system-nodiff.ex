@@ -41,7 +41,6 @@ findutils
 flex
 gawk
 gdbm
-gettext
 gmp
 gnupg
 gnutls
@@ -111,7 +110,6 @@ libssh2
 libtasn1
 libtirpc
 libtool
-libunistring
 libverto
 libxcrypt
 libxcrypt-compat

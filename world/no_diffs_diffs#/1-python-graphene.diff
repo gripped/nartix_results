@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-graphene
+ pkgver=3.3.0
+-pkgrel=4
++pkgrel=3
+ pkgdesc='GraphQL framework for Python'
+ arch=(any)
+ url=https://graphene-python.org/
+@@ -10,6 +10,7 @@
+   python-aniso8601
+   python-graphql-core
+   python-graphql-relay
++  python-six
+ )
+ makedepends=(
+   git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,3 +3,4 @@
+ python-graphql-core
+ python-graphql-relay
+ python-setuptools
++python-six

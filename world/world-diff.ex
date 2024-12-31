@@ -84,6 +84,7 @@ drkonqi
 dtc
 dunst
 earlyoom
+easytag
 element.io
 element-web
 element-desktop
@@ -143,7 +144,11 @@ gnome-desktop-docs
 gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
+gnome-mahjongg
+gnome-mines
+gnome-nibbles
 gnome-panel
+gnome-recipes
 gnome-remote-desktop
 gnome-robots
 gnome-session
@@ -704,6 +709,7 @@ quazip-qt6
 quilt
 rabbitmq
 rabbitmqadmin
+rapidfuzz-cpp
 rdma-core
 redis
 redshift
@@ -756,6 +762,7 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
+tali
 tcc
 telepathy-glib
 tensorflow

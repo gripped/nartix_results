@@ -484,7 +484,6 @@ dvd-rw-tools
 dvdauthor
 dvisvgm
 dzen2
-easytag
 ebook-tools
 eclipse-ecj
 ecryptfs-utils
@@ -736,18 +735,14 @@ gnome-epub-thumbnailer
 gnome-font-viewer
 gnome-games
 gnome-klotski
-gnome-mahjongg
 gnome-maps
 gnome-menus
-gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
-gnome-nibbles
 gnome-online-accounts
 libgoa
 gnome-photos
-gnome-recipes
 gnome-screenshot
 gnome-shell-extensions
 gnome-software
@@ -4476,7 +4471,6 @@ raft
 ragel
 range-v3
 ranger
-rapidfuzz-cpp
 rapidjson
 raptor
 rasqal
@@ -5082,7 +5076,6 @@ t1utils
 taglib
 taglib1
 tailscale
-tali
 talloc
 tang
 task

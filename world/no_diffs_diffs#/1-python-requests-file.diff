@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=python-requests-file
+ pkgver=2.1.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='File transport adapter for Requests'
+ arch=('any')
+ url='https://github.com/dashea/requests-file'
+ license=('Apache-2.0')
+-depends=('python' 'python-requests')
++depends=('python' 'python-six' 'python-requests')
+ makedepends=(
+   'git'
+   'python-build'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,4 +5,5 @@
+ python-requests
+ python-setuptools
+ python-setuptools-scm
++python-six
+ python-wheel

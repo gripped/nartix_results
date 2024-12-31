@@ -22,6 +22,7 @@ gcc-go
 gcc-objc
 lto-dump
 libgccjit
+gettext
 glib2
 glib2-devel
 glib2-docs
@@ -31,6 +32,7 @@ glibc-locales
 gssproxy
 icu
 iputils
+libunistring
 libusb
 linux
 linux-headers
