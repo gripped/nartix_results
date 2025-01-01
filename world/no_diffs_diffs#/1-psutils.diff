@@ -1,11 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=psutils
- pkgver=3.3.7
--pkgrel=2
-+pkgrel=1
+-pkgver=3.3.8
++pkgver=3.3.7
+ pkgrel=1
  pkgdesc='A set of postscript utilities'
  arch=(any)
- url="https://github.com/rrthomas/$pkgname"
+@@ -18,7 +18,7 @@
+               python-wand)
+ _archive="$pkgname-$pkgver"
+ source=("$url/releases/download/v$pkgver/$_archive.tar.gz")
+-sha256sums=('00820195862a8411d84bd4df42576691d8bf4cd9c7d97b51921da235df7ffe45')
++sha256sums=('73a60d2e9e80713bfd5d1be6912e7d05bcb5362957b4b1e871bf7fc7d42dd874')
+ 
+ build() {
+ 	cd "$_archive"

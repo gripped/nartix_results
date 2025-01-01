@@ -41,6 +41,7 @@ findutils
 flex
 gawk
 gdbm
+gettext
 gmp
 gnupg
 gnutls

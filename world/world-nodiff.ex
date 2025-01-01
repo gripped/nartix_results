@@ -1734,7 +1734,6 @@ libmediaart
 libmediainfo
 libmemcached-awesome
 libmicrodns
-libmikmod
 libmilter
 libmms
 libmng
@@ -3066,6 +3065,7 @@ python-attrs
 python-auditwheel
 python-augeas
 python-authheaders
+python-authlib
 python-authres
 python-autobahn
 python-autocommand
@@ -3315,6 +3315,7 @@ python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
+python-fastapi
 python-fastbencode
 python-fasteners
 python-fastimport
@@ -3671,6 +3672,7 @@ python-objsize
 python-odfpy
 python-omemo-dr
 python-openai
+python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
@@ -4158,6 +4160,7 @@ python-sqlmodel
 python-sqlparse
 python-sshpubkeys
 python-stack-data
+python-starlette
 python-statsmodels
 python-stdlibs
 python-stem
@@ -4275,7 +4278,6 @@ python-vistir
 python-vobject
 python-volatile
 python-voluptuous
-python-waitress
 python-wand
 python-warlock
 python-watchdog

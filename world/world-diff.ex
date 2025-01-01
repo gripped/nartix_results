@@ -323,6 +323,7 @@ libhandy0
 libical
 libinput
 libldm
+libmikmod
 libmspub
 libnvme
 libp11
@@ -591,14 +592,11 @@ pyqt6
 python-aiobotocore
 python-anyio
 python-anytree
-python-authlib
 python-bottle
 python-elastic-transport
-python-fastapi
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-openapi-core
 python-pyarrow
 python-pymupdf
 python-pytest-freezegun
@@ -606,7 +604,7 @@ python-pyudev
 python-rapidfuzz
 python-recommonmark
 python-requests-mock
-python-starlette
+python-waitress
 python-werkzeug
 qastools
 qbittorrent
