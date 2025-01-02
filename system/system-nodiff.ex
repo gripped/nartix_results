@@ -43,6 +43,7 @@ gawk
 gdbm
 gettext
 gmp
+gnulib-l10n
 gnupg
 gnutls
 gpgme

@@ -589,10 +589,7 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
-python-aiobotocore
-python-anyio
 python-anytree
-python-bottle
 python-elastic-transport
 python-google-auth
 python-ipykernel
@@ -604,7 +601,6 @@ python-pyudev
 python-rapidfuzz
 python-recommonmark
 python-requests-mock
-python-waitress
 python-werkzeug
 qastools
 qbittorrent

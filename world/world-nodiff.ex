@@ -2998,6 +2998,7 @@ python-absl
 python-acme
 python-adal
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3025,6 +3026,7 @@ python-ansible-compat
 python-ansicolors
 python-ansiwrap
 python-antlr4
+python-anyio
 python-anyjson
 python-anysqlite
 python-apipkg
@@ -3106,6 +3108,7 @@ python-boolean.py
 python-boto
 python-boto3
 python-botocore
+python-bottle
 python-bottleneck
 python-bowler
 python-bracex
@@ -4278,6 +4281,7 @@ python-vistir
 python-vobject
 python-volatile
 python-voluptuous
+python-waitress
 python-wand
 python-warlock
 python-watchdog

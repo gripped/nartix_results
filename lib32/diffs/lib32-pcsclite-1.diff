@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- _pkgname=pcsclite
- pkgname=lib32-$_pkgname
--pkgver=2.3.1
-+pkgver=2.3.0
- pkgrel=1
- pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
- arch=('x86_64')
 @@ -13,7 +13,6 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )
@@ -25,15 +16,6 @@
    'lib32-polkit'
  )
  provides=(
-@@ -35,7 +33,7 @@
-   "program-suffix.patch"
-   "systemd-unit-conflicts.diff"
- )
--sha256sums=('6c2af5bcd2da0418d712dadd091d386ef01acdc14f112f327f9498f09d89eca1'
-+sha256sums=('04bbbb8f63172cd2203d07b801f8e650c94cbcc9c222aa5f18fbabbf807f22e3'
-             '0ce813943722e17b7c830bc914a33dbf377cbde691a4aac386b0062e85b5f8b3'
-             '2e6a50707a62f6b476e392ae4157565c45725d00ee86c29cf248adad71e01fe7')
- 
 @@ -52,10 +50,10 @@
      -D libudev=true
      -D polkit=true
@@ -47,15 +29,6 @@
    meson compile -C build
  
    awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' PCSC/COPYING > LICENSE.BSD-3-Clause
-@@ -67,7 +65,7 @@
- package() {
-   meson install -C build --destdir "${pkgdir}"
- 
--  rm -rv "$pkgdir"/{etc,usr/{include,share}}
-+  rm -rv "$pkgdir"/{usr/include,usr/share}
-   rm -v "$pkgdir"/usr/bin/pcsc-spy
- 
-   install -D -m0644 LICENSE.* -t "$pkgdir/usr/share/licenses/$pkgname"
 
 
 ############# Stripped diff below #################

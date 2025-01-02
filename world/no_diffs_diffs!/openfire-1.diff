@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -1,14 +1,14 @@
+ 
+ pkgname=openfire
+ pkgver=4.9.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="High performance XMPP (Jabber) server."
+ arch=('any')
+ url='https://www.igniterealtime.org/projects/openfire/'
  license=('APACHE-2.0')
  depends=('java-runtime-headless<19')
  makedepends=('maven' 'jre11-openjdk-headless' 'jdk11-openjdk')
@@ -9,7 +17,7 @@
          'etc/openfire/openfire.xml'
          'etc/openfire/security.xml'
          'etc/openfire/crowd.properties'
-@@ -17,14 +17,10 @@
+@@ -17,15 +17,11 @@
          'etc/openfire/security/keystore')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/igniterealtime/Openfire/archive/refs/tags/v$pkgver.tar.gz"
          'openfire.sh'
@@ -21,9 +29,11 @@
              'c850f376d53134ccc8d1035322dea792ba9145a5ab37f1801598c60bc70d0ed1'
 -            'c8a612abee90bdc9a2869e562a4bbbf596159c60adcd23368833a0e2ca27c1d4'
 -            'bc58f7e80cbdaee8523874990bf061cfd0e6480c676102e2131fe487d2782061'
-             '8bfa51cf8cc88fc69547a8f6e9e3fb242926ca2a100659363e1a6b332f223ba9'
+-            'ea08e0c4d4b51b2a1adca71decfa1a856826898f00fb8ef857844f6326277e1e'
++            '8bfa51cf8cc88fc69547a8f6e9e3fb242926ca2a100659363e1a6b332f223ba9'
              'c63396991984a067d05e21094a664255d6aed2bf294bddd3885a7da75472b886')
  
+ build() {
 @@ -40,8 +36,6 @@
  
    cd "$srcdir"

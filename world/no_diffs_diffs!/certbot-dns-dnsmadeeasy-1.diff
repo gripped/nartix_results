@@ -33,17 +33,3 @@
  
  prepare() {
    cd "$_repo/$pkgname"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,7 +0,0 @@
--certbot
--dns-lexicon
--git
--python-acme
--python-build
--python-installer
--python-wheel
