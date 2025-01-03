@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,6 @@
+     -DCMAKE_INSTALL_LIBDIR=lib
+     -Wno-dev
+     -DWITH_GTEST=OFF
+-    -DWITH_UNALIGNED=OFF
+   )
+ 
+   echo "Building zlib-ng"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ -DCMAKE_INSTALL_LIBDIR=lib
+ -Wno-dev
+ -DWITH_GTEST=OFF
+--DWITH_UNALIGNED=OFF
+ )
+ echo "Building zlib-ng"
+ cmake -B build \

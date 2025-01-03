@@ -1,5 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=elementary-icon-theme
+-pkgver=8.1.0
++pkgver=8.0.0
+ pkgrel=1
+ pkgdesc='Named, vector icons for elementary OS'
+ arch=(any)
+@@ -14,9 +14,9 @@
+   meson
+   xorg-xcursorgen
+ )
+-_tag=241be59c7f75ba186d0beba376ae44574f52372b
++_tag=3d5dd03c505aaee68a4b2904ae0d00cbcf141e91
+ source=(elementary-icon-theme::git+https://github.com/elementary/icons.git#tag=${_tag})
+-sha256sums=('f93189bc29f59474c4a90dc2ee6e298d05aeae3604fea3b9bc4fe85daf994ba7')
++sha256sums=('7cbc6f63b7459bf2d5b44447a97dc0485ea017e025fc3fcba600941f153e84a3')
+ 
+ pkgver() {
+   cd elementary-icon-theme
 @@ -25,7 +25,7 @@
  }
  

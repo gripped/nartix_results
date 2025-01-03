@@ -566,10 +566,6 @@ plymouth
 podman
 podman-docker
 polkit
-poppler
-poppler-glib
-poppler-qt5
-poppler-qt6
 postgresql-old-upgrade
 postgresql
 postgresql-libs
@@ -594,12 +590,12 @@ python-elastic-transport
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-pyarrow
+python-peewee
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
-python-rapidfuzz
 python-recommonmark
+python-requests-gssapi
 python-requests-mock
 python-werkzeug
 qastools
@@ -715,6 +711,7 @@ rocblas
 rocfft
 rocrand
 rocsparse
+rofi
 rrdtool
 rspamd
 rtkit
@@ -802,8 +799,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
-usd-extras
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -920,4 +915,6 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
+zlib-ng
+zlib-ng-compat
 znc

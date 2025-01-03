@@ -204,6 +204,10 @@ mate-user-guide
 mate-user-share
 mate-utils
 mednafen
+mgba
+libmgba
+mgba-sdl
+mgba-qt
 mimalloc
 mokutil
 mousepad

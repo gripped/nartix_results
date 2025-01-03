@@ -2883,6 +2883,10 @@ polkit-qt5
 polkit-qt6
 polybar
 poppler-data
+poppler
+poppler-glib
+poppler-qt5
+poppler-qt6
 portaudio
 portmidi
 portsmf
@@ -3738,7 +3742,6 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
-python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -3809,6 +3812,7 @@ python-py3c
 python-pyacoustid
 python-pyaes
 python-pyaml
+python-pyarrow
 python-pyasn1-modules
 python-pyasn1
 python-pyasynchat
@@ -4010,9 +4014,11 @@ python-pyzmq
 python-qdarkstyle
 python-qrcode
 python-qtpy
+python-quart-trio
 python-quart
 python-railroad-diagrams
 python-random2
+python-rapidfuzz
 python-rapidjson
 python-rcssmin
 python-rdflib
@@ -4032,7 +4038,6 @@ python-requests-credssp
 python-requests-file
 python-requests-ftp
 python-requests-futures
-python-requests-gssapi
 python-requests-kerberos
 python-requests-ntlm
 python-requests-oauthlib
@@ -4543,7 +4548,6 @@ rocs
 rocsolver
 rocthrust
 roctracer
-rofi
 ropgadget
 ropper
 rpcsvc-proto
@@ -5365,6 +5369,8 @@ unzip
 upx
 uriparser
 usbredir
+usd
+usd-extras
 usort
 utf8cpp
 uthash
@@ -5634,8 +5640,6 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
-zlib-ng
-zlib-ng-compat
 zopfli
 zsh-autosuggestions
 zsh-completions

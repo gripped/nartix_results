@@ -35,10 +35,6 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
-mgba
-libmgba
-mgba-sdl
-mgba-qt
 mpd
 nushell
 nvidia-390xx-utils

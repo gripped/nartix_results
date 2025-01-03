@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=check-jsonschema
+ pkgver=0.30.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="A JSON Schema CLI and pre-commit hook built on jsonschema"
+ arch=(any)
+ url="https://github.com/python-jsonschema/check-jsonschema"
+@@ -9,6 +9,7 @@
+ depends=(
+   python
+   python-click
++  python-importlib-resources
+   python-jsonschema
+   python-referencing  # implicitly pulled in via python-jsonschema
+   python-regress
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ python
+ python-build
+ python-click
++python-importlib-resources
+ python-installer
+ python-jsonschema
+ python-referencing
