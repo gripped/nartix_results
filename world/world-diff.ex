@@ -113,6 +113,7 @@ firewalld
 flatpak
 flatpak-docs
 fluidsynth
+fmt
 fprintd
 freerdp
 freerdp2
@@ -161,6 +162,9 @@ gnome-user-share
 go-bindata
 godot
 godot-mono
+gradle
+gradle-doc
+gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -328,6 +332,7 @@ libmspub
 libnvme
 libp11
 libprocps
+libquotient
 libsidplay
 libsidplayfp
 libtg_owt
@@ -502,7 +507,6 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-capture-tiny
 pgbouncer
 phodav
 php-legacy
@@ -590,12 +594,10 @@ python-elastic-transport
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-peewee
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-requests-gssapi
 python-requests-mock
 python-werkzeug
 qastools
@@ -737,6 +739,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+spdlog
 spice-vdagent
 squid
 sshguard
@@ -794,6 +797,7 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
+unoconv
 upower
 uptimed
 usb_modeswitch

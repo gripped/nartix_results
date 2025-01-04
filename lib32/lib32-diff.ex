@@ -1,6 +1,7 @@
 lib32-at-spi2-core
 lib32-colord
 lib32-dbus
+lib32-e2fsprogs
 lib32-expat
 lib32-fluidsynth
 lib32-gamemode

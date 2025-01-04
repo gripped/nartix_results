@@ -57,6 +57,7 @@ doublecmd
 doublecmd-gtk2
 doublecmd-qt5
 doublecmd-qt6
+elementary-icon-theme
 engrampa
 eom
 exo
@@ -478,7 +479,6 @@ tinyxxd
 torbrowser-launcher
 ttf-jetbrains-mono
 tumbler
-unoconv
 warpinator
 wev
 wlr-randr

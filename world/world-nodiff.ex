@@ -602,7 +602,6 @@ flickcurl
 flite
 fltk
 fltk-docs
-fmt
 folks
 font-awesome
 ttf-font-awesome
@@ -788,9 +787,6 @@ gphoto2
 gpicview
 gpsd
 gptfdisk
-gradle
-gradle-doc
-gradle-src
 grafana
 granatier
 granite
@@ -1831,7 +1827,6 @@ libqmi
 libqmi-docs
 libqrtr-glib
 libqtxdg
-libquotient
 libquvi-scripts
 libquvi
 libqxp
@@ -2532,6 +2527,7 @@ perl-berkeleydb
 perl-bytes-random-secure
 perl-cache-memcached
 perl-canary-stability
+perl-capture-tiny
 perl-cgi
 perl-class-data-inheritable
 perl-class-inspector
@@ -3742,6 +3738,7 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
+python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -3776,6 +3773,7 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
+python-polib
 python-pooch
 python-pook
 python-portend
@@ -4038,6 +4036,7 @@ python-requests-credssp
 python-requests-file
 python-requests-ftp
 python-requests-futures
+python-requests-gssapi
 python-requests-kerberos
 python-requests-ntlm
 python-requests-oauthlib
@@ -5017,7 +5016,6 @@ spamassassin
 spandsp
 spandsp-docs
 spatialindex
-spdlog
 speakup-utils
 spectacle
 speech-dispatcher
@@ -5360,7 +5358,6 @@ python-unicorn
 ruby-unicorn-engine
 unifdef
 unittestpp
-unoconv
 unrar
 libunrar
 unrealircd

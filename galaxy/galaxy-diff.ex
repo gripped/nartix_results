@@ -5,7 +5,6 @@ copyq
 doctest
 ecrire
 efl
-elementary-icon-theme
 ephoto
 evisum
 fastfetch
@@ -50,6 +49,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 libtransmission
+unoconv
 vice
 wezterm
 wireshark

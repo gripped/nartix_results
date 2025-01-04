@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=('vim' 'gvim' 'vim-runtime')
+ pkgver=9.1.0954
+ _versiondir=91
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Vi Improved, a highly configurable, improved version of the vi text editor'
+ url='https://www.vim.org'
+ arch=('x86_64')
+@@ -91,10 +91,6 @@
+   )
+ }
+ 
+-check() {
+-  cd vim
+-  TERM=xterm make -j1 test
+-}
+ 
+ package_vim-runtime() {
+   pkgdesc+=' (shared runtime)'

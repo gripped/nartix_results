@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=sssd
- pkgver=2.10.1
--pkgrel=5
-+pkgrel=4
- pkgdesc="System Security Services Daemon"
- arch=('x86_64')
- url="https://github.com/SSSD/sssd"
 @@ -27,7 +27,6 @@
    'doxygen'
    'python'
@@ -29,15 +20,7 @@
              '21646ea5900340c1b0a69c79fc72b0d3e360d56e04dc0daf7947024a420d214a931365e684e8f7cfd37c959327e6909ad4c0d6c3a8186153bca870f508dad486')
  validpgpkeys=('C13CD07FFB2DB1408E457A3CD3D21B2910CF6759')
  
-@@ -62,7 +59,6 @@
-   done
- 
-   sed -i 's#/var/run/#/run/#' src/examples/logrotate
--  sed -i 's#^u #u! #' contrib/sssd.sysusers
- 
-   sed '/AM_PROG_CC_C_O/ i AC_PROG_CPP' -i configure.ac
- 
-@@ -84,18 +80,16 @@
+@@ -84,18 +81,16 @@
      --datadir=/usr/share                          \
      --enable-pammoddir=/usr/lib/security          \
      --enable-pac-responder                        \
@@ -57,7 +40,7 @@
      --with-ldb-lib-dir=/usr/lib/samba/ldb \
      ;
    sed -i '/\<HAVE_KRB5_SET_TRACE_CALLBACK\>/d' config.h
-@@ -120,7 +114,6 @@
+@@ -120,7 +115,6 @@
    install -Dm0644 src/examples/logrotate "$pkgdir"/etc/logrotate.d/sssd
    install -Dm0644 contrib/sssd.sysusers "$pkgdir"/usr/lib/sysusers.d/sssd.conf
    install -Dm0644 "$srcdir"/sssd-perms.tmpfile "$pkgdir"/usr/lib/tmpfiles.d/sssd-perms.conf
