@@ -9,3 +9,17 @@
  pkgdesc='The Python interface to the Redis key-value store'
  arch=('any')
  url='https://github.com/redis/redis-py'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-git
+-python
+-python-async-timeout
+-python-build
+-python-installer
+-python-setuptools
+-python-wheel

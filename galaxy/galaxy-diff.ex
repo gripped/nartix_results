@@ -10,6 +10,7 @@ evisum
 fastfetch
 firefox
 font-manager
+freecell-solver
 gpicview
 greetd-regreet
 gtklock

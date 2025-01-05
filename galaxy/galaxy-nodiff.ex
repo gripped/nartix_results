@@ -68,7 +68,6 @@ firefox-i18n
 fluxbox
 fpc-src
 fpc
-freecell-solver
 garcon
 girara
 glib-perl

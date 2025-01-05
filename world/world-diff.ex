@@ -113,7 +113,6 @@ firewalld
 flatpak
 flatpak-docs
 fluidsynth
-fmt
 fprintd
 freerdp
 freerdp2
@@ -326,13 +325,13 @@ libguestfs
 libhandy0
 libical
 libinput
+libixion
 libldm
 libmikmod
 libmspub
 libnvme
 libp11
 libprocps
-libquotient
 libsidplay
 libsidplayfp
 libtg_owt
@@ -593,12 +592,14 @@ python-anytree
 python-elastic-transport
 python-google-auth
 python-ipykernel
+python-krb5
 python-levenshtein
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
+python-scipy
 python-werkzeug
 qastools
 qbittorrent
@@ -713,7 +714,6 @@ rocblas
 rocfft
 rocrand
 rocsparse
-rofi
 rrdtool
 rspamd
 rtkit
@@ -739,7 +739,6 @@ signal-desktop
 smartmontools
 snapper
 solid
-spdlog
 spice-vdagent
 squid
 sshguard

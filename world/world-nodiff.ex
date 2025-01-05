@@ -602,6 +602,8 @@ flickcurl
 flite
 fltk
 fltk-docs
+fmt
+fmt-docs
 folks
 font-awesome
 ttf-font-awesome
@@ -1670,7 +1672,6 @@ libiptcdata
 libiscsi
 libisoburn
 libisofs
-libixion
 libjcat
 libjpeg-turbo
 libjuice
@@ -1827,6 +1828,7 @@ libqmi
 libqmi-docs
 libqrtr-glib
 libqtxdg
+libquotient
 libquvi-scripts
 libquvi
 libqxp
@@ -3542,7 +3544,6 @@ python-keystoneauth1
 python-keyutils
 python-kiwisolver
 python-kombu
-python-krb5
 python-kubernetes
 python-lark-parser
 python-lazr.config
@@ -4073,7 +4074,6 @@ python-schema
 python-scikit-build-core
 python-scikit-build
 python-scikit-learn
-python-scipy
 python-scramp
 python-scripttest
 python-scrypt
@@ -4547,6 +4547,7 @@ rocs
 rocsolver
 rocthrust
 roctracer
+rofi
 ropgadget
 ropper
 rpcsvc-proto
@@ -5016,6 +5017,7 @@ spamassassin
 spandsp
 spandsp-docs
 spatialindex
+spdlog
 speakup-utils
 spectacle
 speech-dispatcher

@@ -1,0 +1,102 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   dolphin-emu-tool
+ )
+ pkgver=2412
+-pkgrel=4
++pkgrel=1
+ epoch=1
+ pkgdesc='A Gamecube and Wii emulator'
+ arch=(x86_64)
+@@ -22,7 +22,10 @@
+   libavformat.so
+   libavutil.so
+   libcurl.so
++  libfmt.so
+   libgl
++  libsfml-network.so
++  libsfml-system.so
+   libspng.so
+   libswscale.so
+   libusb-1.0.so
+@@ -34,6 +37,7 @@
+   mbedtls2
+   pugixml
+   sdl2
++  sfml
+   speexdsp
+   xxhash
+   xz
+@@ -59,7 +63,6 @@
+   dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#tag=${_tag}
+   git+https://github.com/mozilla/cubeb.git
+   git+https://github.com/epezent/implot.git
+-  git+https://github.com/fmtlib/fmt.git
+   git+https://github.com/mgba-emu/mgba.git
+   git+https://github.com/zlib-ng/minizip-ng.git
+   git+https://github.com/RetroAchievements/rcheevos.git
+@@ -79,12 +82,11 @@
+         'SKIP'
+         'SKIP'
+         'SKIP'
+-        'SKIP'
+         'SKIP')
+ 
+ prepare() {
+   cd dolphin-emu
+-  for submodule in Externals/{cubeb/cubeb,implot/implot,fmt/fmt,mGBA/mgba,minizip-ng/minizip-ng,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,tinygltf/tinygltf,VulkanMemoryAllocator,zlib-ng/zlib-ng}; do
++  for submodule in Externals/{cubeb/cubeb,implot/implot,mGBA/mgba,minizip-ng/minizip-ng,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,tinygltf/tinygltf,VulkanMemoryAllocator,zlib-ng/zlib-ng}; do
+     git submodule init ${submodule}
+     git config submodule.${submodule}.url ../${submodule##*/}
+     git -c protocol.file.allow=always submodule update ${submodule}
+@@ -95,20 +97,16 @@
+   git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
+ }
+ 
+-pkgver() {
+-  cd dolphin-emu
+-  git describe --tags
+-}
+ 
+ build() {
+   cmake -S dolphin-emu -B build -G Ninja \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_SKIP_RPATH=ON \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DDISTRIBUTOR=archlinux.org \
++    -DDISTRIBUTOR=artixlinux.org \
+     -DENABLE_ANALYTICS=OFF \
+     -DENABLE_AUTOUPDATE=OFF \
+-    -DENABLE_LTO=OFF \
++    -DENABLE_LTO=ON \
+     -DENABLE_TESTS=OFF \
+     -DUSE_MGBA=ON \
+     -Wno-dev
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,9 +13,12 @@
+ libavutil.so
+ libcurl.so
+ libevdev
++libfmt.so
+ libgl
+ libminiupnpc.so
+ libpulse
++libsfml-network.so
++libsfml-system.so
+ libspng.so
+ libswscale.so
+ libudev.so
+@@ -32,6 +35,7 @@
+ qt6-base
+ qt6-svg
+ sdl2
++sfml
+ speexdsp
+ xxhash
+ xz
