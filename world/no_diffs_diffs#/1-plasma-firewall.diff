@@ -1,13 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,8 @@
  
  pkgname=plasma-firewall
 -pkgver=6.2.5
 +pkgver=6.2.4
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=1
++pkgrel=2
  pkgdesc='Control Panel for your system firewall'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
 @@ -25,7 +25,7 @@
              'ufw: ufw backend')
  groups=(plasma)

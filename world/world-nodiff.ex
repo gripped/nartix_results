@@ -588,7 +588,6 @@ ttf-fira-sans
 otf-fira-sans
 firejail
 fish
-five-or-more
 flac
 flac-doc
 flake8
@@ -617,7 +616,6 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 fossil
-four-in-a-row
 fractal
 frameworkintegration
 frameworkintegration5
@@ -751,7 +749,6 @@ gnome-sound-recorder
 gnome-sudoku
 gnome-taquin
 gnome-terminal
-gnome-tetravex
 gnome-text-editor
 gnome-themes-extra
 gnome-tweaks
@@ -3544,6 +3541,7 @@ python-keystoneauth1
 python-keyutils
 python-kiwisolver
 python-kombu
+python-krb5
 python-kubernetes
 python-lark-parser
 python-lazr.config
@@ -4074,6 +4072,7 @@ python-schema
 python-scikit-build-core
 python-scikit-build
 python-scikit-learn
+python-scipy
 python-scramp
 python-scripttest
 python-scrypt
@@ -4910,6 +4909,8 @@ rust-bindgen
 rust
 lib32-rust-libs
 rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
 rust-wasm
 rust-src
 rustup
@@ -5423,6 +5424,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
@@ -5647,5 +5649,4 @@ zsh
 zsh-doc
 zug
 zvbi
-zxing-cpp
 zziplib

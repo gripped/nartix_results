@@ -110,9 +110,11 @@ fcitx5
 fcron
 firefox
 firewalld
+five-or-more
 flatpak
 flatpak-docs
 fluidsynth
+four-in-a-row
 fprintd
 freerdp
 freerdp2
@@ -156,6 +158,7 @@ gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-system-monitor
+gnome-tetravex
 gnome-tour
 gnome-user-share
 go-bindata
@@ -592,14 +595,12 @@ python-anytree
 python-elastic-transport
 python-google-auth
 python-ipykernel
-python-krb5
 python-levenshtein
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
-python-scipy
 python-werkzeug
 qastools
 qbittorrent
@@ -832,7 +833,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vtk
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -921,3 +921,4 @@ zeromq
 zlib-ng
 zlib-ng-compat
 znc
+zxing-cpp
