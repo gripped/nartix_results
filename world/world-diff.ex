@@ -158,7 +158,6 @@ gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-system-monitor
-gnome-tetravex
 gnome-tour
 gnome-user-share
 go-bindata
@@ -596,6 +595,7 @@ python-elastic-transport
 python-google-auth
 python-ipykernel
 python-levenshtein
+python-matplotlib
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -691,6 +691,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -703,6 +704,7 @@ quazip-qt6
 quilt
 rabbitmq
 rabbitmqadmin
+ranger
 rapidfuzz-cpp
 rdma-core
 redis
@@ -790,6 +792,7 @@ transmission-gtk
 transmission-qt
 libtransmission
 tumbler
+uasm
 udftools
 udisks2
 udisks2-btrfs

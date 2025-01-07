@@ -1,21 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=xapp
--pkgver=2.8.7
--pkgrel=2
+-pkgver=2.8.8
 +pkgver=2.8.4
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Common library for X-Apps project"
  arch=(x86_64)
- url="https://github.com/linuxmint/${pkgname}"
 @@ -13,11 +13,11 @@
  conflicts=(xapps)
  replaces=(xapps)
  source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
--sha256sums=('95ad692de2f53bd12b8fd5fb7786ba197f830f982a73903c342c3a64bc6fb604')
--b2sums=('58fe46d6d9ab42b2bb2a58f7a34831c8be0a007c1a31272c0a314a9dab61b93f2e45130f62530cb12d3ea559179ae34aac6d2381e538fd1c58fd95166ca2d6b0')
+-sha256sums=('343cc336dc0fba86f4b27a46125600c2173c6d7ea0bf7df28cf941c42b55a45d')
+-b2sums=('ad6d33785a2935777bf1dfa96de22edef676280eb7ac48976889c27351010627805c7ebabfd2f7ba7c16ac71ccc65f7306f40f94a045733ff005a841e8b17676')
 +sha256sums=('cdcf13037451c0e74064c113d93aa438fb259d206199d023defa2690db5b9a19')
 +b2sums=('7f3a17b96e236e65eca4369cc21c0f5e913d5727ef17dba03bc7e894ba62285ec9421ad4c53c0e7136ea1ba569f6894a73b11485c6629176f32b69f4dec1587f')
  

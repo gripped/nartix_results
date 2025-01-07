@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,10 +45,9 @@
+     CPP/7zip/UI/Console/b/g/7z
+   install -D CPP/7zip/Bundles/SFXCon/b/g/7zCon "$pkgdir/usr/lib/7zip/7zCon.sfx"
+ 
+-  mkdir -p "$pkgdir/usr/bin"
+   for _prog in 7za 7zr 7z; do
+-    echo -e "#!/bin/sh\nexec /usr/lib/7zip/$_prog \"\$@\"" >"$pkgdir/usr/bin/$_prog"
+-    chmod +x "$pkgdir/usr/bin/$_prog"
++    printf '#!/bin/sh\nexec /usr/lib/7zip/%s "$@"\n' "$_prog" \
++    | install -D /dev/stdin "$pkgdir/usr/bin/$_prog"
+   done
+ 
+   install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" DOC/{,unRar}License.txt

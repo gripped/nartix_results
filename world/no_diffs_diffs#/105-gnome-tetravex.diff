@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D build_cli=true
++  artix-meson $pkgname build -D build_cli=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ git apply -3 ../gnome-tetravex-highscore.patch
+ }
+ build() {
+-arch-meson $pkgname build -D build_cli=true
++artix-meson $pkgname build -D build_cli=true
+ meson compile -C build
+ }

@@ -1,7 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,7 @@
- sha256sums=('237c1b901c5ba1e72ffdf1779d52077229a5902f79c03548342eac3b22a62ec4')
+@@ -1,6 +1,6 @@
+ 
+ pkgname=timeshift
+-pkgver=24.06.6
++pkgver=24.06.5
+ pkgrel=1
+ pkgdesc="A system restore utility for Linux"
+ url="https://github.com/linuxmint/timeshift"
+@@ -13,10 +13,10 @@
+             'xorg-xhost: For authorization on Wayland')
+ install="${pkgname}.install"
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+-sha256sums=('99123f5ee1792ae7d60e4d023e91ef04b9322fc271b5b90d18f6b1ecaa5188c2')
++sha256sums=('237c1b901c5ba1e72ffdf1779d52077229a5902f79c03548342eac3b22a62ec4')
  
  build() {
 -	arch-meson "${pkgname}-${pkgver}" build

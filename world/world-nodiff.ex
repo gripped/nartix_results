@@ -1,4 +1,5 @@
 0ad-data
+7zip
 a2ps
 a52dec
 aalib
@@ -749,6 +750,7 @@ gnome-sound-recorder
 gnome-sudoku
 gnome-taquin
 gnome-terminal
+gnome-tetravex
 gnome-text-editor
 gnome-themes-extra
 gnome-tweaks
@@ -872,6 +874,7 @@ gtk-engines
 gtk-layer-shell
 gtk-sharp-2
 gtk-vnc
+gtk-vnc-docs
 gtk2-compat
 gtk2
 gtkmm-4.0
@@ -3595,7 +3598,6 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
-python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
@@ -4428,7 +4430,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4479,7 +4480,6 @@ radicale
 raft
 ragel
 range-v3
-ranger
 rapidjson
 raptor
 rasqal

@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+   'Watcom-1.0'
+   'CC-BY-SA-3.0'
+ )
+-makedepends=('git' 'gcc<14' 'gcc-libs<14')
++makedepends=('git' 'gcc13')
+ optdepends=('sed: for uasm-nocolor')
+ options=('!makeflags')
+ source=(
+@@ -42,7 +42,7 @@
+ build() {
+   cd "$pkgname"
+ 
+-  make -f Makefile-Linux-GCC-64.mak
++  make -f Makefile-Linux-GCC-64.mak CC=gcc-13
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-gcc-libs<14
+-gcc<14
++gcc13
+ git
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,5 +8,5 @@
+ }
+ build() {
+ cd "$pkgname"
+-make -f Makefile-Linux-GCC-64.mak
++make -f Makefile-Linux-GCC-64.mak CC=gcc-13
+ }
