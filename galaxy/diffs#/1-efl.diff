@@ -1,13 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,85 +1,65 @@
+@@ -1,73 +1,65 @@
  
 -pkgbase=efl
--pkgname=('efl' 'efl-docs')
+-pkgname=('efl')
 +pkgname=efl
  pkgver=1.27.0
--pkgrel=4
-+pkgrel=5
+ pkgrel=5
 +_commit="248d62bf5e13ca8800a73b6cf3e8759443468282"
  pkgdesc="Enlightenment Foundation Libraries"
  arch=('x86_64')
@@ -89,8 +88,6 @@
  
    ninja -C build
 -
--  cd build/doc
--  doxygen
  }
  
 -package_efl(){
@@ -111,24 +108,13 @@
 +  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" AUTHORS COMPLIANCE COPYING
  }
  
--package_efl-docs() {
--  pkgdesc="Documentation for the Enlightenment Foundation Libraries"
--  depends=()
--
--  cd "${srcdir}/${pkgbase}-${pkgver}/build"
--  install -d "${pkgdir}/usr/share/doc/${pkgbase}"
--  cp -a html "${pkgdir}/usr/share/doc/${pkgbase}/html"
--  cp -a latex "${pkgdir}/usr/share/doc/${pkgbase}/latex"
--
--}
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,19 +1,22 @@
--
+@@ -1,18 +1,22 @@
 +binutils
  curl
  dbus
@@ -156,7 +142,7 @@
  libpng
  libpulse
  libraw
-@@ -22,23 +25,18 @@
+@@ -21,23 +25,18 @@
  libspectre
  libtiff
  libunwind
@@ -183,7 +169,7 @@
  mailcap
  mesa
  meson
-@@ -46,14 +44,13 @@
+@@ -45,14 +44,13 @@
  openjpeg2
  openssl
  poppler

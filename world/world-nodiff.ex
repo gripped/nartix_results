@@ -98,6 +98,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -163,6 +164,14 @@ aws-c-sdkutils
 aws-checksums
 aws-cli-v2
 aws-cli
+aws-crt-cpp
+aws-sdk-cpp
+aws-sdk-cpp-core
+aws-sdk-cpp-ec2
+aws-sdk-cpp-firehose
+aws-sdk-cpp-iam
+aws-sdk-cpp-kinesis
+aws-sdk-cpp-s3
 ayatana-ido
 babl
 backuppc
@@ -262,7 +271,6 @@ cargo-c
 caribou
 catatonit
 catch2-v2
-catch2
 catdoc
 cauchy
 cbatticon
@@ -1731,6 +1739,7 @@ libmediaart
 libmediainfo
 libmemcached-awesome
 libmicrodns
+libmikmod
 libmilter
 libmms
 libmng
@@ -3598,6 +3607,7 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
+python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
@@ -4430,6 +4440,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4480,6 +4491,7 @@ radicale
 raft
 ragel
 range-v3
+ranger
 rapidjson
 raptor
 rasqal
@@ -4500,7 +4512,6 @@ redland-storage-mysql
 redland-storage-postgresql
 redland-storage-virtuoso
 redland-storage-sqlite
-remmina
 renameutils
 reptyr
 rest
@@ -5266,9 +5277,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5351,7 +5359,6 @@ umbrello
 umurmur
 unarchiver
 unclutter
-unibilium
 unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
@@ -5370,7 +5377,6 @@ upx
 uriparser
 usbredir
 usd
-usd-extras
 usort
 utf8cpp
 uthash
@@ -5560,7 +5566,6 @@ xorg-xdpyinfo
 xorg-xev
 xorg-xeyes
 xorg-xhost
-xorg-xinit
 xorg-xinput
 xorg-xkbcomp
 xorg-xkill
@@ -5649,4 +5654,5 @@ zsh
 zsh-doc
 zug
 zvbi
+zxing-cpp
 zziplib

@@ -10,7 +10,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -46,6 +45,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+catch2
 catfish
 cgmanager
 chromium-bsu
@@ -329,7 +329,6 @@ libical
 libinput
 libixion
 libldm
-libmikmod
 libmspub
 libnvme
 libp11
@@ -493,6 +492,7 @@ opendht
 openmpi
 openmpi-docs
 opensmtpd
+opensnitch
 opensubdiv
 openvpn
 ostree
@@ -595,7 +595,6 @@ python-elastic-transport
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-matplotlib
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -691,7 +690,6 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -704,13 +702,13 @@ quazip-qt6
 quilt
 rabbitmq
 rabbitmqadmin
-ranger
 rapidfuzz-cpp
 rdma-core
 redis
 redshift
 refind
 refind-docs
+remmina
 ripgrep-all
 ristretto
 rocblas
@@ -769,6 +767,9 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+texlive-texmf
+texlive-doc
+texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -800,6 +801,7 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
+unibilium
 unoconv
 upower
 uptimed
@@ -916,6 +918,7 @@ xorg-server-xnest
 xorg-server-common
 xorg-server-devel
 xorg-xdm
+xorg-xinit
 xorg-xwayland
 xscreensaver
 yubikey-personalization
@@ -924,4 +927,3 @@ zeromq
 zlib-ng
 zlib-ng-compat
 znc
-zxing-cpp

@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,82 +1,71 @@
+@@ -1,85 +1,71 @@
  
  pkgname=scribus
 -pkgver=1.6.2
--pkgrel=7
+-pkgrel=8
 +pkgver=1.5.8
 +pkgrel=24
  pkgdesc="Desktop publishing software"
@@ -55,7 +55,8 @@
  options=(!lto)
 -_archive="$pkgname-$pkgver"
 -source=("https://downloads.sourceforge.net/${pkgname}/$_archive.tar.xz"{,.asc}
--        fix_build_with_poppler_24.12.0.patch)
+-        fix_build_with_poppler_24.12.0.patch
+-        fix_build_with_poppler_25.01.0.patch)
 -sha256sums=('7eff9b1f47e372e56bb369f1dbe18fe49101789b5e6bcfdb7890e0346b641383'
 +source=("https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.xz"{,.asc}
 +        $pkgname-poppler-22.02.0.patch::https://github.com/scribusproject/scribus/commit/85c0dff3422f.patch
@@ -65,7 +66,8 @@
 +	scribus-1.5.8-poppler-22.09.0.patch)
 +sha256sums=('47816e8fcf6d05788ff16aa4499f97ff22431c777a7789149b0a88b451e16b74'
              'SKIP'
--            '69b060bb880a9681fe6223fbc9f94f848a7eb71199efcf36dc8974c94fadeb2d')
+-            '69b060bb880a9681fe6223fbc9f94f848a7eb71199efcf36dc8974c94fadeb2d'
+-            '152265e6d4af88b41552020d273b40947255b0ee13b355c1b4d52922428b06a8')
 +            '718ae9c882889b56919ab9718185b915a75e75e193a028539722b537f528c3dd'
 +            '2b57c0c6dbc93037b83e392d4721523efbccd8af1fe6fc11a26f1d2933b14a85'
 +            '986717d7c99a418d765e6b3d8b37165067548e62b6febb9c31f8831689f3540e'
@@ -80,6 +82,7 @@
 -    sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
 -
 -    patch -Np1 < "$srcdir/fix_build_with_poppler_24.12.0.patch"
+-    patch -Np1 < "$srcdir/fix_build_with_poppler_25.01.0.patch"
 +  cd ${pkgname}-${pkgver}
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
@@ -169,11 +172,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,21 @@
+@@ -1,17 +1,21 @@
  prepare() {
 -cd "$_archive"
 -sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
 -patch -Np1 < "$srcdir/fix_build_with_poppler_24.12.0.patch"
+-patch -Np1 < "$srcdir/fix_build_with_poppler_25.01.0.patch"
 +cd ${pkgname}-${pkgver}
 +patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch

@@ -24,7 +24,7 @@
    taglib
    twolame
    v4l-utils
-@@ -230,6 +227,7 @@
+@@ -226,6 +223,7 @@
  
  build() {
    local meson_options=(
@@ -32,7 +32,7 @@
      -D examples=disabled
      -D gobject-cast-checks=disabled
      -D gpl=enabled
-@@ -264,14 +262,14 @@
+@@ -260,14 +258,14 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -49,7 +49,7 @@
    meson compile -C build
  }
  
-@@ -282,7 +280,7 @@
+@@ -278,7 +276,7 @@
    export NO_AT_BRIDGE=1 GTK_A11Y=none
  
    xvfb-run -s "-nolisten local" \
@@ -58,7 +58,7 @@
  )
  
  _install() {
-@@ -920,23 +918,6 @@
+@@ -916,23 +914,6 @@
    ); _install
  }
  
@@ -82,7 +82,7 @@
  
  package_gst-plugin-opencv() {
    pkgdesc+=" - opencv plugin"
-@@ -1186,7 +1167,6 @@
+@@ -1182,7 +1163,6 @@
      libva
      libx11
      libxrandr
