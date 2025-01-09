@@ -45,7 +45,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-catch2
 catfish
 cgmanager
 chromium-bsu
@@ -79,6 +78,7 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
+dpkg
 dracut
 drkonqi
 dtc
@@ -118,6 +118,7 @@ four-in-a-row
 fprintd
 freerdp
 freerdp2
+frei0r-plugins
 fwupd-efi
 fwupd
 fwupd-docs
@@ -339,6 +340,7 @@ libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
+libutf8proc
 libvirt
 libvncserver
 libxfce4ui
@@ -488,6 +490,11 @@ onboard
 onionshare
 open-iscsi
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendht
 openmpi
 openmpi-docs
@@ -590,12 +597,13 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
+pysolfc
 python-anytree
-python-elastic-transport
 python-google-auth
 python-ipykernel
 python-levenshtein
 python-pymupdf
+python-pytables
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
@@ -808,6 +816,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -918,7 +927,6 @@ xorg-server-xnest
 xorg-server-common
 xorg-server-devel
 xorg-xdm
-xorg-xinit
 xorg-xwayland
 xscreensaver
 yubikey-personalization

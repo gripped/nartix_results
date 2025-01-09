@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=knewstuff
+ pkgver=6.9.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Support for downloading application assets from the network'
+ arch=(x86_64)
+ url='https://community.kde.org/Frameworks'
+@@ -10,20 +10,21 @@
+          gcc-libs
+          glibc
+          karchive
+-         kcmutils
+          kconfig
+          kcoreaddons
+          ki18n
+-         kirigami
+          kpackage
+          kwidgetsaddons
+          qt6-base
+-         qt6-declarative
+          syndication)
+ makedepends=(doxygen
+              extra-cmake-modules
++             kirigami
++             qt6-declarative
+              qt6-doc
+              qt6-tools)
++optdepends=('kirigami: QML components'
++            'qt6-declarative: QML components')
+ groups=(kf6)
+ source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('ae3738515d17ecb56a2b4db17a2a317f1b3676518fc35d461631bcb6fa46c4ea'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,7 +4,6 @@
+ gcc-libs
+ glibc
+ karchive
+-kcmutils
+ kconfig
+ kcoreaddons
+ ki18n

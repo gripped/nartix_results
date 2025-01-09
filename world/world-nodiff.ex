@@ -271,6 +271,7 @@ cargo-c
 caribou
 catatonit
 catch2-v2
+catch2
 catdoc
 cauchy
 cbatticon
@@ -479,7 +480,6 @@ dotconf
 double-conversion
 doxygen
 doxygen-docs
-dpkg
 dqlite
 draco
 dragon
@@ -638,7 +638,6 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
-frei0r-plugins
 fribidi
 frugally-deep
 fstrm
@@ -1925,7 +1924,6 @@ liburing
 libusb-compat
 libusbmuxd
 libutempter
-libutf8proc
 libutp
 libuv
 libva-intel-driver
@@ -2417,11 +2415,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3001,7 +2994,6 @@ shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
-pysolfc
 pystring
 python-aaf2
 python-aafigure
@@ -3307,6 +3299,7 @@ python-editables
 python-editdistance-s
 python-editdistance
 python-editor
+python-elastic-transport
 python-elasticsearch
 python-elementpath
 python-email-validator
@@ -3922,7 +3915,6 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
-python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
@@ -5376,7 +5368,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash
@@ -5566,6 +5557,7 @@ xorg-xdpyinfo
 xorg-xev
 xorg-xeyes
 xorg-xhost
+xorg-xinit
 xorg-xinput
 xorg-xkbcomp
 xorg-xkill

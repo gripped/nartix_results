@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=openlibm
+-pkgver=0.8.5
++pkgver=0.8.4
+ pkgrel=1
+ pkgdesc='Standalone implementation of C mathematical functions'
+ arch=(x86_64)
+@@ -9,7 +9,7 @@
+ depends=(glibc)
+ makedepends=(git)
+ source=(git+https://github.com/JuliaLang/$pkgname#tag=v$pkgver)
+-sha256sums=('afb3c741feb2e78075fe35b1616076b48f79e224e3f92103738114fe0cfedbc4')
++sha256sums=('fb9105e361ddb3f9a508cb64ffa6d21b0dcb0d980919677b8708be86cdb77a38')
+ 
+ prepare() {
+   cd $pkgname

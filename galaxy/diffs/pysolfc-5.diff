@@ -1,0 +1,108 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,55 +1,27 @@
+ 
+ pkgname=pysolfc
+ pkgver=3.1.0
+-pkgrel=4
++pkgrel=1
+ pkgdesc="PySol (Fan Club edition) is an exciting collection of more than 1000 solitaire games"
+ arch=('any')
+ url="http://pysolfc.sourceforge.net/"
+-license=('GPL-3.0-or-later')
+-depends=(
+-  'pysolfc-cardsets'
+-  'python'
+-  'python-attrs'
+-  'python-configobj'
+-  'python-pillow'
+-  'python-pygame'
+-  'python-pysol_cards'
+-  'python-six'
+-  'tk'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
+-)
+-optdepends=(
+-  'python-kivy: Kivy based interface'
+-)
+-source=("https://downloads.sourceforge.net/$pkgname/PySolFC-$pkgver.tar.xz")
++license=('GPL3')
++depends=('python-attrs' 'pysolfc-cardsets' 'python-configobj' 'python-pillow'
++         'python-pysol_cards' 'python-random2' 'python-six' 'tk' 'python-pygame')
++makedepends=('python-setuptools')
++source=(https://downloads.sourceforge.net/$pkgname/PySolFC-$pkgver.tar.xz)
+ sha256sums=('3dcf1c703b35b446d78a062b2471b138e22926db9d20207373c465144700a0cc')
+ 
+ prepare() {
+   cd PySolFC-$pkgver
+-  mv pysol.py pysol
+-  sed -i 's/pysol.py/pysol/' \
+-    MANIFEST.in \
+-    data/pysol.desktop \
+-    setup.py \
+-    tests/lib/pysol_tests/test_version_flag.py
++
++  sed -i 's/pysol.py/pysol/' data/pysol.desktop
+ }
+ 
+-build() {
+-  cd PySolFC-$pkgver
+-  python -m build --wheel --no-isolation
+-}
+-
+-check() {
+-  cd PySolFC-$pkgver
+-  python -m unittest discover -v
+-}
+ 
+ package() {
+   cd PySolFC-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++
++  python setup.py install --root="${pkgdir}"
++  mv "${pkgdir}"/usr/bin/pysol.py "${pkgdir}"/usr/bin/pysol
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +1,10 @@
+ pysolfc-cardsets
+-python
+ python-attrs
+-python-build
+ python-configobj
+-python-installer
+ python-pillow
+ python-pygame
+ python-pysol_cards
++python-random2
+ python-setuptools
+ python-six
+-python-wheel
+ tk
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,4 @@
+ prepare() {
+ cd PySolFC-$pkgver
+-mv pysol.py pysol
+-sed -i 's/pysol.py/pysol/' \
+-MANIFEST.in \
+-data/pysol.desktop \
+-setup.py \
+-tests/lib/pysol_tests/test_version_flag.py
++sed -i 's/pysol.py/pysol/' data/pysol.desktop
+ }
+-build() {
+-cd PySolFC-$pkgver
+-python -m build --wheel --no-isolation
+-}
