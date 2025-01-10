@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ _securityver=1
+ _updatever=0
+ pkgver=${_majorver}.${_minorver}.${_securityver}.u${_updatever}
+-pkgrel=2
++pkgrel=1
+ _git_tag=jdk-${_majorver}.${_minorver}.${_securityver}+${_updatever}
+ arch=('x86_64')
+ url='https://openjdk.java.net/'
+@@ -81,7 +81,9 @@
+ 
+ 
+   bash configure \
+-    --with-version-string="${_majorver}.${_minorver}.${_securityver}" \
++    --with-version-build="${_updatever}" \
++    --with-version-pre="" \
++    --with-version-opt="" \
+     --with-stdc++lib=dynamic \
+     --with-extra-cflags="${_CFLAGS}" \
+     --with-extra-cxxflags="${_CXXFLAGS}" \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,9 @@
+ jvm_features="zgc,shenandoahgc"
+ fi
+ bash configure \
+---with-version-string="${_majorver}.${_minorver}.${_securityver}" \
++--with-version-build="${_updatever}" \
++--with-version-pre="" \
++--with-version-opt="" \
+ --with-stdc++lib=dynamic \
+ --with-extra-cflags="${_CFLAGS}" \
+ --with-extra-cxxflags="${_CXXFLAGS}" \

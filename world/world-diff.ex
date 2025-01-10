@@ -118,7 +118,6 @@ four-in-a-row
 fprintd
 freerdp
 freerdp2
-frei0r-plugins
 fwupd-efi
 fwupd
 fwupd-docs
@@ -137,6 +136,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+gitea
 gjs
 glances
 gnome-bluetooth-3.0
@@ -248,6 +248,12 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -281,6 +287,7 @@ kcoreaddons
 kgamma
 kguiaddons
 kismet
+kitinerary
 kitty
 kitty-terminfo
 kitty-shell-integration
@@ -469,6 +476,7 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
+neochat
 netavark
 netplan
 networkmanager
@@ -490,11 +498,6 @@ onboard
 onionshare
 open-iscsi
 opencollada
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendht
 openmpi
 openmpi-docs
@@ -603,7 +606,6 @@ python-google-auth
 python-ipykernel
 python-levenshtein
 python-pymupdf
-python-pytables
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
@@ -816,7 +818,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

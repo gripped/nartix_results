@@ -38,7 +38,6 @@ mate-system-monitor
 mpd
 nushell
 nvidia-390xx-utils
-pysolfc
 qbittorrent
 qbittorrent-nox
 rage

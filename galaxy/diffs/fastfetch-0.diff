@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,41 +1,59 @@
+@@ -1,40 +1,59 @@
  
  pkgname=fastfetch
--pkgver=2.33.0
+-pkgver=2.34.0
 +pkgver=2.32.1
  pkgrel=1
  pkgdesc="A feature-rich and performance oriented neofetch like system information tool"
@@ -14,6 +14,24 @@
  depends=('glibc' 'yyjson')
 -makedepends=('chafa' 'cmake' 'dbus' 'dconf' 'ddcutil' 'directx-headers' 'imagemagick' 'libpulse' 'libxcb' 'libxrandr'
 -             'mesa' 'ocl-icd' 'opencl-headers' 'vulkan-headers' 'vulkan-icd-loader' 'wayland' 'xfconf' 'zlib')
+-optdepends=('chafa: Image output as ascii art'
+-            'dbus: Bluetooth, Player & Media detection'
+-            'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
+-            'ddcutil: Brightness detection of external displays'
+-            'directx-headers: GPU detection in WSL'
+-            'glib2: Output for values that are only stored in GSettings'
+-            'hwdata: GPU output'
+-            'imagemagick: Image output using sixel or kitty graphics protocol'
+-            'libdrm: Displays detection'
+-            'libelf: st term font detection and fast path of systemd version detection'
+-            'libpulse: Sound detection'
+-            'libxrandr: Multi monitor support'
+-            'mesa: Needed by the OpenGL module for gl context creation'
+-            'ocl-icd: OpenCL module'
+-            'python: Needed for zsh and fish completions'
+-            'vulkan-icd-loader: Vulkan module & fallback for GPU output'
+-            'xfconf: Needed for XFWM theme and XFCE Terminal font'
+-            'zlib: Faster image output when using kitty graphics protocol')
 +makedepends=(
 +  'chafa'
 +  'cmake'
@@ -34,25 +52,7 @@
 +  'xfconf'
 +  'zlib'
 +)
- optdepends=(
--	'chafa: Image output as ascii art'
--	'dbus: Bluetooth, Player & Media detection'
--	'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
--	'ddcutil: Brightness detection of external displays'
--	'directx-headers: GPU detection in WSL'
--	'glib2: Output for values that are only stored in GSettings'
--	'hwdata: GPU output'
--	'imagemagick: Image output using sixel or kitty graphics protocol'
--	'libdrm: Displays detection'
--	'libelf: st term font detection and fast path of systemd version detection'
--	'libpulse: Sound detection'
--	'libxrandr: Multi monitor support'
--	'mesa: Needed by the OpenGL module for gl context creation'
--	'ocl-icd: OpenCL module'
--	'python: Needed for zsh and fish completions'
--	'vulkan-icd-loader: Vulkan module & fallback for GPU output'
--	'xfconf: Needed for XFWM theme and XFCE Terminal font'
--	'zlib: Faster image output when using kitty graphics protocol')
++optdepends=(
 +  'chafa: Image output as ascii art'
 +  'dbus: Bluetooth, Player & Media detection'
 +  'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
@@ -73,7 +73,7 @@
 +  'zlib: Faster image output when using kitty graphics protocol'
 +)
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('fa3b5c3c4fc7d2b6c4e24c15fb7cf3df94024227f2d24995f6ca0eaa95f39725')
+-sha256sums=('2dae260d604557c6bf5a9781b3c960aa4265a067e54a984f8c68889a578193a9')
 +sha256sums=('f08efaaffa9f1c58b085105acfc41c65ed8f5721bdc7b1746b80700c727a4f60')
  
  build() {

@@ -3,9 +3,19 @@
 @@ -1,7 +1,7 @@
  
  pkgname=khangman
- pkgver=24.12.0
--pkgrel=2
-+pkgrel=1
+-pkgver=24.12.1
+-pkgrel=1
++pkgver=24.12.0
++pkgrel=2
  pkgdesc='Hangman Game'
  url='https://apps.kde.org/khangman/'
  arch=(x86_64)
+@@ -25,7 +25,7 @@
+ groups=(kde-applications
+         kde-education)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ae4ee0820d313313371563bab42a74bc0a1a67c1290800176d27f7154030969d'
++sha256sums=('8008e9321fbd4ad861078c9f2b40a1cb9cca15c5e06c6870c5547ebb380d6073'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

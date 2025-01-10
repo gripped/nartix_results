@@ -1,14 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -5,8 +5,8 @@
+          marble-common
           marble-maps
           marble-qt)
- pkgver=24.12.0
--pkgrel=5
+-pkgver=24.12.1
+-pkgrel=1
++pkgver=24.12.0
 +pkgrel=3
  pkgdesc='Desktop Globe'
  arch=(x86_64)
  url='https://apps.kde.org/marble/'
+@@ -26,7 +26,7 @@
+              qt6-webengine
+              shapelib)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgbase-$pkgver.tar.xz{,.sig})
+-sha256sums=('2dcaa7cefede7e4dca7d1a6dcfb2a00c301838158167b0c64974077ae2a192f0'
++sha256sums=('a347f134d1428bd46b886bb41a292a2fec4aea4de274bff73cd8b8994f920576'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
 @@ -70,7 +70,7 @@
    rm -r "$pkgdir"/usr/share/{config.kcfg,kxmlgui5,metainfo} \
          "$pkgdir"/usr/bin \
@@ -18,3 +29,19 @@
          "$pkgdir"/usr/share/icons/hicolor/scalable/apps/org.kde.marble*.svg \
          "$pkgdir"/usr/share/plasma
  }
+@@ -111,7 +111,6 @@
+ 
+ package_marble-maps() {
+   pkgdesc='OpenStreetMap Navigation'
+-  url='https://apps.kde.org/marble.maps/'
+   depends=(gcc-libs
+            glibc
+            kconfig
+@@ -130,7 +129,6 @@
+ 
+ package_marble-behaim() {
+   pkgdesc='Behaim Globe'
+-  url='https://apps.kde.org/marble.behaim/'
+   depends=(gcc-libs
+            glibc
+            kcoreaddons

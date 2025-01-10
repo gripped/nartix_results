@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
+@@ -1,6 +1,6 @@
  
  pkgname=haproxy
- pkgver=3.1.1
--pkgrel=2
-+pkgrel=1
+-pkgver=3.1.2
++pkgver=3.1.1
+ pkgrel=1
  
  pkgdesc='Reliable, high performance TCP/HTTP load balancer'
- url='https://www.haproxy.org/'
+@@ -8,8 +8,8 @@
  arch=('x86_64')
  license=('GPL')
  
@@ -19,9 +19,12 @@
  
  backup=('etc/haproxy/haproxy.cfg')
  
-@@ -24,7 +24,7 @@
+@@ -22,9 +22,9 @@
+         'haproxy.sysusers'
+         '0001-Use-CFLAGS-and-LDFLAGS-when-building-admin.patch')
  
- sha256sums=('19a34a4fa4a6d5cd49861ffa89aea105505ea17204881db382d73e0b582d9c54'
+-sha256sums=('189f77c5a6b09153c221e2c3a4f15594bccb16ae8e2e7aff3709e7a64179e61e'
++sha256sums=('19a34a4fa4a6d5cd49861ffa89aea105505ea17204881db382d73e0b582d9c54'
              'f6babef513b99a3fa0e50f2b144c73c980f1b78b119874ffa2580af1e651e7a9'
 -            'c6e716ea59272a8e871af53703726dd2a75b56c82dacf097d4bf08ac5e841a0d'
 +            'b02b4088205039f0979aef0ef3e22957f493dd54eabefaee7011f2d795303b3e'

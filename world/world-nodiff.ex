@@ -207,6 +207,7 @@ bin86
 bind
 black-hole-solver
 blackbox
+blender
 blinken
 blockdiag
 blosc
@@ -638,6 +639,7 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
+frei0r-plugins
 fribidi
 frugally-deep
 fstrm
@@ -694,7 +696,6 @@ gimp
 girara
 git-lfs
 git
-gitea
 github-cli
 gkrellm
 gl2ps
@@ -1067,12 +1068,6 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-jline
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-xmlgraphics-commons
 jbig2dec
 jbigkit
@@ -1316,7 +1311,6 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
-kitinerary
 kjobwidgets
 kjobwidgets5
 kjots
@@ -2309,7 +2303,6 @@ ncftp
 ncompress
 neatvnc
 nemo
-neochat
 neofetch
 neomutt
 neon
@@ -2415,6 +2408,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3915,6 +3913,7 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
+python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
@@ -5368,6 +5367,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash

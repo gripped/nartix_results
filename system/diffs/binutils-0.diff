@@ -8,7 +8,7 @@
 +options=(staticlibs !distcc !ccache debug)
  source=(git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
          gold-warn-unsupported.patch)
- sha256sums=('4726efb1f887c659cfb6aa198f18ca638d405f58ee1eeda4df3eb201c1169a67'
+ sha256sums=('3e4532890c7266f89c2aa7399e6c9f2855aceb115cf8f5d48c42f535f3796ac1'
 @@ -50,7 +50,7 @@
      --prefix=/usr \
      --sysconfdir="${pkgdir}"/etc \

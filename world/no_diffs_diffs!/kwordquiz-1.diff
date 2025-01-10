@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,13 @@
- 
- pkgname=kwordquiz
- pkgver=24.12.0
--pkgrel=2
-+pkgrel=1
- pkgdesc='Flash Card Trainer'
- url='https://apps.kde.org/kwordquiz/'
- arch=(x86_64)
+@@ -8,7 +8,6 @@
  license=(GPL-2.0-or-later LGPL-2.0-or-later)
  depends=(gcc-libs
           glibc
@@ -16,14 +8,6 @@
           kconfig
           kcoreaddons
           kcrash
-@@ -18,7 +17,6 @@
-          kirigami-addons
-          knewstuff
-          libkeduvocdocument
--         qqc2-desktop-style
-          qt6-base
-          qt6-declarative
-          qt6-multimedia)
 
 
 ############# Stripped diff below #################
@@ -38,11 +22,3 @@
  kconfig
  kcoreaddons
  kcrash
-@@ -12,7 +11,6 @@
- kirigami-addons
- knewstuff
- libkeduvocdocument
--qqc2-desktop-style
- qt6-base
- qt6-declarative
- qt6-multimedia

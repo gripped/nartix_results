@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kitinerary
+-pkgver=24.12.1
+-pkgrel=1
++pkgver=24.12.0
++pkgrel=5
+ pkgdesc='Data model and extraction system for travel reservation information'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+@@ -27,12 +27,19 @@
+              extra-cmake-modules
+              qt6-doc
+              qt6-tools)
+-source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ea6c16a84684d690b1ccaabd8dfee9bfe8f744925db58b62e1b5dce91c84b9bb'
+-            'SKIP')
++source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig}
++        fix_build_with_poppler_25.01.patch)
++sha256sums=('4c11339a5bce980bd061a4437a943200fae82e104bd8472f3b2f7dc36f82b5c7'
++            'SKIP'
++            'a8561e01d397be5045c42d9dbd52eb919e2538e803e977be85df2d756b079d18')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+               D81C0CB38EB725EF6691C385BB463350D6EF31EF) # Heiko Becker <heiko.becker@kde.org>
++
++prepare() {
++  cd $pkgname-$pkgver
++  patch -Np1 -i $srcdir/fix_build_with_poppler_25.01.patch
++}
+ 
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd $pkgname-$pkgver
++patch -Np1 -i $srcdir/fix_build_with_poppler_25.01.patch
++}
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+ -DCMAKE_INSTALL_LIBEXECDIR=lib \

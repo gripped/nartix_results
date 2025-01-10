@@ -3,9 +3,19 @@
 @@ -1,7 +1,7 @@
  
  pkgname=kturtle
- pkgver=24.12.0
--pkgrel=2
-+pkgrel=1
+-pkgver=24.12.1
+-pkgrel=1
++pkgver=24.12.0
++pkgrel=2
  pkgdesc='Educational Programming Environment'
  url='https://apps.kde.org/kturtle/'
  arch=(x86_64)
+@@ -25,7 +25,7 @@
+ groups=(kde-applications
+         kde-education)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('894c19b151b8d5e1da03a7f611c35c7fe56df3e6b2d36232555c898a7d46cc60'
++sha256sums=('e0c2310fbcd76bae4dd33e35773f1d7d55b97117e6bbf7887b5208800aa9474c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

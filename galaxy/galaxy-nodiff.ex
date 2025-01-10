@@ -305,6 +305,7 @@ ppsspp-assets
 profanity
 profanity-gtk
 pysolfc-cardsets
+pysolfc
 python-caja
 python-pysol_cards
 qgis
