@@ -12,6 +12,7 @@ abseil-cpp
 accerciser
 accessibility-inspector
 accounts-qml-module
+ack
 acme-tiny
 acpi
 acpi_call-dkms
@@ -1469,15 +1470,6 @@ ladspa
 lager
 lame
 languagetool
-lapack
-blas
-cblas
-lapacke
-blas64
-cblas64
-lapack64
-lapacke64
-lapack-doc
 laszip
 laszip2
 layer-shell-qt
@@ -2600,6 +2592,7 @@ perl-file-find-rule-perl
 perl-file-find-rule
 perl-file-homedir
 perl-file-listing
+perl-file-next
 perl-file-remove
 perl-file-sharedir-install
 perl-file-sharedir

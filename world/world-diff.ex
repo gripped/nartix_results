@@ -296,6 +296,15 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+lapack
+blas
+cblas
+lapacke
+blas64
+cblas64
+lapack64
+lapacke64
+lapack-doc
 libatasmart
 libayatana-appindicator
 libayatana-indicator

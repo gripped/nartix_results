@@ -7,7 +7,6 @@ ecrire
 efl
 ephoto
 evisum
-fastfetch
 firefox
 font-manager
 freecell-solver
