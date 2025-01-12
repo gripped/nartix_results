@@ -16,7 +16,7 @@
  )
  checkdepends=(
    at-spi2-core
-@@ -45,11 +43,12 @@
+@@ -48,11 +46,12 @@
  
  build() {
    local meson_options=(
@@ -31,7 +31,7 @@
    meson compile -C build
  }
  
-@@ -78,6 +77,8 @@
+@@ -81,6 +80,8 @@
  
    mkdir -p doc/usr/share
    mv {"$pkgdir",doc}/usr/share/doc

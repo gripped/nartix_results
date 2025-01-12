@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -7,7 +7,6 @@
  license=('GPL3')
- depends=('http-parser' 'jose')
+ depends=('llhttp' 'jose')
  makedepends=('git' 'asciidoc' 'meson')
 -checkdepends=('systemd')
  source=("git+$url.git#tag=v$pkgver"

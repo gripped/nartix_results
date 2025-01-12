@@ -409,6 +409,7 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+mat2
 mate-applets
 mate-backgrounds
 mate-calc
@@ -527,6 +528,10 @@ pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-capture-tiny
+perl-file-sharedir
+perl-file-which
+perl-text-csv
 pgbouncer
 phodav
 php-legacy

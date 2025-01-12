@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,27 +9,21 @@
+@@ -9,22 +9,21 @@
           lapack64
           lapacke64
           lapack-doc)
 -pkgver=3.12.1
--pkgrel=1
+-pkgrel=2
 +pkgver=3.12.0
 +pkgrel=5
  url='https://www.netlib.org/lapack'
@@ -19,11 +19,6 @@
  license=(custom)
 -source=(git+https://github.com/Reference-LAPACK/lapack#tag=v$pkgver)
 -sha256sums=('becc909c9de915016625746eead3024ac77d462d8fde26d0c18db2ca57146067')
--
--prepare() {
--  cd $pkgbase
--  git cherry-pick -n f5103fc3b42fcff40e70b1fa4b5567df01dae9bc 3aa877584bcc96e1a0ee37742628946c56afc15f
--}
 +source=(https://github.com/Reference-LAPACK/lapack/archive/v$pkgver/$pkgbase-$pkgver.tar.gz)
 +sha256sums=('eac9570f8e0ad6f30ce4b963f4f033f0f643e7c3912fc9ee6cd99120675ad48b')
  
@@ -33,7 +28,12 @@
      -DCMAKE_SKIP_RPATH=ON \
      -DBUILD_SHARED_LIBS=ON \
      -DBUILD_TESTING=OFF \
-@@ -42,7 +36,7 @@
+@@ -32,11 +31,12 @@
+     -DCMAKE_Fortran_COMPILER=gfortran \
+     -DLAPACKE_WITH_TMG=ON \
+     -DCBLAS=ON \
++    -DBUILD_DEPRECATED=ON \
+     -DBUILD_MAN_DOCUMENTATION=ON
    cmake --build build
    cmake --build build --target man
  
@@ -42,7 +42,15 @@
      -DCMAKE_SKIP_RPATH=ON \
      -DBUILD_SHARED_LIBS=ON \
      -DBUILD_TESTING=OFF \
-@@ -61,7 +55,7 @@
+@@ -44,6 +44,7 @@
+     -DCMAKE_Fortran_COMPILER=gfortran \
+     -DLAPACKE_WITH_TMG=ON \
+     -DCBLAS=ON \
++    -DBUILD_DEPRECATED=ON \
+     -DBUILD_INDEX64=ON
+   cmake --build build64
+ }
+@@ -54,7 +55,7 @@
             glibc)
  
    DESTDIR="$pkgdir" cmake --install build
@@ -51,7 +59,7 @@
  
    rm -r "$pkgdir"/usr/lib/{libblas.*,libcblas.*,liblapacke.*}
    rm -r "$pkgdir"/usr/lib/pkgconfig/{blas.*,cblas.*,lapacke.*}
-@@ -75,7 +69,7 @@
+@@ -68,7 +69,7 @@
             glibc)
  
    DESTDIR="$pkgdir" cmake --install build/BLAS
@@ -60,7 +68,7 @@
  }
  
  package_cblas() {
-@@ -84,7 +78,7 @@
+@@ -77,7 +78,7 @@
             glibc)
  
    DESTDIR="$pkgdir" cmake --install build/CBLAS
@@ -69,7 +77,7 @@
  }
  
  package_lapacke() {
-@@ -93,7 +87,7 @@
+@@ -86,7 +87,7 @@
             lapack)
  
    DESTDIR="$pkgdir" cmake --install build/LAPACKE
@@ -78,7 +86,7 @@
  }
  
  package_lapack64() {
-@@ -103,7 +97,7 @@
+@@ -96,7 +97,7 @@
             glibc)
  
    DESTDIR="$pkgdir" cmake --install build64
@@ -87,7 +95,7 @@
  
    rm -r "$pkgdir"/usr/lib/{libblas64.*,libcblas64.*,liblapacke64.*}
    rm -r "$pkgdir"/usr/lib/pkgconfig/{blas64.*,cblas64.*,lapacke64.*}
-@@ -117,7 +111,7 @@
+@@ -110,7 +111,7 @@
             glibc)
  
    DESTDIR="$pkgdir" cmake --install build64/BLAS
@@ -96,7 +104,7 @@
  }
  
  package_cblas64() {
-@@ -127,7 +121,7 @@
+@@ -120,7 +121,7 @@
    optdepends=('cblas: development headers')
  
    DESTDIR="$pkgdir" cmake --install build64/CBLAS
@@ -105,7 +113,7 @@
    rm -r "$pkgdir"/usr/include # Provided by cblas
  }
  
-@@ -138,7 +132,7 @@
+@@ -131,7 +132,7 @@
    optdepends=('lapacke: development headers')
  
    DESTDIR="$pkgdir" cmake --install build64/LAPACKE
@@ -131,18 +139,18 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgbase
--git cherry-pick -n f5103fc3b42fcff40e70b1fa4b5567df01dae9bc 3aa877584bcc96e1a0ee37742628946c56afc15f
--}
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $pkgbase \
 +cmake -B build -S $pkgbase-$pkgver \
  -DCMAKE_SKIP_RPATH=ON \
  -DBUILD_SHARED_LIBS=ON \
  -DBUILD_TESTING=OFF \
-@@ -15,7 +11,7 @@
+@@ -7,10 +7,11 @@
+ -DCMAKE_Fortran_COMPILER=gfortran \
+ -DLAPACKE_WITH_TMG=ON \
+ -DCBLAS=ON \
++-DBUILD_DEPRECATED=ON \
  -DBUILD_MAN_DOCUMENTATION=ON
  cmake --build build
  cmake --build build --target man
@@ -151,3 +159,11 @@
  -DCMAKE_SKIP_RPATH=ON \
  -DBUILD_SHARED_LIBS=ON \
  -DBUILD_TESTING=OFF \
+@@ -18,6 +19,7 @@
+ -DCMAKE_Fortran_COMPILER=gfortran \
+ -DLAPACKE_WITH_TMG=ON \
+ -DCBLAS=ON \
++-DBUILD_DEPRECATED=ON \
+ -DBUILD_INDEX64=ON
+ cmake --build build64
+ }
