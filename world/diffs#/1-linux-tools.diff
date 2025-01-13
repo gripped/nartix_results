@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+   'intel-speed-select'
+ )
+ pkgver=6.12
+-pkgrel=10
++pkgrel=9
+ license=('GPL-2.0-only')
+ arch=('x86_64')
+ url='https://www.kernel.org'
 @@ -33,11 +33,6 @@
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"

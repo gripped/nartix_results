@@ -15,8 +15,6 @@ greetd-regreet
 gtklock
 labwc
 lemurs
-libreoffice-still
-libreoffice-still-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2

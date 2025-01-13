@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hyprland-qtutils
+ pkgver=0.1.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Qt/QML utility apps for Hyprland'
+ arch=(x86_64 aarch64)
+ url="https://github.com/hyprwm/$pkgname"
+@@ -9,10 +9,10 @@
+ depends=(gcc-libs # libgcc_s.so libstdc++.so
+          glibc # libc.so libm.so
+          hyprutils libhyprutils.so
+-         hyprland-qt-support
+          qt6-base # libQt6Core.so libQt6Gui.so libQt6Widgets.so
+          qt6-declarative # libQt6Qml.so libQt6QuickControls2.so
+-         qt6-wayland)
++         qt6-wayland
++         qqc2-desktop-style)
+ makedepends=(cmake)
+ _archive="$pkgname-$pkgver"
+ source=("$url/archive/v$pkgver/$_archive.tar.gz")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,9 @@
+ cmake
+ gcc-libs
+ glibc
+-hyprland-qt-support
+ hyprutils
+ libhyprutils.so
++qqc2-desktop-style
+ qt6-base
+ qt6-declarative
+ qt6-wayland

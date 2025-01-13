@@ -10,6 +10,7 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
+arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -70,8 +71,6 @@ dbus-broker
 dbus-python
 dbus-python-docs
 ddcutil
-deluge
-deluge-gtk
 dhcpcd
 dns-over-https
 docker
@@ -138,7 +137,6 @@ geoclue
 ghc-filesystem
 gitea
 gjs
-glances
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -164,9 +162,6 @@ gnome-user-share
 go-bindata
 godot
 godot-mono
-gradle
-gradle-doc
-gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -230,30 +225,25 @@ hexchat
 hidapi
 hipify-clang
 hwloc
+hyperkitty
 hyprland
 i2pd
 ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-compute-runtime
 intel-metee
 intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
 isoimagewriter
+ispc
 iwd
 jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -285,9 +275,7 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kgamma
-kguiaddons
 kismet
-kitinerary
 kitty
 kitty-terminfo
 kitty-shell-integration
@@ -330,6 +318,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libcdio
 libe-book
 libei
 libei-docs
@@ -344,7 +333,6 @@ libguestfs
 libhandy0
 libical
 libinput
-libixion
 libldm
 libmspub
 libnvme
@@ -486,7 +474,6 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
-neochat
 netavark
 netplan
 networkmanager
@@ -524,7 +511,6 @@ parole
 passim
 pc-ble-driver
 pcsclite
-pdfgrep
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -616,6 +602,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-dnspython
 python-google-auth
 python-ipykernel
 python-levenshtein
@@ -624,6 +611,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
+python-validate-pyproject
 python-werkzeug
 qastools
 qbittorrent
@@ -732,7 +720,6 @@ redis
 redshift
 refind
 refind-docs
-remmina
 ripgrep-all
 ristretto
 rocblas
@@ -742,7 +729,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-rtorrent
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -791,9 +777,6 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
-texlive-texmf
-texlive-doc
-texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -862,6 +845,7 @@ vte3
 vte-common
 vte4
 vte-docs
+wasi-compiler-rt
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -947,6 +931,7 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
+zig
 zlib-ng
 zlib-ng-compat
 znc

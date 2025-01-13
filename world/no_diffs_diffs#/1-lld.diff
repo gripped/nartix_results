@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=lld
+ pkgver=19.1.6
+-pkgrel=1
++pkgrel=1.1
  pkgdesc="Linker from the LLVM project"
  arch=('x86_64')
  url="https://lld.llvm.org/"
--license=('Apache-2.0 WITH LLVM-exception')
-+license=('custom:Apache 2.0 with LLVM Exception')
- depends=('llvm-libs' 'gcc-libs' 'zlib' 'zstd')
- makedepends=('llvm' 'cmake' 'ninja' 'python-sphinx')
- _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver

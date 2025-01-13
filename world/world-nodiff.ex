@@ -99,7 +99,6 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -427,6 +426,8 @@ ddrescue
 debootstrap
 default-cursors
 dejagnu
+deluge
+deluge-gtk
 desktop-file-utils
 dev86
 devhelp
@@ -482,6 +483,7 @@ dotconf
 double-conversion
 doxygen
 doxygen-docs
+dpdk
 dqlite
 draco
 dragon
@@ -702,6 +704,7 @@ gkrellm
 gl2ps
 glad
 glade
+glances
 glew
 glfw
 glib-networking
@@ -797,6 +800,9 @@ gphoto2
 gpicview
 gpsd
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
@@ -982,7 +988,6 @@ hunspell
 hwinfo
 hy
 hypercorn
-hyperkitty
 hyperscan
 hyphen
 hyphen-en
@@ -1017,6 +1022,7 @@ indent
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
@@ -1050,7 +1056,6 @@ irssi
 iso-codes
 isodate
 python-isodate
-ispc
 ispell
 isync
 itinerary
@@ -1069,6 +1074,12 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-jline
+java-openjdk
+jre-openjdk-headless
+jre-openjdk
+jdk-openjdk
+openjdk-src
+openjdk-doc
 java-xmlgraphics-commons
 jbig2dec
 jbigkit
@@ -1263,6 +1274,7 @@ kglobalacceld
 kgoldrunner
 kgpg
 kgraphviewer
+kguiaddons
 kguiaddons5
 khangman
 khealthcertificate
@@ -1312,6 +1324,7 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
+kitinerary
 kjobwidgets
 kjobwidgets5
 kjots
@@ -1527,7 +1540,6 @@ libcacard
 libcbor
 libcddb
 libcdio-paranoia
-libcdio
 libcdr
 libcerf
 libcgif
@@ -1665,6 +1677,7 @@ libiptcdata
 libiscsi
 libisoburn
 libisofs
+libixion
 libjcat
 libjpeg-turbo
 libjuice
@@ -2022,6 +2035,7 @@ llvm
 llvm14
 llvm15
 llvm16
+llvm18
 lmdb
 lmdbxx
 log4cplus
@@ -2294,6 +2308,7 @@ ncftp
 ncompress
 neatvnc
 nemo
+neochat
 neofetch
 neomutt
 neon
@@ -2496,6 +2511,7 @@ pcmanfm-qt
 pcmanfm
 pdal
 pdfarranger
+pdfgrep
 pdfjs
 pdfmixtool
 pdnsd
@@ -3262,7 +3278,6 @@ python-django-q2
 python-django-rest-framework
 python-django-sekizai
 python-dkim
-python-dnspython
 python-docker-pycreds
 python-docker
 python-dockerpty
@@ -3639,6 +3654,7 @@ python-netaddr
 python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
+python-netifaces2
 python-networkx
 python-nh3
 python-nine
@@ -3963,6 +3979,7 @@ python-pytest-runner
 python-pytest-services
 python-pytest-snapshot
 python-pytest-socket
+python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
@@ -4264,7 +4281,6 @@ python-urwid
 python-userpath
 python-uvloop
 python-validate-email
-python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4492,6 +4508,7 @@ redland-storage-mysql
 redland-storage-postgresql
 redland-storage-virtuoso
 redland-storage-sqlite
+remmina
 renameutils
 reptyr
 rest
@@ -4552,6 +4569,7 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
+rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2
@@ -5257,6 +5275,9 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
+texlive-texmf
+texlive-doc
+texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5421,7 +5442,6 @@ w3m
 wacomtablet
 waf
 warpinator
-wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
 wasi-libc++abi
@@ -5618,7 +5638,6 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zfp
-zig
 zimg
 zip
 ziproxy

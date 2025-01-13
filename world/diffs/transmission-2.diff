@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  	qt6-base
  	qt6-svg
  	qt6-tools
@@ -9,7 +9,7 @@
  )
  source=(https://github.com/transmission/transmission/releases/download/$pkgver/transmission-$pkgver.tar.xz
          febfe49c.patch
-@@ -83,7 +83,7 @@
+@@ -84,7 +84,7 @@
  
  package_transmission-cli() {
    pkgdesc='Fast, easy, and free BitTorrent client (CLI tools, daemon and web client)'
@@ -18,7 +18,7 @@
  
    cd $pkgbase-$pkgver
  
-@@ -94,8 +94,6 @@
+@@ -95,8 +95,6 @@
    install -d "$pkgdir"/usr/share/transmission
    cp -a build/web/public_html/ "$pkgdir"/usr/share/transmission
  
@@ -42,7 +42,7 @@
  glibmm-2.68
  gtk4
  gtkmm-4.0
-@@ -16,4 +18,3 @@
+@@ -17,4 +19,3 @@
  qt6-base
  qt6-svg
  qt6-tools

@@ -106,6 +106,8 @@ libreoffice-fresh-i18n
 libreoffice-fresh
 libreoffice-fresh-sdk
 libreoffice-still-i18n
+libreoffice-still
+libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
