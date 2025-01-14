@@ -6,7 +6,7 @@
          ipv6-up.d.iface-config.sh
 -        ppp.systemd
          LICENSE)
- sha512sums=('2303287dfb6a887f0c61b2a5db2943d2abb74b5116bb6ab123d7d58af4dc2fc7d1dd4dd23fa3fd2443617637bf293ed560142f4cd81ab29c79952618960050ef'
+ sha512sums=('6d627b5fe3d1b92e38efd3217e1471d1155673e20a1a3e20b1f0a3ecec128498d0c9ea841d0588f413ce097a81838c444d95926f9687fa9928905188de3afe19'
              '4324a9abe79b20735b87de2158bb73b6449415a4760f06a06b648dfb53517f8d9907b094a88d1b492b24c8720cfd9b17d491fbe236fbd51ba9042af60483b231'
 @@ -29,7 +28,6 @@
              '256941b220ad54119daf1c76237fecd0b2e9ede1d74b0950c45e373252ce20c1d4cd35a26b4d35f94ad2b7f49569fc9050c44731d672317994b562c750020326'
@@ -25,13 +25,13 @@
    make
  }
  
-@@ -70,7 +68,6 @@
-   install -d -m755 "$pkgdir"/etc/ppp/peers
+@@ -64,7 +62,6 @@
+   install -dm755 "$pkgdir"/etc/ppp/peers
    chmod 0755 "$pkgdir"/usr/lib/pppd/$pkgver/*.so
  
--  install -D -m644 "$srcdir"/ppp.systemd "$pkgdir"/usr/lib/systemd/system/ppp@.service
+-  install -Dm644 "$srcdir"/ppp.systemd "$pkgdir"/usr/lib/systemd/system/ppp@.service
  
-   install -Dm644 "$srcdir"/LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+   install -Dm644 "$srcdir"/LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
  }
 
 

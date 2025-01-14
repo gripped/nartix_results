@@ -135,7 +135,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-gitea
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -318,13 +317,11 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
-libcdio
 libe-book
 libei
 libei-docs
 libepoxy
 libepoxy-docs
-libfbclient
 libfido2
 libfprint
 libgdata
@@ -480,6 +477,7 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+niri
 nsd
 nushell
 nvidia-open
@@ -602,7 +600,6 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-dnspython
 python-google-auth
 python-ipykernel
 python-levenshtein
@@ -815,6 +812,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

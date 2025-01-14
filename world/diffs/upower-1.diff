@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=upower
--pkgver=1.90.7
-+pkgver=1.90.6
- pkgrel=1
- pkgdesc="Abstraction for enumerating power devices, listening to device events and querying history and statistics"
- url="https://upower.freedesktop.org"
 @@ -26,7 +26,7 @@
    gtk-doc
    meson
@@ -17,15 +9,7 @@
    usbmuxd
  )
  checkdepends=(
-@@ -40,14 +40,14 @@
- source=(
-   "git+https://gitlab.freedesktop.org/upower/upower.git#tag=v$pkgver"
- )
--b2sums=('9d973b3d6ae9546a798464499f0dfe6aec769c51e00725956f1df5fc06a6fd7370b8dbe2bf020df18962f10cc2be6fdddb833ab1a679cb70298ad60a5fbc225b')
-+b2sums=('51f2bb2c7497c70ed094eee2167449bbdc2920cb71487c0d9707de5401653f6a03e80f6ec1b8109d05a6c4cd165a63467bef1d62a5f928653f96bf5be803e864')
- 
- prepare() {
-   cd upower
+@@ -47,7 +47,7 @@
  }
  
  build() {

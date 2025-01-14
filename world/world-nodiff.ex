@@ -699,6 +699,7 @@ gimp
 girara
 git-lfs
 git
+gitea
 github-cli
 gkrellm
 gl2ps
@@ -994,6 +995,7 @@ hyphen-en
 hyprcursor
 hyprgraphics
 hypridle
+hyprland-qt-support
 hyprland-qtutils
 hyprlang
 hyprutils
@@ -1540,6 +1542,7 @@ libcacard
 libcbor
 libcddb
 libcdio-paranoia
+libcdio
 libcdr
 libcerf
 libcgif
@@ -1603,6 +1606,7 @@ libexttextcat
 libfabric
 libfakekey
 libfaketime
+libfbclient
 libfdk-aac
 libffado
 libfilezilla
@@ -3278,6 +3282,7 @@ python-django-q2
 python-django-rest-framework
 python-django-sekizai
 python-dkim
+python-dnspython
 python-docker-pycreds
 python-docker
 python-dockerpty
@@ -5377,7 +5382,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

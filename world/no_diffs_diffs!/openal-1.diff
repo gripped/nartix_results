@@ -1,0 +1,68 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   openal
+   openal-examples
+ )
+-pkgver=1.24.2
++pkgver=1.24.1
+ pkgrel=1
+ pkgdesc="Cross-platform 3D audio library, software implementation"
+ url="https://github.com/kcat/openal-soft"
+@@ -17,6 +17,7 @@
+ makedepends=(
+   alsa-lib
+   cmake
++  ffmpeg
+   fluidsynth
+   git
+   jack
+@@ -27,9 +28,10 @@
+   pipewire
+   portaudio
+   qt5-base
++  sdl2
+ )
+ source=("git+https://github.com/kcat/openal-soft#tag=$pkgver")
+-b2sums=('0f39ad0911c0effad28ac695e9aacfd97fcaa7c3da5fb8f6a4144396e3cef304cc0648c2e287719c490df9b26d5d2a60fedb83391eaba28679b7f2e026c296ae')
++b2sums=('882df4c46767fad888626879d9ad1ab8848630bda9c86507dd33945b9c86e5687a90a4ed51e2d701c18d7cb655f143aed5e96527115ca890e226a5ad1c08ce21')
+ 
+ prepare() {
+   cd openal-soft
+@@ -68,7 +70,7 @@
+   install -Dt "$pkgdir/usr/share/doc/openal" -m644 openal-soft/docs/*
+ 
+   cd "$pkgdir"
+-  _pick examples usr/bin/al{direct,hrtf,latency,multireverb}
++  _pick examples usr/bin/al{direct,ffplay,hrtf,latency,loopback,multireverb}
+   _pick examples usr/bin/al{debug,lafplay,play,record,reverb,stream,tonegen}
+ }
+ 
+@@ -76,7 +78,9 @@
+   pkgdesc+=" (example programs)"
+   depends+=(
+     "openal=$pkgver-$pkgrel"
++    ffmpeg
+     libsndfile
++    sdl2
+   )
+ 
+   mv examples/* "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ alsa-lib
+ cmake
++ffmpeg
+ fluidsynth
+ gcc-libs
+ git
+@@ -13,3 +14,4 @@
+ pipewire
+ portaudio
+ qt5-base
++sdl2

@@ -1,15 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   'intel-speed-select'
+@@ -5,17 +5,16 @@
+   'bpf'
+   'cpupower'
+   'hyperv'
+-  'intel-speed-select'
+-  'kcpuid'
+   'linux-tools-meta'
+   'perf'
+   'tmon'
+   'turbostat'
+   'usbip'
+   'x86_energy_perf_policy'
++  'intel-speed-select'
  )
  pkgver=6.12
--pkgrel=10
-+pkgrel=9
+-pkgrel=11
++pkgrel=10
  license=('GPL-2.0-only')
  arch=('x86_64')
  url='https://www.kernel.org'
-@@ -33,11 +33,6 @@
+@@ -34,11 +33,6 @@
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"
          'cpupower.default'
@@ -21,7 +32,7 @@
          'fix-buildid.patch'
  )
  validpgpkeys=(
-@@ -46,11 +41,6 @@
+@@ -47,11 +41,6 @@
  )
  sha256sums=('267bab84f30e3ce4a88b6441aeee777b114fd58041b43cabfe50fdf0c0a97321'
              '4fa509949d6863d001075fa3e8671eff2599c046d20c98bb4a70778595cd1c3f'
@@ -33,7 +44,34 @@
              'b0271b2757bb2cb05a1fd5560a732959cf28db82bb114aadcf7341b71ce127ea')
  
  prepare() {
-@@ -203,8 +193,6 @@
+@@ -136,11 +125,6 @@
+   pushd linux/tools/power/x86/intel-speed-select
+   make
+   popd
+-
+-  echo ':: kcpuid'
+-  pushd linux/tools/arch/x86/kcpuid
+-  make
+-  popd
+ }
+ 
+ package_linux-tools-meta() {
+@@ -151,13 +135,12 @@
+     'bpf'
+     'cpupower'
+     'hyperv'
+-    'intel-speed-select'
+-    'kcpuid'
+     'perf'
+     'tmon'
+     'turbostat'
+     'usbip'
+     'x86_energy_perf_policy'
++    'intel-speed-select'
+   )
+   conflicts=(
+     'acpidump'
+@@ -210,8 +193,6 @@
      install install-man
    popd
    install -Dm 644 $pkgname.default "$pkgdir/etc/default/$pkgname"
@@ -42,7 +80,7 @@
  }
  
  package_x86_energy_perf_policy() {
-@@ -218,14 +206,13 @@
+@@ -225,14 +206,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -58,7 +96,7 @@
  }
  
  package_tmon() {
-@@ -250,9 +237,6 @@
+@@ -257,9 +237,6 @@
  
    cd linux/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib
@@ -68,13 +106,31 @@
  }
  
  package_bpf() {
+@@ -290,10 +267,3 @@
+   make install DESTDIR="$pkgdir"
+ }
+ 
+-package_kcpuid() {
+-  pkgdesc='Kernel tool for various cpu debug outputs'
+-  depends=('glibc')
+-
+-  make BINDIR=/usr/bin HWDATADIR="/usr/share/misc" DESTDIR="$pkgdir" -C linux/tools/arch/x86/kcpuid install
+-}
+-
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -19,6 +19,7 @@
+@@ -13,13 +13,13 @@
+ glibc
+ hyperv
+ intel-speed-select
+-kcpuid
+ libcap
+ libelf
+ libnl
  libpfm
  libsframe.so
  libtraceevent
@@ -82,7 +138,7 @@
  libunwind
  llvm
  llvm-libs
-@@ -34,7 +35,6 @@
+@@ -35,7 +35,6 @@
  readline
  slang
  sysfsutils
