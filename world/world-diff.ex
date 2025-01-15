@@ -10,7 +10,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -109,11 +108,9 @@ fcitx5
 fcron
 firefox
 firewalld
-five-or-more
 flatpak
 flatpak-docs
 fluidsynth
-four-in-a-row
 fprintd
 freerdp
 freerdp2
@@ -608,7 +605,6 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
-python-validate-pyproject
 python-werkzeug
 qastools
 qbittorrent
@@ -702,6 +698,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -812,7 +809,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -830,6 +826,7 @@ v2ray
 v4l-utils
 vault
 vice
+viewnior
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms
@@ -867,6 +864,7 @@ xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal
+xdg-user-dirs-gtk
 xdg-user-dirs
 xf86-input-evdev
 xf86-input-vmmouse

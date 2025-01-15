@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   openmpi
-   openmpi-docs
- )
--pkgver=5.0.6
-+pkgver=5.0.5
- pkgrel=2
- pkgdesc='High performance message passing library (MPI)'
- arch=(x86_64)
-@@ -22,20 +22,14 @@
+@@ -22,8 +22,6 @@
    libfabric
    libnl
    openpmix
@@ -18,31 +9,7 @@
    prrte
    valgrind
    zlib
- )
- source=(
--  https://www.open-mpi.org/software/ompi/v${pkgver%.*}/downloads/$pkgbase-$pkgver.tar.bz2
--  fix-cuda-build.patch
--)
--sha256sums=('bd4183fcbc43477c254799b429df1a6e576c042e74a2d2f8b37d537b2ff98157'
--            '7acee1f8fd6b592b5e3ff09ed0f059a49387c0d00418430a67e5e6d849c8fbea')
--b2sums=('72418c4d2cdc0628214e0c2db2e8d2dd52234a3888d7344eff23576b19de94d4cb74b168120d72cedeea8c835db363d83b61319fcdf13277c541003606f4558a'
--        '51c5dfd4d7ca5b3f650efab4f0d8b383f8767ecfdb192272c796b00608cb412c7cc5ad1231af27be639b238d1e55be34e411aa40efbb37a6a3a99b83e3c2a1f9')
-+  https://www.open-mpi.org/software/ompi/v${pkgver%.*}/downloads/$pkgbase-$pkgver.tar.bz2)
-+sha256sums=('6588d57c0a4bd299a24103f4e196051b29e8b55fbda49e11d5b3d32030a32776')
-+b2sums=('740e5dbc7e54b8f4eac4fa2c40fb5a0ccfba201dff15ccc84899f28dfad0147078ef6c2b0585615c93fc6edb70b665b3f7a9adea5e5e53a7563ae4c7a6ccbada')
- 
- _pick() {
-   local p="$1" f d; shift
-@@ -52,8 +46,6 @@
-   sed -i 's|WRAPPER__FCFLAGS|WRAPPER_FCFLAGS|g' configure
-   sed -i 's|WRAPPER_EXTRA_FCFLAGS|WRAPPER_FCFLAGS|g' configure
-   sed -i 's|"-I/usr/include",||' opal/tools/wrappers/opal_wrapper.c
--
--  patch -Np1 -i ../fix-cuda-build.patch
- }
- 
- build() {
-@@ -70,20 +62,18 @@
+@@ -70,13 +68,11 @@
      --with-pmix=external
      --with-prrte=external
      --with-valgrind
@@ -53,20 +20,12 @@
      --with-rocm=/opt/rocm
 -    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm,coll_ucc,scoll_ucc
 -    --with-show-load-errors='^accelerator,rcache,coll/ucc'
-+    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm
-+    --with-show-load-errors='^accelerator,rcache'
++    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm #,coll_ucc,scoll_ucc
++    --with-show-load-errors='^accelerator,rcache' #,coll/ucc'
    )
    cd $pkgbase-$pkgver
  
-   export HOSTNAME=buildhost
-   export USER=builduser
- 
--  ./configure "${configure_options[@]}"
-+  ac_cv_func_sem_open=no ./configure "${configure_options[@]}"
-   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-   make V=1
- }
-@@ -101,7 +91,6 @@
+@@ -101,7 +97,6 @@
      libfabric
      libnl
      openpmix libpmix.so
@@ -74,7 +33,7 @@
      prrte
      zlib
    )
-@@ -110,7 +99,6 @@
+@@ -110,7 +105,6 @@
      'hip-runtime-amd: ROCm support'
      'gcc-fortran: fortran support'
      'openssh: for execution on remote hosts via plm_ssh_agent'
@@ -100,15 +59,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,6 @@
- sed -i 's|WRAPPER__FCFLAGS|WRAPPER_FCFLAGS|g' configure
- sed -i 's|WRAPPER_EXTRA_FCFLAGS|WRAPPER_FCFLAGS|g' configure
- sed -i 's|"-I/usr/include",||' opal/tools/wrappers/opal_wrapper.c
--patch -Np1 -i ../fix-cuda-build.patch
- }
- build() {
- local configure_options=(
-@@ -19,18 +18,16 @@
+@@ -19,13 +19,11 @@
  --with-pmix=external
  --with-prrte=external
  --with-valgrind
@@ -119,14 +70,8 @@
  --with-rocm=/opt/rocm
 ---enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm,coll_ucc,scoll_ucc
 ---with-show-load-errors='^accelerator,rcache,coll/ucc'
-+--enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm
-+--with-show-load-errors='^accelerator,rcache'
++--enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm #,coll_ucc,scoll_ucc
++--with-show-load-errors='^accelerator,rcache' #,coll/ucc'
  )
  cd $pkgbase-$pkgver
  export HOSTNAME=buildhost
- export USER=builduser
--./configure "${configure_options[@]}"
-+ac_cv_func_sem_open=no ./configure "${configure_options[@]}"
- sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
- make V=1
- }

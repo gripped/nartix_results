@@ -1,14 +1,46 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- license=(LGPL)
- depends=(glib2 libxml2)
- makedepends=(gobject-introspection gtk-doc vala meson git)
+@@ -1,33 +1,29 @@
+ 
+ pkgname=gupnp-av
+-pkgver=0.14.3
+-pkgrel=1
++pkgver=0.14.1
++pkgrel=2
+ pkgdesc="Library to ease handling and implementation of UPnP A/V profiles"
+ url="https://wiki.gnome.org/Projects/GUPnP"
+ arch=(x86_64)
+-license=(LGPL-2.1-or-later)
+-depends=(
+-  glib2
+-  glibc
+-  libxml2
+-)
+-makedepends=(
+-  git
+-  glib2-devel
+-  gobject-introspection
+-  gtk-doc
+-  meson
+-  vala
+-)
+-source=("git+https://gitlab.gnome.org/GNOME/gupnp-av.git#tag=gupnp-av-$pkgver")
+-b2sums=('78d905d0d0c2c46be1fc9d8602894ec2f684fb3d137ff740b1cb06f8d02766654eba8815ae91ab6451e098af59b1ee7a247393926978b94ad4d2b2bd2d7a608f')
++license=(LGPL)
++depends=(glib2 libxml2)
++makedepends=(gobject-introspection gtk-doc vala meson git)
 +options=(debug)
- _commit=86f148ebb920a8113190fd3e6cae636c9fdd3ca7  # tags/gupnp-av-0.14.1^0
- source=("git+https://gitlab.gnome.org/GNOME/gupnp-av.git#commit=$_commit")
- sha256sums=('SKIP')
-@@ -22,7 +23,7 @@
++_commit=86f148ebb920a8113190fd3e6cae636c9fdd3ca7  # tags/gupnp-av-0.14.1^0
++source=("git+https://gitlab.gnome.org/GNOME/gupnp-av.git#commit=$_commit")
++sha256sums=('SKIP')
++
++pkgver() {
++  cd gupnp-av
++  git describe --tags | sed 's/^gupnp-av-//;s/[^-]*-g/r&/;s/-/+/g'
++}
+ 
+ prepare() {
+   cd gupnp-av
  }
  
  build() {
@@ -21,7 +53,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ git
+ glib2
+-glib2-devel
+-glibc
+ gobject-introspection
+ gtk-doc
+ libglib-2.0.so
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

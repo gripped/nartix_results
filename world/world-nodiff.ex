@@ -99,6 +99,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -225,6 +226,7 @@ botan
 botan2
 bovo
 bower
+bpf-linker
 bpython
 breeze-grub
 breeze-gtk
@@ -601,6 +603,7 @@ ttf-fira-sans
 otf-fira-sans
 firejail
 fish
+five-or-more
 flac
 flac-doc
 flake8
@@ -629,6 +632,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 fossil
+four-in-a-row
 fractal
 frameworkintegration
 frameworkintegration5
@@ -4286,6 +4290,7 @@ python-urwid
 python-userpath
 python-uvloop
 python-validate-email
+python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4470,7 +4475,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -5382,6 +5386,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
@@ -5406,7 +5411,6 @@ vdpauinfo
 veracrypt
 verdict
 vid.stab
-viewnior
 vifm
 vigra
 python-vigra
@@ -5515,7 +5519,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
-xdg-user-dirs-gtk
 xdg-utils-cxx
 xdg-utils
 xdotool
