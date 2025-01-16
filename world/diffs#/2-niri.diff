@@ -8,7 +8,7 @@
    xdg-desktop-portal-impl
  )
  makedepends=(
-@@ -65,7 +64,6 @@
+@@ -67,7 +66,6 @@
  package() {
    cd $pkgname-$pkgver
    install -vDm 755 {target/release/$pkgname,resources/$pkgname-session} -t "$pkgdir/usr/bin/"

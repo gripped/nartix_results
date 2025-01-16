@@ -278,7 +278,6 @@ catch2
 catdoc
 cauchy
 cbatticon
-cbindgen
 ccache
 cdparanoia
 cdrdao
@@ -1489,6 +1488,15 @@ ladspa
 lager
 lame
 languagetool
+lapack
+blas
+cblas
+lapacke
+blas64
+cblas64
+lapack64
+lapacke64
+lapack-doc
 laszip
 laszip2
 layer-shell-qt
@@ -3191,7 +3199,6 @@ python-cmsis-pack-manager
 python-cogapp
 python-colorama
 python-colored-traceback
-python-coloredlogs
 python-colorlog
 python-colour
 python-comm
@@ -4475,6 +4482,7 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -5519,6 +5527,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-lxqt
+xdg-user-dirs-gtk
 xdg-utils-cxx
 xdg-utils
 xdotool

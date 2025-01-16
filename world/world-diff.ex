@@ -46,6 +46,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+cbindgen
 cgmanager
 chromium-bsu
 chrony
@@ -280,15 +281,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-lapack
-blas
-cblas
-lapacke
-blas64
-cblas64
-lapack64
-lapacke64
-lapack-doc
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -597,6 +589,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-coloredlogs
 python-google-auth
 python-ipykernel
 python-levenshtein
@@ -698,7 +691,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -864,7 +856,6 @@ xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal
-xdg-user-dirs-gtk
 xdg-user-dirs
 xf86-input-evdev
 xf86-input-vmmouse

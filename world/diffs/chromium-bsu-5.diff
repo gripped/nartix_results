@@ -4,13 +4,13 @@
  
  pkgname=chromium-bsu
  pkgver=0.9.16.1
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="A fast paced top scrolling shooter"
  arch=('x86_64')
  url="http://chromium-bsu.sourceforge.net/"
  license=('custom:artistic')
--depends=('freeglut' 'glu' 'sdl2_image' 'openal' 'freealut' 'ftgl' 'fontconfig')
+-depends=('glu' 'sdl2_image' 'openal' 'freealut' 'ftgl' 'fontconfig')
 +depends=('freeglut' 'glu' 'sdl_image' 'openal' 'freealut' 'ftgl' 'fontconfig')
  source=(https://downloads.sourceforge.net/project/chromium-bsu/Chromium%20B.S.U.%20source%20code/chromium-bsu-$pkgver.tar.gz use_fabs_for_floats.patch)
  sha512sums=('1d202c0704e16b31d93c552ae6cfc17caf1182a9ec80730a981cd99c8ca8cb64d4e6e838691aa86e17ea23b7c2c0b1e7b1f4dab91bbc6129f9bf86801f2b27c8'
@@ -48,7 +48,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,4 +4,4 @@
+@@ -1,6 +1,7 @@
+ fontconfig
+ freealut
++freeglut
  ftgl
  glu
  openal
