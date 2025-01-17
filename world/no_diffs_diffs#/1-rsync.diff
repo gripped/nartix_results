@@ -1,19 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=rsync
--pkgver=3.4.1
-+pkgver=3.4.0
- pkgrel=1
- pkgdesc='A fast and versatile file copying tool for remote and local files'
- arch=('x86_64')
-@@ -10,12 +10,16 @@
+@@ -10,7 +10,10 @@
           'zlib' 'zstd')
  optdepends=('python: for rrsync')
  makedepends=('git' 'python-commonmark')
 -backup=('etc/rsyncd.conf')
-+checkdepends=('rsync')
 +backup=(
 +    'etc/rsyncd.conf'
 +    'etc/xinetd.d/rsync'
@@ -21,21 +12,7 @@
  validpgpkeys=('0048C8B026D4C96F0E589C2F6C859FB14B96A8C5'  # Wayne Davison <wayned@users.sourceforge.net>
                '9FEF112DCE19A0DC7E882CB81BB24997A8535F6F') # Andrew Tridgell <andrew@tridgell.net
  source=("git+https://github.com/RsyncProject/rsync.git#tag=v${pkgver}?signed"
-         'rsyncd.conf')
--sha256sums=('97ac2998444ad0611ea47103e294682fc39c7518a33af3ef3e44fdb1ed282021'
-+sha256sums=('f14621c42d88d42bc020a1cadfa82c4fa2a842df92caa4e41ca33d996f9bf23c'
-             '733ccb571721433c3a6262c58b658253ca6553bec79c2bdd0011810bb4f2156b')
- 
- _backports=(
-@@ -64,6 +68,7 @@
-   fi
- 
-   make test
-+
- }
- 
- package() {
-@@ -71,7 +76,5 @@
+@@ -71,7 +74,5 @@
  
    make DESTDIR="$pkgdir" install
    install -Dm0644 ../rsyncd.conf "$pkgdir/etc/rsyncd.conf"

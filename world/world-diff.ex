@@ -77,7 +77,6 @@ docker
 dolphin-emu
 dolphin-emu-tool
 dovecot
-dpkg
 dracut
 drkonqi
 dtc
@@ -157,6 +156,7 @@ gnome-system-monitor
 gnome-tour
 gnome-user-share
 go-bindata
+go
 godot
 godot-mono
 greetd-tuigreet
@@ -353,13 +353,14 @@ bootconfig
 bpf
 cpupower
 hyperv
+intel-speed-select
+kcpuid
 linux-tools-meta
 perf
 tmon
 turbostat
 usbip
 x86_energy_perf_policy
-intel-speed-select
 lirc
 llvm-julia
 lm_sensors
@@ -536,7 +537,6 @@ php-gd
 php-sodium
 php-odbc
 php-pgsql
-php-pspell
 php-snmp
 php-sqlite
 php-tidy
@@ -577,6 +577,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+pptpd
 proxytunnel
 pulseaudio
 libpulse
@@ -589,7 +590,6 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-coloredlogs
 python-google-auth
 python-ipykernel
 python-levenshtein
@@ -700,7 +700,6 @@ quazip-qt6
 quilt
 rabbitmq
 rabbitmqadmin
-rapidfuzz-cpp
 rdma-core
 redis
 redshift
@@ -715,6 +714,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-parser
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -801,6 +801,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

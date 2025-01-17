@@ -485,6 +485,7 @@ double-conversion
 doxygen
 doxygen-docs
 dpdk
+dpkg
 dqlite
 draco
 dragon
@@ -789,7 +790,6 @@ go-licenses
 go-md2man
 go-tools
 go-yq
-go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -2927,7 +2927,6 @@ vim-powerline
 powertop
 poxml
 pps-tools
-pptpd
 pqiv
 pre-commit
 presage
@@ -3199,6 +3198,7 @@ python-cmsis-pack-manager
 python-cogapp
 python-colorama
 python-colored-traceback
+python-coloredlogs
 python-colorlog
 python-colour
 python-comm
@@ -3725,6 +3725,7 @@ python-oslotest
 python-outcome
 python-overrides
 python-ovirt-engine-sdk
+python-owslib
 python-packaging
 python-pallets-sphinx-themes
 python-pam
@@ -4505,6 +4506,7 @@ raft
 ragel
 range-v3
 ranger
+rapidfuzz-cpp
 rapidjson
 raptor
 rasqal
@@ -4781,7 +4783,6 @@ ruby-optimist
 ruby-packetfu
 ruby-paint
 ruby-parallel
-ruby-parser
 ruby-path_expander
 ruby-patron
 ruby-pcaprub
@@ -5394,7 +5395,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash
