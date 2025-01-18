@@ -111,6 +111,7 @@ firewalld
 flatpak
 flatpak-docs
 fluidsynth
+font-manager
 fprintd
 freerdp
 freerdp2
@@ -156,7 +157,6 @@ gnome-system-monitor
 gnome-tour
 gnome-user-share
 go-bindata
-go
 godot
 godot-mono
 greetd-tuigreet
@@ -215,7 +215,6 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
-gyp
 haproxy
 haveged
 hexchat
@@ -384,7 +383,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-mat2
 mate-applets
 mate-backgrounds
 mate-calc
@@ -714,7 +712,6 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-parser
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -794,7 +791,6 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
-unibilium
 unoconv
 upower
 uptimed

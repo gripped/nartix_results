@@ -181,7 +181,6 @@ sysfsutils
 syslinux
 tar
 texinfo
-tzdata
 unixodbc
 vi
 which

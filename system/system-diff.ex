@@ -61,6 +61,7 @@ shadow
 thin-provisioning-tools
 tpm2-tss
 traceroute
+tzdata
 usbutils
 util-linux
 util-linux-libs

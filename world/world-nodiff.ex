@@ -790,6 +790,7 @@ go-licenses
 go-md2man
 go-tools
 go-yq
+go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -927,6 +928,7 @@ foomatic-db-gutenprint-ppds
 gv
 gwenhywfar
 gwenview
+gyp
 half
 handbrake
 harfbuzz
@@ -2206,6 +2208,7 @@ marked-man
 marked
 marknote
 massif-visualizer
+mat2
 materia-kde
 kvantum-theme-materia
 materialx
@@ -4783,6 +4786,7 @@ ruby-optimist
 ruby-packetfu
 ruby-paint
 ruby-parallel
+ruby-parser
 ruby-path_expander
 ruby-patron
 ruby-pcaprub
@@ -5378,6 +5382,7 @@ umbrello
 umurmur
 unarchiver
 unclutter
+unibilium
 unicode-character-database
 unicode-cldr
 unicode-cldr-annotations

@@ -1,26 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
- 
- pkgname=cbindgen
--pkgver=0.28.0
-+pkgver=0.27.0
- pkgrel=1
- pkgdesc="A tool for generating C bindings to Rust code"
--url="https://github.com/mozilla/cbindgen"
-+url="https://github.com/eqrion/cbindgen"
- arch=(x86_64)
- license=(MPL-2.0)
- depends=(
-@@ -19,13 +19,12 @@
-   cython
-   python
- )
--options=(!lto)
--source=("git+$url#tag=$pkgver")
--b2sums=('8c93d193e8a40936e8bb5f72329477f8cff3fc62809441de669cffecf030fad32c6bf72858a609576759aeb06c9c26eb81c35a9438c089d063d9ca4145d60e82')
-+source=("git+$url#tag=v$pkgver")
-+b2sums=('76b445f7f9729107a04451433d047f50b5ac52c7dc501685f00d0558dab82e2bc09d23a8b5c33ea231e1a2fae81533ba8e64d21a43d524b6dd0de170114c6ea5')
+@@ -25,7 +25,7 @@
  
  prepare() {
    cd cbindgen
@@ -29,7 +9,7 @@
  }
  
  build() {
-@@ -35,7 +34,7 @@
+@@ -35,7 +35,7 @@
  
    export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
  
