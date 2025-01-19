@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=swtpm
+ pkgver=0.10.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Libtpms-based TPM emulator with socket, character device, and Linux CUSE interface'
+ arch=('x86_64')
+ url='https://github.com/stefanberger/swtpm'
 @@ -34,8 +34,8 @@
    "$pkgname.tmpfiles"
  )
@@ -11,7 +20,15 @@
  validpgpkeys=('B818B9CADF9089C2D5CEC66B75AD65802A0B4211') # Stefan Berger <stefanb@linux.vnet.ibm.com>
  
  prepare() {
-@@ -59,7 +59,7 @@
+@@ -51,7 +51,6 @@
+   cd "$pkgname"
+   ./configure \
+     --prefix=/usr \
+-    --libexecdir=/usr/lib \
+     --with-cuse \
+     --with-gnutls \
+     --with-seccomp
+@@ -60,7 +59,7 @@
  
  check() {
    cd "$pkgname"
@@ -20,3 +37,19 @@
  }
  
  package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,6 @@
+ cd "$pkgname"
+ ./configure \
+ --prefix=/usr \
+---libexecdir=/usr/lib \
+ --with-cuse \
+ --with-gnutls \
+ --with-seccomp

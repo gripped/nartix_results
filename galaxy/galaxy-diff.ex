@@ -14,6 +14,10 @@ gpicview
 greetd-regreet
 gtklock
 labwc
+lazarus
+lazarus-gtk3
+lazarus-qt5
+lazarus-qt6
 lemurs
 libretro-dolphin
 libretro-mupen64plus-next

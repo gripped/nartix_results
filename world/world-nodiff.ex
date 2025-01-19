@@ -99,7 +99,6 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -2847,6 +2846,16 @@ phonon-qt6-vlc
 phonon
 phonon-qt5
 phonon-qt6
+php-apcu
+php-legacy-apcu
+php-geoip
+php-memcache
+php-memcached
+php-mongodb
+php-legacy-mongodb
+php-redis
+php-legacy-redis
+php-snuffleupagus
 picard
 picmi
 picom
@@ -3113,6 +3122,7 @@ python-beniget
 python-betamax-matchers
 python-betamax-serializers
 python-betamax
+python-better-exceptions
 python-bidict
 python-big-o
 python-billiard
@@ -5400,6 +5410,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
@@ -5424,6 +5435,7 @@ vdpauinfo
 veracrypt
 verdict
 vid.stab
+viewnior
 vifm
 vigra
 python-vigra

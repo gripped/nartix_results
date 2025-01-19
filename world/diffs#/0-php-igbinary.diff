@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgbase=php-igbinary
+ pkgname=(php-igbinary php-legacy-igbinary)
+ pkgver=3.2.16
+-pkgrel=1
++pkgrel=2
+ pkgdesc="A drop in replacement for the standard php serializer"
+ arch=(x86_64)
+ url="https://github.com/igbinary/igbinary"
+@@ -21,6 +21,7 @@
+   cp -av $pkgbase-$pkgver ${pkgname[1]}-$pkgver
+   (
+     cd $pkgbase-$pkgver
++    sed 's/E_ALL|E_STRICT/E_ALL/g' -i tests/igbinary_009b_php8.phpt
+     phpize
+   )
+   (
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,7 @@
+ cp -av $pkgbase-$pkgver ${pkgname[1]}-$pkgver
+ (
+ cd $pkgbase-$pkgver
++sed 's/E_ALL|E_STRICT/E_ALL/g' -i tests/igbinary_009b_php8.phpt
+ phpize
+ )
+ (

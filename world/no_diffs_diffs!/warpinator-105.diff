@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=warpinator
+-pkgver=1.8.8
++pkgver=1.8.6
+ pkgrel=1
+ pkgdesc='LAN file sender, send and receive files across the network'
+ arch=('any')
+@@ -12,7 +12,7 @@
+ makedepends=('meson' 'polkit')
+ optdepends=('ufw: Open a firewall port for Warpinator')
+ source=("https://github.com/linuxmint/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('29989d3e955cccf2efaf8407f38a443469be3a40ed8eee4c0e41fd226dde3a68')
++sha256sums=('a7e6ef1336de6b67429e7203584b547cf927c1d7ff2b5eaed86394d0a07372b5')
+ 
+ prepare() {
+   cd $pkgname-$pkgver
 @@ -23,7 +23,7 @@
  }
  

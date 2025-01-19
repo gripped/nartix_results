@@ -10,6 +10,7 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
+arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -506,6 +507,10 @@ perl-file-which
 perl-text-csv
 pgbouncer
 phodav
+php-igbinary
+php-legacy-igbinary
+php-imagick
+php-legacy-imagick
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -797,7 +802,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -815,7 +819,6 @@ v2ray
 v4l-utils
 vault
 vice
-viewnior
 virtualbox
 virtualbox-sdk
 virtualbox-host-dkms

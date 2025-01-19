@@ -116,25 +116,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,21 +0,0 @@
--
--audit
+@@ -1,21 +1,20 @@
+ 
+ audit
 -dbus
--docbook-xsl
--doxygen
--expat
--glib2
--glibc
--libaudit.so
--libcap-ng
--libcap-ng.so
--libexpat.so
+ docbook-xsl
+ doxygen
++elogind
+ expat
+ glib2
+ glibc
+ libaudit.so
+ libcap-ng
+ libcap-ng.so
++libelogind
++libelogind.so
+ libexpat.so
 -libsystemd.so
--mallard-ducktype
--meson
--python
--qt5-tools
+ mallard-ducktype
+ meson
+ python
+ qt5-tools
 -systemd
 -systemd-libs
--xmlto
--yelp-tools
+ xmlto
+ yelp-tools

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+   uwsgi-plugin-notfound
+ )
+ pkgver=2.0.28
+-pkgrel=2
++pkgrel=3
+ pkgdesc="A full stack for building hosting services"
+ arch=(x86_64)
+ url="https://uwsgi-docs.readthedocs.io/en/latest/"
 @@ -39,7 +39,6 @@
    python-gevent
    python-greenlet
@@ -42,7 +51,7 @@
          'a8b7d003f66ed5c5b1b60d57c05339af3dcdcf346eab52760810086e17f6936dd29ed7fd26281657bc86ac6721c989cbfbaa8e81f97111c807bcd06baece3bf2'
          '82e03ea95995cfa78abc4d930bd0c250f22788d9ca4dc0921cfbb44a965c0f851cbcc7a855e36ec6e6aa5bf33fbd313b4fe68a2f1c4b7935c2b297be25895324'
          '9759827f7619358383bf0e68c955522c0054620f742f5122a59888fadfc0bc20bd587eab7a77bc73e8ee4d20cf8f02625c07f241462e8ab9c08f5af509daaef3')
-@@ -104,7 +91,6 @@
+@@ -104,19 +91,13 @@
      openssl
      pam libpam.so
      pcre2
@@ -50,7 +59,8 @@
      util-linux-libs libuuid.so
      zlib
    )
-@@ -113,10 +99,6 @@
+   backup=('etc/uwsgi/emperor.ini')
+-  install=uwsgi.install
  
    cd $pkgbase-$pkgver
    install -vDm 755 "${pkgbase}" -t "$pkgdir/usr/bin/"

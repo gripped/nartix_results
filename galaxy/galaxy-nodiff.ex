@@ -78,11 +78,6 @@ gstreamermm-docs
 gtk-session-lock
 incron
 kanshi
-lazarus
-lazarus-gtk2
-lazarus-gtk3
-lazarus-qt5
-lazarus-qt6
 libdbusmenu-lxqt
 libe-book
 libetonyek
