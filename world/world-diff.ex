@@ -10,7 +10,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -104,7 +103,6 @@ fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
-fcitx5-mozc
 fcitx5
 fcron
 firefox
@@ -113,6 +111,7 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
+fontconfig
 fprintd
 freerdp
 freerdp2
@@ -642,7 +641,6 @@ qemu-system-aarch64
 qemu-system-alpha
 qemu-system-arm
 qemu-system-avr
-qemu-system-cris
 qemu-system-hppa
 qemu-system-loongarch64
 qemu-system-m68k

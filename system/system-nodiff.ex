@@ -106,8 +106,6 @@ libpsl
 libsasl
 libseccomp
 python-libseccomp
-libsecret
-libsecret-docs
 libssh2
 libtasn1
 libtirpc
@@ -181,6 +179,7 @@ sysfsutils
 syslinux
 tar
 texinfo
+tzdata
 unixodbc
 vi
 which

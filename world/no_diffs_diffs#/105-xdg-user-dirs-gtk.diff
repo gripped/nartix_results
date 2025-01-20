@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -30,7 +30,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- git apply -3 ../fix-datadir.diff
+@@ -3,6 +3,6 @@
+ git apply -3 ../0001-desktop-Show-in-more-environments.patch
  }
  build() {
 -arch-meson $pkgname build

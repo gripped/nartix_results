@@ -31,6 +31,8 @@ glibc-locales
 gssproxy
 icu
 iputils
+libsecret
+libsecret-docs
 libunistring
 libusb
 linux
@@ -61,7 +63,6 @@ shadow
 thin-provisioning-tools
 tpm2-tss
 traceroute
-tzdata
 usbutils
 util-linux
 util-linux-libs

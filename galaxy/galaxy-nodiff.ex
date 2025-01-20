@@ -54,7 +54,6 @@ cvs
 dillo
 dosbox
 doublecmd
-doublecmd-gtk2
 doublecmd-qt5
 doublecmd-qt6
 elementary-icon-theme
@@ -67,6 +66,7 @@ fceux
 featherpad
 firefox-i18n
 fluxbox
+font-manager
 fpc-src
 fpc
 garcon
@@ -78,6 +78,10 @@ gstreamermm-docs
 gtk-session-lock
 incron
 kanshi
+lazarus
+lazarus-gtk3
+lazarus-qt5
+lazarus-qt6
 libdbusmenu-lxqt
 libe-book
 libetonyek

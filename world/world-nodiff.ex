@@ -99,6 +99,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -574,6 +575,7 @@ fcitx-qt6
 fcitx
 fcitx5-configtool
 fcitx5-gtk
+fcitx5-mozc
 fcitx5-qt
 featherpad
 feh
@@ -622,7 +624,6 @@ folks
 font-awesome
 ttf-font-awesome
 otf-font-awesome
-fontconfig
 fontforge
 foomatic-db-engine
 foomatic-db
