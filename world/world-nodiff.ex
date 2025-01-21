@@ -624,6 +624,7 @@ folks
 font-awesome
 ttf-font-awesome
 otf-font-awesome
+fontconfig
 fontforge
 foomatic-db-engine
 foomatic-db
@@ -1063,6 +1064,7 @@ irssi
 iso-codes
 isodate
 python-isodate
+ispc
 ispell
 isync
 itinerary
@@ -2555,6 +2557,7 @@ perl-berkeleydb
 perl-bytes-random-secure
 perl-cache-memcached
 perl-canary-stability
+perl-capture-tiny
 perl-cgi
 perl-class-data-inheritable
 perl-class-inspector
@@ -2628,9 +2631,11 @@ perl-file-listing
 perl-file-next
 perl-file-remove
 perl-file-sharedir-install
+perl-file-sharedir
 perl-file-slurp-tiny
 perl-file-slurper
 perl-file-tail
+perl-file-which
 perl-font-ttf
 perl-gd
 perl-hash-ordered
@@ -2808,6 +2813,7 @@ perl-test2-suite
 perl-test2-tools-process
 perl-text-bibtex
 perl-text-charwidth
+perl-text-csv
 perl-text-diff
 perl-text-glob
 perl-text-wrapi18n
@@ -2940,6 +2946,7 @@ vim-powerline
 powertop
 poxml
 pps-tools
+pptpd
 pqiv
 pre-commit
 presage

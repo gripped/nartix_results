@@ -1,32 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=connman
- pkgver=1.43
--pkgrel=3
-+pkgrel=1
- pkgdesc="Intel's modular network connection manager"
- url="https://01.org/connman"
- arch=('x86_64')
-@@ -54,11 +54,9 @@
-     --prefix=/usr \
-     --sysconfdir=/etc \
-     --localstatedir=/var \
--    --runstatedir=/run \
+@@ -57,7 +57,7 @@
+     --runstatedir=/run \
      --bindir=/usr/bin \
      --sbindir=/usr/bin \
 -    --with-systemdunitdir=/usr/lib/systemd/system \
--    --with-tmpfilesdir=/usr/lib/tmpfiles.d \
 +    --with-systemdunitdir=no \
+     --with-tmpfilesdir=/usr/lib/tmpfiles.d \
      --enable-pptp \
      --enable-openconnect \
-     --enable-vpnc \
-@@ -82,5 +80,4 @@
+@@ -82,5 +82,5 @@
    make DESTDIR="$pkgdir" install
    install -vDm755 -t "$pkgdir/usr/bin" client/connmanctl
    install -vDm644 -t "$pkgdir/etc/connman" src/main.conf
 -  sed -i 's/ProtectSystem=full/ProtectSystem=true/' "$pkgdir/usr/lib/systemd/system/connman.service"
++  rm -rvf "$pkgdir/usr/lib/systemd/"
  }
 
 
@@ -36,16 +24,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,11 +8,9 @@
- --prefix=/usr \
- --sysconfdir=/etc \
- --localstatedir=/var \
----runstatedir=/run \
+@@ -11,7 +11,7 @@
+ --runstatedir=/run \
  --bindir=/usr/bin \
  --sbindir=/usr/bin \
 ---with-systemdunitdir=/usr/lib/systemd/system \
----with-tmpfilesdir=/usr/lib/tmpfiles.d \
 +--with-systemdunitdir=no \
+ --with-tmpfilesdir=/usr/lib/tmpfiles.d \
  --enable-pptp \
  --enable-openconnect \
- --enable-vpnc \

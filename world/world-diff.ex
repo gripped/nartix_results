@@ -111,7 +111,6 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
-fontconfig
 fprintd
 freerdp
 freerdp2
@@ -234,7 +233,6 @@ intel-opencl-clang
 intel-undervolt
 interception-tools
 isoimagewriter
-ispc
 iwd
 jack2
 jack2-dbus
@@ -500,10 +498,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-capture-tiny
-perl-file-sharedir
-perl-file-which
-perl-text-csv
 pgbouncer
 phodav
 php-igbinary
@@ -579,7 +573,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-pptpd
 proxytunnel
 pulseaudio
 libpulse
