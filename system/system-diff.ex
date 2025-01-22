@@ -30,9 +30,8 @@ lib32-glibc
 glibc-locales
 gssproxy
 icu
+iproute2
 iputils
-libsecret
-libsecret-docs
 libunistring
 libusb
 linux

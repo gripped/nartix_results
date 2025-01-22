@@ -208,7 +208,6 @@ bin86
 bind
 black-hole-solver
 blackbox
-blender
 blinken
 blockdiag
 blosc
@@ -1913,7 +1912,6 @@ libsrtp
 libsrtp-docs
 libssh
 libssh-docs
-libstaroffice
 libstatgrab
 libsysstat
 libtar
@@ -5418,7 +5416,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

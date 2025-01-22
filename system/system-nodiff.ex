@@ -59,7 +59,6 @@ hdparm
 hwdata
 iana-etc
 inetutils
-iproute2
 iptables
 iptables-nft
 iw
@@ -106,6 +105,8 @@ libpsl
 libsasl
 libseccomp
 python-libseccomp
+libsecret
+libsecret-docs
 libssh2
 libtasn1
 libtirpc

@@ -1,4 +1,5 @@
 alsa-utils
+blender
 catfish
 cinnamon-desktop
 copyq

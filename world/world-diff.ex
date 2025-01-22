@@ -20,6 +20,7 @@ avogadrolibs
 avogadrolibs-qt5
 awesome
 bash-bats
+blender
 bluedevil
 bluez
 bluez-utils
@@ -323,6 +324,7 @@ libp11
 libprocps
 libsidplay
 libsidplayfp
+libstaroffice
 libtg_owt
 libudev0-shim
 libusbsio
@@ -793,6 +795,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

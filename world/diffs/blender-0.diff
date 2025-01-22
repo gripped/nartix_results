@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=blender
+ pkgver=4.3.2
+-pkgrel=5
++pkgrel=2
+ epoch=17
+ pkgdesc="A fully integrated 3D graphics creation suite"
+ arch=('x86_64')
+@@ -141,8 +141,6 @@
+   git -C release/datafiles/assets lfs fetch network-origin
+   git -C release/datafiles/assets lfs checkout
+ 
+-  git cherry-pick -n 0f1e1bcdae5953183ef6502545b9fd534cf731a4
+-
+   patch -p1 -i "$srcdir"/force-draco1.patch
+   patch -p1 -i "$srcdir"/force-draco2.patch
+ 
+@@ -162,7 +160,6 @@
+ 
+ build() {
+   export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
+-  CXXFLAGS+=' --param=max-vartrack-size=640000000'
+ 
+   local cmake_options=(
+     -B build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ git -C release/datafiles/assets remote add network-origin https://projects.blender.org/blender/blender-assets
+ git -C release/datafiles/assets lfs fetch network-origin
+ git -C release/datafiles/assets lfs checkout
+-git cherry-pick -n 0f1e1bcdae5953183ef6502545b9fd534cf731a4
+ patch -p1 -i "$srcdir"/force-draco1.patch
+ patch -p1 -i "$srcdir"/force-draco2.patch
+ patch -p1 -i "$srcdir"/blender-4.11-mantaflow-python-3.12.patch
+@@ -18,7 +17,6 @@
+ }
+ build() {
+ export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
+-CXXFLAGS+=' --param=max-vartrack-size=640000000'
+ local cmake_options=(
+ -B build
+ -C "$pkgname/build_files/cmake/config/blender_release.cmake"
