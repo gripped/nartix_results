@@ -16,8 +16,6 @@ at
 atril
 audacious-plugins
 avahi
-avogadrolibs
-avogadrolibs-qt5
 awesome
 bash-bats
 blender
@@ -112,6 +110,7 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
+fontconfig
 fprintd
 freerdp
 freerdp2
@@ -267,6 +266,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 js78
+julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
@@ -590,6 +590,7 @@ python-anytree
 python-google-auth
 python-ipykernel
 python-levenshtein
+python-pallets-sphinx-themes
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -795,7 +796,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

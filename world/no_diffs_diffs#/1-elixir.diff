@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=elixir
+-pkgver=1.18.2
++pkgver=1.18.1
+ pkgrel=1
+-pkgdesc="A dynamic, functional language for building scalable and maintainable applications"
++pkgdesc="a functional meta-programming aware language built on top of the Erlang VM"
+ url="https://elixir-lang.org"
+ license=('Apache-2.0')
+ arch=('any')
+ depends=('erlang-nox')
+ checkdepends=('git')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/elixir-lang/elixir/archive/v${pkgver}.tar.gz")
+-sha256sums=('efc8d0660b56dd3f0c7536725a95f4d8b6be9f11ca9779d824ad79377753e916')
++sha256sums=('4235a63c615c7c787d85a5167db28a58ec9f5a579f9b3fd853fc6f4d886c209e')
+ 
+ build() {
+ 	cd "${pkgname}-${pkgver}"

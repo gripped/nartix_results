@@ -151,6 +151,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt5
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -623,7 +625,6 @@ folks
 font-awesome
 ttf-font-awesome
 otf-font-awesome
-fontconfig
 fontforge
 foomatic-db-engine
 foomatic-db
@@ -1113,7 +1114,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -3746,7 +3746,6 @@ python-overrides
 python-ovirt-engine-sdk
 python-owslib
 python-packaging
-python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
 python-pandas
@@ -5416,6 +5415,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
