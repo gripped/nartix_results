@@ -10,7 +10,7 @@
              'gobject-introspection'
              'python-libevdev' 'python-pytest' 'python-yaml' 'python-gobject' 'python-attrs')
 @@ -17,9 +17,8 @@
- validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') #  "Peter Hutterer (Who-T) <office@who-t.net>"
+ validpgpkeys=('C2E2555DA2AE5A710D807CF7455E2EAC9362FE1B') # Joshua Dickens <Joshua@Joshua-Dickens.com>
  
  build() {
 -  arch-meson $pkgname-$pkgver build \

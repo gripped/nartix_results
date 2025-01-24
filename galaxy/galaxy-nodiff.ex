@@ -329,7 +329,6 @@ retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
-retroarch
 rgbds
 ristretto
 screengrab

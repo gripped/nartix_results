@@ -1,0 +1,91 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=lib32-fontconfig
+ pkgver=2.16.0
+-pkgrel=2
++pkgrel=1
+ epoch=2
+ pkgdesc="Library for configuring and customizing font access"
+ url=https://www.freedesktop.org/wiki/Software/fontconfig/
+@@ -9,9 +9,9 @@
+ license=('HPND AND Unicode-DFS-2016')
+ depends=(
+   fontconfig
+-  lib32-expat
+   lib32-freetype2
+   lib32-glibc
++  lib32-libxml2
+ )
+ makedepends=(
+   git
+@@ -20,14 +20,13 @@
+ )
+ install=fontconfig-32.install
+ source=(
+-  "git+https://gitlab.freedesktop.org/fontconfig/fontconfig.git?signed#tag=$pkgver"
++  "git+https://gitlab.freedesktop.org/fontconfig/fontconfig.git#tag=$pkgver"
+   fontconfig-32.hook
+ )
+ b2sums=('839b16dbb95da285518bbbe303e2acdf3537be96bd161e20501409cb9891d824c65e9f98ee038310b7ab3857745993138f21a91f193120d782e289ec3206d94e'
+         '1cba71810c9bde6ecb6fac124e458fb7260be3ea72ade82b836e0e8e1eaa7c7df31e6e92e405fa420325cec0ce14d0f19630e777308032b0c26ec96a3d668d93')
+ validpgpkeys=(
+   F77A64C4B5B45FF8763A278F65755979B34E1294 # Akira TAGOH <akira@tagoh.org>
+-  ECFFBC3A6B365E721E5BD79830757AA21971A672 # Akira TAGOH <akira@tagoh.org>
+ )
+ 
+ prepare() {
+@@ -38,9 +37,10 @@
+   local meson_options=(
+     --cross-file lib32
+     -D doc=disabled
++    -D xml-backend=libxml2
+   )
+ 
+-  arch-meson fontconfig build "${meson_options[@]}"
++  artix-meson fontconfig build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -50,8 +50,8 @@
+ 
+ package() {
+   depends+=(
+-    libexpat.so
+     libfreetype.so
++    libxml2.so
+   )
+   provides+=(libfontconfig.so)
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,9 @@
+ fontconfig
+ git
+ gperf
+-lib32-expat
+ lib32-freetype2
+ lib32-glibc
+-libexpat.so
++lib32-libxml2
+ libfreetype.so
++libxml2.so
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,8 @@
+ local meson_options=(
+ --cross-file lib32
+ -D doc=disabled
++-D xml-backend=libxml2
+ )
+-arch-meson fontconfig build "${meson_options[@]}"
++artix-meson fontconfig build "${meson_options[@]}"
+ meson compile -C build
+ }

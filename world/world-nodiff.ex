@@ -1941,6 +1941,7 @@ liburing
 libusb-compat
 libusbmuxd
 libutempter
+libutf8proc
 libutp
 libuv
 libva-intel-driver
@@ -3746,6 +3747,7 @@ python-overrides
 python-ovirt-engine-sdk
 python-owslib
 python-packaging
+python-pallets-sphinx-themes
 python-pam
 python-pandas-datareader
 python-pandas
@@ -4179,6 +4181,7 @@ python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
 python-sphinx-lv2-theme
+python-sphinx-notfound-page
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
@@ -4421,6 +4424,8 @@ qqc2-breeze-style
 qqc2-desktop-style
 qqc2-desktop-style5
 qqwing
+qrcodegen-cmake
+qrcodegencpp-cmake
 qrencode
 qscintilla
 qscintilla-qt5
@@ -5494,6 +5499,7 @@ webhook
 webp-pixbuf-loader
 webrtc-audio-processing-1
 webrtc-audio-processing
+websocketpp
 weechat
 wf-recorder
 wget
@@ -5676,6 +5682,7 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zfp
+zig
 zimg
 zip
 ziproxy

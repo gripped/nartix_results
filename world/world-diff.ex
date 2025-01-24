@@ -329,7 +329,6 @@ libtg_owt
 libudev0-shim
 libusbsio
 python-libusbsio
-libutf8proc
 libvirt
 libvncserver
 libxfce4ui
@@ -590,7 +589,6 @@ python-anytree
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-pallets-sphinx-themes
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -912,7 +910,6 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zig
 zlib-ng
 zlib-ng-compat
 znc
