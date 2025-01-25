@@ -302,8 +302,6 @@ perl-glib-object-introspection
 perl-gtk3
 pinentry-bemenu
 pluma
-ppsspp
-ppsspp-assets
 profanity
 profanity-gtk
 pysolfc-cardsets
@@ -329,6 +327,7 @@ retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
+retroarch
 rgbds
 ristretto
 screengrab

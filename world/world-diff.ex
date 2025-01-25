@@ -110,7 +110,6 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
-fontconfig
 fprintd
 freerdp
 freerdp2
@@ -583,6 +582,7 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pwndbg
 pyqt6
 pysolfc
 python-anytree
@@ -794,6 +794,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

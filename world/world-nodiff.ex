@@ -330,6 +330,7 @@ clang
 clang14
 clang15
 clang16
+clang18
 clazy
 clevis
 cli11
@@ -369,6 +370,7 @@ compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
+compiler-rt18
 composefs
 confuse
 consul
@@ -625,6 +627,7 @@ folks
 font-awesome
 ttf-font-awesome
 otf-font-awesome
+fontconfig
 fontforge
 foomatic-db-engine
 foomatic-db
@@ -2048,6 +2051,7 @@ live-media
 lksctp-tools
 lld
 lld16
+lld18
 lldb
 llhttp
 llvm
@@ -2978,7 +2982,6 @@ purpose
 purpose5
 putty
 pv
-pwndbg
 pyalpm
 pyatspi
 python-atspi
@@ -5420,7 +5423,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

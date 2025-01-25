@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   ppsspp-assets
+ )
+ pkgver=1.18.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='A PSP emulator written in C++'
+ arch=(x86_64)
+ url=https://www.ppsspp.org/
+@@ -87,8 +87,6 @@
+     git config submodule.${submodule}.url ../../../armips-${submodule#*/}
+     git -c protocol.file.allow=always submodule update ${submodule}
+   done
+-  cd ../..
+-  git cherry-pick -n bd84c7bf7dcefc991aa2af14ca1f42f2c842c54b
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,8 +17,6 @@
+ git config submodule.${submodule}.url ../../../armips-${submodule#*/}
+ git -c protocol.file.allow=always submodule update ${submodule}
+ done
+-cd ../..
+-git cherry-pick -n bd84c7bf7dcefc991aa2af14ca1f42f2c842c54b
+ }
+ build() {
+ export CC=clang
