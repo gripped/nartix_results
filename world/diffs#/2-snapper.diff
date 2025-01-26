@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,14 +7,14 @@
+@@ -1,20 +1,20 @@
+ 
+ pkgname=snapper
+ pkgver=0.12.1
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping."
+ arch=('x86_64')
  url="http://snapper.io"
  license=('GPL2')
  depends=('btrfs-progs' 'libxml2' 'dbus' 'boost-libs' 'acl' 'json-c')

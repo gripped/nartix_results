@@ -1649,9 +1649,6 @@ libgeotiff
 libgepub
 libgexiv2
 libgig
-libgit2-glib
-libgit2-glib-docs
-libgit2
 libglib-testing
 libglvnd
 libgme
@@ -1995,7 +1992,6 @@ libxfont2
 libxft
 libxi
 libxinerama
-libxisf
 libxkbcommon
 libxkbcommon-x11
 libxkbcommon-doc
@@ -2982,6 +2978,7 @@ purpose
 purpose5
 putty
 pv
+pwndbg
 pyalpm
 pyatspi
 python-atspi
@@ -3895,7 +3892,6 @@ python-pygame-sdl2
 python-pygame
 python-pygdbmi
 python-pygeos
-python-pygit2
 python-pygls
 python-pygments
 python-pygraphviz

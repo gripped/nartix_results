@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=libxisf
+-pkgver=0.2.13
++pkgver=0.2.12
+ pkgrel=1
+ pkgdesc='Library to load and write XISF format from PixInsight'
+ url='https://gitea.nouspiro.space/nou/libXISF'
+-license=(GPL-3.0-only)
++license=(GPL3)
+ arch=(x86_64)
+ depends=(gcc-libs
+          glibc
+@@ -12,13 +12,12 @@
+          pugixml
+          zlib
+          zstd)
+-makedepends=(cmake
+-             git)
+-source=(git+https://gitea.nouspiro.space/nou/libXISF#tag=v$pkgver)
+-sha256sums=('bce61a75d4a745714f0ba925bf6082d566050b11f045bb1e30d9bfe74a48bc0b')
++makedepends=(cmake)
++source=($pkgname-$pkgver.tar.gz::https://gitea.nouspiro.space/nou/libXISF/archive/v$pkgver.tar.gz)
++sha256sums=('262a63c81e673934314d967b0b550ae7bdcb4c3e623b124878dfb186f0be4854')
+ 
+ build() {
+-  cmake -B build -S libXISF \
++  cmake -B build -S $pkgname \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DUSE_BUNDLED_LIBS=OFF
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
+ gcc-libs
+-git
+ glibc
+ lz4
+ pugixml
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cmake -B build -S libXISF \
++cmake -B build -S $pkgname \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DUSE_BUNDLED_LIBS=OFF
+ cmake --build build

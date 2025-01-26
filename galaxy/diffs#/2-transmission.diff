@@ -3,10 +3,9 @@
 @@ -1,8 +1,8 @@
  
  pkgbase=transmission
--pkgname=(transmission-cli transmission-gtk transmission-qt)
+ pkgname=(transmission-cli transmission-gtk transmission-qt libtransmission)
 -pkgver=4.0.6
--pkgrel=6
-+pkgname=(transmission-cli transmission-gtk transmission-qt libtransmission)
+-pkgrel=3
 +pkgver=4.0.5
 +pkgrel=1
  arch=(x86_64)
@@ -43,15 +42,6 @@
  
  build() {
    export CFLAGS+=" -ffat-lto-objects"
-@@ -75,7 +66,7 @@
-   cd $pkgbase-$pkgver
- 
-   cd build
--  ctest --output-on-failure -j "$(nproc)" -E LT.DhtTest.usesBootstrapFile
-+  ctest --output-on-failure -j "$(nproc)"
- }
- 
- _install_component() {
 @@ -84,7 +75,7 @@
  
  package_transmission-cli() {
@@ -89,20 +79,6 @@
    optdepends=('transmission-cli: daemon and web support')
  
    cd $pkgbase-$pkgver
-@@ -131,3 +119,13 @@
- 
-   install -Dm644 COPYING "$pkgdir/usr/share/licenses/transmission-qt/COPYING"
- }
-+
-+package_libtransmission() {
-+  pkgdesc='Fast, easy, and free BitTorrent client (shared library)'
-+
-+  cd $pkgbase-$pkgver
-+
-+  install -Dm644 build/libtransmission/libtransmission.a -t "$pkgdir"/usr/lib
-+  install -Dm644 libtransmission/*.h -t "$pkgdir"/usr/include/transmission
-+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/libtransmission/COPYING"
-+}
 
 
 ############# Stripped diff below #################

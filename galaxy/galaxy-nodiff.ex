@@ -302,6 +302,8 @@ perl-glib-object-introspection
 perl-gtk3
 pinentry-bemenu
 pluma
+ppsspp
+ppsspp-assets
 profanity
 profanity-gtk
 pysolfc-cardsets

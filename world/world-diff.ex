@@ -311,6 +311,9 @@ libepoxy-docs
 libfido2
 libfprint
 libgdata
+libgit2-glib
+libgit2-glib-docs
+libgit2
 libgudev
 libguestfs
 libhandy0
@@ -332,6 +335,7 @@ libvirt
 libvncserver
 libxfce4ui
 libxfce4util
+libxisf
 libytnef
 light-locker
 lightdm
@@ -582,13 +586,13 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-pwndbg
 pyqt6
 pysolfc
 python-anytree
 python-google-auth
 python-ipykernel
 python-levenshtein
+python-pygit2
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

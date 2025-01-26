@@ -35,8 +35,6 @@ mate-system-monitor
 mpd
 nushell
 nvidia-390xx-utils
-ppsspp
-ppsspp-assets
 qbittorrent
 qbittorrent-nox
 rage

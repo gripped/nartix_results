@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=jami-daemon
+ pkgver=20240812
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Free and universal communication platform which preserves the users’ privacy and freedoms (daemon component)"
+ arch=(x86_64)
+ url="https://jami.net"
 @@ -9,8 +9,8 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
@@ -11,7 +20,16 @@
  checkdepends=(cppunit)
  _commit=cbf8f0af6d49d1e95cf7fc85487c9c876d49878c
  _pjprojectver=8fc165b833eea6e3c88d67a541385424b129fd3f
-@@ -58,7 +58,7 @@
+@@ -42,8 +42,6 @@
+ 
+   patch -p1 -i ../ffmpeg-7.patch # Fix build with ffmpeg 7
+   patch -p1 -i ../fmt-v11.patch # Fix build with fmt v11
+-
+-  git cherry-pick -n 58758918d31b440671b78fbb1e8aa80260bf587a
+ }
+ 
+ build() {
+@@ -60,7 +58,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  
    cd "${srcdir}"
