@@ -652,7 +652,6 @@ freetype2-demos
 freetype2-docs
 frei0r-plugins
 fribidi
-frugally-deep
 fstrm
 ftgl
 ftjam
@@ -1649,6 +1648,9 @@ libgeotiff
 libgepub
 libgexiv2
 libgig
+libgit2-glib
+libgit2-glib-docs
+libgit2
 libglib-testing
 libglvnd
 libgme
@@ -2239,7 +2241,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 micro
@@ -3892,6 +3893,7 @@ python-pygame-sdl2
 python-pygame
 python-pygdbmi
 python-pygeos
+python-pygit2
 python-pygls
 python-pygments
 python-pygraphviz
@@ -5496,7 +5498,6 @@ wcslib
 webhook
 webp-pixbuf-loader
 webrtc-audio-processing-1
-webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder

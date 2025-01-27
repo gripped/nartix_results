@@ -75,6 +75,15 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
+dotnet-core
+dotnet-host
+dotnet-runtime
+aspnet-runtime
+dotnet-sdk
+netstandard-targeting-pack
+dotnet-targeting-pack
+aspnet-targeting-pack
+dotnet-source-built-artifacts
 dovecot
 dracut
 drkonqi
@@ -113,6 +122,7 @@ font-manager
 fprintd
 freerdp
 freerdp2
+frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
@@ -311,9 +321,6 @@ libepoxy-docs
 libfido2
 libfprint
 libgdata
-libgit2-glib
-libgit2-glib-docs
-libgit2
 libgudev
 libguestfs
 libhandy0
@@ -423,6 +430,7 @@ vulkan-radeon
 vulkan-swrast
 vulkan-virtio
 mesa-docs
+meson
 mgard
 mgba
 libmgba
@@ -592,7 +600,6 @@ python-anytree
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-pygit2
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -839,6 +846,7 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
+webrtc-audio-processing
 weston
 wireplumber
 libwireplumber

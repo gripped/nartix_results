@@ -5,13 +5,13 @@
  license=(GPL LGPL)
  arch=(x86_64)
 -depends=(glibc ncurses libncursesw.so systemd-libs)
--makedepends=(systemd)
+-makedepends=(gettext git po4a systemd)
 +depends=(glibc ncurses libncursesw.so libelogind)
-+makedepends=(elogind)
++makedepends=(gettext git po4a elogind)
  conflicts=(procps sysvinit-tools)
  provides=(procps sysvinit-tools libproc2.so)
  replaces=(procps sysvinit-tools)
-@@ -35,7 +35,7 @@
+@@ -39,7 +39,7 @@
      --bindir=/usr/bin \
      --sbindir=/usr/bin \
      --enable-watch8bit \
@@ -26,11 +26,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,5 @@
+@@ -1,8 +1,8 @@
 +elogind
+ gettext
+ git
  glibc
 +libelogind
  libncursesw.so
  ncurses
+ po4a
 -systemd
 -systemd-libs
