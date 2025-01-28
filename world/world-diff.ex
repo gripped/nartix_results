@@ -119,6 +119,7 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
+four-in-a-row
 fprintd
 freerdp
 freerdp2
@@ -340,9 +341,10 @@ libusbsio
 python-libusbsio
 libvirt
 libvncserver
+libvorbis
+libvorbis-docs
 libxfce4ui
 libxfce4util
-libxisf
 libytnef
 light-locker
 lightdm
@@ -430,7 +432,6 @@ vulkan-radeon
 vulkan-swrast
 vulkan-virtio
 mesa-docs
-meson
 mgard
 mgba
 libmgba
@@ -823,12 +824,6 @@ v2ray
 v4l-utils
 vault
 vice
-virtualbox
-virtualbox-sdk
-virtualbox-host-dkms
-virtualbox-guest-utils
-virtualbox-guest-utils-nox
-virtualbox-ext-vnc
 vlc
 libvlc
 vpnc
@@ -846,7 +841,6 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
-webrtc-audio-processing
 weston
 wireplumber
 libwireplumber

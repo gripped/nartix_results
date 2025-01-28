@@ -636,7 +636,6 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 fossil
-four-in-a-row
 fractal
 frameworkintegration
 frameworkintegration5
@@ -1615,6 +1614,7 @@ libepubgen
 libesmtp
 libetebase
 libetonyek
+libetonyek-doc
 libev
 libevdev
 libewf
@@ -1957,7 +1957,6 @@ libvirt-python
 libvisio
 libvisual
 libvoikko
-libvorbis
 libvpl
 libvpx
 libvterm
@@ -1976,6 +1975,7 @@ libwpe
 libwpe-docs
 libwpg
 libwps
+libwps-doc
 libwslay
 libx11
 libx86emu
@@ -1994,6 +1994,7 @@ libxfont2
 libxft
 libxi
 libxinerama
+libxisf
 libxkbcommon
 libxkbcommon-x11
 libxkbcommon-doc
@@ -2241,6 +2242,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 micro
@@ -5460,6 +5462,12 @@ virt-viewer
 virt-what
 virtiofsd
 virtualbox-guest-iso
+virtualbox
+virtualbox-sdk
+virtualbox-host-dkms
+virtualbox-guest-utils
+virtualbox-guest-utils-nox
+virtualbox-ext-vnc
 virtualgl
 vkd3d
 vmaf
@@ -5497,7 +5505,9 @@ wayland-docs
 wcslib
 webhook
 webp-pixbuf-loader
+webrtc-audio-processing-0.3
 webrtc-audio-processing-1
+webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder

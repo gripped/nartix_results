@@ -14,11 +14,11 @@ greetd-regreet
 gtklock
 labwc
 lemurs
+libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libsfdo
-libstaroffice
 libxfce4ui
 light
 lxpanel

@@ -52,6 +52,7 @@ claws-mail
 compface
 cvs
 dillo
+dino
 dosbox
 doublecmd
 doublecmd-qt5
@@ -82,9 +83,9 @@ lazarus
 lazarus-gtk3
 lazarus-qt5
 lazarus-qt6
+libcmis
 libdbusmenu-lxqt
 libe-book
-libetonyek
 libetpan
 libexttextcat
 libfm-qt
@@ -124,6 +125,8 @@ libretro-snes9x
 libscfg
 libsidplayfp
 libsignal-protocol-c
+libstaroffice
+libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat

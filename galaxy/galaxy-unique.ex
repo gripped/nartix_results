@@ -13,6 +13,7 @@ artix-desktop-presets
 artix-docs
 artix-gtk-presets
 artix-i3-presets
+artix-metro
 artix-qt-presets
 artixnews
 birdtray

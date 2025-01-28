@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -75,7 +75,7 @@
+ )
+ source=(
+   "git+https://github.com/mesonbuild/meson?signed#tag=$pkgver"
+-  arch-meson
++  artix-meson
+   cross-lib32
+   native-clang
+   0001-Skip-broken-tests.patch
+@@ -121,7 +121,8 @@
+   install -Dm644 data/shell-completions/bash/* -t "$pkgdir/usr/share/bash-completion/completions"
+   install -Dm644 data/shell-completions/zsh/*  -t "$pkgdir/usr/share/zsh/site-functions"
+ 
+-  install -D ../arch-meson -t "$pkgdir/usr/bin"
++  install -D ../artix-meson -t "${pkgdir}/usr/bin"
++  ln -sfv artix-meson "${pkgdir}"/usr/bin/arch-meson
+ 
+   install -Dm644 ../cross-lib32 "$pkgdir/usr/share/meson/cross/lib32"
+   install -Dm644 ../native-clang "$pkgdir/usr/share/meson/native/clang"
