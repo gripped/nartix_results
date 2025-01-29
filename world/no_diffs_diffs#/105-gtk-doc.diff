@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -50,7 +50,7 @@
+ }
+ 
+ build() {
+-  arch-meson gtk-doc build
++  artix-meson gtk-doc build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ git apply -3 ../0002-Fix-syntax-warnings.patch
+ }
+ build() {
+-arch-meson gtk-doc build
++artix-meson gtk-doc build
+ meson compile -C build
+ }

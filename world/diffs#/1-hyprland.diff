@@ -1,5 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hyprland
+-pkgver=0.47.0
+-pkgrel=2
++pkgver=0.46.2
++pkgrel=9
+ pkgdesc='a highly customizable dynamic tiling Wayland compositor'
+ arch=(x86_64 aarch64)
+ url="https://github.com/hyprwm/${pkgname^}"
 @@ -36,7 +36,7 @@
           pixman libpixman-1.so
           re2 libre2.so
@@ -9,6 +19,15 @@
           tomlplusplus libtomlplusplus.so libudev.so
           util-linux-libs libuuid.so
           vulkan-icd-loader
+@@ -62,7 +62,7 @@
+ provides=(wayland-compositor)
+ _archive="${pkgname^}-$pkgver"
+ source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
+-sha256sums=('45176957b935c0bcb16fd9ec0944c35911d26f042bd8e64642aa41152ddea4e8')
++sha256sums=('d072b50ac0bc48aebea7d0bdb3a0188c62103dde42ff3127a9962437f599b0c1')
+ 
+ prepare() {
+ 	ln -sf hyprland-source "$_archive"
 
 
 ############# Stripped diff below #################

@@ -65,4 +65,5 @@ traceroute
 usbutils
 util-linux
 util-linux-libs
+wpa_supplicant
 xfsprogs

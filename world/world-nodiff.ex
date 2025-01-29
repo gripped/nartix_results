@@ -636,6 +636,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 fossil
+four-in-a-row
 fractal
 frameworkintegration
 frameworkintegration5
@@ -712,6 +713,7 @@ gl2ps
 glad
 glade
 glances
+glaze
 glew
 glfw
 glib-networking
@@ -891,6 +893,7 @@ gst-plugin-togglerecord
 gst-plugin-webrtchttp
 gst-python
 gtest
+gtk-doc
 gtk-engine-murrine
 gtk-engines
 gtk-layer-shell
@@ -1957,6 +1960,8 @@ libvirt-python
 libvisio
 libvisual
 libvoikko
+libvorbis
+libvorbis-docs
 libvpl
 libvpx
 libvterm
@@ -3986,6 +3991,7 @@ python-pytest-httpbin
 python-pytest-httpserver
 python-pytest-httpx
 python-pytest-ignore-flaky
+python-pytest-instafail
 python-pytest-isort
 python-pytest-jupyter
 python-pytest-lazy-fixture
@@ -5423,6 +5429,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash

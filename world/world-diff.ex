@@ -119,7 +119,6 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
-four-in-a-row
 fprintd
 freerdp
 freerdp2
@@ -205,7 +204,6 @@ gst-editing-services
 gstreamer-vaapi
 gst-python
 gstreamer-docs
-gtk-doc
 gtk3
 gtk3-demos
 gtk3-docs
@@ -341,8 +339,6 @@ libusbsio
 python-libusbsio
 libvirt
 libvncserver
-libvorbis
-libvorbis-docs
 libxfce4ui
 libxfce4util
 libytnef
@@ -790,7 +786,6 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
-libtransmission
 tumbler
 uasm
 udftools
@@ -806,7 +801,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

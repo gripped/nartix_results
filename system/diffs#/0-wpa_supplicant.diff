@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=wpa_supplicant
+ pkgver=2.11
+-pkgrel=3
++pkgrel=2
+ epoch=2
+ pkgdesc='A utility providing key negotiation for WPA wireless networks'
+ url='https://w1.fi/wpa_supplicant/'
+@@ -62,8 +62,6 @@
+     patch -Np1 < "../$src"
+   done
+ 
+-  git cherry-pick -n 015f6a5a0cd1c8b0d40441b9fd9e4c8658bc9493
+-
+   cp ../wpa_supplicant_config $pkgname/.config
+ }
+ 
+@@ -105,7 +103,6 @@
+   install -Dm644 doc/docbook/*.8 -t "$pkgdir/usr/share/man/man8"
+   rm "$pkgdir"/usr/share/man/man8/wpa_{priv,gui}.8
+ 
+-  install -Dm644 systemd/*.service -t "$pkgdir/usr/lib/systemd/system"
+ 
+   install -Dm644 ../README "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+ echo "Applying patch $src..."
+ patch -Np1 < "../$src"
+ done
+-git cherry-pick -n 015f6a5a0cd1c8b0d40441b9fd9e4c8658bc9493
+ cp ../wpa_supplicant_config $pkgname/.config
+ }
+ build() {

@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libretro-mesen
+-pkgver=2904
+-pkgrel=1
++pkgver=2903
++pkgrel=3
+ pkgdesc='Nintendo Entertainment System core'
+ arch=(x86_64)
+ url=https://github.com/SourMesen/Mesen
+@@ -12,9 +12,9 @@
+   libretro-core-info
+ )
+ makedepends=(git)
+-_commit=e1180957b31979d4b82d613af9263fcb9442a685
++_commit=86326e832974d984846ae078e568c023a5f76f1f
+ source=(git+https://github.com/SourMesen/Mesen.git#commit=${_commit})
+-sha256sums=('5070dacee307d6840529e679243f986eb5675e8a6557ad9d4d8b19f19747c665')
++sha256sums=(SKIP)
+ 
+ pkgver() {
+   cd Mesen

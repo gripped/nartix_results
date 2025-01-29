@@ -185,7 +185,6 @@ unixodbc
 vi
 which
 wireless-regdb
-wpa_supplicant
 xz
 zlib
 minizip

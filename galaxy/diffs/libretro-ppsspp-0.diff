@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libretro-ppsspp
+-pkgver=42066
++pkgver=40927
+ pkgrel=1
+ pkgdesc='Sony PlayStation Portable core'
+ arch=(x86_64)
+@@ -28,7 +28,7 @@
+   ninja
+   python
+ )
+-_commit=41b93c895c48308822a8f38bbfc6808621b69dae
++_commit=62d9abf71d3c868f40a98b24da5773e160981bf5
+ source=(
+   libretro-ppsspp::git+https://github.com/hrydgard/ppsspp.git#commit=${_commit}
+   git+https://github.com/Kingcom/armips.git
+@@ -38,7 +38,6 @@
+   git+https://github.com/KhronosGroup/glslang.git
+   git+https://github.com/hrydgard/ppsspp-lang.git
+   git+https://github.com/rtissera/libchdr.git
+-  git+https://github.com/hrydgard/ppsspp-lua.git
+   git+https://github.com/miniupnp/miniupnp.git
+   git+https://github.com/KhronosGroup/OpenXR-SDK.git
+   git+https://github.com/Tencent/rapidjson.git
+@@ -46,8 +45,7 @@
+   git+https://github.com/KhronosGroup/SPIRV-Cross.git
+   libretro-ppsspp-assets-path.patch
+ )
+-b2sums=('95f31e70ee30200204fd13fbcef103056804512e633ec2f07d6eea981cbf69b27e2b20dac9eb861a192e3bd6fc057d5e1ce6b193090ffd6a8dc43582d2344b9f'
+-        'SKIP'
++b2sums=('c697bdf910bfe7a937ab45c7267ce428347766ab04125bdd09337ed37c202bf9f17100786f95fcf4027bf8347e9276c75437d58a2e022287edb4049167ba595a'
+         'SKIP'
+         'SKIP'
+         'SKIP'
+@@ -74,7 +72,7 @@
+ 
+   git config --global protocol.file.allow always
+ 
+-  for submodule in ffmpeg assets/lang ext/lua; do
++  for submodule in ffmpeg assets/lang; do
+     git submodule init ${submodule}
+     git config submodule.${submodule}.url ../ppsspp-${submodule#*/}
+     git submodule update ${submodule}
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ cd libretro-ppsspp
+ patch -Np1 -i ../libretro-ppsspp-assets-path.patch
+ git config --global protocol.file.allow always
+-for submodule in ffmpeg assets/lang ext/lua; do
++for submodule in ffmpeg assets/lang; do
+ git submodule init ${submodule}
+ git config submodule.${submodule}.url ../ppsspp-${submodule#*/}
+ git submodule update ${submodule}

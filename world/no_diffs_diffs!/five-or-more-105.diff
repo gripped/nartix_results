@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
+@@ -38,7 +38,7 @@
  }
  
  build() {
@@ -18,7 +18,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -3,6 +3,6 @@
- git apply -3 ../five-or-more-new-game.patch
+ git apply -3 ../0001-Reset-positions-when-the-board-is-changed.patch
  }
  build() {
 -arch-meson $pkgname build
