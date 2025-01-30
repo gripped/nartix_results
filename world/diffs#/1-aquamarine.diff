@@ -3,13 +3,14 @@
 @@ -1,7 +1,7 @@
  
  pkgname=aquamarine
- pkgver=0.7.1
--pkgrel=3
-+pkgrel=2
+-pkgver=0.7.2
+-pkgrel=1
++pkgver=0.7.1
++pkgrel=3
  pkgdesc='a very light linux rendering backend library'
  arch=(x86_64 aarch64)
  url="https://github.com/hyprwm/$pkgname"
-@@ -19,7 +19,7 @@
+@@ -19,14 +19,14 @@
           pixman
           pugixml
           seatd libseat.so
@@ -18,6 +19,14 @@
           wayland libwayland-client.so
           wayland-protocols)
  makedepends=(cmake)
+ provides=("lib$pkgname.so")
+ _archive="$pkgname-$pkgver"
+ source=("$url/archive/v$pkgver/$_archive.tar.gz")
+-sha256sums=('822ce38345bc4c1b95966c79ee72ff18d753aa923c83e9aa64e9d82eebf55a38')
++sha256sums=('e61453345e1df9c37cedd10d4c48df0b2d3a53d8e535fc71c3dd06f88f1d31f3')
+ 
+ build() {
+ 	cd "$_archive"
 
 
 ############# Stripped diff below #################

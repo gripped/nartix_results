@@ -597,6 +597,8 @@ python-anytree
 python-google-auth
 python-ipykernel
 python-levenshtein
+python-pexpect
+python-ptyprocess
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -801,6 +803,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

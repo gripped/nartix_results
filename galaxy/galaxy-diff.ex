@@ -18,7 +18,6 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libretro-ppsspp
 libsfdo
 libxfce4ui
 light

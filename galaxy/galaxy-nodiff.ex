@@ -118,6 +118,7 @@ libretro-mgba
 libretro-overlays
 libretro-parallel-n64
 libretro-play
+libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x

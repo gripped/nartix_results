@@ -3797,7 +3797,6 @@ python-pep440
 python-pep621
 python-perf
 python-persistent
-python-pexpect
 python-pg8000
 python-phonenumbers
 python-piccata
@@ -3849,7 +3848,6 @@ python-psutil
 python-psycopg2
 python-pt
 python-ptrace
-python-ptyprocess
 python-publicsuffix2
 python-pure-eval
 python-puremagic
@@ -5102,6 +5100,7 @@ sratom-docs
 srt
 sshfs
 sshpass
+sshuttle
 startup-notification
 stellarsolver
 step-cli
@@ -5429,7 +5428,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash
