@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,7 @@
+@@ -23,7 +23,7 @@
               qt6-base
               qt6-svg
               qt6-tools
@@ -9,7 +9,7 @@
  _archive="$pkgbase-$pkgver"
  source=("https://github.com/transmission/transmission/releases/download/$pkgver/$_archive.tar.xz"
          febfe49c.patch
-@@ -90,15 +90,13 @@
+@@ -89,15 +89,13 @@
  	         libevent
  	         libnatpmp
  	         miniupnpc
@@ -41,7 +41,7 @@
  glibmm-2.68
  gtk4
  gtkmm-4.0
-@@ -17,4 +19,3 @@
+@@ -16,4 +18,3 @@
  qt6-base
  qt6-svg
  qt6-tools

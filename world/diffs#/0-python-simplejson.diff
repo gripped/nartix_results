@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=python-simplejson
+-pkgver=3.19.3
+-pkgrel=1
++_name="${pkgname#python-}"
++pkgver=3.19.2
++pkgrel=5
+ pkgdesc='Simple, fast and extensible JSON decoder/encoder'
+ license=(MIT)
+ arch=(x86_64)
+@@ -16,21 +17,21 @@
+   python-setuptools
+   python-wheel
+ )
+-source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+-b2sums=('8472650023dd892110a3b7b0b434f9f5d5e8e49bbbdfd8f9b3ca79f45d92ac9f2adc2d2ed8449110a41423008bd507e89e095487cdf982ca8d82595f64e171f1')
++source=($pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz)
++b2sums=('3458629073fb0c09aefa3d0ed4b9a32040a7f2f32f0ae3701843511b3a25a5a7e41cc4221169cea441e1d072f17a6af4b903c1d5cfd2fe17dcd00d66c7cae116')
+ 
+ build() {
+-  cd ${pkgname#python-}-$pkgver
++  cd $_name-$pkgver
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd ${pkgname#python-}-$pkgver
++  cd $_name-$pkgver
+   python -m unittest discover -v
+ }
+ 
+-package() {
+-  cd ${pkgname#python-}-$pkgver
++package_python-simplejson() {
++  cd $_name-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
++  install -Dm644 LICENSE.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd ${pkgname#python-}-$pkgver
++cd $_name-$pkgver
+ python -m build --wheel --no-isolation
+ }

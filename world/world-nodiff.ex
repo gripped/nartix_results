@@ -1005,6 +1005,7 @@ hyphen-en
 hyprcursor
 hyprgraphics
 hypridle
+hyprland-protocols
 hyprland-qt-support
 hyprland-qtutils
 hyprlang
@@ -2369,7 +2370,6 @@ nodejs-lts-hydrogen
 nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3360,7 +3360,6 @@ python-evdev
 python-eventlet
 python-exceptiongroup
 python-execnet
-python-executing
 python-expandvars
 python-expects
 python-extras
@@ -4153,7 +4152,6 @@ python-shellingham
 python-should-dsl
 python-shtab
 python-signedjson
-python-simplejson
 python-six
 python-slip
 python-slugify
@@ -5428,6 +5426,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash

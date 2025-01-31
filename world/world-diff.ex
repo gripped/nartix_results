@@ -473,6 +473,7 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nodejs
 nsd
 nushell
 nvidia-open
@@ -594,6 +595,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-executing
 python-google-auth
 python-ipykernel
 python-levenshtein
@@ -604,6 +606,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
+python-simplejson
 python-werkzeug
 qastools
 qbittorrent
@@ -803,7 +806,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

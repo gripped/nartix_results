@@ -8,6 +8,7 @@ efl
 ephoto
 evisum
 firefox
+font-manager
 freecell-solver
 gpicview
 greetd-regreet

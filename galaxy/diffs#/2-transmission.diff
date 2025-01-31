@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,143 +1,131 @@
+@@ -1,141 +1,131 @@
  
  pkgbase=transmission
 -pkgname=(transmission-cli transmission-gtk transmission-qt)
 -pkgver=4.0.6
--pkgrel=8
+-pkgrel=9
 +pkgname=(transmission-cli transmission-gtk transmission-qt libtransmission)
 +pkgver=4.0.5
 +pkgrel=1
@@ -19,7 +19,6 @@
 -             gtk4
 -             gtkmm-4.0
 -             intltool
--             libayatana-indicator
 -             libb64
 -             libdeflate
 -             libevent
@@ -189,7 +188,6 @@
 -	         gtk4
 -	         gtkmm-4.0
 -	         hicolor-icon-theme
--	         libayatana-indicator
 -	         libb64
 -	         libdeflate
 -	         libevent
@@ -254,7 +252,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,13 @@
+@@ -1,6 +1,8 @@
  cmake
  curl
  dht
@@ -263,13 +261,7 @@
  glibmm-2.68
  gtk4
  gtkmm-4.0
- hicolor-icon-theme
- intltool
--libayatana-indicator
- libb64
- libdeflate
- libevent
-@@ -17,4 +18,3 @@
+@@ -16,4 +18,3 @@
  qt6-base
  qt6-svg
  qt6-tools
