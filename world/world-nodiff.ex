@@ -1528,6 +1528,7 @@ lua51-lgi
 lua53-lgi
 lhasa
 lib2geom
+lib3mf
 libabw
 libaccounts-glib
 libaccounts-qt
@@ -2956,6 +2957,7 @@ pps-tools
 pptpd
 pqiv
 pre-commit
+premake
 presage
 print-manager
 prison
@@ -3686,7 +3688,6 @@ python-musicbrainzngs
 python-mutagen
 python-mypy_extensions
 python-mysql-connector
-python-mysqlclient
 python-myst-parser
 python-natsort
 python-nbxmpp
@@ -3842,7 +3843,6 @@ python-prometheus_client
 python-promise
 python-prompt_toolkit
 python-proxmoxer
-python-proxy.py
 python-psutil
 python-psycopg2
 python-pt
@@ -5426,7 +5426,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

@@ -599,7 +599,9 @@ python-executing
 python-google-auth
 python-ipykernel
 python-levenshtein
+python-mysqlclient
 python-pexpect
+python-proxy.py
 python-ptyprocess
 python-pymupdf
 python-pytest-freezegun
@@ -806,6 +808,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
