@@ -168,13 +168,6 @@ aws-checksums
 aws-cli-v2
 aws-cli
 aws-crt-cpp
-aws-sdk-cpp
-aws-sdk-cpp-core
-aws-sdk-cpp-ec2
-aws-sdk-cpp-firehose
-aws-sdk-cpp-iam
-aws-sdk-cpp-kinesis
-aws-sdk-cpp-s3
 ayatana-ido
 babl
 backuppc
@@ -1734,7 +1727,6 @@ libksysguard
 libktorrent
 liblangtag
 liblas
-liblc3
 libldac
 libliftoff
 liblo
@@ -4482,7 +4474,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4506,7 +4497,6 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -5426,6 +5416,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash

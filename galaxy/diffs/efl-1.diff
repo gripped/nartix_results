@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,85 +1,65 @@
+@@ -1,19 +1,21 @@
  
 -pkgbase=efl
 -pkgname=('efl' 'efl-docs')
-+pkgname=efl
- pkgver=1.27.0
+-pkgver=1.27.0
 -pkgrel=4
-+pkgrel=5
-+_commit="248d62bf5e13ca8800a73b6cf3e8759443468282"
++pkgname=efl
++pkgver=1.28.0
++pkgrel=3
  pkgdesc="Enlightenment Foundation Libraries"
  arch=('x86_64')
 -url="https://www.enlightenment.org"
@@ -21,7 +21,6 @@
 -         'libxinerama' 'libxkbcommon' 'libxkbcommon-x11' 'libxrandr' 'libxrender' 'libxss'
 -         'libxtst' 'lua52' 'mailcap' 'mesa' 'openjpeg2' 'openssl' 'shared-mime-info' 'systemd-libs'
 -         'ttf-font' 'util-linux-libs' 'wayland' 'zlib')
--optdepends=('gst-plugins-base: Video and thumbnail codecs'
 +depends=('curl' 'fontconfig' 'fribidi' 'harfbuzz'
 +         'gst-plugins-base-libs' 'luajit' 'lua52' 'libgl' 'libinput'
 +         'libpulse' 'libsndfile' 'libspectre' 'libraw' 'librsvg' 'libwebp'
@@ -32,43 +31,36 @@
 +         'ttf-font' 'scim' 'wayland' 'libxkbcommon-x11'
 +         'libavif' 'libheif' 'libjxl' 'rlottie')
 +makedepends=('git' 'meson' 'ninja' 'gcc' 'binutils' 'procps-ng' 'wayland-protocols' 'pulseaudio' 'doxygen')
-+optdepends=('pulseaudio: Pulse Audio'
-+            'gst-plugins-base: Video and thumbnail codecs'
+ optdepends=('gst-plugins-base: Video and thumbnail codecs'
              'gst-plugins-good: Video and thumbnail codecs'
              'gst-plugins-bad: Video and thumbnail codecs'
-             'gst-plugins-ugly: Video and thumbnail codecs'
-             'gst-libav: Video and thumbnails with ffmpeg/libav'
--            'libraw: RAW image loader'
--            'libreoffice: Office document loader'
--            'librsvg: SVG loader'
--            'libspectre: PostScript loader'
--            'poppler: PDF loader'
--            'scim: IM module for SCIM')
+@@ -25,61 +27,48 @@
+             'libspectre: PostScript loader'
+             'poppler: PDF loader'
+             'scim: IM module for SCIM')
 -makedepends=('doxygen' 'libraw' 'librsvg' 'libspectre' 'meson' 'ninja' 'poppler' 'python' 'scim'
 -             'texlive-basic' 'texlive-fontutils' 'wayland-protocols')
--options=('!emptydirs')
+ options=('!emptydirs')
 -source=(https://download.enlightenment.org/rel/libs/${pkgname}/$pkgname-$pkgver.tar.xz)
 -sha256sums=('3dfb99fbcc268c0bc797e2f83e8c503ef9de66284f40b381bb597a08185c00f4')
 -
 -
-+            'libreoffice: Office document thumbnails')
-+source=("${pkgname}::git+https://git.enlightenment.org/enlightenment/$pkgname.git#commit=$_commit"
++source=("https://download.enlightenment.org/rel/libs/${pkgname}/$pkgname-$pkgver.tar.xz"
 +        "moksha-artix::git+https://gitea.artixlinux.org/artix/moksha-artix.git")
-+sha256sums=('bb70b7c1c92e150a6676199ede30f74c13b61bc6c59bfa8924ae345085baf7cf'
++sha256sums=('f09a43d6b4861be06cc0e2849c53296413d4e52c8e31f52fc95e9ea5f1c59a36'
 +            'SKIP')
  
  build() {
--  cd "${srcdir}/${pkgname}-${pkgver}"
-+  cd $pkgname
+   cd "${srcdir}/${pkgname}-${pkgver}"
  
    export CFLAGS="$CFLAGS -fvisibility=hidden"
 +  export CXXFLAGS="$CXXFLAGS -fvisibility=hidden"
  
--  if [ -d build ]; then
--    rm -rf build
--  fi
--  mkdir -p build
--
+   if [ -d build ]; then
+     rm -rf build
+   fi
+   mkdir -p build
+ 
 -  meson --prefix=/usr \
 +  meson setup --prefix=/usr --buildtype=release \
 +    -Dpulseaudio=true \
@@ -96,7 +88,7 @@
 -package_efl(){
 -  replaces=('elementary' 'evas_generic_loaders' 'emotion_generic_players')
 +package() {
-+  cd $pkgname
++  cd "${srcdir}/${pkgname}-${pkgver}"
  
 -  cd "${srcdir}/${pkgname}-${pkgver}"
 -  DESTDIR="${pkgdir}" ninja -C build install

@@ -532,6 +532,7 @@ xfconf
 xfdesktop
 xfwm4-themes
 xfwm4
+yazi
 yyjson
 zathura-cb
 zathura-djvu

@@ -17,6 +17,13 @@ atril
 audacious-plugins
 avahi
 awesome
+aws-sdk-cpp
+aws-sdk-cpp-core
+aws-sdk-cpp-ec2
+aws-sdk-cpp-firehose
+aws-sdk-cpp-iam
+aws-sdk-cpp-kinesis
+aws-sdk-cpp-s3
 bash-bats
 blender
 bluedevil
@@ -325,6 +332,7 @@ libguestfs
 libhandy0
 libical
 libinput
+liblc3
 libldm
 libmspub
 libnvme
@@ -698,9 +706,11 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
 qterminal
 qtermwidget
 quadrapassel
@@ -808,7 +818,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
