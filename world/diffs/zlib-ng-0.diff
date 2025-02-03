@@ -1,10 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=zlib-ng
+ pkgname=(zlib-ng zlib-ng-compat)
+ pkgver=2.2.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='zlib replacement with optimizations for next generation systems'
+ url='https://github.com/zlib-ng/zlib-ng'
+ arch=('x86_64')
 @@ -29,7 +29,6 @@
      -DCMAKE_INSTALL_LIBDIR=lib
      -Wno-dev
      -DWITH_GTEST=OFF
--    -DWITH_UNALIGNED=OFF
+-    -DBUILD_SHARED_LIBS=ON
    )
  
    echo "Building zlib-ng"
@@ -20,7 +29,7 @@
  -DCMAKE_INSTALL_LIBDIR=lib
  -Wno-dev
  -DWITH_GTEST=OFF
---DWITH_UNALIGNED=OFF
+--DBUILD_SHARED_LIBS=ON
  )
  echo "Building zlib-ng"
  cmake -B build \

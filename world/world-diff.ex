@@ -17,13 +17,6 @@ atril
 audacious-plugins
 avahi
 awesome
-aws-sdk-cpp
-aws-sdk-cpp-core
-aws-sdk-cpp-ec2
-aws-sdk-cpp-firehose
-aws-sdk-cpp-iam
-aws-sdk-cpp-kinesis
-aws-sdk-cpp-s3
 bash-bats
 blender
 bluedevil
@@ -242,6 +235,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-media-driver
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -481,7 +475,6 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
-nodejs
 nsd
 nushell
 nvidia-open
@@ -603,20 +596,14 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-executing
 python-google-auth
 python-ipykernel
 python-levenshtein
-python-mysqlclient
-python-pexpect
-python-proxy.py
-python-ptyprocess
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
-python-simplejson
 python-werkzeug
 qastools
 qbittorrent
@@ -711,6 +698,7 @@ qt6-doc
 qt6-examples
 qt6-serialport
 qt6-tools
+qt6-wayland
 qterminal
 qtermwidget
 quadrapassel
@@ -818,6 +806,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

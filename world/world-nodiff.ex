@@ -168,6 +168,13 @@ aws-checksums
 aws-cli-v2
 aws-cli
 aws-crt-cpp
+aws-sdk-cpp
+aws-sdk-cpp-core
+aws-sdk-cpp-ec2
+aws-sdk-cpp-firehose
+aws-sdk-cpp-iam
+aws-sdk-cpp-kinesis
+aws-sdk-cpp-s3
 ayatana-ido
 babl
 backuppc
@@ -1031,7 +1038,6 @@ innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
-intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
@@ -2363,6 +2369,7 @@ nodejs-lts-hydrogen
 nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3354,6 +3361,7 @@ python-evdev
 python-eventlet
 python-exceptiongroup
 python-execnet
+python-executing
 python-expandvars
 python-expects
 python-extras
@@ -3680,6 +3688,7 @@ python-musicbrainzngs
 python-mutagen
 python-mypy_extensions
 python-mysql-connector
+python-mysqlclient
 python-myst-parser
 python-natsort
 python-nbxmpp
@@ -3789,6 +3798,7 @@ python-pep440
 python-pep621
 python-perf
 python-persistent
+python-pexpect
 python-pg8000
 python-phonenumbers
 python-piccata
@@ -3835,10 +3845,12 @@ python-prometheus_client
 python-promise
 python-prompt_toolkit
 python-proxmoxer
+python-proxy.py
 python-psutil
 python-psycopg2
 python-pt
 python-ptrace
+python-ptyprocess
 python-publicsuffix2
 python-pure-eval
 python-puremagic
@@ -4144,6 +4156,7 @@ python-shellingham
 python-should-dsl
 python-shtab
 python-signedjson
+python-simplejson
 python-six
 python-slip
 python-slugify
@@ -4499,7 +4512,6 @@ qt6-speech
 qt6-svg
 qt6-translations
 qt6-virtualkeyboard
-qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
@@ -5416,7 +5428,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kasts
+ pkgver=24.12.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Kirigami-based podcast player'
+ url='https://apps.kde.org/kasts/'
+ arch=(x86_64)
+@@ -15,6 +15,7 @@
+          ki18n
+          kirigami
+          kirigami-addons
++         qqc2-desktop-style
+          qt6-base
+          qt6-declarative
+          qt6-multimedia
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,6 +9,7 @@
+ kirigami
+ kirigami-addons
+ python
++qqc2-desktop-style
+ qt6-base
+ qt6-declarative
+ qt6-multimedia
