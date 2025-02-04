@@ -40,6 +40,7 @@ qbittorrent-nox
 rage
 sdcv
 terminology
+thunderbird
 tor
 torsocks
 transmission

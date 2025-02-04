@@ -34,6 +34,9 @@ iproute2
 iputils
 libunistring
 libusb
+linux-lts
+linux-lts-headers
+linux-lts-docs
 linux
 linux-headers
 linux-docs

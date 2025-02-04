@@ -478,7 +478,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
-thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher

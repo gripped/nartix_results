@@ -279,7 +279,6 @@ catch2
 catdoc
 cauchy
 cbatticon
-ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -1038,6 +1037,7 @@ innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
+intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
@@ -5428,6 +5428,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
@@ -5705,6 +5706,8 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
+zlib-ng
+zlib-ng-compat
 zopfli
 zsh-autosuggestions
 zsh-completions

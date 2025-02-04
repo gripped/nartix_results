@@ -46,6 +46,7 @@ caja-xattr-tags
 caja
 catfish
 cbindgen
+ccache
 cgmanager
 chromium-bsu
 chrony
@@ -235,7 +236,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-media-driver
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -806,7 +806,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -917,6 +916,4 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zlib-ng
-zlib-ng-compat
 znc

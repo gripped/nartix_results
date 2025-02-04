@@ -1,15 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=qt6-shadertools
 -_pkgver=6.8.2
--pkgver=${_pkgver/-/}
 +_pkgver=6.8.1
-+pkgver=6.8.1
- pkgrel=1
+ pkgver=${_pkgver/-/}
+-pkgrel=1
++pkgrel=1.1
  arch=(x86_64)
  url='https://www.qt.io'
+ license=(GPL-3.0-only
 @@ -19,7 +19,7 @@
  groups=(qt6)
  _pkgfn=${pkgname/6-/}
