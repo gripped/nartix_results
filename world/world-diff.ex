@@ -20,6 +20,7 @@ awesome
 bash-bats
 blender
 bluedevil
+blueman
 bluez
 bluez-utils
 bluez-libs
@@ -34,6 +35,7 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
+broadcom-wl-dkms
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -151,7 +153,6 @@ gnome-desktop-docs
 gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
-gnome-mahjongg
 gnome-mines
 gnome-nibbles
 gnome-panel
@@ -166,6 +167,7 @@ gnome-system-monitor
 gnome-tour
 gnome-user-share
 go-bindata
+go
 godot
 godot-mono
 greetd-tuigreet
@@ -490,7 +492,13 @@ onboard
 onionshare
 open-iscsi
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendht
+openimageio
 openmpi
 openmpi-docs
 opensmtpd
@@ -806,6 +814,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

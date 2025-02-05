@@ -214,7 +214,6 @@ blinken
 blockdiag
 blosc
 blosc2
-blueman
 bluez-qt
 bluez-qt5
 bmake
@@ -237,7 +236,6 @@ breeze
 breeze5
 breezy
 bridge-utils
-broadcom-wl-dkms
 broadcom-wl
 bspwm
 btop
@@ -755,6 +753,7 @@ gnome-epub-thumbnailer
 gnome-font-viewer
 gnome-games
 gnome-klotski
+gnome-mahjongg
 gnome-maps
 gnome-menus
 gnome-multi-writer
@@ -793,7 +792,6 @@ go-licenses
 go-md2man
 go-tools
 go-yq
-go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -2442,11 +2440,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2454,7 +2447,6 @@ openfec
 openfire
 openh264
 openimagedenoise
-openimageio
 openipmi
 openjade
 openjpeg2
@@ -5428,7 +5420,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

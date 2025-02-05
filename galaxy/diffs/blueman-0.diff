@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=blueman
+-pkgver=2.4.4
+-pkgrel=1
++pkgver=2.4.3
++pkgrel=2
+ pkgdesc="GTK+ Bluetooth Manager"
+ url="https://github.com/blueman-project/blueman"
+ arch=('x86_64')
+@@ -13,25 +13,28 @@
+             'networkmanager: Dial Up Networking (DUN) and Personal Area Networking (PAN) support'
+             'pulseaudio-bluetooth: audio devices support')
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+-sha256sums=('08443ad0d2fc6fca0a23b492bd476861163b0c174b44cd3e45ee7977a00dbf90')
++sha256sums=('e7d4775593fd882a2cb424058c5917d9b0f56579110bcce8ece3ea9ee84e75a0')
+ 
+ prepare() {
+ 	cd "${pkgname}-${pkgver}"
+ 	./autogen.sh
++	sed -i '/^dbusdir =/ s/sysconfdir/datadir/' data/configs/Makefile.{am,in}
+ }
+ 
+ build() {
+ 	cd "${pkgname}-${pkgver}"
+ 	./configure \
+-	  --prefix='/usr' \
+-	  --sysconfdir='/etc' \
+-	  --libexecdir="/usr/lib/${pkgname}" \
+-	  --with-dhcp-config='/etc/dhcpd.conf' \
+-	  --disable-schemas-compile
++	  --prefix=/usr \
++	  --sysconfdir=/etc \
++	  --libexecdir=/usr/lib/"${pkgname}" \
++	  --disable-schemas-compile \
++	  --with-dhcp-config='/etc/dhcpd.conf'
+ 	make
+ }
+ 
+ package() {
+ 	cd "${pkgname}-${pkgver}"
+ 	make DESTDIR="${pkgdir}" install
++
++	rm -r $pkgdir/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,15 @@
+ prepare() {
+ cd "${pkgname}-${pkgver}"
+ ./autogen.sh
++sed -i '/^dbusdir =/ s/sysconfdir/datadir/' data/configs/Makefile.{am,in}
+ }
+ build() {
+ cd "${pkgname}-${pkgver}"
+ ./configure \
+---prefix='/usr' \
+---sysconfdir='/etc' \
+---libexecdir="/usr/lib/${pkgname}" \
+---with-dhcp-config='/etc/dhcpd.conf' \
+---disable-schemas-compile
++--prefix=/usr \
++--sysconfdir=/etc \
++--libexecdir=/usr/lib/"${pkgname}" \
++--disable-schemas-compile \
++--with-dhcp-config='/etc/dhcpd.conf'
+ make
+ }

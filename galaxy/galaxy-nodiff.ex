@@ -9,7 +9,6 @@ avidemux
 avidemux-cli
 avidemux-qt
 blender
-blueman
 box2d
 cairo-perl
 caja-extensions
@@ -214,7 +213,6 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
-mimalloc
 mokutil
 mousepad
 mozo

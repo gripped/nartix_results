@@ -1,4 +1,5 @@
 alsa-utils
+blueman
 catfish
 cinnamon-desktop
 copyq
@@ -32,6 +33,7 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
+mimalloc
 mpd
 nushell
 nvidia-390xx-utils
