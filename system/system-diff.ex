@@ -30,13 +30,9 @@ lib32-glibc
 glibc-locales
 gssproxy
 icu
-iproute2
 iputils
 libunistring
 libusb
-linux-lts
-linux-lts-headers
-linux-lts-docs
 linux
 linux-headers
 linux-docs
@@ -68,5 +64,4 @@ traceroute
 usbutils
 util-linux
 util-linux-libs
-wpa_supplicant
 xfsprogs

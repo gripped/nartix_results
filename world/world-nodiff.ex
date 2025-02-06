@@ -390,8 +390,6 @@ cscope
 ctags
 ctpl
 ctwm
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -634,7 +632,6 @@ foomatic-db-nonfree-ppds
 fop
 fossil
 four-in-a-row
-fractal
 frameworkintegration
 frameworkintegration5
 francis
@@ -4479,6 +4476,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4502,8 +4500,10 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
+qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
@@ -5420,6 +5420,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash

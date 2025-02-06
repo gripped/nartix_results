@@ -67,6 +67,8 @@ containerd
 convertlit
 cppcheck
 crun
+cuda
+cuda-tools
 cups
 libcups
 dbus-broker
@@ -123,6 +125,7 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
+fractal
 freerdp
 freerdp2
 frugally-deep
@@ -701,12 +704,9 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
-qt6-wayland
 qterminal
 qtermwidget
 quadrapassel
@@ -814,7 +814,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

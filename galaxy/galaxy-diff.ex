@@ -1,5 +1,4 @@
 alsa-utils
-blueman
 catfish
 cinnamon-desktop
 copyq

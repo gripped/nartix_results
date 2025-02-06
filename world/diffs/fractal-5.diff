@@ -1,0 +1,92 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=fractal
+-pkgver=10
++pkgver=9
+ pkgrel=2
+ pkgdesc="Matrix group messaging app"
+ arch=(x86_64)
+@@ -27,39 +27,34 @@
+   libseccomp
+   libshumate
+   openssl
+-  org.freedesktop.secrets
+   pango
+   sqlite
+ )
+ makedepends=(
+   clang
+   cmake
+-  dart-sass
+   libwebp
+   meson
+   rust
+   xdg-desktop-portal
+ )
++optdepends=('org.freedesktop.secrets: password storage')
+ source=(
+   $url/-/archive/$pkgver/$pkgname-$pkgver.tar.gz
+-  0001-chore-Upgrade-matrix-sdk-and-ruma.patch
+ )
+-sha512sums=('c4f9a24c6cbd8f109c107185703301219f2d2a9749b4c7efd0994bd8e8d3054f4f643496c7caa7d8069776d523ced295df9f1d1f74cea663c6361007c1536dd0'
+-            'a4fe187ee45b3a11badf4766e26c0117cc95bd93ad5c3cf2ac5822ccc071c32fa430561fe5662e8de9c3f918f396c92acdade75d685523701dbb49ec633e0fdd')
+-b2sums=('19fd65aa7696e3ad1ad8f551171d6e1d534f7a3a47d3121da8184b1ae015e6540f274102a397771c2d9bb959d4d61c5d9a1fa42d140cfeed46cddf96f97c117f'
+-        'b7ca0499b78be1a029c9036e6b50659f343bf1c1222f415b312aff8dd1b98aaeb864c65cac8d6131f5acaad1e3c11e9752d9c8fa0c7facad24ddff3677ba7ccb')
++sha512sums=('8b861083d985e15d19bf25418e4e5441cdb86afc26f899229ed7986b3d4014d2e326a885645873ea072513af08ccecce870c2b219afe59d93026cfa9c1141618')
++b2sums=('020fa266e8811d43d3641d925747afd17ad4b2d4081caeebe1136a4fbdcc9d45b9d739f23d370e36c618f4a869625aee4876a1dd1f1ce8082ab1d4ce16f2fa57')
+ 
+ prepare() {
+   export CARGO_HOME="$(pwd)/build/cargo-home"
+   cd $pkgname-$pkgver
+-  patch -Np1 < ../0001-chore-Upgrade-matrix-sdk-and-ruma.patch
+   export RUSTUP_TOOLCHAIN=stable
+   cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ 
+ build() {
+   CFLAGS+=' -ffat-lto-objects'
+-  arch-meson $pkgname-$pkgver build
++  artix-meson $pkgname-$pkgver build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ clang
+ cmake
+-dart-sass
+ dconf
+ fontconfig
+ gcc-libs
+@@ -23,7 +22,6 @@
+ libwebp
+ meson
+ openssl
+-org.freedesktop.secrets
+ pango
+ rust
+ sqlite
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,11 @@
+ prepare() {
+ export CARGO_HOME="$(pwd)/build/cargo-home"
+ cd $pkgname-$pkgver
+-patch -Np1 < ../0001-chore-Upgrade-matrix-sdk-and-ruma.patch
+ export RUSTUP_TOOLCHAIN=stable
+ cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ build() {
+ CFLAGS+=' -ffat-lto-objects'
+-arch-meson $pkgname-$pkgver build
++artix-meson $pkgname-$pkgver build
+ meson compile -C build
+ }
