@@ -35,7 +35,6 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
-broadcom-wl-dkms
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -67,8 +66,6 @@ containerd
 convertlit
 cppcheck
 crun
-cuda
-cuda-tools
 cups
 libcups
 dbus-broker
@@ -143,6 +140,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
@@ -170,7 +169,6 @@ gnome-system-monitor
 gnome-tour
 gnome-user-share
 go-bindata
-go
 godot
 godot-mono
 greetd-tuigreet
@@ -495,11 +493,6 @@ onboard
 onionshare
 open-iscsi
 opencollada
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendht
 openimageio
 openmpi
@@ -604,6 +597,7 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pwndbg
 pyqt6
 pysolfc
 python-anytree

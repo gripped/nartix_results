@@ -236,6 +236,7 @@ breeze
 breeze5
 breezy
 bridge-utils
+broadcom-wl-dkms
 broadcom-wl
 bspwm
 btop
@@ -390,6 +391,8 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -662,8 +665,6 @@ galculator
 gcab
 gcc13
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -789,6 +790,7 @@ go-licenses
 go-md2man
 go-tools
 go-yq
+go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -2437,6 +2439,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2976,7 +2983,6 @@ purpose
 purpose5
 putty
 pv
-pwndbg
 pyalpm
 pyatspi
 python-atspi
