@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=inkscape
+ pkgver=1.4
+-pkgrel=4
++pkgrel=6
+ pkgdesc='Professional vector graphics editor'
+ url='https://inkscape.org/'
+ license=('GPL' 'LGPL')
+@@ -84,6 +84,7 @@
+   'gvfs: import clip art'
+   'pstoedit: latex formulas'
+   'texlive-pstricks: latex formulas'
++  'python-tinycss2: DXF export'
+ )
+ 
+ source=("git+https://gitlab.com/inkscape/inkscape.git#tag=INKSCAPE_${pkgver//./_}"

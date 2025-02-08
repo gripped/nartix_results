@@ -220,7 +220,6 @@ bmake
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -2330,6 +2329,7 @@ nawk
 nccl
 ncdu
 ncftp
+ncmpcpp
 ncompress
 neatvnc
 nemo

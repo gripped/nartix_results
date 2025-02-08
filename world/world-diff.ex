@@ -31,6 +31,7 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
+boost
 box2d
 brightnessctl
 brltty

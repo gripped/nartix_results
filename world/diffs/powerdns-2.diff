@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,9 +7,9 @@
+@@ -1,15 +1,15 @@
+ 
+ pkgname=powerdns
+ pkgver=4.9.3
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Authoritative DNS server'
+ url='https://www.powerdns.com/'
  arch=('x86_64')
  license=('GPL-2.0-only')
  depends=('boost-libs' 'gnutls' 'libcurl.so' 'libsodium' 'lmdb' 'luajit'
