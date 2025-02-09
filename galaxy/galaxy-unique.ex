@@ -72,6 +72,7 @@ moksha-module-deskshow
 moksha-module-desktitle
 moksha-module-dictionary
 moksha-module-diskio
+moksha-module-drawer
 moksha-module-emprint
 moksha-module-engage
 moksha-module-extramenu
