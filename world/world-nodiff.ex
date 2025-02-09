@@ -384,7 +384,6 @@ cppunit
 cpputest
 cppzmq
 criterion
-criu
 cryptoplusplus
 cscope
 ctags
@@ -1142,7 +1141,6 @@ kajongg
 kalarm
 kalendar
 kalgebra
-kalk
 kalm
 kalzium
 kamera
@@ -2451,6 +2449,7 @@ openfec
 openfire
 openh264
 openimagedenoise
+openimageio
 openipmi
 openjade
 openjpeg2

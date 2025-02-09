@@ -66,6 +66,7 @@ connman
 containerd
 convertlit
 cppcheck
+criu
 crun
 cups
 libcups
@@ -281,6 +282,7 @@ openjdk8-doc
 js78
 julia
 jupyter-server-ydoc
+kalk
 kcoreaddons
 kgamma
 kismet
@@ -495,7 +497,6 @@ onionshare
 open-iscsi
 opencollada
 opendht
-openimageio
 openmpi
 openmpi-docs
 opensmtpd
