@@ -376,7 +376,6 @@ coordgen
 copr-cli
 corrosion
 coturn
-couchdb
 cpio
 cpp-hocon
 cppdap
@@ -534,7 +533,6 @@ enscript
 entr
 epiphany
 erlang-nox
-erlang
 espeak-ng
 ethtool
 eventviews
