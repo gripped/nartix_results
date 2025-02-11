@@ -1,14 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=fractal
 -pkgver=10
+-pkgrel=3
 +pkgver=9
- pkgrel=2
++pkgrel=2
  pkgdesc="Matrix group messaging app"
  arch=(x86_64)
-@@ -27,39 +27,34 @@
+ url="https://gitlab.gnome.org/World/fractal"
+@@ -17,7 +17,6 @@
+   graphene
+   gst-plugins-bad-libs
+   gst-plugins-base-libs
+-  gst-plugin-gtk4
+   gstreamer
+   gtk4
+   gtksourceview5
+@@ -28,39 +27,34 @@
    libseccomp
    libshumate
    openssl
@@ -65,7 +75,15 @@
  dconf
  fontconfig
  gcc-libs
-@@ -23,7 +22,6 @@
+@@ -9,7 +8,6 @@
+ glibc
+ glycin
+ graphene
+-gst-plugin-gtk4
+ gst-plugins-bad-libs
+ gst-plugins-base-libs
+ gstreamer
+@@ -24,7 +22,6 @@
  libwebp
  meson
  openssl

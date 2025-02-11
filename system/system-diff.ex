@@ -4,9 +4,6 @@ base
 bash
 binutils
 btrfs-progs
-curl
-libcurl-compat
-libcurl-gnutls
 dbus
 dbus-docs
 dhcpcd
@@ -31,6 +28,7 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
+gnutls
 gssproxy
 iputils
 libunistring

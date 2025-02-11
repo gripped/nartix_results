@@ -1,19 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=inkscape
- pkgver=1.4
--pkgrel=4
-+pkgrel=6
- pkgdesc='Professional vector graphics editor'
- url='https://inkscape.org/'
- license=('GPL' 'LGPL')
-@@ -84,6 +84,7 @@
-   'gvfs: import clip art'
-   'pstoedit: latex formulas'
-   'texlive-pstricks: latex formulas'
-+  'python-tinycss2: DXF export'
- )
- 
- source=("git+https://gitlab.com/inkscape/inkscape.git#tag=INKSCAPE_${pkgver//./_}"
+@@ -70,6 +70,7 @@
+   'python-pillow'
+   'python-pyserial'
+   'python-requests'
++  'python-six'
+   'python-urllib3'
+   'python-zstandard'
+   'readline'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -63,6 +63,7 @@
+ python-pillow
+ python-pyserial
+ python-requests
++python-six
+ python-urllib3
+ python-zstandard
+ readline

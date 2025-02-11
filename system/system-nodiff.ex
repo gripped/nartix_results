@@ -16,6 +16,9 @@ coreutils
 cracklib
 cronie
 cryptsetup
+curl
+libcurl-compat
+libcurl-gnutls
 dash
 db
 db5.3
@@ -42,7 +45,6 @@ gettext
 gmp
 gnulib-l10n
 gnupg
-gnutls
 gpgme
 qgpgme-qt6
 python-gpgme

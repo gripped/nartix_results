@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-          qt6-xcb-private-headers)
- _pkgver=6.8.2
- pkgver=${_pkgver/-/}
--pkgrel=1
-+pkgrel=2
- arch=(x86_64)
- url='https://www.qt.io'
- license=(GPL-3.0-only
 @@ -44,7 +44,7 @@
           pcre2
           shared-mime-info
@@ -18,18 +9,7 @@
           tslib
           vulkan-headers
           xcb-util-cursor
-@@ -91,6 +91,10 @@
- prepare() {
-   patch -d $_pkgfn -p1 < qt6-base-cflags.patch # Use system CFLAGS
-   patch -d $_pkgfn -p1 < qt6-base-nostrip.patch # Don't strip binaries with qmake
-+  cd $_pkgfn
-+  git cherry-pick -n 12d4bf1ab52748cb84894f50d437064b439e0b7d \
-+                     2ef615228bba9a8eb282437bfb7472f925610e89 \
-+                     a43c7e58046604796aa69974ea1c5d3e2648c755
- }
- 
- build() {
-@@ -106,7 +110,7 @@
+@@ -110,7 +110,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \

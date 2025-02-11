@@ -3,7 +3,7 @@
 @@ -1,7 +1,8 @@
  
  pkgname=python-levenshtein
--pkgver=0.26.1
+-pkgver=0.27.0
 -pkgrel=1
 +_name=Levenshtein
 +pkgver=0.25.0
@@ -26,8 +26,8 @@
  )
  checkdepends=('python-pytest')
 -source=("$pkgname::git+$url#tag=v$pkgver")
--sha512sums=('1939c1a73062306eab6e25ac0096216f42891a1c1c7be90a8a862a1bd1a62f5d945c8ba39daa65a8cc834ac26169426777888b50820bc33ca282dce21c2ffd34')
--b2sums=('e13810b819b875b641839e48f5db2822156f3c9a118b02dd37bdd1e780c5a841931f63aa023cde91ce5608629eef9967e2d40f0ae086c90504340a98dab5f010')
+-sha512sums=('2b1faa4efbca28689c4e1d38b7b4f370a8236195b36b5e7ce474848ae47d6ccd44b34693ad61c68d4c44374cfb3859238a78e032fa0241ca89bf336435cc5b6a')
+-b2sums=('98a075bf6a85f30489104bbfc89ebadcbb977df9382299f1a30ccd45e508b204519c034e25d7d8f923ac9833eba06525238b043d69d1574e7510b0d524ac50c9')
 +source=("$_name-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz"
 +        'fix_backend.patch')
 +b2sums=('cb3bb55b37b5bfa8dc95d78dc6898154b4d4240c27348c6e03b13cdaa2c8ff19d1e8f2bf3d6b4fcc5c77be917afaa391276e93dcac24c2c19e1b285653a45c72'

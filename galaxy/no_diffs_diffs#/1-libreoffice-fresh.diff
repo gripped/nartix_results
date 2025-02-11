@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+     'libtommath' 'libzmf' 'xmlsec' 'rxvt-unicode' 'gpgme' 'libwebp'
+     'libepubgen' 'libfreehand' 'libqxp' 'libstaroffice'  'boost' 'libnumbertext'
+     'abseil-cpp' 'clang' 'zxing-cpp'
+-    'libffi' 'git' 'python-setuptools' 'rhino'
++    'libffi' 'git' 'python-setuptools' 'rhino' 'argon2'
+ )
+ options=('!lto') # using --enable-lto (for parallel link-time optimization)
+ _mirror="https://download.documentfoundation.org/libreoffice/src/${pkgver}"

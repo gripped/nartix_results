@@ -3,10 +3,9 @@
 @@ -1,57 +1,45 @@
  
  pkgname=xfce4-settings
--pkgver=4.20.0
--pkgrel=3
+-pkgver=4.20.1
 +pkgver=4.18.4
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Xfce's Configuration System"
  arch=('x86_64')
  url="https://docs.xfce.org/xfce/xfce4-settings/start"
@@ -26,9 +25,9 @@
 +optdepends=('python: xfce4-compose-mail -- "mailto:" URI handling')
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2
          default-xsettings-xml.patch)
--sha256sums=('afd73b672df6bccc9dabb38c1fb05119ea0c9da1e18e0dd93ab55caecd42ff33'
+-sha256sums=('a5dcc67275b1497a4e88f84aafcd9910c14b2fa0a768325a5cd22373acfca12d'
 -            'SKIP'
--            '5851b27939ef28ea391091727522bc792d1f90b9caf9c7de10e47e05eeaaffa8')
+-            '008da8cae0251864d1bf34e2649674e0566475a423becf81e8e3f5c6acb3877d')
 +sha256sums=('f10c55d0360308d9944f415645d9596d4352f952a20fc7c4a66f30fe511ca1dc'
 +            'ca1c7562e209d9ab791b02f2a886c61a9ed705a912d9575f590734eff21d6e5c')
  prepare() {

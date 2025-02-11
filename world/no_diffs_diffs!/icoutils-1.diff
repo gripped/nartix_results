@@ -12,3 +12,12 @@
  
  build() {
    cd ${pkgname}-${pkgver}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -0,0 +1,2 @@
++libpng>
++perl-libwww>

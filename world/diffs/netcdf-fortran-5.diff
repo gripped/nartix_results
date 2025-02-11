@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,20 @@
+ 
+ pkgname=netcdf-fortran
+ pkgver=4.6.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="NetCDF fortran bindings"
+ arch=(x86_64)
+ url="https://github.com/Unidata/netcdf-fortran"
+ license=(custom)
+ depends=(gcc-libs netcdf curl)
+-makedepends=(cmake gcc-fortran git doxygen)
++makedepends=(cmake gcc-fortran doxygen)
+ checkdepends=(valgrind)
+ options=(!makeflags staticlibs)
+-source=(git+${url}#tag=v${pkgver})
+-sha256sums=('1bd7f7dbae3cc4e535742fd5a17a41be655df1c4063c0fd00b75cc105a10d814')
+-
+-prepare() {
+-  cd $pkgname
+-  git cherry-pick -n 7eff7deca464bcf195f0b37a1f0dba1786d1a19b \
+-                     eca8233d3e8c2a3588d6a79a660a8b5d4f1288fc
+-}
++source=(${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha256sums=('40b534e0c81b853081c67ccde095367bd8a5eead2ee883431331674e7aa9509f')
+ 
+ build() {
+-  cmake -B build -S ${pkgname} \
++  cmake -B build -S ${pkgname}-${pkgver} \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DENABLE_FILTER_TEST=ON \
+@@ -35,7 +29,7 @@
+ 
+ package() {
+   make -C build DESTDIR="${pkgdir}" install
+-  install -Dm644 ${pkgname}/COPYRIGHT -t "${pkgdir}"/usr/share/licenses/${pkgname}/
++  install -Dm644 ${pkgname}-${pkgver}/COPYRIGHT -t "${pkgdir}"/usr/share/licenses/${pkgname}/
+   rmdir "${pkgdir}"/usr/include/CMakeFiles/{netcdff{,_c}.dir,}
+   rm "${pkgdir}"/usr/lib/objects-RelWithDebInfo/{nf_,f}test_c/f03lib.c.o
+   rmdir "${pkgdir}"/usr/lib/objects-RelWithDebInfo/{{nf_,f}test_c,}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,5 +3,4 @@
+ doxygen
+ gcc-fortran
+ gcc-libs
+-git
+ netcdf
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,5 @@
+-prepare() {
+-cd $pkgname
+-git cherry-pick -n 7eff7deca464bcf195f0b37a1f0dba1786d1a19b \
+-eca8233d3e8c2a3588d6a79a660a8b5d4f1288fc
+-}
+ build() {
+-cmake -B build -S ${pkgname} \
++cmake -B build -S ${pkgname}-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DENABLE_FILTER_TEST=ON \

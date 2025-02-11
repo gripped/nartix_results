@@ -9,3 +9,15 @@
  pkgdesc="An unidentifiable mechanism that helps you bypass GFW"
  arch=('x86_64')
  url="https://github.com/trojan-gfw/trojan"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-boost
+-boost-libs
+-cmake
+-mariadb-libs
+-openssl

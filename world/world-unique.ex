@@ -483,7 +483,6 @@ radicale-openrc
 radicale-runit
 radicale-s6
 raw-thumbnailer
-rebar3
 redis-dinit
 redis-openrc
 redis-runit
