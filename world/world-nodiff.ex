@@ -86,7 +86,6 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
-ardour
 argyllcms
 aria2
 arianna
@@ -121,7 +120,6 @@ aspell-sv
 aspell-uk
 aspell
 assimp
-astromenace
 astyle
 atftp
 atkmm-2.36
@@ -168,13 +166,6 @@ aws-checksums
 aws-cli-v2
 aws-cli
 aws-crt-cpp
-aws-sdk-cpp
-aws-sdk-cpp-core
-aws-sdk-cpp-ec2
-aws-sdk-cpp-firehose
-aws-sdk-cpp-iam
-aws-sdk-cpp-kinesis
-aws-sdk-cpp-s3
 ayatana-ido
 babl
 backuppc
@@ -277,6 +268,7 @@ catch2
 catdoc
 cauchy
 cbatticon
+ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -640,9 +632,6 @@ freeglut
 freeimage
 freeradius
 freetds
-freetype2
-freetype2-demos
-freetype2-docs
 frei0r-plugins
 fribidi
 fstrm
@@ -1053,7 +1042,6 @@ intel-oneapi-tcm
 intel-ucode
 intltool
 inxi
-iperf
 iperf3
 ipset
 ipython
@@ -1725,6 +1713,7 @@ libksysguard
 libktorrent
 liblangtag
 liblas
+liblc3
 libldac
 libliftoff
 liblo
@@ -2537,7 +2526,6 @@ pdfjs
 pdfmixtool
 pdnsd
 pegtl
-pelican
 perl-acme-alien-dontpanic
 perl-algorithm-diff
 perl-alien-base-modulebuild
@@ -2754,6 +2742,7 @@ perl-ref-util
 perl-regexp-common
 perl-return-multilevel
 perl-role-tiny
+perl-safe-isa
 perl-scalar-list-utils
 perl-scope-guard
 perl-sgmls
@@ -2840,7 +2829,6 @@ perl-xml-sax
 perl-xml-simple
 perl-xml-writer
 perl-xml-xpath
-perl-yaml-libyaml
 perl-yaml-pp
 perl-yaml-tiny
 perl-yaml
@@ -2994,8 +2982,6 @@ pylama
 pyopengl
 python-opengl
 pyprof2calltree
-pypy
-pypy3
 pyqt-builder
 pyqt5-3d
 python-pyqt5-3d
@@ -4330,7 +4316,6 @@ python-vine
 python-virtualenv-clone
 python-virtualenv
 python-vistir
-python-vobject
 python-volatile
 python-voluptuous
 python-waitress
@@ -5003,7 +4988,6 @@ sdl_ttf
 seabios
 seabios-docs
 seahorse
-semver
 senpai
 sequoia-sq
 sequoia-sqv
@@ -5447,6 +5431,7 @@ vde2
 vdpauinfo
 veracrypt
 verdict
+vice
 vid.stab
 viewnior
 vifm

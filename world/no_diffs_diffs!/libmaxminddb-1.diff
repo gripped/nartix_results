@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,11 +2,11 @@
+ pkgname=(libmaxminddb mmdblookup)
+ 
+ pkgver=1.12.2
+-pkgrel=1
++pkgrel=2
+ pkgdesc="MaxMind GeoIP2 database - split package with library and utilities"
+ license=('Apache-2.0')
+ arch=('x86_64')
+-url="https://dev.maxmind.com/geoip/geoip2/downloadable/"
++url="https://maxmind.github.io/libmaxminddb/"
+ optdepends=('geoip2-database: IP geolocation databases')
+ source=("https://github.com/maxmind/libmaxminddb/releases/download/$pkgver/libmaxminddb-$pkgver.tar.gz")
+ sha256sums=('1bfbf8efba3ed6462e04e225906ad5ce5fe958aa3d626a1235b2a2253d600743')
+@@ -33,6 +33,7 @@
+ 
+ package_mmdblookup() {
+ 	pkgdesc="MaxMindDB GeoIP2 lookup utility"
++	url="https://maxmind.github.io/libmaxminddb/mmdblookup.html"
+ 	depends=('libmaxminddb')
+ 
+ 	cd "$srcdir"/libmaxminddb-$pkgver

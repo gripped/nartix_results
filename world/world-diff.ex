@@ -10,6 +10,8 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
+ardour
+astromenace
 at-spi2-core
 at-spi2-core-docs
 at
@@ -17,6 +19,13 @@ atril
 audacious-plugins
 avahi
 awesome
+aws-sdk-cpp
+aws-sdk-cpp-core
+aws-sdk-cpp-ec2
+aws-sdk-cpp-firehose
+aws-sdk-cpp-iam
+aws-sdk-cpp-kinesis
+aws-sdk-cpp-s3
 bash-bats
 blender
 bluedevil
@@ -48,7 +57,6 @@ caja-xattr-tags
 caja
 catfish
 cbindgen
-ccache
 cgmanager
 chromium-bsu
 chrony
@@ -161,6 +169,9 @@ fprintd
 fractal
 freerdp
 freerdp2
+freetype2
+freetype2-demos
+freetype2-docs
 frugally-deep
 fwupd-efi
 fwupd
@@ -280,6 +291,7 @@ intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
+iperf
 isoimagewriter
 iwd
 jack2
@@ -366,7 +378,6 @@ libguestfs
 libhandy0
 libical
 libinput
-liblc3
 libldm
 libmspub
 libnvme
@@ -546,9 +557,11 @@ parole
 passim
 pc-ble-driver
 pcsclite
+pelican
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-yaml-libyaml
 pgbouncer
 phodav
 php-igbinary
@@ -634,6 +647,8 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 pwndbg
+pypy
+pypy3
 pyqt6
 pysolfc
 python-anytree
@@ -645,6 +660,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
+python-vobject
 python-werkzeug
 qastools
 qbittorrent
@@ -775,6 +791,7 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+semver
 sfml
 shairport-sync
 signal-desktop
@@ -860,7 +877,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
-vice
 vlc
 libvlc
 vpnc

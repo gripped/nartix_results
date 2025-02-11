@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+     -D tools=true
+   )
+ 
+-  arch-meson liblc3 build "${meson_options[@]}"
++  artix-meson liblc3 build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ -D python=true
+ -D tools=true
+ )
+-arch-meson liblc3 build "${meson_options[@]}"
++artix-meson liblc3 build "${meson_options[@]}"
+ meson compile -C build
+ }

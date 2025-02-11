@@ -2,6 +2,7 @@
 0ad
 ada
 alacritty
+atool
 atril
 audacious-plugins
 audacious
