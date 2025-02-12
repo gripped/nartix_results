@@ -50,6 +50,7 @@ backlight-s6
 backuppc-dinit
 backuppc-openrc
 backuppc-s6
+basu
 bftpd-dinit
 bftpd-openrc
 bftpd-runit

@@ -168,6 +168,13 @@ aws-checksums
 aws-cli-v2
 aws-cli
 aws-crt-cpp
+aws-sdk-cpp
+aws-sdk-cpp-core
+aws-sdk-cpp-ec2
+aws-sdk-cpp-firehose
+aws-sdk-cpp-iam
+aws-sdk-cpp-kinesis
+aws-sdk-cpp-s3
 ayatana-ido
 babl
 backuppc
@@ -213,6 +220,7 @@ bmake
 boinc
 boinc-nox
 bomber
+boost
 booster
 botan
 botan2
@@ -378,6 +386,7 @@ cppunit
 cpputest
 cppzmq
 criterion
+criu
 cryptoplusplus
 cscope
 ctags
@@ -398,7 +407,6 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
-cython
 cython0
 d-spy
 darkhttpd
@@ -659,6 +667,7 @@ foomatic-db-nonfree-ppds
 fop
 fossil
 four-in-a-row
+fractal
 frameworkintegration
 frameworkintegration5
 francis
@@ -701,7 +710,6 @@ geany
 geary
 gedit-plugins
 gedit
-gegl
 gendesk
 gengetopt
 genxrdpattern
@@ -969,8 +977,6 @@ hexedit
 hexer-hobu
 hicolor-icon-theme
 hiera
-highlight
-highlight-gui
 highway
 hip-runtime-amd
 hip-runtime
@@ -1164,6 +1170,7 @@ kajongg
 kalarm
 kalendar
 kalgebra
+kalk
 kalm
 kalzium
 kamera
@@ -1809,7 +1816,6 @@ libnghttp3
 libngtcp2
 libnice
 libnih
-libnitrokey
 libnma
 libnma-common
 libnma-gtk4
@@ -2241,8 +2247,6 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
-maturin
-python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2362,6 +2366,7 @@ neon
 neovim-qt
 neovim
 net-snmp
+netcdf
 netcf
 netpbm
 netsurf-buildsystem
@@ -2379,7 +2384,6 @@ nload
 nlohmann-json
 nmap
 nnn
-node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-hydrogen
@@ -3223,7 +3227,6 @@ python-cherrypy
 python-claripy
 python-cleo
 python-clevercsv
-python-click-aliases
 python-click-command-tree
 python-click-default-group
 python-click-didyoumean
@@ -3519,7 +3522,6 @@ python-hyperframe
 python-hyperlink
 python-hypothesis-auto
 python-hypothesis-fspaths
-python-hypothesis
 python-hypothesmith
 python-ibm-db-sa
 python-icecream
@@ -5444,6 +5446,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
@@ -5504,6 +5507,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

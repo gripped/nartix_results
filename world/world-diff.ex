@@ -17,13 +17,6 @@ atril
 audacious-plugins
 avahi
 awesome
-aws-sdk-cpp
-aws-sdk-cpp-core
-aws-sdk-cpp-ec2
-aws-sdk-cpp-firehose
-aws-sdk-cpp-iam
-aws-sdk-cpp-kinesis
-aws-sdk-cpp-s3
 bash-bats
 blender
 bluedevil
@@ -38,7 +31,6 @@ bluez-mesh
 bluez-obex
 bogofilter
 bolt
-boost
 box2d
 brightnessctl
 brltty
@@ -72,10 +64,10 @@ connman
 containerd
 convertlit
 cppcheck
-criu
 crun
 cups
 libcups
+cython
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -130,7 +122,6 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
-fractal
 freerdp
 freerdp2
 frugally-deep
@@ -151,6 +142,7 @@ gcr
 gcr-docs
 gdm
 libgdm
+gegl
 geoclue
 ghc-filesystem
 gjs
@@ -240,6 +232,8 @@ haproxy
 haveged
 hexchat
 hidapi
+highlight
+highlight-gui
 hipify-clang
 hwloc
 hyperkitty
@@ -291,7 +285,6 @@ openjdk8-doc
 js78
 julia
 jupyter-server-ydoc
-kalk
 kcoreaddons
 kgamma
 kismet
@@ -343,6 +336,7 @@ libical
 libinput
 libldm
 libmspub
+libnitrokey
 libnvme
 libp11
 libprocps
@@ -432,6 +426,8 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+maturin
+python-maturin
 media-player-info
 memcached
 mesa
@@ -484,13 +480,13 @@ nemo-share
 nemo-terminal
 netavark
 netcdf-fortran
-netcdf
 netplan
 networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+node-gyp
 nsd
 nushell
 nvidia-open
@@ -612,7 +608,9 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-click-aliases
 python-google-auth
+python-hypothesis
 python-invoke
 python-ipykernel
 python-levenshtein
@@ -825,7 +823,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -849,7 +846,6 @@ vte3
 vte-common
 vte4
 vte-docs
-vtk
 wasi-compiler-rt
 waybar
 webkit2gtk-4.1

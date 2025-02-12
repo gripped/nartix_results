@@ -4,15 +4,15 @@
  arch=('x86_64' 'aarch64')
  url='https://www.docker.com/'
  license=('Apache-2.0')
--depends=('glibc' 'bridge-utils' 'iproute2' 'device-mapper' 'sqlite' 'systemd-libs'
-+depends=('glibc' 'bridge-utils' 'iproute2' 'device-mapper' 'sqlite' 'libudev'
+-depends=('glibc' 'iproute2' 'device-mapper' 'sqlite' 'systemd-libs'
++depends=('glibc' 'iproute2' 'device-mapper' 'sqlite' 'libudev'
           'libseccomp' 'libtool' 'runc' 'containerd')
 -makedepends=('git' 'go' 'btrfs-progs' 'cmake' 'systemd' 'go-md2man' 'sed')
 +makedepends=('git' 'go' 'btrfs-progs' 'cmake' 'udev' 'go-md2man' 'sed')
  optdepends=('btrfs-progs: btrfs backend support'
              'pigz: parallel gzip compressor support'
-             'docker-scan: vulnerability scanner'
-@@ -68,7 +68,7 @@
+             'docker-buildx: extended build capabilities')
+@@ -67,7 +67,7 @@
    echo 'Building daemon'
    _fake_gopath_pushd moby github.com/docker/docker
    DOCKER_GITCOMMIT=$(cd "$srcdir"/moby && git rev-parse --short HEAD) \
@@ -21,7 +21,7 @@
      VERSION=$pkgver \
      hack/make.sh dynbinary
    _fake_gopath_popd
-@@ -85,8 +85,6 @@
+@@ -84,8 +84,6 @@
    install -Dm755 moby/bundles/dynbinary-daemon/dockerd "$pkgdir"/usr/bin/dockerd
    install -Dm755 moby/bundles/dynbinary-daemon/docker-proxy "$pkgdir/usr/bin/docker-proxy"
    cd "$srcdir"/moby/contrib
@@ -36,7 +36,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -10,8 +10,8 @@
+@@ -9,8 +9,8 @@
  iproute2
  libseccomp
  libtool
