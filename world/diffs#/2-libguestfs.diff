@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=libguestfs
- pkgver=1.54.0
--pkgrel=4
-+pkgrel=3
- pkgdesc="Access and modify virtual machine disk images"
- arch=(x86_64)
- url="https://libguestfs.org/"
 @@ -40,7 +40,6 @@
    squashfs-tools
    strace
@@ -17,15 +8,6 @@
    vim
    xfsprogs
    yara
-@@ -71,7 +70,7 @@
-   bash-completion
-   cdrtools
-   cpio
--  erlang-erl_interface
-+  erlang-nox
-   go
-   gobject-introspection
-   gperf
 @@ -144,7 +143,7 @@
      --prefix=/usr
      --sbindir=/usr/bin
@@ -53,15 +35,6 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,7 +7,7 @@
- debootstrap
- dhcpcd
- dosfstools
--erlang-erl_interface
-+erlang-nox
- exfatprogs
- f2fs-tools
- fuse2
 @@ -67,7 +67,6 @@
  strace
  supermin

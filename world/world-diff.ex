@@ -67,7 +67,6 @@ cppcheck
 crun
 cups
 libcups
-cython
 dbus-broker
 dbus-python
 dbus-python-docs
@@ -96,6 +95,7 @@ easytag
 element.io
 element-web
 element-desktop
+ell
 emacs
 emacs-nativecomp
 emacs-nox
@@ -142,7 +142,6 @@ gcr
 gcr-docs
 gdm
 libgdm
-gegl
 geoclue
 ghc-filesystem
 gjs
@@ -168,9 +167,6 @@ gnome-system-monitor
 gnome-tour
 gnome-user-share
 go-bindata
-gobject-introspection
-gobject-introspection-runtime
-libgirepository
 godot
 godot-mono
 greetd-tuigreet
@@ -232,8 +228,6 @@ haproxy
 haveged
 hexchat
 hidapi
-highlight
-highlight-gui
 hipify-clang
 hwloc
 hyperkitty
@@ -332,11 +326,9 @@ libgdata
 libgudev
 libguestfs
 libhandy0
-libical
 libinput
 libldm
 libmspub
-libnitrokey
 libnvme
 libp11
 libprocps
@@ -426,8 +418,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-maturin
-python-maturin
 media-player-info
 memcached
 mesa
@@ -486,7 +476,6 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
-node-gyp
 nsd
 nushell
 nvidia-open
@@ -523,10 +512,6 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
-php-igbinary
-php-legacy-igbinary
-php-imagick
-php-legacy-imagick
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -608,20 +593,14 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-click-aliases
 python-google-auth
-python-hypothesis
-python-invoke
 python-ipykernel
-python-levenshtein
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
-python-watchfiles
 python-werkzeug
-python-xmlschema
 qastools
 qbittorrent
 qbittorrent-nox
@@ -758,7 +737,6 @@ signal-desktop
 smartmontools
 snapper
 solid
-spdlog
 spice-vdagent
 squid
 sshguard

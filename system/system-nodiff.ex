@@ -45,9 +45,7 @@ gettext
 gmp
 gnulib-l10n
 gnupg
-gpgme
-qgpgme-qt6
-python-gpgme
+gnutls
 gpm
 grep
 groff
@@ -71,6 +69,7 @@ keyutils
 kmod
 krb5
 ldns
+leancrypto
 less
 libaio
 libarchive

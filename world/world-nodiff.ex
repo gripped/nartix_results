@@ -407,6 +407,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
+cython
 cython0
 d-spy
 darkhttpd
@@ -523,7 +524,6 @@ elementary-icon-theme
 elinks
 elisa
 elixir
-ell
 embree3
 emovix
 enblend-enfuse
@@ -710,6 +710,7 @@ geany
 geary
 gedit-plugins
 gedit
+gegl
 gendesk
 gengetopt
 genxrdpattern
@@ -824,6 +825,9 @@ go-md2man
 go-tools
 go-yq
 go
+gobject-introspection
+gobject-introspection-runtime
+libgirepository
 gom
 gom-docs
 google-glog
@@ -977,6 +981,9 @@ hexedit
 hexer-hobu
 hicolor-icon-theme
 hiera
+highlight
+highlight-perl
+highlight-gui
 highway
 hip-runtime-amd
 hip-runtime
@@ -1706,6 +1713,7 @@ libhandy-docs
 libharu
 libheif
 libhubbub
+libical
 libice
 libiconv
 libid3tag
@@ -1816,6 +1824,7 @@ libnghttp3
 libngtcp2
 libnice
 libnih
+libnitrokey
 libnma
 libnma-common
 libnma-gtk4
@@ -2247,6 +2256,8 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
+maturin
+python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2380,10 +2391,12 @@ nftables
 nginx
 nginx-src
 ninja
+nitrokey-udev-rules
 nload
 nlohmann-json
 nmap
 nnn
+node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-hydrogen
@@ -2885,6 +2898,10 @@ phonon-qt6
 php-apcu
 php-legacy-apcu
 php-geoip
+php-igbinary
+php-legacy-igbinary
+php-imagick
+php-legacy-imagick
 php-memcache
 php-memcached
 php-mongodb
@@ -3227,6 +3244,7 @@ python-cherrypy
 python-claripy
 python-cleo
 python-clevercsv
+python-click-aliases
 python-click-command-tree
 python-click-default-group
 python-click-didyoumean
@@ -3522,6 +3540,7 @@ python-hyperframe
 python-hyperlink
 python-hypothesis-auto
 python-hypothesis-fspaths
+python-hypothesis
 python-hypothesmith
 python-ibm-db-sa
 python-icecream
@@ -3543,6 +3562,7 @@ python-installer
 python-intelhex
 python-intervals
 python-intervaltree
+python-invoke
 python-iocapture
 python-ipdb
 python-ipyparallel
@@ -3621,6 +3641,7 @@ python-lazy-object-proxy
 python-ldap
 python-ldap3
 python-legacy-cgi
+python-levenshtein
 python-lexicon
 python-libarchive-c
 python-libcst
@@ -4364,6 +4385,7 @@ python-waitress
 python-wand
 python-warlock
 python-watchdog
+python-watchfiles
 python-watchgod
 python-wcag-contrast-ratio
 python-wcmatch
@@ -4397,6 +4419,7 @@ python-xlib
 python-xlrd
 python-xlsxwriter
 python-xlwt
+python-xmlschema
 python-xmlsec
 python-xmltodict
 python-xxhash
@@ -5096,6 +5119,7 @@ spamassassin
 spandsp
 spandsp-docs
 spatialindex
+spdlog
 speakup-utils
 spectacle
 speech-dispatcher

@@ -28,7 +28,9 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-gnutls
+gpgme
+qgpgme-qt6
+python-gpgme
 gssproxy
 iputils
 libunistring
