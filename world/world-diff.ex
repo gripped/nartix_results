@@ -32,6 +32,8 @@ bluez-obex
 bogofilter
 bolt
 box2d
+breeze
+breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -229,6 +231,7 @@ haveged
 hexchat
 hidapi
 hipify-clang
+hugin
 hwloc
 hyperkitty
 hyprland
@@ -244,6 +247,7 @@ intel-undervolt
 interception-tools
 iperf
 isoimagewriter
+itstool
 iwd
 jack2
 jack2-dbus
@@ -504,6 +508,7 @@ libpackagekit-glib
 pacman-contrib
 paraview-catalyst
 parole
+passff-host
 passim
 pc-ble-driver
 pcsclite
@@ -581,6 +586,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+prometheus
 proxytunnel
 pulseaudio
 libpulse
@@ -801,6 +807,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

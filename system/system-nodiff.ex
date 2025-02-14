@@ -16,9 +16,6 @@ coreutils
 cracklib
 cronie
 cryptsetup
-curl
-libcurl-compat
-libcurl-gnutls
 dash
 db
 db5.3

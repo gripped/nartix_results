@@ -4,6 +4,9 @@ base
 bash
 binutils
 btrfs-progs
+curl
+libcurl-compat
+libcurl-gnutls
 dbus
 dbus-docs
 dhcpcd

@@ -232,8 +232,6 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
-breeze
-breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -1010,7 +1008,6 @@ htop
 http-parser
 httpbin
 hub
-hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -1103,7 +1100,6 @@ ispc
 ispell
 isync
 itinerary
-itstool
 iucode-tool
 iverilog
 j4-dmenu-desktop
@@ -2558,7 +2554,6 @@ parted
 partitionmanager
 pass-otp
 pass
-passff-host
 passt
 pastebinit
 pasystray
@@ -3006,7 +3001,6 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
-prometheus
 prosody
 protobuf-c
 protobuf
@@ -5470,7 +5464,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash
