@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=python-aiosqlite
+-pkgver=0.21.0
+-pkgrel=1
++_pkgname=${pkgname#python-}
++pkgver=0.20.0
++pkgrel=2
+ pkgdesc="Asyncio bridge to the standard sqlite3 module"
+ arch=(any)
+ url="https://github.com/omnilib/aiosqlite"
+@@ -14,20 +15,25 @@
+ )
+ checkdepends=(python-aiounittest)
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+-sha256sums=('f2338f94d62f5faf5c2da409c3fcd6862e53075cfa52abe521ddba324d472f21')
++sha256sums=('63ecc7f7ffa0d0c2ba918b3c2bfe6f96b65fd7388b9041ae77b020ea8ff566db')
++
++_archive="$_pkgname-$pkgver"
+ 
+ build() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_archive"
++
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd ${pkgname#python-}-$pkgver
+-  python -m unittest discover -v
++  cd "$_archive"
++
++  python -m unittest
+ }
+ 
+ package() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_archive"
++
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
++  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd ${pkgname#python-}-$pkgver
++cd "$_archive"
+ python -m build --wheel --no-isolation
+ }

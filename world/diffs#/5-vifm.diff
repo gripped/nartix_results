@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,31 @@
+ 
+ pkgname=vifm
+-pkgver=0.14
+-pkgrel=1
++pkgver=0.13
++pkgrel=3
+ pkgdesc="A file manager with curses interface, which provides Vi[m]-like environment"
+ arch=('x86_64')
+ url="https://vifm.info/"
+ license=('GPL-2.0-or-later')
+ depends=(
+   'file'
+-  'glib2'
+   'glibc'
+   'ncurses'
+ )
+ makedepends=('perl')
+ changelog=$pkgname.changelog
+-source=("https://github.com/vifm/vifm/releases/download/v$pkgver/$pkgname-$pkgver.tar.bz2"{,.asc})
+-sha256sums=('2714dd4cef4e53e7a8980ae8445e88279104f815d47f417fa0b8adfe2f3d1bed'
+-            'SKIP')
++source=(
++  "https://github.com/vifm/vifm/releases/download/v$pkgver/$pkgname-$pkgver.tar.bz2"{,.asc}
++  "fix-bash-completion.patch::https://github.com/vifm/vifm/commit/efbf106a095c1163eafdc144be1f1c8fecb91e72.patch"
++)
++sha256sums=('0d9293749a794076ade967ecdc47d141d85e450370594765391bdf1a9bd45075'
++            'SKIP'
++            '57dd10a82e87f446d45b09ccd875006c268b33fff5a1583de3a2670eddbd2b71')
+ validpgpkeys=('22349CDBE5227D2108A5667799DC5E4DB05F6BE2') # xaizek <xaizek@posteo.net>
++
++prepare() {
++  cd $pkgname-$pkgver
++  patch -Np1 -i "$srcdir/fix-bash-completion.patch"
++}
+ 
+ build() {
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ file
+-glib2
+ glibc
+ ncurses
+ perl
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd $pkgname-$pkgver
++patch -Np1 -i "$srcdir/fix-bash-completion.patch"
++}
+ build() {
+ cd $pkgname-$pkgver
+ ./configure --prefix=/usr --sysconfdir=/etc

@@ -247,7 +247,6 @@ intel-undervolt
 interception-tools
 iperf
 isoimagewriter
-itstool
 iwd
 jack2
 jack2-dbus
@@ -598,9 +597,12 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiosqlite
 python-anytree
 python-google-auth
 python-ipykernel
+python-lexicon
+python-peewee
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -824,6 +826,7 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 vault
+vifm
 vlc
 libvlc
 vpnc

@@ -1100,6 +1100,7 @@ ispc
 ispell
 isync
 itinerary
+itstool
 iucode-tool
 iverilog
 j4-dmenu-desktop
@@ -3096,7 +3097,6 @@ python-aioresponses
 python-aiorpcx
 python-aiosignal
 python-aiosmtpd
-python-aiosqlite
 python-aiounittest
 python-alembic
 python-amqp
@@ -3636,7 +3636,6 @@ python-ldap
 python-ldap3
 python-legacy-cgi
 python-levenshtein
-python-lexicon
 python-libarchive-c
 python-libcst
 python-libevdev
@@ -3825,7 +3824,6 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
-python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -5490,7 +5488,6 @@ verdict
 vice
 vid.stab
 viewnior
-vifm
 vigra
 python-vigra
 vim

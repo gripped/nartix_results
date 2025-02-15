@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=rdma-core
- pkgdesc="RDMA core userspace libraries and daemons"
--pkgver=56.0
-+pkgver=54.0
- pkgrel=1
- arch=(x86_64)
- url="https://github.com/linux-rdma/rdma-core"
 @@ -20,7 +20,7 @@
    glibc
    libnl
@@ -26,48 +17,7 @@
    valgrind
  )
  optdepends=(
-@@ -61,7 +60,7 @@
- replaces=("${_provides[@]}")
- backup=(etc/rdma/{rdma.conf,mlx4.conf})
- source=("https://github.com/linux-rdma/rdma-core/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
--sha512sums=('c3b897e7bb527be233c1628550d55177b95b8a1371425eb83534de1bddf9f09071a5c1a56aa41dd07b205f61a228076233088534963d048ba519699a043d7e31')
-+sha512sums=('00683439388ff393826c5afd49fd80b49a5d6d830d1736eceddf47b5f6faf8162bb82bbe5de05a37bf5358da794615a6fd14410a2bc14aa501c92124be25007f')
- 
- prepare() {
-     cd $pkgname-$pkgver
-@@ -75,24 +74,19 @@
- }
- 
- build() {
--    local cmake_options=(
--        -B build
--        -S $pkgname-$pkgver
--        -G Ninja
--        -W no-dev
--        -DCMAKE_INSTALL_PREFIX=/usr
--        -DCMAKE_INSTALL_RUNDIR=/run
--        -DCMAKE_INSTALL_SBINDIR=/usr/bin
--        -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/rdma
--        -DCMAKE_INSTALL_SYSCONFDIR=/etc
-+    cmake -B build -S $pkgname-$pkgver -G Ninja \
-+        -DCMAKE_INSTALL_PREFIX=/usr \
-+        -DCMAKE_INSTALL_RUNDIR=/run \
-+        -DCMAKE_INSTALL_SBINDIR=/usr/bin \
-+        -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/rdma \
-+        -DCMAKE_INSTALL_SYSCONFDIR=/etc \
-         -DCMAKE_INSTALL_PERLDIR=/usr/share/perl5/vendor_perl
--    )
--    cmake "${cmake_options[@]}"
-     cmake --build build
- }
- 
- check() {
-     cd $pkgname-$pkgver
-+    PYTHONPATH="$srcdir/build/python" tests/run_tests.py
- }
- 
- package() {
-@@ -116,4 +110,6 @@
+@@ -116,4 +115,6 @@
      install -vDm 644 providers/ipathverbs/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname/providers/ipathverbs/
      install -vDm 644 ccan/LICENSE.CCO -t "$pkgdir"/usr/share/licenses/$pkgname/ccan/
      install -vDm 644 ccan/LICENSE.MIT -t "$pkgdir"/usr/share/licenses/$pkgname/ccan/

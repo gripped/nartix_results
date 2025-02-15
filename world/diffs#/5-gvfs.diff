@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,66 +2,86 @@
+@@ -2,66 +2,91 @@
  pkgbase=gvfs
  pkgname=(
    gvfs
@@ -17,8 +17,9 @@
 +  gvfs-wsdd
  )
 -pkgver=1.52.2
+-pkgrel=2
 +pkgver=1.56.1
- pkgrel=2
++pkgrel=3
  pkgdesc="Virtual filesystem implementation for GIO"
 -url="https://wiki.gnome.org/Projects/gvfs"
 +url="https://gitlab.gnome.org/GNOME/gvfs"
@@ -76,6 +77,7 @@
 +  "git+https://gitlab.gnome.org/GNOME/gvfs.git#tag=$pkgver"
    gvfsd.hook
 +  0001-nfs-Support-libnfs-6-backport-to-1.56.patch
++  0002-monitor-Do-not-load-monitors-when-GIO_USE_VFS-local.patch
  )
 -b2sums=('SKIP'
 -        '08a830600964d2c896d7f107d9558053a32eb6b9166433d6e29b58d4c38e318cbb7fdf7b8230cf72d433df65f4698b9ad86624bf7d3c30c883db325d51335189')
@@ -86,11 +88,15 @@
 -}
 +b2sums=('27f18f387c73244db68995cea5d8b25f95588d3ec78a3a245b8facbfba551f2959339356fe58b1a49f035282379c6f067a2ed2b0f6836ea28f64996949f2a050'
 +        'a0356a49c419dc69466c591d5e69701b865bb97ca336ea6d8bca0f0d9173b832b73d9f2c701d572a0245957d39c9a38ab6dff4ea7c737c34f2a1a28d93c0427f'
-+        '22a0f4868f1c5e7a920b3c88f6191e3f79f90a43ee7b79c0bc00a5c63fc8ab1fb08f3aa7febb2e0e8562c7201ccfe91ddbb2b0ca0206e484b0d8186948b11e93')
++        '22a0f4868f1c5e7a920b3c88f6191e3f79f90a43ee7b79c0bc00a5c63fc8ab1fb08f3aa7febb2e0e8562c7201ccfe91ddbb2b0ca0206e484b0d8186948b11e93'
++        '0f49b0c2425521f79c48ea092b7a26b601a18f9c2559cbfef6f2a1e338fa2f8d44e75edb85445248f4f35f41e2636836d398019fae0f908689385bf0171bd023')
  
  prepare() {
    cd gvfs
++
 +  git apply -3 ../0001-nfs-Support-libnfs-6-backport-to-1.56.patch
++
++  git apply -3 ../0002-monitor-Do-not-load-monitors-when-GIO_USE_VFS-local.patch
  }
  
  build() {
@@ -105,7 +111,7 @@
    meson compile -C build
  }
  
-@@ -80,21 +100,67 @@
+@@ -80,21 +105,67 @@
  }
  
  package_gvfs() {
@@ -180,7 +186,7 @@
  
      _pick smb \
        usr/lib/gvfsd-smb{,-browse} \
-@@ -102,114 +168,149 @@
+@@ -102,114 +173,149 @@
        usr/share/glib-2.0/schemas/org.gnome.system.smb.gschema.xml \
        usr/share/gvfs/mounts/smb{,-browse}.mount
  
@@ -481,10 +487,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,13 @@
+@@ -1,7 +1,14 @@
  prepare() {
  cd gvfs
 +git apply -3 ../0001-nfs-Support-libnfs-6-backport-to-1.56.patch
++git apply -3 ../0002-monitor-Do-not-load-monitors-when-GIO_USE_VFS-local.patch
  }
  build() {
 -arch-meson gvfs build -D man=true
