@@ -135,6 +135,7 @@ libtg_owt
 libvarlink
 libwnck
 libxfce4util
+libxfce4windowing
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 linux-hardened

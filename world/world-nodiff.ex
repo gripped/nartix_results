@@ -1089,6 +1089,7 @@ intel-oneapi-tcm
 intel-ucode
 intltool
 inxi
+iperf
 iperf3
 ipset
 ipython
@@ -1959,7 +1960,6 @@ libtiff
 libtiger
 libtomcrypt
 libtommath
-libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -3002,6 +3002,7 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 prosody
 protobuf-c
 protobuf
@@ -3097,6 +3098,7 @@ python-aioresponses
 python-aiorpcx
 python-aiosignal
 python-aiosmtpd
+python-aiosqlite
 python-aiounittest
 python-alembic
 python-amqp
@@ -3636,6 +3638,7 @@ python-ldap
 python-ldap3
 python-legacy-cgi
 python-levenshtein
+python-lexicon
 python-libarchive-c
 python-libcst
 python-libevdev
@@ -3824,6 +3827,7 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
+python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -3879,6 +3883,8 @@ python-prompt_toolkit
 python-proxmoxer
 python-proxy.py
 python-psutil
+python-psycopg-pool
+python-psycopg
 python-psycopg2
 python-pt
 python-ptrace
@@ -5488,6 +5494,7 @@ verdict
 vice
 vid.stab
 viewnior
+vifm
 vigra
 python-vigra
 vim

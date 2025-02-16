@@ -20,7 +20,6 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libsfdo
 libxfce4ui
-libxfce4windowing
 light
 lxpanel
 lxqt-session

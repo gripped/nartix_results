@@ -17,13 +17,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,7 @@
- glibc
- json-c
- libaio
-+libudev
- liburcu
+@@ -1,10 +0,0 @@
+-device-mapper
+-gcc-libs
+-git
+-glibc
+-json-c
+-libaio
+-liburcu
 -systemd
 -systemd-libs
-+udev
- util-linux-libs
+-util-linux-libs
