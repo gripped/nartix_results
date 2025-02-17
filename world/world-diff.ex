@@ -94,10 +94,10 @@ dtc
 dunst
 earlyoom
 easytag
+ejabberd
 element.io
 element-web
 element-desktop
-ell
 emacs
 emacs-nativecomp
 emacs-nox
@@ -717,6 +717,7 @@ rocblas
 rocfft
 rocrand
 rocsparse
+rofi
 rrdtool
 rspamd
 rtkit
@@ -805,7 +806,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

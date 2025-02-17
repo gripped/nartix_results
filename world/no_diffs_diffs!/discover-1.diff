@@ -6,7 +6,8 @@
 -pkgver=6.3.0
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='KDE and Plasma resources management GUI'
  arch=(x86_64)
 -url='https://apps.kde.org/discover/'
@@ -14,7 +15,15 @@
  license=(LGPL-2.0-or-later)
  depends=(appstream-qt
           archlinux-appstream-data
-@@ -47,7 +47,7 @@
+@@ -35,7 +35,6 @@
+          kwindowsystem
+          purpose
+          qcoro
+-         qqc2-desktop-style
+          qt6-base
+          qt6-declarative
+          qt6-webview)
+@@ -48,7 +47,7 @@
              'packagekit-qt6: to manage packages from Arch Linux repositories (not recommended, use at your own risk)')
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
@@ -23,3 +32,17 @@
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
                '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -30,7 +30,6 @@
+ packagekit-qt6
+ purpose
+ qcoro
+-qqc2-desktop-style
+ qt6-base
+ qt6-declarative
+ qt6-webview

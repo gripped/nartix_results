@@ -515,13 +515,13 @@ egl-wayland
 egl-x11
 eglexternalplatform
 eigen
-ejabberd
 electron
 electrum
 elementary-icon-theme
 elinks
 elisa
 elixir
+ell
 embree3
 emovix
 enblend-enfuse
@@ -4644,7 +4644,6 @@ rocs
 rocsolver
 rocthrust
 roctracer
-rofi
 ropgadget
 ropper
 rpcsvc-proto
@@ -5468,6 +5467,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
@@ -5707,6 +5707,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp

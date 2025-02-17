@@ -94,6 +94,7 @@ moksha-module-spellchecker
 moksha-module-stickynotes
 moksha-module-tclock
 moksha-module-trash
+moksha-module-wallscape
 moksha-module-wincontrol
 moksha-module-winlist-ng
 moksha-module-winselector

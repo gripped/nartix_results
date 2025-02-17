@@ -8,17 +8,3 @@
  source=(
    https://github.com/libevent/libevent/releases/download/release-$pkgver-stable/libevent-$pkgver-stable.tar.gz{,.asc}
    EVENT__SIZEOF_TIME_T.patch
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -0,0 +1,7 @@
-+
-+cmake
-+doxygen
-+ninja
-+openssl
-+python
-+zlib
