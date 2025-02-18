@@ -272,7 +272,6 @@ cargo-c
 caribou
 catatonit
 catch2-v2
-catch2
 catdoc
 cauchy
 cbatticon
@@ -732,7 +731,6 @@ gimp-help
 gimp
 girara
 git-lfs
-git
 gitea
 github-cli
 gkrellm
@@ -4644,6 +4642,7 @@ rocs
 rocsolver
 rocthrust
 roctracer
+rofi
 ropgadget
 ropper
 rpcsvc-proto

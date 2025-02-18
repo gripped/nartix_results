@@ -47,6 +47,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+catch2
 catfish
 cbindgen
 cgmanager
@@ -146,6 +147,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+git
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -717,7 +719,6 @@ rocblas
 rocfft
 rocrand
 rocsparse
-rofi
 rrdtool
 rspamd
 rtkit

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=limine
+-pkgver=9.0.0
++pkgver=8.7.0
+ pkgrel=1
+ pkgdesc="An advanced, portable, multiprotocol bootloader"
+ url="https://limine-bootloader.org/"
+@@ -9,7 +9,7 @@
+ depends=('glibc')
+ makedepends=('git' 'nasm' 'mtools' 'llvm' 'lld' 'clang')
+ source=("git+https://github.com/limine-bootloader/limine.git#tag=v${pkgver}")
+-sha256sums=('d7b83f65d75704fec53e93ae2d6a0abf580bed4df2040f561316073282080f55')
++sha256sums=('9909a382e5548d6793e592517746f16b7397c409f7c6c5cad20b1324c8ba37f6')
+ 
+ prepare() {
+ 	cd "${pkgname}"

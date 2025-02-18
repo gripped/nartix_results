@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=catch2
+ pkgver=3.8.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Modern, C++-native, header-only, test framework for unit-tests, TDD and BDD"
+ arch=('x86_64')
+ url="https://github.com/catchorg/catch2"
+@@ -19,9 +19,8 @@
+   81E70B717FFB27AFDB45F52090BBFF120F9C087B # Jozef Grajciar
+ )
+ 
+-options=(!lto)
+-
+ build() {
++  unset CXXFLAGS
+ 
+   cmake -B "${pkgname}"/build \
+     -S "${pkgname}" \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ build() {
++unset CXXFLAGS
+ cmake -B "${pkgname}"/build \
+ -S "${pkgname}" \
+ -DCMAKE_INSTALL_PREFIX=/usr \
