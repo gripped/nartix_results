@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-desktop
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -20,7 +20,7 @@
               xorg-server-devel)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('bbdbfa874b6c04e3bb33683ea0d09e32616de827df96a1b664a20b2f59d69d0e'
+-sha256sums=('119c9d361274367048320864cbaffc612530cba4ea62d6dfd504f3efe5b254a4'
 +sha256sums=('b73d29202031b7049485d84e615d7bd0a3ca890dcb2c22d8116eb8fe6fe9d068'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

@@ -32,8 +32,6 @@ bluez-obex
 bogofilter
 bolt
 box2d
-breeze
-breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -571,6 +569,8 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
+plasma-integration
+plasma5-integration
 plasma-workspace
 plocate
 pluma
@@ -599,7 +599,6 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-google-auth
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun

@@ -232,6 +232,8 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
+breeze
+breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -2925,8 +2927,6 @@ plasma-disks
 plasma-firewall
 plasma-framework
 plasma-framework5
-plasma-integration
-plasma5-integration
 plasma-meta
 plasma-nm
 plasma-pa
@@ -3490,6 +3490,7 @@ python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
+python-google-auth
 python-googleapis-common-protos
 python-graphene
 python-graphql-core
@@ -5073,6 +5074,7 @@ signon-plugin-oauth2
 signon-ui
 signond
 simde
+simdjson
 simple-scan
 sip
 skanlite

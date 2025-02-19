@@ -3,7 +3,7 @@
 @@ -1,9 +1,7 @@
  
  pkgname=spectacle
--pkgver=6.3.0
+-pkgver=6.3.1
 -_dirver=$(echo $pkgver | cut -d. -f1-3)
 +pkgver=24.12.2
  pkgrel=1
@@ -17,7 +17,7 @@
               plasma-wayland-protocols)
 -groups=(plasma)
 -source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('be80abbc1e80bc4493711089580a905848499608a2497be3d7eb81cbbf876099'
+-sha256sums=('0f364b05dfcc0c63c1eb696e59318f83a9c83d4162f5656b4fa5fe29dacc814e'
 +groups=(kde-applications
 +        kde-graphics)
 +source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})

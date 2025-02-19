@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-activities
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  replaces=(kactivities)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('ccb1ca2dc1deb1e235dd496f42355f0054f58061ecf9a759d9faa0a299a56c7b'
+-sha256sums=('6e1e4f23f9e8b3f8deea9304df1179ea30b0ab6a11cb9f4d7ca21b15e5791a6e'
 +sha256sums=('77ea739c7ce5170d92d78d6f3765e19a32f0e24b741f525555d59dc7de15e6c7'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

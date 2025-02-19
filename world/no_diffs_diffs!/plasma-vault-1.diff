@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-vault
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
              'gocryptfs: to use gocryptfs for encryption')
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('414fe5360eb132ff246322ece9a564504112fa95a4c462b3f172b98613dc25d8'
+-sha256sums=('36694fefda51dffe4bdaa53505ae8998518e4c77aed5473a17ec33eea2af61c4'
 +sha256sums=('6b7e73fc39c6bb5e2c06573ef88a8948eea570608a8e1e49d912389aefa50b4e'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

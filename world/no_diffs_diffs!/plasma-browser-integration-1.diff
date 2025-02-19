@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-browser-integration
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
  makedepends=(extra-cmake-modules)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('9c5ed3c8ecbe0a8ecf1697416cbf9f3416941e9df7f5abe179b667bd8078fb6d'
+-sha256sums=('91a4979aae1a0a131948b0b3f89708bd1106b07e7db0fc1d53bd3ca268da6127'
 +sha256sums=('25da9051669f20a1bf9bd8987d95621b2e664131a3c38701a3c5e2f86d9b5dce'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

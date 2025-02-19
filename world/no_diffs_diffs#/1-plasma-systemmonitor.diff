@@ -3,7 +3,7 @@
 @@ -1,11 +1,11 @@
  
  pkgname=plasma-systemmonitor
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -18,7 +18,7 @@
  groups=(plasma)
  replaces=(ksysguard)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('fe467f5feb9295a02da10353098a02f30056bb964016357e2ce4d0c07d305c88'
+-sha256sums=('ae0b9f01484897013c0ece4d5f2fb0023da8c7f2439c28ed7cf039049ad71bba'
 +sha256sums=('9575d4562e68209627aee2f358070b09122cc3e09fee50c90451df52bf00b2ca'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

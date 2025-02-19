@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=plasma-firewall
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -12,7 +12,7 @@
              'ufw: ufw backend')
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('965d7bda8a8b8d9096e9478b09c46a7d1dcc87dcfffed1c27b787791dbe3c7f0'
+-sha256sums=('ad227126c686089f9369dccc9427c0a0bcc40fa6c86c8dfcae679d84c63f233d'
 +sha256sums=('f0e9b7da481a383ac4511210baa998b8c263601f18211b0655f5c9d98157da69'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

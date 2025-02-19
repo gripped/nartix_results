@@ -3,7 +3,7 @@
 @@ -1,9 +1,9 @@
  
  pkgname=kde-cli-tools
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -16,7 +16,7 @@
               kdoctools)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('cccbcd737f1f433f2eeb17ee1e3b8cc10b673a13b685bc0d60a391978fc97b3b'
+-sha256sums=('32f8d495b6ca4b098d2285e947211c0195ee553b187de792ca2ad4a0b03cba90'
 +sha256sums=('1dda57f7495060a086658796519d68d54f5e7da4e12fa6d8d4bf4614ac728002'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

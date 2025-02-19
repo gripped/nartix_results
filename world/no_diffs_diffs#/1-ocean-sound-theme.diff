@@ -4,7 +4,7 @@
  
  pkgname=ocean-sound-theme
  pkgdesc='Ocean Sound Theme for Plasma'
--pkgver=6.3.0
+-pkgver=6.3.1
 +pkgver=6.2.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -13,7 +13,7 @@
               qt6-base)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('83d9c5f6873cb90e2d71ea5455487c42737e05351338cef19e3f8cad3ebc24da'
+-sha256sums=('170b2371bc4a9a1263f778714a2ccbf47af7c63b4de975b29b07b036ddfcedc1'
 +sha256sums=('017d325ec673bb80dfca442b76ef71a172cca26911c28a230cc7392b015dc505'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
