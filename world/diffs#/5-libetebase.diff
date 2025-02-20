@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,32 @@
+ 
+ pkgname=libetebase
+-pkgver=0.5.7
+-pkgrel=1
++pkgver=0.5.6
++pkgrel=2
+ pkgdesc='Etebase C library'
+ arch=(x86_64)
+ url='https://github.com/etesync/libetebase'
+-license=(BSD-3-Clause)
++license=(BSD)
+ depends=(gcc-libs
+          glibc
+          libsodium
+          openssl)
+-makedepends=(git
+-             rust)
+-source=(git+https://github.com/etesync/libetebase#tag=v$pkgver)
+-sha256sums=('ae2626e555f601a5427a156cbe2f6429eb04fafe7896c2aff5d44e085dcf5a84')
++makedepends=(rust)
++source=(https://github.com/etesync/libetebase/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('b149afcabce839347cb3cef870e781d34df32016885bfed50c08dcab0ab9b1f0')
+ 
+ prepare() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   env CARGO_INCREMENTAL=0 SODIUM_USE_PKG_CONFIG= cargo build --release --locked --offline
+   make pkgconfig
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ 
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ gcc-libs
+-git
+ glibc
+ libsodium
+ openssl
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ env CARGO_INCREMENTAL=0 SODIUM_USE_PKG_CONFIG= cargo build --release --locked --offline
+ make pkgconfig
+ }

@@ -45,7 +45,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-catch2
 catfish
 cbindgen
 cgmanager
@@ -145,7 +144,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-git
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -242,6 +240,12 @@ igsc
 iio-sensor-proxy
 intel-metee
 intel-metee-doc
+intel-oneapi-compiler-dpcpp-cpp-runtime
+"$_pkgname
+"$_pkgname
+intel-oneapi-compiler-shared-runtime
+"$_pkgname
+"$_pkgname
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -322,6 +326,7 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
+libetebase
 libfido2
 libfprint
 libgdata
@@ -500,6 +505,7 @@ openmpi-docs
 opensmtpd
 opensnitch
 opensubdiv
+openvdb
 openvpn
 ostree
 packagekit
@@ -507,7 +513,6 @@ libpackagekit-glib
 pacman-contrib
 paraview-catalyst
 parole
-passff-host
 passim
 pc-ble-driver
 pcsclite

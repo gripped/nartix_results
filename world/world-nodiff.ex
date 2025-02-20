@@ -274,6 +274,7 @@ cargo-c
 caribou
 catatonit
 catch2-v2
+catch2
 catdoc
 cauchy
 cbatticon
@@ -733,6 +734,8 @@ gimp-help
 gimp
 girara
 git-lfs
+git
+git-zsh-completion
 gitea
 github-cli
 gkrellm
@@ -1070,12 +1073,6 @@ intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
-intel-oneapi-compiler-dpcpp-cpp-runtime
-"$_pkgname
-"$_pkgname
-intel-oneapi-compiler-shared-runtime
-"$_pkgname
-"$_pkgname
 intel-oneapi-compiler-shared
 intel-oneapi-dev-utilities
 intel-oneapi-dpcpp-cpp
@@ -1645,7 +1642,6 @@ libebml
 libebur128
 libepubgen
 libesmtp
-libetebase
 libetonyek
 libetonyek-doc
 libev
@@ -2505,7 +2501,6 @@ opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
 opentimelineio
-openvdb
 openvkl
 openvr
 openvswitch
@@ -2555,6 +2550,7 @@ parted
 partitionmanager
 pass-otp
 pass
+passff-host
 passt
 pastebinit
 pasystray

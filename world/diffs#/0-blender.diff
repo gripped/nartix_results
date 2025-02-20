@@ -4,7 +4,7 @@
  
  pkgname=blender
  pkgver=4.3.2
--pkgrel=8
+-pkgrel=9
 +pkgrel=2
  epoch=17
  pkgdesc="A fully integrated 3D graphics creation suite"
@@ -26,6 +26,14 @@
  
    local cmake_options=(
      -B build
+@@ -180,7 +177,6 @@
+     -D OCLOC_INSTALL_DIR=/usr
+     -D OPTIX_ROOT_DIR="$srcdir"
+     -D PYTHON_VERSION="$(_get_pyver)"
+-    -D SYCL_CPP_FLAGS="-D__TC__=__DC__ --verbose"  # for debugging
+     -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
+     -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
+     -D USD_ROOT_DIR=/usr
 
 
 ############# Stripped diff below #################
@@ -50,3 +58,11 @@
  local cmake_options=(
  -B build
  -C "$pkgname/build_files/cmake/config/blender_release.cmake"
+@@ -35,7 +33,6 @@
+ -D OCLOC_INSTALL_DIR=/usr
+ -D OPTIX_ROOT_DIR="$srcdir"
+ -D PYTHON_VERSION="$(_get_pyver)"
+--D SYCL_CPP_FLAGS="-D__TC__=__DC__ --verbose"  # for debugging
+ -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
+ -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
+ -D USD_ROOT_DIR=/usr

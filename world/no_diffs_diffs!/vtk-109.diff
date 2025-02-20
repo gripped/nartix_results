@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=vtk
+ pkgver=9.4.1
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Software system for 3D computer graphics, image processing, and visualization"
+ arch=(x86_64)
+ url="https://www.vtk.org"
 @@ -141,6 +141,7 @@
    export JAVA_HOME=/usr/lib/jvm/default
    local _tkver=$(echo 'puts $tcl_version' | tclsh)

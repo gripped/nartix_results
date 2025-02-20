@@ -2,13 +2,13 @@
 +++ Artix PKGBUILD
 @@ -1,6 +1,11 @@
 +
-+_ver=6.13.2
++_ver=6.13.3
 +_rel=1
 +_arch=arch${_rel}
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
--pkgver=6.13.2.arch1
+-pkgver=6.13.3.arch1
 +pkgver=${_ver}.${_artix}
  pkgrel=1
  pkgdesc='Linux'
@@ -27,21 +27,11 @@
    $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
    config  # the main kernel config file
  )
-@@ -43,14 +48,14 @@
-             'SKIP'
-             '6a0b1fe223d70b1abbc81675f85684e582ea8b997ecd9bd32e0461b717c6a78e'
-             'SKIP'
--            '20ff3a47fab59c996c91ec4d0efe84a60ca9f3ff8adae7c61fef480a7fce4b27')
-+            '8dd53e6c89a036e043746011d7c937474f4c0e38e2e5ed6c8caf6f31438b41f7')
- b2sums=('9434dbcb828d49d0b7b68c3ff6651ed227327e8e9a760200fbea91aa37e7949438d253f1a4586da4f72ac1069484e9720b8c8ac3f995d597b33f272065763336'
+@@ -50,7 +55,7 @@
          'SKIP'
-         'c18b02602d8b6b6db1372a1ccfe067b1bf3b44af3aed7c3d490ac2c166be13624575c2d012457478caeb0190fb415426ae7313a57060dd65c5663928ba321687'
-         'SKIP'
--        '3e530261307cca399da44b1cbb0c84bb3468b1a273af8e38a2b35572b1c56734e12f4ccca2ab0ef07c7bc2a38ffe1969f35024a1532e7272cc0ee784d806ae14')
--
+         '77741908fa7afe101091919c8d477f1c4c161082f115849e352a99a080fe3d599e9d8af78d8c210f81176f34a331aa639883723e230c3bf29621f0cf36fa962d')
+ 
 -export KBUILD_BUILD_HOST=archlinux
-+        'b079da68b35d01f48fe4ba8eb8421db70541293dbf51de2fa87789f144c8a4ed1d97df5e25dd8f79d3117d5c07cd11d1a13132e86684ca720cc243c6e8e0edef')
-+
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
