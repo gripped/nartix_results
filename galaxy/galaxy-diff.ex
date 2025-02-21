@@ -16,6 +16,10 @@ gtklock
 labwc
 lemurs
 libetonyek
+libreoffice-fresh
+libreoffice-fresh-sdk
+libreoffice-still
+libreoffice-still-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -41,6 +45,7 @@ qbittorrent
 qbittorrent-nox
 rage
 sdcv
+signal-desktop
 terminology
 tor
 torsocks

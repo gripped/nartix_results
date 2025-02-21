@@ -1,6 +1,5 @@
 0ad
 accountsservice
-adios2
 alacritty
 alsa-utils
 apache
@@ -73,6 +72,7 @@ dbus-python-docs
 ddcutil
 dhcpcd
 dns-over-https
+docker-buildx
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -91,7 +91,6 @@ drkonqi
 dtc
 dunst
 earlyoom
-easytag
 ejabberd
 element.io
 element-web
@@ -240,12 +239,6 @@ igsc
 iio-sensor-proxy
 intel-metee
 intel-metee-doc
-intel-oneapi-compiler-dpcpp-cpp-runtime
-"$_pkgname
-"$_pkgname
-intel-oneapi-compiler-shared-runtime
-"$_pkgname
-"$_pkgname
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -296,6 +289,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+libappimage
 libatasmart
 libayatana-appindicator
 libayatana-indicator
@@ -505,7 +499,6 @@ openmpi-docs
 opensmtpd
 opensnitch
 opensubdiv
-openvdb
 openvpn
 ostree
 packagekit
@@ -574,8 +567,6 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
-plasma-integration
-plasma5-integration
 plasma-workspace
 plocate
 pluma
@@ -712,7 +703,6 @@ quilt
 rabbitmq
 rabbitmqadmin
 rdma-core
-rebar
 redis
 redshift
 refind
@@ -804,6 +794,7 @@ udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
 umockdev
+umurmur
 unbound
 unoconv
 upower

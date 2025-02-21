@@ -357,6 +357,7 @@ mint-x-icons
 mint-y-icons
 mintlocale
 mkinitcpio-openswap
+mlocate
 modemmanager-runit
 modemmanager-s6
 mopidy-dinit

@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://git.kernel.org/pub/scm/libs/ell/ell.git/"
+ license=('LGPL-2.1-or-later')
+ depends=('gcc-libs' 'glibc')
+-checkdepends=('dbus' 'procps-ng')
++checkdepends=('dbus' 'procps-ng' 'udev')
+ source=(https://mirrors.edge.kernel.org/pub/linux/libs/$pkgname/$pkgname-$pkgver.tar.{xz,sign})
+ sha256sums=('ae97f848b45a59be7741369880badfa8c08a55a24b21eae3468342cc012df11b'
+             'SKIP')

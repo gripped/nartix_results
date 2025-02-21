@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,8 +10,8 @@
- license=("LGPL")
+@@ -11,8 +11,8 @@
+          'LGPL-2.1-only')
  
  depends=('krb5' 'openssl' 'sqlite' 'mariadb-libs' 'libsodium'
 -         'postgresql-libs' 'bzip2' 'lz4' 'expat' 'curl' 'pam' 'systemd-libs')
@@ -11,7 +11,7 @@
  optdepends=('libldap: ldap plugin'
              'lua53: LUA auth and push support'
              'clucene: alternative FTS indexer')
-@@ -63,6 +63,7 @@
+@@ -69,6 +69,7 @@
      --libexecdir=/usr/lib \
      --with-rundir=/run/dovecot \
      --with-moduledir=/usr/lib/dovecot/modules \

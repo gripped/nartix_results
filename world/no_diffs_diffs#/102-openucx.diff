@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,14 @@
+ 
+ _name=ucx
+ pkgname=openucx
+-pkgver=1.18.0
+-pkgrel=1
++pkgver=1.17.0
++pkgrel=3
+ pkgdesc="Communication framework for data-centric and high-performance applications"
+ arch=(x86_64)
+-url="https://openucx.org/"
++url="http://www.openucx.org"
+ license=(BSD-3-Clause)
+ depends=(
+   binutils
+-  gcc-libs
+   glibc
+   zlib
+   zstd
+@@ -17,7 +16,6 @@
+ makedepends=(
+   rdma-core
+   cuda
+-  rocm-language-runtime
+ )
+ optdepends=(
+   'rdma-core: for InfiniBand and RDMA support'
+@@ -32,14 +30,13 @@
+   libuct.so
+ )
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/openucx/$_name/archive/refs/tags/v$pkgver.tar.gz")
+-b2sums=('54df4a27d279be1627f10f7b4295d979b5247e430f76958349ab96f4f77cd349b2f0f19f44f25102bc6712ea654a6983b8299eed63c3f9127d1f24509934663c')
++sha256sums=('36db6b00b0939d746e86f9e0d32dc445faaa109e46dc643fb5ad779492abfaef')
+ 
+ build() {
+   local configure_options=(
+     --prefix=/usr
+     --sysconfdir=/etc
+     --with-cuda=/opt/cuda
+-    --with-rocm=/opt/rocm
+     --with-verbs
+     --with-rc
+     --with-ud
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+ binutils
+ cuda
+-gcc-libs
+ glibc
+ rdma-core
+-rocm-language-runtime
+ zlib
+ zstd
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,6 @@
+ --prefix=/usr
+ --sysconfdir=/etc
+ --with-cuda=/opt/cuda
+---with-rocm=/opt/rocm
+ --with-verbs
+ --with-rc
+ --with-ud

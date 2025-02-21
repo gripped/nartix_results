@@ -20,6 +20,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-icon-theme-legacy
@@ -473,7 +474,6 @@ docbook-xml
 docbook-xsl
 docbook2x
 docbook5-xml
-docker-buildx
 docker-compose
 doctest
 docx2txt
@@ -501,6 +501,7 @@ dvd-rw-tools
 dvdauthor
 dvisvgm
 dzen2
+easytag
 ebook-tools
 eclipse-ecj
 ecryptfs-utils
@@ -1073,6 +1074,12 @@ intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
+intel-oneapi-compiler-dpcpp-cpp-runtime
+"$_pkgname
+"$_pkgname
+intel-oneapi-compiler-shared-runtime
+"$_pkgname
+"$_pkgname
 intel-oneapi-compiler-shared
 intel-oneapi-dev-utilities
 intel-oneapi-dpcpp-cpp
@@ -1564,7 +1571,6 @@ libaec
 libakonadi5
 libalkimia
 libao
-libappimage
 libappindicator
 libappindicator-gtk2
 libappindicator-gtk3
@@ -2501,6 +2507,8 @@ opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
 opentimelineio
+openucx
+openvdb
 openvkl
 openvr
 openvswitch
@@ -2923,6 +2931,8 @@ plasma-disks
 plasma-firewall
 plasma-framework
 plasma-framework5
+plasma-integration
+plasma5-integration
 plasma-meta
 plasma-nm
 plasma-pa
@@ -4584,6 +4594,7 @@ rclone
 rdfind
 re2
 re2c
+rebar
 rebar3
 recastnavigation
 recode
@@ -5031,11 +5042,13 @@ screengrab
 scrot
 sddm-kcm
 sdl12-compat
+sdl2-compat
 sdl2
 sdl2_image
 sdl2_mixer
 sdl2_net
 sdl2_ttf
+sdl3
 sdl_image
 sdl_mixer
 sdl_net
@@ -5443,7 +5456,6 @@ uget
 uglify-js
 uhttpmock
 umbrello
-umurmur
 unarchiver
 unclutter
 unibilium

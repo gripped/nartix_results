@@ -5,7 +5,7 @@
  pkgbase=thunderbird
  pkgname=(thunderbird)
 -pkgver=128.7.0
--pkgrel=3
+-pkgrel=4
 +pkgver=115.5.2
 +pkgrel=2.1
  pkgdesc='Standalone mail and news reader from mozilla.org'
@@ -16,7 +16,7 @@
  depends=(
    glibc
    gtk3 libgdk-3.so libgtk-3.so
-@@ -49,18 +49,16 @@
+@@ -49,19 +49,16 @@
  )
  makedepends=(
    unzip zip diffutils python nasm mesa libpulse libice libsm
@@ -33,12 +33,13 @@
          metainfo.patch
 -        org.mozilla.Thunderbird.desktop
 -        thunderbird-system-icu-74.patch # https://bugzilla.mozilla.org/show_bug.cgi?id=1862601
+-        thunderbird-system-icu-76.patch
 -)
 +        thunderbird-system-icu-74.patch) # https://bugzilla.mozilla.org/show_bug.cgi?id=1862601
  validpgpkeys=(
    14F26682D0916CDD81E37B6D61B7B526D98F0353 # Mozilla Software Releases <release@mozilla.com>
    4360FE2109C49763186F8E21EBE41E90F6F12F6D # Mozilla Software Releases <release@mozilla.com>
-@@ -72,6 +70,8 @@
+@@ -73,6 +70,8 @@
  
  prepare() {
    cd $pkgname-$pkgver
@@ -47,7 +48,7 @@
  
    echo "${noextract[@]}"
  
-@@ -80,13 +80,11 @@
+@@ -81,13 +80,11 @@
      src="${src%%::*}"
      src="${src##*/}"
      [[ $src = *.patch ]] || continue
@@ -62,7 +63,7 @@
  
    sed -i '/^<rect/d' comm/mail/branding/thunderbird/TB-symbolic.svg
  
-@@ -94,6 +92,8 @@
+@@ -95,6 +92,8 @@
    printf "%s" "$_mozilla_api_key" >mozilla-api-key
    cp ../mozconfig.cfg .mozconfig
    sed "s|@PWD@|${PWD@Q}|g" -i .mozconfig
@@ -71,7 +72,7 @@
  }
  
  build() {
-@@ -105,9 +105,7 @@
+@@ -106,9 +105,7 @@
    export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
  
    CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
@@ -81,7 +82,7 @@
  
    ./mach configure
    ./mach build
-@@ -126,7 +124,7 @@
+@@ -127,7 +124,7 @@
  
    install -Dm 644 ../vendor-prefs.js -t "$pkgdir/usr/lib/$pkgname/defaults/pref"
    install -Dm 644 ../distribution.ini -t "$pkgdir/usr/lib/$pkgname/distribution"
@@ -90,7 +91,7 @@
    install -Dm 644 comm/mail/branding/thunderbird/net.thunderbird.Thunderbird.appdata.xml \
      "$pkgdir/usr/share/metainfo/net.thunderbird.Thunderbird.appdata.xml"
  
-@@ -220,7 +218,7 @@
+@@ -221,7 +218,7 @@
    'zh-CN  "Chinese (Simplified)"'
    'zh-TW  "Chinese (Traditional)"'
  )
@@ -99,7 +100,7 @@
  
  for _lang in "${_languages[@]}"; do
    _locale=${_lang%% *}
-@@ -240,75 +238,74 @@
+@@ -241,76 +238,74 @@
      esac
  done
  
@@ -113,6 +114,7 @@
              '7e43b1f25827ddae615ad43fc1e11c6ba439d6c2049477dfe60e00188a70c0a76160c59a97cc01d1fd99c476f261c7cecb57628b5be48874be7cf991c22db290'
 -            'fffeb73e2055408c5598439b0214b3cb3bb4e53dac3090b880a55f64afcbc56ba5d32d1187829a08ef06d592513d158ced1fde2f20e2f01e967b5fbd3b2fafd4'
              '9897cb0ababc8e1a0001c4e1f70e0b39f5cdb9c08c69e3afd42088dfd001aa1fc6996cd83df0db1fb57ee0a80686c35c8df783108408dbe9191602cddd1e3c65'
+-            'b8679c4debf97e98c74d62c154fcd9f9d67c34fd5b41da10c81c95a9c9960717bcda36876c21578b8abf023b18455660a19b19a914f8c9c2b00aca6089a9aa2f'
 -            '18dd42b98b74e951d624a868c89ae9713d5e5b1e991170506a880d2ab8ddb22e834b11a42bf9ab01c2664742eb503afcfbae93dc6baf3c0c2b5ce1322e545632'
 -            'f9e314831d230b1488b64056caf22a410f4e883c50e697746965949775333f785ed0316d0baac1df460c33f7724eb93a8e0784d7ee99d5fc9513245552f7749e'
 -            '4a68c5a10b38496c654d27e4ca82c10804f739ab526e6644509a8dbb09928c1a2d2182e003e79a4276a92bf62ebe6195c292662acbc3e21f633eb00abeaa843e'
