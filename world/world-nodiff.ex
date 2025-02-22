@@ -639,8 +639,6 @@ otf-fira-sans
 firejail
 fish
 five-or-more
-flac
-flac-doc
 flake8
 flameshot
 flashrom
@@ -1031,6 +1029,7 @@ hunspell
 hwinfo
 hy
 hypercorn
+hyperkitty
 hyperscan
 hyphen
 hyphen-en
@@ -5463,9 +5462,6 @@ unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
 unicode-emoji
-unicorn
-python-unicorn
-ruby-unicorn-engine
 unifdef
 unittestpp
 unrar

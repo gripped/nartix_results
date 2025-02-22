@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=mpd
 -pkgver=0.23.17
+-pkgrel=3
 +pkgver=0.23.15
- pkgrel=2
++pkgrel=2
  pkgdesc="Flexible, powerful, server-side application for playing music"
  arch=(x86_64)
+ url="https://www.musicpd.org/"
 @@ -20,6 +20,7 @@
    libmms
    libmodplug
@@ -24,7 +26,7 @@
    avahi
    boost
    bzip2
-@@ -66,7 +68,6 @@
+@@ -66,11 +68,9 @@
    libpipewire
    python-sphinx
    sqlite
@@ -32,7 +34,11 @@
    twolame
    yajl
  )
-@@ -78,14 +79,14 @@
+-checkdepends=(gtest)
+ backup=(etc/$pkgname.conf)
+ source=(
+   $pkgname::git+https://github.com/MusicPlayerDaemon/MPD.git#tag=v${pkgver}?signed
+@@ -79,14 +79,14 @@
    $pkgname.tmpfiles
    $pkgname.service.override
  )
@@ -51,7 +57,7 @@
          'd7b587c25dd5830c27af475a8fdd8102139d7c8fdd6f04fe23b36be030e4411582e289f575c299255ff8183096f7d47247327276f9a24641cbd032d9675b837a'
          '753664445d7d5cc0b36f51ac66549beea403b9731cbcb81b0a782974a0a73d90559ba93e6afcaa470b6f2f5a844c09ef695bdf3b1e6dfee97aa080f41b7fe513')
  validpgpkeys=('0392335A78083894A4301C43236E8A58C6DB4512') # Max Kellermann <max@blarg.de>
-@@ -94,25 +95,25 @@
+@@ -95,26 +95,25 @@
    local _meson_options=(
      -D documentation=enabled
      -D adplug=disabled
@@ -61,6 +67,7 @@
      -D shine=disabled
      -D tremor=disabled
      -D b_ndebug=true
+-    -D test=true
 +    -D systemd=disabled
    )
  
@@ -82,7 +89,7 @@
      avahi libavahi-{client,common}.so
      bzip2 libbz2.so
      chromaprint libchromaprint.so
-@@ -144,14 +145,12 @@
+@@ -146,14 +145,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so

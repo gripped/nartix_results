@@ -5,7 +5,7 @@
  _LOver=24.8.4.2
  pkgver=24.8.4
 -pkgrel=3
-+pkgrel=1
++pkgrel=4
  arch=('x86_64')
  license=('MPL-2.0' 'LGPL-3.0-or-later')
  url="https://www.libreoffice.org/"
@@ -18,27 +18,27 @@
  )
  options=('!lto') # using --enable-lto (for parallel link-time optimization)
  _mirror="https://download.documentfoundation.org/libreoffice/src/${pkgver}"
-@@ -54,7 +54,6 @@
-     ${_additional_source_url2}/odfvalidator-1.2.0-incubating-SNAPSHOT-jar-with-dependencies-971c54fd38a968f5860014b44301872706f9e540.jar # for test suite
+@@ -55,6 +55,7 @@
      ${_additional_source_url2}/f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf
      poppler24.12-buildfix.patch
--    libreoffice-24.8.4.2-icu76_fixes-1.patch
+     libreoffice-24.8.4.2-icu76_fixes-1.patch
++    mdds-3.0.0.patch
      soffice-template.desktop.in
      libreoffice-still.sh libreoffice-still.csh)
  noextract=(a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip
-@@ -104,7 +103,6 @@
-             '984f2a479df79e27e7b01a5815ac53ae64e07746b882262d8a64566494515504'
+@@ -105,6 +106,7 @@
              'f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140'
              'df1ea9e1bfdd91af43d2240eeb70e2985a5d77797f379f656c420fcccf3f673a'
--            '5c67449d7f7d43b66063780650ebf8954e59164c38b36883078e36c11fde82de'
+             '5c67449d7f7d43b66063780650ebf8954e59164c38b36883078e36c11fde82de'
++            '31dbde6d3978d4762428e08c42ed156f2ffd9b582fac9875163b2a86ad4f4898'
              'd0be8099cbee3c9dfda694a828149b881c345b204ab68826f317580aafb50879'
              '9fb33dbc3ffeb6af2ea7341b58242142d4eca903584c21c5f4b44ff27fbf5b5f'
              '512355b5ef646791089da8c2b35cf8b019673c0c8a58685962af3b5d9eb5d6bb')
-@@ -120,7 +118,6 @@
-     popd
+@@ -121,6 +123,7 @@
  
      patch -Np1 -i "${srcdir}"/poppler24.12-buildfix.patch
--    patch -Np1 -i "${srcdir}"/libreoffice-24.8.4.2-icu76_fixes-1.patch
+     patch -Np1 -i "${srcdir}"/libreoffice-24.8.4.2-icu76_fixes-1.patch
++    patch -Np1 -i "${srcdir}"/mdds-3.0.0.patch
  
      for i in $CFLAGS; do
          case "$i" in
@@ -50,11 +50,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,6 @@
- done
+@@ -7,6 +7,7 @@
  popd
  patch -Np1 -i "${srcdir}"/poppler24.12-buildfix.patch
--patch -Np1 -i "${srcdir}"/libreoffice-24.8.4.2-icu76_fixes-1.patch
+ patch -Np1 -i "${srcdir}"/libreoffice-24.8.4.2-icu76_fixes-1.patch
++patch -Np1 -i "${srcdir}"/mdds-3.0.0.patch
  for i in $CFLAGS; do
  case "$i" in
  -pipe|-Wall|-Werror*|-fexceptions) continue;;

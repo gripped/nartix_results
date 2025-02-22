@@ -116,6 +116,8 @@ fcitx5
 fcron
 firefox
 firewalld
+flac
+flac-doc
 flatpak
 flatpak-docs
 fluidsynth
@@ -230,7 +232,6 @@ hidapi
 hipify-clang
 hugin
 hwloc
-hyperkitty
 hyprland
 i2pd
 ibus
@@ -796,6 +797,9 @@ udisks2-docs
 umockdev
 umurmur
 unbound
+unicorn
+python-unicorn
+ruby-unicorn-engine
 unoconv
 upower
 uptimed

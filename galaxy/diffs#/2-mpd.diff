@@ -4,8 +4,8 @@
  
  pkgname=mpd
  pkgver=0.23.17
--pkgrel=2
-+pkgrel=1
+-pkgrel=3
++pkgrel=2
  pkgdesc="Flexible, powerful, server-side application for playing music"
  arch=(x86_64)
  url="https://www.musicpd.org/"
@@ -17,10 +17,10 @@
    twolame
    yajl
  )
-@@ -100,9 +99,10 @@
-     -D shine=disabled
+@@ -102,9 +101,10 @@
      -D tremor=disabled
      -D b_ndebug=true
+     -D test=true
 +    -D systemd=disabled
    )
  
@@ -29,7 +29,7 @@
    meson compile -C build
  }
  
-@@ -144,14 +144,12 @@
+@@ -146,14 +146,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so

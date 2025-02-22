@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=scummvm
 -pkgver=2.9.0
+-pkgrel=2
 +pkgver=2.8.1
- pkgrel=1
++pkgrel=1
  pkgdesc="A 'virtual machine' for several classic graphical point-and-click adventure games."
  arch=('x86_64')
+ license=('GPL')
 @@ -10,8 +10,8 @@
           'libgl' 'glu' 'libjpeg-turbo' 'libmpeg2' 'curl' 'a52dec' 'giflib' 'glew' 'libspeechd' 'gtk3' 'sndio')
  makedepends=('mesa')
