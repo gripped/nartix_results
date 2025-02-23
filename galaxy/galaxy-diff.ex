@@ -1,5 +1,4 @@
 alsa-utils
-blender
 catfish
 cinnamon-desktop
 copyq
@@ -18,8 +17,6 @@ lemurs
 libetonyek
 libreoffice-fresh
 libreoffice-fresh-sdk
-libreoffice-still
-libreoffice-still-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2

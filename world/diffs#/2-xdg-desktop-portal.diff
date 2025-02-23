@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=xdg-desktop-portal
--pkgver=1.20.0
--pkgrel=1
-+pkgver=1.18.4
-+pkgrel=2
- pkgdesc="Desktop integration portals for sandboxed apps"
- url="https://flatpak.github.io/xdg-desktop-portal/"
- arch=(x86_64)
-@@ -12,15 +12,10 @@
-   gdk-pixbuf2
-   glib2
-   glibc
--  gstreamer
--  gst-plugins-base-libs
-   json-glib
--  libgudev
+@@ -19,8 +19,6 @@
    libpipewire
    pipewire
    rtkit
@@ -26,44 +9,7 @@
  )
  makedepends=(
    docbook-xsl
-@@ -28,7 +23,6 @@
-   geoclue
-   git
-   glib2-devel
--  gst-plugins-good
-   libportal
-   meson
-   python-dbus
-@@ -36,43 +30,31 @@
-   python-docutils
-   python-gobject
-   python-pytest
--  python-sphinx
--  python-sphinx-copybutton
--  python-sphinxext-opengraph
--  python-sphinx-furo
--  umockdev
-   xmlto
--)
--checkdepends=(
--  python-pytest-xdist
- )
- optdepends=(
-   'geoclue: Geolocation portal'
-   'xdg-desktop-portal-impl: Portal backends'
- )
--source=(
--  "git+https://github.com/flatpak/xdg-desktop-portal?signed#tag=$pkgver"
--)
--b2sums=('0ea46b11b3f693d6a03e0fd6c3dee4ae8409ea4b332a0fc49a823706f02c8c0c4f3ba9733fa3c7bef566d6e6f2b5fb2c35a2d43f59ffb48d59bb8150cc3aface')
--validpgpkeys=(
--  9038F70CA72FAC9D10C6327B89AFE307C861D158 # Georges Basile Stavracas Neto (Primary Key) <georges.stavracas@gmail.com>
--)
-+source=("git+https://github.com/flatpak/xdg-desktop-portal#tag=$pkgver")
-+b2sums=('724330b7b5d71a606ce0204fd4b5403ceedc31638c81e2143ce917e8c2d8ff42217a675d3a7c310fe9a992fa3245dba511c35501a656ff4acbd67df7094174f2')
- 
- prepare() {
-   cd $pkgname
+@@ -63,16 +61,18 @@
  }
  
  build() {
@@ -73,9 +19,9 @@
  }
  
  check() {
--  XDP_VALIDATE_ICON_INSECURE=1 XDP_VALIDATE_SOUND_INSECURE=1 \
+   XDP_VALIDATE_ICON_INSECURE=1 XDP_VALIDATE_SOUND_INSECURE=1 \
 -    meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs
++    meson test -C build --print-errorlogs || :
  }
  
  package() {
@@ -90,28 +36,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -8,11 +8,7 @@
- glib2
- glib2-devel
- glibc
--gst-plugins-base-libs
--gst-plugins-good
--gstreamer
- json-glib
--libgudev
- libpipewire
- libportal
- meson
-@@ -22,12 +18,5 @@
- python-docutils
- python-gobject
- python-pytest
--python-sphinx
--python-sphinx-copybutton
--python-sphinx-furo
--python-sphinxext-opengraph
+@@ -27,7 +27,5 @@
+ python-sphinx-furo
+ python-sphinxext-opengraph
  rtkit
 -systemd
 -systemd-libs
--umockdev
+ umockdev
  xmlto

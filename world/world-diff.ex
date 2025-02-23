@@ -72,7 +72,6 @@ dbus-python-docs
 ddcutil
 dhcpcd
 dns-over-https
-docker-buildx
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -116,8 +115,6 @@ fcitx5
 fcron
 firefox
 firewalld
-flac
-flac-doc
 flatpak
 flatpak-docs
 fluidsynth
@@ -331,6 +328,7 @@ libhandy0
 libinput
 libldm
 libmspub
+libnbd
 libnvme
 libp11
 libprocps
@@ -479,6 +477,7 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nodejs-lts-hydrogen
 nsd
 nushell
 nvidia-open
@@ -593,9 +592,12 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pwndbg
 pyqt6
 pysolfc
+python-aiobotocore
 python-anytree
+python-apsw
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun
@@ -743,7 +745,6 @@ squid
 sshguard
 sslh
 sssd
-strip-nondeterminism
 strongswan
 stunnel
 sway

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -51,7 +51,7 @@
+@@ -70,7 +70,7 @@
      -DgRPC_BENCHMARK_PROVIDER:STRING='package' \
      -DgRPC_ABSL_PROVIDER:STRING='package' \
      -DgRPC_USE_PROTO_LITE=OFF \
@@ -9,7 +9,7 @@
      -DgRPC_BUILD_GRPC_CPP_PLUGIN=ON \
      -DgRPC_BUILD_GRPC_CSHARP_PLUGIN=ON \
      -DgRPC_BUILD_GRPC_NODE_PLUGIN=ON \
-@@ -82,7 +82,7 @@
+@@ -101,7 +101,7 @@
    export GRPC_PYTHON_BUILD_SYSTEM_CARES=1
    export GRPC_PYTHON_BUILD_SYSTEM_RE2=1
    export GRPC_PYTHON_BUILD_SYSTEM_ABSL=1
@@ -18,7 +18,7 @@
    export GRPC_BUILD_WITH_BORING_SSL_ASM=0
  
    cd "$srcdir/$pkgbase-$pkgver"
-@@ -102,7 +102,7 @@
+@@ -121,7 +121,7 @@
  }
  
  package_grpc() {

@@ -474,6 +474,7 @@ docbook-xml
 docbook-xsl
 docbook2x
 docbook5-xml
+docker-buildx
 docker-compose
 doctest
 docx2txt
@@ -639,6 +640,8 @@ otf-fira-sans
 firejail
 fish
 five-or-more
+flac
+flac-doc
 flake8
 flameshot
 flashrom
@@ -1813,7 +1816,6 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
-libnbd
 libndp
 libnet
 libnetfilter_queue
@@ -2397,7 +2399,6 @@ nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
-nodejs-lts-hydrogen
 nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
@@ -3025,7 +3026,6 @@ purpose
 purpose5
 putty
 pv
-pwndbg
 pyalpm
 pyatspi
 python-atspi
@@ -3084,7 +3084,6 @@ python-absl
 python-acme
 python-adal
 python-adblock
-python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3120,7 +3119,6 @@ python-apispec-webframeworks
 python-apispec
 python-appdirs
 python-apscheduler
-python-apsw
 python-archinfo
 python-aresponses
 python-argcomplete
@@ -5161,6 +5159,7 @@ stoken
 stow
 strace
 strawberry
+strip-nondeterminism
 stubby
 subversion
 sugar-datastore

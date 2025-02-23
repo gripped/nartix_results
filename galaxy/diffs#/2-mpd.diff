@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=mpd
- pkgver=0.23.17
--pkgrel=3
-+pkgrel=2
- pkgdesc="Flexible, powerful, server-side application for playing music"
- arch=(x86_64)
- url="https://www.musicpd.org/"
 @@ -66,7 +66,6 @@
    libpipewire
    python-sphinx
@@ -17,11 +8,16 @@
    twolame
    yajl
  )
-@@ -102,9 +101,10 @@
-     -D tremor=disabled
-     -D b_ndebug=true
-     -D test=true
+@@ -93,6 +92,7 @@
+ 
+ build() {
+   local _meson_options=(
 +    -D systemd=disabled
+     -D documentation=enabled
+     -D adplug=disabled
+     -D audiofile=disabled
+@@ -104,7 +104,7 @@
+     -D test=true
    )
  
 -  arch-meson $pkgname build "${_meson_options[@]}"

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,7 +23,7 @@
+@@ -28,7 +28,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
- sed -i "s/cmocka_dep = cmocka.get_variable('cmocka_dep')/cmocka_dep = dependency('cmocka')/g" meson.build
+@@ -5,7 +5,7 @@
+ patch -Np1 < "$srcdir/fde62484e0e1724569ecc86df8e1ffbe2bc3510a.patch"
  }
  build() {
 -arch-meson "$_pkgname-v$pkgver" build \

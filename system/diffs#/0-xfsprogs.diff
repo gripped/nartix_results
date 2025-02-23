@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=xfsprogs
 -pkgver=6.13.0
+-pkgrel=1
 +pkgver=6.12.0
- pkgrel=1
++pkgrel=2
  pkgdesc="XFS filesystem utilities"
  arch=('x86_64')
+ license=(
 @@ -27,7 +27,7 @@
    icu
  )
@@ -17,13 +19,8 @@
  validpgpkeys=(
    'AE1B2A9562721A6FC4307C1F46A7EA18AC33E108' #  Andrey Albershteyn <aalbersh@redhat.com>
    '2B8185919E8D248981869DED20AE1692E13DDEE0' # Eric Sandeen <sandeen@sandeen.net>
-@@ -37,12 +37,9 @@
- build() {
-   cd ${pkgname}-dev
-   make configure
--
--  sed -r -i 's/\$\(LIBICU_LIBS\)/\0 -licuuc/' scrub/Makefile
--
+@@ -42,7 +42,7 @@
+ 
    export OPTIMIZER=" "
    ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib \
 -              --with-systemd-unit-dir=/usr/lib/systemd/system \
@@ -39,11 +36,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,9 @@
- build() {
- cd ${pkgname}-dev
- make configure
--sed -r -i 's/\$\(LIBICU_LIBS\)/\0 -licuuc/' scrub/Makefile
+@@ -4,7 +4,7 @@
+ sed -r -i 's/\$\(LIBICU_LIBS\)/\0 -licuuc/' scrub/Makefile
  export OPTIMIZER=" "
  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib \
 ---with-systemd-unit-dir=/usr/lib/systemd/system \
