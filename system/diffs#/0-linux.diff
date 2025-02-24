@@ -1,19 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,11 @@
+@@ -1,6 +1,12 @@
 +
-+_ver=6.13.3
++
++_ver=6.13.4
 +_rel=1
 +_arch=arch${_rel}
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
--pkgver=6.13.3.arch1
+-pkgver=6.13.4.arch1
 +pkgver=${_ver}.${_artix}
  pkgrel=1
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
-@@ -27,10 +32,10 @@
+@@ -27,10 +33,10 @@
    !debug
    !strip
  )
@@ -27,16 +28,26 @@
    $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
    config  # the main kernel config file
  )
-@@ -50,7 +55,7 @@
+@@ -43,14 +49,14 @@
+             'SKIP'
+             '9396ecd603c0129ca8457731db5fef117f75b63aec7a6782d5acbe8e4cd64787'
+             'SKIP'
+-            '9a195bc4d8b492b0f44da392689746f605ca946e4f396bbc25fdbffb383899c1')
++            '3548a55938edf05f00197fa0b3a3de1fa12ac1009c4314791baef043c957fc55')
+ b2sums=('2fe8e972e7de458fba6fbb18a08a01f17b49e4a2d31aa1368e50895a2698c6e1aaaf5137d0c0018860de3fe598e4ba425d6126ade7387ba227f690137111a66d'
          'SKIP'
-         '77741908fa7afe101091919c8d477f1c4c161082f115849e352a99a080fe3d599e9d8af78d8c210f81176f34a331aa639883723e230c3bf29621f0cf36fa962d')
- 
+         'da2f63697300bd07a28ab201aa879974eb50870cfcb6d0593c4ca33434ee0ccaa778be9a165f998f2f3e41e4f9f81d811255e6f056c9d15f8259da60d6680e2b'
+         'SKIP'
+-        'eedd98ed226561af9b279b931d5251974ed98cf21fa0974a855dd0365a16d6702f190dc60eca9bb337534110d94d070e7c7bc5cd61ba774ab38d441b567cce6c')
+-
 -export KBUILD_BUILD_HOST=archlinux
++        '5b12a734dd023343efa024acb4ba1bdb43f0fe5de09b449f11a30b2f9862cae577569e21b790fc7173ef90e4c7609fb71c889d15a47f9f2f9cbb4751a536e495')
++
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -70,6 +75,7 @@
+@@ -70,6 +76,7 @@
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
@@ -44,7 +55,7 @@
  
    echo "Setting config..."
    cp ../config .config
-@@ -105,8 +111,8 @@
+@@ -105,8 +112,8 @@
      WIREGUARD-MODULE
    )
    replaces=(

@@ -1332,6 +1332,10 @@ khotkeys
 khtml
 ki18n
 ki18n5
+kicad-library
+$pkgbase
+$pkgbase-3d
+kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -2390,6 +2394,7 @@ newsboat
 nftables
 nginx
 nginx-src
+ngspice
 ninja
 nitrokey-udev-rules
 nload
@@ -2399,7 +2404,6 @@ nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
-nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
 nodejs
@@ -3102,7 +3106,6 @@ python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
-python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
@@ -4255,7 +4258,6 @@ python-sphobjinv
 python-spsdk
 python-spur
 python-sqlalchemy-utils
-python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlalchemy1.4
 python-sqlite-anyio
@@ -5026,6 +5028,7 @@ salt
 samurai
 sassc
 sbc
+sbctl
 sbsigntools
 scdoc
 schedtool

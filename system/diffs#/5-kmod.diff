@@ -1,0 +1,123 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=kmod
+-pkgver=34
+-pkgrel=1
++pkgver=33
++pkgrel=3
+ pkgdesc="Linux kernel module management tools and library"
+ arch=('x86_64')
+ url='https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git'
+ license=('LGPL-2.1-or-later' 'GPL-2.0-or-later')
+ depends=('glibc' 'zlib' 'openssl' 'xz' 'zstd')
+-makedepends=('git' 'meson' 'scdoc')
++makedepends=('git' 'scdoc')
+ checkdepends=('linux-headers' 'libelf')
+ options=('strip')
+ provides=('libkmod.so')
+@@ -16,30 +16,47 @@
+         'depmod-search.conf'
+         'depmod.hook'
+         'depmod.script')
+-sha256sums=('9956120779aab1bcd40991cdb59843d94a77cae8b911487438640a3ccde197c4'
++sha256sums=('f5795fe50a747609d70f764244e645cd946074e70a7e51de0f82bd2e4d0612c8'
+             '1a92bfeae870f61ce814577e69d2a147a9c0caf6aed1131243e4179241fcc4a8'
+             'c11c2a0f66ea405493e8617689ca10818dc81dd1dddc19bdb220c8b2917119c1'
+             '18661aa40c25580f04d2ac3f32e54c2997c0994d1c829905537b413a9d291ac6')
+ 
++prepare() {
++  cd "${pkgname}"
++
++  touch libkmod/docs/gtk-doc.make
++  autoreconf --force --install --symlink
++}
++
+ build() {
+-  arch-meson 'kmod' 'build' \
+-    -Dbuild-tests=true \
+-    -Dmanpages=true \
+-    -Dopenssl=enabled \
+-    -Dxz=enabled \
+-    -Dzlib=enabled \
+-    -Dzstd=enabled
++  cd "${pkgname}"
+ 
+-  meson compile -C build
++  ./configure \
++    --sysconfdir='/etc' \
++    --with-xz \
++    --with-zlib \
++    --with-zstd \
++    --with-openssl
++
++  make
+ }
+ 
+ check() {
+ 
+-  meson test -C 'build'
++  local kdirs=(/usr/lib/modules/*/build/Makefile)
++  if [[ ! -f "${kdirs[0]}" ]]; then
++    printf '==> Unable to find kernel headers to build modules for tests\n' >&2
++    return 1
++  fi
++
++  local kver kdir="${kdirs[0]%/Makefile}"
++  IFS=/ read _ _ _ kver _ <<<"${kdir}"
++
++  make -C "${pkgname}" check KDIR="${kdir}" KVER="${kver}"
+ }
+ 
+ package() {
+-  meson install -C 'build' --destdir "$pkgdir"
++  make -C "${pkgname}" DESTDIR="${pkgdir}" install
+ 
+   install -dm0755 "${pkgdir}"/{etc,usr/lib}/{depmod,modprobe}.d
+ 
+@@ -48,3 +65,4 @@
+   install -Dm0644 "${srcdir}/depmod.hook" "${pkgdir}/usr/share/libalpm/hooks/60-depmod.hook"
+   install -Dm0755 "${srcdir}/depmod.script" "${pkgdir}/usr/share/libalpm/scripts/depmod"
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ git
+ glibc
+-meson
+ openssl
+ scdoc
+ xz
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,15 @@
++prepare() {
++cd "${pkgname}"
++touch libkmod/docs/gtk-doc.make
++autoreconf --force --install --symlink
++}
+ build() {
+-arch-meson 'kmod' 'build' \
+--Dbuild-tests=true \
+--Dmanpages=true \
+--Dopenssl=enabled \
+--Dxz=enabled \
+--Dzlib=enabled \
+--Dzstd=enabled
+-meson compile -C build
++cd "${pkgname}"
++./configure \
++--sysconfdir='/etc' \
++--with-xz \
++--with-zlib \
++--with-zstd \
++--with-openssl
++make
+ }

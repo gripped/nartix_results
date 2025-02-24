@@ -478,6 +478,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs-lts-iron
 nsd
 nushell
 nvidia-open
@@ -596,6 +597,7 @@ pwndbg
 pyqt6
 pysolfc
 python-aiobotocore
+python-alembic
 python-anytree
 python-apsw
 python-ipykernel
@@ -604,6 +606,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-requests-mock
+python-sqlalchemy
 python-werkzeug
 qastools
 qbittorrent
