@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,45 +1,54 @@
+@@ -1,46 +1,54 @@
  pkgname=0ad
 -pkgver=a27
 -_pkgver=0.27.0
--pkgrel=3
+-pkgrel=4
 +pkgver=a26
 +_pkgver=0.0.26-alpha
 +pkgrel=12
@@ -58,6 +58,7 @@
 +  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
  
    ./update-workspaces.sh -j$(nproc) \
+-      --with-lto \
        --without-pch \
 -      --with-system-premake5 \
        --bindir=/usr/bin \
@@ -95,7 +96,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,20 @@
+@@ -1,19 +1,20 @@
  prepare() {
  cd "$pkgname-$_pkgver"
 -patch -Np1 -i "$srcdir"/0ad-fix-missing-includes.patch
@@ -114,6 +115,7 @@
 +export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
 +export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
  ./update-workspaces.sh -j$(nproc) \
+---with-lto \
  --without-pch \
 ---with-system-premake5 \
  --bindir=/usr/bin \

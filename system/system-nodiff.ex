@@ -52,7 +52,6 @@ python-gpgme
 gpm
 grep
 groff
-grub
 guile
 gzip
 hdparm
@@ -69,6 +68,7 @@ jfsutils
 json-c
 kbd
 keyutils
+kmod
 krb5
 ldns
 leancrypto
@@ -155,6 +155,7 @@ openssl
 patch
 pciutils
 pcre
+pcre2
 perl
 pinentry
 pkgconf
@@ -188,3 +189,4 @@ wpa_supplicant
 xz
 zlib
 minizip
+zstd

@@ -11,6 +11,11 @@ avidemux-cli
 avidemux-qt
 blender
 blueman
+bogofilter
+bogofilter-db
+bogofilter-kyotocabinet
+bogofilter-lmdb
+bogofilter-sqlite
 box2d
 cairo-perl
 caja-extensions

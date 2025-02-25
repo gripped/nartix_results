@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _name=activesupport
+ pkgname=ruby-activesupport
+-pkgver=8.0.1
+-pkgrel=1
++pkgver=6.1.7.6
++pkgrel=3
+ pkgdesc='A collection of utility classes and standard library extensions'
+ arch=(any)
+ url="https://github.com/rails/rails/tree/master/activesupport"
+@@ -10,7 +10,6 @@
+ depends=(
+   ruby
+   ruby-concurrent
+-  ruby-connection_pool
+   ruby-i18n  # NOTE: bootstrap without (circular dependency)
+   ruby-minitest
+   ruby-tzinfo
+@@ -26,7 +25,7 @@
+ )
+ options=(!emptydirs)
+ source=($pkgname::git+https://github.com/rails/rails#tag=v$pkgver?signed)
+-sha512sums=('61674b9fe6328ec9f31a945c0aba6c43edd502bd799e931e49c1278468f87a86d2309aa2f55a5b63e8eabe89d36395d3ece9e7989770e4e631b74478213f93db')
++sha512sums=('SKIP')
+ validpgpkeys=(
+   '54FE550EA35E26D7C75362C1FC23B6D0F1EEE948'  # Rafael Mendonça França <rafael.ufs@gmail.com>
+   '4CE91B75A79828E86B1AA8BB953170BCB4FFAFC6'  # Aaron Patterson <tenderlove@ruby-lang.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ git
+ ruby
+ ruby-concurrent
+-ruby-connection_pool
+ ruby-i18n
+ ruby-minitest
+ ruby-rake

@@ -872,7 +872,6 @@ gsettings-system-schemas
 gsfonts
 gsl
 gsm
-gsmartcontrol
 gsoap
 gsound
 gspell
@@ -2400,10 +2399,12 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nmap
+nng
 nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
+nodejs-lts-iron
 nodejs-nopt
 nodejs-yaml
 nodejs
@@ -2977,15 +2978,6 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
-postfix
-postfix-cdb
-postfix-ldap
-postfix-lmdb
-postfix-mongodb
-postfix-mysql
-postfix-pcre
-postfix-pgsql
-postfix-sqlite
 postgis
 postgrey
 postorius
@@ -3030,6 +3022,7 @@ purpose
 purpose5
 putty
 pv
+pwndbg
 pyalpm
 pyatspi
 python-atspi
@@ -3088,6 +3081,7 @@ python-absl
 python-acme
 python-adal
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3106,6 +3100,7 @@ python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
+python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
@@ -3122,6 +3117,7 @@ python-apispec-webframeworks
 python-apispec
 python-appdirs
 python-apscheduler
+python-apsw
 python-archinfo
 python-aresponses
 python-argcomplete
@@ -4154,6 +4150,7 @@ python-rfc3987
 python-rich
 python-rjsmin
 python-robot-detection
+python-roman-numerals-py
 python-rope
 python-routes
 python-rpds-py
@@ -4258,6 +4255,7 @@ python-sphobjinv
 python-spsdk
 python-spur
 python-sqlalchemy-utils
+python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlalchemy1.4
 python-sqlite-anyio
@@ -4677,12 +4675,10 @@ ruby-ae
 ruby-ansi
 ruby-ast
 ruby-async-container
-ruby-async-dns
 ruby-async-http-cache
 ruby-async-http
 ruby-async-io
 ruby-async-pool
-ruby-async-process
 ruby-async-rest
 ruby-async-rspec
 ruby-async-service
@@ -4785,7 +4781,6 @@ ruby-ice_nine
 ruby-introspection
 ruby-io-console
 ruby-io-endpoint
-ruby-io-event
 ruby-io-nonblock
 ruby-io-stream
 ruby-io-wait
@@ -4868,7 +4863,6 @@ ruby-pkg-config
 ruby-power_assert
 ruby-prime
 ruby-process-metrics
-ruby-protocol-hpack
 ruby-protocol-http
 ruby-protocol-http1
 ruby-protocol-http2
@@ -5002,7 +4996,6 @@ ruby-websocket-extensions
 ruby-x25519
 ruby-yard
 ruby-zeitwerk
-ruby
 ruby2.7
 rubygems
 ruff

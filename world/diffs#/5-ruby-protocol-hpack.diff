@@ -1,0 +1,179 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+-_gemname=protocol-hpack
+-pkgname="ruby-${_gemname}"
+-pkgver=1.5.1
+-pkgrel=1
++pkgname=ruby-protocol-hpack
++pkgver=1.4.2
++_commit=031b055eeea20f42facd65e1b57e6d8af93292f3
++pkgrel=4
+ pkgdesc='A compresssor and decompressor for HTTP 2.0 HPACK'
+ arch=(any)
+ url='https://github.com/socketry/protocol-hpack'
+@@ -12,38 +12,24 @@
+ )
+ makedepends=(
+   git
+-)
+-checkdepends=(
+-  ruby-bake
+-  ruby-bake-test
+-  ruby-bake-test-external
+   ruby-bundler
+   ruby-covered
+-  ruby-decode
+-  ruby-sus
++  ruby-rake
++  ruby-rspec
+ )
+ options=(!emptydirs)
+-source=(git+https://github.com/socketry/protocol-hpack.git#tag=v$pkgver)
+-sha256sums=('1c06886ee57ddc13b9bb69cb0bd4de109499b9b6c650589ae3cda29c81b24331')
++source=(git+https://github.com/socketry/protocol-hpack.git#commit=$_commit)
++sha256sums=('SKIP')
+ 
+ prepare() {
+   cd protocol-hpack
+-
+-  sed --in-place --regexp-extended \
+-    --expression 's|~>|>=|g' \
+-    --expression '/signing_key/d' \
+-    "${_gemname}.gemspec"
+-
+-  sed --in-place \
+-    --expression '/group :maintenance/,/end/d' \
+-    --expression '/rubocop/d' \
+-    gems.rb
++  sed -r -e 's|~>|>=|g' -i http-hpack.gemspec
+ }
+ 
+ build() {
+   local _gemdir="$(gem env gemdir)"
+   cd protocol-hpack
+-  gem build --verbose "${_gemname}.gemspec"
++  rake build
+   gem install \
+     --local \
+     --verbose \
+@@ -51,43 +37,28 @@
+     --no-user-install \
+     --install-dir "tmp_install/$_gemdir" \
+     --bindir "tmp_install/usr/bin" \
+-    protocol-hpack-$pkgver.gem
+-
+-  rm --force --recursive --verbose \
+-    "tmp_install${_gemdir}/cache/" \
+-    "tmp_install${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
+-    "tmp_install${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+-
+-  find "tmp_install${_gemdir}/gems/" \
++    pkg/protocol-hpack-$pkgver.gem
++  find "tmp_install/$_gemdir/gems/" \
+     -type f \
+     \( \
+-      -iname "*.o" -o \
+-      -iname "*.c" -o \
+-      -iname "*.so" -o \
+-      -iname "*.time" -o \
+-      -iname "gem.build_complete" -o \
+-      -iname "Makefile" \
++        -iname "*.o" -o \
++        -iname "*.c" -o \
++        -iname "*.so" -o \
++        -iname "*.time" -o \
++        -iname "gem.build_complete" -o \
++        -iname "Makefile" \
+     \) \
+     -delete
+-
+-  find "tmp_install${_gemdir}/extensions/" \
+-    -type f \
+-    \( \
+-      -iname "mkmf.log" -o \
+-      -iname "gem_make.out" \
+-    \) \
+-    -delete
++  rm -r tmp_install/$_gemdir/cache
+ }
+ 
+ check() {
+   local _gemdir="$(gem env gemdir)"
+   cd protocol-hpack
+-  GEM_HOME="tmp_install$_gemdir" bake test
++  GEM_HOME="tmp_install/$_gemdir" rake
+ }
+ 
+ package() {
+   cd protocol-hpack
+   cp -a tmp_install/* "$pkgdir"/
+-
+-  install --verbose -D --mode=0644 license* --target-directory "${pkgdir}/usr/share/licenses/${pkgname}"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1,6 @@
+ git
+ ruby
++ruby-bundler
++ruby-covered
++ruby-rake
++ruby-rspec
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,11 @@
+ prepare() {
+ cd protocol-hpack
+-sed --in-place --regexp-extended \
+---expression 's|~>|>=|g' \
+---expression '/signing_key/d' \
+-"${_gemname}.gemspec"
+-sed --in-place \
+---expression '/group :maintenance/,/end/d' \
+---expression '/rubocop/d' \
+-gems.rb
++sed -r -e 's|~>|>=|g' -i http-hpack.gemspec
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"
+ cd protocol-hpack
+-gem build --verbose "${_gemname}.gemspec"
++rake build
+ gem install \
+ --local \
+ --verbose \
+@@ -20,12 +13,8 @@
+ --no-user-install \
+ --install-dir "tmp_install/$_gemdir" \
+ --bindir "tmp_install/usr/bin" \
+-protocol-hpack-$pkgver.gem
+-rm --force --recursive --verbose \
+-"tmp_install${_gemdir}/cache/" \
+-"tmp_install${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
+-"tmp_install${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+-find "tmp_install${_gemdir}/gems/" \
++pkg/protocol-hpack-$pkgver.gem
++find "tmp_install/$_gemdir/gems/" \
+ -type f \
+ \( \
+ -iname "*.o" -o \
+@@ -36,11 +25,5 @@
+ -iname "Makefile" \
+ \) \
+ -delete
+-find "tmp_install${_gemdir}/extensions/" \
+--type f \
+-\( \
+--iname "mkmf.log" -o \
+--iname "gem_make.out" \
+-\) \
+--delete
++rm -r tmp_install/$_gemdir/cache
+ }

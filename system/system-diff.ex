@@ -28,9 +28,9 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
+grub
 gssproxy
 iputils
-kmod
 libunistring
 libusb
 libxml2
@@ -56,7 +56,6 @@ p11-kit-docs
 pacman
 pam
 pambase
-pcre2
 ppp
 procps-ng
 rpcbind
@@ -68,4 +67,3 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
-zstd

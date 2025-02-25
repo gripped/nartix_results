@@ -131,6 +131,7 @@ octopi
 opensnitch-openrc
 pacifica-icon-theme
 package-query
+pacman-static
 pamac
 pambase-turnstile
 pipewire-dinit

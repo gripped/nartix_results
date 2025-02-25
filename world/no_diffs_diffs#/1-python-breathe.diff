@@ -1,7 +1,0 @@
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -35,3 +35,4 @@
-   python -m installer --destdir="$pkgdir" "breathe-${pkgver}/dist"/*.whl
-   install -D -m644 "breathe-${pkgver}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}"
- }
-+

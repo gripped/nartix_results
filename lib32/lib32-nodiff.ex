@@ -152,6 +152,7 @@ lib32-opus
 lib32-orc
 lib32-pango
 lib32-pcre
+lib32-pcre2
 lib32-pixman
 lib32-popt
 lib32-portaudio
@@ -175,6 +176,7 @@ lib32-wayland
 lib32-xcb-util-keysyms
 lib32-xz
 lib32-zlib
+lib32-zstd
 multilib-devel
 steam
 wine-staging
