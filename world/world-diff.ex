@@ -90,7 +90,6 @@ drkonqi
 dtc
 dunst
 earlyoom
-ejabberd
 element.io
 element-web
 element-desktop
@@ -125,7 +124,6 @@ frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
-gajim
 gala
 gamemode
 gamescope
@@ -227,7 +225,6 @@ haveged
 hexchat
 hidapi
 hipify-clang
-hugin
 hwloc
 hyprland
 i2pd
@@ -727,11 +724,14 @@ rspamd
 rtkit
 ruby-async-dns
 ruby-async-process
+ruby-console
 ruby-io-event
 ruby-protocol-hpack
+ruby-protocol-http2
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+ruby-traces
 ruby
 samba
 libwbclient
@@ -809,9 +809,6 @@ udisks2-docs
 umockdev
 umurmur
 unbound
-unicorn
-python-unicorn
-ruby-unicorn-engine
 unoconv
 upower
 uptimed

@@ -1,0 +1,87 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ruby-async-process
+-pkgver=1.4.0
+-pkgrel=2
++pkgver=1.3.1
++pkgrel=4
+ pkgdesc='Asynchronous process spawning'
+ arch=(any)
+ url='https://github.com/socketry/async-process'
+@@ -9,31 +9,22 @@
+ depends=(
+   ruby
+   ruby-async
++  ruby-async-io
+ )
+ checkdepends=(
+-  ruby-bake
+-  ruby-bake-test
+-  ruby-bake-test-external
++  ruby-async-rspec
+   ruby-bundler
+   ruby-covered
+-  ruby-decode
+-  ruby-sus-fixtures-async
++  ruby-rspec
+ )
+ options=(!emptydirs)
+ source=(https://github.com/socketry/async-process/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
+-sha256sums=('15f4ff6599155e87f9e66c4e709afb104a9ab1518d91699ca511b8a663a832a9')
++sha256sums=('925f89b1fa5e9780098327a56b9210882c638fa4295a96079fd16f28cd25ee5a')
+ 
+ prepare() {
+   cd async-process-$pkgver
+-
+-  sed --in-place --regexp-extended \
+-    --expression 's|~>|>=|g' \
+-    --expression '/signing_key/d' async-process.gemspec
+-
+-  sed --in-place \
+-    --expression '/group :maintenance/,/end/d' \
+-    --expression '/rubocop/d' \
+-    gems.rb
++  sed -r -e 's|~>|>=|g' -i async-process.gemspec
++  echo gemspec > gems.rb
+ }
+ 
+ build() {
+@@ -65,7 +56,7 @@
+ check() {
+   local _gemdir="$(gem env gemdir)"
+   cd async-process-$pkgver
+-  GEM_HOME="tmp_install/$_gemdir" bake test
++  GEM_HOME="tmp_install/$_gemdir" rspec
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1,3 @@
+ ruby
+ ruby-async
++ruby-async-io
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,7 @@
+ prepare() {
+ cd async-process-$pkgver
+-sed --in-place --regexp-extended \
+---expression 's|~>|>=|g' \
+---expression '/signing_key/d' async-process.gemspec
+-sed --in-place \
+---expression '/group :maintenance/,/end/d' \
+---expression '/rubocop/d' \
+-gems.rb
++sed -r -e 's|~>|>=|g' -i async-process.gemspec
++echo gemspec > gems.rb
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"

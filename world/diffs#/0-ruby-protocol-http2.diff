@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ruby-protocol-http2
+-pkgver=0.22.1
++pkgver=0.19.3
+ pkgrel=1
+ pkgdesc='A low level implementation of the HTTP/2 protocol'
+ arch=(any)
+@@ -26,7 +26,7 @@
+ )
+ options=(!emptydirs)
+ source=("git+${url}.git#tag=v${pkgver}")
+-sha256sums=('bcf90f566772b1e51d5ba80c22ce1e7f9067a014c150bc5f3b8866334c8ecf7f')
++sha256sums=('91f942a5f1a37368b995eff25507e0d666c4f5888578fd93e43d2e984f2f59c5')
+ 
+ prepare() {
+   cd protocol-http2
+@@ -37,7 +37,7 @@
+     -i protocol-http2.gemspec
+ 
+   sed -i \
+-    -e '/group :maintenance/,/end/d' \
++    -e '/bake-gem/d;/bake-github-pages/d;/utopia-project/d' \
+     -e '/rubocop/d' \
+     gems.rb
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ -e '/signing_key/d' \
+ -i protocol-http2.gemspec
+ sed -i \
+--e '/group :maintenance/,/end/d' \
++-e '/bake-gem/d;/bake-github-pages/d;/utopia-project/d' \
+ -e '/rubocop/d' \
+ gems.rb
+ }

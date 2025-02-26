@@ -519,6 +519,7 @@ egl-wayland
 egl-x11
 eglexternalplatform
 eigen
+ejabberd
 electron
 electrum
 elementary-icon-theme
@@ -695,6 +696,7 @@ fuse-common
 futuresql
 fwknop
 fzf
+gajim
 galculator
 gcab
 gcc13
@@ -1012,6 +1014,7 @@ htop
 http-parser
 httpbin
 hub
+hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -2405,6 +2408,7 @@ node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
+nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
 nodejs
@@ -4711,7 +4715,6 @@ ruby-chronic
 ruby-coderay
 ruby-concurrent
 ruby-connection_pool
-ruby-console
 ruby-covered
 ruby-crack
 ruby-crass
@@ -4865,7 +4868,6 @@ ruby-prime
 ruby-process-metrics
 ruby-protocol-http
 ruby-protocol-http1
-ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-websocket
 ruby-pry-byebug
@@ -4975,7 +4977,6 @@ ruby-tins
 ruby-tmpdir
 ruby-tomlrb
 ruby-tracer
-ruby-traces
 ruby-trenni
 ruby-typeprof
 ruby-tzinfo
@@ -5457,6 +5458,9 @@ unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
 unicode-emoji
+unicorn
+python-unicorn
+ruby-unicorn-engine
 unifdef
 unittestpp
 unrar
