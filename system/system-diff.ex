@@ -28,7 +28,6 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-grub
 gssproxy
 iputils
 libunistring
@@ -59,7 +58,6 @@ pambase
 ppp
 procps-ng
 rpcbind
-shadow
 thin-provisioning-tools
 tpm2-tss
 traceroute

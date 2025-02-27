@@ -52,6 +52,7 @@ python-gpgme
 gpm
 grep
 groff
+grub
 guile
 gzip
 hdparm
@@ -170,6 +171,7 @@ run-parts
 s-nail
 sdparm
 sed
+shadow
 sqlite
 sqlite-tcl
 sqlite-analyzer

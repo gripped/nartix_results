@@ -1,5 +1,6 @@
 0ad
 accountsservice
+adios2
 alacritty
 alsa-utils
 apache
@@ -325,7 +326,6 @@ libhandy0
 libinput
 libldm
 libmspub
-libnbd
 libnvme
 libp11
 libprocps
@@ -708,6 +708,7 @@ quazip-qt6
 quilt
 rabbitmq
 rabbitmqadmin
+ranger
 rdma-core
 redis
 redshift

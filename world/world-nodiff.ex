@@ -20,7 +20,6 @@ acpi_call
 acpica
 acpid
 acpilight
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-icon-theme-legacy
@@ -177,6 +176,7 @@ aws-sdk-cpp-iam
 aws-sdk-cpp-kinesis
 aws-sdk-cpp-s3
 ayatana-ido
+b3sum
 babl
 backuppc
 baloo-widgets
@@ -1822,6 +1822,7 @@ libmypaint
 libmysofa
 libmythes
 libnatpmp
+libnbd
 libndp
 libnet
 libnetfilter_queue
@@ -4582,7 +4583,6 @@ radicale
 raft
 ragel
 range-v3
-ranger
 rapidfuzz-cpp
 rapidjson
 raptor
@@ -5146,6 +5146,7 @@ sshfs
 sshpass
 sshuttle
 startup-notification
+stb
 stellarsolver
 step-cli
 step
