@@ -224,6 +224,7 @@ mokutil
 mousepad
 mozo
 muffin
+mugshot
 nemo
 nerd-fonts
 otf-aurulent-nerd

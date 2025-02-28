@@ -1,8 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -1,8 +1,8 @@
+ 
  pkgname=kwin
- pkgver=6.3.1
+-pkgver=6.3.2.1
++pkgver=6.3.1
  _dirver=$(echo $pkgver | cut -d. -f1-3)
 -pkgrel=1
 +pkgrel=2.1
@@ -18,6 +20,15 @@
           wayland
           xcb-util-cursor
           xcb-util-keysyms
+@@ -82,7 +82,7 @@
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
+         https://invent.kde.org/plasma/kwin/-/commit/1d2fdf30.patch)
+ install=$pkgname.install
+-sha256sums=('e6123eda2b1fd9f65b36061fdacf96234068d1e24fa7a3352288f4d51b2fc4c2'
++sha256sums=('9a50ba0eaa6209783bdefbb668e57d0cbdfa71ce8ebfbd17fe446db6d773f242'
+             'SKIP'
+             'd0c18b7dcd31702e1e884a025df3cabcfe7927328a9bb7e22c9bab7881631374')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
 @@ -103,4 +103,6 @@
  
  package() {

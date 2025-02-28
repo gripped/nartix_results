@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=emacs
- pkgname=(emacs emacs-nox emacs-wayland)
- pkgver=30.1
--pkgrel=3
-+pkgrel=2
- arch=('x86_64')
- url='https://www.gnu.org/software/emacs/emacs.html'
- license=('GPL3')
 @@ -34,7 +34,6 @@
    librsvg-2.so
    libsm
@@ -17,61 +8,16 @@
    libtiff.so
    libtree-sitter.so
    libwebp.so
-@@ -57,39 +56,35 @@
- }
- 
- build() {
--  local _confflags=(
--    --sysconfdir=/etc
--    --prefix=/usr
--    --libexecdir=/usr/lib
--    --localstatedir=/var
--    --disable-build-details
--    --with-cairo
--    --with-harfbuzz
+@@ -65,7 +64,7 @@
+     --disable-build-details
+     --with-cairo
+     --with-harfbuzz
 -    --with-libsystemd
--    --with-modules
--    --with-native-compilation=aot
--    --with-tree-sitter
--  )
-+  local _confflags="--sysconfdir=/etc \
-+    --prefix=/usr \
-+    --libexecdir=/usr/lib \
-+    --with-tree-sitter \
-+    --localstatedir=/var \
-+    --with-cairo \
-+    --disable-build-details \
-+    --with-harfbuzz \
-+    --with-libsystemd=no \
-+    --with-modules"
- 
-   export ac_cv_lib_gif_EGifPutExtensionLast=yes
- 
-   cd ${pkgname}-${pkgver}
--  ./configure \
--    --with-x-toolkit=gtk3 \
--    "${_confflags[@]}"
-+  ./configure $_confflags \
-+    --with-x-toolkit=gtk3
-   make
- 
-   cd ../${pkgbase}-${pkgver}-nox
-   ./configure \
-     --without-x \
-     --without-sound \
--    "${_confflags[@]}"
-+    $_confflags
-   make
- 
-   cd ../${pkgbase}-${pkgver}-wayland
-   ./configure \
-     --with-pgtk \
--    "${_confflags[@]}"
-+    $_confflags
-   make bootstrap
- }
- 
-@@ -118,7 +113,6 @@
++    --with-libsystemd=no
+     --with-modules
+     --with-native-compilation=aot
+     --with-tree-sitter
+@@ -118,7 +117,6 @@
      libgccjit
      libgpm.so
      libncursesw.so

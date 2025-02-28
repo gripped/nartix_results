@@ -1968,6 +1968,7 @@ libthai
 libtheora
 libtiff
 libtiger
+libtlsrpt
 libtomcrypt
 libtommath
 libtorrent
@@ -2983,6 +2984,15 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mongodb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgis
 postgrey
 postorius
@@ -4583,6 +4593,7 @@ radicale
 raft
 ragel
 range-v3
+ranger
 rapidfuzz-cpp
 rapidjson
 raptor
@@ -4679,10 +4690,12 @@ ruby-ae
 ruby-ansi
 ruby-ast
 ruby-async-container
+ruby-async-dns
 ruby-async-http-cache
 ruby-async-http
 ruby-async-io
 ruby-async-pool
+ruby-async-process
 ruby-async-rest
 ruby-async-rspec
 ruby-async-service
@@ -4715,6 +4728,7 @@ ruby-chronic
 ruby-coderay
 ruby-concurrent
 ruby-connection_pool
+ruby-console
 ruby-covered
 ruby-crack
 ruby-crass
@@ -4784,6 +4798,7 @@ ruby-ice_nine
 ruby-introspection
 ruby-io-console
 ruby-io-endpoint
+ruby-io-event
 ruby-io-nonblock
 ruby-io-stream
 ruby-io-wait
@@ -4866,8 +4881,10 @@ ruby-pkg-config
 ruby-power_assert
 ruby-prime
 ruby-process-metrics
+ruby-protocol-hpack
 ruby-protocol-http
 ruby-protocol-http1
+ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-websocket
 ruby-pry-byebug
@@ -4954,6 +4971,7 @@ ruby-sus-fixtures-async-http
 ruby-sus-fixtures-async
 ruby-sus-fixtures-console
 ruby-sus-fixtures-openssl
+ruby-sus-fixtures-time
 ruby-sus
 ruby-sync
 ruby-syntax
@@ -4977,6 +4995,7 @@ ruby-tins
 ruby-tmpdir
 ruby-tomlrb
 ruby-tracer
+ruby-traces
 ruby-trenni
 ruby-typeprof
 ruby-tzinfo
@@ -4997,6 +5016,7 @@ ruby-websocket-extensions
 ruby-x25519
 ruby-yard
 ruby-zeitwerk
+ruby
 ruby2.7
 rubygems
 ruff
@@ -5122,7 +5142,6 @@ spandsp-docs
 spatialindex
 spdlog
 speakup-utils
-spectacle
 speech-dispatcher
 libspeechd
 speex
