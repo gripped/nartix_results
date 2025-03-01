@@ -489,6 +489,7 @@ nvtop
 onboard
 onionshare
 open-iscsi
+openbsd-netcat
 opencollada
 opendht
 openmpi

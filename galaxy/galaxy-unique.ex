@@ -147,6 +147,7 @@ qt-sudo
 qt5-styleplugins
 qt6gtk2
 qtermwidget-qt6
+r-linux
 raw-thumbnailer
 rdiff-backup
 rlottie

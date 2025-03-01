@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=rdma-core
- pkgdesc="RDMA core userspace libraries and daemons"
- pkgver=56.0
--pkgrel=2
-+pkgrel=1
- arch=(x86_64)
- url="https://github.com/linux-rdma/rdma-core"
- license=(
 @@ -20,7 +20,7 @@
    glibc
    libnl
@@ -26,15 +17,7 @@
    valgrind
  )
  optdepends=(
-@@ -80,7 +79,6 @@
-         -S $pkgname-$pkgver
-         -G Ninja
-         -W no-dev
--        -DCMAKE_BUILD_TYPE=None
-         -DCMAKE_INSTALL_PREFIX=/usr
-         -DCMAKE_INSTALL_RUNDIR=/run
-         -DCMAKE_INSTALL_SBINDIR=/usr/bin
-@@ -117,4 +115,6 @@
+@@ -117,4 +116,6 @@
      install -vDm 644 providers/ipathverbs/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname/providers/ipathverbs/
      install -vDm 644 ccan/LICENSE.CCO -t "$pkgdir"/usr/share/licenses/$pkgname/ccan/
      install -vDm 644 ccan/LICENSE.MIT -t "$pkgdir"/usr/share/licenses/$pkgname/ccan/
