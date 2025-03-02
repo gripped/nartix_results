@@ -639,7 +639,6 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
-fish
 five-or-more
 flac
 flac-doc
@@ -874,6 +873,7 @@ gsettings-system-schemas
 gsfonts
 gsl
 gsm
+gsmartcontrol
 gsoap
 gsound
 gspell
@@ -5149,9 +5149,7 @@ spglib
 spice-gtk
 spice-protocol
 spice
-spirv-headers
 spirv-llvm-translator
-spirv-tools
 splint
 spotifyd
 sqlcipher
@@ -5552,12 +5550,7 @@ vsftpd
 vst3sdk
 vst3sdk-docs
 vtk
-vulkan-docs
-vulkan-html-docs
-vulkan-headers
 vulkan-icd-loader
-vulkan-tools
-vulkan-validation-layers
 w3m
 wacomtablet
 waf

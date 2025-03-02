@@ -114,6 +114,7 @@ fcitx5
 fcron
 firefox
 firewalld
+fish
 flatpak
 flatpak-docs
 fluidsynth
@@ -175,7 +176,6 @@ python-grpcio-tools
 php-grpc
 php-legacy-grpc
 grpc-cli
-gsmartcontrol
 gstreamer
 gst-plugins-bad-libs
 #
@@ -737,6 +737,8 @@ snapper
 solid
 spectacle
 spice-vdagent
+spirv-headers
+spirv-tools
 squid
 sshguard
 sslh
@@ -818,11 +820,17 @@ v4l-utils
 vault
 vlc
 libvlc
+volk
 vpnc
 vte3
 vte-common
 vte4
 vte-docs
+vulkan-docs
+vulkan-html-docs
+vulkan-headers
+vulkan-tools
+vulkan-validation-layers
 wasi-compiler-rt
 waybar
 webkit2gtk-4.1

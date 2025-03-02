@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ _pkgname=c-toxcore
+ epoch=1
+ pkgver=0.2.20
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc='Secure, configuration-free, P2P Skype replacement backend'
+ arch=('x86_64')
+ url='https://tox.chat'
+@@ -45,7 +45,6 @@
+ 
+ prepare() {
+   cd $_pkgname-$pkgver
+-  sed -i "s|/usr/local|/usr|" other/bootstrap_daemon/tox-bootstrapd.service
+   sed -i "/Rpath/d;/RPATH/d" CMakeLists.txt
+ }
+ 
+@@ -71,8 +70,6 @@
+   cd $_pkgname-$pkgver
+   DESTDIR="$pkgdir" cmake --install build
+   install -vDm644 -t "$pkgdir/etc" other/bootstrap_daemon/tox-bootstrapd.conf
+-  install -vDm644 -t "$pkgdir/usr/lib/systemd/system" \
+-    other/bootstrap_daemon/tox-bootstrapd.service
+   install -vDm644 ../toxcore.sysusers "$pkgdir/usr/lib/sysusers.d/toxcore.conf"
+   install -vDm644 ../toxcore.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/toxcore.conf"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ cd $_pkgname-$pkgver
+-sed -i "s|/usr/local|/usr|" other/bootstrap_daemon/tox-bootstrapd.service
+ sed -i "/Rpath/d;/RPATH/d" CMakeLists.txt
+ }
+ build() {
