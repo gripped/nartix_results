@@ -515,6 +515,7 @@ xfce4-mount-plugin
 xfce4-mpc-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
+xfce4-panel-profiles
 xfce4-panel
 xfce4-power-manager
 xfce4-pulseaudio-plugin

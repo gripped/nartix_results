@@ -49,6 +49,7 @@ libwireplumber-4.0-compat
 lxdm-dinit
 lxqt-build-tools-qt6
 mcomix
+mesa-git
 mint-themes-legacy
 mint-themes
 mint-x-icons
@@ -175,6 +176,7 @@ turnstile
 ungoogled-chromium
 vertex-themes
 vscodium
+waterfox
 wayfire-plugins-extra
 wayfire
 wcm

@@ -4,7 +4,7 @@
 -
  pkgname=proxytunnel
  pkgver=1.12.2
- pkgrel=1
+-pkgrel=1
 -pkgdesc="Creates tunnels through HTTP(S) proxies for any TCP based protocol"
 -arch=('x86_64')
 -url="https://github.com/proxytunnel/proxytunnel"
@@ -13,6 +13,7 @@
 -makedepends=('asciidoc' 'xmlto')
 -source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
 -b2sums=('ffa518278660c816b27ae6c497d744d6588ba9be29fab2ce254bcbc4695fc8e5339e836da541c6aed7a73c2d1e5207f529ca9b818ddbf02b699856d43bb85a57')
++pkgrel=1.1
 +pkgdesc="Stealth tunneling through HTTP(S) proxies."
 +arch=("x86_64")
 +url="https://proxytunnel.sourceforge.io"
