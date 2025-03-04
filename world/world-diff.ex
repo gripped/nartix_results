@@ -1,6 +1,5 @@
 0ad
 accountsservice
-adios2
 alacritty
 alsa-utils
 apache
@@ -233,6 +232,8 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-compute-runtime
+intel-media-driver
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -276,6 +277,7 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
+kinfocenter
 kismet
 kitty
 kitty-terminfo
@@ -325,6 +327,7 @@ libguestfs
 libhandy0
 libinput
 libldm
+libmediaart
 libmspub
 libnvme
 libp11
@@ -333,7 +336,6 @@ libsidplay
 libsidplayfp
 libstaroffice
 libtg_owt
-libtorrent-rasterbar
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -467,7 +469,6 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 netavark
-netcdf-fortran
 netplan
 networkmanager
 libnm
@@ -735,7 +736,6 @@ signal-desktop
 smartmontools
 snapper
 solid
-spectacle
 spice-vdagent
 spirv-headers
 spirv-tools
@@ -794,7 +794,6 @@ udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
 umockdev
-umurmur
 unbound
 unoconv
 upower
@@ -830,6 +829,7 @@ vulkan-docs
 vulkan-html-docs
 vulkan-headers
 vulkan-tools
+vulkan-utility-libraries
 vulkan-validation-layers
 wasi-compiler-rt
 waybar

@@ -136,7 +136,6 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
-libtg_owt
 libvarlink
 libwnck
 libxfce4util
@@ -204,7 +203,6 @@ mate-icon-theme
 mate-media
 mate-menus
 mate-netbook
-mate-notification-daemon
 mate-panel
 mate-polkit
 mate-power-manager

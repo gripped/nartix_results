@@ -20,6 +20,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-icon-theme-legacy
@@ -1071,10 +1072,8 @@ indent
 iniparser
 inkscape
 innoextract
-intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
-intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
@@ -1356,7 +1355,6 @@ kimageformats
 kimageformats5
 kimagemapeditor
 kimap
-kinfocenter
 kinit
 kio-admin
 kio-extras
@@ -1798,7 +1796,6 @@ libmatroska
 libmaxminddb
 libmbim
 libmd
-libmediaart
 libmediainfo
 libmemcached-awesome
 libmicrodns
@@ -1971,6 +1968,7 @@ libtiger
 libtlsrpt
 libtomcrypt
 libtommath
+libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -2385,6 +2383,7 @@ neon
 neovim-qt
 neovim
 net-snmp
+netcdf-fortran
 netcdf
 netcf
 netpbm
@@ -5141,6 +5140,7 @@ spandsp-docs
 spatialindex
 spdlog
 speakup-utils
+spectacle
 speech-dispatcher
 libspeechd
 speex
@@ -5468,6 +5468,7 @@ uget
 uglify-js
 uhttpmock
 umbrello
+umurmur
 unarchiver
 unclutter
 unibilium

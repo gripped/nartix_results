@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=drkonqi
--pkgver=6.3.2
-+pkgver=6.3.1
- _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
- pkgdesc='The KDE crash handler'
-@@ -33,11 +33,11 @@
+@@ -33,7 +33,7 @@
           qt6-base
           qt6-declarative
           syntax-highlighting
@@ -17,11 +9,6 @@
  makedepends=(extra-cmake-modules)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('d397ac8549fd2e294cf932d4b8e105dfdbadf8b3df34ec1b0f91649f30fa930b'
-+sha256sums=('d35b2eafa8f36e8809c47acc961e1be4f85348b655178c24cd72dc9126d68f97'
-             'SKIP')
- validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
-               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
 @@ -49,10 +49,13 @@
      -DCMAKE_INSTALL_LIBEXECDIR=lib \
      -DBUILD_TESTING=OFF \
