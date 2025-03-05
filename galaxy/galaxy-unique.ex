@@ -21,6 +21,7 @@ calamares-branding
 calamares
 clawsker
 dbus-dinit-user
+debuginfod-openrc
 edi
 entice
 enventor
@@ -37,6 +38,7 @@ fvwm3
 gitea-tea
 grub-theme
 htpdate
+incron-openrc
 iso-profiles
 kotatogram-desktop-git
 lib32-artix-archlinux-support
