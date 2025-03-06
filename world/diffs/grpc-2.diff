@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=('grpc' 'python-grpcio' 'python-grpcio-tools' 'php-grpc' 'php-legacy-grpc' 'grpc-cli')
+ pkgver=1.70.1
+ _gtestver=2dd1c131950043a8ad5ab0d2dda0e0970596586a
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="High performance, open source, general RPC framework that puts mobile and HTTP/2 first."
+ arch=('x86_64')
+ url='https://grpc.io'
 @@ -70,7 +70,7 @@
      -DgRPC_BENCHMARK_PROVIDER:STRING='package' \
      -DgRPC_ABSL_PROVIDER:STRING='package' \

@@ -105,7 +105,6 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
-fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
@@ -125,6 +124,7 @@ frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
+gajim
 gala
 gamemode
 gamescope
@@ -225,6 +225,7 @@ haveged
 hexchat
 hidapi
 hipify-clang
+hsa-rocr
 hwloc
 hyprland
 i2pd
@@ -325,6 +326,7 @@ libgdata
 libgudev
 libguestfs
 libhandy0
+libheif
 libinput
 libldm
 libmediaart
@@ -546,6 +548,7 @@ php-snmp
 php-sqlite
 php-tidy
 php-xsl
+pifpaf
 pipewire-media-session
 pipewire
 libpipewire
@@ -593,7 +596,11 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiopg
 python-anytree
+python-asyncpg
+python-deprecated
+python-fixtures
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun
@@ -601,6 +608,9 @@ python-pyudev
 python-recommonmark
 python-requests-mock
 python-werkzeug
+python-ytmusicapi
+python-zope-testing
+python-zope-testrunner
 qastools
 qbittorrent
 qbittorrent-nox
@@ -692,6 +702,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6ct
 qterminal
 qtermwidget
 quadrapassel
@@ -710,11 +721,16 @@ ripgrep-all
 ristretto
 rocblas
 rocfft
+rocm-core
+rocm-llvm
+rocm-device-libs
+comgr
 rocrand
 rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-async-rspec
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -739,6 +755,7 @@ solid
 spice-vdagent
 spirv-headers
 spirv-tools
+squashfuse
 squid
 sshguard
 sslh
@@ -918,3 +935,4 @@ yubikey-personalization
 zathura-pdf-mupdf
 zeromq
 znc
+zug

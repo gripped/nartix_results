@@ -603,6 +603,7 @@ fakechroot
 falkon
 farstream
 fast_float
+fastfetch
 fastjar
 faudio
 fcgi
@@ -696,7 +697,6 @@ fuse-common
 futuresql
 fwknop
 fzf
-gajim
 galculator
 gcab
 gcc13
@@ -1007,7 +1007,6 @@ hivex
 hostapd
 hotdoc
 hplip
-hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -1717,7 +1716,6 @@ libgxps
 libhandy
 libhandy-docs
 libharu
-libheif
 libhubbub
 libical
 libice
@@ -2922,7 +2920,6 @@ picard
 picmi
 picom
 pidgin
-pifpaf
 pigeonhole
 pigz
 pim-data-exporter
@@ -3105,7 +3102,6 @@ python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiomysql
-python-aiopg
 python-aioquic
 python-aioresponses
 python-aiorpcx
@@ -3155,7 +3151,6 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
-python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3337,7 +3332,6 @@ python-deepdiff
 python-deepmerge
 python-defusedxml
 python-dep-logic
-python-deprecated
 python-deprecation
 python-devtools
 python-diff-cover
@@ -3439,7 +3433,6 @@ python-fiona
 python-fire
 python-first
 python-fissix
-python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
@@ -4444,7 +4437,6 @@ python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket
-python-ytmusicapi
 python-zc.lockfile
 python-zeep
 python-zeroconf
@@ -4466,8 +4458,6 @@ python-zope-location
 python-zope-proxy
 python-zope-schema
 python-zope-security
-python-zope-testing
-python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4572,7 +4562,6 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
-qt6ct
 qtcreator
 qtcreator-devel
 qtkeychain
@@ -4639,7 +4628,6 @@ roc-toolkit
 rocalution
 rocm-clang-ocl
 rocm-cmake
-rocm-core
 rocm-device-libs
 rocm-hip-sdk
 rocm-hip-libraries
@@ -4648,9 +4636,6 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
-rocm-device-libs
-comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
@@ -4695,7 +4680,6 @@ ruby-async-io
 ruby-async-pool
 ruby-async-process
 ruby-async-rest
-ruby-async-rspec
 ruby-async-service
 ruby-async-websocket
 ruby-async
@@ -5154,7 +5138,6 @@ splint
 spotifyd
 sqlcipher
 squashfs-tools
-squashfuse
 sratom
 sratom-docs
 srt
@@ -5772,7 +5755,6 @@ zsh-completions
 zsh-syntax-highlighting
 zsh
 zsh-doc
-zug
 zvbi
 zxing-cpp
 zziplib

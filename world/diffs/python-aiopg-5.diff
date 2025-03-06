@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,13 @@
+ 
+ pkgname=python-aiopg
+-_pkgname=${pkgname#python-}
+ pkgver=1.4.0
+-pkgrel=5
++pkgrel=6
+ pkgdesc="Library for accessing a PostgreSQL database from the asyncio"
+ arch=(any)
+ url="https://github.com/aio-libs/aiopg"
+ license=(BSD-2-Clause)
+ depends=(
+   python
+-  python-async-timeout
+   python-psycopg2
+ )
+ makedepends=(
+@@ -19,21 +17,26 @@
+   python-wheel
+ )
+ optdepends=('python-sqlalchemy: SQLAlchemy support')
+-source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+-sha256sums=('1b1c2ae3449640fa8fbaa95fe893c83df6ee5195b7018ce5c1b4427f95979509')
++source=(
++  "$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
++  "$pkgname-remove-dep-async-timeout.patch::$url/commit/b5d4a510a0de774085d7bf29297c5abb4ff3b9bc.patch"
++)
++sha256sums=('1b1c2ae3449640fa8fbaa95fe893c83df6ee5195b7018ce5c1b4427f95979509'
++            '3d8d5f3d8c097b5008b9d938459673ca75d0bab566b1e8308e9ed1298f77cc59')
+ 
+-_archive=$_pkgname-$pkgver
++prepare() {
++  cd ${pkgname#python-}-$pkgver
++  patch -Np1 -F3 < ../$pkgname-remove-dep-async-timeout.patch
++}
+ 
+ build() {
+-  cd "$_archive"
+-
++  cd ${pkgname#python-}-$pkgver
+   python -m build --wheel --no-isolation
+ }
+ 
+ 
+ package() {
+-  cd "$_archive"
+-
+-  python -m installer -d "$pkgdir" dist/*.whl
+-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
++  cd ${pkgname#python-}-$pkgver
++  python -m installer --destdir="$pkgdir" dist/*.whl
++  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ python
+-python-async-timeout
+ python-build
+ python-installer
+ python-psycopg2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,8 @@
++prepare() {
++cd ${pkgname#python-}-$pkgver
++patch -Np1 -F3 < ../$pkgname-remove-dep-async-timeout.patch
++}
+ build() {
+-cd "$_archive"
++cd ${pkgname#python-}-$pkgver
+ python -m build --wheel --no-isolation
+ }

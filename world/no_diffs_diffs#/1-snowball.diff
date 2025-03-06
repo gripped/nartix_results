@@ -8,3 +8,13 @@
  _commit=48a67a2831005f49c48ec29a5837640e23e54e6b  # tags/v2.2.0^0
  source=("git+https://github.com/snowballstem/snowball#commit=$_commit"
          dynamiclib.diff)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-git
+-glibc
+-libstemmer
