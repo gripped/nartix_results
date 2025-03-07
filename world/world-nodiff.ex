@@ -464,7 +464,6 @@ libphobos
 dmenu
 dmg2img
 dmidecode
-dns-lexicon
 dnscrypt-proxy
 dnsmasq
 docbook-dsssl
@@ -1138,7 +1137,6 @@ jitterentropy
 jose
 jp2a
 jq
-jrnl
 jruby
 js102
 js115
@@ -1298,7 +1296,6 @@ kdsoap
 kdsoap-qt5
 kdsoap-qt6
 keditbookmarks
-keepassxc
 kemoticons
 kexec-tools
 keybinder2
@@ -2020,7 +2017,6 @@ libwps
 libwps-doc
 libwslay
 libx11
-libx86emu
 libxau
 libxaw
 libxcb
@@ -2318,7 +2314,6 @@ mod_dnssd
 modem-manager-gui
 modemmanager-qt
 modemmanager-qt5
-mold
 molecule
 molequeue
 mongo-c-driver
@@ -4674,7 +4669,6 @@ ruby-ansi
 ruby-ast
 ruby-async-container
 ruby-async-dns
-ruby-async-http-cache
 ruby-async-http
 ruby-async-io
 ruby-async-pool

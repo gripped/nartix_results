@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=keepassxc
+-pkgver=2.7.9
+-pkgrel=6
++pkgver=2.7.10
++pkgrel=1
+ pkgdesc="Cross-platform community-driven port of Keepass password manager"
+ arch=(x86_64)
+ url="https://keepassxc.org/"
+@@ -13,13 +13,21 @@
+             'wl-clipboard: keepassxc-cli clipboard support under Wayland')
+ checkdepends=(xclip xorg-server-xvfb)
+ provides=(org.freedesktop.secrets)
+-source=(https://github.com/keepassxreboot/keepassxc/releases/download/$pkgver/keepassxc-$pkgver-src.tar.xz{,.sig})
+-sha256sums=('3c44e45f22c00ddac63d8bc11054b4b0ada0222ffac08d3ed70f196cb9ed46fd'
+-            'SKIP')
++source=(https://github.com/keepassxreboot/keepassxc/releases/download/$pkgver/keepassxc-$pkgver-src.tar.xz{,.sig}
++        TestEntryModel.patch)
++sha256sums=('5ce76d6440986c24842585f019d5f3cadc166fa71fc911a4fe97b8bbc4819dfa'
++            'SKIP'
++            '1448fb616c4eaf7b0f9019ee10f813199d7105442e3f61aea31e901139b87f43')
+ validpgpkeys=(BF5A669F2272CF4324C1FDA8CFB4C2166397D0D2
+               71D4673D73C7F83C17DAE6A2D8538E98A26FD9C4
+               AF0AEA44ABAC8F1047733EA7AFF235EEFB5A2517
+               C1E4CBA3AD78D3AFD894F9E0B7A66F03B59076A8)
++
++prepare() {
++  cd keepassxc-$pkgver
++
++  patch -Np1 -i "$srcdir"/TestEntryModel.patch
++}
+ 
+ build() {
+   cmake -S keepassxc-$pkgver -B build \
+@@ -34,7 +42,7 @@
+ }
+ 
+ check() {
+-  xvfb-run --auto-servernum cmake --build build --target test
++  xvfb-run --auto-servernum cmake --build build --target test -j1
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd keepassxc-$pkgver
++patch -Np1 -i "$srcdir"/TestEntryModel.patch
++}
+ build() {
+ cmake -S keepassxc-$pkgver -B build \
+ -DCMAKE_BUILD_TYPE=Release \

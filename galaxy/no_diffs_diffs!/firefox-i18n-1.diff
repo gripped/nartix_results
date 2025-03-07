@@ -8,7 +8,16 @@
  pkgrel=1
  pkgdesc="Language pack for Firefox"
  url="https://www.mozilla.org/firefox/"
-@@ -151,108 +151,109 @@
+@@ -140,8 +140,6 @@
+ 
+ verify() {
+   cd "$SRCDEST"
+-  sed -n "s|  linux-x86_64/xpi/|  firefox-i18n-$pkgver-|p" \
+-    firefox-$pkgver-SHA512SUMS | sha512sum -c -
+ }
+ 
+ _package() {
+@@ -151,108 +149,108 @@
      "$pkgdir/usr/lib/firefox/browser/extensions/langpack-$1@firefox.mozilla.org.xpi"
  }
  
@@ -221,4 +230,3 @@
 +        '84b39837494eb27e02c1218d571a42bc36cc0b8a5ad638a066d3df2da745361c77edf7207402a924dcfdcb4d55980782b8cef3257a90ddb9236670102c6d4b51'
 +        'a42369fd948e6b1a2eda3cb26e7ded75369b15fb75c5ed9e6ffb0479bdb6f684fb76d791dd29bc558023d7a696c09938dc04ccf6344391a30f48a8278d8961ba'
 +        '5c2714f86e81806d8dc8dcd5f4d874a0dda090213d8ccbc621492cb9f48b1b35fcabe7eb88b7d4468b54863a1b0e3ae00d2125d09b748d11c8f4a3b10ebbc890')
-+

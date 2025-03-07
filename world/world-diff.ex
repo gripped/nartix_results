@@ -71,6 +71,7 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
+dns-lexicon
 dns-over-https
 docker
 dolphin-emu
@@ -273,10 +274,12 @@ jre8-openjdk
 jdk8-openjdk
 openjdk8-src
 openjdk8-doc
+jrnl
 js78
 julia
 jupyter-server-ydoc
 kcoreaddons
+keepassxc
 kgamma
 kinfocenter
 kismet
@@ -343,6 +346,7 @@ libusbsio
 python-libusbsio
 libvirt
 libvncserver
+libx86emu
 libxfce4ui
 libxfce4util
 libytnef
@@ -440,6 +444,7 @@ mgba-qt
 modemmanager
 libmm-glib
 modest
+mold
 mosquitto
 mousepad
 mozo
@@ -730,6 +735,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-async-http-cache
 ruby-async-rspec
 ruby-racc
 ruby-regexp_property_values
