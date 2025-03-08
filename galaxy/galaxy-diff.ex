@@ -38,6 +38,8 @@ mimalloc
 mpd
 nushell
 nvidia-390xx-utils
+pcmanfm-gtk3
+pcmanfm
 qbittorrent
 qbittorrent-nox
 rage

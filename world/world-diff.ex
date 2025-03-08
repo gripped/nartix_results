@@ -275,6 +275,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jrnl
+js128
 js78
 julia
 jupyter-server-ydoc
@@ -737,8 +738,12 @@ rspamd
 rtkit
 ruby-async-http-cache
 ruby-async-rspec
+ruby-nokogiri
+ruby-parallel
 ruby-racc
+ruby-rake-compiler-dock
 ruby-regexp_property_values
+ruby-sqlite3
 ruby-sys-filesystem
 samba
 libwbclient

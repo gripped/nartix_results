@@ -1140,7 +1140,6 @@ jq
 jruby
 js102
 js115
-js128
 js91
 jshon
 json-glib
@@ -4840,14 +4839,12 @@ ruby-net-smtp
 ruby-netrc
 ruby-network_interface
 ruby-nio4r
-ruby-nokogiri
 ruby-octokit
 ruby-oedipus_lex
 ruby-open-uri
 ruby-optimist
 ruby-packetfu
 ruby-paint
-ruby-parallel
 ruby-parser
 ruby-path_expander
 ruby-patron
@@ -4878,7 +4875,6 @@ ruby-rackup
 ruby-rails-dom-testing
 ruby-rails-html-sanitizer
 ruby-rainbow
-ruby-rake-compiler-dock
 ruby-rake-compiler
 ruby-rake-contrib
 ruby-rake
@@ -4940,7 +4936,6 @@ ruby-simplecov_json_formatter
 ruby-sinatra
 ruby-snowglobe
 ruby-sorted_set
-ruby-sqlite3
 ruby-stackprof
 ruby-stringio
 ruby-sus-fixtures-async-http

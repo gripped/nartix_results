@@ -39,7 +39,6 @@ expat
 file
 findutils
 flex
-gawk
 gdbm
 gettext
 gmp

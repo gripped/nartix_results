@@ -298,9 +298,7 @@ openrct2
 openshot
 parole
 pavucontrol-qt
-pcmanfm-gtk3
 pcmanfm-qt
-pcmanfm
 peek
 perl-cairo-gobject
 perl-extutils-depends
