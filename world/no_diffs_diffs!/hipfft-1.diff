@@ -3,7 +3,7 @@
 @@ -1,16 +1,16 @@
  
  pkgname=hipfft
--pkgver=6.2.4
+-pkgver=6.3.2
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='rocFFT marshalling library.'
@@ -15,7 +15,7 @@
  makedepends=('cmake' 'rocm-cmake' 'git')
  _git='https://github.com/ROCm/hipFFT'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('308b81230498b01046f7fc3299a9e9c2c5456d80fd71a94f490ad97f51ed9de8')
+-sha256sums=('5d9e662c7d67f4c814cad70476b57651df5ae6b65f371ca6dbb5aa51d9eeb6f5')
 +sha256sums=('c0a4bac5fa9a757a19a4995fa9571328b6ee0a71e93c66a880069794d65d284a')
  options=(!lto)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"

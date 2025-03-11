@@ -1,6 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -57,12 +57,12 @@
+@@ -20,8 +20,8 @@
+   pipewire-session-manager
+   pulse-native-provider
+ )
+-pkgver=1.4.0
+-pkgrel=2
++pkgver=1.2.7
++pkgrel=1
+ epoch=1
+ pkgdesc="Low-latency audio/video router and processor"
+ url="https://pipewire.org"
+@@ -41,7 +41,6 @@
+   jack2
+   libcamera
+   libcanberra
+-  libebur128
+   libfdk-aac
+   libffado
+   libfreeaptx
+@@ -58,12 +57,12 @@
    ncurses
    opus
    python-docutils
@@ -14,7 +33,16 @@
    valgrind
    webrtc-audio-processing-1
  )
-@@ -91,9 +91,12 @@
+@@ -74,7 +73,7 @@
+ source=(
+   "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
+ )
+-b2sums=('4546d0c55dd18a6219730493cefa729d26f1d0760364128e8a942762bb5fbcc8c1962cf0b4bd2a2cf28d50a24381495a187e69f2dce7db2b19027bdf2a199b3d')
++b2sums=('c2941d8400e5299da86239967179f15ed69cc0142d5cf5adc510585ce85ff2e49b975c7adc39146a16a9bd130b3f4a9db51c6c470c9cc6a05913a5c38f214635')
+ 
+ prepare() {
+   cd pipewire
+@@ -92,9 +91,12 @@
      -D session-managers=[]
      -D snap=disabled
      -D udevrulesdir=/usr/lib/udev/rules.d
@@ -30,15 +58,31 @@
    meson compile -C build
  }
  
-@@ -127,7 +130,6 @@
-     libglib-2.0.so
-     libncursesw.so
-     libreadline.so
--    libsystemd.so
-     libudev.so
+@@ -120,14 +122,15 @@
+     LGPL-2.1-or-later
+   )
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    dbus libdbus-1.so
+-    gcc-libs
+-    glib2 libglib-2.0.so
+-    glibc
+-    ncurses libncursesw.so
+-    readline libreadline.so
+-    systemd-libs libsystemd.so libudev.so
++    "libpipewire=$epoch:$pkgver-$pkgrel"
++    gcc-libs
++    glibc
++    lib$_pwname.so
++    libdbus-1.so
++    libglib-2.0.so
++    libncursesw.so
++    libreadline.so
++    libudev.so
    )
    optdepends=(
-@@ -148,7 +150,6 @@
+     'gst-plugin-pipewire: GStreamer plugin'
+@@ -147,7 +150,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
    )
@@ -46,14 +90,33 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -189,7 +190,6 @@
+@@ -160,7 +162,6 @@
+     done
+ 
+     _pick lib usr/include/{$_pwname,$_spaname}
+-    _pick lib usr/lib/$_spaname/libspa.so*
+     _pick lib usr/lib/lib$_pwname.so*
+     _pick lib usr/lib/pkgconfig/lib{$_pwname,$_spaname}.pc
+ 
+@@ -188,8 +189,7 @@
+     _pick audio usr/lib/$_pwname/libpipewire-module-protocol-simple.so
      _pick audio usr/lib/$_pwname/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/$_pwname/libpipewire-module-vban*.so
-     _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5}
+-    _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5,filter-graph}
 -    _pick audio usr/lib/systemd/user/filter-chain.service
++    _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5}
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
      _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
+@@ -219,7 +219,7 @@
+     _pick jack usr/bin/pw-jack
+     _pick jack usr/include/jack
+     _pick jack usr/lib/libjack*
+-    _pick jack usr/lib/pkgconfig/jack*.pc
++    _pick jack usr/lib/pkgconfig/jack.pc
+     _pick jack usr/share/man/man1/pw-jack.1
+     _pick jack usr/share/man/man5/pipewire-jack.conf.5
+     _pick jack usr/share/pipewire/jack.conf
 @@ -227,7 +227,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/$_pwname/libpipewire-module-protocol-pulse.so
@@ -62,19 +125,152 @@
      _pick pulse usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
-@@ -325,7 +324,6 @@
-     libusb-1.0.so
-     libwebrtc-audio-processing-1.so
+@@ -292,7 +291,8 @@
+   depends=(
+     gcc-libs
+     glibc
+-    libcamera libcamera-base.so libcamera.so
++    libcamera-base.so
++    libcamera.so
      pipewire
+   )
+ 
+@@ -304,28 +304,26 @@
+ package_pipewire-audio() {
+   pkgdesc+=" - Audio support"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+     alsa-card-profiles
+-    alsa-lib libasound.so
+-    bluez-libs libbluetooth.so
+-    dbus libdbus-1.so
+-    gcc-libs
+-    glib2 libg{lib,object,io}-2.0.so
+-    glibc
+-    libebur128
+-    libfdk-aac libfdk-aac.so
+-    libfreeaptx libfreeaptx.so
+-    liblc3 liblc3.so
+-    libldac libldacBT_enc.so
+-    libmysofa libmysofa.so
+-    libsndfile libsndfile.so
+-    libusb libusb-1.0.so
+-    lilv liblilv-0.so
+-    opus libopus.so
+-    sbc libsbc.so
 -    systemd-libs
+-    webrtc-audio-processing-1 libwebrtc-audio-processing-1.so
++    dbus
++    gcc-libs
++    glib2
++    glibc
++    lib$_pwname.so
++    libasound.so
++    libbluetooth.so
++    libfdk-aac.so
++    libfreeaptx.so
++    liblc3.so
++    libldacBT_enc.so
++    liblilv-0.so
++    libmysofa.so
++    libopus.so
++    libsbc.so
++    libsndfile.so
++    libusb-1.0.so
++    libwebrtc-audio-processing-1.so
++    pipewire
    )
  
    mv audio/* "$pkgdir"
-@@ -441,11 +439,9 @@
-     pipewire
-     pipewire-audio
+@@ -340,8 +338,8 @@
+ package_pipewire-alsa() {
+   pkgdesc+=" - ALSA configuration"
+   depends=(
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
++    pipewire
++    pipewire-audio
      pipewire-session-manager
--    systemd-libs
+   )
+ 
+@@ -358,11 +356,11 @@
+ package_pipewire-ffado() {
+   pkgdesc+=" - FireWire support"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    glibc
+-    libffado libffado.so
++    glibc
++    libffado.so
++    lib$_pwname.so
++    pipewire
++    pipewire-audio
+   )
+ 
+   mv ffado/* "$pkgdir"
+@@ -373,13 +371,13 @@
+ package_pipewire-jack-client() {
+   pkgdesc+=" - PipeWire as JACK client"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    dbus libdbus-1.so
+-    gcc-libs
+-    glibc
+-    jack libjack.so
++    gcc-libs
++    glibc
++    lib$_pwname.so
++    libdbus-1.so
++    libjack.so
++    pipewire
++    pipewire-audio
+   )
+   conflicts=(pipewire-jack)
+ 
+@@ -395,10 +393,10 @@
+     LGPL-2.1-or-later
+   )
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    glibc
++    glibc
++    lib$_pwname.so
++    pipewire
++    pipewire-audio
+     pipewire-session-manager
+     sh
+   )
+@@ -430,22 +428,20 @@
+ package_pipewire-pulse() {
+   pkgdesc+=" - PulseAudio replacement"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    avahi libavahi-{client,common}.so
+-    dbus libdbus-1.so
++    dbus
+     dconf
+     gcc-libs
+-    glib2 libg{lib,object,io}-2.0.so
+-    glibc
+-    libpulse libpulse.so
++    glibc
++    lib$_pwname.so
++    libavahi-{client,common}.so
++    libglib-2.0.so
++    libpulse.so
++    pipewire
++    pipewire-audio
+     pipewire-session-manager
+-    systemd-libs libsystemd.so
    )
    provides=(pulse-native-provider)
    conflicts=(pulseaudio)
@@ -82,13 +278,134 @@
  
    mv pulse/* "$pkgdir"
  
+@@ -460,12 +456,13 @@
+ package_pipewire-roc() {
+   pkgdesc+=" - ROC streaming support"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    gcc-libs
+-    glibc
+-    roc-toolkit libroc.so
++    gcc-libs
++    glibc
++    lib$_pwname.so
++    libroc.so
++    pipewire
++    pipewire-audio
++    roc-toolkit
+   )
+ 
+   mv roc/* "$pkgdir"
+@@ -476,14 +473,13 @@
+ package_gst-plugin-pipewire() {
+   pkgdesc="Multimedia graph framework - pipewire plugin"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    gcc-libs
+-    glib2 libg{lib,object}-2.0.so
++    gcc-libs
++    glib2
+     glibc
+     gst-plugins-base-libs
+     gstreamer
++    lib$_pwname.so
++    pipewire
+     pipewire-session-manager
+   )
+ 
+@@ -495,14 +491,14 @@
+ package_pipewire-zeroconf() {
+   pkgdesc+=" - Zeroconf support"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    avahi libavahi-{client,common}.so
+-    gcc-libs
+-    glibc
+-    openssl libcrypto.so
+-    opus libopus.so
++    gcc-libs
++    glibc
++    lib$_pwname.so
++    libavahi-{client,common}.so
++    openssl
++    opus
++    pipewire
++    pipewire-audio
+   )
+ 
+   mv zeroconf/* "$pkgdir"
+@@ -513,9 +509,9 @@
+ package_pipewire-v4l2() {
+   pkgdesc+=" - V4L2 interceptor"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    glibc
++    glibc
++    lib$_pwname.so
++    pipewire
+     pipewire-session-manager
+     sh
+   )
+@@ -528,13 +524,13 @@
+ package_pipewire-x11-bell() {
+   pkgdesc+=" - X11 bell"
+   depends=(
+-    "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
+-    "pipewire-audio=$epoch:$pkgver-$pkgrel"
+-    "pipewire=$epoch:$pkgver-$pkgrel"
+-    glibc
+-    libcanberra libcanberra.so
++    glibc
++    lib$_pwname.so
++    libcanberra.so
+     libx11
+     libxfixes
++    pipewire
++    pipewire-audio
+   )
+ 
+   mv x11-bell/* "$pkgdir"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -51,7 +51,6 @@
+@@ -14,7 +14,6 @@
+ gst-plugins-base
+ gst-plugins-base-libs
+ gstreamer
+-jack
+ jack2
+ libasound.so
+ libavahi-client.so
+@@ -25,18 +24,14 @@
+ libcamera.so
+ libcanberra
+ libcanberra.so
+-libcrypto.so
+ libdbus-1.so
+-libebur128
+ libfdk-aac
+ libfdk-aac.so
+ libffado
+ libffado.so
+ libfreeaptx
+ libfreeaptx.so
+-libgio-2.0.so
+ libglib-2.0.so
+-libgobject-2.0.so
+ libjack.so
+ liblc3
+ liblc3.so
+@@ -56,7 +51,6 @@
  libsbc.so
  libsndfile
  libsndfile.so
@@ -96,7 +413,7 @@
  libudev.so
  libusb
  libusb-1.0.so
-@@ -68,14 +67,13 @@
+@@ -73,14 +67,13 @@
  pipewire-pulse
  pipewire-session-manager
  python-docutils

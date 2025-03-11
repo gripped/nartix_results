@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ makedepends=(asciidoctor cmake qt5-tools)
+ optdepends=('xclip: keepassxc-cli clipboard support under X server'
+             'wl-clipboard: keepassxc-cli clipboard support under Wayland')
+-checkdepends=(xclip xorg-server-xvfb xclip)
++checkdepends=(xclip xorg-server-xvfb)
+ provides=(org.freedesktop.secrets)
+ source=(https://github.com/keepassxreboot/keepassxc/releases/download/$pkgver/keepassxc-$pkgver-src.tar.xz{,.sig}
+         TestEntryModel.patch)
+@@ -42,7 +42,7 @@
+ }
+ 
+ check() {
+-  xvfb-run --auto-servernum cmake --build build --target test
++  xvfb-run --auto-servernum cmake --build build --target test -j1
+ }
+ 
+ package() {

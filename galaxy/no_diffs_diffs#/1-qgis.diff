@@ -3,19 +3,9 @@
 @@ -1,7 +1,7 @@
  
  pkgname=qgis
--pkgver=3.40.3
+ pkgver=3.42.0
 -pkgrel=2
-+pkgver=3.42.0
 +pkgrel=1
  pkgdesc="Geographic Information System (GIS) that supports vector, raster & database formats"
  arch=(x86_64)
  url="https://qgis.org/"
-@@ -17,7 +17,7 @@
- source=(
-   https://qgis.org/downloads/$pkgname-$pkgver.tar.bz2
- )
--sha256sums=('51135f0b0f82f2b76de4b89a0978396dbdab9baa3c9c03c4a53b7e2f48451076')
-+sha256sums=('04b743397ee2375a1a0521578131fc514752f84db2f86225a9551d1f87e704e8')
- 
- build() {
-   cmake -S $pkgname-$pkgver -B build -G Ninja \

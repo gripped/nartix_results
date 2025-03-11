@@ -4,38 +4,39 @@
  
  pkgname=mkdocs-autorefs
  _pkgname=autorefs
--pkgver=1.3.0
+-pkgver=1.4.1
 +pkgver=1.4.0
  pkgrel=1
  pkgdesc="Automatically link across pages in MkDocs"
  arch=(any)
-@@ -20,12 +20,13 @@
-   python-wheel
+@@ -10,7 +10,6 @@
+ depends=(
+   mkdocs
+   python
+-  python-jinja
+   python-markdown
+   python-markupsafe
  )
- checkdepends=(
-+  mkdocs-material
-   python-pygments
-   python-pymdown-extensions
+@@ -27,7 +26,7 @@
    python-pytest
  )
  source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
--sha256sums=('9a2b1f3bc93ee36a8793e366edea8de091067cad5e1c90223c7182641c2dceaf')
+-sha256sums=('d91d5e0148551fe70b2cdea50467bc42e5e1a0da173243a0e180e40a6c5cf181')
 +sha256sums=('d9a854660bd18067355f2bf55e53076f072111d411f62b2e38cb69e2134848b0')
  
  build() {
    cd $_pkgname-$pkgver
-@@ -35,10 +36,10 @@
- 
- check() {
-   cd $_pkgname-$pkgver
--  python -m installer --destdir=tmp_install dist/*.whl
--  local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
--  export PYTHONPATH="$PWD/tmp_install/$site_packages"
--  pytest
-+  python -m venv --system-site-packages test-env
-+  test-env/bin/python -m installer dist/*.whl
-+  test-env/bin/python -m pytest \
-+    --ignore tests/test_api.py
- }
- 
- package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ python
+ python-build
+ python-installer
+-python-jinja
+ python-markdown
+ python-markupsafe
+ python-pdm-backend

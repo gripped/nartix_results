@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,15 +1,15 @@
  pkgname=roctracer
--pkgver=6.2.4
+-pkgver=6.3.2
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='ROCm tracer library for performance tracing'
@@ -14,7 +14,7 @@
  makedepends=('cmake' 'python-cppheaderparser' 'python-ply')
  _git='https://github.com/ROCm/roctracer'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/refs/tags/rocm-$pkgver.tar.gz")
--sha256sums=('b94c7db8ac57a4a1d7f8115020c36551220c20f33289fd06830495b4914a7d7b')
+-sha256sums=('ca8e93fc37f4671db28df5cb7a24b48f3d4879a188e4780e45961bba3725bb8a')
 +sha256sums=('1e0105b32fdd9c010aab304bb2ca1a5a38ba323cea610afe1135657edda8f26e')
  options=('!lto')
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"

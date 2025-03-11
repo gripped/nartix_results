@@ -3,7 +3,7 @@
 @@ -1,15 +1,15 @@
  
  pkgname=composable-kernel
--pkgver=6.2.4
+-pkgver=6.3.2
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc="High Performance Composable Kernel for AMD GPUs"
@@ -14,7 +14,7 @@
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip')
  makedepends=('git' 'cmake' 'ninja' 'rocm-cmake' 'rocm-llvm' 'openmp')
  source=("$pkgname-$pkgver.tar.gz::$url/archive/rocm-$pkgver.tar.gz")
--sha256sums=('5598aea4bce57dc95b60f2029831edfdade80b30a56e635412cc02b2a6729aa6')
+-sha256sums=('875237fe493ff040f8f63b827cddf2ff30a8d3aa18864f87d0e35323c7d62a2d')
 +sha256sums=('f648a99388045948b7d5fbf8eb8da6a1803c79008b54d406830b7f9119e1dcf6')
  options=(!lto !buildflags)
  _dirname="$(basename "$url")-$(basename "${source[0]}" .tar.gz)"
@@ -23,7 +23,7 @@
      -D CMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc
      -D CMAKE_BUILD_TYPE=Release
      -D CMAKE_INSTALL_PREFIX=/opt/rocm
--    -D CMAKE_HIP_ARCHITECTURES="gfx900;gfx906:xnack-;gfx908:xnack-;gfx90a:xnack+;gfx90a:xnack-;gfx940;gfx941;gfx942;gfx1010;gfx1012;gfx1030;gfx1100;gfx1101;gfx1102"
+-    -D CMAKE_HIP_ARCHITECTURES="gfx900;gfx906:xnack-;gfx908:xnack-;gfx90a:xnack+;gfx90a:xnack-;gfx940;gfx941;gfx942;gfx1010;gfx1012;gfx1030;gfx1100;gfx1101;gfx1102;gfx1151"
      -D BUILD_DEV=OFF
      -D INSTANCES_ONLY=ON
    )
@@ -49,7 +49,7 @@
  -D CMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc
  -D CMAKE_BUILD_TYPE=Release
  -D CMAKE_INSTALL_PREFIX=/opt/rocm
---D CMAKE_HIP_ARCHITECTURES="gfx900;gfx906:xnack-;gfx908:xnack-;gfx90a:xnack+;gfx90a:xnack-;gfx940;gfx941;gfx942;gfx1010;gfx1012;gfx1030;gfx1100;gfx1101;gfx1102"
+--D CMAKE_HIP_ARCHITECTURES="gfx900;gfx906:xnack-;gfx908:xnack-;gfx90a:xnack+;gfx90a:xnack-;gfx940;gfx941;gfx942;gfx1010;gfx1012;gfx1030;gfx1100;gfx1101;gfx1102;gfx1151"
  -D BUILD_DEV=OFF
  -D INSTANCES_ONLY=ON
  )

@@ -19,7 +19,6 @@ libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libsfdo
-libtg_owt
 libxfce4ui
 light
 lxpanel
@@ -30,7 +29,6 @@ lxsession-gtk3
 lxterminal
 ly
 mate-control-center
-mate-notification-daemon
 mate-screensaver
 mate-session-manager
 mate-system-monitor
@@ -38,8 +36,6 @@ mimalloc
 mpd
 nushell
 nvidia-390xx-utils
-pcmanfm-gtk3
-pcmanfm
 qbittorrent
 qbittorrent-nox
 rage

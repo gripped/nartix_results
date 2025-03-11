@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,11 +4,13 @@
+ pkgrel=2
+ pkgdesc="TUI display manager"
+ arch=(x86_64)
+-url="https://github.com/fairyglade/ly"
++url="https://github.com/fairyglade/$pkgname"
+ license=('WTFPL')
+ depends=(pam glibc libxcb)
+ makedepends=(git zig)
+-optdepends=('xorg-xauth: for X server sessions'
++optdepends=('brightnessctl: for controling brightness'
++            'xorg-xmessage: for displaying a message or query in a window'
++            'xorg-xauth: for X server sessions'
+             'libxcb: for X server sessions')
+ backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
+ source=("git+$url.git#tag=v${pkgver}")
+@@ -26,9 +28,11 @@
+ 
+ package() {
+     cd "$pkgname"
+-    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installsystemd
+-
+-    sed -i "s;/usr/bin/ly;/usr/bin/ly-dm;g" "$pkgdir/usr/lib/systemd/system/ly.service"
+-
++    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installnoconf
++    install -Dm644 res/config.ini "$pkgdir/etc/$pkgname/config.ini"
++    sed -i 's|tty = 2|tty = 7|' "$pkgdir"/etc/$pkgname/config.ini
++    sed -i 's|$CONFIG_DIRECTORY|/etc|' "$pkgdir"/etc/$pkgname/config.ini
++    sed -i 's|$PREFIX_DIRECTORY|/usr|' "$pkgdir"/etc/$pkgname/config.ini
+     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
+ }
++

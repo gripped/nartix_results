@@ -1,8 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -4,9 +4,9 @@
+ pkgver=8.4.3_3
+ _pkgver=${pkgver/_/-}
  _myver=${pkgver/_rel*}
- pkgrel=2
+-pkgrel=3
++pkgrel=2
  arch=('x86_64')
 -makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
 +makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'

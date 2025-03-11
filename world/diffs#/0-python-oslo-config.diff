@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=python-oslo-config
+-pkgver=9.5.0
+-pkgrel=1
++pkgver=9.4.0
++_commit=882adf8e4d0685ea3404067fa38066abec9bd5f6
++pkgrel=4
+ pkgdesc="parsing command line arguments and .ini style configuration files"
+ arch=('any')
+ url="https://pypi.python.org/pypi/oslo.config/$pkgver"
+@@ -13,13 +14,8 @@
+ checkdepends=('python-testscenarios' 'python-stestr' 'python-testtools' 'python-oslotest'
+               'python-oslo-log' 'python-requests-mock' 'python-sphinx')
+ options=('!emptydirs')
+-source=("git+https://github.com/openstack/oslo.config.git#tag=$pkgver")
+-sha512sums=('500683bcda10983bceba038711169da5e1d24bfa3d85b2a0f0c22d50d48ac8e1ca7e6290192a5022dee2975d565f6a80c4c8096115e7940d4ecb1bbeb7e8a7eb')
+-
+-prepare() {
+-  cd oslo.config
+-  git cherry-pick -n 972d304bb23baef538ce759004410a20d8109ccb
+-}
++source=("git+https://github.com/openstack/oslo.config.git#commit=$_commit")
++sha512sums=('SKIP')
+ 
+ build() {
+   cd oslo.config
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd oslo.config
+-git cherry-pick -n 972d304bb23baef538ce759004410a20d8109ccb
+-}
+ build() {
+ cd oslo.config
+ python setup.py build

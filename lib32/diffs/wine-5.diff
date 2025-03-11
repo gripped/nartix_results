@@ -1,6 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,7 +35,7 @@
+@@ -1,16 +1,18 @@
+ 
+ pkgname=wine
+-pkgver=10.3
+-pkgrel=1
++pkgver=10.2
++pkgrel=2
+ 
+ _pkgbasever=${pkgver/rc/-rc}
+ 
+ source=("git+https://gitlab.winehq.org/wine/wine.git?signed#tag=wine-$_pkgbasever"
+         30-win32-aliases.conf
+-        wine-binfmt.conf)
+-sha512sums=('d3cdc9c798d7c3ebffc73de8000e7c79260b8ba3019b41bebed8b329293ed4283110b3404a7d71a8204416fda2045bb2778d5f260f1139fb991ea798a5166e27'
++        wine-binfmt.conf
++        fix-ptr-access.patch::https://gitlab.winehq.org/wine/wine/-/commit/05315ce3da4d6f04232611fb5dd6ffbd77f87ce7.patch)
++sha512sums=('2664d57860cd74706556bcf7e6ec48b4a7c49d8f22ed791bfc43caa50d43733a5a28c68a9d89842b9cce7b403d68dd21b9e328efc3349229cdeaf1f31188b51e'
+             '6e54ece7ec7022b3c9d94ad64bdf1017338da16c618966e8baf398e6f18f80f7b0576edf1d1da47ed77b96d577e4cbb2bb0156b0b11c183a0accf22654b0a2bb'
+-            'bdde7ae015d8a98ba55e84b86dc05aca1d4f8de85be7e4bd6187054bfe4ac83b5a20538945b63fb073caab78022141e9545685e4e3698c97ff173cf30859e285')
++            'bdde7ae015d8a98ba55e84b86dc05aca1d4f8de85be7e4bd6187054bfe4ac83b5a20538945b63fb073caab78022141e9545685e4e3698c97ff173cf30859e285'
++            '547a1a31fcfa421e982da6032cdf398e5814d6f35c0670029d69853b89bde6dddfe47c514c2c5ff59d1d0f673c9a9df9adce88d199305f8ed2143ae8d65e2057')
+ validpgpkeys=(5AC1A08B03BD7A313E0A955AF5E6E9EEB9461DD7
+               DA23579A74D4AD9AF9D3F945CEFAC8EAAF17519D)
+ 
+@@ -33,7 +35,7 @@
    libxrandr       lib32-libxrandr
    wayland         lib32-wayland
  )
@@ -9,15 +33,75 @@
    git
    alsa-lib              lib32-alsa-lib
    gnutls                lib32-gnutls
-@@ -94,7 +94,7 @@
- }
- build() {
+@@ -41,6 +43,7 @@
+   libcups               lib32-libcups
+   libgphoto2
+   libpulse              lib32-libpulse
++  libxcomposite         lib32-libxcomposite
+   libxcomposite         lib32-libxcomposite
+   libxinerama           lib32-libxinerama
+   libxxf86vm            lib32-libxxf86vm
+@@ -86,22 +89,21 @@
+ install=wine.install
  
+ prepare() {
+-  rm -rf $pkgname-{32,64}-build
+-  mkdir $pkgname-{32,64}-build
++  cd wine
++  patch -Np1 -i "$srcdir"/fix-ptr-access.patch
++}
++build() {
+ 
+-  cd wine
+-}
+-
+-build() {
 -  export CFLAGS="$CFLAGS -ffat-lto-objects"
 +  export CFLAGS="$CFLAGS -ffat-lto-objects -fPIC"
  
    export CROSSCFLAGS="-O2 -pipe -g"
    export CROSSCXXFLAGS="-O2 -pipe -g"
+   export CROSSLDFLAGS="-Wl,-O1"
+ 
+   echo "Building Wine-64..."
+-  cd "$srcdir/$pkgname-64-build"
+-  ../wine/configure \
++  mkdir "$pkgname-64-build"
++  cd "$pkgname-64-build"
++  ../$pkgname/configure \
+     --prefix=/usr \
+     --libdir=/usr/lib \
+     --with-x \
+@@ -111,16 +113,24 @@
+ 
+   make
+ 
++  cd ..
++
++  _wine32opts=(
++    --libdir=/usr/lib
++    --with-wine64="$srcdir/$pkgname-64-build"
++  )
++
++  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
++
+   echo "Building Wine-32..."
+-  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+-  cd "$srcdir/$pkgname-32-build"
+-  ../wine/configure \
++  mkdir "$pkgname-32-build"
++  cd "$pkgname-32-build"
++  ../$pkgname/configure \
+     --prefix=/usr \
+-    --libdir=/usr/lib \
+     --with-x \
+     --with-wayland \
+     --with-gstreamer \
+-    --with-wine64="$srcdir/$pkgname-64-build"
++    "${_wine32opts[@]}"
+ 
+   make
+ }
 
 
 ############# Stripped diff below #################
@@ -35,8 +119,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- patch -Np1 -i "$srcdir"/fix-ptr-access.patch
+@@ -1,16 +1,16 @@
+ prepare() {
+-rm -rf $pkgname-{32,64}-build
+-mkdir $pkgname-{32,64}-build
+ cd wine
++patch -Np1 -i "$srcdir"/fix-ptr-access.patch
  }
  build() {
 -export CFLAGS="$CFLAGS -ffat-lto-objects"
@@ -44,3 +132,38 @@
  export CROSSCFLAGS="-O2 -pipe -g"
  export CROSSCXXFLAGS="-O2 -pipe -g"
  export CROSSLDFLAGS="-Wl,-O1"
+ echo "Building Wine-64..."
+-cd "$srcdir/$pkgname-64-build"
+-../wine/configure \
++mkdir "$pkgname-64-build"
++cd "$pkgname-64-build"
++../$pkgname/configure \
+ --prefix=/usr \
+ --libdir=/usr/lib \
+ --with-x \
+@@ -18,15 +18,20 @@
+ --with-gstreamer \
+ --enable-win64
+ make
++cd ..
++_wine32opts=(
++--libdir=/usr/lib
++--with-wine64="$srcdir/$pkgname-64-build"
++)
++export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+ echo "Building Wine-32..."
+-export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+-cd "$srcdir/$pkgname-32-build"
+-../wine/configure \
++mkdir "$pkgname-32-build"
++cd "$pkgname-32-build"
++../$pkgname/configure \
+ --prefix=/usr \
+---libdir=/usr/lib \
+ --with-x \
+ --with-wayland \
+ --with-gstreamer \
+---with-wine64="$srcdir/$pkgname-64-build"
++"${_wine32opts[@]}"
+ make
+ }

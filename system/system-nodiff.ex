@@ -39,6 +39,7 @@ expat
 file
 findutils
 flex
+gawk
 gdbm
 gettext
 gmp
@@ -51,6 +52,7 @@ python-gpgme
 gpm
 grep
 groff
+grub
 guile
 gzip
 hdparm

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=man-pages
+-pkgver=6.13
++pkgver=6.12
+ _posixver=2017-a
+ pkgrel=1
+ pkgdesc="Linux man pages"
+@@ -28,7 +28,7 @@
+ makedepends=('man2html' 'git')
+ source=(https://www.kernel.org/pub/linux/docs/man-pages/$pkgname-$pkgver.tar.{xz,sign}
+         https://www.kernel.org/pub/linux/docs/man-pages/man-pages-posix/$pkgname-posix-${_posixver}.tar.{xz,sign})
+-sha256sums=('a2c8a0c2efe8a978ce51ce800461eb9e8931f12cc7ba4b7faa3082b69ba7f12c'
++sha256sums=('b6cb5d67e0bb00a3b3f3d1bcb3fe06c26b045ba63923ed7ae79412350c5e1cb5'
+             'SKIP'
+             'ce67bb25b5048b20dad772e405a83f4bc70faf051afa289361c81f9660318bc3'
+             'SKIP')

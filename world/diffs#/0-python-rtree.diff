@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=python-rtree
+-pkgver=1.4.0
+-pkgrel=1
++_pkgname=${pkgname#python-}
++pkgver=1.3.0
++pkgrel=2
+ pkgdesc="Rtree: spatial index for Python GIS"
+ arch=(any)
+ url="https://rtree.readthedocs.io/en/latest/"
+@@ -20,22 +21,21 @@
+   python-numpy
+   python-pytest
+ )
+-optdepends=('python-numpy: array-based bulk insert support')
+ source=("https://github.com/Toblerity/rtree/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('8f1583f6c479cd93c8788ce33d4a822ef83e2d50499f8bdd4457e27179765f57')
++sha256sums=('8829823d83658cdf5f7f7925107363f1bba31bb6a94e255124c1026c7cbbbfe7')
+ 
+ build() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_pkgname-$pkgver"
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_pkgname-$pkgver"
+   pytest
+ }
+ 
+ package() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_pkgname-$pkgver"
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd ${pkgname#python-}-$pkgver
++cd "$_pkgname-$pkgver"
+ python -m build --wheel --no-isolation
+ }

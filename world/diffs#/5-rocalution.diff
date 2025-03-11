@@ -1,0 +1,77 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,32 @@
+ pkgname=rocalution
+-pkgver=6.3.2
+-pkgrel=1
++pkgver=6.0.2
++pkgrel=2
+ pkgdesc='Next generation library for iterative sparse solvers for ROCm platform'
+ arch=('x86_64')
+ url='https://rocm.docs.amd.com/projects/rocALUTION/en/latest/index.html'
+ license=('MIT')
+-depends=('rocm-core' 'hip-runtime-amd' 'glibc' 'gcc-libs'
++depends=('rocm-core' 'hip' 'glibc' 'gcc-libs'
+          'rocsparse' 'rocblas' 'rocsolver' 'rocprim' 'rocrand')
+ makedepends=('rocm-cmake' 'openmp' 'openmpi')
+ optdepends=('openmp: Multithreaded CPU applications'
+             'openmpi: Distributed CPU and multi GPU applications')
+ _git='https://github.com/ROCm/rocALUTION'
+ source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
+-sha256sums=('b13118a5c0af08a666d80af78d52bdfba12ed134f6745ab36d8de75ed3bc7584')
++sha256sums=('453f889677728b510286d4c72952b343cac63c45e2cb8b801d8388a2ec599d2a')
+ options=(!lto)
+ _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
+ 
+ build() {
+   export HIPCC_COMPILE_FLAGS_APPEND="-parallel-jobs=$(nproc)"
+   export HIPCC_LINK_FLAGS_APPEND="-parallel-jobs=$(nproc)"
+-  CXXFLAGS+=" -fcf-protection=none"
+-  export CC=/opt/rocm/llvm/bin/amdclang
+-  export CXX=/opt/rocm/llvm/bin/amdclang++
++  export ROCM_PATH=/opt/rocm
+   local cmake_args=(
+     -Wno-dev
+     -S "$_dirname"
+     -B build
+     -D CMAKE_BUILD_TYPE=None
+     -D CMAKE_TOOLCHAIN_FILE="$srcdir/$_dirname/toolchain-linux.cmake"
++    -D CMAKE_CXX_FLAGS="${CXXLFLAGS} -fcf-protection=none"
+     -D CMAKE_INSTALL_PREFIX=/opt/rocm
+     -D ROCM_PATH=/opt/rocm
+     -D SUPPORT_HIP=ON
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ gcc-libs
+ glibc
+-hip-runtime-amd
++hip
+ openmp
+ openmpi
+ rocblas
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,14 @@
+ build() {
+ export HIPCC_COMPILE_FLAGS_APPEND="-parallel-jobs=$(nproc)"
+ export HIPCC_LINK_FLAGS_APPEND="-parallel-jobs=$(nproc)"
+-CXXFLAGS+=" -fcf-protection=none"
+-export CC=/opt/rocm/llvm/bin/amdclang
+-export CXX=/opt/rocm/llvm/bin/amdclang++
++export ROCM_PATH=/opt/rocm
+ local cmake_args=(
+ -Wno-dev
+ -S "$_dirname"
+ -B build
+ -D CMAKE_BUILD_TYPE=None
+ -D CMAKE_TOOLCHAIN_FILE="$srcdir/$_dirname/toolchain-linux.cmake"
++-D CMAKE_CXX_FLAGS="${CXXLFLAGS} -fcf-protection=none"
+ -D CMAKE_INSTALL_PREFIX=/opt/rocm
+ -D ROCM_PATH=/opt/rocm
+ -D SUPPORT_HIP=ON

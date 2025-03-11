@@ -3,7 +3,7 @@
 @@ -1,11 +1,11 @@
  
  pkgbase=linux-zen
--pkgver=6.13.4.zen1
+-pkgver=6.13.6.zen1
 +pkgver=6.7.6.zen1
  pkgrel=1
  pkgdesc='Linux ZEN'
@@ -14,7 +14,16 @@
  makedepends=(
    bc
    cpio
-@@ -20,13 +20,9 @@
+@@ -14,22 +14,15 @@
+   pahole
+   perl
+   python
+-  rust
+-  rust-bindgen
+-  rust-src
+   tar
+   xz
+ 
    graphviz
    imagemagick
    python-sphinx
@@ -29,25 +38,25 @@
  _srcname=linux-${pkgver%.*}
  _srctag=v${pkgver%.*}-${pkgver##*.}
  source=(
-@@ -39,18 +35,18 @@
+@@ -42,18 +35,18 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
  )
--sha256sums=('b80e0bc8efbc31e9ce5a84d1084dcccfa40e01bea8cc25afd06648b93d61339e'
+-sha256sums=('de0053cb413d408f20fd1d5788219951b8a4403e5dac1b1d9032090938acd199'
 +sha256sums=('e489ec0e1370d089b446d565aded7a698093d2b7c4122a18f21edb6ef93d37d3'
              'SKIP'
--            'e1c6382a9bc0664da5e344de07413d2773eadc8002db3aba260d0512d310cea9'
+-            '1763c02b3460fda396e8b3903318d4793862a9da5e7fb872eadb34b32aa2185b'
 +            'c6bc98b4ca0839519bc3b497d3094df4094ab346cea90dea5d6189e2439eedb1'
              'SKIP'
--            '457681b58e2e6d67c8445784b5ba3bef652eed91865d77eebe097fbd5e2a29cd')
--b2sums=('2fe8e972e7de458fba6fbb18a08a01f17b49e4a2d31aa1368e50895a2698c6e1aaaf5137d0c0018860de3fe598e4ba425d6126ade7387ba227f690137111a66d'
+-            'e41cc02d1e0ba5772a9a559087ca99d83c8dd15c28d07e696a117a760593723b')
+-b2sums=('5a216c56c77efaee1a3f5c9198ade9180e4640ffcde39662ccf85c2a5945a08c5f362220fb0906369c72a3ea8bdc16fdd24d3e1dbc0f51fc831f3f724ed73300'
 +            '08174d06259be49e66d548aebfc4c464c30495202385f6d975f4f4338645f830')
 +b2sums=('51d6e2304e7a9188a0fec5714276589cb46948157c76a2f4ed3f5e0bf634d94a89ea75251229a86e018767a3367328c16b610d631c78d82663dcd1d904b73385'
          'SKIP'
--        'eb14739a625f7d6ab4bf60fcaafd8d00ae2a060518c4d42fc7ce56b1037750211ccfae248cffa306352c1a1a6c4ce0640953e13b5a91c69adf820fc80a9b74e7'
+-        '0c95c30ef6f7fb9137884bf8efce681694dedf1977b530f1996ed4e841a6076adf4a27e4372792968ce380e37d760274a0014260786e4aedc7ea1c47b1107995'
 +        '804a6bfbd65c834da19bfc0e763c0c51a5bb56db27afa025f6122ca429cfa63b55ca384c45d70fe0601cd16001daf75981a55be86d71b471b005363229213c3e'
          'SKIP'
--        '488bcd4d04d34ab7caf648889e6ce22ab751e4de2c71074062274bc6fb8b0e1a0330451b0ccab15f2a13e6aa9d4583732a06c76e10e0ec063b862e8af1c43855')
+-        '225cdc510686a49ceb746dafb3f70e50cab4a4578dfba5f248bc8d93cfa9995877c692db35ad7a4843bc287ebb2979b348b4f5689e29ca809c6484db16f017b7')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        '25a0316b066956e07d8eb3461b7d71dafc2c2aca37157ddef4db779d59668fb1540422d26c76c91313c82fa75b539316bb35abda29571351a9ffc8f9ba62dc24')
@@ -56,7 +65,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -95,9 +91,8 @@
+@@ -98,9 +91,8 @@
      kmod
    )
    optdepends=(
@@ -67,7 +76,7 @@
    )
    provides=(
      KSMBD-MODULE
-@@ -137,7 +132,6 @@
+@@ -140,7 +132,6 @@
    install -Dt "$builddir/kernel" -m644 kernel/Makefile
    install -Dt "$builddir/arch/x86" -m644 arch/x86/Makefile
    cp -t "$builddir" -a scripts
@@ -81,11 +90,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -11,7 +11,6 @@
+@@ -11,10 +11,6 @@
  perl
  python
  python-sphinx
 -python-yaml
+-rust
+-rust-bindgen
+-rust-src
  tar
  texlive-latexextra
  xz

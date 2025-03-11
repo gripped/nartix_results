@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kdesdk-kio
+-pkgver=24.12.3
++pkgver=24.12.2
+ pkgrel=1
+ pkgdesc='KDE SDK KIO-Slaves'
+ url='https://www.kde.org/'
+@@ -19,7 +19,7 @@
+ groups=(kde-applications
+         kde-sdk)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('2afea60c4a7a244056fae22698bc320820564df839db0275a081c0fae06ae6f4'
++sha256sums=('15f3205de0596b3521cbcf58d8122bd0908a7a034f9d1540a2883a0244bbb8fb'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

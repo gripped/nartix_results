@@ -1,11 +1,45 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -7,8 +7,8 @@
           rocm-language-runtime
           rocm-ml-sdk
           rocm-ml-libraries)
--pkgver=6.2.2
+-pkgver=6.3.2
+-pkgrel=2
 +pkgver=6.0.2
- pkgrel=1
++pkgrel=1
  arch=('any')
  license=('LicenseRef-None')
+ url='https://rocm.docs.amd.com/en/latest/'
+@@ -59,7 +59,8 @@
+     pkgdesc='Develop OpenCL-based applications for AMD platforms'
+     depends=('rocm-core'
+              'hsa-rocr'
+-             'rocm-opencl-runtime')
++             'rocm-opencl-runtime'
++             'hsakmt-roct')
+ }
+ 
+ package_rocm-hip-runtime() {
+@@ -75,6 +76,7 @@
+ package_rocm-language-runtime() {
+     pkgdesc='ROCm runtime'
+     depends=('rocm-core'
++             'hsakmt-roct'
+              'hsa-rocr'
+              'rocm-device-libs'
+              'comgr')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,6 +7,7 @@
+ hipsolver
+ hipsparse
+ hsa-rocr
++hsakmt-roct
+ miopen-hip
+ rccl
+ rocalution

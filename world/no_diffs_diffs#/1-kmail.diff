@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kmail
+-pkgver=24.12.3
++pkgver=24.12.2
+ pkgrel=1
+ pkgdesc='KDE mail client'
+ arch=(x86_64)
+@@ -76,7 +76,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('20caaa4fabcfe2d2c73a0391f94dbc91b265707ab3a6f75def1a7300d97870d7'
++sha256sums=('316949439902dde5130c7e2ef96d2bee458123ed33d160b478d57f9a6a864271'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

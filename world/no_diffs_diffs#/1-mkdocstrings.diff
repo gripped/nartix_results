@@ -3,17 +3,32 @@
 @@ -1,6 +1,6 @@
  
  pkgname=mkdocstrings
--pkgver=0.28.0
+-pkgver=0.28.3
 +pkgver=0.28.2
  pkgrel=1
  pkgdesc="Automatic documentation from sources, for MkDocs"
  arch=(any)
-@@ -29,7 +29,7 @@
+@@ -25,12 +25,11 @@
+ )
+ checkdepends=(
+   mkdocs-material
+-  python-dirty-equals
+   python-pygments
    python-pytest
  )
  source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
--sha256sums=('9288f7dd3b4e36fa744a8cda60acdd72119678a98480f54a757caea77437d5b8')
+-sha256sums=('552d3a4f0673b1210f612b92a7e44f06cb01817a7cc28cc9a8acb8bc95b44dfd')
 +sha256sums=('fad1cc019b4999cbd053001cd38fd73c56ca846011c701c2c6c3369704813d2f')
  
  build() {
    cd $pkgname-$pkgver
+@@ -46,8 +45,7 @@
+     --deselect 'tests/test_extension.py' \
+     --deselect 'tests/test_handlers.py::test_extended_templates' \
+     --deselect 'tests/test_handlers.py::test_nested_autodoc[ext_markdown0]' \
+-    --deselect 'tests/test_plugin.py::test_disabling_plugin' \
+-    --ignore tests/test_api.py
++    --deselect 'tests/test_plugin.py::test_disabling_plugin'
+ }
+ 
+ package() {

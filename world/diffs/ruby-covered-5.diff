@@ -1,0 +1,204 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,16 @@
+ 
+-_gemname='covered'
+-pkgname="ruby-${_gemname}"
+-pkgver=0.27.0
+-pkgrel=1
++pkgname=ruby-covered
++pkgver=0.18.5
++pkgrel=5
+ pkgdesc='A modern approach to code coverage'
+ arch=(any)
+-url='https://github.com/socketry/covered'
++url='https://github.com/ioquatix/covered'
+ license=(MIT)
+ depends=(
+   ruby
+   ruby-console
+   ruby-msgpack
++  ruby-parser
+ )
+ makedepends=(
+   ruby-rdoc
+@@ -19,88 +19,55 @@
+   ruby-bundler
+   ruby-bake
+   ruby-bake-test
+-  ruby-bake-test-external
+-  ruby-decode
+   ruby-minitest
+   ruby-rspec
+   ruby-sus
+-  ruby-xrb
++  ruby-trenni
+ )
+ options=(!emptydirs)
+-source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+-sha512sums=('fc206f83f71e1e2236d1f01f3afe647508dda9928a6372e1a1a7088d02335f2ad50d0ac49647b1bebcc659f8a9625ce0ec2bd1920c96d1ed2e464d654b13be37')
+-b2sums=('b0246bec700fca9ed79583f62b9a6e264c142f23cc50c6379476131bc221bc7fdc2638bcadf29aae32917e14c56af2a741bfa967017e01cc931acdfbae1ca4de')
++source=(https://github.com/ioquatix/covered/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('dab270768595961e4a59d7ed9a73173eccd62b87b9988acf8071e2b35972c867')
+ 
+ prepare() {
+-  cd "${_gemname}-${pkgver}"
+-
+-  sed --in-place --regexp-extended \
+-    --expression 's|~>|>=|g' \
+-    --expression '/signing_key/d' \
+-    "${_gemname}.gemspec"
+-
+-  sed --in-place \
+-    --expression '/group :maintenance/,/end/d' \
+-    --expression '/rubocop/d' \
+-    gems.rb
++  cd covered-$pkgver
++  sed -e 's/~>/>=/' -e '/signing_key/d' -i covered.gemspec
++  sed -i '/bake-modernize/d;/bake-gem/d;/bake-github-pages/d;/utopia-project/d' gems.rb
+ }
+ 
+ build() {
+-  cd "${_gemname}-${pkgver}"
+-
+   local _gemdir="$(gem env gemdir)"
+-
+-  gem build --verbose "${_gemname}.gemspec"
+-
++  cd covered-$pkgver
++  gem build covered.gemspec
+   gem install \
+     --local \
+     --verbose \
+     --ignore-dependencies \
+     --no-user-install \
+-    --install-dir "tmp_install${_gemdir}" \
++    --install-dir "tmp_install/$_gemdir" \
+     --bindir "tmp_install/usr/bin" \
+-    "${_gemname}-${pkgver}.gem"
+-
+-  rm --force --recursive --verbose \
+-    "tmp_install${_gemdir}/cache/" \
+-    "tmp_install${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
+-    "tmp_install${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+-
+-  find "tmp_install${_gemdir}/gems/" \
++    covered-$pkgver.gem
++  find "tmp_install/$_gemdir/gems/" \
+     -type f \
+     \( \
+-      -iname "*.o" -o \
+-      -iname "*.c" -o \
+-      -iname "*.so" -o \
+-      -iname "*.time" -o \
+-      -iname "gem.build_complete" -o \
+-      -iname "Makefile" \
++        -iname "*.o" -o \
++        -iname "*.c" -o \
++        -iname "*.so" -o \
++        -iname "*.time" -o \
++        -iname "gem.build_complete" -o \
++        -iname "Makefile" \
+     \) \
+     -delete
+-
+-  find "tmp_install${_gemdir}/extensions/" \
+-    -type f \
+-    \( \
+-      -iname "mkmf.log" -o \
+-      -iname "gem_make.out" \
+-    \) \
+-    -delete
++  rm -r tmp_install/$_gemdir/cache
+ }
+ 
+ check() {
+-  cd "${_gemname}-${pkgver}"
+-
+   local _gemdir="$(gem env gemdir)"
+-
+-  GEM_HOME="tmp_install${_gemdir}" bake test
++  cd covered-$pkgver
++  GEM_HOME="tmp_install/$_gemdir" bake test
+ }
+ 
+ package() {
+-  cd "${_gemname}-${pkgver}"
+-
+-  cp --archive --verbose tmp_install/* "${pkgdir}"
+-
+-  install --verbose -D --mode=0644 license* --target-directory "${pkgdir}/usr/share/licenses/${pkgname}"
+-  install --verbose -D --mode=0644 *.md --target-directory "${pkgdir}/usr/share/doc/${pkgname}"
++  cd covered-$pkgver
++  cp -a tmp_install/* "$pkgdir"/
++  install -Dm644 license.md -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ ruby
+ ruby-console
+ ruby-msgpack
++ruby-parser
+ ruby-rdoc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,31 +1,21 @@
+ prepare() {
+-cd "${_gemname}-${pkgver}"
+-sed --in-place --regexp-extended \
+---expression 's|~>|>=|g' \
+---expression '/signing_key/d' \
+-"${_gemname}.gemspec"
+-sed --in-place \
+---expression '/group :maintenance/,/end/d' \
+---expression '/rubocop/d' \
+-gems.rb
++cd covered-$pkgver
++sed -e 's/~>/>=/' -e '/signing_key/d' -i covered.gemspec
++sed -i '/bake-modernize/d;/bake-gem/d;/bake-github-pages/d;/utopia-project/d' gems.rb
+ }
+ build() {
+-cd "${_gemname}-${pkgver}"
+ local _gemdir="$(gem env gemdir)"
+-gem build --verbose "${_gemname}.gemspec"
++cd covered-$pkgver
++gem build covered.gemspec
+ gem install \
+ --local \
+ --verbose \
+ --ignore-dependencies \
+ --no-user-install \
+---install-dir "tmp_install${_gemdir}" \
++--install-dir "tmp_install/$_gemdir" \
+ --bindir "tmp_install/usr/bin" \
+-"${_gemname}-${pkgver}.gem"
+-rm --force --recursive --verbose \
+-"tmp_install${_gemdir}/cache/" \
+-"tmp_install${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
+-"tmp_install${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+-find "tmp_install${_gemdir}/gems/" \
++covered-$pkgver.gem
++find "tmp_install/$_gemdir/gems/" \
+ -type f \
+ \( \
+ -iname "*.o" -o \
+@@ -36,11 +26,5 @@
+ -iname "Makefile" \
+ \) \
+ -delete
+-find "tmp_install${_gemdir}/extensions/" \
+--type f \
+-\( \
+--iname "mkmf.log" -o \
+--iname "gem_make.out" \
+-\) \
+--delete
++rm -r tmp_install/$_gemdir/cache
+ }

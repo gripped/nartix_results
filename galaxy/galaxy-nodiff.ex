@@ -136,6 +136,7 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
+libtg_owt
 libvarlink
 libwnck
 libxfce4util
@@ -203,6 +204,7 @@ mate-icon-theme
 mate-media
 mate-menus
 mate-netbook
+mate-notification-daemon
 mate-panel
 mate-polkit
 mate-power-manager
@@ -298,7 +300,9 @@ openrct2
 openshot
 parole
 pavucontrol-qt
+pcmanfm-gtk3
 pcmanfm-qt
+pcmanfm
 peek
 perl-cairo-gobject
 perl-extutils-depends

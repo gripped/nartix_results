@@ -11,7 +11,6 @@ e2fsprogs
 fuse2fs
 fakeroot
 filesystem
-gawk
 gc
 gcc
 gcc-libs
@@ -29,7 +28,6 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-grub
 gssproxy
 iputils
 libunistring

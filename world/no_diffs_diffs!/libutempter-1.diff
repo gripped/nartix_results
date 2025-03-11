@@ -1,11 +1,41 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
- url="http://ftp.altlinux.org/pub/people/ldv/utempter"
- license=('LGPL')
+@@ -1,22 +1,15 @@
+ 
+ pkgname=libutempter
+-pkgver=1.2.3
+-pkgrel=1
+-pkgdesc="Interface for terminal emulators to record user sessions to utmp and wtmp files"
++pkgver=1.2.1
++pkgrel=4
++pkgdesc="Interface for terminal emulators such as screen and xterm to record user sessions to utmp and wtmp files"
+ arch=('x86_64')
+-url="https://github.com/altlinux/libutempter"
+-license=('LGPL-2.1-or-later')
++url="http://ftp.altlinux.org/pub/people/ldv/utempter"
++license=('LGPL')
  depends=('glibc')
--makedepends=('git' 'systemd')
+-makedepends=(
+-  'git'
+-  'systemd'
+-)
+-source=(
+-  "git+$url.git?signed#tag=$pkgver-alt1"
+-  "$pkgname.tmpfiles"
+-)
+-sha256sums=('d14d00fa879d79732f8f6815eef384de9f3265e2ae3ba0cbe0a2dcf70434b694'
+-            '8fc708052bab79f707bacaa66fa1529808bc7e72316faf4038ad9c763ec7e80d')
 +makedepends=('git' 'elogind')
- source=(git+https://github.com/altlinux/libutempter.git?signed#tag=${pkgver}-alt1)
- sha512sums=('SKIP')
++source=(git+https://github.com/altlinux/libutempter.git?signed#tag=${pkgver}-alt1)
++sha512sums=('SKIP')
  validpgpkeys=(296D6F29A020808E8717A8842DB5BD89A340AEB7) # Dmitry V. Levin <ldv@altlinux.org>
+ 
+ build() {
+@@ -27,6 +20,5 @@
+ package() {
+   cd $pkgname/$pkgname
+   make DESTDIR="$pkgdir" install
+-
+-  install -vDm644 "$srcdir/$pkgname.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
++  echo 'z /usr/lib/utempter/utempter 2755 root utmp' | install -Dm644 /dev/stdin "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
+ }

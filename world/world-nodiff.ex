@@ -464,6 +464,7 @@ libphobos
 dmenu
 dmg2img
 dmidecode
+dns-lexicon
 dnscrypt-proxy
 dnsmasq
 docbook-dsssl
@@ -618,8 +619,6 @@ featherpad
 feh
 festival
 ffcall
-ffmpeg
-ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -640,6 +639,7 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+fish
 five-or-more
 flac
 flac-doc
@@ -696,6 +696,7 @@ fuse-common
 futuresql
 fwknop
 fzf
+gajim
 galculator
 gcab
 gcc13
@@ -1006,6 +1007,7 @@ hivex
 hostapd
 hotdoc
 hplip
+hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -1070,8 +1072,10 @@ indent
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
+intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
@@ -1137,9 +1141,11 @@ jitterentropy
 jose
 jp2a
 jq
+jrnl
 jruby
 js102
 js115
+js128
 js91
 jshon
 json-glib
@@ -1295,6 +1301,7 @@ kdsoap
 kdsoap-qt5
 kdsoap-qt6
 keditbookmarks
+keepassxc
 kemoticons
 kexec-tools
 keybinder2
@@ -1350,6 +1357,7 @@ kimageformats
 kimageformats5
 kimagemapeditor
 kimap
+kinfocenter
 kinit
 kio-admin
 kio-extras
@@ -1790,6 +1798,7 @@ libmatroska
 libmaxminddb
 libmbim
 libmd
+libmediaart
 libmediainfo
 libmemcached-awesome
 libmicrodns
@@ -2016,6 +2025,7 @@ libwps
 libwps-doc
 libwslay
 libx11
+libx86emu
 libxau
 libxaw
 libxcb
@@ -2188,6 +2198,7 @@ lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
+ly
 lynx
 lzip
 lzop
@@ -2296,7 +2307,6 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
-miopen-hip
 mitmproxy
 mjpegtools
 mkdocs-autorefs
@@ -2313,6 +2323,7 @@ mod_dnssd
 modem-manager-gui
 modemmanager-qt
 modemmanager-qt5
+mold
 molecule
 molequeue
 mongo-c-driver
@@ -2348,14 +2359,10 @@ musepack
 musepack-tools
 libmpcdec
 musescore
-musl
-musl-aarch64
-musl-riscv64
 mutt
 mypaint-brushes1
 mypy
 namcap
-nanobind
 nanomsg
 nanosvg
 nasm
@@ -2468,6 +2475,7 @@ openblas64
 blas-openblas
 blas64-openblas
 openbox
+openbsd-netcat
 opencascade
 opencc
 opencc-doc
@@ -2569,9 +2577,7 @@ pavucontrol-qt
 pavucontrol
 pbzip2
 pcaudiolib
-pcmanfm-gtk3
 pcmanfm-qt
-pcmanfm
 pdal
 pdfarranger
 pdfgrep
@@ -2914,6 +2920,7 @@ picard
 picmi
 picom
 pidgin
+pifpaf
 pigeonhole
 pigz
 pim-data-exporter
@@ -3009,9 +3016,6 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
@@ -3096,6 +3100,7 @@ python-aiohttp-socks
 python-aiohttp
 python-aioitertools
 python-aiomysql
+python-aiopg
 python-aioquic
 python-aioresponses
 python-aiorpcx
@@ -3139,12 +3144,12 @@ python-aspectlib
 python-assertpy
 python-asteval
 python-astor
-python-astroid
 python-asttokens
 python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
+python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3167,6 +3172,7 @@ python-axolotl-curve25519
 python-axolotl
 python-babel
 python-backcall
+python-backrefs
 python-bcrypt
 python-beaker
 python-beautifulsoup4
@@ -3326,6 +3332,7 @@ python-deepdiff
 python-deepmerge
 python-defusedxml
 python-dep-logic
+python-deprecated
 python-deprecation
 python-devtools
 python-diff-cover
@@ -3427,6 +3434,7 @@ python-fiona
 python-fire
 python-first
 python-fissix
+python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
@@ -3587,7 +3595,6 @@ python-jinja
 python-jiter
 python-jmespath
 python-joblib
-python-jose
 python-josepy
 python-joserfc
 python-jq
@@ -3780,7 +3787,6 @@ python-os-service-types
 python-osc-lib
 python-oscrypto
 python-oslo-concurrency
-python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
@@ -4095,6 +4101,7 @@ python-pytzdata
 python-pyu2f
 python-pyusb
 python-pyvex
+python-pyvips
 python-pyvirtualdisplay
 python-pywal
 python-pywayland
@@ -4140,7 +4147,6 @@ python-requests-wsgi-adapter
 python-requests
 python-requestsexceptions
 python-resolvelib
-python-responses
 python-respx
 python-retrying
 python-rfc3339-validator
@@ -4156,7 +4162,6 @@ python-routes
 python-rpds-py
 python-rpyc
 python-rsa
-python-rtree
 python-ruamel-yaml
 python-ruamel.yaml.clib
 python-ruff-api
@@ -4384,13 +4389,11 @@ python-voluptuous
 python-waitress
 python-wand
 python-warlock
-python-watchdog
 python-watchfiles
 python-watchgod
 python-wcag-contrast-ratio
 python-wcmatch
 python-wcwidth
-python-webcolors
 python-webencodings
 python-webob
 python-webob-docs
@@ -4431,6 +4434,7 @@ python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket
+python-ytmusicapi
 python-zc.lockfile
 python-zeep
 python-zeroconf
@@ -4452,6 +4456,8 @@ python-zope-location
 python-zope-proxy
 python-zope-schema
 python-zope-security
+python-zope-testing
+python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4556,6 +4562,7 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
+qt6ct
 qtcreator
 qtcreator-devel
 qtkeychain
@@ -4564,6 +4571,9 @@ qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
+quazip
+quazip-qt5
+quazip-qt6
 quota-tools
 qutebrowser
 qwt
@@ -4582,7 +4592,6 @@ rasqal
 rav1e
 rawtherapee
 razor
-rccl
 rclone
 rdfind
 re2
@@ -4619,9 +4628,9 @@ rng-tools
 rnnoise
 robin-map
 roc-toolkit
-rocalution
 rocm-clang-ocl
 rocm-cmake
+rocm-core
 rocm-device-libs
 rocm-hip-sdk
 rocm-hip-libraries
@@ -4630,6 +4639,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
@@ -4668,11 +4680,13 @@ ruby-ansi
 ruby-ast
 ruby-async-container
 ruby-async-dns
+ruby-async-http-cache
 ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
 ruby-async-rest
+ruby-async-rspec
 ruby-async-service
 ruby-async-websocket
 ruby-async
@@ -4704,7 +4718,6 @@ ruby-coderay
 ruby-concurrent
 ruby-connection_pool
 ruby-console
-ruby-covered
 ruby-crack
 ruby-crass
 ruby-csv
@@ -4753,7 +4766,6 @@ ruby-fcntl
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
-ruby-fiber-storage
 ruby-fiddle
 ruby-fileutils
 ruby-find
@@ -4768,7 +4780,6 @@ ruby-hocon
 ruby-hoe
 ruby-http-cookie
 ruby-httpclient
-ruby-i18n
 ruby-ice_nine
 ruby-introspection
 ruby-io-console
@@ -4799,13 +4810,11 @@ ruby-matrix
 ruby-memoist
 ruby-memory_profiler
 ruby-metaclass
-ruby-method_source
 ruby-metrics
 ruby-mime-types-data
 ruby-mime-types
 ruby-mini_mime
 ruby-mini_portile
-ruby-mini_portile2
 ruby-minitest-global_expectations
 ruby-minitest-hooks
 ruby-minitest-parallel_fork
@@ -4839,12 +4848,14 @@ ruby-net-smtp
 ruby-netrc
 ruby-network_interface
 ruby-nio4r
+ruby-nokogiri
 ruby-octokit
 ruby-oedipus_lex
 ruby-open-uri
 ruby-optimist
 ruby-packetfu
 ruby-paint
+ruby-parallel
 ruby-parser
 ruby-path_expander
 ruby-patron
@@ -4865,16 +4876,15 @@ ruby-pry
 ruby-psych
 ruby-ptools
 ruby-public_suffix
-ruby-puma
 ruby-puppet-resource_api
 ruby-qed
 ruby-rack-session
 ruby-rack-test
 ruby-rack
 ruby-rackup
-ruby-rails-dom-testing
 ruby-rails-html-sanitizer
 ruby-rainbow
+ruby-rake-compiler-dock
 ruby-rake-compiler
 ruby-rake-contrib
 ruby-rake
@@ -4936,6 +4946,7 @@ ruby-simplecov_json_formatter
 ruby-sinatra
 ruby-snowglobe
 ruby-sorted_set
+ruby-sqlite3
 ruby-stackprof
 ruby-stringio
 ruby-sus-fixtures-async-http
@@ -5122,11 +5133,13 @@ spglib
 spice-gtk
 spice-protocol
 spice
+spirv-headers
 spirv-llvm-translator
+spirv-tools
 splint
-spotifyd
 sqlcipher
 squashfs-tools
+squashfuse
 sratom
 sratom-docs
 srt
@@ -5358,9 +5371,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5374,7 +5384,6 @@ tinycompress
 tinyprog
 tinyproxy
 tinyxml
-tinyxml2
 tinyxxd
 tk
 tl-expected
@@ -5515,6 +5524,7 @@ vncdotool
 vnstat
 vokoscreen
 volatility3
+volk
 volume_key
 python-volume_key
 volumeicon
@@ -5523,7 +5533,12 @@ vsftpd
 vst3sdk
 vst3sdk-docs
 vtk
-vulkan-icd-loader
+vulkan-docs
+vulkan-html-docs
+vulkan-headers
+vulkan-tools
+vulkan-utility-libraries
+vulkan-validation-layers
 w3m
 wacomtablet
 waf
@@ -5744,6 +5759,7 @@ zsh-completions
 zsh-syntax-highlighting
 zsh
 zsh-doc
+zug
 zvbi
 zxing-cpp
 zziplib

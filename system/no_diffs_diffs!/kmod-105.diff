@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=kmod
--pkgver=34
-+pkgver=34.1
- pkgrel=1
- pkgdesc="Linux kernel module management tools and library"
- arch=('x86_64')
 @@ -8,7 +8,6 @@
  license=('LGPL-2.1-or-later' 'GPL-2.0-or-later')
  depends=('glibc' 'zlib' 'openssl' 'xz' 'zstd')
@@ -16,14 +8,7 @@
  options=('strip')
  provides=('libkmod.so')
  validpgpkeys=('EAB33C9690013C733916AC839BA2A5A630CBEA53')  # Lucas DeMarchi
-@@ -16,13 +15,13 @@
-         'depmod-search.conf'
-         'depmod.hook'
-         'depmod.script')
--sha256sums=('9956120779aab1bcd40991cdb59843d94a77cae8b911487438640a3ccde197c4'
-+sha256sums=('9e6f390b35619d068780a61607024626effedfcc509436cb42fa07153a626c92'
-             '1a92bfeae870f61ce814577e69d2a147a9c0caf6aed1131243e4179241fcc4a8'
-             'c11c2a0f66ea405493e8617689ca10818dc81dd1dddc19bdb220c8b2917119c1'
+@@ -22,7 +21,7 @@
              '18661aa40c25580f04d2ac3f32e54c2997c0994d1c829905537b413a9d291ac6')
  
  build() {

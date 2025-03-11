@@ -1,0 +1,190 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,50 +1,39 @@
+ 
+ pkgname=miopen-hip
+-pkgver=6.3.2
++pkgver=6.0.2
+ pkgrel=1
+ pkgdesc="AMD's Machine Intelligence Library (HIP backend)"
+ arch=('x86_64')
+ url="https://rocm.docs.amd.com/projects/MIOpen/en/latest/index.html"
+ license=('MIT')
+-depends=('rocm-core' 'glibc' 'gcc-libs' 'hipblaslt' 'hipblas' 'rocblas' 'rocrand' 'rocm-clang-ocl'
+-         'hip-runtime-amd' 'comgr' 'bzip2' 'composable-kernel' 'roctracer' 'sqlite')
+-makedepends=('cmake' 'git' 'git-lfs' 'ninja' 'rocm-cmake' 'boost' 'lbzip2'
+-             'nlohmann-json' 'eigen' 'functional-plus' 'frugally-deep')
++depends=('rocm-core' 'glibc' 'gcc-libs' 'rocblas' 'rocm-clang-ocl' 'hip'
++         'comgr' 'bzip2' 'composable-kernel' 'roctracer' 'sqlite')
++makedepends=('cmake' 'ninja' 'rocm-cmake' 'boost' 'lbzip2'
++             'nlohmann-json' 'eigen' 'half' 'functional-plus' 'frugally-deep')
+ provides=('miopen')
+ conflicts=('miopen')
+ _git='https://github.com/ROCm/MIOpen'
+ _mlir='https://github.com/ROCm/rocMLIR'
+-source=(
+-  "${pkgname}::git+https://github.com/ROCm/MIOpen#tag=rocm-$pkgver"
+-  "${pkgname}-MIFin::git+https://github.com/ROCm/MIFin.git"
+-  "${pkgname}-rocmlir::git+https://github.com/ROCm/rocMLIR#tag=rocm-$pkgver"
+-  "${pkgname}-half::git+https://github.com/ROCm/half#tag=rocm-$pkgver"
+-)
+-sha256sums=('6010291fbb067b02c5f6b71f7ee0465cbdc07b763bba1c41a23dd9f34331ceb7'
+-            'SKIP'
+-            '3d36c2b339bb3ef2831cf7ff023416199e349d3f6ad85bac1c39812759bb0173'
+-            '16e5a6405dd766339a9409665cd1ccdaceed3c0cb7fe12835fa17bd3914aa6cd')
++source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz"
++        "$pkgname-rocmlir-$pkgver.tar.gz::$_mlir/archive/rocm-$pkgver.tar.gz")
++sha256sums=('e6f671bd6af59f7470f42cda2ff9e77441d8f6c2105772bbf855d31da1085ffa'
++            '6ed039e8045169bb64c10fb063c2e1753b8d52d6d56c60e001c929082be1f20b')
+ options=(!lto)
++_dirname="$(basename "$_git")-$(basename "${source[0]}" .tar.gz)"
++_mlirname="$(basename "$_mlir")-$(basename "${source[1]}" .tar.gz)"
+ 
+ prepare() {
+-  cd "$pkgname"
+-  git submodule init
+-
+-  git config submodule."fin".url "${srcdir}/${pkgname}"-MIFin
+-
+-  git -c protocol.file.allow=always submodule update --init --recursive
+-
+-  sed -i '/add_subdirectory(test)/d' CMakeLists.txt
++    sed -i '/add_subdirectory(test)/d' "$_dirname/CMakeLists.txt"
+ }
+ 
+ build() {
+-  export CC=/opt/rocm/llvm/bin/amdclang
+-  export CXX=/opt/rocm/llvm/bin/amdclang++
++  export CC=/opt/rocm/llvm/bin/clang
++  export CXX=/opt/rocm/llvm/bin/clang++
+   local llvm_args=(
+     -Wno-dev
+     -G Ninja
+     -B build-mlir
+-    -S "$pkgname-rocmlir"
++    -S "$_mlirname"
+     -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"
+     -D CMAKE_INSTALL_PREFIX=/usr
+     -D CMAKE_BUILD_TYPE=Release
+@@ -55,28 +44,16 @@
+   cmake --build build-mlir
+   DESTDIR="$srcdir/deps" cmake --install build-mlir
+ 
+-  local half_args=(
+-    -Wno-dev
+-    -G Ninja
+-    -B build-half
+-    -S "$pkgname-half"
+-    -D CMAKE_INSTALL_PREFIX=/usr
+-    -D CMAKE_BUILD_TYPE=None
+-  )
+-  cmake "${half_args[@]}"
+-  cmake --build build-half
+-  DESTDIR="$srcdir/deps" cmake --install build-half
+-
+   local cmake_args=(
+      -Wno-dev
+     -G Ninja
+     -B build
+-    -S "$pkgname"
++    -S "$_dirname"
+     -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none -DNDEBUG"
+     -D CMAKE_INSTALL_PREFIX=/opt/rocm
+     -D CMAKE_BUILD_TYPE=None
+     -D MIOPEN_BACKEND=HIP
+-    -D HALF_INCLUDE_DIR="$srcdir/deps/usr/include"
++    -D HALF_INCLUDE_DIR=/usr/include/half
+     -D CMAKE_PREFIX_PATH="$srcdir/deps/usr/lib/cmake"
+   )
+   cmake "${cmake_args[@]}"
+@@ -86,5 +63,5 @@
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+ 
+-  install -Dm644 "$pkgname/LICENSE.txt" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
++  install -Dm644 "$_dirname/LICENSE.txt" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,12 +7,9 @@
+ frugally-deep
+ functional-plus
+ gcc-libs
+-git
+-git-lfs
+ glibc
+-hip-runtime-amd
+-hipblas
+-hipblaslt
++half
++hip
+ lbzip2
+ ninja
+ nlohmann-json
+@@ -20,6 +17,5 @@
+ rocm-clang-ocl
+ rocm-cmake
+ rocm-core
+-rocrand
+ roctracer
+ sqlite
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,14 @@
+ prepare() {
+-cd "$pkgname"
+-git submodule init
+-git config submodule."fin".url "${srcdir}/${pkgname}"-MIFin
+-git -c protocol.file.allow=always submodule update --init --recursive
+-sed -i '/add_subdirectory(test)/d' CMakeLists.txt
++sed -i '/add_subdirectory(test)/d' "$_dirname/CMakeLists.txt"
+ }
+ build() {
+-export CC=/opt/rocm/llvm/bin/amdclang
+-export CXX=/opt/rocm/llvm/bin/amdclang++
++export CC=/opt/rocm/llvm/bin/clang
++export CXX=/opt/rocm/llvm/bin/clang++
+ local llvm_args=(
+ -Wno-dev
+ -G Ninja
+ -B build-mlir
+--S "$pkgname-rocmlir"
++-S "$_mlirname"
+ -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"
+ -D CMAKE_INSTALL_PREFIX=/usr
+ -D CMAKE_BUILD_TYPE=Release
+@@ -22,27 +18,16 @@
+ cmake "${llvm_args[@]}"
+ cmake --build build-mlir
+ DESTDIR="$srcdir/deps" cmake --install build-mlir
+-local half_args=(
+--Wno-dev
+--G Ninja
+--B build-half
+--S "$pkgname-half"
+--D CMAKE_INSTALL_PREFIX=/usr
+--D CMAKE_BUILD_TYPE=None
+-)
+-cmake "${half_args[@]}"
+-cmake --build build-half
+-DESTDIR="$srcdir/deps" cmake --install build-half
+ local cmake_args=(
+ -Wno-dev
+ -G Ninja
+ -B build
+--S "$pkgname"
++-S "$_dirname"
+ -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none -DNDEBUG"
+ -D CMAKE_INSTALL_PREFIX=/opt/rocm
+ -D CMAKE_BUILD_TYPE=None
+ -D MIOPEN_BACKEND=HIP
+--D HALF_INCLUDE_DIR="$srcdir/deps/usr/include"
++-D HALF_INCLUDE_DIR=/usr/include/half
+ -D CMAKE_PREFIX_PATH="$srcdir/deps/usr/lib/cmake"
+ )
+ cmake "${cmake_args[@]}"
