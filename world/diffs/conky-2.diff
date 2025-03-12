@@ -1,37 +1,110 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,7 +43,6 @@
+@@ -1,13 +1,26 @@
+ 
+ pkgname=conky
+ pkgver=1.22.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Light-weight system monitor for X, Wayland, and other things, too'
+-arch=('x86_64')
+ url='https://github.com/brndnmtthws/conky'
+ license=(
+   'BSD-3-Clause'
+   'GPL-3.0-or-later'
++)
++arch=('x86_64')
++makedepends=(
++  'catch2'
++  'cmake'
++  'docbook2x'
++  'docbook-xsl'
++  'git'
++  'man-db'
++  'pandoc'
++  'python-yaml'
++  'python-jinja'
++  'wayland-protocols'
++  'gperf'
+ )
+ depends=(
+   'cairo'
+@@ -19,7 +32,6 @@
+   'hicolor-icon-theme'
+   'imlib2'
+   'libpulse' libpulse.so
+-  'librsvg' librsvg-2.so
+   'libx11'
+   'libxdamage'
+   'libxext'
+@@ -31,22 +43,8 @@
    'lua'
    'ncurses' libncursesw.so
    'pango'
 -  'systemd-libs' libsystemd.so
    'wayland'
    'wireless_tools'
+-)
+-makedepends=(
+-  'catch2'
+-  'cmake'
+-  'docbook-xsl'
+-  'docbook2x'
+-  'git'
+-  'gperf'
+-  'man-db'
+-  'pandoc'
+-  'python-jinja'
+-  'python-yaml'
+-  'wayland-protocols'
  )
-@@ -82,7 +81,7 @@
+ source=(
+   "git+$url.git#tag=v${pkgver}?signed"
+@@ -68,11 +66,8 @@
+ build() {
+   cd ${pkgname}
+   cmake \
+-    -S . \
+     -B build \
+     -D CMAKE_BUILD_TYPE=None \
+-    -D CMAKE_INSTALL_PREFIX=/usr \
+-    -Wno-dev \
+     -D CMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects" \
+     -D MAINTAINER_MODE=OFF \
+     -D BUILD_TESTS=ON \
+@@ -86,11 +81,11 @@
      -D BUILD_RSS=ON \
      -D BUILD_NVIDIA=ON \
      -D BUILD_PULSEAUDIO=ON \
 -    -D BUILD_JOURNAL=ON \
 +    -D BUILD_JOURNAL=OFF \
      -D BUILD_WAYLAND=ON \
-     -D CMAKE_INSTALL_PREFIX=/usr \
-     -Wno-dev \
+-    -D BUILD_LUA_CAIRO=ON \
+-    -D BUILD_LUA_IMLIB2=ON \
+-    -D BUILD_LUA_RSVG=ON
++    -D CMAKE_INSTALL_PREFIX=/usr \
++    -Wno-dev \
++    -S .
+   cmake --build build
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -17,7 +17,6 @@
+@@ -17,9 +17,6 @@
  libncursesw.so
  libpulse
  libpulse.so
+-librsvg
+-librsvg-2.so
 -libsystemd.so
  libx11
  libxdamage
  libxext
-@@ -33,7 +32,6 @@
+@@ -35,7 +32,6 @@
  pango
  python-jinja
  python-yaml

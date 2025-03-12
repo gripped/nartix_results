@@ -1,10 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,10 +21,12 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ospray
+ pkgver=3.2.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Ray Tracing Based Rendering Engine for High-Fidelity Visualization"
+ arch=(x86_64)
+ url="https://www.ospray.org/"
+@@ -19,13 +19,14 @@
+   snappy
+ )
  makedepends=(
-   cmake
++  cmake
    benchmark
-+  git
+-  cmake
+   git
    glu
    gtest
    level-zero-headers
@@ -19,14 +31,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,12 +2,14 @@
- cmake
- embree
- gcc-libs
-+git
- glibc
- glu
- gtest
+@@ -9,6 +9,7 @@
  ispc
  level-zero-headers
  level-zero-loader

@@ -3,32 +3,28 @@
 @@ -1,7 +1,7 @@
  
  pkgname=mpd
--pkgver=0.23.17
--pkgrel=3
+-pkgver=0.24
+-pkgrel=1
 +pkgver=0.23.15
 +pkgrel=2
  pkgdesc="Flexible, powerful, server-side application for playing music"
  arch=(x86_64)
  url="https://www.musicpd.org/"
-@@ -20,6 +20,7 @@
-   libmms
-   libmodplug
-   libmpcdec
-+  libnfs
-   libshout
-   libsidplayfp
-   libsoxr
-@@ -31,6 +32,7 @@
+@@ -32,7 +32,9 @@
  )
  makedepends=(
    alsa-lib
 +  audiofile
    avahi
-   boost
++  boost
    bzip2
-@@ -66,11 +68,9 @@
+   chromaprint
+   curl
+@@ -65,13 +67,10 @@
+   opus
    libpipewire
    python-sphinx
+-  python-sphinx_rtd_theme
    sqlite
 -  systemd
    twolame
@@ -38,18 +34,18 @@
  backup=(etc/$pkgname.conf)
  source=(
    $pkgname::git+https://github.com/MusicPlayerDaemon/MPD.git#tag=v${pkgver}?signed
-@@ -79,14 +79,14 @@
+@@ -80,14 +79,14 @@
    $pkgname.tmpfiles
    $pkgname.service.override
  )
--sha512sums=('6c156fd543f426dd7927dac4871d0fc00c3766e55447a800c1987a9a0652384bfddad56aaff8c5a4c3c9ac5e537492dbc67b64a7f493f9b85c17145f901f5c1c'
+-sha512sums=('3d05984ffe961a0a43a9bf69a276097dc8fd349a5074def62d5232f051cd856de7de628204ca285599bd1baa83ff261c1e8fb8d7bb6b2069d8c9fded3684e330'
 +sha512sums=('bce2314087725e709e5936f9e5e74ac1b4713cb3402aecf75ebc81d7eb7cab0237a6dfc90ba71672ffe60593a9c627b918c44c79e4f081b1b8987dbc2c029e17'
              '25a823740d92da8e186916701413114142eb6ad91a172c592e68b569c8e4f50fa99580e555ccf6cd31fc4f55a09bfe0278efa46e4e76ee0fe02846292fadf3c1'
 -            'd66c1d771160ee1781a05e57f383acc466babb29924c07d83ac0e763c14380dd1f279ba7b4aec508dc70245370d9732b4bc6287df1a2e06a920f3b73551d3032'
 +            '6e467481406279767b709ec6d5c06dbd825c0de09045c52ffa2d21d0604dcfe19b7a92bf42bed25163d66a3a0d1dbde6185a648b433eaf5eac56be90491e2e18'
              'db473db27cd68994c3ee26e78e0fb34d13126301d8861563dcc12a22d62ecb14c4ffb1e0798c6aaccdff34e73bae3fbeeff7b42606c901a2d35e278865cdf35d'
              'c1782b82f9db1d30aece43a07230c5d57370f2494a16e108af03815d83968805472f10f53ea5495cf0e08ff8f245430c3c3bc44025af43aaf9ecd12fcd6afc6c')
--b2sums=('25365047cd8238fbcd2adc0cf4ae28c1403810b55939bf106f0139e75341c065c788f288eebfffe515264150ba5410bf25cf98ae03514f0d3038ae95fb451e83'
+-b2sums=('764c606c26dddf190c7394a08704a470be1d81c9263429917350331a926b5bb93581ae3afb61a0045652c858f335cc297bf19441db24531e2c2143966d088aea'
 +b2sums=('c48d421ed44e13026ae880f62e03577b8a9dbf23e05adb217f5cfbc5702a7a66d08c353e9d85784203e0e511d23037836dad3053b9a82748c46f1b9d5a5d17a0'
          '0969a3c477b6a3f34b44e067e515d7f306414dd14e0163584417b9d071e3cc825898219f7ff66ead7905b15429b8411304052d3b2b14a72e560bfabf9bf0adcf'
 -        '814c2314de6040e895657a8c8d62f11bc38c224a3c0ef5cbf280c0e141c80f04b0ac5026be06fd5dc4a4b764f3d91ab46f365da0a7bd466abc3aed02b0612165'
@@ -57,12 +53,11 @@
          'd7b587c25dd5830c27af475a8fdd8102139d7c8fdd6f04fe23b36be030e4411582e289f575c299255ff8183096f7d47247327276f9a24641cbd032d9675b837a'
          '753664445d7d5cc0b36f51ac66549beea403b9731cbcb81b0a782974a0a73d90559ba93e6afcaa470b6f2f5a844c09ef695bdf3b1e6dfee97aa080f41b7fe513')
  validpgpkeys=('0392335A78083894A4301C43236E8A58C6DB4512') # Max Kellermann <max@blarg.de>
-@@ -95,26 +95,25 @@
+@@ -96,25 +95,25 @@
    local _meson_options=(
      -D documentation=enabled
      -D adplug=disabled
 -    -D audiofile=disabled
--    -D nfs=disabled
      -D sndio=disabled
      -D shine=disabled
      -D tremor=disabled
@@ -111,13 +106,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,5 @@
+@@ -1,5 +1,7 @@
  alsa-lib
 +audiofile
  avahi
- boost
++boost
  bzip2
-@@ -22,6 +23,7 @@
+ chromaprint
+ curl
+@@ -21,6 +23,7 @@
  libao
  libao.so
  libasound.so
@@ -125,14 +122,6 @@
  libavahi-client.so
  libavahi-common.so
  libavcodec.so
-@@ -55,6 +57,7 @@
- libmpdclient
- libmpdclient.so
- libmpg123.so
-+libnfs
- libogg
- libogg.so
- libopenal.so
 @@ -73,7 +76,6 @@
  libsndfile.so
  libsoxr
@@ -141,9 +130,11 @@
  libtwolame.so
  libupnp
  libupnp.so
-@@ -90,8 +92,6 @@
+@@ -89,10 +91,7 @@
+ opus
  pcre2
  python-sphinx
+-python-sphinx_rtd_theme
  sqlite
 -systemd
 -systemd-libs

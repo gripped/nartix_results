@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=abseil-cpp
 -pkgver=20250127.0
+-pkgrel=2
 +pkgver=20240722.1
- pkgrel=1
++pkgrel=1
  pkgdesc="Collection of C++ library code designed to augment the C++ standard library"
  arch=('x86_64')
+ url='https://abseil.io'
 @@ -10,7 +10,7 @@
  makedepends=('cmake')
  source=("https://github.com/abseil/abseil-cpp/archive/$pkgver/$pkgname-$pkgver.tar.gz"

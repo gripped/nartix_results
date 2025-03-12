@@ -1,5 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgname=julia
+ epoch=2
+-pkgver=1.11.4
+-pkgrel=1
++pkgver=1.11.3
++pkgrel=2
+ arch=(x86_64)
+ pkgdesc='High-level, high-performance, dynamic programming language'
+ url='https://julialang.org/'
 @@ -28,6 +28,7 @@
               python)
  optdepends=('gnuplot: If using the Gaston Package from julia')
@@ -8,9 +19,12 @@
          c12e8515.patch
          julia-hardcoded-libs.patch
          julia-libgit2-1.8.patch
-@@ -37,6 +38,7 @@
+@@ -35,8 +36,9 @@
+         julia-metainfo.patch
+         julia-curl-1.10.patch)
  backup=(etc/julia/startup.jl)
- sha256sums=('027b258b47b4e1a81d1ecdd355adeffdb6c0181c9ad988e717f5e475a12a1de8'
+-sha256sums=('c4936562d05128842d7fe2be30734333519ea94a54861b5d0bfe38d103e96b5b'
++sha256sums=('027b258b47b4e1a81d1ecdd355adeffdb6c0181c9ad988e717f5e475a12a1de8'
              'SKIP'
 +            'fc94d316bd56902f1720da55c331d43d315ce487d6b4cc7e5ffcb207cf9a8299'
              '2cc294b63e601d50341979fb936826bdba59de2165a5929eae927e152652f367'

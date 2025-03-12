@@ -594,7 +594,6 @@ expac
 expect
 expected-lite
 f2fs-tools
-faac
 faad2
 facile
 facter
@@ -2207,7 +2206,6 @@ m17n-lib
 mac
 macchanger
 maeparser
-magic-wormhole
 mailcap
 mailcommon
 mailgraph
@@ -2938,8 +2936,6 @@ plasma-disks
 plasma-firewall
 plasma-framework
 plasma-framework5
-plasma-integration
-plasma5-integration
 plasma-meta
 plasma-nm
 plasma-pa
@@ -3588,7 +3584,6 @@ python-jaraco.path
 python-jaraco.test
 python-jaraco.text
 python-jedi
-python-jeepney
 python-jellyfish
 python-jinja-time
 python-jinja
@@ -5124,7 +5119,6 @@ spandsp-docs
 spatialindex
 spdlog
 speakup-utils
-spectacle
 speech-dispatcher
 libspeechd
 speex

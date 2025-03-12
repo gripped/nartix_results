@@ -1,0 +1,85 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,48 +1,30 @@
+ 
+ pkgname=python-jeepney
+-pkgver=0.9.0
+-_pkgver=${pkgver%.0}
+-pkgrel=1
++pkgver=0.8.0
++pkgrel=4
+ pkgdesc="Low-level, pure Python DBus protocol wrapper"
+-arch=('any')
+ url="https://gitlab.com/takluyver/jeepney"
+ license=('MIT')
++arch=('any')
+ depends=('python')
+-makedepends=(
+-  'git'
+-  'python-build'
+-  'python-flit-core'
+-  'python-installer'
+-  'python-wheel'
+-)
+-checkdepends=(
+-  'python-pytest'
+-  'python-pytest-asyncio'
+-  'python-pytest-trio'
+-  'python-testpath'
+-  'python-trio'
+-)
+-optdepends=('python-trio: support D-Bus applications with Trio')
+-source=("git+$url.git#tag=$_pkgver")
+-sha512sums=('9a52439e1660c93ad1e47f76fea351c25dcb90c209b99044abefeb2e5228c3521d7d3ce12768081e2f1ed8428549032b8b13ebef50154bb8b1c8638df1671d7a')
++checkdepends=('python-pytest' 'python-pytest-trio' 'python-pytest-asyncio' 'python-testpath'
++              'python-trio' 'python-async-timeout')
++makedepends=('python-build' 'python-installer' 'python-flit-core')
++source=("https://pypi.io/packages/source/j/jeepney/jeepney-$pkgver.tar.gz")
++sha512sums=('823675f262c2c9778ccf9c1083601d936cca534fc0d2d9309b52aa6beeb7f73d225a37c5f18f6b0683c4829a93b1299a2cb4f8f341e55b92bedf58c8dce0aa75')
+ 
+ build() {
+-  cd ${pkgname#python-}
++  cd jeepney-$pkgver
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd ${pkgname#python-}
++  cd jeepney-$pkgver
+   pytest
+ }
+ 
+ package() {
+-  cd ${pkgname#python-}
++  cd jeepney-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-
+-  local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+-  rm -vr "$pkgdir/$site_packages/jeepney/tests"
+-  rm -vr "$pkgdir/$site_packages/jeepney/io/tests"
+-
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
++  install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,4 @@
+-git
+ python
+ python-build
+ python-flit-core
+ python-installer
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd ${pkgname#python-}
++cd jeepney-$pkgver
+ python -m build --wheel --no-isolation
+ }

@@ -1,22 +1,29 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,13 +18,13 @@
+@@ -17,19 +17,19 @@
+          'php-legacy-sqlite'
           'php-legacy-tidy'
           'php-legacy-xsl')
- pkgver=8.2.27
--pkgrel=2
+-pkgver=8.2.28
+-pkgrel=1
++pkgver=8.2.27
 +pkgrel=2.1
  arch=('x86_64')
  license=('PHP-3.01')
  url='https://www.php.net/'
  makedepends=('apache' 'aspell' 'gdbm' 'enchant' 'gd' 'gmp' 'icu' 'libsodium' 'libxslt' 'libzip' 'net-snmp'
 -             'postgresql-libs' 'sqlite' 'systemd' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2' 'libnsl'
--             'oniguruma' 'patchelf')
 +             'postgresql-libs' 'sqlite' 'tidy' 'unixodbc' 'curl' 'libtool' 'postfix' 'freetds' 'pcre2' 'libnsl'
-+             'oniguruma' 'patchelf' 'argon2')
+              'oniguruma' 'patchelf' 'argon2')
  checkdepends=('procps-ng')
  source=("https://php.net/distributions/php-${pkgver}.tar.xz"{,.asc}
          'apache.conf' 'php-fpm.tmpfiles' 'apache.patch' 'php-fpm.patch' 'php.ini.patch' 'php-legacy.patch')
+ 
+-sha256sums=('af8c9153153a7f489153b7a74f2f29a5ee36f5cb2c6c6929c98411a577e89c91'
++sha256sums=('3eec91294d8c09b3df80b39ec36d574ed9b05de4c8afcb25fa215d48f9ecbc6b'
+             'SKIP'
+             '2173046ac22ac50c7a6721306d3f79b2086f66a7a6ff5d8af249a474763197a1'
+             'f3236ca866095d5e42e51e3fa600082ccd0afcfb7f1aecbeb286ef9d4f0dd564'
 @@ -136,7 +136,7 @@
  	./configure ${_phpconfig} \
  		--enable-cgi \

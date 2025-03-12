@@ -30,6 +30,7 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
+libcap
 libunistring
 libusb
 libxml2

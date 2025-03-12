@@ -105,6 +105,7 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
+faac
 fceux
 fcgiwrap
 fcitx-mozc
@@ -380,6 +381,7 @@ lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
+magic-wormhole
 mailman3
 mako
 maliit-framework
@@ -568,6 +570,8 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
+plasma-integration
+plasma5-integration
 plasma-workspace
 plocate
 pluma
@@ -601,6 +605,7 @@ pysolfc
 python-anytree
 python-astroid
 python-ipykernel
+python-jeepney
 python-jose
 python-oslo-config
 python-pymupdf
@@ -754,6 +759,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+spectacle
 spice-vdagent
 spotifyd
 squid
