@@ -75,7 +75,6 @@ ldns
 leancrypto
 less
 libaio
-libarchive
 libassuan
 libbpf
 libcap-ng

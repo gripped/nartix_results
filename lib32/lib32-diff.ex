@@ -5,6 +5,7 @@ lib32-expat
 lib32-fluidsynth
 lib32-gamemode
 lib32-glib2
+lib32-libarchive
 lib32-libepoxy
 lib32-libgudev
 lib32-libpulse

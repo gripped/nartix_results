@@ -341,6 +341,7 @@ libvirt
 libvncserver
 libxfce4ui
 libxfce4util
+libxmlb
 libytnef
 light-locker
 lightdm
@@ -385,6 +386,7 @@ magic-wormhole
 mailman3
 mako
 maliit-framework
+mangohud
 marco
 mariadb
 mariadb-libs

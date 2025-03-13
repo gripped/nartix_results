@@ -2046,7 +2046,6 @@ libxkbcommon-x11
 libxkbcommon-doc
 libxkbfile
 libxklavier
-libxmlb
 libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
@@ -2242,7 +2241,6 @@ man-pages-vi
 man2html
 mandoc
 mandown
-mangohud
 marble
 marble-behaim
 marble-common
