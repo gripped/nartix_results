@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,13 +3,13 @@
- _basever=5.2
- _patchlevel=037
- pkgver=${_basever}.${_patchlevel}
--pkgrel=2
-+pkgrel=1
- pkgdesc='The GNU Bourne Again shell'
- arch=(x86_64)
+@@ -9,7 +9,7 @@
  license=('GPL-3.0-or-later')
  url='https://www.gnu.org/software/bash/bash.html'
  backup=(
@@ -36,7 +29,7 @@
          'dbfe5c1aaea94419305c1f8c9b54b94eab515260910f2309360ff702a27032faa34514e70b31adbb1e41bd912d4e43a610939cb07565f43e05dd19813a81752e'
 -        'c47de7abb7292e1e8cc3bb31fc4212f1fab0d5019d02062ef687c60079e1de2fb4ad2d8a64658528d1151900566baa51c6513039e8545f7fddc0917007ff7003'
 -        'fc924345d5dab10f1ae328bca3cf1053ddff557e074a6e6dff771bd813b93838980ed5d0f20d3a0584cbd1994332fcacc8a6b0e98f7aa376139198ea6a4d6f5a'
-+        '03251662eec28d73f2de16e5a215486588ade53c747a55fbebfe107c00d045179b03f2b83faee8808ceb4803f026bcf211d7b237cea9b26e016f6d65dabc201f'
++        'ff7b83a0542bba7d50d75b8e258b1de9bf00442fd66a52d6092494524461d03da7386def13be24b71c7ade5a890467692f9596583a4c9844244d7d68fb51e05c'
 +        'eed9da98cd4b7cf9db720e9820cf809a9168cb84a8466127ff588d041badc66cc3fd657e897c702cf0b6d19aefc7b880d976aead003594a2e980d98b17ff886f'
 +        '830d042bc0b3473260844e9aa3bca3e14d4ae60264b1f7760f69168cd4db9d0d5b41c1887463b23663e52e9a6a611ef8a99be82c737f0760eaaaf97f7eec35db'
          'd00a8b4fb3babf52c67a3e345158c1f70b5b45e5a54100a6671d96f9cfbf893143d5a23df7e7c5f4d5c0bd650519fb0c447b2304db2d6e0751dfffa651a7cf49'
@@ -53,7 +46,7 @@
                 -DNON_INTERACTIVE_LOGIN_SHELLS)
    export CFLAGS="${CFLAGS} ${_bashconfig[@]}"
  
-@@ -166,12 +168,12 @@
+@@ -166,8 +168,9 @@
    ln -s bash "${pkgdir}/usr/bin/sh"
    ln -s bash "${pkgdir}/usr/bin/rbash"
  
@@ -65,10 +58,6 @@
  
    install -dm755 "${pkgdir}/etc/skel/"
    install -m644 dot.bashrc "${pkgdir}/etc/skel/.bashrc"
-   install -m644 dot.bash_profile "${pkgdir}/etc/skel/.bash_profile"
-   install -m644 dot.bash_logout "${pkgdir}/etc/skel/.bash_logout"
- }
--
 
 
 ############# Stripped diff below #################

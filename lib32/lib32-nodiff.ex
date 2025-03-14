@@ -4,6 +4,7 @@ lib32-alsa-lib
 lib32-alsa-plugins
 lib32-amdvlk
 lib32-attr
+lib32-audit
 lib32-brotli
 lib32-bzip2
 lib32-cairo
@@ -16,6 +17,7 @@ lib32-libcurl-gnutls
 lib32-dconf
 lib32-duktape
 lib32-e2fsprogs
+lib32-expat
 lib32-fakeroot
 lib32-faudio
 lib32-flac
@@ -27,6 +29,7 @@ lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
 lib32-glib-networking
+lib32-glib2
 lib32-glu
 lib32-gmp
 lib32-gnutls
@@ -49,6 +52,7 @@ lib32-keyutils
 lib32-krb5
 lib32-ladspa
 lib32-lcms2
+lib32-libarchive
 lib32-libasyncns
 lib32-libavc1394
 lib32-libavtp
@@ -177,4 +181,5 @@ lib32-zlib
 lib32-zstd
 multilib-devel
 steam
+wine-staging
 winetricks

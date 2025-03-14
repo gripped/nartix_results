@@ -1,0 +1,115 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -58,12 +58,12 @@
+   ncurses
+   opus
+   python-docutils
++  python-packaging
+   readline
+   roc-toolkit
+   rtkit
+   sbc
+   sdl2
+-  systemd
+   valgrind
+   webrtc-audio-processing-1
+ )
+@@ -92,9 +92,12 @@
+     -D session-managers=[]
+     -D snap=disabled
+     -D udevrulesdir=/usr/lib/udev/rules.d
+-  )
+-
+-  arch-meson pipewire build "${meson_options[@]}"
++    -D systemd=disabled
++    -D rlimits-install=false
++    -D logind-provider=libelogind
++  )
++
++  artix-meson pipewire build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -127,7 +130,6 @@
+     glibc
+     ncurses libncursesw.so
+     readline libreadline.so
+-    systemd-libs libsystemd.so libudev.so
+   )
+   optdepends=(
+     'gst-plugin-pipewire: GStreamer plugin'
+@@ -147,7 +149,6 @@
+     'realtime-privileges: realtime privileges with rt module'
+     'rtkit: realtime privileges with rtkit module'
+   )
+-  install=pipewire.install
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+@@ -189,7 +190,6 @@
+     _pick audio usr/lib/$_pwname/libpipewire-module-rtp-{sap,sink,source}.so
+     _pick audio usr/lib/$_pwname/libpipewire-module-vban*.so
+     _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5,filter-graph}
+-    _pick audio usr/lib/systemd/user/filter-chain.service
+     _pick audio usr/share/alsa
+     _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
+     _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
+@@ -227,7 +227,6 @@
+     _pick pulse usr/bin/pipewire-pulse
+     _pick pulse usr/lib/$_pwname/libpipewire-module-protocol-pulse.so
+     _pick pulse usr/lib/$_pwname/libpipewire-module-pulse-tunnel.so
+-    _pick pulse usr/lib/systemd/user/pipewire-pulse.*
+     _pick pulse usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
+     _pick pulse usr/share/man/man1/pipewire-pulse.1
+     _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
+@@ -324,7 +323,6 @@
+     lilv liblilv-0.so
+     opus libopus.so
+     sbc libsbc.so
+-    systemd-libs
+     webrtc-audio-processing-1 libwebrtc-audio-processing-1.so
+   )
+ 
+@@ -441,11 +439,9 @@
+     glibc
+     libpulse libpulse.so
+     pipewire-session-manager
+-    systemd-libs libsystemd.so
+   )
+   provides=(pulse-native-provider)
+   conflicts=(pulseaudio)
+-  install=pipewire-pulse.install
+ 
+   mv pulse/* "$pkgdir"
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -56,8 +56,6 @@
+ libsbc.so
+ libsndfile
+ libsndfile.so
+-libsystemd.so
+-libudev.so
+ libusb
+ libusb-1.0.so
+ libwebrtc-audio-processing-1.so
+@@ -73,14 +71,13 @@
+ pipewire-pulse
+ pipewire-session-manager
+ python-docutils
++python-packaging
+ readline
+ roc-toolkit
+ rtkit
+ sbc
+ sdl2
+ sh
+-systemd
+-systemd-libs
+ valgrind
+ webrtc-audio-processing-1
+ wireplumber

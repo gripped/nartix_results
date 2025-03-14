@@ -1,5 +1,4 @@
 alsa-utils
-catfish
 cinnamon-desktop
 copyq
 doctest
@@ -18,11 +17,9 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libsfdo
 libxfce4ui
 light
 lxpanel
-lxqt-session
 lxqt-wayland-session
 lxsession
 lxsession-gtk3
@@ -34,7 +31,6 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
-nushell
 nvidia-390xx-utils
 qbittorrent
 qbittorrent-nox
@@ -57,4 +53,3 @@ wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
 xfce4-notifyd
-xfce4-smartbookmark-plugin

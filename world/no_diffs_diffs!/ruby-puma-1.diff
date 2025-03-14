@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -96,7 +96,6 @@
+ 
+   local _gemdir="$(gem env gemdir)"
+ 
+-  ulimit -Sn 5000
+ 
+   export PUMA_NO_RUBOCOP="true"
+ 

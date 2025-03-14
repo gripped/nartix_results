@@ -1,23 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=lxqt-wayland-session
- pkgver=0.1.1
--pkgrel=2
-+pkgrel=1.1
- pkgdesc='Files needed for the LXQt Wayland Session'
- arch=('any')
- url='https://github.com/lxqt/lxqt-wayland-session'
-@@ -21,7 +21,6 @@
+@@ -21,19 +21,26 @@
    'layer-shell-qt'
  )
  optdepends=(
 -  'labwc'
    'kwin'
    'hyprland'
++  'labwc'
    'niri'
-@@ -29,11 +28,18 @@
+   'river'
    'sway'
  )
  makedepends=('git' 'cmake' 'qt6-tools' 'lxqt-build-tools')

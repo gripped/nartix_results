@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,35 +1,35 @@
+ 
+ pkgname=asio
+-pkgver=1.34.0
++pkgver=1.30.2
+ pkgrel=1
+ pkgdesc='Cross-platform C++ library for ASynchronous network I/O'
+ url='https://think-async.com/Asio/'
+ arch=('any')
+-license=('BSL-1.0')
+-makedepends=('boost' 'git')
+-source=(git+https://github.com/chriskohlhoff/asio.git#tag=asio-${pkgver//./-})
+-sha512sums=('b12251a2402328eb2a559967b0dec97f6aa791ffbc4fd8ad591e76e4aa0dc7bb0f18f9a32c9a53d11b76c0684993686e4f83a747e23696dcfb27dbf226b3392b')
+-b2sums=('ecb5ae3e13f8e3019450b50f14fbb6f498feb3ca7ab900e075d1dba74bb3890e375341486b8159a69c53fb0c71337002476e2636ef8c34db7a677ec248bd4b6b')
++license=('custom:boost')
++makedepends=('boost')
++source=(https://sourceforge.net/projects/asio/files/asio/${pkgver}%20%28Stable%29/asio-${pkgver}.tar.bz2)
++sha512sums=('2d26cdcfcc0c310e82ab502551b51d70fd95ba4628bd306929e78539299974fc14aa6ba27cf256f1df7a56539cb885012ba02a202ae17bf817ee6311308a795a')
++b2sums=('d902fda2338d9717bb8f2f5d43468c5d0b64591814c3ae3134350650f0dd97bf241287347d324b11d0e6993b1b44373df13305d736df09ad3375ce4976f5bb27')
+ 
+ prepare() {
+-  cd ${pkgname}/${pkgname}
++  cd ${pkgname}-${pkgver}
+   autoreconf -fiv
+ }
+ 
+ build() {
+-  cd ${pkgname}/${pkgname}
++  cd ${pkgname}-${pkgver}
+   ./configure \
+     --prefix=/usr
+   make
+ }
+ 
+ check() {
+-  cd ${pkgname}/${pkgname}
++  cd ${pkgname}-${pkgver}
+   make check
+ }
+ 
+ package() {
+-  cd ${pkgname}/${pkgname}
++  cd ${pkgname}-${pkgver}
+   make DESTDIR="${pkgdir}" install
+   install -Dm 644 COPYING LICENSE_1_0.txt -t "${pkgdir}/usr/share/licenses/${pkgname}"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+ boost
+-git
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd ${pkgname}/${pkgname}
++cd ${pkgname}-${pkgver}
+ autoreconf -fiv
+ }
+ build() {
+-cd ${pkgname}/${pkgname}
++cd ${pkgname}-${pkgver}
+ ./configure \
+ --prefix=/usr
+ make

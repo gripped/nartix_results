@@ -18,6 +18,7 @@ apparmor-dinit
 apparmor-openrc
 apparmor-runit
 apparmor-s6
+artix-archivetools
 artix-artwork
 artix-branding-base
 artix-breeze-sddm
@@ -436,6 +437,7 @@ php-fpm-openrc
 php-fpm-runit
 php-fpm-s6
 pipewire-dinit
+pipewire-openrc
 postfix-dinit
 postfix-openrc
 postfix-runit
@@ -690,6 +692,7 @@ wireguard-openrc
 wireguard-runit
 wireguard-s6
 wireplumber-dinit
+wireplumber-openrc
 wpa_supplicant-runit
 xcursor-breeze
 xcursor-premium

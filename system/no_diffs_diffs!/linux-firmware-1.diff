@@ -6,9 +6,10 @@
  )
 -_tag=20231211
 -pkgver=20231211.f2e52a1c
-+_tag=20250211
-+pkgver=20250210.5bc5868b
- pkgrel=1
+-pkgrel=1
++_tag=20250311
++pkgver=20250311.b69d4b74
++pkgrel=2
  pkgdesc="Firmware files for Linux"
 -url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
 -license=('GPL2' 'GPL3' 'custom')
@@ -35,20 +36,27 @@
 +  !debug
 +)
 +source=("git+$url.git?signed#tag=${_tag}")
-+b2sums=('1fbffd6cfa1169b56436020206f7525e4210744ae0cf2421a4dad8c85d4bb7cbf4fcc95a541d90e809b1236f1889a090dd5ee207ab23e0fca2b44124df07caf0')
++b2sums=('f01980a2e67daf42dd0c6b46b1a0d639473b5d3264cb420b60fdc08e0bc2900cd6bc3347fb20293f48a06e57fecf31518d07e765587095912ddefb2fcab81c06')
  validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
  
  _backports=(
-@@ -77,6 +90,8 @@
+@@ -70,12 +83,15 @@
+   cd ${pkgbase}
+ 
+   ZSTD_CLEVEL=19 make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
++  make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware dedup
+ 
+   install -Dt "${pkgdir}/usr/share/licenses/${pkgname}" -m644 LICEN*
+ 
+   cd "${pkgdir}"
  
    rm usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw_arm64-v4.1.img.zst
- 
-+  _pick amd-ucode usr/lib/firmware/amd-ucode
 +
++  _pick amd-ucode usr/lib/firmware/amd-ucode
+ 
    _pick linux-firmware-nfp usr/lib/firmware/netronome
    _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
- 
-@@ -100,6 +115,8 @@
+@@ -100,6 +116,8 @@
  package_amd-ucode() {
    pkgdesc="Microcode update image for AMD CPUs"
    license=(custom)
@@ -57,7 +65,7 @@
  
    install -Dt "${pkgdir}/boot" -m644 amd-ucode.img
  
-@@ -154,4 +171,3 @@
+@@ -154,4 +172,3 @@
  
    mv -v linux-firmware-bnx2x/* "${pkgdir}"
  }

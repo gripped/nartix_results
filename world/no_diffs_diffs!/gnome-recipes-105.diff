@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -83,7 +83,7 @@
+ }
+ 
+ build() {
+-  arch-meson recipes build
++  artix-meson recipes build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,6 +16,6 @@
+ patch -Np1 -i ../gnome-recipes-no-appmenu.patch
+ }
+ build() {
+-arch-meson recipes build
++artix-meson recipes build
+ meson compile -C build
+ }

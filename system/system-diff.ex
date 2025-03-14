@@ -11,7 +11,6 @@ e2fsprogs
 fuse2fs
 fakeroot
 filesystem
-gc
 gcc
 gcc-libs
 lib32-gcc-libs
@@ -30,9 +29,6 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
-libarchive
-libcap
-libunistring
 libusb
 libxml2
 libxml2-docs

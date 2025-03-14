@@ -8,15 +8,6 @@
    gst-plugin-opencv
    gst-plugin-qml6
    gst-plugin-qmlgl
-@@ -27,7 +26,7 @@
-   gstreamer-docs
- )
- pkgver=1.24.12
--pkgrel=4
-+pkgrel=3
- pkgdesc="Multimedia graph framework"
- url="https://gstreamer.freedesktop.org/"
- arch=(x86_64)
 @@ -138,7 +137,6 @@
    nasm
    neon
@@ -33,30 +24,7 @@
    taglib
    twolame
    v4l-utils
-@@ -206,14 +203,12 @@
-   "https://gstreamer.freedesktop.org/src/gstreamer-docs/gstreamer-docs-$pkgver.tar.xz"{,.asc}
-   0001-HACK-meson-Disable-broken-tests.patch
-   0002-x265enc-Unbreak-build-with-x265-4.0.patch
--  0003-svtav1enc-update-to-use-SVT-AV1-3.0.0-API-changes.patch
- )
- b2sums=('e11c560e33db0292075a8c3043eef959c6b68c2c54e55a62d41acbfce544b198ff0a948682ff2e9d90ec2773674e614378399b1411588eae7757176ce157dd4e'
-         '21a0c3fd42af3870efb38fdd595298d0596d8c90801dc27bd693aaa8436e7f2e2cffd2019dba6188f89cafda1ac3e42958f152e945a9102020bd55f1f66ccfb7'
-         'SKIP'
--        '693a30c7af517ee8c149ec58214e3ac891ff82c9f1bddcbd34949854deb46207a995ff123848a7121f64b41aed8ae4ffada1329bb5c987a542710466770a2935'
--        '94250c1317ce1e3444c2e0effc190ab544eca21c177e43143c3f3a8690c541cbe068604c6ff6401072a6b09f54683eac03128c918a2a16c7013622c24da11348'
--        '97189387749cbcbf66bb378c49dea3bedd2bbd9c181c489f466e61e8d3981d99d578e38e7bc8303d941180ed96bbeefeb01782a6068b89d7030a2234cdd1bdb5')
-+        'ffa84decda2494fd6ad504f05d70c20d72ada43f50c17118ed56a2779101d919a355263a9275b923d2651f032780ad717c8de1b8c3d9359e4cce0ea82b74922d'
-+        '94250c1317ce1e3444c2e0effc190ab544eca21c177e43143c3f3a8690c541cbe068604c6ff6401072a6b09f54683eac03128c918a2a16c7013622c24da11348')
- validpgpkeys=(
-   D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim Müller <tim@gstreamer-foundation.org>
- )
-@@ -224,12 +219,11 @@
-   git apply -3 ../0001-HACK-meson-Disable-broken-tests.patch
- 
-   git apply -3 ../0002-x265enc-Unbreak-build-with-x265-4.0.patch
--
--  git apply -3 ../0003-svtav1enc-update-to-use-SVT-AV1-3.0.0-API-changes.patch
- }
+@@ -230,6 +227,7 @@
  
  build() {
    local meson_options=(
@@ -64,7 +32,7 @@
      -D examples=disabled
      -D gobject-cast-checks=disabled
      -D gpl=enabled
-@@ -264,14 +258,14 @@
+@@ -264,14 +262,14 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -81,7 +49,7 @@
    meson compile -C build
  }
  
-@@ -282,7 +276,7 @@
+@@ -282,7 +280,7 @@
    export NO_AT_BRIDGE=1 GTK_A11Y=none
  
    xvfb-run -s "-nolisten local" \
@@ -90,7 +58,7 @@
  )
  
  _install() {
-@@ -920,23 +914,6 @@
+@@ -920,23 +918,6 @@
    ); _install
  }
  
@@ -114,7 +82,7 @@
  
  package_gst-plugin-opencv() {
    pkgdesc+=" - opencv plugin"
-@@ -1186,7 +1163,6 @@
+@@ -1186,7 +1167,6 @@
      libva
      libx11
      libxrandr

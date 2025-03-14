@@ -28,6 +28,7 @@ caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
 caja
+catfish
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -129,6 +130,7 @@ libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
 libscfg
+libsfdo
 libsidplayfp
 libsignal-protocol-c
 libstaroffice
@@ -187,6 +189,7 @@ lxqt-policykit
 lxqt-powermanagement
 lxqt-qtplugin
 lxqt-runner
+lxqt-session
 lxqt-sudo
 lxqt-themes
 lxrandr
@@ -292,6 +295,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
+nushell
 obconf-qt
 octave
 onionshare
@@ -524,6 +528,7 @@ xfce4-screenshooter
 xfce4-sensors-plugin
 xfce4-session
 xfce4-settings
+xfce4-smartbookmark-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
 xfce4-terminal

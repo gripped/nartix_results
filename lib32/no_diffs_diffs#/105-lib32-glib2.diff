@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -87,7 +87,7 @@
+   CFLAGS+=" -mstackrealign"
+   CXXFLAGS+=" -mstackrealign"
+ 
+-  arch-meson glib build "${meson_options[@]}"
++  artix-meson glib build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,6 @@
+ CXXFLAGS+=" -g3"
+ CFLAGS+=" -mstackrealign"
+ CXXFLAGS+=" -mstackrealign"
+-arch-meson glib build "${meson_options[@]}"
++artix-meson glib build "${meson_options[@]}"
+ meson compile -C build
+ }

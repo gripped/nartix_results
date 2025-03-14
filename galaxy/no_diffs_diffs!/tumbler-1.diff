@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
- 
- pkgname=tumbler
- pkgver=4.20.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="Thumbnail service implementing the thumbnail management D-Bus specification"
- arch=('x86_64')
- url="https://docs.xfce.org/xfce/tumbler/start"
- license=('GPL-2.0-or-later')
- groups=('xfce4')
- depends=('libxfce4util' 'gdk-pixbuf2')
--makedepends=('git' 'glib2-devel' 'python' 'ffmpegthumbnailer' 'poppler-glib'
-+makedepends=('git' 'glib2-devel' 'intltool' 'python' 'ffmpegthumbnailer' 'poppler-glib'
-              'libgsf' 'libgepub' 'libopenraw' 'freetype2' 'xfce4-dev-tools')
- optdepends=('ffmpegthumbnailer: video thumbnails'
-             'poppler-glib: PDF thumbnails'
 @@ -39,5 +39,7 @@
  package() {
    cd $pkgname
@@ -25,17 +8,3 @@
 +  rm -r $pkgdir/usr/lib/systemd
  }
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -3,6 +3,7 @@
- gdk-pixbuf2
- git
- glib2-devel
-+intltool
- libgepub
- libgsf
- libopenraw

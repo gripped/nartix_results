@@ -29,6 +29,7 @@ eovim
 epour
 equate
 espionage
+exaile
 express
 extundelete
 faenza-icon-theme
@@ -48,6 +49,7 @@ libpamac
 librewolf
 libtree
 libwireplumber-4.0-compat
+linux-lts515
 lxdm-dinit
 lxqt-build-tools-qt6
 mcomix
@@ -83,6 +85,7 @@ moksha-module-flame
 moksha-module-forecasts
 moksha-module-mail
 moksha-module-mem
+moksha-module-moon
 moksha-module-net
 moksha-module-news
 moksha-module-penguins
@@ -126,6 +129,7 @@ moksha-theme-viceversa
 moksha-theme-wood-grey
 moksha-themes
 moksha
+moodbar
 mpd-dinit-user
 mpd-dinit
 numix-icon-theme
@@ -163,6 +167,7 @@ ruby-map
 sddm-theme
 sfwbar
 simplescreenrecorder
+sneedacity
 snooze
 socklog
 sv-helper

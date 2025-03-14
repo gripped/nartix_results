@@ -40,6 +40,7 @@ file
 findutils
 flex
 gawk
+gc
 gdbm
 gettext
 gmp
@@ -75,10 +76,12 @@ ldns
 leancrypto
 less
 libaio
+libarchive
 libassuan
 libbpf
 libcap-ng
 python-capng
+libcap
 libedit
 libevent
 libevent-docs
@@ -112,6 +115,7 @@ libssh2
 libtasn1
 libtirpc
 libtool
+libunistring
 libverto
 libxcrypt
 libxcrypt-compat

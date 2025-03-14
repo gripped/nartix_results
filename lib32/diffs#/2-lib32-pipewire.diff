@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   lib32-pipewire-jack
-   lib32-pipewire-v4l2
- )
--pkgver=1.4.0
-+pkgver=1.2.7
- pkgrel=1
- epoch=1
- pkgdesc="Low-latency audio/video router and processor - 32-bit"
-@@ -18,14 +18,12 @@
+@@ -18,9 +18,7 @@
    lib32-alsa-lib
    lib32-dbus
    lib32-glib2
@@ -19,21 +10,7 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
- )
--b2sums=('4546d0c55dd18a6219730493cefa729d26f1d0760364128e8a942762bb5fbcc8c1962cf0b4bd2a2cf28d50a24381495a187e69f2dce7db2b19027bdf2a199b3d')
-+b2sums=('c2941d8400e5299da86239967179f15ed69cc0142d5cf5adc510585ce85ff2e49b975c7adc39146a16a9bd130b3f4a9db51c6c470c9cc6a05913a5c38f214635')
- 
- prepare() {
-   cd pipewire
-@@ -42,7 +40,6 @@
-     -D bluez5=disabled
-     -D compress-offload=disabled
-     -D docs=disabled
--    -D ebur128=disabled
-     -D echo-cancel-webrtc=disabled
-     -D examples=disabled
-     -D gstreamer-device-provider=disabled
-@@ -69,15 +66,17 @@
+@@ -69,15 +67,17 @@
      -D session-managers=[]
      -D snap=disabled
      -D sndfile=disabled
@@ -53,63 +30,14 @@
    meson compile -C build
  }
  
-@@ -100,13 +99,13 @@
- 
- package_lib32-pipewire() {
-   depends=(
--    "lib32-libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
--    lib32-alsa-lib libasound.so
--    lib32-dbus libdbus-1.so
-+    "lib32-libpipewire=$epoch:$pkgver-$pkgrel"
-+    lib$_pwname.so
+@@ -106,7 +106,6 @@
      lib32-gcc-libs
--    lib32-glib2 libglib-2.0.so
+     lib32-glib2 libglib-2.0.so
      lib32-glibc
 -    lib32-systemd libsystemd.so
-+    libasound.so
-+    libdbus-1.so
-+    libglib-2.0.so
      pipewire
    )
    optdepends=(
-@@ -119,12 +118,11 @@
-   (
-     cd "$pkgdir"
- 
--    _pick lib usr/lib32/$_spaname/libspa.so*
-     _pick lib usr/lib32/lib$_pwname.so*
-     _pick lib usr/lib32/pkgconfig/lib{$_pwname,$_spaname}.pc
- 
-     _pick jack usr/lib32/libjack*
--    _pick jack usr/lib32/pkgconfig/jack*.pc
-+    _pick jack usr/lib32/pkgconfig/jack.pc
- 
-     _pick v4l2 usr/lib32/$_pwname/v4l2
- 
-@@ -155,9 +153,9 @@
-     LGPL-2.1-or-later
-   )
-   depends=(
--    "lib32-libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
--    "lib32-pipewire=$epoch:$pkgver-$pkgrel"
-+    lib$_pwname.so
-     lib32-glibc
-+    lib32-pipewire
-     pipewire-jack
-   )
-   conflicts=(
-@@ -179,10 +177,9 @@
- package_lib32-pipewire-v4l2() {
-   pkgdesc+=" - V4L2 interceptor"
-   depends=(
--    "lib32-libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
--    "lib32-pipewire=$epoch:$pkgver-$pkgrel"
-     lib$_pwname.so
-     lib32-glibc
-+    lib32-pipewire
-     pipewire-v4l2
-   )
- 
 
 
 ############# Stripped diff below #################

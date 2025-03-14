@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=nvchecker
- pkgver=2.16
--pkgrel=3
-+pkgrel=2
- pkgdesc="New version checker for software releases"
- arch=('any')
- url="https://github.com/lilydjwg/nvchecker"
+@@ -70,4 +70,3 @@
+   install -Dm644 sample_config.toml -t "$pkgdir"/usr/share/doc/$pkgname/
+   install -Dm644 docs/_build/man/nvchecker.1 -t "$pkgdir"/usr/share/man/man1/
+ }
+-

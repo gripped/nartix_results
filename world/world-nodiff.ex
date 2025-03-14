@@ -60,6 +60,7 @@ amtk
 amule
 analitza
 analitza5
+anari-sdk
 android-file-transfer
 android-tools
 android-udev
@@ -104,7 +105,6 @@ arrow
 artikulate
 asciidoc
 asciidoctor
-asio
 aspell-ca
 aspell-cs
 aspell-de
@@ -193,6 +193,7 @@ bats-assert
 bats-support
 bats
 bazel
+bazelisk
 bbswitch
 bbswitch-dkms
 bc
@@ -618,6 +619,8 @@ featherpad
 feh
 festival
 ffcall
+ffmpeg
+ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -638,7 +641,6 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
-fish
 five-or-more
 flac
 flac-doc
@@ -695,7 +697,6 @@ fuse-common
 futuresql
 fwknop
 fzf
-gajim
 galculator
 gcab
 gcc13
@@ -792,12 +793,16 @@ gnome-klotski
 gnome-mahjongg
 gnome-maps
 gnome-menus
+gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
+gnome-nibbles
 gnome-online-accounts
 libgoa
 gnome-photos
+gnome-recipes
+gnome-robots
 gnome-screenshot
 gnome-shell-extensions
 gnome-software
@@ -808,6 +813,7 @@ gnome-terminal
 gnome-tetravex
 gnome-text-editor
 gnome-themes-extra
+gnome-tour
 gnome-tweaks
 gnome-usage
 gnome-user-docs
@@ -1588,6 +1594,7 @@ libatomic_ops
 libavc1394
 libavif
 libavtp
+libayatana-appindicator
 libb2
 libb64
 libblastrampoline
@@ -1719,6 +1726,7 @@ libgxps
 libhandy
 libhandy-docs
 libharu
+libheif
 libhubbub
 libical
 libice
@@ -1856,6 +1864,7 @@ liborcus
 libosinfo
 libotf
 libotr
+libp11
 libpagemaker
 libpanel
 libpanel-docs
@@ -1986,7 +1995,6 @@ liburcu
 liburing
 libusb-compat
 libusbmuxd
-libutempter
 libutf8proc
 libutp
 libuv
@@ -2046,6 +2054,7 @@ libxkbcommon-x11
 libxkbcommon-doc
 libxkbfile
 libxklavier
+libxmlb
 libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
@@ -2205,6 +2214,7 @@ m17n-lib
 mac
 macchanger
 maeparser
+magic-wormhole
 mailcap
 mailcommon
 mailgraph
@@ -2241,6 +2251,7 @@ man-pages-vi
 man2html
 mandoc
 mandown
+mangohud
 marble
 marble-behaim
 marble-common
@@ -2289,6 +2300,7 @@ meson-python
 meson
 messagelib
 metalog
+mgard
 micro
 microsoft-gsl
 milou
@@ -2346,6 +2358,7 @@ mtools
 mtr
 mtr-gtk
 mujs
+muparser
 mupdf
 libmupdf
 mupdf-gl
@@ -2355,10 +2368,14 @@ musepack
 musepack-tools
 libmpcdec
 musescore
+musl
+musl-aarch64
+musl-riscv64
 mutt
 mypaint-brushes1
 mypy
 namcap
+nanobind
 nanomsg
 nanosvg
 nasm
@@ -2578,7 +2595,6 @@ pdal
 pdfarranger
 pdfgrep
 pdfjs
-pdfmixtool
 pdnsd
 pegtl
 pelican
@@ -2934,6 +2950,8 @@ plasma-disks
 plasma-firewall
 plasma-framework
 plasma-framework5
+plasma-integration
+plasma5-integration
 plasma-meta
 plasma-nm
 plasma-pa
@@ -2954,6 +2972,7 @@ plotutils
 plymouth-kcm
 pmbootstrap
 pngplusplus
+pnpm
 po4a
 poco
 podofo-0.9
@@ -3010,6 +3029,9 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
@@ -3138,6 +3160,7 @@ python-aspectlib
 python-assertpy
 python-asteval
 python-astor
+python-astroid
 python-asttokens
 python-astunparse
 python-async-lru
@@ -3566,6 +3589,7 @@ python-iocapture
 python-ipdb
 python-ipyparallel
 python-ipython-genutils
+python-ipython-pygments-lexers
 python-ipywidgets
 python-iso8601
 python-isoduration
@@ -3582,12 +3606,14 @@ python-jaraco.path
 python-jaraco.test
 python-jaraco.text
 python-jedi
+python-jeepney
 python-jellyfish
 python-jinja-time
 python-jinja
 python-jiter
 python-jmespath
 python-joblib
+python-jose
 python-josepy
 python-joserfc
 python-jq
@@ -3780,6 +3806,7 @@ python-os-service-types
 python-osc-lib
 python-oscrypto
 python-oslo-concurrency
+python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
@@ -4132,6 +4159,7 @@ python-requests-ftp
 python-requests-futures
 python-requests-gssapi
 python-requests-kerberos
+python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
@@ -4140,6 +4168,7 @@ python-requests-wsgi-adapter
 python-requests
 python-requestsexceptions
 python-resolvelib
+python-responses
 python-respx
 python-retrying
 python-rfc3339-validator
@@ -4155,6 +4184,7 @@ python-routes
 python-rpds-py
 python-rpyc
 python-rsa
+python-rtree
 python-ruamel-yaml
 python-ruamel.yaml.clib
 python-ruff-api
@@ -4382,17 +4412,20 @@ python-voluptuous
 python-waitress
 python-wand
 python-warlock
+python-watchdog
 python-watchfiles
 python-watchgod
 python-wcag-contrast-ratio
 python-wcmatch
 python-wcwidth
+python-webcolors
 python-webencodings
 python-webob
 python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
+python-werkzeug
 python-whatthepatch
 python-wheel
 python-wheezy-template
@@ -4556,17 +4589,13 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
-qtcreator
-qtcreator-devel
 qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
-quazip
-quazip-qt5
-quazip-qt6
+quilt
 quota-tools
 qutebrowser
 qwt
@@ -4711,6 +4740,7 @@ ruby-coderay
 ruby-concurrent
 ruby-connection_pool
 ruby-console
+ruby-covered
 ruby-crack
 ruby-crass
 ruby-csv
@@ -4759,6 +4789,7 @@ ruby-fcntl
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
+ruby-fiber-storage
 ruby-fiddle
 ruby-fileutils
 ruby-find
@@ -4773,6 +4804,7 @@ ruby-hocon
 ruby-hoe
 ruby-http-cookie
 ruby-httpclient
+ruby-i18n
 ruby-ice_nine
 ruby-introspection
 ruby-io-console
@@ -4803,11 +4835,14 @@ ruby-matrix
 ruby-memoist
 ruby-memory_profiler
 ruby-metaclass
+ruby-method_source
 ruby-metrics
 ruby-mime-types-data
 ruby-mime-types
 ruby-mini_mime
 ruby-mini_portile
+ruby-mini_portile2
+ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
 ruby-minitest-parallel_fork
@@ -4869,12 +4904,14 @@ ruby-pry
 ruby-psych
 ruby-ptools
 ruby-public_suffix
+ruby-puma
 ruby-puppet-resource_api
 ruby-qed
 ruby-rack-session
 ruby-rack-test
 ruby-rack
 ruby-rackup
+ruby-rails-dom-testing
 ruby-rails-html-sanitizer
 ruby-rainbow
 ruby-rake-compiler-dock
@@ -4989,6 +5026,7 @@ ruby-webrick
 ruby-websocket-driver
 ruby-websocket-extensions
 ruby-x25519
+ruby-xrb
 ruby-yard
 ruby-zeitwerk
 ruby
@@ -5117,6 +5155,7 @@ spandsp-docs
 spatialindex
 spdlog
 speakup-utils
+spectacle
 speech-dispatcher
 libspeechd
 speex
@@ -5129,6 +5168,7 @@ spirv-headers
 spirv-llvm-translator
 spirv-tools
 splint
+spotifyd
 sqlcipher
 squashfs-tools
 squashfuse
@@ -5168,6 +5208,7 @@ swaybg
 swaylock
 sweeper
 swell-foop
+swig
 swtpm
 sxhkd
 sxiv
@@ -5184,6 +5225,7 @@ t1utils
 taglib
 taglib1
 tailscale
+tali
 talloc
 tang
 task
@@ -5363,6 +5405,9 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
+texlive-texmf
+texlive-doc
+texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5376,6 +5421,7 @@ tinycompress
 tinyprog
 tinyproxy
 tinyxml
+tinyxml2
 tinyxxd
 tk
 tl-expected

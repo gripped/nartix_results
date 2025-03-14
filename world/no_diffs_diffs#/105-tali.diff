@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ }
+ 
+ build() {
+-  arch-meson tali build
++  artix-meson tali build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ git apply -3 ../tali-fix-activate.patch
+ }
+ build() {
+-arch-meson tali build
++artix-meson tali build
+ meson compile -C build
+ }

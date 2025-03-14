@@ -1,15 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=strongswan
- pkgver=6.0.0
--pkgrel=2
-+pkgrel=1
- pkgdesc='Open source IPsec implementation'
+@@ -6,8 +6,8 @@
  url='https://www.strongswan.org'
--license=('GPL-2.0-only')
-+license=('GPL2')
+ license=('GPL-2.0-only')
  arch=('x86_64')
 -makedepends=('libnm' 'systemd' 'python' 'ruby' 'mariadb' 'python-setuptools')
 -depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'systemd-libs' 'pam')
@@ -26,16 +19,6 @@
      --enable-ext-auth \
      --enable-mysql \
      --enable-ldap \
-@@ -95,8 +94,7 @@
-     --enable-bypass-lan \
-     --enable-ruby-gems \
-     --enable-python-eggs \
--    --enable-ml \
--    --enable-stroke
-+    --enable-ml
-   make
- }
- 
 
 
 ############# Stripped diff below #################
