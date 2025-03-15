@@ -595,6 +595,7 @@ expac
 expect
 expected-lite
 f2fs-tools
+faac
 faad2
 facile
 facter
@@ -641,6 +642,7 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+fish
 five-or-more
 flac
 flac-doc
@@ -2595,6 +2597,7 @@ pdal
 pdfarranger
 pdfgrep
 pdfjs
+pdfmixtool
 pdnsd
 pegtl
 pelican
@@ -4589,6 +4592,8 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
+qtcreator
+qtcreator-devel
 qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6

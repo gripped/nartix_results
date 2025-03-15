@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,27 +1,25 @@
+@@ -1,32 +1,25 @@
  
  pkgname=mate-sensors-applet
 -pkgver=1.28.0
--pkgrel=3
+-pkgrel=4
 +pkgver=1.26.0
 +pkgrel=2.1
  pkgdesc="A MATE Panel applet to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings"
@@ -16,11 +16,16 @@
 -makedepends=('autoconf-archive' 'docbook-xsl' 'itstool' 'mate-common' 'yelp-tools')
 +makedepends=('docbook-xsl' 'itstool')
  groups=('mate-extra')
--source=("${pkgname}-${pkgver}.tar.gz::https://github.com/mate-desktop/mate-sensors-applet/archive/refs/tags/v${pkgver}.tar.gz")
--sha256sums=('bc4c8a532c385b93cc091210728fe0c35e53c8eda9fd144e80a649ccce368b2e')
+-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/mate-desktop/mate-sensors-applet/archive/refs/tags/v${pkgver}.tar.gz"
+-	"mate-sensors-applet-1_28_0-fix-glib-2_83_2.patch")
+-sha256sums=('bc4c8a532c385b93cc091210728fe0c35e53c8eda9fd144e80a649ccce368b2e'
+-	'39afc3f022efec24838354f0c2d14997e3b1cb577bf5fb76e407ba882b6b7786')
 -
 -prepare() {
 -	cd "${pkgname}-${pkgver}"
+-
+-	patch -p1 -i "${srcdir}/mate-sensors-applet-1_28_0-fix-glib-2_83_2.patch"
+-
 -	./autogen.sh
 -}
 +source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
@@ -59,9 +64,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,8 @@
+@@ -1,12 +1,8 @@
 -prepare() {
 -cd "${pkgname}-${pkgver}"
+-patch -p1 -i "${srcdir}/mate-sensors-applet-1_28_0-fix-glib-2_83_2.patch"
 -./autogen.sh
 -}
  build() {

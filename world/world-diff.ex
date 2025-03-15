@@ -106,7 +106,6 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
-faac
 fceux
 fcgiwrap
 fcitx-mozc
@@ -114,7 +113,6 @@ fcitx5
 fcron
 firefox
 firewalld
-fish
 flatpak
 flatpak-docs
 fluidsynth
@@ -414,6 +412,7 @@ memcached
 mesa
 opencl-clover-mesa
 opencl-rusticl-mesa
+vulkan-gfxstream
 vulkan-intel
 vulkan-mesa-layers
 vulkan-nouveau
@@ -499,7 +498,6 @@ pc-ble-driver
 pcmanfm-gtk3
 pcmanfm
 pcsclite
-pdfmixtool
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -682,8 +680,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qtcreator
-qtcreator-devel
 qterminal
 qtermwidget
 quadrapassel

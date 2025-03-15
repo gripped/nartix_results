@@ -11,6 +11,7 @@ lib32-libusb
 lib32-mesa
 lib32-opencl-clover-mesa
 lib32-opencl-rusticl-mesa
+lib32-vulkan-gfxstream
 lib32-vulkan-intel
 lib32-vulkan-mesa-layers
 lib32-vulkan-nouveau
