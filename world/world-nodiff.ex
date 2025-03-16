@@ -105,6 +105,7 @@ arrow
 artikulate
 asciidoc
 asciidoctor
+asio
 aspell-ca
 aspell-cs
 aspell-de
@@ -303,7 +304,6 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 cervisia
-cfitsio
 cgns
 chafa
 chatblade
@@ -1799,7 +1799,6 @@ lua53-luv
 liblxqt
 liblzf
 libmad
-libmanette
 libmatekbd
 libmatemixer
 libmateweather

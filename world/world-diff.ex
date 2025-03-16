@@ -9,7 +9,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-asio
 at-spi2-core
 at-spi2-core-docs
 at
@@ -47,6 +46,7 @@ caja-xattr-tags
 caja
 catfish
 cbindgen
+cfitsio
 cgmanager
 chromium-bsu
 chrony
@@ -318,6 +318,8 @@ libguestfs
 libhandy0
 libinput
 libldm
+libmanette
+libmanette-docs
 libmspub
 libnvme
 libprocps
