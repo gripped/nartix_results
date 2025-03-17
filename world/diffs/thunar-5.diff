@@ -65,23 +65,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,8 @@
- desktop-file-utils
- exo
+@@ -1,15 +0,0 @@
+-desktop-file-utils
+-exo
 -git
 -glib2-devel
- gobject-introspection
- hicolor-icon-theme
-+intltool
- libexif
- libgudev
- libnotify
-@@ -11,5 +10,4 @@
- libxfce4ui
- libxfce4util
- pcre2
+-gobject-introspection
+-hicolor-icon-theme
+-libexif
+-libgudev
+-libnotify
+-libpng
+-libxfce4ui
+-libxfce4util
+-pcre2
 -xfce4-dev-tools
- xfce4-panel
+-xfce4-panel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

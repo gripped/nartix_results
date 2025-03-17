@@ -72,6 +72,7 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
+digikam
 dns-over-https
 docker
 dolphin-emu

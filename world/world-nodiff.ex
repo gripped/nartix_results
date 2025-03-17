@@ -444,7 +444,6 @@ dhclient
 dht
 diffstat
 diffuse
-digikam
 directx-headers
 directx-shader-compiler
 discount

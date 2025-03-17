@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=sssd
- pkgver=2.10.2
--pkgrel=3
-+pkgrel=1
- pkgdesc="System Security Services Daemon"
- arch=('x86_64')
- url="https://github.com/SSSD/sssd"
 @@ -27,7 +27,6 @@
    'doxygen'
    'python'
@@ -44,6 +35,22 @@
  }
  
  package() {
+@@ -118,6 +113,7 @@
+ 
+   install -Dm0644 src/examples/logrotate "$pkgdir"/etc/logrotate.d/sssd
+   install -Dm0644 contrib/sssd.sysusers "$pkgdir"/usr/lib/sysusers.d/sssd.conf
++  rm -rf $pkgdir/etc/systemd
+   install -Dm0644 "$srcdir"/sssd-perms.tmpfile "$pkgdir"/usr/lib/tmpfiles.d/sssd-perms.conf
+ 
+   setcap cap_dac_read_search,cap_setgid,cap_setuid=p "$pkgdir"/usr/lib/sssd/sssd/krb5_child
+@@ -125,7 +121,6 @@
+   setcap cap_dac_read_search=p "$pkgdir"/usr/lib/sssd/sssd/sssd_pam
+ 
+   cd "$srcdir"
+-  rm -rf "$pkgdir/etc/systemd" # remove the drop-in
+   rm -rf "$pkgdir/var/run"
+ }
+ 
 
 
 ############# Stripped diff below #################
