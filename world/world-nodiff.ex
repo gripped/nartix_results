@@ -739,8 +739,6 @@ gimp-help
 gimp
 girara
 git-lfs
-git
-git-zsh-completion
 gitea
 github-cli
 gkrellm
@@ -836,9 +834,6 @@ go-md2man
 go-tools
 go-yq
 go
-gobject-introspection
-gobject-introspection-runtime
-libgirepository
 gom
 gom-docs
 google-glog
@@ -2177,10 +2172,6 @@ lxdm-gtk3
 lxhotkey
 lxhotkey-gtk3
 lximage-qt
-lxinput
-lxinput-gtk3
-lxlauncher
-lxlauncher-gtk3
 lxmenu-data
 lxmusic
 lxpanel-gtk3
@@ -3030,9 +3021,6 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
@@ -5599,7 +5587,6 @@ webp-pixbuf-loader
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1
 webrtc-audio-processing
-websocketpp
 weechat
 wf-recorder
 wget
@@ -5619,10 +5606,6 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264

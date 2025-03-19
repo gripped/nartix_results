@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -66,13 +66,9 @@
+@@ -2,7 +2,6 @@
+ pkgbase=erlang
+ pkgname=(
+   erlang
+-  erlang-headless
+   erlang-core
+   erlang-asn1
+   erlang-common_test
+@@ -37,7 +36,7 @@
+   erlang-xmerl
+ )
+ pkgver=27.2.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc='General-purpose concurrent functional programming language developed by Ericsson'
+ arch=(x86_64)
+ url='https://erlang.org/'
+@@ -67,13 +66,9 @@
  source=(
    "git+https://github.com/erlang/otp#tag=OTP-$pkgver"
    epmd.conf
@@ -15,7 +32,41 @@
  
  prepare() {
    cd otp
-@@ -161,7 +157,6 @@
+@@ -144,33 +139,6 @@
+   )
+ }
+ 
+-package_erlang-headless() {
+-  pkgdesc+=' (headless, replaces erlang-nox)'
+-  depends=(
+-    erlang-asn1
+-    erlang-core
+-    erlang-diameter
+-    erlang-edoc
+-    erlang-eldap
+-    erlang-eunit
+-    erlang-ftp
+-    erlang-inets
+-    erlang-mnesia
+-    erlang-odbc
+-    erlang-os_mon
+-    erlang-parsetools
+-    erlang-public_key
+-    erlang-runtime_tools
+-    erlang-snmp
+-    erlang-ssh
+-    erlang-ssl
+-    erlang-syntax_tools
+-    erlang-tftp
+-    erlang-tools
+-    erlang-xmerl
+-  )
+-}
+-
+ package_erlang-core() {
+   pkgdesc='Erlang core compenents (compiler, crypto, erts, kernel, stdlib)'
+   depends=(
+@@ -189,7 +157,6 @@
      erlang-stdlib
    )
  

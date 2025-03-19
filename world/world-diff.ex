@@ -141,6 +141,8 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+git
+git-zsh-completion
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -159,6 +161,9 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
+gobject-introspection
+gobject-introspection-runtime
+libgirepository
 godot
 godot-mono
 greetd-tuigreet
@@ -372,6 +377,10 @@ luarocks
 lxc
 lxcfs
 lxd
+lxinput
+lxinput-gtk3
+lxlauncher
+lxlauncher-gtk3
 lxqt-config
 lxqt-qtplugin
 lxqt-session
@@ -575,6 +584,9 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+protobuf
+python-protobuf
+ruby-google-protobuf
 proxytunnel
 pulseaudio
 libpulse
@@ -823,6 +835,7 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
+websocketpp
 weston
 wireplumber
 libwireplumber
@@ -833,6 +846,10 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

@@ -19,6 +19,10 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
+lxinput
+lxinput-gtk3
+lxlauncher
+lxlauncher-gtk3
 lxpanel
 lxqt-wayland-session
 lxsession
