@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,21 @@
+@@ -1,25 +1,21 @@
  
  pkgname=libtg_owt
 -_commit=be39b8c8d0db1f377118f813f0c4bd331d341d5e
 -pkgver=0.git28.${_commit:0:7}
--pkgrel=2
+-pkgrel=3
 +_commit=592b14d13bf9103226e90a83571e24c49f6bfdcd
 +pkgver=0.git24.${_commit:0:7}
 +pkgrel=1
@@ -21,11 +21,13 @@
 +             'ffmpeg' 'libva' 'opus' 'yasm' 'libjpeg-turbo' 'pipewire' 'libxtst' 'libepoxy')
  options=('staticlibs')
 -source=("git+${url}.git#commit=${_commit}"
+-        libtg-pipewire-types.patch::https://github.com/desktop-app/tg_owt/pull/149.patch
 -        "git+https://chromium.googlesource.com/libyuv/libyuv/"
 -        "git+https://github.com/google/crc32c"
 -        "git+https://github.com/abseil/abseil-cpp"
 -        "git+https://github.com/cisco/libsrtp")
 -b2sums=('48df65bbb3e6e8808517e1effa4b0202049c6bcb35a5f8e7004f7a2bd48f4b2a373fd8caeb26e3d25ac2b3646e778b16c714964b75e80a4edc64a421eaab861f'
+-        'a1a68be62f61544e0762e080e9500e75754fdc9098931ce470ff1654414bee91db21e00c9e6e56b12b6a8e2d2cdcca2f1a5c2360c0272eb5dae6ff8a27df6286'
 -        'SKIP'
 +source=("tg_owt::git+${url}.git#commit=${_commit}"
 +        "libvpx::git+https://chromium.googlesource.com/webm/libvpx.git"
@@ -35,7 +37,7 @@
          'SKIP'
          'SKIP'
          'SKIP')
-@@ -25,10 +23,9 @@
+@@ -27,13 +23,10 @@
  prepare() {
    cd tg_owt
    git submodule init
@@ -47,8 +49,11 @@
 +  git config submodule.src/third_party/libyuv.url "$srcdir"/libyuv
 +  git config submodule.src/third_party/pipewire.url "$srcdir"/pipewire
    git -c protocol.file.allow=always submodule update
+-
+-  patch -Np1 -i "$srcdir"/libtg-pipewire-types.patch
  }
  
+ build() {
 
 
 ############# Stripped diff below #################
@@ -70,7 +75,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,9 @@
+@@ -1,12 +1,10 @@
  prepare() {
  cd tg_owt
  git submodule init
@@ -82,5 +87,7 @@
 +git config submodule.src/third_party/libyuv.url "$srcdir"/libyuv
 +git config submodule.src/third_party/pipewire.url "$srcdir"/pipewire
  git -c protocol.file.allow=always submodule update
+-patch -Np1 -i "$srcdir"/libtg-pipewire-types.patch
  }
  build() {
+ cd tg_owt

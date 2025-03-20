@@ -34,10 +34,6 @@ lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-gpm
-lib32-gstreamer
-lib32-gst-plugins-base-libs
-lib32-gst-plugins-base
-lib32-gst-plugins-good
 lib32-gtk2
 lib32-gtk3
 lib32-harfbuzz

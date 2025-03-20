@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ 
+ pkgname=python-kombu
+-pkgver=5.5.0
+-pkgrel=1
++_pkgname=${pkgname#python-}
++pkgver=5.4.2
++pkgrel=4
+ pkgdesc="A messaging library for Python"
+ arch=(any)
+ url="https://github.com/celery/kombu"
+@@ -47,24 +48,23 @@
+   'python-zstandard: for zstd compression support'
+ )
+ source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('19fc871b0e07a12b3f1939525f09ccd72cffe63488bcb60b7e44d555dfda0aca')
++sha256sums=('e601548a1d0af85f439a9cbe2471ea461232f23967f219e2db6d4cd2186e67a7')
+ 
+ build() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_pkgname-$pkgver"
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_pkgname-$pkgver"
+   pytest -v \
+     --ignore t/unit/transport/test_azureservicebus.py \
+     --ignore t/unit/transport/test_azurestoragequeues.py \
+-    --ignore t/unit/transport/test_gcpubsub.py \
+     --deselect t/unit/transport/test_redis.py::test_Channel::test_global_keyprefix_transaction
+ }
+ 
+ package() {
+-  cd ${pkgname#python-}-$pkgver
++  cd "$_pkgname-$pkgver"
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd ${pkgname#python-}-$pkgver
++cd "$_pkgname-$pkgver"
+ python -m build --wheel --no-isolation
+ }

@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,10 +43,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-python-socks
+ pkgver=2.7.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Core proxy client (SOCKS4, SOCKS5, HTTP) functionality for Python'
+ arch=('any')
+ url='https://github.com/romis2012/python-socks'
+@@ -28,6 +28,7 @@
+ )
+ optdepends=(
+   'python-anyio: anyio support'
++  'python-async-timeout: asyncio support'
+   'python-curio: curio support'
+   'python-trio: trio support'
+ )
+@@ -42,10 +43,6 @@
    python -m build --wheel --no-isolation
  }
  

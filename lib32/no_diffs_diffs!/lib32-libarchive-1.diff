@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=lib32-libarchive
+ _name="${pkgname#lib32-}"
+ pkgver=3.7.7
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Multi-format archive and compression library - 32bit"
+ arch=(x86_64)
+ url="https://libarchive.org"
+@@ -35,6 +35,8 @@
+ )
+ 
+ _backports=(
++  "v${pkgver}..eddb9fcf93974f1ecca14fcfa4f67992f25bb790"
++
+   'c9bc934e7e91d302e0feca6e713ccc38d6d01532'
+ )
+ 

@@ -17,6 +17,7 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+libtg_owt
 libxfce4ui
 light
 lxinput
@@ -36,6 +37,7 @@ mate-system-monitor
 mimalloc
 mpd
 nvidia-390xx-utils
+nvm
 qbittorrent
 qbittorrent-nox
 rage

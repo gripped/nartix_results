@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mgard
+ pkgver=1.5.2
+-pkgrel=6
++pkgrel=5
+ pkgdesc="MultiGrid Adaptive Reduction of Data"
+ arch=(x86_64)
+ url="https://github.com/CODARcode/MGARD"
+@@ -40,7 +40,7 @@
+ }
+ 
+ check() {
+-  OMP_NUM_THREADS=4 ./build/bin/tests
++  ctest --test-dir build --output-on-failure
+ }
+ 
+ package() {

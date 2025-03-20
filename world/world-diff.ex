@@ -2,6 +2,7 @@
 accountsservice
 alacritty
 alsa-utils
+android-tools
 apache
 apcupsd
 appstream
@@ -9,6 +10,7 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
+arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -72,7 +74,6 @@ dbus-python
 dbus-python-docs
 ddcutil
 dhcpcd
-digikam
 dns-over-https
 docker
 dolphin-emu
@@ -114,6 +115,7 @@ fcitx5
 fcron
 firefox
 firewalld
+fish
 flatpak
 flatpak-docs
 fluidsynth
@@ -141,9 +143,12 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+gimp
 git
 git-zsh-completion
 gjs
+gmic
+gimp-plugin-gmic
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -210,6 +215,8 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gutenprint
+foomatic-db-gutenprint-ppds
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -276,6 +283,7 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
+kicad
 kismet
 kitty
 kitty-terminfo
@@ -285,6 +293,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+lib3mf
 libappimage
 libatasmart
 libayatana-indicator
@@ -323,6 +332,8 @@ libgudev
 libguestfs
 libhandy0
 libinput
+libjxl
+libjxl-doc
 libldm
 libmanette
 libmanette-docs
@@ -331,6 +342,8 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
+libsrtp
+libsrtp-docs
 libstaroffice
 libtg_owt
 libudev0-shim
@@ -385,6 +398,7 @@ lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
+ly
 mailman3
 mako
 maliit-framework
@@ -421,6 +435,7 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
+menu-cache
 mesa
 opencl-clover-mesa
 opencl-rusticl-mesa
@@ -584,10 +599,12 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+protobuf-c
 protobuf
 python-protobuf
 ruby-google-protobuf
 proxytunnel
+pugixml
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -599,11 +616,17 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-elastic-transport
+python-factory-boy
 python-ipykernel
+python-keyring
+python-kombu
+python-proxy.py
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-validate-pyproject
 qastools
 qbittorrent
 qbittorrent-nox
@@ -694,6 +717,7 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
+qt6-grpc
 qt6-serialport
 qterminal
 qtermwidget
@@ -734,6 +758,7 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+senpai
 sfml
 shairport-sync
 signal-desktop

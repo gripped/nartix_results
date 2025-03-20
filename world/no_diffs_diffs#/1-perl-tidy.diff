@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=perl-tidy
+-pkgver=20250311
++pkgver=20250214
+ pkgrel=1
+ pkgdesc="Parses and beautifies perl source"
+ arch=('any')
+@@ -9,7 +9,7 @@
+ depends=('perl>=5.10.0')
+ options=('!emptydirs')
+ source=(https://www.cpan.org/authors/id/S/SH/SHANCOCK/Perl-Tidy-$pkgver.tar.gz)
+-sha256sums=('7fc6ceda4e3c9fc79c777afbcf8d167ecc35b16ff81c9cbeaf727b15d0502d8a')
++sha256sums=('e71d8e93b2ff55ed7e0cc981117424499edfc927e96e353dbc6fbea1f2a81fa3')
+ 
+ build() {
+   cd  "${srcdir}"/Perl-Tidy-$pkgver

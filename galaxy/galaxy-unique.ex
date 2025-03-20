@@ -133,7 +133,6 @@ moodbar
 mpd-dinit-user
 mpd-dinit
 numix-icon-theme
-nvm
 octopi
 opensnitch-openrc
 pacifica-icon-theme
