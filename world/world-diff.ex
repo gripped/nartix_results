@@ -2,7 +2,6 @@
 accountsservice
 alacritty
 alsa-utils
-android-tools
 apache
 apcupsd
 appstream
@@ -10,7 +9,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -30,7 +28,6 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
-bogofilter
 bolt
 box2d
 brightnessctl
@@ -115,7 +112,6 @@ fcitx5
 fcron
 firefox
 firewalld
-fish
 flatpak
 flatpak-docs
 fluidsynth
@@ -143,12 +139,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-gimp
-git
-git-zsh-completion
 gjs
-gmic
-gimp-plugin-gmic
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -166,9 +157,6 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
-gobject-introspection
-gobject-introspection-runtime
-libgirepository
 godot
 godot-mono
 greetd-tuigreet
@@ -215,8 +203,6 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
-gutenprint
-foomatic-db-gutenprint-ppds
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -233,6 +219,7 @@ haveged
 hexchat
 hidapi
 hipify-clang
+hiprt
 hwloc
 hyprland
 i2pd
@@ -283,7 +270,6 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
-kicad
 kismet
 kitty
 kitty-terminfo
@@ -293,7 +279,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-lib3mf
 libappimage
 libatasmart
 libayatana-indicator
@@ -332,18 +317,12 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libjxl
-libjxl-doc
 libldm
-libmanette
-libmanette-docs
 libmspub
 libnvme
 libprocps
 libsidplay
 libsidplayfp
-libsrtp
-libsrtp-docs
 libstaroffice
 libtg_owt
 libudev0-shim
@@ -435,7 +414,6 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
-menu-cache
 mesa
 opencl-clover-mesa
 opencl-rusticl-mesa
@@ -599,12 +577,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 proxytunnel
-pugixml
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -616,17 +589,11 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-elastic-transport
-python-factory-boy
 python-ipykernel
-python-keyring
-python-kombu
-python-proxy.py
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-validate-pyproject
 qastools
 qbittorrent
 qbittorrent-nox
@@ -717,7 +684,6 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
-qt6-grpc
 qt6-serialport
 qterminal
 qtermwidget
@@ -758,7 +724,6 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
-senpai
 sfml
 shairport-sync
 signal-desktop
@@ -794,7 +759,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
-thunderbird
 tigervnc
 timew
 tint2
@@ -860,7 +824,6 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
-websocketpp
 weston
 wireplumber
 libwireplumber
@@ -871,10 +834,6 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,13 +9,14 @@
+@@ -2,20 +2,21 @@
+ 
+ pkgbase=util-linux
+ pkgname=(util-linux util-linux-libs)
+-pkgver='2.41'
+-pkgrel=2
++pkgver='2.40.4'
++pkgrel=1
+ pkgdesc='Miscellaneous system utilities for Linux'
+ url='https://github.com/util-linux/util-linux'
  arch=('x86_64')
  makedepends=('asciidoctor'
               'bash-completion'
@@ -16,19 +25,23 @@
  license=(
    'BSD-2-Clause'
    'BSD-3-Clause'
-@@ -34,8 +35,7 @@
+@@ -34,19 +35,17 @@
          pam-{login,common,remote,runuser,su}
          'util-linux.sysusers'
          '60-rfkill.rules'
 -        'rfkill-unblock_.service'
 -        'rfkill-block_.service')
+-sha256sums=('bf69afb12389883698078d47ea5ef299d34346ab1c38a885573833ae4b43e5ec'
 +        0001-util-linux-tmpfiles.patch)
- sha256sums=('32b88bea337aa283e4a84a20eb70fe8df5db6c09cfd99bc133e2503e2e6b53d6'
++sha256sums=('32b88bea337aa283e4a84a20eb70fe8df5db6c09cfd99bc133e2503e2e6b53d6'
              '6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a'
              'ee917d55042f78b8bb03f5467e5233e3e2ddc2fe01e302bc53b218003fe22275'
-@@ -45,8 +45,7 @@
+             '57e057758944f4557762c6def939410c04ca5803cbdd2bfa2153ce47ffe7a4af'
+             '8bfbee453618ba44d60ba7fb00eced6c62edebfc592f2e75dede08e769ed8931'
+             '48d6fba767631e3dd3620cf02a71a74c5d65a525d4c4ce4b5a0b7d9f41ebfea1'
              '3f54249ac2db44945d6d12ec728dcd0d69af0735787a8b078eacd2c67e38155b'
-             'b3d8994c0ab0c50500ed249c90fb709555a369b910e5f3eca758a28d4e73e2d3'
+-            '4a0b3dd8aa6d34dd29e1d153f396cacf908b0d64f7218276cbcab684587c0a0a'
++            'b3d8994c0ab0c50500ed249c90fb709555a369b910e5f3eca758a28d4e73e2d3'
              '7423aaaa09fee7f47baa83df9ea6fef525ff9aec395c8cbd9fe848ceb2643f37'
 -            '8ccec10a22523f6b9d55e0d6cbf91905a39881446710aa083e935e8073323376'
 -            'a22e0a037e702170c7d88460cc9c9c2ab1d3e5c54a6985cd4a164ea7beff1b36')
@@ -36,10 +49,12 @@
  
  _backports=(
  )
-@@ -69,15 +68,16 @@
+@@ -69,17 +68,16 @@
      git revert --mainline 1 --no-commit "${_c}"
    done
  
+-  sed -i '/^u /s|u|u!|' misc-utils/uuidd-sysusers.conf.in
+-
 -  sed -i '/dirty=/c dirty=' tools/git-version-gen
 +  git apply ../0001-util-linux-tmpfiles.patch; sed -i '/dirty=/c dirty=' tools/git-version-gen
  }
@@ -55,7 +70,7 @@
      -Dncurses=disabled
      -Dncursesw=enabled
      -Deconf=disabled
-@@ -90,7 +90,7 @@
+@@ -92,7 +90,7 @@
      -Dbuild-write=enabled
    )
  
@@ -64,7 +79,7 @@
  
    meson compile -C build
  }
-@@ -109,7 +109,7 @@
+@@ -111,7 +109,7 @@
             'pam'
             'readline'
             'shadow'
@@ -73,7 +88,7 @@
             'zlib')
    optdepends=('words: default dictionary for look')
    backup=(etc/pam.d/chfn
-@@ -138,7 +138,6 @@
+@@ -140,7 +138,6 @@
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su"
    install -m0644 pam-su "${pkgdir}/etc/pam.d/su-l"
  
@@ -81,7 +96,7 @@
  
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
-@@ -154,10 +153,6 @@
+@@ -156,10 +153,6 @@
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"
  

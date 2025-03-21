@@ -138,6 +138,7 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
+libtg_owt
 libvarlink
 libwnck
 libxfce4util
@@ -167,6 +168,10 @@ lxdm-gtk3
 lxhotkey
 lxhotkey-gtk3
 lximage-qt
+lxinput
+lxinput-gtk3
+lxlauncher
+lxlauncher-gtk3
 lxmenu-data
 lxmusic
 lxpanel-gtk3

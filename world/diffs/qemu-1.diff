@@ -1,25 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,8 +22,8 @@
-   qemu-vmsr-helper
-   qemu-{base,desktop,emulators-full,full}
- )
--pkgver=9.2.2
--pkgrel=1
-+pkgver=9.2.0
-+pkgrel=2
- pkgdesc="A generic and open source machine emulator and virtualizer"
- arch=(x86_64)
- url="https://www.qemu.org/"
-@@ -70,7 +70,6 @@
-   libbpf
-   libcacard
-   libcap-ng
--  libcbor
-   libepoxy
-   libiscsi
-   libnfs
-@@ -107,7 +106,7 @@
+@@ -107,7 +107,7 @@
    snappy
    spice-protocol
    spice
@@ -28,48 +9,7 @@
    usbredir
    vde2
    virglrenderer
-@@ -123,9 +122,9 @@
-   65-kvm.rules
-   99-qemu-guest-agent.rules
-   $pkgbase-8.1.1-static_regression.patch
--  $pkgbase-9.2.2-libnfs6.patch
-+  $pkgbase-9.2.0-libnfs6.patch
- )
--sha512sums=('b010876da9f91da01dbb9e06705a1358d5f062d0fdd4ad5c8cd8ce3fd43adcefcf72a61216eb8d415281f6607b945ce1cfb6b5fc5692ada9163e8f05b7fb5533'
-+sha512sums=('f92548623e4e31400c823a2d78417a8a4ecfccb07f3ee4883e2f2ad33054539d2a37d076dbc64df42c6c86c08fa7c2c975cd6e823aa14d5f20cef83348006813'
-             'SKIP'
-             '7b412ffa5dcda47b0a4ec9e2c5e5e1d9eaaaf0a087b7ea3ead3e706ba4c9cafb919beadd088a0299b6f7aab753b81a5eafb545b4842ee5f26646d16544dd02a7'
-             '6e838773d63ae0ffdffe2b891bf611d8f5f3c67a9bc4cbbedf8363c150c2c9971c8e44d92270bc581af40eb0ece02192760bcdd6aee229fff55635f3a4825afa'
-@@ -133,8 +132,8 @@
-             'bdf05f99407491e27a03aaf845b7cc8acfa2e0e59968236f10ffc905e5e3d5e8569df496fd71c887da2b5b8d1902494520c7da2d3a8258f7fd93a881dd610c99'
-             '93b905046fcea8a0a89513b9259c222494ab3b91319dde23baebcb40dc17376a56661b159b99785d6e816831974a0f3cbd7b2f7d89e5fc3c258f88f4492f3839'
-             'c7d086a951e9a378434ea95a843a4b01f0eb2ae430135a81365147cf6806a7ba1b49014a3aa66904970853ba84a4a28dbaded7bccb99a0bc3730572c80fb8b12'
--            '7949b1435ed979836c59149b4b06b80fe14fa89ef12d1e027860df392e2ffdaf4a0f881021f80b4ee56e8657068bf7f2c6415c9891f34c32228b9d35e9359c8f')
--b2sums=('fe341d25010b02c47c263e6b1bf1a64f72226e188bd79901ec0072005994e305f5c75b8e5b3f36af1e3b3f776a04cd18b4084dc044952f34b131f3b94134f5b8'
-+            '42b2921fbee18c819a98df18d44374266d0283b6e9863121de143b8f87667dfa2ea6f5872b114d390e6dce4333fb1a61a1380016a511bd45a01a7668eabceddd')
-+b2sums=('5800556f356e4324124e250c02a07857eef3a6f22995a819fe972061fa750ebf7233da64ae4c0a3e775b1639c870be4b7312d86d9866fedf2bc99074aad0a10a'
-         'SKIP'
-         'b1eca364aa60f130ff5e649f5d004d3fcb75356d3421a4542efdfc410d39b40d9434d15e1dd7bbdbd315cb72b5290d3ea5f77f9c41961a5601cd28ef7bbe72e8'
-         '2102e4a34e11e406e9606c97e026e7b92e887e296a7f77b9cede1b37119d0df33735f3588628167b2b8e32244c196c491bfab623e2caddac9014d445aa2a6d98'
-@@ -142,7 +141,7 @@
-         '3559fe9c4f744194939770047a0a02d07ff791c845a80726d0bc7b8c4801ed5f11150e7d5adab813844b3dab1cf38c3a5a87fb6efbb8fc9dccdda9fa56409ed8'
-         'a9a2bdfeeb44eb86cbe88ac7c65f72800bdb2fd5cecb02f3a258cf9470b52832180aab43c89d481f7fd4d067342a9a27dd6c8a94d625b95d6e2b912e47d274e7'
-         '209ec05e161d157aaa08a9fcbea45cf87aa22fe9360f9b3c477a78a274e4ecee989c16121f9e6b7765bb479c9db718c98db047c27fd426c127c4c95e28877a16'
--        '16fe3a16eb874a69324ae42ba9f96deacb832e8cf9123cafb7f5148fbc3c84a2c78876b8fc62b9b9abefabfcfdcdbcfc1955040368d4dc1b3d4ccd719ec9b410')
-+        '1b08776936ce1dcd4d0c93a621cda390fac2fbbd18fa4612f13e5b4f4f893ee354ef32457bde341e9099ff8e77c4070521de6b7cc5f2d958618ae6638adbb71f')
- validpgpkeys=('CEACC9E15534EBABB82D3FA03353C9CEF108B584') # Michael Roth <flukshun@gmail.com>
- 
- _qemu_system_deps=(
-@@ -270,7 +269,7 @@
- prepare() {
-   patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-8.1.1-static_regression.patch
- 
--  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-9.2.2-libnfs6.patch
-+  patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-9.2.0-libnfs6.patch
- 
-   sed -n '1,23p' $pkgbase-$pkgver/tcg/tcg-internal.h > tcg.LICENSE.MIT.txt
-   sed -n '1,23p' $pkgbase-$pkgver/tcg/arm/tcg-target.c.inc > tcg-arm.LICENSE.MIT.txt
-@@ -280,7 +279,6 @@
+@@ -280,7 +280,6 @@
  
    sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
  
@@ -77,7 +17,7 @@
  
    mkdir -vp build
    mkdir -vp build-static
-@@ -702,14 +700,13 @@
+@@ -702,14 +701,13 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -93,7 +33,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -775,14 +772,14 @@
+@@ -775,14 +773,14 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
@@ -110,7 +50,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -796,7 +793,7 @@
+@@ -796,7 +794,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -119,7 +59,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -817,7 +814,7 @@
+@@ -817,7 +815,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -128,7 +68,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -831,7 +828,7 @@
+@@ -831,7 +829,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -137,7 +77,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -859,21 +856,21 @@
+@@ -859,21 +857,21 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -162,7 +102,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -887,7 +884,7 @@
+@@ -887,7 +885,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -171,7 +111,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -908,7 +905,7 @@
+@@ -908,7 +906,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -180,7 +120,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -922,14 +919,14 @@
+@@ -922,14 +920,14 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -197,16 +137,16 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -950,7 +947,7 @@
+@@ -950,7 +948,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
 -  depends=("${_qemu_system_deps[@]}" dtc edk2-ovmf libcbor libcbor.so qemu-system-x86-firmware=$pkgver-$pkgrel seabios systemd-libs libudev.so)
-+  depends=("${_qemu_system_deps[@]}" dtc edk2-ovmf qemu-system-x86-firmware=$pkgver-$pkgrel seabios libudev libudev.so)
++  depends=("${_qemu_system_deps[@]}" dtc edk2-ovmf libcbor libcbor.so qemu-system-x86-firmware=$pkgver-$pkgrel seabios libudev libudev.so)
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -964,7 +961,7 @@
+@@ -964,7 +962,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -215,7 +155,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -999,9 +996,8 @@
+@@ -999,9 +997,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -227,7 +167,7 @@
    _install_licenses
  }
  
-@@ -1136,7 +1132,6 @@
+@@ -1136,7 +1133,6 @@
    pkgdesc="QEMU persistent reservation utility"
    depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel)
    mv -v $pkgname/* "$pkgdir"
@@ -250,16 +190,7 @@
  edk2-ovmf
  fuse3
  gcc-libs
-@@ -29,8 +27,6 @@
- libcacard
- libcap-ng
- libcap-ng.so
--libcbor
--libcbor.so
- libcurl.so
- libelf
- libepoxy
-@@ -63,6 +59,7 @@
+@@ -63,6 +61,7 @@
  libspice-server.so
  libssh
  libssh.so
@@ -267,7 +198,7 @@
  libudev.so
  liburing
  liburing.so
-@@ -175,8 +172,7 @@
+@@ -175,8 +174,7 @@
  snappy
  spice
  spice-protocol

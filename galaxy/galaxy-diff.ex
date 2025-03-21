@@ -8,6 +8,7 @@ ephoto
 evisum
 firefox
 freecell-solver
+gammastep
 gpicview
 greetd-regreet
 gtklock
@@ -17,13 +18,8 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libtg_owt
 libxfce4ui
 light
-lxinput
-lxinput-gtk3
-lxlauncher
-lxlauncher-gtk3
 lxpanel
 lxqt-wayland-session
 lxsession

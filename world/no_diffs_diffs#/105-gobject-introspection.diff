@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -57,7 +57,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,6 @@
+ -D glib_src_dir="$srcdir/glib"
+ -D gtk_doc=true
+ )
+-arch-meson $pkgbase build "${meson_options[@]}"
++artix-meson $pkgbase build "${meson_options[@]}"
+ meson compile -C build
+ }

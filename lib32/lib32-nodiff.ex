@@ -34,6 +34,10 @@ lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-gpm
+lib32-gstreamer
+lib32-gst-plugins-base-libs
+lib32-gst-plugins-base
+lib32-gst-plugins-good
 lib32-gtk2
 lib32-gtk3
 lib32-harfbuzz
@@ -58,6 +62,7 @@ lib32-libcanberra
 lib32-libcap
 lib32-libcups
 lib32-libdatrie
+lib32-libdecor
 lib32-libdrm
 lib32-libdv
 lib32-libelf
@@ -158,6 +163,8 @@ lib32-readline
 lib32-rest
 lib32-sdl12-compat
 lib32-sdl2
+lib32-sdl3
+lib32-sndio
 lib32-speex
 lib32-speexdsp
 lib32-spirv-tools

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -110,7 +110,7 @@
+     -Dheadless-tests=disabled # enabled by default, depends on xorg-server-xvfb
+   )
+ 
+-  arch-meson ${pkgname}-${_pkgver} build "${meson_options[@]}"
++  artix-meson ${pkgname}-${_pkgver} build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,6 @@
+ -Dilbm=disabled
+ -Dheadless-tests=disabled # enabled by default, depends on xorg-server-xvfb
+ )
+-arch-meson ${pkgname}-${_pkgver} build "${meson_options[@]}"
++artix-meson ${pkgname}-${_pkgver} build "${meson_options[@]}"
+ meson compile -C build
+ }

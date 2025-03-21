@@ -62,6 +62,7 @@ analitza
 analitza5
 anari-sdk
 android-file-transfer
+android-tools
 android-udev
 angelfish
 ansible-core
@@ -100,6 +101,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -219,6 +221,11 @@ blosc2
 bluez-qt
 bluez-qt5
 bmake
+bogofilter
+bogofilter-db
+bogofilter-kyotocabinet
+bogofilter-lmdb
+bogofilter-sqlite
 boinc
 boinc-nox
 bomber
@@ -540,6 +547,7 @@ entr
 epiphany
 erlang-nox
 erlang
+erlang-headless
 erlang-core
 erlang-asn1
 erlang-common_test
@@ -640,6 +648,7 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+fish
 five-or-more
 flac
 flac-doc
@@ -734,8 +743,11 @@ gi-docgen
 giflib
 gifski
 gimp-help
+gimp
 girara
 git-lfs
+git
+git-zsh-completion
 gitea
 github-cli
 gkrellm
@@ -758,6 +770,8 @@ glslang
 glu
 glusterfs
 glycin
+gmic
+gimp-plugin-gmic
 gmime3
 gn
 gnome-app-list
@@ -829,6 +843,9 @@ go-md2man
 go-tools
 go-yq
 go
+gobject-introspection
+gobject-introspection-runtime
+libgirepository
 gom
 gom-docs
 google-glog
@@ -959,6 +976,8 @@ gupnp-dlna
 gupnp-igd
 gupnp
 gupnp-docs
+gutenprint
+foomatic-db-gutenprint-ppds
 gv
 gwenhywfar
 gwenview
@@ -992,7 +1011,6 @@ hipblas
 hipcub
 hipfft
 hiprand
-hiprt
 hipsolver
 hipsparse
 hiredis
@@ -1332,6 +1350,7 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1562,6 +1581,9 @@ lua51-lgi
 lua53-lgi
 lhasa
 lib2geom
+lib3mf
+
+python-
 libabw
 libaccounts-glib
 libaccounts-qt
@@ -1740,6 +1762,8 @@ libixion
 libjcat
 libjpeg-turbo
 libjuice
+libjxl
+libjxl-doc
 libkate
 libkate-docs
 libkcddb
@@ -1782,6 +1806,8 @@ lua53-luv
 liblxqt
 liblzf
 libmad
+libmanette
+libmanette-docs
 libmatekbd
 libmatemixer
 libmateweather
@@ -1946,6 +1972,8 @@ libspiro
 libspnav
 libspng
 libsquish
+libsrtp
+libsrtp-docs
 libssh
 libssh-docs
 libstatgrab
@@ -2267,6 +2295,7 @@ memray
 memtest86plus
 memtest86+-efi
 memtest86+-iso
+menu-cache
 menumaker
 mercurial
 merkuro
@@ -3005,12 +3034,17 @@ projectm-sdl
 projectm-pulseaudio
 prometheus
 prosody
+protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
 psutils
 ptex
 publicsuffix-list
+pugixml
 pulseaudio-qt
 pulsemixer
 puppet
@@ -3378,6 +3412,7 @@ python-editables
 python-editdistance-s
 python-editdistance
 python-editor
+python-elastic-transport
 python-elasticsearch
 python-elementpath
 python-email-validator
@@ -3396,6 +3431,7 @@ python-executing
 python-expandvars
 python-expects
 python-extras
+python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
@@ -3619,10 +3655,12 @@ python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
+python-keyring
 python-keyrings-alt
 python-keystoneauth1
 python-keyutils
 python-kiwisolver
+python-kombu
 python-krb5
 python-kubernetes
 python-lark-parser
@@ -3876,6 +3914,7 @@ python-prometheus_client
 python-promise
 python-prompt_toolkit
 python-proxmoxer
+python-proxy.py
 python-psutil
 python-psycopg-pool
 python-psycopg
@@ -4364,6 +4403,7 @@ python-urwid
 python-userpath
 python-uvloop
 python-validate-email
+python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4524,6 +4564,7 @@ qt6-connectivity
 qt6-datavis3d
 qt6-declarative
 qt6-graphs
+qt6-grpc
 qt6-httpserver
 qt6-imageformats
 qt6-languageserver
@@ -5052,6 +5093,7 @@ seabios
 seabios-docs
 seahorse
 semver
+senpai
 sequoia-sq
 sequoia-sqv
 serd
@@ -5378,6 +5420,7 @@ thermald
 threadweaver
 threadweaver5
 thrift
+thunderbird
 tidy
 time
 timeshift
@@ -5562,6 +5605,7 @@ webp-pixbuf-loader
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1
 webrtc-audio-processing
+websocketpp
 weechat
 wf-recorder
 wget
@@ -5581,6 +5625,10 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264
@@ -5606,6 +5654,7 @@ xcb-util-wm
 xcb-util-xrm
 xcb-util
 xclip
+xcompmgr
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-dbus-proxy

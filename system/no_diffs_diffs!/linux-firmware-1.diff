@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,17 +3,30 @@
+@@ -3,20 +3,34 @@
  pkgname=(linux-firmware-whence linux-firmware amd-ucode
           linux-firmware-{nfp,mellanox,marvell,qcom,liquidio,qlogic,bnx2x}
  )
@@ -9,7 +9,7 @@
 -pkgrel=1
 +_tag=20250311
 +pkgver=20250311.b69d4b74
-+pkgrel=2
++pkgrel=3
  pkgdesc="Firmware files for Linux"
 -url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
 -license=('GPL2' 'GPL3' 'custom')
@@ -40,7 +40,11 @@
  validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
  
  _backports=(
-@@ -70,12 +83,15 @@
++    47bc8a2407426274d099607d5af419cb616d9209
+ )
+ 
+ prepare() {
+@@ -70,12 +84,15 @@
    cd ${pkgbase}
  
    ZSTD_CLEVEL=19 make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
@@ -56,7 +60,7 @@
  
    _pick linux-firmware-nfp usr/lib/firmware/netronome
    _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
-@@ -100,6 +116,8 @@
+@@ -100,6 +117,8 @@
  package_amd-ucode() {
    pkgdesc="Microcode update image for AMD CPUs"
    license=(custom)
@@ -65,7 +69,7 @@
  
    install -Dt "${pkgdir}/boot" -m644 amd-ucode.img
  
-@@ -154,4 +172,3 @@
+@@ -154,4 +173,3 @@
  
    mv -v linux-firmware-bnx2x/* "${pkgdir}"
  }
