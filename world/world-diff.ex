@@ -1,5 +1,6 @@
 0ad
 accountsservice
+adwaita-fonts
 alacritty
 alsa-utils
 apache
@@ -159,6 +160,7 @@ gnome-user-share
 go-bindata
 godot
 godot-mono
+gpicview
 greetd-tuigreet
 greetd
 $pkgbase
@@ -219,7 +221,6 @@ haveged
 hexchat
 hidapi
 hipify-clang
-hiprt
 hwloc
 hyprland
 i2pd
@@ -373,10 +374,13 @@ lxinput
 lxinput-gtk3
 lxlauncher
 lxlauncher-gtk3
+lxmenu-data
 lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
+lxtask
+lxtask-gtk3
 ly
 mailman3
 mako
@@ -488,6 +492,7 @@ opencollada
 opendht
 openmpi
 openmpi-docs
+openntpd
 opensmtpd
 opensnitch
 opensubdiv
@@ -577,6 +582,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+privoxy
 proxytunnel
 pulseaudio
 libpulse
@@ -755,6 +761,9 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+texlive-texmf
+texlive-doc
+texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -825,6 +834,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wget
 wireplumber
 libwireplumber
 wireplumber-docs

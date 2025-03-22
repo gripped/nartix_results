@@ -19,22 +19,7 @@
    'python-passlib: for Azure and BSD support'
    'python-urllib3: for LXD and Scaleway data sources'
  )
-@@ -52,20 +49,13 @@
- )
- source=(
-   $_url/archive/$pkgver/$pkgname-$pkgver.tar.gz
--  $pkgname-24.3.1-systemd-ordering.patch
- )
--sha512sums=('01b798d67328ecd66229568233fb674f45c055ac469adb31a55a909b6b2c8fd1901a833accb66423923b8945210aa4dc6a0d61945787aabe414c01b501b1416d'
--            '83985119e95d7f377353d207b7485b496ba60a724a909899071ee0b09a52ecec22c0353d0e107631336db0018bf86db12d4b951b4f2dcbef208f5a0e6cbd2f78')
--b2sums=('7e4cb8bd65d34d08b4b4e5ea2370ac952e05b3a210b91a9b29d8e4b633246a9520c2d9259aedfe8edded0d7d761808b86b6b19d98309633c981b2eb0e7cf1f93'
--        '5069819bf18f156b35768d3607dba1f3fcd79ef6f0571886734f6472cc2f3fa3db4fc330f32b176501ea7fde34d1ccf15d747a17b4b80ec050a996d106a4afe8')
--
--prepare() {
--  patch -Np1 -d $pkgname-$pkgver -i ../$pkgname-24.3.1-systemd-ordering.patch
--}
-+sha512sums=('01b798d67328ecd66229568233fb674f45c055ac469adb31a55a909b6b2c8fd1901a833accb66423923b8945210aa4dc6a0d61945787aabe414c01b501b1416d')
-+b2sums=('7e4cb8bd65d34d08b4b4e5ea2370ac952e05b3a210b91a9b29d8e4b633246a9520c2d9259aedfe8edded0d7d761808b86b6b19d98309633c981b2eb0e7cf1f93')
+@@ -58,7 +55,7 @@
  
  build() {
    cd $pkgname-$pkgver
@@ -43,13 +28,14 @@
  }
  
  check() {
-@@ -101,12 +91,4 @@
+@@ -94,13 +91,5 @@
    install -vDm 644 doc/man/*.1 -t "$pkgdir/usr/share/man/man1/"
    install -vDm 655 bash_completion/$pkgname -t "$pkgdir/usr/share/bash-completion/completions/"
    install -vDm 644 udev/*.rules -t "$pkgdir/usr/lib/udev/rules.d/"
 -  install -vdm 755 "$pkgdir/usr/lib/systemd/system"{,-generators}
--  for _file in cloud-{config,final,init-{local,main,network}}.service; do
--    ./tools/render-template --variant arch ./systemd/$_file.tmpl "$pkgdir/usr/lib/systemd/system/$_file"
+-  for template_file in ./systemd/*.service.tmpl; do
+     unit_file="$(basename "${template_file%%.tmpl}")"
+-    ./tools/render-template --variant arch $template_file "$pkgdir/usr/lib/systemd/system/$unit_file"
 -  done
 -  install -vDm 644 systemd/*.{service,socket,target} "$pkgdir/usr/lib/systemd/system/"
 -  ./tools/render-template --variant arch ./systemd/cloud-init-generator.tmpl "$pkgdir/usr/lib/systemd/system-generators/cloud-init-generator"
@@ -64,7 +50,7 @@
 +++ artix_depends
 @@ -1,6 +1,5 @@
  bash
- dhclient
+ dhcp-client
 -netplan
  openbsd-netcat
  python

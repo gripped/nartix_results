@@ -9,7 +9,6 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -172,7 +171,6 @@ lxinput
 lxinput-gtk3
 lxlauncher
 lxlauncher-gtk3
-lxmenu-data
 lxmusic
 lxpanel-gtk3
 lxqt-about
@@ -194,8 +192,6 @@ lxqt-sudo
 lxqt-themes
 lxrandr
 lxrandr-gtk3
-lxtask
-lxtask-gtk3
 marco
 mate-applets
 mate-backgrounds

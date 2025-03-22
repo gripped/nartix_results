@@ -1,4 +1,5 @@
 alsa-utils
+blender
 cinnamon-desktop
 copyq
 doctest
@@ -20,10 +21,13 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
+lxmenu-data
 lxpanel
 lxqt-wayland-session
 lxsession
 lxsession-gtk3
+lxtask
+lxtask-gtk3
 lxterminal
 ly
 mate-control-center

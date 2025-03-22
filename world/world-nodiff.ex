@@ -218,6 +218,7 @@ blinken
 blockdiag
 blosc
 blosc2
+blueprint-compiler
 bluez-qt
 bluez-qt5
 bmake
@@ -854,7 +855,6 @@ gparted
 gperf
 gperftools
 gphoto2
-gpicview
 gpsd
 gptfdisk
 gradle
@@ -1011,6 +1011,7 @@ hipblas
 hipcub
 hipfft
 hiprand
+hiprt
 hipsolver
 hipsparse
 hiredis
@@ -2187,7 +2188,6 @@ lxdm-gtk3
 lxhotkey
 lxhotkey-gtk3
 lximage-qt
-lxmenu-data
 lxmusic
 lxpanel-gtk3
 lxpanel
@@ -2208,8 +2208,6 @@ lxrandr
 lxrandr-gtk3
 lxsession
 lxsession-gtk3
-lxtask
-lxtask-gtk3
 lxterminal
 lynx
 lzip
@@ -2520,7 +2518,6 @@ openjade
 openjpeg2
 openlibm
 openmp
-openntpd
 openpgl
 openpmix
 openpmix-docs
@@ -3026,7 +3023,6 @@ presage
 print-manager
 prison
 prison5
-privoxy
 procinfo-ng
 proj
 projectm
@@ -5413,9 +5409,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5608,7 +5601,6 @@ webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder
-wget
 whois
 wildmidi
 wireguard-tools
