@@ -15,6 +15,7 @@ lib32-curl
 lib32-libcurl-compat
 lib32-libcurl-gnutls
 lib32-dconf
+lib32-directx-headers
 lib32-duktape
 lib32-e2fsprogs
 lib32-expat
@@ -175,6 +176,7 @@ lib32-twolame
 lib32-util-linux
 lib32-vkd3d
 lib32-vulkan-icd-loader
+lib32-vulkan-utility-libraries
 lib32-vulkan-validation-layers
 lib32-wavpack
 lib32-wayland

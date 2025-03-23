@@ -1,19 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
+@@ -1,8 +1,8 @@
  
  pkgbase=tensorflow
  pkgname=(tensorflow tensorflow-opt tensorflow-cuda tensorflow-opt-cuda python-tensorflow python-tensorflow-opt python-tensorflow-cuda python-tensorflow-opt-cuda)
 -pkgver=2.19.0
 -_pkgver=2.19.0
--pkgrel=1
 +pkgver=2.18.0
 +_pkgver=2.18.0
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Library for computation using data flow graphs for scalable machine learning"
  url="https://www.tensorflow.org/"
- license=('APACHE')
-@@ -14,20 +14,18 @@
+@@ -14,22 +14,18 @@
               'python-installer' 'patchelf' 'libxcrypt-compat' 'clang' 'lld')
  optdepends=('tensorboard: Tensorflow visualization toolkit')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/tensorflow/tensorflow/archive/v${_pkgver}.tar.gz"
@@ -21,6 +19,7 @@
 -        tensorflow-2.18.0-clang19-compat.patch
 -        tensorflow-2.18.0-python-3.13-API.patch
 -        tensorflow-2.18.0-add-python-3.13-requirements-lock-file.patch
+-        tensorflow-2.19.0-cudnn-9.8.patch
 +        tensorflow-newer-hermetic-nvidia-versions.patch
 +        https://github.com/tensorflow/tensorflow/commit/3f4b2fda6ffe7dfe03c1663ef37f54fc4432cc8b.patch
 +        tensorflow-2.16.1-python-distutils-removal.patch
@@ -30,6 +29,7 @@
 -            'd17893b4fc56960d7d4a6a8cd906186018045f103a6712b45a0cdb238ec3e5c9c51e233db24d79918f5991884858f4ac5feabd55c6e7279047afe10549b8d09f'
 -            'a9aaee9a8b98438ea78808634a491ab5f52e230cef6c80c1f2ea26e7ed32159b398420632d2ce3c8291b23158ef94503c2e162c26fa50a6cdf6bb2a750ca2b62'
 -            '757726d348239633adb2ebb332d7906d2749b260afe20b1eef60ee776b0afcc872ea6876603ece028e06498ee2f8e8c5df4882904b8be1748615ccab7bc6fc23'
+-            'dfe4e2ab47c867ccfe36b50f20ebc0c7292e62a7d8778df8a0530a9683ffa0af9dc9b591414932c1eda58ec269c639578c82a2d2c4e249d1157416f93c4b8682'
 +sha512sums=('177decaafcdef27afee84a17268f473141d2d0c092d5f3fe33c9cdd3ce4fd52f6b4b83bc41b4b005c8889f5e65602a57ae3eba8f63e0c527feaf83917453f4e6'
 +            '4c2780d69d72c8794aad252a96b21ab81d4e24cb9c6a4b89ff24f0627c7e96b58bec27e59725ef77d6673665faebcb0e958e4dd9406704899ba12fa8d313929e'
 +            '03e8d7188a81cc237899f4f287f129e7759d268f604252636e007e1ffe71b6a07926c219f79b5bf1f8c088345e292eff461d2375ca1a73af435cdca182e9c26c'
@@ -42,7 +42,7 @@
                      python-astunparse python-pasta python-flatbuffers python-typing_extensions python-ml-dtypes)
  
  get_pyver () {
-@@ -58,12 +56,11 @@
+@@ -60,14 +56,11 @@
    export PATH="${srcdir}/bazel:$PATH"
    bazel --version
  
@@ -52,6 +52,8 @@
 -
 -  patch -Np1 -i ../tensorflow-2.18.0-python-3.13-API.patch -d tensorflow-${_pkgver}
 -  patch -Np1 -i ../tensorflow-2.18.0-add-python-3.13-requirements-lock-file.patch -d tensorflow-${_pkgver}
+-
+-  patch -Np1 -i ../tensorflow-2.19.0-cudnn-9.8.patch -d tensorflow-${_pkgver}
 +  patch -Np1 -i ../tensorflow-newer-hermetic-nvidia-versions.patch -d tensorflow-${_pkgver}
 +
 +  patch -Np1 -i ../3f4b2fda6ffe7dfe03c1663ef37f54fc4432cc8b.patch -d tensorflow-${_pkgver}
@@ -60,7 +62,7 @@
  
    sed -i -E "s/'([0-9a-z_-]+) .= [0-9].+[0-9]'/'\1'/" tensorflow-${_pkgver}/tensorflow/tools/pip_package/setup.py
  
-@@ -106,12 +103,12 @@
+@@ -110,12 +103,12 @@
    export TF_CUDA_PATHS=/opt/cuda,/usr/lib,/usr
    export HERMETIC_CUDA_VERSION=$(/opt/cuda/bin/nvcc --version | sed -n 's/\(release [^.]\+.[^.]\+\),/\1.0,/;s/^.*release \(.*\),.*/\1/p')
    export HERMETIC_CUDNN_VERSION="$(sed -n 's/^#define CUDNN_MAJOR\s*\(.*\).*/\1/p' /usr/include/cudnn_version.h).$(sed -n 's/^#define CUDNN_MINOR\s*\(.*\).*/\1/p' /usr/include/cudnn_version.h).$(sed -n 's/^#define CUDNN_PATCHLEVEL\s*\(.*\).*/\1/p' /usr/include/cudnn_version.h)"
@@ -75,7 +77,7 @@
  }
  
  build() {
-@@ -132,7 +129,7 @@
+@@ -136,7 +129,7 @@
  
    echo "Building with cuda and with non-x86-64 optimizations"
    cd "${srcdir}"/tensorflow-${_pkgver}-opt-cuda
@@ -84,7 +86,7 @@
    export TF_NEED_CUDA=1
    ./configure
    bazel \
-@@ -162,7 +159,7 @@
+@@ -166,7 +159,7 @@
  
    echo "Building without cuda and with non-x86-64 optimizations"
    cd "${srcdir}"/tensorflow-${_pkgver}-opt
@@ -113,7 +115,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,10 +2,9 @@
+@@ -2,11 +2,9 @@
  install -Dm755 "${srcdir}"/bazel_nojdk-6.5.0-linux-x86_64 bazel/bazel
  export PATH="${srcdir}/bazel:$PATH"
  bazel --version
@@ -121,13 +123,14 @@
 -patch -Np1 -i ../tensorflow-2.18.0-clang19-compat.patch -d tensorflow-${_pkgver}
 -patch -Np1 -i ../tensorflow-2.18.0-python-3.13-API.patch -d tensorflow-${_pkgver}
 -patch -Np1 -i ../tensorflow-2.18.0-add-python-3.13-requirements-lock-file.patch -d tensorflow-${_pkgver}
+-patch -Np1 -i ../tensorflow-2.19.0-cudnn-9.8.patch -d tensorflow-${_pkgver}
 +patch -Np1 -i ../tensorflow-newer-hermetic-nvidia-versions.patch -d tensorflow-${_pkgver}
 +patch -Np1 -i ../3f4b2fda6ffe7dfe03c1663ef37f54fc4432cc8b.patch -d tensorflow-${_pkgver}
 +patch -Np1 -i ../tensorflow-2.16.1-python-distutils-removal.patch -d tensorflow-${_pkgver}
  sed -i -E "s/'([0-9a-z_-]+) .= [0-9].+[0-9]'/'\1'/" tensorflow-${_pkgver}/tensorflow/tools/pip_package/setup.py
  sed -i "/set_cuda_local_path(environ_cp, '/d" tensorflow-${_pkgver}/configure.py
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt
-@@ -44,11 +43,11 @@
+@@ -45,11 +43,11 @@
  export TF_CUDA_PATHS=/opt/cuda,/usr/lib,/usr
  export HERMETIC_CUDA_VERSION=$(/opt/cuda/bin/nvcc --version | sed -n 's/\(release [^.]\+.[^.]\+\),/\1.0,/;s/^.*release \(.*\),.*/\1/p')
  export HERMETIC_CUDNN_VERSION="$(sed -n 's/^#define CUDNN_MAJOR\s*\(.*\).*/\1/p' /usr/include/cudnn_version.h).$(sed -n 's/^#define CUDNN_MINOR\s*\(.*\).*/\1/p' /usr/include/cudnn_version.h).$(sed -n 's/^#define CUDNN_PATCHLEVEL\s*\(.*\).*/\1/p' /usr/include/cudnn_version.h)"
@@ -141,7 +144,7 @@
  }
  build() {
  echo "Building with cuda and without non-x86-64 optimizations"
-@@ -66,7 +65,7 @@
+@@ -67,7 +65,7 @@
  //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow
  echo "Building with cuda and with non-x86-64 optimizations"
  cd "${srcdir}"/tensorflow-${_pkgver}-opt-cuda
@@ -150,7 +153,7 @@
  export TF_NEED_CUDA=1
  ./configure
  bazel \
-@@ -92,7 +91,7 @@
+@@ -93,7 +91,7 @@
  //tensorflow/tools/pip_package:wheel --repo_env=WHEEL_NAME=tensorflow_cpu
  echo "Building without cuda and with non-x86-64 optimizations"
  cd "${srcdir}"/tensorflow-${_pkgver}-opt

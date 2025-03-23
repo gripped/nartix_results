@@ -8,8 +8,8 @@
 -  systemd-libs
  )
  makedepends=(
-   appstream-glib
-@@ -43,7 +41,7 @@
+   appstream
+@@ -44,7 +42,7 @@
  }
  
  build() {
@@ -24,7 +24,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,6 +19,4 @@
+@@ -20,6 +20,4 @@
  meson
  pango
  polkit

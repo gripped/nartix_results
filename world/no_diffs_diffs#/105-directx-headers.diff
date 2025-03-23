@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,7 +15,7 @@
- b2sums=('15f8bc4b16483299e3f3da7250bd2f2fbedfdfb7d290cb899a3aca8f8f54e90f260f03c4392cef7d9177a2e3b04eefab80f7385f3d905a299cf90ee444bf922d')
+@@ -20,7 +20,7 @@
+     -D build-test=false
+   )
  
- build() {
--  arch-meson $pkgname build -D build-test=false
-+  artix-meson $pkgname build -D build-test=false
+-  arch-meson directx-headers build "${meson_options[@]}"
++  artix-meson directx-headers build "${meson_options[@]}"
    meson compile -C build
  }
  
@@ -17,9 +17,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
- build() {
--arch-meson $pkgname build -D build-test=false
-+artix-meson $pkgname build -D build-test=false
+@@ -2,6 +2,6 @@
+ local meson_options=(
+ -D build-test=false
+ )
+-arch-meson directx-headers build "${meson_options[@]}"
++artix-meson directx-headers build "${meson_options[@]}"
  meson compile -C build
  }

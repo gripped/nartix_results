@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -38,7 +38,7 @@
+@@ -36,7 +36,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
- git cherry-pick -n 6e4e8a7d90c76cd1aaa8efa8eb676f68e53c84b9
+@@ -4,6 +4,6 @@
+ cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
  }
  build() {
 -arch-meson $pkgname build

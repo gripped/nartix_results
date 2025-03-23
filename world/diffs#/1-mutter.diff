@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -68,7 +68,7 @@
+   python-argcomplete
+   python-gobject
+   startup-notification
+-  systemd-libs
++  libelogind
+   wayland
+   xorg-xwayland
+ )
+@@ -118,7 +118,7 @@
+ 
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
+-  arch-meson mutter build "${meson_options[@]}"
++  artix-meson mutter build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -28,6 +28,7 @@
+ libdisplay-info
+ libdrm
+ libei
++libelogind
+ libgirepository
+ libglvnd
+ libgudev
+@@ -63,7 +64,6 @@
+ python-gobject
+ startup-notification
+ sysprof
+-systemd-libs
+ wayland
+ wayland-protocols
+ xorg-xwayland

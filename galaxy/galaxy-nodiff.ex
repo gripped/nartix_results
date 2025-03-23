@@ -79,6 +79,7 @@ fpc
 garcon
 girara
 glib-perl
+gpicview
 grub-btrfs
 gstreamermm
 gstreamermm-docs
@@ -171,6 +172,7 @@ lxinput
 lxinput-gtk3
 lxlauncher
 lxlauncher-gtk3
+lxmenu-data
 lxmusic
 lxpanel-gtk3
 lxqt-about
@@ -192,6 +194,8 @@ lxqt-sudo
 lxqt-themes
 lxrandr
 lxrandr-gtk3
+lxtask
+lxtask-gtk3
 marco
 mate-applets
 mate-backgrounds

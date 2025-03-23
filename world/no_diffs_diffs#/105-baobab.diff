@@ -18,7 +18,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -3,6 +3,6 @@
- git apply -3 ../no-mimetype.diff
+ git apply -3 ../0001-HACK-Remove-inode-directory-association.patch
  }
  build() {
 -arch-meson baobab build

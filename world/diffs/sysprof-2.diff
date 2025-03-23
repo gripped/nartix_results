@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,6 @@
+@@ -26,7 +26,6 @@
    libunwind
    pango
    polkit
@@ -8,7 +8,7 @@
  )
  makedepends=(
    git
-@@ -45,7 +44,7 @@
+@@ -46,7 +45,7 @@
  build() {
    CFLAGS+=" -ffat-lto-objects"
  
@@ -17,7 +17,7 @@
    meson compile -C build
  }
  
-@@ -76,6 +75,8 @@
+@@ -77,6 +76,8 @@
    _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
    _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
    _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
@@ -32,7 +32,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -17,5 +17,4 @@
+@@ -18,5 +18,4 @@
  meson
  pango
  polkit

@@ -1,28 +1,41 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,6 @@
-   glibc
+@@ -20,7 +20,6 @@
+   libcap-ng
    libgcrypt
    pam
 -  systemd-libs
  )
  makedepends=(
    docbook-xsl
-@@ -29,7 +28,6 @@
+@@ -32,7 +31,6 @@
  )
  provides=(org.freedesktop.secrets)
  groups=(gnome)
 -install=gnome-keyring.install
  source=(
-   "git+$url.git#tag=$pkgver"
+   "git+$url.git?signed#tag=${pkgver/[a-z]/.&}"
    0001-daemon-Add-Cinnamon-to-autostart-files.patch
+@@ -51,10 +49,11 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=disabled
+     -D selinux=disabled
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -10,4 +10,3 @@
+@@ -13,4 +13,3 @@
  p11-kit
  pam
  python

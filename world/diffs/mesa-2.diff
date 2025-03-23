@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -44,7 +44,6 @@
+@@ -46,7 +46,6 @@
    rust
    spirv-llvm-translator
    spirv-tools
@@ -8,7 +8,7 @@
    vulkan-icd-loader
    wayland
    xcb-util-keysyms
-@@ -203,7 +202,7 @@
+@@ -190,7 +189,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -17,7 +17,15 @@
    meson compile -C build
  }
  
-@@ -365,7 +364,6 @@
+@@ -358,7 +357,6 @@
+     libxcb
+     libxshmfence
+     spirv-tools
+-    systemd-libs
+     vulkan-icd-loader
+     wayland
+     xcb-util-keysyms
+@@ -383,7 +381,6 @@
      libx11
      libxcb
      libxshmfence
@@ -25,7 +33,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -389,7 +387,6 @@
+@@ -407,7 +404,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -33,7 +41,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -435,7 +432,6 @@
+@@ -433,7 +429,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -41,7 +49,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -463,7 +459,6 @@
+@@ -461,7 +456,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -49,7 +57,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -490,7 +485,6 @@
+@@ -488,7 +482,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -57,7 +65,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -517,7 +511,6 @@
+@@ -515,7 +508,6 @@
      libx11
      libxcb
      libxshmfence

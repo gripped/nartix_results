@@ -331,7 +331,6 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
-cinnamon
 cjs
 cjson
 clang
@@ -706,6 +705,7 @@ fuse-common
 futuresql
 fwknop
 fzf
+gajim
 galculator
 gcab
 gcc13
@@ -5576,6 +5576,7 @@ vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers
+vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries
 vulkan-validation-layers
@@ -5601,6 +5602,7 @@ webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder
+wget
 whois
 wildmidi
 wireguard-tools

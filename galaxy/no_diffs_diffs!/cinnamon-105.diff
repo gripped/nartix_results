@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -50,7 +50,7 @@
+@@ -55,7 +55,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,6 @@
- files/usr/share/cinnamon/cinnamon-settings/modules/cs_backgrounds.py
+@@ -10,6 +10,6 @@
+ patch -p1 < ../pygobject-3.52.patch # https://github.com/linuxmint/cinnamon/issues/12799
  }
  build() {
 -arch-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build

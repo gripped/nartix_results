@@ -4,8 +4,8 @@
  }
  
  build() {
--  arch-meson connections build
-+  artix-meson connections build
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -21,7 +21,7 @@
  git -c protocol.file.allow=always submodule update
  }
  build() {
--arch-meson connections build
-+artix-meson connections build
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }

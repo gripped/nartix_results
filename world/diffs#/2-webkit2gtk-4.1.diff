@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -70,7 +70,6 @@
+@@ -41,7 +41,6 @@
+   bubblewrap
+   cairo
+   enchant
+-  expat
+   fontconfig
+   freetype2
+   gcc-libs
+@@ -71,7 +70,6 @@
    libseccomp
    libsecret
    libsoup3
@@ -8,7 +16,7 @@
    libtasn1
    libwebp
    libx11
-@@ -98,7 +97,6 @@
+@@ -99,7 +97,6 @@
    python
    ruby
    ruby-stdlib
@@ -16,22 +24,30 @@
    unifdef
    wayland-protocols
  )
-@@ -120,6 +118,8 @@
+@@ -121,6 +118,8 @@
  
  build() {
    local cmake_options=(
-+    -DUSE_SYSTEMD=OFF
-+    -DENABLE_JOURNALD_LOG=OFF
-     -DPORT=GTK
-     -DCMAKE_BUILD_TYPE=Release
-     -DCMAKE_INSTALL_PREFIX=/usr
++    -D USE_SYSTEMD=OFF
++    -D ENABLE_JOURNALD_LOG=OFF
+     -D CMAKE_BUILD_TYPE=Release
+     -D CMAKE_INSTALL_LIBDIR=lib
+     -D CMAKE_INSTALL_LIBEXECDIR=lib
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -40,7 +40,6 @@
+@@ -6,7 +6,6 @@
+ clang
+ cmake
+ enchant
+-expat
+ fontconfig
+ freetype2
+ gcc-libs
+@@ -41,7 +40,6 @@
  libseccomp
  libsecret
  libsoup3
@@ -39,7 +55,7 @@
  libtasn1
  libwebp
  libx11
-@@ -55,7 +54,6 @@
+@@ -56,7 +54,6 @@
  ruby
  ruby-stdlib
  sqlite

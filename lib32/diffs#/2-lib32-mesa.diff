@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,7 +43,6 @@
+@@ -45,7 +45,6 @@
    lib32-rust-libs
    lib32-spirv-llvm-translator
    lib32-spirv-tools
@@ -8,7 +8,7 @@
    lib32-vulkan-icd-loader
    lib32-wayland
    lib32-xcb-util-keysyms
-@@ -198,7 +197,7 @@
+@@ -187,7 +186,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -17,7 +17,15 @@
    meson compile -C build
  }
  
-@@ -357,7 +356,6 @@
+@@ -351,7 +350,6 @@
+     lib32-libxcb
+     lib32-libxshmfence
+     lib32-spirv-tools
+-    lib32-systemd
+     lib32-vulkan-icd-loader
+     lib32-wayland
+     lib32-xcb-util-keysyms
+@@ -378,7 +376,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
@@ -25,7 +33,7 @@
      lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -383,7 +381,6 @@
+@@ -404,7 +401,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -33,7 +41,7 @@
      lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -431,7 +428,6 @@
+@@ -432,7 +428,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -41,7 +49,7 @@
      lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -461,7 +457,6 @@
+@@ -462,7 +457,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
@@ -49,7 +57,7 @@
      lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -490,7 +485,6 @@
+@@ -491,7 +485,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
@@ -57,7 +65,7 @@
      lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -519,7 +513,6 @@
+@@ -520,7 +513,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
@@ -71,7 +79,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -26,7 +26,6 @@
+@@ -27,7 +27,6 @@
  lib32-rust-libs
  lib32-spirv-llvm-translator
  lib32-spirv-tools

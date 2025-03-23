@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
-               python-pyqt6 pyside6 python-tornado python-wxpython tk
-               jupyter-nbconvert jupyter-nbformat python-ipykernel
-               python-pandas python-pikepdf python-pytz python-xarray
--              noto-fonts-cjk wqy-zenhei python-xcffib ttf-dejavu)
-+              noto-fonts-cjk wqy-zenhei ttf-dejavu)
- _ftver=2.13.1
- source=(git+https://github.com/matplotlib/matplotlib.git#tag=v${pkgver}?signed
-         https://github.com/QuLogic/mpl-images/archive/v${_mpl_images_ver}-with-freetype-${_ftver}/mpl-images-${_mpl_images_ver}-ft${_ftver}.tar.gz
+@@ -77,7 +77,7 @@
+   python-tornado
+   python-wxpython
+   python-xarray
+-  python-xcffib
++
+   texlive-bin
+   texlive-fontsrecommended
+   texlive-latexextra

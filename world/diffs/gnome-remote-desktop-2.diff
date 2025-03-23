@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,8 +26,6 @@
+@@ -27,8 +27,6 @@
    opus
    pipewire
    polkit
 -  systemd
 -  systemd-libs
    tpm2-tss
+   vulkan-icd-loader
  )
- makedepends=(
-@@ -51,11 +49,12 @@
+@@ -54,11 +52,12 @@
  
  build() {
    local meson_options=(
@@ -29,10 +29,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -22,6 +22,4 @@
+@@ -23,8 +23,6 @@
  opus
  pipewire
  polkit
 -systemd
 -systemd-libs
  tpm2-tss
+ vulkan-headers
+ vulkan-icd-loader

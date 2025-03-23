@@ -51,6 +51,7 @@ cgmanager
 chromium-bsu
 chrony
 cinnamon-desktop
+cinnamon
 clamav
 cloud-init
 cmake
@@ -124,7 +125,6 @@ frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
-gajim
 gala
 gamemode
 gamescope
@@ -421,13 +421,14 @@ memcached
 mesa
 opencl-clover-mesa
 opencl-rusticl-mesa
+vulkan-dzn
 vulkan-gfxstream
 vulkan-intel
-vulkan-mesa-layers
 vulkan-nouveau
 vulkan-radeon
 vulkan-swrast
 vulkan-virtio
+vulkan-mesa-layers
 mesa-docs
 mgba
 libmgba
@@ -820,9 +821,10 @@ libvlc
 vpnc
 vte3
 vte-common
+vte3-utils
 vte4
+vte4-utils
 vte-docs
-vulkan-icd-loader
 wasi-compiler-rt
 waybar
 webkit2gtk-4.1
@@ -834,7 +836,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wget
 wireplumber
 libwireplumber
 wireplumber-docs
