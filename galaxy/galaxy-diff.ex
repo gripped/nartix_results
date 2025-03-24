@@ -1,5 +1,4 @@
 alsa-utils
-blender
 cinnamon-desktop
 copyq
 doctest
@@ -20,6 +19,8 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
+lxde-common
+lxde-icon-theme
 lxpanel
 lxqt-wayland-session
 lxsession

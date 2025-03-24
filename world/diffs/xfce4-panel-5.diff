@@ -3,7 +3,7 @@
 @@ -1,45 +1,32 @@
  
  pkgname=xfce4-panel
--pkgver=4.20.3
+-pkgver=4.20.4
 +pkgver=4.18.6
  pkgrel=1
  pkgdesc="Panel for the Xfce desktop environment"
@@ -16,7 +16,7 @@
 -         'libxfce4windowing' 'hicolor-icon-theme' 'desktop-file-utils')
 -makedepends=('git' 'glib2-devel' 'gobject-introspection' 'vala' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/xfce/xfce4-panel.git#tag=$pkgname-$pkgver")
--sha256sums=('a99b4dd5ff67a8c1bbb32ca8f099920ace5046f919c0715be827474ba9c52725')
+-sha256sums=('a71a9397d5095315b3cb24b56b0ec40ff6a06beddc68d880a4af8e378dcbd3e0')
 -
 -prepare() {
 -  cd $pkgname

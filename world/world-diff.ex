@@ -370,6 +370,8 @@ luarocks
 lxc
 lxcfs
 lxd
+lxde-common
+lxde-icon-theme
 lxinput
 lxinput-gtk3
 lxlauncher
@@ -596,6 +598,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-flask-cors
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun
@@ -762,9 +765,6 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
-texlive-texmf
-texlive-doc
-texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

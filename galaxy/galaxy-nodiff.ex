@@ -9,6 +9,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
+blender
 blueman
 bogofilter
 bogofilter-db
@@ -161,8 +162,6 @@ lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
-lxde-common
-lxde-icon-theme
 lxdm
 lxdm-gtk3
 lxhotkey

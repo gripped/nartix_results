@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ _pkgname=pyarrow
+ pkgname=python-$_pkgname
+ pkgver=19.0.1
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="Columnar in-memory analytics layer for big data — Python module."
+ arch=(x86_64)
+ url="https://arrow.apache.org"
 @@ -63,7 +63,8 @@
    test-env/bin/python -m installer apache-$_pkg-$pkgver/python/dist/*.whl
    PARQUET_TEST_DATA="$srcdir"/parquet-testing/data \

@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-flask-cors
+-pkgver=5.0.1
+-pkgrel=1
++pkgver=5.0.0
++pkgrel=3
+ 
+ pkgdesc='A Flask extension adding a decorator for CORS support'
+ url='https://github.com/corydolphin/flask-cors'
+@@ -13,15 +13,7 @@
+ 
+ source=("git+https://github.com/corydolphin/flask-cors.git#tag=$pkgver")
+ 
+-sha256sums=('bd14700e139f4f636975f0de14ef0ed3c0064a1e92d04d124a365ff41dc2a97a')
+-
+-prepare() {
+-	cd flask-cors
+-
+-	local RELEASE_VERSION=$pkgver
+-	sed -i "s/^version = \".*\"/version = \"$RELEASE_VERSION\"/" pyproject.toml
+-	sed -i "s/__version__ .*/__version__ = \"$RELEASE_VERSION\"/" flask_cors/version.py
+-}
++sha256sums=('97bdc4193b88260f77fcb69991bf12ba78aa191507be17ab099914e1d2c332fb')
+ 
+ build() {
+ 	cd flask-cors
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,3 @@
+-prepare() {
+-cd flask-cors
+-local RELEASE_VERSION=$pkgver
+-sed -i "s/^version = \".*\"/version = \"$RELEASE_VERSION\"/" pyproject.toml
+-sed -i "s/__version__ .*/__version__ = \"$RELEASE_VERSION\"/" flask_cors/version.py
+-}
+ build() {
+ cd flask-cors
+ python -m build --wheel --no-isolation --skip-dependency-check

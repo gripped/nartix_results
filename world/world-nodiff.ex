@@ -2181,8 +2181,6 @@ lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
-lxde-common
-lxde-icon-theme
 lxdm
 lxdm-gtk3
 lxhotkey
@@ -3459,7 +3457,6 @@ python-flake8-docstrings
 python-flaky
 python-flasgger
 python-flask-compress
-python-flask-cors
 python-flask-httpauth
 python-flask-jwt
 python-flask-login
@@ -5409,6 +5406,9 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
+texlive-texmf
+texlive-doc
+texlive-meta
 thermald
 threadweaver
 threadweaver5
