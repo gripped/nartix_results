@@ -744,7 +744,6 @@ gi-docgen
 giflib
 gifski
 gimp-help
-gimp
 girara
 git-lfs
 git
@@ -1004,9 +1003,6 @@ highlight-perl
 highlight-gui
 highway
 hip-runtime-amd
-hip-runtime
-hip-runtime-amd
-hip-runtime-nvidia
 hipblas
 hipcub
 hipfft
@@ -1713,7 +1709,6 @@ libgit2-glib-docs
 libgit2
 libglib-testing
 libglvnd
-libgme
 libgnome-games-support-2
 libgnome-games-support
 libgnome-keyring
@@ -2516,6 +2511,7 @@ openjade
 openjpeg2
 openlibm
 openmp
+openntpd
 openpgl
 openpmix
 openpmix-docs
@@ -3021,6 +3017,7 @@ presage
 print-manager
 prison
 prison5
+privoxy
 procinfo-ng
 proj
 projectm
@@ -5619,10 +5616,6 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264

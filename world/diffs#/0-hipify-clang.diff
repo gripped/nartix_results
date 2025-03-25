@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,5 +1,5 @@
  pkgname=hipify-clang
--pkgver=6.3.2
+-pkgver=6.3.3
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='Convert CUDA to Portable C++ Code'
@@ -12,7 +12,7 @@
  makedepends=('cmake')
  _git='https://github.com/ROCm-Developer-Tools/HIPIFY'
 -source=("${pkgname}-${pkgver}.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('c0da5118be8207fab6d19803417c0b8d2db5bc766279038527cbd6fa92b25c67')
+-sha256sums=('94d32b0e02c0c34debb9a8034cb5fcd6c2ee35b67350c64690034cf94cd38ddd')
 +source=("${pkgname}-${pkgver}.tar.gz::$_git/archive/rocm-$pkgver.tar.gz"
 +        "hipify-fix-install-cmake.patch")
 +sha256sums=('21e46276677ec8c00e61c0cbf5fa42185517f6af0d4845ea877fd40eb35198c4'

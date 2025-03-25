@@ -140,6 +140,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+gimp
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -220,6 +221,9 @@ haproxy
 haveged
 hexchat
 hidapi
+hip-runtime
+hip-runtime-amd
+hip-runtime-nvidia
 hipify-clang
 hwloc
 hyprland
@@ -314,6 +318,7 @@ libetebase
 libfido2
 libfprint
 libgdata
+libgme
 libgudev
 libguestfs
 libhandy0
@@ -495,7 +500,6 @@ opencollada
 opendht
 openmpi
 openmpi-docs
-openntpd
 opensmtpd
 opensnitch
 opensubdiv
@@ -585,7 +589,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-privoxy
 proxytunnel
 pulseaudio
 libpulse
@@ -845,6 +848,10 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp

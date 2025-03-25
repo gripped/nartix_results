@@ -4,9 +4,9 @@
  arch=(x86_64)
  url="https://github.com/intel/igsc/"
  license=(Apache-2.0)
--depends=(intel-metee systemd-libs)
+-depends=(glibc intel-metee systemd-libs)
 -makedepends=(cmake systemd)
-+depends=(intel-metee libudev)
++depends=(glibc intel-metee libudev)
 +makedepends=(cmake udev)
  source=(${url}/archive/V${pkgver}/${pkgname}-${pkgver}.tar.gz)
  sha256sums=('516a099239ad0541598be87025556c878c0d11c6d43e09115d2bb2e24508b6ec')
@@ -26,8 +26,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,5 @@
  cmake
+ glibc
  intel-metee
 -systemd
 -systemd-libs
