@@ -36,7 +36,6 @@ elfutils
 libelf
 debuginfod
 expat
-file
 findutils
 flex
 gawk

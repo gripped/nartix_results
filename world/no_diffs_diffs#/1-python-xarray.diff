@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _pkg=xarray
+ pkgname=python-${_pkg}
+-pkgver=2025.03.0
++pkgver=2025.01.2
+ pkgrel=1
+ pkgdesc="N-D labeled arrays and datasets in Python"
+ arch=(any)
+@@ -50,7 +50,7 @@
+   'python-pint: units of measure support'
+ )
+ source=("https://github.com/pydata/xarray/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+-sha256sums=('d5e3bb7e087feaa86f98f0a6bccb40e29205f2f9d6a8329741c2c843ab0f624c')
++sha256sums=('e9c06c7d2c34ca9e8d73972a11aefe56b8ff7f94edb087c4c8989f9848421982')
+ 
+ build() {
+   cd ${_pkg}-${pkgver}
+@@ -60,7 +60,6 @@
+ check() {
+   cd ${_pkg}-${pkgver}
+   local pytest_args=(
+-    --override-ini "addopts="
+     -W ignore::pytest.PytestDeprecationWarning
+     --deselect=xarray/tests/test_backends.py::TestDask::test_save_mfdataset_compute_false_roundtrip
+     --deselect=xarray/tests/test_backends.py::TestNetCDF4Data::test_compression_encoding

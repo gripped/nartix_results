@@ -9,7 +9,6 @@ aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
 abseil-cpp
-accerciser
 accessibility-inspector
 accounts-qml-module
 ack
@@ -744,6 +743,7 @@ gi-docgen
 giflib
 gifski
 gimp-help
+gimp
 girara
 git-lfs
 git
@@ -1003,6 +1003,9 @@ highlight-perl
 highlight-gui
 highway
 hip-runtime-amd
+hip-runtime
+hip-runtime-amd
+hip-runtime-nvidia
 hipblas
 hipcub
 hipfft
@@ -1709,6 +1712,7 @@ libgit2-glib-docs
 libgit2
 libglib-testing
 libglvnd
+libgme
 libgnome-games-support-2
 libgnome-games-support
 libgnome-keyring
@@ -2174,14 +2178,11 @@ lv2-docs
 lv2-example-plugins
 lxappearance-obconf-gtk3
 lxappearance-obconf
-lxappearance
-lxappearance-gtk3
 lxdm
 lxdm-gtk3
 lxhotkey
 lxhotkey-gtk3
 lximage-qt
-lxmusic
 lxpanel-gtk3
 lxpanel
 lxqt-about
@@ -2341,7 +2342,6 @@ mpdecimal
 mpg123
 mplayer
 mencoder
-mpv
 mpvqt
 msgpack-c
 msgpack-cxx
@@ -3785,7 +3785,6 @@ python-objgraph
 python-objsize
 python-odfpy
 python-omemo-dr
-python-openai
 python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
@@ -5043,8 +5042,6 @@ rust-aarch64-musl
 rust-wasm
 rust-src
 rustup
-rxvt-unicode
-rxvt-unicode-terminfo
 rygel
 s2n-tls
 s3cmd
@@ -5616,6 +5613,10 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264

@@ -1,4 +1,5 @@
 0ad
+accerciser
 accountsservice
 adwaita-fonts
 alacritty
@@ -140,7 +141,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-gimp
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -221,9 +221,6 @@ haproxy
 haveged
 hexchat
 hidapi
-hip-runtime
-hip-runtime-amd
-hip-runtime-nvidia
 hipify-clang
 hwloc
 hyprland
@@ -318,7 +315,6 @@ libetebase
 libfido2
 libfprint
 libgdata
-libgme
 libgudev
 libguestfs
 libhandy0
@@ -372,6 +368,8 @@ localsearch
 localsearch-testutils
 lua-filesystem
 luarocks
+lxappearance
+lxappearance-gtk3
 lxc
 lxcfs
 lxd
@@ -382,6 +380,7 @@ lxinput-gtk3
 lxlauncher
 lxlauncher-gtk3
 lxmenu-data
+lxmusic
 lxqt-config
 lxqt-qtplugin
 lxqt-session
@@ -449,6 +448,7 @@ mosquitto
 mousepad
 mozo
 mpd
+mpv
 muffin
 multipath-tools
 mumble
@@ -603,6 +603,7 @@ pysolfc
 python-anytree
 python-flask-cors
 python-ipykernel
+python-openai
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -725,6 +726,8 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+rxvt-unicode
+rxvt-unicode-terminfo
 samba
 libwbclient
 ldb
@@ -848,10 +851,6 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
