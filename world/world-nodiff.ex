@@ -9,6 +9,7 @@ aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
 abseil-cpp
+accerciser
 accessibility-inspector
 accounts-qml-module
 ack
@@ -56,7 +57,6 @@ amf-headers
 amfora
 aml
 amtk
-amule
 analitza
 analitza5
 anari-sdk
@@ -2342,6 +2342,7 @@ mpdecimal
 mpg123
 mplayer
 mencoder
+mpv
 mpvqt
 msgpack-c
 msgpack-cxx
@@ -2569,8 +2570,6 @@ papirus-icon-theme
 epapirus-icon-theme
 paprefs
 par2cmdline
-parallel
-parallel-docs
 parley
 parted
 partitionmanager
@@ -3425,7 +3424,6 @@ python-extras
 python-factory-boy
 python-faker
 python-fakeredis
-python-falcon
 python-fastapi
 python-fastbencode
 python-fasteners
@@ -3906,7 +3904,6 @@ python-proxmoxer
 python-proxy.py
 python-psutil
 python-psycopg-pool
-python-psycopg
 python-psycopg2
 python-pt
 python-ptrace

@@ -19,15 +19,10 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
-lxappearance
-lxappearance-gtk3
-lxmusic
 lxpanel
 lxqt-wayland-session
 lxsession
 lxsession-gtk3
-lxtask
-lxtask-gtk3
 lxterminal
 ly
 mate-control-center

@@ -10,7 +10,6 @@ dhcpcd
 e2fsprogs
 fuse2fs
 fakeroot
-file
 filesystem
 gcc
 gcc-libs

@@ -1,9 +1,9 @@
 0ad
-accerciser
 accountsservice
 adwaita-fonts
 alacritty
 alsa-utils
+amule
 apache
 apcupsd
 appstream
@@ -448,7 +448,6 @@ mosquitto
 mousepad
 mozo
 mpd
-mpv
 muffin
 multipath-tools
 mumble
@@ -508,6 +507,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+parallel
+parallel-docs
 paraview-catalyst
 parole
 passim
@@ -601,9 +602,11 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-falcon
 python-flask-cors
 python-ipykernel
 python-openai
+python-psycopg
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

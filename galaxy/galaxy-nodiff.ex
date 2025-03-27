@@ -160,6 +160,8 @@ linux-zen-headers
 linux-zen-docs
 lxappearance-obconf-gtk3
 lxappearance-obconf
+lxappearance
+lxappearance-gtk3
 lxde-common
 lxde-icon-theme
 lxdm
@@ -172,6 +174,7 @@ lxinput-gtk3
 lxlauncher
 lxlauncher-gtk3
 lxmenu-data
+lxmusic
 lxpanel-gtk3
 lxqt-about
 lxqt-admin
@@ -192,6 +195,8 @@ lxqt-sudo
 lxqt-themes
 lxrandr
 lxrandr-gtk3
+lxtask
+lxtask-gtk3
 marco
 mate-applets
 mate-backgrounds
