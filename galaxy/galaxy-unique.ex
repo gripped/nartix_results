@@ -127,6 +127,7 @@ moksha-theme-seven
 moksha-theme-sunshine
 moksha-theme-viceversa
 moksha-theme-wood-grey
+moksha-theme-zenithal
 moksha-themes
 moksha
 moodbar

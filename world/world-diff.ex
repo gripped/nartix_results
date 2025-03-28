@@ -385,6 +385,8 @@ lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
+lxrandr
+lxrandr-gtk3
 lxtask
 lxtask-gtk3
 ly
@@ -493,6 +495,7 @@ nvidia
 nvme-cli
 nvtop
 onboard
+onetbb
 onionshare
 open-iscsi
 opencollada

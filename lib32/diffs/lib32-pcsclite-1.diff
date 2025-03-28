@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkgname=pcsclite
+ pkgname=lib32-$_pkgname
+ pkgver=2.3.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
+ arch=('x86_64')
+ url='https://pcsclite.apdu.fr/'
 @@ -13,7 +13,6 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )

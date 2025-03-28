@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,30 +1,26 @@
+ 
+ pkgbase=lxrandr
+ pkgname=(lxrandr lxrandr-gtk3)
+-pkgver=0.3.3
+-pkgrel=1
++pkgver=0.3.2
++pkgrel=3
+ pkgdesc="Monitor configuration tool (part of LXDE)"
+ arch=('x86_64')
+ license=('GPL2')
+ url="https://lxde.org/"
+ depends=('gtk2' 'gtk3' 'xorg-xrandr')
+-makedepends=('git' 'intltool')
+-source=("git+https://github.com/lxde/lxrandr.git#tag=${pkgver}")
+-sha256sums=('86647b70c29fcb4aa6cded36529aced6f0cf4f2bb2d89c9b19e2b61948b1220f')
+-
+-prepare() {
+-  cd $pkgbase
+-  autoreconf -fiv
+-}
++makedepends=('intltool')
++source=("https://downloads.sourceforge.net/lxde/$pkgbase-$pkgver.tar.xz")
++md5sums=('5101ab29d87fb2b56a5ec5bc8bc3f258')
++sha256sums=('8b5edfc9718061bc161fe51d388697cbaa819d6f8013ed24ba22f438e0dbc312')
+ 
+ build() {
+-  [ -d gtk2 ] || cp -r $pkgbase gtk2
++  [ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
+   cd gtk2
+   ./configure --sysconfdir=/etc --prefix=/usr
+   make
+ 
+   cd "$srcdir"
+-  [ -d gtk3 ] || cp -r $pkgbase gtk3
++  [ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
+   cd gtk3
+   ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+   make
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ gtk2
+ gtk3
+ intltool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,10 @@
+-prepare() {
+-cd $pkgbase
+-autoreconf -fiv
+-}
+ build() {
+-[ -d gtk2 ] || cp -r $pkgbase gtk2
++[ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
+ cd gtk2
+ ./configure --sysconfdir=/etc --prefix=/usr
+ make
+ cd "$srcdir"
+-[ -d gtk3 ] || cp -r $pkgbase gtk3
++[ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
+ cd gtk3
+ ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+ make

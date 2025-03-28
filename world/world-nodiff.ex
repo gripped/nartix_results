@@ -2198,8 +2198,6 @@ lxqt-policykit
 lxqt-powermanagement
 lxqt-runner
 lxqt-sudo
-lxrandr
-lxrandr-gtk3
 lxsession
 lxsession-gtk3
 lxterminal
@@ -2469,7 +2467,6 @@ okteta
 okular
 okularpart5
 onednn
-onetbb
 onevpl
 oniguruma
 onnx
