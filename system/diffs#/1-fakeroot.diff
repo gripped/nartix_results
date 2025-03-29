@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=fakeroot
--pkgver=1.37.1.1
-+pkgver=1.37.1
- pkgrel=1
- pkgdesc='Tool for simulating superuser privileges'
- arch=('x86_64')
-@@ -8,10 +8,10 @@
+@@ -8,7 +8,7 @@
  url='https://tracker.debian.org/pkg/fakeroot'
  install=fakeroot.install
  depends=('glibc' 'filesystem' 'sed' 'util-linux' 'sh')
@@ -16,11 +8,7 @@
 +makedepends=('git' 'udev' 'po4a')
  checkdepends=('sharutils')
  source=("git+https://salsa.debian.org/clint/fakeroot.git#tag=upstream/${pkgver}")
--sha256sums=('092a98669bdce20bbe72ba9cb737bb5ad6f638706fa9715328c3259fb0dc94cb')
-+sha256sums=('569df5378c91ff5b2e360bccfa307ac6e33b3694570fdbe0f2f15115366f1842')
- 
- prepare() {
-   cd "${pkgname}"
+ sha256sums=('092a98669bdce20bbe72ba9cb737bb5ad6f638706fa9715328c3259fb0dc94cb')
 
 
 ############# Stripped diff below #################

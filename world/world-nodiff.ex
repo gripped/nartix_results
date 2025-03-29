@@ -270,7 +270,6 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
-calf
 calligra
 camlp-streams
 camlp4
@@ -309,6 +308,7 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 cervisia
+cfitsio
 cgns
 chafa
 chatblade
@@ -1990,7 +1990,6 @@ libtlsrpt
 libtomcrypt
 libtommath
 libtorrent-rasterbar
-libtorrent
 libtpms
 libtraceevent
 libtraceevent-docs
@@ -4679,7 +4678,6 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
-rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2
@@ -5036,6 +5034,8 @@ rust-aarch64-musl
 rust-wasm
 rust-src
 rustup
+rxvt-unicode
+rxvt-unicode-terminfo
 rygel
 s2n-tls
 s3cmd

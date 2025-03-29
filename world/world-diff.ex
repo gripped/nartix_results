@@ -45,9 +45,9 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calf
 catfish
 cbindgen
-cfitsio
 cgmanager
 chromium-bsu
 chrony
@@ -327,6 +327,7 @@ libsidplay
 libsidplayfp
 libstaroffice
 libtg_owt
+libtorrent
 libudev0-shim
 libusbsio
 python-libusbsio
@@ -729,11 +730,10 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+rtorrent
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-rxvt-unicode
-rxvt-unicode-terminfo
 samba
 libwbclient
 ldb
