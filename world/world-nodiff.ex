@@ -393,7 +393,6 @@ cppunit
 cpputest
 cppzmq
 criterion
-criu
 cryptoplusplus
 cscope
 ctags
@@ -404,7 +403,6 @@ cuda-tools
 cudnn
 cunit
 cups-filters
-cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
@@ -736,9 +734,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
-ghostxps
-ghostpcl
 gi-docgen
 giflib
 gifski
@@ -1537,7 +1532,6 @@ kweather
 kweathercore
 kwidgetsaddons
 kwidgetsaddons5
-kwindowsystem
 kwindowsystem5
 kwordquiz
 kwrited
@@ -3314,7 +3308,6 @@ python-csv23
 python-cucumber-tag-expressions
 python-curio
 python-curtsies
-python-cwcwidth
 python-cx-freeze
 python-cycler
 python-cython-test-exception-raiser
@@ -3403,7 +3396,6 @@ python-elasticsearch
 python-elementpath
 python-email-validator
 python-emoji
-python-engineio
 python-enrich
 python-entrypoint2
 python-entrypoints
@@ -3447,14 +3439,11 @@ python-flake8-black
 python-flake8-docstrings
 python-flaky
 python-flasgger
-python-flask-compress
 python-flask-httpauth
 python-flask-jwt
 python-flask-login
 python-flask-restful
-python-flask-socketio
 python-flask-sqlalchemy
-python-flask
 python-flex
 python-flexcache
 python-flexmock
@@ -4217,15 +4206,12 @@ python-six
 python-slip
 python-slugify
 python-sly
-python-smartypants
 python-smbprotocol
 python-smmap
 python-snappy
 python-sniffio
 python-snowballstemmer
-python-socketio
 python-socketpool
-python-socksio
 python-softlayer-zeep
 python-softlayer
 python-sortedcollections
@@ -4290,7 +4276,6 @@ python-straight.plugin
 python-strict-rfc3339
 python-strictyaml
 python-structlog
-python-subprocess-tee
 python-subunit
 python-sure
 python-svglib
@@ -4358,7 +4343,6 @@ python-typeguard
 python-types-python-dateutil
 python-typing_extensions
 python-typing_inspect
-python-typogrify
 python-tzdata
 python-tzlocal
 python-u-msgpack
@@ -4379,7 +4363,6 @@ python-unittest-mixins
 python-unpaddedbase64
 python-update-checker
 python-uri-template
-python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
@@ -5115,7 +5098,6 @@ slurp
 smb4k
 smpeg
 smplayer
-snappy
 snapshot
 sndio
 snorenotify

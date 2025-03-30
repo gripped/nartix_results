@@ -1,11 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cmake
+-pkgver=4.0.0
++pkgver=3.31.6
+ pkgrel=1
+ pkgdesc='A cross-platform open-source make system'
+ arch=('x86_64')
 @@ -28,9 +28,15 @@
    'ninja: for ninja generator'
    'qt6-base: cmake-gui'
  )
 -source=(git+https://gitlab.kitware.com/cmake/cmake.git#tag=v$pkgver?signed)
--sha512sums=('c478e688b909e689c5b5ffb2269c8d4c86029f6b0947491c6ed527b00ba93ff21f1840107a97a336b05ba48369b85a3c1f7055cbde1b372eea3669879da3c2a4')
+-sha512sums=('3708b8357a404bc94f3054d641cbf8af50c73ecf436d4d08f45cdefadbbb597a286ee682308085908cf626ff270d4fa31b6f37968b2cb16d2da8d77e9e7e3c97')
 +source=(git+https://gitlab.kitware.com/cmake/cmake.git#tag=v$pkgver?signed
 +        artix-cmake.patch)
 +sha512sums=('c478e688b909e689c5b5ffb2269c8d4c86029f6b0947491c6ed527b00ba93ff21f1840107a97a336b05ba48369b85a3c1f7055cbde1b372eea3669879da3c2a4'
@@ -18,6 +26,13 @@
  
  build() {
    cd ${pkgname}
+@@ -52,5 +58,5 @@
+ 
+   rm -r "$pkgdir"/usr/share/doc/cmake/html/_sources
+   emacs -batch -f batch-byte-compile "${pkgdir}"/usr/share/emacs/site-lisp/cmake-mode.el
+-  install -Dm644 LICENSE.rst -t "${pkgdir}"/usr/share/licenses/$pkgname
++  install -Dm644 Copyright.txt "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
+ }
 
 
 ############# Stripped diff below #################

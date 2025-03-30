@@ -66,7 +66,9 @@ connman
 containerd
 convertlit
 cppcheck
+criu
 crun
+cups-pdf
 cups
 libcups
 dbus-broker
@@ -141,6 +143,9 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
+ghostxps
+ghostpcl
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -281,6 +286,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+kwindowsystem
 libappimage
 libatasmart
 libayatana-indicator
@@ -606,8 +612,13 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-cwcwidth
+python-engineio
 python-falcon
+python-flask-compress
 python-flask-cors
+python-flask-socketio
+python-flask
 python-ipykernel
 python-openai
 python-psycopg
@@ -615,6 +626,12 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-smartypants
+python-socketio
+python-socksio
+python-subprocess-tee
+python-typogrify
+python-uritemplate
 qastools
 qbittorrent
 qbittorrent-nox
@@ -751,6 +768,7 @@ shairport-sync
 signal-desktop
 smartmontools
 snapper
+snappy
 solid
 spice-vdagent
 squid

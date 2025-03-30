@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,62 +1,30 @@
+@@ -1,63 +1,30 @@
  
  pkgname=calf
--pkgver=0.90.5
+-pkgver=0.90.5.2
 +pkgver=0.90.4
  pkgrel=1
  pkgdesc='LV2 plug-in suite and standalone Jack host'
@@ -35,7 +35,7 @@
 -  lv2
 -)
 -source=("git+$_url#tag=$pkgver")
--b2sums=('1eba51349947153206d53786caad6216d7700c0d9555db31316d961f884eaeb95fef51658a1f3ac03483e63fd2080aaba7ed1d907de434afeb23633ec7bed91e')
+-b2sums=('1a04be3a801697d12023c481fc799400de9708db68cf2db82102e3333de1c17143c5016725cdc610abc15141849f581b950c51a2fc84c48c6e0a97c2898e568c')
 +groups=(lv2-plugins pro-audio)
 +license=(LGPL2.1)
 +depends=(cairo expat fluidsynth gcc-libs gdk-pixbuf2 glib2 glibc gtk2 hicolor-icon-theme jack)
@@ -44,7 +44,7 @@
 +b2sums=('a5d2ccca675c21e807b4851d26e519beafce5ce159be8e5c711d1dd1febbf17f164dd9e6bc4e776295bfc2132c6ccb67bf4dc0a975acf49f6094bd0ef8f914b1')
  
  prepare() {
--  sed -i "s/@VERSION@/$pkgver/" $pkgname/$pkgname.desktop.in > $pkgname.desktop
+-  sed "s/@VERSION@/$pkgver/" $pkgname/$pkgname.desktop.in > $pkgname.desktop
 +  cd $pkgname
 +  autoreconf -fiv
  }
@@ -54,6 +54,7 @@
 -    -B build
 -    -D CMAKE_BUILD_TYPE=None
 -    -D CMAKE_INSTALL_PREFIX=/usr
+-    -D WANT_EXPERIMENTAL=ON
 -    -S $pkgname
 -    -W no-dev
 -  )
@@ -93,9 +94,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,10 @@
+@@ -1,15 +1,10 @@
  prepare() {
--sed -i "s/@VERSION@/$pkgver/" $pkgname/$pkgname.desktop.in > $pkgname.desktop
+-sed "s/@VERSION@/$pkgver/" $pkgname/$pkgname.desktop.in > $pkgname.desktop
 +cd $pkgname
 +autoreconf -fiv
  }
@@ -104,6 +105,7 @@
 --B build
 --D CMAKE_BUILD_TYPE=None
 --D CMAKE_INSTALL_PREFIX=/usr
+--D WANT_EXPERIMENTAL=ON
 --S $pkgname
 --W no-dev
 -)

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -42,7 +42,7 @@
+@@ -51,7 +51,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- git cherry-pick -n c09a6def153e52494072a36233c7e7b3307b67bf
+@@ -7,6 +7,6 @@
+ sed -i 's/simple-scan.desktop/org.gnome.SimpleScan.desktop/' data/meson.build data/org.gnome.SimpleScan.appdata.xml.in
  }
  build() {
 -arch-meson $pkgname build
