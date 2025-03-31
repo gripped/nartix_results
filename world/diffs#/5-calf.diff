@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,63 +1,30 @@
+@@ -1,53 +1,30 @@
  
  pkgname=calf
--pkgver=0.90.5.2
+-pkgver=0.90.6
 +pkgver=0.90.4
  pkgrel=1
  pkgdesc='LV2 plug-in suite and standalone Jack host'
@@ -35,19 +35,18 @@
 -  lv2
 -)
 -source=("git+$_url#tag=$pkgver")
--b2sums=('1a04be3a801697d12023c481fc799400de9708db68cf2db82102e3333de1c17143c5016725cdc610abc15141849f581b950c51a2fc84c48c6e0a97c2898e568c')
+-b2sums=('4354d2a09518563725940d48c581d4e14ccb8fba15e40b615ed25511650f9c41a1c71f942f3861e5eae2d987968f6e8f8f9ae2dfb54753126d3089f725004a7c')
 +groups=(lv2-plugins pro-audio)
 +license=(LGPL2.1)
 +depends=(cairo expat fluidsynth gcc-libs gdk-pixbuf2 glib2 glibc gtk2 hicolor-icon-theme jack)
 +makedepends=(git lv2)
 +source=("git+https://github.com/calf-studio-gear/calf#tag=$pkgver")
 +b2sums=('a5d2ccca675c21e807b4851d26e519beafce5ce159be8e5c711d1dd1febbf17f164dd9e6bc4e776295bfc2132c6ccb67bf4dc0a975acf49f6094bd0ef8f914b1')
- 
- prepare() {
--  sed "s/@VERSION@/$pkgver/" $pkgname/$pkgname.desktop.in > $pkgname.desktop
++
++prepare() {
 +  cd $pkgname
 +  autoreconf -fiv
- }
++}
  
  build() {
 -  local cmake_options=(
@@ -69,12 +68,6 @@
  
  package() {
 -  DESTDIR="$pkgdir" cmake --install build
--
--  install -vDm 644 $pkgname.desktop -t "$pkgdir/usr/share/applications/"
--  install -vDm 644 $pkgname/$pkgname*.1 -t "$pkgdir/usr/share/man/man1/"
--  install -vDm 644 $pkgname/$pkgname.7 -t "$pkgdir/usr/share/man/man7/"
--  install -vDm 644 $pkgname/$pkgname -t "$pkgdir/usr/share/bash-completion/completions/"
--
 -  install -Dm644 $pkgname/{AUTHORS,ChangeLog,README.md} -t "$pkgdir/usr/share/doc/$pkgname"
 +  make DESTDIR="$pkgdir" install -C $pkgname
 +  install -Dm644 $pkgname/{AUTHORS,ChangeLog,README} -t "$pkgdir/usr/share/doc/$pkgname"
@@ -94,12 +87,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,10 @@
- prepare() {
--sed "s/@VERSION@/$pkgver/" $pkgname/$pkgname.desktop.in > $pkgname.desktop
+@@ -1,12 +1,10 @@
++prepare() {
 +cd $pkgname
 +autoreconf -fiv
- }
++}
  build() {
 -local cmake_options=(
 --B build

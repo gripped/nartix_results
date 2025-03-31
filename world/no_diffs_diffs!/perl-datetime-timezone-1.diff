@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=perl-datetime-timezone
+-pkgver=2.65
++pkgver=2.63
+ pkgrel=1
+ pkgdesc="Time zone object base class and factory "
+ arch=(any)
+@@ -10,7 +10,7 @@
+ 	 'perl-list-allutils')
+ options=('!emptydirs')
+ source=(https://www.cpan.org/CPAN/authors/id/D/DR/DROLSKY/DateTime-TimeZone-$pkgver.tar.gz)
+-sha256sums=('019e99ca8e8c655d70d6813b6df3f351c2bee5983e0f4732f18c5788e1d38e62')
++sha256sums=('79ac1c34fb2129b1ad88e0c7090166b98f2a7fd658358f2e1ae7e9bac963cc0f')
+ 
+ build() {
+   cd  "$srcdir"/DateTime-TimeZone-$pkgver

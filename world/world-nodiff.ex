@@ -734,6 +734,9 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
+ghostxps
+ghostpcl
 gi-docgen
 giflib
 gifski
@@ -1837,7 +1840,6 @@ libnbd
 libndp
 libnet
 libnetfilter_queue
-libnewt
 libnfs
 libnghttp3
 libngtcp2
@@ -3422,7 +3424,6 @@ python-fastparquet
 python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
-python-feedgenerator
 python-feedparser
 python-fido2
 python-fields
@@ -3443,7 +3444,6 @@ python-flask-httpauth
 python-flask-jwt
 python-flask-login
 python-flask-restful
-python-flask-sqlalchemy
 python-flex
 python-flexcache
 python-flexmock
@@ -3482,7 +3482,6 @@ python-geopy
 python-gevent-websocket
 python-gevent
 python-gherkin
-python-ghp-import
 python-gitdb
 python-github3py
 python-gitlab
@@ -3834,7 +3833,6 @@ python-pdm
 python-pecan
 python-peewee
 python-pefile
-python-pendulum
 python-pep440
 python-pep621
 python-perf
@@ -3904,7 +3902,6 @@ python-py
 python-py3c
 python-pyacoustid
 python-pyaes
-python-pyaml
 python-pyarrow
 python-pyasn1-modules
 python-pyasn1
@@ -3937,7 +3934,6 @@ python-pyfakefs
 python-pyflakes
 python-pyftdi
 python-pyftpdlib
-python-pygal
 python-pygaljs
 python-pygame-sdl2
 python-pygame
@@ -3990,7 +3986,6 @@ python-pyproject-hooks
 python-pyproject-metadata
 python-pyqt5-sip
 python-pyqt6-sip
-python-pyquery
 python-pyrfc3339
 python-pyro
 python-pyrsistent

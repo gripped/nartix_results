@@ -8,7 +8,6 @@ ephoto
 evisum
 firefox
 freecell-solver
-gammastep
 greetd-regreet
 gtklock
 labwc

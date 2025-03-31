@@ -77,6 +77,7 @@ fluxbox
 font-manager
 fpc-src
 fpc
+gammastep
 garcon
 girara
 glib-perl
