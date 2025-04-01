@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,19 @@
+ 
+ pkgname=lxappearance-obconf
+-pkgver=0.2.4
+-pkgrel=1
++pkgver=0.2.3
++pkgrel=3
+ pkgdesc='Plugin for LXAppearance to configure Openbox'
+ arch=('x86_64')
+ license=('GPL2')
+ url='https://lxde.org/'
+ groups=('lxde')
+ depends=('lxappearance' 'openbox' 'libobrender.so')
+-makedepends=('git' 'intltool')
+-source=(git+https://github.com/lxde/lxappearance-obconf.git?#tag=${pkgver})
+-sha256sums=('63299027fdce3acfc55eb1ae601f4a0ab4b0be0ebe055f21df46d80ff4d3f437')
+-
+-prepare() {
+-  cd $pkgname
+-  autoreconf -fiv
+-}
++makedepends=('intltool')
++source=(https://downloads.sourceforge.net/lxde/$pkgname-$pkgver.tar.xz)
++md5sums=('ae0076d489aa786f5d573f7ff592a4ab')
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   ./configure --prefix=/usr
+ 
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+@@ -27,6 +22,6 @@
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ intltool
+ libobrender.so
+ lxappearance
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,5 @@
+-prepare() {
+-cd $pkgname
+-autoreconf -fiv
+-}
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ ./configure --prefix=/usr
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make

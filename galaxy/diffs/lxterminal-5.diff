@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,31 +1,27 @@
+ 
+ pkgname=lxterminal
+-pkgver=0.4.1
+-pkgrel=1
++pkgver=0.4.0
++pkgrel=1.1
+ pkgdesc="VTE-based terminal emulator (part of LXDE)"
+ arch=('x86_64')
+ url="https://lxde.org/"
+ license=('GPL2')
+ groups=('lxde' 'lxde-gtk3')
+ depends=('vte3')
+-makedepends=('git' 'intltool')
++makedepends=('intltool')
+ conflicts=('lxterminal-gtk3')
+ replaces=('lxterminal-gtk3')
+-source=(git+https://github.com/lxde/lxterminal.git?#tag=${pkgver})
+-sha256sums=('1261b4134b9a83b512008bdd778d241a4db9b731347c78116b7315b5581f0872')
+-
+-prepare() {
+-  cd $pkgname
+-  autoreconf -fiv
+-}
++source=(https://downloads.sourceforge.net/lxde/${pkgname}-${pkgver}.tar.xz)
++sha256sums=('9db8748923b3fa09a82ae2210ed1fa4cdb4c45312009da9caed103d48f8e9be7')
+ 
+ build() {
+-  cd $pkgname
++  export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
++  cd $pkgname-$pkgver
+   ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-git
+ intltool
+ vte3
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,6 @@
+-prepare() {
+-cd $pkgname
+-autoreconf -fiv
+-}
+ build() {
+-cd $pkgname
++export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
++cd $pkgname-$pkgver
+ ./configure --sysconfdir=/etc --prefix=/usr --enable-gtk3
+ make
+ }

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -33,7 +33,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- sed -i '/icon_name/ s/gnome-mines/org.gnome.Mines/' src/interface.ui
+@@ -2,6 +2,6 @@
+ cd $pkgname
  }
  build() {
 -arch-meson $pkgname build

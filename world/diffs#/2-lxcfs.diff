@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=lxcfs
+ pkgver=6.0.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc="FUSE filesystem for LXC"
+ arch=(x86_64)
  url="https://linuxcontainers.org/"
  license=('GPL')
  depends=('lxc' 'libnih' 'fuse3' 'dbus-glib')

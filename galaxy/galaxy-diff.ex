@@ -1,5 +1,6 @@
 alsa-utils
 cinnamon-desktop
+cinnamon
 copyq
 doctest
 ecrire
@@ -18,6 +19,9 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
+lxappearance-obconf
+lxlauncher
+lxlauncher-gtk3
 lxpanel
 lxqt-wayland-session
 lxsession
@@ -29,7 +33,6 @@ mate-screensaver
 mate-session-manager
 mate-system-monitor
 mimalloc
-mousepad
 mpd
 nvidia-390xx-utils
 nvm

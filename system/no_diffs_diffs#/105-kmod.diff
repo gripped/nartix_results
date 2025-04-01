@@ -17,12 +17,12 @@
      -Dbuild-tests=true \
      -Dmanpages=true \
      -Dopenssl=enabled \
-@@ -33,10 +32,7 @@
+@@ -33,10 +32,6 @@
    meson compile -C build
  }
  
 -check() {
- 
+-
 -  meson test -C 'build'
 -}
  

@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=pcsclite
--pkgver=2.3.2
-+pkgver=2.3.1
- pkgrel=1
- pkgdesc="PC/SC Architecture smartcard middleware library"
- arch=('x86_64')
 @@ -12,7 +12,6 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )
@@ -25,7 +17,7 @@
  )
  optdepends=(
    'python: API call trace logging with the pcsc-spy'
-@@ -32,23 +31,22 @@
+@@ -32,7 +31,7 @@
    'libpcscspy.so'
  )
  backup=(
@@ -34,10 +26,7 @@
  )
  validpgpkeys=('F5E11B9FFE911146F41D953D78A1B4DFE8F9C57E') # Ludovic Rousseau <rousseau@debian.org>
  source=(
-   "git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
- )
--sha256sums=('de0932e2c2838af5459ab08d116186664a6a3fe37266bddfe84c93613d8ebe16')
-+sha256sums=('6c2af5bcd2da0418d712dadd091d386ef01acdc14f112f327f9498f09d89eca1')
+@@ -42,13 +41,12 @@
  
  build() {
    local meson_options=(

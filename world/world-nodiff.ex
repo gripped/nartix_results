@@ -330,6 +330,7 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
+cinnamon
 cjs
 cjson
 clang
@@ -403,6 +404,7 @@ cuda-tools
 cudnn
 cunit
 cups-filters
+cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
@@ -426,6 +428,9 @@ dav1d-doc
 dblatex
 dbus-cplusplus
 dbus-glib
+dbus-python
+python-dbus
+python-dbus-docs
 dconf-editor
 dconf
 dcraw
@@ -735,8 +740,6 @@ gflags
 ghex
 ghex-docs
 ghostscript
-ghostxps
-ghostpcl
 gi-docgen
 giflib
 gifski
@@ -871,7 +874,6 @@ graphicsmagick
 graphite
 graphite-docs
 graphviz
-grilo-plugins
 grilo
 grim
 groovy
@@ -1348,7 +1350,6 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
-kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1726,6 +1727,7 @@ libgsf-docs
 libgssglue
 libgtop
 libgusb
+libgusb-docs
 libgweather-4
 libgweather-4-docs
 libgxps
@@ -1986,6 +1988,7 @@ libtlsrpt
 libtomcrypt
 libtommath
 libtorrent-rasterbar
+libtorrent
 libtpms
 libtraceevent
 libtraceevent-docs
@@ -2172,7 +2175,6 @@ lv2
 lv2-docs
 lv2-example-plugins
 lxappearance-obconf-gtk3
-lxappearance-obconf
 lxdm
 lxdm-gtk3
 lxhotkey
@@ -2195,7 +2197,6 @@ lxqt-runner
 lxqt-sudo
 lxsession
 lxsession-gtk3
-lxterminal
 lynx
 lzip
 lzop
@@ -3310,6 +3311,7 @@ python-csv23
 python-cucumber-tag-expressions
 python-curio
 python-curtsies
+python-cwcwidth
 python-cx-freeze
 python-cycler
 python-cython-test-exception-raiser
@@ -3398,6 +3400,7 @@ python-elasticsearch
 python-elementpath
 python-email-validator
 python-emoji
+python-engineio
 python-enrich
 python-entrypoint2
 python-entrypoints
@@ -3414,6 +3417,7 @@ python-extras
 python-factory-boy
 python-faker
 python-fakeredis
+python-falcon
 python-fastapi
 python-fastbencode
 python-fasteners
@@ -3424,6 +3428,7 @@ python-fastparquet
 python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
+python-feedgenerator
 python-feedparser
 python-fido2
 python-fields
@@ -3440,10 +3445,16 @@ python-flake8-black
 python-flake8-docstrings
 python-flaky
 python-flasgger
+python-flask-caching
+python-flask-compress
+python-flask-cors
 python-flask-httpauth
 python-flask-jwt
 python-flask-login
 python-flask-restful
+python-flask-socketio
+python-flask-sqlalchemy
+python-flask
 python-flex
 python-flexcache
 python-flexmock
@@ -3482,6 +3493,7 @@ python-geopy
 python-gevent-websocket
 python-gevent
 python-gherkin
+python-ghp-import
 python-gitdb
 python-github3py
 python-gitlab
@@ -3767,6 +3779,7 @@ python-objgraph
 python-objsize
 python-odfpy
 python-omemo-dr
+python-openai
 python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
@@ -3833,6 +3846,7 @@ python-pdm
 python-pecan
 python-peewee
 python-pefile
+python-pendulum
 python-pep440
 python-pep621
 python-perf
@@ -3887,6 +3901,7 @@ python-proxmoxer
 python-proxy.py
 python-psutil
 python-psycopg-pool
+python-psycopg
 python-psycopg2
 python-pt
 python-ptrace
@@ -3902,6 +3917,7 @@ python-py
 python-py3c
 python-pyacoustid
 python-pyaes
+python-pyaml
 python-pyarrow
 python-pyasn1-modules
 python-pyasn1
@@ -3934,6 +3950,7 @@ python-pyfakefs
 python-pyflakes
 python-pyftdi
 python-pyftpdlib
+python-pygal
 python-pygaljs
 python-pygame-sdl2
 python-pygame
@@ -3986,6 +4003,7 @@ python-pyproject-hooks
 python-pyproject-metadata
 python-pyqt5-sip
 python-pyqt6-sip
+python-pyquery
 python-pyrfc3339
 python-pyro
 python-pyrsistent
@@ -4059,6 +4077,7 @@ python-pytest-relaxed
 python-pytest-repeat
 python-pytest-rerunfailures
 python-pytest-ruff
+python-pytest-run-parallel
 python-pytest-runner
 python-pytest-services
 python-pytest-snapshot
@@ -4196,17 +4215,21 @@ python-shellingham
 python-should-dsl
 python-shtab
 python-signedjson
+python-simple-websocket
 python-simplejson
 python-six
 python-slip
 python-slugify
 python-sly
+python-smartypants
 python-smbprotocol
 python-smmap
 python-snappy
 python-sniffio
 python-snowballstemmer
+python-socketio
 python-socketpool
+python-socksio
 python-softlayer-zeep
 python-softlayer
 python-sortedcollections
@@ -4271,6 +4294,7 @@ python-straight.plugin
 python-strict-rfc3339
 python-strictyaml
 python-structlog
+python-subprocess-tee
 python-subunit
 python-sure
 python-svglib
@@ -4336,8 +4360,10 @@ python-txtorcon
 python-typed-ast
 python-typeguard
 python-types-python-dateutil
+python-typing-inspection
 python-typing_extensions
 python-typing_inspect
+python-typogrify
 python-tzdata
 python-tzlocal
 python-u-msgpack
@@ -4358,6 +4384,7 @@ python-unittest-mixins
 python-unpaddedbase64
 python-update-checker
 python-uri-template
+python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
@@ -4656,6 +4683,7 @@ rtaudio
 rtaudio-docs
 rtl-sdr
 rtmpdump
+rtorrent
 rubberband
 rubberband-ladspa
 rubberband-lv2
@@ -5093,6 +5121,7 @@ slurp
 smb4k
 smpeg
 smplayer
+snappy
 snapshot
 sndio
 snorenotify
@@ -5403,7 +5432,6 @@ tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser
-totem
 towncrier
 toxic
 tp_smapi

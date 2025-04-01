@@ -1,14 +1,50 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,7 +35,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ostree
+-pkgver=2025.2
+-pkgrel=2
++pkgver=2025.1
++pkgrel=1
+ pkgdesc="Operating system and container binary deployment and upgrades"
+ url="https://ostreedev.github.io/ostree/"
+ arch=(x86_64)
+@@ -33,9 +33,8 @@
+   libsoup3
+   libxslt
    mkinitcpio
-   openssl
+-  openssl-1.1
++  openssl
    python
 -  systemd
    xz
  )
  checkdepends=(
-@@ -73,6 +72,7 @@
+@@ -52,20 +51,16 @@
+   git+https://github.com/mendsley/bsdiff
+   git+https://gitlab.gnome.org/GNOME/libglnx.git
+   $pkgname-2023.1-use_fuse3.patch
+-  ostree-2025.2-fix-compilation.patch
+ )
+-b2sums=('fc329e7e14e473b6a5355369ff6f66b8043e77ee5a2af14e01f76079183dc630dddde4927000890e5d4ac4f22a9bc9040fb899f82cff3fc4b41090bd1a09601d'
++b2sums=('0cb994a7be44a3efe8240e9711c1e224ec8d80b2dbc9b5cfa0f536f4bc029c9e6e91a9ebf46b34622e75dd3306cd1504fd61df464388126e2f889da0ebe79c42'
+         'SKIP'
+         'SKIP'
+-        'cfff162120f70995e18ec56454711501391b97456e2a0f34643c9d2a9c2b50b4d76afc2e2fc50ea28e8a773c618215d6cb855b96663f69dc5cc93bc5766f3f28'
+-        'acbf29badb52ff115e2edfb97a650d43dcf8f1b721ecdbfdcc58a204d7f1a7ed5fc2695117b1e029a210e9076d20d3a43db7859bb2d1ae18f6c8b7fc6e50986e')
++        'cfff162120f70995e18ec56454711501391b97456e2a0f34643c9d2a9c2b50b4d76afc2e2fc50ea28e8a773c618215d6cb855b96663f69dc5cc93bc5766f3f28')
+ 
+ prepare() {
+   cd $pkgname
+ 
+   git apply -3 ../$pkgname-2023.1-use_fuse3.patch
+-
+-  git apply ../ostree-2025.2-fix-compilation.patch
+ 
+   git submodule init
+   git submodule set-url bsdiff "$srcdir/bsdiff"
+@@ -77,6 +72,7 @@
  
  build() {
    local configure_options=(
@@ -16,7 +52,7 @@
      --disable-static
      --enable-experimental-api
      --enable-gtk-doc
-@@ -108,7 +108,6 @@
+@@ -112,7 +108,6 @@
      gpgme libgpgme.so
      libarchive libarchive.so
      openssl libcrypto.so
@@ -30,7 +66,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -27,14 +27,11 @@
+@@ -27,15 +27,11 @@
  liblzma.so
  libsodium
  libsoup3
@@ -38,6 +74,7 @@
  libxslt
  mkinitcpio
  openssl
+-openssl-1.1
  python
  sh
 -systemd

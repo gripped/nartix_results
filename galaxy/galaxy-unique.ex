@@ -41,6 +41,7 @@ grub-theme
 htpdate
 incron-openrc
 iso-profiles
+knockd-openrc
 kotatogram-desktop-git
 lib32-artix-archlinux-support
 libfoo
