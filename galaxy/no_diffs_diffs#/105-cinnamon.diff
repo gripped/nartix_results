@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -50,7 +50,7 @@
+ }
+ 
+ build() {
+-  arch-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
++  artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
+   samu -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,6 @@
+ files/usr/share/cinnamon/cinnamon-settings/modules/cs_backgrounds.py
+ }
+ build() {
+-arch-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
++artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
+ samu -C build
+ }

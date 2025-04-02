@@ -65,7 +65,6 @@ connman
 containerd
 convertlit
 cppcheck
-criu
 crun
 cups
 libcups
@@ -228,6 +227,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -271,7 +271,6 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
-kicad
 kismet
 kitty
 kitty-terminfo
@@ -282,7 +281,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-kwindowsystem
 libappimage
 libatasmart
 libayatana-indicator
@@ -391,11 +389,12 @@ lxqt-session
 lxqt-themes
 lxrandr
 lxrandr-gtk3
+lxsession
+lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
 ly
-mailman3
 mako
 maliit-framework
 marco
@@ -788,7 +787,6 @@ tinysparql-docs
 tmux
 tor
 torsocks
-totem
 toxcore
 tracker3-miners
 tracker3

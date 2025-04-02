@@ -8,7 +8,7 @@
  )
  makedepends=(
    git
-@@ -48,7 +47,7 @@
+@@ -50,7 +49,7 @@
  build() {
    CFLAGS+=" -ffat-lto-objects"
  
@@ -17,7 +17,7 @@
    meson compile -C build
  }
  
-@@ -79,6 +78,8 @@
+@@ -81,6 +80,8 @@
    _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
    _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
    _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h

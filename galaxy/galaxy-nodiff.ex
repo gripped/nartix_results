@@ -53,6 +53,7 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
+cinnamon
 cjs
 claws-mail
 compface
@@ -159,6 +160,7 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lxappearance-obconf-gtk3
+lxappearance-obconf
 lxappearance
 lxappearance-gtk3
 lxde-common
@@ -170,6 +172,8 @@ lxhotkey-gtk3
 lximage-qt
 lxinput
 lxinput-gtk3
+lxlauncher
+lxlauncher-gtk3
 lxmenu-data
 lxmusic
 lxpanel-gtk3
@@ -194,6 +198,7 @@ lxrandr
 lxrandr-gtk3
 lxtask
 lxtask-gtk3
+lxterminal
 marco
 mate-applets
 mate-backgrounds

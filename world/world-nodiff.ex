@@ -394,6 +394,7 @@ cppunit
 cpputest
 cppzmq
 criterion
+criu
 cryptoplusplus
 cscope
 ctags
@@ -1082,7 +1083,6 @@ immer
 incidenceeditor
 indent
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1350,6 +1350,7 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1536,6 +1537,7 @@ kweather
 kweathercore
 kwidgetsaddons
 kwidgetsaddons5
+kwindowsystem
 kwindowsystem5
 kwordquiz
 kwrited
@@ -2195,8 +2197,6 @@ lxqt-policykit
 lxqt-powermanagement
 lxqt-runner
 lxqt-sudo
-lxsession
-lxsession-gtk3
 lynx
 lzip
 lzop
@@ -2212,6 +2212,7 @@ mailgraph
 mailimporter
 mailman-web
 mailman3-hyperkitty
+mailman3
 maim
 malcontent
 libmalcontent
@@ -5432,6 +5433,7 @@ tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser
+totem
 towncrier
 toxic
 tp_smapi

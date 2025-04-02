@@ -1,6 +1,5 @@
 alsa-utils
 cinnamon-desktop
-cinnamon
 copyq
 doctest
 ecrire
@@ -19,14 +18,10 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
-lxappearance-obconf
-lxlauncher
-lxlauncher-gtk3
 lxpanel
 lxqt-wayland-session
 lxsession
 lxsession-gtk3
-lxterminal
 ly
 mate-control-center
 mate-screensaver
@@ -36,6 +31,7 @@ mimalloc
 mpd
 nvidia-390xx-utils
 nvm
+opensnitch
 qbittorrent
 qbittorrent-nox
 rage

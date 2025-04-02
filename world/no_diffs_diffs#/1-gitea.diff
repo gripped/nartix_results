@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,11 +20,9 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gitea
+ pkgver=1.23.6
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Painless self-hosted Git service, community managed."
+ url="https://gitea.io"
+ arch=('x86_64')
+@@ -13,18 +13,16 @@
+ 	    'openssh: GIT over SSH support'
+ 	    'pam: Authentication via PAM support'
+ 	    'postgresql: PostgreSQL support'
+-	    'valkey: Valkey support'
++	    'redis: Redis support'
+ 	    'sqlite: SQLite support')
+ checkdepends=('openssh')
+ options=('!lto')
  backup=("etc/${pkgname}/app.ini")
  source=("git+https://github.com/go-gitea/gitea.git#tag=v${pkgver}?signed"
          "${pkgname}.tmpfiles"
