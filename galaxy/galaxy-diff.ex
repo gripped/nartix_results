@@ -8,6 +8,7 @@ ephoto
 evisum
 firefox
 freecell-solver
+gpicview
 greetd-regreet
 gtklock
 labwc
@@ -36,7 +37,6 @@ qbittorrent
 qbittorrent-nox
 rage
 sdcv
-signal-desktop
 terminology
 tor
 torsocks

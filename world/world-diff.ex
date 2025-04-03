@@ -18,6 +18,7 @@ atril
 audacious-plugins
 avahi
 awesome
+b3sum
 bash-bats
 blender
 bluedevil
@@ -32,6 +33,7 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
+breeze-plymouth
 brightnessctl
 brltty
 brltty-udev-generic
@@ -138,6 +140,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -506,6 +509,7 @@ opencollada
 opendht
 openmpi
 openmpi-docs
+openresolv
 opensmtpd
 opensnitch
 opensubdiv

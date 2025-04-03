@@ -81,6 +81,7 @@ lib32-libjpeg-turbo
 lib32-libldap
 lib32-libltdl
 lib32-libmodplug
+lib32-libndp
 lib32-libnghttp2
 lib32-libnghttp3
 lib32-libnl

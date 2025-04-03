@@ -177,7 +177,6 @@ aws-sdk-cpp-iam
 aws-sdk-cpp-kinesis
 aws-sdk-cpp-s3
 ayatana-ido
-b3sum
 babl
 backuppc
 baloo-widgets
@@ -240,7 +239,6 @@ bpython
 breeze-grub
 breeze-gtk
 breeze-icons
-breeze-plymouth
 breeze
 breeze5
 breezy
@@ -740,7 +738,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 giflib
 gifski

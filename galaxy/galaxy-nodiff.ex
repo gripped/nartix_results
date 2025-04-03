@@ -81,7 +81,6 @@ gammastep
 garcon
 girara
 glib-perl
-gpicview
 grub-btrfs
 gstreamermm
 gstreamermm-docs
@@ -351,6 +350,7 @@ ristretto
 screengrab
 scribus
 scummvm
+signal-desktop
 sqlitebrowser
 stalonetray
 subtitleeditor
