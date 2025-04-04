@@ -236,6 +236,7 @@ bovo
 bower
 bpf-linker
 bpython
+brasero
 breeze-grub
 breeze-gtk
 breeze-icons
@@ -436,6 +437,7 @@ dcraw
 ddclient
 ddrescue
 debootstrap
+decibels
 default-cursors
 dejagnu
 deluge
@@ -800,11 +802,13 @@ gnome-klotski
 gnome-mahjongg
 gnome-maps
 gnome-menus
+gnome-mimeapps
 gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
 gnome-nibbles
+gnome-notes
 gnome-online-accounts
 libgoa
 gnome-photos
@@ -841,7 +845,6 @@ go-licenses
 go-md2man
 go-tools
 go-yq
-go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -938,6 +941,7 @@ gst-plugin-togglerecord
 gst-plugin-webrtchttp
 gst-python
 gtest
+gthumb
 gtk-doc
 gtk-engine-murrine
 gtk-engines
@@ -2557,6 +2561,8 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
+papers
+papers-lib-docs
 papirus-icon-theme
 epapirus-icon-theme
 paprefs
@@ -5489,9 +5495,6 @@ unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
 unicode-emoji
-unicorn
-python-unicorn
-ruby-unicorn-engine
 unifdef
 unittestpp
 unrar

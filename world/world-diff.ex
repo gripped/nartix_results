@@ -159,6 +159,7 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
+go
 godot
 godot-mono
 gpicview
@@ -808,6 +809,9 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
+unicorn
+python-unicorn
+ruby-unicorn-engine
 unoconv
 upower
 uptimed

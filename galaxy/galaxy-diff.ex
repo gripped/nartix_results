@@ -8,12 +8,12 @@ ephoto
 evisum
 firefox
 freecell-solver
-gpicview
 greetd-regreet
 gtklock
 labwc
 lemurs
 libetonyek
+libqtxdg
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -21,8 +21,6 @@ libxfce4ui
 light
 lxpanel
 lxqt-wayland-session
-lxsession
-lxsession-gtk3
 ly
 mate-control-center
 mate-screensaver

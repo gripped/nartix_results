@@ -1,23 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,6 +8,7 @@
- license=('MIT')
- depends=(
-   'python'
-+  'python-async-timeout'
- )
- makedepends=(
-   'git'
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +1,6 @@
- git
- python
-+python-async-timeout
- python-build
- python-installer
- python-setuptools
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-redis
+ pkgver=5.2.1
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc='The Python interface to the Redis key-value store'
+ arch=('any')
+ url='https://github.com/redis/redis-py'

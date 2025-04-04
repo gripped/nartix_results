@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,9 +7,9 @@
+@@ -1,15 +1,15 @@
+ 
+ pkgname=docker
+ pkgver=28.0.4
+-pkgrel=2
++pkgrel=1
+ epoch=1
+ pkgdesc='Pack, ship and run any application as a lightweight container'
  arch=('x86_64' 'aarch64')
  url='https://www.docker.com/'
  license=('Apache-2.0')
@@ -12,7 +19,7 @@
  optdepends=('btrfs-progs: btrfs backend support'
              'pigz: parallel gzip compressor support'
              'docker-buildx: extended build capabilities')
-@@ -67,7 +67,7 @@
+@@ -67,14 +67,14 @@
    echo 'Building daemon'
    _fake_gopath_pushd moby github.com/docker/docker
    DOCKER_GITCOMMIT=$(cd "$srcdir"/moby && git rev-parse --short HEAD) \
@@ -21,6 +28,14 @@
      VERSION=$pkgver \
      hack/make.sh dynbinary
    _fake_gopath_popd
+ 
+   echo 'Building docker-init'
+   _fake_gopath_pushd tini github.com/krallin/tini
+-  cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 .
++  cmake .
+   make tini-static
+   _fake_gopath_popd
+ }
 @@ -84,8 +84,6 @@
    install -Dm755 moby/bundles/dynbinary-daemon/dockerd "$pkgdir"/usr/bin/dockerd
    install -Dm755 moby/bundles/dynbinary-daemon/docker-proxy "$pkgdir/usr/bin/docker-proxy"

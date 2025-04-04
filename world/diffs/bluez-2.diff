@@ -8,7 +8,7 @@
 +makedepends=('dbus' 'libical' 'alsa-lib' 'json-c' 'ell' 'python-docutils' 'python-pygments' 'cups')
  source=(https://www.kernel.org/pub/linux/bluetooth/${pkgname}-${pkgver}.tar.{xz,sign}
          bluetooth.modprobe)
- sha256sums=('a4d0bca3299691f06d5bd9773b854638204a51a5026c42b0ad7f1c6cf16b459a'
+ sha256sums=('0739fa608a837967ee6d5572b43fb89946a938d1c6c26127158aaefd743a790b'
 @@ -27,6 +27,8 @@
            --localstatedir=/var \
            --libexecdir=/usr/lib \

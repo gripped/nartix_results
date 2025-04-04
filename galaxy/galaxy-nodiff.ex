@@ -81,6 +81,7 @@ gammastep
 garcon
 girara
 glib-perl
+gpicview
 grub-btrfs
 gstreamermm
 gstreamermm-docs
@@ -107,7 +108,6 @@ libodfgen
 libopenshot-audio
 libopenshot-audio-docs
 libopenshot
-libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
@@ -195,6 +195,8 @@ lxqt-sudo
 lxqt-themes
 lxrandr
 lxrandr-gtk3
+lxsession
+lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
