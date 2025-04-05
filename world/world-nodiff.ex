@@ -240,8 +240,7 @@ brasero
 breeze-grub
 breeze-gtk
 breeze-icons
-breeze
-breeze5
+breeze-plymouth
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -269,6 +268,7 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
+calf
 calligra
 camlp-streams
 camlp4
@@ -845,6 +845,7 @@ go-licenses
 go-md2man
 go-tools
 go-yq
+go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -1595,6 +1596,7 @@ libaec
 libakonadi5
 libalkimia
 libao
+libappimage
 libappindicator
 libappindicator-gtk2
 libappindicator-gtk3
@@ -1918,7 +1920,6 @@ libqb
 libqmi
 libqmi-docs
 libqrtr-glib
-libqtxdg
 libquotient
 libquvi-scripts
 libquvi
@@ -2142,6 +2143,7 @@ lshw
 lskat
 lsof
 lsscsi
+ltrace
 lttng-ust2.12
 lua-bitop
 lua51-bitop
@@ -2184,7 +2186,6 @@ lxhotkey
 lxhotkey-gtk3
 lximage-qt
 lxpanel-gtk3
-lxpanel
 lxqt-about
 lxqt-admin
 lxqt-archiver
@@ -2465,6 +2466,7 @@ okteta
 okular
 okularpart5
 onednn
+onetbb
 onevpl
 oniguruma
 onnx
@@ -2952,7 +2954,6 @@ plasma-pass
 plasma-sdk
 plasma-systemmonitor
 plasma-thunderbolt
-plasma-vault
 plasma-wayland-protocols
 plasma-welcome
 plasma-workspace-wallpapers
@@ -5234,7 +5235,6 @@ tcsh
 tdb
 tea
 tecla
-telegram-desktop
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream

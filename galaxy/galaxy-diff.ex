@@ -13,13 +13,11 @@ gtklock
 labwc
 lemurs
 libetonyek
-libqtxdg
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
-lxpanel
 lxqt-wayland-session
 ly
 mate-control-center
@@ -35,6 +33,7 @@ qbittorrent
 qbittorrent-nox
 rage
 sdcv
+telegram-desktop
 terminology
 tor
 torsocks

@@ -108,6 +108,7 @@ libodfgen
 libopenshot-audio
 libopenshot-audio-docs
 libopenshot
+libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
@@ -176,6 +177,7 @@ lxlauncher-gtk3
 lxmenu-data
 lxmusic
 lxpanel-gtk3
+lxpanel
 lxqt-about
 lxqt-admin
 lxqt-archiver
@@ -357,7 +359,6 @@ sqlitebrowser
 stalonetray
 subtitleeditor
 sundials
-telegram-desktop
 terminus-font
 termshark
 tesseract-data

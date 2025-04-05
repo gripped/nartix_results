@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=ksystemstats
--pkgver=6.3.4
-+pkgver=6.3.3
- _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=1
- pkgdesc='A plugin based system monitoring daemon'
-@@ -22,10 +22,10 @@
+@@ -22,7 +22,7 @@
               networkmanager-qt)
  optdepends=('libnl: network usage monitor'
              'networkmanager-qt: network usage monitor'
@@ -16,11 +8,7 @@
 +            'libudev: GPU monitor')
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('00006a9370d03a1114c31a869c6c0676c4493aac3716138dd9aea898d0e85395'
-+sha256sums=('2fb8c29c595dc6df983246676f28e8ee1c71042da588f573c7baa2e63bbdf42e'
-             'SKIP')
- validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
-               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+ sha256sums=('00006a9370d03a1114c31a869c6c0676c4493aac3716138dd9aea898d0e85395'
 @@ -40,4 +40,6 @@
  
  package() {

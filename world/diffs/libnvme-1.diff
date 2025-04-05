@@ -1,26 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,21 @@
- 
- pkgname=libnvme
--pkgver=1.12
-+pkgver=1.11.1
- pkgrel=2
- pkgdesc="C Library for NVM Express on Linux"
+@@ -6,14 +6,14 @@
  arch=('x86_64')
  url="https://github.com/linux-nvme/libnvme"
--license=('LGPL-2.1-only')
+ license=('LGPL-2.1-only')
 -makedepends=('systemd' 'meson' 'asciidoc' 'python' 'swig')
--depends=('json-c' 'openssl' 'keyutils' 'dbus' 'liburing')
--source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
--sha256sums=('53791f2e75773ba95449fc98a3b8b444d984624322ec6980049fd4eb289123d5')
-+license=('LGPL2.1')
 +makedepends=('udev' 'meson' 'asciidoc' 'python' 'swig')
-+depends=('json-c' 'openssl' 'keyutils' 'dbus')
-+source=(
-+	"$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz"
-+)
-+sha256sums=('6d5d8ba2cc4c94a61a994c9f7f25b3b26ef973fb5c0daa37729890903f37a1f1')
+ depends=('json-c' 'openssl' 'keyutils' 'dbus' 'liburing')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
+ sha256sums=('53791f2e75773ba95449fc98a3b8b444d984624322ec6980049fd4eb289123d5')
  
  build() {
  	cd "${pkgname}-${pkgver}"
@@ -35,12 +23,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,9 +2,8 @@
- dbus
- json-c
- keyutils
--liburing
- meson
+@@ -7,4 +7,4 @@
  openssl
  python
  swig

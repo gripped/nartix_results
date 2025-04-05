@@ -33,7 +33,8 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
-breeze-plymouth
+breeze
+breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -47,7 +48,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calf
 catfish
 cbindgen
 cgmanager
@@ -159,7 +159,6 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
-go
 godot
 godot-mono
 gpicview
@@ -285,7 +284,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-libappimage
 libatasmart
 libayatana-indicator
 libblockdev
@@ -328,6 +326,7 @@ libmspub
 libnewt
 libnvme
 libprocps
+libqtxdg
 libsidplay
 libsidplayfp
 libstaroffice
@@ -387,6 +386,7 @@ lxlauncher
 lxlauncher-gtk3
 lxmenu-data
 lxmusic
+lxpanel
 lxqt-config
 lxqt-qtplugin
 lxqt-session
@@ -503,7 +503,6 @@ nvidia
 nvme-cli
 nvtop
 onboard
-onetbb
 onionshare
 open-iscsi
 opencollada
@@ -586,6 +585,7 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
+plasma-vault
 plasma-workspace
 plocate
 pluma
@@ -771,6 +771,7 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
+telegram-desktop
 telepathy-glib
 tensorflow
 tensorflow-opt

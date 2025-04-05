@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,19 +4,21 @@
+@@ -4,8 +4,8 @@
  pkgrel=1
  pkgdesc="Clipboard manager with searchable and editable history"
  url="https://github.com/hluk/${pkgname}"
@@ -11,8 +11,7 @@
  license=('GPL3')
  arch=('x86_64')
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz")
--sha256sums=('500893c01b662d1f157e26432f75ffeaef61862e551b831d53a79b14579ad0b3')
-+sha256sums=('SKIP')
+@@ -13,10 +13,12 @@
  
  build() {
      cmake -B build -S CopyQ-$pkgver \

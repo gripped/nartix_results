@@ -4,9 +4,6 @@ base
 bash
 binutils
 btrfs-progs
-curl
-libcurl-compat
-libcurl-gnutls
 dbus
 dbus-docs
 dhcpcd
@@ -14,7 +11,6 @@ e2fsprogs
 fuse2fs
 fakeroot
 filesystem
-gawk
 gcc
 gcc-libs
 lib32-gcc-libs
@@ -33,7 +29,6 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
-leancrypto
 libusb
 libxml2
 libxml2-docs

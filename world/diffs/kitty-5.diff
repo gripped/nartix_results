@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -3,94 +3,68 @@
  pkgname=(kitty kitty-terminfo kitty-shell-integration)
- pkgver=0.41.0
+ pkgver=0.41.1
  pkgrel=1
 -pkgdesc="A modern, hackable, featureful, OpenGL-based terminal emulator"
 -arch=('x86_64')
@@ -40,7 +40,7 @@
 -)
 -options=("!lto")
 -source=("https://github.com/kovidgoyal/${pkgbase}/releases/download/v${pkgver}/${pkgbase}-${pkgver}.tar.xz"{,.sig})
--b2sums=('d0324d99cb2643e229e6848620c3ef38f3ec3bb31201c5f29574a4bca3427cb455c5204497a49fe9b2a0c50d59fefaa1d7774ec81c1c7918b2314d709d0d49a1'
+-b2sums=('9875df797099b893176bc8899d00f40cb57f0056a1ca87c778d2ffdd4480c7b14f58e0fe322c1e3cbdb73a126f3b0664600484764217eccfd4818589fbe43b47'
 -        'SKIP')
 +pkgdesc="Modern, hackable, featureful, OpenGL based terminal emulator"
 +arch=(x86_64)
@@ -136,7 +136,7 @@
 +  cp -r "$srcdir/$pkgbase-$pkgver/shell-integration" "$pkgdir/usr/lib/kitty/"
  }
 +
-+sha256sums=('30c59848585d89d2d25bd0050b172c1cd9dfdc0071cfce6917e6b035fec766b7'
++sha256sums=('e30150fad1bcc885a7adbd87380696ef7b67a62a38f74634efbc05c3745f26aa'
 +            'SKIP')
 
 
