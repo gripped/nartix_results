@@ -18,7 +18,6 @@ atril
 audacious-plugins
 avahi
 awesome
-b3sum
 bash-bats
 blender
 bluedevil
@@ -470,6 +469,7 @@ nautilus
 libnautilus-extension
 libnautilus-extension-docs
 nbd
+nccl
 ndctl
 ndisc6
 nemo-extensions

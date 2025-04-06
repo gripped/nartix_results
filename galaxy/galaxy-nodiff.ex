@@ -355,10 +355,12 @@ screengrab
 scribus
 scummvm
 signal-desktop
+solaar
 sqlitebrowser
 stalonetray
 subtitleeditor
 sundials
+telegram-desktop
 terminus-font
 termshark
 tesseract-data

@@ -1,16 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- pkgname=rdma-core
- pkgdesc="RDMA core userspace libraries and daemons"
--pkgver=56.1
--pkgrel=1
-+pkgver=56.0
-+pkgrel=2
- arch=(x86_64)
- url="https://github.com/linux-rdma/rdma-core"
- license=(
 @@ -20,7 +20,7 @@
    glibc
    libnl
@@ -28,15 +17,6 @@
    valgrind
  )
  optdepends=(
-@@ -61,7 +60,7 @@
- replaces=("${_provides[@]}")
- backup=(etc/rdma/{rdma.conf,mlx4.conf})
- source=("https://github.com/linux-rdma/rdma-core/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
--sha512sums=('e26bea4c7f76fca0b5275bbfb969455e704a6f801ac0f1c142c667b00d26c3d21d19503f3fdf1973dcf3c3e59e5f9c7338a9ffdae3f721828c4f429e6c500158')
-+sha512sums=('c3b897e7bb527be233c1628550d55177b95b8a1371425eb83534de1bddf9f09071a5c1a56aa41dd07b205f61a228076233088534963d048ba519699a043d7e31')
- 
- prepare() {
-     cd $pkgname-$pkgver
 @@ -117,4 +116,6 @@
      install -vDm 644 providers/ipathverbs/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname/providers/ipathverbs/
      install -vDm 644 ccan/LICENSE.CCO -t "$pkgdir"/usr/share/licenses/$pkgname/ccan/

@@ -31,4 +31,5 @@ lib32-pipewire-v4l2
 lib32-polkit
 lib32-spirv-llvm-translator
 lib32-v4l-utils
+steam
 wine

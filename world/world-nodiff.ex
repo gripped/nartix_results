@@ -177,6 +177,7 @@ aws-sdk-cpp-iam
 aws-sdk-cpp-kinesis
 aws-sdk-cpp-s3
 ayatana-ido
+b3sum
 babl
 backuppc
 baloo-widgets
@@ -2375,7 +2376,6 @@ nanosvg
 nasm
 nauty
 nawk
-nccl
 ncdu
 ncftp
 ncmpcpp
@@ -5152,6 +5152,7 @@ sox
 spamassassin
 spandsp
 spandsp-docs
+sparsehash
 spatialindex
 spdlog
 speakup-utils
