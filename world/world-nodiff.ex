@@ -306,7 +306,6 @@ certbot-dns-rfc2136
 certbot-dns-route53
 certbot-dns-sakuracloud
 certbot-nginx
-certbot
 cervisia
 cfitsio
 cgns
@@ -345,7 +344,6 @@ clinfo
 clisp
 cln
 cloc
-clucene
 clutter-gst
 clutter-gtk
 clutter
@@ -741,6 +739,7 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
@@ -877,6 +876,7 @@ graphicsmagick
 graphite
 graphite-docs
 graphviz
+grilo-plugins
 grilo
 grim
 groovy
@@ -2376,6 +2376,7 @@ nanosvg
 nasm
 nauty
 nawk
+nccl
 ncdu
 ncftp
 ncmpcpp
@@ -4583,7 +4584,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -5037,13 +5037,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

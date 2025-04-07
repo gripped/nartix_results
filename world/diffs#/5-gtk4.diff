@@ -5,8 +5,9 @@
    gtk-update-icon-cache
  )
 -pkgver=4.12.5
+-pkgrel=1
 +pkgver=4.18.3
- pkgrel=1
++pkgrel=2
  epoch=1
  pkgdesc="GObject-based multi-platform GUI toolkit"
  url="https://www.gtk.org/"
@@ -59,7 +60,7 @@
    wayland-protocols
  )
  checkdepends=(
-@@ -71,27 +76,22 @@
+@@ -71,32 +76,29 @@
    noto-fonts
    pipewire
    python-pydbus
@@ -91,7 +92,14 @@
  
  prepare() {
    cd gtk
-@@ -106,24 +106,27 @@
+ 
+   git apply -3 ../0001-HACK-Don-t-use-objcopy-for-resource-embedding.patch
++
++  git cherry-pick -n 5c065826311fc807f4a1825f52562f14db0f3979
+ }
+ 
+ build() {
+@@ -106,24 +108,27 @@
      -D colord=enabled
      -D documentation=true
      -D man-pages=true
@@ -125,7 +133,7 @@
  )
  
  _pick() {
-@@ -137,7 +140,14 @@
+@@ -137,7 +142,14 @@
  }
  
  package_gtk4() {
@@ -141,7 +149,7 @@
    optdepends=('evince: Default print preview command')
    provides=(libgtk-4.so)
  
-@@ -155,24 +165,35 @@
+@@ -155,24 +167,35 @@
  
    cd "$pkgdir"
  
@@ -185,7 +193,7 @@
    mv demo/* "$pkgdir"
  }
  
-@@ -184,13 +205,22 @@
+@@ -184,13 +207,22 @@
  
  package_gtk-update-icon-cache() {
    pkgdesc="GTK icon cache updater"
@@ -272,7 +280,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,9 +9,9 @@
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd gtk
+ git apply -3 ../0001-HACK-Don-t-use-objcopy-for-resource-embedding.patch
++git cherry-pick -n 5c065826311fc807f4a1825f52562f14db0f3979
+ }
+ build() {
+ local meson_options=(
+@@ -9,9 +10,9 @@
  -D colord=enabled
  -D documentation=true
  -D man-pages=true

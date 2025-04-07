@@ -49,12 +49,14 @@ caja-xattr-tags
 caja
 catfish
 cbindgen
+certbot
 cgmanager
 chromium-bsu
 chrony
 cinnamon-desktop
 clamav
 cloud-init
+clucene
 cmake
 colord
 colord-sane
@@ -139,7 +141,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -165,7 +166,6 @@ greetd-tuigreet
 greetd
 $pkgbase
 $pkgbase-agreety
-grilo-plugins
 grpc
 python-grpcio
 python-grpcio-tools
@@ -469,7 +469,6 @@ nautilus
 libnautilus-extension
 libnautilus-extension-docs
 nbd
-nccl
 ndctl
 ndisc6
 nemo-extensions
@@ -710,6 +709,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -737,6 +737,13 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 ldb

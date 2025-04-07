@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=grilo-plugins
+ pkgver=0.3.16+r46+gea3afa8c
+-pkgrel=1
++pkgrel=1.1
+ epoch=1
+ pkgdesc="A collection of plugins for the Grilo framework"
+ url="https://gitlab.gnome.org/GNOME/grilo-plugins"
+@@ -75,7 +75,7 @@
+     -D enable-tracker=no
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ local meson_options=(
+ -D enable-tracker=no
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

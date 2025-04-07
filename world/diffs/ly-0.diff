@@ -1,7 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,15 +4,22 @@
- pkgrel=1
+@@ -1,21 +1,25 @@
+ 
+ pkgname=ly
+ pkgver=1.0.3
+-pkgrel=2
++pkgrel=1
  pkgdesc="TUI display manager"
  arch=(x86_64)
 -url="https://github.com/fairyglade/ly"
@@ -14,7 +18,11 @@
 +            'xorg-xmessage: for displaying a message or query in a window'
 +            'xorg-xauth: for X server sessions'
              'libxcb: for X server sessions')
- backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
+-backup=(
+-    etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh}
+-    etc/pam.d/ly
+-)
++backup=(etc/$pkgname/{config.ini,wsetup.sh,xsetup.sh})
  source=("git+$url.git#tag=v${pkgver}")
  b2sums=('f5ac7d949487d70e0102b595f5d8b31615071f3edcc90e1d15285ad46843147bcda2510e4c946dbe123c326f3d1ed407d2ed4e7adac0370a7af2750a757c61f8')
 +
@@ -25,7 +33,7 @@
  
  build() {
      cd "$pkgname"
-@@ -21,9 +28,11 @@
+@@ -24,9 +28,11 @@
  
  package() {
      cd "$pkgname"
