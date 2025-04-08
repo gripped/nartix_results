@@ -141,6 +141,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -283,6 +284,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+ldc
 libatasmart
 libayatana-indicator
 libblockdev
@@ -322,7 +324,6 @@ libhandy0
 libinput
 libldm
 libmspub
-libnewt
 libnvme
 libprocps
 libqtxdg
@@ -397,7 +398,6 @@ lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
-ly
 mako
 maliit-framework
 marco
@@ -614,6 +614,7 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
+python-logbook
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -709,7 +710,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -737,13 +737,6 @@ rtkit
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 ldb
@@ -841,6 +834,7 @@ uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
 v2ray
 v4l-utils
+valkey
 vault
 vlc
 libvlc

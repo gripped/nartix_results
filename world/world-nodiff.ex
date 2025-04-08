@@ -26,6 +26,7 @@ adobe-source-sans-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
+aflplusplus
 afpfs-ng
 aha
 akonadi-calendar-tools
@@ -739,7 +740,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 giflib
 gifski
@@ -1568,7 +1568,6 @@ layer-shell-qt5
 lbzip2
 lcms2
 ldb
-ldc
 leafpad
 leatherman
 lensfun
@@ -1848,6 +1847,7 @@ libnbd
 libndp
 libnet
 libnetfilter_queue
+libnewt
 libnfs
 libnghttp3
 libngtcp2
@@ -2200,6 +2200,7 @@ lxqt-policykit
 lxqt-powermanagement
 lxqt-runner
 lxqt-sudo
+ly
 lynx
 lzip
 lzop
@@ -2583,6 +2584,7 @@ patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
+pax-utils
 pbzip2
 pcaudiolib
 pcmanfm-qt
@@ -3680,7 +3682,6 @@ python-lmdb
 python-localzone
 python-locket
 python-lockfile
-python-logbook
 python-loguru
 python-logutils
 python-looseversion
@@ -4584,6 +4585,7 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -5037,6 +5039,13 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

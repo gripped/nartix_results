@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,9 +24,8 @@
+ 
+ package() {
+     cd "$pkgname"
+-    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installsystemd
++    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installnoconf
+ 
+-    sed -i "s;/usr/bin/ly;/usr/bin/ly-dm;g" "$pkgdir/usr/lib/systemd/system/ly.service"
+ 
+     install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
+ }
