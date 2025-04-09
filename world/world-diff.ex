@@ -614,7 +614,9 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
+python-jaraco.itertools
 python-logbook
+python-pikepdf
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

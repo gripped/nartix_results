@@ -3599,7 +3599,6 @@ python-jaraco.collections
 python-jaraco.context
 python-jaraco.envs
 python-jaraco.functools
-python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
 python-jaraco.text
@@ -3864,7 +3863,6 @@ python-phonenumbers
 python-piccata
 python-pickleshare
 python-pika
-python-pikepdf
 python-pillow
 python-pint
 python-pip-run

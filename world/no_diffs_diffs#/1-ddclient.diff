@@ -1,28 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
- optdepends=('smtp-forwarder: email support requires sendmail binary')
- source=("git+https://github.com/ddclient/ddclient.git?signed#tag=v${pkgver}"
-          permission.patch)
--sha256sums=('12d29dbd3b3407c752a72d39fc2e7be013e92584940717b16af362f61e3d8e82'
-+sha256sums=('SKIP'
-             '2e02b1c41a270f20fc3ef5d6e9bf230338be7a371bdf73c9d1eb34db20c8fe00')
- validpgpkeys=('53B26AEDC08246715E15504B236B6291555E8401' # Sandro Jäckel
-               'D852004BCC1AEC6F2449631D394799890605C42A' # Lenard Heß
-@@ -32,16 +32,11 @@
+@@ -34,6 +34,9 @@
    make
  }
  
--check() {
--  cd ${pkgname}
--  make VERBOSE=1 check
--}
++check() {
++  cd ${pkgname}
++}
  
  package() {
    cd ${pkgname}
-   make DESTDIR="${pkgdir}" install
- 
--  install -Dm644 sample-etc_systemd.service "$pkgdir"/usr/lib/systemd/system/ddclient.service
-   install -d "$pkgdir"/var/cache/ddclient
- 
-   install -Dm644 README.cisco "$pkgdir"/usr/share/doc/ddclient/README.cisco
