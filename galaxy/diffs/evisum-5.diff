@@ -3,11 +3,10 @@
 @@ -1,28 +1,28 @@
  
  pkgname=evisum
--pkgver=0.6.1
--pkgrel=3
--pkgdesc="GUI top/htop-like process viewer using EFL"
+-pkgver=0.6.4
 +pkgver=0.6.3
-+pkgrel=1
+ pkgrel=1
+-pkgdesc="GUI top/htop-like process viewer using EFL"
 +pkgdesc="Process monitor like top based on EFL"
  arch=('x86_64')
 -url="https://www.enlightenment.org"
@@ -16,7 +15,7 @@
  depends=('efl')
 -makedepends=('meson' 'ninja')
 -source=("https://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${pkgver}.tar.xz")
--sha256sums=('832f20b8de13e290890810267cf41ed84cbb0c84e2e20a14f6783632612dadb9')
+-sha256sums=('865ca8b565137c32a412302f0eb944ef1604306ed792c0a0dd7f5792c75c6bf8')
 +makedepends=('meson' 'ninja' 'gcc' 'binutils' 'git')
 +source=("${pkgname}-${pkgver}::git+https://git.enlightenment.org/enlightenment/evisum.git")
  

@@ -4310,7 +4310,6 @@ python-tabulate
 python-tabview
 python-tappy
 python-tblib
-python-teamcity-messages
 python-tempita
 python-tempora
 python-tenacity

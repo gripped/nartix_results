@@ -621,6 +621,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-teamcity-messages
 qastools
 qbittorrent
 qbittorrent-nox
