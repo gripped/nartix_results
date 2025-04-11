@@ -51,6 +51,7 @@ librewolf
 libtree
 libwireplumber-4.0-compat
 linux-lts515
+linux-wifi-hotspot
 lxdm-dinit
 lxqt-build-tools-qt6
 mcomix

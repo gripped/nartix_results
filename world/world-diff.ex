@@ -230,7 +230,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-inkscape
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -622,6 +621,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-teamcity-messages
+python-textual
 qastools
 qbittorrent
 qbittorrent-nox

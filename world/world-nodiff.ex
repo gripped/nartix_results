@@ -1086,6 +1086,7 @@ immer
 incidenceeditor
 indent
 iniparser
+inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1818,6 +1819,7 @@ libmateweather
 libmatroska
 libmaxminddb
 libmbim
+libmbim-docs
 libmd
 libmediaart
 libmediainfo
@@ -1921,6 +1923,7 @@ libqb
 libqmi
 libqmi-docs
 libqrtr-glib
+libqrtr-glib-docs
 libquotient
 libquvi-scripts
 libquvi
@@ -4326,7 +4329,6 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
-python-textual
 python-threadpoolctl
 python-tiktoken
 python-time-machine
