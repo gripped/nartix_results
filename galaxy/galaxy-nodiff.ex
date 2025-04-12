@@ -29,6 +29,7 @@ caja-xattr-tags
 caja-audio-video-properties
 caja
 catfish
+cava
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -86,6 +87,7 @@ grub-btrfs
 gstreamermm
 gstreamermm-docs
 gtk-session-lock
+imv
 incron
 kanshi
 lazarus

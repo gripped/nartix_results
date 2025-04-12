@@ -451,6 +451,7 @@ mgba-qt
 miopen-hip
 modemmanager
 libmm-glib
+modemmanager-docs
 modest
 mosquitto
 mousepad

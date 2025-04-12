@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _pipname=debugpy
+ pkgname=python-$_pipname
+-pkgver=1.8.14
++pkgver=1.8.13
+ pkgrel=1
+ pkgdesc='An implementation of the Debug Adapter Protocol for Python'
+ arch=(x86_64)
+@@ -17,7 +17,7 @@
+              python-setuptools
+              python-wheel)
+ source=(git+https://github.com/microsoft/debugpy#tag=v$pkgver)
+-sha256sums=('3b3bbead39ee48ad0afe6c72441fbd1e1672517da5b38a79f4bb947edb0fcbef')
++sha256sums=('3191585a7a39d5c76e3c7bbc936ecad7d4ed3288efdc69ad612021c7622ee671')
+ 
+ build() {
+   cd $_pipname

@@ -1,27 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,6 @@
+@@ -27,7 +27,7 @@
    mobile-broadband-provider-info
    polkit
    ppp
--  systemd
+-  systemd-libs
++  libelogind
  )
  makedepends=(
    bash-completion
-@@ -29,6 +28,7 @@
+@@ -36,7 +36,7 @@
+   gobject-introspection
    gtk-doc
    meson
-   vala
+-  systemd
 +  elogind
+   vala
  )
  checkdepends=(
-   python-dbus
-@@ -52,11 +52,14 @@
+@@ -64,11 +64,13 @@
      -D dbus_policy_dir=/usr/share/dbus-1/system.d
      -D dist_version="\"$pkgver-$pkgrel\""
      -D gtk_doc=true
 +    -D systemd_journal=false
-+    -D systemd_suspend_resume=true
 +    -D systemdsystemunitdir=no
      -D polkit=permissive
      -D vapi=true
@@ -32,9 +33,9 @@
    meson compile -C build
  }
  
-@@ -77,7 +80,7 @@
+@@ -90,7 +92,7 @@
+     libg{lib,object,io,module}-2.0.so
      libmbim-glib.so
-     libmm-glib.so
      libqmi-glib.so
 -    libsystemd.so
 +    libelogind.so
@@ -45,21 +46,34 @@
 
 ############# Stripped diff below #################
 
-
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -6,9 +6,12 @@
- -D dbus_policy_dir=/usr/share/dbus-1/system.d
- -D dist_version="\"$pkgver-$pkgrel\""
- -D gtk_doc=true
-+-D systemd_journal=false
-+-D systemd_suspend_resume=true
-+-D systemdsystemunitdir=no
- -D polkit=permissive
- -D vapi=true
- )
--arch-meson ModemManager build "${meson_options[@]}"
-+artix-meson ModemManager build "${meson_options[@]}"
- meson compile -C build
- }
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ 
+ bash
+ bash-completion
++elogind
+ gcc-libs
+ git
+ glib2
+@@ -9,6 +10,8 @@
+ gobject-introspection
+ gtk-doc
+ hicolor-icon-theme
++libelogind
++libelogind.so
+ libgio-2.0.so
+ libglib-2.0.so
+ libgmodule-2.0.so
+@@ -22,11 +25,8 @@
+ libqmi
+ libqmi-glib.so
+ libqrtr-glib
+-libsystemd.so
+ meson
+ mobile-broadband-provider-info
+ polkit
+ ppp
+-systemd
+-systemd-libs
+ vala
