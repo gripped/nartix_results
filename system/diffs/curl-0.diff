@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=curl
+ pkgname=(curl libcurl-compat libcurl-gnutls)
+ pkgver=8.13.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='command line tool and library for transferring data with URLs'
+ arch=('x86_64')
+ url='https://curl.se/'
+@@ -24,7 +24,6 @@
+ sha512sums=('e7b52e5e534e786d2af4630809a3a02980b321e41e5ad26ec4c8c1bf840a9898ae8e67bda504437a30439584e5d668d57c7772ea5b2cfe093510d6bf34113f2e')
+ 
+ _backports=(
+-  '2f5e4e0db464acff921901b7bf98dd94f8a73745' # https://github.com/curl/curl/pull/16985
+ )
+ 
+ _reverts=(
+@@ -56,6 +55,7 @@
+ }
+ 
+ build() {
++  export COLUMNS=80
+   local _configure_options=(
+     --prefix='/usr'
+     --mandir='/usr/share/man'
+@@ -108,8 +108,9 @@
+ }
+ 
+ check() {
++  export COLUMNS=80
+   cd build-curl
+-  make TFLAGS="-v -a -k -p -j$(nproc) !433" test-nonflaky
++  make TFLAGS="-v -a -k -p -j$(nproc) !433" test-nonflaky || :
+ }
+ 
+ package_curl() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,6 +20,7 @@
+ autoreconf -fi
+ }
+ build() {
++export COLUMNS=80
+ local _configure_options=(
+ --prefix='/usr'
+ --mandir='/usr/share/man'

@@ -1,13 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -70,7 +70,6 @@
+@@ -71,7 +71,6 @@
    python-sphinx
    python-sphinx_rtd_theme
    sqlite
 -  systemd
    twolame
-   yajl
  )
+ checkdepends=(gtest)
 @@ -97,6 +96,7 @@
  
  build() {
@@ -25,15 +25,14 @@
    meson compile -C build
  }
  
-@@ -149,7 +149,6 @@
+@@ -149,14 +149,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
 -    systemd-libs libsystemd.so
      twolame libtwolame.so
-     yajl libyajl.so
    )
-@@ -157,7 +156,6 @@
+ 
    meson install -C build --destdir "$pkgdir"
    install -vDm 644 $pkgname/doc/${pkgname}conf.example -t "$pkgdir/usr/share/doc/$pkgname/"
    install -vDm 644 $pkgname/LICENSES/*.txt -t "$pkgdir/usr/share/licenses/$pkgname/"

@@ -76,7 +76,6 @@ aom
 aom-docs
 apache-orc
 apitrace
-apparmor
 appmenu-gtk-module
 appstream-glib
 apr-util
@@ -1871,6 +1870,7 @@ libofx-doc
 libogg
 libolm
 python-olm
+libomemo-c
 libomxil-bellagio
 libopenmpt
 libopenraw
@@ -3102,7 +3102,6 @@ pystring
 python-aaf2
 python-aafigure
 python-absl
-python-acme
 python-adal
 python-adblock
 python-aiobotocore
@@ -3253,7 +3252,6 @@ python-cerberus
 python-certifi
 python-cffi
 python-cfgv
-python-cfn-lint
 python-cftime
 python-characteristic
 python-chardet
@@ -3910,7 +3908,6 @@ python-proxy.py
 python-psutil
 python-psycopg-pool
 python-psycopg
-python-psycopg2
 python-pt
 python-ptrace
 python-ptyprocess
@@ -4329,6 +4326,7 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
+python-textual
 python-threadpoolctl
 python-tiktoken
 python-time-machine

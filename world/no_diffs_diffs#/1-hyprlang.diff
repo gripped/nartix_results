@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hyprlang
+-pkgver=0.6.1
+-pkgrel=1
++pkgver=0.6.0
++pkgrel=7
+ pkgdesc='implementation library for the hypr config language'
+ arch=(x86_64 aarch64)
+ url="https://github.com/hyprwm/$pkgname"
+@@ -13,7 +13,7 @@
+ provides=("lib$pkgname.so")
+ _archive="$pkgname-$pkgver"
+ source=("$url/archive/v$pkgver/$_archive.tar.gz")
+-sha256sums=('8537bb112c633b3463850747d1fd29e1e1884df2cc4659c12736b941ba06e6bb')
++sha256sums=('b1a163606402041d92507936fb6dcbc40dd0035b8e8abbf44b0ab59be627b52c')
+ 
+ build() {
+ 	cd "$_archive"
