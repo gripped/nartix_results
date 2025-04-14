@@ -76,6 +76,7 @@ aom
 aom-docs
 apache-orc
 apitrace
+apparmor
 appmenu-gtk-module
 appstream-glib
 apr-util
@@ -306,6 +307,7 @@ certbot-dns-rfc2136
 certbot-dns-route53
 certbot-dns-sakuracloud
 certbot-nginx
+certbot
 cervisia
 cfitsio
 cgns
@@ -1068,7 +1070,6 @@ i3-wm
 i3blocks
 i3lock
 i3status
-iagno
 ibm-sw-tpm2
 icewm
 icmake
@@ -3315,7 +3316,6 @@ python-cson
 python-css-parser
 python-csscompressor
 python-cssselect
-python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
@@ -4582,7 +4582,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct

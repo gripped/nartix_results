@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -23,7 +23,7 @@
+@@ -31,7 +31,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- git apply -3 ../gnome-tetravex-highscore.patch
+@@ -6,6 +6,6 @@
+ git apply -3 ../gnome-tetravex-create-window.patch
  }
  build() {
 -arch-meson $pkgname build -D build_cli=true

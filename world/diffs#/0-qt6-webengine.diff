@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-webengine
+ _pkgver=6.9.0
+ pkgver=${_pkgver/-/}
+-pkgrel=4
++pkgrel=3
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL-3.0-only
+@@ -89,10 +89,6 @@
+ 
+   git cherry-pick -n a56ea1e9cf1004d475932dc954c9cc494fbf32b1
+ 
+-  git cherry-pick -n 23cb28fa0c21c3205b398eb177dffada62de6cc9
+-
+-  git cherry-pick -n f88fa0c83c7f0c063475539b327065f8615fe9d7
+-
+   git -C src/3rdparty cherry-pick -n 416c7ff1efbb6565b109ff1462bc84a6870e13b9
+ 
+   patch -d src/3rdparty/chromium/third_party/webrtc -p1 < ../pipewire-1.4.patch
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,8 +5,6 @@
+ git -c protocol.file.allow=always submodule update
+ git cherry-pick -n 08f793a6ef5da886e1282a3fb9a2829bd14413b2
+ git cherry-pick -n a56ea1e9cf1004d475932dc954c9cc494fbf32b1
+-git cherry-pick -n 23cb28fa0c21c3205b398eb177dffada62de6cc9
+-git cherry-pick -n f88fa0c83c7f0c063475539b327065f8615fe9d7
+ git -C src/3rdparty cherry-pick -n 416c7ff1efbb6565b109ff1462bc84a6870e13b9
+ patch -d src/3rdparty/chromium/third_party/webrtc -p1 < ../pipewire-1.4.patch
+ }

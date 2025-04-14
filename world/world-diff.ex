@@ -6,7 +6,6 @@ alsa-utils
 amule
 apache
 apcupsd
-apparmor
 appstream
 appstream-qt5
 appstream-qt
@@ -50,7 +49,6 @@ caja-xattr-tags
 caja
 catfish
 cbindgen
-certbot
 cgmanager
 chromium-bsu
 chrony
@@ -227,6 +225,7 @@ hipify-clang
 hwloc
 hyprland
 i2pd
+iagno
 ibus
 libibus
 igsc
@@ -616,6 +615,7 @@ pysolfc
 python-acme
 python-anytree
 python-cfn-lint
+python-cssselect2
 python-ipykernel
 python-jaraco.itertools
 python-logbook
@@ -717,6 +717,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
