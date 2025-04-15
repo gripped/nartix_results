@@ -82,7 +82,6 @@ libcap
 libedit
 libevent
 libevent-docs
-libffi
 libgcrypt
 libgpg-error
 libgssglue

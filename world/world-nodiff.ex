@@ -9,7 +9,6 @@ aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
 abseil-cpp
-accerciser
 accessibility-inspector
 accounts-qml-module
 ack
@@ -52,7 +51,6 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
-alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -741,6 +739,7 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
@@ -1019,7 +1018,6 @@ hiprt
 hipsolver
 hipsparse
 hiredis
-hitori
 hivex
 hostapd
 hotdoc
@@ -1072,7 +1070,6 @@ i3lock
 i3status
 ibm-sw-tpm2
 icewm
-icmake
 icon-naming-utils
 icoutils
 id3lib
@@ -1091,7 +1088,6 @@ innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
-intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
@@ -3103,6 +3099,7 @@ pystring
 python-aaf2
 python-aafigure
 python-absl
+python-acme
 python-adal
 python-adblock
 python-aiobotocore
@@ -3123,7 +3120,6 @@ python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
-python-aiounittest
 python-alembic
 python-amqp
 python-aniso8601
@@ -3171,7 +3167,6 @@ python-asynctest
 python-atomicwrites
 python-atpublic
 python-attrdict
-python-attrs
 python-auditwheel
 python-augeas
 python-authheaders
@@ -3526,7 +3521,6 @@ python-greenlet
 python-gssapi
 python-guzzle-sphinx-theme
 python-h11
-python-h2
 python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
@@ -3557,7 +3551,6 @@ python-httpx
 python-humanfriendly
 python-humanize
 python-hvac
-python-hyperframe
 python-hyperlink
 python-hypothesis-auto
 python-hypothesis-fspaths
@@ -3864,7 +3857,6 @@ python-phonenumbers
 python-piccata
 python-pickleshare
 python-pika
-python-pillow
 python-pint
 python-pip-run
 python-pip
@@ -4136,7 +4128,6 @@ python-random2
 python-rapidfuzz
 python-rapidjson
 python-rcssmin
-python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
@@ -4405,7 +4396,6 @@ python-virtualenv
 python-vistir
 python-vobject
 python-volatile
-python-voluptuous
 python-waitress
 python-wand
 python-warlock
@@ -4582,6 +4572,7 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -5224,7 +5215,6 @@ t1utils
 taglib
 taglib1
 tailscale
-tali
 talloc
 tang
 task
@@ -5237,7 +5227,6 @@ tecla
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
-telepathy-gabble
 telepathy-haze
 telepathy-idle
 telepathy-kde-accounts-kcm

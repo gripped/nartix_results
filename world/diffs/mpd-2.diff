@@ -4,9 +4,8 @@
  
  pkgname=mpd
 -pkgver=0.24.3
--pkgrel=1
 +pkgver=0.23.15
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Flexible, powerful, server-side application for playing music"
  arch=(x86_64)
  url="https://www.musicpd.org/"
@@ -29,7 +28,11 @@
    bzip2
    chromaprint
    curl
-@@ -64,33 +63,30 @@
+@@ -60,36 +59,34 @@
+   libsamplerate
+   libsndfile
+   libupnp
++  liburing
    libvorbis
    meson
    mpg123
@@ -69,11 +72,12 @@
          'd7b587c25dd5830c27af475a8fdd8102139d7c8fdd6f04fe23b36be030e4411582e289f575c299255ff8183096f7d47247327276f9a24641cbd032d9675b837a'
          '753664445d7d5cc0b36f51ac66549beea403b9731cbcb81b0a782974a0a73d90559ba93e6afcaa470b6f2f5a844c09ef695bdf3b1e6dfee97aa080f41b7fe513')
  validpgpkeys=('0392335A78083894A4301C43236E8A58C6DB4512') # Max Kellermann <max@blarg.de>
-@@ -99,25 +95,25 @@
+@@ -98,26 +95,25 @@
    local _meson_options=(
      -D documentation=enabled
      -D adplug=disabled
 -    -D audiofile=disabled
+-    -D io_uring=disabled  # liburing support broken: https://github.com/MusicPlayerDaemon/MPD/issues/2241
      -D sndio=disabled
      -D shine=disabled
      -D tremor=disabled
@@ -100,7 +104,13 @@
      avahi libavahi-{client,common}.so
      bzip2 libbz2.so
      chromaprint libchromaprint.so
-@@ -149,14 +145,12 @@
+@@ -143,19 +139,18 @@
+     libsamplerate libsamplerate.so
+     libsndfile libsndfile.so
+     libupnp libixml.so libupnp.so
++    liburing liburing.so
+     libvorbis libvorbis{,enc}.so
+     mpg123 libmpg123.so
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
@@ -139,7 +149,7 @@
  libavahi-client.so
  libavahi-common.so
  libavcodec.so
-@@ -73,7 +76,6 @@
+@@ -73,26 +76,25 @@
  libsndfile.so
  libsoxr
  libsqlite3.so
@@ -147,7 +157,8 @@
  libtwolame.so
  libupnp
  libupnp.so
-@@ -82,19 +84,17 @@
++liburing
++liburing.so
  libvorbis
  libvorbis.so
  libvorbisenc.so

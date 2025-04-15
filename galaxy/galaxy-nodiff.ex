@@ -45,6 +45,7 @@ certbot-dns-rfc2136
 certbot-dns-route53
 certbot-dns-sakuracloud
 certbot-nginx
+certbot
 chess-tui
 chromium-bsu
 cinnamon-control-center

@@ -1,5 +1,4 @@
 alsa-utils
-certbot
 cinnamon-desktop
 copyq
 doctest

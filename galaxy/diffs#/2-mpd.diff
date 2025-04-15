@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -71,7 +71,6 @@
+@@ -70,7 +70,6 @@
    python-sphinx
    python-sphinx_rtd_theme
    sqlite
@@ -8,7 +8,7 @@
    twolame
  )
  checkdepends=(gtest)
-@@ -97,6 +96,7 @@
+@@ -96,6 +95,7 @@
  
  build() {
    local _meson_options=(
@@ -25,7 +25,7 @@
    meson compile -C build
  }
  
-@@ -149,14 +149,12 @@
+@@ -148,14 +148,12 @@
      openal libopenal.so
      opus libopus.so
      sqlite libsqlite3.so
@@ -54,7 +54,7 @@
  libtwolame.so
  libupnp
  libupnp.so
-@@ -91,8 +90,6 @@
+@@ -89,8 +88,6 @@
  python-sphinx
  python-sphinx_rtd_theme
  sqlite
