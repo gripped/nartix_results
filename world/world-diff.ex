@@ -1,9 +1,7 @@
 0ad
-accerciser
 accountsservice
 adwaita-fonts
 alacritty
-alsa-ucm-conf
 alsa-utils
 amule
 apache
@@ -142,6 +140,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+giflib
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -533,6 +532,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-test-deep
 pgbouncer
 phodav
 php-legacy
@@ -727,6 +727,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
 qterminal
 qtermwidget
 quadrapassel
@@ -787,7 +788,6 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
-tali
 tcc
 telegram-desktop
 telepathy-gabble
@@ -821,6 +821,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 tumbler
+twine
 uasm
 udftools
 udisks2

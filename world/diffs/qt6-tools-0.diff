@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=qt6-tools
+ _pkgver=6.9.0
+ pkgver=${_pkgver/-/}
+-pkgrel=2
++pkgrel=1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL-3.0-only
+@@ -37,8 +37,6 @@
+   git submodule init
+   git submodule set-url src/assistant/qlitehtml "$srcdir"/qlitehtml
+   git -c protocol.file.allow=always submodule update
+-
+-  git cherry-pick -n 9cbd235f7e9dd5baea2f55a6fe1c29a7abd7255b # Add desktop and metainfo files for GUI tools
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,6 @@
+ git submodule init
+ git submodule set-url src/assistant/qlitehtml "$srcdir"/qlitehtml
+ git -c protocol.file.allow=always submodule update
+-git cherry-pick -n 9cbd235f7e9dd5baea2f55a6fe1c29a7abd7255b # Add desktop and metainfo files for GUI tools
+ }
+ build() {
+ cmake -B build -S $_pkgfn -G Ninja \

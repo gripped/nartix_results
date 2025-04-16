@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -42,7 +42,7 @@
+@@ -48,7 +48,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,6 @@
- sed -i '/gtk_window_set_default_icon_name/ s/glade/org.gnome.Glade/' src/main.c
+@@ -7,6 +7,6 @@
+ git apply -3 ../0001-Add-D-Bus-service-file.patch
  }
  build() {
 -arch-meson glade build -D gtk_doc=true

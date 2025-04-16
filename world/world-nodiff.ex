@@ -9,6 +9,7 @@ aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
 abseil-cpp
+accerciser
 accessibility-inspector
 accounts-qml-module
 ack
@@ -51,6 +52,7 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
+alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -741,7 +743,6 @@ ghex
 ghex-docs
 ghostscript
 gi-docgen
-giflib
 gifski
 gimp-help
 gimp
@@ -2843,7 +2844,6 @@ perl-term-readline-gnu
 perl-term-table
 perl-term-ui
 perl-test-base
-perl-test-deep
 perl-test-exception
 perl-test-exit
 perl-test-failwarnings
@@ -4567,7 +4567,6 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -5215,6 +5214,7 @@ t1utils
 taglib
 taglib1
 tailscale
+tali
 talloc
 tang
 task
@@ -5462,7 +5462,6 @@ ttf-opensans
 ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
-twine
 twolame
 txt2man
 typescript

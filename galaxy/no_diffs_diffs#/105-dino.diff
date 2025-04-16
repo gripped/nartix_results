@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ validpgpkeys=('A32134DD19952FB12EC43E4501FABCC83FEA225E')
+ 
+ build() {
+-	arch-meson "${pkgname}-${pkgver}" build
++	artix-meson "${pkgname}-${pkgver}" build
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "${pkgname}-${pkgver}" build
++artix-meson "${pkgname}-${pkgver}" build
+ meson compile -C build
+ }

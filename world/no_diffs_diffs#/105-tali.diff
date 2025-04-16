@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+ }
+ 
+ build() {
+-  arch-meson tali build
++  artix-meson tali build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ git apply -3 ../tali-dbus-activatable.patch
+ }
+ build() {
+-arch-meson tali build
++artix-meson tali build
+ meson compile -C build
+ }

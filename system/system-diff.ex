@@ -57,6 +57,7 @@ p11-kit-docs
 pacman
 pam
 pambase
+perl
 ppp
 procps-ng
 rpcbind
