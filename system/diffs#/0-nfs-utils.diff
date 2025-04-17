@@ -1,39 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,27 @@
- 
- pkgbase=nfs-utils
- pkgname=('nfs-utils' 'nfsidmap')
--pkgver=2.8.3
--pkgrel=1
-+pkgver=2.8.2
-+pkgrel=2
- arch=('x86_64')
- url='http://nfs.sourceforge.net'
- license=('GPL-2.0-or-later')
- makedepends=('libevent' 'sqlite' 'rpcsvc-proto' 'device-mapper' 'libnl')
- source=(https://www.kernel.org/pub/linux/utils/${pkgname}/${pkgver}/${pkgname}-${pkgver}.tar.{xz,sign}
-         exports
--        sysusers.d)
--sha256sums=('11e7c5847a8423a72931c865bd9296e7fd56ff270a795a849183900961711725'
-+        sysusers.d
-+        0001-fix-nfsidmap-missing-functions.patch)
-+sha256sums=('a39bbea76ac0ab9e6e8699caf3c308b6b310c20d458e8fa8606196d358e7fb15'
-             'SKIP'
-             'b8238b74179f7e1626db2b637671ddc17288a1c5b7692954ae6d2fbb1be3788d'
--            '61a3fbe55e30bc9c5da17a76e772c8be1cc695e0142a144c15f0f9aa46ab9ce0')
-+            '61a3fbe55e30bc9c5da17a76e772c8be1cc695e0142a144c15f0f9aa46ab9ce0'
-+            '74a9c27fa82e4d4411d99ed65712363467dabcb17c76f9a9ae9d7c3ebb50994e')
- validpgpkeys=('E1B71E339E20A10A676F7CB69AFB1D681A125177') # Steve Dickson
- 
- prepare() {
-   cd "${pkgbase}"-${pkgver}
-+
-+  patch -Np1 -i ../0001-fix-nfsidmap-missing-functions.patch
- 
-   sed -i "s|sbindir = /sbin|sbindir = /usr/bin|g" utils/*/Makefile.am
-   sed -i "s|sbin|bin|" utils/nfsidmap/id_resolver.conf
-@@ -40,7 +44,7 @@
+@@ -40,7 +40,7 @@
      --enable-ipv6 \
      --enable-libmount-mount \
      --enable-mountconfig \
@@ -42,7 +9,7 @@
    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
    make
  }
-@@ -68,7 +72,6 @@
+@@ -68,7 +68,6 @@
    install -D -m 644 nfs.conf "$pkgdir"/etc/nfs.conf
  
    install -d -m 755 "$pkgdir"/usr/share/doc/$pkgname
@@ -58,14 +25,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,6 @@
- prepare() {
- cd "${pkgbase}"-${pkgver}
-+patch -Np1 -i ../0001-fix-nfsidmap-missing-functions.patch
- sed -i "s|sbindir = /sbin|sbindir = /usr/bin|g" utils/*/Makefile.am
- sed -i "s|sbin|bin|" utils/nfsidmap/id_resolver.conf
- sed -i "s|libexec|bin|" tools/nfsrahead/99-nfs.rules
-@@ -20,7 +21,7 @@
+@@ -20,7 +20,7 @@
  --enable-ipv6 \
  --enable-libmount-mount \
  --enable-mountconfig \

@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,7 @@
- b2sums=('12fa78ff8371098baf18244c493108cd3048cad6b5655a567bbe866794ece855e116a65b3c5c92f38eaafbd782104448faa64ee51178f4823d0bd81373f8f7b0')
+@@ -37,7 +37,7 @@
+ }
  
  build() {
 -  arch-meson d-spy build
@@ -17,7 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
+@@ -5,6 +5,6 @@
+ git cherry-pick -n 84c6327289b69fabe9ce0c91e54f8910a82ff72c
+ }
  build() {
 -arch-meson d-spy build
 +artix-meson d-spy build

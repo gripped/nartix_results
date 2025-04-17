@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,7 +28,7 @@
+@@ -32,7 +32,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd $pkgname
+@@ -3,6 +3,6 @@
+ git apply -3 ../dconf-editor-prgname.patch
  }
  build() {
 -arch-meson $pkgname build

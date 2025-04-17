@@ -67,6 +67,7 @@ lib32-libdecor
 lib32-libdrm
 lib32-libdv
 lib32-libelf
+lib32-libffi
 lib32-libgcrypt
 lib32-libglvnd
 lib32-libgpg-error

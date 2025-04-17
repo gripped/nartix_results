@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -109,7 +109,7 @@
+ 
+ check() {
+   cd build-curl
+-  make TFLAGS="-v -a -k -p -j$(nproc) !433" test-nonflaky
++  make TFLAGS="-v -a -k -p -j$(nproc) !433" test-nonflaky || :
+ }
+ 
+ package_curl() {

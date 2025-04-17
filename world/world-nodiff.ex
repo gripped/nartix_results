@@ -353,7 +353,6 @@ cmark-gfm
 cmark
 cmatrix
 cmocka
-cmus
 cni-plugins
 codespell
 coffeescript
@@ -445,8 +444,6 @@ deluge
 deluge-gtk
 desktop-file-utils
 dev86
-devhelp
-devhelp-docs
 devil
 dhcp
 dhclient
@@ -464,7 +461,6 @@ distro-info
 django
 python-django
 djvulibre
-dkms
 dleyna
 dleyna-docs
 python-dleyna
@@ -741,7 +737,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 gifski
 gimp-help
@@ -2844,6 +2839,7 @@ perl-term-readline-gnu
 perl-term-table
 perl-term-ui
 perl-test-base
+perl-test-deep
 perl-test-exception
 perl-test-exit
 perl-test-failwarnings
@@ -4411,7 +4407,6 @@ python-webob
 python-webob-docs
 python-websocket-client
 python-websockets
-python-webtest
 python-werkzeug
 python-whatthepatch
 python-wheel
@@ -4567,6 +4562,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland

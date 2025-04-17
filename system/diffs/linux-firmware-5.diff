@@ -1,0 +1,112 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,31 +3,33 @@
+ pkgname=(linux-firmware-whence linux-firmware amd-ucode
+          linux-firmware-{nfp,mellanox,marvell,qcom,liquidio,qlogic,bnx2x}
+ )
+-_tag=20231211
+-pkgver=20231211.f2e52a1c
++_tag=20250410
++pkgver=20250408.c1a774f3
+ pkgrel=1
+ pkgdesc="Firmware files for Linux"
+-url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
+-license=('GPL2' 'GPL3' 'custom')
++url="https://gitlab.com/kernel-firmware/linux-firmware"
++license=(
++  GPL-2.0-only
++  GPL-2.0-or-later
++  GPL-3.0-only
++  custom
++)
+ arch=('any')
+-makedepends=('git' 'rdfind')
+-options=(!strip)
+-source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git#tag=${_tag}?signed")
+-sha256sums=('SKIP')
++makedepends=(
++  git
++  parallel
++  python
++  rdfind
++)
++options=(
++  !strip
++  !debug
++)
++source=("git+$url.git?signed#tag=${_tag}")
++b2sums=('4f5a24352fdac13f208dff5041f54c5e0924684781a26f637ba525808dff8bdffc44f20f0ede7edbffaedfac9620f2c975f8d18fc1fb1e9f4d963afe9f304c77')
+ validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
+ 
+-_backports=(
+-)
+ 
+-prepare() {
+-  cd ${pkgbase}
+-
+-  local _c
+-  for _c in "${_backports[@]}"; do
+-    git log --oneline -1 "${_c}"
+-    git cherry-pick -n "${_c}"
+-  done
+-}
+ 
+ pkgver() {
+   cd ${pkgbase}
+@@ -70,12 +72,15 @@
+   cd ${pkgbase}
+ 
+   ZSTD_CLEVEL=19 make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
++  make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware dedup
+ 
+   install -Dt "${pkgdir}/usr/share/licenses/${pkgname}" -m644 LICEN*
+ 
+   cd "${pkgdir}"
+ 
+   rm usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw_arm64-v4.1.img.zst
++
++  _pick amd-ucode usr/lib/firmware/amd-ucode
+ 
+   _pick linux-firmware-nfp usr/lib/firmware/netronome
+   _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
+@@ -100,6 +105,8 @@
+ package_amd-ucode() {
+   pkgdesc="Microcode update image for AMD CPUs"
+   license=(custom)
++
++  mv -v $pkgname/* "$pkgdir"
+ 
+   install -Dt "${pkgdir}/boot" -m644 amd-ucode.img
+ 
+@@ -154,4 +161,3 @@
+ 
+   mv -v linux-firmware-bnx2x/* "${pkgdir}"
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,5 @@
+ git
+ linux-firmware-whence
++parallel
++python
+ rdfind
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,3 @@
+-prepare() {
+-cd ${pkgbase}
+-local _c
+-for _c in "${_backports[@]}"; do
+-git log --oneline -1 "${_c}"
+-git cherry-pick -n "${_c}"
+-done
+-}
+ build() {
+ mkdir -p kernel/x86/microcode
+ cat ${pkgbase}/amd-ucode/microcode_amd*.bin > kernel/x86/microcode/AuthenticAMD.bin

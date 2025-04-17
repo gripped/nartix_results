@@ -57,6 +57,7 @@ clamav
 cloud-init
 clucene
 cmake
+cmus
 colord
 colord-sane
 libcolord
@@ -72,7 +73,10 @@ cups
 libcups
 dbus-broker
 ddcutil
+devhelp
+devhelp-docs
 dhcpcd
+dkms
 dns-over-https
 docker
 dolphin-emu
@@ -140,6 +144,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
 giflib
 gjs
 gnome-bluetooth-3.0
@@ -532,7 +537,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-test-deep
 pgbouncer
 phodav
 php-legacy
@@ -636,6 +640,7 @@ python-rdflib
 python-recommonmark
 python-teamcity-messages
 python-voluptuous
+python-webtest
 qastools
 qbittorrent
 qbittorrent-nox
@@ -727,7 +732,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
 qterminal
 qtermwidget
 quadrapassel
