@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=xreader
+-pkgver=4.2.5
++pkgver=4.0.2
+ pkgrel=1
+ pkgdesc="Document viewer for files like PDF and Postscript. X-Apps Project."
+ arch=(x86_64)
+@@ -14,13 +14,13 @@
+             'mathjax2: support for math in epub files'
+             'texlive-bin: support for dvi files')
+ makedepends=(meson samurai intltool itstool gobject-introspection djvulibre
+-             git libgxps libspectre texlive-bin glib2-devel)
+-source=(git+https://github.com/linuxmint/xreader.git#tag=${pkgver})
+-sha256sums=('803b5b5f600e92dee82fcea422d390b780a407cddb5d7ec1be22f04af404bbaf')
+-b2sums=('e7ab48406dbf205adcaaa703853483900a1f95ad217e234348e53706a00089fc3f195c335fe3fb80c88e97214175426a127956ee965133f4521e911cb5ddca53')
++             libgxps libspectre texlive-bin)
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha256sums=('d12ec612039672a6db065bede31c1e88df6a945762e0f85cd86fb6786774152a')
++b2sums=('5d91299c082cdac7516b59cb5547387033b65e9e16af5725df64ea513a8fa9ab88a206101985e3222d90539e28a724050248afc4cbc67928eb02eab636f257e2')
+ 
+ build() {
+-  arch-meson ${pkgname} build \
++  artix-meson ${pkgname}-${pkgver} build \
+     --libexecdir=lib/${pkgname} \
+     -Dmathjax-directory=/usr/share/mathjax2 \
+     -Dcomics=true \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,4 @@
+ djvulibre
+-git
+-glib2-devel
+ gobject-introspection
+ intltool
+ itstool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson ${pkgname} build \
++artix-meson ${pkgname}-${pkgver} build \
+ --libexecdir=lib/${pkgname} \
+ -Dmathjax-directory=/usr/share/mathjax2 \
+ -Dcomics=true \

@@ -32,6 +32,7 @@ qbittorrent
 qbittorrent-nox
 rage
 sdcv
+signal-desktop
 terminology
 tor
 torsocks

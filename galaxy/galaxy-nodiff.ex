@@ -357,7 +357,6 @@ ristretto
 screengrab
 scribus
 scummvm
-signal-desktop
 solaar
 sqlitebrowser
 stalonetray

@@ -461,6 +461,7 @@ distro-info
 django
 python-django
 djvulibre
+dkms
 dleyna
 dleyna-docs
 python-dleyna
@@ -1084,6 +1085,7 @@ innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
+intel-media-driver
 intel-media-sdk
 libmfx
 intel-oneapi-common
@@ -1561,6 +1563,7 @@ layer-shell-qt5
 lbzip2
 lcms2
 ldb
+ldc
 leafpad
 leatherman
 lensfun
@@ -1745,7 +1748,6 @@ libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
-libimobiledevice
 libindi
 libindicator
 libindicator-gtk2
@@ -3116,6 +3118,7 @@ python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
+python-aiounittest
 python-alembic
 python-amqp
 python-aniso8601
@@ -3163,6 +3166,7 @@ python-asynctest
 python-atomicwrites
 python-atpublic
 python-attrdict
+python-attrs
 python-auditwheel
 python-augeas
 python-authheaders
@@ -3244,6 +3248,7 @@ python-cerberus
 python-certifi
 python-cffi
 python-cfgv
+python-cfn-lint
 python-cftime
 python-characteristic
 python-chardet
@@ -3302,11 +3307,13 @@ python-crc32c
 python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
+python-crispy-bootstrap5
 python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
 python-cssselect
+python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
@@ -3365,6 +3372,7 @@ python-django-gravatar
 python-django-guardian
 python-django-haystack
 python-django-mailman3
+python-django-ninja
 python-django-picklefield
 python-django-q
 python-django-q2
@@ -3517,6 +3525,7 @@ python-greenlet
 python-gssapi
 python-guzzle-sphinx-theme
 python-h11
+python-h2
 python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
@@ -3547,6 +3556,7 @@ python-httpx
 python-humanfriendly
 python-humanize
 python-hvac
+python-hyperframe
 python-hyperlink
 python-hypothesis-auto
 python-hypothesis-fspaths
@@ -3554,6 +3564,7 @@ python-hypothesis
 python-hypothesmith
 python-ibm-db-sa
 python-icecream
+python-id
 python-identify
 python-idna
 python-ifaddr
@@ -3589,6 +3600,7 @@ python-jaraco.collections
 python-jaraco.context
 python-jaraco.envs
 python-jaraco.functools
+python-jaraco.itertools
 python-jaraco.path
 python-jaraco.test
 python-jaraco.text
@@ -3671,6 +3683,7 @@ python-lmdb
 python-localzone
 python-locket
 python-lockfile
+python-logbook
 python-loguru
 python-logutils
 python-looseversion
@@ -3853,6 +3866,8 @@ python-phonenumbers
 python-piccata
 python-pickleshare
 python-pika
+python-pikepdf
+python-pillow
 python-pint
 python-pip-run
 python-pip
@@ -3896,6 +3911,7 @@ python-proxy.py
 python-psutil
 python-psycopg-pool
 python-psycopg
+python-psycopg2
 python-pt
 python-ptrace
 python-ptyprocess
@@ -4080,6 +4096,7 @@ python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
+python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
@@ -4124,6 +4141,7 @@ python-random2
 python-rapidfuzz
 python-rapidjson
 python-rcssmin
+python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
@@ -4297,6 +4315,7 @@ python-tabulate
 python-tabview
 python-tappy
 python-tblib
+python-teamcity-messages
 python-tempita
 python-tempora
 python-tenacity
@@ -4376,7 +4395,6 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
-python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -4392,6 +4410,7 @@ python-virtualenv
 python-vistir
 python-vobject
 python-volatile
+python-voluptuous
 python-waitress
 python-wand
 python-warlock
@@ -4407,6 +4426,7 @@ python-webob
 python-webob-docs
 python-websocket-client
 python-websockets
+python-webtest
 python-werkzeug
 python-whatthepatch
 python-wheel
@@ -5708,7 +5728,6 @@ xosd
 xournalpp
 xpdf
 xpra
-xreader
 xsane
 xsane-gimp
 xsd
@@ -5733,7 +5752,6 @@ yasm
 yaz
 yazi
 yelp-tools
-yelp-xsl
 yelp
 yodl
 youtube-dl

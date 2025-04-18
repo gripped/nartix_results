@@ -1,50 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,20 @@
- 
- pkgname=python-aiobotocore
- _pkgname=aiobotocore
--pkgver=2.21.1
-+pkgver=2.20.0
- pkgrel=1
- pkgdesc='asyncio support for botocore library using aiohttp'
- arch=(any)
- url='https://github.com/aio-libs/aiobotocore'
- license=('Apache-2.0')
--depends=(python python-aiohttp python-aioitertools python-botocore python-dateutil
--         python-jmespath python-multidict python-wrapt)
-+depends=(python python-aiohttp python-botocore python-wrapt python-aioitertools
-+         python-dateutil python-jmespath python-multidict python-urllib3)
- makedepends=(python-build python-installer python-setuptools python-wheel git)
- checkdepends=(python-moto python-pytest python-pytest-asyncio python-dill python-docutils python-pip
-               python-time-machine
-               python-docker python-openapi-spec-validator python-yaml python-flask python-flask-cors)
- source=("git+https://github.com/aio-libs/aiobotocore.git#tag=$pkgver")
--sha256sums=('2ea768545e01d39c9a35e5a657b79895f0b2e4f2cfc5d776db2167cc42ba5f24')
-+sha256sums=('94d795d766cb1b20e77e3f856aa9b3790322449936f70d76dd27498be9b8a214')
- 
- build() {
-   cd $_pkgname
-@@ -26,7 +26,8 @@
- 
+@@ -27,6 +27,7 @@
    export PYTHONPATH="$PWD"
    pytest -m "not localonly" tests \
--      --ignore=tests/test_lambda.py
-+      --ignore=tests/test_lambda.py \
-+      --deselect 'tests/test_basic_s3.py::test_fail_proxy_request'
+       --ignore=tests/test_lambda.py
++      --deselect tests/test_basic_s3.py::test_fail_proxy_request
  }
  
  package() {
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -9,5 +9,6 @@
- python-jmespath
- python-multidict
- python-setuptools
-+python-urllib3
- python-wheel
- python-wrapt
