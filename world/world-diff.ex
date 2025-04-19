@@ -143,7 +143,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
 giflib
 gjs
 gnome-bluetooth-3.0
@@ -342,6 +341,7 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
+libvpl
 libxfce4ui
 libxfce4util
 libytnef
@@ -624,7 +624,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-urllib3
 qastools
 qbittorrent
 qbittorrent-nox
@@ -809,7 +808,6 @@ transmission-cli
 transmission-gtk
 transmission-qt
 tumbler
-twine
 uasm
 udftools
 udisks2
@@ -817,6 +815,7 @@ udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
 umockdev
+umurmur
 unbound
 unicorn
 python-unicorn
@@ -846,6 +845,7 @@ valkey
 vault
 vlc
 libvlc
+vokoscreen
 vpnc
 vte3
 vte-common
@@ -938,6 +938,7 @@ xorg-xwayland
 xreader
 xscreensaver
 yelp-xsl
+yelp
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

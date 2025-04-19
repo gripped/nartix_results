@@ -738,6 +738,7 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 gifski
 gimp-help
@@ -2022,7 +2023,6 @@ libvisual
 libvoikko
 libvorbis
 libvorbis-docs
-libvpl
 libvpx
 libvterm
 libwacom
@@ -2408,6 +2408,7 @@ ninja
 nitrokey-udev-rules
 nload
 nlohmann-json
+nltk-data
 nmap
 nng
 nnn
@@ -3767,6 +3768,7 @@ python-nh3
 python-nine
 python-nitrokey
 python-nkdfu
+python-nltk
 python-nodeenv
 python-noiseprotocol
 python-nose-random
@@ -4395,6 +4397,7 @@ python-unpaddedbase64
 python-update-checker
 python-uri-template
 python-uritemplate
+python-urllib3
 python-urwid
 python-userpath
 python-uvloop
@@ -5478,6 +5481,7 @@ ttf-opensans
 ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
+twine
 twolame
 txt2man
 typescript
@@ -5490,7 +5494,6 @@ uget
 uglify-js
 uhttpmock
 umbrello
-umurmur
 unarchiver
 unclutter
 unibilium
@@ -5560,7 +5563,6 @@ vkd3d
 vmaf
 vncdotool
 vnstat
-vokoscreen
 volatility3
 volk
 volume_key
@@ -5752,7 +5754,6 @@ yasm
 yaz
 yazi
 yelp-tools
-yelp
 yodl
 youtube-dl
 yt-dlp
