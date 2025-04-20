@@ -1,32 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=inetutils
--pkgver=2.6
-+pkgver=2.5
- pkgrel=1
- pkgdesc="A collection of common network programs"
- arch=('x86_64')
-@@ -8,48 +8,26 @@
- license=('GPL-3.0-or-later')
- depends=('glibc' 'pam' 'libcap' 'readline' 'ncurses' 'libxcrypt'
- 	     libpam.so libcrypt.so libreadline.so libncursesw.so)
--makedepends=('git' 'help2man' 'python')
-+makedepends=('help2man')
- backup=('etc/pam.d/rlogin' 'etc/pam.d/rsh')
- options=('!emptydirs')
- install=inetutils.install
--source=("git+https://git.savannah.gnu.org/git/inetutils.git#tag=v${pkgver}?signed"
--        "git+https://git.savannah.gnu.org/git/gnulib.git"
-+source=("https://ftp.gnu.org/gnu/inetutils/${pkgname}-${pkgver}.tar.xz"{,.sig}
+@@ -15,23 +15,13 @@
+ source=("git+https://git.savannah.gnu.org/git/inetutils.git#tag=v${pkgver}?signed"
+         "git+https://git.savannah.gnu.org/git/gnulib.git"
          'inetutils.sysusers'
 -        'ftpd.service' 'rlogin.pam' 'rlogin@.service' 'rlogin.socket'
 -        'rsh.pam' 'rsh@.service' 'rsh.socket' 'talk.service' 'talk.socket'
 -        'telnet@.service' 'telnet.socket')
--sha512sums=('59a65642f1883cb7315abe602eb92bb4c0639cde616323449e81e44dbdcb4d41b01e2332b5822a92fb08890feda6ef98a17cf8507fa3dce600c2af5b2d917fb4'
-+        'rlogin.pam' 'rsh.pam')
-+sha512sums=('dc11ad6eeb5ea2c85edddbfc77630b5b09e4e1ac643629edf13b0ac0828c13cdb0885275153c072ae13a798427c96bc461037822ad646f7210369192c35bb04c'
++        'rlogin.pam'
++        'rsh.pam')
+ sha512sums=('59a65642f1883cb7315abe602eb92bb4c0639cde616323449e81e44dbdcb4d41b01e2332b5822a92fb08890feda6ef98a17cf8507fa3dce600c2af5b2d917fb4'
              'SKIP'
              '00a6ff36efe63612990181f7cb37ea7d43ee7f2b6bda6b1fc23ccb2f3b19da54aabad041c2412936561dcd997f9613bd8144a96f5e04f30135a36f9ac98d8056'
 -            'df5b37c9fc072e012f0e67d849db7e535a62ddb17a37e865acb157f2bc16ffd72d84f24fef1e788dacbbe7e5675e87e141fbd36e53339cc7810dde1b9c54a3b8'
@@ -44,49 +27,7 @@
  validpgpkeys=(
    '4FBD67621082C4C502448E3B180551BAD95A3C35' # Alfred M. Szmidt <ams@gnu.org>
    '9AA9BDB11BB1B99A21285A330664A76954265E8C' # Simon Josefsson <simon@josefsson.org>
-   'B1D2BD1375BECB784CF4F8C4D73CF638C53C06BE' # simon@josefsson.org
- )
- 
--prepare() {
--  cd ${pkgname}
--
--  GNULIB_REFDIR="${srcdir}/gnulib"
--  export GNULIB_REFDIR
--
--  sh bootstrap
--  autoreconf -fiv
--}
--
- build() {
--  cd ${pkgname}
-+  cd ${pkgname}-${pkgver}
-   ./configure \
-     --prefix=/usr \
-     --libexec=/usr/bin \
-@@ -83,20 +61,16 @@
-     --disable-uucpd \
-     --disable-ifconfig \
-     --disable-traceroute
--
--  sed -i '/HAVE_CURSES_TGETENT/c #define HAVE_CURSES_TGETENT 1' config.h
--  sed -i '/# include <curses.h>/a # include <term.h>' telnet/telnet.c telnetd/utility.c
--
-   make
- }
- 
- check() {
--  cd ${pkgname}
-+  cd ${pkgname}-${pkgver}
-   make check
- }
- 
- package() {
--  cd ${pkgname}
-+  cd ${pkgname}-${pkgver}
-   make DESTDIR="${pkgdir}" install
- 
-   chmod -s "${pkgdir}"/usr/bin/{rcp,rlogin,rsh}
-@@ -104,15 +78,5 @@
+@@ -104,15 +94,5 @@
    install -D -m644 "${srcdir}/rlogin.pam" "${pkgdir}/etc/pam.d/rlogin"
    install -D -m644 "${srcdir}/rsh.pam" "${pkgdir}/etc/pam.d/rsh"
  
@@ -101,46 +42,4 @@
 -  install -D -m644 "${srcdir}/telnet.socket" "${pkgdir}/usr/lib/systemd/system/telnet.socket"
 -
    install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
- }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +1,3 @@
--git
- glibc
- help2man
- libcap
-@@ -9,5 +8,4 @@
- libxcrypt
- ncurses
- pam
--python
- readline
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -1,12 +1,5 @@
--prepare() {
--cd ${pkgname}
--GNULIB_REFDIR="${srcdir}/gnulib"
--export GNULIB_REFDIR
--sh bootstrap
--autoreconf -fiv
--}
- build() {
--cd ${pkgname}
-+cd ${pkgname}-${pkgver}
- ./configure \
- --prefix=/usr \
- --libexec=/usr/bin \
-@@ -40,7 +33,5 @@
- --disable-uucpd \
- --disable-ifconfig \
- --disable-traceroute
--sed -i '/HAVE_CURSES_TGETENT/c #define HAVE_CURSES_TGETENT 1' config.h
--sed -i '/# include <curses.h>/a # include <term.h>' telnet/telnet.c telnetd/utility.c
- make
  }

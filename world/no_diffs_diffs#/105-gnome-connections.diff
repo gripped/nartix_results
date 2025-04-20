@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -47,7 +47,7 @@
+@@ -65,7 +65,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,6 @@
- git -c protocol.file.allow=always submodule update
+@@ -9,6 +9,6 @@
+ git apply -3 ../gnome-connections-option-parse.patch
  }
  build() {
 -arch-meson $pkgname build

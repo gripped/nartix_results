@@ -24,6 +24,7 @@ db
 db5.3
 debugedit
 dialog
+diffutils
 ding-libs
 dmraid
 dnssec-anchors
@@ -50,6 +51,7 @@ gpgme
 qgpgme-qt6
 python-gpgme
 gpm
+grep
 groff
 grub
 guile
@@ -58,6 +60,7 @@ hdparm
 hwdata
 iana-etc
 icu
+inetutils
 iproute2
 iptables
 iptables-nft
@@ -142,9 +145,11 @@ ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl
+patch
 pciutils
 pcre
 pcre2
+perl
 pinentry
 pkgconf
 popt

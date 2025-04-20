@@ -2023,6 +2023,7 @@ libvisual
 libvoikko
 libvorbis
 libvorbis-docs
+libvpl
 libvpx
 libvterm
 libwacom
@@ -5246,6 +5247,7 @@ tecla
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
+telepathy-gabble
 telepathy-haze
 telepathy-idle
 telepathy-kde-accounts-kcm

@@ -7,7 +7,6 @@ btrfs-progs
 dbus
 dbus-docs
 dhcpcd
-diffutils
 e2fsprogs
 fuse2fs
 fakeroot
@@ -28,9 +27,7 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-grep
 gssproxy
-inetutils
 iputils
 libusb
 libxml2
@@ -66,8 +63,6 @@ p11-kit-docs
 pacman
 pam
 pambase
-patch
-perl
 ppp
 procps-ng
 rpcbind

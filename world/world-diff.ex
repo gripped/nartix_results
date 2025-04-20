@@ -341,7 +341,6 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
-libvpl
 libxfce4ui
 libxfce4util
 libytnef
@@ -777,7 +776,6 @@ sysstat
 system-config-printer
 tcc
 telegram-desktop
-telepathy-gabble
 telepathy-glib
 tensorflow
 tensorflow-opt
