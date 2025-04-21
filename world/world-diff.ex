@@ -143,7 +143,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-giflib
+ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -232,9 +232,10 @@ i2pd
 iagno
 ibus
 libibus
-icmake
 igsc
 iio-sensor-proxy
+intel-gmmlib
+intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -312,6 +313,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libcerf
 libe-book
 libei
 libei-docs
@@ -324,7 +326,6 @@ libgdata
 libgudev
 libguestfs
 libhandy0
-libimobiledevice
 libinput
 libldm
 libmspub
@@ -731,7 +732,6 @@ refind-docs
 ripgrep-all
 ristretto
 rocalution
-rocblas
 rocfft
 rocrand
 rocsparse
@@ -935,8 +935,6 @@ xorg-xdm
 xorg-xwayland
 xreader
 xscreensaver
-yelp-xsl
-yelp
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

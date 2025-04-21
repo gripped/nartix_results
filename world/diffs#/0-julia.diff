@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=julia
+ epoch=2
+-pkgver=1.11.5
++pkgver=1.11.4
+ pkgrel=1
+ arch=(x86_64)
+ pkgdesc='High-level, high-performance, dynamic programming language'
 @@ -28,6 +28,7 @@
               python)
  optdepends=('gnuplot: If using the Gaston Package from julia')
@@ -8,9 +17,12 @@
          c12e8515.patch
          julia-hardcoded-libs.patch
          julia-libgit2-1.8.patch
-@@ -37,6 +38,7 @@
+@@ -35,8 +36,9 @@
+         julia-metainfo.patch
+         julia-curl-1.10.patch)
  backup=(etc/julia/startup.jl)
- sha256sums=('c4936562d05128842d7fe2be30734333519ea94a54861b5d0bfe38d103e96b5b'
+-sha256sums=('147626db6b6887bfb6612cb6cd2a48d689806649fae34dc749fddc8375c2c625'
++sha256sums=('c4936562d05128842d7fe2be30734333519ea94a54861b5d0bfe38d103e96b5b'
              'SKIP'
 +            'fc94d316bd56902f1720da55c331d43d315ce487d6b4cc7e5ffcb207cf9a8299'
              '2cc294b63e601d50341979fb936826bdba59de2165a5929eae927e152652f367'
@@ -24,6 +36,14 @@
    cd stdlib/srccache
    _SAsha=89d3c7dded535a77551e763a437a6d31e4d9bf84
    tar -xzf Downloads-$_SAsha.tar.gz
+@@ -106,7 +109,6 @@
+     LLVM_CONFIG=/usr/lib/llvm-julia/bin/llvm-config
+   )
+ 
+-  export CMAKE_POLICY_VERSION_MINIMUM=3.5 # Fix build with cmake 4
+   LD_LIBRARY_PATH="/usr/lib/mbedtls2" make "${make_options[@]}" "$@"
+ }
+ 
 
 
 ############# Stripped diff below #################

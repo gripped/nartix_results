@@ -738,8 +738,8 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
+giflib
 gifski
 gimp-help
 gimp
@@ -1068,6 +1068,7 @@ i3lock
 i3status
 ibm-sw-tpm2
 icewm
+icmake
 icon-naming-utils
 icoutils
 id3lib
@@ -1084,8 +1085,6 @@ iniparser
 inkscape
 innoextract
 intel-compute-runtime
-intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1620,7 +1619,6 @@ libcddb
 libcdio-paranoia
 libcdio
 libcdr
-libcerf
 libcgif
 libchamplain
 libchewing
@@ -1749,6 +1747,7 @@ libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
+libimobiledevice
 libindi
 libindicator
 libindicator-gtk2
@@ -4040,6 +4039,7 @@ python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
+python-pytest-codspeed
 python-pytest-console-scripts
 python-pytest-cov
 python-pytest-datadir
@@ -4322,6 +4322,7 @@ python-teamcity-messages
 python-tempita
 python-tempora
 python-tenacity
+python-tensile
 python-termcolor
 python-terminado
 python-termstyle
@@ -4509,6 +4510,7 @@ qqc2-breeze-style
 qqc2-desktop-style
 qqc2-desktop-style5
 qqwing
+qrca
 qrcodegen-cmake
 qrcodegencpp-cmake
 qrencode
@@ -4658,6 +4660,7 @@ rng-tools
 rnnoise
 robin-map
 roc-toolkit
+rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core
@@ -5756,6 +5759,8 @@ yasm
 yaz
 yazi
 yelp-tools
+yelp-xsl
+yelp
 yodl
 youtube-dl
 yt-dlp

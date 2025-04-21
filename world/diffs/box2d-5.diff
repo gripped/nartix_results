@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,36 +1,39 @@
- 
+@@ -1,35 +1,39 @@
++
  pkgname=box2d
--pkgver=3.0.0
+-pkgver=3.1.0
 +pkgver=2.4.1
  pkgrel=1
  pkgdesc="2D rigid body simulation library for games"
@@ -15,7 +15,7 @@
 -             'libxinerama' 'libxkbcommon' 'libxkbcommon-x11' 'libxt'
 -             'xorg-xrandr' 'libxcursor' 'xorg-xinput' 'glfw')
 -source=("$pkgname-$pkgver.tar.gz::https://github.com/erincatto/Box2D/archive/v${pkgver}.tar.gz")
--sha512sums=('b56e4e79aa3660ee728c1698b7a5256727b505d993103ad3cc6555e9b38cf81e6f26d5cbc717bdc6f386a6062ee47065277778ca6dd78cacb35f2d5e8c897723')
+-sha512sums=('85d67a0de92aecc61692d7a6f1a8c7e878cdd2a6457470f1a9be075dfc27fdcefb951ac689d95bb78a7b791d6586f794720af8417f55d7f66782b4c3c179210a')
 +makedepends=('cmake' 'doxygen' 'ninja')
 +source=("$pkgname-$pkgver.tar.gz::https://github.com/erincatto/box2d/archive/v2.4.1.tar.gz")
 +sha512sums=('d900f925b77906777719c91488bdc5e2df1ad1f4a8ca39a574229f5e57070e3a843bdd7530e817112605fde6d82145c872d8afdfc65b84531a73199098c81162')
