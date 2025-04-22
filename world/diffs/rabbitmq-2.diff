@@ -1,6 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,7 +34,7 @@
+@@ -4,8 +4,8 @@
+   rabbitmq
+   rabbitmqadmin
+ )
+-pkgver=4.1.0
+-pkgrel=2
++pkgver=4.0.7
++pkgrel=1
+ pkgdesc='Highly reliable and performant enterprise messaging implementation of AMQP written in Erlang/OTP'
+ url='https://rabbitmq.com'
+ arch=('any')
+@@ -27,13 +27,14 @@
+   'erlang-tools'
+   'erlang-xmerl'
+   'git'
++  'inetutils'
+   'libxslt'
+   'python'
+   'python-simplejson'
    'rebar3'
    'rsync'
    'socat'
@@ -9,7 +27,7 @@
    'unzip'
    'util-linux'
    'xmlto'
-@@ -43,7 +43,6 @@
+@@ -42,7 +43,6 @@
  _commit=293a4f665ac59c6d53732a18340a76e69c257ea8
  source=(
    "git+https://github.com/rabbitmq/rabbitmq-server.git#commit=${_commit}?signed"
@@ -17,7 +35,7 @@
    rabbitmq-devendor-rebar3.patch
    rabbitmq-env.conf
    rabbitmq.sysusers
-@@ -51,7 +50,6 @@
+@@ -50,7 +50,6 @@
    rabbitmq.logrotate
  )
  sha512sums=('ac6e468bb4e6324b9531a382f9cd67371df297954d935d89d24b3ea702d08eea1658646582d516d522ef6a815d33236fa5437df1f00d36dad9d5307567ad57b3'
@@ -25,15 +43,24 @@
              '67eca945ac5c5acf5f64f52ec65803a7b2ea098e6b38a685a0d85b8a91db907782dffb2e1facff6fa5dbf21d6b71fae6eced13ea9c714a27d167259080523d34'
              '8b841e28fa0a1424dd9e57c0988e015f3cd4cccef0f73ccdb7c7b66d11ca62ba8ef3a59c7ca5e5f0c9c9d8003ac72bf53785985d98aae867961787003286e179'
              '33c6af8810d8cbc479c63ed535de0a27b2e90eeed8fc9b39255683028478529a7e8953aa992f615d4101c6aefdc066f95c98fb9fb5bf1faf0ea327364101914c'
-@@ -68,7 +66,6 @@
+@@ -67,8 +66,6 @@
    sed -E 's|^(SYS_PREFIX=).*$|\1""|' -i deps/rabbit/scripts/rabbitmq-defaults
    sed -E 's|@RABBITMQ_USER@|rabbitmq|g' -i scripts/rabbitmq-script-wrapper
    sed -E 's|@RABBITMQ_GROUP@|rabbitmq|g' -i scripts/rabbitmq-script-wrapper
+-  sed -E 's|(else )hostname(;)|\1uname -n\2|' -i deps/rabbitmq_ct_helpers/tools/tls-certs/Makefile
 -  patch -p1 < ../rabbitmq-customize-systemd-service.patch
    patch -p1 < ../rabbitmq-devendor-rebar3.patch
  }
  
-@@ -172,7 +169,6 @@
+@@ -134,6 +131,7 @@
+     'erlang-syntax_tools'
+     'erlang-tools'
+     'erlang-xmerl'
++    'inetutils'
+     'socat'
+     'util-linux'
+   )
+@@ -171,7 +169,6 @@
      ln -vs /usr/lib/rabbitmq/bin/rabbitmq-script-wrapper "${pkgdir}/usr/bin/${script}"
    done
  
@@ -47,7 +74,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -21,7 +21,6 @@
+@@ -14,13 +14,13 @@
+ erlang-tools
+ erlang-xmerl
+ git
++inetutils
+ libxslt
+ python
+ python-simplejson
  rebar3
  rsync
  socat

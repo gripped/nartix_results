@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -126,16 +126,12 @@
+@@ -127,16 +127,12 @@
    rspamd.tmpfiles
    rspamd.sysusers
    rspamd.logrotate
@@ -18,7 +18,7 @@
          '8a2882e4cd59eb3304acae9dfa71252c2024a8251e61cd1e75e6b84a84ec8c636e70d6702c03d7b7d0e2f7fa60d2466c6eed4f4f80f1834585185deaf7157eee')
  
  pkgver() {
-@@ -143,10 +139,6 @@
+@@ -144,10 +140,6 @@
    git describe --tags
  }
  
@@ -29,7 +29,7 @@
  
  build() {
    export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs/}
-@@ -158,7 +150,7 @@
+@@ -159,7 +151,7 @@
      -DRUNDIR=/run/rspamd \
      -DRSPAMD_USER=rspamd \
      -DNO_SHARED=ON \
@@ -38,7 +38,7 @@
      -DENABLE_HYPERSCAN=ON \
      -DENABLE_JEMALLOC=ON \
      -DENABLE_OPTIMIZATION=ON
-@@ -171,8 +163,6 @@
+@@ -172,8 +164,6 @@
    install -Dm 644 rspamd.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/rspamd.conf
    install -Dm 644 rspamd.sysusers "${pkgdir}"/usr/lib/sysusers.d/rspamd.conf
    install -Dm 644 rspamd.logrotate "${pkgdir}"/etc/logrotate.d/rspamd

@@ -1085,6 +1085,8 @@ iniparser
 inkscape
 innoextract
 intel-compute-runtime
+intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1535,7 +1537,6 @@ kweather
 kweathercore
 kwidgetsaddons
 kwidgetsaddons5
-kwindowsystem
 kwindowsystem5
 kwordquiz
 kwrited
@@ -3104,7 +3105,6 @@ python-adblock
 python-aiobotocore
 python-aiodns
 python-aiofiles
-python-aiogram
 python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
@@ -3366,7 +3366,6 @@ python-django-compressor
 python-django-crispy-forms
 python-django-debug-toolbar
 python-django-environ
-python-django-extensions
 python-django-fake-model
 python-django-filter
 python-django-gravatar
@@ -4362,7 +4361,6 @@ python-traitlets
 python-transaction
 python-treq
 python-trio-asyncio
-python-trio
 python-trove-classifiers
 python-trustme
 python-truststore

@@ -354,6 +354,7 @@ retroarch-assets-xmb
 retroarch
 rgbds
 ristretto
+rpi-imager
 screengrab
 scribus
 scummvm

@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   dolphin-emu-tool
+ )
+ pkgver=2503
+-pkgrel=2
++pkgrel=1
+ epoch=1
+ pkgdesc='A Gamecube and Wii emulator'
+ arch=(x86_64)
+@@ -51,7 +51,6 @@
+   python
+   qt6-base
+   qt6-svg
+-  vulkan-headers
+ )
+ optdepends=('pulseaudio: PulseAudio backend')
+ options=(!emptydirs !lto)
+@@ -96,18 +95,13 @@
+   git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
+ }
+ 
+-pkgver() {
+-  cd dolphin-emu
+-  git describe --tags
+-}
+ 
+ build() {
+   cmake -S dolphin-emu -B build -G Ninja \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_SKIP_RPATH=ON \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+-    -DDISTRIBUTOR=archlinux.org \
++    -DDISTRIBUTOR=artixlinux.org \
+     -DENABLE_ANALYTICS=OFF \
+     -DENABLE_AUTOUPDATE=OFF \
+     -DENABLE_LTO=OFF \
+@@ -135,13 +129,6 @@
+ }
+ 
+ package_dolphin-emu-tool() {
+-  depends+=(
+-    alsa-lib
+-    libevdev
+-    libpulse
+-    libudev.so
+-    qt6-base
+-  )
+   install -Dm 755 build/Binaries/dolphin-tool -t "${pkgdir}"/usr/bin/
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -33,7 +33,6 @@
+ qt6-svg
+ sdl2
+ speexdsp
+-vulkan-headers
+ xxhash
+ xz
+ zstd

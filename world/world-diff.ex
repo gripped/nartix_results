@@ -234,8 +234,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-gmmlib
-intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -289,6 +287,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+kwindowsystem
 libatasmart
 libayatana-indicator
 libblockdev
@@ -618,12 +617,15 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiogram
 python-anytree
+python-django-extensions
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-trio
 qastools
 qbittorrent
 qbittorrent-nox
