@@ -18,7 +18,6 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
-lxqt-wayland-session
 ly
 mate-control-center
 mate-screensaver

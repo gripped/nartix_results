@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=librdkafka
+-pkgver=2.10.0
++pkgver=2.8.0
+ pkgrel=1
+ pkgdesc='The Apache Kafka C/C++ library'
+ arch=(x86_64)
+@@ -27,12 +27,11 @@
+   python
+   rapidjson
+ )
+-provides=(librdkafka.so)
+ source=(
+   "$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
+   "remove-failing-tests.patch"
+ )
+-sha256sums=('004b1cc2685d1d6d416b90b426a0a9d27327a214c6b807df6f9ea5887346ba3a'
++sha256sums=('5bd1c46f63265f31c6bfcedcde78703f77d28238eadf23821c2b43fc30be3e25'
+             '23c8d030179724d13a91f13cf566b045b195d64a3219eb2c5122d06e1e1c6fd1')
+ 
+ prepare() {

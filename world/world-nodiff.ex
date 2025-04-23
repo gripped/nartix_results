@@ -65,7 +65,6 @@ android-file-transfer
 android-tools
 android-udev
 angelfish
-ansible-core
 ansible-language-server
 ansible-lint
 ansible
@@ -243,7 +242,6 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
-breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -292,22 +290,6 @@ cdparanoia
 cdrdao
 gcdmaster
 cdrtools
-certbot-apache
-certbot-dns-cloudflare
-certbot-dns-digitalocean
-certbot-dns-dnsimple
-certbot-dns-dnsmadeeasy
-certbot-dns-gehirn
-certbot-dns-google
-certbot-dns-linode
-certbot-dns-luadns
-certbot-dns-nsone
-certbot-dns-ovh
-certbot-dns-rfc2136
-certbot-dns-route53
-certbot-dns-sakuracloud
-certbot-nginx
-certbot
 cervisia
 cfitsio
 cgns
@@ -343,7 +325,6 @@ clazy
 clevis
 cli11
 clinfo
-clisp
 cln
 cloc
 clutter-gst
@@ -525,7 +506,6 @@ edk2-ovmf
 egl-gbm
 egl-wayland
 egl-x11
-eglexternalplatform
 eigen
 ejabberd
 electron
@@ -991,7 +971,6 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
-hdf5
 helix
 help2man
 herbstluftwm
@@ -1920,6 +1899,7 @@ libqmi
 libqmi-docs
 libqrtr-glib
 libqrtr-glib-docs
+libqtxdg
 libquotient
 libquvi-scripts
 libquvi
@@ -2917,8 +2897,6 @@ php-legacy-apcu
 php-geoip
 php-igbinary
 php-legacy-igbinary
-php-imagick
-php-legacy-imagick
 php-memcache
 php-memcached
 php-mongodb
@@ -3105,18 +3083,16 @@ python-adblock
 python-aiobotocore
 python-aiodns
 python-aiofiles
-python-aiohappyeyeballs
+python-aiogram
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
-python-aiohttp
 python-aioitertools
 python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
 python-aiorpcx
-python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
@@ -3302,7 +3278,6 @@ python-coverage
 python-cppheaderparser
 python-cppy
 python-cram
-python-cramjam
 python-crashtest
 python-crc32c
 python-crcmod
@@ -3366,6 +3341,7 @@ python-django-compressor
 python-django-crispy-forms
 python-django-debug-toolbar
 python-django-environ
+python-django-extensions
 python-django-fake-model
 python-django-filter
 python-django-gravatar
@@ -3415,7 +3391,6 @@ python-entrypoints
 python-ephemeral-port-reserve
 python-et-xmlfile
 python-evdev
-python-eventlet
 python-exceptiongroup
 python-execnet
 python-executing
@@ -3448,7 +3423,6 @@ python-fiona
 python-fire
 python-first
 python-fissix
-python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
@@ -3480,7 +3454,6 @@ python-fonttools
 python-fqdn
 python-freezegun
 python-frozendict
-python-frozenlist
 python-fs
 python-fsspec
 python-func-timeout
@@ -3526,7 +3499,6 @@ python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
-python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3594,7 +3566,6 @@ python-iso8601
 python-isoduration
 python-isort
 python-iterable-io
-python-itsdangerous
 python-jaraco.classes
 python-jaraco.collections
 python-jaraco.context
@@ -4361,6 +4332,7 @@ python-traitlets
 python-transaction
 python-treq
 python-trio-asyncio
+python-trio
 python-trove-classifiers
 python-trustme
 python-truststore
@@ -4428,7 +4400,6 @@ python-webencodings
 python-webob
 python-webob-docs
 python-websocket-client
-python-websockets
 python-webtest
 python-werkzeug
 python-whatthepatch
@@ -4461,7 +4432,6 @@ python-y-py
 python-yaml
 python-yara
 python-yarg
-python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket

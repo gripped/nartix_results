@@ -1,0 +1,125 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,21 +1,20 @@
+ 
+ 
++_pkgname=aiohttp
+ pkgname=python-aiohttp
+-pkgver=3.11.18
++pkgver=3.10.11
+ pkgrel=1
+ pkgdesc='HTTP client/server for asyncio'
+ arch=(x86_64)
+ url=https://aiohttp.readthedocs.io
+ license=(Apache-2.0)
+ depends=(
+-  glibc
+   python
+   python-aiohappyeyeballs
+   python-aiosignal
+   python-attrs
+   python-frozenlist
+   python-multidict
+-  python-propcache
+   python-yarl
+ )
+ makedepends=(
+@@ -34,8 +33,8 @@
+   python-freezegun
+   python-proxy.py
+   python-pytest
+-  python-pytest-codspeed
+   python-pytest-mock
++  python-pytest-xdist
+   python-re-assert
+   python-time-machine
+   python-trustme
+@@ -50,7 +49,7 @@
+   "$pkgname::git+https://github.com/aio-libs/aiohttp#tag=v$pkgver"
+   git+https://github.com/nodejs/llhttp.git
+ )
+-b2sums=('02c8f8a2f20d176d28fc95fcae31652d5dc8c70def8ba77a840a7b71a4db31c4bd550fb721bd2fb5d50878ad25aef2a23bc901c2642c7d02d1546828e7865c00'
++b2sums=('510d512e9ac89ee28cb24ce0992986b5c0a88ad9757b9868f46aa1597bb8bd39a69bc4d9ba5d92319313d21fb398ab92bc0e11c73f407b4937310b0997ce2d70'
+         'SKIP')
+ 
+ prepare() {
+@@ -59,6 +58,11 @@
+   git config submodule.vendor/llhttp.url ../llhttp
+   git -c protocol.file.allow=always submodule update --recursive
+   sed 's|.install-cython ||' -i Makefile
++
++  sed -i "s/import {import_path!s}/import sys; sys.path.insert(0, '{os.environ['PYTHONPATH']}'); &/" \
++      tests/test_circular_imports.py
++
++  sed -i '/--cov=/d;/-p pytest_cov/d' setup.cfg
+ }
+ 
+ build() {
+@@ -67,33 +71,6 @@
+   python -m build --wheel --no-isolation
+ }
+ 
+-check() {
+-  local pytest_args=(
+-    --override-ini="addopts="
+-
+-    --deselect=tests/test_http_parser.py::test_http_response_parser_bad_chunked_strict_c
+-    --deselect=tests/test_http_parser.py::test_http_response_parser_bad_chunked_strict_py
+-    --deselect=tests/test_http_parser.py::test_http_response_parser_strict_headers
+-    --deselect=tests/test_http_parser.py::test_http_response_parser_strict_obs_line_folding
+-    --deselect=tests/test_proxy_functional.py::test_uvloop_secure_https_proxy
+-
+-    --deselect=tests/test_circular_imports.py::test_no_warnings
+-
+-    --ignore=tests/autobahn/test_autobahn.py # Docker tests
+-    --ignore=tests/test_benchmarks_client.py
+-    --ignore=tests/test_benchmarks_client_request.py
+-    --ignore=tests/test_benchmarks_client_ws.py
+-    --ignore=tests/test_benchmarks_cookiejar.py
+-    --ignore=tests/test_benchmarks_http_websocket.py
+-    --ignore=tests/test_benchmarks_http_writer.py
+-  )
+-
+-  cd $pkgname
+-  python -m venv --system-site-packages test-env
+-  test-env/bin/python -m installer dist/*.whl
+-  test-env/bin/python -Pm pytest "${pytest_args[@]}"
+-}
+-
+ package() {
+   cd $pkgname
+   python -m installer --destdir="$pkgdir" dist/*.whl
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cython
+ git
+-glibc
+ npm
+ python
+ python-aiohappyeyeballs
+@@ -10,7 +9,6 @@
+ python-frozenlist
+ python-installer
+ python-multidict
+-python-propcache
+ python-setuptools
+ python-wheel
+ python-yarl
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,9 @@
+ git config submodule.vendor/llhttp.url ../llhttp
+ git -c protocol.file.allow=always submodule update --recursive
+ sed 's|.install-cython ||' -i Makefile
++sed -i "s/import {import_path!s}/import sys; sys.path.insert(0, '{os.environ['PYTHONPATH']}'); &/" \
++tests/test_circular_imports.py
++sed -i '/--cov=/d;/-p pytest_cov/d' setup.cfg
+ }
+ build() {
+ cd $pkgname
