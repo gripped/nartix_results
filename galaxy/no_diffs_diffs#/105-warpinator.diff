@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
- 
- pkgname=warpinator
- pkgver=1.8.8
--pkgrel=2
-+pkgrel=1
- pkgdesc='LAN file sender, send and receive files across the network'
- arch=('any')
- url='https://github.com/linuxmint/warpinator'
- license=('GPL3')
- depends=('gtk3' 'libnm' 'python-cryptography' 'python-gobject' 'python-grpcio'
-          'python-protobuf' 'python-pynacl' 'python-setproctitle' 'python-setuptools' 'python-xapp' 'python-zeroconf'
--         'xapp' 'python-cairo' 'python-qrcode' 'python-pillow' 'python-netifaces')
-+         'xapp' 'python-cairo' 'python-qrcode' 'python-pillow')
- makedepends=('meson' 'polkit')
- optdepends=('ufw: Open a firewall port for Warpinator')
- source=("https://github.com/linuxmint/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz")
 @@ -23,7 +23,7 @@
  }
  
@@ -30,16 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -6,7 +6,6 @@
- python-cryptography
- python-gobject
- python-grpcio
--python-netifaces
- python-pillow
- python-protobuf
- python-pynacl
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

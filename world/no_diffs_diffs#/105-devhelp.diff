@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+     -D plugin_vim=true
+   )
+ 
+-  arch-meson devhelp build "${meson_options[@]}"
++  artix-meson devhelp build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,6 @@
+ -D plugin_gedit=true
+ -D plugin_vim=true
+ )
+-arch-meson devhelp build "${meson_options[@]}"
++artix-meson devhelp build "${meson_options[@]}"
+ meson compile -C build
+ }

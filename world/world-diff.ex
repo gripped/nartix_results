@@ -4,7 +4,6 @@ adwaita-fonts
 alacritty
 alsa-utils
 amule
-ansible-core
 apache
 apcupsd
 appstream
@@ -20,6 +19,7 @@ audacious-plugins
 avahi
 awesome
 bash-bats
+bazelisk
 blender
 bluedevil
 blueman
@@ -92,8 +92,6 @@ cups
 libcups
 dbus-broker
 ddcutil
-devhelp
-devhelp-docs
 dhcpcd
 dns-over-https
 docker
@@ -163,9 +161,9 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
 gjs
 gnome-bluetooth-3.0
+gnome-boxes
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -180,6 +178,7 @@ gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-system-monitor
+gnome-usage
 gnome-user-share
 go-bindata
 godot
@@ -242,7 +241,6 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
-hdf5
 hexchat
 hidapi
 hipify-clang
@@ -250,7 +248,6 @@ hitori
 hwloc
 hyprland
 i2pd
-iagno
 ibus
 libibus
 igsc
@@ -305,6 +302,7 @@ kitty-shell-integration
 knockd
 knot
 kopeninghours
+kpmcore
 ksnip
 ksystemlog
 kwin
@@ -513,6 +511,8 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+nginx
+nginx-src
 niri
 nodejs-lts-hydrogen
 nsd
@@ -556,8 +556,6 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
-php-imagick
-php-legacy-imagick
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -639,23 +637,15 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiohappyeyeballs
 python-aiohttp
-python-aiosignal
 python-anytree
 python-cramjam
-python-eventlet
-python-fixtures
-python-frozenlist
-python-h5py
 python-ipykernel
-python-itsdangerous
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-websockets
-python-yarl
 qastools
 qbittorrent
 qbittorrent-nox

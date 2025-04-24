@@ -29,6 +29,7 @@ nvidia-390xx-utils
 nvm
 qbittorrent
 qbittorrent-nox
+qt6pas
 rage
 sdcv
 signal-desktop

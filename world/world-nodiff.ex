@@ -65,6 +65,7 @@ android-file-transfer
 android-tools
 android-udev
 angelfish
+ansible-core
 ansible-language-server
 ansible-lint
 ansible
@@ -193,7 +194,6 @@ bats-assert
 bats-support
 bats
 bazel
-bazelisk
 bbswitch
 bbswitch-dkms
 bc
@@ -425,6 +425,8 @@ deluge
 deluge-gtk
 desktop-file-utils
 dev86
+devhelp
+devhelp-docs
 devil
 dhcp
 dhclient
@@ -718,6 +720,7 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
@@ -757,7 +760,6 @@ gnome-app-list
 gnome-applets
 gnome-autoar
 gnome-backgrounds
-gnome-boxes
 gnome-builder
 gnome-calculator
 gnome-calendar
@@ -804,7 +806,6 @@ gnome-text-editor
 gnome-themes-extra
 gnome-tour
 gnome-tweaks
-gnome-usage
 gnome-user-docs
 gnome-video-effects
 gnome-weather
@@ -971,6 +972,8 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
+hdf5
+hdf5-openmpi
 helix
 help2man
 herbstluftwm
@@ -1045,6 +1048,7 @@ i3-wm
 i3blocks
 i3lock
 i3status
+iagno
 ibm-sw-tpm2
 icewm
 icmake
@@ -1439,7 +1443,6 @@ kpipewire
 kpkpass
 kplotting
 kplotting5
-kpmcore
 kpty
 kpty5
 kpublictransport
@@ -1924,6 +1927,7 @@ libsamplerate
 libsass
 libsbsms
 libsecp256k1
+libsfdo
 libshout
 libshumate
 libshumate-docs
@@ -2382,8 +2386,6 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
-nginx
-nginx-src
 ngspice
 ninja
 nitrokey-udev-rules
@@ -2897,6 +2899,8 @@ php-legacy-apcu
 php-geoip
 php-igbinary
 php-legacy-igbinary
+php-imagick
+php-legacy-imagick
 php-memcache
 php-memcached
 php-mongodb
@@ -3084,6 +3088,7 @@ python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
+python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
@@ -3093,6 +3098,7 @@ python-aiopg
 python-aioquic
 python-aioresponses
 python-aiorpcx
+python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
@@ -3391,6 +3397,7 @@ python-entrypoints
 python-ephemeral-port-reserve
 python-et-xmlfile
 python-evdev
+python-eventlet
 python-exceptiongroup
 python-execnet
 python-executing
@@ -3423,6 +3430,7 @@ python-fiona
 python-fire
 python-first
 python-fissix
+python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
@@ -3454,6 +3462,7 @@ python-fonttools
 python-fqdn
 python-freezegun
 python-frozendict
+python-frozenlist
 python-fs
 python-fsspec
 python-func-timeout
@@ -3499,6 +3508,7 @@ python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
+python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3566,6 +3576,7 @@ python-iso8601
 python-isoduration
 python-isort
 python-iterable-io
+python-itsdangerous
 python-jaraco.classes
 python-jaraco.collections
 python-jaraco.context
@@ -3878,6 +3889,7 @@ python-profilestats
 python-prometheus_client
 python-promise
 python-prompt_toolkit
+python-propcache
 python-proxmoxer
 python-proxy.py
 python-psutil
@@ -4432,6 +4444,7 @@ python-y-py
 python-yaml
 python-yara
 python-yarg
+python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket
