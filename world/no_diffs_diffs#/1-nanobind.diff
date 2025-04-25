@@ -1,0 +1,12 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,9 +18,7 @@
+ )
+ checkdepends=(
+   python-pytest
+-  python-pytorch
+   python-scipy
+-  python-tensorflow
+ )
+ source=(
+   "$pkgname-$pkgver::git+$url.git#tag=v$pkgver"

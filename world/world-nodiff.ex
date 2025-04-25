@@ -72,6 +72,7 @@ ansible
 ant
 ant-doc
 anthy
+anubis
 aom
 aom-docs
 apache-orc
@@ -325,6 +326,7 @@ clazy
 clevis
 cli11
 clinfo
+clisp
 cln
 cloc
 clutter-gst
@@ -563,6 +565,7 @@ erlang-tftp
 erlang-tools
 erlang-wx
 erlang-xmerl
+esbuild
 espeak-ng
 ethtool
 eventviews
@@ -720,7 +723,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 giflib
 gifski
@@ -760,6 +762,7 @@ gnome-app-list
 gnome-applets
 gnome-autoar
 gnome-backgrounds
+gnome-boxes
 gnome-builder
 gnome-calculator
 gnome-calendar
@@ -806,6 +809,7 @@ gnome-text-editor
 gnome-themes-extra
 gnome-tour
 gnome-tweaks
+gnome-usage
 gnome-user-docs
 gnome-video-effects
 gnome-weather
@@ -1443,6 +1447,7 @@ kpipewire
 kpkpass
 kplotting
 kplotting5
+kpmcore
 kpty
 kpty5
 kpublictransport
@@ -1571,7 +1576,6 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
-libaec
 libakonadi5
 libalkimia
 libao
@@ -1928,7 +1932,6 @@ libsass
 libsbsms
 libsecp256k1
 libsfdo
-libshout
 libshumate
 libshumate-docs
 libsigcplusplus-3.0
@@ -2386,6 +2389,14 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
+nginx
+nginx-src
+nginx-mod-geoip
+nginx-mod-image-filter
+nginx-mod-mail
+nginx-mod-perl
+nginx-mod-stream
+nginx-mod-xslt
 ngspice
 ninja
 nitrokey-udev-rules
@@ -2489,7 +2500,6 @@ openh264
 openimagedenoise
 openimageio
 openipmi
-openjade
 openjpeg2
 openlibm
 openmp
@@ -5605,10 +5615,6 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264

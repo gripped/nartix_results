@@ -72,7 +72,6 @@ chromium-bsu
 chrony
 cinnamon-desktop
 clamav
-clisp
 cloud-init
 clucene
 cmake
@@ -161,9 +160,9 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
 gjs
 gnome-bluetooth-3.0
-gnome-boxes
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
@@ -178,7 +177,6 @@ gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-system-monitor
-gnome-usage
 gnome-user-share
 go-bindata
 godot
@@ -302,11 +300,11 @@ kitty-shell-integration
 knockd
 knot
 kopeninghours
-kpmcore
 ksnip
 ksystemlog
 kwin
 kwindowsystem
+libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -349,6 +347,7 @@ libldm
 libmspub
 libnvme
 libprocps
+libshout
 libsidplay
 libsidplayfp
 libstaroffice
@@ -511,8 +510,6 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-nginx
-nginx-src
 niri
 nodejs-lts-hydrogen
 nsd
@@ -531,6 +528,7 @@ onionshare
 open-iscsi
 opencollada
 opendht
+openjade
 openmpi
 openmpi-docs
 openresolv
@@ -893,6 +891,10 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
