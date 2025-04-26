@@ -5,10 +5,10 @@
  replaces=('geth')
  source=("git+https://github.com/ethereum/go-ethereum.git#tag=v${pkgver}"
 -        'geth-user.service')
--sha256sums=('b301ae359d594b476a2cc7cf07276e349f401b379d1fd1d00af9b1adebc03bd8'
+-sha256sums=('2e662c91015119177196dac08892c6d84da55910378d9b62ccc35540b66568ed'
 -            '806ab43221f0c203e663a78afced694786a5adb033f06fab07d07904384d7645')
 +        )
-+sha256sums=('b301ae359d594b476a2cc7cf07276e349f401b379d1fd1d00af9b1adebc03bd8')
++sha256sums=('2e662c91015119177196dac08892c6d84da55910378d9b62ccc35540b66568ed')
  
  build() {
      cd ${pkgname}

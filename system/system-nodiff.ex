@@ -51,6 +51,7 @@ gpgme
 qgpgme-qt6
 python-gpgme
 gpm
+grep
 groff
 grub
 guile
@@ -159,6 +160,7 @@ python-tests
 readline
 reiserfsprogs
 run-parts
+s-nail
 sdparm
 sed
 shadow

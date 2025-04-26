@@ -1,12 +1,29 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -60,12 +60,16 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mitmproxy
+ pkgver=11.1.3
+-pkgrel=1
++pkgrel=2
+ pkgdesc='SSL-capable man-in-the-middle HTTP proxy'
+ arch=('any')
+ url='https://mitmproxy.org'
+@@ -31,6 +31,7 @@
+   'python-ruamel-yaml'
+   'python-sortedcontainers'
+   'python-tornado'
++  'python-typing_extensions'
+   'python-urwid'
+   'python-wsproto'
+   'python-zstandard'
+@@ -60,12 +61,16 @@
  }
  
  check() {
 +  local pytest_opts=(
-+    --override-ini="addopts="
-+  	--deselect test/mitmproxy/addons/test_dns_resolver.py
++  	--override-ini="addopts="
++  		--deselect test/mitmproxy/addons/test_dns_resolver.py
 +  )
    local _site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
  
@@ -18,3 +35,17 @@
  }
  
  package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -25,6 +25,7 @@
+ python-setuptools
+ python-sortedcontainers
+ python-tornado
++python-typing_extensions
+ python-urwid
+ python-wheel
+ python-wsproto

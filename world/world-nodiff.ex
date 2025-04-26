@@ -243,6 +243,7 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
+breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -382,8 +383,6 @@ cscope
 ctags
 ctpl
 ctwm
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -1606,6 +1605,7 @@ libcddb
 libcdio-paranoia
 libcdio
 libcdr
+libcerf
 libcgif
 libchamplain
 libchewing
@@ -1932,6 +1932,7 @@ libsass
 libsbsms
 libsecp256k1
 libsfdo
+libshout
 libshumate
 libshumate-docs
 libsigcplusplus-3.0
@@ -5615,6 +5616,10 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x11vnc
 x264

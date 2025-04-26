@@ -35,7 +35,6 @@ bolt
 box2d
 breeze
 breeze5
-breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -87,6 +86,8 @@ containerd
 convertlit
 cppcheck
 crun
+cuda
+cuda-tools
 cups
 libcups
 dbus-broker
@@ -329,7 +330,6 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
-libcerf
 libe-book
 libei
 libei-docs
@@ -347,7 +347,6 @@ libldm
 libmspub
 libnvme
 libprocps
-libshout
 libsidplay
 libsidplayfp
 libstaroffice
@@ -891,10 +890,6 @@ wlroots0.16
 wlroots0.17
 wpewebkit
 wpewebkit-docs
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
