@@ -19,7 +19,6 @@ audacious-plugins
 avahi
 awesome
 bash-bats
-bazelisk
 blender
 bluedevil
 blueman
@@ -161,7 +160,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -240,6 +238,8 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
+hdf5
+hdf5-openmpi
 hexchat
 hidapi
 hipify-clang
@@ -304,7 +304,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-kwindowsystem
 libaec
 libatasmart
 libayatana-indicator
@@ -638,10 +637,14 @@ python-aiohttp
 python-anytree
 python-cramjam
 python-ipykernel
+python-multidict
+python-pyelftools
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-tblib
+python-urwid
 python-websockets
 qastools
 qbittorrent

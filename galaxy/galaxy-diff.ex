@@ -1,3 +1,4 @@
+0ad
 alsa-utils
 cinnamon-desktop
 copyq

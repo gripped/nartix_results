@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,46 +1,54 @@
+@@ -1,38 +1,46 @@
  pkgname=0ad
 -pkgver=a27
 -_pkgver=0.27.0
--pkgrel=4
+-pkgrel=5
 +pkgver=a26
 +_pkgver=0.0.26-alpha
 +pkgrel=12
@@ -16,7 +16,7 @@
  depends=('0ad-data' 'binutils' 'boost-libs' 'curl' 'enet' 'libogg' 'libpng' 'libvorbis'
           'libxml2' 'openal' 'sdl2' 'wxwidgets-gtk3' 'zlib' 'libgl' 'glu' 'fmt'
           'gloox' 'miniupnpc' 'libminiupnpc.so' 'icu' 'nspr' 'libsodium' 'which')
--makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'git' 'premake' 'python' 'llvm')
+-makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'git' 'python' 'llvm')
 +makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'python' 'python-virtualenv' 'git')
  options=('!lto') # breaks spidermonkey linking (https://bugs.gentoo.org/746947)
  source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz"
@@ -51,6 +51,7 @@
 -  cd "$pkgname-$_pkgver"
 +  cd "$pkgname-$_pkgver/build/workspaces"
  
+-  export CMAKE_POLICY_VERSION_MINIMUM=3.5
 -  cd libraries
 -  ./build-source-libs.sh
 -  cd ../build/workspaces
@@ -60,10 +61,9 @@
    ./update-workspaces.sh -j$(nproc) \
 -      --with-lto \
        --without-pch \
--      --with-system-premake5 \
        --bindir=/usr/bin \
        --libdir=/usr/lib/0ad \
-       --datadir=/usr/share/0ad/data
+@@ -40,7 +48,7 @@
  
    cd gcc
  
@@ -78,7 +78,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -18,13 +18,12 @@
+@@ -18,12 +18,12 @@
  libsodium
  libvorbis
  libxml2
@@ -87,7 +87,6 @@
  miniupnpc
  nspr
  openal
--premake
  python
 +python-virtualenv
  rust
@@ -108,6 +107,7 @@
  }
  build() {
 -cd "$pkgname-$_pkgver"
+-export CMAKE_POLICY_VERSION_MINIMUM=3.5
 -cd libraries
 -./build-source-libs.sh
 -cd ../build/workspaces
@@ -117,7 +117,6 @@
  ./update-workspaces.sh -j$(nproc) \
 ---with-lto \
  --without-pch \
----with-system-premake5 \
  --bindir=/usr/bin \
  --libdir=/usr/lib/0ad \
  --datadir=/usr/share/0ad/data

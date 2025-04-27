@@ -195,6 +195,7 @@ bats-assert
 bats-support
 bats
 bazel
+bazelisk
 bbswitch
 bbswitch-dkms
 bc
@@ -722,6 +723,7 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
@@ -975,8 +977,6 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hddtemp
-hdf5
-hdf5-openmpi
 helix
 help2man
 herbstluftwm
@@ -1523,6 +1523,7 @@ kweather
 kweathercore
 kwidgetsaddons
 kwidgetsaddons5
+kwindowsystem
 kwindowsystem5
 kwordquiz
 kwrited
@@ -3735,7 +3736,6 @@ python-mpmath
 python-msgpack
 python-mss
 python-mujson
-python-multidict
 python-multipart
 python-munch
 python-munkres
@@ -3947,7 +3947,6 @@ python-pydocstyle
 python-pydot
 python-pydrive
 python-pyee
-python-pyelftools
 python-pyenchant
 python-pyenchant-docs
 python-pyfakefs
@@ -4310,7 +4309,6 @@ python-syrupy
 python-tabulate
 python-tabview
 python-tappy
-python-tblib
 python-teamcity-messages
 python-tempita
 python-tempora
@@ -4393,7 +4391,6 @@ python-update-checker
 python-uri-template
 python-uritemplate
 python-urllib3
-python-urwid
 python-userpath
 python-uvloop
 python-validate-email

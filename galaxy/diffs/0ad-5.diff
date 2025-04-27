@@ -1,0 +1,68 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ pkgname=0ad
+ pkgver=a27
+ _pkgver=0.27.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc="Cross-platform, 3D and historically-based real-time strategy game"
+ arch=('x86_64')
+ url="http://play0ad.com/"
+@@ -9,7 +9,7 @@
+ depends=('0ad-data' 'binutils' 'boost-libs' 'curl' 'enet' 'libogg' 'libpng' 'libvorbis'
+          'libxml2' 'openal' 'sdl2' 'wxwidgets-gtk3' 'zlib' 'libgl' 'glu' 'fmt'
+          'gloox' 'miniupnpc' 'libminiupnpc.so' 'icu' 'nspr' 'libsodium' 'which')
+-makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'git' 'python' 'llvm')
++makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'git' 'premake' 'python' 'llvm')
+ options=('!lto') # breaks spidermonkey linking (https://bugs.gentoo.org/746947)
+ source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz"
+         0ad-fix-missing-includes.patch)
+@@ -26,7 +26,6 @@
+ build() {
+   cd "$pkgname-$_pkgver"
+ 
+-  export CMAKE_POLICY_VERSION_MINIMUM=3.5
+   cd libraries
+   ./build-source-libs.sh
+   cd ../build/workspaces
+@@ -34,6 +33,7 @@
+   ./update-workspaces.sh -j$(nproc) \
+       --with-lto \
+       --without-pch \
++      --with-system-premake5 \
+       --bindir=/usr/bin \
+       --libdir=/usr/lib/0ad \
+       --datadir=/usr/share/0ad/data
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -23,6 +23,7 @@
+ miniupnpc
+ nspr
+ openal
++premake
+ python
+ rust
+ sdl2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,13 +4,13 @@
+ }
+ build() {
+ cd "$pkgname-$_pkgver"
+-export CMAKE_POLICY_VERSION_MINIMUM=3.5
+ cd libraries
+ ./build-source-libs.sh
+ cd ../build/workspaces
+ ./update-workspaces.sh -j$(nproc) \
+ --with-lto \
+ --without-pch \
++--with-system-premake5 \
+ --bindir=/usr/bin \
+ --libdir=/usr/lib/0ad \
+ --datadir=/usr/share/0ad/data

@@ -1,15 +1,37 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=radicale
  _name=Radicale
 -pkgver=3.5.2
+-pkgrel=2
 +pkgver=3.5.1
- pkgrel=1
++pkgrel=1
  pkgdesc="Simple calendar (CalDAV) and contact (CardDAV) server"
  arch=(any)
-@@ -37,16 +37,13 @@
+ url="https://radicale.org/"
+@@ -11,6 +11,7 @@
+ depends=(
+   python
+   python-bcrypt
++  python-dateutil
+   python-defusedxml
+   python-passlib
+   python-pika
+@@ -26,11 +27,6 @@
+   python-pytest
+   python-waitress
+ )
+-optdepends=(
+-  'python-ldap3: for LDAP authentication'
+-  'python-pam: for PAM authentication'
+-  'python-requests: for OAuth2 authentication'
+-)
+ backup=(
+   'etc/radicale/config'
+   'etc/radicale/rights'
+@@ -41,16 +37,13 @@
    $pkgname-$pkgver.tar.gz::$_url/archive/v$pkgver.tar.gz
    $pkgname-sysusers.conf
    $pkgname-tmpfiles.conf
@@ -30,7 +52,7 @@
  
  prepare() {
    cd $_name-$pkgver
-@@ -76,7 +73,6 @@
+@@ -80,7 +73,6 @@
    python -m installer --destdir="$pkgdir" dist/*.whl
    install -vDm 644 {config,rights,users} -t "$pkgdir/etc/$pkgname/"
    install -vDm 644 $pkgname.wsgi -t "$pkgdir/usr/share/$pkgname/"
@@ -38,3 +60,17 @@
    install -vDm 644 ../$pkgname-sysusers.conf "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
    install -vDm 644 ../$pkgname-tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
    install -vDm 644 {CHANGELOG,DOCUMENTATION,README}.md -t "$pkgdir/usr/share/doc/$pkgname/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ python
+ python-bcrypt
+ python-build
++python-dateutil
+ python-defusedxml
+ python-installer
+ python-passlib

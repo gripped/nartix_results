@@ -9,7 +9,7 @@
    udisks2
    xz
  )
-@@ -34,14 +34,14 @@
+@@ -34,7 +34,7 @@
    git
    glib2-devel
    meson
@@ -17,8 +17,9 @@
 +  elogind
  )
  groups=(gnome)
- source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#tag=${pkgver/[a-z]/.&}")
- b2sums=('4eabd5a5bfd62289700228ed36b4ee49a73474d307da8f82216c65f4efec9bbc4f0f51abd74a1eacc466ca7488444ffd92fd98523a0631bc800cf4ff40f617ae')
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#tag=${pkgver/[a-z]/.&}"
+@@ -53,7 +53,7 @@
+ }
  
  build() {
 -  arch-meson $pkgname build
