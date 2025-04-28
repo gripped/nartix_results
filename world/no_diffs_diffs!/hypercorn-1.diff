@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hypercorn
+ pkgver=0.17.3
+-pkgrel=5
++pkgrel=4
+ pkgdesc='An ASGI Server based on Hyper libraries and inspired by Gunicorn'
+ url=https://github.com/pgjones/hypercorn
+ arch=(any)
 @@ -34,10 +34,6 @@
  source=(git+https://github.com/pgjones/hypercorn.git#tag=${_tag})
  sha256sums=('8702202c855ae5e8978a36eee7d6bc3cb5fdeb795351e53672a4f3d4445152f7')

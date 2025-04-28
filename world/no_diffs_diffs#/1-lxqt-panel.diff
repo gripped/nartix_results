@@ -4,7 +4,7 @@
  
  pkgname=lxqt-panel
 -pkgver=2.2.0
--pkgrel=1
+-pkgrel=2
 +pkgver=1.4.0
 +pkgrel=1.2
  pkgdesc="The LXQt desktop panel"
@@ -13,7 +13,7 @@
  url="https://github.com/lxqt/$pkgname"
  license=("LGPL2.1")
  depends=(
--	"libdbusmenu-lxqt" "libxcomposite" "lxqt-menu-data" "libxtst"
+-	"libdbusmenu-lxqt" "lxqt-menu-data" "libxtst"
 -	"lxqt-globalkeys" "solid" "libxcb" "libQt6Xdg.so" "layer-shell-qt"
 +	"libdbusmenu-qt5" "libxcomposite" "lxqt-menu-data" "libxtst"
 +	"lxqt-globalkeys" "solid5" "libxcb" "libQt5Xdg.so"
@@ -35,7 +35,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,6 @@
+@@ -1,16 +1,16 @@
  alsa-lib
 -layer-shell-qt
 -libQt6Xdg.so
@@ -45,7 +45,9 @@
  liblxqt
  libpulse
  libstatgrab
-@@ -11,7 +10,7 @@
+ libsysstat
+ libxcb
++libxcomposite
  libxdamage
  libxtst
  lm_sensors

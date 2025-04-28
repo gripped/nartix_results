@@ -4,7 +4,7 @@
  
  pkgname=lxqt-powermanagement
 -pkgver=2.2.0
--pkgrel=1
+-pkgrel=2
 +pkgver=1.4.0
 +pkgrel=1.1
  pkgdesc="LXQt power management daemon"
@@ -13,7 +13,7 @@
  url="https://github.com/lxqt/$pkgname"
  license=("LGPL2.1")
 -depends=("qt6-svg" "upower" "kidletime" "solid" "hicolor-icon-theme"
--         "libQt6Xdg.so" "lxqt-globalkeys")
+-         "lxqt-globalkeys")
 +depends=("qt5-svg" "qt5-x11extras" "upower" "kidletime5" "solid5" "hicolor-icon-theme"
 +         "libQt5Xdg.so" "lxqt-globalkeys")
  makedepends=("cmake" "lxqt-build-tools")
@@ -31,11 +31,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,10 @@
+@@ -1,8 +1,10 @@
  cmake
  hicolor-icon-theme
 -kidletime
--libQt6Xdg.so
 +kidletime5
 +libQt5Xdg.so
  lxqt-build-tools

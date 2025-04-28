@@ -85,8 +85,6 @@ containerd
 convertlit
 cppcheck
 crun
-cuda
-cuda-tools
 cups
 libcups
 dbus-broker
@@ -160,6 +158,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -538,8 +537,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-parallel
-parallel-docs
 paraview-catalyst
 parole
 passim
@@ -634,6 +631,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-aiohttp
+python-anyio
 python-anytree
 python-cramjam
 python-ipykernel

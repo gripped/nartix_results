@@ -4,14 +4,14 @@
  
  pkgname=libqtxdg
 -pkgver=4.2.0
--pkgrel=1
+-pkgrel=2
 +pkgver=3.12.0
 +pkgrel=3
  pkgdesc="Library providing freedesktop.org XDG specs implementations for Qt"
  arch=("x86_64")
  url="https://github.com/lxqt/$pkgname"
  license=("LGPL" "custom")
--depends=("libsm" "libxkbcommon-x11" "qt6-base" "qt6-svg")
+-depends=("qt6-base" "qt6-svg")
 +depends=("libsm" "libxkbcommon-x11" "qt5-base" "qt5-svg")
  makedepends=("cmake" "lxqt-build-tools")
  checkdepends=("xorg-server-xvfb")
@@ -42,9 +42,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,5 +2,5 @@
- libsm
- libxkbcommon-x11
+@@ -1,4 +1,6 @@
+ cmake
++libsm
++libxkbcommon-x11
  lxqt-build-tools
 -qt6-base
 -qt6-svg

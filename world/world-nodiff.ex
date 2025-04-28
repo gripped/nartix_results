@@ -384,6 +384,8 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -723,7 +725,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 giflib
 gifski
@@ -2565,6 +2566,8 @@ papirus-icon-theme
 epapirus-icon-theme
 paprefs
 par2cmdline
+parallel
+parallel-docs
 parley
 parted
 partitionmanager
@@ -2690,6 +2693,7 @@ perl-file-tail
 perl-file-which
 perl-font-ttf
 perl-gd
+perl-getopt-argvfile
 perl-hash-ordered
 perl-hook-lexwrap
 perl-html-parser
@@ -2785,6 +2789,7 @@ perl-parse-recdescent
 perl-parse-yapp
 perl-path-class
 perl-path-tiny
+perl-pdf-api2
 perl-pegex
 perl-perl-critic
 perl-perl-minimumversion
@@ -2793,7 +2798,10 @@ perl-pkgconfig-libpkgconf
 perl-pkgconfig
 perl-pod-coverage
 perl-pod-parser
+perl-pod-pom-view-restructured
+perl-pod-pom
 perl-pod-spell
+perl-pod2pdf
 perl-ppi
 perl-ppix-quotelike
 perl-ppix-regexp
@@ -2869,6 +2877,7 @@ perl-text-charwidth
 perl-text-csv
 perl-text-diff
 perl-text-glob
+perl-text-tabs-wrap
 perl-text-wrapi18n
 perl-tidy
 perl-time-duration
@@ -3123,7 +3132,6 @@ python-ansible-compat
 python-ansicolors
 python-ansiwrap
 python-antlr4
-python-anyio
 python-anyjson
 python-anysqlite
 python-apipkg

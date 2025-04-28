@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,14 @@
+ 
+ pkgname=diffutils
+ pkgver=3.12
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Utility programs used for creating patch files'
+ arch=('x86_64')
+ url='https://www.gnu.org/software/diffutils'
+ license=('GPL-3.0-or-later')
+ depends=('glibc' 'bash')
+ makedepends=('git' 'gperf' 'help2man' 'python' 'wget')
++options=('!lto')
+ validpgpkeys=('155D3FC500C834486D1EEA677FD9FCCB000BEEEE') # Jim Meyering
+ source=("git+https://git.savannah.gnu.org/git/diffutils.git#tag=v${pkgver}?signed"
+         "git+https://git.savannah.gnu.org/git/gnulib.git")
+@@ -26,9 +27,7 @@
+ 
+ build() {
+   cd $pkgname
+-  ./configure \
+-    --prefix=/usr \
+-    --disable-gcc-warnings
++  ./configure --prefix=/usr
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,6 @@
+ }
+ build() {
+ cd $pkgname
+-./configure \
+---prefix=/usr \
+---disable-gcc-warnings
++./configure --prefix=/usr
+ make
+ }

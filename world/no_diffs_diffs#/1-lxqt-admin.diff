@@ -4,7 +4,7 @@
  
  pkgname=lxqt-admin
 -pkgver=2.2.0
--pkgrel=1
+-pkgrel=2
 +pkgver=1.4.0
 +pkgrel=1.1
  pkgdesc="LXQt system administration tool."
@@ -12,7 +12,7 @@
  groups=("lxqt")
  url="https://github.com/lxqt/$pkgname"
  license=("LGPL2.1")
--depends=("qt6-base" "liblxqt" "kwindowsystem" "polkit-qt6")
+-depends=("qt6-base" "liblxqt" "polkit-qt6")
 -makedepends=("cmake" "qt6-tools" "lxqt-build-tools")
 +depends=("qt5-base" "liblxqt" "kwindowsystem5" "polkit-qt5")
 +makedepends=("cmake" "qt5-tools" "lxqt-build-tools")
@@ -31,9 +31,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,7 @@
  cmake
--kwindowsystem
 +kwindowsystem5
  liblxqt
  lxqt-build-tools

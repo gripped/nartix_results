@@ -24,7 +24,6 @@ db
 db5.3
 debugedit
 dialog
-diffutils
 ding-libs
 dmraid
 dnssec-anchors
@@ -55,7 +54,6 @@ grep
 groff
 grub
 guile
-gzip
 hdparm
 hwdata
 iana-etc
