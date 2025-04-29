@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ruby-sus-fixtures-async
+ pkgver=0.2.0
+-pkgrel=3
++pkgrel=1
+ pkgdesc='Test fixtures for running in Async'
+ arch=(any)
+ url='https://github.com/socketry/sus-fixtures-async'
+@@ -16,11 +16,10 @@
+   ruby-rdoc
+ )
+ checkdepends=(
+-  ruby-bake
++  ruby-bake-modernize
+   ruby-bake-test
+   ruby-bundler
+   ruby-covered
+-  ruby-decode
+ )
+ options=(!emptydirs)
+ source=(git+https://github.com/socketry/sus-fixtures-async.git#tag=v$pkgver)
+@@ -29,11 +28,7 @@
+ prepare() {
+   cd sus-fixtures-async
+   sed -r -e 's|~>|>=|g' -e '/signing_key/d' -i sus-fixtures-async.gemspec
+-
+-  sed --in-place \
+-    --expression '/group :maintenance/,/end/d' \
+-    --expression '/rubocop/d' \
+-    gems.rb
++  sed -i '/bake-gem/d;/utopia-project/d;/decode/d;/rubocop/d;' gems.rb
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,7 @@
+ prepare() {
+ cd sus-fixtures-async
+ sed -r -e 's|~>|>=|g' -e '/signing_key/d' -i sus-fixtures-async.gemspec
+-sed --in-place \
+---expression '/group :maintenance/,/end/d' \
+---expression '/rubocop/d' \
+-gems.rb
++sed -i '/bake-gem/d;/utopia-project/d;/decode/d;/rubocop/d;' gems.rb
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"

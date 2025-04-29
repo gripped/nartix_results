@@ -1,0 +1,155 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _gemname='simplecov_json_formatter'
+ pkgname="ruby-${_gemname}"
+ pkgver=0.1.4
+-pkgrel=7
++pkgrel=5
+ pkgdesc='JSON formatter for SimpleCov'
+ arch=('any')
+ url="https://github.com/codeclimate-community/${_gemname}"
+@@ -29,28 +29,46 @@
+   sed --in-place --regexp-extended 's|~>|>=|g' "${_gemname}.gemspec"
+ 
+   rm --verbose Gemfile*
++
++  local simplecov_version="$(ruby -e 'require("simplecov"); puts SimpleCov::VERSION')"
++
++  sed --in-place '/byebug/d' spec/simplecov_json_formatter_spec.rb
++  sed --in-place --regexp-extended "s/\"simplecov_version\": \"[0-9]+\.[0-9]+\.[0-9]+\"/\"simplecov_version\": \"${simplecov_version}\"/" spec/fixtures/*.json
++  sed --in-place --regexp-extended "s|/gem/|${srcdir}/${_gemname}-${pkgver}/|" spec/fixtures/*.json
+ }
+ 
+ build() {
+   cd "${_gemname}-${pkgver}"
+ 
++  gem build "${_gemname}.gemspec"
++}
++
++check() {
++  cd "${_gemname}-${pkgver}"
++
++  rake spec
++}
++
++package() {
++  cd "${_gemname}-${pkgver}"
++
+   local _gemdir="$(gem env gemdir)"
+-
+-  gem build "${_gemname}.gemspec"
+ 
+   gem install \
+     --local \
+     --verbose \
+     --ignore-dependencies \
+-    --build-root "tmp_install" \
++    --no-user-install \
++    --install-dir "${pkgdir}/${_gemdir}" \
++    --bindir "${pkgdir}/usr/bin" \
+     "${_gemname}-${pkgver}.gem"
+ 
+   rm --force --recursive --verbose \
+-    "tmp_install/${_gemdir}/cache/" \
+-    "tmp_install/${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
+-    "tmp_install/${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
++    "${pkgdir}/${_gemdir}/cache/" \
++    "${pkgdir}/${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
++    "${pkgdir}/${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+ 
+-  find "tmp_install/${_gemdir}/gems/" \
++  find "${pkgdir}/${_gemdir}/gems/" \
+     -type f \
+     \( \
+       -iname "*.o" -o \
+@@ -62,35 +80,14 @@
+     \) \
+     -delete
+ 
+-  find "tmp_install/${_gemdir}/extensions/" \
++  find "${pkgdir}/${_gemdir}/extensions/" \
+     -type f \
+     \( \
+       -iname "mkmf.log" -o \
+       -iname "gem_make.out" \
+     \) \
+     -delete
++
++  install --verbose -D --mode=644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++  install --verbose -D --mode=644 *.md --target-directory "${pkgdir}/usr/share/doc/${pkgname}"
+ }
+-
+-check() {
+-  cd "${_gemname}-${pkgver}"
+-
+-  local _gemdir="$(gem env gemdir)"
+-
+-  local simplecov_version="$(GEM_HOME="tmp_install/${_gemdir}" ruby -e 'require("simplecov"); puts SimpleCov::VERSION')"
+-
+-  sed --in-place '/byebug/d' spec/simplecov_json_formatter_spec.rb
+-  sed --in-place --regexp-extended "s/\"simplecov_version\": \"[0-9]+\.[0-9]+\.[0-9]+\"/\"simplecov_version\": \"${simplecov_version}\"/" spec/fixtures/*.json
+-  sed --in-place --regexp-extended "s|/gem/|${srcdir}/${_gemname}-${pkgver}/|" spec/fixtures/*.json
+-
+-
+-  GEM_HOME="tmp_install/${_gemdir}" rake spec
+-}
+-
+-package() {
+-  cd "${_gemname}-${pkgver}"
+-
+-  cp --archive --verbose tmp_install/* "${pkgdir}"
+-
+-  install --verbose -D --mode=0644 LICENSE --target-directory "${pkgdir}/usr/share/licenses/${pkgname}"
+-  install --verbose -D --mode=0644 *.md --target-directory "${pkgdir}/usr/share/doc/${pkgname}"
+-}
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,37 +2,12 @@
+ cd "${_gemname}-${pkgver}"
+ sed --in-place --regexp-extended 's|~>|>=|g' "${_gemname}.gemspec"
+ rm --verbose Gemfile*
++local simplecov_version="$(ruby -e 'require("simplecov"); puts SimpleCov::VERSION')"
++sed --in-place '/byebug/d' spec/simplecov_json_formatter_spec.rb
++sed --in-place --regexp-extended "s/\"simplecov_version\": \"[0-9]+\.[0-9]+\.[0-9]+\"/\"simplecov_version\": \"${simplecov_version}\"/" spec/fixtures/*.json
++sed --in-place --regexp-extended "s|/gem/|${srcdir}/${_gemname}-${pkgver}/|" spec/fixtures/*.json
+ }
+ build() {
+ cd "${_gemname}-${pkgver}"
+-local _gemdir="$(gem env gemdir)"
+ gem build "${_gemname}.gemspec"
+-gem install \
+---local \
+---verbose \
+---ignore-dependencies \
+---build-root "tmp_install" \
+-"${_gemname}-${pkgver}.gem"
+-rm --force --recursive --verbose \
+-"tmp_install/${_gemdir}/cache/" \
+-"tmp_install/${_gemdir}/gems/${_gemname}-${pkgver}/vendor/" \
+-"tmp_install/${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+-find "tmp_install/${_gemdir}/gems/" \
+--type f \
+-\( \
+--iname "*.o" -o \
+--iname "*.c" -o \
+--iname "*.so" -o \
+--iname "*.time" -o \
+--iname "gem.build_complete" -o \
+--iname "Makefile" \
+-\) \
+--delete
+-find "tmp_install/${_gemdir}/extensions/" \
+--type f \
+-\( \
+--iname "mkmf.log" -o \
+--iname "gem_make.out" \
+-\) \
+--delete
+ }

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase='protobuf'
+ pkgname=('protobuf' 'python-protobuf' 'ruby-google-protobuf')
+ pkgver=30.1
+-pkgrel=4
++pkgrel=1
+ pkgdesc="Protocol Buffers - Google's data interchange format"
+ arch=('x86_64')
+ url='https://developers.google.com/protocol-buffers/'
+@@ -152,7 +152,6 @@
+   pkgdesc='Ruby bindings for Google Protocol Buffers'
+   depends=(
+     'ruby'
+-    'ruby-bigdecimal'
+   )
+ 
+   cp -a $pkgbase/ruby/tmp_install/* "$pkgdir"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,7 +12,6 @@
+ python-setuptools
+ python-wheel
+ ruby
+-ruby-bigdecimal
+ ruby-rake
+ ruby-rake-compiler
+ zlib

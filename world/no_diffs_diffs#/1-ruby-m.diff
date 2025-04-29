@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=ruby-m
+ pkgver=1.6.1
+ _commit=c5220612016b014f4aac29632d044a024704cdd9
+-pkgrel=5
++pkgrel=3
+ pkgdesc='Run test/unit tests by line number. Metal!'
+ arch=(any)
+ url='https://github.com/qrush/m'
+@@ -17,7 +17,6 @@
+   ruby-activesupport
+   ruby-rdiscount
+   ruby-rdoc
+-  ruby-mutex_m
+ )
+ checkdepends=(
+   ruby-bundler
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ ruby
+ ruby-activesupport
+ ruby-method_source
+-ruby-mutex_m
+ ruby-rake
+ ruby-rdiscount
+ ruby-rdoc

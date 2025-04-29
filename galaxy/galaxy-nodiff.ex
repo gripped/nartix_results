@@ -71,7 +71,6 @@ exo
 ext4magic
 fastfetch
 fceux
-featherpad
 firefox-i18n
 fluxbox
 font-manager

@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,21 +2,16 @@
+ _gemname='net-imap'
+ pkgname="ruby-${_gemname}"
+ pkgver=0.4.12
+-pkgrel=5
++pkgrel=3
+ pkgdesc='Ruby client api for Internet Message Access Protocol'
+ arch=('any')
+ url="https://github.com/ruby/${_gemname}"
+ license=('RUBY' 'BSD-2-CLAUSE')
+-depends=(
+-  ruby
+-)
+-makedepends=(
+-  ruby-rdoc
+-  )
++depends=('ruby')
+ checkdepends=(
+-  ruby-base64
+   ruby-bundler
+   ruby-rake
++  ruby-rdoc
+   ruby-test-unit
+   ruby-test-unit-ruby-core
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+ ruby
+-ruby-rdoc

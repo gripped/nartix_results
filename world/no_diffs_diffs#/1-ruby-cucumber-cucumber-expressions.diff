@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,14 +2,13 @@
+ pkgname=ruby-cucumber-cucumber-expressions
+ pkgver=17.1.0
+ _commit=b5dcaa533ae6d2ed36a486bdaabbdcc6e6f46777
+-pkgrel=4
++pkgrel=2
+ pkgdesc="Cucumber Expressions - a simpler alternative to Regular Expressions"
+ arch=(any)
+ url='https://github.com/cucumber/cucumber-expressions/tree/main/ruby'
+ license=(MIT)
+ depends=(
+   ruby
+-  ruby-bigdecimal
+ )
+ makedepends=(
+   git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ git
+ ruby
+-ruby-bigdecimal
+ ruby-rake
+ ruby-rspec

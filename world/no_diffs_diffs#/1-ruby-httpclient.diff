@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,14 +2,14 @@
+ _gemname='httpclient'
+ pkgname="ruby-${_gemname}"
+ pkgver=2.8.3
+-pkgrel=13
++pkgrel=11
+ pkgdesc='gives something like the functionality of libwww-perl (LWP) in Ruby'
+ arch=('any')
+ url='https://github.com/nahi/httpclient'
+ license=('Ruby')
+ makedepends=('ruby-rdoc' 'ruby-bundler')
+ checkdepends=('ruby-rake' 'ruby-http-cookie' 'ruby-test-unit' 'ruby-rack' 'ruby-webrick')
+-depends=('ruby' 'ruby-mutex_m')
++depends=('ruby')
+ options=(!emptydirs)
+ source=("${url}/archive/v${pkgver}/${pkgname}-v${pkgver}.tar.gz"
+         'disable-broken-TLS-test.patch')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+ ruby
+ ruby-bundler
+-ruby-mutex_m
+ ruby-rdoc

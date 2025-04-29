@@ -7,6 +7,7 @@ ecrire
 efl
 ephoto
 evisum
+featherpad
 firefox
 freecell-solver
 greetd-regreet

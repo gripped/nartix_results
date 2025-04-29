@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ruby-fiber-annotation
+ pkgver=0.2.0
+-pkgrel=8
++pkgrel=5
+ pkgdesc='A mechanism for annotating fibers'
+ arch=(any)
+ url='https://github.com/ioquatix/fiber-annotation'
+@@ -13,7 +13,7 @@
+   ruby-rdoc
+ )
+ checkdepends=(
+-  ruby-bake
++  ruby-bake-modernize
+   ruby-bake-test
+   ruby-bake-test-external
+   ruby-bundler
+@@ -27,11 +27,7 @@
+ prepare() {
+   cd fiber-annotation-$pkgver
+   sed '/signing_key/d' -i fiber-annotation.gemspec
+-
+-  sed --in-place \
+-    --expression '/group :maintenance/,/end/d' \
+-    --expression '/rubocop/d' \
+-    gems.rb
++  sed -i '/bake-gem/d;/utopia-project/d' gems.rb
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,7 @@
+ prepare() {
+ cd fiber-annotation-$pkgver
+ sed '/signing_key/d' -i fiber-annotation.gemspec
+-sed --in-place \
+---expression '/group :maintenance/,/end/d' \
+---expression '/rubocop/d' \
+-gems.rb
++sed -i '/bake-gem/d;/utopia-project/d' gems.rb
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"

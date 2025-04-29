@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,25 +2,18 @@
+ _name=activesupport
+ pkgname=ruby-activesupport
+ pkgver=8.0.1
+-pkgrel=5
++pkgrel=1
+ pkgdesc='A collection of utility classes and standard library extensions'
+ arch=(any)
+ url="https://github.com/rails/rails/tree/master/activesupport"
+ license=(MIT)
+ depends=(
+   ruby
+-  ruby-base64
+-  ruby-benchmark
+-  ruby-bigdecimal
+   ruby-concurrent
+   ruby-connection_pool
+-  ruby-drb
+-  ruby-logger
+   ruby-i18n  # NOTE: bootstrap without (circular dependency)
+   ruby-minitest
+-  ruby-securerandom
+   ruby-tzinfo
+-  ruby-uri
+   ruby-zeitwerk
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,17 +1,10 @@
+ git
+ ruby
+-ruby-base64
+-ruby-benchmark
+-ruby-bigdecimal
+ ruby-concurrent
+ ruby-connection_pool
+-ruby-drb
+ ruby-i18n
+-ruby-logger
+ ruby-minitest
+ ruby-rake
+ ruby-rdoc
+-ruby-securerandom
+ ruby-tzinfo
+-ruby-uri
+ ruby-zeitwerk

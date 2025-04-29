@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _gemname='crack'
+ pkgname="ruby-${_gemname}"
+ pkgver=1.0.0
+-pkgrel=5
++pkgrel=3
+ pkgdesc='Really simple JSON and XML parsing, ripped from Merb and Rails.'
+ arch=('any')
+ url='https://github.com/jnunemaker/crack/'
+@@ -10,7 +10,6 @@
+ depends=(
+   ruby
+   ruby-rexml
+-  ruby-bigdecimal
+ )
+ makedepends=(
+   ruby-rdoc
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+ ruby
+-ruby-bigdecimal
+ ruby-rdoc
+ ruby-rexml

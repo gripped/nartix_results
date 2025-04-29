@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkg=filter-dkimsign
+ pkgname=opensmtpd-${_pkg}
+ pkgver=0.6
+-pkgrel=3
++pkgrel=2
+ pkgdesc="OpenSMTPD filter for signing mail with DKIM"
+ license=(BSD)
+ url="https://imperialat.at/dev/filter-dkimsign/"
+@@ -16,7 +16,7 @@
+ 
+ build() {
+   cd ${_pkg}-${pkgver}
+-  make -f Makefile.gnu HAVE_ED25519=1
++  make -f Makefile.gnu
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd ${_pkg}-${pkgver}
+-make -f Makefile.gnu HAVE_ED25519=1
++make -f Makefile.gnu
+ }
