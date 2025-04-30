@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   rabbitmqadmin
+ )
+ pkgver=4.1.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Highly reliable and performant enterprise messaging implementation of AMQP written in Erlang/OTP'
+ url='https://rabbitmq.com'
+ arch=('any')
 @@ -33,7 +33,7 @@
    'rebar3'
    'rsync'
@@ -33,7 +42,12 @@
    patch -p1 < ../rabbitmq-devendor-rebar3.patch
  }
  
-@@ -171,7 +168,6 @@
+@@ -167,11 +164,10 @@
+     rabbitmqctl
+     vmware-rabbitmq
+   )
+-  for script in "${scripts[@]}"; do
++  for script in ${scripts}; do
      ln -vs /usr/lib/rabbitmq/bin/rabbitmq-script-wrapper "${pkgdir}/usr/bin/${script}"
    done
  

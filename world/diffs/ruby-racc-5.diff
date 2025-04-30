@@ -6,8 +6,8 @@
  pkgname="ruby-${_gemname}"
 -pkgver=1.6.0
 -pkgrel=3
-+pkgver=1.7.3
-+pkgrel=1
++pkgver=1.8.1
++pkgrel=2
  pkgdesc='LALR parser generator written in Ruby itself and generates ruby programs'
 -arch=('x86_64')
 +arch=(x86_64)
@@ -38,7 +38,7 @@
  options=('!emptydirs')
  source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
 -sha512sums=('c19b7444bfafa0dfe3448600d10a1a09319702c37632e19569aeb947e7c035cc4067da040d45ede0dab35eaa197a55eac394715aae520fba41ed6e0c01c95e3d')
-+sha512sums=('8412c021d3fc7f25ccf3a61d56c11df0d8c0b09852d99cc314c8b4931f9c22939dc43ef599801de9a64a69acbd897fb6f215f56702634f2c8b6d69ae3bdfa2b3')
++sha512sums=('69ba66d4cd324922bdace64c6475d3218f94483b08c9f3cfcba1e32f252b198f96d10aaa999b4c9cb3a9d41591710d6aa4b74137b2910b350d407f5ff77a849c')
 +
 +prepare() {
 +  cd "${_gemname}-${pkgver}"
@@ -49,8 +49,12 @@
  
  build() {
    cd "${_gemname}-${pkgver}"
-@@ -63,3 +85,4 @@
-   install --verbose -D --mode=0644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+@@ -60,6 +82,7 @@
+     "${pkgdir}${_gemdir}/plugins/" \
+     "${pkgdir}${_gemdir}/doc/${_gemname}-${pkgver}/ri/ext/"
+ 
+-  install --verbose -D --mode=0644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++  install --verbose -D --mode=0644 BSDL COPYING --target-directory "${pkgdir}/usr/share/licenses/${pkgname}"
    install --verbose -D --mode=0644 ChangeLog README.rdoc --target-directory "${pkgdir}/usr/share/doc/${pkgname}"
  }
 +

@@ -7,7 +7,6 @@ btrfs-progs
 dbus
 dbus-docs
 dhcpcd
-diffutils
 e2fsprogs
 fuse2fs
 fakeroot
@@ -29,7 +28,6 @@ glibc
 lib32-glibc
 glibc-locales
 gssproxy
-gzip
 iputils
 libusb
 libxml2
