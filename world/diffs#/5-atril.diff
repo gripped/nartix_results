@@ -4,7 +4,7 @@
  
  pkgname=atril
 -pkgver=1.28.1
--pkgrel=1
+-pkgrel=3
 -pkgdesc="A document viewer for MATE"
 +pkgver=1.26.1
 +pkgrel=1.1
@@ -12,7 +12,7 @@
  url="https://mate-desktop.org"
  arch=('x86_64')
 -license=('GPL-2.0-or-later')
--depends=('djvulibre' 'libspectre' 'libgxps' 'mathjax2' 'gettext' 'poppler-glib' 'cairo>=1.14.0' 'webkit2gtk>=2.6.0' 'libsynctex' 'mate-desktop')
+-depends=('djvulibre' 'libspectre' 'libgxps' 'mathjax2' 'gettext' 'poppler-glib' 'cairo>=1.14.0' 'webkit2gtk-4.1>=2.6.0' 'libsynctex' 'mate-desktop')
 -makedepends=('autoconf-archive' 'caja' 'git' 'glib2-devel' 'gobject-introspection' 'itstool' 'mate-common' 'texlive-bin' 'python-packaging' 'yelp-tools')
 +license=('GPL')
 +depends=('djvulibre' 'libspectre' 'libgxps' 'mathjax2' 'gettext' 'poppler-glib' 'cairo>=1.14.0' 'webkit2gtk>=2.6.0' 'libsynctex')
@@ -91,8 +91,9 @@
  poppler-glib
 -python-packaging
  texlive-bin
- webkit2gtk>
+-webkit2gtk-4.1>
 -yelp-tools
++webkit2gtk>
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

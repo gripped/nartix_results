@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
- makedepends=('intltool')
- conflicts=($_pkgname)
- source=(https://downloads.sourceforge.net/lxde/$_pkgname-$pkgver.tar.xz)
--sha256sums=('3150b33b4b7beb71c1803aee2be21c94767d73b70dfc8d2bcaafe2650ea83149')
-+md5sums=('ae0076d489aa786f5d573f7ff592a4ab')
- 
- prepare() {
-   cd $_pkgname-$pkgver
+@@ -2,7 +2,7 @@
+ pkgname=lxappearance-obconf-gtk3
+ _pkgname=lxappearance-obconf
+ pkgver=0.2.3
+-pkgrel=4
++pkgrel=4.1
+ pkgdesc='Plugin for LXAppearance to configure Openbox (GTK+ 3 version)'
+ arch=('x86_64')
+ license=('GPL2')

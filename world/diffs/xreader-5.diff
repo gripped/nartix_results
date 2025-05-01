@@ -1,13 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,11 +1,11 @@
  
  pkgname=xreader
 -pkgver=4.2.5
+-pkgrel=2
 +pkgver=4.0.2
- pkgrel=1
++pkgrel=1
  pkgdesc="Document viewer for files like PDF and Postscript. X-Apps Project."
  arch=(x86_64)
+ url="https://github.com/linuxmint/${pkgname}"
+-license=(GPL-2.0-or-later)
++license=(GPL)
+ groups=(x-apps)
+ depends=(poppler-glib webkit2gtk-4.1 xapp)
+ optdepends=('djvulibre: support for djvu files'
 @@ -14,13 +14,13 @@
              'mathjax2: support for math in epub files'
              'texlive-bin: support for dvi files')

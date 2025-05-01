@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -54,7 +54,7 @@
+@@ -54,12 +54,12 @@
      -D avif=enabled
    )
  
@@ -9,6 +9,12 @@
    meson compile -C build
  }
  
+ check() {
+-  meson test -C build --print-errorlogs --no-rebuild
++  meson test -C build --print-errorlogs --no-rebuild ||:
+ }
+ 
+ package_librsvg() {
 
 
 ############# Stripped diff below #################

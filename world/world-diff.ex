@@ -159,7 +159,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -225,7 +224,6 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
-gufw
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -336,7 +334,6 @@ libepoxy-docs
 libetebase
 libfido2
 libfprint
-libgdata
 libgudev
 libguestfs
 libhandy0
@@ -347,6 +344,7 @@ libnvme
 libprocps
 libsidplay
 libsidplayfp
+libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
@@ -384,12 +382,13 @@ turbostat
 usbip
 x86_energy_perf_policy
 lirc
-llvm-julia
+llvm14
 lm_sensors
 localsearch
 localsearch-testutils
 lua-filesystem
 luarocks
+lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
@@ -404,6 +403,7 @@ lxlauncher
 lxlauncher-gtk3
 lxmenu-data
 lxmusic
+lxpanel-gtk3
 lxpanel
 lxqt-config
 lxqt-qtplugin
@@ -502,6 +502,7 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 netavark
+netpbm
 netplan
 networkmanager
 libnm
@@ -634,19 +635,14 @@ pysolfc
 python-aiohttp
 python-anytree
 python-awscrt
-python-boto3
-python-botocore
-python-cfn-lint
 python-cramjam
 python-ipykernel
 python-lazy-object-proxy
-python-moto
 python-pymupdf
-python-pytest-bdd
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-s3transfer
+python-typing_extensions
 qastools
 qbittorrent
 qbittorrent-nox
@@ -839,9 +835,6 @@ udisks2-docs
 umockdev
 umurmur
 unbound
-unicorn
-python-unicorn
-ruby-unicorn-engine
 unoconv
 upower
 uptimed
@@ -867,7 +860,6 @@ valkey
 vault
 vlc
 libvlc
-vokoscreen
 vpnc
 vte3
 vte-common
@@ -875,6 +867,7 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
+vtk
 wasi-compiler-rt
 waybar
 webkit2gtk-4.1

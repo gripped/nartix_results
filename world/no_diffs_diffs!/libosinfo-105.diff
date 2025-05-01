@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,7 +37,7 @@
+@@ -39,7 +39,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- sed -i 's/-Werror//' meson.build
+@@ -4,7 +4,7 @@
+ git cherry-pick -n 0adf38535637ec668e658d43f04f60f11f51574f
  }
  build() {
 -arch-meson $pkgname build \

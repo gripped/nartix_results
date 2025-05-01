@@ -724,6 +724,7 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
@@ -953,6 +954,7 @@ gtkspell
 gtkspell3
 gts
 gucharmap
+gufw
 guile2.2
 gulp
 gumbo-parser
@@ -1684,6 +1686,7 @@ libfreehand
 libfreexl
 libftdi
 libgadu
+libgdata
 libgdiplus
 libgedit-amtk
 libgedit-gfls
@@ -1955,7 +1958,6 @@ libsoup-docs
 libsoup3
 libsoup3-docs
 libsoxr
-libspatialite
 libspectre
 libspelling
 libspelling-docs
@@ -2109,8 +2111,8 @@ lld16
 lld18
 lldb
 llhttp
+llvm-julia
 llvm
-llvm14
 llvm15
 llvm16
 llvm18
@@ -2169,13 +2171,11 @@ luksmeta
 lv2
 lv2-docs
 lv2-example-plugins
-lxappearance-obconf-gtk3
 lxdm
 lxdm-gtk3
 lxhotkey
 lxhotkey-gtk3
 lximage-qt
-lxpanel-gtk3
 lxqt-about
 lxqt-admin
 lxqt-archiver
@@ -2383,7 +2383,6 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
-netpbm
 netsurf-buildsystem
 network-manager-applet
 nm-connection-editor
@@ -3213,6 +3212,8 @@ python-blosc
 python-blosc2
 python-boolean.py
 python-boto
+python-boto3
+python-botocore
 python-bottle
 python-bottleneck
 python-bowler
@@ -3248,6 +3249,7 @@ python-cerberus
 python-certifi
 python-cffi
 python-cfgv
+python-cfn-lint
 python-cftime
 python-characteristic
 python-chardet
@@ -3731,6 +3733,7 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
+python-moto
 python-motor
 python-mpd2
 python-mpi4py
@@ -4030,6 +4033,7 @@ python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
+python-pytest-bdd
 python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
@@ -4188,6 +4192,7 @@ python-ruamel-yaml
 python-ruamel.yaml.clib
 python-ruff-api
 python-rx
+python-s3transfer
 python-saml
 python-sarif-om
 python-schema
@@ -4369,7 +4374,6 @@ python-typed-ast
 python-typeguard
 python-types-python-dateutil
 python-typing-inspection
-python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata
@@ -5513,6 +5517,9 @@ unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
 unicode-emoji
+unicorn
+python-unicorn
+ruby-unicorn-engine
 unifdef
 unittestpp
 unrar
@@ -5575,6 +5582,7 @@ vkd3d
 vmaf
 vncdotool
 vnstat
+vokoscreen
 volatility3
 volk
 volume_key
@@ -5584,7 +5592,6 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

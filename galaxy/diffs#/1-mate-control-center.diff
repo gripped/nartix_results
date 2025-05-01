@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,26 +8,31 @@
+@@ -1,33 +1,38 @@
+ 
+ pkgname=mate-control-center
+ pkgver=1.28.1
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="The Control Center for MATE"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
  license=('GPL-2.0-or-later')
  depends=('mate-menus' 'mate-settings-daemon' 'marco' 'libxss' 'mate-desktop'
           'gettext' 'accountsservice' 'mate-panel' 'libcanberra' 'udisks2' 'libayatana-appindicator')

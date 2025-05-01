@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -63,12 +63,12 @@
-     -D fuse=3
+@@ -64,7 +64,7 @@
+     -D tests=false
    )
  
 -  arch-meson $pkgname build "${meson_options[@]}"
@@ -9,12 +9,6 @@
    meson compile -C build
  }
  
- check() {
--  meson test -C build --print-errorlogs
-+  meson test -C build --print-errorlogs || :
- }
- 
- package() {
 
 
 ############# Stripped diff below #################
@@ -23,9 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,6 +9,6 @@
- local meson_options=(
+@@ -10,6 +10,6 @@
  -D fuse=3
+ -D tests=false
  )
 -arch-meson $pkgname build "${meson_options[@]}"
 +artix-meson $pkgname build "${meson_options[@]}"
