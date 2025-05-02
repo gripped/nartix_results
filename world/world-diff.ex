@@ -2,8 +2,10 @@
 accountsservice
 adwaita-fonts
 alacritty
+alsa-ucm-conf
 alsa-utils
 amule
+anubis
 apache
 apcupsd
 appstream
@@ -126,6 +128,7 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
+fastfetch
 fceux
 fcgiwrap
 fcitx-mozc
@@ -757,7 +760,10 @@ rocsparse
 rrdtool
 rspamd
 rtkit
+ruby-addressable
 ruby-bake-modernize
+ruby-net-imap
+ruby-public_suffix
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem

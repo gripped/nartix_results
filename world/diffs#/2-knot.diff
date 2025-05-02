@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,28 +1,24 @@
+ 
+ pkgname=knot
+-pkgver=3.4.6
++pkgver=3.4.5
+ pkgrel=1
+ pkgdesc="High-performance authoritative-only DNS server"
+ arch=(x86_64)
  url="https://www.knot-dns.cz/"
  license=(GPL3)
  depends=(libedit gnutls liburcu lmdb
@@ -8,8 +15,43 @@
 +         libidn2 libcap-ng
           fstrm protobuf-c libmaxminddb
           libbpf libxdp libnghttp2 libmnl)
- makedepends=(python-sphinx)
-@@ -50,7 +50,6 @@
+-makedepends=(git python-sphinx)
++makedepends=(python-sphinx)
+ backup=('etc/knot/knot.conf')
+-source=("git+https://gitlab.nic.cz/knot/knot-dns.git#tag=v${pkgver}?signed")
+-sha256sums=('79521afb1a33a66f0c5db157c6ab1fb7d2cb1eb07d9dd93ec99379e26efa1681')
++source=("https://secure.nic.cz/files/knot-dns/${pkgname}-${pkgver}.tar.xz"{,.asc})
++sha256sums=('359af70afafa7ccaa18439a7c1eb35270ff9eece81d0756ae4ca716b1433cb4b'
++            'SKIP')
+ validpgpkeys=(742FA4E95829B6C5EAC6B85710BB7AF6FEBBD6AB) # Daniel Salzman <daniel.salzman@nic.cz>
+ 
+-prepare() {
+-    cd ${pkgname}-dns
+-    autoreconf -fiv
+-}
+-
+ build() {
+-    cd ${pkgname}-dns
++    cd ${pkgname}-${pkgver}
+ 
+     ./configure \
+         --prefix=/usr \
+@@ -40,12 +36,12 @@
+ }
+ 
+ check() {
+-    cd ${pkgname}-dns
++    cd ${pkgname}-${pkgver}
+     make check
+ }
+ 
+ package() {
+-    cd ${pkgname}-dns
++    cd ${pkgname}-${pkgver}
+ 
+     make DESTDIR="${pkgdir}" install
+ 
+@@ -54,7 +50,6 @@
      rm "${pkgdir}"/etc/knot/example.com.zone
      mv "${pkgdir}"/etc/knot/{knot.sample.conf,knot.conf}
  
@@ -23,7 +65,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,4 +12,3 @@
+@@ -1,5 +1,4 @@
+ fstrm
+-git
+ gnutls
+ libbpf
+ libcap-ng
+@@ -13,4 +12,3 @@
  lmdb
  protobuf-c
  python-sphinx

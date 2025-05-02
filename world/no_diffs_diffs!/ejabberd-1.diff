@@ -1,24 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=ejabberd
--pkgver=25.04
--pkgrel=1
-+pkgver=25.03
-+pkgrel=2
- pkgdesc="Jabber server written in Erlang"
- arch=('x86_64')
- url="https://www.ejabberd.im/"
-@@ -50,7 +50,7 @@
- 	"luerl::git+https://github.com/rvirding/luerl"
- 	"$pkgname.logrotate"
- 	"sysuser.conf")
--sha256sums=('54beae3e7729fdaab1d578a9d59046f31d8ce31c851ae5aca9532821ff22cb45'
-+sha256sums=('27df1ed8123ecc3139a573ee254e8a584392f759f5c23a0825662ca1df0cb62c'
-             'a8e1be2d9daf8dd2dfedc11736a9677f3ed5c520c0f2ddf183689d2182b9151a'
-             'SKIP'
-             'SKIP'
 @@ -138,7 +138,6 @@
      -e "s|INSTALLUSER=\"\"|INSTALLUSER=\"jabber\"|g" \
      "$pkgdir"/usr/bin/ejabberdctl

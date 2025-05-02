@@ -1,4 +1,3 @@
-0ad
 alsa-utils
 cinnamon-desktop
 copyq
@@ -7,6 +6,7 @@ ecrire
 efl
 ephoto
 evisum
+fastfetch
 featherpad
 firefox
 freecell-solver
@@ -18,6 +18,7 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+libtg_owt
 libxfce4ui
 light
 ly

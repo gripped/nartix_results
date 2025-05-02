@@ -1,4 +1,5 @@
 0ad-data
+0ad
 ada
 alacritty
 atool
@@ -69,7 +70,6 @@ engrampa
 eom
 exo
 ext4magic
-fastfetch
 fceux
 firefox-i18n
 fluxbox
@@ -81,6 +81,7 @@ garcon
 girara
 glib-perl
 gpicview
+grilo-plugins
 grub-btrfs
 gstreamermm
 gstreamermm-docs
@@ -140,7 +141,6 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
-libtg_owt
 libvarlink
 libwnck
 libxfce4util

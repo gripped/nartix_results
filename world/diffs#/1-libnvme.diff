@@ -8,7 +8,7 @@
 +makedepends=('udev' 'meson' 'asciidoc' 'python' 'swig')
  depends=('json-c' 'openssl' 'keyutils' 'dbus' 'liburing')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
- sha256sums=('53791f2e75773ba95449fc98a3b8b444d984624322ec6980049fd4eb289123d5')
+ sha256sums=('f083c21f525644a2bcca6d367d96fab813de880cba9f1746a850f3a8692a5980')
  
  build() {
  	cd "${pkgname}-${pkgver}"

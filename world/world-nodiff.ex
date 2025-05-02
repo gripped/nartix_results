@@ -52,7 +52,6 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
-alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -72,7 +71,6 @@ ansible
 ant
 ant-doc
 anthy
-anubis
 aom
 aom-docs
 apache-orc
@@ -597,7 +595,6 @@ fakechroot
 falkon
 farstream
 fast_float
-fastfetch
 fastjar
 faudio
 fcgi
@@ -696,6 +693,7 @@ gajim
 galculator
 gcab
 gcc13
+gcc14
 gd
 gdal
 python-gdal
@@ -4705,7 +4703,6 @@ rubberband-vamp
 rubocop
 ruby-abbrev
 ruby-activesupport
-ruby-addressable
 ruby-ae
 ruby-ansi
 ruby-ast
@@ -4884,7 +4881,6 @@ ruby-native-package-installer
 ruby-net-ftp
 ruby-net-http-persistent
 ruby-net-http
-ruby-net-imap
 ruby-net-pop
 ruby-net-smtp
 ruby-netrc
@@ -4919,7 +4915,6 @@ ruby-pry-byebug
 ruby-pry
 ruby-psych
 ruby-ptools
-ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
 ruby-qed
