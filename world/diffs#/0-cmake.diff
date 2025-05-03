@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=cmake
- pkgver=4.0.1
--pkgrel=2
-+pkgrel=1
- pkgdesc='A cross-platform open-source make system'
- arch=('x86_64')
- url="https://www.cmake.org/"
-@@ -28,13 +28,14 @@
+@@ -28,13 +28,17 @@
    'ninja: for ninja generator'
    'qt6-base: cmake-gui'
  )
@@ -22,9 +13,10 @@
  validpgpkeys=(CBA23971357C2E6590D9EFD3EC8FEF3A7BFB4EDA) # Brad King <brad.king@kitware.com>
  
  prepare() {
--  cd $pkgname
--  git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
 +  git -C "${pkgname}" apply ../artix-cmake.patch
+   cd $pkgname
+   git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
++
  }
  
  build() {
@@ -36,11 +28,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,5 @@
+@@ -1,4 +1,5 @@
  prepare() {
--cd $pkgname
--git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
 +git -C "${pkgname}" apply ../artix-cmake.patch
+ cd $pkgname
+ git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
  }
- build() {
- cd ${pkgname}

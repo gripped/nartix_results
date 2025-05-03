@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ pkgname=sdl2_mixer
+ pkgver=2.8.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A simple multi-channel audio mixer (Version 2)"
+ arch=('x86_64')
+ url="https://github.com/libsdl-org/SDL_mixer"
+ license=('MIT')
+-depends=('sdl2' 'libvorbis' 'libmodplug' 'mpg123' 'flac' 'opusfile' 'libxmp')
++depends=('sdl2' 'libvorbis' 'libmodplug' 'mpg123' 'flac' 'opusfile')
+ makedepends=('fluidsynth')
+ optdepends=('fluidsynth: MIDI software synth, replaces built-in timidity')
+ source=("https://github.com/libsdl-org/SDL_mixer/releases/download/release-${pkgver}/SDL2_mixer-${pkgver}.tar.gz"{,.sig})
+@@ -19,7 +19,6 @@
+   sed -i "s|/etc/timidity.cfg|/etc/timidity/timidity.cfg|g" src/codecs/music_timidity.c
+ 
+   ./configure \
+-      --enable-music-mod-modplug \
+       --enable-music-ogg-vorbis \
+       --enable-music-flac-libflac \
+       --enable-music-mp3-mpg123 \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ fluidsynth
+ libmodplug
+ libvorbis
+-libxmp
+ mpg123
+ opusfile
+ sdl2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,6 @@
+ cd "${srcdir}/SDL2_mixer-${pkgver}/"
+ sed -i "s|/etc/timidity.cfg|/etc/timidity/timidity.cfg|g" src/codecs/music_timidity.c
+ ./configure \
+---enable-music-mod-modplug \
+ --enable-music-ogg-vorbis \
+ --enable-music-flac-libflac \
+ --enable-music-mp3-mpg123 \

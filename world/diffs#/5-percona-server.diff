@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -6,7 +6,7 @@
  _myver=${pkgver/_rel*}
- pkgrel=2
+ pkgrel=3
  arch=('x86_64')
 -makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
 +makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
@@ -23,7 +23,7 @@
  
  	patch -p1 -i ../gcc-14.patch # Fix build with GCC 14
  }
-@@ -92,7 +86,7 @@
+@@ -93,7 +87,7 @@
  		-DDEBUG_EXTNAME=OFF \
  		-DBUILD_TESTING=OFF \
  		-DWITH_UNIT_TESTS=OFF \
@@ -32,7 +32,7 @@
  		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
  		-DWITH_NUMA=ON
  
-@@ -139,7 +133,7 @@
+@@ -140,7 +134,7 @@
  package_percona-server() {
  	pkgdesc='Drop-in replacement for MySQL that provides improved performance, diagnostics, instrumentation and MyRocks storage engine'
  	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf')
@@ -70,7 +70,7 @@
  patch -p1 -i ../gcc-14.patch # Fix build with GCC 14
  }
  build() {
-@@ -63,7 +57,7 @@
+@@ -64,7 +58,7 @@
  -DDEBUG_EXTNAME=OFF \
  -DBUILD_TESTING=OFF \
  -DWITH_UNIT_TESTS=OFF \

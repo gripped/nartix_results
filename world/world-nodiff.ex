@@ -52,6 +52,7 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
+alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -3109,6 +3110,7 @@ python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
+python-aiohttp
 python-aioitertools
 python-aiomysql
 python-aiopg
@@ -3179,6 +3181,7 @@ python-autopage
 python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
+python-awscrt
 python-axolotl-curve25519
 python-axolotl
 python-babel
@@ -3300,6 +3303,7 @@ python-coverage
 python-cppheaderparser
 python-cppy
 python-cram
+python-cramjam
 python-crashtest
 python-crc32c
 python-crcmod
@@ -3657,6 +3661,7 @@ python-kubernetes
 python-lark-parser
 python-lazr.config
 python-lazr.delegates
+python-lazy-object-proxy
 python-ldap
 python-ldap3
 python-legacy-cgi
@@ -4372,6 +4377,7 @@ python-typed-ast
 python-typeguard
 python-types-python-dateutil
 python-typing-inspection
+python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata
@@ -4703,6 +4709,7 @@ rubberband-vamp
 rubocop
 ruby-abbrev
 ruby-activesupport
+ruby-addressable
 ruby-ae
 ruby-ansi
 ruby-ast
@@ -4881,6 +4888,7 @@ ruby-native-package-installer
 ruby-net-ftp
 ruby-net-http-persistent
 ruby-net-http
+ruby-net-imap
 ruby-net-pop
 ruby-net-smtp
 ruby-netrc
@@ -4915,6 +4923,7 @@ ruby-pry-byebug
 ruby-pry
 ruby-psych
 ruby-ptools
+ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
 ruby-qed

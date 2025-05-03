@@ -2,7 +2,6 @@
 accountsservice
 adwaita-fonts
 alacritty
-alsa-ucm-conf
 alsa-utils
 amule
 anubis
@@ -635,17 +634,12 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiohttp
 python-anytree
-python-awscrt
-python-cramjam
 python-ipykernel
-python-lazy-object-proxy
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-typing_extensions
 qastools
 qbittorrent
 qbittorrent-nox
@@ -760,10 +754,7 @@ rocsparse
 rrdtool
 rspamd
 rtkit
-ruby-addressable
 ruby-bake-modernize
-ruby-net-imap
-ruby-public_suffix
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem

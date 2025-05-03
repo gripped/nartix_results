@@ -6,7 +6,6 @@ ecrire
 efl
 ephoto
 evisum
-fastfetch
 featherpad
 firefox
 freecell-solver
