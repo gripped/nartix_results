@@ -2063,6 +2063,7 @@ libxml++-docs
 libxmlplusplus2.6
 libxml++2.6-docs
 libxmlrpc
+libxmp
 libxmu
 libxp
 libxpm
@@ -2391,13 +2392,13 @@ networkmanager-qt5
 newsboat
 nftables
 nginx
-nginx-src
 nginx-mod-geoip
 nginx-mod-image-filter
 nginx-mod-mail
 nginx-mod-perl
 nginx-mod-stream
 nginx-mod-xslt
+nginx-src
 ngspice
 ninja
 nitrokey-udev-rules
@@ -2501,6 +2502,7 @@ openh264
 openimagedenoise
 openimageio
 openipmi
+openjade
 openjpeg2
 openlibm
 openmp
@@ -2513,6 +2515,7 @@ openscenegraph
 openshadinglanguage
 opensips
 openslide
+opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
@@ -3686,7 +3689,6 @@ python-localzone
 python-locket
 python-lockfile
 python-logbook
-python-loguru
 python-logutils
 python-looseversion
 python-lsp-black
@@ -4835,6 +4837,7 @@ ruby-kpeg
 ruby-kramdown-parser-gfm
 ruby-kramdown
 ruby-language_server-protocol
+ruby-launchy
 ruby-lemon
 ruby-leto
 ruby-lint_roller
@@ -5514,6 +5517,7 @@ uget
 uglify-js
 uhttpmock
 umbrello
+umurmur
 unarchiver
 unclutter
 unibilium

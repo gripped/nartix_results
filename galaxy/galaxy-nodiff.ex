@@ -142,6 +142,7 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
+libtg_owt
 libvarlink
 libwnck
 libxfce4util

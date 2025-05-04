@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,6 +20,7 @@
+   ruby-bundler
+   ruby-minitest
+   ruby-rake
++  ruby-public_suffix
+ )
+ options=('!emptydirs')
+ source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")

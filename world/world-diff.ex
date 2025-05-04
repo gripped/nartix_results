@@ -528,11 +528,9 @@ onionshare
 open-iscsi
 opencollada
 opendht
-openjade
 openmpi
 openmpi-docs
 openresolv
-opensmtpd-filter-dkimsign
 opensmtpd
 opensnitch
 opensubdiv
@@ -636,6 +634,7 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
+python-loguru
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -830,7 +829,6 @@ udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
 umockdev
-umurmur
 unbound
 unoconv
 upower

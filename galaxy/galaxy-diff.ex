@@ -17,7 +17,6 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libtg_owt
 libxfce4ui
 light
 ly
