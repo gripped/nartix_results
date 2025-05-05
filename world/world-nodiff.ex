@@ -424,6 +424,8 @@ debootstrap
 decibels
 default-cursors
 dejagnu
+deluge
+deluge-gtk
 desktop-file-utils
 dev86
 devhelp
@@ -4263,7 +4265,6 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
-python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -5704,7 +5705,6 @@ xfce4-datetime-plugin
 xfwm4-themes
 xinetd
 xkeyboard-config
-xl2tpd
 xmldiff
 xmlsec
 xmlstarlet

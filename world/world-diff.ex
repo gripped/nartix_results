@@ -90,8 +90,6 @@ cups
 libcups
 dbus-broker
 ddcutil
-deluge
-deluge-gtk
 dhcpcd
 dns-over-https
 docker
@@ -639,6 +637,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-sphinx-hawkmoth
 qastools
 qbittorrent
 qbittorrent-nox
@@ -937,6 +936,7 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
+xl2tpd
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

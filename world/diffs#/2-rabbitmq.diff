@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   rabbitmqadmin
- )
- pkgver=4.1.0
--pkgrel=3
-+pkgrel=2
- pkgdesc='Highly reliable and performant enterprise messaging implementation of AMQP written in Erlang/OTP'
- url='https://rabbitmq.com'
- arch=('any')
 @@ -33,7 +33,7 @@
    'rebar3'
    'rsync'
@@ -18,11 +9,13 @@
    'unzip'
    'util-linux'
    'xmlto'
-@@ -42,7 +42,6 @@
+@@ -41,8 +41,7 @@
+ )
  _commit=293a4f665ac59c6d53732a18340a76e69c257ea8
  source=(
-   "git+https://github.com/rabbitmq/rabbitmq-server.git#commit=${_commit}?signed"
+-  "git+https://github.com/rabbitmq/rabbitmq-server.git#commit=${_commit}?signed"
 -  rabbitmq-customize-systemd-service.patch
++  "git+https://github.com/rabbitmq/rabbitmq-server.git#commit=${_commit}"
    rabbitmq-devendor-rebar3.patch
    rabbitmq-env.conf
    rabbitmq.sysusers
@@ -42,12 +35,7 @@
    patch -p1 < ../rabbitmq-devendor-rebar3.patch
  }
  
-@@ -167,11 +164,10 @@
-     rabbitmqctl
-     vmware-rabbitmq
-   )
--  for script in "${scripts[@]}"; do
-+  for script in ${scripts}; do
+@@ -171,7 +168,6 @@
      ln -vs /usr/lib/rabbitmq/bin/rabbitmq-script-wrapper "${pkgdir}/usr/bin/${script}"
    done
  
