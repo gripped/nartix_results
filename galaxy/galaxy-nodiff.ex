@@ -68,6 +68,7 @@ doublecmd-qt6
 elementary-icon-theme
 engrampa
 eom
+esbuild
 exo
 ext4magic
 fastfetch

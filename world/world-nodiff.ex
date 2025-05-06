@@ -2521,6 +2521,7 @@ opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
+opensubdiv
 opentimelineio
 openucx
 openvdb
@@ -2565,7 +2566,6 @@ pangomm-docs
 papers
 papers-lib-docs
 papirus-icon-theme
-epapirus-icon-theme
 paprefs
 par2cmdline
 parallel
@@ -3691,6 +3691,7 @@ python-localzone
 python-locket
 python-lockfile
 python-logbook
+python-loguru
 python-logutils
 python-looseversion
 python-lsp-black
@@ -4265,6 +4266,7 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
+python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja

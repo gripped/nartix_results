@@ -531,7 +531,6 @@ openmpi-docs
 openresolv
 opensmtpd
 opensnitch
-opensubdiv
 openvpn
 ostree
 packagekit
@@ -632,12 +631,10 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
-python-loguru
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-sphinx-hawkmoth
 qastools
 qbittorrent
 qbittorrent-nox

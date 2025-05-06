@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  
  pkgname=blender
--pkgver=4.4.1
+-pkgver=4.4.3
+-pkgrel=1
 +pkgver=4.3.2
- pkgrel=2
++pkgrel=2
  epoch=17
  pkgdesc="A fully integrated 3D graphics creation suite"
+ arch=('x86_64')
 @@ -101,7 +101,6 @@
    'ninja'
    'subversion'
@@ -28,7 +30,7 @@
 +        ffmpeg-7-1.patch
 +        ffmpeg-7-2.patch
          hiprt-lib-path.patch)
--sha512sums=('aaa6a124dd2b66a8fb3919580d4c5cec8a14c1c4294ab50570e50649f8e93f2c78894514e0606251f99a5194d51ca15e85d71471dcc3c240a66e7373168e7fba'
+-sha512sums=('e24f3ab3b02a3d1b89f0db55ba51fda4e9108a51971692fde52bf371714dd3f79f8878cbc6df159b09b074068377941e2da79b4e049c2b39144ae7731cb2c137'
 -            '43cc5f388581698a68ad611222fcf48445441fc58685259beacb4e6de62c86db6adb7d255f1781bbb1cacf3eade4a6745ddcc519dfed3f776bddcbe1e3ee82d9'
 +sha512sums=('c19e26326cebd8afe4f8c6ca2bbeed15092c53a0bfceec5b6ac226fe2ebd48e701830c840b8e44a6142da95bbf6ddbe9da93aa1afc5f1d379848a38bd06d1f93'
 +            '88be713847bca183f78efd5dccb049e1d40e366b48bfdfb5ef781832f235dedaae84a109b04ce3c2b7d379c38e49daa340e8cd1f1a87e2ee4929e489b5d10dc3'
