@@ -1,20 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,12 @@
+@@ -1,6 +1,11 @@
 +
-+_ver=6.14.4
++_ver=6.14.5
 +_rel=1
 +_arch=arch${_rel}
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
--pkgver=6.14.4.arch1
--pkgrel=2
+-pkgver=6.14.5.arch1
 +pkgver=${_ver}.${_artix}
-+pkgrel=1
+ pkgrel=1
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
- arch=(x86_64)
 @@ -30,10 +35,10 @@
    !debug
    !strip
@@ -31,18 +29,18 @@
  )
 @@ -46,14 +51,14 @@
              'SKIP'
-             'e39c50dc9d58d817f3d27b6269f007624d69a62124e1fc4f82e93dbb1163dba9'
+             '0b49a5f7b6c24e1d80aa09150a2c9f59834bc6777cb7e60c5851b26f461acdf8'
              'SKIP'
--            '869860f66c2cb1d278f08a1d4bb54d247771e9d56a92f2b95ced7ffe70d5da64')
-+            '8e6cac385668d048d1b52cc6d5b8a7a1c09f316f3dbd8fd32704c57c877a6d72')
- b2sums=('8f5f44fa6f7b2a964a3fb14afd10dc0c6cc5ec73eb3b6dba24d35664f7083546b70eff7a3d5a9b3ba3c8b84785518c6df91aff0ed948cd538ff0b3b0484fd613'
+-            '6390d797200f74c0869dddfe357d304c1850f368b2919e4661c0fb8ce35b6fc0')
++            'f1e7a5d4590ce6444e411c839de2d7f113c2414f2e071c838232ddb0034a562c')
+ b2sums=('872d0b8817c7e02b5e826238c3f548488d26c1d50bd334420ac2f4feb0cf5e1f11cac7f666982b2ccdc3c816aec428e4d57139080bb0510247e9631796bdab0a'
          'SKIP'
-         '9baa56eb0df29c3266bb1979c1924cd283ff9cab52d11407226b5967dd603983fb5a16ffca0e4938784e95272e688ad37550d78551aba193947eda13c1ffa281'
+         '441d8555e0a7331589800632f2dd66457f008d99be96f2a8fdf7a17a2858f9f8fa659e23d9fbdcc2de9cfd720c909d4795156d91206951ddeb316ad9deb3b1d5'
          'SKIP'
--        '63b72509117c51ea3e6e7a186bb7419716175990bb458bbf51c047bc86b06e0a0a2daee8ddf8c9e2d6c981db83ff733813411a3a3d3b86981d574e950ef3ba50')
+-        '8abb977b0d2bed965ecd5b884eef1bc592d467b32dca3fddb8f238076df0fb273d62d8776e19368206e64ffcea320eba0d09613297954095032a5d5d5111886a')
 -
 -export KBUILD_BUILD_HOST=archlinux
-+        'f31da88b5685b5037993aeabe1da91a45925887f3b7ce0ea4ef66fa1c561763077beb273a8f65a3bbfbb2acc06e228863daf44b970fdb55db36d8219072767c8')
++        '6534b69e0ff2d6271d6ff50e709c4d2a066d6b177429cef64ac6b181253c932da0f330e90cab93de8c09d1204671c8232ce17c7ed30d8c67a4e4371c51bbb7dc')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase

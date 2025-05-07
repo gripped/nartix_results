@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,15 +31,16 @@
+@@ -26,15 +26,16 @@
  
  build() {
          local _meson_options=(
@@ -14,8 +14,8 @@
 -                -Dsystemd=true
          )
  
--        arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
-+        artix-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
+-        arch-meson 'PackageKit' build "${_meson_options[@]}"
++        artix-meson 'PackageKit' build "${_meson_options[@]}"
  
          meson compile -C build
  }
@@ -27,8 +27,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,13 +4,14 @@
- }
+@@ -1,12 +1,13 @@
  build() {
  local _meson_options=(
 +-Dsystemd=false
@@ -40,7 +39,7 @@
  -Dpackaging_backend=alpm
 --Dsystemd=true
  )
--arch-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
-+artix-meson "PackageKit-$pkgver" build "${_meson_options[@]}"
+-arch-meson 'PackageKit' build "${_meson_options[@]}"
++artix-meson 'PackageKit' build "${_meson_options[@]}"
  meson compile -C build
  }

@@ -1160,6 +1160,7 @@ judy
 juk
 junit
 jupyter-console
+jupyter-nbclassic
 jupyter-nbclient
 jupyter-nbconvert
 jupyter-nbformat

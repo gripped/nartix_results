@@ -9,7 +9,7 @@
  optdepends=('qrencode: for displaying QR code after DPP is started')
  source=(https://www.kernel.org/pub/linux/network/wireless/iwd-${pkgver}.tar{.xz,.sign}
          0001-use-network-group-for-unprivileged-access.diff)
-@@ -35,6 +35,7 @@
+@@ -36,6 +36,7 @@
  	--enable-wired \
  	--enable-ofono \
  	--enable-hwsim \

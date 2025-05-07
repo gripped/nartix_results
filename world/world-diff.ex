@@ -288,7 +288,6 @@ openjdk8-src
 openjdk8-doc
 js78
 julia
-jupyter-nbclassic
 jupyter-server-ydoc
 kcoreaddons
 kgamma

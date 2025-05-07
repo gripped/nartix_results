@@ -2,6 +2,7 @@
 0ad
 ada
 alacritty
+anubis
 atool
 atril
 audacious-plugins
