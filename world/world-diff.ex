@@ -240,7 +240,6 @@ haveged
 hexchat
 hidapi
 hipify-clang
-hitori
 hwloc
 hyprland
 i2pd
@@ -665,6 +664,7 @@ qemu-hw-display--{gl
 qemu-hw-display-pci
 qemu-hw-display-pci-gl
 qemu-hw-s390x-virtio-gpu-ccw
+qemu-hw-uefi-vars
 qemu-hw-usb-host
 qemu-hw-usb-redirect
 qemu-hw-usb-smartcard

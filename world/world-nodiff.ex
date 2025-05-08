@@ -1005,6 +1005,7 @@ hiprt
 hipsolver
 hipsparse
 hiredis
+hitori
 hivex
 hostapd
 hotdoc
