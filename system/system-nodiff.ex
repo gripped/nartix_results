@@ -133,6 +133,7 @@ man-pages
 mkinitcpio-busybox
 mkinitcpio-nfs-utils
 mlocate
+mpdecimal
 mpfr
 nano
 ncurses

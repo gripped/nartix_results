@@ -91,6 +91,8 @@ libcups
 dbus-broker
 ddcutil
 dhcpcd
+django
+python-django
 dns-over-https
 docker
 dolphin-emu
@@ -633,6 +635,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-setuptools
 qastools
 qbittorrent
 qbittorrent-nox

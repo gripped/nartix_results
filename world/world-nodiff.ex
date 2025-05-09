@@ -444,8 +444,6 @@ discover
 distcc
 distro-info-data
 distro-info
-django
-python-django
 djvulibre
 dkms
 dleyna
@@ -4229,7 +4227,6 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
-python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely

@@ -475,6 +475,7 @@ prosody-openrc
 prosody-runit
 prosody-s6
 python-dbus
+python-interpreters-pep-734
 python-pytz-deprecation-shim
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
