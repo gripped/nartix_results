@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zxing-cpp
+ pkgver=2.3.0
+-pkgrel=4
++pkgrel=5
+ pkgdesc='An open-source, multi-format linear/matrix barcode image processing library implemented in C++'
+ arch=(x86_64)
+ url='https://github.com/zxing-cpp/zxing-cpp'
+@@ -23,7 +23,7 @@
+   cmake -B build -S $pkgname \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=None \
+-    -DZXING_EXAMPLES=OFF \
++    -DZXING_EXAMPLES=ON \
+     -DZXING_UNIT_TESTS=ON \
+     -DZXING_C_API=ON
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ cmake -B build -S $pkgname \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=None \
+--DZXING_EXAMPLES=OFF \
++-DZXING_EXAMPLES=ON \
+ -DZXING_UNIT_TESTS=ON \
+ -DZXING_C_API=ON
+ cmake --build build

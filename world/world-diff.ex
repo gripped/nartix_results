@@ -33,8 +33,6 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
-breeze
-breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -326,6 +324,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libdatachannel
 libe-book
 libei
 libei-docs
@@ -521,6 +520,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+obs-studio
 onboard
 onionshare
 open-iscsi
@@ -601,7 +601,6 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
-plasma-vault
 plasma-workspace
 plocate
 pluma
@@ -636,6 +635,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-setuptools
+python-validators
 qastools
 qbittorrent
 qbittorrent-nox
@@ -950,3 +950,4 @@ yubikey-personalization
 zathura-pdf-mupdf
 zeromq
 znc
+zxing-cpp

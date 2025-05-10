@@ -24,11 +24,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,6 +6,6 @@
- libgobject-2.0.so
- libudev.so
- meson
--systemd
+@@ -0,0 +1,11 @@
++git
++glib2
++gobject-introspection
++gtk-doc
++libglib-2.0.so
++libgobject-2.0.so
++libudev.so
++meson
 +udev
- umockdev
- vala
++umockdev
++vala

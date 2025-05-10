@@ -243,6 +243,8 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
+breeze
+breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -1626,7 +1628,6 @@ libcue
 libcupsfilters
 libcutl
 libdaemon
-libdatachannel
 libdatrie
 libdazzle
 libdbi
@@ -2444,7 +2445,6 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
-obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -2962,6 +2962,7 @@ plasma-pass
 plasma-sdk
 plasma-systemmonitor
 plasma-thunderbolt
+plasma-vault
 plasma-wayland-protocols
 plasma-welcome
 plasma-workspace-wallpapers
@@ -4411,7 +4412,6 @@ python-userpath
 python-uvloop
 python-validate-email
 python-validate-pyproject
-python-validators
 python-vcrpy
 python-versioneer
 python-versioningit
@@ -5830,5 +5830,4 @@ zsh
 zsh-doc
 zug
 zvbi
-zxing-cpp
 zziplib

@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,7 @@
- makedepends=(asciidoctor cmake qt5-tools)
- optdepends=('xclip: keepassxc-cli clipboard support under X server'
-             'wl-clipboard: keepassxc-cli clipboard support under Wayland')
--checkdepends=(xclip xorg-server-xvfb xclip)
-+checkdepends=(xclip xorg-server-xvfb)
- provides=(org.freedesktop.secrets)
- source=(https://github.com/keepassxreboot/keepassxc/releases/download/$pkgver/keepassxc-$pkgver-src.tar.xz{,.sig}
-         TestEntryModel.patch)
+@@ -1,7 +1,7 @@
+ 
+ pkgname=keepassxc
+ pkgver=2.7.10
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Cross-platform community-driven port of Keepass password manager"
+ arch=(x86_64)
+ url="https://keepassxc.org/"
 @@ -42,7 +42,7 @@
  }
  
