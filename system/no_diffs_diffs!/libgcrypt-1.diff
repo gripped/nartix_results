@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ 
+ pkgname=libgcrypt
+-pkgver=1.11.0
+-pkgrel=3
++pkgver=1.11.1
++pkgrel=1
+ pkgdesc="General purpose cryptographic library based on the code from GnuPG"
+ arch=(x86_64)
+ url="https://www.gnupg.org"
+@@ -19,7 +19,7 @@
+ depends=('libgpg-error' 'glibc')
+ options=('!emptydirs')
+ source=(https://gnupg.org/ftp/gcrypt/${pkgname}/${pkgname}-${pkgver}.tar.bz2{,.sig})
+-sha256sums=('09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c'
++sha256sums=('24e91c9123a46c54e8371f3a3a2502f1198f2893fbfbf59af95bc1c21499b00e'
+             'SKIP')
+ validpgpkeys=('6DAA6E64A76D2840571B4902528897B826403ADA') # "Werner Koch (dist signing 2020)"
+ 

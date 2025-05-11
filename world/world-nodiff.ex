@@ -698,8 +698,6 @@ gcab
 gcc13
 gcc14
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -753,7 +751,6 @@ glibmm-docs
 glm
 gloox
 glpk
-glslang
 glu
 glusterfs
 glycin
@@ -3029,7 +3026,6 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
-prometheus
 prosody
 protobuf-c
 protobuf
@@ -3217,7 +3213,6 @@ python-blessed
 python-blinker
 python-blosc
 python-blosc2
-python-boolean.py
 python-boto
 python-boto3
 python-botocore
@@ -3681,7 +3676,6 @@ python-libsass
 python-libtmux
 python-libusb1
 python-libvcs
-python-license-expression
 python-linetable
 python-linkify-it-py
 python-littleutils
@@ -5602,9 +5596,6 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
-vulkan-docs
-vulkan-html-docs
-vulkan-headers
 vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries

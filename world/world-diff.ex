@@ -155,11 +155,14 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
 ghc-filesystem
 gjs
+glslang
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common
@@ -617,6 +620,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+prometheus
 proxytunnel
 pulseaudio
 libpulse
@@ -629,7 +633,9 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-boolean.py
 python-ipykernel
+python-license-expression
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -861,6 +867,9 @@ vte4
 vte4-utils
 vte-docs
 vtk
+vulkan-docs
+vulkan-html-docs
+vulkan-headers
 wasi-compiler-rt
 waybar
 webkit2gtk-4.1
