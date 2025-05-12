@@ -86,6 +86,7 @@ cppcheck
 crun
 cups
 libcups
+cython
 dbus-broker
 ddcutil
 dhcpcd
@@ -534,6 +535,7 @@ openmpi-docs
 openresolv
 opensmtpd
 opensnitch
+openucx
 openvpn
 ostree
 packagekit

@@ -136,7 +136,6 @@ mlocate
 mpdecimal
 mpfr
 nano
-ncurses
 net-tools
 nettle
 nilfs-utils

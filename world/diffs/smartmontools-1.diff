@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -1,16 +1,16 @@
+ 
+ pkgname=smartmontools
+ pkgver=7.5
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives'
  url='https://www.smartmontools.org/'
  license=('GPL')
  arch=('x86_64')
@@ -10,7 +16,11 @@
 +makedepends=('udev')
  optdepends=('s-nail: to get mail alerts to work')
  backup=('etc/smartd.conf'
-         'etc/conf.d/smartd')
+-        'etc/conf.d/smartd')
++        )
+ validpgpkeys=('0C9577FD2C4CFCB4B9A599640A30812EFF3AEFF5') # Smartmontools Signing Key (through 2025) <smartmontools-support@listi.jpberlin.de>
+ source=("https://downloads.sourceforge.net/sourceforge/${pkgname}/${pkgname}-${pkgver}.tar.gz"{,.asc}
+         'smartd.conf')
 @@ -27,9 +27,8 @@
      --sysconfdir=/etc \
      --with-drivedbdir \
@@ -23,7 +33,7 @@
      --with-smartdscriptdir=/usr/share/smartmontools \
      --with-smartdplugindir=/usr/share/smartmontools/smartd_warning.d
  
-@@ -39,8 +38,6 @@
+@@ -39,11 +38,8 @@
  package() {
    cd "${srcdir}/${pkgname}-${pkgver}"
  
@@ -32,6 +42,9 @@
  
    make DESTDIR="${pkgdir}" install
  
+   rm -rf "${pkgdir}"/etc/rc.d
+-  install -D -m0644 "${srcdir}"/smartd.conf "${pkgdir}/etc/conf.d/smartd"
+ }
 
 
 ############# Stripped diff below #################

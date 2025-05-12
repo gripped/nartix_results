@@ -672,6 +672,7 @@ v2ray-dinit
 v2ray-openrc
 v2ray-runit
 v2ray-s6
+valkey-openrc
 vault-runit
 veracrypt-openrc
 vertex-themes

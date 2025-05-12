@@ -400,7 +400,6 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
-cython
 cython0
 d-spy
 darkhttpd
@@ -2520,7 +2519,6 @@ opensmtpd-filter-senderscore
 opensp
 opensubdiv
 opentimelineio
-openucx
 openvdb
 openvkl
 openvr
@@ -4797,6 +4795,7 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
+ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
@@ -4973,6 +4972,7 @@ ruby-ruby-progressbar
 ruby-ruby2_keywords
 ruby-ruby_memcheck
 ruby-rubydns
+ruby-rubygems-tasks
 ruby-rubytest-cli
 ruby-rubytest
 ruby-rubyzip

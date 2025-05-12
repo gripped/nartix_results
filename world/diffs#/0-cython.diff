@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=cython
 -pkgver=3.0.12
+-pkgrel=1
 +pkgver=3.1.0
- pkgrel=1
++pkgrel=2
  pkgdesc='C-Extensions for Python'
  arch=(x86_64)
-@@ -15,11 +15,12 @@
+ url='https://cython.org'
+@@ -15,11 +15,17 @@
               python-setuptools
               python-wheel)
  checkdepends=(gdb
@@ -19,6 +21,27 @@
  source=(git+https://github.com/cython/cython#tag=$pkgver)
 -sha256sums=('903f0cde1b595019edd5a49d4f991c1636ff4fe5e72cc9678cb2985c41c00836')
 +sha256sums=('4c16061633cd4c14e4991d08ec243b2340e258e6700faec710170addf6567789')
++
++prepare() {
++  cd cython
++  git cherry-pick -n bcb7c863e734a95a2b185086fb16a78a66205380 # Fix build of sagemath
++}
  
  build() {
    cd cython
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd cython
++git cherry-pick -n bcb7c863e734a95a2b185086fb16a78a66205380 # Fix build of sagemath
++}
+ build() {
+ cd cython
+ python -m build --wheel --no-isolation
