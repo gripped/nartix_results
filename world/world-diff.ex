@@ -12,6 +12,7 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
+arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -254,6 +255,7 @@ iio-sensor-proxy
 intel-metee
 intel-metee-doc
 intel-opencl-clang
+intel-ucode
 intel-undervolt
 interception-tools
 isoimagewriter
@@ -293,6 +295,7 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
+keychain
 kgamma
 kismet
 kitty
@@ -344,6 +347,12 @@ libinput
 libldm
 libmspub
 libnvme
+libportal
+libportal-docs
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-qt6
 libprocps
 libsidplay
 libsidplayfp
@@ -636,6 +645,7 @@ pyqt6
 pysolfc
 python-anytree
 python-boolean.py
+python-fixtures
 python-ipykernel
 python-license-expression
 python-pymupdf
@@ -760,8 +770,10 @@ rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
+ruby-io-event
 ruby-racc
 ruby-regexp_property_values
+ruby-rubyzip
 ruby-sys-filesystem
 samba
 libwbclient
@@ -780,6 +792,8 @@ shairport-sync
 signal-desktop
 smartmontools
 snapper
+snowball
+libstemmer
 solid
 spice-vdagent
 squid
@@ -812,7 +826,6 @@ thunar-media-tags-plugin
 thunar-volman
 thunar
 tigervnc
-timew
 tint2
 tinysparql
 tinysparql-docs

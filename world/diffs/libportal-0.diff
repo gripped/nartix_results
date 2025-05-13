@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+   libportal-qt6
+ )
+ pkgver=0.9.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="GIO-style async APIs for most Flatpak portals"
+ url="https://github.com/flatpak/libportal"
+ arch=(x86_64)
+@@ -43,10 +43,12 @@
+ 
+ prepare() {
+   cd libportal
++
++  git cherry-pick -n 796053d2eebe4532aad6bd3fd80cdf3b197806ec
+ }
+ 
+ build() {
+-  arch-meson libportal build
++  artix-meson libportal build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,8 @@
+ prepare() {
+ cd libportal
++git cherry-pick -n 796053d2eebe4532aad6bd3fd80cdf3b197806ec
+ }
+ build() {
+-arch-meson libportal build
++artix-meson libportal build
+ meson compile -C build
+ }

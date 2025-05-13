@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-fixtures
+ pkgver=4.2.5
+ _commit=1edd6c2bc6cb48cc666eb7d9ffdd182659c2cae0
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Python fixtures for testing / resource management"
+ arch=('any')
+ url="https://github.com/testing-cabal/fixtures"
+@@ -24,12 +24,6 @@
+   sed -n '/^CHANGES/{n;n;n;p;q;}' ChangeLog
+ }
+ 
+-prepare() {
+-  cd ${pkgname#python-}-$_commit
+-  echo '[tool.hatch.build.targets.wheel]' >> pyproject.toml
+-  echo 'exclude = ["fixtures/tests*"]' >> pyproject.toml
+-}
+-
+ build() {
+   cd ${pkgname#python-}-$_commit
+   export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,3 @@
+-prepare() {
+-cd ${pkgname#python-}-$_commit
+-echo '[tool.hatch.build.targets.wheel]' >> pyproject.toml
+-echo 'exclude = ["fixtures/tests*"]' >> pyproject.toml
+-}
+ build() {
+ cd ${pkgname#python-}-$_commit
+ export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver

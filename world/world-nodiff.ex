@@ -101,7 +101,6 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -1094,7 +1093,6 @@ intel-oneapi-mkl
 intel-oneapi-openmp
 intel-oneapi-tbb
 intel-oneapi-tcm
-intel-ucode
 intltool
 inxi
 iperf
@@ -1305,7 +1303,6 @@ kemoticons
 kexec-tools
 keybinder2
 libkeybinder2
-keychain
 keysmith
 keystone
 python-keystone
@@ -1887,12 +1884,6 @@ libplasma
 libplist
 libpng
 libpng12
-libportal
-libportal-docs
-libportal-gtk3
-libportal-gtk4
-libportal-qt5
-libportal-qt6
 libppd
 libproxy
 libproxy-docs
@@ -3449,7 +3440,6 @@ python-fiona
 python-fire
 python-first
 python-fissix
-python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
@@ -4819,7 +4809,6 @@ ruby-ice_nine
 ruby-introspection
 ruby-io-console
 ruby-io-endpoint
-ruby-io-event
 ruby-io-nonblock
 ruby-io-stream
 ruby-io-wait
@@ -4975,7 +4964,6 @@ ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
 ruby-rubytest
-ruby-rubyzip
 ruby-rugged
 ruby-safe_yaml
 ruby-samovar
@@ -5155,8 +5143,6 @@ snappy
 snapshot
 sndio
 snorenotify
-snowball
-libstemmer
 socat
 sof-bin
 sof-firmware
@@ -5441,6 +5427,7 @@ thunderbird
 tidy
 time
 timeshift
+timew
 timezonemap
 tinycdb
 tinycompress
