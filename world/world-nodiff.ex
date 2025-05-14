@@ -471,7 +471,6 @@ docker-compose
 doctest
 docx2txt
 dolphin-plugins
-dolphin
 dontpanic
 dos2unix
 dosbox
@@ -593,7 +592,6 @@ facile
 facter
 fail2ban
 fakechroot
-falkon
 farstream
 fast_float
 fastjar
@@ -721,7 +719,6 @@ getdns
 gflags
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 giflib
 gifski
@@ -1074,8 +1071,6 @@ intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
-intel-media-sdk
-libmfx
 intel-oneapi-common
 intel-oneapi-compiler-dpcpp-cpp-runtime
 "$_pkgname
@@ -1444,7 +1439,6 @@ kpipewire
 kpkpass
 kplotting
 kplotting5
-kpmcore
 kpty
 kpty5
 kpublictransport
@@ -2353,7 +2347,6 @@ namcap
 nanobind
 nanomsg
 nanosvg
-nasm
 nauty
 nawk
 nccl
@@ -3093,7 +3086,6 @@ python-absl
 python-acme
 python-adal
 python-adblock
-python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3107,7 +3099,6 @@ python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
-python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite

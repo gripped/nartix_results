@@ -97,6 +97,7 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
+dolphin
 dotnet-core
 dotnet-host
 dotnet-runtime
@@ -127,6 +128,7 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
+falkon
 fastfetch
 fceux
 fcgiwrap
@@ -163,6 +165,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghostscript
 gjs
 glslang
 gnome-bluetooth-3.0
@@ -252,6 +255,8 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-media-sdk
+libmfx
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -304,6 +309,7 @@ kitty-shell-integration
 knockd
 knot
 kopeninghours
+kpmcore
 ksnip
 ksystemlog
 kwin
@@ -496,6 +502,7 @@ mutter
 mutter-docs
 mutter45
 mutter46
+nasm
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
@@ -643,6 +650,8 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiobotocore
+python-aiorpcx
 python-anytree
 python-boolean.py
 python-fixtures

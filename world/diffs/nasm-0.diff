@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=nasm
+ pkgver=2.16.03
+-pkgrel=1
++pkgrel=2
+ pkgdesc='80x86 assembler designed for portability and modularity'
+ url='https://www.nasm.us'
+ arch=('x86_64')
+-license=('BSD')
++license=('BSD-2-Clause')
+ depends=('glibc')
+ makedepends=('perl-font-ttf' 'perl-sort-versions' 'fontconfig' 'adobe-source-sans-pro-fonts'
+              'ttf-liberation' 'ghostscript' 'xmlto' 'asciidoc' 'diffutils')
+@@ -15,8 +15,12 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
+-  ./configure --prefix=/usr
+-  make
++  ./configure \
++    --prefix=/usr \
++    --docdir=/usr/share/doc/${pkgname} \
++    --htmldir=/usr/share/doc/${pkgname}/html
++
++  make all doc
+ }
+ 
+ check() {
+@@ -26,7 +30,7 @@
+ 
+ package() {
+   cd ${pkgname}-${pkgver}
+-  make DESTDIR="${pkgdir}" install
++  make DESTDIR="${pkgdir}" install install_doc
+   install -Dm 644 LICENSE -t "${pkgdir}"/usr/share/licenses/nasm
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,8 @@
+ build() {
+ cd ${pkgname}-${pkgver}
+-./configure --prefix=/usr
+-make
++./configure \
++--prefix=/usr \
++--docdir=/usr/share/doc/${pkgname} \
++--htmldir=/usr/share/doc/${pkgname}/html
++make all doc
+ }
