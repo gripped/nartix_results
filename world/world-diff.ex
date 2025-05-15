@@ -144,6 +144,7 @@ font-manager
 fprintd
 freerdp
 freerdp2
+fribidi
 frugally-deep
 fwupd-efi
 fwupd
@@ -247,7 +248,7 @@ haproxy
 haveged
 hexchat
 hidapi
-hipify-clang
+hsa-rocr
 hwloc
 hyprland
 i2pd
@@ -551,6 +552,7 @@ openmpi-docs
 openresolv
 opensmtpd
 opensnitch
+openucc
 openucx
 openvpn
 ostree
@@ -639,6 +641,9 @@ powerdevil
 powerdns-recursor
 powerdns
 prometheus
+protobuf
+python-protobuf
+ruby-google-protobuf
 proxytunnel
 pulseaudio
 libpulse
@@ -657,6 +662,7 @@ python-boolean.py
 python-fixtures
 python-ipykernel
 python-license-expression
+python-peewee
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -755,6 +761,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel
@@ -763,7 +770,6 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
-rccl
 rdma-core
 redis
 redshift
@@ -773,6 +779,10 @@ ripgrep-all
 ristretto
 rocalution
 rocfft
+rocm-cmake
+rocm-llvm
+rocm-device-libs
+comgr
 rocrand
 rocsparse
 rrdtool
@@ -912,6 +922,7 @@ wlroots
 wlroots0.15
 wlroots0.16
 wlroots0.17
+woff2
 wpewebkit
 wpewebkit-docs
 xdg-desktop-portal-gnome

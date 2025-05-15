@@ -147,9 +147,6 @@ libxfce4util
 libxfce4windowing
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
-linux-hardened
-linux-hardened-headers
-linux-hardened-docs
 linux-rt-lts
 linux-rt-lts-headers
 linux-rt-lts-docs
@@ -520,7 +517,6 @@ xfce4-cpufreq-plugin
 xfce4-cpugraph-plugin
 xfce4-datetime-plugin
 xfce4-dev-tools
-xfce4-dict
 xfce4-diskperf-plugin
 xfce4-eyes-plugin
 xfce4-fsguard-plugin

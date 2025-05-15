@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=prometheus
 -pkgver=3.2.1
+-pkgrel=1
 +pkgver=3.3.1
- pkgrel=1
++pkgrel=2
  
  pkgdesc='An open-source systems monitoring and alerting toolkit'
+ url='https://prometheus.io'
 @@ -12,24 +12,17 @@
  makedepends=('go' 'git' 'npm' 'nodejs' 'yamllint' 'typescript' 'yarn')
  
@@ -20,7 +22,7 @@
          prometheus.sysusers
 -        prometheus.conf
 -        ignore_gzip_timestamps.patch)
-+	)
++        )
  
 -sha256sums=('9e6308f48077b93daed1a39650784fc02805a518632b9c5b00e9c778ef88eac5'
 -            'a6deb1f678960ee9b406e4458364c5082db11f93fae6286940aacd3e3933beb7'
@@ -37,7 +39,15 @@
  }
  
  build() {
-@@ -70,13 +63,11 @@
+@@ -57,6 +50,7 @@
+     -buildmode=pie \
+     -mod=readonly \
+     -modcacherw \
++    -tags stringlabels \
+     -ldflags "-compressdwarf=false -linkmode external $LDFLAGS" \
+     ./cmd/prometheus
+   go build \
+@@ -70,13 +64,11 @@
  check() {
    cd prometheus-$pkgver
  
@@ -67,3 +77,11 @@
  }
  build() {
  cd prometheus-$pkgver
+@@ -22,6 +21,7 @@
+ -buildmode=pie \
+ -mod=readonly \
+ -modcacherw \
++-tags stringlabels \
+ -ldflags "-compressdwarf=false -linkmode external $LDFLAGS" \
+ ./cmd/prometheus
+ go build \

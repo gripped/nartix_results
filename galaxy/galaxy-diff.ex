@@ -23,6 +23,9 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
+linux-hardened
+linux-hardened-headers
+linux-hardened-docs
 ly
 mate-control-center
 mate-screensaver
@@ -52,4 +55,5 @@ wireshark
 wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
+xfce4-dict
 xfce4-notifyd

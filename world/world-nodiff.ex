@@ -676,7 +676,6 @@ freetype2
 freetype2-demos
 freetype2-docs
 frei0r-plugins
-fribidi
 fstrm
 ftgl
 ftjam
@@ -992,6 +991,7 @@ hip-runtime-nvidia
 hipblas
 hipcub
 hipfft
+hipify-clang
 hiprand
 hiprt
 hipsolver
@@ -1002,7 +1002,6 @@ hivex
 hostapd
 hotdoc
 hplip
-hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -3010,9 +3009,6 @@ projectm-sdl
 projectm-pulseaudio
 prosody
 protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
@@ -3835,7 +3831,6 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
-python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -4572,7 +4567,6 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4603,6 +4597,7 @@ rasqal
 rav1e
 rawtherapee
 razor
+rccl
 rclone
 rdfind
 re2
@@ -4641,7 +4636,6 @@ robin-map
 roc-toolkit
 rocblas
 rocm-clang-ocl
-rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4651,9 +4645,6 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
-rocm-device-libs
-comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
@@ -5609,7 +5600,6 @@ wireshark
 wireshark-cli
 wireshark-qt
 wl-clipboard
-woff2
 wolfssl
 words
 wpebackend-fdo
@@ -5782,6 +5772,8 @@ zeroc-ice-java
 zfp
 zig
 zimg
+zint
+zint-qt
 zip
 ziproxy
 zita-alsa-pcmi
