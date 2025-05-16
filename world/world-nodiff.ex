@@ -199,7 +199,6 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
-bear
 bearssl
 beep
 bemenu
@@ -2397,7 +2396,6 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2469,11 +2467,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3165,7 +3158,6 @@ python-axolotl
 python-babel
 python-backcall
 python-backrefs
-python-bcrypt
 python-beaker
 python-beautifulsoup4
 python-behave
@@ -3709,7 +3701,6 @@ python-mocket
 python-mongoengine
 python-mongomock
 python-monotonic
-python-more-itertools
 python-moreorless
 python-moto
 python-motor
@@ -5206,7 +5197,6 @@ swig
 swtpm
 sxhkd
 sxiv
-syncthing
 syndication
 syndication5
 syntax-highlighting

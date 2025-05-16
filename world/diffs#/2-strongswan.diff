@@ -1,17 +1,55 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=strongswan
+-pkgver=6.0.0
+-pkgrel=2
++pkgver=6.0.1
++pkgrel=1
+ pkgdesc='Open source IPsec implementation'
  url='https://www.strongswan.org'
  license=('GPL-2.0-only')
  arch=('x86_64')
 -makedepends=('libnm' 'systemd' 'python' 'ruby' 'mariadb' 'python-setuptools')
 -depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'systemd-libs' 'pam')
-+makedepends=('libnm' 'python' 'ruby' 'mariadb' 'python-setuptools')
++makedepends=('libnm' 'ruby' 'ruby-rdoc' 'mariadb' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
 +depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'pam')
  optdepends=('libnm: for networkmanager support'
    'mariadb: MySQL support'
    'ruby: Ruby support'
-@@ -66,7 +66,6 @@
+@@ -19,22 +19,21 @@
+   etc/ipsec.secrets
+   etc/swanctl/swanctl.conf
+   etc/strongswan.conf
+-  etc/strongswan.d/{charon-logging.conf,charon.conf,pki.conf,pool.conf,scepclient.conf,starter.conf,swanctl.conf}
+-  etc/strongswan.d/charon/{aesni.conf,attr-sql.conf,attr.conf,bliss.conf,chapoly.conf,cmac.conf,connmark.conf,constraints.conf,curl.conf,des.conf,dhcp.conf,dnskey.conf,eap-aka-3gpp2.conf,eap-aka.conf,eap-gtc.conf,eap-identity.conf,eap-md5.conf,eap-mschapv2.conf,eap-radius.conf,eap-sim-file.conf,eap-sim.conf,eap-simaka-pseudonym.conf,eap-simaka-reauth.conf,eap-tls.conf,ext-auth.conf,farp.conf,fips-prf.conf,forecast.conf,gmp.conf,ha.conf,hmac.conf,kernel-netlink.conf,md5.conf,mgf1.conf,nonce.conf,newhope.conf,ntru.conf,openssl.conf,pem.conf,pgp.conf,pkcs1.conf,pkcs12.conf,pkcs7.conf,pkcs8.conf,pubkey.conf,random.conf,rc2.conf,resolve.conf,revocation.conf,sha1.conf,sha2.conf,sha3.conf,socket-default.conf,sql.conf,sqlite.conf,sshkey.conf,stroke.conf,updown.conf,vici.conf,x509.conf,xauth-eap.conf,xauth-generic.conf,xcbc.conf,unity.conf,curve25519.conf,bypass-lan.conf})
+-source=("https://download.strongswan.org/strongswan-${pkgver}.tar.bz2"{,.sig}
+-  'configure_ac.patch')
++  etc/strongswan.d/{charon-logging.conf,charon-nm.conf,charon-systemd.conf,charon.conf,pki.conf,pool.conf,starter.conf,swanctl.conf}
++  etc/strongswan.d/charon/{aesni.conf,agent.conf,attr-sql.conf,attr.conf,bypass-lan.conf,chapoly.conf,cmac.conf,connmark.conf,constraints.conf,counters.conf,curl.conf,dhcp.conf,dnscert.conf,dnskey.conf,drbg.conf,eap-aka-3gpp2.conf,eap-aka.conf,eap-dynamic.conf,eap-gtc.conf,eap-identity.conf,eap-md5.conf,eap-mschapv2.conf,eap-peap.conf,eap-radius.conf,eap-sim-file.conf,eap-sim.conf,eap-simaka-pseudonym.conf,eap-simaka-reauth.conf,eap-tls.conf,eap-ttls.conf,ext-auth.conf,farp.conf,fips-prf.conf,forecast.conf,gmp.conf,ha.conf,kdf.conf,kernel-netlink.conf,ldap.conf,mgf1.conf,ml.conf,mysql.conf,nonce.conf,openssl.conf,pem.conf,pgp.conf,pkcs1.conf,pkcs11.conf,pkcs7.conf,pkcs8.conf,pubkey.conf,radattr.conf,random.conf,resolve.conf,revocation.conf,sha3.conf,socket-default.conf,sql.conf,sqlite.conf,sshkey.conf,stroke.conf,unity.conf,updown.conf,vici.conf,x509.conf,xauth-eap.conf,xauth-generic.conf,xauth-noauth.conf,xauth-pam.conf,xcbc.conf})
++source=("https://download.strongswan.org/strongswan-${pkgver}.tar.bz2"{,.sig})
+ validpgpkeys=("948F158A4E76A27BF3D07532DF42C170B34DBA77")
+-sha512sums=('ea3ffe481db1b161faf9c57a433950bb53b83f458f06c1c535c885d6f7e75fa587ab8714661f8daedaf95714fae9e84ce738173dd9964c2aba55264650f758fa'
+-            'SKIP'
+-            '645f6e3c9df8634ac06cbafc314ad46ede45b5412140c20236d25187a7405a5a941f74c52ca3ee3cc3a8e97d7af88b22209cae854d6e99f0ad9c489db78026c4')
++sha512sums=('86aa89242fd5a5569c3e8b73ea9a2b613be1d1674a4384f05ec7e74669cec2ed0b82c0900f797dd374b4c5a165385a4723dc674b84b28498a835a4c8d42a2eff'
++            'SKIP')
+ 
+ prepare() {
+   cd ${pkgname}-${pkgver}
+-  patch -Np1 -i ../configure_ac.patch
+-  autoreconf -fiv
++  sed -i 's/$(PYTHON) -m build/$(PYTHON) -m build --wheel --no-isolation/' src/libcharon/plugins/vici/python/Makefile.am
++  autoreconf -fiv -I /usr/share/gettext/m4
+ }
+ 
+ build() {
++  CFLAGS+=' -std=gnu17'
+   cd ${pkgname}-${pkgver}
+   ./configure --prefix=/usr \
+     --sbindir=/usr/bin \
+@@ -66,7 +65,6 @@
      --enable-ha \
      --enable-vici \
      --enable-swanctl \
@@ -19,15 +57,55 @@
      --enable-ext-auth \
      --enable-mysql \
      --enable-ldap \
+@@ -84,23 +82,27 @@
+     --enable-chapoly \
+     --enable-unity \
+     --with-capabilities=libcap \
+-    --enable-newhope \
+-    --enable-ntru \
+     --enable-mgf1 \
+     --enable-sha3 \
+-    --enable-bliss \
+     --enable-dnscert \
+     --enable-nm \
+     --enable-agent \
+     --enable-bypass-lan \
+     --enable-ruby-gems \
+-    --enable-python-eggs \
++    --enable-ruby-gems-install \
++    --enable-python-wheels \
+     --enable-ml \
+     --enable-stroke
+   make
+ }
+ 
+ package() {
++  local _gemdir="$(gem env gemdir)"
++
+   cd ${pkgname}-${pkgver}
+   make DESTDIR="${pkgdir}" install
++
++  python -m installer --destdir="$pkgdir" src/libcharon/plugins/vici/python/dist/*.whl
++
++  rm -r "${pkgdir}"/${_gemdir}/cache/
+ }
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -10,5 +10,3 @@
+@@ -6,9 +6,10 @@
+ mariadb
+ openssl
+ pam
+-python
++python-build
++python-installer
  python-setuptools
++python-wheel
  ruby
++ruby-rdoc
  sqlite
 -systemd
 -systemd-libs

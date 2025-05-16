@@ -21,6 +21,7 @@ audacious-plugins
 avahi
 awesome
 bash-bats
+bear
 blender
 bluedevil
 blueman
@@ -530,6 +531,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs
 nsd
 nushell
 nvidia-open
@@ -546,6 +548,11 @@ onboard
 onionshare
 open-iscsi
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendht
 openmpi
 openmpi-docs
@@ -658,10 +665,12 @@ pysolfc
 python-aiobotocore
 python-aiorpcx
 python-anytree
+python-bcrypt
 python-boolean.py
 python-fixtures
 python-ipykernel
 python-license-expression
+python-more-itertools
 python-peewee
 python-pymupdf
 python-pytest-freezegun
@@ -824,6 +833,7 @@ stunnel
 sway
 swayidle
 switcheroo-control
+syncthing
 syslog-ng
 sysprof
 libsysprof-capture
