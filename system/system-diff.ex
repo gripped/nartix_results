@@ -29,6 +29,7 @@ lib32-glibc
 glibc-locales
 gssproxy
 iputils
+json-c
 libusb
 libxml2
 libxml2-docs

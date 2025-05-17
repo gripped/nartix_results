@@ -47,7 +47,6 @@ lib32-harfbuzz-icu
 lib32-icu
 lib32-imlib2
 lib32-jack2
-lib32-json-c
 lib32-json-glib
 lib32-keyutils
 lib32-krb5
@@ -131,7 +130,6 @@ lib32-libxi
 lib32-libxinerama
 lib32-libxkbcommon
 lib32-libxkbcommon-x11
-lib32-libxml2
 lib32-libxmu
 lib32-libxrandr
 lib32-libxrender

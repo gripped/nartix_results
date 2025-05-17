@@ -67,6 +67,8 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 cgmanager
+check
+check-docs
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -314,6 +316,7 @@ kopeninghours
 kpmcore
 ksnip
 ksystemlog
+kwallet
 kwin
 libatasmart
 libayatana-indicator
@@ -354,6 +357,7 @@ libhandy0
 libinput
 libldm
 libmspub
+libnice
 libnvme
 libportal
 libportal-docs
@@ -861,6 +865,7 @@ tinysparql-docs
 tmux
 tor
 torsocks
+totem
 toxcore
 tracker3-miners
 tracker3

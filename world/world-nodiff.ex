@@ -298,8 +298,6 @@ cgns
 chafa
 chatblade
 check-jsonschema
-check
-check-docs
 checkbashisms
 cheese
 libcheese
@@ -1502,7 +1500,6 @@ kvantum
 kvantum-qt5
 kvirc
 kwallet-pam
-kwallet
 kwallet5
 kwalletmanager
 kwave
@@ -1826,7 +1823,6 @@ libnewt
 libnfs
 libnghttp3
 libngtcp2
-libnice
 libnih
 libnitrokey
 libnma
@@ -5421,7 +5417,6 @@ tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser
-totem
 towncrier
 toxic
 tp_smapi
