@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-redis
+-pkgver=5.2.1
+-pkgrel=4
++pkgver=6.1.0
++pkgrel=1
+ pkgdesc='The Python interface to the Redis key-value store'
+ arch=('any')
+ url='https://github.com/redis/redis-py'
+@@ -12,8 +12,8 @@
+ makedepends=(
+   'git'
+   'python-build'
++  'python-hatchling'
+   'python-installer'
+-  'python-setuptools'
+   'python-wheel'
+ )
+ checkdepends=(
+@@ -34,12 +34,15 @@
+   'python-requests: OCSP certificate validation'
+ )
+ source=("$pkgname::git+$url#tag=v$pkgver")
+-b2sums=('bd0eadfe2d3881a9677973065578b96d6f1c9f21bc3d823eec3f497fdea6f9b5eb2e59f917025f0ba583c8194080bde28a847bba40efb7d6bd0ff87c2a7734ca')
++b2sums=('6bbd166be98b729ead953e4c7ad130cbff2824d820a5af48864ac874aa8e7542eb3fc70e47d589666f947841465d4e9760aee3f646c2c7ab33c515c7239b1eaa')
+ 
+ prepare() {
+   cd "$pkgname"
+   sed -i 's/@pytest.mark.asyncio(forbid_global_loop=True)/@pytest.mark.asyncio/g' \
+     tests/test_asyncio/test_scripting.py
++  sed -i 's/from mock.mock/from unittest.mock/g' \
++    tests/test_asyncio/test_credentials.py \
++    tests/test_credentials.py
+ }
+ 
+ build() {
+@@ -125,6 +128,13 @@
+     --deselect=tests/test_monitor.py::TestMonitor::test_command_with_escaped_data
+     --deselect=tests/test_cluster.py::TestClusterMonitor::test_command_with_quoted_key
+     --deselect=tests/test_cluster.py::TestClusterMonitor::test_command_with_escaped_data
++
++    --ignore=tests/test_asyncio/test_credentials.py
++    --ignore=tests/test_credentials.py
++
++    --deselect=tests/test_asyncio/test_commands.py::TestRedisCommands::test_client_setinfo
++    --deselect=tests/test_commands.py::TestRedisCommands::test_client_setinfo
++    --deselect=tests/test_commands.py::TestRedisCommands::test_xgroup_create_entriesread
+   )
+ 
+   pytest \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ git
+ python
+ python-build
++python-hatchling
+ python-installer
+-python-setuptools
+ python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,9 @@
+ cd "$pkgname"
+ sed -i 's/@pytest.mark.asyncio(forbid_global_loop=True)/@pytest.mark.asyncio/g' \
+ tests/test_asyncio/test_scripting.py
++sed -i 's/from mock.mock/from unittest.mock/g' \
++tests/test_asyncio/test_credentials.py \
++tests/test_credentials.py
+ }
+ build() {
+ cd "$pkgname"

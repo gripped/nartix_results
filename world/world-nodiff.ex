@@ -665,7 +665,6 @@ frameworkintegration5
 francis
 freealut
 freecell-solver
-freeglut
 freeimage
 freeradius
 freetds
@@ -811,7 +810,6 @@ gnugo
 gnuplot
 gnuplot-demos
 gnustep-base
-gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
@@ -4111,7 +4109,6 @@ python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
-python-redis
 python-referencing
 python-reflink
 python-regex
@@ -4616,7 +4613,6 @@ riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
 rkcommon
-rlwrap
 rng-tools
 rnnoise
 robin-map
@@ -5046,7 +5042,6 @@ scim
 scite
 scons
 scour
-screen
 screengrab
 scrot
 sddm-kcm

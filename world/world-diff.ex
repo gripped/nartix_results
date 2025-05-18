@@ -145,6 +145,7 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
+freeglut
 freerdp
 freerdp2
 fribidi
@@ -188,6 +189,7 @@ gnome-shell
 gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
+gnustep-make
 go-bindata
 godot
 godot-mono
@@ -680,6 +682,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-redis
 python-setuptools
 python-validators
 qastools
@@ -790,6 +793,7 @@ refind
 refind-docs
 ripgrep-all
 ristretto
+rlwrap
 rocalution
 rocfft
 rocm-cmake
@@ -812,6 +816,7 @@ libwbclient
 ldb
 smbclient
 sane
+screen
 scribus
 sdbus-cpp
 $pkgbase

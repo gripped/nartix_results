@@ -1,13 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -48,6 +48,7 @@
-   echo 'PNGLIB = libpng.so' >> config.mk
-   echo 'ZLIB = libz.so' >> config.mk
-   echo 'JBIGLIB = /usr/lib/libjbig.a' >> config.mk
-+  echo 'CFLAGS = -std=c17 -Wno-implicit-function-declaration -Wno-int-conversion -D_DEFAULT_SOURCE' >> config.mk
+@@ -1,7 +1,7 @@
  
-   sed -i 's|misc|share/netpbm|' common.mk
-   sed -e 's|/sharedlink|/lib|' -e 's|/staticlink|/lib|' -i lib/Makefile
+ pkgname=netpbm
+ pkgver=10.86.46
+-pkgrel=2
++pkgrel=3
+ pkgdesc='A toolkit for manipulation of graphic images'
+ arch=(x86_64)
+ license=(Artistic-1.0 GPL-2.0-only LGPL-2.0-only MIT)
+@@ -16,7 +16,6 @@
+          libxml2
+          perl
+          zlib)
+-options=(!makeflags)
+ source=(https://downloads.sourceforge.net/project/netpbm/super_stable/$pkgver/netpbm-$pkgver.tgz
+         https://sources.archlinux.org/other/packages/netpbm/netpbm-doc-31Jan2014.tar.xz{,.sig}
+         netpbm-CAN-2005-2471.patch
+@@ -41,7 +40,7 @@
+   patch -p1 < ../reproducible-man-gzip.patch
+ 
+   cp config.mk.in  config.mk
+-  [ "${CARCH}" = 'x86_64' ] && echo 'CFLAGS_SHLIB = -fPIC' >> config.mk
++  echo 'CFLAGS_SHLIB = -fPIC' >> config.mk
+   echo "NETPBM_DOCURL = file://${srcdir}/doc" >> config.mk
+   echo 'TIFFLIB = libtiff.so' >> config.mk
+   echo 'JPEGLIB = libjpeg.so' >> config.mk
+@@ -56,6 +55,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
++  CFLAGS+=' -std=gnu17'
+   make
+ }
+ 
 
 
 ############# Stripped diff below #################
@@ -16,11 +42,19 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,6 +12,7 @@
- echo 'PNGLIB = libpng.so' >> config.mk
- echo 'ZLIB = libz.so' >> config.mk
- echo 'JBIGLIB = /usr/lib/libjbig.a' >> config.mk
-+echo 'CFLAGS = -std=c17 -Wno-implicit-function-declaration -Wno-int-conversion -D_DEFAULT_SOURCE' >> config.mk
- sed -i 's|misc|share/netpbm|' common.mk
- sed -e 's|/sharedlink|/lib|' -e 's|/staticlink|/lib|' -i lib/Makefile
- sed -i 's|install.manwebmain install.manweb install.man|install.man|' GNUmakefile
+@@ -5,7 +5,7 @@
+ patch -p1 < ../netpbm-security-scripts.patch
+ patch -p1 < ../reproducible-man-gzip.patch
+ cp config.mk.in  config.mk
+-[ "${CARCH}" = 'x86_64' ] && echo 'CFLAGS_SHLIB = -fPIC' >> config.mk
++echo 'CFLAGS_SHLIB = -fPIC' >> config.mk
+ echo "NETPBM_DOCURL = file://${srcdir}/doc" >> config.mk
+ echo 'TIFFLIB = libtiff.so' >> config.mk
+ echo 'JPEGLIB = libjpeg.so' >> config.mk
+@@ -18,5 +18,6 @@
+ }
+ build() {
+ cd $pkgname-$pkgver
++CFLAGS+=' -std=gnu17'
+ make
+ }
