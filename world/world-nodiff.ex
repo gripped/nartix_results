@@ -225,8 +225,6 @@ bogofilter-db
 bogofilter-kyotocabinet
 bogofilter-lmdb
 bogofilter-sqlite
-boinc
-boinc-nox
 bomber
 boost
 booster
@@ -809,7 +807,6 @@ gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
-gnustep-base
 go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
@@ -948,7 +945,6 @@ gumbo-parser
 gunicorn
 gupnp-av
 gupnp-dlna
-gupnp-igd
 gupnp
 gupnp-docs
 gutenprint
@@ -1498,6 +1494,7 @@ kvantum
 kvantum-qt5
 kvirc
 kwallet-pam
+kwallet
 kwallet5
 kwalletmanager
 kwave
@@ -5015,13 +5012,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo

@@ -33,6 +33,8 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+boinc
+boinc-nox
 bolt
 box2d
 brightnessctl
@@ -138,6 +140,7 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+fig2dev
 firefox
 firewalld
 flatpak
@@ -189,6 +192,7 @@ gnome-shell
 gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
+gnustep-base
 gnustep-make
 go-bindata
 godot
@@ -238,6 +242,7 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gupnp-igd
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -318,7 +323,6 @@ kopeninghours
 kpmcore
 ksnip
 ksystemlog
-kwallet
 kwin
 libatasmart
 libayatana-indicator
@@ -811,6 +815,13 @@ ruby-racc
 ruby-regexp_property_values
 ruby-rubyzip
 ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 ldb

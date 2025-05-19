@@ -1,16 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,6 +1,6 @@
  
  pkgname=plasma-workspace
 -pkgver=6.3.4
 +pkgver=6.3.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=2
-+pkgrel=1
+ pkgrel=2
  pkgdesc='KDE Plasma Workspace'
- arch=(x86_64)
- url='https://kde.org/plasma-desktop/'
 @@ -98,7 +98,7 @@
           qt6-wayland
           sh
@@ -20,7 +17,23 @@
           wayland
           xcb-util
           xcb-util-cursor
-@@ -127,19 +127,14 @@
+@@ -109,7 +109,6 @@
+          zlib)
+ makedepends=(baloo
+              extra-cmake-modules
+-             gpsd
+              kdoctools
+              networkmanager-qt
+              plasma-wayland-protocols
+@@ -117,7 +116,6 @@
+ optdepends=('appmenu-gtk-module: global menu support for GTK2 and some GTK3 applications'
+             'baloo: Baloo search runner'
+             'discover: manage applications installation from the launcher'
+-            'gpsd: GPS based geolocation'
+             'kdepim-addons: displaying PIM events in the calendar'
+             'kwayland-integration: Wayland integration for Qt5 applications'
+             'networkmanager-qt: IP based geolocation'
+@@ -127,19 +125,14 @@
  conflicts=(plasma-wayland-session)
  replaces=(plasma-wayland-session)
  groups=(plasma)
@@ -43,7 +56,7 @@
  
  build() {
    cmake -B build -S $pkgname-$pkgver \
-@@ -153,4 +148,6 @@
+@@ -153,4 +146,6 @@
    depends+=(plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
  
    DESTDIR="$pkgdir" cmake --install build
@@ -56,7 +69,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -62,6 +62,7 @@
+@@ -7,7 +7,6 @@
+ freetype2
+ gcc-libs
+ glibc
+-gpsd
+ icu
+ kactivitymanagerd
+ karchive
+@@ -62,6 +61,7 @@
  kxmlgui
  layer-shell-qt
  libcanberra
@@ -64,7 +85,7 @@
  libice
  libkexiv2
  libksysguard
-@@ -97,7 +98,6 @@
+@@ -97,7 +97,6 @@
  qt6-wayland
  sh
  solid
