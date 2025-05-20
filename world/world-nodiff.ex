@@ -61,7 +61,6 @@ amtk
 analitza
 analitza5
 anari-sdk
-android-file-transfer
 android-tools
 android-udev
 angelfish
@@ -394,6 +393,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
+cython
 cython0
 d-spy
 darkhttpd
@@ -562,7 +562,6 @@ erlang-xmerl
 esbuild
 espeak-ng
 ethtool
-eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -716,7 +715,6 @@ gi-docgen
 giflib
 gifski
 gimp-help
-gimp
 girara
 git-lfs
 git
@@ -4506,7 +4504,6 @@ qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
 qt5-webchannel
-qt5-webengine
 qt5-webglplugin
 qt5-websockets
 qt5-webview
@@ -4841,7 +4838,6 @@ ruby-net-imap
 ruby-net-pop
 ruby-net-smtp
 ruby-netrc
-ruby-network_interface
 ruby-nio4r
 ruby-nkf
 ruby-nokogiri
@@ -4878,7 +4874,6 @@ ruby-puppet-resource_api
 ruby-qed
 ruby-rack-session
 ruby-rack-test
-ruby-rack
 ruby-rackup
 ruby-rails-dom-testing
 ruby-rails-html-sanitizer
@@ -4969,7 +4964,6 @@ ruby-term-ansicolor
 ruby-test-queue
 ruby-test-unit-rr
 ruby-test-unit-ruby-core
-ruby-test-unit
 ruby-test_declarative
 ruby-thin
 ruby-thor
@@ -5582,7 +5576,6 @@ wxwidgets-common
 wxwidgets-gtk3
 wxwidgets-qt5
 x11-ssh-askpass
-x11vnc
 x264
 x265
 xa

@@ -4,6 +4,7 @@ adwaita-fonts
 alacritty
 alsa-utils
 amule
+android-file-transfer
 anubis
 apache
 apcupsd
@@ -92,7 +93,6 @@ cppcheck
 crun
 cups
 libcups
-cython
 dbus-broker
 ddcutil
 dhcpcd
@@ -131,6 +131,7 @@ eog-docs
 eom
 espeakup
 etherwall
+eventviews
 exo
 extra-cmake-modules
 falkon
@@ -174,6 +175,7 @@ libgdm
 geoclue
 ghc-filesystem
 ghostscript
+gimp
 gjs
 glslang
 gnome-bluetooth-3.0
@@ -776,6 +778,7 @@ qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
 qt5-datavis3d
+qt5-webengine
 qt6-base
 qt6-xcb-private-headers
 qt6-doc
@@ -811,10 +814,13 @@ rspamd
 rtkit
 ruby-bake-modernize
 ruby-io-event
+ruby-network_interface
 ruby-racc
+ruby-rack
 ruby-regexp_property_values
 ruby-rubyzip
 ruby-sys-filesystem
+ruby-test-unit
 rust
 lib32-rust-libs
 rust-musl
@@ -956,6 +962,7 @@ wlroots0.17
 woff2
 wpewebkit
 wpewebkit-docs
+x11vnc
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
