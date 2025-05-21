@@ -92,6 +92,7 @@ gtk-session-lock
 imv
 incron
 kanshi
+kernel-headers-musl
 lazarus
 lazarus-gtk3
 lazarus-qt5

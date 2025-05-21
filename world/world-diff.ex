@@ -168,8 +168,6 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdal
-python-gdal
 gdm
 libgdm
 geoclue
@@ -259,6 +257,7 @@ gvfs-wsdd
 haproxy
 haveged
 hexchat
+hexer-hobu
 hidapi
 hsa-rocr
 hwloc
@@ -277,6 +276,7 @@ intel-ucode
 intel-undervolt
 interception-tools
 isoimagewriter
+ispell
 iwd
 jack2
 jack2-dbus
@@ -315,6 +315,7 @@ jupyter-server-ydoc
 kcoreaddons
 keychain
 kgamma
+kirigami-addons
 kismet
 kitty
 kitty-terminfo
@@ -569,6 +570,7 @@ opendht
 openmpi
 openmpi-docs
 openresolv
+openscenegraph
 opensmtpd
 opensnitch
 openucc
@@ -679,6 +681,7 @@ python-aiorpcx
 python-anytree
 python-bcrypt
 python-boolean.py
+python-fiona
 python-fixtures
 python-ipykernel
 python-license-expression
@@ -937,7 +940,6 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

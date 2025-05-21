@@ -686,6 +686,8 @@ gcab
 gcc13
 gcc14
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -966,7 +968,6 @@ help2man
 herbstluftwm
 hevea
 hexedit
-hexer-hobu
 hicolor-icon-theme
 hiera
 highlight
@@ -1087,7 +1088,6 @@ iso-codes
 isodate
 python-isodate
 ispc
-ispell
 isync
 itinerary
 itstool
@@ -1346,7 +1346,6 @@ kio-zeroconf
 kio
 kio5-extras
 kio5
-kirigami-addons
 kirigami-addons5
 kirigami-gallery
 kirigami
@@ -2474,7 +2473,6 @@ openpgl
 openpmix
 openpmix-docs
 openrct2
-openscenegraph
 openshadinglanguage
 opensips
 openslide
@@ -3404,7 +3402,6 @@ python-filebytes
 python-filelock
 python-filetype
 python-findpython
-python-fiona
 python-fire
 python-first
 python-fissix
@@ -5529,6 +5526,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries

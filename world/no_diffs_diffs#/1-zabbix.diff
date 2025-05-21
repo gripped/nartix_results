@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,27 +8,18 @@
+@@ -2,33 +2,24 @@
+ pkgbase=zabbix
+ pkgname=(zabbix-server zabbix-agent{,2} zabbix-proxy zabbix-frontend-php zabbix-web-service)
+ pkgver=7.2.6
+-pkgrel=1
++pkgrel=2
+ arch=(x86_64)
+ url='https://www.zabbix.com/'
  license=('GPL-2.0-only')
  makedepends=(postgresql-libs libxml2 unixodbc net-snmp mariadb-libs libldap libevent go pkgconfig pcre2 openipmi)
  source=("https://cdn.zabbix.com/zabbix/sources/stable/${pkgver%.*}/zabbix-${pkgver}.tar.gz"
