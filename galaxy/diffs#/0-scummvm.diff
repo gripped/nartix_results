@@ -1,16 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,23 +1,23 @@
  
  pkgname=scummvm
 -pkgver=2.9.0
 -pkgrel=3
 +pkgver=2.9.1
-+pkgrel=1
++pkgrel=2
  pkgdesc="A 'virtual machine' for several classic graphical point-and-click adventure games."
  arch=('x86_64')
- license=('GPL')
-@@ -10,8 +10,8 @@
+-license=('GPL')
++license=('GPL-3.0-only')
+ url="http://www.scummvm.org/"
+ depends=('libpng' 'libtheora' 'sdl2' 'sdl2_net' 'fluidsynth' 'flac' 'faad2' 'libvorbis' 'libmad' 'freetype2'
           'libgl' 'glu' 'libjpeg-turbo' 'libmpeg2' 'curl' 'a52dec' 'giflib' 'glew' 'libspeechd' 'gtk3' 'sndio')
  makedepends=('mesa')
  source=("https://downloads.scummvm.org/frs/${pkgname}/${pkgver}/${pkgname}-${pkgver}.tar.xz")
@@ -21,3 +23,27 @@
  
  build() {
    cd ${pkgname}-${pkgver}
+   ./configure \
+     --enable-release \
+-    --enable-all-engines \
++    --disable-debug \
+     --prefix=/usr
+   make
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ cd ${pkgname}-${pkgver}
+ ./configure \
+ --enable-release \
+---enable-all-engines \
++--disable-debug \
+ --prefix=/usr
+ make
+ }

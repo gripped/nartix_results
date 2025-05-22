@@ -5,17 +5,18 @@
           wxwidgets-qt5)
  pkgver=3.2.8
 -pkgrel=1
-+pkgrel=3
++pkgrel=5
  arch=(x86_64)
  url='https://wxwidgets.org'
  license=(custom:wxWindows)
-@@ -77,7 +77,8 @@
+@@ -76,8 +76,9 @@
+   conflicts=(wxgtk-common)
    replaces=(wxgtk-common)
  
++  DESTDIR="$pkgdir" cmake --install build-qt5
    DESTDIR="$pkgdir" cmake --install build-gtk3
 -  rm -r "$pkgdir"/usr/{bin/wx-config,lib/{cmake,wx,libwx_gtk*}}
-+  DESTDIR="$pkgdir" cmake --install build-qt5
-+  rm -r "$pkgdir"/usr/lib/{cmake,wx,libwx_{gtk,qt}*}
++  rm -r "$pkgdir"/usr/lib/{cmake,wx/{3*,include,config/qt*},libwx_{gtk,qt}*}
    install -Dm644 wxWidgets/wxwin.m4 -t "$pkgdir"/usr/share/aclocal
  
    install -Dm644 wxWidgets/docs/licence.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
@@ -24,7 +25,7 @@
  
    DESTDIR="$pkgdir" cmake --install build-gtk3
 -  rm -r "$pkgdir"/usr/{include,lib/libwx_base*,bin/wxrc*,share}
-+  rm -r "$pkgdir"/usr/{include,lib/libwx_base*,bin,share}
++  rm -r "$pkgdir"/usr/{include,lib/libwx_base*,lib/wx/config,bin,share}
  
    install -Dm644 wxWidgets/docs/licence.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
  }

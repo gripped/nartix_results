@@ -1632,7 +1632,6 @@ libdvbpsi
 libdvdcss
 libdvdnav
 libdvdread
-libdwarf
 libebml
 libebur128
 libepubgen
@@ -2262,6 +2261,11 @@ milou
 mimalloc
 mimetic
 mimetreeparser
+mingw-w64-binutils
+mingw-w64-crt
+mingw-w64-gcc
+mingw-w64-headers
+mingw-w64-winpthreads
 minicom
 minidlna
 minio
@@ -2521,8 +2525,6 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
-papers
-papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
@@ -3498,7 +3500,6 @@ python-hidapi
 python-hiredis
 python-hishel
 python-hkdf
-python-hpack
 python-html2text
 python-html5-parser
 python-html5lib
@@ -4463,7 +4464,6 @@ qqwing
 qrca
 qrcodegen-cmake
 qrcodegencpp-cmake
-qrencode
 qscintilla
 qscintilla-qt5
 python-qscintilla-qt5
@@ -5698,7 +5698,6 @@ yamllint
 yapf
 yara
 yarn
-yasm
 yaz
 yazi
 yelp-tools

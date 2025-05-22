@@ -352,6 +352,7 @@ gst-plugin-libcamera
 python-libcamera
 libcanberra
 libdatachannel
+libdwarf
 libe-book
 libei
 libei-docs
@@ -580,6 +581,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+papers
+papers-lib-docs
 paraview-catalyst
 parole
 passim
@@ -683,6 +686,7 @@ python-bcrypt
 python-boolean.py
 python-fiona
 python-fixtures
+python-hpack
 python-ipykernel
 python-license-expression
 python-more-itertools
@@ -777,6 +781,7 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
+qrencode
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
@@ -1030,6 +1035,7 @@ xorg-xdm
 xorg-xwayland
 xreader
 xscreensaver
+yasm
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

@@ -355,13 +355,11 @@ ristretto
 rpi-imager
 screengrab
 scribus
-scummvm
 solaar
 sqlitebrowser
 stalonetray
 subtitleeditor
 sundials
-telegram-desktop
 terminus-font
 termshark
 tesseract-data

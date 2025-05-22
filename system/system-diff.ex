@@ -27,6 +27,10 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
+gnupg
+gpgme
+qgpgme-qt6
+python-gpgme
 gssproxy
 iputils
 json-c

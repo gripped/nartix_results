@@ -38,8 +38,10 @@ nvm
 qbittorrent
 qbittorrent-nox
 rage
+scummvm
 sdcv
 signal-desktop
+telegram-desktop
 terminology
 tor
 torsocks

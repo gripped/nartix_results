@@ -227,6 +227,7 @@ gdm-dinit
 gdm-openrc
 gdm-runit
 gdm-s6
+gfxstream
 git-dinit
 git-openrc
 git-runit
@@ -283,6 +284,7 @@ knot-openrc
 knot-runit
 knot-s6
 krb5-runit
+libaemu
 libnl
 libplacebo5
 librewolf
@@ -514,6 +516,7 @@ ruby-map
 runit-bash-completions
 runit-rc
 runit
+rutabaga-ffi
 s6-dns
 s6-linux-utils
 s6-networking

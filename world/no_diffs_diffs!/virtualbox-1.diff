@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+          'virtualbox-ext-vnc')
+ pkgver=7.1.8
+ _tarver=${pkgver}
+-pkgrel=2
++pkgrel=4
+ arch=('x86_64')
+ url='https://virtualbox.org/'
+ license=('GPL' 'custom:CDDL')
 @@ -57,11 +57,6 @@
          '60-vboxdrv.rules'
          '60-vboxguest.rules'
@@ -12,7 +21,17 @@
          'vboxreload'
          '001-disable-update.patch'
          '004-drop-Wno-format.patch'
-@@ -80,11 +75,6 @@
+@@ -71,7 +66,8 @@
+         '013-support-building-from-dkms.patch'
+         '018-upate-xclient-script.patch'
+         '020-python-3-12.patch'
+-        '021-python-3-13.patch')
++        '021-python-3-13.patch'
++        '022-C23.patch')
+ sha256sums=('3f7132c55ac6c5f50585bfaa115d29e30b47ccf535cb0a12ff50214ddae2f63d'
+             'f753501352054576c510aa81e83f4935079ea620e601057784b02b4d4d1eeb04'
+             '07fe5c8b313cd7f01505eb9721357269a288ccd0c04e6467afb954038d6f46df'
+@@ -80,11 +76,6 @@
              'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
              '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
              '476202f87a4a461af6b73a7709e91f868a65ff7306494227e0d7b264fa3f919e'
@@ -24,7 +43,20 @@
              '4001b5927348fe669a541e80526d4f9ea91b883805f102f7d571edbb482a9b9d'
              '483a043ddfe32c4c5001a8de0a94a0ea884f34d3dbd817b492b9c97fba3ab5e0'
              'ffd30d1d5c41909518571da02c797102d459ba6dec22fe335b4778db264275e1'
-@@ -199,7 +189,6 @@
+@@ -92,9 +83,10 @@
+             'd76b52d955215a72c296aa36d173897bcaa357528bf5a73347c52ccec8654ced'
+             '8c64b3617e597390dd25cf85c9afac0ebbe369d620349d7f5c8056d834acb6c6'
+             '00f68b86d32a1fada900c2da8dad2ab4215106cd58004f049bded99727cda2ff'
+-            '73ed7ef243c975227660b9bbe7c576018f2c0216b3a3b5efcc4cc56c44c90914'
++            '2540381de895fabbcc68d820c1f72ba644ef566ff5dab0f60be055c7b45cc06f'
+             'ddb2092a5a000aa6ef854796f39dcdf86e72c06d53b24bac3835350571182df6'
+-            'a8e53afe996c3de401824261ac4228eb8960af0832de2a8f101e9aa6ddb442f8')
++            'a8e53afe996c3de401824261ac4228eb8960af0832de2a8f101e9aa6ddb442f8'
++            '3e7d779e10f3d58088c3b5fe1b10bfb4505fd07ff4e8f2201b46f280838cce09')
+ 
+ prepare() {
+     cd "VirtualBox-${pkgver}"
+@@ -199,7 +191,6 @@
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
  
      install -D -m0644 60-vboxdrv.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxdrv.rules"
@@ -32,7 +64,18 @@
      install -D -m0644 virtualbox.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox.conf"
  
      install -D -m0755 vboxreload "${pkgdir}/usr/bin"
-@@ -277,9 +266,6 @@
+@@ -256,8 +247,9 @@
+ package_virtualbox-guest-utils() {
+     pkgdesc='VirtualBox Guest userspace utilities'
+     depends=('glibc' 'pam' 'libx11' 'libxcomposite' 'libxdamage' 'libxext'
+-             'libxfixes' 'libxmu' 'libxt' 'xorg-xrandr' 'xf86-video-vmware'
++             'libxfixes' 'libxmu' 'libxt' 'xorg-xrandr'
+              'VIRTUALBOX-GUEST-MODULES')
++    optdepends=('xf86-video-vmware: for VMSVGA graphics controller')
+     replaces=('virtualbox-archlinux-additions'
+               'virtualbox-guest-additions'
+               'virtualbox-guest-dkms')
+@@ -277,9 +269,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
@@ -42,7 +85,7 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 VirtualBox-${pkgver}/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
-@@ -299,7 +285,6 @@
+@@ -299,7 +288,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
@@ -50,3 +93,17 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 "${srcdir}/VirtualBox-${pkgver}/COPYING" \
          "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -50,7 +50,6 @@
+ shared-mime-info
+ vde2
+ virtualbox
+-xf86-video-vmware
+ xorg-server-devel
+ xorg-xrandr
+ xorgproto
