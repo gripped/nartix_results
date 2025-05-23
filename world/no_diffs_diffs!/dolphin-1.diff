@@ -1,0 +1,17 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,6 @@
+             'kdegraphics-thumbnailers: PDF and PS thumbnails'
+             'kdenetwork-filesharing: samba usershare properties menu'
+             'kio-admin: for managing files as administrator'
+-            'kompare: comparing files menu action'
+             'konsole: terminal panel'
+             'purpose: share context menu')
+ groups=(kde-applications
+@@ -66,4 +65,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd
+ }

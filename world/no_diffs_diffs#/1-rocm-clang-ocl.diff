@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,5 +1,5 @@
  pkgname=rocm-clang-ocl
--pkgver=6.1.2
+-pkgver=6.1.5
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc="OpenCL compilation with clang compiler"
@@ -11,7 +11,7 @@
  depends=('rocm-core' 'bash' 'rocm-llvm' 'rocm-opencl-runtime')
  makedepends=('rocm-cmake')
  source=("${pkgname}-${pkgver}.tar.gz::$url/archive/rocm-$pkgver.tar.gz")
--sha256sums=('cc9942539b5e50b97fa0d2425ba93aae7223635fecba869d8f43b2c26f9482ae')
+-sha256sums=('3d4911ae53effd17c5978732f95bb1e743ae565209971073d321853ffdd0eb87')
 +sha256sums=('a2f2fcb203737b1f436b4c2b78bbd696552f6de619ba0e7e8faf95a888869866')
  _dirname="$(basename "$url")-$(basename ${source[0]} .tar.gz)"
  

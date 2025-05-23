@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=run-parts
+-pkgver=5.22
++pkgver=5.17
+ pkgrel=1
+ pkgdesc='run scripts or programs in a directory'
+ arch=('x86_64')
+@@ -9,7 +9,7 @@
+ depends=('glibc')
+ makedepends=('po4a')
+ source=("http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_${pkgver}.tar.xz")
+-sha256sums=('043569241cdd893cc45e00f917c94c123d0c24143895d91c4d08c6c567e35155')
++sha256sums=('367654878388f532cd8a897fe64766e2d57ae4c60da1d4d8f20dcdf2fb0cbde8')
+ 
+ prepare() {
+   cd "$srcdir/debianutils-${pkgver}"

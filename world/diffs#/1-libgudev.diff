@@ -1,55 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,37 +1,33 @@
- 
- pkgname=libgudev
- pkgver=238
--pkgrel=1
-+pkgrel=3
- pkgdesc="GObject bindings for libudev"
--url="https://wiki.gnome.org/Projects/libgudev"
-+url="https://gitlab.gnome.org/GNOME/libgudev"
- arch=(x86_64)
--license=(LGPL2.1)
-+license=(LGPL-2.1-or-later)
- depends=(
-+  gcc-libs
+@@ -10,7 +10,7 @@
+   gcc-libs
    glib2
--  systemd
-+  glibc
+   glibc
+-  libsystemd
 +  libudev
  )
  makedepends=(
    git
-+  glib2-devel
-+  glibc-locales
+@@ -19,7 +19,7 @@
    gobject-introspection
    gtk-doc
    meson
+-  systemd
 +  udev
    umockdev
    vala
  )
--_commit=df7c9c9940160307aaeb31347f4776a46f8736a9  # tags/238^0
--source=("git+https://gitlab.gnome.org/GNOME/libgudev.git#commit=$_commit")
--b2sums=('SKIP')
--
--pkgver() {
--  cd libgudev
--  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
--}
-+source=("git+$url.git#tag=$pkgver")
-+b2sums=('6da9512d87154fbd62aae044a39abd84bee451f5a21203180062c369ebedf2ee1bc7672408cf806918111397bc74be58314e6c3155e638137603d11012a4355f')
- 
- prepare() {
-   cd libgudev
--
--  sed -e 's/fr_FR\.UTF-8/de_DE.UTF-8/g' \
--      -i tests/meson.build tests/test-double.c
- }
- 
- build() {
-@@ -39,7 +35,7 @@
+@@ -35,7 +35,7 @@
      -D gtk_doc=true
    )
  
@@ -58,35 +27,17 @@
    meson compile -C build
  }
  
-@@ -48,7 +44,10 @@
- }
- 
- package() {
--  depends+=(libg{lib,object}-2.0.so libudev.so)
-+  depends+=(
-+    libg{lib,object}-2.0.so
-+    libudev.so
-+  )
-   provides+=(libgudev-1.0.so)
- 
-   meson install -C build --destdir "$pkgdir"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +1,16 @@
-+gcc-libs
- git
- glib2
-+glib2-devel
-+glibc
-+glibc-locales
- gobject-introspection
+@@ -8,9 +8,9 @@
  gtk-doc
  libglib-2.0.so
  libgobject-2.0.so
+-libsystemd
 +libudev
  libudev.so
  meson

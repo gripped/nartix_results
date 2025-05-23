@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,20 @@
+@@ -1,24 +1,31 @@
  
  pkgname=xfce4-eyes-plugin
--pkgver=4.6.2
+-pkgver=4.7.0
 +pkgver=4.6.0
  pkgrel=1
  pkgdesc="A rolling eyes (following mouse pointer) plugin for the Xfce panel"
@@ -14,32 +14,32 @@
 +license=('GPL2')
  groups=('xfce4-goodies')
  depends=('xfce4-panel' 'hicolor-icon-theme')
--makedepends=('git' 'perl-xml-parser' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'perl-xml-parser' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('900505bce430f76495a47e29f8f2f536c48e0314d58820056b1a92ee164a48f0')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('1ff925dfc81d9da545eb164f76158e18323fa2afccfdde381e678f9bb14c8327')
 +makedepends=('intltool' 'perl-xml-parser')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('ad0ff05d88ba393b7c8922f8233edd33fc0a4e8b000b61de1f8f3a10c5ae5324')
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-@@ -29,7 +25,7 @@
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --libexecdir=/usr/lib \
++    --localstatedir=/var \
++    --disable-static
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd "$srcdir/$pkgname-$pkgver"
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -48,9 +48,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
+@@ -1,6 +1,4 @@
 -git
  hicolor-icon-theme
+-meson
 +intltool
  perl-xml-parser
 -xfce4-dev-tools
@@ -58,14 +59,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,5 +1,10 @@
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd "$srcdir/$pkgname-$pkgver"
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--libexecdir=/usr/lib \
++--localstatedir=/var \
++--disable-static
++make
+ }

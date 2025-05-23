@@ -6,14 +6,14 @@ lib32-gamemode
 lib32-json-c
 lib32-libepoxy
 lib32-libgudev
+lib32-libinstpatch
 lib32-libnm
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
 lib32-libxml2
 lib32-mesa
-lib32-opencl-clover-mesa
-lib32-opencl-rusticl-mesa
+lib32-opencl-mesa
 lib32-vulkan-dzn
 lib32-vulkan-gfxstream
 lib32-vulkan-intel

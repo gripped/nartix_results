@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -80,7 +80,7 @@
+     -D enable-gtk-doc=true
+   )
+ 
+-  arch-meson totem build "${meson_options[@]}"
++  artix-meson totem build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ local meson_options=(
+ -D enable-gtk-doc=true
+ )
+-arch-meson totem build "${meson_options[@]}"
++artix-meson totem build "${meson_options[@]}"
+ meson compile -C build
+ }

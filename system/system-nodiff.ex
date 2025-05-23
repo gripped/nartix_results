@@ -45,7 +45,11 @@ gdbm
 gettext
 gmp
 gnulib-l10n
+gnupg
 gnutls
+gpgme
+qgpgme-qt6
+python-gpgme
 gpm
 grep
 groff
@@ -63,6 +67,7 @@ iptables-nft
 iw
 jansson
 jfsutils
+json-c
 kbd
 keyutils
 kmod
@@ -108,7 +113,6 @@ libsecret
 libsecret-docs
 libssh2
 libtasn1
-libtirpc
 libtool
 libunistring
 libverto
@@ -131,6 +135,7 @@ mlocate
 mpdecimal
 mpfr
 nano
+ncurses
 net-tools
 nettle
 nilfs-utils

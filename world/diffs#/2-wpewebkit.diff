@@ -1,16 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,8 +4,8 @@
-   wpewebkit
-   wpewebkit-docs
- )
--pkgver=2.48.1
--pkgrel=2
-+pkgver=2.48.2
-+pkgrel=1
- pkgdesc="Embeddable web content engine"
- url="https://wpewebkit.org"
- arch=(x86_64)
 @@ -63,7 +63,6 @@
    libpng
    libseccomp
@@ -19,7 +8,7 @@
    libtasn1
    libwebp
    libwpe
-@@ -92,16 +91,15 @@
+@@ -92,7 +91,6 @@
    python
    ruby
    ruby-stdlib
@@ -27,17 +16,6 @@
    unifdef
    wayland-protocols
  )
- source=(
-   $url/releases/wpewebkit-$pkgver.tar.xz{,.asc}
- )
--sha256sums=('2f411b692bb4c2a924d9bddf0c794fd69a24931ad836d6a93c9a65f5adb0357f'
-+sha256sums=('539c6c19b4be1630341a9e9582c25378a1e64eaab7818772ef6c09648ad9584c'
-             'SKIP')
--b2sums=('683dc9ff4f7a15f5bf6953c1a177c9fe553a9a2f15418db3958ac8ad3573b2453e4d662641d8bb30323bc538ec076fc905d2e97cd20546a43ba1e48f62bf6a0b'
-+b2sums=('22fb3f91cdd0e87463b3a6f6f7de7d789bc0932234f45023c5ff67a9bf2f8b317837d101a2e480f6cb81dcd8babb6924ed0fe6679def0c5330a240e34a6724e7'
-         'SKIP')
- validpgpkeys=(
-   5AA3BC334FD7E3369E7C77B291C559DBE4C9123B # Adrián Pérez de Castro <aperez@igalia.com>
 @@ -114,6 +112,8 @@
  
  build() {

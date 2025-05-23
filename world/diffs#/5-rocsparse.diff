@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,34 +1,35 @@
  pkgname=rocsparse
--pkgver=6.3.3
+-pkgver=6.4.0
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='BLAS for sparse computation on top of ROCm'
@@ -16,7 +16,7 @@
 +makedepends=('rocm-cmake' 'gcc-fortran')
  _git='https://github.com/ROCmSoftwarePlatform/rocSPARSE'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('e316d46b40e99976f4acaa097d6ebf5c2caf1ff2bd3c5b1de04c93c1dac90516')
+-sha256sums=('a0fb423b80da72f072a6d80b9837c80c671b5fae719f57c0e83d7e4e27d3d187')
 +sha256sums=('bdc618677ec78830c6af315d61194d6ab8532345b8daeeb115aca96f274d4ca4')
  options=(!lto !buildflags)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"

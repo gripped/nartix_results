@@ -3,7 +3,7 @@
 @@ -1,15 +1,15 @@
  
  pkgname=composable-kernel
--pkgver=6.3.3
+-pkgver=6.4.0
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc="High Performance Composable Kernel for AMD GPUs"
@@ -14,7 +14,7 @@
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip')
  makedepends=('git' 'cmake' 'ninja' 'rocm-cmake' 'rocm-llvm' 'openmp')
  source=("$pkgname-$pkgver.tar.gz::$url/archive/rocm-$pkgver.tar.gz")
--sha256sums=('b7102efba044455416a6127af1951019fe8365a653ea7eb0b1d83bb4542c9309')
+-sha256sums=('8dbfea0bdc4950ca60e8d1ea43edf1f515c4a34e47ead951415c49a0669a3baf')
 +sha256sums=('f648a99388045948b7d5fbf8eb8da6a1803c79008b54d406830b7f9119e1dcf6')
  options=(!lto !buildflags)
  _dirname="$(basename "$url")-$(basename "${source[0]}" .tar.gz)"

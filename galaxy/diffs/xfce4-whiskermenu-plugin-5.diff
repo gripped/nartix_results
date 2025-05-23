@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,28 @@
+ 
+ pkgname=xfce4-whiskermenu-plugin
+-pkgver=2.10.0
+-pkgrel=1
++pkgver=2.9.2
++pkgrel=2
+ pkgdesc='Menu for Xfce4'
+ arch=('x86_64')
+ url='https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start'
+ license=('GPL-2.0-or-later')
+ groups=('xfce4-goodies')
+ depends=('accountsservice' 'garcon' 'gtk3' 'gtk-layer-shell' 'xfce4-panel')
+-makedepends=('git' 'meson' 'ninja')
++makedepends=('cmake' 'git' 'ninja')
+ optdepends=('mugshot: Update user details')
+ source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-whiskermenu-plugin.git#tag=v${pkgver}")
+-sha256sums=('1e870594f5da764ec65ad0df62ce71403f5b0541adcd960fe268b87d8ba4e601')
++sha256sums=('c81107cb2d6a3358da225ce62771f5f8d7400d2c896accfbd92846098a09de15')
+ 
+ build() {
+-  arch-meson $pkgname build
+-  meson compile -C build
++  cmake -B build -S "${pkgname}" \
++    -DCMAKE_BUILD_TYPE='None' \
++    -DCMAKE_INSTALL_PREFIX='/usr' \
++    -DCMAKE_INSTALL_LIBDIR='lib' \
++    -GNinja \
++    -Wno-dev
++  cmake --build build
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  DESTDIR="${pkgdir}" cmake --install build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,8 @@
+ accountsservice
++cmake
+ garcon
+ git
+ gtk-layer-shell
+ gtk3
+-meson
+ ninja
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,9 @@
+ build() {
+-arch-meson $pkgname build
+-meson compile -C build
++cmake -B build -S "${pkgname}" \
++-DCMAKE_BUILD_TYPE='None' \
++-DCMAKE_INSTALL_PREFIX='/usr' \
++-DCMAKE_INSTALL_LIBDIR='lib' \
++-GNinja \
++-Wno-dev
++cmake --build build
+ }

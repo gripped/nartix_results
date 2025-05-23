@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,20 @@
+@@ -1,24 +1,31 @@
  
  pkgname=xfce4-cpugraph-plugin
--pkgver=1.2.11
+-pkgver=1.3.0
 +pkgver=1.2.10
  pkgrel=1
  pkgdesc="Graphical representation of the CPU load"
@@ -14,32 +14,31 @@
 +url="https://docs.xfce.org/panel-plugins/xfce4-cpugraph-plugin"
  groups=('xfce4-goodies')
  depends=('xfce4-panel' 'xfconf')
--makedepends=('git' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-cpugraph-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('da1bebfcf43dfb89a0ca847eb8a78c221b9328436e322f45d589a2af1af0f6e7')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('3fc84010c1d43f011f2a06ba545a71c93365c911f99faf0fc02d7256e07adcdb')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('37792dd052691712195658169b95fb6583f924485ce7a467b33d01e08775d915')
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-@@ -28,7 +24,8 @@
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
 +  install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
  }
  
@@ -49,8 +48,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,5 +1,3 @@
 -git
+-meson
 -xfce4-dev-tools
 +intltool
  xfce4-panel
@@ -58,14 +58,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,5 +1,9 @@
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd $pkgname-$pkgver
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

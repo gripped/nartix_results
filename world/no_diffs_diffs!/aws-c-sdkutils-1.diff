@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=aws-c-sdkutils
+-pkgver=0.2.4
++pkgver=0.2.3
+ pkgrel=1
+ pkgdesc='AWS SDK utility library'
+ arch=(x86_64)
+@@ -12,7 +12,7 @@
+ )
+ makedepends=(cmake)
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+-sha256sums=('493cbed4fa57e0d4622fcff044e11305eb4fc12445f32c8861025597939175fc')
++sha256sums=('5a0489d508341b84eea556e351717bc33524d3dfd6207ee3aba6068994ea6018')
+ 
+ build() {
+   cd $pkgname-$pkgver

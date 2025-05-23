@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,21 @@
+@@ -1,26 +1,32 @@
  
  pkgname=thunar-archive-plugin
--pkgver=0.5.3
+-pkgver=0.6.0
 +pkgver=0.5.2
  pkgrel=1
  pkgdesc="Adds archive operations to the Thunar file context menus"
@@ -13,33 +13,33 @@
 +license=('GPL2')
  groups=('xfce4-goodies')
  depends=('thunar' 'hicolor-icon-theme')
--makedepends=('git' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
 +makedepends=('intltool' 'xfce4-dev-tools')
  optdepends=('file-roller' 'engrampa' 'ark' 'xarchiver')
 -source=("git+https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('5b74a059e7cd9a7f64667ab48a5dbe5a18188c5d0b97bf5d278c49d0df4d4239')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('01543943f188c341f2b4c698b99279de81202673a5446ff1b391d51e95fc46f8')
 +source=(https://archive.xfce.org/src/thunar-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('6379f877bcfc0ea85db9f43723b6fb317893050c712bd03c2ae3232fb9d5ade3')
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
 +  cd $pkgname-$pkgver
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-@@ -30,7 +26,7 @@
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --libexecdir=/usr/lib/xfce4 \
+     --localstatedir=/var \
+-    --libexecdir=/usr/lib/xfce4
+-  meson compile -C build
++    --disable-static
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -48,23 +48,27 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,4 @@
 -git
  hicolor-icon-theme
+-meson
 +intltool
  thunar
  xfce4-dev-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,6 +1,10 @@
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
 +cd $pkgname-$pkgver
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--libexecdir=/usr/lib/xfce4 \
+ --localstatedir=/var \
+---libexecdir=/usr/lib/xfce4
+-meson compile -C build
++--disable-static
++make
+ }

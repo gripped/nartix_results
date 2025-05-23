@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=plasma-workspace
--pkgver=6.3.4
-+pkgver=6.3.5
- _dirver=$(echo $pkgver | cut -d. -f1-3)
- pkgrel=2
- pkgdesc='KDE Plasma Workspace'
 @@ -98,7 +98,7 @@
           qt6-wayland
           sh
@@ -17,46 +9,7 @@
           wayland
           xcb-util
           xcb-util-cursor
-@@ -109,7 +109,6 @@
-          zlib)
- makedepends=(baloo
-              extra-cmake-modules
--             gpsd
-              kdoctools
-              networkmanager-qt
-              plasma-wayland-protocols
-@@ -117,7 +116,6 @@
- optdepends=('appmenu-gtk-module: global menu support for GTK2 and some GTK3 applications'
-             'baloo: Baloo search runner'
-             'discover: manage applications installation from the launcher'
--            'gpsd: GPS based geolocation'
-             'kdepim-addons: displaying PIM events in the calendar'
-             'kwayland-integration: Wayland integration for Qt5 applications'
-             'networkmanager-qt: IP based geolocation'
-@@ -127,19 +125,14 @@
- conflicts=(plasma-wayland-session)
- replaces=(plasma-wayland-session)
- groups=(plasma)
--source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
--        https://invent.kde.org/plasma/plasma-workspace/-/commit/47d50235.patch)
--sha256sums=('85d99dd0d8a33758997af033d24c45ee399152efd2c8b7de0bd3a34fd1cdd155'
--            'SKIP'
--            '101accef84c00a5b90b27c0efb0543a827218c80e0106e9223b997d12020f757')
-+source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
-+sha256sums=('7f508f6ca27d7d615eee27919dd0b0f94d168ba81c3a4d543968046bccb787f2'
-+            'SKIP')
- validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
-               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
-               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
-               '1FA881591C26B276D7A5518EEAAF29B42A678C20') # Marco Martin <notmart@gmail.com>
- 
--prepare() {
--  patch -d $pkgname-$pkgver -p1 < 47d50235.patch # Fix padding in notifications
--}
- 
- build() {
-   cmake -B build -S $pkgname-$pkgver \
-@@ -153,4 +146,6 @@
+@@ -146,4 +146,6 @@
    depends+=(plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
  
    DESTDIR="$pkgdir" cmake --install build
@@ -69,15 +22,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,7 +7,6 @@
- freetype2
- gcc-libs
- glibc
--gpsd
- icu
- kactivitymanagerd
- karchive
-@@ -62,6 +61,7 @@
+@@ -61,6 +61,7 @@
  kxmlgui
  layer-shell-qt
  libcanberra
@@ -85,7 +30,7 @@
  libice
  libkexiv2
  libksysguard
-@@ -97,7 +97,6 @@
+@@ -96,7 +97,6 @@
  qt6-wayland
  sh
  solid

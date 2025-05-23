@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,35 +1,28 @@
+@@ -1,26 +1,28 @@
  
  pkgname=parole
--pkgver=4.18.2
+-pkgver=4.20.0
 -pkgrel=1
 -pkgdesc="Modern media player based on the GStreamer framework"
 +pkgver=4.18.1
@@ -16,36 +16,29 @@
 +license=('GPL')
  groups=('xfce4-goodies')
  depends=('dbus-glib' 'gst-plugins-base' 'gst-plugins-good' 'libnotify' 'libxfce4ui')
--makedepends=('git' 'glib2-devel' 'python' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'glib2-devel' 'python' 'xfce4-dev-tools')
 +makedepends=('intltool' 'python')
  optdepends=('gst-libav: Extra media codecs'
  	    'gst-plugins-bad: Extra media codecs'
  	    'gst-plugins-ugly: Extra media codecs')
 -source=("git+https://gitlab.xfce.org/apps/parole.git#tag=$pkgname-$pkgver")
--sha256sums=('c639f4c33bbd6e645fd434fec2f793a25f331c31ef70e8dfd082bc331c2f34c8')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('676d8c1a98bc9db7d8a69f5abcdd6c8adda950c6415db1bfe5b35c7c948b2574')
 +source=("https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2")
 +sha256sums=('0c7364a484812f69cf2b20a2323864203334cc854fd8103d1d1131814ac55a66')
  
  build() {
--  cd $pkgname
--  ./configure \
--    --prefix=/usr \
--    --enable-maintainer-mode
+-  arch-meson $pkgname build
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +  ./configure --prefix=/usr
 +  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-   make
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
 -
 
@@ -54,7 +47,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,7 @@
+@@ -1,10 +1,7 @@
  dbus-glib
 -git
 -glib2-devel
@@ -63,23 +56,18 @@
 +intltool
  libnotify
  libxfce4ui
+-meson
  python
 -xfce4-dev-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,6 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,4 +1,6 @@
  build() {
--cd $pkgname
--./configure \
----prefix=/usr \
----enable-maintainer-mode
+-arch-meson $pkgname build
+-meson compile -C build
 +cd $pkgname-$pkgver
 +./configure --prefix=/usr
 +sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
- make
++make
  }

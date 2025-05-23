@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,20 @@
+@@ -1,24 +1,30 @@
  
  pkgname=xfce4-timer-plugin
--pkgver=1.7.3
+-pkgver=1.8.0
 +pkgver=1.7.2
  pkgrel=1
  pkgdesc="Plugin to track time for the Xfce4 panel"
@@ -14,32 +14,31 @@
 +license=('GPL2')
  groups=('xfce4-goodies')
  depends=('xfce4-panel')
--makedepends=('git' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-timer-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('b17d9b405a4f857d401c0d6c70b61c0f1089d1a3440824e8f47ad030c768f423')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('5c82b321f9484bcffea66b8bd4e21c52aed9fe4d583bbb054c2acfb6be660935')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('feb3b8c2d39505e816683540a3226bd7bda870ccbcb4c7d0f6abfeeff5c58b7d')
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-@@ -28,7 +24,7 @@
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -48,22 +47,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,3 +1,2 @@
+@@ -1,4 +1,2 @@
 -git
+-meson
 -xfce4-dev-tools
 +intltool
  xfce4-panel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,5 +1,9 @@
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd $pkgname-$pkgver
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

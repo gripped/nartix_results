@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=mesa-demos
+ pkgname=('mesa-demos' 'mesa-utils')
+ pkgver=9.0.0
+-pkgrel=6
++pkgrel=5
+ arch=('x86_64')
+ url="https://www.mesa3d.org/"
+ license=('MIT')
+@@ -26,9 +26,8 @@
+ 
+ build() {
+ 
+-  arch-meson mesa-demos-$pkgver build \
++  artix-meson mesa-demos-$pkgver build \
+     -D gles1=disabled \
+-    -D osmesa=disabled \
+     -D with-system-data-files=true
+ 
+   meson configure build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,9 +3,8 @@
+ patch -p1 -i $srcdir/mesa-demos-system-data.patch
+ }
+ build() {
+-arch-meson mesa-demos-$pkgver build \
++artix-meson mesa-demos-$pkgver build \
+ -D gles1=disabled \
+--D osmesa=disabled \
+ -D with-system-data-files=true
+ meson configure build
+ meson compile -C build

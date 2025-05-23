@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ 
+ build() {
+   cd $srcdir/crosvm/rutabaga_gfx/ffi
+-  arch-meson . build -Dgfxstream=true
++  artix-meson . build -Dgfxstream=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd $srcdir/crosvm/rutabaga_gfx/ffi
+-arch-meson . build -Dgfxstream=true
++artix-meson . build -Dgfxstream=true
+ meson compile -C build
+ }

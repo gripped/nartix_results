@@ -4,7 +4,7 @@
  pkgver=13.3.1+r432+gfc8bd63119c0
  _majorver=${pkgver%%.*}
  _commit=fc8bd63119c00f4763ba337aab02db64beb25931
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc='The GNU Compiler Collection'
  arch=(x86_64)
@@ -19,3 +19,12 @@
  
    make -C $CHOST/libstdc++-v3/src DESTDIR="$pkgdir" install
    make -C $CHOST/libstdc++-v3/include DESTDIR="$pkgdir" install
+@@ -196,7 +195,7 @@
+   make -C libcpp DESTDIR="$pkgdir" install
+   make -C gcc DESTDIR="$pkgdir" install-po
+ 
+-  ln -s gcc-13 "$pkgdir"/usr/bin/cc-13
++  ln -s gcc "$pkgdir"/usr/bin/cc-13
+ 
+   for binary in {c++,g++,gcc,gcc-ar,gcc-nm,gcc-ranlib}; do
+     ln -s /usr/bin/${binary} "${pkgdir}"/usr/bin/x86_64-linux-gnu-${binary}-13

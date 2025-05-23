@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=xfce4-netload-plugin
+-pkgver=1.5.0
++pkgver=1.4.2
+ pkgrel=1
+ pkgdesc="A netload plugin for the Xfce panel"
+ arch=('x86_64')
+@@ -8,17 +8,27 @@
+ license=('GPL-2.0-or-later')
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
++makedepends=('git' 'xfce4-dev-tools')
+ source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-netload-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('fe8ffbbd3eeee8f97cbf783079bb6d799f6ebc06904eee90273ac4a7c5201efe')
++sha256sums=('42b7d3d376cba05a804eb5221bf1272402f198cfaccc33fd0a4ba670f479fb84')
++
++prepare() {
++  cd $pkgname
++  NOCONFIGURE=1 ./autogen.sh
++}
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
++  cd $pkgname
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+ git
+-meson
+ xfce4-dev-tools
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,13 @@
++prepare() {
++cd $pkgname
++NOCONFIGURE=1 ./autogen.sh
++}
+ build() {
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
++cd $pkgname
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

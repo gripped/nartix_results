@@ -284,7 +284,6 @@ knot-openrc
 knot-runit
 knot-s6
 krb5-runit
-libaemu
 libnl
 libplacebo5
 librewolf
@@ -477,7 +476,6 @@ prosody-openrc
 prosody-runit
 prosody-s6
 python-dbus
-python-interpreters-pep-734
 python-pytz-deprecation-shim
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
@@ -516,7 +514,6 @@ ruby-map
 runit-bash-completions
 runit-rc
 runit
-rutabaga-ffi
 s6-dns
 s6-linux-utils
 s6-networking

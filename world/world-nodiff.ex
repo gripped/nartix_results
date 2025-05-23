@@ -64,7 +64,6 @@ anari-sdk
 android-tools
 android-udev
 angelfish
-ansible-core
 ansible-language-server
 ansible-lint
 ansible
@@ -198,6 +197,7 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
+bear
 bearssl
 beep
 bemenu
@@ -224,6 +224,8 @@ bogofilter-db
 bogofilter-kyotocabinet
 bogofilter-lmdb
 bogofilter-sqlite
+boinc
+boinc-nox
 bomber
 boost
 booster
@@ -284,6 +286,7 @@ catch2
 catdoc
 cauchy
 cbatticon
+cbindgen
 ccache
 cdparanoia
 cdrdao
@@ -295,6 +298,8 @@ cgns
 chafa
 chatblade
 check-jsonschema
+check
+check-docs
 checkbashisms
 cheese
 libcheese
@@ -439,6 +444,8 @@ discover
 distcc
 distro-info-data
 distro-info
+django
+python-django
 djvulibre
 dkms
 dleyna
@@ -466,6 +473,7 @@ docker-compose
 doctest
 docx2txt
 dolphin-plugins
+dolphin
 dontpanic
 dos2unix
 dosbox
@@ -562,6 +570,7 @@ erlang-xmerl
 esbuild
 espeak-ng
 ethtool
+eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -586,6 +595,7 @@ facile
 facter
 fail2ban
 fakechroot
+falkon
 farstream
 fast_float
 fastjar
@@ -713,10 +723,12 @@ getdns
 gflags
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
 gimp-help
+gimp
 girara
 git-lfs
 git
@@ -739,6 +751,7 @@ glibmm-docs
 glm
 gloox
 glpk
+glslang
 glu
 glusterfs
 glycin
@@ -807,6 +820,8 @@ gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
+gnustep-base
+gnustep-make
 go-bindata-assetfs
 go-bindata-hashicorp
 go-ethereum
@@ -945,6 +960,7 @@ gumbo-parser
 gunicorn
 gupnp-av
 gupnp-dlna
+gupnp-igd
 gupnp
 gupnp-docs
 gutenprint
@@ -968,6 +984,7 @@ help2man
 herbstluftwm
 hevea
 hexedit
+hexer-hobu
 hicolor-icon-theme
 hiera
 highlight
@@ -1060,6 +1077,8 @@ intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
+intel-media-sdk
+libmfx
 intel-oneapi-common
 intel-oneapi-compiler-dpcpp-cpp-runtime
 "$_pkgname
@@ -1077,6 +1096,7 @@ intel-oneapi-mkl
 intel-oneapi-openmp
 intel-oneapi-tbb
 intel-oneapi-tcm
+intel-ucode
 intltool
 inxi
 iperf
@@ -1286,6 +1306,7 @@ kemoticons
 kexec-tools
 keybinder2
 libkeybinder2
+keychain
 keysmith
 keystone
 python-keystone
@@ -1346,6 +1367,7 @@ kio-zeroconf
 kio
 kio5-extras
 kio5
+kirigami-addons
 kirigami-addons5
 kirigami-gallery
 kirigami
@@ -1426,6 +1448,7 @@ kpipewire
 kpkpass
 kplotting
 kplotting5
+kpmcore
 kpty
 kpty5
 kpublictransport
@@ -1556,6 +1579,7 @@ libadwaita
 libadwaita-demos
 libadwaita-docs
 libaec
+libaemu
 libakonadi5
 libalkimia
 libao
@@ -1602,6 +1626,7 @@ libcue
 libcupsfilters
 libcutl
 libdaemon
+libdatachannel
 libdatrie
 libdazzle
 libdbi
@@ -1719,7 +1744,6 @@ libindi
 libindicator
 libindicator-gtk2
 libindicator-gtk3
-libinstpatch
 libiptcdata
 libiscsi
 libisoburn
@@ -1814,6 +1838,7 @@ libnewt
 libnfs
 libnghttp3
 libngtcp2
+libnice
 libnih
 libnitrokey
 libnma
@@ -1863,6 +1888,12 @@ libplasma
 libplist
 libpng
 libpng12
+libportal
+libportal-docs
+libportal-gtk3
+libportal-gtk4
+libportal-qt5
+libportal-qt6
 libppd
 libproxy
 libproxy-docs
@@ -1874,7 +1905,6 @@ libqaccessibilityclient
 libqaccessibilityclient-qt5
 libqaccessibilityclient-qt6
 libqalculate
-libqb
 libqmi
 libqmi-docs
 libqrtr-glib
@@ -2248,8 +2278,6 @@ menu-cache
 menumaker
 mercurial
 merkuro
-mesa-demos
-mesa-utils
 meson-python
 meson
 messagelib
@@ -2337,6 +2365,7 @@ namcap
 nanobind
 nanomsg
 nanosvg
+nasm
 nauty
 nawk
 nccl
@@ -2459,6 +2488,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2486,6 +2520,8 @@ opensmtpd-filter-senderscore
 opensp
 opensubdiv
 opentimelineio
+openucc
+openucx
 openvdb
 openvkl
 openvr
@@ -2525,6 +2561,8 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
+papers
+papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
@@ -2902,7 +2940,6 @@ pim-data-exporter
 pim-sieve-editor
 pimcommon
 pixman
-pkcs11-helper
 plank
 plantuml
 plasma-activities-stats
@@ -2989,8 +3026,12 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 prosody
 protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 prrte
 prrte-docs
 pstoedit
@@ -3077,6 +3118,7 @@ python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
+python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
@@ -3147,6 +3189,7 @@ python-axolotl
 python-babel
 python-backcall
 python-backrefs
+python-bcrypt
 python-beaker
 python-beautifulsoup4
 python-behave
@@ -3268,7 +3311,6 @@ python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
 python-crispy-bootstrap5
-python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -3404,16 +3446,17 @@ python-filebytes
 python-filelock
 python-filetype
 python-findpython
+python-fiona
 python-fire
 python-first
 python-fissix
+python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flaky
 python-flasgger
 python-flask-caching
 python-flask-compress
-python-flask-cors
 python-flask-httpauth
 python-flask-jwt
 python-flask-login
@@ -3500,6 +3543,7 @@ python-hidapi
 python-hiredis
 python-hishel
 python-hkdf
+python-hpack
 python-html2text
 python-html5-parser
 python-html5lib
@@ -3538,6 +3582,7 @@ python-iniconfig
 python-inline-snapshot
 python-installer
 python-intelhex
+python-interpreters-pep-734
 python-intervals
 python-intervaltree
 python-invoke
@@ -3630,6 +3675,7 @@ python-libsass
 python-libtmux
 python-libusb1
 python-libvcs
+python-license-expression
 python-linetable
 python-linkify-it-py
 python-littleutils
@@ -3688,6 +3734,7 @@ python-mocket
 python-mongoengine
 python-mongomock
 python-monotonic
+python-more-itertools
 python-moreorless
 python-moto
 python-motor
@@ -4054,7 +4101,6 @@ python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
 python-pytest-textual-snapshot
-python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
 python-pytest-trio
@@ -4102,6 +4148,7 @@ python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
+python-redis
 python-referencing
 python-reflink
 python-regex
@@ -4357,6 +4404,7 @@ python-userpath
 python-uvloop
 python-validate-email
 python-validate-pyproject
+python-validators
 python-vcrpy
 python-versioneer
 python-versioningit
@@ -4473,8 +4521,6 @@ qt5-3d
 qt5-charts
 qt5-connectivity
 qt5-declarative
-qt5-doc
-qt5-examples
 qt5-feedback
 qt5-gamepad
 qt5-graphicaleffects
@@ -4542,6 +4588,7 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4598,17 +4645,18 @@ rhino
 java-rhino
 rhino-javadoc
 rinutils
+ripgrep-all
 ripgrep
 riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
 rkcommon
+rlwrap
 rng-tools
 rnnoise
 robin-map
 roc-toolkit
-rocblas
 rocm-clang-ocl
 rocm-core
 rocm-device-libs
@@ -4619,6 +4667,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
@@ -4628,7 +4679,6 @@ rocs
 rocsolver
 rocthrust
 roctracer
-rofi
 ropgadget
 ropper
 rpcsvc-proto
@@ -4765,6 +4815,7 @@ ruby-ice_nine
 ruby-introspection
 ruby-io-console
 ruby-io-endpoint
+ruby-io-event
 ruby-io-nonblock
 ruby-io-stream
 ruby-io-wait
@@ -4835,6 +4886,7 @@ ruby-net-imap
 ruby-net-pop
 ruby-net-smtp
 ruby-netrc
+ruby-network_interface
 ruby-nio4r
 ruby-nkf
 ruby-nokogiri
@@ -4871,6 +4923,7 @@ ruby-puppet-resource_api
 ruby-qed
 ruby-rack-session
 ruby-rack-test
+ruby-rack
 ruby-rackup
 ruby-rails-dom-testing
 ruby-rails-html-sanitizer
@@ -4961,6 +5014,7 @@ ruby-term-ansicolor
 ruby-test-queue
 ruby-test-unit-rr
 ruby-test-unit-ruby-core
+ruby-test-unit
 ruby-test_declarative
 ruby-thin
 ruby-thor
@@ -5004,6 +5058,7 @@ run-parts
 runc
 rust-bindgen
 rustup
+rutabaga-ffi
 rxvt-unicode
 rxvt-unicode-terminfo
 rygel
@@ -5088,6 +5143,8 @@ snappy
 snapshot
 sndio
 snorenotify
+snowball
+libstemmer
 socat
 sof-bin
 sof-firmware
@@ -5169,6 +5226,7 @@ swig
 swtpm
 sxhkd
 sxiv
+syncthing
 syndication
 syndication5
 syntax-highlighting
@@ -5393,6 +5451,7 @@ tokodon
 tomlplusplus
 torbrowser-launcher
 totem-pl-parser
+totem
 towncrier
 toxic
 tp_smapi
@@ -5527,6 +5586,8 @@ vsftpd
 vst3sdk
 vst3sdk-docs
 vtk
+vulkan-docs
+vulkan-html-docs
 vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries
@@ -5751,4 +5812,5 @@ zsh
 zsh-doc
 zug
 zvbi
+zxing-cpp
 zziplib

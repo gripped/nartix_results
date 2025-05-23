@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,35 +1,34 @@
+@@ -1,24 +1,34 @@
  
  pkgname=xfce4-taskmanager
--pkgver=1.5.8
+-pkgver=1.6.0
 +pkgver=1.5.7
  pkgrel=1
  pkgdesc="Easy to use task manager"
@@ -13,38 +13,36 @@
 +url="https://docs.xfce.org/apps/xfce4-taskmanager"
 +license=('GPL2')
  depends=('libxfce4ui' 'xfconf' 'libxmu' 'libwnck3')
--makedepends=('git' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
 +makedepends=('intltool')
  groups=('xfce4-goodies')
 -source=("git+https://gitlab.xfce.org/apps/xfce4-taskmanager.git#tag=$pkgname-$pkgver")
--sha256sums=('48f9453b01e066c78bd3e9c3779fe972e3ea45984cd13bf81f99653ec3ed1b46')
+-sha256sums=('2304041ba75c7153f96cbccf238769aaf3e4145874e7d8bef70511185460a68a')
 +source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('6736832f5a64533e536f4994280bd907da19666cda8d2f465c8a53bb581f68bb')
- 
- prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
++
++prepare() {
 +  cd $pkgname-$pkgver
- }
++}
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-     --localstatedir=/var \
--    --disable-debug \
--    --enable-maintainer-mode
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
 +    --disable-debug
-   make
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -53,32 +51,31 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,5 @@
+@@ -1,7 +1,5 @@
 -git
 +intltool
  libwnck3
  libxfce4ui
  libxmu
+-meson
 -xfce4-dev-tools
  xfconf
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,12 @@
- prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
+@@ -1,5 +1,12 @@
++prepare() {
 +cd $pkgname-$pkgver
- }
++}
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd $pkgname-$pkgver
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
- --localstatedir=/var \
----disable-debug \
----enable-maintainer-mode
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
 +--disable-debug
- make
++make
  }

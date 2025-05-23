@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -57,7 +57,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgbase build
++  artix-meson $pkgbase build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ build() {
+-arch-meson $pkgbase build
++artix-meson $pkgbase build
+ meson compile -C build
+ }
