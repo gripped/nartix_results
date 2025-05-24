@@ -47,6 +47,7 @@ lib32-harfbuzz-icu
 lib32-icu
 lib32-imlib2
 lib32-jack2
+lib32-json-c
 lib32-json-glib
 lib32-keyutils
 lib32-krb5
@@ -75,6 +76,7 @@ lib32-libice
 lib32-libid3tag
 lib32-libidn2
 lib32-libiec61883
+lib32-libinstpatch
 lib32-libjpeg-turbo
 lib32-libldap
 lib32-libltdl
@@ -129,6 +131,7 @@ lib32-libxi
 lib32-libxinerama
 lib32-libxkbcommon
 lib32-libxkbcommon-x11
+lib32-libxml2
 lib32-libxmu
 lib32-libxrandr
 lib32-libxrender
@@ -143,6 +146,7 @@ lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123
+lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss

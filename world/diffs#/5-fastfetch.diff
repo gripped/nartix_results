@@ -1,15 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
+@@ -1,6 +1,6 @@
  
  pkgname=fastfetch
--pkgver=2.42.0
--pkgrel=3
+-pkgver=2.44.0
 +pkgver=2.38.0
-+pkgrel=1
+ pkgrel=1
  pkgdesc="A feature-rich and performance oriented neofetch like system information tool"
  url="https://github.com/fastfetch-cli/fastfetch"
- arch=('x86_64')
+@@ -8,7 +8,7 @@
  license=('MIT')
  depends=('glibc' 'yyjson')
  makedepends=('chafa' 'cmake' 'dbus' 'dconf' 'ddcutil' 'directx-headers' 'imagemagick' 'libpulse' 'libxcb' 'libxrandr'
@@ -30,7 +29,7 @@
              'xfconf: Needed for XFWM theme and XFCE Terminal font'
              'zlib: Faster image output when using kitty graphics protocol')
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('9f94fdbe0642b2402517bba2fff4dd31099649d4e066f4c39b5b728cc3627f01')
+-sha256sums=('3fc2b6d71e38f07ccef29945937daac7825a7cf48f67658207d31a5d42a5a90b')
 +sha256sums=('f64635bfc1b42a2e845e3f3f38531a641de8203300112504b9eddc5a61f38f6a')
  
  build() {

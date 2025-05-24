@@ -61,9 +61,11 @@ amtk
 analitza
 analitza5
 anari-sdk
+android-file-transfer
 android-tools
 android-udev
 angelfish
+ansible-core
 ansible-language-server
 ansible-lint
 ansible
@@ -99,6 +101,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -672,6 +675,7 @@ frameworkintegration5
 francis
 freealut
 freecell-solver
+freeglut
 freeimage
 freeradius
 freetds
@@ -679,6 +683,7 @@ freetype2
 freetype2-demos
 freetype2-docs
 frei0r-plugins
+fribidi
 fstrm
 ftgl
 ftjam
@@ -721,6 +726,7 @@ geoip
 geos
 getdns
 gflags
+gfxstream
 ghex
 ghex-docs
 ghostscript
@@ -1009,6 +1015,7 @@ hivex
 hostapd
 hotdoc
 hplip
+hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -1108,6 +1115,7 @@ iso-codes
 isodate
 python-isodate
 ispc
+ispell
 isync
 itinerary
 itstool
@@ -1657,6 +1665,7 @@ libdvbpsi
 libdvdcss
 libdvdnav
 libdvdread
+libdwarf
 libebml
 libebur128
 libepubgen
@@ -1744,6 +1753,7 @@ libindi
 libindicator
 libindicator-gtk2
 libindicator-gtk3
+libinstpatch
 libiptcdata
 libiscsi
 libisoburn
@@ -2278,6 +2288,8 @@ menu-cache
 menumaker
 mercurial
 merkuro
+mesa-demos
+mesa-utils
 meson-python
 meson
 messagelib
@@ -2385,6 +2397,7 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
+netpbm
 netsurf-buildsystem
 network-manager-applet
 nm-connection-editor
@@ -2417,6 +2430,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2443,6 +2457,7 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
+obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -2511,6 +2526,7 @@ openpgl
 openpmix
 openpmix-docs
 openrct2
+openscenegraph
 openshadinglanguage
 opensips
 openslide
@@ -2940,6 +2956,7 @@ pim-data-exporter
 pim-sieve-editor
 pimcommon
 pixman
+pkcs11-helper
 plank
 plantuml
 plasma-activities-stats
@@ -3105,6 +3122,7 @@ python-absl
 python-acme
 python-adal
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3213,6 +3231,7 @@ python-blessed
 python-blinker
 python-blosc
 python-blosc2
+python-boolean.py
 python-boto
 python-boto3
 python-botocore
@@ -3311,6 +3330,7 @@ python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
 python-crispy-bootstrap5
+python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -3457,6 +3477,7 @@ python-flaky
 python-flasgger
 python-flask-caching
 python-flask-compress
+python-flask-cors
 python-flask-httpauth
 python-flask-jwt
 python-flask-login
@@ -3856,6 +3877,7 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
+python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -4101,6 +4123,7 @@ python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
 python-pytest-textual-snapshot
+python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
 python-pytest-trio
@@ -4220,6 +4243,7 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
+python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely
@@ -4512,6 +4536,7 @@ qqwing
 qrca
 qrcodegen-cmake
 qrcodegencpp-cmake
+qrencode
 qscintilla
 qscintilla-qt5
 python-qscintilla-qt5
@@ -4547,6 +4572,7 @@ qt5-translations
 qt5-virtualkeyboard
 qt5-wayland
 qt5-webchannel
+qt5-webengine
 qt5-webglplugin
 qt5-websockets
 qt5-webview
@@ -4657,7 +4683,9 @@ rng-tools
 rnnoise
 robin-map
 roc-toolkit
+rocblas
 rocm-clang-ocl
+rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4679,6 +4707,7 @@ rocs
 rocsolver
 rocthrust
 roctracer
+rofi
 ropgadget
 ropper
 rpcsvc-proto
@@ -4971,6 +5000,7 @@ ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
 ruby-rubytest
+ruby-rubyzip
 ruby-rugged
 ruby-safe_yaml
 ruby-samovar
@@ -5078,6 +5108,7 @@ scim
 scite
 scons
 scour
+screen
 screengrab
 scrot
 sddm-kcm
@@ -5453,6 +5484,7 @@ torbrowser-launcher
 totem-pl-parser
 totem
 towncrier
+toxcore
 toxic
 tp_smapi
 tpm2-abrmd
@@ -5588,6 +5620,7 @@ vst3sdk-docs
 vtk
 vulkan-docs
 vulkan-html-docs
+vulkan-headers
 vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries
@@ -5617,12 +5650,12 @@ wf-recorder
 wget
 whois
 wildmidi
-wireguard-tools
 wireless_tools
 wireshark
 wireshark-cli
 wireshark-qt
 wl-clipboard
+woff2
 wolfssl
 words
 wpebackend-fdo
@@ -5759,6 +5792,7 @@ yamllint
 yapf
 yara
 yarn
+yasm
 yaz
 yazi
 yelp-tools

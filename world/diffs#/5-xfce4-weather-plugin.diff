@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,36 +1,31 @@
+@@ -1,24 +1,31 @@
  
  pkgname=xfce4-weather-plugin
--pkgver=0.11.3
--pkgrel=2
+-pkgver=0.12.0
 +pkgver=0.11.2
-+pkgrel=1
+ pkgrel=1
  pkgdesc="A weather plugin for the Xfce4 panel"
  arch=('x86_64')
 -url="https://docs.xfce.org/panel-plugins/xfce4-weather-plugin/start"
@@ -14,38 +13,34 @@
 +url="https://docs.xfce.org/panel-plugins/xfce4-weather-plugin"
 +license=('GPL2')
  groups=('xfce4-goodies')
- depends=('xfce4-panel' 'libxml2' 'libsoup' 'hicolor-icon-theme')
--makedepends=('git' 'xfce4-dev-tools')
+-depends=('xfce4-panel' 'libxml2' 'libsoup' 'hicolor-icon-theme' 'upower')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-weather-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('2482c746243abf3fc56d5ffb3bdbec10612ac67b5aae8645dabf49afbcb906d6')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('6df8516c076453b5968a31972c33f1cd48ef1909d1a56d607eb7092252c321c4')
++depends=('xfce4-panel' 'libxml2' 'libsoup' 'hicolor-icon-theme')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('65d40aff7863550858a9f9d2b6054f27c69a3e7e712991785987f9a73bba876b')
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-     --localstatedir=/var \
-     --disable-debug \
--    --disable-upower \
--    --enable-maintainer-mode
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug \
 +    --disable-upower
-   make
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -54,32 +49,30 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,5 @@
+@@ -1,8 +1,5 @@
 -git
  hicolor-icon-theme
 +intltool
  libsoup
  libxml2
+-meson
+-upower
 -xfce4-dev-tools
  xfce4-panel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,10 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,5 +1,10 @@
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd $pkgname-$pkgver
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
- --localstatedir=/var \
- --disable-debug \
----disable-upower \
----enable-maintainer-mode
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug \
 +--disable-upower
- make
++make
  }

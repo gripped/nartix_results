@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+ }
+ 
+ build() {
+-	arch-meson "${pkgname}" build
++	artix-meson "${pkgname}" build
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ patch -Np1 -i "${srcdir}/fix_xfce4-terminal_binary_name.patch"
+ }
+ build() {
+-arch-meson "${pkgname}" build
++artix-meson "${pkgname}" build
+ meson compile -C build
+ }

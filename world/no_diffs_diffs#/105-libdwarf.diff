@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ build() {
+   CFLAGS+=' -ffat-lto-objects'
+ 
+-  arch-meson "$pkgname" build -Ddwarfexample=true
++  artix-meson "$pkgname" build -Ddwarfexample=true
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ CFLAGS+=' -ffat-lto-objects'
+-arch-meson "$pkgname" build -Ddwarfexample=true
++artix-meson "$pkgname" build -Ddwarfexample=true
+ meson compile -C build
+ }

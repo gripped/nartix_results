@@ -4,8 +4,6 @@ adwaita-fonts
 alacritty
 alsa-utils
 amule
-android-file-transfer
-ansible-core
 anubis
 apache
 apcupsd
@@ -14,7 +12,6 @@ appstream-qt5
 appstream-qt
 aquamarine
 archivetools
-arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -139,10 +136,8 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
-freeglut
 freerdp
 freerdp2
-fribidi
 frugally-deep
 fwupd-efi
 fwupd
@@ -242,7 +237,6 @@ haproxy
 haveged
 hexchat
 hidapi
-hsa-rocr
 hwloc
 hyprland
 i2pd
@@ -256,7 +250,6 @@ intel-opencl-clang
 intel-undervolt
 interception-tools
 isoimagewriter
-ispell
 iwd
 jack2
 jack2-dbus
@@ -328,7 +321,6 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
-libdwarf
 libe-book
 libei
 libei-docs
@@ -341,7 +333,6 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libinstpatch
 libldm
 libmspub
 libnvme
@@ -456,8 +447,6 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
-mesa-demos
-mesa-utils
 mesa
 opencl-mesa
 vulkan-dzn
@@ -508,7 +497,6 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 netavark
-netpbm
 netplan
 networkmanager
 libnm
@@ -516,7 +504,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-open
@@ -528,7 +515,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-obs-studio
 onboard
 onionshare
 open-iscsi
@@ -537,7 +523,6 @@ opendht
 openmpi
 openmpi-docs
 openresolv
-openscenegraph
 opensmtpd
 opensnitch
 openvpn
@@ -609,7 +594,6 @@ pipewire-v4l2
 pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
-pkcs11-helper
 pkgfile
 plasma-workspace
 plocate
@@ -638,19 +622,12 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiobotocore
 python-anytree
-python-boolean.py
-python-cryptography
-python-flask-cors
 python-ipykernel
-python-peewee
 python-pymupdf
 python-pytest-freezegun
-python-pytest-timeout
 python-pyudev
 python-recommonmark
-python-setuptools
 qastools
 qbittorrent
 qbittorrent-nox
@@ -734,14 +711,12 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
-qrencode
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
 qt5-datavis3d
 qt5-doc
 qt5-examples
-qt5-webengine
 qt6-base
 qt6-xcb-private-headers
 qt6-doc
@@ -762,19 +737,15 @@ refind
 refind-docs
 ristretto
 rocalution
-rocblas
 rocfft
-rocm-cmake
 rocrand
 rocsparse
-rofi
 rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
-ruby-rubyzip
 ruby-sys-filesystem
 rust
 lib32-rust-libs
@@ -788,7 +759,6 @@ libwbclient
 ldb
 smbclient
 sane
-screen
 scribus
 sdbus-cpp
 $pkgbase
@@ -839,7 +809,6 @@ tinysparql-docs
 tmux
 tor
 torsocks
-toxcore
 tracker3-miners
 tracker3
 tracker3-docs
@@ -888,7 +857,6 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
-vulkan-headers
 wasi-compiler-rt
 waybar
 webkit2gtk-4.1
@@ -900,6 +868,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wireguard-tools
 wireplumber
 libwireplumber
 wireplumber-docs
@@ -907,7 +876,6 @@ wlroots
 wlroots0.15
 wlroots0.16
 wlroots0.17
-woff2
 wpewebkit
 wpewebkit-docs
 x11vnc
@@ -976,7 +944,6 @@ xorg-xdm
 xorg-xwayland
 xreader
 xscreensaver
-yasm
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

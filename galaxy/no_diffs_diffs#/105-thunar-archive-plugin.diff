@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ sha256sums=('01543943f188c341f2b4c698b99279de81202673a5446ff1b391d51e95fc46f8')
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     --localstatedir=/var \
+     --libexecdir=/usr/lib/xfce4
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ --localstatedir=/var \
+ --libexecdir=/usr/lib/xfce4
+ meson compile -C build

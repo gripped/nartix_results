@@ -3,15 +3,12 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
-lib32-json-c
 lib32-libepoxy
 lib32-libgudev
-lib32-libinstpatch
 lib32-libnm
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
-lib32-libxml2
 lib32-mesa
 lib32-opencl-mesa
 lib32-vulkan-dzn
@@ -22,7 +19,6 @@ lib32-vulkan-radeon
 lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-vulkan-mesa-layers
-lib32-ncurses
 lib32-nvidia-utils
 lib32-p11-kit
 lib32-pam

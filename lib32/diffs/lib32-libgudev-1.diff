@@ -1,22 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,29 +1,26 @@
- 
- pkgname=lib32-libgudev
- pkgver=238
--pkgrel=2
-+pkgrel=3
- pkgdesc="GObject bindings for libudev"
--url="https://wiki.gnome.org/Projects/libgudev"
-+url="https://gitlab.gnome.org/GNOME/libgudev"
- arch=(x86_64)
--license=(LGPL2.1)
-+license=(LGPL-2.1-or-later)
- depends=(
-+  lib32-gcc-libs
+@@ -10,14 +10,14 @@
+   lib32-gcc-libs
    lib32-glib2
+   lib32-glibc
 -  lib32-systemd
-+  lib32-glibc
 +  lib32-elogind
    libgudev
  )
@@ -24,31 +12,12 @@
    git
    glib2-devel
    meson
+-  systemd
 +  elogind
  )
--_commit=df7c9c9940160307aaeb31347f4776a46f8736a9  # tags/238^0
--source=("git+https://gitlab.gnome.org/GNOME/libgudev.git#commit=$_commit")
--b2sums=('SKIP')
--
--pkgver() {
--  cd libgudev
--  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
--}
-+source=("git+$url.git#tag=$pkgver")
-+b2sums=('6da9512d87154fbd62aae044a39abd84bee451f5a21203180062c369ebedf2ee1bc7672408cf806918111397bc74be58314e6c3155e638137603d11012a4355f')
- 
- prepare() {
-   cd libgudev
-@@ -34,7 +31,7 @@
-     --libdir=/usr/lib32
-     -D gtk_doc=false
-     -D introspection=disabled
--    -D tests=disabled  # Need lib32-umockdev
-+    -D tests=disabled # Needs lib32-umockdev
-     -D vapi=disabled
-   )
- 
-@@ -42,12 +39,15 @@
+ source=("git+$url.git#tag=$pkgver")
+ b2sums=('6da9512d87154fbd62aae044a39abd84bee451f5a21203180062c369ebedf2ee1bc7672408cf806918111397bc74be58314e6c3155e638137603d11012a4355f')
+@@ -39,7 +39,7 @@
    export CXX='g++ -m32'
    export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
  
@@ -57,30 +26,24 @@
    meson compile -C build
  }
  
- package() {
--  depends+=(libg{lib,object}-2.0.so libudev.so)
-+  depends+=(
-+    libg{lib,object}-2.0.so
-+    libudev.so
-+  )
-   provides+=(libgudev-1.0.so)
- 
-   meson install -C build --destdir "$pkgdir"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,10 @@
+@@ -1,12 +1,12 @@
 +elogind
  git
  glib2-devel
 +lib32-elogind
-+lib32-gcc-libs
+ lib32-gcc-libs
  lib32-glib2
+ lib32-glibc
 -lib32-systemd
-+lib32-glibc
  libglib-2.0.so
  libgobject-2.0.so
  libgudev
+ libudev.so
+ meson
+-systemd

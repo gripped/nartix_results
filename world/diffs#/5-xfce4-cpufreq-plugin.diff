@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,20 @@
+@@ -1,24 +1,30 @@
  
  pkgname=xfce4-cpufreq-plugin
--pkgver=1.2.9
+-pkgver=1.3.0
 +pkgver=1.2.8
  pkgrel=1
  pkgdesc="CPU frequency and governor plugin for the Xfce4 panel"
@@ -14,32 +14,31 @@
 +url="https://docs.xfce.org/panel-plugins/xfce4-cpufreq-plugin"
  groups=('xfce4-goodies')
  depends=('xfce4-panel')
--makedepends=('git' 'xfce4-dev-tools')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-cpufreq-plugin.git#tag=$pkgname-$pkgver")
--sha256sums=('676a1f6bc39fda9c46c2aa011de80041edcb953e2f266843ac2bff873d45234f')
--
--prepare() {
--  cd $pkgname
--  NOCONFIGURE=1 ./autogen.sh
--}
+-sha256sums=('250037af285533e6cef705116ea6d8bc002af1c64ae6d5a1ab6dccbffa6e99da')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('07e458d9f4725e572001fb7eb66b9e931792311146e0f75ad5d87b9ae19573e9')
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd "$srcdir/$pkgname-$pkgver"
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-@@ -28,7 +24,7 @@
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd "$srcdir/$pkgname-$pkgver"
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -48,22 +47,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,3 +1,2 @@
+@@ -1,4 +1,2 @@
 -git
+-meson
 -xfce4-dev-tools
 +intltool
  xfce4-panel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgname
--NOCONFIGURE=1 ./autogen.sh
--}
+@@ -1,5 +1,9 @@
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd "$srcdir/$pkgname-$pkgver"
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

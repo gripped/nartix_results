@@ -227,7 +227,6 @@ gdm-dinit
 gdm-openrc
 gdm-runit
 gdm-s6
-gfxstream
 git-dinit
 git-openrc
 git-runit
