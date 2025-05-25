@@ -178,6 +178,9 @@ go-bindata
 godot
 godot-mono
 gpicview
+gradle
+gradle-doc
+gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -530,6 +533,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+parallel
+parallel-docs
 paraview-catalyst
 parole
 passim
@@ -715,8 +720,6 @@ qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
 qt5-datavis3d
-qt5-doc
-qt5-examples
 qt6-base
 qt6-xcb-private-headers
 qt6-doc

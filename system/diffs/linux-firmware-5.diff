@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,31 +3,33 @@
+@@ -3,29 +3,44 @@
  pkgname=(linux-firmware-whence linux-firmware amd-ucode
           linux-firmware-{nfp,mellanox,marvell,qcom,liquidio,qlogic,bnx2x}
  )
 -_tag=20231211
 -pkgver=20231211.f2e52a1c
+-pkgrel=1
 +_tag=20250509
 +pkgver=20250508.788aadc8
- pkgrel=1
++pkgrel=2
  pkgdesc="Firmware files for Linux"
 -url="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
 -license=('GPL2' 'GPL3' 'custom')
@@ -39,21 +40,24 @@
  validpgpkeys=('4CDE8575E547BF835FE15807A31B6BD72486CFD6') # Josh Boyer <jwboyer@fedoraproject.org>
  
 -_backports=(
--)
++
++_reverts=(
++  360fd45301707daa3d95be32d84132481b17db46 # revert ath12k: https://bugzilla.kernel.org/show_bug.cgi?id=220108
+ )
  
--prepare() {
--  cd ${pkgbase}
--
--  local _c
--  for _c in "${_backports[@]}"; do
--    git log --oneline -1 "${_c}"
--    git cherry-pick -n "${_c}"
--  done
--}
- 
- pkgver() {
+ prepare() {
    cd ${pkgbase}
-@@ -70,12 +72,15 @@
+ 
+   local _c
+-  for _c in "${_backports[@]}"; do
++  for _c in "${_reverts[@]}"; do
+     git log --oneline -1 "${_c}"
+-    git cherry-pick -n "${_c}"
++    git revert -n "${_c}"
+   done
+ }
+ 
+@@ -70,12 +85,15 @@
    cd ${pkgbase}
  
    ZSTD_CLEVEL=19 make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
@@ -69,7 +73,7 @@
  
    _pick linux-firmware-nfp usr/lib/firmware/netronome
    _pick linux-firmware-nfp usr/share/licenses/${pkgname}/LICENCE.Netronome
-@@ -100,6 +105,8 @@
+@@ -100,6 +118,8 @@
  package_amd-ucode() {
    pkgdesc="Microcode update image for AMD CPUs"
    license=(custom)
@@ -78,7 +82,7 @@
  
    install -Dt "${pkgdir}/boot" -m644 amd-ucode.img
  
-@@ -154,4 +161,3 @@
+@@ -154,4 +174,3 @@
  
    mv -v linux-firmware-bnx2x/* "${pkgdir}"
  }
@@ -98,15 +102,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,3 @@
--prepare() {
--cd ${pkgbase}
--local _c
+@@ -1,9 +1,9 @@
+ prepare() {
+ cd ${pkgbase}
+ local _c
 -for _c in "${_backports[@]}"; do
--git log --oneline -1 "${_c}"
++for _c in "${_reverts[@]}"; do
+ git log --oneline -1 "${_c}"
 -git cherry-pick -n "${_c}"
--done
--}
++git revert -n "${_c}"
+ done
+ }
  build() {
- mkdir -p kernel/x86/microcode
- cat ${pkgbase}/amd-ucode/microcode_amd*.bin > kernel/x86/microcode/AuthenticAMD.bin

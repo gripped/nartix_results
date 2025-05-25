@@ -849,9 +849,6 @@ gperftools
 gphoto2
 gpsd
 gptfdisk
-gradle
-gradle-doc
-gradle-src
 grafana
 granatier
 granite
@@ -2582,8 +2579,6 @@ papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
-parallel
-parallel-docs
 parley
 parted
 partitionmanager
@@ -4546,6 +4541,8 @@ qt5-3d
 qt5-charts
 qt5-connectivity
 qt5-declarative
+qt5-doc
+qt5-examples
 qt5-feedback
 qt5-gamepad
 qt5-graphicaleffects

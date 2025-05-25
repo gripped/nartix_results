@@ -2,11 +2,11 @@
 +++ Artix PKGBUILD
 @@ -1,53 +1,38 @@
  
--_electron=electron35
+-_electron=electron36
 +_electron=electron24
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--pkgver=1.11.100
+-pkgver=1.11.101
 +pkgver=1.11.33
  pkgrel=1
  pkgdesc="Glossy Matrix collaboration client — "
@@ -38,8 +38,8 @@
          autolaunch.patch
          io.element.Element.desktop
          element-desktop.sh)
--sha256sums=('72285cf9cfcffde4531f2cfb31afd5cef4c275344476748b9f4b72d6c29c884a'
--            '3bba475c33578902259c4cc986236eaa547ce3dfd80202a59530ce458e3169d2'
+-sha256sums=('c1ccb5f46eecb37ea25430f82539961bd5bfa4e4ff91dd06fccb144cdc78e710'
+-            'b16900dd249696bcdc9acdc8a03e5558cdf982aebdc04b9286c346fc95cc5182'
 +sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
 +            'SKIP'
 +            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
@@ -117,7 +117,7 @@
 --- arch_depends
 +++ artix_depends
 @@ -1,13 +0,0 @@
--electron35
+-electron36
 -element-web
 -git
 -jq
