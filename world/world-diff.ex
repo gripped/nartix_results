@@ -178,9 +178,6 @@ go-bindata
 godot
 godot-mono
 gpicview
-gradle
-gradle-doc
-gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -627,6 +624,7 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-alembic
 python-anytree
 python-ipykernel
 python-pymupdf
@@ -871,7 +869,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wireguard-tools
 wireplumber
 libwireplumber
 wireplumber-docs

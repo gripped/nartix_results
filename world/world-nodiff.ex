@@ -849,6 +849,9 @@ gperftools
 gphoto2
 gpsd
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
@@ -3136,7 +3139,6 @@ python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
-python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
@@ -5647,6 +5649,7 @@ wf-recorder
 wget
 whois
 wildmidi
+wireguard-tools
 wireless_tools
 wireshark
 wireshark-cli

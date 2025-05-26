@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+ 		DESTDIR="${pkgdir}/" \
+ 		WITH_BASHCOMPLETION=yes \
+                 WITH_WGQUICK=yes \
+-                WITH_SYSTEMDUNITS=yes \
++                WITH_SYSTEMDUNITS=no \
+                 install
+ 
+ 	install -d -m0755 "${pkgdir}"/usr/share/${pkgname}/

@@ -1,6 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -108,7 +108,7 @@
+@@ -7,7 +7,7 @@
+   qemu-chardev-{baum,spice}
+   qemu-docs
+   qemu-guest-agent
+-  qemu-hw-display-{qxl,virtio-{gpu{,-{gl,rutabaga,pci,pci-gl,pci-rutabaga}},vga{,-gl,-rutabaga}}}
++  qemu-hw-display-{qxl,virtio-{gpu{,-{gl,pci,pci-gl}},vga{,-gl}}}
+   qemu-hw-s390x-virtio-gpu-ccw
+   qemu-hw-uefi-vars
+   qemu-hw-usb-{host,redirect,smartcard}
+@@ -24,7 +24,7 @@
+   qemu-{base,desktop,emulators-full,full}
+ )
+ pkgver=10.0.0
+-pkgrel=5
++pkgrel=1
+ pkgdesc="A generic and open source machine emulator and virtualizer"
+ arch=(x86_64)
+ url="https://www.qemu.org/"
+@@ -103,13 +103,12 @@
+   python-pip
+   python-sphinx
+   python-sphinx_rtd_theme
+-  rutabaga-ffi
+   sdl2
+   sdl2_image
    snappy
    spice-protocol
    spice
@@ -9,7 +33,21 @@
    usbredir
    vde2
    virglrenderer
-@@ -282,7 +282,6 @@
+@@ -234,13 +233,10 @@
+   'qemu-hw-display-qxl: for the QXL display device'
+   'qemu-hw-display-virtio-vga: for the virtio-vga display device'
+   'qemu-hw-display-virtio-vga-gl: for the virtio-vga-gl display device'
+-  'qemu-hw-display-virtio-vga-rutabaga: for the virtio-vga-rutabaga display device'
+   'qemu-hw-display-virtio-gpu: for the virtio-gpu display device'
+   'qemu-hw-display-virtio-gpu-gl: for the virtio-gpu-gl display device'
+-  'qemu-hw-display-virtio-gpu-rutabaga: for the virtio-gpu-rutabaga display device'
+   'qemu-hw-display-virtio-gpu-pci: for the virtio-gpu-pci display device'
+   'qemu-hw-display-virtio-gpu-pci-gl: for the virtio-gpu-pci-gl display device'
+-  'qemu-hw-display-virtio-gpu-pci-rutabaga: for the virtio-gpu-pci-rutabaga display device'
+   'qemu-hw-uefi-vars: for UEFI variable support'
+   'qemu-hw-usb-host: for host USB support'
+   'qemu-hw-usb-redirect: for USB redirect support'
+@@ -286,7 +282,6 @@
  
    sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
  
@@ -17,7 +55,29 @@
  
    mkdir -vp build
    mkdir -vp build-static
-@@ -706,14 +705,13 @@
+@@ -306,7 +301,6 @@
+     --enable-sdl
+     --enable-slirp
+     --enable-tpm
+-    --enable-rutabaga-gfx
+     --smbd=/usr/bin/smbd
+     --with-coroutine=ucontext
+   )
+@@ -459,13 +453,10 @@
+     _pick qemu-hw-display-qxl usr/lib/qemu/hw-display-qxl.so
+     _pick qemu-hw-display-virtio-gpu usr/lib/qemu/hw-display-virtio-gpu.so
+     _pick qemu-hw-display-virtio-gpu-gl usr/lib/qemu/hw-display-virtio-gpu-gl.so
+-    _pick qemu-hw-display-virtio-gpu-rutabaga usr/lib/qemu/hw-display-virtio-gpu-rutabaga.so
+     _pick qemu-hw-display-virtio-gpu-pci usr/lib/qemu/hw-display-virtio-gpu-pci.so
+     _pick qemu-hw-display-virtio-gpu-pci-gl usr/lib/qemu/hw-display-virtio-gpu-pci-gl.so
+-    _pick qemu-hw-display-virtio-gpu-pci-rutabaga usr/lib/qemu/hw-display-virtio-gpu-pci-rutabaga.so
+     _pick qemu-hw-display-virtio-vga usr/lib/qemu/hw-display-virtio-vga.so
+     _pick qemu-hw-display-virtio-vga-gl usr/lib/qemu/hw-display-virtio-vga-gl.so
+-    _pick qemu-hw-display-virtio-vga-rutabaga usr/lib/qemu/hw-display-virtio-vga-rutabaga.so
+ 
+     _pick qemu-hw-usb-host usr/lib/qemu/hw-usb-host.so
+     _pick qemu-hw-usb-redirect usr/lib/qemu/hw-usb-redirect.so
+@@ -714,14 +705,13 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -33,7 +93,49 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -779,14 +777,14 @@
+@@ -743,13 +733,6 @@
+   _install_licenses
+ }
+ 
+-package_qemu-hw-display-virtio-gpu-rutabaga() {
+-  pkgdesc="QEMU virtio-gpu-rutabaga display device"
+-  depends=(gcc-libs glibc pixman libpixman-1.so qemu-common=$pkgver-$pkgrel rutabaga-ffi)
+-  mv -v $pkgname/* "$pkgdir"
+-  _install_licenses
+-}
+-
+ package_qemu-hw-display-virtio-gpu-gl() {
+   pkgdesc="QEMU virtio-gpu-gl display device"
+   depends=(gcc-libs glibc qemu-common=$pkgver-$pkgrel virglrenderer)
+@@ -764,13 +747,6 @@
+   _install_licenses
+ }
+ 
+-package_qemu-hw-display-virtio-gpu-pci-rutabaga() {
+-  pkgdesc="QEMU virtio-gpu-pci-rutabaga display device"
+-  depends=(gcc-libs glibc pixman libpixman-1.so qemu-common=$pkgver-$pkgrel rutabaga-ffi)
+-  mv -v $pkgname/* "$pkgdir"
+-  _install_licenses
+-}
+-
+ package_qemu-hw-display-virtio-gpu-pci-gl() {
+   pkgdesc="QEMU virtio-gpu-pci-gl display device"
+   depends=(qemu-common=$pkgver-$pkgrel)
+@@ -792,13 +768,6 @@
+   _install_licenses
+ }
+ 
+-package_qemu-hw-display-virtio-vga-rutabaga() {
+-  pkgdesc="QEMU virtio-vga-rutabaga display device"
+-  depends=(gcc-libs glibc pixman qemu-common=$pkgver-$pkgrel rutabaga-ffi)
+-  mv -v $pkgname/* "$pkgdir"
+-  _install_licenses
+-}
+-
+ package_qemu-hw-s390x-virtio-gpu-ccw() {
+   pkgdesc="QEMU s390x-virtio-gpu-ccw display device"
+   depends=(qemu-common=$pkgver-$pkgrel)
+@@ -808,14 +777,14 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
@@ -50,7 +152,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -800,7 +798,7 @@
+@@ -829,7 +798,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -59,7 +161,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -821,7 +819,7 @@
+@@ -850,7 +819,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -68,7 +170,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -835,7 +833,7 @@
+@@ -864,7 +833,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -77,7 +179,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -863,21 +861,21 @@
+@@ -892,21 +861,21 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -102,7 +204,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -891,7 +889,7 @@
+@@ -920,7 +889,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -111,7 +213,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -912,7 +910,7 @@
+@@ -941,7 +910,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -120,7 +222,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -926,14 +924,14 @@
+@@ -955,14 +924,14 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -137,7 +239,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -954,7 +952,7 @@
+@@ -983,7 +952,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
@@ -146,7 +248,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -968,7 +966,7 @@
+@@ -997,7 +966,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -155,7 +257,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -1010,9 +1008,8 @@
+@@ -1039,9 +1008,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -167,7 +269,7 @@
    _install_licenses
  }
  
-@@ -1147,7 +1144,6 @@
+@@ -1176,7 +1144,6 @@
    pkgdesc="QEMU persistent reservation utility"
    depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel)
    mv -v $pkgname/* "$pkgdir"
@@ -175,6 +277,17 @@
    _install_licenses
  }
  
+@@ -1200,8 +1167,8 @@
+     qemu-audio-{alsa,dbus,jack,oss,pa,pipewire,sdl,spice}=$pkgver-$pkgrel
+     qemu-block-{curl,dmg,nfs,ssh}=$pkgver-$pkgrel
+     qemu-chardev-spice=$pkgver-$pkgrel
+-    qemu-hw-display-{qxl,virtio-gpu{,-{gl,rutabaga,pci,pci-gl,pci-rutabaga}}}=$pkgver-$pkgrel
+-    qemu-hw-display-virtio-vga{,-gl,-rutabaga}=$pkgver-$pkgrel
++    qemu-hw-display-{qxl,virtio-gpu{,-{gl,pci,pci-gl}}}=$pkgver-$pkgrel
++    qemu-hw-display-virtio-vga{,-gl}=$pkgver-$pkgrel
+     qemu-hw-uefi-vars=$pkgver-$pkgrel
+     qemu-hw-usb-{host,redirect,smartcard}=$pkgver-$pkgrel
+     qemu-ui-{curses,dbus,egl-headless,gtk,opengl,sdl,spice-{app,core}}=$pkgver-$pkgrel
 
 
 ############# Stripped diff below #################
@@ -198,7 +311,27 @@
  libudev.so
  liburing
  liburing.so
-@@ -176,8 +175,7 @@
+@@ -118,11 +117,8 @@
+ qemu-hw-display-virtio-gpu-gl
+ qemu-hw-display-virtio-gpu-pci
+ qemu-hw-display-virtio-gpu-pci-gl
+-qemu-hw-display-virtio-gpu-pci-rutabaga
+-qemu-hw-display-virtio-gpu-rutabaga
+ qemu-hw-display-virtio-vga
+ qemu-hw-display-virtio-vga-gl
+-qemu-hw-display-virtio-vga-rutabaga
+ qemu-hw-s390x-virtio-gpu-ccw
+ qemu-hw-uefi-vars
+ qemu-hw-usb-host
+@@ -172,7 +168,6 @@
+ qemu-user-static
+ qemu-vhost-user-gpu
+ qemu-vmsr-helper
+-rutabaga-ffi
+ sdl2
+ sdl2_image
+ seabios
+@@ -180,8 +175,7 @@
  snappy
  spice
  spice-protocol
