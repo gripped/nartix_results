@@ -244,6 +244,8 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-compute-runtime
+intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -286,6 +288,7 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
+kdsingleapplication
 kgamma
 kismet
 kitty
@@ -530,8 +533,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-parallel
-parallel-docs
 paraview-catalyst
 parole
 passim
@@ -624,7 +625,6 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-alembic
 python-anytree
 python-ipykernel
 python-pymupdf

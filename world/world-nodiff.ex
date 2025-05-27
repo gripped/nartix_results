@@ -1080,9 +1080,7 @@ indent
 iniparser
 inkscape
 innoextract
-intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1303,7 +1301,6 @@ kdnssd
 kdnssd5
 kdoctools
 kdoctools5
-kdsingleapplication
 kdsoap-ws-discovery-client
 kdsoap
 kdsoap-qt5
@@ -2582,6 +2579,8 @@ papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
+parallel
+parallel-docs
 parley
 parted
 partitionmanager
@@ -3139,6 +3138,7 @@ python-aiosignal
 python-aiosmtpd
 python-aiosqlite
 python-aiounittest
+python-alembic
 python-amqp
 python-aniso8601
 python-annotated-types
