@@ -62,6 +62,7 @@ compface
 cvs
 dillo
 dino
+distrobox
 dosbox
 doublecmd
 doublecmd-qt5

@@ -1080,7 +1080,9 @@ indent
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx

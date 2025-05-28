@@ -244,8 +244,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-compute-runtime
-intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
