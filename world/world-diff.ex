@@ -286,7 +286,6 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
-kdsingleapplication
 kgamma
 kismet
 kitty
@@ -327,7 +326,6 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
-libetebase
 libfido2
 libfprint
 libgudev
@@ -657,8 +655,10 @@ qemu-guest-agent
 qemu-hw-display-qxl
 qemu-hw-display-virtio-{gpu{
 qemu-hw-display--{gl
+qemu-hw-display-rutabaga
 qemu-hw-display-pci
 qemu-hw-display-pci-gl
+qemu-hw-display-pci-rutabaga
 qemu-hw-s390x-virtio-gpu-ccw
 qemu-hw-uefi-vars
 qemu-hw-usb-host

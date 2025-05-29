@@ -282,6 +282,7 @@ capnproto
 capstone
 python-capstone
 cargo-c
+cargo-edit
 caribou
 catatonit
 catch2-v2
@@ -591,6 +592,7 @@ exiv2
 expac
 expect
 expected-lite
+eza
 f2fs-tools
 faac
 faad2
@@ -1303,6 +1305,7 @@ kdnssd
 kdnssd5
 kdoctools
 kdoctools5
+kdsingleapplication
 kdsoap-ws-discovery-client
 kdsoap
 kdsoap-qt5
@@ -1669,6 +1672,7 @@ libebml
 libebur128
 libepubgen
 libesmtp
+libetebase
 libetonyek
 libetonyek-doc
 libev
