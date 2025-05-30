@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=screen
+ pkgver=5.0.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Full-screen window manager that multiplexes a physical terminal'
+ url='https://www.gnu.org/software/screen/'
+ arch=('x86_64')
+@@ -53,7 +53,6 @@
+ package() {
+   cd ${pkgname}/src
+   make DESTDIR="${pkgdir}" install
+-  chmod 755 "${pkgdir}"/usr/bin/screen-${pkgver}
+ 
+   install -Dm644 ../../pam.d "${pkgdir}"/etc/pam.d/screen
+   install -Dm644 ../../tmpfiles.d "${pkgdir}"/usr/lib/tmpfiles.d/screen.conf

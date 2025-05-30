@@ -623,6 +623,7 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
+python-joserfc
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -866,6 +867,7 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
+webrtc-audio-processing-1
 weston
 wireplumber
 libwireplumber

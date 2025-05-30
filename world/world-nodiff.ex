@@ -3640,7 +3640,6 @@ python-jmespath
 python-joblib
 python-jose
 python-josepy
-python-joserfc
 python-jq
 python-js2py
 python-jschema-to-python
@@ -5647,7 +5646,6 @@ wcslib
 webhook
 webp-pixbuf-loader
 webrtc-audio-processing-0.3
-webrtc-audio-processing-1
 webrtc-audio-processing
 websocketpp
 weechat

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-cfn-lint
+-pkgver=1.35.3
++pkgver=1.35.1
+ pkgrel=1
+ pkgdesc='CloudFormation Linter'
+ arch=(any)
+@@ -39,7 +39,7 @@
+   'python-sarif-om: for sarif formatter'
+ )
+ source=("git+$url.git#tag=v$pkgver")
+-sha256sums=('c0a449c15d06f0230db45a2027be2a027401bc92429e4b279bd2173dd565c644')
++sha256sums=('79a8cb63a3a30032fb10f56c5376af4f82de406fcd3055a6b7aa783f8646b3e2')
+ 
+ build() {
+   cd ${pkgname#python-}

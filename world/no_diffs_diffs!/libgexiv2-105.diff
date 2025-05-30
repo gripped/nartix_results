@@ -1,19 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
-     -D tests=true
-   )
+@@ -13,7 +13,7 @@
+ validpgpkeys=(AC9CD4E32D7C7F6357BA8ADD10F6E970175D29E1) # Jens Georg <mail@jensge.org>
  
--  arch-meson gexiv2 build "${meson_options[@]}"
-+  artix-meson gexiv2 build "${meson_options[@]}"
+ build() {
+-  arch-meson gexiv2 build -D gtk_doc=true -D tests=true
++  artix-meson gexiv2 build -D gtk_doc=true -D tests=true
    meson compile -C build
  }
  
-@@ -50,3 +50,4 @@
-   meson install -C build --destdir "$pkgdir"
- }
- 
-+
 
 
 ############# Stripped diff below #################
@@ -22,11 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- -D gtk_doc=true
- -D tests=true
- )
--arch-meson gexiv2 build "${meson_options[@]}"
-+artix-meson gexiv2 build "${meson_options[@]}"
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson gexiv2 build -D gtk_doc=true -D tests=true
++artix-meson gexiv2 build -D gtk_doc=true -D tests=true
  meson compile -C build
  }
