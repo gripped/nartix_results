@@ -1,11 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ly
+ pkgver=1.0.3
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="TUI display manager"
+ arch=(x86_64)
+ url="https://github.com/fairyglade/ly"
 @@ -24,9 +24,8 @@
  
  package() {
      cd "$pkgname"
 -    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installsystemd
-+    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installnoconf
++    zig build -Ddest_directory="$pkgdir" -Dname="ly-dm" -Dcpu=baseline -Doptimize=ReleaseSafe installexe
  
 -    sed -i "s;/usr/bin/ly;/usr/bin/ly-dm;g" "$pkgdir/usr/lib/systemd/system/ly.service"
  

@@ -3133,7 +3133,6 @@ python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
-python-aiohttp
 python-aioitertools
 python-aiomysql
 python-aiopg
@@ -5456,7 +5455,6 @@ texlive-science
 texlive-texmf
 texlive-doc
 texlive-meta
-thermald
 threadweaver
 threadweaver5
 thrift
@@ -5646,6 +5644,7 @@ wcslib
 webhook
 webp-pixbuf-loader
 webrtc-audio-processing-0.3
+webrtc-audio-processing-1
 webrtc-audio-processing
 websocketpp
 weechat

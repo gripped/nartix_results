@@ -621,6 +621,7 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiohttp
 python-anytree
 python-ipykernel
 python-joserfc
@@ -798,6 +799,7 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+thermald
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -867,7 +869,6 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
-webrtc-audio-processing-1
 weston
 wireplumber
 libwireplumber

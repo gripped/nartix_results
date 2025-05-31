@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,16 @@
+ 
+ _pkgbasename=libldap
+ pkgname=lib32-$_pkgbasename
+-pkgver=2.6.10
++pkgver=2.6.9
+ pkgrel=1
+ pkgdesc="Lightweight Directory Access Protocol (LDAP) client libraries (32-bit)"
+ arch=('x86_64')
+-license=('LicenseRef-OpenLDAP')
++license=('custom')
+ url="https://www.openldap.org/"
+ depends=('lib32-openssl' 'lib32-libxcrypt' $_pkgbasename)
+ makedepends=(gcc-multilib)
+ source=(https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-${pkgver}.tgz{,.asc})
+-sha256sums=('c065f04aad42737aebd60b2fe4939704ac844266bc0aeaa1609f0cad987be516'
++sha256sums=('2cb7dc73e9c8340dff0d99357fbaa578abf30cc6619f0521972c555681e6b2ff'
+             'SKIP')
+ validpgpkeys=('3CE269B5398BC8B785645E987F67D5FD1CE1CBCE') # OpenLDAP Project <project@openldap.org> https://www.openldap.org/software/download/OpenLDAP/gpg-pubkey.txt
+ 
+@@ -31,15 +31,23 @@
+ 	      --disable-spasswd --without-cyrus-sasl \
+ 	      --disable-bdb --disable-hdb --libdir=/usr/lib32
+ 
+-  make -C include
+-  make -C libraries
++  cd include
++  make
++
++  cd ../libraries
++  make depend
++  make
++
+ }
+ 
+ package() {
+   cd openldap-${pkgver}
+ 
+-  make -C include DESTDIR="${pkgdir}" install
+-  make -C libraries DESTDIR="${pkgdir}" install
++  cd include
++  make DESTDIR="${pkgdir}" install
++
++  cd ../libraries
++  make DESTDIR="${pkgdir}" install
+ 
+   rm -rf "${pkgdir}"/usr/{include,share,bin} "$pkgdir/etc"
+   mkdir -p "$pkgdir/usr/share/licenses"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,9 @@
+ --with-threads --disable-wrappers \
+ --disable-spasswd --without-cyrus-sasl \
+ --disable-bdb --disable-hdb --libdir=/usr/lib32
+-make -C include
+-make -C libraries
++cd include
++make
++cd ../libraries
++make depend
++make
+ }
