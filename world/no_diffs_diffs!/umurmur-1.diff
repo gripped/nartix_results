@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=umurmur
+ pkgver=0.3.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Minimalistic Mumble server'
+ url="https://github.com/umurmur/umurmur"
+ arch=(x86_64)
 @@ -20,18 +20,15 @@
    $pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz
    $pkgname-0.3.1-install-dir.patch

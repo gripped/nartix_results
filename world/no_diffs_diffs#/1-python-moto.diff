@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=python-moto
--pkgver=5.1.5
-+pkgver=5.1.4
- pkgrel=1
- pkgdesc='Moto is a library to mock out the boto library.'
- arch=(any)
-@@ -71,7 +71,7 @@
-   "git+https://github.com/getmoto/moto#tag=$pkgver"
-   "fix-tests.diff"
- )
--sha256sums=('0a17d3c99ced7663702c7e5fd542ed20e24835379bdfb8037b4d66b59ccd0ea7'
-+sha256sums=('6d5ef52463cf54f4c1d372324f6c28657f6cbfb8cf7d834897e18fae31d2509c'
-             '21305cdf3d650ced1acb1d0f7dde8760b26e32a94c56a5571e798d6b6976cf5a')
- 
- prepare() {
 @@ -90,6 +90,9 @@
    cd ${pkgname#python-}
    local pytest_args=(

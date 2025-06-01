@@ -1113,6 +1113,7 @@ iperf3
 ipset
 ipython
 irssi
+isa-l
 iso-codes
 isodate
 python-isodate
@@ -3639,6 +3640,7 @@ python-jmespath
 python-joblib
 python-jose
 python-josepy
+python-joserfc
 python-jq
 python-js2py
 python-jschema-to-python
@@ -5455,6 +5457,7 @@ texlive-science
 texlive-texmf
 texlive-doc
 texlive-meta
+thermald
 threadweaver
 threadweaver5
 thrift

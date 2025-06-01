@@ -5,7 +5,6 @@ lib32-fluidsynth
 lib32-gamemode
 lib32-libepoxy
 lib32-libgudev
-lib32-libldap
 lib32-libnm
 lib32-libpulse
 lib32-libudev0-shim

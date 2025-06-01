@@ -624,7 +624,6 @@ pysolfc
 python-aiohttp
 python-anytree
 python-ipykernel
-python-joserfc
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -799,7 +798,6 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
-thermald
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -877,6 +875,7 @@ wlroots
 wlroots0.15
 wlroots0.16
 wlroots0.17
+wlroots0.18
 wpewebkit
 wpewebkit-docs
 x11vnc
