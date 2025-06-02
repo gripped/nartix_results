@@ -43,6 +43,7 @@ transmission-qt
 libtransmission
 unoconv
 vice
+wayvnc
 wezterm
 wireshark
 wireshark-cli

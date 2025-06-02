@@ -1,10 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,45 +2,22 @@
+@@ -1,46 +1,24 @@
+ 
  pkgname=labwc
  pkgver=0.8.4
- pkgrel=2
+-pkgrel=2
 -pkgdesc='stacking wayland compositor with look and feel from openbox'
++pkgrel=2.1
 +pkgdesc='wlroots-based window-stacking compositor for wayland'
  url="https://github.com/labwc/labwc"
  arch=('x86_64')
@@ -38,7 +40,8 @@
 -source=("git+https://github.com/labwc/labwc#tag=${pkgver}")
 -b2sums=('ba631a9c5ff6cd1a4178620641dbb8823d20af90cc5b1c705ad0fa70786c6099e95cb04a5b18642aa203964b2bec418e0569b94b1a60543dfd7dbec866c9e0fa')
 -
-+depends=('libpng' 'librsvg' 'pango' 'seatd' 'ttf-font' 'wlroots=0.18.2' 'wayland' 'xorg-xwayland' 'libsfdo' )
++depends=(cairo glib2 glibc libinput libpng librsvg libsfdo libwlroots-0.18.so
++         libxcb libxkbcommon libxml2 pango pixman ttf-font wayland xorg-xwayland)
 +makedepends=('meson' 'cmake' 'scdoc' 'wayland-protocols')
 +provides=(wayland-compositor)
 +source=("${url}/archive/refs/tags/${pkgver}.tar.gz")
@@ -60,30 +63,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,21 +1,13 @@
--cairo
+@@ -1,5 +1,5 @@
+ cairo
 -git
--glib2
--glibc
--libinput
 +cmake
- libpng
- librsvg
- libsfdo
--libwlroots-0.18.so
--libxcb
--libxkbcommon
--libxml2
- meson
+ glib2
+ glibc
+ libinput
+@@ -14,7 +14,6 @@
  pango
--pixman
+ pixman
  scdoc
- seatd
+-seatd
  ttf-font
  wayland
  wayland-protocols
-+wlroots
- xorg-xwayland
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

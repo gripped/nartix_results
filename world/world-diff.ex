@@ -295,6 +295,7 @@ knockd
 knot
 kopeninghours
 ksnip
+kstars
 ksystemlog
 kwin
 libatasmart
@@ -746,6 +747,7 @@ rtkit
 ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
+ruby-rspec-mocks
 ruby-sys-filesystem
 rust
 lib32-rust-libs
@@ -777,6 +779,7 @@ squid
 sshguard
 sslh
 sssd
+stellarsolver
 strongswan
 stunnel
 sway
@@ -876,6 +879,7 @@ wlroots0.15
 wlroots0.16
 wlroots0.17
 wlroots0.18
+wlroots0.19
 wpewebkit
 wpewebkit-docs
 x11vnc

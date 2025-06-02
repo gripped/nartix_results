@@ -1494,7 +1494,6 @@ ksnakeduel
 kspaceduel
 ksquares
 ksshaskpass
-kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -3232,6 +3231,7 @@ python-black
 python-bleach
 python-blessed
 python-blinker
+python-blockbuster
 python-blosc
 python-blosc2
 python-boolean.py
@@ -3502,6 +3502,7 @@ python-flufl.testing
 python-fluidity
 python-flup
 python-fonttools
+python-forbiddenfruit
 python-fqdn
 python-freezegun
 python-frozendict
@@ -3616,6 +3617,7 @@ python-ipyparallel
 python-ipython-genutils
 python-ipython-pygments-lexers
 python-ipywidgets
+python-isal
 python-iso8601
 python-isoduration
 python-isort
@@ -4500,6 +4502,7 @@ python-zeroconf
 python-zict
 python-zipp
 python-zipstream-ng
+python-zlib-ng
 python-zodbpickle
 python-zope-component
 python-zope-configuration
@@ -4989,7 +4992,6 @@ ruby-rspec-expectations
 ruby-rspec-files
 ruby-rspec-its
 ruby-rspec-memory
-ruby-rspec-mocks
 ruby-rspec-rerun
 ruby-rspec-support
 ruby-rspec
@@ -5230,7 +5232,6 @@ sshpass
 sshuttle
 startup-notification
 stb
-stellarsolver
 step-cli
 step
 stfl
