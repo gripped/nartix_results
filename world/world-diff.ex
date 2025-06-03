@@ -297,6 +297,8 @@ kopeninghours
 ksnip
 kstars
 ksystemlog
+ktextaddons
+ktextaddons5
 kwin
 libatasmart
 libayatana-indicator
@@ -731,6 +733,7 @@ quazip-qt5
 quazip-qt6
 rabbitmq
 rabbitmqadmin
+rawtherapee
 rdma-core
 redis
 redshift
@@ -756,6 +759,7 @@ rust-aarch64-gnu
 rust-aarch64-musl
 rust-wasm
 rust-src
+rustup
 samba
 libwbclient
 ldb

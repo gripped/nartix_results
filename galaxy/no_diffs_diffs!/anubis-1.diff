@@ -7,4 +7,4 @@
 -  install -Dm644 run/anubis@.service -t "$pkgdir/usr/lib/systemd/system"
    install -Dm644 run/default.env -t "$pkgdir/etc/anubis"
  
-   install -Dm644 README.md data/botPolicies.json -t "$pkgdir/usr/share/doc/$pkgname"
+   local docdir="$pkgdir/usr/share/doc/$pkgname"

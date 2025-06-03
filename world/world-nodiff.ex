@@ -1500,8 +1500,6 @@ ksvg
 ksysguard
 ksystemstats
 kteatime
-ktextaddons
-ktextaddons5
 ktexteditor
 ktexteditor5
 ktexttemplate
@@ -4651,7 +4649,6 @@ rapidjson
 raptor
 rasqal
 rav1e
-rawtherapee
 razor
 rccl
 rclone
@@ -5094,7 +5091,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rustup
 rutabaga-ffi
 rxvt-unicode
 rxvt-unicode-terminfo
