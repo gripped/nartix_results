@@ -3,7 +3,7 @@
 @@ -11,11 +11,6 @@
  backup=(etc/v2ray/config.json)
  source=("git+https://github.com/v2fly/v2ray-core.git#tag=v$pkgver")
- sha512sums=('7c48dc458c47389831e44dbc01c2092c085852eb4740f7e06a383cb496729c5404a58e446f3f755df50f04ab99f603ed9c003e38eaf207c5105fba4154339dae')
+ sha512sums=('21c308f1e3917ff323bd86b68872f7e76e0e1529a1a559f02f6c95140499420b4f344f7258b4f09d782794f7b7404d2edf375a5f7814965ce48e6e5461a24dc8')
 -
 -prepare() {
 -  cd v2ray-core

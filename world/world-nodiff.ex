@@ -2268,8 +2268,6 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
-maturin
-python-maturin
 maven
 mbedtls
 mbedtls2
@@ -3918,7 +3916,6 @@ python-poetry
 python-polib
 python-pooch
 python-pook
-python-portend
 python-pprofile
 python-prance
 python-praw

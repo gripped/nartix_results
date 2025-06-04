@@ -447,6 +447,8 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+maturin
+python-maturin
 media-player-info
 memcached
 mesa
@@ -627,6 +629,7 @@ pysolfc
 python-aiohttp
 python-anytree
 python-ipykernel
+python-portend
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
