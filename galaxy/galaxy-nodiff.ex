@@ -337,7 +337,6 @@ pysolfc-cardsets
 pysolfc
 python-caja
 python-pysol_cards
-qgis
 qgit
 qrupdate
 qt5ct
@@ -553,13 +552,13 @@ xfce4-time-out-plugin
 xfce4-timer-plugin
 xfce4-verve-plugin
 xfce4-wavelan-plugin
-xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4-themes
 xfwm4
+xreader
 yazi
 yyjson
 zathura-cb

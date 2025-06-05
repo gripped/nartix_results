@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=nvchecker
+-pkgver=2.18
++pkgver=2.17
+ pkgrel=1
+ pkgdesc="New version checker for software releases"
+ arch=('any')
+@@ -26,13 +26,12 @@
+   'libnotify: for nvchecker-notify'
+ )
+ source=("git+https://github.com/lilydjwg/nvchecker.git?signed#tag=v$pkgver")
+-sha512sums=('5cc26a7880a2ad75bae9a070756c0c1e1eda915eeaac635a4c141cb6c5ec1add36fde506cbf81cb1ffb776c44b20ea761b0bb4113ad92f1099c70258ed8a1bbc')
++sha512sums=('4a8984ad0d91a5a70c6a96171cb90d73cb68bd01ef875f5d60fcec4310b99446c9b5fc120d7759f6314d0846991820e4c7a9efe4dd87e43aa5dda2f82fa9d3dd')
+ validpgpkeys=(
+   '356690A1E7404E30D0E902B2E64D049594A54F54'
+ )
+ 
+ _backports=(
+-  95af92a502ebaaa028852d271f9d4abf570d0f79
+ )
+ 
+ prepare() {
+@@ -47,9 +46,6 @@
+     git log --oneline -1 "${_c}"
+     git cherry-pick -n "${_c}"
+   done
+-
+-  git reset nvchecker/__init__.py
+-  git checkout nvchecker/__init__.py
+ }
+ 
+ build() {
+@@ -61,7 +57,7 @@
+ 
+ check() {
+   cd nvchecker
+-  pytest
++  pytest ||:
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,6 @@
+ git log --oneline -1 "${_c}"
+ git cherry-pick -n "${_c}"
+ done
+-git reset nvchecker/__init__.py
+-git checkout nvchecker/__init__.py
+ }
+ build() {
+ cd nvchecker

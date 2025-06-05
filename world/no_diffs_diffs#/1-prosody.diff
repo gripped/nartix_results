@@ -6,7 +6,7 @@
          'sysuser.conf'
 -        'prosody.service')
 +)
- sha256sums=('7bde8a5bf3cce195fd454970001b9faeac1a4601bcaa5c74eed7c6b74e48d806'
+ sha256sums=('3e61bd396f37ca5245debfd6be49a47a6191332f0faa2d4ee5f00fbb040addb0'
              'SKIP'
              '0753bd9260f1cfdce6e18e01a61e320b396acfe9fca8ccf3250653bfa6af997e'
              '5a2466b73bd069fb73be97a4e23b24e4c8dd1adb7db871cb8f5ab4094c1f967f'
@@ -16,7 +16,7 @@
  
  prepare() {
    cd prosody-$pkgver
-@@ -75,7 +74,6 @@
+@@ -64,7 +63,6 @@
    make DESTDIR="${pkgdir}" install -C tools/migration
  
    install -Dm644 "${srcdir}"/prosody.tmpfile.d "${pkgdir}"/usr/lib/tmpfiles.d/prosody.conf

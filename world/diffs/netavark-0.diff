@@ -1,8 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,10 +21,6 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=netavark
+-pkgver=1.15.2
++pkgver=1.15.0
+ pkgrel=1
+ pkgdesc="Container network stack"
+ arch=(x86_64)
+@@ -19,12 +19,8 @@
+ )
+ provides=(container-network-stack=2)
  source=(git+$url#tag=v$pkgver)
- sha256sums=('a194adefd71975f28c57fecc36dcc0ab989281fbe5e2159d97594a13f80ff900')
+-sha256sums=('9f145c43038859f7abb25809c948e496460fcdc9b275852fb4e8697ede439848')
++sha256sums=('a194adefd71975f28c57fecc36dcc0ab989281fbe5e2159d97594a13f80ff900')
  
 -pkgver() {
 -  cd $pkgname

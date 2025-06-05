@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   openmpi-docs
- )
- pkgver=5.0.7
--pkgrel=5
-+pkgrel=3
- pkgdesc='High performance message passing library (MPI)'
- arch=(x86_64)
- url='https://www.open-mpi.org'
 @@ -22,8 +22,6 @@
    libfabric
    libnl
@@ -18,7 +9,7 @@
    prrte
    valgrind
    zlib
-@@ -70,13 +68,11 @@
+@@ -70,8 +68,6 @@
      --with-pmix=external
      --with-prrte=external
      --with-valgrind
@@ -27,13 +18,6 @@
      --with-cuda=/opt/cuda
      --with-cuda-libdir=/usr/lib
      --with-rocm=/opt/rocm
--    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm,coll_ucc,scoll_ucc
--    --with-show-load-errors='^accelerator,rcache,coll/ucc'
-+    --enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm #,coll_ucc,scoll_ucc
-+    --with-show-load-errors='^accelerator,rcache' #,coll/ucc'
-   )
-   cd $pkgbase-$pkgver
- 
 @@ -101,7 +97,6 @@
      libfabric
      libnl
@@ -68,7 +52,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,13 +19,11 @@
+@@ -19,8 +19,6 @@
  --with-pmix=external
  --with-prrte=external
  --with-valgrind
@@ -77,10 +61,3 @@
  --with-cuda=/opt/cuda
  --with-cuda-libdir=/usr/lib
  --with-rocm=/opt/rocm
----enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm,coll_ucc,scoll_ucc
----with-show-load-errors='^accelerator,rcache,coll/ucc'
-+--enable-mca-dso=accelerator_cuda,accelerator_rocm,btl_smcuda,rcache_gpusm,rcache_rgpusm #,coll_ucc,scoll_ucc
-+--with-show-load-errors='^accelerator,rcache' #,coll/ucc'
- )
- cd $pkgbase-$pkgver
- export HOSTNAME=buildhost

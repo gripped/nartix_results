@@ -2366,9 +2366,6 @@ musepack
 musepack-tools
 libmpcdec
 musescore
-musl
-musl-aarch64
-musl-riscv64
 mutt
 mypaint-brushes1
 mypy
@@ -2453,7 +2450,6 @@ nuklear
 numactl
 numlockx
 nuspell
-nvchecker
 oath-toolkit
 obconf-qt
 obs-studio
@@ -2520,6 +2516,8 @@ openjade
 openjpeg2
 openlibm
 openmp
+openmpi
+openmpi-docs
 openntpd
 openpgl
 openpmix
@@ -5088,6 +5086,7 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rustup
 rutabaga-ffi
 rxvt-unicode
 rxvt-unicode-terminfo

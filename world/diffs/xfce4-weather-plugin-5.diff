@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,31 @@
+@@ -1,28 +1,31 @@
  
  pkgname=xfce4-weather-plugin
 -pkgver=0.12.0
+-pkgrel=2
 +pkgver=0.11.2
- pkgrel=1
++pkgrel=1
  pkgdesc="A weather plugin for the Xfce4 panel"
  arch=('x86_64')
 -url="https://docs.xfce.org/panel-plugins/xfce4-weather-plugin/start"
@@ -13,10 +14,14 @@
 +url="https://docs.xfce.org/panel-plugins/xfce4-weather-plugin"
 +license=('GPL2')
  groups=('xfce4-goodies')
--depends=('xfce4-panel' 'libxml2' 'libsoup' 'hicolor-icon-theme' 'upower')
+-depends=('xfce4-panel' 'libxml2' 'libsoup3' 'hicolor-icon-theme' 'upower')
 -makedepends=('git' 'meson' 'xfce4-dev-tools')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-weather-plugin.git#tag=$pkgname-$pkgver")
 -sha256sums=('6df8516c076453b5968a31972c33f1cd48ef1909d1a56d607eb7092252c321c4')
+-
+-prepare() {
+-  git -C $pkgname cherry-pick -n 1d8e5e5dbbc4d53e4b810f9b01a460197cd47b64
+-}
 +depends=('xfce4-panel' 'libxml2' 'libsoup' 'hicolor-icon-theme')
 +makedepends=('intltool')
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
@@ -52,8 +57,9 @@
 @@ -1,8 +1,5 @@
 -git
  hicolor-icon-theme
+-libsoup3
 +intltool
- libsoup
++libsoup
  libxml2
 -meson
 -upower
@@ -62,11 +68,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,10 @@
- build() {
--arch-meson $pkgname build \
----localstatedir=/var
--meson compile -C build
+@@ -1,8 +1,10 @@
+-prepare() {
+-git -C $pkgname cherry-pick -n 1d8e5e5dbbc4d53e4b810f9b01a460197cd47b64
++build() {
 +cd $pkgname-$pkgver
 +./configure \
 +--prefix=/usr \
@@ -76,3 +81,8 @@
 +--disable-upower
 +make
  }
+-build() {
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
+-}

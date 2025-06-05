@@ -101,6 +101,7 @@ colord-dinit
 colord-openrc
 colord-runit
 colord-s6
+compiler-rt19
 connman-dinit
 connman-openrc
 connman-runit
@@ -305,6 +306,7 @@ lirc-runit
 lirc-s6
 live-services
 llvm11
+llvm19
 lm_sensors-dinit
 lm_sensors-openrc
 lm_sensors-runit

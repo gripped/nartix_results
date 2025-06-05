@@ -30,6 +30,7 @@ nvidia-390xx-utils
 nvm
 qbittorrent
 qbittorrent-nox
+qgis
 rage
 sdcv
 signal-desktop
@@ -50,3 +51,4 @@ wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
 xfce4-notifyd
+xfce4-weather-plugin

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ b2sums=('c99bab7e7f13145a2cef4ae75919863c2211a5308f205d9a22faf1e27cd264b53b9dfb0486e9939ae888a14cd4889d3ff92e2a03caafb5a07fcd59c22db1ac82')
+ 
+ build() {
+-  arch-meson ${pkgname} build \
++  artix-meson ${pkgname} build \
+     --libexecdir=lib/${pkgname} \
+     -Dmathjax-directory=/usr/share/mathjax2 \
+     -Dcomics=true \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson ${pkgname} build \
++artix-meson ${pkgname} build \
+ --libexecdir=lib/${pkgname} \
+ -Dmathjax-directory=/usr/share/mathjax2 \
+ -Dcomics=true \

@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(qtcreator
+          qtcreator-devel)
+ pkgver=16.0.2
+-pkgrel=3
++pkgrel=4
+ pkgdesc='Lightweight, cross-platform integrated development environment'
+ arch=(x86_64)
+ url='https://www.qt.io'
+@@ -87,3 +87,4 @@
+ 
+   DESTDIR="$pkgdir" cmake --install build --component Devel
+ }
++

@@ -1,16 +1,37 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,8 +19,7 @@
-   gpgme
+@@ -1,7 +1,7 @@
+ 
+ pkgname=pacman
+ pkgver=7.0.0.r6.gc685ae6
+-pkgrel=5
++pkgrel=2
+ _git_tag=7.0.0
+ _git_patch_level_commit=c685ae6412af04cae1eaa5d6bda8c277c7ffb8c8
+ pkgdesc="A library-based package manager with dependency support"
+@@ -11,17 +11,15 @@
+ depends=(
+   bash
+   coreutils
+-  curl libcurl.so
++  curl
+   gawk
+   gettext
+   glibc
+   gnupg
+-  gpgme libgpgme.so
++  gpgme
    grep
-   libarchive
+-  libarchive libarchive.so
+-  openssl libcrypto.so
 -  pacman-mirrorlist
 -  systemd
++  libarchive
 +  artix-mirrorlist
  )
  makedepends=(
    asciidoc
-@@ -47,13 +46,17 @@
+@@ -48,13 +46,17 @@
          pacman.conf
          makepkg.conf
          alpm.sysusers
@@ -25,14 +46,23 @@
 +            '03b3165fde80c3a5889ea5f9d3de190704825a262478f64a0b5d12a50deda9f3'
 +            '06ec1332f835a33de2b26ae4517ffc00fbabe3abf311bd0c0d86e8f7c99575dd'
              'c8760d7ebb6c9817d508c691c67084be251cd9c8811ee1ccf92c1278bad74c1c'
--            '59a8bbdc32830c90dbce5ead9f90074a2bb31cd85ec92bc5f92251bb4bcf8a1d')
+-            '6fe03e6ea3f69d99d59a48847a8ae97c2160fca847c7aedf7b89d05e4aa9386d')
 +            '59a8bbdc32830c90dbce5ead9f90074a2bb31cd85ec92bc5f92251bb4bcf8a1d'
 +            'a78f366eee71610be1a2da1e533128af3ef188ff9ab577f3eab82ba69ad02466'
 +            'f563c81338d462f3c3bbcc182b4eb4139abf078acb119c0bc730e4e777b9eb2e')
  
  pkgver() {
    cd "$pkgname"
-@@ -120,12 +123,5 @@
+@@ -71,8 +73,6 @@
+     fi
+     git rebase "${_git_patch_level_commit}"
+   fi
+-
+-  git cherry-pick -n '0d37c1daa0990766d12d0060a353c829bf8616eb'
+ 
+   local -a patches
+   patches=($(printf '%s\n' "${source[@]}" | grep '.patch'))
+@@ -123,12 +123,5 @@
    install -D -m644 "$srcdir/alpm.sysusers" "${pkgdir}"/usr/lib/sysusers.d/alpm.conf
    install -m644 "$srcdir/rust.conf" "$pkgdir/etc/makepkg.conf.d"
  
@@ -56,9 +86,15 @@
  asciidoc
  bash
  coreutils
-@@ -12,5 +13,3 @@
+@@ -11,11 +12,4 @@
+ gpgme
  grep
  libarchive
+-libarchive.so
+-libcrypto.so
+-libcurl.so
+-libgpgme.so
  meson
+-openssl
 -pacman-mirrorlist
 -systemd

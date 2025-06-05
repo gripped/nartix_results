@@ -479,6 +479,9 @@ muffin
 multipath-tools
 mumble
 mumble-server
+musl
+musl-aarch64
+musl-riscv64
 mutter
 mutter-docs
 mutter45
@@ -510,6 +513,7 @@ niri
 nodejs-lts-hydrogen
 nsd
 nushell
+nvchecker
 nvidia-open
 nvidia-settings
 nvidia-utils-dinit
@@ -524,8 +528,6 @@ onionshare
 open-iscsi
 opencollada
 opendht
-openmpi
-openmpi-docs
 openresolv
 opensmtpd
 opensnitch
@@ -762,7 +764,6 @@ rust-aarch64-gnu
 rust-aarch64-musl
 rust-wasm
 rust-src
-rustup
 samba
 libwbclient
 ldb
