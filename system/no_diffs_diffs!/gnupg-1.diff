@@ -11,7 +11,7 @@
    $pkgname-2.4-avoid_beta_warning.patch  # do not emit beta warnings (due to misbehaving build system)
    0001-gpg-accept-subkeys-with-a-good-revocation-but-no-sel.patch
    0002-gpg-allow-import-of-previously-known-keys-even-witho.patch
-@@ -77,24 +73,6 @@
+@@ -76,24 +72,6 @@
    0021-Add-keyboxd-systemd-support.patch
  )
  sha256sums=('4e946396a8a3cf8e0b997c5ea87e5732efdc7fee2037d96b0eeb911cd350dab0'
@@ -36,7 +36,7 @@
              '243c3a79295519b3931f9d846cf2af5caa064a78de812ee336dc786c1567b4d0'
              'b9b9f711a0eb4517102f5b5205afec0978dbaeeebd192e66f3bb0190a3f86035'
              '9ac259d6ea0d58de502b1b2e42a8fe8fe47080c90b690b5b090d7109be17a7d7'
-@@ -118,24 +96,6 @@
+@@ -116,24 +94,6 @@
              '8901ead8817cccb10bb9720549718bf0bc3cd0b9a315c04fdaa605311c2f69be'
              '7a57c9a5b75fbd70acd565f8db6a816bc85ea18fe1121543758d933e777d6538')
  b2sums=('2c53de51bdde9c7107b6cad253ee552987c43a1f8969e7888fb7017811260b62ad7e06fd470693a8a768bf690b596d514b50795add3a27f3587d5fe439e7518e'
@@ -61,7 +61,7 @@
          '168855b598714abb27e01e52e0ed1e1a01ab14ffb2ee09d759308375359cd28c0a9f96c6b9dee0a2cc5713aec8ea831858d59f56a0a126bca3e1401b078fc7ab'
          '40d67730a471be90765cae47e85d3d845a2ed8f6be21f87a784b01d979a2761eaca5e84290a6411e583de908e7f17fa5506d32261df0643e7735e8e422e52140'
          'dd8dea0c5928271be2d3b08fd6af48af4525ec081219f15aa2e5d872361092d1fecee18e1a8f2907d46811bd75b88cbd6738f49f3deef4fd895bac8c3eabcf76'
-@@ -220,17 +180,6 @@
+@@ -217,17 +177,6 @@
  
    install -vDm 644 {BSD-{2,3,4}-Clause,MIT,Unicode-TOU}.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
  

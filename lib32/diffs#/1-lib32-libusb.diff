@@ -8,7 +8,7 @@
 +  lib32-elogind
    libusb=$pkgver
  )
- makedepends=(gcc-multilib)
+ makedepends=(
 
 
 ############# Stripped diff below #################
@@ -16,7 +16,7 @@
 --- arch_depends
 +++ artix_depends
 @@ -1,4 +1,4 @@
- gcc-multilib
+ git
 +lib32-elogind
  lib32-glibc
 -lib32-systemd

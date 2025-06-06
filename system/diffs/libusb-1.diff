@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
- _url="https://github.com/libusb/libusb"
- license=(LGPL-2.1-or-later)
+@@ -10,7 +10,7 @@
  depends=(glibc)
--makedepends=(systemd)
-+makedepends=(udev)
+ makedepends=(
+   git
+-  systemd
++  udev
+ )
  provides=(libusb-1.0.so)
- source=($_url/releases/download/v$pkgver/$pkgname-$pkgver.tar.bz2)
- sha512sums=('0f4efa6b54e6195d2e5446652c2dc07358583e205d63bf438c4409511b8637d1700a71268c40499755747827d23cc730d9122267386f847bf781993c045c519f')
-@@ -32,7 +32,7 @@
+ source=(git+$_url.git#tag=v$pkgver)
+@@ -35,7 +35,7 @@
  
  package () {
    depends+=(
@@ -17,14 +17,15 @@
 +    libudev libudev.so
    )
  
-   make DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install -C $pkgname
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,5 @@
+ git
  glibc
 +libudev
  libudev.so

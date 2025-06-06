@@ -295,10 +295,7 @@ knockd
 knot
 kopeninghours
 ksnip
-kstars
 ksystemlog
-ktextaddons
-ktextaddons5
 kwin
 libatasmart
 libayatana-indicator
@@ -331,6 +328,7 @@ libepoxy
 libepoxy-docs
 libfido2
 libfprint
+libgit2
 libgudev
 libguestfs
 libhandy0
@@ -349,6 +347,7 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libutempter
+libvirt-python
 libvirt
 libvncserver
 libxfce4ui
@@ -447,8 +446,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-maturin
-python-maturin
 media-player-info
 memcached
 mesa
@@ -479,9 +476,6 @@ muffin
 multipath-tools
 mumble
 mumble-server
-musl
-musl-aarch64
-musl-riscv64
 mutter
 mutter-docs
 mutter45
@@ -513,7 +507,6 @@ niri
 nodejs-lts-hydrogen
 nsd
 nushell
-nvchecker
 nvidia-open
 nvidia-settings
 nvidia-utils-dinit
@@ -631,7 +624,6 @@ pysolfc
 python-aiohttp
 python-anytree
 python-ipykernel
-python-portend
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -787,7 +779,6 @@ squid
 sshguard
 sslh
 sssd
-stellarsolver
 strongswan
 stunnel
 sway

@@ -337,6 +337,7 @@ pysolfc-cardsets
 pysolfc
 python-caja
 python-pysol_cards
+qgis
 qgit
 qrupdate
 qt5ct

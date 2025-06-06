@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,36 +1,37 @@
  pkgname=rocrand
--pkgver=6.4.0
+-pkgver=6.4.1
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='Pseudo-random and quasi-random number generator on ROCm'
@@ -18,7 +18,7 @@
 +            'python: Use Python wrapper')
  _git='https://github.com/ROCmSoftwarePlatform/rocRAND'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('689bc7de81741a0b3feb9f4415a55c2cf1ae58a378fbd9b1a33769caf62bbf95')
+-sha256sums=('690f8edc7789719876cf6119e58aa1335b4ca17b775a753dffb9a07000af9df7')
 +sha256sums=('cee93231c088be524bb2cb0e6093ec47e62e61a55153486bebbc2ca5b3d49360')
  options=(!lto)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"

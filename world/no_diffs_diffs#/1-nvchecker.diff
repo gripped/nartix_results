@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,10 +59,6 @@
+   make -C docs man
+ }
+ 
+-check() {
+-  cd nvchecker
+-  pytest
+-}
+ 
+ package() {
+   cd nvchecker

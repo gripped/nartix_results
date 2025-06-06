@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,36 +1,37 @@
  pkgname=rocfft
--pkgver=6.4.0
+-pkgver=6.4.1
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='Next generation FFT implementation for ROCm'
@@ -16,7 +16,7 @@
 +makedepends=('rocm-cmake')
  _git='https://github.com/ROCmSoftwarePlatform/rocFFT'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('0e9f3f23d8facee65e32baaec7941119b56eb17313b8b514e1c3994c9777c320')
+-sha256sums=('66e543990736bc4bf3b27fa085cca3bea0d42252f960be376371549707e35373')
 +sha256sums=('fb8ba56572702e77e4383d922cd1fee4ad3fa5f63a5ebdb3d9c354439a446992')
  options=(!lto)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"

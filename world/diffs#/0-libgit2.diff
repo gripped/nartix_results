@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libgit2
+ pkgver=1.9.0
+-pkgrel=2
++pkgrel=2.3
+ epoch=1
+ pkgdesc="A linkable library for Git"
+ arch=(x86_64)
+@@ -33,6 +33,7 @@
+     -D REGEX_BACKEND=pcre2
+     -D USE_HTTP_PARSER=llhttp
+     -D USE_SSH=ON
++    -D USE_THREADS:BOOL=ON
+     -S $pkgname-$pkgver
+     -W no-dev
+   )
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ -D REGEX_BACKEND=pcre2
+ -D USE_HTTP_PARSER=llhttp
+ -D USE_SSH=ON
++-D USE_THREADS:BOOL=ON
+ -S $pkgname-$pkgver
+ -W no-dev
+ )

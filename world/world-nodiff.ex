@@ -1494,12 +1494,14 @@ ksnakeduel
 kspaceduel
 ksquares
 ksshaskpass
+kstars
 kstatusnotifieritem
 ksudoku
 ksvg
 ksysguard
 ksystemstats
 kteatime
+ktextaddons
 ktexteditor
 ktexteditor5
 ktexttemplate
@@ -1709,7 +1711,6 @@ libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
-libgit2
 libglib-testing
 libglvnd
 libgme
@@ -2018,7 +2019,6 @@ libva
 libvdpau
 libvips
 libvirt-glib
-libvirt-python
 libvisio
 libvisual
 libvoikko
@@ -2268,6 +2268,8 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
+maturin
+python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2366,6 +2368,9 @@ musepack
 musepack-tools
 libmpcdec
 musescore
+musl
+musl-aarch64
+musl-riscv64
 mutt
 mypaint-brushes1
 mypy
@@ -2450,6 +2455,7 @@ nuklear
 numactl
 numlockx
 nuspell
+nvchecker
 oath-toolkit
 obconf-qt
 obs-studio
@@ -3914,6 +3920,7 @@ python-poetry
 python-polib
 python-pooch
 python-pook
+python-portend
 python-pprofile
 python-prance
 python-praw
@@ -5224,6 +5231,7 @@ sshpass
 sshuttle
 startup-notification
 stb
+stellarsolver
 step-cli
 step
 stfl

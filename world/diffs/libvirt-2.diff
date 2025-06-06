@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -34,7 +34,6 @@
+@@ -36,7 +36,6 @@
    parted
    polkit
    readline
@@ -8,7 +8,7 @@
    util-linux-libs
  )
  makedepends=(
-@@ -49,7 +48,6 @@
+@@ -52,7 +51,6 @@
    open-iscsi
    python-docutils
    qemu-base
@@ -16,9 +16,9 @@
  )
  optdepends=(
    'dmidecode: DMI system info support'
-@@ -150,7 +148,7 @@
+@@ -148,7 +146,7 @@
  build() {
-   cd "$pkgname-$pkgver"
+   cd ${pkgname}
  
 -  arch-meson build \
 +  artix-meson build \
@@ -31,7 +31,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -35,6 +35,4 @@
+@@ -36,6 +36,4 @@
  python-docutils
  qemu-base
  readline
