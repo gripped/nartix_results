@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -47,7 +47,7 @@
+@@ -51,7 +51,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- git cherry-pick -n c6fcd381425b638c16eeab7e5858bddf7de76b9f
+@@ -4,6 +4,6 @@
+ patch -p1 -i ../gpgme-2.0.patch
  }
  build() {
 -arch-meson seahorse build -D manpage=true

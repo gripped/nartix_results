@@ -1,14 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,9 +1,9 @@
  
  pkgname=pacman
- pkgver=7.0.0.r6.gc685ae6
--pkgrel=5
+-pkgver=7.0.0.r7.g1f38429
+-pkgrel=0
++pkgver=7.0.0.r6.gc685ae6
 +pkgrel=6
  _git_tag=7.0.0
- _git_patch_level_commit=c685ae6412af04cae1eaa5d6bda8c277c7ffb8c8
+-_git_patch_level_commit=1f38429b1c5f30edce30c731aa352e6363cc788e
++_git_patch_level_commit=c685ae6412af04cae1eaa5d6bda8c277c7ffb8c8
  pkgdesc="A library-based package manager with dependency support"
+ arch=('x86_64')
+ url="https://www.archlinux.org/pacman/"
 @@ -20,8 +20,7 @@
    grep
    libarchive libarchive.so
@@ -41,7 +45,16 @@
  
  pkgver() {
    cd "$pkgname"
-@@ -123,12 +126,5 @@
+@@ -71,6 +74,8 @@
+     fi
+     git rebase "${_git_patch_level_commit}"
+   fi
++
++  git cherry-pick -n '0d37c1daa0990766d12d0060a353c829bf8616eb'
+ 
+   local -a patches
+   patches=($(printf '%s\n' "${source[@]}" | grep '.patch'))
+@@ -121,12 +126,5 @@
    install -D -m644 "$srcdir/alpm.sysusers" "${pkgdir}"/usr/lib/sysusers.d/alpm.conf
    install -m644 "$srcdir/rust.conf" "$pkgdir/etc/makepkg.conf.d"
  

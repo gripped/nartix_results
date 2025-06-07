@@ -16,7 +16,7 @@
 -        '0001-arch-specific.patch')
 +        '0001-arch-specific.patch'
 +'mariadb.sysusers.conf' 'mariadb.tmpfiles.conf')
- sha256sums=('11f4af52c4ae42bc03f62b69ed3a2cba8f4959083ca4b47484c7e445a5e6c2a8'
+ sha256sums=('3c6c8dc3de8c716315c8380fbc7a54bd233b21becea54513d27db596390a0ad7'
              'SKIP'
              'SKIP'
 @@ -26,7 +27,9 @@
@@ -30,7 +30,7 @@
  
  prepare() {
    cd mariadb/
-@@ -55,7 +58,7 @@
+@@ -45,7 +48,7 @@
  
  build() {
    local _cmake_options=(
@@ -39,7 +39,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
  
-@@ -66,7 +69,7 @@
+@@ -56,7 +59,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -48,7 +48,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -91,7 +94,7 @@
+@@ -81,7 +84,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -57,68 +57,15 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
  
-@@ -116,20 +119,10 @@
- 
- package_mariadb-libs() {
-   pkgdesc='MariaDB libraries'
--  depends=('liburing' 'liburing.so'
--           'libxcrypt' 'libcrypt.so'
--           'openssl' 'libcrypto.so' 'libssl.so'
--           'pcre2' 'libpcre2-8.so'
--           'zlib' 'libz.so'
--           'zstd' 'libzstd.so')
-+  depends=('liburing' 'libxcrypt' 'libcrypt.so' 'openssl' 'pcre2' 'zlib' 'zstd')
-   optdepends=('krb5: for gssapi authentication')
--  conflicts=('libmysqlclient'
--	     'libmariadbclient'
--	     'mariadb-connector-c')
--  provides=('libmariadbclient'
--	    'mariadb-connector-c'
--	    'libmariadb.so'
--	    'libmariadbd.so')
-+  conflicts=('libmysqlclient' 'libmariadbclient' 'mariadb-connector-c')
-+  provides=('libmariadbclient' 'mariadb-connector-c' 'libmariadb.so' 'libmariadbd.so')
-   replaces=('libmariadbclient')
- 
-   cd build
-@@ -154,9 +147,7 @@
- 
- package_mariadb-clients() {
-   pkgdesc='MariaDB client tools'
--  depends=("mariadb-libs=${pkgver}"
--           'jemalloc'
--           'ncurses' 'libncursesw.so')
-+  depends=("mariadb-libs=${pkgver}" 'jemalloc' 'ncurses')
-   conflicts=('mysql-clients')
-   provides=("mysql-clients=${pkgver}")
- 
-@@ -183,13 +174,8 @@
-           'etc/my.cnf.d/spider.cnf'
-           'etc/security/user_map.conf')
-   install=mariadb.install
--  depends=("mariadb-clients=${pkgver}"
--           'bzip2' 'libbz2.so'
--           'coreutils'
--           'libxml2' 'libxml2.so'
--           'lz4' 'liblz4.so'
+@@ -178,7 +181,6 @@
+            'coreutils'
+            'libxml2' 'libxml2.so'
+            'lz4' 'liblz4.so'
 -           'systemd-libs' 'libsystemd.so'
--           'zstd' 'libzstd.so')
-+  depends=("mariadb-clients=${pkgver}" 'bzip2' 'coreutils' 'libxml2' 'lz4'
-+           'zstd')
+            'zstd' 'libzstd.so')
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
-               'galera: for MariaDB cluster with Galera WSREP'
-@@ -198,8 +184,7 @@
-               'python-mysqlclient: for myrocks_hotbackup'
-               'xz: lzma provider')
-   conflicts=('mysql')
--  provides=("mariadb-server=${pkgver}"
--	    "mysql=${pkgver}")
-+  provides=("mariadb-server=${pkgver}" "mysql=${pkgver}")
-   options=('emptydirs')
- 
-   cd build
-@@ -221,8 +206,8 @@
+@@ -211,8 +213,8 @@
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
  
@@ -129,46 +76,21 @@
  
    rm usr/bin/{mariadb{_,-},mysql_}config
    rm -r usr/include/
-@@ -244,9 +229,7 @@
- 
- package_mytop() {
-   pkgdesc='Top clone for MariaDB'
--  depends=('perl'
--	   'perl-dbd-mariadb'
--	   'perl-term-readkey')
-+  depends=('perl' 'perl-dbd-mariadb' 'perl-term-readkey')
- 
-   install -D -m0755 build/scripts/mytop "$pkgdir"/usr/bin/mytop
- }
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -8,21 +8,10 @@
- jemalloc
- judy
- krb5
--libbz2.so
- libcrypt.so
--libcrypto.so
--liblz4.so
--libncursesw.so
--libpcre2-8.so
--libssl.so
+@@ -15,7 +15,6 @@
+ libncursesw.so
+ libpcre2-8.so
+ libssl.so
 -libsystemd.so
  liburing
--liburing.so
+ liburing.so
  libxcrypt
- libxml2
--libxml2.so
--libz.so
--libzstd.so
- lz4
- mariadb-clients
- mariadb-libs
-@@ -32,8 +21,6 @@
+@@ -32,8 +31,6 @@
  perl
  perl-dbd-mariadb
  perl-term-readkey

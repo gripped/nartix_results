@@ -50,4 +50,3 @@ wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
 xfce4-notifyd
-xfce4-weather-plugin

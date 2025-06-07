@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=francis
+-pkgver=25.04.2
++pkgver=25.04.1
+ pkgrel=1
+ pkgdesc='Track your time'
+ url='https://apps.kde.org/francis/'
+@@ -23,7 +23,7 @@
+ groups=(kde-applications
+         kde-utilities)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('8870c744b249b1fd5094b524aa44e6d6f027ee2fe04e0cb689efe3bf79670a0b'
++sha256sums=('ccf641c1719f4f2b70365f99632e41056b0682bf17cc9e699817d993936259c5'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

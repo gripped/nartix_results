@@ -36,6 +36,7 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
+broadcom-wl-dkms
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -120,6 +121,7 @@ eog-docs
 eom
 espeakup
 etherwall
+eventviews
 exo
 extra-cmake-modules
 fastfetch
@@ -347,7 +349,6 @@ libudev0-shim
 libusbsio
 python-libusbsio
 libutempter
-libvirt-python
 libvirt
 libvncserver
 libxfce4ui
@@ -745,9 +746,14 @@ rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
+ruby-mini_portile2
+ruby-nokogiri
 ruby-racc
 ruby-regexp_property_values
-ruby-rspec-mocks
+ruby-rspec-core
+ruby-rspec-expectations
+ruby-rspec-support
+ruby-rspec
 ruby-sys-filesystem
 rust
 lib32-rust-libs
@@ -881,6 +887,10 @@ wlroots0.18
 wlroots0.19
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt
 x11vnc
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr

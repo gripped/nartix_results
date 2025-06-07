@@ -5,13 +5,13 @@
           nemo-share
           nemo-terminal)
 -pkgver=6.4.0
--pkgrel=2
+-pkgrel=3
 +pkgver=6.0.1
 +pkgrel=1
  pkgdesc="Various extensions for Nemo"
  arch=(x86_64)
  license=(GPL2)
-@@ -20,19 +20,16 @@
+@@ -20,23 +20,16 @@
  _preview_deps=(cjs clutter-gtk clutter-gst libmusicbrainz5 gtksourceview4 xreader webkit2gtk-4.1)
  _python_deps=(python-gobject python-setuptools)
  _seahorse_deps=(libcryptui)
@@ -20,11 +20,14 @@
  makedepends+=("${_preview_deps[@]}" "${_python_deps[@]}" "${_seahorse_deps[@]}")
  options=(!emptydirs)
 -source=("${url}/archive/${pkgver}/${pkgbase}-${pkgver}.tar.gz"
--        https://github.com/linuxmint/nemo-extensions/commit/9cd1e890.patch)
+-        https://github.com/linuxmint/nemo-extensions/commit/9cd1e890.patch
+-        gpgme-2.0.patch)
 -sha256sums=('55e8fb43edde09c3ceba197a4359c1e79b1f0ea7007543d26f32532957aabd49'
--            '2d170132547eee4f698625aa5055cb5e15c510902c46ea70fcf84c05f71bc5cb')
+-            '2d170132547eee4f698625aa5055cb5e15c510902c46ea70fcf84c05f71bc5cb'
+-            'ee74ec6be83d1f44069cc04392e3e34139a90b521f7bf3e4e9172c409bcc6f0a')
 -b2sums=('5c8b26b12ecd752d8e1fefc055891dc70c91b210c99c729babae3946b134634abfb5ef8f0314c8392f0edad891bee6b8e32fae7e4805f0463f30685dcb88ce11'
--        'cd83da627a1db611f78f9daaf6ce497fa36c86c749854174616e2a5418ffee7f3d166028e00172e38ec7c1ec86834fa6d080562aa1631daabb210606b0adfde2')
+-        'cd83da627a1db611f78f9daaf6ce497fa36c86c749854174616e2a5418ffee7f3d166028e00172e38ec7c1ec86834fa6d080562aa1631daabb210606b0adfde2'
+-        '2b040cfb9be99f86defe5dce18439c9b1d6d3a7f15700885e0125bd22ee87dc5076749de9fec4d6987b3e2481bf86abc4b07963b3a8b380aa1d92ae66e32a8e5')
 +source=("${url}/archive/${pkgver}/${pkgbase}-${pkgver}.tar.gz")
 +sha256sums=('d7d0e78df10dc4240623a1daa7cd457cc4c31969c8a6ff1cdeca4b3ce66b5cdb')
 +b2sums=('b4cf28839e9feecdc6716327e432c862c962c5a12bce79317096054a2be7beb2b932e5efd3f31241afed58bead533a085580999da8da3a08b97d76445fee0f8e')
@@ -32,11 +35,12 @@
  prepare() {
    cd $pkgbase-$pkgver
 -  patch -p1 -i ../9cd1e890.patch # Fix build
+-  patch -p1 -i ../gpgme-2.0.patch # Fix build with gpgme 2.0
 +  rm -r ./*/debian # Fix build with newer setuptools
  }
  
  build() {
-@@ -42,7 +39,7 @@
+@@ -46,7 +39,7 @@
      if [[ -f ${_dir}/meson.build ]]; then
        mkdir -p ${_dir}/build
        pushd ${_dir}/build
@@ -62,15 +66,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,6 @@
  prepare() {
  cd $pkgbase-$pkgver
 -patch -p1 -i ../9cd1e890.patch # Fix build
+-patch -p1 -i ../gpgme-2.0.patch # Fix build with gpgme 2.0
 +rm -r ./*/debian # Fix build with newer setuptools
  }
  build() {
  cd ${pkgbase}-${pkgver}
-@@ -8,7 +8,7 @@
+@@ -9,7 +8,7 @@
  if [[ -f ${_dir}/meson.build ]]; then
  mkdir -p ${_dir}/build
  pushd ${_dir}/build

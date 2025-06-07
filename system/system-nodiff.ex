@@ -48,8 +48,6 @@ gnulib-l10n
 gnupg
 gnutls
 gpgme
-qgpgme-qt6
-python-gpgme
 gpm
 grep
 groff

@@ -247,7 +247,6 @@ breeze
 breeze5
 breezy
 bridge-utils
-broadcom-wl-dkms
 broadcom-wl
 bspwm
 btop
@@ -574,7 +573,6 @@ erlang-xmerl
 esbuild
 espeak-ng
 ethtool
-eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -848,6 +846,7 @@ gox
 gparted
 gperf
 gperftools
+gpgmepp
 gphoto2
 gpsd
 gptfdisk
@@ -2019,6 +2018,7 @@ libva
 libvdpau
 libvips
 libvirt-glib
+libvirt-python
 libvisio
 libvisual
 libvoikko
@@ -4531,6 +4531,7 @@ qca-qt5
 qca-qt6
 qcoro
 qgit
+qgpgme
 qhexedit2
 qhull
 qpdf
@@ -4888,7 +4889,6 @@ ruby-mime-types-data
 ruby-mime-types
 ruby-mini_mime
 ruby-mini_portile
-ruby-mini_portile2
 ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
@@ -4925,7 +4925,6 @@ ruby-netrc
 ruby-network_interface
 ruby-nio4r
 ruby-nkf
-ruby-nokogiri
 ruby-observer
 ruby-octokit
 ruby-oedipus_lex
@@ -4986,14 +4985,11 @@ ruby-rexml
 ruby-rinda
 ruby-ronn-ng
 ruby-rr
-ruby-rspec-core
-ruby-rspec-expectations
 ruby-rspec-files
 ruby-rspec-its
 ruby-rspec-memory
+ruby-rspec-mocks
 ruby-rspec-rerun
-ruby-rspec-support
-ruby-rspec
 ruby-rss
 ruby-rubocop-ast
 ruby-rubocop-performance
@@ -5670,10 +5666,6 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265

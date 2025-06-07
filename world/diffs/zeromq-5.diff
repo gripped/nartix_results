@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -50,6 +50,8 @@
+     -B build \
+     -D CMAKE_BUILD_TYPE=None \
+     -D CMAKE_INSTALL_PREFIX=/usr \
++    -D CMAKE_PREFIX_PATH=/usr \
++    -D CMAKE_INSTALL_LIBDIR=/usr/lib \
+     -D CMAKE_CURRENT_BINARY_DIR=/usr \
+     -D BUILD_SHARED=ON \
+     -D BUILD_STATIC=OFF \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-asciidoc
+-cmake
+-gcc-libs
+-git
+-glibc
+-gnutls
+-libpgm
+-libsodium
+-util-linux
+-xmlto
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,8 @@
+ -B build \
+ -D CMAKE_BUILD_TYPE=None \
+ -D CMAKE_INSTALL_PREFIX=/usr \
++-D CMAKE_PREFIX_PATH=/usr \
++-D CMAKE_INSTALL_LIBDIR=/usr/lib \
+ -D CMAKE_CURRENT_BINARY_DIR=/usr \
+ -D BUILD_SHARED=ON \
+ -D BUILD_STATIC=OFF \
