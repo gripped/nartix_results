@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=coturn
+ pkgver=4.6.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Open-source implementation of TURN and STUN server'
+ arch=(x86_64)
+ url=https://github.com/coturn/coturn
 @@ -9,11 +9,9 @@
  depends=(libevent postgresql-libs libmariadbclient hiredis sqlite)
  backup=(etc/turnserver/turnserver.conf)

@@ -522,6 +522,8 @@ onionshare
 open-iscsi
 opencollada
 opendht
+openmpi
+openmpi-docs
 openresolv
 opensmtpd
 opensnitch
@@ -624,11 +626,14 @@ pyqt6
 pysolfc
 python-aiohttp
 python-anytree
+python-googleapis-common-protos
+python-hiredis
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-requests-unixsocket
 qastools
 qbittorrent
 qbittorrent-nox

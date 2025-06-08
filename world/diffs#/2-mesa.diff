@@ -4,10 +4,10 @@
    vulkan-mesa-layers
    mesa-docs
  )
--pkgver=25.1.2
--pkgrel=1
-+pkgver=25.1.1
-+pkgrel=3
+-pkgver=25.1.3
+-pkgrel=2
++pkgver=25.1.2
++pkgrel=1
  epoch=1
  pkgdesc="Open-source OpenGL drivers"
  url="https://www.mesa3d.org/"
@@ -19,46 +19,55 @@
    vulkan-icd-loader
    wayland
    xcb-util-keysyms
-@@ -77,6 +76,7 @@
+@@ -77,8 +76,6 @@
  )
  source=(
    "https://archive.mesa3d.org/mesa-$pkgver.tar.xz"{,.sig}
-+  0001-kopper-Revert-kopper-Explicitly-choose-zink.patch
+-
+-  0001-Revert-hasvk-elk-stop-turning-load_push_constants-in.patch
  )
  validpgpkeys=(
    946D09B5E4C9845E63075FF1D961C596A7203456 # Andres Gomez <tanty@igalia.com>
-@@ -112,8 +112,9 @@
+@@ -114,9 +111,8 @@
    )
  done
  
--b2sums=('2c92a5fb09353034936951f75848fbc1da113a1c78391d781cecc61a8b2aed6e579f0c5e2cf95b213af0f8b8823c73dc48659cb51f124c3e1ee266bfed408189'
-+b2sums=('73618405dee247f7e3141f817ab66e5bbb6256d116cc1bb3eb86ed8c9511194891d3e68b3d7d36cdc3a68fab25a231da58e3bba2da7914e8c7d55ea861d50952'
+-b2sums=('a61698b51b769aea6926192f9a42459449a14f4d732717866814e6917a8db262ca00a0de3cd12fb6d3d6be897d2e7df34d011f29a54774efd431e987dda399e1'
++b2sums=('2c92a5fb09353034936951f75848fbc1da113a1c78391d781cecc61a8b2aed6e579f0c5e2cf95b213af0f8b8823c73dc48659cb51f124c3e1ee266bfed408189'
          'SKIP'
-+        '52ed2848b9aaf7a4c2bb01492a00326ed6e0046e1c7e900e678ce395f34fe28a46fd726d5cb02e57b2a60d116ee1fae30677cdb0e1243157a76b6d6bc7e86db1'
+-        'c3b19195837900a6bcdaefcd5ce213113fe5abcabca55e4a0f0947070fe20c276a5f14b75fa2acfa31405c5949498864c3aae22f4fc2595d66d3d1fde0126235'
          'a6d47c903be6094423d89b8ec3ca899d0a84df6dbd6e76632bb6c9b9f40ad9c216f8fa400310753d392f85072756b43ac3892e0a2c4d55f87ab6463002554823'
          '9a73962e1e38b84131ab2350b69a1f5d611c549533eec73e898c394a9b9442f357bb5d5f59e1be12270dd29bdf237dc2d21786c0c2210736e224ef5d48300dcf'
          'fac5cf6339dc3c0a40b100035a5c874cc7b2efeafeb31c51488d25156e392dc9db86a497e76eead351d2126f69d060422faa9c55d73407a0de9f5be18d234123'
-@@ -130,8 +131,9 @@
+@@ -133,9 +129,8 @@
          '7681b1a7497b5711e663773c1a7e076f333c06c10d3f289079a781c36f050c1620cc279742ea8e5b15ec48f3d6038a6079bbda7fee3ae8e1128bd916d53ed43a'
          '8bc6f68ed286bea617a2cfaf3949bb699d3a0466faeca735314a51596ce950e4ee57eda88154bd562c1728cfaff4cdb5bc1ba701b9d47a9c50d4c4f011bee975')
  
--sha256sums=('c29c93fd35119b949a589463d1feb61b4000c0daad04e8d543d7f909f119bd97'
-+sha256sums=('cf942a18b7b9e9b88524dcbf0b31fed3cde18e6d52b3375b0ab6587a14415bce'
+-sha256sums=('ffcb6cadb5fd356d56008e6308641dfe4b2929f30139f6585436ca6e3cddba7f'
++sha256sums=('c29c93fd35119b949a589463d1feb61b4000c0daad04e8d543d7f909f119bd97'
              'SKIP'
-+            '6b111e9fbbc615a0d7c0a780226c8832c7a53038e4a031da466fef3480328b32'
+-            '1dcb01dcc8dcbdc3e6285f73a47f030b3e9bdb8da0c0825bec98c1b427b9ccba'
              'ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9'
              '7f9f832470494906d1fca5329f8ab5791cc60beb230c74815dff541cbd2b5ca0'
              '168fb715dda47215e360912c096649d23d58bf392ac62f73919e831745e40f26'
-@@ -150,6 +152,8 @@
+@@ -154,16 +149,6 @@
  
  prepare() {
    cd mesa-$pkgver
-+
-+  patch -Np1 -i ../0001-kopper-Revert-kopper-Explicitly-choose-zink.patch
+-
+-  local src
+-  for src in "${source[@]}"; do
+-    src="${src%%::*}"
+-    src="${src##*/}"
+-    src="${src%.zst}"
+-    [[ $src = *.patch ]] || continue
+-    echo "Applying patch $src..."
+-    patch -Np1 < "../$src"
+-  done
  
    echo "$pkgver-arch$epoch.$pkgrel" >VERSION
  }
-@@ -177,7 +181,7 @@
+@@ -191,7 +176,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -67,16 +76,7 @@
    meson compile -C build
  }
  
-@@ -231,7 +235,7 @@
-     'mesa-vdpau<1:24.2.7-1'
-   )
- 
--  meson install -C build --destdir "$pkgdir" --no-rebuild
-+  meson install -C build --destdir "$pkgdir"
- 
-   (
-     local libdir=usr/lib icddir=usr/share/vulkan/icd.d
-@@ -321,7 +325,6 @@
+@@ -335,7 +320,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -84,7 +84,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -346,7 +349,6 @@
+@@ -360,7 +344,6 @@
      libx11
      libxcb
      libxshmfence
@@ -92,7 +92,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -370,7 +372,6 @@
+@@ -384,7 +367,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -100,7 +100,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -396,7 +397,6 @@
+@@ -410,7 +392,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -108,7 +108,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -424,7 +424,6 @@
+@@ -438,7 +419,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -116,7 +116,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -451,7 +450,6 @@
+@@ -465,7 +445,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -124,7 +124,7 @@
      vulkan-icd-loader
      wayland
      xcb-util-keysyms
-@@ -478,7 +476,6 @@
+@@ -492,7 +471,6 @@
      libx11
      libxcb
      libxshmfence

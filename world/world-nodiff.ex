@@ -2522,8 +2522,6 @@ openjade
 openjpeg2
 openlibm
 openmp
-openmpi
-openmpi-docs
 openntpd
 openpgl
 openpmix
@@ -3542,7 +3540,6 @@ python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
 python-google-auth
-python-googleapis-common-protos
 python-graphene
 python-graphql-core
 python-graphql-relay
@@ -3565,7 +3562,6 @@ python-heapdict
 python-helpdev
 python-hexdump
 python-hidapi
-python-hiredis
 python-hishel
 python-hkdf
 python-hpack
@@ -4195,7 +4191,6 @@ python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
-python-requests-unixsocket
 python-requests-wsgi-adapter
 python-requests
 python-requestsexceptions
@@ -4534,6 +4529,7 @@ qgit
 qgpgme
 qhexedit2
 qhull
+qoi
 qpdf
 qpdf-docs
 qqc2-breeze-style
