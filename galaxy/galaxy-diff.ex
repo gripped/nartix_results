@@ -19,6 +19,7 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libxfce4ui
 light
+lxappearance-obconf-gtk3
 ly
 mate-control-center
 mate-screensaver

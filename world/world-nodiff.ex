@@ -2522,11 +2522,12 @@ openjade
 openjpeg2
 openlibm
 openmp
+openmpi
+openmpi-docs
 openntpd
 openpgl
 openpmix
 openpmix-docs
-openrct2
 openscenegraph
 openshadinglanguage
 opensips
@@ -3044,7 +3045,6 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
-prometheus
 prosody
 protobuf-c
 protobuf
@@ -3131,6 +3131,7 @@ python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
+python-aiohttp
 python-aioitertools
 python-aiomysql
 python-aiopg
@@ -3540,6 +3541,7 @@ python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
 python-google-auth
+python-googleapis-common-protos
 python-graphene
 python-graphql-core
 python-graphql-relay
@@ -3562,6 +3564,7 @@ python-heapdict
 python-helpdev
 python-hexdump
 python-hidapi
+python-hiredis
 python-hishel
 python-hkdf
 python-hpack
@@ -4191,6 +4194,7 @@ python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
+python-requests-unixsocket
 python-requests-wsgi-adapter
 python-requests
 python-requestsexceptions
@@ -4738,6 +4742,7 @@ ruby-addressable
 ruby-ae
 ruby-ansi
 ruby-ast
+ruby-async-container-supervisor
 ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
@@ -4877,6 +4882,7 @@ ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
+ruby-memory-leak
 ruby-memory_profiler
 ruby-metaclass
 ruby-method_source
@@ -4885,6 +4891,7 @@ ruby-mime-types-data
 ruby-mime-types
 ruby-mini_mime
 ruby-mini_portile
+ruby-mini_portile2
 ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
@@ -4921,6 +4928,7 @@ ruby-netrc
 ruby-network_interface
 ruby-nio4r
 ruby-nkf
+ruby-nokogiri
 ruby-observer
 ruby-octokit
 ruby-oedipus_lex
@@ -4981,11 +4989,15 @@ ruby-rexml
 ruby-rinda
 ruby-ronn-ng
 ruby-rr
+ruby-rspec-core
+ruby-rspec-expectations
 ruby-rspec-files
 ruby-rspec-its
 ruby-rspec-memory
 ruby-rspec-mocks
 ruby-rspec-rerun
+ruby-rspec-support
+ruby-rspec
 ruby-rss
 ruby-rubocop-ast
 ruby-rubocop-performance
