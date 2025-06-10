@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -91,7 +91,7 @@
+     -DLLVM_LINK_LLVM_DYLIB=ON
+     -DLLVM_MAIN_SRC_DIR="$srcdir/llvm-$pkgver.src"
+     -DSPHINX_WARNINGS_AS_ERRORS=OFF
+-    -DPACKAGE_BUGREPORT=https://gitlab.archlinux.org/archlinux/packaging/packages/clang/-/issues
++    -DPACKAGE_BUGREPORT=https://gitea.artixlinux.org/packages/clang/issues
+   )
+ 
+   cmake .. "${cmake_args[@]}"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+ -DLLVM_LINK_LLVM_DYLIB=ON
+ -DLLVM_MAIN_SRC_DIR="$srcdir/llvm-$pkgver.src"
+ -DSPHINX_WARNINGS_AS_ERRORS=OFF
+--DPACKAGE_BUGREPORT=https://gitlab.archlinux.org/archlinux/packaging/packages/clang/-/issues
++-DPACKAGE_BUGREPORT=https://gitea.artixlinux.org/packages/clang/issues
+ )
+ cmake .. "${cmake_args[@]}"
+ local distribution_components=$(_get_distribution_components | paste -sd\;)

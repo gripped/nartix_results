@@ -6,7 +6,7 @@
  license=('LGPL-2.1-or-later')
 -depends=('polkit' 'systemd')
 +depends=('polkit' 'udev')
- makedepends=('asciidoc' 'meson' 'python-setuptools' 'patch')
+ makedepends=('asciidoc' 'meson' 'python-setuptools' 'patch' 'glib2-devel')
  checkdepends=('umockdev')
  source=(https://gitlab.freedesktop.org/$pkgname/$pkgname/-/archive/$pkgver/$pkgname-$pkgver.tar.gz)
 @@ -15,7 +15,8 @@
@@ -25,7 +25,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,4 +3,4 @@
+@@ -4,4 +4,4 @@
  patch
  polkit
  python-setuptools

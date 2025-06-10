@@ -165,6 +165,7 @@ linux-rt-docs
 linux-zen
 linux-zen-headers
 linux-zen-docs
+lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3

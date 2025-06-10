@@ -136,8 +136,6 @@ attica5
 aubio
 python-aubio
 audacious
-audacity
-audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -321,11 +319,11 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
-clang
 clang14
 clang15
 clang16
 clang18
+clang19
 clazy
 clevis
 cli11
@@ -364,6 +362,7 @@ compiler-rt14
 compiler-rt15
 compiler-rt16
 compiler-rt18
+compiler-rt19
 composefs
 confuse
 consul
@@ -1710,6 +1709,7 @@ libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
+libgit2
 libglib-testing
 libglvnd
 libgme
@@ -2119,6 +2119,7 @@ lksctp-tools
 lld
 lld16
 lld18
+lld19
 lldb
 llhttp
 llvm-julia
@@ -2126,6 +2127,7 @@ llvm
 llvm15
 llvm16
 llvm18
+llvm19
 lmdb
 lmdbxx
 log4cplus
@@ -2199,7 +2201,6 @@ lxqt-policykit
 lxqt-powermanagement
 lxqt-runner
 lxqt-sudo
-ly
 lynx
 lzip
 lzop
@@ -3045,6 +3046,7 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 prosody
 protobuf-c
 protobuf
@@ -5639,6 +5641,7 @@ w3m
 wacomtablet
 waf
 warpinator
+wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
 wasi-libc++abi

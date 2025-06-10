@@ -17,6 +17,8 @@ at-spi2-core-docs
 at
 atril
 audacious-plugins
+audacity
+audacity-docs
 avahi
 awesome
 bash-bats
@@ -69,6 +71,7 @@ chromium-bsu
 chrony
 cinnamon-desktop
 clamav
+clang
 cloud-init
 clucene
 cmake
@@ -330,7 +333,6 @@ libepoxy
 libepoxy-docs
 libfido2
 libfprint
-libgit2
 libgudev
 libguestfs
 libhandy0
@@ -414,6 +416,7 @@ lxsession-gtk3
 lxtask
 lxtask-gtk3
 lxterminal
+ly
 mako
 maliit-framework
 marco
@@ -612,7 +615,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-prometheus
 proxytunnel
 pulseaudio
 libpulse
@@ -860,7 +862,6 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
-wasi-compiler-rt
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

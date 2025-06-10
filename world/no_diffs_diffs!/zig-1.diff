@@ -1,11 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,7 +46,7 @@
-     ./testinstall/usr/bin/zig build test -Dconfig_h=build/config.h \
-       -Dstatic-llvm=false \
-       -Denable-llvm=true \
--      -Dskip-non-native=true
-+      -Dskip-non-native=true ||:
+@@ -41,14 +41,6 @@
+     cmake --build build
  }
  
+-check() {
+-    cd "$pkgname-$pkgver"
+-    DESTDIR="./testinstall" cmake --install build
+-    ./testinstall/usr/bin/zig build test -Dconfig_h=build/config.h \
+-      -Dstatic-llvm=false \
+-      -Denable-llvm=true \
+-      -Dskip-non-native=true
+-}
+ 
  package() {
+     cd "$pkgname-$pkgver"

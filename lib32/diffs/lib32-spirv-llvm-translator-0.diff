@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -12,11 +12,10 @@
  source=(git+${url}.git#tag=v$pkgver)
- sha256sums=('9f18053231af570fb2e24d29840421cbff1b977bc3ac04c9e8a4a19cffea2529')
+ sha256sums=('42b1d255aa8e997c07a857cf167c2c7f554509428581f30f35d8560b39f65ed4')
  
 -pkgver() {
 -  git -C ${_srcname} describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./;s/-/+/'
