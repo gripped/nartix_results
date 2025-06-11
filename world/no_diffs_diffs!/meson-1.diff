@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -82,7 +82,7 @@
+@@ -81,7 +81,7 @@
  )
  source=(
    "git+https://github.com/mesonbuild/meson?signed#tag=$pkgver"
@@ -9,7 +9,7 @@
    cross-lib32
    native-clang
    0001-Skip-broken-tests.patch
-@@ -130,7 +130,8 @@
+@@ -128,7 +128,8 @@
    install -Dm644 data/shell-completions/bash/* -t "$pkgdir/usr/share/bash-completion/completions"
    install -Dm644 data/shell-completions/zsh/*  -t "$pkgdir/usr/share/zsh/site-functions"
  

@@ -17,8 +17,6 @@ at-spi2-core-docs
 at
 atril
 audacious-plugins
-audacity
-audacity-docs
 avahi
 awesome
 bash-bats
@@ -124,7 +122,6 @@ eog-docs
 eom
 espeakup
 etherwall
-eventviews
 exo
 extra-cmake-modules
 fastfetch
@@ -135,6 +132,7 @@ fcitx5
 fcron
 fig2dev
 firefox
+firejail
 firewalld
 flatpak
 flatpak-docs
@@ -534,6 +532,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+pahole
+ostra-cg
 paraview-catalyst
 parole
 passim
@@ -883,10 +883,6 @@ wlroots0.18
 wlroots0.19
 wpewebkit
 wpewebkit-docs
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt
 x11vnc
 xdg-desktop-portal-gnome
 xdg-desktop-portal-wlr

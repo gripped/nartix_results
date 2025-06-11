@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=ark
--pkgver=25.04.2
-+pkgver=25.04.1
- pkgrel=1
- pkgdesc='Archiving Tool'
- arch=(x86_64)
-@@ -42,7 +42,7 @@
- groups=(kde-applications
-         kde-utilities)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('54a374c2f06ff65abe577865a7fc2521de70f10f438b399f81bbe3c0dd4be68a'
-+sha256sums=('e9d2267cbb8da2786e8456c12607ac5aa378589e811159e50b5c667df5143a7f'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
 @@ -57,4 +57,3 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build

@@ -57,7 +57,6 @@ lib32-libarchive
 lib32-libasyncns
 lib32-libavc1394
 lib32-libavtp
-lib32-libbpf
 lib32-libcaca
 lib32-libcanberra
 lib32-libcap

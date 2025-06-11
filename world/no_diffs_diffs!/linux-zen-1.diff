@@ -3,9 +3,10 @@
 @@ -1,11 +1,11 @@
  
  pkgbase=linux-zen
--pkgver=6.14.10.zen1
+-pkgver=6.15.1.zen1
+-pkgrel=2
 +pkgver=6.7.6.zen1
- pkgrel=1
++pkgrel=1
  pkgdesc='Linux ZEN'
  url='https://github.com/zen-kernel/zen-kernel'
  arch=(x86_64)
@@ -42,21 +43,21 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
  )
--sha256sums=('de8b97cfeae74c22f832ee4ca2333c157cc978d98baa122f0ee9c01796a2fe43'
+-sha256sums=('44f1bb84fe512e7bafe0e6dc85d38ec1c6c8fcbe97ccb51d8c19930b799f0d64'
 +sha256sums=('e489ec0e1370d089b446d565aded7a698093d2b7c4122a18f21edb6ef93d37d3'
              'SKIP'
--            '0b692e5879f60b04b0d41a145c45b2985adebc1e9ac335fafe0efbafa33d804e'
+-            '73010aacde62645343e6426b54a589b507515fe94903cf66de54a6ff7a47bafc'
 +            'c6bc98b4ca0839519bc3b497d3094df4094ab346cea90dea5d6189e2439eedb1'
              'SKIP'
--            'bc4996e43b77c188605ee9e535ad7a8482dd8020e6833a9e99bbfdb6a2a87478')
--b2sums=('d94b0ca4eaf302d5b28e8dc7df680b1f6bf98c622d3b7785353597c3bb032bde75ffa7bbc9c6e80583e21c1f47bd4ba635489a1ee1aedbebfdde50223233b053'
+-            '776057f881586faadec3a81263bb5498b028a135c55940b75959cb868c2aace2')
+-b2sums=('bce19089e6c7b7e6f905855940b69a6edb68818caa25de866a3673082ec9e8ad95f842689db185a9271eac5cccd122212c05711f99b4d0c2e0a1b7abc895bc24'
 +            '08174d06259be49e66d548aebfc4c464c30495202385f6d975f4f4338645f830')
 +b2sums=('51d6e2304e7a9188a0fec5714276589cb46948157c76a2f4ed3f5e0bf634d94a89ea75251229a86e018767a3367328c16b610d631c78d82663dcd1d904b73385'
          'SKIP'
--        '4ee92dc3b1df250ce446a8bde177cbe74d97f649f16377ece3a73ad29836531626f597ea4132b2832d43ea98dc6e8f890c7e56297d7af9def8af1dd17eac08ca'
+-        'b83d6d9414b9c0803c2486a84b8d4a7cc943929e5c07c51a1358fb443b261d021417be3e6b67246076b65f4aff0515015068af55fee77efe9358bb4bc85cb3df'
 +        '804a6bfbd65c834da19bfc0e763c0c51a5bb56db27afa025f6122ca429cfa63b55ca384c45d70fe0601cd16001daf75981a55be86d71b471b005363229213c3e'
          'SKIP'
--        'd2246be592f7d6009919719408521bd9f981cf47f6a43e4ea6f3048e15f69a0aee9ac3fdd1c1c67ee3fb841bfdd3c29d0abf1dbc264b46a85b15bac43cc01030')
+-        '4a9d55abd65e146dd3596735e78fac7ae73fd54f02a0d687f1b19715b9725cf73be90eb9340f259670e915697f08666646875f72cfa2b31937d32230cd7b6b88')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        '25a0316b066956e07d8eb3461b7d71dafc2c2aca37157ddef4db779d59668fb1540422d26c76c91313c82fa75b539316bb35abda29571351a9ffc8f9ba62dc24')
@@ -65,7 +66,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -98,13 +91,11 @@
+@@ -98,13 +91,12 @@
      kmod
    )
    optdepends=(
@@ -77,10 +78,11 @@
    provides=(
      KSMBD-MODULE
 -    NTSYNC-MODULE
-     UKSMD-BUILTIN
++    UKSMD-BUILTIN
      VHBA-MODULE
      VIRTUALBOX-GUEST-MODULES
-@@ -141,7 +132,6 @@
+     WIREGUARD-MODULE
+@@ -140,7 +132,6 @@
    install -Dt "$builddir/kernel" -m644 kernel/Makefile
    install -Dt "$builddir/arch/x86" -m644 arch/x86/Makefile
    cp -t "$builddir" -a scripts
@@ -88,7 +90,7 @@
  
    install -Dt "$builddir/tools/objtool" tools/objtool/objtool
  
-@@ -165,14 +155,6 @@
+@@ -164,14 +155,6 @@
  
    echo "Installing KConfig files..."
    find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;

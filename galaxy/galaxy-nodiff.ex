@@ -7,9 +7,6 @@ atool
 atril
 audacious-plugins
 audacious
-avidemux
-avidemux-cli
-avidemux-qt
 blender
 blueman
 bogofilter

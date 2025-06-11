@@ -1,4 +1,7 @@
 alsa-utils
+avidemux
+avidemux-cli
+avidemux-qt
 cinnamon-desktop
 copyq
 doctest

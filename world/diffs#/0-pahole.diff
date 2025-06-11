@@ -1,0 +1,116 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,58 +5,47 @@
+   ostra-cg
+ )
+ pkgver=1.30
+-pkgrel=2
++pkgrel=1
+ epoch=1
+-pkgdesc="Type info tools"
++pkgdesc="Pahole and other DWARF utils"
+ url="https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
+ arch=(x86_64)
+ license=(GPL-2.0-only)
+-depends=(
++makedepends=(
+   bash
++  cmake
++  git
+   glibc
+   libelf
+-  zlib
+-)
+-makedepends=(
+-  cmake
+-  git
+   ninja
+   python
+   python-matplotlib
++  zlib
+ )
+ source=(
+-  "git+$url?signed#tag=v$pkgver"
+-  "git+https://github.com/libbpf/libbpf"
++  "git+https://github.com/acmel/dwarves?signed#tag=v$pkgver"
+   0001-CMakeLists.txt-Install-ostra.py-into-Python3_SITELIB.patch
+ )
+ b2sums=('69bdc8cbc211a239f5f8e50ad63a8106cc58936ebd9c4c440dbaee7c22190189fa132147e0dd2f5fb81e0f07ca1a1c7e9a0691fe985eef12aeb43ea7d94cf4b4'
+-        'SKIP'
+         'f299bb705066a05f5390e07475cec5ab4184aa6d5e1e290c0fb73d50a6e60d5e4729eba59748c1ead388338e2010220a3054db737415f7b2e4bdf7362f4a4745')
+ validpgpkeys=(
+   2DBF5BAA46FB4DED338A335BD65016F35352AA40  # Arnaldo Carvalho de Melo <acme@kernel.org>
+ )
+ 
+ prepare() {
+-  cd pahole
+-
+-  git cherry-pick -n 042d73962d35fdd1466e056f1ea14590b1cdbb9b
++  cd dwarves
+ 
+   git apply -3 ../0001-CMakeLists.txt-Install-ostra.py-into-Python3_SITELIB.patch
+-
+-  git submodule init
+-  git submodule set-url lib/bpf "$srcdir/libbpf"
+-  git -c protocol.file.allow=always -c protocol.allow=never submodule update
+ }
+ 
+ build() {
+   local cmake_options=(
++    -D CMAKE_INSTALL_PREFIX=/usr
+     -D CMAKE_BUILD_TYPE=None
+-    -D CMAKE_INSTALL_PREFIX=/usr
+-    -D GIT_SUBMODULE=OFF
+-    -D LIBBPF_EMBEDDED=ON
++    -D __LIB=lib
+   )
+ 
+-  cmake -S pahole -B build -G Ninja "${cmake_options[@]}"
++  cmake -S dwarves -B build -G Ninja "${cmake_options[@]}"
+   cmake --build build
+ }
+ 
+@@ -75,6 +64,12 @@
+ }
+ 
+ package_pahole() {
++  depends=(
++    bash
++    glibc
++    libelf
++    zlib
++  )
+   optdepends=('ostra-cg: Generate call graphs from encoded traces')
+   provides=(libdwarves{,_emit,_reorganize}.so)
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,13 @@
+ prepare() {
+-cd pahole
+-git cherry-pick -n 042d73962d35fdd1466e056f1ea14590b1cdbb9b
++cd dwarves
+ git apply -3 ../0001-CMakeLists.txt-Install-ostra.py-into-Python3_SITELIB.patch
+-git submodule init
+-git submodule set-url lib/bpf "$srcdir/libbpf"
+-git -c protocol.file.allow=always -c protocol.allow=never submodule update
+ }
+ build() {
+ local cmake_options=(
++-D CMAKE_INSTALL_PREFIX=/usr
+ -D CMAKE_BUILD_TYPE=None
+--D CMAKE_INSTALL_PREFIX=/usr
+--D GIT_SUBMODULE=OFF
+--D LIBBPF_EMBEDDED=ON
++-D __LIB=lib
+ )
+-cmake -S pahole -B build -G Ninja "${cmake_options[@]}"
++cmake -S dwarves -B build -G Ninja "${cmake_options[@]}"
+ cmake --build build
+ }

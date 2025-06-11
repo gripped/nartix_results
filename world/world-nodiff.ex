@@ -136,6 +136,8 @@ attica5
 aubio
 python-aubio
 audacious
+audacity
+audacity-docs
 audex
 audiocd-kio
 audiofile
@@ -572,6 +574,7 @@ erlang-xmerl
 esbuild
 espeak-ng
 ethtool
+eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -636,7 +639,6 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
-firejail
 fish
 five-or-more
 flac
@@ -2570,8 +2572,6 @@ packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
-pahole
-ostra-cg
 palapeli
 pam_wrapper
 pango
@@ -5677,6 +5677,10 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265
