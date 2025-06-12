@@ -513,6 +513,8 @@ wlr-randr
 wlsunset
 wofi
 xapp
+xcursor-vanilla-dmz
+xcursor-vanilla-dmz-aa
 xdg-desktop-portal-lxqt
 xfburn
 xfce4-appfinder

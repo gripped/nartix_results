@@ -18,7 +18,7 @@
  )
  checkdepends=(
    python-pytest-xdist
-@@ -51,19 +51,20 @@
+@@ -51,12 +51,13 @@
  
  build() {
    local meson_options=(
@@ -32,14 +32,6 @@
 +  artix-meson libei build "${meson_options[@]}"
    meson compile -C build
    meson compile -C build doxygen
- }
- 
- check() {
-   meson test -C build --print-errorlogs --no-suite python
--  meson test -C build --print-errorlogs --suite python
-+  meson test -C build --print-errorlogs --suite python || :
- 
-   meson test -C build --print-errorlogs --setup valgrind
  }
 
 

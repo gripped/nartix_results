@@ -2327,7 +2327,6 @@ mkdocs
 mkdocstrings
 mktorrent
 mlt
-mm-common
 mmtf-cpp
 mobile-broadband-provider-info
 mod_dnssd
@@ -2572,6 +2571,8 @@ packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
+pahole
+ostra-cg
 palapeli
 pam_wrapper
 pango

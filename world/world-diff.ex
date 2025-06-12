@@ -466,6 +466,7 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
+mm-common
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -532,8 +533,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-pahole
-ostra-cg
 paraview-catalyst
 parole
 passim
