@@ -247,6 +247,7 @@ breeze
 breeze5
 breezy
 bridge-utils
+broadcom-wl-dkms
 broadcom-wl
 bspwm
 btop
@@ -639,6 +640,7 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
+firejail
 fish
 five-or-more
 flac
@@ -1563,7 +1565,6 @@ layer-shell-qt5
 lbzip2
 lcms2
 ldb
-ldc
 leafpad
 leatherman
 lensfun
@@ -2170,6 +2171,7 @@ lua53-expat
 luajit
 luajson
 lua52-luajson
+luarocks
 luasec
 lua-sec
 lua51-sec
@@ -2327,6 +2329,7 @@ mkdocs
 mkdocstrings
 mktorrent
 mlt
+mm-common
 mmtf-cpp
 mobile-broadband-provider-info
 mod_dnssd
@@ -2444,7 +2447,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts
 noto-fonts-extra
-npm
 nrpe
 nss-mdns
 nsxiv
@@ -3478,6 +3480,7 @@ python-fissix
 python-fixtures
 python-flake8-black
 python-flake8-docstrings
+python-flake8
 python-flaky
 python-flasgger
 python-flask-caching
@@ -3812,7 +3815,6 @@ python-nspektr
 python-ntlm-auth
 python-numba
 python-numexpr
-python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -3969,6 +3971,7 @@ python-pycares
 python-pycodestyle
 python-pycountry
 python-pycparser
+python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome

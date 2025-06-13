@@ -8,6 +8,7 @@ doctest
 ecrire
 efl
 ephoto
+etherwall
 evisum
 featherpad
 firefox
@@ -20,6 +21,8 @@ libetonyek
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+libusbsio
+python-libusbsio
 libxfce4ui
 light
 ly

@@ -1,0 +1,93 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,17 @@
+ 
+ pkgname=('ldc' 'liblphobos')
+ groups=('dlang' 'dlang-ldc')
+-pkgver=1.41.0
+-_pkgcommit=90e39b6a6e61d36ef5f5d0ab6ae0667130fd8549
+-_dversion=2.111.0
++pkgver=1.40.1
++_pkgcommit=880d514c1d553e15fc07cc49091ae2cc3239c3f3
++_dversion=2.110.0
++_clangversion=19 # related to where ldc2 looks for compiler-rt sanitizers
+ epoch=3
+-pkgrel=1
++pkgrel=3
+ pkgdesc="A D Compiler based on the LLVM Compiler Infrastructure including D runtime and libphobos2"
+ arch=('x86_64')
+ url="https://github.com/ldc-developers/ldc"
+ license=('BSD-3-Clause AND BSL-1.0 AND Apache-2.0 WITH LLVM-exception')
+-makedepends=('git' 'cmake' 'llvm' 'lld' 'ldc' 'ninja')
++makedepends=('git' 'cmake' 'llvm19' 'lld' 'ldc' 'ninja')
+ options=(!lto)
+ 
+ source=(
+@@ -18,7 +19,7 @@
+     "ldc-phobos::git+https://github.com/ldc-developers/phobos.git"
+ )
+ 
+-sha256sums=('d680e97568265c37ce456a8837e16a4356c2d93b83511b73ded4c0d681a591a6'
++sha256sums=('4146e0a78d554d94cd1d45aa49d9855baf6c35caa6de5be5153611eeec302274'
+             'SKIP')
+ 
+ prepare() {
+@@ -28,7 +29,12 @@
+     git config submodule.phobos.url "$srcdir/ldc-phobos"
+     git -c protocol.file.allow=always submodule update
+ 
+-    sed -i "s/-lLLVMDebuginfod/-lLLVMDebuginfod -lcurl/" tools/CMakeLists.txt
++
++    git config user.email "cherrypick@localhost"
++    git config user.name "Cherrypick"
++    git cherry-pick 06b2e42a1b8436faae2b7976a1d41a635df116d5
++
++    sed -i "s/ldc::llvm_version_base/\"$_clangversion\"/" driver/linker-gcc.cpp
+ }
+ 
+ build() {
+@@ -56,7 +62,7 @@
+ }
+ 
+ package_ldc() {
+-    depends=('liblphobos' 'llvm-libs' 'gcc' 'compiler-rt' 'curl')
++    depends=('liblphobos' 'llvm19-libs' 'gcc' 'compiler-rt19')
+     backup=('etc/ldc2.conf')
+     provides=("d-compiler=$_dversion")
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,11 @@
+ cmake
+-compiler-rt
++compiler-rt19
+ curl
+ gcc
+ git
+ ldc
+ liblphobos
+ lld
+-llvm
+-llvm-libs
++llvm19
++llvm19-libs
+ ninja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,10 @@
+ git submodule init
+ git config submodule.phobos.url "$srcdir/ldc-phobos"
+ git -c protocol.file.allow=always submodule update
+-sed -i "s/-lLLVMDebuginfod/-lLLVMDebuginfod -lcurl/" tools/CMakeLists.txt
++git config user.email "cherrypick@localhost"
++git config user.name "Cherrypick"
++git cherry-pick 06b2e42a1b8436faae2b7976a1d41a635df116d5
++sed -i "s/ldc::llvm_version_base/\"$_clangversion\"/" driver/linker-gcc.cpp
+ }
+ build() {
+ cd "$srcdir/ldc"

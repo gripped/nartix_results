@@ -17,6 +17,7 @@ artix-metro
 artix-qt-presets
 artixnews
 autofs
+basu
 birdtray
 calamares-branding
 calamares
@@ -55,6 +56,7 @@ linux-lts515
 linux-wifi-hotspot
 lxdm-dinit
 lxqt-build-tools-qt6
+mailgraph-openrc
 mcomix
 mesa-git
 mint-themes-legacy
@@ -167,8 +169,16 @@ ruby-braid
 ruby-fattr
 ruby-main
 ruby-map
+salt-dinit
+salt-openrc
+salt-runit
+salt-s6
 sddm-theme
 sfwbar
+shairplay-dinit
+shairplay-openrc
+shairplay-runit
+shairplay-s6
 simplescreenrecorder
 sneedacity
 snooze

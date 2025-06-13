@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,32 @@
+@@ -1,27 +1,32 @@
  
  pkgname=xfce4-sensors-plugin
 -pkgver=1.5.0
+-pkgrel=2
 +pkgver=1.4.4
- pkgrel=1
++pkgrel=1
  pkgdesc="Sensors plugin for the Xfce panel"
  arch=('x86_64')
 -url="https://docs.xfce.org/panel-plugins/xfce4-sensors-plugin/start"
@@ -25,6 +26,8 @@
  
  build() {
 -  arch-meson $pkgname build \
+-    -Dhddtemp=enabled \
+-    -Dnetcat=enabled \
 -    --localstatedir=/var
 -  meson compile -C build
 +  cd $pkgname-$pkgver
@@ -65,9 +68,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,10 @@
+@@ -1,7 +1,10 @@
  build() {
 -arch-meson $pkgname build \
+--Dhddtemp=enabled \
+--Dnetcat=enabled \
 ---localstatedir=/var
 -meson compile -C build
 +cd $pkgname-$pkgver

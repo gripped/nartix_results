@@ -36,7 +36,6 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
-broadcom-wl-dkms
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -132,7 +131,6 @@ fcitx5
 fcron
 fig2dev
 firefox
-firejail
 firewalld
 flatpak
 flatpak-docs
@@ -300,6 +298,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
+ldc
 libatasmart
 libayatana-indicator
 libblockdev
@@ -385,7 +384,6 @@ lm_sensors
 localsearch
 localsearch-testutils
 lua-filesystem
-luarocks
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -466,7 +464,6 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
-mm-common
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -508,6 +505,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+npm
 nsd
 nushell
 nvidia-open
@@ -627,6 +625,7 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
+python-numpy
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
