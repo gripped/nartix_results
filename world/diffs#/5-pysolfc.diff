@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,55 +1,27 @@
+@@ -1,54 +1,27 @@
  
  pkgname=pysolfc
 -pkgver=3.2.0
+-pkgrel=2
 +pkgver=2.21.0
- pkgrel=1
++pkgrel=1
  pkgdesc="PySol (Fan Club edition) is an exciting collection of more than 1000 solitaire games"
  arch=('any')
  url="http://pysolfc.sourceforge.net/"
@@ -18,7 +19,6 @@
 -  'python-pillow'
 -  'python-pygame'
 -  'python-pysol_cards'
--  'python-six'
 -  'tk'
 -)
 -makedepends=(
@@ -74,7 +74,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,13 +1,10 @@
+@@ -1,12 +1,10 @@
  pysolfc-cardsets
 -python
  python-attrs
@@ -86,8 +86,8 @@
  python-pysol_cards
 +python-random2
  python-setuptools
- python-six
 -python-wheel
++python-six
  tk
 
 --- Arch PKGBUILD

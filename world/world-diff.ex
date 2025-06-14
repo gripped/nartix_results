@@ -132,6 +132,7 @@ fcron
 fig2dev
 firefox
 firewalld
+firewalld-test
 flatpak
 flatpak-docs
 fluidsynth
@@ -298,7 +299,7 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-ldc
+libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -345,6 +346,7 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
+libusbmuxd
 libusbsio
 python-libusbsio
 libutempter
@@ -505,7 +507,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-npm
 nsd
 nushell
 nvidia-open
@@ -625,7 +626,6 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
-python-numpy
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -947,6 +947,7 @@ xorg-xdm
 xorg-xwayland
 xreader
 xscreensaver
+yelp
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

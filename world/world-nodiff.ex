@@ -1565,6 +1565,7 @@ layer-shell-qt5
 lbzip2
 lcms2
 ldb
+ldc
 leafpad
 leatherman
 lensfun
@@ -1589,7 +1590,6 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
-libaec
 libaemu
 libakonadi5
 libalkimia
@@ -2010,7 +2010,6 @@ libupnp
 liburcu
 liburing
 libusb-compat
-libusbmuxd
 libutf8proc
 libutp
 libuv
@@ -2447,6 +2446,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts
 noto-fonts-extra
+npm
 nrpe
 nss-mdns
 nsxiv
@@ -3815,6 +3815,7 @@ python-nspektr
 python-ntlm-auth
 python-numba
 python-numexpr
+python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -5815,7 +5816,6 @@ yaz
 yazi
 yelp-tools
 yelp-xsl
-yelp
 yodl
 youtube-dl
 yt-dlp
