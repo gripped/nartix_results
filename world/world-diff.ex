@@ -103,6 +103,8 @@ dotnet-targeting-pack
 aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
+doxygen
+doxygen-docs
 dracut
 drkonqi
 dtc
@@ -337,6 +339,7 @@ libhandy0
 libinput
 libldm
 libmspub
+libnfs
 libnvme
 libprocps
 libqb
@@ -346,7 +349,6 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
-libusbmuxd
 libusbsio
 python-libusbsio
 libutempter
@@ -947,7 +949,6 @@ xorg-xdm
 xorg-xwayland
 xreader
 xscreensaver
-yelp
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq

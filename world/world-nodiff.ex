@@ -484,8 +484,6 @@ dos2unix
 dosbox
 dotconf
 double-conversion
-doxygen
-doxygen-docs
 dpdk
 dpkg
 dqlite
@@ -1849,7 +1847,6 @@ libndp
 libnet
 libnetfilter_queue
 libnewt
-libnfs
 libnghttp3
 libngtcp2
 libnice
@@ -2010,6 +2007,7 @@ libupnp
 liburcu
 liburing
 libusb-compat
+libusbmuxd
 libutf8proc
 libutp
 libuv
@@ -5816,6 +5814,7 @@ yaz
 yazi
 yelp-tools
 yelp-xsl
+yelp
 yodl
 youtube-dl
 yt-dlp
