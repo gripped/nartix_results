@@ -1588,6 +1588,7 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
+libaec
 libaemu
 libakonadi5
 libalkimia
@@ -1614,7 +1615,6 @@ libburn
 libbytesize
 libcaca
 libcacard
-libcbor
 libcddb
 libcdio-paranoia
 libcdio
@@ -1847,6 +1847,7 @@ libndp
 libnet
 libnetfilter_queue
 libnewt
+libnfs
 libnghttp3
 libngtcp2
 libnice
@@ -1877,7 +1878,6 @@ liborcus
 libosinfo
 libotf
 libotr
-libp11
 libpagemaker
 libpanel
 libpanel-docs
@@ -2270,8 +2270,6 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
-maturin
-python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2423,7 +2421,6 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nltk-data
-nmap
 nng
 nnn
 node-gyp
@@ -3284,7 +3281,6 @@ python-cheetah3
 python-cheetah3-docs
 python-cheroot
 python-cherrypy
-python-claripy
 python-cleo
 python-clevercsv
 python-click-aliases
@@ -4055,7 +4051,6 @@ python-pyscard
 python-pyscreenshot
 python-pysendfile
 python-pyserial
-python-pysmt
 python-pysocks
 python-pysol_cards
 python-pysolr
@@ -5199,7 +5194,6 @@ softhsm
 solid5
 solr
 sonivox
-sonnet
 sonnet5
 sopel
 sord
@@ -5273,9 +5267,7 @@ swtpm
 sxhkd
 sxiv
 syncthing
-syndication
 syndication5
-syntax-highlighting
 syntax-highlighting5
 sysfsutils
 systemsettings
@@ -5468,7 +5460,6 @@ texlive-texmf
 texlive-doc
 texlive-meta
 thermald
-threadweaver
 threadweaver5
 thrift
 thunderbird

@@ -338,8 +338,6 @@ perl-gtk3
 perl-perl4-corelibs
 pinentry-bemenu
 pluma
-ppsspp
-ppsspp-assets
 profanity
 profanity-gtk
 pysolfc-cardsets

@@ -301,7 +301,6 @@ kopeninghours
 ksnip
 ksystemlog
 kwin
-libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -326,6 +325,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libcbor
 libe-book
 libei
 libei-docs
@@ -339,8 +339,8 @@ libhandy0
 libinput
 libldm
 libmspub
-libnfs
 libnvme
+libp11
 libprocps
 libqb
 libsidplay
@@ -450,6 +450,8 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+maturin
+python-maturin
 media-player-info
 memcached
 mesa
@@ -508,6 +510,7 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nmap
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -627,8 +630,10 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-claripy
 python-ipykernel
 python-pymupdf
+python-pysmt
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
@@ -777,6 +782,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+sonnet
 spice-vdagent
 squid
 sshguard
@@ -787,6 +793,8 @@ stunnel
 sway
 swayidle
 switcheroo-control
+syndication
+syntax-highlighting
 syslog-ng
 sysprof
 libsysprof-capture
@@ -803,6 +811,7 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+threadweaver
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

@@ -7,7 +7,7 @@
 -source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
 +source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig}
 +        artix.patch)
- sha256sums=('d02cbbb3269b39680884abf6f14ba68f448570c554173f5249da3b8761784c13'
+ sha256sums=('f7cd022095a9e6bdbe5897720a24bfda81d211757b7c08b173061962bf2ee0b2'
 -            'SKIP')
 +            'SKIP'
 +            '65b541e9f4144adb7c7d3612071b66ebb811c59cef0a7712c1d92345044d618f')

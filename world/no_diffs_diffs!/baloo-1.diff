@@ -1,9 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,4 +46,6 @@
+@@ -22,6 +22,7 @@
+ makedepends=(doxygen
+              extra-cmake-modules
+              kdoctools
++             qt6-doc
+              qt6-tools)
+ optdepends=('qt6-declarative: QML bindings')
+ conflicts=(baloo5)
+@@ -44,4 +45,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,5 +13,6 @@
+ kio
+ lmdb
+ qt6-base
++qt6-doc
+ qt6-tools
+ solid
