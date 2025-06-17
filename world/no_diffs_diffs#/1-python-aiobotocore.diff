@@ -1,9 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -57,6 +57,8 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-aiobotocore
+-pkgver=2.22.0
++pkgver=2.23.0
+ pkgrel=1
+ pkgdesc='asyncio support for botocore library using aiohttp'
+ arch=(any)
+@@ -38,7 +38,7 @@
+   python-yaml
+ )
+ source=("git+$url.git#tag=$pkgver")
+-sha256sums=('df7ff2ded659e8000ef2fca289d484ac29a58afbc33c405b030f285b4b1d66a8')
++sha256sums=('7aa3a9fa71725f5e96171abc9ec743dd95e08915e065b1358cb39b8baceec02f')
+ 
+ build() {
+   cd ${pkgname#python-}
+@@ -57,6 +57,12 @@
      --deselect='tests/test_patches.py::test_patches[EndpointRulesetResolver._get_provider_params-digests117]'
      --deselect='tests/test_patches.py::test_patches[Session.create_client-digests123]'
      --deselect='tests/test_patches.py::test_patches[Waiter.wait-digests191]'
++
++    --deselect='tests/test_patches.py::test_patches[aiohttp-ClientCreator._register_retries-digests8]'
++    --deselect='tests/test_patches.py::test_patches[aiohttp-Endpoint._do_get_response-digests87]'
++    --deselect='tests/test_patches.py::test_patches[aiohttp-get_response-digests123]'
 +
 +    --deselect tests/test_basic_s3.py::test_fail_proxy_request
    )

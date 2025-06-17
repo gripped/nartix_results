@@ -1,7 +1,4 @@
 alsa-utils
-avidemux
-avidemux-cli
-avidemux-qt
 cinnamon-desktop
 copyq
 doctest
@@ -34,8 +31,6 @@ mimalloc
 mpd
 nvidia-390xx-utils
 nvm
-ppsspp
-ppsspp-assets
 qbittorrent
 qbittorrent-nox
 rage

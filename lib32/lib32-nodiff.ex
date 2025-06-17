@@ -186,5 +186,4 @@ lib32-xz
 lib32-zlib
 lib32-zstd
 multilib-devel
-wine-staging
 winetricks

@@ -12,6 +12,9 @@ atool
 atril
 audacious-plugins
 audacious
+avidemux
+avidemux-cli
+avidemux-qt
 blender
 blueman
 bogofilter
@@ -338,6 +341,8 @@ perl-gtk3
 perl-perl4-corelibs
 pinentry-bemenu
 pluma
+ppsspp
+ppsspp-assets
 profanity
 profanity-gtk
 pysolfc-cardsets

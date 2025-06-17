@@ -1588,7 +1588,6 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
-libaec
 libaemu
 libakonadi5
 libalkimia
@@ -1615,6 +1614,7 @@ libburn
 libbytesize
 libcaca
 libcacard
+libcbor
 libcddb
 libcdio-paranoia
 libcdio
@@ -1819,7 +1819,6 @@ libmbim
 libmbim-docs
 libmd
 libmediaart
-libmediainfo
 libmemcached-awesome
 libmicrodns
 libmikmod
@@ -1878,6 +1877,7 @@ liborcus
 libosinfo
 libotf
 libotr
+libp11
 libpagemaker
 libpanel
 libpanel-docs
@@ -2310,7 +2310,6 @@ mingw-w64-winpthreads
 minicom
 minidlna
 minio
-minisign
 miniupnpc
 python-miniupnpc
 minizip-ng
@@ -3281,6 +3280,7 @@ python-cheetah3
 python-cheetah3-docs
 python-cheroot
 python-cherrypy
+python-claripy
 python-cleo
 python-clevercsv
 python-click-aliases
@@ -3545,7 +3545,6 @@ python-googleapis-common-protos
 python-graphene
 python-graphql-core
 python-graphql-relay
-python-graphviz
 python-greenlet
 python-gssapi
 python-guzzle-sphinx-theme
@@ -4051,6 +4050,7 @@ python-pyscard
 python-pyscreenshot
 python-pysendfile
 python-pyserial
+python-pysmt
 python-pysocks
 python-pysol_cards
 python-pysolr
@@ -5194,6 +5194,7 @@ softhsm
 solid5
 solr
 sonivox
+sonnet
 sonnet5
 sopel
 sord
@@ -5267,7 +5268,9 @@ swtpm
 sxhkd
 sxiv
 syncthing
+syndication
 syndication5
+syntax-highlighting
 syntax-highlighting5
 sysfsutils
 systemsettings
@@ -5460,6 +5463,7 @@ texlive-texmf
 texlive-doc
 texlive-meta
 thermald
+threadweaver
 threadweaver5
 thrift
 thunderbird
