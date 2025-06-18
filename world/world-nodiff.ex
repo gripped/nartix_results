@@ -675,7 +675,6 @@ frameworkintegration
 frameworkintegration5
 francis
 freealut
-freecell-solver
 freeglut
 freeimage
 freeradius
@@ -2267,7 +2266,6 @@ massif-visualizer
 mat2
 materia-kde
 kvantum-theme-materia
-materialx
 mathjax2
 matterbridge
 maven
@@ -2420,6 +2418,7 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nltk-data
+nmap
 nng
 nnn
 node-gyp

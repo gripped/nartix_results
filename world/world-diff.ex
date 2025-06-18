@@ -140,6 +140,7 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
+freecell-solver
 freerdp
 freerdp2
 frugally-deep
@@ -449,6 +450,7 @@ mate-themes
 mate-user-guide
 mate-user-share
 mate-utils
+materialx
 matrix-synapse
 maturin
 python-maturin
@@ -511,7 +513,6 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
-nmap
 nodejs-lts-hydrogen
 nsd
 nushell
