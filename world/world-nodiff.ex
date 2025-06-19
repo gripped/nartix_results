@@ -331,7 +331,6 @@ clazy
 clevis
 cli11
 clinfo
-clisp
 cln
 cloc
 clutter-gst
@@ -616,7 +615,6 @@ fcitx5-qt
 featherpad
 feh
 festival
-ffcall
 ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
@@ -675,6 +673,7 @@ frameworkintegration
 frameworkintegration5
 francis
 freealut
+freecell-solver
 freeglut
 freeimage
 freeradius
@@ -1498,7 +1497,6 @@ kstatusnotifieritem
 ksudoku
 ksvg
 ksysguard
-ksystemstats
 kteatime
 ktextaddons
 ktexteditor
@@ -1587,6 +1585,7 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
+libaec
 libaemu
 libakonadi5
 libalkimia
@@ -2004,7 +2003,6 @@ libuninameslist
 libunwind
 libupnp
 liburcu
-liburing
 libusb-compat
 libusbmuxd
 libutf8proc
@@ -2266,8 +2264,11 @@ massif-visualizer
 mat2
 materia-kde
 kvantum-theme-materia
+materialx
 mathjax2
 matterbridge
+maturin
+python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2308,6 +2309,7 @@ mingw-w64-winpthreads
 minicom
 minidlna
 minio
+minisign
 miniupnpc
 python-miniupnpc
 minizip-ng
@@ -2370,7 +2372,6 @@ musl-aarch64
 musl-riscv64
 mutt
 mypaint-brushes1
-mypy
 namcap
 nanobind
 nanomsg
@@ -3544,6 +3545,7 @@ python-googleapis-common-protos
 python-graphene
 python-graphql-core
 python-graphql-relay
+python-graphviz
 python-greenlet
 python-gssapi
 python-guzzle-sphinx-theme
@@ -4179,7 +4181,6 @@ python-referencing
 python-reflink
 python-regex
 python-regress
-python-rencode
 python-reportlab
 python-repoze.lru
 python-requests-aws4auth
@@ -4326,7 +4327,6 @@ python-starlette
 python-statsmodels
 python-stdlibs
 python-stem
-python-stestr
 python-stevedore
 python-stone
 python-straight.plugin
@@ -5287,7 +5287,6 @@ tcl
 tclap
 tcsh
 tdb
-tea
 tecla
 telegram-qt
 telepathy-accounts-signon
@@ -5660,6 +5659,7 @@ wf-recorder
 wget
 whois
 wildmidi
+wine-staging
 wireguard-tools
 wireless_tools
 wireshark

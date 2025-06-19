@@ -38,13 +38,3 @@
  	install -Dm0644 crond.sysconfig "${pkgdir}"/etc/sysconfig/crond
  
  	install -Dm0644 pam/crond "${pkgdir}"/etc/pam.d/crond
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,3 +0,0 @@
--bash
--pam
--run-parts

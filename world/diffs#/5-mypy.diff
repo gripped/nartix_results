@@ -1,0 +1,120 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,63 +1,48 @@
+ 
+ pkgname=mypy
+-pkgver=1.16.1
++pkgver=1.14.0
+ pkgrel=1
+-pkgdesc='Optional static typing for Python (PEP484)'
++pkgdesc='Optional static typing for Python 2 and 3 (PEP484)'
++url="http://www.mypy-lang.org/"
+ arch=('any')
+-url="http://www.mypy-lang.org/"
+ license=('MIT')
+-depends=(
+-  'python'
+-  'python-mypy_extensions'
+-  'python-orjson'
+-  'python-pathspec'
+-  'python-typing_extensions'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-  'python-wheel'
+-)
+-checkdepends=(
+-  'python-attrs'
+-  'python-filelock'
+-  'python-psutil'
+-  'python-pytest'
+-  'python-pytest-xdist'
+-)
++depends=('python' 'python-mypy_extensions' 'python-typing_extensions' 'python-orjson')
++makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++checkdepends=('python-attrs' 'python-psutil' 'python-pytest' 'python-pytest-xdist')
+ optdepends=(
+   'python-lxml: for reports'
+   'python-pip: for installing missing types'
+   'python-psutil: for dmypy'
+   'python-setuptools: for mypyc'
+ )
+-source=(
+-  "$pkgname-$pkgver.tar.gz::https://github.com/python/mypy/archive/v$pkgver.tar.gz"
+-  "$pkgname-exclude-tests.patch"
+-)
+-sha256sums=('c92779a6f0215c913442f2abf1fca615b253fe6d671f8de857fc34321c269ff2'
+-            '4f270a2ab4e20366ae2ebc912c2589edd070f488a224d2a6b3209c731c3a28f9')
++source=("$pkgname-$pkgver.tar.gz::https://github.com/python/mypy/archive/refs/tags/v$pkgver.tar.gz")
++sha256sums=('f1af5afba749b4d055545831693cc37702adf979e75dfec48e97f0c0e0f381a5')
+ 
+ prepare() {
+-  cd "$pkgname-$pkgver"
+-  sed -e '/Werror/d' -i mypyc/build.py
+-  patch -Np1 < ../$pkgname-exclude-tests.patch
++    cd "$pkgname-$pkgver"
++    sed -e '/typing_extensions/d;/mypy_extensions/d;/typed_ast/d;/tomli/d;/types-psutil/d;/types-setuptools/d;/types-typed-ast/d' -i pyproject.toml
++    sed -e '/Werror/d' -i mypyc/build.py
+ }
+ 
+ build() {
+-  cd "$pkgname-$pkgver"
+-  python -m build --wheel --no-isolation --skip-dependency-check
++    cd "$pkgname-$pkgver"
++    python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd "$pkgname-$pkgver"
+-  unset CFLAGS
+-  pytest -vv
++    cd "$pkgname-$pkgver"
++    pytest -vv -c /dev/null
+ }
+ 
+ package() {
+-  cd "$pkgname-$pkgver"
+-  python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
++    local _site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
++
++    cd "$pkgname-$pkgver"
++    python -m installer --destdir="$pkgdir" dist/*.whl
++    rm -frv "$pkgdir/$_site_packages/$pkgname/test/"
++
++    local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
++    install -d "$pkgdir/usr/share/licenses/$pkgname"
++    ln -s "$site_packages/$pkgname-$pkgver.dist-info/LICENSE" \
++        "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,6 @@
+ python-installer
+ python-mypy_extensions
+ python-orjson
+-python-pathspec
+ python-setuptools
+ python-typing_extensions
+ python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+ cd "$pkgname-$pkgver"
++sed -e '/typing_extensions/d;/mypy_extensions/d;/typed_ast/d;/tomli/d;/types-psutil/d;/types-setuptools/d;/types-typed-ast/d' -i pyproject.toml
+ sed -e '/Werror/d' -i mypyc/build.py
+-patch -Np1 < ../$pkgname-exclude-tests.patch
+ }
+ build() {
+ cd "$pkgname-$pkgver"
+-python -m build --wheel --no-isolation --skip-dependency-check
++python -m build --wheel --no-isolation
+ }

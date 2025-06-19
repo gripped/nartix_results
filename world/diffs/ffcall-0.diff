@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,35 +1,31 @@
+ 
+ pkgname=ffcall
+-pkgver=2.5
+-pkgrel=1
++pkgver=2.4
++pkgrel=3
+ pkgdesc="C library for implementing foreign function calls in embedded interpreters"
+ arch=('x86_64')
+ url="https://www.gnu.org/software/libffcall/"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ depends=('glibc')
+-options=('!makeflags')
+-source=("https://ftp.gnu.org/gnu/libffcall/libffcall-${pkgver}.tar.gz"{,.sig})
+-sha256sums=('7f422096b40498b1389093955825f141bb67ed6014249d884009463dc7846879'
+-            'SKIP')
+-validpgpkeys=("9001B85AF9E1B83DF1BDA942F5BE8B267C6A406D") # Bruno Haible (Open Source Development) <bruno@clisp.org>
++options=('!makeflags' 'staticlibs')
++source=(https://ftp.gnu.org/gnu/libffcall/libffcall-${pkgver}.tar.gz)
++sha256sums=('8ef69921dbdc06bc5bb90513622637a7b83a71f31f5ba377be9d8fd8f57912c2')
+ 
+ build() {
+-  cd "lib${pkgname}-${pkgver}"
++  cd "${srcdir}/lib${pkgname}-${pkgver}"
++  [ "$CARCH" = "x86_64" ] && CONFIGFLAG="--with-pic"
+   CFLAGS+=" -ffat-lto-objects" \
+-    ./configure \
+-    --prefix=/usr \
+-    --mandir=/usr/share/man \
+-    --with-pic \
+-    --disable-static
++  ./configure --prefix=/usr --mandir=/usr/share/man $CONFIGFLAG
+   make
+ }
+ 
+ check() {
+-  cd "lib${pkgname}-${pkgver}"
++  cd "${srcdir}/lib${pkgname}-${pkgver}"
+   make check
+ }
+ 
+ package() {
+-  cd "lib${pkgname}-${pkgver}"
++  cd "${srcdir}/lib${pkgname}-${pkgver}"
++  install -d "${pkgdir}"/usr/share/{man,doc/ffcall}
+   make DESTDIR="${pkgdir}" htmldir=/usr/share/doc/ffcall install
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,7 @@
+ build() {
+-cd "lib${pkgname}-${pkgver}"
++cd "${srcdir}/lib${pkgname}-${pkgver}"
++[ "$CARCH" = "x86_64" ] && CONFIGFLAG="--with-pic"
+ CFLAGS+=" -ffat-lto-objects" \
+-./configure \
+---prefix=/usr \
+---mandir=/usr/share/man \
+---with-pic \
+---disable-static
++./configure --prefix=/usr --mandir=/usr/share/man $CONFIGFLAG
+ make
+ }

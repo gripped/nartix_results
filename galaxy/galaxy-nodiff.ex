@@ -85,6 +85,7 @@ fluxbox
 font-manager
 fpc-src
 fpc
+freecell-solver
 gammastep
 garcon
 girara

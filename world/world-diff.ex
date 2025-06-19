@@ -69,6 +69,7 @@ chrony
 cinnamon-desktop
 clamav
 clang
+clisp
 cloud-init
 clucene
 cmake
@@ -131,6 +132,7 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+ffcall
 fig2dev
 firefox
 firewalld
@@ -140,7 +142,6 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
-freecell-solver
 freerdp
 freerdp2
 frugally-deep
@@ -301,8 +302,8 @@ knot
 kopeninghours
 ksnip
 ksystemlog
+ksystemstats
 kwin
-libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -350,6 +351,7 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
+liburing
 libusbsio
 python-libusbsio
 libutempter
@@ -450,10 +452,7 @@ mate-themes
 mate-user-guide
 mate-user-share
 mate-utils
-materialx
 matrix-synapse
-maturin
-python-maturin
 media-player-info
 memcached
 mesa
@@ -471,7 +470,6 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
-minisign
 miopen-hip
 modemmanager
 libmm-glib
@@ -489,6 +487,7 @@ mutter
 mutter-docs
 mutter45
 mutter46
+mypy
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
@@ -632,12 +631,13 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-graphviz
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-rencode
+python-stestr
 qastools
 qbittorrent
 qbittorrent-nox
@@ -799,6 +799,7 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
+tea
 telegram-desktop
 telepathy-glib
 tensorflow
@@ -878,6 +879,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wine
 wireplumber
 libwireplumber
 wireplumber-docs

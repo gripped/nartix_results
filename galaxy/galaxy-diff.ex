@@ -9,7 +9,6 @@ etherwall
 evisum
 featherpad
 firefox
-freecell-solver
 greetd-regreet
 gtklock
 labwc
