@@ -281,6 +281,7 @@ cantor
 capnproto
 capstone
 python-capstone
+cargo-about
 cargo-c
 cargo-edit
 caribou
@@ -331,6 +332,7 @@ clazy
 clevis
 cli11
 clinfo
+clisp
 cln
 cloc
 clutter-gst
@@ -615,6 +617,7 @@ fcitx5-qt
 featherpad
 feh
 festival
+ffcall
 ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
@@ -838,6 +841,7 @@ go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
+gocryptfs
 gom
 gom-docs
 google-glog
@@ -1497,6 +1501,7 @@ kstatusnotifieritem
 ksudoku
 ksvg
 ksysguard
+ksystemstats
 kteatime
 ktextaddons
 ktexteditor
@@ -2003,6 +2008,7 @@ libuninameslist
 libunwind
 libupnp
 liburcu
+liburing
 libusb-compat
 libusbmuxd
 libutf8proc
@@ -2372,6 +2378,7 @@ musl-aarch64
 musl-riscv64
 mutt
 mypaint-brushes1
+mypy
 namcap
 nanobind
 nanomsg
@@ -4181,6 +4188,7 @@ python-referencing
 python-reflink
 python-regex
 python-regress
+python-rencode
 python-reportlab
 python-repoze.lru
 python-requests-aws4auth
@@ -4327,6 +4335,7 @@ python-starlette
 python-statsmodels
 python-stdlibs
 python-stem
+python-stestr
 python-stevedore
 python-stone
 python-straight.plugin
@@ -5287,6 +5296,7 @@ tcl
 tclap
 tcsh
 tdb
+tea
 tecla
 telegram-qt
 telepathy-accounts-signon

@@ -69,7 +69,6 @@ chrony
 cinnamon-desktop
 clamav
 clang
-clisp
 cloud-init
 clucene
 cmake
@@ -132,7 +131,6 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
-ffcall
 fig2dev
 firefox
 firewalld
@@ -302,7 +300,6 @@ knot
 kopeninghours
 ksnip
 ksystemlog
-ksystemstats
 kwin
 libatasmart
 libayatana-indicator
@@ -351,7 +348,6 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
-liburing
 libusbsio
 python-libusbsio
 libutempter
@@ -487,7 +483,6 @@ mutter
 mutter-docs
 mutter45
 mutter46
-mypy
 nautilus
 libnautilus-extension
 libnautilus-extension-docs
@@ -636,8 +631,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-rencode
-python-stestr
 qastools
 qbittorrent
 qbittorrent-nox
@@ -799,7 +792,6 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
-tea
 telegram-desktop
 telepathy-glib
 tensorflow

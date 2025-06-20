@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+              networkmanager-qt)
+ optdepends=('libnl: network usage monitor'
+             'networkmanager-qt: network usage monitor'
+-            'systemd-libs: GPU monitor')
++            'libudev: GPU monitor')
+ groups=(plasma)
+ install=ksystemstats.install
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+@@ -42,4 +42,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
