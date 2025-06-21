@@ -33,6 +33,7 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
+breeze-plymouth
 brightnessctl
 brltty
 brltty-udev-generic

@@ -242,7 +242,6 @@ brasero
 breeze-grub
 breeze-gtk
 breeze-icons
-breeze-plymouth
 breeze
 breeze5
 breezy

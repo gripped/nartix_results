@@ -528,6 +528,7 @@ thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher
+ttf-input-nerd
 ttf-jetbrains-mono
 tumbler
 vagrant
@@ -595,3 +596,4 @@ zathura-pdf-mupdf
 zathura-pdf-poppler
 zathura-ps
 zathura
+zed
