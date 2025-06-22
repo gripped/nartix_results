@@ -33,7 +33,6 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
-breeze-plymouth
 brightnessctl
 brltty
 brltty-udev-generic
@@ -104,8 +103,6 @@ dotnet-targeting-pack
 aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
-doxygen
-doxygen-docs
 dracut
 drkonqi
 dtc
@@ -296,12 +293,14 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
+kmymoney
 knockd
 knot
 kopeninghours
 ksnip
 ksystemlog
 kwin
+libalkimia
 libatasmart
 libayatana-indicator
 libblockdev
@@ -600,6 +599,7 @@ pipewire-session-manager
 pulse-native-provider
 pkgfile
 plasma-workspace
+plasma-x11-session
 plocate
 pluma
 plymouth
@@ -728,6 +728,9 @@ qt6-examples
 qt6-serialport
 qterminal
 qtermwidget
+qtkeychain
+qtkeychain-qt5
+qtkeychain-qt6
 quadrapassel
 quazip
 quazip-qt5

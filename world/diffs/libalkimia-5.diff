@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,30 @@
+ 
+ pkgname=libalkimia
+-pkgver=8.2.0
+-pkgrel=1
++pkgver=8.1.2
++pkgrel=3
+ pkgdesc="A library with common classes and functionality used by finance applications for the KDE SC"
+ arch=('x86_64')
+ url="https://community.kde.org/Alkimia/libalkimia"
+ license=('LGPL')
+-depends=('qt6-webengine' 'knewstuff' 'ktextwidgets')
+-makedepends=('cmake' 'doxygen' 'extra-cmake-modules' 'kdoctools')
++depends=('qt5-webengine' 'knewstuff5' 'hicolor-icon-theme' 'perl')
++makedepends=('cmake' 'doxygen' 'extra-cmake-modules' 'kdoctools5')
+ source=(https://download.kde.org/stable/alkimia/$pkgver/alkimia-$pkgver.tar.xz{,.sig})
+-validpgpkeys=('91F17B048CF4668CD27FE9FBD3694D8B346FCA80'  # Ralf Habacker <ralf.habacker@freenet.de>
+-              'D69A745A55331F44F404D8258D4DE062AA2EB01C') # Thomas Baumgart <thb@net-bembel.de>
+-sha256sums=('68ee1ac4b3ea0516ada66343889d871170b3da63fc9fac89a0c5675af6583996'
++validpgpkeys=('2060FF0BBF0E77C4E56DECE0B3DA98B373A0D6FA'
++              '8C13BC14185A65215B592A2F1243132CD9321771'
++              '91F17B048CF4668CD27FE9FBD3694D8B346FCA80') # Ralf Habacker <ralf.habacker@freenet.de>
++sha256sums=('cf846ee87b9cc630f58e0bdd23334296810ba3bcc1751fe2f4722161897ee33a'
+             'SKIP')
+ 
+ build() {
+-  cmake -B build -S alkimia-$pkgver \
+-    -DQT_MAJOR_VERSION=6 \
+-    -DBUILD_APPLETS=OFF
+-  cmake --build build
++  mkdir build
++  cd build
++
++  cmake -DSHARE_INSTALL_DIR=/usr/share -DBUILD_APPLETS=OFF ../alkimia-${pkgver}
++  make
+ }
+ 
+ package() {
+-  DESTDIR="${pkgdir}" cmake --install build
++  cd build
++
++  make DESTDIR="${pkgdir}" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,8 @@
+ cmake
+ doxygen
+ extra-cmake-modules
+-kdoctools
+-knewstuff
+-ktextwidgets
+-qt6-webengine
++hicolor-icon-theme
++kdoctools5
++knewstuff5
++perl
++qt5-webengine
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+-cmake -B build -S alkimia-$pkgver \
+--DQT_MAJOR_VERSION=6 \
+--DBUILD_APPLETS=OFF
+-cmake --build build
++mkdir build
++cd build
++cmake -DSHARE_INSTALL_DIR=/usr/share -DBUILD_APPLETS=OFF ../alkimia-${pkgver}
++make
+ }

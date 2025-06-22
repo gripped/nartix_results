@@ -143,6 +143,7 @@ audiocd-kio
 audiofile
 audiotube
 augeas
+aurorae
 auth-tarball-from-git
 autoconf-archive
 autoconf2.13
@@ -242,6 +243,7 @@ brasero
 breeze-grub
 breeze-gtk
 breeze-icons
+breeze-plymouth
 breeze
 breeze5
 breezy
@@ -484,6 +486,8 @@ dos2unix
 dosbox
 dotconf
 double-conversion
+doxygen
+doxygen-docs
 dpdk
 dpkg
 dqlite
@@ -1415,7 +1419,6 @@ kmix
 kmousetool
 kmouth
 kmplot
-kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1592,7 +1595,6 @@ libadwaita-docs
 libaec
 libaemu
 libakonadi5
-libalkimia
 libao
 libappimage
 libappindicator
@@ -2690,6 +2692,7 @@ perl-exception-class
 perl-exporter-tiny
 perl-extutils-config
 perl-extutils-cppguess
+perl-extutils-depends
 perl-extutils-helpers
 perl-extutils-installpaths
 perl-extutils-libbuilder
@@ -4636,9 +4639,6 @@ qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools

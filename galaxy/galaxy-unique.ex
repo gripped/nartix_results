@@ -16,6 +16,7 @@ artix-i3-presets
 artix-metro
 artix-qt-presets
 artixnews
+autofs-dinit
 autofs
 basu
 birdtray
