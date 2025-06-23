@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=kwin-x11
+ pkgver=6.4.0
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=1
++pkgrel=2.3
+ pkgdesc='An easy to use, but flexible, X Window Manager'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+@@ -44,7 +44,6 @@
+          libqaccessibilityclient-qt6
+          libx11
+          libxcb
+-         libxcvt
+          libxi
+          libxkbcommon
+          libxkbcommon-x11
+@@ -57,14 +56,13 @@
+          qt6-svg
+          qt6-tools
+          qt6-wayland
+-         systemd-libs
++         libelogind
+          wayland
+          xcb-util-cursor
+          xcb-util-keysyms
+          xcb-util-wm)
+ makedepends=(extra-cmake-modules
+              kdoctools
+-             kwayland
+              plasma-wayland-protocols
+              python
+              wayland-protocols)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -25,7 +25,6 @@
+ kscreenlocker
+ kservice
+ ksvg
+-kwayland
+ kwidgetsaddons
+ kwindowsystem
+ kxmlgui
+@@ -33,12 +32,12 @@
+ libcanberra
+ libdisplay-info
+ libdrm
++libelogind
+ libepoxy
+ libplasma
+ libqaccessibilityclient-qt6
+ libx11
+ libxcb
+-libxcvt
+ libxi
+ libxkbcommon
+ libxkbcommon-x11
+@@ -53,7 +52,6 @@
+ qt6-svg
+ qt6-tools
+ qt6-wayland
+-systemd-libs
+ wayland
+ wayland-protocols
+ xcb-util-cursor

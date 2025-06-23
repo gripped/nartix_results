@@ -1419,6 +1419,7 @@ kmix
 kmousetool
 kmouth
 kmplot
+kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1595,6 +1596,7 @@ libadwaita-docs
 libaec
 libaemu
 libakonadi5
+libalkimia
 libao
 libappimage
 libappindicator
@@ -3627,6 +3629,7 @@ python-ipython-pygments-lexers
 python-ipywidgets
 python-isal
 python-iso8601
+python-isodate
 python-isoduration
 python-isort
 python-iterable-io

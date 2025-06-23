@@ -293,14 +293,13 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
-kmymoney
 knockd
 knot
 kopeninghours
 ksnip
 ksystemlog
+kwin-x11
 kwin
-libalkimia
 libatasmart
 libayatana-indicator
 libblockdev
