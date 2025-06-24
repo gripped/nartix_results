@@ -289,6 +289,7 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
+kirigami
 kismet
 kitty
 kitty-terminfo

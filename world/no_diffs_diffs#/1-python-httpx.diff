@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkgname=httpx
+ pkgname=python-httpx
+ pkgver=0.28.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="A next generation HTTP client for Python"
+ arch=('any')
+ url="https://github.com/encode/${_pkgname}"
+@@ -22,7 +22,7 @@
+ )
+ makedepends=('python-build' 'python-installer' 'python-hatchling' 'python-hatch-fancy-pypi-readme'
+              'python-pygments')
+-checkdepends=('python-pytest-asyncio' 'python-pytest-trio' 'python-brotli' 'python-brotlicffi' 'python-h2' 'python-trustme' 'uvicorn' 'python-socksio'
++checkdepends=('python-pytest-asyncio' 'python-pytest-trio' 'python-typing_extensions' 'python-brotli' 'python-brotlicffi' 'python-h2' 'python-trustme' 'uvicorn' 'python-socksio'
+               'python-rich' 'python-chardet' 'python-zstandard')
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz"
+         "uvicorn-test-server-use-h11.diff")
+@@ -55,8 +55,5 @@
+   cd ${_pkgname}-${pkgver}
+ 
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm644 LICENSE.md "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE.md
+-
+-  install -vDm644 -t "${pkgdir}/usr/share/${pkgname}" pyproject.toml
+-  cp -va -t "${pkgdir}/usr/share/${pkgname}" tests
++  install -Dm644 LICENSE.md "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE.md
+ }

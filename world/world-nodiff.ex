@@ -1386,7 +1386,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
