@@ -246,6 +246,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+iniparser
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -288,6 +289,7 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
+kdepim-runtime
 kgamma
 kirigami
 kismet

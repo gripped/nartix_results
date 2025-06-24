@@ -1084,7 +1084,6 @@ imlib2
 immer
 incidenceeditor
 indent
-iniparser
 inkscape
 innoextract
 intel-compute-runtime
@@ -1291,7 +1290,6 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
-kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
