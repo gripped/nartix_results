@@ -475,6 +475,7 @@ prosody-openrc
 prosody-runit
 prosody-s6
 python-dbus
+python-httpx-aiohttp
 python-pytz-deprecation-shim
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc

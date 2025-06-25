@@ -1290,6 +1290,7 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
+kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -1874,7 +1875,6 @@ libomemo-c
 libomxil-bellagio
 libopenmpt
 libopenraw
-libopensmtpd
 libopusenc
 liborcus
 libosinfo
@@ -2537,7 +2537,6 @@ openscenegraph
 openshadinglanguage
 opensips
 openslide
-opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp

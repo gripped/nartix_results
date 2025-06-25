@@ -289,7 +289,6 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
-kdepim-runtime
 kgamma
 kirigami
 kismet
@@ -342,6 +341,7 @@ libldm
 libmediainfo
 libmspub
 libnvme
+libopensmtpd
 libprocps
 libqb
 libsidplay
@@ -528,6 +528,7 @@ opencollada
 opendht
 openrct2
 openresolv
+opensmtpd-filter-dkimsign
 opensmtpd
 opensnitch
 openvpn
