@@ -1,6 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=waybar
+-pkgver=0.13.0
++pkgver=0.12.0
+ pkgrel=1
+ pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors'
+ arch=('x86_64')
+@@ -14,7 +14,6 @@
+     'glib2'
+     'glibc'
+     'glibmm'
+-    'gpsd'
+     'gtk-layer-shell'
+     'gtk3'
+     'gtkmm3'
+@@ -33,7 +32,7 @@
      'playerctl'
      'sndio'
      'spdlog'
@@ -9,7 +25,16 @@
      'upower'
      'wayland'
  )
-@@ -62,6 +62,7 @@
+@@ -55,7 +54,7 @@
+ source=(
+     "$pkgname-$pkgver.tar.gz::https://github.com/Alexays/Waybar/archive/$pkgver.tar.gz"
+ )
+-b2sums=('5e234046d4dc276c59a8cda57363c43967e21abc618f046dfde8c1952ca5001b2e1575cfaf19bef032d212a7f9fc681e854d758b4a2ca496e4b6f2108d92493c')
++b2sums=('861eacae9ab9571dc09259055b48ff739915de92745de04af4d621de029feb9e5b225ae7f590ea95883c993b12a7be45b164a90d823a322fe4d533a33b3fe689')
+ 
+ build() {
+     cd "Waybar-$pkgver"
+@@ -63,6 +62,7 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
@@ -23,7 +48,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -16,6 +16,7 @@
+@@ -8,7 +8,6 @@
+ glib2-devel
+ glibc
+ glibmm
+-gpsd
+ gtk-layer-shell
+ gtk3
+ gtkmm3
+@@ -17,6 +16,7 @@
  libatkmm-1.6.so
  libcairomm-1.0.so
  libdbusmenu-gtk3
@@ -31,7 +64,7 @@
  libevdev
  libgtk-3.so
  libinput
-@@ -38,7 +39,6 @@
+@@ -39,7 +39,6 @@
  scdoc
  sndio
  spdlog

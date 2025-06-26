@@ -1,9 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,94 +3,68 @@
+@@ -2,95 +2,69 @@
+ pkgbase=kitty
  pkgname=(kitty kitty-terminfo kitty-shell-integration)
  pkgver=0.42.1
- pkgrel=1
+-pkgrel=1
 -pkgdesc="A modern, hackable, featureful, OpenGL-based terminal emulator"
 -arch=('x86_64')
 -url="https://github.com/kovidgoyal/kitty"
@@ -42,13 +43,14 @@
 -source=("https://github.com/kovidgoyal/${pkgbase}/releases/download/v${pkgver}/${pkgbase}-${pkgver}.tar.xz"{,.sig})
 -b2sums=('df0e9cba73d3e05579760b0f3d4778a189ab70b89c3a9932927fecc3c1e16870e8ae34ebd1042e9e1d44920991d5f45e4e53257f095797395f06f102d7308df5'
 -        'SKIP')
++pkgrel=1.1
 +pkgdesc="Modern, hackable, featureful, OpenGL based terminal emulator"
 +arch=(x86_64)
 +url="https://sw.kovidgoyal.net/kitty/"
 +license=(GPL3)
 +depends=('python>=3.8' 'harfbuzz>=2.2.0' zlib libpng freetype2 fontconfig openssl libx11 libxi
 +         libgl libcanberra dbus lcms2 libxkbcommon-x11 xxhash librsync hicolor-icon-theme
-+         pixman cairo)
++         pixman cairo tk)
 +makedepends=(git python-setuptools libxinerama libxrandr libxkbcommon mesa
 +             wayland-protocols python-sphinx python-sphinx-copybutton libxcursor
 +             python-sphinx-inline-tabs python-sphinxext-opengraph python-sphinx-furo go
@@ -160,7 +162,7 @@
  libgl
  libpng
  librsync
-@@ -18,12 +20,20 @@
+@@ -18,12 +20,21 @@
  libxkbcommon
  libxkbcommon-x11
  libxrandr
@@ -177,6 +179,7 @@
 +python-sphinxext-opengraph
 +python>
  simde
++tk
  ttf-nerd-fonts-symbols-mono
 -wayland
 +ttf-roboto

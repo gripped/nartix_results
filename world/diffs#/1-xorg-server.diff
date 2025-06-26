@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- pkgname=('xorg-server' 'xorg-server-xephyr' 'xorg-server-xvfb' 'xorg-server-xnest'
-          'xorg-server-common' 'xorg-server-devel')
- pkgver=21.1.18
--pkgrel=2
-+pkgrel=1
- arch=('x86_64')
- license=('LicenseRef-Adobe-Display-PostScript'
-          'BSD-3-Clause'
 @@ -28,7 +28,7 @@
               'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
               'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
@@ -27,15 +18,7 @@
      -D ipv6=true \
      -D xvfb=true \
      -D xnest=true \
-@@ -62,7 +62,6 @@
-     -D dtrace=false \
-     -D systemd_logind=true \
-     -D suid_wrapper=true \
--    -D linux_acpi=false \
-     -D xkb_dir=/usr/share/X11/xkb \
-     -D xkb_output_dir=/var/lib/xkb \
-     -D libunwind=true
-@@ -99,7 +98,7 @@
+@@ -99,7 +99,7 @@
    pkgdesc="Xorg X server"
    depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
             dbus libgl xf86-input-libinput nettle
@@ -44,7 +27,7 @@
             libpciaccess libdrm libxshmfence libxcvt) # FS#52949
    provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
    conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
-@@ -121,7 +120,7 @@
+@@ -121,7 +121,7 @@
  
  package_xorg-server-xephyr() {
    pkgdesc="A nested X server that runs as an X application"
@@ -53,7 +36,7 @@
             xcb-util-image xcb-util-renderutil xcb-util-wm xcb-util-keysyms
             nettle libtirpc
             xcb-util libxdmcp libx11 libxau libxshmfence glibc)
-@@ -136,7 +135,7 @@
+@@ -136,7 +136,7 @@
    pkgdesc="Virtual framebuffer X server"
    license=('MIT' 'GPL-2.0-only')
    depends=(libxfont2 libunwind pixman xorg-server-common xorg-xauth
@@ -62,7 +45,7 @@
             libxdmcp sh glibc libxau)
  
    _install fakeinstall/usr/bin/Xvfb
-@@ -151,7 +150,7 @@
+@@ -151,7 +151,7 @@
  package_xorg-server-xnest() {
    pkgdesc="A nested X server that runs as an X application"
    depends=(libxfont2 libunwind libxext pixman xorg-server-common nettle

@@ -1875,6 +1875,7 @@ libomemo-c
 libomxil-bellagio
 libopenmpt
 libopenraw
+libopensmtpd
 libopusenc
 liborcus
 libosinfo
@@ -2537,6 +2538,7 @@ openscenegraph
 openshadinglanguage
 opensips
 openslide
+opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensp
@@ -4638,6 +4640,9 @@ qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
+qtkeychain
+qtkeychain-qt5
+qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools

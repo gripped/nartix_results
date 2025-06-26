@@ -341,7 +341,6 @@ libldm
 libmediainfo
 libmspub
 libnvme
-libopensmtpd
 libprocps
 libqb
 libsidplay
@@ -528,7 +527,6 @@ opencollada
 opendht
 openrct2
 openresolv
-opensmtpd-filter-dkimsign
 opensmtpd
 opensnitch
 openvpn
@@ -731,9 +729,6 @@ qt6-examples
 qt6-serialport
 qterminal
 qtermwidget
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 quadrapassel
 quazip
 quazip-qt5
