@@ -4007,7 +4007,6 @@ python-pygdbmi
 python-pygeos
 python-pygit2
 python-pygls
-python-pygments
 python-pygraphviz
 python-pyhamcrest
 python-pyhcl
@@ -4358,7 +4357,6 @@ python-tappy
 python-tblib
 python-teamcity-messages
 python-tempita
-python-tempora
 python-tenacity
 python-tensile
 python-termcolor
@@ -5582,7 +5580,8 @@ utf8cpp
 uthash
 uv
 $pkgbase
-python-$pkgbase
+"python-$pkgbase"
+"python-$pkgbase"-build
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip
@@ -5624,6 +5623,7 @@ virtualbox-guest-utils
 virtualbox-guest-utils-nox
 virtualbox-ext-vnc
 virtualgl
+viskores
 vkd3d
 vmaf
 vncdotool

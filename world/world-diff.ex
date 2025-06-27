@@ -629,10 +629,12 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
+python-pygments
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-tempora
 qastools
 qbittorrent
 qbittorrent-nox
