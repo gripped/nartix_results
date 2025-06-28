@@ -68,10 +68,13 @@ angelfish
 ansible-core
 ansible-language-server
 ansible-lint
+ansible-navigator
+ansible-runner
 ansible
 ant
 ant-doc
 anthy
+anubis
 aom
 aom-docs
 apache-orc
@@ -1084,6 +1087,7 @@ imlib2
 immer
 incidenceeditor
 indent
+iniparser
 inkscape
 innoextract
 intel-compute-runtime
@@ -2644,6 +2648,7 @@ perl-class-load
 perl-class-method-modifiers
 perl-class-singleton
 perl-class-tiny
+perl-clone-choose
 perl-clone
 perl-common-sense
 perl-config-autoconf
@@ -3282,6 +3287,7 @@ python-cffi
 python-cfgv
 python-cfn-lint
 python-cftime
+python-changelog-chug
 python-characteristic
 python-chardet
 python-charset-normalizer
@@ -3356,6 +3362,7 @@ python-cycler
 python-cython-test-exception-raiser
 python-cytoolz
 python-d2to1
+python-daemon
 python-daemonize
 python-daiquiri
 python-dask-expr
@@ -3799,7 +3806,6 @@ python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
 python-netifaces2
-python-networkx
 python-nh3
 python-nine
 python-nitrokey
@@ -3826,6 +3832,7 @@ python-objgraph
 python-objsize
 python-odfpy
 python-omemo-dr
+python-onigurumacffi
 python-openai
 python-openapi-core
 python-openapi-schema-validator
@@ -4007,6 +4014,7 @@ python-pygdbmi
 python-pygeos
 python-pygit2
 python-pygls
+python-pygments
 python-pygraphviz
 python-pyhamcrest
 python-pyhcl
@@ -4357,6 +4365,7 @@ python-tappy
 python-tblib
 python-teamcity-messages
 python-tempita
+python-tempora
 python-tenacity
 python-tensile
 python-termcolor

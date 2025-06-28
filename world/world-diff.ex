@@ -4,7 +4,6 @@ adwaita-fonts
 alacritty
 alsa-utils
 amule
-anubis
 apache
 apcupsd
 appstream
@@ -246,7 +245,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-iniparser
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -629,12 +627,11 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
-python-pygments
+python-networkx
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-tempora
 qastools
 qbittorrent
 qbittorrent-nox

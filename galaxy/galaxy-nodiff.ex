@@ -4,7 +4,6 @@ ack
 acpilight
 ada
 alacritty
-anubis
 arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme

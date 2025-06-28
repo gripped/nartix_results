@@ -1,11 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,88 +1,60 @@
+@@ -1,103 +1,60 @@
  
  pkgname=miopen-hip
 -pkgver=6.4.1
+-pkgrel=2
+-_fdeep_ver=0.15.31
 +pkgver=6.0.2
- pkgrel=1
++pkgrel=1
  pkgdesc="AMD's Machine Intelligence Library (HIP backend)"
  arch=('x86_64')
  url="https://rocm.docs.amd.com/projects/MIOpen/en/latest/index.html"
@@ -13,7 +15,7 @@
 -depends=('rocm-core' 'glibc' 'gcc-libs' 'hipblaslt' 'hipblas' 'rocblas' 'rocrand'
 -         'hip-runtime-amd' 'comgr' 'bzip2' 'composable-kernel' 'roctracer' 'sqlite')
 -makedepends=('cmake' 'git' 'git-lfs' 'ninja' 'rocm-cmake' 'boost' 'lbzip2'
--             'nlohmann-json' 'eigen' 'functional-plus' 'frugally-deep')
+-             'nlohmann-json' 'eigen' 'functional-plus')
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'rocblas' 'rocm-clang-ocl' 'hip'
 +         'comgr' 'bzip2' 'composable-kernel' 'roctracer' 'sqlite')
 +makedepends=('cmake' 'ninja' 'rocm-cmake' 'boost' 'lbzip2'
@@ -27,11 +29,13 @@
 -  "${pkgname}-MIFin::git+https://github.com/ROCm/MIFin.git"
 -  "${pkgname}-rocmlir::git+https://github.com/ROCm/rocMLIR#tag=rocm-$pkgver"
 -  "${pkgname}-half::git+https://github.com/ROCm/half#tag=rocm-$pkgver"
+-  "${pkgname}-frugally-deep::git+https://github.com/Dobiasd/frugally-deep#tag=v$_fdeep_ver"
 -)
 -sha256sums=('ccb9d303537b7572196e60c6077965771716f7c2edac0644e5bf4f778bb7763f'
 -            'SKIP'
 -            '91451c3352320d088adaf2c4721ec0d7942248adfd22ad4a981a2f143fbee4fd'
--            '16e5a6405dd766339a9409665cd1ccdaceed3c0cb7fe12835fa17bd3914aa6cd')
+-            '16e5a6405dd766339a9409665cd1ccdaceed3c0cb7fe12835fa17bd3914aa6cd'
+-            'd1e1d55945eded7219c50f59f55967327118d6792df5a283c01131b18a3f061f')
 +source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz"
 +        "$pkgname-rocmlir-$pkgver.tar.gz::$_mlir/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('e6f671bd6af59f7470f42cda2ff9e77441d8f6c2105772bbf855d31da1085ffa'
@@ -53,6 +57,18 @@
  }
  
  build() {
+-  local fdeep_args=(
+-    -S $pkgname-frugally-deep
+-		-B build-frugally-deep
+-		-Wno-dev
+-		-DCMAKE_BUILD_TYPE=None
+-		-DCMAKE_INSTALL_PREFIX=/usr
+-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+-  )
+-  cmake "${fdeep_args[@]}"
+-  cmake --build build-frugally-deep
+-  DESTDIR="$srcdir/deps" cmake --install build-frugally-deep
+-
 +  export CC=/opt/rocm/llvm/bin/clang
 +  export CXX=/opt/rocm/llvm/bin/clang++
    local llvm_args=(
@@ -107,7 +123,7 @@
    )
    cmake "${cmake_args[@]}"
    cmake --build build
-@@ -91,5 +63,5 @@
+@@ -106,5 +63,5 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  
@@ -120,8 +136,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,18 +7,15 @@
- frugally-deep
+@@ -4,20 +4,18 @@
+ comgr
+ composable-kernel
+ eigen
++frugally-deep
  functional-plus
  gcc-libs
 -git
@@ -145,7 +164,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,54 +1,34 @@
+@@ -1,65 +1,34 @@
  prepare() {
 -cd "$pkgname"
 -git submodule init
@@ -155,6 +174,17 @@
 +sed -i '/add_subdirectory(test)/d' "$_dirname/CMakeLists.txt"
  }
  build() {
+-local fdeep_args=(
+--S $pkgname-frugally-deep
+--B build-frugally-deep
+--Wno-dev
+--DCMAKE_BUILD_TYPE=None
+--DCMAKE_INSTALL_PREFIX=/usr
+--DCMAKE_POLICY_VERSION_MINIMUM=3.5
+-)
+-cmake "${fdeep_args[@]}"
+-cmake --build build-frugally-deep
+-DESTDIR="$srcdir/deps" cmake --install build-frugally-deep
 +export CC=/opt/rocm/llvm/bin/clang
 +export CXX=/opt/rocm/llvm/bin/clang++
  local llvm_args=(

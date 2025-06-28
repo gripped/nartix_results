@@ -1,4 +1,5 @@
 alsa-utils
+anubis
 cinnamon-desktop
 copyq
 doctest
