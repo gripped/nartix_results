@@ -1,6 +1,5 @@
 0ad
 accountsservice
-adwaita-fonts
 alacritty
 alsa-utils
 amule
@@ -288,7 +287,6 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
-kirigami
 kismet
 kitty
 kitty-terminfo
@@ -627,7 +625,6 @@ pyqt6
 pysolfc
 python-anytree
 python-ipykernel
-python-networkx
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -876,6 +873,7 @@ wine
 wireplumber
 libwireplumber
 wireplumber-docs
+wl-clipboard
 wlroots
 wlroots0.15
 wlroots0.16

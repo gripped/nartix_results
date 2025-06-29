@@ -23,6 +23,7 @@ acpilight
 adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
+adwaita-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
@@ -1389,6 +1390,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -3558,6 +3560,7 @@ python-google-auth-httplib2
 python-google-auth-oauthlib
 python-google-auth
 python-googleapis-common-protos
+python-gpgme
 python-graphene
 python-graphql-core
 python-graphql-relay
@@ -3592,6 +3595,7 @@ python-httpcore
 python-httplib2
 python-httpretty
 python-httptools
+python-httpx-aiohttp
 python-httpx-ws
 python-httpx
 python-humanfriendly
@@ -3806,6 +3810,7 @@ python-netcdf4
 python-nethsm-sdk-py
 python-netifaces
 python-netifaces2
+python-networkx
 python-nh3
 python-nine
 python-nitrokey
@@ -5687,7 +5692,6 @@ wireless_tools
 wireshark
 wireshark-cli
 wireshark-qt
-wl-clipboard
 woff2
 wolfssl
 words
