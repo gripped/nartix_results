@@ -975,7 +975,6 @@ guile2.2
 gulp
 gumbo-parser
 gunicorn
-gupnp-av
 gupnp-dlna
 gupnp-igd
 gupnp
@@ -2012,7 +2011,6 @@ libtracefs-docs
 libultrahdr
 libunibreak
 libuninameslist
-libunwind
 libupnp
 liburcu
 liburing
@@ -2391,6 +2389,9 @@ nanobind
 nanomsg
 nanosvg
 nasm
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -2443,7 +2444,6 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch

@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -69,7 +69,7 @@
-     -D ps=enabled
-   )
+ 
+   CFLAGS+=" -DHAVE_STRING_H -DHAVE_STDLIB_H"
  
 -  arch-meson evince build "${meson_options[@]}"
 +  artix-meson evince build "${meson_options[@]}"
@@ -18,9 +18,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -6,6 +6,6 @@
- local meson_options=(
  -D ps=enabled
  )
+ CFLAGS+=" -DHAVE_STRING_H -DHAVE_STDLIB_H"
 -arch-meson evince build "${meson_options[@]}"
 +artix-meson evince build "${meson_options[@]}"
  meson compile -C build

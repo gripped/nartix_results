@@ -333,11 +333,17 @@ pcmanfm-qt
 pcmanfm
 peek
 perl-cairo-gobject
+perl-cgi-fast
+perl-config-grammar
+perl-crypt-des
 perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-next
 perl-glib-object-introspection
 perl-gtk3
+perl-net-openssh
+perl-net-snmp
+perl-net-telnet
 perl-perl4-corelibs
 pinentry-bemenu
 pluma

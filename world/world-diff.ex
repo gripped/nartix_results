@@ -222,6 +222,7 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gupnp-av
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -345,6 +346,7 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
+libunwind
 libusbsio
 python-libusbsio
 libutempter
@@ -480,9 +482,6 @@ mutter
 mutter-docs
 mutter45
 mutter46
-nautilus
-libnautilus-extension
-libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
@@ -505,6 +504,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs
 nsd
 nushell
 nvidia-open
