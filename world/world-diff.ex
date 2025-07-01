@@ -72,8 +72,9 @@ clucene
 cmake
 cmus
 colord
-colord-sane
 libcolord
+colord-sane
+colord-docs
 composable-kernel
 conky
 conmon
@@ -131,6 +132,7 @@ fig2dev
 firefox
 firewalld
 firewalld-test
+flashrom
 flatpak
 flatpak-docs
 fluidsynth
@@ -346,7 +348,6 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
-libunwind
 libusbsio
 python-libusbsio
 libutempter
@@ -749,6 +750,7 @@ ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+run-parts
 rust
 lib32-rust-libs
 rust-musl
@@ -869,6 +871,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wine-staging
 wine
 wireplumber
 libwireplumber

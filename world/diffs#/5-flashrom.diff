@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,12 @@
+ 
+ pkgname=flashrom
+ pkgver=1.5.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Utility for reading, writing, erasing and verifying flash ROM chips"
+ arch=(x86_64)
+ url="https://www.flashrom.org/"
+ license=(GPL-2.0-or-later)
+ depends=(
+-  libcrypto.so
+   libftdi
+   libusb
+   pciutils
+@@ -22,16 +21,15 @@
+ source=(git+https://github.com/flashrom/flashrom.git#tag=v${pkgver})
+ sha256sums=('4a755be0c279d95e68f5d8c8c0ea478c9cb2a372cbf211bc2dc67055400e32b8')
+ 
+-prepare() {
+-  sed -i 's#GROUP="plugdev"#TAG+="uaccess"#g' flashrom/util/flashrom_udev.rules
+-}
+-
+ build() {
+-  arch-meson ${pkgname} build
++  artix-meson ${pkgname} build
+   meson compile -C build
+ }
+ 
+ package() {
+   meson install -C build --destdir "${pkgdir}"
+-  install -Dm644 flashrom/util/flashrom_udev.rules "${pkgdir}"/usr/lib/udev/rules.d/70-flashrom.rules
++
++  cd ${pkgname}
++  sed -i 's#GROUP="plugdev"#TAG+="uaccess"#g' util/flashrom_udev.rules
++  install -Dm644 util/flashrom_udev.rules "${pkgdir}"/usr/lib/udev/rules.d/70-flashrom.rules
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmocka
+ git
+-libcrypto.so
+ libftdi
+ libusb
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,4 @@
+-prepare() {
+-sed -i 's#GROUP="plugdev"#TAG+="uaccess"#g' flashrom/util/flashrom_udev.rules
+-}
+ build() {
+-arch-meson ${pkgname} build
++artix-meson ${pkgname} build
+ meson compile -C build
+ }

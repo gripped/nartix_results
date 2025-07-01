@@ -653,7 +653,6 @@ flac
 flac-doc
 flake8
 flameshot
-flashrom
 flatbuffers
 python-flatbuffers
 flatpak-builder
@@ -2011,6 +2010,7 @@ libtracefs-docs
 libultrahdr
 libunibreak
 libuninameslist
+libunwind
 libupnp
 liburcu
 liburing
@@ -5117,7 +5117,6 @@ ruby2.7
 rubygems
 ruff
 python-ruff
-run-parts
 runc
 rust-bindgen
 rustup
@@ -5686,7 +5685,6 @@ wf-recorder
 wget
 whois
 wildmidi
-wine-staging
 wireguard-tools
 wireless_tools
 wireshark

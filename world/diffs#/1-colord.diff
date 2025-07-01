@@ -1,15 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -24,7 +24,7 @@
    polkit
    shared-mime-info
    sqlite
--  systemd
-+  udev
+-  systemd-libs
++  libudev
  )
  makedepends=(
    argyllcms
-@@ -56,6 +56,7 @@
+@@ -35,7 +35,7 @@
+   gtk-doc
+   meson
+   sane
+-  systemd
++  udev
+   vala
+ )
+ options=(!emptydirs)
+@@ -51,6 +51,7 @@
  
  build() {
    local meson_options=(
@@ -17,7 +26,7 @@
      -D daemon_user=colord
      -D libcolordcompat=true
      -D print_profiles=true
-@@ -63,7 +64,7 @@
+@@ -58,7 +59,7 @@
      -D vapi=true
    )
  
@@ -26,12 +35,12 @@
    meson compile -C build
  }
  
-@@ -121,7 +122,7 @@
-   depends=(
+@@ -108,7 +109,7 @@
      glib2
+     glibc
      lcms2
--    systemd
-+    udev
+-    systemd-libs
++    libudev
    )
    provides=(libcolord.so)
    mv lib/* "$pkgdir"
@@ -41,10 +50,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -17,5 +17,5 @@
+@@ -15,11 +15,11 @@
+ libcolord
+ libgudev
+ libgusb
++libudev
+ meson
+ polkit
  sane
  shared-mime-info
  sqlite
 -systemd
+-systemd-libs
 +udev
  vala
