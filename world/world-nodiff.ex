@@ -3,7 +3,6 @@
 a2ps
 a52dec
 aalib
-aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
@@ -974,6 +973,8 @@ guile2.2
 gulp
 gumbo-parser
 gunicorn
+gupnp-av
+gupnp-av-docs
 gupnp-dlna
 gupnp-igd
 gupnp
@@ -2444,6 +2445,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -4612,7 +4614,6 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
-qt6-3d
 qt6-5compat
 qt6-charts
 qt6-connectivity
@@ -4630,7 +4631,6 @@ qt6-multimedia-ffmpeg
 qt6-multimedia-gstreamer
 qt6-networkauth
 qt6-positioning
-qt6-quick3d
 qt6-quick3dphysics
 qt6-quickeffectmaker
 qt6-quicktimeline
@@ -5685,11 +5685,13 @@ wf-recorder
 wget
 whois
 wildmidi
+wine-staging
 wireguard-tools
 wireless_tools
 wireshark
 wireshark-cli
 wireshark-qt
+wl-clipboard
 woff2
 wolfssl
 words

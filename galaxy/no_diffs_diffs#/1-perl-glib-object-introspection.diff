@@ -13,16 +13,3 @@
  
  package() {
    cd "${_perl_namespace}-${_perl_module}-${pkgver}"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,6 +0,0 @@
--glib-perl
--gobject-introspection
--gobject-introspection-runtime
--perl-cairo-gobject
--perl-extutils-depends
--perl-extutils-pkgconfig

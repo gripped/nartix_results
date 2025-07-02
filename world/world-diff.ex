@@ -1,4 +1,5 @@
 0ad
+aarch64-linux-gnu-binutils
 accountsservice
 alacritty
 alsa-utils
@@ -224,7 +225,6 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
-gupnp-av
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -505,7 +505,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-open
@@ -719,10 +718,12 @@ qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
 qt5-datavis3d
+qt6-3d
 qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
+qt6-quick3d
 qt6-serialport
 qterminal
 qtermwidget
@@ -871,12 +872,10 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wine-staging
 wine
 wireplumber
 libwireplumber
 wireplumber-docs
-wl-clipboard
 wlroots
 wlroots0.15
 wlroots0.16

@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,11 +9,13 @@
+@@ -2,18 +2,20 @@
+ pkgbase=luaexpat
+ pkgname=(lua-expat lua51-expat lua52-expat lua53-expat)
+ pkgver=1.5.1
+-pkgrel=2
++pkgrel=1
+ _rockrel=1
+ pkgdesc='SAX XML parser based on the Expat library'
+ arch=('x86_64')
  url="https://github.com/lunarmodules/$pkgbase"
  license=('MIT')
  depends=(expat)
