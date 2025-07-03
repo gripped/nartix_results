@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url='https://www.x.org'
+ license=('MIT')
+ groups=('xorg-drivers')
+-depends=('spice' 'systemd-libs' 'libxfont2' 'glibc')
++depends=('spice' 'libudev' 'libxfont2' 'glibc')
+ optdepends=('python: for Xspice')
+ makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=25.2' 'spice-protocol'
+     'xorgproto' 'git' 'libcacard')
+@@ -38,3 +38,4 @@
+     install -v -Dm0755 scripts/Xspice "${pkgdir}"/usr/bin/Xspice
+     install -Dm644 "${srcdir}"/${pkgname}-${pkgver}/COPYING "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,9 +2,9 @@
+ git
+ glibc
+ libcacard
++libudev
+ libxfont2
+ spice
+ spice-protocol
+-systemd-libs
+ xorg-server-devel
+ xorgproto

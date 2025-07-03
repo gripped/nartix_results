@@ -1,5 +1,4 @@
 0ad
-aarch64-linux-gnu-binutils
 accountsservice
 alacritty
 alsa-utils
@@ -82,6 +81,7 @@ conmon
 connman
 containerd
 convertlit
+cpio
 cppcheck
 crun
 cups
@@ -133,7 +133,6 @@ fig2dev
 firefox
 firewalld
 firewalld-test
-flashrom
 flatpak
 flatpak-docs
 fluidsynth
@@ -141,6 +140,7 @@ font-manager
 fprintd
 freerdp
 freerdp2
+frei0r-plugins
 frugally-deep
 fwupd-efi
 fwupd
@@ -181,6 +181,7 @@ go-bindata
 godot
 godot-mono
 gpicview
+gpsd
 greetd-tuigreet
 greetd
 $pkgbase
@@ -517,6 +518,7 @@ nvidia
 nvme-cli
 nvtop
 onboard
+onetbb
 onionshare
 open-iscsi
 opencollada
@@ -751,14 +753,6 @@ ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-run-parts
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 ldb
@@ -853,6 +847,9 @@ v2ray
 v4l-utils
 valkey
 vault
+vim
+gvim
+vim-runtime
 vlc
 libvlc
 vpnc
@@ -898,6 +895,7 @@ xf86-video-ati
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-openchrome
+xf86-video-qxl
 xf86-video-vmware
 xfburn
 xfce4-appfinder

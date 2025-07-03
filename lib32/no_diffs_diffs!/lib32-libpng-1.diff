@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _pkgbasename=libpng
+ pkgname=lib32-$_pkgbasename
+-pkgver=1.6.50
++pkgver=1.6.49
+ _libversion=16
+ pkgrel=1
+ pkgdesc='A collection of routines used to create PNG format graphics files (32-bit)'
+@@ -12,7 +12,7 @@
+ makedepends=('git')
+ provides=('libpng16.so')
+ source=("git+https://github.com/pnggroup/libpng.git?signed#tag=v${pkgver}")
+-sha256sums=('7def7cd90b18267c7d4242288e6aafc97077ff59b5454ab9a99ee8b6e9171047')
++sha256sums=('f9fe444413f8c3c3979d06a350725c0b52ba4c6264f2d215902eaa253d9a25e0')
+ validpgpkeys=('F57A55036A4D45837074FD92C9E384533403C2F8'  # Cosmin Truta <ctruta@gmail.com>
+               '1FED507E3236B4A6E53E922BB292C64843FF5BCF') # Cosmin Truta <ctruta@gmail.com>
+ 

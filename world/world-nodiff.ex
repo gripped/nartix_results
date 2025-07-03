@@ -3,6 +3,7 @@
 a2ps
 a52dec
 aalib
+aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
@@ -380,7 +381,6 @@ copr-cli
 corrosion
 coturn
 couchdb
-cpio
 cpp-hocon
 cppdap
 cppunit
@@ -652,6 +652,7 @@ flac
 flac-doc
 flake8
 flameshot
+flashrom
 flatbuffers
 python-flatbuffers
 flatpak-builder
@@ -689,7 +690,6 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
-frei0r-plugins
 fribidi
 fstrm
 ftgl
@@ -856,7 +856,6 @@ gperf
 gperftools
 gpgmepp
 gphoto2
-gpsd
 gptfdisk
 gradle
 gradle-doc
@@ -2493,7 +2492,6 @@ okteta
 okular
 okularpart5
 onednn
-onetbb
 onevpl
 oniguruma
 onnx
@@ -5117,8 +5115,16 @@ ruby2.7
 rubygems
 ruff
 python-ruff
+run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 rustup
 rutabaga-ffi
 rxvt-unicode
@@ -5618,9 +5624,6 @@ viewnior
 vifm
 vigra
 python-vigra
-vim
-gvim
-vim-runtime
 vimiv
 virglrenderer
 virt-manager
@@ -5747,6 +5750,7 @@ xerces-c
 xf86-input-elographics
 xf86-input-libinput
 xf86-input-synaptics
+xf86-input-void
 xf86-video-dummy
 xf86-video-fbdev
 xf86-video-sisusb
