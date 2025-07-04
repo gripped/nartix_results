@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,20 +1,20 @@
+ 
+ pkgname=umockdev
+-pkgver=0.19.1
++pkgver=0.18.4
+ pkgrel=1
+ pkgdesc="Record/mock hardware devices for bug reports and regression tests"
  arch=('x86_64')
  url="https://github.com/martinpitt/umockdev/"
  license=('LGPL')
@@ -8,8 +14,9 @@
 +depends=('udev' 'libgudev' 'libpcap')
  makedepends=('meson' 'gobject-introspection' 'gtk-doc' 'vala')
  source=(https://github.com/martinpitt/umockdev/releases/download/$pkgver/$pkgname-$pkgver.tar.xz)
- sha256sums=('115306f17be78f8c99e20652e2deccdd48df38736bf00eb4f43fefc3809a319c')
-@@ -14,7 +14,7 @@
+-sha256sums=('2cece0e8e366b89b4070be74f3389c9f7fa21aca56d8a5357e96e30cd8d4f426')
++sha256sums=('115306f17be78f8c99e20652e2deccdd48df38736bf00eb4f43fefc3809a319c')
+ 
  build() {
    cd $pkgname-$pkgver
  

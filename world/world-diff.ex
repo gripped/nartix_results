@@ -3,6 +3,7 @@ accountsservice
 alacritty
 alsa-utils
 amule
+ansible-core
 apache
 apcupsd
 appstream
@@ -140,7 +141,6 @@ font-manager
 fprintd
 freerdp
 freerdp2
-frei0r-plugins
 frugally-deep
 fwupd-efi
 fwupd
@@ -290,6 +290,7 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
+kdepim-runtime
 kgamma
 kismet
 kitty
@@ -298,6 +299,7 @@ kitty-shell-integration
 knockd
 knot
 kopeninghours
+krita
 ksnip
 ksystemlog
 kwin-x11
@@ -337,6 +339,8 @@ libgudev
 libguestfs
 libhandy0
 libinput
+libjxl
+libjxl-doc
 libldm
 libmediainfo
 libmspub

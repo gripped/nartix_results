@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=massif-visualizer
+-pkgver=25.04.3
++pkgver=25.04.2
+ pkgrel=1
+ pkgdesc='Visualizer for Valgrind Massif data files'
+ arch=(x86_64)
+@@ -29,7 +29,7 @@
+ groups=(kde-applications
+         kde-sdk)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('762ac3e82aff576c48b511f37fca042121cfaa10f64df31019b18a7bb0098834'
++sha256sums=('103ed4be91baeaff7ee49e58eaaab0c774f3648865a9a106fc1323b191667917'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

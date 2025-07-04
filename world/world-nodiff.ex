@@ -66,7 +66,6 @@ android-file-transfer
 android-tools
 android-udev
 angelfish
-ansible-core
 ansible-language-server
 ansible-lint
 ansible-navigator
@@ -690,6 +689,7 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
+frei0r-plugins
 fribidi
 fstrm
 ftgl
@@ -1293,7 +1293,6 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
-kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -1480,7 +1479,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -1772,8 +1770,6 @@ libixion
 libjcat
 libjpeg-turbo
 libjuice
-libjxl
-libjxl-doc
 libkate
 libkate-docs
 libkcddb
