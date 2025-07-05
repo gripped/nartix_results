@@ -249,7 +249,6 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
-breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -358,6 +357,7 @@ coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
+collada-dom
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -856,6 +856,7 @@ gperf
 gperftools
 gpgmepp
 gphoto2
+gpsd
 gptfdisk
 gradle
 gradle-doc
@@ -1770,6 +1771,8 @@ libixion
 libjcat
 libjpeg-turbo
 libjuice
+libjxl
+libjxl-doc
 libkate
 libkate-docs
 libkcddb
@@ -4608,6 +4611,7 @@ qt5-x11extras
 qt5-xmlpatterns
 qt5ct
 qt5pas
+qt6-3d
 qt6-5compat
 qt6-charts
 qt6-connectivity
@@ -4625,6 +4629,7 @@ qt6-multimedia-ffmpeg
 qt6-multimedia-gstreamer
 qt6-networkauth
 qt6-positioning
+qt6-quick3d
 qt6-quick3dphysics
 qt6-quickeffectmaker
 qt6-quicktimeline

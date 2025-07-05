@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=xterm
 -pkgver=400
+-pkgrel=1
 +pkgver=401
- pkgrel=1
++pkgrel=1.1
  pkgdesc="X Terminal Emulator"
  arch=('x86_64')
+ url="https://invisible-island.net/xterm/"
 @@ -27,7 +27,7 @@
  makedepends=('git')
  optdepends=('xorg-mkfontscale: font scaling')

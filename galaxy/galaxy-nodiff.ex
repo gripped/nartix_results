@@ -363,6 +363,7 @@ python-caja
 python-pysol_cards
 qgis
 qgit
+qps
 qrupdate
 qt5ct
 qt5pas

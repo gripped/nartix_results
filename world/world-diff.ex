@@ -32,6 +32,7 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
+breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -181,7 +182,6 @@ go-bindata
 godot
 godot-mono
 gpicview
-gpsd
 greetd-tuigreet
 greetd
 $pkgbase
@@ -339,8 +339,6 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libjxl
-libjxl-doc
 libldm
 libmediainfo
 libmspub
@@ -724,12 +722,10 @@ qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
 qt5-datavis3d
-qt6-3d
 qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
-qt6-quick3d
 qt6-serialport
 qterminal
 qtermwidget
