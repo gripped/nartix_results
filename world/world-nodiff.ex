@@ -66,6 +66,7 @@ android-file-transfer
 android-tools
 android-udev
 angelfish
+ansible-core
 ansible-language-server
 ansible-lint
 ansible-navigator
@@ -2759,7 +2760,6 @@ perl-ipc-run3
 perl-json-xs
 perl-json
 perl-libintl-perl
-perl-libwww
 perl-lingua-en-inflect
 perl-list-allutils
 perl-list-moreutils-xs
@@ -5152,7 +5152,6 @@ screengrab
 scrot
 sddm-kcm
 sdl12-compat
-sdl2-compat
 sdl2
 sdl2_image
 sdl2_mixer

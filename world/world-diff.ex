@@ -3,7 +3,6 @@ accountsservice
 alacritty
 alsa-utils
 amule
-ansible-core
 apache
 apcupsd
 appstream
@@ -544,6 +543,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-libwww
 pgbouncer
 phodav
 php-legacy
@@ -764,6 +764,7 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
+sdl2-compat
 seatd
 sfml
 shairport-sync

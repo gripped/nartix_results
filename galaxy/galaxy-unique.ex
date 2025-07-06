@@ -142,6 +142,7 @@ mpd-dinit
 numix-icon-theme
 octopi
 opensnitch-openrc
+opentracker
 pacifica-icon-theme
 package-query
 pacman-static
