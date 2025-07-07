@@ -764,7 +764,6 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
-sdl2-compat
 seatd
 sfml
 shairport-sync

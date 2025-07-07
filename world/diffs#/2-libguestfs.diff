@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -40,7 +40,6 @@
+@@ -37,7 +37,6 @@
    squashfs-tools
    strace
    syslinux
@@ -8,16 +8,15 @@
    vim
    xfsprogs
    yara
-@@ -134,7 +133,7 @@
+@@ -131,7 +130,6 @@
      --prefix=/usr
      --sbindir=/usr/bin
      --sysconfdir=/etc
--    --with-extra-packages="libldm systemd-sysvcompat openssh qemu"
-+    --with-extra-packages="libldm openssh qemu"
+-    --with-extra-packages="libldm systemd-sysvcompat openssh"
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -144,11 +143,6 @@
+@@ -141,11 +139,6 @@
    make
  }
  
@@ -35,7 +34,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -67,7 +67,6 @@
+@@ -64,7 +64,6 @@
  strace
  supermin
  syslinux

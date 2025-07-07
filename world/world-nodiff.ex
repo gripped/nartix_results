@@ -5152,6 +5152,7 @@ screengrab
 scrot
 sddm-kcm
 sdl12-compat
+sdl2-compat
 sdl2
 sdl2_image
 sdl2_mixer
