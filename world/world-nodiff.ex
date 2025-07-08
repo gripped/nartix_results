@@ -983,7 +983,6 @@ gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
-gwenhywfar
 gwenview
 gyp
 half
@@ -1422,7 +1421,6 @@ kmix
 kmousetool
 kmouth
 kmplot
-kmymoney
 knavalbattle
 knetwalk
 knewstuff

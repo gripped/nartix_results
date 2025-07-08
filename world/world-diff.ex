@@ -236,6 +236,7 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
+gwenhywfar
 haproxy
 haveged
 hexchat
@@ -295,6 +296,7 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
+kmymoney
 knockd
 knot
 kopeninghours
