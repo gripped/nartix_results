@@ -1,14 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=kasts
 -pkgver=25.04.3
+-pkgrel=2
 +pkgver=25.04.2
- pkgrel=1
++pkgrel=1
  pkgdesc='Kirigami-based podcast player'
  url='https://apps.kde.org/kasts/'
-@@ -33,7 +33,7 @@
+ arch=(x86_64)
+@@ -19,7 +19,6 @@
+          kirigami
+          kirigami-addons
+          kwindowsystem
+-         libvlc
+          qqc2-desktop-style
+          qt6-base
+          qt6-declarative
+@@ -28,13 +27,13 @@
+          syndication
+          taglib
+          threadweaver
+-         vlc-plugins-base)
++         vlc)
+ makedepends=(extra-cmake-modules
+              python)
  groups=(kde-applications
          kde-multimedia)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
@@ -17,3 +34,23 @@
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,7 +12,6 @@
+ kirigami
+ kirigami-addons
+ kwindowsystem
+-libvlc
+ python
+ qqc2-desktop-style
+ qt6-base
+@@ -22,4 +21,4 @@
+ syndication
+ taglib
+ threadweaver
+-vlc-plugins-base
++vlc

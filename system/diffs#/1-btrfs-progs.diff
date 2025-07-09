@@ -56,20 +56,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,16 +0,0 @@
--asciidoc
--e2fsprogs
--git
--glibc
--libgcrypt
--lzo
--python
--python-setuptools
--python-sphinx
--python-sphinx_rtd_theme
+@@ -3,13 +3,13 @@
+ git
+ glibc
+ libgcrypt
++libudev
+ lzo
+ python
+ python-setuptools
+ python-sphinx
+ python-sphinx_rtd_theme
 -systemd
 -systemd-libs
--util-linux-libs
--xmlto
--zlib
--zstd
++udev
+ util-linux-libs
+ xmlto
+ zlib
