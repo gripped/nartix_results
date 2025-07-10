@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,7 +24,7 @@
- b2sums=('f0c3ca6a2270ba28bcafbccf684c94808cb97fdd1f711670972875a15c4acae38e552a1efe6634c644a5c4b79bd668a157f29a482040bef5297718ac303d0190')
+@@ -28,7 +28,7 @@
+     -D docs=true
+   )
  
- build() {
--  arch-meson $pkgname build
-+  artix-meson $pkgname build
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
+   meson compile -C build docs
  }
- 
 
 
 ############# Stripped diff below #################
@@ -17,9 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
- build() {
--arch-meson $pkgname build
-+artix-meson $pkgname build
+@@ -2,7 +2,7 @@
+ local meson_options=(
+ -D docs=true
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
  meson compile -C build
+ meson compile -C build docs
  }

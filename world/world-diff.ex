@@ -31,7 +31,6 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
-breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -82,7 +81,6 @@ conmon
 connman
 containerd
 convertlit
-cpio
 cppcheck
 crun
 cups
@@ -90,6 +88,7 @@ libcups
 dbus-broker
 ddcutil
 dhcpcd
+djvulibre
 dns-over-https
 docker
 dolphin-emu
@@ -236,7 +235,6 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
-gwenhywfar
 haproxy
 haveged
 hexchat
@@ -290,17 +288,14 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
-kdepim-runtime
 kgamma
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
-kmymoney
 knockd
 knot
 kopeninghours
-krita
 ksnip
 ksystemlog
 kwin-x11
@@ -521,7 +516,6 @@ nvidia
 nvme-cli
 nvtop
 onboard
-onetbb
 onionshare
 open-iscsi
 opencollada
@@ -545,7 +539,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-libwww
 pgbouncer
 phodav
 php-legacy
@@ -630,6 +623,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-breathe
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun

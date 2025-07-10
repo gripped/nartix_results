@@ -250,6 +250,7 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
+breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -381,6 +382,7 @@ copr-cli
 corrosion
 coturn
 couchdb
+cpio
 cpp-hocon
 cppdap
 cppunit
@@ -456,7 +458,6 @@ distro-info-data
 distro-info
 django
 python-django
-djvulibre
 dkms
 dleyna
 dleyna-docs
@@ -983,6 +984,7 @@ gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
+gwenhywfar
 gwenview
 gyp
 half
@@ -1294,6 +1296,7 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
+kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -1421,6 +1424,7 @@ kmix
 kmousetool
 kmouth
 kmplot
+kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1479,6 +1483,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1728,6 +1733,7 @@ libgnt
 libgoom2
 libgovirt
 libgphoto2
+libgphoto2-docs
 libgpod
 libgravatar
 libgrss
@@ -2490,6 +2496,7 @@ okteta
 okular
 okularpart5
 onednn
+onetbb
 onevpl
 oniguruma
 onnx
@@ -2758,6 +2765,7 @@ perl-ipc-run3
 perl-json-xs
 perl-json
 perl-libintl-perl
+perl-libwww
 perl-lingua-en-inflect
 perl-list-allutils
 perl-list-moreutils-xs
@@ -3254,7 +3262,6 @@ python-bottleneck
 python-bowler
 python-bracex
 python-braintree
-python-breathe
 python-brotlicffi
 python-btchip
 python-btrees
