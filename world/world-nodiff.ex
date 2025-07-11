@@ -694,6 +694,7 @@ freetype2-docs
 frei0r-plugins
 fribidi
 fstrm
+fsverity-utils
 ftgl
 ftjam
 functional-plus
@@ -874,8 +875,6 @@ grantleetheme5
 graphene
 graphene-docs
 graphicsmagick
-graphite
-graphite-docs
 graphviz
 grilo-plugins
 grilo
@@ -3262,6 +3261,7 @@ python-bottleneck
 python-bowler
 python-bracex
 python-braintree
+python-breathe
 python-brotlicffi
 python-btchip
 python-btrees

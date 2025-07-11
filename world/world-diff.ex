@@ -180,6 +180,8 @@ go-bindata
 godot
 godot-mono
 gpicview
+graphite
+graphite-docs
 greetd-tuigreet
 greetd
 $pkgbase
@@ -623,7 +625,6 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-breathe
 python-ipykernel
 python-pymupdf
 python-pytest-freezegun

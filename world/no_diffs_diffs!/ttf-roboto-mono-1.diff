@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -39,4 +39,3 @@
- 	install -m644 "$srcdir/"*.ttf "$pkgdir/usr/share/fonts/TTF/"
- 	install -D -m644 "$srcdir/LICENSE.txt" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+@@ -36,4 +36,3 @@
+ 	install -Dm0644 -t "$pkgdir/usr/share/fonts/TTF/" "$srcdir/"*.ttf
+ 	install -Dm0644 -t "$pkgdir/usr/share/licenses/$pkgname/" OFL.txt
  }
 -
