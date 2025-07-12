@@ -1390,7 +1390,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -3087,7 +3086,6 @@ pwndbg
 pyalpm
 pyatspi
 python-atspi
-pybind11
 pycups
 python-pycups
 pyenv

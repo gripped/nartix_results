@@ -291,6 +291,7 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -622,6 +623,7 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pybind11
 pyqt6
 pysolfc
 python-anytree

@@ -1,42 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=lib32-libnm
- pkgver=1.52.0
--pkgrel=1
-+pkgrel=1.1
- pkgdesc="NetworkManager client library (32-bit)"
- url="https://networkmanager.dev/"
- arch=(x86_64)
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,6 @@
    lib32-glibc
    lib32-nspr
    lib32-nss
 -  lib32-systemd
-+
    lib32-util-linux
    libnm
  )
-@@ -25,7 +25,7 @@
+@@ -25,7 +24,6 @@
    lib32-polkit
    libxslt
    meson
 -  systemd
-+
  )
  provides=(libnm.so)
  source=(
-@@ -44,7 +44,7 @@
- )
- 
- prepare() {
--  cd NetworkManager
-+  cd NetworkManager || exit
- }
- 
- build() {
-@@ -56,7 +56,9 @@
+@@ -57,7 +55,9 @@
      -D dist_version="$pkgver-$pkgrel"
      -D libaudit=no
      -D session_tracking_consolekit=false
@@ -47,23 +27,13 @@
      -D modify_system=true
      -D selinux=false
  
-@@ -85,7 +87,7 @@
+@@ -86,7 +86,7 @@
      -D qt=false
    )
  
 -  arch-meson NetworkManager build "${meson_options[@]}"
 +  artix-meson NetworkManager build "${meson_options[@]}"
    meson compile -C build
- }
- 
-@@ -94,7 +96,7 @@
- }
- 
- package() {
--  meson install -C build --destdir "${pkgdir}"
--  rm -r "${pkgdir}"/{etc,usr/{bin,include,lib,lib32/NetworkManager,share},var}
-+  meson install -C build --destdir "$pkgdir"
-+  rm -r "$pkgdir"/{etc,usr/{bin,include,lib,lib32/NetworkManager,share},var}
  }
  
 

@@ -18,7 +18,7 @@
    vala
    wpa_supplicant
  )
-@@ -81,9 +79,12 @@
+@@ -84,9 +82,12 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -32,7 +32,7 @@
  
      -D iwd=true
      -D teamdctl=true
-@@ -101,7 +102,7 @@
+@@ -104,7 +105,7 @@
      -D qt=false
    )
  
@@ -41,7 +41,7 @@
    meson compile -C build
  }
  
-@@ -123,6 +124,7 @@
+@@ -126,6 +127,7 @@
    depends=(
      audit
      curl
@@ -49,7 +49,7 @@
      gcc-libs
      glib2
      glibc
-@@ -138,7 +140,6 @@
+@@ -141,7 +143,6 @@
      nspr
      nss
      readline
@@ -57,7 +57,7 @@
      wpa_supplicant
    )
    optdepends=(
-@@ -166,6 +167,9 @@
+@@ -169,6 +170,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -67,7 +67,7 @@
  END
  
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -187,7 +191,6 @@
+@@ -190,7 +194,6 @@
    _pick cloud usr/lib/**/*nm-cloud-setup*
    _pick cloud usr/share/man/*/nm-cloud-setup*
  
@@ -75,7 +75,7 @@
  
    install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
-@@ -200,7 +203,7 @@
+@@ -203,7 +206,7 @@
      glibc
      nspr
      nss
@@ -84,11 +84,6 @@
      util-linux-libs
    )
    provides=(libnm.so)
-@@ -229,4 +232,3 @@
- 
-   mv docs/* "$pkgdir"
- }
--
 
 
 ############# Stripped diff below #################
