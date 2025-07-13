@@ -41,7 +41,7 @@
 -source=("git+https://github.com/labwc/labwc#tag=${pkgver}")
 -b2sums=('ba631a9c5ff6cd1a4178620641dbb8823d20af90cc5b1c705ad0fa70786c6099e95cb04a5b18642aa203964b2bec418e0569b94b1a60543dfd7dbec866c9e0fa')
 -
-+depends=(cairo glib2 glibc libinput libpng librsvg libsfdo libwlroots-0.18.so
++depends=(cairo glib2 glibc libinput libpng librsvg libsfdo libwlroots-0.19.so
 +         libxcb libxkbcommon libxml2 pango pixman ttf-font wayland xorg-xwayland)
 +makedepends=('meson' 'cmake' 'scdoc' 'wayland-protocols')
 +provides=(wayland-compositor)
@@ -64,13 +64,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,5 @@
+@@ -1,12 +1,12 @@
  cairo
 -git
 +cmake
  glib2
  glibc
  libinput
+ libpng
+ librsvg
+ libsfdo
+-libwlroots-0.18.so
++libwlroots-0.19.so
+ libxcb
+ libxkbcommon
+ libxml2
 @@ -14,7 +14,6 @@
  pango
  pixman

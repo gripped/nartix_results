@@ -180,8 +180,6 @@ go-bindata
 godot
 godot-mono
 gpicview
-graphite
-graphite-docs
 greetd-tuigreet
 greetd
 $pkgbase
@@ -339,7 +337,6 @@ libguestfs
 libhandy0
 libinput
 libldm
-libmediainfo
 libmspub
 libnvme
 libprocps
@@ -486,6 +483,7 @@ mutter-docs
 mutter45
 mutter46
 nbd
+nccl
 ndctl
 ndisc6
 nemo-extensions
@@ -499,6 +497,7 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
+neovim
 netavark
 netplan
 networkmanager
@@ -542,6 +541,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-mail-authenticationresults
 pgbouncer
 phodav
 php-legacy
@@ -623,7 +623,6 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-pybind11
 pyqt6
 pysolfc
 python-anytree
@@ -632,6 +631,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-tappy
 qastools
 qbittorrent
 qbittorrent-nox

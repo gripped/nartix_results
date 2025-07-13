@@ -875,6 +875,8 @@ grantleetheme5
 graphene
 graphene-docs
 graphicsmagick
+graphite
+graphite-docs
 graphviz
 grilo-plugins
 grilo
@@ -1829,6 +1831,7 @@ libmbim
 libmbim-docs
 libmd
 libmediaart
+libmediainfo
 libmemcached-awesome
 libmicrodns
 libmikmod
@@ -2396,7 +2399,6 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
-nccl
 ncdu
 ncftp
 ncmpcpp
@@ -2408,7 +2410,6 @@ neofetch
 neomutt
 neon
 neovim-qt
-neovim
 net-snmp
 netcdf-fortran
 netcdf
@@ -2775,7 +2776,6 @@ perl-log-message-simple
 perl-log-message
 perl-lwp-mediatypes
 perl-lwp-protocol-https
-perl-mail-authenticationresults
 perl-mail-box
 perl-mail-dkim
 perl-mail-message
@@ -3086,6 +3086,7 @@ pwndbg
 pyalpm
 pyatspi
 python-atspi
+pybind11
 pycups
 python-pycups
 pyenv
@@ -4186,6 +4187,7 @@ python-pywlroots
 python-pyxbe
 python-pyyaml-env-tag
 python-pyzmq
+python-pyzstd
 python-qdarkstyle
 python-qrcode
 python-qtpy
@@ -4368,7 +4370,6 @@ python-sympy
 python-syrupy
 python-tabulate
 python-tabview
-python-tappy
 python-tblib
 python-teamcity-messages
 python-tempita
