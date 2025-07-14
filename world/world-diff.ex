@@ -288,6 +288,7 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
+keepassxc
 kgamma
 kirigami
 kismet
@@ -298,6 +299,7 @@ knockd
 knot
 kopeninghours
 ksnip
+kstars
 ksystemlog
 kwin-x11
 kwin
@@ -497,7 +499,6 @@ nemo-python
 nemo-seahorse
 nemo-share
 nemo-terminal
-neovim
 netavark
 netplan
 networkmanager
@@ -524,6 +525,7 @@ opencollada
 opendht
 openrct2
 openresolv
+openshadinglanguage
 opensmtpd
 opensnitch
 openvpn
@@ -631,7 +633,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-tappy
 qastools
 qbittorrent
 qbittorrent-nox
@@ -717,6 +718,7 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
+qgpgme
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
@@ -949,7 +951,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wine
 wireplumber
 libwireplumber
 wireplumber-docs

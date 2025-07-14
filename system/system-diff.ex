@@ -1,5 +1,6 @@
 audit
 python-audit
+automake
 base
 bash
 binutils
@@ -74,7 +75,6 @@ pam
 pambase
 ppp
 procps-ng
-readline
 rpcbind
 thin-provisioning-tools
 tpm2-tss

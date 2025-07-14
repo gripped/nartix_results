@@ -114,6 +114,7 @@ lib32-libvdpau
 lib32-libvisual
 lib32-libvorbis
 lib32-libvpx
+lib32-libwebp
 lib32-libx11
 lib32-libxau
 lib32-libxcb

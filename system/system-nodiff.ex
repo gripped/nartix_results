@@ -2,7 +2,6 @@ acl
 argon2
 attr
 autoconf
-automake
 b43-fwcutter
 base-devel
 bison
@@ -156,6 +155,7 @@ pptpclient
 psmisc
 python
 python-tests
+readline
 reiserfsprogs
 run-parts
 s-nail

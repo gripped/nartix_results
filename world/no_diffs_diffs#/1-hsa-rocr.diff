@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=hsa-rocr
+ pkgver=6.4.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='HSA Runtime API and runtime for ROCm'
+ arch=('x86_64')
+ url='https://github.com/ROCm/ROCR-Runtime'
+ license=('NCSA')
+ depends=('rocm-core' 'glibc' 'gcc-libs' 'numactl' 'pciutils' 'libelf' 'libdrm'
+-         'rocm-device-libs' 'rocprofiler-register')
++         'rocm-device-libs')
+ provides=("hsakmt-roct=$pkgver")
+ replaces=('hsakmt-roct')
+ makedepends=('cmake' 'rocm-llvm' 'xxd')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,5 +8,4 @@
+ rocm-core
+ rocm-device-libs
+ rocm-llvm
+-rocprofiler-register
+ xxd

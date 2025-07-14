@@ -1323,7 +1323,6 @@ kdsoap
 kdsoap-qt5
 kdsoap-qt6
 keditbookmarks
-keepassxc
 kemoticons
 kexec-tools
 keybinder2
@@ -1504,7 +1503,6 @@ ksnakeduel
 kspaceduel
 ksquares
 ksshaskpass
-kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -2410,6 +2408,7 @@ neofetch
 neomutt
 neon
 neovim-qt
+neovim
 net-snmp
 netcdf-fortran
 netcdf
@@ -2545,7 +2544,6 @@ openpgl
 openpmix
 openpmix-docs
 openscenegraph
-openshadinglanguage
 opensips
 openslide
 opensmtpd-filter-dkimsign
@@ -4370,6 +4368,7 @@ python-sympy
 python-syrupy
 python-tabulate
 python-tabview
+python-tappy
 python-tblib
 python-teamcity-messages
 python-tempita
@@ -4556,7 +4555,6 @@ qca-qt5
 qca-qt6
 qcoro
 qgit
-qgpgme
 qhexedit2
 qhull
 qoi
@@ -5694,6 +5692,7 @@ wget
 whois
 wildmidi
 wine-staging
+wine
 wireguard-tools
 wireless_tools
 wireshark
