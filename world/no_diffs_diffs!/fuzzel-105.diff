@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+ 
+ build() {
+ 	cd "$pkgname"
+-	arch-meson \
++	artix-meson \
+ 		-Denable-cairo=enabled \
+ 		-Dpng-backend=libpng \
+ 		-Dsvg-backend=librsvg \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ cd "$pkgname"
+-arch-meson \
++artix-meson \
+ -Denable-cairo=enabled \
+ -Dpng-backend=libpng \
+ -Dsvg-backend=librsvg \

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=icewm
+-pkgver=3.8.1
++pkgver=3.8.0
+ pkgrel=1
+ pkgdesc="Window Manager designed for speed, usability, and consistency"
+ url="https://ice-wm.org/"
+@@ -10,7 +10,7 @@
+ makedepends=('asciidoctor' 'cmake' 'xorg-mkfontscale')
+ optdepends=('perl: for icewm-menu-xrandr')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/ice-wm/icewm/archive/refs/tags/${pkgver}.tar.gz")
+-sha256sums=('9177d82b109e7ce233eb87918c1563bf7eaebd37520c88ad511dd9de59652dda')
++sha256sums=('11a3e1287036a967b140f5606a5891b912541fbca919253dcbba4a544c98b490')
+ 
+ build() {
+ 	cmake -B build -S "${pkgname}-${pkgver}" \

@@ -155,7 +155,6 @@ pptpclient
 psmisc
 python
 python-tests
-readline
 reiserfsprogs
 run-parts
 s-nail

@@ -290,7 +290,6 @@ jupyter-server-ydoc
 kcoreaddons
 keepassxc
 kgamma
-kirigami
 kismet
 kitty
 kitty-terminfo
@@ -485,7 +484,6 @@ mutter-docs
 mutter45
 mutter46
 nbd
-nccl
 ndctl
 ndisc6
 nemo-extensions
@@ -525,7 +523,6 @@ opencollada
 opendht
 openrct2
 openresolv
-openshadinglanguage
 opensmtpd
 opensnitch
 openvpn

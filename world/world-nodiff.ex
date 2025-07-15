@@ -612,6 +612,7 @@ farstream
 fast_float
 fastjar
 faudio
+fcft
 fcgi
 fcitx-configtool
 fcitx-qt5
@@ -676,6 +677,7 @@ foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
+fortune-mod
 fossil
 four-in-a-row
 fractal
@@ -703,6 +705,7 @@ fuse2
 fuse3
 fuse-common
 futuresql
+fuzzel
 fwknop
 fzf
 gajim
@@ -1391,6 +1394,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -2397,6 +2401,7 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
+nccl
 ncdu
 ncftp
 ncmpcpp
@@ -2544,6 +2549,7 @@ openpgl
 openpmix
 openpmix-docs
 openscenegraph
+openshadinglanguage
 opensips
 openslide
 opensmtpd-filter-dkimsign
@@ -3608,6 +3614,7 @@ python-hypothesis-auto
 python-hypothesis-fspaths
 python-hypothesis
 python-hypothesmith
+python-i3ipc
 python-ibm-db-sa
 python-icecream
 python-id
