@@ -715,7 +715,6 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
-qgpgme
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers

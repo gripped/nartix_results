@@ -4562,6 +4562,7 @@ qca-qt5
 qca-qt6
 qcoro
 qgit
+qgpgme
 qhexedit2
 qhull
 qoi
