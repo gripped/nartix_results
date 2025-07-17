@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=perl-alien-build-plugin-download-gitlab
+ pkgver=0.01
+-pkgrel=6
++pkgrel=4
+ pkgdesc="Alien::Build plugin to download from GitLab"
+ arch=('any')
+ license=('PerlArtistic')
+ url="https://metacpan.org/release/Alien-Build-Plugin-Download-GitLab"
+ depends=('perl-alien-build' 'perl-path-tiny' 'perl-uri')
++makedepends=('perl-test2-suite')
+ options=('!emptydirs')
+ source=("https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Build-Plugin-Download-GitLab-$pkgver.tar.gz")
+ sha512sums=('5a1a1dcefbec09732e377c47a961d57cc21a54fef154158dbad1738a93a143348ddc69430b35207d9db111a74592a7120b2abf2f7045818a74a6397bbf07fb06')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
+ perl-alien-build
+ perl-path-tiny
++perl-test2-suite
+ perl-uri

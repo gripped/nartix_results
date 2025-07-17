@@ -185,7 +185,6 @@ aws-sdk-cpp-s3
 ayatana-ido
 b3sum
 babl
-backuppc
 baloo-widgets
 baloo
 baloo5
@@ -1534,7 +1533,6 @@ kuserfeedback
 kuserfeedback5
 kvantum
 kvantum-qt5
-kvirc
 kwallet-pam
 kwallet
 kwallet5
@@ -2333,7 +2331,6 @@ python-miniupnpc
 minizip-ng
 minuet
 mitmproxy
-mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
 mkdocs-material
@@ -2362,6 +2359,7 @@ mpdecimal
 mpg123
 mplayer
 mencoder
+mpv-mpris
 mpv
 mpvqt
 msgpack-c
@@ -2812,7 +2810,6 @@ perl-net-http
 perl-net-ip
 perl-net-libidn2
 perl-net-server
-perl-net-ssleay
 perl-netaddr-ip
 perl-number-compare
 perl-object-realize-later

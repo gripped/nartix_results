@@ -65,6 +65,7 @@ cjs
 claws-mail
 compface
 cvs
+dbeaver
 dillo
 dino
 distrobox
@@ -105,6 +106,7 @@ lazarus
 lazarus-gtk3
 lazarus-qt5
 lazarus-qt6
+lazygit
 libcmis
 libdbusmenu-lxqt
 libe-book
@@ -341,7 +343,6 @@ perl-crypt-des
 perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-next
-perl-glib-object-introspection
 perl-gtk3
 perl-ldap
 perl-net-openssh

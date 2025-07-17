@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,14 @@
+ 
+ pkgname=perl-alien-build
+ pkgver=2.84
+-pkgrel=3
++pkgrel=1
+ pkgdesc="Build external dependencies for use in CPAN"
+ arch=('any')
+ license=('PerlArtistic')
+ url="https://metacpan.org/release/Alien-Build"
+ depends=('perl-capture-tiny' 'perl-ffi-checklib' 'perl-file-chdir' 'perl-file-which'
+          'perl-path-tiny')
++makedepends=('perl-test2-suite')
+ checkdepends=('perl-alien-base-modulebuild' 'perl-alien-cmake3' 'perl-env-shellwords'
+               'perl-pkgconfig' 'perl-pkgconfig-libpkgconf' 'perl-readonly' 'perl-sort-versions'
+               'wget')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,3 +3,4 @@
+ perl-file-chdir
+ perl-file-which
+ perl-path-tiny
++perl-test2-suite

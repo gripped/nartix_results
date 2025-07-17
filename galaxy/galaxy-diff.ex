@@ -30,6 +30,7 @@ mimalloc
 mpd
 nvidia-390xx-utils
 nvm
+perl-glib-object-introspection
 qbittorrent
 qbittorrent-nox
 rage

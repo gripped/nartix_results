@@ -17,6 +17,7 @@ atril
 audacious-plugins
 avahi
 awesome
+backuppc
 bash-bats
 blender
 bluedevil
@@ -300,6 +301,7 @@ kopeninghours
 ksnip
 kstars
 ksystemlog
+kvirc
 kwin-x11
 kwin
 libatasmart
@@ -467,6 +469,7 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
+mjpegtools
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -541,6 +544,7 @@ percona-server
 libperconaserverclient
 percona-server-clients
 perl-mail-authenticationresults
+perl-net-ssleay
 pgbouncer
 phodav
 php-legacy

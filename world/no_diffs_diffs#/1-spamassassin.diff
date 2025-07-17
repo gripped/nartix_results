@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=spamassassin
+ pkgver=4.0.1
+-pkgrel=5
++pkgrel=4
+ pkgdesc="A mail filter to identify spam."
+ arch=('x86_64')
+ license=('APACHE')
 @@ -8,7 +8,7 @@
  depends=('openssl' 'zlib' 're2c' 'perl-net-dns' 'perl-io-socket-ssl'
           'perl-libwww' 'perl-mail-spf' 'perl-http-message' 'perl-net-http'
