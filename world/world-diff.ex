@@ -291,6 +291,7 @@ jupyter-server-ydoc
 kcoreaddons
 keepassxc
 kgamma
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -469,7 +470,6 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
-mjpegtools
 modemmanager
 libmm-glib
 modemmanager-docs

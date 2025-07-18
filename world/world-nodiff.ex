@@ -906,12 +906,14 @@ gst-plugin-aws
 gst-plugin-cdg
 gst-plugin-claxon
 gst-plugin-dav1d
+gst-plugin-elevenlabs
 gst-plugin-fallbackswitch
 gst-plugin-ffv1
 gst-plugin-fmp4
 gst-plugin-gif
 gst-plugin-gopbuffer
 gst-plugin-gtk4
+gst-plugin-hlsmultivariantsink
 gst-plugin-hlssink3
 gst-plugin-hsv
 gst-plugin-json
@@ -938,12 +940,16 @@ gst-plugin-rstracers
 gst-plugin-rsvideofx
 gst-plugin-rswebp
 gst-plugin-rswebrtc
+gst-plugin-skia
 gst-plugin-sodium
+gst-plugin-speechmatics
 gst-plugin-spotify
+gst-plugin-streamgrouper
 gst-plugin-textahead
 gst-plugin-textwrap
 gst-plugin-threadshare
 gst-plugin-togglerecord
+gst-plugin-uriplaylistbin
 gst-plugin-webrtchttp
 gst-python
 gtest
@@ -1393,7 +1399,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -2331,6 +2336,7 @@ python-miniupnpc
 minizip-ng
 minuet
 mitmproxy
+mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
 mkdocs-material
@@ -3776,6 +3782,7 @@ python-merge3
 python-mergedeep
 python-mimeparse
 python-minidump
+python-mistletoe
 python-mistune
 python-mitmproxy-rs
 python-mitmproxy-wireguard

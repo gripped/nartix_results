@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
- depends=(
-   'cairo' 'libcairo.so'
-   'glibc'
--  'libev' 'libev.so'
-+  'libev'
-   'libxcb'
-   'libxkbcommon' 'libxkbcommon.so'
-   'libxkbcommon-x11' 'libxkbcommon-x11.so'
 @@ -37,7 +37,7 @@
  
  
@@ -22,16 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -2,7 +2,6 @@
- glibc
- libcairo.so
- libev
--libev.so
- libpam.so
- libxcb
- libxkbcommon
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
