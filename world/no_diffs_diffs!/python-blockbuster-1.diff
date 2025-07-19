@@ -5,7 +5,7 @@
  check() {
    cd ${pkgname#python-}
 -  pytest
-+  pytest -v \
++  pytest \
 +    --deselect tests/test_blockbuster.py::test_socket_send \
 +    --deselect tests/test_blockbuster.py::test_socket_send_non_blocking
  }

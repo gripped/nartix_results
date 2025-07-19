@@ -1,13 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,83 +4,66 @@
+@@ -4,83 +4,63 @@
    libxml2
    libxml2-docs
  )
 -pkgver=2.12.2
--pkgrel=1
-+pkgver=2.14.4
-+pkgrel=2
++pkgver=2.14.5
+ pkgrel=1
  pkgdesc="XML C parser and toolkit"
  url="https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home"
  arch=(x86_64)
@@ -36,7 +35,7 @@
  )
 -b2sums=('SKIP'
 -        '6931b07a467874c3016deb7a68bab1e9cfaabc88fdeaf0ccf6c9cca02bbce9618b18f8c285f5748089138489d04d7c72a659b2bfd4ea5fe24ad273daacbd6d50'
-+b2sums=('b83cacaa96d747ca4ada13a77c0b41522817c6d42561f119d4d06e9ca074532bc4da2bd6b02e87308c429450b24e2e988cddd95c9d31d09662100d80493487fe'
++b2sums=('c4104e9f98671c591df9bd539c24c5dd232644750c3e8ec1664592638b01f61148150d44c50f919eacf4b63750a486ec87b4a5a65535d2872d42c7d9c9fd768a'
          '63a47bc69278ef510cd0b3779aed729e1b309e30efa0015d28ed051cc03f9dfddb447ab57b07b3393e8f47393d15473b0e199c34cb1f5f746b15ddfaa55670be')
 -
 -pkgver() {
@@ -47,9 +46,6 @@
  prepare() {
    cd libxml2
  
-+  git cherry-pick -n 5700d989cc18889e1601c651ad69a41af8b32073 \
-+                     d3e33dc214276498e73b61188be02b2863c9670a
-+
    ln -s ../xmlconf
 -
 -  git apply -3 ../0001-HACK-Don-t-run-fuzzing-tests.patch
@@ -126,11 +122,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,23 +1,14 @@
+@@ -1,23 +1,12 @@
  prepare() {
  cd libxml2
-+git cherry-pick -n 5700d989cc18889e1601c651ad69a41af8b32073 \
-+d3e33dc214276498e73b61188be02b2863c9670a
  ln -s ../xmlconf
 -git apply -3 ../0001-HACK-Don-t-run-fuzzing-tests.patch
 -NOCONFIGURE=1 ./autogen.sh

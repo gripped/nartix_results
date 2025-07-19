@@ -343,6 +343,7 @@ perl-crypt-des
 perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-next
+perl-glib-object-introspection
 perl-gtk3
 perl-ldap
 perl-net-openssh
@@ -402,6 +403,7 @@ stalonetray
 starship
 subtitleeditor
 sundials
+swww
 t1lib
 tealdeer
 telegram-desktop

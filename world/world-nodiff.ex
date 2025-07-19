@@ -172,7 +172,6 @@ aws-c-mqtt
 aws-c-s3
 aws-c-sdkutils
 aws-checksums
-aws-cli-v2
 aws-cli
 aws-crt-cpp
 aws-sdk-cpp
@@ -301,6 +300,7 @@ cdparanoia
 cdrdao
 gcdmaster
 cdrtools
+celluloid
 cervisia
 cfitsio
 cgns
@@ -327,6 +327,7 @@ cinnamon-translations
 cinnamon
 cjs
 cjson
+clang
 clang14
 clang15
 clang16
@@ -621,6 +622,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
 fcitx5-qt
+fd
 featherpad
 feh
 festival
@@ -1155,12 +1157,6 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-jline
-java-openjdk
-jre-openjdk-headless
-jre-openjdk
-jdk-openjdk
-openjdk-src
-openjdk-doc
 java-xmlgraphics-commons
 jbig2dec
 jbigkit
@@ -1399,6 +1395,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1538,6 +1535,7 @@ kuserfeedback
 kuserfeedback5
 kvantum
 kvantum-qt5
+kvirc
 kwallet-pam
 kwallet
 kwallet5
@@ -2784,6 +2782,7 @@ perl-log-message-simple
 perl-log-message
 perl-lwp-mediatypes
 perl-lwp-protocol-https
+perl-mail-authenticationresults
 perl-mail-box
 perl-mail-dkim
 perl-mail-message
@@ -2816,6 +2815,7 @@ perl-net-http
 perl-net-ip
 perl-net-libidn2
 perl-net-server
+perl-net-ssleay
 perl-netaddr-ip
 perl-number-compare
 perl-object-realize-later
@@ -5544,6 +5544,7 @@ tpm2-abrmd
 tpm2-tools
 transcode
 transmageddon
+trash-cli
 tre
 tree-sitter-bash
 tree-sitter-c
@@ -5710,6 +5711,7 @@ wireless_tools
 wireshark
 wireshark-cli
 wireshark-qt
+wl-clip-persist
 wl-clipboard
 woff2
 wolfssl
@@ -5896,6 +5898,7 @@ zix-docs
 zlib-ng
 zlib-ng-compat
 zopfli
+zoxide
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting

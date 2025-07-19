@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,7 +11,7 @@
-   nginx-src
- )
- pkgver=1.28.0
--pkgrel=4
-+pkgrel=3
- _tests_commit=17c6a06e7b692351f4af53ca6511b919e9e510b8
- arch=(x86_64)
- pkgdesc='Lightweight HTTP server and IMAP/POP3 proxy server'
 @@ -46,7 +46,6 @@
  source=(
    "git+https://github.com/nginx/nginx.git#tag=release-${pkgver}"

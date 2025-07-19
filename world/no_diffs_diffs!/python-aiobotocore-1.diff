@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -61,6 +61,8 @@
-     --deselect='tests/test_patches.py::test_patches[aiohttp-ClientCreator._register_retries-digests8]'
-     --deselect='tests/test_patches.py::test_patches[aiohttp-Endpoint._do_get_response-digests87]'
-     --deselect='tests/test_patches.py::test_patches[aiohttp-get_response-digests123]'
+@@ -52,6 +52,8 @@
+     --deselect='tests/test_lambda.py'
+     --deselect='tests/test_patches.py'
+     --deselect='tests/test_sns.py::test_topic_attributes[aiohttp]'
 +
 +    --deselect tests/test_basic_s3.py::test_fail_proxy_request
    )

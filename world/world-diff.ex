@@ -17,6 +17,7 @@ atril
 audacious-plugins
 avahi
 awesome
+aws-cli-v2
 backuppc
 bash-bats
 blender
@@ -67,7 +68,6 @@ chromium-bsu
 chrony
 cinnamon-desktop
 clamav
-clang
 cloud-init
 clucene
 cmake
@@ -258,6 +258,12 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+java-openjdk
+jdk-openjdk
+jre-openjdk
+jre-openjdk-headless
+openjdk-doc
+openjdk-src
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -280,18 +286,13 @@ jdk21-openjdk
 openjdk21-src
 openjdk21-doc
 java8-openjdk
-jre8-openjdk-headless
-jre8-openjdk
-jdk8-openjdk
-openjdk8-src
-openjdk8-doc
+jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 js78
 julia
 jupyter-server-ydoc
 kcoreaddons
 keepassxc
 kgamma
-kirigami
 kismet
 kitty
 kitty-terminfo
@@ -302,7 +303,6 @@ kopeninghours
 ksnip
 kstars
 ksystemlog
-kvirc
 kwin-x11
 kwin
 libatasmart
@@ -543,8 +543,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-mail-authenticationresults
-perl-net-ssleay
 pgbouncer
 phodav
 php-legacy

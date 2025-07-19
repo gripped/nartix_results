@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- pkgname=spamassassin
- pkgver=4.0.1
--pkgrel=5
-+pkgrel=4
- pkgdesc="A mail filter to identify spam."
- arch=('x86_64')
- license=('APACHE')
-@@ -8,7 +8,7 @@
- depends=('openssl' 'zlib' 're2c' 'perl-net-dns' 'perl-io-socket-ssl'
-          'perl-libwww' 'perl-mail-spf' 'perl-http-message' 'perl-net-http'
-          'perl-io-socket-inet6' 'perl-mail-dkim')
--makedepends=('razor' 'perl-dbi')
-+makedepends=('razor' 'perl-dbi' 'perl-crypt-ssleay')
- checkdepends=('perl-text-diff')
- optdepends=('razor: to identify collaborately-flagged spam'
-             'make: to use sa-compile'
 @@ -30,13 +30,12 @@
          "https://www.apache.org/dist/${pkgname}/source/Mail-SpamAssassin-${pkgver}.tar.gz.asc"
          fix-tests.patch
@@ -49,15 +32,3 @@
    install -d -o 182 -g 182 -m 755 "$pkgdir/var/lib/spamassassin"
  
    echo 'u spamd 182 - /var/lib/spamassassin' |
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +1,5 @@
- openssl
-+perl-crypt-ssleay
- perl-dbi
- perl-http-message
- perl-io-socket-inet6
