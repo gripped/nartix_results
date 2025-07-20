@@ -89,6 +89,7 @@ libcups
 dbus-broker
 ddcutil
 dhcpcd
+digikam
 djvulibre
 dns-over-https
 docker
@@ -305,6 +306,7 @@ kstars
 ksystemlog
 kwin-x11
 kwin
+libao
 libatasmart
 libayatana-indicator
 libblockdev
@@ -632,6 +634,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-sphinx-furo
 qastools
 qbittorrent
 qbittorrent-nox

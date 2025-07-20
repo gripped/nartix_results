@@ -33,6 +33,7 @@ nvm
 qbittorrent
 qbittorrent-nox
 rage
+rpi-imager
 sdcv
 signal-desktop
 terminology

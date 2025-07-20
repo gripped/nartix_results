@@ -389,7 +389,6 @@ retroarch
 rgbds
 rio
 ristretto
-rpi-imager
 salt
 screengrab
 scribus

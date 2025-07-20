@@ -4,7 +4,7 @@
  
  pkgname=esbuild
 -pkgver=0.25.7
-+pkgver=0.25.3
++pkgver=0.25.6
  pkgrel=1
  pkgdesc="An extremely fast JavaScript and CSS bundler and minifier."
  arch=('x86_64')
@@ -13,7 +13,7 @@
  makedepends=(go)
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/evanw/${pkgname}/archive/v${pkgver}.tar.gz")
 -sha512sums=('b1118f2ba38da3e320119623af26be19096569bf0b4a0e2f401c94db0a862456c3504b9f79ce578dd4aded733eba3e5c2260ec0ebdad7ae28d15184039d65e2e')
-+sha512sums=('f23c58564742d6857e67ebd02a5d0425a2122487fa639a05202d7987cc3f716c549508f77681e0ba579f7f65906ede446df08b3b911012c6ceb635704757c545')
++sha512sums=('ed5c4ade760dd090955253e96d2c762de83476d46b6869953d75298053eafade2f9cc3e4fe5a1f40cc2eecc0488ed53a87e73f29bae4580fb44c6ea81e91358e')
  
  export CGO_CPPFLAGS="${CPPFLAGS}"
  export CGO_CFLAGS="${CFLAGS}"

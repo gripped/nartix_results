@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=godot
+ pkgname=(godot godot-mono)
+ pkgver=4.4.1
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Advanced cross-platform 2D and 3D game engine'
+ url='https://godotengine.org/'
+ license=(MIT)
 @@ -36,7 +36,7 @@
  build() {
    cd $pkgname-$pkgver-stable
@@ -9,6 +18,14 @@
  
  
    _args=(
+@@ -76,7 +76,6 @@
+     builtin_zstd=no
+     colored=yes
+     disable_exceptions=false
+-    debug_symbols=yes
+     platform=linuxbsd
+     production=yes
+     pulseaudio=yes
 
 
 ############# Stripped diff below #################
@@ -26,3 +43,11 @@
  _args=(
  -j$(nproc --all)
  cflags="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w"
+@@ -50,7 +50,6 @@
+ builtin_zstd=no
+ colored=yes
+ disable_exceptions=false
+-debug_symbols=yes
+ platform=linuxbsd
+ production=yes
+ pulseaudio=yes

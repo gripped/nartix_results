@@ -448,7 +448,6 @@ dhclient
 dht
 diffstat
 diffuse
-digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -1605,7 +1604,6 @@ libaec
 libaemu
 libakonadi5
 libalkimia
-libao
 libappimage
 libappindicator
 libappindicator-gtk2
@@ -4321,7 +4319,6 @@ python-sphinx-autobuild
 python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
-python-sphinx-furo
 python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
