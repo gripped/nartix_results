@@ -448,6 +448,7 @@ dhclient
 dht
 diffstat
 diffuse
+digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -1326,6 +1327,7 @@ kdsoap
 kdsoap-qt5
 kdsoap-qt6
 keditbookmarks
+keepassxc
 kemoticons
 kexec-tools
 keybinder2
@@ -3143,6 +3145,7 @@ pystring
 python-aaf2
 python-aafigure
 python-absl
+python-accessible-pygments
 python-acme
 python-adal
 python-adblock
@@ -4319,6 +4322,7 @@ python-sphinx-autobuild
 python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
+python-sphinx-furo
 python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues

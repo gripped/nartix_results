@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,7 +42,7 @@
+ }
+ 
+ check() {
+-	xvfb-run --auto-servernum cmake --build build --target test
++	xvfb-run --auto-servernum cmake --build build --target test -j1
+ }
+ 
+ package() {

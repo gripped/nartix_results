@@ -89,7 +89,6 @@ libcups
 dbus-broker
 ddcutil
 dhcpcd
-digikam
 djvulibre
 dns-over-https
 docker
@@ -292,7 +291,6 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
-keepassxc
 kgamma
 kismet
 kitty
@@ -634,7 +632,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-sphinx-furo
 qastools
 qbittorrent
 qbittorrent-nox
