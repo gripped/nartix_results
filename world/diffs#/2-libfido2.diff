@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=libfido2
+ pkgver=1.16.0
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc='Library functionality for FIDO 2.0, including communication with a device over USB'
+ url='https://developers.yubico.com/libfido2/'
+ arch=('x86_64')
+ license=('BSD-2-Clause')
+-depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'systemd-libs'  'libudev.so' 'zlib')
+-makedepends=('cmake' 'systemd')
++depends=('glibc' 'openssl' 'libcbor' 'libcbor.so' 'hidapi' 'libudev'  'libudev.so' 'zlib')
++makedepends=('cmake' 'udev')
+ provides=('libfido2.so')
+ source=("https://developers.yubico.com/libfido2/Releases/libfido2-${pkgver}.tar.gz"{,.sig})
+ sha512sums=('487424a993ff3c9cb48f96a8e15bdd1b0105b7ad840c6d44cdd683a53bc4fe500a42f51d1d0ab75f8e000c081af57ba95cb4c04c641ea4322c23a407d291f470'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-cmake
+-glibc
+-hidapi
+-libcbor
+-libcbor.so
+-libudev.so
+-openssl
+-systemd
+-systemd-libs
+-zlib

@@ -136,31 +136,30 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,20 +4,18 @@
- comgr
- composable-kernel
- eigen
-+frugally-deep
- functional-plus
- gcc-libs
+@@ -1,23 +0,0 @@
+-boost
+-bzip2
+-cmake
+-comgr
+-composable-kernel
+-eigen
+-functional-plus
+-gcc-libs
 -git
 -git-lfs
- glibc
+-glibc
 -hip-runtime-amd
 -hipblas
 -hipblaslt
-+half
-+hip
- lbzip2
- ninja
- nlohmann-json
- rocblas
-+rocm-clang-ocl
- rocm-cmake
- rocm-core
+-lbzip2
+-ninja
+-nlohmann-json
+-rocblas
+-rocm-cmake
+-rocm-core
 -rocrand
- roctracer
- sqlite
+-roctracer
+-sqlite
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

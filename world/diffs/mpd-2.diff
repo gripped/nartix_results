@@ -133,50 +133,102 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,7 @@
- alsa-lib
-+audiofile
- avahi
-+boost
- bzip2
- chromaprint
- curl
-@@ -21,6 +23,7 @@
- libao
- libao.so
- libasound.so
-+libaudiofile.so
- libavahi-client.so
- libavahi-common.so
- libavcodec.so
-@@ -73,26 +76,25 @@
- libsndfile.so
- libsoxr
- libsqlite3.so
+@@ -1,98 +0,0 @@
+-alsa-lib
+-avahi
+-bzip2
+-chromaprint
+-curl
+-dbus
+-expat
+-faad2
+-ffmpeg
+-flac
+-fluidsynth
+-fmt
+-gcc-libs
+-git
+-glibc
+-hicolor-icon-theme
+-icu
+-jack
+-lame
+-libFLAC.so
+-libao
+-libao.so
+-libasound.so
+-libavahi-client.so
+-libavahi-common.so
+-libavcodec.so
+-libavfilter.so
+-libavformat.so
+-libavutil.so
+-libbz2.so
+-libcdio
+-libcdio-paranoia
+-libchromaprint.so
+-libcurl.so
+-libdbus-1.so
+-libexpat.so
+-libfaad.so
+-libfluidsynth.so
+-libfmt.so
+-libgme
+-libicui18n.so
+-libicuuc.so
+-libid3tag
+-libid3tag.so
+-libixml.so
+-libjack.so
+-libmad
+-libmikmod
+-libmikmod.so
+-libmms
+-libmodplug
+-libmp3lame.so
+-libmpcdec
+-libmpdclient
+-libmpdclient.so
+-libmpg123.so
+-libnfs
+-libogg
+-libogg.so
+-libopenal.so
+-libopenmpt
+-libopenmpt.so
+-libopus.so
+-libpipewire
+-libpipewire-0.3.so
+-libpulse
+-libpulse.so
+-libsamplerate
+-libsamplerate.so
+-libshout
+-libsidplayfp
+-libsndfile
+-libsndfile.so
+-libsoxr
+-libsqlite3.so
 -libsystemd.so
- libtwolame.so
- libupnp
- libupnp.so
-+liburing
-+liburing.so
- libvorbis
- libvorbis.so
- libvorbisenc.so
-+libyajl.so
- meson
- mpg123
+-libtwolame.so
+-libupnp
+-libupnp.so
+-libvorbis
+-libvorbis.so
+-libvorbisenc.so
+-meson
+-mpg123
 -nlohmann-json
- openal
- opus
- pcre2
- python-sphinx
+-openal
+-opus
+-pcre2
+-python-sphinx
 -python-sphinx_rtd_theme
- sqlite
+-sqlite
 -systemd
 -systemd-libs
- twolame
- wavpack
- wildmidi
-+yajl
- zlib
- zziplib
+-twolame
+-wavpack
+-wildmidi
+-zlib
+-zziplib

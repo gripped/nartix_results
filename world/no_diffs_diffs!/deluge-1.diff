@@ -15,3 +15,48 @@
  
    echo 'u deluge - "Deluge BitTorrent daemon" /srv/deluge' |
      install -Dm644 /dev/stdin "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,38 +0,0 @@
+-deluge
+-git
+-glib2
+-gtk3
+-hicolor-icon-theme
+-intltool
+-libappindicator-gtk3
+-libnotify
+-librsvg
+-libtorrent-rasterbar
+-openssl
+-pango
+-python
+-python-build
+-python-cairo
+-python-chardet
+-python-dbus
+-python-distro
+-python-geoip
+-python-gobject
+-python-idna
+-python-ifaddr
+-python-incremental
+-python-installer
+-python-mako
+-python-pillow
+-python-pygame
+-python-pyopenssl
+-python-rencode
+-python-rjsmin
+-python-service-identity
+-python-setproctitle
+-python-setuptools
+-python-twisted
+-python-wheel
+-python-xdg
+-python-zope-interface
+-xdg-utils

@@ -50,12 +50,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
- docbook-xsl
+@@ -1,8 +0,0 @@
+-docbook-xsl
 -git
- gtk2
- gtk3
- intltool
+-gtk2
+-gtk3
+-intltool
+-polkit
+-vala
+-which
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

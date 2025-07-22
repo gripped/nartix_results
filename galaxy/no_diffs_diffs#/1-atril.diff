@@ -9,3 +9,30 @@
  pkgdesc="A document viewer for MATE"
  url="https://mate-desktop.org"
  arch=('x86_64')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,20 +0,0 @@
+-autoconf-archive
+-cairo>
+-caja
+-djvulibre
+-gettext
+-git
+-glib2-devel
+-gobject-introspection
+-itstool
+-libgxps
+-libspectre
+-libsynctex
+-mate-common
+-mate-desktop
+-mathjax2
+-poppler-glib
+-python-packaging
+-texlive-bin
+-webkit2gtk-4.1>
+-yelp-tools

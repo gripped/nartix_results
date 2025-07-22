@@ -39,3 +39,17 @@
    install -Dm644 empty.rules "$pkgdir/etc/iptables/iptables.rules"
    install -Dm644 empty.rules "$pkgdir/etc/iptables/ip6tables.rules"
    install -Dt "$pkgdir/usr/share/iptables" -m644 *.rules
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-bash
+-libnetfilter_conntrack
+-libnfnetlink
+-libnftnl
+-libpcap
+-linux-api-headers
+-nftables

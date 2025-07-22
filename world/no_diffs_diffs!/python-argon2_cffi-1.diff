@@ -29,3 +29,16 @@
  
  prepare() {
    cd $_pkgname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-git
+-python-argon2-cffi-bindings
+-python-build
+-python-hatch-fancy-pypi-readme
+-python-hatch-vcs
+-python-installer

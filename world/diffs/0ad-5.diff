@@ -76,20 +76,39 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -18,12 +18,12 @@
- libsodium
- libvorbis
- libxml2
+@@ -1,32 +0,0 @@
+-0ad-data
+-binutils
+-boost
+-boost-libs
+-cmake
+-curl
+-enet
+-fmt
+-git
+-gloox
+-glu
+-icu
+-libgl
+-libminiupnpc.so
+-libogg
+-libpng
+-libsm
+-libsodium
+-libvorbis
+-libxml2
 -llvm
- mesa
- miniupnpc
- nspr
- openal
- python
-+python-virtualenv
- rust
- sdl2
- which
+-mesa
+-miniupnpc
+-nspr
+-openal
+-python
+-rust
+-sdl2
+-which
+-wxwidgets-gtk3
+-zip
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

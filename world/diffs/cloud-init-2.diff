@@ -48,15 +48,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,5 @@
- bash
- dhcp-client
+@@ -1,21 +0,0 @@
+-bash
+-dhcp-client
 -netplan
- openbsd-netcat
- python
- python-build
-@@ -18,4 +17,3 @@
- python-typing_extensions
- python-wheel
- sudo
+-openbsd-netcat
+-python
+-python-build
+-python-configobj
+-python-installer
+-python-jinja
+-python-jsonpatch
+-python-jsonschema
+-python-netifaces
+-python-oauthlib
+-python-pyserial
+-python-pyyaml
+-python-requests
+-python-setuptools
+-python-typing_extensions
+-python-wheel
+-sudo
 -systemd

@@ -19,3 +19,13 @@
    install -dm755 "$pkgdir"/etc/webhook
 -  install -Dm644 "$srcdir"/webhook.service "$pkgdir"/usr/lib/systemd/system/webhook.service
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-git
+-glibc
+-go

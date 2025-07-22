@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,9 +18,12 @@
+   libaio
+   libglvnd
+   soundtouch
+-  systemd-libs
++  libudev.so
++  libgio-2.0.so
++  libglib-2.0.so
+   xorg-xrandr
+   zlib
++  libretro-core-info
+ )
+ makedepends=(
+   clang
+@@ -29,7 +32,7 @@
+   lld
+   ninja
+   png++
+-  systemd
++  libpcap
+ )
+ _commit=d86c52557863f27b2504bc9cba9b196790cb3cfd
+ source=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +0,0 @@
+-clang
+-cmake
+-ffmpeg
+-gcc-libs
+-git
+-glibc
+-libaio
+-libglvnd
+-lld
+-ninja
+-png++
+-soundtouch
+-systemd
+-systemd-libs
+-xorg-xrandr
+-zlib

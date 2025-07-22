@@ -9,3 +9,12 @@
  pkgdesc="GNU rewrite of netcat, the network piping application"
  depends=(
    'glibc'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-glibc
+-texinfo

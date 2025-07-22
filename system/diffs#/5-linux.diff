@@ -1,0 +1,113 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,11 @@
++
++_ver=6.15.6
++_rel=1
++_arch=arch${_rel}
++_artix=${_arch/arch/artix}
+ 
+ pkgbase=linux
+-pkgver=6.15.7.arch1
++pkgver=${_ver}.${_artix}
+ pkgrel=1
+ pkgdesc='Linux'
+ url='https://github.com/archlinux/linux'
+@@ -30,10 +35,10 @@
+   !debug
+   !strip
+ )
+-_srcname=linux-${pkgver%.*}
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srcname=linux-${_ver}
++_srctag=v${_ver}-${_arch}
+ source=(
+-  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
++  https://cdn.kernel.org/pub/linux/kernel/v${_ver%%.*}.x/${_srcname}.tar.{xz,sign}
+   $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
+   config  # the main kernel config file
+ )
+@@ -42,18 +47,18 @@
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
+   83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
+ )
+-sha256sums=('3507dd105b0a0e1101bd43d294472fccf853429a259a5fa7c67467bba318f8e9'
++sha256sums=('2bb586c954277d070c8fdf6d7275faa93b4807d9bf3353b491d8149cca02b4fc'
+             'SKIP'
+-            '14c8bdb45022c28f06b13274f3ec838fa7f8bdad0d1dc1137d4d01cd2851fa71'
++            '2e41f4218472b46451af3718ce0951d908ad0356ac3a65f3a81b9ae932b24ad0'
+             'SKIP'
+-            '92005b43e54429b65a5adfa60f3ee5d164b6c88a64816cce920b7e67dc4661b6')
+-b2sums=('da0d7e22e88e5d46636bc53ebaaccbb986b98d41ee786fe87bff6777dd15426b3fdb254e628674871c679c7942971e9ad10ebdfed6666e7127dfb292f60125ff'
++            '5d236a19a43048da2ad3357e402173d2427e89b7cd99bc91ba47f38e2fa6590a')
++b2sums=('34301ec451141cab53c6017445fb78c6a681095604387b20060e8b2102d9677cf25a3af9f3db56a0b88772434179f730842bce67b718cd28998e5c56178c748a'
+         'SKIP'
+-        'aac70b2c9db8b5abb19b994995f2cf2dacbf2f010e39a294bd6975476a3db3183d50949891b33db785d3ae82cf9f9e61d5dc481d89eb24e303fb2ce75cc1d9f9'
++        'caff0a73f3eb6152fcc9fd9972328321dfab6437a60ba93501bc44452e09382a2865e9672218645aa145bf6cd9600d77b472691d2199ac8229e18d77c3a9b7b4'
+         'SKIP'
+-        '60161db656851b0e651e6e7ebc974cada22474bddd6b0a7ad4946bc0ecf888ca68e66f1530997aa5c7fe09645e4cfbdd16f6e32ce50678291c708c40d8a8563c')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        'd0966b270e6fb6c7fda93c18c63849bdca200d623e4e470d4d9e2c5d3474274c085f609ff5468697bc1d465ded7e4de8d40a33873c58b8afd37b0c5874a14133')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -73,6 +78,7 @@
+     echo "Applying patch $src..."
+     patch -Np1 < "../$src"
+   done
++  sed -i -r "s/EXTRAVERSION = -${_arch}/EXTRAVERSION = -${_artix}/" "Makefile"
+ 
+   echo "Setting config..."
+   cp ../config .config
+@@ -109,8 +115,8 @@
+     WIREGUARD-MODULE
+   )
+   replaces=(
+-    virtualbox-guest-modules-arch
+-    wireguard-arch
++    virtualbox-guest-modules-artix
++    wireguard-artix
+   )
+ 
+   cd $_srcname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,20 +0,0 @@
+-bc
+-coreutils
+-cpio
+-gettext
+-graphviz
+-imagemagick
+-initramfs
+-kmod
+-libelf
+-pahole
+-perl
+-python
+-python-sphinx
+-python-yaml
+-rust
+-rust-bindgen
+-rust-src
+-tar
+-texlive-latexextra
+-xz
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ echo "Applying patch $src..."
+ patch -Np1 < "../$src"
+ done
++sed -i -r "s/EXTRAVERSION = -${_arch}/EXTRAVERSION = -${_artix}/" "Makefile"
+ echo "Setting config..."
+ cp ../config .config
+ make olddefconfig

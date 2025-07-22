@@ -16,3 +16,27 @@
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,17 +0,0 @@
+-doxygen
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-kconfig
+-kcoreaddons
+-kcrash
+-kdbusaddons
+-kdoctools
+-kfilemetadata
+-ki18n
+-kidletime
+-kio
+-lmdb
+-qt6-base
+-qt6-tools
+-solid

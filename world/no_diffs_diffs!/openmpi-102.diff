@@ -40,15 +40,26 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,8 +12,6 @@
- libpmix.so
- nvidia-utils
- openpmix
+@@ -1,19 +0,0 @@
+-cuda
+-gcc-fortran
+-gcc-libs
+-glibc
+-hip-runtime-amd
+-hwloc
+-libevent
+-libevent_core-2.1.so
+-libevent_pthreads-2.1.so
+-libfabric
+-libnl
+-libpmix.so
+-nvidia-utils
+-openpmix
 -openucc
 -openucx
- prrte
- valgrind
- zlib
+-prrte
+-valgrind
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

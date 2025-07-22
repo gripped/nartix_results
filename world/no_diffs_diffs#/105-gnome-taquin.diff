@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
+@@ -30,7 +30,7 @@
  }
  
  build() {
@@ -13,7 +13,17 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-appstream-glib
+-git
+-gsound
+-gtk3
+-librsvg
+-meson
+-vala
+-yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

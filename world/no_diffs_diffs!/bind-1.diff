@@ -51,12 +51,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,8 @@
- bash
- dnssec-anchors
- e2fsprogs
-+esysusers
-+etmpfiles
- git
- glibc
- icu
+@@ -1,24 +0,0 @@
+-bash
+-dnssec-anchors
+-e2fsprogs
+-git
+-glibc
+-icu
+-jemalloc
+-json-c
+-krb5
+-libcap
+-libedit
+-libidn2
+-libmaxminddb
+-libnghttp2
+-libnsl
+-liburcu
+-libuv
+-libxml2
+-lmdb
+-openssl
+-python-sphinx
+-readline
+-xz
+-zlib

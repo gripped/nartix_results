@@ -150,31 +150,39 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,14 +4,12 @@
- freetype2
- harfbuzz-icu
- hunspell
+@@ -1,32 +0,0 @@
+-cairo
+-cmake
+-fontconfig
+-freetype2
+-harfbuzz-icu
+-hunspell
 -icu
- lcms2
- libcdr
- libcups
- libfreehand
- libicuuc.so
+-lcms2
+-libcdr
+-libcups
+-libfreehand
+-libicuuc.so
 -libjpeg-turbo
 -libjpeg.so
-+libjpeg
- libmspub
- libpagemaker
- libpng
-@@ -24,7 +22,7 @@
- mesa
- openscenegraph
- openssl
+-libmspub
+-libpagemaker
+-libpng
+-libqxp
+-librevenge
+-libtiff
+-libvisio
+-libxml2
+-libzmf
+-mesa
+-openscenegraph
+-openssl
 -podofo
-+podofo-0.9
- poppler
- python3
- qt5-base
+-poppler
+-python3
+-qt5-base
+-qt5-tools
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

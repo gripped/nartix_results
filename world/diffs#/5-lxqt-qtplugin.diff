@@ -42,16 +42,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,6 @@
+@@ -1,6 +0,0 @@
 -git
 -libQt6XdgIconLoader.so
 -libdbusmenu-lxqt
-+libQt5XdgIconLoader.so
-+libdbusmenu-qt5
- libfm-qt
- libqtxdg
- lxqt-build-tools
-+qt5-x11extras
+-libfm-qt
+-libqtxdg
+-lxqt-build-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

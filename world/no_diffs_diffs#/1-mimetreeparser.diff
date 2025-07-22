@@ -41,21 +41,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,7 @@
- extra-cmake-modules
- gcc-libs
- glibc
+@@ -1,18 +0,0 @@
+-doxygen
+-extra-cmake-modules
+-gcc-libs
+-glibc
 -gpgme
-+gpgmepp
- kcalendarcore
- ki18n
- kirigami
-@@ -10,7 +10,7 @@
- kmime
- kwidgetsaddons
- libkleo
+-kcalendarcore
+-ki18n
+-kirigami
+-kmbox
+-kmime
+-kwidgetsaddons
+-libkleo
 -qgpgme-qt6
-+qgpgme
- qt6-base
- qt6-declarative
- qt6-doc
+-qt6-base
+-qt6-declarative
+-qt6-doc
+-qt6-tools
+-qt6-webengine

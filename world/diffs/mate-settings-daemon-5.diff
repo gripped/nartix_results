@@ -65,21 +65,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,13 +1,10 @@
+@@ -1,13 +0,0 @@
 -autoconf-archive
- dbus-glib
- gettext
+-dbus-glib
+-gettext
 -glib2-devel
- libcanberra
- libmatekbd
- libmatemixer
- libnotify
+-libcanberra
+-libmatekbd
+-libmatemixer
+-libnotify
 -mate-common
- mate-desktop
- nss
- polkit
+-mate-desktop
+-nss
+-polkit
 -python-packaging
-+python
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

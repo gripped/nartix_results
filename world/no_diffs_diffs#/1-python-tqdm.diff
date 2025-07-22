@@ -9,3 +9,17 @@
  source=("git+https://github.com/tqdm/tqdm.git#commit=v${pkgver}")
  sha512sums=('be7467509c82c6eca11caf70bd95a1fa41c761158b97c649f02ebeda3fae64337742c8bdc4110ea000fba39322888387cdb8630463630809c016f75764250667')
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-git
+-python
+-python-build
+-python-installer
+-python-setuptools-scm
+-python-toml
+-python-wheel

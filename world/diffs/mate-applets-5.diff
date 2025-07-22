@@ -48,22 +48,23 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +1,11 @@
+@@ -1,16 +0,0 @@
 -autoconf-archive
- cpupower
+-cpupower
 -glib2-devel
 -gtksourceview4
-+gtksourceview3
- gucharmap
- intltool
- itstool
- libgtop
- libnl
- libnotify
+-gucharmap
+-intltool
+-itstool
+-libgtop
+-libnl
+-libnotify
 -mate-common
- mate-panel
- polkit
- upower
+-mate-panel
+-polkit
+-upower
+-wireless_tools
+-yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

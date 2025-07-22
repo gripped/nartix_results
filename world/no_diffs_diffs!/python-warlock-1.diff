@@ -5,3 +5,15 @@
    python -m installer --destdir="$pkgdir" dist/*.whl
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-python-build
+-python-installer
+-python-jsonpatch
+-python-jsonschema
+-python-poetry-core

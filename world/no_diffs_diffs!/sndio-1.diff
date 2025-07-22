@@ -44,3 +44,12 @@
 +	install -Dm644 "${srcdir}/${pkgname}.sysusers.conf" "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"
 +	sed '/^ \*\//q' libsndio/sioctl.c > "$pkgdir/usr/share/licenses/sndio/LICENSE"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-alsa-lib
+-libbsd

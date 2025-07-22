@@ -9,3 +9,17 @@
  arch=('x86_64')
  url="https://github.com/s-yata/marisa-trie"
  license=('BSD' 'LGPL')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-gcc-libs
+-marisa
+-perl
+-python
+-python-setuptools
+-ruby
+-swig

@@ -32,17 +32,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,7 @@
- X-ABI-XINPUT_VERSION
- glibc
- gobject-introspection
-+libudev
- libx11
- libxi
- libxinerama
-@@ -11,5 +12,4 @@
- python-libevdev
- python-pytest
- python-yaml
+@@ -1,15 +0,0 @@
+-X-ABI-XINPUT_VERSION
+-glibc
+-gobject-introspection
+-libx11
+-libxi
+-libxinerama
+-libxrandr
+-meson
+-python-attrs
+-python-gobject
+-python-libevdev
+-python-pytest
+-python-yaml
 -systemd-libs
- xorg-server-devel
+-xorg-server-devel

@@ -8,3 +8,23 @@
    'sshpass: for ssh connections with password'
  )
  provides=('python-ansible' 'ansible-base')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-python
+-python-build
+-python-cryptography
+-python-docutils
+-python-installer
+-python-jinja
+-python-packaging
+-python-paramiko
+-python-pyyaml
+-python-resolvelib
+-python-setuptools
+-python-typing_extensions
+-python-wheel

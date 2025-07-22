@@ -15,18 +15,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,7 @@
- extra-cmake-modules
- gcc-libs
- glibc
-+gpgme
- gpgmepp
- kcoreaddons
- ki18n
-@@ -10,5 +11,6 @@
- plasma-workspace
- plasma5support
- qgpgme
-+qgpgme-qt6
- qt6-base
- qt6-declarative
+@@ -1,14 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-gpgmepp
+-kcoreaddons
+-ki18n
+-kitemmodels
+-libplasma
+-oath-toolkit
+-plasma-workspace
+-plasma5support
+-qgpgme
+-qt6-base
+-qt6-declarative

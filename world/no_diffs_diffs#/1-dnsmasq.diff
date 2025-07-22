@@ -23,3 +23,21 @@
    install -Dm0644 "$srcdir/dnsmasq-sysusers.conf" "$pkgdir"/usr/lib/sysusers.d/dnsmasq.conf
  
    sed -i 's,%%PREFIX%%,/usr,' "$pkgdir"/etc/dnsmasq.conf
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-glibc
+-gmp
+-libdbus
+-libdbus-1.so
+-libhogweed.so
+-libidn2
+-libidn2.so
+-libnetfilter_conntrack
+-libnettle.so
+-nettle
+-nftables

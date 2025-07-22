@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -58,6 +58,7 @@
+         --disable-memconf \
+         --enable-ui \
+         --disable-python2 \
++        --disable-systemd-services \
+         --with-python=python3 \
+         --with-ucd-dir=/usr/share/unicode/
+     sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,33 +0,0 @@
+-at-spi2-core
+-cairo
+-dconf
+-gdk-pixbuf2
+-glib2
+-glib2-devel
+-gobject-introspection
+-graphene
+-gtk-doc
+-gtk3
+-gtk4
+-hicolor-icon-theme
+-libdbusmenu-glib
+-libdbusmenu-gtk3
+-libgio-2.0.so
+-libglib-2.0.so
+-libgobject-2.0.so
+-libibus
+-libnotify
+-libx11
+-libxfixes
+-libxi
+-libxkbcommon
+-pango
+-python
+-python-gobject
+-qt5-base
+-unicode-character-database
+-unicode-cldr
+-unicode-emoji
+-vala
+-wayland
+-wayland-protocols
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ --disable-memconf \
+ --enable-ui \
+ --disable-python2 \
++--disable-systemd-services \
+ --with-python=python3 \
+ --with-ucd-dir=/usr/share/unicode/
+ sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

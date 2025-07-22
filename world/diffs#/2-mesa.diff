@@ -79,11 +79,51 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -36,7 +36,6 @@
- rust-bindgen
- spirv-llvm-translator
- spirv-tools
+@@ -1,47 +0,0 @@
+-cbindgen
+-clang
+-cmake
+-directx-headers
+-elfutils
+-expat
+-gcc-libs
+-glibc
+-glslang
+-libclc
+-libdrm
+-libelf
+-libglvnd
+-libpng
+-libva
+-libvdpau
+-libx11
+-libxcb
+-libxext
+-libxml2
+-libxrandr
+-libxshmfence
+-libxxf86vm
+-llvm
+-llvm-libs
+-lm_sensors
+-meson
+-python
+-python-mako
+-python-packaging
+-python-ply
+-python-sphinx
+-python-sphinx-hawkmoth
+-python-yaml
+-rust
+-rust-bindgen
+-spirv-llvm-translator
+-spirv-tools
 -systemd-libs
- valgrind
- vulkan-icd-loader
- wayland
+-valgrind
+-vulkan-icd-loader
+-wayland
+-wayland-protocols
+-xcb-util-keysyms
+-xorgproto
+-zlib
+-zstd

@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+   'nss'
+   'parted'
+   'python'
+-  'systemd-libs'
++  'libudev'
+   'util-linux'
+   'util-linux-libs'
+   'volume_key'
+@@ -80,7 +80,7 @@
+     glib2 libglib-2.0.so libgio-2.0.so libgobject-2.0.so
+     glibc
+     kmod libkmod.so
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+   optdepends=(
+     'libblockdev-btrfs: for BTRFS support'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,47 +0,0 @@
+-autoconf-archive
+-btrfs-progs
+-cryptsetup
+-device-mapper
+-dosfstools
+-e2fsprogs
+-exfatprogs
+-gcc-libs
+-glib2
+-glibc
+-gobject-introspection
+-gtk-doc
+-json-glib
+-keyutils
+-kmod
+-libatasmart
+-libbd_utils.so
+-libblkid.so
+-libblockdev
+-libblockdev.so
+-libbytesize
+-libcryptsetup.so
+-libdevmapper.so
+-libe2p.so
+-libext2fs.so
+-libfdisk.so
+-libgio-2.0.so
+-libglib-2.0.so
+-libgobject-2.0.so
+-libkeyutils.so
+-libkmod.so
+-libmount.so
+-libnvme
+-libudev.so
+-libuuid.so
+-libyaml
+-lvm2
+-mdadm
+-ndctl
+-nss
+-parted
+-python
+-python-gobject
+-systemd-libs
+-util-linux
+-util-linux-libs
+-volume_key

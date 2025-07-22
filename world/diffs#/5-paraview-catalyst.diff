@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,17 +37,15 @@
+ }
+ 
+ build() {
+-  local cmake_options=(
+-    -B build
+-    -S $_name-v$pkgver
+-    -G Ninja
+-    -W no-dev
++  local cmake_flags=(
++    -B build -S $_name-v$pkgver -G Ninja
+     -DCMAKE_INSTALL_PREFIX=/usr
+     -DCATALYST_USE_MPI=ON
+     -DCATALYST_WRAP_PYTHON=ON
+     -DCATALYST_WRAP_FORTRAN=ON
++    -Wno-dev
+   )
+-  cmake "${cmake_options[@]}"
++  cmake "${cmake_flags[@]}"
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-cmake
+-gcc-fortran
+-gcc-libs
+-glibc
+-gtest
+-ninja
+-openmpi
+-python
+-python-numpy
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,16 +6,14 @@
+ EOF
+ }
+ build() {
+-local cmake_options=(
+--B build
+--S $_name-v$pkgver
+--G Ninja
+--W no-dev
++local cmake_flags=(
++-B build -S $_name-v$pkgver -G Ninja
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DCATALYST_USE_MPI=ON
+ -DCATALYST_WRAP_PYTHON=ON
+ -DCATALYST_WRAP_FORTRAN=ON
++-Wno-dev
+ )
+-cmake "${cmake_options[@]}"
++cmake "${cmake_flags[@]}"
+ cmake --build build
+ }

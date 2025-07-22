@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,8 @@
+ groups=(jami)
+ depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
+          fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
+-         openssl webrtc-audio-processing-0.3 systemd-libs libarchive)
+-makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio systemd meson)
++         openssl webrtc-audio-processing-0.3 libudev libarchive)
++makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio udev meson)
+ checkdepends=(cppunit)
+ _commit=cbf8f0af6d49d1e95cf7fc85487c9c876d49878c
+ _pjprojectver=8fc165b833eea6e3c88d67a541385424b129fd3f
+@@ -60,7 +60,7 @@
+   make DEPS_pjproject= DEPS_dhtnet=pjproject
+ 
+   cd "${srcdir}"
+-  arch-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
++  artix-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
+                               $( ((CHECKFUNC)) && echo -D tests=true) \
+                               -D pkg_config_path="${PWD}/${pkgname}/contrib/$(cc -dumpmachine)/lib/pkgconfig"
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,31 +0,0 @@
+-alsa-lib
+-asio
+-cmake
+-ffmpeg
+-fmt
+-git
+-glibc
+-gnutls
+-jack
+-jsoncpp
+-libarchive
+-libgit2
+-libnatpmp
+-libpulse
+-libsecp256k1
+-libsecp256k1.so
+-libupnp
+-meson
+-msgpack-c
+-msgpack-cxx
+-nettle
+-opendht
+-openssl
+-perl
+-restinio
+-speexdsp
+-systemd
+-systemd-libs
+-webrtc-audio-processing-0.3
+-yaml-cpp
+-zlib

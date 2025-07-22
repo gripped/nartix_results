@@ -9,3 +9,13 @@
  pkgdesc='Broadcom 802.11 Linux STA wireless driver'
  arch=('x86_64')
  url='https://www.broadcom.com/support/download-search/?pf=Wireless+LAN+Infrastructure'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-broadcom-wl-dkms
+-linux
+-linux-headers

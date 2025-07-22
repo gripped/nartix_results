@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,7 @@
+     -DINSTALL_INCLUDEDIR=include/qt6 \
+     -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
+     -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
+-    -DQT_FEATURE_journald=ON \
++    -DQT_FEATURE_journald=OFF \
+     -DQT_FEATURE_openssl_linked=ON \
+     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+   cmake --build build --target docs
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,21 +0,0 @@
+-alsa-lib
+-clang
+-cmake
+-cups
+-freetds
+-gperf
+-gst-plugins-base-libs
+-gtk3
+-libpulse
+-libxkbfile
+-llvm
+-mariadb-libs
+-ninja
+-nodejs
+-openxr
+-postgresql
+-python
+-python-html5lib
+-qt6-doc
+-unixodbc
+-vulkan-headers
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ -DINSTALL_INCLUDEDIR=include/qt6 \
+ -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
+ -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
+--DQT_FEATURE_journald=ON \
++-DQT_FEATURE_journald=OFF \
+ -DQT_FEATURE_openssl_linked=ON \
+ -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+ cmake --build build --target docs

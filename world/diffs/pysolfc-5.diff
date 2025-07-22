@@ -73,21 +73,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,10 @@
- pysolfc-cardsets
+@@ -1,12 +0,0 @@
+-pysolfc-cardsets
 -python
- python-attrs
+-python-attrs
 -python-build
- python-configobj
+-python-configobj
 -python-installer
- python-pillow
- python-pygame
- python-pysol_cards
-+python-random2
- python-setuptools
+-python-pillow
+-python-pygame
+-python-pysol_cards
+-python-setuptools
 -python-wheel
-+python-six
- tk
+-tk
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

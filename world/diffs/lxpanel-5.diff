@@ -46,14 +46,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,6 @@
- curl
- docbook-xml
- docbook-xsl
+@@ -1,12 +0,0 @@
+-alsa-lib
+-curl
+-docbook-xml
+-docbook-xsl
 -git
- intltool
- libfm-gtk2
- libkeybinder2
+-intltool
+-libfm-gtk2
+-libkeybinder2
+-libwnck
+-lxmenu-data
+-menu-cache
+-wireless_tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -19,3 +19,20 @@
  
 -  install -Dm0644 "$srcdir"/$pkgname.service "$pkgdir"/usr/lib/systemd/system/$pkgname.service
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-gcc-libs
+-libldap
+-libmariadbclient
+-libmicrohttpd
+-libxml2
+-libxslt
+-lynx
+-openssl
+-postgresql-libs
+-unixodbc

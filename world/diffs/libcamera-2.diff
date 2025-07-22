@@ -1,0 +1,93 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+   qt6-base
+   qt6-tools
+   sdl2
+-  systemd
++  udev
+   texlive-core
+ )
+ source=(
+@@ -75,19 +75,10 @@
+     -D test=true
+   )
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+-check() {
+-  local tests=$(
+-    meson test -C build --list | awk '{print $3}' \
+-      | grep -v single_stream_test \
+-      | grep -v multi_stream_test \
+-      | grep -v memory_lifetime_test \
+-  )
+-  meson test -C build ${tests[@]}
+-}
+ 
+ package_libcamera() {
+   license=(
+@@ -109,7 +100,7 @@
+     libyaml
+     libyuv
+     sh
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+   optdepends=(
+     'gst-plugin-libcamera: GStreamer plugin'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,45 +0,0 @@
+-cmake
+-doxygen
+-gcc-libs
+-git
+-glib2
+-glibc
+-gnutls
+-graphviz
+-gst-plugins-base
+-gst-plugins-base-libs
+-gstreamer
+-gtest
+-libcamera
+-libcamera-base.so
+-libcamera-ipa
+-libcamera.so
+-libdrm
+-libelf
+-libevent
+-libevent-2.1.so
+-libevent_pthreads-2.1.so
+-libglib-2.0.so
+-libgobject-2.0.so
+-libjpeg-turbo
+-libjpeg.so
+-libtiff
+-libtiff.so
+-libudev.so
+-libunwind
+-libyaml
+-libyuv
+-meson
+-pybind11
+-python
+-python-jinja
+-python-ply
+-python-pyyaml
+-python-sphinx
+-qt6-base
+-qt6-tools
+-sdl2
+-sh
+-systemd
+-systemd-libs
+-texlive-core

@@ -9,3 +9,21 @@
  pkgdesc="Library for import of reflowable e-book formats."
  arch=('x86_64')
  url="https://sourceforge.net/projects/libebook/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-boost
+-cppunit
+-doxygen
+-gcc-libs
+-glibc
+-gperf
+-icu
+-liblangtag
+-librevenge
+-libxml2
+-zlib

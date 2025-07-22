@@ -9,3 +9,22 @@
  pkgdesc="Set of extensions for Caja, the MATE file manager"
  url="https://mate-desktop.org"
  arch=('x86_64')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-
+-autoconf-archive
+-caja
+-caja-extensions-common
+-dbus-glib
+-gettext
+-glib2-devel
+-gst-plugins-base
+-imagemagick
+-mate-common
+-python
+-samba

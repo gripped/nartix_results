@@ -33,3 +33,14 @@
    install -Dm0644 user.conf "$pkgdir"/usr/lib/sysusers.d/openfire.conf
    install -Dm0644 tmpfile.conf "$pkgdir"/usr/lib/tmpfiles.d/openfire.conf
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-java-runtime-headless<19
+-jdk11-openjdk
+-jre11-openjdk-headless
+-maven

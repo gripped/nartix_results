@@ -8,3 +8,39 @@
    )
    local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,29 +0,0 @@
+-python
+-python-blinker
+-python-build
+-python-certifi
+-python-dep-logic
+-python-dotenv
+-python-filelock
+-python-findpython
+-python-hishel
+-python-httpcore
+-python-httpx
+-python-id
+-python-installer
+-python-msgpack
+-python-packaging
+-python-pbs-installer
+-python-pdm-backend
+-python-pdm-build-locked
+-python-platformdirs
+-python-pyproject-hooks
+-python-resolvelib
+-python-rich
+-python-shellingham
+-python-socksio
+-python-tomlkit
+-python-truststore
+-python-unearth
+-python-virtualenv
+-python-wheel

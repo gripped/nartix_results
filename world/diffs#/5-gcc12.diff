@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -58,7 +58,7 @@
+       --libexecdir=/usr/lib
+       --mandir=/usr/share/man
+       --infodir=/usr/share/info
+-      --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc12/-/issues
++      --with-bugurl=https://gitea.artixlinux.org/packages/gcc12/issues
+       --with-build-config=bootstrap-lto
+       --with-linker-hash-style=gnu
+       --with-system-zlib
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +0,0 @@
+-binutils
+-binutils>
+-doxygen
+-gcc-ada
+-gcc-d
+-gcc12
+-gcc12-libs
+-git
+-glibc>
+-libisl
+-libisl.so
+-libmpc
+-python
+-zstd
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ --libexecdir=/usr/lib
+ --mandir=/usr/share/man
+ --infodir=/usr/share/info
+---with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc12/-/issues
++--with-bugurl=https://gitea.artixlinux.org/packages/gcc12/issues
+ --with-build-config=bootstrap-lto
+ --with-linker-hash-style=gnu
+ --with-system-zlib

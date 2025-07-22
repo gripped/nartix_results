@@ -194,17 +194,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,9 @@
+@@ -1,15 +0,0 @@
 -git
- python
- python-awscrt
- python-build
-+python-certifi
- python-colorama
-+python-cryptography
- python-dateutil
- python-distro
- python-docutils
+-python
+-python-awscrt
+-python-build
+-python-colorama
+-python-dateutil
+-python-distro
+-python-docutils
+-python-flit-core
+-python-installer
+-python-jmespath
+-python-prompt_toolkit
+-python-ruamel-yaml
+-python-urllib3
+-python-wheel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

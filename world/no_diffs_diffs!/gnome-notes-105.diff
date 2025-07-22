@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -80,7 +80,7 @@
+@@ -67,7 +67,7 @@
      -D update_mimedb=false
    )
  
@@ -13,7 +13,31 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,22 +0,0 @@
+-cairo
+-curl
+-dconf
+-evolution-data-server
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-gnome-online-accounts
+-gtk3
+-hicolor-icon-theme
+-json-glib
+-libgoa
+-libhandy
+-libical
+-libxml2
+-meson
+-pango
+-tinysparql
+-webkit2gtk-4.1
+-yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

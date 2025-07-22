@@ -9,3 +9,39 @@
  pkgdesc='A music player aimed at audio enthusiasts and music collectors'
  arch=(x86_64)
  url='https://www.strawberrymusicplayer.org/'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,29 +0,0 @@
+-alsa-lib
+-boost
+-chromaprint
+-cmake
+-fftw
+-gcc-libs
+-gdk-pixbuf2
+-git
+-glib2
+-glibc
+-gst-plugins-base
+-gst-plugins-base-libs
+-gst-plugins-good
+-gstreamer
+-icu
+-kdsingleapplication
+-libcdio
+-libebur128
+-libgpod
+-libmtp
+-libpulse
+-libx11
+-qt6-base
+-qt6-tools
+-rapidjson
+-sparsehash
+-sqlite
+-taglib
+-udisks2

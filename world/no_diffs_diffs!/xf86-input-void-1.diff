@@ -5,3 +5,14 @@
    install -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/"
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-X-ABI-XINPUT_VERSION
+-glibc
+-xorg-server-devel
+-xorgproto

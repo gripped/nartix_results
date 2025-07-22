@@ -22,3 +22,27 @@
    install -Dm644 $pkgbase.conf \
      "${pkgdir}"/etc/conf.d/$pkgbase
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,17 +0,0 @@
+-boost
+-cmake
+-extra-cmake-modules
+-hicolor-icon-theme
+-icu
+-knotifyconfig5
+-libldap
+-python
+-qca
+-qca-qt5
+-qt5-base
+-qt5-multimedia
+-qt5-svg
+-qt5-tools
+-qt5-webengine
+-quassel-common
+-sonnet5

@@ -9,3 +9,22 @@
  pkgdesc='Lightweight X11 desktop panel for LXDE'
  arch=('x86_64')
  license=('GPL2')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-alsa-lib
+-curl
+-docbook-xml
+-docbook-xsl
+-git
+-intltool
+-libfm-gtk2
+-libkeybinder2
+-libwnck
+-lxmenu-data
+-menu-cache
+-wireless_tools

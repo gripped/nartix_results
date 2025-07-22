@@ -8,3 +8,29 @@
    install -Dm644 "extra/desktop/mopidy.desktop" "${pkgdir}/usr/share/applications/mopidy.desktop"
  
    install -dm755 -g 46 -o 46 "${pkgdir}/var/cache/mopidy"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,19 +0,0 @@
+-git
+-gst-plugins-base
+-gst-plugins-good
+-gst-plugins-ugly
+-gst-python
+-gstreamer
+-python
+-python-build
+-python-dbus
+-python-installer
+-python-pykka
+-python-requests
+-python-setuptools
+-python-setuptools-scm
+-python-sphinx
+-python-sphinx-autodoc-typehints
+-python-sphinx_rtd_theme
+-python-tornado
+-python-wheel

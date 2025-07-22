@@ -36,13 +36,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,6 @@
- bower
-+esysusers
-+etmpfiles
- git
- glibc
- go
+@@ -1,10 +0,0 @@
+-bower
+-git
+-glibc
+-go
+-go-tools
+-gox
+-nodejs-lts-iron
+-npm
+-yarn
+-zip
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

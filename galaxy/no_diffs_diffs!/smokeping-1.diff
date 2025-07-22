@@ -32,3 +32,22 @@
    install -Dm644 "$srcdir/smokeping.sysusers" "$pkgdir/usr/lib/sysusers.d/smokeping.conf"
    install -Dm644 "$srcdir/smokeping.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/smokeping.conf"
    chown -R 181:181 "$pkgdir"/{etc/smokeping,srv/http/smokeping}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-perl-cgi-fast
+-perl-config-grammar
+-perl-digest-hmac
+-perl-fcgi
+-perl-io-tty
+-perl-ldap
+-perl-libwww
+-perl-net-dns
+-perl-net-openssh
+-perl-net-snmp
+-perl-net-telnet
+-rrdtool

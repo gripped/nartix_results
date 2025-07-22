@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,13 +32,11 @@
+   "vpnc-scripts::git+https://gitlab.com/openconnect/vpnc-scripts.git#commit=${_vpncscripts_commit}"
+   git+https://github.com/streambinder/vpnc.wiki.git
+   vpnc.conf
+-  vpnc@.service
+ )
+ sha512sums=('SKIP'
+             'SKIP'
+             'SKIP'
+-            'ac70712192c01ff638a9badc5cff7105bee5c4fed5d3a3b728e9597661952d156041c82fe1e544e2bab602d193d4105d3689c79c46d964623f6ce38dd89f0ea7'
+-            'cafcab676986c1a2e49441f01d61997f1c6b54bbb68661b9af007d4816f8e76eee6b7ac2dfab55b55965fa407e8331c663cf11aa79384c30b0c9049c1477b791')
++            'ac70712192c01ff638a9badc5cff7105bee5c4fed5d3a3b728e9597661952d156041c82fe1e544e2bab602d193d4105d3689c79c46d964623f6ce38dd89f0ea7')
+ 
+ pkgver() {
+   cd ${pkgname}
+@@ -58,6 +56,9 @@
+   sed 's|/sbin/resolvconf|/usr/bin/resolvconf|g' -i ../vpnc-scripts/vpnc-script
+   ln -sf ../../vpnc-scripts/vpnc-script src
+   ln -sf ../../vpnc.conf src
++  sed -e '/service/d' \
++      -e "/SYSTEMDDIR=/d"\
++      -i "$srcdir"/vpnc/Makefile
+ }
+ 
+ build() {
+@@ -73,7 +74,6 @@
+   install -d "${pkgdir}/usr/share/doc/${pkgname}"
+   make DESTDIR="${pkgdir}" PREFIX=/usr SBINDIR=/usr/bin install
+   install -Dm 755 ../vpnc-scripts/vpnc-script -t "${pkgdir}/etc/vpnc"
+-  install -Dm 644 ../vpnc@.service -t "${pkgdir}/usr/lib/systemd/system"
+   install -Dm 644 .github/README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+   install -Dm 644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-bash
+-git
+-glibc
+-iproute2
+-libgcrypt
+-openssl
+-perl
+-which
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,9 @@
+ sed 's|/sbin/resolvconf|/usr/bin/resolvconf|g' -i ../vpnc-scripts/vpnc-script
+ ln -sf ../../vpnc-scripts/vpnc-script src
+ ln -sf ../../vpnc.conf src
++sed -e '/service/d' \
++-e "/SYSTEMDDIR=/d"\
++-i "$srcdir"/vpnc/Makefile
+ }
+ build() {
+ make -C ${pkgname}

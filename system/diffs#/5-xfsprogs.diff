@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,7 +42,7 @@
+ 
+   export OPTIMIZER=" "
+   ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib \
+-              --with-systemd-unit-dir=/usr/lib/systemd/system \
++              --with-systemd-unit-dir=no \
+               --localstatedir=/var --enable-editline
+   make
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-device-mapper
+-git
+-icu
+-libedit
+-libinih
+-liburcu
+-sh
+-util-linux-libs
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ sed -r -i 's/\$\(LIBICU_LIBS\)/\0 -licuuc/' scrub/Makefile
+ export OPTIMIZER=" "
+ ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib \
+---with-systemd-unit-dir=/usr/lib/systemd/system \
++--with-systemd-unit-dir=no \
+ --localstatedir=/var --enable-editline
+ make
+ }

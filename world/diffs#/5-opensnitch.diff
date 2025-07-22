@@ -152,29 +152,33 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +1,9 @@
+@@ -1,26 +0,0 @@
 -bc
 -clang
- git
- glibc
- go
- hicolor-icon-theme
+-git
+-glibc
+-go
+-hicolor-icon-theme
 -libelf
- libnetfilter_queue
- libnfnetlink
+-libnetfilter_queue
+-libnfnetlink
 -linux-headers
 -llvm
- python
- python-build
- python-grpcio
-@@ -16,7 +11,6 @@
- python-installer
- python-jaraco.text
- python-notify2
+-python
+-python-build
+-python-grpcio
+-python-grpcio-tools
+-python-installer
+-python-jaraco.text
+-python-notify2
 -python-packaging
- python-protobuf
- python-pyinotify
- python-pyqt5
+-python-protobuf
+-python-pyinotify
+-python-pyqt5
+-python-setuptools
+-python-slugify
+-python-wheel
+-qt5-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

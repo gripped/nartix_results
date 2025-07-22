@@ -24,3 +24,20 @@
    install -Dm644 "${srcdir}/consul.sysusers" "${pkgdir}/usr/lib/sysusers.d/consul.conf"
  
    install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-git
+-glibc
+-go
+-go-tools
+-gox
+-nodejs-lts-iron
+-npm
+-procps-ng
+-yarn
+-zip

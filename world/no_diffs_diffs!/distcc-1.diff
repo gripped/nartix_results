@@ -23,3 +23,16 @@
    _targets=(c++ c89 c99 cc clang clang++ cpp g++ gcc $CARCH-pc-linux-gnu-g++
              $CARCH-pc-linux-gnu-gcc $CARCH-pc-linux-gnu-gcc-$(gcc -dumpversion))
    install -d "$pkgdir/usr/lib/$pkgname/bin"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-avahi
+-git
+-gtk3
+-popt
+-python
+-python-setuptools

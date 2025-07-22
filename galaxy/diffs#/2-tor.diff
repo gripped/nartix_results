@@ -70,19 +70,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,7 @@
- bash
- ca-certificates
-+esysusers
-+etmpfiles
- gcc-libs
- glibc
- libcap.so
-@@ -8,7 +10,5 @@
- liblzma.so
- libseccomp.so
- libssl.so
+@@ -1,14 +0,0 @@
+-bash
+-ca-certificates
+-gcc-libs
+-glibc
+-libcap.so
+-libcrypto.so
+-libevent
+-liblzma.so
+-libseccomp.so
+-libssl.so
 -libsystemd.so
- libz.so
- libzstd.so
+-libz.so
+-libzstd.so
 -systemd

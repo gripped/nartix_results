@@ -9,3 +9,15 @@
  pkgdesc="A portable middleware for email access"
  arch=('x86_64')
  url="https://www.etpan.org/libetpan.html"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-expat
+-glibc
+-gnutls
+-libsasl
+-zlib

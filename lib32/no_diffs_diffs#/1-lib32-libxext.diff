@@ -9,3 +9,14 @@
  pkgdesc="X11 miscellaneous extensions library (32-bit)"
  arch=(x86_64)
  url="https://xorg.freedesktop.org/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-gcc-multilib
+-lib32-libx11
+-libxext
+-xorg-util-macros

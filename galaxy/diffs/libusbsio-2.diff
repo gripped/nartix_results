@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+   python-installer
+   python-setuptools
+   python-wheel
+-  systemd
++  udev
+ )
+ source=(https://www.nxp.com/downloads/en/libraries/$pkgbase-$pkgver-src.zip)
+ sha512sums=('200717be44cdb2bb7cc7eeba29afb6aed8a88a72e7664377c1abf8c1d1f88f7de1ed05c9a7d6c960ae53e4b9420889c252d51fd807b1534396430004138518a0')
+@@ -45,7 +45,7 @@
+ package_libusbsio() {
+   depends=(
+     glibc
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+ 
+   cd $pkgbase-$pkgver-src
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-glibc
+-hidapi
+-libudev.so
+-libusb
+-libusbsio
+-python
+-python-build
+-python-installer
+-python-setuptools
+-python-wheel
+-systemd
+-systemd-libs

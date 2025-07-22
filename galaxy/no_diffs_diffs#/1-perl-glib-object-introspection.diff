@@ -9,3 +9,16 @@
  pkgdesc="Dynamically create Perl language bindings"
  arch=('x86_64')
  url="https://metacpan.org/release/${_perl_namespace}-${_perl_module}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-glib-perl
+-gobject-introspection
+-gobject-introspection-runtime
+-perl-cairo-gobject
+-perl-extutils-depends
+-perl-extutils-pkgconfig

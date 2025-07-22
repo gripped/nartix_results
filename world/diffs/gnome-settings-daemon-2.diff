@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,8 +44,8 @@
+   pango
+   polkit
+   pulse-native-provider
+-  systemd
+-  systemd-libs
++  elogind
++  libelogind
+   upower
+   wayland
+   xorg-xrdb
+@@ -82,7 +82,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Delogind=true -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,46 +0,0 @@
+-alsa-lib
+-bash
+-cairo
+-dconf
+-docbook-xsl
+-fontconfig
+-gcc-libs
+-gcr-4
+-geoclue
+-geocode-glib-2
+-git
+-glib2
+-glib2-devel
+-glibc
+-gnome-desktop
+-gsettings-desktop-schemas
+-gtk3
+-libcanberra-pulse
+-libcolord
+-libcups
+-libgudev
+-libgweather-4
+-libmm-glib
+-libnm
+-libnotify
+-libp11-kit
+-libpulse
+-librsvg
+-libwacom
+-libx11
+-libxext
+-libxfixes
+-libxi
+-libxslt
+-meson
+-nss
+-pango
+-polkit
+-pulse-native-provider
+-python
+-systemd
+-systemd-libs
+-upower
+-usbguard
+-wayland
+-xorg-xrdb

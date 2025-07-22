@@ -73,12 +73,33 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,8 +20,6 @@
- postgresql-libs>
- python
- readline
+@@ -1,29 +0,0 @@
+-
+-bash
+-clang
+-docbook-xml
+-docbook-xsl
+-gcc-libs
+-glibc
+-icu
+-krb5
+-libldap
+-libxml2
+-libxslt
+-llvm
+-llvm-libs
+-lz4
+-openssl
+-pam
+-perl
+-perl-ipc-run
+-postgresql-libs>
+-python
+-readline
 -systemd
 -systemd-libs
- tcl
- util-linux
- util-linux-libs
+-tcl
+-util-linux
+-util-linux-libs
+-zlib
+-zstd

@@ -32,3 +32,19 @@
 -  install -D -m644 "${srcdir}/snmptrapd.service" "${pkgdir}/usr/lib/systemd/system/snmptrapd.service"
    install -D -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-git
+-libnsl
+-libpcap
+-lm_sensors
+-openssl
+-pciutils
+-pcre2
+-perl
+-python-setuptools

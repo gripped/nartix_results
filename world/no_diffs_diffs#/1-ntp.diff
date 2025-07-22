@@ -24,3 +24,14 @@
  	install -Dm644 ../ntp.sysusers "${pkgdir}"/usr/lib/sysusers.d/ntp.conf
  	install -Dm644 COPYRIGHT "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-libcap
+-libedit
+-openssl
+-perl

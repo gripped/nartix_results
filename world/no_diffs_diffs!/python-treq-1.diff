@@ -5,3 +5,26 @@
    install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +0,0 @@
+-httpbin
+-python
+-python-attrs
+-python-build
+-python-hyperlink
+-python-idna
+-python-incremental
+-python-installer
+-python-pyopenssl
+-python-requests
+-python-service-identity
+-python-setuptools
+-python-twisted
+-python-typing_extensions
+-python-wheel
+-python-zope-interface

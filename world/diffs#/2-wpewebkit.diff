@@ -31,19 +31,64 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -34,7 +34,6 @@
- libpng
- libseccomp
- libsoup3
+@@ -1,60 +0,0 @@
+-
+-at-spi2-core
+-atk
+-bubblewrap
+-cairo
+-clang
+-cmake
+-expat
+-fontconfig
+-freetype2
+-gcc-libs
+-gi-docgen
+-glib2
+-glib2-devel
+-glibc
+-gobject-introspection
+-gperf
+-gst-plugins-bad
+-gst-plugins-bad-libs
+-gst-plugins-base-libs
+-gstreamer
+-harfbuzz
+-harfbuzz-icu
+-icu
+-lcms2
+-libWPEBackend-fdo-1.0.so
+-libavif
+-libdrm
+-libepoxy
+-libgcrypt
+-libinput
+-libjpeg-turbo
+-libjxl
+-libpng
+-libseccomp
+-libsoup3
 -libsystemd
- libtasn1
- libwebp
- libwpe
-@@ -50,7 +49,6 @@
- ruby
- ruby-stdlib
- sqlite
+-libtasn1
+-libwebp
+-libwpe
+-libwpe-1.0.so
+-libxkbcommon
+-libxml2
+-libxslt
+-lld
+-mesa
+-ninja
+-openjpeg2
+-python
+-ruby
+-ruby-stdlib
+-sqlite
 -systemd
- unifdef
- wayland
- wayland-protocols
+-unifdef
+-wayland
+-wayland-protocols
+-woff2
+-wpebackend-fdo
+-xdg-dbus-proxy
+-zlib

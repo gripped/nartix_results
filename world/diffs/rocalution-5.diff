@@ -46,14 +46,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,6 @@
- gcc-libs
- glibc
+@@ -1,12 +0,0 @@
+-gcc-libs
+-glibc
 -hip-runtime-amd
-+hip
- openmp
- openmpi
- rocblas
+-openmp
+-openmpi
+-rocblas
+-rocm-cmake
+-rocm-core
+-rocprim
+-rocrand
+-rocsolver
+-rocsparse
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

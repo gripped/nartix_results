@@ -35,3 +35,25 @@
  	install -Dm0644 exim.logrotate "$pkgdir/etc/logrotate.d/exim"
  	install -Dm0644 exim.sysusers "$pkgdir/usr/lib/sysusers.d/exim.conf"
  	install -Dm0644 exim.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/exim.conf"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,15 +0,0 @@
+-bash
+-gdbm
+-glibc
+-libidn
+-libidn2
+-libldap
+-libnsl
+-libspf2
+-libxcrypt
+-openssl
+-pam
+-pcre2
+-perl
+-perl-file-fcntllock
+-sqlite

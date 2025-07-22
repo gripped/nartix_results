@@ -9,3 +9,21 @@
  pkgdesc="Intel oneAPI DPC++/C++ Compiler"
  arch=('x86_64')
  url='https://software.intel.com/content/www/us/en/develop/tools/oneapi.html'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-bash
+-gcc-libs
+-glibc
+-intel-oneapi-common
+-intel-oneapi-compiler-dpcpp-cpp-common
+-intel-oneapi-compiler-dpcpp-cpp-runtime
+-intel-oneapi-compiler-shared
+-intel-oneapi-compiler-shared-runtime
+-intel-oneapi-dev-utilities
+-intel-oneapi-tbb
+-zlib

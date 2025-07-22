@@ -22,20 +22,48 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,7 +19,6 @@
- libssl.so
- libswresample.so
- libswscale.so
+@@ -1,44 +0,0 @@
+-alsa-lib
+-cmake
+-docbook-xsl
+-ffmpeg
+-glibc
+-icu
+-krb5
+-libasound.so
+-libavcodec.so
+-libavutil.so
+-libcrypto.so
+-libcups
+-libicuuc.so
+-libjpeg-turbo
+-libjpeg.so
+-libpam.so
+-libpulse
+-libpulse.so
+-libssl.so
+-libswresample.so
+-libswscale.so
 -libsystemd.so
- libusb
- libusb-1.0.so
- libx11
-@@ -37,8 +36,6 @@
- openssl
- pam
- pcsclite
+-libusb
+-libusb-1.0.so
+-libx11
+-libxcursor
+-libxdamage
+-libxext
+-libxfixes
+-libxi
+-libxinerama
+-libxkbcommon
+-libxkbfile
+-libxrandr
+-libxrender
+-libxtst
+-openssl
+-pam
+-pcsclite
 -systemd
 -systemd-libs
- wayland
- xmlto
- xorgproto
+-wayland
+-xmlto
+-xorgproto

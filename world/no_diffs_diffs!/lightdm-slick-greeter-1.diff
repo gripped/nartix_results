@@ -19,3 +19,23 @@
  
  prepare() {
  	cd slick-greeter-${pkgver}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-cairo
+-freetype2
+-gnome-common
+-gtk3
+-intltool
+-libcanberra
+-libxext
+-lightdm
+-pixman
+-python
+-vala
+-xapp
+-xorg-server

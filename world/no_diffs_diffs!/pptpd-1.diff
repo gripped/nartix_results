@@ -22,3 +22,11 @@
    mkdir -p "$pkgdir"/usr/share/doc/pptpd
    cp -a samples "$pkgdir"/usr/share/doc/pptpd/
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1 +0,0 @@
+-ppp

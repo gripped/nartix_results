@@ -9,3 +9,25 @@
  pkgdesc="Securely and easily download, verify, install, and launch Tor Browser in Linux"
  url="https://github.com/torproject/torbrowser-launcher"
  depends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,15 +0,0 @@
+-dbus-glib
+-gnupg
+-hicolor-icon-theme
+-python
+-python-build
+-python-distro
+-python-gpgme
+-python-installer
+-python-packaging
+-python-pyqt5
+-python-pysocks
+-python-requests
+-python-setuptools
+-python-wheel
+-tor

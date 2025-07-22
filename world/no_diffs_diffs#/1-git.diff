@@ -22,3 +22,25 @@
  
    install -D -m 0644 "$srcdir"/git-sysusers.conf "$pkgdir"/usr/lib/sysusers.d/git.conf
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,15 +0,0 @@
+-asciidoc
+-curl
+-expat
+-git
+-grep
+-openssl
+-pcre2
+-perl
+-perl-error
+-perl-mailtools
+-python
+-shadow
+-xmlto
+-zlib-ng
+-zsh

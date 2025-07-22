@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,8 @@
+ depends=('libevent' 'libevent_core-2.1.so'
+          'libutempter'
+          'ncurses' 'libncursesw.so'
+-         'systemd-libs' 'libsystemd.so')
+-makedepends=('git' 'systemd')
++          'libudev.so')
++makedepends=('git' )
+ source=("git+https://github.com/tmux/tmux.git#tag=${pkgver/_/}")
+ sha256sums=('4809a5c8289027f4bc15a06bd232f5797d7dd9ba47adf4c3135c5295aece6ff5')
+ 
+@@ -26,7 +26,7 @@
+ 	./configure \
+ 		--prefix=/usr \
+ 		--enable-sixel \
+-		--enable-systemd \
++		--disable-systemd \
+ 		--enable-utempter
+ 	make
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-git
+-libevent
+-libevent_core-2.1.so
+-libncursesw.so
+-libsystemd.so
+-libutempter
+-ncurses
+-systemd
+-systemd-libs

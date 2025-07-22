@@ -33,14 +33,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,6 @@
- cinnamon-menus
- cinnamon-settings-daemon
- colord
+@@ -1,10 +0,0 @@
+-cinnamon-menus
+-cinnamon-settings-daemon
+-colord
 -glib2-devel
- gnome-online-accounts
- libgnomekbd
- libmm-glib
+-gnome-online-accounts
+-libgnomekbd
+-libmm-glib
+-meson
+-nm-connection-editor
+-samurai
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

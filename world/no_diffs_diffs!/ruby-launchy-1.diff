@@ -8,3 +8,15 @@
  )
  options=('!emptydirs')
  source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-ruby
+-ruby-addressable
+-ruby-childprocess
+-ruby-logger
+-ruby-rdoc

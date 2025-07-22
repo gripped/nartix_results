@@ -9,3 +9,19 @@
  )
  optdepends=('puppet: retrieve puppet facts')
  conflicts=('libwhereami' 'cpp-hocon' 'leatherman')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-dmidecode
+-git
+-pciutils
+-ruby-base64
+-ruby-hocon
+-ruby-rdoc
+-ruby-sys-filesystem
+-ruby-thor
+-virt-what

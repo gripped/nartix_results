@@ -251,6 +251,7 @@ mimetic
 mokutil
 mousepad
 mozo
+msedit
 muffin
 mugshot
 nemo

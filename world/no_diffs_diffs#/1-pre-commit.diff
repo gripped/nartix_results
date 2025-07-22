@@ -49,3 +49,17 @@
  
  package() {
    cd pre-commit-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-python-cfgv
+-python-identify
+-python-nodeenv
+-python-setuptools
+-python-toml
+-python-virtualenv
+-python-yaml

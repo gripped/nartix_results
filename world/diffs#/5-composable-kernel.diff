@@ -33,15 +33,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,7 @@
- gcc-libs
- git
- glibc
+@@ -1,10 +0,0 @@
+-cmake
+-gcc-libs
+-git
+-glibc
 -hip-runtime-amd
-+hip
- ninja
- openmp
- rocm-cmake
+-ninja
+-openmp
+-rocm-cmake
+-rocm-core
+-rocm-llvm
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

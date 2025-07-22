@@ -33,18 +33,30 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,7 +13,6 @@
- libmilter
- libmspack
- libncursesw.so
+@@ -1,26 +0,0 @@
+-bash
+-bzip2
+-cargo
+-cmake
+-curl
+-gcc-libs
+-glibc
+-json-c
+-libbz2.so
+-libcurl.so
+-libjson-c.so
+-libltdl
+-libmilter
+-libmspack
+-libncursesw.so
 -libsystemd.so
- libxml2
- ncurses
- ninja
-@@ -21,6 +20,4 @@
- pcre2
- python
- python-pytest
+-libxml2
+-ncurses
+-ninja
+-openssl
+-pcre2
+-python
+-python-pytest
 -systemd
 -systemd-libs
- zlib
+-zlib

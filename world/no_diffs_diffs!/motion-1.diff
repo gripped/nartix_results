@@ -31,3 +31,15 @@
    install -Dm644 "$srcdir"/motion.sysusers "$pkgdir"/usr/lib/sysusers.d/motion.conf
    install -Dm644 "$srcdir"/motion.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/motion.conf
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-ffmpeg
+-libmicrohttpd
+-libwebp
+-mariadb-libs
+-sqlite

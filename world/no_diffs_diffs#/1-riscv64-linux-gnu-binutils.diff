@@ -9,3 +9,17 @@
  pkgdesc='Assemble and manipulate binary and object files for 32-bit and 64-bit RISC-V'
  arch=(x86_64)
  url='https://gnu.org/software/binutils/'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-glibc
+-libelf
+-libz.so
+-libzstd.so
+-setconf
+-zlib
+-zstd

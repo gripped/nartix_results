@@ -72,22 +72,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +1,10 @@
+@@ -1,15 +0,0 @@
 -git
 -glib2-devel
 -gtk-layer-shell
- hicolor-icon-theme
-+intltool
- libsm
- libwnck3
- libxfce4ui
+-hicolor-icon-theme
+-libsm
+-libwnck3
+-libxfce4ui
 -libxfce4windowing
- polkit
- polkit-gnome
+-polkit
+-polkit-gnome
 -xfce4-dev-tools
- xfconf
- xorg-iceauth
- xorg-xinit
+-xfconf
+-xorg-iceauth
+-xorg-xinit
+-xorg-xrdb
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

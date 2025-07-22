@@ -21,3 +21,14 @@
    chmod 644 "$pkgdir/etc/ufw/"*.rules
    rm -rf "$pkgdir/usr/share/ufw/messages"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-git
+-iptables
+-python
+-python-setuptools

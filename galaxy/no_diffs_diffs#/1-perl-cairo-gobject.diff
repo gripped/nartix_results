@@ -9,3 +9,14 @@
  pkgdesc="Integrate Cairo into the Glib type system"
  arch=('x86_64')
  url="https://metacpan.org/dist/${_perl_namespace}-${_perl_module}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-cairo-perl
+-glib-perl
+-perl-extutils-depends
+-perl-extutils-pkgconfig

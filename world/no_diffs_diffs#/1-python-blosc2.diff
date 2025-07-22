@@ -8,3 +8,28 @@
  )
  source=("$pkgname::git+$url#tag=v$pkgver")
  sha512sums=('93d827be517a964a3a96b425d71ca5742eb5374e0cad8fbddda72a07dbf461a470bd674d2e31d48bb47ac88b5ffe8313aa60c3703f7e4f7bfa75035e9c7e8f06')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,18 +0,0 @@
+-blosc2
+-cmake
+-cython
+-git
+-glibc
+-ninja
+-python
+-python-build
+-python-installer
+-python-msgpack
+-python-ndindex
+-python-numexpr
+-python-numpy
+-python-platformdirs
+-python-py-cpuinfo
+-python-requests
+-python-scikit-build-core
+-python-setuptools

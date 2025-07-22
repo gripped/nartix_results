@@ -60,17 +60,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,8 @@
+@@ -1,12 +0,0 @@
 -appstream-glib
- cairo
- git
- gumbo-parser
- jbig2dec
+-cairo
+-git
+-gumbo-parser
+-jbig2dec
 -libjpeg-turbo
-+libjpeg
- libmupdf
- meson
- ninja
+-libmupdf
+-meson
+-ninja
+-openjpeg2
+-openssl
+-zathura
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -64,29 +64,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,12 @@
- cairo
+@@ -1,21 +0,0 @@
+-cairo
 -git
-+cmake
- glib2
- glibc
- libinput
- libpng
- librsvg
- libsfdo
+-glib2
+-glibc
+-libinput
+-libpng
+-librsvg
+-libsfdo
 -libwlroots-0.18.so
-+libwlroots-0.19.so
- libxcb
- libxkbcommon
- libxml2
-@@ -14,7 +14,6 @@
- pango
- pixman
- scdoc
+-libxcb
+-libxkbcommon
+-libxml2
+-meson
+-pango
+-pixman
+-scdoc
 -seatd
- ttf-font
- wayland
- wayland-protocols
+-ttf-font
+-wayland
+-wayland-protocols
+-xorg-xwayland
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

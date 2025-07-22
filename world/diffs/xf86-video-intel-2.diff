@@ -15,18 +15,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,7 @@
- glibc
- libdrm
- libpciaccess
-+libudev
- libx11
- libxcb
- libxcursor
-@@ -19,6 +20,5 @@
- libxvmc
- mesa
- pixman
+@@ -1,24 +0,0 @@
+-X-ABI-VIDEODRV_VERSION
+-git
+-glibc
+-libdrm
+-libpciaccess
+-libx11
+-libxcb
+-libxcursor
+-libxdamage
+-libxext
+-libxfixes
+-libxinerama
+-libxrandr
+-libxrender
+-libxshmfence
+-libxss
+-libxtst
+-libxv
+-libxvmc
+-mesa
+-pixman
 -systemd-libs
- xcb-util>
- xorg-server-devel
+-xcb-util>
+-xorg-server-devel

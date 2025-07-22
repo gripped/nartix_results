@@ -72,30 +72,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +1,23 @@
-+cairo
- dconf
-+gcc-libs
- geoclue
- geocode-glib-2
- git
- gjs
- glib2
-+glibc
- gobject-introspection
- gtk4
- hicolor-icon-theme
-+json-glib
- libadwaita
- libgweather-4
- libportal
- librest
-+librsvg
- libshumate
- libxml2
- meson
-+pango
- yelp-tools
+@@ -1,17 +0,0 @@
+-dconf
+-geoclue
+-geocode-glib-2
+-git
+-gjs
+-glib2
+-gobject-introspection
+-gtk4
+-hicolor-icon-theme
+-libadwaita
+-libgweather-4
+-libportal
+-librest
+-libshumate
+-libxml2
+-meson
+-yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

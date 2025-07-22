@@ -9,3 +9,16 @@
  pkgdesc="Free Pascal Compiler, Turbo Pascal 7.0 and Delphi compatible."
  arch=('x86_64')
  url="http://www.freepascal.org/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-binutils
+-expat
+-fpc
+-make
+-ncurses
+-zlib

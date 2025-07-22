@@ -43,11 +43,47 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -37,7 +37,6 @@
- readline
- rpcsvc-proto
- smbclient>
+@@ -1,43 +0,0 @@
+-acl
+-cifs-utils
+-dateutils
+-dbus
+-docbook-xsl
+-glusterfs
+-gnutls
+-gnutls>
+-gpgme
+-icu
+-jansson
+-krb5
+-ldb
+-libarchive
+-libbsd
+-libcap
+-libcap>
+-libcups
+-libldap
+-libldb.so
+-libnsl
+-libreadline.so
+-libtdb.so
+-libtevent.so
+-libtirpc
+-liburing
+-libwbclient
+-lmdb
+-pam
+-perl-json
+-perl-parse-yapp
+-pkg-config
+-popt
+-python
+-python-dnspython
+-python-markdown
+-readline
+-rpcsvc-proto
+-smbclient>
 -systemd
- talloc
- tdb
- tevent
+-talloc
+-tdb
+-tevent

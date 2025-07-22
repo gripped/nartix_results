@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -49,7 +49,7 @@
+@@ -48,7 +48,7 @@
  }
  
  build() {
@@ -13,7 +13,31 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,22 +0,0 @@
+-appstream
+-at-spi2-core
+-dconf
+-gdk-pixbuf2
+-git
+-glib2
+-gtk3
+-hicolor-icon-theme
+-ipython
+-librsvg
+-libwnck3
+-meson
+-pango
+-python
+-python-atspi
+-python-cairo
+-python-dbus
+-python-gobject
+-python-setuptools
+-python-traitlets
+-python-xdg
+-yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

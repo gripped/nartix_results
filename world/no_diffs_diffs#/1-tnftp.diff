@@ -9,3 +9,14 @@
  pkgdesc='NetBSD FTP client with several advanced features'
  url='https://ftp.netbsd.org/pub/NetBSD/misc/tnftp/'
  arch=('x86_64')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-glibc
+-libncursesw.so
+-ncurses
+-openssl

@@ -9,3 +9,18 @@
  pkgdesc='Full-function IPMI (Intelligent Platform Management Interface) system'
  url='http://openipmi.sourceforge.net/'
  arch=('x86_64')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-gdbm
+-glib2
+-libedit
+-ncurses
+-net-snmp
+-popt
+-python
+-swig

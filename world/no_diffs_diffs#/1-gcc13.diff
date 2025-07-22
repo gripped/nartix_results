@@ -28,3 +28,24 @@
  
    for binary in {c++,g++,gcc,gcc-ar,gcc-nm,gcc-ranlib}; do
      ln -s /usr/bin/${binary} "${pkgdir}"/usr/bin/x86_64-linux-gnu-${binary}-13
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +0,0 @@
+-binutils
+-binutils>
+-doxygen
+-gcc-ada
+-gcc-d
+-gcc13
+-gcc13-libs
+-git
+-glibc>
+-libisl
+-libisl.so
+-libmpc
+-python
+-zstd

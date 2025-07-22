@@ -24,3 +24,26 @@
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-kconfig
+-kcoreaddons
+-kcrash
+-kdbusaddons
+-kglobalaccel
+-kio
+-kjobwidgets
+-kservice
+-kwindowsystem
+-libx11
+-libxcb
+-qt6-base
+-xcb-util-keysyms

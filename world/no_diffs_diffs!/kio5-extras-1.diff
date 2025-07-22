@@ -21,3 +21,41 @@
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,31 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-gperf
+-kactivities-stats5
+-kactivities5
+-karchive5
+-kconfig5
+-kcoreaddons5
+-kdbusaddons5
+-kdnssd5
+-kdoctools5
+-kdsoap-qt5
+-ki18n5
+-kio5
+-libappimage
+-libimobiledevice
+-libkexiv2-qt5
+-libmtp
+-libplist
+-libssh
+-libtirpc
+-libxcursor
+-openexr
+-phonon-qt5
+-qt5-base
+-qt5-svg
+-smbclient
+-solid5
+-syntax-highlighting5
+-taglib

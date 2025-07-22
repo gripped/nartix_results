@@ -23,19 +23,45 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,7 +19,6 @@
- libpulse.so
- librsvg
- librsvg-2.so
+@@ -1,41 +0,0 @@
+-cairo
+-catch2
+-cmake
+-curl
+-docbook-xsl
+-docbook2x
+-fontconfig
+-gcc-libs
+-git
+-glib2
+-glibc
+-gperf
+-hicolor-icon-theme
+-imlib2
+-libXNVCtrl.so
+-libcurl.so
+-libncursesw.so
+-libpulse
+-libpulse.so
+-librsvg
+-librsvg-2.so
 -libsystemd.so
- libx11
- libxdamage
- libxext
-@@ -35,7 +34,6 @@
- pango
- python-jinja
- python-yaml
+-libx11
+-libxdamage
+-libxext
+-libxfixes
+-libxft
+-libxinerama
+-libxml2
+-libxnvctrl
+-lua
+-man-db
+-ncurses
+-pandoc
+-pango
+-python-jinja
+-python-yaml
 -systemd-libs
- wayland
- wayland-protocols
- wireless_tools
+-wayland
+-wayland-protocols
+-wireless_tools

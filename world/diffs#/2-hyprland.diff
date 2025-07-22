@@ -1,0 +1,110 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+          pixman libpixman-1.so
+          re2 libre2.so
+          seatd libseat.so
+-         systemd-libs libsystemd.so
++         libelogind libelogind.so
+          tomlplusplus libtomlplusplus.so libudev.so
+          util-linux-libs libuuid.so
+          wayland libwayland-client.so libwayland-server.so
+@@ -59,8 +59,7 @@
+             'cpio: to build and install plugins using hyprpm'
+             'glaze: to build and install plugins using hyprpm'
+             'hyprland-protocols: to build and install plugins using hyprpm'
+-            'meson: to build and install plugins using hyprpm'
+-            'uwsm: the recommended way to start Hyprland')
++            'meson: to build and install plugins using hyprpm')
+ provides=(wayland-compositor)
+ _archive="${pkgname^}-$pkgver"
+ source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
+@@ -75,7 +74,7 @@
+ 
+ build() {
+ 	cd "$_archive"
+-	make release PREFIX=/usr
++	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DNO_SYSTEMD=True
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,73 +0,0 @@
+-aquamarine
+-cairo
+-cmake
+-gcc-libs
+-glaze
+-glib2
+-glibc
+-glslang
+-hyprcursor
+-hyprgraphics
+-hyprland-protocols
+-hyprland-qtutils
+-hyprlang
+-hyprutils
+-hyprwayland-scanner
+-libEGL.so
+-libGLESv2.so
+-libOpenGL.so
+-libaquamarine.so
+-libdisplay-info
+-libdisplay-info.so
+-libdrm
+-libgio-2.0.so
+-libglvnd
+-libgobject-2.0.so
+-libhyprcursor.so
+-libhyprgraphics.so
+-libhyprlang.so
+-libhyprutils.so
+-libinput
+-libliftoff
+-libliftoff.so
+-libpango-1.0.so
+-libpangocairo-1.0.so
+-libpixman-1.so
+-libre2.so
+-libseat.so
+-libsystemd.so
+-libtomlplusplus.so
+-libudev.so
+-libuuid.so
+-libwayland-client.so
+-libwayland-server.so
+-libx11
+-libxcb
+-libxcomposite
+-libxcursor
+-libxfixes
+-libxkbcommon
+-libxkbcommon.so
+-libxrender
+-mesa
+-meson
+-ninja
+-opengl-driver
+-pango
+-pixman
+-re2
+-seatd
+-systemd-libs
+-tomlplusplus
+-util-linux-libs
+-wayland
+-wayland-protocols
+-xcb-proto
+-xcb-util
+-xcb-util-errors
+-xcb-util-image
+-xcb-util-keysyms
+-xcb-util-renderutil
+-xcb-util-wm
+-xorg-xwayland
+-xorgproto

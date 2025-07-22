@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,14 +10,14 @@
+   lib32-gcc-libs
+   lib32-glib2
+   lib32-glibc
+-  lib32-systemd
++  lib32-elogind
+   libgudev
+ )
+ makedepends=(
+   git
+   glib2-devel
+   meson
+-  systemd
++  elogind
+ )
+ source=("git+$url.git#tag=$pkgver")
+ b2sums=('6da9512d87154fbd62aae044a39abd84bee451f5a21203180062c369ebedf2ee1bc7672408cf806918111397bc74be58314e6c3155e638137603d11012a4355f')
+@@ -39,7 +39,7 @@
+   export CXX='g++ -m32'
+   export PKG_CONFIG=i686-pc-linux-gnu-pkg-config
+ 
+-  arch-meson libgudev build "${meson_options[@]}"
++  artix-meson libgudev build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-git
+-glib2-devel
+-lib32-gcc-libs
+-lib32-glib2
+-lib32-glibc
+-lib32-systemd
+-libglib-2.0.so
+-libgobject-2.0.so
+-libgudev
+-libudev.so
+-meson
+-systemd

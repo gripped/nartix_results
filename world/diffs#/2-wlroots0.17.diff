@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,6 @@
+     'glslang'
+     'meson'
+     'ninja'
+-    'systemd'
+     'vulkan-headers'
+     'wayland-protocols'
+     'xorg-xwayland'
+@@ -61,7 +60,7 @@
+ }
+ 
+ build() {
+-    arch-meson \
++    artix-meson \
+       --includedir    /usr/include/wlroots0.17 \
+       --libdir        /usr/lib/wlroots0.17 \
+       wlroots-"${pkgver}" build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,22 +0,0 @@
+-glslang
+-libdisplay-info.so
+-libglvnd
+-libinput
+-libpixman-1.so
+-libseat.so
+-libudev.so
+-libvulkan.so
+-libwayland-client.so
+-libwayland-server.so
+-libxcb
+-libxkbcommon.so
+-meson
+-ninja
+-opengl-driver
+-systemd
+-vulkan-headers
+-wayland-protocols
+-xcb-util-errors
+-xcb-util-renderutil
+-xcb-util-wm
+-xorg-xwayland

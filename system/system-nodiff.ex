@@ -141,6 +141,7 @@ nilfs-utils
 npth
 nss
 ca-certificates-mozilla
+openresolv
 openssh
 openssl-1.1
 openssl

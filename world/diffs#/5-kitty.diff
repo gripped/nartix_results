@@ -144,46 +144,36 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,12 +2,14 @@
- dbus
- fontconfig
- freetype2
-+git
- go
+@@ -1,29 +0,0 @@
+-cairo
+-dbus
+-fontconfig
+-freetype2
+-go
 -harfbuzz
-+harfbuzz>
- hicolor-icon-theme
- kitty-shell-integration
- kitty-terminfo
- lcms2
-+libcanberra
- libgl
- libpng
- librsync
-@@ -18,12 +20,21 @@
- libxkbcommon
- libxkbcommon-x11
- libxrandr
-+mesa
- ncurses
- openssl
+-hicolor-icon-theme
+-kitty-shell-integration
+-kitty-terminfo
+-lcms2
+-libgl
+-libpng
+-librsync
+-libx11
+-libxcursor
+-libxi
+-libxinerama
+-libxkbcommon
+-libxkbcommon-x11
+-libxrandr
+-ncurses
+-openssl
 -python3
-+pixman
-+python-setuptools
-+python-sphinx
-+python-sphinx-copybutton
-+python-sphinx-furo
-+python-sphinx-inline-tabs
-+python-sphinxext-opengraph
-+python>
- simde
-+tk
- ttf-nerd-fonts-symbols-mono
+-simde
+-ttf-nerd-fonts-symbols-mono
 -wayland
-+ttf-roboto
- wayland-protocols
- xxhash
- zlib
+-wayland-protocols
+-xxhash
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

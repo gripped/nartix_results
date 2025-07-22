@@ -20,3 +20,14 @@
 -	install -Dm0644 -t "$pkgdir/usr/lib/systemd/system/" "../$pkgname.service"
  	install -Dm0600 matterbridge.toml.sample "$pkgdir/etc/$pkgname.toml"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-gcc-libs
+-git
+-glibc
+-go

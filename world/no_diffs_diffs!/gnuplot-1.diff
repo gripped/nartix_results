@@ -9,3 +9,33 @@
  pkgdesc='Plotting package which outputs to X11, PostScript, PNG, GIF, and others'
  arch=(x86_64)
  url='http://www.gnuplot.info'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,23 +0,0 @@
+-cairo
+-emacs
+-gcc-libs
+-gd
+-git
+-glib2
+-glibc
+-gnuplot
+-gtk3
+-libcaca
+-libcerf
+-libwebp
+-libx11
+-lua
+-pango
+-qt6-5compat
+-qt6-base
+-qt6-svg
+-qt6-tools
+-readline
+-texlive-latexextra
+-wxwidgets-common
+-wxwidgets-gtk3

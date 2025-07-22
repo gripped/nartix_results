@@ -39,11 +39,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,5 @@
- libsodium
- libtool
- perl
+@@ -1,10 +0,0 @@
+-chrpath
+-libldap>
+-libsasl
+-libsodium
+-libtool
+-perl
 -systemd
 -systemd-libs
- unixodbc
- util-linux
+-unixodbc
+-util-linux

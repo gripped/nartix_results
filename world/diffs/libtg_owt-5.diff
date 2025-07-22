@@ -55,21 +55,26 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,13 +7,12 @@
- libjpeg-turbo
- libva
- libxcomposite
+@@ -1,19 +0,0 @@
+-cmake
+-ffmpeg
+-git
+-glibc
+-libdrm
+-libepoxy
+-libjpeg-turbo
+-libva
+-libxcomposite
 -libxdamage
- libxrandr
- libxtst
- ninja
+-libxrandr
+-libxtst
+-ninja
 -openh264
- openssl
- opus
- pipewire
- protobuf
-+unzip
- yasm
+-openssl
+-opus
+-pipewire
+-protobuf
+-yasm
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

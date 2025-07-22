@@ -27,16 +27,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,6 @@
- boost
- boost-libs
-+esysusers
- fstrm
- gcc-libs
- libboost_context.so
-@@ -12,5 +13,3 @@
- pandoc
- ragel
- rust
+@@ -1,16 +0,0 @@
+-boost
+-boost-libs
+-fstrm
+-gcc-libs
+-libboost_context.so
+-libcap
+-libcurl.so
+-libsodium
+-luajit
+-net-snmp
+-openssl
+-pandoc
+-ragel
+-rust
 -systemd
 -systemd-libs

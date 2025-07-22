@@ -59,44 +59,52 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,22 +1,17 @@
- accountsservice
- caribou
- cinnamon-control-center
+@@ -1,45 +0,0 @@
+-accountsservice
+-caribou
+-cinnamon-control-center
 -cinnamon-desktop
- cinnamon-menus
- cinnamon-screensaver
- cinnamon-session
- cinnamon-settings-daemon
- cjs
+-cinnamon-menus
+-cinnamon-screensaver
+-cinnamon-session
+-cinnamon-settings-daemon
+-cjs
 -gcr
 -gdk-pixbuf2
 -glib2
 -glib2-devel
- gnome-backgrounds
- gobject-introspection
- gsound
- gstreamer
+-gnome-backgrounds
+-gobject-introspection
+-gsound
+-gstreamer
 -gtk3
- intltool
-+libcroco
- libgnomekbd
- libkeybinder3
- librsvg
-@@ -24,13 +19,10 @@
- muffin
- nemo
- network-manager-applet
+-intltool
+-libgnomekbd
+-libkeybinder3
+-librsvg
+-meson
+-muffin
+-nemo
+-network-manager-applet
 -pango
- polkit-gnome
+-polkit-gnome
 -python
- python-cairo
- python-dbus
- python-gobject
+-python-cairo
+-python-dbus
+-python-gobject
 -python-libsass
- python-pam
- python-pexpect
- python-pillow
+-python-pam
+-python-pexpect
+-python-pillow
+-python-pyinotify
+-python-pytz
+-python-requests
+-python-tinycss2
+-python-xapp
+-samurai
+-timezonemap
+-xapps
+-xdg-desktop-portal-xapp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

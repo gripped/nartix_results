@@ -9,3 +9,12 @@
  pkgdesc="Lightweight, portable, C-language-based SSL/TLS library"
  arch=(x86_64)
  url="https://www.wolfssl.com/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-cmake
+-glibc

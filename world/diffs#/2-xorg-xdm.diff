@@ -32,12 +32,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,8 +13,6 @@
- libxt
- pam
- sh
+@@ -1,21 +0,0 @@
+-glibc
+-libx11
+-libxau
+-libxaw
+-libxcrypt
+-libxdmcp
+-libxext
+-libxft
+-libxinerama
+-libxmu
+-libxpm
+-libxrender
+-libxt
+-pam
+-sh
 -systemd
 -systemd-libs
- xorg-sessreg
- xorg-util-macros
- xorg-xrdb
+-xorg-sessreg
+-xorg-util-macros
+-xorg-xrdb
+-xtrans

@@ -105,39 +105,34 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,5 @@
- 
+@@ -1,27 +0,0 @@
+-
 -appstream-glib
-+appstream
- cairo
- dconf
- gcc-libs
-@@ -7,9 +7,12 @@
- gi-docgen
- git
- glib2
-+glib2-devel
-+glibc
- gnome-autoar
- gnome-desktop-4
- gobject-introspection
-+graphene
- gst-plugins-base-libs
- gstreamer
- gtk4
-@@ -21,7 +24,10 @@
- libnautilus-extension.so
- libportal
- libportal-gtk4
-+libx11
-+localsearch
- meson
- pango
+-cairo
+-dconf
+-gcc-libs
+-gdk-pixbuf2
+-gi-docgen
+-git
+-glib2
+-gnome-autoar
+-gnome-desktop-4
+-gobject-introspection
+-gst-plugins-base-libs
+-gstreamer
+-gtk4
+-gvfs
+-hicolor-icon-theme
+-libadwaita
+-libcloudproviders
+-libgexiv2
+-libnautilus-extension.so
+-libportal
+-libportal-gtk4
+-meson
+-pango
 -tracker3
 -tracker3-miners
-+tinysparql
-+wayland
-+xdg-user-dirs-gtk
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

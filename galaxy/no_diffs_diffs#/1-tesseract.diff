@@ -20,3 +20,19 @@
  
  build() {
    cd "$srcdir"/$pkgname-${pkgver}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-asciidoc
+-curl
+-gcc-libs
+-icu
+-leptonica
+-libarchive
+-pango
+-tessdata
+-tesseract-data-osd

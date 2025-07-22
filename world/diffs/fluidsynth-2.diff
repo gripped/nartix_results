@@ -26,12 +26,34 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -23,8 +23,6 @@
- libreadline.so
- libsndfile
- libsndfile.so
+@@ -1,30 +0,0 @@
+-alsa-lib
+-cmake
+-dbus
+-doxygen
+-gcc-libs
+-glib2
+-glibc
+-jack
+-ladspa
+-libasound.so
+-libdbus-1.so
+-libglib-2.0.so
+-libgmodule-2.0.so
+-libgobject-2.0.so
+-libinstpatch
+-libinstpatch-1.0.so
+-libjack.so
+-libpipewire
+-libpipewire-0.3.so
+-libportaudio.so
+-libpulse
+-libpulse-simple.so
+-libreadline.so
+-libsndfile
+-libsndfile.so
 -libsystemd.so
- portaudio
- readline
- sdl3
+-portaudio
+-readline
+-sdl3
 -systemd-libs

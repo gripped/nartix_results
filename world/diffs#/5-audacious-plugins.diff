@@ -51,26 +51,37 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +1,11 @@
- alsa-lib
- audacious>
- curl
-+dbus-glib
- faad2
- ffmpeg
- flac
- fluidsynth
+@@ -1,30 +0,0 @@
+-alsa-lib
+-audacious>
+-curl
+-faad2
+-ffmpeg
+-flac
+-fluidsynth
 -glib2-devel
- jack
- lame
- libbs2b
-@@ -27,4 +27,6 @@
- mpg123
- neon
- opusfile
-+python-packaging
-+qt5-x11extras
- wavpack
+-jack
+-lame
+-libbs2b
+-libcddb
+-libcdio-paranoia
+-libcue
+-libmms
+-libmodplug
+-libmtp
+-libnotify
+-libopenmpt
+-libpipewire
+-libpulse
+-libsamplerate
+-libsidplayfp
+-libvorbis
+-lirc
+-meson
+-mpg123
+-neon
+-opusfile
+-wavpack
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

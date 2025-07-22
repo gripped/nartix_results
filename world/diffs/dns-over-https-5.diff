@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,10 +14,6 @@
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/m13253/dns-over-https/archive/v$pkgver.tar.gz")
+ sha256sums=('9df05f730099ca1a7bae506a1532a3876a74c87e74a0e7a19c97d2363cbdfefb')
+ 
+-prepare(){
+-  cd "$pkgname-$pkgver"
+-  sed -i 's/\/local//g' systemd/doh-{client,server}.service
+-}
+ 
+ build() {
+   cd "$pkgname-$pkgver"
+@@ -38,12 +34,10 @@
+   cd $pkgname-$pkgver
+   install -Dm755 client "$pkgdir"/usr/bin/doh-client
+   install -Dm644 doh-client/doh-client.conf -t "$pkgdir"/etc/dns-over-https/
+-  install -Dm644 systemd/doh-client.service -t "$pkgdir"/usr/lib/systemd/system/
+   install -Dm755 NetworkManager/dispatcher.d/doh-client -t "$pkgdir"/etc/NetworkManager/dispatcher.d/
+ 
+   install -Dm755 server "$pkgdir"/usr/bin/doh-server
+   install -Dm644 doh-server/doh-server.conf -t "$pkgdir"/etc/dns-over-https/
+-  install -Dm644 systemd/doh-server.service -t "$pkgdir"/usr/lib/systemd/system/
+   install -Dm755 NetworkManager/dispatcher.d/doh-server -t "$pkgdir"/etc/NetworkManager/dispatcher.d/
+ 
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-git
+-go
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare(){
+-cd "$pkgname-$pkgver"
+-sed -i 's/\/local//g' systemd/doh-{client,server}.service
+-}
+ build() {
+ cd "$pkgname-$pkgver"
+ export GOFLAGS="-buildmode=pie -trimpath"

@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('GPL-2.0-or-later')
+ depends=('dbus-glib' 'gettext' 'gtk3' 'libsm' 'mate-desktop')
+-makedepends=('autoconf-archive' 'git' 'glib2-devel' 'mate-common' 'xtrans' 'systemd' 'python')
++makedepends=('autoconf-archive' 'git' 'glib2-devel' 'mate-common' 'xtrans' 'elogind' 'python')
+ optdepends=('gnome-keyring: keyring support'
+             'xdg-user-dirs-gtk: manage user directories')
+ groups=('mate')
+@@ -33,7 +33,8 @@
+ 	            --libexecdir="/usr/lib/${pkgname}" \
+ 	            --sysconfdir=/etc \
+ 	            --localstatedir=/var \
+-	            --disable-upower
++	            --disable-upower \
++	            --with-elogind=yes
+ 	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-autoconf-archive
+-dbus-glib
+-gettext
+-git
+-glib2-devel
+-gtk3
+-libsm
+-mate-common
+-mate-desktop
+-python
+-systemd
+-xtrans

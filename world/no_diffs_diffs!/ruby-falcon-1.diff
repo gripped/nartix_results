@@ -16,3 +16,23 @@
  
  package() {
    cd "${_gemname}-${pkgver}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-ruby
+-ruby-async
+-ruby-async-container
+-ruby-async-container-supervisor
+-ruby-async-http
+-ruby-async-http-cache
+-ruby-async-service
+-ruby-bundler
+-ruby-localhost
+-ruby-protocol-http
+-ruby-protocol-rack
+-ruby-rdoc
+-ruby-samovar

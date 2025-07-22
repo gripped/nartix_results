@@ -24,17 +24,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -8,6 +8,7 @@
- libcups
- libnotify
- libsecret
-+libudev
- libusb
- pango
- python-cairo
-@@ -16,5 +17,4 @@
- python-pycups
- python-setuptools
- sh
+@@ -1,20 +0,0 @@
+-autoconf-archive
+-desktop-file-utils
+-docbook-xsl
+-gdk-pixbuf2
+-glib2
+-glibc
+-gtk3
+-libcups
+-libnotify
+-libsecret
+-libusb
+-pango
+-python-cairo
+-python-dbus
+-python-gobject
+-python-pycups
+-python-setuptools
+-sh
 -systemd-libs
- xmlto
+-xmlto

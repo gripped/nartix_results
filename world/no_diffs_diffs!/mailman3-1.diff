@@ -43,3 +43,37 @@
    install -vDm 644 ../$pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
 -  install -vDm 644 ../*.{service,timer} -t "$pkgdir/usr/lib/systemd/system"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,27 +0,0 @@
+-git
+-gunicorn
+-python
+-python-aiosmtpd
+-python-alembic
+-python-atpublic
+-python-authheaders
+-python-authres
+-python-build
+-python-click
+-python-dateutil
+-python-dnspython
+-python-falcon
+-python-flufl-lock
+-python-flufl.bounce
+-python-flufl.i18n
+-python-installer
+-python-lazr.config
+-python-nntplib
+-python-passlib
+-python-pdm-backend
+-python-requests
+-python-sqlalchemy>
+-python-zope-component
+-python-zope-configuration
+-python-zope-event
+-python-zope-interface

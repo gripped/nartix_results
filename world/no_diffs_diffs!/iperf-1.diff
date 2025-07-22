@@ -24,3 +24,12 @@
 -  install -Dm644 iperf-udp.service "$pkgdir/usr/lib/systemd/system/iperf-udp.service"
  }
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-gcc-libs
+-glibc

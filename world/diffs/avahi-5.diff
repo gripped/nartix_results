@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -53,10 +53,6 @@
+ b2sums=('SKIP'
+         'a15b00c05cce3b6a1479d88b1393cd955a80c669fed03be5f624a8e8701f22fe327bbd42f7563a532ae8ebc39408f3aedfc982c42a2b6141ccc22af96f16293c')
+ 
+-pkgver() {
+-  cd avahi
+-  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
+-}
+ 
+ prepare() {
+   cd avahi
+@@ -68,6 +64,8 @@
+ 
+ build() {
+   local configure_options=(
++    --with-systemdsystemunitdir=no
++    --disable-libsystemd
+     --prefix=/usr
+     --sysconfdir=/etc
+     --localstatedir=/var
+@@ -79,7 +77,6 @@
+     --with-autoipd-user=avahi
+     --with-avahi-priv-access-group=network
+     --with-distro=archlinux
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
+     with_dbus_sys=/usr/share/dbus-1/system.d
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,18 +0,0 @@
+-dbus
+-doxygen
+-expat
+-gdbm
+-git
+-glib2
+-glib2-devel
+-gobject-introspection
+-graphviz
+-gtk3
+-libcap
+-libdaemon
+-libdbus-1.so
+-libevent
+-python-dbus
+-python-gobject
+-qt5-base
+-xmltoman
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,8 @@
+ }
+ build() {
+ local configure_options=(
++--with-systemdsystemunitdir=no
++--disable-libsystemd
+ --prefix=/usr
+ --sysconfdir=/etc
+ --localstatedir=/var
+@@ -16,7 +18,6 @@
+ --with-autoipd-user=avahi
+ --with-avahi-priv-access-group=network
+ --with-distro=archlinux
+---with-systemdsystemunitdir=/usr/lib/systemd/system
+ with_dbus_sys=/usr/share/dbus-1/system.d
+ )
+ cd avahi

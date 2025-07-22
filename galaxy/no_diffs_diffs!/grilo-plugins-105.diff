@@ -64,14 +64,36 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,7 +19,6 @@
- libgrlpls-0.3.so
- libmediaart
- liboauth
+@@ -1,29 +0,0 @@
+-avahi
+-chromaprint
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-gom
+-gperf
+-grilo
+-gst-plugins-bad
+-gstreamer
+-json-glib
+-libarchive
+-libdmapsharing
+-libgoa
+-libgrilo-0.3.so
+-libgrlnet-0.3.so
+-libgrlpls-0.3.so
+-libmediaart
+-liboauth
 -librest
- libxml2
- lua
- meson
+-libxml2
+-lua
+-meson
+-sqlite
+-tinysparql
+-totem-pl-parser
+-yelp-tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

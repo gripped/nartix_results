@@ -25,3 +25,12 @@
 -    install -dm0755 "$pkgdir/usr/lib/systemd/system/timers.target.wants"
 -    ln -s ../mandoc.timer "${pkgdir}"/usr/lib/systemd/system/timers.target.wants/mandoc.timer
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-less
+-zlib

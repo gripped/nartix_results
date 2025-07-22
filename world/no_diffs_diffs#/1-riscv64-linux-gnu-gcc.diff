@@ -9,3 +9,24 @@
  pkgdesc='Cross compiler for 32-bit and 64-bit RISC-V'
  arch=('x86_64')
  url='https://gcc.gnu.org/'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +0,0 @@
+-gcc-libs
+-glibc
+-gmp
+-libisl
+-libisl.so
+-libmpc
+-libmpfr.so
+-libz.so
+-libzstd.so
+-mpfr
+-riscv64-linux-gnu-binutils
+-riscv64-linux-gnu-glibc
+-zlib
+-zstd

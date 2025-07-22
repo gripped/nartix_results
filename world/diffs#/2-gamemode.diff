@@ -26,12 +26,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,7 +3,7 @@
- git
- glibc
- libdbus-1.so
-+libelogind.so
- libinih
+@@ -1,9 +0,0 @@
+-bash
+-gcc-libs
+-git
+-glibc
+-libdbus-1.so
+-libinih
 -libsystemd.so
- meson
- polkit
+-meson
+-polkit

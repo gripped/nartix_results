@@ -228,56 +228,58 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,8 @@
- 
-+adwaita-fonts
- adwaita-icon-theme
-+at-spi2-core
-+bash
- cairo
- cantarell-fonts
- dconf
-@@ -7,13 +10,18 @@
- docbook-xsl
- fontconfig
- fribidi
-+gcc-libs
- gdk-pixbuf2
- gi-docgen
- git
- glib2
-+glib2-devel
-+glibc
- gobject-introspection
- graphene
- gst-plugins-bad-libs
-+gst-plugins-base-libs
-+gstreamer
- gtk-update-icon-cache
- gtk4
- harfbuzz
-@@ -25,9 +33,10 @@
- libegl
- libepoxy
- libgl
+@@ -1,51 +0,0 @@
+-
+-adwaita-icon-theme
+-cairo
+-cantarell-fonts
+-dconf
+-desktop-file-utils
+-docbook-xsl
+-fontconfig
+-fribidi
+-gdk-pixbuf2
+-gi-docgen
+-git
+-glib2
+-gobject-introspection
+-graphene
+-gst-plugins-bad-libs
+-gtk-update-icon-cache
+-gtk4
+-harfbuzz
+-hicolor-icon-theme
+-iso-codes
+-libcloudproviders
+-libcolord
+-libcups
+-libegl
+-libepoxy
+-libgl
 -libjpeg
-+libjpeg-turbo
- libpng
- librsvg
-+libsysprof-capture
- libtiff
- libx11
- libxcursor
-@@ -46,6 +55,8 @@
- sassc
- shaderc
- shared-mime-info
+-libpng
+-librsvg
+-libtiff
+-libx11
+-libxcursor
+-libxdamage
+-libxext
+-libxfixes
+-libxi
+-libxinerama
+-libxkbcommon
+-libxrandr
+-libxrender
+-meson
+-pango
+-python-docutils
+-python-gobject
+-sassc
+-shaderc
+-shared-mime-info
 -tracker3
-+tinysparql
-+vulkan-headers
-+vulkan-icd-loader
- wayland
- wayland-protocols
+-wayland
+-wayland-protocols
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

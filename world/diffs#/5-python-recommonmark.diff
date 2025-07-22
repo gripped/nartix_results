@@ -51,15 +51,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,8 @@
- python
-+python-build
- python-commonmark
- python-docutils
-+python-installer
- python-setuptools
- python-sphinx
-+python-wheel
+@@ -1,5 +0,0 @@
+-python
+-python-commonmark
+-python-docutils
+-python-setuptools
+-python-sphinx
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

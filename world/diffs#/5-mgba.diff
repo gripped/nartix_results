@@ -123,23 +123,25 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,16 +1,11 @@
- cmake
- desktop-file-utils
- ffmpeg
+@@ -1,18 +0,0 @@
+-cmake
+-desktop-file-utils
+-ffmpeg
 -gcc-libs
 -glibc
- libedit
+-libedit
 -libelf
 -libglvnd
- libmgba
- libpng
- libzip
- lua
+-libmgba
+-libpng
+-libzip
+-lua
 -qt5-base
- qt5-multimedia
- qt5-tools
- sdl2
+-qt5-multimedia
+-qt5-tools
+-sdl2
+-sqlite
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

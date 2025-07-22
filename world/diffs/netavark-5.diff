@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,10 +21,6 @@
+ source=(git+$url#tag=v$pkgver)
+ sha256sums=('9f145c43038859f7abb25809c948e496460fcdc9b275852fb4e8697ede439848')
+ 
+-pkgver() {
+-  cd $pkgname
+-  git describe --tags | sed 's/v//g'
+-}
+ 
+ prepare() {
+   cd $pkgname
+@@ -34,7 +30,6 @@
+ build() {
+   cd $pkgname
+   mandown docs/$pkgname.1.md > $pkgname.1
+-  sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" contrib/systemd/system/netavark-dhcp-proxy.service.in > contrib/systemd/system/netavark-dhcp-proxy.service
+   cargo build --frozen --release --all-features
+ }
+ 
+@@ -47,6 +42,5 @@
+   cd $pkgname
+   install -vDm 755 target/release/$pkgname -t "$pkgdir/usr/lib/podman/"
+   install -vDm 644 $pkgname.1 -t "$pkgdir/usr/share/man/man1/"
+-  install -vDm 644 contrib/systemd/system/*.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
+   install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-aardvark-dns
+-cargo
+-gcc-libs
+-git
+-glibc
+-mandown
+-protobuf
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,5 @@
+ build() {
+ cd $pkgname
+ mandown docs/$pkgname.1.md > $pkgname.1
+-sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" contrib/systemd/system/netavark-dhcp-proxy.service.in > contrib/systemd/system/netavark-dhcp-proxy.service
+ cargo build --frozen --release --all-features
+ }

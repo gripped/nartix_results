@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,13 +17,9 @@
+              git)
+ provides=(amule-daemon)
+ source=(git+https://github.com/amule-project/amule#tag=$pkgver
+-        amuled.systemd
+-        amuleweb.systemd
+         amule.sysusers
+         amule.tmpfiles)
+ sha256sums=('9e28bde45b432bb966a2972141f8a445c9cdfe8a808d9874cfa4d67f277ce153'
+-            '20ac6b60c5f3bf49c0b080dfc02409da3c9d01b154344188008c6a75ca69681e'
+-            'f4f43b1154ddccc9036a4291a58c6715f097b171fec62ea7aead0c9d9fa654f2'
+             '1a1780d3010f338b16ace33fac6af8480bb0830402001f95f12c2e98afbd1b60'
+             'e9d1b7019c7075b0f8616c6507a767b87de8f899936680e9ff5829d8cbba224d')
+ 
+@@ -35,6 +31,7 @@
+   git cherry-pick -n d22e057 # Fix build
+   git cherry-pick -n 9e1d9eb
+   git cherry-pick -n a667c61 # Install icons
++  git cherry-pick -n 212b189 # Fix build with boost
+   rm -fr .git
+ }
+ 
+@@ -58,8 +55,6 @@
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+ 
+-  install -Dm644 "$srcdir"/amuled.systemd "$pkgdir"/usr/lib/systemd/system/amuled.service
+-  install -Dm644 "$srcdir"/amuleweb.systemd "$pkgdir"/usr/lib/systemd/system/amuleweb.service
+   install -Dm644 "$srcdir"/amule.sysusers "$pkgdir"/usr/lib/sysusers.d/amule.conf
+   install -Dm644 "$srcdir"/amule.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/amule.conf
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-boost
+-cmake
+-crypto++
+-gd
+-geoip
+-git
+-libupnp
+-wxwidgets-gtk3
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ git cherry-pick -n d22e057 # Fix build
+ git cherry-pick -n 9e1d9eb
+ git cherry-pick -n a667c61 # Install icons
++git cherry-pick -n 212b189 # Fix build with boost
+ rm -fr .git
+ }
+ build() {

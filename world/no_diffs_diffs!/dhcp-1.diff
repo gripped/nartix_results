@@ -37,3 +37,16 @@
 -
 -  install -m644 -D "$srcdir/dhclient@.service" "${pkgdir}/usr/lib/systemd/system/dhclient@.service"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-bash
+-glibc
+-iproute2
+-libldap
+-openldap
+-run-parts

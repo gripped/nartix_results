@@ -13,3 +13,14 @@
    done
  
    install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" DOC/{,unRar}License.txt
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-gcc-libs
+-glibc
+-sh
+-uasm

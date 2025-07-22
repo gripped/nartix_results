@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=('x86_64')
+ url="https://www.spice-space.org/"
+ license=('GPL')
+-depends=('alsa-lib' 'dbus' 'glib2' 'gtk3' 'libdrm' 'libpciaccess' 'libxfixes' 'libxinerama' 'libxrandr' 'systemd')
++depends=('alsa-lib' 'dbus' 'glib2' 'gtk3' 'libdrm' 'libpciaccess' 'libxfixes' 'libxinerama' 'libxrandr' 'elogind')
+ makedepends=('spice-protocol' 'git')
+ checkdepends=('procps-ng')
+ backup=('etc/conf.d/spice-vdagentd')
+@@ -22,8 +22,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin \
+-              --with-session-info=systemd --with-init-script=systemd
++  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --sbindir=/usr/bin
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-alsa-lib
+-dbus
+-git
+-glib2
+-gtk3
+-libdrm
+-libpciaccess
+-libxfixes
+-libxinerama
+-libxrandr
+-spice-protocol
+-systemd

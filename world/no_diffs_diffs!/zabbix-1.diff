@@ -83,3 +83,27 @@
    install -Dm644 "$srcdir/zabbix-web-service.sysusers" \
  	"$pkgdir/usr/lib/sysusers.d/zabbix-web-service.conf"
    install -Dm644 "$srcdir/zabbix-web-service.tmpfiles" \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,17 +0,0 @@
+-chromium
+-curl
+-go
+-libevent
+-libldap
+-libxml2
+-mariadb-libs
+-net-snmp
+-openipmi
+-pcre2
+-php
+-php-gd
+-pkgconfig
+-postgresql-libs
+-sqlite
+-unixodbc
+-zabbix-server

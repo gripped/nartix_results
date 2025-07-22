@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ url='https://gitlab.com/procps-ng/procps'
+ license=('GPL' 'LGPL')
+ arch=('x86_64')
+-depends=('glibc' 'systemd-libs')
++depends=('glibc' 'libelogind')
+ provides=('libprocps.so')
+ options=('!emptydirs')
+ validpgpkeys=('5D2FB320B825D93904D205193938F96BDF50FEA5') # Craig Small <csmall@debian.org>
+@@ -27,7 +27,7 @@
+     --bindir=/usr/bin \
+     --sbindir=/usr/bin \
+     --enable-watch8bit \
+-    --with-systemd \
++    --with-elogind \
+     --disable-modern-top \
+     --disable-kill
+   make
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-glibc
+-systemd-libs

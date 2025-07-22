@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+   gtk-doc
+   meson
+   python
+-  systemd
++  udev
+   usbmuxd
+ )
+ optdepends=('usbmuxd: Read charge status of iOS devices')
+@@ -43,7 +43,7 @@
+ }
+ 
+ build() {
+-  arch-meson upower build
++  artix-meson -D systemdsystemunitdir=no upower build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,19 +0,0 @@
+-docbook-xsl
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-gobject-introspection
+-gtk-doc
+-libgio-2.0.so
+-libglib-2.0.so
+-libgobject-2.0.so
+-libgudev
+-libimobiledevice
+-libplist
+-meson
+-polkit
+-python
+-systemd
+-usbmuxd

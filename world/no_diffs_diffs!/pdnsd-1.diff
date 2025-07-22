@@ -24,3 +24,11 @@
    install -Dm0644 ../pdnsd.sysusers "$pkgdir/usr/lib/sysusers.d/pdnsd.conf"
    install -Dm0644 ../pdnsd.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/pdnsd.conf"
  
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1 +0,0 @@
+-glibc

@@ -22,3 +22,13 @@
    install -Dm 0644 /dev/null "${pkgdir}/etc/${pkgname}.conf"
    install -Dm 0644 ipset/utils/ipset_bash_completion/ipset \
      "${pkgdir}/usr/share/bash-completion/completions/ipset"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-git
+-glibc
+-libmnl

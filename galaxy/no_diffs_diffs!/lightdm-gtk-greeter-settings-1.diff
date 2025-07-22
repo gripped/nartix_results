@@ -9,3 +9,21 @@
  pkgdesc='Settings editor for the LightDM GTK+ Greeter'
  arch=(any)
  url=https://github.com/xubuntu/lightdm-gtk-greeter-settings
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-bash
+-gdk-pixbuf2
+-git
+-glib2
+-gtk-update-icon-cache
+-gtk3
+-lightdm-gtk-greeter
+-pango
+-python
+-python-distutils-extra
+-python-gobject

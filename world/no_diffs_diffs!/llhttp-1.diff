@@ -27,3 +27,15 @@
 -  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" $pkgname/LICENSE-MIT
 +  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" $pkgname/LICENSE
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-cmake
+-git
+-glibc
+-npm
+-ts-node

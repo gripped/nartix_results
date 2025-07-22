@@ -44,16 +44,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,12 +9,10 @@
- libgio-2.0.so
- libglib-2.0.so
- libgobject-2.0.so
+@@ -1,20 +0,0 @@
+-docbook-xsl
+-gcc-libs
+-git
+-glib2
+-glibc
+-gobject-introspection
+-gtk-doc
+-libcrypt.so
+-libgio-2.0.so
+-libglib-2.0.so
+-libgobject-2.0.so
 -libsystemd.so
- libxcrypt
- meson
- polkit
- python-packaging
- shadow
+-libxcrypt
+-meson
+-polkit
+-python-packaging
+-shadow
 -systemd
- vala
- xmlto
+-vala
+-xmlto

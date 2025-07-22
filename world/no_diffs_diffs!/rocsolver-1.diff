@@ -28,12 +28,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,7 @@
- fmt
- gcc-libs
- glibc
+@@ -1,9 +0,0 @@
+-fmt
+-gcc-libs
+-glibc
 -hip-runtime-amd
-+hip
- python-pyaml
- rocblas
- rocm-cmake
+-python-pyaml
+-rocblas
+-rocm-cmake
+-rocm-core
+-rocsparse

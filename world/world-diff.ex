@@ -243,6 +243,7 @@ hidapi
 hwloc
 hyprland
 i2pd
+iagno
 ibus
 libibus
 igsc
@@ -305,7 +306,6 @@ ksystemlog
 kwin-x11
 kwin
 libao
-libatasmart
 libayatana-indicator
 libblockdev
 libblockdev-btrfs
@@ -360,8 +360,6 @@ libxfce4ui
 libxfce4util
 libytnef
 light-locker
-lightdm
-liblightdm-qt5
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -407,7 +405,6 @@ lxmenu-data
 lxmusic
 lxpanel-gtk3
 lxpanel
-lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
@@ -519,6 +516,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+okularpart5
 onboard
 onionshare
 open-iscsi
@@ -545,6 +543,9 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
+phonon
+phonon-qt5
+phonon-qt6
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -627,7 +628,6 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-ipykernel
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -973,7 +973,6 @@ xf86-video-amdgpu
 xf86-video-ati
 xf86-video-intel
 xf86-video-nouveau
-xf86-video-openchrome
 xf86-video-qxl
 xf86-video-vmware
 xfburn

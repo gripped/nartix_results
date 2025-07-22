@@ -21,3 +21,12 @@
    install -D -m0644 ../atftpd.conf "$pkgdir"/etc/conf.d/atftpd
    install -D -m0644 ../sysusers.conf "$pkgdir"/usr/lib/sysusers.d/atftp.conf
    install -D -m0644 ../tmpfiles.conf "$pkgdir"/usr/lib/tmpfiles.d/atftp.conf
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-pcre2
+-readline

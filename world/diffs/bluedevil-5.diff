@@ -62,34 +62,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,22 @@
+@@ -1,6 +0,0 @@
 -bluez-qt5
-+bluez-qt
- extra-cmake-modules
+-extra-cmake-modules
 -kcmutils5
 -kdeclarative5
 -kdoctools5
 -plasma-framework5
-+gcc-libs
-+glibc
-+kcmutils
-+kconfig
-+kcoreaddons
-+kdbusaddons
-+kdeclarative
-+kdoctools
-+ki18n
-+kio
-+kirigami
-+kjobwidgets
-+knotifications
-+kservice
-+ksvg
-+kwidgetsaddons
-+kwindowsystem
-+libplasma
-+qt6-base
-+qt6-declarative
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=mate-system-monitor
+ pkgver=1.28.1
+-pkgrel=3
++pkgrel=3.1
+ pkgdesc="A system monitor for MATE"
+ url="https://mate-desktop.org"
+ arch=('x86_64')
+ license=('GPL-2.0-or-later')
+ depends=('gtkmm3' 'libgtop' 'libwnck3' 'gettext' 'polkit')
+-makedepends=('autoconf-archive' 'glib2-devel' 'itstool' 'mate-common' 'python' 'yelp-tools')
++makedepends=('autoconf-archive' 'glib2-devel' 'itstool' 'mate-common' 'python' 'yelp-tools' 'elogind')
+ conflicts=('mate-system-monitor-gtk3')
+ replaces=('mate-system-monitor-gtk3')
+ groups=('mate-extra')
+@@ -16,6 +16,7 @@
+ 
+ prepare() {
+ 	cd "${pkgname}-${pkgver}"
++	sed -i 's/libsystemd/libelogind/g' configure.ac
+ 	./autogen.sh
+ }
+ 
+@@ -25,7 +26,7 @@
+ 	           --prefix=/usr \
+ 	           --libexecdir="/usr/lib/${pkgname}" \
+ 	           --localstatedir=/var \
+-	           --enable-systemd
++	           --disable-systemd
+ 	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-autoconf-archive
+-gettext
+-glib2-devel
+-gtkmm3
+-itstool
+-libgtop
+-libwnck3
+-mate-common
+-polkit
+-python
+-yelp-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd "${pkgname}-${pkgver}"
++sed -i 's/libsystemd/libelogind/g' configure.ac
+ ./autogen.sh
+ }
+ build() {
+@@ -8,6 +9,6 @@
+ --prefix=/usr \
+ --libexecdir="/usr/lib/${pkgname}" \
+ --localstatedir=/var \
+---enable-systemd
++--disable-systemd
+ make
+ }

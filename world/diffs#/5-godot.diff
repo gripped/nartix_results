@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+ build() {
+   cd $pkgname-$pkgver-stable
+ 
+-  export BUILD_NAME=arch_linux
++  export BUILD_NAME=artix_linux
+ 
+ 
+   _args=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,28 +0,0 @@
+-alsa-lib
+-brotli
+-ca-certificates
+-dotnet-sdk
+-embree
+-freetype2
+-graphite
+-harfbuzz
+-harfbuzz-icu
+-libglvnd
+-libspeechd
+-libsquish
+-libtheora
+-libvorbis
+-libwebp
+-libwslay
+-libxcursor
+-libxi
+-libxinerama
+-libxrandr
+-miniupnpc
+-nuget
+-openxr
+-pcre2
+-pulse-native-provider
+-scons
+-setconf
+-yasm
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ }
+ build() {
+ cd $pkgname-$pkgver-stable
+-export BUILD_NAME=arch_linux
++export BUILD_NAME=artix_linux
+ _args=(
+ -j$(nproc --all)
+ cflags="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w"

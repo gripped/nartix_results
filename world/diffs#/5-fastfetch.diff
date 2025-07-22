@@ -49,17 +49,27 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,9 +9,9 @@
- libpulse
- libxcb
- libxrandr
-+mesa
- ocl-icd
- opencl-headers
+@@ -1,20 +0,0 @@
+-chafa
+-cmake
+-dbus
+-dconf
+-ddcutil
+-directx-headers
+-glibc
+-imagemagick
+-libpulse
+-libxcb
+-libxrandr
+-ocl-icd
+-opencl-headers
 -sqlite
- vulkan-headers
- vulkan-icd-loader
- wayland
+-vulkan-headers
+-vulkan-icd-loader
+-wayland
+-xfconf
+-yyjson
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

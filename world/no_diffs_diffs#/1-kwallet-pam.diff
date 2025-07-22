@@ -24,3 +24,17 @@
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-extra-cmake-modules
+-glibc
+-kwallet
+-libgcrypt
+-pam
+-sh
+-socat

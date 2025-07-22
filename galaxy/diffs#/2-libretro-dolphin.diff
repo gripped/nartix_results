@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+   libxrandr
+   lzo
+   sfml
+-  systemd-libs
++  libudev.so
+   xz
+   zlib
+   zstd
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,28 +0,0 @@
+-alsa-lib
+-bluez-libs
+-bzip2
+-clang
+-cmake
+-enet
+-fmt
+-gcc-libs
+-git
+-glibc
+-hidapi
+-libevdev
+-libgl
+-libglvnd
+-libretro-core-info
+-libusb
+-libx11
+-libxi
+-libxrandr
+-lzo
+-mesa
+-ninja
+-python
+-sfml
+-systemd-libs
+-xz
+-zlib
+-zstd

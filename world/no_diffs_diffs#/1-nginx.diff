@@ -26,3 +26,26 @@
    install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
  
    rmdir "$pkgdir"/run
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +0,0 @@
+-bash
+-findutils
+-gd
+-geoip
+-git
+-glibc
+-libxcrypt
+-libxml2
+-libxslt
+-mailcap
+-nginx
+-openssl
+-pcre2
+-perl
+-rsync
+-zlib

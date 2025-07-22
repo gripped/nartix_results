@@ -21,3 +21,58 @@
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
                '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,48 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-kcolorscheme
+-kcompletion
+-kcompletion5
+-kconfig
+-kconfig5
+-kconfigwidgets5
+-kcoreaddons
+-kcoreaddons5
+-kguiaddons
+-ki18n
+-ki18n5
+-kiconthemes
+-kiconthemes5
+-kio
+-kio5
+-kjobwidgets
+-kjobwidgets5
+-knotifications5
+-kservice
+-kservice5
+-kstatusnotifieritem
+-kwayland5
+-kwidgetsaddons
+-kwidgetsaddons5
+-kwindowsystem
+-kwindowsystem5
+-kxmlgui
+-kxmlgui5
+-libxcb
+-libxcursor
+-noto-fonts
+-plasma-wayland-protocols
+-qqc2-breeze-style
+-qqc2-desktop-style
+-qt5-base
+-qt5-declarative
+-qt5-quickcontrols2
+-qt5-wayland
+-qt5-x11extras
+-qt6-base
+-qt6-declarative
+-qt6-wayland
+-ttf-hack
+-wayland
+-xdg-desktop-portal-kde

@@ -9,3 +9,20 @@
  arch=('x86_64')
  url='https://software.schmorp.de/pkg/rxvt-unicode.html'
  license=('GPL-3.0-only')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-libnsl
+-libptytty
+-libxext
+-libxft
+-libxmu
+-libxt
+-perl
+-rxvt-unicode-terminfo
+-signify
+-startup-notification

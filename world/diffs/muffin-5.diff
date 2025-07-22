@@ -33,18 +33,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +1,9 @@
- cinnamon-desktop
+@@ -1,17 +0,0 @@
+-cinnamon-desktop
 -egl-wayland
 -glib2-devel
- gobject-introspection
- gobject-introspection-runtime
- graphene
- intltool
-+json-glib
- libcanberra
- libinput
- libsm
+-gobject-introspection
+-gobject-introspection-runtime
+-graphene
+-intltool
+-libcanberra
+-libinput
+-libsm
+-libxkbcommon-x11
+-meson
+-pipewire
+-startup-notification
+-wayland-protocols
+-xorg-xwayland
+-zenity
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

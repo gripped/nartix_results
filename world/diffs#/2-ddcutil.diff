@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('GPL2')
+ depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libx11' 'libxext' 'libxrandr')
+-makedepends=('git' 'systemd')
++makedepends=('git' 'udev')
+ source=(git+https://github.com/rockowitz/ddcutil.git#tag=v$pkgver)
+ sha512sums=('5507b4557686ae59e260e07a150c4119e0b1486918cf45b78e47d47f8eb26fa4629916ce5a22113e82a448eb9175eb75880933ba086181acabed79bc4fe8dd77')
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-git
+-glib2
+-i2c-tools
+-jansson
+-libdrm
+-libusb
+-libx11
+-libxext
+-libxrandr
+-systemd

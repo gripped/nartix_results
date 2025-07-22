@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ url='https://github.com/Yubico/yubikey-personalization'
+ license=('BSD')
+ depends=('libusb' 'json-c' 'yubico-c-client')
+-makedepends=('systemd')
++makedepends=('udev')
+ provides=('ykpers')
+ conflicts=('ykpers')
+ validpgpkeys=('0A3B0262BCA1705307D5FF06BCA00FD4B2168C0A') # Klas Lindfors <klas@yubico.com>
+@@ -49,4 +49,3 @@
+ 	install -D -m0644 README "${pkgdir}/usr/share/doc/yubikey-personalization/README"
+ 	make DESTDIR="${pkgdir}/" install
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +0,0 @@
+-json-c
+-libusb
+-systemd
+-yubico-c-client

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ depends=(gcc-libs
+          glibc
+          qt6-base
+-         systemd-libs)
++         libelogind)
+ makedepends=(cmake
+              git
+              ninja)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-cmake
+-gcc-libs
+-git
+-glibc
+-ninja
+-qt6-base
+-systemd-libs

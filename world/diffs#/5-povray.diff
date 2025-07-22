@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+   ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+-    COMPILED_BY='Arch Linux' \
++    COMPILED_BY='Artix Linux' \
+     LIBS="-lboost_system -lboost_thread"
+   make CXXFLAGS+='-std=c++11 -lboost_system -lboost_thread -DBOOST_BIND_GLOBAL_PLACEHOLDERS=1 -w'
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-boost
+-boost-libs
+-git
+-glu
+-imath
+-libpng
+-libtiff
+-openexr
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ ./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+-COMPILED_BY='Arch Linux' \
++COMPILED_BY='Artix Linux' \
+ LIBS="-lboost_system -lboost_thread"
+ make CXXFLAGS+='-std=c++11 -lboost_system -lboost_thread -DBOOST_BIND_GLOBAL_PLACEHOLDERS=1 -w'
+ }

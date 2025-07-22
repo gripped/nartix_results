@@ -9,3 +9,19 @@
  pkgdesc='Disk encryption with strong security based on TrueCrypt'
  url='https://www.veracrypt.fr/'
  arch=(x86_64)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-device-mapper
+-fuse2
+-gcc-libs
+-glibc
+-libsm
+-pcsclite
+-wxwidgets-common
+-wxwidgets-gtk3
+-yasm

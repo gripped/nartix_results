@@ -1084,7 +1084,6 @@ i3-wm
 i3blocks
 i3lock
 i3status
-iagno
 ibm-sw-tpm2
 icewm
 icmake
@@ -1612,6 +1611,7 @@ libappindicator-gtk2
 libappindicator-gtk3
 libass
 libasyncns
+libatasmart
 libatomic_ops
 libavc1394
 libavif
@@ -2117,6 +2117,8 @@ liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
+lightdm
+liblightdm-qt5
 lightsoff
 lighttpd
 lilv
@@ -2209,6 +2211,7 @@ lxqt-about
 lxqt-admin
 lxqt-archiver
 lxqt-build-tools
+lxqt-config
 lxqt-globalkeys
 lxqt-menu-data
 lxqt-notificationd
@@ -2499,7 +2502,6 @@ ocl-icd
 odt2txt
 okteta
 okular
-okularpart5
 onednn
 onetbb
 onevpl
@@ -2952,11 +2954,7 @@ persepolis
 phonon-gstreamer
 phonon-qt5-gstreamer
 phonon-vlc
-phonon-qt5-vlc
 phonon-qt6-vlc
-phonon
-phonon-qt5
-phonon-qt6
 php-apcu
 php-legacy-apcu
 php-geoip
@@ -3644,6 +3642,7 @@ python-intervaltree
 python-invoke
 python-iocapture
 python-ipdb
+python-ipykernel
 python-ipyparallel
 python-ipython-genutils
 python-ipython-pygments-lexers
@@ -5772,6 +5771,7 @@ xf86-input-synaptics
 xf86-input-void
 xf86-video-dummy
 xf86-video-fbdev
+xf86-video-openchrome
 xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo

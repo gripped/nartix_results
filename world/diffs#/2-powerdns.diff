@@ -27,20 +27,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,7 @@
- boost
- boost-libs
- curl
-+esysusers
- geoip
- gnutls
- libcurl.so
-@@ -13,8 +14,6 @@
- openssl
- postgresql-libs
- sqlite
+@@ -1,20 +0,0 @@
+-boost
+-boost-libs
+-curl
+-geoip
+-gnutls
+-libcurl.so
+-libldap
+-libmaxminddb
+-libsodium
+-lmdb
+-luajit
+-mariadb-libs
+-openssl
+-postgresql-libs
+-sqlite
 -systemd
 -systemd-libs
- tinycdb
- unixodbc
- yaml-cpp
+-tinycdb
+-unixodbc
+-yaml-cpp

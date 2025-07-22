@@ -1,0 +1,96 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -67,7 +67,7 @@
+   python-argcomplete
+   python-gobject
+   startup-notification
+-  systemd-libs
++  libelogind
+   wayland
+   xorg-xwayland
+ )
+@@ -107,7 +107,7 @@
+ 
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
+-  arch-meson mutter build "${meson_options[@]}"
++  artix-meson mutter build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,69 +0,0 @@
+-
+-at-spi2-core
+-bash-completion
+-cairo
+-colord
+-dconf
+-egl-wayland
+-fontconfig
+-fribidi
+-gcc-libs
+-gdk-pixbuf2
+-gi-docgen
+-git
+-glib2
+-glib2-devel
+-glibc
+-gnome-desktop-4
+-gnome-settings-daemon
+-gobject-introspection
+-graphene
+-gsettings-desktop-schemas
+-gtk4
+-harfbuzz
+-iio-sensor-proxy
+-lcms2
+-libcanberra
+-libcolord
+-libdisplay-info
+-libdrm
+-libei
+-libgirepository
+-libglvnd
+-libgudev
+-libice
+-libinput
+-libpipewire
+-libsm
+-libsysprof-capture
+-libwacom
+-libx11
+-libxau
+-libxcb
+-libxcomposite
+-libxcursor
+-libxdamage
+-libxext
+-libxfixes
+-libxi
+-libxinerama
+-libxkbcommon
+-libxkbcommon-x11
+-libxkbfile
+-libxrandr
+-libxtst
+-mesa
+-meson
+-pango
+-pipewire
+-pixman
+-python
+-python-argcomplete
+-python-docutils
+-python-gobject
+-startup-notification
+-sysprof
+-systemd-libs
+-wayland
+-wayland-protocols
+-xorg-xwayland

@@ -5,3 +5,19 @@
    python -m installer --destdir="$pkgdir" dist/*.whl
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-git
+-python-build
+-python-configupdater
+-python-installer
+-python-packaging
+-python-setuptools
+-python-setuptools-scm
+-python-tomlkit
+-python-wheel

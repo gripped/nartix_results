@@ -48,17 +48,29 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,7 +12,6 @@
- libgobject-2.0.so
- libpipewire
- libpipewire-0.3.so
+@@ -1,25 +0,0 @@
+-doxygen
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-gobject-introspection
+-graphviz
+-libgio-2.0.so
+-libglib-2.0.so
+-libgmodule-2.0.so
+-libgobject-2.0.so
+-libpipewire
+-libpipewire-0.3.so
 -libsystemd.so
- libwireplumber
- lua
- meson
-@@ -21,5 +20,3 @@
- python-lxml
- python-sphinx
- python-sphinx_rtd_theme
+-libwireplumber
+-lua
+-meson
+-pipewire
+-python-breathe
+-python-lxml
+-python-sphinx
+-python-sphinx_rtd_theme
 -systemd
 -systemd-libs

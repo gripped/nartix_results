@@ -8,3 +8,36 @@
    install -vDm644 "$srcdir/tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
  
    install -vDm644 -t "$pkgdir/etc/opensnitchd" daemon/{default-config,system-fw}.json
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,26 +0,0 @@
+-bc
+-clang
+-git
+-glibc
+-go
+-hicolor-icon-theme
+-libelf
+-libnetfilter_queue
+-libnfnetlink
+-linux-headers
+-llvm
+-python
+-python-build
+-python-grpcio
+-python-grpcio-tools
+-python-installer
+-python-jaraco.text
+-python-notify2
+-python-packaging
+-python-protobuf
+-python-pyinotify
+-python-pyqt5
+-python-setuptools
+-python-slugify
+-python-wheel
+-qt5-tools

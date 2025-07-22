@@ -8,3 +8,16 @@
  source=(
    git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
    git+https://git.savannah.gnu.org/git/gnulib.git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-gcc>
+-git
+-glibc
+-help2man
+-sh
+-tar

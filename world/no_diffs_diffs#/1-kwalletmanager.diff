@@ -5,3 +5,33 @@
    DESTDIR="$pkgdir" cmake --install build
  }
 -
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,23 +0,0 @@
+-extra-cmake-modules
+-gcc-libs
+-glibc
+-karchive
+-kauth
+-kcmutils
+-kcodecs
+-kconfig
+-kconfigwidgets
+-kcoreaddons
+-kcrash
+-kdbusaddons
+-kdoctools
+-ki18n
+-kio
+-kitemviews
+-kservice
+-kstatusnotifieritem
+-kwallet
+-kwidgetsaddons
+-kwindowsystem
+-kxmlgui
+-qt6-base

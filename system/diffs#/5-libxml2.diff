@@ -108,17 +108,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,9 @@
- 
-+bash
- git
-+glibc
- icu
+@@ -1,8 +0,0 @@
+-
+-git
+-icu
 -ncurses
-+meson
- python
- readline
- xz
+-python
+-readline
+-xz
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

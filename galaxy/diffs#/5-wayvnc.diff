@@ -52,11 +52,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,13 +0,0 @@
 -git
- glibc
- jansson
- libaml.so
+-glibc
+-jansson
+-libaml.so
+-libdrm
+-libneatvnc.so
+-libpixman-1.so
+-libxkbcommon.so
+-meson
+-ninja
+-pam
+-scdoc
+-wayland
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

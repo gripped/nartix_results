@@ -31,3 +31,32 @@
    install -vDm 644 ../$pkgname.uwsgi "$pkgdir/etc/uwsgi/$pkgname.ini"
    install -vDm 644 ../$pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
    install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,22 +0,0 @@
+-git
+-python
+-python-build
+-python-dateutil
+-python-django
+-python-django-allauth
+-python-django-compressor
+-python-django-extensions
+-python-django-gravatar
+-python-django-haystack
+-python-django-mailman3
+-python-django-q2
+-python-django-rest-framework
+-python-flufl-lock
+-python-installer
+-python-isort
+-python-mailmanclient
+-python-mistune
+-python-networkx
+-python-pdm-backend
+-python-robot-detection
+-sassc

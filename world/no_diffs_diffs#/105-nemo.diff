@@ -37,14 +37,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,6 @@
- cinnamon-desktop
- dconf
- exempi
+@@ -1,15 +0,0 @@
+-cinnamon-desktop
+-dconf
+-exempi
 -glib2-devel
- gobject-introspection
- gvfs
- intltool
+-gobject-introspection
+-gvfs
+-intltool
+-libexif
+-libgsf
+-libnotify
+-libxml2
+-meson
+-python
+-samurai
+-xapp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

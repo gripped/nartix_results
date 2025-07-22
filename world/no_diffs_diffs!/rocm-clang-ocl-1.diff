@@ -16,3 +16,15 @@
  _dirname="$(basename "$url")-$(basename ${source[0]} .tar.gz)"
  
  build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-bash
+-rocm-cmake
+-rocm-core
+-rocm-llvm
+-rocm-opencl-runtime

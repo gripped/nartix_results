@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,6 @@
+     'glslang'
+     'meson'
+     'ninja'
+-    'systemd'
+     'vulkan-headers'
+     'wayland-protocols'
+     'xorg-xwayland'
+@@ -60,7 +59,7 @@
+ }
+ 
+ build() {
+-    arch-meson "$pkgname-$pkgver" build
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,24 +0,0 @@
+-glslang
+-libdisplay-info.so
+-libglvnd
+-libinput
+-liblcms2.so
+-libliftoff.so
+-libpixman-1.so
+-libseat.so
+-libudev.so
+-libvulkan.so
+-libwayland-client.so
+-libwayland-server.so
+-libxcb
+-libxkbcommon.so
+-meson
+-ninja
+-opengl-driver
+-systemd
+-vulkan-headers
+-wayland-protocols
+-xcb-util-errors
+-xcb-util-renderutil
+-xcb-util-wm
+-xorg-xwayland

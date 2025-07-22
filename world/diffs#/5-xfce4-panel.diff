@@ -63,23 +63,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,15 +1,11 @@
- desktop-file-utils
- exo
- garcon
+@@ -1,15 +0,0 @@
+-desktop-file-utils
+-exo
+-garcon
 -git
 -glib2-devel
- gobject-introspection
+-gobject-introspection
 -gtk-layer-shell
- hicolor-icon-theme
-+intltool
- libdbusmenu-gtk3
- libwnck3
- libxfce4ui
+-hicolor-icon-theme
+-libdbusmenu-gtk3
+-libwnck3
+-libxfce4ui
 -libxfce4windowing
- vala
+-vala
 -xfce4-dev-tools
- xfconf
+-xfconf
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

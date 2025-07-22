@@ -75,12 +75,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
- avahi
+@@ -1,17 +0,0 @@
+-avahi
 -git
- glibc
- libvncserver
- libx11
+-glibc
+-libvncserver
+-libx11
+-libxcomposite
+-libxcrypt
+-libxdamage
+-libxext
+-libxfixes
+-libxi
+-libxinerama
+-libxrandr
+-libxtst
+-openssl
+-sh
+-xorg-xdpyinfo
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-  ./configure --prefix=/usr
++  ./configure --prefix=/usr --enable-freexl=no
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-geos
+-libfreexl
+-librttopo
+-libxml2
+-minizip
+-proj
+-sqlite
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd $pkgname-$pkgver
+-./configure --prefix=/usr
++./configure --prefix=/usr --enable-freexl=no
+ make
+ }

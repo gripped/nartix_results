@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ url='https://www.gnu.org/software/libc'
+ license=(GPL-2.0-or-later LGPL-2.1-or-later)
+ makedepends=(git gd lib32-gcc-libs python)
+-options=(staticlibs !lto)
++options=(staticlibs !lto debug)
+ source=("git+https://sourceware.org/git/glibc.git#commit=${_commit}"
+         locale.gen.txt
+         locale-gen
+@@ -41,7 +41,7 @@
+   local _configure_flags=(
+       --prefix=/usr
+       --with-headers=/usr/include
+-      --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/glibc/-/issues
++      --with-bugurl=https://gitea.artixlinux.org/packages/glibc/issues
+       --enable-bind-now
+       --enable-fortify-source
+       --enable-kernel=4.4
+@@ -121,7 +121,7 @@
+   _skip_test tst-shstk-legacy-1g     sysdeps/x86_64/Makefile
+   _skip_test tst-adjtime             time/Makefile
+ 
+-  make -O check
++  make -O check || :
+ )
+ 
+ package_glibc() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-filesystem
+-gd
+-git
+-glibc
+-lib32-gcc-libs
+-linux-api-headers>
+-python
+-tzdata
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ local _configure_flags=(
+ --prefix=/usr
+ --with-headers=/usr/include
+---with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/glibc/-/issues
++--with-bugurl=https://gitea.artixlinux.org/packages/glibc/issues
+ --enable-bind-now
+ --enable-fortify-source
+ --enable-kernel=4.4

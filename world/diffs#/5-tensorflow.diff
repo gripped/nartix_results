@@ -183,37 +183,46 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,8 +2,9 @@
- bazel
- c-ares
- clang
-+cuda
-+cudnn
- curl
+@@ -1,39 +0,0 @@
+-absl-py
+-bazel
+-c-ares
+-clang
+-curl
 -gcc14
- giflib
- git
- icu
-@@ -13,6 +14,8 @@
- libpng
- libxcrypt-compat
- lld
-+nccl
-+nvidia-utils
- openmp
- openssl
- patchelf
-@@ -30,9 +33,9 @@
- python-pasta
- python-protobuf
- python-pycuda
-+python-tensorflow-estimator
- python-termcolor
- python-typing_extensions
+-giflib
+-git
+-icu
+-intel-oneapi-compiler-shared-runtime-libs
+-intel-oneapi-openmp
+-libjpeg-turbo
+-libpng
+-libxcrypt-compat
+-lld
+-openmp
+-openssl
+-patchelf
+-pybind11
+-python-astor
+-python-astunparse
+-python-flatbuffers
+-python-gast
+-python-h5py
+-python-installer
+-python-keras
+-python-ml-dtypes
+-python-numpy
+-python-opt_einsum
+-python-pasta
+-python-protobuf
+-python-pycuda
+-python-termcolor
+-python-typing_extensions
 -python-wrapt
- tensorflow
- tensorflow-cuda
- tensorflow-opt
+-tensorflow
+-tensorflow-cuda
+-tensorflow-opt
+-tensorflow-opt-cuda
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

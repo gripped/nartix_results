@@ -9,3 +9,22 @@
  pkgdesc="Read and write geographic data files"
  arch=(x86_64)
  url="https://github.com/Toblerity/Fiona"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +0,0 @@
+-cython
+-gdal
+-python-attrs
+-python-build
+-python-certifi
+-python-click
+-python-click-plugins
+-python-cligj
+-python-installer
+-python-munch
+-python-setuptools
+-python-wheel

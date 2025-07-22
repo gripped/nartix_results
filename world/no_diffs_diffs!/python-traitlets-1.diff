@@ -5,3 +5,17 @@
    install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-git
+-python
+-python-argcomplete
+-python-build
+-python-hatchling
+-python-installer
+-python-typing_extensions

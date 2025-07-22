@@ -44,19 +44,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,15 +6,12 @@
- lib32-glibc
- lib32-libpipewire
- lib32-pipewire
+@@ -1,20 +0,0 @@
+-git
+-lib32-alsa-lib
+-lib32-dbus
+-lib32-gcc-libs
+-lib32-glib2
+-lib32-glibc
+-lib32-libpipewire
+-lib32-pipewire
 -lib32-systemd
- libasound.so
- libdbus-1.so
- libglib-2.0.so
- libpipewire
- libpipewire-0.3.so
+-libasound.so
+-libdbus-1.so
+-libglib-2.0.so
+-libpipewire
+-libpipewire-0.3.so
 -libsystemd.so
- meson
- pipewire
- pipewire-jack
- pipewire-v4l2
+-meson
+-pipewire
+-pipewire-jack
+-pipewire-v4l2
 -systemd

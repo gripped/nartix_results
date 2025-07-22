@@ -9,3 +9,15 @@
  pkgdesc='Lightweight X11 Display Manager'
  arch=('x86_64')
  url="https://lxde.org/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-gtk2
+-gtk3
+-intltool
+-iso-codes
+-xorg-server

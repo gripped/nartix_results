@@ -9,3 +9,19 @@
  provides=('notification-daemon')
  pkgdesc="Notification daemon for MATE"
  url="https://mate-desktop.org"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-autoconf-archive
+-gettext
+-glib2-devel
+-libcanberra
+-libnotify
+-libwnck3
+-mate-common
+-mate-panel
+-python

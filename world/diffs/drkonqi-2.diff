@@ -1,0 +1,84 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=drkonqi
+-pkgver=6.4.3
++pkgver=6.3.5
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='The KDE crash handler'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+ license=(GPL-2.0-or-later)
+-depends=(elfutils
+-         gcc-libs
++depends=(gcc-libs
+          gdb
+          glibc
+          kcmutils
+@@ -34,11 +33,11 @@
+          qt6-base
+          qt6-declarative
+          syntax-highlighting
+-         systemd-libs)
++         libelogind)
+ makedepends=(extra-cmake-modules)
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('3ad98b1bcc6420ed4154640af8cb2f441ca774caf3d9a8e4d8ab9f553609fb43'
++sha256sums=('d0c93f0fc1b4203b6245d3a2f4e9c85d4161570d14a14d81eed5a4ebd5adffcd'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
+@@ -50,10 +49,13 @@
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \
+     -DBUILD_TESTING=OFF \
+     -DWITH_GDB12=ON \
+-    -DWITH_PYTHON_VENDORING=OFF
++    -DWITH_PYTHON_VENDORING=OFF \
++    -DCMAKE_DISABLE_FIND_PACKAGE_Systemd=ON
+   cmake --build build
+ }
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,29 +0,0 @@
+-elfutils
+-extra-cmake-modules
+-gcc-libs
+-gdb
+-glibc
+-kcmutils
+-kconfig
+-kcoreaddons
+-kcrash
+-ki18n
+-kidletime
+-kio
+-kirigami
+-kitemmodels
+-knotifications
+-kservice
+-kstatusnotifieritem
+-kwallet
+-kwidgetsaddons
+-kwindowsystem
+-polkit-qt6
+-python
+-python-psutil
+-python-pygdbmi
+-python-sentry_sdk
+-qt6-base
+-qt6-declarative
+-syntax-highlighting
+-systemd-libs

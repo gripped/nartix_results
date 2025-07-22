@@ -9,3 +9,18 @@
  pkgdesc='Library for generating documents in Open Document Format'
  arch=('x86_64')
  url='https://sourceforge.net/p/libwpd/wiki/libodfgen/'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-doxygen
+-gcc-libs
+-glibc
+-libetonyek
+-librevenge
+-libwpg
+-libxml2
+-zlib

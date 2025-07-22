@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,8 +14,7 @@
+   libfprint
+   pam
+   polkit
+-  systemd
+-  systemd-libs
++  libelogind
+ )
+ makedepends=(
+   git
+@@ -47,11 +46,13 @@
+ 
+ build() {
+   local meson_options=(
++    -D libsystemd=libelogind
++    -D systemd=false
+     -D gtk_doc=true
+     -D pam_modules_dir=/usr/lib/security
+   )
+ 
+-  arch-meson fprintd build "${meson_options[@]}"
++  artix-meson fprintd build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,19 +0,0 @@
+-dbus
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-gtk-doc
+-libfprint
+-libfprint-2.so
+-meson
+-pam
+-pam_wrapper
+-polkit
+-python-cairo
+-python-dbus
+-python-dbusmock
+-python-packaging
+-systemd
+-systemd-libs

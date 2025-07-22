@@ -76,17 +76,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,8 @@
+@@ -1,4 +0,0 @@
 -cmake
 -glib2
-+cmake>
-+gcc
-+gcc-libs
-+glib2>
-+make
-+pkgconf
- readline
- zlib
+-readline
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

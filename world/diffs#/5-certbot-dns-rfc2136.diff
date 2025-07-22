@@ -53,12 +53,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,5 +4,4 @@
- python-build
- python-dnspython
- python-installer
+@@ -1,8 +0,0 @@
+-certbot
+-git
+-python-acme
+-python-build
+-python-dnspython
+-python-installer
 -python-setuptools
- python-wheel
+-python-wheel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

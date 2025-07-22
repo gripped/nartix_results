@@ -14,10 +14,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,6 +9,5 @@
- qt5-base
- qt5-declarative
- qt5-wayland
+@@ -1,14 +0,0 @@
+-cmake
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-gtk3
+-libxcb
+-qt5-base
+-qt5-declarative
+-qt5-wayland
 -systemd-libs
- wayland
- wayland-protocols
+-wayland
+-wayland-protocols
