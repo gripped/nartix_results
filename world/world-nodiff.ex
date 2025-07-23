@@ -66,7 +66,6 @@ android-file-transfer
 android-tools
 android-udev
 angelfish
-ansible-core
 ansible-language-server
 ansible-lint
 ansible-navigator
@@ -458,6 +457,7 @@ distro-info-data
 distro-info
 django
 python-django
+djvulibre
 dkms
 dleyna
 dleyna-docs
@@ -1084,6 +1084,7 @@ i3-wm
 i3blocks
 i3lock
 i3status
+iagno
 ibm-sw-tpm2
 icewm
 icmake
@@ -1390,7 +1391,6 @@ kio-fuse
 kio-gdrive
 kio-zeroconf
 kio
-kio5-extras
 kio5
 kirigami-addons
 kirigami-addons5
@@ -2502,6 +2502,7 @@ ocl-icd
 odt2txt
 okteta
 okular
+okularpart5
 onednn
 onetbb
 onevpl
@@ -2608,8 +2609,6 @@ papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
-parallel
-parallel-docs
 parley
 parted
 partitionmanager
@@ -2832,7 +2831,6 @@ perl-params-validationcompiler
 perl-parse-recdescent
 perl-parse-yapp
 perl-path-class
-perl-path-tiny
 perl-pdf-api2
 perl-pegex
 perl-perl-critic
@@ -2955,6 +2953,8 @@ phonon-gstreamer
 phonon-qt5-gstreamer
 phonon-vlc
 phonon-qt6-vlc
+phonon
+phonon-qt6
 php-apcu
 php-legacy-apcu
 php-geoip
@@ -3384,10 +3384,6 @@ python-dbus-deviation
 python-dbus-next
 python-dbusmock
 python-ddt
-python-deadlib
-python-nntplib
-python-cgi
-python-mailcap
 python-debtcollector
 python-debugpy
 python-decorator
@@ -3881,7 +3877,6 @@ python-ovirt-engine-sdk
 python-owslib
 python-packaging
 python-pallets-sphinx-themes
-python-pam
 python-pandas-datareader
 python-pandas
 python-pandocfilters

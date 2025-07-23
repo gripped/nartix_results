@@ -2,29 +2,30 @@
 +++ Artix PKGBUILD
 @@ -8,7 +8,7 @@
  license=('APACHE-2.0')
- depends=('java-runtime-headless<19')
- makedepends=('maven' 'jre11-openjdk-headless' 'jdk11-openjdk')
+ depends=('java-runtime-headless>=17')
+ makedepends=('maven' 'java-environment=17')
 -backup=('etc/conf.d/openfire'
 +backup=(
          'etc/openfire/openfire.xml'
          'etc/openfire/security.xml'
          'etc/openfire/crowd.properties'
-@@ -17,14 +17,10 @@
+@@ -17,15 +17,11 @@
          'etc/openfire/security/keystore')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/igniterealtime/Openfire/archive/refs/tags/v$pkgver.tar.gz"
          'openfire.sh'
 -        'openfire.conf'
 -        'openfire.service'
          'user.conf'
-         'tmpfile.conf')
- sha256sums=('3918dc46664ec6a1a8d6094858d7a6f8e3d923780de3625767bb3d8ac7a13db9'
+         'tmpfile.conf'
+         'force-java17.patch')
+ sha256sums=('cd29305ff1bc9ee544aaa60fb11f32f5c6783a433069b589e9cb82d556a67c76'
              'c850f376d53134ccc8d1035322dea792ba9145a5ab37f1801598c60bc70d0ed1'
 -            'c8a612abee90bdc9a2869e562a4bbbf596159c60adcd23368833a0e2ca27c1d4'
 -            'bc58f7e80cbdaee8523874990bf061cfd0e6480c676102e2131fe487d2782061'
              'ea08e0c4d4b51b2a1adca71decfa1a856826898f00fb8ef857844f6326277e1e'
-             'c63396991984a067d05e21094a664255d6aed2bf294bddd3885a7da75472b886')
- 
-@@ -40,8 +36,6 @@
+             'c63396991984a067d05e21094a664255d6aed2bf294bddd3885a7da75472b886'
+             'f7104310b0921f2b5d088dc76e619f3b06f642f66402083a936419755b15232e')
+@@ -51,8 +47,6 @@
  
    cd "$srcdir"
    install -Dm0755 openfire.sh "$pkgdir"/usr/bin/openfire
@@ -39,8 +40,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +0,0 @@
--java-runtime-headless<19
--jdk11-openjdk
--jre11-openjdk-headless
+@@ -1,3 +0,0 @@
+-java-environment
+-java-runtime-headless>
 -maven

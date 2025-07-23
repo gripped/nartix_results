@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +0,0 @@
+-appstream
+-git
+-gobject-introspection
+-gsound
+-gtk3
+-librsvg
+-meson
+-vala
+-yelp-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

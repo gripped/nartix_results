@@ -6,12 +6,31 @@
 -pkgver=24.02.0
 -pkgrel=1
 +pkgver=24.02.2
-+pkgrel=2
++pkgrel=4
  pkgdesc='Additional components to increase the functionality of KIO'
  arch=(x86_64)
  url='https://www.kde.org/'
-@@ -45,8 +45,8 @@
-             'kactivities-stats5: recently used kioslave'
+@@ -23,8 +23,6 @@
+          libssh
+          libtirpc
+          libxcursor
+-         phonon-qt5
+-         kactivities5
+          qt5-base
+          qt5-svg
+          smbclient
+@@ -35,18 +33,16 @@
+              kdoctools5
+              libappimage
+              openexr
+-             kactivities-stats5
+              taglib)
+ optdepends=('icoutils: Windows executable thumbnails'
+             'kimageformats5: thumbnails for additional image formats'
+             'libappimage: AppImage thumbnails'
+             'openexr: EXR format thumbnails'
+             'perl: info kioslave'
+-            'kactivities-stats5: recently used kioslave'
              'qt5-imageformats: thumbnails for additional image formats'
              'taglib: audio file thumbnails')
 -source=(https://download.kde.org/unstable/release-service/$pkgver/src/kio-extras-kf5-$pkgver.tar.xz{,.sig})
@@ -21,6 +40,16 @@
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+@@ -56,7 +52,8 @@
+   cmake -B build -S kio-extras-kf5-$pkgver \
+     -DLIBAPPIMAGE_LIBRARIES=libappimage.so \
+     -DCMAKE_INSTALL_LIBEXECDIR=lib \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_TESTING=OFF \
++    -DBUILD_ACTIVITIES=OFF
+   cmake --build build
+ }
+ 
 
 
 ############# Stripped diff below #################
@@ -59,3 +88,15 @@
 -solid5
 -syntax-highlighting5
 -taglib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,7 @@
+ cmake -B build -S kio-extras-kf5-$pkgver \
+ -DLIBAPPIMAGE_LIBRARIES=libappimage.so \
+ -DCMAKE_INSTALL_LIBEXECDIR=lib \
+--DBUILD_TESTING=OFF
++-DBUILD_TESTING=OFF \
++-DBUILD_ACTIVITIES=OFF
+ cmake --build build
+ }

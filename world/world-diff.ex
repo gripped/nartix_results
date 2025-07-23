@@ -3,6 +3,7 @@ accountsservice
 alacritty
 alsa-utils
 amule
+ansible-core
 apache
 apcupsd
 appstream
@@ -89,7 +90,6 @@ libcups
 dbus-broker
 ddcutil
 dhcpcd
-djvulibre
 dns-over-https
 docker
 dolphin-emu
@@ -243,7 +243,6 @@ hidapi
 hwloc
 hyprland
 i2pd
-iagno
 ibus
 libibus
 igsc
@@ -293,6 +292,7 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 kgamma
+kio5-extras
 kismet
 kitty
 kitty-terminfo
@@ -516,7 +516,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-okularpart5
 onboard
 onionshare
 open-iscsi
@@ -531,6 +530,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+parallel
+parallel-docs
 paraview-catalyst
 parole
 passim
@@ -541,11 +542,9 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-path-tiny
 pgbouncer
 phodav
-phonon
-phonon-qt5
-phonon-qt6
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -628,6 +627,11 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-deadlib
+python-nntplib
+python-cgi
+python-mailcap
+python-pam
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
