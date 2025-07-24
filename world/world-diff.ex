@@ -3,7 +3,6 @@ accountsservice
 alacritty
 alsa-utils
 amule
-ansible-core
 apache
 apcupsd
 appstream
@@ -87,6 +86,7 @@ cppcheck
 crun
 cups
 libcups
+darkhttpd
 dbus-broker
 ddcutil
 dhcpcd
@@ -631,7 +631,6 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-pam
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -727,6 +726,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport

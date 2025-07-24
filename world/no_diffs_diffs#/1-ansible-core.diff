@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,7 +47,6 @@
+   'python-pip: for module to manage Python libarary dependencies'
+   'python-pywinrm: connect to Windows machines'
+   'python-setuptools: for module to manage Python libarary dependencies'
+-  'python-systemd: for journald support'
+   'sshpass: for ssh connections with password'
+ )
+ provides=('python-ansible' 'ansible-base')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-python
+-python-build
+-python-cryptography
+-python-docutils
+-python-installer
+-python-jinja
+-python-packaging
+-python-paramiko
+-python-pyyaml
+-python-resolvelib
+-python-setuptools
+-python-typing_extensions
+-python-wheel

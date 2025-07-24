@@ -18,7 +18,7 @@
    taglib
    twolame
    wayland
-@@ -453,7 +453,6 @@
+@@ -451,7 +451,6 @@
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/access/libaccess_jack_plugin.so
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/audio_output/libjack_plugin.so
  
@@ -26,7 +26,7 @@
  
      _pick $pkgname-plugin-jpeg usr/lib/vlc/plugins/codec/libjpeg_plugin.so
  
-@@ -1314,16 +1313,6 @@
+@@ -1332,16 +1331,6 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
@@ -43,30 +43,30 @@
  
  package_vlc-plugin-jpeg() {
    pkgdesc+=" - JPEG plugin"
-@@ -1725,7 +1714,7 @@
+@@ -1767,7 +1756,7 @@
      alsa-lib
      glibc
      libvlc libvlccore.so
 -    systemd-libs
 +    libudev
+     vlc-plugins-base
    )
  
-   mv -v $pkgname/* "$pkgdir"
-@@ -1849,7 +1838,6 @@
+@@ -1897,7 +1886,6 @@
      vlc-plugin-gnutls
      vlc-plugin-inflate
      vlc-plugin-jpeg
 -    vlc-plugin-journal
      vlc-plugin-mpg123
+     vlc-plugin-ogg
      vlc-plugin-opus
-     vlc-plugin-png
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,197 +0,0 @@
+@@ -1,198 +0,0 @@
 -a52dec
 -aalib
 -abseil-cpp
@@ -228,6 +228,7 @@
 -vlc-plugin-musepack
 -vlc-plugin-nfs
 -vlc-plugin-notify
+-vlc-plugin-ogg
 -vlc-plugin-opus
 -vlc-plugin-png
 -vlc-plugin-pulse

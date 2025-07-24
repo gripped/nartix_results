@@ -229,3 +229,4 @@ xlibre-xf86-video-vesa
 xlibre-xf86-video-vmware
 xlibre-xf86-video-voodoo
 xlibre-xserver
+zramen

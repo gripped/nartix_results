@@ -66,6 +66,7 @@ android-file-transfer
 android-tools
 android-udev
 angelfish
+ansible-core
 ansible-language-server
 ansible-lint
 ansible-navigator
@@ -412,7 +413,6 @@ cython-dev
 cython
 cython0
 d-spy
-darkhttpd
 darktable
 dart-sass
 dart
@@ -3451,6 +3451,8 @@ python-editdistance
 python-editor
 python-elastic-transport
 python-elasticsearch
+python-electrum-aionostr
+python-electrum-ecc
 python-elementpath
 python-email-validator
 python-emoji
@@ -3877,6 +3879,7 @@ python-ovirt-engine-sdk
 python-owslib
 python-packaging
 python-pallets-sphinx-themes
+python-pam
 python-pandas-datareader
 python-pandas
 python-pandocfilters
@@ -4625,7 +4628,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
