@@ -275,7 +275,6 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
-calf
 calligra
 camlp-streams
 camlp4
@@ -1619,7 +1618,6 @@ libavtp
 libayatana-appindicator
 libb2
 libb64
-libblastrampoline
 libbluray
 libbobcat
 libbs2b
@@ -2268,6 +2266,7 @@ man2html
 mandoc
 mandown
 mangohud
+manifold
 marble
 marble-behaim
 marble-common
@@ -2456,7 +2455,6 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -4628,6 +4626,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver

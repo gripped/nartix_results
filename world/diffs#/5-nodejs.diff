@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=nodejs
+ pkgver=24.4.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Evented I/O for V8 javascript ("Current" release)'
+ arch=('x86_64')
+ url='https://nodejs.org/'
+@@ -41,7 +41,8 @@
+ 
+ prepare() {
+   cd node
+-  git cherry-pick -n 049664bbdc421c63b2145c85a18c64d184b40aa5
++  git cherry-pick -n cd685fe3b6b18d2a1433f2635470513896faebe6
++  git cherry-pick -n 100c6da238bec44ea0b18a3df4e82080a8ae05b3
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-brotli
+-c-ares
+-git
+-icu
+-libnghttp2
+-libnghttp3
+-libngtcp2
+-libuv
+-openssl
+-procps-ng
+-python
+-simdjson
+-zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd node
+-git cherry-pick -n 049664bbdc421c63b2145c85a18c64d184b40aa5
++git cherry-pick -n cd685fe3b6b18d2a1433f2635470513896faebe6
++git cherry-pick -n 100c6da238bec44ea0b18a3df4e82080a8ae05b3
+ }
+ build() {
+ _set_flags

@@ -46,6 +46,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calf
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -307,6 +308,7 @@ kwin-x11
 kwin
 libao
 libayatana-indicator
+libblastrampoline
 libblockdev
 libblockdev-btrfs
 libblockdev-crypto
@@ -505,6 +507,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs
 nsd
 nushell
 nvidia-open
@@ -726,7 +729,6 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport

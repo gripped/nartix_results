@@ -1,0 +1,108 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,27 +1,50 @@
+ 
+ pkgname=calf
+ pkgver=0.90.8
+-pkgrel=2
++pkgrel=1
+ pkgdesc='LV2 plug-in suite and standalone Jack host'
+ arch=(x86_64)
+ url='https://calf-studio-gear.org'
+ _url="https://github.com/calf-studio-gear/calf"
+-groups=(lv2-plugins pro-audio)
+-license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(cairo expat fluidsynth gcc-libs gdk-pixbuf2 glib2 glibc gtk2 hicolor-icon-theme jack)
+-makedepends=(cmake git lv2)
++groups=(
++  lv2-plugins
++  pro-audio
++)
++license=(
++  GPL-2.0-or-later
++  LGPL-2.0-or-later
++)
++depends=(
++  cairo
++  expat
++  fluidsynth
++  gcc-libs
++  gdk-pixbuf2
++  glib2
++  glibc
++  gtk2
++  hicolor-icon-theme
++  jack)
++makedepends=(
++  cmake
++  git
++  lv2
++)
+ source=("git+$_url#tag=$pkgver")
+ b2sums=('18b206958a945e47aa88e3097dfbc3ec960d163a26e4f23f2b239e58f2f4f71841b5e8cd5bac646e4adb8d37e60b232580edcc8a91bcc44b4a1f9a15ebfa2872')
+ 
+ build() {
+-  cmake \
+-    -B build \
+-    -D CMAKE_BUILD_TYPE=None \
+-    -D CMAKE_INSTALL_PREFIX=/usr \
+-    -D WANT_EXPERIMENTAL=ON \
+-    -S $pkgname \
++  local cmake_options=(
++    -B build
++    -D CMAKE_BUILD_TYPE=None
++    -D CMAKE_INSTALL_PREFIX=/usr
++    -D WANT_EXPERIMENTAL=ON
++    -S $pkgname
+     -W no-dev
+-  make -C build
++  )
++
++  cmake "${cmake_options[@]}"
++  cmake --build build --verbose
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-cairo
+-cmake
+-expat
+-fluidsynth
+-gcc-libs
+-gdk-pixbuf2
+-git
+-glib2
+-glibc
+-gtk2
+-hicolor-icon-theme
+-jack
+-lv2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,12 @@
+ build() {
+-cmake \
+--B build \
+--D CMAKE_BUILD_TYPE=None \
+--D CMAKE_INSTALL_PREFIX=/usr \
+--D WANT_EXPERIMENTAL=ON \
+--S $pkgname \
++local cmake_options=(
++-B build
++-D CMAKE_BUILD_TYPE=None
++-D CMAKE_INSTALL_PREFIX=/usr
++-D WANT_EXPERIMENTAL=ON
++-S $pkgname
+ -W no-dev
+-make -C build
++)
++cmake "${cmake_options[@]}"
++cmake --build build --verbose
+ }
