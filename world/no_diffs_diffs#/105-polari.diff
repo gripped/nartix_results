@@ -1,25 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=polari
- pkgver=46.0
--pkgrel=4
-+pkgrel=3
- pkgdesc="An IRC Client for GNOME"
- url="https://apps.gnome.org/Polari/"
- arch=(x86_64)
-@@ -32,7 +32,8 @@
-   yelp-tools
- )
- optdepends=('webkit2gtk-4.1: URL preview feature')
--groups=(gnome-circle)
-+groups=(gnome-extra)
-+_commit=9ea71de3d20fdc96e76bb55362418b9118e7cf07  # tags/45.0^0
- source=(
-   "git+https://gitlab.gnome.org/GNOME/polari.git#tag=${pkgver/[a-z]/.&}"
-   polari-close-dialog.patch
-@@ -59,7 +60,7 @@
+@@ -59,7 +59,7 @@
  }
  
  build() {

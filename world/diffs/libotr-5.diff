@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libotr
+ pkgver=4.1.1
+-pkgrel=6
++pkgrel=5
+ pkgdesc='Off-the-Record Messaging Library and Toolkit'
+ url='https://otr.cypherpunks.ca/'
+ license=(
+@@ -12,6 +12,7 @@
+ depends=(
+   'glibc'
+   'libgcrypt'
++  'libgpg-error'
+ )
+ validpgpkeys=('22DF3305DF56667CE15784FCF24DE08F42C2ABAD') # OTR Dev Team
+ source=(https://otr.cypherpunks.ca/${pkgname}-${pkgver}.tar.gz{,.asc}
+@@ -22,8 +23,6 @@
+ 
+ prepare() {
+     patch -d "$pkgname-$pkgver" -N -p 1 -i "${srcdir}/$pkgname-4.1.1-include-socket.h.patch"
+-    cd $pkgname-$pkgver
+-    autoreconf -vif
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-glibc
+-libgcrypt
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,5 @@
+ prepare() {
+ patch -d "$pkgname-$pkgver" -N -p 1 -i "${srcdir}/$pkgname-4.1.1-include-socket.h.patch"
+-cd $pkgname-$pkgver
+-autoreconf -vif
+ }
+ build() {
+ cd "${srcdir}/${pkgname}-${pkgver}"

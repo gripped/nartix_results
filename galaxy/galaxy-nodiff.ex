@@ -357,8 +357,6 @@ perl-xml-filter-buffertext
 perl-xml-sax-writer
 pinentry-bemenu
 pluma
-ppsspp
-ppsspp-assets
 profanity
 profanity-gtk
 pysolfc-cardsets

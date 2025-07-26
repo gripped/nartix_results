@@ -72,6 +72,7 @@ clamav
 cloud-init
 clucene
 cmake
+cmatrix
 cmus
 colord
 libcolord
@@ -302,7 +303,6 @@ knockd
 knot
 kopeninghours
 ksnip
-kstars
 ksystemlog
 kwin-x11
 kwin
@@ -345,6 +345,7 @@ libinput
 libldm
 libmspub
 libnvme
+libotr
 libprocps
 libqb
 libsidplay
@@ -360,6 +361,7 @@ libvirt
 libvncserver
 libxfce4ui
 libxfce4util
+libxmlrpc
 libytnef
 light-locker
 linux-hardened
@@ -507,7 +509,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-open
@@ -545,7 +546,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-path-tiny
 pgbouncer
 phodav
 php-legacy
@@ -830,6 +830,7 @@ udisks2-docs
 umockdev
 unbound
 unoconv
+unzip
 upower
 uptimed
 usb_modeswitch
@@ -958,6 +959,9 @@ weston
 wireplumber
 libwireplumber
 wireplumber-docs
+wireshark
+wireshark-cli
+wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16

@@ -344,7 +344,6 @@ clutter-gtk
 clutter
 cmark-gfm
 cmark
-cmatrix
 cmocka
 cni-plugins
 codespell
@@ -1507,6 +1506,7 @@ ksnakeduel
 kspaceduel
 ksquares
 ksshaskpass
+kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -1890,7 +1890,6 @@ libopusenc
 liborcus
 libosinfo
 libotf
-libotr
 libp11
 libpagemaker
 libpanel
@@ -2086,7 +2085,6 @@ libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
 libxml++2.6-docs
-libxmlrpc
 libxmp
 libxmu
 libxp
@@ -2455,6 +2453,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2829,6 +2828,7 @@ perl-params-validationcompiler
 perl-parse-recdescent
 perl-parse-yapp
 perl-path-class
+perl-path-tiny
 perl-pdf-api2
 perl-pegex
 perl-perl-critic
@@ -5601,7 +5601,6 @@ unrar
 libunrar
 unrealircd
 unrtf
-unzip
 upx
 uriparser
 usbredir
@@ -5704,9 +5703,6 @@ wine-staging
 wine
 wireguard-tools
 wireless_tools
-wireshark
-wireshark-cli
-wireshark-qt
 wl-clip-persist
 wl-clipboard
 woff2

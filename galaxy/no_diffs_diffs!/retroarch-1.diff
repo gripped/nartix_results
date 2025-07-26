@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=retroarch
+-pkgver=1.21.0
+-pkgrel=1
++pkgver=1.20.0
++pkgrel=3
+ pkgdesc='Reference frontend for the libretro API'
+ arch=(x86_64)
+ url=http://www.libretro.com/
+@@ -56,12 +56,12 @@
+   'retroarch-assets-xmb: XMB menu assets'
+ )
+ backup=(etc/retroarch.cfg)
+-_tag=baee906ef35b99283f9a1a060a2ce5ac86159b63
++_tag=ab3b175848fa6cd8b2340809631e30bc0fe1d136
+ source=(
+   git+https://github.com/libretro/RetroArch.git#tag=${_tag}
+   retroarch-config.patch
+ )
+-b2sums=('0eb80d8ba9dabd3b1a40dd8beb3d2a83feb56b764085d827db6361509c3d57f871be3177ffb5b339727323f0492cd1f9d10f12361b318847605f4c992cebfbd7'
++b2sums=('c87e326732a9bf8124068f848ac86eda8d559cd3a36c44bc7625fc21fd1f911d952a1141f21604a27ac5c4da7977f9f12bfd92dab24c3880d4d9655f7d8090e2'
+         '5ecbe57126c7f9b66bdf189f0af2f1cec031cb68ea85bb9609847ba9beb0e720c902cd3330d7c286901a73e6c2e272c3f04166cf9a47bb6f80097f19dde8ce3a')
+ 
+ pkgver() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,35 +0,0 @@
+-alsa-lib
+-dbus
+-ffmpeg
+-flac
+-fontconfig
+-fribidi
+-gamemode
+-gcc-libs
+-git
+-glibc
+-libass.so
+-libdecor
+-libdrm
+-libfreetype.so
+-libgl
+-libpulse
+-libudev.so
+-libusb
+-libx11
+-libxcb
+-libxext
+-libxinerama
+-libxkbcommon
+-libxrandr
+-libxv
+-libxxf86vm
+-mesa
+-openssl
+-qt6-base
+-sdl2
+-v4l-utils
+-vulkan-icd-loader
+-wayland
+-wayland-protocols
+-zlib
