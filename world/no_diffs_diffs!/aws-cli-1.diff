@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=aws-cli
+-pkgver=1.41.9
++pkgver=1.41.4
+ pkgrel=1
+ pkgdesc='Universal Command Line Interface for Amazon Web Services'
+ arch=('any')
+@@ -30,7 +30,7 @@
+   'python-pytest-xdist'
+ )
+ source=("$url/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('1e6cc9cc829bcc2bf214d3a40c657292d9a27dc8d4892fb974b99e430b9d3251')
++sha256sums=('c830c20168a1d845910182be3182bad753e4ea4ca6a8b7768fcc56983168e301')
+ 
+ build() {
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +0,0 @@
+-python
+-python-botocore
+-python-build
+-python-colorama
+-python-dateutil
+-python-docutils
+-python-installer
+-python-jmespath
+-python-pyasn1
+-python-rsa
+-python-s3transfer
+-python-setuptools
+-python-wheel
+-python-yaml

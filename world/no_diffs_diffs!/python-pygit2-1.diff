@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-pygit2
+-pkgver=1.18.1
++pkgver=1.18.0
+ pkgrel=1
+ pkgdesc='Python bindings for libgit2'
+ arch=('x86_64')
+@@ -10,7 +10,7 @@
+ makedepends=('cython' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+ checkdepends=('python-pytest')
+ source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('90cb79402ab403b71c3773f7d02663919fdde4d0c01f202c67f2335e29dca3df')
++sha256sums=('688cbaab1c52fde358589270fbfdf09a87f8e0fbaa68d120e7a2c923ac8e5c34')
+ 
+ prepare() {
+ 	cd "pygit2-$pkgver"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-cython
+-glibc
+-libgit2
+-libgit2.so
+-python
+-python-build
+-python-cffi
+-python-installer
+-python-setuptools
+-python-wheel

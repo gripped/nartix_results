@@ -666,7 +666,7 @@ fmt
 fmt-docs
 folks
 font-awesome
-ttf-font-awesome
+woff2-font-awesome
 otf-font-awesome
 fontconfig
 fontforge
@@ -2085,6 +2085,7 @@ libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
 libxml++2.6-docs
+libxmlrpc
 libxmp
 libxmu
 libxp
@@ -4540,7 +4541,6 @@ python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
-python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid

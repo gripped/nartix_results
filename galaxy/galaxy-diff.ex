@@ -30,8 +30,6 @@ mimalloc
 mpd
 nvidia-390xx-utils
 nvm
-ppsspp
-ppsspp-assets
 qbittorrent
 qbittorrent-nox
 rage

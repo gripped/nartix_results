@@ -1,17 +1,49 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,8 +6,8 @@
+@@ -1,34 +1,23 @@
+ 
+ pkgname=nvme-cli
+-pkgver=2.15
++pkgver=2.14
+ pkgrel=1
+ pkgdesc="NVM-Express user space tooling for Linux"
  arch=('x86_64')
  url="https://github.com/linux-nvme/nvme-cli"
- license=('GPL')
--makedepends=('systemd' 'meson' 'git' 'asciidoc' 'xmlto' 'swig')
--depends=('util-linux' 'libsystemd' 'libnvme')
+-license=('GPL-2.0-or-later')
+-makedepends=(
+-    'asciidoc'
+-    'git'
+-    'meson'
+-    'swig'
+-    'systemd'
+-    'xmlto'
+-)
+-depends=(
+-    'gcc-libs'
+-    'glibc'
+-    'json-c'
+-    'libnvme'
+-    'libsystemd'
+-    'util-linux'
+-)
++license=('GPL')
 +makedepends=('udev' 'meson' 'git' 'asciidoc' 'xmlto' 'swig')
 +depends=('util-linux' 'libudev' 'libnvme')
- options=(strip)
++options=(strip)
  install=nvme-cli.install
  source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
-@@ -28,7 +28,7 @@
+-sha256sums=('93282c426f22dd1ea6d172dec8af043c4e9ff80189becfbbb5378fe1ca0a74ad')
++sha256sums=('ff689ec0dabd32e8077a9fc0b2732067b08dedeef471aadea0136ae210f6edd1')
+ 
+ build() {
+ 	cd "${pkgname}-${pkgver}"
+ 
++	export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++	export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ 
+ 	meson setup \
+ 	--prefix /usr \
+@@ -39,7 +28,7 @@
  	--auto-features enabled \
  	-D b_lto=true -D b_pie=true \
  	-D docs=man -D docs-build=true \
@@ -26,9 +58,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +0,0 @@
+@@ -1,12 +0,0 @@
 -asciidoc
+-gcc-libs
 -git
+-glibc
+-json-c
 -libnvme
 -libsystemd
 -meson

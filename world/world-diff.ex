@@ -96,6 +96,13 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
+dotnet-core-8.0
+dotnet-runtime-8.0
+aspnet-runtime-8.0
+dotnet-sdk-8.0
+dotnet-targeting-pack-8.0
+aspnet-targeting-pack-8.0
+dotnet-source-built-artifacts-8.0
 dotnet-core
 dotnet-host
 dotnet-runtime
@@ -361,7 +368,6 @@ libvirt
 libvncserver
 libxfce4ui
 libxfce4util
-libxmlrpc
 libytnef
 light-locker
 linux-hardened
@@ -634,10 +640,12 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-lxml-html-clean
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-zope-event
 qastools
 qbittorrent
 qbittorrent-nox
