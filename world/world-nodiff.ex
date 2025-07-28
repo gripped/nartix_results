@@ -275,6 +275,7 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
+calf
 calligra
 camlp-streams
 camlp4
@@ -813,7 +814,6 @@ gnome-nibbles
 gnome-notes
 gnome-online-accounts
 libgoa
-gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
@@ -1890,6 +1890,7 @@ libopusenc
 liborcus
 libosinfo
 libotf
+libotr
 libp11
 libpagemaker
 libpanel
@@ -2085,7 +2086,6 @@ libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
 libxml++2.6-docs
-libxmlrpc
 libxmp
 libxmu
 libxp
@@ -3748,6 +3748,7 @@ python-lsp-jsonrpc
 python-lsp-server
 python-lsprotocol
 python-lupa
+python-lxml-html-clean
 python-lxml
 python-lxml-docs
 python-lz4
@@ -4541,6 +4542,7 @@ python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
+python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
@@ -5601,6 +5603,7 @@ unrar
 libunrar
 unrealircd
 unrtf
+unzip
 upx
 uriparser
 usbredir

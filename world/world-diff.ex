@@ -46,7 +46,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calf
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -179,6 +178,7 @@ gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
 gnome-panel
+gnome-photos
 gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
@@ -352,7 +352,6 @@ libinput
 libldm
 libmspub
 libnvme
-libotr
 libprocps
 libqb
 libsidplay
@@ -368,6 +367,7 @@ libvirt
 libvncserver
 libxfce4ui
 libxfce4util
+libxmlrpc
 libytnef
 light-locker
 linux-hardened
@@ -640,12 +640,10 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-lxml-html-clean
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-zope-event
 qastools
 qbittorrent
 qbittorrent-nox
@@ -838,7 +836,6 @@ udisks2-docs
 umockdev
 unbound
 unoconv
-unzip
 upower
 uptimed
 usb_modeswitch

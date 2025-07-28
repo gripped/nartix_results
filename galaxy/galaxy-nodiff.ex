@@ -90,6 +90,7 @@ freecell-solver
 gammastep
 garcon
 girara
+gitoxide
 glib-perl
 gpicview
 grilo-plugins
