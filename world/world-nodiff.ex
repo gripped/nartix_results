@@ -154,7 +154,6 @@ autoconf2.13
 autogen
 autopep8
 autossh
-avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
@@ -345,6 +344,7 @@ clutter-gtk
 clutter
 cmark-gfm
 cmark
+cmatrix
 cmocka
 cni-plugins
 codespell
@@ -661,8 +661,7 @@ flatpak-builder
 flatpak-kcm
 flickcurl
 flite
-fltk
-fltk-docs
+fltk1.3
 fmt
 fmt-docs
 folks
@@ -814,6 +813,7 @@ gnome-nibbles
 gnome-notes
 gnome-online-accounts
 libgoa
+gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
@@ -2586,9 +2586,6 @@ oxygen-sounds
 oxygen
 oxygen5
 p7zip
-packagekit-qt
-packagekit-qt5
-packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
@@ -5632,7 +5629,6 @@ vde2
 vdpauinfo
 veracrypt
 verdict
-vice
 vid.stab
 viewnior
 vifm

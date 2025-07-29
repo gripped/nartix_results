@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,7 +43,7 @@
+@@ -49,7 +49,7 @@
  }
  
  build() {
@@ -15,7 +15,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,13 +0,0 @@
+@@ -1,14 +0,0 @@
+-appstream
 -cairo
 -dconf
 -gcc-libs
@@ -32,8 +33,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- patch -Np1 -i ../0001-Fix-various-fallback-paths.patch
+@@ -6,6 +6,6 @@
+ sed -i 's/appstreamctl/appstreamcli/' data/meson.build
  }
  build() {
 -arch-meson $pkgname build

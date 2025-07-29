@@ -1,14 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -48,6 +48,7 @@
-     -DCMAKE_INSTALL_PREFIX=/usr \
-     -DCMAKE_INSTALL_SBINDIR=/usr/bin \
-     -DCMAKE_INSTALL_LIBEXECDIR=/usr/bin \
-+    -DINSTALL_SYSTEMD_UNITS=OFF \
-     -DBUILD_JAVA=TRUE
-   make
- 
-@@ -70,4 +71,6 @@
+@@ -37,7 +37,7 @@
+   'pam'
+   'perl'
+   'pixman'
+-  'systemd-libs'
++  'libudev'
+   'xkeyboard-config'
+   'xorg-xauth'
+   'xorg-xinit'
+@@ -142,4 +142,6 @@
    cd unix/xserver/hw/vnc
    make DESTDIR="$pkgdir" install
    install -Dm0755 "$srcdir"/Xsession "$pkgdir"/etc/X11/tigervnc/Xsession
@@ -21,27 +22,42 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,29 +0,0 @@
+@@ -1,45 +0,0 @@
+-bash
 -cmake
 -ffmpeg
--fltk
+-fltk1.3
+-gcc-libs
 -git
+-glibc
+-gmp
 -gnutls
+-hicolor-icon-theme
 -imagemagick
 -java-environment
--libdrm
--libgcrypt
+-java-runtime
 -libgl
 -libjpeg-turbo
+-libunwind
+-libx11
+-libxau
 -libxcvt
 -libxdamage
+-libxdmcp
+-libxext
+-libxfixes
 -libxfont2
+-libxi
+-libxrender
+-libxshmfence
 -libxtst
 -mesa
 -nasm
+-nettle
 -pam
 -perl
 -pixman
+-systemd-libs
 -xkeyboard-config
 -xorg-font-util
 -xorg-util-macros
@@ -51,14 +67,4 @@
 -xorg-xsetroot
 -xorgproto
 -xtrans
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -12,6 +12,7 @@
- -DCMAKE_INSTALL_PREFIX=/usr \
- -DCMAKE_INSTALL_SBINDIR=/usr/bin \
- -DCMAKE_INSTALL_LIBEXECDIR=/usr/bin \
-+-DINSTALL_SYSTEMD_UNITS=OFF \
- -DBUILD_JAVA=TRUE
- make
- cd unix/xserver
+-zlib

@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=octave
+ pkgver=10.2.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A high-level language, primarily intended for numerical computations'
+ arch=('x86_64')
+ url='https://www.gnu.org/software/octave/'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,25 +0,0 @@
+-arpack
+-curl
+-fftw
+-fltk
+-gcc-fortran
+-ghostscript
+-gl2ps
+-glpk
+-glu
+-gnuplot
+-graphicsmagick
+-hdf5
+-jdk-openjdk
+-libsndfile
+-pcre2
+-portaudio
+-qhull
+-qrupdate
+-qscintilla-qt6
+-qt6-5compat
+-qt6-tools
+-rapidjson
+-suitesparse
+-sundials
+-texinfo

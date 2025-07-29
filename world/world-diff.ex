@@ -16,6 +16,7 @@ at
 atril
 audacious-plugins
 avahi
+avisynthplus
 awesome
 aws-cli-v2
 backuppc
@@ -71,7 +72,6 @@ clamav
 cloud-init
 clucene
 cmake
-cmatrix
 cmus
 colord
 libcolord
@@ -144,6 +144,8 @@ firewalld
 firewalld-test
 flatpak
 flatpak-docs
+fltk
+fltk-docs
 fluidsynth
 font-manager
 fprintd
@@ -178,7 +180,6 @@ gnome-disk-utility
 gnome-initial-setup
 gnome-keyring
 gnome-panel
-gnome-photos
 gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
@@ -537,6 +538,9 @@ opensmtpd
 opensnitch
 openvpn
 ostree
+packagekit-qt
+packagekit-qt5
+packagekit-qt6
 packagekit
 libpackagekit-glib
 pacman-contrib
@@ -858,6 +862,7 @@ v2ray
 v4l-utils
 valkey
 vault
+vice
 vim
 gvim
 vim-runtime
