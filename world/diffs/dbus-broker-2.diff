@@ -90,15 +90,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +0,0 @@
--audit
--expat
--libaudit.so
--libcap-ng
--libcap-ng.so
--libexpat.so
+@@ -1,11 +1,10 @@
+ audit
+ expat
++gcc-libs
++glibc
+ libaudit.so
+ libcap-ng
+ libcap-ng.so
+ libexpat.so
 -libsystemd.so
--meson
--python-docutils
+ meson
+ python-docutils
 -systemd
 -systemd-libs

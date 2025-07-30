@@ -41,8 +41,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +0,0 @@
--cmake
--lxqt-build-tools
+@@ -1,4 +1,6 @@
+ cmake
++libsm
++libxkbcommon-x11
+ lxqt-build-tools
 -qt6-base
 -qt6-svg
++qt5-base
++qt5-svg

@@ -82,43 +82,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,39 +0,0 @@
--boost
--bzip2
--cmake
--coreutils
--cracklib
--curl
--git
--jemalloc
--judy
--krb5
--libbz2.so
--libcrypt.so
--libcrypto.so
--liblz4.so
--libncursesw.so
--libpcre2-8.so
--libssl.so
+@@ -15,7 +15,6 @@
+ libncursesw.so
+ libpcre2-8.so
+ libssl.so
 -libsystemd.so
--liburing
--liburing.so
--libxcrypt
--libxml2
--libxml2.so
--libz.so
--libzstd.so
--lz4
--mariadb-clients
--mariadb-libs
--ncurses
--openssl
--pcre2
--perl
--perl-dbd-mariadb
--perl-term-readkey
+ liburing
+ liburing.so
+ libxcrypt
+@@ -32,8 +31,6 @@
+ perl
+ perl-dbd-mariadb
+ perl-term-readkey
 -systemd
 -systemd-libs
--xz
--zlib
--zstd
+ xz
+ zlib
+ zstd

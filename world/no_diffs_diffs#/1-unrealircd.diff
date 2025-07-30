@@ -22,20 +22,3 @@
    install -Dm0644 "$srcdir"/unrealircd.tmpfiles.d "$pkgdir"/usr/lib/tmpfiles.d/unrealircd.conf
    install -Dm0644 "$srcdir"/unrealircd.sysusers.d "$pkgdir"/usr/lib/sysusers.d/unrealircd.conf
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--argon2
--c-ares
--chrpath
--curl
--jansson
--libnsl
--libsodium
--openssl
--pcre2
--tre

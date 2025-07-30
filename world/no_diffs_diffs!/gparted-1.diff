@@ -27,17 +27,3 @@
              'xorg-xhost: authorization from wayland')
  validpgpkeys=('BB09FFB87563FA2E1A22146817A6D3FF338C9570') # "Curtis Gedak <gedakc@gmail.com>"
  source=("https://downloads.sourceforge.net/project/${pkgname}/${pkgname}/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.gz"{,.sig})
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,7 +0,0 @@
--gtkmm3
--intltool
--itstool
--parted
--pkg-config
--polkit
--yelp-tools

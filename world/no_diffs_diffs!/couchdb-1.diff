@@ -23,22 +23,3 @@
    install -vDm644 ${pkgname}.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/${pkgname}.conf
    install -vDm644 ${pkgname}.sysusers "${pkgdir}"/usr/lib/sysusers.d/${pkgname}.conf
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,12 +0,0 @@
--erlang-asn1
--erlang-erts
--erlang-eunit
--erlang-os_mon
--erlang-reltool
--erlang-xmerl
--gcc-libs
--glibc
--icu
--ncurses
--rebar3
--zlib

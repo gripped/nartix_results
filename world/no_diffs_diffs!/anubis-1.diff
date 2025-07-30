@@ -50,18 +50,3 @@
  
    install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,8 +0,0 @@
--brotli
--esbuild
--git
--glibc
--go
--gzip
--npm
--zstd

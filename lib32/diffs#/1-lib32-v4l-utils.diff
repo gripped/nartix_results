@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ replaces=('lib32-libv4l')
+ conflicts=('lib32-libv4l')
+ license=('LGPL')
+-depends=($_pkgbasename 'lib32-gcc-libs' 'lib32-libjpeg-turbo' 'lib32-systemd' 'lib32-libglvnd' 'lib32-json-c')
++depends=($_pkgbasename 'lib32-gcc-libs' 'lib32-libjpeg-turbo' 'lib32-udev' 'lib32-libglvnd' 'lib32-json-c')
+ makedepends=('meson' 'clang' 'lib32-libbpf')
+ source=(https://linuxtv.org/downloads/v4l-utils/${_pkgbasename}-${pkgver}.tar.xz
+         https://linuxtv.org/downloads/v4l-utils/${_pkgbasename}-${pkgver}.tar.xz.asc)
+@@ -27,7 +27,7 @@
+   export CXX="g++ -m32"
+   export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+ 
+-  arch-meson  -Dgconv=disabled -Ddoxygen-doc=disabled -Dqv4l2=disabled -Dqvidcap=disabled \
++  artix-meson  -Dgconv=disabled -Ddoxygen-doc=disabled -Dqv4l2=disabled -Dqvidcap=disabled \
+     "${_pkgbasename}-${pkgver}" build --libdir=/usr/lib32
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,6 @@
+ lib32-libbpf
+ lib32-libglvnd
+ lib32-libjpeg-turbo
+-lib32-systemd
++lib32-udev
+ meson
+ v4l-utils

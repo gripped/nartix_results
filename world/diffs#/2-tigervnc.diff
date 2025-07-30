@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,7 +37,7 @@
+@@ -36,7 +36,7 @@
    'pam'
    'perl'
    'pixman'
@@ -9,10 +9,10 @@
    'xkeyboard-config'
    'xorg-xauth'
    'xorg-xinit'
-@@ -142,4 +142,6 @@
-   cd unix/xserver/hw/vnc
-   make DESTDIR="$pkgdir" install
+@@ -147,4 +147,6 @@
    install -Dm0755 "$srcdir"/Xsession "$pkgdir"/etc/X11/tigervnc/Xsession
+ 
+   strip-nondeterminism "$pkgdir"/usr/share/vnc/classes/VncViewer.jar
 +
 +  sed -i '/systemd/Id' "$pkgdir"/etc/pam.d/tigervnc
  }
@@ -22,49 +22,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,45 +0,0 @@
--bash
--cmake
--ffmpeg
--fltk1.3
--gcc-libs
--git
--glibc
--gmp
--gnutls
--hicolor-icon-theme
--imagemagick
--java-environment
--java-runtime
--libgl
--libjpeg-turbo
--libunwind
--libx11
--libxau
--libxcvt
--libxdamage
--libxdmcp
--libxext
--libxfixes
--libxfont2
--libxi
--libxrender
--libxshmfence
--libxtst
--mesa
--nasm
--nettle
--pam
--perl
--pixman
+@@ -12,6 +12,7 @@
+ java-environment
+ libgl
+ libjpeg-turbo
++libudev
+ libunwind
+ libx11
+ libxau
+@@ -32,7 +33,6 @@
+ perl
+ pixman
+ strip-nondeterminism
 -systemd-libs
--xkeyboard-config
--xorg-font-util
--xorg-util-macros
--xorg-xauth
--xorg-xinit
--xorg-xkbcomp
--xorg-xsetroot
--xorgproto
--xtrans
--zlib
+ xkeyboard-config
+ xorg-font-util
+ xorg-util-macros

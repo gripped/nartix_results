@@ -76,21 +76,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +0,0 @@
--colord
--elementary-icon-theme
--exo
--garcon
+@@ -2,13 +2,11 @@
+ elementary-icon-theme
+ exo
+ garcon
 -git
 -glib2-devel
--gnome-themes-extra
--libcanberra
--libnotify
--libxfce4ui
--libxklavier
--xf86-input-libinput
+ gnome-themes-extra
++intltool
+ libcanberra
+ libnotify
+ libxfce4ui
+ libxklavier
+ xf86-input-libinput
 -xfce4-dev-tools
--xfconf
+ xfconf
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

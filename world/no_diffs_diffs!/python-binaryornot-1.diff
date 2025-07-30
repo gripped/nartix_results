@@ -9,16 +9,3 @@
    $pkgname-0.4.4-hypothesis_tests.patch::$url/pull/52.patch
    $pkgname-0.4.4-set_version.patch::$url/commit/cff1a0a4478c17d4f970d133c06abbf6945b6a5e.patch
  )
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,6 +0,0 @@
--python
--python-build
--python-chardet
--python-installer
--python-setuptools
--python-wheel

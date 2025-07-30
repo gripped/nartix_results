@@ -154,6 +154,7 @@ autoconf2.13
 autogen
 autopep8
 autossh
+avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
@@ -661,6 +662,8 @@ flatpak-builder
 flatpak-kcm
 flickcurl
 flite
+fltk
+fltk-docs
 fltk1.3
 fmt
 fmt-docs
@@ -1610,7 +1613,6 @@ libappindicator-gtk2
 libappindicator-gtk3
 libass
 libasyncns
-libatasmart
 libatomic_ops
 libavc1394
 libavif
@@ -2086,6 +2088,7 @@ libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
 libxml++2.6-docs
+libxmlrpc
 libxmp
 libxmu
 libxp
@@ -2114,8 +2117,6 @@ liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
-lightdm
-liblightdm-qt5
 lightsoff
 lighttpd
 lilv
@@ -2208,7 +2209,6 @@ lxqt-about
 lxqt-admin
 lxqt-archiver
 lxqt-build-tools
-lxqt-config
 lxqt-globalkeys
 lxqt-menu-data
 lxqt-notificationd
@@ -5762,7 +5762,6 @@ xf86-input-synaptics
 xf86-input-void
 xf86-video-dummy
 xf86-video-fbdev
-xf86-video-openchrome
 xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo

@@ -180,23 +180,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,64 +0,0 @@
--alsa-lib
--attr
--autoconf
--bison
--desktop-file-utils
--ffmpeg
--flex
--fontconfig
--freetype2
--gcc-libs
--gettext
--giflib
--git
--gnutls
--gst-plugins-base-libs
--gtk3
+@@ -14,32 +14,6 @@
+ gnutls
+ gst-plugins-base-libs
+ gtk3
 -lib32-alsa-lib
 -lib32-attr
 -lib32-fontconfig
@@ -223,28 +210,9 @@
 -lib32-sdl2
 -lib32-v4l-utils
 -lib32-vulkan-icd-loader
--libcups
--libgphoto2
--libpcap
--libpulse
--libva
--libxcomposite
--libxcursor
--libxi
--libxinerama
--libxrandr
--libxxf86vm
--mesa
--mesa-libgl
--mingw-w64-gcc
--opencl-headers
--opencl-icd-loader
--perl
--samba
--sane
--sdl2
--v4l-utils
--vulkan-icd-loader
+ libcups
+ libgphoto2
+ libpcap
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -22,14 +22,3 @@
 +  install -Dm644 "$srcdir"/vnstatd.tmpfile "$pkgdir"/usr/lib/tmpfiles.d/vnstatd.conf
 +  install -Dm644 "$srcdir"/vnstatd.sysusers "$pkgdir"/usr/lib/sysusers.d/vnstatd.conf
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +0,0 @@
--bash
--gd
--git
--sqlite

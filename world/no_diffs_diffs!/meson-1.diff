@@ -19,21 +19,3 @@
  
    install -Dm644 ../cross-lib32 "$pkgdir/usr/share/meson/cross/lib32"
    install -Dm644 ../native-clang "$pkgdir/usr/share/meson/native/clang"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,11 +0,0 @@
--bash
--git
--ninja
--python
--python-aiohttp
--python-build
--python-installer
--python-setuptools
--python-strictyaml
--python-tqdm
--python-wheel

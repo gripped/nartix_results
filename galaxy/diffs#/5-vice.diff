@@ -89,25 +89,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,18 +0,0 @@
--alsa-lib
--dos2unix
--giflib
--glew
+@@ -2,9 +2,7 @@
+ dos2unix
+ giflib
+ glew
 -glib2-devel
--gtk3
+ gtk3
 -libevdev
--libjpeg-turbo
--libpcap
--libpng
--libpulse
--libxaw
--python
--sdl2
--sdl2_image
--xa
--xorg-bdftopcf
+ libjpeg-turbo
+ libpcap
+ libpng
+@@ -15,4 +13,4 @@
+ sdl2_image
+ xa
+ xorg-bdftopcf
 -xorg-mkfontscale
++xorg-mkfontdir
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

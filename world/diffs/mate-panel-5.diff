@@ -64,24 +64,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +0,0 @@
--autoconf-archive
--dbus-glib
+@@ -1,9 +1,6 @@
+ autoconf-archive
+ dbus-glib
 -dconf-editor
--gettext
+ gettext
 -git
 -glib2-devel
--gobject-introspection
--gtk-layer-shell
--itstool
--libcanberra
--libmateweather
--libsm
--libwnck3
--mate-common
--mate-desktop
--mate-menus
--yelp-tools
+ gobject-introspection
+ gtk-layer-shell
+ itstool
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

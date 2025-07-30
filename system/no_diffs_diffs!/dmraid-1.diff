@@ -22,11 +22,3 @@
 -
 -  install -Dm644 "$srcdir/dmraid.service" "$pkgdir/usr/lib/systemd/system/dmraid.service"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1 +0,0 @@
--device-mapper>

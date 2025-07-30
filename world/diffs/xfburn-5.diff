@@ -45,17 +45,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +0,0 @@
--desktop-file-utils
--exo
+@@ -1,12 +1,9 @@
+ desktop-file-utils
+ exo
 -git
 -glib2-devel
--gst-plugins-base-libs
--gtk3
--libburn
--libgudev
--libisofs
--libxfce4ui
+ gst-plugins-base-libs
+ gtk3
++intltool
+ libburn
+ libgudev
+ libisofs
+ libxfce4ui
 -meson
 -xfce4-dev-tools
 

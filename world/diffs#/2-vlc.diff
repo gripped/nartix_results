@@ -66,202 +66,27 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,198 +0,0 @@
--a52dec
--aalib
--abseil-cpp
--alsa-lib
--aom
--aribb24
--aribb25
--avahi
--bash
--cairo
--dav1d
--dbus
--faad2
--ffmpeg4.4
--flac
--fluidsynth
--fontconfig
--freetype2
--fribidi
--gcc-libs
--gdk-pixbuf2
--glib2
--glibc
--gnutls
--gst-plugins-base-libs
--gstreamer
--gtk3
--harfbuzz
--hicolor-icon-theme
--jack
--kwallet
--libarchive
--libass
--libavc1394
--libbluray
--libcaca
--libcddb
--libdc1394
--libdca
--libdvbpsi
--libdvdcss
--libdvdnav
--libdvdread
--libebml
--libglvnd
--libgme
--libgoom2
--libjack.so
--libjpeg-turbo
--libkate
--libmad
--libmatroska
--libmfx
--libmicrodns
--libmodplug
--libmpcdec
--libmpeg2
--libmtp
--libnfs
--libnotify
--libogg
--libpng
--libproxy
--libpulse
--libraw1394
--librsvg
--libsamplerate
--libsecret
--libshout
--libsoxr
--libssh2
--libtheora
--libtiger
--libupnp
--libva
--libvlc
--libvlc.so
--libvlc_vdpau.so
--libvlccore.so
--libvorbis
--libvpx
--libx11
--libxcb
--libxext
--libxinerama
--libxml2
--libxpm
--lirc
--live-media
--lua
--mesa
--mpg123
--ncurses
--opus
--pcsclite
--projectm
--protobuf
--qt5-base
--qt5-svg
--qt5-wayland
--qt5-x11extras
--sdl12-compat
--sdl_image
--smbclient
--speex
--speexdsp
--srt
+@@ -71,6 +71,7 @@
+ libssh2
+ libtheora
+ libtiger
++libudev
+ libupnp
+ libva
+ libvlc
+@@ -105,7 +106,6 @@
+ speex
+ speexdsp
+ srt
 -systemd-libs
--taglib
--ttf-dejavu
--twolame
--vlc-cli
--vlc-gui-qt
--vlc-plugin-a52dec
--vlc-plugin-aalib
--vlc-plugin-alsa
--vlc-plugin-aom
--vlc-plugin-archive
--vlc-plugin-aribb24
--vlc-plugin-aribb25
--vlc-plugin-ass
--vlc-plugin-avahi
--vlc-plugin-bluray
--vlc-plugin-caca
--vlc-plugin-cddb
--vlc-plugin-chromecast
--vlc-plugin-dav1d
--vlc-plugin-dbus
--vlc-plugin-dbus-screensaver
--vlc-plugin-dca
--vlc-plugin-dvb
--vlc-plugin-dvd
--vlc-plugin-faad2
--vlc-plugin-ffmpeg
--vlc-plugin-firewire
--vlc-plugin-flac
--vlc-plugin-fluidsynth
--vlc-plugin-freetype
--vlc-plugin-gme
--vlc-plugin-gnutls
--vlc-plugin-gstreamer
--vlc-plugin-inflate
--vlc-plugin-jack
+ taglib
+ ttf-dejavu
+ twolame
+@@ -141,7 +141,6 @@
+ vlc-plugin-gstreamer
+ vlc-plugin-inflate
+ vlc-plugin-jack
 -vlc-plugin-journal
--vlc-plugin-jpeg
--vlc-plugin-kate
--vlc-plugin-kwallet
--vlc-plugin-libsecret
--vlc-plugin-lirc
--vlc-plugin-live555
--vlc-plugin-lua
--vlc-plugin-mad
--vlc-plugin-matroska
--vlc-plugin-mdns
--vlc-plugin-modplug
--vlc-plugin-mpeg2
--vlc-plugin-mpg123
--vlc-plugin-mtp
--vlc-plugin-musepack
--vlc-plugin-nfs
--vlc-plugin-notify
--vlc-plugin-ogg
--vlc-plugin-opus
--vlc-plugin-png
--vlc-plugin-pulse
--vlc-plugin-quicksync
--vlc-plugin-samplerate
--vlc-plugin-sdl
--vlc-plugin-sftp
--vlc-plugin-shout
--vlc-plugin-smb
--vlc-plugin-soxr
--vlc-plugin-speex
--vlc-plugin-srt
--vlc-plugin-svg
--vlc-plugin-tag
--vlc-plugin-theora
--vlc-plugin-twolame
--vlc-plugin-udev
--vlc-plugin-upnp
--vlc-plugin-vorbis
--vlc-plugin-vpx
--vlc-plugin-x264
--vlc-plugin-x265
--vlc-plugin-xml
--vlc-plugin-zvbi
--vlc-plugins-base
--vlc-plugins-extra
--vlc-plugins-video-output
--vlc-plugins-visualization
--wayland
--wayland-protocols
--x264
--x265
--xcb-util-keysyms
--xosd
--zlib
--zvbi
+ vlc-plugin-jpeg
+ vlc-plugin-kate
+ vlc-plugin-kwallet

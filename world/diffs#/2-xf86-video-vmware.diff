@@ -15,12 +15,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--X-ABI-VIDEODRV_VERSION
--glibc
--libdrm
--libx11
--libxext
--mesa
+@@ -1,8 +1,8 @@
+ X-ABI-VIDEODRV_VERSION
+ glibc
+ libdrm
++libudev
+ libx11
+ libxext
+ mesa
 -systemd-libs
--xorg-server-devel
+ xorg-server-devel

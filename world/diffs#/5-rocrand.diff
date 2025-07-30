@@ -60,14 +60,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--gcc-fortran
+@@ -1,8 +1,5 @@
+ gcc-fortran
 -gcc-libs
--git
+ git
 -glibc
 -hip-runtime-amd
--python
--rocm-cmake
++hip
+ python
+ rocm-cmake
 -rocm-core
 
 --- Arch PKGBUILD

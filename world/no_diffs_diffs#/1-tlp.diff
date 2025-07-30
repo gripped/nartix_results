@@ -15,20 +15,3 @@
  
    make DESTDIR="${pkgdir}" -C TLP install-tlp install-man-tlp
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--git
--hdparm
--iw
--networkmanager
--pciutils
--perl
--rfkill
--tlp
--usbutils
--util-linux

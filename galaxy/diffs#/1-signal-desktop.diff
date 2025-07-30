@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,7 +34,7 @@
+   'nspr'
+   'nss'
+   'pango' 'libpango-1.0.so'
+-  'systemd-libs' 'libudev.so'
++  'libudev' 'libudev.so'
+ )
+ makedepends=(
+   'git'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -21,6 +21,7 @@
+ libnotify
+ libpango-1.0.so
+ libpulse
++libudev
+ libudev.so
+ libx11
+ libxcb
+@@ -40,4 +41,3 @@
+ pango
+ pnpm
+ python
+-systemd-libs

@@ -62,18 +62,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +0,0 @@
--ffmpegthumbnailer
--freetype2
--gdk-pixbuf2
+@@ -1,12 +1,10 @@
+ ffmpegthumbnailer
+ freetype2
+ gdk-pixbuf2
 -git
 -glib2-devel
--libgepub
--libgsf
--libopenraw
--libxfce4util
--poppler-glib
--python
++intltool
+ libgepub
+ libgsf
+ libopenraw
+ libxfce4util
+ poppler-glib
+ python
 -xfce4-dev-tools
 
 --- Arch PKGBUILD

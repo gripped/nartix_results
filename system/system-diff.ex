@@ -21,6 +21,7 @@ gcc-go
 gcc-objc
 lto-dump
 libgccjit
+gettext
 glib2
 glib2-devel
 glib2-docs
@@ -65,6 +66,7 @@ nfsidmap
 nspr
 openldap
 libldap
+openresolv
 p11-kit
 libp11-kit
 p11-kit-docs

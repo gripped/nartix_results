@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,7 @@
+   libsecret
+   pango
+   parted
+-  systemd-libs
++  libelogind
+   udisks2
+   xz
+ )
+@@ -34,7 +34,7 @@
+   git
+   glib2-devel
+   meson
+-  systemd
++  elogind
+ )
+ groups=(gnome)
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#tag=${pkgver/[a-z]/.&}"
+@@ -53,7 +53,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dlogind=libelogind
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,7 @@
+ cairo
+ dconf
+ docbook-xsl
++elogind
+ gcc-libs
+ gdk-pixbuf2
+ git
+@@ -13,6 +14,7 @@
+ hicolor-icon-theme
+ libcanberra
+ libdvdread
++libelogind
+ libhandy
+ libnotify
+ libpwquality
+@@ -20,7 +22,5 @@
+ meson
+ pango
+ parted
+-systemd
+-systemd-libs
+ udisks2
+ xz

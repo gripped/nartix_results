@@ -203,24 +203,30 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +0,0 @@
--
--dbus
--gettext
--git
+@@ -1,8 +1,13 @@
+ 
++bash
+ dbus
++dconf
+ gettext
++gi-docgen
+ git
 -gtk-doc
--libelf
--libffi
--libffi.so
--libmount.so
--libsysprof-capture
--meson
--pcre2
--python
--shared-mime-info
--util-linux
--util-linux-libs
--zlib
++glib2
++glibc
++gobject-introspection
+ libelf
+ libffi
+ libffi.so
+@@ -11,6 +16,8 @@
+ meson
+ pcre2
+ python
++python-docutils
++python-packaging
+ shared-mime-info
+ util-linux
+ util-linux-libs
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

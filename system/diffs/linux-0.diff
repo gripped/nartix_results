@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,11 @@
++
++_ver=6.15.8
++_rel=1
++_arch=arch${_rel}
++_artix=${_arch/arch/artix}
+ 
+ pkgbase=linux
+-pkgver=6.15.8.arch1
++pkgver=${_ver}.${_artix}
+ pkgrel=1
+ pkgdesc='Linux'
+ url='https://github.com/archlinux/linux'
+@@ -30,10 +35,10 @@
+   !debug
+   !strip
+ )
+-_srcname=linux-${pkgver%.*}
+-_srctag=v${pkgver%.*}-${pkgver##*.}
++_srcname=linux-${_ver}
++_srctag=v${_ver}-${_arch}
+ source=(
+-  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
++  https://cdn.kernel.org/pub/linux/kernel/v${_ver%%.*}.x/${_srcname}.tar.{xz,sign}
+   $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
+   config  # the main kernel config file
+ )
+@@ -46,14 +51,14 @@
+             'SKIP'
+             '00c37576f95f520be912edbfd3805b10c5c1fc7e18b2cab2ff5e77ede42137f6'
+             'SKIP'
+-            'e73c5746d8f569f8c24538ffa7bc3ebc40224b806b157a0559e9f7bae61ef4e4')
++            'ac4a328830307bf2aa6b79daa81e6a6f865c18f4c768e8a15294cebf34d2a048')
+ b2sums=('bf2d461a990f18e593a00cdcc324c24075f922c9623b7cca6be3e6145c05008c38266fee740e27b1f818c433969be66f0f5dee1c5e7679a4490682ec955fd24b'
+         'SKIP'
+         '51e8b931222ca73d34c14f1abb113ed7a34ec52b73814adcc28f08c813706c6c7f844c77b5c8fbf0f73a3bc62bcdcfc1852868d77bbea0ce9504a7954baa750b'
+         'SKIP'
+-        '092bc96cea7717472fb4b48a2a896c97b3a71055945f9e7cc110e27d35f95690add218e5709898aef9ea9c3e3675b6dc1ef7cbf69f192508ec0019740d679a54')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        'a615dfd62e80c23daf5202a923f25b10d7a19f5c0f2e072162a26b0fdcdf3c1ea2382f5e625b4779c5a104180ab622910f5cac18b761388cc70246d01d5e43a6')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -73,6 +78,7 @@
+     echo "Applying patch $src..."
+     patch -Np1 < "../$src"
+   done
++  sed -i -r "s/EXTRAVERSION = -${_arch}/EXTRAVERSION = -${_artix}/" "Makefile"
+ 
+   echo "Setting config..."
+   cp ../config .config
+@@ -109,8 +115,8 @@
+     WIREGUARD-MODULE
+   )
+   replaces=(
+-    virtualbox-guest-modules-arch
+-    wireguard-arch
++    virtualbox-guest-modules-artix
++    wireguard-artix
+   )
+ 
+   cd $_srcname
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,7 @@
+ echo "Applying patch $src..."
+ patch -Np1 < "../$src"
+ done
++sed -i -r "s/EXTRAVERSION = -${_arch}/EXTRAVERSION = -${_artix}/" "Makefile"
+ echo "Setting config..."
+ cp ../config .config
+ make olddefconfig

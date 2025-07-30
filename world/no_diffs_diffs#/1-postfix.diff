@@ -31,38 +31,3 @@
    install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
    install -vDm 644 ../$pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,28 +0,0 @@
--glibc
--icu
--libcdb.so
--libcrypto.so
--libicuuc.so
--libldap
--libmariadb.so
--libnsl
--libnsl.so
--libpcre2-8.so
--libpq.so
--libsasl
--libsasl2.so
--libsqlite3.so
--libssl.so
--libtlsrpt
--libtlsrpt.so
--lmdb
--mariadb-libs
--mongo-c-driver
--openssl
--pcre2
--postfix
--postfix-lmdb
--postgresql-libs
--sh
--sqlite
--tinycdb

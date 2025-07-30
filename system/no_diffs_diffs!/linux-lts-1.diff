@@ -18,27 +18,3 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,17 +0,0 @@
--bc
--coreutils
--cpio
--gettext
--graphviz
--imagemagick
--initramfs
--kmod
--libelf
--pahole
--perl
--python
--python-sphinx
--python-yaml
--tar
--texlive-latexextra
--xz

@@ -21,21 +21,3 @@
 +  install -vDm644 "$srcdir/origin.artixlinux" "$pkgdir/etc/dpkg/origins/artixlinux"
 +  ln -vsf artixlinux "$pkgdir/etc/dpkg/origins/default"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,11 +0,0 @@
--bzip2
--gcc-libs
--git
--glibc
--libmd
--perl
--perl-io-string
--perl-timedate
--xz
--zlib-ng
--zstd

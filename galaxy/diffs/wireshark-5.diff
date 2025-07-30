@@ -159,58 +159,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,51 +0,0 @@
--asciidoctor
--bcg729
--brotli
--c-ares
--cmake
--desktop-file-utils
--doxygen
--gcc-libs
--glib2
--glibc
--gnutls
--hicolor-icon-theme
--krb5
--libbrotlidec.so
--libcap
--libcap.so
--libcares.so
--libgcrypt
--libk5crypto.so
--libkrb5.so
--libmaxminddb
--libnghttp2
--libnl
--libpcap
--libpcap.so
--libssh
--libwireshark.so
--libwiretap.so
--libwsutil.so
--libxml2
--libxslt
+@@ -29,7 +29,7 @@
+ libwsutil.so
+ libxml2
+ libxslt
 -lua53
--lz4
--minizip
--ninja
--opencore-amr
--opus
--python
--qt6-5compat
--qt6-multimedia
--qt6-svg
--qt6-tools
--sbc
--shared-mime-info
--snappy
--spandsp
--speexdsp
--wireshark-cli
--xdg-utils
++lua52
+ lz4
+ minizip
+ ninja
+@@ -47,5 +47,5 @@
+ speexdsp
+ wireshark-cli
+ xdg-utils
 -zlib-ng
--zstd
++zlib
+ zstd
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

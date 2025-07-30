@@ -15,15 +15,3 @@
  
  package() {
      cd "$pkgname-$pkgver"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +0,0 @@
--clang19
--cmake
--lld19
--llvm19
--llvm19-libs

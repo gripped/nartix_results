@@ -61,14 +61,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +0,0 @@
--git
+@@ -1,7 +1,3 @@
+ git
 -python
 -python-build
 -python-installer
 -python-pdm-backend
 -python-poetry-core
 -python-wheel
++python-setuptools
++python-six
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

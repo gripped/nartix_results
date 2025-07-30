@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,8 @@
+     -G 'Unix Makefiles' \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
++    -DCMAKE_PREFIX_PATH=/usr \
+     -DBUILD_DOCS=ON \
+     -DBUILD_SHARED_LIBS=ON \
+     -Wno-dev
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,8 @@
+ -G 'Unix Makefiles' \
+ -DCMAKE_BUILD_TYPE=None \
+ -DCMAKE_INSTALL_PREFIX=/usr \
++-DCMAKE_INSTALL_LIBDIR=/usr/lib \
++-DCMAKE_PREFIX_PATH=/usr \
+ -DBUILD_DOCS=ON \
+ -DBUILD_SHARED_LIBS=ON \
+ -Wno-dev

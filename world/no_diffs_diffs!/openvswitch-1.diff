@@ -27,14 +27,3 @@
    install -dm0755 "$pkgdir/etc/openvswitch"
    rm -rf "$pkgdir"/run
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +0,0 @@
--dpdk
--libcap-ng
--openssl
--python

@@ -19,15 +19,3 @@
    install -Dm0644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"
  }
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +0,0 @@
--cmake
--glibc
--hwloc
--libssl.so
--libuv

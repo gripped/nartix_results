@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -54,7 +54,7 @@
+ 
+ build() {
+   cd pyqt6-$pkgver
+-  sip-build \
++  sip-build --scripts-dir=/usr/bin \
+     --confirm-license \
+     --no-make \
+     --qmake=/usr/bin/qmake6 \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ cd pyqt6-$pkgver
+-sip-build \
++sip-build --scripts-dir=/usr/bin \
+ --confirm-license \
+ --no-make \
+ --qmake=/usr/bin/qmake6 \

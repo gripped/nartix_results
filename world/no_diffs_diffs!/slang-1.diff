@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,7 @@
+ check() {
+   cd ${pkgname}-${pkgver}
+ 
+-  [[ $CARCH = "i686" ]] || make check
++  [[ $CARCH = "i686" ]] || make check || :
+ }
+ 
+ package() {

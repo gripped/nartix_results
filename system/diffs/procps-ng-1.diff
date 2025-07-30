@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ url='https://gitlab.com/procps-ng/procps'
+ license=(GPL LGPL)
+ arch=(x86_64)
+-depends=(glibc ncurses libncursesw.so systemd-libs)
+-makedepends=(gettext git po4a systemd)
++depends=(glibc ncurses libncursesw.so libelogind)
++makedepends=(gettext git po4a elogind)
+ conflicts=(procps sysvinit-tools)
+ provides=(procps sysvinit-tools libproc2.so)
+ replaces=(procps sysvinit-tools)
+@@ -36,7 +36,7 @@
+     --bindir=/usr/bin \
+     --sbindir=/usr/bin \
+     --enable-watch8bit \
+-    --with-systemd \
++    --with-elogind \
+     --disable-modern-top \
+     --disable-kill
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,8 @@
++elogind
+ gettext
+ git
+ glibc
++libelogind
+ libncursesw.so
+ ncurses
+ po4a
+-systemd
+-systemd-libs

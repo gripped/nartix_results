@@ -42,7 +42,6 @@ flex
 gawk
 gc
 gdbm
-gettext
 gmp
 gnulib-l10n
 gnupg
@@ -141,7 +140,6 @@ nilfs-utils
 npth
 nss
 ca-certificates-mozilla
-openresolv
 openssh
 openssl-1.1
 openssl

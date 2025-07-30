@@ -38,29 +38,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,22 +0,0 @@
--asciidoctor
--cairo
--cmake
--dbus
--docbook-xsl
--doxygen
--gdk-pixbuf2
--imagemagick
+@@ -6,7 +6,7 @@
+ doxygen
+ gdk-pixbuf2
+ imagemagick
 -ldoc
--libxdg-basedir
--libxkbcommon
--libxkbcommon-x11
--lua53
--lua53-lgi
--pango
--startup-notification
--ttf-font
--xcb-util-cursor
--xcb-util-keysyms
--xcb-util-wm
--xcb-util-xrm
--xmlto
++imlib2
+ libxdg-basedir
+ libxkbcommon
+ libxkbcommon-x11
+@@ -20,3 +20,4 @@
+ xcb-util-wm
+ xcb-util-xrm
+ xmlto
++xorg-xmessage
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -72,27 +72,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,20 +0,0 @@
+@@ -1,20 +1,13 @@
 -autoconf-archive
--cairo>
--caja
--djvulibre
--gettext
+ cairo>
+ caja
+ djvulibre
+ gettext
 -git
 -glib2-devel
--gobject-introspection
--itstool
--libgxps
--libspectre
--libsynctex
+ gobject-introspection
+ itstool
+ libgxps
+ libspectre
+ libsynctex
 -mate-common
 -mate-desktop
--mathjax2
--poppler-glib
+ mathjax2
+ poppler-glib
 -python-packaging
--texlive-bin
+ texlive-bin
 -webkit2gtk-4.1>
 -yelp-tools
++webkit2gtk>
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

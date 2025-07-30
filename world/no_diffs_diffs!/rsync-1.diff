@@ -21,21 +21,3 @@
 -  install -Dm0644 packaging/systemd/rsync@.service "$pkgdir/usr/lib/systemd/system/rsyncd@.service"
 +  install -Dm0644 packaging/lsb/rsync.xinetd "$pkgdir/etc/xinetd.d/rsync"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,11 +0,0 @@
--acl
--git
--libacl.so
--libxxhash.so
--lz4
--openssl
--popt
--python-commonmark
--xxhash
--zlib
--zstd

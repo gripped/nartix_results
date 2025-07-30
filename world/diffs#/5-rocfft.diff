@@ -59,12 +59,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +0,0 @@
+@@ -1,6 +1,3 @@
 -cmake
 -gcc-libs
 -glibc
 -hip-runtime-amd
--rocm-cmake
++hip
++python
+ rocm-cmake
 -rocm-core
 
 --- Arch PKGBUILD

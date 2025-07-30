@@ -57,20 +57,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,13 +0,0 @@
--extra-cmake-modules
--gcc-libs
--glibc
+@@ -1,13 +1,13 @@
+ extra-cmake-modules
+ gcc-libs
+ glibc
 -gpgme
--karchive
--kcoreaddons
--kcrash
--ki18n
--kiconthemes
--kwidgetsaddons
++gpgmepp
+ karchive
+ kcoreaddons
+ kcrash
+ ki18n
+ kiconthemes
+ kwidgetsaddons
 -qgpgme-qt6
--qt6-base
--solid
++qgpgme
+ qt6-base
+ solid
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

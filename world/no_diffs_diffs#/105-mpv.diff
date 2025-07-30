@@ -1,5 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=mpv
+ epoch=1
+ pkgver=0.40.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc='a free, open source, and cross-platform media player'
+ arch=('x86_64')
+ license=('GPL-2.0-or-later AND LGPL-2.1-or-later')
+@@ -12,7 +12,7 @@
+          'libcdio-paranoia' 'libdisplay-info' 'libdrm' 'libdvdnav' 'libdvdread' 'libegl' 'libgl'
+          'libglvnd' 'libjpeg-turbo' 'libplacebo' 'libpulse' 'libsixel' 'libva'
+          'libvdpau' 'libx11' 'libxext' 'libxkbcommon' 'libxpresent' 'libxrandr'
+-         'libxss' 'libxv' 'luajit' 'mesa' 'mujs' 'libpipewire' 'rubberband' 'sdl2'
++         'libxss' 'libxv' 'luajit' 'mesa' 'mujs' 'libpipewire' 'rubberband' 'sdl2-compat'
+          'openal' 'uchardet' 'vapoursynth' 'vulkan-icd-loader' 'wayland' 'zlib')
+ makedepends=('git' 'meson' 'python-docutils' 'ladspa' 'wayland-protocols'
+              'ffnvcodec-headers' 'vulkan-headers')
 @@ -50,7 +50,7 @@
      -Dsdl2-gamepad=enabled
    )
@@ -15,81 +33,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,74 +0,0 @@
--alsa-lib
--desktop-file-utils
--ffmpeg
--ffnvcodec-headers
--git
--glibc
--hicolor-icon-theme
--jack
--ladspa
--lcms2
--libarchive
--libarchive.so
--libasound.so
--libass
--libass.so
--libavcodec.so
--libavdevice.so
--libavfilter.so
--libavformat.so
--libavutil.so
--libbluray
--libbluray.so
--libcdio
--libcdio-paranoia
--libdisplay-info
--libdisplay-info.so
--libdrm
--libdvdnav
--libdvdread
--libegl
--libgl
--libglvnd
--libjack.so
--libjpeg-turbo
--libjpeg.so
--liblcms2.so
--libpipewire
--libplacebo
--libplacebo.so
--libpulse
--libpulse.so
--librubberband.so
--libsixel
--libswresample.so
--libswscale.so
--libva
--libva-drm.so
--libva-wayland.so
--libva-x11.so
--libva.so
--libvdpau
--libx11
--libxext
--libxkbcommon
--libxkbcommon.so
--libxpresent
--libxrandr
--libxss
--libxv
--luajit
--mesa
--meson
--mujs
--openal
--python-docutils
--rubberband
--sdl2-compat
--uchardet
--vapoursynth
--vulkan-headers
--vulkan-icd-loader
--wayland
--wayland-protocols
--zlib
+@@ -64,7 +64,7 @@
+ openal
+ python-docutils
+ rubberband
+-sdl2
++sdl2-compat
+ uchardet
+ vapoursynth
+ vulkan-headers
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -9,22 +9,3 @@
  makedepends=(python-{build,installer,wheel}
              python-setuptools)
  _archive="$pkgname-$pkgver"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,12 +0,0 @@
--binutils
--elfutils
--licenses
--pkgconf
--pyalpm
--python
--python-build
--python-installer
--python-license-expression
--python-pyelftools
--python-setuptools
--python-wheel

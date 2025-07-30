@@ -55,18 +55,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +0,0 @@
--exo
--garcon
+@@ -1,12 +1,7 @@
+ exo
+ garcon
 -git
 -glib2-devel
 -gtk-layer-shell
--hicolor-icon-theme
--libwnck3
--libxfce4ui
+ hicolor-icon-theme
++intltool
+ libwnck3
+ libxfce4ui
 -libxfce4windowing
 -libyaml
--thunar
+ thunar
 -xfce4-dev-tools
 
 --- Arch PKGBUILD

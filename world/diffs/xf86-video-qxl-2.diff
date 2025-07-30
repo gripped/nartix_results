@@ -20,14 +20,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +0,0 @@
--X-ABI-VIDEODRV_VERSION
--git
--glibc
--libcacard
--libxfont2
--spice
--spice-protocol
+@@ -2,9 +2,9 @@
+ git
+ glibc
+ libcacard
++libudev
+ libxfont2
+ spice
+ spice-protocol
 -systemd-libs
--xorg-server-devel
--xorgproto
+ xorg-server-devel
+ xorgproto

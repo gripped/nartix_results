@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -98,7 +98,7 @@
+          qt6-wayland
+          sh
+          solid
+-         systemd-libs
++         libelogind
+          wayland
+          xcb-util
+          xcb-util-cursor
+@@ -138,18 +138,19 @@
+             'discover: manage applications installation from the launcher'
+             'kdepim-addons: displaying PIM events in the calendar'
+             'kwayland-integration: Wayland integration for Qt5 applications'
+-            'kwin-x11: X session window manager'
+             'networkmanager-qt: IP based geolocation'
+             'plasma-workspace-wallpapers: additional wallpapers'
+             'plasma5-integration: use Plasma settings in Qt5 applications'
+             'xdg-desktop-portal-gtk: sync font settings to Flatpak apps')
+-  depends+=(plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
++  depends+=(plasma-x11-session plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
+   conflicts=(plasma-wayland-session)
+   replaces=(plasma-wayland-session)
+ 
+   DESTDIR="$pkgdir" cmake --install build
+ 
+   rm -r "$pkgdir"/usr/share/xsessions/plasmax11.desktop
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -62,6 +62,7 @@
+ kxmlgui
+ layer-shell-qt
+ libcanberra
++libelogind
+ libice
+ libkexiv2
+ libksysguard
+@@ -85,6 +86,7 @@
+ plasma-integration
+ plasma-wayland-protocols
+ plasma-workspace
++plasma-x11-session
+ plasma5support
+ prison
+ qcoro
+@@ -99,7 +101,6 @@
+ qt6-wayland
+ sh
+ solid
+-systemd-libs
+ wayland
+ xcb-util
+ xcb-util-cursor

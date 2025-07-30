@@ -32,3 +32,12 @@
 -	ln -s ../updatedb.timer "${pkgdir}/usr/lib/systemd/system/timers.target.wants/updatedb.timer"
 +	install -Dm744 ../updatedb.cron "${pkgdir}/etc/cron.daily/updatedb"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -0,0 +1,2 @@
++git
++glibc

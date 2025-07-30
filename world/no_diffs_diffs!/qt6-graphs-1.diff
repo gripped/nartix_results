@@ -41,12 +41,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--cmake
--gcc-libs
--glibc
--ninja
--qt6-base
--qt6-declarative
--qt6-quick3d
--qt6-shadertools
+@@ -1,5 +1,6 @@
+ cmake
+ gcc-libs
++git
+ glibc
+ ninja
+ qt6-base

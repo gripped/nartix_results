@@ -66,21 +66,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +0,0 @@
+@@ -1,14 +1,11 @@
 -git
 -glib2-devel
--gobject-introspection
--gtk3
--hicolor-icon-theme
--libepoxy
--libgtop
+ gobject-introspection
+ gtk3
+ hicolor-icon-theme
++intltool
+ libepoxy
+ libgtop
 -libgudev
--libsm
--libxfce4util
--startup-notification
--vala
+ libsm
+ libxfce4util
+ startup-notification
+ vala
 -xfce4-dev-tools
--xfconf
+ xfconf
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

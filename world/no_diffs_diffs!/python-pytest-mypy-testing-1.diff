@@ -5,16 +5,3 @@
    install -Dm644 LICENSES/* -t "$pkgdir"/usr/share/licenses/$pkgname
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,6 +0,0 @@
--mypy
--python
--python-build
--python-flit-core
--python-installer
--python-pytest

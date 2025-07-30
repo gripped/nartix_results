@@ -24,13 +24,3 @@
    install -Dm0644 "${srcdir}/incron.sysusers" "${pkgdir}/usr/lib/sysusers.d/incrond.conf"
    install -Dm0644 "${srcdir}/incron.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/incrond.conf"
    rm -r "$pkgdir"/{usr/sbin,var}
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,3 +0,0 @@
--bash
--gcc-libs
--git

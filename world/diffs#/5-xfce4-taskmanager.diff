@@ -51,14 +51,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +0,0 @@
+@@ -1,7 +1,5 @@
 -git
--libwnck3
--libxfce4ui
--libxmu
++intltool
+ libwnck3
+ libxfce4ui
+ libxmu
 -meson
 -xfce4-dev-tools
--xfconf
+ xfconf
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

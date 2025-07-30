@@ -61,13 +61,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +0,0 @@
+@@ -1,6 +1,9 @@
 -git
 -glib2-devel
--hicolor-icon-theme
++curl
+ hicolor-icon-theme
 -wayland-protocols
 -xfce4-dev-tools
--xfce4-panel
++intltool
++jq
++libsoup3
++python
++xclip
+ xfce4-panel
++zenity
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -30,19 +30,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,15 +0,0 @@
--bash
--cmake
--cython
--git
--glibc
--libdrm
--libnl
--ninja
--pandoc
--perl
--python
--python-docutils
+@@ -5,11 +5,10 @@
+ glibc
+ libdrm
+ libnl
++libudev
+ ninja
+ pandoc
+ perl
+ python
+ python-docutils
 -systemd
 -systemd-libs
--valgrind
+ valgrind

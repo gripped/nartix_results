@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ license=('LGPL-2.1-or-later AND Unicode-DFS-2016')
+ conflicts=('fcitx')
+ groups=('fcitx5-im')
+-depends=('cairo' 'enchant' 'iso-codes' 'libgl' 'libxkbcommon-x11' 'pango' 'systemd' 'wayland'
++depends=('cairo' 'enchant' 'iso-codes' 'libgl' 'libxkbcommon-x11' 'pango' 'elogind' 'libuv' 'wayland'
+          'xcb-imdkit' 'xcb-util-wm' 'libxkbfile' 'gdk-pixbuf2' 'json-c')
+ makedepends=('git' 'extra-cmake-modules' 'ninja' 'wayland-protocols')
+ source=("git+https://github.com/fcitx/fcitx5.git#tag=$pkgver?signed"
+@@ -28,6 +28,7 @@
+   cd $pkgname
+ 
+   cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib \
++        -DUSE_SYSTEMD=off \
+         -DCMAKE_INSTALL_SYSCONFDIR=/etc -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib .
+   ninja
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ cairo
++elogind
+ enchant
+ extra-cmake-modules
+ gdk-pixbuf2
+@@ -6,11 +7,11 @@
+ iso-codes
+ json-c
+ libgl
++libuv
+ libxkbcommon-x11
+ libxkbfile
+ ninja
+ pango
+-systemd
+ wayland
+ wayland-protocols
+ xcb-imdkit

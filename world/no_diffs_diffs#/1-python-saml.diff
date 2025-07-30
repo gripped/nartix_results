@@ -5,19 +5,3 @@
    install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,9 +0,0 @@
--python
--python-build
--python-installer
--python-isodate
--python-lxml
--python-poetry-core
--python-setuptools
--python-wheel
--python-xmlsec

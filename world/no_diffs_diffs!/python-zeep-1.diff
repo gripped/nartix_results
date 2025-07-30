@@ -5,22 +5,3 @@
    install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,12 +0,0 @@
--python-attrs
--python-build
--python-installer
--python-isodate
--python-lxml
--python-platformdirs
--python-pytz
--python-requests
--python-requests-file
--python-requests-toolbelt
--python-setuptools
--python-wheel

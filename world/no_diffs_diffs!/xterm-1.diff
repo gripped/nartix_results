@@ -14,27 +14,3 @@
    install -vDm644 -t "$pkgdir/usr/share/applications" {xterm,uxterm}.desktop
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,17 +0,0 @@
--fontconfig
--freetype2
--git
--glibc
--libice
--libutempter
--libx11
--libxaw
--libxext
--libxft
--libxkbfile
--libxmu
--libxpm
--libxt
--luit
--ncurses
--xbitmaps

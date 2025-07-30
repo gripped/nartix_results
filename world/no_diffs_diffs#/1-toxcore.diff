@@ -9,18 +9,3 @@
    install -vDm644 ../toxcore.sysusers "$pkgdir/usr/lib/sysusers.d/toxcore.conf"
    install -vDm644 ../toxcore.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/toxcore.conf"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,8 +0,0 @@
--cmake
--git
--glibc
--gtest
--libconfig
--libsodium
--libvpx
--opus

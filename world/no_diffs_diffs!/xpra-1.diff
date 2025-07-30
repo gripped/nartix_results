@@ -18,31 +18,3 @@
    mkdir -p "${pkgdir}"/usr/share/dbus-1
    mv "${pkgdir}"/{etc,usr/share}/dbus-1/system.d
    chmod +x "${pkgdir}"/usr/bin/*
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,21 +0,0 @@
--cython
--ffmpeg
--gtk3
--libvpx
--libxkbfile
--libxres
--libxtst
--pandoc
--pkgconf
--pygobject-devel
--python
--python-cairo
--python-gobject
--python-lz4
--python-netifaces
--python-opengl
--python-pillow
--python-rencode
--python-setuptools
--uglify-js
--xf86-video-dummy

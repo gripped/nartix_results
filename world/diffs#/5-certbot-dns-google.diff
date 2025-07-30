@@ -57,16 +57,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +0,0 @@
--certbot
--git
--python-acme
--python-build
--python-google-api-python-client
--python-httplib2
--python-installer
+@@ -5,5 +5,5 @@
+ python-google-api-python-client
+ python-httplib2
+ python-installer
 -python-setuptools
--python-wheel
++python-oauth2client
+ python-wheel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

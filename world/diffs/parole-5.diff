@@ -47,16 +47,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +0,0 @@
--dbus-glib
+@@ -1,10 +1,7 @@
+ dbus-glib
 -git
 -glib2-devel
--gst-plugins-base
--gst-plugins-good
--libnotify
--libxfce4ui
+ gst-plugins-base
+ gst-plugins-good
++intltool
+ libnotify
+ libxfce4ui
 -meson
--python
+ python
 -xfce4-dev-tools
 
 --- Arch PKGBUILD

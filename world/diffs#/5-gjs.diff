@@ -72,22 +72,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,15 +0,0 @@
--cairo
--dbus
--dconf
--git
--glib2
--gobject-introspection
--gobject-introspection-runtime
+@@ -1,11 +1,13 @@
+ cairo
+ dbus
+ dconf
++gcc-libs
+ git
+ glib2
++glibc
+ gobject-introspection
+ gobject-introspection-runtime
 -js115
--libffi
--libgirepository
--libreadline.so
--libsysprof-capture
--libx11
--meson
--readline
++js128
+ libffi
+ libgirepository
+ libreadline.so
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

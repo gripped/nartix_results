@@ -20,12 +20,3 @@
 -  install -D -m644 "$srcdir/mailgraph.service" "$pkgdir/usr/lib/systemd/system/mailgraph.service"
    install -d -m755 "$pkgdir/var/lib/mailgraph"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,2 +0,0 @@
--perl-file-tail
--rrdtool

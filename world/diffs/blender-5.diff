@@ -142,89 +142,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,82 +0,0 @@
--alembic
--bash
--boost
--boost-libs
--cmake
--cuda
--draco
--embree
--expat
--ffmpeg
--fftw
--freetype2
--gcc-libs
--git
--git-lfs
--glew
--glibc
--gmp
--hicolor-icon-theme
--hip-runtime-amd
--hiprt
--imath
--intel-compute-runtime
--intel-oneapi-compiler-dpcpp-cpp-runtime-libs
--intel-oneapi-compiler-shared-runtime
--intel-oneapi-compiler-shared-runtime-libs
--intel-oneapi-dpcpp-cpp
--jack
--jemalloc
--level-zero-headers
--level-zero-loader
--libdecor
--libepoxy
--libharu
--libjpeg-turbo
--libpng
--libsndfile
--libspnav
--libtiff
--libwebp
--libx11
--libxfixes
--libxi
--libxkbcommon
--libxml2
--libxrender
--libxxf86vm
--llvm
--llvm-libs
+@@ -47,7 +47,6 @@
+ libxxf86vm
+ llvm
+ llvm-libs
 -manifold
--materialx
--mesa
--mold
--ninja
--onetbb
--openal
--opencolorio
--openexr
--openimagedenoise
--openimageio
--openjpeg2
--openpgl
--openshadinglanguage
--opensubdiv
--openvdb
--openxr
--potrace
--pugixml
--pystring
--python
--python-numpy
--python-requests
--sdl2
--shared-mime-info
--subversion
--usd
+ materialx
+ mesa
+ mold
+@@ -74,7 +73,6 @@
+ shared-mime-info
+ subversion
+ usd
 -vulkan-headers
--wayland-protocols
--xdg-utils
--yaml-cpp
--zlib
--zstd
+ wayland-protocols
+ xdg-utils
+ yaml-cpp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

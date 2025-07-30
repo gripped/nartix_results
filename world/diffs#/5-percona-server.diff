@@ -47,27 +47,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,20 +0,0 @@
--cmake
--curl
--doxygen
--graphviz
--icu
--jemalloc
--libaio
--libevent
--libfido2
--libperconaserverclient
--libtirpc
--lz4
--numactl
--openssl
--pam
--readline
--rpcsvc-proto
+@@ -15,6 +15,5 @@
+ pam
+ readline
+ rpcsvc-proto
 -systemd-tools
--zlib
--zstd
+ zlib
+ zstd
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

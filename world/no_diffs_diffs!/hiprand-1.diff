@@ -27,12 +27,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--cmake
--gcc-fortran
--gcc-libs
--glibc
+@@ -2,7 +2,7 @@
+ gcc-fortran
+ gcc-libs
+ glibc
 -hip-runtime-amd
--rocm-cmake
--rocm-core
--rocrand
++hip
+ rocm-cmake
+ rocm-core
+ rocrand

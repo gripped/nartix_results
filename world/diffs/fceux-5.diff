@@ -58,18 +58,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +0,0 @@
--cmake
--gd
--git
--glu
--lua
--mesa-libgl
--minizip
--qt5-base
--scons
--sdl2
--setconf
+@@ -5,6 +5,7 @@
+ lua
+ mesa-libgl
+ minizip
++ninja
+ qt5-base
+ scons
+ sdl2
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -5,30 +5,3 @@
    install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,20 +0,0 @@
--git
--glibc
--libtss2-esys.so
--libtss2-fapi.so
--libtss2-mu.so
--libtss2-rc.so
--libtss2-tctildr.so
--python
--python-asn1crypto
--python-build
--python-cffi
--python-cryptography
--python-installer
--python-packaging
--python-pkgconfig
--python-setuptools
--python-setuptools-scm
--python-wheel
--python-yaml
--tpm2-tss

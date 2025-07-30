@@ -15,15 +15,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +0,0 @@
--doxygen
--extra-cmake-modules
--gcc-libs
--glibc
--pyside6
--python-build
--python-setuptools
--qt6-base
--qt6-declarative
--qt6-tools
+@@ -2,10 +2,10 @@
+ extra-cmake-modules
+ gcc-libs
+ glibc
++libudev
+ pyside6
+ python-build
+ python-setuptools
+ qt6-base
+ qt6-declarative
+ qt6-tools
 -systemd-libs

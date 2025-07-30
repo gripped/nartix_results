@@ -10,26 +10,3 @@
      -m 'not requires_docker'
    )
    TZ=UTC pytest tests "${pytest_args[@]}"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,16 +0,0 @@
--git
--python
--python-boto3
--python-botocore
--python-build
--python-cryptography
--python-dateutil
--python-installer
--python-jinja
--python-requests
--python-responses
--python-setuptools
--python-urllib3
--python-werkzeug
--python-wheel
--python-xmltodict

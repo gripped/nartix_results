@@ -43,15 +43,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--accountsservice
--garcon
+@@ -1,8 +1,7 @@
+ accountsservice
++cmake
+ garcon
 -git
--gtk-layer-shell
--gtk3
+ gtk-layer-shell
+ gtk3
 -meson
--ninja
--xfce4-panel
+ ninja
+ xfce4-panel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

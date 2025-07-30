@@ -64,11 +64,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +0,0 @@
--asciidoc
+@@ -1,4 +1,6 @@
+ asciidoc
 -glibc
--openssl
--xmlto
++gcc
++make
+ openssl
++pkgconf
+ xmlto
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

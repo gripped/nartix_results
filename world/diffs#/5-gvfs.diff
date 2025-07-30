@@ -435,39 +435,51 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,32 +0,0 @@
--avahi
--dbus
--dconf
--docbook-xsl
--fuse3
+@@ -3,16 +3,20 @@
+ dconf
+ docbook-xsl
+ fuse3
 -gcr
--git
--gsettings-desktop-schemas
++gcc-libs
++gcr-4
+ git
++glib2
++glib2-devel
++glibc
+ gsettings-desktop-schemas
 -gtk-doc
 -gtk3
--gvfs
--gvfs-goa
--libarchive
--libbluray
--libcdio-paranoia
--libgdata
--libgoa
--libgphoto2
--libgudev
--libimobiledevice
--libmtp
--libnfs
--libsecret
--libsoup3
--meson
--openssh
+ gvfs
+ gvfs-goa
+ libarchive
+ libbluray
++libcdio
+ libcdio-paranoia
++libgcrypt
+ libgdata
+ libgoa
+ libgphoto2
+@@ -20,13 +24,19 @@
+ libimobiledevice
+ libmtp
+ libnfs
++libplist
+ libsecret
+ libsoup3
++libusb
++libxml2
+ meson
++msgraph
+ openssh
 -psmisc
--python
--smbclient
--smbclient>
--udisks2
--usbmuxd
++polkit
++procps-ng
+ python
+ smbclient
+ smbclient>
+ udisks2
+ usbmuxd
++wsdd
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

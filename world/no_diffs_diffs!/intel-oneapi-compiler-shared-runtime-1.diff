@@ -5,18 +5,3 @@
      ln -s /usr/share/licenses/intel-oneapi "${pkgdir}"/usr/share/licenses/"${pkgname}"/oneapi
  }
 -
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,8 +0,0 @@
--gcc-libs
--glibc
--intel-oneapi-common
--intel-oneapi-compiler-shared-runtime-libs
--intel-oneapi-openmp
--level-zero-loader
--libxml2
--zlib

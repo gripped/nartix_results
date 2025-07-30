@@ -8,20 +8,3 @@
  source=(
    "git+https://github.com/libcheck/check#tag=$pkgver"
    0001-Avoid-static-library.patch
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--
--awk
--cmake
--doxygen
--gcc-libs
--git
--glibc
--ninja
--texi2html
--texlive-bin

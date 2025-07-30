@@ -25,13 +25,3 @@
      install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
  
    "$pkgdir/usr/bin/tailscale" completion bash | install -Dm644 /dev/stdin "$pkgdir/usr/share/bash-completion/completions/tailscale"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,3 +0,0 @@
--git
--glibc
--go

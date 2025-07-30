@@ -25,15 +25,3 @@
    cd fossil-src-$pkgver
    install -Dm755 fossil "$pkgdir"/usr/bin/fossil
    install -Dm644 tools/fossil-autocomplete.bash "$pkgdir"/usr/share/bash-completion/completions/fossil
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +0,0 @@
--glibc
--openssl
--sqlite
--tcl
--zlib

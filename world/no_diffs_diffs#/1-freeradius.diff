@@ -33,30 +33,3 @@
    install -D -m0644 "$srcdir"/$pkgname-sysusers.conf "$pkgdir"/usr/lib/sysusers.d/$pkgname.conf
    install -D -m0644 "$srcdir"/$pkgname-tmpfiles.conf "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,20 +0,0 @@
--curl
--freetds
--hiredis
--json-c
--krb5
--libcrypt.so
--libmemcached
--libpcap
--libxcrypt
--mariadb-libs
--net-snmp
--perl
--postgresql-libs
--python
--samba
--smbclient
--sqlite
--talloc
--unixodbc
--yubico-c-client

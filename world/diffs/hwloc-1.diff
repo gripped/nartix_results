@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,13 +11,13 @@
+   'libpciaccess'
+   'libtool'
+   'ncurses'
+-  'systemd-libs'
++  'udev'
+ )
+ makedepends=(
+   'cairo'
+   'libx11'
+   'libxml2'
+-  'systemd'
++  'udev'
+ )
+ optdepends=(
+   'cairo: PDF, Postscript, and PNG export support'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,5 +5,4 @@
+ libx11
+ libxml2
+ ncurses
+-systemd
+-systemd-libs
++udev

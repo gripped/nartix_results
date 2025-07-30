@@ -44,17 +44,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +0,0 @@
--dbus-python
+@@ -1,8 +1,8 @@
+ dbus-python
 -git
--gtk3
+ gtk3
 -meson
--python-cairo
--python-gobject
--python-pexpect
--which
--xdg-utils
--xfconf
++intltool
+ python-cairo
++python-distutils-extra
+ python-gobject
+ python-pexpect
+ which
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

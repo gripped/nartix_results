@@ -27,20 +27,3 @@
    install -vDm 644 ../$pkgname-sysusers.conf "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
    install -vDm 644 ../$pkgname-tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
    install -vDm 644 {CHANGELOG,DOCUMENTATION,README}.md -t "$pkgdir/usr/share/doc/$pkgname/"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--python
--python-bcrypt
--python-build
--python-defusedxml
--python-installer
--python-passlib
--python-pika
--python-setuptools
--python-vobject
--python-wheel

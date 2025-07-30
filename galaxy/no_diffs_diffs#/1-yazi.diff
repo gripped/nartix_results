@@ -36,14 +36,3 @@
  )
  makedepends=('cargo' 'imagemagick')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/sxyazi/$pkgname/archive/v$pkgver.tar.gz")
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +0,0 @@
--cargo
--gcc-libs
--imagemagick
--ttf-nerd-fonts-symbols

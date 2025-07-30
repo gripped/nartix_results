@@ -9,15 +9,3 @@
  pkgdesc="PulseAudio system tray (a replacement for padevchooser)"
  url="https://github.com/christophgysin/pasystray"
  arch=('x86_64')
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +0,0 @@
--avahi
--gtk3
--libnotify
--libpulse
--libx11

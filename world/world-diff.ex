@@ -16,7 +16,6 @@ at
 atril
 audacious-plugins
 avahi
-avisynthplus
 awesome
 aws-cli-v2
 backuppc
@@ -144,8 +143,6 @@ firewalld
 firewalld-test
 flatpak
 flatpak-docs
-fltk
-fltk-docs
 fluidsynth
 font-manager
 fprintd
@@ -315,6 +312,7 @@ ksystemlog
 kwin-x11
 kwin
 libao
+libatasmart
 libayatana-indicator
 libblastrampoline
 libblockdev
@@ -368,9 +366,10 @@ libvirt
 libvncserver
 libxfce4ui
 libxfce4util
-libxmlrpc
 libytnef
 light-locker
+lightdm
+liblightdm-qt5
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -416,6 +415,7 @@ lxmenu-data
 lxmusic
 lxpanel-gtk3
 lxpanel
+lxqt-config
 lxqt-qtplugin
 lxqt-session
 lxqt-themes
@@ -993,6 +993,7 @@ xf86-video-amdgpu
 xf86-video-ati
 xf86-video-intel
 xf86-video-nouveau
+xf86-video-openchrome
 xf86-video-qxl
 xf86-video-vmware
 xfburn

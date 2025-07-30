@@ -23,13 +23,3 @@
    install -Dm644 "$srcdir/privoxy.sysusers" "$pkgdir/usr/lib/sysusers.d/privoxy.conf"
    install -Dm644 "$srcdir/privoxy.logrotate.d" "$pkgdir/etc/logrotate.d/privoxy"
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,3 +0,0 @@
--git
--pcre2
--zlib

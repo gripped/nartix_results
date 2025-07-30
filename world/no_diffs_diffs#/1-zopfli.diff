@@ -5,13 +5,3 @@
    install -vDm 644 $pkgname-$pkgname-$pkgver/README* -t "$pkgdir/usr/share/doc/$pkgname/"
  }
 -
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,3 +0,0 @@
--cmake
--gcc-libs
--glibc

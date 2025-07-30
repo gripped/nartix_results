@@ -28,27 +28,3 @@
    install -vDm644 tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
  
    cd "$_repo/$pkgname"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,17 +0,0 @@
--ca-certificates
--git
--python
--python-acme
--python-build
--python-configargparse
--python-configobj
--python-cryptography
--python-distro
--python-installer
--python-parsedatetime
--python-pyrfc3339
--python-pytz
--python-setuptools
--python-sphinx
--python-sphinx_rtd_theme
--python-wheel

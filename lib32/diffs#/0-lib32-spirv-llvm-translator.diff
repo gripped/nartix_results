@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,11 +12,10 @@
+ source=(git+${url}.git#tag=v$pkgver)
+ sha256sums=('902641ccb6e00116b93fb446ed93bab75e8aa923072daf91b4f52060bbe3df6a')
+ 
+-pkgver() {
+-  git -C ${_srcname} describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./;s/-/+/'
+-}
+ 
+ build() {
++  export CMAKE_PREFIX_PATH=/usr
++  export CMAKE_INSTALL_LIBDIR=/usr/lib32
+   export PKG_CONFIG=${CARCH}-pc-linux-gnu-pkg-config
+ 
+   cmake -B build -S ${_srcname} \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,6 @@
+ build() {
++export CMAKE_PREFIX_PATH=/usr
++export CMAKE_INSTALL_LIBDIR=/usr/lib32
+ export PKG_CONFIG=${CARCH}-pc-linux-gnu-pkg-config
+ cmake -B build -S ${_srcname} \
+ -G 'Unix Makefiles' \

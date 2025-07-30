@@ -4,7 +4,7 @@
  
  pkgname=zathura-pdf-mupdf
 -pkgver=0.4.4
--pkgrel=19
+-pkgrel=20
 +pkgver=0.4.1
 +pkgrel=12.1
 +
@@ -60,19 +60,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +0,0 @@
+@@ -1,9 +1,8 @@
 -appstream-glib
--cairo
--git
--gumbo-parser
--jbig2dec
+ cairo
+ git
+ gumbo-parser
+ jbig2dec
 -libjpeg-turbo
--libmupdf
--meson
--ninja
--openjpeg2
--openssl
--zathura
++libjpeg
+ libmupdf
+ meson
+ ninja
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

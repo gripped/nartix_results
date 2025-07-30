@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ arch=('x86_64')
+ url='https://www.open-iscsi.com/'
+ license=('GPL')
+-makedepends=('meson' 'systemd')
+-depends=('systemd-libs' 'util-linux-libs' 'kmod' 'openssl' 'open-isns')
++makedepends=('meson' 'udev')
++depends=('libudev' 'util-linux-libs' 'kmod' 'openssl' 'open-isns')
+ install=$pkgname.install
+ backup=('etc/iscsi/iscsid.conf'
+ 	'etc/iscsi/initiatorname.iscsi')
+@@ -19,9 +19,10 @@
+   local _meson_options=(
+     -Discsi_sbindir=/usr/bin/
+     -Drulesdir=/usr/lib/udev/rules.d/
++    -Dno_systemd=true
+   )
+ 
+-  arch-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
++  artix-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ kmod
++libudev
+ meson
+ open-isns
+ openssl
+-systemd
+-systemd-libs
++udev
+ util-linux-libs

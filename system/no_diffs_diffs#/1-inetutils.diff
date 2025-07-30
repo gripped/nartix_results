@@ -43,23 +43,3 @@
 -
    install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,13 +0,0 @@
--git
--glibc
--help2man
--libcap
--libcrypt.so
--libncursesw.so
--libpam.so
--libreadline.so
--libxcrypt
--ncurses
--pam
--python
--readline

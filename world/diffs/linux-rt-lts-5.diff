@@ -322,24 +322,26 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +0,0 @@
--bc
--coreutils
+@@ -1,17 +1,12 @@
+ bc
+ coreutils
 -cpio
 -gettext
--graphviz
--imagemagick
--initramfs
--kmod
--libelf
--pahole
++git
+ graphviz
+ imagemagick
+ initramfs
+ kmod
+ libelf
+ pahole
 -perl
 -python
--python-sphinx
+ python-sphinx
 -python-yaml
 -tar
--texlive-latexextra
+ texlive-latexextra
 -xz
++xmlto
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

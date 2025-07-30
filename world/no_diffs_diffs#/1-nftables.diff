@@ -22,22 +22,3 @@
 -  install -Dm644 nftables.service "$pkgdir/usr/lib/systemd/system/nftables.service"
  }
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,12 +0,0 @@
--asciidoc
--gmp
--jansson
--libmnl
--libnftnl
--ncurses
--python
--python-build
--python-installer
--python-setuptools
--python-wheel
--readline

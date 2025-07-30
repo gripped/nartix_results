@@ -56,19 +56,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +0,0 @@
+@@ -1,11 +1,10 @@
 -git
 -glib2-devel
 -gtk-layer-shell
--hicolor-icon-theme
--libcanberra
--libnotify
--libxfce4ui
--libxfce4util
--sqlite
--xfce4-dev-tools
--xfce4-panel
--xfconf
+ hicolor-icon-theme
++intltool
+ libcanberra
+ libnotify
+ libxfce4ui
+ libxfce4util
++python
+ sqlite
+ xfce4-dev-tools
+ xfce4-panel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

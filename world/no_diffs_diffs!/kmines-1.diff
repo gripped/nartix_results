@@ -44,8 +44,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +0,0 @@
--extra-cmake-modules
+@@ -1,4 +1,16 @@
+ extra-cmake-modules
 -hicolor-icon-theme
 -kdoctools5
--libkdegames
++gcc-libs
++glibc
++kconfig
++kconfigwidgets
++kcoreaddons
++kcrash
++kdbusaddons
++kdoctools
++ki18n
++kiconthemes
++ktextwidgets
++kwidgetsaddons
++kxmlgui
+ libkdegames
++qt6-base

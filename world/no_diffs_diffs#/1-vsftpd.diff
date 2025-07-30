@@ -28,15 +28,3 @@
  
    install -Dm 644 ${pkgname}.conf "${srcdir}"/ftpusers -t "${pkgdir}/etc"
    install -Dm 644 RedHat/vsftpd.log "${pkgdir}/etc/logrotate.d/${pkgname}"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +0,0 @@
--glibc
--libcap
--libnsl
--openssl
--pam

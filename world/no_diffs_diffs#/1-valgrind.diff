@@ -17,19 +17,3 @@
  
  prepare() {
    cd valgrind-${pkgver}
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,9 +0,0 @@
--debuginfod
--docbook-sgml
--docbook-xml
--docbook-xsl
--gdb
--glibc
--lib32-gcc-libs
--lib32-glibc
--perl

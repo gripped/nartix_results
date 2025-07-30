@@ -31,69 +31,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,65 +0,0 @@
--
--at-spi2-core
--atk
--bubblewrap
--cairo
--clang
--cmake
--enchant
--expat
--fontconfig
--freetype2
--gcc-libs
--gdk-pixbuf2
--gi-docgen
--glib2
--glib2-devel
--glibc
--gobject-introspection
--gperf
--gst-plugins-bad
--gst-plugins-bad-libs
--gst-plugins-base-libs
--gstreamer
--gtk3
--harfbuzz
--harfbuzz-icu
--hyphen
--icu
--lcms2
--libavif
--libdrm
--libegl
--libepoxy
--libgcrypt
--libgl
--libgles
--libjpeg-turbo
--libjxl
--libmanette
--libpng
--libseccomp
--libsecret
--libsoup
+@@ -41,7 +41,6 @@
+ libseccomp
+ libsecret
+ libsoup
 -libsystemd
--libtasn1
--libwebp
--libx11
--libxml2
--libxslt
--lld
--mesa
--ninja
--openjpeg2
--pango
--python
--ruby
--ruby-stdlib
--sqlite
+ libtasn1
+ libwebp
+ libx11
+@@ -56,7 +55,6 @@
+ ruby
+ ruby-stdlib
+ sqlite
 -systemd
--unifdef
--wayland
--wayland-protocols
--woff2
--xdg-dbus-proxy
--zlib
+ unifdef
+ wayland
+ wayland-protocols

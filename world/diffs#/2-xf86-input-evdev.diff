@@ -15,11 +15,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +0,0 @@
--X-ABI-XINPUT_VERSION
--glibc
--libevdev
--mtdev
+@@ -1,7 +1,7 @@
+ X-ABI-XINPUT_VERSION
+ glibc
+ libevdev
++libudev
+ mtdev
 -systemd-libs
--xorg-server-devel
--xorgproto
+ xorg-server-devel
+ xorgproto

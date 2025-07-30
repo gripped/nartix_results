@@ -5,17 +5,3 @@
    install -vDm 644 README.rst -t "$pkgdir/usr/share/doc/$pkgname/"
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,7 +0,0 @@
--python
--python-atpublic
--python-build
--python-installer
--python-setuptools
--python-wheel
--python-zope-interface

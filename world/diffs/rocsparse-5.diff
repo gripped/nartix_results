@@ -57,15 +57,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
+@@ -1,8 +1,4 @@
 -cmake
--gcc-fortran
+ gcc-fortran
 -gcc-libs
 -glibc
 -hip-runtime-amd
--rocm-cmake
++hip
+ rocm-cmake
 -rocm-core
--rocprim
+ rocprim
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

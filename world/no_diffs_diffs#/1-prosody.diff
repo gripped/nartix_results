@@ -24,17 +24,3 @@
    install -Dm644 "${srcdir}"/sysuser.conf "${pkgdir}"/usr/lib/sysusers.d/prosody.conf
  
    for i in tools/*.lua; do
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,7 +0,0 @@
--libidn
--lua
--lua-expat
--lua-filesystem
--lua-sec
--lua-socket
--openssl

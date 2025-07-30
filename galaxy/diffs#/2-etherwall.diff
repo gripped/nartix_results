@@ -15,15 +15,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +0,0 @@
--geth
--hidapi
--libhidapi-libusb.so
--libusb
--protobuf
--qt5-declarative
--qt5-graphicaleffects
--qt5-quickcontrols
--qt5-quickcontrols2
--qt5-websockets
+@@ -1,6 +1,7 @@
+ geth
+ hidapi
+ libhidapi-libusb.so
++libudev
+ libusb
+ protobuf
+ qt5-declarative
+@@ -8,4 +9,3 @@
+ qt5-quickcontrols
+ qt5-quickcontrols2
+ qt5-websockets
 -systemd-libs

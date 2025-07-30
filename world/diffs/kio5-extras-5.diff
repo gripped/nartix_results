@@ -56,38 +56,23 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,31 +0,0 @@
--extra-cmake-modules
--gcc-libs
--glibc
--gperf
+@@ -2,8 +2,6 @@
+ gcc-libs
+ glibc
+ gperf
 -kactivities-stats5
 -kactivities5
--karchive5
--kconfig5
--kcoreaddons5
--kdbusaddons5
--kdnssd5
--kdoctools5
--kdsoap-qt5
--ki18n5
--kio5
--libappimage
--libimobiledevice
--libkexiv2-qt5
--libmtp
--libplist
--libssh
--libtirpc
--libxcursor
--openexr
+ karchive5
+ kconfig5
+ kcoreaddons5
+@@ -22,7 +20,6 @@
+ libtirpc
+ libxcursor
+ openexr
 -phonon-qt5
--qt5-base
--qt5-svg
--smbclient
--solid5
--syntax-highlighting5
--taglib
+ qt5-base
+ qt5-svg
+ smbclient
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

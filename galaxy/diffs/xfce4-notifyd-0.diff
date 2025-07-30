@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ 
+ prepare() {
+   cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
++  NOCONFIGURE=1 ./autogen.sh --disable-systemd
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd $pkgname
+-NOCONFIGURE=1 ./autogen.sh
++NOCONFIGURE=1 ./autogen.sh --disable-systemd
+ }
+ build() {
+ cd $pkgname
