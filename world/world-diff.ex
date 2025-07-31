@@ -139,6 +139,7 @@ fcitx5
 fcron
 fig2dev
 firefox
+firejail
 firewalld
 firewalld-test
 flatpak
@@ -397,6 +398,7 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
+lsof
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf

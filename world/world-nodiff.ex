@@ -67,6 +67,7 @@ android-tools
 android-udev
 angelfish
 ansible-core
+ansible-creator
 ansible-language-server
 ansible-lint
 ansible-navigator
@@ -648,7 +649,6 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
-firejail
 fish
 five-or-more
 flac
@@ -2161,7 +2161,6 @@ lrzip
 lsb-release
 lshw
 lskat
-lsof
 lsscsi
 ltrace
 lttng-ust2.12

@@ -6,7 +6,6 @@ alsa-utils-dinit
 alsa-utils-openrc
 alsa-utils-runit
 alsa-utils-s6
-ansible-creator
 apache-dinit
 apache-openrc
 apache-runit

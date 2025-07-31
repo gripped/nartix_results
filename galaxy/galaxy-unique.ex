@@ -14,6 +14,7 @@ artix-docs
 artix-gtk-presets
 artix-i3-presets
 artix-metro
+artix-mlg
 artix-qt-presets
 artixnews
 autofs-dinit

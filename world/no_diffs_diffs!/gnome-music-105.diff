@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -51,7 +51,7 @@
+@@ -55,7 +55,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd $pkgname
+@@ -3,6 +3,6 @@
+ git apply -3 ../gnome-music-fix-non-responsive-window.patch
  }
  build() {
 -arch-meson $pkgname build
