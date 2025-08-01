@@ -58,7 +58,6 @@ hwdata
 iana-etc
 icu
 inetutils
-iproute2
 iptables
 iptables-nft
 iw
@@ -111,7 +110,6 @@ libsecret-docs
 libssh2
 libtasn1
 libtirpc
-libtool
 libunistring
 libverto
 libxcrypt

@@ -684,7 +684,6 @@ fossil
 four-in-a-row
 fractal
 frameworkintegration
-frameworkintegration5
 francis
 freealut
 freecell-solver
@@ -2450,10 +2449,8 @@ node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
-nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3010,7 +3007,6 @@ pmbootstrap
 pngplusplus
 pnpm
 po4a
-poco
 podofo-0.9
 podofo
 podofo-tools
@@ -4820,8 +4816,6 @@ ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
-ruby-cucumber-gherkin
-ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
@@ -5537,7 +5531,6 @@ tp_smapi
 tpm2-abrmd
 tpm2-tools
 transcode
-transmageddon
 trash-cli
 tre
 tree-sitter-bash

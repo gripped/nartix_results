@@ -147,6 +147,7 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
+frameworkintegration5
 freerdp
 freerdp2
 frugally-deep
@@ -518,6 +519,8 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs-lts-jod
+nodejs
 nsd
 nushell
 nvidia-open
@@ -618,6 +621,7 @@ plasma-x11-session
 plocate
 pluma
 plymouth
+poco
 podman
 podman-docker
 polkit
@@ -767,6 +771,8 @@ rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
+ruby-cucumber-gherkin
+ruby-cucumber-html-formatter
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -828,6 +834,7 @@ torsocks
 tracker3-miners
 tracker3
 tracker3-docs
+transmageddon
 transmission
 transmission-cli
 transmission-gtk

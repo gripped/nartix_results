@@ -4,8 +4,8 @@
  
  
  pkgname=binutils
--pkgver=2.45
--_commit=2bc7af1ff7732451b6a7b09462a815c3284f9613
+-pkgver=2.45+r8+g09be88bfb653
+-_commit=09be88bfb653bc9739bc281733407fcae73fb12f
 +pkgver=2.44+r94+gfe459e33c676
 +_commit=fe459e33c676883b5f28cc96c00e242973d906a9
  pkgrel=1
@@ -60,7 +60,7 @@
 -  git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
 -  gold-warn-unsupported.patch
 -)
--sha256sums=('005763c1ecf23168be877788ed148467d31b1852ff15b27c0f69343c2a64652a'
+-sha256sums=('68533b94c94db960cd138f0651002f91305a835619a691ad75fe259838103f25'
 +backup=('etc/gprofng.rc')
 +options=(staticlibs !distcc !ccache debug)
 +source=(git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}

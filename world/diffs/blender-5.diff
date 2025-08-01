@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  
  pkgname=blender
--pkgver=4.5.0
+-pkgver=4.5.1
+-pkgrel=1
 +pkgver=4.3.2
- pkgrel=2
++pkgrel=2
  epoch=17
  pkgdesc="A fully integrated 3D graphics creation suite"
+ arch=('x86_64')
 @@ -55,7 +55,6 @@
    'libxrender'
    'libxxf86vm'
@@ -25,14 +27,12 @@
  )
  optdepends=('cuda: Cycles renderer CUDA support'
              'intel-compute-runtime: Cycles renderer Intel OneAPI support'
-@@ -111,21 +109,49 @@
+@@ -111,17 +109,49 @@
              'libdecor: wayland support')
  options=('!lto')
  source=("git+https://projects.blender.org/blender/blender.git#tag=v$pkgver"
--        https://projects.blender.org/blender/blender/commit/c19218e4232a632cb2c540f1dd217567bccdb7ca.patch
 -        https://developer.download.nvidia.com/redist/optix/v8.0/OptiX-8.0-Include.zip)
--sha512sums=('0d6c611a49ab42c7fee9aefc9b41d9db80899eff411ae1396de68848f24f0252d0e904d4b7d9690b071d2dd46b52e86a8621f692119aa0f3b53bbbab175aaa78'
--            '10cc6def772f981fe1bf29f7654e7fb33b613193df5dd68bdfb41096fbd5ccf495ec4e268f89364c2665073ec9bfba6b040ac0229e1145ed46c8f052ad078a6e'
+-sha512sums=('482a618d483d6e5e43dbf000629ce81b526a7301323bb4e677d87b91ade62d046497727b57c4dd80807787f5f8f71deafc7c36d9330b1658a0c0b1b8998c5b4f'
 -            '5502d9df847de12badc702c0444bd4f1f7620460b2235026df2c3133da1e04c148af0f1fc7f345e9a0c009c32f905f66c8d427743445e8864d3a797cdce6a483')
 +        "git+https://projects.blender.org/blender/blender-assets#tag=v$pkgver"
 +        https://developer.download.nvidia.com/redist/optix/v8.0/OptiX-8.0-Include.zip
@@ -61,8 +61,6 @@
 -  git remote add network-origin https://projects.blender.org/blender/blender
 -  git lfs fetch network-origin
 -  git lfs checkout
--
--  patch -Np1 -i "$srcdir"/c19218e4232a632cb2c540f1dd217567bccdb7ca.patch
 +  git submodule init
 +  git config submodule.release/datafiles/assets.url "$srcdir/blender-assets"
 +  git -c protocol.file.allow=always submodule update
@@ -86,7 +84,7 @@
  }
  
  _get_pyver() {
-@@ -134,23 +160,23 @@
+@@ -130,23 +160,23 @@
  
  build() {
    export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
@@ -114,7 +112,7 @@
      -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
      -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
      -D USD_ROOT_DIR=/usr
-@@ -162,6 +188,9 @@
+@@ -158,6 +188,9 @@
      -W no-dev
    )
  
@@ -124,7 +122,7 @@
    cmake "${cmake_options[@]}"
    cmake --build build
  }
-@@ -176,7 +205,10 @@
+@@ -172,7 +205,10 @@
  
    install -Dm644 release/freedesktop/org.blender.Blender.metainfo.xml "${pkgdir}/usr/share/metainfo/org.blender.Blender.metainfo.xml"
  
@@ -161,14 +159,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,38 @@
+@@ -1,27 +1,38 @@
  prepare() {
  cd "$pkgname"
 -git lfs install --local
 -git remote add network-origin https://projects.blender.org/blender/blender
 -git lfs fetch network-origin
 -git lfs checkout
--patch -Np1 -i "$srcdir"/c19218e4232a632cb2c540f1dd217567bccdb7ca.patch
 +git submodule init
 +git config submodule.release/datafiles/assets.url "$srcdir/blender-assets"
 +git -c protocol.file.allow=always submodule update
@@ -208,7 +205,7 @@
  -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
  -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
  -D USD_ROOT_DIR=/usr
-@@ -33,6 +43,8 @@
+@@ -32,6 +43,8 @@
  -S "$pkgname"
  -W no-dev
  )

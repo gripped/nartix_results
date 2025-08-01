@@ -15,7 +15,6 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
-blender
 blueman
 bogofilter
 bogofilter-db
