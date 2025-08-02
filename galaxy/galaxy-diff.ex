@@ -1,5 +1,4 @@
 alsa-utils
-blender
 cinnamon-desktop
 copyq
 doctest
@@ -22,6 +21,7 @@ libusbsio
 python-libusbsio
 libxfce4ui
 light
+lightdm-slick-greeter
 ly
 mate-control-center
 mate-screensaver

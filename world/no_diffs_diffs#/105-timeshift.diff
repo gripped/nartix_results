@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=timeshift
--pkgver=24.06.6
+-pkgver=25.07.4
 +pkgver=24.06.3
  pkgrel=1
  pkgdesc="A system restore utility for Linux"
@@ -12,7 +12,7 @@
              'xorg-xhost: For authorization on Wayland')
  install="${pkgname}.install"
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('99123f5ee1792ae7d60e4d023e91ef04b9322fc271b5b90d18f6b1ecaa5188c2')
+-sha256sums=('5944b8d03770e78ba756d5f8b055df718d9669da26e422d4c7dbb29fe5ebe0cf')
 +sha256sums=('d5151abba395ceb54d7b3383c52f30ed99ecb880d09c5a8c9f666dceef2015ca')
  
  build() {

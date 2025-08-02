@@ -2087,7 +2087,6 @@ libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
 libxml++2.6-docs
-libxmlrpc
 libxmp
 libxmu
 libxp
@@ -2988,7 +2987,6 @@ plasma5-integration
 plasma-meta
 plasma-nm
 plasma-pa
-plasma-pass
 plasma-sdk
 plasma-systemmonitor
 plasma-thunderbolt
@@ -3007,6 +3005,7 @@ pmbootstrap
 pngplusplus
 pnpm
 po4a
+poco
 podofo-0.9
 podofo
 podofo-tools
@@ -3276,7 +3275,6 @@ python-caja
 python-calmjs.parse
 python-calmjs.types
 python-calmjs
-python-calver
 python-canonicaljson
 python-case
 python-cattrs
@@ -4816,6 +4814,8 @@ ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
+ruby-cucumber-gherkin
+ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
@@ -5012,6 +5012,7 @@ ruby-resolv-replace
 ruby-rexml
 ruby-rinda
 ruby-ronn-ng
+ruby-rouge
 ruby-rr
 ruby-rspec-core
 ruby-rspec-expectations
@@ -5055,6 +5056,7 @@ ruby-simplecov-html
 ruby-simplecov
 ruby-simplecov_json_formatter
 ruby-sinatra
+ruby-slim
 ruby-snowglobe
 ruby-sorbet-runtime
 ruby-sorted_set
@@ -5531,6 +5533,7 @@ tp_smapi
 tpm2-abrmd
 tpm2-tools
 transcode
+transmageddon
 trash-cli
 tre
 tree-sitter-bash

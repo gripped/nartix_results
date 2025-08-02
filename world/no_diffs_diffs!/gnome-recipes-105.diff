@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -82,7 +82,7 @@
+@@ -86,7 +86,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,6 +16,6 @@
- patch -Np1 -i ../gnome-recipes-no-appmenu.patch
+@@ -17,6 +17,6 @@
+ git apply -3 ../gnome-recipes-missing-icons.patch
  }
  build() {
 -arch-meson recipes build

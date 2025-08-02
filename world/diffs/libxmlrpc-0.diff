@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,7 +24,6 @@
+   cd xmlrpc-c-$pkgver
+ 
+   patch -p1 -i ../xmlrpc-c-1.59.03-use-system-expat.patch
+-  patch -p1 -i ../xmlrpc-c-1.51.06-pkg-config-libxml2.patch
+ }
+ 
+ build() {
+@@ -35,7 +34,7 @@
+     --disable-libwww-client \
+     --disable-wininet-client \
+     --enable-cplusplus \
+-    --enable-libxml2-backend \
++    --disable-libxml2-backend \
+     --mandir=/usr/share/man \
+     --prefix=/usr
+ 
+@@ -57,3 +56,4 @@
+ 
+   install -Dm644 doc/COPYING "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
++
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd xmlrpc-c-$pkgver
+ patch -p1 -i ../xmlrpc-c-1.59.03-use-system-expat.patch
+-patch -p1 -i ../xmlrpc-c-1.51.06-pkg-config-libxml2.patch
+ }
+ build() {
+ cd xmlrpc-c-$pkgver
+@@ -10,7 +9,7 @@
+ --disable-libwww-client \
+ --disable-wininet-client \
+ --enable-cplusplus \
+---enable-libxml2-backend \
++--disable-libxml2-backend \
+ --mandir=/usr/share/man \
+ --prefix=/usr
+ mkdir -p include/curl
