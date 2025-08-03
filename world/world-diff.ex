@@ -520,8 +520,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs-lts-jod
-nodejs
 nsd
 nushell
 nvidia-open
@@ -617,7 +615,6 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
-plasma-pass
 plasma-workspace
 plasma-x11-session
 plocate
@@ -647,11 +644,11 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-calver
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-matplotlib
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

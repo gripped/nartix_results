@@ -2448,8 +2448,10 @@ node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
+nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2987,6 +2989,7 @@ plasma5-integration
 plasma-meta
 plasma-nm
 plasma-pa
+plasma-pass
 plasma-sdk
 plasma-systemmonitor
 plasma-thunderbolt
@@ -3275,6 +3278,7 @@ python-caja
 python-calmjs.parse
 python-calmjs.types
 python-calmjs
+python-calver
 python-canonicaljson
 python-case
 python-cattrs
@@ -3756,7 +3760,6 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
-python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
