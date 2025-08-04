@@ -18,7 +18,6 @@ audacious-plugins
 avahi
 awesome
 aws-cli-v2
-backuppc
 bash-bats
 blender
 bluedevil

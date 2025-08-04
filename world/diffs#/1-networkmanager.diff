@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   nm-cloud-setup
+   networkmanager-docs
+ )
+-pkgver=1.54.0
++pkgver=1.52.1
+ pkgrel=1
+ pkgdesc="Network connection manager and user applications"
+ url="https://networkmanager.dev/"
 @@ -18,6 +18,7 @@
    curl
    dhcpcd
@@ -8,7 +17,15 @@
    gcc-libs
    git
    glib2
-@@ -46,9 +47,6 @@
+@@ -32,7 +33,6 @@
+   libmm-glib
+   libndp
+   libnewt
+-  libnvme
+   libpsl
+   libteam
+   meson
+@@ -47,9 +47,6 @@
    ppp
    python-gobject
    readline
@@ -18,7 +35,24 @@
    vala
    wpa_supplicant
  )
-@@ -84,9 +82,12 @@
+@@ -60,7 +57,7 @@
+ source=(
+   "git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git?signed#tag=${pkgver/[a-z]/-&}"
+ )
+-b2sums=('b0bb870e19216ac15b9902007502c16a7bf3d72620f76479fc8ff43acfeb5bceb1b7822293603975a99d42ab05b3b522b87a184af154a0b382423639804d1b76')
++b2sums=('0af9767688f43ccdca335c1655f4a0b7b2f0568f965b7cfc268aad63a4dfa0f0d9b86746a72e5d27923f0fb8fe8cc74d429fe977c10edea3b24dd47497d021b1')
+ validpgpkeys=(
+   3D10AD045AB4AAFF8E8F36AF9B980AC2FB874FEB # Ana Cabral <acabral@redhat.com>
+   F07F7C1EABD382F81CBFBA3B998D4828CD7E1656 # Beniamino Galvani <bgalvani@redhat.com>
+@@ -71,7 +68,6 @@
+   E472337703D0C46002928B5790617850A125DE59 # Stanislas FAYE <sfaye@redhat.com>
+   49EA7C670E0850E7419514F629C2366E4DFC5728 # Thomas Haller <thaller@redhat.com>
+   07F9AEC86144386D9576210B66A44781B4EBC2D0 # Íñigo Huguet <ihuguet@redhat.com>
+-  8D1F4C471D38D59A56301CEBE1974C8D8DD6ED2A # Filip Pokryvka <fpokryvk@redhat.com>
+ )
+ 
+ prepare() {
+@@ -86,9 +82,12 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -32,7 +66,7 @@
  
      -D iwd=true
      -D teamdctl=true
-@@ -104,7 +105,7 @@
+@@ -106,7 +105,7 @@
      -D qt=false
    )
  
@@ -41,7 +75,7 @@
    meson compile -C build
  }
  
-@@ -126,6 +127,7 @@
+@@ -128,6 +127,7 @@
    depends=(
      audit
      curl
@@ -49,7 +83,14 @@
      gcc-libs
      glib2
      glibc
-@@ -141,7 +143,6 @@
+@@ -137,14 +137,12 @@
+     libndp
+     libnewt
+     libnm
+-    libnvme
+     libpsl
+     libteam
+     mobile-broadband-provider-info
      nspr
      nss
      readline
@@ -57,7 +98,7 @@
      wpa_supplicant
    )
    optdepends=(
-@@ -169,6 +170,9 @@
+@@ -172,6 +170,9 @@
    install -d etc/NetworkManager/{conf,dnsmasq}.d
    install -dm700 etc/NetworkManager/system-connections
    install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
@@ -67,7 +108,7 @@
  END
  
    install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -190,7 +194,6 @@
+@@ -193,7 +194,6 @@
    _pick cloud usr/lib/**/*nm-cloud-setup*
    _pick cloud usr/share/man/*/nm-cloud-setup*
  
@@ -75,7 +116,7 @@
  
    install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
-@@ -203,7 +206,7 @@
+@@ -206,7 +206,7 @@
      glibc
      nspr
      nss
@@ -98,7 +139,7 @@
  gcc-libs
  git
  glib2
-@@ -15,6 +16,7 @@
+@@ -15,11 +16,11 @@
  iptables
  iwd
  jansson
@@ -106,7 +147,12 @@
  libmm-glib
  libndp
  libnewt
-@@ -35,8 +37,6 @@
+ libnm
+-libnvme
+ libpsl
+ libteam
+ meson
+@@ -36,8 +37,6 @@
  ppp
  python-gobject
  readline

@@ -185,6 +185,7 @@ aws-sdk-cpp-s3
 ayatana-ido
 b3sum
 babl
+backuppc
 baloo-widgets
 baloo
 baloo5
@@ -5069,6 +5070,7 @@ ruby-stringio
 ruby-subprocess
 ruby-sus-fixtures-async-http
 ruby-sus-fixtures-async
+ruby-sus-fixtures-benchmark
 ruby-sus-fixtures-console
 ruby-sus-fixtures-openssl
 ruby-sus-fixtures-time
