@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gperftools
+ pkgver=2.16
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Fast, multi-threaded malloc and nifty performance analysis tools'
+ arch=(x86_64)
+ url='https://github.com/gperftools/gperftools'
+@@ -38,7 +38,7 @@
+ 
+ check() {
+   cd $pkgname
+-  make check || : # Failed tests: heap-checker-death_unittest.sh, heap-checker_unittest heap-checker_debug_unittest
++  make check
+ }
+ 
+ package() {

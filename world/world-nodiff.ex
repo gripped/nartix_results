@@ -2,7 +2,6 @@
 7zip
 a2ps
 a52dec
-aalib
 aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
@@ -5856,13 +5855,6 @@ yubico-c-client
 yubico-c
 z3
 python-z3-solver
-zabbix
-zabbix-server
-zabbix-agent
-zabbix-agent2
-zabbix-proxy
-zabbix-frontend-php
-zabbix-web-service
 zanshin
 zathura-cb
 zathura-djvu

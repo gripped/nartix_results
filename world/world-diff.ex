@@ -1,4 +1,5 @@
 0ad
+aalib
 accountsservice
 alacritty
 alsa-utils
@@ -1052,6 +1053,13 @@ xorg-xwayland
 xreader
 xscreensaver
 yubikey-personalization
+zabbix
+zabbix-server
+zabbix-agent
+zabbix-agent2
+zabbix-proxy
+zabbix-frontend-php
+zabbix-web-service
 zathura-pdf-mupdf
 zeromq
 znc
