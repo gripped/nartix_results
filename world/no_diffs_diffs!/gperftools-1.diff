@@ -1,20 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=gperftools
- pkgver=2.16
--pkgrel=2
-+pkgrel=1
+-pkgver=2.17
++pkgver=2.16
+ pkgrel=1
  pkgdesc='Fast, multi-threaded malloc and nifty performance analysis tools'
  arch=(x86_64)
- url='https://github.com/gperftools/gperftools'
-@@ -38,7 +38,7 @@
+@@ -11,12 +11,13 @@
+   glibc
+   libunwind
+ )
+-makedepends=(
+-  asciidoctor
+-  git
++makedepends=(git)
++optdepends=(
++  'graphviz: pprof graph generation'
++  'perl: pprof and pprof-symbolize commands'
+ )
+ source=("git+https://github.com/gperftools/gperftools.git#tag=$pkgname-$pkgver")
+-b2sums=(b0cd59121adb2b1c3d6a298759fad19ce78c610dfe0a4353e03f2d817fc97d9df2fac0ef9de1c04deedb4305a2ebc37f2b1ae4174183cd600f06216b69d40422)
++b2sums=(e48d103d3954aea25b1dc0315cbfe080a12ca45154e25d824b4096fc735928104e4c28d98287fd44993f38ec28f56fa72be6ecee85227d03f69235c70063e5da)
  
- check() {
+ prepare() {
    cd $pkgname
--  make check || : # Failed tests: heap-checker-death_unittest.sh, heap-checker_unittest heap-checker_debug_unittest
-+  make check
- }
- 
- package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-asciidoctor
+ gcc-libs
+ git
+ glibc

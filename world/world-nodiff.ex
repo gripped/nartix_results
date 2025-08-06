@@ -649,6 +649,7 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
+firejail
 fish
 five-or-more
 flac
@@ -884,7 +885,6 @@ graphite-docs
 graphviz
 grilo-plugins
 grilo
-grim
 groovy
 grsync
 grub-customizer
@@ -2590,6 +2590,7 @@ pahole
 ostra-cg
 palapeli
 pam_wrapper
+pam_wrapper-docs
 pango
 pango-docs
 pangomm-2.48
@@ -3455,7 +3456,6 @@ python-entrypoint2
 python-entrypoints
 python-ephemeral-port-reserve
 python-et-xmlfile
-python-evdev
 python-eventlet
 python-exceptiongroup
 python-execnet
@@ -3475,7 +3475,6 @@ python-fastjsonschema
 python-fastnumbers
 python-fastparquet
 python-fastpbkdf2
-python-faust-cchardet
 python-feedgen
 python-feedgenerator
 python-feedparser
@@ -3923,7 +3922,6 @@ python-pikepdf
 python-pillow
 python-pint
 python-pip-run
-python-pip
 python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
@@ -4313,7 +4311,6 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
-python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -5628,6 +5625,8 @@ vde2
 vdpauinfo
 veracrypt
 verdict
+vice
+vice-sdl2
 vid.stab
 viewnior
 vifm

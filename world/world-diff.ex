@@ -139,7 +139,6 @@ fcitx5
 fcron
 fig2dev
 firefox
-firejail
 firewalld
 firewalld-test
 flatpak
@@ -194,6 +193,7 @@ greetd-tuigreet
 greetd
 $pkgbase
 $pkgbase-agreety
+grim
 grpc
 python-grpcio
 python-grpcio-tools
@@ -648,11 +648,15 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-evdev
+python-faust-cchardet
 python-matplotlib
+python-pip
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-sphinx-hawkmoth
 qastools
 qbittorrent
 qbittorrent-nox
@@ -867,7 +871,6 @@ v2ray
 v4l-utils
 valkey
 vault
-vice
 vim
 gvim
 vim-runtime

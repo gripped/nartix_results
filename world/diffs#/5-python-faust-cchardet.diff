@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,16 @@
+ 
+ pkgname=python-faust-cchardet
+ pkgver=2.1.19
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Fork of the original cChardet"
+ url="https://github.com/faust-streaming/cChardet"
+ arch=(x86_64)
+-license=('GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1')
++license=(
++  GPL
++  LGPL
++  MPL
++)
+ depends=(
+-  gcc-libs
+-  glibc
+   python
+ )
+ makedepends=(
+@@ -38,10 +40,12 @@
+ }
+ 
+ build() {
+-  python -m build --wheel --no-isolation faust-cchardet
++  cd faust-cchardet
++  python -m build --wheel --no-isolation
+ }
+ 
+ package() {
+-  python -m installer --destdir="$pkgdir" faust-cchardet/dist/*.whl
++  cd faust-cchardet
++  python -m installer --destdir="$pkgdir" dist/*.whl
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ cython
+-gcc-libs
+ git
+-glibc
+ python
+ python-build
+ python-installer
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,5 +5,6 @@
+ git -c protocol.file.allow=always -c protocol.allow=never submodule update
+ }
+ build() {
+-python -m build --wheel --no-isolation faust-cchardet
++cd faust-cchardet
++python -m build --wheel --no-isolation
+ }
