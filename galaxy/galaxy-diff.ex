@@ -31,6 +31,8 @@ mimalloc
 mpd
 nvidia-390xx-utils
 nvm
+opensc
+opensnitch
 qbittorrent
 qbittorrent-nox
 rage

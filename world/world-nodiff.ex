@@ -3456,6 +3456,7 @@ python-entrypoint2
 python-entrypoints
 python-ephemeral-port-reserve
 python-et-xmlfile
+python-evdev
 python-eventlet
 python-exceptiongroup
 python-execnet
@@ -3475,6 +3476,7 @@ python-fastjsonschema
 python-fastnumbers
 python-fastparquet
 python-fastpbkdf2
+python-faust-cchardet
 python-feedgen
 python-feedgenerator
 python-feedparser
@@ -3759,6 +3761,7 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
+python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
@@ -3922,6 +3925,7 @@ python-pikepdf
 python-pillow
 python-pint
 python-pip-run
+python-pip
 python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
@@ -4311,6 +4315,7 @@ python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
 python-sphinx-copybutton
 python-sphinx-furo
+python-sphinx-hawkmoth
 python-sphinx-inline-tabs
 python-sphinx-issues
 python-sphinx-jinja
@@ -5209,7 +5214,6 @@ sleuthkit
 slimit
 slirp4netns
 slock
-slop
 slurp
 smb4k
 smpeg
@@ -5854,6 +5858,14 @@ yubico-c-client
 yubico-c
 z3
 python-z3-solver
+zabbix
+zabbix-common
+zabbix-server
+zabbix-frontend-php
+zabbix-web-service
+zabbix-proxy
+zabbix-agent
+zabbix-agent2
 zanshin
 zathura-cb
 zathura-djvu

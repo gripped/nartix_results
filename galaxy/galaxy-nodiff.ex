@@ -331,7 +331,6 @@ onionshare
 openbox
 openrct2
 openshot
-opensnitch
 parole
 pavucontrol-qt
 pcmanfm-gtk3

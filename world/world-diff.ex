@@ -648,15 +648,10 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-evdev
-python-faust-cchardet
-python-matplotlib
-python-pip
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-sphinx-hawkmoth
 qastools
 qbittorrent
 qbittorrent-nox
@@ -792,6 +787,7 @@ seatd
 sfml
 shairport-sync
 signal-desktop
+slop
 smartmontools
 snapper
 solid
@@ -1056,13 +1052,6 @@ xorg-xwayland
 xreader
 xscreensaver
 yubikey-personalization
-zabbix
-zabbix-server
-zabbix-agent
-zabbix-agent2
-zabbix-proxy
-zabbix-frontend-php
-zabbix-web-service
 zathura-pdf-mupdf
 zeromq
 znc

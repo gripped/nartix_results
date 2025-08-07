@@ -3,8 +3,8 @@
 @@ -1,38 +1,32 @@
  
  pkgname=atril
--pkgver=1.28.1
--pkgrel=3
+-pkgver=1.28.2
+-pkgrel=1
 -pkgdesc="A document viewer for MATE"
 +pkgver=1.26.1
 +pkgrel=1.1
@@ -24,7 +24,7 @@
  replaces=('atril-gtk3')
 -source=("git+https://github.com/mate-desktop/atril.git#tag=v${pkgver}"
 -        git+https://github.com/mate-desktop/mate-submodules.git)
--sha256sums=('f75822ea74bdba1268a4284dfb6e4679416d68e60639e4ee3f337bffee09f170'
+-sha256sums=('873ae0cbcecc12519e54e0ab9bdebf13f3c8cf9bdddb4236f820d27002c67f8e'
 -            'SKIP')
 +source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/$pkgname-$pkgver.tar.xz")
 +sha256sums=('a53a613acb9701a18ad671bf590254d1ce836ba0ae1be2c0bd8948fdf6b491a4')
