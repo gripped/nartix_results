@@ -2121,7 +2121,6 @@ lilv
 lilv-docs
 python-lilv
 lilypond
-limine
 linux-atm
 linux-zen
 linux-zen-headers
@@ -3851,7 +3850,6 @@ python-openid
 python-openpyxl
 python-openstacksdk
 python-opt_einsum
-python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -5214,6 +5212,7 @@ sleuthkit
 slimit
 slirp4netns
 slock
+slop
 slurp
 smb4k
 smpeg

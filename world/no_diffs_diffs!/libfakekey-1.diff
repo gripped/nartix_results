@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+ pkgname=libfakekey
+ pkgver=0.3
+-pkgrel=4
++pkgrel=3
+ pkgdesc='X virtual keyboard library.'
+ arch=('x86_64')
+-url='https://git.yoctoproject.org/libfakekey/'
++url='https://www.yoctoproject.org/tools-resources/projects/matchbox'
+ license=('GPL')
+ depends=('libxtst')
+ source=("https://git.yoctoproject.org/cgit/cgit.cgi/$pkgname/snapshot/$pkgname-$pkgver.tar.gz")

@@ -373,6 +373,7 @@ libytnef
 light-locker
 lightdm
 liblightdm-qt5
+limine
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -648,6 +649,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-optree
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -787,7 +789,6 @@ seatd
 sfml
 shairport-sync
 signal-desktop
-slop
 smartmontools
 snapper
 solid

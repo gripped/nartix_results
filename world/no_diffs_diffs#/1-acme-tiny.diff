@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ pkgname=acme-tiny
+-pkgver=5.0.2
+-pkgrel=1
++pkgver=5.0.1
++pkgrel=2
+ pkgdesc="A tiny script to issue and renew TLS certs from Let's Encrypt"
+ url="https://github.com/diafygi/acme-tiny"
+ depends=('python' 'openssl')
+ license=('MIT')
+ arch=('any')
+ source=($pkgname-$pkgver.tar.gz::https://github.com/diafygi/acme-tiny/archive/${pkgver}.tar.gz)
+-sha256sums=('f0436c37a2cc33b8a228a7be356b38cf7fa992aca1a52af9bb164e180bdef649')
++sha256sums=('8205736d0de258283e337f6fbc35892cb54fac19e10b770f4dc8b0941b1a08a5')
+ 
+ package() {
+     cd "$srcdir"/acme-tiny-${pkgver}
