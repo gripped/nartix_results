@@ -1,6 +1,7 @@
 0ad
 aalib
 accountsservice
+adios2
 alacritty
 alsa-utils
 amule
@@ -355,6 +356,9 @@ libmspub
 libnvme
 libprocps
 libqb
+librest
+librest-docs
+librest-demos
 libsidplay
 libsidplayfp
 libspatialite
@@ -519,6 +523,7 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+nftables
 niri
 nodejs-lts-hydrogen
 nsd
@@ -541,6 +546,8 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
+openucx
+openvkl
 openvpn
 ostree
 packagekit-qt
@@ -649,7 +656,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-optree
+python-ml-dtypes
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -851,6 +858,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

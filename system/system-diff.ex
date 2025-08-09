@@ -31,6 +31,7 @@ glibc-locales
 gssproxy
 iproute2
 iputils
+libnftnl
 libusb
 libxml2
 libxml2-docs

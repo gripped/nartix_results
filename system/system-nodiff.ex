@@ -94,7 +94,6 @@ libmnl
 libmpc
 libnetfilter_conntrack
 libnfnetlink
-libnftnl
 libnghttp2
 libnghttp3
 libnl

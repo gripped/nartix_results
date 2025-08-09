@@ -19,7 +19,6 @@ acpi_call
 acpica
 acpid
 acpilight
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -1947,9 +1946,6 @@ libraw1394
 librdkafka
 libreplaygain
 libressl
-librest
-librest-docs
-librest-demos
 libretls
 librevenge
 librsvg
@@ -2425,7 +2421,6 @@ networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
 newsboat
-nftables
 nginx
 nginx-mod-geoip
 nginx-mod-image-filter
@@ -2558,9 +2553,7 @@ opensp
 opensubdiv
 opentimelineio
 openucc
-openucx
 openvdb
-openvkl
 openvr
 openvswitch
 openxr
@@ -3778,7 +3771,6 @@ python-mistletoe
 python-mistune
 python-mitmproxy-rs
 python-mitmproxy-wireguard
-python-ml-dtypes
 python-mock
 python-mocket
 python-mongoengine
@@ -3850,6 +3842,7 @@ python-openid
 python-openpyxl
 python-openstacksdk
 python-opt_einsum
+python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -5603,7 +5596,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash

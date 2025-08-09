@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=adios2
+ pkgver=2.10.2
+-pkgrel=8
++pkgrel=7
+ pkgdesc="The Adaptable Input/Output System version 2"
+ arch=(x86_64)
+ url="https://adios2.readthedocs.io/en/latest/"
+@@ -53,7 +53,7 @@
+ }
+ 
+ build() {
+-  local cuda_archs="50;60;61;62;70;72;75;80;86;87;89;90;100;101;120;120-virtual"
++  local cuda_archs="50;52;53;60;61;62;70;72;75;80;86;87;89;90;90a;100;100a;101;101a;120;120a;120-virtual"
+ 
+   local cmake_options=(
+     -B build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ patch --directory=${pkgname^^}-${pkgver} -Np1 < fix-destdir-installation.patch
+ }
+ build() {
+-local cuda_archs="50;60;61;62;70;72;75;80;86;87;89;90;100;101;120;120-virtual"
++local cuda_archs="50;52;53;60;61;62;70;72;75;80;86;87;89;90;90a;100;100a;101;101a;120;120a;120-virtual"
+ local cmake_options=(
+ -B build
+ -S ${pkgname^^}-${pkgver}
