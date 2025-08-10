@@ -1,7 +1,6 @@
 0ad
 aalib
 accountsservice
-adios2
 alacritty
 alsa-utils
 amule
@@ -303,6 +302,7 @@ jupyter-server-ydoc
 kcoreaddons
 kgamma
 kio5-extras
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -546,7 +546,6 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
-openucx
 openvkl
 openvpn
 ostree
@@ -652,6 +651,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-charset-normalizer
 python-deadlib
 python-nntplib
 python-cgi

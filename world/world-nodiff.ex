@@ -19,6 +19,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -1394,7 +1395,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -2553,6 +2553,7 @@ opensp
 opensubdiv
 opentimelineio
 openucc
+openucx
 openvdb
 openvr
 openvswitch
@@ -3287,7 +3288,6 @@ python-cftime
 python-changelog-chug
 python-characteristic
 python-chardet
-python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
 python-cheroot
