@@ -84,6 +84,7 @@ containerd
 convertlit
 cppcheck
 crun
+ctwm
 cups
 libcups
 darkhttpd
@@ -131,6 +132,7 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
+facter
 fastfetch
 fceux
 fcgiwrap
@@ -651,16 +653,15 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-charset-normalizer
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-ml-dtypes
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-warlock
 qastools
 qbittorrent
 qbittorrent-nox
@@ -781,6 +782,13 @@ ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 ldb

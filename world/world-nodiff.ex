@@ -395,7 +395,6 @@ cryptoplusplus
 cscope
 ctags
 ctpl
-ctwm
 cuda
 cuda-tools
 cudnn
@@ -605,7 +604,6 @@ f2fs-tools
 faac
 faad2
 facile
-facter
 fail2ban
 fakechroot
 falkon
@@ -3288,6 +3286,7 @@ python-cftime
 python-changelog-chug
 python-characteristic
 python-chardet
+python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
 python-cheroot
@@ -3771,6 +3770,7 @@ python-mistletoe
 python-mistune
 python-mitmproxy-rs
 python-mitmproxy-wireguard
+python-ml-dtypes
 python-mock
 python-mocket
 python-mongoengine
@@ -4465,7 +4465,6 @@ python-volatile
 python-voluptuous
 python-waitress
 python-wand
-python-warlock
 python-watchdog
 python-watchfiles
 python-watchgod
@@ -5120,13 +5119,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 rustup
 rutabaga-ffi
 rxvt-unicode
