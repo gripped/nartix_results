@@ -395,6 +395,7 @@ cryptoplusplus
 cscope
 ctags
 ctpl
+ctwm
 cuda
 cuda-tools
 cudnn
@@ -604,6 +605,7 @@ f2fs-tools
 faac
 faad2
 facile
+facter
 fail2ban
 fakechroot
 falkon
@@ -1393,6 +1395,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -4465,6 +4468,7 @@ python-volatile
 python-voluptuous
 python-waitress
 python-wand
+python-warlock
 python-watchdog
 python-watchfiles
 python-watchgod

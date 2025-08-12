@@ -22,6 +22,12 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
+linux-rt
+linux-rt-headers
+linux-rt-docs
 ly
 mate-control-center
 mate-screensaver

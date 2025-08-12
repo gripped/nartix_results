@@ -84,7 +84,6 @@ containerd
 convertlit
 cppcheck
 crun
-ctwm
 cups
 libcups
 darkhttpd
@@ -132,7 +131,6 @@ espeakup
 etherwall
 exo
 extra-cmake-modules
-facter
 fastfetch
 fceux
 fcgiwrap
@@ -304,7 +302,6 @@ jupyter-server-ydoc
 kcoreaddons
 kgamma
 kio5-extras
-kirigami
 kismet
 kitty
 kitty-terminfo
@@ -661,7 +658,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-warlock
 qastools
 qbittorrent
 qbittorrent-nox

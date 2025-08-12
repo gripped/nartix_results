@@ -16,7 +16,7 @@
 -        '0001-arch-specific.patch')
 +        '0001-arch-specific.patch'
 +'mariadb.sysusers.conf' 'mariadb.tmpfiles.conf')
- sha256sums=('3c6c8dc3de8c716315c8380fbc7a54bd233b21becea54513d27db596390a0ad7'
+ sha256sums=('c27a5d127bb262021f9d134fd0e304c7cf426074c732f99084850fd54951c4ca'
              'SKIP'
              'SKIP'
 @@ -26,7 +27,9 @@
@@ -56,16 +56,17 @@
 +    -DWITH_SYSTEMD=no
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
- 
-@@ -178,7 +181,6 @@
+   )
+@@ -176,7 +179,7 @@
             'coreutils'
             'libxml2' 'libxml2.so'
             'lz4' 'liblz4.so'
 -           'systemd-libs' 'libsystemd.so'
++
             'zstd' 'libzstd.so')
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
-@@ -211,8 +213,8 @@
+@@ -209,8 +212,8 @@
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
  
