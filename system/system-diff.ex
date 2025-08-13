@@ -31,7 +31,6 @@ glibc-locales
 gssproxy
 iproute2
 iputils
-libnftnl
 libusb
 libxml2
 libxml2-docs
@@ -69,7 +68,6 @@ nspr
 openldap
 libldap
 openresolv
-openssl
 p11-kit
 libp11-kit
 p11-kit-docs

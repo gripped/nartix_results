@@ -94,6 +94,7 @@ libmnl
 libmpc
 libnetfilter_conntrack
 libnfnetlink
+libnftnl
 libnghttp2
 libnghttp3
 libnl
@@ -140,6 +141,7 @@ nss
 ca-certificates-mozilla
 openssh
 openssl-1.1
+openssl
 patch
 pciutils
 pcre

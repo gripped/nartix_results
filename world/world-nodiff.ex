@@ -2,6 +2,7 @@
 7zip
 a2ps
 a52dec
+aalib
 aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
@@ -1606,6 +1607,7 @@ libaec
 libaemu
 libakonadi5
 libalkimia
+libao
 libappimage
 libappindicator
 libappindicator-gtk2
@@ -2118,6 +2120,7 @@ lilv
 lilv-docs
 python-lilv
 lilypond
+limine
 linux-atm
 linux-zen
 linux-zen-headers
@@ -2155,6 +2158,7 @@ lrzip
 lsb-release
 lshw
 lskat
+lsof
 lsscsi
 ltrace
 lttng-ust2.12
@@ -2422,6 +2426,7 @@ networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
 newsboat
+nftables
 nginx
 nginx-mod-geoip
 nginx-mod-image-filter
@@ -2556,6 +2561,7 @@ opentimelineio
 openucc
 openucx
 openvdb
+openvkl
 openvr
 openvswitch
 openxr
@@ -5123,6 +5129,13 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 rustup
 rutabaga-ffi
 rxvt-unicode

@@ -1,5 +1,4 @@
 0ad
-aalib
 accountsservice
 alacritty
 alsa-utils
@@ -313,7 +312,6 @@ ksnip
 ksystemlog
 kwin-x11
 kwin
-libao
 libatasmart
 libayatana-indicator
 libblastrampoline
@@ -376,7 +374,6 @@ libytnef
 light-locker
 lightdm
 liblightdm-qt5
-limine
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -404,7 +401,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-lsof
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -522,7 +518,6 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-nftables
 niri
 nodejs-lts-hydrogen
 nsd
@@ -545,7 +540,6 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
-openvkl
 openvpn
 ostree
 packagekit-qt
@@ -778,13 +772,6 @@ ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 ldb

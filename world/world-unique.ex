@@ -149,6 +149,7 @@ dhcp-openrc
 dhcp-runit
 dhcp-s6
 dhcpcd-runit
+dinit-user-spawn
 distcc-dinit
 distcc-openrc
 distcc-runit

@@ -24,6 +24,7 @@ dhcpcd-dinit
 dhcpcd-openrc
 dhcpcd-s6
 dinit-rc
+dinit-user-spawn
 dinit
 elogind-dinit
 elogind-openrc
