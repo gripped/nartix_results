@@ -145,7 +145,6 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
-frameworkintegration5
 freerdp
 freerdp2
 frugally-deep
@@ -372,6 +371,7 @@ libxfce4util
 libxmlrpc
 libytnef
 light-locker
+lightdm-slick-greeter
 lightdm
 liblightdm-qt5
 linux-hardened
@@ -772,6 +772,13 @@ ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
+rust
+lib32-rust-libs
+rust-musl
+rust-aarch64-gnu
+rust-aarch64-musl
+rust-wasm
+rust-src
 samba
 libwbclient
 ldb
@@ -849,7 +856,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

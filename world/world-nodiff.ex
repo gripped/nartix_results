@@ -686,6 +686,7 @@ fossil
 four-in-a-row
 fractal
 frameworkintegration
+frameworkintegration5
 francis
 freealut
 freecell-solver
@@ -2113,7 +2114,6 @@ libzmf
 liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
-lightdm-slick-greeter
 lightsoff
 lighttpd
 lilv
@@ -5129,13 +5129,6 @@ python-ruff
 run-parts
 runc
 rust-bindgen
-rust
-lib32-rust-libs
-rust-musl
-rust-aarch64-gnu
-rust-aarch64-musl
-rust-wasm
-rust-src
 rustup
 rutabaga-ffi
 rxvt-unicode
@@ -5605,6 +5598,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash

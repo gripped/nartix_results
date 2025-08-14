@@ -6,7 +6,7 @@
 -pkgver=0.44
 -pkgrel=20
 +pkgver=0.45
-+pkgrel=8
++pkgrel=10
  pkgdesc="Modules for ThinkPad's SMAPI functionality"
  url='https://github.com/evgeni/tp_smapi'
  arch=(x86_64)
@@ -24,9 +24,11 @@
  
  pkgver() {
    cd tp_smapi
-@@ -34,7 +34,7 @@
+@@ -33,8 +33,9 @@
+   cd tp_smapi
  
    find . -name "*.ko" -exec install -Dt "$pkgdir$extradir" {} +
++
    find "$pkgdir" -name "*.ko" -exec strip --strip-debug {} +
 -  find "$pkgdir" -name "*.ko" -exec xz {} +
 +  find "$pkgdir" -name '*.ko' -exec zstd --rm -19 {} +
