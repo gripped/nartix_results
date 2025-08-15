@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -96,10 +96,6 @@
+@@ -99,10 +99,6 @@
    git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
  }
  
@@ -11,7 +11,7 @@
  
  build() {
    cmake -S dolphin-emu -B build -G Ninja \
-@@ -107,7 +103,7 @@
+@@ -110,7 +106,7 @@
      -DCMAKE_SKIP_RPATH=ON \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \

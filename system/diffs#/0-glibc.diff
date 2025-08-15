@@ -18,15 +18,6 @@
        --enable-bind-now
        --enable-fortify-source
        --enable-kernel=4.4
-@@ -122,7 +122,7 @@
-   _skip_test tst-shstk-legacy-1g     sysdeps/x86_64/Makefile
-   _skip_test tst-adjtime             time/Makefile
- 
--  make -O check
-+  make -O check || :
- )
- 
- package_glibc() {
 
 
 ############# Stripped diff below #################

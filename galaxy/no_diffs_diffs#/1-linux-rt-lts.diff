@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ 
+ pkgbase=linux-rt-lts
+-pkgver=6.6.87.rt54.arch1
++pkgver=6.6.87.rt54.artix1
++archpkgver=6.6.87.rt54.arch1
+ pkgrel=3
+ pkgdesc='Linux RT LTS'
+ arch=(x86_64)
+@@ -25,13 +26,13 @@
+   !debug
+   !strip
+ )
+-_pre_rt_ver=${pkgver%.*}
++_pre_rt_ver=${archpkgver%.*}
+ _upstream_ver=${_pre_rt_ver%.*}
+ _rt_ver=${_pre_rt_ver%.*}-${_pre_rt_ver##*.}
+ _srcname=linux-${_upstream_ver}
+-_srctag=v${_rt_ver}-${pkgver##*.}
++_srctag=v${_rt_ver}-${archpkgver##*.}
+ source=(
+-  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
++  https://cdn.kernel.org/pub/linux/kernel/v${archpkgver%%.*}.x/${_srcname}.tar.{xz,sign}
+   https://cdn.kernel.org/pub/linux/kernel/projects/rt/${_upstream_ver%.*}/older/patch-${_rt_ver}.patch.{xz,sign}
+   $url/-/releases/${_srctag}/downloads/$pkgbase-${_srctag}.patch{,.sig}
+   gcc15-x86.patch
+@@ -44,7 +45,7 @@
+             '6f634cea87cfdfd371b37736e39d0c318fb97c50f288ff9702b14960c56222e3b20156ca16598dbc242995b3266d27022e7d50f34ef19909f601ee62a3c2c7af'
+             'SKIP'
+             'b7d85508e3eb7f269977e972550e5d0975c8566a85d48b4b1667e5fc580734ef55e8576aa3cbaffcdbc5686965058e8eaecfee623918336a255b6ff3cc85640d'
+-            '8b2a0e4d8f466623e37b13e98d2dc24c2d9c5f535c50a5bb32e6701214dc87907672190596df5bc8339073c14bcd0dd9d671095127e25103d47b676c87173673')
++            'c866548cf9e2d850fca4866340fc89e53832ec04ab622cb3fef22eb244aad76137145f13e19c4042b1dbc8e500f6fb2aba4c4f1518f6171757df4a72eab93630')
+ b2sums=('37af97ec6e188f53803fcbb714530cdb4259b71cd3cfafb6ed6210fe47acf9e0ce6a59daa18c1269421d013532fca8713ce63e7861f2138c2c2980c40f4062a2'
+         'SKIP'
+         '999a605fff617cb746eafea257408c5f2abe6716c7e83aa6fbd9c2587cb5faa9e3380c9bed7b375a6dec2e50658cd92e4ba111a1b77a73d60de58cb9469d3c6f'
+@@ -52,14 +53,14 @@
+         '6b16388b5710a81dd02289fdca55a20ba39805f0adc7689d58d08eeb92050e750f521ac3f39158dd2a9ac6621e35e2e5d7c3fd6daf8e6a6e4272d7bb707c2826'
+         'SKIP'
+         'af0bc4eedb77a7d1d7605c15d040e606ce0534fb56887ba1361d303705b97415a9c38d76a7a87585f41020ffacbe07ef7de1c3a3f3ef7bedacbe6989cd078fe3'
+-        'a53ece79b57ba70890a3f445543ad8b0e50b7ce8fcd1be9c47cdab564d64214329753c3cd3a5e8893abd34bd1727b127143371add5d2dab3ca093596ada9f049')
++        '907de08c50eb0616e21d80a5cc44e7c2667c170f59d7209336188cbbcf584ca7ff18541e29a6636ae9026a2f593c59de2f0065da977fb1f43af9252c111c44bc')
+ validpgpkeys=(
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+   D5653EA39C8675DA4BD5971C13B55DD07C53B851  # Clark Williams (Kernel Correspondence) <clrkwllms@kernel.org>
+   991F6E3F0765CF6295888586139B09DA5BF0D338  # David Runge <dvzrv@archlinux.org>
+ )
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 

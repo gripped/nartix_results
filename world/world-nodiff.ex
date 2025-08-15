@@ -2122,9 +2122,6 @@ python-lilv
 lilypond
 limine
 linux-atm
-linux-zen
-linux-zen-headers
-linux-zen-docs
 liquidctl
 litehtml
 live-media

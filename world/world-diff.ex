@@ -396,6 +396,9 @@ tmon
 turbostat
 usbip
 x86_energy_perf_policy
+linux-zen
+linux-zen-headers
+linux-zen-docs
 lirc
 llvm14
 lm_sensors
