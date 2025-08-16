@@ -647,14 +647,17 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-automat
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-django-allauth
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-wrapt
 qastools
 qbittorrent
 qbittorrent-nox

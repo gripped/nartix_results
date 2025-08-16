@@ -3212,7 +3212,6 @@ python-authlib
 python-authres
 python-autobahn
 python-autocommand
-python-automat
 python-autopage
 python-awesomeversion
 python-aws-sam-translator
@@ -3395,7 +3394,6 @@ python-distlib
 python-distributed
 python-distro
 python-distutils-extra
-python-django-allauth
 python-django-appconf
 python-django-classy-tags
 python-django-compressor
@@ -4491,7 +4489,6 @@ python-wheel
 python-wheezy-template
 python-whoosh
 python-wilderness
-python-wrapt
 python-wsaccel
 python-wsgiproxy2
 python-wsproto

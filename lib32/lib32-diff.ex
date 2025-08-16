@@ -3,11 +3,11 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
+lib32-libelf
 lib32-libepoxy
 lib32-libgudev
 lib32-libnm
 lib32-libpulse
-lib32-libtirpc
 lib32-libudev0-shim
 lib32-libusb
 lib32-mesa

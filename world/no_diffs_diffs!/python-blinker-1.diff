@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-blinker
+-pkgver=1.9.0
+-pkgrel=1
++pkgver=1.8.2
++pkgrel=2
+ pkgdesc="Fast, simple object-to-object and broadcast signaling"
+ arch=('any')
+ url="https://blinker.readthedocs.io"
+@@ -10,7 +10,7 @@
+ makedepends=('python-build' 'python-installer' 'python-flit-core')
+ checkdepends=('python-pytest-asyncio')
+ source=("https://files.pythonhosted.org/packages/source/b/blinker/blinker-$pkgver.tar.gz")
+-sha512sums=('587eaead4750eb742209703d792498293579dc55afc855498066b49a067527b6b3eccbe9a35ddbacc2cb1b7ced0bb3bb7a5716dba82d87b434a6ca8281bd76e5')
++sha512sums=('037822e014974aaa9d6faf76805b09c06d697de9555cf4cd1265e639c52f72c5ed905e4698140b49a5e011806d91541636a7cf58082aabdd927c60dffd7df012')
+ 
+ build() {
+   cd blinker-$pkgver

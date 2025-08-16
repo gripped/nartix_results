@@ -66,7 +66,6 @@ lib32-libdatrie
 lib32-libdecor
 lib32-libdrm
 lib32-libdv
-lib32-libelf
 lib32-libffi
 lib32-libgcrypt
 lib32-libglvnd
@@ -106,6 +105,7 @@ lib32-libtasn1
 lib32-libthai
 lib32-libtheora
 lib32-libtiff
+lib32-libtirpc
 lib32-libunistring
 lib32-libunwind
 lib32-libva
