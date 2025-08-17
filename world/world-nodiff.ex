@@ -159,8 +159,6 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt5
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -632,7 +630,6 @@ ffcall
 ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
-ffmpegthumbs
 ffnvcodec-headers
 fftw
 fftw-openmpi
@@ -1298,7 +1295,6 @@ kded
 kded5
 kdeedu-data
 kdegraphics-mobipocket
-kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
 kdenlive
@@ -1306,7 +1302,6 @@ kdepim-addons
 kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
-kdesdk-thumbnailers
 kdesignerplugin
 kdesu
 kdesu5
@@ -1345,7 +1340,6 @@ kfloppy
 kfourinline
 kgamma5
 kgeography
-kget
 kglobalaccel
 kglobalaccel5
 kglobalacceld
@@ -1412,7 +1406,6 @@ kjots
 kjs
 kjumpingcube
 kldap
-kleopatra
 klettres
 klickety
 klines
@@ -1441,7 +1434,6 @@ knotifications
 knotifications5
 knotifyconfig
 knotifyconfig5
-koko
 kolf
 kollision
 kolourpaint
@@ -1785,7 +1777,6 @@ libjxl
 libjxl-doc
 libkate
 libkate-docs
-libkcddb
 libkcompactdisc
 libkdcraw
 libkdcraw5
@@ -3212,6 +3203,7 @@ python-authlib
 python-authres
 python-autobahn
 python-autocommand
+python-automat
 python-autopage
 python-awesomeversion
 python-aws-sam-translator
@@ -3394,6 +3386,7 @@ python-distlib
 python-distributed
 python-distro
 python-distutils-extra
+python-django-allauth
 python-django-appconf
 python-django-classy-tags
 python-django-compressor
@@ -3544,7 +3537,6 @@ python-ghp-import
 python-gitdb
 python-github3py
 python-gitlab
-python-gitpython
 python-glanceclient
 python-glob2
 python-gmpy2
@@ -4148,7 +4140,6 @@ python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
-python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
@@ -4489,6 +4480,7 @@ python-wheel
 python-wheezy-template
 python-whoosh
 python-wilderness
+python-wrapt
 python-wsaccel
 python-wsgiproxy2
 python-wsproto
@@ -5654,7 +5646,6 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

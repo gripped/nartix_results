@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kdebugsettings
+-pkgver=25.08.0
++pkgver=25.04.3
+ pkgrel=1
+ pkgdesc='An application to enable/disable qCDebug'
+ arch=(x86_64)
+@@ -23,7 +23,7 @@
+ groups=(kde-applications
+         kde-utilities)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('bedd634252ff85621c2246b26d61ab1a05ed9ab18bebbf8d658f4638af5f695e'
++sha256sums=('5861db6582ded4ac112b0a43baef2192d51f3b0609270441e05aa6c550d2e8c8'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
 @@ -38,4 +38,3 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build

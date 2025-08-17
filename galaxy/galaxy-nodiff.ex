@@ -582,7 +582,6 @@ xfce4-panel-profiles
 xfce4-panel
 xfce4-power-manager
 xfce4-pulseaudio-plugin
-xfce4-screensaver
 xfce4-screenshooter
 xfce4-sensors-plugin
 xfce4-session

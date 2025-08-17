@@ -1,0 +1,73 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=vtk
+ pkgver=9.5.0
+-pkgrel=7
++pkgrel=6
+ pkgdesc="Software system for 3D computer graphics, image processing, and visualization"
+ arch=(x86_64)
+ url="https://www.vtk.org"
+@@ -32,9 +32,9 @@
+   python
+   python-matplotlib
+   python-mpi4py
+-  qt6-base                # libvtkGUISupportQt.so etc. (5 direct libs, 6 total libs)
+-  qt6-declarative         # libvtkGUISupportQtQuick.so (1 direct lib, 1 total lib)
+-  qt6-tools
++  qt5-base                # libvtkGUISupportQt.so etc. (5 direct libs, 6 total libs)
++  qt5-declarative         # libvtkGUISupportQtQuick.so (1 direct lib, 1 total lib)
++  qt5-tools
+   tk                      # libvtkRenderingTk.so (1 direct lib, 1 total lib)
+   openmpi                 # 13 direct libs, 67 total libs
+   libx11                  # libvtkglad.so, libvtkRenderingUI.so, libvtkRenderingTk.so, libvtkRenderingOpenGL2.so (4 direct libs, 58 total libs)
+@@ -82,7 +82,7 @@
+   'python: python bindings'
+   'python-matplotlib: for Matplotlib rendering'
+   'python-mpi4py: OpenMPI python support'
+-  'qt6-declarative: QML plugin'
++  'qt5-declarative: QML plugin'
+   'tk: tcl bindings'
+   'libx11: rendering'
+   'libxcursor: rendering'
+@@ -152,7 +152,7 @@
+     -DVTK_SMP_ENABLE_OPENMP=ON \
+     -DVTK_SMP_IMPLEMENTATION_TYPE=TBB \
+     -DVTK_PYTHON_VERSION=3 \
+-    -DVTK_QT_VERSION=6 \
++    -DVTK_QT_VERSION=5 \
+     -DVTK_USE_MPI=ON \
+     -DVTK_USE_TK=ON \
+     -DVTK_VERSIONED_INSTALL=OFF \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -52,9 +52,9 @@
+ python
+ python-matplotlib
+ python-mpi4py
+-qt6-base
+-qt6-declarative
+-qt6-tools
++qt5-base
++qt5-declarative
++qt5-tools
+ sqlite
+ tk
+ unixodbc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ -DVTK_SMP_ENABLE_OPENMP=ON \
+ -DVTK_SMP_IMPLEMENTATION_TYPE=TBB \
+ -DVTK_PYTHON_VERSION=3 \
+--DVTK_QT_VERSION=6 \
++-DVTK_QT_VERSION=5 \
+ -DVTK_USE_MPI=ON \
+ -DVTK_USE_TK=ON \
+ -DVTK_VERSIONED_INSTALL=OFF \
