@@ -65,7 +65,6 @@ cjs
 claws-mail
 compface
 cvs
-dbeaver
 dillo
 dino
 distrobox
@@ -358,6 +357,7 @@ pinentry-bemenu
 pluma
 ppsspp
 ppsspp-assets
+prismlauncher
 profanity
 profanity-gtk
 pysolfc-cardsets

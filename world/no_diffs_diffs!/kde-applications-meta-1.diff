@@ -1,25 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
-          kde-system-meta
-          kde-utilities-meta
-          kdevelop-meta)
--pkgver=25.08
-+pkgver=25.04
- pkgrel=1
- arch=(any)
- license=(None)
-@@ -204,7 +204,8 @@
- package_kde-sdk-meta() {
-   pkgdesc='Meta package for KDE SDK applications'
-   replaces=(kdesdk-meta)
--  depends=(dolphin-plugins
-+  depends=(cervisia
-+           dolphin-plugins
-            kde-dev-scripts
-            kde-dev-utils
-            kapptemplate
-@@ -227,7 +228,6 @@
+@@ -227,7 +227,6 @@
             kde-inotify-survey
             khelpcenter
             kio-admin
@@ -33,15 +14,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -15,6 +15,7 @@
- bovo
- calligra
- cantor
-+cervisia
- colord-kde
- dolphin
- dolphin-plugins
-@@ -110,7 +111,6 @@
+@@ -110,7 +110,6 @@
  kirigami-gallery
  kiriki
  kiten

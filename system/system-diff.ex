@@ -29,7 +29,6 @@ glibc
 lib32-glibc
 glibc-locales
 gssproxy
-iproute2
 iputils
 libusb
 libxml2

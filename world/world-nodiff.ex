@@ -159,6 +159,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -469,7 +471,6 @@ dmenu
 dmg2img
 dmidecode
 dns-lexicon
-dnscrypt-proxy
 dnsmasq
 docbook-dsssl
 docbook-sgml
@@ -630,6 +631,7 @@ ffcall
 ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
+ffmpegthumbs
 ffnvcodec-headers
 fftw
 fftw-openmpi
@@ -741,8 +743,6 @@ geos
 getdns
 gflags
 gfxstream
-ghex
-ghex-docs
 ghostscript
 gi-docgen
 giflib
@@ -1041,6 +1041,7 @@ hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
+htmlq
 htop
 http-parser
 httpbin
@@ -1295,6 +1296,7 @@ kded
 kded5
 kdeedu-data
 kdegraphics-mobipocket
+kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
 kdenlive
@@ -1302,6 +1304,7 @@ kdepim-addons
 kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
+kdesdk-thumbnailers
 kdesignerplugin
 kdesu
 kdesu5
@@ -1340,6 +1343,7 @@ kfloppy
 kfourinline
 kgamma5
 kgeography
+kget
 kglobalaccel
 kglobalaccel5
 kglobalacceld
@@ -1406,6 +1410,7 @@ kjots
 kjs
 kjumpingcube
 kldap
+kleopatra
 klettres
 klickety
 klines
@@ -1434,6 +1439,7 @@ knotifications
 knotifications5
 knotifyconfig
 knotifyconfig5
+koko
 kolf
 kollision
 kolourpaint
@@ -1777,6 +1783,7 @@ libjxl
 libjxl-doc
 libkate
 libkate-docs
+libkcddb
 libkcompactdisc
 libkdcraw
 libkdcraw5
@@ -3537,6 +3544,7 @@ python-ghp-import
 python-gitdb
 python-github3py
 python-gitlab
+python-gitpython
 python-glanceclient
 python-glob2
 python-gmpy2
@@ -4140,6 +4148,7 @@ python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
+python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
@@ -5646,6 +5655,7 @@ vorbis-tools
 vsftpd
 vst3sdk
 vst3sdk-docs
+vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

@@ -4,20 +4,21 @@
  
  pkgname=mimetreeparser
 -pkgver=24.02.0
-+pkgver=25.04.3
++pkgver=25.08.0
  pkgrel=1
  pkgdesc='Parser for MIME trees'
  arch=(x86_64)
-@@ -8,7 +8,7 @@
+@@ -8,15 +8,16 @@
  license=(LGPL-2.0-or-later)
  depends=(gcc-libs
           glibc
 -         gpgme
 +         gpgmepp
           kcalendarcore
++         kcolorscheme
           ki18n
           kirigami
-@@ -16,7 +16,7 @@
+          kmbox
           kmime
           kwidgetsaddons
           libkleo
@@ -26,12 +27,12 @@
           qt6-base
           qt6-declarative
           qt6-webengine)
-@@ -25,7 +25,7 @@
+@@ -25,7 +26,7 @@
               qt6-doc
               qt6-tools)
  source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
 -sha256sums=('5d0546c49e8fd5d639ba68ae0a790260aae5e1d068737587f2bdc5c110ff97ef'
-+sha256sums=('26a4440d50ca62db1f154794557d5a216acc44ae96347e072200255a267c4ac4'
++sha256sums=('606333eccf752e6ee47260e427596649695425d85ed7e5e12d332c75882f96ca'
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
@@ -41,16 +42,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,7 @@
+@@ -2,15 +2,16 @@
  extra-cmake-modules
  gcc-libs
  glibc
 -gpgme
 +gpgmepp
  kcalendarcore
++kcolorscheme
  ki18n
  kirigami
-@@ -10,7 +10,7 @@
+ kmbox
  kmime
  kwidgetsaddons
  libkleo

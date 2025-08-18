@@ -2,13 +2,13 @@
 +++ Artix PKGBUILD
 @@ -1,6 +1,11 @@
 +
-+_ver=6.15.9
++_ver=6.16.1
 +_rel=1
 +_arch=arch${_rel}
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
--pkgver=6.16.arch2
+-pkgver=6.16.1.arch1
 +pkgver=${_ver}.${_artix}
  pkgrel=1
  pkgdesc='Linux'
@@ -27,28 +27,20 @@
    $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
    config  # the main kernel config file
  )
-@@ -42,18 +47,18 @@
-   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
-   83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
- )
--sha256sums=('1a4be2fe6b5246aa4ac8987a8a4af34c42a8dd7d08b46ab48516bcc1befbcd83'
-+sha256sums=('e94f3af85492302f7a819441458f80bca0ad9912e5a4c83c699ff3c63c52957d'
+@@ -46,14 +51,14 @@
              'SKIP'
--            '35820c0344711206470bd68cb4ea8ed038c3f5359b9c145d49e6aa1c15f61ad1'
-+            'ca64ed4a15e0cedb39713b09dd7f113986e799f58d0240a5c9381a8a0b13eaf2'
+             'b357773b9ed7e0f2265a04d53306d3d85d3b705ff32abe1f399b126685e1511d'
              'SKIP'
--            'a3e3ed64041b9da48e2785e000a04bffb5d8b42c4f535e934282d9ea4834a678')
--b2sums=('87bc4da7e89cc8265aebffea7ec6c09f711be24fee87cb1c03a264c03fd5a538d66aa806640835aa5103926e612cdfbc52d7c861d7f7065f1a8bb11d893b0921'
-+            '0b69722ea96f7ce6cd5a354fa3bb87b728e7d2cd8ac99535ff536e9df19d1d17')
-+b2sums=('9818201a76f2e4cdde00a67245764cd971b0cc17ca7c6147cd53d7397eaf54036ec606a86d64b467e8973fa9650cfc83b8389de828b06860f2ee3b0164b2942e'
+-            'ae8836206f1518de5c9204d58d74565be8978bb2eda93731373a839e77555433')
++            '995bc325d3df9b3fe3b91763222d4f942072037c2b5d2265fc57ad1312c3dbca')
+ b2sums=('280386f483f3f181fd0e45789815621f6f6bed208b7c10b05a7e2c2eed102d53928ce3f0e28cdd58d1e3c69f9977f60f7b6e832c3a00c0f4524aa45f83ec9491'
          'SKIP'
--        '7a171d297b671f5389062d856b0725ba1f0c88fea192698bbb158e533d641e7d23b1bf3ef8b1f78f08cdea8102463f0171499731f094a5003557d8cb55cdccf8'
-+        'd4e0bb27c1b3dd7ec989bedd15ec97e234d61d5df6658b1610a495e75ff482830ad977a97badeb2541f488b92aa0aed0147a586f24335b701fd6c3dcdc77f0af'
+         'e8572bedf0dfe7c4e997f03b37242752e2326372839ac152584f4bdcb91430b205ea036b3f952e7e4bde982a9e5d6c79172303d87cfa487ba3aa334ea274d5c7'
          'SKIP'
--        '9ad1aafacb476346fe184062a0a8156b73d1e211c669f1f3c96d1930a34a596d9197cb9abb94dbf36a5e3a250f60a44d4eb8868309b3b7718704a0c1b23f9dde')
+-        '0aea5109845ffa5d80726854a9a8faff57cbff326a96bf8bf55543d6518cab894046b35fedcd4155fdc5e81e1c1c701c42f40e5c2dc928bd5ba1565d0a0ac2eb')
 -
 -export KBUILD_BUILD_HOST=archlinux
-+        'a4aaacc5cb4aa2d2583b08e1ef0d3d29c9e98cbeab3e5b8d62cd19db4e8fc4464719c3f6efbf62a5c4a1b520d1ff284222c823ee26b90126e9fd4ef50ca74056')
++        '34be62628cb74d06e0c73494393cd73dee3d7895e5ea5d76089eac96aa066d4a7f4268e900255286199d61eb8bd0824240c1468d4509e39bf92ad1a76e0a6804')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
@@ -62,15 +54,6 @@
  
    echo "Setting config..."
    cp ../config .config
-@@ -87,7 +93,7 @@
-   cd $_srcname
-   make all
-   make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
--  make htmldocs SPHINXOPTS=-QT
-+  make htmldocs
- }
- 
- _package() {
 @@ -109,8 +115,8 @@
      WIREGUARD-MODULE
    )
@@ -98,10 +81,3 @@
  echo "Setting config..."
  cp ../config .config
  make olddefconfig
-@@ -23,5 +24,5 @@
- cd $_srcname
- make all
- make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
--make htmldocs SPHINXOPTS=-QT
-+make htmldocs
- }

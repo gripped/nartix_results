@@ -16,8 +16,6 @@ at
 atril
 audacious-plugins
 avahi
-avogadrolibs
-avogadrolibs-qt5
 awesome
 aws-cli-v2
 bash-bats
@@ -92,6 +90,7 @@ dbus-broker
 ddcutil
 dhcpcd
 dns-over-https
+dnscrypt-proxy
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -138,7 +137,6 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
-ffmpegthumbs
 fig2dev
 firefox
 firewalld
@@ -169,6 +167,8 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+ghex
+ghex-docs
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -301,19 +301,14 @@ js78
 julia
 jupyter-server-ydoc
 kcoreaddons
-kdegraphics-thumbnailers
-kdesdk-thumbnailers
 kgamma
-kget
 kio5-extras
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
-kleopatra
 knockd
 knot
-koko
 kopeninghours
 ksnip
 ksystemlog
@@ -355,7 +350,6 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libkcddb
 libldm
 libmspub
 libnvme
@@ -660,10 +654,8 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-gitpython
 python-pymupdf
 python-pytest-freezegun
-python-pytest-testinfra
 python-pyudev
 python-recommonmark
 qastools
@@ -980,7 +972,6 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
-vtk
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

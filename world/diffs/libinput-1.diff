@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,12 +1,12 @@
+ 
+ pkgname=libinput
+-pkgver=1.29.0
++pkgver=1.28.1
+ pkgrel=1
+ pkgdesc="Input device management and event handling library"
  url="https://gitlab.freedesktop.org/libinput/libinput"
  arch=(x86_64)
  license=(MIT)
@@ -9,8 +15,12 @@
  makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
  checkdepends=('python-pytest')
  optdepends=('gtk4: libinput debug-gui'
-@@ -17,7 +17,7 @@
- sha256sums=('19e5337ec10fdf920c8d1f4ece63cd7d1c12279ee26e347e30e98e2942d9e1aa')
+@@ -14,10 +14,10 @@
+             'python-libevdev: libinput measure'
+             'python-yaml: used by various tools')
+ source=(https://gitlab.freedesktop.org/libinput/libinput/-/archive/$pkgver/$pkgname-$pkgver.tar.bz2)
+-sha256sums=('7160c16c409c9ea4f7da9d91923ae0a92df7f3453a292bf684bed071acd7b4ff')
++sha256sums=('19e5337ec10fdf920c8d1f4ece63cd7d1c12279ee26e347e30e98e2942d9e1aa')
  
  build() {
 -  arch-meson $pkgname-$pkgver build \
