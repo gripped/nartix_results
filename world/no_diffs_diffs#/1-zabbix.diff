@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,36 +11,20 @@
+@@ -11,18 +11,10 @@
  source=("git+https://git.zabbix.com/scm/zbx/zabbix.git#tag=${pkgver}"
          'zabbix-common.sysusers'
          'zabbix-common.tmpfiles'
@@ -18,7 +18,8 @@
 -        'zabbix-agent2.service'
          'zabbix-agent2.tmpfiles'
          'write_log_to_syslog.patch'
-         'set_socket_paths.patch')
+         'set_socket_paths.patch'
+@@ -30,18 +22,10 @@
  sha512sums=('e9d22d5a0dd8ba4996d2b64a57e32fe7b4fff87a3eec35bd276858e019d38ca7ac298fb99d5a58074e7261acd8f5cfdfee0182e3ea35f55880ea0d7361a19d78'
              '0c3e974c6f8366d46e7156f6669e42b76a184cd9727e2474abc9253064d42f806bd7c2dd31d214dd083f039eac48d14a79bd8e16935a3a43a45b880dce15bbc1'
              '7c39d1cb1d269e8a2a22c634612c7d110e9e67c170f32add33312f97bc2e7f8f19bf5bb1d1c71df43afc893043472069b9f828dfc5a9f2946606798ed54c73a0'
@@ -36,8 +37,8 @@
 -            'cb2a6571edb88db442f107717fba636e45bbeab2c9fc08d4d9d110a1d808299e3ba384d1ce1496deb9013f8724218bb0ed5ea2e0b25769a6cce02eda98e47560'
              '0f8d0db314f8e0ed1cfc1bc1951aaa81455f52ea3012f2eb54bed37056d7d89ad1dd22af18039f1ce9c96430050b2b30e4d24ff8606f3f364f1596838435252b'
              '49a197a97536745818664593cf597540eb51e1f0c2429efea6be9ab85ee57f2a4b6e72a197bf02440c9b49a80a7ea0417f9b5a23bef003dc3337d7f08792cbf5'
-             '55dec0ef08d54e7972421e3958119cb7df9e0ef10ff6c58836306d4ad6e3724fb902e819070d76e4a5fa24428610d838db7eb0425f05b19493b5e2c9b5919931')
-@@ -141,8 +125,6 @@
+             '55dec0ef08d54e7972421e3958119cb7df9e0ef10ff6c58836306d4ad6e3724fb902e819070d76e4a5fa24428610d838db7eb0425f05b19493b5e2c9b5919931'
+@@ -145,8 +129,6 @@
  	install -Dm 644 conf/zabbix_server.conf "${pkgdir}/etc/zabbix/zabbix_server.conf"
  	install -Dm 644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/${pkgname}.conf"
  
@@ -46,7 +47,7 @@
  }
  
  package_zabbix-frontend-php() {
-@@ -169,7 +151,6 @@
+@@ -173,7 +155,6 @@
  	install -Dm 644 src/go/conf/zabbix_web_service.conf "${pkgdir}/etc/zabbix/zabbix_web_service.conf"
  	install -Dm 644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/${pkgname}.conf"
  
@@ -54,7 +55,7 @@
  }
  
  package_zabbix-proxy() {
-@@ -189,9 +170,6 @@
+@@ -193,9 +174,6 @@
  	install -Dm 644 conf/zabbix_proxy.conf "${pkgdir}/etc/zabbix/zabbix_proxy.conf"
  	install -Dm 644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/${pkgname}.conf"
  
@@ -64,7 +65,7 @@
  }
  
  package_zabbix-agent() {
-@@ -213,7 +191,6 @@
+@@ -217,7 +195,6 @@
  	install -Dm 644 man/zabbix_agentd.man "${pkgdir}/usr/share/man/man8/zabbix_agentd.8"
  	install -Dm 644 man/zabbix_sender.man "${pkgdir}/usr/share/man/man1/zabbix_sender.1"
  
@@ -72,7 +73,7 @@
  }
  
  package_zabbix-agent2() {
-@@ -231,5 +208,4 @@
+@@ -235,5 +212,4 @@
  
  	install -Dm 644 man/zabbix_agent2.man "${pkgdir}/usr/share/man/man8/zabbix_agent2.8"
  

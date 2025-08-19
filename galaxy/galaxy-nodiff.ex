@@ -65,6 +65,7 @@ cjs
 claws-mail
 compface
 cvs
+dbeaver
 dillo
 dino
 distrobox

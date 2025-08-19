@@ -1,4 +1,5 @@
 0ad
+aardvark-dns
 accountsservice
 alacritty
 alsa-utils
@@ -90,7 +91,6 @@ dbus-broker
 ddcutil
 dhcpcd
 dns-over-https
-dnscrypt-proxy
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -167,8 +167,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghex
-ghex-docs
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -309,6 +307,7 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
+knotifications5
 kopeninghours
 ksnip
 ksystemlog
@@ -650,6 +649,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-argparse-manpage
 python-deadlib
 python-nntplib
 python-cgi
@@ -802,6 +802,7 @@ shairport-sync
 signal-desktop
 smartmontools
 snapper
+softhsm
 solid
 spice-vdagent
 squid

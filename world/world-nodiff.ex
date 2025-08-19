@@ -7,7 +7,6 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
-aardvark-dns
 abseil-cpp
 accerciser
 accessibility-inspector
@@ -471,6 +470,7 @@ dmenu
 dmg2img
 dmidecode
 dns-lexicon
+dnscrypt-proxy
 dnsmasq
 docbook-dsssl
 docbook-sgml
@@ -743,6 +743,8 @@ geos
 getdns
 gflags
 gfxstream
+ghex
+ghex-docs
 ghostscript
 gi-docgen
 giflib
@@ -1436,7 +1438,6 @@ knewstuff5
 knights
 knotes
 knotifications
-knotifications5
 knotifyconfig
 knotifyconfig5
 koko
@@ -3181,7 +3182,6 @@ python-argon2-cffi-bindings
 python-argon2-cffi
 python-argon2_cffi
 python-argparse-addons
-python-argparse-manpage
 python-arpeggio
 python-arpy
 python-arrow
@@ -5217,7 +5217,6 @@ socat
 sof-bin
 sof-firmware
 sof-tools
-softhsm
 solid5
 solr
 sonivox

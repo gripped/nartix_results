@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
-   libseccomp
+@@ -19,7 +19,7 @@
    man-db
    shadow
+   sqlite
 -  systemd
 +  udev
  )
  options=(!lto)
  source=(
-@@ -68,6 +68,8 @@
+@@ -70,6 +70,8 @@
    )
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -18,7 +18,7 @@
  }
  
  package_podman-docker() {
-@@ -80,4 +82,6 @@
+@@ -82,4 +84,6 @@
    provides=(docker)
  
    make -j1 install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
@@ -31,9 +31,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,4 +19,4 @@
- podman
+@@ -20,4 +20,4 @@
  sh
  shadow
+ sqlite
 -systemd
 +udev
