@@ -7,6 +7,7 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
+aardvark-dns
 abseil-cpp
 accerciser
 accessibility-inspector
@@ -713,6 +714,7 @@ fwknop
 fzf
 gajim
 galculator
+gavl
 gcab
 gcc13
 gcc14
@@ -1615,7 +1617,6 @@ libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
-libavc1394
 libavif
 libavtp
 libayatana-appindicator
@@ -3063,6 +3064,7 @@ protobuf-c
 protobuf
 python-protobuf
 ruby-google-protobuf
+proxytunnel
 prrte
 prrte-docs
 pstoedit
@@ -3456,7 +3458,6 @@ python-eventlet
 python-exceptiongroup
 python-execnet
 python-executing
-python-expandvars
 python-expects
 python-extras
 python-factory-boy
@@ -3709,7 +3710,6 @@ python-lazy-object-proxy
 python-ldap
 python-ldap3
 python-legacy-cgi
-python-levenshtein
 python-lexicon
 python-libarchive-c
 python-libcst
@@ -3811,7 +3811,6 @@ python-nethsm-sdk-py
 python-netifaces
 python-netifaces2
 python-networkx
-python-nh3
 python-nine
 python-nitrokey
 python-nkdfu
@@ -4192,7 +4191,6 @@ python-quart-trio
 python-quart
 python-railroad-diagrams
 python-random2
-python-rapidfuzz
 python-rapidjson
 python-rcssmin
 python-rdflib
@@ -5217,6 +5215,7 @@ socat
 sof-bin
 sof-firmware
 sof-tools
+softhsm
 solid5
 solr
 sonivox
@@ -5230,8 +5229,6 @@ soundtouch
 source-highlight
 sox
 spamassassin
-spandsp
-spandsp-docs
 sparsehash
 spatialindex
 spdlog
@@ -5259,7 +5256,6 @@ srt
 sshfs
 sshpass
 sshuttle
-startup-notification
 stb
 stellarsolver
 step-cli

@@ -1,5 +1,4 @@
 0ad
-aardvark-dns
 accountsservice
 alacritty
 alsa-utils
@@ -157,7 +156,6 @@ gamemode
 gamescope
 gammastep
 garcon
-gavl
 gcc12
 gcr-4
 gcr-4-docs
@@ -314,6 +312,7 @@ ksystemlog
 kwin-x11
 kwin
 libatasmart
+libavc1394
 libayatana-indicator
 libblastrampoline
 libblockdev
@@ -637,7 +636,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-proxytunnel
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -654,9 +652,13 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-expandvars
+python-levenshtein
+python-nh3
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
+python-rapidfuzz
 python-recommonmark
 qastools
 qbittorrent
@@ -802,13 +804,15 @@ shairport-sync
 signal-desktop
 smartmontools
 snapper
-softhsm
 solid
+spandsp
+spandsp-docs
 spice-vdagent
 squid
 sshguard
 sslh
 sssd
+startup-notification
 strongswan
 stunnel
 sway
