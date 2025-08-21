@@ -32,6 +32,7 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
+neofetch
 nvidia-390xx-utils
 nvm
 opensc

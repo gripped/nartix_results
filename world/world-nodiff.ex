@@ -1440,6 +1440,7 @@ knewstuff5
 knights
 knotes
 knotifications
+knotifications5
 knotifyconfig
 knotifyconfig5
 koko
@@ -1617,6 +1618,7 @@ libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
+libavc1394
 libavif
 libavtp
 libayatana-appindicator
@@ -3184,6 +3186,7 @@ python-argon2-cffi-bindings
 python-argon2-cffi
 python-argon2_cffi
 python-argparse-addons
+python-argparse-manpage
 python-arpeggio
 python-arpy
 python-arrow
@@ -3458,6 +3461,7 @@ python-eventlet
 python-exceptiongroup
 python-execnet
 python-executing
+python-expandvars
 python-expects
 python-extras
 python-factory-boy
@@ -3710,6 +3714,7 @@ python-lazy-object-proxy
 python-ldap
 python-ldap3
 python-legacy-cgi
+python-levenshtein
 python-lexicon
 python-libarchive-c
 python-libcst
@@ -3811,6 +3816,7 @@ python-nethsm-sdk-py
 python-netifaces
 python-netifaces2
 python-networkx
+python-nh3
 python-nine
 python-nitrokey
 python-nkdfu
@@ -4191,6 +4197,7 @@ python-quart-trio
 python-quart
 python-railroad-diagrams
 python-random2
+python-rapidfuzz
 python-rapidjson
 python-rcssmin
 python-rdflib
@@ -5218,7 +5225,6 @@ sof-tools
 softhsm
 solid5
 solr
-sonivox
 sonnet
 sonnet5
 sopel

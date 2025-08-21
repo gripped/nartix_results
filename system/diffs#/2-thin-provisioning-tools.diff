@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,15 +1,15 @@
+ 
+ pkgname=thin-provisioning-tools
+-pkgver=1.2.1
++pkgver=1.2.0
+ pkgrel=1
+ pkgdesc='Suite of tools for manipulating the metadata of the dm-thin device-mapper target'
  arch=('x86_64')
  url='https://github.com/jthornber/thin-provisioning-tools'
  license=('GPL3')
@@ -8,7 +14,11 @@
 +depends=('gcc-libs')
  makedepends=('git' 'cargo' 'clang' 'device-mapper')
  source=("git+https://github.com/jthornber/thin-provisioning-tools#tag=v${pkgver}")
- sha256sums=('f57dc300f93a825f6359ffc6d11f8eff40c5c461946b221c00d4a805e620a66d')
+-sha256sums=('01b5c632b270ab40800b8483079541f0cb4bcffbca234436a20b070ec11dfa58')
++sha256sums=('f57dc300f93a825f6359ffc6d11f8eff40c5c461946b221c00d4a805e620a66d')
+ 
+ build() {
+   cd "${srcdir}/${pkgname}"
 
 
 ############# Stripped diff below #################

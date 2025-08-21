@@ -254,7 +254,6 @@ msedit
 muffin
 mugshot
 nemo
-neofetch
 nerd-fonts
 otf-aurulent-nerd
 otf-codenewroman-nerd
