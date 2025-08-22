@@ -1144,7 +1144,6 @@ isodate
 python-isodate
 ispc
 ispell
-isync
 itinerary
 itstool
 iucode-tool

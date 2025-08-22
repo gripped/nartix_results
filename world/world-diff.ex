@@ -259,6 +259,7 @@ intel-opencl-clang
 intel-undervolt
 interception-tools
 isoimagewriter
+isync
 iwd
 jack2
 jack2-dbus

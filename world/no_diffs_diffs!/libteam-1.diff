@@ -17,20 +17,3 @@
    install -Dt "$pkgdir/usr/share/dbus-1/system.d" -m644 teamd/dbus/teamd.conf
  }
  
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--
--bash
--doxygen
--git
--graphviz
--jansson
--libdaemon
--libdbus
--libnl
--zeromq
