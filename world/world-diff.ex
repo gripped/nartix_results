@@ -763,6 +763,7 @@ redshift
 refind
 refind-docs
 ristretto
+rlwrap
 rocalution
 rocfft
 rocrand

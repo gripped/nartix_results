@@ -4714,7 +4714,6 @@ riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
 rkcommon
-rlwrap
 rng-tools
 rnnoise
 robin-map
