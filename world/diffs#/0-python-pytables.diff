@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-pytables
+ _pkgname=PyTables
+ pkgver=3.10.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc="A Python package to manage extremely large amounts of data"
+ arch=(x86_64)
+ url="https://www.pytables.org"
+@@ -47,7 +47,6 @@
+ 
+ build() {
+   cd $_pkgname
+-  export CFLAGS="$CFLAGS -std=gnu11"
+   python -m build --wheel --no-isolation
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,5 @@
+ }
+ build() {
+ cd $_pkgname
+-export CFLAGS="$CFLAGS -std=gnu11"
+ python -m build --wheel --no-isolation
+ }

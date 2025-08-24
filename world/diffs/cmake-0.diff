@@ -1,11 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cmake
+-pkgver=4.1.0
++pkgver=4.0.3
+ pkgrel=1
+ pkgdesc='A cross-platform open-source make system'
+ arch=('x86_64')
 @@ -28,11 +28,14 @@
    'ninja: for ninja generator'
    'qt6-base: cmake-gui'
  )
 -source=(git+https://gitlab.kitware.com/cmake/cmake.git#tag=v$pkgver?signed)
--sha512sums=('19bbc12717eecf60225c085e1c5bd7cfb22ef52e939584ee912eb6f685bdeadff5eb320c1b267a167c8fee6323955f24df3eb27bbb728a25fbb86b71f0b2b6d3')
+-sha512sums=('ab0ae1e7b750d81f155dc990180b3ac9a7e2328df2889a4d3e69450f2203486745fad93f9b66f6828793c2390f27ceadcab90c32eaf3c0393dfcdb77aef253a8')
 +source=(git+https://gitlab.kitware.com/cmake/cmake.git#tag=v$pkgver?signed
 +        artix-cmake.patch)
 +sha512sums=('19bbc12717eecf60225c085e1c5bd7cfb22ef52e939584ee912eb6f685bdeadff5eb320c1b267a167c8fee6323955f24df3eb27bbb728a25fbb86b71f0b2b6d3'

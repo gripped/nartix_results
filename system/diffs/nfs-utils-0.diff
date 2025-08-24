@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -40,7 +40,7 @@
+@@ -43,7 +43,7 @@
      --enable-ipv6 \
      --enable-libmount-mount \
      --enable-mountconfig \
@@ -9,7 +9,7 @@
    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
    make
  }
-@@ -68,7 +68,6 @@
+@@ -71,7 +71,6 @@
    install -D -m 644 nfs.conf "$pkgdir"/etc/nfs.conf
  
    install -d -m 755 "$pkgdir"/usr/share/doc/$pkgname
@@ -25,7 +25,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -21,7 +21,7 @@
  --enable-ipv6 \
  --enable-libmount-mount \
  --enable-mountconfig \

@@ -2,11 +2,11 @@
 +++ Artix PKGBUILD
 @@ -1,53 +1,38 @@
  
--_electron=electron36
+-_electron=electron37
 +_electron=electron24
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--pkgver=1.11.103
+-pkgver=1.11.109
 +pkgver=1.11.33
  pkgrel=1
  pkgdesc="Glossy Matrix collaboration client — "
@@ -38,8 +38,8 @@
          autolaunch.patch
          io.element.Element.desktop
          element-desktop.sh)
--sha256sums=('eeeff356e6b3b1083f375b6c730eecd7a8713ea3c7907642b1b893d920bc0abd'
--            '238f2d5aafba3fd6d9dbbba2987e78723782b8b35523a512eafe7badcaf79590'
+-sha256sums=('c0d218a3cdd36303793608e966ff5d07101d4bba57f570cd4a9816ec75d8d63c'
+-            'c828e7e22722d52a82ee53b347071245dc6395c0d23598462c34fe50de3634f3'
 +sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
 +            'SKIP'
 +            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
@@ -69,7 +69,7 @@
    patch -p1 < ../autolaunch.patch
    sed -i 's|"target": "deb"|"target": "dir"|' package.json
    sed -i 's|"https://packages.element.io/desktop/update/"|null|' element.io/release/config.json
-@@ -56,10 +41,10 @@
+@@ -56,21 +41,21 @@
  
  build() {
    export NODE_OPTIONS=--openssl-legacy-provider
@@ -83,7 +83,11 @@
    export SQLCIPHER_BUNDLED=1
    export CFLAGS+=" -ffat-lto-objects"
    yarn run build:native
-@@ -70,7 +55,7 @@
+-  yarn run build --publish never
++  yarn run build
+ }
+ 
+ package_element-web() {
    pkgdesc+="web version."
    replaces=(riot-web vector-web)
  
@@ -117,7 +121,7 @@
 --- arch_depends
 +++ artix_depends
 @@ -1,13 +0,0 @@
--electron36
+-electron37
 -element-web
 -git
 -jq
@@ -149,7 +153,7 @@
  patch -p1 < ../autolaunch.patch
  sed -i 's|"target": "deb"|"target": "dir"|' package.json
  sed -i 's|"https://packages.element.io/desktop/update/"|null|' element.io/release/config.json
-@@ -15,9 +10,9 @@
+@@ -15,11 +10,11 @@
  }
  build() {
  export NODE_OPTIONS=--openssl-legacy-provider
@@ -162,3 +166,6 @@
  export SQLCIPHER_BUNDLED=1
  export CFLAGS+=" -ffat-lto-objects"
  yarn run build:native
+-yarn run build --publish never
++yarn run build
+ }

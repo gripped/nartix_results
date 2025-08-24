@@ -15,6 +15,7 @@ gtklock
 labwc
 lemurs
 libetonyek
+libodfgen
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -37,6 +38,7 @@ neofetch
 nvidia-390xx-utils
 nvm
 opensc
+perl-cgi-fast
 qbittorrent
 qbittorrent-nox
 rage

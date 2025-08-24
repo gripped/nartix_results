@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-flask
+-pkgver=3.1.2
++pkgver=3.1.1
+ pkgrel=1
+ pkgdesc='Micro webdevelopment framework for Python'
+ url='https://flask.palletsprojects.com/'
+@@ -21,17 +21,14 @@
+   'python-installer'
+   'python-wheel'
+ )
+-checkdepends=(
+-  'python-asgiref'
+-  'python-pytest'
+-)
++checkdepends=('python-pytest')
+ optdepends=(
+   'python-asgiref: async functions and views'
+   'python-cryptography: using ad-hoc certificates'
+   'python-dotenv: loading env vars from files'
+ )
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/pallets/flask/archive/$pkgver.tar.gz")
+-sha512sums=('87fcb2c73531eca0151286204034e433130f74ae365e62600f3973fbd0f11d0cdead62b07a9f4cbaaca2a1b2c149063be091c00addeba1f9ba6b7f2f2e0572c2')
++sha512sums=('8bf68f4f1646bfb7e98ef432e68ca70cee641116164e0ab6777221be749b2b5a1a7c72b86a1044eeb9e9d97a87656cd31daa7f7d4d9dcbaad14a25885dc9414a')
+ 
+ build() {
+   cd ${pkgname#python-}-$pkgver

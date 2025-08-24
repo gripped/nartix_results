@@ -213,12 +213,15 @@ xcursor-breeze
 xcursor-premium
 xlibre-xf86-input-elographics
 xlibre-xf86-input-evdev
+xlibre-xf86-input-keyboard
 xlibre-xf86-input-libinput
+xlibre-xf86-input-mouse
 xlibre-xf86-input-synaptics
 xlibre-xf86-input-vmmouse
 xlibre-xf86-input-void
 xlibre-xf86-input-wacom
 xlibre-xf86-video-amdgpu
+xlibre-xf86-video-ast
 xlibre-xf86-video-ati
 xlibre-xf86-video-dummy
 xlibre-xf86-video-fbdev

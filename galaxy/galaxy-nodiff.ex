@@ -120,7 +120,6 @@ libmatekbd
 libmatemixer
 libmateweather
 libmspub
-libodfgen
 libopenshot-audio
 libopenshot-audio-docs
 libopenshot
@@ -174,6 +173,7 @@ linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs
+lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -335,7 +335,6 @@ pcmanfm-qt
 pcmanfm
 peek
 perl-cairo-gobject
-perl-cgi-fast
 perl-config-grammar
 perl-convert-asn1
 perl-crypt-des
@@ -390,6 +389,7 @@ rgbds
 rio
 ristretto
 rpi-imager
+sakura
 salt
 screengrab
 scribus
@@ -398,6 +398,7 @@ shairplay
 smokeping
 snorenotify
 solaar
+spotify-launcher
 sqlitebrowser
 stalonetray
 starship

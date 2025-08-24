@@ -6,7 +6,6 @@ amule
 apache
 apcupsd
 appstream
-appstream-qt5
 appstream-qt
 aquamarine
 archivetools
@@ -82,6 +81,7 @@ connman
 containerd
 convertlit
 cppcheck
+criterion
 crun
 cups
 libcups
@@ -145,6 +145,7 @@ flatpak-docs
 fluidsynth
 font-manager
 fprintd
+freeradius
 freerdp
 freerdp2
 frugally-deep
@@ -253,6 +254,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -307,7 +309,9 @@ kitty-shell-integration
 knockd
 knot
 kopeninghours
+krita
 ksnip
+kstars
 ksystemlog
 kwin-x11
 kwin
@@ -352,6 +356,7 @@ libmspub
 libnvme
 libprocps
 libqb
+librdkafka
 librest
 librest-docs
 librest-demos
@@ -646,14 +651,22 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-argon2-cffi-bindings
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-fastbencode
+python-filelock
+python-fixtures
 python-pymupdf
+python-pytables
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-sentinels
+python-zope-deferredimport
+python-zope-schema
 qastools
 qbittorrent
 qbittorrent-nox
@@ -748,6 +761,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-webengine
 qterminal
 qtermwidget
 quadrapassel

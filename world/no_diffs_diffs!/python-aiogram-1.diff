@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-aiogram
+-pkgver=3.22.0
++pkgver=3.21.0
+ pkgrel=1
+ pkgdesc="A modern and fully asynchronous framework for Telegram Bot API"
+ arch=('any')
+@@ -11,7 +11,6 @@
+   'python-aiofiles'
+   'python-aiohttp'
+   'python-certifi'
+-  'python-cryptography'
+   'python-magic-filter'
+   'python-pydantic'
+ )
+@@ -47,7 +46,7 @@
+   'python-babel: i18n support'
+ )
+ source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('5554a6feccce80efa6c1f3a76f529a2f0b85951783208297d205543f78799a5a')
++sha256sums=('d39ad0dce5a6800ac1223fdfbda8a461dea0a8db4d82af2bfa2d73f0893fe70e')
+ 
+ build() {
+   cd ${pkgname#python-}-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,6 @@
+ python-aiohttp
+ python-build
+ python-certifi
+-python-cryptography
+ python-hatchling
+ python-installer
+ python-magic-filter
