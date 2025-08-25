@@ -81,7 +81,6 @@ connman
 containerd
 convertlit
 cppcheck
-criterion
 crun
 cups
 libcups
@@ -166,6 +165,8 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+git
+git-zsh-completion
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -254,7 +255,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -356,7 +356,6 @@ libmspub
 libnvme
 libprocps
 libqb
-librdkafka
 librest
 librest-docs
 librest-demos
@@ -539,6 +538,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+okularpart5
 onboard
 onionshare
 open-iscsi
@@ -651,22 +651,14 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-argon2-cffi-bindings
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-fastbencode
-python-filelock
-python-fixtures
 python-pymupdf
-python-pytables
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-sentinels
-python-zope-deferredimport
-python-zope-schema
 qastools
 qbittorrent
 qbittorrent-nox
@@ -761,7 +753,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-webengine
 qterminal
 qtermwidget
 quadrapassel

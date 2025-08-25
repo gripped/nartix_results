@@ -173,6 +173,9 @@ linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs
+linux-zen
+linux-zen-headers
+linux-zen-docs
 lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf

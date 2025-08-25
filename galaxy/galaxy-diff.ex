@@ -24,9 +24,6 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
-linux-zen
-linux-zen-headers
-linux-zen-docs
 ly
 mate-control-center
 mate-screensaver

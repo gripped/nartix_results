@@ -390,6 +390,7 @@ cppdap
 cppunit
 cpputest
 cppzmq
+criterion
 criu
 cryptoplusplus
 cscope
@@ -753,8 +754,6 @@ gimp-help
 gimp
 girara
 git-lfs
-git
-git-zsh-completion
 gitea
 github-cli
 gkrellm
@@ -1107,6 +1106,7 @@ inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1943,6 +1943,7 @@ librabbitmq-c
 libraqm
 libraw
 libraw1394
+librdkafka
 libreplaygain
 libressl
 libretls
@@ -2489,7 +2490,6 @@ ocl-icd
 odt2txt
 okteta
 okular
-okularpart5
 onednn
 onetbb
 onevpl
@@ -3175,6 +3175,7 @@ python-archinfo
 python-aresponses
 python-argcomplete
 python-argh
+python-argon2-cffi-bindings
 python-argon2-cffi
 python-argon2_cffi
 python-argparse-addons
@@ -3461,6 +3462,7 @@ python-faker
 python-fakeredis
 python-falcon
 python-fastapi
+python-fastbencode
 python-fasteners
 python-fastimport
 python-fastjsonschema
@@ -3474,12 +3476,14 @@ python-feedparser
 python-fido2
 python-fields
 python-filebytes
+python-filelock
 python-filetype
 python-findpython
 python-fiona
 python-fire
 python-first
 python-fissix
+python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flake8
@@ -3560,6 +3564,7 @@ python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
+python-h5netcdf
 python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
@@ -4075,6 +4080,7 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
+python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
@@ -4256,6 +4262,7 @@ python-seedir
 python-semantic-version
 python-semver
 python-send2trash
+python-sentinels
 python-sentry_sdk
 python-serpent
 python-service-identity
@@ -4524,6 +4531,7 @@ python-zodbpickle
 python-zope-component
 python-zope-configuration
 python-zope-copy
+python-zope-deferredimport
 python-zope-deprecation
 python-zope-event
 python-zope-exceptions
@@ -4532,6 +4540,7 @@ python-zope-i18nmessageid
 python-zope-interface
 python-zope-location
 python-zope-proxy
+python-zope-schema
 python-zope-security
 python-zope-testing
 python-zope-testrunner
@@ -4639,6 +4648,7 @@ qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct

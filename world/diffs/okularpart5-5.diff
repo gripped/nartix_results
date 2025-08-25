@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=okularpart5
+ pkgver=23.08.5
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Qt5 Okular KPart'
+ arch=(x86_64)
+ url='https://apps.kde.org/okular/'
+@@ -29,17 +29,23 @@
+          kwidgetsaddons5
+          kxmlgui5
+          libjpeg-turbo
++         libkexiv2-qt5
+          libspectre
+          libtiff
+          poppler-qt5
++         purpose5
+          qt5-base
+          qt5-declarative
+          qt5-speech
+          qt5-svg
+          threadweaver5
+          zlib)
+-makedepends=(extra-cmake-modules
++makedepends=(ebook-tools
++             extra-cmake-modules
+              kactivities5)
++optdepends=('ebook-tools: mobi and epub support'
++            'unarchiver: Comic Book Archive support (alternative)'
++            'unrar: Comic Book Archive support')
+ conflicts=('okular<24')
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/okular-$pkgver.tar.xz{,.sig})
+ sha256sums=('d5d51f69b176a250907ee70e8f97143fc9d705cee3ef7ff448626c8a529ce364'
+@@ -51,7 +57,7 @@
+ build() {
+   cmake -B build -S okular-$pkgver \
+     -DBUILD_TESTING=OFF \
+-    -DFORCE_NOT_REQUIRED_DEPENDENCIES="KF5DocTools;CHM;KF5KHtml;QMobipocket;Phonon4Qt5;KF5Purpose;KF5KExiv2;LibZip;EPub"
++    -DFORCE_NOT_REQUIRED_DEPENDENCIES="KF5DocTools;CHM;KF5KHtml;QMobipocket;Phonon4Qt5"
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ discount
+ djvulibre
++ebook-tools
+ extra-cmake-modules
+ freetype2
+ gcc-libs
+@@ -23,9 +24,11 @@
+ kwidgetsaddons5
+ kxmlgui5
+ libjpeg-turbo
++libkexiv2-qt5
+ libspectre
+ libtiff
+ poppler-qt5
++purpose5
+ qt5-base
+ qt5-declarative
+ qt5-speech
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ cmake -B build -S okular-$pkgver \
+ -DBUILD_TESTING=OFF \
+--DFORCE_NOT_REQUIRED_DEPENDENCIES="KF5DocTools;CHM;KF5KHtml;QMobipocket;Phonon4Qt5;KF5Purpose;KF5KExiv2;LibZip;EPub"
++-DFORCE_NOT_REQUIRED_DEPENDENCIES="KF5DocTools;CHM;KF5KHtml;QMobipocket;Phonon4Qt5"
+ cmake --build build
+ }
