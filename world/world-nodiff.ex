@@ -145,7 +145,6 @@ audacity
 audacity-docs
 audex
 audiocd-kio
-audiofile
 audiotube
 augeas
 aurorae
@@ -241,7 +240,6 @@ botan
 botan2
 bovo
 bower
-bpf-linker
 bpython
 brasero
 breeze-grub
@@ -746,7 +744,6 @@ gflags
 gfxstream
 ghex
 ghex-docs
-ghostscript
 gi-docgen
 giflib
 gifski
@@ -754,6 +751,8 @@ gimp-help
 gimp
 girara
 git-lfs
+git
+git-zsh-completion
 gitea
 github-cli
 gkrellm
@@ -1555,7 +1554,6 @@ kxmlgui
 kxmlgui5
 kyotocabinet
 l-smash
-ladspa
 lager
 lame
 languagetool
@@ -2419,7 +2417,6 @@ networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
 newsboat
-nftables
 nginx
 nginx-mod-geoip
 nginx-mod-image-filter
@@ -2490,6 +2487,7 @@ ocl-icd
 odt2txt
 okteta
 okular
+okularpart5
 onednn
 onetbb
 onevpl
@@ -4427,7 +4425,6 @@ python-typed-ast
 python-typeguard
 python-types-python-dateutil
 python-typing-inspection
-python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata

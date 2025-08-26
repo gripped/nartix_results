@@ -14,6 +14,7 @@ at-spi2-core-docs
 at
 atril
 audacious-plugins
+audiofile
 avahi
 awesome
 aws-cli-v2
@@ -31,6 +32,7 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
+bpf-linker
 brightnessctl
 brltty
 brltty-udev-generic
@@ -165,8 +167,7 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-git
-git-zsh-completion
+ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -315,6 +316,7 @@ kstars
 ksystemlog
 kwin-x11
 kwin
+ladspa
 libatasmart
 libayatana-indicator
 libblastrampoline
@@ -525,6 +527,7 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+nftables
 niri
 nodejs-lts-hydrogen
 nsd
@@ -538,7 +541,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-okularpart5
 onboard
 onionshare
 open-iscsi
@@ -659,6 +661,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-typing_extensions
 qastools
 qbittorrent
 qbittorrent-nox

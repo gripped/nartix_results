@@ -64,6 +64,7 @@ cinnamon
 cjs
 claws-mail
 compface
+copyq
 cvs
 dbeaver
 dillo

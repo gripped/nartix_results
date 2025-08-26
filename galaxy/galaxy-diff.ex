@@ -1,7 +1,6 @@
 alsa-utils
 autorandr
 cinnamon-desktop
-copyq
 doctest
 ecrire
 efl

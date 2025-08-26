@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,11 +15,10 @@
+@@ -2,7 +2,7 @@
+ pkgname=nftables
+ epoch=1
+ pkgver=1.1.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Netfilter tables userspace tools'
+ arch=('x86_64')
+ url='https://netfilter.org/projects/nftables/'
+@@ -15,18 +15,13 @@
  validpgpkeys=('8C5F7146A1757A65E2422A94D70D1A666ACF2B21') # Netfilter Core Team
  source=("git+https://git.netfilter.org/nftables.git#tag=v${pkgver}?signed"
          'nftables.conf'
@@ -14,9 +23,32 @@
  
  prepare() {
    cd $pkgname
-@@ -48,5 +47,4 @@
+-
+-  git cherry-pick -n \
+-    '5e492307c2c93b7eb654691ca87ddc7ad86640d8'
+-
+   autoreconf -fiv
+ }
+ 
+@@ -52,5 +47,4 @@
    python -m installer --destdir="$pkgdir" py/dist/*.whl
    popd
    install -Dm644 nftables.conf "$pkgdir/etc/nftables.conf"
 -  install -Dm644 nftables.service "$pkgdir/usr/lib/systemd/system/nftables.service"
  }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,5 @@
+ prepare() {
+ cd $pkgname
+-git cherry-pick -n \
+-'5e492307c2c93b7eb654691ca87ddc7ad86640d8'
+ autoreconf -fiv
+ }
+ build() {

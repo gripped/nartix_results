@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ghostscript
+ pkgver=10.05.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc="An interpreter for the PostScript language"
+ url="https://www.ghostscript.com/"
+ arch=('x86_64')
+@@ -36,13 +36,13 @@
+   rm -r Resource/CMap
+ 
+   patch -Np1 -i ../2010_add_build_timestamp_setting.patch
++  patch -Np1 -i ../gcc15.patch
+ }
+ 
+ build() {
+   cd ghostscript-${pkgver}
+ 
+-
+-  export CFLAGS="$CFLAGS -std=gnu17"
++  export CFLAGS+=" -Wno-incompatible-pointer-types -Wno-int-conversion"
+ 
+   ./configure --prefix=/usr \
+               --with-ijs \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,10 +5,11 @@
+ rm -rf gpdl
+ rm -r Resource/CMap
+ patch -Np1 -i ../2010_add_build_timestamp_setting.patch
++patch -Np1 -i ../gcc15.patch
+ }
+ build() {
+ cd ghostscript-${pkgver}
+-export CFLAGS="$CFLAGS -std=gnu17"
++export CFLAGS+=" -Wno-incompatible-pointer-types -Wno-int-conversion"
+ ./configure --prefix=/usr \
+ --with-ijs \
+ --with-jbig2dec \

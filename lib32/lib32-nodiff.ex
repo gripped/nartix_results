@@ -51,7 +51,6 @@ lib32-json-c
 lib32-json-glib
 lib32-keyutils
 lib32-krb5
-lib32-ladspa
 lib32-lcms2
 lib32-libarchive
 lib32-libasyncns
