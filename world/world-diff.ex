@@ -32,7 +32,6 @@ bluez-mesh
 bluez-obex
 bolt
 box2d
-bpf-linker
 brightnessctl
 brltty
 brltty-udev-generic
@@ -46,6 +45,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+catch2
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -167,7 +167,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-ghostscript
 gjs
 gnome-bluetooth-3.0
 gnome-desktop
@@ -249,6 +248,8 @@ haproxy
 haveged
 hexchat
 hidapi
+hipcub
+hipsolver
 hwloc
 hyprland
 i2pd
@@ -527,7 +528,6 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-nftables
 niri
 nodejs-lts-hydrogen
 nsd
@@ -642,6 +642,9 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+protobuf
+python-protobuf
+ruby-google-protobuf
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -661,7 +664,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-typing_extensions
 qastools
 qbittorrent
 qbittorrent-nox
@@ -774,6 +776,10 @@ ristretto
 rlwrap
 rocalution
 rocfft
+rocm-llvm
+rocm-device-libs
+comgr
+rocprim
 rocrand
 rocsparse
 rrdtool
@@ -795,6 +801,7 @@ libwbclient
 ldb
 smbclient
 sane
+schedtool
 scribus
 sdbus-cpp
 $pkgbase
@@ -990,6 +997,7 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
+webrtc-audio-processing
 weston
 wireplumber
 libwireplumber

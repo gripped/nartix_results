@@ -240,6 +240,7 @@ botan
 botan2
 bovo
 bower
+bpf-linker
 bpython
 brasero
 breeze-grub
@@ -290,7 +291,6 @@ cargo-edit
 caribou
 catatonit
 catch2-v2
-catch2
 catdoc
 cauchy
 cbatticon
@@ -744,6 +744,7 @@ gflags
 gfxstream
 ghex
 ghex-docs
+ghostscript
 gi-docgen
 giflib
 gifski
@@ -1024,12 +1025,10 @@ hip-runtime
 hip-runtime-amd
 hip-runtime-nvidia
 hipblas
-hipcub
 hipfft
 hipify-clang
 hiprand
 hiprt
-hipsolver
 hipsparse
 hiredis
 hitori
@@ -2417,6 +2416,7 @@ networkmanager-openvpn
 networkmanager-qt
 networkmanager-qt5
 newsboat
+nftables
 nginx
 nginx-mod-geoip
 nginx-mod-image-filter
@@ -3054,9 +3054,6 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 proxytunnel
 prrte
 prrte-docs
@@ -4425,6 +4422,7 @@ python-typed-ast
 python-typeguard
 python-types-python-dateutil
 python-typing-inspection
+python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata
@@ -4724,13 +4722,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
-rocm-device-libs
-comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocminfo
-rocprim
 rocprofiler-register
 rocs
 rocsolver
@@ -5136,7 +5130,6 @@ sbc
 sbctl
 sbsigntools
 scdoc
-schedtool
 schroedinger
 scim
 scite
@@ -5675,7 +5668,6 @@ webhook
 webp-pixbuf-loader
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1
-webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder

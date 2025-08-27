@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,17 +1,17 @@
  pkgname=hiprand
--pkgver=6.4.1
+-pkgver=6.4.3
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='rocRAND marshalling library'
@@ -16,7 +16,7 @@
  _git='https://github.com/ROCm/hipRAND'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz"
          "$pkgname-rocm-bin-path.patch")
--sha256sums=('6310b63c31c68e454f6498f06679843bdbd27e1eca0fd40ed1700cae9fce88e0'
+-sha256sums=('15b67f1b0dcad6319d2fa54d3330a075e74d52a650b682f44afa086cb0f526f0'
 +sha256sums=('cb6ff8f58c024b60b3914271921f58f0ab3bdbc9889a53795b40c99c9de0bcd4'
              '144fb5162222d81559e847d31226f7b56215fa558a549c8be534cfba3fbca241')
  options=(!lto)

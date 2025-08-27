@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=catch2
+-pkgver=3.10.0
++pkgver=3.9.1
+ pkgrel=1
+ pkgdesc="Modern, C++-native, header-only, test framework for unit-tests, TDD and BDD"
+ arch=('x86_64')
+@@ -13,7 +13,7 @@
+ )
+ conflicts=('catch2-v2')
+ source=(${pkgname}::"git+https://github.com/catchorg/Catch2#tag=v${pkgver}?signed")
+-sha512sums=('4afdd51836915ac922c77a334ddfd588c19c6894977c153285fc5df9e208453f3f29d1be178b5d6344b26294708efd47ad9b8447db2f37d7020554fb2f7156c6')
++sha512sums=('ba34eadb107cf2fb7e83d667a7f327042feed7f7c99c04cc9d2829d74a143afc5e89338fa8820ea1fcd097530616318db0be69a9de19b019ccb57abecc6f26db')
+ validpgpkeys=(
+   FC5D2FD9051354DBF834F9FD56FB686C9DFC8E2C # Chris Thrasher
+   E29C46F3B8A7502860793B7DECC9C20E314B2360 # Martin Hořeňovský
+@@ -24,6 +24,7 @@
+ prepare() {
+   cd "${pkgname}"
+ 
++  git revert -n 3839e27f056cd975e5be2faa9adb5a8cf1f5dcf4
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd "${pkgname}"
++git revert -n 3839e27f056cd975e5be2faa9adb5a8cf1f5dcf4
+ }
+ build() {
+ local cmake_options=(

@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=lximage-qt
+ pkgver=2.2.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="The LXQt image viewer and screenshot tool"
+ arch=("x86_64")
+ groups=("lxqt")
+ url="https://github.com/lxqt/$pkgname"
+ license=("GPL-2.0-or-later")
+-depends=("hicolor-icon-theme" "libfm-qt" "qt6-svg" "libexif" "libxfixes" "libfm-qt6.so")
++depends=("lxqt-themes" "libfm-qt" "qt6-svg" "libexif" "libxfixes" "libfm-qt6.so")
+ optdepends=(
+ 	"qt6-imageformats: support for additional image formats (WEBP, TIFF, etc.)"
+ 	"kimageformats: support for additional image formats (PCX, XCF, HEIF, etc.)"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+-hicolor-icon-theme
+ libexif
+ libfm-qt
+ libfm-qt6.so
+ libxfixes
+ lxqt-build-tools
++lxqt-themes
+ qt6-svg

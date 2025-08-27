@@ -4,7 +4,7 @@
  
  pkgname=lximage-qt
 -pkgver=2.2.0
--pkgrel=1
+-pkgrel=2
 +pkgver=1.4.0
 +pkgrel=1.1
  pkgdesc="The LXQt image viewer and screenshot tool"
@@ -12,7 +12,7 @@
  groups=("lxqt")
  url="https://github.com/lxqt/$pkgname"
 -license=("GPL-2.0-or-later")
--depends=("lxqt-themes" "libfm-qt" "qt6-svg" "libexif" "libxfixes" "libfm-qt6.so")
+-depends=("hicolor-icon-theme" "libfm-qt" "qt6-svg" "libexif" "libxfixes" "libfm-qt6.so")
 +license=("GPL2")
 +depends=("lxqt-themes" "libfm-qt" "qt5-svg" "libexif" "libxfixes" "libfm-qt.so")
  optdepends=(
@@ -38,12 +38,13 @@
 --- arch_depends
 +++ artix_depends
 @@ -1,7 +1,7 @@
+-hicolor-icon-theme
  libexif
  libfm-qt
 -libfm-qt6.so
 +libfm-qt.so
  libxfixes
  lxqt-build-tools
- lxqt-themes
 -qt6-svg
++lxqt-themes
 +qt5-svg
