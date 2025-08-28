@@ -18,7 +18,6 @@ libodfgen
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libtg_owt
 libusbsio
 python-libusbsio
 libxfce4ui

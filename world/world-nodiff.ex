@@ -291,6 +291,7 @@ cargo-edit
 caribou
 catatonit
 catch2-v2
+catch2
 catdoc
 cauchy
 cbatticon
@@ -1139,6 +1140,7 @@ isodate
 python-isodate
 ispc
 ispell
+isync
 itinerary
 itstool
 iucode-tool
@@ -1553,6 +1555,7 @@ kxmlgui
 kxmlgui5
 kyotocabinet
 l-smash
+ladspa
 lager
 lame
 languagetool
@@ -1876,6 +1879,7 @@ libofa
 libofx
 libofx-doc
 libogg
+liboggz
 libolm
 python-olm
 libomemo-c
@@ -2413,6 +2417,7 @@ netsurf-buildsystem
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
+networkmanager-vpn-plugin-openvpn
 networkmanager-qt
 networkmanager-qt5
 newsboat
@@ -2573,6 +2578,8 @@ oxygen-sounds
 oxygen
 oxygen5
 p7zip
+packagekit-qt
+packagekit-qt6
 pacmanlogviewer
 pacrunner
 pacutils
@@ -3054,6 +3061,9 @@ projectm-pulseaudio
 prometheus
 prosody
 protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 proxytunnel
 prrte
 prrte-docs
@@ -4722,9 +4732,14 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
+rocm-toolchain
 rocminfo
+rocprim
 rocprofiler-register
 rocs
 rocsolver
@@ -5668,6 +5683,7 @@ webhook
 webp-pixbuf-loader
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1
+webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,7 +43,7 @@
+     -D neon=disabled
+   )
+ 
+-  arch-meson webrtc-audio-processing build "${meson_options[@]}"
++  artix-meson webrtc-audio-processing build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ -D cpp_std=c++17
+ -D neon=disabled
+ )
+-arch-meson webrtc-audio-processing build "${meson_options[@]}"
++artix-meson webrtc-audio-processing build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -17,13 +17,3 @@
  
    chmod -R 755 "$pkgdir"/usr/lib/monitoring-plugins
    chown -R root:root "$pkgdir"/usr/lib/monitoring-plugins
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,3 +0,0 @@
--glibc
--openssl
--procps-ng

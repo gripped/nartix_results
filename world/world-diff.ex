@@ -45,7 +45,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-catch2
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -263,7 +262,6 @@ intel-opencl-clang
 intel-undervolt
 interception-tools
 isoimagewriter
-isync
 iwd
 jack2
 jack2-dbus
@@ -317,7 +315,6 @@ kstars
 ksystemlog
 kwin-x11
 kwin
-ladspa
 libatasmart
 libayatana-indicator
 libblastrampoline
@@ -552,9 +549,6 @@ opensmtpd
 opensnitch
 openvpn
 ostree
-packagekit-qt
-packagekit-qt5
-packagekit-qt6
 packagekit
 libpackagekit-glib
 pacman-contrib
@@ -642,9 +636,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-protobuf
-python-protobuf
-ruby-google-protobuf
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -776,10 +767,6 @@ ristretto
 rlwrap
 rocalution
 rocfft
-rocm-llvm
-rocm-device-libs
-comgr
-rocprim
 rocrand
 rocsparse
 rrdtool
@@ -997,7 +984,6 @@ webkit2gtk
 webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
-webrtc-audio-processing
 weston
 wireplumber
 libwireplumber
