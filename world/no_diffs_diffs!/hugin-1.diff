@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=hugin
- pkgver=2024.0.1
--pkgrel=6
-+pkgrel=6.2
- pkgdesc="Panorama photo stitcher"
- arch=(x86_64)
- url="http://hugin.sourceforge.net/"
+@@ -62,3 +62,4 @@
+ package() {
+   make -C build DESTDIR="$pkgdir" install
+ }
++

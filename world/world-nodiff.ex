@@ -1487,6 +1487,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1557,7 +1558,6 @@ kyotocabinet
 l-smash
 ladspa
 lager
-lame
 languagetool
 lapack
 blas
@@ -1779,8 +1779,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
-libkate-docs
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1947,6 +1945,9 @@ libraw1394
 librdkafka
 libreplaygain
 libressl
+librest
+librest-docs
+librest-demos
 libretls
 librevenge
 librsvg
@@ -2017,7 +2018,6 @@ libuninameslist
 libunwind
 libupnp
 liburcu
-liburing
 libusb-compat
 libusbmuxd
 libutf8proc
@@ -5125,8 +5125,6 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
-ruff
-python-ruff
 run-parts
 runc
 rust-bindgen
@@ -5163,7 +5161,6 @@ sdl2_net
 sdl2_ttf
 sdl3
 sdl_image
-sdl_mixer
 sdl_net
 sdl_sound
 sdl_ttf

@@ -251,6 +251,7 @@ libmgba
 mgba-sdl
 mgba-qt
 mimetic
+mixxx
 mokutil
 mousepad
 mozo
@@ -553,6 +554,8 @@ torbrowser-launcher
 ttf-input-nerd
 ttf-jetbrains-mono
 tumbler
+ueberzug
+ueberzugpp
 vagrant
 warpinator
 wev

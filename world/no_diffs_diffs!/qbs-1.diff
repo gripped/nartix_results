@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=qbs
+-pkgver=3.0.2
++pkgver=3.0.1
+ pkgrel=1
+ pkgdesc='Cross platform build tool'
+ arch=(x86_64)
+@@ -13,7 +13,7 @@
+ makedepends=(cmake
+              git)
+ source=(git+https://code.qt.io/qbs/qbs#tag=v$pkgver)
+-sha256sums=('85911455dc5f7c3422c5f566ddfc080c01405322fc299373f4235d3df0500e9d')
++sha256sums=('7f2a1109a3cf69c216a7c74ed6a3d2d20e4e6c4a1e6cb0567aa2d444042d9fd0')
+ 
+ build() {
+   cmake -B build -S $pkgname \

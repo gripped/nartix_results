@@ -7,14 +7,14 @@
 -        'nftables.service')
 +        )
  install=nftables.install
- sha256sums=('af9029347c5cbec915cf4d1f4503a269908cee86a15e35b9f4526b465823ed78'
+ sha256sums=('5a257ae8eb39044e7f618be1ce8f21ab4713ee9ced933fe066d1e08f873eadf4'
 -            'f83d6f2f99f306866850c60ff0e343bbd9bc0c989d333ebe288563f7be4afe20'
 -            'deffeef36fe658867dd9203ec13dec85047a6d224ea63334dcf60db97e1809ea')
 +            'f83d6f2f99f306866850c60ff0e343bbd9bc0c989d333ebe288563f7be4afe20')
  
  prepare() {
    cd $pkgname
-@@ -52,5 +51,4 @@
+@@ -49,5 +48,4 @@
    python -m installer --destdir="$pkgdir" py/dist/*.whl
    popd
    install -Dm644 nftables.conf "$pkgdir/etc/nftables.conf"

@@ -7,20 +7,20 @@
 -depends=('gcc-libs' 'boost-libs' 'libcap' 'libcurl.so' 'libsodium' 'systemd-libs' 'luajit' 'openssl'
 +depends=('gcc-libs' 'boost-libs' 'libcap' 'libcurl.so' 'libsodium' 'esysusers' 'luajit' 'openssl'
           'libboost_context.so' 'fstrm' 'net-snmp')
--makedepends=('boost' 'pandoc' 'ragel' 'rust' 'systemd')
-+makedepends=('boost' 'pandoc' 'ragel' 'rust' )
+-makedepends=('boost' 'meson' 'pandoc' 'python' 'python-yaml' 'ragel' 'rust' 'systemd')
++makedepends=('boost' 'meson' 'pandoc' 'python' 'python-yaml' 'ragel' 'rust' )
  options=(!lto)
  provides=('pdns-recursor')
  conflicts=('pdns-recursor')
-@@ -34,7 +34,7 @@
-     --sysconfdir=/etc/powerdns \
-     --disable-silent-rules \
-     --enable-reproducible \
--    --enable-systemd \
-+    --disable-systemd \
-     --enable-dns-over-tls \
-     --with-libsodium \
-     --with-lua=luajit \
+@@ -39,7 +39,7 @@
+     -Dreproducible=true \
+     -Dsigners-libsodium=enabled \
+     -Dsnmp=enabled \
+-    -Dsystemd-service=enabled \
++    -Dsystemd-service=disabled \
+     -Dunit-tests=true \
+     -Dsigners-libcrypto-path=/usr # workaround for https://github.com/PowerDNS/pdns/issues/14084
+   meson compile -C build
 
 
 ############# Stripped diff below #################
@@ -34,8 +34,8 @@
  fstrm
  gcc-libs
  libboost_context.so
-@@ -12,5 +13,3 @@
- pandoc
+@@ -15,5 +16,3 @@
+ python-yaml
  ragel
  rust
 -systemd
