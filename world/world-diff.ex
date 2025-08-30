@@ -351,7 +351,6 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libkate
 libkeyfinder
 libldm
 libmspub
@@ -364,7 +363,6 @@ libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
-liburing
 libusbsio
 python-libusbsio
 libutempter
@@ -651,6 +649,8 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-oslo-i18n
+python-oslo-serialization
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -766,13 +766,19 @@ refind-docs
 ristretto
 rlwrap
 rocalution
+rocblas
 rocfft
+rocm-llvm
+rocm-device-libs
+comgr
 rocrand
 rocsparse
 rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
+ruby-concurrent
+ruby-mustache
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -991,9 +997,6 @@ weston
 wireplumber
 libwireplumber
 wireplumber-docs
-wireshark
-wireshark-cli
-wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16

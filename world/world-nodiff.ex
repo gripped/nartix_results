@@ -1779,6 +1779,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2018,6 +2019,7 @@ libuninameslist
 libunwind
 libupnp
 liburcu
+liburing
 libusb-compat
 libusbmuxd
 libutf8proc
@@ -3863,9 +3865,7 @@ python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
-python-oslo-i18n
 python-oslo-log
-python-oslo-serialization
 python-oslo-utils
 python-oslotest
 python-outcome
@@ -4720,7 +4720,6 @@ rng-tools
 rnnoise
 robin-map
 roc-toolkit
-rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core
@@ -4732,9 +4731,6 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
-rocm-device-libs
-comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain
@@ -4809,7 +4805,6 @@ ruby-chef-utils
 ruby-childprocess
 ruby-chronic
 ruby-coderay
-ruby-concurrent
 ruby-connection_pool
 ruby-console
 ruby-covered
@@ -4943,7 +4938,6 @@ ruby-multi_json
 ruby-multi_test
 ruby-multipart-parser
 ruby-multipart-post
-ruby-mustache
 ruby-mustermann
 ruby-mutex_m
 ruby-nanotest
@@ -5691,6 +5685,9 @@ wine-staging
 wine
 wireguard-tools
 wireless_tools
+wireshark
+wireshark-cli
+wireshark-qt
 wl-clip-persist
 wl-clipboard
 woff2

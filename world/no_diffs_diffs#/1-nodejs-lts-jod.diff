@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=nodejs-lts-jod
+-pkgver=22.19.0
++pkgver=22.18.0
+ pkgrel=1
+ pkgdesc='Evented I/O for V8 javascript ("Active LTS" release: Jod)'
+ arch=(x86_64)
+@@ -16,7 +16,7 @@
+ )
+ conflicts=(nodejs)
+ source=("https://nodejs.org/dist/v${pkgver}/node-v${pkgver}.tar.xz")
+-sha256sums=('0272acfce50ce9ad060288321b1092719a7f19966f81419835410c59c09daa46')
++sha256sums=('120e0f74419097a9fafae1fd80b9de7791a587e6f1c48c22b193239ccd0f7084')
+ 
+ _set_flags() {
+   CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
