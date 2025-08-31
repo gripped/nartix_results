@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=qt6-location
+-_pkgver=6.9.2
++_pkgver=6.9.1
+ pkgver=${_pkgver/-/}
+ pkgrel=1
+ arch=(x86_64)
+@@ -21,7 +21,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('beafdf8f64ab24fbe142e771eafec067f04d92e49f99316728dfc57f1522333a')
++sha256sums=('facd2155e6820d690664cdc0256b69699ba55db6460edfd09cc46962190e4dab')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \

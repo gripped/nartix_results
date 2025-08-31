@@ -1779,7 +1779,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2622,7 +2621,6 @@ pdal
 pdfarranger
 pdfgrep
 pdfjs
-pdfmixtool
 pdnsd
 pegtl
 pelican
@@ -3865,7 +3863,9 @@ python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
+python-oslo-i18n
 python-oslo-log
+python-oslo-serialization
 python-oslo-utils
 python-oslotest
 python-outcome
@@ -4624,7 +4624,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4648,12 +4647,10 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
-qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4663,7 +4660,6 @@ qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
-qtqr
 qtxdg-tools
 quilt
 quota-tools
@@ -4805,6 +4801,7 @@ ruby-chef-utils
 ruby-childprocess
 ruby-chronic
 ruby-coderay
+ruby-concurrent
 ruby-connection_pool
 ruby-console
 ruby-covered
@@ -4938,6 +4935,7 @@ ruby-multi_json
 ruby-multi_test
 ruby-multipart-parser
 ruby-multipart-post
+ruby-mustache
 ruby-mustermann
 ruby-mutex_m
 ruby-nanotest
@@ -5864,8 +5862,6 @@ zeroc-ice-java
 zfp
 zig
 zimg
-zint
-zint-qt
 zip
 ziproxy
 zita-alsa-pcmi

@@ -351,6 +351,7 @@ libgudev
 libguestfs
 libhandy0
 libinput
+libkate
 libkeyfinder
 libldm
 libmspub
@@ -559,6 +560,7 @@ pc-ble-driver
 pcmanfm-gtk3
 pcmanfm
 pcsclite
+pdfmixtool
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -649,8 +651,6 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-oslo-i18n
-python-oslo-serialization
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -746,11 +746,15 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
+qt6-webengine
 qterminal
 qtermwidget
+qtqr
 quadrapassel
 quazip
 quazip-qt5
@@ -777,8 +781,6 @@ rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
-ruby-concurrent
-ruby-mustache
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -1075,4 +1077,6 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
+zint
+zint-qt
 znc
