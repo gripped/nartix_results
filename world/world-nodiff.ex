@@ -314,7 +314,6 @@ checkbashisms
 cheese
 libcheese
 cherrytree
-chmlib
 chromaprint
 chrono-date
 chrpath
@@ -838,7 +837,6 @@ gnome-video-effects
 gnome-weather
 gnu-efi
 gnu-free-fonts
-gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
@@ -980,7 +978,6 @@ gtksourceviewmm
 gtksourceviewmm-docs
 gtkspell
 gtkspell3
-gts
 gucharmap
 gufw
 guile2.2
@@ -1180,7 +1177,6 @@ jsoncpp
 jsoncpp-doc
 jsonrpc-glib
 jsonrpc-glib-docs
-judy
 juk
 junit
 jupyter-console
@@ -1569,7 +1565,6 @@ lapack64
 lapacke64
 lapack-doc
 laszip
-laszip2
 layer-shell-qt
 layer-shell-qt5
 lbzip2
@@ -1650,8 +1645,6 @@ libdaemon
 libdatachannel
 libdatrie
 libdazzle
-libdbi
-libdbi-docs
 libdbusmenu-qt
 libdbusmenu-qt5
 libdbusmenu
@@ -1706,7 +1699,6 @@ libfm-gtk3
 libfontenc
 libfreeaptx
 libfreehand
-libfreexl
 libftdi
 libgadu
 libgdata
@@ -1735,7 +1727,6 @@ libgoom2
 libgovirt
 libgphoto2
 libgphoto2-docs
-libgpod
 libgravatar
 libgrss
 libgsf
@@ -1888,7 +1879,6 @@ libopensmtpd
 libopusenc
 liborcus
 libosinfo
-libotf
 libotr
 libp11
 libpagemaker
@@ -2155,7 +2145,6 @@ lshw
 lskat
 lsof
 lsscsi
-ltrace
 lttng-ust2.12
 lua-bitop
 lua51-bitop
@@ -2434,7 +2423,6 @@ nginx-src
 ngspice
 ninja
 nitrokey-udev-rules
-nload
 nlohmann-json
 nltk-data
 nmap
@@ -2599,7 +2587,6 @@ papers
 papers-lib-docs
 papirus-icon-theme
 paprefs
-par2cmdline
 parley
 parted
 partitionmanager
@@ -4624,6 +4611,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4647,10 +4635,12 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
 qt6-webchannel
+qt6-webengine
 qt6-websockets
 qt6-webview
 qt6ct
@@ -4660,6 +4650,7 @@ qtkeychain
 qtkeychain-qt5
 qtkeychain-qt6
 qtox
+qtqr
 qtxdg-tools
 quilt
 quota-tools
@@ -4727,6 +4718,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain
@@ -5117,6 +5111,8 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
+ruff
+python-ruff
 run-parts
 runc
 rust-bindgen
@@ -5155,7 +5151,6 @@ sdl3
 sdl_image
 sdl_net
 sdl_sound
-sdl_ttf
 seabios
 seabios-docs
 seahorse
@@ -5634,8 +5629,6 @@ viskores
 vkd3d
 vmaf
 vncdotool
-vnstat
-vokoscreen
 volatility3
 volk
 volume_key
@@ -5862,6 +5855,8 @@ zeroc-ice-java
 zfp
 zig
 zimg
+zint
+zint-qt
 zip
 ziproxy
 zita-alsa-pcmi

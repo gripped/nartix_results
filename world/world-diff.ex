@@ -63,6 +63,7 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 cgmanager
+chmlib
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -183,6 +184,7 @@ gnome-shell
 gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
+gnu-netcat
 go-bindata
 godot
 godot-mono
@@ -232,6 +234,7 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
+gts
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -297,6 +300,7 @@ openjdk21-doc
 java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 js78
+judy
 julia
 jupyter-server-ydoc
 kcoreaddons
@@ -315,6 +319,7 @@ ksystemlog
 kwin-x11
 kwin
 lame
+laszip2
 libatasmart
 libayatana-indicator
 libblastrampoline
@@ -340,6 +345,8 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
+libdbi
+libdbi-docs
 libe-book
 libei
 libei-docs
@@ -347,6 +354,8 @@ libepoxy
 libepoxy-docs
 libfido2
 libfprint
+libfreexl
+libgpod
 libgudev
 libguestfs
 libhandy0
@@ -356,6 +365,7 @@ libkeyfinder
 libldm
 libmspub
 libnvme
+libotf
 libprocps
 libqb
 libsidplay
@@ -407,6 +417,7 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
+ltrace
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -525,6 +536,7 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nload
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -551,6 +563,7 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+par2cmdline
 parallel
 parallel-docs
 paraview-catalyst
@@ -746,15 +759,11 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
-qt6-webengine
 qterminal
 qtermwidget
-qtqr
 quadrapassel
 quazip
 quazip-qt5
@@ -772,9 +781,6 @@ rlwrap
 rocalution
 rocblas
 rocfft
-rocm-llvm
-rocm-device-libs
-comgr
 rocrand
 rocsparse
 rrdtool
@@ -784,8 +790,6 @@ ruby-bake-modernize
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
-ruff
-python-ruff
 rust
 lib32-rust-libs
 rust-musl
@@ -806,6 +810,7 @@ $pkgbase-doc
 sdcv
 sddm
 sdl_mixer
+sdl_ttf
 seatd
 sfml
 shairport-sync
@@ -979,6 +984,8 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
+vnstat
+vokoscreen
 vpnc
 vte3
 vte-common
@@ -1077,6 +1084,4 @@ xscreensaver
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zint
-zint-qt
 znc

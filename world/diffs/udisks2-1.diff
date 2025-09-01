@@ -1,90 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,45 +6,44 @@
-   udisks2-lvm2
-   udisks2-docs
- )
--pkgver=2.10.2
--pkgrel=1
-+pkgver=2.10.1
-+pkgrel=6
- pkgdesc="Daemon, tools and libraries to access and manipulate disks, storage devices and technologies"
--arch=(x86_64)
-+arch=('x86_64')
- url="https://www.freedesktop.org/wiki/Software/udisks/"
- license=(
-   GPL-2.0-or-later
-   LGPL-2.0-or-later
- )
- makedepends=(
--  acl
--  autoconf-archive
--  gcc-libs
--  git
--  glib2
--  glib2-devel
--  glibc
--  gobject-introspection
--  gtk-doc
--  libatasmart
--  libblockdev
--  libblockdev-btrfs
--  libblockdev-crypto
--  libblockdev-fs
--  libblockdev-loop
--  libblockdev-lvm
--  libblockdev-mdraid
--  libblockdev-nvme
--  libblockdev-part
--  libblockdev-swap
--  libgudev
--  lvm2
--  polkit
+@@ -39,7 +39,7 @@
+   libgudev
+   lvm2
+   polkit
 -  systemd-libs
--  util-linux-libs
-+  'acl'
-+  'autoconf-archive'
-+  'gcc-libs'
-+  'git'
-+  'glib2'
-+  'glib2-devel'
-+  'glibc'
-+  'gobject-introspection'
-+  'gtk-doc'
-+  'libatasmart'
-+  'libblockdev'
-+  'libblockdev-btrfs'
-+  'libblockdev-crypto'
-+  'libblockdev-fs'
-+  'libblockdev-loop'
-+  'libblockdev-lvm'
-+  'libblockdev-mdraid'
-+  'libblockdev-nvme'
-+  'libblockdev-part'
-+  'libblockdev-swap'
-+  'libgudev'
-+  'lvm2'
-+  'polkit'
-+  'libelogind'
-+  'util-linux-libs'
++  libelogind
+   util-linux-libs
  )
--source=($pkgbase::git+https://github.com/storaged-project/udisks#tag=udisks-$pkgver)
--sha512sums=('8d7503b6643c51be6bd04b34dba847759060aa22f22970806a998f1fcd1982b1a4a42d8a7db456f48a0cd2ebc3d2bbdd4c8a78a2c8e2e4b96aeef882365314f2')
--b2sums=('e06bb2cbc063fadcebb5c308f19e296cb78b451758e1822d0e3a490b89f1a8009f36dc9aeff53fae8a1da65b80e91c22bcb8b8fd32e3f6924c9765748551c616')
-+source=("git+https://github.com/storaged-project/udisks#tag=udisks-$pkgver")
-+b2sums=('a27d8b416dbfb24ce8ad2cfbdfc4b8fca37794167b56d88272c3c0761b3e65380f888a7fc3cabd64ca2d3911ea0e9348081f57c0390ec90982056f4da8e51c07')
- 
- _pick() {
-   local p="$1" f d; shift
-@@ -57,12 +56,14 @@
- }
- 
- prepare() {
--  cd $pkgbase
-+  cd udisks
-+  git cherry-pick -n 5e7277debea926370e587408517560afe87d28c9  # Mount private mounts with 'nodev,nosuid'
-   NOCONFIGURE=1 ./autogen.sh
- }
+ source=($pkgbase::git+https://github.com/storaged-project/udisks#tag=udisks-$pkgver)
+@@ -63,6 +63,7 @@
  
  build() {
    local configure_options=(
@@ -92,7 +17,7 @@
      --disable-static
      --enable-btrfs
      --enable-gtk-doc
-@@ -72,17 +73,17 @@
+@@ -72,7 +73,7 @@
      --prefix=/usr
      --sbindir=/usr/bin
      --sysconfdir=/etc
@@ -100,19 +25,7 @@
 +    --with-systemdsystemunitdir=no
    )
  
--  cd $pkgbase
-+  cd udisks
-   ./configure "${configure_options[@]}"
-   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-   make
- }
- 
- check() {
--  cd $pkgbase
-+  cd udisks
-   make check
- }
- 
+   cd $pkgbase
 @@ -104,7 +105,7 @@
      libblockdev-swap  # dynamically loaded by libblockdev.so, required for default operation
      libgudev libgudev-1.0.so
@@ -122,25 +35,7 @@
      util-linux-libs libblkid.so libmount.so libuuid.so
    )
    optdepends=(
-@@ -116,15 +117,14 @@
-     'exfatprogs: for exFAT support in libblockdev-fs'
-     'e2fsprogs: for Ext2/3/4 support in libblockdev-fs'
-     'f2fs-tools: for F2FS support in libblockdev-fs'
--    'less: for default pager of the udisksctl dump command'
-     'nilfs-utils: for NILFS support in libblockdev-fs'
-     'udftools: for UDF support in libblockdev-fs'
-     'xfsprogs: for XFS support in libblockdev-fs'
-   )
-   provides=(libudisks2.so)
--  backup=(etc/udisks2/udisks2.conf)
-+  backup=('etc/udisks2/udisks2.conf')
- 
--  cd $pkgbase
-+  cd udisks
-   make DESTDIR="$pkgdir" install
- 
-   install -vDm 644 data/org.freedesktop.UDisks2.xml -t "$pkgdir/usr/share/dbus-1/interfaces/"
-@@ -152,7 +152,7 @@
+@@ -152,7 +153,7 @@
      libblockdev-btrfs  # dynamically loaded by libblockdev.so
      libgudev libgudev-1.0.so
      polkit libpolkit-gobject-1.so
@@ -149,7 +44,7 @@
      udisks2 libudisks2.so
      util-linux-libs libblkid.so libmount.so libuuid.so
    )
-@@ -173,7 +173,7 @@
+@@ -173,7 +174,7 @@
      libgudev libgudev-1.0.so
      lvm2
      polkit libpolkit-gobject-1.so

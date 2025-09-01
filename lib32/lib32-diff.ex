@@ -11,7 +11,9 @@ lib32-libudev0-shim
 lib32-libusb
 lib32-mesa
 lib32-opencl-mesa
+lib32-vulkan-asahi
 lib32-vulkan-dzn
+lib32-vulkan-freedreno
 lib32-vulkan-gfxstream
 lib32-vulkan-intel
 lib32-vulkan-nouveau
