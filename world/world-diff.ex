@@ -63,7 +63,6 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 cgmanager
-chmlib
 chromium-bsu
 chrony
 cinnamon-desktop
@@ -354,13 +353,12 @@ libepoxy
 libepoxy-docs
 libfido2
 libfprint
-libfreexl
 libgpod
 libgudev
 libguestfs
 libhandy0
+libiec61883
 libinput
-libkate
 libkeyfinder
 libldm
 libmspub
@@ -370,7 +368,6 @@ libprocps
 libqb
 libsidplay
 libsidplayfp
-libspatialite
 libstaroffice
 libtg_owt
 libudev0-shim
@@ -787,6 +784,7 @@ rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
+ruby-ffi-compiler
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
@@ -984,7 +982,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-vnstat
 vokoscreen
 vpnc
 vte3
@@ -1071,6 +1068,7 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
+xmlstarlet
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

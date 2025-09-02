@@ -1,0 +1,109 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,21 +7,19 @@
+          'quassel-monolithic-qt'
+          'quassel-common')
+ pkgver=0.14.0
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Next-generation distributed IRC client"
+ arch=('x86_64')
+ url="https://quassel-irc.org/"
+ license=('GPL')
+-makedepends=('qt5-base' 'qt5-tools' 'qca-qt5'
++makedepends=('qt5-base' 'qt5-tools' 'qt5-webengine' 'qca-qt5'
+              'qt5-multimedia' 'knotifyconfig5' 'sonnet5' 'libldap' 'cmake'
+              'extra-cmake-modules' 'python' 'hicolor-icon-theme' 'boost')
+ source=(https://quassel-irc.org/pub/$pkgbase-$pkgver.tar.bz2
+-        $pkgbase.service
+         $pkgbase.sysusers
+         $pkgbase.tmpfiles
+         $pkgbase.conf)
+ sha256sums=('bbd46ca429c1518480904c9e2b0ab3a0412fe197f3ce4879974e06ed3a0093a3'
+-            '5dbe20290f3361b9b7a74a52905137e76b656976febf2d31082a2276f9dcde7f'
+             '3c72441a99e2668c6a8a751fa07beeb44f937576c8a1b5f615e4a55f841d93d9'
+             '2afd4340c7713f6533e5d175a86b28fd118ecd907776c2b10925d1a4fb31cdca'
+             'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
+@@ -31,7 +29,6 @@
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=None \
+     -DENABLE_SHARED=OFF \
+-    -DWITH_WEBENGINE=OFF \
+     -DCMAKE_CXX_FLAGS="$CXXFLAGS -Wno-suggest-override" \
+     "${@:2}" \
+     -Wno-dev
+@@ -46,7 +43,8 @@
+   _build core \
+     -DWANT_QTCLIENT=OFF \
+     -DWANT_MONO=OFF \
+-    -DWITH_BUNDLED_ICONS=OFF
++    -DWITH_BUNDLED_ICONS=OFF \
++    -DWITH_WEBENGINE=OFF
+ 
+   _build monolithic \
+     -DWANT_CORE=OFF \
+@@ -56,6 +54,7 @@
+   _build monolithic-qt \
+     -DWANT_CORE=OFF \
+     -DWANT_QTCLIENT=OFF \
++    -DWITH_WEBENGINE=OFF \
+     -DCMAKE_DISABLE_FIND_PACKAGE_dbusmenu-qt5=ON \
+     -DCMAKE_DISABLE_FIND_PACKAGE_Qt5Multimedia=ON \
+     -DCMAKE_DISABLE_FIND_PACKAGE_Phonon4Qt5=ON
+@@ -68,6 +67,7 @@
+   _build client-qt \
+     -DWANT_CORE=OFF \
+     -DWANT_MONO=OFF \
++    -DWITH_WEBENGINE=OFF \
+     -DCMAKE_DISABLE_FIND_PACKAGE_dbusmenu-qt5=ON \
+     -DCMAKE_DISABLE_FIND_PACKAGE_Qt5Multimedia=ON \
+     -DCMAKE_DISABLE_FIND_PACKAGE_Phonon4Qt5=ON
+@@ -87,15 +87,13 @@
+     "${pkgdir}"/usr/lib/sysusers.d/$pkgbase.conf
+   install -Dm644 $pkgbase.tmpfiles \
+     "${pkgdir}"/usr/lib/tmpfiles.d/$pkgbase.conf
+-  install -Dm644 $pkgbase.service \
+-    "${pkgdir}"/usr/lib/systemd/system/$pkgbase.service
+   install -Dm644 $pkgbase.conf \
+     "${pkgdir}"/etc/conf.d/$pkgbase
+ }
+ 
+ package_quassel-client() {
+ pkgdesc="Next-generation distributed IRC client - client only, KDE version"
+-depends=('quassel-common' 'qt5-base' 'qt5-multimedia' 'knotifyconfig5')
++depends=('quassel-common' 'qt5-base' 'qt5-webengine' 'qt5-multimedia' 'knotifyconfig5')
+ optdepends=('perl: for builtin /exec scripts')
+ conflicts=('quassel-client-qt')
+ 
+@@ -121,7 +119,7 @@
+ 
+ package_quassel-monolithic() {
+ pkgdesc="Next-generation distributed IRC client - monolithic, KDE version"
+-depends=('quassel-common' 'qt5-base' 'qt5-multimedia' 'qca-qt5'
++depends=('quassel-common' 'qt5-base' 'qt5-webengine' 'qt5-multimedia' 'qca-qt5'
+          'knotifyconfig5' 'libldap')
+ optdepends=('perl: for builtin /exec scripts'
+             'postgresql: PostgreSQL database support')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,5 +12,6 @@
+ qt5-multimedia
+ qt5-svg
+ qt5-tools
++qt5-webengine
+ quassel-common
+ sonnet5
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,5 @@
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=None \
+ -DENABLE_SHARED=OFF \
+--DWITH_WEBENGINE=OFF \
+ -DCMAKE_CXX_FLAGS="$CXXFLAGS -Wno-suggest-override" \
+ "${@:2}

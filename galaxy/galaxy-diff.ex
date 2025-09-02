@@ -37,6 +37,14 @@ opensc
 perl-cgi-fast
 qbittorrent
 qbittorrent-nox
+qgis
+quassel
+quassel-core
+quassel-client
+quassel-client-qt
+quassel-monolithic
+quassel-monolithic-qt
+quassel-common
 rage
 sdcv
 signal-desktop

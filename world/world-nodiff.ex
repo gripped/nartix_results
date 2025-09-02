@@ -314,6 +314,7 @@ checkbashisms
 cheese
 libcheese
 cherrytree
+chmlib
 chromaprint
 chrono-date
 chrpath
@@ -1699,6 +1700,7 @@ libfm-gtk3
 libfontenc
 libfreeaptx
 libfreehand
+libfreexl
 libftdi
 libgadu
 libgdata
@@ -1750,7 +1752,6 @@ libid3tag
 libident
 libidl2
 libidn
-libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
@@ -1770,6 +1771,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1970,6 +1972,7 @@ libsoup-docs
 libsoup3
 libsoup3-docs
 libsoxr
+libspatialite
 libspectre
 libspelling
 libspelling-docs
@@ -4845,7 +4848,6 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
-ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
@@ -5629,6 +5631,7 @@ viskores
 vkd3d
 vmaf
 vncdotool
+vnstat
 volatility3
 volk
 volume_key
@@ -5749,7 +5752,6 @@ xinetd
 xkeyboard-config
 xmldiff
 xmlsec
-xmlstarlet
 xmlto
 xmltoman
 xmms2

@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,20 @@
+ 
+ pkgname=ruby-ffi-compiler
+-pkgver=1.2.0
+-pkgrel=1
++pkgver=1.0.1
++pkgrel=5
+ pkgdesc='Ruby library for automating compilation of native libraries for use with ffi'
+ arch=(any)
+ url='https://github.com/ffi/ffi-compiler'
+-license=(Apache-2.0)
++license=(Apache)
+ depends=(ruby-ffi ruby-rake)
+-makedepends=(git ruby-rspec ruby-rubygems-tasks ruby-rdoc)
++makedepends=(ruby-rspec ruby-rubygems-tasks ruby-rdoc)
+ options=(!emptydirs)
+-source=(git+https://github.com/ffi/ffi-compiler.git#tag=$pkgver)
+-sha256sums=('381967425e874c53067f062eb1043f98570cf72cc8cf8ea7e6dcf4a672cdc121')
++source=(https://github.com/ffi/ffi-compiler/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('633cdcc7bd6e146523a665872dd5a4db0c0972c661064bdfd60b82f8d221376e')
+ 
+ build() {
+   local _gemdir="$(gem env gemdir)"
+-  cd ffi-compiler
++  cd ffi-compiler-$pkgver
+   rake build
+   gem install \
+     --local \
+@@ -40,10 +40,10 @@
+ 
+ check() {
+   local _gemdir="$(gem env gemdir)"
+-  cd ffi-compiler
++  cd ffi-compiler-$pkgver
+ }
+ 
+ package() {
+-  cd ffi-compiler
++  cd ffi-compiler-$pkgver
+   cp -a tmp_install/* "$pkgdir"/
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ ruby-ffi
+ ruby-rake
+ ruby-rdoc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ local _gemdir="$(gem env gemdir)"
+-cd ffi-compiler
++cd ffi-compiler-$pkgver
+ rake build
+ gem install \
+ --local \

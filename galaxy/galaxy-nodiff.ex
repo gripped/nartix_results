@@ -368,7 +368,6 @@ pysolfc-cardsets
 pysolfc
 python-caja
 python-pysol_cards
-qgis
 qgit
 qps
 qrupdate
@@ -378,13 +377,6 @@ qt6pas
 qterminal
 qtermwidget
 qtxdg-tools
-quassel
-quassel-core
-quassel-client
-quassel-client-qt
-quassel-monolithic
-quassel-monolithic-qt
-quassel-common
 retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
