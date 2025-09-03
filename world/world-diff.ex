@@ -89,6 +89,7 @@ darkhttpd
 dbus-broker
 ddcutil
 dhcpcd
+distcc
 dns-over-https
 docker
 dolphin-emu
@@ -111,6 +112,7 @@ aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
 dracut
+dragon
 drkonqi
 dtc
 dunst
@@ -188,6 +190,7 @@ go-bindata
 godot
 godot-mono
 gpicview
+grafana
 greetd-tuigreet
 greetd
 $pkgbase
@@ -380,6 +383,7 @@ libxfce4ui
 libxfce4util
 libxmlrpc
 libytnef
+libzmf
 light-locker
 lightdm-slick-greeter
 lightdm
@@ -482,7 +486,9 @@ media-player-info
 memcached
 mesa
 opencl-mesa
+vulkan-asahi
 vulkan-dzn
+vulkan-freedreno
 vulkan-gfxstream
 vulkan-intel
 vulkan-nouveau
@@ -785,7 +791,9 @@ rspamd
 rtkit
 ruby-bake-modernize
 ruby-ffi-compiler
+ruby-markly
 ruby-racc
+ruby-rack-session
 ruby-regexp_property_values
 ruby-sys-filesystem
 rust

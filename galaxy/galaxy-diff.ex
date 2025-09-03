@@ -7,6 +7,7 @@ efl
 ephoto
 etherwall
 evisum
+fastfetch
 featherpad
 firefox
 greetd-regreet
@@ -23,6 +24,7 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
+lxqt-config
 ly
 mate-control-center
 mate-screensaver
@@ -37,14 +39,6 @@ opensc
 perl-cgi-fast
 qbittorrent
 qbittorrent-nox
-qgis
-quassel
-quassel-core
-quassel-client
-quassel-client-qt
-quassel-monolithic
-quassel-monolithic-qt
-quassel-common
 rage
 sdcv
 signal-desktop

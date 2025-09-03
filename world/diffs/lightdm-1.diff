@@ -5,7 +5,7 @@
  )
  pkgver=1.32.0
 -pkgrel=6
-+pkgrel=6.1
++pkgrel=6.2
  epoch=1
  pkgdesc='A lightweight display manager'
  arch=(x86_64)
@@ -17,6 +17,15 @@
    glib2
    git
    gobject-introspection
+@@ -29,7 +30,7 @@
+   polkit
+   qt5-base
+   vala
+-  xorg-server
++  x11win-server
+   xorg-xmodmap
+   xorg-xrdb
+   yelp-tools
 @@ -37,24 +38,24 @@
  _tag=9e72b5b3072ff9990211f35aa2a48e971ff710c7
  source=(
@@ -78,3 +87,11 @@
  git
  glib2
  gobject-introspection
+@@ -14,6 +15,7 @@
+ polkit
+ qt5-base
+ vala
++x11win-server
+ xorg-server
+ xorg-xmodmap
+ xorg-xrdb

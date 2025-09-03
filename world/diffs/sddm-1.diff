@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,12 +9,12 @@
+@@ -9,14 +9,14 @@
  depends=(bash
           gcc-libs
           glibc
@@ -12,8 +12,11 @@
           qt6-declarative
 -         systemd-libs
           ttf-font
-          xorg-server
+-         xorg-server
++         x11win-server
           xorg-xauth)
+ makedepends=(extra-cmake-modules
+              python-docutils
 @@ -31,8 +31,11 @@
          'etc/pam.d/sddm-autologin'
          'etc/pam.d/sddm-greeter')
@@ -65,5 +68,6 @@
  qt6-tools
 -systemd-libs
  ttf-font
- xorg-server
+-xorg-server
++x11win-server
  xorg-xauth

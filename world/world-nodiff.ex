@@ -453,7 +453,6 @@ directx-headers
 directx-shader-compiler
 discount
 discover
-distcc
 distro-info-data
 distro-info
 django
@@ -497,7 +496,6 @@ dpdk
 dpkg
 dqlite
 draco
-dragon
 dropbear
 dropbear-scp
 duktape
@@ -869,7 +867,6 @@ gptfdisk
 gradle
 gradle-doc
 gradle-src
-grafana
 granatier
 granite
 granite7
@@ -1972,6 +1969,7 @@ libsoup-docs
 libsoup3
 libsoup3-docs
 libsoxr
+libspatialindex
 libspatialite
 libspectre
 libspelling
@@ -2101,7 +2099,6 @@ libyaml
 libyuv
 libzen
 libzip
-libzmf
 liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -3358,6 +3355,7 @@ python-d2to1
 python-daemon
 python-daemonize
 python-daiquiri
+python-dasbus
 python-dask-expr
 python-dask
 python-databases
@@ -4896,7 +4894,6 @@ ruby-lsp
 ruby-m
 ruby-manpages
 ruby-mapping
-ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
@@ -4978,7 +4975,6 @@ ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
 ruby-qed
-ruby-rack-session
 ruby-rack-test
 ruby-rack
 ruby-rackup
@@ -5621,11 +5617,11 @@ virt-what
 virtiofsd
 virtualbox-guest-iso
 virtualbox
-virtualbox-sdk
-virtualbox-host-dkms
+virtualbox-ext-vnc
 virtualbox-guest-utils
 virtualbox-guest-utils-nox
-virtualbox-ext-vnc
+virtualbox-host-dkms
+virtualbox-sdk
 virtualgl
 viskores
 vkd3d

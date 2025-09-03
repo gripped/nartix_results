@@ -1,14 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=xpra
+ pkgver=6.2.1
+-pkgrel=2
++pkgrel=2.1
  pkgdesc="multi-platform screen and application forwarding system screen for X11"
  arch=('x86_64')
  url='https://www.xpra.org'
 -license=(GPL-2.0-or-later)
 +license=('GPL2')
  depends=('gtk3' 'python' 'libxtst' 'python-cairo' 'python-gobject' 'python-pillow' 'python-lz4'
-          'ffmpeg' 'libvpx' 'xf86-video-dummy' 'libxkbfile' 'libxres'
+-         'ffmpeg' 'libvpx' 'xf86-video-dummy' 'libxkbfile' 'libxres'
++         'ffmpeg' 'libvpx' 'x11win-video-dummy' 'libxkbfile' 'libxres'
           'python-netifaces' 'python-rencode' 'python-opengl'
+          'python-lz4')
+ optdepends=('x264: Codec' 'python-dbus: dbus features'
 @@ -58,8 +58,6 @@
    cd "${srcdir}/$pkgname-$pkgver"
    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
@@ -18,3 +26,15 @@
    mkdir -p "${pkgdir}"/usr/share/dbus-1
    mv "${pkgdir}"/{etc,usr/share}/dbus-1/system.d
    chmod +x "${pkgdir}"/usr/bin/*
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -18,4 +18,4 @@
+ python-rencode
+ python-setuptools
+ uglify-js
+-xf86-video-dummy
++x11win-video-dummy

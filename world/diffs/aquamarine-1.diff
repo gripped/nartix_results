@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=aquamarine
--pkgver=0.9.4
-+pkgver=0.9.3
- pkgrel=1
- pkgdesc='a very light linux rendering backend library'
- arch=(x86_64 aarch64)
-@@ -19,14 +19,14 @@
+@@ -19,7 +19,7 @@
           pixman
           pugixml
           seatd libseat.so
@@ -17,14 +9,6 @@
           wayland libwayland-client.so
           wayland-protocols)
  makedepends=(cmake)
- provides=("lib$pkgname.so")
- _archive="$pkgname-$pkgver"
- source=("$url/archive/v$pkgver/$_archive.tar.gz")
--sha256sums=('fccc7c4e9b42b34082690ba672ba54025b781eca46c48ec304b7e5b2ba775893')
-+sha256sums=('18f4bd8f3aff78160b4f8464e9c71b24809e2f028fbaad5e65c93b5848c84b0a')
- 
- build() {
- 	cd "$_archive"
 
 
 ############# Stripped diff below #################

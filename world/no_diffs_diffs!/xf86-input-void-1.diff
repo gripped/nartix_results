@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xf86-input-void
+ pkgver=1.4.2
+-pkgrel=2
++pkgrel=2.2
+ pkgdesc="X.org void input driver"
+ arch=(x86_64)
+ license=('custom')
 @@ -29,3 +29,4 @@
    install -m755 -d "${pkgdir}/usr/share/licenses/${pkgname}"
    install -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/"

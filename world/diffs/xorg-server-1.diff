@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=('xorg-server' 'xorg-server-xephyr' 'xorg-server-xvfb' 'xorg-server-xnest'
+          'xorg-server-common' 'xorg-server-devel')
+ pkgver=21.1.18
+-pkgrel=2
++pkgrel=2.2
+ arch=('x86_64')
+ license=('LicenseRef-Adobe-Display-PostScript'
+          'BSD-3-Clause'
 @@ -28,7 +28,7 @@
               'libxmu' 'libxrender' 'libxi' 'libxaw' 'libxtst' 'libxres'
               'xorg-xkbcomp' 'xorg-util-macros' 'xorg-font-util' 'libepoxy'
@@ -18,15 +27,18 @@
      -D ipv6=true \
      -D xvfb=true \
      -D xnest=true \
-@@ -99,7 +99,7 @@
+@@ -99,9 +99,9 @@
    pkgdesc="Xorg X server"
    depends=(libepoxy libxfont2 pixman xorg-server-common libunwind
             dbus libgl xf86-input-libinput nettle
 -           libxdmcp sh glibc libxau systemd-libs libtirpc
 +           libxdmcp sh glibc libxau libelogind libtirpc
             libpciaccess libdrm libxshmfence libxcvt) # FS#52949
-   provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
+-  provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server')
++  provides=('X-ABI-VIDEODRV_VERSION=25.2' 'X-ABI-XINPUT_VERSION=24.4' 'X-ABI-EXTENSION_VERSION=10.0' 'x-server' 'x11win-server')
    conflicts=('nvidia-utils<=331.20' 'glamor-egl' 'xf86-video-modesetting')
+   replaces=('glamor-egl' 'xf86-video-modesetting')
+   install=xorg-server.install
 @@ -121,7 +121,7 @@
  
  package_xorg-server-xephyr() {
