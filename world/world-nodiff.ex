@@ -334,7 +334,6 @@ clang15
 clang16
 clang18
 clang19
-clazy
 clevis
 cli11
 clinfo
@@ -496,6 +495,7 @@ dpdk
 dpkg
 dqlite
 draco
+dragon
 dropbear
 dropbear-scp
 duktape
@@ -867,6 +867,7 @@ gptfdisk
 gradle
 gradle-doc
 gradle-src
+grafana
 granatier
 granite
 granite7
@@ -1768,7 +1769,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2099,6 +2099,7 @@ libyaml
 libyuv
 libzen
 libzip
+libzmf
 liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -4894,6 +4895,7 @@ ruby-lsp
 ruby-m
 ruby-manpages
 ruby-mapping
+ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
@@ -4975,6 +4977,7 @@ ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
 ruby-qed
+ruby-rack-session
 ruby-rack-test
 ruby-rack
 ruby-rackup

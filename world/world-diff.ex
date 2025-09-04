@@ -67,6 +67,7 @@ chromium-bsu
 chrony
 cinnamon-desktop
 clamav
+clazy
 cloud-init
 clucene
 cmake
@@ -112,7 +113,6 @@ aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
 dracut
-dragon
 drkonqi
 dtc
 dunst
@@ -190,7 +190,6 @@ go-bindata
 godot
 godot-mono
 gpicview
-grafana
 greetd-tuigreet
 greetd
 $pkgbase
@@ -362,6 +361,7 @@ libguestfs
 libhandy0
 libiec61883
 libinput
+libkate
 libkeyfinder
 libldm
 libmspub
@@ -383,7 +383,6 @@ libxfce4ui
 libxfce4util
 libxmlrpc
 libytnef
-libzmf
 light-locker
 lightdm-slick-greeter
 lightdm
@@ -791,9 +790,7 @@ rspamd
 rtkit
 ruby-bake-modernize
 ruby-ffi-compiler
-ruby-markly
 ruby-racc
-ruby-rack-session
 ruby-regexp_property_values
 ruby-sys-filesystem
 rust
