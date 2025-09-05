@@ -90,7 +90,6 @@ darkhttpd
 dbus-broker
 ddcutil
 dhcpcd
-distcc
 dns-over-https
 docker
 dolphin-emu
@@ -146,8 +145,8 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
+fop
 fprintd
-freeradius
 freerdp
 freerdp2
 frugally-deep
@@ -185,7 +184,6 @@ gnome-shell
 gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
-gnu-netcat
 go-bindata
 godot
 godot-mono
@@ -315,11 +313,9 @@ knockd
 knot
 kopeninghours
 ksnip
-kstars
 ksystemlog
 kwin-x11
 kwin
-lame
 laszip2
 libatasmart
 libayatana-indicator
@@ -346,8 +342,6 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcanberra
-libdbi
-libdbi-docs
 libe-book
 libei
 libei-docs
@@ -361,7 +355,6 @@ libguestfs
 libhandy0
 libiec61883
 libinput
-libkate
 libkeyfinder
 libldm
 libmspub
@@ -417,7 +410,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-ltrace
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -779,7 +771,6 @@ redshift
 refind
 refind-docs
 ristretto
-rlwrap
 rocalution
 rocblas
 rocfft
@@ -881,6 +872,7 @@ unbound
 unoconv
 upower
 uptimed
+uriparser
 usb_modeswitch
 usbguard
 usbmuxd
@@ -987,7 +979,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-vokoscreen
 vpnc
 vte3
 vte-common

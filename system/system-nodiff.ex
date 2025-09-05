@@ -61,7 +61,6 @@ inetutils
 iproute2
 iptables
 iptables-nft
-iw
 jansson
 jfsutils
 json-c

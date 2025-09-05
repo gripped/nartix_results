@@ -452,6 +452,7 @@ directx-headers
 directx-shader-compiler
 discount
 discover
+distcc
 distro-info-data
 distro-info
 django
@@ -677,7 +678,6 @@ foomatic-db
 foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
-fop
 fortune-mod
 fossil
 four-in-a-row
@@ -689,6 +689,7 @@ freealut
 freecell-solver
 freeglut
 freeimage
+freeradius
 freetds
 freetype2
 freetype2-demos
@@ -836,6 +837,7 @@ gnome-video-effects
 gnome-weather
 gnu-efi
 gnu-free-fonts
+gnu-netcat
 gnugo
 gnuplot
 gnuplot-demos
@@ -1503,6 +1505,7 @@ ksnakeduel
 kspaceduel
 ksquares
 ksshaskpass
+kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -1553,6 +1556,7 @@ kyotocabinet
 l-smash
 ladspa
 lager
+lame
 languagetool
 lapack
 blas
@@ -1644,6 +1648,8 @@ libdaemon
 libdatachannel
 libdatrie
 libdazzle
+libdbi
+libdbi-docs
 libdbusmenu-qt
 libdbusmenu-qt5
 libdbusmenu
@@ -1769,6 +1775,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2146,6 +2153,7 @@ lshw
 lskat
 lsof
 lsscsi
+ltrace
 lttng-ust2.12
 lua-bitop
 lua51-bitop
@@ -4705,6 +4713,7 @@ riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
 rkcommon
+rlwrap
 rng-tools
 rnnoise
 robin-map
@@ -5577,7 +5586,6 @@ unrealircd
 unrtf
 unzip
 upx
-uriparser
 usbredir
 usd
 usort
@@ -5631,6 +5639,7 @@ vkd3d
 vmaf
 vncdotool
 vnstat
+vokoscreen
 volatility3
 volk
 volume_key

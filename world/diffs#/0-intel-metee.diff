@@ -1,5 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=intel-metee
+ pkgname=(intel-metee intel-metee-doc)
+-pkgver=6.0.1
++pkgver=6.0.0
+ pkgrel=1
+ pkgdesc="Access library for Intel CSME HECI interface"
+ arch=(x86_64)
+@@ -9,7 +9,7 @@
+ license=(Apache-2.0)
+ makedepends=(cmake doxygen graphviz)
+ source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('f67bb97f4eed0cbe90916a770e39292d133d9297282af6fe6280f5a8a787cceb')
++sha256sums=('cf604756f78da6f66a79f6ae7a1c2fa6833495316036a97824bce40483fee9f4')
+ 
+ build() {
+   export CFLAGS="${CFLAGS/-Wp,-D_FORTIFY_SOURCE=?/}"
 @@ -19,6 +19,8 @@
      -G 'Unix Makefiles' \
      -DCMAKE_BUILD_TYPE=None \
