@@ -850,7 +850,6 @@ go-licenses
 go-md2man
 go-tools
 go-yq
-go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -2551,7 +2550,6 @@ opensmtpd-filter-senderscore
 opensp
 opensubdiv
 opentimelineio
-openucc
 openucx
 openvdb
 openvkl

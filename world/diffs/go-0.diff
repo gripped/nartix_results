@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,11 +2,11 @@
+ 
+ pkgname=go
+ epoch=2
+-pkgver=1.25.1
+-pkgrel=2
++pkgver=1.24.6
++pkgrel=1
+ pkgdesc='Core compiler tools for the Go programming language'
+ arch=(x86_64)
+-url='https://go.dev/'
++url='https://golang.org/'
+ license=(BSD-3-Clause)
+ makedepends=(git go)
+ replaces=(go-pie)
+@@ -14,7 +14,7 @@
+ options=(!strip staticlibs)
+ source=("https://go.dev/dl/go${pkgver}.src.tar.gz"{,.asc})
+ validpgpkeys=('EB4C1BFD4F042F6DDDCCEC917721F63BD38B4796')
+-sha256sums=('d010c109cee94d80efe681eab46bdea491ac906bf46583c32e9f0dbb0bd1a594'
++sha256sums=('e1cb5582aab588668bc04c07de18688070f6b8c9b2aaf361f821e19bd47cfdbd'
+             'SKIP')
+ 
+ prepare() {
+@@ -28,8 +28,6 @@
+   export GOROOT_FINAL=/usr/lib/go
+   export GOROOT_BOOTSTRAP=/usr/lib/go
+ 
+-  export GOEXPERIMENT=nodwarf5
+-
+   cd "$pkgname/src"
+   ./make.bash -v
+ }
+@@ -38,7 +36,7 @@
+   export GO_TEST_TIMEOUT_SCALE=3
+ 
+   cd $pkgname/src
+-  ./run.bash --no-rebuild -v -v -v -k -run "!cmd/cgo/internal/testsanitizers"
++  ./run.bash --no-rebuild -v -v -v -k
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ export GOAMD64=v1 # make sure we're building for the right x86-64 version
+ export GOROOT_FINAL=/usr/lib/go
+ export GOROOT_BOOTSTRAP=/usr/lib/go
+-export GOEXPERIMENT=nodwarf5
+ cd "$pkgname/src"
+ ./make.bash -v
+ }

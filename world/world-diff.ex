@@ -185,6 +185,7 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
+go
 godot
 godot-mono
 gpicview
@@ -552,6 +553,7 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
+openucc
 openvpn
 ostree
 packagekit

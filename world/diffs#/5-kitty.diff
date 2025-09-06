@@ -1,9 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,94 +3,68 @@
+@@ -2,95 +2,69 @@
+ pkgbase=kitty
  pkgname=(kitty kitty-terminfo kitty-shell-integration)
  pkgver=0.42.2
- pkgrel=1
+-pkgrel=1
 -pkgdesc="A modern, hackable, featureful, OpenGL-based terminal emulator"
 -arch=('x86_64')
 -url="https://github.com/kovidgoyal/kitty"
@@ -42,6 +43,7 @@
 -source=("https://github.com/kovidgoyal/${pkgbase}/releases/download/v${pkgver}/${pkgbase}-${pkgver}.tar.xz"{,.sig})
 -b2sums=('56c80ab6467e4c4bef0acd0724e8a2458234c4bbdf81aaffed330a3148c299c3c59bf9cf5309d14618b0d143ee8f925fdb25776d6d5d530ffad24673cc88b04d'
 -        'SKIP')
++pkgrel=1.1
 +pkgdesc="Modern, hackable, featureful, OpenGL based terminal emulator"
 +arch=(x86_64)
 +url="https://sw.kovidgoyal.net/kitty/"
@@ -74,7 +76,7 @@
 +  export CGO_LDFLAGS="${LDFLAGS}"
 +  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
 +
-+  python3 setup.py linux-package --update-check-interval=0 --systemd-library="/usr/lib/libelogind.so.0.30.0"
++  python3 setup.py linux-package --update-check-interval=0 --systemd-library="/usr/lib/libelogind.so"
  }
  
  package_kitty() {
@@ -198,5 +200,5 @@
  export CGO_LDFLAGS="${LDFLAGS}"
  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
 -python3 setup.py linux-package --update-check-interval=0
-+python3 setup.py linux-package --update-check-interval=0 --systemd-library="/usr/lib/libelogind.so.0.30.0"
++python3 setup.py linux-package --update-check-interval=0 --systemd-library="/usr/lib/libelogind.so"
  }
