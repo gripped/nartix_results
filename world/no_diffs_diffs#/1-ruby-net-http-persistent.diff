@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ruby-net-http-persistent
+-pkgver=4.0.5
++pkgver=4.0.4
+ pkgrel=1
+ pkgdesc='Thread-safe persistent connections with Net::HTTP'
+ arch=(any)
+@@ -11,7 +11,7 @@
+ checkdepends=(ruby-rake ruby-minitest)
+ options=(!emptydirs)
+ source=(git+https://github.com/drbrain/net-http-persistent.git#tag=v$pkgver)
+-sha256sums=('667287514cf657e9689d01273e15117a84858f18bdbda31652cbe1936b53c50b')
++sha256sums=('8f11f55011a1db4256254bbd4346c13bb5c1edbb72716ade391c960ca9250c1f')
+ 
+ prepare() {
+   cd net-http-persistent

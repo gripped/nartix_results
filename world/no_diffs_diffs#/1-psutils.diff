@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=psutils
+-pkgver=3.3.13
++pkgver=3.3.12
+ pkgrel=1
+ pkgdesc='A set of postscript utilities'
+ arch=(any)
+@@ -18,7 +18,7 @@
+               python-wand)
+ _archive="$pkgname-$pkgver"
+ source=("$url/releases/download/v$pkgver/$_archive.tar.gz")
+-sha256sums=('c994345ad52c6875fb654c3fa2b1a937c0b0a60500a1801d0d308fb215221ecb')
++sha256sums=('424851fdbc814a56a6b7e636212b32adabd26cbca3d2dee01f4dcf53bc5de0ed')
+ 
+ build() {
+ 	cd "$_archive"

@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=fastfetch
--pkgver=2.51.1
+-pkgver=2.52.0
 +pkgver=2.38.0
  pkgrel=1
  pkgdesc="A feature-rich and performance oriented neofetch like system information tool"
@@ -17,7 +17,7 @@
  optdepends=('chafa: Image output as ascii art'
              'dbus: Bluetooth, Player & Media detection'
              'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
-@@ -21,14 +21,14 @@
+@@ -21,13 +21,14 @@
              'libelf: st term font detection and fast path of systemd version detection'
              'libpulse: Sound detection'
              'libxrandr: Multi monitor support'
@@ -26,15 +26,15 @@
              'python: Needed for zsh and fish completions'
 -            'sqlite: Needed for Sqlite integration and Soar packages count'
              'vulkan-icd-loader: Vulkan module & fallback for GPU output'
-             'xfconf: Needed for XFWM theme and XFCE Terminal font'
++            'xfconf: Needed for XFWM theme and XFCE Terminal font'
              'zlib: Faster image output when using kitty graphics protocol')
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('38755082ff0f7123616b98de5f032de76d0cc5837b5204cf5c88ee6c52a77bf6')
+-sha256sums=('6199c4cacc0b411fde7ec6c66d12829459284c6cdfb4bacce7b535190d5cd94c')
 +sha256sums=('f64635bfc1b42a2e845e3f3f38531a641de8203300112504b9eddc5a61f38f6a')
  
  build() {
  	cmake -B build -S "${pkgname}-${pkgver}" \
-@@ -36,7 +36,7 @@
+@@ -35,7 +36,7 @@
  		-DCMAKE_INSTALL_PREFIX='/usr' \
  		-DBUILD_FLASHFETCH='OFF' \
  		-DBUILD_TESTS='ON' \

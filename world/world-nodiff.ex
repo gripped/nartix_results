@@ -145,6 +145,7 @@ audacity
 audacity-docs
 audex
 audiocd-kio
+audiofile
 audiotube
 augeas
 aurorae
@@ -334,6 +335,7 @@ clang15
 clang16
 clang18
 clang19
+clazy
 clevis
 cli11
 clinfo
@@ -5139,6 +5141,7 @@ sbc
 sbctl
 sbsigntools
 scdoc
+schedtool
 schroedinger
 scim
 scite
@@ -5584,6 +5587,7 @@ unrealircd
 unrtf
 unzip
 upx
+uriparser
 usbredir
 usd
 usort

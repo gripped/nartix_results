@@ -14,7 +14,6 @@ at-spi2-core-docs
 at
 atril
 audacious-plugins
-audiofile
 avahi
 awesome
 aws-cli-v2
@@ -67,7 +66,6 @@ chromium-bsu
 chrony
 cinnamon-desktop
 clamav
-clazy
 cloud-init
 clucene
 cmake
@@ -798,7 +796,6 @@ libwbclient
 ldb
 smbclient
 sane
-schedtool
 scribus
 sdbus-cpp
 $pkgbase
@@ -874,7 +871,6 @@ unbound
 unoconv
 upower
 uptimed
-uriparser
 usb_modeswitch
 usbguard
 usbmuxd
