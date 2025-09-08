@@ -37,6 +37,7 @@ nvidia-390xx-utils
 nvm
 opensc
 perl-cgi-fast
+perl-glib-object-introspection
 qbittorrent
 qbittorrent-nox
 rage

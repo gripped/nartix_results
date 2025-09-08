@@ -357,6 +357,7 @@ libinput
 libkeyfinder
 libldm
 libmspub
+libnova
 libnvme
 libotf
 libprocps
@@ -557,6 +558,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+pango
+pango-docs
 par2cmdline
 parallel
 parallel-docs
@@ -812,6 +815,7 @@ smartmontools
 snapper
 solid
 sonivox
+sox
 spandsp
 spandsp-docs
 spice-vdagent

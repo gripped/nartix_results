@@ -1867,7 +1867,6 @@ libnma-common
 libnma-gtk4
 libnotify
 libnotify-docs
-libnova
 libnumbertext
 liboauth
 libodfgen
@@ -2586,8 +2585,6 @@ ostra-cg
 palapeli
 pam_wrapper
 pam_wrapper-docs
-pango
-pango-docs
 pangomm-2.48
 pangomm-2.48-docs
 pangomm
@@ -5228,7 +5225,6 @@ sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
-sox
 spamassassin
 sparsehash
 spatialindex
