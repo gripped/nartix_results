@@ -5,7 +5,7 @@
    'libtool'
    'ncurses'
 -  'systemd-libs'
-+  'udev'
++  'libudev'
  )
  makedepends=(
    'cairo'
@@ -22,7 +22,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -5,5 +5,4 @@
+@@ -2,8 +2,8 @@
+ glibc
+ libpciaccess
+ libtool
++libudev
  libx11
  libxml2
  ncurses

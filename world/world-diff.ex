@@ -79,7 +79,6 @@ conky
 conmon
 connman
 containerd
-convertlit
 cppcheck
 crun
 cups
@@ -89,6 +88,7 @@ dbus-broker
 ddcutil
 dhcpcd
 dns-over-https
+dnscrypt-proxy
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -183,7 +183,6 @@ gnome-shell-docs
 gnome-system-monitor
 gnome-user-share
 go-bindata
-go
 godot
 godot-mono
 gpicview
@@ -315,7 +314,6 @@ ksnip
 ksystemlog
 kwin-x11
 kwin
-laszip2
 libatasmart
 libayatana-indicator
 libblastrampoline
@@ -352,14 +350,12 @@ libgpod
 libgudev
 libguestfs
 libhandy0
-libiec61883
 libinput
+libkate
 libkeyfinder
 libldm
 libmspub
-libnova
 libnvme
-libotf
 libprocps
 libqb
 libsidplay
@@ -473,6 +469,7 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+mcpp
 media-player-info
 memcached
 mesa
@@ -558,8 +555,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-pango
-pango-docs
 par2cmdline
 parallel
 parallel-docs
@@ -661,6 +656,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-pillow
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

@@ -1,6 +1,7 @@
 alsa-utils
 autorandr
 cinnamon-desktop
+dbeaver
 doctest
 ecrire
 efl

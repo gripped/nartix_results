@@ -66,7 +66,6 @@ claws-mail
 compface
 copyq
 cvs
-dbeaver
 dillo
 dino
 distrobox

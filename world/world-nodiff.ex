@@ -379,6 +379,7 @@ composefs
 confuse
 consul
 containers-common
+convertlit
 coordgen
 copr-cli
 corrosion
@@ -471,7 +472,6 @@ dmenu
 dmg2img
 dmidecode
 dns-lexicon
-dnscrypt-proxy
 dnsmasq
 docbook-dsssl
 docbook-sgml
@@ -852,6 +852,7 @@ go-licenses
 go-md2man
 go-tools
 go-yq
+go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -1569,6 +1570,7 @@ lapack64
 lapacke64
 lapack-doc
 laszip
+laszip2
 layer-shell-qt
 layer-shell-qt5
 lbzip2
@@ -1757,6 +1759,7 @@ libid3tag
 libident
 libidl2
 libidn
+libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
@@ -1776,7 +1779,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1867,6 +1869,7 @@ libnma-common
 libnma-gtk4
 libnotify
 libnotify-docs
+libnova
 libnumbertext
 liboauth
 libodfgen
@@ -1885,6 +1888,7 @@ libopensmtpd
 libopusenc
 liborcus
 libosinfo
+libotf
 libotr
 libp11
 libpagemaker
@@ -2284,7 +2288,6 @@ mbedtls
 mbedtls2
 mbox-importer
 mc
-mcpp
 md4c
 mdds
 mediainfo
@@ -2585,6 +2588,8 @@ ostra-cg
 palapeli
 pam_wrapper
 pam_wrapper-docs
+pango
+pango-docs
 pangomm-2.48
 pangomm-2.48-docs
 pangomm
@@ -3916,7 +3921,6 @@ python-piccata
 python-pickleshare
 python-pika
 python-pikepdf
-python-pillow
 python-pint
 python-pip-run
 python-pip
