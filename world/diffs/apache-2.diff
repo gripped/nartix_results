@@ -1,5 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=apache
+-pkgver=2.4.65
+-pkgrel=1
++pkgver=2.4.63
++pkgrel=3
+ pkgdesc='A high performance Unix-based HTTP server'
+ arch=('x86_64')
+ url='https://www.apache.org/dist/httpd'
+-license=('Apache-2.0')
++license=('APACHE')
+ backup=(
+     etc/httpd/conf/httpd.conf
+     etc/httpd/conf/extra/httpd-{autoindex,dav,default,info,languages}.conf
 @@ -19,7 +19,7 @@
  conflicts=('mod_proxy_uwsgi')
  replaces=('mod_proxy_uwsgi')
@@ -18,13 +33,15 @@
  )
  source=(
      https://www.apache.org/dist/httpd/httpd-${pkgver}.tar.bz2{,.asc}
-     apache.tmpfiles.conf
+-    apache.tmpfiles
++    apache.tmpfiles.conf
      httpd.logrotate
 -    httpd.service
 -    arch.layout
 +    artix.layout
  )
- sha256sums=('88fc236ab99b2864b248de7d49a008ec2afd7551e64dce8b95f58f32f94c46ab'
+-sha256sums=('58b8be97d9940ec17f7656c0c6b9f41b618aac468b894b534148e3296c53b8b3'
++sha256sums=('88fc236ab99b2864b248de7d49a008ec2afd7551e64dce8b95f58f32f94c46ab'
              'SKIP'
              '63da1a420f4714a3e7af2672d28384419cc7eedbe7bf35baebd02938fabc15bf'
              '0bbbfae23a917b2fce0bf8f900f60319b50769224a96314e9301a75ccd078e16'
@@ -60,11 +77,13 @@
        --with-apr=/usr/bin/apr-1-config \
        --with-apr-util=/usr/bin/apu-1-config \
        --with-pcre2
-@@ -100,7 +97,6 @@
+@@ -99,8 +96,7 @@
+   make DESTDIR="${pkgdir}" install
  
    install -D -m644 "${srcdir}/httpd.logrotate" "${pkgdir}/etc/logrotate.d/httpd"
-   install -D -m644 "${srcdir}/apache.tmpfiles.conf" "${pkgdir}/usr/lib/tmpfiles.d/apache.conf"
+-  install -D -m644 "${srcdir}/apache.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/apache.conf"
 -  install -D -m644 "${srcdir}/httpd.service" "${pkgdir}/usr/lib/systemd/system/httpd.service"
++  install -D -m644 "${srcdir}/apache.tmpfiles.conf" "${pkgdir}/usr/lib/tmpfiles.d/apache.conf"
    install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  
    ln -fs /usr/lib/httpd/modules "${pkgdir}/etc/httpd/modules"

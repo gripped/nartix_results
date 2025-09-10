@@ -28,10 +28,8 @@ glib2-docs
 glibc
 lib32-glibc
 glibc-locales
-grub
 gssproxy
 iputils
-iw
 libusb
 libxml2
 libxml2-docs

@@ -88,7 +88,6 @@ dbus-broker
 ddcutil
 dhcpcd
 dns-over-https
-dnscrypt-proxy
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -143,10 +142,12 @@ flatpak
 flatpak-docs
 fluidsynth
 font-manager
-fop
 fprintd
 freerdp
 freerdp2
+freetype2
+freetype2-demos
+freetype2-docs
 frugally-deep
 fwupd-efi
 fwupd
@@ -231,7 +232,6 @@ gtk4
 gtk4-demos
 gtk4-docs
 gtk-update-icon-cache
-gts
 gvfs
 gvfs-afc
 gvfs-dnssd
@@ -351,7 +351,6 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libkate
 libkeyfinder
 libldm
 libmspub
@@ -636,6 +635,7 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
+potrace
 povray
 power-profiles-daemon
 powerdevil
@@ -656,7 +656,6 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-pillow
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -771,8 +770,10 @@ refind
 refind-docs
 ristretto
 rocalution
-rocblas
 rocfft
+rocm-llvm
+rocm-device-libs
+comgr
 rocrand
 rocsparse
 rrdtool
@@ -819,7 +820,6 @@ squid
 sshguard
 sslh
 sssd
-startup-notification
 strongswan
 stunnel
 sway

@@ -155,6 +155,7 @@ lib32-openal
 lib32-openssl
 lib32-opus
 lib32-orc
+lib32-pango
 lib32-pcre
 lib32-pcre2
 lib32-pixman

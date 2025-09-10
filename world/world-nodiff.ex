@@ -472,6 +472,7 @@ dmenu
 dmg2img
 dmidecode
 dns-lexicon
+dnscrypt-proxy
 dnsmasq
 docbook-dsssl
 docbook-sgml
@@ -680,6 +681,7 @@ foomatic-db
 foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
+fop
 fortune-mod
 fossil
 four-in-a-row
@@ -693,9 +695,6 @@ freeglut
 freeimage
 freeradius
 freetds
-freetype2
-freetype2-demos
-freetype2-docs
 frei0r-plugins
 fribidi
 fstrm
@@ -981,6 +980,7 @@ gtksourceviewmm
 gtksourceviewmm-docs
 gtkspell
 gtkspell3
+gts
 gucharmap
 gufw
 guile2.2
@@ -1779,6 +1779,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3035,7 +3036,6 @@ postfix-sqlite
 postgis
 postgrey
 postorius
-potrace
 powerline
 powerline-fonts
 vim-powerline
@@ -3921,6 +3921,7 @@ python-piccata
 python-pickleshare
 python-pika
 python-pikepdf
+python-pillow
 python-pint
 python-pip-run
 python-pip
@@ -4719,6 +4720,7 @@ rng-tools
 rnnoise
 robin-map
 roc-toolkit
+rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core
@@ -4730,9 +4732,6 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
-rocm-device-libs
-comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain
@@ -5257,6 +5256,7 @@ srt
 sshfs
 sshpass
 sshuttle
+startup-notification
 stb
 stellarsolver
 step-cli

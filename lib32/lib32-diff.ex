@@ -24,7 +24,6 @@ lib32-vulkan-mesa-layers
 lib32-nvidia-utils
 lib32-p11-kit
 lib32-pam
-lib32-pango
 lib32-pcsclite
 lib32-pipewire
 lib32-libpipewire
