@@ -1331,7 +1331,6 @@ kemoticons
 kexec-tools
 keybinder2
 libkeybinder2
-keychain
 keysmith
 keystone
 python-keystone
@@ -1779,7 +1778,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4856,6 +4854,7 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
+ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local

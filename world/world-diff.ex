@@ -301,6 +301,7 @@ judy
 julia
 jupyter-server-ydoc
 kcoreaddons
+keychain
 kgamma
 kio5-extras
 kismet
@@ -351,6 +352,7 @@ libgudev
 libguestfs
 libhandy0
 libinput
+libkate
 libkeyfinder
 libldm
 libmspub
@@ -780,7 +782,6 @@ rrdtool
 rspamd
 rtkit
 ruby-bake-modernize
-ruby-ffi-compiler
 ruby-racc
 ruby-regexp_property_values
 ruby-sys-filesystem
