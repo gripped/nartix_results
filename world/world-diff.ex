@@ -145,9 +145,6 @@ font-manager
 fprintd
 freerdp
 freerdp2
-freetype2
-freetype2-demos
-freetype2-docs
 frugally-deep
 fwupd-efi
 fwupd
@@ -297,7 +294,6 @@ openjdk21-doc
 java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 js78
-judy
 julia
 jupyter-server-ydoc
 kcoreaddons
@@ -347,7 +343,6 @@ libepoxy
 libepoxy-docs
 libfido2
 libfprint
-libgpod
 libgudev
 libguestfs
 libhandy0
@@ -470,7 +465,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-mcpp
 media-player-info
 memcached
 mesa
@@ -528,7 +522,6 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
-nload
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -550,13 +543,11 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
-openucc
 openvpn
 ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-par2cmdline
 parallel
 parallel-docs
 paraview-catalyst
@@ -566,7 +557,6 @@ pc-ble-driver
 pcmanfm-gtk3
 pcmanfm
 pcsclite
-pdfmixtool
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -658,6 +648,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-httplib2
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -803,7 +794,6 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
-sdl_mixer
 sdl_ttf
 seatd
 sfml
@@ -812,10 +802,6 @@ signal-desktop
 smartmontools
 snapper
 solid
-sonivox
-sox
-spandsp
-spandsp-docs
 spice-vdagent
 squid
 sshguard

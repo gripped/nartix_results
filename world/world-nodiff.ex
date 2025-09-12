@@ -695,6 +695,9 @@ freeglut
 freeimage
 freeradius
 freetds
+freetype2
+freetype2-demos
+freetype2-docs
 frei0r-plugins
 fribidi
 fstrm
@@ -1180,6 +1183,7 @@ jsoncpp
 jsoncpp-doc
 jsonrpc-glib
 jsonrpc-glib-docs
+judy
 juk
 junit
 jupyter-console
@@ -1735,6 +1739,7 @@ libgoom2
 libgovirt
 libgphoto2
 libgphoto2-docs
+libgpod
 libgravatar
 libgrss
 libgsf
@@ -2287,6 +2292,7 @@ mbedtls
 mbedtls2
 mbox-importer
 mc
+mcpp
 md4c
 mdds
 mediainfo
@@ -2434,6 +2440,7 @@ nginx-src
 ngspice
 ninja
 nitrokey-udev-rules
+nload
 nlohmann-json
 nltk-data
 nmap
@@ -2553,6 +2560,7 @@ opensmtpd-filter-senderscore
 opensp
 opensubdiv
 opentimelineio
+openucc
 openucx
 openvdb
 openvkl
@@ -2597,6 +2605,7 @@ papers
 papers-lib-docs
 papirus-icon-theme
 paprefs
+par2cmdline
 parley
 parted
 partitionmanager
@@ -2618,6 +2627,7 @@ pdal
 pdfarranger
 pdfgrep
 pdfjs
+pdfmixtool
 pdnsd
 pegtl
 pelican
@@ -3589,7 +3599,6 @@ python-html5-parser
 python-html5lib
 python-http-parser
 python-httpcore
-python-httplib2
 python-httpretty
 python-httptools
 python-httpx-aiohttp
@@ -5159,6 +5168,7 @@ sdl2_net
 sdl2_ttf
 sdl3
 sdl_image
+sdl_mixer
 sdl_net
 sdl_sound
 seabios
@@ -5219,6 +5229,7 @@ sof-tools
 softhsm
 solid5
 solr
+sonivox
 sonnet
 sonnet5
 sopel
@@ -5227,7 +5238,10 @@ sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
+sox
 spamassassin
+spandsp
+spandsp-docs
 sparsehash
 spatialindex
 spdlog

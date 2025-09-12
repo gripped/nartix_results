@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -42,7 +42,7 @@
      -D ucd_path=/usr/share/unicode
    )
  
--  arch-meson $pkgname build "${meson_options[@]}"
-+  artix-meson $pkgname build "${meson_options[@]}"
+-  arch-meson gucharmap build "${meson_options[@]}"
++  artix-meson gucharmap build "${meson_options[@]}"
    meson compile -C build
  }
  
@@ -21,7 +21,7 @@
  -D b_lto=false
  -D ucd_path=/usr/share/unicode
  )
--arch-meson $pkgname build "${meson_options[@]}"
-+artix-meson $pkgname build "${meson_options[@]}"
+-arch-meson gucharmap build "${meson_options[@]}"
++artix-meson gucharmap build "${meson_options[@]}"
  meson compile -C build
  }
