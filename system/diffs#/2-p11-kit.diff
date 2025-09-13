@@ -5,15 +5,11 @@
    p11-kit-docs
  )
 -pkgver=0.25.7
-+pkgver=0.25.5
++pkgver=0.25.6
  pkgrel=1
  pkgdesc="Loads and enumerates PKCS#11 modules"
  url="https://p11-glue.freedesktop.org"
-@@ -18,20 +18,17 @@
- )
- makedepends=(
-   bash-completion
--  git
+@@ -22,7 +22,6 @@
    gtk-doc
    libffi
    meson
@@ -21,31 +17,25 @@
  )
  checkdepends=(
    gnutls
- )
- source=(
--  "git+https://github.com/p11-glue/p11-kit?signed#tag=$pkgver"
--  git+https://github.com/p11-glue/pkcs11-json
-+  https://github.com/p11-glue/p11-kit/releases/download/$pkgver/p11-kit-$pkgver.tar.xz{,.sig}
+@@ -31,7 +30,7 @@
+   "git+https://github.com/p11-glue/p11-kit?signed#tag=$pkgver"
+   git+https://github.com/p11-glue/pkcs11-json
  )
 -b2sums=('b69e4b5a97671dd1b72b9914a1ae565164ad84fa0209bdbbfce3a73e4f36ce6c60b0f19c619c2817a5d920d310bed56db3124843ea677cd1325866006abfde02'
-+b2sums=('96d6a9c2807586abafae4da4df89f566672733963997d6a83e00aaf83a7a0c0e2995638f505e98fb87a90c60bde28814f1e8b7d5071bf0af96bb0467105a1ddc'
++b2sums=('ef27c6dd2cd60881b185e1d05a46a9799cda8ebb86407ae9264d7173b2b686c757de91e3463babfeda5307adcb452d7e67e22b5c1a8df1613a5e176d0a2ee913'
          'SKIP')
  validpgpkeys=(
    C0F67099B808FB063E2C81117BFB1108D92765AF  # Stef Walter <stef@thewalter.net>
-@@ -40,11 +37,7 @@
- )
+@@ -41,6 +40,8 @@
  
  prepare() {
--  cd p11-kit
--
--  git submodule init
--  git submodule set-url subprojects/pkcs11-json "$srcdir/pkcs11-json"
--  git -c protocol.file.allow=always -c protocol.allow=never submodule update
-+  cd p11-kit-$pkgver
- }
+   cd p11-kit
++
++  git cherry-pick -n 93ba10fd8c7764dd253105c9ae927dcaae406843
  
- build() {
-@@ -52,9 +45,10 @@
+   git submodule init
+   git submodule set-url subprojects/pkcs11-json "$srcdir/pkcs11-json"
+@@ -52,9 +53,10 @@
      -D gtk_doc=true
      -D man=true
      -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source
@@ -53,11 +43,11 @@
    )
  
 -  arch-meson p11-kit build "${meson_options[@]}"
-+  artix-meson p11-kit-$pkgver build "${meson_options[@]}"
++  artix-meson p11-kit build "${meson_options[@]}"
    meson compile -C build
  }
  
-@@ -77,7 +71,6 @@
+@@ -77,7 +79,6 @@
      "libp11-kit=$pkgver-$pkgrel"
      libp11-kit.so
    )
@@ -65,47 +55,13 @@
  
    meson install -C build --destdir "$pkgdir"
    ln -srf "$pkgdir/usr/bin/update-ca-trust" "$pkgdir/usr/lib/p11-kit/trust-extract-compat"
-@@ -89,7 +82,7 @@
- 
-   _pick doc "$pkgdir"/usr/share/gtk-doc
- 
--  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 p11-kit/COPYING
-+  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 p11-kit-$pkgver/COPYING
- }
- 
- package_libp11-kit() {
-@@ -103,7 +96,7 @@
- 
-   mv lib/* "$pkgdir"
- 
--  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 p11-kit/COPYING
-+  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 p11-kit-$pkgver/COPYING
- }
- 
- package_p11-kit-docs() {
-@@ -112,6 +105,6 @@
- 
-   mv doc/* "$pkgdir"
- 
--  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 p11-kit/COPYING
-+  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 p11-kit-$pkgver/COPYING
- }
- 
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,6 @@
- 
- bash-completion
- coreutils
--git
- glibc
- gtk-doc
- libffi
-@@ -9,4 +8,3 @@
+@@ -9,4 +9,3 @@
  libp11-kit.so
  libtasn1
  meson

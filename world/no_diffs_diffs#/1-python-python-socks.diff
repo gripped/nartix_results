@@ -11,16 +11,3 @@
  
  package() {
    cd "${pkgname#python-}"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,6 +0,0 @@
--git
--python
--python-build
--python-installer
--python-setuptools
--python-wheel

@@ -648,7 +648,6 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-httplib2
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

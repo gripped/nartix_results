@@ -3599,6 +3599,7 @@ python-html5-parser
 python-html5lib
 python-http-parser
 python-httpcore
+python-httplib2
 python-httpretty
 python-httptools
 python-httpx-aiohttp

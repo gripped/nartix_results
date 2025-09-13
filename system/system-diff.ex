@@ -64,6 +64,8 @@ mkinitcpio
 nfs-utils
 nfsidmap
 nspr
+nss
+ca-certificates-mozilla
 openldap
 libldap
 openresolv

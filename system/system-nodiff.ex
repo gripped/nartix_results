@@ -138,8 +138,6 @@ net-tools
 nettle
 nilfs-utils
 npth
-nss
-ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl
