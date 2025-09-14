@@ -81,7 +81,6 @@ aom
 aom-docs
 apache-orc
 apitrace
-apparmor
 appmenu-gtk-module
 appstream-glib
 apr-util
@@ -1783,6 +1782,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3484,7 +3484,6 @@ python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
-python-feedparser
 python-fido2
 python-fields
 python-filebytes
@@ -5544,7 +5543,6 @@ tree-sitter-bash
 tree-sitter-c
 tree-sitter-lua
 tree-sitter-markdown
-tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc

@@ -5,6 +5,7 @@ alsa-utils
 amule
 apache
 apcupsd
+apparmor
 appstream
 appstream-qt
 aquamarine
@@ -347,7 +348,6 @@ libgudev
 libguestfs
 libhandy0
 libinput
-libkate
 libkeyfinder
 libldm
 libmspub
@@ -648,6 +648,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-feedparser
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -845,6 +846,7 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
+tree-sitter-python
 tumbler
 uasm
 udftools
