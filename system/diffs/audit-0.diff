@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -56,8 +56,8 @@
+@@ -56,17 +56,15 @@
  
  build() {
    local configure_options=(
@@ -10,7 +10,16 @@
      --enable-zos-remote
      --libexecdir=/usr/lib/audit
      --prefix=/usr
-@@ -120,6 +120,8 @@
+     --runstatedir=/run
+     --sbindir=/usr/bin
+     --sysconfdir=/etc
+-    --with-aarch64
+     --with-apparmor=yes
+-    --with-arm
+     --with-io_uring=yes
+     --with-libcap-ng=yes
+     --with-python3=yes
+@@ -122,6 +120,8 @@
      cd "$pkgdir"
      _pick python-audit usr/lib/python*
    )
@@ -27,7 +36,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,8 +5,8 @@
+@@ -5,17 +5,15 @@
  }
  build() {
  local configure_options=(
@@ -37,3 +46,12 @@
  --enable-zos-remote
  --libexecdir=/usr/lib/audit
  --prefix=/usr
+ --runstatedir=/run
+ --sbindir=/usr/bin
+ --sysconfdir=/etc
+---with-aarch64
+ --with-apparmor=yes
+---with-arm
+ --with-io_uring=yes
+ --with-libcap-ng=yes
+ --with-python3=yes

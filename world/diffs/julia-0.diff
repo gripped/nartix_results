@@ -24,6 +24,22 @@
    cd stdlib/srccache
    _SAsha=89d3c7dded535a77551e763a437a6d31e4d9bf84
    tar -xzf Downloads-$_SAsha.tar.gz
+@@ -99,13 +102,12 @@
+     LIBBLASNAME=libblas64
+     LIBLAPACK=-llapack64
+     LIBLAPACKNAME=liblapack64
++    MARCH=x86-64
++    JULIA_CPU_TARGET="generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1)"
+     VERBOSE=1
+     JLDFLAGS="$LDFLAGS -lLLVM-16jl"
+     LLVM_CONFIG=/usr/lib/llvm-julia/bin/llvm-config
+   )
+-
+-  [[ ${CARCH} == 'aarch64' ]] && make_options+=(MARCH=armv8.2-a JULIA_CPU_TARGET="generic;armv8.2-a,crypto,fullfp16,lse,rdm")
+-  [[ ${CARCH} == 'x86_64' ]] &&  make_options+=(MARCH=x86-64 JULIA_CPU_TARGET="generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1)")
+ 
+   export CMAKE_POLICY_VERSION_MINIMUM=3.5 # Fix build with cmake 4
+   LD_LIBRARY_PATH="/usr/lib/mbedtls2" make "${make_options[@]}" "$@"
 
 
 ############# Stripped diff below #################

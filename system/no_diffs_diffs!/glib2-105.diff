@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -91,7 +91,7 @@
+   CFLAGS+=" -ffat-lto-objects"
+   CXXFLAGS+=" -ffat-lto-objects"
+ 
+-  arch-meson glib build "${meson_options[@]}"
++  artix-meson glib build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,6 +23,6 @@
+ CXXFLAGS+=" -g3"
+ CFLAGS+=" -ffat-lto-objects"
+ CXXFLAGS+=" -ffat-lto-objects"
+-arch-meson glib build "${meson_options[@]}"
++artix-meson glib build "${meson_options[@]}"
+ meson compile -C build
+ }

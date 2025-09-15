@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,11 +10,6 @@
+ source=(https://download.savannah.nongnu.org/releases/${pkgname}/${pkgname}-${pkgver}.tar.gz)
+ sha256sums=('f156abc5de8658f22ee8f08d7a72c88f9409ebd8c7933e9466b0842afeb2f145')
+ 
+-prepare() {
+-  cd ${pkgname}-${pkgver}
+-  autoreconf -fvi
+-}
+-
+ build() {
+   cd ${pkgname}-${pkgver}
+   ./configure --prefix=/usr
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd ${pkgname}-${pkgver}
+-autoreconf -fvi
+-}
+ build() {
+ cd ${pkgname}-${pkgver}
+ ./configure --prefix=/usr

@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=tk
+-pkgver=9.0.1
++pkgver=8.6.16
+ pkgrel=1
+ pkgdesc='A windowing toolkit for use with tcl'
+ arch=(x86_64)
+@@ -9,16 +9,21 @@
+ depends=(tcl
+          libxss
+          libxft)
+-makedepends=(zip)
+ options=(staticlibs)
+ _archive="$pkgname$pkgver"
+-source=("https://downloads.sourceforge.net/sourceforge/tcl/$_archive-src.tar.gz")
+-sha256sums=('d6f01a4d598bfc6398be9584e1bab828c907b0758db4bbb351a1429106aec527')
++source=("https://downloads.sourceforge.net/sourceforge/tcl/$_archive-src.tar.gz"
++        font-sizes.diff)
++sha256sums=('be9f94d3575d4b3099d84bc3c10de8994df2d7aa405208173c709cc404a7e5fe'
++            '80a64f81a002ca83475ac2e53b8c9836e1a376049989733b61687c88df8c68e5')
++
++prepare() {
++	cd "$_archive"
++	patch -p1 -i ../font-sizes.diff
++}
+ 
+ build() {
+ 	cd "$_archive/unix"
+ 	./configure \
+-		ZIP_PROG=zip \
+ 		--prefix=/usr \
+ 		--mandir=/usr/share/man \
+ 		--enable-threads \
+@@ -48,5 +53,5 @@
+ 		-e "s#$srcdir/$_archive#/usr/include#" \
+ 		-i "$pkgdir/usr/lib/tkConfig.sh"
+ 
+-	chmod -x "$pkgdir/usr/lib/libtkstub.a"
++	chmod -x "$pkgdir/usr/lib/libtkstub8.6.a"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+ libxft
+ libxss
+ tcl
+-zip
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,10 @@
++prepare() {
++cd "$_archive"
++patch -p1 -i ../font-sizes.diff
++}
+ build() {
+ cd "$_archive/unix"
+ ./configure \
+-ZIP_PROG=zip \
+ --prefix=/usr \
+ --mandir=/usr/share/man \
+ --enable-threads \

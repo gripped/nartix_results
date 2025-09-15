@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,14 +9,14 @@
+@@ -9,17 +9,16 @@
  depends=(bash
           gcc-libs
           glibc
@@ -16,13 +16,20 @@
 +         x11win-server
           xorg-xauth)
  makedepends=(extra-cmake-modules
+-             git
               python-docutils
-@@ -31,8 +31,11 @@
+              qt5-base
+              qt5-declarative
+@@ -32,25 +31,26 @@
          'etc/pam.d/sddm-autologin'
          'etc/pam.d/sddm-greeter')
  provides=(display-manager)
--source=(https://github.com/$pkgname/$pkgname/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
--sha256sums=('f895de2683627e969e4849dbfbbb2b500787481ca5ba0de6d6dfdae5f1549abf')
+-source=(git+https://github.com/$pkgname/$pkgname#tag=v$pkgver)
+-sha256sums=('67394c93f331fc02f89559f68e149a992efaed07690f548e6a83ec384ebb8000')
+-
+-prepare() {
+-  git -C $pkgname cherry-pick -n 228778c2b4b7e26db1e1d69fe484ed75c5791c3a # Fix build with cmake 4
+-}
 +source=(https://github.com/$pkgname/$pkgname/archive/v$pkgver/$pkgname-$pkgver.tar.gz
 +        sddm.{tmpfiles,sysusers})
 +sha256sums=('f895de2683627e969e4849dbfbbb2b500787481ca5ba0de6d6dfdae5f1549abf'
@@ -30,8 +37,11 @@
 +            '9fce66f325d170c61caed57816f4bc72e9591df083e89da114a3bb16b0a0e60f')
  
  build() {
-   cmake -B build -S $pkgname-$pkgver \
-@@ -42,6 +45,8 @@
+-  cmake -B build -S $pkgname \
++  cmake -B build -S $pkgname-$pkgver \
+         -DCMAKE_INSTALL_PREFIX=/usr \
+         -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/sddm \
+         -DBUILD_WITH_QT6=ON \
          -DDBUS_CONFIG_DIR=/usr/share/dbus-1/system.d \
          -DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
          -DBUILD_MAN_PAGES=ON \
@@ -40,7 +50,12 @@
          -DUID_MAX=60513
    cmake --build build
  
-@@ -60,4 +65,7 @@
+-  cmake -B build5 -S $pkgname \
++  cmake -B build5 -S $pkgname-$pkgver \
+         -DCMAKE_INSTALL_PREFIX=/usr
+   cmake --build build5/src/greeter
+   cmake --build build5/components
+@@ -65,4 +65,7 @@
    "$pkgdir"/usr/bin/sddm --example-config > "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf
    sed -r 's|DefaultPath=.*|DefaultPath=/usr/local/sbin:/usr/local/bin:/usr/bin|g' -i "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf
    sed -e "/^InputMethod/s/qtvirtualkeyboard//" -i "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf
@@ -54,15 +69,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,6 +2,7 @@
+@@ -1,8 +1,8 @@
+ bash
  extra-cmake-modules
  gcc-libs
+-git
  glibc
 +libelogind
  libxau
  libxcb
  pam
-@@ -12,7 +13,6 @@
+@@ -13,7 +13,6 @@
  qt6-base
  qt6-declarative
  qt6-tools

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,6 @@
+ prepare() {
+   cd libunwind-$pkgver
+   patch -p1 -i ../b67d508a.patch # Fix build with GCC 15
+-  autoreconf -fvi
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd libunwind-$pkgver
+ patch -p1 -i ../b67d508a.patch # Fix build with GCC 15
+-autoreconf -fvi
+ }
+ build() {
+ local configure_options=(

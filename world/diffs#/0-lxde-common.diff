@@ -10,27 +10,39 @@
  pkgdesc='Common files of the LXDE Desktop'
  arch=('any')
  url='https://lxde.org/'
-@@ -12,10 +12,10 @@
+@@ -12,27 +12,26 @@
  makedepends=('intltool')
  optdepends=('gnome-themes-standard: default GTK+ theme'
              'lxde-icon-theme: default icon theme')
--source=(https://github.com/lxde/$pkgname/archive/$pkgver/$pkgname-$pkgver.tar.gz
+-source=(git+https://github.com/lxde/lxde-common.git#tag=${pkgver}
 +source=(https://downloads.sourceforge.net/lxde/$pkgname-$pkgver.tar.xz
          dbus-update-environment.patch
          default-config.patch)
--sha256sums=('e55ac4b4406f7538ed5994677c6488c6a0dd9a4b34a0969402aaa4f04b52b26f'
+-sha256sums=('0096ee210df9bdeb67867ef57b008dc28014c9581cbba347cfdca2699de2325d'
 +sha256sums=('1cd9bc900960c995d48ffbbdc86ecffda7c806168c67aaa50c53113794234856'
              '87f1413f5bb371de45451fc7f82f9f80a23c90f5799bed173ec31589824c03bb'
              '6a31a706d0fd1cb168b495806bb4a646c019e3b9c4f6bc13aae9edb8b0372d9d')
  
-@@ -23,7 +23,6 @@
-     cd $pkgname-$pkgver
+ prepare() {
+-    cd $pkgname
++    cd $pkgname-$pkgver
      patch -Np1 -i ../dbus-update-environment.patch
      patch -Np1 -i ../default-config.patch
--    autoreconf -vif
+-    autoreconf -fiv
  }
  
  build() {
+-    cd $pkgname
++    cd $pkgname-$pkgver
+     ./configure --sysconfdir=/etc --prefix=/usr
+     make
+ }
+ 
+ package() {
+-    cd $pkgname
++    cd $pkgname-$pkgver
+     make DESTDIR="$pkgdir" install
+ }
 
 
 ############# Stripped diff below #################
@@ -39,11 +51,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,6 @@
- cd $pkgname-$pkgver
+@@ -1,11 +1,10 @@
+ prepare() {
+-cd $pkgname
++cd $pkgname-$pkgver
  patch -Np1 -i ../dbus-update-environment.patch
  patch -Np1 -i ../default-config.patch
--autoreconf -vif
+-autoreconf -fiv
  }
  build() {
- cd $pkgname-$pkgver
+-cd $pkgname
++cd $pkgname-$pkgver
+ ./configure --sysconfdir=/etc --prefix=/usr
+ make
+ }

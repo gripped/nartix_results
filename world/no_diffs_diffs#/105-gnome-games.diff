@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -79,7 +79,7 @@
+@@ -26,6 +26,7 @@
+   tinysparql
+ )
+ makedepends=(
++  appstream-glib
+   git
+   meson
+   vala
+@@ -78,7 +79,7 @@
  }
  
  build() {
@@ -13,7 +21,13 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++appstream-glib
+ cairo
+ dconf
+ gdk-pixbuf2
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ pkgdesc="LAS and OGR hexagonal density and boundary surface generation"
+ arch=('x86_64')
+ url="https://github.com/hobu/hexer"
+-license=("LGPL-2.1-only")
++license=(LGPL)
+ depends=(gdal)
+ makedepends=(cmake)
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/hobu/hexer/archive/${pkgver}.tar.gz"

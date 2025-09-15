@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=pkgfile
--pkgver=25
-+pkgver=24
- pkgrel=1
- pkgdesc='A tool to search for files in official repository packages'
- arch=('x86_64')
-@@ -11,28 +11,26 @@
+@@ -11,9 +11,10 @@
      'gcc-libs'
      'glibc'
      'libarchive'
@@ -20,32 +12,21 @@
  makedepends=(
      'git'
      'meson')
--checkdepends=(
--    'gtest'
--    'python'
--)
- install=pkgfile.install
- source=("git+https://github.com/falconindy/pkgfile.git#tag=v${pkgver}?signed")
--sha256sums=('3b247c9e0647ddf93682b7b9fedee5822004b9b4b57af37be82351f1cdca3b81')
-+sha256sums=('0a02f98d7b4fd516065757e4942c7d2490104a044e31306f7f4b259db8ba36b3')
+@@ -26,8 +27,13 @@
+ sha256sums=('3b247c9e0647ddf93682b7b9fedee5822004b9b4b57af37be82351f1cdca3b81')
  validpgpkeys=('487EACC08557AD082088DABA1EB2638FF56C0C53') # Dave Reisner <d@falconindy.com>
  
--build() {
--    arch-meson "$pkgname" build
--    meson compile -C build
 +prepare() {
 +    cd "$pkgname"
 +    sed -e 's|libsystemd|libelogind|g' -i meson.build
- }
- 
--check() {
--  meson test -C build --print-errorlogs
-+build() {
++}
++
+ build() {
+-    arch-meson "$pkgname" build
 +    artix-meson "$pkgname" -D systemd_units=false build
-+    meson compile -C build
+     meson compile -C build
  }
  
- package() {
 
 
 ############# Stripped diff below #################

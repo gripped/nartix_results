@@ -3,7 +3,7 @@
 @@ -1,18 +1,18 @@
  
  pkgname=cinnamon-desktop
--pkgver=6.4.1
+-pkgver=6.4.2
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc="Library with common API for various Cinnamon modules"
@@ -15,10 +15,10 @@
 +makedepends=(meson samurai gobject-introspection intltool)
  source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
          config.patch)
--sha256sums=('0e9af48b97910302a1130424a05c63b2e7aacb4ce6ae7a1d53c71bcd157a3a8f'
+-sha256sums=('f11d063c7ecb86b98803e9a22ade0655d979b334f6c90fdd1cc6f50bbe6e9992'
 +sha256sums=('17473083758acac9ca580849c88a2ac4bcc2fe715ee232fbecfa0baf2204bbb5'
              'e70227c64eca6857fe9adc21c6aee851df40b3a54bf34a145e0dc4b9819a7b6a')
--b2sums=('36cc34af24adeaa80bb89440bfbb0676131493c55a418d55397e0d14beff1afecf1c0073b653b5927d830ae16200575489608d9f33c9c8603cdc328890c04a0a'
+-b2sums=('3cb8bf41dbef3f3a0e6aa40917a4f1a25930deb4a04ef52af154266b5568cb4956769657c3595714fbe57275fc687ab666d8da38c5f186314993d462e82ea682'
 +b2sums=('908b53445327cdbb5560655700e6dfa829934714167f02dda2d9d31a02ae85fcf6565704e791f67f0725e9eb76ed65ef26944d3fac2a58e3091b2afd10bb70af'
          '5ae28fca1f3fee35222569afdba3f6f2df00f2b27709d1135589f33a3b80546ca541c391f5ee02759467fcaffe380dc1cbc4117dffe3c10cdf7046fd8588e384')
  

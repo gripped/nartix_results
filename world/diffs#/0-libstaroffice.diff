@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,28 @@
+@@ -1,43 +1,28 @@
  
 -pkgbase=libstaroffice
 -pkgname=(libstaroffice libstaroffice-doc)
@@ -18,6 +18,11 @@
  source=(https://github.com/fosnola/$pkgname/releases/download/$pkgver/libstaroffice-$pkgver.tar.xz)
  sha256sums=('f94fb0ad8216f97127bedef163a45886b43c62deac5e5b0f5e628e234220c8db')
  
+-prepare() {
+-  cd $pkgname-$pkgver
+-  autoreconf -fiv
+-}
+-
  build() {
 -  cd "${pkgbase}-${pkgver}"
 +  cd "${pkgname}-${pkgver}"
@@ -56,7 +61,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,9 +1,5 @@
+-prepare() {
+-cd $pkgname-$pkgver
+-autoreconf -fiv
+-}
  build() {
 -cd "${pkgbase}-${pkgver}"
 +cd "${pkgname}-${pkgver}"

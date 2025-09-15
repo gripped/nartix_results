@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,8 @@
+ pkgrel=1
+ arch=(x86_64)
+ depends=(gcc-libs)
+-makedepends=(cmake python)
++makedepends=(cmake)
++checkdepends=(python)
+ pkgdesc='A tool for generating C-based recognizers from regular expressions'
+ url='https://re2c.org'
+ license=('public domain')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ cmake
+ gcc-libs
+-python

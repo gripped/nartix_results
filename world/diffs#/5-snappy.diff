@@ -1,0 +1,88 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,26 +13,25 @@
+ makedepends=(
+   'clang'
+   'cmake'
+-  'git'
+   'gtest'
+ )
+ checkdepends=('zlib')
+ provides=('libsnappy.so')
+ source=(
+-  "git+https://github.com/google/snappy.git#tag=${pkgver}"
++  "$url/archive/$pkgver/$pkgname-$pkgver.tar.gz"
+   "snappy.pc.in"
+   "$pkgname-cmake_add_pkgconfig.patch"
+   "$pkgname-use_system_gtest.patch"
+   "$pkgname-reenable_rtti.patch"
+ )
+-sha256sums=('6cc4304fc850b9878709c6da48490c8929929aa5befda2966981cea78059ba6d'
++sha256sums=('90f74bc1fbf78a6c56b3c4a082a05103b3a56bb17bca1a27e052ea11723292dc'
+             '134f06ca0584a1026538d0fb972fc141c008390ecae1806184b721eca1abbc75'
+             '2a204d7d35509ffc290d80c641fcb7e8488c67ca550aa1695493cff12c53156b'
+             '50b31b45511e8907f1319305c102f37631b0fbe509f862b612e70073383658e4'
+             '6ff6970d2a1961aed375a8e5098bf3b7340ff86fe60aff4483dec3400f273372')
+ 
+ prepare() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   cp ../snappy.pc.in .
+   patch -Np1 < ../$pkgname-cmake_add_pkgconfig.patch # https://bugs.archlinux.org/task/71246
+   patch -Np1 < ../$pkgname-use_system_gtest.patch
+@@ -40,7 +39,8 @@
+ }
+ 
+ build() {
+-  cmake -S $pkgname -B build \
++  cd $pkgname-$pkgver
++  cmake -S . -B build \
+     -D CMAKE_BUILD_TYPE=None \
+     -D CMAKE_INSTALL_PREFIX=/usr \
+     -W no-dev \
+@@ -51,10 +51,12 @@
+ }
+ 
+ check() {
++  cd $pkgname-$pkgver
+   cmake --build build --target test
+ }
+ 
+ package() {
++  cd $pkgname-$pkgver
+   DESTDIR="$pkgdir" cmake --install build
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" $pkgname/COPYING
++  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" COPYING
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ clang
+ cmake
+ gcc-libs
+-git
+ glibc
+ gtest
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ prepare() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ cp ../snappy.pc.in .
+ patch -Np1 < ../$pkgname-cmake_add_pkgconfig.patch # https://bugs.archlinux.org/task/71246
+ patch -Np1 < ../$pkgname-use_system_gtest.patch
+ patch -Np1 < ../$pkgname-reenable_rtti.patch
+ }
+ build() {
+-cmake -S $pkgname -B build \
++cd $pkgname-$pkgver
++cmake -S . -B build \
+ -D CMAKE_BUILD_TYPE=None \
+ -D CMAKE_INSTALL_PREFIX=/usr \
+ -W no-dev \

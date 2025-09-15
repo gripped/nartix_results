@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-  ./configure --prefix=/usr --with-libunwind --enable-mpers=check
++  ./configure --prefix=/usr --with-libunwind
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd $pkgname-$pkgver
+-./configure --prefix=/usr --with-libunwind --enable-mpers=check
++./configure --prefix=/usr --with-libunwind
+ make
+ }

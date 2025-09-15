@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,6 @@
+@@ -13,15 +13,14 @@
    libxcrypt
    polkit
    shadow
@@ -8,7 +8,33 @@
  )
  makedepends=(
    docbook-xsl
-@@ -43,12 +42,14 @@
+   git
+-  glib2-devel
+   gobject-introspection
+   gtk-doc
+   meson
++  python-packaging
+   vala
+   xmlto
+ )
+@@ -33,28 +32,24 @@
+ source=(
+   "git+$url.git#tag=$pkgver"
+   accounts-daemon-restart.hook
+-  0001-tests-Drop-check-format-test.patch
+ )
+ b2sums=('d0e2166dc7232a9cc9f6b37b69bc8651486a85b5a98f98a9fdd39958142fec480cfc19e300c7fcc4becf9436282bd8b2f0141523347c748ee074a4bfec0029c4'
+-        'ac1892d814c9efca38daec5b34efdee6289089df515ceeb0f675794263879506e2b59894eef6a85f52570db3bd8e62cdf15a7d980538195c5af7cba016d6a533'
+-        'b3d35224061a7e2c3654610d7c850b05b7c99cd0516f0a2d3ce1c49d7382b3c4ba2eefe80f50916ab1492cb42b666a6dc29f47b8cad73a9abbb8fa501822abd0')
++        'ac1892d814c9efca38daec5b34efdee6289089df515ceeb0f675794263879506e2b59894eef6a85f52570db3bd8e62cdf15a7d980538195c5af7cba016d6a533')
+ 
+ prepare() {
+   cd $pkgname
+-
+-  git cherry-pick -n da65bee12d9118fe1a49c8718d428fe61d232339 \
+-                     ad0365b77b583da06bcd1e8da4c1bed74129895a
+-  git apply -3 ../0001-tests-Drop-check-format-test.patch
+ }
  
  build() {
    local meson_options=(
@@ -24,7 +50,7 @@
    meson compile -C build
  }
  
-@@ -60,13 +61,11 @@
+@@ -66,13 +61,11 @@
    depends+=(
      libcrypt.so
      libg{lib,object,io}-2.0.so
@@ -44,7 +70,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,12 +9,10 @@
+@@ -2,7 +2,6 @@
+ gcc-libs
+ git
+ glib2
+-glib2-devel
+ glibc
+ gobject-introspection
+ gtk-doc
+@@ -10,11 +9,10 @@
  libgio-2.0.so
  libglib-2.0.so
  libgobject-2.0.so
@@ -52,7 +86,7 @@
  libxcrypt
  meson
  polkit
- python-packaging
++python-packaging
  shadow
 -systemd
  vala

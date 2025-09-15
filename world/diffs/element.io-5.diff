@@ -6,7 +6,7 @@
 +_electron=electron24
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--pkgver=1.11.110
+-pkgver=1.11.111
 +pkgver=1.11.33
  pkgrel=1
  pkgdesc="Glossy Matrix collaboration client — "
@@ -38,8 +38,8 @@
          autolaunch.patch
          io.element.Element.desktop
          element-desktop.sh)
--sha256sums=('ee2398a233526fa3f6a259f1f9862952d1740028f720071c9b76653a912aa9af'
--            'aad4da927ddca0c22801690f5bf75b9ffbd2646300df40b826cda7d1df426497'
+-sha256sums=('df9ae61c39211443814de1cb4f854c3655df4ca94fe7625d3a2d5b4662d1a600'
+-            'e959deb56bdaa38602869c1896c830a57de0ecb1a75cacdd21027bf7073d68d1'
 +sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
 +            'SKIP'
 +            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
@@ -105,15 +105,17 @@
  
    install -d "${pkgdir}"{/usr/lib/element/,/etc/webapps/element}
  
-@@ -99,7 +84,7 @@
+@@ -99,6 +84,8 @@
    install -Dm644 ../io.element.Element.desktop -t "${pkgdir}"/usr/share/applications/
    install -Dm755 ../${pkgname}.sh "${pkgdir}"/usr/bin/${pkgname}
  
 -  install -Dm644 ../element-web/res/themes/element/img/logos/element-logo.svg "${pkgdir}"/usr/share/icons/hicolor/scalable/apps/io.element.Element.svg
+-  install -Dm644 build/icon.png "${pkgdir}"/usr/share/icons/hicolor/512x512/apps/io.element.Element.png
 +  install -Dm644 ../element-web-${pkgver}/res/themes/element/img/logos/element-logo.svg "${pkgdir}"/usr/share/icons/hicolor/scalable/apps/io.element.Element.svg
-   for i in 16 24 48 64 96 128 256 512; do
-     install -Dm644 build/icons/${i}x${i}.png "${pkgdir}"/usr/share/icons/hicolor/${i}x${i}/apps/io.element.Element.png
-   done
++  for i in 16 24 48 64 96 128 256 512; do
++    install -Dm644 build/icons/${i}x${i}.png "${pkgdir}"/usr/share/icons/hicolor/${i}x${i}/apps/io.element.Element.png
++  done
+ }
 
 
 ############# Stripped diff below #################

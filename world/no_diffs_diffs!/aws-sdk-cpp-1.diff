@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+   aws-sdk-cpp-kinesis
+   aws-sdk-cpp-s3
+ )
+-pkgver=1.11.647
++pkgver=1.11.633
+ pkgrel=1
+ pkgdesc='AWS SDK for C++'
+ arch=(x86_64)
+@@ -31,7 +31,7 @@
+   zlib
+ )
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
+-sha256sums=('9b9dd4bb1ac91ed22a5f65849945234d28757e1e57c7844d4c1a8391baa8410c')
++sha256sums=('5952be393752eb914d34bbae572d9161ef36278c3d09b5028be4c935ad26d431')
+ 
+ prepare() {
+   cd $pkgbase-$pkgver

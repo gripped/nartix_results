@@ -1,5 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,9 +3,9 @@
+ _commit='b8b6a5fd7b4e8cab8e5a5d01064cf5bf2b5eed95'
+ pkgver=0.9.27.r1151.gb8b6a5fd
+ pkgrel=1
+-pkgdesc='Tiny C Compiler (tinycc)'
++pkgdesc="Tiny C Compiler"
+ arch=('x86_64')
+-url='https://bellard.org/tcc/'
++url="https://bellard.org/tcc/"
+ license=('LGPL')
+ depends=('glibc')
+ makedepends=('git')
 @@ -28,8 +28,7 @@
  
    ./configure \

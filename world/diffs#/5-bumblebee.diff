@@ -9,6 +9,15 @@
  makedepends=('help2man')
  optdepends=('bbswitch: switch on/off discrete card'
              'nvidia: NVIDIA kernel driver'
+@@ -14,7 +14,7 @@
+             'lib32-virtualgl: run 32bit applications with optirun'
+             'lib32-primus: faster back-end for optirun')
+ url="http://www.bumblebee-project.org"
+-license=("GPL-3.0-only")
++license=("GPL3")
+ install=bumblebee.install
+ backup=('etc/bumblebee/bumblebee.conf'
+         'etc/bumblebee/xorg.conf.nouveau'
 @@ -43,14 +43,14 @@
              '1bc209c21b4f6d1975ede4091829baf98d20b33100b9d21061393880bb391fd8')
  

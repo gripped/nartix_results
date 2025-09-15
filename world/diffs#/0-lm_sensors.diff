@@ -23,7 +23,7 @@
  validpgpkeys=('7CA69F4460F1BDC41FD2C858A5526B9BB3CD4E6A')
  
  prepare() {
--  cd lm-sensors
+-  cd lm-sensors-$_pkgver
 -  sed -i 's|/etc/sysconfig|/etc/conf.d|' prog/{detect/sensors-detect,init/{sensord,lm_sensors}.service}
 -  sed -i 's/EnvironmentFile=/EnvironmentFile=-/' prog/init/lm_sensors.service
 +  cd lm-sensors-${pkgver//./-}
@@ -31,13 +31,13 @@
  }
  
  build() {
--  cd lm-sensors
+-  cd lm-sensors-$_pkgver
 +  cd lm-sensors-${pkgver//./-}
    make PREFIX=/usr
  }
  
  package() {
--  cd lm-sensors
+-  cd lm-sensors-$_pkgver
 +  cd lm-sensors-${pkgver//./-}
    make PROG_EXTRA=sensord BUILD_STATIC_LIB=0 \
      PREFIX=/usr SBINDIR=/usr/bin MANDIR=/usr/share/man DESTDIR="${pkgdir}" install
@@ -60,14 +60,14 @@
 +++ Artix PKGBUILD
 @@ -1,9 +1,8 @@
  prepare() {
--cd lm-sensors
+-cd lm-sensors-$_pkgver
 -sed -i 's|/etc/sysconfig|/etc/conf.d|' prog/{detect/sensors-detect,init/{sensord,lm_sensors}.service}
 -sed -i 's/EnvironmentFile=/EnvironmentFile=-/' prog/init/lm_sensors.service
 +cd lm-sensors-${pkgver//./-}
 +sed -i 's|/etc/sysconfig|/etc/conf.d|' prog/detect/sensors-detect
  }
  build() {
--cd lm-sensors
+-cd lm-sensors-$_pkgver
 +cd lm-sensors-${pkgver//./-}
  make PREFIX=/usr
  }

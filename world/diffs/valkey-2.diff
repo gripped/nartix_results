@@ -40,13 +40,15 @@
         -C $pkgname
  }
  
-@@ -85,7 +80,6 @@
- 
-   install -vDm 644 ../BSD-{2,3}-Clause.txt -t "$pkgdir"/usr/share/licenses/$pkgname/
+@@ -87,9 +82,4 @@
    install -Dm644 -t "$pkgdir"/etc/valkey valkey.conf sentinel.conf
--  install -Dm644 -t "$pkgdir"/usr/lib/systemd/system/ ../valkey.service ../valkey-sentinel.service
    install -Dm644 "$srcdir"/valkey.sysusers "$pkgdir"/usr/lib/sysusers.d/valkey.conf
    install -Dm644 "$srcdir"/valkey.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/valkey.conf
+-
+-  install -Dm644 -t "$pkgdir"/usr/lib/systemd/system/ ../valkey.service ../valkey-sentinel.service
+-  cd "$pkgdir"/usr/lib/systemd/system/
+-  ln -s {valkey,redis}.service
+-  ln -s {valkey,redis}-sentinel.service
  }
 
 

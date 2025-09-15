@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,7 +42,7 @@
+     -D legacy=enabled
+   )
+ 
+-  arch-meson libxml2 build "${meson_options[@]}"
++  artix-meson libxml2 build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ -D icu=enabled
+ -D legacy=enabled
+ )
+-arch-meson libxml2 build "${meson_options[@]}"
++artix-meson libxml2 build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,6 +19,7 @@
+ makedepends=(
+   alsa-lib
+   bash
++  ccache
+   cpio
+   fontconfig
+   gcc14
+@@ -64,14 +65,6 @@
+   cd jdk8u-jdk${_majorver}u${_minorver}-b${_updatever}
+ 
+   patch -Np1 -i "${srcdir}"/gcc11.patch
+-
+-  sed -i 's/uabs(/g_uabs(/' \
+-    hotspot/src/cpu/aarch64/vm/assembler_aarch64.cpp \
+-    hotspot/src/cpu/aarch64/vm/assembler_aarch64.hpp \
+-    hotspot/src/cpu/aarch64/vm/macroAssembler_aarch64.cpp \
+-    hotspot/src/cpu/aarch64/vm/stubGenerator_aarch64.cpp \
+-    hotspot/src/share/vm/opto/mulnode.cpp \
+-    hotspot/src/share/vm/utilities/globalDefinitions.hpp
+ }
+ 
+ build() {
+@@ -101,7 +94,7 @@
+     --with-extra-cflags="${CFLAGS}" \
+     --with-extra-cxxflags="${CXXFLAGS}" \
+     --with-extra-ldflags="${LDFLAGS}" \
+-    --with-vendor-name="Arch Linux"
++    --with-vendor-name="Artix Linux"
+ 
+   make
+   make docs
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ alsa-lib
+ bash
+ ca-certificates-utils
++ccache
+ cpio
+ fontconfig
+ gcc14
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,6 @@
+ prepare() {
+ cd jdk8u-jdk${_majorver}u${_minorver}-b${_updatever}
+ patch -Np1 -i "${srcdir}"/gcc11.patch
+-sed -i 's/uabs(/g_uabs(/' \
+-hotspot/src/cpu/aarch64/vm/assembler_aarch64.cpp \
+-hotspot/src/cpu/aarch64/vm/assembler_aarch64.hpp \
+-hotspot/src/cpu/aarch64/vm/macroAssembler_aarch64.cpp \
+-hotspot/src/cpu/aarch64/vm/stubGenerator_aarch64.cpp \
+-hotspot/src/share/vm/opto/mulnode.cpp \
+-hotspot/src/share/vm/utilities/globalDefinitions.hpp
+ }
+ build() {
+ cd jdk8u-jdk${_majorver}u${_minorver}-b${_updatever}
+@@ -31,7 +24,7 @@
+ --with-extra-cflags="${CFLAGS}" \
+ --with-extra-cxxflags="${CXXFLAGS}" \
+ --with-extra-ldflags="${LDFLAGS}" \
+---with-vendor-name="Arch Linux"
++--with-vendor-name="Artix Linux"
+ make
+ make docs
+ make install

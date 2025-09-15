@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,11 +4,10 @@
+ pkgrel=2
+ pkgdesc='A string search utility'
+ arch=('x86_64')
+-license=('GPL-3.0-or-later')
++license=('GPL3')
+ url='https://www.gnu.org/software/grep/'
+-depends=('glibc' 'pcre2' 'sh')
++depends=('glibc' 'pcre2')
+ makedepends=('gperf' 'git' 'python' 'texinfo' 'wget')
+-checkdepends=('glibc-locales')
+ validpgpkeys=('155D3FC500C834486D1EEA677FD9FCCB000BEEEE') # Jim Meyering
+ source=("git+https://git.savannah.gnu.org/git/grep.git#tag=v${pkgver}?signed"
+         "git+https://git.savannah.gnu.org/git/gnulib.git")
+@@ -25,7 +24,7 @@
+   git cherry-pick -n \
+     '2e19d07ef1c08c3ce4771bb1bfee1ae6541f1c0d'
+ 
+-  ./bootstrap
++  sh bootstrap
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,5 @@
+ gperf
+ pcre2
+ python
+-sh
+ texinfo
+ wget
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ git -c protocol.file.allow=always submodule update
+ git cherry-pick -n \
+ '2e19d07ef1c08c3ce4771bb1bfee1ae6541f1c0d'
+-./bootstrap
++sh bootstrap
+ }
+ build() {
+ cd $pkgname

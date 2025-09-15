@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,6 @@
+ prepare() {
+   cd $pkgbase-$pkgver
+   patch -Np0 -i ../mdds3.patch
+-  autoreconf -vfi
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd $pkgbase-$pkgver
+ patch -Np0 -i ../mdds3.patch
+-autoreconf -vfi
+ }
+ build() {
+ cd $pkgbase-$pkgver

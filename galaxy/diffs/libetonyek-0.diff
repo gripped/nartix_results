@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,48 +1,28 @@
+@@ -1,49 +1,28 @@
  
 -pkgbase=libetonyek
 -pkgname=(libetonyek libetonyek-doc)
@@ -24,6 +24,7 @@
 -prepare() {
 -  cd $pkgbase-$pkgver
 -  patch -Np0 -i ../mdds3.patch
+-  autoreconf -vfi
 -}
 +depends=('libxml2' 'zlib' 'librevenge' 'liblangtag' 'gcc-libs' 'glibc')
 +makedepends=('boost' 'cppunit' 'gperf' 'doxygen' 'glm' 'mdds')
@@ -69,10 +70,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
+@@ -1,10 +1,5 @@
 -prepare() {
 -cd $pkgbase-$pkgver
 -patch -Np0 -i ../mdds3.patch
+-autoreconf -vfi
 -}
  build() {
 -cd $pkgbase-$pkgver

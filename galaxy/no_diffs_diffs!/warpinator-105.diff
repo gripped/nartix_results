@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ pkgdesc='LAN file sender, send and receive files across the network'
+ arch=('any')
+ url='https://github.com/linuxmint/warpinator'
+-license=('GPL-3.0-only')
++license=('GPL3')
+ depends=('gtk3' 'libnm' 'python-cryptography' 'python-gobject' 'python-grpcio'
+          'python-protobuf' 'python-pynacl' 'python-setproctitle' 'python-setuptools' 'python-xapp' 'python-zeroconf'
+          'xapp' 'python-cairo' 'python-qrcode' 'python-pillow' 'python-netifaces')
 @@ -23,7 +23,7 @@
  }
  

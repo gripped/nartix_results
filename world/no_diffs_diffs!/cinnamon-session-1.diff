@@ -1,22 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,17 +1,17 @@
  
  pkgname=cinnamon-session
--pkgver=6.4.0
+-pkgver=6.4.2
 +pkgver=6.0.3
  pkgrel=1
  pkgdesc="The Cinnamon Session Handler"
  arch=('x86_64')
-@@ -8,10 +8,10 @@
+ url="https://github.com/linuxmint/${pkgname}"
  license=('GPL' 'LGPL')
- depends=('cinnamon-desktop' 'libsm' 'libcanberra' 'xapps')
+-depends=('cinnamon-desktop' 'libsm' 'libcanberra' 'xapp')
++depends=('cinnamon-desktop' 'libsm' 'libcanberra' 'xapps')
  optdepends=('cinnamon-translations: i18n')
 -makedepends=('meson' 'samurai' 'xtrans' 'glib2-devel')
 +makedepends=('meson' 'samurai' 'xtrans')
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
--sha256sums=('464075d920df360b5ad94f72395a09b5fbf8b14f0190406ec76055a17659e243')
--b2sums=('13bed1e5cec912f679c13c9ef8e4bbca8c267c37663910ba0a82e78074c77405c259020dffb86c843f2e080792e836a567d120eb5c80459e870a29a959f7f4a3')
+-sha256sums=('e4f0380ef45be08366fcdfbda431c6b0b20760d251ea78b810b4e0e223134690')
+-b2sums=('f14215e9680ead7ab9220911bc5cd0d348c2d7334bbcb9ca3891ee06d3aae7334c89348937217f47b839b086149be473badaed9a1539b205675f653b332c56af')
 +sha256sums=('76ce6cd4e09d1da37021cb2aa8e89e55d2f894ee83a926ed68aecabd971c5747')
 +b2sums=('52e32beb7f055469c016bd0341f113beff03323b8e212df2b9591d93167fa9cb96adbc0a1aca31a4ff5d69d85ffe3af7dff1c7b19d7d20b70b1dcf84abbb8579')
  
@@ -28,9 +29,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
+@@ -1,8 +1,7 @@
  cinnamon-desktop
 -glib2-devel
  libcanberra
  libsm
  meson
+ samurai
+-xapp
++xapps
+ xtrans

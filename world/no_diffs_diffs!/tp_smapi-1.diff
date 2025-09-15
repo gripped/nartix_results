@@ -1,37 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
+@@ -1,7 +1,7 @@
  
  pkgname=tp_smapi
--pkgver=0.44
+ pkgver=0.45
 -pkgrel=20
-+pkgver=0.45
 +pkgrel=19
  pkgdesc="Modules for ThinkPad's SMAPI functionality"
  url='https://github.com/evgeni/tp_smapi'
  arch=(x86_64)
--license=(GPL)
-+license=('GPL-2.0-only')
- makedepends=(
-   git
-   linux-headers
- )
--_commit=6e80bb1752280bcd142d86ecd0739661bd0e8312  # master
-+_commit=2ed5e3b8ae4103e3fbc196fba7c96eba773dd7e1  # master
- source=("git+https://github.com/evgeni/tp_smapi#commit=$_commit")
--b2sums=('SKIP')
-+b2sums=('dbe198a983c3e0cc555736ad2f96c424b82984b4ba10f0757bc090e6ac2a9f9e46162abecdaef68b779a39c39b3a6433773fb688ae4c424bcf90b0f021bf8e62')
- 
- pkgver() {
-   cd tp_smapi
-@@ -33,8 +33,9 @@
-   cd tp_smapi
- 
-   find . -name "*.ko" -exec install -Dt "$pkgdir$extradir" {} +
-+
-   find "$pkgdir" -name "*.ko" -exec strip --strip-debug {} +
--  find "$pkgdir" -name "*.ko" -exec xz {} +
-+  find "$pkgdir" -name '*.ko' -exec zstd --rm -19 {} +
- 
-   echo tp_smapi | install -Dm644 /dev/stdin "$pkgdir/usr/lib/modules-load.d/$pkgname.conf"
- }

@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=wlroots0.19
+ _pkgname=wlroots
+ pkgver=0.19.0
+-pkgrel=6
++pkgrel=1
+ pkgdesc="Modular Wayland compositor library"
+ url="https://gitlab.freedesktop.org/wlroots/wlroots"
+ license=('MIT')
+@@ -10,29 +10,24 @@
  depends=('libdisplay-info.so' 'libglvnd' 'libinput' 'liblcms2.so' 'libliftoff.so' 'libpixman-1.so'
           'libseat.so' 'libudev.so' 'libvulkan.so' 'libwayland-client.so' 'libwayland-server.so'
           'libxcb' 'libxkbcommon.so' 'opengl-driver' 'xcb-util-errors' 'xcb-util-renderutil' 'xcb-util-wm')
@@ -9,7 +18,23 @@
  optdepends=('xorg-xwayland: Xwayland support')
  provides=("libwlroots-${pkgver%.*}.so")
  source=("${pkgname}::git+${url}.git#tag=${pkgver}?signed"
-@@ -27,7 +27,7 @@
+-        'Revert-layer-shell-error-on-0-dimension-without-anch.patch'
+-        'Fix-assert-induced-crashes.patch')
++        'Revert-layer-shell-error-on-0-dimension-without-anch.patch')
+ sha256sums=('6c5d9b1012769497aa9a0f03915582fdb3399ff8dbf1344ef03778e6a37f73cc'
+-            '75fef991c636b1f285c1020bd653dd7239c9c276aea56b4937db5d412a3a13dd'
+-            '4e8ec50a943218f0065a6dfc7f3d529c4856af14f61d56e4200e436c9af1083e')
++            '75fef991c636b1f285c1020bd653dd7239c9c276aea56b4937db5d412a3a13dd')
+ validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48'  # Simon Ser
+               '9DDA3B9FA5D58DD5392C78E652CB6609B22DA89A'  # Drew DeVault
+               '4100929B33EEB0FD1DB852797BC79407090047CA') # Sway signing key)
+ 
+ prepare() {
+ 	cd "${pkgname}"
+-
+ 	patch -Np1 -i "${srcdir}/Revert-layer-shell-error-on-0-dimension-without-anch.patch"
+-
+-	patch -Np1 -i "${srcdir}/Fix-assert-induced-crashes.patch"
  }
  
  build() {
@@ -18,7 +43,7 @@
  	ninja -C build
  }
  
-@@ -35,3 +35,4 @@
+@@ -40,3 +35,4 @@
  	DESTDIR="${pkgdir}" ninja -C build install
  	install -Dm 644 "${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  }

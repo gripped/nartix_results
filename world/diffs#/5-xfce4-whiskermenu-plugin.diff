@@ -23,7 +23,7 @@
 +sha256sums=('e776c287658f98d0739447279522fe78766088438242cf2365a49c8973fc9cd0')
  
  build() {
--  arch-meson $pkgname build
+-  arch-meson "${pkgname}" build
 -  meson compile -C build
 +  cmake -B build -S "${srcdir}/${pkgname}-${pkgver}" \
 +    -DCMAKE_BUILD_TYPE=Release \
@@ -34,7 +34,7 @@
  }
  
  package() {
--  meson install -C build --destdir "$pkgdir"
+-  meson install -C build --destdir "${pkgdir}"
 +  DESTDIR="${pkgdir}" cmake --install build
  }
 
@@ -58,7 +58,7 @@
 +++ Artix PKGBUILD
 @@ -1,4 +1,8 @@
  build() {
--arch-meson $pkgname build
+-arch-meson "${pkgname}" build
 -meson compile -C build
 +cmake -B build -S "${srcdir}/${pkgname}-${pkgver}" \
 +-DCMAKE_BUILD_TYPE=Release \

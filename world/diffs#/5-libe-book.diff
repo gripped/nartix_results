@@ -17,7 +17,13 @@
  makedepends=('gperf' 'boost' 'cppunit' 'doxygen')
  source=(https://sourceforge.net/projects/${pkgname//-/}/files//${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.xz
          icu68.patch)
-@@ -24,7 +23,6 @@
+@@ -19,13 +18,11 @@
+ prepare() {
+   cd "${pkgname}"-${pkgver}
+   patch -Np0 -i ../icu68.patch
+-  autoreconf -vfi
+ }
+ 
  build() {
    cd "${pkgname}"-${pkgver}
    ./configure --prefix=/usr
@@ -46,7 +52,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,5 @@
+@@ -1,11 +1,9 @@
+ prepare() {
+ cd "${pkgname}"-${pkgver}
+ patch -Np0 -i ../icu68.patch
+-autoreconf -vfi
+ }
  build() {
  cd "${pkgname}"-${pkgver}
  ./configure --prefix=/usr

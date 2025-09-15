@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,32 +19,29 @@
+             'a1df5f6134b03bd2cd62c68815b424797980c1a7cefdf1a72f87b9b41d6dc525')
+ 
+ prepare() {
+-  cd "${_shortname}-${pkgver}"
++	cd "${_shortname}-${pkgver}"
+ 
+-  patch -Np1 < ../0001-https-ify-urls-and-drop-v1-selftest.patch
+-
+-  autoreconf -fvi
++	patch -Np1 < ../0001-https-ify-urls-and-drop-v1-selftest.patch
+ }
+ 
+ build() {
+-  cd "${_shortname}-${pkgver}"
++	cd "${_shortname}-${pkgver}"
+ 
+-  ./configure \
+-    --prefix=/usr
+-  make
++	./configure \
++		--prefix=/usr
++	make
+ }
+ 
+ check() {
+-  cd "${_shortname}-${pkgver}"
++	cd "${_shortname}-${pkgver}"
+ 
+-  make check
++	make check
+ }
+ 
+ package() {
+-  cd "${_shortname}-${pkgver}"
++	cd "${_shortname}-${pkgver}"
+ 
+-  install -D -m0644 COPYING "${pkgdir}/usr/share/licenses/yubico-c-client/COPYING"
+-  install -D -m0644 README "${pkgdir}/usr/share/doc/yubico-c-client/README"
+-  make DESTDIR="${pkgdir}/" install
++	install -D -m0644 COPYING "${pkgdir}/usr/share/licenses/yubico-c-client/COPYING"
++	install -D -m0644 README "${pkgdir}/usr/share/doc/yubico-c-client/README"
++	make DESTDIR="${pkgdir}/" install
+ }
+-
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd "${_shortname}-${pkgver}"
+ patch -Np1 < ../0001-https-ify-urls-and-drop-v1-selftest.patch
+-autoreconf -fvi
+ }
+ build() {
+ cd "${_shortname}-${pkgver}"

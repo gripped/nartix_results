@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,8 @@
+          qt6-declarative
+          qt6-multimedia
+          sonnet)
+-makedepends=(extra-cmake-modules)
++makedepends=(extra-cmake-modules
++             qt6-tools)
+ source=(https://download.kde.org/stable/$pkgname/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('21314a91f26b1c962def3fd7ff2e762d3358b075f63f4d7e0144fb2c63b7ebc7'
+             'SKIP')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,4 +12,5 @@
+ qt6-base
+ qt6-declarative
+ qt6-multimedia
++qt6-tools
+ sonnet

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,11 +1,11 @@
  
  pkgname=openbox
  pkgver=3.6.1
@@ -9,3 +9,8 @@
  pkgdesc='Highly configurable and lightweight X11 window manager'
  arch=('x86_64')
  url='http://openbox.org'
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ provides=(libobrender.so)
+ depends=('startup-notification' 'libxml2' 'libxinerama' 'libxrandr'
+          'libxcursor' 'pango' 'imlib2' 'librsvg' 'libsm')

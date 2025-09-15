@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -54,7 +54,7 @@
+     -D installed_tests=false
+   )
+ 
+-  arch-meson gjs build "${meson_options[@]}"
++  artix-meson gjs build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ local meson_options=(
+ -D installed_tests=false
+ )
+-arch-meson gjs build "${meson_options[@]}"
++artix-meson gjs build "${meson_options[@]}"
+ meson compile -C build
+ }

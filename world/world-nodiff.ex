@@ -1,7 +1,6 @@
 0ad-data
 7zip
 a2ps
-a52dec
 aalib
 aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
@@ -20,7 +19,6 @@ acpi_call
 acpica
 acpid
 acpilight
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -81,10 +79,10 @@ aom
 aom-docs
 apache-orc
 apitrace
+apparmor
 appmenu-gtk-module
 appstream-glib
 apr-util
-apr
 aqbanking
 arandr
 arc-gtk-theme
@@ -222,6 +220,7 @@ blinken
 blockdiag
 blosc
 blosc2
+bluedevil
 blueprint-compiler
 bluez-qt
 bluez-qt5
@@ -313,12 +312,10 @@ check-docs
 checkbashisms
 cheese
 libcheese
-cherrytree
 chmlib
 chromaprint
 chrono-date
 chrpath
-cifs-utils
 cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
@@ -327,7 +324,6 @@ cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
-cjson
 clang
 clang14
 clang15
@@ -386,7 +382,6 @@ coturn
 couchdb
 cpio
 cpp-hocon
-cppdap
 cppunit
 cpputest
 cppzmq
@@ -444,17 +439,13 @@ dev86
 devhelp
 devhelp-docs
 devil
-dhcp
-dhclient
 dht
 diffstat
 diffuse
 digikam
 directx-headers
-directx-shader-compiler
 discount
 discover
-distcc
 distro-info-data
 distro-info
 django
@@ -491,7 +482,6 @@ dontpanic
 dos2unix
 dosbox
 dotconf
-double-conversion
 doxygen
 doxygen-docs
 dpdk
@@ -599,7 +589,6 @@ exfatprogs
 exim
 exiv2
 expac
-expect
 expected-lite
 eza
 f2fs-tools
@@ -612,7 +601,6 @@ fakechroot
 falkon
 farstream
 fast_float
-fastjar
 faudio
 fcft
 fcgi
@@ -622,14 +610,12 @@ fcitx-qt6
 fcitx
 fcitx5-configtool
 fcitx5-gtk
-fcitx5-mozc
 fcitx5-qt
 fd
 featherpad
 feh
 festival
 ffcall
-ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
@@ -663,7 +649,6 @@ python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
-flite
 fltk
 fltk-docs
 fltk1.3
@@ -759,6 +744,7 @@ git
 git-zsh-completion
 gitea
 github-cli
+gjs
 gkrellm
 gl2ps
 glad
@@ -774,7 +760,6 @@ glibmm
 glibmm-docs
 glm
 gloox
-glpk
 glslang
 glu
 glusterfs
@@ -896,11 +881,9 @@ gsasl
 gsettings-desktop-schemas
 gsettings-system-schemas
 gsfonts
-gsl
 gsm
 gsmartcontrol
 gsoap
-gsound
 gspell
 gspell-docs
 gssdp
@@ -981,7 +964,6 @@ gtksourceview5-docs
 gtksourceviewmm
 gtksourceviewmm-docs
 gtkspell
-gtkspell3
 gts
 gucharmap
 gufw
@@ -1070,8 +1052,6 @@ hy
 hypercorn
 hyperkitty
 hyperscan
-hyphen
-hyphen-en
 hyprcursor
 hyprgraphics
 hypridle
@@ -1099,7 +1079,6 @@ imake
 imath
 img2pdf
 imlib2
-immer
 incidenceeditor
 indent
 iniparser
@@ -1140,6 +1119,7 @@ isa-l
 iso-codes
 isodate
 python-isodate
+isoimagewriter
 ispc
 ispell
 isync
@@ -1159,9 +1139,14 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-jline
+java-openjdk
+jdk-openjdk
+jre-openjdk
+jre-openjdk-headless
+openjdk-doc
+openjdk-src
 java-xmlgraphics-commons
 jbig2dec
-jbigkit
 jedi-language-server
 jemalloc
 jenkins
@@ -1342,6 +1327,7 @@ kfilemetadata5
 kfind
 kfloppy
 kfourinline
+kgamma
 kgamma5
 kgeography
 kget
@@ -1392,6 +1378,7 @@ kio-fuse
 kio-gdrive
 kio-zeroconf
 kio
+kio5-extras
 kio5
 kirigami-addons
 kirigami-addons5
@@ -1437,7 +1424,6 @@ knewstuff5
 knights
 knotes
 knotifications
-knotifications5
 knotifyconfig
 knotifyconfig5
 koko
@@ -1456,6 +1442,7 @@ kontactinterface
 kontactinterface5
 kontrast
 konversation
+kopeninghours
 kopete
 korganizer
 kosmindoormap
@@ -1545,7 +1532,6 @@ kwalletmanager
 kwave
 kwayland-integration
 kwayland
-kwayland5
 kweather
 kweathercore
 kwidgetsaddons
@@ -1597,7 +1583,6 @@ lib2geom
 lib3mf
 
 python-
-libabw
 libaccounts-glib
 libaccounts-qt
 libadwaita
@@ -1621,6 +1606,7 @@ libavtp
 libayatana-appindicator
 libb2
 libb64
+libblastrampoline
 libbluray
 libbobcat
 libbs2b
@@ -1631,7 +1617,6 @@ libcaca
 libcacard
 libcbor
 libcddb
-libcdio-paranoia
 libcdio
 libcdr
 libcerf
@@ -1649,9 +1634,7 @@ libcuckoo
 libcue
 libcupsfilters
 libcutl
-libdaemon
 libdatachannel
-libdatrie
 libdazzle
 libdbi
 libdbi-docs
@@ -1660,8 +1643,6 @@ libdbusmenu-qt5
 libdbusmenu
 libdbusmenu-gtk2
 libdbusmenu-gtk3
-libdc1394
-libdca
 libde265
 libdecor
 libdeflate
@@ -1676,19 +1657,13 @@ libdnet
 libdom
 libdovi
 libdrm
-libdv
 libdvbpsi
 libdvdcss
-libdvdnav
-libdvdread
 libdwarf
 libebml
 libebur128
-libepubgen
 libesmtp
 libetebase
-libetonyek
-libetonyek-doc
 libev
 libevdev
 libewf
@@ -1708,13 +1683,11 @@ libfm-gtk2
 libfm-gtk3
 libfontenc
 libfreeaptx
-libfreehand
 libfreexl
 libftdi
 libgadu
 libgdata
 libgdiplus
-libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
 libgedit-tepl
@@ -1744,7 +1717,6 @@ libgrss
 libgsf
 libgsf-docs
 libgssglue
-libgtop
 libgusb
 libgusb-docs
 libgweather-4
@@ -1760,7 +1732,6 @@ libice
 libiconv
 libid3tag
 libident
-libidl2
 libidn
 libiec61883
 libieee1284
@@ -1774,8 +1745,6 @@ libindicator-gtk3
 libinstpatch
 libiptcdata
 libiscsi
-libisoburn
-libisofs
 libixion
 libjcat
 libjpeg-turbo
@@ -1793,6 +1762,7 @@ libkeduvocdocument
 libkexiv2
 libkexiv2-qt5
 libkeybinder3
+libkeyfinder
 libkgapi
 libkleo
 libkmahjongg
@@ -1812,7 +1782,6 @@ libliftoff
 liblo
 liblo-docs
 liblouis
-liblqr
 liblrdf
 libltc
 libluv
@@ -1838,21 +1807,16 @@ libmediainfo
 libmemcached-awesome
 libmicrodns
 libmikmod
-libmilter
 libmms
-libmng
 libmodplug
 libmp4v2
 libmpack
-libmpd
 libmpdclient
 libmpeg2
 libmspack
 libmsym
 libmtp
 libmusicbrainz5
-libmwaw
-libmwaw-docs
 libmypaint
 libmysofa
 libmythes
@@ -1877,7 +1841,6 @@ libnova
 libnumbertext
 liboauth
 libodfgen
-libofa
 libofx
 libofx-doc
 libogg
@@ -1895,7 +1858,6 @@ libosinfo
 libotf
 libotr
 libp11
-libpagemaker
 libpanel
 libpanel-docs
 libpano13
@@ -1908,7 +1870,6 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpfm
-libpgm
 libphonenumber
 libpinyin
 libplacebo
@@ -1953,7 +1914,6 @@ librest
 librest-docs
 librest-demos
 libretls
-librevenge
 librsvg
 librsvg-docs
 librsync
@@ -1983,7 +1943,6 @@ libsoup
 libsoup-docs
 libsoup3
 libsoup3-docs
-libsoxr
 libspatialindex
 libspatialite
 libspectre
@@ -2004,9 +1963,7 @@ libtar
 libteam
 libteam-docs
 libtermkey
-libthai
 libtheora
-libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -2021,7 +1978,6 @@ libtracefs-docs
 libultrahdr
 libunibreak
 libuninameslist
-libunwind
 libupnp
 liburcu
 liburing
@@ -2034,11 +1990,9 @@ libva-intel-driver
 libva-utils
 libva-vdpau-driver
 libva
-libvdpau
 libvips
 libvirt-glib
 libvirt-python
-libvisio
 libvisual
 libvoikko
 libvorbis
@@ -2056,7 +2010,6 @@ libwlocate
 libwmf
 libwnck
 libwnck3
-libwpd
 libwpe
 libwpe-docs
 libwpg
@@ -2111,11 +2064,11 @@ libxv
 libxvmc
 libxxf86vm
 libyaml
+libytnef
 libyuv
 libzen
 libzip
 libzmf
-liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
@@ -2200,8 +2153,6 @@ lv2-docs
 lv2-example-plugins
 lxdm
 lxdm-gtk3
-lxhotkey
-lxhotkey-gtk3
 lximage-qt
 lxqt-about
 lxqt-admin
@@ -2309,7 +2260,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard
@@ -2344,7 +2294,6 @@ mlt
 mm-common
 mmtf-cpp
 mobile-broadband-provider-info
-mod_dnssd
 modem-manager-gui
 modemmanager-qt
 modemmanager-qt5
@@ -2382,9 +2331,6 @@ libmupdf
 mupdf-gl
 mupdf-tools
 python-mupdf
-musepack
-musepack-tools
-libmpcdec
 musescore
 musl
 musl-aarch64
@@ -2402,7 +2348,6 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
-nccl
 ncdu
 ncftp
 ncmpcpp
@@ -2416,7 +2361,6 @@ neon
 neovim-qt
 neovim
 net-snmp
-netcdf-fortran
 netcdf
 netcf
 netpbm
@@ -2438,7 +2382,6 @@ nginx-mod-stream
 nginx-mod-xslt
 nginx-src
 ngspice
-ninja
 nitrokey-udev-rules
 nload
 nlohmann-json
@@ -2539,8 +2482,6 @@ openfire
 openh264
 openimagedenoise
 openimageio
-openipmi
-openjade
 openjpeg2
 openlibm
 openmp
@@ -2557,8 +2498,6 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
-opensp
-opensubdiv
 opentimelineio
 openucc
 openucx
@@ -3054,7 +2993,6 @@ pptpd
 pqiv
 pre-commit
 premake
-presage
 print-manager
 prison
 prison5
@@ -3065,7 +3003,6 @@ projectm
 projectm-sdl
 projectm-pulseaudio
 prometheus
-prosody
 protobuf-c
 protobuf
 python-protobuf
@@ -3145,7 +3082,6 @@ python-accessible-pygments
 python-acme
 python-adal
 python-adblock
-python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3343,7 +3279,6 @@ python-constantly
 python-contextlib2
 python-contourpy
 python-cookiecutter
-python-copr
 python-coverage
 python-cppheaderparser
 python-cppy
@@ -3424,7 +3359,6 @@ python-django-q2
 python-django-rest-framework
 python-django-sekizai
 python-dkim
-python-dnspython
 python-docker-pycreds
 python-docker
 python-dockerpty
@@ -3484,6 +3418,7 @@ python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
+python-feedparser
 python-fido2
 python-fields
 python-filebytes
@@ -3550,7 +3485,6 @@ python-gevent-websocket
 python-gevent
 python-gherkin
 python-ghp-import
-python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
@@ -3793,7 +3727,6 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
-python-moto
 python-motor
 python-mpd2
 python-mpi4py
@@ -4006,7 +3939,6 @@ python-pycryptodome
 python-pycryptodomex
 python-pycuda
 python-pycurl
-python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
 python-pydantic
@@ -4267,7 +4199,6 @@ python-scramp
 python-scripttest
 python-scrypt
 python-scs
-python-seaborn
 python-secretstorage
 python-seedir
 python-semantic-version
@@ -4298,7 +4229,6 @@ python-slugify
 python-sly
 python-smartypants
 python-smbprotocol
-python-smmap
 python-snappy
 python-sniffio
 python-snowballstemmer
@@ -4511,7 +4441,6 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
-python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -4537,7 +4466,6 @@ python-zeroconf
 python-zict
 python-zipp
 python-zipstream-ng
-python-zlib-ng
 python-zodbpickle
 python-zope-component
 python-zope-configuration
@@ -4575,7 +4503,6 @@ qpdf-docs
 qqc2-breeze-style
 qqc2-desktop-style
 qqc2-desktop-style5
-qqwing
 qrca
 qrcodegen-cmake
 qrcodegencpp-cmake
@@ -4708,7 +4635,6 @@ remmina
 renameutils
 reptyr
 rest
-restinio
 retro-gtk
 rhash
 rhino
@@ -4724,7 +4650,6 @@ riscv64-linux-gnu-linux-api-headers
 rkcommon
 rlwrap
 rng-tools
-rnnoise
 robin-map
 roc-toolkit
 rocblas
@@ -4759,7 +4684,6 @@ rpmextract
 rssguard
 rssguard-lite
 rst2pdf
-rsync
 rtaudio
 rtaudio-docs
 rtl-sdr
@@ -4822,7 +4746,6 @@ ruby-crass
 ruby-csv
 ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
-ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
@@ -4940,6 +4863,7 @@ ruby-minitest
 ruby-mixlib-cli
 ruby-mixlib-config
 ruby-mixlib-shellout
+ruby-mize
 ruby-mkmf-lite
 ruby-mocha
 ruby-msgpack
@@ -4994,6 +4918,7 @@ ruby-public_suffix
 ruby-puma
 ruby-puppet-resource_api
 ruby-qed
+ruby-racc
 ruby-rack-session
 ruby-rack-test
 ruby-rack
@@ -5010,12 +4935,11 @@ ruby-rb-fsevent
 ruby-rb-inotify
 ruby-rbnacl
 ruby-rbs
-ruby-rbtree
-ruby-rdiscount
 ruby-rdoc
 ruby-redcarpet
 ruby-redcloth
 ruby-regexp_parser
+ruby-regexp_property_values
 ruby-reline
 ruby-repl_type_completor
 ruby-resolv-replace
@@ -5190,7 +5114,6 @@ shairplay
 shapelib
 shared-color-targets
 shared-mime-info
-sharutils
 shhmsg
 shhopt
 shunit2
@@ -5216,7 +5139,6 @@ slurp
 smb4k
 smpeg
 smplayer
-snappy
 snapshot
 sndio
 snorenotify
@@ -5260,7 +5182,6 @@ spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
-sqlcipher
 squashfs-tools
 squashfuse
 sratom
@@ -5279,7 +5200,6 @@ stk
 stk-docs
 stoken
 stow
-strace
 strawberry
 strip-nondeterminism
 stubby
@@ -5330,8 +5250,8 @@ telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
 telepathy-gabble
+telepathy-glib
 telepathy-haze
-telepathy-idle
 telepathy-kde-accounts-kcm
 telepathy-kde-approver
 telepathy-kde-auth-handler
@@ -5515,7 +5435,6 @@ tinyproxy
 tinyxml
 tinyxml2
 tinyxxd
-tk
 tl-expected
 tldp-howtos-txt
 tldr
@@ -5543,6 +5462,7 @@ tree-sitter-bash
 tree-sitter-c
 tree-sitter-lua
 tree-sitter-markdown
+tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc
@@ -5571,6 +5491,7 @@ twine
 twolame
 txt2man
 typescript
+uasm
 uchardet
 udiskie
 udpxy
@@ -5671,7 +5592,6 @@ vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries
 vulkan-validation-layers
-w3m
 wacomtablet
 waf
 warpinator
@@ -5694,9 +5614,7 @@ webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder
-wget
 whois
-wildmidi
 wine-staging
 wine
 wireguard-tools
@@ -5764,7 +5682,6 @@ xf86-input-synaptics
 xf86-input-void
 xf86-video-dummy
 xf86-video-fbdev
-xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo
 xfce4-artwork
@@ -5774,6 +5691,7 @@ xinetd
 xkeyboard-config
 xmldiff
 xmlsec
+xmlstarlet
 xmlto
 xmltoman
 xmms2
@@ -5834,7 +5752,6 @@ xterm
 xtrans
 xvidcore
 xwallpaper
-xxhash
 yad
 yajl
 yakuake
@@ -5853,8 +5770,6 @@ yodl
 youtube-dl
 yt-dlp
 ytfzf
-yubico-c-client
-yubico-c
 z3
 python-z3-solver
 zabbix
@@ -5895,8 +5810,6 @@ zoxide
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
-zsh
-zsh-doc
 zug
 zvbi
 zxing-cpp
