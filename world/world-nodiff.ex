@@ -19,6 +19,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -312,6 +313,7 @@ check-docs
 checkbashisms
 cheese
 libcheese
+cherrytree
 chmlib
 chromaprint
 chrono-date
@@ -1964,6 +1966,7 @@ libteam
 libteam-docs
 libtermkey
 libtheora
+libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -2017,6 +2020,7 @@ libwps
 libwps-doc
 libwslay
 libx11
+libx86
 libx86emu
 libxau
 libxaw
@@ -2348,6 +2352,7 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
+nccl
 ncdu
 ncftp
 ncmpcpp
@@ -2361,6 +2366,7 @@ neon
 neovim-qt
 neovim
 net-snmp
+netcdf-fortran
 netcdf
 netcf
 netpbm
@@ -2382,6 +2388,7 @@ nginx-mod-stream
 nginx-mod-xslt
 nginx-src
 ngspice
+ninja
 nitrokey-udev-rules
 nload
 nlohmann-json
@@ -2498,6 +2505,7 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
+opensubdiv
 opentimelineio
 openucc
 openucx
@@ -3082,6 +3090,7 @@ python-accessible-pygments
 python-acme
 python-adal
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3279,6 +3288,7 @@ python-constantly
 python-contextlib2
 python-contourpy
 python-cookiecutter
+python-copr
 python-coverage
 python-cppheaderparser
 python-cppy
@@ -3359,6 +3369,7 @@ python-django-q2
 python-django-rest-framework
 python-django-sekizai
 python-dkim
+python-dnspython
 python-docker-pycreds
 python-docker
 python-dockerpty
@@ -3727,6 +3738,7 @@ python-mongomock
 python-monotonic
 python-more-itertools
 python-moreorless
+python-moto
 python-motor
 python-mpd2
 python-mpi4py
@@ -3939,6 +3951,7 @@ python-pycryptodome
 python-pycryptodomex
 python-pycuda
 python-pycurl
+python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
 python-pydantic
@@ -4441,6 +4454,7 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
+python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -4466,6 +4480,7 @@ python-zeroconf
 python-zict
 python-zipp
 python-zipstream-ng
+python-zlib-ng
 python-zodbpickle
 python-zope-component
 python-zope-configuration
@@ -4635,6 +4650,7 @@ remmina
 renameutils
 reptyr
 rest
+restinio
 retro-gtk
 rhash
 rhino
@@ -4664,6 +4680,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain
@@ -4746,6 +4765,7 @@ ruby-crass
 ruby-csv
 ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
+ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
@@ -5435,6 +5455,7 @@ tinyproxy
 tinyxml
 tinyxml2
 tinyxxd
+tk
 tl-expected
 tldp-howtos-txt
 tldr
@@ -5791,6 +5812,7 @@ zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
+zerotier-one
 zfp
 zig
 zimg

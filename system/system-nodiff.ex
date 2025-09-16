@@ -151,6 +151,8 @@ net-tools
 nettle
 npth
 nspr
+nss
+ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl
@@ -172,6 +174,11 @@ s-nail
 sdparm
 sed
 shadow
+sqlite
+sqlite-tcl
+sqlite-analyzer
+lemon
+sqlite-doc
 sudo
 sysfsutils
 syslinux

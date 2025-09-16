@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
- 
- pkgbase="cups"
- pkgname=('libcups' 'cups')
--pkgver=2.4.14
--pkgrel=1
-+pkgver=2.4.12
-+pkgrel=2
- epoch=2
- arch=('x86_64')
+@@ -8,7 +8,7 @@
  license=('Apache-2.0 WITH LLVM-exception AND BSD-3-Clause AND Zlib AND BSD-2-Clause')
  url="https://openprinting.github.io/cups/"
  makedepends=('acl' 'pam' 'gnutls' 'cups-filters' 'colord'
@@ -18,15 +9,6 @@
  source=(https://github.com/OpenPrinting/cups/releases/download/v${pkgver}/cups-${pkgver}-source.tar.gz{,.sig}
          cups.logrotate
          cups.pam
-@@ -17,7 +17,7 @@
-         cups-freebind.patch
-         guid.patch
- )
--sha256sums=('660288020dd6f79caf799811c4c1a3207a48689899ac2093959d70a3bdcb7699'
-+sha256sums=('b1dde191a4ae2760c47220c82ca6155a28c382701e6c1a0159d1054990231d59'
-             'SKIP'
-             'd87fa0f0b5ec677aae34668f260333db17ce303aa1a752cba5f8e72623d9acf9'
-             '57dfd072fd7ef0018c6b0a798367aac1abb5979060ff3f9df22d1048bb71c0d5'
 @@ -46,7 +46,7 @@
  
    export DSOFLAGS=${LDFLAGS}

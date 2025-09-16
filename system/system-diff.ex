@@ -51,8 +51,6 @@ mkinitcpio
 nfs-utils
 nfsidmap
 nilfs-utils
-nss
-ca-certificates-mozilla
 openldap
 libldap
 openresolv
@@ -66,11 +64,6 @@ patch
 ppp
 procps-ng
 rpcbind
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 thin-provisioning-tools
 tpm2-tss
 traceroute
