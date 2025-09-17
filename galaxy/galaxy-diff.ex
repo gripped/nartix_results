@@ -116,6 +116,7 @@ perl-cgi-fast
 qbittorrent
 qbittorrent-nox
 rage
+read-edid
 sdcv
 signal-desktop
 terminology

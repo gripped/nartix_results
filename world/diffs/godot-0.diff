@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,15 +31,12 @@
-     org.godotengine.Godot.xml
- 
-   cp -f org.godotengine.Godot.xml org.godotengine.Godot-mono.xml
--
--  [[ ${CARCH} == aarch64 ]] && export CARCH=arm64
--
- }
- 
+@@ -36,7 +36,7 @@
  build() {
    cd $pkgname-$pkgver-stable
  
@@ -25,11 +17,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,11 +9,10 @@
- sed -i 's,xmlns="https://specifications.freedesktop.org/shared-mime-info-spec",xmlns="http://www.freedesktop.org/standards/shared-mime-info",g' \
- org.godotengine.Godot.xml
- cp -f org.godotengine.Godot.xml org.godotengine.Godot-mono.xml
--[[ ${CARCH} == aarch64 ]] && export CARCH=arm64
+@@ -12,7 +12,7 @@
  }
  build() {
  cd $pkgname-$pkgver-stable

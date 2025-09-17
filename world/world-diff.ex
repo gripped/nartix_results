@@ -35,6 +35,7 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
+broadcom-wl-dkms
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -377,6 +378,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -705,11 +707,14 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
+python-pymacaroons
 python-pymupdf
 python-pytest-freezegun
+python-pytest-sugar
 python-pyudev
 python-recommonmark
 python-seaborn
+python-setuptools
 python-smmap
 qastools
 qbittorrent
@@ -852,7 +857,6 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
-sdl_ttf
 seatd
 sfml
 shairport-sync

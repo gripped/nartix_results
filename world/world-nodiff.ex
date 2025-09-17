@@ -251,7 +251,6 @@ breeze
 breeze5
 breezy
 bridge-utils
-broadcom-wl-dkms
 broadcom-wl
 bspwm
 btop
@@ -1687,6 +1686,7 @@ libfontenc
 libfreeaptx
 libfreexl
 libftdi
+libfyaml
 libgadu
 libgdata
 libgdiplus
@@ -1753,7 +1753,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3993,7 +3992,6 @@ python-pylink-square
 python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
-python-pymacaroons
 python-pymdown-extensions
 python-pymongo
 python-pymysql
@@ -4103,7 +4101,6 @@ python-pytest-socket
 python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
-python-pytest-sugar
 python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
@@ -4226,7 +4223,6 @@ python-setuptools-gettext
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
-python-setuptools
 python-sgmllib3k
 python-sh
 python-shapely
@@ -5115,6 +5111,7 @@ sdl_image
 sdl_mixer
 sdl_net
 sdl_sound
+sdl_ttf
 seabios
 seabios-docs
 seahorse
