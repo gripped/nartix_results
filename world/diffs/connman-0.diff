@@ -1,5 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ 
+ pkgname=connman
+ pkgver=1.45
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Intel's modular network connection manager"
+-url="https://git.kernel.org/pub/scm/network/connman/connman.git/"
++url="https://01.org/connman"
+ arch=('x86_64')
+ license=('GPL-2.0-only')
+ depends=(
 @@ -57,7 +57,7 @@
      --runstatedir=/run \
      --bindir=/usr/bin \

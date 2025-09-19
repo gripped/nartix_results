@@ -378,6 +378,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -399,6 +400,7 @@ libsoxr
 libstaroffice
 libtg_owt
 libthai
+libtiff
 libudev0-shim
 libunwind
 libusbsio

@@ -1753,7 +1753,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1966,7 +1965,6 @@ libteam
 libteam-docs
 libtermkey
 libtheora
-libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -2006,6 +2004,7 @@ libvterm
 libwacom
 libwapcaplet
 libwebp
+libwebp-utils
 libwebsockets
 libwhereami
 libwhich
