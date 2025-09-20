@@ -1753,6 +1753,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3726,7 +3727,6 @@ python-mimeparse
 python-minidump
 python-mistletoe
 python-mistune
-python-mitmproxy-rs
 python-mitmproxy-wireguard
 python-ml-dtypes
 python-mock

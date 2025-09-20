@@ -9,7 +9,7 @@
    talloc
    tdb
    tevent
-@@ -78,8 +78,7 @@
+@@ -86,8 +86,7 @@
      --with-ldap \
      --with-winbind \
      --with-acl-support \
@@ -19,7 +19,7 @@
      --with-pam \
      --with-pammodulesdir=/usr/lib/security \
      --private-libraries='!ldb' \
-@@ -279,7 +278,6 @@
+@@ -286,7 +285,6 @@
  backup=(
    etc/logrotate.d/samba
    etc/pam.d/samba
@@ -27,7 +27,7 @@
  )
  install=samba.install
  
-@@ -295,9 +293,6 @@
+@@ -302,9 +300,6 @@
        "${pkgdir}"/usr/${script}
    done
  

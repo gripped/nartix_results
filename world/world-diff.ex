@@ -378,7 +378,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -708,6 +707,7 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
+python-mitmproxy-rs
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

@@ -1,17 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,8 +14,8 @@
+@@ -12,10 +12,9 @@
+   lib32-vulkan-radeon
+   lib32-vulkan-swrast
    lib32-vulkan-virtio
+-  lib32-vulkan-mesa-device-select
    lib32-vulkan-mesa-layers
  )
 -pkgver=25.2.3
--pkgrel=1
 +pkgver=25.2.2
-+pkgrel=2
+ pkgrel=2
  epoch=1
  pkgdesc="Open-source OpenGL drivers - 32-bit"
- url="https://www.mesa3d.org/"
-@@ -46,7 +46,6 @@
+@@ -47,7 +46,6 @@
    lib32-rust-libs
    lib32-spirv-llvm-translator
    lib32-spirv-tools
@@ -19,7 +20,7 @@
    lib32-vulkan-icd-loader
    lib32-wayland
    lib32-xcb-util-keysyms
-@@ -73,6 +72,7 @@
+@@ -74,6 +72,7 @@
  )
  source=(
    "https://archive.mesa3d.org/mesa-$pkgver.tar.xz"{,.sig}
@@ -27,7 +28,7 @@
  )
  validpgpkeys=(
    946D09B5E4C9845E63075FF1D961C596A7203456 # Andres Gomez <tanty@igalia.com>
-@@ -126,8 +126,9 @@
+@@ -127,8 +126,9 @@
    )
  done
  
@@ -38,7 +39,7 @@
          '431439d31632d177aeb15f910b4f546efa76d54fc74fc8e140399dc5e54eca33fd606f11dbfb48fa83067c8474ee512e62751895d5948367b65ab08b984284e5'
          'a6d47c903be6094423d89b8ec3ca899d0a84df6dbd6e76632bb6c9b9f40ad9c216f8fa400310753d392f85072756b43ac3892e0a2c4d55f87ab6463002554823'
          '9a73962e1e38b84131ab2350b69a1f5d611c549533eec73e898c394a9b9442f357bb5d5f59e1be12270dd29bdf237dc2d21786c0c2210736e224ef5d48300dcf'
-@@ -156,8 +157,9 @@
+@@ -157,8 +157,9 @@
          '7681b1a7497b5711e663773c1a7e076f333c06c10d3f289079a781c36f050c1620cc279742ea8e5b15ec48f3d6038a6079bbda7fee3ae8e1128bd916d53ed43a'
          '93385f64103fdb482bec34c7912474ae7a5935948715e6eb9a54907e0db5c39f089f6cd393bab33c935c59a1bbb0f4099431f206343811c1a450554d96a35756')
  
@@ -49,7 +50,7 @@
              '67914ab451f3bfd2e69e5e9d2ef3858484e7074d63f204fd166ec391b54de21d'
              'ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9'
              '7f9f832470494906d1fca5329f8ab5791cc60beb230c74815dff541cbd2b5ca0'
-@@ -228,7 +230,7 @@
+@@ -229,7 +230,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -58,89 +59,169 @@
    meson compile -C build
  }
  
-@@ -375,7 +377,6 @@
+@@ -322,8 +323,6 @@
+     _pick vkvirtio $icddir/virtio_icd.*.json
+     _pick vkvirtio $libdir/libvulkan_virtio.so
+ 
+-    _pick vkdevice $libdir/libVkLayer_MESA_device_select.so
+-
+     _pick vklayer $libdir/libVkLayer_*.so
+ 
+     rm -rv etc usr/{bin,include,share}
+@@ -378,9 +377,7 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -403,7 +404,6 @@
+     lib32-zlib
+@@ -407,9 +404,7 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -431,7 +431,6 @@
+     lib32-zlib
+@@ -436,9 +431,7 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -458,7 +457,6 @@
+     lib32-zlib
+@@ -464,9 +457,7 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -484,7 +482,6 @@
+ 
+@@ -491,9 +482,7 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -512,7 +509,6 @@
+     lib32-zlib
+@@ -520,9 +509,7 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -542,7 +538,6 @@
+     lib32-zlib
+@@ -551,9 +538,7 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -571,7 +566,6 @@
+     lib32-zlib
+@@ -581,9 +566,7 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
-@@ -600,7 +594,6 @@
+     lib32-zlib
+@@ -611,9 +594,7 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
 -    lib32-systemd
-     lib32-vulkan-icd-loader
+-    lib32-vulkan-icd-loader
+-    lib32-vulkan-mesa-device-select
++    lib32-vulkan-icd-loader
      lib32-wayland
      lib32-xcb-util-keysyms
+     lib32-zlib
+@@ -625,22 +606,6 @@
+   provides=(lib32-vulkan-driver)
+ 
+   mv vkvirtio/* "$pkgdir"
+-
+-  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
+-}
+-
+-package_lib32-vulkan-mesa-device-select() {
+-  pkgdesc="Mesa's Vulkan Device Select layer - 32-bit"
+-  depends=(
+-    lib32-glibc
+-    lib32-libdrm
+-    lib32-libxcb
+-    lib32-wayland
+-
+-    vulkan-mesa-device-select
+-  )
+-
+-  mv vkdevice/* "$pkgdir"
+ 
+   install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
+@@ -650,7 +615,10 @@
+   depends=(
+     lib32-gcc-libs
+     lib32-glibc
++    lib32-libdrm
+     lib32-libpng
++    lib32-libxcb
++    lib32-wayland
+ 
+     vulkan-mesa-layers
+   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -27,7 +27,6 @@
+@@ -27,9 +27,7 @@
  lib32-rust-libs
  lib32-spirv-llvm-translator
  lib32-spirv-tools
 -lib32-systemd
  lib32-vulkan-icd-loader
+-lib32-vulkan-mesa-device-select
  lib32-wayland
  lib32-xcb-util-keysyms
+ lib32-zlib
+@@ -48,7 +46,6 @@
+ vulkan-freedreno
+ vulkan-gfxstream
+ vulkan-intel
+-vulkan-mesa-device-select
+ vulkan-mesa-layers
+ vulkan-nouveau
+ vulkan-radeon

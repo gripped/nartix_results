@@ -241,6 +241,8 @@ mgba-qt
 mimetic
 mixxx
 mokutil
+monero-gui
+monero
 mousepad
 mozo
 msedit
