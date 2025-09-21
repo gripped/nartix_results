@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
-   lib32-pipewire-v4l2
- )
- pkgver=1.4.8
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Low-latency audio/video router and processor - 32-bit"
- url="https://pipewire.org"
 @@ -18,9 +18,7 @@
    lib32-alsa-lib
    lib32-dbus
@@ -19,19 +10,7 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
-@@ -29,11 +27,6 @@
- 
- prepare() {
-   cd pipewire
--
--  git cherry-pick -n 3e574b314a7d73801fe3aac012cf6671bb1f5575 \
--                     24ab601201223e05950bb8133be5d77526de1997
--
--  git cherry-pick -n 8f35e18d18b18b8db959793fe73fc594e5da8cd5
- }
- 
- build() {
-@@ -74,15 +67,17 @@
+@@ -74,15 +72,17 @@
      -D session-managers=[]
      -D snap=disabled
      -D sndfile=disabled
@@ -51,7 +30,7 @@
    meson compile -C build
  }
  
-@@ -111,7 +106,6 @@
+@@ -111,7 +111,6 @@
      lib32-gcc-libs
      lib32-glib2 libglib-2.0.so
      lib32-glibc

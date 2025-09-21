@@ -3,6 +3,7 @@ autorandr
 cinnamon-desktop
 dbeaver
 doctest
+dvtm
 ecrire
 efl
 ephoto

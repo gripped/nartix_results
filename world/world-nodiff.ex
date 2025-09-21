@@ -516,7 +516,6 @@ egl-gbm
 egl-wayland
 egl-x11
 eglexternalplatform
-eigen
 ejabberd
 electron
 electrum
@@ -1966,6 +1965,7 @@ libteam
 libteam-docs
 libtermkey
 libtheora
+libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -3727,6 +3727,7 @@ python-mimeparse
 python-minidump
 python-mistletoe
 python-mistune
+python-mitmproxy-rs
 python-mitmproxy-wireguard
 python-ml-dtypes
 python-mock
@@ -4121,6 +4122,7 @@ python-python-pkcs11
 python-python-socks
 python-pythonfinder
 python-pythran
+python-pytokens
 python-pytoml
 python-pytoolconfig
 python-pytools

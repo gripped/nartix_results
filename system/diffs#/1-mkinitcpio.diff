@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,45 +1,39 @@
- 
- pkgname=mkinitcpio
- pkgver=39.2
--pkgrel=5
-+pkgrel=3
- pkgdesc="Modular initramfs image creation utility"
- arch=('any')
+@@ -7,39 +7,33 @@
  url='https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio'
  license=('GPL-2.0-only')
  depends=('awk' 'mkinitcpio-busybox' 'kmod' 'util-linux' 'libarchive' 'coreutils'

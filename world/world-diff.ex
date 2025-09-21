@@ -123,6 +123,7 @@ drkonqi
 dtc
 dunst
 earlyoom
+eigen
 element.io
 element-web
 element-desktop
@@ -399,7 +400,6 @@ libsoxr
 libstaroffice
 libtg_owt
 libthai
-libtiff
 libudev0-shim
 libunwind
 libusbsio
@@ -526,6 +526,7 @@ vulkan-nouveau
 vulkan-radeon
 vulkan-swrast
 vulkan-virtio
+vulkan-mesa-device-select
 vulkan-mesa-layers
 mesa-docs
 meson
@@ -707,7 +708,6 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
-python-mitmproxy-rs
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
