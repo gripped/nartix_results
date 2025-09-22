@@ -535,6 +535,7 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
+mitmproxy
 mod_dnssd
 modemmanager
 libmm-glib
@@ -680,6 +681,15 @@ plymouth
 podman
 podman-docker
 polkit
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mongodb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgresql-old-upgrade
 postgresql
 postgresql-libs

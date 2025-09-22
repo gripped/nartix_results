@@ -2286,7 +2286,6 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
-mitmproxy
 mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
@@ -2979,15 +2978,6 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
-postfix
-postfix-cdb
-postfix-ldap
-postfix-lmdb
-postfix-mongodb
-postfix-mysql
-postfix-pcre
-postfix-pgsql
-postfix-sqlite
 postgis
 postgrey
 postorius

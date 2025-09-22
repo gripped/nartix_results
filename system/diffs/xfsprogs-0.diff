@@ -1,5 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xfsprogs
+ pkgver=6.16.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="XFS filesystem utilities"
+ arch=('x86_64')
+ license=(
+@@ -19,7 +19,7 @@
+ )
+ optdepends=(
+   'icu: for xfs_scrub'
+-  'python-dbus: for xfs_scrub_all script'
++  'python: for xfs_scrub_all script'
+   'smtp-forwarder: for xfs_scrub_fail script'
+ )
+ makedepends=(
 @@ -44,7 +44,7 @@
  
    export OPTIMIZER=" "

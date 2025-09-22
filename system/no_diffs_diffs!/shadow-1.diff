@@ -61,27 +61,3 @@
  
    install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
    install -vDm 644 ../$pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,17 +0,0 @@
--acl
--attr
--audit
--docbook-xsl
--git
--glibc
--itstool
--libacl.so
--libattr.so
--libaudit.so
--libcap
--libcrypt.so
--libpam.so
--libpam_misc.so
--libxcrypt
--libxslt
--pam

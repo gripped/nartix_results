@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   postfix-{cdb,ldap,lmdb,mongodb,mysql,pcre,pgsql,sqlite}
+ )
+ pkgver=3.10.4
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Fast, easy to administer, secure mail server"
+ arch=(x86_64)
+ url="https://www.postfix.org/"
 @@ -34,7 +34,6 @@
    $pkgbase-$pkgver.tar.gz.sig::https://de.postfix.org/ftpmirror/official/$pkgbase-$pkgver.tar.gz.gpg2
    $pkgbase-3.5.8-main_defaults.patch
@@ -23,7 +32,16 @@
          'd2605f8720a4cb9b666ac70f1f060840d66c848ae2f884ac5288aed0c80b69f22a799d187fd899c2064cc24cf33c1baf94ceb13192eb3c6fc932d3128111da4d'
          'de31693cea5f452a9c8c0d1cf5210a6e67c0176f8b1a4d74106f2e803911569e9fdbb2301b3b5dc7ad6a6da285026b1a3ed3de52117d216b030cf0d92348909d')
  validpgpkeys=('622C7C012254C186677469C50C0B590E80CA15A7') # Wietse Venema <wietse@porcupine.org>
-@@ -164,7 +161,6 @@
+@@ -70,8 +67,6 @@
+ }
+ 
+ build() {
+-  export NORANDOMIZE=""
+-
+   local ccargs=(
+     '-fPIC' '-fcommon'
+     '-DUSE_SASL_AUTH'
+@@ -166,7 +161,6 @@
    install -vDm 755 auxiliary/collate/tlstype.pl "$pkgdir/usr/bin/postfix-tlstype.pl"
    install -vDm 644 auxiliary/collate/README* -t "$pkgdir/usr/share/doc/$pkgname/collate/"
    install -vDm 644 LICENSE COPYRIGHT -t "$pkgdir/usr/share/licenses/$pkgname/"
@@ -31,3 +49,19 @@
    install -vDm 644 ../$pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
    install -vDm 644 ../$pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
  
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,6 @@
+ patch -Np1 -d $pkgbase-$pkgver -i ../$pkgbase-3.9.0-mail_params.patch
+ }
+ build() {
+-export NORANDOMIZE=""
+ local ccargs=(
+ '-fPIC' '-fcommon'
+ '-DUSE_SASL_AUTH'
