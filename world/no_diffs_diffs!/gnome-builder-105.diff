@@ -1,6 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -88,7 +88,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gnome-builder
+-pkgver=49.0
++pkgver=48.3
+ pkgrel=1
+ pkgdesc="An IDE for writing GNOME-based software"
+ url="https://apps.gnome.org/Builder/"
+@@ -39,7 +39,6 @@
+   libsoup3
+   libspelling
+   libxml2
+-  libyaml
+   meson
+   pango
+   python
+@@ -77,7 +76,7 @@
+ )
+ groups=(gnome-extra)
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#tag=${pkgver/[a-z]/.&}")
+-b2sums=('dfeeab9070f3085b138bcbe29a960beabca1dd1f1e318a68e7ba35a4a09b1374bb8e6f075bcb2cd4b542cba9b20c8bd50d7d9a635ab512589219973d62d7278f')
++b2sums=('d0245608b20cb2dcf6826eae1cc2d02eca9e29fc4510db1f08dacd64a32c82efeeab422b2a5925f761cee86c8c11912beba2837554b4de424fbf97ae2ac8acc8')
+ 
+ prepare() {
+   cd $pkgname
+@@ -89,7 +88,7 @@
      -D network_tests=false
    )
  
@@ -13,7 +38,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -35,7 +35,6 @@
+ libsoup3
+ libspelling
+ libxml2
+-libyaml
+ llvm
+ meson
+ mm-common
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

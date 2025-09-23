@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   webkitgtk-6.0
+   webkitgtk-6.0-docs
+ )
+-pkgver=2.50.0
++pkgver=2.48.6
+ pkgrel=1
+ pkgdesc="Web content engine for GTK"
+ url="https://webkitgtk.org"
 @@ -71,7 +71,6 @@
    libseccomp
    libsecret
@@ -8,7 +17,7 @@
    libtasn1
    libwebp
    libx11
-@@ -99,7 +98,6 @@
+@@ -99,16 +98,15 @@
    python
    ruby
    ruby-stdlib
@@ -16,6 +25,17 @@
    unifdef
    wayland-protocols
  )
+ source=(
+   $url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
+ )
+-sha256sums=('e564b8099f9a3ae32409539b290bbd2ad084e99b6d22d4aac5e51e4554df8bc2'
++sha256sums=('d9ac3034b7a39c2aaa567e6112b3124b158e591a74439e46974a031dd0e44e24'
+             'SKIP')
+-b2sums=('75fd27a2d6922fb1a3ed8ed4c03bfe437ce2f9236f2817fd085ada87304345c647f0cf3b759a3aeab0b3c8dd1b4225185ece83d831c861ecfd01146f2ee02410'
++b2sums=('4d9dfabcb3b5ba0ce9b203dff6d164e17a835799d20328695437714f7ef2c0d31425aff4ce05978572ac0d84b6a0f5dd9076391977776cb936652a955c0c4b67'
+         'SKIP')
+ validpgpkeys=(
+   5AA3BC334FD7E3369E7C77B291C559DBE4C9123B # Adrián Pérez de Castro <aperez@igalia.com>
 @@ -121,6 +119,8 @@
  
  build() {

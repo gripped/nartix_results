@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=zed
+-pkgver=0.204.5
++pkgver=0.204.4
+ pkgrel=1
+ pkgdesc='A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter'
+ arch=(x86_64)
+@@ -41,7 +41,7 @@
+ replaces=(zed-editor)
+ _archive="$pkgname-$pkgver"
+ source=("$_url/archive/v$pkgver/$_archive.tar.gz")
+-sha256sums=('eb2c4d9f430a2fef7085acc391386efab637db60700a55a83d4b567091229ee1')
++sha256sums=('fbcafb5eb6249ffc15e1164708ba94638bb182a94af9ebbf746ef4005a4bdf0c')
+ 
+ _binname=zeditor
+ _appid=dev.zed.Zed

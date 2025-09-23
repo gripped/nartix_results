@@ -1,6 +1,37 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -59,7 +59,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=epiphany
+-pkgver=49.0
++pkgver=48.5
+ pkgrel=1
+ pkgdesc="A GNOME web browser based on the WebKit rendering engine"
+ url="https://apps.gnome.org/Epiphany"
+@@ -32,13 +32,12 @@
+   webkitgtk-6.0
+ )
+ makedepends=(
+-  blueprint-compiler
++  docbook-xml
+   git
+   glib2-devel
+   gobject-introspection
+   lsb-release
+   meson
+-  python-docutils
+   startup-notification
+   yelp-tools
+ )
+@@ -53,14 +52,14 @@
+ )
+ groups=(gnome)
+ source=("git+https://gitlab.gnome.org/GNOME/epiphany.git#tag=${pkgver/[a-z]/.&}")
+-b2sums=('c33443d4512cbdf1243964cecb393c9ef07bbc1e2d02b166ea47d565b0b41119a421f7b0a1df50b01400a761272c5c5ae77aa0a5a23478dded702bc785bc6999')
++b2sums=('49b2b48fb2d66472ebb4e6f6fb84f182f183b192202fbca87931d4c83532a7582988a6cdabd8bc1af38f2609d6c0267678e50ddc35474a46ea3611a14d34deef')
+ 
+ prepare() {
+   cd epiphany
  }
  
  build() {
@@ -13,7 +44,24 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+-blueprint-compiler
+ cairo
+ dconf
++docbook-xml
+ gcc-libs
+ gcr-4
+ gdk-pixbuf2
+@@ -25,7 +25,6 @@
+ meson
+ nettle
+ pango
+-python-docutils
+ sqlite
+ startup-notification
+ webkitgtk-6.0
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

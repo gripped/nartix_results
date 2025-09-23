@@ -1,0 +1,110 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,40 +1,39 @@
+ 
+ pkgname=cjs
+-pkgver=128.0
++pkgver=6.4.0
+ pkgrel=1
+ pkgdesc="Javascript Bindings for Cinnamon"
+ arch=('x86_64')
+ url="https://github.com/linuxmint/${pkgname}"
+-license=('LGPL-2.0-or-later')
+-depends=('gobject-introspection-runtime' 'js128' 'readline' 'gcc-libs'
+-         'libffi' 'cairo' 'glib2' 'libgirepository' 'libx11' 'glibc')
+-makedepends=('dbus' 'meson' 'gobject-introspection')
+-checkdepends=('xorg-server-xvfb' 'gtk3')
+-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz"
+-        fixes-from-master.patch)
+-sha512sums=('e7ad28a085788f05bc40dd8a86799c068e54e25d7ed349a610a8935c9de3bc556b72e4b7b2c158f84a4a62a4b10789a3b812ca9e3ae2b3e1b1db471e91ddee97'
+-            'ef85371a0e065c70978a0755d2202b4e0bb83997db1d6bf7caaedff797fdbb9d9372422388e9a6ac9ab07b6064224ec43ce8477fdb71ebd477e6b9c1f27dab19')
+-b2sums=('d4b516a8d02fcb297f23f277d8ac12f7cf3c8bf0eec41d22e01ea4ffd3995aedc1b20a173d44c3fc6827e4cb3366c277347fcd11e6362a66d682c47919f84fec'
+-        'f4c9abdd21f013f27d400b030e71b69213048cbb91705f92a81d99c326d857009ff4294b187bed687400809e8b123a676235cc1675ad7eb087ec7fe5af8b08cd')
+-
+-prepare() {
+-    cd ${pkgname}-${pkgver}
+-
+-    patch -Np1 -i ../fixes-from-master.patch
+-}
++license=('GPL')
++depends=('gtk3' 'gobject-introspection-runtime' 'js115')
++makedepends=('meson' 'samurai' 'gobject-introspection')
++checkdepends=('xorg-server-xvfb')
++source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
++sha512sums=('525f19f7a5fba642b9d98ca29406d6663ca029d0f92d177bb10ffb68f03843085b86dfc623ef49ceada01dacb64e03742f16e9d7e2fb86a3cc67c25b6de4a616')
++b2sums=('7cedfa8c9c3b53b417cbe6cebc335cb9ca056c6d98cb6c0abc03db5da678f275ff73b867b4c85289797c4701fe1f4dc10aa257eaa55b97824d9e4bebe61eadeb')
+ 
+ build() {
+-    arch-meson ${pkgname}-${pkgver} build -D installed_tests=false
+-    meson compile -C build
++    mkdir -p ${pkgname}-${pkgver}/builddir
++    cd ${pkgname}-${pkgver}/builddir
++
++    meson --prefix=/usr \
++          --libexecdir=/usr/lib \
++          --buildtype=plain \
++          -Dinstalled_tests=false \
++          ..
++
++    samu
+ }
+ 
+ check() {
+-    dbus-run-session xvfb-run -s '-nolisten local' \
+-        meson test -C build --print-errorlogs
++    cd ${pkgname}-${pkgver}/builddir
++
++    xvfb-run meson test --print-errorlogs
+ }
+ 
+ package() {
+-    meson install -C build --destdir "${pkgdir}"
++    cd ${pkgname}-${pkgver}/builddir
+ 
+-    rm -r "${pkgdir}/usr/lib/installed-tests"
++    DESTDIR="${pkgdir}" samu install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +1,6 @@
+-cairo
+-dbus
+-gcc-libs
+-glib2
+-glibc
+ gobject-introspection
+ gobject-introspection-runtime
+-js128
+-libffi
+-libgirepository
+-libx11
++gtk3
++js115
+ meson
+-readline
++samurai
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,10 @@
+-prepare() {
+-cd ${pkgname}-${pkgver}
+-patch -Np1 -i ../fixes-from-master.patch
++build() {
++mkdir -p ${pkgname}-${pkgver}/builddir
++cd ${pkgname}-${pkgver}/builddir
++meson --prefix=/usr \
++--libexecdir=/usr/lib \
++--buildtype=plain \
++-Dinstalled_tests=false \
++..
++samu
+ }
+-build() {
+-arch-meson ${pkgname}-${pkgver} build -D installed_tests=false
+-meson compile -C build
+-}

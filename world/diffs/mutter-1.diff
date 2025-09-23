@@ -1,7 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -67,7 +67,7 @@
+@@ -2,11 +2,10 @@
+ pkgbase=mutter
+ pkgname=(
+   mutter
+-  mutter-devkit
+   mutter-docs
+ )
+-pkgver=49.0
+-pkgrel=3
++pkgver=48.5
++pkgrel=1
+ pkgdesc="Window manager and compositor for GNOME"
+ url="https://gitlab.gnome.org/GNOME/mutter"
+ arch=(x86_64)
+@@ -23,7 +22,6 @@
+   gdk-pixbuf2
+   glib2
+   glibc
+-  glycin
+   gnome-desktop-4
+   gnome-settings-daemon
+   graphene
+@@ -67,10 +65,9 @@
+   pixman
+   python
    python-argcomplete
+-  python-dbus
    python-gobject
    startup-notification
 -  systemd-libs
@@ -9,7 +34,26 @@
    wayland
    xorg-xwayland
  )
-@@ -107,7 +107,7 @@
+@@ -87,15 +84,13 @@
+ )
+ source=(
+   "git+$url.git#tag=${pkgver/[a-z]/.&}"
+-  "git+https://gitlab.gnome.org/GNOME/gvdb.git#commit=b54bc5da25127ef416858a3ad92e57159ff565b3"
++  "git+https://gitlab.gnome.org/GNOME/gvdb.git#commit=466fc22016cf0981424e7121557611942191992f"
+ )
+-b2sums=('99defeefd72cc366cfa5c433a22d855400cc14c1f41d7cfe08008fd98a0b7a36295e3591dead6e7ebec489a526f8cd9af5471031d36becb4de6b441391bd9e07'
+-        'f989bc2ceb52aad3c6a23c439df3bbc672bc11d561a247d19971d30cc85ed5d42295de40f8e55b13404ed32aa44f12307c9f5b470f2e288d1c9c8329255c43bf')
++b2sums=('a24df78021a0f2499eae868bd168e2cf08e595a4df8e73ddbdb7bd2c2f24372b5652eccce1bffbfe09dc511abbf45c2ac9dd02f8493d0c2fe7accdda0f4a0819'
++        'c25796ff54fee353c5fc7a0815c25255b399490148d2bad1f37932d2da66d80561d6e262a5f256c89d142419a504c23eff69f7ef4e65e349f2dea3e0ac0bac1a')
+ 
+ prepare() {
+   cd mutter
+-
+-  git cherry-pick -n 353b03b689216d7e1c5ebd0acaf2c433d712294c
+ }
+ 
+ build() {
+@@ -112,7 +107,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -18,13 +62,71 @@
    meson compile -C build
  }
  
+@@ -127,38 +122,12 @@
+ }
+ 
+ package_mutter() {
+-  provides=(libmutter-17.so)
+-  optdepends=(
+-    'bash-completion: Bash completions for gdctl'
+-    'mutter-devkit: Mutter SDK, "MDK"'
+-  )
++  provides=(libmutter-16.so)
++  optdepends=('bash-completion: Bash completions for gdctl')
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+-  _pick devkit "$pkgdir"/usr/lib/mutter-devkit
+-  _pick devkit "$pkgdir"/usr/share/applications/org.gnome.Mutter.Mdk.desktop
+-  _pick devkit "$pkgdir"/usr/share/icons/hicolor/scalable/apps/org.gnome.Mutter.Mdk.Devel.svg
+-  _pick devkit "$pkgdir"/usr/share/icons/hicolor/scalable/apps/org.gnome.Mutter.Mdk.svg
+-  _pick devkit "$pkgdir"/usr/share/icons/hicolor/symbolic/apps/org.gnome.Mutter.Mdk-symbolic.svg
+-
+   _pick docs "$pkgdir"/usr/share/mutter-*/doc
+-}
+-
+-package_mutter-devkit() {
+-  pkgdesc="GNOME Mutter Development Kit"
+-  depends=(
+-    gcc-libs
+-    glib2
+-    glibc
+-    gtk4
+-    hicolor-icon-theme
+-    libadwaita
+-    libei
+-    libpipewire
+-    mutter
+-  )
+-
+-  mv devkit/* "$pkgdir"
+ }
+ 
+ package_mutter-docs() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -28,6 +28,7 @@
+@@ -14,7 +14,6 @@
+ glib2
+ glib2-devel
+ glibc
+-glycin
+ gnome-desktop-4
+ gnome-settings-daemon
+ gobject-introspection
+@@ -22,15 +21,14 @@
+ gsettings-desktop-schemas
+ gtk4
+ harfbuzz
+-hicolor-icon-theme
+ iio-sensor-proxy
+ lcms2
+-libadwaita
+ libcanberra
+ libcolord
  libdisplay-info
  libdrm
  libei
@@ -32,7 +134,18 @@
  libgirepository
  libglvnd
  libgudev
-@@ -63,7 +64,6 @@
+@@ -57,18 +55,15 @@
+ libxtst
+ mesa
+ meson
+-mutter
+ pango
+ pipewire
+ pixman
+ python
+ python-argcomplete
+-python-dbus
+ python-docutils
  python-gobject
  startup-notification
  sysprof

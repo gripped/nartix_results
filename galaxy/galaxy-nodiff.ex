@@ -16,7 +16,6 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -62,7 +61,6 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
-cjs
 claws-mail
 compface
 copyq
@@ -108,6 +106,7 @@ lazarus-gtk3
 lazarus-qt5
 lazarus-qt6
 lazygit
+lf
 libcmis
 libdbusmenu-lxqt
 libetpan

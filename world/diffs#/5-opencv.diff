@@ -1,0 +1,109 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+          opencv-cuda
+          python-opencv-cuda)
+ pkgver=4.12.0
+-pkgrel=7
++pkgrel=4
+ pkgdesc='Open Source Computer Vision Library'
+ arch=(x86_64)
+ license=(Apache-2.0)
+@@ -42,6 +42,7 @@
+              cudnn
+              eigen
+              fmt
++             gcc14
+              git
+              glew
+              hdf5
+@@ -75,20 +76,12 @@
+ prepare() {
+   pushd opencv
+   git cherry-pick -n cb8030809e0278d02fa335cc1f5ec7c3c17548e0 # Fix configuring with CMake version 4
+-
+-  git cherry-pick -n df23b593c52e0e18095a3d2e772fe13083e2ebe7 \
+-                     42f89347005dcd14a671d30a52a046e45303833b \
+-                     3278820f5df20a6d4170b7374a9b396250e36641
+-
+-  git cherry-pick -n 353b4ddf52db48ba85d2efaa33310afa0eb73a72
+-
+   patch -p1 < ../vtk9.patch # Don't require all vtk optdepends
+   sed -i 's/add_definitions(${Qt${QT_VERSION_MAJOR}${dt_dep}_DEFINITIONS})/link_libraries(${Qt${QT_VERSION_MAJOR}${dt_dep}})/' modules/highgui/CMakeLists.txt
+   patch -p1 < ../fix-cuda-flags.patch
+   popd
+ 
+   pushd opencv_contrib
+-  git cherry-pick -n 9a9b173cd178e7c07a98896a009c2a2021a6b247
+ }
+ 
+ build() {
+@@ -130,7 +123,7 @@
+     -DBUILD_WITH_DEBUG_INFO=ON
+   cmake --build build
+ 
+-  local cuda_archs="75;80;86;87;88;89;90;100;103;110;120;121;121-virtual"
++  local cuda_archs="53;60;61;62;70;72;75;80;86;87;89;90;90a;100;100a;101;101a;120;120a;120-virtual"
+ 
+   CUDAFLAGS="${CXXFLAGS/-Werror=format-security/-Xcompiler -Werror=format-security} -fno-lto --threads 0" \
+   CFLAGS="${CFLAGS} -fno-lto" CXXFLAGS="${CXXFLAGS} -fno-lto" LDFLAGS="${LDFLAGS} -fno-lto" \
+@@ -138,6 +131,8 @@
+     -DBUILD_WITH_DEBUG_INFO=OFF \
+     -DWITH_CUDA=ON \
+     -DWITH_CUDNN=ON \
++    -DCMAKE_C_COMPILER=gcc-14 \
++    -DCMAKE_CXX_COMPILER=g++-14 \
+     -DENABLE_CUDA_FIRST_CLASS_LANGUAGE=ON \
+     -DCMAKE_CUDA_ARCHITECTURES="$cuda_archs"
+   cmake --build build-cuda --verbose
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,6 +9,7 @@
+ fmt
+ freetype2
+ gcc-libs
++gcc14
+ git
+ glew
+ glib2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,11 @@
+ prepare() {
+ pushd opencv
+ git cherry-pick -n cb8030809e0278d02fa335cc1f5ec7c3c17548e0 # Fix configuring with CMake version 4
+-git cherry-pick -n df23b593c52e0e18095a3d2e772fe13083e2ebe7 \
+-42f89347005dcd14a671d30a52a046e45303833b \
+-3278820f5df20a6d4170b7374a9b396250e36641
+-git cherry-pick -n 353b4ddf52db48ba85d2efaa33310afa0eb73a72
+ patch -p1 < ../vtk9.patch # Don't require all vtk optdepends
+ sed -i 's/add_definitions(${Qt${QT_VERSION_MAJOR}${dt_dep}_DEFINITIONS})/link_libraries(${Qt${QT_VERSION_MAJOR}${dt_dep}})/' modules/highgui/CMakeLists.txt
+ patch -p1 < ../fix-cuda-flags.patch
+ popd
+ pushd opencv_contrib
+-git cherry-pick -n 9a9b173cd178e7c07a98896a009c2a2021a6b247
+ }
+ build() {
+ export JAVA_HOME="/usr/lib/jvm/default"
+@@ -49,13 +44,15 @@
+ cmake -B build -S $pkgname "${cmake_options[@]}" \
+ -DBUILD_WITH_DEBUG_INFO=ON
+ cmake --build build
+-local cuda_archs="75;80;86;87;88;89;90;100;103;110;120;121;121-virtual"
++local cuda_archs="53;60;61;62;70;72;75;80;86;87;89;90;90a;100;100a;101;101a;120;120a;120-virtual"
+ CUDAFLAGS="${CXXFLAGS/-Werror=format-security/-Xcompiler -Werror=format-security} -fno-lto --threads 0" \
+ CFLAGS="${CFLAGS} -fno-lto" CXXFLAGS="${CXXFLAGS} -fno-lto" LDFLAGS="${LDFLAGS} -fno-lto" \
+ cmake -B build-cuda -S $pkgname "${cmake_options[@]}" \
+ -DBUILD_WITH_DEBUG_INFO=OFF \
+ -DWITH_CUDA=ON \
+ -DWITH_CUDNN=ON \
++-DCMAKE_C_COMPILER=gcc-14 \
++-DCMAKE_CXX_COMPILER=g++-14 \
+ -DENABLE_CUDA_FIRST_CLASS_LANGUAGE=ON \
+ -DCMAKE_CUDA_ARCHITECTURES="$cuda_archs"
+ cmake --build build-cuda --verbose

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gimp
+ pkgver=3.0.4
+-pkgrel=5
++pkgrel=4
+ pkgdesc='GNU Image Manipulation Program'
+ url='https://www.gimp.org/'
+ arch=('x86_64')
 @@ -111,7 +111,7 @@
      -Dheadless-tests=disabled # enabled by default, depends on xorg-server-xvfb
    )

@@ -19,7 +19,6 @@ acpi_call
 acpica
 acpid
 acpilight
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -324,7 +323,6 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
-cjs
 clang
 clang14
 clang15
@@ -393,8 +391,6 @@ cscope
 ctags
 ctpl
 ctwm
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -410,7 +406,6 @@ cyrus-sasl-sql
 cython-dev
 cython
 cython0
-d-spy
 darktable
 dart-sass
 dart
@@ -424,8 +419,6 @@ dbus-glib
 dbus-python
 python-dbus
 python-dbus-docs
-dconf-editor
-dconf
 dcraw
 ddclient
 ddrescue
@@ -516,6 +509,7 @@ egl-gbm
 egl-wayland
 egl-x11
 eglexternalplatform
+eigen
 ejabberd
 electron
 electrum
@@ -576,9 +570,6 @@ ethtool
 eventviews
 evince
 evince-lib-docs
-evolution-data-server
-libedataserverui4
-evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
@@ -709,8 +700,6 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
-gdk-pixbuf2
-gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -763,7 +752,6 @@ gloox
 glslang
 glu
 glusterfs
-glycin
 gmic
 gimp-plugin-gmic
 gmime3
@@ -772,7 +760,6 @@ gnome-app-list
 gnome-applets
 gnome-autoar
 gnome-backgrounds
-gnome-boxes
 gnome-builder
 gnome-calculator
 gnome-calendar
@@ -782,11 +769,8 @@ gnome-clocks
 gnome-code-assistance
 gnome-color-manager
 gnome-common
-gnome-connections
 gnome-console
 gnome-contacts
-gnome-control-center
-gnome-keybindings
 gnome-devel-docs
 gnome-epub-thumbnailer
 gnome-font-viewer
@@ -800,29 +784,21 @@ gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
-gnome-nibbles
 gnome-notes
-gnome-online-accounts
-libgoa
 gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
 gnome-shell-extensions
-gnome-software
 gnome-sound-recorder
-gnome-sudoku
 gnome-taquin
 gnome-terminal
-gnome-tetravex
-gnome-text-editor
 gnome-themes-extra
 gnome-tour
 gnome-tweaks
 gnome-usage
 gnome-user-docs
 gnome-video-effects
-gnome-weather
 gnu-efi
 gnu-free-fonts
 gnu-netcat
@@ -1373,12 +1349,10 @@ kimap
 kinfocenter
 kinit
 kio-admin
-kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
 kio
-kio5-extras
 kio5
 kirigami-addons
 kirigami-addons5
@@ -1475,7 +1449,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -1574,10 +1547,6 @@ level-zero-headers
 level-zero-loader
 leveldb
 lftp
-lgi
-lua-lgi
-lua51-lgi
-lua53-lgi
 lhasa
 lib2geom
 lib3mf
@@ -1752,7 +1721,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2351,7 +2319,6 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
-nccl
 ncdu
 ncftp
 ncmpcpp
@@ -2475,18 +2442,12 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
 openfec
 openfire
 openh264
-openimagedenoise
 openimageio
 openjpeg2
 openlibm
@@ -2504,7 +2465,6 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
-opensubdiv
 opentimelineio
 openucc
 openucx
@@ -2533,7 +2493,6 @@ oxygen5
 p7zip
 packagekit-qt
 packagekit-qt6
-pacmanlogviewer
 pacrunner
 pacutils
 pahole
@@ -2963,7 +2922,6 @@ poco
 podofo-0.9
 podofo
 podofo-tools
-polari
 polkit-gnome
 polkit-kde-agent
 polkit-qt
@@ -3022,15 +2980,10 @@ putty
 pv
 pwndbg
 pyalpm
-pyatspi
-python-atspi
 pybind11
 pycups
 python-pycups
 pyenv
-pygobject
-python-gobject
-python-gobject-docs
 pylama
 pyopengl
 python-opengl
@@ -4604,6 +4557,7 @@ qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
+quadrapassel
 quilt
 quota-tools
 qutebrowser
@@ -5136,7 +5090,6 @@ signon-ui
 signond
 simde
 simdjson
-simple-scan
 sip
 skanlite
 skanpage
@@ -5283,7 +5236,6 @@ telepathy-qt
 telepathy-salut
 tellico
 telly-skout
-template-glib
 tepl
 terminator
 terminus-font

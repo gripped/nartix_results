@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -69,7 +69,7 @@
+@@ -6,7 +6,6 @@
+ )
+ pkgver=48.1
+ pkgrel=1
+-epoch=1
+ pkgdesc="Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)"
+ url="https://apps.gnome.org/Evince"
+ arch=(x86_64)
+@@ -70,7 +69,7 @@
  
    CFLAGS+=" -DHAVE_STRING_H -DHAVE_STDLIB_H"
  
@@ -8,6 +16,14 @@
 +  artix-meson evince build "${meson_options[@]}"
    meson compile -C build
  }
+ 
+@@ -91,6 +90,7 @@
+ package_evince() {
+   provides=(libev{document,view}3.so)
+   optdepends=('texlive-bin: DVI support')
++  groups=(gnome)
+ 
+   meson install -C build --destdir "$pkgdir"
  
 
 
