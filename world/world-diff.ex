@@ -410,7 +410,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -769,6 +768,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-ruamel.yaml.clib
 python-seaborn
 python-smmap
 qastools
@@ -900,6 +900,7 @@ rust-aarch64-gnu
 rust-aarch64-musl
 rust-wasm
 rust-src
+rutabaga-ffi
 samba
 libwbclient
 ldb

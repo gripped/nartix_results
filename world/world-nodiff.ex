@@ -1721,6 +1721,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4141,7 +4142,6 @@ python-rpyc
 python-rsa
 python-rtree
 python-ruamel-yaml
-python-ruamel.yaml.clib
 python-ruff-api
 python-rx
 python-s3transfer
@@ -5024,7 +5024,6 @@ run-parts
 runc
 rust-bindgen
 rustup
-rutabaga-ffi
 rxvt-unicode
 rxvt-unicode-terminfo
 rygel

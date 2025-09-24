@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,26 @@
+ pkgname=rutabaga-ffi
+-pkgver=0.1.71
+-pkgrel=1
+-pkgdesc="Cross-platform, open-source, Rust-based GPU paravirtualization"
++pkgver=0.1.6
++pkgrel=2
++pkgdesc="VGI cross-platform abstraction for GPU and display virtualization."
+ arch=("x86_64")
+-url="https://github.com/magma-gpu/rutabaga_gfx"
+-license=(BSD-3-Clause)
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/magma-gpu/rutabaga_gfx/archive/refs/tags/v${pkgver}.tar.gz")
++url="https://crosvm.dev/book/appendix/rutabaga_gfx.html"
++license=(LicenseRef-chromiumos)
++source=("git+https://chromium.googlesource.com/crosvm/crosvm#tag=v${pkgver}-rutabaga-release")
+ depends=(glibc gcc-libs virglrenderer gfxstream)
+ makedepends=(rust meson git)
+-sha256sums=('123e5e00417b8600a643b55145fe8a1bcdf3091df0249b5245a7777e85b65696')
++sha256sums=('285af77bfa34df753c8b88fd1139351e3efe0360a5531d8e26d0be9b7821f402')
+ 
+ build() {
+-  cd rutabaga_gfx-$pkgver/ffi
+-  arch-meson . build -Dgfxstream=true
++  cd $srcdir/crosvm/rutabaga_gfx/ffi
++  artix-meson . build -Dgfxstream=true
+   meson compile -C build
+ }
+ 
+ package() {
+-  cd rutabaga_gfx-$pkgver/ffi
++  cd $srcdir/crosvm/rutabaga_gfx/ffi
+   meson install -C build --destdir "$pkgdir"
+   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
++  cd $pkgdir/usr/lib
++  ln -sf librutabaga_gfx_ffi.so.$pkgver librutabaga_gfx_ffi.so.0
++  ln -sf librutabaga_gfx_ffi.so.0 librutabaga_gfx_ffi.so
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd rutabaga_gfx-$pkgver/ffi
+-arch-meson . build -Dgfxstream=true
++cd $srcdir/crosvm/rutabaga_gfx/ffi
++artix-meson . build -Dgfxstream=true
+ meson compile -C build
+ }

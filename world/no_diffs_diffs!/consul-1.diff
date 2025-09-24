@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,6 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=consul
+-pkgver=1.21.5
++pkgver=1.21.3
+ pkgrel=1
+ pkgdesc="A tool for service discovery, monitoring and configuration."
+ arch=('x86_64')
+@@ -10,18 +10,18 @@
  makedepends=('git' 'go' 'gox' 'go-tools')
  makedepends+=('procps-ng' 'zip' 'yarn' 'nodejs-lts-iron' 'npm')  # makedepends for the UI
  source=("git+https://github.com/hashicorp/consul#tag=v${pkgver}"
@@ -8,15 +16,22 @@
          'consul.default'
          'consul.sysusers'
          'example.json'
-@@ -19,7 +18,6 @@
++        'use_nodejs_v20.patch'
+         )
  install=consul.install
  backup=('etc/default/consul')
- sha512sums=('aad80582f1660c3080da09f6287a2aa7a977de5f71489aa062ef8ab19d85208696a2715063e6baf3b016906834344d870638a5be3fc5263e745f3af7eef81296'
+-sha512sums=('b6a64818909030a96d9c56690604ba0b8aaa0b99b21f947c1f16b9ee8b54eca1d885b122cf9b9b06895dc1ee81e0890c9984060d39c5e7404de6d94516b5c07e'
 -            'c70b9d1556f6c7ecb2e915ab685f289cef0e31198bd2e50c74a0483bbfb387beec67334f539a90adbf68b61b07946e98b300ab8a8e26e53b35f4ab4894adeb04'
++sha512sums=('aad80582f1660c3080da09f6287a2aa7a977de5f71489aa062ef8ab19d85208696a2715063e6baf3b016906834344d870638a5be3fc5263e745f3af7eef81296'
              'ec5a800529a297c709fa383c094ecf106351cf0f8ac7b613b972d415d77fe001088902d7ab805e63e78a8e6360323fec1b795db5a4446df1e21b9b4ed31e7079'
              'ef872aedb2bc022a29292b7972a792b22e684c1ccb904a2b2cfec6d8966c28fb19be1452ce060821c419f1b646b236ba2e783175595e4bb6926d164c27a15c87'
-             'c4292b8f56ee955ed7385a49843fd90d6434029891b3e1e724cb2fc841514c06e2554a26d3937c114371b18c2168c4e64319eb2cbd726ee8b35870df19089348'
-@@ -73,7 +71,6 @@
+-            'c4292b8f56ee955ed7385a49843fd90d6434029891b3e1e724cb2fc841514c06e2554a26d3937c114371b18c2168c4e64319eb2cbd726ee8b35870df19089348')
++            'c4292b8f56ee955ed7385a49843fd90d6434029891b3e1e724cb2fc841514c06e2554a26d3937c114371b18c2168c4e64319eb2cbd726ee8b35870df19089348'
++            '2e13ff1311e96affe4e4554c6dad3ffad95429f2e5e4b7d06f2c18fb46682fc2dbdf603054a2155b2d2dfcad8b6eb6dc38cb7e3042919eedf5c297d32a633da2')
+ 
+ export CGO_LDFLAGS="${LDFLAGS}"
+ export CGO_CFLAGS="${CFLAGS}"
+@@ -71,7 +71,6 @@
    install -D -m644 -o 0 -g 0 "${srcdir}/example.json" "${pkgdir}/usr/share/doc/consul/config.example.json"
    install -Dm755 "build/consul" "${pkgdir}/usr/bin/consul"
  

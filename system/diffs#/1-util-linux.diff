@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,14 +9,16 @@
+@@ -2,21 +2,23 @@
+ 
+ pkgbase=util-linux
+ pkgname=(util-linux util-linux-libs)
+-pkgver=2.41.2
++pkgver=2.41.1
+ pkgrel=1
+ pkgdesc='Miscellaneous system utilities for Linux'
+ url='https://github.com/util-linux/util-linux'
  arch=('x86_64')
  makedepends=('asciidoctor'
               'bash-completion'
@@ -18,7 +26,7 @@
  license=(
    'BSD-2-Clause'
    'BSD-3-Clause'
-@@ -32,11 +34,11 @@
+@@ -32,12 +34,12 @@
  validpgpkeys=('B0C64D14301CC6EFAEDF60E4E4B71D5EEC39C284')  # Karel Zak
  source=("git+https://github.com/util-linux/util-linux#tag=v${pkgver/rc/-rc}?signed"
          $pkgbase-BSD-2-Clause.txt::https://raw.githubusercontent.com/Cyan4973/xxHash/f035303b8a86c1db9be70cbb638678ef6ef4cb2d/LICENSE
@@ -28,12 +36,14 @@
          '60-rfkill.rules'
 -        'rfkill-unblock_.service'
 -        'rfkill-block_.service')
+-sha256sums=('d7fec66283cce093f54aaf0f30dcb6adfea7c7c170abf8cdf24df3c409397f87'
 +        0001-util-linux-no-systemd.patch
 +       )
- sha256sums=('1995919a5c3e8a2cff213bd3ab8a421ee209aff99cbe5da4536cccd57de9267b'
++sha256sums=('1995919a5c3e8a2cff213bd3ab8a421ee209aff99cbe5da4536cccd57de9267b'
              '6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a'
              'ee917d55042f78b8bb03f5467e5233e3e2ddc2fe01e302bc53b218003fe22275'
-@@ -46,8 +48,7 @@
+             '57e057758944f4557762c6def939410c04ca5803cbdd2bfa2153ce47ffe7a4af'
+@@ -46,10 +48,12 @@
              '3f54249ac2db44945d6d12ec728dcd0d69af0735787a8b078eacd2c67e38155b'
              '4a0b3dd8aa6d34dd29e1d153f396cacf908b0d64f7218276cbcab684587c0a0a'
              '7423aaaa09fee7f47baa83df9ea6fef525ff9aec395c8cbd9fe848ceb2643f37'
@@ -42,8 +52,13 @@
 +            '43180fb2bf51696654cc6bda7a5bacc769882268613343d783caad875749ef45')
  
  _backports=(
-   '56b97db03a56d90f0480885a35b0383afabc2e18'
-@@ -73,6 +74,8 @@
++  '56b97db03a56d90f0480885a35b0383afabc2e18'
++
++  '77723beaaaca654f72ac9538772e69fbafa8835d'
+ )
+ 
+ _reverts=(
+@@ -70,6 +74,8 @@
      git revert --mainline 1 --no-commit "${_c}"
    done
  
@@ -52,7 +67,7 @@
    sed -i '/^u /s|u|u!|' misc-utils/uuidd-sysusers.conf.in
  
    sed -i '/dirty=/c dirty=' tools/git-version-gen
-@@ -80,10 +83,11 @@
+@@ -77,10 +83,11 @@
  
  build() {
    local _meson_options=(
@@ -65,7 +80,7 @@
      -Dncurses=disabled
      -Dncursesw=enabled
      -Deconf=disabled
-@@ -94,9 +98,11 @@
+@@ -91,9 +98,11 @@
      -Dbuild-newgrp=enabled
      -Dbuild-vipw=enabled
      -Dbuild-write=enabled
@@ -78,7 +93,7 @@
  
    meson compile -C build
  }
-@@ -115,7 +121,8 @@
+@@ -112,7 +121,8 @@
             'pam'
             'readline'
             'shadow'
@@ -88,7 +103,7 @@
             'zlib')
    optdepends=('words: default dictionary for look')
    backup=(etc/pam.d/chfn
-@@ -135,16 +142,14 @@
+@@ -132,16 +142,14 @@
  
    chmod 4755 "${pkgdir}"/usr/bin/{newgrp,ch{sh,fn}}
  
@@ -113,7 +128,7 @@
  
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
-@@ -159,11 +164,6 @@
+@@ -156,11 +164,6 @@
  
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"

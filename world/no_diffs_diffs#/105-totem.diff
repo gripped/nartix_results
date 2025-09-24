@@ -1,6 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -82,7 +82,7 @@
+@@ -1,9 +1,9 @@
+ 
+ pkgname=totem
+ pkgver=43.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Movie player for the GNOME desktop based on GStreamer"
+-url="https://gitlab.gnome.org/GNOME/totem"
++url="https://apps.gnome.org/Totem/"
+ arch=(x86_64)
+ license=('GPL-2.0-or-later WITH GStreamer-exception-2008')
+ depends=(
+@@ -56,6 +56,7 @@
+ provides=(libtotem.so)
+ conflicts=(totem-plugin)
+ replaces=(totem-plugin)
++groups=(gnome)
+ source=(
+   "git+https://gitlab.gnome.org/GNOME/totem.git?signed#tag=${pkgver/[a-z]/.&}"
+   "git+https://gitlab.gnome.org/GNOME/libgd.git"
+@@ -81,7 +82,7 @@
      -D enable-gtk-doc=true
    )
  
