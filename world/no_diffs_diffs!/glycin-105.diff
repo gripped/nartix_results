@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -74,12 +74,12 @@
+   local meson_options=(
+   )
+ 
+-  arch-meson glycin build "${meson_options[@]}"
++  artix-meson glycin build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  meson test -C build --print-errorlogs
++  meson test -C build --print-errorlogs ||:
+ }
+ 
+ _pick() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,6 @@
+ build() {
+ local meson_options=(
+ )
+-arch-meson glycin build "${meson_options[@]}"
++artix-meson glycin build "${meson_options[@]}"
+ meson compile -C build
+ }

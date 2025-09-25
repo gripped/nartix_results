@@ -8,9 +8,9 @@
    mutter-docs
  )
 -pkgver=49.0
--pkgrel=3
+-pkgrel=4
 +pkgver=48.5
-+pkgrel=1
++pkgrel=2
  pkgdesc="Window manager and compositor for GNOME"
  url="https://gitlab.gnome.org/GNOME/mutter"
  arch=(x86_64)
@@ -34,7 +34,7 @@
    wayland
    xorg-xwayland
  )
-@@ -87,15 +84,13 @@
+@@ -87,18 +84,13 @@
  )
  source=(
    "git+$url.git#tag=${pkgver/[a-z]/.&}"
@@ -50,10 +50,13 @@
    cd mutter
 -
 -  git cherry-pick -n 353b03b689216d7e1c5ebd0acaf2c433d712294c
+-
+-  git cherry-pick -n d9410c0ec6923016d0fc5c4abb9ea41061a93ae4
+-  git cherry-pick -n 85216f2db006a5f51703c0bcd519e9d630e9b7eb
  }
  
  build() {
-@@ -112,7 +107,7 @@
+@@ -115,7 +107,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -62,7 +65,7 @@
    meson compile -C build
  }
  
-@@ -127,38 +122,12 @@
+@@ -130,38 +122,12 @@
  }
  
  package_mutter() {

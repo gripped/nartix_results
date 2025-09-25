@@ -16,6 +16,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
+blender
 blueman
 bogofilter
 bogofilter-db
@@ -61,10 +62,12 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
+cjs
 claws-mail
 compface
 copyq
 cvs
+dbeaver
 dillo
 dino
 distrobox

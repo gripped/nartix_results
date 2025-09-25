@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,8 +26,6 @@
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DOPENDHT_DOCUMENTATION=OFF \
+     -DOPENDHT_TESTS=ON \
+-    -DOPENDHT_SYSTEMD=ON \
+-    -DOPENDHT_SYSTEMD_UNIT_FILE_LOCATION=/usr/lib/systemd/system/ \
+     -DOPENDHT_INDEX=ON \
+     -DOPENDHT_HTTP=ON \
+     -DOPENDHT_PYTHON=ON \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,8 +8,6 @@
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DOPENDHT_DOCUMENTATION=OFF \
+ -DOPENDHT_TESTS=ON \
+--DOPENDHT_SYSTEMD=ON \
+--DOPENDHT_SYSTEMD_UNIT_FILE_LOCATION=/usr/lib/systemd/system/ \
+ -DOPENDHT_INDEX=ON \
+ -DOPENDHT_HTTP=ON \
+ -DOPENDHT_PYTHON=ON \

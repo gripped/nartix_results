@@ -1,42 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   nm-cloud-setup
-   networkmanager-docs
- )
--pkgver=1.54.1
-+pkgver=1.54.0
- pkgrel=1
- pkgdesc="Network connection manager and user applications"
- url="https://networkmanager.dev/"
-@@ -18,6 +18,7 @@
-   curl
-   dhcpcd
-   dnsmasq
-+  elogind
-   gcc-libs
-   git
-   glib2
-@@ -47,9 +48,6 @@
+@@ -47,8 +47,7 @@
    ppp
    python-gobject
    readline
 -  systemd
 -  systemd-libs
--  vala
++  elogind
+   vala
    vala
    wpa_supplicant
- )
-@@ -60,7 +58,7 @@
- source=(
-   "git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git?signed#tag=${pkgver/[a-z]/-&}"
- )
--b2sums=('8f658aba51dca1af831908b7219cff7e9b83c32465e1fc1489ae2bc132d7caf82f930169365ee81dfac280973d067462dde9625d29c6dd8bf127534e405a7f0d')
-+b2sums=('b0bb870e19216ac15b9902007502c16a7bf3d72620f76479fc8ff43acfeb5bceb1b7822293603975a99d42ab05b3b522b87a184af154a0b382423639804d1b76')
- validpgpkeys=(
-   3D10AD045AB4AAFF8E8F36AF9B980AC2FB874FEB # Ana Cabral <acabral@redhat.com>
-   F07F7C1EABD382F81CBFBA3B998D4828CD7E1656 # Beniamino Galvani <bgalvani@redhat.com>
-@@ -86,9 +84,12 @@
+@@ -86,9 +85,12 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -50,7 +24,7 @@
  
      -D iwd=true
      -D teamdctl=true
-@@ -106,7 +107,7 @@
+@@ -106,7 +108,7 @@
      -D qt=false
    )
  
@@ -59,15 +33,11 @@
    meson compile -C build
  }
  
-@@ -128,6 +129,7 @@
-   depends=(
-     audit
-     curl
+@@ -141,10 +143,10 @@
+     libpsl
+     libteam
+     mobile-broadband-provider-info
 +    elogind
-     gcc-libs
-     glib2
-     glibc
-@@ -144,7 +146,6 @@
      nspr
      nss
      readline
@@ -75,17 +45,7 @@
      wpa_supplicant
    )
    optdepends=(
-@@ -172,6 +173,9 @@
-   install -d etc/NetworkManager/{conf,dnsmasq}.d
-   install -dm700 etc/NetworkManager/system-connections
-   install -m644 /dev/stdin etc/NetworkManager/NetworkManager.conf <<END
-+[main]
-+plugins=keyfile
-+hostname-mode=none
- END
- 
-   install -Dm644 /dev/stdin usr/lib/NetworkManager/conf.d/20-connectivity.conf <<END
-@@ -193,7 +197,6 @@
+@@ -193,7 +195,6 @@
    _pick cloud usr/lib/**/*nm-cloud-setup*
    _pick cloud usr/share/man/*/nm-cloud-setup*
  
@@ -93,15 +53,16 @@
  
    install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
-@@ -206,7 +209,7 @@
+@@ -206,8 +207,8 @@
      glibc
      nspr
      nss
 -    systemd-libs
-+    libelogind
      util-linux-libs
++    libelogind
    )
    provides=(libnm.so)
+ 
 
 
 ############# Stripped diff below #################

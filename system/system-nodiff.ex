@@ -12,7 +12,6 @@ ca-certificates
 ca-certificates-utils
 coreutils
 cracklib
-cronie
 cryptsetup
 curl
 libcurl-compat
@@ -38,6 +37,9 @@ flex
 gawk
 gc
 gdbm
+glib2
+glib2-devel
+glib2-docs
 gnulib-l10n
 gnupg
 gnutls

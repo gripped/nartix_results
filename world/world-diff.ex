@@ -1,7 +1,6 @@
 0ad
 a52dec
 accountsservice
-adios2
 alacritty
 alsa-utils
 amule
@@ -88,14 +87,10 @@ containerd
 cppcheck
 cppdap
 crun
-cuda
-cuda-tools
 cups
 libcups
-d-spy
 darkhttpd
 dbus-broker
-dconf-editor
 dconf
 ddcutil
 dhcp
@@ -143,9 +138,6 @@ eog-docs
 eom
 espeakup
 etherwall
-evolution-data-server
-libedataserverui4
-evolution-data-server-docs
 exo
 expect
 extra-cmake-modules
@@ -162,6 +154,8 @@ fig2dev
 firefox
 firewalld
 firewalld-test
+flatbuffers
+python-flatbuffers
 flatpak
 flatpak-docs
 flite
@@ -184,29 +178,18 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdk-pixbuf2
-gdk-pixbuf2-docs
 gdm
 libgdm
 geoclue
 ghc-filesystem
 glpk
-glycin
 gnome-bluetooth-3.0
-gnome-boxes
-gnome-connections
-gnome-control-center
-gnome-keybindings
 gnome-desktop
 gnome-desktop-common
 gnome-desktop-4
 gnome-desktop-docs
 gnome-disk-utility
-gnome-initial-setup
 gnome-keyring
-gnome-nibbles
-gnome-online-accounts
-libgoa
 gnome-panel
 gnome-remote-desktop
 gnome-session
@@ -214,12 +197,8 @@ gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-software
-gnome-sudoku
 gnome-system-monitor
-gnome-tetravex
-gnome-text-editor
 gnome-user-share
-gnome-weather
 go-bindata
 godot
 godot-mono
@@ -228,7 +207,6 @@ greetd-tuigreet
 greetd
 $pkgbase
 $pkgbase-agreety
-grim
 grpc
 python-grpcio
 python-grpcio-tools
@@ -338,8 +316,6 @@ julia
 jupyter-server-ydoc
 kcoreaddons
 keychain
-kio-extras
-kio5-extras
 kismet
 kitty
 kitty-terminfo
@@ -353,10 +329,6 @@ ksystemlog
 kwayland5
 kwin-x11
 kwin
-lgi
-lua-lgi
-lua51-lgi
-lua53-lgi
 libabw
 libatasmart
 libayatana-indicator
@@ -560,7 +532,6 @@ vulkan-virtio
 vulkan-mesa-device-select
 vulkan-mesa-layers
 mesa-docs
-meson
 mgba
 libmgba
 mgba-sdl
@@ -588,7 +559,6 @@ mutter-docs
 mutter45
 mutter46
 nbd
-nccl
 ndctl
 ndisc6
 nemo-extensions
@@ -631,7 +601,6 @@ python-opencv
 opencv-cuda
 python-opencv-cuda
 opendht
-openimagedenoise
 openipmi
 openjade
 openrct2
@@ -645,7 +614,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-pacmanlogviewer
 parallel
 parallel-docs
 paraview-catalyst
@@ -720,7 +688,6 @@ pluma
 plymouth
 podman
 podman-docker
-polari
 polkit
 postfix
 postfix-cdb
@@ -751,11 +718,6 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-pyatspi
-python-atspi
-pygobject
-python-gobject
-python-gobject-docs
 pyqt6
 pysolfc
 python-anytree
@@ -768,7 +730,6 @@ python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-ruamel.yaml.clib
 python-seaborn
 python-smmap
 qastools
@@ -900,7 +861,6 @@ rust-aarch64-gnu
 rust-aarch64-musl
 rust-wasm
 rust-src
-rutabaga-ffi
 samba
 libwbclient
 ldb
@@ -917,7 +877,6 @@ sfml
 shairport-sync
 sharutils
 signal-desktop
-simple-scan
 smartmontools
 snapper
 snappy
@@ -942,7 +901,6 @@ system-config-printer
 tcc
 telegram-desktop
 telepathy-idle
-template-glib
 tensorflow
 tensorflow-opt
 tensorflow-cuda

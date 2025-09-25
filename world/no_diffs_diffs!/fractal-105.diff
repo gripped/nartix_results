@@ -1,5 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=fractal
+ pkgver=12.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Matrix group messaging app"
+ arch=(x86_64)
+ url="https://gitlab.gnome.org/World/fractal"
+@@ -13,7 +13,7 @@
+   gdk-pixbuf2
+   glib2
+   glibc
+-  glycin1  # dlopen'ed
++  glycin  # dlopen'ed
+   graphene
+   gst-plugins-bad-libs
+   gst-plugins-base-libs
 @@ -56,7 +56,7 @@
  
  build() {
@@ -13,7 +31,17 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -7,7 +7,7 @@
+ gdk-pixbuf2
+ glib2
+ glibc
+-glycin1
++glycin
+ graphene
+ gst-plugin-gtk4
+ gst-plugins-bad-libs
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

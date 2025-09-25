@@ -19,6 +19,7 @@ acpi_call
 acpica
 acpid
 acpilight
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -391,6 +392,8 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
+cuda-tools
 cudnn
 cunit
 cups-filters
@@ -406,6 +409,7 @@ cyrus-sasl-sql
 cython-dev
 cython
 cython0
+d-spy
 darktable
 dart-sass
 dart
@@ -419,6 +423,7 @@ dbus-glib
 dbus-python
 python-dbus
 python-dbus-docs
+dconf-editor
 dcraw
 ddclient
 ddrescue
@@ -570,6 +575,9 @@ ethtool
 eventviews
 evince
 evince-lib-docs
+evolution-data-server
+libedataserverui4
+evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
@@ -635,8 +643,6 @@ flac-doc
 flake8
 flameshot
 flashrom
-flatbuffers
-python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
@@ -700,6 +706,8 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -752,6 +760,8 @@ gloox
 glslang
 glu
 glusterfs
+glycin
+glycin-gtk4
 gmic
 gimp-plugin-gmic
 gmime3
@@ -760,6 +770,7 @@ gnome-app-list
 gnome-applets
 gnome-autoar
 gnome-backgrounds
+gnome-boxes
 gnome-builder
 gnome-calculator
 gnome-calendar
@@ -769,12 +780,16 @@ gnome-clocks
 gnome-code-assistance
 gnome-color-manager
 gnome-common
+gnome-connections
 gnome-console
 gnome-contacts
+gnome-control-center
+gnome-keybindings
 gnome-devel-docs
 gnome-epub-thumbnailer
 gnome-font-viewer
 gnome-games
+gnome-initial-setup
 gnome-klotski
 gnome-mahjongg
 gnome-maps
@@ -784,21 +799,28 @@ gnome-mines
 gnome-multi-writer
 gnome-music
 gnome-nettool
+gnome-nibbles
 gnome-notes
+gnome-online-accounts
+libgoa
 gnome-photos
 gnome-recipes
 gnome-robots
 gnome-screenshot
 gnome-shell-extensions
 gnome-sound-recorder
+gnome-sudoku
 gnome-taquin
 gnome-terminal
+gnome-tetravex
+gnome-text-editor
 gnome-themes-extra
 gnome-tour
 gnome-tweaks
 gnome-usage
 gnome-user-docs
 gnome-video-effects
+gnome-weather
 gnu-efi
 gnu-free-fonts
 gnu-netcat
@@ -849,6 +871,7 @@ graphite-docs
 graphviz
 grilo-plugins
 grilo
+grim
 groovy
 grsync
 grub-customizer
@@ -1135,6 +1158,7 @@ jruby
 js102
 js115
 js128
+js140
 js91
 jshon
 json-glib
@@ -1349,10 +1373,12 @@ kimap
 kinfocenter
 kinit
 kio-admin
+kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
 kio
+kio5-extras
 kio5
 kirigami-addons
 kirigami-addons5
@@ -1547,6 +1573,10 @@ level-zero-headers
 level-zero-loader
 leveldb
 lftp
+lgi
+lua-lgi
+lua51-lgi
+lua53-lgi
 lhasa
 lib2geom
 lib3mf
@@ -2233,6 +2263,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -2320,6 +2351,7 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
+nccl
 ncdu
 ncftp
 ncmpcpp
@@ -2449,6 +2481,7 @@ openexr
 openfec
 openfire
 openh264
+openimagedenoise
 openimageio
 openjpeg2
 openlibm
@@ -2494,6 +2527,7 @@ oxygen5
 p7zip
 packagekit-qt
 packagekit-qt6
+pacmanlogviewer
 pacrunner
 pacutils
 pahole
@@ -2557,6 +2591,7 @@ perl-bytes-random-secure
 perl-cache-memcached
 perl-canary-stability
 perl-capture-tiny
+perl-cgi-fast
 perl-cgi
 perl-class-data-inheritable
 perl-class-inspector
@@ -2923,6 +2958,7 @@ poco
 podofo-0.9
 podofo
 podofo-tools
+polari
 polkit-gnome
 polkit-kde-agent
 polkit-qt
@@ -2981,10 +3017,15 @@ putty
 pv
 pwndbg
 pyalpm
+pyatspi
+python-atspi
 pybind11
 pycups
 python-pycups
 pyenv
+pygobject
+python-gobject
+python-gobject-docs
 pylama
 pyopengl
 python-opengl
@@ -3899,6 +3940,7 @@ python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
 python-pydantic
+python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
 python-pydot
@@ -4142,6 +4184,7 @@ python-rpyc
 python-rsa
 python-rtree
 python-ruamel-yaml
+python-ruamel.yaml.clib
 python-ruff-api
 python-rx
 python-s3transfer
@@ -5024,6 +5067,7 @@ run-parts
 runc
 rust-bindgen
 rustup
+rutabaga-ffi
 rxvt-unicode
 rxvt-unicode-terminfo
 rygel
@@ -5089,6 +5133,7 @@ signon-ui
 signond
 simde
 simdjson
+simple-scan
 sip
 skanlite
 skanpage
@@ -5235,6 +5280,8 @@ telepathy-qt
 telepathy-salut
 tellico
 telly-skout
+template-glib
+template-glib-docs
 tepl
 terminator
 terminus-font

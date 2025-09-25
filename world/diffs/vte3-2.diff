@@ -1,26 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,8 +8,8 @@
-   vte4-utils
-   vte-docs
- )
--pkgver=0.82.0
--pkgrel=2
-+pkgver=0.80.3
-+pkgrel=1
- pkgdesc="Virtual Terminal Emulator widget"
- url="https://wiki.gnome.org/Apps/Terminal/VTE"
- arch=(x86_64)
-@@ -22,38 +22,32 @@
-   cairo
-   fribidi
-   gcc-libs
-+  gdk-pixbuf2
-   glib2
-   glibc
-   gnutls
-+  graphene
-   icu
+@@ -29,8 +29,6 @@
    lz4
    pango
    pcre2
@@ -29,33 +9,7 @@
  )
  makedepends=(
    at-spi2-core
-+  gi-docgen
-   fast_float
--  fmt
--  gi-docgen
-   git
-   glib2-devel
-   gobject-introspection
-   gperf
--  graphene
-   gtk3
-   gtk4
-   meson
-   vala
- )
- options=(!lto)
--source=(
--  "git+https://gitlab.gnome.org/GNOME/vte.git#tag=$pkgver"
--  "git+https://github.com/simdutf/simdutf.git#tag=v6.4.0"
--)
--b2sums=('59ffcc20365ec6a89c6ae7c89b3e5bbebe7e525cb3608d1056c49faa7015f1c066e35d98bbd50051390731a090186006101bfbc490cbb7d86a409ec614d7887d'
--        '32939601b78402d5b69d620798c9df14df8ce639d9ba9d5cfe1b0bc05417fa743a5acd97ede0f4a715efeebea1920e91fa8f583c6531851917fadf701d4e3ea5')
-+source=("git+https://gitlab.gnome.org/GNOME/vte.git#tag=$pkgver")
-+b2sums=('2c9da14397e88df05a6e7479a3baf2745f0c3071e800a80926f69d52df00569e11e4437c74bb24beadd06baa1b468ff88a2df7b94cfd636109fcfa7abd5fe3e2')
- 
- prepare() {
-   cd vte
-@@ -61,12 +55,11 @@
+@@ -61,12 +59,13 @@
  
  build() {
    local meson_options=(
@@ -63,36 +17,20 @@
      -D docs=true
    )
  
--  export MESON_PACKAGE_CACHE_DIR="$srcdir"
--
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
 -  arch-meson vte build "${meson_options[@]}"
 +  artix-meson vte build "${meson_options[@]}"
    meson compile -C build
  }
  
-@@ -153,7 +146,6 @@
-   pkgdesc+=" (GTK4)"
-   license=(LGPL-3.0-or-later)
-   depends+=(
--    graphene
-     gtk4
-     vte-common
-   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,6 @@
- at-spi2-core
- cairo
- fast_float
--fmt
- fribidi
- gcc-libs
- gdk-pixbuf2
-@@ -22,8 +21,6 @@
+@@ -22,8 +22,6 @@
  meson
  pango
  pcre2

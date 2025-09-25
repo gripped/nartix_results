@@ -1,9 +1,6 @@
 alsa-utils
 autorandr
-blender
 cinnamon-desktop
-cjs
-dbeaver
 doctest
 dvtm
 ecrire

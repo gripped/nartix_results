@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=sddm
+ pkgver=0.21.0
+-pkgrel=6
++pkgrel=6.1
+ pkgdesc='QML based X11 and Wayland display manager'
+ arch=(x86_64)
+ url='https://github.com/sddm/sddm'
 @@ -9,17 +9,16 @@
  depends=(bash
           gcc-libs
@@ -20,7 +29,7 @@
               python-docutils
               qt5-base
               qt5-declarative
-@@ -32,25 +31,26 @@
+@@ -32,26 +31,29 @@
          'etc/pam.d/sddm-autologin'
          'etc/pam.d/sddm-greeter')
  provides=(display-manager)
@@ -45,17 +54,22 @@
          -DDBUS_CONFIG_DIR=/usr/share/dbus-1/system.d \
          -DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
          -DBUILD_MAN_PAGES=ON \
+-        -DUID_MAX=60513
 +        -DUSE_ELOGIND=yes \
 +        -DNO_SYSTEMD=yes \
-         -DUID_MAX=60513
++        -DUID_MAX=60513 \
++		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
    cmake --build build
  
 -  cmake -B build5 -S $pkgname \
+-        -DCMAKE_INSTALL_PREFIX=/usr
 +  cmake -B build5 -S $pkgname-$pkgver \
-         -DCMAKE_INSTALL_PREFIX=/usr
++        -DCMAKE_INSTALL_PREFIX=/usr \
++		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
    cmake --build build5/src/greeter
    cmake --build build5/components
-@@ -65,4 +65,7 @@
+ }
+@@ -65,4 +67,7 @@
    "$pkgdir"/usr/bin/sddm --example-config > "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf
    sed -r 's|DefaultPath=.*|DefaultPath=/usr/local/sbin:/usr/local/bin:/usr/bin|g' -i "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf
    sed -e "/^InputMethod/s/qtvirtualkeyboard//" -i "$pkgdir"/usr/lib/sddm/sddm.conf.d/default.conf

@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+   libx11
+   libxinerama
+   libxrandr
+-  systemd-libs
+ )
+ makedepends=(
+   git
+@@ -50,8 +49,6 @@
+     --sysconfdir=/etc \
+     --localstatedir=/var \
+     --sbindir=/usr/bin \
+-    --with-session-info=systemd \
+-    --with-init-script=systemd
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,4 +10,3 @@
+ libxinerama
+ libxrandr
+ spice-protocol
+-systemd-libs

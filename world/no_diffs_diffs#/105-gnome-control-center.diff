@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -110,7 +110,7 @@
+ 
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
+-  arch-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+ -D malcontent=true
+ )
+ export MESON_PACKAGE_CACHE_DIR="$srcdir"
+-arch-meson $pkgbase build "${meson_options[@]}"
++artix-meson $pkgbase build "${meson_options[@]}"
+ meson compile -C build
+ }
