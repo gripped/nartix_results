@@ -324,6 +324,7 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
+cjson
 clang
 clang14
 clang15
@@ -1475,6 +1476,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1709,8 +1711,6 @@ libgnomekbd
 libgnt
 libgoom2
 libgovirt
-libgphoto2
-libgphoto2-docs
 libgpod
 libgravatar
 libgrss
@@ -2499,6 +2499,7 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
+opensubdiv
 opentimelineio
 openucc
 openucx
@@ -2973,9 +2974,19 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mongodb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgis
 postgrey
 postorius
+potrace
 powerline
 powerline-fonts
 vim-powerline
@@ -4482,7 +4493,6 @@ python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
-python-zope-security
 python-zope-testing
 python-zope-testrunner
 python-zopfli

@@ -69,7 +69,6 @@ chrony
 cifs-utils
 cinnamon-desktop
 cjs
-cjson
 clamav
 cloud-init
 clucene
@@ -323,7 +322,6 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
-krita
 ksnip
 ksystemlog
 kwayland5
@@ -374,6 +372,8 @@ libfido2
 libfprint
 libfreehand
 libgedit-amtk
+libgphoto2
+libgphoto2-docs
 libgtop
 libgudev
 libguestfs
@@ -608,7 +608,6 @@ openresolv
 opensmtpd
 opensnitch
 opensp
-opensubdiv
 openvpn
 ostree
 packagekit
@@ -689,20 +688,10 @@ plymouth
 podman
 podman-docker
 polkit
-postfix
-postfix-cdb
-postfix-ldap
-postfix-lmdb
-postfix-mongodb
-postfix-mysql
-postfix-pcre
-postfix-pgsql
-postfix-sqlite
 postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
-potrace
 povray
 power-profiles-daemon
 powerdevil
@@ -732,6 +721,7 @@ python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-zope-security
 qastools
 qbittorrent
 qbittorrent-nox

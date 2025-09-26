@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- _pkgname=ntp #-dev
- _pkgver=4.2.8p18
- pkgver=${_pkgver/p/.p}
--pkgrel=4
-+pkgrel=3
- pkgdesc='Network Time Protocol reference implementation'
- url='https://www.ntp.org/'
- license=('custom')
 @@ -13,14 +13,10 @@
  source=("https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/${_pkgname}-${_pkgver}.tar.gz"
          ntp-4.2.8.p18-fix-build.patch
