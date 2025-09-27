@@ -763,6 +763,8 @@ glu
 glusterfs
 glycin
 glycin-gtk4
+glycin1
+glycin1-gtk4
 gmic
 gimp-plugin-gmic
 gmime3
@@ -1711,6 +1713,8 @@ libgnomekbd
 libgnt
 libgoom2
 libgovirt
+libgphoto2
+libgphoto2-docs
 libgpod
 libgravatar
 libgrss

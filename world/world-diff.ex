@@ -372,8 +372,6 @@ libfido2
 libfprint
 libfreehand
 libgedit-amtk
-libgphoto2
-libgphoto2-docs
 libgtop
 libgudev
 libguestfs

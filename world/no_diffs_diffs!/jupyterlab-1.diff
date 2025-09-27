@@ -4,7 +4,7 @@
  
  pkgname=jupyterlab
  _pipname=jupyterlab
--pkgver=4.4.8
+-pkgver=4.4.9
 +pkgver=4.4.7
  pkgrel=1
  pkgdesc='JupyterLab computational environment'
@@ -13,7 +13,7 @@
                python-pytest-jupyter
                python-pytest-tornasync)
  source=(git+https://github.com/jupyterlab/jupyterlab#tag=v$pkgver)
--sha256sums=('bad02043bb47fd478521870509810f792ecdfa18e6d75184202478f33aff64d5')
+-sha256sums=('463d901178e7fdce594ffe095a848f91128e3eb0c1753e38f59c629e939ac00b')
 +sha256sums=('2a8e5b3f177b1c2f200bda82588afb4e0814a9396afcacd7e827dbc462082669')
  
  build() {

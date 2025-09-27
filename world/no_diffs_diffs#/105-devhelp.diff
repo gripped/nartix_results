@@ -1,20 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,11 @@
- pkgbase=devhelp
- pkgname=(devhelp devhelp-docs)
- pkgver=43.0
--pkgrel=4
-+pkgrel=3
- pkgdesc="API documentation browser for GNOME"
--url="https://gitlab.gnome.org/GNOME/devhelp"
-+url="https://apps.gnome.org/Devhelp/"
- arch=(x86_64)
--license=(GPL-3.0-or-later)
-+license=(GPL)
- depends=(webkit2gtk-4.1)
- makedepends=(git appstream-glib gobject-introspection meson yelp-tools
-              gi-docgen glib2-devel)
 @@ -34,7 +34,7 @@
      -D plugin_vim=true
    )
@@ -24,15 +9,6 @@
    meson compile -C build
  }
  
-@@ -43,6 +43,8 @@
- }
- 
- package_devhelp() {
-+  groups=(gnome-extra)
-+
-   meson install -C build --destdir "$pkgdir"
- 
-   mkdir -p docs/usr/share
 
 
 ############# Stripped diff below #################
