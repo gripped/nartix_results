@@ -1,19 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=audacious
--pkgver=4.5.1
-+pkgver=4.4.2
- pkgrel=1
- pkgdesc="Lightweight, advanced audio player focused on audio quality"
- arch=('x86_64')
-@@ -11,10 +11,10 @@
- makedepends=('meson' 'glib2-devel')
- optdepends=('unzip: zipped skins support')
- source=(https://distfiles.audacious-media-player.org/$pkgname-$pkgver.tar.bz2)
--sha256sums=('7194743a0a41b1d8f582c071488b77f7b917be47ca5e142dd76af5d81d36f9cd')
-+sha256sums=('34509504f8c93b370420d827703519f0681136672e42d56335f26f7baec95005')
+@@ -14,7 +14,7 @@
+ sha256sums=('7194743a0a41b1d8f582c071488b77f7b917be47ca5e142dd76af5d81d36f9cd')
  
  build() {
 -  arch-meson $pkgname-$pkgver build \

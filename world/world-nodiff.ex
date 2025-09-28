@@ -644,6 +644,8 @@ flac-doc
 flake8
 flameshot
 flashrom
+flatbuffers
+python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
@@ -1667,6 +1669,8 @@ libebml
 libebur128
 libesmtp
 libetebase
+libetonyek
+libetonyek-doc
 libev
 libevdev
 libewf
@@ -1998,6 +2002,7 @@ libva
 libvips
 libvirt-glib
 libvirt-python
+libvisio
 libvisual
 libvoikko
 libvorbis
@@ -2505,7 +2510,6 @@ opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensubdiv
 opentimelineio
-openucc
 openucx
 openvdb
 openvkl
@@ -2551,6 +2555,8 @@ papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
+parallel
+parallel-docs
 parley
 parted
 partitionmanager
@@ -4497,6 +4503,7 @@ python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
+python-zope-security
 python-zope-testing
 python-zope-testrunner
 python-zopfli

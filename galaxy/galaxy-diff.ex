@@ -8,7 +8,6 @@ efl
 ephoto
 etherwall
 evisum
-fastfetch
 featherpad
 firefox
 greetd-regreet

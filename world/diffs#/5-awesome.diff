@@ -1,35 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,14 +6,10 @@
- url='https://awesomewm.org'
- arch=(x86_64)
- license=(GPL-2.0-or-later)
--depends=(bash
--         cairo
-+depends=(cairo
-          dbus
-          gdk-pixbuf2
--         glib2
--         glibc
--         libx11
--         libxcb
-+         imlib2
-          libxdg-basedir
-          libxkbcommon
-          libxkbcommon-x11
-@@ -21,17 +17,16 @@
-          lua53-lgi
-          pango
-          startup-notification
--         xcb-util
-          xcb-util-cursor
-          xcb-util-keysyms
-          xcb-util-wm
--         xcb-util-xrm)
-+         xcb-util-xrm
-+         xorg-xmessage)
- makedepends=(asciidoctor
-              cmake
+@@ -31,7 +31,6 @@
               docbook-xsl
               doxygen
               imagemagick
@@ -37,25 +8,10 @@
               ttf-font
               xmlto)
  optdepends=('rlwrap: readline support for awesome-client'
-@@ -51,11 +46,6 @@
- 	sed -i 's| lua | lua5.3 |;s/lua)/lua5.3)/' tests/examples/CMakeLists.txt
- 	sed -i '1s|/usr/bin/env lua$|/usr/bin/env lua5.3|' build-utils/check_for_invalid_requires.lua
- 	sed -i 's/"lua"/"lua5.3"/' tests/test-spawn.lua
--
--	sed -e '/^local Gio = lgi.Gio$/alocal GioUnix = lgi.GioUnix' \
--	    -e 's/Gio\.UnixInputStream/GioUnix\.InputStream/g' \
--	    -e 's/Gio\.UnixOutputStream/GioUnix\.OutputStream/g' \
--	    -i lib/awful/spawn.lua tests/_client.lua tests/test-spawn.lua
- }
- 
- build() {
-@@ -64,8 +54,9 @@
- 	cmake -B build \
- 		-DCMAKE_BUILD_TYPE=RELEASE \
+@@ -66,6 +65,7 @@
  		-DCMAKE_INSTALL_PREFIX=/usr \
-+		-DSYSCONFDIR=/etc \
  		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
--		-DSYSCONFDIR=/etc \
+ 		-DSYSCONFDIR=/etc \
 +		-DGENERATE_DOC=OFF \
  		-DLUA_LIBRARY=/usr/lib/liblua5.3.so \
  		-DLUA_INCLUDE_DIR=/usr/include/lua5.3
@@ -66,57 +22,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +1,12 @@
- asciidoctor
--bash
- cairo
- cmake
- dbus
- docbook-xsl
- doxygen
- gdk-pixbuf2
--glib2
--glibc
+@@ -9,7 +9,6 @@
+ glib2
+ glibc
  imagemagick
 -ldoc
--libx11
--libxcb
-+imlib2
+ libx11
+ libxcb
  libxdg-basedir
- libxkbcommon
- libxkbcommon-x11
-@@ -20,9 +15,9 @@
- pango
- startup-notification
- ttf-font
--xcb-util
- xcb-util-cursor
- xcb-util-keysyms
- xcb-util-wm
- xcb-util-xrm
- xmlto
-+xorg-xmessage
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,10 +4,6 @@
- sed -i 's| lua | lua5.3 |;s/lua)/lua5.3)/' tests/examples/CMakeLists.txt
- sed -i '1s|/usr/bin/env lua$|/usr/bin/env lua5.3|' build-utils/check_for_invalid_requires.lua
- sed -i 's/"lua"/"lua5.3"/' tests/test-spawn.lua
--sed -e '/^local Gio = lgi.Gio$/alocal GioUnix = lgi.GioUnix' \
---e 's/Gio\.UnixInputStream/GioUnix\.InputStream/g' \
---e 's/Gio\.UnixOutputStream/GioUnix\.OutputStream/g' \
---i lib/awful/spawn.lua tests/_client.lua tests/test-spawn.lua
- }
- build() {
- cd "$_archive"
-@@ -15,8 +11,9 @@
- cmake -B build \
- -DCMAKE_BUILD_TYPE=RELEASE \
+@@ -17,6 +17,7 @@
  -DCMAKE_INSTALL_PREFIX=/usr \
-+-DSYSCONFDIR=/etc \
  -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
---DSYSCONFDIR=/etc \
+ -DSYSCONFDIR=/etc \
 +-DGENERATE_DOC=OFF \
  -DLUA_LIBRARY=/usr/lib/liblua5.3.so \
  -DLUA_INCLUDE_DIR=/usr/include/lua5.3

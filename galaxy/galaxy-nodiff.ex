@@ -81,6 +81,7 @@ eom
 esbuild
 exo
 ext4magic
+fastfetch
 fceux
 firefox-i18n
 fluxbox

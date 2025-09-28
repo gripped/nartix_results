@@ -153,8 +153,6 @@ fig2dev
 firefox
 firewalld
 firewalld-test
-flatbuffers
-python-flatbuffers
 flatpak
 flatpak-docs
 flite
@@ -366,8 +364,6 @@ libei-docs
 libepoxy
 libepoxy-docs
 libepubgen
-libetonyek
-libetonyek-doc
 libfido2
 libfprint
 libfreehand
@@ -408,7 +404,6 @@ python-libusbsio
 libutempter
 libvdpau
 libvirt
-libvisio
 libvncserver
 libwpd
 libxfce4ui
@@ -606,13 +601,12 @@ openresolv
 opensmtpd
 opensnitch
 opensp
+openucc
 openvpn
 ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-parallel
-parallel-docs
 paraview-catalyst
 parole
 passim
@@ -719,7 +713,6 @@ python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-zope-security
 qastools
 qbittorrent
 qbittorrent-nox
