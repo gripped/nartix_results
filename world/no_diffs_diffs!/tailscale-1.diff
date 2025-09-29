@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=tailscale
+-pkgver=1.88.3
++pkgver=1.88.1
+ pkgrel=1
+ pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
+ arch=("x86_64")
+@@ -10,7 +10,7 @@
+ depends=("glibc")
+ backup=("etc/default/tailscaled")
+ source=("git+https://github.com/tailscale/tailscale.git#tag=v${pkgver}")
+-sha256sums=('842a80bbf1d5d39313826976da14b429a1ef257dc4d0681c03ae58acd86828ff')
++sha256sums=('bf2266c5f11cb5423b111f77f55c1086981d980ddb16f486e27276bdc9dc22ae')
+ 
+ options=(!lto)
+ 
 @@ -41,7 +41,6 @@
      cd "${pkgname}"
      install -Dm755 tailscale tailscaled -t "$pkgdir/usr/bin"

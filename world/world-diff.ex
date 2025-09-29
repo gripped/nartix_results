@@ -175,6 +175,7 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gd
 gdm
 libgdm
 geoclue
@@ -707,6 +708,7 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
+python-pycparser
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

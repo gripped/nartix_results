@@ -703,7 +703,6 @@ gavl
 gcab
 gcc13
 gcc14
-gd
 gdal
 python-gdal
 gdb
@@ -1318,6 +1317,9 @@ kdsoap-ws-discovery-client
 kdsoap
 kdsoap-qt5
 kdsoap-qt6
+kea
+"$pkgbase
+"$pkgbase
 keditbookmarks
 keepassxc
 kemoticons
@@ -3949,7 +3951,6 @@ python-pyaxmlparser
 python-pycares
 python-pycodestyle
 python-pycountry
-python-pycparser
 python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt
