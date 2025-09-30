@@ -52,6 +52,7 @@ backuppc-dinit
 backuppc-openrc
 backuppc-s6
 basu
+batticonplus
 bftpd-dinit
 bftpd-openrc
 bftpd-runit

@@ -444,6 +444,7 @@ diffstat
 diffuse
 digikam
 directx-headers
+directx-shader-compiler
 discount
 discover
 distro-info-data
@@ -703,6 +704,7 @@ gavl
 gcab
 gcc13
 gcc14
+gd
 gdal
 python-gdal
 gdb
@@ -1665,7 +1667,6 @@ libdom
 libdovi
 libdrm
 libdvbpsi
-libdvdcss
 libdwarf
 libebml
 libebur128
@@ -2512,6 +2513,7 @@ opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
 opensubdiv
 opentimelineio
+openucc
 openucx
 openvdb
 openvkl
@@ -5464,7 +5466,6 @@ tinycdb
 tinycompress
 tinyprog
 tinyproxy
-tinyxml
 tinyxml2
 tinyxxd
 tk

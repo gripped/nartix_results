@@ -1,55 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,43 +1,41 @@
- 
- pkgname=switcheroo-control
--pkgver=3.0
--pkgrel=1
-+pkgver=2.6
-+pkgrel=4
- pkgdesc="D-Bus service to check the availability of dual-GPU"
- url="https://gitlab.freedesktop.org/hadess/switcheroo-control"
- arch=(x86_64)
--license=(GPL-3.0-or-later)
-+license=(GPL3)
- depends=(
--  gcc-libs
-   glib2
--  glibc
--  libdrm
-   libgudev
--  python
-   python-gobject
- )
- makedepends=(
-   git
--  glib2-devel
-   gtk-doc
+@@ -22,7 +22,7 @@
    meson
    python-dbus
    python-dbusmock
 -  systemd
++  linux-api-headers
  )
  checkdepends=(umockdev)
--source=("git+$url.git?signed#tag=$pkgver")
--b2sums=('25ccf0ba490088c4155bb0eec527ad2f87d25a8241e914cf2a3032665b0e28f1088d9f00bb120d9889530dace044e746ac5d4ca7f54445574723cf3f3b985b61')
--validpgpkeys=(
--  8307C0A224BABDA1BABD0EB9A6EEEC9E0136164A # Jonas Ådahl <jadahl@gmail.com>
--)
-+_commit=0dd257edd6b27589d2a1013cda1d2d5f325eee8b  # tags/2.6^0
-+source=("git+$url.git#commit=$_commit")
-+b2sums=('SKIP')
-+
-+pkgver() {
-+  cd $pkgname
-+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
-+}
+ source=("git+$url.git?signed#tag=$pkgver")
+@@ -33,11 +33,12 @@
  
  build() {
    local meson_options=(
++    -D systemdsystemunitdir=/usr/lib/systemd # dummy dir
      -D gtk_doc=true
      -D tests=true
-+    -D systemdsystemunitdir=/usr/lib/systemd # dummy dir
    )
  
 -  arch-meson $pkgname build "${meson_options[@]}"
@@ -57,11 +23,12 @@
    meson compile -C build
  }
  
-@@ -47,5 +45,6 @@
+@@ -47,5 +48,7 @@
  
  package() {
    meson install -C build --destdir "$pkgdir"
-+  rm -r "$pkgdir"/usr/lib/systemd
++
++  rm -r $pkgdir/usr/lib/systemd
  }
  
 
@@ -70,17 +37,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +1,8 @@
--gcc-libs
- git
- glib2
--glib2-devel
--glibc
+@@ -6,9 +6,9 @@
  gtk-doc
--libdrm
+ libdrm
  libgudev
++linux-api-headers
  meson
--python
+ python
  python-dbus
  python-dbusmock
  python-gobject

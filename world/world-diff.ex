@@ -95,7 +95,6 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
-directx-shader-compiler
 distcc
 dns-over-https
 docker
@@ -175,7 +174,6 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gd
 gdm
 libgdm
 geoclue
@@ -357,6 +355,7 @@ libdatrie
 libdc1394
 libdca
 libdv
+libdvdcss
 libdvdnav
 libdvdread
 libe-book
@@ -602,7 +601,6 @@ openresolv
 opensmtpd
 opensnitch
 opensp
-openucc
 openvpn
 ostree
 packagekit
@@ -900,6 +898,7 @@ tigervnc
 tint2
 tinysparql
 tinysparql-docs
+tinyxml
 tmux
 tor
 torsocks
