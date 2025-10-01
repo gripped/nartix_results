@@ -572,6 +572,7 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nmap
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -706,6 +707,7 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
+python-pipx
 python-pycparser
 python-pymupdf
 python-pytest-freezegun
@@ -898,7 +900,6 @@ tigervnc
 tint2
 tinysparql
 tinysparql-docs
-tinyxml
 tmux
 tor
 torsocks

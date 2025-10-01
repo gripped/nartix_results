@@ -118,7 +118,6 @@ rage
 read-edid
 sdcv
 signal-desktop
-stalonetray
 terminology
 termshark
 tor

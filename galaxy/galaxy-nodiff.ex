@@ -332,6 +332,7 @@ snorenotify
 solaar
 spotify-launcher
 sqlitebrowser
+stalonetray
 starship
 subtitleeditor
 sundials

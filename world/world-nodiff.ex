@@ -2404,7 +2404,6 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nltk-data
-nmap
 nng
 nnn
 node-gyp
@@ -3890,7 +3889,6 @@ python-pip
 python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
-python-pipx
 python-pixelmatch
 python-pkgconfig
 python-pkginfo
@@ -5466,6 +5464,7 @@ tinycdb
 tinycompress
 tinyprog
 tinyproxy
+tinyxml
 tinyxml2
 tinyxxd
 tk
