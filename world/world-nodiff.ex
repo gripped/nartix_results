@@ -1242,7 +1242,6 @@ kcodecs
 kcodecs5
 kcolorchooser
 kcolorpicker
-kcolorpicker-qt5
 kcolorscheme
 kcompletion
 kcompletion5
@@ -1374,7 +1373,6 @@ kig
 kigo
 killbots
 kimageannotator
-kimageannotator-qt5
 kimageformats
 kimageformats5
 kimagemapeditor
@@ -3889,6 +3887,7 @@ python-pip
 python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
+python-pipx
 python-pixelmatch
 python-pkgconfig
 python-pkginfo
@@ -3951,6 +3950,7 @@ python-pyaxmlparser
 python-pycares
 python-pycodestyle
 python-pycountry
+python-pycparser
 python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt

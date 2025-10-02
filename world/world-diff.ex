@@ -707,8 +707,6 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
-python-pipx
-python-pycparser
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

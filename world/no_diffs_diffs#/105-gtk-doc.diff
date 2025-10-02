@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -50,7 +50,7 @@
+@@ -46,7 +46,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- git apply -3 ../0002-Fix-syntax-warnings.patch
+@@ -3,6 +3,6 @@
+ git apply -3 ../0001-Fix-tests.patch
  }
  build() {
 -arch-meson gtk-doc build
