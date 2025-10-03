@@ -319,7 +319,7 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
-ksnip
+kstars
 ksystemlog
 kwayland5
 kwin-x11
@@ -707,6 +707,7 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gitdb
+python-oslo-context
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

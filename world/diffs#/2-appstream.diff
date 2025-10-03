@@ -8,10 +8,10 @@
           zstd)
  makedepends=(gi-docgen
               git
-@@ -46,6 +45,7 @@
+@@ -45,6 +44,7 @@
+     --prefix=/usr \
      --libexecdir=lib \
      -Dqt=true \
-     -Dqt-versions=6 \
 +    -Dsystemd=false \
      -Dvapi=true \
      -Dcompose=true

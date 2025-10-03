@@ -23,16 +23,3 @@
  
  build() {
    cmake -B build -S $pkgname-$pkgver \
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,6 +0,0 @@
--cmake
--gcc-libs
--glibc
--qt5-base
--qt5-svg
--qt5-tools

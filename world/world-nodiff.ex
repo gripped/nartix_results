@@ -1500,10 +1500,10 @@ kshisen
 ksirk
 ksmtp
 ksnakeduel
+ksnip
 kspaceduel
 ksquares
 ksshaskpass
-kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -3533,6 +3533,7 @@ python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
+python-hatch-regex-commit
 python-hatch-requirements-txt
 python-hatch-vcs
 python-hatch
@@ -3819,7 +3820,6 @@ python-osc-lib
 python-oscrypto
 python-oslo-concurrency
 python-oslo-config
-python-oslo-context
 python-oslo-db
 python-oslo-i18n
 python-oslo-log
@@ -3933,6 +3933,7 @@ python-publicsuffix2
 python-pure-eval
 python-puremagic
 python-purl
+python-pwdlib
 python-pwntools
 python-py-cpuinfo
 python-py-partiql-parser
