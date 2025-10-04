@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=elixir
+ pkgver=1.18.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A dynamic, functional language for building scalable and maintainable applications"
+ url="https://elixir-lang.org"
+ license=('Apache-2.0')
+@@ -26,29 +26,17 @@
+   'erlang-dialyzer'
+   'erlang-eunit'
+   'git'
+-  'rebar3'
+ )
+-source=(
+-  "${pkgname}-${pkgver}.tar.gz::https://github.com/elixir-lang/elixir/archive/v${pkgver}.tar.gz"
+-  "${pkgname}-remove-failing-tests.patch"
+-)
+-sha256sums=('8e136c0a92160cdad8daa74560e0e9c6810486bd232fbce1709d40fcc426b5e0'
+-            '992a6bd73819a04c9a3fb31bde4ae189d5bd2a5c6e592d66fb7ddc351941ce3d')
+-
+-prepare() {
+-  cd "${pkgname}-${pkgver}"
+-  patch -Np1 < ../${pkgname}-remove-failing-tests.patch
+-}
++source=("${pkgname}-${pkgver}.tar.gz::https://github.com/elixir-lang/elixir/archive/v${pkgver}.tar.gz")
++sha256sums=('8e136c0a92160cdad8daa74560e0e9c6810486bd232fbce1709d40fcc426b5e0')
+ 
+ build() {
+   cd "${pkgname}-${pkgver}"
+-  export REBAR3=/usr/bin/rebar3
+   make
+ }
+ 
+ check() {
+   cd "${pkgname}-${pkgver}"
+-  export REBAR3=/usr/bin/rebar3
+   export ERL_EPMD_PORT=5369
+   make test
+   epmd -port $ERL_EPMD_PORT -kill
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,4 @@
+-prepare() {
+-cd "${pkgname}-${pkgver}"
+-patch -Np1 < ../${pkgname}-remove-failing-tests.patch
+-}
+ build() {
+ cd "${pkgname}-${pkgver}"
+-export REBAR3=/usr/bin/rebar3
+ make
+ }

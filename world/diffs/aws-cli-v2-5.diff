@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,116 +1,94 @@
+@@ -1,118 +1,94 @@
  
  pkgname=aws-cli-v2
--pkgver=2.30.1
+-pkgver=2.31.3
 +pkgver=2.15.19
  pkgrel=1
 -pkgdesc='Universal Command Line Interface for Amazon Web Services (version 2)'
@@ -74,7 +74,7 @@
 +validpgpkeys=(
 +  'FB5DB77FD5C118B80511ADA8A6310ACC4672475C'  # the key mentioned on https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
  )
--sha256sums=('d7aa33f7771e947124c0899504e0793855a86b345bb31c7b6ab5477f88bafea8'
+-sha256sums=('8d54a283f0421c25cdd54bfcad3b9937e09fb2195ef89f09304686b263a25a6e'
 -            '8c1b98482b1ba6f072cd5bc0c81efdb2a64dcc484a8394c24959078841ac5b18'
 -            '2e9149840a8b37083957345a697399ada16dce274990133156f9c6254b62ff2d')
  
@@ -139,6 +139,10 @@
 -    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_state_reset_on_connection_close
 +  export PYTHONPATH="$PWD"
  
+-    --deselect=tests/unit/customizations/configure/test_importer.py::TestConfigureImportCommand::test_csv_content_from_file_succeeds
++  python -m venv --system-site-packages "$PWD/venv"
++  "$PWD/venv/bin/python" -m installer dist/*.whl
+ 
 -    --deselect=tests/integration/botocore/test_apigateway.py
 -    --deselect=tests/integration/botocore/test_client.py
 -    --deselect=tests/integration/botocore/test_cloudwatch.py
@@ -171,9 +175,6 @@
 -  test-env/bin/python -m installer dist/*.whl
 -  PATH="$PWD/test-env/bin:$PATH" \
 -    test-env/bin/python -m pytest "${pytest_args[@]}"
-+  python -m venv --system-site-packages "$PWD/venv"
-+  "$PWD/venv/bin/python" -m installer dist/*.whl
-+
 +  "$PWD/venv/bin/python" -m pytest tests -n auto --dist loadfile --ignore=tests/backends --ignore=tests/integration
  }
  

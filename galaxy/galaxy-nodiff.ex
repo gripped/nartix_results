@@ -105,6 +105,9 @@ imv
 incron
 kanshi
 kernel-headers-musl
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 lf
 libcmis

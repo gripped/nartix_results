@@ -523,7 +523,6 @@ electrum
 elementary-icon-theme
 elinks
 elisa
-elixir
 ell
 embree3
 emovix
@@ -3254,7 +3253,6 @@ python-chardet
 python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
-python-cheroot
 python-cherrypy
 python-claripy
 python-cleo
@@ -3793,7 +3791,6 @@ python-nrfutil
 python-nspektr
 python-ntlm-auth
 python-numba
-python-numexpr
 python-numpy
 python-oauth2client
 python-oauthlib
@@ -3975,7 +3972,6 @@ python-pyenchant-docs
 python-pyfakefs
 python-pyflakes
 python-pyftdi
-python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
@@ -4492,20 +4488,14 @@ python-zipp
 python-zipstream-ng
 python-zlib-ng
 python-zodbpickle
-python-zope-component
 python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
-python-zope-deprecation
 python-zope-event
-python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
 python-zope-interface
-python-zope-location
-python-zope-proxy
 python-zope-schema
-python-zope-security
 python-zope-testing
 python-zope-testrunner
 python-zopfli
