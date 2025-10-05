@@ -16,7 +16,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
-blender
+bleachbit
 blueman
 bogofilter
 bogofilter-db
@@ -105,9 +105,6 @@ imv
 incron
 kanshi
 kernel-headers-musl
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 lf
 libcmis
@@ -237,10 +234,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 mednafen
-mgba
-libmgba
-mgba-sdl
-mgba-qt
 mimetic
 mixxx
 mokutil
@@ -316,7 +309,6 @@ retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
-retroarch
 rgbds
 rio
 ristretto
@@ -339,7 +331,6 @@ sundials
 swww
 t1lib
 tealdeer
-telegram-desktop
 terminus-font
 tesseract-data
 tesseract

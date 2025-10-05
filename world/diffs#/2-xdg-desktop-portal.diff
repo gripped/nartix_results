@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=xdg-desktop-portal
- pkgver=1.20.3
--pkgrel=2
-+pkgrel=1
- pkgdesc="Desktop integration portals for sandboxed apps"
- url="https://flatpak.github.io/xdg-desktop-portal/"
- arch=(x86_64)
 @@ -19,8 +19,6 @@
    libpipewire
    pipewire
@@ -18,13 +9,7 @@
  )
  makedepends=(
    docbook-xsl
-@@ -61,22 +59,21 @@
- 
- prepare() {
-   cd $pkgname
--
--  git cherry-pick -n dd08d451e3019f4ec6285ecb14d4c746b6e1d420 \
--                     522236e41043a558a825da4cee70ee31ce607147
+@@ -67,16 +65,18 @@
  }
  
  build() {

@@ -136,8 +136,6 @@ atkmm-docs
 atop
 attica
 attica5
-aubio
-python-aubio
 audacious
 audacity
 audacity-docs
@@ -442,7 +440,6 @@ devil
 dht
 diffstat
 diffuse
-digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -523,6 +520,7 @@ electrum
 elementary-icon-theme
 elinks
 elisa
+elixir
 ell
 embree3
 emovix
@@ -617,7 +615,6 @@ feh
 festival
 ffcall
 ffmpeg4.4
-ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
@@ -717,7 +714,6 @@ geany
 geary
 gedit-plugins
 gedit
-gegl
 gendesk
 gengetopt
 genxrdpattern
@@ -735,7 +731,6 @@ ghex-docs
 ghostscript
 gi-docgen
 giflib
-gifski
 gimp-help
 gimp
 girara
@@ -1189,7 +1184,6 @@ jupyterlab-pygments
 jupyterlab
 jupyterlab_pygments
 jxrlib
-k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -1290,7 +1284,6 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
-kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1463,7 +1456,6 @@ kpeople5
 kpeoplevcard
 kpimtextedit
 kpimtextedit5
-kpipewire
 kpkpass
 kplotting
 kplotting5
@@ -1613,7 +1605,6 @@ libayatana-appindicator
 libb2
 libb64
 libblastrampoline
-libbluray
 libbobcat
 libbs2b
 libbsd
@@ -1759,7 +1750,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2302,7 +2292,6 @@ mkdocs-material
 mkdocs
 mkdocstrings
 mktorrent
-mlt
 mm-common
 mmtf-cpp
 mobile-broadband-provider-info
@@ -2321,10 +2310,7 @@ motion
 movit
 mpdecimal
 mpg123
-mplayer
-mencoder
 mpv-mpris
-mpv
 mpvqt
 msgpack-c
 msgpack-cxx
@@ -2437,7 +2423,6 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
-obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -2483,6 +2468,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3253,6 +3243,7 @@ python-chardet
 python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
+python-cheroot
 python-cherrypy
 python-claripy
 python-cleo
@@ -3501,6 +3492,7 @@ python-gevent-websocket
 python-gevent
 python-gherkin
 python-ghp-import
+python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
@@ -3791,6 +3783,7 @@ python-nrfutil
 python-nspektr
 python-ntlm-auth
 python-numba
+python-numexpr
 python-numpy
 python-oauth2client
 python-oauthlib
@@ -3817,6 +3810,7 @@ python-osc-lib
 python-oscrypto
 python-oslo-concurrency
 python-oslo-config
+python-oslo-context
 python-oslo-db
 python-oslo-i18n
 python-oslo-log
@@ -3972,6 +3966,7 @@ python-pyenchant-docs
 python-pyfakefs
 python-pyflakes
 python-pyftdi
+python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
@@ -4488,14 +4483,20 @@ python-zipp
 python-zipstream-ng
 python-zlib-ng
 python-zodbpickle
+python-zope-component
 python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
+python-zope-deprecation
 python-zope-event
+python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
 python-zope-interface
+python-zope-location
+python-zope-proxy
 python-zope-schema
+python-zope-security
 python-zope-testing
 python-zope-testrunner
 python-zopfli
@@ -5639,7 +5640,6 @@ websocketpp
 weechat
 wf-recorder
 whois
-wine-staging
 wine
 wireguard-tools
 wireless_tools
@@ -5718,7 +5718,6 @@ xmlsec
 xmlstarlet
 xmlto
 xmltoman
-xmms2
 xmrig
 xonsh
 xorg-appres

@@ -15,6 +15,8 @@ at-spi2-core
 at-spi2-core-docs
 at
 atril
+aubio
+python-aubio
 audacious-plugins
 avahi
 awesome
@@ -95,6 +97,7 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
+digikam
 distcc
 dns-over-https
 docker
@@ -126,7 +129,6 @@ earlyoom
 element.io
 element-web
 element-desktop
-elixir
 emacs
 emacs-nox
 emacs-wayland
@@ -149,6 +151,7 @@ fcitx5-mozc
 fcitx5
 fcron
 ffmpeg
+ffmpegthumbnailer
 fig2dev
 firefox
 firewalld
@@ -177,8 +180,10 @@ gcr
 gcr-docs
 gdm
 libgdm
+gegl
 geoclue
 ghc-filesystem
+gifski
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -311,7 +316,9 @@ jbigkit
 js78
 julia
 jupyter-server-ydoc
+k3b
 kcoreaddons
+kdenlive
 keychain
 kismet
 kitty
@@ -320,6 +327,7 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
+kpipewire
 kstars
 ksystemlog
 kwayland5
@@ -343,6 +351,7 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
+libbluray
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -377,6 +386,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -532,6 +542,7 @@ mgba-sdl
 mgba-qt
 miopen-hip
 mitmproxy
+mlt
 mod_dnssd
 modemmanager
 libmm-glib
@@ -541,6 +552,9 @@ mosquitto
 mousepad
 mozo
 mpd
+mplayer
+mencoder
+mpv
 muffin
 multipath-tools
 mumble
@@ -586,15 +600,11 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+obs-studio
 onboard
 onionshare
 open-iscsi
 opencollada
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendht
 openipmi
 openjade
@@ -703,27 +713,16 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-cheroot
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-gitdb
-python-numexpr
-python-oslo-context
-python-pyftpdlib
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-zope-component
-python-zope-deprecation
-python-zope-exceptions
-python-zope-location
-python-zope-proxy
-python-zope-security
 qastools
 qbittorrent
 qbittorrent-nox
@@ -1056,6 +1055,7 @@ webkitgtk-6.0-docs
 weston
 wget
 wildmidi
+wine-staging
 wireplumber
 libwireplumber
 wireplumber-docs
@@ -1125,6 +1125,7 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
+xmms2
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

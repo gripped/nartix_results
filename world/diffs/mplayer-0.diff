@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=mplayer
+ pkgname=('mplayer' 'mencoder')
+ pkgver=38542
+-pkgrel=6
++pkgrel=5
+ pkgdesc='Media player for Linux'
+ url='http://www.mplayerhq.hu/'
+ arch=('x86_64')
+@@ -24,13 +24,11 @@
+ source=(${pkgbase}-${pkgver}::"svn://svn.mplayerhq.hu/mplayer/trunk#revision=${pkgver}"
+         mplayer.desktop
+         include-samba-4.0.patch
+-        ffmpeg-7.patch
+-        ffmpeg-8.patch)
++        ffmpeg-7.patch)
+ sha512sums=('SKIP'
+             'd3c5cbf0035279c6f307e4e225473d7b77f9b56566537a26aa694e68446b9e3240333296da627ad5af83b04cc8f476d1a3f8c05e4cf81cd6e77153feb4ed74bc'
+             '9debb8c58b996f6c716c22c86c720bf9dc49b4ee9b76c57519f791667ae1de2cc6f5add878fbf4ac02c6b6fd1865e1bcfa6105e75de4bf7ec596c338ed0cae99'
+-            '93185451be01fd872c5304f2b4ac2832a91b89397f7d920759ef4681dd43977d50c0207851721d7e8ec00ff3fbef93133aa54e8f6cf3d83190f8ab331e106a16'
+-            '15f6f3367f3ae4e1292773bddb5e466045f44d1d45ed2b4ab2109d86cd92c990fcdbeb441d105c363c618b05cfd9e4cb7182846a369e93aa9e43a808df8796f7')
++            '93185451be01fd872c5304f2b4ac2832a91b89397f7d920759ef4681dd43977d50c0207851721d7e8ec00ff3fbef93133aa54e8f6cf3d83190f8ab331e106a16')
+ 
+ prepare() {
+   cd ${pkgbase}-${pkgver}
+@@ -38,7 +36,6 @@
+   ./version.sh
+ 
+   patch -p0 -i ../ffmpeg-7.patch
+-  patch -p0 -i ../ffmpeg-8.patch
+ }
+ 
+ build() {
+@@ -53,7 +50,6 @@
+     --disable-arts \
+     --disable-liblzo \
+     --disable-libdv \
+-    --disable-vdpau \
+     --disable-musepack \
+     --disable-esd \
+     --disable-mga \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,6 @@
+ patch -p1 < "../include-samba-4.0.patch"
+ ./version.sh
+ patch -p0 -i ../ffmpeg-7.patch
+-patch -p0 -i ../ffmpeg-8.patch
+ }
+ build() {
+ cd ${pkgbase}-${pkgver}
+@@ -17,7 +16,6 @@
+ --disable-arts \
+ --disable-liblzo \
+ --disable-libdv \
+---disable-vdpau \
+ --disable-musepack \
+ --disable-esd \
+ --disable-mga \

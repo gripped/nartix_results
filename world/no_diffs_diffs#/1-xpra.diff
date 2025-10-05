@@ -1,16 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=xpra
- pkgver=6.2.1
--pkgrel=2
-+pkgrel=2.1
- pkgdesc="multi-platform screen and application forwarding system screen for X11"
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url='https://www.xpra.org'
--license=(GPL-2.0-or-later)
-+license=('GPL2')
+ license=(GPL-2.0-or-later)
  depends=('gtk3' 'python' 'libxtst' 'python-cairo' 'python-gobject' 'python-pillow' 'python-lz4'
 -         'ffmpeg' 'libvpx' 'xf86-video-dummy' 'libxkbfile' 'libxres'
 +         'ffmpeg' 'libvpx' 'x11win-video-dummy' 'libxkbfile' 'libxres'

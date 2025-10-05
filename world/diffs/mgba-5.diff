@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,80 +1,59 @@
+@@ -1,81 +1,59 @@
  
  pkgbase=mgba
 -pkgname=(
@@ -9,10 +9,11 @@
 -  'mgba-qt'
 -)
 -pkgver=0.10.5
+-pkgrel=2
+-pkgdesc='A Nintendo Gameboy Advance Emulator focusing on speed and accuracy'
 +pkgname=('libmgba' 'mgba-sdl' 'mgba-qt')
 +pkgver=0.10.3
- pkgrel=1
--pkgdesc='A Nintendo Gameboy Advance Emulator focusing on speed and accuracy'
++pkgrel=1
  arch=('x86_64')
  url='http://mgba.io'
 -license=('MPL-2.0')
@@ -42,6 +43,7 @@
    cmake -B build -S mgba-$pkgver \
      -DCMAKE_BUILD_TYPE=None \
      -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 +    -DCMAKE_INSTALL_LIBDIR=lib \
      -Wno-dev
    cmake --build build
@@ -143,10 +145,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -2,7 +2,7 @@
  cmake -B build -S mgba-$pkgver \
  -DCMAKE_BUILD_TYPE=None \
  -DCMAKE_INSTALL_PREFIX=/usr \
+--DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 +-DCMAKE_INSTALL_LIBDIR=lib \
  -Wno-dev
  cmake --build build
