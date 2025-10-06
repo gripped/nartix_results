@@ -136,6 +136,8 @@ atkmm-docs
 atop
 attica
 attica5
+aubio
+python-aubio
 audacious
 audacity
 audacity-docs
@@ -614,7 +616,9 @@ featherpad
 feh
 festival
 ffcall
+ffmpeg
 ffmpeg4.4
+ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
@@ -714,6 +718,7 @@ geany
 geary
 gedit-plugins
 gedit
+gegl
 gendesk
 gengetopt
 genxrdpattern
@@ -731,6 +736,7 @@ ghex-docs
 ghostscript
 gi-docgen
 giflib
+gifski
 gimp-help
 gimp
 girara
@@ -879,7 +885,6 @@ grunt-cli
 gsasl
 gsettings-desktop-schemas
 gsettings-system-schemas
-gsfonts
 gsm
 gsmartcontrol
 gsoap
@@ -1058,6 +1063,12 @@ hyprland-protocols
 hyprland-qt-support
 hyprland-qtutils
 hyprlang
+hyprlock
+hyprpaper
+hyprpicker
+hyprpolkitagent
+hyprshot
+hyprsunset
 hyprutils
 hyprwayland-scanner
 i2c-tools
@@ -1184,6 +1195,7 @@ jupyterlab-pygments
 jupyterlab
 jupyterlab_pygments
 jxrlib
+k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -1284,6 +1296,7 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
+kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1605,6 +1618,7 @@ libayatana-appindicator
 libb2
 libb64
 libblastrampoline
+libbluray
 libbobcat
 libbs2b
 libbsd
@@ -1750,6 +1764,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2292,6 +2307,7 @@ mkdocs-material
 mkdocs
 mkdocstrings
 mktorrent
+mlt
 mm-common
 mmtf-cpp
 mobile-broadband-provider-info
@@ -2310,7 +2326,10 @@ motion
 movit
 mpdecimal
 mpg123
+mplayer
+mencoder
 mpv-mpris
+mpv
 mpvqt
 msgpack-c
 msgpack-cxx
@@ -2423,6 +2442,7 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
+obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -4766,11 +4786,8 @@ ruby-crack
 ruby-crass
 ruby-csv
 ruby-cucumber-ci-environment
-ruby-cucumber-compatibility-kit
-ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
-ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
@@ -5718,6 +5735,7 @@ xmlsec
 xmlstarlet
 xmlto
 xmltoman
+xmms2
 xmrig
 xonsh
 xorg-appres

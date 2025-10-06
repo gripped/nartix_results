@@ -1,6 +1,5 @@
 alsa-utils
 autorandr
-blender
 cinnamon-desktop
 doctest
 dvtm
@@ -14,9 +13,6 @@ firefox
 greetd-regreet
 gtklock
 labwc
-lazarus
-lazarus-qt5
-lazarus-qt6
 lemurs
 libe-book
 libetonyek
@@ -43,10 +39,6 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
-mgba
-libmgba
-mgba-sdl
-mgba-qt
 mimalloc
 mpd
 neofetch
@@ -124,10 +116,8 @@ qbittorrent
 qbittorrent-nox
 rage
 read-edid
-retroarch
 sdcv
 signal-desktop
-telegram-desktop
 terminology
 termshark
 tor

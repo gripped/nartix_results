@@ -15,8 +15,6 @@ at-spi2-core
 at-spi2-core-docs
 at
 atril
-aubio
-python-aubio
 audacious-plugins
 avahi
 awesome
@@ -150,8 +148,6 @@ fcitx-mozc
 fcitx5-mozc
 fcitx5
 fcron
-ffmpeg
-ffmpegthumbnailer
 fig2dev
 firefox
 firewalld
@@ -180,10 +176,8 @@ gcr
 gcr-docs
 gdm
 libgdm
-gegl
 geoclue
 ghc-filesystem
-gifski
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -215,6 +209,7 @@ python-grpcio-tools
 php-grpc
 php-legacy-grpc
 grpc-cli
+gsfonts
 gsl
 gsound
 gstreamer
@@ -316,9 +311,7 @@ jbigkit
 js78
 julia
 jupyter-server-ydoc
-k3b
 kcoreaddons
-kdenlive
 keychain
 kismet
 kitty
@@ -351,7 +344,6 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
-libbluray
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -386,7 +378,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -542,7 +533,6 @@ mgba-sdl
 mgba-qt
 miopen-hip
 mitmproxy
-mlt
 mod_dnssd
 modemmanager
 libmm-glib
@@ -552,9 +542,6 @@ mosquitto
 mousepad
 mozo
 mpd
-mplayer
-mencoder
-mpv
 muffin
 multipath-tools
 mumble
@@ -600,7 +587,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-obs-studio
 onboard
 onionshare
 open-iscsi
@@ -842,6 +828,9 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-cucumber-compatibility-kit
+ruby-cucumber-core
+ruby-cucumber-html-formatter
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
@@ -1125,7 +1114,6 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
-xmms2
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb
