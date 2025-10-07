@@ -209,7 +209,6 @@ python-grpcio-tools
 php-grpc
 php-legacy-grpc
 grpc-cli
-gsfonts
 gsl
 gsound
 gstreamer
@@ -320,7 +319,6 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
-kpipewire
 kstars
 ksystemlog
 kwayland5
@@ -828,12 +826,10 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-cucumber-compatibility-kit
-ruby-cucumber-core
-ruby-cucumber-html-formatter
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
+run-parts
 rust
 lib32-rust-libs
 rust-musl
@@ -1044,7 +1040,6 @@ webkitgtk-6.0-docs
 weston
 wget
 wildmidi
-wine-staging
 wireplumber
 libwireplumber
 wireplumber-docs

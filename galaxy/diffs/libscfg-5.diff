@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,19 +1,21 @@
+ 
+ pkgname=libscfg
+-pkgver=0.2.0
+-pkgrel=1
++pkgver=0.1.1
++pkgrel=4
+ pkgdesc="A C library for scfg"
+ arch=(x86_64)
+ url="https://codeberg.org/emersion/libscfg"
+ license=('MIT')
+-makedepends=(meson git)
++makedepends=(meson)
+ provides=(libscfg.so)
+-source=("git+https://codeberg.org/emersion/libscfg.git#tag=v$pkgver")
+-sha256sums=('1f76a80aa8cef7aaf04e6987e082513ac08607944a093791971829ae75822dfc')
++source=("https://codeberg.org/emersion/libscfg/releases/download/v$pkgver/libscfg-$pkgver.tar.gz"
++        "https://codeberg.org/emersion/libscfg/releases/download/v$pkgver/libscfg-$pkgver.tar.gz.sig")
++sha256sums=('8276cbca1de5350f534325e38d08ca71bcbb8041a1fa5174521f4ea17eba1039'
++            'SKIP')
+ validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48')  # Simon Ser
+ 
+ build() {
+-    arch-meson "$pkgname" build
++    artix-meson "$pkgname-$pkgver" build
+     ninja -C build
+ }
+ 
+@@ -23,7 +25,7 @@
+ 
+ package() {
+     DESTDIR="$pkgdir" ninja -C build install
+-    cd "$pkgname"
++    cd "$pkgname-$pkgver"
+     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+     install -Dm644 README.md -t "$pkgdir/usr/share/doc/$pkgname"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+-git
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "$pkgname" build
++artix-meson "$pkgname-$pkgver" build
+ ninja -C build
+ }

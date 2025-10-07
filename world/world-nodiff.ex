@@ -885,6 +885,7 @@ grunt-cli
 gsasl
 gsettings-desktop-schemas
 gsettings-system-schemas
+gsfonts
 gsm
 gsmartcontrol
 gsoap
@@ -1469,6 +1470,7 @@ kpeople5
 kpeoplevcard
 kpimtextedit
 kpimtextedit5
+kpipewire
 kpkpass
 kplotting
 kplotting5
@@ -1934,6 +1936,7 @@ librttopo
 libsamplerate
 libsass
 libsbsms
+libscfg
 libsecp256k1
 libsfdo
 libshout
@@ -4786,8 +4789,11 @@ ruby-crack
 ruby-crass
 ruby-csv
 ruby-cucumber-ci-environment
+ruby-cucumber-compatibility-kit
+ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
+ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
@@ -5094,7 +5100,6 @@ ruby2.7
 rubygems
 ruff
 python-ruff
-run-parts
 runc
 rust-bindgen
 rustup
@@ -5657,6 +5662,7 @@ websocketpp
 weechat
 wf-recorder
 whois
+wine-staging
 wine
 wireguard-tools
 wireless_tools

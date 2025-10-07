@@ -13,6 +13,9 @@ firefox
 greetd-regreet
 gtklock
 labwc
+lazarus
+lazarus-qt5
+lazarus-qt6
 lemurs
 libe-book
 libetonyek
@@ -20,6 +23,7 @@ libodfgen
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+libscfg
 libstaroffice
 libstaroffice-doc
 libusbsio
@@ -118,6 +122,7 @@ rage
 read-edid
 sdcv
 signal-desktop
+telegram-desktop
 terminology
 termshark
 tor
