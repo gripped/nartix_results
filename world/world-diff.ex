@@ -376,6 +376,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -388,6 +389,7 @@ libnvme
 libofa
 libpagemaker
 libpgm
+libplacebo
 libprocps
 libqb
 librevenge
@@ -701,12 +703,14 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-gssapi
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-yarl
 qastools
 qbittorrent
 qbittorrent-nox
@@ -857,6 +861,7 @@ smartmontools
 snapper
 snappy
 solid
+spdlog
 spice-vdagent
 sqlcipher
 squid

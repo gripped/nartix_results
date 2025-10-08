@@ -1766,7 +1766,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1887,7 +1886,6 @@ libpeas-docs
 libpfm
 libphonenumber
 libpinyin
-libplacebo
 libplasma
 libplist
 libpng
@@ -3536,7 +3534,6 @@ python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
-python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
@@ -4493,7 +4490,6 @@ python-y-py
 python-yaml
 python-yara
 python-yarg
-python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket
@@ -5211,7 +5207,6 @@ spandsp
 spandsp-docs
 sparsehash
 spatialindex
-spdlog
 speakup-utils
 spectacle
 speech-dispatcher

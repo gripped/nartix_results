@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libscfg
+ pkgver=0.2.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A C library for scfg"
+ arch=(x86_64)
+ url="https://codeberg.org/emersion/libscfg"
+@@ -13,7 +13,7 @@
+ validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48')  # Simon Ser
+ 
+ build() {
+-    arch-meson "$pkgname" build
++    artix-meson "$pkgname" build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "$pkgname" build
++artix-meson "$pkgname" build
+ ninja -C build
+ }

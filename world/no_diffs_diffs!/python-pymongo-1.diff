@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pymongo
+ _pkgname=mongo-python-driver
+-pkgver=4.15.2
++pkgver=4.15.1
+ pkgrel=1
+ pkgdesc="The official MongoDB Python driver"
+ arch=(x86_64)
+@@ -40,7 +40,7 @@
+   'python-zstandard: for [zstd]'
+ )
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver/$pkgver.tar.gz")
+-sha256sums=('483d6b186ab748844e6d51e6ce45b5a502829b17f9462ee877b0e197c2201b48')
++sha256sums=('92b5df9dee34a5787ddb25febf647c1e8002ff13061f9aabd3b717b44fedd4f7')
+ 
+ build() {
+   cd "$_pkgname-$pkgver"

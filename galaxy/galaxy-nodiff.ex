@@ -106,6 +106,9 @@ imv
 incron
 kanshi
 kernel-headers-musl
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 lf
 libcmis
@@ -145,6 +148,7 @@ libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
+libscfg
 libsfdo
 libsidplayfp
 libsignal-protocol-c
@@ -336,6 +340,7 @@ sundials
 swww
 t1lib
 tealdeer
+telegram-desktop
 terminus-font
 tesseract-data
 tesseract
