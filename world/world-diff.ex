@@ -70,6 +70,7 @@ cifs-utils
 cinnamon-desktop
 cjs
 clamav
+clang
 cloud-init
 clucene
 cmake
@@ -376,7 +377,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -389,6 +389,7 @@ libnvme
 libofa
 libpagemaker
 libpgm
+libphonenumber
 libplacebo
 libprocps
 libqb
@@ -861,7 +862,6 @@ smartmontools
 snapper
 snappy
 solid
-spdlog
 spice-vdagent
 sqlcipher
 squid
@@ -1113,6 +1113,7 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
+xkeyboard-config
 xl2tpd
 xorg-server
 xorg-server-xephyr

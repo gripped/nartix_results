@@ -325,7 +325,6 @@ cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjson
-clang
 clang14
 clang15
 clang16
@@ -1139,6 +1138,7 @@ itstool
 iucode-tool
 iverilog
 j4-dmenu-desktop
+jami-qt
 jasper
 jasper-doc
 java-avalon-framework
@@ -1766,6 +1766,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1884,7 +1885,6 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpfm
-libphonenumber
 libpinyin
 libplasma
 libplist
@@ -4669,6 +4669,7 @@ redland-storage-virtuoso
 redland-storage-sqlite
 remmina
 renameutils
+renderdoc
 reptyr
 rest
 restinio
@@ -5207,6 +5208,7 @@ spandsp
 spandsp-docs
 sparsehash
 spatialindex
+spdlog
 speakup-utils
 spectacle
 speech-dispatcher
@@ -5730,7 +5732,6 @@ xfce4-artwork
 xfce4-datetime-plugin
 xfwm4-themes
 xinetd
-xkeyboard-config
 xmldiff
 xmlsec
 xmlstarlet

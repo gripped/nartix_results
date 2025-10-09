@@ -1,6 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -109,7 +109,7 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=gimp
+ pkgver=3.0.6
+-pkgrel=2
++pkgrel=1
+ pkgdesc='GNU Image Manipulation Program'
+ url='https://www.gimp.org/'
+ arch=('x86_64')
+ license=('GPL-3.0-or-later')
+ depends=(
+-  'appstream'
++  'appstream-glib'
+   'babl'
+   'cairo'
+   'fontconfig'
+@@ -57,6 +57,7 @@
+ )
+ makedepends=(
+   'alsa-lib'
++  'appstream'
+   'cfitsio'
+   'ghostscript'
+   'gi-docgen'
+@@ -108,7 +109,7 @@
      -Dheadless-tests=disabled # enabled by default, depends on xorg-server-xvfb
    )
  
@@ -13,7 +37,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ aalib
+ alsa-lib
+ appstream
++appstream-glib
+ babl
+ bzip2
+ cairo
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

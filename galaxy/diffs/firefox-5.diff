@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,7 +12,7 @@
-   bash
-   cairo
-   dbus
--  ffmpeg4.4
-+  ffmpeg
-   fontconfig
-   freetype2
-   gcc-libs
+@@ -1,7 +1,7 @@
+ 
+ pkgname=firefox
+ pkgver=143.0.4
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="Fast, Private & Safe Web Browser"
+ url="https://www.mozilla.org/firefox/"
+ arch=(x86_64)
 @@ -48,7 +48,6 @@
    mesa
    nasm
@@ -152,15 +152,6 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,7 +6,7 @@
- clang
- dbus
- diffutils
--ffmpeg4.4
-+ffmpeg
- fontconfig
- freetype2
- gcc-libs
 @@ -35,7 +35,6 @@
  nodejs
  nspr
