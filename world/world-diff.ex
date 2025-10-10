@@ -46,6 +46,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -311,8 +312,11 @@ jbigkit
 js78
 julia
 jupyter-server-ydoc
+k3b
 kcoreaddons
+kdenlive
 keychain
+kio-extras
 kismet
 kitty
 kitty-terminfo
@@ -320,7 +324,6 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
-kstars
 ksystemlog
 kwayland5
 kwin-x11
@@ -377,6 +380,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -389,7 +393,6 @@ libnvme
 libofa
 libpagemaker
 libpgm
-libphonenumber
 libplacebo
 libprocps
 libqb
@@ -705,6 +708,8 @@ python-nntplib
 python-cgi
 python-mailcap
 python-gssapi
+python-os-client-config
+python-oslo-log
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -871,6 +876,7 @@ sssd
 strace
 strongswan
 stunnel
+sugar-datastore
 sway
 swayidle
 switcheroo-control
@@ -881,7 +887,9 @@ sysstat
 system-config-printer
 tcc
 telegram-desktop
-telepathy-idle
+telepathy-gabble
+telepathy-glib
+telepathy-salut
 tensorflow
 tensorflow-opt
 tensorflow-cuda
@@ -1113,7 +1121,6 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
-xkeyboard-config
 xl2tpd
 xorg-server
 xorg-server-xephyr

@@ -276,7 +276,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -1196,7 +1195,6 @@ jupyterlab-pygments
 jupyterlab
 jupyterlab_pygments
 jxrlib
-k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -1297,7 +1295,6 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
-kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1386,7 +1383,6 @@ kimap
 kinfocenter
 kinit
 kio-admin
-kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
@@ -1510,6 +1506,7 @@ ksnip
 kspaceduel
 ksquares
 ksshaskpass
+kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -1766,7 +1763,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1885,6 +1881,7 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpfm
+libphonenumber
 libpinyin
 libplasma
 libplist
@@ -3824,7 +3821,6 @@ python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
-python-os-client-config
 python-os-service-types
 python-osc-lib
 python-oscrypto
@@ -3833,7 +3829,6 @@ python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
-python-oslo-log
 python-oslo-serialization
 python-oslo-utils
 python-oslotest
@@ -5246,7 +5241,6 @@ strawberry
 strip-nondeterminism
 stubby
 subversion
-sugar-datastore
 suil
 suil-docs
 suitesparse
@@ -5291,9 +5285,8 @@ tecla
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
-telepathy-gabble
-telepathy-glib
 telepathy-haze
+telepathy-idle
 telepathy-kde-accounts-kcm
 telepathy-kde-approver
 telepathy-kde-auth-handler
@@ -5310,7 +5303,6 @@ telepathy-logger-qt
 telepathy-logger
 telepathy-mission-control
 telepathy-qt
-telepathy-salut
 tellico
 telly-skout
 template-glib
@@ -5732,6 +5724,7 @@ xfce4-artwork
 xfce4-datetime-plugin
 xfwm4-themes
 xinetd
+xkeyboard-config
 xmldiff
 xmlsec
 xmlstarlet

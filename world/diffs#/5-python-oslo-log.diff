@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-oslo-log
+-pkgver=7.2.0
++pkgver=7.1.0
+ pkgrel=1
+ pkgdesc="Oslo Logging Library"
+ arch=('any')
+@@ -9,14 +9,14 @@
+ depends=('python-pbr' 'python-oslo-config' 'python-oslo-context' 'python-oslo-i18n'
+          'python-oslo-utils' 'python-oslo-serialization' 'python-debtcollector' 'python-pyinotify'
+          'python-dateutil')
+-makedepends=('git' 'python-build' 'python-installer')
++makedepends=('git' 'python-setuptools')
+ checkdepends=('python-stestr' 'python-testtools' 'python-oslotest' 'python-eventlet')
+ source=("git+https://github.com/openstack/oslo.log.git#tag=$pkgver")
+-sha512sums=('d1d18d1fcf595b3138d4a103f0586b5b6df987c0595e9e663651224c022c7326436f2814b6f8f0d8e3f220331fb89a383fe26d8be81c6c128cf4394cdeedf6db')
++sha512sums=('541526f0ccc3f4f4a8bf45449b6737956a01cfe4f15fa04980fb60532fab6a06fcb440b8f1be8971b7b68e36c8ad25f53a75b4797d6a3ae5bcd22ed912ad94b8')
+ 
+ build() {
+   cd oslo.log
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -26,6 +26,6 @@
+ 
+ package() {
+   cd oslo.log
+-  python -m installer --destdir "$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+ git
+-python-build
+ python-dateutil
+ python-debtcollector
+-python-installer
+ python-oslo-config
+ python-oslo-context
+ python-oslo-i18n
+@@ -10,3 +8,4 @@
+ python-oslo-utils
+ python-pbr
+ python-pyinotify
++python-setuptools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd oslo.log
+-python -m build --wheel --no-isolation
++python setup.py build
+ }
