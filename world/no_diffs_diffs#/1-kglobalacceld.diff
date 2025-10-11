@@ -1,9 +1,0 @@
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -41,4 +41,6 @@
- 
- package() {
-   DESTDIR="$pkgdir" cmake --install build
-+
-+  rm -r $pkgdir/usr/lib/systemd
- }
