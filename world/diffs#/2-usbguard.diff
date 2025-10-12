@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -24,6 +24,7 @@
+   libsodium
+   polkit
+   protobuf
++  dbus-glib
+ )
+ makedepends=(
+   asciidoc
+@@ -32,7 +33,6 @@
+   libxml2
+   libxslt
+   pegtl
+-  systemd
+ )
+ provides=(
+   libusbguard.so
+@@ -63,7 +63,6 @@
+     --sys=/etc \
+     --sbindir=/usr/bin \
+     --libdir=/usr/lib \
+-    --enable-systemd \
+     --without-bundled-catch \
+     --without-bundled-pegtl \
+     --with-dbus \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ asciidoc
+ audit
+ catch2
++dbus-glib
+ gcc-libs
+ glib2-devel
+ glibc
+@@ -21,4 +22,3 @@
+ pegtl
+ polkit
+ protobuf
+-systemd

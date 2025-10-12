@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -54,7 +54,7 @@
+          qt6-webchannel
+          re2
+          snappy
+-         systemd-libs
++         libudev
+          ttf-font
+          zlib)
+ makedepends=(cmake
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -22,6 +22,7 @@
+ libpng
+ libpulse
+ libtiff
++libudev
+ libva
+ libwebp
+ libx11
+@@ -56,6 +57,5 @@
+ qt6-websockets
+ re2
+ snappy
+-systemd-libs
+ ttf-font
+ zlib

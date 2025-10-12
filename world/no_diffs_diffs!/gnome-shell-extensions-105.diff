@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+     -D classic_mode=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ -D extension_set=all
+ -D classic_mode=true
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

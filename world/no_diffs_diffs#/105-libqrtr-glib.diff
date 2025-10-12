@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson libqrtr-glib build "${meson_options[@]}"
++  artix-meson libqrtr-glib build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ local meson_options=(
+ -D gtk_doc=true
+ )
+-arch-meson libqrtr-glib build "${meson_options[@]}"
++artix-meson libqrtr-glib build "${meson_options[@]}"
+ meson compile -C build
+ }

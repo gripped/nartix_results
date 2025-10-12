@@ -1,0 +1,89 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,35 +1,39 @@
++
+ pkgname=box2d
+-pkgver=3.1.1
++pkgver=2.4.1
+ pkgrel=1
+ pkgdesc="2D rigid body simulation library for games"
+ url="http://www.box2d.org/"
+ license=('MIT')
+ arch=('x86_64')
+ depends=('gcc-libs')
+-makedepends=('cmake' 'ninja' 'git' 'wayland'
+-             'libxinerama' 'libxkbcommon' 'libxkbcommon-x11' 'libxt'
+-             'xorg-xrandr' 'libxcursor' 'xorg-xinput' 'glfw')
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/erincatto/Box2D/archive/v${pkgver}.tar.gz")
+-sha512sums=('7367640e7f2ff395b8ca48766c71f57c96e08c298627c996eba76899a149ee28b0e3ecacfa4a224fdb5d160c7e25c6069bb8414fd1575787727d796097aa347b')
++makedepends=('cmake' 'doxygen' 'ninja')
++source=("$pkgname-$pkgver.tar.gz::https://github.com/erincatto/box2d/archive/v2.4.1.tar.gz")
++sha512sums=('d900f925b77906777719c91488bdc5e2df1ad1f4a8ca39a574229f5e57070e3a843bdd7530e817112605fde6d82145c872d8afdfc65b84531a73199098c81162')
+ 
+ build() {
+   cd $pkgname-$pkgver
+ 
+-  export CXXFLAGS="$CXXFLAGS -Wno-error=unused-result"
+-  cmake \
++  cmake . \
+     -Bbuild \
+     -GNinja \
++    -DBOX2D_BUILD_DOCS=ON \
++    -DBOX2D_BUILD_TESTBED=OFF \
+     -DBUILD_SHARED_LIBS=ON \
+     -DCMAKE_INSTALL_PREFIX=/usr
+   ninja -C build
++}
++
++check() {
++  cd $pkgname-$pkgver
++
++  build/bin/unit_test
+ }
+ 
+ package() {
+   cd $pkgname-$pkgver
+ 
+   DESTDIR="$pkgdir" ninja -C build install
+-
+-  cp -r include "$pkgdir"/usr/
+   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/box2d/LICENSE
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +1,4 @@
+ cmake
++doxygen
+ gcc-libs
+-git
+-glfw
+-libxcursor
+-libxinerama
+-libxkbcommon
+-libxkbcommon-x11
+-libxt
+ ninja
+-wayland
+-xorg-xinput
+-xorg-xrandr
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,10 @@
+ build() {
+ cd $pkgname-$pkgver
+-export CXXFLAGS="$CXXFLAGS -Wno-error=unused-result"
+-cmake \
++cmake . \
+ -Bbuild \
+ -GNinja \
++-DBOX2D_BUILD_DOCS=ON \
++-DBOX2D_BUILD_TESTBED=OFF \
+ -DBUILD_SHARED_LIBS=ON \
+ -DCMAKE_INSTALL_PREFIX=/usr
+ ninja -C build

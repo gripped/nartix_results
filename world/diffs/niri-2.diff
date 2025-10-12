@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,6 @@
+   pango
+   pixman
+   seatd
+-  systemd-libs
+   xdg-desktop-portal-impl
+ )
+ makedepends=(
+@@ -78,7 +77,6 @@
+ package() {
+   cd $pkgname-$pkgver
+   install -vDm 755 {target/release/$pkgname,resources/$pkgname-session} -t "$pkgdir/usr/bin/"
+-  install -vDm 644 resources/$pkgname{.service,-shutdown.target} -t "$pkgdir/usr/lib/systemd/user/"
+   install -vDm 644 resources/$pkgname.desktop -t "$pkgdir/usr/share/wayland-sessions/"
+   install -vDm 644 resources/$pkgname-portals.conf -t "$pkgdir/usr/share/xdg-desktop-portal/"
+   install -vDm 644 resources/default-config.kdl README.md -t "$pkgdir/usr/share/doc/$pkgname/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,5 +13,4 @@
+ pixman
+ rust
+ seatd
+-systemd-libs
+ xdg-desktop-portal-impl

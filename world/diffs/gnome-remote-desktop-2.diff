@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,8 +27,6 @@
+   opus
+   pipewire
+   polkit
+-  systemd
+-  systemd-libs
+   tpm2-tss
+   vulkan-icd-loader
+ )
+@@ -54,11 +52,12 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=false
+     -D tests=false
+     -D vnc=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -23,8 +23,6 @@
+ opus
+ pipewire
+ polkit
+-systemd
+-systemd-libs
+ tpm2-tss
+ vulkan-headers
+ vulkan-icd-loader

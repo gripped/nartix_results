@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,12 +12,10 @@
+             'libxtst: needed for the GUI version'
+             'gtk3: GTK style for the GUI')
+ source=(https://www.languagetool.org/download/LanguageTool-$pkgver.zip
+-        languagetool.sh
+-        languagetool.service)
++        languagetool.sh)
+ noextract=($pkgname-$pkgver.zip)
+ sha256sums=('53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631'
+-            '1230bed5e596ba161a08cddc70764afb46f018e8f483e9934017b3c7b2aaea70'
+-            '628e59208af02dd41c678135ef6dd8b328905701301d8257316b388d36d6c52b')
++            '1230bed5e596ba161a08cddc70764afb46f018e8f483e9934017b3c7b2aaea70')
+ 
+ package() {
+   install -d "$pkgdir"/usr/{bin,share/java/$pkgname/libs}
+@@ -29,6 +27,5 @@
+   mv libs/*.jar "$pkgdir"/usr/share/java/$pkgname/libs
+   rm -rf libs
+   install -m755 "$srcdir"/$pkgname.sh "$pkgdir"/usr/bin/$pkgname
+-  mkdir -p "$pkgdir"/usr/lib/systemd/system
+-  install -m644 "$srcdir"/$pkgname.service "$pkgdir"/usr/lib/systemd/system/$pkgname.service
++
+ }

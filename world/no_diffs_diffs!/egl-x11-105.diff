@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+ sha256sums=('ebef20d89f8001df3b89488f1f968a5a8624fa42430a0b595672925cb210d656')
+ 
+ build() {
+-  arch-meson "$pkgname" build
++  artix-meson "$pkgname" build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "$pkgname" build
++artix-meson "$pkgname" build
+ meson compile -C build
+ }

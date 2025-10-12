@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ url='https://www.strongswan.org'
+ license=('GPL-2.0-only')
+ arch=('x86_64')
+-makedepends=('libnm' 'systemd' 'ruby' 'ruby-rdoc' 'mariadb' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+-depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'systemd-libs' 'pam')
++makedepends=('libnm' 'ruby' 'ruby-rdoc' 'mariadb' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++depends=('curl' 'gmp' 'iproute2' 'openssl' 'sqlite' 'libcap' 'pam')
+ optdepends=('libnm: for networkmanager support'
+   'mariadb: MySQL support'
+   'ruby: Ruby support'
+@@ -65,7 +65,6 @@
+     --enable-ha \
+     --enable-vici \
+     --enable-swanctl \
+-    --enable-systemd \
+     --enable-ext-auth \
+     --enable-mysql \
+     --enable-ldap \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,5 +13,3 @@
+ ruby
+ ruby-rdoc
+ sqlite
+-systemd
+-systemd-libs

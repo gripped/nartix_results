@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+             'SKIP')
+ 
+ build() {
+-  arch-meson libXau-$pkgver build
++  artix-meson libXau-$pkgver build
+ 
+   meson configure build
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson libXau-$pkgver build
++artix-meson libXau-$pkgver build
+ meson configure build
+ meson compile -C build
+ }

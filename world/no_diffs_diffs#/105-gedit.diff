@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -61,7 +61,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D gtk_doc=true \
+     -D require_all_tests=true
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ git apply -3 ../gedit-prgname.patch
+ }
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D gtk_doc=true \
+ -D require_all_tests=true
+ meson compile -C build

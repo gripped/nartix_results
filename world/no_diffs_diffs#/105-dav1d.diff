@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,7 @@
+ 
+ build() {
+ 	cd ${pkgbase}-${pkgver}
+-	arch-meson \
++	artix-meson \
+ 		-Dtestdata_tests='true' \
+ 		-Denable_docs='true' \
+ 		build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ }
+ build() {
+ cd ${pkgbase}-${pkgver}
+-arch-meson \
++artix-meson \
+ -Dtestdata_tests='true' \
+ -Denable_docs='true' \
+ build

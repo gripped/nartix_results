@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ pkgdesc='Compressor/archiver for creating and modifying zipfiles'
+ url='http://www.info-zip.org/Zip.html'
+ arch=('x86_64')
+-license=('LicenseRef-Info-ZIP')
++license=('custom')
+ depends=('bzip2')
+ source=("https://downloads.sourceforge.net/infozip/${pkgname}${_pkgver}.tar.gz"
+         'https://src.fedoraproject.org/rpms/zip/raw/rawhide/f/zip-3.0-currdir.patch'

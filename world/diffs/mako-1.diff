@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,10 +10,10 @@
+ 	"glib2"
+ 	"glibc"
+ 	"pango"
+-	"systemd-libs"
++	"libelogind"
+ 	"wayland"
+ )
+-makedepends=("meson" "scdoc" "systemd" "wayland-protocols")
++makedepends=("meson" "scdoc" "elogind" "wayland-protocols")
+ optdepends=("jq: support for 'makoctl menu'")
+ arch=("x86_64")
+ url='https://mako-project.org'
+@@ -32,11 +32,11 @@
+ }
+ 
+ build() {
+-	arch-meson \
++	artix-meson \
+ 		-Dbash-completions=true \
+ 		-Dfish-completions=true \
+ 		-Dzsh-completions=true \
+-		-Dsd-bus-provider=libsystemd \
++		-Dsd-bus-provider=libelogind \
+ 		"$pkgname-$pkgver" build
+ 	ninja -C build
+ }
+@@ -44,5 +44,4 @@
+ package() {
+ 	DESTDIR="$pkgdir" ninja -C build install
+ 	install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname/" "$pkgname-$pkgver/LICENSE"
+-	install -vDm644 -t "$pkgdir/usr/lib/systemd/user/" "$pkgname-$pkgver/contrib/systemd/mako.service"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,11 @@
+ cairo
++elogind
+ gdk-pixbuf2
+ glib2
+ glibc
++libelogind
+ meson
+ pango
+ scdoc
+-systemd
+-systemd-libs
+ wayland
+ wayland-protocols

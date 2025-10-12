@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,7 @@
+     -D tests=disabled
+   )
+ 
+-  arch-meson cairo build "${meson_options[@]}"
++  artix-meson cairo build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,6 @@
+ -D symbol-lookup=disabled
+ -D tests=disabled
+ )
+-arch-meson cairo build "${meson_options[@]}"
++artix-meson cairo build "${meson_options[@]}"
+ meson compile -C build
+ }

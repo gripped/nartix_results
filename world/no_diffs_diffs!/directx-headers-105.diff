@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+     -D build-test=false
+   )
+ 
+-  arch-meson directx-headers build "${meson_options[@]}"
++  artix-meson directx-headers build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ local meson_options=(
+ -D build-test=false
+ )
+-arch-meson directx-headers build "${meson_options[@]}"
++artix-meson directx-headers build "${meson_options[@]}"
+ meson compile -C build
+ }

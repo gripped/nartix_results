@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+     -D vapi=true
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ -D tests=true
+ -D vapi=true
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

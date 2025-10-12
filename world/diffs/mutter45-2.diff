@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,7 +59,6 @@
+   pixman
+   python
+   startup-notification
+-  systemd-libs
+   wayland
+   xorg-xwayland
+ )
+@@ -88,6 +87,7 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd=false
+     -D docs=false
+     -D egl_device=true
+     -D installed_tests=false
+@@ -98,7 +98,7 @@
+   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
+   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+ 
+-  arch-meson mutter build "${meson_options[@]}"
++  artix-meson mutter build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -57,7 +57,6 @@
+ python-packaging
+ startup-notification
+ sysprof
+-systemd-libs
+ wayland
+ wayland-protocols
+ xorg-server

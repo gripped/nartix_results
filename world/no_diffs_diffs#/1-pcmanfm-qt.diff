@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,25 +1,25 @@
+ 
+ pkgname=pcmanfm-qt
+-pkgver=2.2.0
++pkgver=1.4.1
+ pkgrel=1
+ pkgdesc="The LXQt file manager, Qt port of PCManFM"
+ arch=("x86_64")
+ groups=("lxqt")
+ url="https://github.com/lxqt/$pkgname"
+ license=("GPL-2.0-or-later")
+-depends=("desktop-file-utils" "libfm-qt" "libfm-qt6.so" "layer-shell-qt")
++depends=("desktop-file-utils" "libfm-qt" "libfm-qt.so")
+ makedepends=("lxqt-build-tools")
+ optdepends=(
+ 	"gvfs: for various features like mounting without root, remote filesystems, encrypted filesystems and many others mentioned on https://github.com/lxqt/pcmanfm-qt/wiki"
+ 	"gvfs-mtp: MTP support (Media Transfer Protocol)"
+ 	"lxqt-archiver: archive management"
+-	"qt6-translations: allow keyboard shortcuts to function in some languages (e.g. German)"
++	"qt5-translations: allow keyboard shortcuts to function in some languages (e.g. German)"
+ )
+ source=(
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz.asc"
+ )
+-sha256sums=('a5eeeafa8d02c9ada1b4660c238f95fde08fa13278c9ea5e191ea3bdfba1be8f'
++sha256sums=('0de6c9125e7d4250fc52e65bf102720b88edb91d88bc89c352d45b5cb0202986'
+             'SKIP')
+ validpgpkeys=(
+ 	"169704C6FB490C6892C7F23C37E0AF1FDA48F373"  # Jerome Leclanche <jerome@leclan.ch>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ desktop-file-utils
+-layer-shell-qt
+ libfm-qt
+-libfm-qt6.so
++libfm-qt.so
+ lxqt-build-tools

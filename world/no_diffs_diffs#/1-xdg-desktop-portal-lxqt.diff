@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,18 @@
+ 
+ pkgname=xdg-desktop-portal-lxqt
+-pkgver=1.2.0
+-pkgrel=1
+-pkgdesc='A backend implementation for xdg-desktop-portal using Qt/KDE Frameworks/libfm-qt'
++pkgver=0.5.0
++pkgrel=1.1
++pkgdesc='A backend implementation for xdg-desktop-portal using Qt/KF5/libfm-qt'
+ arch=(x86_64)
+ groups=(lxqt)
+ url='https://github.com/lxqt/xdg-desktop-portal-lxqt'
+-license=('LGPL-2.1-or-later')
+-depends=(qt6-base kwindowsystem xdg-desktop-portal libfm-qt)
++license=(LGPL)
++depends=(qt5-base kwindowsystem5 xdg-desktop-portal libfm-qt)
+ makedepends=(cmake)
+ provides=(xdg-desktop-portal-impl)
+ source=("https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc}
+         lxqt-portals.conf)
+-sha256sums=('227f807b03b3503fc95ceba08895df0353a6508ce8129721a4b33a5251042f9b'
++sha256sums=('43f76255cfe57e8b5df88af71f20e36bc1d3b89f4b39771ad443b0215b57e796'
+             'SKIP'
+             '867b15caa72e2a85d2ef566cce9f35d8cdea9ed181fbb0290e5ab50e18a8d4aa')
+ validpgpkeys=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,5 @@
+ cmake
+-kwindowsystem
++kwindowsystem5
+ libfm-qt
+-qt6-base
++qt5-base
+ xdg-desktop-portal

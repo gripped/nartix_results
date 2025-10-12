@@ -1,0 +1,14 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,9 +6,10 @@
+ pkgdesc="Event notification library"
+ url="https://libevent.org/"
+ arch=(x86_64)
+-license=(BSD-3-Clause-Modification)
++license=(BSD)
+ depends=(openssl)
+ makedepends=(cmake ninja python zlib doxygen)
++options=(debug)
+ source=(
+   https://github.com/libevent/libevent/releases/download/release-$pkgver-stable/libevent-$pkgver-stable.tar.gz{,.asc}
+   EVENT__SIZEOF_TIME_T.patch

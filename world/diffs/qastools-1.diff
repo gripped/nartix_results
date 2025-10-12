@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   alsa-lib
+   cmake
+   qt6-tools
+-  systemd-libs
++  libudev
+ )
+ source=($url/-/archive/v$pkgver/$pkgname-v$pkgver.tar.gz
+         qastools-1_4_0-fix-manpage-reproducibility.patch)
+@@ -51,7 +51,7 @@
+ package() {
+   depends+=(
+     alsa-lib libasound.so
+-    systemd-libs libudev.so
++    libudev libudev.so
+   )
+ 
+   DESTDIR="$pkgdir" cmake --install build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,8 +4,8 @@
+ glibc
+ hicolor-icon-theme
+ libasound.so
++libudev
+ libudev.so
+ qt6-base
+ qt6-svg
+ qt6-tools
+-systemd-libs

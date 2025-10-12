@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ sha256sums=('11185e845b5a52813b9a7610505384813eb4ad3cfe3c3e7aee5ce10d75b91468')
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -Dhddtemp=enabled \
+     -Dnetcat=enabled \
+     --localstatedir=/var
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -Dhddtemp=enabled \
+ -Dnetcat=enabled \
+ --localstatedir=/var

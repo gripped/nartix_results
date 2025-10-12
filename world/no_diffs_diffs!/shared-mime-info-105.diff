@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ pkgrel=2
+ pkgdesc="Freedesktop.org Shared MIME Info"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ depends=('libxml2' 'glib2' 'glibc' 'gcc-libs')
+ makedepends=('gettext' 'xmlto' 'docbook-xsl' 'git' 'meson')
+ install=shared-mime-info.install
+@@ -28,7 +28,7 @@
+ }
+ 
+ build() {
+-  arch-meson ${pkgname} build \
++  artix-meson ${pkgname} build \
+     -D update-mimedb=false \
+     -D xdgmime-path=${srcdir}/xdgmime
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ CFLAGS= make -C xdgmime
+ }
+ build() {
+-arch-meson ${pkgname} build \
++artix-meson ${pkgname} build \
+ -D update-mimedb=false \
+ -D xdgmime-path=${srcdir}/xdgmime
+ meson configure build

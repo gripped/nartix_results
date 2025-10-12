@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+ }
+ 
+ build() {
+-  arch-meson libwnck build -D gtk_doc=true
++  artix-meson libwnck build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ cd libwnck
+ }
+ build() {
+-arch-meson libwnck build -D gtk_doc=true
++artix-meson libwnck build -D gtk_doc=true
+ meson compile -C build
+ }

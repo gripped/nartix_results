@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=net-snmp
+ pkgver=5.9.4
+-pkgrel=7
++pkgrel=7.1
+ pkgdesc='A suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6'
+ arch=('x86_64')
+ url='http://www.net-snmp.org/'
+@@ -18,12 +18,8 @@
+           'libnetsnmptrapd.so'
+           'libsnmp.so')
+ options=('!emptydirs' '!makeflags')
+-source=("git+https://github.com/net-snmp/net-snmp.git#tag=v${pkgver}"
+-        'snmpd.service'
+-        'snmptrapd.service')
+-sha512sums=('c88ff9d81a683dbe5ff2c34c1e8c9e579b67aef1d74153275a1dc4ff7991cdc1611d01acc2d5691ae3cf6acd980807fb1a5309f91470ae2f67fbbc175b3e34e1'
+-            'f7c4bee084f5fb5a27b6447f6ac52a7e5b9541e048b53d23be5c22f2c6de5e72ba8978f381af54850f3c34fd35a9e73f1c5f58e116dbb03461035095509f5602'
+-            '549f555205c303723e98d5c482abe73f20b8a6e8522ebeb5d197750752314d3930ebe08898e45fcc83646290df53d3244ae55b97779f88d206cc6179a58df606')
++source=("git+https://github.com/net-snmp/net-snmp.git#tag=v${pkgver}")
++sha512sums=('c88ff9d81a683dbe5ff2c34c1e8c9e579b67aef1d74153275a1dc4ff7991cdc1611d01acc2d5691ae3cf6acd980807fb1a5309f91470ae2f67fbbc175b3e34e1')
+ validpgpkeys=('27CAA4A32E371383A33ED0587D5F9576E0F81533'
+               '6E6718AEF1EB5C65C32D1B2A356BC0B552D53CAB'
+               '8AAA779B597B405BBC329B6376CF47B8A77C5329'
+@@ -84,7 +80,5 @@
+ 
+   sed -i -e "s:install --basedir=\$\$dir:install --basedir=\$\$dir --root=${pkgdir}:" Makefile
+   make DESTDIR="${pkgdir}" INSTALL_PREFIX="${pkgdir}" INSTALLDIRS=vendor install
+-  install -D -m644 "${srcdir}/snmpd.service" "${pkgdir}/usr/lib/systemd/system/snmpd.service"
+-  install -D -m644 "${srcdir}/snmptrapd.service" "${pkgdir}/usr/lib/systemd/system/snmptrapd.service"
+   install -D -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+ }

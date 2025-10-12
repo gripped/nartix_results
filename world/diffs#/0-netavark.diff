@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,8 +30,6 @@
+ build() {
+   cd $pkgname
+   mandown docs/$pkgname.1.md > $pkgname.1
+-  sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" contrib/systemd/system/netavark-dhcp-proxy.service.in > contrib/systemd/system/netavark-dhcp-proxy.service
+-  sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" contrib/systemd/system/netavark-firewalld-reload.service.in > contrib/systemd/system/netavark-firewalld-reload.service
+   cargo build --frozen --release --all-features
+ }
+ 
+@@ -44,6 +42,5 @@
+   cd $pkgname
+   install -vDm 755 target/release/$pkgname -t "$pkgdir/usr/lib/podman/"
+   install -vDm 644 $pkgname.1 -t "$pkgdir/usr/share/man/man1/"
+-  install -vDm 644 contrib/systemd/system/*.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
+   install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,5 @@
+ build() {
+ cd $pkgname
+ mandown docs/$pkgname.1.md > $pkgname.1
+-sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" contrib/systemd/system/netavark-dhcp-proxy.service.in > contrib/systemd/system/netavark-dhcp-proxy.service
+-sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" contrib/systemd/system/netavark-firewalld-reload.service.in > contrib/systemd/system/netavark-firewalld-reload.service
+ cargo build --frozen --release --all-features
+ }

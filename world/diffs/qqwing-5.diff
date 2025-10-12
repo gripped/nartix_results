@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,37 +3,21 @@
+ pkgver=1.3.4
+ pkgrel=7
+ pkgdesc='Sudoku generating and solving software'
+-arch=(x86_64)
++arch=('x86_64')
+ url='https://qqwing.com/'
+-license=(GPL-2.0-or-later)
+-depends=(
+-  gcc-libs
+-  glibc
+-)
+-makedepends=(git)
+-source=("git+https://github.com/stephenostermiller/qqwing.git#tag=v$pkgver")
+-b2sums=(15ba43b7ea118d3bae484f956125abdc5ca2b2713545183986ccbe72e6bbe5b40fe86215376795fe2926e645d92cecea03611db431a04895ffff095a6c841a24)
+-
+-prepare() {
+-  cd $pkgname
+-  cp build/configure.ac build/Makefile.am build/qqwing.pc.in src/cpp
+-  cp doc/qqwing.man src/cpp/qqwing.1
+-
+-  cd src/cpp
+-  autoreconf -fi
+-}
++license=('GPL-2.0-or-later')
++depends=('gcc-libs' 'glibc')
++source=("https://qqwing.com/$pkgname-$pkgver.tar.gz")
++sha256sums=('1753736c31feea0085f5cfac33143743204f8a7e66b81ccd17e249ecafba802f')
+ 
+ build() {
+-  cd $pkgname/src/cpp
+-  ./configure \
+-    --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --localstatedir=/var
++  cd $pkgname-$pkgver
++  ./configure --prefix=/usr
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+ 
+ package() {
+-  cd $pkgname/src/cpp
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ gcc-libs
+-git
+ glibc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,6 @@
+-prepare() {
+-cd $pkgname
+-cp build/configure.ac build/Makefile.am build/qqwing.pc.in src/cpp
+-cp doc/qqwing.man src/cpp/qqwing.1
+-cd src/cpp
+-autoreconf -fi
+-}
+ build() {
+-cd $pkgname/src/cpp
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---localstatedir=/var
++cd $pkgname-$pkgver
++./configure --prefix=/usr
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

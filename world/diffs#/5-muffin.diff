@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=muffin
+-pkgver=6.4.1
++pkgver=6.0.1
+ pkgrel=1
+ pkgdesc="Cinnamon window manager based on Mutter"
+ arch=(x86_64)
+@@ -8,14 +8,14 @@
+ license=(GPL)
+ depends=(cinnamon-desktop gobject-introspection-runtime libcanberra libinput
+          libsm libxkbcommon-x11 startup-notification zenity graphene pipewire xorg-xwayland)
+-makedepends=(meson intltool gobject-introspection wayland-protocols glib2-devel egl-wayland)
++makedepends=(meson intltool gobject-introspection wayland-protocols json-glib)
+ options=(!emptydirs)
+ source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('3c4ef0139d9bbaf7ac17f39dd06b6397c175614a2eb6c55d463024a457293808')
+-b2sums=('bc77af9f56fce5c50cfa28e468a260876520a3d9e5bfa445af2b16e118b9306973a0632dadf3b7456a2131a6fd01616e2056a5f1799e787ae10777577ffe0ae3')
++sha256sums=('3f305c345db72e8bf14f19e56a88e466029997ff41cbc091148d16dbf20b087e')
++b2sums=('e3f28dea9f66b30805f9b98bc79f2e4a08e9e5eb6501f455f0e3c42c5d9ed14c48be75b07a97da7b671156d14ed61f3b882d8ede4f9b83dac5496fac5a0f0348')
+ 
+ build() {
+-  arch-meson build ${pkgname}-${pkgver} -D egl_device=true -D wayland_eglstream=true
++  artix-meson build ${pkgname}-${pkgver}
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,9 @@
+ cinnamon-desktop
+-egl-wayland
+-glib2-devel
+ gobject-introspection
+ gobject-introspection-runtime
+ graphene
+ intltool
++json-glib
+ libcanberra
+ libinput
+ libsm
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson build ${pkgname}-${pkgver} -D egl_device=true -D wayland_eglstream=true
++artix-meson build ${pkgname}-${pkgver}
+ meson compile -C build
+ }

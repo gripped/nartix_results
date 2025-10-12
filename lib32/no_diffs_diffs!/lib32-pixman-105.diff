@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+   export CXX="g++ -m32"
+   export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+ 
+-  arch-meson "$_pkgbasename"-"$pkgver" build "${meson_options[@]}"
++  artix-meson "$_pkgbasename"-"$pkgver" build "${meson_options[@]}"
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,6 +13,6 @@
+ export CC="gcc -m32"
+ export CXX="g++ -m32"
+ export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+-arch-meson "$_pkgbasename"-"$pkgver" build "${meson_options[@]}"
++artix-meson "$_pkgbasename"-"$pkgver" build "${meson_options[@]}"
+ ninja -C build
+ }

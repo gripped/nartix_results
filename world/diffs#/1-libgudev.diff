@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+   gcc-libs
+   glib2
+   glibc
+-  libsystemd
++  libudev
+ )
+ makedepends=(
+   git
+@@ -19,7 +19,7 @@
+   gobject-introspection
+   gtk-doc
+   meson
+-  systemd
++  udev
+   umockdev
+   vala
+ )
+@@ -35,7 +35,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson libgudev build "${meson_options[@]}"
++  artix-meson libgudev build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,9 +8,9 @@
+ gtk-doc
+ libglib-2.0.so
+ libgobject-2.0.so
+-libsystemd
++libudev
+ libudev.so
+ meson
+-systemd
++udev
+ umockdev
+ vala

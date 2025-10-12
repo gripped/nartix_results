@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+     -D gtk_doc=true
+   )
+ 
+-  arch-meson gtksourceview build "${meson_options[@]}"
++  artix-meson gtksourceview build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ -D glade_catalog=true
+ -D gtk_doc=true
+ )
+-arch-meson gtksourceview build "${meson_options[@]}"
++artix-meson gtksourceview build "${meson_options[@]}"
+ meson compile -C build
+ }

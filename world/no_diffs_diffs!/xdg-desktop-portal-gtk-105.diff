@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+     -D wallpaper=disabled
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -52,5 +52,7 @@
+ [preferred]
+ default=gtk
+ END
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ local meson_options=(
+ -D wallpaper=disabled
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

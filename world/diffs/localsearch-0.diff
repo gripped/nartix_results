@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -61,11 +61,12 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd_user_services=false
+     -D landlock=enabled
+     -D tests_tap_protocol=true
+   )
+ 
+-  arch-meson localsearch build "${meson_options[@]}"
++  artix-meson localsearch build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,9 +3,10 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd_user_services=false
+ -D landlock=enabled
+ -D tests_tap_protocol=true
+ )
+-arch-meson localsearch build "${meson_options[@]}"
++artix-meson localsearch build "${meson_options[@]}"
+ meson compile -C build
+ }

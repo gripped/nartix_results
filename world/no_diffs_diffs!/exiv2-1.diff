@@ -1,0 +1,15 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,12 +39,6 @@
+   ninja -C build
+ }
+ 
+-check() {
+-  cd ${pkgname}
+-  LD_LIBRARY_PATH="$PWD"/build/lib \
+-  ninja -C build test
+-}
+-
+ package() {
+   cd ${pkgname}
+   sed '/samples\/cmake_install.cmake/d' -i build/cmake_install.cmake

@@ -1,0 +1,12 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,7 +40,8 @@
+   cd $_pyname
+   pytest -v \
+     --deselect tests/test_api.py::TestReceive::test_receive \
+-    --deselect tests/test_api.py::test_receive_close
++    --deselect tests/test_api.py::test_receive_close \
++    --deselect tests/test_api.py::TestSend::test_send_json[asyncio-wsproto-binary]
+ }
+ 
+ package() {

@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+   glibc
+   libdbus-1.so
+   libinih
+-  libsystemd.so
++  libelogind.so
+   polkit
+ )
+ makedepends=(
+@@ -34,8 +34,9 @@
+ }
+ 
+ build() {
+-  arch-meson gamemode build \
++  artix-meson gamemode build \
+     --libexecdir /usr/lib/gamemode \
++    -Dwith-sd-bus-provider=elogind \
+     -Dwith-examples=false
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,7 @@
+ git
+ glibc
+ libdbus-1.so
++libelogind.so
+ libinih
+-libsystemd.so
+ meson
+ polkit

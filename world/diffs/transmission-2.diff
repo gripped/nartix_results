@@ -1,0 +1,48 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+              qt6-base
+              qt6-svg
+              qt6-tools
+-             systemd)
++             etmpfiles esysusers)
+ _archive="$pkgbase-$pkgver"
+ source=("https://github.com/transmission/transmission/releases/download/$pkgver/$_archive.tar.xz"
+         febfe49c.patch
+@@ -89,15 +89,13 @@
+ 	         libevent
+ 	         libnatpmp
+ 	         miniupnpc
+-	         systemd)
++	         etmpfiles esysusers)
+ 	cd "$_archive"
+ 	for dir in daemon cli web utils; do
+ 		_install_component $dir
+ 	done
+ 	install -d "$pkgdir"/usr/share/transmission
+ 	cp -a build/web/public_html/ "$pkgdir"/usr/share/transmission
+-	install -Dm644 daemon/transmission-daemon.service \
+-		"$pkgdir/usr/lib/systemd/system/transmission.service"
+ 	install -Dm644 COPYING "$pkgdir/usr/share/licenses/transmission-cli/COPYING"
+ 	install -Dm644 "$srcdir/$pkgname.sysusers" \
+ 		"$pkgdir/usr/lib/sysusers.d/transmission.conf"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,8 @@
+ cmake
+ curl
+ dht
++esysusers
++etmpfiles
+ glibmm-2.68
+ gtk4
+ gtkmm-4.0
+@@ -16,4 +18,3 @@
+ qt6-base
+ qt6-svg
+ qt6-tools
+-systemd

@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,9 +12,8 @@
+ conflicts=('geth')
+ replaces=('geth')
+ source=("git+https://github.com/ethereum/go-ethereum.git#tag=v${pkgver}"
+-        'geth-user.service')
+-sha256sums=('3167301f4af2fd246cc4a80c7e0a03cebf03ab1e593ad33ca0533bb477cc3ec4'
+-            '806ab43221f0c203e663a78afced694786a5adb033f06fab07d07904384d7645')
++        )
++sha256sums=('3167301f4af2fd246cc4a80c7e0a03cebf03ab1e593ad33ca0533bb477cc3ec4')
+ 
+ build() {
+     cd ${pkgname}
+@@ -28,8 +27,6 @@
+     cd ${pkgname}
+ 
+     install -Dm755 -t "${pkgdir}"/usr/bin build/bin/*
+-    install -Dm644 ../geth-user.service \
+-        "${pkgdir}/usr/lib/systemd/user/geth.service"
+     install -Dm644 build/deb/ethereum/completions/bash/geth -t "$pkgdir"/usr/share/bash-completion/completions
+     install -Dm644 build/deb/ethereum/completions/zsh/_geth -t "$pkgdir"/usr/share/zsh/site-functions
+ }

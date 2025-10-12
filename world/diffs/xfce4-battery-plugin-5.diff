@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,30 @@
+ 
+ pkgname=xfce4-battery-plugin
+-pkgver=1.2.0
++pkgver=1.1.5
+ pkgrel=1
+ pkgdesc="A battery monitor plugin for the Xfce panel"
+ arch=('x86_64')
+-license=('GPL-2.0-or-later')
+-url="https://docs.xfce.org/panel-plugins/xfce4-battery-plugin/start"
++license=('GPL2')
++url="https://docs.xfce.org/panel-plugins/xfce4-battery-plugin"
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-battery-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('c78914ba1ddef189f45c5f9feee94fc5b8d4eda63e6f0e2b5026cbc4e23d5b53')
++makedepends=('intltool')
++source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('752233bfb320ee1e26104a656cbb868299f562733063e2b9a18f0966585ce213')
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,2 @@
+-git
+-meson
+-xfce4-dev-tools
++intltool
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,9 @@
+ build() {
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

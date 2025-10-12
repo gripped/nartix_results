@@ -1,0 +1,125 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gnome-settings-daemon
+-pkgver=49.0
++pkgver=48.1
+ pkgrel=1
+ pkgdesc="GNOME Settings Daemon"
+ url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
+@@ -12,6 +12,7 @@
+ depends=(
+   alsa-lib
+   bash
++  cairo
+   dconf
+   fontconfig
+   gcc-libs
+@@ -20,9 +21,9 @@
+   geocode-glib-2
+   glib2
+   glibc
+-  gnome-desktop-4
++  gnome-desktop
+   gsettings-desktop-schemas
+-  gtk4
++  gtk3
+   libcanberra-pulse
+   libcolord
+   libcups
+@@ -33,12 +34,21 @@
+   libnotify
+   libp11-kit
+   libpulse
++  librsvg
++  libwacom
+   libx11
++  libxext
+   libxfixes
++  libxi
++  nss
++  pango
+   polkit
+   pulse-native-provider
+-  systemd-libs
++  elogind
++  libelogind
+   upower
++  wayland
++  xorg-xrdb
+ )
+ makedepends=(
+   docbook-xsl
+@@ -60,7 +70,7 @@
+   "git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#tag=${pkgver/[a-z]/.&}"
+   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
+ )
+-b2sums=('87acacd2b77f527811384665a2a29d3ab67656dd9e800c37168dab4db478825afe967442ebbbe146f4f9c54f9c256d1c9e2f8010a49b8bc0ec1b5f655a96d41d'
++b2sums=('58eefca256c425049936de5f7e58b35dad065f9a659a1ba89a8a15f9e2bbbc9a698f0e295f8bb2ff24b8f76ff9ece6a77244068452a69c4ba6bd32c669babbec'
+         'SKIP')
+ 
+ prepare() {
+@@ -72,7 +82,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Delogind=true -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,9 @@
+ alsa-lib
+ bash
++cairo
+ dconf
+ docbook-xsl
++elogind
+ fontconfig
+ gcc-libs
+ gcr-4
+@@ -11,12 +13,13 @@
+ glib2
+ glib2-devel
+ glibc
+-gnome-desktop-4
++gnome-desktop
+ gsettings-desktop-schemas
+-gtk4
++gtk3
+ libcanberra-pulse
+ libcolord
+ libcups
++libelogind
+ libgudev
+ libgweather-4
+ libmm-glib
+@@ -24,13 +27,20 @@
+ libnotify
+ libp11-kit
+ libpulse
++librsvg
++libwacom
+ libx11
++libxext
+ libxfixes
++libxi
+ libxslt
+ meson
++nss
++pango
+ polkit
+ pulse-native-provider
+ python
+-systemd-libs
+ upower
+ usbguard
++wayland
++xorg-xrdb

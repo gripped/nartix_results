@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,17 @@
+ 
+ pkgname=rocsolver
+-pkgver=6.4.4
++pkgver=6.0.2
+ pkgrel=1
+ pkgdesc='Subset of LAPACK functionality on the ROCm platform'
+ arch=('x86_64')
+ url='https://rocm.docs.amd.com/projects/rocSOLVER/en/latest/index.html'
+ license=('BSD-2-Clause')
+-depends=(
+-    'gcc-libs'
+-    'glibc'
+-    'hip-runtime-amd'
+-    'rocblas'
+-    'rocm-core'
+-    'rocsparse'
+-)
+-makedepends=(
+-    'fmt'
+-    'python-pyaml'
+-    'rocm-cmake'
+-    'rocm-toolchain'
+-)
++depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocblas' 'rocsparse')
++makedepends=('rocm-cmake' 'python-pyaml' 'fmt')
+ _git='https://github.com/ROCmSoftwarePlatform/rocSOLVER'
+ source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
+-sha256sums=('53a67cd7c0d0f3aa5f9d1e8733a5149be13e84e9b1aafbb5238ceeca085ce124')
+-options=(!lto)
++sha256sums=('781d5df2886ab0d5087a215a33ac390dd27653b2a9b4a620c7d51b0ae56f63d2')
++options=(!lto !buildflags)
+ _dirname="$(basename "$_git")-$(basename "${source[0]}" .tar.gz)"
+ 
+ build() {
+@@ -38,7 +26,6 @@
+         -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"
+         -D CMAKE_INSTALL_PREFIX=/opt/rocm
+         -D ROCSOLVER_EMBED_FMT=ON
+-        -D AMDGPU_TARGETS=$(rocm-supported-gfx -e gfx950)
+     )
+     cmake "${cmake_args[@]}"
+     cmake --build build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,9 @@
+ fmt
+ gcc-libs
+ glibc
+-hip-runtime-amd
++hip
+ python-pyaml
+ rocblas
+ rocm-cmake
+ rocm-core
+-rocm-toolchain
+ rocsparse
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,6 @@
+ -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"
+ -D CMAKE_INSTALL_PREFIX=/opt/rocm
+ -D ROCSOLVER_EMBED_FMT=ON
+--D AMDGPU_TARGETS=$(rocm-supported-gfx -e gfx950)
+ )
+ cmake "${cmake_args[@]}"
+ cmake --build build

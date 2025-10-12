@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+ prepare() {
+   cd "${srcdir}/${pkgname}"
+   sed -e 's|cd \$(ROOTSBINDIR)|cd $(DESTDIR)$(ROOTSBINDIR)|g' -i Makefile.am
+-  autoreconf -fiv
++  autoreconf -i
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ prepare() {
+ cd "${srcdir}/${pkgname}"
+ sed -e 's|cd \$(ROOTSBINDIR)|cd $(DESTDIR)$(ROOTSBINDIR)|g' -i Makefile.am
+-autoreconf -fiv
++autoreconf -i
+ }
+ build() {
+ cd "${srcdir}/${pkgname}"

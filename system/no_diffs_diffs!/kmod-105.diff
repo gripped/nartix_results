@@ -1,0 +1,45 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+ license=('LGPL-2.1-or-later' 'GPL-2.0-or-later')
+ depends=('glibc' 'zlib' 'openssl' 'xz' 'zstd')
+ makedepends=('git' 'meson' 'scdoc')
+-checkdepends=('linux-headers' 'libelf')
+ options=('strip')
+ provides=('libkmod.so')
+ validpgpkeys=('EAB33C9690013C733916AC839BA2A5A630CBEA53')  # Lucas DeMarchi
+@@ -22,7 +21,7 @@
+             '18661aa40c25580f04d2ac3f32e54c2997c0994d1c829905537b413a9d291ac6')
+ 
+ build() {
+-  arch-meson 'kmod' 'build' \
++  artix-meson 'kmod' 'build' \
+     -Dbuild-tests=true \
+     -Dmanpages=true \
+     -Dopenssl=enabled \
+@@ -33,10 +32,6 @@
+   meson compile -C build
+ }
+ 
+-check() {
+-
+-  meson test -C 'build'
+-}
+ 
+ package() {
+   meson install -C 'build' --destdir "$pkgdir"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson 'kmod' 'build' \
++artix-meson 'kmod' 'build' \
+ -Dbuild-tests=true \
+ -Dmanpages=true \
+ -Dopenssl=enabled \

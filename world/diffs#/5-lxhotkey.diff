@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,30 +1,30 @@
+ 
+ pkgbase=lxhotkey
+ pkgname=(lxhotkey lxhotkey-gtk3)
+-pkgver=0.1.2
+-pkgrel=1
++pkgver=0.1.1
++pkgrel=2
+ pkgdesc='Keyboard shortcuts configurator (part of LXDE)'
+ arch=('x86_64')
+ license=('GPL2')
+ url='https://lxde.org/'
+ depends=('gtk2' 'gtk3' 'libfm')
+-makedepends=('git' 'intltool')
+-source=(git+https://github.com/lxde/lxhotkey.git#tag=${pkgver})
+-sha256sums=('0b5a0ed9174c72c1e305bcf770f4d9e64191c336064c3682ff6b8a63ea67ece6')
++makedepends=('intltool')
++source=(https://downloads.sourceforge.net/lxde/$pkgbase-$pkgver.tar.xz)
++sha1sums=('2f41397a07dc3ae19607be23f61f09cdb93c8a3d')
+ 
+ prepare() {
+-  cd $pkgbase
+-  autoreconf -fiv
++  cd $pkgbase-$pkgver
++  ./autogen.sh
+ }
+ 
+ build() {
+-  [ -d gtk2 ] || cp -r $pkgbase gtk2
++  [ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
+   cd gtk2
+   ./configure --sysconfdir=/etc --prefix=/usr --with-gtk=2
+   make
+ 
+   cd "$srcdir"
+-  [ -d gtk3 ] || cp -r $pkgbase gtk3
++  [ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
+   cd gtk3
+   ./configure --sysconfdir=/etc --prefix=/usr --with-gtk=3
+   make
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ gtk2
+ gtk3
+ intltool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ prepare() {
+-cd $pkgbase
+-autoreconf -fiv
++cd $pkgbase-$pkgver
++./autogen.sh
+ }
+ build() {
+-[ -d gtk2 ] || cp -r $pkgbase gtk2
++[ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
+ cd gtk2
+ ./configure --sysconfdir=/etc --prefix=/usr --with-gtk=2
+ make
+ cd "$srcdir"
+-[ -d gtk3 ] || cp -r $pkgbase gtk3
++[ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
+ cd gtk3
+ ./configure --sysconfdir=/etc --prefix=/usr --with-gtk=3
+ make

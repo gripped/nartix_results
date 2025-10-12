@@ -1,0 +1,135 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,48 +1,44 @@
+ 
+ pkgname=font-manager
+-pkgver=0.9.4
+-pkgrel=2
++pkgver=0.9.1
++pkgrel=2.1
+ pkgdesc='A simple font management application for GTK+ Desktop Environments'
+ url=https://fontmanager.github.io
+-_url="https://github.com/FontManager/$pkgname"
+ arch=(x86_64 i686)
+ license=(GPL-3.0-only)
+-depends=(cairo libcairo.so
+-         fontconfig libfontconfig.so
+-         freetype2 libfreetype.so
+-         gcc-libs # libgcc_s.so
+-         glibc # libc.so
+-         glib2 libgio-2.0.so libglib-2.0.so libgobject-2.0.so
+-         graphene libgraphene-1.0.so
+-         gtk4
+-         harfbuzz libharfbuzz.so
++depends=(gtk4
+          json-glib
+-         libsoup3 libsoup-3.0.so
+-         libxml2 libxml2.so
+-         pango libpango-1.0.so libpangoft2-1.0.so
+-         sqlite libsqlite3.so
+-         webkitgtk-6.0 libwebkitgtk-6.0.so)
++         libsoup3
++         libxml2
++         sqlite
++         webkitgtk-6.0)
+ optdepends=(file-roller
+             libnautilus-extension)
+ makedepends=(gobject-introspection
+              intltool
+              meson
+              nautilus
++             ninja
+              vala
+              yelp-tools)
+ _archive="$pkgname-$pkgver"
++_url="https://github.com/FontManager/font-manager"
+ source=("$_url/releases/download/$pkgver/$_archive.tar.xz")
+-sha256sums=('6a0899ac753f50d0779751828c62fa6220024213ebd2179b6f64a3a9bff51f96')
++sha256sums=('a83c294322cabaa424b35efa8a20a28f04d379dcf7701ee860a29725e50e5e72')
++
++prepare() {
++    cd "${pkgname}-${pkgver}"/data
++    sed -i 's/DBusActivatable=true/DBusActivatable=false/' com.github.FontManager.FontManager.desktop.in.in
++    sed -i 's/DBusActivatable=true/DBusActivatable=false/' com.github.FontManager.FontViewer.desktop.in.in
++}
+ 
+ build() {
+-	local meson_opts=(
+-		nautilus=true
+-		reproducible=true
+-	)
+-	arch-meson "$_archive" build ${meson_opts[@]/#/-D }
+-	meson compile -C build
++	artix-meson "$_archive" build \
++		-Dnautilus=true \
++		-Dreproducible=true
++		ninja -C build
+ }
+ 
+ package() {
+-	meson install -C build --destdir "$pkgdir"
++	DESTDIR="$pkgdir" ninja -C build install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,34 +1,12 @@
+-cairo
+-fontconfig
+-freetype2
+-gcc-libs
+-glib2
+-glibc
+ gobject-introspection
+-graphene
+ gtk4
+-harfbuzz
+ intltool
+ json-glib
+-libcairo.so
+-libfontconfig.so
+-libfreetype.so
+-libgio-2.0.so
+-libglib-2.0.so
+-libgobject-2.0.so
+-libgraphene-1.0.so
+-libharfbuzz.so
+-libpango-1.0.so
+-libpangoft2-1.0.so
+-libsoup-3.0.so
+ libsoup3
+-libsqlite3.so
+-libwebkitgtk-6.0.so
+ libxml2
+-libxml2.so
+ meson
+ nautilus
+-pango
++ninja
+ sqlite
+ vala
+ webkitgtk-6.0
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,11 @@
++prepare() {
++cd "${pkgname}-${pkgver}"/data
++sed -i 's/DBusActivatable=true/DBusActivatable=false/' com.github.FontManager.FontManager.desktop.in.in
++sed -i 's/DBusActivatable=true/DBusActivatable=false/' com.github.FontManager.FontViewer.desktop.in.in
++}
+ build() {
+-local meson_opts=(
+-nautilus=true
+-reproducible=true
+-)
+-arch-meson "$_archive" build ${meson_opts[@]/#/-D }
+-meson compile -C build
++artix-meson "$_archive" build \
++-Dnautilus=true \
++-Dreproducible=true
++ninja -C build
+ }

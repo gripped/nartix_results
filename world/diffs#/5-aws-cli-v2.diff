@@ -1,0 +1,240 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,118 +1,94 @@
+ 
+ pkgname=aws-cli-v2
+-pkgver=2.31.13
++pkgver=2.15.19
+ pkgrel=1
+-pkgdesc='Universal Command Line Interface for Amazon Web Services (version 2)'
+-arch=('any')
+-url="https://docs.aws.amazon.com/cli"
+-_url="https://github.com/aws/aws-cli"
+-license=('Apache-2.0')
+-depends=(
+-  'python'
+-  'python-awscrt'
+-  'python-colorama'
+-  'python-dateutil'
+-  'python-distro'
+-  'python-docutils'
+-  'python-jmespath'
+-  'python-prompt_toolkit'
+-  'python-ruamel-yaml'
+-  'python-urllib3'
+-)
+-makedepends=(
+-  'git'
+-  'python-build'
+-  'python-flit-core'
+-  'python-installer'
+-  'python-wheel'
+-)
+-checkdepends=(
+-  'python-jsonschema'
+-  'python-pytest'
+-  'python-pytest-xdist'
+-)
++pkgdesc='Unified command line interface for Amazon Web Services (version 2)'
++arch=(any)
++url='https://github.com/aws/aws-cli/tree/v2'
++license=(Apache)
++depends=(python python-awscrt python-certifi python-colorama python-cryptography python-dateutil
++         python-distro python-docutils python-jmespath python-prompt_toolkit python-ruamel-yaml
++         python-urllib3)
++makedepends=(python-build python-wheel python-flit-core python-installer)
++checkdepends=(python-pytest python-pytest-xdist python-jsonschema procps-ng)
+ provides=(aws-cli)
+ conflicts=(aws-cli)
+-install=$pkgname.install
+-source=(
+-  "git+$_url#tag=$pkgver"
+-  "https://github.com/boto/botocore/commit/f0ff061aebd9ef15a66f87b675789275e373da43.patch"
+-  "$pkgname-python-prompt-toolkit-3.0.52-compat.patch"
++install=aws-cli-v2.install
++source=("https://awscli.amazonaws.com/awscli-$pkgver.tar.gz"{,.sig}
++        build-ac.index-in-tmp.diff
++        fix-env.diff
++        "$pkgname-tz-fix.patch"
++        "${pkgname}-ruamel-yaml-v4.patch"
++        allow-egg-info.diff
++        botocore-2922.patch
++        botocore-2924.patch
++        botocore-2990-rebased.patch)
++sha256sums=('4acf1cbb9bd7f158d13276f18467d9f8fd8dde504e537141fe8899b1273f9d5c'
++            'SKIP'
++            '0267e41561ab2c46a97ebfb024f0b047aabc9e6b9866f204b2c1a84ee5810d63'
++            '893d61d7e958c3c02bfa1e03bf58f6f6abd98849d248cc661f1c56423df9f312'
++            '4fc614b8550d7363bb2d578c6b49326c9255203eb2f933fd0551f96ed5fb1f30'
++            '20a9fcd5235bf606e86a6ec06ca30307ebbcfd36063d2ac561c1f9eff7243046'
++            '6768df8667fe7fd827e6eef1c4cdb3eae25aba5806bbc725270200a585f62152'
++            '62be6cad0f9039ae682abffd167181abbd4a690e2680867418c5542893d74b36'
++            'aad8b863d9f9107c56401e71d76b71f526efd9f8efac31e2a007b9071f85b5b6'
++            'a43c3e9aba8974fc09f1780a37b6a94108b15dbbbcecdf6d9e7e224ca135816b')
++validpgpkeys=(
++  'FB5DB77FD5C118B80511ADA8A6310ACC4672475C'  # the key mentioned on https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+ )
+-sha256sums=('e06c355def507f3d9c64e6da5c4af7f6436b0662b02025448cd97ee306cf8e80'
+-            '8c1b98482b1ba6f072cd5bc0c81efdb2a64dcc484a8394c24959078841ac5b18'
+-            '2e9149840a8b37083957345a697399ada16dce274990133156f9c6254b62ff2d')
+ 
+ prepare() {
+-  cd ${pkgname%-v2}
+-  patch -Np1 -f -d awscli < ../f0ff061aebd9ef15a66f87b675789275e373da43.patch || :
+-  patch -Np3 -f -d tests/unit/botocore < ../f0ff061aebd9ef15a66f87b675789275e373da43.patch || :
++  cd awscli-$pkgver
+ 
+-  patch -Np1 -f < ../$pkgname-python-prompt-toolkit-3.0.52-compat.patch
++  sed -i '/"error::/d' pyproject.toml
++
++  patch -Np1 -i ../build-ac.index-in-tmp.diff
++
++  patch -Np1 -i ../fix-env.diff
++
++  patch -Np1 -i ../$pkgname-tz-fix.patch
++
++  patch -Np1 -i ../${pkgname}-ruamel-yaml-v4.patch
++
++  patch -Np1 -i ../allow-egg-info.diff
++
++  pushd awscli
++  patch --no-backup-if-mismatch -Np1 -i ../../botocore-2922.patch
++  patch --no-backup-if-mismatch -Np1 -i ../../botocore-2924.patch
++  patch --no-backup-if-mismatch -Np1 -i ../../botocore-2990-rebased.patch
++  popd
++
++  find -type f -name '*.py' -exec sed \
++      -e 's/^\( *\)import mock$/\1from unittest import mock/' \
++      -e 's/^\( *\)from mock import mock/\1from unittest import mock/' \
++      -e 's/^\( *\)from mock import/\1from unittest.mock import/' \
++      -i '{}' +
+ }
+ 
+ build() {
+-  cd ${pkgname%-v2}
++  cd awscli-$pkgver
++
+   python -m build --wheel --no-isolation --skip-dependency-check
++  cp -v build/unpacked_wheel/awscli/data/ac.index awscli/data/ac.index
+ }
+ 
+ check() {
+-  cd ${pkgname%-v2}
+-  local pytest_args=(
+-    -vv
+-    --numprocesses=auto
++  cd awscli-$pkgver
+ 
+-    --ignore=tests/backends
+-    --ignore=tests/dependencies
+-    --ignore=tests/functional
++  export AWS_SECRET_ACCESS_KEY=fake_key
++  export AWS_ACCESS_KEY_ID=fake_id
+ 
+-    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_expect_100_continue_returned
+-    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_expect_100_sends_connection_header
+-    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_expect_100_continue_sends_307
+-    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_handles_expect_100_with_different_reason_phrase
+-    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_expect_100_continue_no_response_from_server
+-    --deselect=tests/unit/botocore/test_awsrequest.py::TestAWSHTTPConnection::test_state_reset_on_connection_close
++  export PYTHONPATH="$PWD"
+ 
+-    --deselect=tests/unit/customizations/configure/test_importer.py::TestConfigureImportCommand::test_csv_content_from_file_succeeds
++  python -m venv --system-site-packages "$PWD/venv"
++  "$PWD/venv/bin/python" -m installer dist/*.whl
+ 
+-    --deselect=tests/integration/botocore/test_apigateway.py
+-    --deselect=tests/integration/botocore/test_client.py
+-    --deselect=tests/integration/botocore/test_cloudwatch.py
+-    --deselect=tests/integration/botocore/test_cognito_identity.py
+-    --deselect=tests/integration/botocore/test_credentials.py
+-    --deselect=tests/integration/botocore/test_ec2.py
+-    --deselect=tests/integration/botocore/test_elastictranscoder.py
+-    --deselect=tests/integration/botocore/test_emr.py
+-    --deselect=tests/integration/botocore/test_glacier.py
+-    --deselect=tests/integration/botocore/test_rds.py
+-    --deselect=tests/integration/botocore/test_route53.py
+-    --deselect=tests/integration/botocore/test_s3.py
+-    --deselect=tests/integration/botocore/test_session.py
+-    --deselect=tests/integration/botocore/test_smoke.py
+-    --deselect=tests/integration/botocore/test_sts.py
+-    --deselect=tests/integration/botocore/test_waiters.py
+-    --deselect=tests/integration/customizations/s3/test_filegenerator.py
+-    --deselect=tests/integration/customizations/s3/test_plugin.py
+-    --deselect=tests/integration/customizations/test_waiters.py
+-    --deselect=tests/integration/customizations/test_waiters.py
+-    --deselect=tests/integration/s3transfer
+-    --deselect=tests/integration/test_assume_role.py
+-    --deselect=tests/integration/test_cli.py
+-    --deselect=tests/integration/test_ec2.py
+-    --deselect=tests/integration/test_smoke.py::test_can_make_success_request
+-  )
+-  export AWS_ACCESS_KEY_ID=fake_id
+-  export AWS_SECRET_ACCESS_KEY=fake_key
+-  python -m venv --system-site-packages test-env
+-  test-env/bin/python -m installer dist/*.whl
+-  PATH="$PWD/test-env/bin:$PATH" \
+-    test-env/bin/python -m pytest "${pytest_args[@]}"
++  "$PWD/venv/bin/python" -m pytest tests -n auto --dist loadfile --ignore=tests/backends --ignore=tests/integration
+ }
+ 
+ package() {
+-  cd ${pkgname%-v2}
++  cd awscli-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm644 bin/aws_bash_completer "$pkgdir/usr/share/bash-completion/completions/aws"
+-  rm -v "$pkgdir/usr/bin/aws.cmd"
+-  rm -v "$pkgdir/usr/bin/aws_bash_completer"
++  install -Dm 644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
++  install -Dm 644 bin/aws_bash_completer "$pkgdir/usr/share/bash-completion/completions/aws"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,9 @@
+-git
+ python
+ python-awscrt
+ python-build
++python-certifi
+ python-colorama
++python-cryptography
+ python-dateutil
+ python-distro
+ python-docutils
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,24 @@
+ prepare() {
+-cd ${pkgname%-v2}
+-patch -Np1 -f -d awscli < ../f0ff061aebd9ef15a66f87b675789275e373da43.patch || :
+-patch -Np3 -f -d tests/unit/botocore < ../f0ff061aebd9ef15a66f87b675789275e373da43.patch || :
+-patch -Np1 -f < ../$pkgname-python-prompt-toolkit-3.0.52-compat.patch
++cd awscli-$pkgver
++sed -i '/"error::/d' pyproject.toml
++patch -Np1 -i ../build-ac.index-in-tmp.diff
++patch -Np1 -i ../fix-env.diff
++patch -Np1 -i ../$pkgname-tz-fix.patch
++patch -Np1 -i ../${pkgname}-ruamel-yaml-v4.patch
++patch -Np1 -i ../allow-egg-info.diff
++pushd awscli
++patch --no-backup-if-mismatch -Np1 -i ../../botocore-2922.patch
++patch --no-backup-if-mismatch -Np1 -i ../../botocore-2924.patch
++patch --no-backup-if-mismatch -Np1 -i ../../botocore-2990-rebased.patch
++popd
++find -type f -name '*.py' -exec sed \
++-e 's/^\( *\)import mock$/\1from unittest import mock/' \
++-e 's/^\( *\)from mock import mock/\1from unittest import mock/' \
++-e 's/^\( *\)from mock import/\1from unittest.mock import/' \
++-i '{}' +
+ }
+ build() {
+-cd ${pkgname%-v2}
++cd awscli-$pkgver
+ python -m build --wheel --no-isolation --skip-dependency-check
++cp -v build/unpacked_wheel/awscli/data/ac.index awscli/data/ac.index
+ }

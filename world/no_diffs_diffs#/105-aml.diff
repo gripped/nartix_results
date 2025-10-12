@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson aml build
++  artix-meson aml build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson aml build
++artix-meson aml build
+ meson compile -C build
+ }

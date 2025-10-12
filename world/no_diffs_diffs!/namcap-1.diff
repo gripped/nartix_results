@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+          python-license-expression
+          python-pyelftools)
+ checkdepends=(python-pytest
+-              systemd)
++              elogind)
+ makedepends=(python-{build,installer,wheel}
+             python-setuptools
+     	    git)

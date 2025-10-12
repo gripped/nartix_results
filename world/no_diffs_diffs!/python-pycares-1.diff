@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,6 +38,7 @@
+     --deselect tests/test_all.py::DNSTest::test_gethostbyaddr6
+     --deselect tests/test_all.py::DNSTest::test_getnameinfo
+     --deselect tests/test_all.py::DNSTest::test_query_txt_chunked
++    --deselect tests/test_all.py::DNSTest::test_getaddrinfo4
+   )
+ 
+   cd "$_name"

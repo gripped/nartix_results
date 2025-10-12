@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -49,7 +49,7 @@
+     -D vapi=disabled
+   )
+ 
+-  arch-meson libsoup build "${meson_options[@]}"
++  artix-meson libsoup build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,6 @@
+ -D sysprof=disabled
+ -D vapi=disabled
+ )
+-arch-meson libsoup build "${meson_options[@]}"
++artix-meson libsoup build "${meson_options[@]}"
+ meson compile -C build
+ }

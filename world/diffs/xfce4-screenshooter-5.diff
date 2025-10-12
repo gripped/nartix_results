@@ -1,0 +1,95 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,35 +1,25 @@
+ 
+ pkgname=xfce4-screenshooter
+-pkgver=1.11.2
++pkgver=1.10.5
+ pkgrel=1
+ pkgdesc="An application to take screenshots"
+ arch=('x86_64')
+ url="https://docs.xfce.org/apps/xfce4-screenshooter/start"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ groups=('xfce4-goodies')
+-depends=('xfce4-panel' 'hicolor-icon-theme' 'wayland-protocols')
+-makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
+-optdepends=(
+-  'curl: upload screenshots to Imgur'
+-  'jq: upload screenshots to Imgur'
+-  'xclip: upload screenshots to Imgur'
+-  'zenity: upload screenshots to Imgur'
+-)
+-source=("git+https://gitlab.xfce.org/apps/xfce4-screenshooter.git#tag=$pkgname-$pkgver"
+-        git+https://gitlab.freedesktop.org/wlroots/wlr-protocols.git)
+-sha256sums=('8f12610907e922d615598a0a8be2fe8234f7dc8e5192c26d7d57fe7be1c2291d'
+-            'SKIP')
++depends=('xfce4-panel' 'libsoup3' 'curl' 'jq' 'zenity' 'xclip'
++         'hicolor-icon-theme')
++makedepends=('intltool' 'python')
++source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('fa711f2a6a5517f575f2e129fe48c2678e836bd4ede5433075f3076d7670621c')
+ 
+ prepare() {
+-  cd $pkgname
+-  git submodule init
+-  git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
+-  git -c protocol.file.allow=always submodule update
+-  NOCONFIGURE=1 ./autogen.sh
++  cd $pkgname-$pkgver
+ }
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
++
+   ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+@@ -40,7 +30,7 @@
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,9 @@
+-git
+-glib2-devel
++curl
+ hicolor-icon-theme
+-wayland-protocols
+-xfce4-dev-tools
++intltool
++jq
++libsoup3
++python
++xclip
+ xfce4-panel
++zenity
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,8 @@
+ prepare() {
+-cd $pkgname
+-git submodule init
+-git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
+-git -c protocol.file.allow=always submodule update
+-NOCONFIGURE=1 ./autogen.sh
++cd $pkgname-$pkgver
+ }
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ ./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \

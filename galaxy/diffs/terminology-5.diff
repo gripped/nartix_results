@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,26 +4,25 @@
+ pkgrel=1
+ pkgdesc="EFL based terminal emulator"
+ arch=('x86_64')
+-url="https://www.enlightenment.org/about-terminology"
++url="http://www.enlightenment.org/p.php?p=about/terminology"
+ license=('BSD')
+-depends=('efl')
+-makedepends=('meson')
+-source=("https://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${pkgver}.tar.xz")
+-sha256sums=('f354057051b05cffb699e33836a1135db1d4ed8bf954f9b57dc0e93bc307514d')
++depends=('efl>=1.26' 'openssl-1.1' 'libsndfile' 'libpulse')
++makedepends=('git' 'meson' 'cmake')
++source=("git+http://git.enlightenment.org/enlightenment/$pkgname.git#commit=4c3f4fbb390caf8636c470450fd70209d429720e")
++
++sha256sums=('4e8be8539d95ba94683594ad85ad335360c6d931371b3ea0c9e520fb5b0a0a26')
+ 
+ build() {
+-  cd "${srcdir}/${pkgname}-${pkgver}"
+-
+-  export CFLAGS="${CFLAGS} -fvisibility=hidden"
+-  meson builddir --prefix=/usr
+-  ninja -C builddir
++  cd "$pkgname"
++  export CFLAGS="$CFLAGS -fvisibility=hidden"
++  meson --prefix=/usr . build
++  meson configure build
++  ninja -C build
+ }
+ 
+ package(){
+-  cd "${srcdir}/${pkgname}-${pkgver}"
+-
+-  DESTDIR="${pkgdir}" ninja -C builddir install
+-
+-  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/COPYING" \
+-        "${pkgdir}/usr/share/licenses/${pkgname}/COPYING"
++  cd "$pkgname"
++  DESTDIR="$pkgdir" ninja -C build install
++  install -Dm644 -t"$pkgdir/usr/share/doc/$pkgname/" ChangeLog NEWS README.md
++  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" AUTHORS COPYING
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1,7 @@
+-efl
++cmake
++efl>
++git
++libpulse
++libsndfile
+ meson
++openssl-1.1
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ build() {
+-cd "${srcdir}/${pkgname}-${pkgver}"
+-export CFLAGS="${CFLAGS} -fvisibility=hidden"
+-meson builddir --prefix=/usr
+-ninja -C builddir
++cd "$pkgname"
++export CFLAGS="$CFLAGS -fvisibility=hidden"
++meson --prefix=/usr . build
++meson configure build
++ninja -C build
+ }

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ 
+ build() {
+   cd $pkgname/meson
+-  arch-meson -Dmans=true .. build
++  artix-meson -Dmans=true .. build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd $pkgname/meson
+-arch-meson -Dmans=true .. build
++artix-meson -Dmans=true .. build
+ meson compile -C build
+ }

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -60,7 +60,7 @@
+     -Dncursesw=enabled
+   )
+ 
+-  arch-meson "${_pkgbasename}" build "${_meson_options[@]}"
++  artix-meson "${_pkgbasename}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,6 +29,6 @@
+ -Dncurses=disabled
+ -Dncursesw=enabled
+ )
+-arch-meson "${_pkgbasename}" build "${_meson_options[@]}"
++artix-meson "${_pkgbasename}" build "${_meson_options[@]}"
+ meson compile -C build
+ }

@@ -1,0 +1,89 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,42 +1,22 @@
+ 
+ pkgname=quadrapassel
+-pkgver=49.1
++pkgver=40.2
+ pkgrel=1
+ pkgdesc="Fit falling blocks together (Tetris-like game for GNOME)"
+ url="https://wiki.gnome.org/Apps/Quadrapassel"
+ arch=(x86_64)
+-license=(GPL-2.0-or-later)
+-depends=(
+-  cairo
+-  dconf
+-  glib2
+-  glibc
+-  gsound
+-  gtk4
+-  hicolor-icon-theme
+-  libadwaita
+-  libgee
+-  libmanette
+-  librsvg
+-  pango
+-)
+-makedepends=(
+-  blueprint-compiler
+-  git
+-  gobject-introspection
+-  meson
+-  vala
+-  yelp-tools
+-)
++license=(GPL)
++depends=(clutter-gtk gsound librsvg libmanette)
++makedepends=(meson gobject-introspection yelp-tools appstream-glib git vala)
+ groups=(gnome-extra)
+-source=(
+-  "git+https://gitlab.gnome.org/GNOME/quadrapassel.git?signed#tag=${pkgver/[a-z]/.&}"
+-)
+-b2sums=('0bdccc8a5f760c8c60ae2c9e0796902609bbaa2701dca8f5a8c15e95ff6352f5681acb4e5bc5fc48b3f4645a9ea3d431c77890a7078711398707e9d34cea99b0')
+-validpgpkeys=(
+-  161DEEB19F942B2CE00B67ADC1C19D5530553963 # John Ward <john@johnward.net>
+-  1DB827B47C4E2494A1D733586458908EC334A207 # Will Warner <willwwarner@proton.me>
+-)
++_commit=51adfcf8097fc17f7df44e228ac715272d07b60e  # tags/40.2^0
++source=("git+https://gitlab.gnome.org/GNOME/quadrapassel.git#commit=$_commit")
++sha256sums=('SKIP')
++
++pkgver() {
++  cd $pkgname
++  git describe --tags | sed 's/^v//;s/-/+/g'
++}
+ 
+ prepare() {
+   cd $pkgname
+@@ -54,4 +34,3 @@
+ package() {
+   meson install -C build --destdir "$pkgdir"
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,18 +1,10 @@
+-blueprint-compiler
+-cairo
+-dconf
++appstream-glib
++clutter-gtk
+ git
+-glib2
+-glibc
+ gobject-introspection
+ gsound
+-gtk4
+-hicolor-icon-theme
+-libadwaita
+-libgee
+ libmanette
+ librsvg
+ meson
+-pango
+ vala
+ yelp-tools

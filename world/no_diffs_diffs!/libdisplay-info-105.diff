@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48')
+ 
+ build() {
+-	arch-meson "$_archive" build
++	artix-meson "$_archive" build
+ 	ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "$_archive" build
++artix-meson "$_archive" build
+ ninja -C build
+ }

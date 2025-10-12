@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ license=('GPL-2.0-or-later')
+ depends=('python-pycups' 'python-dbus' 'libnotify'
+          'python-gobject' 'gtk3' 'python-cairo' 'libusb'
+-         'pango' 'glib2' 'libcups' 'systemd-libs' 'glibc'
++         'pango' 'glib2' 'libcups' 'libudev' 'glibc'
+          'gdk-pixbuf2' 'sh')
+ makedepends=('xmlto' 'docbook-xsl' 'desktop-file-utils' 'libsecret'
+              'python-setuptools' 'autoconf-archive')
+@@ -33,7 +33,7 @@
+   ./configure --prefix=/usr \
+     --sbindir=/usr/bin \
+     --sysconfdir=/etc \
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system \
++    --with-udevsystemunitdir=no \
+     --with-udevdir=/usr/lib/udev \
+     --with-udev-rules \
+     --with-cups-serverbin-dir=/usr/lib/cups
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,6 +8,7 @@
+ libcups
+ libnotify
+ libsecret
++libudev
+ libusb
+ pango
+ python-cairo
+@@ -16,5 +17,4 @@
+ python-pycups
+ python-setuptools
+ sh
+-systemd-libs
+ xmlto

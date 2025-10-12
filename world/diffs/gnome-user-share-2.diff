@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   git
+   meson
+   rust
+-  systemd
++
+ )
+ groups=(gnome)
+ source=(
+@@ -43,11 +43,12 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemduserunitdir=/usr/lib/systemd
+     -D httpd=/usr/bin/httpd
+     -D modules_path=/usr/lib/httpd/modules
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -57,5 +58,7 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir" --no-rebuild
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,4 +7,3 @@
+ meson
+ mod_dnssd
+ rust
+-systemd

@@ -1,0 +1,79 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,24 @@
+ 
+ _pyname=jupyter_server_ydoc
+ pkgname=jupyter-server-ydoc
+-pkgver=1.0.0
+-pkgrel=1
++pkgver=0.8.0
++pkgrel=5
+ pkgdesc='A Jupyter Server Extension Providing Y Documents'
+ arch=(any)
+ url='https://jupyter.org/'
+-license=(BSD-3-Clause)
+-depends=(jupyter-nbformat
+-         jupyter-server
+-         jupyter-server-fileid
+-         python
+-         python-jupyter-events
+-         python-jupyter-ydoc
+-         python-pycrdt
+-         python-pycrdt-websocket
+-         python-tornado
+-         python-traitlets
+-         python-websockets)
+-makedepends=(python-build
+-             python-hatchling
+-             python-installer)
+-checkdepends=(python-pytest-jupyter)
+-source=(https://pypi.python.org/packages/source/j/$_pyname/$_pyname-$pkgver.tar.gz)
+-sha256sums=('3017524c1da068815b748c8f1ebe7ec08eda047fc597ce72c125b18009a391e9')
++license=(BSD)
++depends=(jupyter-server python-jupyter-ydoc jupyter-server-fileid)
++makedepends=(python-build python-installer python-hatchling)
++checkdepends=(python-pytest-timeout python-pytest-jupyter)
++source=(https://pypi.python.org/packages/source/j/$_pyname/$_pyname-$pkgver.tar.gz
++        https://github.com/jupyterlab/jupyter_collaboration/commit/6e684048.patch)
++sha256sums=('a6fe125091792d16c962cc3720c950c2b87fcc8c3ecf0c54c84e9a20b814526c'
++            '72c8386df9a167b1d29c61e4e66969a8731aff9094c63c90877202d5c9fc2f71')
++
++prepare() {
++  patch -d $_pyname-$pkgver -p1 < 6e684048.patch # Fix on_document_change signature
++  sed -e 's|jupyter_ydoc>=0.2.0,<0.4.0|jupyter_ydoc|' -e 's|ypy-websocket>=0.8.2,<0.9.0|ypy-websocket|' -i $_pyname-$pkgver/pyproject.toml
++}
+ 
+ build() {
+   cd $_pyname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +1,6 @@
+-jupyter-nbformat
+ jupyter-server
+ jupyter-server-fileid
+-python
+ python-build
+ python-hatchling
+ python-installer
+-python-jupyter-events
+ python-jupyter-ydoc
+-python-pycrdt
+-python-pycrdt-websocket
+-python-tornado
+-python-traitlets
+-python-websockets
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++patch -d $_pyname-$pkgver -p1 < 6e684048.patch # Fix on_document_change signature
++sed -e 's|jupyter_ydoc>=0.2.0,<0.4.0|jupyter_ydoc|' -e 's|ypy-websocket>=0.8.2,<0.9.0|ypy-websocket|' -i $_pyname-$pkgver/pyproject.toml
++}
+ build() {
+ cd $_pyname-$pkgver
+ python -m build --wheel --no-isolation

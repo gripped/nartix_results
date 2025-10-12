@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://www.knot-dns.cz/"
+ license=(GPL3)
+ depends=(libedit gnutls liburcu lmdb
+-         libidn2 systemd libcap-ng
++         libidn2 libcap-ng
+          fstrm protobuf-c libmaxminddb
+          libbpf libxdp libnghttp2 libmnl)
+ makedepends=(git python-sphinx)
+@@ -54,7 +54,6 @@
+     rm "${pkgdir}"/etc/knot/example.com.zone
+     mv "${pkgdir}"/etc/knot/{knot.sample.conf,knot.conf}
+ 
+-    install -Dm644 distro/common/knot.service -t "${pkgdir}"/usr/lib/systemd/system/
+     install -Dm644 distro/pkg/arch/knot.tmpfiles.arch "${pkgdir}"/usr/lib/tmpfiles.d/${pkgname}.conf
+     install -Dm644 distro/pkg/arch/knot.sysusers "${pkgdir}"/usr/lib/sysusers.d/${pkgname}.conf
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,4 +13,3 @@
+ lmdb
+ protobuf-c
+ python-sphinx
+-systemd

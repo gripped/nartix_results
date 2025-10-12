@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,3 +38,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+ }
++

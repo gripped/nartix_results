@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,6 @@
+ 
+          'python-pyzmq'
+          'python-m2crypto'
+-         'python-systemd'
+          'python-importlib-metadata'
+          'python-pycryptodomex')
+ makedepends=('python-setuptools')
+@@ -59,9 +58,6 @@
+   install -v -Dm644 conf/master "$pkgdir/etc/salt/master"
+   install -v -Dm644 conf/minion "$pkgdir/etc/salt/minion"
+ 
+-  for _svc in salt-master.service salt-syndic.service salt-minion.service salt-api.service; do
+-    install -v -Dm644 pkg/common/$_svc "$pkgdir/usr/lib/systemd/system/$_svc"
+-  done
+   install -v -Dm644 pkg/common/salt.bash "$pkgdir/usr/share/bash-completion/completions/salt"
+   install -v -Dm644 pkg/common/salt.zsh "$pkgdir/usr/share/zsh/site-functions/_salt"
+   install -v -Dm644 -t "$pkgdir/usr/share/fish/vendor_completions.d" pkg/common/fish-completions/*
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,5 +12,4 @@
+ python-pyzmq
+ python-requests
+ python-setuptools
+-python-systemd
+ python-yaml

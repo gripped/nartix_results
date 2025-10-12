@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=nanobind
+ pkgdesc="Tiny and efficient C++/Python bindings"
+-pkgver=2.9.2
++pkgver=2.7.0
+ pkgrel=1
+ arch=(any)
+ url="https://github.com/wjakob/nanobind"
+@@ -18,16 +18,13 @@
+ )
+ checkdepends=(
+   python-pytest
+-  python-pytorch
+   python-scipy
+-  python-tensorflow
+-  python-tests
+ )
+ source=(
+   "$pkgname-$pkgver::git+$url.git#tag=v$pkgver"
+   "git+https://github.com/Tessil/robin-map.git"
+ )
+-sha512sums=('9c1f762948100c9f88beea1a21672ee8141dc2e5d8a053ded65b2a1d7b9aedaa3f679fac7e8e8772b56f6ce9a36669b467b50009cdc6bf3e17cef525111e0187'
++sha512sums=('c2b892738351a2f89cf498a7751b03abcdd3e60cb4955c79ae518da4c753716dee298129e945713be9f88f4ab585db4f6bf9744dea8d231d427108d5e082bd71'
+             'SKIP')
+ 
+ prepare() {

@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,20 +11,20 @@
+ checkdepends=(xorg-server-xvfb)
+ provides=(libhandy-0.0.so)
+ _commit=aa6b6f43d505383538a2a3e7b4fcdd6a8ada85ff  # libhandy-0-0
+-source=("git+https://gitlab.gnome.org/GNOME/libhandy.git#commit=$_commit")
++source=("libhandy-${pkgver}::git+https://gitlab.gnome.org/GNOME/libhandy.git#commit=$_commit")
+ sha256sums=('SKIP')
+ 
+ prepare() {
+-  cd libhandy
++  cd libhandy-${pkgver}
+ }
+ 
+ pkgver() {
+-  cd libhandy
++  cd libhandy-${pkgver}
+   git describe --tags | sed 's/^v//;s/-/+/g'
+ }
+ 
+ build() {
+-  arch-meson libhandy build \
++  arch-meson libhandy-${pkgver} build \
+     -D glade_catalog=disabled \
+     -D examples=false
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ prepare() {
+-cd libhandy
++cd libhandy-${pkgver}
+ }
+ build() {
+-arch-meson libhandy build \
++arch-meson libhandy-${pkgver} build \
+ -D glade_catalog=disabled \
+ -D examples=false
+ meson compile -C build

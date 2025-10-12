@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ arch=('x86_64')
+ url="https://xorg.freedesktop.org/"
+ license=('MIT')
+-depends=('systemd-libs' 'mesa' 'libdrm' 'glibc')
+-makedepends=('xorg-server-devel' 'systemd' 'X-ABI-VIDEODRV_VERSION=25.2' 'meson')
++depends=('libudev' 'mesa' 'libdrm' 'glibc')
++makedepends=('xorg-server-devel' 'udev' 'X-ABI-VIDEODRV_VERSION=25.2' 'meson')
+ conflicts=('xorg-server<1.20.0' 'X-ABI-VIDEODRV_VERSION<25' 'X-ABI-VIDEODRV_VERSION>=26')
+ groups=('xorg-drivers')
+ source=(${url}/releases/individual/driver/${pkgname}-${pkgver}.tar.xz{,.sig})
+@@ -20,7 +20,7 @@
+   export CXXFLAGS=${CXXFLAGS/-fno-plt}
+   export LDFLAGS=${LDFLAGS/-Wl,-z,now}
+ 
+-  arch-meson $pkgname-$pkgver build \
++  artix-meson $pkgname-$pkgver build \
+     -D glamor=enabled
+ 
+   meson configure build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,8 @@
+ X-ABI-VIDEODRV_VERSION
+ glibc
+ libdrm
++libudev
+ mesa
+ meson
+-systemd
+-systemd-libs
++udev
+ xorg-server-devel

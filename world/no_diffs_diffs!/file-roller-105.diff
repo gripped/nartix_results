@@ -1,0 +1,83 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+   pango
+ )
+ makedepends=(
+-  7zip
++  appstream-glib
+   arj
+   binutils
+   bzip3
+@@ -32,17 +32,16 @@
+   lhasa
+   lrzip
+   meson
++  p7zip
+   python
+   rpmextract
+   squashfs-tools
+-  unace
+   unrar
+   unzip
+   yelp-tools
+   zip
+ )
+ optdepends=(
+-  '7zip: 7z archive support'
+   'arj: arj archive support'
+   'binutils: ar archive support'
+   'bzip3: bzip3 compression support'
+@@ -51,6 +50,7 @@
+   'dpkg: deb archive support'
+   'lhasa: LHA/LZA archive support'
+   'lrzip: lrzip compression support'
++  'p7zip: 7z archive support'
+   'rpmextract: rpm archive support'
+   'squashfs-tools: squashfs image support'
+   'unace: ACE archive support'
+@@ -67,7 +67,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+-7zip
++appstream-glib
+ arj
+ binutils
+ bzip3
+@@ -20,11 +20,11 @@
+ libnautilus-extension
+ lrzip
+ meson
++p7zip
+ pango
+ python
+ rpmextract
+ squashfs-tools
+-unace
+ unrar
+ unzip
+ yelp-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

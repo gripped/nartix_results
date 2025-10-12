@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('GPL-2.0-or-later')
+ depends=('mate-panel' 'libmatekbd' 'gettext' 'libnotify' 'libxss' 'mate-desktop' 'mate-menus' 'mate-session-manager')
+-makedepends=('autoconf-archive' 'glib2-devel' 'mate-common' 'systemd')
++makedepends=('autoconf-archive' 'glib2-devel' 'mate-common' 'elogind')
+ groups=('mate-extra')
+ conflicts=('mate-screensaver-gtk3')
+ replaces=('mate-screensaver-gtk3')
+@@ -30,7 +30,8 @@
+ 	           --with-mit-ext \
+ 	           --with-libnotify \
+ 	           --enable-locking \
+-	           --without-console-kit
++	           --without-console-kit \
++	           --with-elogind=yes
+ 	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ autoconf-archive
++elogind
+ gettext
+ glib2-devel
+ libmatekbd
+@@ -9,4 +10,3 @@
+ mate-menus
+ mate-panel
+ mate-session-manager
+-systemd

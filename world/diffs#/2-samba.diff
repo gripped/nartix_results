@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -32,7 +32,7 @@
+   python-markdown
+   readline
+   rpcsvc-proto
+-  systemd
++
+   talloc
+   tdb
+   tevent
+@@ -80,8 +80,7 @@
+     --with-ldap \
+     --with-winbind \
+     --with-acl-support \
+-    --with-systemd \
+-    --systemd-install-services \
++    --without-systemd \
+     --with-pam \
+     --with-pammodulesdir=/usr/lib/security \
+     --private-libraries='!ldb' \
+@@ -280,7 +279,6 @@
+ backup=(
+   etc/logrotate.d/samba
+   etc/pam.d/samba
+-  etc/conf.d/samba
+ )
+ install=samba.install
+ 
+@@ -296,9 +294,6 @@
+       "${pkgdir}"/usr/${script}
+   done
+ 
+-  sed -i -e '/^EnvironmentFile/ s/sysconfig/conf.d/' "${pkgdir}"/usr/lib/systemd/system/*.service
+-  install -d -m755  "${pkgdir}"/etc/conf.d
+-  install -m644 "${srcdir}"/samba-${pkgver}/packaging/systemd/samba.sysconfig "${pkgdir}"/etc/conf.d/samba
+ 
+   install -D -m644 "${srcdir}"/samba.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/samba.conf
+   install -d -m755 "${pkgdir}"/etc/samba
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -37,7 +37,6 @@
+ readline
+ rpcsvc-proto
+ smbclient>
+-systemd
+ talloc
+ tdb
+ tevent

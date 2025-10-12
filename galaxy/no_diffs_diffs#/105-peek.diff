@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+   mkdir $pkgname/build
+   cd $pkgname/build
+ 
+-  arch-meson ..
++  artix-meson ..
+ 
+   ninja
+ }
+@@ -37,4 +37,3 @@
+ 
+   DESTDIR="$pkgdir" ninja install
+ }
+-
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ mkdir $pkgname/build
+ cd $pkgname/build
+-arch-meson ..
++artix-meson ..
+ ninja
+ }

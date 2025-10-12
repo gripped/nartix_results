@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,39 +3,27 @@
+ pkgver=10.2+2.0.2
+ pkgrel=1
+ pkgdesc='Compact Disc Digital Audio (CDDA) extraction tool using libcdio for CDROM access'
+-arch=(x86_64)
++arch=('x86_64')
+ url='https://www.gnu.org/software/libcdio/'
+-license=(GPL-3.0-or-later)
+-depends=(
+-  glibc
+-  libcdio
+-)
+-makedepends=(git)
+-source=("git+https://github.com/rocky/libcdio-paranoia.git#tag=release-$pkgver")
+-b2sums=(c7badd7b7fa2c65df0b328a9aacc001ff970ea9cc4212ea6b68ffc13f4e301bbed7239f50e52ff453dc78ce1bb0a69ecfd3efb0801c1af8556f926daf822562e)
+-validpgpkeys=(DAA63BC2582034A02B923D521A8DE5008275EC21) # R. Bernstein <rocky@panix.com>
+-
+-prepare() {
+-  cd $pkgname
+-  autoreconf -fi
+-}
++license=('GPL-3.0-or-later')
++depends=('glibc' 'libcdio')
++source=("https://github.com/rocky/$pkgname/releases/download/release-$pkgver/$pkgname-$pkgver.tar.gz")
++sha256sums=('b875d45c3f788fce82a5091c7e87869dd4298cd945e7fb873b61b3e613a32e43')
++validpgpkeys=('DAA63BC2582034A02B923D521A8DE5008275EC21') # R. Bernstein <rocky@panix.com>
+ 
+ build() {
+-  cd $pkgname
+-  ./configure \
+-    --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --localstatedir=/var
++  cd $pkgname-$pkgver
++  ./configure --prefix=/usr
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+ 
+ check() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make check
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-git
+ glibc
+ libcdio
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,6 @@
+-prepare() {
+-cd $pkgname
+-autoreconf -fi
+-}
+ build() {
+-cd $pkgname
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---localstatedir=/var
++cd $pkgname-$pkgver
++./configure --prefix=/usr
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

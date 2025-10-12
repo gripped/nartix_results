@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,8 +9,8 @@
+ arch=('x86_64')
+ license=('GPL-2.0-or-later')
+ 
+-depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua' 'systemd-libs')
+-makedepends=('git' 'systemd')
++depends=('openssl' 'pcre2' 'zlib' 'libxcrypt' 'libcrypt.so' 'lua')
++makedepends=('git')
+ 
+ backup=('etc/haproxy/haproxy.cfg')
+ 
+@@ -50,7 +50,6 @@
+     USE_OPENSSL=1 \
+     USE_PCRE2=1 USE_PCRE2_JIT=1 \
+     USE_PROMEX=1 \
+-    USE_SYSTEMD=1 \
+     USE_ZLIB=1
+ 
+     make \
+@@ -59,9 +58,6 @@
+       CFLAGS="$CFLAGS" \
+       LDFLAGS="$LDFLAGS" \
+       admin/{halog/halog,iprange/ip{,6}range}
+-    make \
+-      SBINDIR=/usr/bin \
+-      -C admin/systemd/
+ }
+ 
+ package() {
+@@ -79,8 +75,6 @@
+ 
+   install -D -m0644 ../haproxy.sysusers "$pkgdir"/usr/lib/sysusers.d/haproxy.conf
+   install -D -m0644 ../haproxy.cfg "$pkgdir"/etc/haproxy/haproxy.cfg
+-  install -D -m0644 admin/systemd/haproxy.service \
+-    "$pkgdir"/usr/lib/systemd/system/haproxy.service
+   install -D -m0644 admin/syntax-highlight/haproxy.vim \
+     "$pkgdir"/usr/share/nvim/runtime/syntax/haproxy.vim
+   cp -r examples "$pkgdir"/usr/share/haproxy/examples
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,4 @@
+ lua
+ openssl
+ pcre2
+-systemd
+-systemd-libs
+ zlib

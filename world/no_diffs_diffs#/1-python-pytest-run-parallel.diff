@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=pytest-run-parallel
+ pkgname=python-pytest-run-parallel
+ pkgver=0.7.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A simple pytest plugin to run tests concurrently"
+ arch=(any)
+ url="https://github.com/Quansight-Labs/pytest-run-parallel"
+@@ -19,12 +19,8 @@
+     python-setuptools-scm
+     python-wheel
+ )
+-optdepends=(
+-    'python-psutil: for identifying the number of available cores'
+-)
+ checkdepends=(
+-    python-hypothesis
+-    python-pytest-order
++    python-tox
+ )
+ source=("git+https://github.com/Quansight-Labs/pytest-run-parallel.git#tag=v${pkgver}")
+ sha512sums=('6ea933410d9b8cb288ff2d96d09c35cd6e37473ba54acf4eb49d89b5d2d8d7725c05365afe68b2b98e63a7bdb4f1b699602961163ffd30392711a4bb5d512989')
+@@ -35,10 +31,6 @@
+     python -m build --wheel --no-isolation
+ }
+ 
+-check() {
+-    cd $_name
+-    PYTHONPATH="$PWD/src:$PYTHONPATH" pytest -vv
+-}
+ 
+ package() {
+     cd $_name

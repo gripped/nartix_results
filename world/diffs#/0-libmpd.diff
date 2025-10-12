@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ pkgdesc='Signal based wrapper around libmpdclient'
+ arch=('x86_64')
+ url='https://gmpclient.org/'
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ depends=('glib2')
+ source=("https://download.sarine.nl/Programs/gmpc/${pkgver%.*}/${pkgname}-${pkgver}.tar.gz"
+         '0001-fix-return-value.patch'
+@@ -18,24 +18,18 @@
+ 
+ prepare() {
+   cd $pkgname-$pkgver
+-
+   patch -Np1 < "${srcdir}"/0001-fix-return-value.patch
+   patch -Np1 < "${srcdir}"/0002-include-config.h.patch
+   patch -Np1 < "${srcdir}"/0003-fix-comparison.patch
+-
+-  autoreconf -fvi
+ }
+ 
+ build() {
+   cd $pkgname-$pkgver
+-
+-  ./configure \
+-    --prefix=/usr
++  ./configure --prefix=/usr
+   make
+ }
+ 
+ package() {
+   cd $pkgname-$pkgver
+-
+   make DESTDIR="${pkgdir}" install
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,11 +3,9 @@
+ patch -Np1 < "${srcdir}"/0001-fix-return-value.patch
+ patch -Np1 < "${srcdir}"/0002-include-config.h.patch
+ patch -Np1 < "${srcdir}"/0003-fix-comparison.patch
+-autoreconf -fvi
+ }
+ build() {
+ cd $pkgname-$pkgver
+-./configure \
+---prefix=/usr
++./configure --prefix=/usr
+ make
+ }

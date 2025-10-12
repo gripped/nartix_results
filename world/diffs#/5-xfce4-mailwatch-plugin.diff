@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,30 @@
+ 
+ pkgname=xfce4-mailwatch-plugin
+-pkgver=1.4.0
++pkgver=1.3.1
+ pkgrel=1
+ pkgdesc="Multi-protocol, multi-mailbox mail watcher for the Xfce4 panel"
+ arch=('x86_64')
+-url="https://docs.xfce.org/panel-plugins/xfce4-mailwatch-plugin/start"
+-license=('GPL-2.0-or-later')
++url="https://docs.xfce.org/panel-plugins/xfce4-mailwatch-plugin"
++license=('GPL2')
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel' 'gnutls')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-mailwatch-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('691a6177d2c7d3b0e35c8a75aa838c231101aa9f6ca9e6eb565bb5a835ea901f')
++makedepends=('intltool')
++source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('054964e9fe4ca668486400991ce1ea01d07aac7ba235f4b14d4a8f7d9800046a')
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,3 @@
+-git
+ gnutls
+-meson
+-xfce4-dev-tools
++intltool
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,9 @@
+ build() {
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

@@ -1,0 +1,86 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ 
+ pkgname=pacman
+-pkgver=7.0.0.r7.g1f38429
+-pkgrel=0
++pkgver=7.0.0.r6.gc685ae6
++pkgrel=6
+ _git_tag=7.0.0
+-_git_patch_level_commit=1f38429b1c5f30edce30c731aa352e6363cc788e
++_git_patch_level_commit=c685ae6412af04cae1eaa5d6bda8c277c7ffb8c8
+ pkgdesc="A library-based package manager with dependency support"
+ arch=('x86_64')
+ url="https://www.archlinux.org/pacman/"
+@@ -20,8 +20,7 @@
+   grep
+   libarchive libarchive.so
+   openssl libcrypto.so
+-  pacman-mirrorlist
+-  systemd
++  artix-mirrorlist
+ )
+ makedepends=(
+   asciidoc
+@@ -48,13 +47,17 @@
+         pacman.conf
+         makepkg.conf
+         alpm.sysusers
+-        rust.conf)
++        rust.conf
++        extracolors.patch
++        repo-remove-r.patch)
+ sha256sums=('06d082c3ce6f0811ca728515aa82d69d372800bd3ada99f5c445ef9429b6e3a6'
+             'b3bce9d662e189e8e49013b818f255d08494a57e13fc264625f852f087d3def2'
+-            'bc80e9d0439caddd29b99a69b5060b5589cad2398c23abc5b2b8b990fae6ad8c'
+-            'd99c1f9608362fff9ab3a2ca0a3096a317927b42a6725bc86599da6849c9c67c'
++            '03b3165fde80c3a5889ea5f9d3de190704825a262478f64a0b5d12a50deda9f3'
++            '06ec1332f835a33de2b26ae4517ffc00fbabe3abf311bd0c0d86e8f7c99575dd'
+             'c8760d7ebb6c9817d508c691c67084be251cd9c8811ee1ccf92c1278bad74c1c'
+-            '6fe03e6ea3f69d99d59a48847a8ae97c2160fca847c7aedf7b89d05e4aa9386d')
++            '6fe03e6ea3f69d99d59a48847a8ae97c2160fca847c7aedf7b89d05e4aa9386d'
++            'a78f366eee71610be1a2da1e533128af3ef188ff9ab577f3eab82ba69ad02466'
++            'f563c81338d462f3c3bbcc182b4eb4139abf078acb119c0bc730e4e777b9eb2e')
+ 
+ pkgver() {
+   cd "$pkgname"
+@@ -71,6 +74,8 @@
+     fi
+     git rebase "${_git_patch_level_commit}"
+   fi
++
++  git cherry-pick -n '0d37c1daa0990766d12d0060a353c829bf8616eb'
+ 
+   local -a patches
+   patches=($(printf '%s\n' "${source[@]}" | grep '.patch'))
+@@ -121,12 +126,5 @@
+   install -D -m644 "$srcdir/alpm.sysusers" "${pkgdir}"/usr/lib/sysusers.d/alpm.conf
+   install -m644 "$srcdir/rust.conf" "$pkgdir/etc/makepkg.conf.d"
+ 
+-  local wantsdir="$pkgdir/usr/lib/systemd/system/sockets.target.wants"
+-  install -dm755 "$wantsdir"
+-
+-  local unit
+-  for unit in dirmngr gpg-agent gpg-agent-{browser,extra,ssh} keyboxd; do
+-    ln -s "../${unit}@.socket" "$wantsdir/${unit}@etc-pacman.d-gnupg.socket"
+-  done
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++artix-mirrorlist
+ asciidoc
+ bash
+ coreutils
+@@ -17,5 +18,3 @@
+ libgpgme.so
+ meson
+ openssl
+-pacman-mirrorlist
+-systemd

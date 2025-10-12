@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,13 +11,9 @@
+ makedepends=(tcl)
+ optdepends=(tcl)
+ source=(
+-  fossil.socket
+-  fossil.service
+   https://fossil-scm.org/home/tarball/$_tag/fossil-src-$pkgver.tar.gz
+ )
+-sha256sums=('f885e17998dc1eece1688a75e516663462fe72a7f4f132def4132055777c7ff8'
+-            'c4973079facf209d3757db81df08f8d0843ede242f2a0c12281720da65e3b166'
+-            '611cfa50d08899eb993a5f475f988b4512366cded82688c906cf913e5191b525')
++sha256sums=('611cfa50d08899eb993a5f475f988b4512366cded82688c906cf913e5191b525')
+ 
+ build() {
+   cd fossil-src-$pkgver
+@@ -26,9 +22,6 @@
+ }
+ 
+ package() {
+-  install -Dm644 fossil.socket "$pkgdir"/usr/lib/systemd/system/fossil.socket
+-  install -Dm644 fossil.service "$pkgdir"/usr/lib/systemd/system/fossil@.service
+-
+   cd fossil-src-$pkgver
+   install -Dm755 fossil "$pkgdir"/usr/bin/fossil
+   install -Dm644 tools/fossil-autocomplete.bash "$pkgdir"/usr/share/bash-completion/completions/fossil

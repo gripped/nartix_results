@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+          libplist
+          media-player-info
+          qt6-base
+-         systemd-libs
++         libudev
+          udisks2
+          upower
+          util-linux-libs)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,11 +4,11 @@
+ glibc
+ libimobiledevice
+ libplist
++libudev
+ media-player-info
+ qt6-base
+ qt6-declarative
+ qt6-tools
+-systemd-libs
+ udisks2
+ upower
+ util-linux-libs

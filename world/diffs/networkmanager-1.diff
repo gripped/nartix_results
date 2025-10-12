@@ -1,0 +1,96 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,8 +47,7 @@
+   ppp
+   python-gobject
+   readline
+-  systemd
+-  systemd-libs
++  elogind
+   vala
+   vala
+   wpa_supplicant
+@@ -86,9 +85,12 @@
+ 
+     -D dist_version="$pkgver-$pkgrel"
+     -D session_tracking_consolekit=false
+-    -D suspend_resume=systemd
++    -D suspend_resume=elogind
+     -D modify_system=true
+     -D selinux=false
++    -D systemdsystemunitdir=no
++    -D session_tracking=elogind
++    -D systemd_journal=false
+ 
+     -D iwd=true
+     -D teamdctl=true
+@@ -106,7 +108,7 @@
+     -D qt=false
+   )
+ 
+-  arch-meson NetworkManager build "${meson_options[@]}"
++  artix-meson NetworkManager build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -141,10 +143,10 @@
+     libpsl
+     libteam
+     mobile-broadband-provider-info
++    elogind
+     nspr
+     nss
+     readline
+-    systemd-libs
+     wpa_supplicant
+   )
+   optdepends=(
+@@ -193,7 +195,6 @@
+   _pick cloud usr/lib/**/*nm-cloud-setup*
+   _pick cloud usr/share/man/*/nm-cloud-setup*
+ 
+-  _pick ovs usr/lib/systemd/system/NetworkManager.service.d/NetworkManager-ovs.conf
+ 
+   install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
+ }
+@@ -206,8 +207,8 @@
+     glibc
+     nspr
+     nss
+-    systemd-libs
+     util-linux-libs
++    libelogind
+   )
+   provides=(libnm.so)
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,7 @@
+ curl
+ dhcpcd
+ dnsmasq
++elogind
+ gcc-libs
+ git
+ glib2
+@@ -15,6 +16,7 @@
+ iptables
+ iwd
+ jansson
++libelogind
+ libmm-glib
+ libndp
+ libnewt
+@@ -36,8 +38,6 @@
+ ppp
+ python-gobject
+ readline
+-systemd
+-systemd-libs
+ util-linux-libs
+ vala
+ wpa_supplicant

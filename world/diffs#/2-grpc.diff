@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -71,7 +71,7 @@
+     -DgRPC_BENCHMARK_PROVIDER:STRING='package' \
+     -DgRPC_ABSL_PROVIDER:STRING='package' \
+     -DgRPC_USE_PROTO_LITE=OFF \
+-    -DgRPC_USE_SYSTEMD=ON \
++    -DgRPC_USE_SYSTEMD=OFF \
+     -DgRPC_BUILD_GRPC_CPP_PLUGIN=ON \
+     -DgRPC_BUILD_GRPC_CSHARP_PLUGIN=ON \
+     -DgRPC_BUILD_GRPC_NODE_PLUGIN=ON \
+@@ -102,7 +102,7 @@
+   export GRPC_PYTHON_BUILD_SYSTEM_CARES=1
+   export GRPC_PYTHON_BUILD_SYSTEM_RE2=1
+   export GRPC_PYTHON_BUILD_SYSTEM_ABSL=1
+-  export GRPC_PYTHON_BUILD_WITH_SYSTEMD=1
++  export GRPC_PYTHON_BUILD_WITH_SYSTEMD=0
+   export GRPC_BUILD_WITH_BORING_SSL_ASM=0
+ 
+   cd "$srcdir/$pkgbase-$pkgver"
+@@ -122,7 +122,7 @@
+ }
+ 
+ package_grpc() {
+-  depends=('glibc' 'gcc-libs' 'zlib' 'systemd-libs' 'c-ares' 'protobuf' 'openssl' 're2' 'abseil-cpp')
++  depends=('glibc' 'gcc-libs' 'zlib' 'c-ares' 'protobuf' 'openssl' 're2' 'abseil-cpp')
+   provides=(
+     'libupb.so'
+     'libgrpcpp_channelz.so'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -21,5 +21,4 @@
+ python-wheel
+ re2
+ re2c
+-systemd-libs
+ zlib

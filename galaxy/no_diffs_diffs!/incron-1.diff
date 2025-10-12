@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,13 +13,11 @@
+ source=("git+https://github.com/ar-/incron.git#commit=${_commit}"
+         '0001-GetSafePath.patch'
+         "incron.sysusers"
+-        "incron.tmpfiles"
+-        "incrond.service")
++        "incron.tmpfiles")
+ sha256sums=('SKIP'
+             '4a939f4af82c8d972478f2703aea6e524af8f7bf8bd1d8cf516ef78ff5e6713b'
+             'e5da0a3af368c286fa2b180015c9efc5aef5018c271a16620b8c30bfe6f9ccc2'
+-            '422c4a715da4037550d2f97de28f47f91d0b58983c188c6cf1d1233370e048a4'
+-            '5ff72411c704dd38823892d7fd13992509c3d906bfe0b4a5cafbe382e4e01c24')
++            '422c4a715da4037550d2f97de28f47f91d0b58983c188c6cf1d1233370e048a4')
+ 
+ prepare() {
+   cd "${srcdir}"/$pkgname
+@@ -45,7 +43,6 @@
+     CFGDIR="${pkgdir}"/etc \
+     SYSDATADIR="${pkgdir}"/etc/incron.d install
+ 
+-  install -Dm0644 "${srcdir}/incrond.service" "${pkgdir}/usr/lib/systemd/system/incrond.service"
+   install -Dm0644 "${srcdir}/incron.sysusers" "${pkgdir}/usr/lib/sysusers.d/incrond.conf"
+   install -Dm0644 "${srcdir}/incron.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/incrond.conf"
+   rm -r "$pkgdir"/{usr/sbin,var}

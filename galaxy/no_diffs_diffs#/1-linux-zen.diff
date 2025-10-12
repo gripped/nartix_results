@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgbase=linux-zen
+-pkgver=6.17.1.zen1
++pkgver=6.16.9.zen1
+ pkgrel=1
+ pkgdesc='Linux ZEN'
+ url='https://github.com/zen-kernel/zen-kernel'
+@@ -42,18 +42,18 @@
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
+   83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
+ )
+-sha256sums=('a53dbe3f41491922a61f17c5cc551e88f544d5411aeb1c8c65c402795c4f4da0'
++sha256sums=('7ac8c8a3cf05476375deaaa85dfcee095a826ffe557b437f43774fc3b64ce58d'
+             'SKIP'
+-            'd7719e1742ae58bcd81d4e72e7e163e5e4002acada6ff68ed2f350d8d5c7c82d'
++            '70a7b77e59c4a6c0ea0adfb6f361e969f1c296171111992dda1b739982baf195'
+             'SKIP'
+-            '44413e1299ad951fa2109fc0d2eec588e93b03e7a54d634d3b6e2ecd983eba94')
+-b2sums=('44fa5ec3e5471d33171830e8890f41118daa27f10eedb8dd0fe57250463a596a6fdefbc0ee68d8afab252e7635c9ca9eb3009b1849442e3f6de6231f47d1d7df'
++            'e41be3b96fa42abc1af62fa893abd7b5e6d32ab62651d5706658b6982a6de93a')
++b2sums=('b511b1be8668ff8d07cd0b87416b8acb496d23cf448cb270db7380444a8f02d36ef3df732dfbf893c60d9e8f260891e47d2befa789f9f161034cc6daf615a523'
+         'SKIP'
+-        '9baf3771c2ab396034f173472ddfb3521f90e3f33a03ed38e9cd9affa9b58ca78aa836206325c2daf85429b3db93510f4194792494043d49d517745d9a582d8c'
++        '38f00d39073d1b3eb3be12644f8d6211a85da4426d9080bcd9623a46e12c0f739ad0437578440d7d0a556b72a480e70cbe2b2dec50ec4754236d051c7a544751'
+         'SKIP'
+-        'aa58c63817e05ea9d5a2a7e2939a40a4873707187a77dc6f3ed3356d39d67aa8bc7362f41a8f64db4cc00bc480c8ee924bc76970653ee2f0f7f1370721f67cab')
+-
+-export KBUILD_BUILD_HOST=archlinux
++        'f2130b088a0682327a27e616d387c41db15d5ad0a0b7e4817e538dddb6238027dc9576b87b43d5bc25a4ac6dbab3440da143fb18b6b384e45ba830cd881169c3')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 

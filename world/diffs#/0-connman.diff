@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -57,7 +57,7 @@
+     --runstatedir=/run \
+     --bindir=/usr/bin \
+     --sbindir=/usr/bin \
+-    --with-systemdunitdir=/usr/lib/systemd/system \
++    --with-systemdunitdir=no \
+     --with-tmpfilesdir=/usr/lib/tmpfiles.d \
+     --enable-pptp \
+     --enable-openconnect \
+@@ -82,5 +82,5 @@
+   make DESTDIR="$pkgdir" install
+   install -vDm755 -t "$pkgdir/usr/bin" client/connmanctl
+   install -vDm644 -t "$pkgdir/etc/connman" src/main.conf
+-  sed -i 's/ProtectSystem=full/ProtectSystem=true/' "$pkgdir/usr/lib/systemd/system/connman.service"
++  rm -rvf "$pkgdir/usr/lib/systemd/"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ --runstatedir=/run \
+ --bindir=/usr/bin \
+ --sbindir=/usr/bin \
+---with-systemdunitdir=/usr/lib/systemd/system \
++--with-systemdunitdir=no \
+ --with-tmpfilesdir=/usr/lib/tmpfiles.d \
+ --enable-pptp \
+ --enable-openconnect \

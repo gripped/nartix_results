@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -27,7 +27,7 @@
+ build() {
+ 	cd "${pkgname}-${pkgver}"
+ 	./configure --prefix=/usr --enable-drm --enable-randr --enable-vidmode --enable-geoclue2 \
+-	--with-systemduserunitdir=/usr/lib/systemd/user
++	--with-systemduserunitdir=no
+ 	make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ build() {
+ cd "${pkgname}-${pkgver}"
+ ./configure --prefix=/usr --enable-drm --enable-randr --enable-vidmode --enable-geoclue2 \
+---with-systemduserunitdir=/usr/lib/systemd/user
++--with-systemduserunitdir=no
+ make
+ }

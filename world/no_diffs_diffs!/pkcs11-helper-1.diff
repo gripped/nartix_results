@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ pkgdesc='A library that simplifies the interaction with PKCS11 providers for end-user applications using a simple API and optional OpenSSL engine'
+ arch=('x86_64')
+ url='https://github.com/OpenSC/pkcs11-helper'
+-license=('GPL-2.0-only' 'BSD')
++license=('GPL' 'BSD')
+ depends=('gnutls' 'nss' 'openssl')
+ makedepends=('git')
+ provides=('libpkcs11-helper.so')

@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=termshark
+ pkgver=2.4.0
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc='Terminal UI for tshark, inspired by Wireshark'
+ url='https://github.com/gcla/termshark'
+ arch=('x86_64')
+@@ -14,6 +14,7 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
++  export GO111MODULE=on
+   export CGO_LDFLAGS="${LDFLAGS}"
+   export CGO_CPPFLAGS="${CPPFLAGS}"
+   export CGO_CFLAGS="${CFLAGS}"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cd ${pkgname}-${pkgver}
++export GO111MODULE=on
+ export CGO_LDFLAGS="${LDFLAGS}"
+ export CGO_CPPFLAGS="${CPPFLAGS}"
+ export CGO_CFLAGS="${CFLAGS}"

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -71,7 +71,7 @@
+ 
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
+-  arch-meson ft2demos-$pkgver build "${meson_options[@]}"
++  artix-meson ft2demos-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,6 +12,6 @@
+ -D freetype2:harfbuzz=dynamic
+ )
+ export MESON_PACKAGE_CACHE_DIR="$srcdir"
+-arch-meson ft2demos-$pkgver build "${meson_options[@]}"
++artix-meson ft2demos-$pkgver build "${meson_options[@]}"
+ meson compile -C build
+ }

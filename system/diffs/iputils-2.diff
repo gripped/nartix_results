@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+   iproute
+   meson
+   perl-sgmls
+-  systemd
+ )
+ conflicts=(
+   arping
+@@ -31,7 +30,7 @@
+ build() {
+   mkdir -p build
+   cd build
+-  arch-meson ../$pkgname
++  artix-meson ../$pkgname
+   ninja
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,4 +5,3 @@
+ libidn2
+ meson
+ perl-sgmls
+-systemd

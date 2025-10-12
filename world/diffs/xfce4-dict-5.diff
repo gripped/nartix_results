@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,25 +1,30 @@
+ 
+ pkgname=xfce4-dict
+-pkgver=0.8.9
++pkgver=0.8.6
+ pkgrel=1
+ pkgdesc="A dictionary plugin for the Xfce panel"
+ arch=('x86_64')
+ url="https://docs.xfce.org/apps/xfce4-dict/start"
+-license=('GPL-2.0-or-later')
++license=('GPL2')
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel' 'librsvg' 'hicolor-icon-theme')
+-makedepends=('git' 'glib2-devel' 'meson' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/apps/xfce4-dict.git#tag=$pkgname-$pkgver")
+-sha256sums=('48381c8d18dc0baacfcf01150e291c9683ba0d9a26da89a770de0d46e3e469d0')
+-
++makedepends=('intltool')
++source=(https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('ae5db7ca70354d3293fc08eaf7ca40cdbc91799a219f199d824684b39e6c0a41')
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,4 @@
+-git
+-glib2-devel
+ hicolor-icon-theme
++intltool
+ librsvg
+-meson
+-xfce4-dev-tools
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,9 @@
+ build() {
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

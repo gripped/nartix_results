@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,8 @@
+ arch=(x86_64)
+ url="https://github.com/intel/igsc/"
+ license=(Apache-2.0)
+-depends=(glibc intel-metee systemd-libs)
+-makedepends=(cmake systemd)
++depends=(glibc intel-metee libudev)
++makedepends=(cmake udev)
+ source=(${url}/archive/V${pkgver}/${pkgname}-${pkgver}.tar.gz)
+ sha256sums=('516a099239ad0541598be87025556c878c0d11c6d43e09115d2bb2e24508b6ec')
+ 
+@@ -16,6 +16,8 @@
+     -G 'Unix Makefiles' \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_INSTALL_PREFIX=/usr \
++    -DCMAKE_PREFIX_PATH=/usr \
++    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+     -DENABLE_WERROR=OFF \
+     -Wno-dev
+   cmake --build build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,5 @@
+ cmake
+ glibc
+ intel-metee
+-systemd
+-systemd-libs
++libudev
++udev

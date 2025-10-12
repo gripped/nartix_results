@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+   lib32-libnsl
+   lib32-libtirpc
+   lib32-libxcrypt
+-  lib32-systemd
++  lib32-elogind
+   pam
+ )
+ makedepends=(
+@@ -22,7 +22,7 @@
+   w3m
+ )
+ _tag=v$pkgver
+-source=(git+https://github.com/linux-pam/linux-pam.git?signed#tag=${_tag})
++source=(git+https://github.com/linux-pam/linux-pam.git#tag=${_tag})
+ validpgpkeys=(296D6F29A020808E8717A8842DB5BD89A340AEB7) # Dimitry V. Levin <ldv@altlinux.org>
+ b2sums=('ae06eea144c64ba5efa3b71df9094190eb094bcc8d2e6f9dcc93816bbf5070ff4c8e82a3cf1e2a6a43411a51e9c394c271fc7d734ca745374f19700526d51063')
+ options=(!emptydirs)
+@@ -38,13 +38,13 @@
+   export CXX='g++ -m32'
+   export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+ 
+-  arch-meson linux-pam \
++  artix-meson linux-pam \
+     --libdir=lib32 \
+-    -Dlogind=enabled \
++    -Dlogind=disabled \
+     -Ddocs=disabled \
+     -Deconf=disabled \
+     -Dselinux=disabled \
+-    -Delogind=disabled \
++    -Delogind=enabled \
+     -Dpam_userdb=disabled \
+     build
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,11 @@
+ fop
+ git
+ lib32-audit
++lib32-elogind
+ lib32-flex
+ lib32-libnsl
+ lib32-libtirpc
+ lib32-libxcrypt
+-lib32-systemd
+ meson
+ pam
+ w3m

@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -42,10 +42,6 @@
+   python -m build --wheel --no-isolation
+ }
+ 
+-check() {
+-  cd "${pkgname#python-}"
+-  pytest
+-}
+ 
+ package() {
+   cd "${pkgname#python-}"

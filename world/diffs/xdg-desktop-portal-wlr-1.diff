@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+     'pipewire'
+     'pipewire-session-manager'
+     'slurp'
+-    'systemd-libs'
++    'libelogind'
+     'wayland'
+     'xdg-desktop-portal'
+ )
+@@ -33,7 +33,7 @@
+ 
+ build() {
+     cd "${pkgname}-${pkgver}"
+-    arch-meson -Dsd-bus-provider=libsystemd build
++    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
+     ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ glibc
+ grim
+ libdrm
++libelogind
+ libinih
+ libpipewire
+ mesa
+@@ -9,7 +10,6 @@
+ pipewire-session-manager
+ scdoc
+ slurp
+-systemd-libs
+ wayland
+ wayland-protocols
+ xdg-desktop-portal

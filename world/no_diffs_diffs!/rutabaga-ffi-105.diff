@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ 
+ build() {
+   cd rutabaga_gfx-$pkgver/ffi
+-  arch-meson . build -Dgfxstream=true --buildtype=release
++  artix-meson . build -Dgfxstream=true --buildtype=release
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd rutabaga_gfx-$pkgver/ffi
+-arch-meson . build -Dgfxstream=true --buildtype=release
++artix-meson . build -Dgfxstream=true --buildtype=release
+ meson compile -C build
+ }

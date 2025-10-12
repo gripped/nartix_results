@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cinnamon-control-center
+-pkgver=6.4.2
++pkgver=6.0.0
+ pkgrel=1
+ pkgdesc="The Control Center for Cinnamon"
+ arch=(x86_64)
+@@ -11,14 +11,14 @@
+ optdepends=('cinnamon-translations: i18n'
+             'gnome-color-manager: for color management tasks'
+             'gnome-online-accounts: for the online accounts module')
+-makedepends=(meson samurai gnome-online-accounts glib2-devel)
++makedepends=(meson samurai gnome-online-accounts)
+ options=(!emptydirs)
+ source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('2dfeb547d22c5ce3663120830dd96cccd3673c208f62c498b12346a485a57c1e')
+-b2sums=('893f649c853bd1fd74cd46d8d75de395f6f13490c42443edb3e1bcde7556a8701a1d112f0f0e78b5e1fb57843abbcc8e0f440d65be67aa77d28542365fb6438f')
++sha256sums=('8dcf3b1a5e0388f5292de27120482c692a79e7c31aea583301ad083a8c449532')
++b2sums=('b856e4c258a76aa5e558cca53ac333df81ae135d731a5de65470282e741a95f2c179fbd9f28e8bb26824de5ee1f9b9fcb0143fee1760800149a345085c45f11b')
+ 
+ build() {
+-  arch-meson build ${pkgname}-${pkgver}
++  artix-meson build ${pkgname}-${pkgver}
+   samu -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ cinnamon-menus
+ cinnamon-settings-daemon
+ colord
+-glib2-devel
+ gnome-online-accounts
+ libgnomekbd
+ libmm-glib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson build ${pkgname}-${pkgver}
++artix-meson build ${pkgname}-${pkgver}
+ samu -C build
+ }

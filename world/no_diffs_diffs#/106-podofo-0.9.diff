@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ }
+ 
+ build() {
+-  cmake -B build -S ${_pkgname}-${pkgver} \
++  artix-cmake -B build -S ${_pkgname}-${pkgver} \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_LIBDIR=lib/podofo-0.9 \
+     -DCMAKE_INSTALL_INCLUDEDIR=include/podofo-0.9 \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ sed -e 's|@CMAKE_INSTALL_FULL_INCLUDEDIR@/podofo|@CMAKE_INSTALL_FULL_INCLUDEDIR@|' -i ${_pkgname}-${pkgver}/src/podofo/libpodofo.pc.in
+ }
+ build() {
+-cmake -B build -S ${_pkgname}-${pkgver} \
++artix-cmake -B build -S ${_pkgname}-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_INSTALL_LIBDIR=lib/podofo-0.9 \
+ -DCMAKE_INSTALL_INCLUDEDIR=include/podofo-0.9 \

@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,7 @@
+          qt6-base
+          qt6-declarative
+          solid
+-         systemd-libs
++         libelogind
+          wayland)
+ makedepends=(extra-cmake-modules
+              kdoctools
+@@ -61,4 +61,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -19,6 +19,7 @@
+ ksvg
+ kwindowsystem
+ kxmlgui
++libelogind
+ libkscreen
+ libplasma
+ libxcb
+@@ -29,5 +30,4 @@
+ qt6-base
+ qt6-declarative
+ solid
+-systemd-libs
+ wayland

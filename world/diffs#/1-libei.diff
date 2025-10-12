@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+   gcc-libs
+   glibc
+   libevdev
+-  systemd-libs
++  libelogind
+ )
+ makedepends=(
+   doxygen
+@@ -27,7 +27,7 @@
+   python-pytest
+   python-structlog
+   python-yaml
+-  systemd
++  elogind
+ )
+ checkdepends=(
+   python-pytest-xdist
+@@ -51,12 +51,13 @@
+ 
+ build() {
+   local meson_options=(
++    -D sd-bus-provider=libelogind
+     -D documentation=api
+   )
+ 
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
+-  arch-meson libei build "${meson_options[@]}"
++  artix-meson libei build "${meson_options[@]}"
+   meson compile -C build
+   meson compile -C build doxygen
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,10 @@
+ 
+ doxygen
++elogind
+ gcc-libs
+ git
+ glibc
++libelogind
+ libevdev
+ libxkbcommon
+ meson
+@@ -12,5 +14,3 @@
+ python-pytest
+ python-structlog
+ python-yaml
+-systemd
+-systemd-libs

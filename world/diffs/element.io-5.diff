@@ -1,0 +1,173 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,53 +1,38 @@
+ 
+-_electron=electron38
++_electron=electron24
+ pkgbase=element.io
+ pkgname=(element-web element-desktop)
+-pkgver=1.12.0
++pkgver=1.11.33
+ pkgrel=1
+ pkgdesc="Glossy Matrix collaboration client — "
+ arch=(x86_64)
+ url="https://element.io"
+ license=(Apache)
+-makedepends=(
+-  ${_electron}
+-  git
+-  jq
+-  libxcrypt-compat
+-  nodejs
+-  npm
+-  python
+-  python-setuptools
+-  rust
+-  tcl
+-  yarn
+-)
+-_url="https://github.com/element-hq/element"
+-source=(git+https://github.com/element-hq/element-desktop.git#tag=v${pkgver}?signed
+-        git+https://github.com/element-hq/element-web.git#tag=v${pkgver}?signed
++makedepends=(npm git yarn python rust tcl ${_electron} nodejs-lts-gallium libxcrypt-compat)
++_url="https://github.com/vector-im/element"
++source=(element-web-${pkgver}.tar.gz::${_url}-web/archive/v${pkgver}.tar.gz
++        element-web-${pkgver}.tar.gz.asc::${_url}-web/releases/download/v${pkgver}/v${pkgver}-src.tar.gz.asc
++        element-desktop-${pkgver}.tar.gz::${_url}-desktop/archive/v${pkgver}.tar.gz
++        element-desktop-${pkgver}.tar.gz.asc::${_url}-desktop/releases/download/v${pkgver}/v${pkgver}-src.tar.gz.asc
+         autolaunch.patch
+         io.element.Element.desktop
+         element-desktop.sh)
+-sha256sums=('24c60c69a6de90f68ae8dbcb6f109b6fa1648caf6f7e714e558101c2ef80960f'
+-            '35ebbbaab14d9a0acd577ef51b592cc542fc072a4070b5c95ab7c502402b274a'
++sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
++            'SKIP'
++            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
++            'SKIP'
+             '268485f35103d00a89be7f5c84703e3d393350c71f4f90932f7bcb5ea2fd094f'
+-            '16a21cd4ad144641e0f4cbe18ed1b665565ed6f3f3e67d5bccba2806491674a9'
++            '0103f28a32fe31f698836516783c1c70a76a0117b5df7fd0af5c422c224220f9'
+             'c1bd9ace215e3ec9af14d7f28b163fc8c8b42e23a2cf04ce6f4ce2fcc465feba')
+ validpgpkeys=(712BFBEE92DCA45252DB17D7C7BE97EFA179B100) # Element Releases <releases@riot.im>
+ 
+ prepare() {
+-  _electron_major=$(jq --raw-output '.devDependencies.electron' < "${srcdir}/element-desktop/package.json" | sed 's/^[~^]\?\([0-9]\+\)\(\.[0-9]\+\)*$/\1/')
+-
+-  if [ "${_electron}" != "electron${_electron_major}" ] ; then
+-    echo "Error: Incorrect electron version detected. Please change the value of \"_electron\" from \"${_electron}\" to \"electron${_electron_major}\"."
+-    return 1
+-  fi
+-
+   sed -i "s|@ELECTRON@|${_electron}|" element-desktop.sh
+ 
+-  cd element-web
++  cd element-web-${pkgver}
+   yarn install --no-fund
+ 
+-  cd ../element-desktop
++  cd ../element-desktop-${pkgver}
+   patch -p1 < ../autolaunch.patch
+   sed -i 's|"target": "deb"|"target": "dir"|' package.json
+   sed -i 's|"https://packages.element.io/desktop/update/"|null|' element.io/release/config.json
+@@ -56,21 +41,21 @@
+ 
+ build() {
+   export NODE_OPTIONS=--openssl-legacy-provider
+-  cd element-web
+-  VERSION=${pkgver} yarn build
++  cd element-web-${pkgver}
++  VERSION=${pkgver} yarn build --offline
+ 
+-  cd ../element-desktop
++  cd ../element-desktop-${pkgver}
+   export SQLCIPHER_BUNDLED=1
+   export CFLAGS+=" -ffat-lto-objects"
+   yarn run build:native
+-  yarn run build --publish never
++  yarn run build
+ }
+ 
+ package_element-web() {
+   pkgdesc+="web version."
+   replaces=(riot-web vector-web)
+ 
+-  cd element-web
++  cd element-web-${pkgver}
+ 
+   install -d "${pkgdir}"/{usr/share/webapps,etc/webapps}/element
+ 
+@@ -86,7 +71,7 @@
+   depends=("element-web=${pkgver}" ${_electron} libsecret)
+   backup=('etc/element/config.json')
+ 
+-  cd element-desktop
++  cd element-desktop-${pkgver}
+ 
+   install -d "${pkgdir}"{/usr/lib/element/,/etc/webapps/element}
+ 
+@@ -99,6 +84,8 @@
+   install -Dm644 ../io.element.Element.desktop -t "${pkgdir}"/usr/share/applications/
+   install -Dm755 ../${pkgname}.sh "${pkgdir}"/usr/bin/${pkgname}
+ 
+-  install -Dm644 ../element-web/res/themes/element/img/logos/element-logo.svg "${pkgdir}"/usr/share/icons/hicolor/scalable/apps/io.element.Element.svg
+-  install -Dm644 build/icon.png "${pkgdir}"/usr/share/icons/hicolor/512x512/apps/io.element.Element.png
++  install -Dm644 ../element-web-${pkgver}/res/themes/element/img/logos/element-logo.svg "${pkgdir}"/usr/share/icons/hicolor/scalable/apps/io.element.Element.svg
++  for i in 16 24 48 64 96 128 256 512; do
++    install -Dm644 build/icons/${i}x${i}.png "${pkgdir}"/usr/share/icons/hicolor/${i}x${i}/apps/io.element.Element.png
++  done
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +0,0 @@
+-electron38
+-element-web
+-git
+-jq
+-libsecret
+-libxcrypt-compat
+-nodejs
+-npm
+-python
+-python-setuptools
+-rust
+-tcl
+-yarn
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,8 @@
+ prepare() {
+-_electron_major=$(jq --raw-output '.devDependencies.electron' < "${srcdir}/element-desktop/package.json" | sed 's/^[~^]\?\([0-9]\+\)\(\.[0-9]\+\)*$/\1/')
+-if [ "${_electron}" != "electron${_electron_major}" ] ; then
+-echo "Error: Incorrect electron version detected. Please change the value of \"_electron\" from \"${_electron}\" to \"electron${_electron_major}\"."
+-return 1
+-fi
+ sed -i "s|@ELECTRON@|${_electron}|" element-desktop.sh
+-cd element-web
++cd element-web-${pkgver}
+ yarn install --no-fund
+-cd ../element-desktop
++cd ../element-desktop-${pkgver}
+ patch -p1 < ../autolaunch.patch
+ sed -i 's|"target": "deb"|"target": "dir"|' package.json
+ sed -i 's|"https://packages.element.io/desktop/update/"|null|' element.io/release/config.json
+@@ -15,11 +10,11 @@
+ }
+ build() {
+ export NODE_OPTIONS=--openssl-legacy-provider
+-cd element-web
+-VERSION=${pkgver} yarn build
+-cd ../element-desktop
++cd element-web-${pkgver}
++VERSION=${pkgver} yarn build --offline
++cd ../element-desktop-${pkgver}
+ export SQLCIPHER_BUNDLED=1
+ export CFLAGS+=" -ffat-lto-objects"
+ yarn run build:native
+-yarn run build --publish never
++yarn run build
+ }

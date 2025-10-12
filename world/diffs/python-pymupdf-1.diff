@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=PyMuPDF
+ pkgname=python-pymupdf
+ pkgver=1.26.4
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="Python bindings for MuPDF's rendering library"
+ arch=(x86_64)
+ url="https://github.com/pymupdf/PyMuPDF"
+@@ -22,7 +22,7 @@
+   python-setuptools
+   python-wheel
+   swig
+-  systemd
++  udev
+ )
+ checkdepends=(
+   python-fonttools
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,4 +10,4 @@
+ python-setuptools
+ python-wheel
+ swig
+-systemd
++udev

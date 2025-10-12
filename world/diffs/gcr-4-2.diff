@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+   libp11-kit
+   libsecret
+   openssh
+-  systemd-libs
+ )
+ makedepends=(
+   gi-docgen
+@@ -26,7 +25,6 @@
+   gobject-introspection
+   gtk4
+   meson
+-  systemd
+   vala
+ )
+ source=("git+https://gitlab.gnome.org/GNOME/gcr.git?signed#tag=$pkgver")
+@@ -45,7 +43,7 @@
+     -D crypto=gnutls
+   )
+ 
+-  arch-meson gcr build "${meson_options[@]}"
++  artix-meson gcr build -Dsystemd=disabled "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,6 +11,4 @@
+ libsecret
+ meson
+ openssh
+-systemd
+-systemd-libs
+ vala

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ validpgpkeys=(4570C3DB9C3B37ABCC9086CB3EBDF887C2E2C548) # Randy <randy408@protonmail.com>
+ 
+ build() {
+-  arch-meson build libspng \
++  artix-meson build libspng \
+     -Dbuild_examples=false
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson build libspng \
++artix-meson build libspng \
+ -Dbuild_examples=false
+ meson compile -C build
+ }

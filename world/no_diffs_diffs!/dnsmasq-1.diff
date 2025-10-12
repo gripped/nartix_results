@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,11 +11,9 @@
+ backup=('etc/dnsmasq.conf')
+ validpgpkeys=('D6EACBD6EE46B834248D111215CDDA6AE19135A2') # Simon Kelley <simon@thekelleys.org.uk>
+ source=("http://www.thekelleys.org.uk/$pkgname/$pkgname-$pkgver.tar.xz"{,.asc}
+-        'dnsmasq.service'
+-        'dnsmasq.sysusers')
++        'dnsmasq-sysusers.conf')
+ sha256sums=('f622682848b33677adb2b6ad08264618a2ae0a01da486a93fd8cd91186b3d153'
+             'SKIP'
+-            '297dbae8cfa3d353284820dd87cc65c37d1ef289cac3a5c3ede079413d31eeec'
+             'e805d41b291dfe6988d6896d311ff2fa62d8291067572f3db1059b0217f31aff')
+ 
+ _build_copts='-DHAVE_DNSSEC -DHAVE_DBUS -DHAVE_LIBIDN2 -DHAVE_CONNTRACK -DHAVE_NFTSET'
+@@ -52,8 +50,7 @@
+ 
+   install -Dm0644 "dbus/dnsmasq.conf" "$pkgdir"/usr/share/dbus-1/system.d/dnsmasq.conf
+   install -Dm0644 "dnsmasq.conf.example" "$pkgdir"/etc/dnsmasq.conf
+-  install -Dm0644 "$srcdir/dnsmasq.service" "$pkgdir"/usr/lib/systemd/system/dnsmasq.service
+-  install -Dm0644 "$srcdir/dnsmasq.sysusers" "$pkgdir"/usr/lib/sysusers.d/dnsmasq.conf
++  install -Dm0644 "$srcdir/dnsmasq-sysusers.conf" "$pkgdir"/usr/lib/sysusers.d/dnsmasq.conf
+ 
+   sed -i 's,%%PREFIX%%,/usr,' "$pkgdir"/etc/dnsmasq.conf
+   install -Dm0644 "trust-anchors.conf" "$pkgdir"/usr/share/dnsmasq/trust-anchors.conf

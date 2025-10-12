@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,26 +1,32 @@
+ 
+ pkgname=thunar-archive-plugin
+-pkgver=0.6.0
++pkgver=0.5.2
+ pkgrel=1
+ pkgdesc="Adds archive operations to the Thunar file context menus"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/thunar/archive"
+-license=('GPL-2.0-only')
++license=('GPL2')
+ groups=('xfce4-goodies')
+ depends=('thunar' 'hicolor-icon-theme')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
++makedepends=('intltool' 'xfce4-dev-tools')
+ optdepends=('file-roller' 'engrampa' 'ark' 'xarchiver')
+-source=("git+https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('01543943f188c341f2b4c698b99279de81202673a5446ff1b391d51e95fc46f8')
++source=(https://archive.xfce.org/src/thunar-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('6379f877bcfc0ea85db9f43723b6fb317893050c712bd03c2ae3232fb9d5ade3')
+ 
+ build() {
+-  arch-meson $pkgname build \
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --libexecdir=/usr/lib/xfce4 \
+     --localstatedir=/var \
+-    --libexecdir=/usr/lib/xfce4
+-  meson compile -C build
++    --disable-static
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+-git
+ hicolor-icon-theme
+-meson
++intltool
+ thunar
+ xfce4-dev-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,10 @@
+ build() {
+-arch-meson $pkgname build \
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--libexecdir=/usr/lib/xfce4 \
+ --localstatedir=/var \
+---libexecdir=/usr/lib/xfce4
+-meson compile -C build
++--disable-static
++make
+ }

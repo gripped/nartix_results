@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,6 @@
+   glibc
+   libsoup3
+   libxml2
+-  systemd
+ )
+ makedepends=(
+   asciidoc
+@@ -33,7 +32,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,5 +7,4 @@
+ libsoup3
+ libxml2
+ meson
+-systemd
+ xmlto

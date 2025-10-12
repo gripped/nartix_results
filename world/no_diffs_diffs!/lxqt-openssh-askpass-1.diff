@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,25 @@
+ 
+ pkgname=lxqt-openssh-askpass
+-pkgver=2.2.0
+-pkgrel=1
++pkgver=1.4.0
++pkgrel=1.1
+ pkgdesc="LXQt openssh password prompt"
+ arch=("x86_64")
+ groups=("lxqt")
+ url="https://github.com/lxqt/$pkgname"
+-license=("LGPL-2.1-or-later")
++license=("LGPL2.1")
+ depends=("liblxqt")
+ makedepends=("cmake" "lxqt-build-tools")
+ source=(
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc}
+ )
+-sha256sums=('bb2966427a9462b26059f76ac0504c4d3bf539a6b02e45357c4f9ee99f9b6f3c'
++sha256sums=('2ba6bcac5d90db846dce7895d03294126315ec20e59977f9f2faadf3e668c54a'
+             'SKIP')
+ validpgpkeys=(
++	"169704C6FB490C6892C7F23C37E0AF1FDA48F373"  # Jerome Leclanche <jerome@leclan.ch>
++	"7C733BA5F585AAD669E4D23A42C9C8D3AF5EA5E3"  # Alf Gaida <agaida@siduction.org>
+ 	"19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # Pedram Pourang <tsujan2000@gmail.com>
+ )
++
+ 
+ build() {
+ 	mkdir -p build

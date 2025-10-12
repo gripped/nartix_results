@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+   'pam'
+   'perl'
+   'pixman'
+-  'systemd-libs'
++  'libudev'
+   'xkeyboard-config'
+   'xorg-xauth'
+   'xorg-xinit'
+@@ -147,4 +147,6 @@
+   install -Dm0755 "$srcdir"/Xsession "$pkgdir"/etc/X11/tigervnc/Xsession
+ 
+   strip-nondeterminism "$pkgdir"/usr/share/vnc/classes/VncViewer.jar
++
++  sed -i '/systemd/Id' "$pkgdir"/etc/pam.d/tigervnc
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,6 +12,7 @@
+ java-environment
+ libgl
+ libjpeg-turbo
++libudev
+ libunwind
+ libx11
+ libxau
+@@ -32,7 +33,6 @@
+ perl
+ pixman
+ strip-nondeterminism
+-systemd-libs
+ xkeyboard-config
+ xorg-font-util
+ xorg-util-macros

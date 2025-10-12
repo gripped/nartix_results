@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ 
+ build() {
+   export CFLAGS+=' -w'
+-  arch-meson build $pkgname-v$pkgver -D libnsgif=disabled -D freeimage=disabled
++  artix-meson build $pkgname-v$pkgver -D libnsgif=disabled -D freeimage=disabled
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ }
+ build() {
+ export CFLAGS+=' -w'
+-arch-meson build $pkgname-v$pkgver -D libnsgif=disabled -D freeimage=disabled
++artix-meson build $pkgname-v$pkgver -D libnsgif=disabled -D freeimage=disabled
+ ninja -C build
+ }

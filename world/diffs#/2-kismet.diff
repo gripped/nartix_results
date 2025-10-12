@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,7 +9,7 @@
+ license=('GPL-2.0-or-later')
+ depends=('libpcap' 'pcre2' 'bluez-libs' 'libcap' 'protobuf-c' 'libprotobuf-c.so'
+          'sqlite' 'libnm' 'gcc-libs' 'libusb' 'libusb-1.0.so' 'libnl' 'glibc' 'zlib' 'libelf'
+-         'lm_sensors' 'systemd' 'python' 'python-setuptools' 'python-protobuf' 'python-pyserial'
++         'lm_sensors' 'python' 'python-setuptools' 'python-protobuf' 'python-pyserial'
+          'python-numpy' 'python-websockets' 'libwebsockets' 'libcap-ng'
+          libpcap.so libprotobuf.so libnm.so libwebsockets.so libsensors.so)
+ makedepends=('python-setuptools')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -26,5 +26,4 @@
+ python-setuptools
+ python-websockets
+ sqlite
+-systemd
+ zlib

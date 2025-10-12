@@ -1,0 +1,84 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,39 +1,28 @@
+ 
+ pkgname=xfce4-dev-tools
+-pkgver=4.20.0
+-pkgrel=2
++pkgver=4.18.1
++pkgrel=1
+ pkgdesc="Xfce developer tools"
+ arch=('x86_64')
+-url="https://docs.xfce.org/xfce/xfce4-dev-tools/start"
+-license=('GPL-2.0-or-later')
+-depends=('glib2' 'gtk-doc')
+-makedepends=('git' 'meson')
++url="https://www.xfce.org/"
++license=('GPL2')
++depends=('glib2' 'intltool' 'gtk-doc')
+ optdepends=('docker: xfce-build helper script')
+-source=("git+https://gitlab.xfce.org/xfce/xfce4-dev-tools.git#tag=$pkgname-$pkgver")
+-sha256sums=('21723980448db541948f4138e445c6c9f136f8271930a3c7d2e3ccf66b2f5923')
+-
+-prepare() {
+-  cd $pkgname
+-  NOCONFIGURE=1 ./autogen.sh
+-}
++source=(https://archive.xfce.org/src/xfce/xfce4-dev-tools/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('812cabe7048922ebc176564b73c3e427e467c9566365ee3e54c0487d305a7681')
+ 
+ build() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
++
+   ./configure \
+     --prefix=/usr \
+     --sysconfdir=/etc \
+-    --localstatedir=/var \
+-    --enable-maintainer-mode
++    --localstatedir=/var
+   make
+ }
+ 
+-check() {
+-  cd $pkgname
+-  make check
+-}
+-
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ glib2
+ gtk-doc
+-meson
++intltool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,8 @@
+-prepare() {
+-cd $pkgname
+-NOCONFIGURE=1 ./autogen.sh
+-}
+ build() {
+-cd $pkgname
++cd $pkgname-$pkgver
+ ./configure \
+ --prefix=/usr \
+ --sysconfdir=/etc \
+---localstatedir=/var \
+---enable-maintainer-mode
++--localstatedir=/var
+ make
+ }

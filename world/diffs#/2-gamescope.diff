@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+   pixman
+   sdl2
+   seatd
+-  systemd-libs
++  libudev
+   vulkan-icd-loader
+   wayland
+   xcb-util-errors
+@@ -88,7 +88,7 @@
+ }
+ 
+ build() {
+-  arch-meson gamescope build \
++  artix-meson gamescope build \
+     -Dforce_fallback_for=glm,stb,libdisplay-info,libliftoff,vkroots,wlroots \
+     -Dpipewire=enabled
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,6 +12,7 @@
+ libei
+ libinput
+ libpipewire-0.3.so
++libudev
+ libx11
+ libxcb
+ libxcomposite
+@@ -32,7 +33,6 @@
+ pixman
+ sdl2
+ seatd
+-systemd-libs
+ vulkan-headers
+ vulkan-icd-loader
+ wayland

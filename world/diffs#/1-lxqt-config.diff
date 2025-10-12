@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=lxqt-config
+-pkgver=2.2.0
+-pkgrel=1
++pkgver=1.4.0
++pkgrel=2
+ pkgdesc="LXQt system configuration."
+ arch=("x86_64")
+ groups=("lxqt")
+ url="https://github.com/lxqt/$pkgname"
+ license=("LGPL2.1")
+ depends=("glibc" "gcc-libs"
+-         "qt6-base" "qt6-svg" "libkscreen"
+-         "libQt6Xdg.so" "liblxqt" "lxqt-themes" "lxqt-menu-data"
++         "qt5-base" "qt5-svg" "qt5-x11extras" "libkscreen5"
++         "libQt5Xdg.so" "liblxqt" "lxqt-themes" "lxqt-menu-data"
+          "libx11" "libxcb" "libxcursor" "libxfixes" "libxi" "xf86-input-libinput"
+          "libudev.so" "zlib")
+ makedepends=("lxqt-build-tools")
+@@ -20,7 +20,7 @@
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz.asc"
+ )
+-sha256sums=('527b0b39e8156450f8f69bd6e516d10193b07e492a8945761036de46990f331e'
++sha256sums=('e60d5c3f00588fb373b48fa0c65f7a164500738467359472409a29b9db11c84b'
+             'SKIP')
+ validpgpkeys=(
+ 	"19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # https://github.com/tsujan.gpg
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ gcc-libs
+ glibc
+-libQt6Xdg.so
+-libkscreen
++libQt5Xdg.so
++libkscreen5
+ liblxqt
+ libudev.so
+ libx11
+@@ -12,7 +12,8 @@
+ lxqt-build-tools
+ lxqt-menu-data
+ lxqt-themes
+-qt6-base
+-qt6-svg
++qt5-base
++qt5-svg
++qt5-x11extras
+ xf86-input-libinput
+ zlib

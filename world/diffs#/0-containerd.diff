@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,9 +15,6 @@
+               "910C28608D33DDE689C03290997C5A3CD3167CB5") # Samuel Karp
+ sha256sums=('b41cdc8f3581913da8fe1235840723ae2ab9061231c77d30802ef8b49be432d0')
+ 
+-prepare() {
+-  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service
+-}
+ 
+ build() {
+   cd "${pkgname}"
+@@ -34,7 +31,6 @@
+ package() {
+   cd "${pkgname}"
+   make PREFIX=/usr DESTDIR="$pkgdir/" install
+-  install -Dm644 containerd.service "$pkgdir"/usr/lib/systemd/system/containerd.service
+   install -Dm644 man/*.8 -t "$pkgdir/usr/share/man/man8"
+   install -Dm644 man/*.5 -t "$pkgdir/usr/share/man/man5"
+   install -Dm644 contrib/autocomplete/ctr "$pkgdir"/usr/share/bash-completion/completions/ctr
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,3 @@
+-prepare() {
+-sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service
+-}
+ build() {
+ cd "${pkgname}"
+ export GOFLAGS="-trimpath -mod=readonly -modcacherw"

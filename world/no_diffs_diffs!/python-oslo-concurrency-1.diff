@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-oslo-concurrency
+-pkgver=7.0.0
++pkgver=6.2.0
+ pkgrel=1
+ pkgdesc="OpenStack library for all concurrency-related code"
+ arch=('any')
+@@ -11,7 +11,7 @@
+ makedepends=('git' 'python-setuptools')
+ checkdepends=('python-oslotest' 'python-stestr' 'python-eventlet')
+ source=("git+https://github.com/openstack/oslo.concurrency.git#tag=$pkgver")
+-sha512sums=('22c9f841cda714b91eb5fd2832b27f7080953157ddff4775e585cfebfc89da1e5b4e50bd4017a30ca99ee2346786c0b4062ff3f0ebb21c8a5f3b41e70a3a2882')
++sha512sums=('3cf0260965695c739e3056be2c5c3b82be51bdffa174c5be3ded22010c6a45e01cfd70f0c3a97bea3054cb2cecce8e3523ff1eb754bf0fd19cead7fd6e3e252a')
+ 
+ build() {
+   cd oslo.concurrency

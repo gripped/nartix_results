@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,25 +1,31 @@
+ 
+ pkgname=xfce4-pulseaudio-plugin
+-pkgver=0.5.1
++pkgver=0.4.8
+ pkgrel=1
+ pkgdesc="Pulseaudio plugin for the Xfce4 panel"
+ arch=('x86_64')
+-url="https://docs.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/start"
+-license=('GPL-2.0-or-later')
++url="https://goodies.xfce.org/projects/panel-plugins/xfce4-pulseaudio-plugin"
++license=('GPL2')
+ groups=('xfce4-goodies')
+ depends=('xfce4-panel' 'libpulse' 'libkeybinder3' 'libnotify' 'libcanberra')
+-makedepends=('git' 'meson' 'xfce4-dev-tools')
++makedepends=('intltool')
+ optdepends=('pavucontrol: default pulseaudio mixer')
+-source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-pulseaudio-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('d230d2107d64e78ca9deb536768e7264c16b4dfb7af2cc816f6f848ae3bdc7a7')
++source=("git+https://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/#commit=$_commit")
++source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('bd742b207c39c221e91c57c9c9be2839eb802d1b1ee01a02b7427cd02d3f0348')
+ 
+ build() {
+-  arch-meson $pkgname build \
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --libexecdir=/usr/lib \
+     --localstatedir=/var
+-  meson compile -C build
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+-git
++intltool
+ libcanberra
+ libkeybinder3
+ libnotify
+ libpulse
+-meson
+-xfce4-dev-tools
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,9 @@
+ build() {
+-arch-meson $pkgname build \
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--libexecdir=/usr/lib \
+ --localstatedir=/var
+-meson compile -C build
++make
+ }

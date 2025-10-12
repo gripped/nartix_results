@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,7 +37,7 @@
+ makedepends=(clang
+              cmake
+              desktop-file-utils
+-             intltool
++             intltool json-glib
+              libwebp
+              llvm
+              portmidi
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,6 +9,7 @@
+ intltool
+ iso-codes
+ jasper
++json-glib
+ lensfun
+ libavif
+ libgphoto2

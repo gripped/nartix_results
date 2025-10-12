@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -37,8 +37,6 @@
+   libsoup3
+   polkit
+   procps-ng
+-  systemd
+-  systemd-libs
+   udisks2
+ )
+ makedepends=(
+@@ -79,10 +77,12 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemduserunitdir=no
++    -D tmpfilesdir=/usr/lib/tmpfiles.d
+     -D man=true
+   )
+ 
+-  arch-meson gvfs build "${meson_options[@]}"
++  artix-meson gvfs build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -124,7 +124,6 @@
+ 
+     _pick afc \
+       usr/lib/gvfs{-afc-volume-monitor,d-afc} \
+-      usr/lib/systemd/user/gvfs-afc-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
+       usr/share/gvfs/mounts/afc.mount \
+       usr/share/gvfs/remote-volume-monitors/afc.monitor
+@@ -137,7 +136,6 @@
+ 
+     _pick goa \
+       usr/lib/gvfs-goa-volume-monitor \
+-      usr/lib/systemd/user/gvfs-goa-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
+       usr/share/gvfs/remote-volume-monitors/goa.monitor
+ 
+@@ -147,14 +145,12 @@
+ 
+     _pick gphoto2 \
+       usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \
+-      usr/lib/systemd/user/gvfs-gphoto2-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service \
+       usr/share/gvfs/mounts/gphoto2.mount \
+       usr/share/gvfs/remote-volume-monitors/gphoto2.monitor
+ 
+     _pick mtp \
+       usr/lib/gvfs{-mtp-volume-monitor,d-mtp} \
+-      usr/lib/systemd/user/gvfs-mtp-volume-monitor.service \
+       usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service \
+       usr/share/gvfs/mounts/mtp.mount \
+       usr/share/gvfs/remote-volume-monitors/mtp.monitor
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -37,8 +37,6 @@
+ python
+ smbclient
+ smbclient>
+-systemd
+-systemd-libs
+ udisks2
+ usbmuxd
+ wsdd

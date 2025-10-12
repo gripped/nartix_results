@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,32 +1,34 @@
++pkgname=modest
++_com=2540a03259fc62fe15f47e85c20b2eedd5af66de
++pkgver=0.0.6.${_com:0:8}
++pkgrel=1
++pkgdesc="Fast HTML renderer implemented as a pure C99 library"
++arch=("x86_64")
++url="https://github.com/lexborisov/Modest"
++license=("LGPL2.1")
++makedepends=(
++	"gcc"
++	"make"
++)
++source=(
++	"https://github.com/lexborisov/$pkgname/archive/$_com.tar.gz"
++)
++sha256sums=(
++	"SKIP"
++)
+ 
+-_commit='d021b907517d0be30bd709dc9649bc9b54e4b4f4'
+-
+-pkgname=modest
+-pkgver=0.0.6.${_commit:0:7}
+-pkgrel=3
+-pkgdesc='Fast HTML renderer implemented as a pure C99 library with no outside dependencies'
+-arch=('x86_64')
+-url='https://github.com/lexborisov/modest'
+-license=('LGPL2.1')
+-makedepends=('git')
+-source=("git+${url}#commit=${_commit}")
+-md5sums=('SKIP')
+-provides=('mycore' 'mycss' 'myencoding' 'myfont' 'myhtml' 'myunicode' 'myurl')
+ 
+ build() {
+-	cd "${pkgname}"
+-
+-	make CFLAGS="$CFLAGS -Wno-variadic-macros -ffat-lto-objects" prefix="/usr"
++	cd "Modest-$_com"
++	make CFLAGS="$CFLAGS"
+ }
+ 
+ check() {
+-	cd "${pkgname}"
+-
++	cd "Modest-$_com"
+ 	make test
+ }
+ 
+ package() {
+-	cd "${pkgname}"
+-
+-	make DESTDIR="${pkgdir}/" prefix="/usr" install
++	cd "Modest-$_com"
++	make install DESTDIR="$pkgdir" prefix="/usr"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1 +1,2 @@
+-git
++gcc
++make
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd "${pkgname}"
+-make CFLAGS="$CFLAGS -Wno-variadic-macros -ffat-lto-objects" prefix="/usr"
++cd "Modest-$_com"
++make CFLAGS="$CFLAGS"
+ }

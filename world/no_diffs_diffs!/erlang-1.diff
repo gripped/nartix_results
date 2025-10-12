@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -67,13 +67,9 @@
+ source=(
+   "git+https://github.com/erlang/otp#tag=OTP-$pkgver"
+   epmd.conf
+-  epmd.service
+-  epmd.socket
+ )
+ b2sums=('516e1173011e9fb22886767ee2aefb322e158b4c3fc14010dd17061d94e641c02d906b3c5aa5d3dedb39ca292c95aa5f9123e0c58c70061a90c5ca2877bddb0f'
+-        '1675ac9bf948ab19e8b63077d870ccf356fcdbce14de2777f00b3488aa1ce34a5e0a5cdc0428707f744dee5940b12653a44e0ded0554de95ebb31bce4676ff87'
+-        '1f765318bcd322ce697a48c064ccdb1bd107b4a84e164a87f62678391cb82a9ab17a397d679cf266e037a5a2d91772b85f7a97f9cc5478c0f18118743b30045f'
+-        'c37706f5f6e2d49100104fb442ebf15edd6ee0a1e8038d0364794cf34fd3f02a61b9ad2706228b3327b85b0cadcd11aac6087e7c98408eae2d307a09191b6553')
++        '1675ac9bf948ab19e8b63077d870ccf356fcdbce14de2777f00b3488aa1ce34a5e0a5cdc0428707f744dee5940b12653a44e0ded0554de95ebb31bce4676ff87')
+ 
+ prepare() {
+   cd otp
+@@ -192,7 +188,6 @@
+     erlang-stdlib
+   )
+ 
+-  install -vDm644 -t "$pkgdir/usr/lib/systemd/system" epmd.service epmd.socket
+   install -vDm644 epmd.conf "$pkgdir/etc/conf.d/epmd"
+ 
+   cd otp

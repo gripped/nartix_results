@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,8 +7,8 @@
+ arch=('x86_64')
+ url="https://linuxcontainers.org"
+ depends=('bash' 'perl' 'libseccomp' 'libcap' 'python' 'rsync' 'wget')
+-makedepends=('docbook2x' 'systemd' 'meson' 'lua' 'python-setuptools' 'apparmor')
+-optdepends=('dnsmasq: lxc-net.service'
++makedepends=('docbook2x' 'elogind' 'meson' 'lua' 'python-setuptools' 'apparmor')
++optdepends=('dnsmasq'
+ 	    'lua'
+ 	    'lua-filesystem: lxc-top'
+ 	    'lua-alt-getopt: lxc-top')
+@@ -19,13 +19,10 @@
+ validpgpkeys=('602F567663E593BCBD14F338C638974D64792D67')
+ source=("https://linuxcontainers.org/downloads/lxc/$pkgname-${pkgver}.tar.gz"{,.asc}
+ 	"lxc.tmpfiles"
+-	"lxc.service"
+-	"lxc-auto.service")
++)
+ sha256sums=('2e540c60b9dd49e7ee1a4efa5e9c743b05df911b81b375ed5043d9dd7ee0b48a'
+             'SKIP'
+-            '10e4f661872f773bf3122a2f9f2cb13344fea86a4ab72beecb4213be4325c479'
+-            'bbe7e0447bc3bf5f75f312c34d647f5218024731628a5e8633b1ea1801ebe16b'
+-            'b31f8d6b301ab9901b43f2696bcd0babb32b96e4a59fab63a2d642e43bf26bb3')
++            '10e4f661872f773bf3122a2f9f2cb13344fea86a4ab72beecb4213be4325c479')
+ 
+ 
+ prepare() {
+@@ -35,7 +32,7 @@
+ 
+ build() {
+   cd "$pkgname-${pkgver/_/-}"
+-  arch-meson build -Dtools=true -Dtools-multicall=false
++  artix-meson build -Dinit-script=sysvinit -Dtools=true -Dtools-multicall=false
+   meson compile -C build -v
+ }
+ 
+@@ -46,8 +43,6 @@
+ 
+   install -d -m755 "$pkgdir/var/lib/lxc"
+   install -d -m755 "$pkgdir/usr/lib/lxc/rootfs/dev"
+-  install -D -m644 "$srcdir"/lxc.service "$pkgdir"/usr/lib/systemd/system/lxc@.service
+-  install -D -m644 "$srcdir"/lxc-auto.service "$pkgdir"/usr/lib/systemd/system/lxc-auto.service
+   install -D -m644 "$srcdir"/lxc.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/lxc.conf
+ 
+   cd doc
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ apparmor
+ bash
+ docbook2x
++elogind
+ libcap
+ libseccomp
+ lua
+@@ -9,5 +10,4 @@
+ python
+ python-setuptools
+ rsync
+-systemd
+ wget

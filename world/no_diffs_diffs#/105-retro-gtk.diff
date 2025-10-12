@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D build-doc=true \
+     -D install-doc=true
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ git cherry-pick -n 8016c10e7216394bc66281f2d9be740140b6fad6
+ }
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D build-doc=true \
+ -D install-doc=true
+ meson compile -C build

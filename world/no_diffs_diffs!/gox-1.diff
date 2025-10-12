@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ pkgdesc="A simple, no-frills tool for Go cross compilation"
+ arch=('x86_64')
+ url="https://github.com/mitchellh/${pkgname}"
+-license=('MPL-2.0')
++license=('MPL2')
+ depends=('glibc')
+ makedepends=('go')
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz")

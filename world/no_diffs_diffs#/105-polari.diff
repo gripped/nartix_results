@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,7 +59,7 @@
+ }
+ 
+ build() {
+-  arch-meson polari build
++  artix-meson polari build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ git apply -3 ../0003-Add-option-to-disable-URL-preview-feature.patch
+ }
+ build() {
+-arch-meson polari build
++artix-meson polari build
+ meson compile -C build
+ }

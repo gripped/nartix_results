@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,6 @@
+   meson
+   python-cairo
+   python-gobject
+-  systemd
+ )
+ checkdepends=(
+   cairo
+@@ -48,7 +47,7 @@
+     -D installed-tests=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -12,4 +12,3 @@
+ pixman
+ python-cairo
+ python-gobject
+-systemd

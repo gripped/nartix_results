@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,18 +1,14 @@
+ 
+ pkgname=pmbootstrap
+-pkgver=3.6.0
++pkgver=2.2.1
+ pkgrel=1
+ pkgdesc='Sophisticated chroot/build/flash tool to develop and install postmarketOS'
+-url='https://gitlab.postmarketos.org/postmarketOS/pmbootstrap'
++url='https://gitlab.com/postmarketOS/pmbootstrap'
+ arch=('any')
+ license=('GPL-3.0-only')
+ depends=(
+-  'git'
+-  'multipath-tools'
+   'python'
+   'python-argcomplete'
+-  'python-tomli'
+-  'util-linux'
+ )
+ makedepends=(
+   'python-build'
+@@ -20,9 +16,9 @@
+   'python-setuptools'
+   'python-wheel'
+ )
+-source=("https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/archive/${pkgver}/pmbootstrap-${pkgver}.tar.gz")
+-sha256sums=('8394bd77a86b3ff8a49a3898a8b5fba835a96da99a0733dd9a702210dbac546b')
+-b2sums=('1d3e8d6f6a187d544792825c105e1c7e69a1a417146d8f29f3dbc801e5f55ab1048244e3cbcf30fe177856b3333ce04525d601af62b75ec0076f5162779b5f83')
++source=("https://gitlab.com/postmarketOS/pmbootstrap/-/archive/$pkgver/pmbootstrap-$pkgver.tar.gz")
++sha256sums=('195a3cb430c9ede354bc575ddb765f10b205067f8c478f153c84f6f793785c09')
++b2sums=('578fdc26125f5b33fffb2926c32aec1dbaf78f87574ed051967a567214965ad9578091e48a0cbf91f0f6e10b5ff2b3fde0c70c854d6d2f208c2a41e482b04445')
+ 
+ build() {
+   cd "${pkgname}-${pkgver}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,6 @@
+-git
+-multipath-tools
+ python
+ python-argcomplete
+ python-build
+ python-installer
+ python-setuptools
+-python-tomli
+ python-wheel
+-util-linux

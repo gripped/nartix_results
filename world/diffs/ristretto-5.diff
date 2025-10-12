@@ -1,0 +1,77 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,30 @@
+ 
+ pkgname=ristretto
+-pkgver=0.13.4
++pkgver=0.13.2
+ pkgrel=1
+ pkgdesc="A fast and lightweight picture viewer for Xfce"
+ arch=('x86_64')
+ url="https://docs.xfce.org/apps/ristretto/start"
+-license=('GPL-2.0-or-later')
++license=('GPL')
+ groups=('xfce4-goodies')
+-depends=('exo' 'libxfce4ui' 'xfconf' 'tumbler' 'libexif' 'file')
+-makedepends=('git' 'glib2-devel' 'meson' 'python' 'xfce4-dev-tools')
+-source=("git+https://gitlab.xfce.org/apps/ristretto.git#tag=$pkgname-$pkgver")
+-sha256sums=('335315c06edd3c9a68017a447f27ee5f52e9c2559cc86398d3dfc04b636a8b09')
++depends=('libxfce4ui' 'xfconf' 'tumbler' 'libexif' 'file')
++makedepends=('python')
++source=("https://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2")
++sha256sums=('779f5ede3016019eec01d64a025583078d3936e35d4288ec2e8433494d757dd9')
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-debug
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,6 @@
+-exo
+ file
+-git
+-glib2-devel
+ libexif
+ libxfce4ui
+-meson
+ python
+ tumbler
+-xfce4-dev-tools
+ xfconf
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,9 @@
+ build() {
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-debug
++make
+ }

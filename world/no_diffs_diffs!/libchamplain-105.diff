@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libchamplain
+ pkgver=0.12.21
+-pkgrel=1
++pkgrel=1.3
+ pkgdesc="Map widget for GTK 3"
+ url="https://wiki.gnome.org/Projects/libchamplain"
+ license=(LGPL)
+@@ -22,7 +22,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build -D gtk_doc=true
++  artix-meson $pkgname build -D gtk_doc=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ cd $pkgname
+ }
+ build() {
+-arch-meson $pkgname build -D gtk_doc=true
++artix-meson $pkgname build -D gtk_doc=true
+ meson compile -C build
+ }

@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,6 @@
+   gtk-doc
+   libffi
+   meson
+-  systemd
+ )
+ checkdepends=(
+   gnutls
+@@ -52,9 +51,10 @@
+     -D gtk_doc=true
+     -D man=true
+     -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source
++    -D systemd=disabled
+   )
+ 
+-  arch-meson p11-kit build "${meson_options[@]}"
++  artix-meson p11-kit build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -77,7 +77,6 @@
+     "libp11-kit=$pkgver-$pkgrel"
+     libp11-kit.so
+   )
+-  install=p11-kit.install
+ 
+   meson install -C build --destdir "$pkgdir"
+   ln -srf "$pkgdir/usr/bin/update-ca-trust" "$pkgdir/usr/lib/p11-kit/trust-extract-compat"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,4 +9,3 @@
+ libp11-kit.so
+ libtasn1
+ meson
+-systemd

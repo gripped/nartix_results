@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,9 +7,9 @@
+ arch=('x86_64')
+ license=('GPL-2.0-only')
+ depends=('boost-libs' 'gnutls' 'libcurl.so' 'libsodium' 'lmdb' 'luajit'
+-         'openssl' 'sqlite' 'systemd-libs')
++         'openssl' 'sqlite' 'esysusers')
+ makedepends=('boost' 'geoip' 'libldap' 'mariadb-libs' 'curl' 'libmaxminddb'
+-             'postgresql-libs' 'systemd' 'tinycdb' 'unixodbc' 'yaml-cpp')
++             'postgresql-libs' 'tinycdb' 'unixodbc' 'yaml-cpp')
+ optdepends=('geoip: GeoIP backend'
+             'mariadb-libs: MariaDB/MySQL and MyDNS backend'
+             'libldap: LDAP backend'
+@@ -51,7 +51,7 @@
+     --disable-silent-rules \
+     --enable-reproducible \
+     --enable-unit-tests \
+-    --enable-systemd \
++    --disable-systemd \
+     --enable-lto=thin \
+     --enable-auto-var-init=zero \
+     --with-service-user=powerdns \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ boost
+ boost-libs
+ curl
++esysusers
+ geoip
+ gnutls
+ libcurl.so
+@@ -13,8 +14,6 @@
+ openssl
+ postgresql-libs
+ sqlite
+-systemd
+-systemd-libs
+ tinycdb
+ unixodbc
+ yaml-cpp

@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ b2sums=('68c929de517071eceaa83936f15cb083df16dd52af95a71cab09fabfb51f3c692ad571d87bd8bb7d6c588ed31e933ee27e6445606d2f7f3c4f1f6ac825d892ce')
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,3 @@
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ }

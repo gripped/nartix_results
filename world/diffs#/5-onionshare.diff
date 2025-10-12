@@ -1,0 +1,160 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,80 +1,49 @@
+ 
+ pkgname=onionshare
+-pkgver=2.6.3
++pkgver=2.6
+ pkgrel=2
+ pkgdesc='Share a file over Tor Hidden Services anonymously and securely'
+ url='https://github.com/onionshare/onionshare'
+ arch=('any')
+-license=('GPL-3.0-or-later')
+-depends=(
+-  'hicolor-icon-theme'
+-  'pyside6'
+-  'python'
+-  'python-cffi'
+-  'python-colorama'
+-  'python-eventlet'
+-  'python-flask'
+-  'python-flask-compress'
+-  'python-flask-socketio'
+-  'python-gevent'
+-  'python-gevent-websocket'
+-  'python-gnupg'
+-  'python-packaging'
+-  'python-psutil'
+-  'python-pynacl'
+-  'python-pysocks'
+-  'python-qrcode'
+-  'python-requests'
+-  'python-setuptools'
+-  'python-stem'
+-  'python-unidecode'
+-  'python-urllib3'
+-  'python-waitress'
+-  'python-werkzeug'
+-  'tor'
+-)
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-poetry-core'
+-  'python-wheel'
+-)
++license=('GPL3')
++depends=('python' 'hicolor-icon-theme' 'tor' 'stem' 'python-requests' 'python-pysocks' 'python-flask' 'python-flask-httpauth' 'python-flask-socketio' 'python-gevent-websocket' 'python-psutil' 'python-pycryptodome' 'python-pyqt5' 'python-qrcode' 'python-unidecode' 'python-colorama' 'pyside2')
++makedepends=('python-setuptools')
+ optdepends=(
+   'python-nautilus: enable Nautilus right-click extension'
+ )
+-checkdepends=(
+-  'python-pytest'
++checkdepends=('python-pytest' 'python-stem')
++source=(https://github.com/onionshare/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz
++        https://github.com/onionshare/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz.asc
+ )
+-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/onionshare/onionshare/archive/refs/tags/v${pkgver}.tar.gz")
+-sha512sums=('0ea925230617c303c47fd5558066f8dec58f5d2f920738a7351c83fa2655e7d9fd1433ee0c552d1e8affea6f18cb3d489696d640847129b4082f00fa7481f220')
+-b2sums=('9a6f75f1cf05de3bce9f7847f7cf4146550e45c102ae9f8b193f55825924fe2665925e33709a6137b6da743c4187204607cabdf5f8d559ab5ab044e01b2e22af')
++sha512sums=('8764688c902aab1681eb3c00e6bbf779fa1f419d96852ecd091da3d5bd60d86759835da21d06510c2d7f4456e1f7fb0014d5df0b9533f736ae2ff596a53ec75e'
++            'SKIP')
++b2sums=('43ab80d23b1b169d94fd9511298f282f9b61f61026bdb46c14b4f02315564898e8de919ba3c1737e96343fe0ddc2bf6737fbcdf9ce3f4c5cff16b58381a86314'
++        'SKIP')
+ 
+-prepare() {
+-  sed -i '/^onionshare-cli = /d' ${pkgname}-${pkgver}/desktop/pyproject.toml
+-}
++validpgpkeys=('927F419D7EC82C2F149C1BD1403C2657CD994F73')
+ 
+ build() {
+-  cd ${pkgname}-${pkgver}/cli
+-  python -m build --wheel --no-isolation
++  cd ${pkgname}/cli
++  python setup.py build
+   cd ../desktop
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+-  cd ${pkgname}-${pkgver}
++  cd ${pkgname}
+   pushd cli
+-  PYTHONPATH=".:${PYTHONPATH}" pytest tests/
+   popd
+   pushd desktop
+ }
+ 
+ package() {
+-  cd ${pkgname}-${pkgver}
+-  python -m installer --destdir="${pkgdir}" cli/dist/*.whl
+-  python -m installer --destdir="${pkgdir}" desktop/dist/*.whl
++  cd ${pkgname}/cli
++  python setup.py install --skip-build -O1 --root="${pkgdir}"
++  cd ../desktop
++  python setup.py install --skip-build -O1 --root="${pkgdir}"
+ 
+-  install -Dm 644 desktop/org.onionshare.OnionShare.desktop -t "${pkgdir}/usr/share/applications/"
+-  install -Dm 644 desktop/org.onionshare.OnionShare.svg -t "${pkgdir}/usr/share/icons/hicolor/scalable/apps/"
+-  install -Dm 644 desktop/org.onionshare.OnionShare.appdata.xml -t "${pkgdir}/usr/share/metainfo/"
++  install -Dm 644 org.onionshare.OnionShare.desktop -t "${pkgdir}/usr/share/applications/"
++  install -Dm 644 org.onionshare.OnionShare.svg -t "${pkgdir}/usr/share/icons/hicolor/scalable/apps/"
++  install -Dm 644 org.onionshare.OnionShare.appdata.xml -t "${pkgdir}/usr/share/metainfo/"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,29 +0,0 @@
+-hicolor-icon-theme
+-pyside6
+-python
+-python-build
+-python-cffi
+-python-colorama
+-python-eventlet
+-python-flask
+-python-flask-compress
+-python-flask-socketio
+-python-gevent
+-python-gevent-websocket
+-python-gnupg
+-python-installer
+-python-packaging
+-python-poetry-core
+-python-psutil
+-python-pynacl
+-python-pysocks
+-python-qrcode
+-python-requests
+-python-setuptools
+-python-stem
+-python-unidecode
+-python-urllib3
+-python-waitress
+-python-werkzeug
+-python-wheel
+-tor
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,6 @@
+-prepare() {
+-sed -i '/^onionshare-cli = /d' ${pkgname}-${pkgver}/desktop/pyproject.toml
++build() {
++cd ${pkgname}/cli
++python setup.py build
++cd ../desktop
++python setup.py build
+ }
+-build() {
+-cd ${pkgname}-${pkgver}/cli
+-python -m build --wheel --no-isolation
+-cd ../desktop
+-python -m build --wheel --no-isolation
+-}

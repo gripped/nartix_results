@@ -1,0 +1,86 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,27 +1,32 @@
+ 
+ pkgname=xfce4-sensors-plugin
+-pkgver=1.5.0
+-pkgrel=2
++pkgver=1.4.4
++pkgrel=1
+ pkgdesc="Sensors plugin for the Xfce panel"
+ arch=('x86_64')
+-url="https://docs.xfce.org/panel-plugins/xfce4-sensors-plugin/start"
+-license=('GPL-2.0-or-later')
++url="https://docs.xfce.org/panel-plugins/xfce4-sensors-plugin"
++license=('GPL2')
+ groups=('xfce4-goodies')
+-depends=('xfce4-panel' 'lm_sensors' 'libnotify' 'libxnvctrl' 'hicolor-icon-theme')
+-makedepends=('git' 'hddtemp' 'meson' 'netcat' 'xfce4-dev-tools')
++depends=('xfce4-panel' 'lm_sensors' 'libnotify' 'hicolor-icon-theme')
++makedepends=('intltool' 'hddtemp' 'netcat')
+ optdepends=('hddtemp: for monitoring the temperature of hard drives')
+-source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-sensors-plugin.git#tag=$pkgname-$pkgver")
+-sha256sums=('11185e845b5a52813b9a7610505384813eb4ad3cfe3c3e7aee5ce10d75b91468')
++source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
++sha256sums=('6c1605a738e5df40e084d08ac93f962cd445093396de1e9bfadc7ab4588c36b6')
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    -Dhddtemp=enabled \
+-    -Dnetcat=enabled \
+-    --localstatedir=/var
+-  meson compile -C build
++  cd $pkgname-$pkgver
++
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --localstatedir=/var \
++    --disable-pathchecks \
++    --disable-debug
++  make
+ }
+ 
+ package() {
+-  meson install -C build --destdir "$pkgdir"
++  cd $pkgname-$pkgver
++  make DESTDIR="$pkgdir" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,7 @@
+-git
+ hddtemp
+ hicolor-icon-theme
++intltool
+ libnotify
+-libxnvctrl
+ lm_sensors
+-meson
+ netcat
+-xfce4-dev-tools
+ xfce4-panel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,10 @@
+ build() {
+-arch-meson $pkgname build \
+--Dhddtemp=enabled \
+--Dnetcat=enabled \
+---localstatedir=/var
+-meson compile -C build
++cd $pkgname-$pkgver
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--localstatedir=/var \
++--disable-pathchecks \
++--disable-debug
++make
+ }

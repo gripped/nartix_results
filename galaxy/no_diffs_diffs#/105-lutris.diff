@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -86,7 +86,7 @@
+ }
+ 
+ build() {
+-  arch-meson lutris build
++  artix-meson lutris build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ cp -vf product_db_pb2.py lutris/lutris/util/battlenet/product_db_pb2.py
+ }
+ build() {
+-arch-meson lutris build
++artix-meson lutris build
+ ninja -C build
+ }

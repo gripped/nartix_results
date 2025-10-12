@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -54,7 +54,7 @@
+ }
+ 
+ build() {
+-  arch-meson seahorse build -D manpage=true
++  artix-meson seahorse build -D manpage=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ patch -p1 -i ../gpgme-2.0.patch
+ }
+ build() {
+-arch-meson seahorse build -D manpage=true
++artix-meson seahorse build -D manpage=true
+ meson compile -C build
+ }

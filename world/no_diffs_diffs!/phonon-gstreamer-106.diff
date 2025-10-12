@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,13 +18,14 @@
+             'SKIP'
+             '79068597cd4ea57f3b1fe1b30ffeb4749bccefbbcbbf6585f57e2dc5944ae3d7')
+ validpgpkeys=(CB9387521E1EE0127DA804843FDBB55084CC5D84) # Harald Sitter <sitter@kde.org>
++options=(debug)
+ 
+ prepare() {
+   patch -d phonon-backend-gstreamer-$pkgver -p1 < bbbb160f.patch # Fix tearing on wayland
+ }
+ 
+ build() {
+-  cmake -B build -S phonon-backend-gstreamer-$pkgver
++  artix-cmake -B build -S phonon-backend-gstreamer-$pkgver
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ patch -d phonon-backend-gstreamer-$pkgver -p1 < bbbb160f.patch # Fix tearing on wayland
+ }
+ build() {
+-cmake -B build -S phonon-backend-gstreamer-$pkgver
++artix-cmake -B build -S phonon-backend-gstreamer-$pkgver
+ cmake --build build
+ }

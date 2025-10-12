@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ 
+ build() {
+   cd "$pkgname"
+-  CC=clang CXX=clang++ arch-meson -Ddecoders=gles,vulkan,composer . build
++  CC=clang CXX=clang++ artix-meson -Ddecoders=gles,vulkan,composer . build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ }
+ build() {
+ cd "$pkgname"
+-CC=clang CXX=clang++ arch-meson -Ddecoders=gles,vulkan,composer . build
++CC=clang CXX=clang++ artix-meson -Ddecoders=gles,vulkan,composer . build
+ meson compile -C build
+ }

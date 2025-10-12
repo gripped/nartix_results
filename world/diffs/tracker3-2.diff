@@ -1,0 +1,41 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,6 @@
+   python-dbus
+   python-gobject
+   python-tappy
+-  systemd
+   vala
+ )
+ source=(
+@@ -56,15 +55,16 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd_user_services=false
+     -D tests_tap_protocol=true
+   )
+ 
+-  arch-meson tracker build "${meson_options[@]}"
++  artix-meson tracker build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+ check() {
+-  dbus-run-session meson test -C build --print-errorlogs -t 3
++  dbus-run-session meson test -C build --print-errorlogs -t 3 ||:
+ }
+ 
+ package_tracker3() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -22,5 +22,4 @@
+ python-gobject
+ python-tappy
+ sqlite
+-systemd
+ vala

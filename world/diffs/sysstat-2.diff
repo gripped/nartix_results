@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ url="https://sysstat.github.io/"
+ license=('GPL')
+ depends=('lm_sensors')
+-makedepends=('systemd')
+ optdepends=('tk: to use isag'
+ 	    'gnuplot: to use isag')
+ options=('zipman')
+@@ -41,4 +40,6 @@
+   make DESTDIR="${pkgdir}" install
+   chown -R root:root "${pkgdir}"
+   rm -rf "${pkgdir}"/etc/rc*
++
++  rm -rf "${pkgdir}"/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+ lm_sensors
+-systemd

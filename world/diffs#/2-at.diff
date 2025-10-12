@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,17 +7,15 @@
+ url='https://salsa.debian.org/debian/at'
+ license=('GPL')
+ depends=('pam' 'flex')
+-makedepends=('smtp-forwarder' 'git' 'systemd')
++makedepends=('smtp-forwarder' 'git')
+ backup=('etc/at.deny'
+         'etc/pam.d/atd'
+         'var/spool/atd/.SEQ')
+ options=('!makeflags')
+ validpgpkeys=('464BC7CD439FEE5E8B4098A0348A778D6885EF8F') # Jose M Calhariz (Técnico) <jose.calhariz@tecnico.ulisboa.pt>
+ source=("git+https://salsa.debian.org/debian/at.git?signed#tag=release/${pkgver}"
+-        '80-atd.hook'
+         'atd.pam')
+ sha256sums=('dc055b0afe2c60483525b7b7ea3ab4fb9fdbc7bb51070cb2705b598b5c69ebb2'
+-            'f1fbe6740f82ec301fdf16d224eddb491ced1fa1aef6cdc86ee27b467f8e819f'
+             '663cd2f7c5abf56d1ea3f38dfac8d3e64896f1384ca5e97b7ec6d26fd6afafef')
+ 
+ prepare() {
+@@ -33,8 +31,7 @@
+     --prefix=/usr \
+     --sbindir=/usr/bin \
+     --with-jobdir=/var/spool/atd \
+-    --with-atspool=/var/spool/atd \
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --with-atspool=/var/spool/atd
+ 
+   CFLAGS="$CFLAGS -w" make
+ }
+@@ -43,6 +40,5 @@
+   make -C "$pkgname" IROOT="$pkgdir" docdir=/usr/share/doc install
+ 
+   install -D -m0644 atd.pam "$pkgdir"/etc/pam.d/atd
+-  install -D -m0644 80-atd.hook "$pkgdir"/usr/share/libalpm/hooks/80-atd.hook
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,4 +2,3 @@
+ git
+ pam
+ smtp-forwarder
+-systemd

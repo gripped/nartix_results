@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ url="https://github.com/linuxmint/${pkgname}"
+ license=(GPL LGPL)
+ depends=(accountsservice gtk3 libxkbfile libpulse)
+-makedepends=(meson samurai gobject-introspection intltool glib2-devel)
++makedepends=(meson samurai glib2-devel gobject-introspection intltool glib2-devel)
+ source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+         config.patch)
+ sha256sums=('f11d063c7ecb86b98803e9a22ade0655d979b334f6c90fdd1cc6f50bbe6e9992'
+@@ -23,7 +23,17 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}/build
+-  arch-meson ..
++  meson setup \
++  --prefix        /usr \
++  --libexecdir    lib \
++  --sbindir       bin \
++  --buildtype     plain \
++  --wrap-mode     nodownload \
++  -D              alsa=true \
++  -D              b_lto=true \
++  -D              b_pie=true \
++  -D              python.bytecompile=1 \
++  ..
+   samu
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,16 @@
+ }
+ build() {
+ cd ${pkgname}-${pkgver}/build
+-arch-meson ..
++meson setup \
++--prefix        /usr \
++--libexecdir    lib \
++--sbindir       bin \
++--buildtype     plain \
++--wrap-mode     nodownload \
++-D              alsa=true \
++-D              b_lto=true \
++-D              b_pie=true \
++-D              python.bytecompile=1 \
++..
+ samu
+ }

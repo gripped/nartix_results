@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,11 +5,8 @@
+ pkgdesc='Library and command line tools for XZ and LZMA compressed files'
+ arch=('x86_64')
+ url='https://tukaani.org/xz/'
+-license=("GPL-2.0-or-later AND 0BSD AND LicenseRef-Public-Domain AND LGPL-2.1-or-later")
+-depends=(
+-  glibc
+-  sh
+-)
++license=('GPL' 'LGPL' 'custom')
++depends=('sh')
+ makedepends=('git' 'po4a' 'doxygen')
+ provides=('liblzma.so')
+ validpgpkeys=('3690C240CE51B4670D30AD1C38EE757D69184620') # Lasse Collin <lasse.collin@tukaani.org>
+@@ -46,8 +43,5 @@
+   make DESTDIR="${pkgdir}" install
+ 
+   install -d -m0755 "${pkgdir}/usr/share/licenses/xz/"
+-  local file
+-  for file in "${pkgdir}"/usr/share/doc/xz/COPYING*; do
+-    ln -sf "/usr/share/doc/xz/$(basename "${file}")" "${pkgdir}/usr/share/licenses/xz/"
+-  done
++  ln -sf /usr/share/doc/xz/COPYING "${pkgdir}/usr/share/licenses/xz/"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ doxygen
+ git
+-glibc
+ po4a
+ sh

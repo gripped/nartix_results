@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ 
+ build() {
+   cd i3
+-  arch-meson build -Dmans=true
++  artix-meson build -Dmans=true
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd i3
+-arch-meson build -Dmans=true
++artix-meson build -Dmans=true
+ ninja -C build
+ }

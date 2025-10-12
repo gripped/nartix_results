@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,7 +55,7 @@
+          qt6-sensors
+          qt6-svg
+          qt6-tools
+-         systemd-libs
++         libelogind
+          wayland
+          xcb-util-cursor
+          xcb-util-keysyms
+@@ -88,4 +88,6 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -32,6 +32,7 @@
+ libcanberra
+ libdisplay-info
+ libdrm
++libelogind
+ libepoxy
+ libplasma
+ libqaccessibilityclient-qt6
+@@ -50,7 +51,6 @@
+ qt6-sensors
+ qt6-svg
+ qt6-tools
+-systemd-libs
+ wayland
+ wayland-protocols
+ xcb-util-cursor

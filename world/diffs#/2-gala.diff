@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,6 @@
+   libxfixes
+   mutter46
+   sqlite
+-  systemd-libs
+   wayland
+ )
+ makedepends=(
+@@ -48,7 +47,7 @@
+ }
+ 
+ build() {
+-  arch-meson gala build
++  artix-meson gala build -Dsystemd=false
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -21,6 +21,5 @@
+ meson
+ mutter46
+ sqlite
+-systemd-libs
+ vala
+ wayland

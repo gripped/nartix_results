@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,31 +15,25 @@
+ sha256sums=('04edd0eb09cb665a05d808c58e1985f25bb7c5254d2849f36a0658ffc51c3401'
+             'SKIP')
+ 
+-prepare() {
+-  cd "${_shortname}-${pkgver}"
++build() {
++	cd "${_shortname}-${pkgver}"
+ 
+-  autoreconf -fvi
+-}
+-
+-build() {
+-  cd "${_shortname}-${pkgver}"
+-
+-  ./configure \
+-    --prefix=/usr
+-  make
++	./configure \
++		--prefix=/usr
++	make
+ }
+ 
+ check() {
+-  cd "${_shortname}-${pkgver}"
++	cd "${_shortname}-${pkgver}"
+ 
+-  make check
++	make check
+ }
+ 
+ package() {
+-  cd "${_shortname}-${pkgver}"
++	cd "${_shortname}-${pkgver}"
+ 
+-  install -D -m0644 COPYING "${pkgdir}/usr/share/licenses/yubico-c/COPYING"
+-  install -D -m0644 README "${pkgdir}/usr/share/doc/yubico-c/README"
+-  make DESTDIR="${pkgdir}/" install
++	install -D -m0644 COPYING "${pkgdir}/usr/share/licenses/yubico-c/COPYING"
++	install -D -m0644 README "${pkgdir}/usr/share/doc/yubico-c/README"
++	make DESTDIR="${pkgdir}/" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd "${_shortname}-${pkgver}"
+-autoreconf -fvi
+-}
+ build() {
+ cd "${_shortname}-${pkgver}"
+ ./configure \

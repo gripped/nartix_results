@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+   glibc
+   libcap
+   libdaemon
+-  systemd-libs
++  libelogind
+ )
+ makedepends=(
+   doxygen
+@@ -28,7 +28,7 @@
+   libevent
+   python-dbus
+   python-gobject
+-  systemd
++  elogind
+   xmltoman
+ )
+ optdepends=(
+@@ -76,7 +76,8 @@
+     --with-autoipd-user=avahi
+     --with-avahi-priv-access-group=network
+     --with-distro=archlinux
+-    --with-systemdsystemunitdir=/usr/lib/systemd/system
++    --with-systemdsystemunitdir=no
++    --disable-libsystemd
+     with_dbus_sys=/usr/share/dbus-1/system.d
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ bash
+ dbus
+ doxygen
++elogind
+ expat
+ gdbm
+ git
+@@ -13,9 +14,8 @@
+ libcap
+ libdaemon
+ libdbus-1.so
++libelogind
+ libevent
+ python-dbus
+ python-gobject
+-systemd
+-systemd-libs
+ xmltoman

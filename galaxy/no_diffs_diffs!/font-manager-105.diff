@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=font-manager
+ pkgver=0.9.4
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc='A simple font management application for GTK+ Desktop Environments'
+ url=https://fontmanager.github.io
+ _url="https://github.com/FontManager/$pkgname"
+@@ -39,7 +39,7 @@
+ 		nautilus=true
+ 		reproducible=true
+ 	)
+-	arch-meson "$_archive" build ${meson_opts[@]/#/-D }
++	artix-meson "$_archive" build ${meson_opts[@]/#/-D }
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ nautilus=true
+ reproducible=true
+ )
+-arch-meson "$_archive" build ${meson_opts[@]/#/-D }
++artix-meson "$_archive" build ${meson_opts[@]/#/-D }
+ meson compile -C build
+ }

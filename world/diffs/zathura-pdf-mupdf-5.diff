@@ -1,0 +1,90 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,32 +1,36 @@
+ 
+ pkgname=zathura-pdf-mupdf
+-pkgver=0.4.4
+-pkgrel=24
++pkgver=0.4.1
++pkgrel=12.1
++
+ pkgdesc="PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)"
+ url="https://pwmt.org/projects/zathura-pdf-mupdf/"
+ arch=('x86_64')
+-license=('Zlib')
++license=('zlib')
++
+ conflicts=('zathura-pdf-poppler')
+-depends=('cairo' 'gumbo-parser' 'jbig2dec' 'libjpeg-turbo' 'libmupdf' 'openjpeg2' 'openssl' 'zathura')
+-makedepends=('meson' 'ninja' 'git' 'appstream-glib')
+-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz"
++
++depends=('cairo' 'gumbo-parser' 'jbig2dec' 'libjpeg' 'libmupdf' 'openjpeg2' 'openssl' 'zathura')
++makedepends=('meson' 'ninja' 'git')
++
++source=(zathura-pdf-mupdf-$pkgver.tar.gz::https://pwmt.org/projects/zathura-pdf-mupdf/download/zathura-pdf-mupdf-$pkgver.tar.xz
+         0001-Remove-mupdf-linking-detection.patch)
+-sha512sums=('c6297b8ed68a0797db2e7b295d7fc7cb4d099f24cd9faea49e1e2d0c61818b071297b57f6472c057010caf104053cc0866685349b33a61302280cb52bac055cf'
+-            '53f76de2e857a8f57ed9da00e7d0d4c647c38c1a3cb318b27427a1201d7290654aaa3271088e6839f989c7b0ac2a29d353b8bc01561c82e38f33bdb8aba6208c')
++
++sha256sums=('f982a01d6523fa25669381184c06a625edbfd7961cbdb0711dccfdb9c402ac2f'
++            'b72a21f697ffb6183345db62c3e7f97974ac7747a34587e0c84a4e5b87848af0')
+ 
+ prepare() {
+-        cd "${pkgname}-${pkgver}"
+-        patch -p1 < "${srcdir}/0001-Remove-mupdf-linking-detection.patch"
++  cd zathura-pdf-mupdf-$pkgver
++  patch -p1 <"$srcdir"/0001-Remove-mupdf-linking-detection.patch
+ }
+ 
+ build() {
+-        cd "${pkgname}-${pkgver}"
+-        arch-meson build
+-        ninja -C build
++  cd zathura-pdf-mupdf-$pkgver
++  artix-meson build
++  ninja -C build
+ }
+ 
+-package() {
+-        cd "${pkgname}-${pkgver}"
+-        DESTDIR="${pkgdir}" ninja -C build install
+-        install -Dm 664 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++package(){
++  DESTDIR="$pkgdir" ninja -C zathura-pdf-mupdf-$pkgver/build install
++  install -Dm0644 zathura-pdf-mupdf-$pkgver/LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,8 @@
+-appstream-glib
+ cairo
+ git
+ gumbo-parser
+ jbig2dec
+-libjpeg-turbo
++libjpeg
+ libmupdf
+ meson
+ ninja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+-cd "${pkgname}-${pkgver}"
+-patch -p1 < "${srcdir}/0001-Remove-mupdf-linking-detection.patch"
++cd zathura-pdf-mupdf-$pkgver
++patch -p1 <"$srcdir"/0001-Remove-mupdf-linking-detection.patch
+ }
+ build() {
+-cd "${pkgname}-${pkgver}"
+-arch-meson build
++cd zathura-pdf-mupdf-$pkgver
++artix-meson build
+ ninja -C build
+ }

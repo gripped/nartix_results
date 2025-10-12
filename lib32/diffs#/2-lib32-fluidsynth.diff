@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+   lib32-libpulse
+   lib32-readline
+   lib32-sdl3
+-  lib32-systemd
++
+ )
+ makedepends=(
+   cmake
+@@ -43,6 +43,7 @@
+     -D enable-portaudio=ON
+     -W no-dev
+     -S $_name-$pkgver
++    -D enable-systemd=off
+   )
+ 
+   export CC='gcc -m32'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,7 +13,6 @@
+ lib32-portaudio
+ lib32-readline
+ lib32-sdl3
+-lib32-systemd
+ libasound.so
+ libglib-2.0.so
+ libgmodule-2.0.so
