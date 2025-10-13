@@ -104,9 +104,6 @@ imv
 incron
 kanshi
 kernel-headers-musl
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 lf
 libaacs
@@ -128,6 +125,8 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
 libreoffice-still
 libreoffice-still-sdk

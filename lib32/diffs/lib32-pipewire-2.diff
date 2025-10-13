@@ -10,7 +10,7 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
-@@ -74,15 +72,17 @@
+@@ -69,15 +67,17 @@
      -D session-managers=[]
      -D snap=disabled
      -D sndfile=disabled
@@ -30,7 +30,7 @@
    meson compile -C build
  }
  
-@@ -111,7 +111,6 @@
+@@ -106,7 +106,6 @@
      lib32-gcc-libs
      lib32-glib2 libglib-2.0.so
      lib32-glibc

@@ -91,6 +91,7 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
+ardour
 argyllcms
 aria2
 arianna
@@ -680,6 +681,7 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
+frei0r-plugins
 fribidi
 fstrm
 fsverity-utils
@@ -1760,7 +1762,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3244,6 +3245,7 @@ python-calmjs
 python-calver
 python-canonicaljson
 python-case
+python-cattrs
 python-cbor2
 python-cchardet
 python-celery
@@ -3529,6 +3531,7 @@ python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
+python-gssapi
 python-guzzle-sphinx-theme
 python-h11
 python-h2
@@ -3819,6 +3822,7 @@ python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
+python-os-client-config
 python-os-service-types
 python-osc-lib
 python-oscrypto
@@ -3827,6 +3831,7 @@ python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
+python-oslo-log
 python-oslo-serialization
 python-oslo-utils
 python-oslotest
@@ -4066,6 +4071,7 @@ python-pytest-datafiles
 python-pytest-dependency
 python-pytest-django
 python-pytest-enabler
+python-pytest-env
 python-pytest-examples
 python-pytest-expect
 python-pytest-flake8
@@ -4311,6 +4317,7 @@ python-sqlalchemy
 python-sqlalchemy1.3
 python-sqlalchemy1.4
 python-sqlite-anyio
+python-sqlmodel
 python-sqlparse
 python-sshpubkeys
 python-stack-data
@@ -4481,6 +4488,7 @@ python-y-py
 python-yaml
 python-yara
 python-yarg
+python-yarl
 python-yaspin
 python-yg.lockfile
 python-ypy-websocket
@@ -5596,7 +5604,6 @@ virtualbox-host-dkms
 virtualbox-sdk
 virtualgl
 viskores
-vkd3d
 vmaf
 vncdotool
 vnstat

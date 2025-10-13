@@ -11,7 +11,6 @@ appstream-qt
 apr
 aquamarine
 archivetools
-ardour
 at-spi2-core
 at-spi2-core-docs
 at
@@ -163,7 +162,6 @@ font-manager
 fprintd
 freerdp
 freerdp2
-frei0r-plugins
 frugally-deep
 fwupd-efi
 fwupd
@@ -383,6 +381,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -704,23 +703,16 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-cattrs
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-gssapi
-python-os-client-config
-python-oslo-log
 python-pymupdf
-python-pytest-env
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-sqlmodel
-python-yarl
 qastools
 qbittorrent
 qbittorrent-nox
@@ -960,6 +952,7 @@ vault
 vim
 gvim
 vim-runtime
+vkd3d
 vlc
 libvlc
 vlc-cli

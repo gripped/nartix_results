@@ -14,7 +14,7 @@
    valgrind
    webrtc-audio-processing-1
  )
-@@ -97,9 +97,12 @@
+@@ -92,9 +92,12 @@
      -D session-managers=[]
      -D snap=disabled
      -D udevrulesdir=/usr/lib/udev/rules.d
@@ -30,7 +30,7 @@
    meson compile -C build
  }
  
-@@ -132,7 +135,6 @@
+@@ -127,7 +130,6 @@
      glibc
      ncurses libncursesw.so
      readline libreadline.so
@@ -38,7 +38,7 @@
    )
    optdepends=(
      'gst-plugin-pipewire: GStreamer plugin'
-@@ -152,7 +154,6 @@
+@@ -147,7 +149,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
    )
@@ -46,7 +46,7 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -194,7 +195,6 @@
+@@ -189,7 +190,6 @@
      _pick audio usr/lib/$_pwname/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/$_pwname/libpipewire-module-vban*.so
      _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5,filter-graph}
@@ -54,7 +54,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
      _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
-@@ -232,7 +232,6 @@
+@@ -227,7 +227,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/$_pwname/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/$_pwname/libpipewire-module-pulse-tunnel.so
@@ -62,7 +62,7 @@
      _pick pulse usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
-@@ -329,7 +328,6 @@
+@@ -324,7 +323,6 @@
      lilv liblilv-0.so
      opus libopus.so
      sbc libsbc.so
@@ -70,7 +70,7 @@
      webrtc-audio-processing-1 libwebrtc-audio-processing-1.so
    )
  
-@@ -446,11 +444,9 @@
+@@ -441,11 +439,9 @@
      glibc
      libpulse libpulse.so
      pipewire-session-manager

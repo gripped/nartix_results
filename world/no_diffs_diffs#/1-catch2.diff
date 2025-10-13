@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=catch2
+-pkgver=3.11.0
++pkgver=3.10.0
+ pkgrel=1
+ pkgdesc="Modern, C++-native, header-only, test framework for unit-tests, TDD and BDD"
+ arch=('x86_64')
+@@ -13,7 +13,7 @@
+ )
+ conflicts=('catch2-v2')
+ source=(${pkgname}::"git+https://github.com/catchorg/Catch2#tag=v${pkgver}?signed")
+-sha512sums=('bb9aad274de23c688562b90d50513c49beb486ea5c19096c8a8b6a87148d9aca95758ed785dc2a8ae9476193444fb0b8e77b21c8df1bc2b60bfbe1d45d3d1118')
++sha512sums=('4afdd51836915ac922c77a334ddfd588c19c6894977c153285fc5df9e208453f3f29d1be178b5d6344b26294708efd47ad9b8447db2f37d7020554fb2f7156c6')
+ validpgpkeys=(
+   FC5D2FD9051354DBF834F9FD56FB686C9DFC8E2C # Chris Thrasher
+   E29C46F3B8A7502860793B7DECC9C20E314B2360 # Martin Hořeňovský
