@@ -104,6 +104,9 @@ imv
 incron
 kanshi
 kernel-headers-musl
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 lf
 libaacs
@@ -480,6 +483,7 @@ tumbler
 ueberzug
 ueberzugpp
 vagrant
+vicious
 warpinator
 wev
 wlr-randr

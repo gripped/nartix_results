@@ -514,6 +514,7 @@ egl-wayland
 egl-x11
 eglexternalplatform
 eigen
+eigen3
 ejabberd
 electron
 electrum
@@ -1195,6 +1196,7 @@ jupyterlab-pygments
 jupyterlab
 jupyterlab_pygments
 jxrlib
+k3b
 kaccounts-integration
 kaccounts-providers
 kactivities-stats
@@ -1295,6 +1297,7 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
+kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1383,6 +1386,7 @@ kimap
 kinfocenter
 kinit
 kio-admin
+kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
@@ -1762,6 +1766,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw

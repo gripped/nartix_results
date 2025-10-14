@@ -312,11 +312,8 @@ jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
 jupyter-server-ydoc
-k3b
 kcoreaddons
-kdenlive
 keychain
-kio-extras
 kismet
 kitty
 kitty-terminfo
@@ -381,7 +378,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter

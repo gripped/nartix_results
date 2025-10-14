@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,6 +44,7 @@
+   staticlibs
+   !distcc
+   !ccache
++  debug
+ )
+ source=(
+   git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
+@@ -80,7 +81,7 @@
+     --prefix=/usr \
+     --sysconfdir="${pkgdir}"/etc \
+     --with-lib-path=/usr/lib:/usr/local/lib \
+-    --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/binutils/-/issues \
++    --with-bugurl=https://gitea.artixlinux.org/packages/binutils/issues \
+     --enable-cet \
+     --enable-colored-disassembly \
+     --enable-default-execstack=no \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-git
+-glibc
+-jansson
+-libelf
+-zlib
+-zstd
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ --prefix=/usr \
+ --sysconfdir="${pkgdir}"/etc \
+ --with-lib-path=/usr/lib:/usr/local/lib \
+---with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/binutils/-/issues \
++--with-bugurl=https://gitea.artixlinux.org/packages/binutils/issues \
+ --enable-cet \
+ --enable-colored-disassembly \
+ --enable-default-execstack=no \
