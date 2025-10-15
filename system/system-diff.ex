@@ -55,7 +55,6 @@ nilfs-utils
 openldap
 libldap
 openresolv
-openssh
 p11-kit
 libp11-kit
 p11-kit-docs

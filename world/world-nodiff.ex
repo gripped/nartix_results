@@ -1766,7 +1766,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2481,7 +2480,6 @@ openblas
 openblas64
 blas-openblas
 blas64-openblas
-openbox
 openbsd-netcat
 opencascade
 opencc
@@ -4736,6 +4734,7 @@ rubberband
 rubberband-ladspa
 rubberband-lv2
 rubberband-vamp
+rubocop
 ruby-abbrev
 ruby-activesupport
 ruby-addressable
@@ -4743,7 +4742,6 @@ ruby-ae
 ruby-ansi
 ruby-ast
 ruby-async-container-supervisor
-ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
 ruby-async-http
@@ -4754,6 +4752,7 @@ ruby-async-rest
 ruby-async-rspec
 ruby-async-service
 ruby-async-websocket
+ruby-async
 ruby-atk
 ruby-augeas
 ruby-bacon-colored_output
@@ -5014,6 +5013,7 @@ ruby-rubytest
 ruby-rubyzip
 ruby-rugged
 ruby-safe_yaml
+ruby-samovar
 ruby-samus
 ruby-sass-embedded
 ruby-sass-listen
@@ -5202,7 +5202,6 @@ sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
-sox
 spamassassin
 spandsp
 spandsp-docs
@@ -5609,6 +5608,8 @@ virtualbox-host-dkms
 virtualbox-sdk
 virtualgl
 viskores
+vkd3d
+vkd3d-docs
 vmaf
 vncdotool
 vnstat

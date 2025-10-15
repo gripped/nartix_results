@@ -378,6 +378,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -590,6 +591,7 @@ nvtop
 onboard
 onionshare
 open-iscsi
+openbox
 opencollada
 opendht
 openipmi
@@ -829,12 +831,10 @@ rrdtool
 rspamd
 rsync
 rtkit
-rubocop
-ruby-async
+ruby-async-container
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
-ruby-samovar
 ruby-sys-filesystem
 rust
 lib32-rust-libs
@@ -863,6 +863,7 @@ smartmontools
 snapper
 snappy
 solid
+sox
 spice-vdagent
 sqlcipher
 squid
@@ -948,7 +949,6 @@ vault
 vim
 gvim
 vim-runtime
-vkd3d
 vlc
 libvlc
 vlc-cli

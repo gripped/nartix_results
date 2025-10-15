@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 cinnamon-desktop
 copyq
-dbeaver
 doctest
 dvtm
 ecrire
@@ -112,6 +111,7 @@ ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 nvidia-390xx-utils
 nvm
+onionshare
 opensc
 perl-cgi-fast
 qbittorrent

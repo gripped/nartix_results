@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,80 +1,49 @@
+@@ -1,86 +1,49 @@
  
  pkgname=onionshare
 -pkgver=2.6.3
+-pkgrel=3
 +pkgver=2.6
- pkgrel=2
++pkgrel=2
  pkgdesc='Share a file over Tor Hidden Services anonymously and securely'
  url='https://github.com/onionshare/onionshare'
  arch=('any')
@@ -55,9 +56,14 @@
 +source=(https://github.com/onionshare/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz
 +        https://github.com/onionshare/${pkgname}/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz.asc
  )
--source=("${pkgname}-${pkgver}.tar.gz::https://github.com/onionshare/onionshare/archive/refs/tags/v${pkgver}.tar.gz")
--sha512sums=('0ea925230617c303c47fd5558066f8dec58f5d2f920738a7351c83fa2655e7d9fd1433ee0c552d1e8affea6f18cb3d489696d640847129b4082f00fa7481f220')
--b2sums=('9a6f75f1cf05de3bce9f7847f7cf4146550e45c102ae9f8b193f55825924fe2665925e33709a6137b6da743c4187204607cabdf5f8d559ab5ab044e01b2e22af')
+-source=(
+-  "${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz"
+-  "${pkgname}-loosen-cffi-version-bounds.patch"
+-)
+-sha512sums=('0ea925230617c303c47fd5558066f8dec58f5d2f920738a7351c83fa2655e7d9fd1433ee0c552d1e8affea6f18cb3d489696d640847129b4082f00fa7481f220'
+-            '6d4dbaa0ee7073ffae09fec95b7258f40886c87c4a7f85206111727f4cbc73cf6cb2b2c04ba5b5dcca88f8f72aadabe12368f5319fe929db761c6096c9ab614b')
+-b2sums=('9a6f75f1cf05de3bce9f7847f7cf4146550e45c102ae9f8b193f55825924fe2665925e33709a6137b6da743c4187204607cabdf5f8d559ab5ab044e01b2e22af'
+-        '7fae57ae4d2afdcae287515770925ff040977be254ab8d5646b3b3b4cd89e5d645a655bfae507455beb3bca15c4a5d1ad6610d548b23a19f897d7c48cac97ede')
 +sha512sums=('8764688c902aab1681eb3c00e6bbf779fa1f419d96852ecd091da3d5bd60d86759835da21d06510c2d7f4456e1f7fb0014d5df0b9533f736ae2ff596a53ec75e'
 +            'SKIP')
 +b2sums=('43ab80d23b1b169d94fd9511298f282f9b61f61026bdb46c14b4f02315564898e8de919ba3c1737e96343fe0ddc2bf6737fbcdf9ce3f4c5cff16b58381a86314'
@@ -65,6 +71,7 @@
  
 -prepare() {
 -  sed -i '/^onionshare-cli = /d' ${pkgname}-${pkgver}/desktop/pyproject.toml
+-  patch -Np1 -d ${pkgname}-${pkgver} < ${pkgname}-loosen-cffi-version-bounds.patch
 -}
 +validpgpkeys=('927F419D7EC82C2F149C1BD1403C2657CD994F73')
  
@@ -143,9 +150,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,6 @@
+@@ -1,10 +1,6 @@
 -prepare() {
 -sed -i '/^onionshare-cli = /d' ${pkgname}-${pkgver}/desktop/pyproject.toml
+-patch -Np1 -d ${pkgname}-${pkgver} < ${pkgname}-loosen-cffi-version-bounds.patch
 +build() {
 +cd ${pkgname}/cli
 +python setup.py build

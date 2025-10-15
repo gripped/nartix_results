@@ -1,0 +1,89 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,8 +4,8 @@
+   localsearch
+   localsearch-testutils
+ )
+-pkgver=3.10.1
+-pkgrel=1
++pkgver=3.10.0
++pkgrel=2
+ pkgdesc="Filesystem indexer and metadata extractor"
+ url="https://gnome.pages.gitlab.gnome.org/localsearch/"
+ arch=(x86_64)
+@@ -15,7 +15,6 @@
+   exempi
+   ffmpeg
+   gcc-libs
+-  gexiv2
+   giflib
+   glib2
+   glibc
+@@ -25,6 +24,7 @@
+   icu
+   libcue
+   libexif
++  libgexiv2
+   libgsf
+   libgudev
+   libgxps
+@@ -53,7 +53,7 @@
+   python-gobject
+ )
+ source=("git+https://gitlab.gnome.org/GNOME/localsearch.git#tag=${pkgver/[a-z]/.&}")
+-b2sums=('836a02130ece328722e8d453af2ebf38374049e9d80c6435955276a8ff27b2ab1826ee252ecaa1322a0a3ab30de964825c481f3be9e0948fceae3fc809cdf864')
++b2sums=('2a41545bedc9afd25f47d812b53b975744b78fe24a2bd6827b4fee1009c0307b0bf35762317bd9d9b3f9fea3b552622aeb62d5d454a7a2bbf5efe8d71020488a')
+ 
+ prepare() {
+   cd localsearch
+@@ -61,11 +61,12 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd_user_services=false
+     -D landlock=enabled
+     -D tests_tap_protocol=true
+   )
+ 
+-  arch-meson localsearch build "${meson_options[@]}"
++  artix-meson localsearch build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,7 +4,6 @@
+ exempi
+ ffmpeg
+ gcc-libs
+-gexiv2
+ giflib
+ git
+ glib2
+@@ -17,6 +16,7 @@
+ icu
+ libcue
+ libexif
++libgexiv2
+ libgsf
+ libgudev
+ libgxps
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,9 +3,10 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd_user_services=false
+ -D landlock=enabled
+ -D tests_tap_protocol=true
+ )
+-arch-meson localsearch build "${meson_options[@]}"
++artix-meson localsearch build "${meson_options[@]}"
+ meson compile -C build
+ }

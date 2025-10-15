@@ -67,6 +67,7 @@ cjs
 claws-mail
 compface
 cvs
+dbeaver
 dillo
 dino
 distrobox
@@ -255,7 +256,6 @@ nemo
 nushell
 obconf-qt
 octave
-onionshare
 openbox
 openrct2
 openshot

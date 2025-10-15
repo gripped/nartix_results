@@ -1,0 +1,87 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ruby-async-container
+-pkgver=0.27.1
++pkgver=0.27.0
+ pkgrel=1
+ pkgdesc='Abstract container-based parallelism using threads and processes where appropriate'
+ arch=(any)
+@@ -9,9 +9,6 @@
+ depends=(
+   ruby
+   ruby-async
+-)
+-makedepends=(
+-  git
+ )
+ checkdepends=(
+   ruby-bake
+@@ -23,11 +20,11 @@
+   ruby-sus
+ )
+ options=(!emptydirs)
+-source=(git+https://github.com/socketry/async-container.git#tag=v$pkgver)
+-sha256sums=('12156ecf210f3bf61ef8553c6b1fb6d1f81904d07c3b2e140a49ad391be0c220')
++source=(https://github.com/socketry/async-container/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('7d19749f4b70da548903f9f488deced779deb38d7d12d81ae3c3414aecdf0c9e')
+ 
+ prepare() {
+-  cd async-container
++  cd async-container-$pkgver
+ 
+   sed -r \
+     -e 's|~>|>=|g' \
+@@ -42,7 +39,7 @@
+ 
+ build() {
+   local _gemdir="$(gem env gemdir)"
+-  cd async-container
++  cd async-container-$pkgver
+   gem build async-container.gemspec
+   gem install \
+     --local \
+@@ -68,11 +65,11 @@
+ 
+ check() {
+   local _gemdir="$(gem env gemdir)"
+-  cd async-container
++  cd async-container-$pkgver
+   GEM_HOME="tmp_install/$_gemdir" bake test
+ }
+ 
+ package() {
+-  cd async-container
++  cd async-container-$pkgver
+   cp -a tmp_install/* "$pkgdir"/
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-git
+ ruby
+ ruby-async
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ prepare() {
+-cd async-container
++cd async-container-$pkgver
+ sed -r \
+ -e 's|~>|>=|g' \
+ -e '/signing_key/d' \
+@@ -11,7 +11,7 @@
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"
+-cd async-container
++cd async-container-$pkgver
+ gem build async-container.gemspec
+ gem install \
+ --local \
