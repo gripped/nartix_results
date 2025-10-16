@@ -176,6 +176,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
@@ -273,6 +275,7 @@ hyprland
 i2pd
 ibus
 libibus
+icewm
 igsc
 iio-sensor-proxy
 immer
@@ -378,7 +381,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -413,7 +415,6 @@ libwpd
 libxfce4ui
 libxfce4util
 libxmlrpc
-liferea
 light-locker
 lightdm-slick-greeter
 lightdm
@@ -575,7 +576,6 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
-nmap
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -831,7 +831,6 @@ rrdtool
 rspamd
 rsync
 rtkit
-ruby-async-container
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
@@ -882,9 +881,6 @@ sysstat
 system-config-printer
 tcc
 telegram-desktop
-telepathy-gabble
-telepathy-glib
-telepathy-salut
 tensorflow
 tensorflow-opt
 tensorflow-cuda
@@ -893,7 +889,6 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
-thrift
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

@@ -1,15 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=rrdtool
- pkgver=1.9.0
--pkgrel=7
-+pkgrel=7.1
- pkgdesc="Data logging and graphing application"
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url="https://www.rrdtool.org"
- license=('GPL' 'custom')
+ license=('GPL-2.0-or-later')
  depends=('libxml2' 'pango' 'ttf-dejavu')
 -makedepends=('intltool' 'ruby' 'python-setuptools' 'tcl' 'lua51' 'systemd')
 +makedepends=('intltool' 'ruby' 'python-setuptools' 'tcl' 'lua51' 'udev')

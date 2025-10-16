@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+   lib32-libasyncns
+   lib32-libsndfile
+   lib32-libxcb
+-  lib32-systemd
+   libpulse
+ )
+ makedepends=(
+@@ -74,9 +73,11 @@
+     -D udevrulesdir=/usr/lib/udev/rules.d
+     -D webrtc-aec=disabled
+     -D zshcompletiondir=no
++-D systemduserunitdir=no
++-D systemd=disabled
+   )
+ 
+-  arch-meson pulseaudio build "${meson_options[@]}"
++  artix-meson pulseaudio build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,7 +7,6 @@
+ lib32-libsndfile
+ lib32-libx11
+ lib32-libxcb
+-lib32-systemd
+ libpulse
+ meson
+ valgrind

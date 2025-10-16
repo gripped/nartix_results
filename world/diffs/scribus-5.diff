@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,95 +1,71 @@
+@@ -1,99 +1,71 @@
  
  pkgname=scribus
 -pkgver=1.6.4
--pkgrel=7
+-pkgrel=8
 +pkgver=1.5.8
 +pkgrel=24
  pkgdesc="Desktop publishing software"
@@ -56,7 +56,8 @@
 -_archive="$pkgname-$pkgver"
 -source=("https://downloads.sourceforge.net/${pkgname}/$_archive.tar.xz"{,.asc}
 -        fix_build_with_poppler_25.07.0.patch
--        fix_build_with_poppler_25.09.0.patch)
+-        fix_build_with_poppler_25.09.0.patch
+-        fix_build_with_poppler_25.10.0.patch)
 -sha256sums=('533be7af03acfaa736ec5f7a3fc2562abd200fef5ca2a7cdee02b5f44d61829e'
 +source=("https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.xz"{,.asc}
 +        $pkgname-poppler-22.02.0.patch::https://github.com/scribusproject/scribus/commit/85c0dff3422f.patch
@@ -67,7 +68,8 @@
 +sha256sums=('47816e8fcf6d05788ff16aa4499f97ff22431c777a7789149b0a88b451e16b74'
              'SKIP'
 -            'f7dc5ba74cf0c6045bb1da4c3a910544e49e3858445a87aebf88575b0788daca'
--            'b43f500c919cd7d93fa3ef1bbeec36c87640971d520286eaad307259a19c377d')
+-            'b43f500c919cd7d93fa3ef1bbeec36c87640971d520286eaad307259a19c377d'
+-            '940fb08464740a3b99819bdac063b534c7572f973fabacf237aa2f0c8a2bfe95')
 +            '718ae9c882889b56919ab9718185b915a75e75e193a028539722b537f528c3dd'
 +            '2b57c0c6dbc93037b83e392d4721523efbccd8af1fe6fc11a26f1d2933b14a85'
 +            '986717d7c99a418d765e6b3d8b37165067548e62b6febb9c31f8831689f3540e'
@@ -84,6 +86,8 @@
 -    patch -Np1 -i "$srcdir/fix_build_with_poppler_25.07.0.patch"
 -
 -    patch -Np1 -i "$srcdir/fix_build_with_poppler_25.09.0.patch"
+-
+-    patch -Np1 -i "$srcdir/fix_build_with_poppler_25.10.0.patch"
 -}
 -
 -pkgver() {
@@ -182,12 +186,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,21 @@
+@@ -1,18 +1,21 @@
  prepare() {
 -cd "$_archive"
 -sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
 -patch -Np1 -i "$srcdir/fix_build_with_poppler_25.07.0.patch"
 -patch -Np1 -i "$srcdir/fix_build_with_poppler_25.09.0.patch"
+-patch -Np1 -i "$srcdir/fix_build_with_poppler_25.10.0.patch"
 +cd ${pkgname}-${pkgver}
 +patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch

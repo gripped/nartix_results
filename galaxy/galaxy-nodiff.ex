@@ -66,6 +66,7 @@ cinnamon
 cjs
 claws-mail
 compface
+copyq
 cvs
 dbeaver
 dillo
@@ -256,6 +257,7 @@ nemo
 nushell
 obconf-qt
 octave
+onionshare
 openbox
 openrct2
 openshot
@@ -532,6 +534,7 @@ xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-xkb-plugin
 xfconf
+xfdashboard
 xfdesktop
 xfwm4-themes
 xfwm4

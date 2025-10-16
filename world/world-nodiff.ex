@@ -704,8 +704,6 @@ gcab
 gcc13
 gcc14
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1077,7 +1075,6 @@ i3lock
 i3status
 iagno
 ibm-sw-tpm2
-icewm
 icmake
 icon-naming-utils
 icoutils
@@ -1333,6 +1330,7 @@ kemoticons
 kexec-tools
 keybinder2
 libkeybinder2
+keyd
 keysmith
 keystone
 python-keystone
@@ -1766,6 +1764,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2087,6 +2086,7 @@ libyuv
 libzen
 libzip
 libzmf
+liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
@@ -2408,6 +2408,9 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nltk-data
+nmap
+ndiff
+zenmap
 nng
 nnn
 node-gyp
@@ -4638,6 +4641,7 @@ quadrapassel
 quilt
 quota-tools
 qutebrowser
+qwindowkit
 qwt
 r
 r8168
@@ -4742,6 +4746,7 @@ ruby-ae
 ruby-ansi
 ruby-ast
 ruby-async-container-supervisor
+ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
 ruby-async-http
@@ -5291,6 +5296,8 @@ tecla
 telegram-qt
 telepathy-accounts-signon
 telepathy-farstream
+telepathy-gabble
+telepathy-glib
 telepathy-haze
 telepathy-idle
 telepathy-kde-accounts-kcm
@@ -5309,6 +5316,7 @@ telepathy-logger-qt
 telepathy-logger
 telepathy-mission-control
 telepathy-qt
+telepathy-salut
 tellico
 telly-skout
 template-glib
@@ -5462,6 +5470,8 @@ texlive-meta
 thermald
 threadweaver
 threadweaver5
+thrift
+python-thrift
 thunderbird
 tidy
 time
