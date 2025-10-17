@@ -46,7 +46,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -176,12 +175,12 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdal
-python-gdal
 gdm
 libgdm
 geoclue
 ghc-filesystem
+git
+git-zsh-completion
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -275,7 +274,6 @@ hyprland
 i2pd
 ibus
 libibus
-icewm
 igsc
 iio-sensor-proxy
 immer
@@ -317,6 +315,7 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 keychain
+kio
 kismet
 kitty
 kitty-terminfo
@@ -359,7 +358,6 @@ libdatrie
 libdc1394
 libdca
 libdv
-libdvdcss
 libdvdnav
 libdvdread
 libe-book
@@ -381,6 +379,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -862,7 +861,6 @@ smartmontools
 snapper
 snappy
 solid
-sox
 spice-vdagent
 sqlcipher
 squid
@@ -1027,6 +1025,7 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
+vokoscreen
 vpnc
 vte3
 vte-common

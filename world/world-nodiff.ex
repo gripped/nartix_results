@@ -276,6 +276,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -704,6 +705,8 @@ gcab
 gcc13
 gcc14
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -726,6 +729,7 @@ geoip-database
 geoip
 geos
 getdns
+gexiv2
 gflags
 gfxstream
 ghex
@@ -738,8 +742,6 @@ gimp-help
 gimp
 girara
 git-lfs
-git
-git-zsh-completion
 gitea
 github-cli
 gjs
@@ -1075,6 +1077,7 @@ i3lock
 i3status
 iagno
 ibm-sw-tpm2
+icewm
 icmake
 icon-naming-utils
 icoutils
@@ -1388,7 +1391,6 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
-kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1670,6 +1672,7 @@ libdom
 libdovi
 libdrm
 libdvbpsi
+libdvdcss
 libdwarf
 libebml
 libebur128
@@ -1764,7 +1767,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -5207,6 +5209,7 @@ sord-docs
 sound-theme-freedesktop
 soundtouch
 source-highlight
+sox
 spamassassin
 spandsp
 spandsp-docs
@@ -5623,7 +5626,6 @@ vkd3d-docs
 vmaf
 vncdotool
 vnstat
-vokoscreen
 volatility3
 volk
 volume_key
