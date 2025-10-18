@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libheif
+ pkgver=1.20.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc='An HEIF and AVIF file format decoder and encoder'
+ arch=(x86_64)
+ url='https://github.com/strukturag/libheif'
+@@ -10,6 +10,7 @@
+ makedepends=(cmake
+              dav1d
+              ffmpeg
++             gdk-pixbuf2
+              git
+              libjpeg-turbo
+              libpng
+@@ -42,8 +43,7 @@
+     -DWITH_FFMPEG_DECODER=ON \
+     -DWITH_FFMPEG_DECODER_PLUGIN=ON \
+     -DWITH_SvtEnc=ON \
+-    -DWITH_OpenJPEG_DECODER=ON \
+-    -DWITH_GDK_PIXBUF=OFF
++    -DWITH_OpenJPEG_DECODER=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,7 @@
+ dav1d
+ ffmpeg
+ gcc-libs
++gdk-pixbuf2
+ git
+ glibc
+ libde265
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,6 @@
+ -DWITH_FFMPEG_DECODER=ON \
+ -DWITH_FFMPEG_DECODER_PLUGIN=ON \
+ -DWITH_SvtEnc=ON \
+--DWITH_OpenJPEG_DECODER=ON \
+--DWITH_GDK_PIXBUF=OFF
++-DWITH_OpenJPEG_DECODER=ON
+ cmake --build build
+ }

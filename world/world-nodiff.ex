@@ -1741,7 +1741,6 @@ libgxps
 libhandy
 libhandy-docs
 libharu
-libheif
 libhubbub
 libical
 libice
@@ -1753,7 +1752,6 @@ libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
-libimobiledevice
 libindi
 libindicator
 libindicator-gtk2
@@ -1767,6 +1765,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw

@@ -375,11 +375,12 @@ libgtop
 libgudev
 libguestfs
 libhandy0
+libheif
 libidl2
+libimobiledevice
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
