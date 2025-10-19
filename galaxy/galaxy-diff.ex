@@ -12,10 +12,6 @@ featherpad
 firefox
 greetd-regreet
 gtklock
-labwc
-lazarus
-lazarus-qt5
-lazarus-qt6
 lemurs
 libe-book
 libetonyek

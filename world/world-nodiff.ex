@@ -742,6 +742,8 @@ gimp-help
 gimp
 girara
 git-lfs
+git
+git-zsh-completion
 gitea
 github-cli
 gjs
@@ -1391,6 +1393,7 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
+kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1765,7 +1768,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2021,7 +2023,6 @@ libwapcaplet
 libwebp
 libwebp-utils
 libwebsockets
-libwhereami
 libwhich
 libwlocate
 libwmf
@@ -4249,6 +4250,7 @@ python-serpent
 python-service-identity
 python-setproctitle
 python-setuptools-gettext
+python-setuptools-git-versioning
 python-setuptools-git
 python-setuptools-rust
 python-setuptools-scm
@@ -5820,6 +5822,7 @@ yodl
 youtube-dl
 yt-dlp
 ytfzf
+yyjson
 z3
 python-z3-solver
 zabbix

@@ -179,8 +179,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-git
-git-zsh-completion
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -315,7 +313,6 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 keychain
-kio
 kismet
 kitty
 kitty-terminfo
@@ -381,6 +378,7 @@ libimobiledevice
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -411,6 +409,7 @@ libutempter
 libvdpau
 libvirt
 libvncserver
+libwhereami
 libwpd
 libxfce4ui
 libxfce4util
