@@ -51,7 +51,6 @@ mdadm
 mkinitcpio
 nfs-utils
 nfsidmap
-nilfs-utils
 openldap
 libldap
 openresolv

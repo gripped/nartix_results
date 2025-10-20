@@ -2,6 +2,7 @@
 a52dec
 accountsservice
 alacritty
+alsa-lib
 alsa-utils
 amule
 apache
@@ -86,6 +87,7 @@ connman
 containerd
 cppcheck
 cppdap
+criterion
 crun
 cups
 libcups
@@ -374,7 +376,6 @@ libguestfs
 libhandy0
 libheif
 libidl2
-libimobiledevice
 libinput
 libisoburn
 libisofs
@@ -397,6 +398,7 @@ libqtxdg
 librevenge
 libsidplay
 libsidplayfp
+libsndfile
 libsoxr
 libstaroffice
 libtg_owt
@@ -913,9 +915,6 @@ udisks2-lvm2
 udisks2-docs
 umockdev
 unbound
-unicorn
-python-unicorn
-ruby-unicorn-engine
 unoconv
 upower
 uptimed
@@ -1035,6 +1034,7 @@ vte4-utils
 vte-docs
 w3m
 waybar
+webhook
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
 webkit2gtk-5.0

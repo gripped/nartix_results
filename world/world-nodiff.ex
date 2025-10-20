@@ -19,6 +19,7 @@ acpi_call
 acpica
 acpid
 acpilight
+add-determinism
 adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
@@ -46,7 +47,6 @@ alacarte
 alembic
 alligator
 alsa-firmware
-alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
@@ -385,7 +385,6 @@ cpp-hocon
 cppunit
 cpputest
 cppzmq
-criterion
 criu
 cryptoplusplus
 cscope
@@ -1755,6 +1754,7 @@ libiec61883
 libieee1284
 libimagequant
 libimobiledevice-glue
+libimobiledevice
 libindi
 libindicator
 libindicator-gtk2
@@ -1952,7 +1952,6 @@ libsixel
 libslirp
 libsm
 libsmbios
-libsndfile
 libsodium
 libsonic
 libsoup
@@ -1976,6 +1975,7 @@ libssh-docs
 libstatgrab
 libsysstat
 libtar
+libtatsu
 libteam
 libteam-docs
 libtermkey
@@ -5564,6 +5564,9 @@ unicode-character-database
 unicode-cldr
 unicode-cldr-annotations
 unicode-emoji
+unicorn
+python-unicorn
+ruby-unicorn-engine
 unifdef
 unittestpp
 unrar
@@ -5658,7 +5661,6 @@ wayland-utils
 wayland
 wayland-docs
 wcslib
-webhook
 webp-pixbuf-loader
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,29 @@
+@@ -1,21 +1,28 @@
  
  pkgname=ly
 -pkgver=1.1.2
@@ -36,12 +36,11 @@
 +prepare() {
 +    cd "$pkgname"
 +    sed -i '/try install_service(allocator, patch_map);/d' build.zig
-+    patch -Np1 -i "$srcdir/config_ini.patch"
 +}
  
  build() {
      cd "$pkgname"
-@@ -24,7 +32,7 @@
+@@ -24,7 +31,8 @@
  
  package() {
      cd "$pkgname"
@@ -51,6 +50,7 @@
      install -Dm644 license.md "$pkgdir/usr/share/licenses/$pkgname/WTFPL"
  }
 +
++
 
 
 ############# Stripped diff below #################
@@ -59,11 +59,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,3 +1,8 @@
+@@ -1,3 +1,7 @@
 +prepare() {
 +cd "$pkgname"
 +sed -i '/try install_service(allocator, patch_map);/d' build.zig
-+patch -Np1 -i "$srcdir/config_ini.patch"
 +}
  build() {
  cd "$pkgname"

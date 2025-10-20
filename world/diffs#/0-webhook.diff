@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,10 +8,8 @@
+@@ -1,17 +1,15 @@
+ 
+ pkgname=webhook
+ pkgver=2.8.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A lightweight incoming webhook server to run shell commands"
+ arch=('x86_64')
+ url="https://github.com/adnanh/webhook"
  license=('MIT')
  depends=('glibc')
  makedepends=('go' 'git')
@@ -13,9 +21,33 @@
  
  prepare() {
    cd webhook-$pkgver
+@@ -34,7 +32,7 @@
+   export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
+ 
+   cd "$srcdir"/webhook-$pkgver
+-  go build -ldflags="-s -w -buildid=''" -o build/webhook
++  go build -o build/webhook
+ }
+ 
+ package() {
 @@ -44,5 +42,4 @@
    install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
  
    install -dm755 "$pkgdir"/etc/webhook
 -  install -Dm644 "$srcdir"/webhook.service "$pkgdir"/usr/lib/systemd/system/webhook.service
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,5 +14,5 @@
+ export CGO_LDFLAGS="${LDFLAGS}"
+ export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
+ cd "$srcdir"/webhook-$pkgver
+-go build -ldflags="-s -w -buildid=''" -o build/webhook
++go build -o build/webhook
  }

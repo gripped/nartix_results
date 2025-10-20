@@ -332,7 +332,6 @@ scummvm
 shairplay
 smokeping
 snorenotify
-solaar
 spotify-launcher
 sqlitebrowser
 stalonetray

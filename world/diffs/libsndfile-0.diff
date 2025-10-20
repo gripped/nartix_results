@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libsndfile
+ pkgver=1.2.2
+-pkgrel=4
++pkgrel=3
+ pkgdesc="A C library for reading and writing files containing sampled audio data"
+ arch=(x86_64)
+ url="https://libsndfile.github.io/libsndfile/"
+@@ -45,7 +45,6 @@
+     -D BUILD_SHARED_LIBS=ON
+     -D CMAKE_INSTALL_PREFIX=/usr
+     -D CMAKE_BUILD_TYPE=None
+-    -D CMAKE_POLICY_VERSION_MINIMUM=3.5
+     -D ENABLE_EXTERNAL_LIBS=ON
+     -D ENABLE_MPEG=ON
+     -S $pkgname-$pkgver
+@@ -55,7 +54,6 @@
+     -B build-test
+     -D CMAKE_BUILD_TYPE=None
+     -D CMAKE_INSTALL_PREFIX=/usr
+-    -D CMAKE_POLICY_VERSION_MINIMUM=3.5
+     -S $pkgname-$pkgver
+     -W no-dev
+   )
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ -D BUILD_SHARED_LIBS=ON
+ -D CMAKE_INSTALL_PREFIX=/usr
+ -D CMAKE_BUILD_TYPE=None
+--D CMAKE_POLICY_VERSION_MINIMUM=3.5
+ -D ENABLE_EXTERNAL_LIBS=ON
+ -D ENABLE_MPEG=ON
+ -S $pkgname-$pkgver
+@@ -17,7 +16,6 @@
+ -B build-test
+ -D CMAKE_BUILD_TYPE=None
+ -D CMAKE_INSTALL_PREFIX=/usr
+--D CMAKE_POLICY_VERSION_MINIMUM=3.5
+ -S $pkgname-$pkgver
+ -W no-dev
+ )

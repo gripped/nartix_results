@@ -148,6 +148,7 @@ nano
 ncurses
 net-tools
 nettle
+nilfs-utils
 npth
 nspr
 nss

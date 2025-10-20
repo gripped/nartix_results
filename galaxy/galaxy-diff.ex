@@ -117,6 +117,7 @@ rage
 read-edid
 sdcv
 signal-desktop
+solaar
 terminology
 termshark
 tor

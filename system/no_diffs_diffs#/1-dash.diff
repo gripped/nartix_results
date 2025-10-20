@@ -9,3 +9,13 @@
  depends=('glibc' 'libedit' 'libedit.so')
  install=dash.install
  source=(https://git.kernel.org/pub/scm/utils/dash/dash.git/snapshot/${pkgname}-${pkgver}.tar.gz)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-glibc
+-libedit
+-libedit.so

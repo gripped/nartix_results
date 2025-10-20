@@ -8,7 +8,30 @@
               ttf-font
               xmlto)
  optdepends=('rlwrap: readline support for awesome-client'
-@@ -66,6 +65,7 @@
+@@ -40,9 +39,11 @@
+ provides=(notification-daemon)
+ backup=('etc/xdg/awesome/rc.lua')
+ _archive="$pkgname-$pkgver"
+-source=("https://github.com/awesomeWM/awesome/releases/download/v$pkgver/$_archive.tar.xz"{,.asc})
++source=("https://github.com/awesomeWM/awesome/releases/download/v$pkgver/$_archive.tar.xz"{,.asc}
++		"https://patch-diff.githubusercontent.com/raw/awesomeWM/awesome/pull/4030.patch")
+ sha512sums=('c5ef1e8dc593e7783b895d22143154aea8f211beeda24672a7ee4ed5112b4f4284043f848a151f3d3c4f569e91308670367a4353f705b20511b36495b22fa3f5'
+-            'SKIP')
++            'SKIP'
++            '1176649021d2df966c767f79fb9f60d72fa184d5c1ac1f227821bd31d3a9529a98c99e9fe5766175dfb8b72eef94fd2022ac94015b1947c04884f97256bfad2f')
+ validpgpkeys=('2BB32F88FF3D1E76E682303F22E428EBCB8FCB06') # Uli Schlachter <psychon@znc.in>
+ 
+ prepare() {
+@@ -56,6 +57,8 @@
+ 	    -e 's/Gio\.UnixInputStream/GioUnix\.InputStream/g' \
+ 	    -e 's/Gio\.UnixOutputStream/GioUnix\.OutputStream/g' \
+ 	    -i lib/awful/spawn.lua tests/_client.lua tests/test-spawn.lua
++
++	patch -Np1 -i ../4030.patch
+ }
+ 
+ build() {
+@@ -66,6 +69,7 @@
  		-DCMAKE_INSTALL_PREFIX=/usr \
  		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
  		-DSYSCONFDIR=/etc \
@@ -33,7 +56,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,6 +17,7 @@
+@@ -8,6 +8,7 @@
+ -e 's/Gio\.UnixInputStream/GioUnix\.InputStream/g' \
+ -e 's/Gio\.UnixOutputStream/GioUnix\.OutputStream/g' \
+ -i lib/awful/spawn.lua tests/_client.lua tests/test-spawn.lua
++patch -Np1 -i ../4030.patch
+ }
+ build() {
+ cd "$_archive"
+@@ -17,6 +18,7 @@
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
  -DSYSCONFDIR=/etc \

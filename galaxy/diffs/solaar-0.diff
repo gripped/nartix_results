@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _name=Solaar
+ pkgname=solaar
+ pkgver=1.1.14
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Linux device manager for a wide range of Logitech devices"
+ url="https://pwr-solaar.github.io/Solaar/"
+ _url="https://github.com/pwr-Solaar/Solaar"
+@@ -40,7 +40,6 @@
+ 
+ prepare() {
+   cd $_name
+-  git cherry-pick -n 924684b610f831ceeb659bbc9a8321e38954870e  # https://github.com/pwr-Solaar/Solaar/pull/2931
+   tools/po-compile.sh
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ cd $_name
+-git cherry-pick -n 924684b610f831ceeb659bbc9a8321e38954870e  # https://github.com/pwr-Solaar/Solaar/pull/2931
+ tools/po-compile.sh
+ }
+ build() {
