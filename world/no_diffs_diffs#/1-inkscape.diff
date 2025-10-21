@@ -1,11 +1,150 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -9,46 +9,46 @@
+ makedepends=('cmake' 'boost' 'git' 'glib2-devel')
  
- pkgname=inkscape
- pkgver=1.4.2
--pkgrel=9
-+pkgrel=10
- pkgdesc='Professional vector graphics editor'
- url='https://inkscape.org/'
- license=('GPL' 'LGPL')
+ depends=(
+-  'atkmm' 'libatkmm-1.6.so'
++  'atkmm'
+   'boost-libs'
+-  'cairo' 'libcairo.so' 'libcairo-gobject.so'
+-  'cairomm' 'libcairomm-1.0.so'
++  'cairo'
++  'cairomm'
+   'double-conversion'
+-  'fontconfig' 'libfontconfig.so'
+-  'freetype2' 'libfreetype.so'
++  'fontconfig'
++  'freetype2'
+   'gc'
+   'gcc-libs'
+-  'gdk-pixbuf2' 'libgdk_pixbuf-2.0.so'
+-  'glib2' 'libglib-2.0.so' 'libgmodule-2.0.so'
++  'gdk-pixbuf2'
++  'glib2'
+   'glibc'
+-  'glibmm' 'libglibmm-2.4.so' # 'libgiomm-2.4.so'
++  'glibmm'
+   'gobject-introspection-runtime'
+-  'graphicsmagick' # 'libGraphicsMagick++.so'
+-  'gsl' # 'libgsl.so'
+-  'gspell' 'libgspell-1.so'
+-  'gtk3' 'libgdk-3.so' 'libgtk-3.so'
+-  'gtkmm3' 'libgdkmm-3.0.so' 'libgtkmm-3.0.so'
+-  'gtksourceview4' 'libgtksourceview-4.so'
+-  'harfbuzz' 'libharfbuzz.so'
++  'graphicsmagick'
++  'gsl'
++  'gspell'
++  'gtk3'
++  'gtkmm3'
++  'gtksourceview4'
++  'harfbuzz'
+   'hicolor-icon-theme'
+-  'lcms2' 'liblcms2.so'
+-  'lib2geom' # 'lib2geom.so'
+-  'libcdr' # 'libcdr-0.1.so'
+-  'libepoxy' 'libepoxy.so'
+-  'libjpeg-turbo' 'libjpeg.so'
+-  'libpng' 'libpng16.so'
+-  'librevenge' # 'librevenge-0.0.so'
+-  'libsigc++' 'libsigc-2.0.so'
+-  'libvisio' # 'libvisio-0.1.so'
+-  'libwpg' # 'libwpg-0.3.so'
++  'lcms2'
++  'lib2geom'
++  'libcdr'
++  'libepoxy'
++  'libjpeg-turbo'
++  'libpng'
++  'librevenge'
++  'libsigc++'
++  'libvisio'
++  'libwpg'
+   'libx11'
+-  'libxml2' 'libxml2.so'
+-  'libxslt' 'libxslt.so'
+-  'pango' 'libpango-1.0.so' 'libpangocairo-1.0.so' 'libpangoft2-1.0.so'
+-  'pangomm' 'libpangomm-1.4.so'
+-  'poppler' 'libpoppler.so'
+-  'poppler-glib' 'libpoppler-glib.so'
+-  'potrace' # 'libpotrace.so'
++  'libxml2'
++  'libxslt'
++  'pango'
++  'pangomm'
++  'poppler'
++  'poppler-glib'
++  'potrace'
+   'python'
+   'python-appdirs'
+   'python-beautifulsoup4'
+@@ -71,10 +71,10 @@
+   'python-tinycss2'
+   'python-urllib3'
+   'python-zstandard'
+-  'readline' 'libreadline.so'
++  'readline'
+   'scour'
+   'ttf-font'
+-  'zlib' 'libz.so'
++  'zlib'
+ )
+ 
+ optdepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -26,49 +26,17 @@
+ hicolor-icon-theme
+ lcms2
+ lib2geom
+-libatkmm-1.6.so
+-libcairo-gobject.so
+-libcairo.so
+-libcairomm-1.0.so
+ libcdr
+ libepoxy
+-libepoxy.so
+-libfontconfig.so
+-libfreetype.so
+-libgdk-3.so
+-libgdk_pixbuf-2.0.so
+-libgdkmm-3.0.so
+-libglib-2.0.so
+-libglibmm-2.4.so
+-libgmodule-2.0.so
+-libgspell-1.so
+-libgtk-3.so
+-libgtkmm-3.0.so
+-libgtksourceview-4.so
+-libharfbuzz.so
+ libjpeg-turbo
+-libjpeg.so
+-liblcms2.so
+-libpango-1.0.so
+-libpangocairo-1.0.so
+-libpangoft2-1.0.so
+-libpangomm-1.4.so
+ libpng
+-libpng16.so
+-libpoppler-glib.so
+-libpoppler.so
+-libreadline.so
+ librevenge
+ libsigc++
+-libsigc-2.0.so
+ libvisio
+ libwpg
+ libx11
+ libxml2
+-libxml2.so
+ libxslt
+-libxslt.so
+-libz.so
+ pango
+ pangomm
+ poppler

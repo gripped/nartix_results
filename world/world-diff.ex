@@ -2,7 +2,6 @@
 a52dec
 accountsservice
 alacritty
-alsa-lib
 alsa-utils
 amule
 apache
@@ -32,6 +31,7 @@ bluez-hid2hci
 bluez-mesh
 bluez-obex
 bolt
+boost
 booster
 box2d
 brightnessctl
@@ -76,6 +76,7 @@ cloud-init
 clucene
 cmake
 cmus
+collada-dom
 colord
 libcolord
 colord-sane
@@ -92,6 +93,7 @@ crun
 cups
 libcups
 darkhttpd
+dart
 dbus-broker
 dconf
 ddcutil
@@ -181,6 +183,8 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
+git
+git-zsh-completion
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -267,6 +271,7 @@ hidapi
 hipcub
 hipfft
 hipsolver
+hugin
 hwloc
 hyphen
 hyphen-en
@@ -277,6 +282,7 @@ libibus
 igsc
 iio-sensor-proxy
 immer
+innoextract
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -326,6 +332,7 @@ ksystemlog
 kwayland5
 kwin-x11
 kwin
+leatherman
 libabw
 libatasmart
 libayatana-indicator
@@ -379,7 +386,9 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
+libixion
+libkolabxml
+liblas
 libldm
 liblqr
 libmilter
@@ -398,7 +407,6 @@ libqtxdg
 librevenge
 libsidplay
 libsidplayfp
-libsndfile
 libsoxr
 libstaroffice
 libtg_owt
@@ -411,7 +419,6 @@ libutempter
 libvdpau
 libvirt
 libvncserver
-libwhereami
 libwpd
 libxfce4ui
 libxfce4util
@@ -517,6 +524,7 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
+menu-cache
 mesa
 opencl-mesa
 vulkan-asahi
@@ -557,6 +565,8 @@ mutter-docs
 mutter45
 mutter46
 nbd
+ncdu
+ncmpcpp
 ndctl
 ndisc6
 nemo-extensions
@@ -804,6 +814,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -907,6 +918,7 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
+trojan
 tumbler
 udftools
 udisks2

@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ncdu
+ pkgver=2.9.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Disk usage analyzer with an ncurses interface'
+ url='https://dev.yorhel.nl/ncdu'
+ license=('MIT')
+@@ -28,8 +28,7 @@
+     --prefix /usr \
+     --search-prefix /usr \
+     --release=safe \
+-    --build-id=sha1 \
+-    -Dtarget=native-linux.6.6-gnu.2.40 \
++    -Dtarget=native-linux.6.1-gnu.2.38 \
+     -Dcpu=baseline \
+     -Dpie=true
+ }
+@@ -43,8 +42,7 @@
+     --prefix /usr \
+     --search-prefix /usr \
+     --release=safe \
+-    --build-id=sha1 \
+-    -Dtarget=native-linux.6.6-gnu.2.40 \
++    -Dtarget=native-linux.6.1-gnu.2.38 \
+     -Dcpu=baseline \
+     -Dpie=true
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,7 @@
+ --prefix /usr \
+ --search-prefix /usr \
+ --release=safe \
+---build-id=sha1 \
+--Dtarget=native-linux.6.6-gnu.2.40 \
++-Dtarget=native-linux.6.1-gnu.2.38 \
+ -Dcpu=baseline \
+ -Dpie=true
+ }

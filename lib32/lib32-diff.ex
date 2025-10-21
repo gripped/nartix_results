@@ -1,4 +1,3 @@
-lib32-alsa-lib
 lib32-at-spi2-core
 lib32-colord
 lib32-dbus

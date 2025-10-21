@@ -1,8 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,33 +3,22 @@
- pkgver=6.1.1
- pkgrel=2
+@@ -1,32 +1,24 @@
+ 
+ pkgname=libdvdnav
+-pkgver=7.0.0
+-pkgrel=1
++pkgver=6.1.1
++pkgrel=2
  pkgdesc='Library to navigate DVD video disks'
 -arch=(x86_64)
 +arch=('x86_64')
@@ -12,14 +16,16 @@
 -  glibc
 -  libdvdread
 -)
--makedepends=(git)
+-makedepends=(
+-  git
+-  meson
+-)
 -source=("git+https://code.videolan.org/videolan/libdvdnav.git#tag=$pkgver")
--b2sums=(923e3171a7b5d488e77bbe8411827568c89cc85b2bb4d5434fc044b27274ef6c7e5987c4f2900f3a26371531603dcc66a7d40a7b4a9574fd8a4e677a482f7004)
+-b2sums=(64a37fb6c68aed46b2cbf2bd98e499bf9ed8694d9f358d07a2e630bba385bb48b909eea04097da86d0bc4f8958c987895fd98a7ba4d82119d8a8a4a9e6743583)
 -validpgpkeys=(65F7C6B4206BD057A7EB73787180713BE58D1ADC) # VideoLAN Release Signing Key
 -
 -prepare() {
 -  cd $pkgname
--  autoreconf -fi
 -}
 +license=('GPL')
 +depends=('glibc' 'libdvdread')
@@ -29,20 +35,17 @@
 +validpgpkeys=('65F7C6B4206BD057A7EB73787180713BE58D1ADC') # VideoLAN Release Signing Key
  
  build() {
--  cd $pkgname
--  ./configure \
--    --prefix=/usr \
--    --sysconfdir=/etc \
--    --localstatedir=/var
+-  arch-meson $pkgname build
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +  ./configure --prefix=/usr
-   make
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
 
 
@@ -50,25 +53,23 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,3 +1,2 @@
+@@ -1,4 +1,2 @@
 -git
  glibc
  libdvdread
+-meson
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,5 @@
+@@ -1,7 +1,5 @@
 -prepare() {
 -cd $pkgname
--autoreconf -fi
--}
- build() {
--cd $pkgname
--./configure \
----prefix=/usr \
----sysconfdir=/etc \
----localstatedir=/var
++build() {
 +cd $pkgname-$pkgver
 +./configure --prefix=/usr
- make
++make
  }
+-build() {
+-arch-meson $pkgname build
+-meson compile -C build
+-}

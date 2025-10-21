@@ -47,6 +47,7 @@ alacarte
 alembic
 alligator
 alsa-firmware
+alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
@@ -234,7 +235,6 @@ bogofilter-sqlite
 boinc
 boinc-nox
 bomber
-boost
 botan
 botan2
 bovo
@@ -356,7 +356,6 @@ coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
-collada-dom
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -411,7 +410,6 @@ cython0
 d-spy
 darktable
 dart-sass
-dart
 darts
 dateutils
 dav1d
@@ -741,8 +739,6 @@ gimp-help
 gimp
 girara
 git-lfs
-git
-git-zsh-completion
 gitea
 github-cli
 gjs
@@ -1034,7 +1030,6 @@ htop
 http-parser
 httpbin
 hub
-hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -1093,7 +1088,6 @@ incidenceeditor
 indent
 iniparser
 inkscape
-innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
@@ -1582,7 +1576,6 @@ lcms2
 ldb
 ldc
 leafpad
-leatherman
 lensfun
 leptonica
 level-zero
@@ -1762,12 +1755,12 @@ libindicator-gtk3
 libinstpatch
 libiptcdata
 libiscsi
-libixion
 libjcat
 libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1782,7 +1775,6 @@ libkeyfinder
 libkgapi
 libkleo
 libkmahjongg
-libkolabxml
 libkomparediff2
 libksane
 libkscreen
@@ -1791,7 +1783,6 @@ libksieve
 libksysguard
 libktorrent
 liblangtag
-liblas
 liblc3
 libldac
 libliftoff
@@ -1952,6 +1943,7 @@ libsixel
 libslirp
 libsm
 libsmbios
+libsndfile
 libsodium
 libsonic
 libsoup
@@ -2023,6 +2015,7 @@ libwapcaplet
 libwebp
 libwebp-utils
 libwebsockets
+libwhereami
 libwhich
 libwlocate
 libwmf
@@ -2273,7 +2266,6 @@ memray
 memtest86plus
 memtest86+-efi
 memtest86+-iso
-menu-cache
 menumaker
 mercurial
 merkuro
@@ -2370,9 +2362,7 @@ libnautilus-extension-docs
 nauty
 nawk
 nccl
-ncdu
 ncftp
-ncmpcpp
 ncompress
 neatvnc
 nemo
@@ -4600,7 +4590,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -5524,7 +5513,6 @@ tree-sitter-vimdoc
 tree-sitter
 tree-sitter-cli
 tree
-trojan
 ts-node
 tslib
 ttf-bitstream-vera

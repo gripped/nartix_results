@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,30 +1,46 @@
+@@ -1,37 +1,46 @@
  pkgname=0ad
 -pkgver=a27.1
 -_pkgver=0.27.1
--pkgrel=3
+-pkgrel=4
 +pkgver=a26
 +_pkgver=0.0.26-alpha
 +pkgrel=12
@@ -19,10 +19,11 @@
 -makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'git' 'python' 'llvm')
 +makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'python' 'python-virtualenv' 'git')
  options=('!lto') # breaks spidermonkey linking (https://bugs.gentoo.org/746947)
--source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz")
+ source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz"
+-         boost-1.89.patch)
 -validpgpkeys=('A035C8C19219BA821ECEA86B64E628F8D684696D')  # Pablo Galindo Salgado <pablogsal@gmail.com>
--sha512sums=('7ddc355afed44511f3c62bb4119e308f921fc9624980a3171853d923042777eeb248a1ce326d3768f23596d75e8346025321d7d72d6fa3b1106a5818ca62b40d')
-+source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz"
+-sha512sums=('7ddc355afed44511f3c62bb4119e308f921fc9624980a3171853d923042777eeb248a1ce326d3768f23596d75e8346025321d7d72d6fa3b1106a5818ca62b40d'
+-            'fa3741c82c2ea037f47c1466c29b5b5af2eb921f2f4033f4f7db8999c712b68402471a4015b39dfbac2d3fd82c30afac89b3aef01bf01c7f01b2097187206f87')
 +        mozjs_virtualenv.patch
 +        fix_python_3.11_ftbfs.patch
 +        https://github.com/0ad/0ad/commit/839edc3a.patch
@@ -34,16 +35,17 @@
 +            '1dfc8a0c6ac29040f72d9bbf6b631a74cbdec444b9078a015345139228666354d9b5059f85b640ce3afc0f590bcbe8afd5e158509a0c95751e1cd69fece46876'
 +            'a7fd1454385f56b7c8cb0fc6ac001761d4419df4aeec570ba846c7df4eb327d25b9ff1a7946cb334315109fa90ca2c1820583619f4e1ec5d53805afa08e10093'
 +            '5f32d47f01d845e07b2f919c9b04ac5e50dc9977fa97f981eba4a53677a29d797d0d76bc385ac047dd7c7d24af7d95cd8256d433bd43ce1a6606763c0ea736cb')
-+
-+prepare() {
-+  cd "$pkgname-$_pkgver"
+ 
+ prepare() {
+   cd "$pkgname-$_pkgver"
+-  patch -p1 -i ../boost-1.89.patch
 +
 +  patch -Np1 -i "$srcdir"/fix_python_3.11_ftbfs.patch
 +  cp "$srcdir"/mozjs_virtualenv.patch libraries/source/spidermonkey
 +  patch -p1 -i ../839edc3a.patch # Fix build with fmt 10
 +  patch -p1 -i ../093e1eb2.patch # Fix build with GCC 13
 +  patch -p1 -i ../d2426312.patch # Fix build with libxml2 2.12
-+}
+ }
  
  build() {
 -  cd "$pkgname-$_pkgver"
@@ -61,7 +63,7 @@
        --without-pch \
        --bindir=/usr/bin \
        --libdir=/usr/lib/0ad \
-@@ -32,7 +48,7 @@
+@@ -39,7 +48,7 @@
  
    cd gcc
  
@@ -93,15 +95,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,20 @@
-+prepare() {
-+cd "$pkgname-$_pkgver"
+@@ -1,19 +1,20 @@
+ prepare() {
+ cd "$pkgname-$_pkgver"
+-patch -p1 -i ../boost-1.89.patch
 +patch -Np1 -i "$srcdir"/fix_python_3.11_ftbfs.patch
 +cp "$srcdir"/mozjs_virtualenv.patch libraries/source/spidermonkey
 +patch -p1 -i ../839edc3a.patch # Fix build with fmt 10
 +patch -p1 -i ../093e1eb2.patch # Fix build with GCC 13
 +patch -p1 -i ../d2426312.patch # Fix build with libxml2 2.12
-+}
+ }
  build() {
 -cd "$pkgname-$_pkgver"
 -export CMAKE_POLICY_VERSION_MINIMUM=3.5

@@ -1,0 +1,78 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,27 @@
+ 
+ pkgname=lxmenu-data
+ pkgver=0.1.6
+-pkgrel=2
+-pkgdesc='Freedesktop.org desktop menus for LXDE'
+-arch=(any)
+-url='https://github.com/lxde/lxmenu-data'
+-license=(LGPL-2.1-or-later)
+-makedepends=(
+-  git
+-  intltool
+-)
+-source=("git+https://github.com/lxde/lxmenu-data.git#tag=$pkgver")
+-b2sums=(7612b6d8212ab33542176f14f6b94e0a33523543c7553db8fbd75b3b602bedbd93a6f02740f611806b39c13e6a4a9135527d9d97a6b93adcb21fdda9682b69ed)
++pkgrel=1
++pkgdesc="Freedesktop.org desktop menus for LXDE"
++arch=('any')
++license=('GPL2')
++url="https://lxde.org/"
++source=(https://github.com/lxde/lxmenu-data/archive/$pkgver/$pkgname-$pkgver.tar.gz)
++makedepends=('intltool')
++sha256sums=('b237e732609fb2a521a942e08bb825ac7973ee478db7567d3606665a3793b2e8')
+ 
+ prepare() {
+-  cd $pkgname
+-  autoreconf -fi
++  cd $pkgname-$pkgver
++  autoreconf -vif
+ }
+ 
+ build() {
+-  cd $pkgname
+-  ./configure \
+-    --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --localstatedir=/var
++  cd $pkgname-$pkgver
++  ./configure --prefix=/usr --sysconfdir=/etc
+   make
+ }
+ 
+ package() {
+-  cd $pkgname
++  cd $pkgname-$pkgver
+   make DESTDIR="$pkgdir" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +1 @@
+-git
+ intltool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,9 @@
+ prepare() {
+-cd $pkgname
+-autoreconf -fi
++cd $pkgname-$pkgver
++autoreconf -vif
+ }
+ build() {
+-cd $pkgname
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---localstatedir=/var
++cd $pkgname-$pkgver
++./configure --prefix=/usr --sysconfdir=/etc
+ make
+ }

@@ -1,3 +1,4 @@
+0ad
 alsa-utils
 autorandr
 cinnamon-desktop
@@ -10,6 +11,7 @@ etherwall
 evisum
 featherpad
 firefox
+gpicview
 greetd-regreet
 gtklock
 lemurs
@@ -32,6 +34,8 @@ lxhotkey
 lxhotkey-gtk3
 lxinput
 lxinput-gtk3
+lxmenu-data
+lxmusic
 lxqt-config
 ly
 mate-control-center

@@ -1,5 +1,4 @@
 0ad-data
-0ad
 abduco
 ack
 acpilight
@@ -95,7 +94,6 @@ garcon
 girara
 gitoxide
 glib-perl
-gpicview
 grilo-plugins
 grub-btrfs
 grub-customizer
@@ -188,8 +186,6 @@ lxdm-gtk3
 lximage-qt
 lxlauncher
 lxlauncher-gtk3
-lxmenu-data
-lxmusic
 lxpanel-gtk3
 lxpanel
 lxqt-about
