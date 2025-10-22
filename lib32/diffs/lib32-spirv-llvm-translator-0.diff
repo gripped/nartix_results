@@ -1,19 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,11 +12,10 @@
- source=(git+${url}.git#tag=v$pkgver)
- sha256sums=('735001cb8622fc0dfcc4e2005299d185ebc4bb1970a98189a43da262c6c1dfe3')
- 
--pkgver() {
--  git -C ${_srcname} describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./;s/-/+/'
--}
+@@ -38,6 +38,8 @@
+ }
  
  build() {
 +  export CMAKE_PREFIX_PATH=/usr
 +  export CMAKE_INSTALL_LIBDIR=/usr/lib32
-   export PKG_CONFIG=${CARCH}-pc-linux-gnu-pkg-config
- 
-   cmake -B build -S ${_srcname} \
+   local cmake_options=(
+     -D BUILD_SHARED_LIBS=ON
+     -D CMAKE_BUILD_TYPE=Release
 
 
 ############# Stripped diff below #################
@@ -22,10 +17,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,6 @@
+@@ -3,6 +3,8 @@
+ git apply -3 ../0001-fixes-a-new-validation-failure-in-a-UniformId-test-3.patch
+ }
  build() {
 +export CMAKE_PREFIX_PATH=/usr
 +export CMAKE_INSTALL_LIBDIR=/usr/lib32
- export PKG_CONFIG=${CARCH}-pc-linux-gnu-pkg-config
- cmake -B build -S ${_srcname} \
- -G 'Unix Makefiles' \
+ local cmake_options=(
+ -D BUILD_SHARED_LIBS=ON
+ -D CMAKE_BUILD_TYPE=Release

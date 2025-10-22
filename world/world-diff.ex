@@ -31,8 +31,6 @@ bluez-hid2hci
 bluez-mesh
 bluez-obex
 bolt
-boost
-booster
 box2d
 brightnessctl
 brltty
@@ -71,12 +69,10 @@ cifs-utils
 cinnamon-desktop
 cjs
 clamav
-clang
 cloud-init
 clucene
 cmake
 cmus
-collada-dom
 colord
 libcolord
 colord-sane
@@ -88,19 +84,16 @@ connman
 containerd
 cppcheck
 cppdap
-criterion
 crun
 cups
 libcups
 darkhttpd
-dart
 dbus-broker
 dconf
 ddcutil
 dhcp
 dhclient
 dhcpcd
-digikam
 distcc
 dns-over-https
 docker
@@ -150,7 +143,6 @@ fastjar
 fceux
 fcgiwrap
 fcitx-mozc
-fcitx5-mozc
 fcitx5
 fcron
 fig2dev
@@ -205,7 +197,6 @@ gnome-user-share
 go-bindata
 godot
 godot-mono
-gpicview
 greetd-tuigreet
 greetd
 $pkgbase
@@ -271,7 +262,6 @@ hidapi
 hipcub
 hipfft
 hipsolver
-hugin
 hwloc
 hyphen
 hyphen-en
@@ -282,7 +272,6 @@ libibus
 igsc
 iio-sensor-proxy
 immer
-innoextract
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -332,7 +321,6 @@ ksystemlog
 kwayland5
 kwin-x11
 kwin
-leatherman
 libabw
 libatasmart
 libayatana-indicator
@@ -364,8 +352,6 @@ libdatrie
 libdc1394
 libdca
 libdv
-libdvdnav
-libdvdread
 libe-book
 libei
 libei-docs
@@ -374,6 +360,10 @@ libepoxy-docs
 libepubgen
 libfido2
 libfm-qt
+libfm
+libfm-extra
+libfm-gtk2
+libfm-gtk3
 libfprint
 libfreehand
 libgedit-amtk
@@ -381,14 +371,11 @@ libgtop
 libgudev
 libguestfs
 libhandy0
-libheif
 libidl2
 libinput
 libisoburn
 libisofs
-libixion
-libkolabxml
-liblas
+libkate
 libldm
 liblqr
 libmilter
@@ -566,7 +553,6 @@ mutter45
 mutter46
 nbd
 ncdu
-ncmpcpp
 ndctl
 ndisc6
 nemo-extensions
@@ -712,6 +698,7 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-cryptography
 python-deadlib
 python-nntplib
 python-cgi
@@ -722,6 +709,7 @@ python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-toolz
 qastools
 qbittorrent
 qbittorrent-nox
@@ -814,7 +802,6 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -886,6 +873,15 @@ sway
 swayidle
 switcheroo-control
 syslog-ng
+syslog-ng-python
+syslog-ng-amqp
+syslog-ng-geoip2
+syslog-ng-kafka
+syslog-ng-mongodb
+syslog-ng-redis
+syslog-ng-smtp
+syslog-ng-snmp
+syslog-ng-sql
 sysprof
 libsysprof-capture
 sysstat
@@ -918,7 +914,6 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
-trojan
 tumbler
 udftools
 udisks2
@@ -926,6 +921,7 @@ udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
 umockdev
+unace
 unbound
 unoconv
 upower
@@ -1046,7 +1042,6 @@ vte4-utils
 vte-docs
 w3m
 waybar
-webhook
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
 webkit2gtk-5.0

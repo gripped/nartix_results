@@ -235,6 +235,8 @@ bogofilter-sqlite
 boinc
 boinc-nox
 bomber
+boost
+booster
 botan
 botan2
 bovo
@@ -325,11 +327,13 @@ cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjson
+clang
 clang14
 clang15
 clang16
 clang18
 clang19
+clang20
 clazy
 clevis
 cli11
@@ -356,6 +360,7 @@ coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
+collada-dom
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -369,6 +374,7 @@ compiler-rt15
 compiler-rt16
 compiler-rt18
 compiler-rt19
+compiler-rt20
 composefs
 confuse
 consul
@@ -384,6 +390,7 @@ cpp-hocon
 cppunit
 cpputest
 cppzmq
+criterion
 criu
 cryptoplusplus
 cscope
@@ -410,6 +417,7 @@ cython0
 d-spy
 darktable
 dart-sass
+dart
 darts
 dateutils
 dav1d
@@ -438,6 +446,7 @@ devil
 dht
 diffstat
 diffuse
+digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -607,6 +616,7 @@ fcitx-qt6
 fcitx
 fcitx5-configtool
 fcitx5-gtk
+fcitx5-mozc
 fcitx5-qt
 fd
 featherpad
@@ -852,6 +862,7 @@ gperf
 gperftools
 gpgmepp
 gphoto2
+gpicview
 gpsd
 gptfdisk
 gradle
@@ -1030,6 +1041,7 @@ htop
 http-parser
 httpbin
 hub
+hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -1088,6 +1100,7 @@ incidenceeditor
 indent
 iniparser
 inkscape
+innoextract
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
@@ -1576,6 +1589,7 @@ lcms2
 ldb
 ldc
 leafpad
+leatherman
 lensfun
 leptonica
 level-zero
@@ -1668,6 +1682,8 @@ libdovi
 libdrm
 libdvbpsi
 libdvdcss
+libdvdnav
+libdvdread
 libdwarf
 libebml
 libebur128
@@ -1687,10 +1703,6 @@ libfbclient
 libfdk-aac
 libffado
 libfilezilla
-libfm
-libfm-extra
-libfm-gtk2
-libfm-gtk3
 libfontenc
 libfreeaptx
 libfreexl
@@ -1736,6 +1748,7 @@ libgxps
 libhandy
 libhandy-docs
 libharu
+libheif
 libhubbub
 libical
 libice
@@ -1755,12 +1768,12 @@ libindicator-gtk3
 libinstpatch
 libiptcdata
 libiscsi
+libixion
 libjcat
 libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1775,6 +1788,7 @@ libkeyfinder
 libkgapi
 libkleo
 libkmahjongg
+libkolabxml
 libkomparediff2
 libksane
 libkscreen
@@ -1783,6 +1797,7 @@ libksieve
 libksysguard
 libktorrent
 liblangtag
+liblas
 liblc3
 libldac
 libliftoff
@@ -2100,6 +2115,7 @@ lld
 lld16
 lld18
 lld19
+lld20
 lldb
 llhttp
 llvm-julia
@@ -2108,6 +2124,7 @@ llvm15
 llvm16
 llvm18
 llvm19
+llvm20
 lmdb
 lmdbxx
 log4cplus
@@ -2363,6 +2380,7 @@ nauty
 nawk
 nccl
 ncftp
+ncmpcpp
 ncompress
 neatvnc
 nemo
@@ -3312,7 +3330,6 @@ python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
 python-crispy-bootstrap5
-python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -4374,7 +4391,6 @@ python-toml
 python-tomli-w
 python-tomli
 python-tomlkit
-python-toolz
 python-toposort
 python-tornado
 python-tox-current-env
@@ -4590,6 +4606,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -5513,6 +5530,7 @@ tree-sitter-vimdoc
 tree-sitter
 tree-sitter-cli
 tree
+trojan
 ts-node
 tslib
 ttf-bitstream-vera
@@ -5649,6 +5667,7 @@ wayland-utils
 wayland
 wayland-docs
 wcslib
+webhook
 webp-pixbuf-loader
 webrtc-audio-processing-0.3
 webrtc-audio-processing-1
@@ -5687,7 +5706,6 @@ xapian-core
 xapian-core-docs
 xapp
 xarchiver
-xarchiver-gtk2
 xautolock
 xaw3d
 xbitmaps

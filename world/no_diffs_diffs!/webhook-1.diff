@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,10 +8,8 @@
+ license=('MIT')
+ depends=('glibc')
+ makedepends=('go' 'git')
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/adnanh/webhook/archive/$pkgver.tar.gz"
+-        webhook.service)
+-sha512sums=('2006afc324a265e807bc8be6d2aa108e06082360891682c188be932bdbf6ece3d8d67bb653f9a5466e71bbb256c66f7411920c8c96aee6bb64daba888eba7c1d'
+-            '2f8c46354777050a07001156e3e94821fce43a491712e88b8930a5081060506b0b8de8d05c9ac057aa2891ff73ef855772373299006edbc62b1734af529a2014')
++source=("$pkgname-$pkgver.tar.gz::https://github.com/adnanh/webhook/archive/$pkgver.tar.gz")
++sha512sums=('2006afc324a265e807bc8be6d2aa108e06082360891682c188be932bdbf6ece3d8d67bb653f9a5466e71bbb256c66f7411920c8c96aee6bb64daba888eba7c1d')
+ 
+ prepare() {
+   cd webhook-$pkgver
+@@ -44,5 +42,4 @@
+   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+ 
+   install -dm755 "$pkgdir"/etc/webhook
+-  install -Dm644 "$srcdir"/webhook.service "$pkgdir"/usr/lib/systemd/system/webhook.service
+ }

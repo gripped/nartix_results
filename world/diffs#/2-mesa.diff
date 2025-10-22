@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
-   mesa-docs
- )
- pkgver=25.2.4
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Open-source OpenGL drivers"
- url="https://www.mesa3d.org/"
 @@ -48,7 +48,6 @@
    rust
    spirv-llvm-translator
@@ -17,6 +8,15 @@
    vulkan-icd-loader
    wayland
    xcb-util-keysyms
+@@ -219,7 +218,7 @@
+     -D gallium-mediafoundation=disabled
+     -D gallium-rusticl=true
+     -D gles1=disabled
+-    -D html-docs=enabled
++    -D html-docs=disabled
+     -D intel-rt=enabled
+     -D libunwind=disabled
+     -D microsoft-clc=disabled
 @@ -235,7 +234,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
@@ -26,7 +26,15 @@
    meson compile -C build
  }
  
-@@ -388,7 +387,6 @@
+@@ -336,7 +335,6 @@
+     _pick vklayer usr/bin/mesa-*-control.py
+     _pick vklayer usr/share/vulkan/explicit_layer.d
+ 
+-    _pick docs usr/share/doc
+ 
+     ln -sr $libdir/libGLX_{mesa,indirect}.so.0
+   )
+@@ -388,7 +386,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -34,7 +42,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -415,7 +413,6 @@
+@@ -415,7 +412,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -42,7 +50,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -442,7 +439,6 @@
+@@ -442,7 +438,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -50,7 +58,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -468,7 +464,6 @@
+@@ -468,7 +463,6 @@
      libx11
      libxcb
      libxshmfence
@@ -58,7 +66,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -493,7 +488,6 @@
+@@ -493,7 +487,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -66,7 +74,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -520,7 +514,6 @@
+@@ -520,7 +513,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -74,7 +82,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -549,7 +542,6 @@
+@@ -549,7 +541,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -82,7 +90,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -577,7 +569,6 @@
+@@ -577,7 +568,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -90,7 +98,7 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
-@@ -605,7 +596,6 @@
+@@ -605,7 +595,6 @@
      libx11
      libxcb
      libxshmfence
@@ -98,6 +106,19 @@
      vulkan-icd-loader
      vulkan-mesa-device-select
      wayland
+@@ -655,8 +644,7 @@
+ package_mesa-docs() {
+   pkgdesc="Mesa's documentation"
+ 
+-  mv docs/* "$pkgdir"
+-
+-  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
+-}
+-
++
++  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
++}
++
 
 
 ############# Stripped diff below #################

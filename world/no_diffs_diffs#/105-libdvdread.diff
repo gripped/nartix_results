@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D libdvdcss=disabled
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ sed -i "s|'git', 'log'|'git', '-C', meson.project_source_root(), 'log' |" meson.build
+ }
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D libdvdcss=disabled
+ meson compile -C build
+ }

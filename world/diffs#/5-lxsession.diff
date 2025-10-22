@@ -1,81 +1,158 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,32 +1,34 @@
+@@ -1,62 +1,57 @@
  
- pkgbase=lxsession
- pkgname=(lxsession lxsession-gtk3)
+-pkgname=lxsession
 -pkgver=0.5.6
--pkgrel=1
++pkgbase=lxsession
++pkgname=(lxsession lxsession-gtk3)
 +pkgver=0.5.5
-+pkgrel=2
+ pkgrel=2
  epoch=1
  pkgdesc='Lightweight X11 session manager'
- arch=('x86_64')
- url="https://lxde.org/"
- license=('GPL2')
- depends=('gtk2' 'gtk3' 'polkit' 'which')
--makedepends=('git' 'intltool' 'docbook-xsl' 'vala')
+-arch=(x86_64)
+-url='https://github.com/lxde/lxsession'
+-license=(GPL-2.0-or-later)
+-depends=(
+-  bash
+-  cairo
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gtk3
+-  libx11
+-  polkit
+-)
+-makedepends=(
+-  git
+-  intltool
+-  vala
+-)
+-conflicts=(
+-  lxpolkit
+-  lxsession-gtk3
+-)
+-replaces=(
+-  lxpolkit
+-  lxsession-gtk3
+-)
+-groups=(lxde)
+-source=("git+https://github.com/lxde/lxsession.git#tag=$pkgver")
+-b2sums=(3242d2c28baf4767a028b737912bb422a5a7bdc391c8fdf85ad6c62959e135a194ee364a87f5c3381a4aaaab47eb98819d4b59bf531c352697d82bd4b4e566fa)
++arch=('x86_64')
++url="https://lxde.org/"
++license=('GPL2')
++depends=('gtk2' 'gtk3' 'polkit' 'which')
 +makedepends=('intltool' 'docbook-xsl' 'vala')
- conflicts=('lxpolkit')
--source=(git+https://github.com/lxde/lxsession.git#tag=${pkgver})
--sha256sums=('552d9331d30c0349b28699ec51de201b23586b209ffb5ac6e32372117dc44557')
++conflicts=('lxpolkit')
 +source=(https://downloads.sourceforge.net/lxde/$pkgbase-$pkgver.tar.xz)
 +sha256sums=('e43e0d9c033095559ab57c8821c2b84fea58009d267db1324d32dca8bd4dbb46')
  
  prepare() {
--  cd $pkgbase
--  sh autogen.sh
+-  cd $pkgname
 +  cd $pkgbase-$pkgver
-+
+ 
+-  sed -i 's/which /command -v /' lxlock/lxlock
+-
+-  sed -i 's/^NotShowIn=.*/OnlyShowIn=LXDE;/' data/lxpolkit.desktop.in.in
+-
+-  mkdir m4
 +  rm *.stamp
-+  autoreconf -fi
+   autoreconf -fi
  }
  
  build() {
--  [ -d gtk2 ] || cp -r $pkgbase gtk2
+-  cd $pkgname
+-   ./configure \
+-     --prefix=/usr \
+-     --sysconfdir=/etc \
+-     --localstatedir=/var \
+-     --libexecdir=/usr/lib \
+-     --enable-gtk3
 +  [ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
-   cd gtk2
-   ./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib
-   make
- 
-   cd "$srcdir"
--  [ -d gtk3 ] || cp -r $pkgbase gtk3
++  cd gtk2
++  ./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib
++  make
++
++  cd "$srcdir"
 +  [ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
-   cd gtk3
-   ./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib --enable-gtk3
++  cd gtk3
++  ./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib --enable-gtk3
    make
+ }
+ 
+-package() {
+-  cd $pkgname
++package_lxsession() {
++  groups=('lxde')
++  depends=('gtk2' 'polkit')
++  replaces=('lxpolkit')
++
++  cd gtk2
+   make DESTDIR="$pkgdir" install
+ }
++
++package_lxsession-gtk3() {
++  groups=('lxde-gtk3')
++  pkgdesc+=' (GTK+ 3 version)'
++  depends=('gtk3' 'polkit')
++  conflicts+=('lxsession')
++
++  cd gtk3
++  make DESTDIR="$pkgdir" install
++
++  echo 'X-AppStream-Ignore=true' >> "$pkgdir/usr/share/applications/lxsession-default-apps.desktop"
++  echo 'X-AppStream-Ignore=true' >> "$pkgdir/usr/share/applications/lxsession-edit.desktop"
++}
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
- docbook-xsl
+@@ -1,11 +1,7 @@
+-bash
+-cairo
+-gdk-pixbuf2
 -git
- gtk2
+-glib2
+-glibc
++docbook-xsl
++gtk2
  gtk3
  intltool
+-libx11
+ polkit
+ vala
++which
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,15 @@
+@@ -1,17 +1,16 @@
  prepare() {
--cd $pkgbase
--sh autogen.sh
+-cd $pkgname
+-sed -i 's/which /command -v /' lxlock/lxlock
+-sed -i 's/^NotShowIn=.*/OnlyShowIn=LXDE;/' data/lxpolkit.desktop.in.in
+-mkdir m4
 +cd $pkgbase-$pkgver
 +rm *.stamp
-+autoreconf -fi
+ autoreconf -fi
  }
  build() {
--[ -d gtk2 ] || cp -r $pkgbase gtk2
+-cd $pkgname
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---localstatedir=/var \
+---libexecdir=/usr/lib \
+---enable-gtk3
 +[ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
- cd gtk2
- ./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib
- make
- cd "$srcdir"
--[ -d gtk3 ] || cp -r $pkgbase gtk3
++cd gtk2
++./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib
++make
++cd "$srcdir"
 +[ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
- cd gtk3
- ./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib --enable-gtk3
++cd gtk3
++./configure --sysconfdir=/etc --prefix=/usr --libexecdir=/usr/lib --enable-gtk3
  make
+ }

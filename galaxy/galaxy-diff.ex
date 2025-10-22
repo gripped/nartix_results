@@ -1,4 +1,3 @@
-0ad
 alsa-utils
 autorandr
 cinnamon-desktop
@@ -28,14 +27,8 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
-lxde-common
-lxde-icon-theme
-lxhotkey
-lxhotkey-gtk3
 lxinput
 lxinput-gtk3
-lxmenu-data
-lxmusic
 lxqt-config
 ly
 mate-control-center
@@ -114,6 +107,7 @@ ttf-zed-mono-nerd
 nvidia-390xx-utils
 nvm
 opensc
+pcmanfm
 perl-cgi-fast
 qbittorrent
 qbittorrent-nox
@@ -121,7 +115,6 @@ rage
 read-edid
 sdcv
 signal-desktop
-solaar
 terminology
 termshark
 tor

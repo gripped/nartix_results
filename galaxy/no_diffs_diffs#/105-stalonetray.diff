@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ 
+ build() {
+   cd "$srcdir"/$pkgname-$pkgver
+-  arch-meson . build
++  artix-meson . build
+   meson compile -C build
+ }
+ 
+@@ -22,3 +22,4 @@
+   meson install -C build --destdir "$pkgdir"
+   install -D -m644 stalonetrayrc.sample "$pkgdir"/etc/stalonetrayrc # FIXME
+ }
++
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd "$srcdir"/$pkgname-$pkgver
+-arch-meson . build
++artix-meson . build
+ meson compile -C build
+ }

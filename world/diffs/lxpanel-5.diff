@@ -1,27 +1,55 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,20 @@
+@@ -1,58 +1,30 @@
  
  pkgname=lxpanel
 -pkgver=0.11.1
--pkgrel=2
+-pkgrel=3
 +pkgver=0.10.1
 +pkgrel=1
  pkgdesc='Lightweight X11 desktop panel for LXDE'
- arch=('x86_64')
- license=('GPL2')
- url='https://lxde.org/'
- groups=('lxde')
- depends=('alsa-lib' 'curl' 'menu-cache' 'lxmenu-data' 'libwnck' 'libfm-gtk2' 'libkeybinder2')
--makedepends=('git' 'intltool' 'docbook-xml' 'docbook-xsl' 'wireless_tools')
+-arch=(x86_64)
+-url='https://github.com/lxde/lxpanel'
+-license=(GPL-2.0-or-later)
+-groups=(lxde)
+-depends=(
+-  alsa-lib
+-  cairo
+-  curl
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gtk3
+-  libfm
+-  libfm-gtk3
+-  libkeybinder3
+-  libwnck3
+-  libx11
+-  libxml2
+-  lxmenu-data
+-  menu-cache
+-  pango
+-)
+-makedepends=(
+-  git
+-  intltool
+-  wireless_tools
+-)
++arch=('x86_64')
++license=('GPL2')
++url='https://lxde.org/'
++groups=('lxde')
++depends=('alsa-lib' 'curl' 'menu-cache' 'lxmenu-data' 'libwnck' 'libfm-gtk2' 'libkeybinder2')
 +makedepends=('intltool' 'docbook-xml' 'docbook-xsl' 'wireless_tools')
  optdepends=('wireless_tools: netstat plugin')
--source=(git+https://github.com/lxde/lxpanel.git#tag=${pkgver})
--sha256sums=('262d261e14a13e6df1bb1a0406afee1e69f6da0891269a3e0a865507d04d5a95')
+-conflicts=(lxpanel-gtk3)
+-replaces=(lxpanel-gtk3)
+-source=("git+https://github.com/lxde/lxpanel.git#tag=$pkgver")
+-b2sums=(9ae8710140db2e41091d22f42585c14186213a359cc0f48dc06dcf779d9cfa8ac57694d75efbd3ba080c4d276306bb6e278f0bad1bfd43f97c2cf9f7101ad6ad)
 -
 -prepare() {
 -  cd $pkgname
--  autoreconf -fiv
+-  autoreconf -fi
 -}
 +source=(https://downloads.sourceforge.net/lxde/$pkgname-$pkgver.tar.xz)
 +sha256sums=('1e318f57d7e36b61c23a504d03d2430c78dad142c1804451061f1b3ea5441ee8')
@@ -30,9 +58,15 @@
 -  cd $pkgname
 +  cd $pkgname-$pkgver
    ./configure \
+-    --prefix=/usr \
      --sysconfdir=/etc \
-     --prefix=/usr
-@@ -30,6 +25,6 @@
+-    --localstatedir=/var \
+-    --enable-gtk3
++    --prefix=/usr
++
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++
+   make
  }
  
  package() {
@@ -46,25 +80,48 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,6 @@
+@@ -1,19 +1,11 @@
+ alsa-lib
+-cairo
  curl
- docbook-xml
- docbook-xsl
+-gdk-pixbuf2
 -git
+-glib2
+-glibc
+-gtk3
++docbook-xml
++docbook-xsl
  intltool
- libfm-gtk2
- libkeybinder2
+-libfm
+-libfm-gtk3
+-libkeybinder3
+-libwnck3
+-libx11
+-libxml2
++libfm-gtk2
++libkeybinder2
++libwnck
+ lxmenu-data
+ menu-cache
+-pango
+ wireless_tools
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
+@@ -1,14 +1,8 @@
 -prepare() {
 -cd $pkgname
--autoreconf -fiv
+-autoreconf -fi
 -}
  build() {
 -cd $pkgname
 +cd $pkgname-$pkgver
  ./configure \
+---prefix=/usr \
  --sysconfdir=/etc \
- --prefix=/usr
+---localstatedir=/var \
+---enable-gtk3
++--prefix=/usr
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

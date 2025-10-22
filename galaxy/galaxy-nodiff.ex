@@ -1,4 +1,5 @@
 0ad-data
+0ad
 abduco
 ack
 acpilight
@@ -181,11 +182,15 @@ lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
 lxappearance-gtk3
+lxde-common
+lxde-icon-theme
 lxdm
 lxdm-gtk3
+lxhotkey
 lximage-qt
 lxlauncher
-lxlauncher-gtk3
+lxmenu-data
+lxmusic
 lxpanel-gtk3
 lxpanel
 lxqt-about
@@ -208,9 +213,7 @@ lxqt-wayland-session
 lxrandr
 lxrandr-gtk3
 lxsession
-lxsession-gtk3
 lxtask
-lxtask-gtk3
 lxterminal
 mailgraph
 marco
@@ -263,7 +266,6 @@ parole
 pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
-pcmanfm
 peek
 perl-cairo-gobject
 perl-config-grammar
@@ -328,6 +330,7 @@ scummvm
 shairplay
 smokeping
 snorenotify
+solaar
 spotify-launcher
 sqlitebrowser
 stalonetray
