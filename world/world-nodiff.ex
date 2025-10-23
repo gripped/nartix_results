@@ -388,7 +388,6 @@ couchdb
 cpio
 cpp-hocon
 cppunit
-cpputest
 cppzmq
 criterion
 criu
@@ -749,6 +748,8 @@ gimp-help
 gimp
 girara
 git-lfs
+git
+git-zsh-completion
 gitea
 github-cli
 gjs
@@ -2065,7 +2066,6 @@ libxkbcommon
 libxkbcommon-x11
 libxkbcommon-doc
 libxkbfile
-libxklavier
 libxmlb
 libxmlplusplus
 libxml++-docs
@@ -2130,7 +2130,6 @@ lmdbxx
 log4cplus
 lokalize
 lolcat
-loupe
 lowdown
 lpeg
 lua-$pkgbase
@@ -2181,8 +2180,6 @@ luksmeta
 lv2
 lv2-docs
 lv2-example-plugins
-lxdm
-lxdm-gtk3
 lximage-qt
 lxqt-about
 lxqt-admin
@@ -3100,8 +3097,6 @@ pyqt6-datavisualization
 python-pyqt6-datavisualization
 pyqt6-networkauth
 python-pyqt6-networkauth
-pyqt6-webengine
-python-pyqt6-webengine
 pyside2
 shiboken2
 python-shiboken2
@@ -3330,6 +3325,7 @@ python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
 python-crispy-bootstrap5
+python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -4391,6 +4387,7 @@ python-toml
 python-tomli-w
 python-tomli
 python-tomlkit
+python-toolz
 python-toposort
 python-tornado
 python-tox-current-env
@@ -4688,7 +4685,6 @@ reptyr
 rest
 restinio
 retro-gtk
-rhash
 rhino
 java-rhino
 rhino-javadoc

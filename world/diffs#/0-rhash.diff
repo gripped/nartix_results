@@ -1,0 +1,97 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,49 +1,45 @@
+ 
+ pkgname=rhash
+-_pkgname=RHash
+-pkgver=1.4.6
++pkgver=1.4.4
+ pkgrel=1
++
+ pkgdesc='Utility for verifying hash sums of files'
++url='https://github.com/rhash/RHash'
++license=('BSD')
+ arch=('x86_64')
+-url='https://github.com/rhash/RHash'
+-license=('0BSD')
++
+ depends=('glibc')
+-provides=('librhash.so')
++
+ backup=('etc/rhashrc')
+-source=(
+-  "$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
+-  "$pkgname-$pkgver.tar.gz.asc::$url/releases/download/v$pkgver/v$pkgver.tar.gz.asc"
+-)
+-sha512sums=('c125b71ec36cce2ec31057239cac8b987555f5e3b152dacb6386b905f8cc4d449c1de5b53e5a5206a2d87975681225c9b54e5826c10ffd91b3440f8595d22b15'
++
++source=(rhash-$pkgver.tar.gz::https://github.com/rhash/RHash/archive/v$pkgver.tar.gz
++        rhash-$pkgver.tar.gz.asc::https://github.com/rhash/RHash/releases/download/v$pkgver/v$pkgver.tar.gz.asc)
++
++sha512sums=('00a7e5e058b53ce20ae79509815452ed9cb699d1322b678220b72c61dea3ea2f8fa131acfade8bb6d9f6af913f0c3c472330841181b22314b8755166310c946f'
+             'SKIP')
+-validpgpkeys=('2875F6B1C2D27A4F0C8AF60B2A714497E37363AE') # Aleksey Kravchenko <rhash.admin@gmail.com>
++validpgpkeys=('2875F6B1C2D27A4F0C8AF60B2A714497E37363AE')
+ 
+ prepare() {
+-  cd $_pkgname-$pkgver
+-  ./configure \
+-    --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --extra-cflags="$CFLAGS" \
+-    --extra-ldflags="$LDFLAGS"
++  cd RHash-$pkgver
++  ./configure --prefix=/usr --sysconfdir=/etc --extra-cflags="$CFLAGS" --extra-ldflags="$LDFLAGS"
+ }
+ 
+ build() {
+-  cd $_pkgname-$pkgver
++  cd RHash-$pkgver
+   make
+ }
+ 
+ check() {
+-  cd $_pkgname-$pkgver
++  cd RHash-$pkgver
+   make test test-lib
+ }
+ 
+ package() {
+-  cd $_pkgname-$pkgver
++  cd RHash-$pkgver
++
+   make DESTDIR="$pkgdir" install
+-  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" COPYING
+ 
+-  make -C librhash DESTDIR="$pkgdir" \
+-    install-lib-headers \
+-    install-lib-shared \
+-    install-so-link
++  make -C librhash DESTDIR="$pkgdir" install-lib-headers install-lib-shared install-so-link
++
++  install -Dm644 COPYING "$pkgdir"/usr/share/licenses/rhash/LICENSE
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,8 @@
+ prepare() {
+-cd $_pkgname-$pkgver
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---extra-cflags="$CFLAGS" \
+---extra-ldflags="$LDFLAGS"
++cd RHash-$pkgver
++./configure --prefix=/usr --sysconfdir=/etc --extra-cflags="$CFLAGS" --extra-ldflags="$LDFLAGS"
+ }
+ build() {
+-cd $_pkgname-$pkgver
++cd RHash-$pkgver
+ make
+ }

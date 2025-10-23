@@ -1,28 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   libxkbcommon-x11
-   libxkbcommon-doc
- )
--pkgver=1.12.2
-+pkgver=1.11.0
- pkgrel=1
- pkgdesc='Keymap handling library for toolkits and window systems'
- url='https://xkbcommon.org/'
-@@ -29,10 +29,8 @@
-   libgl
-   xorg-server-xvfb
- )
--source=(
--  "git+https://github.com/xkbcommon/libxkbcommon#tag=xkbcommon-$pkgver"
--)
--b2sums=('267011a9ae6d68da29ecd3713cbd5ffc950110906be4d0abcaffc6cef6025878898f4470a3bee05400788ccb9bff3c8ed1aa02987d287b1e8ed0ab1a75e16842')
-+source=("git+https://github.com/xkbcommon/libxkbcommon#tag=xkbcommon-$pkgver")
-+b2sums=('8d7e9ac15503bad2f9bc26367b9ece5c8719f2ecf4871d0bf5e6b200347497cf9f484892ad4a55e03293e3db8c0bcd2770eae9ba754c647b69bbbe42b716564b')
- 
- prepare() {
-   cd libxkbcommon
-@@ -43,7 +41,7 @@
+@@ -43,7 +43,7 @@
      -D enable-docs=true
    )
  

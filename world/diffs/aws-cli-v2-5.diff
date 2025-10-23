@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,118 +1,94 @@
+@@ -1,122 +1,94 @@
  
  pkgname=aws-cli-v2
--pkgver=2.31.13
+-pkgver=2.31.18
 +pkgver=2.15.19
  pkgrel=1
 -pkgdesc='Universal Command Line Interface for Amazon Web Services (version 2)'
@@ -51,6 +51,7 @@
 -  "git+$_url#tag=$pkgver"
 -  "https://github.com/boto/botocore/commit/f0ff061aebd9ef15a66f87b675789275e373da43.patch"
 -  "$pkgname-python-prompt-toolkit-3.0.52-compat.patch"
+-  "https://github.com/carlsmedstad/aws-cli/commit/0eaa376cb01e4e1297b34a19b275ed635152ae5f.patch"
 +install=aws-cli-v2.install
 +source=("https://awscli.amazonaws.com/awscli-$pkgver.tar.gz"{,.sig}
 +        build-ac.index-in-tmp.diff
@@ -74,9 +75,10 @@
 +validpgpkeys=(
 +  'FB5DB77FD5C118B80511ADA8A6310ACC4672475C'  # the key mentioned on https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
  )
--sha256sums=('e06c355def507f3d9c64e6da5c4af7f6436b0662b02025448cd97ee306cf8e80'
+-sha256sums=('7344b0a23fc012a7782c7393ca3b469726de59777bf18f2581fd4515e5263eb4'
 -            '8c1b98482b1ba6f072cd5bc0c81efdb2a64dcc484a8394c24959078841ac5b18'
--            '2e9149840a8b37083957345a697399ada16dce274990133156f9c6254b62ff2d')
+-            '2e9149840a8b37083957345a697399ada16dce274990133156f9c6254b62ff2d'
+-            '78661afca23ae5741969a013b8649fcb162400dcebe0ae375bf1abc558e1407b')
  
  prepare() {
 -  cd ${pkgname%-v2}
@@ -86,7 +88,8 @@
  
 -  patch -Np1 -f < ../$pkgname-python-prompt-toolkit-3.0.52-compat.patch
 +  sed -i '/"error::/d' pyproject.toml
-+
+ 
+-  patch -Np1 -f < ../0eaa376cb01e4e1297b34a19b275ed635152ae5f.patch
 +  patch -Np1 -i ../build-ac.index-in-tmp.diff
 +
 +  patch -Np1 -i ../fix-env.diff
@@ -208,12 +211,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,24 @@
+@@ -1,11 +1,24 @@
  prepare() {
 -cd ${pkgname%-v2}
 -patch -Np1 -f -d awscli < ../f0ff061aebd9ef15a66f87b675789275e373da43.patch || :
 -patch -Np3 -f -d tests/unit/botocore < ../f0ff061aebd9ef15a66f87b675789275e373da43.patch || :
 -patch -Np1 -f < ../$pkgname-python-prompt-toolkit-3.0.52-compat.patch
+-patch -Np1 -f < ../0eaa376cb01e4e1297b34a19b275ed635152ae5f.patch
 +cd awscli-$pkgver
 +sed -i '/"error::/d' pyproject.toml
 +patch -Np1 -i ../build-ac.index-in-tmp.diff

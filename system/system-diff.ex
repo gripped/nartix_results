@@ -16,6 +16,7 @@ e2fsprogs
 fuse2fs
 fakeroot
 filesystem
+gc
 gcc
 gcc-libs
 lib32-gcc-libs

@@ -1,6 +1,7 @@
 alsa-utils
 autorandr
 cinnamon-desktop
+copyq
 doctest
 dvtm
 ecrire

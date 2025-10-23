@@ -84,6 +84,7 @@ connman
 containerd
 cppcheck
 cppdap
+cpputest
 crun
 cups
 libcups
@@ -175,8 +176,6 @@ gdm
 libgdm
 geoclue
 ghc-filesystem
-git
-git-zsh-completion
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -409,6 +408,7 @@ libvncserver
 libwpd
 libxfce4ui
 libxfce4util
+libxklavier
 libxmlrpc
 light-locker
 lightdm-slick-greeter
@@ -444,6 +444,7 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
+loupe
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -454,6 +455,8 @@ lxcfs
 lxd
 lxde-common
 lxde-icon-theme
+lxdm
+lxdm-gtk3
 lxhotkey
 lxhotkey-gtk3
 lxinput
@@ -695,10 +698,11 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pyqt6-webengine
+python-pyqt6-webengine
 pyqt6
 pysolfc
 python-anytree
-python-cryptography
 python-deadlib
 python-nntplib
 python-cgi
@@ -709,7 +713,6 @@ python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-toolz
 qastools
 qbittorrent
 qbittorrent-nox
@@ -819,6 +822,7 @@ redis
 redshift
 refind
 refind-docs
+rhash
 ristretto
 rnnoise
 rocalution

@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gc
+ pkgver=8.2.10
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A garbage collector for C and C++"
+ arch=('x86_64')
+ url="https://www.hboehm.info/gc/"
+@@ -25,9 +25,6 @@
+ prepare() {
+   cd bdwgc
+ 
+-  git revert -n 2cd0f5e56
+-  git revert -n 74fc05d12
+-
+   ./autogen.sh
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,5 @@
+ prepare() {
+ cd bdwgc
+-git revert -n 2cd0f5e56
+-git revert -n 74fc05d12
+ ./autogen.sh
+ }
+ build() {

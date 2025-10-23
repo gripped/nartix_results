@@ -66,7 +66,6 @@ cinnamon
 cjs
 claws-mail
 compface
-copyq
 cvs
 dbeaver
 dillo
@@ -185,7 +184,6 @@ lxappearance-gtk3
 lxde-common
 lxde-icon-theme
 lxdm
-lxdm-gtk3
 lxhotkey
 lximage-qt
 lxlauncher

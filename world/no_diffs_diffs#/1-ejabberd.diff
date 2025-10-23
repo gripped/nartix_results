@@ -8,3 +8,39 @@
  
    install -d "$pkgdir/var/lib/$pkgname"
    install -D -m0644 "$srcdir/$pkgname.logrotate" "$pkgdir/etc/logrotate.d/$pkgname"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,29 +0,0 @@
+-elixir
+-erlang-asn1
+-erlang-compiler
+-erlang-core
+-erlang-eldap
+-erlang-erl_interface
+-erlang-eunit
+-erlang-mnesia
+-erlang-odbc
+-erlang-os_mon
+-erlang-parsetools
+-erlang-public_key
+-erlang-ssl
+-erlang-syntax_tools
+-erlang-xmerl
+-expat
+-gd
+-git
+-hevea
+-iproute2
+-libyaml
+-openssl
+-pam
+-rebar3
+-sqlite
+-texlive-basic
+-texlive-bin
+-texlive-latexextra
+-zlib
