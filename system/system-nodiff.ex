@@ -36,15 +36,11 @@ findutils
 flex
 gawk
 gdbm
-glib2
-glib2-devel
-glib2-docs
 gnulib-l10n
 gnupg
 gnutls
 gpgme
 groff
-grub
 guile
 hdparm
 hwdata

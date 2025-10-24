@@ -388,6 +388,7 @@ couchdb
 cpio
 cpp-hocon
 cppunit
+cpputest
 cppzmq
 criterion
 criu
@@ -1775,6 +1776,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1936,8 +1938,6 @@ librest
 librest-docs
 librest-demos
 libretls
-librsvg
-librsvg-docs
 librsync
 librttopo
 libsamplerate
@@ -2130,6 +2130,7 @@ lmdbxx
 log4cplus
 lokalize
 lolcat
+loupe
 lowdown
 lpeg
 lua-$pkgbase
@@ -2370,9 +2371,6 @@ nanobind
 nanomsg
 nanosvg
 nasm
-nautilus
-libnautilus-extension
-libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -3097,6 +3095,8 @@ pyqt6-datavisualization
 python-pyqt6-datavisualization
 pyqt6-networkauth
 python-pyqt6-networkauth
+pyqt6-webengine
+python-pyqt6-webengine
 pyside2
 shiboken2
 python-shiboken2
@@ -3857,7 +3857,6 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
-python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
@@ -4391,7 +4390,6 @@ python-toolz
 python-toposort
 python-tornado
 python-tox-current-env
-python-tox
 python-tpm2-pytss
 python-tqdm
 python-trailrunner
@@ -4685,6 +4683,7 @@ reptyr
 rest
 restinio
 retro-gtk
+rhash
 rhino
 java-rhino
 rhino-javadoc

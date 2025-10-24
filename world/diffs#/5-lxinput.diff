@@ -1,72 +1,137 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,31 +1,26 @@
+@@ -1,56 +1,45 @@
  
- pkgbase=lxinput
- pkgname=(lxinput lxinput-gtk3)
+-pkgname=lxinput
 -pkgver=0.3.6
--pkgrel=1
-+pkgver=0.3.5
-+pkgrel=3
- pkgdesc="Small program to configure keyboard and mouse for LXDE"
- arch=('x86_64')
- url="https://lxde.org/"
- license=('GPL')
- groups=('lxde')
- depends=('gtk2' 'gtk3')
--makedepends=('git' 'intltool')
--source=(git+https://github.com/lxde/lxinput.git#tag=${pkgver})
--sha256sums=('526fda829d408e476a08133a7cd0737704241c56e645f8988e49cc4ff39ea997')
+-pkgrel=2
+-pkgdesc='Small program to configure keyboard and mouse for LXDE'
+-arch=(x86_64)
+-url='https://github.com/lxde/lxinput'
+-license=(GPL-2.0-or-later)
+-groups=(lxde)
+-depends=(
+-  glib2
+-  glibc
+-  gtk3
+-  libx11
+-)
+-makedepends=(
+-  git
+-  intltool
+-)
+-conflicts=(lxinput-gtk3)
+-replaces=(lxinput-gtk3)
+-source=(
+-  "git+https://github.com/lxde/lxinput.git#tag=$pkgver"
+-  lxinput-notshowin.patch
+-  lxinput-x11-only.patch
+-)
+-b2sums=(
+-  35f17ab642d2da3099fa5593592ae2b96aaaba19f746328e6a271ca9d8689b5f1f5cb925e9ca92b86600719966601b1be969e84d6afce2034fe8da6a64a2db13
+-  dc2db0560bb6a66629dbc78f44b0daf45c33f102723ccc9a9df9c140510a473fdd432ca182f8a9b0a68df9f52a1d9c418e658b4ff4e7f9f74f9a87efc3238875
+-  4f2cd26de3dfb69f16f8283035a3aa43bd64ec8841941dff24eb9be190c780e4f6b84acafb176831807c4a5be8d87353b096ceb80bfaea959b4f41bee960748f
+-)
 -
 -prepare() {
--  cd $pkgbase
--  autoreconf -fiv
+-  cd $pkgname
+-
+-  git apply -3 ../lxinput-notshowin.patch
+-
+-  git apply -3 ../lxinput-x11-only.patch
+-
+-  autoreconf -fi
 -}
++pkgbase=lxinput
++pkgname=(lxinput lxinput-gtk3)
++pkgver=0.3.5
++pkgrel=3
++pkgdesc="Small program to configure keyboard and mouse for LXDE"
++arch=('x86_64')
++url="https://lxde.org/"
++license=('GPL')
++groups=('lxde')
++depends=('gtk2' 'gtk3')
 +makedepends=('intltool')
 +source=(https://downloads.sourceforge.net/lxde/$pkgbase-$pkgver.tar.xz)
 +sha256sums=('4e8f778a65a4afe2365b47e7899358aa4fab535343aa62c72a3cdc4cac1f6e88')
  
  build() {
--  [ -d gtk2 ] || cp -r $pkgbase gtk2
+-  cd $pkgname
+-  ./configure \
+-    --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --localstatedir=/var \
+-    --enable-gtk3
 +  [ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
-   cd gtk2
-   ./configure --prefix=/usr
-   make
- 
-   cd "$srcdir"
--  [ -d gtk3 ] || cp -r $pkgbase gtk3
++  cd gtk2
++  ./configure --prefix=/usr
++  make
++
++  cd "$srcdir"
 +  [ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
-   cd gtk3
-   ./configure --prefix=/usr --enable-gtk3
++  cd gtk3
++  ./configure --prefix=/usr --enable-gtk3
    make
+ }
+ 
+-package() {
+-  cd $pkgname
++package_lxinput() {
++  groups=('lxde')
++  depends=('gtk2')
++
++  cd gtk2
+   make DESTDIR="$pkgdir" install
+ }
++
++package_lxinput-gtk3() {
++  groups=('lxde-gtk3')
++  pkgdesc+=' (GTK+ 3 version)'
++  depends=('gtk3')
++  conflicts=('lxinput')
++
++  cd gtk3
++  make DESTDIR="$pkgdir" install
++}
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,6 +1,3 @@
 -git
- gtk2
+-glib2
+-glibc
++gtk2
  gtk3
  intltool
+-libx11
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,10 @@
+@@ -1,15 +1,11 @@
 -prepare() {
--cd $pkgbase
--autoreconf -fiv
+-cd $pkgname
+-git apply -3 ../lxinput-notshowin.patch
+-git apply -3 ../lxinput-x11-only.patch
+-autoreconf -fi
 -}
  build() {
--[ -d gtk2 ] || cp -r $pkgbase gtk2
+-cd $pkgname
+-./configure \
+---prefix=/usr \
+---sysconfdir=/etc \
+---localstatedir=/var \
+---enable-gtk3
 +[ -d gtk2 ] || cp -r $pkgbase-$pkgver gtk2
- cd gtk2
- ./configure --prefix=/usr
- make
- cd "$srcdir"
--[ -d gtk3 ] || cp -r $pkgbase gtk3
++cd gtk2
++./configure --prefix=/usr
++make
++cd "$srcdir"
 +[ -d gtk3 ] || cp -r $pkgbase-$pkgver gtk3
- cd gtk3
- ./configure --prefix=/usr --enable-gtk3
++cd gtk3
++./configure --prefix=/usr --enable-gtk3
  make
+ }

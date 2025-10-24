@@ -28,8 +28,6 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
-lxinput
-lxinput-gtk3
 lxqt-config
 ly
 mate-control-center

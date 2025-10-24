@@ -180,12 +180,12 @@ lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
-lxappearance-gtk3
 lxde-common
 lxde-icon-theme
 lxdm
 lxhotkey
 lximage-qt
+lxinput
 lxlauncher
 lxmenu-data
 lxmusic
@@ -209,7 +209,6 @@ lxqt-sudo
 lxqt-themes
 lxqt-wayland-session
 lxrandr
-lxrandr-gtk3
 lxsession
 lxtask
 lxterminal

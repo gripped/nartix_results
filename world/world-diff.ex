@@ -84,7 +84,6 @@ connman
 containerd
 cppcheck
 cppdap
-cpputest
 crun
 cups
 libcups
@@ -374,7 +373,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -391,6 +389,8 @@ libprocps
 libqb
 libqtxdg
 librevenge
+librsvg
+librsvg-docs
 libsidplay
 libsidplayfp
 libsoxr
@@ -444,7 +444,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-loupe
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -554,6 +553,9 @@ mutter
 mutter-docs
 mutter45
 mutter46
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nbd
 ncdu
 ndctl
@@ -698,8 +700,6 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-pyqt6-webengine
-python-pyqt6-webengine
 pyqt6
 pysolfc
 python-anytree
@@ -707,12 +707,14 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-paramiko
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-tox
 qastools
 qbittorrent
 qbittorrent-nox
@@ -793,7 +795,6 @@ qemu-ui-core
 qemu-user
 qemu-user-static
 qemu-vhost-user-gpu
-qemu-vmsr-helper
 qemu-base
 qemu-desktop
 qemu-emulators-full
@@ -822,7 +823,6 @@ redis
 redshift
 refind
 refind-docs
-rhash
 ristretto
 rnnoise
 rocalution
