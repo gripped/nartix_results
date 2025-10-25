@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,8 @@
+          xcb-util-keysyms)
+ makedepends=(extra-cmake-modules
+              kcmutils
+-             kdoctools)
++             kdoctools
++             plasma-activities)
+ optdepends=('kcmutils: configuration module')
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -24,6 +24,7 @@
+ libxcb
+ libxi
+ pam
++plasma-activities
+ qt6-base
+ qt6-declarative
+ wayland

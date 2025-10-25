@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,7 +35,7 @@
+@@ -33,7 +33,7 @@
           qt6-base
           qt6-declarative
           solid
@@ -9,7 +9,7 @@
           wayland)
  makedepends=(extra-cmake-modules
               kdoctools
-@@ -61,4 +61,6 @@
+@@ -59,4 +59,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
@@ -22,15 +22,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,6 +19,7 @@
- ksvg
- kwindowsystem
+@@ -17,6 +17,7 @@
+ knotifications
+ kservice
  kxmlgui
 +libelogind
  libkscreen
  libplasma
  libxcb
-@@ -29,5 +30,4 @@
+@@ -27,5 +28,4 @@
  qt6-base
  qt6-declarative
  solid

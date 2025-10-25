@@ -35,6 +35,7 @@ glibc
 lib32-glibc
 glibc-locales
 gmp
+gnupg
 gpm
 grep
 grub

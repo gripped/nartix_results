@@ -1,5 +1,6 @@
 alsa-utils
 autorandr
+blender
 cinnamon-desktop
 copyq
 doctest

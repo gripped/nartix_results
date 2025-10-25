@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -60,7 +60,7 @@
+     -D pixbuf-loader=disabled
+   )
+ 
+-  arch-meson librsvg build "${meson_options[@]}"
++  artix-meson librsvg build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,6 @@
+ -D avif=enabled
+ -D pixbuf-loader=disabled
+ )
+-arch-meson librsvg build "${meson_options[@]}"
++artix-meson librsvg build "${meson_options[@]}"
+ meson compile -C build
+ }

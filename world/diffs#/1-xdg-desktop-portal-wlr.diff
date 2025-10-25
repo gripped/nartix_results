@@ -1,21 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -17,7 +17,7 @@
-     'pipewire'
-     'pipewire-session-manager'
-     'slurp'
--    'systemd-libs'
-+    'libelogind'
-     'wayland'
-     'xdg-desktop-portal'
+   'pipewire'
+   'pipewire-session-manager'
+   'slurp'
+-  'systemd-libs'
++  'libelogind'
+   'wayland'
+   'xdg-desktop-portal'
  )
-@@ -33,7 +33,7 @@
+@@ -35,7 +35,7 @@
  
  build() {
-     cd "${pkgname}-${pkgver}"
--    arch-meson -Dsd-bus-provider=libsystemd build
-+    artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
-     ninja -C build
+   cd "${pkgname}-${pkgver}"
+-  arch-meson -Dsd-bus-provider=libsystemd build
++  artix-meson -Dsystemd=disabled -Dsd-bus-provider=libelogind build
+   ninja -C build
  }
  
 

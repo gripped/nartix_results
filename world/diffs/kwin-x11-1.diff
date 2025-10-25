@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -55,7 +55,7 @@
+@@ -56,7 +56,7 @@
           qt6-sensors
           qt6-svg
           qt6-tools
@@ -9,7 +9,7 @@
           wayland
           xcb-util-cursor
           xcb-util-keysyms
-@@ -88,4 +88,6 @@
+@@ -85,4 +85,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
@@ -22,7 +22,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -32,6 +32,7 @@
+@@ -33,6 +33,7 @@
  libcanberra
  libdisplay-info
  libdrm
@@ -30,7 +30,7 @@
  libepoxy
  libplasma
  libqaccessibilityclient-qt6
-@@ -50,7 +51,6 @@
+@@ -51,7 +52,6 @@
  qt6-sensors
  qt6-svg
  qt6-tools

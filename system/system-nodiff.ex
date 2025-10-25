@@ -37,7 +37,6 @@ flex
 gawk
 gdbm
 gnulib-l10n
-gnupg
 gnutls
 gpgme
 groff

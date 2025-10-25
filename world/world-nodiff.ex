@@ -82,7 +82,6 @@ aom-docs
 apache-orc
 apitrace
 apparmor
-appmenu-gtk-module
 appstream-glib
 apr-util
 aqbanking
@@ -158,8 +157,6 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -236,7 +233,6 @@ boinc
 boinc-nox
 bomber
 boost
-booster
 botan
 botan2
 bovo
@@ -613,11 +609,8 @@ fcgi
 fcitx-configtool
 fcitx-qt5
 fcitx-qt6
-fcitx
 fcitx5-configtool
-fcitx5-gtk
 fcitx5-mozc
-fcitx5-qt
 fd
 featherpad
 feh
@@ -961,6 +954,7 @@ gtk-engine-murrine
 gtk-engines
 gtk-layer-shell
 gtk-sharp-2
+gtk-sharp-3
 gtk-vnc
 gtk-vnc-docs
 gtk2-compat
@@ -1394,7 +1388,6 @@ kimageformats
 kimageformats5
 kimagemapeditor
 kimap
-kinfocenter
 kinit
 kio-admin
 kio-extras
@@ -1446,6 +1439,7 @@ knetwalk
 knewstuff
 knewstuff5
 knights
+knighttime
 knotes
 knotifications
 knotifyconfig
@@ -1499,7 +1493,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -1640,6 +1633,7 @@ libburn
 libbytesize
 libcaca
 libcacard
+libcanberra
 libcbor
 libcddb
 libcdio
@@ -1776,7 +1770,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1938,6 +1931,8 @@ librest
 librest-docs
 librest-demos
 libretls
+librsvg
+librsvg-docs
 librsync
 librttopo
 libsamplerate
@@ -2371,6 +2366,9 @@ nanobind
 nanomsg
 nanosvg
 nasm
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -2955,7 +2953,6 @@ plantuml
 plasma-activities-stats
 plasma-activities
 plasma-browser-integration
-plasma-desktop
 plasma-disks
 plasma-firewall
 plasma-framework
@@ -3125,7 +3122,6 @@ python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aiohttp
 python-aioitertools
-python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
@@ -3611,7 +3607,6 @@ python-intervaltree
 python-invoke
 python-iocapture
 python-ipdb
-python-ipykernel
 python-ipyparallel
 python-ipython-genutils
 python-ipython-pygments-lexers
@@ -4929,9 +4924,7 @@ ruby-native-package-installer
 ruby-net-ftp
 ruby-net-http-persistent
 ruby-net-http
-ruby-net-imap
 ruby-net-pop
-ruby-net-smtp
 ruby-netrc
 ruby-network_interface
 ruby-nio4r
@@ -5100,7 +5093,6 @@ ruby-x25519
 ruby-xrb
 ruby-yard
 ruby-zeitwerk
-ruby
 ruby2.7
 rubygems
 ruff

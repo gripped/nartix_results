@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -67,7 +67,7 @@
+          sdl2
+          solid
+          sonnet
+-         systemd-libs
++         libelogind
+          systemsettings
+          wayland
+          xcb-util-keysyms
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -41,6 +41,7 @@
+ kwindowsystem
+ kxmlgui
+ libcanberra
++libelogind
+ libibus
+ libksysguard
+ libplasma
+@@ -65,7 +66,6 @@
+ sdl2
+ solid
+ sonnet
+-systemd-libs
+ systemsettings
+ wayland
+ wayland-protocols

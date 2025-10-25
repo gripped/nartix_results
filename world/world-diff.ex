@@ -6,6 +6,7 @@ alsa-utils
 amule
 apache
 apcupsd
+appmenu-gtk-module
 appstream
 appstream-qt
 apr
@@ -17,6 +18,8 @@ at
 atril
 audacious-plugins
 avahi
+avogadrolibs
+avogadrolibs-qt
 awesome
 aws-cli-v2
 bash-bats
@@ -31,6 +34,7 @@ bluez-hid2hci
 bluez-mesh
 bluez-obex
 bolt
+booster
 box2d
 brightnessctl
 brltty
@@ -143,6 +147,9 @@ fastjar
 fceux
 fcgiwrap
 fcitx-mozc
+fcitx
+fcitx5-gtk
+fcitx5-qt
 fcitx5
 fcron
 fig2dev
@@ -308,6 +315,7 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 keychain
+kinfocenter
 kismet
 kitty
 kitty-terminfo
@@ -315,6 +323,7 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
+krita
 ksystemlog
 kwayland5
 kwin-x11
@@ -343,7 +352,6 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 python-libcamera
-libcanberra
 libcdio-paranoia
 libdaemon
 libdatrie
@@ -373,6 +381,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -389,8 +398,6 @@ libprocps
 libqb
 libqtxdg
 librevenge
-librsvg
-librsvg-docs
 libsidplay
 libsidplayfp
 libsoxr
@@ -553,9 +560,6 @@ mutter
 mutter-docs
 mutter45
 mutter46
-nautilus
-libnautilus-extension
-libnautilus-extension-docs
 nbd
 ncdu
 ndctl
@@ -673,6 +677,7 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
+plasma-desktop
 plasma-workspace
 plasma-x11-session
 plocate
@@ -702,11 +707,13 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiomysql
 python-anytree
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-ipykernel
 python-paramiko
 python-pymupdf
 python-pytest-freezegun
@@ -835,9 +842,12 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-net-imap
+ruby-net-smtp
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
+ruby
 rust
 lib32-rust-libs
 rust-musl

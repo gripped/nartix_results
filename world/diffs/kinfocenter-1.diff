@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -33,7 +33,7 @@
+          qt6-declarative
+          sh
+          solid
+-         systemd-libs
++         libelogind
+          systemsettings
+          vulkan-tools
+          wayland-utils
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -19,6 +19,7 @@
+ kservice
+ libdisplay-info
+ libdrm
++libelogind
+ libpulse
+ libusb
+ lm_sensors
+@@ -27,7 +28,6 @@
+ qt6-declarative
+ sh
+ solid
+-systemd-libs
+ systemsettings
+ vulkan-headers
+ vulkan-tools

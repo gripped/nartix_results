@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+ }
+ 
+ build() {
+-  arch-meson $_pkgname build \
++  artix-meson $_pkgname build \
+     -D b_pie=false \
+     -D install=true
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ git revert -n 2bb4d5c2440b917ef03ff2b38aca4afa9d93d065
+ }
+ build() {
+-arch-meson $_pkgname build \
++artix-meson $_pkgname build \
+ -D b_pie=false \
+ -D install=true
+ meson compile -C build

@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,18 @@
+ 
+ pkgname=appmenu-gtk-module
+ pkgver=25.04
+-pkgrel=2
+-pkgdesc="Application Menu GTK Module"
++pkgrel=1
++pkgdesc="Application Menu GTK+ Module"
+ depends=(gcc-libs
+          gdk-pixbuf2
+          glib2
+-         glibc
+-         gtk3)
++         glibc)
+ makedepends=(git
++             gtk2
++             gtk3
+              meson)
++optdepends=('gtk2: GTK2 module'
++            'gtk3: GTK3 module')
+ url="https://gitlab.com/vala-panel-project/vala-panel-appmenu/"
+ arch=(x86_64)
+ license=(LGPL-3.0-only)
+@@ -20,8 +23,7 @@
+ 
+ build() {
+   meson build vala-panel-appmenu/subprojects/$pkgname \
+-    --prefix=/usr \
+-    -D gtk=3
++    --prefix=/usr
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,5 +3,6 @@
+ git
+ glib2
+ glibc
++gtk2
+ gtk3
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ build() {
+ meson build vala-panel-appmenu/subprojects/$pkgname \
+---prefix=/usr \
+--D gtk=3
++--prefix=/usr
+ ninja -C build
+ }
