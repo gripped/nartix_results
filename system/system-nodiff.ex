@@ -17,7 +17,6 @@ curl
 libcurl-compat
 libcurl-gnutls
 dash
-db
 debugedit
 dialog
 ding-libs
@@ -147,7 +146,6 @@ npth
 nspr
 nss
 ca-certificates-mozilla
-openssh
 openssl-1.1
 openssl
 pciutils

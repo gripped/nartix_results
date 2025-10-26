@@ -18,8 +18,6 @@ at
 atril
 audacious-plugins
 avahi
-avogadrolibs
-avogadrolibs-qt
 awesome
 aws-cli-v2
 bash-bats
@@ -49,6 +47,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calf
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -198,6 +197,7 @@ gnome-shell
 gnome-shell-docs
 gnome-software
 gnome-system-monitor
+gnome-usage
 gnome-user-share
 go-bindata
 godot
@@ -323,7 +323,6 @@ kitty-shell-integration
 knockd
 knot
 knotifications5
-krita
 ksystemlog
 kwayland5
 kwin-x11
@@ -366,10 +365,6 @@ libepoxy-docs
 libepubgen
 libfido2
 libfm-qt
-libfm
-libfm-extra
-libfm-gtk2
-libfm-gtk3
 libfprint
 libfreehand
 libgedit-amtk
@@ -452,6 +447,9 @@ lm_sensors
 localsearch
 localsearch-testutils
 lua-filesystem
+lv2
+lv2-docs
+lv2-example-plugins
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -624,6 +622,8 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
+php-imagick
+php-legacy-imagick
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -842,12 +842,9 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-net-imap
-ruby-net-smtp
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
-ruby
 rust
 lib32-rust-libs
 rust-musl
@@ -883,6 +880,8 @@ sslh
 sssd
 strongswan
 stunnel
+suil
+suil-docs
 sway
 swayidle
 switcheroo-control

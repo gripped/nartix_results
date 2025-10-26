@@ -1,16 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,8 +16,7 @@
-   lib32-vulkan-mesa-layers
- )
- pkgver=25.2.5
--_pkgver=${pkgver/[a-z]/-&}
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Open-source OpenGL drivers - 32-bit"
- url="https://www.mesa3d.org/"
-@@ -48,7 +47,6 @@
+@@ -48,7 +48,6 @@
    lib32-rust-libs
    lib32-spirv-llvm-translator
    lib32-spirv-tools
@@ -18,79 +8,16 @@
    lib32-vulkan-icd-loader
    lib32-wayland
    lib32-xcb-util-keysyms
-@@ -74,9 +72,7 @@
-   !lto
- )
- source=(
--  "https://archive.mesa3d.org/mesa-$_pkgver.tar.xz"{,.sig}
--
--  0001-anv-fix-FS-output-attachment-map-building.patch
-+  "https://archive.mesa3d.org/mesa-$pkgver.tar.xz"{,.sig}
- )
- validpgpkeys=(
-   946D09B5E4C9845E63075FF1D961C596A7203456 # Andres Gomez <tanty@igalia.com>
-@@ -132,7 +128,6 @@
- 
- b2sums=('375237d23918e09b7dab4f4abd2c3b24a046521d6e247043c5fbeb7d8a33d71471b23572d254f0ad489a2533094568ef6f067a57977a7ccc1805aa735c3f8b7d'
-         'SKIP'
--        'ee9be38d036aad299b3ecd32b2ca3fca5534c6ab329bb0d9f841ce5911d5f6a0fcdab2219b7a3a849f585863c313465ea3160e201b23ce3a80a2bfeaaabd06bc'
-         '431439d31632d177aeb15f910b4f546efa76d54fc74fc8e140399dc5e54eca33fd606f11dbfb48fa83067c8474ee512e62751895d5948367b65ab08b984284e5'
-         'a6d47c903be6094423d89b8ec3ca899d0a84df6dbd6e76632bb6c9b9f40ad9c216f8fa400310753d392f85072756b43ac3892e0a2c4d55f87ab6463002554823'
-         '9a73962e1e38b84131ab2350b69a1f5d611c549533eec73e898c394a9b9442f357bb5d5f59e1be12270dd29bdf237dc2d21786c0c2210736e224ef5d48300dcf'
-@@ -163,7 +158,6 @@
- 
- sha256sums=('bb6243e7a6f525febfa1e6ab50827ca4d4bfdad73812377b0ca9b6c50998b03e'
-             'SKIP'
--            '58e81f7d5f38c837f6414f4eb8ba150b21309d02a2060559556e47a3c67cc2fe'
-             '67914ab451f3bfd2e69e5e9d2ef3858484e7074d63f204fd166ec391b54de21d'
-             'ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9'
-             '7f9f832470494906d1fca5329f8ab5791cc60beb230c74815dff541cbd2b5ca0'
-@@ -193,7 +187,7 @@
-             '25aa4ce346d03a6dcd68dd8b4010bcb74e54e62c90c573f394c46eae99aba32d')
- 
- prepare() {
--  cd mesa-$_pkgver
-+  cd mesa-$pkgver
- 
-   local src
-   for src in "${source[@]}"; do
-@@ -205,7 +199,7 @@
-     patch -Np1 < "../$src"
-   done
- 
--  echo "$_pkgver-arch$epoch.$pkgrel" >VERSION
-+  echo "$pkgver-arch$epoch.$pkgrel" >VERSION
- }
- 
- build() {
-@@ -234,7 +228,7 @@
+@@ -234,7 +233,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
 -  arch-meson mesa-$_pkgver build "${meson_options[@]}"
-+  artix-meson mesa-$pkgver build "${meson_options[@]}"
++  artix-meson mesa-$_pkgver build "${meson_options[@]}"
    meson compile -C build
  }
  
-@@ -336,7 +330,7 @@
-     ln -sr $libdir/libGLX_{mesa,indirect}.so.0
-   )
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-opencl-mesa() {
-@@ -369,7 +363,7 @@
- 
-   mv opencl/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-asahi() {
-@@ -383,7 +377,6 @@
+@@ -383,7 +382,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -98,16 +25,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -398,7 +391,7 @@
- 
-   mv vkasahi/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-dzn() {
-@@ -412,7 +405,6 @@
+@@ -412,7 +410,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -115,16 +33,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -427,7 +419,7 @@
- 
-   mv vkd3d12/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-freedreno() {
-@@ -441,7 +433,6 @@
+@@ -441,7 +438,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -132,16 +41,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -456,7 +447,7 @@
- 
-   mv vkfdreno/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-gfxstream() {
-@@ -469,7 +460,6 @@
+@@ -469,7 +465,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
@@ -149,16 +49,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -482,7 +472,7 @@
- 
-   mv vkgfxstr/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-intel() {
-@@ -496,7 +486,6 @@
+@@ -496,7 +491,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -166,16 +57,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -511,7 +500,7 @@
- 
-   mv vkintel/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-nouveau() {
-@@ -525,7 +514,6 @@
+@@ -525,7 +519,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -183,16 +65,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -540,7 +528,7 @@
- 
-   mv vknvidia/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-radeon() {
-@@ -556,7 +544,6 @@
+@@ -556,7 +549,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
@@ -200,16 +73,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -571,7 +558,7 @@
- 
-   mv vkradeon/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-swrast() {
-@@ -586,7 +573,6 @@
+@@ -586,7 +578,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
@@ -217,16 +81,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -603,7 +589,7 @@
- 
-   mv vkswrast/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-virtio() {
-@@ -616,7 +602,6 @@
+@@ -616,7 +607,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
@@ -234,37 +89,6 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-device-select
      lib32-wayland
-@@ -631,7 +616,7 @@
- 
-   mv vkvirtio/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-mesa-device-select() {
-@@ -647,7 +632,7 @@
- 
-   mv vkdevice/* "$pkgdir"
- 
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
- 
- package_lib32-vulkan-mesa-layers() {
-@@ -662,8 +647,7 @@
-   conflicts=(lib32-vulkan-mesa-layer)
-   replaces=(lib32-vulkan-mesa-layer)
- 
--  mv vklayer/* "$pkgdir"
--
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
--}
--
-+
-+  install -Dm644 mesa-$pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
-+}
-+
 
 
 ############# Stripped diff below #################

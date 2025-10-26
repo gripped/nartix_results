@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,14 @@
+ pkgbase=suil
+ pkgname=(suil{,-docs})
+ pkgver=0.10.20
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A lightweight C library for loading and wrapping LV2 plugin UIs"
+ arch=(x86_64)
+ url="https://drobilla.net/software/suil.html"
+ license=('0BSD OR ISC')
+ makedepends=(
+   doxygen
++  gtk2
+   gtk3
+   lv2
+   meson
+@@ -36,7 +37,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build -D cocoa=disabled -D gtk2=disabled
++  artix-meson $pkgname-$pkgver build -D cocoa=disabled
+   meson compile -C build
+ }
+ 
+@@ -51,10 +52,11 @@
+     lv2
+   )
+   optdepends=(
+-    'glib2: support for wrapping X11 and Qt5 in GTK3'
++    'glib2: support for wrapping X11 and Qt5 in GTK3 and GTK2'
++    'gtk2: support for wrapping X11 and Qt5 in GTK2 and GTK2 in Qt5'
+     'gtk3: support for wrapping X11 and Qt5 in GTK3'
+-    'libx11: support for wrapping X11 directly and in GTK3'
+-    'qt5-base: support for wrapping X11 in Qt5 and Qt5 in GTK3'
++    'libx11: support for wrapping X11 directly and in GTK3 and GTK2'
++    'qt5-base: support for wrapping X11 in Qt5 and Qt5 in GTK3 and GTK2'
+     'qt5-x11extras: support for wrapping X11 in Qt5'
+   )
+   provides=(libsuil-0.so)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ doxygen
+ gcc-libs
+ glibc
++gtk2
+ gtk3
+ lv2
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson $pkgname-$pkgver build -D cocoa=disabled -D gtk2=disabled
++artix-meson $pkgname-$pkgver build -D cocoa=disabled
+ meson compile -C build
+ }

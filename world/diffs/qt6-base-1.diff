@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-          qt6-xcb-private-headers)
- _pkgver=6.10.0
- pkgver=${_pkgver/-/}
--pkgrel=2
-+pkgrel=1
- arch=(x86_64)
- url='https://www.qt.io'
- license=(GPL-3.0-only
 @@ -44,7 +44,7 @@
           pcre2
           shared-mime-info
@@ -18,17 +9,7 @@
           tslib
           wayland
           xcb-util-cursor
-@@ -93,8 +93,7 @@
- prepare() {
-   patch -d $_pkgfn -p1 < qt6-base-cflags.patch # Use system CFLAGS
-   patch -d $_pkgfn -p1 < qt6-base-nostrip.patch # Don't strip binaries with qmake
--
--  git -C $_pkgfn cherry-pick -n 2974b3d740a705767a1b6ca0779eb0d989364769 # Fix window positioning
-+  git -C $_pkgfn cherry-pick -n a374ab6ce9f01f1f559403ec377cde990a689890 # Fix yakuake
- }
- 
- build() {
-@@ -110,7 +109,7 @@
+@@ -110,7 +110,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
@@ -37,11 +18,6 @@
      -DFEATURE_libproxy=ON \
      -DFEATURE_openssl_linked=ON \
      -DFEATURE_system_sqlite=ON \
-@@ -148,3 +147,4 @@
-   cp -r src/plugins/platforms/xcb/gl_integrations/*.h "$pkgdir"/usr/include/qt6xcb-private/gl_integrations/
-   cp -r src/plugins/platforms/xcb/nativepainting/*.h "$pkgdir"/usr/include/qt6xcb-private/nativepainting/
- }
-+
 
 
 ############# Stripped diff below #################

@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 blender
 cinnamon-desktop
-copyq
 doctest
 dvtm
 ecrire
@@ -35,6 +34,7 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
+mate-themes
 mimalloc
 mpd
 neofetch

@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=alsa-tools
+ pkgver=1.2.14
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Advanced tools for certain sound cards"
+ arch=(x86_64)
+ url="https://alsa-project.org/"
+@@ -14,11 +14,13 @@
+ makedepends=(
+   alsa-lib
+   fltk
++  gtk2
+   gtk3
+ )
+ optdepends=(
+   'fltk: hdspconf, hdspmixer'
+-  'gtk3: envy24control, hdajackretask, hwmixvolume'
++  'gtk2: envy24control, echomixer, rmeddigicontrol'
++  'gtk3: hdajackretask'
+   'python-pyalsa: hwmixvolume'
+   'python-gobject: hwmixvolume'
+ )
+@@ -32,6 +34,7 @@
+ 
+ _tools=(
+   as10k1
++  echomixer
+   envy24control
+   hda-verb
+   hdajackretask
+@@ -43,6 +46,7 @@
+   ld10k1
+   mixartloader
+   pcxhrloader
++  rmedigicontrol
+   sb16_csp
+   seq/sbiload
+   sscape_ctl
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ fltk
+ gcc-libs
+ glibc
++gtk2
+ gtk3
+ hicolor-icon-theme
+ libasound.so

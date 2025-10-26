@@ -157,6 +157,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -273,7 +275,6 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
-calf
 calligra
 camlp-streams
 camlp4
@@ -434,6 +435,7 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
+deno
 desktop-file-utils
 dev86
 devhelp
@@ -824,7 +826,6 @@ gnome-text-editor
 gnome-themes-extra
 gnome-tour
 gnome-tweaks
-gnome-usage
 gnome-user-docs
 gnome-video-effects
 gnome-weather
@@ -1165,6 +1166,7 @@ jedi-language-server
 jemalloc
 jenkins
 jitterentropy
+jkqtplotter
 jose
 jp2a
 jq
@@ -1493,6 +1495,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1699,6 +1702,9 @@ libfbclient
 libfdk-aac
 libffado
 libfilezilla
+libfm
+libfm-extra
+libfm-gtk3
 libfontenc
 libfreeaptx
 libfreexl
@@ -2173,9 +2179,6 @@ lua52-socket
 lua53-socket
 luit
 luksmeta
-lv2
-lv2-docs
-lv2-example-plugins
 lximage-qt
 lxqt-about
 lxqt-admin
@@ -2927,8 +2930,6 @@ php-legacy-apcu
 php-geoip
 php-igbinary
 php-legacy-igbinary
-php-imagick
-php-legacy-imagick
 php-memcache
 php-memcached
 php-mongodb
@@ -4924,7 +4925,9 @@ ruby-native-package-installer
 ruby-net-ftp
 ruby-net-http-persistent
 ruby-net-http
+ruby-net-imap
 ruby-net-pop
+ruby-net-smtp
 ruby-netrc
 ruby-network_interface
 ruby-nio4r
@@ -4952,6 +4955,7 @@ ruby-protocol-http
 ruby-protocol-http1
 ruby-protocol-http2
 ruby-protocol-rack
+ruby-protocol-url
 ruby-protocol-websocket
 ruby-pry-byebug
 ruby-pry
@@ -5093,6 +5097,7 @@ ruby-x25519
 ruby-xrb
 ruby-yard
 ruby-zeitwerk
+ruby
 ruby2.7
 rubygems
 ruff
@@ -5249,8 +5254,6 @@ strip-nondeterminism
 stubby
 subversion
 sugar-datastore
-suil
-suil-docs
 suitesparse
 suitesparse-graphblas
 supermin
