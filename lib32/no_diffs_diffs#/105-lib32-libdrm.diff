@@ -4,7 +4,7 @@
  
  _pkgbasename=libdrm
  pkgname=lib32-$_pkgbasename
--pkgver=2.4.126
+-pkgver=2.4.127
 +pkgver=2.4.125
  pkgrel=1
  pkgdesc="Userspace interface to kernel DRM services (32-bit)"
@@ -13,7 +13,7 @@
  makedepends=('meson')
  checkdepends=('lib32-cairo')
  source=(https://dri.freedesktop.org/${_pkgbasename}/${_pkgbasename}-${pkgver}.tar.xz{,.sig})
--sha512sums=('7cf2e2904025165562f0bf56faa57f3c3cca6f739c2afc299952bcb7bb1dcb86554c8060a7dbe070f2100d036b0ece615e0a55d9df00885679ae30b7e6ef0f0b'
+-sha512sums=('2b1e9bdc864d1d8b890763a5154708bd44ee0cab5cb9156a7ec473d1d83b9fae7f4f66f660a68a3d1839ecca010163439c9991d9360f9be03be7ed8823a73ec6'
 +sha512sums=('faad141f48a49915c0312eb635df76968f0f4d41bb6851be625a7ae0e24826e7283b5ec9ec3b09ead9a96297bf42221c411288f9b000c3dbc159ed8dde93a7e4'
              'SKIP')
  validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48'  # Simon Ser <contact@emersion.fr>

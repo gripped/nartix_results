@@ -82,6 +82,7 @@ aom-docs
 apache-orc
 apitrace
 apparmor
+appmenu-gtk-module
 appstream-glib
 apr-util
 aqbanking
@@ -379,6 +380,7 @@ containers-common
 convertlit
 coordgen
 copr-cli
+corepack
 corrosion
 coturn
 couchdb
@@ -612,7 +614,9 @@ fcitx-configtool
 fcitx-qt5
 fcitx-qt6
 fcitx5-configtool
+fcitx5-gtk
 fcitx5-mozc
+fcitx5-qt
 fd
 featherpad
 feh
@@ -826,6 +830,7 @@ gnome-text-editor
 gnome-themes-extra
 gnome-tour
 gnome-tweaks
+gnome-usage
 gnome-user-docs
 gnome-video-effects
 gnome-weather
@@ -1196,6 +1201,7 @@ jupyter-nbformat
 jupyter-notebook-shim
 jupyter-notebook
 jupyter-server-fileid
+jupyter-server-mathjax
 jupyter-server
 jupyter-widgetsnbextension
 jupyterlab-pygments
@@ -2930,6 +2936,8 @@ php-legacy-apcu
 php-geoip
 php-igbinary
 php-legacy-igbinary
+php-imagick
+php-legacy-imagick
 php-memcache
 php-memcached
 php-mongodb
@@ -3123,6 +3131,7 @@ python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aiohttp
 python-aioitertools
+python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
@@ -3134,6 +3143,7 @@ python-aiounittest
 python-alembic
 python-amqp
 python-aniso8601
+python-annotated-doc
 python-annotated-types
 python-ansi2html
 python-ansible-compat
@@ -3533,6 +3543,7 @@ python-google-auth-httplib2
 python-google-auth-oauthlib
 python-google-auth
 python-googleapis-common-protos
+python-gp-libs
 python-gpgme
 python-graphene
 python-graphql-core
@@ -3608,6 +3619,7 @@ python-intervaltree
 python-invoke
 python-iocapture
 python-ipdb
+python-ipykernel
 python-ipyparallel
 python-ipython-genutils
 python-ipython-pygments-lexers
@@ -3780,6 +3792,8 @@ python-mysql-connector
 python-mysqlclient
 python-myst-parser
 python-natsort
+python-nbdime
+python-nbval
 python-nbxmpp
 python-ndg-httpsclient
 python-ndindex
@@ -3853,6 +3867,7 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
+python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
@@ -4386,6 +4401,7 @@ python-toolz
 python-toposort
 python-tornado
 python-tox-current-env
+python-tox
 python-tpm2-pytss
 python-tqdm
 python-trailrunner
@@ -4995,7 +5011,6 @@ ruby-rinda
 ruby-ronn-ng
 ruby-rouge
 ruby-rr
-ruby-rspec-core
 ruby-rspec-expectations
 ruby-rspec-files
 ruby-rspec-its
@@ -5546,7 +5561,6 @@ uasm
 uchardet
 udiskie
 udpxy
-ufmt
 ufw
 uget
 uglify-js

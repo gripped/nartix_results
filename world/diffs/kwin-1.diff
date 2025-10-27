@@ -9,7 +9,7 @@
           wayland
           xcb-util-keysyms
           xcb-util-wm)
-@@ -93,4 +93,6 @@
+@@ -99,4 +99,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build

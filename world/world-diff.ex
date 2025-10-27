@@ -6,7 +6,6 @@ alsa-utils
 amule
 apache
 apcupsd
-appmenu-gtk-module
 appstream
 appstream-qt
 apr
@@ -147,8 +146,6 @@ fceux
 fcgiwrap
 fcitx-mozc
 fcitx
-fcitx5-gtk
-fcitx5-qt
 fcitx5
 fcron
 fig2dev
@@ -197,7 +194,6 @@ gnome-shell
 gnome-shell-docs
 gnome-software
 gnome-system-monitor
-gnome-usage
 gnome-user-share
 go-bindata
 godot
@@ -622,8 +618,6 @@ libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
-php-imagick
-php-legacy-imagick
 php-legacy
 php-legacy-cgi
 php-legacy-apache
@@ -707,21 +701,17 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiomysql
 python-anytree
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-ipykernel
-python-paramiko
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-tox
 qastools
 qbittorrent
 qbittorrent-nox
@@ -844,6 +834,7 @@ rtkit
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
+ruby-rspec-core
 ruby-sys-filesystem
 rust
 lib32-rust-libs
@@ -933,6 +924,7 @@ udisks2
 udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
+ufmt
 umockdev
 unace
 unbound

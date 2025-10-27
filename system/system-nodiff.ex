@@ -17,6 +17,7 @@ curl
 libcurl-compat
 libcurl-gnutls
 dash
+db
 debugedit
 dialog
 ding-libs
@@ -34,11 +35,16 @@ file
 findutils
 flex
 gawk
+gc
 gdbm
+glib2
+glib2-devel
+glib2-docs
 gnulib-l10n
 gnutls
 gpgme
 groff
+grub
 guile
 hdparm
 hwdata

@@ -7,7 +7,6 @@ bash
 binutils
 btrfs-progs
 cronie
-db
 db5.3
 dbus
 dbus-docs
@@ -17,7 +16,6 @@ e2fsprogs
 fuse2fs
 fakeroot
 filesystem
-gc
 gcc
 gcc-libs
 lib32-gcc-libs
@@ -29,9 +27,6 @@ gcc-objc
 lto-dump
 libgccjit
 gettext
-glib2
-glib2-devel
-glib2-docs
 glibc
 lib32-glibc
 glibc-locales
@@ -39,7 +34,6 @@ gmp
 gnupg
 gpm
 grep
-grub
 gssproxy
 gzip
 iputils
