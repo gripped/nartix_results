@@ -484,7 +484,6 @@ docx2txt
 dolphin-plugins
 dolphin
 dontpanic
-dos2unix
 dosbox
 dotconf
 doxygen
@@ -813,7 +812,6 @@ gnome-multi-writer
 gnome-music
 gnome-nettool
 gnome-nibbles
-gnome-notes
 gnome-online-accounts
 libgoa
 gnome-photos
@@ -1098,6 +1096,7 @@ imake
 imath
 img2pdf
 imlib2
+inchi
 incidenceeditor
 indent
 iniparser
@@ -1770,9 +1769,6 @@ libimagequant
 libimobiledevice-glue
 libimobiledevice
 libindi
-libindicator
-libindicator-gtk2
-libindicator-gtk3
 libinstpatch
 libiptcdata
 libiscsi
@@ -1782,6 +1778,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2381,6 +2378,7 @@ libnautilus-extension-docs
 nauty
 nawk
 nccl
+ncdu
 ncftp
 ncmpcpp
 ncompress
@@ -2949,6 +2947,8 @@ picard
 picmi
 picom
 pidgin
+libpurple
+finch
 pifpaf
 pigeonhole
 pigz
@@ -3315,7 +3315,6 @@ python-commonmark
 python-configargparse
 python-configobj
 python-configupdater
-python-confuse
 python-constantly
 python-contextlib2
 python-contourpy
@@ -3692,7 +3691,6 @@ python-kiwisolver
 python-kombu
 python-krb5
 python-kubernetes
-python-lark-parser
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
@@ -4195,7 +4193,6 @@ python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
-python-redis
 python-referencing
 python-reflink
 python-regex
@@ -4259,7 +4256,6 @@ python-semver
 python-send2trash
 python-sentinels
 python-sentry_sdk
-python-serpent
 python-service-identity
 python-setproctitle
 python-setuptools-gettext
@@ -5011,6 +5007,7 @@ ruby-rinda
 ruby-ronn-ng
 ruby-rouge
 ruby-rr
+ruby-rspec-core
 ruby-rspec-expectations
 ruby-rspec-files
 ruby-rspec-its
@@ -5640,6 +5637,7 @@ vkd3d-docs
 vmaf
 vncdotool
 vnstat
+vokoscreen
 volatility3
 volk
 volume_key
@@ -5680,7 +5678,6 @@ websocketpp
 weechat
 wf-recorder
 whois
-wine-staging
 wine
 wireguard-tools
 wireless_tools

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=(libvirt libvirt-storage-gluster libvirt-storage-iscsi-direct)
- epoch=1
--pkgver=11.8.0
-+pkgver=11.7.0
- pkgrel=1
- pkgdesc="API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)"
- arch=('x86_64')
 @@ -36,7 +36,6 @@
    parted
    polkit
@@ -25,25 +16,15 @@
  )
  optdepends=(
    'dmidecode: DMI system info support'
-@@ -125,7 +123,7 @@
- source=(
-   "git+https://gitlab.com/libvirt/libvirt.git#tag=v${pkgver}"
- )
--sha256sums=('016d41dc7be5dfbf45d3e9ac98c98bfed4ba5447395bb5144b50b08a99c4aa8c')
-+sha256sums=('859b3b5a0a6e57b5d973fbf77c2683898b778a9745ab2b5c8fb2a8009a1373bc')
- 
- prepare() {
-   cd ${pkgname}
-@@ -143,8 +141,7 @@
+@@ -143,7 +141,7 @@
  build() {
    cd ${pkgname}
  
 -  arch-meson build \
--    -Dwerror=false -Dgit_werror=disabled \
 +  artix-meson build \
+     -Dwerror=false -Dgit_werror=disabled \
      --libexecdir=lib/libvirt \
      -Drunstatedir=/run \
-     -Dqemu_user=libvirt-qemu \
 
 
 ############# Stripped diff below #################

@@ -101,6 +101,7 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
+dos2unix
 dotnet-core-8.0
 dotnet-runtime-8.0
 aspnet-runtime-8.0
@@ -186,6 +187,7 @@ gnome-desktop-4
 gnome-desktop-docs
 gnome-disk-utility
 gnome-keyring
+gnome-notes
 gnome-panel
 gnome-remote-desktop
 gnome-session
@@ -369,10 +371,12 @@ libgudev
 libguestfs
 libhandy0
 libidl2
+libindicator
+libindicator-gtk2
+libindicator-gtk3
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -555,7 +559,6 @@ mutter-docs
 mutter45
 mutter46
 nbd
-ncdu
 ndctl
 ndisc6
 nemo-extensions
@@ -702,15 +705,19 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-confuse
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-lark-parser
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-redis
 python-seaborn
+python-serpent
 python-smmap
 qastools
 qbittorrent
@@ -834,7 +841,6 @@ rtkit
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
-ruby-rspec-core
 ruby-sys-filesystem
 rust
 lib32-rust-libs
@@ -1037,7 +1043,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-vokoscreen
 vpnc
 vte3
 vte-common
@@ -1058,6 +1063,7 @@ webkitgtk-6.0-docs
 weston
 wget
 wildmidi
+wine-staging
 wireplumber
 libwireplumber
 wireplumber-docs
