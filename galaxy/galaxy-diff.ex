@@ -115,6 +115,7 @@ rage
 read-edid
 sdcv
 signal-desktop
+sundials
 terminology
 termshark
 tor

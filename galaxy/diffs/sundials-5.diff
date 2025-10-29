@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=sundials
+ pkgver=7.5.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Suite of nonlinear differential/algebraic equation solvers'
+ arch=(x86_64)
+ url='https://computing.llnl.gov/projects/sundials'
+ license=(BSD-3-Clause)
+ depends=(gcc-libs
+          glibc
+-         lapack
+          openmpi
+          suitesparse)
+ makedepends=(cmake
+@@ -30,7 +29,6 @@
+     -DENABLE_KLU=ON \
+     -DKLU_LIBRARY_DIR=/usr/lib \
+     -DKLU_INCLUDE_DIR=/usr/include/suitesparse \
+-    -DENABLE_LAPACK=ON \
+     -DEXAMPLES_INSTALL_PATH=/usr/share/sundials/examples
+   cmake --build build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,6 @@
+ gcc-libs
+ git
+ glibc
+-lapack
+ openmpi
+ python
+ suitesparse
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,6 @@
+ -DENABLE_KLU=ON \
+ -DKLU_LIBRARY_DIR=/usr/lib \
+ -DKLU_INCLUDE_DIR=/usr/include/suitesparse \
+--DENABLE_LAPACK=ON \
+ -DEXAMPLES_INSTALL_PATH=/usr/share/sundials/examples
+ cmake --build build
+ }

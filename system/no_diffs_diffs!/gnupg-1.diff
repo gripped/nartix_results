@@ -1,0 +1,81 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -49,10 +49,6 @@
+ install=$pkgname.install
+ source=(
+   git+https://dev.gnupg.org/source/gnupg.git?signed#tag=${pkgname}-${pkgver}
+-  dirmngr{,@}.{service,socket}
+-  gpg-agent{,@}.{service,socket}
+-  gpg-agent-{browser,extra,ssh}{,@}.socket
+-  keyboxd{,@}.{service,socket}
+   keyboxd.8
+   $pkgname-2.4-avoid_beta_warning.patch  # do not emit beta warnings (due to misbehaving build system)
+   0001-gpg-accept-subkeys-with-a-good-revocation-but-no-sel.patch
+@@ -79,24 +75,6 @@
+   0023-gpg-Verify-Text-mode-Signatures-over-binary-Literal-.patch
+ )
+ sha256sums=('45d7a37b15e8afc6361a4ca168f610e5d3a9dd28de66453b2a25607fa162dfc1'
+-            '80a3a80f9f1f337da555a6838483e1baca44cde8a8a3d8c4ba7743626304b981'
+-            '8374255ce93a3c343019ab425963bcbc41982ea89e669d1ad1df0aa7be810de1'
+-            'ca55048f992824a24ab7f61cbc44a713a153f70a1a60d1cbba7ab4440302a204'
+-            'd0d79d76bbf6c0d744ee262882fcdfbe52601c6d74cdc5dd99a15da1cdbb6ae1'
+-            '8ea489a57edb0db9394bf2d6c0ec62205f881bb54efb919e4870209c7db01aa7'
+-            '81e9dd05cbf3b8406367258eae6ef67ff97f270301bf50b52742647c515c8304'
+-            'f735119afa3c452728e899809aa1d87b6091a327934befde3aef70ea9259197f'
+-            '2af0824fdbb95c1c6b54a9ab0a22aeb92ac997e44112f93919d263efa81909ae'
+-            '1cf9821b3bf4efaf4da2fd52ceb70d254dc4f6c545603f9045de716ef6aabf2d'
+-            '402eb8f875daaa419f9fdef59ffa84a1e063cc79e04d885ab0768788a4620ac0'
+-            'f0094f67586cbcda17fd0d780e3e73d6dbaa479ac84715ba941531f83f6ecfe9'
+-            '6644d769f7919ad58d3caf955195047c521328d180ee2077b78b7f1459f3184b'
+-            'ffa0191fad52712732f8b24d7d570c1d19a7803e59d30088797b76e252f65858'
+-            'ddfeafd4b86ef4dd7bcc841115483bcda58c660547ebaeae47ee343741e571eb'
+-            'cba1aa10c072d982135d2367a7e957d6787037ab232fd148144eca39a92ec2e6'
+-            '2e3e6ce050737c3bc0e608f283bdfef5471def2ff12dee7ef007854033178694'
+-            '34144a8e43fbeac88f1ddaf1621e6a3b192efba4580d18a42254ad386819afea'
+-            '50a00213e44ff07b385e12bca455cd5eec35b271ca2fe500bfe7704ebd8ec73d'
+             '38c66efbd3bffdfa9cb0f226a6db03ae4b226f705dc2d0266a555d8ace823b79'
+             '243c3a79295519b3931f9d846cf2af5caa064a78de812ee336dc786c1567b4d0'
+             'e07bd246e13d88df72506ef1f98aee416473c1c6674de6628ad79cc39fa999b8'
+@@ -122,24 +100,6 @@
+             '9bb1ea61b1f2885e4e82cf743e065c67ee60ce8a8c135ae6b4a56536a49bcec6'
+             'fe879074384037f818c5287c668d2e655bc3628299ce1ab33f8999967c88321d')
+ b2sums=('2b0b212f01e96ed04340437d71986473a088d6935e6ef0cde2ce983667037e18bcc519e316dce3789f952ca08cb7f1cbf6312d460619f686ec247a5403d85a57'
+-        '7a3af856305eb4b00929aaf029dd4e5c84376df4f30add76976b9b058addf6fc4d8c39335fc83d11493ea9d8a40f0510dbac8572b99a8c8b9b3a4eca8e585774'
+-        'ee51a4702715f5ec2629ff42eeba8630010da8a67545d1e53961e710de5faf197708e55d2d55796917a134ca2a76b1d6c88a8f7756d0706e0cbc33b605f52d86'
+-        '3f40de2bf73e84f099b542349257ef6c098b4e347fb218d21a2a785830aa335832229b24c74aadae73deff5460f8645e2d7e7c3c2faaeb91cc812eeb06ddca84'
+-        '10c6074d67addd5c244a2e83485ed0fd34847e16619e2ff4a5ab09011ed9daf199b7d7b5f109a1ea88a6ba3218e442c6c28575879b305686a13c8a93612937a3'
+-        'ad71d7fab2a92a8da454c34884b5724e94adc0925a7f97f062fb7b78ed3ec87e5babb6383e755c943afd16bf61789ba83455dc2baf82ce248c1c4622ff87e364'
+-        '129ecd9df3f00ed28f494f914483645e9aeaa1d6812c762ded60582c0a3f66b215731d4415ea5c017aa5ce97448faa5b93dbcb3793a82643d6ed160cc62f4ea4'
+-        '36f8709733fbd509f096675a10a240ec6862e6cbd59d32cf8b1fdc1ac04fb7137093690cd97db705e324f6d030344d1d72384504f3465cffccb855c2e29be678'
+-        '1da101e67ac09eebbb0682d465075a3657c614426c70907d36fd56fee27df082df6536ac47273f41cd7e145e9ab536a3887a9b118cd8b05887a384070294ceca'
+-        'bf5daa4a33daae716a1d7743470dae618151e14ab7bb5d99138f880a908fac57dbb517b78d92c81ecf4532c25366cd32f7acc0e33a711ccde830fbc208726e69'
+-        '8a4d1f57c3223c817f840ee989532a57760ad4f836950d18149f4827746f3e7cfb2a1ebdbb115be7c049b5971802eaed9e99125b39cac26b5186b18f9693da99'
+-        'ffc8ea3c7875b195720ad238742a726b4b7be0bb8f2f8927358d259202f22b5e32f9ad23a4c66da85e25f36544770c29725be6d99256b685427b94d814e29196'
+-        'c2d29d2adbff690099e537d294d08f9ade73f7a744038382f011b4c9f93c29e27629b740dae02361a4e663730459db6fa81bc2903595fe52e71407dab6590ca2'
+-        '9dd03f808af45752a01ccbcfec3f3cb39f1a720088e21aa8a19c2ceec3876b3a8b950c1c154203d0adc208fed8ae07a26c8cd59d783e32eb1294a3a340bedad4'
+-        '91b2a13fdd2c20c5950ec42c742e8be8ee2b6137a9e73e20cf269415fcc960e90049ab3ca6ec8ddc045a8fa03b16396849494b86ebb742adabb53e2703f2d290'
+-        'cd8578ae69d58d4818b0aecca95fa5080586dfaa9bc5050a7203b0f48e50ad64c5b7c1f71e71711ed120223eb2662e96f577855f729bdf10d2cd648a9e305bfe'
+-        '4f206967e3d8d1066f5bcb64c35a72bc5f6d69d484b2ab52fd239f4b92b398cdd08c9a016c5dc07fc5cbfdb05983969830983531fae70f67a6a5f61624336577'
+-        '61e262c714f0e2f9e2a595f16f203c41df93fbfd3aaf20c3ccdbc2bc6c0285a6591b21346f5f15b23f624e1f72470d5d6e1e805979858ea391c815bc1d2e7c67'
+-        'af13f78ff240c00d9e61bd470ace03bc6926e1cf946016c8c4fa27706ed278babc0ec8a04c79b930d9047f62bd7cfcfeba3e7fd493da7476a318fc49ff0e54fe'
+         '5e4fed3c54785fc0140a1cfe970c6ed6a61c0041961999a9777dfcb0050d45e2b9231b3e5e97e025cefe1461614b599bc7129eea931d1996f4849cd83f546abc'
+         '168855b598714abb27e01e52e0ed1e1a01ab14ffb2ee09d759308375359cd28c0a9f96c6b9dee0a2cc5713aec8ea831858d59f56a0a126bca3e1401b078fc7ab'
+         '8d6937764aa47720245358ed2a20a5097808f4af2beb03479c0801d84ff5641a24bd92da909d5878c8115f1922772e883895a74c6aed1bdcc9a618766ab4b444'
+@@ -229,17 +189,6 @@
+   install -vDm 644 ../keyboxd.8 -t "$pkgdir/usr/share/man/man8/"
+   install -vDm 644 {BSD-{2,3,4}-Clause,MIT,Unicode-TOU}.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+ 
+-  local systemdir="$pkgdir/usr/lib/systemd/"
+-  local wantsdir="${systemdir}user/sockets.target.wants/"
+-  install -vdm 755 "$wantsdir"
+ 
+-  local unit
+-  for unit in ../*.{service,socket}; do
+-    case $unit in
+-      *@.*) install -vDm 644 "$unit" -t "${systemdir}system/" ;;
+-      *.socket) ln -sv "../${unit##*/}" -t "$wantsdir" ;&
+-      *) install -vDm 644 "$unit" -t "${systemdir}user/" ;;
+-    esac
+-  done
+ }
+ 

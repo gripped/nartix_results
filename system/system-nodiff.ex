@@ -41,6 +41,7 @@ glib2
 glib2-devel
 glib2-docs
 gnulib-l10n
+gnupg
 gnutls
 gpgme
 groff
@@ -152,6 +153,7 @@ npth
 nspr
 nss
 ca-certificates-mozilla
+openssh
 openssl-1.1
 openssl
 pciutils

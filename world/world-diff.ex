@@ -46,7 +46,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calf
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -84,6 +83,7 @@ conky
 conmon
 connman
 containerd
+coordgen
 cppcheck
 cppdap
 crun
@@ -187,7 +187,6 @@ gnome-desktop-4
 gnome-desktop-docs
 gnome-disk-utility
 gnome-keyring
-gnome-notes
 gnome-panel
 gnome-remote-desktop
 gnome-session
@@ -326,6 +325,9 @@ kwayland5
 kwin-x11
 kwin
 libabw
+libappindicator
+libappindicator-gtk2
+libappindicator-gtk3
 libatasmart
 libayatana-indicator
 libblockdev
@@ -352,6 +354,9 @@ python-libcamera
 libcdio-paranoia
 libdaemon
 libdatrie
+libdbusmenu
+libdbusmenu-gtk2
+libdbusmenu-gtk3
 libdc1394
 libdca
 libdv
@@ -377,6 +382,7 @@ libindicator-gtk3
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -483,6 +489,7 @@ lxtask
 lxtask-gtk3
 lxterminal
 ly
+maeparser
 mako
 maliit-framework
 marco
@@ -580,6 +587,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs
 nsd
 nushell
 nvidia-open
@@ -705,19 +713,15 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-confuse
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-lark-parser
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-redis
 python-seaborn
-python-serpent
 python-smmap
 qastools
 qbittorrent

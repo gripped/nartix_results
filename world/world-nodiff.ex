@@ -276,6 +276,7 @@ cairomm-docs
 calc
 calcurse
 calendarsupport
+calf
 calligra
 camlp-streams
 camlp4
@@ -378,7 +379,6 @@ confuse
 consul
 containers-common
 convertlit
-coordgen
 copr-cli
 corepack
 corrosion
@@ -812,6 +812,7 @@ gnome-multi-writer
 gnome-music
 gnome-nettool
 gnome-nibbles
+gnome-notes
 gnome-online-accounts
 libgoa
 gnome-photos
@@ -1620,9 +1621,6 @@ libakonadi5
 libalkimia
 libao
 libappimage
-libappindicator
-libappindicator-gtk2
-libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
@@ -1667,9 +1665,6 @@ libdbi
 libdbi-docs
 libdbusmenu-qt
 libdbusmenu-qt5
-libdbusmenu
-libdbusmenu-gtk2
-libdbusmenu-gtk3
 libde265
 libdecor
 libdeflate
@@ -1778,7 +1773,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2203,7 +2197,6 @@ m17n-db
 m17n-lib
 mac
 macchanger
-maeparser
 magic-wormhole
 mailcap
 mailcommon
@@ -2430,7 +2423,6 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3315,6 +3307,7 @@ python-commonmark
 python-configargparse
 python-configobj
 python-configupdater
+python-confuse
 python-constantly
 python-contextlib2
 python-contourpy
@@ -3691,6 +3684,7 @@ python-kiwisolver
 python-kombu
 python-krb5
 python-kubernetes
+python-lark-parser
 python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
@@ -3976,6 +3970,7 @@ python-pyasn1
 python-pyasynchat
 python-pyasyncore
 python-pyaxmlparser
+python-pybreaker
 python-pycares
 python-pycodestyle
 python-pycountry
@@ -4193,6 +4188,7 @@ python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
+python-redis
 python-referencing
 python-reflink
 python-regex
@@ -4256,6 +4252,7 @@ python-semver
 python-send2trash
 python-sentinels
 python-sentry_sdk
+python-serpent
 python-service-identity
 python-setproctitle
 python-setuptools-gettext

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -53,7 +53,7 @@
+     -D update_mimedb=false
+   )
+ 
+-  arch-meson $pkgname build "${meson_options[@]}"
++  artix-meson $pkgname build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,6 @@
+ local meson_options=(
+ -D update_mimedb=false
+ )
+-arch-meson $pkgname build "${meson_options[@]}"
++artix-meson $pkgname build "${meson_options[@]}"
+ meson compile -C build
+ }

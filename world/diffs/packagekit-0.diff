@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,15 +26,16 @@
+@@ -31,15 +31,16 @@
  
  build() {
          local _meson_options=(
@@ -27,7 +27,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
+@@ -4,13 +4,14 @@
+ }
  build() {
  local _meson_options=(
 +-Dsystemd=false

@@ -332,7 +332,6 @@ sqlitebrowser
 stalonetray
 starship
 subtitleeditor
-sundials
 swww
 t1lib
 tealdeer
