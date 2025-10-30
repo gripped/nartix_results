@@ -105,9 +105,6 @@ incron
 kanshi
 kernel-headers-musl
 labwc
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 lf
 libaacs
@@ -325,6 +322,8 @@ scribus
 scummvm
 shairplay
 smokeping
+snes9x
+snes9x-gtk
 snorenotify
 solaar
 spotify-launcher

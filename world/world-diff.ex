@@ -83,7 +83,6 @@ conky
 conmon
 connman
 containerd
-coordgen
 cppcheck
 cppdap
 crun
@@ -382,7 +381,6 @@ libindicator-gtk3
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -489,7 +487,6 @@ lxtask
 lxtask-gtk3
 lxterminal
 ly
-maeparser
 mako
 maliit-framework
 marco
@@ -587,7 +584,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-open
@@ -662,6 +658,7 @@ php-snmp
 php-sqlite
 php-tidy
 php-xsl
+pigeonhole
 pipewire-media-session
 pipewire
 libpipewire

@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,7 +3,7 @@
- _pkgname=ntp #-dev
- _pkgver=4.2.8p18
- pkgver=${_pkgver/p/.p}
--pkgrel=6
-+pkgrel=5
- pkgdesc='Network Time Protocol reference implementation'
- url='https://www.ntp.org/'
- license=('custom')
-@@ -13,15 +13,11 @@
+@@ -13,14 +13,10 @@
  source=("https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/${_pkgname}-${_pkgver}.tar.gz"
          ntp-4.2.8.p18-fix-build.patch
          'ntp.conf'
@@ -21,11 +12,9 @@
              'abccefe0b3a65cd375d5071ce780be8d2d205439aa6d34bcd3c56de6e80ba821'
 -            '1edd7e7916766b4aebb4d96a5da4b0a1086f43d3e0e4ffc90c2e4f92bd13ce7e'
 -            '63b0f8c03905daecad3f901664db70a608519b6ca4f4e7b159ab2c971cffacf4'
--            'e2684bd1ea1a4eec164619c93eaaed78b1cc5a882c7044436800f9c7cec86636')
-+            'f839a3b6d8e64fcd9332274131b4d5aa0b2c272db072dc310af1735ef286746a')
+             'e2684bd1ea1a4eec164619c93eaaed78b1cc5a882c7044436800f9c7cec86636')
  options=('!emptydirs')
  
- prepare() {
 @@ -44,8 +40,6 @@
  	make DESTDIR="${pkgdir}" install
  

@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,7 @@
- b2sums=('b59748bd2dacb4980fdc850d3ef98e27130654ac59423f0d27e22b8b3b9d9ab02ba19e086c4229c7fe9d02f8600d1cf01bd9cf90ec7d613f3cd09c27b5b8cae6')
+@@ -35,7 +35,7 @@
+ }
  
  build() {
 -  arch-meson $pkgbase build \
@@ -17,7 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -2,7 +2,7 @@
+ git -C $pkgbase apply -3 ../0001-build-Use-python-install_sources.patch
+ }
  build() {
 -arch-meson $pkgbase build \
 +artix-meson $pkgbase build \

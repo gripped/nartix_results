@@ -379,6 +379,7 @@ confuse
 consul
 containers-common
 convertlit
+coordgen
 copr-cli
 corepack
 corrosion
@@ -1773,6 +1774,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2197,6 +2199,7 @@ m17n-db
 m17n-lib
 mac
 macchanger
+maeparser
 magic-wormhole
 mailcap
 mailcommon
@@ -2423,6 +2426,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2942,7 +2946,6 @@ pidgin
 libpurple
 finch
 pifpaf
-pigeonhole
 pigz
 pim-data-exporter
 pim-sieve-editor
