@@ -643,7 +643,6 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
-firejail
 fish
 five-or-more
 flac
@@ -2527,6 +2526,7 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
+opensmtpd
 opensubdiv
 opentimelineio
 openucc
@@ -2986,6 +2986,7 @@ pngplusplus
 pnpm
 po4a
 poco
+podman-compose
 podofo-0.9
 podofo
 podofo-tools
@@ -5755,7 +5756,6 @@ xmlsec
 xmlstarlet
 xmlto
 xmltoman
-xmms2
 xmrig
 xonsh
 xorg-appres

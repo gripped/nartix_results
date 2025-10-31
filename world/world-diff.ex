@@ -150,6 +150,7 @@ fcitx5
 fcron
 fig2dev
 firefox
+firejail
 firewalld
 firewalld-test
 flatpak
@@ -605,7 +606,6 @@ openipmi
 openjade
 openrct2
 openresolv
-opensmtpd
 opensnitch
 opensp
 openvpn
@@ -1134,6 +1134,7 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
+xmms2
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

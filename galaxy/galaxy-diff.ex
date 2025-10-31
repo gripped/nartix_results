@@ -14,9 +14,6 @@ firefox
 gpicview
 greetd-regreet
 gtklock
-lazarus
-lazarus-qt5
-lazarus-qt6
 lemurs
 libe-book
 libetonyek

@@ -35,6 +35,7 @@ caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
 caja
+cargo-nextest
 catfish
 cava
 certbot-apache
@@ -102,9 +103,13 @@ gstreamermm-docs
 gtk-session-lock
 imv
 incron
+just
 kanshi
 kernel-headers-musl
 labwc
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 lf
 libaacs
@@ -315,6 +320,7 @@ rgbds
 rio
 ristretto
 rpi-imager
+rust-script
 sakura
 salt
 screengrab
@@ -479,6 +485,7 @@ ueberzug
 ueberzugpp
 vagrant
 vicious
+voa
 warpinator
 wev
 wlr-randr
