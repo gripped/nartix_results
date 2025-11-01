@@ -233,6 +233,7 @@ mate-power-manager
 mate-sensors-applet
 mate-settings-daemon
 mate-terminal
+mate-themes
 mate-user-guide
 mate-user-share
 mate-utils
@@ -337,6 +338,7 @@ sqlitebrowser
 stalonetray
 starship
 subtitleeditor
+sundials
 swww
 t1lib
 tealdeer

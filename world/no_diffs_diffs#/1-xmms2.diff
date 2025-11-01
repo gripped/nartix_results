@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,18 +59,12 @@
+   git+https://github.com/xmms2/s4.git
+   tmpfiles.conf
+   sysusers.conf
+-  system.service
+-  user.service
+ )
+-b2sums=(
+-  265d1090260e50c49b0f54f9e108f4da7449c85f33b048806e0cf661f89d8a5253f44e741e59f9a0f4d8702f4fca8b7b0c9c7b60fa98fc7a1a083da20e53e1d0
+-  SKIP
+-  SKIP
+-  2042a966321a8581efbd981edcaf680054c8f91df6b8373e117e51cd4d1d208ba43da723f33995dee941b7e3fc44c46f76b4dcd7a70dc07f9a2eb7a27a159639
+-  58e3d33add4dae998dfe034267f216745467005fc44e646bbb228ac6885f6cf77c5964da299c050a695fb260700aafa988be26ce6dea96580ab8f1fda45de593
+-  e7f14c27fbe8113feba2d2c6c1d4afb7605c43c63004fdbbf18abefea08d303e7d59db30e315206b722bdf044add00492538bd3b03ef01730dd120916aa78004
+-  96d2174b8321176bd94753c87cda79012bc30f024b449472b41be6fd1577c1c8e84f1d2df2282d0cf6ce8e5fce45e9e3f12ccd0515958a23c9ebdd22860fc98d
+-)
++b2sums=('265d1090260e50c49b0f54f9e108f4da7449c85f33b048806e0cf661f89d8a5253f44e741e59f9a0f4d8702f4fca8b7b0c9c7b60fa98fc7a1a083da20e53e1d0'
++        'SKIP'
++        'SKIP'
++        '2042a966321a8581efbd981edcaf680054c8f91df6b8373e117e51cd4d1d208ba43da723f33995dee941b7e3fc44c46f76b4dcd7a70dc07f9a2eb7a27a159639'
++        '58e3d33add4dae998dfe034267f216745467005fc44e646bbb228ac6885f6cf77c5964da299c050a695fb260700aafa988be26ce6dea96580ab8f1fda45de593')
+ validpgpkeys=(62197C11C7C25A61C448E95644FE231F3F3926E4) # Sergei Trofimovich <slyfox@gentoo.org>
+ 
+ prepare() {
+@@ -98,6 +92,4 @@
+ 
+   install -Dm644 ../sysusers.conf "$pkgdir/usr/lib/sysusers.d/xmms2.conf"
+   install -Dm644 ../tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/xmms2.conf"
+-  install -Dm644 ../system.service "$pkgdir/usr/lib/systemd/system/xmms2d.service"
+-  install -Dm644 ../user.service "$pkgdir/usr/lib/systemd/user/xmms2d.service"
+ }

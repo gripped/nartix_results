@@ -11,6 +11,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+arrow
 at-spi2-core
 at-spi2-core-docs
 at
@@ -33,6 +34,7 @@ bluez-obex
 bolt
 booster
 box2d
+breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -97,6 +99,7 @@ dhclient
 dhcpcd
 distcc
 dns-over-https
+docker-compose
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -382,6 +385,7 @@ libindicator-gtk3
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -606,6 +610,7 @@ openipmi
 openjade
 openrct2
 openresolv
+opensmtpd
 opensnitch
 opensp
 openvpn
@@ -714,12 +719,15 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-psutil
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-zope-hookable
+python-zope-security
 qastools
 qbittorrent
 qbittorrent-nox
@@ -931,7 +939,6 @@ udisks2
 udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
-ufmt
 umockdev
 unace
 unbound
@@ -1134,7 +1141,6 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
-xmms2
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

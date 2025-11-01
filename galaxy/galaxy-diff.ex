@@ -14,6 +14,7 @@ firefox
 gpicview
 greetd-regreet
 gtklock
+hexchat
 lemurs
 libe-book
 libetonyek
@@ -34,7 +35,6 @@ mate-control-center
 mate-screensaver
 mate-session-manager
 mate-system-monitor
-mate-themes
 mimalloc
 mpd
 neofetch
@@ -115,7 +115,6 @@ rage
 read-edid
 sdcv
 signal-desktop
-sundials
 terminology
 termshark
 tor

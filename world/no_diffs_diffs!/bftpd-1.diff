@@ -28,3 +28,15 @@
    install -Dm 644 ../bftpd.tmpfiles "${pkgdir}/usr/lib/tmpfiles.d/bftpd.conf"
    install -Dm 644 ../bftpd.logrotate "${pkgdir}/etc/logrotate.d/bftpd"
    install -Dm 644 ../bftpd.pam "${pkgdir}/etc/pam.d/bftpd"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-glibc
+-libcrypt.so
+-libxcrypt
+-pam
+-zlib

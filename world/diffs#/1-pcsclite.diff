@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=pcsclite
--pkgver=2.4.0
--pkgrel=3
-+pkgver=2.3.3
-+pkgrel=1
- pkgdesc="PC/SC Architecture smartcard middleware library"
- arch=('x86_64')
- url='https://pcsclite.apdu.fr/'
 @@ -12,7 +12,6 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )
@@ -27,7 +17,7 @@
  )
  optdepends=(
    'python: API call trace logging with the pcsc-spy'
-@@ -32,23 +31,22 @@
+@@ -32,7 +31,7 @@
    'libpcscspy.so'
  )
  backup=(
@@ -36,10 +26,7 @@
  )
  validpgpkeys=('F5E11B9FFE911146F41D953D78A1B4DFE8F9C57E') # Ludovic Rousseau <rousseau@debian.org>
  source=(
-   "git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
- )
--sha256sums=('441ca8dd35b6c8b8363cbac72b1d9a97d0e482f48ab51b9766cbab304e81305e')
-+sha256sums=('b1cd0ef7b75b3daf8230a9a824a4c4797e26e235bb884b5ec4d7eef85b46a890')
+@@ -42,13 +41,12 @@
  
  build() {
    local meson_options=(
@@ -55,17 +42,6 @@
    meson compile -C build
  
    awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' PCSC/COPYING > LICENSE.BSD-3-Clause
-@@ -60,8 +58,7 @@
- package() {
-   meson install -C build --destdir "${pkgdir}"
- 
--  install -D -m0644 LICENSE.* -t "${pkgdir}"/usr/share/licenses/$pkgname
--  install -D -m0644 PCSC/doc/org.debian.pcsc-lite.policy -t "${pkgdir}"/usr/share/polkit-1/actions/
--  install -d "${pkgdir}"/usr/lib/pcsc/drivers
-+  install -D -m0644 LICENSE.* -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -d "$pkgdir/usr/lib/pcsc/drivers"
- }
- 
 
 
 ############# Stripped diff below #################

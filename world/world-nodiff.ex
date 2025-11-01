@@ -105,7 +105,6 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
-arrow
 artikulate
 asciidoc
 asciidoctor
@@ -249,7 +248,6 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
-breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -479,7 +477,6 @@ docbook-xsl
 docbook2x
 docbook5-xml
 docker-buildx
-docker-compose
 doctest
 docx2txt
 dolphin-plugins
@@ -1773,7 +1770,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2526,7 +2522,6 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
-opensmtpd
 opensubdiv
 opentimelineio
 openucc
@@ -3948,7 +3943,6 @@ python-prompt_toolkit
 python-propcache
 python-proxmoxer
 python-proxy.py
-python-psutil
 python-psycopg-pool
 python-psycopg
 python-psycopg2
@@ -4527,13 +4521,11 @@ python-zope-deferredimport
 python-zope-deprecation
 python-zope-event
 python-zope-exceptions
-python-zope-hookable
 python-zope-i18nmessageid
 python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
-python-zope-security
 python-zope-testing
 python-zope-testrunner
 python-zopfli
@@ -5559,6 +5551,7 @@ uasm
 uchardet
 udiskie
 udpxy
+ufmt
 ufw
 uget
 uglify-js
@@ -5756,6 +5749,7 @@ xmlsec
 xmlstarlet
 xmlto
 xmltoman
+xmms2
 xmrig
 xonsh
 xorg-appres
