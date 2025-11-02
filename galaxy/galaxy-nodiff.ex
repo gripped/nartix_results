@@ -266,6 +266,7 @@ pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
 peek
+pekwm
 perl-cairo-gobject
 perl-config-grammar
 perl-convert-asn1

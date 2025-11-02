@@ -477,6 +477,7 @@ docbook-xsl
 docbook2x
 docbook5-xml
 docker-buildx
+docker-compose
 doctest
 docx2txt
 dolphin-plugins
@@ -1102,7 +1103,6 @@ inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1342,6 +1342,7 @@ kemoticons
 kexec-tools
 keybinder2
 libkeybinder2
+keychain
 keyd
 keysmith
 keystone
@@ -3943,6 +3944,7 @@ python-prompt_toolkit
 python-propcache
 python-proxmoxer
 python-proxy.py
+python-psutil
 python-psycopg-pool
 python-psycopg
 python-psycopg2
@@ -4521,11 +4523,13 @@ python-zope-deferredimport
 python-zope-deprecation
 python-zope-event
 python-zope-exceptions
+python-zope-hookable
 python-zope-i18nmessageid
 python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
+python-zope-security
 python-zope-testing
 python-zope-testrunner
 python-zopfli
@@ -5259,6 +5263,8 @@ strip-nondeterminism
 stubby
 subversion
 sugar-datastore
+suil
+suil-docs
 suitesparse
 suitesparse-graphblas
 supermin

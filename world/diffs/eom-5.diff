@@ -48,21 +48,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,6 @@
+@@ -1,15 +0,0 @@
 -autoconf-archive
- dbus-glib
- exempi
- gettext
+-dbus-glib
+-exempi
+-gettext
 -glib2-devel
- gobject-introspection
- gobject-introspection-runtime
- itstool
-@@ -10,6 +8,4 @@
- libexif
- libjpeg-turbo
- libpeas
+-gobject-introspection
+-gobject-introspection-runtime
+-itstool
+-lcms2
+-libexif
+-libjpeg-turbo
+-libpeas
 -mate-common
- mate-desktop
+-mate-desktop
 -yelp-tools
 
 --- Arch PKGBUILD

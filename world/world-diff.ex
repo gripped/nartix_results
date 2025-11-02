@@ -99,7 +99,6 @@ dhclient
 dhcpcd
 distcc
 dns-over-https
-docker-compose
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -277,6 +276,7 @@ libibus
 igsc
 iio-sensor-proxy
 immer
+intel-graphics-compiler
 intel-metee
 intel-metee-doc
 intel-opencl-clang
@@ -314,7 +314,6 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
-keychain
 kinfocenter
 kismet
 kitty
@@ -719,15 +718,12 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-psutil
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-zope-hookable
-python-zope-security
 qastools
 qbittorrent
 qbittorrent-nox
@@ -886,8 +882,6 @@ sslh
 sssd
 strongswan
 stunnel
-suil
-suil-docs
 sway
 swayidle
 switcheroo-control

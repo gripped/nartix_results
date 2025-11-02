@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,7 +45,7 @@
+     -D gtk2=disabled
+   )
+ 
+-  arch-meson $pkgname-$pkgver build "${meson_options[@]}"
++  artix-meson $pkgname-$pkgver build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ -D cocoa=disabled
+ -D gtk2=disabled
+ )
+-arch-meson $pkgname-$pkgver build "${meson_options[@]}"
++artix-meson $pkgname-$pkgver build "${meson_options[@]}"
+ meson compile -C build
+ }
