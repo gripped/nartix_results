@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=(x86_64)
+ url='https://community.kde.org/Frameworks'
+ license=(LGPL)
+-depends=(kio5 kpackage5 libepoxy)
++depends=(kio5 kpackage5 libepoxy knotifications5)
+ makedepends=(extra-cmake-modules)
+ conflicts=("$_name<5.111")
+ replaces=("$_name<5.111")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
+ kio5
++knotifications5
+ kpackage5
+ libepoxy

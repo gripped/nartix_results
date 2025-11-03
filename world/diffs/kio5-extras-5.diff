@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kio5-extras
+ pkgver=24.02.2
+-pkgrel=6
++pkgrel=5
+ pkgdesc='Additional components to increase the functionality of KIO'
+ arch=(x86_64)
+ url='https://www.kde.org/'
+@@ -30,6 +30,7 @@
+          syntax-highlighting5)
+ makedepends=(extra-cmake-modules
+              gperf
++             kdoctools5
+              libappimage
+              openexr
+              taglib)
+@@ -49,7 +50,6 @@
+ 
+ prepare() {
+   sed -e 's|"extension "|"extension"|' -i kio-extras-kf5-$pkgver/po/it/docs/kioslave5/bzip2/index.docbook
+-  sed -e '/DocTools/d' -e '/( doc )/d' -e '/kdoctools_install/d' -i kio-extras-kf5-$pkgver/CMakeLists.txt
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,6 +7,7 @@
+ kcoreaddons5
+ kdbusaddons5
+ kdnssd5
++kdoctools5
+ kdsoap-qt5
+ ki18n5
+ kio5
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ sed -e 's|"extension "|"extension"|' -i kio-extras-kf5-$pkgver/po/it/docs/kioslave5/bzip2/index.docbook
+-sed -e '/DocTools/d' -e '/( doc )/d' -e '/kdoctools_install/d' -i kio-extras-kf5-$pkgver/CMakeLists.txt
+ }
+ build() {
+ cmake -B build -S kio-extras-kf5-$pkgver \

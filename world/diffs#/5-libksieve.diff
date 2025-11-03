@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libksieve
+ pkgver=25.08.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='KDE PIM library for managing sieves'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+@@ -26,9 +26,12 @@
+          qt6-webengine
+          sonnet
+          syntax-highlighting)
+-makedepends=(extra-cmake-modules
++makedepends=(doxygen
++             extra-cmake-modules
+              kdoctools
+-             kmailtransport)
++             kmailtransport
++             qt6-doc
++             qt6-tools)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('9f0ee6de58c67b8158873e97e86994a238cb62b91e5b91d02b4041e966ce2478'
+             'SKIP')
+@@ -38,7 +41,8 @@
+ 
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_TESTING=OFF \
++    -DBUILD_QCH=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++doxygen
+ extra-cmake-modules
+ gcc-libs
+ glibc
+@@ -18,6 +19,8 @@
+ libsasl
+ pimcommon
+ qt6-base
++qt6-doc
++qt6-tools
+ qt6-webengine
+ sonnet
+ syntax-highlighting
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+--DBUILD_TESTING=OFF
++-DBUILD_TESTING=OFF \
++-DBUILD_QCH=ON
+ cmake --build build
+ }

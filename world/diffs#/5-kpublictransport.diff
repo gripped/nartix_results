@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kpublictransport
+ pkgver=25.08.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Library to assist with accessing public transport timetables and other data'
+ arch=(x86_64)
+ url='https://www.kde.org'
+@@ -13,9 +13,11 @@
+          qt6-base
+          qt6-declarative
+          zlib)
+-makedepends=(extra-cmake-modules
++makedepends=(doxygen
++             extra-cmake-modules
+              kirigami-addons
+-             protobuf)
++             protobuf
++             qt6-tools)
+ optdepends=('kirigami-addons: QML bindings')
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('b2dec9e45fd631c8d6df81c08d4b9f4706ee3d4781165431a04a4b4c0c8c2ed3'
+@@ -26,7 +28,8 @@
+ 
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_TESTING=OFF \
++    -DBUILD_QCH=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++doxygen
+ extra-cmake-modules
+ gcc-libs
+ glibc
+@@ -7,4 +8,5 @@
+ protobuf
+ qt6-base
+ qt6-declarative
++qt6-tools
+ zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+--DBUILD_TESTING=OFF
++-DBUILD_TESTING=OFF \
++-DBUILD_QCH=ON
+ cmake --build build
+ }

@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=rocs
+ pkgver=25.08.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Graph Theory IDE'
+ url='https://apps.kde.org/rocs/'
+ arch=(x86_64)
+@@ -28,7 +28,8 @@
+          qt5-script
+          qt5-xmlpatterns)
+ makedepends=(boost
+-             extra-cmake-modules)
++             extra-cmake-modules
++             kdoctools5)
+ groups=(kde-applications
+         kde-education)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,6 +9,7 @@
+ kconfigwidgets5
+ kcoreaddons5
+ kcrash5
++kdoctools5
+ ki18n5
+ kitemviews5
+ kparts5

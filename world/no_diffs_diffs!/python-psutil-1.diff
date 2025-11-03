@@ -1,11 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -38,7 +38,10 @@
-   cp -r psutil/tests/ "$relative_site_packages/psutil"
+@@ -39,7 +39,9 @@
    GITHUB_ACTIONS=1 test-env/bin/python -m pytest --override-ini="addopts=" "$relative_site_packages" \
      --deselect "$relative_site_packages/psutil/tests/test_linux.py::TestSystemNetIfAddrs::test_ips" \
--    --deselect "$relative_site_packages/psutil/tests/test_system.py::TestNetAPIs::test_net_if_addrs"
-+    --deselect "$relative_site_packages/psutil/tests/test_system.py::TestNetAPIs::test_net_if_addrs" \
+     --deselect "$relative_site_packages/psutil/tests/test_system.py::TestNetAPIs::test_net_if_addrs" \
+-    --deselect "$relative_site_packages/psutil/tests/test_system.py::TestSensorsAPIs::test_sensors_temperatures"
 +    --deselect "$relative_site_packages/psutil/tests/test_linux.py::TestRootFsDeviceFinder::test_disk_partitions_mocked" \
 +    --deselect "$relative_site_packages/psutil/tests/test_system.py::TestDiskAPIs::test_disk_partitions" \
 +    --deselect "$relative_site_packages/psutil/tests/test_process_all.py::TestFetchAllProcesses::test_all"

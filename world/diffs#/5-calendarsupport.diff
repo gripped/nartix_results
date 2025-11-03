@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=calendarsupport
+ pkgver=25.08.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Calendar support library'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+@@ -24,7 +24,10 @@
+          kwidgetsaddons
+          libakonadi
+          qt6-base)
+-makedepends=(extra-cmake-modules)
++makedepends=(doxygen
++             extra-cmake-modules
++             qt6-doc
++             qt6-tools)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('2f3c3da6ff600c571c962e18cab7d2a6c780d79e282b94dec6d70a6f084d6d46'
+             'SKIP')
+@@ -34,7 +37,8 @@
+ 
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_TESTING=OFF \
++    -DBUILD_QCH=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ akonadi-calendar
++doxygen
+ extra-cmake-modules
+ gcc-libs
+ glibc
+@@ -17,3 +18,5 @@
+ kwidgetsaddons
+ libakonadi
+ qt6-base
++qt6-doc
++qt6-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+--DBUILD_TESTING=OFF
++-DBUILD_TESTING=OFF \
++-DBUILD_QCH=ON
+ cmake --build build
+ }

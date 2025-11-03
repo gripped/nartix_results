@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,22 @@
- 
- pkgbase=lvm2
- pkgname=('lvm2' 'device-mapper')
--pkgver=2.03.36
-+pkgver=2.03.35
- pkgrel=1
+@@ -6,15 +6,15 @@
  arch=('x86_64')
  url='https://sourceware.org/lvm2/'
  license=('GPL-2.0-only' 'LGPL-2.1-only')
@@ -15,34 +9,33 @@
  validpgpkeys=('88437EF5C077BD113D3B7224228191C1567E2C17'  # Alasdair G Kergon <agk@redhat.com>
                'D501A478440AE2FD130A1BE8B9112431E509039F') # Marian Csontos <marian.csontos@gmail.com>
  source=("git+https://gitlab.com/lvmteam/lvm2.git#tag=v${pkgver//./_}?signed"
-         '0001-udev-initcpio.patch'
+-        '0001-udev-initcpio.patch'
 -        '11-dm-initramfs.rules')
--sha256sums=('847f864411614e5ec8f2ab8d5e8d91e8d10e430a1b4f2277efa6386a3f7af81c'
 +        '11-dm-initramfs.rules'
-+        0001-lvm2-autoactivate.patch)
-+sha256sums=('c7278a37586910f7d750d3e664d34c9f8b47d3be2e951e687e5faad7245323b1'
-             '2b3a16ec05e2bc6678e9ebd5ffa8319ebfde29aa260ce004f79f9b8df57d73c9'
++        '0001-lvm2-autoactivate.patch')
+ sha256sums=('847f864411614e5ec8f2ab8d5e8d91e8d10e430a1b4f2277efa6386a3f7af81c'
+-            '2b3a16ec05e2bc6678e9ebd5ffa8319ebfde29aa260ce004f79f9b8df57d73c9'
 -            'e10f24b57582d6e2da71f7c80732a62e0ee2e3b867fe84591ccdb53e80fa92e0')
 +            'e10f24b57582d6e2da71f7c80732a62e0ee2e3b867fe84591ccdb53e80fa92e0'
 +            '6aff2a85c16cf9bee3ecde708423a640fc82252cbd8e6ffdfd3aaf8accb308ce')
  
  _backports=(
  )
-@@ -28,12 +30,8 @@
+@@ -28,12 +28,7 @@
      git show "${_c}" -- ':(exclude)WHATS_NEW' | git apply
    done
  
 -  patch -Np1 --output='udev/69-dm-lvm-initcpio.rules.in' < ../0001-udev-initcpio.patch
-+  patch -Np1  --output='udev/69-dm-lvm-initcpio.rules.in' -i ../0001-lvm2-autoactivate.patch
- 
+-
 -  sed -i -e '/^\[Install\]$/,$d' \
 -    scripts/dm_event_systemd_red_hat.socket.in \
 -    scripts/lvm2_lvmpolld_systemd_red_hat.socket.in \
 -    scripts/lvm2_monitoring_systemd_red_hat.service.in
++  patch -Np1  --output='udev/69-dm-lvm-initcpio.rules.in' -i ../0001-lvm2-autoactivate.patch
  }
  
  build() {
-@@ -61,7 +59,7 @@
+@@ -61,7 +56,7 @@
      --with-default-pid-dir=/run \
      --with-default-run-dir=/run/lvm \
      --with-libexecdir=/usr/lib/lvm2 \
@@ -51,7 +44,7 @@
      --with-thin=internal \
      --with-udev-prefix=/usr
    make
-@@ -72,7 +70,7 @@
+@@ -72,7 +67,7 @@
  package_device-mapper() {
    pkgdesc="Device mapper userspace library and tools"
    url="http://sourceware.org/dm/"
@@ -60,7 +53,7 @@
    provides=('libdevmapper.so'
      'libdevmapper-event.so')
  
-@@ -80,15 +78,11 @@
+@@ -80,15 +75,11 @@
  
    make DESTDIR="${pkgdir}" install_device-mapper
    install -D -m0644 "${srcdir}/11-dm-initramfs.rules" "${pkgdir}/usr/lib/initcpio/udev/11-dm-initramfs.rules"
@@ -77,7 +70,7 @@
      'libudev.so' 'util-linux-libs' 'libblkid.so' 'readline' 'libreadline.so'
      'thin-provisioning-tools' 'libaio' 'libaio.so')
    conflicts=('lvm' 'mkinitcpio<38-1')
-@@ -100,10 +94,4 @@
+@@ -100,10 +91,4 @@
    make DESTDIR="${pkgdir}" install_lvm2
    install -d "${pkgdir}"/etc/lvm/{archive,backup}
    install -D -m0644 udev/69-dm-lvm-initcpio.rules "${pkgdir}/usr/lib/initcpio/udev/69-dm-lvm.rules"

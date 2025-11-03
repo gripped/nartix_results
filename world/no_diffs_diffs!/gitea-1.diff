@@ -1,12 +1,29 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=gitea
+-pkgver=1.25.0
++pkgver=1.24.7
+ pkgrel=1
+ pkgdesc="Painless self-hosted Git service, community managed."
+ url="https://gitea.io"
+ arch=('x86_64')
+ license=('MIT')
+ depends=('git')
+-makedepends=('go' 'nodejs' 'npm' 'pnpm')
++makedepends=('go' 'nodejs' 'npm')
+ optdepends=('mariadb: MariaDB support'
+             'memcached: MemCached support'
+ 	    'openssh: GIT over SSH support'
 @@ -20,11 +20,9 @@
  backup=("etc/${pkgname}/app.ini")
  source=("git+https://github.com/go-gitea/gitea.git#tag=v${pkgver}?signed"
          "${pkgname}.tmpfiles"
 -        "${pkgname}.service"
          "${pkgname}.sysusers")
- sha256sums=('053ff45b3aa1dac438e392ce213307fded8212e894d04b502b4bbdcd947502f1'
+-sha256sums=('0aa332d13427a6979ac7b09d1f61c6481658aa79b3e6f4ed07e3e33676b9465f'
++sha256sums=('053ff45b3aa1dac438e392ce213307fded8212e894d04b502b4bbdcd947502f1'
              '1521fd7edc3830c695698ffe9835709f1408040b5ec989f07410972c894fa8ba'
 -            '0725aa3d9c556229b473ee5a12a922a1ebbb88aeb02cffd0252756c8bd531959'
              'e29dcc74b2f52e32d3931103d03f202d1cafe18e7eb9a271da0f50ef61dc8446')
@@ -20,3 +37,14 @@
  	install -Dm 644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/${pkgname}.conf"
  	install -Dm 644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,4 +2,3 @@
+ go
+ nodejs
+ npm
+-pnpm

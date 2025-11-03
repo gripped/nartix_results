@@ -1,6 +1,5 @@
 alsa-utils
 autorandr
-blender
 cinnamon-desktop
 doctest
 dvtm

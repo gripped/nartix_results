@@ -1,6 +1,8 @@
 acl
 attr
 audit
+audispd-plugins
+audispd-plugins-zos
 python-audit
 base
 bash

@@ -56,8 +56,14 @@ libtree
 libwireplumber-4.0-compat
 linux-lts515
 linux-wifi-hotspot
+lxappearance-gtk2
+lxappearance-obconf-gtk2
 lxdm-dinit
+lxdm-gtk2
+lxdm-openrc
+lxpanel-gtk2
 lxqt-build-tools-qt6
+lxsession-gtk2
 mailgraph-openrc
 mcomix
 mesa-git
@@ -209,6 +215,7 @@ wireplumber-dinit
 wlogout
 wlopm
 wlrctl
+xarchiver-gtk2
 xcursor-breeze
 xcursor-premium
 xlibre-xf86-input-elographics

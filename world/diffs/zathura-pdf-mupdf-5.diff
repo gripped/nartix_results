@@ -3,8 +3,8 @@
 @@ -1,32 +1,36 @@
  
  pkgname=zathura-pdf-mupdf
--pkgver=0.4.4
--pkgrel=25
+-pkgver=0.4.6
+-pkgrel=1
 +pkgver=0.4.1
 +pkgrel=12.1
 +
@@ -16,7 +16,7 @@
 +
  conflicts=('zathura-pdf-poppler')
 -depends=('cairo' 'gumbo-parser' 'jbig2dec' 'libjpeg-turbo' 'libmupdf' 'openjpeg2' 'openssl' 'zathura')
--makedepends=('meson' 'ninja' 'git' 'appstream-glib')
+-makedepends=('meson' 'ninja' 'git' 'appstream' 'appstream-glib')
 -source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz"
 +
 +depends=('cairo' 'gumbo-parser' 'jbig2dec' 'libjpeg' 'libmupdf' 'openjpeg2' 'openssl' 'zathura')
@@ -24,8 +24,8 @@
 +
 +source=(zathura-pdf-mupdf-$pkgver.tar.gz::https://pwmt.org/projects/zathura-pdf-mupdf/download/zathura-pdf-mupdf-$pkgver.tar.xz
          0001-Remove-mupdf-linking-detection.patch)
--sha512sums=('c6297b8ed68a0797db2e7b295d7fc7cb4d099f24cd9faea49e1e2d0c61818b071297b57f6472c057010caf104053cc0866685349b33a61302280cb52bac055cf'
--            '53f76de2e857a8f57ed9da00e7d0d4c647c38c1a3cb318b27427a1201d7290654aaa3271088e6839f989c7b0ac2a29d353b8bc01561c82e38f33bdb8aba6208c')
+-sha512sums=('d05ccd9d09e1d5e410a6ce41faf6e5ff47059d4a2ef263808a095c7824ecb7d63ba26cc6a4b84a20d2e4aeb6fd72bb90ec56564a48ed763a450941cd22ed3db4'
+-            '5402a6ae9f4b177a9f96483f59b5c50042eb9de3267675725ea2aa0beedfc677f267847e6b0274a7043c0d281136ec72282a2d40f87b408db935d7411eef7cac')
 +
 +sha256sums=('f982a01d6523fa25669381184c06a625edbfd7961cbdb0711dccfdb9c402ac2f'
 +            'b72a21f697ffb6183345db62c3e7f97974ac7747a34587e0c84a4e5b87848af0')
@@ -60,7 +60,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,8 @@
+@@ -1,10 +1,8 @@
+-appstream
 -appstream-glib
  cairo
  git

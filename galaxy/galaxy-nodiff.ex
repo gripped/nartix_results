@@ -17,6 +17,7 @@ avidemux
 avidemux-cli
 avidemux-qt
 bleachbit
+blender
 blueman
 bogofilter
 bogofilter-db

@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ktextaddons
+ pkgver=1.8.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Various text handling addons'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later)
+@@ -22,7 +22,9 @@
+          qtkeychain-qt6
+          sonnet
+          syntax-highlighting)
+-makedepends=(extra-cmake-modules
++makedepends=(doxygen
++             extra-cmake-modules
++             qt6-doc
+              qt6-tools)
+ optdepends=('languagetool: Grammar checking'
+             'grammalecte: French grammar checking'
+@@ -35,7 +37,8 @@
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+     -DBUILD_TESTING=OFF \
+-    -DBUILD_DESIGNERPLUGIN=ON
++    -DBUILD_DESIGNERPLUGIN=ON \
++    -DBUILD_QCH=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++doxygen
+ extra-cmake-modules
+ gcc-libs
+ glibc
+@@ -11,6 +12,7 @@
+ ktextwidgets
+ kwidgetsaddons
+ qt6-base
++qt6-doc
+ qt6-speech
+ qt6-tools
+ qtkeychain-qt6
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+ -DBUILD_TESTING=OFF \
+--DBUILD_DESIGNERPLUGIN=ON
++-DBUILD_DESIGNERPLUGIN=ON \
++-DBUILD_QCH=ON
+ cmake --build build
+ }

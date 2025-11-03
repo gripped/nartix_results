@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=akonadi-calendar
+ pkgver=25.08.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Akonadi calendar integration'
+ arch=(x86_64)
+ url='https://kontact.kde.org'
+@@ -34,7 +34,10 @@
+          messagelib
+          qgpgme
+          qt6-base)
+-makedepends=(extra-cmake-modules)
++makedepends=(doxygen
++             extra-cmake-modules
++             qt6-doc
++             qt6-tools)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+ sha256sums=('c27aedc92cf29570636b3a1dc4044abee29a6a36d3536deeb32d558d79b35461'
+             'SKIP')
+@@ -44,7 +47,8 @@
+ 
+ build() {
+   cmake -B build -S $pkgname-$pkgver \
+-    -DBUILD_TESTING=OFF
++    -DBUILD_TESTING=OFF \
++    -DBUILD_QCH=ON
+   cmake --build build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ akonadi-contacts
+ akonadi-mime
++doxygen
+ extra-cmake-modules
+ gcc-libs
+ glibc
+@@ -27,3 +28,5 @@
+ messagelib
+ qgpgme
+ qt6-base
++qt6-doc
++qt6-tools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cmake -B build -S $pkgname-$pkgver \
+--DBUILD_TESTING=OFF
++-DBUILD_TESTING=OFF \
++-DBUILD_QCH=ON
+ cmake --build build
+ }
