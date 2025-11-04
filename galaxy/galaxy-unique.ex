@@ -20,6 +20,7 @@ artixnews
 autofs-dinit
 autofs
 basu
+batticonplus
 birdtray
 calamares-branding
 calamares

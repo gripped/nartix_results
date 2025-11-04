@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,7 +47,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgbase-$pkgver build
++  artix-meson $pkgbase-$pkgver build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ sed -i -e '/eg-sampler.lv2/d' -e '/eg-scope.lv2/d' plugins/meson.build
+ }
+ build() {
+-arch-meson $pkgbase-$pkgver build
++artix-meson $pkgbase-$pkgver build
+ meson compile -C build
+ }

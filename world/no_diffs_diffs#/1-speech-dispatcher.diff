@@ -8,20 +8,3 @@
  
    cd ${pkgname}-${pkgver}
    make DESTDIR="${pkgdir}" install
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--dotconf
--espeak-ng
--glib2
--intltool
--libao
--libpipewire
--libpulse
--libspeechd
--libtool
--python-pyxdg

@@ -1,8 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,94 +3,68 @@
+@@ -1,96 +1,70 @@
+ 
+ pkgbase=kitty
  pkgname=(kitty kitty-terminfo kitty-shell-integration)
- pkgver=0.43.1
+-pkgver=0.44.0
++pkgver=0.43.1
  pkgrel=1
 -pkgdesc="A modern, hackable, featureful, OpenGL-based terminal emulator"
 -arch=('x86_64')
@@ -40,7 +43,7 @@
 -)
 -options=("!lto")
 -source=("https://github.com/kovidgoyal/${pkgbase}/releases/download/v${pkgver}/${pkgbase}-${pkgver}.tar.xz"{,.sig})
--b2sums=('27d6d06d16d5d2989741691aa5ec40c395f11ae9479f2ac78cfab6e2716023d01603d94957b825f9fe5bf09c377c5bc87a839545238abab8512a408482a4a570'
+-b2sums=('67c876292be90f7c783dc1a07430508e0bce3cfc2092b21c93e794c86fad76427b7be8e24480f5dc9c56c99e103cc5ef4575743968ee2821b4aee30069e0e748'
 -        'SKIP')
 +pkgdesc="Modern, hackable, featureful, OpenGL based terminal emulator"
 +arch=(x86_64)

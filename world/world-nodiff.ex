@@ -31,10 +31,16 @@ aflplusplus
 afpfs-ng
 aha
 akonadi-calendar-tools
+akonadi-calendar
+akonadi-contacts
 akonadi-contacts5
 akonadi-import-wizard
+akonadi-mime
 akonadi-notes
 akonadi-notes5
+akonadi-search
+akonadi
+libakonadi
 akonadiconsole
 akregator
 alacarte
@@ -99,6 +105,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
 arpack
+arrow
 artikulate
 asciidoc
 asciidoctor
@@ -268,6 +275,7 @@ cairomm
 cairomm-docs
 calc
 calcurse
+calendarsupport
 calf
 calligra
 camlp-streams
@@ -571,6 +579,7 @@ erlang-xmerl
 esbuild
 espeak-ng
 ethtool
+eventviews
 evince
 evince-lib-docs
 evolution-data-server
@@ -604,6 +613,7 @@ fcgi
 fcitx-configtool
 fcitx-qt5
 fcitx-qt6
+fcitx
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
@@ -865,6 +875,7 @@ granite
 granite7
 grantlee-editor
 grantlee
+grantleetheme
 grantleetheme5
 graphene
 graphene-docs
@@ -1088,12 +1099,14 @@ imath
 img2pdf
 imlib2
 inchi
+incidenceeditor
 indent
 iniparser
 inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1239,6 +1252,7 @@ qcachegrind
 kcalc
 kcalendarcore
 kcalendarcore5
+kcalutils
 kcharselect
 kclock
 kcmutils
@@ -1296,6 +1310,7 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
+kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1309,6 +1324,7 @@ kdevelop-php
 kdevelop-python
 kdevelop
 kdf
+kdiagram
 kdiagram5
 kdialog
 kdiamond
@@ -1316,6 +1332,7 @@ kdnssd
 kdnssd5
 kdoctools
 kdsingleapplication
+kdsoap-ws-discovery-client
 kdsoap
 kdsoap-qt5
 kdsoap-qt6
@@ -1365,6 +1382,7 @@ kiconthemes5
 kid3
 kid3-common
 kid3-qt
+kidentitymanagement
 kidentitymanagement5
 kidletime
 kidletime5
@@ -1375,6 +1393,7 @@ kimageannotator
 kimageformats
 kimageformats5
 kimagemapeditor
+kimap
 kinit
 kio-admin
 kio-extras
@@ -1382,6 +1401,7 @@ kio-fuse
 kio-gdrive
 kio-zeroconf
 kio
+kio5-extras
 kio5
 kirigami-addons
 kirigami-addons5
@@ -1394,11 +1414,13 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
+kitinerary
 kjobwidgets
 kjobwidgets5
 kjots
 kjs
 kjumpingcube
+kldap
 kleopatra
 klettres
 klickety
@@ -1407,7 +1429,10 @@ kmag
 kmahjongg
 kmail-account-wizard
 kmail
+kmailtransport
+kmbox
 kmenuedit
+kmime
 kmime5
 kmines
 kmix
@@ -1438,9 +1463,11 @@ konquest
 konsole
 konsolepart5
 kontact
+kontactinterface
 kontactinterface5
 kontrast
 konversation
+kopeninghours
 kopete
 korganizer
 kosmindoormap
@@ -1453,13 +1480,16 @@ kpat
 kpeople
 kpeople5
 kpeoplevcard
+kpimtextedit
 kpimtextedit5
 kpipewire
+kpkpass
 kplotting
 kplotting5
 kpmcore
 kpty
 kpty5
+kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
@@ -1486,6 +1516,7 @@ kservice5
 ksh
 kshisen
 ksirk
+ksmtp
 ksnakeduel
 ksnip
 kspaceduel
@@ -1498,12 +1529,14 @@ ksvg
 ksysguard
 ksystemstats
 kteatime
+ktextaddons
 ktexteditor
 ktexteditor5
 ktexttemplate
 ktextwidgets
 ktextwidgets5
 ktimer
+ktnef
 ktorrent
 ktouch
 ktrip
@@ -1588,6 +1621,9 @@ libakonadi5
 libalkimia
 libao
 libappimage
+libappindicator
+libappindicator-gtk2
+libappindicator-gtk3
 libass
 libasyncns
 libatomic_ops
@@ -1632,6 +1668,9 @@ libdbi
 libdbi-docs
 libdbusmenu-qt
 libdbusmenu-qt5
+libdbusmenu
+libdbusmenu-gtk2
+libdbusmenu-gtk3
 libde265
 libdecor
 libdeflate
@@ -1669,6 +1708,7 @@ libfbclient
 libfdk-aac
 libffado
 libfilezilla
+libfilteraudio
 libfm
 libfm-extra
 libfm-gtk3
@@ -1704,6 +1744,7 @@ libgovirt
 libgphoto2
 libgphoto2-docs
 libgpod
+libgravatar
 libgrss
 libgsf
 libgsf-docs
@@ -1730,6 +1771,9 @@ libimagequant
 libimobiledevice-glue
 libimobiledevice
 libindi
+libindicator
+libindicator-gtk2
+libindicator-gtk3
 libinstpatch
 libiptcdata
 libiscsi
@@ -1739,21 +1783,27 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
 libkdcraw5
 libkdegames
+libkdepim
 libkeduvocdocument
 libkexiv2
 libkexiv2-qt5
 libkeybinder3
 libkeyfinder
+libkgapi
+libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
 libksane
 libkscreen
+libkscreen5
+libksieve
 libksysguard
 libktorrent
 liblangtag
@@ -1766,11 +1816,6 @@ liblo-docs
 liblouis
 liblrdf
 libltc
-libluv
-lua-luv
-lua51-luv
-lua52-luv
-lua53-luv
 liblxqt
 liblzf
 libmad
@@ -1895,8 +1940,6 @@ librest
 librest-docs
 librest-demos
 libretls
-librsvg
-librsvg-docs
 librsync
 librttopo
 libsamplerate
@@ -2137,6 +2180,9 @@ lua52-socket
 lua53-socket
 luit
 luksmeta
+lv2
+lv2-docs
+lv2-example-plugins
 lximage-qt
 lxqt-about
 lxqt-admin
@@ -2161,7 +2207,9 @@ macchanger
 maeparser
 magic-wormhole
 mailcap
+mailcommon
 mailgraph
+mailimporter
 mailman-web
 mailman3-hyperkitty
 mailman3
@@ -2242,6 +2290,7 @@ mesa-demos
 mesa-utils
 meson-python
 meson
+messagelib
 metalog
 mgard
 micro
@@ -2249,6 +2298,7 @@ microsoft-gsl
 milou
 mimalloc
 mimetic
+mimetreeparser
 mingw-w64-binutils
 mingw-w64-crt
 mingw-w64-gcc
@@ -2425,6 +2475,7 @@ ocamlbuild
 ocean-sound-theme
 ocl-icd
 odt2txt
+okteta
 okular
 okularpart5
 onednn
@@ -2900,6 +2951,7 @@ pidgin
 libpurple
 finch
 pifpaf
+pigeonhole
 pigz
 pim-data-exporter
 pim-sieve-editor
@@ -3004,6 +3056,7 @@ psutils
 ptex
 publicsuffix-list
 pugixml
+pulseaudio-qt
 pulsemixer
 puppet
 purpose
@@ -3230,6 +3283,7 @@ python-cheetah3
 python-cheetah3-docs
 python-cheroot
 python-cherrypy
+python-cjkwrap
 python-claripy
 python-cleo
 python-clevercsv
@@ -3556,6 +3610,7 @@ python-importlib-metadata
 python-importlib_resources
 python-incremental
 python-infinity
+python-inflate64
 python-inflect
 python-ini2toml
 python-iniconfig
@@ -3661,6 +3716,7 @@ python-libvcs
 python-license-expression
 python-linetable
 python-linkify-it-py
+python-linux-procfs
 python-littleutils
 python-livereload
 python-llvmlite
@@ -3732,6 +3788,7 @@ python-mss
 python-mujson
 python-multidict
 python-multipart
+python-multivolumefile
 python-munch
 python-munkres
 python-musicbrainzngs
@@ -3840,6 +3897,7 @@ python-pbr
 python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
+python-pdftotext
 python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
@@ -3918,6 +3976,7 @@ python-py-cpuinfo
 python-py-partiql-parser
 python-py
 python-py3c
+python-py7zr
 python-pyacoustid
 python-pyaes
 python-pyaml
@@ -3927,6 +3986,7 @@ python-pyasn1
 python-pyasynchat
 python-pyasyncore
 python-pyaxmlparser
+python-pybcj
 python-pybreaker
 python-pycares
 python-pycodestyle
@@ -4003,6 +4063,7 @@ python-pypdf
 python-pyperclip
 python-pypng
 python-pyppeteer
+python-pyppmd
 python-pyproj
 python-pyproject-api
 python-pyproject-hooks
@@ -4333,6 +4394,7 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
+python-texttable
 python-textual
 python-threadpoolctl
 python-tiktoken
@@ -5519,6 +5581,7 @@ ufw
 uget
 uglify-js
 uhttpmock
+umbrello
 umurmur
 unarchiver
 unclutter
@@ -5634,6 +5697,7 @@ websocketpp
 weechat
 wf-recorder
 whois
+wine-staging
 wine
 wireguard-tools
 wireless_tools
@@ -5734,6 +5798,7 @@ xorg-twm
 xorg-util-macros
 xorg-xauth
 xorg-xcalc
+xorg-xclock
 xorg-xcursorgen
 xorg-xdpyinfo
 xorg-xev

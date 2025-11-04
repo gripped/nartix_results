@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=just
+ pkgver=1.43.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A handy way to save and run project-specific commands"
+ arch=("x86_64")
+ url="https://github.com/casey/just"
+@@ -39,3 +39,4 @@
+   install -Dm644 -t "${pkgdir}/usr/share/fish/vendor_completions.d/" "completions/${pkgname}.fish"
+   install -Dm644 "completions/${pkgname}.zsh" "${pkgdir}/usr/share/zsh/site-functions/_${pkgname}"
+ }
++
