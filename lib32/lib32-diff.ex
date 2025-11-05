@@ -7,6 +7,7 @@ lib32-libepoxy
 lib32-libgudev
 lib32-libnm
 lib32-libpulse
+lib32-librsvg
 lib32-libudev0-shim
 lib32-libusb
 lib32-mesa

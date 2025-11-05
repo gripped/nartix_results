@@ -373,13 +373,9 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
-libluv
-lua-luv
-lua51-luv
-lua52-luv
-lua53-luv
 libmilter
 libmng
 libmpd
@@ -394,8 +390,6 @@ libprocps
 libqb
 libqtxdg
 librevenge
-librsvg
-librsvg-docs
 libsidplay
 libsidplayfp
 libsoxr
@@ -518,7 +512,6 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
-menu-cache
 mesa
 opencl-mesa
 vulkan-asahi

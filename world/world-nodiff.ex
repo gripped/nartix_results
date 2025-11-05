@@ -1783,7 +1783,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1816,6 +1815,11 @@ liblo-docs
 liblouis
 liblrdf
 libltc
+libluv
+lua-luv
+lua51-luv
+lua52-luv
+lua53-luv
 liblxqt
 liblzf
 libmad
@@ -1940,6 +1944,8 @@ librest
 librest-docs
 librest-demos
 libretls
+librsvg
+librsvg-docs
 librsync
 librttopo
 libsamplerate
@@ -2283,6 +2289,7 @@ memray
 memtest86plus
 memtest86+-efi
 memtest86+-iso
+menu-cache
 menumaker
 mercurial
 merkuro

@@ -14,9 +14,6 @@ gpicview
 greetd-regreet
 gtklock
 hexchat
-lazarus
-lazarus-qt5
-lazarus-qt6
 lemurs
 libe-book
 libetonyek
