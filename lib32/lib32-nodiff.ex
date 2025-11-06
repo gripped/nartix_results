@@ -94,6 +94,7 @@ lib32-libpng12
 lib32-libproxy
 lib32-libpsl
 lib32-libraw1394
+lib32-librsvg
 lib32-libsamplerate
 lib32-libshout
 lib32-libsm

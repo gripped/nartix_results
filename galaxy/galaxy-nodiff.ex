@@ -212,7 +212,6 @@ lxlauncher
 lxmenu-data
 lxmusic
 lxpanel-gtk3
-lxpanel
 lxqt-about
 lxqt-admin
 lxqt-archiver
@@ -575,6 +574,7 @@ xfce4-timer-plugin
 xfce4-verve-plugin
 xfce4-wavelan-plugin
 xfce4-weather-plugin
+xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfconf
 xfdashboard

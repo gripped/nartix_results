@@ -1783,6 +1783,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -5559,7 +5560,6 @@ tree-sitter-cli
 tree
 trojan
 ts-node
-tslib
 ttf-bitstream-vera
 ttf-carlito
 ttf-dejavu

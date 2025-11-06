@@ -373,7 +373,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmilter
@@ -911,6 +910,7 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
+tslib
 tumbler
 udftools
 udisks2

@@ -28,6 +28,7 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
+lxpanel
 lxqt-config
 ly
 mate-control-center
@@ -133,4 +134,3 @@ wireshark-qt
 xdg-desktop-portal-xapp
 xfce4-notifyd
 xfce4-screensaver
-xfce4-whiskermenu-plugin

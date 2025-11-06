@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=nvme-cli
+-pkgver=2.16
++pkgver=2.15
+ pkgrel=1
+ pkgdesc="NVM-Express user space tooling for Linux"
+ arch=('x86_64')
 @@ -11,7 +11,7 @@
      'git'
      'meson'
@@ -9,7 +17,7 @@
      'xmlto'
  )
  depends=(
-@@ -19,7 +19,7 @@
+@@ -19,28 +19,37 @@
      'glibc'
      'json-c'
      'libnvme'
@@ -18,14 +26,47 @@
      'util-linux'
  )
  install=nvme-cli.install
-@@ -39,7 +39,7 @@
- 	--auto-features enabled \
- 	-D b_lto=true -D b_pie=true \
- 	-D docs=man -D docs-build=true \
--	-D systemddir=lib/systemd/system/ \
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
+-sha256sums=('989682ed7b250a2c7a8127e362ffc5d29f5c370127abe405be09c73216da2b97')
++sha256sums=('93282c426f22dd1ea6d172dec8af043c4e9ff80189becfbbb5378fe1ca0a74ad')
+ 
+ build() {
+-    local meson_options=(
+-        --sysconfdir /etc
+-        -D docs=man -D docs-build=true
+-        -D systemddir=lib/systemd/system/
+-        -D udevrulesdir=lib/udev/rules.d
+-        build
+-        "${pkgname}-${pkgver}"
+-    )
++	cd "${pkgname}-${pkgver}"
+ 
+-    arch-meson "${meson_options[@]}"
+-    meson compile -C build
++
++	meson setup \
++	--prefix /usr \
++	--sysconfdir /etc \
++	--libexecdir lib \
++	--sbindir bin \
++	--buildtype plain \
++	--auto-features enabled \
++	-D b_lto=true -D b_pie=true \
++	-D docs=man -D docs-build=true \
 +	-D systemddir=no \
- 	-D udevrulesdir=lib/udev/rules.d \
- 	.build
++	-D udevrulesdir=lib/udev/rules.d \
++	.build
+ }
+ 
+ 
+ package() {
+-    meson install -C build --destdir "$pkgdir"
++	cd "${pkgname}-${pkgver}"
++
++	export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++	export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
++
++	DESTDIR="$pkgdir" meson install -C .build
  }
 
 
