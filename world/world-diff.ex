@@ -17,6 +17,8 @@ at
 atril
 audacious-plugins
 avahi
+avogadrolibs
+avogadrolibs-qt
 awesome
 aws-cli-v2
 bash-bats
@@ -46,6 +48,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+cantor
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -120,6 +123,7 @@ dotnet-source-built-artifacts
 double-conversion
 dovecot
 dracut
+dragon
 drkonqi
 dtc
 dunst
@@ -309,7 +313,9 @@ jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
 jupyter-server-ydoc
+kalzium
 kcoreaddons
+kdepim-runtime
 kdoctools5
 kea
 "$pkgbase
@@ -696,17 +702,22 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aniso8601
 python-anytree
+python-btrees
+python-dask
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-distributed
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-zc.lockfile
 qastools
 qbittorrent
 qbittorrent-nox

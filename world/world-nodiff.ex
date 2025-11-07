@@ -158,8 +158,6 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -281,7 +279,6 @@ calligra
 camlp-streams
 camlp4
 cantarell-fonts
-cantor
 capnproto
 capstone
 python-capstone
@@ -493,7 +490,6 @@ dpdk
 dpkg
 dqlite
 draco
-dragon
 dropbear
 dropbear-scp
 duktape
@@ -1224,7 +1220,6 @@ kalendar
 kalgebra
 kalk
 kalm
-kalzium
 kamera
 kamoso
 kanagram
@@ -1312,7 +1307,6 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
-kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -3152,7 +3146,6 @@ python-aiosqlite
 python-aiounittest
 python-alembic
 python-amqp
-python-aniso8601
 python-annotated-doc
 python-annotated-types
 python-ansi2html
@@ -3254,7 +3247,6 @@ python-braintree
 python-breathe
 python-brotlicffi
 python-btchip
-python-btrees
 python-build
 python-cachecontrol
 python-cached-property
@@ -3364,7 +3356,6 @@ python-daemonize
 python-daiquiri
 python-dasbus
 python-dask-expr
-python-dask
 python-databases
 python-dateutil
 python-dbus-deviation
@@ -3388,7 +3379,6 @@ python-dirty-equals
 python-discid
 python-discogs-client
 python-distlib
-python-distributed
 python-distro
 python-distutils-extra
 python-django-allauth
@@ -4535,7 +4525,6 @@ python-yaspin
 python-yg.lockfile
 python-ypy-websocket
 python-ytmusicapi
-python-zc.lockfile
 python-zeep
 python-zeroconf
 python-zict

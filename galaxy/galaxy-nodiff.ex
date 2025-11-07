@@ -212,6 +212,7 @@ lxlauncher
 lxmenu-data
 lxmusic
 lxpanel-gtk3
+lxpanel
 lxqt-about
 lxqt-admin
 lxqt-archiver

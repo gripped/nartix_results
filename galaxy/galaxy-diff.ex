@@ -28,7 +28,6 @@ python-libusbsio
 libxfce4ui
 light
 lightdm-slick-greeter
-lxpanel
 lxqt-config
 ly
 mate-control-center
