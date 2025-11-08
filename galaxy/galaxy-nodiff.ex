@@ -125,9 +125,6 @@ just
 kanshi
 kernel-headers-musl
 labwc
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 leafpad
 lf
@@ -515,7 +512,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
-thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher

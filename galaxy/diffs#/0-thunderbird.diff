@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=thunderbird
+ pkgname=(thunderbird)
+ pkgver=144.0.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Standalone mail and news reader from mozilla.org'
+ url='https://www.thunderbird.net/'
+ arch=(x86_64)
+@@ -102,8 +102,6 @@
+   fi
+   export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+   export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
+-
+-  export MOZ_APP_REMOTINGNAME=org.mozilla.Thunderbird
+ 
+   CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+   CFLAGS="${CFLAGS/-fexceptions/}"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,6 @@
+ fi
+ export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+ export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
+-export MOZ_APP_REMOTINGNAME=org.mozilla.Thunderbird
+ CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ CFLAGS="${CFLAGS/-fexceptions/}"
+ CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"

@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,53 +1,38 @@
+@@ -1,51 +1,39 @@
  
 -_electron=electron38
 +_electron=electron24
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--pkgver=1.12.1
+-pkgver=1.12.3
 +pkgver=1.11.33
  pkgrel=1
  pkgdesc="Glossy Matrix collaboration client — "
@@ -35,17 +35,17 @@
 +        element-web-${pkgver}.tar.gz.asc::${_url}-web/releases/download/v${pkgver}/v${pkgver}-src.tar.gz.asc
 +        element-desktop-${pkgver}.tar.gz::${_url}-desktop/archive/v${pkgver}.tar.gz
 +        element-desktop-${pkgver}.tar.gz.asc::${_url}-desktop/releases/download/v${pkgver}/v${pkgver}-src.tar.gz.asc
-         autolaunch.patch
++        autolaunch.patch
          io.element.Element.desktop
          element-desktop.sh)
--sha256sums=('b363b509dad665dd219515993671a77c98c4a61cf36a60822844a903c4cb7658'
--            'c3ea695c0efa32131c2d26d0b33aa84f01c4a9ae6c93265b9d0a75cd62dc3201'
+-sha256sums=('add2e9de2ccc02fcabf2b92fdd1d64382c825d39fc36894f459acd94a51ac0df'
+-            '44c86478707798492afbf1e8055ad9ab7c75c647a21d73d258cc5a70051c3bd5'
+-            '16a21cd4ad144641e0f4cbe18ed1b665565ed6f3f3e67d5bccba2806491674a9'
 +sha256sums=('4015804125d448065c68e1f9e8673c1fea9f11a2e937159edbdc64113c564d45'
 +            'SKIP'
 +            'ac657d25576c6151f4a96ce067363d27bbc0ed940b3c16d79eee5fafc5ce0024'
 +            'SKIP'
-             '268485f35103d00a89be7f5c84703e3d393350c71f4f90932f7bcb5ea2fd094f'
--            '16a21cd4ad144641e0f4cbe18ed1b665565ed6f3f3e67d5bccba2806491674a9'
++            '268485f35103d00a89be7f5c84703e3d393350c71f4f90932f7bcb5ea2fd094f'
 +            '0103f28a32fe31f698836516783c1c70a76a0117b5df7fd0af5c422c224220f9'
              'c1bd9ace215e3ec9af14d7f28b163fc8c8b42e23a2cf04ce6f4ce2fcc465feba')
  validpgpkeys=(712BFBEE92DCA45252DB17D7C7BE97EFA179B100) # Element Releases <releases@riot.im>
@@ -66,10 +66,11 @@
  
 -  cd ../element-desktop
 +  cd ../element-desktop-${pkgver}
-   patch -p1 < ../autolaunch.patch
++  patch -p1 < ../autolaunch.patch
    sed -i 's|"target": "deb"|"target": "dir"|' package.json
    sed -i 's|"https://packages.element.io/desktop/update/"|null|' element.io/release/config.json
-@@ -56,21 +41,21 @@
+   yarn install --no-fund
+@@ -53,21 +41,21 @@
  
  build() {
    export NODE_OPTIONS=--openssl-legacy-provider
@@ -96,7 +97,7 @@
  
    install -d "${pkgdir}"/{usr/share/webapps,etc/webapps}/element
  
-@@ -86,7 +71,7 @@
+@@ -83,7 +71,7 @@
    depends=("element-web=${pkgver}" ${_electron} libsecret)
    backup=('etc/element/config.json')
  
@@ -105,7 +106,7 @@
  
    install -d "${pkgdir}"{/usr/lib/element/,/etc/webapps/element}
  
-@@ -99,6 +84,8 @@
+@@ -96,6 +84,8 @@
    install -Dm644 ../io.element.Element.desktop -t "${pkgdir}"/usr/share/applications/
    install -Dm755 ../${pkgname}.sh "${pkgdir}"/usr/bin/${pkgname}
  
@@ -139,7 +140,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,8 @@
+@@ -1,24 +1,20 @@
  prepare() {
 -_electron_major=$(jq --raw-output '.devDependencies.electron' < "${srcdir}/element-desktop/package.json" | sed 's/^[~^]\?\([0-9]\+\)\(\.[0-9]\+\)*$/\1/')
 -if [ "${_electron}" != "electron${_electron_major}" ] ; then
@@ -152,10 +153,10 @@
  yarn install --no-fund
 -cd ../element-desktop
 +cd ../element-desktop-${pkgver}
- patch -p1 < ../autolaunch.patch
++patch -p1 < ../autolaunch.patch
  sed -i 's|"target": "deb"|"target": "dir"|' package.json
  sed -i 's|"https://packages.element.io/desktop/update/"|null|' element.io/release/config.json
-@@ -15,11 +10,11 @@
+ yarn install --no-fund
  }
  build() {
  export NODE_OPTIONS=--openssl-legacy-provider

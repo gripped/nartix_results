@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,35 +1,25 @@
+@@ -1,39 +1,36 @@
  
  pkgname=xfce4-screenshooter
--pkgver=1.11.2
+-pkgver=1.11.3
 +pkgver=1.10.5
  pkgrel=1
  pkgdesc="An application to take screenshots"
@@ -13,7 +13,7 @@
 +license=('GPL2')
  groups=('xfce4-goodies')
 -depends=('xfce4-panel' 'hicolor-icon-theme' 'wayland-protocols')
--makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
+-makedepends=('git' 'glib2-devel' 'meson' 'xfce4-dev-tools')
 -optdepends=(
 -  'curl: upload screenshots to Imgur'
 -  'jq: upload screenshots to Imgur'
@@ -22,7 +22,7 @@
 -)
 -source=("git+https://gitlab.xfce.org/apps/xfce4-screenshooter.git#tag=$pkgname-$pkgver"
 -        git+https://gitlab.freedesktop.org/wlroots/wlr-protocols.git)
--sha256sums=('8f12610907e922d615598a0a8be2fe8234f7dc8e5192c26d7d57fe7be1c2291d'
+-sha256sums=('603ee8eae4f8ac982f93bc7c4fe0b951696b2d2362ed038c8df4101936ba3346'
 -            'SKIP')
 +depends=('xfce4-panel' 'libsoup3' 'curl' 'jq' 'zenity' 'xclip'
 +         'hicolor-icon-theme')
@@ -35,24 +35,28 @@
 -  git submodule init
 -  git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
 -  git -c protocol.file.allow=always submodule update
--  NOCONFIGURE=1 ./autogen.sh
 +  cd $pkgname-$pkgver
  }
  
  build() {
--  cd $pkgname
+-  arch-meson $pkgname build \
+-    --localstatedir=/var
+-  meson compile -C build
 +  cd $pkgname-$pkgver
 +
-   ./configure \
-     --prefix=/usr \
-     --sysconfdir=/etc \
-@@ -40,7 +30,7 @@
++  ./configure \
++    --prefix=/usr \
++    --sysconfdir=/etc \
++    --libexecdir=/usr/lib \
++    --localstatedir=/var \
++    --disable-debug
++  make
  }
  
  package() {
--  cd $pkgname
+-  meson install -C build --destdir "$pkgdir"
 +  cd $pkgname-$pkgver
-   make DESTDIR="$pkgdir" install
++  make DESTDIR="$pkgdir" install
  }
  
 
@@ -61,11 +65,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,9 @@
+@@ -1,7 +1,9 @@
 -git
 -glib2-devel
 +curl
  hicolor-icon-theme
+-meson
 -wayland-protocols
 -xfce4-dev-tools
 +intltool
@@ -78,18 +83,24 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,8 @@
+@@ -1,11 +1,13 @@
  prepare() {
 -cd $pkgname
 -git submodule init
 -git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
 -git -c protocol.file.allow=always submodule update
--NOCONFIGURE=1 ./autogen.sh
 +cd $pkgname-$pkgver
  }
  build() {
--cd $pkgname
+-arch-meson $pkgname build \
+---localstatedir=/var
+-meson compile -C build
 +cd $pkgname-$pkgver
- ./configure \
- --prefix=/usr \
- --sysconfdir=/etc \
++./configure \
++--prefix=/usr \
++--sysconfdir=/etc \
++--libexecdir=/usr/lib \
++--localstatedir=/var \
++--disable-debug
++make
+ }

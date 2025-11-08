@@ -158,6 +158,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -279,6 +281,7 @@ calligra
 camlp-streams
 camlp4
 cantarell-fonts
+cantor
 capnproto
 capstone
 python-capstone
@@ -490,6 +493,7 @@ dpdk
 dpkg
 dqlite
 draco
+dragon
 dropbear
 dropbear-scp
 duktape
@@ -1220,6 +1224,7 @@ kalendar
 kalgebra
 kalk
 kalm
+kalzium
 kamera
 kamoso
 kanagram
@@ -1307,6 +1312,7 @@ kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
+kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -5499,7 +5505,6 @@ threadweaver
 threadweaver5
 thrift
 python-thrift
-thunderbird
 tidy
 time
 timeshift

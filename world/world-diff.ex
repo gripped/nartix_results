@@ -17,8 +17,6 @@ at
 atril
 audacious-plugins
 avahi
-avogadrolibs
-avogadrolibs-qt
 awesome
 aws-cli-v2
 bash-bats
@@ -48,7 +46,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cantor
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -123,7 +120,6 @@ dotnet-source-built-artifacts
 double-conversion
 dovecot
 dracut
-dragon
 drkonqi
 dtc
 dunst
@@ -313,9 +309,7 @@ jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
 jupyter-server-ydoc
-kalzium
 kcoreaddons
-kdepim-runtime
 kdoctools5
 kea
 "$pkgbase
@@ -907,6 +901,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
+thunderbird
 tigervnc
 tint2
 tinysparql

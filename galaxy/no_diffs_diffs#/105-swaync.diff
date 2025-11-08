@@ -1,7 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
- sha256sums=('c440223f199b4f0d28e2434f879a2ad2103cb6aaac670313434b05926707535e')
+@@ -1,8 +1,8 @@
+ 
+ pkgname=swaync
+ _pkgname=SwayNotificationCenter
+-pkgver=0.12.3
+-pkgrel=1
++pkgver=0.12.2
++pkgrel=2
+ pkgdesc="A simple GTK based notification daemon for Sway"
+ url="https://github.com/ErikReider/SwayNotificationCenter"
+ arch=('x86_64')
+@@ -11,10 +11,10 @@
+ makedepends=('vala' 'meson' 'git' 'scdoc' 'sassc' 'gobject-introspection' 'blueprint-compiler')
+ optdepends=('gvfs: Get album art in MPRIS widget')
+ source=("${_pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz")
+-sha256sums=('788033f2d6c2599ec32809c875ec68f9affce062c8a0448fc50c062cdc08cd7f')
++sha256sums=('c440223f199b4f0d28e2434f879a2ad2103cb6aaac670313434b05926707535e')
  
  build() {
 -	arch-meson "${_pkgname}-${pkgver}" build -Dscripting=true
