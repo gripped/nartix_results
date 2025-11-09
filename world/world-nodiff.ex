@@ -196,7 +196,6 @@ bash-bats-support
 bash-completion
 bats-assert
 bats-support
-bats
 bazel
 bazelisk
 bbswitch
@@ -249,7 +248,6 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
-breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -1068,6 +1066,7 @@ hyperscan
 hyprcursor
 hyprgraphics
 hypridle
+hyprland-guiutils
 hyprland-protocols
 hyprland-qt-support
 hyprland-qtutils
@@ -1078,6 +1077,7 @@ hyprpicker
 hyprpolkitagent
 hyprshot
 hyprsunset
+hyprtoolkit
 hyprutils
 hyprwayland-scanner
 i2c-tools
@@ -1644,7 +1644,6 @@ libcaca
 libcacard
 libcanberra
 libcbor
-libcddb
 libcdio
 libcdr
 libcerf
@@ -3152,6 +3151,7 @@ python-aiosqlite
 python-aiounittest
 python-alembic
 python-amqp
+python-aniso8601
 python-annotated-doc
 python-annotated-types
 python-ansi2html
@@ -3253,6 +3253,7 @@ python-braintree
 python-breathe
 python-brotlicffi
 python-btchip
+python-btrees
 python-build
 python-cachecontrol
 python-cached-property
@@ -3362,6 +3363,7 @@ python-daemonize
 python-daiquiri
 python-dasbus
 python-dask-expr
+python-dask
 python-databases
 python-dateutil
 python-dbus-deviation
@@ -3385,6 +3387,7 @@ python-dirty-equals
 python-discid
 python-discogs-client
 python-distlib
+python-distributed
 python-distro
 python-distutils-extra
 python-django-allauth
@@ -4531,6 +4534,7 @@ python-yaspin
 python-yg.lockfile
 python-ypy-websocket
 python-ytmusicapi
+python-zc.lockfile
 python-zeep
 python-zeroconf
 python-zict

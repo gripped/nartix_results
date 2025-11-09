@@ -71,7 +71,21 @@ cjs
 claws-mail
 compface
 copyq
+cosmic-app-library
+cosmic-bg
+cosmic-files
+cosmic-greeter
+cosmic-icon-theme
+cosmic-idle
+cosmic-launcher
+cosmic-notifications
+cosmic-panel
+cosmic-player
+cosmic-randr
+cosmic-screenshot
 cosmic-settings
+cosmic-store
+cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers
 cosmic-workspaces
@@ -272,6 +286,7 @@ muffin
 mugshot
 nemo
 nushell
+nyx
 obconf-qt
 octave
 onionshare
@@ -306,6 +321,7 @@ perl-xml-sax-writer
 pinentry-bemenu
 pluma
 pnpm
+pop-sound-theme
 ppsspp
 ppsspp-assets
 prismlauncher
@@ -521,6 +537,7 @@ tumbler
 ueberzug
 ueberzugpp
 vagrant
+vdirsyncer
 vicious
 voa
 warpinator

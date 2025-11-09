@@ -20,6 +20,7 @@ avahi
 awesome
 aws-cli-v2
 bash-bats
+bats
 blender
 blueman
 bluez
@@ -33,6 +34,7 @@ bluez-obex
 bolt
 booster
 box2d
+breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -348,6 +350,7 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 python-libcamera
+libcddb
 libcdio-paranoia
 libdaemon
 libdatrie
@@ -696,22 +699,17 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aniso8601
 python-anytree
-python-btrees
-python-dask
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-distributed
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-zc.lockfile
 qastools
 qbittorrent
 qbittorrent-nox

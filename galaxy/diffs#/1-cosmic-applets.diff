@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+   libpipewire
+   libpulse
+   libxkbcommon
+-  systemd-libs
++  libelogind
+   util-linux
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,10 +6,10 @@
+ git
+ glibc
+ just
++libelogind
+ libinput
+ libpipewire
+ libpulse
+ libxkbcommon
+ lld
+-systemd-libs
+ util-linux

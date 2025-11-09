@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,6 +52,7 @@
+   'gnome-keyring: Start gnome keyring components if the daemon is active'
+   'system-config-printer: printer settings'
+ )
++_tag=d8ec361e3ccfc9a02bffc893ab0c08c204a275f2
+ source=(
+   git+https://github.com/pop-os/cosmic-session.git#tag=epoch-${pkgver/.beta./-beta.}
+   cosmic-session-lto.patch
+@@ -69,7 +70,7 @@
+ build() {
+   cd cosmic-session
+   RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+-  cargo build --release --frozen
++  cargo build --release --features autostart --frozen
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,5 +7,5 @@
+ build() {
+ cd cosmic-session
+ RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+-cargo build --release --frozen
++cargo build --release --features autostart --frozen
+ }

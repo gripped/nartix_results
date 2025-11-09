@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=vdirsyncer
+ pkgver=0.20.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Synchronize CalDAV and CardDAV'
+ arch=(any)
+ url=https://vdirsyncer.pimutils.org/en/stable/
+@@ -57,7 +57,6 @@
+ 
+   cd $pkgname
+   python -m installer --destdir="$pkgdir" dist/*.whl
+-  install -vDm 644 contrib/$pkgname.{service,timer} -t "$pkgdir"/usr/lib/systemd/user
+   install -vDm 644 build/$pkgname.1 -t "$pkgdir"/usr/share/man/man1
+   install -vDm 644 {AUTHORS,CHANGELOG,README}.rst config.example -t "$pkgdir"/usr/share/doc/$pkgname
+ }

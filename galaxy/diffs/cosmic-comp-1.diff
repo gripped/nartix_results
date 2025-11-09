@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   libxkbcommon
+   mesa
+   pixman
+-  systemd-libs
++  libelogind
+   wayland
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,7 @@
+ git
+ glibc
+ libdisplay-info
++libelogind
+ libinput
+ libseat.so
+ libxcb
+@@ -11,5 +12,4 @@
+ lld
+ mesa
+ pixman
+-systemd-libs
+ wayland

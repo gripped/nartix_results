@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+   libpulse
+   playerctl
+   pop-sound-theme
+-  systemd-libs
++  libelogind
+   wireplumber
+   xdg-utils
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,12 +6,12 @@
+ geoclue
+ git
+ glibc
++libelogind
+ libinput
+ libpulse
+ libxkbcommon
+ lld
+ playerctl
+ pop-sound-theme
+-systemd-libs
+ wireplumber
+ xdg-utils

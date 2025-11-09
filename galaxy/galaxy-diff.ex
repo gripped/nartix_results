@@ -1,6 +1,11 @@
 alsa-utils
 autorandr
 cinnamon-desktop
+cosmic-applets
+cosmic-comp
+cosmic-osd
+cosmic-session
+cosmic-settings-daemon
 doctest
 dvtm
 ecrire
