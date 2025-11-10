@@ -34,7 +34,6 @@ bluez-obex
 bolt
 booster
 box2d
-breezy
 brightnessctl
 brltty
 brltty-udev-generic
@@ -85,6 +84,7 @@ conky
 conmon
 connman
 containerd
+corepack
 cppcheck
 cppdap
 crun

@@ -4,9 +4,8 @@
  
  pkgname=xfce4-smartbookmark-plugin
 -pkgver=0.6.0
--pkgrel=1
 +pkgver=0.5.2
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Allows you to send requests directly to your browser and perform a custom search"
  arch=('x86_64')
 -url="https://docs.xfce.org/panel-plugins/xfce4-smartbookmark-plugin/start"
@@ -21,7 +20,7 @@
 +source=(https://archive.xfce.org/src/panel-plugins/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2
          xfce4-smartbookmark-plugin-archlinux.patch)
 -sha256sums=('f136fcfbb529aed8f15ac00a68b4567d5ed27245ea0b35b5984bc6d7ad5e3c24'
--            '99c7e17d0e3efe50c19172b5f90c3da73f634fcb6d02cadad883abd04f92fd9f')
+-            'ceae750c6d5015385d13b5c5915981d8bf29e3e70896d350ad7ff866af126e1c')
 +sha256sums=('2a279e2f5a54518684e62ad1f3cd8ef950826505b39725f1b5d8f0c43031cdd3'
 +            '07f0e70bcdf371f7d4302cecf82c59845cf7b6b77ff87befff3603feca29903d')
  

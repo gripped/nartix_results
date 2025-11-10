@@ -248,6 +248,7 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
+breezy
 bridge-utils
 broadcom-wl-dkms
 broadcom-wl
@@ -379,7 +380,6 @@ containers-common
 convertlit
 coordgen
 copr-cli
-corepack
 corrosion
 coturn
 couchdb

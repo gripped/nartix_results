@@ -221,6 +221,7 @@ xcursor-breeze
 xcursor-premium
 xlibre-xf86-input-elographics
 xlibre-xf86-input-evdev
+xlibre-xf86-input-joystick
 xlibre-xf86-input-keyboard
 xlibre-xf86-input-libinput
 xlibre-xf86-input-mouse

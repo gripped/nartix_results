@@ -321,6 +321,8 @@ perl-xml-sax-writer
 pinentry-bemenu
 pluma
 pnpm
+pop-icon-theme
+pop-launcher
 pop-sound-theme
 ppsspp
 ppsspp-assets

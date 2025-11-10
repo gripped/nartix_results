@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,92 +1,84 @@
+@@ -1,93 +1,84 @@
  
  pkgname=opensnitch
 -pkgver=1.7.2
--pkgrel=1
+-pkgrel=2
 +pkgver=1.6.6
 +pkgrel=3
  pkgdesc='A GNU/Linux application firewall'
@@ -71,6 +71,7 @@
  )
 -replaces=(opensnitch-ebpf-module) # from the AUR
  backup=(
+-  etc/logrotate.d/opensnitch
 -  etc/opensnitchd/default-config.json
 -  etc/opensnitchd/system-fw.json
 +  'etc/opensnitchd/default-config.json'
@@ -143,7 +144,7 @@
  
  
    cd daemon
-@@ -118,20 +110,13 @@
+@@ -119,20 +110,13 @@
    pushd ui
    python -m build --wheel --no-isolation
    popd
@@ -164,7 +165,7 @@
    install -vDm644 "$srcdir/tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
  
    install -vDm644 -t "$pkgdir/etc/opensnitchd" daemon/{default-config,system-fw}.json
-@@ -140,9 +125,6 @@
+@@ -141,9 +125,6 @@
  
    python -m installer --destdir="$pkgdir" ui/dist/*.whl
  

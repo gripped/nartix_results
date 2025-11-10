@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -131,7 +131,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=opensnitch
+ pkgver=1.7.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A GNU/Linux application firewall'
+ arch=(x86_64)
+ url=https://github.com/evilsocket/opensnitch
+@@ -43,7 +43,6 @@
+ )
+ replaces=(opensnitch-ebpf-module) # from the AUR
+ backup=(
+-  etc/logrotate.d/opensnitch
+   etc/opensnitchd/default-config.json
+   etc/opensnitchd/system-fw.json
+ )
+@@ -132,7 +131,6 @@
  
    install -vDm755 -t "$pkgdir/usr/bin" daemon/opensnitchd
  
