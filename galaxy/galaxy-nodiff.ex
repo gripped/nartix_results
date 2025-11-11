@@ -145,6 +145,7 @@ lf
 libaacs
 libcmis
 libdbusmenu-lxqt
+libe-book
 libetpan
 libexttextcat
 libfm-qt
@@ -530,6 +531,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
+thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher
@@ -597,6 +599,8 @@ xfdashboard
 xfdesktop
 xfwm4-themes
 xfwm4
+xonotic-data
+xonotic
 xreader
 xsane
 xsane-gimp

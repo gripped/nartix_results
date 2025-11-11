@@ -20,7 +20,6 @@ avahi
 awesome
 aws-cli-v2
 bash-bats
-bats
 blender
 blueman
 bluez
@@ -84,7 +83,6 @@ conky
 conmon
 connman
 containerd
-corepack
 cppcheck
 cppdap
 crun
@@ -196,6 +194,7 @@ gnome-shell
 gnome-shell-docs
 gnome-software
 gnome-system-monitor
+gnome-themes-extra
 gnome-user-share
 go-bindata
 godot
@@ -313,9 +312,6 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
-kea
-"$pkgbase
-"$pkgbase
 kinfocenter
 kismet
 kitty
@@ -704,6 +700,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-lmdb
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

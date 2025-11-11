@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,31 @@
+@@ -1,42 +1,31 @@
  
  pkgname=xfdesktop
 -pkgver=4.20.1
--pkgrel=2
+-pkgrel=3
 +pkgver=4.18.1
 +pkgrel=1
  pkgdesc="Xfce's desktop manager"
@@ -13,14 +13,18 @@
 -license=('GPL-2.0-or-later')
 +license=('GPL2')
  groups=('xfce4')
--depends=('libxfce4ui' 'libxfce4windowing' 'libwnck3' 'libyaml' 'gtk-layer-shell' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
+-depends=('libxfce4ui' 'libxfce4windowing' 'libyaml' 'gtk-layer-shell' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
 -makedepends=('git' 'glib2-devel' 'xfce4-dev-tools')
--source=("git+https://gitlab.xfce.org/xfce/xfdesktop.git#tag=$pkgname-$pkgver")
--sha256sums=('f19dca4adf0c82975b3c8ae58e8745e8d07b0328c603413ebf199e1e0ad37b99')
+-source=("git+https://gitlab.xfce.org/xfce/xfdesktop.git#tag=$pkgname-$pkgver"
+-        'fix_log_spam_with_trashed_files.patch')
+-sha256sums=('f19dca4adf0c82975b3c8ae58e8745e8d07b0328c603413ebf199e1e0ad37b99'
+-            'bf75f2fec0402a685feccf3e273e86f1b6f446c1c823dd86d97f46a5fc742b7c')
 -
 -prepare() {
 -  cd $pkgname
 -  NOCONFIGURE=1 ./autogen.sh
+-
+-  patch -Np1 -i "$srcdir/fix_log_spam_with_trashed_files.patch"
 -}
 +depends=('libxfce4ui' 'libwnck3' 'exo' 'thunar' 'garcon' 'hicolor-icon-theme')
 +makedepends=('intltool')
@@ -56,7 +60,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,7 @@
+@@ -1,11 +1,7 @@
  exo
  garcon
 -git
@@ -64,7 +68,7 @@
 -gtk-layer-shell
  hicolor-icon-theme
 +intltool
- libwnck3
++libwnck3
  libxfce4ui
 -libxfce4windowing
 -libyaml
@@ -73,10 +77,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,10 @@
+@@ -1,18 +1,10 @@
 -prepare() {
 -cd $pkgname
 -NOCONFIGURE=1 ./autogen.sh
+-patch -Np1 -i "$srcdir/fix_log_spam_with_trashed_files.patch"
 -}
  build() {
 -cd $pkgname

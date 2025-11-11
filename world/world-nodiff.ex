@@ -196,6 +196,7 @@ bash-bats-support
 bash-completion
 bats-assert
 bats-support
+bats
 bazel
 bazelisk
 bbswitch
@@ -380,6 +381,7 @@ containers-common
 convertlit
 coordgen
 copr-cli
+corepack
 corrosion
 coturn
 couchdb
@@ -825,7 +827,6 @@ gnome-taquin
 gnome-terminal
 gnome-tetravex
 gnome-text-editor
-gnome-themes-extra
 gnome-tour
 gnome-tweaks
 gnome-usage
@@ -1336,6 +1337,9 @@ kdsoap-ws-discovery-client
 kdsoap
 kdsoap-qt5
 kdsoap-qt6
+kea
+"$pkgbase
+"$pkgbase
 keditbookmarks
 keepassxc
 kemoticons
@@ -3727,7 +3731,6 @@ python-linux-procfs
 python-littleutils
 python-livereload
 python-llvmlite
-python-lmdb
 python-localzone
 python-locket
 python-lockfile
@@ -4921,6 +4924,7 @@ ruby-maruku
 ruby-matrix
 ruby-memoist
 ruby-memory-leak
+ruby-memory
 ruby-memory_profiler
 ruby-metaclass
 ruby-method_source

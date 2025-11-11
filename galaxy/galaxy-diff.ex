@@ -23,7 +23,6 @@ lazarus
 lazarus-qt5
 lazarus-qt6
 lemurs
-libe-book
 libetonyek
 libodfgen
 libretro-dolphin
@@ -124,7 +123,6 @@ sdcv
 signal-desktop
 terminology
 termshark
-thunderbird
 tor
 torsocks
 transmission

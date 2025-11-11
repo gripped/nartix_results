@@ -16,12 +16,19 @@
    tcl
    util-linux
  )
-@@ -70,7 +68,7 @@
+@@ -53,6 +51,7 @@
+ 
+ build() {
+   local configure_options=(
++    --without-systemd
+     --prefix=/opt/pgsql-${pkgver%%.*}
+     --disable-rpath
+     --disable-nls
+@@ -70,7 +69,6 @@
      --with-python
      --without-readline
      --with-system-tzdata=/usr/share/zoneinfo
 -    --with-systemd
-+    --without-systemd
      --with-tcl
      --with-uuid=e2fs
      --with-zstd
