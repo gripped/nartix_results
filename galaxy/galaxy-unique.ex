@@ -1,6 +1,7 @@
 act-runner-openrc
 act-runner
 alpm-octopi-utils
+apulse
 archlinux-keyring
 archlinux-mirrorlist
 artix-archlinux-support
@@ -25,6 +26,7 @@ birdtray
 calamares-branding
 calamares
 clawsker
+conan
 dbus-dinit-user
 debuginfod-openrc
 edi
@@ -48,6 +50,8 @@ incron-openrc
 iso-profiles
 knockd-openrc
 kotatogram-desktop-git
+leftwm
+lemonbar
 lib32-artix-archlinux-support
 libfoo
 liboctopi
@@ -55,6 +59,7 @@ libpamac
 librewolf
 libtree
 libwireplumber-4.0-compat
+lightdm-settings
 linux-lts515
 linux-wifi-hotspot
 lxappearance-gtk2
@@ -147,6 +152,7 @@ moksha
 moodbar
 mpd-dinit-user
 mpd-dinit
+newsraft
 numix-icon-theme
 octopi
 opensnitch-openrc
@@ -158,12 +164,16 @@ pamac
 pambase-turnstile
 pipewire-dinit
 pix
+pod2man
 pure-ftpd-openrc
 pure-ftpd
 pwvucontrol
 python-efl
 python-wayfire
+python2-cairo
+python2
 qbittorrent-openrc
+qdirstat
 qpdfview
 qt-sudo
 qt5-styleplugins
@@ -172,6 +182,7 @@ qtermwidget-qt6
 r-linux
 raw-thumbnailer
 rdiff-backup
+refine
 rlottie
 rsm
 ruby-arrayfields
@@ -219,6 +230,7 @@ wlrctl
 xarchiver-gtk2
 xcursor-breeze
 xcursor-premium
+xfce4-kbdleds-plugin
 xlibre-xf86-input-elographics
 xlibre-xf86-input-evdev
 xlibre-xf86-input-joystick

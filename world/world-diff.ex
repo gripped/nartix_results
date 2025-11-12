@@ -194,7 +194,6 @@ gnome-shell
 gnome-shell-docs
 gnome-software
 gnome-system-monitor
-gnome-themes-extra
 gnome-user-share
 go-bindata
 godot
@@ -700,7 +699,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-lmdb
+python-patch-ng
 python-pymupdf
 python-pytest-freezegun
 python-pyudev

@@ -1,5 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libnvme
+-pkgver=1.16.1
+-pkgrel=1
++pkgver=1.16
++pkgrel=2
+ pkgdesc="C Library for NVM Express on Linux"
+ arch=('x86_64')
+ url="https://github.com/linux-nvme/libnvme"
 @@ -11,7 +11,7 @@
      'meson'
      'python'
@@ -9,6 +19,15 @@
  )
  depends=(
      'dbus'
+@@ -23,7 +23,7 @@
+     'openssl'
+ )
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/linux-nvme/${pkgname}/archive/v${pkgver}.tar.gz")
+-sha256sums=('ce1d9d393feb84c4e82ca096db2bdb7dd4a5fd1997d711cc1904796944f2c579')
++sha256sums=('5bb24139a113f350708fe54073e799f454d509218758060c398144b91811d176')
+ 
+ build() {
+     local meson_options=(
 @@ -32,7 +32,7 @@
          build
          "${pkgname}-${pkgver}"

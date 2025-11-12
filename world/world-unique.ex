@@ -476,8 +476,10 @@ prosody-dinit
 prosody-openrc
 prosody-runit
 prosody-s6
+python-configparser
 python-dbus
 python-pytz-deprecation-shim
+python-screeninfo
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
 qemu-guest-agent-runit

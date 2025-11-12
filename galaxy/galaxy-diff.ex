@@ -25,6 +25,7 @@ lazarus-qt6
 lemurs
 libetonyek
 libodfgen
+libratbag
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2

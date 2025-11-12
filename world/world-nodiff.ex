@@ -827,6 +827,7 @@ gnome-taquin
 gnome-terminal
 gnome-tetravex
 gnome-text-editor
+gnome-themes-extra
 gnome-tour
 gnome-tweaks
 gnome-usage
@@ -3731,6 +3732,7 @@ python-linux-procfs
 python-littleutils
 python-livereload
 python-llvmlite
+python-lmdb
 python-localzone
 python-locket
 python-lockfile

@@ -286,6 +286,7 @@ msedit
 muffin
 mugshot
 nemo
+nicotineplus
 nushell
 nyx
 obconf-qt
@@ -364,6 +365,7 @@ quassel-monolithic
 quassel-monolithic-qt
 quassel-common
 reaper
+rebuild-detector
 renderdoc
 retroarch-assets
 retroarch-assets-glui
@@ -545,6 +547,7 @@ vdirsyncer
 vicious
 voa
 warpinator
+waypipe
 wev
 wlr-randr
 wlsunset
