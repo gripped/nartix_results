@@ -88,6 +88,7 @@ cppdap
 crun
 cups
 libcups
+cython
 darkhttpd
 dbus-broker
 dconf
@@ -371,6 +372,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmilter
@@ -699,7 +701,6 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-patch-ng
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -1047,7 +1048,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wget
 wildmidi
 wireplumber
 libwireplumber

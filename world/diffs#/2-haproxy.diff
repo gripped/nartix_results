@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=haproxy
--pkgver=3.2.8
--pkgrel=2
-+pkgver=3.2.7
-+pkgrel=1
- 
- 
- pkgdesc='Reliable, high performance TCP/HTTP load balancer'
 @@ -9,8 +9,8 @@
  arch=('x86_64')
  license=('GPL-2.0-or-later')
@@ -21,41 +11,17 @@
  
  backup=('etc/haproxy/haproxy.cfg')
  
-@@ -24,7 +24,7 @@
-         'haproxy.sysusers'
-         '0001-Use-CFLAGS-and-LDFLAGS-when-building-admin.patch')
- 
--sha256sums=('7ed984557fbf4189b6d539de5833967ab1e816fd210b473d5e60894d5965d049'
-+sha256sums=('0ceabfc68c222b8b4067a035b7b3dc0361a9e55289c00ad1940896612ed7d404'
-             'f6babef513b99a3fa0e50f2b144c73c980f1b78b119874ffa2580af1e651e7a9'
-             'c6e716ea59272a8e871af53703726dd2a75b56c82dacf097d4bf08ac5e841a0d'
-             'a1e3a1c2923465081383eb431bae55ff9841d89909469311cdba4b394ec4a998')
-@@ -50,18 +50,14 @@
-     USE_OPENSSL=1 \
-     USE_PCRE2=1 USE_PCRE2_JIT=1 \
-     USE_PROMEX=1 \
--    USE_QUIC=1 \
-     USE_ZLIB=1
- 
--  make \
--    SBINDIR=/usr/bin \
--    OPTIMIZE= \
--    CFLAGS="$CFLAGS" \
--    LDFLAGS="$LDFLAGS" \
--    admin/{halog/halog,iprange/ip{,6}range}
+@@ -59,9 +59,6 @@
+     CFLAGS="$CFLAGS" \
+     LDFLAGS="$LDFLAGS" \
+     admin/{halog/halog,iprange/ip{,6}range}
 -  make \
 -    SBINDIR=/usr/bin \
 -    -C admin/systemd/
-+    make \
-+      SBINDIR=/usr/bin \
-+      OPTIMIZE= \
-+      CFLAGS="$CFLAGS" \
-+      LDFLAGS="$LDFLAGS" \
-+      admin/{halog/halog,iprange/ip{,6}range}
  }
  
  package() {
-@@ -79,8 +75,6 @@
+@@ -79,8 +76,6 @@
  
    install -D -m0644 ../haproxy.sysusers "$pkgdir"/usr/lib/sysusers.d/haproxy.conf
    install -D -m0644 ../haproxy.cfg "$pkgdir"/etc/haproxy/haproxy.cfg

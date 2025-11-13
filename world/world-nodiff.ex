@@ -412,7 +412,6 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
-cython
 cython0
 d-spy
 darktable
@@ -1787,7 +1786,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3897,6 +3895,7 @@ python-pasta
 python-paste
 python-pastedeploy
 python-pastel
+python-patch-ng
 python-path
 python-pathable
 python-pathspec
@@ -5707,6 +5706,7 @@ webrtc-audio-processing
 websocketpp
 weechat
 wf-recorder
+wget
 whois
 wine-staging
 wine

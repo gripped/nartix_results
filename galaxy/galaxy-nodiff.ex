@@ -130,6 +130,7 @@ grub-btrfs
 grub-customizer
 gstreamermm
 gstreamermm-docs
+gtk-engines
 gtk-session-lock
 gtk2
 gtk4-layer-shell
@@ -139,6 +140,9 @@ just
 kanshi
 kernel-headers-musl
 labwc
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 leafpad
 lf
