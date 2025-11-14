@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,6 +6,7 @@
+ arch=('x86_64')
+ url="https://github.com/osdlyrics/osdlyrics"
+ license=('GPL3')
++groups=('gtk2')
+ depends=('gtk2' 'dbus-glib' 'curl' 'libnotify' 'libmpd' 'xmms2'
+          'desktop-file-utils' 'hicolor-icon-theme' 'sqlite' 'python'
+          'python-pycurl' 'python-dbus' 'python-chardet'
+@@ -23,8 +24,7 @@
+ 
+ build() {
+   cd "$srcdir/$pkgname-$pkgver"
+-
+-  ./configure --prefix=/usr
++  ./configure --prefix=/usr CFLAGS="$CFLAGS -Wno-error=incompatible-pointer-types"
+   make
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ }
+ build() {
+ cd "$srcdir/$pkgname-$pkgver"
+-./configure --prefix=/usr
++./configure --prefix=/usr CFLAGS="$CFLAGS -Wno-error=incompatible-pointer-types"
+ make
+ }

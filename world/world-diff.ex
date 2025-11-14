@@ -697,10 +697,12 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
+python-authheaders
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-django-compressor
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -800,6 +802,9 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
 qt6-serialport
 qt6-webengine
 qterminal

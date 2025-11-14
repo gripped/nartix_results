@@ -1872,6 +1872,7 @@ libnma-gtk4
 libnotify
 libnotify-docs
 libnova
+libnsbmp
 libnumbertext
 liboauth
 libodfgen
@@ -3203,7 +3204,6 @@ python-attrdict
 python-attrs
 python-auditwheel
 python-augeas
-python-authheaders
 python-authlib
 python-authres
 python-autobahn
@@ -3396,7 +3396,6 @@ python-distutils-extra
 python-django-allauth
 python-django-appconf
 python-django-classy-tags
-python-django-compressor
 python-django-crispy-forms
 python-django-debug-toolbar
 python-django-environ
@@ -4644,9 +4643,6 @@ qt6-imageformats
 qt6-languageserver
 qt6-location
 qt6-lottie
-qt6-multimedia
-qt6-multimedia-ffmpeg
-qt6-multimedia-gstreamer
 qt6-networkauth
 qt6-positioning
 qt6-quick3d

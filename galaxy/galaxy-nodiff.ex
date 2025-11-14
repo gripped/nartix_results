@@ -139,6 +139,11 @@ incron
 just
 kanshi
 kernel-headers-musl
+kodi
+kodi-gles
+kodi-eventclients
+kodi-tools-texturepacker
+kodi-dev
 labwc
 lazarus
 lazarus-qt5
@@ -147,6 +152,7 @@ lazygit
 leafpad
 lf
 libaacs
+libcec
 libcmis
 libdbusmenu-lxqt
 libe-book
@@ -304,6 +310,7 @@ parole
 pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
+pcmanfm
 peek
 pekwm
 perl-cairo-gobject
@@ -346,6 +353,7 @@ python-multivolumefile
 python-pdftotext
 python-py7zr
 python-pybcj
+python-pybluez
 python-pyppmd
 python-pysol_cards
 python-pyzstd
@@ -551,6 +559,7 @@ vdirsyncer
 vicious
 voa
 warpinator
+waylandpp
 waypipe
 wev
 wlr-randr

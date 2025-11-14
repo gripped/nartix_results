@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,12 @@
+ 
+ pkgname=gtk-engine-murrine
+ pkgver=0.98.2
+-pkgrel=4
++pkgrel=4.1
+ pkgdesc="GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers."
+ arch=('x86_64')
+ url="http://cimitan.com/murrine/project/murrine"
+ license=('LGPL3')
++groups=('gtk2')
+ depends=('gtk2')
+ makedepends=('intltool')
+ source=(https://ftp.gnome.org/pub/GNOME/sources/murrine/0.98/murrine-${pkgver}.tar.xz
+@@ -23,7 +24,8 @@
+   ./configure \
+     --prefix=/usr \
+     --enable-animation \
+-    --enable-animationrtl
++    --enable-animationrtl \
++    CFLAGS="$CFLAGS -Wno-error=implicit-function-declaration"
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,8 @@
+ ./configure \
+ --prefix=/usr \
+ --enable-animation \
+---enable-animationrtl
++--enable-animationrtl \
++CFLAGS="$CFLAGS -Wno-error=implicit-function-declaration"
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

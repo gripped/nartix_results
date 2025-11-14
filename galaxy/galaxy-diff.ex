@@ -17,6 +17,7 @@ featherpad
 firefox
 gpicview
 greetd-regreet
+gtk-engine-murrine
 gtklock
 hexchat
 lemurs
@@ -111,7 +112,8 @@ ttf-zed-mono-nerd
 nvidia-390xx-utils
 nvm
 opensc
-pcmanfm
+osdlyrics
+p8-platform
 perl-cgi-fast
 qbittorrent
 qbittorrent-nox

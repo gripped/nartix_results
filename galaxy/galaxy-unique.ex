@@ -51,9 +51,11 @@ incron-openrc
 iso-profiles
 knockd-openrc
 kotatogram-desktop-git
+lagrange
 leftwm
 lemonbar
 lib32-artix-archlinux-support
+libfm-gtk2
 libfoo
 libglade
 liboctopi

@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,40 +1,29 @@
+@@ -1,62 +1,43 @@
  
  pkgbase=linux-hardened
 -pkgver=6.16.12.hardened1
+-pkgrel=2
 +pkgver=6.4.14.hardened1
- pkgrel=1
++pkgrel=1
  pkgdesc='Security-Hardened Linux'
  url='https://github.com/anthraxx/linux-hardened'
  arch=(x86_64)
@@ -47,9 +48,10 @@
 +  https://www.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
 +  https://github.com/anthraxx/${pkgbase}/releases/download/${_srctag}/${pkgbase}-${_srctag}.patch{,.sig}
    config  # the main kernel config file
+-  fix-sphinx-error.patch::https://github.com/archlinux/linux/commit/c7dd449e808fbd0a2a070bde516450f92a0790fe.patch # Sphinx error
  )
  validpgpkeys=(
-@@ -42,18 +31,13 @@
+   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
@@ -57,14 +59,16 @@
 -            'SKIP'
 -            '547063b6148d59e8463f7069e8304a1ddebf58a3ad49f460303cdbd502fcc8a6'
 -            'SKIP'
--            'ecdc5fe7156828623b60c9a7bf201e647db49486e21b35e0f9469efd61be612e')
+-            'ecdc5fe7156828623b60c9a7bf201e647db49486e21b35e0f9469efd61be612e'
+-            '65c714437facf2001a980a1c2749ba2b516698a1ab0a9abde4f2f318f5884947')
 -b2sums=('86d30cc03b13e13291c4f5e2da1087c5e6e4ef75513b26f89a1e2a4ed63c4d25fdb406b887ba1222a446f62b16fe2cccf7f4fa98778d5741e069b03a0d88d1fd'
 +b2sums=('f81dabaef7e31b743aeb75d0dbb0a337e747d1d743fb0b38cb314498200d8d459d82f5f8bb34d6ad688842f3617fd53fd35b1b518654c845a6781580531ab1b2'
          'SKIP'
 -        'edb03015ed0dc2928b089ea1c45d9fe56a6b36c51fea442822a7342a8c3243c289961db03b0dbc98fc08cfc4c7bc4b25bbb10496aec3e5973f9dfaa04fef59b9'
 +        'd12ff8cbb4dc171167050a198a783e8341df51aa1c3579d3c3f20b9d28025847e6cae9575fc2a37dda2e0f96a10d0306ec4293edaa53ebdfe15a21892c6d2a5f'
          'SKIP'
--        '90e7ee527fc934fc8e1fc063e56530b7e272f09dce4cacab82f449f79e7522309c9f66d0053bfbfc902abb693f65f8f7cbb939ae941899989e8ac4bddbf0887c')
+-        '90e7ee527fc934fc8e1fc063e56530b7e272f09dce4cacab82f449f79e7522309c9f66d0053bfbfc902abb693f65f8f7cbb939ae941899989e8ac4bddbf0887c'
+-        'b3539217b05686fd7062cbde174593b9b14a640594590ecbdaea37f59a85aeccd2d6d0f3ac37f25a3ed3a87e9f36bf70f1becea28781f1b445c6d79fb7c64698')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        'f60be61e60a36d8c8fd186ddb2ac7514a6439c413a0a563d8c3d13593aaa5e34e20a3ddeba2d0b868fffdd515678320ddda1fe843e24f90369c1d4d0c4019306')
@@ -73,7 +77,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -68,7 +52,6 @@
+@@ -71,7 +52,6 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -81,7 +85,7 @@
      [[ $src = *.patch ]] || continue
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
-@@ -85,13 +68,7 @@
+@@ -88,13 +68,7 @@
  
  build() {
    cd $_srcname
@@ -95,7 +99,7 @@
  }
  
  _package() {
-@@ -102,19 +79,15 @@
+@@ -105,19 +79,15 @@
      kmod
    )
    optdepends=(
@@ -116,7 +120,7 @@
  
    cd $_srcname
    local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-@@ -128,7 +101,7 @@
+@@ -131,7 +101,7 @@
    ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
      DEPMOD=/doesnt/exist modules_install  # Suppress depmod
  
@@ -125,7 +129,7 @@
  }
  
  _package-headers() {
-@@ -140,15 +113,13 @@
+@@ -143,15 +113,13 @@
  
    echo "Installing build files..."
    install -Dt "$builddir" -m644 .config Makefile Module.symvers System.map \
@@ -142,7 +146,7 @@
  
    echo "Installing headers..."
    cp -t "$builddir" -a include
-@@ -168,11 +139,6 @@
+@@ -171,11 +139,6 @@
  
    echo "Installing KConfig files..."
    find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
