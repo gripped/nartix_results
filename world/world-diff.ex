@@ -802,9 +802,6 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
-qt6-multimedia
-qt6-multimedia-ffmpeg
-qt6-multimedia-gstreamer
 qt6-serialport
 qt6-webengine
 qterminal

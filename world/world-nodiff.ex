@@ -4643,6 +4643,9 @@ qt6-imageformats
 qt6-languageserver
 qt6-location
 qt6-lottie
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
 qt6-networkauth
 qt6-positioning
 qt6-quick3d
