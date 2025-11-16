@@ -10,6 +10,7 @@ appstream
 appstream-qt
 apr
 aquamarine
+arandr
 archivetools
 at-spi2-core
 at-spi2-core-docs
@@ -153,6 +154,8 @@ firefox
 firejail
 firewalld
 firewalld-test
+flatbuffers
+python-flatbuffers
 flatpak
 flatpak-docs
 flite
@@ -264,6 +267,7 @@ hidapi
 hipcub
 hipfft
 hipsolver
+hugin
 hwloc
 hyphen
 hyphen-en
@@ -684,6 +688,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+pqiv
 presage
 prosody
 pulseaudio
@@ -703,8 +708,11 @@ python-nntplib
 python-cgi
 python-mailcap
 python-django-compressor
+python-msgpack
+python-pkgconfig
 python-pymupdf
 python-pytest-freezegun
+python-pytest-tornasync
 python-pyudev
 python-recommonmark
 python-seaborn
@@ -865,6 +873,7 @@ squid
 sshguard
 sslh
 sssd
+step
 strongswan
 stunnel
 sway

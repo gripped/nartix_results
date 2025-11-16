@@ -4,9 +4,10 @@
  
  pkgname=firefox
 -pkgver=145.0
-+pkgver=120.0
- pkgrel=1
+-pkgrel=2
 -pkgdesc="Fast, Private & Safe Web Browser"
++pkgver=120.0
++pkgrel=1
 +pkgdesc="Standalone web browser from mozilla.org"
  url="https://www.mozilla.org/firefox/"
  arch=(x86_64)
@@ -66,7 +67,7 @@
    python
    rust
    unzip
-@@ -64,47 +49,42 @@
+@@ -64,52 +49,42 @@
    'hunspell-en_US: Spell checking, American English'
    'libnotify: Notification integration'
    'networkmanager: Location detection via available WiFi networks'
@@ -88,6 +89,7 @@
    $pkgname.desktop
 -  org.mozilla.$pkgname.metainfo.xml
 -  0001-Install-under-remoting-name.patch
+-  0002-Bug-1995035-Allow-F_DUPFD_QUERY-in-the-Linux-sandbox.patch
 +  identity-icons-brand.svg
  )
  validpgpkeys=(
@@ -99,7 +101,8 @@
 -            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9'
 -            '71fe797430198ac8c00b538dce537284cf526e48be0496698cf5a980d70c16da'
 -            '23f557fa7989adcae03cc9458d94716981dbcf0e9d6d52a289a2426e50b4b785'
--            'ef63a12975f108f30b00bb3290d9ca76f311d8af9c1d5dfc0d8335ad57e8f77c')
+-            'ef63a12975f108f30b00bb3290d9ca76f311d8af9c1d5dfc0d8335ad57e8f77c'
+-            '3b8bae25a05e6075c7025be387ee8e1a2dc57c19d89d3028b457128530f6c24b')
 -b2sums=('a8007d06dce77197dfb40ab9a759287b6bcff4e56d1b2c7acfed9475aaa2f936948534d6e726a158550c70a28bad8ec8c7f1b99ca8165198c1952a484869b6c9'
 +            '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
 +            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
@@ -108,7 +111,8 @@
 -        '63a8dd9d8910f9efb353bed452d8b4b2a2da435857ccee083fc0c557f8c4c1339ca593b463db320f70387a1b63f1a79e709e9d12c69520993e26d85a3d742e34'
 -        '2c7936949ef922307fb593bd0480a13bde2eab8ae24fc89071d809d6659384705f9b7838b1ae8bc46b98a152ba01fcffad606d4c84796ad9bfaaf20166f0a0fd'
 -        '1a7fc030b1051df00df1b2f5b247b8c658de6cdfba0788041c830da3aaaa6ac974ab684e05feb80672aa2d2c22294cacfa93a71dc664b3e60becdd65e879fcee'
--        'ff0ba11844e99ab1b1fed91d70c6f45837198ba43e77313c8b9c48a621e40c459953fc35283b6b6eafb5641510a5ce1e18ebda4d7d076f8212810391c0a9234b')
+-        'ff0ba11844e99ab1b1fed91d70c6f45837198ba43e77313c8b9c48a621e40c459953fc35283b6b6eafb5641510a5ce1e18ebda4d7d076f8212810391c0a9234b'
+-        'e97f22602666465d418cbbb260cf8de936ca101b2c800247b45a63444c36fadee2c0dc8b93ee203409e27fb99a82e24d8c7bd20a7e53eddc979cd21b7cdaedde')
 -
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 +        'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
@@ -122,12 +126,14 @@
  
 -  patch -Np1 -i ../0001-Install-under-remoting-name.patch
 -
+-  patch -Np1 -i ../0002-Bug-1995035-Allow-F_DUPFD_QUERY-in-the-Linux-sandbox.patch
+-
    echo -n "$_google_api_key" >google-api-key
 +  echo -n "$_mozilla_api_key" >mozilla-api-key
  
    cat >../mozconfig <<END
  ac_add_options --enable-application=browser
-@@ -116,20 +96,18 @@
+@@ -121,20 +96,18 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -152,7 +158,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -145,16 +123,13 @@
+@@ -150,16 +123,13 @@
  build() {
    cd firefox-$pkgver
  
@@ -172,7 +178,7 @@
  
    ulimit -n 4096
  
-@@ -162,12 +137,12 @@
+@@ -167,12 +137,12 @@
    cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-profile-generate=cross
  END
@@ -188,7 +194,7 @@
      xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
      ./mach python build/pgo/profileserver.py
  
-@@ -178,7 +153,7 @@
+@@ -183,7 +153,7 @@
    test -s jarlog
  
    echo "Removing instrumented browser..."
@@ -197,7 +203,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
-@@ -187,7 +162,10 @@
+@@ -192,7 +162,10 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END
@@ -209,7 +215,7 @@
  }
  
  package() {
-@@ -215,17 +193,15 @@
+@@ -220,17 +193,15 @@
    local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
    install -Dvm644 /dev/stdin "$distini" <<END
  [Global]
@@ -232,7 +238,7 @@
  
    local i theme=official
    for i in 16 22 24 32 48 64 128 256; do
-@@ -238,24 +214,37 @@
+@@ -243,24 +214,37 @@
      "$pkgdir/usr/share/icons/hicolor/384x384/apps/$pkgname.png"
    install -Dvm644 browser/branding/$theme/content/about-logo.svg \
      "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
@@ -331,17 +337,18 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,9 +1,8 @@
  prepare() {
  mkdir mozbuild
  cd firefox-$pkgver
 -patch -Np1 -i ../0001-Install-under-remoting-name.patch
+-patch -Np1 -i ../0002-Bug-1995035-Allow-F_DUPFD_QUERY-in-the-Linux-sandbox.patch
  echo -n "$_google_api_key" >google-api-key
 +echo -n "$_mozilla_api_key" >mozilla-api-key
  cat >../mozconfig <<END
  ac_add_options --enable-application=browser
  mk_add_options MOZ_OBJDIR=${PWD@Q}/obj
-@@ -12,18 +12,16 @@
+@@ -13,18 +12,16 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -363,7 +370,7 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
-@@ -35,24 +33,22 @@
+@@ -36,24 +33,22 @@
  }
  build() {
  cd firefox-$pkgver
@@ -394,7 +401,7 @@
  xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
  ./mach python build/pgo/profileserver.py
  stat -c "Profile data found (%s bytes)" merged.profdata
-@@ -60,7 +56,7 @@
+@@ -61,7 +56,7 @@
  stat -c "Jar log found (%s bytes)" jarlog
  test -s jarlog
  echo "Removing instrumented browser..."
@@ -403,7 +410,7 @@
  echo "Building optimized browser..."
  cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-lto=cross,full
-@@ -68,5 +64,7 @@
+@@ -69,5 +64,7 @@
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END

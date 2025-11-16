@@ -64,6 +64,7 @@ lib32-libcap
 lib32-libcups
 lib32-libdatrie
 lib32-libdecor
+lib32-libdisplay-info
 lib32-libdrm
 lib32-libdv
 lib32-libelf

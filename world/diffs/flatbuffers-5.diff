@@ -1,0 +1,62 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,17 +2,13 @@
+ pkgbase=flatbuffers
+ pkgname=(flatbuffers python-flatbuffers)
+ pkgver=25.9.23
+-pkgrel=2
++pkgrel=1
+ pkgdesc='An efficient cross platform serialization library for C++, with support for Java, C# and Go'
+ arch=(x86_64)
+ url='https://google.github.io/flatbuffers/'
+ license=(Apache)
+ depends=(gcc-libs)
+-makedepends=(cmake
+-             python-build
+-             python-installer
+-             python-numpy
+-             python-setuptools)
++makedepends=(cmake python-setuptools python-numpy)
+ source=(https://github.com/google/$pkgbase/archive/v$pkgver/$pkgbase-$pkgver.tar.gz)
+ sha256sums=('9102253214dea6ae10c2ac966ea1ed2155d22202390b532d1dea64935c518ada')
+ 
+@@ -31,7 +27,7 @@
+   cmake --build build
+ 
+   cd $pkgbase-$pkgver/python
+-  VERSION=$pkgver python -m build --wheel --no-isolation
++  VERSION=$pkgver python setup.py build
+ }
+ 
+ check() {
+@@ -52,5 +48,5 @@
+   )
+ 
+   cd $pkgbase-$pkgver/python
+-  VERSION=$pkgver python -m installer --destdir="$pkgdir" dist/*.whl
++  VERSION=$pkgver python setup.py install --root="$pkgdir" --optimize=1 --skip-build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ cmake
+ gcc-libs
+ python
+-python-build
+-python-installer
+ python-numpy
+ python-setuptools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,5 +10,5 @@
+ -DFLATBUFFERS_BUILD_SHAREDLIB=ON
+ cmake --build build
+ cd $pkgbase-$pkgver/python
+-VERSION=$pkgver python -m build --wheel --no-isolation
++VERSION=$pkgver python setup.py build
+ }

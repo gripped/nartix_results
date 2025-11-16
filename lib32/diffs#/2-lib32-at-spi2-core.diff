@@ -1,18 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,9 +24,9 @@
+@@ -4,7 +4,7 @@
+   lib32-at-spi2-core
+ )
+ pkgver=2.58.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Protocol definitions and daemon for D-Bus at-spi (32-bit)"
+ url="https://gitlab.gnome.org/GNOME/at-spi2-core"
+ arch=(x86_64)
+@@ -24,8 +24,9 @@
    git
    glib2-devel
    lib32-libxml2
 -  lib32-systemd
 +
    meson
--  systemd
 +
  )
  checkdepends=(
    at-spi2-core
-@@ -49,7 +49,7 @@
+@@ -45,11 +46,10 @@
+     --cross-file lib32
+     -D default_bus=dbus-broker
+     -D docs=false
+-    -D gtk2_atk_adaptor=false
      -D introspection=disabled
    )
  
@@ -27,10 +39,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -10,6 +10,4 @@
+@@ -10,5 +10,4 @@
  lib32-libxi
  lib32-libxml2
  lib32-libxtst
 -lib32-systemd
  meson
--systemd

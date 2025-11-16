@@ -248,6 +248,7 @@ xarchiver-gtk2
 xcursor-breeze
 xcursor-premium
 xfce4-kbdleds-plugin
+xlibre-input-libinput
 xlibre-xf86-input-elographics
 xlibre-xf86-input-evdev
 xlibre-xf86-input-joystick
@@ -270,5 +271,8 @@ xlibre-xf86-video-sisusb
 xlibre-xf86-video-vesa
 xlibre-xf86-video-vmware
 xlibre-xf86-video-voodoo
+xlibre-xorgxrdp-glamor
+xlibre-xorgxrdp
 xlibre-xserver
+xrdp
 zramen

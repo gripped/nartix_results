@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   at-spi2-core-docs
+ )
+ pkgver=2.58.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
+ url="https://gitlab.gnome.org/GNOME/at-spi2-core"
+ arch=(x86_64)
 @@ -20,7 +20,6 @@
    libx11
    libxi
@@ -8,15 +17,7 @@
    xorg-xprop
  )
  makedepends=(
-@@ -32,7 +31,6 @@
-   libxml2
-   meson
-   python-sphinx
--  systemd
- )
- checkdepends=(
-   at-spi2-core
-@@ -49,11 +47,12 @@
+@@ -48,12 +47,12 @@
  
  build() {
    local meson_options=(
@@ -24,6 +25,7 @@
 +    -D use_systemd=false
 +    -D default_bus=dbus-daemon
      -D docs=true
+-    -D gtk2_atk_adaptor=false
    )
  
 -  arch-meson at-spi2-core build "${meson_options[@]}"
@@ -37,10 +39,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -16,6 +16,4 @@
+@@ -16,5 +16,4 @@
  libxtst
  meson
  python-sphinx
--systemd
 -systemd-libs
  xorg-xprop

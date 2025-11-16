@@ -86,7 +86,6 @@ appmenu-gtk-module
 appstream-glib
 apr-util
 aqbanking
-arandr
 arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme
@@ -650,8 +649,6 @@ flac-doc
 flake8
 flameshot
 flashrom
-flatbuffers
-python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
@@ -1042,7 +1039,6 @@ htop
 http-parser
 httpbin
 hub
-hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -1841,6 +1837,7 @@ libmediainfo
 libmemcached-awesome
 libmicrodns
 libmikmod
+libmirage
 libmms
 libmodplug
 libmp4v2
@@ -3042,7 +3039,6 @@ powertop
 poxml
 pps-tools
 pptpd
-pqiv
 pre-commit
 premake
 print-manager
@@ -3792,7 +3788,6 @@ python-motor
 python-mpd2
 python-mpi4py
 python-mpmath
-python-msgpack
 python-mss
 python-mujson
 python-multidict
@@ -3936,7 +3931,6 @@ python-pipenv
 python-pipreqs
 python-pipx
 python-pixelmatch
-python-pkgconfig
 python-pkginfo
 python-platformdirs
 python-playwright
@@ -4168,7 +4162,6 @@ python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
-python-pytest-tornasync
 python-pytest-trio
 python-pytest-twisted
 python-pytest-vcr
@@ -5245,6 +5238,7 @@ sopel
 sord
 sord-docs
 sound-theme-freedesktop
+soundconverter
 soundtouch
 source-highlight
 sox
@@ -5281,7 +5275,6 @@ startup-notification
 stb
 stellarsolver
 step-cli
-step
 stfl
 stk
 stk-docs
