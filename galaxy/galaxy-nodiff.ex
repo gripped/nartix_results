@@ -42,6 +42,8 @@ calibre
 cargo-nextest
 catfish
 cava
+cdemu-client
+cdemu-daemon
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -134,6 +136,7 @@ gtk-engines
 gtk-session-lock
 gtk2
 gtk4-layer-shell
+hyperfine
 imv
 incron
 just
@@ -145,9 +148,8 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
-lazarus
-lazarus-qt5
-lazarus-qt6
+lact
+lact-libadwaita
 lazygit
 leafpad
 lf
@@ -556,6 +558,8 @@ ueberzug
 ueberzugpp
 vagrant
 vdirsyncer
+vhba-module
+vhba-module-dkms
 vicious
 voa
 warpinator
@@ -572,6 +576,7 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic
 xdg-desktop-portal-lxqt
+xed
 xfburn
 xfce4-appfinder
 xfce4-artwork

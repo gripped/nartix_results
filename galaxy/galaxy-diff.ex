@@ -20,6 +20,9 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
+lazarus
+lazarus-qt5
+lazarus-qt6
 lemurs
 libetonyek
 libodfgen

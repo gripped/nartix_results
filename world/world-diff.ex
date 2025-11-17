@@ -162,6 +162,7 @@ flite
 fluidsynth
 font-manager
 fprintd
+freeglut
 freerdp
 freerdp2
 frugally-deep
@@ -267,7 +268,6 @@ hidapi
 hipcub
 hipfft
 hipsolver
-hugin
 hwloc
 hyphen
 hyphen-en
@@ -688,7 +688,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-pqiv
 presage
 prosody
 pulseaudio
@@ -709,6 +708,7 @@ python-cgi
 python-mailcap
 python-django-compressor
 python-msgpack
+python-optree
 python-pkgconfig
 python-pymupdf
 python-pytest-freezegun

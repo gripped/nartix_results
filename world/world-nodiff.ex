@@ -678,7 +678,6 @@ frameworkintegration5
 francis
 freealut
 freecell-solver
-freeglut
 freeimage
 freeradius
 freetds
@@ -979,6 +978,7 @@ gucharmap
 gufw
 guile2.2
 gulp
+gum
 gumbo-parser
 gunicorn
 gupnp-av
@@ -1039,6 +1039,7 @@ htop
 http-parser
 httpbin
 hub
+hugin
 hunspell-de
 hunspell-el
 hunspell-en
@@ -3039,6 +3040,7 @@ powertop
 poxml
 pps-tools
 pptpd
+pqiv
 pre-commit
 premake
 print-manager
@@ -3849,7 +3851,6 @@ python-openid
 python-openpyxl
 python-openstacksdk
 python-opt_einsum
-python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
