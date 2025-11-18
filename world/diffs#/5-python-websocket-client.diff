@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,20 @@
+ 
+ pkgname=python-websocket-client
+ pkgver=1.9.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="WebSocket client library for Python"
+ arch=('any')
+ url="https://github.com/websocket-client/websocket-client"
+-license=('Apache-2.0')
++license=('LGPL')
+ depends=('python')
+-makedepends=(
+-  'python-build'
+-  'python-installer'
+-  'python-setuptools'
+-)
++makedepends=('python-setuptools')
+ checkdepends=('python-pytest')
+ source=("https://pypi.io/packages/source/w/websocket-client/websocket_client-$pkgver.tar.gz")
+ sha512sums=('63385845aaaf792167d681c4b3089b09ea4dedbf931fa1f4ebc55648b6d864c2a479ac61f758d6a7967ce84e59e197613c976069f64381599c274f89c3edd0b4')
+ 
+ build() {
+   cd websocket_client-$pkgver
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -28,7 +24,7 @@
+ 
+ package() {
+   cd websocket_client-$pkgver
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,2 @@
+ python
+-python-build
+-python-installer
+ python-setuptools
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd websocket_client-$pkgver
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

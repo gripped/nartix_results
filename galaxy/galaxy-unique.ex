@@ -264,6 +264,7 @@ xlibre-video-ast
 xlibre-video-ati
 xlibre-video-dummy
 xlibre-video-fbdev
+xlibre-video-intel
 xlibre-video-nouveau
 xlibre-video-qxl
 xlibre-video-sisusb

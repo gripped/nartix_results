@@ -1,6 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -39,7 +39,7 @@
+@@ -6,7 +6,7 @@
+   udisks2-lvm2
+   udisks2-docs
+ )
+-pkgver=2.11.0
++pkgver=2.10.2
+ pkgrel=1
+ pkgdesc="Daemon, tools and libraries to access and manipulate disks, storage devices and technologies"
+ arch=(x86_64)
+@@ -25,6 +25,7 @@
+   glibc
+   gobject-introspection
+   gtk-doc
++  libatasmart
+   libblockdev
+   libblockdev-btrfs
+   libblockdev-crypto
+@@ -34,17 +35,16 @@
+   libblockdev-mdraid
+   libblockdev-nvme
+   libblockdev-part
+-  libblockdev-smart
+   libblockdev-swap
    libgudev
    lvm2
    polkit
@@ -9,6 +31,13 @@
    util-linux-libs
  )
  source=($pkgbase::git+https://github.com/storaged-project/udisks#tag=udisks-$pkgver)
+-sha512sums=('101dee33aa965059ea21a7273bdd2201dc42f8f01f7880cc5c7f5e210691a72589393968b6813987b2923dbdc45ade82a2e270058a90e6fd2d8fc6ec4fe972ed')
+-b2sums=('17c179387facc282356554e7f5a5694f8ad40a560292394434b5d4d939cef3a77a445beecedf21e3cf96910694484c3de8835282edd63517a871b7b981a8c3a5')
++sha512sums=('8d7503b6643c51be6bd04b34dba847759060aa22f22970806a998f1fcd1982b1a4a42d8a7db456f48a0cd2ebc3d2bbdd4c8a78a2c8e2e4b96aeef882365314f2')
++b2sums=('e06bb2cbc063fadcebb5c308f19e296cb78b451758e1822d0e3a490b89f1a8009f36dc9aeff53fae8a1da65b80e91c22bcb8b8fd32e3f6924c9765748551c616')
+ 
+ _pick() {
+   local p="$1" f d; shift
 @@ -63,6 +63,7 @@
  
  build() {
@@ -26,7 +55,19 @@
    )
  
    cd $pkgbase
-@@ -104,7 +105,7 @@
+@@ -93,6 +94,7 @@
+     gcc-libs
+     glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+     glibc
++    libatasmart
+     libblockdev libbd_utils.so libblockdev.so
+     libblockdev-crypto  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-fs  # dynamically loaded by libblockdev.so, required for default operation
+@@ -100,11 +102,10 @@
+     libblockdev-loop  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-nvme  # dynamically loaded by libblockdev.so, required for default operation
+     libblockdev-part  # dynamically loaded by libblockdev.so, required for default operation
+-    libblockdev-smart  # dynamically loaded by libblockdev.so, required for default operation
      libblockdev-swap  # dynamically loaded by libblockdev.so, required for default operation
      libgudev libgudev-1.0.so
      polkit libpolkit-agent-1.so libpolkit-gobject-1.so
@@ -35,7 +76,12 @@
      util-linux-libs libblkid.so libmount.so libuuid.so
    )
    optdepends=(
-@@ -152,7 +153,7 @@
+@@ -147,11 +148,12 @@
+     gcc-libs
+     glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+     glibc
++    libatasmart
+     libblockdev libbd_utils.so libblockdev.so
      libblockdev-btrfs  # dynamically loaded by libblockdev.so
      libgudev libgudev-1.0.so
      polkit libpolkit-gobject-1.so
@@ -44,7 +90,13 @@
      udisks2 libudisks2.so
      util-linux-libs libblkid.so libmount.so libuuid.so
    )
-@@ -173,7 +174,7 @@
+@@ -166,12 +168,13 @@
+     gcc-libs
+     glib2 libgio-2.0.so libglib-2.0.so libgmodule-2.0.so libgobject-2.0.so
+     glibc
++    libatasmart
+     libblockdev libbd_utils.so libblockdev.so
+     libblockdev-lvm  # dynamically loaded by libblockdev.so
      libgudev libgudev-1.0.so
      lvm2
      polkit libpolkit-gobject-1.so
@@ -59,8 +111,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -24,6 +24,8 @@
+@@ -10,6 +10,7 @@
+ gobject-introspection
+ gtk-doc
+ libacl.so
++libatasmart
+ libbd_utils.so
+ libblkid.so
+ libblockdev
+@@ -21,9 +22,10 @@
+ libblockdev-mdraid
+ libblockdev-nvme
  libblockdev-part
+-libblockdev-smart
  libblockdev-swap
  libblockdev.so
 +libelogind

@@ -179,6 +179,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
@@ -317,6 +319,7 @@ jupyter-server-ydoc
 kcoreaddons
 kdoctools5
 kinfocenter
+kio
 kismet
 kitty
 kitty-terminfo
@@ -377,8 +380,10 @@ libinput
 libisoburn
 libisofs
 libkate
+liblas
 libldm
 liblqr
+libmateweather
 libmilter
 libmng
 libmpd
@@ -717,6 +722,7 @@ python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
+python-websocket-client
 qastools
 qbittorrent
 qbittorrent-nox
@@ -873,7 +879,6 @@ squid
 sshguard
 sslh
 sssd
-step
 strongswan
 stunnel
 sway

@@ -706,8 +706,6 @@ gcab
 gcc13
 gcc14
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1000,6 +998,8 @@ harfbuzz-cairo
 harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
+hashcat-utils
+hashcat
 hddtemp
 hdf5
 hdf5-openmpi
@@ -1401,7 +1401,6 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
-kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1806,7 +1805,6 @@ libksieve
 libksysguard
 libktorrent
 liblangtag
-liblas
 liblc3
 libldac
 libliftoff
@@ -1827,7 +1825,6 @@ libmanette
 libmanette-docs
 libmatekbd
 libmatemixer
-libmateweather
 libmatroska
 libmaxminddb
 libmbim
@@ -4492,7 +4489,6 @@ python-webcolors
 python-webencodings
 python-webob
 python-webob-docs
-python-websocket-client
 python-websockets
 python-webtest
 python-werkzeug
@@ -5276,6 +5272,7 @@ startup-notification
 stb
 stellarsolver
 step-cli
+step
 stfl
 stk
 stk-docs

@@ -25,6 +25,7 @@ lazarus-qt5
 lazarus-qt6
 lemurs
 libetonyek
+libmateweather
 libodfgen
 libratbag
 libretro-dolphin

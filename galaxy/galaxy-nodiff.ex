@@ -166,7 +166,6 @@ liblangtag
 liblxqt
 libmatekbd
 libmatemixer
-libmateweather
 libmspub
 libopenshot-audio
 libopenshot-audio-docs
@@ -298,10 +297,12 @@ msedit
 muffin
 mugshot
 nemo
+neovide
 nicotineplus
 nushell
 nyx
 obconf-qt
+obsidian-icon-theme
 octave
 onionshare
 openbox
@@ -378,6 +379,7 @@ quassel-client-qt
 quassel-monolithic
 quassel-monolithic-qt
 quassel-common
+quickshell
 reaper
 rebuild-detector
 renderdoc
@@ -411,6 +413,7 @@ subtitleeditor
 sundials
 swaync
 swww
+sysbench
 t1lib
 tealdeer
 telegram-desktop
