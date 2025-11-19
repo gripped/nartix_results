@@ -574,7 +574,6 @@ erlang-tftp
 erlang-tools
 erlang-wx
 erlang-xmerl
-esbuild
 espeak-ng
 ethtool
 eventviews
@@ -706,6 +705,8 @@ gcab
 gcc13
 gcc14
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1401,6 +1402,7 @@ kio-extras
 kio-fuse
 kio-gdrive
 kio-zeroconf
+kio
 kio5-extras
 kio5
 kirigami-addons
@@ -1782,6 +1784,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1805,6 +1808,7 @@ libksieve
 libksysguard
 libktorrent
 liblangtag
+liblas
 liblc3
 libldac
 libliftoff

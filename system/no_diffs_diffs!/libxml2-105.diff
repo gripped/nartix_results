@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   libxml2-docs
+ )
+ pkgver=2.15.1
+-pkgrel=4
++pkgrel=3
+ pkgdesc="XML C parser and toolkit"
+ url="https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home"
+ arch=(x86_64)
 @@ -43,7 +43,7 @@
      -D legacy=enabled
    )
@@ -9,11 +18,28 @@
    meson compile -C build
  }
  
+@@ -52,7 +52,6 @@
+ }
+ 
+ package_libxml2() {
+-  depends+=(libicuuc.so)
+   optdepends=('python: Python bindings')
+   provides=(libxml2.so)
+ 
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -5,7 +5,6 @@
+ git
+ glibc
+ icu
+-libicuuc.so
+ meson
+ python
+ readline
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

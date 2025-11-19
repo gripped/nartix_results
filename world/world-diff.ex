@@ -137,6 +137,7 @@ engrampa
 eog
 eog-docs
 eom
+esbuild
 espeakup
 etherwall
 exo
@@ -179,8 +180,6 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdal
-python-gdal
 gdm
 libgdm
 geoclue
@@ -319,7 +318,6 @@ jupyter-server-ydoc
 kcoreaddons
 kdoctools5
 kinfocenter
-kio
 kismet
 kitty
 kitty-terminfo
@@ -379,8 +377,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
-liblas
 libldm
 liblqr
 libmateweather

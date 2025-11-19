@@ -85,7 +85,7 @@ cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
-cosmic-settings
+cosmic-session
 cosmic-store
 cosmic-terminal
 cosmic-text-editor
@@ -103,7 +103,6 @@ doublecmd-qt6
 elementary-icon-theme
 engrampa
 eom
-esbuild
 exo
 ext4magic
 fastfetch
@@ -150,6 +149,9 @@ kodi-dev
 labwc
 lact
 lact-libadwaita
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 leafpad
 lf
@@ -166,6 +168,7 @@ liblangtag
 liblxqt
 libmatekbd
 libmatemixer
+libmateweather
 libmspub
 libopenshot-audio
 libopenshot-audio-docs
@@ -559,6 +562,7 @@ ttf-jetbrains-mono
 tumbler
 ueberzug
 ueberzugpp
+utox
 vagrant
 vdirsyncer
 vhba-module
