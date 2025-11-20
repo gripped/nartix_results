@@ -138,6 +138,7 @@ gtk4-layer-shell
 hyperfine
 imv
 incron
+joyutils
 just
 kanshi
 kernel-headers-musl
@@ -386,6 +387,7 @@ quickshell
 reaper
 rebuild-detector
 renderdoc
+resvg
 retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone

@@ -86,6 +86,7 @@ appmenu-gtk-module
 appstream-glib
 apr-util
 aqbanking
+arandr
 arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme
@@ -376,7 +377,6 @@ compiler-rt20
 composefs
 confuse
 consul
-containers-common
 convertlit
 coordgen
 copr-cli
@@ -641,6 +641,7 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
+firejail
 fish
 five-or-more
 flac
@@ -677,6 +678,7 @@ frameworkintegration5
 francis
 freealut
 freecell-solver
+freeglut
 freeimage
 freeradius
 freetds
@@ -1646,6 +1648,7 @@ libcaca
 libcacard
 libcanberra
 libcbor
+libcddb
 libcdio
 libcdr
 libcerf
@@ -5557,6 +5560,7 @@ tree-sitter-cli
 tree
 trojan
 ts-node
+tslib
 ttf-bitstream-vera
 ttf-carlito
 ttf-dejavu

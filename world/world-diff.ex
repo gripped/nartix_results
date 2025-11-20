@@ -10,7 +10,6 @@ appstream
 appstream-qt
 apr
 aquamarine
-arandr
 archivetools
 at-spi2-core
 at-spi2-core-docs
@@ -84,6 +83,7 @@ conky
 conmon
 connman
 containerd
+containers-common
 cppcheck
 cppdap
 crun
@@ -152,7 +152,6 @@ fcitx5
 fcron
 fig2dev
 firefox
-firejail
 firewalld
 firewalld-test
 flatbuffers
@@ -163,7 +162,6 @@ flite
 fluidsynth
 font-manager
 fprintd
-freeglut
 freerdp
 freerdp2
 frugally-deep
@@ -351,7 +349,6 @@ libcamera-ipa
 libcamera-tools
 gst-plugin-libcamera
 python-libcamera
-libcddb
 libcdio-paranoia
 libdaemon
 libdatrie
@@ -923,7 +920,6 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
-tslib
 tumbler
 udftools
 udisks2
