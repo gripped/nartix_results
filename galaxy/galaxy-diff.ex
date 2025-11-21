@@ -11,7 +11,6 @@ dvtm
 ecrire
 efl
 ephoto
-esbuild
 etherwall
 evisum
 featherpad
@@ -23,7 +22,9 @@ gtklock
 hexchat
 lemurs
 libetonyek
+libfm-qt
 libodfgen
+libqtxdg
 libratbag
 libretro-dolphin
 libretro-mupen64plus-next
@@ -36,6 +37,9 @@ libxfce4ui
 light
 lightdm-slick-greeter
 lxqt-config
+lxqt-qtplugin
+lxqt-session
+lxqt-wayland-session
 ly
 mate-control-center
 mate-screensaver
@@ -113,8 +117,10 @@ ttf-zed-mono-nerd
 nvidia-390xx-utils
 nvm
 opensc
+opensnitch
 osdlyrics
 p8-platform
+pcmanfm-qt
 perl-cgi-fast
 qbittorrent
 qbittorrent-nox
@@ -138,6 +144,7 @@ wezterm
 wireshark
 wireshark-cli
 wireshark-qt
+xdg-desktop-portal-lxqt
 xdg-desktop-portal-xapp
 xfce4-notifyd
 xfce4-screensaver

@@ -1,6 +1,7 @@
 0ad
 a52dec
 accountsservice
+adios2
 alacritty
 alsa-utils
 amule
@@ -89,7 +90,6 @@ cppdap
 crun
 cups
 libcups
-cython
 darkhttpd
 dbus-broker
 dconf
@@ -154,8 +154,6 @@ fig2dev
 firefox
 firewalld
 firewalld-test
-flatbuffers
-python-flatbuffers
 flatpak
 flatpak-docs
 flite
@@ -445,6 +443,7 @@ lm_sensors
 localsearch
 localsearch-testutils
 lua-filesystem
+luajit
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -574,6 +573,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs
 nsd
 nushell
 nvidia-open
@@ -686,6 +686,7 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+pre-commit
 presage
 prosody
 pulseaudio
@@ -698,24 +699,23 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiounittest
 python-anytree
-python-authheaders
+python-augeas
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-django-compressor
-python-msgpack
-python-optree
-python-pkgconfig
+python-jschema-to-python
+python-keyring
+python-pymdown-extensions
 python-pymupdf
 python-pytest-freezegun
-python-pytest-tornasync
 python-pyudev
 python-recommonmark
+python-sarif-om
 python-seaborn
 python-smmap
-python-websocket-client
 qastools
 qbittorrent
 qbittorrent-nox
@@ -955,6 +955,7 @@ vault
 vim
 gvim
 vim-runtime
+viskores
 vlc
 libvlc
 vlc-cli

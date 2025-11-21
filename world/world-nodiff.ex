@@ -20,7 +20,6 @@ acpica
 acpid
 acpilight
 add-determinism
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -411,6 +410,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
+cython
 cython0
 d-spy
 darktable
@@ -649,6 +649,8 @@ flac-doc
 flake8
 flameshot
 flashrom
+flatbuffers
+python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
@@ -2176,7 +2178,6 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
-luajit
 luajson
 lua52-luajson
 luarocks
@@ -2444,7 +2445,6 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3045,7 +3045,6 @@ poxml
 pps-tools
 pptpd
 pqiv
-pre-commit
 premake
 print-manager
 prison
@@ -3154,7 +3153,6 @@ python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
-python-aiounittest
 python-alembic
 python-amqp
 python-aniso8601
@@ -3205,7 +3203,7 @@ python-atpublic
 python-attrdict
 python-attrs
 python-auditwheel
-python-augeas
+python-authheaders
 python-authlib
 python-authres
 python-autobahn
@@ -3221,6 +3219,7 @@ python-axolotl
 python-babel
 python-backcall
 python-backrefs
+python-base58
 python-bcrypt
 python-beaker
 python-beautifulsoup4
@@ -3398,6 +3397,7 @@ python-distutils-extra
 python-django-allauth
 python-django-appconf
 python-django-classy-tags
+python-django-compressor
 python-django-crispy-forms
 python-django-debug-toolbar
 python-django-environ
@@ -3668,7 +3668,6 @@ python-josepy
 python-joserfc
 python-jq
 python-js2py
-python-jschema-to-python
 python-json-logger
 python-json5
 python-jsondiff
@@ -3699,7 +3698,6 @@ python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
-python-keyring
 python-keyrings-alt
 python-keystoneauth1
 python-keyutils
@@ -3794,6 +3792,7 @@ python-motor
 python-mpd2
 python-mpi4py
 python-mpmath
+python-msgpack
 python-mss
 python-mujson
 python-multidict
@@ -3855,6 +3854,7 @@ python-openid
 python-openpyxl
 python-openstacksdk
 python-opt_einsum
+python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -3936,6 +3936,7 @@ python-pipenv
 python-pipreqs
 python-pipx
 python-pixelmatch
+python-pkgconfig
 python-pkginfo
 python-platformdirs
 python-playwright
@@ -4052,7 +4053,6 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
-python-pymdown-extensions
 python-pymongo
 python-pymysql
 python-pynacl
@@ -4167,6 +4167,7 @@ python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
+python-pytest-tornasync
 python-pytest-trio
 python-pytest-twisted
 python-pytest-vcr
@@ -4261,7 +4262,6 @@ python-ruff-api
 python-rx
 python-s3transfer
 python-saml
-python-sarif-om
 python-schema
 python-scikit-build-core
 python-scikit-build
@@ -4496,6 +4496,7 @@ python-webcolors
 python-webencodings
 python-webob
 python-webob-docs
+python-websocket-client
 python-websockets
 python-webtest
 python-werkzeug
@@ -5658,7 +5659,6 @@ virtualbox-guest-utils-nox
 virtualbox-host-dkms
 virtualbox-sdk
 virtualgl
-viskores
 vkd3d
 vkd3d-docs
 vmaf

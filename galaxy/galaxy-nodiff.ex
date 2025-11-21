@@ -103,6 +103,7 @@ doublecmd-qt6
 elementary-icon-theme
 engrampa
 eom
+esbuild
 exo
 ext4magic
 fastfetch
@@ -163,7 +164,6 @@ libdbusmenu-lxqt
 libe-book
 libetpan
 libexttextcat
-libfm-qt
 libkeyfinder
 liblangtag
 liblxqt
@@ -174,7 +174,6 @@ libmspub
 libopenshot-audio
 libopenshot-audio-docs
 libopenshot
-libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
@@ -251,12 +250,9 @@ lxqt-openssh-askpass
 lxqt-panel
 lxqt-policykit
 lxqt-powermanagement
-lxqt-qtplugin
 lxqt-runner
-lxqt-session
 lxqt-sudo
 lxqt-themes
-lxqt-wayland-session
 lxrandr
 lxsession
 lxtask
@@ -312,11 +308,9 @@ onionshare
 openbox
 openrct2
 openshot
-opensnitch
 parole
 pavucontrol-qt
 pcmanfm-gtk3
-pcmanfm-qt
 pcmanfm
 peek
 pekwm
@@ -584,7 +578,6 @@ xautolock
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic
-xdg-desktop-portal-lxqt
 xed
 xfburn
 xfce4-appfinder
