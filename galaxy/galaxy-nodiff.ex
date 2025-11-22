@@ -151,9 +151,6 @@ kodi-dev
 labwc
 lact
 lact-libadwaita
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 leafpad
 lf
@@ -212,6 +209,7 @@ libxfce4windowing
 libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
+lightdm-slick-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -578,6 +576,7 @@ xautolock
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic
+xdg-desktop-portal-lxqt
 xed
 xfburn
 xfce4-appfinder

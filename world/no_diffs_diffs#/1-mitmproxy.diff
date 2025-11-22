@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -66,9 +66,14 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mitmproxy
+ pkgver=12.2.0
+-pkgrel=1
++pkgrel=3
+ pkgdesc='SSL-capable man-in-the-middle HTTP proxy'
+ arch=(any)
+ url='https://mitmproxy.org'
+@@ -22,7 +22,6 @@
+   python-ldap3
+   python-mitmproxy-rs
+   python-msgpack
+-  python-passlib
+   python-publicsuffix2
+   python-pyopenssl
+   python-pyparsing
+@@ -66,10 +65,16 @@
  check() {
    cd "$pkgname"
  
@@ -14,5 +31,21 @@
 -  PATH="test_dir/usr/bin:$PATH" PYTHONPATH="test_dir/$_site_packages:$PYTHONPATH" pytest -vv
 +  PATH="test_dir/usr/bin:$PATH" PYTHONPATH="test_dir/$_site_packages:$PYTHONPATH" pytest -vv "${pytest_opts[@]}"
  }
++
  
  package() {
+   cd "$pkgname"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -17,7 +17,6 @@
+ python-ldap3
+ python-mitmproxy-rs
+ python-msgpack
+-python-passlib
+ python-publicsuffix2
+ python-pyopenssl
+ python-pyparsing

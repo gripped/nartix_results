@@ -20,6 +20,9 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
+lazarus
+lazarus-qt5
+lazarus-qt6
 lemurs
 libetonyek
 libfm-qt
@@ -35,7 +38,6 @@ libusbsio
 python-libusbsio
 libxfce4ui
 light
-lightdm-slick-greeter
 lxqt-config
 lxqt-qtplugin
 lxqt-session
@@ -144,7 +146,6 @@ wezterm
 wireshark
 wireshark-cli
 wireshark-qt
-xdg-desktop-portal-lxqt
 xdg-desktop-portal-xapp
 xfce4-notifyd
 xfce4-screensaver

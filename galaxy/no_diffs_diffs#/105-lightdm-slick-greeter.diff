@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ 
+ build() {
+ 	cd slick-greeter-${pkgver}
+-	arch-meson . build
++	artix-meson . build
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd slick-greeter-${pkgver}
+-arch-meson . build
++artix-meson . build
+ meson compile -C build
+ }

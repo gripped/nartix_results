@@ -189,7 +189,6 @@ baloo
 baloo5
 bamf
 banner
-baobab
 bash-bats-assert
 bash-bats-support
 bash-completion
@@ -246,8 +245,6 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
-breeze
-breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -366,7 +363,6 @@ colord-kde
 colordiff
 colorgcc
 comgr
-compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
@@ -1789,7 +1785,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2135,7 +2130,6 @@ lld20
 lldb
 llhttp
 llvm-julia
-llvm
 llvm15
 llvm16
 llvm18
@@ -3045,6 +3039,7 @@ poxml
 pps-tools
 pptpd
 pqiv
+pre-commit
 premake
 print-manager
 prison
@@ -3153,6 +3148,7 @@ python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
+python-aiounittest
 python-alembic
 python-amqp
 python-aniso8601
@@ -3668,6 +3664,7 @@ python-josepy
 python-joserfc
 python-jq
 python-js2py
+python-jschema-to-python
 python-json-logger
 python-json5
 python-jsondiff
@@ -4262,6 +4259,7 @@ python-ruff-api
 python-rx
 python-s3transfer
 python-saml
+python-sarif-om
 python-schema
 python-scikit-build-core
 python-scikit-build
@@ -5757,7 +5755,6 @@ xdg-dbus-proxy
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
-xdg-desktop-portal-lxqt
 xdg-user-dirs-gtk
 xdg-utils-cxx
 xdg-utils

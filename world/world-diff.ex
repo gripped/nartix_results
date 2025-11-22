@@ -20,6 +20,7 @@ audacious-plugins
 avahi
 awesome
 aws-cli-v2
+baobab
 bash-bats
 blender
 blueman
@@ -34,6 +35,8 @@ bluez-obex
 bolt
 booster
 box2d
+breeze
+breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -79,6 +82,7 @@ colord
 libcolord
 colord-sane
 colord-docs
+compiler-rt
 composable-kernel
 conky
 conmon
@@ -372,6 +376,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmateweather
@@ -438,6 +443,7 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+llvm
 llvm14
 lm_sensors
 localsearch
@@ -686,7 +692,6 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
-pre-commit
 presage
 prosody
 pulseaudio
@@ -699,21 +704,18 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiounittest
 python-anytree
 python-augeas
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-jschema-to-python
 python-keyring
 python-pymdown-extensions
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-sarif-om
 python-seaborn
 python-smmap
 qastools
@@ -1071,6 +1073,7 @@ wpewebkit
 wpewebkit-docs
 x11vnc
 xdg-desktop-portal-gnome
+xdg-desktop-portal-lxqt
 xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal

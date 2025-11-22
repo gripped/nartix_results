@@ -29,6 +29,9 @@ gcc-objc
 lto-dump
 libgccjit
 gettext
+glib2
+glib2-devel
+glib2-docs
 glibc
 lib32-glibc
 glibc-locales
