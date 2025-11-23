@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=reflector
+ pkgver=2023
+-pkgrel=3
++pkgrel=3.2
+ pkgdesc='A Python 3 module and script to retrieve and filter the latest Pacman mirror list.'
+ arch=(any)
+ license=(GPL2)
+@@ -19,6 +19,10 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
++  sed -e "s|https://archlinux.org|https://packages.artixlinux.org|g" \
++      -e "s|Arch Linux|Artix Linux|g" \
++      -e "s|extra/os/x86_64/extra.db|system/os/x86_64/system.db|g" \
++      -i Reflector.py
+   python -m build --wheel --no-isolation
+ }
+ 
+@@ -27,8 +31,6 @@
+   cd $pkgname-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -Dm644 "man/${pkgname}.1.gz" "${pkgdir}/usr/share/man/man1/${pkgname}.1.gz"
+-  install -Dm644 'reflector.service' "$pkgdir/usr/lib/systemd/system/reflector.service"
+-  install -Dm644 'reflector.timer' "$pkgdir/usr/lib/systemd/system/reflector.timer"
+   install -Dm644 'reflector.conf' "$pkgdir/etc/xdg/reflector/reflector.conf"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,8 @@
+ build() {
+ cd $pkgname-$pkgver
++sed -e "s|https://archlinux.org|https://packages.artixlinux.org|g" \
++-e "s|Arch Linux|Artix Linux|g" \
++-e "s|extra/os/x86_64/extra.db|system/os/x86_64/system.db|g" \
++-i Reflector.py
+ python -m build --wheel --no-isolation
+ }

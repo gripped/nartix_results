@@ -1,7 +1,6 @@
 0ad
 a52dec
 accountsservice
-adios2
 alacritty
 alsa-utils
 amule
@@ -20,7 +19,6 @@ audacious-plugins
 avahi
 awesome
 aws-cli-v2
-baobab
 bash-bats
 blender
 blueman
@@ -35,8 +33,6 @@ bluez-obex
 bolt
 booster
 box2d
-breeze
-breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -82,13 +78,11 @@ colord
 libcolord
 colord-sane
 colord-docs
-compiler-rt
 composable-kernel
 conky
 conmon
 connman
 containerd
-containers-common
 cppcheck
 cppdap
 crun
@@ -279,8 +273,6 @@ libibus
 igsc
 iio-sensor-proxy
 immer
-intel-metee
-intel-metee-doc
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -364,7 +356,6 @@ libepoxy
 libepoxy-docs
 libepubgen
 libfido2
-libfm-qt
 libfprint
 libfreehand
 libgedit-amtk
@@ -392,7 +383,6 @@ libpagemaker
 libpgm
 libprocps
 libqb
-libqtxdg
 librevenge
 libsidplay
 libsidplayfp
@@ -400,6 +390,7 @@ libsoxr
 libstaroffice
 libtg_owt
 libthai
+libtommath
 libudev0-shim
 libunwind
 libusbsio
@@ -443,13 +434,11 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
-llvm
 llvm14
 lm_sensors
 localsearch
 localsearch-testutils
 lua-filesystem
-luajit
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -579,7 +568,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-open
@@ -591,6 +579,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+obs-studio
 onboard
 onionshare
 open-iscsi
@@ -614,6 +603,7 @@ parole
 passim
 pc-ble-driver
 pcmanfm-gtk3
+pcmanfm-qt
 pcmanfm
 pcsclite
 percona-server
@@ -705,13 +695,10 @@ pulseaudio-rtp
 pyqt6
 pysolfc
 python-anytree
-python-augeas
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-keyring
-python-pymdown-extensions
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -957,7 +944,6 @@ vault
 vim
 gvim
 vim-runtime
-viskores
 vlc
 libvlc
 vlc-cli

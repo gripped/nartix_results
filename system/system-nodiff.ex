@@ -37,6 +37,9 @@ flex
 gawk
 gc
 gdbm
+glib2
+glib2-devel
+glib2-docs
 gnulib-l10n
 gnupg
 gnutls

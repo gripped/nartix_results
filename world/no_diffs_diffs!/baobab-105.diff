@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,7 +43,7 @@
+ }
+ 
+ build() {
+-  arch-meson baobab build
++  artix-meson baobab build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ git apply -3 ../0001-Scanner-Initialize-root-results-as-empty.patch
+ }
+ build() {
+-arch-meson baobab build
++artix-meson baobab build
+ meson compile -C build
+ }

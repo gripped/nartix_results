@@ -16,15 +16,15 @@
 -        '0001-arch-specific.patch')
 +        '0001-arch-specific.patch'
 +'mariadb.sysusers.conf' 'mariadb.tmpfiles.conf')
- sha256sums=('226cd30171976f76d7a0d4587f3d53d1f551414d2fc14c36a383209119fc0123'
+ sha256sums=('307cd1f1ee54424dc11724de074fbac57f02fc04d9836fc6f139931668cd9879'
              'SKIP'
              'SKIP'
 @@ -26,7 +27,9 @@
              'SKIP'
              'SKIP'
              'SKIP'
--            'cb22088c50f6deea0b3858180514cad905304794e4f1e5752f03702eae10c353')
-+            'cb22088c50f6deea0b3858180514cad905304794e4f1e5752f03702eae10c353'
+-            'dd5e4846f6173097130e44d60cdd880c7d1b98bf5177baaca67c0ab9e5134516')
++            'dd5e4846f6173097130e44d60cdd880c7d1b98bf5177baaca67c0ab9e5134516'
 +            'd21fa98b57b3f44d1731551ac441bf24b75662fb26393757aa22f9cb92d470cd'
 +            '65dfade5bfa2338ec201e3fdcddd819ee87a94a27e1c7c293e890927f4ac7555')
  
@@ -39,7 +39,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
  
-@@ -56,7 +59,7 @@
+@@ -57,7 +60,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -48,7 +48,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -81,7 +84,7 @@
+@@ -82,7 +85,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -57,7 +57,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -176,7 +179,7 @@
+@@ -177,7 +180,7 @@
             'coreutils'
             'libxml2' 'libxml2.so'
             'lz4' 'liblz4.so'
@@ -66,7 +66,7 @@
             'zstd' 'libzstd.so')
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
-@@ -209,8 +212,8 @@
+@@ -210,8 +213,8 @@
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
  

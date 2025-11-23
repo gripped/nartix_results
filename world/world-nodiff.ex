@@ -20,6 +20,7 @@ acpica
 acpid
 acpilight
 add-determinism
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -189,6 +190,7 @@ baloo
 baloo5
 bamf
 banner
+baobab
 bash-bats-assert
 bash-bats-support
 bash-completion
@@ -245,6 +247,8 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
+breeze
+breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -363,6 +367,7 @@ colord-kde
 colordiff
 colorgcc
 comgr
+compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
@@ -372,6 +377,7 @@ compiler-rt20
 composefs
 confuse
 consul
+containers-common
 convertlit
 coordgen
 copr-cli
@@ -1109,6 +1115,8 @@ intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
+intel-metee
+intel-metee-doc
 intel-oneapi-common
 intel-oneapi-compiler-dpcpp-cpp-runtime
 "$_pkgname
@@ -1711,6 +1719,7 @@ libfdk-aac
 libffado
 libfilezilla
 libfilteraudio
+libfm-qt
 libfm
 libfm-extra
 libfm-gtk3
@@ -1932,6 +1941,7 @@ libqmi
 libqmi-docs
 libqrtr-glib
 libqrtr-glib-docs
+libqtxdg
 libquotient
 libquvi-scripts
 libquvi
@@ -2003,7 +2013,6 @@ libtiff
 libtiger
 libtlsrpt
 libtomcrypt
-libtommath
 libtorrent-rasterbar
 libtorrent
 libtpms
@@ -2130,6 +2139,7 @@ lld20
 lldb
 llhttp
 llvm-julia
+llvm
 llvm15
 llvm16
 llvm18
@@ -2172,6 +2182,7 @@ lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
+luajit
 luajson
 lua52-luajson
 luarocks
@@ -2439,6 +2450,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2465,7 +2477,6 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
-obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -2605,7 +2616,6 @@ pavucontrol
 pax-utils
 pbzip2
 pcaudiolib
-pcmanfm-qt
 pdal
 pdfarranger
 pdfgrep
@@ -3199,6 +3209,7 @@ python-atpublic
 python-attrdict
 python-attrs
 python-auditwheel
+python-augeas
 python-authheaders
 python-authlib
 python-authres
@@ -3695,6 +3706,7 @@ python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
+python-keyring
 python-keyrings-alt
 python-keystoneauth1
 python-keyutils
@@ -4050,6 +4062,7 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
+python-pymdown-extensions
 python-pymongo
 python-pymysql
 python-pynacl
@@ -5657,6 +5670,7 @@ virtualbox-guest-utils-nox
 virtualbox-host-dkms
 virtualbox-sdk
 virtualgl
+viskores
 vkd3d
 vkd3d-docs
 vmaf

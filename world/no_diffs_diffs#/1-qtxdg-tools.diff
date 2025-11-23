@@ -3,7 +3,7 @@
 @@ -1,15 +1,15 @@
  
  pkgname=qtxdg-tools
--pkgver=4.2.0
+-pkgver=4.3.0
 +pkgver=3.12.0
  pkgrel=1
  pkgdesc="libqtxdg user tools"
@@ -15,7 +15,7 @@
 +depends=("qt5-base" "libqtxdg")
 +makedepends=("cmake" "qt5-tools" "lxqt-build-tools")
  source=("https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc})
--sha256sums=('503a6e37792709340dddd642821eca13ef8d789cd26a06983cb7c5e06b8d63af'
+-sha256sums=('6d84dc5016464741a6fbc466b94120267ea5333ebe037b9b0e1799846165ef96'
 +sha256sums=('8afba8c57647ccbec27964c021b1f317866bb93c7293f60319a340b6484bf883'
              'SKIP')
  validpgpkeys=(

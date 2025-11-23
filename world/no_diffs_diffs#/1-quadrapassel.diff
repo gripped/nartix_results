@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,42 +1,22 @@
+@@ -1,43 +1,22 @@
  
  pkgname=quadrapassel
--pkgver=49.1
+-pkgver=49.2.1
 +pkgver=40.2
  pkgrel=1
  pkgdesc="Fit falling blocks together (Tetris-like game for GNOME)"
@@ -39,10 +39,11 @@
 -source=(
 -  "git+https://gitlab.gnome.org/GNOME/quadrapassel.git?signed#tag=${pkgver/[a-z]/.&}"
 -)
--b2sums=('0bdccc8a5f760c8c60ae2c9e0796902609bbaa2701dca8f5a8c15e95ff6352f5681acb4e5bc5fc48b3f4645a9ea3d431c77890a7078711398707e9d34cea99b0')
+-b2sums=('6c4e2ce084bfcce42af8b2a0952bb6faead9339d2e27f499bbf7b774c3af48626c485fe07f024ba02cc7b7010ed5ecd5b4ed8e3dcf793a1af0d82e4803695f4d')
 -validpgpkeys=(
 -  161DEEB19F942B2CE00B67ADC1C19D5530553963 # John Ward <john@johnward.net>
 -  1DB827B47C4E2494A1D733586458908EC334A207 # Will Warner <willwwarner@proton.me>
+-  C6043B3C11E1C16FCA1FBEE48D0B2EC86F801EA9 # Will Warner <willwwarner@proton.me>
 -)
 +_commit=51adfcf8097fc17f7df44e228ac715272d07b60e  # tags/40.2^0
 +source=("git+https://gitlab.gnome.org/GNOME/quadrapassel.git#commit=$_commit")
@@ -55,7 +56,7 @@
  
  prepare() {
    cd $pkgname
-@@ -54,4 +34,3 @@
+@@ -55,4 +34,3 @@
  package() {
    meson install -C build --destdir "$pkgdir"
  }
