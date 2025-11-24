@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,25 @@
- 
- pkgname=xf86-input-wacom
- pkgver=1.2.3
--pkgrel=1
-+pkgrel=1.5
- pkgdesc="X.Org Wacom tablet driver"
+@@ -6,21 +6,19 @@
  arch=(x86_64)
  url="https://github.com/linuxwacom/xf86-input-wacom"
  license=('GPL-2.0-or-later')
@@ -16,11 +10,14 @@
              'gobject-introspection'
              'python-libevdev' 'python-pytest' 'python-yaml' 'python-gobject' 'python-attrs')
  conflicts=('xorg-server<21.1.1' 'X-ABI-XINPUT_VERSION<24' 'X-ABI-XINPUT_VERSION>=25')
+-source=(https://github.com/linuxwacom/xf86-input-wacom/releases/download/$pkgname-$pkgver/$pkgname-$pkgver.tar.bz2 #{,.sig}
+-)
+-sha256sums=('cbc5fccda8994b9314e60da6933d8e5f901e4c3f208dd9fc09a611fe25b71a0d'
+-)
 +provides=("x11win-input-wacom")
- source=(https://github.com/linuxwacom/xf86-input-wacom/releases/download/$pkgname-$pkgver/$pkgname-$pkgver.tar.bz2{,.sig})
- sha256sums=('70365826c3ca58cc81d98fab8f048f2c375e78c786111eb8a72a67a5721cb146'
-             'SKIP')
- validpgpkeys=('C2E2555DA2AE5A710D807CF7455E2EAC9362FE1B') # Joshua Dickens <Joshua@Joshua-Dickens.com>
++source=(https://github.com/linuxwacom/xf86-input-wacom/releases/download/$pkgname-$pkgver/$pkgname-$pkgver.tar.bz2) #{,.sig}
++sha256sums=('cbc5fccda8994b9314e60da6933d8e5f901e4c3f208dd9fc09a611fe25b71a0d')
+ 
  
  build() {
 -  arch-meson $pkgname-$pkgver build \

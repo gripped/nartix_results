@@ -1,16 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- _pkgname=pcsclite
- pkgname=lib32-$_pkgname
--pkgver=2.4.0
--pkgrel=3
-+pkgver=2.3.3
-+pkgrel=1
- pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
- arch=('x86_64')
- url='https://pcsclite.apdu.fr/'
 @@ -13,7 +13,6 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )
@@ -27,28 +16,7 @@
  )
  provides=(
    'libpcsclite.so'
-@@ -34,32 +32,28 @@
-   "git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
-   "program-suffix.patch"
-   "systemd-unit-conflicts.diff"
--  "0001-Allow-to-run-32-bit-pcscd-on-64-bit-systems.patch"
- )
--sha256sums=('441ca8dd35b6c8b8363cbac72b1d9a97d0e482f48ab51b9766cbab304e81305e'
--            '73831a681d3dd5f0198b9f09e2a69db5e70abe3e4c04fa242452076af1c174fd'
--            '207a2109c954ae75ba31e607f8da587f7053c6fe2f9e3ae17090acfb0c680b36'
--            '6623cfd64ce75c3c8a4274210a437f3d192908bd3b5505f5c529c2aebd581581')
-+sha256sums=('b1cd0ef7b75b3daf8230a9a824a4c4797e26e235bb884b5ec4d7eef85b46a890'
-+            'f81b5f1ad38fabf6f18d75164264bfe5ba42aed092cc52b30341948b5324388d'
-+            '98c6c4084a875f52e02fecdc3ae46b4752e16b637af2dc3ca9a36fb3aa96fe0f')
- 
- prepare() {
-   cd PCSC
-   patch -Np1 -i ../program-suffix.patch
-   patch -Np1 -i ../systemd-unit-conflicts.diff
--  patch -Np1 -i ../0001-Allow-to-run-32-bit-pcscd-on-64-bit-systems.patch
- }
- 
- build() {
+@@ -52,14 +50,13 @@
    local meson_options=(
      --cross-file lib32
      -D program_suffix="-32"
@@ -65,7 +33,7 @@
    meson compile -C build
  
    awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' PCSC/COPYING > LICENSE.BSD-3-Clause
-@@ -71,10 +65,10 @@
+@@ -71,7 +68,7 @@
  package() {
    meson install -C build --destdir "${pkgdir}"
  
@@ -73,12 +41,7 @@
 +  rm -rv "$pkgdir"/{etc,usr/{include,share}}
    rm -v "$pkgdir"/usr/bin/pcsc-spy
  
--  install -D -m0644 LICENSE.* -t "${pkgdir}"/usr/share/licenses/$pkgname
--  install -d "${pkgdir}"/usr/lib32/pcsc/drivers
-+  install -D -m0644 LICENSE.* -t "$pkgdir/usr/share/licenses/$pkgname"
-+  install -d "$pkgdir/usr/lib32/pcsc/drivers"
- }
- 
+   install -D -m0644 LICENSE.* -t "${pkgdir}"/usr/share/licenses/$pkgname
 
 
 ############# Stripped diff below #################

@@ -367,7 +367,6 @@ libidl2
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmateweather
@@ -579,7 +578,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-obs-studio
 onboard
 onionshare
 open-iscsi

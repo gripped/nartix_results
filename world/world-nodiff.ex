@@ -1794,6 +1794,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2477,6 +2478,7 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
+obs-studio
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -5186,6 +5188,7 @@ sdl2_mixer
 sdl2_net
 sdl2_ttf
 sdl3
+sdl3_ttf
 sdl_image
 sdl_mixer
 sdl_net

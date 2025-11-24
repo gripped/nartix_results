@@ -3,9 +3,9 @@
 @@ -16,7 +16,7 @@
  
  build() {
-   cd rutabaga_gfx-$pkgver/ffi
--  arch-meson . build -Dgfxstream=true --buildtype=release
-+  artix-meson . build -Dgfxstream=true --buildtype=release
+   cd rutabaga_gfx-$pkgver
+-  arch-meson . build -Dfeatures=gfxstream -Dffi=true --buildtype=release --wrap-mode=forcefallback
++  artix-meson . build -Dfeatures=gfxstream -Dffi=true --buildtype=release --wrap-mode=forcefallback
    meson compile -C build
  }
  
@@ -19,8 +19,8 @@
 +++ Artix PKGBUILD
 @@ -1,5 +1,5 @@
  build() {
- cd rutabaga_gfx-$pkgver/ffi
--arch-meson . build -Dgfxstream=true --buildtype=release
-+artix-meson . build -Dgfxstream=true --buildtype=release
+ cd rutabaga_gfx-$pkgver
+-arch-meson . build -Dfeatures=gfxstream -Dffi=true --buildtype=release --wrap-mode=forcefallback
++artix-meson . build -Dfeatures=gfxstream -Dffi=true --buildtype=release --wrap-mode=forcefallback
  meson compile -C build
  }

@@ -1,17 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,8 +7,8 @@
+@@ -1,14 +1,14 @@
+ 
+ pkgname=crun
+ pkgver=1.25
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A fast and lightweight fully featured OCI runtime and C library for running containers"
+ url="https://github.com/containers/crun"
  license=('LGPL-2.1-or-later')
  arch=('x86_64')
  provides=('oci-runtime')
--depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu')
+-depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu' 'libkrun')
 -makedepends=('libtool' 'python' 'go-md2man' 'systemd' 'git')
 +depends=('yajl' 'libudev' 'libcap' 'libseccomp' 'criu')
 +makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git')
  source=("git+https://github.com/containers/crun.git#tag=$pkgver?signed")
  validpgpkeys=('AC404C1C0BF735C63FF4D562263D6DF2E163E1EA')
  sha256sums=('bfa43678d3de3f38d00b0011d819e45b8f6ad25fdaf175eae39380cb35703ded')
-@@ -16,7 +16,7 @@
+@@ -16,12 +16,11 @@
  build() {
      cd "$pkgname"
      ./autogen.sh
@@ -20,14 +27,23 @@
          --prefix=/usr \
          --enable-shared \
          --enable-dynamic \
+-        --with-python-bindings \
+-        --with-libkrun
++        --with-python-bindings
+     make
+ }
+ 
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,7 @@
+@@ -2,10 +2,9 @@
+ git
+ go-md2man
  libcap
+-libkrun
  libseccomp
  libtool
 +libudev

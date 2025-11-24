@@ -4,7 +4,7 @@
  
  
  pkgname=blender
--pkgver=4.5.5
+-pkgver=5.0.0
 -pkgrel=1
 +pkgver=4.3.2
 +pkgrel=2
@@ -27,12 +27,12 @@
  )
  optdepends=('cuda: Cycles renderer CUDA support'
              'intel-compute-runtime: Cycles renderer Intel OneAPI support'
-@@ -111,21 +109,49 @@
+@@ -111,19 +109,49 @@
              'libdecor: wayland support')
  options=('!lto')
  source=("git+https://projects.blender.org/blender/blender.git#tag=v$pkgver"
 -        https://developer.download.nvidia.com/redist/optix/v8.0/OptiX-8.0-Include.zip)
--sha512sums=('d8b3a6a817fbd871d78417a9f13748d11cfaec2a14ae45720eab47bf003d9bb5e00739c9db9d4f68fc2d58294be3d21dd4a9de95ed2f8ce83327f2bd7df6022d'
+-sha512sums=('f70cc04396f7d2d12f2a154ce41894527f012366e64f2ee53e416634c7b0a0ec6470310f3b9d622ef0304397f16625e1ab235a47d29ff226da9ba2b692d2258b'
 -            '5502d9df847de12badc702c0444bd4f1f7620460b2235026df2c3133da1e04c148af0f1fc7f345e9a0c009c32f905f66c8d427743445e8864d3a797cdce6a483')
 +        "git+https://projects.blender.org/blender/blender-assets#tag=v$pkgver"
 +        https://developer.download.nvidia.com/redist/optix/v8.0/OptiX-8.0-Include.zip
@@ -62,9 +62,7 @@
 -  git lfs fetch network-origin
 -  git lfs checkout
 -
--  git cherry-pick -n \
--    ebfad2c071d712d126a5c3d93ebed8a226821feb \
--    f5f30131131025a24be93eced7d04f9d96cf5cbf
+-  git revert -n 49414a72f607ccd15f8b71b81edc9aff040d581e
 +  git submodule init
 +  git config submodule.release/datafiles/assets.url "$srcdir/blender-assets"
 +  git -c protocol.file.allow=always submodule update
@@ -88,13 +86,11 @@
  }
  
  _get_pyver() {
-@@ -134,27 +160,23 @@
+@@ -132,25 +160,23 @@
  
  build() {
    export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
 -  CXXFLAGS+=' --param=max-vartrack-size=640000000'
--
--  sed -i "s|core/include|_core/include|g" blender/CMakeLists.txt
 -
 -  local cuda_archs="sm_75;sm_80;sm_86;sm_87;sm_88;sm_89;sm_90;sm_100;sm_103;sm_110;sm_120;sm_121;compute_121"
  
@@ -120,7 +116,7 @@
      -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
      -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
      -D USD_ROOT_DIR=/usr
-@@ -166,6 +188,9 @@
+@@ -162,6 +188,9 @@
      -W no-dev
    )
  
@@ -130,7 +126,7 @@
    cmake "${cmake_options[@]}"
    cmake --build build
  }
-@@ -180,7 +205,10 @@
+@@ -176,7 +205,10 @@
  
    install -Dm644 release/freedesktop/org.blender.Blender.metainfo.xml "${pkgdir}/usr/share/metainfo/org.blender.Blender.metainfo.xml"
  
@@ -167,16 +163,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,33 +1,38 @@
+@@ -1,30 +1,38 @@
  prepare() {
  cd "$pkgname"
 -git lfs install --local
 -git remote add network-origin https://projects.blender.org/blender/blender
 -git lfs fetch network-origin
 -git lfs checkout
--git cherry-pick -n \
--ebfad2c071d712d126a5c3d93ebed8a226821feb \
--f5f30131131025a24be93eced7d04f9d96cf5cbf
+-git revert -n 49414a72f607ccd15f8b71b81edc9aff040d581e
 +git submodule init
 +git config submodule.release/datafiles/assets.url "$srcdir/blender-assets"
 +git -c protocol.file.allow=always submodule update
@@ -195,7 +189,6 @@
  build() {
  export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
 -CXXFLAGS+=' --param=max-vartrack-size=640000000'
--sed -i "s|core/include|_core/include|g" blender/CMakeLists.txt
 -local cuda_archs="sm_75;sm_80;sm_86;sm_87;sm_88;sm_89;sm_90;sm_100;sm_103;sm_110;sm_120;sm_121;compute_121"
  local cmake_options=(
  -B build
@@ -219,7 +212,7 @@
  -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
  -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
  -D USD_ROOT_DIR=/usr
-@@ -38,6 +43,8 @@
+@@ -35,6 +43,8 @@
  -S "$pkgname"
  -W no-dev
  )
