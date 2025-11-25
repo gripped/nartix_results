@@ -1,16 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,8 +4,8 @@
+@@ -4,7 +4,7 @@
    gnome-shell
    gnome-shell-docs
  )
--pkgver=49.1
--pkgrel=2
+-pkgver=49.2
 +pkgver=48.5
-+pkgrel=1
+ pkgrel=1
  epoch=1
  pkgdesc="Next generation desktop shell"
- url="https://gitlab.gnome.org/GNOME/gnome-shell"
 @@ -31,11 +31,11 @@
    gsettings-desktop-schemas
    gtk4
@@ -37,13 +35,13 @@
    unzip
    upower
    webkitgtk-6.0
-@@ -74,23 +72,20 @@
+@@ -74,12 +72,10 @@
    "git+https://gitlab.gnome.org/GNOME/gnome-shell.git#tag=${pkgver/[a-z]/.&}"
    "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git#commit=5f9768a2eac29c1ed56f1fbb449a77a3523683b6"
    "git+https://github.com/ptomato/jasmine-gjs.git#commit=856465dddbd92e82e574891e1ebc79e17d7b708a"
 -  "git+https://gitlab.gnome.org/GNOME/libshew.git#commit=ed782477cb5164320ae4f731d49bc5d475ab2a52"
  )
--b2sums=('50e2bb1d5b64bcb322163653364c8074072266898eefec1eded44ad3da385b63fa4d6911135882fa0ab3895592878a402048d6a87d0718dfe432156ef807b0fa'
+-b2sums=('b19f7bbd499b87d9300d413f96ba2600821407c8624e3fe9f3979dd6c009cca2feb75e32c72c03377988fb88375521dad3575f88b1307a9531c43c8870ccd730'
 +b2sums=('70a2662c46c14888b34cd1379e49ebe2e40efd763a343f09682f90acdcb72942baa26410b4e7453dfebb3eef33db58fecf9343345dbb505992cfa14a69a9007d'
          'e31ae379039dfc345e8032f7b9803a59ded075fc52457ba1553276d3031e7025d9304a7f2167a01be2d54c5e121bae00a2824a9c5ccbf926865d0b24520bb053'
 -        'ecbbb9ce5895cc1caed2ddef39c70b4768d78ea0a929ea932d4149f923f92650973cdaefc2aacc9063f2ccf4ec965b57a9698a286f9a6561e39ce2e579ae4522'
@@ -52,11 +50,7 @@
  
  prepare() {
    ln -s libgnome-volume-control gvc
- 
-   cd $pkgbase
--
--  git cherry-pick -n d6123a003afc9665e7b0067a46dc93b19ea52c07
- }
+@@ -89,6 +85,7 @@
  
  build() {
    local meson_options=(
@@ -64,7 +58,7 @@
      -D gtk_doc=true
      -D tests=false
    )
-@@ -100,12 +95,12 @@
+@@ -98,12 +95,12 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -79,7 +73,7 @@
    optdepends=(
      'evolution-data-server: Evolution calendar integration'
      'gnome-bluetooth-3.0: Bluetooth support'
-@@ -122,11 +117,6 @@
+@@ -120,11 +117,6 @@
  
    meson install -C build --destdir "$pkgdir"
  

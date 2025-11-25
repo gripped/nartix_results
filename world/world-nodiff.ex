@@ -1109,7 +1109,6 @@ indent
 iniparser
 inkscape
 innoextract
-intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
@@ -2014,6 +2013,7 @@ libtiff
 libtiger
 libtlsrpt
 libtomcrypt
+libtommath
 libtorrent-rasterbar
 libtorrent
 libtpms
@@ -3067,6 +3067,7 @@ protobuf-c
 protobuf
 python-protobuf
 ruby-google-protobuf
+proxychains-ng
 proxytunnel
 prrte
 prrte-docs

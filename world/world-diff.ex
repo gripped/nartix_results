@@ -273,6 +273,7 @@ libibus
 igsc
 iio-sensor-proxy
 immer
+intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -389,7 +390,6 @@ libsoxr
 libstaroffice
 libtg_owt
 libthai
-libtommath
 libudev0-shim
 libunwind
 libusbsio
