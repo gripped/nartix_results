@@ -1,26 +1,42 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,16 @@
+@@ -1,28 +1,18 @@
  
  pkgname=hipfft
--pkgver=6.4.4
+-pkgver=7.1.0
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='rocFFT marshalling library.'
  arch=('x86_64')
  url='https://rocm.docs.amd.com/projects/hipFFT/en/latest/index.html'
  license=('MIT')
--depends=('rocm-core' 'glibc' 'gcc-libs' 'hip-runtime-amd' 'rocfft')
+-depends=(
+-  'gcc-libs'
+-  'glibc'
+-  'hip-runtime-amd'
+-  'rocfft'
+-  'rocm-core'
+-)
+-makedepends=(
+-  'cmake'
+-  'git'
+-  'rocm-cmake'
+-)
+-_git='https://github.com/ROCm/rocm-libraries'
+-source=("rocm-libraries::git+$_git.git#tag=rocm-$pkgver")
+-sha256sums=('aaadb942b979b814dc436de772afab3120382aa0e4662e3c58d9a2ddfbfe790c')
+-_dirname="rocm-libraries/projects/$pkgname"
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocfft')
- makedepends=('cmake' 'rocm-cmake' 'git')
- _git='https://github.com/ROCm/hipFFT'
- source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('b700e3320f5228d1476ead64dac47e9b117ddd63cf6d3419bf3534dddfc40088')
++makedepends=('cmake' 'rocm-cmake' 'git')
++_git='https://github.com/ROCm/hipFFT'
++source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('c0a4bac5fa9a757a19a4995fa9571328b6ee0a71e93c66a880069794d65d284a')
  options=(!lto)
- _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
++_dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
  
-@@ -20,7 +20,7 @@
+ build() {
+   local cmake_args=(
+@@ -30,7 +20,7 @@
      -S "$_dirname"
      -B build
      -D CMAKE_BUILD_TYPE=None

@@ -273,7 +273,6 @@ libibus
 igsc
 iio-sensor-proxy
 immer
-intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -359,7 +358,6 @@ libepubgen
 libfido2
 libfprint
 libfreehand
-libgedit-amtk
 libgtop
 libgudev
 libguestfs
@@ -814,6 +812,7 @@ refind-docs
 ristretto
 rnnoise
 rocalution
+rocblas
 rocfft
 rocrand
 rocsolver
@@ -922,6 +921,10 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+uv
+$pkgbase
+"python-$pkgbase"
+"python-$pkgbase"-build
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

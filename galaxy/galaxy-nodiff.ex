@@ -17,7 +17,6 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
-bat
 bleachbit
 blender
 blueman
@@ -74,18 +73,23 @@ claws-mail
 compface
 copyq
 cosmic-app-library
+cosmic-applets
 cosmic-bg
+cosmic-comp
 cosmic-files
 cosmic-greeter
 cosmic-icon-theme
 cosmic-idle
 cosmic-launcher
 cosmic-notifications
+cosmic-osd
 cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
 cosmic-session
+cosmic-settings-daemon
+cosmic-settings
 cosmic-store
 cosmic-terminal
 cosmic-text-editor
@@ -104,6 +108,7 @@ elementary-icon-theme
 engrampa
 eom
 esbuild
+etherape
 exo
 ext4magic
 fastfetch
@@ -119,6 +124,7 @@ fpc-src
 fpc
 freecell-solver
 gammastep
+gaphor
 garcon
 ghostty
 ghostty-shell-integration
@@ -127,6 +133,7 @@ girara
 gitoxide
 gkrellm
 glib-perl
+goocanvas
 grilo-plugins
 grub-btrfs
 grub-customizer
@@ -151,9 +158,6 @@ kodi-dev
 labwc
 lact
 lact-libadwaita
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 leafpad
 lf
@@ -362,9 +366,11 @@ python-pdftotext
 python-py7zr
 python-pybcj
 python-pybluez
+python-pychm
 python-pyppmd
 python-pysol_cards
 python-pyzstd
+python-sphinxcontrib-newsfeed
 python-texttable
 qgis
 qgit
@@ -566,6 +572,7 @@ ttf-jetbrains-mono
 tumbler
 ueberzug
 ueberzugpp
+uncrustify
 utox
 vagrant
 vdirsyncer
@@ -599,6 +606,7 @@ xfce4-datetime-plugin
 xfce4-dev-tools
 xfce4-dict
 xfce4-diskperf-plugin
+xfce4-docklike-plugin
 xfce4-eyes-plugin
 xfce4-fsguard-plugin
 xfce4-genmon-plugin

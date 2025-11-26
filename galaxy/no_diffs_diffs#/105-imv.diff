@@ -4,8 +4,8 @@
  
  build() {
    export CFLAGS+=' -w'
--  arch-meson build $pkgname-v$pkgver -D libnsgif=disabled
-+  artix-meson build $pkgname-v$pkgver -D libnsgif=disabled
+-  arch-meson build $pkgname-v$pkgver
++  artix-meson build $pkgname-v$pkgver
    ninja -C build
  }
  
@@ -21,7 +21,7 @@
  }
  build() {
  export CFLAGS+=' -w'
--arch-meson build $pkgname-v$pkgver -D libnsgif=disabled
-+artix-meson build $pkgname-v$pkgver -D libnsgif=disabled
+-arch-meson build $pkgname-v$pkgver
++artix-meson build $pkgname-v$pkgver
  ninja -C build
  }

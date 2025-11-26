@@ -194,6 +194,7 @@ baobab
 bash-bats-assert
 bash-bats-support
 bash-completion
+bash-preexec
 bats-assert
 bats-support
 bats
@@ -1109,6 +1110,7 @@ indent
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
@@ -1730,6 +1732,7 @@ libfyaml
 libgadu
 libgdata
 libgdiplus
+libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
 libgedit-tepl
@@ -1881,6 +1884,7 @@ libnotify
 libnotify-docs
 libnova
 libnsbmp
+libnsgif
 libnumbertext
 liboauth
 libodfgen
@@ -4745,7 +4749,6 @@ rlwrap
 rng-tools
 robin-map
 roc-toolkit
-rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core
@@ -5631,10 +5634,6 @@ usd
 usort
 utf8cpp
 uthash
-uv
-$pkgbase
-"python-$pkgbase"
-"python-$pkgbase"-build
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip

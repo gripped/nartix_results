@@ -1,35 +1,54 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,16 @@
+@@ -1,30 +1,18 @@
  
  pkgname=hipsparse
--pkgver=6.4.4
+-pkgver=7.1.0
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='rocSPARSE marshalling library.'
  arch=('x86_64')
  url='https://rocm.docs.amd.com/projects/hipSPARSE/en/latest/index.html'
  license=('MIT')
--depends=('rocm-core' 'glibc' 'gcc-libs' 'hip-runtime-amd' 'rocsparse')
--makedepends=('cmake' 'rocm-cmake' 'gcc-fortran' 'gtest')
+-depends=(
+-  'gcc-libs'
+-  'glibc'
+-  'hip-runtime-amd'
+-  'rocm-core'
+-  'rocsparse'
+-)
+-makedepends=(
+-  'cmake'
+-  'gcc-fortran'
+-  'git'
+-  'gtest'
+-  'rocm-cmake'
+-)
+-_git='https://github.com/ROCm/rocm-libraries'
+-source=("rocm-libraries::git+$_git.git#tag=rocm-$pkgver")
+-sha256sums=('aaadb942b979b814dc436de772afab3120382aa0e4662e3c58d9a2ddfbfe790c')
+-_dirname="rocm-libraries/projects/$pkgname"
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocsparse')
 +makedepends=('cmake' 'rocm-cmake' 'gcc-fortran')
- _git='https://github.com/ROCm/hipSPARSE'
- source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('9a979ac480b1d76eb06778f3d9472b7a44cd3642e04e65ff1f4b2e4baaa182b0')
++_git='https://github.com/ROCm/hipSPARSE'
++source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('40c1d2493f87c686d9afd84a00321ad10ca0d0d80d6dcfeee8e51858dd1bd8c1')
  options=(!lto)
- _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
++_dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
  
+ build() {
+   local cmake_args=(
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -2,8 +2,7 @@
+@@ -1,10 +1,8 @@
+ cmake
  gcc-fortran
  gcc-libs
+-git
  glibc
 -gtest
 -hip-runtime-amd

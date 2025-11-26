@@ -1,8 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,29 +1,26 @@
+@@ -1,30 +1,26 @@
+-
  pkgname=hipcub
--pkgver=6.4.4
+-pkgver=7.1.0
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='Header-only library on top of rocPRIM or CUB'
@@ -11,14 +12,17 @@
 +url='https://hipcub.readthedocs.io/en/latest/'
  license=('NCSA')
 -depends=('rocm-core' 'rocprim' 'hip-runtime-amd')
--makedepends=('cmake' 'rocm-cmake' 'rocm-toolchain')
+-makedepends=('git' 'cmake' 'rocm-cmake' 'rocm-toolchain' 'rocm-llvm')
+-_git='https://github.com/ROCm/rocm-libraries'
+-source=("rocm-libraries::git+$_git.git#tag=rocm-$pkgver")
+-sha256sums=('aaadb942b979b814dc436de772afab3120382aa0e4662e3c58d9a2ddfbfe790c')
+-_dirname="rocm-libraries/projects/$pkgname"
 +depends=('rocm-core' 'rocprim' 'hip')
 +makedepends=('cmake' 'rocm-cmake')
- _git='https://github.com/ROCm/hipCUB'
- source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('f68baad99f5fd99b561ebd69999fec3276e23e8fbc9d46e737821bdd980d9c7f')
++_git='https://github.com/ROCm/hipCUB'
++source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('3f912a23dc34510cf18d9097f6eda37e01d01724975c8149c92a64c92415968c')
- _dirname="$(basename $_git)-$(basename "${source[0]}" ".tar.gz")"
++_dirname="$(basename $_git)-$(basename "${source[0]}" ".tar.gz")"
  
  build() {
 -  export CC=amdclang
@@ -43,12 +47,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,5 @@
+@@ -1,8 +1,5 @@
  cmake
+-git
 -hip-runtime-amd
 +hip
  rocm-cmake
  rocm-core
+-rocm-llvm
 -rocm-toolchain
  rocprim
 
