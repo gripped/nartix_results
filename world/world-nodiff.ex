@@ -4749,6 +4749,7 @@ rlwrap
 rng-tools
 robin-map
 roc-toolkit
+rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core

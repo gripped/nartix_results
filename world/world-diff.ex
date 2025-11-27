@@ -812,7 +812,6 @@ refind-docs
 ristretto
 rnnoise
 rocalution
-rocblas
 rocfft
 rocrand
 rocsolver

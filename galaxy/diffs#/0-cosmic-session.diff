@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cosmic-session
+ pkgver=1.0.0.beta.7
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Session manager for the COSMIC desktop environment'
+ arch=(x86_64)
+ url=https://github.com/pop-os/cosmic-session
+@@ -69,7 +69,7 @@
+ build() {
+   cd cosmic-session
+   RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+-  cargo build --release --frozen
++  cargo build --release --frozen --features autostart
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,5 +7,5 @@
+ build() {
+ cd cosmic-session
+ RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+-cargo build --release --frozen
++cargo build --release --frozen --features autostart
+ }

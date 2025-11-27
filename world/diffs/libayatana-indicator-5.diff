@@ -71,15 +71,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--ayatana-ido
+@@ -1,8 +1,10 @@
+ ayatana-ido
 -cmake
 -gdk-pixbuf2
 -glib2
 -glibc
--gobject-introspection
++cmake>
++gcc
++glib2-devel
++glib2>
+ gobject-introspection
 -gtk3
--vala
++gtk3>
++make
++pkgconf
+ vala
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

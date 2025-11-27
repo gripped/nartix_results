@@ -1,7 +1,12 @@
 alsa-utils
 autorandr
-bat
 cinnamon-desktop
+cosmic-applets
+cosmic-comp
+cosmic-osd
+cosmic-session
+cosmic-settings-daemon
+cosmic-settings
 doctest
 dvtm
 ecrire
@@ -16,9 +21,6 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
-lazarus
-lazarus-qt5
-lazarus-qt6
 lemurs
 libetonyek
 libodfgen

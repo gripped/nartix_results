@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cosmic-comp
+ pkgver=1.0.0.beta.7
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Compositor for the COSMIC desktop environment'
+ arch=(x86_64)
+ url='https://github.com/pop-os/cosmic-comp'
+@@ -18,7 +18,7 @@
+   libxkbcommon
+   mesa
+   pixman
+-  systemd-libs
++  libelogind
+   wayland
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,7 @@
+ git
+ glibc
+ libdisplay-info
++libelogind
+ libinput
+ libseat.so
+ libxcb
+@@ -11,5 +12,4 @@
+ lld
+ mesa
+ pixman
+-systemd-libs
+ wayland

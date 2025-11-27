@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cosmic-osd
+ pkgver=1.0.0.beta.7
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='COSMIC On-Screen Display'
+ arch=(x86_64)
+ url=https://github.com/pop-os/cosmic-osd
+@@ -15,7 +15,7 @@
+   libpulse
+   libxkbcommon
+   sound-theme-freedesktop
+-  systemd-libs
++  libelogind
+   wayland
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,11 +3,11 @@
+ gcc-libs
+ git
+ glibc
++libelogind
+ libinput
+ libpipewire
+ libpulse
+ libxkbcommon
+ lld
+ sound-theme-freedesktop
+-systemd-libs
+ wayland
