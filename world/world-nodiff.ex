@@ -1030,7 +1030,6 @@ hip-runtime-nvidia
 hipblas
 hipify-clang
 hiprand
-hiprt
 hipsparse
 hiredis
 hitori
@@ -1874,7 +1873,6 @@ libnewt
 libnfs
 libnghttp3
 libngtcp2
-libnice
 libnih
 libnitrokey
 libnma
@@ -3133,9 +3131,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3542,6 +3537,7 @@ python-funcparserlib
 python-furl
 python-future
 python-fuzzywuzzy
+python-gaphas
 python-gast
 python-gast03
 python-gcp-devrel-py-tools
@@ -4361,6 +4357,7 @@ python-sphinxcontrib-doxylink
 python-sphinxcontrib-htmlhelp
 python-sphinxcontrib-jquery
 python-sphinxcontrib-jsmath
+python-sphinxcontrib-newsfeed
 python-sphinxcontrib-qthelp
 python-sphinxcontrib-serializinghtml
 python-sphinxcontrib-spelling
@@ -5539,7 +5536,6 @@ timezonemap
 tinycdb
 tinycompress
 tinyprog
-tinyproxy
 tinyxml
 tinyxml2
 tinyxxd

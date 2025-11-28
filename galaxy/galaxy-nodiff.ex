@@ -139,7 +139,6 @@ gtk-session-lock
 gtk2
 gtk4-layer-shell
 hyperfine
-imv
 incron
 joyutils
 just
@@ -153,9 +152,6 @@ kodi-dev
 labwc
 lact
 lact-libadwaita
-lazarus
-lazarus-qt5
-lazarus-qt6
 lazygit
 leafpad
 lf

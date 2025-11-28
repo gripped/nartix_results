@@ -262,6 +262,7 @@ hexchat
 hidapi
 hipcub
 hipfft
+hiprt
 hipsolver
 hwloc
 hyphen
@@ -375,6 +376,7 @@ libmpd
 libmspub
 libmwaw
 libmwaw-docs
+libnice
 libnvme
 libofa
 libpagemaker
@@ -689,6 +691,9 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
+pyside6
+pyside6-tools
+shiboken6
 pysolfc
 python-anytree
 python-deadlib
@@ -893,6 +898,7 @@ thunar
 thunderbird
 tigervnc
 tint2
+tinyproxy
 tinysparql
 tinysparql-docs
 tmux

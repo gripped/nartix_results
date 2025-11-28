@@ -20,6 +20,8 @@ artix-qt-presets
 artixnews
 autofs-dinit
 autofs
+b43-firmware-classic
+b43-firmware
 basu
 batticonplus
 birdtray
