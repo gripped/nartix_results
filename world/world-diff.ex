@@ -926,10 +926,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-uv
-$pkgbase
-"python-$pkgbase"
-"python-$pkgbase"-build
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -1138,6 +1134,8 @@ yubico-c
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
+zlib-ng
+zlib-ng-compat
 znc
 zsh
 zsh-doc

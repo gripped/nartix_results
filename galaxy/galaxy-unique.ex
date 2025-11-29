@@ -22,6 +22,7 @@ autofs-dinit
 autofs
 b43-firmware-classic
 b43-firmware
+b43legacy-firmware
 basu
 batticonplus
 birdtray

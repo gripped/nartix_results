@@ -22,9 +22,6 @@ gtk-engine-murrine
 gtklock
 hexchat
 imv
-lazarus
-lazarus-qt5
-lazarus-qt6
 lemurs
 libetonyek
 libodfgen

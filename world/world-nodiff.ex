@@ -5631,6 +5631,10 @@ usd
 usort
 utf8cpp
 uthash
+uv
+$pkgbase
+"python-$pkgbase"
+"python-$pkgbase"-build
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip
@@ -5907,8 +5911,6 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
-zlib-ng
-zlib-ng-compat
 zopfli
 zoxide
 zsh-autosuggestions

@@ -118,6 +118,7 @@ $pkgbase-terminfo
 fpc-src
 fpc
 freecell-solver
+fzy
 gammastep
 gaphor
 garcon
@@ -152,6 +153,9 @@ kodi-dev
 labwc
 lact
 lact-libadwaita
+lazarus
+lazarus-qt5
+lazarus-qt6
 lazygit
 leafpad
 lf
