@@ -1109,7 +1109,6 @@ indent
 iniparser
 inkscape
 innoextract
-intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
@@ -1606,9 +1605,6 @@ leafpad
 leatherman
 lensfun
 leptonica
-level-zero
-level-zero-headers
-level-zero-loader
 leveldb
 lftp
 lgi
@@ -1795,7 +1791,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4777,8 +4772,6 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
-rssguard
-rssguard-lite
 rst2pdf
 rtaudio
 rtaudio-docs
@@ -5152,8 +5145,6 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
-ruff
-python-ruff
 run-parts
 runc
 rust-bindgen
@@ -5536,6 +5527,7 @@ timezonemap
 tinycdb
 tinycompress
 tinyprog
+tinyproxy
 tinyxml
 tinyxml2
 tinyxxd
@@ -5911,6 +5903,8 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
+zlib-ng
+zlib-ng-compat
 zopfli
 zoxide
 zsh-autosuggestions

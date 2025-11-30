@@ -125,6 +125,7 @@ garcon
 ghostty
 ghostty-shell-integration
 ghostty-terminfo
+gigolo
 girara
 gitoxide
 gkrellm
@@ -140,6 +141,7 @@ gtk-session-lock
 gtk2
 gtk4-layer-shell
 hyperfine
+imv
 incron
 joyutils
 just
@@ -307,7 +309,6 @@ mugshot
 nemo
 neovide
 nicotineplus
-nushell
 nyx
 obconf-qt
 obsidian-icon-theme
@@ -316,6 +317,7 @@ onionshare
 openbox
 openrct2
 openshot
+orage
 parole
 pavucontrol-qt
 pcmanfm-gtk3
@@ -607,6 +609,7 @@ xfce4-diskperf-plugin
 xfce4-docklike-plugin
 xfce4-eyes-plugin
 xfce4-fsguard-plugin
+xfce4-generic-slider
 xfce4-genmon-plugin
 xfce4-mailwatch-plugin
 xfce4-mixer
@@ -636,6 +639,7 @@ xfce4-xkb-plugin
 xfconf
 xfdashboard
 xfdesktop
+xfmpc
 xfwm4-themes
 xfwm4
 xonotic-data

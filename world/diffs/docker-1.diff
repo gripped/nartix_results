@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
- 
- pkgname=docker
--pkgver=29.1.1
-+pkgver=29.0.4
- pkgrel=1
- epoch=1
- pkgdesc='Pack, ship and run any application as a lightweight container'
+@@ -7,9 +7,9 @@
  arch=('x86_64' 'aarch64')
  url='https://www.docker.com/'
  license=('Apache-2.0')
@@ -19,17 +12,6 @@
  optdepends=('btrfs-progs: btrfs backend support'
              'pigz: parallel gzip compressor support'
              'docker-buildx: extended build capabilities')
-@@ -19,8 +19,8 @@
-         "git+https://github.com/moby/moby.git#tag=docker-v$pkgver"
-         "git+https://github.com/krallin/tini.git#commit=$_TINI_COMMIT"
-         "$pkgname.sysusers")
--sha256sums=('fe71544bc9695bd6f89495c1669f64b9fb66410c83c761c2139691a9336f4b45'
--            '1437732d41b4e3eac370340125b68539177d280ca5e33c16ec4b66520bd2bb5c'
-+sha256sums=('59808078877ca3d06ed495e9bd2378f6953be9a474fbabdb2ecbbd30fd19e784'
-+            '2d7a29d4992db1427fcf4e5efd4d5a8ba31f01f478cc96db28b19611e88db624'
-             '28a6641d508f60d47315efb3c85d97360188750a45bd6d3c8737d3f1a2b44121'
-             '541826011a9836d05a2f42293d5f1beadf2ca8d89fb604487d61a013505678eb')
- 
 @@ -67,7 +67,7 @@
    echo 'Building daemon'
    _fake_gopath_pushd moby github.com/moby/moby/v2

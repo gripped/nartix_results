@@ -1,18 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,11 +1,11 @@
  
  pkgname=perl-mail-box
--pkgver=3.011
+-pkgver=3.012
 +pkgver=3.010
  pkgrel=1
  pkgdesc="Mail folder manager and MUA backend"
  arch=(any)
+ url="https://search.cpan.org/dist/Mail-Box"
+-license=('Artistic-1.0-Perl' 'GPL-1.0-or-later')
++license=('GPL' 'PerlArtistic')
+ depends=('perl-timedate' 'perl-digest-hmac' 'perl-file-remove>=0.20'
+ 	 'perl-io-stringy' 'perl-mime-types>=1.004' 'perl-mailtools'
+ 	 'perl-object-realize-later>=0.14' 'perl-uri>=1.23'
 @@ -13,7 +13,7 @@
  	 'perl-mail-message')
  options=('!emptydirs')
  source=(https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Mail-Box-$pkgver.tar.gz)
--sha256sums=('0fdb5683c0b15fe95f50a6d5db6801e212797f0025a00f97460b75e8e96ed7ff')
+-sha256sums=('c46be7efcc96149750f650261d20af057aba4bbf0180fcac0115fb639214ed29')
 +sha256sums=('ae194fa250c545c9b9153e3fb5103cab29f79cf2acd4e9fd75cec532201a9564')
  
  prepare() {

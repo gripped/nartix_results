@@ -274,6 +274,7 @@ libibus
 igsc
 iio-sensor-proxy
 immer
+intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -320,6 +321,9 @@ knot
 ksystemlog
 kwin-x11
 kwin
+level-zero
+level-zero-headers
+level-zero-loader
 libabw
 libatasmart
 libayatana-indicator
@@ -367,6 +371,7 @@ libidl2
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmateweather
@@ -823,12 +828,16 @@ rocsolver
 rocsparse
 rrdtool
 rspamd
+rssguard
+rssguard-lite
 rsync
 rtkit
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
+ruff
+python-ruff
 rust
 lib32-rust-libs
 rust-musl
@@ -898,7 +907,6 @@ thunar
 thunderbird
 tigervnc
 tint2
-tinyproxy
 tinysparql
 tinysparql-docs
 tmux
@@ -1134,8 +1142,6 @@ yubico-c
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zlib-ng
-zlib-ng-compat
 znc
 zsh
 zsh-doc

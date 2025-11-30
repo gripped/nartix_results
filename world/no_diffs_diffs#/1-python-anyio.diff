@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,8 @@
+@@ -37,7 +37,8 @@
    cd anyio
    pyver=$(python -c "import sys; print('{}.{}'.format(*sys.version_info[:2]))")
    python -m installer --destdir="$PWD/tmp_install" dist/*.whl
