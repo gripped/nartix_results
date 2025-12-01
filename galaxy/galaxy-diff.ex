@@ -7,6 +7,7 @@ cosmic-osd
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
+dbeaver
 doctest
 dvtm
 ecrire
@@ -21,6 +22,7 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
+imv
 lemurs
 libetonyek
 libodfgen
@@ -109,7 +111,6 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
-nushell
 nvidia-390xx-utils
 nvm
 opensc

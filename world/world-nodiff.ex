@@ -398,8 +398,6 @@ cscope
 ctags
 ctpl
 ctwm
-cuda
-cuda-tools
 cudnn
 cunit
 cups-filters
@@ -1109,6 +1107,7 @@ indent
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
@@ -1605,6 +1604,9 @@ leafpad
 leatherman
 lensfun
 leptonica
+level-zero
+level-zero-headers
+level-zero-loader
 leveldb
 lftp
 lgi
@@ -4772,6 +4774,8 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
+rssguard
+rssguard-lite
 rst2pdf
 rtaudio
 rtaudio-docs
@@ -5145,6 +5149,8 @@ ruby-zeitwerk
 ruby
 ruby2.7
 rubygems
+ruff
+python-ruff
 run-parts
 runc
 rust-bindgen

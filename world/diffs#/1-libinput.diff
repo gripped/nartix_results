@@ -1,33 +1,162 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
- url="https://gitlab.freedesktop.org/libinput/libinput"
+@@ -1,54 +1,28 @@
+ 
+-pkgbase=libinput
+-pkgname=(
+-  libinput
+-  libinput-tools
+-)
+-pkgver=1.30.0
+-pkgrel=2
++pkgname=libinput
++pkgver=1.29.2
++pkgrel=1
+ pkgdesc="Input device management and event handling library"
+-url="https://wayland.freedesktop.org/libinput/doc/latest/"
++url="https://gitlab.freedesktop.org/libinput/libinput"
  arch=(x86_64)
  license=(MIT)
--depends=('mtdev' 'libevdev' 'libwacom' 'systemd-libs' 'glibc')
+-depends=(
+-  gcc-libs
+-  glibc
+-  libevdev
+-  libwacom
+-  lua
+-  mtdev
+-  systemd-libs
+-)
+-makedepends=(
+-  cairo
+-  check
+-  git
+-  glib2
+-  gtk4
+-  libx11
+-  meson
+-  python
+-  python-libevdev
+-  python-pyudev
+-  python-yaml
+-  wayland
+-  wayland-protocols
+-)
+-checkdepends=(python-pytest)
+-source=(
+-  "git+https://gitlab.freedesktop.org/libinput/libinput.git?signed#tag=$pkgver"
+-)
+-b2sums=('cf3e64440022ef497266120763c6af34d54e8d981b1dee8c2ddc3085bba6663116c1ec3ac4511ebf52e3a44262453e2396630e31ce20bcd66f65ae61b3a075db')
+-validpgpkeys=(
+-  3C2C43D9447D5938EF4551EBE23B7E70B467F0BF # Peter Hutterer (Who-T) <office@who-t.net>
+-)
 +depends=('mtdev' 'libevdev' 'libwacom' 'udev' 'glibc')
- makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
- checkdepends=('python-pytest')
- optdepends=('gtk4: libinput debug-gui'
-@@ -17,7 +17,7 @@
- sha256sums=('0429db1121ea514eda80038ca74d9ac866c32596e9eff14b2d9453a696e947d1')
++makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
++checkdepends=('python-pytest')
++optdepends=('gtk4: libinput debug-gui'
++            'python-pyudev: libinput measure'
++            'python-libevdev: libinput measure'
++            'python-yaml: used by various tools')
++source=(https://gitlab.freedesktop.org/libinput/libinput/-/archive/$pkgver/$pkgname-$pkgver.tar.bz2)
++sha256sums=('0429db1121ea514eda80038ca74d9ac866c32596e9eff14b2d9453a696e947d1')
  
  build() {
--  arch-meson $pkgname-$pkgver build \
+-  local meson_options=(
 +  artix-meson $pkgname-$pkgver build \
-     -D udev-dir=/usr/lib/udev \
++    -D udev-dir=/usr/lib/udev \
      -D documentation=false
+-  )
  
+-  arch-meson libinput build "${meson_options[@]}"
++  meson configure build
++
+   meson compile -C build
+ }
+ 
+@@ -56,55 +30,9 @@
+   meson test -C build --print-errorlogs
+ }
+ 
+-_pick() {
+-  local p="$1" f d; shift
+-  for f; do
+-    d="$srcdir/$p/${f#$pkgdir/}"
+-    mkdir -p "$(dirname "$d")"
+-    mv "$f" "$d"
+-    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+-  done
+-}
+-
+-package_libinput() {
+-  optdepends=('libinput-tools: debug utilities')
+-  provides=(libinput.so)
+-
++package() {
+   meson install -C build --destdir "$pkgdir"
+ 
+-  (
+-    cd "$pkgdir"
+-
+-    _pick tools usr/bin
+-    _pick tools usr/lib/libinput
+-    _pick tools usr/share/man
+-    _pick tools usr/share/zsh
+-  )
+-
+-  install -Dm644 libinput/COPYING -t "$pkgdir/usr/share/licenses/$pkgname"
++  install -Dvm644 $pkgname-$pkgver/COPYING \
++    "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+-
+-package_libinput-tools() {
+-  pkgdesc+=" (debug utilities)"
+-  depends=(
+-    cairo
+-    gcc-libs
+-    glib2
+-    glibc
+-    gtk4
+-    libevdev
+-    libinput
+-    libx11
+-    python
+-    python-libevdev
+-    python-pyudev
+-    python-yaml
+-    systemd-libs
+-    wayland
+-  )
+-
+-  mv tools/* "$pkgdir"
+-
+-  install -Dm644 libinput/COPYING -t "$pkgdir/usr/share/licenses/$pkgname"
+-}
+-
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -5,5 +5,5 @@
+@@ -1,21 +1,9 @@
+-cairo
+ check
+-gcc-libs
+-git
+-glib2
+ glibc
+ gtk4
+ libevdev
+-libinput
  libwacom
+-libx11
+-lua
  meson
  mtdev
+-python
+-python-libevdev
+-python-pyudev
+-python-yaml
 -systemd-libs
+-wayland
 +udev
  wayland-protocols

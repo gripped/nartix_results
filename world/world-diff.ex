@@ -86,6 +86,8 @@ containerd
 cppcheck
 cppdap
 crun
+cuda
+cuda-tools
 cups
 libcups
 darkhttpd
@@ -274,7 +276,6 @@ libibus
 igsc
 iio-sensor-proxy
 immer
-intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -321,9 +322,6 @@ knot
 ksystemlog
 kwin-x11
 kwin
-level-zero
-level-zero-headers
-level-zero-loader
 libabw
 libatasmart
 libayatana-indicator
@@ -828,16 +826,12 @@ rocsolver
 rocsparse
 rrdtool
 rspamd
-rssguard
-rssguard-lite
 rsync
 rtkit
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
-ruff
-python-ruff
 rust
 lib32-rust-libs
 rust-musl

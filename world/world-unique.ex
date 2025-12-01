@@ -480,6 +480,7 @@ python-configparser
 python-dbus
 python-pytz-deprecation-shim
 python-screeninfo
+python-sphinx-book-theme
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
 qemu-guest-agent-runit
