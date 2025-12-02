@@ -398,6 +398,7 @@ cscope
 ctags
 ctpl
 ctwm
+cuda
 cudnn
 cunit
 cups-filters
@@ -527,7 +528,6 @@ electrum
 elementary-icon-theme
 elinks
 elisa
-elixir
 ell
 embree3
 emovix
@@ -648,7 +648,6 @@ five-or-more
 flac
 flac-doc
 flake8
-flameshot
 flashrom
 flatbuffers
 python-flatbuffers
@@ -1780,7 +1779,6 @@ libieee1284
 libimagequant
 libimobiledevice-glue
 libimobiledevice
-libindi
 libindicator
 libindicator-gtk2
 libindicator-gtk3
@@ -1793,6 +1791,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1870,6 +1869,7 @@ libnewt
 libnfs
 libnghttp3
 libngtcp2
+libnice
 libnih
 libnitrokey
 libnma
@@ -2463,6 +2463,8 @@ noto-fonts
 noto-fonts-extra
 npm
 nrpe
+nsight-compute
+nsight-systems
 nss-mdns
 nsxiv
 nsync
@@ -4333,6 +4335,7 @@ python-sphinx-argparse
 python-sphinx-autobuild
 python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
+python-sphinx-book-theme
 python-sphinx-copybutton
 python-sphinx-furo
 python-sphinx-hawkmoth
@@ -5831,6 +5834,7 @@ xorg-xinput
 xorg-xkbcomp
 xorg-xkill
 xorg-xlogo
+xorg-xlsfonts
 xorg-xmessage
 xorg-xmodmap
 xorg-xprop
@@ -5856,7 +5860,6 @@ xterm
 xtrans
 xvidcore
 xwallpaper
-yad
 yajl
 yakuake
 yaml-cpp

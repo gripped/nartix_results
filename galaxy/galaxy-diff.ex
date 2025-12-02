@@ -7,7 +7,6 @@ cosmic-osd
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
-dbeaver
 doctest
 dvtm
 ecrire
@@ -22,7 +21,6 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
-imv
 lemurs
 libetonyek
 libodfgen

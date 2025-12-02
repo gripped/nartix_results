@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,7 +45,7 @@
+     -D gtk_doc=enabled
+   )
+ 
+-  arch-meson libnice build "${meson_options[@]}"
++  artix-meson libnice build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ -D glib_debug=disabled
+ -D gtk_doc=enabled
+ )
+-arch-meson libnice build "${meson_options[@]}"
++artix-meson libnice build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,23 @@
+ 
+ pkgname=yad
+-pkgver=14.2
+-pkgrel=1
++pkgver=14.1
++pkgrel=2
+ pkgdesc='A fork of zenity - display graphical dialogs from shell scripts or command line'
+ url='https://github.com/v1cont/yad'
+ arch=('x86_64')
+-license=('GPL-3.0-or-later')
++license=('GPL3')
+ depends=('gtk3' 'webkit2gtk-4.1' 'gtksourceview3' 'gspell')
+-makedepends=('autoconf' 'automake')
++makedepends=('autoconf' 'automake' 'intltool')
+ source=("https://github.com/v1cont/yad/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.xz")
+-sha256sums=('5cab399af8d9a10b76d477f848180d00addba38f4f1272a05b153a393bba3038')
++sha256sums=('dde047a915cd8d3892c32b6ba031876f5cda673e01882c99613f043867c88133')
+ 
+ prepare() {
+   cd "${srcdir}/${pkgname}-${pkgver}"
+ 
++  sed -i 's|webkit2gtk-4.0|webkit2gtk-4.1|' configure.ac
++
+   autoreconf -ivf
++  intltoolize
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,4 +3,5 @@
+ gspell
+ gtk3
+ gtksourceview3
++intltool
+ webkit2gtk-4.1
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,8 @@
+ prepare() {
+ cd "${srcdir}/${pkgname}-${pkgver}"
++sed -i 's|webkit2gtk-4.0|webkit2gtk-4.1|' configure.ac
+ autoreconf -ivf
++intltoolize
+ }
+ build() {
+ cd "${srcdir}/${pkgname}-${pkgver}"

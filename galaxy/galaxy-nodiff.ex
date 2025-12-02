@@ -91,6 +91,7 @@ cosmic-text-editor
 cosmic-wallpapers
 cosmic-workspaces
 cvs
+dbeaver
 dillo
 dino
 distrobox
@@ -140,6 +141,7 @@ gtk-session-lock
 gtk2
 gtk4-layer-shell
 hyperfine
+imv
 incron
 joyutils
 just

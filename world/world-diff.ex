@@ -86,8 +86,6 @@ containerd
 cppcheck
 cppdap
 crun
-cuda
-cuda-tools
 cups
 libcups
 darkhttpd
@@ -129,6 +127,7 @@ earlyoom
 element.io
 element-web
 element-desktop
+elixir
 emacs
 emacs-nox
 emacs-wayland
@@ -154,6 +153,7 @@ fig2dev
 firefox
 firewalld
 firewalld-test
+flameshot
 flatpak
 flatpak-docs
 flite
@@ -366,10 +366,10 @@ libgudev
 libguestfs
 libhandy0
 libidl2
+libindi
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmateweather
@@ -379,7 +379,6 @@ libmpd
 libmspub
 libmwaw
 libmwaw-docs
-libnice
 libnvme
 libofa
 libpagemaker
@@ -1131,6 +1130,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yad
 yubico-c-client
 yubico-c
 yubikey-personalization
