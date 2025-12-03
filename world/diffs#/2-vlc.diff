@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,13 +5,13 @@
+@@ -5,7 +5,7 @@
    libvlc
    vlc-cli
    vlc-gui-{ncurses,qt,skins2}
@@ -9,13 +9,6 @@
    vlc-plugins-{all,base,extra,video-output,visualization}
  )
  _vlcver=3.0.21
- _vlcfixupver=
- pkgver=$_vlcver${_vlcfixupver//-/.r}
--pkgrel=32
-+pkgrel=31
- pkgdesc='Free and open source cross-platform multimedia player and framework'
- url=https://www.videolan.org/vlc/
- arch=(x86_64)
 @@ -114,7 +114,7 @@
    speex
    speexdsp

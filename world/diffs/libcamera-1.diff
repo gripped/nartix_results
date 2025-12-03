@@ -1,20 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
-   gst-plugin-libcamera
-   python-libcamera
- )
--pkgver=0.6.0
-+pkgver=0.5.2
- pkgrel=1
- pkgdesc="A complex camera support library for Linux, Android, and ChromeOS"
- arch=(x86_64)
-@@ -33,17 +33,16 @@
-   python-ply
-   python-pyyaml
-   python-sphinx
--  python-sphinx-book-theme
-   python-sphinxcontrib-doxylink
+@@ -38,7 +38,7 @@
    qt6-base
    qt6-tools
    sdl2
@@ -23,22 +9,15 @@
    texlive-core
  )
  source=("git+$_url#tag=v$pkgver")
--sha512sums=('6aff990fb8be8d57aef75c59cbfae7f22fe560df8f89e1d16be22ed6bb8a31023729651e230ef227bd4be20483879c10d9bac1ed13dd2a4b275af6e5f76c6b5d')
--b2sums=('960a3b18040104514755b30ea8c12c2b68473372385cfb471ab536fed75838ea6a383e6c68eacec837ed454614508357efe35dbba8c09b93873a80c3ea552d1a')
-+sha512sums=('4d9688e2587854cd7bd4b98cb53b4f5c89dab588c793523f0d3d41cdb7f884dca5490dd72eb78aeee838bc33a2db6db580409d4835841e8c123e3edf1fa7bf78')
-+b2sums=('749b620a993140ac3ce4d7c1808d588f65a99592f03247cff117d3949d3a169650d7f763fb4f67eb296c95f8f663daf7b3fedca1e2c8c48345b2733d54d8cfb2')
- 
- _pick() {
-   local p="$1" f d; shift
-@@ -68,19 +67,10 @@
+@@ -68,18 +68,8 @@
      -D test=true
    )
  
 -  arch-meson $pkgbase build "${meson_options[@]}"
 +  artix-meson $pkgbase build "${meson_options[@]}"
    meson compile -C build
- }
- 
+-}
+-
 -check() {
 -  local tests=$(
 -    meson test -C build --list | awk '{print $3}' \
@@ -47,10 +26,9 @@
 -      | grep -v memory_lifetime_test \
 -  )
 -  meson test -C build ${tests[@]}
--}
+ }
  
  package_libcamera() {
-   license=(
 @@ -102,7 +92,7 @@
      libyaml
      libyuv
@@ -74,13 +52,7 @@
  libudev.so
  libunwind
  libyaml
-@@ -36,12 +37,10 @@
- python-ply
- python-pyyaml
- python-sphinx
--python-sphinx-book-theme
- python-sphinxcontrib-doxylink
- qt6-base
+@@ -42,6 +43,5 @@
  qt6-tools
  sdl2
  sh

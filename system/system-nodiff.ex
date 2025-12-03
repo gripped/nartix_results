@@ -45,7 +45,6 @@ gnupg
 gnutls
 gpgme
 groff
-grub
 guile
 hdparm
 hwdata

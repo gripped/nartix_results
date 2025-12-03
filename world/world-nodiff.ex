@@ -648,6 +648,7 @@ five-or-more
 flac
 flac-doc
 flake8
+flameshot
 flashrom
 flatbuffers
 python-flatbuffers
@@ -1027,6 +1028,7 @@ hip-runtime-nvidia
 hipblas
 hipify-clang
 hiprand
+hiprt
 hipsparse
 hiredis
 hitori
@@ -1791,7 +1793,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2547,7 +2548,6 @@ openpgl
 openpmix
 openpmix-docs
 openscenegraph
-openshadinglanguage
 opensips
 openslide
 opensmtpd-filter-dkimsign
@@ -3982,7 +3982,6 @@ python-proxmoxer
 python-proxy.py
 python-psutil
 python-psycopg-pool
-python-psycopg
 python-psycopg2
 python-pt
 python-ptrace
@@ -5860,6 +5859,7 @@ xterm
 xtrans
 xvidcore
 xwallpaper
+yad
 yajl
 yakuake
 yaml-cpp

@@ -153,7 +153,6 @@ fig2dev
 firefox
 firewalld
 firewalld-test
-flameshot
 flatpak
 flatpak-docs
 flite
@@ -264,7 +263,6 @@ hexchat
 hidapi
 hipcub
 hipfft
-hiprt
 hipsolver
 hwloc
 hyphen
@@ -370,6 +368,7 @@ libindi
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmateweather
@@ -590,6 +589,7 @@ openipmi
 openjade
 openrct2
 openresolv
+openshadinglanguage
 opensmtpd
 opensnitch
 opensp
@@ -702,6 +702,7 @@ python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-psycopg
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -1130,7 +1131,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yad
 yubico-c-client
 yubico-c
 yubikey-personalization

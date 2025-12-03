@@ -35,6 +35,7 @@ glibc-locales
 gmp
 gpm
 grep
+grub
 gssproxy
 gzip
 iputils
