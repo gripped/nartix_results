@@ -127,7 +127,6 @@ earlyoom
 element.io
 element-web
 element-desktop
-elixir
 emacs
 emacs-nox
 emacs-wayland
@@ -1136,6 +1135,8 @@ yubico-c
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
+zlib-ng
+zlib-ng-compat
 znc
 zsh
 zsh-doc

@@ -1,6 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,30 +5,16 @@
+@@ -1,29 +1,20 @@
+ 
+ pkgname=immer
+-pkgver=0.9.0
++pkgver=0.8.1
+ pkgrel=1
  pkgdesc='Postmodern immutable and persistent data structures for C++'
  arch=(any)
  url='https://sinusoid.es/immer'
@@ -12,12 +17,7 @@
 -checkdepends=(boost
 -              fmt)
 -source=(git+https://github.com/arximboldi/immer#tag=v$pkgver)
--sha256sums=('58a8c75270c642e3232d7ae27449ef3d07aa640eeedb53d67e6577493c1b79e7')
--
--prepare() {
--  cd $pkgname
--  git cherry-pick -n f381e4988c1562f0f64533146c9b9cb7c0823b3e
--}
+-sha256sums=('ff78b15c7398254d250d2da6f3dccff8d97f5c88410982087c64f180d3258191')
 +             cmake)
 +source=(https://github.com/arximboldi/immer/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
 +sha256sums=('de8411c84830864604bb685dc8f2e3c0dbdc40b95b2f6726092f7dcc85e75209')
@@ -49,11 +49,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,5 @@
--prepare() {
--cd $pkgname
--git cherry-pick -n f381e4988c1562f0f64533146c9b9cb7c0823b3e
--}
+@@ -1,5 +1,5 @@
  build() {
 -cmake -B build -S $pkgname \
 +cmake -B build -S $pkgname-$pkgver \

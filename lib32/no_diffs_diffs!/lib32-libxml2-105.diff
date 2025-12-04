@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   lib32-libxml2
- )
- pkgver=2.15.1
--pkgrel=4
-+pkgrel=2
- pkgdesc="XML C parser and toolkit (32-bit)"
- url="https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home"
- arch=(x86_64)
 @@ -42,7 +42,7 @@
      -D python=disabled
    )
@@ -18,27 +9,11 @@
    meson compile -C build
  }
  
-@@ -51,7 +51,6 @@
- }
- 
- package_lib32-libxml2() {
--  depends+=(libicuuc.so)
-   provides=(libxml2.so)
- 
-   meson install -C build --destdir "$pkgdir"
 
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -3,6 +3,5 @@
- lib32-icu
- lib32-readline
- lib32-zlib
--libicuuc.so
- libxml2
- meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

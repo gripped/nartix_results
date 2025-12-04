@@ -17,6 +17,7 @@ lib32-libcurl-gnutls
 lib32-dconf
 lib32-directx-headers
 lib32-duktape
+lib32-e2fsprogs
 lib32-expat
 lib32-fakeroot
 lib32-faudio
@@ -29,6 +30,7 @@ lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
 lib32-glib-networking
+lib32-glib2
 lib32-glu
 lib32-gmp
 lib32-gnutls

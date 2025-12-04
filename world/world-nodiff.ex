@@ -528,6 +528,7 @@ electrum
 elementary-icon-theme
 elinks
 elisa
+elixir
 ell
 embree3
 emovix
@@ -5912,8 +5913,6 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
-zlib-ng
-zlib-ng-compat
 zopfli
 zoxide
 zsh-autosuggestions
