@@ -1,15 +1,55 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -1,15 +1,16 @@
+ 
+ pkgbase="cups"
+ pkgname=('libcups' 'cups')
+-pkgver=2.4.16
+-pkgrel=1
++pkgver=2.4.15
++pkgrel=2
+ epoch=2
+ arch=('x86_64')
  license=('Apache-2.0 WITH LLVM-exception AND BSD-3-Clause AND Zlib AND BSD-2-Clause')
  url="https://openprinting.github.io/cups/"
  makedepends=('acl' 'pam' 'gnutls' 'cups-filters' 'colord'
--             'libusb' 'avahi'  'systemd' 'libpaper' 'git')
+-             'libusb' 'avahi'  'systemd' 'libpaper') # 'git')
+-source=(https://github.com/OpenPrinting/cups/releases/download/v${pkgver}/cups-${pkgver}-source.tar.gz{,.sig}
 +             'libusb' 'avahi'  'libpaper' 'git')
- source=(#https://github.com/OpenPrinting/cups/releases/download/v${pkgver}/cups-${pkgver}-source.tar.gz{,.sig}
-         "git+https://github.com/OpenPrinting/cups.git#tag=v$pkgver"
++source=(#https://github.com/OpenPrinting/cups/releases/download/v${pkgver}/cups-${pkgver}-source.tar.gz{,.sig}
++        "git+https://github.com/OpenPrinting/cups.git#tag=v$pkgver"
          cups.logrotate
-@@ -47,7 +47,7 @@
+         cups.pam
+         cups.sysusers
+@@ -17,18 +18,18 @@
+         cups-freebind.patch
+         guid.patch
+ )
+-sha256sums=('0339587204b4f9428dd0592eb301dec0bf9ea6ea8dce5d9690d56be585aba92d'
+-            'SKIP'
++sha256sums=('69c0d6ad8629aff633f4e4a510761ecc61263ca917d5a6ddc64e82ee7785a746'
+             'd87fa0f0b5ec677aae34668f260333db17ce303aa1a752cba5f8e72623d9acf9'
+             '57dfd072fd7ef0018c6b0a798367aac1abb5979060ff3f9df22d1048bb71c0d5'
+             '5324bd933385713e0dfd0b20cf5f861d1401bdeb693c5be7edc3ca4404e78e2b'
+             'f0b15192952c151b1843742c87850ff3a7d0f3ba5dd236ed16623ef908472ad7'
+             '3385047b9ac8a7b13aeb8f0ca55d15f793ce7283516db0155fe28a67923c592d'
+             '8becc2ad17787ef755fb77f83a87cf52f1a38154c5dde0f4a0051e06a0583fb9')
+-validpgpkeys=('7082A0A50A2E92640F3880E0E4522DCC9B246FF7') # Zdenek Dohnal (The old 4D4227D7 key revoked) <zdohnal@redhat.com>
+ 
+ prepare() {
+-  cd "${pkgbase}"-${pkgver}
++  cd "${pkgbase}" #-${pkgver}
++
++  git revert -n 5d414f1f91bdca118413301b148f0b188eb1cdc6
+ 
+   patch -Np1 -i "${srcdir}"/cups-2.4.0-statedir.patch
+ 
+@@ -42,11 +43,11 @@
+ }
+ 
+ build() {
+-  cd "${pkgbase}"-${pkgver}
++  cd "${pkgbase}" #-${pkgver}
  
    export DSOFLAGS=${LDFLAGS}
  
@@ -18,7 +58,20 @@
       --sysconfdir=/etc \
       --localstatedir=/var \
       --sbindir=/usr/bin \
-@@ -94,7 +94,7 @@
+@@ -73,10 +74,10 @@
+ pkgdesc="OpenPrinting CUPS - client libraries and headers"
+ depends=('gnutls' 'avahi' 'glibc' 'zlib' 'sh')
+ 
+-  cd ${pkgbase}-${pkgver}
++  cd ${pkgbase} #-${pkgver}
+   make BUILDROOT="${pkgdir}" install-headers install-libs
+   mkdir -p "${pkgdir}"/usr/bin
+-  install -m755 "${srcdir}"/"${pkgbase}"-${pkgver}/cups-config "${pkgdir}"/usr/bin/cups-config
++  install -m755 "${srcdir}"/"${pkgbase}"/cups-config "${pkgdir}"/usr/bin/cups-config
+ 
+   install -m644 -Dt "${pkgdir}/usr/share/licenses/${pkgname}" {LICENSE,NOTICE}
+ }
+@@ -93,7 +94,7 @@
          etc/logrotate.d/cups
          etc/pam.d/cups)
  depends=('acl' 'pam' "libcups>=${pkgver}" 'cups-filters'
@@ -27,13 +80,28 @@
           'glibc' 'gcc-libs' 'avahi' 'gnutls')
  optdepends=('cups-browsed: to browse the network for remote CUPS queues and IPP network printers'
              'libusb: for usb printer backend'
+@@ -102,7 +103,7 @@
+             'colord: for ICC color profile support'
+             'logrotate: for logfile rotation support')
+ 
+-  cd "${pkgbase}"-${pkgver}
++  cd "${pkgbase}" #-${pkgver}
+   make BUILDROOT="${pkgdir}" install-data install-exec
+ 
+   rm -f "${pkgdir}"/usr/bin/cups-config
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -10,9 +10,8 @@
+@@ -4,14 +4,14 @@
+ cups-filters
+ dbus
+ gcc-libs
++git
+ glibc
+ gnutls
  hicolor-icon-theme
  libcups>
  libpaper

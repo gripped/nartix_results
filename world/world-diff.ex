@@ -148,6 +148,7 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+ffmpegthumbnailer
 fig2dev
 firefox
 firewalld
@@ -520,6 +521,7 @@ vulkan-virtio
 vulkan-mesa-device-select
 vulkan-mesa-layers
 mesa-docs
+meson
 mgba
 libmgba
 mgba-sdl

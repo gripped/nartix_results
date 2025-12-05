@@ -624,7 +624,6 @@ festival
 ffcall
 ffmpeg
 ffmpeg4.4
-ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
@@ -2310,7 +2309,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard
