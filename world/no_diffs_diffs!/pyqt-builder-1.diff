@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=pyqt-builder
+-pkgver=1.19.1
++pkgver=1.19.0
+ pkgrel=1
+ pkgdesc='The PEP 517 compliant PyQt build system'
+ arch=(any)
+@@ -15,7 +15,7 @@
+              python-setuptools-scm
+              python-wheel)
+ source=(git+https://github.com/Python-PyQt/PyQt-builder#tag=$pkgver)
+-sha256sums=('0667fff7f451e59ba9eba68cc0fd17208899fb4e588118f80b16ae584f31d939')
++sha256sums=('16eeb5531721fa8604ddf4c64fa0fc5d494181566536011b44a08d88dc9e6156')
+ 
+ build() {
+   cd PyQt-builder

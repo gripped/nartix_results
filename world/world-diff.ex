@@ -108,6 +108,13 @@ dotnet-sdk-8.0
 dotnet-targeting-pack-8.0
 aspnet-targeting-pack-8.0
 dotnet-source-built-artifacts-8.0
+dotnet-core-9.0
+dotnet-runtime-9.0
+aspnet-runtime-9.0
+dotnet-sdk-9.0
+dotnet-targeting-pack-9.0
+aspnet-targeting-pack-9.0
+dotnet-source-built-artifacts-9.0
 dotnet-core
 dotnet-host
 dotnet-runtime
@@ -368,7 +375,6 @@ libindi
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmateweather

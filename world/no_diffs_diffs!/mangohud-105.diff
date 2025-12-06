@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ _pkgname=MangoHud
+ pkgname=mangohud
+ pkgver=0.8.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more."
+ arch=('x86_64')
+ url="https://github.com/flightlessmango/MangoHud"
+ license=('MIT')
+-makedepends=('appstream' 'cmocka' 'git' 'glslang' 'libxnvctrl' 'libxrandr' 'meson' 'python-mako' 'vulkan-headers')
+-depends=('dbus' 'fmt' 'gcc-libs' 'glfw' 'hicolor-icon-theme' 'libglvnd' 'libx11' 'libxkbcommon' 'python' 'python-matplotlib' 'python-numpy' 'vulkan-icd-loader' 'wayland')
++makedepends=('appstream' 'cmocka' 'git' 'glslang' 'libxnvctrl' 'libxrandr' 'meson' 'nlohmann-json' 'python-mako' 'vulkan-headers')
++depends=('dbus' 'fmt' 'gcc-libs' 'glew' 'glfw' 'hicolor-icon-theme' 'libglvnd' 'libx11' 'libxkbcommon' 'python' 'python-matplotlib' 'python-numpy' 'vulkan-icd-loader' 'wayland')
+ optdepends=('gamescope: Use MangoApp as an overlay within gamescope'
+             'libxnvctrl: NVIDIA GPU stats by XNVCtrl')
+ replaces=("$pkgname-common" "$pkgname-common-wayland" "$pkgname-common-x11" "mangoapp" "$pkgname-x11" "$pkgname-wayland")
 @@ -23,7 +23,7 @@
  }
  
@@ -13,7 +30,24 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,7 @@
+ fmt
+ gcc-libs
+ git
++glew
+ glfw
+ glslang
+ hicolor-icon-theme
+@@ -13,6 +14,7 @@
+ libxnvctrl
+ libxrandr
+ meson
++nlohmann-json
+ python
+ python-mako
+ python-matplotlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

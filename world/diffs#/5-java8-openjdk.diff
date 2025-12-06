@@ -78,14 +78,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,7 +3,6 @@
- ca-certificates-utils
- cpio
- fontconfig
+@@ -1,21 +0,0 @@
+-alsa-lib
+-bash
+-ca-certificates-utils
+-cpio
+-fontconfig
 -gcc14
- giflib
- git
- hicolor-icon-theme
+-giflib
+-git
+-hicolor-icon-theme
+-java-environment
+-java-environment-common
+-java-runtime-common
+-jre8-openjdk
+-jre8-openjdk-headless
+-libcups
+-libxrender
+-libxtst
+-nss
+-unzip
+-xdg-utils
+-zip
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -38,6 +38,7 @@ grep
 grub
 gssproxy
 gzip
+iproute2
 iputils
 libsasl
 libseccomp
