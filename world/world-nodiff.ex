@@ -642,7 +642,6 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
-firejail
 fish
 five-or-more
 flac
@@ -1036,7 +1035,6 @@ hivex
 hostapd
 hotdoc
 hplip
-hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -2548,6 +2546,7 @@ openpgl
 openpmix
 openpmix-docs
 openscenegraph
+openshadinglanguage
 opensips
 openslide
 opensmtpd-filter-dkimsign
@@ -2957,13 +2956,11 @@ php-igbinary
 php-legacy-igbinary
 php-imagick
 php-legacy-imagick
-php-memcache
 php-memcached
 php-mongodb
 php-legacy-mongodb
 php-redis
 php-legacy-redis
-php-snuffleupagus
 picard
 picmi
 picom
@@ -3248,7 +3245,6 @@ python-bitarray
 python-bitstring
 python-black
 python-bleach
-python-blessed
 python-blinker
 python-blockbuster
 python-blosc
@@ -3655,6 +3651,7 @@ python-isoduration
 python-isort
 python-iterable-io
 python-itsdangerous
+python-jaconv
 python-jaraco.classes
 python-jaraco.collections
 python-jaraco.context
@@ -3982,6 +3979,7 @@ python-proxmoxer
 python-proxy.py
 python-psutil
 python-psycopg-pool
+python-psycopg
 python-psycopg2
 python-pt
 python-ptrace
@@ -4214,6 +4212,7 @@ python-pyzmq
 python-pyzstd
 python-qdarkstyle
 python-qrcode
+python-qt-material
 python-qtpy
 python-quart-trio
 python-quart
@@ -4576,6 +4575,7 @@ python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
+qalculate-gtk
 qalculate-qt
 qbe
 qbs
@@ -5912,6 +5912,8 @@ zita-resampler
 zita-resampler-docs
 zix
 zix-docs
+zlib-ng
+zlib-ng-compat
 zopfli
 zoxide
 zsh-autosuggestions

@@ -1,22 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=python-aiobotocore
--pkgver=2.26.0
-+pkgver=2.25.2
- pkgrel=1
- pkgdesc='asyncio support for botocore library using aiohttp'
- arch=(any)
-@@ -38,7 +38,7 @@
-   python-yaml
- )
- source=("git+$url.git#tag=$pkgver")
--sha256sums=('322c56b3dc6f71a67fded420fdcc675f19dedf8b2f0b31ae8ab9535b0097235e')
-+sha256sums=('80dd4f7c7cfbbe02d6dbd136c8fdd9f1c18beacdd916ee5e3e4d5b7f85a68c3c')
- 
- build() {
-   cd ${pkgname#python-}
 @@ -53,6 +53,8 @@
      --deselect='tests/test_patches.py'
      --deselect='tests/botocore_tests/unit/test_signers.py::test_signers_generate_db_auth_token[aiohttp-aws_auth0]'

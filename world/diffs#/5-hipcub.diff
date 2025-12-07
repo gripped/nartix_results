@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,30 +1,26 @@
+@@ -1,29 +1,26 @@
 -
  pkgname=hipcub
--pkgver=7.1.0
+-pkgver=7.1.1
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='Header-only library on top of rocPRIM or CUB'
@@ -14,9 +14,8 @@
 -depends=('rocm-core' 'rocprim' 'hip-runtime-amd')
 -makedepends=('git' 'cmake' 'rocm-cmake' 'rocm-toolchain' 'rocm-llvm')
 -_git='https://github.com/ROCm/rocm-libraries'
--source=("rocm-libraries::git+$_git.git#tag=rocm-$pkgver")
--sha256sums=('aaadb942b979b814dc436de772afab3120382aa0e4662e3c58d9a2ddfbfe790c')
--_dirname="rocm-libraries/projects/$pkgname"
+-source=("$pkgname-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/releases/download/rocm-$pkgver/hipcub.tar.gz")
+-sha256sums=('6dadbb7689c7906493ec42f56792d9557f0293670a86059c9c188851f399647b')
 +depends=('rocm-core' 'rocprim' 'hip')
 +makedepends=('cmake' 'rocm-cmake')
 +_git='https://github.com/ROCm/hipCUB'
@@ -30,17 +29,25 @@
 -  CXXFLAGS+=" -fcf-protection=none"
    local cmake_args=(
      -Wno-dev
-     -S "$_dirname"
+-    -S "$pkgname"
++    -S "$_dirname"
      -B build
      -D CMAKE_BUILD_TYPE=None
      -D CMAKE_INSTALL_PREFIX=/opt/rocm
--    -D CMAKE_TOOLCHAIN_FILE="$srcdir/$_dirname"/toolchain-linux.cmake
+-    -D CMAKE_TOOLCHAIN_FILE="$srcdir/$pkgname"/toolchain-linux.cmake
 -    -D GPU_TARGETS=$(rocm-supported-gfx)
 +    -D CMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc
 +    -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"
    )
    cmake "${cmake_args[@]}"
    cmake --build build
+@@ -31,5 +28,5 @@
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+-  install -Dm644 "$pkgname/LICENSE.txt" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
++  install -Dm644 "$_dirname/LICENSE.txt" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
 
 
 ############# Stripped diff below #################
@@ -67,11 +74,12 @@
 -CXXFLAGS+=" -fcf-protection=none"
  local cmake_args=(
  -Wno-dev
- -S "$_dirname"
+--S "$pkgname"
++-S "$_dirname"
  -B build
  -D CMAKE_BUILD_TYPE=None
  -D CMAKE_INSTALL_PREFIX=/opt/rocm
---D CMAKE_TOOLCHAIN_FILE="$srcdir/$_dirname"/toolchain-linux.cmake
+--D CMAKE_TOOLCHAIN_FILE="$srcdir/$pkgname"/toolchain-linux.cmake
 --D GPU_TARGETS=$(rocm-supported-gfx)
 +-D CMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc
 +-D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"

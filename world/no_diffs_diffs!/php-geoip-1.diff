@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=('php-geoip' 'php-legacy-geoip')
+ pkgver=1.1.1
+-pkgrel=14
++pkgrel=13
+ pkgdesc="GeoIP module for PHP"
+ arch=('x86_64')
+ url="https://pecl.php.net/package/geoip"
+-license=('PHP-3.01')
++license=('PHP')
+ depends=('geoip')
+ makedepends=('php' 'php-legacy')
+ source=(https://pecl.php.net/get/geoip-$pkgver.tgz

@@ -144,7 +144,6 @@ hyperfine
 imv
 incron
 joyutils
-just
 kanshi
 kernel-headers-musl
 kodi

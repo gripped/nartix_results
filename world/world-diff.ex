@@ -158,6 +158,7 @@ fcron
 ffmpegthumbnailer
 fig2dev
 firefox
+firejail
 firewalld
 firewalld-test
 flatpak
@@ -271,6 +272,7 @@ hidapi
 hipcub
 hipfft
 hipsolver
+hsa-rocr
 hwloc
 hyphen
 hyphen-en
@@ -596,7 +598,6 @@ openipmi
 openjade
 openrct2
 openresolv
-openshadinglanguage
 opensmtpd
 opensnitch
 opensp
@@ -635,6 +636,8 @@ php-legacy-snmp
 php-legacy-sqlite
 php-legacy-tidy
 php-legacy-xsl
+php-memcache
+php-snuffleupagus
 php
 php-cgi
 php-apache
@@ -705,11 +708,11 @@ pyside6-tools
 shiboken6
 pysolfc
 python-anytree
+python-blessed
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-psycopg
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -1143,8 +1146,6 @@ yubico-c
 yubikey-personalization
 zathura-pdf-mupdf
 zeromq
-zlib-ng
-zlib-ng-compat
 znc
 zsh
 zsh-doc

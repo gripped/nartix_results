@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=just
+-pkgver=1.44.0
++pkgver=1.43.1
+ pkgrel=1
+ pkgdesc="A handy way to save and run project-specific commands"
+ arch=("x86_64")
+@@ -9,11 +9,11 @@
+ depends=("gcc-libs")
+ makedepends=("cargo")
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/casey/${pkgname}/archive/${pkgver}.tar.gz")
+-sha256sums=('450ab569b76053ec34c2ae0616cdf50114a4dce0c2e8dfba2d79bdfb60081a04')
++sha256sums=('741b5c6743501dc4dbd23050dd798f571d873d042b67bcea113d622b0c37d180')
+ 
+ prepare() {
+   cd "${pkgname}-${pkgver}"
+-  cargo fetch --locked --target "$(rustc --print host-tuple)"
++  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+   mkdir -p man completions
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd "${pkgname}-${pkgver}"
+-cargo fetch --locked --target "$(rustc --print host-tuple)"
++cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ mkdir -p man completions
+ }
+ build() {

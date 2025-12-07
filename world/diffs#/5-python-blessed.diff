@@ -1,0 +1,79 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-blessed
+-pkgver=1.25
+-pkgrel=1
++pkgver=1.21.0
++pkgrel=2
+ pkgdesc='A thin, practical wrapper around terminal styling, screen positioning, and keyboard input'
+ arch=(any)
+ url=https://github.com/jquast/blessed
+@@ -12,19 +12,16 @@
+ )
+ makedepends=(
+   git
+-  python-build
+-  python-flit-core
+-  python-installer
+-  python-wheel
++  python-setuptools
+ )
+ checkdepends=(
+   python-pytest
+   python-pytest-rerunfailures
+   python-pytest-xdist
+ )
+-_tag=864a8f7d6de752d7fede2c030758d245f1bb8e21
++_tag=e4554e12a5f33d7fd2236b1e2be976842c110e7c
+ source=(git+https://github.com/jquast/blessed.git#tag=${_tag})
+-b2sums=('abd1bc99026547ce266e03554f685f07fa446964f92dbab99fc7a42321baed3ce96a7b1db3ce34369d861c0e96ae20939b57641fae43facb5a4faaa1a6e95c56')
++b2sums=('02f61a32ba0a75346a7ad47856be614ce9f61396a0d743402fe7751fe4925b9f31c35e3fc4126a3a2621866892de19003ddbd3f8a9d12d5f7640a708ad5f0af1')
+ 
+ pkgver() {
+   cd blessed
+@@ -33,7 +30,7 @@
+ 
+ build() {
+   cd blessed
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -42,7 +39,8 @@
+ }
+ 
+ package() {
+-  python -m installer --destdir="${pkgdir}" blessed/dist/*.whl
+-  install -Dm 644 blessed/LICENSE -t "${pkgdir}"/usr/share/licenses/python-blessed/
++  cd blessed
++  python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
++  install -Dm 644 LICENSE -t "${pkgdir}"/usr/share/licenses/python-blessed/
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,4 @@
+ git
+ python
+-python-build
+-python-flit-core
+-python-installer
++python-setuptools
+ python-wcwidth
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd blessed
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

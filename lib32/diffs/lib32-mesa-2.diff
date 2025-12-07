@@ -8,7 +8,7 @@
    lib32-vulkan-icd-loader
    lib32-wayland
    lib32-xcb-util-keysyms
-@@ -234,7 +233,7 @@
+@@ -231,7 +230,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -17,45 +17,45 @@
    meson compile -C build
  }
  
-@@ -383,7 +382,6 @@
+@@ -378,7 +377,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -412,7 +410,6 @@
+@@ -408,7 +406,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -441,7 +438,6 @@
+@@ -438,7 +435,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -469,7 +465,6 @@
+@@ -467,7 +463,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -496,7 +491,6 @@
+@@ -495,7 +490,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
 @@ -525,7 +519,6 @@
      lib32-libxcb
@@ -63,31 +63,31 @@
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -556,7 +549,6 @@
+@@ -557,7 +550,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -587,7 +579,6 @@
+@@ -589,7 +581,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -617,7 +608,6 @@
+@@ -620,7 +611,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
 -    lib32-systemd
      lib32-vulkan-icd-loader
-     lib32-vulkan-mesa-device-select
+     lib32-vulkan-mesa-implicit-layers
      lib32-wayland
 
 
@@ -101,5 +101,5 @@
  lib32-spirv-tools
 -lib32-systemd
  lib32-vulkan-icd-loader
- lib32-vulkan-mesa-device-select
+ lib32-vulkan-mesa-implicit-layers
  lib32-wayland

@@ -12,3 +12,26 @@
  package() {
    cd nvchecker
    python -m installer --destdir="$pkgdir" dist/*.whl
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +0,0 @@
+-git
+-python
+-python-aiohttp
+-python-build
+-python-docutils
+-python-gobject
+-python-httpx
+-python-installer
+-python-platformdirs
+-python-pycurl
+-python-pygments
+-python-setuptools
+-python-structlog
+-python-toml
+-python-tornado
+-python-wheel

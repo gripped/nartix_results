@@ -20,7 +20,7 @@ lib32-vulkan-nouveau
 lib32-vulkan-radeon
 lib32-vulkan-swrast
 lib32-vulkan-virtio
-lib32-vulkan-mesa-device-select
+lib32-vulkan-mesa-implicit-layers
 lib32-vulkan-mesa-layers
 lib32-nvidia-utils
 lib32-p11-kit

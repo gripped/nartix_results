@@ -21,6 +21,7 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
+just
 lemurs
 libetonyek
 libodfgen
