@@ -1,6 +1,49 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -99,10 +99,6 @@
+@@ -4,8 +4,8 @@
+   dolphin-emu
+   dolphin-emu-tool
+ )
+-pkgver=2509
+-pkgrel=1
++pkgver=2506a
++pkgrel=2
+ epoch=1
+ pkgdesc='A Gamecube and Wii emulator'
+ arch=(x86_64)
+@@ -58,7 +58,7 @@
+ )
+ optdepends=('pulseaudio: PulseAudio backend')
+ options=(!emptydirs !lto)
+-_tag=f0519d4f6cfa650846674d0b15849035b4c27e74
++_tag=9843115ad8414970312c954d83145300d7cdbec3
+ source=(
+   dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#tag=${_tag}
+   git+https://github.com/mozilla/cubeb.git
+@@ -71,11 +71,9 @@
+   git+https://github.com/KhronosGroup/SPIRV-Cross.git
+   git+https://github.com/syoyo/tinygltf.git
+   git+https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
+-  git+https://github.com/e-dant/watcher.git
+   git+https://github.com/zlib-ng/zlib-ng.git
+ )
+-b2sums=('6405ec0f50fec312da1e093773db34421ff0c9a2bbcf7e86f7521a1e68a07048558d7fbdd6513df39c126c666e58b755e54fe9de8e48382ffd461475964ec446'
+-        'SKIP'
++b2sums=('03f747ff20d7e0e4ff00c91cb1a86d6d8d70a108b55c689dddf9be58fc6ead2ff9965470975308109e95bda0f8059bc52a58d3bfbe80a001852ab6b2a375fd96'
+         'SKIP'
+         'SKIP'
+         'SKIP'
+@@ -90,8 +88,7 @@
+ 
+ prepare() {
+   cd dolphin-emu
+-  git cherry-pick -n b3bdad416ca0a6a604dca12bed7bd00542092d25
+-  for submodule in Externals/{cubeb/cubeb,implot/implot,fmt/fmt,mGBA/mgba,minizip-ng/minizip-ng,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,tinygltf/tinygltf,VulkanMemoryAllocator,watcher,zlib-ng/zlib-ng}; do
++  for submodule in Externals/{cubeb/cubeb,implot/implot,fmt/fmt,mGBA/mgba,minizip-ng/minizip-ng,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,tinygltf/tinygltf,VulkanMemoryAllocator,zlib-ng/zlib-ng}; do
+     git submodule init ${submodule}
+     git config submodule.${submodule}.url ../${submodule##*/}
+     git -c protocol.file.allow=always submodule update ${submodule}
+@@ -102,10 +99,6 @@
    git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
  }
  
@@ -11,7 +54,7 @@
  
  build() {
    cmake -S dolphin-emu -B build -G Ninja \
-@@ -110,7 +106,7 @@
+@@ -113,7 +106,7 @@
      -DCMAKE_SKIP_RPATH=ON \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
@@ -28,7 +71,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -16,7 +16,7 @@
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd dolphin-emu
+-git cherry-pick -n b3bdad416ca0a6a604dca12bed7bd00542092d25
+-for submodule in Externals/{cubeb/cubeb,implot/implot,fmt/fmt,mGBA/mgba,minizip-ng/minizip-ng,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,tinygltf/tinygltf,VulkanMemoryAllocator,watcher,zlib-ng/zlib-ng}; do
++for submodule in Externals/{cubeb/cubeb,implot/implot,fmt/fmt,mGBA/mgba,minizip-ng/minizip-ng,rcheevos/rcheevos,spirv_cross/SPIRV-Cross,tinygltf/tinygltf,VulkanMemoryAllocator,zlib-ng/zlib-ng}; do
+ git submodule init ${submodule}
+ git config submodule.${submodule}.url ../${submodule##*/}
+ git -c protocol.file.allow=always submodule update ${submodule}
+@@ -17,7 +16,7 @@
  -DCMAKE_SKIP_RPATH=ON \
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=aws-crt-cpp
+-pkgver=0.35.4
++pkgver=0.35.3
+ pkgrel=1
+ pkgdesc='C++ wrapper around the aws-c-* libraries. Provides Cross-Platform Transport Protocols and SSL/TLS implementations for C++.'
+ arch=(x86_64)
+@@ -22,7 +22,7 @@
+ )
+ makedepends=(cmake)
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+-sha256sums=('3deb29f816498259aa289930afdb5f37d95bba991ec224952f57f931d877e81d')
++sha256sums=('1d84d73d5e32e54757e8feb9441c75a6e5f9e5e1dbb4efda588caaeac9fe7acf')
+ 
+ build() {
+   cd $pkgname-$pkgver

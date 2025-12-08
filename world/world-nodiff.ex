@@ -305,7 +305,6 @@ cdrtools
 celluloid
 cervisia
 cfitsio
-cgns
 chafa
 chatblade
 check-jsonschema
@@ -1791,7 +1790,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2374,11 +2372,6 @@ mtr
 mtr-gtk
 mujs
 muparser
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
-python-mupdf
 musescore
 musl
 musl-aarch64
@@ -2961,6 +2954,7 @@ php-mongodb
 php-legacy-mongodb
 php-redis
 php-legacy-redis
+php-snuffleupagus
 picard
 picmi
 picom
@@ -3187,7 +3181,6 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
-python-arrow
 python-asgiref
 python-asn1crypto
 python-aspectlib
@@ -3245,6 +3238,7 @@ python-bitarray
 python-bitstring
 python-black
 python-bleach
+python-blessed
 python-blinker
 python-blockbuster
 python-blosc
@@ -3797,7 +3791,6 @@ python-more-itertools
 python-moreorless
 python-moto
 python-motor
-python-mpd2
 python-mpi4py
 python-mpmath
 python-msgpack
@@ -4767,7 +4760,6 @@ rocminfo
 rocprim
 rocprofiler-register
 rocs
-rocthrust
 roctracer
 rofi
 ropgadget
@@ -5545,6 +5537,7 @@ tldp-howtos-txt
 tldr
 tllist
 tlp
+tlp-pd
 tlp-rdw
 tmuxp
 tnftp
@@ -5739,10 +5732,6 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265
@@ -5846,7 +5835,6 @@ xorg-xwininfo
 xorgproto
 xosd
 xournalpp
-xpdf
 xpra
 xsane
 xsane-gimp

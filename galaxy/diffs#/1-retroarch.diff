@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=retroarch
+-pkgver=1.22.2
+-pkgrel=1
++pkgver=1.21.0
++pkgrel=2.1
+ pkgdesc='Reference frontend for the libretro API'
+ arch=(x86_64)
+ url=http://www.libretro.com/
+@@ -11,6 +11,7 @@
+   alsa-lib
+   dbus
+   ffmpeg
++  flac
+   fontconfig
+   fribidi
+   gcc-libs
+@@ -55,13 +56,15 @@
+   'retroarch-assets-xmb: XMB menu assets'
+ )
+ backup=(etc/retroarch.cfg)
+-_tag=69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576
++_tag=baee906ef35b99283f9a1a060a2ce5ac86159b63
+ source=(
+   git+https://github.com/libretro/RetroArch.git#tag=${_tag}
+   retroarch-config.patch
++  0001-Attempt-to-fix-ffmpeg-8.0-build-errors.patch
+ )
+-b2sums=('001cf261cda10fc42e9261d9eae56452d23904cba544f906fa96db8db149bf3f4cd5ce5a84f90c591b5501cd3e7637be131a2a25342dca745b2ad0161a4755f6'
+-        '5ecbe57126c7f9b66bdf189f0af2f1cec031cb68ea85bb9609847ba9beb0e720c902cd3330d7c286901a73e6c2e272c3f04166cf9a47bb6f80097f19dde8ce3a')
++b2sums=('0eb80d8ba9dabd3b1a40dd8beb3d2a83feb56b764085d827db6361509c3d57f871be3177ffb5b339727323f0492cd1f9d10f12361b318847605f4c992cebfbd7'
++        '5ecbe57126c7f9b66bdf189f0af2f1cec031cb68ea85bb9609847ba9beb0e720c902cd3330d7c286901a73e6c2e272c3f04166cf9a47bb6f80097f19dde8ce3a'
++        '27cdd21b02fff47f0c0a0e8457a2d3ccc526bf3b5a54afd5a06efaa15ed3a22728b7c8a4c5795453e4746c5b66df911f4ddb366c60236e76f52120fb8039ab70')
+ 
+ pkgver() {
+   cd RetroArch
+@@ -70,13 +73,17 @@
+ 
+ prepare() {
+   cd RetroArch
++
+   patch -Np1 -i ../retroarch-config.patch
++
++  patch -Np1 -i ../0001-Attempt-to-fix-ffmpeg-8.0-build-errors.patch
+ }
+ 
+ build() {
+   cd RetroArch
+   ./configure \
+     --prefix=/usr \
++    --disable-builtinflac \
+     --enable-builtinmbedtls \
+     --disable-builtinzlib \
+     --disable-cg \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ alsa-lib
+ dbus
+ ffmpeg
++flac
+ fontconfig
+ fribidi
+ gamemode

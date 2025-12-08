@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-s3transfer
+-pkgver=0.16.0
++pkgver=0.15.0
+ pkgrel=1
+ pkgdesc='Amazon S3 Transfer Manager for Python'
+ arch=('any')
+@@ -20,7 +20,7 @@
+ checkdepends=('python-pytest')
+ optdepends=('python-awscrt: use AWS Common Runtime')
+ source=("$url/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+-sha256sums=('0a5e0cee83bde59222a61c6abc6ec40223f82090203016d65af065373b084e5c')
++sha256sums=('b9e29ad509a7459df9bb9f9a55e24f0c035111033cd21797d54acc173a72fd3f')
+ 
+ build() {
+   cd ${pkgname#python-}-$pkgver

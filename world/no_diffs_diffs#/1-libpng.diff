@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=libpng
--pkgver=1.6.52
+-pkgver=1.6.53
 +pkgver=1.6.51
  pkgrel=1
  pkgdesc='A collection of routines used to create PNG format graphics files'
@@ -13,7 +13,7 @@
  makedepends=('git')
  provides=('libpng16.so')
 -source=("git+https://github.com/pnggroup/libpng.git?signed#tag=v${pkgver}?signed")
--sha256sums=('d4512f8ddfdd749cf5eddf1eff5432a71a0c7450d8e992f94c547fe0c8ecd9f1')
+-sha256sums=('08c7700264cf66f1700d47719cdaa45eac10743de5702f19164c84b67035b0ba')
 +source=("git+https://github.com/pnggroup/libpng.git?signed#tag=v${pkgver}")
 +sha256sums=('0b3026798a564f3a0af4ed4e1fef6ecc5f36664527eee2f96376b72a52aa75c0')
  validpgpkeys=('F57A55036A4D45837074FD92C9E384533403C2F8'  # Cosmin Truta <ctruta@gmail.com>

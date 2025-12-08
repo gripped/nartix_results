@@ -64,6 +64,7 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 cgmanager
+cgns
 chromium-bsu
 chrony
 cifs-utils
@@ -377,6 +378,7 @@ libindi
 libinput
 libisoburn
 libisofs
+libkate
 libldm
 liblqr
 libmateweather
@@ -548,6 +550,11 @@ muffin
 multipath-tools
 mumble
 mumble-server
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
+python-mupdf
 musepack
 musepack-tools
 libmpcdec
@@ -637,7 +644,6 @@ php-legacy-sqlite
 php-legacy-tidy
 php-legacy-xsl
 php-memcache
-php-snuffleupagus
 php
 php-cgi
 php-apache
@@ -708,11 +714,12 @@ pyside6-tools
 shiboken6
 pysolfc
 python-anytree
-python-blessed
+python-arrow
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
+python-mpd2
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -834,6 +841,7 @@ rocfft
 rocrand
 rocsolver
 rocsparse
+rocthrust
 rrdtool
 rspamd
 rsync
@@ -1071,6 +1079,10 @@ wlroots0.18
 wlroots0.19
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11vnc
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt
@@ -1138,6 +1150,7 @@ xorg-server-common
 xorg-server-devel
 xorg-xdm
 xorg-xwayland
+xpdf
 xreader
 xscreensaver
 xxhash

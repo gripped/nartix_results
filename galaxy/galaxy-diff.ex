@@ -122,6 +122,7 @@ qbittorrent-nox
 rage
 read-edid
 reflector
+retroarch
 sdcv
 signal-desktop
 terminology
