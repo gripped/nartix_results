@@ -663,7 +663,6 @@ font-awesome
 woff2-font-awesome
 otf-font-awesome
 fontconfig
-fontforge
 foomatic-db-engine
 foomatic-db
 foomatic-db-ppds
@@ -4760,6 +4759,7 @@ rocminfo
 rocprim
 rocprofiler-register
 rocs
+rocthrust
 roctracer
 rofi
 ropgadget
@@ -5732,6 +5732,10 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265

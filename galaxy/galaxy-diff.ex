@@ -117,6 +117,7 @@ opensnitch
 osdlyrics
 p8-platform
 perl-cgi-fast
+python-pyzstd
 qbittorrent
 qbittorrent-nox
 rage

@@ -89,7 +89,6 @@ libnfnetlink
 libnftnl
 libnghttp2
 libnghttp3
-libnl
 libnsl
 libpcap
 libpipeline

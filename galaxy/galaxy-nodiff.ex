@@ -369,7 +369,6 @@ python-pybluez
 python-pychm
 python-pyppmd
 python-pysol_cards
-python-pyzstd
 python-sphinxcontrib-newsfeed
 python-texttable
 qgis

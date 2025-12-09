@@ -167,6 +167,7 @@ flatpak-docs
 flite
 fluidsynth
 font-manager
+fontforge
 fprintd
 freerdp
 freerdp2
@@ -841,7 +842,6 @@ rocfft
 rocrand
 rocsolver
 rocsparse
-rocthrust
 rrdtool
 rspamd
 rsync
@@ -1079,10 +1079,6 @@ wlroots0.18
 wlroots0.19
 wpewebkit
 wpewebkit-docs
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11vnc
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt

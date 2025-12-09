@@ -1,14 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,11 +43,10 @@
+@@ -6,10 +6,10 @@
+   tlp-rdw
+ )
+ pkgver=1.9.0
+-pkgrel=3
++pkgrel=2
+ arch=(any)
+ url=https://linrunner.de/en/tlp/tlp.html
+-license=(GPL-2.0-or-later)
++license=(GPL-2.0-only)
+ makedepends=(git)
+ _tag=50fd73cff7b346a0d9ffd644185e359332f453c2
+ source=(git+https://github.com/linrunner/TLP.git#tag=${_tag})
+@@ -43,8 +43,10 @@
  
    export TLP_NO_INIT=1
    export TLP_SBIN=/usr/bin
--  export TLP_SDSL=/usr/lib/systemd/system-sleep
--  export TLP_SYSD=/usr/lib/systemd/system
-   export TLP_ULIB=/usr/lib/udev
 -  export TLP_WITH_ELOGIND=0
 -  export TLP_WITH_SYSTEMD=1
++  export TLP_ULIB=/usr/lib/udev
 +  export TLP_ELOD=/usr/lib/elogind/system-sleep
 +  export TLP_WITH_ELOGIND=1
 +  export TLP_WITH_SYSTEMD=0
