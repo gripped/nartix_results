@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _pyname=jupyter_client
+ pkgname=python-${_pyname/_/-}
+-pkgver=8.7.0
+-pkgrel=1
++pkgver=8.6.3
++pkgrel=4
+ pkgdesc='Jupyter protocol implementation and client libraries'
+ arch=(any)
+ url='https://pypi.python.org/pypi/jupyter_client'
+@@ -10,6 +10,7 @@
+ depends=(ipython
+          python
+          python-dateutil
++         python-importlib-metadata
+          python-jupyter-core
+          python-pexpect
+          python-pyzmq
+@@ -29,7 +30,7 @@
+ provides=(python-jupyter_client)
+ replaces=(python-jupyter_client)
+ source=(git+https://github.com/jupyter/jupyter_client#tag=v$pkgver)
+-sha256sums=('cb481964bd0dd647012eb3ec0d288c3a0179ee82a5bf23c52d1cc3aa8bad9b49')
++sha256sums=('aa4854b7ecfc06a1340267f8c6da71ceb9ac1a8f7b42d212b5c4ae278e6acd7e')
+ 
+ build() {
+   cd $_pyname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,6 +4,7 @@
+ python-build
+ python-dateutil
+ python-hatchling
++python-importlib-metadata
+ python-installer
+ python-jupyter-core
+ python-pexpect

@@ -85,6 +85,7 @@ lib32-libmodplug
 lib32-libndp
 lib32-libnghttp2
 lib32-libnghttp3
+lib32-libnl
 lib32-libnsl
 lib32-libogg
 lib32-libpcap

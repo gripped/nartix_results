@@ -33,6 +33,8 @@ bluez-obex
 bolt
 booster
 box2d
+breeze
+breeze5
 brightnessctl
 brltty
 brltty-udev-generic
@@ -125,7 +127,6 @@ netstandard-targeting-pack
 dotnet-targeting-pack
 aspnet-targeting-pack
 dotnet-source-built-artifacts
-double-conversion
 dovecot
 dracut
 drkonqi
@@ -321,6 +322,7 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
+kicad
 kinfocenter
 kismet
 kitty
@@ -379,7 +381,6 @@ libindi
 libinput
 libisoburn
 libisofs
-libkate
 libldm
 liblqr
 libmateweather

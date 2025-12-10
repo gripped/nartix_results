@@ -248,8 +248,6 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
-breeze
-breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -486,6 +484,7 @@ dolphin
 dontpanic
 dosbox
 dotconf
+double-conversion
 doxygen
 doxygen-docs
 dpdk
@@ -1381,7 +1380,6 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
-kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1789,6 +1787,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
