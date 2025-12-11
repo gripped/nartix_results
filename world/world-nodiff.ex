@@ -5822,7 +5822,6 @@ xorg-xeyes
 xorg-xhost
 xorg-xinit
 xorg-xinput
-xorg-xkbcomp
 xorg-xkill
 xorg-xlogo
 xorg-xlsfonts
@@ -5866,6 +5865,7 @@ yelp-xsl
 yelp
 yodl
 youtube-dl
+yt-dlp-ejs
 yt-dlp
 ytfzf
 yyjson

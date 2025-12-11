@@ -1146,6 +1146,7 @@ xorg-server-xnest
 xorg-server-common
 xorg-server-devel
 xorg-xdm
+xorg-xkbcomp
 xorg-xwayland
 xpdf
 xreader
