@@ -100,6 +100,7 @@ dhclient
 dhcpcd
 distcc
 dns-over-https
+docbook-utils
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -330,6 +331,7 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
+krita
 ksystemlog
 kwin-x11
 kwin

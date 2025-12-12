@@ -470,7 +470,6 @@ dnsmasq
 docbook-dsssl
 docbook-sgml
 docbook-sgml31
-docbook-utils
 docbook-xml
 docbook-xsl
 docbook2x
@@ -1503,7 +1502,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
