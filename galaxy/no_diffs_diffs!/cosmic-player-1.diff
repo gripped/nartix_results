@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,7 @@
+ 
+ pkgname=cosmic-player
+-pkgver=1.0.0
++pkgver=1.0.0.beta.9
+ pkgrel=1
+-epoch=1
+ pkgdesc="WIP COSMIC media player"
+ arch=(x86_64)
+ url="https://github.com/pop-os/cosmic-player"
+@@ -25,8 +24,8 @@
+   just
+   lld
+ )
+-source=(git+https://github.com/pop-os/cosmic-player.git#tag=epoch-${pkgver})
+-sha256sums=('67cb2339b23662f4b1fda4a605650465a2160d5ca9283ee6bde35aae0ef1da9d')
++source=(git+https://github.com/pop-os/cosmic-player.git#tag=epoch-${pkgver/.beta./-beta.})
++sha256sums=('4b847d193cfb7e772b6fc24a4f93880746e253cac4c84fcb335ce59f9efe7f14')
+ 
+ prepare() {
+   cd "$pkgname"

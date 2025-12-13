@@ -69,7 +69,6 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
-cjs
 claws-mail
 compface
 copyq

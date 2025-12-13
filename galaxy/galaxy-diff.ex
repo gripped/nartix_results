@@ -1,6 +1,7 @@
 alsa-utils
 autorandr
 cinnamon-desktop
+cjs
 cosmic-applets
 cosmic-comp
 cosmic-osd

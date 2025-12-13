@@ -1,6 +1,8 @@
 0ad
 a52dec
 accountsservice
+akonadi
+libakonadi
 alacritty
 alsa-utils
 amule
@@ -48,6 +50,8 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
+cantor
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -130,6 +134,7 @@ aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
 dracut
+dragon
 drkonqi
 dtc
 dunst
@@ -321,7 +326,11 @@ jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
 jupyter-server-ydoc
+kalzium
 kcoreaddons
+kdeconnect
+kdegraphics-mobipocket
+kdepim-runtime
 kdoctools5
 kicad
 kinfocenter
@@ -383,6 +392,8 @@ libindi
 libinput
 libisoburn
 libisofs
+libkexiv2
+libkexiv2-qt5
 libldm
 liblqr
 libmateweather
@@ -880,6 +891,7 @@ smartmontools
 snapper
 snappy
 solid
+spice-gtk
 spice-vdagent
 sqlcipher
 squid
@@ -1082,6 +1094,10 @@ wlroots0.18
 wlroots0.19
 wpewebkit
 wpewebkit-docs
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11vnc
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt
@@ -1150,6 +1166,7 @@ xorg-server-devel
 xorg-xdm
 xorg-xkbcomp
 xorg-xwayland
+xournalpp
 xpdf
 xreader
 xscreensaver

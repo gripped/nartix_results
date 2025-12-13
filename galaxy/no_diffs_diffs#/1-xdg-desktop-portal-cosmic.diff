@@ -1,18 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,7 @@
  
  pkgname=xdg-desktop-portal-cosmic
--pkgver=1.0.0.beta.9
+-pkgver=1.0.0
 +pkgver=1.0.0.beta.7
  pkgrel=1
+-epoch=1
  pkgdesc='A backend implementation for xdg-desktop-portal for the COSMIC desktop environment'
  arch=(x86_64)
-@@ -27,7 +27,7 @@
- source=(
-   git+https://github.com/pop-os/xdg-desktop-portal-cosmic.git#tag=epoch-${pkgver/.beta./-beta.}
+ url=https://github.com/pop-os/xdg-desktop-portal-cosmic
+@@ -26,9 +25,9 @@
  )
--b2sums=('c11b9043f5c71b1af0cacacc361a1607d52256a38c9772bc28f42052394ed140dd2e37bcc55c9050d39c3a50e99812d65c59d63a0eeeffbc6efabc0aefcc3fde')
+ provides=(xdg-desktop-portal-impl)
+ source=(
+-  git+https://github.com/pop-os/xdg-desktop-portal-cosmic.git#tag=epoch-${pkgver}
++  git+https://github.com/pop-os/xdg-desktop-portal-cosmic.git#tag=epoch-${pkgver/.beta./-beta.}
+ )
+-b2sums=('f409bfe89bb5400b5a3fe1aa9b8ebd7342cf55ce14a30d2f758e66508958917e140da959f66c08ad4786d51b8e6ca9bdc24d05221f51ed67c88a0420197ab6de')
 +b2sums=('c5e584361e25c983d4a2cd4eb1f83b5fea98745cfd396d93ee94efc058f7a1b34e2ba3256abe7829471e953051122ee859720aaa02f6438faf8d1a32f0964042')
  
  prepare() {

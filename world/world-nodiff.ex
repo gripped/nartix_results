@@ -39,8 +39,6 @@ akonadi-mime
 akonadi-notes
 akonadi-notes5
 akonadi-search
-akonadi
-libakonadi
 akonadiconsole
 akregator
 alacarte
@@ -276,11 +274,9 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
-cantor
 capnproto
 capstone
 python-capstone
@@ -490,7 +486,6 @@ dpdk
 dpkg
 dqlite
 draco
-dragon
 dropbear
 dropbear-scp
 duktape
@@ -1224,7 +1219,6 @@ kalendar
 kalgebra
 kalk
 kalm
-kalzium
 kamera
 kamoso
 kanagram
@@ -1300,19 +1294,16 @@ kde-inotify-survey
 kdebugsettings
 kdeclarative
 kdeclarative5
-kdeconnect
 kdecoration
 kdecoration5
 kded
 kded5
 kdeedu-data
-kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
-kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -1793,8 +1784,6 @@ libkdcraw5
 libkdegames
 libkdepim
 libkeduvocdocument
-libkexiv2
-libkexiv2-qt5
 libkeybinder3
 libkeyfinder
 libkgapi
@@ -5264,7 +5253,6 @@ libspeechd
 speex
 speexdsp
 spglib
-spice-gtk
 spice-protocol
 spice
 spirv-headers
@@ -5729,10 +5717,6 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265
@@ -5834,7 +5818,6 @@ xorg-xsetroot
 xorg-xwininfo
 xorgproto
 xosd
-xournalpp
 xpra
 xsane
 xsane-gimp
