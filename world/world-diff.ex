@@ -345,6 +345,7 @@ ksystemlog
 kwin-x11
 kwin
 libabw
+libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -392,6 +393,7 @@ libindi
 libinput
 libisoburn
 libisofs
+libkate
 libkexiv2
 libkexiv2-qt5
 libldm
@@ -658,7 +660,6 @@ php-legacy-snmp
 php-legacy-sqlite
 php-legacy-tidy
 php-legacy-xsl
-php-memcache
 php
 php-cgi
 php-apache
@@ -729,12 +730,11 @@ pyside6-tools
 shiboken6
 pysolfc
 python-anytree
-python-arrow
 python-deadlib
 python-nntplib
 python-cgi
 python-mailcap
-python-mpd2
+python-debugpy
 python-pymupdf
 python-pytest-freezegun
 python-pyudev
@@ -891,6 +891,7 @@ smartmontools
 snapper
 snappy
 solid
+spamassassin
 spice-gtk
 spice-vdagent
 sqlcipher
@@ -1166,8 +1167,6 @@ xorg-server-devel
 xorg-xdm
 xorg-xkbcomp
 xorg-xwayland
-xournalpp
-xpdf
 xreader
 xscreensaver
 xxhash

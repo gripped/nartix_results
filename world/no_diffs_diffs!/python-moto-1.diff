@@ -1,33 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=python-moto
--pkgver=5.1.18
-+pkgver=5.1.17
- pkgrel=1
- pkgdesc='Moto is a library to mock out the boto library.'
- arch=(any)
-@@ -68,7 +68,7 @@
-   'python-jsonschema: for quicksight'
- )
- source=("git+https://github.com/getmoto/moto#tag=$pkgver")
--sha256sums=('ee63b1dfaf0cb5853675852f5878b2efc64c916243f10c31b95417e128029900')
-+sha256sums=('1a643008f34d8048a6c5d8e7ed11c21d7bc69ee47dc3f581a0ce79d88bd60514')
- 
- prepare() {
-   cd ${pkgname#python-}
-@@ -83,9 +83,11 @@
- check() {
-   cd ${pkgname#python-}
-   local pytest_args=(
--    --ignore=tests/test_cognitoidp/test_cognitoidp.py
-+    --ignore tests/test_cognitoidp/test_cognitoidp.py
+@@ -86,6 +86,9 @@
+     --ignore=tests/test_cognitoidp/test_cognitoidp.py
+     -m 'not requires_docker'
+     --deselect=tests/test_awslambda/test_lambda.py::test_delete_function
 +    --deselect tests/test_s3/test_multiple_accounts_server.py::TestAccountIdResolution::test_with_custom_request_header
 +    --deselect tests/test_s3/test_server.py::test_s3_server_post_cors_multiple_origins
 +    --deselect tests/test_s3/test_s3_select.py
-     -m 'not requires_docker'
--    --deselect=tests/test_awslambda/test_lambda.py::test_delete_function
    )
    TZ=UTC pytest tests "${pytest_args[@]}"
  }

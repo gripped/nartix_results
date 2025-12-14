@@ -1607,7 +1607,6 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
-libaec
 libaemu
 libakonadi5
 libalkimia
@@ -1776,7 +1775,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2934,6 +2932,7 @@ php-igbinary
 php-legacy-igbinary
 php-imagick
 php-legacy-imagick
+php-memcache
 php-memcached
 php-mongodb
 php-legacy-mongodb
@@ -3166,6 +3165,7 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
+python-arrow
 python-asgiref
 python-asn1crypto
 python-aspectlib
@@ -3201,6 +3201,7 @@ python-axolotl-curve25519
 python-axolotl
 python-babel
 python-backcall
+python-backports-zstd
 python-backrefs
 python-base58
 python-bcrypt
@@ -3358,7 +3359,6 @@ python-dbus-next
 python-dbusmock
 python-ddt
 python-debtcollector
-python-debugpy
 python-decorator
 python-deepdiff
 python-deepmerge
@@ -3776,6 +3776,7 @@ python-more-itertools
 python-moreorless
 python-moto
 python-motor
+python-mpd2
 python-mpi4py
 python-mpmath
 python-msgpack
@@ -5240,7 +5241,6 @@ soundconverter
 soundtouch
 source-highlight
 sox
-spamassassin
 spandsp
 spandsp-docs
 sparsehash
@@ -5818,6 +5818,8 @@ xorg-xsetroot
 xorg-xwininfo
 xorgproto
 xosd
+xournalpp
+xpdf
 xpra
 xsane
 xsane-gimp

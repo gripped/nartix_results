@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=prometheus
--pkgver=3.8.0
-+pkgver=3.7.3
- pkgrel=1
- 
- pkgdesc='An open-source systems monitoring and alerting toolkit'
 @@ -12,17 +12,14 @@
  makedepends=('go' 'git' 'npm' 'nodejs' 'yamllint' 'typescript' 'yarn')
  
@@ -21,11 +13,10 @@
 -        prometheus.conf)
 +        )
  
--sha256sums=('5e6e64535b5862b1a6247bd492f424b68dcb0dcc875424b66d9112a168f9ec16'
+ sha256sums=('5e6e64535b5862b1a6247bd492f424b68dcb0dcc875424b66d9112a168f9ec16'
 -            'a6deb1f678960ee9b406e4458364c5082db11f93fae6286940aacd3e3933beb7'
 -            '2747fabb4e56b808361eb7dd7acf9729ab8973d1ebe2f857dd56f6c71f71e45f'
 -            '6d32deb125381cbebac11b6953a7d9a65eb7e50f209dc1e22c63facf678a3070')
-+sha256sums=('c3f6be8b3198d547c548dc6289f06688c245b46dcc28490e60445b06e5360347'
 +            '2747fabb4e56b808361eb7dd7acf9729ab8973d1ebe2f857dd56f6c71f71e45f')
  
  prepare() {

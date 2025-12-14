@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=perl-mail-box
+-pkgver=4.00
++pkgver=3.012
+ pkgrel=1
+ pkgdesc="Mail folder manager and MUA backend"
+ arch=(any)
+@@ -13,7 +13,7 @@
+ 	 'perl-mail-message')
+ options=('!emptydirs')
+ source=(https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Mail-Box-$pkgver.tar.gz)
+-sha256sums=('f620921c92bd49bfea083a9ff5231191c09937e17c5aba05d754e0bf121d490a')
++sha256sums=('c46be7efcc96149750f650261d20af057aba4bbf0180fcac0115fb639214ed29')
+ 
+ prepare() {
+   cd  "$srcdir"/Mail-Box-$pkgver

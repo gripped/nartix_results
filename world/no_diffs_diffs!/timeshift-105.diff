@@ -1,18 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,22 +1,22 @@
  
  pkgname=timeshift
--pkgver=25.07.7
+-pkgver=25.12.1
 +pkgver=24.06.3
  pkgrel=1
  pkgdesc="A system restore utility for Linux"
  url="https://github.com/linuxmint/timeshift"
-@@ -13,10 +13,10 @@
+ arch=('x86_64')
+ license=('GPL-2.0-or-later')
+-depends=('libgee' 'json-glib' 'gtk3' 'vte3' 'rsync' 'xapp' 'cronie')
++depends=('libgee' 'json-glib' 'gtk3' 'vte3' 'rsync' 'xapp' 'cronie' 'which')
+ makedepends=('help2man' 'meson' 'vala')
+ optdepends=('btrfs-progs: For BTRFS support'
+             'grub-btrfs: For BTRFS snapshots in GRUB'
              'xorg-xhost: For authorization on Wayland')
  install="${pkgname}.install"
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('c4de584ac4ab29d17edae35d372fc64fd3a92e6d15efb5eb8ea458b315c6d52f')
+-sha256sums=('d49f5cefbb12c214038d40c36f5a93f78fdea810dc9b57a7a08c3734346b0162')
 +sha256sums=('d5151abba395ceb54d7b3383c52f30ed99ecb880d09c5a8c9f666dceef2015ca')
  
  build() {
@@ -25,7 +31,14 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -7,4 +7,5 @@
+ rsync
+ vala
+ vte3
++which
+ xapp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
