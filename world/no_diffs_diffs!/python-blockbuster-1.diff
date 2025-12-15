@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-blockbuster
+-pkgver=1.5.26
++pkgver=1.5.25
+ pkgrel=1
+ pkgdesc='Utility to detect blocking calls in the async event loop'
+ arch=(any)
+@@ -23,7 +23,7 @@
+   python-requests
+ )
+ source=("git+$url.git#tag=v$pkgver")
+-sha256sums=('d58d4de1299b0864c3f3b7ad77caea9a8f8e4eb45af81db5cf70dd7fbb0f114d')
++sha256sums=('112a5b57f70f62447fe9b8463018dcde80d23beff4e16f94f1e8bc64273ea2ff')
+ 
+ build() {
+   cd ${pkgname#python-}
 @@ -32,7 +32,9 @@
  
  check() {

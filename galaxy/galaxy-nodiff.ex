@@ -60,15 +60,10 @@ certbot-dns-route53
 certbot-dns-sakuracloud
 certbot-nginx
 certbot
-chess-tui
 chromium-bsu
-cinnamon-control-center
-cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
-cinnamon-translations
-cinnamon
 claws-mail
 compface
 copyq
@@ -302,9 +297,7 @@ monero
 mousepad
 mozo
 msedit
-muffin
 mugshot
-nemo
 neovide
 nicotineplus
 nushell
@@ -585,7 +578,6 @@ wlr-randr
 wlsunset
 wofi
 wol
-xapp
 xautolock
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
@@ -641,7 +633,6 @@ xfwm4-themes
 xfwm4
 xonotic-data
 xonotic
-xreader
 xsane
 xsane-gimp
 yazi

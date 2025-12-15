@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
+@@ -1,31 +1,43 @@
  
  pkgname=cinnamon-desktop
--pkgver=6.4.2
+-pkgver=6.6.0
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc="Library with common API for various Cinnamon modules"
@@ -11,23 +11,29 @@
  url="https://github.com/linuxmint/${pkgname}"
  license=(GPL LGPL)
  depends=(accountsservice gtk3 libxkbfile libpulse)
--makedepends=(meson samurai gobject-introspection intltool glib2-devel)
+-makedepends=(git meson gobject-introspection intltool glib2-devel)
+-source=(git+${url}#tag=$pkgver
 +makedepends=(meson samurai gobject-introspection intltool)
- source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
          config.patch)
--sha256sums=('f11d063c7ecb86b98803e9a22ade0655d979b334f6c90fdd1cc6f50bbe6e9992'
+-sha256sums=('a41b080077b61a6ad16f4a787d77dc8c4b6b3d04209bf82117f4de55f64cca60'
 +sha256sums=('17473083758acac9ca580849c88a2ac4bcc2fe715ee232fbecfa0baf2204bbb5'
              'e70227c64eca6857fe9adc21c6aee851df40b3a54bf34a145e0dc4b9819a7b6a')
--b2sums=('3cb8bf41dbef3f3a0e6aa40917a4f1a25930deb4a04ef52af154266b5568cb4956769657c3595714fbe57275fc687ab666d8da38c5f186314993d462e82ea682'
+-b2sums=('ad5ed3fb5966625ab5a84176cf33f631ffbbee3b221f8e37432af82221aaac663a18a09c50ff8210d99f48848546f4348235ac9c89b55aa5c6e1d096f6eb5042'
 +b2sums=('908b53445327cdbb5560655700e6dfa829934714167f02dda2d9d31a02ae85fcf6565704e791f67f0725e9eb76ed65ef26944d3fac2a58e3091b2afd10bb70af'
          '5ae28fca1f3fee35222569afdba3f6f2df00f2b27709d1135589f33a3b80546ca541c391f5ee02759467fcaffe380dc1cbc4117dffe3c10cdf7046fd8588e384')
  
  prepare() {
-@@ -23,7 +23,17 @@
+-  cd ${pkgname}
++  cd ${pkgname}-${pkgver}
+   patch -p1 < ../config.patch
+   mkdir -p build
+ }
  
  build() {
-   cd ${pkgname}-${pkgver}/build
--  arch-meson ..
+-  arch-meson build $pkgname
+-  meson compile -C build
++  cd ${pkgname}-${pkgver}/build
 +  meson setup \
 +  --prefix        /usr \
 +  --libexecdir    lib \
@@ -39,29 +45,45 @@
 +  -D              b_pie=true \
 +  -D              python.bytecompile=1 \
 +  ..
-   samu
++  samu
  }
  
+ package() {
+-  meson install -C build --destdir="$pkgdir"
++  cd ${pkgname}-${pkgver}/build
++  DESTDIR="${pkgdir}" samu install
+ }
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
+@@ -1,9 +1,8 @@
  accountsservice
+-git
 -glib2-devel
  gobject-introspection
  gtk3
  intltool
+ libpulse
+ libxkbfile
+ meson
++samurai
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,6 +5,16 @@
+@@ -1,9 +1,20 @@
+ prepare() {
+-cd ${pkgname}
++cd ${pkgname}-${pkgver}
+ patch -p1 < ../config.patch
+ mkdir -p build
  }
  build() {
- cd ${pkgname}-${pkgver}/build
--arch-meson ..
+-arch-meson build $pkgname
+-meson compile -C build
++cd ${pkgname}-${pkgver}/build
 +meson setup \
 +--prefix        /usr \
 +--libexecdir    lib \
@@ -73,5 +95,5 @@
 +-D              b_pie=true \
 +-D              python.bytecompile=1 \
 +..
- samu
++samu
  }

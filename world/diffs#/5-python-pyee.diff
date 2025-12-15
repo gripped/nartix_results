@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=python-pyee
+ _name=${pkgname#python-}
+ pkgver=13.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Port of node.js's EventEmitter to python"
+ arch=(any)
+ url=https://github.com/jfhbrook/pyee
+@@ -13,7 +13,6 @@
+   python-build
+   python-installer
+   python-setuptools
+-  python-setuptools-scm
+   python-wheel
+ )
+ checkdepends=(
+@@ -28,13 +27,9 @@
+ source=(git+https://github.com/jfhbrook/pyee#tag=v$pkgver)
+ sha256sums=('d44abfc1549ae13fb1c8b4325aae98aebff07bdc87475232162dc81e22f5700f')
+ 
+-prepare() {
+-  git -C $_name cherry-pick -n 022d42550282e6c10e821f52b45ad5ff9eeb59be
+-}
+-
+ build() {
+   cd $_name
+-  python -m build --wheel --no-isolation
++  python -m build --wheel --skip-dependency-check --no-isolation
+ }
+ 
+ check() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,5 @@
+ python-build
+ python-installer
+ python-setuptools
+-python-setuptools-scm
+ python-typing_extensions
+ python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,4 @@
+-prepare() {
+-git -C $_name cherry-pick -n 022d42550282e6c10e821f52b45ad5ff9eeb59be
+-}
+ build() {
+ cd $_name
+-python -m build --wheel --no-isolation
++python -m build --wheel --skip-dependency-check --no-isolation
+ }

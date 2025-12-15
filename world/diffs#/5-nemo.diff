@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=nemo
+-pkgver=6.6.1
++pkgver=6.0.2
+ pkgrel=1
+ pkgdesc="Cinnamon file manager (Nautilus fork)"
+ arch=(x86_64)
+@@ -16,21 +16,21 @@
+             'libreoffice: search helpers support for legacy MS Office powerpoint files'
+             'odt2txt: search helpers support for LibreOffice files'
+             'poppler: search helpers support for PDF')
+-makedepends=(git meson gobject-introspection intltool libgsf glib2-devel)
+-source=(git+${url}#tag=$pkgver)
+-sha512sums=('6da5994e817779ad84b8f30d25b87a18f4e9c23bd0d49c528d88269cca13c8e15a2889c625aaf7c8542e91f4ce23ec9d8ca30f925af94b401c12cda2e91acaeb')
+-b2sums=('652e563d0efdd3144536044527e0f5469b2b68fca1670894ccc9039a4f6a62d8f67b7efb54b06106490a9bdc9abc4e35c1b583ad4dc69147efe930a3d5a58aef')
++makedepends=(meson samurai gobject-introspection intltool libgsf)
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha512sums=('05e8a6ab785f527ad61c1fe57d372ae8ea8f77d27ec8608d38e99f5f0f9065aecef4b84d1b016b682d14320d7099806d5672a101c0a370429d1c3f2a341fed1c')
++b2sums=('d1e3892938cb81bcb676626a9ef54362939d522a6d09befe25dd77a236a7eee3e06461da1855317bff2a5f201bc142903ce085bfbafdbddca0700a177221ccdf')
+ 
+ prepare() {
+-  cd ${pkgname}
++  cd ${pkgname}-${pkgver}
+   sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
+ }
+ 
+ build() {
+-  arch-meson --libexecdir=lib/${pkgname} ${pkgname} build
+-  meson compile -C build
++  artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
++  samu -C build
+ }
+ 
+ package() {
+-  meson install -C build --destdir="$pkgdir"
++  DESTDIR="${pkgdir}" samu -C build install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+ cinnamon-desktop
+ dconf
+ exempi
+-git
+-glib2-devel
+ gobject-introspection
+ gvfs
+ intltool
+@@ -12,4 +10,5 @@
+ libxml2
+ meson
+ python
++samurai
+ xapp
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ prepare() {
+-cd ${pkgname}
++cd ${pkgname}-${pkgver}
+ sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
+ }
+ build() {
+-arch-meson --libexecdir=lib/${pkgname} ${pkgname} build
+-meson compile -C build
++artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
++samu -C build
+ }

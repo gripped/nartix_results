@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=libguestfs
- pkgver=1.56.2
--pkgrel=3
-+pkgrel=2
- pkgdesc="Access and modify virtual machine disk images"
- arch=(x86_64)
- url="https://libguestfs.org/"
 @@ -37,7 +37,6 @@
    squashfs-tools
    strace
@@ -17,7 +8,15 @@
    vim
    xfsprogs
    yara
-@@ -131,7 +130,6 @@
+@@ -86,6 +85,7 @@
+   ruby-rdoc
+   rust
+   vala
++  wget
+ )
+ checkdepends=(
+   linux-lts  # test against LTS kernel: https://github.com/libguestfs/libguestfs/issues/139
+@@ -131,7 +131,6 @@
      --prefix=/usr
      --sbindir=/usr/bin
      --sysconfdir=/etc
@@ -25,7 +24,7 @@
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -141,12 +139,6 @@
+@@ -141,12 +140,6 @@
    make
  }
  
@@ -44,11 +43,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -64,7 +64,6 @@
+@@ -64,8 +64,8 @@
  strace
  supermin
  syslinux
 -systemd-sysvcompat
  vala
  vim
++wget
  xfsprogs
+ yara

@@ -35,7 +35,7 @@
          'ca275ade6a7132d316a4d1ffd401c9bfc6de691c58531385d85087c4d50723aeacb5b4bc7abef0165b4fb3cbed146a0fefd9dae4c99c1547f61618798a772d29'
          'SKIP'
          'fec52c475b8126774290eab7a514f8145ae51edab150d413c09f5540719c9578fe1cb99987b6190a9cd82bd947e059c32e740a03d26e9d472af51356cafd8a32'
-@@ -73,8 +75,8 @@
+@@ -75,8 +77,8 @@
  
    _bashconfig=(-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/bin\"\'
                 -DSTANDARD_UTILS_PATH=\'\"/usr/bin\"\'
@@ -46,7 +46,7 @@
                 -DNON_INTERACTIVE_LOGIN_SHELLS
                 -std=gnu17)
    export CFLAGS="${CFLAGS} ${_bashconfig[@]}"
-@@ -97,8 +99,9 @@
+@@ -99,8 +101,9 @@
    ln -s bash "${pkgdir}/usr/bin/sh"
    ln -s bash "${pkgdir}/usr/bin/rbash"
  

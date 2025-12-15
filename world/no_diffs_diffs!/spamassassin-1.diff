@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,13 +40,11 @@
+ _archive="Mail-SpamAssassin-$pkgver"
+ source=("https://ftp.fau.de/apache/$pkgname/source/$_archive.tar.gz"
+         "https://www.apache.org/dist/$pkgname/source/$_archive.tar.gz.asc"
+-        spamassassin.tmpfiles.d
+-        spamassassin.service)
++        spamassassin.tmpfiles.d)
+ validpgpkeys=(D8099BC79E17D7E49BC21E31FDE52F40F7D39814)
+ sha256sums=('c521be978cef3d49b1e139477ca60a0bd498345fc98274796e44161fae49a17f'
+             'SKIP'
+-            'a4abb06b42d29e76ab90b1b40a7e761fae320586b6be8a491f648cd1def77d6b'
+-            'ce195f6c678f28242eee80ded0de85285b7a992af82b80f88a756eb4473706cc')
++            'a4abb06b42d29e76ab90b1b40a7e761fae320586b6be8a491f648cd1def77d6b')
+ 
+ prepare() {
+ 	cd "$_archive"
+@@ -74,7 +72,6 @@
+ package() {
+ 	cd "$_archive"
+ 	make DESTDIR="$pkgdir" install
+-	install -D -m644 -t "$pkgdir/usr/lib/systemd/system/" ../spamassassin.service
+ 	install -d -o 182 -g 182 -m 755 "$pkgdir/var/lib/spamassassin"
+ 	echo 'u spamd 182 - /var/lib/spamassassin' |
+ 		install -Dm644 /dev/stdin "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"

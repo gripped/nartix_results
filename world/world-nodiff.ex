@@ -39,6 +39,8 @@ akonadi-mime
 akonadi-notes
 akonadi-notes5
 akonadi-search
+akonadi
+libakonadi
 akonadiconsole
 akregator
 alacarte
@@ -132,6 +134,7 @@ atkmm-2.36
 atkmm-2.36-docs
 atkmm
 atkmm-docs
+atomicparsley
 atop
 attica
 attica5
@@ -246,6 +249,8 @@ breeze-grub
 breeze-gtk
 breeze-icons
 breeze-plymouth
+breeze
+breeze5
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -274,14 +279,15 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
+cantor
 capnproto
 capstone
 python-capstone
 cargo-about
-cargo-c
 cargo-edit
 caribou
 catatonit
@@ -299,6 +305,7 @@ cdrtools
 celluloid
 cervisia
 cfitsio
+cgns
 chafa
 chatblade
 check-jsonschema
@@ -312,13 +319,9 @@ chmlib
 chromaprint
 chrono-date
 chrpath
-cinnamon-control-center
-cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
-cinnamon-translations
-cinnamon
 cjson
 clang
 clang14
@@ -466,6 +469,7 @@ dnsmasq
 docbook-dsssl
 docbook-sgml
 docbook-sgml31
+docbook-utils
 docbook-xml
 docbook-xsl
 docbook2x
@@ -486,6 +490,7 @@ dpdk
 dpkg
 dqlite
 draco
+dragon
 dropbear
 dropbear-scp
 duktape
@@ -616,6 +621,7 @@ festival
 ffcall
 ffmpeg
 ffmpeg4.4
+ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
 fftw
@@ -634,6 +640,7 @@ otf-fira-mono
 fira-sans
 ttf-fira-sans
 otf-fira-sans
+firejail
 fish
 five-or-more
 flac
@@ -656,6 +663,7 @@ font-awesome
 woff2-font-awesome
 otf-font-awesome
 fontconfig
+fontforge
 foomatic-db-engine
 foomatic-db
 foomatic-db-ppds
@@ -1026,6 +1034,7 @@ hivex
 hostapd
 hotdoc
 hplip
+hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -1091,6 +1100,7 @@ imake
 imath
 img2pdf
 imlib2
+immer
 inchi
 incidenceeditor
 indent
@@ -1219,6 +1229,7 @@ kalendar
 kalgebra
 kalk
 kalm
+kalzium
 kamera
 kamoso
 kanagram
@@ -1272,6 +1283,7 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
+kddockwidgets
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -1294,16 +1306,19 @@ kde-inotify-survey
 kdebugsettings
 kdeclarative
 kdeclarative5
+kdeconnect
 kdecoration
 kdecoration5
 kded
 kded5
 kdeedu-data
+kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
 kdenlive
 kdepim-addons
+kdepim-runtime
 kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
@@ -1370,6 +1385,7 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1493,6 +1509,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1654,6 +1671,7 @@ libcue
 libcupsfilters
 libcutl
 libdatachannel
+libdatrie
 libdazzle
 libdbi
 libdbi-docs
@@ -1782,6 +1800,7 @@ libkdcraw5
 libkdegames
 libkdepim
 libkeduvocdocument
+libkexiv2
 libkeybinder3
 libkeyfinder
 libkgapi
@@ -1789,6 +1808,8 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
+libkrun
+libkrunfw
 libksane
 libkscreen
 libkscreen5
@@ -2289,6 +2310,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -2355,6 +2377,11 @@ mtr
 mtr-gtk
 mujs
 muparser
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
+python-mupdf
 musescore
 musl
 musl-aarch64
@@ -2378,7 +2405,6 @@ ncftp
 ncmpcpp
 ncompress
 neatvnc
-nemo
 neochat
 neofetch
 neomutt
@@ -2750,6 +2776,8 @@ perl-list-utilsby
 perl-locale-gettext
 perl-log-message-simple
 perl-log-message
+perl-log-report-optional
+perl-log-report
 perl-lwp-mediatypes
 perl-lwp-protocol-https
 perl-mail-authenticationresults
@@ -2838,6 +2866,7 @@ perl-specio
 perl-spiffy
 perl-string-crc32
 perl-string-format
+perl-string-print
 perl-string-shellquote
 perl-sub-exporter-progressive
 perl-sub-exporter
@@ -3120,7 +3149,6 @@ python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
-python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
@@ -3130,7 +3158,6 @@ python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
-python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
@@ -3155,7 +3182,6 @@ python-appdirs
 python-apscheduler
 python-apsw
 python-archinfo
-python-aresponses
 python-argcomplete
 python-argh
 python-argon2-cffi-bindings
@@ -3189,7 +3215,6 @@ python-augeas
 python-authheaders
 python-authlib
 python-authres
-python-autobahn
 python-autocommand
 python-automat
 python-autopage
@@ -3544,7 +3569,6 @@ python-googleapis-common-protos
 python-gp-libs
 python-gpgme
 python-graphene
-python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
@@ -4005,7 +4029,6 @@ python-pydbus
 python-pydocstyle
 python-pydot
 python-pydrive
-python-pyee
 python-pyelftools
 python-pyenchant
 python-pyenchant-docs
@@ -4147,7 +4170,6 @@ python-pytest-runner
 python-pytest-services
 python-pytest-snapshot
 python-pytest-socket
-python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
@@ -4506,7 +4528,6 @@ python-wurlitzer
 python-wxpython
 python-xapian-haystack
 python-xapian
-python-xapp
 python-xarray
 python-xattr
 python-xkbcommon
@@ -5241,6 +5262,7 @@ soundconverter
 soundtouch
 source-highlight
 sox
+spamassassin
 spandsp
 spandsp-docs
 sparsehash
@@ -5253,10 +5275,10 @@ libspeechd
 speex
 speexdsp
 spglib
+spice-gtk
 spice-protocol
 spice
 spirv-headers
-spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
@@ -5717,6 +5739,10 @@ wpebackend-fdo-docs
 wqy-zenhei
 wsdd
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265
@@ -5724,7 +5750,6 @@ xa
 xalan-c
 xapian-core
 xapian-core-docs
-xapp
 xarchiver
 xautolock
 xaw3d

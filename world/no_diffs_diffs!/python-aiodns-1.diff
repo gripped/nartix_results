@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=python-aiodns
  _name=${pkgname#python-}
 -pkgver=3.6.1
+-pkgrel=2
 +pkgver=3.5.0
- pkgrel=1
++pkgrel=1
  pkgdesc='Simple DNS resolver for asyncio'
  arch=(any)
+ url=https://github.com/saghul/aiodns
 @@ -21,7 +21,7 @@
    python-uvloop
  )

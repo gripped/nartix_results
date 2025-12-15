@@ -1,6 +1,11 @@
 alsa-utils
 autorandr
+chess-tui
+cinnamon-control-center
 cinnamon-desktop
+cinnamon-menus
+cinnamon-translations
+cinnamon
 cjs
 cosmic-applets
 cosmic-comp
@@ -44,6 +49,8 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
+muffin
+nemo
 neofetch
 nerd-fonts
 otf-aurulent-nerd
@@ -143,6 +150,8 @@ wezterm
 wireshark
 wireshark-cli
 wireshark-qt
+xapp
 xdg-desktop-portal-xapp
 xfce4-notifyd
 xfce4-screensaver
+xreader

@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=libindi
--pkgver=2.1.7
-+pkgver=2.1.6
- pkgrel=1
- pkgdesc='A distributed control protocol designed to operate astronomical instrumentation'
- url='https://www.indilib.org/index.php?title=Main_Page'
-@@ -21,19 +21,18 @@
+@@ -21,7 +21,6 @@
           libusb
           libxisf
           rtl-sdr
@@ -16,34 +8,15 @@
           zlib)
  makedepends=(cmake
               git
--             qt6-base)
--optdepends=('qt6-base: Qt client library')
-+             qt5-base)
-+optdepends=('qt5-base: Qt client library')
- source=(git+https://github.com/indilib/indi#tag=v$pkgver)
--sha256sums=('da08fa4c9999b97aa78e0571fd8177d43583bb4e4623b74f77699f8c62068cf8')
-+sha256sums=('6f5e14e78e4a0c7c4cd471e9ef531e801ea269252bb1cabb24218c0b8cb0b309')
- 
- build() {
-   cmake -B build -S indi \
-     -DCMAKE_INSTALL_PREFIX=/usr \
--    -DINDI_BUILD_QT_CLIENT=ON \
-+    -DINDI_BUILD_QT5_CLIENT=ON \
-     -DUDEVRULES_INSTALL_DIR=/usr/lib/udev/rules.d \
-     -DCMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects" \
-     -DCMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects -Wp,-U_GLIBCXX_ASSERTIONS"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -14,7 +14,6 @@
- libtheora
- libusb
+@@ -16,5 +16,4 @@
  libxisf
--qt6-base
-+qt5-base
+ qt6-base
  rtl-sdr
 -systemd-libs
  zlib

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ 
+ prepare() {
+ 	cd "$_archive"
+-	cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
++	cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd "$_archive"
+-cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
++cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ build() {
+ cd "$_archive"

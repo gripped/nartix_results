@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,21 @@
- 
- pkgname=weston
- pkgver=14.0.2
--pkgrel=3
-+pkgrel=2
- pkgdesc='Reference implementation of a Wayland compositor'
- arch=('x86_64')
+@@ -7,7 +7,7 @@
  url='https://wayland.freedesktop.org/'
  license=('MIT')
  depends=('fontconfig' 'glibc' 'wayland' 'libxkbcommon' 'libinput' 'libunwind' 'pixman'
@@ -16,16 +9,6 @@
           'mesa' 'libegl' 'libevdev' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
           'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
           'gstreamer' 'gst-plugins-base-libs')
--makedepends=('wayland-protocols' 'meson' 'ninja' 'freerdp' 'neatvnc' 'libpipewire'
-+makedepends=('wayland-protocols' 'meson' 'ninja' 'freerdp2' 'neatvnc' 'libpipewire'
-              'xorg-xwayland' 'xcb-util-cursor' 'libdisplay-info')
- optdepends=('xorg-xwayland: support x11 backend'
-             'libpipewire: support pipewire backend'
--            'freerdp: support rdp backend'
-+            'freerdp2: support rdp backend'
-             'neatvnc: support vnc backend'
-             'libdisplay-info: support drm backend')
- options=(!lto)
 @@ -42,8 +42,8 @@
  }
  
@@ -43,15 +26,6 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,7 @@
- colord
- dbus
- fontconfig
--freerdp
-+freerdp2
- glib2
- glibc
- gst-plugins-base-libs
 @@ -11,6 +11,7 @@
  libdisplay-info
  libdrm

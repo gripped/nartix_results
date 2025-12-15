@@ -40,8 +40,6 @@ gssproxy
 gzip
 iproute2
 iputils
-ldns
-libnl
 libsasl
 libseccomp
 python-libseccomp

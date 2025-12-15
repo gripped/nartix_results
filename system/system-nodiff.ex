@@ -61,6 +61,7 @@ kbd
 keyutils
 kmod
 krb5
+ldns
 leancrypto
 less
 libaio
@@ -81,6 +82,7 @@ libidn2
 libinih
 libisl
 libksba
+libmakepkg-dropins
 libmicrohttpd
 libmnl
 libmpc
@@ -89,6 +91,7 @@ libnfnetlink
 libnftnl
 libnghttp2
 libnghttp3
+libnl
 libnsl
 libpcap
 libpipeline

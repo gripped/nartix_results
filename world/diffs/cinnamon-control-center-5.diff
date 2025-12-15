@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cinnamon-control-center
+-pkgver=6.6.0
++pkgver=6.0.0
+ pkgrel=1
+ pkgdesc="The Control Center for Cinnamon"
+ arch=(x86_64)
+@@ -11,19 +11,19 @@
+ optdepends=('cinnamon-translations: i18n'
+             'gnome-color-manager: for color management tasks'
+             'gnome-online-accounts: for the online accounts module')
+-makedepends=(git meson gnome-online-accounts glib2-devel)
++makedepends=(meson samurai gnome-online-accounts)
+ options=(!emptydirs)
+-source=(git+${url}#tag=$pkgver)
+-sha256sums=('f3d14e4e30d473f7284314ccdb207bb970c8c8ceed1ac27c8cc7647c5ab04c8c')
+-b2sums=('0521be583a47061f35d76474308269c821e7c5c5e7bcbf6fee7fd6e8b6ff0ef9d0ffd79ed2d397d3af1509ec284e3a2700430a41d2233568aac52b33446e5262')
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha256sums=('8dcf3b1a5e0388f5292de27120482c692a79e7c31aea583301ad083a8c449532')
++b2sums=('b856e4c258a76aa5e558cca53ac333df81ae135d731a5de65470282e741a95f2c179fbd9f28e8bb26824de5ee1f9b9fcb0143fee1760800149a345085c45f11b')
+ 
+ build() {
+-  arch-meson build ${pkgname}
+-  meson compile -C build
++  artix-meson build ${pkgname}-${pkgver}
++  samu -C build
+ }
+ 
+ package() {
+-  meson install -C build --destdir="$pkgdir"
++  DESTDIR="${pkgdir}" samu -C build install
+   rm "${pkgdir}"/usr/bin/cinnamon-control-center
+   rm "${pkgdir}"/usr/share/cinnamon-control-center/ui/shell.ui
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,9 @@
+ cinnamon-menus
+ cinnamon-settings-daemon
+ colord
+-git
+-glib2-devel
+ gnome-online-accounts
+ libgnomekbd
+ libmm-glib
+ meson
+ nm-connection-editor
++samurai
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson build ${pkgname}
+-meson compile -C build
++artix-meson build ${pkgname}-${pkgver}
++samu -C build
+ }
