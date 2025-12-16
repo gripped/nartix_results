@@ -46,7 +46,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cargo-c
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -71,6 +70,9 @@ cifs-utils
 cinnamon-control-center
 cinnamon-desktop
 cinnamon-menus
+cinnamon-screensaver
+cinnamon-session
+cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
@@ -318,8 +320,10 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
+kdenlive
 kdoctools5
 kinfocenter
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -329,8 +333,10 @@ knot
 ksystemlog
 kwin-x11
 kwin
+lib3mf
+
+python-
 libabw
-libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -379,6 +385,7 @@ libinput-tools
 libisoburn
 libisofs
 libkate
+libkrun
 libldm
 liblqr
 libmateweather
@@ -390,6 +397,7 @@ libmwaw
 libmwaw-docs
 libnvme
 libofa
+libopusenc
 libpagemaker
 libpgm
 libprocps
@@ -694,6 +702,7 @@ powerdns-recursor
 powerdns
 presage
 prosody
+ptex
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -878,7 +887,6 @@ snapper
 snappy
 solid
 spice-vdagent
-spirv-llvm-translator
 sqlcipher
 squid
 sshguard
@@ -1088,6 +1096,7 @@ xdg-desktop-portal-wlr
 xdg-desktop-portal-xapp
 xdg-desktop-portal
 xdg-user-dirs
+xed
 xf86-input-evdev
 xf86-input-vmmouse
 xf86-input-wacom

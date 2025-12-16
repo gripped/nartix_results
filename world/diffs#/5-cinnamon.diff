@@ -4,15 +4,16 @@
  
  pkgname=cinnamon
 -pkgver=6.6.0
+-pkgrel=2
 +pkgver=6.0.4
- pkgrel=1
++pkgrel=1
  pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
  arch=(x86_64)
  url="https://github.com/linuxmint/cinnamon"
  license=(GPL2)
 -depends=(accountsservice caribou cinnamon-control-center cinnamon-desktop cinnamon-menus cinnamon-screensaver
 -         cinnamon-session cinnamon-settings-daemon cjs gcr gdk-pixbuf2 glib2 gnome-backgrounds gsound
--         gstreamer gtk3 libgnomekbd libkeybinder3 librsvg muffin
+-         gstreamer gtk3 libibus libgnomekbd libkeybinder3 librsvg muffin
 -         network-manager-applet nemo pango polkit-gnome python python-cairo python-dbus
 +depends=(accountsservice caribou cinnamon-control-center cinnamon-menus cinnamon-screensaver
 +         cinnamon-session cinnamon-settings-daemon cjs gnome-backgrounds gsound
@@ -73,7 +74,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,23 +1,17 @@
+@@ -1,38 +1,28 @@
  accountsservice
  caribou
  cinnamon-control-center
@@ -96,9 +97,10 @@
  intltool
 +libcroco
  libgnomekbd
+-libibus
  libkeybinder3
  librsvg
-@@ -25,13 +19,10 @@
+ meson
  muffin
  nemo
  network-manager-applet
@@ -112,7 +114,7 @@
  python-pam
  python-pexpect
  python-pillow
-@@ -40,6 +31,7 @@
+@@ -41,6 +31,7 @@
  python-requests
  python-tinycss2
  python-xapp

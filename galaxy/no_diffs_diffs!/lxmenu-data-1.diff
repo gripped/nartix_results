@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=lxmenu-data
+-pkgver=0.1.7
+-pkgrel=1
++pkgver=0.1.6
++pkgrel=2
+ pkgdesc='Freedesktop.org desktop menus for LXDE'
+ arch=(any)
+ url='https://github.com/lxde/lxmenu-data'
+@@ -11,7 +11,7 @@
+   intltool
+ )
+ source=("git+https://github.com/lxde/lxmenu-data.git#tag=$pkgver")
+-b2sums=(4de363cce5007310fc4d7282132847e4da65365c3c2291f8753d3acbd78c0a8bffdb3f5651231a5b2e2bb4a71dab2a407db1bdd10c85a871907f06b0300d6bf4)
++b2sums=(7612b6d8212ab33542176f14f6b94e0a33523543c7553db8fbd75b3b602bedbd93a6f02740f611806b39c13e6a4a9135527d9d97a6b93adcb21fdda9682b69ed)
+ 
+ prepare() {
+   cd $pkgname

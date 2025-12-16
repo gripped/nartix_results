@@ -288,6 +288,7 @@ capnproto
 capstone
 python-capstone
 cargo-about
+cargo-c
 cargo-edit
 caribou
 catatonit
@@ -319,9 +320,6 @@ chmlib
 chromaprint
 chrono-date
 chrpath
-cinnamon-screensaver
-cinnamon-session
-cinnamon-settings-daemon
 cjson
 clang
 clang14
@@ -1316,7 +1314,6 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
-kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1415,7 +1412,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1616,14 +1612,12 @@ lua51-lgi
 lua53-lgi
 lhasa
 lib2geom
-lib3mf
-
-python-
 libaccounts-glib
 libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
+libaec
 libaemu
 libakonadi5
 libalkimia
@@ -1808,7 +1802,6 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
-libkrun
 libkrunfw
 libksane
 libkscreen
@@ -1896,7 +1889,6 @@ libomxil-bellagio
 libopenmpt
 libopenraw
 libopensmtpd
-libopusenc
 liborcus
 libosinfo
 libotf
@@ -3078,7 +3070,6 @@ prrte
 prrte-docs
 pstoedit
 psutils
-ptex
 publicsuffix-list
 pugixml
 pulseaudio-qt
@@ -5279,6 +5270,7 @@ spice-gtk
 spice-protocol
 spice
 spirv-headers
+spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
@@ -5778,7 +5770,6 @@ xdg-utils
 xdotool
 xdp-tools
 libxdp
-xed
 xerces-c
 xf86-input-elographics
 xf86-input-libinput

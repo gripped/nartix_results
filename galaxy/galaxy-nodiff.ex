@@ -19,7 +19,6 @@ avidemux-cli
 avidemux-qt
 bat
 bleachbit
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -39,7 +38,6 @@ caja-xattr-tags
 caja-audio-video-properties
 caja
 calibre
-cargo-nextest
 catfish
 cava
 cdemu-client
@@ -61,9 +59,6 @@ certbot-dns-sakuracloud
 certbot-nginx
 certbot
 chromium-bsu
-cinnamon-screensaver
-cinnamon-session
-cinnamon-settings-daemon
 claws-mail
 compface
 copyq
@@ -399,7 +394,6 @@ rust-script
 sakura
 salt
 screengrab
-scribus
 scummvm
 shairplay
 smokeping
@@ -583,7 +577,6 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic
 xdg-desktop-portal-lxqt
-xed
 xfburn
 xfce4-appfinder
 xfce4-artwork

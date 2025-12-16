@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cinnamon-screensaver
+-pkgver=6.6.0
++pkgver=6.0.3
+ pkgrel=1
+ pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
+ arch=(x86_64)
+@@ -9,17 +9,17 @@
+ depends=(accountsservice cinnamon-desktop libgnomekbd
+          python-cairo python-gobject python-setproctitle python-xapp xapp xdotool)
+ optdepends=('cinnamon-translations: i18n')
+-makedepends=(git gobject-introspection meson glib2-devel)
++makedepends=(gobject-introspection meson samurai)
+ backup=(etc/pam.d/cinnamon-screensaver)
+-source=(git+${url}#tag=$pkgver)
+-sha512sums=('13b613596a6ab82b3b1909698cb43ed44b9e3c60209c0ff445a4b4188bfd1050d1a3012c86819d9fc3bcebccc18954a8a97c0d23ccdc9d964f68f0812334d207')
+-b2sums=('7fdce2f9c2123fe81a0b7e5018261f011f3c7fb962b09b297943a78a7f85574195f5d4038e8aa9d6ccb5e136cd4301fb68868319d9d85e6ed44c758e46ecb8f3')
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha512sums=('556b8eeac280001273460e5f1f5d1e5dbdf003ff95ad1ec9c3217316a6197520a32cd05d61a395daef066f13c8c9c89ebb9057779dd845bd597c207492fd91ef')
++b2sums=('4f88cf0ca72384fbff2ce1f55047b6d53704bf55b2a3bfd5c942c19bcfbe9249c07e9fc1f08246c0e55c6b2110f543157ec87028789e58d752ff21d54d347ae2')
+ 
+ build() {
+-  arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
+-  meson compile -C build
++  artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
++  samu -C build
+ }
+ 
+ package() {
+-  meson install -C build --destdir="$pkgdir"
++  DESTDIR="${pkgdir}" samu -C build install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ accountsservice
+ cinnamon-desktop
+-git
+-glib2-devel
+ gobject-introspection
+ libgnomekbd
+ meson
+@@ -9,5 +7,6 @@
+ python-gobject
+ python-setproctitle
+ python-xapp
++samurai
+ xapp
+ xdotool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
+-meson compile -C build
++artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
++samu -C build
+ }

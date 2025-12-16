@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cinnamon-settings-daemon
+-pkgver=6.6.1
+-pkgrel=1
++pkgver=6.0.0
++pkgrel=2
+ pkgdesc="The Cinnamon Settings daemon"
+ arch=(x86_64)
+ url="https://github.com/linuxmint/${pkgname}"
+@@ -10,17 +10,17 @@
+          libgnomekbd libgudev libnotify librsvg libwacom nss polkit
+          pulse-native-provider upower)
+ optdepends=('cinnamon-translations: i18n')
+-makedepends=(git meson xf86-input-wacom glib2-devel)
++makedepends=(meson samurai xf86-input-wacom xf86-input-evdev)
+ options=(!emptydirs)
+-source=(git+${url}#tag=$pkgver)
+-sha512sums=('4a45dc85289bb27d68c90820ff972a8bad4c3b21708efeeba86b794781ac8d439097617a514c0197f98bf7f413fcb35ecf82e13f2d5e704419a8c81bcceb7ac6')
+-b2sums=('fb694bda874f9f9d0d6851ea72339fd2bd5c902e49fb9a14af13a6a085722f72fe60622543f0e83e1ab13ec382aa7ea0f60b4f9a9b06792ac5b1132f952bbfa9')
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha512sums=('44348765bf8c0cb941d177a6765aef10796d72f5c215dbffa4b514523956e257128d6bbbb0dcd9c3f0b2bcde24745e082ad82a7cee149125903e13b349c07200')
++b2sums=('f05e14e9d3c15bc94df5435b0f317e1924993fbf4908491ea5a825b623c6a6f127ce20f5c31f54bfbd547a70ad645c3dbe71d9c55f790a3e0730d55bc58d6316')
+ 
+ build() {
+-  arch-meson --libexecdir=lib/${pkgname} ${pkgname} build
+-  meson compile -C build
++  artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
++  samu -C build
+ }
+ 
+ package() {
+-  meson install -C build --destdir="$pkgdir"
++  DESTDIR="${pkgdir}" samu -C build install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+ cinnamon-desktop
+ colord
+ dbus-glib
+-git
+-glib2-devel
+ libcanberra-pulse
+ libcups
+ libgnomekbd
+@@ -14,5 +12,7 @@
+ nss
+ polkit
+ pulse-native-provider
++samurai
+ upower
++xf86-input-evdev
+ xf86-input-wacom
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson --libexecdir=lib/${pkgname} ${pkgname} build
+-meson compile -C build
++artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
++samu -C build
+ }

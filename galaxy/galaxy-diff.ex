@@ -1,9 +1,14 @@
 alsa-utils
 autorandr
+blender
+cargo-nextest
 chess-tui
 cinnamon-control-center
 cinnamon-desktop
 cinnamon-menus
+cinnamon-screensaver
+cinnamon-session
+cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
@@ -132,6 +137,7 @@ rage
 read-edid
 reflector
 retroarch
+scribus
 sdcv
 signal-desktop
 terminology
@@ -152,6 +158,7 @@ wireshark-cli
 wireshark-qt
 xapp
 xdg-desktop-portal-xapp
+xed
 xfce4-notifyd
 xfce4-screensaver
 xreader

@@ -1,13 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,14 +1,14 @@
  
  pkgname=cinnamon
 -pkgver=6.6.0
+-pkgrel=2
 +pkgver=6.4.13
- pkgrel=1
++pkgrel=1
  pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
  arch=(x86_64)
+ url="https://github.com/linuxmint/cinnamon"
+ license=(GPL2)
+ depends=(accountsservice caribou cinnamon-control-center cinnamon-desktop cinnamon-menus cinnamon-screensaver
+          cinnamon-session cinnamon-settings-daemon cjs gcr gdk-pixbuf2 glib2 gnome-backgrounds gsound
+-         gstreamer gtk3 libibus libgnomekbd libkeybinder3 librsvg muffin
++         gstreamer gtk3 libgnomekbd libkeybinder3 librsvg muffin
+          network-manager-applet nemo pango polkit-gnome python python-cairo python-dbus
+          python-gobject python-pam python-pexpect python-pillow python-pyinotify
+          python-pytz python-tinycss2 python-xapp python-requests timezonemap xapp xdg-desktop-portal-xapp)
 @@ -21,20 +21,20 @@
              'gnome-terminal: X terminal emulator'
              'touchegg: touch gestures'
@@ -62,7 +72,15 @@
  glib2
  glib2-devel
  gnome-backgrounds
-@@ -40,6 +39,7 @@
+@@ -19,7 +18,6 @@
+ gtk3
+ intltool
+ libgnomekbd
+-libibus
+ libkeybinder3
+ librsvg
+ meson
+@@ -41,6 +39,7 @@
  python-requests
  python-tinycss2
  python-xapp

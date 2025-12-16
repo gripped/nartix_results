@@ -1,27 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gitea
--pkgver=1.25.2
-+pkgver=1.25.1
- pkgrel=1
- pkgdesc="Painless self-hosted Git service, community managed."
- url="https://gitea.io"
 @@ -20,11 +20,9 @@
  backup=("etc/${pkgname}/app.ini")
  source=("git+https://github.com/go-gitea/gitea.git#tag=v${pkgver}?signed"
          "${pkgname}.tmpfiles"
 -        "${pkgname}.service"
          "${pkgname}.sysusers")
--sha256sums=('97d9e90f04a1ed66e31e783550a9ee05d9d566c4c690c79b2ca33a590acafb7e'
-+sha256sums=('ca6871926d3dba088fb04dfbc323794354a7d8ca9be0363ec424b8b99fc82c51'
+ sha256sums=('97d9e90f04a1ed66e31e783550a9ee05d9d566c4c690c79b2ca33a590acafb7e'
              '1521fd7edc3830c695698ffe9835709f1408040b5ec989f07410972c894fa8ba'
 -            '0725aa3d9c556229b473ee5a12a922a1ebbb88aeb02cffd0252756c8bd531959'
              'e29dcc74b2f52e32d3931103d03f202d1cafe18e7eb9a271da0f50ef61dc8446')
  validpgpkeys=(B56E3C7437A49E136862F5DE9D8A57ADAA232E95  # Matti Ranta <matti@mdranta.net>, retrieved from https://github.com/techknowlogick.gpg
                D8F9672D77C0BB60A024C23EDFDE60A0093EB926  # Lauris Bukšis-Haberkorns <lauris@nix.lv>, retrieved from https://github.com/lafriks.gpg
-@@ -61,7 +59,6 @@
+@@ -53,6 +51,8 @@
+ 
+ check() {
+ 	cd "${pkgname}"
++    unset GIT_CONFIG_GLOBAL
++    unset GIT_CONFIG_SYSTEM
+ 	make test
+ }
+ 
+@@ -61,7 +61,6 @@
  	install -Dm 755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
  	install -Dm 644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  	install -Dm 644 custom/conf/app.example.ini "${pkgdir}/etc/${pkgname}/app.ini"
