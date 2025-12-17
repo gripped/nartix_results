@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=wine
+ pkgver=10.20
+-pkgrel=1
++pkgrel=2
+ 
+ _pkgbasever=${pkgver/rc/-rc}
+ 
+@@ -19,7 +19,7 @@
+ pkgdesc="A compatibility layer for running Windows programs"
+ url="https://www.winehq.org"
+ arch=(x86_64)
+-options=(!lto)
++options=(!lto pestrip)
+ license=(LGPL-2.1-or-later)
+ depends=(
+   desktop-file-utils
+@@ -99,12 +99,18 @@
+   export CROSSCXXFLAGS="-O2 -pipe -g"
+   export CROSSLDFLAGS="-Wl,-O1"
+ 
++  if [[ $CFLAGS =~ (-ffile-prefix-map=[^[:space:]]+) ]]; then
++    CROSSCFLAGS="$CROSSCFLAGS ${BASH_REMATCH[1]}"
++    CROSSCXXFLAGS="$CROSSCXXFLAGS ${BASH_REMATCH[1]}"
++  fi
++
+   cd "$srcdir/$pkgname-64-build"
+   ../wine/configure \
+     --prefix=/usr \
+     --libdir=/usr/lib \
+     --disable-tests \
+-    --enable-archs=x86_64,i386
++    --enable-archs=x86_64,i386 \
++    --enable-build-id
+ 
+   make
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,11 +6,16 @@
+ export CROSSCFLAGS="-O2 -pipe -g"
+ export CROSSCXXFLAGS="-O2 -pipe -g"
+ export CROSSLDFLAGS="-Wl,-O1"
++if [[ $CFLAGS =~ (-ffile-prefix-map=[^[:space:]]+) ]]; then
++CROSSCFLAGS="$CROSSCFLAGS ${BASH_REMATCH[1]}"
++CROSSCXXFLAGS="$CROSSCXXFLAGS ${BASH_REMATCH[1]}"
++fi
+ cd "$srcdir/$pkgname-64-build"
+ ../wine/configure \
+ --prefix=/usr \
+ --libdir=/usr/lib \
+ --disable-tests \
+---enable-archs=x86_64,i386
++--enable-archs=x86_64,i386 \
++--enable-build-id
+ make
+ }

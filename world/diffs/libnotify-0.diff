@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   libnotify-docs
+ )
+ pkgver=0.8.7
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Library for sending desktop notifications"
+ url="https://gitlab.gnome.org/GNOME/libnotify"
+ arch=(x86_64)
+@@ -42,11 +42,6 @@
+ prepare() {
+   cd libnotify
+ 
+-  git cherry-pick -n \
+-    '92c3d2c315deeac94ff5e75333b58a629f0455a9' \
+-    '7dbd6baed011e495d8617bd9b569b90e8817527c' \
+-    '00a7b773e520161bdbd9c8139a9fddef976b2136'
+-
+   sed -i "/xvfb_run, '-a'/d" tests/meson.build
+ }
+ 
+@@ -54,7 +49,7 @@
+   local meson_options=(
+   )
+ 
+-  arch-meson libnotify build "${meson_options[@]}"
++  artix-meson libnotify build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,10 @@
+ prepare() {
+ cd libnotify
+-git cherry-pick -n \
+-'92c3d2c315deeac94ff5e75333b58a629f0455a9' \
+-'7dbd6baed011e495d8617bd9b569b90e8817527c' \
+-'00a7b773e520161bdbd9c8139a9fddef976b2136'
+ sed -i "/xvfb_run, '-a'/d" tests/meson.build
+ }
+ build() {
+ local meson_options=(
+ )
+-arch-meson libnotify build "${meson_options[@]}"
++artix-meson libnotify build "${meson_options[@]}"
+ meson compile -C build
+ }

@@ -323,7 +323,6 @@ kcoreaddons
 kdenlive
 kdoctools5
 kinfocenter
-kirigami
 kismet
 kitty
 kitty-terminfo
@@ -384,7 +383,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -395,6 +393,8 @@ libmpd
 libmspub
 libmwaw
 libmwaw-docs
+libnotify
+libnotify-docs
 libnvme
 libofa
 libopusenc
@@ -716,26 +716,13 @@ pyside6
 pyside6-tools
 shiboken6
 pysolfc
-python-aiohappyeyeballs
-python-aiorpcx
 python-anytree
-python-aresponses
-python-autobahn
-python-deadlib
-python-nntplib
-python-cgi
-python-mailcap
-python-debugpy
-python-graphql-core
-python-pyee
 python-pymupdf
 python-pytest-freezegun
-python-pytest-subprocess
 python-pyudev
 python-recommonmark
 python-seaborn
 python-smmap
-python-xapp
 qastools
 qbittorrent
 qbittorrent-nox
@@ -851,6 +838,7 @@ rocfft
 rocrand
 rocsolver
 rocsparse
+rpm-sequoia
 rrdtool
 rspamd
 rsync
@@ -1065,7 +1053,6 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
-w3m
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -1077,6 +1064,7 @@ webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
 wildmidi
+wine
 wireplumber
 libwireplumber
 wireplumber-docs

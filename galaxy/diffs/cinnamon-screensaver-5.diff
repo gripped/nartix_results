@@ -1,23 +1,35 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,34 +1,25 @@
  
  pkgname=cinnamon-screensaver
 -pkgver=6.6.0
+-pkgrel=2
 +pkgver=6.4.1
- pkgrel=1
++pkgrel=1
  pkgdesc="Screensaver designed to integrate well with the Cinnamon desktop."
  arch=(x86_64)
-@@ -9,17 +9,17 @@
+ url="https://github.com/linuxmint/${pkgname}"
+-license=(GPL-2.0-or-later)
++license=(GPL)
  depends=(accountsservice cinnamon-desktop libgnomekbd
           python-cairo python-gobject python-setproctitle python-xapp xapp xdotool)
  optdepends=('cinnamon-translations: i18n')
 -makedepends=(git gobject-introspection meson glib2-devel)
 +makedepends=(gobject-introspection meson samurai glib2-devel)
  backup=(etc/pam.d/cinnamon-screensaver)
--source=(git+${url}#tag=$pkgver)
--sha512sums=('13b613596a6ab82b3b1909698cb43ed44b9e3c60209c0ff445a4b4188bfd1050d1a3012c86819d9fc3bcebccc18954a8a97c0d23ccdc9d964f68f0812334d207')
--b2sums=('7fdce2f9c2123fe81a0b7e5018261f011f3c7fb962b09b297943a78a7f85574195f5d4038e8aa9d6ccb5e136cd4301fb68868319d9d85e6ed44c758e46ecb8f3')
+-source=(git+${url}#tag=$pkgver
+-        cinnamon-screensaver-optional-caribou.patch)
+-sha512sums=('13b613596a6ab82b3b1909698cb43ed44b9e3c60209c0ff445a4b4188bfd1050d1a3012c86819d9fc3bcebccc18954a8a97c0d23ccdc9d964f68f0812334d207'
+-            'ad57b144d02de861fe2d144f0cbd8908531604aab9fa1efe185d073282d274bb05751a763457f064a98d63cb7bdedd88eb7bc5e7d3f0315cd5b717e1a626288d')
+-b2sums=('7fdce2f9c2123fe81a0b7e5018261f011f3c7fb962b09b297943a78a7f85574195f5d4038e8aa9d6ccb5e136cd4301fb68868319d9d85e6ed44c758e46ecb8f3'
+-        'ed6134828147d43ed101c4d6dd1d2b36b2c13cbe0ec21a8f708fc3b37c86623cc6d05febe7386d48b8f094aa87df97d147b9760422cd7b76432d05b8bcb80551')
+-
+-prepare() {
+-  cd ${pkgname}
+-
+-  git apply -3 ../cinnamon-screensaver-optional-caribou.patch
+-}
 +source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
 +sha512sums=('62125b6c8a0cfa8b969acd2be5f4ce0ae8f092565c45807b7ccedcf626a2c9bb2208838872eeea3ef2c418d902e55a58fab54e7f57cf2e6da00bbf19fd440783')
 +b2sums=('83a9fda11bc0e1a809b43a2b7c3c4b6b540b0c6415faaa21f31534c550b956b4c67bd67108f2d1c8b66780dbedecf6f726dd9e3e29779ede9a496fce9a59237a')
@@ -56,10 +68,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,4 @@
- build() {
--arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
--meson compile -C build
+@@ -1,8 +1,4 @@
+-prepare() {
+-cd ${pkgname}
+-git apply -3 ../cinnamon-screensaver-optional-caribou.patch
++build() {
 +artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}-${pkgver}
 +samu -C build
  }
+-build() {
+-arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
+-meson compile -C build
+-}

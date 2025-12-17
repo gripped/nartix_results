@@ -1,7 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,7 @@
- sha256sums=('ebef20d89f8001df3b89488f1f968a5a8624fa42430a0b595672925cb210d656')
+@@ -1,6 +1,6 @@
+ 
+ pkgname=egl-x11
+-pkgver=1.0.4
++pkgver=1.0.3
+ pkgrel=1
+ pkgdesc="NVIDIA XLib and XCB EGL Platform Library"
+ arch=('x86_64')
+@@ -19,10 +19,10 @@
+   git
+ )
+ source=("git+https://github.com/NVIDIA/egl-x11#tag=v$pkgver")
+-sha256sums=('f7068e4a5619a877174b781b2378fe5f703a45a14d125a400bae4806fe545c46')
++sha256sums=('ebef20d89f8001df3b89488f1f968a5a8624fa42430a0b595672925cb210d656')
  
  build() {
 -  arch-meson "$pkgname" build

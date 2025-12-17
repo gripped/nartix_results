@@ -25,7 +25,7 @@
 -        'rfkill-unblock_.service'
 -        'rfkill-block_.service')
 +        '0001-util-linux-no-systemd.patch')
- sha256sums=('d7fec66283cce093f54aaf0f30dcb6adfea7c7c170abf8cdf24df3c409397f87'
+ sha256sums=('d95e1a90d4a0733372f46c4af4fbb6fe7667d96b800c46a0cc05c5abe699eabe'
              '6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a'
              'ee917d55042f78b8bb03f5467e5233e3e2ddc2fe01e302bc53b218003fe22275'
 @@ -46,8 +47,7 @@
@@ -47,13 +47,11 @@
    sed -i '/^u /s|u|u!|' misc-utils/uuidd-sysusers.conf.in
  
    sed -i '/dirty=/c dirty=' tools/git-version-gen
-@@ -77,10 +79,11 @@
- 
- build() {
+@@ -79,8 +81,9 @@
    local _meson_options=(
-+    -Dsystemd=disabled
      -Dfs-search-path=/usr/bin:/usr/local/bin
  
++    -Dsystemd=disabled
      -Dlibuser=disabled
 -    -Dlibutempter=disabled
 +    -Dlibutempter=enabled
@@ -73,7 +71,7 @@
  
    meson compile -C build
  }
-@@ -112,7 +117,8 @@
+@@ -119,7 +124,8 @@
             'pam'
             'readline'
             'shadow'
@@ -83,7 +81,7 @@
             'zlib')
    optdepends=('words: default dictionary for look')
    backup=(etc/pam.d/chfn
-@@ -141,8 +147,6 @@
+@@ -148,8 +154,6 @@
    install -Dm0644 su.pam "${pkgdir}/etc/pam.d/su"
    install -Dm0644 su.pam "${pkgdir}/etc/pam.d/su-l"
  
@@ -92,7 +90,7 @@
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/pkgconfig util-linux-libs/lib/pkgconfig
-@@ -156,11 +160,6 @@
+@@ -163,11 +167,6 @@
  
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"

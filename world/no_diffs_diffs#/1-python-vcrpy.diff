@@ -1,19 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=python-vcrpy
- _name="${pkgname#python-}"
- pkgver=7.0.0
--pkgrel=2
-+pkgrel=1
- pkgdesc='Automatically mock your HTTP interactions to simplify and speed up testing'
- arch=('any')
- license=('MIT')
-@@ -22,7 +22,6 @@
-   local pytest_options=(
+@@ -23,6 +23,7 @@
      -vv
      --ignore tests/integration
--    -m 'not online'
+     -m 'not online'
++    --ignore=tests/unit/test_stubs.py::TestVCRConnection::test_body_consumed_once_stream
    )
  
    cd $_name-$pkgver

@@ -1412,6 +1412,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1787,6 +1788,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1870,8 +1872,6 @@ libnitrokey
 libnma
 libnma-common
 libnma-gtk4
-libnotify
-libnotify-docs
 libnova
 libnsbmp
 libnsgif
@@ -3140,6 +3140,7 @@ python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
+python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-openmetrics
 python-aiohttp-socks
@@ -3149,6 +3150,7 @@ python-aiomysql
 python-aiopg
 python-aioquic
 python-aioresponses
+python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
@@ -3173,6 +3175,7 @@ python-appdirs
 python-apscheduler
 python-apsw
 python-archinfo
+python-aresponses
 python-argcomplete
 python-argh
 python-argon2-cffi-bindings
@@ -3206,6 +3209,7 @@ python-augeas
 python-authheaders
 python-authlib
 python-authres
+python-autobahn
 python-autocommand
 python-automat
 python-autopage
@@ -3374,7 +3378,10 @@ python-dbus-deviation
 python-dbus-next
 python-dbusmock
 python-ddt
+python-deadlib
+$_modules[@]/#/python-standard-
 python-debtcollector
+python-debugpy
 python-decorator
 python-deepdiff
 python-deepmerge
@@ -3560,6 +3567,7 @@ python-googleapis-common-protos
 python-gp-libs
 python-gpgme
 python-graphene
+python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
@@ -4020,6 +4028,7 @@ python-pydbus
 python-pydocstyle
 python-pydot
 python-pydrive
+python-pyee
 python-pyelftools
 python-pyenchant
 python-pyenchant-docs
@@ -4161,6 +4170,7 @@ python-pytest-runner
 python-pytest-services
 python-pytest-snapshot
 python-pytest-socket
+python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
@@ -4519,6 +4529,7 @@ python-wurlitzer
 python-wxpython
 python-xapian-haystack
 python-xapian
+python-xapp
 python-xarray
 python-xattr
 python-xkbcommon
@@ -4764,7 +4775,6 @@ rofi
 ropgadget
 ropper
 rpcsvc-proto
-rpm-sequoia
 rpm-tools
 rpmextract
 rssguard
@@ -5690,6 +5700,7 @@ vulkan-icd-loader
 vulkan-tools
 vulkan-utility-libraries
 vulkan-validation-layers
+w3m
 wacomtablet
 waf
 warpinator
@@ -5715,7 +5726,6 @@ wf-recorder
 wget
 whois
 wine-staging
-wine
 wireguard-tools
 wireless_tools
 wireshark
@@ -5908,6 +5918,7 @@ zopfli
 zoxide
 zsh-autosuggestions
 zsh-completions
+zsh-history-substring-search
 zsh-syntax-highlighting
 zug
 zvbi
