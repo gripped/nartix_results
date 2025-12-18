@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,13 +30,11 @@
+ 
+ prepare() {
+   cd "$pkgname"
+-  export RUSTUP_TOOLCHAIN=stable
+-  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
++  cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ 
+ build() {
+   cd "$pkgname"
+-  export RUSTUP_TOOLCHAIN=stable
+ 
+   RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,9 @@
+ prepare() {
+ cd "$pkgname"
+-export RUSTUP_TOOLCHAIN=stable
+-cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
++cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ build() {
+ cd "$pkgname"
+-export RUSTUP_TOOLCHAIN=stable
+ RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+ nice just build-release --frozen
+ }

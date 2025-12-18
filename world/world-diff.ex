@@ -287,6 +287,7 @@ iio-sensor-proxy
 intel-opencl-clang
 intel-undervolt
 interception-tools
+ispc
 iwd
 jack2
 jack2-dbus
@@ -383,6 +384,7 @@ libinput
 libinput-tools
 libisoburn
 libisofs
+libkate
 libkrun
 libldm
 liblqr
@@ -1064,7 +1066,6 @@ webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
 wildmidi
-wine
 wireplumber
 libwireplumber
 wireplumber-docs

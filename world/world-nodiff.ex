@@ -1143,7 +1143,6 @@ iso-codes
 isodate
 python-isodate
 isoimagewriter
-ispc
 ispell
 isync
 itinerary
@@ -1788,7 +1787,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4052,6 +4050,7 @@ python-pyicu
 python-pyinotify
 python-pyjsparser
 python-pyjwt
+python-pykakasi
 python-pykerberos
 python-pykka
 python-pylast
@@ -4332,6 +4331,7 @@ python-speg
 python-sphinx-alabaster-theme
 python-sphinx-argparse-cli
 python-sphinx-argparse
+python-sphinx-autoapi
 python-sphinx-autobuild
 python-sphinx-autodoc-typehints
 python-sphinx-basic-ng
@@ -4340,6 +4340,7 @@ python-sphinx-copybutton
 python-sphinx-furo
 python-sphinx-hawkmoth
 python-sphinx-inline-tabs
+python-sphinx-intl
 python-sphinx-issues
 python-sphinx-jinja
 python-sphinx-lv2-theme
@@ -4478,6 +4479,7 @@ python-unidecode
 python-unidiff
 python-unittest-mixins
 python-unpaddedbase64
+python-unrardll
 python-update-checker
 python-uri-template
 python-uritemplate
@@ -5726,6 +5728,7 @@ wf-recorder
 wget
 whois
 wine-staging
+wine
 wireguard-tools
 wireless_tools
 wireshark

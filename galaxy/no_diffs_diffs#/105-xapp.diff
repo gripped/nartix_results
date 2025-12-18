@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,7 @@
+ b2sums=('21dd7a808439cbdbb7d01facaca7f533abe1bcfa8244de26eafa12db0381c37fcf5e458456e6d70d825d39a6c0b9c8e9a5ea70726ec1cf149e052796b53b3380')
+ 
+ build() {
+-  arch-meson ${pkgname} build
++  artix-meson ${pkgname} build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,6 +5,5 @@
+ libgnomekbd
+ meson
+ python-gobject
+-samurai
+ vala
+ xapp-symbolic-icons
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson ${pkgname} build
++artix-meson ${pkgname} build
+ meson compile -C build
+ }
