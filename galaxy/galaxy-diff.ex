@@ -137,6 +137,7 @@ transmission-gtk
 transmission-qt
 unoconv
 vice
+voa
 wayvnc
 wezterm
 wireshark

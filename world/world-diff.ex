@@ -176,6 +176,7 @@ frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
+gajim
 gala
 gamemode
 gamescope
@@ -287,7 +288,6 @@ iio-sensor-proxy
 intel-opencl-clang
 intel-undervolt
 interception-tools
-ispc
 iwd
 jack2
 jack2-dbus
@@ -333,9 +333,6 @@ knot
 ksystemlog
 kwin-x11
 kwin
-lib3mf
-
-python-
 libabw
 libatasmart
 libayatana-indicator
@@ -872,6 +869,7 @@ sfml
 shairport-sync
 sharutils
 signal-desktop
+sip
 smartmontools
 snapper
 snappy

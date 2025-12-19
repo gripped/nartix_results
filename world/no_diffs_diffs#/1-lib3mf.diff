@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -68,8 +68,13 @@
+   DESTDIR="$pkgdir" cmake --install build
+ 
+   install -vd "$pkgdir/usr"
+-  mv "$pkgdir"/build/lib3mf/src/* "$pkgdir/usr"
+-  rm -rf "$pkgdir/build"
++  mv "$pkgdir$srcdir"/* "$pkgdir/usr"
++  _wrongdir="$srcdir"
++  while test "$_wrongdir" != "/"; do
++    rmdir "$pkgdir$_wrongdir"
++    _wrongdir=$(dirname "$_wrongdir")
++  done
++  sed -i -e "s|$srcdir/||" "$pkgdir/usr/lib/pkgconfig/lib3mf.pc"
+ 
+   ln -s lib3mf.pc "$pkgdir"/usr/lib/pkgconfig/lib3MF.pc
+ 

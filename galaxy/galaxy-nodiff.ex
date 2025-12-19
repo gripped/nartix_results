@@ -376,6 +376,7 @@ python-py7zr
 python-pybcj
 python-pybluez
 python-pychm
+python-pykakasi
 python-pyppmd
 python-pysol_cards
 python-pyzstd
@@ -591,7 +592,6 @@ vdirsyncer
 vhba-module
 vhba-module-dkms
 vicious
-voa
 warpinator
 waylandpp
 waypipe

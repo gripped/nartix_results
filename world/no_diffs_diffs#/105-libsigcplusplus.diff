@@ -1,6 +1,41 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -35,7 +35,7 @@
+@@ -5,23 +5,26 @@
+   libsigc++-docs
+ )
+ pkgver=2.12.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Callback Framework for C++"
+ url="https://libsigcplusplus.github.io/libsigcplusplus/"
+ arch=(x86_64)
+-license=(LGPL-2.1-or-later)
+-depends=(
+-  gcc-libs
+-  glibc
+-)
++license=(LGPL)
++depends=(gcc-libs)
+ makedepends=(
+   git
+   meson
+   mm-common
+ )
+ options=(!emptydirs)
+-source=("git+https://github.com/libsigcplusplus/libsigcplusplus#tag=$pkgver")
+-b2sums=('ae2a3775bbf10f438dd08413b28d9e206ee11c5b487fcf767f107843727adb086a360f605b643082c9b8a513527e4ac958004ff65fed2fbbb1b5d637dd40dc5e')
++_commit=6bef4e0005f00f0844d917866aec7e3b2d829fdf  # tags/2.12.1^0
++source=("git+https://github.com/libsigcplusplus/libsigcplusplus#commit=$_commit")
++b2sums=('SKIP')
++
++pkgver() {
++  cd libsigcplusplus
++  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
++}
+ 
+ prepare() {
+   cd libsigcplusplus
+@@ -32,7 +35,7 @@
      -D maintainer-mode=true
    )
  
@@ -9,11 +44,24 @@
    meson compile -C build
  }
  
+@@ -64,4 +67,3 @@
+ 
+   mv -t "$pkgdir" docs/*
+ }
+-
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ 
+ gcc-libs
+ git
+-glibc
+ meson
+ mm-common
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

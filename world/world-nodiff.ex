@@ -699,7 +699,6 @@ futuresql
 fuzzel
 fwknop
 fzf
-gajim
 galculator
 gavl
 gcab
@@ -1143,6 +1142,7 @@ iso-codes
 isodate
 python-isodate
 isoimagewriter
+ispc
 ispell
 isync
 itinerary
@@ -1612,6 +1612,9 @@ lua51-lgi
 lua53-lgi
 lhasa
 lib2geom
+lib3mf
+
+python-
 libaccounts-glib
 libaccounts-qt
 libadwaita
@@ -5228,7 +5231,6 @@ signond
 simde
 simdjson
 simple-scan
-sip
 skanlite
 skanpage
 skladnik
