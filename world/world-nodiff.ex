@@ -1104,9 +1104,7 @@ indent
 iniparser
 inkscape
 innoextract
-intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -4197,7 +4195,6 @@ python-pythran
 python-pytokens
 python-pytoml
 python-pytoolconfig
-python-pytools
 python-pytrie
 python-pytz
 python-pytzdata

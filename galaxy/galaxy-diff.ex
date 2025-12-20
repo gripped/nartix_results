@@ -125,6 +125,7 @@ qbittorrent-nox
 rage
 read-edid
 reflector
+rio
 sdcv
 signal-desktop
 terminology
@@ -137,7 +138,6 @@ transmission-gtk
 transmission-qt
 unoconv
 vice
-voa
 wayvnc
 wezterm
 wireshark

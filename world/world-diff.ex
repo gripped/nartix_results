@@ -285,6 +285,8 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-compute-runtime
+intel-graphics-compiler
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -718,6 +720,7 @@ pysolfc
 python-anytree
 python-pymupdf
 python-pytest-freezegun
+python-pytools
 python-pyudev
 python-recommonmark
 python-seaborn

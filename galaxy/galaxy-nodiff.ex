@@ -414,7 +414,6 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
-rio
 ristretto
 rmpc
 rpi-imager
@@ -592,6 +591,7 @@ vdirsyncer
 vhba-module
 vhba-module-dkms
 vicious
+voa
 warpinator
 waylandpp
 waypipe
