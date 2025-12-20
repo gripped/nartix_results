@@ -383,7 +383,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr

@@ -1788,6 +1788,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
