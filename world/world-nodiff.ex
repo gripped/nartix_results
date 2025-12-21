@@ -1104,7 +1104,9 @@ indent
 iniparser
 inkscape
 innoextract
+intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1889,6 +1891,7 @@ libomxil-bellagio
 libopenmpt
 libopenraw
 libopensmtpd
+libopusenc
 liborcus
 libosinfo
 libotf
@@ -3728,6 +3731,7 @@ python-libarchive-c
 python-libcst
 python-libevdev
 python-librabbitmq
+python-librt
 python-libsass
 python-libtmux
 python-libusb1
@@ -5229,6 +5233,7 @@ signond
 simde
 simdjson
 simple-scan
+sip
 skanlite
 skanpage
 skladnik

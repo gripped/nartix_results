@@ -63,6 +63,7 @@ chess-tui
 chromium-bsu
 cinnamon-control-center
 cinnamon-menus
+cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations

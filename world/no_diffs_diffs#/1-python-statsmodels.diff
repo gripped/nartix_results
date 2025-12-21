@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-statsmodels
+-pkgver=0.14.6
++pkgver=0.14.5
+ pkgrel=1
+ pkgdesc="Statistical computations and models for use with SciPy"
+ arch=(x86_64)
+@@ -14,7 +14,7 @@
+             'python-matplotlib: plotting functions')
+ checkdepends=(python-pytest python-pytest-xdist python-joblib python-matplotlib)
+ source=(git+https://github.com/statsmodels/statsmodels#tag=v$pkgver)
+-sha256sums=('032a7ca9875b3752201fcc03916abb722271de9eaa85aba3e4c086248ce3b516')
++sha256sums=('7b19f05e3ad46c6e576683574be6d3ddb8044fd5f1171692061ef20b318a27db')
+ 
+ prepare() {
+   sed -e 's/,<9//' -e '/oldest-supported-numpy/d' -i statsmodels/pyproject.toml

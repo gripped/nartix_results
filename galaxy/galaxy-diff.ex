@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 blender
 cinnamon-desktop
-cinnamon-screensaver
 cosmic-applets
 cosmic-comp
 cosmic-osd

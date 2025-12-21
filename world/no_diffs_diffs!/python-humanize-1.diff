@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _pkgname=humanize
+ pkgname=python-$_pkgname
+-pkgver=4.15.0
++pkgver=4.14.0
+ pkgrel=1
+ pkgdesc='Common humanization utilities for Python'
+ arch=(any)
+@@ -16,7 +16,7 @@
+               python-pytest)
+ _archive="$_pkgname-$pkgver"
+ source=("https://pypi.python.org/packages/source/${_pkgname::1}/$_pkgname/$_archive.tar.gz")
+-sha256sums=('1dd098483eb1c7ee8e32eb2e99ad1910baefa4b75c3aff3a82f4d78688993b10')
++sha256sums=('2fa092705ea640d605c435b1ca82b2866a1b601cdf96f076d70b79a855eba90d')
+ 
+ prepare() {
+ 	cd "$_archive"

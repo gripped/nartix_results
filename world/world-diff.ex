@@ -285,8 +285,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-compute-runtime
-intel-graphics-compiler
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -397,7 +395,6 @@ libnotify
 libnotify-docs
 libnvme
 libofa
-libopusenc
 libpagemaker
 libpgm
 libprocps
@@ -871,7 +868,6 @@ sfml
 shairport-sync
 sharutils
 signal-desktop
-sip
 smartmontools
 snapper
 snappy
