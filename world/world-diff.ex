@@ -143,6 +143,7 @@ emacs
 emacs-nox
 emacs-wayland
 embree
+enca
 engrampa
 eog
 eog-docs
@@ -271,8 +272,13 @@ gvfs-smb
 gvfs-wsdd
 haproxy
 haveged
+hdf5
+hdf5-openmpi
 hexchat
 hidapi
+highlight
+highlight-perl
+highlight-gui
 hipcub
 hipfft
 hipsolver
@@ -323,6 +329,7 @@ jupyter-server-ydoc
 kcoreaddons
 kdenlive
 kdoctools5
+keyd
 kinfocenter
 kismet
 kitty
@@ -577,6 +584,7 @@ nemo-share
 nemo-terminal
 nemo
 netavark
+netcdf
 netplan
 networkmanager
 libnm
@@ -714,6 +722,9 @@ pyside6-tools
 shiboken6
 pysolfc
 python-anytree
+python-fastparquet
+python-h5py
+python-joblib
 python-pymupdf
 python-pytest-freezegun
 python-pytools
@@ -1146,6 +1157,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yapf
 yubico-c-client
 yubico-c
 yubikey-personalization

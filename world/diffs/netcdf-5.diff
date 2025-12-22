@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,25 @@
+ 
+ pkgname=netcdf
+ pkgver=4.9.3
+-pkgrel=4
++pkgrel=3
+ pkgdesc="network Common Data Form interface for array-oriented data access and corresponding library"
+ arch=(x86_64)
+ url="https://www.unidata.ucar.edu/software/netcdf/"
+ depends=(hdf5 curl libxml2 libaec blosc bzip2 libzip zstd)
+-makedepends=(cmake git)
++makedepends=(cmake)
+ checkdepends=(unzip)
+ optdepends=('netcdf-fortran: fortran bindings' 'netcdf-cxx: c++ bindings')
+ options=(!makeflags)
+ license=(custom)
+-source=(git+https://github.com/Unidata/netcdf-c#tag=v$pkgver)
+-sha256sums=('01e621bb0a556860bb6e580142e4c05ba1ca7ef46f115ec41f592fd1736423ab')
++source=(https://github.com/Unidata/netcdf-c/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha256sums=('990f46d49525d6ab5dc4249f8684c6deeaf54de6fec63a187e9fb382cc0ffdff')
+ 
+ prepare() {
+-  sed -i "/tst_remote3/d" ${pkgname}-c/ncdap_test/CMakeLists.txt
+-
+-  git -C $pkgname-c cherry-pick -n 1f1f359aeb4a31c47410d36581a141bb04d7b4a1 \
+-                                   cf095c623963552a571b1c7fc46a2af69be071e2 \
+-                                   741c4b4a909179d3fce56b60eede7ee5332af349 # Fix build with HDF5 2.0
++  sed -i "/tst_remote3/d" ${pkgname}-c-${pkgver}/ncdap_test/CMakeLists.txt
+ }
+ 
+ build() {
+-  cmake -B build -S ${pkgname}-c \
++  cmake -B build -S ${pkgname}-c-${pkgver} \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DNETCDF_WITH_PLUGIN_DIR=/usr/lib/netcdf/plugin \
+@@ -47,5 +43,5 @@
+ 
+ package() {
+   make -C build DESTDIR="${pkgdir}" install
+-  install -Dm644 ${pkgname}-c/COPYRIGHT -t "${pkgdir}"/usr/share/licenses/${pkgname}/
++  install -Dm644 ${pkgname}-c-${pkgver}/COPYRIGHT -t "${pkgdir}"/usr/share/licenses/${pkgname}/
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ bzip2
+ cmake
+ curl
+-git
+ hdf5
+ libaec
+ libxml2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,8 @@
+ prepare() {
+-sed -i "/tst_remote3/d" ${pkgname}-c/ncdap_test/CMakeLists.txt
+-git -C $pkgname-c cherry-pick -n 1f1f359aeb4a31c47410d36581a141bb04d7b4a1 \
+-cf095c623963552a571b1c7fc46a2af69be071e2 \
+-741c4b4a909179d3fce56b60eede7ee5332af349 # Fix build with HDF5 2.0
++sed -i "/tst_remote3/d" ${pkgname}-c-${pkgver}/ncdap_test/CMakeLists.txt
+ }
+ build() {
+-cmake -B build -S ${pkgname}-c \
++cmake -B build -S ${pkgname}-c-${pkgver} \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=Release \
+ -DNETCDF_WITH_PLUGIN_DIR=/usr/lib/netcdf/plugin \

@@ -528,7 +528,6 @@ ell
 embree3
 emovix
 enblend-enfuse
-enca
 encfs
 enchant
 endeavour
@@ -1002,8 +1001,6 @@ harfbuzz-docs
 hashcat-utils
 hashcat
 hddtemp
-hdf5
-hdf5-openmpi
 helix
 help2man
 herbstluftwm
@@ -1012,9 +1009,6 @@ hexedit
 hexer-hobu
 hicolor-icon-theme
 hiera
-highlight
-highlight-perl
-highlight-gui
 highway
 hip-runtime-amd
 hip-runtime
@@ -1348,7 +1342,6 @@ kexec-tools
 keybinder2
 libkeybinder2
 keychain
-keyd
 keysmith
 keystone
 python-keystone
@@ -2408,7 +2401,6 @@ neovim-qt
 neovim
 net-snmp
 netcdf-fortran
-netcdf
 netcf
 netpbm
 netsurf-buildsystem
@@ -3479,7 +3471,6 @@ python-fasteners
 python-fastimport
 python-fastjsonschema
 python-fastnumbers
-python-fastparquet
 python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
@@ -3579,7 +3570,6 @@ python-guzzle-sphinx-theme
 python-h11
 python-h2
 python-h5netcdf
-python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3673,7 +3663,6 @@ python-jinja-time
 python-jinja
 python-jiter
 python-jmespath
-python-joblib
 python-jose
 python-josepy
 python-joserfc
@@ -5785,6 +5774,7 @@ xdg-desktop-portal-kde
 xdg-user-dirs-gtk
 xdg-utils-cxx
 xdg-utils
+xdo
 xdotool
 xdp-tools
 libxdp
@@ -5871,7 +5861,6 @@ yajl
 yakuake
 yaml-cpp
 yamllint
-yapf
 yara
 yarn
 yasm

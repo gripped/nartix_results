@@ -1,6 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -60,7 +60,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=nvchecker
+-pkgver=2.20
+-pkgrel=1
++pkgver=2.19
++pkgrel=2
+ pkgdesc="New version checker for software releases"
+ arch=('any')
+ url="https://github.com/lilydjwg/nvchecker"
+@@ -27,12 +27,14 @@
+   'libnotify: for nvchecker-notify'
+ )
+ source=("git+https://github.com/lilydjwg/nvchecker.git?signed#tag=v$pkgver")
+-sha512sums=('30fa78d200079e313a8c3acb5168b6f9ec321476b159121fb2dcbb1fa6365efc1740e908e1fd78d6d5e0feb605bb2ad3a535e3c42a8583187e3c5918c49ed7ca')
++sha512sums=('539d791d5912859a7bbea561b3c750099547382e9f08efd624cb482efa98fe0518c132ad552936ceb09ab23373c06ea3e73f49aa298427e21c3b9dbf26985db9')
+ validpgpkeys=(
+   '356690A1E7404E30D0E902B2E64D049594A54F54'
+ )
+ 
+ _backports=(
++  ab4fc7d2e5a0d7ed7bf7a5850e56c1af5d34c459
++  b02ddd38d6b9703b6114567c65038a56af9b3def
+ )
+ 
+ prepare() {
+@@ -58,7 +60,7 @@
  
  check() {
    cd nvchecker

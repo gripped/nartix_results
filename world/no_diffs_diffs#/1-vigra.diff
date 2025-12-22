@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=vigra
+ pkgname=(vigra python-vigra)
+ pkgver=1.12.2
+-pkgrel=6
++pkgrel=5
+ pkgdesc='Computer vision library'
+ arch=(x86_64)
+ url="https://ukoethe.github.io/$pkgname"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,19 +0,0 @@
+-boost
+-boost-libs
+-cmake
+-fftw
+-gcc-libs
+-glibc
+-hdf5
+-imath
+-libjpeg-turbo
+-libpng
+-libtiff
+-openexr
+-python
+-python-h5py
+-python-matplotlib
+-python-numpy
+-python-scipy
+-vigra
+-zlib
