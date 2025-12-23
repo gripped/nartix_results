@@ -1,13 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,28 +1,37 @@
+@@ -1,32 +1,37 @@
  
  pkgname=torsocks
- pkgver=2.4.0
+-pkgver=2.5.0
 -pkgrel=1
 -pkgdesc='Wrapper to safely torify applications'
 -url='https://gitlab.torproject.org/tpo/core/torsocks'
 -arch=('x86_64')
+-license=(GPL-2.0-or-later)
+-depends=(
+-  bash
+-  glibc
+-  tor
++pkgver=2.4.0
 +pkgrel=4
 +pkgdesc="Wrapper to transparently torify an application"
 +url="https://gitlab.torproject.org/tpo/core/torsocks"
@@ -19,16 +25,15 @@
 +	"automake"
 +	"gcc"
 +	"libtool"
-+)
+ )
+-backup=("etc/tor/${pkgname}.conf")
+-source=("${url}/-/archive/v${pkgver}/torsocks-v${pkgver}.tar.gz")
+-sha512sums=('dcf4d4d817eb79e52930afff12915eb040b8fc7acd75ec60f28e0d06528cf011b20968ae6ea9bcb3dc51aebe26f88e89fc53d0630487e9216371ed7f71d25773')
+-validpgpkeys=('B74417EDDF22AC9F9E90F49142E86A2A11F48D36')
 +backup=("etc/tor/$pkgname.conf")
 +source=(https://gitlab.torproject.org/tpo/core/$pkgname/-/archive/v$pkgver/$pkgname-v$pkgver.tar.gz)
 +sha256sums=('c01b471d89eda9f3c8dcb85a448e8066692d0707f9ff8b2ac7e665a602291b87')
- license=('GPL2')
--depends=('tor')
--backup=("etc/tor/${pkgname}.conf")
--source=("${url}/-/archive/v${pkgver}/torsocks-v${pkgver}.tar.gz")
--sha512sums=('7d625ce3a4600f87b86ae9ac79dfd206e7709cb0bafe0b7afcf33a6f1825f968cc63ad3e23c584582b244647bdeafbfdbfc54f7c81e521b0a3d278a1483ce86e')
--validpgpkeys=('B74417EDDF22AC9F9E90F49142E86A2A11F48D36')
++license=('GPL2')
 +
 +
  
@@ -62,7 +67,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1 +1,5 @@
+@@ -1,3 +1,5 @@
+-bash
+-glibc
 +autoconf
 +automake
 +gcc

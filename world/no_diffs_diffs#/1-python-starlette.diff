@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -57,6 +57,13 @@
+@@ -2,7 +2,7 @@
+ _name=starlette
+ pkgname=python-$_name
+ pkgver=0.50.0
+-pkgrel=3
++pkgrel=1
+ pkgdesc='The little ASGI framework that shines'
+ arch=(any)
+ url="https://github.com/encode/starlette"
+@@ -19,6 +19,7 @@
+ )
+ checkdepends=(
+   python-aiosqlite
++  python-databases
+   python-pytest
+   python-trio
+ 
+@@ -56,6 +57,13 @@
      -vv
      --deselect 'tests/test_routing.py::test_lifespan_with_on_events[asyncio]'
      --deselect 'tests/test_routing.py::test_lifespan_with_on_events[trio]'

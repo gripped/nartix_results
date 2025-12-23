@@ -1,7 +1,6 @@
 alsa-utils
 autorandr
 blender
-cinnamon-desktop
 cosmic-applets
 cosmic-comp
 cosmic-osd

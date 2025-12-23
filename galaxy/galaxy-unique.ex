@@ -70,6 +70,7 @@ libwireplumber-4.0-compat
 lightdm-settings
 linux-lts515
 linux-wifi-hotspot
+logalize
 lxappearance-gtk2
 lxappearance-obconf-gtk2
 lxdm-dinit

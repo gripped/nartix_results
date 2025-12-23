@@ -1,5 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ 
+ pkgname=xorgproto
+-pkgver=2025.1
+-pkgrel=1
++pkgver=2024.1
++pkgrel=2
+ pkgdesc="combined X.Org X11 Protocol headers"
+ arch=('any')
+ url="https://xorg.freedesktop.org/"
+@@ -19,7 +19,7 @@
+ makedepends=('xorg-util-macros' 'meson')
+ checkdepends=('python-libevdev')
+ source=(https://xorg.freedesktop.org/archive/individual/proto/$pkgname-$pkgver.tar.xz{,.sig})
+-sha512sums=('dbbee3aa1bc62721d64309e1d98807d403609d8129944b2e23e48f95d30c6448718c2842362994d67647908645bafc757c710070c5dcdca96d191fd2689d023a'
++sha512sums=('63955cb604ff831575af2193548857c1b99e52d00206ea9421ce99e145094bcd907388c4574bc32174a01cbe2c940b0377bf75ae7d2c0f953157dc9c32e5a07f'
+             'SKIP')
+ validpgpkeys=('67DC86F2623FC5FD4BB5225D14706DBE1E4B4540') # "Olivier Fourdan <fourdan@xfce.org>"
+ 
 @@ -28,7 +28,7 @@
  }
  

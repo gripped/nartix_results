@@ -62,6 +62,7 @@ certbot
 chess-tui
 chromium-bsu
 cinnamon-control-center
+cinnamon-desktop
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
@@ -433,6 +434,7 @@ solaar
 sparsehash
 spotify-launcher
 sqlitebrowser
+ssh-tools
 stalonetray
 starship
 subtitleeditor

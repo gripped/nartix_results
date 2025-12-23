@@ -372,7 +372,6 @@ compiler-rt20
 composefs
 confuse
 consul
-containers-common
 convertlit
 coordgen
 copr-cli
@@ -528,6 +527,7 @@ ell
 embree3
 emovix
 enblend-enfuse
+enca
 encfs
 enchant
 endeavour
@@ -1001,6 +1001,8 @@ harfbuzz-docs
 hashcat-utils
 hashcat
 hddtemp
+hdf5
+hdf5-openmpi
 helix
 help2man
 herbstluftwm
@@ -1009,6 +1011,9 @@ hexedit
 hexer-hobu
 hicolor-icon-theme
 hiera
+highlight
+highlight-perl
+highlight-gui
 highway
 hip-runtime-amd
 hip-runtime
@@ -1605,9 +1610,6 @@ lua51-lgi
 lua53-lgi
 lhasa
 lib2geom
-lib3mf
-
-python-
 libaccounts-glib
 libaccounts-qt
 libadwaita
@@ -1783,7 +1785,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1867,6 +1868,8 @@ libnitrokey
 libnma
 libnma-common
 libnma-gtk4
+libnotify
+libnotify-docs
 libnova
 libnsbmp
 libnsgif
@@ -2292,7 +2295,6 @@ memtest86plus
 memtest86+-efi
 memtest86+-iso
 menu-cache
-menumaker
 mercurial
 merkuro
 mesa-demos
@@ -2401,6 +2403,7 @@ neovim-qt
 neovim
 net-snmp
 netcdf-fortran
+netcdf
 netcf
 netpbm
 netsurf-buildsystem
@@ -3471,6 +3474,7 @@ python-fasteners
 python-fastimport
 python-fastjsonschema
 python-fastnumbers
+python-fastparquet
 python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
@@ -3570,6 +3574,7 @@ python-guzzle-sphinx-theme
 python-h11
 python-h2
 python-h5netcdf
+python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3617,7 +3622,6 @@ python-ifaddr
 python-ijson
 python-imagesize
 python-immutabledict
-python-importlib-metadata
 python-importlib_resources
 python-incremental
 python-infinity
@@ -3663,6 +3667,7 @@ python-jinja-time
 python-jinja
 python-jiter
 python-jmespath
+python-joblib
 python-jose
 python-josepy
 python-joserfc
@@ -3914,7 +3919,6 @@ python-pdftotext
 python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
-python-pdm
 python-pecan
 python-peewee
 python-pefile
@@ -3989,7 +3993,6 @@ python-py-cpuinfo
 python-py-partiql-parser
 python-py
 python-py3c
-python-py7zr
 python-pyacoustid
 python-pyaes
 python-pyaml
@@ -4015,7 +4018,6 @@ python-pycurl
 python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
-python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
@@ -4708,7 +4710,6 @@ razor
 rccl
 rclone
 rdfind
-re2
 re2c
 rebar
 rebar3
@@ -5736,7 +5737,6 @@ words
 wpebackend-fdo
 wpebackend-fdo-docs
 wqy-zenhei
-wsdd
 wtype
 wxwidgets
 wxwidgets-common
