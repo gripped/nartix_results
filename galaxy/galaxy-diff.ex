@@ -5,6 +5,7 @@ cosmic-applets
 cosmic-comp
 cosmic-osd
 cosmic-player
+cosmic-session
 cosmic-settings-daemon
 cosmic-settings
 doctest

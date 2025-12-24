@@ -84,7 +84,6 @@ cosmic-notifications
 cosmic-panel
 cosmic-randr
 cosmic-screenshot
-cosmic-session
 cosmic-store
 cosmic-terminal
 cosmic-text-editor

@@ -366,6 +366,7 @@ libcdio-paranoia
 libdaemon
 libdc1394
 libdca
+libdrm
 libdv
 libe-book
 libei
@@ -386,7 +387,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -713,12 +713,15 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+pyopengl
+python-opengl
 pyqt6
 pyside6
 pyside6-tools
 shiboken6
 pysolfc
 python-anytree
+python-bottleneck
 python-importlib-metadata
 python-pdm
 python-py7zr
@@ -727,6 +730,7 @@ python-pymupdf
 python-pytest-freezegun
 python-pytools
 python-pyudev
+python-rapidjson
 python-recommonmark
 python-seaborn
 python-smmap
@@ -923,6 +927,7 @@ thunar-volman
 thunar
 thunderbird
 tigervnc
+timezonemap
 tint2
 tinysparql
 tinysparql-docs

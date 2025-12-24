@@ -1685,7 +1685,6 @@ libdmtx
 libdnet
 libdom
 libdovi
-libdrm
 libdvbpsi
 libdvdcss
 libdvdnav
@@ -1785,6 +1784,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3089,8 +3089,6 @@ pygobject
 python-gobject
 python-gobject-docs
 pylama
-pyopengl
-python-opengl
 pyprof2calltree
 pypy
 pypy3
@@ -3252,7 +3250,6 @@ python-boto
 python-boto3
 python-botocore
 python-bottle
-python-bottleneck
 python-bowler
 python-bracex
 python-braintree
@@ -4216,7 +4213,6 @@ python-quart
 python-railroad-diagrams
 python-random2
 python-rapidfuzz
-python-rapidjson
 python-rcssmin
 python-rdflib
 python-re-assert
@@ -5529,7 +5525,6 @@ tidy
 time
 timeshift
 timew
-timezonemap
 tinycdb
 tinycompress
 tinyprog
