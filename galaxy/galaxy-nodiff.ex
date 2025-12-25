@@ -41,6 +41,7 @@ calibre
 cargo-nextest
 catfish
 cava
+ccze
 cdemu-client
 cdemu-daemon
 certbot-apache
@@ -62,7 +63,6 @@ certbot
 chess-tui
 chromium-bsu
 cinnamon-control-center
-cinnamon-desktop
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session

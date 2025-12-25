@@ -322,7 +322,6 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
-kdenlive
 kdoctools5
 keyd
 kinfocenter
@@ -335,9 +334,6 @@ knot
 ksystemlog
 kwin-x11
 kwin
-lib3mf
-
-python-
 libabw
 libatasmart
 libayatana-indicator
@@ -704,7 +700,6 @@ powerdns-recursor
 powerdns
 presage
 prosody
-ptex
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -728,6 +723,7 @@ python-py7zr
 python-pydantic
 python-pymupdf
 python-pytest-freezegun
+python-pytest-textual-snapshot
 python-pytools
 python-pyudev
 python-rapidjson

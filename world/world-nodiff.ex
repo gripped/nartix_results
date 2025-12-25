@@ -1312,6 +1312,7 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
+kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1610,6 +1611,9 @@ lua51-lgi
 lua53-lgi
 lhasa
 lib2geom
+lib3mf
+
+python-
 libaccounts-glib
 libaccounts-qt
 libadwaita
@@ -3068,6 +3072,7 @@ prrte
 prrte-docs
 pstoedit
 psutils
+ptex
 publicsuffix-list
 pugixml
 pulseaudio-qt
@@ -4168,7 +4173,6 @@ python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
-python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync

@@ -46,6 +46,7 @@ extundelete
 faenza-icon-theme
 firedragon
 firefox-esr
+fu-perl
 fvwm3
 gitea-tea
 grub-theme
