@@ -602,7 +602,6 @@ wlr-randr
 wlsunset
 wofi
 wol
-xapp-symbolic-icons
 xapp
 xautolock
 xcursor-vanilla-dmz

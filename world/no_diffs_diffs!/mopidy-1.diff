@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mopidy
+ pkgver=4.0.0a2
+-pkgrel=1
++pkgrel=2
+ pkgdesc="An extensible music server written in Python"
+ arch=('any')
+ url="https://www.mopidy.com"
 @@ -57,7 +57,6 @@
    install -Dm644 "${srcdir}/mopidy.conf" "${pkgdir}/etc/mopidy/mopidy.conf"
    install -Dm644 "${srcdir}/logging.conf" "${pkgdir}/etc/mopidy/logging.conf"

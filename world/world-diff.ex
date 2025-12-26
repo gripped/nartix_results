@@ -105,6 +105,7 @@ dhclient
 dhcpcd
 distcc
 dns-over-https
+docker-compose
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -140,6 +141,7 @@ earlyoom
 element.io
 element-web
 element-desktop
+elinks
 emacs
 emacs-nox
 emacs-wayland
@@ -617,6 +619,7 @@ pacman-contrib
 paraview-catalyst
 parole
 passim
+patchelf
 pc-ble-driver
 pcmanfm-gtk3
 pcmanfm-qt
@@ -698,6 +701,9 @@ power-profiles-daemon
 powerdevil
 powerdns-recursor
 powerdns
+powerline
+powerline-fonts
+vim-powerline
 presage
 prosody
 pulseaudio
@@ -730,6 +736,7 @@ python-rapidjson
 python-recommonmark
 python-seaborn
 python-smmap
+python-urwid
 qastools
 qbittorrent
 qbittorrent-nox

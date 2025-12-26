@@ -143,6 +143,7 @@ wezterm
 wireshark
 wireshark-cli
 wireshark-qt
+xapp-symbolic-icons
 xdg-desktop-portal-xapp
 xed
 xfce4-notifyd

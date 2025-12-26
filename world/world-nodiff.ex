@@ -472,7 +472,6 @@ docbook-xsl
 docbook2x
 docbook5-xml
 docker-buildx
-docker-compose
 doctest
 docx2txt
 dolphin-plugins
@@ -520,7 +519,6 @@ ejabberd
 electron
 electrum
 elementary-icon-theme
-elinks
 elisa
 elixir
 ell
@@ -2607,7 +2605,6 @@ passff-host
 passt
 pastebinit
 pasystray
-patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
@@ -3042,9 +3039,6 @@ postgis
 postgrey
 postorius
 potrace
-powerline
-powerline-fonts
-vim-powerline
 powertop
 poxml
 pps-tools
@@ -4480,7 +4474,6 @@ python-update-checker
 python-uri-template
 python-uritemplate
 python-urllib3
-python-urwid
 python-userpath
 python-uvloop
 python-validate-email

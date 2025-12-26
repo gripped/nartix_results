@@ -42,15 +42,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,9 @@
- dbus
-+elogind
- git
- glibc
- libcap
-+libelogind
- meson
- polkit
+@@ -1,9 +0,0 @@
+-dbus
+-git
+-glibc
+-libcap
+-meson
+-polkit
 -systemd
 -systemd-libs
- vim
+-vim

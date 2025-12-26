@@ -1,0 +1,117 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,55 +1,26 @@
+ 
+ pkgname=cinnamon-settings-daemon
+-pkgver=6.6.1
++pkgver=6.0.0
+ pkgrel=2
+-pkgdesc='Settings daemon for Cinnamon'
++pkgdesc="The Cinnamon Settings daemon"
+ arch=(x86_64)
+-url='https://github.com/linuxmint/cinnamon-settings-daemon'
+-license=('GPL-2.0-or-later AND LGPL-2.0-or-later')
+-depends=(
+-  cairo
+-  cinnamon-desktop
+-  dconf
+-  fontconfig
+-  gcc-libs
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gtk3
+-  hicolor-icon-theme
+-  lcms2
+-  libcanberra-pulse
+-  libcolord
+-  libcups
+-  libgudev
+-  libnotify
+-  libwacom
+-  libx11
+-  libxext
+-  libxi
+-  nspr
+-  nss
+-  pango
+-  polkit
+-  pulse-native-provider
+-  systemd-libs
+-  upower
+-)
++url="https://github.com/linuxmint/${pkgname}"
++license=(GPL)
++depends=(cinnamon-desktop colord dbus-glib libcanberra-pulse libcups
++         libgnomekbd libgudev libnotify librsvg libwacom nss polkit
++         pulse-native-provider upower)
+ optdepends=('cinnamon-translations: i18n')
+-makedepends=(
+-  git
+-  glib2-devel
+-  meson
+-)
+-source=("git+https://github.com/linuxmint/cinnamon-settings-daemon.git#tag=$pkgver")
+-b2sums=(fb694bda874f9f9d0d6851ea72339fd2bd5c902e49fb9a14af13a6a085722f72fe60622543f0e83e1ab13ec382aa7ea0f60b4f9a9b06792ac5b1132f952bbfa9)
++makedepends=(meson samurai xf86-input-wacom xf86-input-evdev)
++options=(!emptydirs)
++source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
++sha512sums=('44348765bf8c0cb941d177a6765aef10796d72f5c215dbffa4b514523956e257128d6bbbb0dcd9c3f0b2bcde24745e082ad82a7cee149125903e13b349c07200')
++b2sums=('f05e14e9d3c15bc94df5435b0f317e1924993fbf4908491ea5a825b623c6a6f127ce20f5c31f54bfbd547a70ad645c3dbe71d9c55f790a3e0730d55bc58d6316')
+ 
+ build() {
+-  arch-meson $pkgname build \
+-    --libexecdir=lib/$pkgname
+-  meson compile -C build
++  artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
++  samu -C build
+ }
+ 
+ package() {
+-  meson install -C build --destdir="$pkgdir"
++  DESTDIR="${pkgdir}" samu -C build install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,30 +1,18 @@
+-cairo
+ cinnamon-desktop
+-dconf
+-fontconfig
+-gcc-libs
+-gdk-pixbuf2
+-git
+-glib2
+-glib2-devel
+-glibc
+-gtk3
+-hicolor-icon-theme
+-lcms2
++colord
++dbus-glib
+ libcanberra-pulse
+-libcolord
+ libcups
++libgnomekbd
+ libgudev
+ libnotify
++librsvg
+ libwacom
+-libx11
+-libxext
+-libxi
+ meson
+-nspr
+ nss
+-pango
+ polkit
+ pulse-native-provider
+-systemd-libs
++samurai
+ upower
++xf86-input-evdev
++xf86-input-wacom

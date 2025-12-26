@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,7 +25,7 @@
- }
+@@ -42,7 +42,7 @@
+ b2sums=(7ab901979f88f3f60d65a9a8381e96c5ea120abafc6994d4b75e4192c116bbe6778ac84c66800e777055e012c9833c06e74c4ec2c6d95f9b58cf4062742f3aa1)
  
  build() {
--  arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
-+  artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -17,11 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- git apply -3 ../cinnamon-screensaver-optional-caribou.patch
- }
+@@ -1,4 +1,4 @@
  build() {
--arch-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
-+artix-meson --libexecdir=lib/cinnamon-screensaver build ${pkgname}
+-arch-meson $pkgname build
++artix-meson $pkgname build
  meson compile -C build
  }
