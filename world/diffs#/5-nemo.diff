@@ -1,34 +1,88 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,69 +1,36 @@
  
  pkgname=nemo
--pkgver=6.6.1
+-pkgver=6.6.2
 +pkgver=6.0.2
  pkgrel=1
- pkgdesc="Cinnamon file manager (Nautilus fork)"
+-pkgdesc='File manager for Cinnamon (Nautilus fork)'
++pkgdesc="Cinnamon file manager (Nautilus fork)"
  arch=(x86_64)
-@@ -16,21 +16,21 @@
-             'libreoffice: search helpers support for legacy MS Office powerpoint files'
-             'odt2txt: search helpers support for LibreOffice files'
-             'poppler: search helpers support for PDF')
--makedepends=(git meson gobject-introspection intltool libgsf glib2-devel)
--source=(git+${url}#tag=$pkgver)
--sha512sums=('6da5994e817779ad84b8f30d25b87a18f4e9c23bd0d49c528d88269cca13c8e15a2889c625aaf7c8542e91f4ce23ec9d8ca30f925af94b401c12cda2e91acaeb')
--b2sums=('652e563d0efdd3144536044527e0f5469b2b68fca1670894ccc9039a4f6a62d8f67b7efb54b06106490a9bdc9abc4e35c1b583ad4dc69147efe930a3d5a58aef')
+-url='https://github.com/linuxmint/nemo'
+-license=('GPL-3.0-or-later AND LGPL-2.1-or-later')
+-depends=(
+-  at-spi2-core
+-  bash
+-  cairo
+-  cinnamon-desktop
+-  dconf
+-  exempi
+-  gcc-libs
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gtk3
+-  gvfs
+-  hicolor-icon-theme
+-  json-glib
+-  libexif
+-  libx11
+-  libxmlb
+-  pango
+-  python
+-  python-cairo
+-  python-gobject
+-  xapp
+-)
+-optdepends=(
+-  'catdoc: search helpers support for legacy MS Word files'
+-  'cinnamon-translations: i18n'
+-  'ffmpegthumbnailer: support for video thumbnails'
+-  'ghostscript: search helpers support for PostScript files'
+-  'libgsf: search helpers support for MS Office files'
+-  'libreoffice: search helpers support for legacy MS PowerPoint files'
+-  'poppler: search helpers support for PDF files'
+-  'python-xlrd: search helpers support for legacy MS Excel files'
+-)
+-makedepends=(
+-  git
+-  glib2-devel
+-  gobject-introspection
+-  gtk-doc
+-  intltool
+-  libgsf
+-  meson
+-)
+-source=("git+https://github.com/linuxmint/nemo.git#tag=$pkgver")
+-b2sums=(175852456cdd845608ec994a34f2a419ff4d086db59f4a98b6c3aa5ab0ca89acacb66701861c35a35bda021ff1f0ee005798978f7b24d4a10e4cbe2b883505ea)
++url="https://github.com/linuxmint/${pkgname}"
++license=(GPL)
++depends=(cinnamon-desktop dconf gvfs exempi libexif libnotify libxml2
++         python xapp)
++optdepends=('cinnamon-translations: i18n'
++            'ffmpegthumbnailer: support for video thumbnails'
++            'catdoc: search helpers support for legacy MS Office files'
++            'ghostscript: search helpers support for PostScript files'
++            'libgsf: search helpers support for MS Office files'
++            'libreoffice: search helpers support for legacy MS Office powerpoint files'
++            'odt2txt: search helpers support for LibreOffice files'
++            'poppler: search helpers support for PDF')
 +makedepends=(meson samurai gobject-introspection intltool libgsf)
 +source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
 +sha512sums=('05e8a6ab785f527ad61c1fe57d372ae8ea8f77d27ec8608d38e99f5f0f9065aecef4b84d1b016b682d14320d7099806d5672a101c0a370429d1c3f2a341fed1c')
 +b2sums=('d1e3892938cb81bcb676626a9ef54362939d522a6d09befe25dd77a236a7eee3e06461da1855317bff2a5f201bc142903ce085bfbafdbddca0700a177221ccdf')
  
  prepare() {
--  cd ${pkgname}
+-  cd $pkgname
 +  cd ${pkgname}-${pkgver}
    sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
  }
  
  build() {
--  arch-meson --libexecdir=lib/${pkgname} ${pkgname} build
+-  arch-meson $pkgname build \
+-    --libexecdir=lib/$pkgname \
+-    -D gtk_doc=true
 -  meson compile -C build
 +  artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
 +  samu -C build
@@ -44,32 +98,52 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,6 @@
+@@ -1,29 +1,14 @@
+-at-spi2-core
+-bash
+-cairo
  cinnamon-desktop
  dconf
  exempi
+-gcc-libs
+-gdk-pixbuf2
 -git
+-glib2
 -glib2-devel
+-glibc
  gobject-introspection
+-gtk-doc
+-gtk3
  gvfs
+-hicolor-icon-theme
  intltool
-@@ -12,4 +10,5 @@
- libxml2
+-json-glib
+ libexif
+ libgsf
+-libx11
+-libxmlb
++libnotify
++libxml2
  meson
+-pango
  python
+-python-cairo
+-python-gobject
 +samurai
  xapp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,10 +1,8 @@
  prepare() {
--cd ${pkgname}
+-cd $pkgname
 +cd ${pkgname}-${pkgver}
  sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
  }
  build() {
--arch-meson --libexecdir=lib/${pkgname} ${pkgname} build
+-arch-meson $pkgname build \
+---libexecdir=lib/$pkgname \
+--D gtk_doc=true
 -meson compile -C build
 +artix-meson --libexecdir=lib/${pkgname} ${pkgname}-${pkgver} build
 +samu -C build

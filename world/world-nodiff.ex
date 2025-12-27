@@ -2754,6 +2754,7 @@ perl-io-stringy
 perl-io-tty
 perl-ipc-run
 perl-ipc-run3
+perl-ipc-system-simple
 perl-json-xs
 perl-json
 perl-libintl-perl
@@ -3630,7 +3631,6 @@ python-installer
 python-intelhex
 python-interpreters-pep-734
 python-intervals
-python-intervaltree
 python-invoke
 python-iocapture
 python-ipdb

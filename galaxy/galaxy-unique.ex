@@ -226,6 +226,10 @@ simplescreenrecorder
 sneedacity
 snooze
 socklog
+sonic-silver-theme
+sonic-win
+sonic-workspace
+sonicde-meta
 sv-helper
 tinydns-dinit
 tinydns-openrc

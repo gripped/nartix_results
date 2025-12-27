@@ -144,6 +144,7 @@ hugin
 hyperfine
 imv
 incron
+intel-gpu-tools
 joyutils
 just
 kanshi
@@ -336,9 +337,12 @@ perl-convert-asn1
 perl-crypt-des
 perl-extutils-depends
 perl-extutils-pkgconfig
+perl-file-basedir
+perl-file-desktopentry
 perl-file-next
 perl-glib-object-introspection
 perl-gtk3
+perl-ipc-system-simple
 perl-ldap
 perl-net-openssh
 perl-net-snmp
@@ -349,6 +353,7 @@ perl-text-soundex
 perl-xml-filter-buffertext
 perl-xml-sax-writer
 pinentry-bemenu
+piper
 pluma
 pnpm
 pop-icon-theme
@@ -602,6 +607,7 @@ wlr-randr
 wlsunset
 wofi
 wol
+xapp-symbolic-icons
 xapp
 xautolock
 xcursor-vanilla-dmz

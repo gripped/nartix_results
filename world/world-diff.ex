@@ -724,6 +724,7 @@ pysolfc
 python-anytree
 python-bottleneck
 python-importlib-metadata
+python-intervaltree
 python-pdm
 python-py7zr
 python-pydantic
