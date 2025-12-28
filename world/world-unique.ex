@@ -434,6 +434,8 @@ pdnsd-dinit
 pdnsd-openrc
 pdnsd-runit
 pdnsd-s6
+perl-authen-pam
+perl-encode-detect
 php-fpm-dinit
 php-fpm-openrc
 php-fpm-runit

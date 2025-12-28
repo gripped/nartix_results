@@ -149,6 +149,7 @@ joyutils
 just
 kanshi
 kernel-headers-musl
+khard
 kodi
 kodi-gles
 kodi-eventclients
@@ -314,6 +315,7 @@ neomutt
 neovide
 nicotineplus
 nushell
+nwg-hello
 nyx
 obconf-qt
 obsidian-icon-theme

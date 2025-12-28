@@ -1,10 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,68 +2,38 @@
+@@ -1,74 +1,39 @@
+ 
  pkgname=ly
  pkgver=1.3.0
- pkgrel=2
+-pkgrel=3
 -pkgdesc="TUI display manager"
++pkgrel=2
 +pkgdesc="Lightweight TUI (ncurses-like) display manager"
  arch=(x86_64)
 -url="https://codeberg.org/fairyglade/ly"
@@ -47,6 +49,11 @@
 -    for dep in "${_zig_deps[@]}"; do
 -        zig fetch --global-cache-dir ./zig-global-cache "${dep%%::*}"
 -    done
+-
+-    cd $pkgname
+-    git cherry-pick -n \
+-        ced8f9bee35ad97c1e59ef1e182e064c04eb76a7 \
+-        c7e442be8b083dd3dba818806f143cb5dddd4c1f
 +  cd "$pkgname"
 +  sed -i '/try install_service(allocator, patch_map);/d' build.zig
 +  sed -i 's|restart_cmd = /sbin/shutdown -r now|restart_cmd = /usr/bin/loginctl reboot|' res/config.ini
@@ -99,11 +106,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,11 @@
+@@ -1,22 +1,11 @@
  prepare() {
 -for dep in "${_zig_deps[@]}"; do
 -zig fetch --global-cache-dir ./zig-global-cache "${dep%%::*}"
 -done
+-cd $pkgname
+-git cherry-pick -n \
+-ced8f9bee35ad97c1e59ef1e182e064c04eb76a7 \
+-c7e442be8b083dd3dba818806f143cb5dddd4c1f
 +cd "$pkgname"
 +sed -i '/try install_service(allocator, patch_map);/d' build.zig
 +sed -i 's|restart_cmd = /sbin/shutdown -r now|restart_cmd = /usr/bin/loginctl reboot|' res/config.ini

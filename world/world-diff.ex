@@ -179,6 +179,7 @@ frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
+fzf
 gajim
 gala
 gamemode
@@ -725,6 +726,8 @@ python-anytree
 python-bottleneck
 python-importlib-metadata
 python-intervaltree
+python-llvmlite
+python-numba
 python-pdm
 python-py7zr
 python-pydantic

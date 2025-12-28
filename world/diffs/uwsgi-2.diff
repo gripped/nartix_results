@@ -68,20 +68,33 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,6 @@
- libcap.so
- libcrypt.so
- libpam.so
+@@ -1,29 +0,0 @@
+-glibc
+-jansson
+-libcap
+-libcap.so
+-libcrypt.so
+-libpam.so
 -libsystemd.so
- libuuid.so
- libxcrypt
- libxml2
-@@ -21,8 +20,6 @@
- python-gevent
- python-greenlet
- ruby
+-libuuid.so
+-libxcrypt
+-libxml2
+-lua51
+-mono
+-openssl
+-pam
+-pcre2
+-perl
+-php-embed
+-php-legacy-embed
+-pypy
+-python
+-python-gevent
+-python-greenlet
+-ruby
 -systemd
 -systemd-libs
- util-linux
- util-linux-libs
- uwsgi
+-util-linux
+-util-linux-libs
+-uwsgi
+-zlib

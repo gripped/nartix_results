@@ -248,6 +248,7 @@ waterfox
 wayfire-plugins-extra
 wayfire
 wcm
+webmin
 wf-config
 wf-shell
 wireplumber-dinit

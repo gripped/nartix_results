@@ -695,7 +695,6 @@ fuse-common
 futuresql
 fuzzel
 fwknop
-fzf
 galculator
 gavl
 gcab
@@ -2704,9 +2703,11 @@ perl-extutils-pkgconfig
 perl-fcgi-client
 perl-fcgi
 perl-ffi-checklib
+perl-file-basedir
 perl-file-chdir
 perl-file-copy-recursive-reduced
 perl-file-copy-recursive
+perl-file-desktopentry
 perl-file-fcntllock
 perl-file-find-rule-perl
 perl-file-find-rule
@@ -3732,7 +3733,6 @@ python-linkify-it-py
 python-linux-procfs
 python-littleutils
 python-livereload
-python-llvmlite
 python-lmdb
 python-localzone
 python-locket
@@ -3840,7 +3840,6 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
-python-numba
 python-numexpr
 python-numpy
 python-oauth2client

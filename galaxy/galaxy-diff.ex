@@ -112,7 +112,12 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
+nvidia-340xx-utils
 nvidia-390xx-utils
+nvidia-510xx-utils
+nvidia-525xx-utils
+nvidia-535xx-utils
+nvidia-580xx-utils
 nvm
 opensc
 opensnitch
