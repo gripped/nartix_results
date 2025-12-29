@@ -125,12 +125,12 @@ osdlyrics
 ouch
 p8-platform
 perl-cgi-fast
+python-xapp
 qbittorrent
 qbittorrent-nox
 rage
 read-edid
 reflector
-rio
 sdcv
 signal-desktop
 terminology

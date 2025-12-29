@@ -422,6 +422,7 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
+rio
 ristretto
 rmpc
 rpi-imager

@@ -1,69 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,6 @@
-   bash
-   cpio
-   fontconfig
--  gcc14
-   giflib
-   git
+@@ -12,7 +12,7 @@
+ _minorver=472
+ _updatever=08
+ pkgver=${_majorver}.${_minorver}.u${_updatever}
+-pkgrel=2
++pkgrel=1
+ arch=('x86_64')
+ url='https://openjdk.java.net/'
+ license=('LicenseRef-Java')
+@@ -26,7 +26,6 @@
    java-environment=8
-@@ -39,14 +38,13 @@
- )
- source=(
-   https://github.com/openjdk/jdk${_majorver}u/archive/refs/tags/jdk${_majorver}u${_minorver}-b${_updatever}.tar.gz
--  gcc11.patch
--)
--b2sums=('4ce86687b29882a3e1add166c9f31818e3253f58f198f17d076acda3b15523baec7c51540aefe14ca237191656472f841eeb09cb69e59548ebc4cd5a267c04ec'
--        '9679e4dfb6027a87376081489c09810812d6849573afac4ea96abe3a3e00ca5b6af7d0ffb010c43b93cfa913f9e97fbb9f11e19fcc86a89b4548442671c32da1')
-+)
-+b2sums=('4ce86687b29882a3e1add166c9f31818e3253f58f198f17d076acda3b15523baec7c51540aefe14ca237191656472f841eeb09cb69e59548ebc4cd5a267c04ec')
- 
- case "${CARCH}" in
--  'x86_64') _JARCH=amd64 ; _DOC_ARCH=x86_64 ;;
--  'i686'  ) _JARCH=i386  ; _DOC_ARCH=x86    ;;
-+  'x86_64'  ) _JARCH=amd64   ; _DOC_ARCH=x86_64  ;;
-+  'i686'    ) _JARCH=i386    ; _DOC_ARCH=x86     ;;
-+  'aarch64' ) _JARCH=aarch64 ; _DOC_ARCH=aarch64 ;;
- esac
- 
- _jdkname=openjdk8
-@@ -63,7 +61,16 @@
- prepare() {
-   cd jdk8u-jdk${_majorver}u${_minorver}-b${_updatever}
- 
--  patch -Np1 -i "${srcdir}"/gcc11.patch
-+  sed -E -i 's/(^WARNINGS_ARE_ERRORS = -W)(error)/\1no-\2/' \
-+    hotspot/make/linux/makefiles/gcc.make
-+
-+  install -Dm755 /dev/stdin "gcc" <<END
-+exec /usr/bin/gcc -std=gnu17 "\$@"
-+END
-+
-+  install -Dm755 /dev/stdin "g++" <<END
-+exec /usr/bin/g++ -std=gnu++14 "\$@"
-+END
- 
-   sed -i 's/uabs(/g_uabs(/' \
-     hotspot/src/cpu/aarch64/vm/assembler_aarch64.cpp \
-@@ -82,12 +89,10 @@
-   local MAKEFLAG_J=$(echo ${MAKEFLAGS} | sed -En 's/.*-j([0-9]+).*/\1/p')
-   export MAKEFLAGS=${MAKEFLAGS/-j${MAKEFLAG_J}/}
- 
--  export CFLAGS="${CFLAGS//-O2/-O3} -Wno-error=nonnull -Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fcommon -fno-exceptions -Wno-error=format-overflow= -Wno-error=int-conversion -Wno-error=incompatible-pointer-types"
--  export CXXFLAGS="${CXXFLAGS} -fcommon -fno-exceptions"
--
--  export CC="gcc-14"
--  export CXX="g++-14"
--  export CXXCPP="gcc-14 -E"
-+  export CFLAGS="${CFLAGS//-O2/-O3} -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=int-conversion -Wno-error=incompatible-pointer-types"
-+  export CXXFLAGS="${CXXFLAGS} -fno-exceptions"
-+
-+  PATH="$PWD":$PATH
- 
-   install -d -m 755 "${srcdir}/${_prefix}/"
-   bash configure \
-@@ -101,7 +106,7 @@
+   libcups
+   libxrender
+-  libxt
+   libxtst
+   unzip
+   zip
+@@ -107,7 +106,7 @@
      --with-extra-cflags="${CFLAGS}" \
      --with-extra-cxxflags="${CXXFLAGS}" \
      --with-extra-ldflags="${LDFLAGS}" \
@@ -78,48 +32,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,7 +3,6 @@
- ca-certificates-utils
- cpio
- fontconfig
--gcc14
- giflib
- git
- hicolor-icon-theme
+@@ -13,7 +13,6 @@
+ jre8-openjdk-headless
+ libcups
+ libxrender
+-libxt
+ libxtst
+ nss
+ unzip
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,13 @@
- prepare() {
- cd jdk8u-jdk${_majorver}u${_minorver}-b${_updatever}
--patch -Np1 -i "${srcdir}"/gcc11.patch
-+sed -E -i 's/(^WARNINGS_ARE_ERRORS = -W)(error)/\1no-\2/' \
-+hotspot/make/linux/makefiles/gcc.make
-+install -Dm755 /dev/stdin "gcc" <<END
-+exec /usr/bin/gcc -std=gnu17 "\$@"
-+END
-+install -Dm755 /dev/stdin "g++" <<END
-+exec /usr/bin/g++ -std=gnu++14 "\$@"
-+END
- sed -i 's/uabs(/g_uabs(/' \
- hotspot/src/cpu/aarch64/vm/assembler_aarch64.cpp \
- hotspot/src/cpu/aarch64/vm/assembler_aarch64.hpp \
-@@ -14,11 +21,9 @@
- unset JAVA_HOME
- local MAKEFLAG_J=$(echo ${MAKEFLAGS} | sed -En 's/.*-j([0-9]+).*/\1/p')
- export MAKEFLAGS=${MAKEFLAGS/-j${MAKEFLAG_J}/}
--export CFLAGS="${CFLAGS//-O2/-O3} -Wno-error=nonnull -Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fcommon -fno-exceptions -Wno-error=format-overflow= -Wno-error=int-conversion -Wno-error=incompatible-pointer-types"
--export CXXFLAGS="${CXXFLAGS} -fcommon -fno-exceptions"
--export CC="gcc-14"
--export CXX="g++-14"
--export CXXCPP="gcc-14 -E"
-+export CFLAGS="${CFLAGS//-O2/-O3} -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=int-conversion -Wno-error=incompatible-pointer-types"
-+export CXXFLAGS="${CXXFLAGS} -fno-exceptions"
-+PATH="$PWD":$PATH
- install -d -m 755 "${srcdir}/${_prefix}/"
- bash configure \
- --prefix="${srcdir}/${_prefix}" \
-@@ -31,7 +36,7 @@
+@@ -36,7 +36,7 @@
  --with-extra-cflags="${CFLAGS}" \
  --with-extra-cxxflags="${CXXFLAGS}" \
  --with-extra-ldflags="${LDFLAGS}" \

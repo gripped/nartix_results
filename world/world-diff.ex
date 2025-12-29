@@ -105,7 +105,6 @@ dhclient
 dhcpcd
 distcc
 dns-over-https
-docker-compose
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -289,6 +288,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -326,7 +326,6 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
-keyd
 kinfocenter
 kismet
 kitty
@@ -554,6 +553,7 @@ mosquitto
 mousepad
 mozo
 mpd
+mpv
 muffin
 multipath-tools
 mumble
@@ -586,6 +586,7 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+newsboat
 niri
 nodejs-lts-hydrogen
 nsd
@@ -601,6 +602,8 @@ nvme-cli
 nvtop
 onboard
 onionshare
+onnx
+python-onnx
 open-iscsi
 openbox
 opencollada
@@ -845,7 +848,6 @@ rabbitmq
 rabbitmqadmin
 rawtherapee
 rdma-core
-re2
 redis
 redshift
 refind
@@ -1097,7 +1099,6 @@ wpewebkit
 wpewebkit-docs
 wsdd
 x11vnc
-xapp
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt
 xdg-desktop-portal-wlr

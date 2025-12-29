@@ -472,6 +472,7 @@ docbook-xsl
 docbook2x
 docbook5-xml
 docker-buildx
+docker-compose
 doctest
 docx2txt
 dolphin-plugins
@@ -599,6 +600,7 @@ falkon
 farstream
 fast_float
 faudio
+fbset
 fcft
 fcgi
 fcitx-configtool
@@ -1098,7 +1100,6 @@ inchi
 incidenceeditor
 indent
 iniparser
-inkscape
 innoextract
 intel-compute-runtime
 intel-gmmlib
@@ -1345,6 +1346,7 @@ kexec-tools
 keybinder2
 libkeybinder2
 keychain
+keyd
 keysmith
 keystone
 python-keystone
@@ -2354,7 +2356,6 @@ mpg123
 mplayer
 mencoder
 mpv-mpris
-mpv
 mpvqt
 msgpack-c
 msgpack-cxx
@@ -2414,7 +2415,6 @@ networkmanager-openvpn
 networkmanager-vpn-plugin-openvpn
 networkmanager-qt
 networkmanager-qt5
-newsboat
 nftables
 nginx
 nginx-mod-geoip
@@ -2495,8 +2495,6 @@ onednn
 onetbb
 onevpl
 oniguruma
-onnx
-python-onnx
 opam
 open-isns
 openal
@@ -4702,6 +4700,7 @@ razor
 rccl
 rclone
 rdfind
+re2
 re2c
 rebar
 rebar3
@@ -5740,6 +5739,7 @@ xa
 xalan-c
 xapian-core
 xapian-core-docs
+xapp
 xarchiver
 xautolock
 xaw3d
