@@ -66,7 +66,6 @@ cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
-cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
@@ -363,8 +362,6 @@ pop-sound-theme
 ppsspp
 ppsspp-assets
 prismlauncher
-profanity
-profanity-gtk
 pysolfc-cardsets
 pysolfc
 python-aiohttp-oauthlib
@@ -438,7 +435,6 @@ snes9x-gtk
 snorenotify
 solaar
 sparsehash
-spotify-launcher
 sqlitebrowser
 ssh-tools
 stalonetray

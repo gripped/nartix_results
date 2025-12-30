@@ -1,5 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -36,8 +36,8 @@
+   erlang-wx
+   erlang-xmerl
+ )
+-pkgver=28.3
+-pkgrel=4
++pkgver=28.2
++pkgrel=1
+ pkgdesc='General-purpose concurrent functional programming language developed by Ericsson'
+ arch=(x86_64)
+ url='https://erlang.org/'
 @@ -67,13 +67,9 @@
  source=(
    "git+https://github.com/erlang/otp#tag=OTP-$pkgver"
@@ -7,15 +18,27 @@
 -  epmd.service
 -  epmd.socket
  )
- b2sums=('0fc85d9375e704520482deb100f70249ae12f9cbf23b17058bcca0c65408a7381564ac331bb323e8b66ed7ca5f98e6191f3e7c331675867031b874f42fc6fdaf'
+-b2sums=('2a0045d47d97b137ca40815dc48403a74fb1bea708b1eb3960b68c36a0c4e87e0e547628bf1dcf53e4e91d8732baecb6b67c95568bd2f16c5ef4bad82877305e'
 -        '1675ac9bf948ab19e8b63077d870ccf356fcdbce14de2777f00b3488aa1ce34a5e0a5cdc0428707f744dee5940b12653a44e0ded0554de95ebb31bce4676ff87'
 -        '1f765318bcd322ce697a48c064ccdb1bd107b4a84e164a87f62678391cb82a9ab17a397d679cf266e037a5a2d91772b85f7a97f9cc5478c0f18118743b30045f'
 -        'c37706f5f6e2d49100104fb442ebf15edd6ee0a1e8038d0364794cf34fd3f02a61b9ad2706228b3327b85b0cadcd11aac6087e7c98408eae2d307a09191b6553')
++b2sums=('0fc85d9375e704520482deb100f70249ae12f9cbf23b17058bcca0c65408a7381564ac331bb323e8b66ed7ca5f98e6191f3e7c331675867031b874f42fc6fdaf'
 +        '1675ac9bf948ab19e8b63077d870ccf356fcdbce14de2777f00b3488aa1ce34a5e0a5cdc0428707f744dee5940b12653a44e0ded0554de95ebb31bce4676ff87')
  
  prepare() {
    cd otp
-@@ -192,7 +188,6 @@
+@@ -148,9 +144,7 @@
+   pkgdesc+=' (headless, replaces erlang-nox)'
+   depends=(
+     erlang-asn1
+-    erlang-common_test
+-    erlang-core
+-    erlang-dialyzer
++    erlang-core
+     erlang-diameter
+     erlang-edoc
+     erlang-eldap
+@@ -194,7 +188,6 @@
      erlang-stdlib
    )
  
@@ -23,3 +46,42 @@
    install -vDm644 epmd.conf "$pkgdir/etc/conf.d/epmd"
  
    cd otp
+@@ -210,8 +203,6 @@
+     "$pkgdir/usr/lib/erlang/misc/format_man_pages" \
+     "$pkgdir/usr/share/man/man1/erlsrv.1" \
+     "$pkgdir/usr/share/man/man1/werl.1"
+-
+-  rm -rf "$pkgdir/usr/share/man/man3"
+ 
+   cd "$pkgdir"
+   _pick "$srcdir/erlang-asn1" usr/lib/erlang/lib/asn1-*
+@@ -285,7 +276,9 @@
+   pkgdesc='A portable framework for automatic testing'
+   depends=(
+     erlang-core
+-    erlang-inets
++    erlang-debugger
++    erlang-inets
++    erlang-observer
+     erlang-runtime_tools
+     erlang-sasl
+     erlang-snmp
+@@ -295,10 +288,6 @@
+     erlang-xmerl
+     glibc
+   )
+-  optdepends=(
+-    'erlang-debugger: for ct:break/1 interactive debugging'
+-    'erlang-observer: for observer integration'
+-  )
+   cp -va -t "$pkgdir" "$pkgname/"*
+ }
+ 
+@@ -316,6 +305,7 @@
+   depends=(
+     erlang-core
+     erlang-syntax_tools
++    erlang-wx
+   )
+   cp -va -t "$pkgdir" "$pkgname/"*
+ }

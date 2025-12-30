@@ -521,7 +521,6 @@ electron
 electrum
 elementary-icon-theme
 elisa
-elixir
 ell
 embree3
 emovix
@@ -638,6 +637,7 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+fish
 five-or-more
 flac
 flac-doc
@@ -945,7 +945,6 @@ gst-plugin-uriplaylistbin
 gst-plugin-webrtchttp
 gst-python
 gtest
-gthumb
 gtk-doc
 gtk-engine-murrine
 gtk-engines
@@ -1173,7 +1172,6 @@ jenkins
 jitterentropy
 jkqtplotter
 jose
-jp2a
 jq
 jrnl
 jruby
@@ -2492,6 +2490,7 @@ odt2txt
 okteta
 okular
 okularpart5
+onboard
 onednn
 onetbb
 onevpl
@@ -4746,6 +4745,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain

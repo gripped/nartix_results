@@ -1,15 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=wlroots0.19
+ _pkgname=wlroots
+ pkgver=0.19.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Modular Wayland compositor library"
+ url="https://gitlab.freedesktop.org/wlroots/wlroots"
+ license=('MIT')
+@@ -10,9 +10,8 @@
  depends=('libdisplay-info.so' 'libglvnd' 'libinput' 'liblcms2.so' 'libliftoff.so' 'libpixman-1.so'
           'libseat.so' 'libudev.so' 'libvulkan.so' 'libwayland-client.so' 'libwayland-server.so'
           'libxcb' 'libxkbcommon.so' 'opengl-driver' 'xcb-util-errors' 'xcb-util-renderutil' 'xcb-util-wm')
 -makedepends=('git' 'glslang' 'meson' 'ninja' 'systemd' 'vulkan-headers' 'wayland-protocols' 'xorg-xwayland')
+-optdepends=('xorg-xwayland: Xwayland support'
+-            'vulkan-validation-layers: validation layers for the experimental vulkan renderer backend')
 +makedepends=('git' 'glslang' 'meson' 'ninja' 'vulkan-headers' 'wayland-protocols' 'xorg-xwayland')
- optdepends=('xorg-xwayland: Xwayland support')
++optdepends=('xorg-xwayland: Xwayland support')
  provides=("libwlroots-${pkgver%.*}.so")
  source=("${pkgname}::git+${url}.git#tag=${pkgver}?signed"
-@@ -29,7 +29,7 @@
+         'Revert-layer-shell-error-on-0-dimension-without-anch.patch'
+@@ -30,7 +29,7 @@
  }
  
  build() {

@@ -2,6 +2,7 @@ alsa-utils
 autorandr
 blender
 cinnamon-desktop
+cinnamon-settings-daemon
 cosmic-applets
 cosmic-comp
 cosmic-osd
@@ -126,6 +127,8 @@ osdlyrics
 ouch
 p8-platform
 perl-cgi-fast
+profanity
+profanity-gtk
 python-xapp
 qbittorrent
 qbittorrent-nox
@@ -134,6 +137,7 @@ read-edid
 reflector
 sdcv
 signal-desktop
+spotify-launcher
 terminology
 termshark
 tor

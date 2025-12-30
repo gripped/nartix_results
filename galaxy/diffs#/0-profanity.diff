@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=profanity
+ pkgname=('profanity' 'profanity-gtk')
+ pkgver=0.15.1
+-pkgrel=1
++pkgrel=1.1
+ epoch=1
+ pkgdesc='Console based XMPP client'
+ url='http://www.profanity.im'
+@@ -46,6 +46,7 @@
+       --enable-plugins \
+       --enable-otr \
+       --enable-omemo \
++      --enable-omemo-qrcode \
+       --enable-pgp
+     sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+     make
+@@ -62,6 +63,7 @@
+       --enable-plugins \
+       --enable-otr \
+       --enable-omemo \
++      --enable-omemo-qrcode \
+       --enable-pgp
+     sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+     make
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,6 +17,7 @@
+ --enable-plugins \
+ --enable-otr \
+ --enable-omemo \
++--enable-omemo-qrcode \
+ --enable-pgp
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+@@ -33,6 +34,7 @@
+ --enable-plugins \
+ --enable-otr \
+ --enable-omemo \
++--enable-omemo-qrcode \
+ --enable-pgp
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make

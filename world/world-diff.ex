@@ -141,6 +141,7 @@ element.io
 element-web
 element-desktop
 elinks
+elixir
 emacs
 emacs-nox
 emacs-wayland
@@ -166,7 +167,6 @@ fig2dev
 firefox
 firewalld
 firewalld-test
-fish
 flatpak
 flatpak-docs
 flite
@@ -254,6 +254,7 @@ gst-editing-services
 gstreamer-vaapi
 gst-python
 gstreamer-docs
+gthumb
 gtk3
 gtk3-demos
 gtk3-docs
@@ -322,6 +323,7 @@ openjdk21-doc
 java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
+jp2a
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -599,7 +601,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-onboard
 onionshare
 onnx
 python-onnx
@@ -857,9 +858,6 @@ ristretto
 rnnoise
 rocalution
 rocfft
-rocm-llvm
-rocm-device-libs
-comgr
 rocrand
 rocsolver
 rocsparse

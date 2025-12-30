@@ -1,25 +1,57 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,7 @@
-          nemo-seahorse
-          nemo-share
-          nemo-terminal)
+@@ -1,237 +1,156 @@
+ 
+ pkgbase=nemo-extensions
+-pkgname=(
+-  nemo-audio-tab
+-  nemo-compare
+-  nemo-emblems
+-  nemo-fileroller
+-  nemo-image-converter
+-  nemo-media-columns
+-  nemo-pastebin
+-  nemo-python
+-  nemo-repairer
+-  nemo-share
+-  nemo-terminal
+-)
 -pkgver=6.6.0
+-pkgrel=3
+-pkgdesc='Various extensions for Nemo'
++pkgname=(nemo-audio-tab
++         nemo-emblems
++         nemo-fileroller
++         nemo-image-converter
++         nemo-pastebin
++         nemo-preview
++         nemo-python
++         nemo-seahorse
++         nemo-share
++         nemo-terminal)
 +pkgver=6.0.1
- pkgrel=1
- pkgdesc="Various extensions for Nemo"
++pkgrel=1
++pkgdesc="Various extensions for Nemo"
  arch=(x86_64)
-@@ -20,21 +20,27 @@
- _preview_deps=(cjs clutter-gtk clutter-gst libmusicbrainz5 gtksourceview4 xreader webkit2gtk-4.1)
- _python_deps=(python-gobject python-setuptools)
- _seahorse_deps=(libcryptui)
--makedepends=(git intltool gobject-introspection meson glib2-devel)
+-url='https://github.com/linuxmint/nemo-extensions'
+-makedepends=(
+-  git
+-  meson
+-  nemo
+-  python-setuptools
+-)
+-optdepends=('cinnamon-translations: i18n')
+-source=("git+https://github.com/linuxmint/nemo-extensions.git#tag=$pkgver")
+-b2sums=(e3803f0d9254a663576c532e0dbdc08e29eac625ee18274725acdf37f73a1757f557b1bb6452a1f2578ac4c48017e919123ae9c36c117e5e917a81538b4f2d84)
++license=(GPL2)
++url="https://github.com/linuxmint/nemo-extensions"
++depends=(nemo)
++_preview_deps=(cjs clutter-gtk clutter-gst libmusicbrainz5 gtksourceview4 xreader webkit2gtk-4.1)
++_python_deps=(python-gobject python-setuptools)
++_seahorse_deps=(libcryptui)
 +makedepends=(intltool gobject-introspection meson samurai)
- makedepends+=("${_preview_deps[@]}" "${_python_deps[@]}" "${_seahorse_deps[@]}")
- options=(!emptydirs)
--source=(git+${url}#tag=$pkgver)
--sha256sums=('9477bf5a298c03a5e83ff382665c1c7edcaf051757ca3b56449cf636a4494249')
--b2sums=('e3803f0d9254a663576c532e0dbdc08e29eac625ee18274725acdf37f73a1757f557b1bb6452a1f2578ac4c48017e919123ae9c36c117e5e917a81538b4f2d84')
++makedepends+=("${_preview_deps[@]}" "${_python_deps[@]}" "${_seahorse_deps[@]}")
++options=(!emptydirs)
 +source=("${url}/archive/${pkgver}/${pkgbase}-${pkgver}.tar.gz")
 +sha256sums=('d7d0e78df10dc4240623a1daa7cd457cc4c31969c8a6ff1cdeca4b3ce66b5cdb')
 +b2sums=('b4cf28839e9feecdc6716327e432c862c962c5a12bce79317096054a2be7beb2b932e5efd3f31241afed58bead533a085580999da8da3a08b97d76445fee0f8e')
@@ -30,165 +62,371 @@
 +}
  
  build() {
--  cd ${pkgbase}
+-  cd $pkgbase
 +  cd ${pkgbase}-${pkgver}
  
    for _dir in "${pkgname[@]}"; do
-     if [[ -f ${_dir}/meson.build ]]; then
--      pushd ${_dir}
--      arch-meson --libexecdir=lib/${_dir} . build
+-    pushd $_dir
+-    if [[ -f meson.build ]]; then
+-      arch-meson . build \
+-        --libexecdir=lib/$_dir
 -      meson compile -C build
++    if [[ -f ${_dir}/meson.build ]]; then
 +      mkdir -p ${_dir}/build
 +      pushd ${_dir}/build
 +      artix-meson --libexecdir=lib/${_dir} ..
 +      samu
-       popd
++      popd
      fi
+-    if [[ -f setup.py ]]; then
+-      python setup.py build
+-    fi
+-    popd
    done
-@@ -57,7 +63,7 @@
-   depends+=(nemo-python python-mutagen)
-   optdepends=('cinnamon-translations: i18n')
- 
--  cd ${pkgbase}/${pkgname}
-+  cd ${pkgbase}-${pkgver}/${pkgname}
-   python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
++
++  cd nemo-audio-tab
++  python setup.py build
++  cd ..
++
++  cd nemo-emblems
++  python setup.py build
++  cd ..
++
++  cd nemo-pastebin
++  python setup.py build
++  cd ..
  }
  
-@@ -66,7 +72,7 @@
-   depends+=(nemo-python)
-   optdepends=('cinnamon-translations: i18n')
+ package_nemo-audio-tab(){
+-  pkgdesc='View audio tag information in Nemo properties tab'
+-  license=(GPL-3.0-only)
+-  depends=(
+-    glib2
+-    gtk3
+-    nemo
+-    nemo-python
+-    python
+-    python-gobject
+-    python-mutagen
+-  )
++  pkgdesc="View audio tag information in Nemo properties tab"
++  depends+=(nemo-python python-mutagen)
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
+-  python setup.py install --root="$pkgdir" --optimize=1
+-}
+-
+-package_nemo-compare() {
+-  pkgdesc='Context menu comparison extension for Nemo file manager'
+-  license=(GPL-3.0-or-later)
+-  depends=(
+-    glib2
+-    gtk3
+-    meld
+-    nemo
+-    nemo-python
+-    python
+-    python-gobject
+-  )
+-
+-  cd $pkgbase/$pkgname
+-  python setup.py install --root="$pkgdir" --optimize=1
 +  cd ${pkgbase}-${pkgver}/${pkgname}
-   python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
++  python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
  }
  
-@@ -75,8 +81,8 @@
-   depends+=(file-roller)
-   optdepends=('cinnamon-translations: i18n')
+ package_nemo-emblems(){
+-  pkgdesc='Change a folder or file emblem in Nemo'
+-  license=(GPL-3.0-only)
+-  depends=(
+-    glib2
+-    gtk3
+-    nemo
+-    nemo-python
+-    python
+-    python-gobject
+-  )
++  pkgdesc="Change a folder or file emblem in Nemo"
++  depends+=(nemo-python)
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
+-  python setup.py install --root="$pkgdir" --optimize=1
++  cd ${pkgbase}-${pkgver}/${pkgname}
++  python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
+ }
+ 
+ package_nemo-fileroller(){
+-  pkgdesc='File archiver extension for Nemo'
+-  license=(GPL-2.0-or-later)
+-  depends=(
+-    file-roller
+-    glib2
+-    glibc
+-    nemo
+-  )
++  pkgdesc="File archiver extension for Nemo"
++  depends+=(file-roller)
++  optdepends=('cinnamon-translations: i18n')
+ 
+-  cd $pkgbase/$pkgname
 -  meson install -C build --destdir="$pkgdir"
 +  cd ${pkgbase}-${pkgver}/${pkgname}/build
 +  DESTDIR="${pkgdir}" samu install
  }
  
  package_nemo-image-converter(){
-@@ -84,8 +90,8 @@
-   depends+=(imagemagick)
-   optdepends=('cinnamon-translations: i18n')
+-  pkgdesc='Nemo extension to rotate/resize image files'
+-  license=(GPL-2.0-or-later)
+-  depends=(
+-    glib2
+-    glibc
+-    gtk3
+-    imagemagick
+-    nemo
+-  )
++  pkgdesc="Nemo extension to rotate/resize image files"
++  depends+=(imagemagick)
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
 -  meson install -C build --destdir="$pkgdir"
 +  cd ${pkgbase}-${pkgver}/${pkgname}/build
 +  DESTDIR="${pkgdir}" samu install
  }
  
- package_nemo-preview(){
-@@ -93,8 +99,8 @@
-   depends+=("${_preview_deps[@]}")
-   optdepends=('cinnamon-translations: i18n')
+-package_nemo-media-columns(){
+-  pkgdesc='A Nemo extension to display music/EXIF and PDF metadata info in the Nemo List View'
+-  license=(GPL-3.0-only)
+-  depends=(
+-    dconf
+-    gdk-pixbuf2
+-    glib2
+-    gtk3
+-    libgexiv2
+-    nemo
+-    nemo-python
+-    python
+-    python-gobject
+-    python-mutagen
+-    python-pillow
+-    python-pymediainfo
+-    python-pypdf
+-    python-stopit
+-    xapp
+-  )
++package_nemo-preview(){
++  pkgdesc="Quick file previewer for Nemo"
++  depends+=("${_preview_deps[@]}")
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
--  meson install -C build --destdir="$pkgdir"
+-  cd $pkgbase/$pkgname
+-  python setup.py install --root="$pkgdir" --optimize=1
 +  cd ${pkgbase}-${pkgver}/${pkgname}/build
 +  DESTDIR="${pkgdir}" samu install
  }
  
  package_nemo-pastebin(){
-@@ -102,7 +108,7 @@
-   depends+=(nemo-python pastebinit)
-   optdepends=('cinnamon-translations: i18n')
+-  pkgdesc='Nemo extension to send files to a pastebin'
+-  license=(GPL-2.0-or-later)
+-  depends=(
+-    dconf
+-    glib2
+-    gtk3
+-    hicolor-icon-theme
+-    libnotify
+-    nemo
+-    nemo-python
+-    pastebinit
+-    python
+-    python-gobject
+-  )
++  pkgdesc="Nemo extension to send files to a pastebin"
++  depends+=(nemo-python pastebinit)
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
+-  python setup.py install --root="$pkgdir" --optimize=1
 +  cd ${pkgbase}-${pkgver}/${pkgname}
-   python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
++  python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
  }
  
-@@ -110,8 +116,8 @@
-   pkgdesc="Python3 binding for Nemo components"
-   depends+=("${_python_deps[@]}")
+ package_nemo-python() {
+-  pkgdesc='Python binding for Nemo components'
+-  license=(GPL-2.0-or-later)
+-  depends=(
+-    glib2
+-    glibc
+-    gtk3
+-    nemo
+-    python
+-  )
++  pkgdesc="Python3 binding for Nemo components"
++  depends+=("${_python_deps[@]}")
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
 -  meson install -C build --destdir="$pkgdir"
 +  cd ${pkgbase}-${pkgver}/${pkgname}/build
 +  DESTDIR="${pkgdir}" samu install
  }
  
- package_nemo-seahorse(){
-@@ -119,8 +125,8 @@
-   depends+=("${_seahorse_deps[@]}")
-   optdepends=('cinnamon-translations: i18n')
+-package_nemo-repairer(){
+-  pkgdesc='Nemo extension for filename encoding repair'
+-  license=(GPL-2.0-or-later)
+-  depends=(
+-    glib2
+-    glibc
+-    gtk3
+-    nemo
+-  )
++package_nemo-seahorse(){
++  pkgdesc="PGP encryption and signing extension for Nemo"
++  depends+=("${_seahorse_deps[@]}")
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
 -  meson install -C build --destdir="$pkgdir"
 +  cd ${pkgbase}-${pkgver}/${pkgname}/build
 +  DESTDIR="${pkgdir}" samu install
  }
  
  package_nemo-share(){
-@@ -128,15 +134,15 @@
-   depends+=(samba)
-   optdepends=('cinnamon-translations: i18n')
+-  pkgdesc='Samba extension for Nemo'
+-  license=(GPL-2.0-or-later)
+-  depends=(
+-    glib2
+-    glibc
+-    gtk3
+-    nemo
+-    python
+-    samba
+-  )
++  pkgdesc="Samba extension for Nemo"
++  depends+=(samba)
++  optdepends=('cinnamon-translations: i18n')
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
 -  meson install -C build --destdir="$pkgdir"
+-
+-  rm "$pkgdir/usr/share/nemo-share/install-samba"
+-  rm "$pkgdir/usr/share/polkit-1/actions/org.nemo.share.samba_install.policy"
 +  cd ${pkgbase}-${pkgver}/${pkgname}/build
 +  DESTDIR="${pkgdir}" samu install
  }
  
  package_nemo-terminal(){
-   pkgdesc="Embedded terminal window for Nemo"
-   depends=(nemo-python vte3)
+-  pkgdesc='Embedded terminal window for Nemo'
+-  license=(GPL-3.0-or-later)
+-  depends=(
+-    dconf
+-    glib2
+-    gtk3
+-    nemo
+-    nemo-python
+-    python
+-    python-gobject
+-    vte3
+-    xapp
+-  )
++  pkgdesc="Embedded terminal window for Nemo"
++  depends=(nemo-python vte3)
  
--  cd ${pkgbase}/${pkgname}
+-  cd $pkgbase/$pkgname
+-  python setup.py install --root="$pkgdir" --optimize=1
 +  cd ${pkgbase}-${pkgver}/${pkgname}
-   install -Dm644 src/nemo_terminal.py -t "${pkgdir}"/usr/share/nemo-python/extensions/
-   install -Dm755 src/nemo-terminal-prefs.py "${pkgdir}"/usr/bin/nemo-terminal-prefs
-   install -Dm644 src/org.nemo.extensions.nemo-terminal.gschema.xml -t "${pkgdir}"/usr/share/glib-2.0/schemas/
++  install -Dm644 src/nemo_terminal.py -t "${pkgdir}"/usr/share/nemo-python/extensions/
++  install -Dm755 src/nemo-terminal-prefs.py "${pkgdir}"/usr/bin/nemo-terminal-prefs
++  install -Dm644 src/org.nemo.extensions.nemo-terminal.gschema.xml -t "${pkgdir}"/usr/share/glib-2.0/schemas/
++  install -Dm644 pixmap/logo_120x120.png -t "${pkgdir}"/usr/share/nemo-terminal/
+ }
++
++
++
++
++
++
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -2,8 +2,6 @@
- clutter-gst
- clutter-gtk
+@@ -1,27 +1,22 @@
+-dconf
++cjs
++clutter-gst
++clutter-gtk
  file-roller
+-gdk-pixbuf2
 -git
--glib2-devel
- gobject-introspection
- gtksourceview4
+-glib2
+-glibc
+-gtk3
+-hicolor-icon-theme
++gobject-introspection
++gtksourceview4
  imagemagick
-@@ -18,6 +16,7 @@
+-libgexiv2
+-libnotify
+-meld
++intltool
++libcryptui
++libmusicbrainz5
+ meson
+ nemo
+ nemo-python
+ pastebinit
+-python
+ python-gobject
  python-mutagen
+-python-pillow
+-python-pymediainfo
+-python-pypdf
  python-setuptools
+-python-stopit
  samba
 +samurai
  vte3
- webkit2gtk-4.1
- xreader
+-xapp
++webkit2gtk-4.1
++xreader
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,15 @@
+@@ -1,15 +1,25 @@
 +prepare() {
 +cd $pkgbase-$pkgver
 +rm -r ./*/debian # Fix build with newer setuptools
 +}
  build() {
--cd ${pkgbase}
+-cd $pkgbase
 +cd ${pkgbase}-${pkgver}
  for _dir in "${pkgname[@]}"; do
- if [[ -f ${_dir}/meson.build ]]; then
--pushd ${_dir}
--arch-meson --libexecdir=lib/${_dir} . build
+-pushd $_dir
+-if [[ -f meson.build ]]; then
+-arch-meson . build \
+---libexecdir=lib/$_dir
 -meson compile -C build
++if [[ -f ${_dir}/meson.build ]]; then
 +mkdir -p ${_dir}/build
 +pushd ${_dir}/build
 +artix-meson --libexecdir=lib/${_dir} ..
 +samu
- popd
++popd
  fi
- done
+-if [[ -f setup.py ]]; then
++done
++cd nemo-audio-tab
+ python setup.py build
+-fi
+-popd
+-done
++cd ..
++cd nemo-emblems
++python setup.py build
++cd ..
++cd nemo-pastebin
++python setup.py build
++cd ..
+ }

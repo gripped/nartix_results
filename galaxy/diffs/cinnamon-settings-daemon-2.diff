@@ -13,14 +13,36 @@
 
 ############# Stripped diff below #################
 
-
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- build() {
--arch-meson $pkgname build \
-+artix-meson $pkgname build \
- --libexecdir=lib/$pkgname
- meson compile -C build
- }
+--- arch_depends
++++ artix_depends
+@@ -1,30 +0,0 @@
+-cairo
+-cinnamon-desktop
+-dconf
+-fontconfig
+-gcc-libs
+-gdk-pixbuf2
+-git
+-glib2
+-glib2-devel
+-glibc
+-gtk3
+-hicolor-icon-theme
+-lcms2
+-libcanberra-pulse
+-libcolord
+-libcups
+-libgudev
+-libnotify
+-libwacom
+-libx11
+-libxext
+-libxi
+-meson
+-nspr
+-nss
+-pango
+-polkit
+-pulse-native-provider
+-systemd-libs
+-upower
