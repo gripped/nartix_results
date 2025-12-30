@@ -1,12 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,69 +1,36 @@
+@@ -1,64 +1,36 @@
  
  pkgname=nemo
 -pkgver=6.6.2
-+pkgver=6.0.2
- pkgrel=1
+-pkgrel=2
 -pkgdesc='File manager for Cinnamon (Nautilus fork)'
++pkgver=6.0.2
++pkgrel=1
 +pkgdesc="Cinnamon file manager (Nautilus fork)"
  arch=(x86_64)
 -url='https://github.com/linuxmint/nemo'
@@ -72,12 +73,11 @@
 +source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
 +sha512sums=('05e8a6ab785f527ad61c1fe57d372ae8ea8f77d27ec8608d38e99f5f0f9065aecef4b84d1b016b682d14320d7099806d5672a101c0a370429d1c3f2a341fed1c')
 +b2sums=('d1e3892938cb81bcb676626a9ef54362939d522a6d09befe25dd77a236a7eee3e06461da1855317bff2a5f201bc142903ce085bfbafdbddca0700a177221ccdf')
- 
- prepare() {
--  cd $pkgname
++
++prepare() {
 +  cd ${pkgname}-${pkgver}
-   sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
- }
++  sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
++}
  
  build() {
 -  arch-meson $pkgname build \
@@ -134,12 +134,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,8 @@
- prepare() {
--cd $pkgname
+@@ -1,6 +1,8 @@
++prepare() {
 +cd ${pkgname}-${pkgver}
- sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
- }
++sed -i '/^\[Desktop Entry/,/^\[Desktop Action/ s/^Name\(.*\)=.*/Name\1=Nemo/' data/nemo.desktop.in
++}
  build() {
 -arch-meson $pkgname build \
 ---libexecdir=lib/$pkgname \

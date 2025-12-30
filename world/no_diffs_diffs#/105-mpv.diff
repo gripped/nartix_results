@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,7 +41,7 @@
+     -Dsdl2-gamepad=enabled
+   )
+ 
+-  arch-meson "${pkgname}" build "${_meson_options[@]}"
++  artix-meson "${pkgname}" build "${_meson_options[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,6 @@
+ -Dsdl2-video=enabled
+ -Dsdl2-gamepad=enabled
+ )
+-arch-meson "${pkgname}" build "${_meson_options[@]}"
++artix-meson "${pkgname}" build "${_meson_options[@]}"
+ meson compile -C build
+ }

@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hyprpaper
+-pkgver=0.8.0
+-pkgrel=1
++pkgver=0.7.6
++pkgrel=4
+ pkgdesc='a blazing fast wayland wallpaper utility with IPC controls'
+ arch=(x86_64)
+ url="https://github.com/hyprwm/$pkgname"
+@@ -11,10 +11,8 @@
+          glibc
+          hyprgraphics libhyprgraphics.so
+          hyprlang libhyprlang.so
+-         hyprtoolkit libhyprtoolkit.so
+          hyprutils libhyprutils.so
+          hyprwayland-scanner
+-         hyprwire libhyprwire.so
+          libglvnd
+          pango
+          wayland) # libwayland-cursor.so libwayland-client.so
+@@ -23,7 +21,7 @@
+              xorgproto)
+ _archive="$pkgname-$pkgver"
+ source=("$url/archive/v$pkgver/$_archive.tar.gz")
+-sha256sums=('bc10f9c42e2dead8d7e0001f0194ba4ede12bb50bd5e5d766914be79e99386d0')
++sha256sums=('a19f59e21abb8b1e3f4103ffeeac7c4658c1c09433047979836b2210a4edc40e')
+ 
+ build() {
+ 	cd "$_archive"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,17 +4,13 @@
+ glibc
+ hyprgraphics
+ hyprlang
+-hyprtoolkit
+ hyprutils
+ hyprwayland-scanner
+-hyprwire
+ libcairo.so
+ libglvnd
+ libhyprgraphics.so
+ libhyprlang.so
+-libhyprtoolkit.so
+ libhyprutils.so
+-libhyprwire.so
+ pango
+ wayland
+ wayland-protocols

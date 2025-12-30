@@ -45,6 +45,7 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
+nemo
 neofetch
 nerd-fonts
 otf-aurulent-nerd

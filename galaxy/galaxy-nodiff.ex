@@ -310,7 +310,6 @@ msedit
 muffin
 mugshot
 mutt
-nemo
 neomutt
 neovide
 nicotineplus

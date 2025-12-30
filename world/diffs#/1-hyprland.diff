@@ -1,6 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,7 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=hyprland
+-pkgver=0.53.0
++pkgver=0.52.2
+ pkgrel=2
+ pkgdesc='a highly customizable dynamic tiling Wayland compositor'
+ arch=(x86_64 aarch64)
+@@ -18,7 +18,6 @@
+          hyprlang libhyprlang.so
+          hyprutils libhyprutils.so
+          hyprwayland-scanner
+-         hyprwire libhyprwire.so
+          libdisplay-info libdisplay-info.so
+          libdrm # libdrm.so
+          libglvnd libEGL.so libGLESv2.so libOpenGL.so
+@@ -32,13 +31,12 @@
+          libxkbcommon libxkbcommon.so
+          libxrender
+          mesa # libgbm.so
+-         muparser # libmuparser.so
+          opengl-driver
+          pango libpango-1.0.so libpangocairo-1.0.so
           pixman libpixman-1.so
           re2 libre2.so
           seatd libseat.so
@@ -9,7 +31,7 @@
           tomlplusplus libtomlplusplus.so libudev.so
           util-linux-libs libuuid.so
           wayland libwayland-client.so libwayland-server.so
-@@ -60,7 +60,6 @@
+@@ -62,12 +60,11 @@
              'glaze: to build and install plugins using hyprpm'
              'hyprland-protocols: to build and install plugins using hyprpm'
              'meson: to build and install plugins using hyprpm'
@@ -17,7 +39,13 @@
              'xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland')
  provides=(wayland-compositor)
  _archive="${pkgname^}-$pkgver"
-@@ -75,7 +74,7 @@
+ source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
+-sha256sums=('43ed210eca530c8d65a072936640764b38e216f7da8c86be44185bb8fe7e4f3c')
++sha256sums=('57b4db99896cad8388482b945b119b206fd7ea94638793b550210be08274d7dd')
+ 
+ prepare() {
+ 	ln -sf hyprland-source "$_archive"
+@@ -77,7 +74,7 @@
  
  build() {
  	cd "$_archive"
@@ -32,7 +60,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,6 +20,8 @@
+@@ -13,7 +13,6 @@
+ hyprlang
+ hyprutils
+ hyprwayland-scanner
+-hyprwire
+ libEGL.so
+ libGLESv2.so
+ libOpenGL.so
+@@ -21,6 +20,8 @@
  libdisplay-info
  libdisplay-info.so
  libdrm
@@ -41,7 +77,15 @@
  libgio-2.0.so
  libglvnd
  libgobject-2.0.so
-@@ -35,7 +37,6 @@
+@@ -28,7 +29,6 @@
+ libhyprgraphics.so
+ libhyprlang.so
+ libhyprutils.so
+-libhyprwire.so
+ libinput
+ libliftoff
+ libliftoff.so
+@@ -37,7 +37,6 @@
  libpixman-1.so
  libre2.so
  libseat.so
@@ -49,7 +93,14 @@
  libtomlplusplus.so
  libudev.so
  libuuid.so
-@@ -57,7 +58,6 @@
+@@ -53,14 +52,12 @@
+ libxrender
+ mesa
+ meson
+-muparser
+ ninja
+ opengl-driver
+ pango
  pixman
  re2
  seatd

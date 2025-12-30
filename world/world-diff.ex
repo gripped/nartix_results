@@ -166,6 +166,7 @@ fig2dev
 firefox
 firewalld
 firewalld-test
+fish
 flatpak
 flatpak-docs
 flite
@@ -288,7 +289,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-inkscape
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -379,6 +379,7 @@ libgtop
 libgudev
 libguestfs
 libhandy0
+libheif
 libidl2
 libindi
 libinput
@@ -553,7 +554,6 @@ mosquitto
 mousepad
 mozo
 mpd
-mpv
 muffin
 multipath-tools
 mumble
@@ -586,7 +586,6 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-newsboat
 niri
 nodejs-lts-hydrogen
 nsd
@@ -730,6 +729,7 @@ python-bottleneck
 python-importlib-metadata
 python-intervaltree
 python-llvmlite
+python-mediafile
 python-numba
 python-pdm
 python-py7zr
@@ -743,6 +743,7 @@ python-rapidjson
 python-recommonmark
 python-seaborn
 python-smmap
+python-tldextract
 python-urwid
 qastools
 qbittorrent
@@ -856,6 +857,9 @@ ristretto
 rnnoise
 rocalution
 rocfft
+rocm-llvm
+rocm-device-libs
+comgr
 rocrand
 rocsolver
 rocsparse
