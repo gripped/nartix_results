@@ -945,6 +945,7 @@ gst-plugin-uriplaylistbin
 gst-plugin-webrtchttp
 gst-python
 gtest
+gthumb
 gtk-doc
 gtk-engine-murrine
 gtk-engines
@@ -1075,6 +1076,7 @@ hyprsunset
 hyprtoolkit
 hyprutils
 hyprwayland-scanner
+hyprwire
 i2c-tools
 i3-wm
 i3blocks
@@ -1760,6 +1762,7 @@ libgxps
 libhandy
 libhandy-docs
 libharu
+libheif
 libhubbub
 libical
 libice
@@ -1784,7 +1787,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -5869,7 +5871,6 @@ yara
 yarn
 yasm
 yaz
-yazi
 yelp-tools
 yelp-xsl
 yelp

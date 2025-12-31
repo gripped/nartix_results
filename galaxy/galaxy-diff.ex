@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 blender
 cinnamon-desktop
-cinnamon-settings-daemon
 cosmic-applets
 cosmic-comp
 cosmic-osd
@@ -46,7 +45,6 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
-nemo
 neofetch
 nerd-fonts
 otf-aurulent-nerd
@@ -137,7 +135,6 @@ read-edid
 reflector
 sdcv
 signal-desktop
-spotify-launcher
 terminology
 termshark
 tor

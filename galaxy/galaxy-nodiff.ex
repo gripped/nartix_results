@@ -66,6 +66,7 @@ cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
+cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
 cjs
@@ -309,6 +310,7 @@ msedit
 muffin
 mugshot
 mutt
+nemo
 neomutt
 neovide
 nicotineplus
@@ -435,6 +437,7 @@ snes9x-gtk
 snorenotify
 solaar
 sparsehash
+spotify-launcher
 sqlitebrowser
 ssh-tools
 stalonetray

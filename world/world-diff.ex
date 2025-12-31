@@ -254,7 +254,6 @@ gst-editing-services
 gstreamer-vaapi
 gst-python
 gstreamer-docs
-gthumb
 gtk3
 gtk3-demos
 gtk3-docs
@@ -381,13 +380,13 @@ libgtop
 libgudev
 libguestfs
 libhandy0
-libheif
 libidl2
 libindi
 libinput
 libinput-tools
 libisoburn
 libisofs
+libkate
 libkrun
 libldm
 liblqr
@@ -1173,6 +1172,7 @@ xreader
 xscreensaver
 xxhash
 yapf
+yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

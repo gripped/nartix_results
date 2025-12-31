@@ -1,37 +1,68 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,31 @@
+@@ -1,53 +1,31 @@
  
  pkgname=xed
--pkgver=3.8.5
+-pkgver=3.8.7
 -pkgrel=1
+-pkgdesc='A small and lightweight text editor'
 +pkgver=3.6.3
 +pkgrel=1.1
- pkgdesc="A small and lightweight text editor. X-Apps Project."
++pkgdesc="A small and lightweight text editor. X-Apps Project."
  arch=(x86_64)
- url="https://github.com/linuxmint/${pkgname}"
- license=(GPL)
+-url='https://github.com/linuxmint/xed'
+-license=(GPL-2.0-or-later)
++url="https://github.com/linuxmint/${pkgname}"
++license=(GPL)
  groups=(x-apps)
- depends=(gspell gtksourceview4 libpeas xapp)
--makedepends=(git meson gobject-introspection intltool itstool glib2-devel python-gobject)
+-depends=(
+-  at-spi2-core
+-  cairo
+-  dconf
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gspell
+-  gtk3
+-  gtksourceview4
+-  libgirepository
+-  libpeas
+-  libx11
+-  libxml2
+-  pango
+-  python
+-  python-gobject
+-  xapp
+-)
+-makedepends=(
+-  git
+-  glib2-devel
+-  gobject-introspection
+-  intltool
+-  itstool
+-  meson
+-)
+-source=("git+https://github.com/linuxmint/xed.git#tag=$pkgver")
+-b2sums=(41c18cf0f7e9c3876e615454e0156eb9ed6e8e7b942078b982be56c42f08bac853e6c22f6cb3486fa0a4d3344481fcdee6ee482cfa59d61454dcf20dda74da82)
++depends=(gspell gtksourceview4 libpeas xapp)
 +makedepends=(meson samurai gobject-introspection intltool itstool glib2-devel)
- optdepends=('python: required for some plugins')
--source=(git+${url}#tag=$pkgver)
--sha256sums=('d9b92857975f0e0b2ccad2cd27bf94839111655f4d12996d07e3e8519b39124b')
--b2sums=('35e30c5b58273572f817853aaefb5721f64e811e034121199fcb41e9a8c2aa79356848e4ca60b7780ec5a66cfd23189e68052a8ac5a181bf094dc02b1961d486')
++optdepends=('python: required for some plugins')
 +source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
 +        libxml-2.12.patch)
 +sha256sums=('26c6810968c53d56d8d620483edc4c3e06c5e1c23a2f9cc93cb88a1f3d5884a0'
 +            'ed19b6f419a4f703d290d8c97ed5d904c88a90fc475c738a0e65f7ab31697c40')
 +b2sums=('ebe714e7744562910bb84d3e935fd408b54c4b83128a49e23dbf99fb84109b5fc4167eb9c843b481bba3c1b0138247ff84fc43b250b5c9f8aeee9749ffdeea79'
 +        'bd3f1c73b5873b05db1a734d2b42025d460f6862dbb13813e3fc97602c43e6758e2857f2e2db14e739780a7d58fdb48e87186cfde4393b7799070def14750353')
-+
-+prepare() {
+ 
+ prepare() {
+-  cd $pkgname
+-
+-  git revert -n 13f55ff3f0db4e4f3b75883260bb56afbad08fd2
 +  patch -d $pkgname-$pkgver -p1 < libxml-2.12.patch
-+}
+ }
  
  build() {
--  arch-meson ${pkgname} build
+-  arch-meson $pkgname build
 -  meson compile -C build
 +  artix-meson ${pkgname}-${pkgver} build
 +  samu -C build
@@ -41,34 +72,48 @@
 -  meson install -C build --destdir="$pkgdir"
 +  DESTDIR="${pkgdir}" samu -C build install
  }
--
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,23 +1,10 @@
+-at-spi2-core
+-cairo
+-dconf
+-gdk-pixbuf2
 -git
+-glib2
  glib2-devel
+-glibc
  gobject-introspection
  gspell
-@@ -7,5 +6,5 @@
+-gtk3
+ gtksourceview4
+ intltool
  itstool
+-libgirepository
  libpeas
+-libx11
+-libxml2
  meson
+-pango
+-python
 -python-gobject
 +samurai
  xapp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,7 @@
-+prepare() {
+@@ -1,8 +1,7 @@
+ prepare() {
+-cd $pkgname
+-git revert -n 13f55ff3f0db4e4f3b75883260bb56afbad08fd2
 +patch -d $pkgname-$pkgver -p1 < libxml-2.12.patch
-+}
+ }
  build() {
--arch-meson ${pkgname} build
+-arch-meson $pkgname build
 -meson compile -C build
 +artix-meson ${pkgname}-${pkgver} build
 +samu -C build

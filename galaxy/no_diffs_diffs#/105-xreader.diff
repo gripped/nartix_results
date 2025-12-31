@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
- b2sums=('5b5d10782bbc5346f774483e4f3f8e14ad8cf007d790fdcf54519e2eff5bcf9972d67b540e9db55c9b06ca846a7d28d569f763baea8ca03a030783f384c96617')
+@@ -52,7 +52,7 @@
+ b2sums=(9fadfa533d7113522fc9f10166a3b6ea7f8cd2276c812e4714de829da32d4baf3c1ab56857d401eca62f6902f4bfebf38a1f00d2a7aa50e9155d11857b481040)
  
  build() {
--  arch-meson ${pkgname} build \
-+  artix-meson ${pkgname} build \
-     --libexecdir=lib/${pkgname} \
-     -Dmathjax-directory=/usr/share/mathjax2 \
-     -Dcomics=true \
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     --libexecdir=lib/$pkgname \
+     -D mathjax-directory=/usr/share/mathjax2 \
+     -D comics=true \
 
 
 ############# Stripped diff below #################
@@ -19,8 +19,8 @@
 +++ Artix PKGBUILD
 @@ -1,5 +1,5 @@
  build() {
--arch-meson ${pkgname} build \
-+artix-meson ${pkgname} build \
- --libexecdir=lib/${pkgname} \
- -Dmathjax-directory=/usr/share/mathjax2 \
- -Dcomics=true \
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ --libexecdir=lib/$pkgname \
+ -D mathjax-directory=/usr/share/mathjax2 \
+ -D comics=true \

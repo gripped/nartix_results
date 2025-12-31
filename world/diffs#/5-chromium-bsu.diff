@@ -48,13 +48,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +0,0 @@
--fontconfig
--freealut
--ftgl
--glu
--openal
+@@ -1,6 +1,7 @@
+ fontconfig
+ freealut
++freeglut
+ ftgl
+ glu
+ openal
 -sdl2_image
++sdl_image
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

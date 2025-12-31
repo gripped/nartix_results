@@ -1,28 +1,68 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,70 +1,38 @@
  
  pkgname=xreader
--pkgver=4.6.0
+-pkgver=4.6.1
 +pkgver=4.0.2
  pkgrel=1
- pkgdesc="Document viewer for files like PDF and Postscript. X-Apps Project."
+-pkgdesc='Document viewer for files like PDF and Postscript'
++pkgdesc="Document viewer for files like PDF and Postscript. X-Apps Project."
  arch=(x86_64)
- url="https://github.com/linuxmint/${pkgname}"
+-url='https://github.com/linuxmint/xreader'
 -license=(GPL-2.0-or-later)
++url="https://github.com/linuxmint/${pkgname}"
 +license=(GPL)
  groups=(x-apps)
- depends=(poppler-glib webkit2gtk-4.1 xapp)
- optdepends=('djvulibre: support for djvu files'
-@@ -13,14 +13,14 @@
-             'libspectre: support for dvi and ps files'
-             'mathjax2: support for math in epub files'
-             'texlive-bin: support for dvi files')
--makedepends=(meson intltool itstool gobject-introspection djvulibre
--             git libgxps libspectre texlive-bin glib2-devel)
--source=(git+https://github.com/linuxmint/xreader.git#tag=${pkgver})
--sha256sums=('486281f9afe2edfd78f601c8ae169333511db098e8320cd77f87d37854f66659')
--b2sums=('5b5d10782bbc5346f774483e4f3f8e14ad8cf007d790fdcf54519e2eff5bcf9972d67b540e9db55c9b06ca846a7d28d569f763baea8ca03a030783f384c96617')
+-depends=(
+-  at-spi2-core
+-  cairo
+-  dconf
+-  gcc-libs
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gtk3
+-  hicolor-icon-theme
+-  libarchive
+-  libice
+-  libsm
+-  libtiff
+-  libx11
+-  libxml2
+-  pango
+-  poppler-glib
+-  webkit2gtk-4.1
+-  xapp
+-  zlib
+-)
+-makedepends=(
+-  djvulibre
+-  git
+-  glib2-devel
+-  gobject-introspection
+-  intltool
+-  itstool
+-  libgxps
+-  libspectre
+-  meson
+-  texlive-bin
+-)
+-optdepends=(
+-  'djvulibre: support for djvu files'
+-  'libgxps: support for xps files'
+-  'libspectre: support for dvi and ps files'
+-  'mathjax2: support for math in epub files'
+-  'texlive-bin: support for dvi files'
+-)
+-source=("git+https://github.com/linuxmint/xreader.git#tag=${pkgver}")
+-b2sums=(9fadfa533d7113522fc9f10166a3b6ea7f8cd2276c812e4714de829da32d4baf3c1ab56857d401eca62f6902f4bfebf38a1f00d2a7aa50e9155d11857b481040)
++depends=(poppler-glib webkit2gtk-4.1 xapp)
++optdepends=('djvulibre: support for djvu files'
++            'libgxps: support for xps files'
++            'libspectre: support for dvi and ps files'
++            'mathjax2: support for math in epub files'
++            'texlive-bin: support for dvi files')
 +makedepends=(meson samurai intltool itstool gobject-introspection djvulibre
 +             libgxps libspectre texlive-bin)
 +source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
@@ -30,16 +70,27 @@
 +b2sums=('5d91299c082cdac7516b59cb5547387033b65e9e16af5725df64ea513a8fa9ab88a206101985e3222d90539e28a724050248afc4cbc67928eb02eab636f257e2')
  
  build() {
--  arch-meson ${pkgname} build \
-+  artix-meson ${pkgname}-${pkgver} build \
-     --libexecdir=lib/${pkgname} \
-     -Dmathjax-directory=/usr/share/mathjax2 \
-     -Dcomics=true \
-@@ -30,9 +30,9 @@
-     -Dpixbuf=true \
-     -Dhelp_files=true \
-     -Dintrospection=true
+-  arch-meson $pkgname build \
+-    --libexecdir=lib/$pkgname \
+-    -D mathjax-directory=/usr/share/mathjax2 \
+-    -D comics=true \
+-    -D djvu=true \
+-    -D dvi=true \
+-    -D t1lib=true \
+-    -D pixbuf=true \
+-    -D help_files=true \
+-    -D introspection=true
 -  meson compile -C build
++  artix-meson ${pkgname}-${pkgver} build \
++    --libexecdir=lib/${pkgname} \
++    -Dmathjax-directory=/usr/share/mathjax2 \
++    -Dcomics=true \
++    -Ddjvu=true \
++    -Ddvi=true \
++    -Dt1lib=true \
++    -Dpixbuf=true \
++    -Dhelp_files=true \
++    -Dintrospection=true
 +  samu -C build
  }
  
@@ -53,35 +104,63 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,4 @@
+@@ -1,30 +1,12 @@
+-at-spi2-core
+-cairo
+-dconf
  djvulibre
+-gcc-libs
+-gdk-pixbuf2
 -git
+-glib2
 -glib2-devel
+-glibc
  gobject-introspection
+-gtk3
+-hicolor-icon-theme
  intltool
  itstool
-@@ -8,6 +6,7 @@
+-libarchive
+ libgxps
+-libice
+-libsm
  libspectre
+-libtiff
+-libx11
+-libxml2
  meson
+-pango
  poppler-glib
 +samurai
  texlive-bin
  webkit2gtk-4.1
  xapp
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,13 +1,13 @@
  build() {
--arch-meson ${pkgname} build \
-+artix-meson ${pkgname}-${pkgver} build \
- --libexecdir=lib/${pkgname} \
- -Dmathjax-directory=/usr/share/mathjax2 \
- -Dcomics=true \
-@@ -9,5 +9,5 @@
- -Dpixbuf=true \
- -Dhelp_files=true \
- -Dintrospection=true
+-arch-meson $pkgname build \
+---libexecdir=lib/$pkgname \
+--D mathjax-directory=/usr/share/mathjax2 \
+--D comics=true \
+--D djvu=true \
+--D dvi=true \
+--D t1lib=true \
+--D pixbuf=true \
+--D help_files=true \
+--D introspection=true
 -meson compile -C build
++artix-meson ${pkgname}-${pkgver} build \
++--libexecdir=lib/${pkgname} \
++-Dmathjax-directory=/usr/share/mathjax2 \
++-Dcomics=true \
++-Ddjvu=true \
++-Ddvi=true \
++-Dt1lib=true \
++-Dpixbuf=true \
++-Dhelp_files=true \
++-Dintrospection=true
 +samu -C build
  }

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -57,7 +57,7 @@
+ }
+ 
+ build() {
+-  arch-meson gthumb build
++  artix-meson gthumb build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,6 @@
+ cd gthumb
+ }
+ build() {
+-arch-meson gthumb build
++artix-meson gthumb build
+ meson compile -C build
+ }
