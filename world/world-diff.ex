@@ -2,6 +2,8 @@
 a52dec
 accountsservice
 alacritty
+alsa-lib
+alsa-ucm-conf
 alsa-utils
 amule
 apache
@@ -172,6 +174,7 @@ flatpak-docs
 flite
 fluidsynth
 font-manager
+fontforge
 fprintd
 freerdp
 freerdp2
@@ -180,7 +183,6 @@ fwupd-efi
 fwupd
 fwupd-docs
 fzf
-gajim
 gala
 gamemode
 gamescope
@@ -386,7 +388,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -743,8 +744,10 @@ python-rapidjson
 python-recommonmark
 python-seaborn
 python-smmap
+python-stone
 python-tldextract
 python-urwid
+python-xlwt
 qastools
 qbittorrent
 qbittorrent-nox
@@ -1172,7 +1175,6 @@ xreader
 xscreensaver
 xxhash
 yapf
-yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

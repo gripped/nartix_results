@@ -1,0 +1,82 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,47 +1,43 @@
+ 
+ pkgname=yazi
+-pkgver=25.12.29
+-pkgrel=2
++pkgver=25.5.31
++pkgrel=1
+ pkgdesc="Blazing fast terminal file manager written in Rust, based on async I/O"
+ url="https://github.com/sxyazi/yazi"
+ arch=("x86_64")
+ license=('MIT')
+ depends=('gcc-libs' 'ttf-nerd-fonts-symbols')
+ optdepends=(
++	'jq: for JSON preview'
++	'7zip: for archive preview'
+ 	'ffmpeg: for video thumbnails'
+-	'7zip: for archive extraction and preview'
+-	'jq: for JSON preview'
+-	'poppler: for PDF preview'
+ 	'fd: for file searching'
+ 	'ripgrep: for file content searching'
+-	'fzf: for quick file subtree navigation'
+-	'zoxide: for historical directories navigation'
+-	'resvg: for SVG preview'
+-	'imagemagick: for image and font preview'
+-	'xclip: for X11 clipboard support'
+-	'xsel: for X11 clipboard support'
+-	'wl-clipboard: for Wayland clipboard support'
+-	'chafa: for ASCII image preview as fallback'
+-	'git: for Yazi package management'
++	'fzf: for directory jumping'
++	'poppler: for PDF preview'
++	'zoxide: for directory jumping'
++	'imagemagick: for previewing fonts'
++	'chafa: for previewing images'
+ )
+ makedepends=('cargo' 'imagemagick')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/sxyazi/$pkgname/archive/v$pkgver.tar.gz")
+-sha256sums=('95d426eb933837bc499d3cddadaf845b919586d0105ffb831dcd5e085f73fd6c')
++sha256sums=('4d005e7c3f32b5574d51ab105597f3da3a4be2f7b5cd1bcb284143ad38253ed4')
+ options=('!lto')
+ 
+ prepare() {
+   cd "$pkgname-$pkgver"
+-  cargo fetch --locked --target "$(rustc --print host-tuple)"
++  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ 
+ build() {
+   cd "$pkgname-$pkgver"
+   VERGEN_GIT_SHA="Arch Linux" YAZI_GEN_COMPLETIONS=true cargo build --release --frozen --no-default-features
++  YAZI_GEN_COMPLETIONS=true cargo build --release -p "$pkgname-cli"
+ }
+ 
+ check() {
+   cd "$pkgname"-$pkgver
+-  cargo test --frozen --workspace
++  cargo test --frozen
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,9 @@
+ prepare() {
+ cd "$pkgname-$pkgver"
+-cargo fetch --locked --target "$(rustc --print host-tuple)"
++cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ build() {
+ cd "$pkgname-$pkgver"
+ VERGEN_GIT_SHA="Arch Linux" YAZI_GEN_COMPLETIONS=true cargo build --release --frozen --no-default-features
++YAZI_GEN_COMPLETIONS=true cargo build --release -p "$pkgname-cli"
+ }

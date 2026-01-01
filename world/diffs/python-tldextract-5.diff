@@ -79,12 +79,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,4 @@
- git
+@@ -1,11 +0,0 @@
+-git
 -python
- python-build
- python-filelock
- python-idna
+-python-build
+-python-filelock
+-python-idna
+-python-installer
+-python-requests
+-python-requests-file
+-python-setuptools
+-python-setuptools-scm
+-python-wheel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

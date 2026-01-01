@@ -38,24 +38,64 @@
 
 ############# Stripped diff below #################
 
-
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -9,6 +9,8 @@
- -DCMAKE_INSTALL_LIBDIR=lib
- -DCMAKE_INSTALL_LIBEXECDIR=lib
- -DCMAKE_SKIP_RPATH=ON
-+-DUSE_SYSTEMD=OFF
-+-DENABLE_JOURNALD_LOG=OFF
- -DUSE_AVIF=ON
- -DUSE_GTK4=ON
- -DENABLE_DOCUMENTATION=ON
-@@ -16,6 +18,6 @@
- )
- CFLAGS+=' -g1'
- CXXFLAGS+=' -g1'
--cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
-+artix-cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
- cmake --build build
- }
+--- arch_depends
++++ artix_depends
+@@ -1,58 +0,0 @@
+-
+-at-spi2-core
+-atk
+-bubblewrap
+-cairo
+-cmake
+-enchant
+-fontconfig
+-freetype2
+-gi-docgen
+-glib2
+-gobject-introspection
+-gperf
+-gst-plugins-bad
+-gst-plugins-base-libs
+-gstreamer
+-gtk4
+-harfbuzz
+-harfbuzz-icu
+-hyphen
+-icu
+-libWPEBackend-fdo-1.0.so
+-libavif
+-libegl
+-libgcrypt
+-libgl
+-libgles
+-libice
+-libjpeg
+-libmanette
+-libnotify
+-libpng
+-libseccomp
+-libsecret
+-libsoup3
+-libsystemd
+-libtasn1
+-libwebp
+-libwpe
+-libwpe-1.0.so
+-libx11
+-libxcomposite
+-libxext
+-libxml2
+-libxslt
+-libxt
+-ninja
+-openjpeg2
+-python
+-ruby
+-sqlite
+-systemd
+-wayland
+-wayland-protocols
+-woff2
+-wpebackend-fdo
+-xdg-dbus-proxy
+-zlib

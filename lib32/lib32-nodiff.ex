@@ -1,6 +1,5 @@
 lib32-aalib
 lib32-acl
-lib32-alsa-lib
 lib32-alsa-plugins
 lib32-amdvlk
 lib32-attr

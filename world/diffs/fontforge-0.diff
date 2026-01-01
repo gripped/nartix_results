@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=fontforge
+ pkgver=20251009
+-pkgrel=4
++pkgrel=2.1
+ pkgdesc='Outline and bitmap font editor'
+ url='https://fontforge.github.io/'
+ _url="https://github.com/$pkgname/$pkgname"
+@@ -29,9 +29,9 @@
+ sha256sums=('69046500185a5581b58139dfad30c0b3d8128f00ebbfddc31f2fcf877e329e52'
+             'dcabf49b2057df11c4e64999f3acb6636d5b80f7931b593cd095de80b6e1a702')
+ 
+-prepare() {
++build() {
+ 	cd "$_archive"
+-	patch -p1 -i "$srcdir/5702.patch"
++	patch -p1 -i 5702.patch
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,8 @@
+-prepare() {
++build() {
+ cd "$_archive"
+-patch -p1 -i "$srcdir/5702.patch"
++patch -p1 -i 5702.patch
+ }
+ build() {
+ cd "$_archive"
+-local cmake_options=(
+--D CMAKE_BUILD_TYPE=Release
+--D CMAKE_INSTALL_PREFIX=/usr
+--D ENABLE_MAINTAINER_TOOLS=True
+--D ENABLE_FONTFORGE_EXTRAS=True
+--D UNIX=True
+-)
+-cmake -B build -S . ${cmake_options[@]} ..
+-make -C build
++patch -p1 -i 5702.patch
+ }

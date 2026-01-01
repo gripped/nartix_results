@@ -19,6 +19,7 @@ avidemux-cli
 avidemux-qt
 bat
 bleachbit
+blender
 blueman
 bogofilter
 bogofilter-db
@@ -668,7 +669,6 @@ xreader
 xsane
 xsane-gimp
 xwayland-satellite
-yazi
 yyjson
 zathura-cb
 zathura-djvu

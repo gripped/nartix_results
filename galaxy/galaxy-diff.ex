@@ -1,6 +1,5 @@
 alsa-utils
 autorandr
-blender
 cinnamon-desktop
 cosmic-applets
 cosmic-comp
@@ -154,3 +153,4 @@ xdg-desktop-portal-xapp
 xed
 xfce4-notifyd
 xfce4-screensaver
+yazi

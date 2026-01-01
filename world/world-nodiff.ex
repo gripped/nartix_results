@@ -47,13 +47,11 @@ alacarte
 alembic
 alligator
 alsa-firmware
-alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
-alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -659,7 +657,6 @@ font-awesome
 woff2-font-awesome
 otf-font-awesome
 fontconfig
-fontforge
 foomatic-db-engine
 foomatic-db
 foomatic-db-ppds
@@ -696,6 +693,7 @@ fuse-common
 futuresql
 fuzzel
 fwknop
+gajim
 galculator
 gavl
 gcab
@@ -1787,6 +1785,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4372,7 +4371,6 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
-python-stone
 python-straight.plugin
 python-strict-rfc3339
 python-strictyaml
@@ -4524,7 +4522,6 @@ python-xkbcommon
 python-xlib
 python-xlrd
 python-xlsxwriter
-python-xlwt
 python-xmlschema
 python-xmlsec
 python-xmltodict
@@ -5871,6 +5868,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp
