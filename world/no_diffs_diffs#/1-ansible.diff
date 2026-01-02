@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ansible
+-pkgver=13.2.0
++pkgver=13.1.0
+ pkgrel=1
+ pkgdesc='Official assortment of Ansible collections'
+ arch=('any')
+@@ -13,6 +13,7 @@
+             'python-dnspython: for dig lookup'
+             'python-ovirt-engine-sdk: ovirt support'
+             'python-boto3: aws_s3 module'
++            'python-ldap: ldap support'
+             'python-proxmoxer: proxmox modules'
+             'python-openstacksdk: OpenStack module'
+             'python-pynetbox: NetBox module'
+@@ -25,7 +26,7 @@
+             'acme-tiny: openssl_certificate module')
+ makedepends=('python-build' 'python-installer' 'python-wheel' 'python-setuptools')
+ source=("https://pypi.python.org/packages/source/a/ansible/ansible-${pkgver}.tar.gz")
+-sha512sums=('34a21653742729962cd784f6743ca37855089544a0b8029b2c1d48555df94b8cc68b0441a28950e2d0f074f0e1f4b1cd7bf693faa3d61aaaf716bfa6ed9a30a2')
++sha512sums=('2e7abd85b44d48ea756c65906811c9fa5519ce5d9ecaca71c718446a52dfc3dff97597d048f071ca820ea606ee2de670e8a0746717f95e2ce636db06273b3544')
+ 
+ build() {
+   cd "ansible-${pkgver}"

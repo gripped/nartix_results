@@ -47,11 +47,13 @@ alacarte
 alembic
 alligator
 alsa-firmware
+alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
+alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -995,7 +997,6 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hashcat-utils
-hashcat
 hddtemp
 hdf5
 hdf5-openmpi

@@ -3,10 +3,9 @@
 @@ -1,124 +1,60 @@
  
  pkgname=cinnamon
--pkgver=6.6.3
+ pkgver=6.6.3
 -pkgrel=3
 -pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
-+pkgver=6.0.4
 +pkgrel=1
 +pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
  arch=(x86_64)
@@ -104,37 +103,37 @@
 -)
 +url="https://github.com/linuxmint/cinnamon"
 +license=(GPL2)
-+depends=(accountsservice caribou cinnamon-control-center cinnamon-menus cinnamon-screensaver
-+         cinnamon-session cinnamon-settings-daemon cjs gnome-backgrounds gsound
-+         gstreamer libcroco libgnomekbd libkeybinder3 librsvg muffin
-+         network-manager-applet nemo polkit-gnome python-cairo python-dbus
++depends=(accountsservice cinnamon-control-center cinnamon-desktop cinnamon-menus cinnamon-screensaver
++         cinnamon-session cinnamon-settings-daemon cjs gcr gdk-pixbuf2 glib2 gnome-backgrounds gsound
++         gstreamer gtk3 libibus libgnomekbd libkeybinder3 librsvg muffin
++         network-manager-applet nemo pango polkit-gnome python python-cairo python-dbus
 +         python-gobject python-pam python-pexpect python-pillow python-pyinotify
-+         python-pytz python-tinycss2 python-xapp python-requests timezonemap xapps xdg-desktop-portal-xapp)
++         python-pytz python-tinycss2 python-xapp python-requests timezonemap xapp xdg-desktop-portal-xapp)
 +optdepends=('blueman: Bluetooth support'
 +            'cinnamon-translations: i18n'
 +            'gnome-panel: fallback mode'
 +            'metacity: fallback mode'
 +            'system-config-printer: printer settings'
 +            'wget: cover download support in audio applet'
-+            'gnome-themes-extra: GTK2 themes'
 +            'gnome-terminal: X terminal emulator'
 +            'touchegg: touch gestures'
 +            'switcheroo-control: GPU offloading')
-+makedepends=(meson samurai gobject-introspection intltool)
++makedepends=(git meson gobject-introspection intltool glib2-devel python-libsass)
++conflicts=("caribou<=0.4.21+75+g8ad9883-8")
 +options=('!emptydirs')
-+source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
++source=(git+${url}#tag=$pkgver
 +        set_wheel.diff
 +        default-theme.patch)
-+sha512sums=('357dd44f40b195a4a3ca3e88c5c9e55f1c06d36b4cec812a001c54ffb784b0d67bb9f41c1ae74fec590184b3480c9cd21ae54f7ee01e31f80eab0297b0d18a9c'
++sha512sums=('39a45317ff89262cc675dab14e2341baaa7af504ffab6f0e1d3f861220cfa13e0757c79c5e0165181a9b4238b59278c0dbd5232acae02f7fc3579f2e680004aa'
 +            'fd7e117054996ed1c3dfd0f968c2bf98ca4fcee9a100221f8839a232147745ec0140e1f68eeffba58a3c44f66f26e05d433648a7a28858ec669524f7266ba04c'
 +            'ee7dedd59ea370cf81d75def49060f9a29b22e7b025ca7d5db87a0102d50f138c79aa562b0d36a748c4b1c59a37f600ba1f60ff6caf303cf5b6fc4d110d051b4')
-+b2sums=('de67c2e465d04dd4ed269172b4b58cfe0391446466e32e15410b5a847248566c075823d0a2fb87d7a693033b3e4e1fc21a18c7b9f45dca89ce8968a0be71eaba'
++b2sums=('bf9c79f6347f7e4a7a6bccf09be777c3edc057500539bba8a6deb0af91a4f8e292d47a549d5dfe995bb666f1e361f15c55fbd072906e4374d37007c76423defa'
 +        '3becf1f40068fc629109e6e7d464c3c484296afacc9ab6328b2ccbb3c9735bcbfa9550f9f73b430ede178ae668e37c660ce322b5b4d1873526de3d3d41185160'
 +        '86c3a29acd132ca321f08fd81dd5a45707accdc035b2aeec95bf358b29072ff1eedb77b2566cf48d7253d1d791599f0f44938c4600761d711cb18b59019f1c62')
  
  prepare() {
 -  cd $pkgname
-+  cd ${pkgname}-${pkgver}
++  cd ${pkgname}
  
 -  git cherry-pick -n 7a297049113bccc99c9457d818ed59814c479803
 +  patch -p1 < ../set_wheel.diff
@@ -158,15 +157,13 @@
  build() {
 -  arch-meson $pkgname build \
 -    --libexecdir=lib/$pkgname
--  meson compile -C build
-+  artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
-+  samu -C build
++  artix-meson --libexecdir=lib/cinnamon ${pkgname} build
+   meson compile -C build
  }
  
  package() {
--  meson install -C build --destdir="$pkgdir"
+   meson install -C build --destdir="$pkgdir"
 -  install -Dm644 -t "$pkgdir/usr/share/glib-2.0/schemas" 30_org.archlinux.cinnamon.gschema.override
-+  DESTDIR="${pkgdir}" samu -C build install
  }
 
 
@@ -174,14 +171,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,66 +1,37 @@
+@@ -1,66 +1,45 @@
  accountsservice
 -at-spi2-core
 -bash
 -cairo
-+caribou
  cinnamon-control-center
--cinnamon-desktop
+ cinnamon-desktop
  cinnamon-menus
  cinnamon-screensaver
  cinnamon-session
@@ -191,11 +187,11 @@
 -dconf
 -evolution-data-server
 -gcc-libs
--gcr
--gdk-pixbuf2
--git
--glib2
--glib2-devel
+ gcr
+ gdk-pixbuf2
+ git
+ glib2
+ glib2-devel
 -glibc
  gnome-backgrounds
 -gnome-keyring
@@ -203,15 +199,14 @@
  gobject-introspection
  gsound
  gstreamer
--gtk3
+ gtk3
 -hicolor-icon-theme
 -libgirepository
 -libglvnd
--libibus
--libical
 +intltool
-+libcroco
 +libgnomekbd
+ libibus
+-libical
  libkeybinder3
 -libnm
 -libnotify
@@ -224,15 +219,15 @@
  muffin
  nemo
  network-manager-applet
--pango
+ pango
 -papirus-icon-theme
 -polkit
--python
 +polkit-gnome
+ python
  python-cairo
 +python-dbus
  python-gobject
--python-libsass
+ python-libsass
  python-pam
  python-pexpect
  python-pillow
@@ -244,11 +239,9 @@
  python-tinycss2
  python-xapp
 -sound-theme-freedesktop
-+samurai
  timezonemap
 -upower
--xapp
-+xapps
+ xapp
  xdg-desktop-portal-xapp
 
 --- Arch PKGBUILD
@@ -259,7 +252,7 @@
 -git cherry-pick -n 7a297049113bccc99c9457d818ed59814c479803
 -git apply -3 ../cinnamon-menu-button.patch
 -patch -Np1 -i ../cinnamon-set-wheel.patch
-+cd ${pkgname}-${pkgver}
++cd ${pkgname}
 +patch -p1 < ../set_wheel.diff
 +patch -p1 < ../default-theme.patch
 +sed -i 's/mintinstall.desktop/org.gnome.Software.desktop/' data/org.cinnamon.gschema.xml
@@ -272,7 +265,6 @@
  build() {
 -arch-meson $pkgname build \
 ---libexecdir=lib/$pkgname
--meson compile -C build
-+artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
-+samu -C build
++artix-meson --libexecdir=lib/cinnamon ${pkgname} build
+ meson compile -C build
  }

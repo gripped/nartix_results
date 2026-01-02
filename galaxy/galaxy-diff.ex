@@ -1,6 +1,8 @@
 alsa-utils
 autorandr
 cinnamon-desktop
+cinnamon-settings-daemon
+cinnamon
 cosmic-applets
 cosmic-comp
 cosmic-osd
@@ -44,6 +46,7 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
+muffin
 neofetch
 nerd-fonts
 otf-aurulent-nerd

@@ -2,8 +2,6 @@
 a52dec
 accountsservice
 alacritty
-alsa-lib
-alsa-ucm-conf
 alsa-utils
 amule
 apache
@@ -276,6 +274,7 @@ gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
 haproxy
+hashcat
 haveged
 hexchat
 hidapi

@@ -4,7 +4,7 @@
  
  pkgname=polkit
  pkgver=127
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Application development toolkit for controlling system-wide privileges"
  url="https://github.com/polkit-org/polkit"
@@ -23,12 +23,13 @@
    git
    glib2-devel
    gobject-introspection
-@@ -29,21 +29,23 @@
+@@ -29,24 +29,23 @@
  source=(
    "git+$url#tag=$pkgver"
    0001-meson-Support-explicit-GID.patch
 -  0002-meson-Detect-Arch-Linux-and-set-the-UID-and-GID.patch
--  0003-agent-helper-Send-standard-error-to-journal.patch
+-  0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch
+-  0004-agent-helper-Send-standard-error-to-journal.patch
 -)
 +  0002-meson-Detect-Artix-Linux-and-set-the-UID-and-GID.patch
 +  0003-meson-elogind-build-fix.patch
@@ -37,6 +38,7 @@
  b2sums=('6744385984906d97f79aedbfeb894ff274769212af44686b90f6c5ab7f3007d0e6db91b5439c95f344621aa447b570686d46eff7fac861854cfcd37fba5e73e5'
          '5549570ecce8db08263167a52211befda69eca2dd65020d132c3001b621e7b6db8a092eefb29ad0e50ab980b0158ed15a79ab7f23e1754e890b51c6ef827eb72'
          '6d4d435c8af82270fb6720ca00bab14492fbf6f0d73ba0eba0ac909cc192452a78de56ceb2fe224ac68fcc0f7c9decc01771aaa3f1956ccfae9747620986948c'
+-        '79ca31e536f236757d1d8774f7a6037826b7010e177675a95da8b131e7cfc61d1b08fc278fff6e6a5a06af443f37e32923c29754895c467eaffbacdd8d120803'
 -        '3d59bd7a7e41ed0c0de95992f3dbb34a3fce10cd29beaf7309839b0ef113398f94f5ef602ccc2c4b608e151ced2b84067ab604098e9d9fd851ef334e54c1f8d6')
 +        '6eb4dda518941223b16ce1f7fa32c11f3d381d189e7f1a51e19f70bf224f5569305412a419b2e7b0d0cdd682951fb6922edd59004c51ee30a02f26fcb201621e'
 +        'cacdece40f519ce2f2a4b06d31e75e92ed9496c18d4b1090b91a3c8d19f49aff41949b1bdda6e3c0b049b0ca74bbf164023044cf1ec8de6a24065bcda0d42d1f'
@@ -48,14 +50,15 @@
 +  git apply -3 ../turnstile.patch
    git apply -3 ../0001-meson-Support-explicit-GID.patch
 -  git apply -3 ../0002-meson-Detect-Arch-Linux-and-set-the-UID-and-GID.patch
+-  git apply -3 ../0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch
 -
--  git apply -3 ../0003-agent-helper-Send-standard-error-to-journal.patch
+-  git apply -3 ../0004-agent-helper-Send-standard-error-to-journal.patch
 +  git apply -3 ../0002-meson-Detect-Artix-Linux-and-set-the-UID-and-GID.patch
 +  git apply -3 ../0003-meson-elogind-build-fix.patch
  }
  
  build() {
-@@ -53,17 +55,18 @@
+@@ -56,17 +55,18 @@
      -D gtk_doc=true
      -D man=true
      -D tests=true

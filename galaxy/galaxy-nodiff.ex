@@ -67,9 +67,7 @@ cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
-cinnamon-settings-daemon
 cinnamon-translations
-cinnamon
 cjs
 claws-mail
 compface
@@ -308,7 +306,6 @@ monero
 mousepad
 mozo
 msedit
-muffin
 mugshot
 mutt
 nemo
