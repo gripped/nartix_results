@@ -1378,7 +1378,6 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
-kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1786,7 +1785,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2145,7 +2143,6 @@ lmdbxx
 log4cplus
 lokalize
 lolcat
-loupe
 lowdown
 lpeg
 lua-$pkgbase
@@ -5714,9 +5711,6 @@ wine-staging
 wine
 wireguard-tools
 wireless_tools
-wireshark
-wireshark-cli
-wireshark-qt
 wl-clip-persist
 wl-clipboard
 woff2

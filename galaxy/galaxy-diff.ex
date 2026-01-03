@@ -6,7 +6,6 @@ cinnamon
 cosmic-applets
 cosmic-comp
 cosmic-osd
-cosmic-player
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
@@ -25,6 +24,7 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
+intel-gpu-tools
 lemurs
 libetonyek
 libodfgen

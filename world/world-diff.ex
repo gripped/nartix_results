@@ -328,6 +328,7 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
+kicad
 kinfocenter
 kismet
 kitty
@@ -387,6 +388,7 @@ libinput
 libinput-tools
 libisoburn
 libisofs
+libkate
 libkrun
 libldm
 liblqr
@@ -457,6 +459,7 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
+loupe
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -1092,6 +1095,9 @@ wildmidi
 wireplumber
 libwireplumber
 wireplumber-docs
+wireshark
+wireshark-cli
+wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16

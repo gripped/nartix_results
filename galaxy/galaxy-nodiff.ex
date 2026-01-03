@@ -81,6 +81,7 @@ cosmic-idle
 cosmic-launcher
 cosmic-notifications
 cosmic-panel
+cosmic-player
 cosmic-randr
 cosmic-screenshot
 cosmic-store
@@ -143,7 +144,6 @@ hugin
 hyperfine
 imv
 incron
-intel-gpu-tools
 joyutils
 just
 kanshi

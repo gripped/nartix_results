@@ -9,3 +9,18 @@
  pkgdesc="Calculator for the MATE desktop environment"
  url="https://mate-desktop.org"
  arch=('x86_64')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +0,0 @@
+-autoconf-archive
+-gettext
+-glib2-devel
+-gtk3
+-itstool
+-libmpc
+-mate-common
+-yelp-tools
