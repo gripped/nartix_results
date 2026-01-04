@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xfce4-settings
+-pkgver=4.20.3
+-pkgrel=1
++pkgver=4.20.2
++pkgrel=2
+ pkgdesc="Xfce's Configuration System"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/xfce4-settings/start"
+@@ -17,7 +17,7 @@
+ source=("git+https://gitlab.xfce.org/xfce/xfce4-settings.git#tag=$pkgname-$pkgver"
+         git+https://gitlab.freedesktop.org/wlroots/wlr-protocols.git
+         default-xsettings-xml.patch)
+-sha256sums=('d94645103a9f60093259be55ae1b7d21f6abb357e01d101b8680f84352c82662'
++sha256sums=('222180d81c2a6d009d97084fc12be9c6e1d5d238d5a6401ef32ea43e13b24d7b'
+             'SKIP'
+             '008da8cae0251864d1bf34e2649674e0566475a423becf81e8e3f5c6acb3877d')
+ prepare() {

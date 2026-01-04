@@ -24,7 +24,6 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
-intel-gpu-tools
 lemurs
 libetonyek
 libodfgen
@@ -126,6 +125,7 @@ opensnitch
 osdlyrics
 ouch
 p8-platform
+pekwm
 perl-cgi-fast
 profanity
 profanity-gtk

@@ -206,7 +206,6 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
-bear
 bearssl
 beep
 bemenu
@@ -512,6 +511,7 @@ edk2-shell
 edk2-ovmf
 egl-gbm
 egl-wayland
+egl-wayland2
 egl-x11
 eglexternalplatform
 eigen
@@ -1101,6 +1101,7 @@ indent
 iniparser
 inkscape
 innoextract
+inotify-tools
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
@@ -1173,6 +1174,7 @@ jenkins
 jitterentropy
 jkqtplotter
 jose
+jp2a
 jq
 jrnl
 jruby
@@ -2143,6 +2145,7 @@ lmdbxx
 log4cplus
 lokalize
 lolcat
+loupe
 lowdown
 lpeg
 lua-$pkgbase
@@ -2283,7 +2286,6 @@ mbedtls
 mbedtls2
 mbox-importer
 mc
-mcpp
 md4c
 mdds
 mediainfo
@@ -2601,6 +2603,7 @@ passff-host
 passt
 pastebinit
 pasystray
+patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
@@ -5295,7 +5298,6 @@ suil
 suil-docs
 suitesparse
 suitesparse-graphblas
-supermin
 sushi
 svgcleaner
 svgpart

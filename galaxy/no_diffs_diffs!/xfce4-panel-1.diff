@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xfce4-panel
+-pkgver=4.20.6
+-pkgrel=1
++pkgver=4.20.5
++pkgrel=2
+ pkgdesc="Panel for the Xfce desktop environment"
+ arch=('x86_64')
+ url="https://docs.xfce.org/xfce/xfce4-panel/start"
+@@ -11,7 +11,7 @@
+          'libxfce4windowing' 'hicolor-icon-theme' 'desktop-file-utils')
+ makedepends=('git' 'glib2-devel' 'gobject-introspection' 'vala' 'xfce4-dev-tools')
+ source=("git+https://gitlab.xfce.org/xfce/xfce4-panel.git#tag=$pkgname-$pkgver")
+-sha256sums=('0b985776ea6af10b0ae65e3a84595a0f75ed4c2b0f880d99a04ea6cebbfa2586')
++sha256sums=('11a7f04d2d71c99a6298ab5c70bf3e54dfc868a3aabd5a0601bedf3f144bba7b')
+ 
+ prepare() {
+   cd $pkgname

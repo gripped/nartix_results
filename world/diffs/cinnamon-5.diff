@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,124 +1,60 @@
+@@ -1,126 +1,60 @@
  
  pkgname=cinnamon
 -pkgver=6.6.3
--pkgrel=3
+-pkgrel=5
 -pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
 +pkgver=6.0.4
 +pkgrel=1
@@ -87,6 +87,7 @@
 -  git
 -  glib2-devel
 -  gobject-introspection
+-  gtk-doc
 -  meson
 -  python-libsass
 -)
@@ -157,7 +158,8 @@
  
  build() {
 -  arch-meson $pkgname build \
--    --libexecdir=lib/$pkgname
+-    --libexecdir=lib/$pkgname \
+-    -D docs=true
 -  meson compile -C build
 +  artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
 +  samu -C build
@@ -174,7 +176,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,66 +1,37 @@
+@@ -1,67 +1,37 @@
  accountsservice
 -at-spi2-core
 -bash
@@ -203,6 +205,7 @@
  gobject-introspection
  gsound
  gstreamer
+-gtk-doc
 -gtk3
 -hicolor-icon-theme
 -libgirepository
@@ -253,7 +256,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
+@@ -1,15 +1,14 @@
  prepare() {
 -cd $pkgname
 -git cherry-pick -n 7a297049113bccc99c9457d818ed59814c479803
@@ -271,7 +274,8 @@
  }
  build() {
 -arch-meson $pkgname build \
----libexecdir=lib/$pkgname
+---libexecdir=lib/$pkgname \
+--D docs=true
 -meson compile -C build
 +artix-meson --libexecdir=lib/cinnamon ${pkgname}-${pkgver} build
 +samu -C build

@@ -20,6 +20,7 @@ avahi
 awesome
 aws-cli-v2
 bash-bats
+bear
 blender
 blueman
 bluez
@@ -323,7 +324,6 @@ openjdk21-doc
 java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
-jp2a
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -459,7 +459,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-loupe
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -527,6 +526,7 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+mcpp
 media-player-info
 memcached
 menumaker
@@ -625,7 +625,6 @@ pacman-contrib
 paraview-catalyst
 parole
 passim
-patchelf
 pc-ble-driver
 pcmanfm-gtk3
 pcmanfm-qt
@@ -909,6 +908,7 @@ sslh
 sssd
 strongswan
 stunnel
+supermin
 sway
 swayidle
 switcheroo-control

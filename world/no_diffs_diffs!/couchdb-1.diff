@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=couchdb
- pkgver=3.5.1
--pkgrel=3
-+pkgrel=2
- pkgdesc="Document-oriented database that can be queried and indexed in a MapReduce fashion using JSON"
- arch=(x86_64)
- url="https://couchdb.apache.org"
 @@ -37,14 +37,12 @@
  source=(
    "https://archive.apache.org/dist/${pkgname}/source/${pkgver}/apache-${pkgname}-${pkgver}.tar.gz"{,.asc}

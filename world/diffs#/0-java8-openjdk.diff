@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -107,7 +107,7 @@
+     --with-extra-cflags="${CFLAGS}" \
+     --with-extra-cxxflags="${CXXFLAGS}" \
+     --with-extra-ldflags="${LDFLAGS}" \
+-    --with-vendor-name="Arch Linux"
++    --with-vendor-name="Artix Linux"
+ 
+   make
+   make docs
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,7 +36,7 @@
+ --with-extra-cflags="${CFLAGS}" \
+ --with-extra-cxxflags="${CXXFLAGS}" \
+ --with-extra-ldflags="${LDFLAGS}" \
+---with-vendor-name="Arch Linux"
++--with-vendor-name="Artix Linux"
+ make
+ make docs
+ make install
