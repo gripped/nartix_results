@@ -47,6 +47,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+cantarell-fonts
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -294,6 +295,7 @@ iio-sensor-proxy
 intel-opencl-clang
 intel-undervolt
 interception-tools
+iso-codes
 iwd
 jack2
 jack2-dbus
@@ -388,7 +390,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -526,7 +527,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-mcpp
 media-player-info
 memcached
 menumaker
@@ -622,6 +622,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+papers
+papers-lib-docs
 paraview-catalyst
 parole
 passim
@@ -936,6 +938,9 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+texlive-texmf
+texlive-doc
+texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

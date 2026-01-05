@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=chrpath
+-pkgver=0.18
++pkgver=0.17
+ pkgrel=1
+ pkgdesc="Change or delete the rpath or runpath in ELF files"
+ arch=('x86_64')
+@@ -9,7 +9,7 @@
+ depends=('glibc')
+ makedepends=('git')
+ source=("git+https://codeberg.org/pere/chrpath.git#tag=release-$pkgver")
+-sha256sums=('5c304cace5b15e820eeea341d8a98d24fca8593d440b2ffe1b41c6ad08002d4a')
++sha256sums=('SKIP')
+ 
+ prepare() {
+   cd "${srcdir}"/$pkgname

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-games
+ pkgver=40.0
+-pkgrel=10
++pkgrel=9
+ pkgdesc='Simple game launcher for GNOME'
+ arch=(x86_64)
+ url='https://wiki.gnome.org/Apps/Games'
 @@ -26,6 +26,7 @@
    tinysparql
  )
@@ -8,7 +17,15 @@
    git
    meson
    vala
-@@ -78,7 +79,7 @@
+@@ -34,6 +35,7 @@
+   'libretro-beetle-pce-fast: Support for TurboGrafx-16 and TurboGrafx-CD games'
+   'libretro-beetle-psx: Support for PlayStation games'
+   'libretro-blastem: Support for Sega Genesis games'
++  'libretro-citra: Support for Nintendo 3DS games'
+   'libretro-flycast: Support for Dreamcast games'
+   'libretro-gambatte: Support for Game Boy and Game Boy Color games'
+   'libretro-mgba: Support for Game Boy Advance games'
+@@ -77,7 +79,7 @@
  }
  
  build() {

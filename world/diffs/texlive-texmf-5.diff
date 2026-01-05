@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,13 +7,12 @@
+ done
+ _rev=74725
+ pkgver=2025.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc='TeX Live - '
+ license=(GPL)
+ arch=(any)
+ depends=(texlive-bin)
+-makedepends=(subversion
+-             zip)
++makedepends=(subversion)
+ url='https://tug.org/texlive/'
+ source=(svn://tug.org/texlive/tags/texlive-$pkgver/Master/texmf-dist#revision=$_rev
+         svn://tug.org/texlive/tags/texlive-$pkgver/Master/tlpkg#revision=$_rev
+@@ -30,8 +29,7 @@
+         texlive-updmap.script
+         80-mtxrun.hook
+         mtxrun.script
+-        https://gitlab.com/git-latexdiff/git-latexdiff/-/commit/a0aa6bad.patch
+-        minted-python-3.14.patch)
++        https://gitlab.com/git-latexdiff/git-latexdiff/-/commit/a0aa6bad.patch)
+ sha256sums=('SKIP'
+             'SKIP'
+             'SKIP'
+@@ -47,8 +45,7 @@
+             'ee6e76192a5ad880a2152cd7900b86c8465239fb228045a2f8360b0d7a449f4a'
+             'f6bb67db32d37ca15eba88bd15d8b9882c61915f98bc8d7c3c21a66c8cf8f019'
+             '98b730e917281227e29077ba5689ad78baee0af3859b55966b2604c6a85f1305'
+-            'e6b754b49563531ec737891ae7c9ad3d2e5bc716e0718ae7bfda298463af48f1'
+-            'e01cb79d11a5eee51084565b77edb83fa85b1f24df2b30061c04f9e88f058a4e')
++            'e6b754b49563531ec737891ae7c9ad3d2e5bc716e0718ae7bfda298463af48f1')
+ options=(!strip) # Nothing to strip, save packaging time
+ 
+ prepare() {
+@@ -56,12 +53,6 @@
+   patch -d texmf-dist/web2c -p0 < texmfcnf.lua.patch
+ 
+   patch -d texmf-dist/scripts/git-latexdiff -p1 < a0aa6bad.patch
+-
+-  pushd texmf-dist/scripts/minted
+-    bsdunzip latexminted-0.5.0-py3-none-any.whl
+-    patch -p2 --binary < "$srcdir"/minted-python-3.14.patch
+-    zip -r latexminted-0.5.0-py3-none-any.whl latexminted latexminted-0.5.0.dist-info
+-  popd
+ 
+   cp texmf-dist/web2c/{fmtutil.cnf,updmap.cfg,texmf.cnf} .
+   cp texmf-dist/tex/generic/config/language.{dat,dat.lua,def} .
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ subversion
+ texlive-bin
+-zip
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,11 +2,6 @@
+ patch -d texmf-dist/web2c -p0 < texmf.cnf.patch
+ patch -d texmf-dist/web2c -p0 < texmfcnf.lua.patch
+ patch -d texmf-dist/scripts/git-latexdiff -p1 < a0aa6bad.patch
+-pushd texmf-dist/scripts/minted
+-bsdunzip latexminted-0.5.0-py3-none-any.whl
+-patch -p2 --binary < "$srcdir"/minted-python-3.14.patch
+-zip -r latexminted-0.5.0-py3-none-any.whl latexminted latexminted-0.5.0.dist-info
+-popd
+ cp texmf-dist/web2c/{fmtutil.cnf,updmap.cfg,texmf.cnf} .
+ cp texmf-dist/tex/generic/config/language.{dat,dat.lua,def} .
+ for _coll in ${_collections[@]}; do

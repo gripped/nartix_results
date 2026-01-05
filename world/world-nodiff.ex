@@ -281,7 +281,6 @@ calf
 calligra
 camlp-streams
 camlp4
-cantarell-fonts
 cantor
 capnproto
 capstone
@@ -1136,7 +1135,6 @@ ipset
 ipython
 irssi
 isa-l
-iso-codes
 isodate
 python-isodate
 isoimagewriter
@@ -1787,6 +1785,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2286,6 +2285,7 @@ mbedtls
 mbedtls2
 mbox-importer
 mc
+mcpp
 md4c
 mdds
 mediainfo
@@ -2587,8 +2587,6 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
-papers
-papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
@@ -5505,9 +5503,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5
