@@ -47,7 +47,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cantarell-fonts
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -143,7 +142,6 @@ element.io
 element-web
 element-desktop
 elinks
-elixir
 emacs
 emacs-nox
 emacs-wayland
@@ -622,8 +620,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-papers
-papers-lib-docs
 paraview-catalyst
 parole
 passim
@@ -1086,6 +1082,7 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
+wasm-component-ld
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

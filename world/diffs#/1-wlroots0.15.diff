@@ -42,11 +42,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,7 +12,6 @@
- meson
- ninja
- opengl-driver
--systemd
- vulkan-headers
- wayland-protocols
- xcb-util-errors
+@@ -0,0 +1,20 @@
++glslang
++libglvnd
++libinput
++libpixman-1.so
++libseat.so
++libudev.so
++libvulkan.so
++libwayland-client.so
++libwayland-server.so
++libxcb
++libxkbcommon.so
++meson
++ninja
++opengl-driver
++vulkan-headers
++wayland-protocols
++xcb-util-errors
++xcb-util-renderutil
++xcb-util-wm
++xorg-xwayland

@@ -1,42 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=polari
- pkgver=49.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="An IRC Client for GNOME"
- url="https://apps.gnome.org/Polari/"
- arch=(x86_64)
-@@ -9,23 +9,20 @@
- depends=(
-   dconf
-   gcc-libs
--  gdk-pixbuf2
-   gjs
-   glib2
-   glibc
--  graphene
-+  gnome-keyring
-   gtk4
-   hicolor-icon-theme
-   libadwaita
-   libgirepository
--  libsecret
-   libsoup3
--  org.freedesktop.secrets
--  pango
-   telepathy-glib
-   telepathy-idle
-+  telepathy-logger
-   telepathy-mission-control
--  tinysparql
-+  tracker3
- )
- makedepends=(
-   appstream
-@@ -58,7 +55,7 @@
+@@ -58,7 +58,7 @@
  }
  
  build() {
@@ -49,36 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,24 +1,21 @@
- appstream
- dconf
- gcc-libs
--gdk-pixbuf2
- git
- gjs
- glib2
- glibc
-+gnome-keyring
- gobject-introspection
--graphene
- gtk4
- hicolor-icon-theme
- libadwaita
- libgirepository
--libsecret
- libsoup3
- meson
--org.freedesktop.secrets
--pango
- telepathy-glib
- telepathy-idle
-+telepathy-logger
- telepathy-mission-control
--tinysparql
-+tracker3
- yelp-tools
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

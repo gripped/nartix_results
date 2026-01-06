@@ -1,31 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=polkit
- pkgver=127
--pkgrel=3
-+pkgrel=1
- pkgdesc="Application development toolkit for controlling system-wide privileges"
- url="https://github.com/polkit-org/polkit"
- arch=(x86_64)
-@@ -12,11 +12,11 @@
+@@ -12,8 +12,8 @@
    glib2
    glibc
    pam
 -  systemd # required by polkit.install
 -  systemd-libs
++  elogind # required by polkit.install
 +  libelogind
  )
  makedepends=(
    dbus
-+  elogind
-   git
-   glib2-devel
-   gobject-introspection
-@@ -29,24 +29,23 @@
+@@ -28,25 +28,27 @@
+ install=polkit.install
  source=(
    "git+$url#tag=$pkgver"
++  turnstile.patch
    0001-meson-Support-explicit-GID.patch
 -  0002-meson-Detect-Arch-Linux-and-set-the-UID-and-GID.patch
 -  0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch
@@ -33,9 +23,11 @@
 -)
 +  0002-meson-Detect-Artix-Linux-and-set-the-UID-and-GID.patch
 +  0003-meson-elogind-build-fix.patch
++
 +  99-artix.rules
 +  turnstile.patch)
  b2sums=('6744385984906d97f79aedbfeb894ff274769212af44686b90f6c5ab7f3007d0e6db91b5439c95f344621aa447b570686d46eff7fac861854cfcd37fba5e73e5'
++        'c09efe9dac0a842ea4eb053c0668d4ad13a4c699dc279674766bbf9f9028a90934afe92de5aed6b215ecd52dbf47ae46754c49e10a4c4f1d6f652bfb89f4e6d7'
          '5549570ecce8db08263167a52211befda69eca2dd65020d132c3001b621e7b6db8a092eefb29ad0e50ab980b0158ed15a79ab7f23e1754e890b51c6ef827eb72'
          '6d4d435c8af82270fb6720ca00bab14492fbf6f0d73ba0eba0ac909cc192452a78de56ceb2fe224ac68fcc0f7c9decc01771aaa3f1956ccfae9747620986948c'
 -        '79ca31e536f236757d1d8774f7a6037826b7010e177675a95da8b131e7cfc61d1b08fc278fff6e6a5a06af443f37e32923c29754895c467eaffbacdd8d120803'
@@ -58,7 +50,7 @@
  }
  
  build() {
-@@ -56,17 +55,18 @@
+@@ -56,17 +58,18 @@
      -D gtk_doc=true
      -D man=true
      -D tests=true

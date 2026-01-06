@@ -17,28 +17,3 @@
  
  prepare() {
  	cd "${pkgname#python-}-$pkgver"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,18 +0,0 @@
--python-autobahn
--python-build
--python-click
--python-humanize
--python-idna
--python-installer
--python-iterable-io
--python-pynacl
--python-pyopenssl
--python-qrcode
--python-service-identity
--python-setuptools
--python-spake2
--python-tqdm
--python-txtorcon
--python-versioneer
--python-wheel
--python-zipstream-ng

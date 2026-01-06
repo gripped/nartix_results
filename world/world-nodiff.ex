@@ -281,6 +281,7 @@ calf
 calligra
 camlp-streams
 camlp4
+cantarell-fonts
 cantor
 capnproto
 capstone
@@ -520,6 +521,7 @@ electron
 electrum
 elementary-icon-theme
 elisa
+elixir
 ell
 embree3
 emovix
@@ -2151,6 +2153,7 @@ lua-$pkgbase
 lua51-$pkgbase
 lua52-$pkgbase
 lua53-$pkgbase
+lua54-$pkgbase
 lpsolve
 lrzip
 lsb-release
@@ -2587,6 +2590,8 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
+papers
+papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
@@ -4247,6 +4252,7 @@ python-rich
 python-rjsmin
 python-robot-detection
 python-roman-numerals-py
+python-roman
 python-rope
 python-routes
 python-rpds-py
@@ -5687,7 +5693,6 @@ wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
 wasi-libc++abi
-wasm-component-ld
 wavpack
 wayland-protocols
 wayland-utils
