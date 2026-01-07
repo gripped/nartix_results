@@ -206,6 +206,7 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
+bear
 bearssl
 beep
 bemenu
@@ -1656,6 +1657,7 @@ libchamplain
 libchewing
 libclc
 libcloudproviders
+libcloudproviders-docs
 libcmis
 libconfig
 libcroco
@@ -1699,7 +1701,6 @@ libesmtp
 libetebase
 libetonyek
 libetonyek-doc
-libev
 libevdev
 libewf
 libexif
@@ -1787,7 +1788,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -5302,6 +5302,7 @@ suil
 suil-docs
 suitesparse
 suitesparse-graphblas
+supermin
 sushi
 svgcleaner
 svgpart
@@ -5509,6 +5510,9 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
+texlive-texmf
+texlive-doc
+texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5518,6 +5522,7 @@ tidy
 time
 timeshift
 timew
+timezonemap
 tinycdb
 tinycompress
 tinyprog
@@ -5693,6 +5698,7 @@ wasi-compiler-rt
 wasi-libc
 wasi-libcplusplus
 wasi-libc++abi
+wasm-component-ld
 wavpack
 wayland-protocols
 wayland-utils

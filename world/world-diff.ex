@@ -20,7 +20,6 @@ avahi
 awesome
 aws-cli-v2
 bash-bats
-bear
 blender
 blueman
 bluez
@@ -375,6 +374,7 @@ libei-docs
 libepoxy
 libepoxy-docs
 libepubgen
+libev
 libfido2
 libfprint
 libfreehand
@@ -388,6 +388,7 @@ libinput
 libinput-tools
 libisoburn
 libisofs
+libkate
 libkrun
 libldm
 liblqr
@@ -906,7 +907,6 @@ sslh
 sssd
 strongswan
 stunnel
-supermin
 sway
 swayidle
 switcheroo-control
@@ -934,16 +934,12 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
-texlive-texmf
-texlive-doc
-texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
 thunderbird
 tigervnc
-timezonemap
 tint2
 tinysparql
 tinysparql-docs
@@ -1082,7 +1078,6 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
-wasm-component-ld
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

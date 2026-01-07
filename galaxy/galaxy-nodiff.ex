@@ -331,6 +331,7 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 peek
+pekwm
 perl-cairo-gobject
 perl-config-grammar
 perl-convert-asn1

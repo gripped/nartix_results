@@ -125,7 +125,6 @@ opensnitch
 osdlyrics
 ouch
 p8-platform
-pekwm
 perl-cgi-fast
 profanity
 profanity-gtk
