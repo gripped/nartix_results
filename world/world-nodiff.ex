@@ -1788,6 +1788,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3061,6 +3062,7 @@ projectm
 projectm-sdl
 projectm-pulseaudio
 prometheus
+prosody
 protobuf-c
 protobuf
 python-protobuf
@@ -5883,14 +5885,6 @@ ytfzf
 yyjson
 z3
 python-z3-solver
-zabbix
-zabbix-common
-zabbix-server
-zabbix-frontend-php
-zabbix-web-service
-zabbix-proxy
-zabbix-agent
-zabbix-agent2
 zanshin
 zathura-cb
 zathura-djvu

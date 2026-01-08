@@ -388,7 +388,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -709,7 +708,6 @@ powerline
 powerline-fonts
 vim-powerline
 presage
-prosody
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -1180,6 +1178,14 @@ yapf
 yubico-c-client
 yubico-c
 yubikey-personalization
+zabbix
+zabbix-common
+zabbix-server
+zabbix-frontend-php
+zabbix-web-service
+zabbix-proxy
+zabbix-agent
+zabbix-agent2
 zathura-pdf-mupdf
 zeromq
 znc

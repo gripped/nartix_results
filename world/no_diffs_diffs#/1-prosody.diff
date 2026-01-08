@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,13 +26,12 @@
+         'prosody.tmpfiles'
+         'prosody.logrotated'
+         'sysuser.conf'
+-        'prosody.service')
++)
+ sha256sums=('a51ed3ebe54c19acd638ee5f54014ab3696c12f99ffc75ac293d69f2f0ffdc0b'
+             'SKIP'
+             '0753bd9260f1cfdce6e18e01a61e320b396acfe9fca8ccf3250653bfa6af997e'
+             '5a2466b73bd069fb73be97a4e23b24e4c8dd1adb7db871cb8f5ab4094c1f967f'
+-            '211295ad5fe71742a8ec4a4420da31720e3bb407c6653250f9c6c7574e44f14e'
+-            'ff3c5517a143b5572908a9b085e03567294a03e7ca34b02bb20ba142edcc6334')
++            '211295ad5fe71742a8ec4a4420da31720e3bb407c6653250f9c6c7574e44f14e')
+ 
+ prepare() {
+   cd prosody-$pkgver
+@@ -65,7 +64,6 @@
+   make DESTDIR="${pkgdir}" install -C tools/migration
+ 
+   install -Dm644 "${srcdir}"/prosody.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/prosody.conf
+-  install -Dm644 "${srcdir}"/prosody.service "${pkgdir}"/usr/lib/systemd/system/prosody.service
+   install -Dm644 "${srcdir}"/sysuser.conf "${pkgdir}"/usr/lib/sysusers.d/prosody.conf
+ 
+   for i in tools/*.lua; do
