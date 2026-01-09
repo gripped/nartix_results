@@ -2,6 +2,7 @@
 a52dec
 accountsservice
 alacritty
+alsa-tools
 alsa-utils
 amule
 apache
@@ -324,8 +325,11 @@ java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
+julia
 jupyter-server-ydoc
 kcoreaddons
+kdenlive
+kdevelop-python
 kdoctools5
 kicad
 kinfocenter
@@ -388,6 +392,7 @@ libinput
 libinput-tools
 libisoburn
 libisofs
+libkate
 libkrun
 libldm
 liblqr
@@ -592,6 +597,13 @@ niri
 nodejs-lts-hydrogen
 nsd
 nushell
+nvidia-340xx-utils
+nvidia-390xx-utils
+nvidia-510xx-utils
+nvidia-525xx-utils
+nvidia-535xx-utils
+nvidia-580xx-settings
+nvidia-580xx-utils
 nvidia-open
 nvidia-settings
 nvidia-utils-dinit
@@ -606,6 +618,8 @@ onnx
 python-onnx
 open-iscsi
 openbox
+opencc
+opencc-doc
 opencollada
 opendht
 openipmi
@@ -650,6 +664,7 @@ php-legacy-snmp
 php-legacy-sqlite
 php-legacy-tidy
 php-legacy-xsl
+php-snuffleupagus
 php
 php-cgi
 php-apache

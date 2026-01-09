@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -26,7 +26,7 @@
+   pkgname=("${pkgname[@]}" qemu-vmsr-helper)
+ fi
+ pkgver=10.1.2
+-pkgrel=4
++pkgrel=3
+ pkgdesc="A generic and open source machine emulator and virtualizer"
+ arch=(x86_64)
+ url="https://www.qemu.org/"
 @@ -112,7 +112,7 @@
    snappy
    spice-protocol

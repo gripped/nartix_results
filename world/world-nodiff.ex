@@ -51,7 +51,6 @@ alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
-alsa-tools
 alsa-topology-conf
 alsa-ucm-conf
 amdvlk
@@ -1193,7 +1192,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1312,7 +1310,6 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
-kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1323,7 +1320,6 @@ kdesu
 kdesu5
 kdevelop-pg-qt
 kdevelop-php
-kdevelop-python
 kdevelop
 kdf
 kdiagram
@@ -1788,7 +1784,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2512,8 +2507,6 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
-opencc
-opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -2964,7 +2957,6 @@ php-mongodb
 php-legacy-mongodb
 php-redis
 php-legacy-redis
-php-snuffleupagus
 picard
 picmi
 picom

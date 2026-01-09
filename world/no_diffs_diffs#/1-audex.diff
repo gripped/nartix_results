@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=audex
+-pkgver=25.12.1
++pkgver=25.12.0
+ pkgrel=1
+ pkgdesc='Tool for ripping compact discs'
+ arch=(x86_64)
+@@ -34,7 +34,7 @@
+ groups=(kde-applications
+         kde-multimedia)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('df9f18d0bfcef5a0f32c75b377ef855dce999a25243d81cd03d613877c6f94f3'
++sha256sums=('8a6215b85a315e1d5e48e7d87ad61aa5969d6c2b543a891426de534959ba7cb8'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
