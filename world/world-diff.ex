@@ -325,7 +325,6 @@ java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
-julia
 jupyter-server-ydoc
 kcoreaddons
 kdenlive
@@ -392,7 +391,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -532,7 +530,6 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
-menumaker
 mesa
 opencl-mesa
 vulkan-asahi

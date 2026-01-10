@@ -28,6 +28,7 @@ gcc-go
 gcc-objc
 lto-dump
 libgccjit
+gdbm
 gettext
 glibc
 lib32-glibc

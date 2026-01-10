@@ -1192,6 +1192,7 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
+julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1784,6 +1785,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2295,6 +2297,7 @@ memtest86plus
 memtest86+-efi
 memtest86+-iso
 menu-cache
+menumaker
 mercurial
 merkuro
 mesa-demos
