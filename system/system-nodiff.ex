@@ -36,6 +36,7 @@ findutils
 flex
 gawk
 gc
+gdbm
 glib2
 glib2-devel
 glib2-docs
@@ -50,6 +51,7 @@ hwdata
 iana-etc
 icu
 inetutils
+iproute2
 iptables
 iptables-nft
 iw
@@ -95,6 +97,8 @@ libnsl
 libpcap
 libpipeline
 libpsl
+libseccomp
+python-libseccomp
 libsecret
 libsecret-docs
 libssh2
@@ -163,8 +167,6 @@ pkgconf
 popt
 pptpclient
 psmisc
-python
-python-tests
 readline
 reiserfsprogs
 run-parts

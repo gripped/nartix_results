@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -87,3 +87,4 @@
+   rm -rfv "$pkgdir$site_packages"/$_pkgname/include/
+   ln -sTv /usr/include/arrow/ "$pkgdir$site_packages"/$_pkgname/include
+ }
++

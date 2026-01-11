@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=niri
+ pkgver=25.11
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="A scrollable-tiling Wayland compositor"
+ arch=(x86_64)
+ url="https://github.com/YaLTeR/niri"
 @@ -19,7 +19,6 @@
    pango
    pixman
@@ -8,7 +17,17 @@
    xdg-desktop-portal-impl
  )
  makedepends=(
-@@ -72,7 +71,6 @@
+@@ -54,7 +53,8 @@
+   cd $pkgname-$pkgver
+   export NIRI_BUILD_COMMIT="$(zcat ../$pkgname-$pkgver.tar.gz | git get-tar-commit-id | cut -c1-7)"
+   CFLAGS+=(' -ffat-lto-objects')
+-  cargo build --frozen --release --features default
++  cargo build --frozen --release --no-default-features --features "dbus xdp-gnome-screencast"
++  sed -i "s/niri-session/dbus-launch --exit-with-session niri --session/" resources/$pkgname.desktop
+ 
+   for shell in bash fish zsh; do
+     cargo run --frozen --release --bin niri -- \
+@@ -72,7 +72,6 @@
  package() {
    cd $pkgname-$pkgver
    install -vDm 755 {target/release/$pkgname,resources/$pkgname-session} -t "$pkgdir/usr/bin/"

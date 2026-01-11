@@ -28,7 +28,6 @@ gcc-go
 gcc-objc
 lto-dump
 libgccjit
-gdbm
 gettext
 glibc
 lib32-glibc
@@ -39,11 +38,8 @@ grep
 grub
 gssproxy
 gzip
-iproute2
 iputils
 libsasl
-libseccomp
-python-libseccomp
 libusb
 linux
 linux-headers
@@ -68,6 +64,8 @@ pambase
 patch
 ppp
 procps-ng
+python
+python-tests
 rpcbind
 thin-provisioning-tools
 tpm2-tss

@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,3 +34,4 @@
+   python setup.py install --prefix=/usr --root="${pkgdir}" --skip-build --optimize=1
+   install -Dm644 LICENSE.txt -t "${pkgdir}"/usr/share/licenses/${pkgname}
+ }
++

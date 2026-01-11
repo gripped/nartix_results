@@ -9,3 +9,8 @@
  source=("git+https://github.com/tqdm/tqdm.git#commit=v${pkgver}")
  sha512sums=('be7467509c82c6eca11caf70bd95a1fa41c761158b97c649f02ebeda3fae64337742c8bdc4110ea000fba39322888387cdb8630463630809c016f75764250667')
  
+@@ -29,3 +29,4 @@
+   install -Dm 644 tqdm/completion.sh "${pkgdir}/usr/share/bash-completion/completions/tqdm"
+ }
+ 
++

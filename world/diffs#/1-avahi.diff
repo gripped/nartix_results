@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=avahi
+ pkgver=0.9rc2
+-pkgrel=3
++pkgrel=1
+ epoch=1
+ pkgdesc="Service Discovery for Linux using mDNS/DNS-SD (compatible with Bonjour)"
+ url="https://github.com/avahi/avahi"
 @@ -16,7 +16,7 @@
    glibc
    libcap
@@ -18,7 +27,18 @@
    xmltoman
  )
  optdepends=(
-@@ -76,7 +76,8 @@
+@@ -57,10 +57,6 @@
+ prepare() {
+   cd avahi
+ 
+-  git cherry-pick -n 78eab31128479f06e30beb8c1cbf99dd921e2524
+-
+-  git cherry-pick -n 4e2e1ea0908d7e6ad7f38ae04fdcdf2411f8b942
+-
+   git apply -3 ../0001-HACK-Install-fixes.patch
+ 
+   NOCONFIGURE=1 ./autogen.sh
+@@ -80,7 +76,8 @@
      --with-autoipd-user=avahi
      --with-avahi-priv-access-group=network
      --with-distro=archlinux

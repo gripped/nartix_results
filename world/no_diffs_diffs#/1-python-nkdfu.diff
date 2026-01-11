@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,3 +34,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm 644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+ }
++

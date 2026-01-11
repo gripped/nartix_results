@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,3 +55,4 @@
+   find "$pkgdir/$site_packages/" -type f -iname "*conftest.py" -delete
+   install -vDm 644 README.rst -t "${pkgdir}/usr/share/doc/${pkgname}"
+ }
++

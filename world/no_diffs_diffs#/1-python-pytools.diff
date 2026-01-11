@@ -1,0 +1,16 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-pytools
+ pkgver=2025.2.5
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="A collection of tools for Python"
+ arch=(any)
+ url="https://github.com/inducer/pytools"
+@@ -48,3 +48,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }
++

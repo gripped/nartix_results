@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=distcc
+ pkgver=3.4
+-pkgrel=15
++pkgrel=14
+ pkgdesc='Distributed compilation service for C, C++ and Objective-C'
+ arch=(x86_64)
+ url='https://github.com/distcc/distcc'
 @@ -13,11 +13,9 @@
          etc/distcc/hosts)
  source=("git+$url?signed#tag=v$pkgver"

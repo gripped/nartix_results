@@ -44,6 +44,7 @@ mate-screensaver
 mate-session-manager
 mate-system-monitor
 mimalloc
+mozo
 mpd
 muffin
 neofetch
@@ -120,12 +121,14 @@ nvidia-525xx-utils
 nvidia-535xx-utils
 nvidia-580xx-utils
 nvm
+onionshare
 opensc
 opensnitch
 osdlyrics
 ouch
 p8-platform
 perl-cgi-fast
+prismlauncher
 profanity
 profanity-gtk
 python-xapp

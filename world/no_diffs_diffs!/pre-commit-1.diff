@@ -10,12 +10,13 @@
    go
    julia
    luarocks
-@@ -50,38 +48,6 @@
+@@ -50,39 +48,6 @@
    python -m build --wheel --no-isolation
  }
  
 -check() {
 -  cd pre-commit-$pkgver
+-  export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
 -  git init
 -  git config user.email "pony@arch"
 -  git config user.name "Lucky Pony"

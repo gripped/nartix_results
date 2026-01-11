@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,41 +1,32 @@
+@@ -1,43 +1,32 @@
  
  pkgbase=tensorflow
  pkgname=(tensorflow tensorflow-opt tensorflow-cuda tensorflow-opt-cuda python-tensorflow python-tensorflow-opt python-tensorflow-cuda python-tensorflow-opt-cuda)
 -pkgver=2.20.0
 -_pkgver=2.20.0
--pkgrel=3
+-pkgrel=4
 -_cuda_ver=12.8.1
 -_cudnn_ver=9.8.0
 -_nvshmem_ver=3.2.5
@@ -21,8 +21,9 @@
  depends=('c-ares' 'pybind11' 'openssl' 'libpng' 'curl' 'giflib' 'icu' 'libjpeg-turbo' 'intel-oneapi-openmp'
           'intel-oneapi-compiler-shared-runtime-libs')
 -makedepends=('bazel' 'git' 'openmp'
+-             'python-installer' 'patchelf' 'libxcrypt-compat' 'clang20' 'lld')
 +makedepends=('bazel' 'cuda' 'nvidia-utils' 'nccl' 'git' 'cudnn' 'openmp'
-              'python-installer' 'patchelf' 'libxcrypt-compat' 'clang' 'lld')
++             'python-installer' 'patchelf' 'libxcrypt-compat' 'clang' 'lld')
  optdepends=('tensorboard: Tensorflow visualization toolkit')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/tensorflow/tensorflow/archive/v${_pkgver}.tar.gz"
 -        https://github.com/bazelbuild/bazel/releases/download/7.4.1/bazel_nojdk-7.4.1-linux-x86_64
@@ -30,13 +31,15 @@
 -        tf-runtime-forward-decls.patch
 -        tensorflow-2.19.0-matmul-it-unused-result.patch
 -        protobuf-deps.patch
+-        tensorflow-2.20.0-python-3.14.patch
 -)
 -sha512sums=('e1e27c84491a28dc5b7deb181de0fbad27ddd58cdd7ee2f6815bebd26d7ff400a94efea52eb7da344702adcd9181a474a76dc9e94d2ad7d6511d261deffa0cf5'
 -            'ca01422266ed741a7d2ec1fdaba8fed8aa1d1ca4d53e45345225403cb132dc56266fd799351e80aeb50df6f2f4e29e6e0dc9430aef882d749425e8521ba0a806'
 -            '27a07c1f5ab3898e049717e3f56498577c62840416b425e582a308d22112c0341b26a69d419daa0f80fac5be53cee122122b1b8200fc885ae5f7346b8e3ecb10'
 -            'b3ac22ede074decdb751adbc8f0324f4b729ffb4927fddcc67250e2f2a2812d2ed6ff515ed98cb3eaf5c1e4b755d6b780f5515181b6f10f046dbaa91e0eb1964'
 -            'e5856d277edcef6ab655e8b641f1ec8fe9823264221d687c9938bb00d5acee626a2a05b46cfd97fbad8551f270332ed09b73848bf9784137317fee47ad64c80e'
--            '5a90a66ea6b78196aaa8852f90ac2af82cfac12b4f7eefa9b1e04ff0fbefd4fdc82f9705f77634efe76c55d5e1804cdfd736dd8ceb875d7ce2757552467a04dd')
+-            '5a90a66ea6b78196aaa8852f90ac2af82cfac12b4f7eefa9b1e04ff0fbefd4fdc82f9705f77634efe76c55d5e1804cdfd736dd8ceb875d7ce2757552467a04dd'
+-            'cfb1eced1f4b4534deddf14b73d45ae4f8104264ccada1a8854e0dbf7ef2a2f28e67930348211541630a102994ad258d55804359448d225863c4bd5c8762fff1')
 +        tensorflow-newer-hermetic-nvidia-versions.patch
 +        https://github.com/tensorflow/tensorflow/commit/3f4b2fda6ffe7dfe03c1663ef37f54fc4432cc8b.patch
 +        tensorflow-2.16.1-python-distutils-removal.patch
@@ -57,7 +60,7 @@
  
  get_pyver () {
    python -c 'import sys; print(str(sys.version_info[0]) + "." + str(sys.version_info[1]))'
-@@ -61,30 +52,19 @@
+@@ -63,32 +52,19 @@
  }
  
  prepare() {
@@ -66,6 +69,8 @@
    export PATH="${srcdir}/bazel:$PATH"
    bazel --version
  
+-  patch -Np1 -i ../tensorflow-2.20.0-python-3.14.patch -d tensorflow-${_pkgver}
+-
 -  patch -Np1 -i ../tensorflow-2.19.0-tf-runtime-workspace.patch -d tensorflow-${_pkgver}
 -  cp tf-runtime-forward-decls.patch tensorflow-${_pkgver}/third_party/tf_runtime/forward_decls.patch
 -
@@ -96,10 +101,12 @@
  
    cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt
    cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-cuda
-@@ -108,40 +88,31 @@
+@@ -111,41 +87,32 @@
+   export TF_NEED_IGNITE=0
    export TF_NEED_ROCM=0
    export TF_NEED_CLANG=1
-   export CLANG_COMPILER_PATH=/usr/bin/clang
+-  export CLANG_COMPILER_PATH=/usr/lib/llvm20/bin/clang
++  export CLANG_COMPILER_PATH=/usr/bin/clang
 +  export TF_SYSTEM_LIBS="boringssl,curl,cython,gif,icu,libjpeg_turbo,nasm,png,zlib"
    export TF_SET_ANDROID_WORKSPACE=0
    export TF_DOWNLOAD_CLANG=0
@@ -114,7 +121,8 @@
 +  export HOST_C_COMPILER="${NVCC_CCBIN/++/cc}"
 +  export HOST_CXX_COMPILER="$NVCC_CCBIN"
    export TF_CUDA_CLANG=0  # Clang currently disabled because it's not compatible at the moment.
-   export CLANG_CUDA_COMPILER_PATH=/usr/bin/clang
+-  export CLANG_CUDA_COMPILER_PATH=/usr/lib/llvm20/bin/clang
++  export CLANG_CUDA_COMPILER_PATH=/usr/bin/clang
    export TF_CUDA_PATHS=/opt/cuda,/usr/lib,/usr
 -  export HERMETIC_CUDA_VERSION=$_cuda_ver
 -  export HERMETIC_CUDNN_VERSION=$_cudnn_ver
@@ -147,7 +155,7 @@
    cd "${srcdir}"/tensorflow-${_pkgver}-cuda
    export CC_OPT_FLAGS="-march=x86-64"
    export TF_NEED_CUDA=1
-@@ -151,43 +122,27 @@
+@@ -155,43 +122,27 @@
        ${BAZEL_ARGS[@]} \
        //tensorflow:libtensorflow.so \
        //tensorflow:libtensorflow_cc.so \
@@ -205,7 +213,7 @@
    cd "${srcdir}"/tensorflow-${_pkgver}
    export CC_OPT_FLAGS="-march=x86-64"
    export TF_NEED_CUDA=0
-@@ -197,40 +152,32 @@
+@@ -201,40 +152,32 @@
        ${BAZEL_ARGS[@]} \
        //tensorflow:libtensorflow.so \
        //tensorflow:libtensorflow_cc.so \
@@ -262,7 +270,7 @@
  
    local _srch_path="${pkgdir}/usr/lib/python$(get_pyver)"/site-packages/tensorflow/include
    check_dir "${_srch_path}"  # we need to quit on broken search paths
-@@ -254,12 +201,22 @@
+@@ -258,12 +201,22 @@
    rm bazel-bin/tensorflow/*.params
    cp -P bazel-bin/tensorflow/*.so* "${pkgdir}"/usr/lib
  
@@ -287,7 +295,7 @@
  
    rm -r "${pkgdir}"/usr/bin/tensorboard
  
-@@ -268,7 +225,7 @@
+@@ -272,7 +225,7 @@
  
  package_tensorflow() {
    cd "${srcdir}"/tensorflow-${_pkgver}
@@ -296,7 +304,7 @@
  }
  
  package_tensorflow-opt() {
-@@ -277,63 +234,63 @@
+@@ -281,63 +234,63 @@
    provides=(tensorflow)
  
    cd "${srcdir}"/tensorflow-${_pkgver}-opt
@@ -383,10 +391,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,6 +2,8 @@
+@@ -1,7 +1,9 @@
+ absl-py
  bazel
  c-ares
- clang
+-clang20
++clang
 +cuda
 +cudnn
  curl
@@ -416,12 +426,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,12 @@
+@@ -1,20 +1,12 @@
  prepare() {
 -install -Dm755 "${srcdir}"/bazel_nojdk-7.4.1-linux-x86_64 bazel/bazel
 +install -Dm755 "${srcdir}"/bazel_nojdk-6.5.0-linux-x86_64 bazel/bazel
  export PATH="${srcdir}/bazel:$PATH"
  bazel --version
+-patch -Np1 -i ../tensorflow-2.20.0-python-3.14.patch -d tensorflow-${_pkgver}
 -patch -Np1 -i ../tensorflow-2.19.0-tf-runtime-workspace.patch -d tensorflow-${_pkgver}
 -cp tf-runtime-forward-decls.patch tensorflow-${_pkgver}/third_party/tf_runtime/forward_decls.patch
 -patch -Np1 -i ../tensorflow-2.19.0-matmul-it-unused-result.patch -d tensorflow-${_pkgver}
@@ -441,10 +452,12 @@
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-cuda
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt-cuda
-@@ -35,37 +28,29 @@
+@@ -35,38 +27,30 @@
+ export TF_NEED_IGNITE=0
  export TF_NEED_ROCM=0
  export TF_NEED_CLANG=1
- export CLANG_COMPILER_PATH=/usr/bin/clang
+-export CLANG_COMPILER_PATH=/usr/lib/llvm20/bin/clang
++export CLANG_COMPILER_PATH=/usr/bin/clang
 +export TF_SYSTEM_LIBS="boringssl,curl,cython,gif,icu,libjpeg_turbo,nasm,png,zlib"
  export TF_SET_ANDROID_WORKSPACE=0
  export TF_DOWNLOAD_CLANG=0
@@ -459,7 +472,8 @@
 +export HOST_C_COMPILER="${NVCC_CCBIN/++/cc}"
 +export HOST_CXX_COMPILER="$NVCC_CCBIN"
  export TF_CUDA_CLANG=0  # Clang currently disabled because it's not compatible at the moment.
- export CLANG_CUDA_COMPILER_PATH=/usr/bin/clang
+-export CLANG_CUDA_COMPILER_PATH=/usr/lib/llvm20/bin/clang
++export CLANG_CUDA_COMPILER_PATH=/usr/bin/clang
  export TF_CUDA_PATHS=/opt/cuda,/usr/lib,/usr
 -export HERMETIC_CUDA_VERSION=$_cuda_ver
 -export HERMETIC_CUDNN_VERSION=$_cudnn_ver
@@ -489,7 +503,7 @@
  cd "${srcdir}"/tensorflow-${_pkgver}-cuda
  export CC_OPT_FLAGS="-march=x86-64"
  export TF_NEED_CUDA=1
-@@ -75,19 +60,12 @@
+@@ -76,19 +60,12 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \
@@ -513,7 +527,7 @@
  export TF_NEED_CUDA=1
  ./configure
  bazel \
-@@ -95,17 +73,10 @@
+@@ -96,17 +73,10 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \
@@ -535,7 +549,7 @@
  cd "${srcdir}"/tensorflow-${_pkgver}
  export CC_OPT_FLAGS="-march=x86-64"
  export TF_NEED_CUDA=0
-@@ -115,19 +86,12 @@
+@@ -116,19 +86,12 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \
@@ -559,7 +573,7 @@
  export TF_NEED_CUDA=0
  ./configure
  bazel \
-@@ -135,5 +99,7 @@
+@@ -136,5 +99,7 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \

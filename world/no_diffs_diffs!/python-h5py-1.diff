@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=python-h5py
- pkgver=3.15.1
--pkgrel=2
-+pkgrel=3
- pkgdesc="General-purpose Python bindings for the HDF5 library"
- arch=(x86_64)
- url="https://www.h5py.org/"
 @@ -61,3 +61,4 @@
    python -m installer --destdir="$pkgdir" dist/*.whl
    install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE

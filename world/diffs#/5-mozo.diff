@@ -4,7 +4,7 @@
  
  pkgname=mozo
 -pkgver=1.28.0
--pkgrel=4
+-pkgrel=5
 +pkgver=1.27.0
 +pkgrel=2
  pkgdesc="MATE menu editing tool"
@@ -22,7 +22,7 @@
 -
 -prepare() {
 -    	cd "${pkgname}-${pkgver}"
--	./autogen.sh
+-	autoreconf -fiv -I /usr/share/gettext/m4/
 -}
 +source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
 +sha256sums=('0d97e5dfb7c446bb552d563290927306ae4c6f2b385649e4161ece8776fdccc1')
@@ -49,7 +49,7 @@
 @@ -1,7 +1,3 @@
 -prepare() {
 -cd "${pkgname}-${pkgver}"
--./autogen.sh
+-autoreconf -fiv -I /usr/share/gettext/m4/
 -}
  build() {
  cd "${pkgname}-${pkgver}"

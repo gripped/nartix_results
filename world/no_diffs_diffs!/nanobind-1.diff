@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=nanobind
  pkgdesc="Tiny and efficient C++/Python bindings"
 -pkgver=2.10.2
+-pkgrel=2
 +pkgver=2.9.2
- pkgrel=1
++pkgrel=1
  arch=(any)
  url="https://github.com/wjakob/nanobind"
+ license=(BSD-3-Clause)
 @@ -18,16 +18,14 @@
  )
  checkdepends=(
@@ -27,3 +29,13 @@
              'SKIP')
  
  prepare() {
+@@ -50,8 +48,7 @@
+ 
+ check() {
+   cd $pkgname-$pkgver
+-  cd build
+-  python -m pytest
++  pytest build
+ }
+ 
+ package() {

@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _pyname=jupyter_ydoc
+ pkgname=python-${_pyname//_/-}
+-pkgver=3.3.4
++pkgver=3.3.3
+ pkgrel=1
+ pkgdesc='Document structures for collaborative editing using Ypy'
+ arch=(any)
+@@ -19,7 +19,7 @@
+               python-websockets
+               python-pycrdt-websocket)
+ source=(git+https://github.com/jupyter-server/jupyter_ydoc#tag=v$pkgver)
+-sha256sums=('300283669a0be3b5ae165b2f6f811ec125e3c404ad3727e5c859a6d6a4bf1e90')
++sha256sums=('748fd44fe1daee6873fe8f9f508f21a733b9f1688d7c8cd37093b89bfba1a5a4')
+ 
+ build() {
+   cd $_pyname

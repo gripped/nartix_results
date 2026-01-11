@@ -1,16 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  
  
  pkgname=blender
 -pkgver=5.0.1
--pkgrel=1
 +pkgver=4.3.2
-+pkgrel=2
+ pkgrel=2
  epoch=17
  pkgdesc="A fully integrated 3D graphics creation suite"
- arch=('x86_64')
 @@ -55,7 +55,6 @@
    'libxrender'
    'libxxf86vm'
@@ -19,7 +17,7 @@
    'materialx'
    'onetbb'
    'openal'
-@@ -102,7 +101,6 @@
+@@ -102,33 +101,57 @@
    'ninja'
    'subversion'
    'wayland-protocols'
@@ -27,7 +25,9 @@
  )
  optdepends=('cuda: Cycles renderer CUDA support'
              'intel-compute-runtime: Cycles renderer Intel OneAPI support'
-@@ -111,23 +109,49 @@
+-            'intel-level-zero-raytracing-support: Cycles renderer Intel OneAPI Raytracing Support'
+             'hip-runtime-amd: Cycles renderer AMD ROCm support'
+             'hiprt: Ray tracing AMD ROCm support'
              'libdecor: wayland support')
  options=('!lto')
  source=("git+https://projects.blender.org/blender/blender.git#tag=v$pkgver"
@@ -90,7 +90,7 @@
  }
  
  _get_pyver() {
-@@ -136,25 +160,23 @@
+@@ -137,25 +160,23 @@
  
  build() {
    export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
@@ -120,7 +120,7 @@
      -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
      -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
      -D USD_ROOT_DIR=/usr
-@@ -166,6 +188,9 @@
+@@ -167,6 +188,9 @@
      -W no-dev
    )
  
@@ -130,7 +130,7 @@
    cmake "${cmake_options[@]}"
    cmake --build build
  }
-@@ -180,7 +205,10 @@
+@@ -181,7 +205,10 @@
  
    install -Dm644 release/freedesktop/org.blender.Blender.metainfo.xml "${pkgdir}/usr/share/metainfo/org.blender.Blender.metainfo.xml"
  

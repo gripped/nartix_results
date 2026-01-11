@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase='python-webob'
+ pkgname=('python-webob' 'python-webob-docs')
+ pkgver=1.8.9
+-pkgrel=3
++pkgrel=1
+ pkgdesc="WSGI request and response object"
+ arch=('any')
+ url="https://webob.org/"
+@@ -29,8 +29,7 @@
+ 
+ check() {
+   cd webob
+-  PYTHONPATH="$PWD/src" pytest --ignore=docs \
+-    --deselect=tests/test_in_wsgiref.py::test_interrupted_request
++  PYTHONPATH="$PWD/src" pytest --ignore=docs
+ }
+ 
+ package_python-webob() {

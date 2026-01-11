@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
- url='https://www.gnu.org/software/libc'
- license=(GPL-2.0-or-later LGPL-2.1-or-later)
- makedepends=(git gd lib32-gcc-libs python)
+@@ -14,7 +14,7 @@
+   lib32-gcc-libs
+   python
+ )
 -options=(staticlibs !lto)
 +options=(staticlibs !lto debug)
- source=("git+https://sourceware.org/git/glibc.git#commit=${_commit}"
-         locale.gen.txt
-         locale-gen
-@@ -41,7 +41,7 @@
+ source=(
+   "git+https://sourceware.org/git/glibc.git#commit=${_commit}"
+   locale.gen.txt
+@@ -48,7 +48,7 @@
    local _configure_flags=(
        --prefix=/usr
        --with-headers=/usr/include

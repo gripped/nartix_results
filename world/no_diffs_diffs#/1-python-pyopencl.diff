@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -105,3 +105,4 @@
+     install -Dm644 $_name/cl/*.cl -t "${pkgdir}"/usr/include/$_name
+     install -vDm644 ../*.txt -t "${pkgdir}"/usr/share/licenses/${pkgname}/
+ }
++

@@ -1,35 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,13 +2,12 @@
- pkgname=python-pyzstd
- _pyname=${pkgname#python-}
- pkgver=0.19.1
--pkgrel=1
-+pkgrel=3
- pkgdesc='Python bindings to Zstandard (zstd) compression library'
- arch=(x86_64)
- url="https://pypi.org/project/$_pyname"
- license=(BSD-3-Clause)
--depends=(python
--         python-backports-zstd)
-+depends=(python)
- makedepends=(python-{build,installer,wheel}
-              python-hatch-vcs
-              python-hatchling)
-@@ -31,3 +30,4 @@
+@@ -30,3 +30,4 @@
  	cd "$_archive"
  	python -m installer -d "$pkgdir" dist/*.whl
  }
 +
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +1,4 @@
- python
--python-backports-zstd
- python-build
- python-hatch-vcs
- python-hatchling

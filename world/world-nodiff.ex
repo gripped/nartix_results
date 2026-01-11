@@ -27,7 +27,6 @@ adwaita-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
-aflplusplus
 afpfs-ng
 aha
 akonadi-calendar-tools
@@ -51,6 +50,7 @@ alsa-lib
 alsa-oss
 alsa-plugins
 pulseaudio-alsa
+alsa-tools
 alsa-topology-conf
 alsa-ucm-conf
 amdvlk
@@ -660,6 +660,7 @@ font-awesome
 woff2-font-awesome
 otf-font-awesome
 fontconfig
+fontforge
 foomatic-db-engine
 foomatic-db
 foomatic-db-ppds
@@ -1717,7 +1718,6 @@ libfm-gtk3
 libfontenc
 libfreeaptx
 libfreexl
-libftdi
 libfyaml
 libgadu
 libgdata
@@ -1785,7 +1785,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2279,8 +2278,6 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
-maturin
-python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2498,6 +2495,8 @@ onednn
 onetbb
 onevpl
 oniguruma
+onnx
+python-onnx
 opam
 open-isns
 openal
@@ -2528,6 +2527,7 @@ openfire
 openh264
 openimagedenoise
 openimageio
+openipmi
 openjpeg2
 openlibm
 openmp
@@ -2594,6 +2594,7 @@ paprefs
 par2cmdline
 parallel
 parallel-docs
+paraview-catalyst
 parley
 parted
 partitionmanager
@@ -3040,6 +3041,9 @@ postgis
 postgrey
 postorius
 potrace
+powerline
+powerline-fonts
+vim-powerline
 powertop
 poxml
 pps-tools
@@ -3090,6 +3094,8 @@ pygobject
 python-gobject
 python-gobject-docs
 pylama
+pyopengl
+python-opengl
 pyprof2calltree
 pypy
 pypy3
@@ -3109,7 +3115,6 @@ python-pyqt5-webengine
 pyqt5
 python-pyqt5
 pyqt6-3d
-python-pyqt6-3d
 pyqt6-charts
 python-pyqt6-charts
 pyqt6-datavisualization
@@ -3122,6 +3127,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3139,6 +3147,7 @@ python-aiofiles
 python-aiogram
 python-aiohappyeyeballs
 python-aiohttp-cors
+python-aiohttp-oauthlib
 python-aiohttp-openmetrics
 python-aiohttp-socks
 python-aiohttp
@@ -3184,7 +3193,6 @@ python-arpeggio
 python-arpy
 python-arrow
 python-asgiref
-python-asn1crypto
 python-aspectlib
 python-assertpy
 python-asteval
@@ -3201,6 +3209,8 @@ python-atomicwrites
 python-atpublic
 python-attrdict
 python-attrs
+python-audioop-lts
+python-audioread
 python-auditwheel
 python-augeas
 python-authheaders
@@ -3251,6 +3261,7 @@ python-boto
 python-boto3
 python-botocore
 python-bottle
+python-bottleneck
 python-bowler
 python-bracex
 python-braintree
@@ -3303,6 +3314,7 @@ python-click-command-tree
 python-click-default-group
 python-click-didyoumean
 python-click-help-colors
+python-click-log
 python-click-option-group
 python-click-plugins
 python-click-repl
@@ -3377,7 +3389,6 @@ python-ddt
 python-deadlib
 $_modules[@]/#/python-standard-
 python-debtcollector
-python-debugpy
 python-decorator
 python-deepdiff
 python-deepmerge
@@ -3534,6 +3545,7 @@ python-gaphas
 python-gast
 python-gast03
 python-gcp-devrel-py-tools
+python-generic
 python-genshi
 python-genty
 python-geographiclib
@@ -3585,7 +3597,6 @@ python-hatchling
 python-heapdict
 python-helpdev
 python-hexdump
-python-hidapi
 python-hiredis
 python-hishel
 python-hkdf
@@ -3620,6 +3631,7 @@ python-ifaddr
 python-ijson
 python-imagesize
 python-immutabledict
+python-importlib-metadata
 python-importlib_resources
 python-incremental
 python-infinity
@@ -3632,6 +3644,7 @@ python-installer
 python-intelhex
 python-interpreters-pep-734
 python-intervals
+python-intervaltree
 python-invoke
 python-iocapture
 python-ipdb
@@ -3733,6 +3746,7 @@ python-linkify-it-py
 python-linux-procfs
 python-littleutils
 python-livereload
+python-llvmlite
 python-lmdb
 python-localzone
 python-locket
@@ -3771,6 +3785,7 @@ python-mccabe
 python-mdit_py_plugins
 python-mdurl
 python-mechanize
+python-mediafile
 python-memcached
 python-memory-profiler
 python-merge3
@@ -3839,8 +3854,8 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
+python-numba
 python-numexpr
-python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -3913,6 +3928,7 @@ python-pdftotext
 python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
+python-pdm
 python-pecan
 python-peewee
 python-pefile
@@ -3948,7 +3964,6 @@ python-ply
 python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
-python-poetry
 python-polib
 python-pooch
 python-pook
@@ -3987,6 +4002,7 @@ python-py-cpuinfo
 python-py-partiql-parser
 python-py
 python-py3c
+python-py7zr
 python-pyacoustid
 python-pyaes
 python-pyaml
@@ -3999,6 +4015,7 @@ python-pyaxmlparser
 python-pybcj
 python-pybreaker
 python-pycares
+python-pychm
 python-pycodestyle
 python-pycountry
 python-pycparser
@@ -4012,6 +4029,7 @@ python-pycurl
 python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
+python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
@@ -4053,6 +4071,7 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
+python-pymad
 python-pymdown-extensions
 python-pymongo
 python-pymysql
@@ -4085,7 +4104,6 @@ python-pyrfc3339
 python-pyro
 python-pyrsistent
 python-pysaml2
-python-pyscard
 python-pyscreenshot
 python-pysendfile
 python-pyserial
@@ -4165,6 +4183,7 @@ python-pytest-subtesthack
 python-pytest-subtests
 python-pytest-sugar
 python-pytest-testinfra
+python-pytest-textual-snapshot
 python-pytest-timeout
 python-pytest-tornado
 python-pytest-tornasync
@@ -4184,6 +4203,7 @@ python-pythran
 python-pytokens
 python-pytoml
 python-pytoolconfig
+python-pytools
 python-pytrie
 python-pytz
 python-pytzdata
@@ -4209,6 +4229,7 @@ python-quart
 python-railroad-diagrams
 python-random2
 python-rapidfuzz
+python-rapidjson
 python-rcssmin
 python-rdflib
 python-re-assert
@@ -4272,6 +4293,7 @@ python-scramp
 python-scripttest
 python-scrypt
 python-scs
+python-seaborn
 python-secretstorage
 python-seedir
 python-semantic-version
@@ -4297,12 +4319,14 @@ python-shtab
 python-signedjson
 python-simple-websocket
 python-simplejson
+python-siphash24
 python-six
 python-slip
 python-slugify
 python-sly
 python-smartypants
 python-smbprotocol
+python-smmap
 python-snappy
 python-sniffio
 python-snowballstemmer
@@ -4373,6 +4397,7 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
+python-stone
 python-straight.plugin
 python-strict-rfc3339
 python-strictyaml
@@ -4414,6 +4439,7 @@ python-time-machine
 python-tiny-proxy
 python-tinycss
 python-tinycss2
+python-tldextract
 python-tlv8
 python-tokenize-rt
 python-toml
@@ -4459,10 +4485,8 @@ python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
-python-uncertainties
 python-unearth
 python-unicodedata2
-python-unidecode
 python-unidiff
 python-unittest-mixins
 python-unpaddedbase64
@@ -4474,7 +4498,6 @@ python-urllib3
 python-userpath
 python-uvloop
 python-validate-email
-python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4484,7 +4507,6 @@ python-virtualenv-clone
 python-virtualenv
 python-vistir
 python-vobject
-python-volatile
 python-voluptuous
 python-waitress
 python-wand
@@ -4515,7 +4537,6 @@ python-wsproto
 python-wstools
 python-wurlitzer
 python-wxpython
-python-xapian-haystack
 python-xapian
 python-xapp
 python-xarray
@@ -4540,7 +4561,6 @@ python-ytmusicapi
 python-zc.lockfile
 python-zeep
 python-zeroconf
-python-zict
 python-zipp
 python-zipstream-ng
 python-zlib-ng
@@ -4560,7 +4580,6 @@ python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
-python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4762,11 +4781,9 @@ rofi
 ropgadget
 ropper
 rpcsvc-proto
-rpm-tools
 rpmextract
 rssguard
 rssguard-lite
-rst2pdf
 rtaudio
 rtaudio-docs
 rtl-sdr
@@ -5293,7 +5310,6 @@ strace
 strawberry
 strip-nondeterminism
 stubby
-subversion
 sugar-datastore
 suil
 suil-docs
@@ -5560,8 +5576,6 @@ tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc
-tree-sitter
-tree-sitter-cli
 tree
 trojan
 ts-node
@@ -5581,7 +5595,6 @@ ttf-opensans
 ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
-twine
 twolame
 txt2man
 typescript
@@ -5590,7 +5603,6 @@ uchardet
 udiskie
 udpxy
 ufmt
-ufw
 uget
 uglify-js
 uhttpmock
@@ -5780,7 +5792,6 @@ xfce4-datetime-plugin
 xfwm4-themes
 xinetd
 xkeyboard-config
-xmldiff
 xmlsec
 xmlstarlet
 xmlto

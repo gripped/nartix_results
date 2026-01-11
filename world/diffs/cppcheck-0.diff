@@ -1,15 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=cppcheck
 -pkgver=2.19.1
--pkgrel=1
 +pkgver=2.19.0
-+pkgrel=2
+ pkgrel=2
  pkgdesc='A tool for static C/C++ code analysis'
  arch=('x86_64')
- url='http://cppcheck.sourceforge.net/'
 @@ -31,9 +31,9 @@
    "$pkgname::git+https://github.com/danmar/cppcheck.git#tag=$pkgver"
    'translations-location.patch'

@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,13 +36,14 @@
+ 
+ build() {
+   cd "$_pkgname-$pkgver"
++
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+   cd "$_pkgname-$pkgver"
+ 
+-  pytest -v -k "not test_iterparse"
++  pytest -v
+ }
+ 
+ package() {

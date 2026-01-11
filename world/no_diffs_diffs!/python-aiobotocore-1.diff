@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -53,6 +53,8 @@
-     --deselect='tests/test_patches.py'
-     --deselect='tests/botocore_tests/unit/test_signers.py::test_signers_generate_db_auth_token[aiohttp-aws_auth0]'
-     --deselect='tests/test_sns.py::test_topic_attributes[aiohttp]'
+@@ -63,3 +63,4 @@
+   cd ${pkgname#python-}
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
 +
-+    --deselect tests/test_basic_s3.py::test_fail_proxy_request
-   )
-   python -m venv --system-site-packages test-env
-   test-env/bin/python -m installer dist/*.whl

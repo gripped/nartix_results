@@ -8,16 +8,8 @@
  )
  source=("$pkgname::git+$url#tag=v$pkgver")
  sha512sums=('dad0c609f185725c3c12436f7c977651ec5f86f97c9cf40fb09db1f01667e59b79727722fba5ac70084e076ee47eec964ae0445c5167b2d3e5f8eff25beb35b7')
-@@ -56,7 +55,11 @@
-     --deselect tests/ndarray/test_reductions.py::test_save_version1 \
-     --deselect tests/ndarray/test_reductions.py::test_save_version2 \
-     --deselect tests/ndarray/test_reductions.py::test_save_version3 \
--    --deselect tests/ndarray/test_reductions.py::test_save_version4
-+    --deselect tests/ndarray/test_reductions.py::test_save_version4 \
-+    --ignore=tests/ndarray/test_elementwise_funcs.py \
-+    --ignore=tests/ndarray/test_lazyexpr.py \
-+    --ignore=tests/ndarray/test_linalg.py \
-+    --ignore=tests/ndarray/test_setitem.py
+@@ -65,3 +64,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
  }
- 
- package() {
++

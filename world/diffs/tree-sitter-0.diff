@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   tree-sitter-cli
+ )
+ pkgver=0.25.10
+-pkgrel=3
++pkgrel=1
+ arch=(x86_64)
+ url=https://github.com/tree-sitter/tree-sitter
+ license=(MIT)
+@@ -21,7 +21,7 @@
+ 
+ prepare() {
+   cd $pkgbase/cli
+-  cargo fetch --locked --target "$(rustc --print host-tuple)"
++  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ 
+ build() {
+@@ -33,11 +33,6 @@
+ 
+   cd cli
+   cargo build --release --locked --offline
+-
+-  for completion in bash elvish fish nushell zsh; do
+-    cargo run --frozen --release -- \
+-      complete --shell $completion > $completion-completions
+-  done
+ }
+ 
+ package_tree-sitter() {
+@@ -57,11 +52,4 @@
+   cd $pkgbase
+   install -Dt "$pkgdir"/usr/bin target/release/$pkgbase
+   install -Dm644 -t "$pkgdir"/usr/share/licenses/${pkgbase}-cli LICENSE
+-
+-  cd cli
+-  install -Dm644 bash-completions "$pkgdir"/usr/share/bash-completion/completions/$pkgbase
+-  install -Dm644 elvish-completions "$pkgdir"/usr/share/elvish/lib/$pkgbase.elv
+-  install -Dm644 fish-completions "$pkgdir"/usr/share/fish/vendor_completions.d/$pkgbase.fish
+-  install -Dm644 nushell-completions "$pkgdir"/usr/share/nushell/vendor/autoload/$pkgbase.nu
+-  install -Dm644 zsh-completions "$pkgdir"/usr/share/zsh/site-functions/_$pkgbase
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd $pkgbase/cli
+-cargo fetch --locked --target "$(rustc --print host-tuple)"
++cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ build() {
+ cd $pkgbase
+@@ -10,8 +10,4 @@
+ cmake --build build
+ cd cli
+ cargo build --release --locked --offline
+-for completion in bash elvish fish nushell zsh; do
+-cargo run --frozen --release -- \
+-complete --shell $completion > $completion-completions
+-done
+ }

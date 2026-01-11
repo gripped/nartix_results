@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ license=(Apache-2.0)
+ depends=(
+   python
++  python-filelock
+   python-msgpack
+   python-requests
+   python-urllib3
+@@ -21,12 +22,11 @@
+   python-wheel)
+ checkdepends=(
+   python-cherrypy
+-  python-filelock
+   python-pytest
+   python-redis
+ )
+ optdepends=(
+-  'python-filelock: for filecache'
++  'python-lockfile: for filecache'
+   'python-redis: for redis cache'
+ )
+ source=($_name-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ python
+ python-build
++python-filelock
+ python-installer
+ python-msgpack
+ python-requests

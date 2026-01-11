@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=znc
+ pkgver=1.10.1
+-pkgrel=5
++pkgrel=4
+ pkgdesc='An IRC bouncer with modules & scripts support'
+ url='https://wiki.znc.in/'
+ license=('Apache-2.0')
 @@ -47,10 +47,9 @@
      -DCMAKE_INSTALL_LIBDIR=lib \
      -DWANT_PYTHON=YES \

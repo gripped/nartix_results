@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ufmt
+ pkgver=2.8.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Safe, atomic formatting with black and µsort'
+ arch=('any')
+ url='https://github.com/omnilib/ufmt'
+@@ -9,7 +9,7 @@
+ depends=('python-black' 'python-click' 'python-libcst' 'python-moreorless'
+          'python-tomlkit' 'python-trailrunner' 'python-typing_extensions' 'usort')
+ makedepends=('python-build' 'python-installer' 'python-flit-core' 'python-wheel')
+-checkdepends=('python-pygls' 'python-ruff-api' 'python-pytest')
++checkdepends=('python-pygls' 'python-ruff-api')
+ optdepends=('python-pygls: for the LSP formatting server'
+             'python-ruff-api: for Ruff formatter support')
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
+@@ -32,7 +32,7 @@
+ check() {
+   cd $pkgname-$pkgver
+ 
+-  pytest -v ufmt/tests/__init__.py
++  python -m ufmt.tests
+ }
+ 
+ package() {

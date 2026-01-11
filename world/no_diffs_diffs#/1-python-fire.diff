@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,3 +55,4 @@
+   install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
+   rm -frv "$pkgdir/$_site_packages/$_name/"{testutils,*_test}.py
+ }
++

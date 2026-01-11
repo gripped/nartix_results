@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -53,3 +53,4 @@
+   cd $_pkgname-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
++

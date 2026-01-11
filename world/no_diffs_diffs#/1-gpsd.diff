@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=gpsd
 -pkgver=3.27.3
+-pkgrel=2
 +pkgver=3.27
- pkgrel=1
++pkgrel=1
  pkgdesc="GPS daemon and library to support USB/serial GPS devices"
  arch=('x86_64')
+ url="https://gpsd.gitlab.io/gpsd/"
 @@ -24,7 +24,7 @@
  backup=('etc/default/gpsd')
  source=(https://download-mirror.savannah.gnu.org/releases/$pkgname/$pkgname-$pkgver.tar.gz

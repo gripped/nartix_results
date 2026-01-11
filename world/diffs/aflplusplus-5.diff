@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,19 +1,19 @@
+ 
+ pkgname=afl++
+ pkgver=4.32c
+-pkgrel=3
++pkgrel=2
+ pkgdesc='instrumentation-driven fuzzer for binary format'
+ url='https://aflplus.plus/'
+ arch=(x86_64)
+ license=(Apache-2.0)
+ depends=(
+   bash
+-  clang19
++  clang
+   compiler-rt
+   gcc-libs
+   glibc
+-  lld19
+-  llvm19
++  lld
++  llvm
+   python
+   zlib
+ )
+@@ -49,17 +49,17 @@
+ build() {
+   cd "AFLplusplus-${pkgver}"
+   export LLVM_LTO=1
+-  PATH="/usr/lib/llvm19/bin:$PATH" make PREFIX=/usr
++  make PREFIX=/usr
+ }
+ 
+ check() {
+   cd "AFLplusplus-${pkgver}"
+-  PATH="/usr/lib/llvm19/bin:$PATH" CFLAGS= CXXFLAGS= make test
++  CFLAGS= CXXFLAGS= make test
+ }
+ 
+ package() {
+   cd "AFLplusplus-${pkgver}"
+-  PATH="/usr/lib/llvm19/bin:$PATH" make install PREFIX=/usr DESTDIR="${pkgdir}"
++  make install PREFIX=/usr DESTDIR="${pkgdir}"
+   install -Dm 644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,13 +1,13 @@
+ bash
+-clang19
++clang
+ compiler-rt
+ cpio
+ gcc-libs
+ git
+ glibc
+ grep
+-lld19
+-llvm19
++lld
++llvm
+ pax-utils
+ python
+ python-jinja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd "AFLplusplus-${pkgver}"
+ export LLVM_LTO=1
+-PATH="/usr/lib/llvm19/bin:$PATH" make PREFIX=/usr
++make PREFIX=/usr
+ }

@@ -16,7 +16,7 @@
  )
  provides=(
    'libpcsclite.so'
-@@ -52,14 +50,13 @@
+@@ -52,14 +50,14 @@
    local meson_options=(
      --cross-file lib32
      -D program_suffix="-32"
@@ -26,6 +26,7 @@
      -D serial=true
 -    -D systemdunit=system
 +    -D libsystemd=false
++    -D libsystemd=false
      -D usbdropdir=/usr/lib32/pcsc/drivers
    )
 -  arch-meson PCSC build "${meson_options[@]}"
@@ -33,7 +34,7 @@
    meson compile -C build
  
    awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' PCSC/COPYING > LICENSE.BSD-3-Clause
-@@ -71,7 +68,7 @@
+@@ -71,7 +69,7 @@
  package() {
    meson install -C build --destdir "${pkgdir}"
  

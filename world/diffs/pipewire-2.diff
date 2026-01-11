@@ -88,90 +88,28 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,86 +0,0 @@
--alsa-card-profiles
--alsa-lib
--avahi
--bluez-libs
--dbus
--dconf
--doxygen
--gcc-libs
--git
--glib2
--glib2-devel
--glibc
--graphviz
--gst-plugins-base
--gst-plugins-base-libs
--gstreamer
--jack
--jack2
--libasound.so
--libavahi-client.so
--libavahi-common.so
--libbluetooth.so
--libcamera
--libcamera-base.so
--libcamera.so
--libcanberra
--libcanberra.so
--libcrypto.so
--libdbus-1.so
--libebur128
--libfdk-aac
--libfdk-aac.so
--libffado
--libffado.so
--libfreeaptx
--libfreeaptx.so
--libgio-2.0.so
--libglib-2.0.so
--libgobject-2.0.so
--libjack.so
--liblc3
--liblc3.so
--libldac
--libldacBT_enc.so
--liblilv-0.so
--libmysofa
--libmysofa.so
--libncursesw.so
--libopus.so
--libpipewire
--libpipewire-0.3.so
--libpulse
--libpulse.so
--libreadline.so
--libroc.so
--libsbc.so
--libsndfile
--libsndfile.so
+@@ -56,8 +56,6 @@
+ libsbc.so
+ libsndfile
+ libsndfile.so
 -libsystemd.so
 -libudev.so
--libusb
--libusb-1.0.so
--libwebrtc-audio-processing-1.so
--libx11
--libxfixes
--lilv
--meson
--ncurses
--openssl
--opus
--pipewire
--pipewire-audio
--pipewire-pulse
--pipewire-session-manager
--python-docutils
--readline
--roc-toolkit
--rtkit
--sbc
--sdl2
--sh
+ libusb
+ libusb-1.0.so
+ libwebrtc-audio-processing-1.so
+@@ -73,14 +71,13 @@
+ pipewire-pulse
+ pipewire-session-manager
+ python-docutils
++python-packaging
+ readline
+ roc-toolkit
+ rtkit
+ sbc
+ sdl2
+ sh
 -systemd
 -systemd-libs
--valgrind
--webrtc-audio-processing-1
--wireplumber
+ valgrind
+ webrtc-audio-processing-1
+ wireplumber

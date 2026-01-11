@@ -9,3 +9,8 @@
    texlive-bin
    texlive-fontsrecommended
    texlive-latexextra
+@@ -159,3 +159,4 @@
+   install -vDm 644 LICENSE/* -t "${pkgdir}"/usr/share/licenses/${pkgname}/
+   rm -r "${pkgdir}"$(python -c "import site; print(site.getsitepackages()[0])")/{matplotlib,mpl_toolkits/*}/tests/
+ }
++

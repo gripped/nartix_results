@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkgname=poetry
+ pkgname=python-poetry
+ pkgver=2.2.1
+-pkgrel=4
++pkgrel=1
+ pkgdesc='Python dependency management and packaging made easy'
+ arch=(any)
+ url=https://python-poetry.org
+@@ -19,6 +19,7 @@
+        installer
+        jsonschema
+        keyring
++       lockfile
+        packaging
+        pbs-installer
+        pexpect
+@@ -47,21 +48,8 @@
+ optdepends=('python-pip: to use pip with virtual environments')
+ provides=(poetry)
+ _archive="$_pkgname-$pkgver"
+-source=("https://github.com/$pkgname/$_pkgname/archive/$pkgver/$_archive.tar.gz"
+-        "0001-Test-vcs.git.backend-tests-9507.patch"
+-        "0002-tests-make-test-independent-of-git-setting-of-defaul.patch"
+-        "0003-Dulwich-upgrade-10674.patch")
+-sha256sums=('ef9e3e5efd0a79421061a34892047917b6491ca4de1dfdeff7e709a453f74782'
+-            '514cb5b618333b67edffbaefd8396561aeb3b591c1a77c6f017d816484f48173'
+-            'e5ef410d0a2990e0e50ae92a4de8cea4b019bc99f5e37661bedab76ed488bc74'
+-            'e7d265d7c555578ecd7d91c6085c03f193f44c4ac3ffacf5f421858b8591e6cb')
+-
+-prepare() {
+-	cd "$_archive"
+-	patch -Np1 -i ../0001-Test-vcs.git.backend-tests-9507.patch
+-	patch -Np1 -i ../0002-tests-make-test-independent-of-git-setting-of-defaul.patch
+-	patch -Np1 -i ../0003-Dulwich-upgrade-10674.patch
+-}
++source=("https://github.com/$pkgname/$_pkgname/archive/$pkgver/$_archive.tar.gz")
++sha256sums=('ef9e3e5efd0a79421061a34892047917b6491ca4de1dfdeff7e709a453f74782')
+ 
+ build() {
+ 	local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,6 +11,7 @@
+ python-installer
+ python-jsonschema
+ python-keyring
++python-lockfile
+ python-packaging
+ python-pbs-installer
+ python-pexpect
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,3 @@
+-prepare() {
+-cd "$_archive"
+-patch -Np1 -i ../0001-Test-vcs.git.backend-tests-9507.patch
+-patch -Np1 -i ../0002-tests-make-test-independent-of-git-setting-of-defaul.patch
+-patch -Np1 -i ../0003-Dulwich-upgrade-10674.patch
+-}
+ build() {
+ local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+ cd "$_archive"

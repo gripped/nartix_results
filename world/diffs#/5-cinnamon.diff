@@ -4,7 +4,7 @@
  
  pkgname=cinnamon
 -pkgver=6.6.3
--pkgrel=5
+-pkgrel=7
 -pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
 +pkgver=6.0.4
 +pkgrel=1
@@ -33,7 +33,6 @@
 -  glib2
 -  glibc
 -  gnome-backgrounds
--  gnome-keyring
 -  gnome-themes-extra
 -  gsound
 -  gstreamer
@@ -77,6 +76,7 @@
 -)
 -optdepends=(
 -  'blueman: Bluetooth support'
+-  'gnome-keyring: Secrets service backend'
 -  'ibus: input method support'
 -  'switcheroo-control: GPU offloading'
 -  'system-config-printer: printer settings'
@@ -176,7 +176,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,67 +1,37 @@
+@@ -1,66 +1,37 @@
  accountsservice
 -at-spi2-core
 -bash
@@ -200,7 +200,6 @@
 -glib2-devel
 -glibc
  gnome-backgrounds
--gnome-keyring
 -gnome-themes-extra
  gobject-introspection
  gsound

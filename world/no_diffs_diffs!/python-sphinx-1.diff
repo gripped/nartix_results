@@ -1,0 +1,17 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -61,13 +61,7 @@
+ 
+ check() {
+   cd "$_name"
+-  LC_ALL="en_US.UTF-8" python -X dev -X warn_default_encoding -m pytest -vx \
+-    -k "not test_latex_labels \
+-    and not test_autodoc_special_members \
+-    and not test_sphinx_directive_parse_content_to_nodes \
+-    and not test_sphinx_directive_parse_text_to_nodes \
+-    and not test_autosummary_generate_content_for_module_imported_members \
+-    and not test_is_invalid_builtin_class"
++  LC_ALL="en_US.UTF-8" python -X dev -X warn_default_encoding -m pytest -vx
+ }
+ 
+ package() {

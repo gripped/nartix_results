@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  _pyname=jupyter_client
  pkgname=python-${_pyname/_/-}
 -pkgver=8.8.0
+-pkgrel=2
 +pkgver=8.7.0
- pkgrel=1
++pkgrel=1
  pkgdesc='Jupyter protocol implementation and client libraries'
  arch=(any)
+ url='https://pypi.python.org/pypi/jupyter_client'
 @@ -29,7 +29,7 @@
  provides=(python-jupyter_client)
  replaces=(python-jupyter_client)
