@@ -3,7 +3,7 @@
 @@ -1,70 +1,38 @@
  
  pkgname=xreader
--pkgver=4.6.1
+-pkgver=4.6.3
 +pkgver=4.0.2
  pkgrel=1
 -pkgdesc='Document viewer for files like PDF and Postscript'
@@ -56,7 +56,7 @@
 -  'texlive-bin: support for dvi files'
 -)
 -source=("git+https://github.com/linuxmint/xreader.git#tag=${pkgver}")
--b2sums=(9fadfa533d7113522fc9f10166a3b6ea7f8cd2276c812e4714de829da32d4baf3c1ab56857d401eca62f6902f4bfebf38a1f00d2a7aa50e9155d11857b481040)
+-b2sums=('8837a7803ec05e0563705f17e108c0e09eea34894cce140f0407eaa526632db4ae2d077964377108018456c768c3fa977713d2e6508385ff2ff29608dc96ea10')
 +depends=(poppler-glib webkit2gtk-4.1 xapp)
 +optdepends=('djvulibre: support for djvu files'
 +            'libgxps: support for xps files'

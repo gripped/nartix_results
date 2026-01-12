@@ -1,18 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=ksystemstats
+ pkgver=6.5.4
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A plugin based system monitoring daemon'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+@@ -22,8 +22,9 @@
               networkmanager-qt)
  optdepends=('libnl: network usage monitor'
              'networkmanager-qt: network usage monitor'
 -            'systemd-libs: GPU monitor')
 +            'libudev: GPU monitor')
  groups=(plasma)
- install=ksystemstats.install
++install=ksystemstats.install
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
-@@ -42,4 +42,6 @@
+ sha256sums=('a53038232221b773c695312c6cd3f11a903be1aa186fd4c274ddded8c1ac31fb'
+             'SKIP')
+@@ -41,5 +42,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
+-  setcap CAP_PERFMON=+ep "$pkgdir"/usr/lib/ksystemstats_intel_helper
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }

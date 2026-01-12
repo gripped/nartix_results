@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libretro-play
+ pkgver=8625
+-pkgrel=3
++pkgrel=1
+ pkgdesc='Sony PlayStation 2 core'
+ arch=(x86_64)
+ url=https://github.com/jpd002/Play-
+@@ -53,7 +53,6 @@
+ 
+ prepare() {
+   cd libretro-play
+-  export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
+   git config --global protocol.file.allow always
+   for submodule in deps/{CodeGen,Dependencies,Framework,Nuanceur,libchdr}; do
+     git submodule init ${submodule}
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ cd libretro-play
+-export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
+ git config --global protocol.file.allow always
+ for submodule in deps/{CodeGen,Dependencies,Framework,Nuanceur,libchdr}; do
+ git submodule init ${submodule}

@@ -67,7 +67,7 @@ cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
-cinnamon-translations
+cinnamon-settings-daemon
 cjs
 claws-mail
 compface
@@ -200,7 +200,6 @@ libretro-mesen
 libretro-mgba
 libretro-overlays
 libretro-parallel-n64
-libretro-play
 libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
@@ -217,7 +216,6 @@ libutp
 libvarlink
 libwnck
 libxfce4util
-libxfce4windowing
 libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -366,7 +364,6 @@ python-aiohttp-oauthlib
 python-caja
 python-cjkwrap
 python-click-log
-python-generic
 python-inflate64
 python-jaconv
 python-linux-procfs
@@ -387,6 +384,7 @@ python-sphinx-intl
 python-sphinxcontrib-newsfeed
 python-texttable
 python-unrardll
+python-xapp
 qgis
 qgit
 qmmp

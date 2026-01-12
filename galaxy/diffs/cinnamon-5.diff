@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,126 +1,60 @@
+@@ -1,122 +1,60 @@
  
  pkgname=cinnamon
- pkgver=6.6.3
--pkgrel=7
+-pkgver=6.6.4
++pkgver=6.6.3
+ pkgrel=1
 -pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
-+pkgrel=1
 +pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
  arch=(x86_64)
 -url='https://github.com/linuxmint/cinnamon'
@@ -96,12 +96,8 @@
 -  cinnamon-set-wheel.patch
 -  30_org.archlinux.cinnamon.gschema.override
 -)
--b2sums=(
--  bf9c79f6347f7e4a7a6bccf09be777c3edc057500539bba8a6deb0af91a4f8e292d47a549d5dfe995bb666f1e361f15c55fbd072906e4374d37007c76423defa
--  716095bf9b74fad22714040dfd3d7b115eb950a81b4ec809f8541d81102bc276532948d1e70c2d022b061cc8e939276b9f51f4fedb01c6ef2940d1232253460d
--  3becf1f40068fc629109e6e7d464c3c484296afacc9ab6328b2ccbb3c9735bcbfa9550f9f73b430ede178ae668e37c660ce322b5b4d1873526de3d3d41185160
--  c071ce664c5189883c409d65b1d054ef4526c0283484e936b10500cec13efdaf3e3792459e648817e1c48e0505bc1154950ce3080cd9aafe0f5de8da5b16bafd
--)
+-b2sums=('c55ec94280bd3d59183a321153a6875f5a64491168b47670d5d324394af56f0a3d02a7f6419e2077d261127cfdd42046fc271e408f8e3281cda71b79174a6971'
+-        '716095bf9b74fad22714040dfd3d7b115eb950a81b4ec809f8541d81102bc276532948d1e70c2d022b061cc8e939276b9f51f4fedb01c6ef2940d1232253460d'
 +url="https://github.com/linuxmint/cinnamon"
 +license=(GPL2)
 +depends=(accountsservice cinnamon-control-center cinnamon-desktop cinnamon-menus cinnamon-screensaver
@@ -129,20 +125,20 @@
 +            'fd7e117054996ed1c3dfd0f968c2bf98ca4fcee9a100221f8839a232147745ec0140e1f68eeffba58a3c44f66f26e05d433648a7a28858ec669524f7266ba04c'
 +            'ee7dedd59ea370cf81d75def49060f9a29b22e7b025ca7d5db87a0102d50f138c79aa562b0d36a748c4b1c59a37f600ba1f60ff6caf303cf5b6fc4d110d051b4')
 +b2sums=('bf9c79f6347f7e4a7a6bccf09be777c3edc057500539bba8a6deb0af91a4f8e292d47a549d5dfe995bb666f1e361f15c55fbd072906e4374d37007c76423defa'
-+        '3becf1f40068fc629109e6e7d464c3c484296afacc9ab6328b2ccbb3c9735bcbfa9550f9f73b430ede178ae668e37c660ce322b5b4d1873526de3d3d41185160'
+         '3becf1f40068fc629109e6e7d464c3c484296afacc9ab6328b2ccbb3c9735bcbfa9550f9f73b430ede178ae668e37c660ce322b5b4d1873526de3d3d41185160'
+-        'c071ce664c5189883c409d65b1d054ef4526c0283484e936b10500cec13efdaf3e3792459e648817e1c48e0505bc1154950ce3080cd9aafe0f5de8da5b16bafd')
 +        '86c3a29acd132ca321f08fd81dd5a45707accdc035b2aeec95bf358b29072ff1eedb77b2566cf48d7253d1d791599f0f44938c4600761d711cb18b59019f1c62')
  
  prepare() {
 -  cd $pkgname
 +  cd ${pkgname}
  
--  git cherry-pick -n 7a297049113bccc99c9457d818ed59814c479803
+-  git apply -3 ../cinnamon-menu-button.patch
 +  patch -p1 < ../set_wheel.diff
  
--  git apply -3 ../cinnamon-menu-button.patch
-+  patch -p1 < ../default-theme.patch
- 
 -  patch -Np1 -i ../cinnamon-set-wheel.patch
++  patch -p1 < ../default-theme.patch
++
 +  sed -i 's/mintinstall.desktop/org.gnome.Software.desktop/' data/org.cinnamon.gschema.xml
 +
 +  sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
@@ -248,10 +244,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,14 @@
+@@ -1,14 +1,14 @@
  prepare() {
 -cd $pkgname
--git cherry-pick -n 7a297049113bccc99c9457d818ed59814c479803
 -git apply -3 ../cinnamon-menu-button.patch
 -patch -Np1 -i ../cinnamon-set-wheel.patch
 +cd ${pkgname}

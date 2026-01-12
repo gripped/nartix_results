@@ -19,7 +19,6 @@ atril
 audacious-plugins
 avahi
 awesome
-aws-cli-v2
 bash-bats
 blender
 blueman
@@ -332,6 +331,7 @@ kdevelop-python
 kdoctools5
 kicad
 kinfocenter
+kirigami
 kismet
 kitty
 kitty-terminfo
@@ -403,6 +403,8 @@ libmpd
 libmspub
 libmwaw
 libmwaw-docs
+libnotify
+libnotify-docs
 libnvme
 libofa
 libpagemaker
@@ -530,8 +532,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-maturin
-python-maturin
 media-player-info
 memcached
 mesa
@@ -617,8 +617,6 @@ nvtop
 onionshare
 open-iscsi
 openbox
-opencc
-opencc-doc
 opencollada
 opendht
 openjade
@@ -661,7 +659,6 @@ php-legacy-snmp
 php-legacy-sqlite
 php-legacy-tidy
 php-legacy-xsl
-php-snuffleupagus
 php
 php-cgi
 php-apache
@@ -729,24 +726,15 @@ pyqt6
 pysolfc
 python-anytree
 python-asn1crypto
+python-astor
 python-debugpy
+python-generic
 python-hidapi
-python-numpy
-python-poetry
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-uncertainties
-python-unidecode
-python-urwid
-python-validate-pyproject
-python-volatile
-python-xapian-haystack
-python-xlwt
-python-zict
-python-zope-testrunner
 qastools
 qbittorrent
 qbittorrent-nox
@@ -863,10 +851,8 @@ rocrand
 rocsolver
 rocsparse
 rpm-sequoia
-rpm-tools
 rrdtool
 rspamd
-rst2pdf
 rsync
 rtkit
 ruby-bake-modernize
@@ -908,7 +894,6 @@ sslh
 sssd
 strongswan
 stunnel
-subversion
 sway
 swayidle
 switcheroo-control
@@ -955,10 +940,7 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
-tree-sitter
-tree-sitter-cli
 tumbler
-twine
 udftools
 udisks2
 udisks2-btrfs
@@ -1170,7 +1152,6 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
-xmldiff
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb
@@ -1183,7 +1164,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yapf
 yubico-c-client
 yubico-c
 yubikey-personalization

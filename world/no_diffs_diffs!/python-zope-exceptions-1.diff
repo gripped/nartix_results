@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=python-zope-exceptions
- _pkgname=zope.exceptions
- pkgver=6.0
--pkgrel=3
-+pkgrel=1
- pkgdesc="Generic exceptions and implementations for Zope"
- arch=('any')
- url="https://github.com/zopefoundation/zope.exceptions"
+@@ -38,3 +38,4 @@
+   cd "$_pkgname"
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
++

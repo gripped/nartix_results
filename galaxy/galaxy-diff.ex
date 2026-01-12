@@ -1,7 +1,7 @@
 alsa-utils
 autorandr
 cinnamon-desktop
-cinnamon-settings-daemon
+cinnamon-translations
 cinnamon
 cosmic-applets
 cosmic-comp
@@ -31,11 +31,13 @@ libratbag
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
+libretro-play
 libstaroffice
 libstaroffice-doc
 libusbsio
 python-libusbsio
 libxfce4ui
+libxfce4windowing
 light
 lxqt-config
 ly
@@ -131,7 +133,7 @@ perl-cgi-fast
 prismlauncher
 profanity
 profanity-gtk
-python-xapp
+python-generic
 qbittorrent
 qbittorrent-nox
 rage

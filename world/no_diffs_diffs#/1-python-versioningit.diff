@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=python-versioningit
- pkgver=3.3.0
--pkgrel=2
-+pkgrel=1
- pkgdesc='Versioning It with your Version In Git'
- arch=('any')
- url='https://github.com/jwodder/versioningit'
+@@ -53,3 +53,4 @@
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
+ }
++

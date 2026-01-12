@@ -10,9 +10,9 @@
           xcb-util-keysyms
           xcb-util-wm)
 @@ -99,4 +99,6 @@
- 
  package() {
    DESTDIR="$pkgdir" cmake --install build
+   setcap CAP_SYS_NICE=+ep "$pkgdir"/usr/bin/kwin_wayland
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }

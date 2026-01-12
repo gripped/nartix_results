@@ -1,11 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=python-zc.lockfile
- _pkgname=${pkgname#python-}
- pkgver=4.0
--pkgrel=2
-+pkgrel=1
- arch=('any')
- pkgdesc="Zope testing frameworks"
- url="https://github.com/zopefoundation/${_pkgname}"
+@@ -29,3 +29,4 @@
+ 	cd "${_pkgname}-${pkgver}/"
+ 	python -m installer --destdir="${pkgdir}" dist/*.whl
+ }
++

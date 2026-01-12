@@ -172,6 +172,7 @@ aws-c-mqtt
 aws-c-s3
 aws-c-sdkutils
 aws-checksums
+aws-cli-v2
 aws-cli
 aws-crt-cpp
 aws-sdk-cpp
@@ -1408,7 +1409,6 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
-kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1868,8 +1868,6 @@ libnitrokey
 libnma
 libnma-common
 libnma-gtk4
-libnotify
-libnotify-docs
 libnova
 libnsbmp
 libnsgif
@@ -2278,6 +2276,8 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
+maturin
+python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2509,6 +2509,8 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
+opencc
+opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -2961,6 +2963,7 @@ php-mongodb
 php-legacy-mongodb
 php-redis
 php-legacy-redis
+php-snuffleupagus
 picard
 picmi
 picom
@@ -3160,6 +3163,7 @@ python-aiorpcx
 python-aiosignal
 python-aiosmtpd
 python-aiosqlite
+python-aiostream
 python-aiounittest
 python-alembic
 python-amqp
@@ -3196,7 +3200,6 @@ python-asgiref
 python-aspectlib
 python-assertpy
 python-asteval
-python-astor
 python-astroid
 python-asttokens
 python-astunparse
@@ -3358,6 +3361,7 @@ python-crcmod
 python-crispy-bootstrap3
 python-crispy-bootstrap4
 python-crispy-bootstrap5
+python-cron-converter
 python-cryptography
 python-cson
 python-css-parser
@@ -3545,7 +3549,6 @@ python-gaphas
 python-gast
 python-gast03
 python-gcp-devrel-py-tools
-python-generic
 python-genshi
 python-genty
 python-geographiclib
@@ -3856,6 +3859,7 @@ python-nspektr
 python-ntlm-auth
 python-numba
 python-numexpr
+python-numpy
 python-oauth2client
 python-oauthlib
 python-objgraph
@@ -3964,6 +3968,7 @@ python-ply
 python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
+python-poetry
 python-polib
 python-pooch
 python-pook
@@ -4485,8 +4490,10 @@ python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
+python-uncertainties
 python-unearth
 python-unicodedata2
+python-unidecode
 python-unidiff
 python-unittest-mixins
 python-unpaddedbase64
@@ -4495,9 +4502,11 @@ python-update-checker
 python-uri-template
 python-uritemplate
 python-urllib3
+python-urwid
 python-userpath
 python-uvloop
 python-validate-email
+python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4507,6 +4516,7 @@ python-virtualenv-clone
 python-virtualenv
 python-vistir
 python-vobject
+python-volatile
 python-voluptuous
 python-waitress
 python-wand
@@ -4537,6 +4547,7 @@ python-wsproto
 python-wstools
 python-wurlitzer
 python-wxpython
+python-xapian-haystack
 python-xapian
 python-xapp
 python-xarray
@@ -4545,6 +4556,7 @@ python-xkbcommon
 python-xlib
 python-xlrd
 python-xlsxwriter
+python-xlwt
 python-xmlschema
 python-xmlsec
 python-xmltodict
@@ -4561,6 +4573,7 @@ python-ytmusicapi
 python-zc.lockfile
 python-zeep
 python-zeroconf
+python-zict
 python-zipp
 python-zipstream-ng
 python-zlib-ng
@@ -4580,6 +4593,7 @@ python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
+python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4781,9 +4795,11 @@ rofi
 ropgadget
 ropper
 rpcsvc-proto
+rpm-tools
 rpmextract
 rssguard
 rssguard-lite
+rst2pdf
 rtaudio
 rtaudio-docs
 rtl-sdr
@@ -5310,6 +5326,7 @@ strace
 strawberry
 strip-nondeterminism
 stubby
+subversion
 sugar-datastore
 suil
 suil-docs
@@ -5576,6 +5593,8 @@ tree-sitter-python
 tree-sitter-query
 tree-sitter-vim
 tree-sitter-vimdoc
+tree-sitter
+tree-sitter-cli
 tree
 trojan
 ts-node
@@ -5595,6 +5614,7 @@ ttf-opensans
 ttf-roboto-mono
 ttf-roboto
 ttf-ubuntu-font-family
+twine
 twolame
 txt2man
 typescript
@@ -5792,6 +5812,7 @@ xfce4-datetime-plugin
 xfwm4-themes
 xinetd
 xkeyboard-config
+xmldiff
 xmlsec
 xmlstarlet
 xmlto
@@ -5875,6 +5896,7 @@ yajl
 yakuake
 yaml-cpp
 yamllint
+yapf
 yara
 yarn
 yasm

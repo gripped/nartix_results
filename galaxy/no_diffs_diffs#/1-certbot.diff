@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=certbot
- pkgver=5.2.2
--pkgrel=2
-+pkgrel=1
- pkgdesc='An ACME client'
- arch=(any)
- license=(Apache-2.0)
 @@ -37,17 +37,11 @@
  source=(
    "$_repo::git+https://github.com/certbot/certbot#tag=v$pkgver"
