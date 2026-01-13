@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ arch=('x86_64')
+ license=('BSD')
+ makedepends=('git')
+-depends=('ncurses' 'systemd')
++depends=('ncurses')
+ optdepends=('words: for hangman')
+ source=($pkgname::"git+https://git.code.sf.net/p/bsd-games/code?signed#tag=v${pkgver}")
+ sha256sums=('33b17362808ad950865c06d26d423606b889c5b3cacf9f76105817c75f16f79e')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ git
+ ncurses
+-systemd

@@ -1,24 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=lutris
- pkgver=0.5.19
--pkgrel=8
-+pkgrel=6
- pkgdesc='Open Gaming Platform'
- arch=(any)
- url=https://lutris.net
-@@ -45,7 +45,7 @@
-   python-poetry-core
- )
- checkdepends=(
--  python-nose2
-+  python-nose
-   xorg-server-xvfb
-   xterm
-   fluidsynth
-@@ -86,13 +86,13 @@
+@@ -86,7 +86,7 @@
  }
  
  build() {
@@ -27,13 +9,6 @@
    ninja -C build
  }
  
- check() {
-   cd lutris
--  xvfb-run nose2
-+  xvfb-run nosetests
- }
- 
- package() {
 
 
 ############# Stripped diff below #################

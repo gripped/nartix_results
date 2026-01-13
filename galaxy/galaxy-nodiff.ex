@@ -140,7 +140,6 @@ gtk-engines
 gtk-session-lock
 gtk2
 gtk4-layer-shell
-hugin
 hyperfine
 imv
 incron
@@ -200,6 +199,7 @@ libretro-mesen
 libretro-mgba
 libretro-overlays
 libretro-parallel-n64
+libretro-play
 libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
@@ -303,6 +303,7 @@ mokutil
 monero-gui
 monero
 mousepad
+mozo
 msedit
 mugshot
 mutt
@@ -316,6 +317,7 @@ nyx
 obconf-qt
 obsidian-icon-theme
 octave
+onionshare
 openbox
 openrct2
 openshot
@@ -358,6 +360,7 @@ pop-launcher
 pop-sound-theme
 ppsspp
 ppsspp-assets
+prismlauncher
 pysolfc-cardsets
 pysolfc
 python-aiohttp-oauthlib

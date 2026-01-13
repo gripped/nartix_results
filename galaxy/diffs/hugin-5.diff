@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hugin
+ pkgver=2025.0.1
+-pkgrel=4
++pkgrel=1
+ pkgdesc="Panorama photo stitcher"
+ arch=(x86_64)
+ url="http://hugin.sourceforge.net/"
+@@ -9,11 +9,11 @@
+ depends=(enblend-enfuse
+          exiv2
+          fftw
++         glew
+          glu
+          lapack
+          lcms2
+          lensfun
+-         libepoxy
+          libpano13
+          libtiff
+          libxi
+@@ -49,8 +49,7 @@
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DENABLE_LAPACK=yes \
+     -DBUILD_HSI=ON \
+-    -DUSE_GDKBACKEND_X11=ON \
+-    -DBUILD_WITH_EPOXY=ON
++    -DUSE_GDKBACKEND_X11=ON
+   make -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,11 +3,11 @@
+ enblend-enfuse
+ exiv2
+ fftw
++glew
+ glu
+ lapack
+ lcms2
+ lensfun
+-libepoxy
+ libpano13
+ libtiff
+ libxi
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,6 @@
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DENABLE_LAPACK=yes \
+ -DBUILD_HSI=ON \
+--DUSE_GDKBACKEND_X11=ON \
+--DBUILD_WITH_EPOXY=ON
++-DUSE_GDKBACKEND_X11=ON
+ make -C build
+ }

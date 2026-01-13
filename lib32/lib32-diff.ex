@@ -12,11 +12,14 @@ lib32-libusb
 lib32-mesa
 lib32-opencl-mesa
 lib32-vulkan-asahi
+lib32-vulkan-broadcom
 lib32-vulkan-dzn
 lib32-vulkan-freedreno
 lib32-vulkan-gfxstream
 lib32-vulkan-intel
 lib32-vulkan-nouveau
+lib32-vulkan-panfrost
+lib32-vulkan-powervr
 lib32-vulkan-radeon
 lib32-vulkan-swrast
 lib32-vulkan-virtio

@@ -1,30 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,14 +4,11 @@
-   mesa
-   opencl-mesa
-   vulkan-asahi
--  vulkan-broadcom
-   vulkan-dzn
-   vulkan-freedreno
-   vulkan-gfxstream
-   vulkan-intel
-   vulkan-nouveau
--  vulkan-panfrost
--  vulkan-powervr
-   vulkan-radeon
-   vulkan-swrast
-   vulkan-virtio
-@@ -21,7 +18,7 @@
- )
- pkgver=25.3.3
- _pkgver=${pkgver/[a-z]/-&}
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc="Open-source OpenGL drivers"
- url="https://www.mesa3d.org/"
-@@ -52,7 +49,6 @@
+@@ -52,7 +52,6 @@
    rust
    spirv-llvm-translator
    spirv-tools
@@ -32,37 +8,7 @@
    vulkan-icd-loader
    wayland
    xcb-util-keysyms
-@@ -69,7 +65,6 @@
-   python-mako
-   python-packaging
-   python-ply
--  python-pycparser
-   python-yaml
-   rust-bindgen
-   wayland-protocols
-@@ -219,10 +214,10 @@
-   local meson_options=(
-     -D android-libbacktrace=disabled
-     -D b_ndebug=true
--    -D gallium-drivers=all
-+    -D gallium-drivers=asahi,crocus,d3d12,freedreno,i915,iris,llvmpipe,nouveau,r300,r600,radeonsi,softpipe,svga,virgl,zink
-     -D gallium-extra-hud=true
-     -D gallium-mediafoundation=disabled
--    -D gallium-rusticl-enable-drivers=all
-+    -D gallium-rusticl-enable-drivers=asahi,freedreno,radeonsi
-     -D gallium-rusticl=true
-     -D gles1=disabled
-     -D html-docs=enabled
-@@ -232,7 +227,7 @@
-     -D sysprof=true
-     -D valgrind=enabled
-     -D video-codecs=all
--    -D vulkan-drivers=all
-+    -D vulkan-drivers=amd,freedreno,intel,intel_hasvk,swrast,virtio,microsoft-experimental,nouveau,asahi,gfxstream
-     -D vulkan-layers=device-select,intel-nullhw,overlay,screenshot,anti-lag,vram-report-limit
-   )
- 
-@@ -241,7 +236,7 @@
+@@ -241,7 +240,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -71,30 +17,7 @@
    meson compile -C build
  }
  
-@@ -304,9 +299,6 @@
-     _pick vkasahi $icddir/asahi_icd.*.json
-     _pick vkasahi $libdir/libvulkan_asahi.so
- 
--    _pick vkbrcom $icddir/broadcom_icd.*.json
--    _pick vkbrcom $libdir/libvulkan_broadcom.so
--
-     _pick vkd3d12 $icddir/dzn_icd.*.json
-     _pick vkd3d12 $libdir/libvulkan_dzn.so
-     _pick vkd3d12 $libdir/libspirv_to_dxil.*
-@@ -323,12 +315,6 @@
- 
-     _pick vknvidia $icddir/nouveau_icd.*.json
-     _pick vknvidia $libdir/libvulkan_nouveau.so
--
--    _pick vkpfrost $icddir/panfrost_icd.*.json
--    _pick vkpfrost $libdir/libvulkan_panfrost.so
--
--    _pick vkpowrvr $icddir/powervr_mesa_icd.*.json
--    _pick vkpowrvr $libdir/libvulkan_powervr_mesa.so
- 
-     _pick vkradeon $icddir/radeon_icd.*.json
-     _pick vkradeon $libdir/libvulkan_radeon.so
-@@ -401,7 +387,6 @@
+@@ -401,7 +400,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -102,42 +25,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -413,34 +398,6 @@
-   provides=(vulkan-driver)
- 
-   mv vkasahi/* "$pkgdir"
--
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
--}
--
--package_vulkan-broadcom() {
--  pkgdesc="Open-source Vulkan driver for VideoCore GPUs"
--  depends=(
--    expat
--    gcc-libs
--    glibc
--    libdisplay-info
--    libdrm
--    libx11
--    libxcb
--    libxshmfence
--    spirv-tools
--    systemd-libs
--    vulkan-icd-loader
--    vulkan-mesa-implicit-layers
--    wayland
--    xcb-util-keysyms
--    zlib
--    zstd
--  )
--  optdepends=("vulkan-mesa-layers: additional vulkan layers")
--  provides=(vulkan-driver)
--
--  mv vkbrcom/* "$pkgdir"
- 
-   install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
-@@ -457,7 +414,6 @@
+@@ -429,7 +427,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -145,7 +33,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -485,7 +441,6 @@
+@@ -457,7 +454,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -153,7 +41,15 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -512,7 +467,6 @@
+@@ -485,7 +481,6 @@
+     libxcb
+     libxshmfence
+     spirv-tools
+-    systemd-libs
+     vulkan-icd-loader
+     vulkan-mesa-implicit-layers
+     wayland
+@@ -512,7 +507,6 @@
      libx11
      libxcb
      libxshmfence
@@ -161,7 +57,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -538,7 +492,6 @@
+@@ -538,7 +532,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -169,7 +65,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -566,7 +519,6 @@
+@@ -566,7 +559,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -177,70 +73,23 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -578,62 +530,6 @@
-   provides=(vulkan-driver)
- 
-   mv vknvidia/* "$pkgdir"
--
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
--}
--
--package_vulkan-panfrost() {
--  pkgdesc="Open-source Vulkan driver for Mali GPUs"
--  depends=(
--    expat
--    gcc-libs
--    glibc
--    libdisplay-info
--    libdrm
--    libx11
--    libxcb
--    libxshmfence
--    spirv-tools
+@@ -594,7 +586,6 @@
+     libxcb
+     libxshmfence
+     spirv-tools
 -    systemd-libs
--    vulkan-icd-loader
--    vulkan-mesa-implicit-layers
--    wayland
--    xcb-util-keysyms
--    zlib
--    zstd
--  )
--  optdepends=("vulkan-mesa-layers: additional vulkan layers")
--  provides=(vulkan-driver)
--
--  mv vkpfrost/* "$pkgdir"
--
--  install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
--}
--
--package_vulkan-powervr() {
--  pkgdesc="Open-source Vulkan driver for PowerVR GPUs"
--  depends=(
--    expat
--    gcc-libs
--    glibc
--    libdisplay-info
--    libdrm
--    libx11
--    libxcb
--    libxshmfence
--    spirv-tools
+     vulkan-icd-loader
+     vulkan-mesa-implicit-layers
+     wayland
+@@ -622,7 +613,6 @@
+     libxcb
+     libxshmfence
+     spirv-tools
 -    systemd-libs
--    vulkan-icd-loader
--    vulkan-mesa-implicit-layers
--    wayland
--    xcb-util-keysyms
--    zlib
--    zstd
--  )
--  optdepends=("vulkan-mesa-layers: additional vulkan layers")
--  provides=(vulkan-driver)
--
--  mv vkpowrvr/* "$pkgdir"
- 
-   install -Dm644 mesa-$_pkgver/docs/license.rst -t "$pkgdir/usr/share/licenses/$pkgname"
- }
-@@ -652,7 +548,6 @@
+     vulkan-icd-loader
+     vulkan-mesa-implicit-layers
+     wayland
+@@ -652,7 +642,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -248,7 +97,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -682,7 +577,6 @@
+@@ -682,7 +671,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -256,7 +105,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -711,7 +605,6 @@
+@@ -711,7 +699,6 @@
      libx11
      libxcb
      libxshmfence
@@ -270,15 +119,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -30,7 +30,6 @@
- python-mako
- python-packaging
- python-ply
--python-pycparser
- python-sphinx
- python-sphinx-hawkmoth
- python-yaml
-@@ -38,7 +37,6 @@
+@@ -38,7 +38,6 @@
  rust-bindgen
  spirv-llvm-translator
  spirv-tools

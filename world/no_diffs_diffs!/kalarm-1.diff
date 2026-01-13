@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=kalarm
 -pkgver=25.12.1
+-pkgrel=1
 +pkgver=25.12.0
- pkgrel=1
++pkgrel=2
  pkgdesc='Personal alarm scheduler'
  arch=(x86_64)
+ url='https://apps.kde.org/kalarm/'
 @@ -52,7 +52,7 @@
  groups=(kde-applications
          kde-pim)
@@ -17,10 +19,3 @@
              'SKIP')
  validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
                F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
-@@ -67,6 +67,4 @@
- 
- package() {
-   DESTDIR="$pkgdir" cmake --install build
--
--  setcap cap_wake_alarm+ep "$pkgdir"/usr/bin/kalarm
- }

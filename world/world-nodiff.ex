@@ -454,9 +454,6 @@ dkms
 dleyna
 dleyna-docs
 python-dleyna
-dmd
-dmd-docs
-libphobos
 dmenu
 dmg2img
 dmidecode
@@ -490,6 +487,7 @@ draco
 dragon
 dropbear
 dropbear-scp
+dtc
 duktape
 dump_syms
 dune
@@ -669,7 +667,6 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 fortune-mod
-fossil
 four-in-a-row
 fractal
 frameworkintegration
@@ -1000,6 +997,7 @@ harfbuzz-icu
 harfbuzz-utils
 harfbuzz-docs
 hashcat-utils
+hashcat
 hddtemp
 hdf5
 hdf5-openmpi
@@ -1029,7 +1027,6 @@ hitori
 hivex
 hostapd
 hotdoc
-hplip
 hsa-rocr
 hsakmt-roct
 hspell
@@ -1037,7 +1034,6 @@ hunspell-he
 htmlq
 htop
 http-parser
-httpbin
 hub
 hugin
 hunspell-de
@@ -1183,7 +1179,6 @@ jruby
 js102
 js115
 js128
-js140
 js91
 jshon
 json-glib
@@ -1194,7 +1189,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1313,6 +1307,7 @@ kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdelibs4support
 kdenetwork-filesharing
+kdenlive
 kdepim-addons
 kdepim-runtime
 kdeplasma-addons
@@ -1323,6 +1318,7 @@ kdesu
 kdesu5
 kdevelop-pg-qt
 kdevelop-php
+kdevelop-python
 kdevelop
 kdf
 kdiagram
@@ -1380,6 +1376,7 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1409,6 +1406,7 @@ kio5
 kirigami-addons
 kirigami-addons5
 kirigami-gallery
+kirigami
 kirigami2
 kiriki
 kitemmodels
@@ -1785,6 +1783,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4018,6 +4017,7 @@ python-pyasynchat
 python-pyasyncore
 python-pyaxmlparser
 python-pybcj
+python-pybluez
 python-pybreaker
 python-pycares
 python-pychm
@@ -5663,7 +5663,6 @@ vagrant
 vala
 valabind
 valgrind
-vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
 vc

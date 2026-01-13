@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -13,7 +13,7 @@
-   syslog-ng-sql
- )
- pkgver=4.10.2
--pkgrel=5
-+pkgrel=4
- pkgdesc="Next-generation syslogd with advanced networking and filtering capabilities"
- arch=(x86_64)
- url="https://github.com/syslog-ng/syslog-ng"
 @@ -69,8 +69,6 @@
    python-setuptools
    python-urllib3
@@ -42,7 +33,7 @@
    patch -Np1 < ../$pkgbase-do-not-install-python-venv.patch
    patch -Np1 < ../$pkgbase-config.patch
  
-@@ -119,6 +114,8 @@
+@@ -122,6 +117,8 @@
  build() {
    cd $pkgbase
    local configure_options=(
@@ -51,7 +42,7 @@
      --datadir=/usr/share
      --disable-java
      --disable-java-modules
-@@ -128,7 +125,6 @@
+@@ -131,7 +128,6 @@
      --enable-ipv6
      --enable-manpages
      --enable-spoof-source
@@ -59,7 +50,7 @@
      --libexecdir=/usr/lib
      --localstatedir="/var/lib/$pkgbase"
      --prefix=/usr
-@@ -137,7 +133,6 @@
+@@ -140,7 +136,6 @@
      --with-jsonc=system
      --with-pidfile-dir=/run
      --with-python-packages=system
@@ -67,7 +58,7 @@
    )
    ./configure "${configure_options[@]}"
  
-@@ -175,7 +170,6 @@
+@@ -178,7 +173,6 @@
      openssl
      pcre2
      protobuf
@@ -75,7 +66,7 @@
      zlib
    )
    optdepends=('logrotate: for rotating log files')
-@@ -190,7 +184,6 @@
+@@ -193,7 +187,6 @@
  
    cd $pkgbase
    make DESTDIR="$pkgdir" install

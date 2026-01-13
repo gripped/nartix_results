@@ -1,5 +1,6 @@
 alsa-utils
 autorandr
+bsd-games
 cinnamon-desktop
 cinnamon-translations
 cinnamon
@@ -24,6 +25,7 @@ greetd-regreet
 gtk-engine-murrine
 gtklock
 hexchat
+hugin
 lemurs
 libetonyek
 libodfgen
@@ -31,7 +33,6 @@ libratbag
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
-libretro-play
 libstaroffice
 libstaroffice-doc
 libusbsio
@@ -46,7 +47,6 @@ mate-screensaver
 mate-session-manager
 mate-system-monitor
 mimalloc
-mozo
 mpd
 muffin
 neofetch
@@ -123,14 +123,12 @@ nvidia-525xx-utils
 nvidia-535xx-utils
 nvidia-580xx-utils
 nvm
-onionshare
 opensc
 opensnitch
 osdlyrics
 ouch
 p8-platform
 perl-cgi-fast
-prismlauncher
 profanity
 profanity-gtk
 python-generic

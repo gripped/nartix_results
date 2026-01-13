@@ -51,6 +51,7 @@ fvwm3
 gitea-tea
 grub-theme
 htpdate
+incron-next
 incron-openrc
 iso-profiles
 knockd-openrc
@@ -226,6 +227,7 @@ simplescreenrecorder
 sneedacity
 snooze
 socklog
+sonic-silver-sddm
 sonic-silver-theme
 sonic-win
 sonic-workspace
