@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libraw
+-pkgver=0.22.0
+-pkgrel=2
++pkgver=0.21.5
++pkgrel=1
+ pkgdesc='A library for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, and others)'
+ arch=(x86_64)
+ url='https://www.libraw.org/'
+@@ -9,16 +9,17 @@
+          LGPL-2.1-only)
+ depends=(gcc-libs
+          glibc
++         jasper
+          lcms2
+          libjpeg-turbo
+          zlib)
+ makedepends=(git)
+ source=(git+https://github.com/LibRaw/LibRaw#tag=$pkgver)
+-sha256sums=('493e060186d5c798ff7d123f146d4d5b271fb054ee6449a91bb6b2fcb5629963')
++sha256sums=('94c35b8a7fbf7cecf2a395a13c4de5c6da79c9a71ab7d01c4fbed470f4d7cf98')
+ 
+ prepare() {
+   cd LibRaw
+-  autoreconf -fiv
++  autoreconf -vi
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ gcc-libs
+ git
+ glibc
++jasper
+ lcms2
+ libjpeg-turbo
+ zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd LibRaw
+-autoreconf -fiv
++autoreconf -vi
+ }
+ build() {
+ cd LibRaw

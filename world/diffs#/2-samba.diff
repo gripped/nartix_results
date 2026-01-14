@@ -5,7 +5,7 @@
  pkgname=('libwbclient' 'ldb' 'smbclient' 'samba')
  pkgver=4.23.4
 -pkgrel=2
-+pkgrel=2.1
++pkgrel=2.2
  arch=(x86_64)
  url="https://www.samba.org"
  license=('GPL-3.0-or-later')
@@ -46,6 +46,14 @@
  
    install -D -m644 "${srcdir}"/samba.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/samba.conf
    install -d -m755 "${pkgdir}"/etc/samba
+@@ -314,6 +309,7 @@
+   rm -rf "${pkgdir}"/run
+   rm -rf "${pkgdir}"/var/run
+   rm -rf "${pkgdir}"/etc/sysconfig
++  rm -f "${pkgdir}"/usr/lib/python3.14/site-packages/*{tdb,teventt}*
+ 
+   install -D -m644 "${srcdir}"/samba-${pkgver}/examples/LDAP/samba.schema \
+     "${pkgdir}"/usr/share/doc/samba/examples/LDAP/samba.schema
 
 
 ############# Stripped diff below #################

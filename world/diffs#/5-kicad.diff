@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kicad
+ pkgver=9.0.7
+-pkgrel=5
++pkgrel=4
+ pkgdesc='Electronic schematic and printed circuit board (PCB) design tools'
+ arch=(x86_64)
+ url='http://kicad.org/'
+@@ -25,6 +25,7 @@
+   wxwidgets-common
+   zlib
+   curl
++  glew
+   glm
+   ngspice
+   opencascade
+@@ -72,6 +73,7 @@
+     -D CMAKE_BUILD_TYPE=Release
+     -D CMAKE_INSTALL_PREFIX=/usr
+     -D KICAD_USE_EGL=ON
++    -D KICAD_USE_BUNDLED_GLEW=OFF
+     -D KICAD_BUILD_I18N=ON
+     -D KICAD_I18N_UNIX_STRICT_PATH=ON
+     -D KICAD_BUILD_QA_TESTS=OFF
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,6 +7,7 @@
+ freetype2
+ gcc-libs
+ git
++glew
+ glib2
+ glibc
+ glm
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ -D CMAKE_BUILD_TYPE=Release
+ -D CMAKE_INSTALL_PREFIX=/usr
+ -D KICAD_USE_EGL=ON
++-D KICAD_USE_BUNDLED_GLEW=OFF
+ -D KICAD_BUILD_I18N=ON
+ -D KICAD_I18N_UNIX_STRICT_PATH=ON
+ -D KICAD_BUILD_QA_TESTS=OFF

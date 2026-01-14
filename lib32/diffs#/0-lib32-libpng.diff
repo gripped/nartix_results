@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=lib32-$_pkgbasename
+ pkgver=1.6.53
+ _libversion=16
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A collection of routines used to create PNG format graphics files (32-bit)'
+ arch=('x86_64')
+ url='http://www.libpng.org/pub/png/libpng.html'
+@@ -18,12 +18,6 @@
+ 
+ prepare() {
+   cd libpng
+-
+-  git cherry-pick -n \
+-    0e894374dd7ee53039c6d84bd538dd7f16fc4cbe \
+-    e4f7ad4ea2a471776c81dda4846b7691925d9786 \
+-    cf155de014fc6c5cb199dd681dd5c8fb70429072
+-
+   autoreconf -fiv
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,5 @@
+ prepare() {
+ cd libpng
+-git cherry-pick -n \
+-0e894374dd7ee53039c6d84bd538dd7f16fc4cbe \
+-e4f7ad4ea2a471776c81dda4846b7691925d9786 \
+-cf155de014fc6c5cb199dd681dd5c8fb70429072
+ autoreconf -fiv
+ }
+ build() {

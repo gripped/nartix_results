@@ -19,6 +19,7 @@ atril
 audacious-plugins
 avahi
 awesome
+b3sum
 bash-bats
 blender
 blueman
@@ -104,7 +105,6 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
-distcc
 dmd
 dmd-docs
 libphobos
@@ -193,6 +193,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 geoclue
@@ -282,8 +284,6 @@ hidapi
 hipcub
 hipfft
 hipsolver
-hplip
-httpbin
 hwloc
 hyphen
 hyphen-en
@@ -293,6 +293,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+imagemagick
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -327,12 +328,12 @@ openjdk21-doc
 java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
-js140
 js78
 julia
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
+kicad
 kinfocenter
 kismet
 kitty
@@ -340,6 +341,7 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
+krita
 ksystemlog
 kwin-x11
 kwin
@@ -383,7 +385,7 @@ libev
 libfido2
 libfprint
 libfreehand
-libftdi
+libgpod
 libgtop
 libgudev
 libguestfs
@@ -412,6 +414,7 @@ libpagemaker
 libpgm
 libprocps
 libqb
+libraw
 librevenge
 libsidplay
 libsidplayfp
@@ -428,6 +431,7 @@ libvdpau
 libvirt
 libvncserver
 libwpd
+libx86
 libxfce4ui
 libxfce4util
 libxklavier
@@ -600,6 +604,9 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs-lts-iron
+nodejs-lts-jod
+nodejs
 nsd
 nushell
 nvidia-340xx-utils
@@ -732,13 +739,18 @@ python-anytree
 python-asn1crypto
 python-astor
 python-debugpy
+python-dulwich
+python-fiona
 python-generic
 python-hidapi
+python-prometheus_client
+python-pygraphviz
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+pyxdg
 qastools
 qbittorrent
 qbittorrent-nox
@@ -874,7 +886,6 @@ samba
 libwbclient
 ldb
 smbclient
-sane
 scribus
 sdbus-cpp
 $pkgbase

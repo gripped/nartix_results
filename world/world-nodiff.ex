@@ -183,7 +183,6 @@ aws-sdk-cpp-iam
 aws-sdk-cpp-kinesis
 aws-sdk-cpp-s3
 ayatana-ido
-b3sum
 babl
 backuppc
 baloo-widgets
@@ -445,6 +444,7 @@ directx-headers
 directx-shader-compiler
 discount
 discover
+distcc
 distro-info-data
 distro-info
 django
@@ -702,8 +702,6 @@ gcab
 gcc13
 gcc14
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1027,6 +1025,7 @@ hitori
 hivex
 hostapd
 hotdoc
+hplip
 hsa-rocr
 hsakmt-roct
 hspell
@@ -1034,6 +1033,7 @@ hunspell-he
 htmlq
 htop
 http-parser
+httpbin
 hub
 hugin
 hunspell-de
@@ -1088,7 +1088,6 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
-imagemagick
 imake
 imath
 img2pdf
@@ -1179,6 +1178,7 @@ jruby
 js102
 js115
 js128
+js140
 js91
 jshon
 json-glib
@@ -1376,7 +1376,6 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
-kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1500,7 +1499,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -1716,6 +1714,7 @@ libfm-gtk3
 libfontenc
 libfreeaptx
 libfreexl
+libftdi
 libfyaml
 libgadu
 libgdata
@@ -1744,7 +1743,6 @@ libgoom2
 libgovirt
 libgphoto2
 libgphoto2-docs
-libgpod
 libgravatar
 libgrss
 libgsf
@@ -1937,7 +1935,6 @@ libquvi
 libqxp
 librabbitmq-c
 libraqm
-libraw
 libraw1394
 librdkafka
 libreplaygain
@@ -2054,7 +2051,6 @@ libwps
 libwps-doc
 libwslay
 libx11
-libx86
 libx86emu
 libxau
 libxaw
@@ -2436,11 +2432,8 @@ nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
-nodejs-lts-iron
-nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -3446,7 +3439,6 @@ python-doublex-expects
 python-doublex
 python-dpcontracts
 python-dropbox
-python-dulwich
 python-dunamai
 python-durationpy
 python-easyprocess
@@ -3498,7 +3490,6 @@ python-filebytes
 python-filelock
 python-filetype
 python-findpython
-python-fiona
 python-fire
 python-first
 python-fissix
@@ -3983,7 +3974,6 @@ python-prettytable
 python-priority
 python-process-tests
 python-profilestats
-python-prometheus_client
 python-promise
 python-prompt_toolkit
 python-propcache
@@ -4057,7 +4047,6 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
-python-pygraphviz
 python-pyhamcrest
 python-pyhcl
 python-pyicu
@@ -4596,7 +4585,6 @@ python-zope-testing
 python-zope-testrunner
 python-zopfli
 python-zstandard
-pyxdg
 qalculate-gtk
 qalculate-qt
 qbe
@@ -5187,6 +5175,7 @@ s3cmd
 s3fs-fuse
 salt
 samurai
+sane
 sassc
 sbc
 sbctl
