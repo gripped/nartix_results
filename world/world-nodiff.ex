@@ -183,6 +183,7 @@ aws-sdk-cpp-iam
 aws-sdk-cpp-kinesis
 aws-sdk-cpp-s3
 ayatana-ido
+b3sum
 babl
 backuppc
 baloo-widgets
@@ -278,7 +279,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -341,6 +341,7 @@ cmark-gfm
 cmark
 cmatrix
 cmocka
+cmus
 cni-plugins
 codespell
 coffeescript
@@ -519,6 +520,7 @@ ejabberd
 electron
 electrum
 elementary-icon-theme
+elinks
 elisa
 elixir
 ell
@@ -667,6 +669,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
 fortune-mod
+fossil
 four-in-a-row
 fractal
 frameworkintegration
@@ -695,6 +698,7 @@ fuse-common
 futuresql
 fuzzel
 fwknop
+fzf
 gajim
 galculator
 gavl
@@ -702,6 +706,8 @@ gcab
 gcc13
 gcc14
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -1088,6 +1094,7 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
+imagemagick
 imake
 imath
 img2pdf
@@ -1189,6 +1196,7 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
+julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1376,6 +1384,7 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -1499,6 +1508,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1781,7 +1791,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1837,7 +1846,6 @@ libmemcached-awesome
 libmicrodns
 libmikmod
 libmirage
-libmms
 libmodplug
 libmp4v2
 libmpack
@@ -1865,6 +1873,8 @@ libnitrokey
 libnma
 libnma-common
 libnma-gtk4
+libnotify
+libnotify-docs
 libnova
 libnsbmp
 libnsgif
@@ -1935,6 +1945,7 @@ libquvi
 libqxp
 librabbitmq-c
 libraqm
+libraw
 libraw1394
 librdkafka
 libreplaygain
@@ -2051,6 +2062,7 @@ libwps
 libwps-doc
 libwslay
 libx11
+libx86
 libx86emu
 libxau
 libxaw
@@ -5612,6 +5624,7 @@ uchardet
 udiskie
 udpxy
 ufmt
+ufw
 uget
 uglify-js
 uhttpmock
@@ -5734,8 +5747,12 @@ wget
 whois
 wine-staging
 wine
+winetricks
 wireguard-tools
 wireless_tools
+wireshark
+wireshark-cli
+wireshark-qt
 wl-clip-persist
 wl-clipboard
 woff2

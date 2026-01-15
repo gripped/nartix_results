@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,43 +1,32 @@
+@@ -1,45 +1,32 @@
  
  pkgbase=tensorflow
  pkgname=(tensorflow tensorflow-opt tensorflow-cuda tensorflow-opt-cuda python-tensorflow python-tensorflow-opt python-tensorflow-cuda python-tensorflow-opt-cuda)
 -pkgver=2.20.0
 -_pkgver=2.20.0
--pkgrel=4
+-pkgrel=5
 -_cuda_ver=12.8.1
 -_cudnn_ver=9.8.0
 -_nvshmem_ver=3.2.5
@@ -32,6 +32,7 @@
 -        tensorflow-2.19.0-matmul-it-unused-result.patch
 -        protobuf-deps.patch
 -        tensorflow-2.20.0-python-3.14.patch
+-        tensorflow-2.20.0-StructuredTensor.patch
 -)
 -sha512sums=('e1e27c84491a28dc5b7deb181de0fbad27ddd58cdd7ee2f6815bebd26d7ff400a94efea52eb7da344702adcd9181a474a76dc9e94d2ad7d6511d261deffa0cf5'
 -            'ca01422266ed741a7d2ec1fdaba8fed8aa1d1ca4d53e45345225403cb132dc56266fd799351e80aeb50df6f2f4e29e6e0dc9430aef882d749425e8521ba0a806'
@@ -39,7 +40,8 @@
 -            'b3ac22ede074decdb751adbc8f0324f4b729ffb4927fddcc67250e2f2a2812d2ed6ff515ed98cb3eaf5c1e4b755d6b780f5515181b6f10f046dbaa91e0eb1964'
 -            'e5856d277edcef6ab655e8b641f1ec8fe9823264221d687c9938bb00d5acee626a2a05b46cfd97fbad8551f270332ed09b73848bf9784137317fee47ad64c80e'
 -            '5a90a66ea6b78196aaa8852f90ac2af82cfac12b4f7eefa9b1e04ff0fbefd4fdc82f9705f77634efe76c55d5e1804cdfd736dd8ceb875d7ce2757552467a04dd'
--            'cfb1eced1f4b4534deddf14b73d45ae4f8104264ccada1a8854e0dbf7ef2a2f28e67930348211541630a102994ad258d55804359448d225863c4bd5c8762fff1')
+-            'cfb1eced1f4b4534deddf14b73d45ae4f8104264ccada1a8854e0dbf7ef2a2f28e67930348211541630a102994ad258d55804359448d225863c4bd5c8762fff1'
+-            'eb64f0dddabf505f7ce4efd852187d8b5a1be3dc797dbe26f21f1c4ece50d20f48d90434929212eb32d2c93668aec56a180cbb0331d88f0dc9ba4b0081060a2c')
 +        tensorflow-newer-hermetic-nvidia-versions.patch
 +        https://github.com/tensorflow/tensorflow/commit/3f4b2fda6ffe7dfe03c1663ef37f54fc4432cc8b.patch
 +        tensorflow-2.16.1-python-distutils-removal.patch
@@ -60,7 +62,7 @@
  
  get_pyver () {
    python -c 'import sys; print(str(sys.version_info[0]) + "." + str(sys.version_info[1]))'
-@@ -63,32 +52,19 @@
+@@ -65,34 +52,19 @@
  }
  
  prepare() {
@@ -70,6 +72,8 @@
    bazel --version
  
 -  patch -Np1 -i ../tensorflow-2.20.0-python-3.14.patch -d tensorflow-${_pkgver}
+-
+-  patch -Np1 -i ../tensorflow-2.20.0-StructuredTensor.patch -d tensorflow-${_pkgver}
 -
 -  patch -Np1 -i ../tensorflow-2.19.0-tf-runtime-workspace.patch -d tensorflow-${_pkgver}
 -  cp tf-runtime-forward-decls.patch tensorflow-${_pkgver}/third_party/tf_runtime/forward_decls.patch
@@ -101,7 +105,7 @@
  
    cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt
    cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-cuda
-@@ -111,41 +87,32 @@
+@@ -115,41 +87,32 @@
    export TF_NEED_IGNITE=0
    export TF_NEED_ROCM=0
    export TF_NEED_CLANG=1
@@ -155,7 +159,7 @@
    cd "${srcdir}"/tensorflow-${_pkgver}-cuda
    export CC_OPT_FLAGS="-march=x86-64"
    export TF_NEED_CUDA=1
-@@ -155,43 +122,27 @@
+@@ -159,43 +122,27 @@
        ${BAZEL_ARGS[@]} \
        //tensorflow:libtensorflow.so \
        //tensorflow:libtensorflow_cc.so \
@@ -213,7 +217,7 @@
    cd "${srcdir}"/tensorflow-${_pkgver}
    export CC_OPT_FLAGS="-march=x86-64"
    export TF_NEED_CUDA=0
-@@ -201,40 +152,32 @@
+@@ -205,40 +152,32 @@
        ${BAZEL_ARGS[@]} \
        //tensorflow:libtensorflow.so \
        //tensorflow:libtensorflow_cc.so \
@@ -270,7 +274,7 @@
  
    local _srch_path="${pkgdir}/usr/lib/python$(get_pyver)"/site-packages/tensorflow/include
    check_dir "${_srch_path}"  # we need to quit on broken search paths
-@@ -258,12 +201,22 @@
+@@ -262,12 +201,22 @@
    rm bazel-bin/tensorflow/*.params
    cp -P bazel-bin/tensorflow/*.so* "${pkgdir}"/usr/lib
  
@@ -295,7 +299,7 @@
  
    rm -r "${pkgdir}"/usr/bin/tensorboard
  
-@@ -272,7 +225,7 @@
+@@ -276,7 +225,7 @@
  
  package_tensorflow() {
    cd "${srcdir}"/tensorflow-${_pkgver}
@@ -304,7 +308,7 @@
  }
  
  package_tensorflow-opt() {
-@@ -281,63 +234,63 @@
+@@ -285,63 +234,63 @@
    provides=(tensorflow)
  
    cd "${srcdir}"/tensorflow-${_pkgver}-opt
@@ -426,13 +430,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,12 @@
+@@ -1,21 +1,12 @@
  prepare() {
 -install -Dm755 "${srcdir}"/bazel_nojdk-7.4.1-linux-x86_64 bazel/bazel
 +install -Dm755 "${srcdir}"/bazel_nojdk-6.5.0-linux-x86_64 bazel/bazel
  export PATH="${srcdir}/bazel:$PATH"
  bazel --version
 -patch -Np1 -i ../tensorflow-2.20.0-python-3.14.patch -d tensorflow-${_pkgver}
+-patch -Np1 -i ../tensorflow-2.20.0-StructuredTensor.patch -d tensorflow-${_pkgver}
 -patch -Np1 -i ../tensorflow-2.19.0-tf-runtime-workspace.patch -d tensorflow-${_pkgver}
 -cp tf-runtime-forward-decls.patch tensorflow-${_pkgver}/third_party/tf_runtime/forward_decls.patch
 -patch -Np1 -i ../tensorflow-2.19.0-matmul-it-unused-result.patch -d tensorflow-${_pkgver}
@@ -452,7 +457,7 @@
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-cuda
  cp -r tensorflow-${_pkgver} tensorflow-${_pkgver}-opt-cuda
-@@ -35,38 +27,30 @@
+@@ -36,38 +27,30 @@
  export TF_NEED_IGNITE=0
  export TF_NEED_ROCM=0
  export TF_NEED_CLANG=1
@@ -503,7 +508,7 @@
  cd "${srcdir}"/tensorflow-${_pkgver}-cuda
  export CC_OPT_FLAGS="-march=x86-64"
  export TF_NEED_CUDA=1
-@@ -76,19 +60,12 @@
+@@ -77,19 +60,12 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \
@@ -527,7 +532,7 @@
  export TF_NEED_CUDA=1
  ./configure
  bazel \
-@@ -96,17 +73,10 @@
+@@ -97,17 +73,10 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \
@@ -549,7 +554,7 @@
  cd "${srcdir}"/tensorflow-${_pkgver}
  export CC_OPT_FLAGS="-march=x86-64"
  export TF_NEED_CUDA=0
-@@ -116,19 +86,12 @@
+@@ -117,19 +86,12 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \
@@ -573,7 +578,7 @@
  export TF_NEED_CUDA=0
  ./configure
  bazel \
-@@ -136,5 +99,7 @@
+@@ -137,5 +99,7 @@
  ${BAZEL_ARGS[@]} \
  //tensorflow:libtensorflow.so \
  //tensorflow:libtensorflow_cc.so \

@@ -9,3 +9,21 @@
  pkgdesc="Python/NumPy interface to the netCDF C library"
  arch=(x86_64)
  url="https://unidata.github.io/netcdf4-python"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +0,0 @@
+-cython
+-git
+-netcdf
+-python-build
+-python-certifi
+-python-cftime
+-python-installer
+-python-numpy
+-python-setuptools
+-python-setuptools-scm
+-python-wheel

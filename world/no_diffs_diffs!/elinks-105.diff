@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,7 @@
+     -D reproducible=true
+     -D source-date-epoch="$SOURCE_DATE_EPOCH"
+   )
+-  arch-meson "${meson_opts[@]}"
++  artix-meson "${meson_opts[@]}"
+ 
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,6 +14,6 @@
+ -D reproducible=true
+ -D source-date-epoch="$SOURCE_DATE_EPOCH"
+ )
+-arch-meson "${meson_opts[@]}"
++artix-meson "${meson_opts[@]}"
+ meson compile -C build
+ }

@@ -68,6 +68,7 @@ cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
+cinnamon-translations
 cjs
 claws-mail
 compface
@@ -118,6 +119,7 @@ $pkgbase-terminfo
 fpc-src
 fpc
 freecell-solver
+fvwm3
 fzy
 gammastep
 gaphor
@@ -185,7 +187,11 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
+libreoffice-still
+libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
@@ -212,6 +218,7 @@ libutp
 libvarlink
 libwnck
 libxfce4util
+libxfce4windowing
 libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -301,6 +308,7 @@ monero
 mousepad
 mozo
 msedit
+muffin
 mugshot
 mutt
 nemo
@@ -421,6 +429,7 @@ rust-script
 sakura
 salt
 screengrab
+scribus
 scummvm
 shairplay
 smokeping

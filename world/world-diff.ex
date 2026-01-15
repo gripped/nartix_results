@@ -19,7 +19,6 @@ atril
 audacious-plugins
 avahi
 awesome
-b3sum
 bash-bats
 blender
 blueman
@@ -47,6 +46,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -81,7 +81,6 @@ clamav
 cloud-init
 clucene
 cmake
-cmus
 colord
 libcolord
 colord-sane
@@ -143,7 +142,6 @@ earlyoom
 element.io
 element-web
 element-desktop
-elinks
 emacs
 emacs-nox
 emacs-wayland
@@ -174,7 +172,6 @@ flatpak-docs
 flite
 fluidsynth
 font-manager
-fossil
 fprintd
 freerdp
 freerdp2
@@ -182,7 +179,6 @@ frugally-deep
 fwupd-efi
 fwupd
 fwupd-docs
-fzf
 gala
 gamemode
 gamescope
@@ -193,8 +189,6 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdal
-python-gdal
 gdm
 libgdm
 geoclue
@@ -293,7 +287,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-imagemagick
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -329,11 +322,9 @@ java8-openjdk
 jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
 jbigkit
 js78
-julia
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
-kicad
 kinfocenter
 kismet
 kitty
@@ -341,7 +332,6 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
-krita
 ksystemlog
 kwin-x11
 kwin
@@ -396,25 +386,24 @@ libinput
 libinput-tools
 libisoburn
 libisofs
+libkate
 libkrun
 libldm
 liblqr
 libmateweather
 libmilter
+libmms
 libmng
 libmpd
 libmspub
 libmwaw
 libmwaw-docs
-libnotify
-libnotify-docs
 libnvme
 libofa
 libpagemaker
 libpgm
 libprocps
 libqb
-libraw
 librevenge
 libsidplay
 libsidplayfp
@@ -431,7 +420,6 @@ libvdpau
 libvirt
 libvncserver
 libwpd
-libx86
 libxfce4ui
 libxfce4util
 libxklavier
@@ -961,7 +949,6 @@ udisks2
 udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
-ufw
 umockdev
 unace
 unbound
@@ -1096,9 +1083,6 @@ wildmidi
 wireplumber
 libwireplumber
 wireplumber-docs
-wireshark
-wireshark-cli
-wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16

@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
-cinnamon-translations
 cinnamon
 cosmic-applets
 cosmic-comp
@@ -30,10 +29,6 @@ lemurs
 libetonyek
 libodfgen
 libratbag
-libreoffice-fresh
-libreoffice-fresh-sdk
-libreoffice-still
-libreoffice-still-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -42,7 +37,6 @@ libstaroffice-doc
 libusbsio
 python-libusbsio
 libxfce4ui
-libxfce4windowing
 light
 lxqt-config
 ly
@@ -52,7 +46,6 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
-muffin
 neofetch
 nerd-fonts
 otf-aurulent-nerd
@@ -141,7 +134,6 @@ qbittorrent-nox
 rage
 read-edid
 reflector
-scribus
 sdcv
 signal-desktop
 terminology

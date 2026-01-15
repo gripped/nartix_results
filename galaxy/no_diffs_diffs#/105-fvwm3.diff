@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -60,7 +60,7 @@
+   export GOPATH="$srcdir"
+   export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+ 
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D mandoc=true
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ export CGO_LDFLAGS="$LDFLAGS"
+ export GOPATH="$srcdir"
+ export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D mandoc=true
+ meson compile -C build
+ }
