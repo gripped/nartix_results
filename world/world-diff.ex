@@ -95,6 +95,7 @@ cppcheck
 cppdap
 crun
 krun
+cups-filters
 cups
 libcups
 darkhttpd
@@ -353,6 +354,7 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
+libburn
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -592,8 +594,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs-lts-iron
-nodejs-lts-jod
 nodejs
 nsd
 nushell
@@ -725,14 +725,8 @@ pyqt6
 pysolfc
 python-anytree
 python-asn1crypto
-python-astor
 python-debugpy
-python-dulwich
-python-fiona
-python-generic
 python-hidapi
-python-prometheus_client
-python-pygraphviz
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -1152,6 +1146,7 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
+xmltoman
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

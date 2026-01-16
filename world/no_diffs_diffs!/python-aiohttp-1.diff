@@ -4,7 +4,7 @@
      --ignore=tests/test_benchmarks_http_websocket.py
      --ignore=tests/test_benchmarks_http_writer.py
  
-+    --deselect=tests/test_connector.py
++    --deselect='tests/test_connector.py::test_tcp_connector_socket_factory[pyloop]'
 +
      -n auto
  

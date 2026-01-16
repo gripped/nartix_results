@@ -371,6 +371,7 @@ python-aiohttp-oauthlib
 python-caja
 python-cjkwrap
 python-click-log
+python-generic
 python-inflate64
 python-jaconv
 python-linux-procfs

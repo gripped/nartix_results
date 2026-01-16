@@ -394,7 +394,6 @@ ctwm
 cuda
 cudnn
 cunit
-cups-filters
 cups-pdf
 cups-pk-helper
 curator
@@ -1646,7 +1645,6 @@ libbluray
 libbobcat
 libbs2b
 libbsd
-libburn
 libbytesize
 libcaca
 libcacard
@@ -2444,6 +2442,8 @@ nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
+nodejs-lts-iron
+nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
 noise-suppression-for-voice
@@ -3204,6 +3204,7 @@ python-asgiref
 python-aspectlib
 python-assertpy
 python-asteval
+python-astor
 python-astroid
 python-asttokens
 python-astunparse
@@ -3451,6 +3452,7 @@ python-doublex-expects
 python-doublex
 python-dpcontracts
 python-dropbox
+python-dulwich
 python-dunamai
 python-durationpy
 python-easyprocess
@@ -3502,6 +3504,7 @@ python-filebytes
 python-filelock
 python-filetype
 python-findpython
+python-fiona
 python-fire
 python-first
 python-fissix
@@ -3551,6 +3554,7 @@ python-gaphas
 python-gast
 python-gast03
 python-gcp-devrel-py-tools
+python-generic
 python-genshi
 python-genty
 python-geographiclib
@@ -3986,6 +3990,7 @@ python-prettytable
 python-priority
 python-process-tests
 python-profilestats
+python-prometheus_client
 python-promise
 python-prompt_toolkit
 python-propcache
@@ -4059,6 +4064,7 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
+python-pygraphviz
 python-pyhamcrest
 python-pyhcl
 python-pyicu
@@ -5821,7 +5827,6 @@ xmldiff
 xmlsec
 xmlstarlet
 xmlto
-xmltoman
 xmms2
 xmrig
 xonsh

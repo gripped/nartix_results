@@ -128,7 +128,6 @@ p8-platform
 perl-cgi-fast
 profanity
 profanity-gtk
-python-generic
 qbittorrent
 qbittorrent-nox
 rage

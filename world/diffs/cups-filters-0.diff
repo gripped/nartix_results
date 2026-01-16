@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cups-filters
+ pkgver=2.0.1
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="OpenPrinting CUPS Filters"
+ arch=('x86_64')
+ url="https://wiki.linuxfoundation.org/openprinting/cups-filters"
+@@ -17,6 +17,7 @@
+ sha256sums=('39e71de3ce06762b342749f1dc7cba6817738f7bf4d322c1bb9ab10b8569ab80')
+ 
+ build() {
++  CFLAGS+=" -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-stringop-overflow -std=gnu17"
+   cd "$pkgname"-$pkgver
+   ./configure --prefix=/usr  \
+     --sysconfdir=/etc \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ build() {
++CFLAGS+=" -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-stringop-overflow -std=gnu17"
+ cd "$pkgname"-$pkgver
+ ./configure --prefix=/usr  \
+ --sysconfdir=/etc \
