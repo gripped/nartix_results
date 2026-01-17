@@ -69,6 +69,7 @@ cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
+cinnamon
 cjs
 claws-mail
 compface
@@ -606,6 +607,7 @@ warpinator
 waylandpp
 waypipe
 wev
+wlopm
 wlr-randr
 wlsunset
 wofi

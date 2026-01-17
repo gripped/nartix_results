@@ -1,7 +1,6 @@
 0ad
 a52dec
 accountsservice
-aflplusplus
 alacritty
 alsa-utils
 amule
@@ -46,7 +45,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -105,6 +103,7 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
+directx-shader-compiler
 dmd
 dmd-docs
 libphobos
@@ -355,6 +354,7 @@ libblockdev-smart
 libblockdev-swap
 python-libblockdev
 libburn
+libbytesize
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -388,7 +388,6 @@ libinput
 libinput-tools
 libisoburn
 libisofs
-libkate
 libkrun
 libldm
 liblqr
@@ -594,7 +593,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-340xx-utils

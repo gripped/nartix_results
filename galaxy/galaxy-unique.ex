@@ -254,7 +254,6 @@ wf-config
 wf-shell
 wireplumber-dinit
 wlogout
-wlopm
 wlrctl
 xarchiver-gtk2
 xcursor-breeze

@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
-cinnamon
 cosmic-applets
 cosmic-comp
 cosmic-osd

@@ -27,6 +27,7 @@ adwaita-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
+aflplusplus
 afpfs-ng
 aha
 akonadi-calendar-tools
@@ -279,6 +280,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -441,7 +443,6 @@ diffstat
 diffuse
 digikam
 directx-headers
-directx-shader-compiler
 discount
 discover
 distcc
@@ -1645,7 +1646,6 @@ libbluray
 libbobcat
 libbs2b
 libbsd
-libbytesize
 libcaca
 libcacard
 libcanberra
@@ -1789,6 +1789,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2446,6 +2447,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch

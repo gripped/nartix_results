@@ -21,14 +21,3 @@
  
    install -vDm644 "build/libs/$pkgname-$pkgver.jar" "$pkgdir/usr/share/java/$pkgname/$pkgname.jar"
    install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" plantuml-mit/mit-license.txt
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +0,0 @@
--bash
--gradle
--java-environment>
--java-runtime>
