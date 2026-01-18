@@ -37,6 +37,8 @@ libusbsio
 python-libusbsio
 libxfce4ui
 light
+lxappearance
+lxhotkey
 lxqt-config
 ly
 mate-control-center

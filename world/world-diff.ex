@@ -611,6 +611,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+onboard
 onionshare
 open-iscsi
 openbox
@@ -723,6 +724,7 @@ pyqt6
 pysolfc
 python-anytree
 python-asn1crypto
+python-autobahn
 python-debugpy
 python-hidapi
 python-pymupdf
@@ -730,7 +732,6 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-pyxdg
 qastools
 qbittorrent
 qbittorrent-nox
@@ -866,6 +867,7 @@ samba
 libwbclient
 ldb
 smbclient
+sane
 scribus
 sdbus-cpp
 $pkgbase

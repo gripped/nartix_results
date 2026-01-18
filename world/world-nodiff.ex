@@ -2496,7 +2496,6 @@ odt2txt
 okteta
 okular
 okularpart5
-onboard
 onednn
 onetbb
 onevpl
@@ -3226,7 +3225,6 @@ python-augeas
 python-authheaders
 python-authlib
 python-authres
-python-autobahn
 python-autocommand
 python-automat
 python-autopage
@@ -4605,6 +4603,7 @@ python-zope-testing
 python-zope-testrunner
 python-zopfli
 python-zstandard
+pyxdg
 qalculate-gtk
 qalculate-qt
 qbe
@@ -5195,7 +5194,6 @@ s3cmd
 s3fs-fuse
 salt
 samurai
-sane
 sassc
 sbc
 sbctl

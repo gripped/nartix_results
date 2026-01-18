@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ _pkgname=pcsclite
+ pkgname=lib32-$_pkgname
+ pkgver=2.4.1
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
+ arch=('x86_64')
+ url='https://pcsclite.apdu.fr/'
 @@ -13,8 +13,7 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )
@@ -40,7 +49,7 @@
    meson install -C build --destdir "${pkgdir}"
  
 -  rm -rv "$pkgdir"/{etc,usr/{include,lib/sysusers.d,share}}
-+  rm -rv "$pkgdir"/{etc,usr/{include,share}}
++  rm -rv "$pkgdir"/{etc,usr/{include,sysusers.d,share}}
    rm -v "$pkgdir"/usr/bin/pcsc-spy
  
    install -D -m0644 LICENSE.* -t "${pkgdir}"/usr/share/licenses/$pkgname

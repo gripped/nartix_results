@@ -239,11 +239,9 @@ linux-zen-docs
 lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
-lxappearance
 lxde-common
 lxde-icon-theme
 lxdm
-lxhotkey
 lximage-qt
 lxinput
 lxlauncher
