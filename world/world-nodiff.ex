@@ -27,7 +27,6 @@ adwaita-fonts
 adwaita-icon-theme-legacy
 adwaita-icon-theme
 adwaita-cursors
-aflplusplus
 afpfs-ng
 aha
 akonadi-calendar-tools
@@ -1751,6 +1750,7 @@ libgoom2
 libgovirt
 libgphoto2
 libgphoto2-docs
+libgpod
 libgravatar
 libgrss
 libgsf
@@ -3225,6 +3225,7 @@ python-augeas
 python-authheaders
 python-authlib
 python-authres
+python-autobahn
 python-autocommand
 python-automat
 python-autopage
@@ -4083,7 +4084,6 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
-python-pymad
 python-pymdown-extensions
 python-pymongo
 python-pymysql
@@ -4100,6 +4100,7 @@ python-pyopenssl
 python-pyotp
 python-pypandoc
 python-pyparsing
+python-pypcode
 python-pypdf
 python-pyperclip
 python-pypng

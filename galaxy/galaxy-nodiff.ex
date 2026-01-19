@@ -219,7 +219,6 @@ libutp
 libvarlink
 libwnck
 libxfce4util
-libxfce4windowing
 libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
@@ -239,9 +238,11 @@ linux-zen-docs
 lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
+lxappearance
 lxde-common
 lxde-icon-theme
 lxdm
+lxhotkey
 lximage-qt
 lxinput
 lxlauncher

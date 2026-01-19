@@ -36,9 +36,8 @@ libstaroffice-doc
 libusbsio
 python-libusbsio
 libxfce4ui
+libxfce4windowing
 light
-lxappearance
-lxhotkey
 lxqt-config
 ly
 mate-control-center

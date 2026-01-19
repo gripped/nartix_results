@@ -1,6 +1,7 @@
 0ad
 a52dec
 accountsservice
+aflplusplus
 alacritty
 alsa-utils
 amule
@@ -377,7 +378,6 @@ libev
 libfido2
 libfprint
 libfreehand
-libgpod
 libgtop
 libgudev
 libguestfs
@@ -724,9 +724,9 @@ pyqt6
 pysolfc
 python-anytree
 python-asn1crypto
-python-autobahn
 python-debugpy
 python-hidapi
+python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun

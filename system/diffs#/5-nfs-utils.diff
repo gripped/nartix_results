@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -40,7 +40,7 @@
+     --enable-ipv6 \
+     --enable-libmount-mount \
+     --enable-mountconfig \
+-    --with-systemd
++    --without-systemd
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+@@ -68,7 +68,6 @@
+   install -D -m 644 nfs.conf "$pkgdir"/etc/nfs.conf
+ 
+   install -d -m 755 "$pkgdir"/usr/share/doc/$pkgname
+-  install -D -m 644 systemd/README "$pkgdir"/usr/share/doc/$pkgname/README.systemd
+ 
+   install -m 644 {NEWS,README} "$pkgdir"/usr/share/doc/$pkgname/
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,20 +0,0 @@
+-device-mapper
+-e2fsprogs
+-gcc-libs
+-glibc
+-gssproxy
+-keyutils
+-krb5
+-libcap
+-libevent
+-libldap
+-libnl
+-libtirpc
+-libxml2
+-nfsidmap
+-readline
+-rpcbind
+-rpcsvc-proto
+-sh
+-sqlite
+-util-linux-libs
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ --enable-ipv6 \
+ --enable-libmount-mount \
+ --enable-mountconfig \
+---with-systemd
++--without-systemd
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }
