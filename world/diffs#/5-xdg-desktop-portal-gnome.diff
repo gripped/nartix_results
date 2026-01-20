@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,7 @@
+ build() {
+   export MESON_PACKAGE_CACHE_DIR="$srcdir"
+ 
+-  arch-meson $pkgname build
++  artix-meson $pkgname build -Dsystemduserunitdir=/usr/lib/systemd
+   meson compile -C build
+ }
+ 
+@@ -62,5 +62,7 @@
+ 
+ package() {
+   meson install -C build --destdir "$pkgdir"
++
++  rm -r $pkgdir/usr/lib/systemd
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,19 +0,0 @@
+-cairo
+-dconf
+-fontconfig
+-gcc-libs
+-gdk-pixbuf2
+-git
+-glib2
+-glib2-devel
+-glibc
+-gnome-desktop-4
+-graphene
+-gtk4
+-libadwaita
+-libx11
+-meson
+-nautilus
+-wayland
+-xdg-desktop-portal
+-xdg-desktop-portal-gtk>
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ }
+ build() {
+ export MESON_PACKAGE_CACHE_DIR="$srcdir"
+-arch-meson $pkgname build
++artix-meson $pkgname build -Dsystemduserunitdir=/usr/lib/systemd
+ meson compile -C build
+ }

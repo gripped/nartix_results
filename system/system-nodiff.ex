@@ -45,6 +45,7 @@ gnupg
 gnutls
 gpgme
 groff
+grub
 guile
 hdparm
 hwdata
@@ -104,7 +105,6 @@ libsecret-docs
 libssh2
 libtasn1
 libtirpc
-libtool
 libunistring
 libverto
 libxcrypt

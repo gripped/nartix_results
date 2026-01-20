@@ -35,11 +35,11 @@ glibc-locales
 gmp
 gpm
 grep
-grub
 gssproxy
 gzip
 iputils
 libsasl
+libtool
 libusb
 linux
 linux-headers

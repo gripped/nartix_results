@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=libxfce4windowing
- pkgver=4.20.5
--pkgrel=3
-+pkgrel=2
- pkgdesc="Windowing concept abstraction library for X11 and Wayland"
- arch=('x86_64')
- url="https://docs.xfce.org/xfce/libxfce4windowing/start"
 @@ -9,11 +9,9 @@
  depends=('gdk-pixbuf2' 'glib2' 'gtk3' 'libwnck3' 'libdisplay-info' 'libx11' 'wayland')
  makedepends=('git' 'glib2-devel' 'gobject-introspection' 'gtk-doc' 'meson' 'vala' 'wayland-protocols' 'xfce4-dev-tools')
@@ -23,12 +14,12 @@
  
  prepare() {
    cd $pkgname
-@@ -21,12 +19,10 @@
-   git submodule init
+@@ -22,11 +20,11 @@
    git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
    git -c protocol.file.allow=always submodule update
--
+ 
 -  git apply -3 ../libxfce4windowing-protocols-dep.patch
++  git cherry-pick -n 9b1e7e18343f927f9946960977804230f3fbc16d
  }
  
  build() {
@@ -45,11 +36,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,10 +3,9 @@
+@@ -3,10 +3,10 @@
  git submodule init
  git config submodule.mate-submodules.url "$srcdir/protocols/wlr-protocols"
  git -c protocol.file.allow=always submodule update
 -git apply -3 ../libxfce4windowing-protocols-dep.patch
++git cherry-pick -n 9b1e7e18343f927f9946960977804230f3fbc16d
  }
  build() {
 -arch-meson $pkgname build \

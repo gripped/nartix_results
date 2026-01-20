@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,6 +19,10 @@
+@@ -27,6 +27,10 @@
  
  build() {
    cd $pkgname-$pkgver
@@ -11,7 +11,7 @@
    python -m build --wheel --no-isolation
  }
  
-@@ -27,8 +31,6 @@
+@@ -35,8 +39,6 @@
    cd $pkgname-$pkgver
    python -m installer --destdir="$pkgdir" dist/*.whl
    install -Dm644 "man/${pkgname}.1.gz" "${pkgdir}/usr/share/man/man1/${pkgname}.1.gz"
@@ -28,7 +28,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,4 +1,8 @@
+@@ -4,5 +4,9 @@
+ }
  build() {
  cd $pkgname-$pkgver
 +sed -e "s|https://archlinux.org|https://status.artixlinux.org|g" \

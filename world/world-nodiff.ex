@@ -454,6 +454,9 @@ dkms
 dleyna
 dleyna-docs
 python-dleyna
+dmd
+dmd-docs
+libphobos
 dmenu
 dmg2img
 dmidecode
@@ -1093,7 +1096,6 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
-imagemagick
 imake
 imath
 img2pdf
@@ -1140,6 +1142,7 @@ ipset
 ipython
 irssi
 isa-l
+iso-codes
 isodate
 python-isodate
 isoimagewriter
@@ -1645,6 +1648,8 @@ libbluray
 libbobcat
 libbs2b
 libbsd
+libburn
+libbytesize
 libcaca
 libcacard
 libcanberra
@@ -1783,6 +1788,8 @@ libindicator-gtk3
 libinstpatch
 libiptcdata
 libiscsi
+libisoburn
+libisofs
 libixion
 libjcat
 libjpeg-turbo
@@ -2004,6 +2011,7 @@ libtatsu
 libteam
 libteam-docs
 libtermkey
+libthai
 libtheora
 libtiff
 libtiger
@@ -3409,7 +3417,6 @@ python-deprecation
 python-devtools
 python-diff-cover
 python-digitalocean
-python-dill
 python-dirty-equals
 python-discid
 python-discogs-client
@@ -4213,7 +4220,6 @@ python-python-pkcs11
 python-python-socks
 python-pythonfinder
 python-pythran
-python-pytokens
 python-pytoml
 python-pytoolconfig
 python-pytools
@@ -5672,6 +5678,7 @@ vagrant
 vala
 valabind
 valgrind
+vamp-plugin-sdk
 vapoursynth
 vc-intrinsics
 vc
@@ -5828,6 +5835,7 @@ xmldiff
 xmlsec
 xmlstarlet
 xmlto
+xmltoman
 xmms2
 xmrig
 xonsh

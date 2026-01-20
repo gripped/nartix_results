@@ -249,6 +249,7 @@ waterfox
 wayfire-plugins-extra
 wayfire
 wcm
+webappcontainer
 webmin
 wf-config
 wf-shell

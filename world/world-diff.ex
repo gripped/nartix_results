@@ -105,9 +105,6 @@ dhcp
 dhclient
 dhcpcd
 directx-shader-compiler
-dmd
-dmd-docs
-libphobos
 dns-over-https
 docker
 dolphin-emu
@@ -288,10 +285,10 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+imagemagick
 intel-opencl-clang
 intel-undervolt
 interception-tools
-iso-codes
 iwd
 jack2
 jack2-dbus
@@ -354,8 +351,6 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
-libburn
-libbytesize
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -386,8 +381,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libisoburn
-libisofs
 libkrun
 libldm
 liblqr
@@ -411,7 +404,6 @@ libsidplayfp
 libsoxr
 libstaroffice
 libtg_owt
-libthai
 libudev0-shim
 libunwind
 libusbsio
@@ -725,11 +717,13 @@ pysolfc
 python-anytree
 python-asn1crypto
 python-debugpy
+python-dill
 python-hidapi
 python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
+python-pytokens
 python-pyudev
 python-recommonmark
 qastools
@@ -968,7 +962,6 @@ uwsgi-plugin-notfound
 v2ray
 v4l-utils
 valkey
-vamp-plugin-sdk
 vault
 vim
 gvim
@@ -1146,7 +1139,6 @@ xfconf
 xfdesktop
 xfwm4
 xl2tpd
-xmltoman
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb
