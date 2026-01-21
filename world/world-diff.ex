@@ -285,7 +285,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-imagemagick
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -381,9 +380,12 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libkrun
 libldm
 liblqr
+libmatekbd
+libmatemixer
 libmateweather
 libmilter
 libmms
@@ -717,13 +719,11 @@ pysolfc
 python-anytree
 python-asn1crypto
 python-debugpy
-python-dill
 python-hidapi
 python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
-python-pytokens
 python-pyudev
 python-recommonmark
 qastools

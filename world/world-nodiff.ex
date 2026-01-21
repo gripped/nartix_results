@@ -1096,6 +1096,7 @@ icon-naming-utils
 icoutils
 id3lib
 ijs
+imagemagick
 imake
 imath
 img2pdf
@@ -1796,7 +1797,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1839,8 +1839,6 @@ liblzf
 libmad
 libmanette
 libmanette-docs
-libmatekbd
-libmatemixer
 libmatroska
 libmaxminddb
 libmbim
@@ -3417,6 +3415,7 @@ python-deprecation
 python-devtools
 python-diff-cover
 python-digitalocean
+python-dill
 python-dirty-equals
 python-discid
 python-discogs-client
@@ -4220,6 +4219,7 @@ python-python-pkcs11
 python-python-socks
 python-pythonfinder
 python-pythran
+python-pytokens
 python-pytoml
 python-pytoolconfig
 python-pytools
@@ -5932,6 +5932,7 @@ ytfzf
 yyjson
 z3
 python-z3-solver
+z3-java
 zanshin
 zathura-cb
 zathura-djvu

@@ -39,7 +39,6 @@ gssproxy
 gzip
 iputils
 libsasl
-libtool
 libusb
 linux
 linux-headers

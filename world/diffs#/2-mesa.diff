@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,7 @@
- )
- pkgver=25.3.3
- _pkgver=${pkgver/[a-z]/-&}
--pkgrel=3
-+pkgrel=2
- epoch=1
- pkgdesc="Open-source OpenGL drivers"
- url="https://www.mesa3d.org/"
 @@ -52,7 +52,6 @@
    rust
    spirv-llvm-translator
@@ -17,15 +8,6 @@
    vulkan-icd-loader
    wayland
    xcb-util-keysyms
-@@ -222,7 +221,7 @@
-     -D gallium-drivers=all
-     -D gallium-extra-hud=true
-     -D gallium-mediafoundation=disabled
--    -D gallium-rusticl-enable-drivers=asahi,freedreno,radeonsi
-+    -D gallium-rusticl-enable-drivers=all
-     -D gallium-rusticl=true
-     -D gles1=disabled
-     -D html-docs=enabled
 @@ -241,7 +240,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"

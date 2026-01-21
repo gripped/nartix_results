@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=perl-tidy
+-pkgver=20260109
++pkgver=20250912
+ pkgrel=1
+ pkgdesc="Parses and beautifies perl source"
+ arch=('any')
+@@ -9,7 +9,7 @@
+ depends=('perl>=5.10.0')
+ options=('!emptydirs')
+ source=(https://www.cpan.org/authors/id/S/SH/SHANCOCK/Perl-Tidy-$pkgver.tar.gz)
+-sha256sums=('76404514505ba0c768a394d4f28ea0691c8899b049258aa545b7042265e14811')
++sha256sums=('b48ee48835fbceab2fde0f1c59c5a539f046e3bb236fa34d8b60871fd79cf0a4')
+ 
+ build() {
+   cd  "${srcdir}"/Perl-Tidy-$pkgver
+@@ -22,4 +22,6 @@
+   cd  "${srcdir}"/Perl-Tidy-$pkgver
+ 
+   make install DESTDIR="${pkgdir}"
++  find "${pkgdir}" -name '.packlist' -delete
++  find "${pkgdir}" -name '*.pod' -delete
+ }

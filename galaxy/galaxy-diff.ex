@@ -26,6 +26,9 @@ hexchat
 hugin
 lemurs
 libetonyek
+libmatekbd
+libmatemixer
+libmateweather
 libodfgen
 libratbag
 libretro-dolphin
@@ -40,6 +43,7 @@ libxfce4windowing
 light
 lxqt-config
 ly
+mate-common
 mate-control-center
 mate-screensaver
 mate-session-manager
