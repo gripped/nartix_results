@@ -18,7 +18,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -3,6 +3,6 @@
- git apply -3 ../fix-build.diff
+ git apply -3 ../0001-Fix-build-with-recent-Meson.patch
  }
  build() {
 -arch-meson $pkgname build

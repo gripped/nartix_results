@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -38,7 +38,7 @@
+@@ -44,7 +44,7 @@
  }
  
  build() {
@@ -18,7 +18,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -7,6 +7,6 @@
- git apply -3 ../gnome-sound-recorder-dbus-activatable.patch
+ git apply -3 ../0002-Add-D-Bus-service-file.patch
  }
  build() {
 -arch-meson $pkgname build

@@ -1647,7 +1647,6 @@ libb64
 libblastrampoline
 libbluray
 libbobcat
-libbs2b
 libbsd
 libburn
 libbytesize
@@ -1708,6 +1707,7 @@ libesmtp
 libetebase
 libetonyek
 libetonyek-doc
+libev
 libevdev
 libewf
 libexif
@@ -1797,6 +1797,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2119,7 +2120,6 @@ libyuv
 libzen
 libzip
 libzmf
-liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
@@ -2587,7 +2587,6 @@ p7zip
 packagekit-qt
 packagekit-qt6
 pacmanlogviewer
-pacrunner
 pacutils
 pahole
 ostra-cg

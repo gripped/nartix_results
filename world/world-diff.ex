@@ -316,7 +316,11 @@ jdk21-openjdk
 openjdk21-src
 openjdk21-doc
 java8-openjdk
-jre8-openjdk-headlessjre8-openjdkjdk8-openjdkopenjdk8-srcopenjdk8-doc
+jre8-openjdk-headless
+jre8-openjdk
+jdk8-openjdk
+openjdk8-src
+openjdk8-doc
 jbigkit
 js78
 jupyter-server-ydoc
@@ -350,6 +354,7 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
+libbs2b
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -368,7 +373,6 @@ libei-docs
 libepoxy
 libepoxy-docs
 libepubgen
-libev
 libfido2
 libfprint
 libfreehand
@@ -380,7 +384,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libkrun
 libldm
 liblqr
@@ -419,6 +422,7 @@ libxfce4ui
 libxfce4util
 libxklavier
 libxmlrpc
+liferea
 light-locker
 lightdm-slick-greeter
 lightdm
@@ -622,6 +626,7 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+pacrunner
 parole
 passim
 pc-ble-driver
@@ -806,6 +811,7 @@ qemu-ui-core
 qemu-user
 qemu-user-static
 qemu-vhost-user-gpu
+qemu-vmsr-helper
 qemu-base
 qemu-desktop
 qemu-emulators-full

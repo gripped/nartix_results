@@ -4,16 +4,18 @@
  
  pkgname=bash-completion
  pkgver=2.17.0
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc='Programmable completion for the bash shell'
  arch=(any)
  url='https://github.com/scop/bash-completion'
-@@ -26,7 +26,5 @@
+@@ -26,9 +26,5 @@
    rm "${pkgdir}/etc/profile.d/bash_completion.sh"
  
    rm "${pkgdir}/usr/share/bash-completion/completions/makepkg"
 -
 -  rm "${pkgdir}/usr/share/bash-completion/completions/checksec"
+-
+-  rm "${pkgdir}/usr/share/bash-completion/completions/interdiff"
  }
  

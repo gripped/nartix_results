@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -112,7 +112,7 @@
+@@ -110,7 +110,7 @@
    snappy
    spice-protocol
    spice
@@ -9,7 +9,7 @@
    usbredir
    vde2
    virglrenderer
-@@ -289,7 +289,6 @@
+@@ -287,7 +287,6 @@
  
    sed -n '3,33p' $pkgbase-$pkgver/include/standard-headers/linux/fuse.h > fuse.LICENSE.BSD-2-Clause.txt
  
@@ -17,7 +17,7 @@
  
    mkdir -vp build
    mkdir -vp build-static
-@@ -719,14 +718,13 @@
+@@ -717,14 +716,13 @@
  
  package_qemu-guest-agent() {
    pkgdesc="QEMU Guest Agent"
@@ -33,7 +33,7 @@
    install -vDm 644 99-$pkgname.rules -t "$pkgdir/usr/lib/udev/rules.d/"
    install -vDm 644 $pkgbase-ga.conf -t "$pkgdir/etc/$pkgbase/"
    install -vDm 755 $pkgbase-$pkgver/scripts/$pkgname/fsfreeze-hook -t "$pkgdir/etc/$pkgbase/"
-@@ -813,14 +811,14 @@
+@@ -811,14 +809,14 @@
  
  package_qemu-system-aarch64() {
    pkgdesc="QEMU system emulator for AARCH64"
@@ -50,7 +50,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -834,7 +832,7 @@
+@@ -832,7 +830,7 @@
  
  package_qemu-system-arm() {
    pkgdesc="QEMU system emulator for ARM"
@@ -59,7 +59,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -855,7 +853,7 @@
+@@ -853,7 +851,7 @@
  
  package_qemu-system-hppa() {
    pkgdesc="QEMU system emulator for HPPA"
@@ -68,7 +68,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -869,7 +867,7 @@
+@@ -867,7 +865,7 @@
  
  package_qemu-system-loongarch64() {
    pkgdesc="QEMU system emulator for LoongArch64"
@@ -77,7 +77,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -897,21 +895,21 @@
+@@ -895,21 +893,21 @@
  
  package_qemu-system-mips() {
    pkgdesc="QEMU system emulator for MIPS"
@@ -102,7 +102,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -925,7 +923,7 @@
+@@ -923,7 +921,7 @@
  
  package_qemu-system-riscv() {
    pkgdesc="QEMU system emulator for RISC-V"
@@ -111,7 +111,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -946,7 +944,7 @@
+@@ -944,7 +942,7 @@
  
  package_qemu-system-s390x() {
    pkgdesc="QEMU system emulator for S390"
@@ -120,7 +120,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -960,14 +958,14 @@
+@@ -958,14 +956,14 @@
  
  package_qemu-system-sh4() {
    pkgdesc="QEMU system emulator for SH4"
@@ -137,7 +137,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -988,7 +986,7 @@
+@@ -986,7 +984,7 @@
  
  package_qemu-system-x86() {
    pkgdesc="QEMU system emulator for x86"
@@ -146,7 +146,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -1002,7 +1000,7 @@
+@@ -1000,7 +998,7 @@
  
  package_qemu-system-xtensa() {
    pkgdesc="QEMU system emulator for Xtensa"
@@ -155,7 +155,7 @@
    mv -v $pkgname/* "$pkgdir"
    _install_licenses
  }
-@@ -1044,9 +1042,8 @@
+@@ -1042,9 +1040,8 @@
  
  package_qemu-pr-helper() {
    pkgdesc="QEMU persistent reservation utility"
@@ -167,8 +167,8 @@
    _install_licenses
  }
  
-@@ -1181,7 +1178,6 @@
-   pkgdesc="QEMU persistent reservation utility"
+@@ -1180,7 +1177,6 @@
+   arch=(x86_64)
    depends=(gcc-libs glib2 libglib-2.0.so libgmodule-2.0.so glibc gnutls libcap-ng libcap-ng.so liburing liburing.so numactl libnuma.so pam libpam.so qemu-common=$pkgver-$pkgrel)
    mv -v $pkgname/* "$pkgdir"
 -  install -vDm 644 $pkgbase-$pkgver/contrib/systemd/$pkgname.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"

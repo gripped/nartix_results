@@ -93,6 +93,7 @@ libnfnetlink
 libnftnl
 libnghttp2
 libnghttp3
+libngtcp2
 libnl
 libnsl
 libpcap
