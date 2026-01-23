@@ -354,7 +354,6 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
-libbs2b
 libcamera
 libcamera-docs
 libcamera-ipa
@@ -427,6 +426,9 @@ light-locker
 lightdm-slick-greeter
 lightdm
 liblightdm-qt5
+lilv
+lilv-docs
+python-lilv
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -626,7 +628,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-pacrunner
 parole
 passim
 pc-ble-driver

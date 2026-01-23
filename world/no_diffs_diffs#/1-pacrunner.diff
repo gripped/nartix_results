@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,31 +47,4 @@
+   make
+ }
+ 
+-package() {
+-  cd $pkgname
+-  make DESTDIR="$pkgdir" install
+ 
+-  install -Dm644 /dev/stdin "$pkgdir/usr/lib/systemd/system/pacrunner.service" <<END
+-[Unit]
+-Description=Proxy configuration daemon
+-Before=network.target
+-Wants=network.target
+-
+-[Service]
+-Type=dbus
+-BusName=org.pacrunner
+-ExecStart=/usr/bin/pacrunner
+-
+-[Install]
+-WantedBy=multi-user.target
+-END
+-
+-  install -Dm644 /dev/stdin "$pkgdir/usr/share/dbus-1/system-services/org.pacrunner.service" <<END
+-[D-BUS Service]
+-Name=org.pacrunner
+-Exec=/usr/bin/pacrunner
+-User=root
+-SystemdService=pacrunner.service
+-END
+-}
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +0,0 @@
+-curl
+-dbus
+-duktape
+-git
+-glib2
+-glibc

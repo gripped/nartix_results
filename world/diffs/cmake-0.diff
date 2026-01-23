@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,14 +28,17 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cmake
+ pkgver=4.2.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A cross-platform open-source make system'
+ arch=('x86_64')
+ url="https://www.cmake.org/"
+@@ -28,15 +28,17 @@
    'ninja: for ninja generator'
    'qt6-base: cmake-gui'
  )
@@ -14,8 +23,10 @@
  
  prepare() {
    cd $pkgname
-   git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
++  git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
    git cherry-pick -n 261b7b933c6604095687d473503e24bae6ec0d6f # Support LUA 5.5
+-
+-  rm -fr .git # Avoid dirty version number
 +  git apply ../artix-cmake.patch
  }
  
@@ -28,10 +39,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,7 @@
+@@ -1,7 +1,8 @@
+ prepare() {
  cd $pkgname
- git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
++git cherry-pick -n a869b79c5921412c91fb71a761748ae5f7d3fb23 # Fix FindHDF5 for HDF5 built with cmake
  git cherry-pick -n 261b7b933c6604095687d473503e24bae6ec0d6f # Support LUA 5.5
+-rm -fr .git # Avoid dirty version number
 +git apply ../artix-cmake.patch
  }
  build() {

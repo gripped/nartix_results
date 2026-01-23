@@ -1647,6 +1647,7 @@ libb64
 libblastrampoline
 libbluray
 libbobcat
+libbs2b
 libbsd
 libburn
 libbytesize
@@ -2124,9 +2125,6 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
 lighttpd
-lilv
-lilv-docs
-python-lilv
 lilypond
 limine
 linux-atm
@@ -2587,6 +2585,7 @@ p7zip
 packagekit-qt
 packagekit-qt6
 pacmanlogviewer
+pacrunner
 pacutils
 pahole
 ostra-cg
