@@ -177,6 +177,8 @@ libfm-qt
 libkeyfinder
 liblangtag
 liblxqt
+libmatekbd
+libmateweather
 libmspub
 libopenshot-audio
 libopenshot-audio-docs
@@ -273,6 +275,7 @@ marco
 mate-applets
 mate-backgrounds
 mate-calc
+mate-common
 mate-desktop
 mate-icon-theme-faenza
 mate-icon-theme

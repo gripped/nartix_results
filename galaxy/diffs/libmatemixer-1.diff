@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+   glib2
+   glibc
+   libpulse
+-  systemd-libs
++  libelogind
+ )
+ makedepends=(
+   git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,5 +3,5 @@
+ glib2
+ glibc
+ gtk-doc
++libelogind
+ libpulse
+-systemd-libs

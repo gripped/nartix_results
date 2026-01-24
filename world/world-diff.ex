@@ -47,6 +47,8 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+cdrdao
+gcdmaster
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -500,6 +502,7 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+marknote
 mate-applets
 mate-backgrounds
 mate-calc
@@ -593,6 +596,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs-lts-jod
 nsd
 nushell
 nvidia-340xx-utils

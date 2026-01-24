@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=tigervnc
+ pkgver=1.16.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Suite of VNC servers and clients based on the VNC 4 branch of TightVNC"
+ arch=('x86_64')
+ url="https://www.tigervnc.org"
+@@ -35,7 +35,7 @@
    'pam'
    'perl'
    'pixman'
@@ -9,10 +18,50 @@
    'xkeyboard-config'
    'xorg-xauth'
    'xorg-xinit'
-@@ -147,4 +147,6 @@
+@@ -70,20 +70,16 @@
+   Xsession
+   more-xsessions.patch
+   remove-selinux.patch
+-  tigervnc-1.16.0-fltk1.3.patch
+ )
+ sha256sums=('86d13ae2ec6775f7c1e61f93aff8a9036c06aa82529cc5d446d779da34210f93'
+             'c9276f6ea277cf9654fb2cc3bc9dadbb2e596b5cf8ca867ee906c0080cf7f810'
+             'df7d5ac0b16781ba50963833f1bdd4603f1cdfcc24b1727f563ae800508c9dc0'
+-            'b5da49ee5f10dd40945df9c8563066c5523a24ac0ad934c7efcb41d0847b94ed'
+-            '4f17f32887b7818c27c7ddb2a4da499e477f5f2f7e0f183bb473dfaafab263c4')
++            'b5da49ee5f10dd40945df9c8563066c5523a24ac0ad934c7efcb41d0847b94ed')
+ 
+ prepare() {
+   cd ${pkgname}
+   patch -p1 -i ../more-xsessions.patch
+   patch -p1 -i ../remove-selinux.patch
+-
+-  patch -Np1 -i ../$pkgname-1.16.0-fltk1.3.patch
+ 
+   cd unix/xserver
+   cp -r /usr/src/xorg-server/* .
+@@ -99,7 +95,6 @@
+     -D CMAKE_INSTALL_SBINDIR=/usr/bin
+     -D CMAKE_INSTALL_LIBEXECDIR=/usr/bin
+     -D BUILD_JAVA=TRUE
+-    -D BUILD_VIEWER=TRUE
+     -S .  # out-of-tree build not possible due to xorg-server build below
+     -W no-dev
+   )
+@@ -126,8 +121,7 @@
+   )
+ 
+   cd $pkgname
+-  CFLAGS+=" -I/usr/include/fltk1.3 -L/usr/lib/fltk1.3"
+-  LDFLAGS+=" -L/usr/lib/fltk1.3"
++  CFLAGS+=" -L/usr/lib/fltk1.3"
+   cmake "${cmake_options[@]}"
+   cmake --build . --verbose
+ 
+@@ -145,4 +139,6 @@
+   make DESTDIR="$pkgdir" install
    install -Dm0755 "$srcdir"/Xsession "$pkgdir"/etc/X11/tigervnc/Xsession
  
-   strip-nondeterminism "$pkgdir"/usr/share/vnc/classes/VncViewer.jar
 +
 +  sed -i '/systemd/Id' "$pkgdir"/etc/pam.d/tigervnc
  }
@@ -30,11 +79,11 @@
  libunwind
  libx11
  libxau
-@@ -32,7 +33,6 @@
+@@ -31,7 +32,6 @@
+ pam
  perl
  pixman
- strip-nondeterminism
 -systemd-libs
  xkeyboard-config
  xorg-font-util
- xorg-util-macros
+ xorg-server-src

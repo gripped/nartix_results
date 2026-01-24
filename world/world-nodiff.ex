@@ -300,8 +300,6 @@ cbatticon
 cbindgen
 ccache
 cdparanoia
-cdrdao
-gcdmaster
 cdrtools
 celluloid
 cervisia
@@ -2278,7 +2276,6 @@ markdownlint
 markdownpart
 marked-man
 marked
-marknote
 massif-visualizer
 mat2
 materia-kde
@@ -2448,7 +2445,6 @@ node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
-nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
 nodejs
