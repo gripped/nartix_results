@@ -24,6 +24,7 @@ gtk-engine-murrine
 gtklock
 hexchat
 hugin
+intel-gpu-tools
 lemurs
 libetonyek
 libmatemixer

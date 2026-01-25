@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _name=django-debug-toolbar
+ pkgname=python-django-debug-toolbar
+-pkgver=6.2.0
+-pkgrel=1
++pkgver=6.1.0
++pkgrel=2
+ pkgdesc='A configurable set of panels that display various debug information about the current request/response.'
+ arch=(any)
+ url='https://github.com/jazzband/django-debug-toolbar'
+@@ -11,7 +11,7 @@
+ checkdepends=(python-jinja python-html5lib)
+ depends=(python-django python-sqlparse)
+ source=(${pkgname}-${pkgver}.tar.gz::https://github.com/jazzband/${_name}/archive/${pkgver}.tar.gz)
+-sha256sums=('7b53a5da5915cd35c02e2a9cff0d64b4bbb076195ec347036d8f8c189861ac17')
++sha256sums=('52e40c2c3260e3016e7616008c765c80955e8410455645acace1b89c29037ef1')
+ 
+ prepare() {
+   cd "${_name}-${pkgver}"

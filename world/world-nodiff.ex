@@ -300,6 +300,8 @@ cbatticon
 cbindgen
 ccache
 cdparanoia
+cdrdao
+gcdmaster
 cdrtools
 celluloid
 cervisia
@@ -1812,6 +1814,7 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
+libkrun
 libkrunfw
 libksane
 libkscreen
@@ -2123,6 +2126,9 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
 lighttpd
+lilv
+lilv-docs
+python-lilv
 lilypond
 limine
 linux-atm
@@ -2276,6 +2282,7 @@ markdownlint
 markdownpart
 marked-man
 marked
+marknote
 massif-visualizer
 mat2
 materia-kde

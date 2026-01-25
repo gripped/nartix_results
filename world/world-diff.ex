@@ -47,8 +47,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
-cdrdao
-gcdmaster
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -385,7 +383,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkrun
 libldm
 liblqr
 libmatekbd
@@ -428,9 +425,6 @@ light-locker
 lightdm-slick-greeter
 lightdm
 liblightdm-qt5
-lilv
-lilv-docs
-python-lilv
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -502,7 +496,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-marknote
 mate-applets
 mate-backgrounds
 mate-calc

@@ -146,7 +146,6 @@ gtk4-layer-shell
 hyperfine
 imv
 incron
-intel-gpu-tools
 joyutils
 just
 kanshi
@@ -332,6 +331,7 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 peek
+peg
 pekwm
 perl-cairo-gobject
 perl-config-grammar
@@ -432,6 +432,7 @@ screengrab
 scribus
 scummvm
 shairplay
+shotcut
 smokeping
 snes9x
 snes9x-gtk
