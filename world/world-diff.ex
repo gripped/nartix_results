@@ -723,12 +723,14 @@ python-anytree
 python-asn1crypto
 python-debugpy
 python-hidapi
+python-marshmallow
 python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-requests-kerberos
 qastools
 qbittorrent
 qbittorrent-nox
@@ -851,9 +853,11 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-cucumber
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
+ruby
 rust
 lib32-rust-libs
 rust-musl

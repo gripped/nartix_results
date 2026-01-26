@@ -1,19 +1,60 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -108,7 +108,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gimp
+-pkgver=3.0.8
+-pkgrel=1
++pkgver=3.0.6
++pkgrel=2
+ pkgdesc='GNU Image Manipulation Program'
+ url='https://www.gimp.org/'
+ arch=('x86_64')
+@@ -9,7 +9,6 @@
+ depends=(
+   'appstream'
+   'babl'
+-  'bash-completion'
+   'cairo'
+   'fontconfig'
+   'freetype2'
+@@ -85,7 +84,7 @@
+   git+https://gitlab.gnome.org/GNOME/gimp.git#tag=GIMP_${pkgver//./_}
+   git+https://gitlab.gnome.org/GNOME/gimp-data.git
+ )
+-sha256sums=('7737db8e51e7a95a43734cfe8c01cdf8a8391c9d19262348c3f5bee42a0bda04'
++sha256sums=('207318f002baa3703197d24bc45267c00564505b0307cd312a2279424ca4d7e2'
+             'SKIP')
+ 
+ prepare() {
+@@ -109,12 +108,8 @@
      -Dheadless-tests=disabled # enabled by default, depends on xorg-server-xvfb
    )
  
 -  arch-meson ${pkgname} build "${meson_options[@]}"
 +  artix-meson ${pkgname} build "${meson_options[@]}"
    meson compile -C build
+-}
+-
+-check() {
+-  meson test -C build --print-errorlogs
  }
  
+ package() {
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -2,7 +2,6 @@
+ alsa-lib
+ appstream
+ babl
+-bash-completion
+ bzip2
+ cairo
+ cfitsio
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

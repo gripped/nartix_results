@@ -3,7 +3,7 @@
 @@ -1,19 +1,20 @@
  
  pkgname=featherpad
--pkgver=1.6.2
+-pkgver=1.6.3
 +pkgver=1.6.1
  pkgrel=1
  pkgdesc='Lightweight Qt plain text editor'
@@ -13,7 +13,7 @@
  depends=('hicolor-icon-theme' 'hunspell' 'qt6-svg')
 -makedepends=('cmake' 'git' 'ninja' 'qt6-tools')
 -source=("git+https://github.com/tsujan/FeatherPad.git#tag=V${pkgver}?signed")
--sha256sums=('e0782826cd1488be56e38320c7a66ec6ebc71aebac16bcbbe9dd01ff61f1386f')
+-sha256sums=('5252d69c3805752b2e8e05f9aaeeea4b31fdd808f5025accb8c5ded9027be5f5')
 +makedepends=('cmake' 'ninja' 'qt6-tools')
 +source=("https://github.com/tsujan/FeatherPad/releases/download/V$pkgver/FeatherPad-$pkgver.tar.xz"{,.asc})
 +sha256sums=('fb2515f65b607cd659e67eb20bb348d81357bd3471ad4f6e887fa0c49be509ad'

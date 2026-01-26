@@ -3793,7 +3793,6 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
-python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -4269,7 +4268,6 @@ python-requests-file
 python-requests-ftp
 python-requests-futures
 python-requests-gssapi
-python-requests-kerberos
 python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
@@ -4883,7 +4881,6 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
-ruby-cucumber
 ruby-daemons
 ruby-date
 ruby-dbm
@@ -5184,7 +5181,6 @@ ruby-x25519
 ruby-xrb
 ruby-yard
 ruby-zeitwerk
-ruby
 ruby2.7
 rubygems
 ruff
