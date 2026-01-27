@@ -17,6 +17,15 @@
           ttf-agave-nerd
           ttf-anonymouspro-nerd
           ttf-arimo-nerd
+@@ -69,7 +67,7 @@
+          ttf-zed-mono-nerd)
+ pkgdesc="Iconic font aggregator, collection, and patcher"
+ pkgver=3.4.0
+-pkgrel=2
++pkgrel=1
+ arch=('any')
+ url='https://github.com/ryanoasis/nerd-fonts'
+ _urlbase="${url}/releases/download/v${pkgver}"
 @@ -79,11 +77,9 @@
  groups=('nerd-fonts')
  source=("0xproto-${pkgver}.tar.xz::${_urlbase}/0xProto.tar.xz"

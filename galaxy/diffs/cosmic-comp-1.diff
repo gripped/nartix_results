@@ -32,19 +32,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,15 +0,0 @@
--cargo
--fontconfig
--gcc-libs
--git
--glibc
--libdisplay-info
--libinput
--libseat.so
--libxcb
--libxkbcommon
--lld
--mesa
--pixman
+@@ -4,6 +4,7 @@
+ git
+ glibc
+ libdisplay-info
++libelogind
+ libinput
+ libseat.so
+ libxcb
+@@ -11,5 +12,4 @@
+ lld
+ mesa
+ pixman
 -systemd-libs
--wayland
+ wayland

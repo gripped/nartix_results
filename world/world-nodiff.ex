@@ -1798,7 +1798,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4172,7 +4171,6 @@ python-pytest-metadata
 python-pytest-mock
 python-pytest-mpi
 python-pytest-mpl
-python-pytest-mypy-testing
 python-pytest-mypy
 python-pytest-order
 python-pytest-ordering
@@ -4395,7 +4393,6 @@ python-sphinxcontrib-serializinghtml
 python-sphinxcontrib-spelling
 python-sphinxcontrib-towncrier
 python-sphinxcontrib-trio
-python-sphinxext-opengraph
 python-sphinxygen
 python-sphobjinv
 python-spsdk
@@ -5917,7 +5914,6 @@ yara
 yarn
 yasm
 yaz
-yazi
 yelp-tools
 yelp-xsl
 yelp

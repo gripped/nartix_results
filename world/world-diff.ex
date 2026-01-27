@@ -383,6 +383,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -728,9 +729,11 @@ python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
+python-pytest-mypy-testing
 python-pyudev
 python-recommonmark
 python-requests-kerberos
+python-sphinxext-opengraph
 qastools
 qbittorrent
 qbittorrent-nox
@@ -1159,6 +1162,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

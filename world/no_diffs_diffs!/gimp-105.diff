@@ -1,24 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=gimp
 -pkgver=3.0.8
--pkgrel=1
 +pkgver=3.0.6
-+pkgrel=2
+ pkgrel=2
  pkgdesc='GNU Image Manipulation Program'
  url='https://www.gimp.org/'
- arch=('x86_64')
-@@ -9,7 +9,6 @@
- depends=(
-   'appstream'
-   'babl'
+@@ -57,7 +57,6 @@
+ )
+ makedepends=(
+   'alsa-lib'
 -  'bash-completion'
-   'cairo'
-   'fontconfig'
-   'freetype2'
-@@ -85,7 +84,7 @@
+   'cfitsio'
+   'ghostscript'
+   'gi-docgen'
+@@ -74,7 +73,6 @@
+ )
+ optdepends=(
+   'alsa-lib: for MIDI event controller module'
+-  'bash-completion: for bash completion support'
+   'cfitsio: for FITS support'
+   'ghostscript: for PostScript support'
+   'gjs: for JavaScript scripting support'
+@@ -86,7 +84,7 @@
    git+https://gitlab.gnome.org/GNOME/gimp.git#tag=GIMP_${pkgver//./_}
    git+https://gitlab.gnome.org/GNOME/gimp-data.git
  )
@@ -27,7 +33,7 @@
              'SKIP')
  
  prepare() {
-@@ -109,12 +108,8 @@
+@@ -110,12 +108,8 @@
      -Dheadless-tests=disabled # enabled by default, depends on xorg-server-xvfb
    )
  
