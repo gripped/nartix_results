@@ -128,7 +128,6 @@ aspell
 assimp
 astromenace
 astyle
-atftp
 atkmm-2.36
 atkmm-2.36-docs
 atkmm
@@ -438,6 +437,7 @@ devhelp
 devhelp-docs
 devil
 dht
+dialog
 diffstat
 diffuse
 digikam
@@ -3792,6 +3792,7 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
+python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -4266,6 +4267,7 @@ python-requests-file
 python-requests-ftp
 python-requests-futures
 python-requests-gssapi
+python-requests-kerberos
 python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
@@ -4878,6 +4880,7 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
+ruby-cucumber
 ruby-daemons
 ruby-date
 ruby-dbm
@@ -5914,6 +5917,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp

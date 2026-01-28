@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=kwin
- pkgver=6.5.5
- _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=1
-+pkgrel=1.1
- pkgdesc='An easy to use, but flexible, Wayland compositor'
- arch=(x86_64)
- url='https://kde.org/plasma-desktop/'
 @@ -61,7 +61,7 @@
           qt6-sensors
           qt6-svg
@@ -18,7 +9,7 @@
           wayland
           xcb-util-keysyms
           xcb-util-wm)
-@@ -93,4 +93,6 @@
+@@ -99,4 +99,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
    setcap CAP_SYS_NICE=+ep "$pkgdir"/usr/bin/kwin_wayland

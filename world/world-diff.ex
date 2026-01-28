@@ -15,6 +15,7 @@ archivetools
 at-spi2-core
 at-spi2-core-docs
 at
+atftp
 atril
 audacious-plugins
 avahi
@@ -724,7 +725,6 @@ python-anytree
 python-asn1crypto
 python-debugpy
 python-hidapi
-python-marshmallow
 python-pymad
 python-pymupdf
 python-pyscard
@@ -732,7 +732,6 @@ python-pytest-freezegun
 python-pytest-mypy-testing
 python-pyudev
 python-recommonmark
-python-requests-kerberos
 python-sphinxext-opengraph
 qastools
 qbittorrent
@@ -856,7 +855,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-cucumber
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
@@ -1162,7 +1160,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

@@ -51,7 +51,6 @@ hdparm
 hwdata
 iana-etc
 icu
-inetutils
 iproute2
 iptables
 iptables-nft

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,8 +9,8 @@
+@@ -9,15 +9,15 @@
  groups=(jami)
  depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
           fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
@@ -11,6 +11,23 @@
  checkdepends=(cppunit)
  _commit=afe2446133eb3c9279e42b0d1dcfdd9a3c76a35f
  _pjprojectver=93dc96918bb6ba74e1e1d00c40c80402e856f2ac
+ _dhtnetver=7861b4620b4cec5fa34c5d1bb2b304912730f638
+ source=(git+https://git.jami.net/savoirfairelinux/${pkgname}.git#commit=${_commit}
+         https://github.com/savoirfairelinux/pjproject/archive/${_pjprojectver}/pjproject-${_pjprojectver}.tar.gz
+-        dhtnet-$_dhtnetver.tar.gz::https://review.jami.net/plugins/gitiles/dhtnet/+archive/$_dhtnetver.tar.gz
++        dhtnet-$_dhtnetver.tar.gz::https://git.jami.net/savoirfairelinux/dhtnet/-/archive/${_dhtnetver}/dhtnet-${_dhtnetver}.tar.gz
+         ffmpeg-7.patch
+         ffmpeg-8.patch
+         fmt-12.patch)
+@@ -44,7 +44,7 @@
+ 
+   cd contrib/tarballs
+   mkdir -p dhtnet
+-  tar -xzf dhtnet-$_dhtnetver.tar.gz -C dhtnet
++  tar -xzf dhtnet-$_dhtnetver.tar.gz -C dhtnet --strip-components=1
+   cd dhtnet
+   patch -p1 -i "$srcdir"/fmt-12.patch
+   tar -czf ../dhtnet-$_dhtnetver.tar.gz *
 @@ -70,7 +70,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  

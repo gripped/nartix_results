@@ -37,6 +37,7 @@ gpm
 grep
 gssproxy
 gzip
+inetutils
 iputils
 libsasl
 libusb
