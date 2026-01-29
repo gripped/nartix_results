@@ -8,8 +8,8 @@
 +             etmpfiles esysusers)
  _archive="$pkgbase-$pkgver"
  source=("https://github.com/transmission/transmission/releases/download/$pkgver/$_archive.tar.xz"
-         febfe49c.patch
-@@ -89,15 +89,13 @@
+         transmission-cli.sysusers
+@@ -82,15 +82,13 @@
  	         libevent
  	         libnatpmp
  	         miniupnpc
@@ -21,7 +21,7 @@
  	done
  	install -d "$pkgdir"/usr/share/transmission
  	cp -a build/web/public_html/ "$pkgdir"/usr/share/transmission
--	install -Dm644 daemon/transmission-daemon.service \
+-	install -Dm644 build/daemon/transmission-daemon.service \
 -		"$pkgdir/usr/lib/systemd/system/transmission.service"
  	install -Dm644 COPYING "$pkgdir/usr/share/licenses/transmission-cli/COPYING"
  	install -Dm644 "$srcdir/$pkgname.sysusers" \

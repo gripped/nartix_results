@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,36 +1,28 @@
+ 
+ pkgname=gengetopt
+ pkgver=2.23
+-pkgrel=4
++pkgrel=3
+ pkgdesc='A tool to write command line option parsing code for C programs'
+ arch=('x86_64')
+ url='https://www.gnu.org/software/gengetopt/gengetopt.html'
+-license=('GPL-3.0-or-later')
++license=('GPL')
+ options=('!docs' '!makeflags')
+-depends=('glibc' 'gcc-libs')
+-makedepends=('git' 'gengen' 'gengetopt' 'help2man')
++depends=('gcc-libs')
+ validpgpkeys=('CD7AB2B200F374043F92E5D42485C3A5CF0FF62F') # Gray Wolf <wolf@wolfsden.cz>
+-source=("git+https://git.savannah.gnu.org/git/gengetopt.git#tag=rel_${pkgver/./_}?signed")
+-sha256sums=('acb81a9e7315285e2ef6e3d5ded387e85abe7322d86f509e25644d27ac1a5bd0')
+-
+-prepare() {
+-  cd "${pkgname}"
+-
+-  autoreconf -fi
+-}
++source=("https://ftp.gnu.org/gnu/gengetopt/${pkgname}-${pkgver}.tar.xz"{,.sig})
++sha256sums=('b941aec9011864978dd7fdeb052b1943535824169d2aa2b0e7eae9ab807584ac'
++            'SKIP')
+ 
+ build() {
+-  cd "${pkgname}"
++	cd "${srcdir}/${pkgname}-${pkgver}"
+ 
+-  ./configure \
+-    YACC='bison' \
+-    --prefix=/usr
+-  make
++	./configure --prefix=/usr
++	make
+ }
+ 
+ package() {
+-  cd "${pkgname}"
++	cd "${srcdir}/${pkgname}-${pkgver}"
+ 
+-  make DESTDIR="${pkgdir}" install
++	make DESTDIR="${pkgdir}" install
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1 @@
+ gcc-libs
+-gengen
+-gengetopt
+-git
+-glibc
+-help2man
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,5 @@
+-prepare() {
+-cd "${pkgname}"
+-autoreconf -fi
+-}
+ build() {
+-cd "${pkgname}"
+-./configure \
+-YACC='bison' \
+---prefix=/usr
++cd "${srcdir}/${pkgname}-${pkgver}"
++./configure --prefix=/usr
+ make
+ }

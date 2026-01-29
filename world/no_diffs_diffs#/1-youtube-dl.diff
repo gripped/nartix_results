@@ -9,3 +9,12 @@
  pkgdesc="A command-line program to download videos from YouTube.com and a few more sites"
  arch=('any')
  url="https://ytdl-org.github.io/youtube-dl/"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -0,0 +1,2 @@
++python
++python-setuptools

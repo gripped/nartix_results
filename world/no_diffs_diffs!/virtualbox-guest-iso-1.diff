@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=virtualbox-guest-iso
+-pkgver=7.2.6
++pkgver=7.2.4
+ pkgrel=1
+ pkgdesc='The official VirtualBox Guest Additions ISO image'
+ arch=('any')
+@@ -11,7 +11,7 @@
+ conflicts=('virtualbox-additions' 'virtualbox-iso-additions')
+ noextract=("VBoxGuestAdditions_${pkgver}.iso")
+ source=("https://download.virtualbox.org/virtualbox/${pkgver}/VBoxGuestAdditions_${pkgver}.iso")
+-sha256sums=('740e9a729c944180a165188fd426f9a2e1a2581d654402a1b856f9755a1ffc97')
++sha256sums=('66fa60b041fcda5d8b2ed22ba91bfafafaa3a5ff05c7d8ba01fbbe639669e153')
+ 
+ package() {
+   install -D -m 0644 "VBoxGuestAdditions_${pkgver}.iso" \

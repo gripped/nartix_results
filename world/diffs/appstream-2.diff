@@ -6,9 +6,9 @@
           pango
 -         systemd-libs
           zstd)
- makedepends=(gi-docgen
-              git
-@@ -45,6 +44,7 @@
+ makedepends=(bash-completion
+              gi-docgen
+@@ -46,6 +45,7 @@
      --prefix=/usr \
      --libexecdir=lib \
      -Dqt=true \
@@ -22,7 +22,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -22,7 +22,6 @@
+@@ -23,7 +23,6 @@
  pango
  qt6-base
  qt6-tools

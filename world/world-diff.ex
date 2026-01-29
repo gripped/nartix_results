@@ -190,6 +190,7 @@ gcr
 gcr-docs
 gdm
 libgdm
+gengetopt
 geoclue
 ghc-filesystem
 glpk
@@ -384,7 +385,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -547,6 +547,7 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
+micro
 miopen-hip
 mod_dnssd
 modemmanager
@@ -729,10 +730,8 @@ python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
-python-pytest-mypy-testing
 python-pyudev
 python-recommonmark
-python-sphinxext-opengraph
 qastools
 qbittorrent
 qbittorrent-nox
@@ -858,7 +857,6 @@ ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
-ruby
 rust
 lib32-rust-libs
 rust-musl

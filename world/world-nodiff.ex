@@ -723,7 +723,6 @@ gedit-plugins
 gedit
 gegl
 gendesk
-gengetopt
 genxrdpattern
 geocode-glib
 geocode-glib-common
@@ -1798,6 +1797,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2317,7 +2317,6 @@ meson
 messagelib
 metalog
 mgard
-micro
 microsoft-gsl
 milou
 mimalloc
@@ -4172,6 +4171,7 @@ python-pytest-metadata
 python-pytest-mock
 python-pytest-mpi
 python-pytest-mpl
+python-pytest-mypy-testing
 python-pytest-mypy
 python-pytest-order
 python-pytest-ordering
@@ -4395,6 +4395,7 @@ python-sphinxcontrib-serializinghtml
 python-sphinxcontrib-spelling
 python-sphinxcontrib-towncrier
 python-sphinxcontrib-trio
+python-sphinxext-opengraph
 python-sphinxygen
 python-sphobjinv
 python-spsdk
@@ -4838,6 +4839,7 @@ ruby-async-pool
 ruby-async-process
 ruby-async-rest
 ruby-async-rspec
+ruby-async-safe
 ruby-async-service
 ruby-async-websocket
 ruby-async
@@ -5127,6 +5129,7 @@ ruby-sorbet-runtime
 ruby-sorted_set
 ruby-sqlite3
 ruby-stackprof
+ruby-string-format
 ruby-stringio
 ruby-subprocess
 ruby-sus-fixtures-async-http
@@ -5181,6 +5184,7 @@ ruby-x25519
 ruby-xrb
 ruby-yard
 ruby-zeitwerk
+ruby
 ruby2.7
 rubygems
 ruff
