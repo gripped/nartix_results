@@ -547,7 +547,6 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
-micro
 miopen-hip
 mod_dnssd
 modemmanager

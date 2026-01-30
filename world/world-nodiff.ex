@@ -2317,6 +2317,7 @@ meson
 messagelib
 metalog
 mgard
+micro
 microsoft-gsl
 milou
 mimalloc

@@ -3,8 +3,9 @@
 @@ -1,7 +1,7 @@
  
  pkgname=lxqt-config
- pkgver=2.3.0
+-pkgver=2.3.1
 -pkgrel=1
++pkgver=2.3.0
 +pkgrel=2.1
  pkgdesc="LXQt system configuration."
  arch=("x86_64")
@@ -18,6 +19,15 @@
           "libudev.so" "zlib")
  makedepends=("lxqt-build-tools")
  optdepends=(
+@@ -20,7 +20,7 @@
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
+ 	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz.asc"
+ )
+-sha256sums=('69e5ca947fda1d2b4242f3021af8c41bd0ec03096e946ca37e50248e44dd8e01'
++sha256sums=('69b8acf50ebedfe3c3808f7dad853e9f5a5e74c8d17693a15180654fcb7f4b0c'
+             'SKIP')
+ validpgpkeys=(
+ 	"19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # https://github.com/tsujan.gpg
 
 
 ############# Stripped diff below #################

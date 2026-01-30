@@ -158,6 +158,8 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
+lact
+lact-libadwaita
 lazarus
 lazarus-qt5
 lazarus-qt6

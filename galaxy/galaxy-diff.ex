@@ -25,8 +25,6 @@ gtklock
 hexchat
 hugin
 intel-gpu-tools
-lact
-lact-libadwaita
 lemurs
 libetonyek
 libmatemixer
