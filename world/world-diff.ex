@@ -34,6 +34,7 @@ bluez-obex
 bolt
 booster
 box2d
+bpf-linker
 brightnessctl
 brltty
 brltty-udev-generic
@@ -385,6 +386,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd

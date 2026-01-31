@@ -1,18 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,12 +19,6 @@
- source=(git+https://github.com/microsoft/debugpy#tag=v$pkgver)
- sha256sums=('be7e6727a746db30f5e309c56a90c5e788c2f0fae8826794b9b3bb3a06970977')
+@@ -1,8 +1,8 @@
  
+ _pipname=debugpy
+ pkgname=python-$_pipname
+-pkgver=1.8.20
+-pkgrel=1
++pkgver=1.8.19
++pkgrel=2
+ pkgdesc='An implementation of the Debug Adapter Protocol for Python'
+ arch=(x86_64)
+ url='https://aka.ms/debugpy'
+@@ -17,13 +17,7 @@
+              python-setuptools
+              python-wheel)
+ source=(git+https://github.com/microsoft/debugpy#tag=v$pkgver)
+-sha256sums=('975069defb5092f6e0203c044ddb2923233ed19bd1fdc5bff5ae03ca064457e0')
+-
 -case $CARCH in
 -    i*86) _SUFFIX=x86;;
 -    x86_64) _SUFFIX=amd64;;
 -    *) _SUFFIX=$CARCH;;
 -esac
--
++sha256sums=('be7e6727a746db30f5e309c56a90c5e788c2f0fae8826794b9b3bb3a06970977')
+ 
  build() {
    cd $_pipname
-   pushd src/debugpy/_vendored/pydevd/_pydevd_bundle
 @@ -33,13 +27,13 @@
  
    python -m build --wheel --no-isolation

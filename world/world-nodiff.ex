@@ -241,7 +241,6 @@ botan
 botan2
 bovo
 bower
-bpf-linker
 bpython
 brasero
 breeze-grub
@@ -1797,7 +1796,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
