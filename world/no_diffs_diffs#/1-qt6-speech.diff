@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=qt6-speech
+-_pkgver=6.10.2
++_pkgver=6.10.1
+ pkgver=${_pkgver/-/}
+ pkgrel=1
+ arch=(x86_64)
+@@ -26,7 +26,7 @@
+ groups=(qt6)
+ _pkgfn=${pkgname/6-/}
+ source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver)
+-sha256sums=('94b439bca3bf42b0d59e5869efcfe5acd8263b194b7fdf1f741f3910c5e32b6e')
++sha256sums=('d461e32ef0ee32f7851c85e9b9311085563c8635d9ae9fb61e2453476aafb882')
+ 
+ build() {
+   cmake -B build -S $_pkgfn -G Ninja \

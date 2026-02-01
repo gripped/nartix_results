@@ -176,6 +176,7 @@ fprintd
 freerdp
 freerdp2
 frugally-deep
+fuzzel
 fwupd-efi
 fwupd
 fwupd-docs
@@ -386,7 +387,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -727,6 +727,7 @@ python-anytree
 python-asn1crypto
 python-debugpy
 python-hidapi
+python-ndg-httpsclient
 python-pymad
 python-pymupdf
 python-pyscard
@@ -827,6 +828,9 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
 qt6-serialport
 qt6-webengine
 qterminal
@@ -1173,5 +1177,6 @@ zabbix-agent2
 zathura-pdf-mupdf
 zeromq
 znc
+zoxide
 zsh
 zsh-doc

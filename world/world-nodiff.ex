@@ -697,7 +697,6 @@ fuse2
 fuse3
 fuse-common
 futuresql
-fuzzel
 fwknop
 fzf
 gajim
@@ -1796,6 +1795,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3842,7 +3842,6 @@ python-natsort
 python-nbdime
 python-nbval
 python-nbxmpp
-python-ndg-httpsclient
 python-ndindex
 python-nest-asyncio
 python-netaddr
@@ -4689,9 +4688,6 @@ qt6-imageformats
 qt6-languageserver
 qt6-location
 qt6-lottie
-qt6-multimedia
-qt6-multimedia-ffmpeg
-qt6-multimedia-gstreamer
 qt6-networkauth
 qt6-positioning
 qt6-quick3d
@@ -5960,7 +5956,6 @@ zix-docs
 zlib-ng
 zlib-ng-compat
 zopfli
-zoxide
 zsh-autosuggestions
 zsh-completions
 zsh-history-substring-search
