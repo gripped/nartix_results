@@ -1795,7 +1795,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3194,7 +3193,6 @@ python-appdirs
 python-apscheduler
 python-apsw
 python-archinfo
-python-aresponses
 python-argcomplete
 python-argh
 python-argon2-cffi-bindings
@@ -3363,7 +3361,6 @@ python-copr
 python-coverage
 python-cppheaderparser
 python-cppy
-python-cram
 python-cramjam
 python-crashtest
 python-crc32c
@@ -3412,7 +3409,6 @@ python-deprecated
 python-deprecation
 python-devtools
 python-diff-cover
-python-digitalocean
 python-dill
 python-dirty-equals
 python-discid
@@ -3946,7 +3942,6 @@ python-pdm
 python-pecan
 python-peewee
 python-pefile
-python-pendulum
 python-pep440
 python-pep621
 python-perf
@@ -4547,7 +4542,6 @@ python-websockets
 python-webtest
 python-werkzeug
 python-whatthepatch
-python-wheel
 python-wheezy-template
 python-whoosh
 python-wilderness
@@ -5689,8 +5683,6 @@ vice-sdl2
 vid.stab
 viewnior
 vifm
-vigra
-python-vigra
 vimiv
 virglrenderer
 virt-manager

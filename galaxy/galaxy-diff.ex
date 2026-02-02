@@ -69,6 +69,7 @@ qbittorrent-nox
 rage
 read-edid
 reflector
+rmpc
 sdcv
 signal-desktop
 terminology

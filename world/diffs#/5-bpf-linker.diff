@@ -3,7 +3,7 @@
 @@ -1,19 +1,19 @@
  
  pkgname=bpf-linker
--pkgver=0.10.0
+-pkgver=0.10.1
 +pkgver=0.9.15
  pkgrel=1
  pkgdesc="Simple BPF static linker"
@@ -14,7 +14,7 @@
 +depends=('glibc' 'gcc-libs' 'llvm-libs')
  makedepends=('cargo' 'llvm')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/aya-rs/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
--sha256sums=('b803fec30431aeb3b4e9866e0bf8eb283a77966cbe155a275075825c8ad227d0')
+-sha256sums=('b09b2daec7e1935cabccab5b6d61cc61f195047775cf1d63c0c7e5a52cac6a39')
 +sha256sums=('90e53daa07e0f047a0ef91042a69417d0b0fa961ce9a6afe1d8fbf9f0f048fc1')
  
  prepare() {

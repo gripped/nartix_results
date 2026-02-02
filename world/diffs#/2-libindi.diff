@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -21,7 +21,6 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libindi
+-pkgver=2.1.8
++pkgver=2.1.7
+ pkgrel=1
+ pkgdesc='A distributed control protocol designed to operate astronomical instrumentation'
+ url='https://www.indilib.org/index.php?title=Main_Page'
+@@ -21,14 +21,13 @@
           libusb
           libxisf
           rtl-sdr
@@ -8,6 +16,14 @@
           zlib)
  makedepends=(cmake
               git
+              qt6-base)
+ optdepends=('qt6-base: Qt client library')
+ source=(git+https://github.com/indilib/indi#tag=v$pkgver)
+-sha256sums=('9a2d13428e8d7c28174e5c008dfaaaa6aaeaa17d0b0d98f065d4f928c3459f02')
++sha256sums=('da08fa4c9999b97aa78e0571fd8177d43583bb4e4623b74f77699f8c62068cf8')
+ 
+ build() {
+   cmake -B build -S indi \
 
 
 ############# Stripped diff below #################
