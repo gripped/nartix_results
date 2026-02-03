@@ -1,7 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -25,3 +25,4 @@
-     cd txrequests-$pkgver
-     python setup.py install --root="$pkgdir" --optimize=1 --skip-build
- }
-+
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-txrequests
+ pkgver=0.9.6
+-pkgrel=11
++pkgrel=11.1
+ pkgdesc='Asynchronous Python HTTP Requests for Humans using twisted'
+ license=('Apache')
+ arch=(any)

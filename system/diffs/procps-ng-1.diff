@@ -1,13 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,26 @@
- 
- pkgname=procps-ng
--pkgver=4.0.6
--pkgrel=1
-+pkgver=4.0.5
-+pkgrel=3
- pkgdesc='Utilities for monitoring your system and its processes'
+@@ -6,8 +6,8 @@
  url='https://gitlab.com/procps-ng/procps'
  license=(GPL LGPL)
  arch=(x86_64)
@@ -18,22 +11,7 @@
  conflicts=(procps sysvinit-tools)
  provides=(procps sysvinit-tools libproc2.so)
  replaces=(procps sysvinit-tools)
- options=('!emptydirs')
- validpgpkeys=('5D2FB320B825D93904D205193938F96BDF50FEA5') # Craig Small <csmall@debian.org>
- source=("git+https://gitlab.com/procps-ng/procps.git#tag=v${pkgver}?signed")
--sha256sums=('160aa30e2a133f44e7cc6e90c16cc018360a786f043aef84614ce595062fc894')
--b2sums=('fe36c3c3c38882e09c47f7865015c5f8fc82e7432cb427ca21ad3712a112025daeba395b118ba81245727443407fb6666cf4ffea1f2ce1f605a8c5bbe8508db2')
-+sha256sums=('640ad0085ee013efb94877072cfa7c0c025884dc8cc398e331b7efb6ebaefc01')
-+b2sums=('4f5d23ecd02434e83896e93840dddbe0896e321c7cb2294a54d280abf03b87302489ef7d99c56476952d1364eb4acfe7715b06b2b56a956373e037b0a273111b')
- 
- prepare() {
-   cd procps
-+
-+  git cherry-pick -n e443b0dea14d72ad4d201ebf5d5df96df23fa425
- 
-   ./autogen.sh
- }
-@@ -34,7 +36,7 @@
+@@ -34,7 +34,7 @@
      --bindir=/usr/bin \
      --sbindir=/usr/bin \
      --enable-watch8bit \
@@ -42,13 +20,6 @@
      --disable-modern-top \
      --disable-kill
  
-@@ -45,4 +47,6 @@
-   cd procps
- 
-   make DESTDIR="$pkgdir" install
-+
-+  rm "$pkgdir"/usr/share/man/{de,ro,uk}/man1/kill.1
- }
 
 
 ############# Stripped diff below #################

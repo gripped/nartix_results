@@ -3,7 +3,7 @@
 @@ -1,34 +1,37 @@
 -
  pkgname=rocfft
--pkgver=7.1.1
+-pkgver=7.2.0
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='Next generation FFT implementation for ROCm'
@@ -17,7 +17,7 @@
 +makedepends=('rocm-cmake')
  _git='https://github.com/ROCmSoftwarePlatform/rocFFT'
 -source=("$pkgname-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/releases/download/rocm-$pkgver/$pkgname.tar.gz")
--sha256sums=('a3a98a3d29292b9e28c8685b85b3d5a5e2fdc3bb2773c5fa59d219f43db03ccd')
+-sha256sums=('ce23994caf23bb618c856095aaefd0b6367b0097dde22558e4558e66d07783d8')
 +source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('fb8ba56572702e77e4383d922cd1fee4ad3fa5f63a5ebdb3d9c354439a446992')
  options=(!lto)

@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=rocm-cmake
+-pkgver=7.2.0
++pkgver=7.1.1
+ pkgrel=1
+ pkgdesc='CMake modules for common build tasks needed for the ROCm software stack'
+ arch=('any')
+@@ -9,13 +9,15 @@
+ depends=('rocm-core' 'cmake')
+ checkdepends=('git' 'rocm-llvm')
+ source=("${pkgname}-${pkgver}.tar.gz::$url/archive/rocm-$pkgver.tar.gz")
+-sha256sums=('3f3899e84d78a0fecab62a35eed0014bb503c04d2cf76d263b29daf17f178636')
++sha256sums=('4ef6bbe518a3d4670272203c83f98b2a7135ad570a13498f871efda2320b698e')
+ _dirname="$(basename "$url")-$(basename "${source[0]}" .tar.gz)"
+ 
+ prepare() {
+     cd "$_dirname"
+     rm test/pass/{version-norepo.cmake,version-parent.cmake}
+     rm test/pass/doc-sphinxdoxygen.cmake
++    rm test/pass/{analyze-gh.cmake,analyze.cmake}
++    rm test/fail/rename-compatibility.cmake
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,6 +2,8 @@
+ cd "$_dirname"
+ rm test/pass/{version-norepo.cmake,version-parent.cmake}
+ rm test/pass/doc-sphinxdoxygen.cmake
++rm test/pass/{analyze-gh.cmake,analyze.cmake}
++rm test/fail/rename-compatibility.cmake
+ }
+ build() {
+ local cmake_args=(

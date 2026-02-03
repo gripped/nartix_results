@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -54,7 +54,7 @@
+ 
+ check() {
+   cd ${pkgname}-${pkgver}
+-  make check
++  make check || :
+ }
+ 
+ package() {

@@ -493,6 +493,7 @@ retroarch
 rgbds
 rio
 ristretto
+rmpc
 rpi-imager
 rust-script
 sakura

@@ -34,7 +34,6 @@ bluez-obex
 bolt
 booster
 box2d
-bpf-linker
 brightnessctl
 brltty
 brltty-udev-generic
@@ -99,6 +98,7 @@ krun
 cups-filters
 cups
 libcups
+cython
 darkhttpd
 dbus-broker
 dconf
@@ -111,7 +111,6 @@ dns-over-https
 docker
 dolphin-emu
 dolphin-emu-tool
-dos2unix
 dotnet-core-8.0
 dotnet-runtime-8.0
 aspnet-runtime-8.0
@@ -163,6 +162,7 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+ffmpeg
 fig2dev
 firefox
 firewalld
@@ -280,6 +280,8 @@ hidapi
 hipcub
 hipfft
 hipsolver
+hipsparse
+hsa-rocr
 hwloc
 hyphen
 hyphen-en
@@ -342,6 +344,7 @@ kwin-x11
 kwin
 libabw
 libatasmart
+libavif
 libayatana-indicator
 libblockdev
 libblockdev-btrfs
@@ -383,6 +386,7 @@ libgtop
 libgudev
 libguestfs
 libhandy0
+libheif
 libidl2
 libindi
 libinput
@@ -404,6 +408,7 @@ libnvme
 libofa
 libpagemaker
 libpgm
+libpng
 libprocps
 libqb
 librevenge
@@ -729,10 +734,9 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-digitalocean
+python-deprecation
 python-hidapi
 python-ndg-httpsclient
-python-pendulum
 python-pymad
 python-pymupdf
 python-pyscard
@@ -856,6 +860,10 @@ ristretto
 rnnoise
 rocalution
 rocfft
+rocm-cmake
+rocm-llvm
+rocm-device-libs
+comgr
 rocrand
 rocsolver
 rocsparse
@@ -869,12 +877,12 @@ ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
 rust
-lib32-rust-libs
 rust-musl
+rust-src
+rust-wasm
+lib32-rust-libs
 rust-aarch64-gnu
 rust-aarch64-musl
-rust-wasm
-rust-src
 samba
 libwbclient
 ldb
@@ -930,6 +938,9 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+texlive-texmf
+texlive-doc
+texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

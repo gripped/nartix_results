@@ -4,12 +4,28 @@
  
  pkgname=tigervnc
  pkgver=1.16.0
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Suite of VNC servers and clients based on the VNC 4 branch of TightVNC"
  arch=('x86_64')
  url="https://www.tigervnc.org"
-@@ -35,7 +35,7 @@
+@@ -17,7 +17,6 @@
+   'hicolor-icon-theme'
+   'libgl'
+   'libjpeg-turbo'
+-  'libpipewire'
+   'libunwind'
+   'libx11'
+   'libxau'
+@@ -28,7 +27,6 @@
+   'libxfixes'
+   'libxfont2'
+   'libxi'
+-  'libxkbcommon'
+   'libxrender'
+   'libxshmfence'
+   'libxtst'
+@@ -37,7 +35,7 @@
    'pam'
    'perl'
    'pixman'
@@ -18,7 +34,7 @@
    'xkeyboard-config'
    'xorg-xauth'
    'xorg-xinit'
-@@ -70,20 +70,16 @@
+@@ -72,20 +70,16 @@
    Xsession
    more-xsessions.patch
    remove-selinux.patch
@@ -40,15 +56,16 @@
  
    cd unix/xserver
    cp -r /usr/src/xorg-server/* .
-@@ -99,7 +95,6 @@
+@@ -101,8 +95,6 @@
      -D CMAKE_INSTALL_SBINDIR=/usr/bin
      -D CMAKE_INSTALL_LIBEXECDIR=/usr/bin
      -D BUILD_JAVA=TRUE
 -    -D BUILD_VIEWER=TRUE
+-    -D ENABLE_WAYLAND=TRUE
      -S .  # out-of-tree build not possible due to xorg-server build below
      -W no-dev
    )
-@@ -126,8 +121,7 @@
+@@ -129,8 +121,7 @@
    )
  
    cd $pkgname
@@ -58,7 +75,7 @@
    cmake "${cmake_options[@]}"
    cmake --build . --verbose
  
-@@ -145,4 +139,6 @@
+@@ -148,4 +139,6 @@
    make DESTDIR="$pkgdir" install
    install -Dm0755 "$srcdir"/Xsession "$pkgdir"/etc/X11/tigervnc/Xsession
  
@@ -71,15 +88,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,6 +12,7 @@
+@@ -12,7 +12,7 @@
  java-environment
  libgl
  libjpeg-turbo
+-libpipewire
 +libudev
  libunwind
  libx11
  libxau
-@@ -31,7 +32,6 @@
+@@ -23,7 +23,6 @@
+ libxfixes
+ libxfont2
+ libxi
+-libxkbcommon
+ libxrender
+ libxshmfence
+ libxtst
+@@ -33,7 +32,6 @@
  pam
  perl
  pixman

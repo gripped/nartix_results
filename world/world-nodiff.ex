@@ -241,6 +241,7 @@ botan
 botan2
 bovo
 bower
+bpf-linker
 bpython
 brasero
 breeze-grub
@@ -403,7 +404,6 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
-cython
 cython0
 d-spy
 darktable
@@ -477,6 +477,7 @@ docx2txt
 dolphin-plugins
 dolphin
 dontpanic
+dos2unix
 dosbox
 dotconf
 double-conversion
@@ -618,7 +619,6 @@ featherpad
 feh
 festival
 ffcall
-ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
@@ -1024,14 +1024,12 @@ hipblas
 hipify-clang
 hiprand
 hiprt
-hipsparse
 hiredis
 hitori
 hivex
 hostapd
 hotdoc
 hplip
-hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -1636,7 +1634,6 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
-libavif
 libavtp
 libayatana-appindicator
 libb2
@@ -1768,7 +1765,6 @@ libgxps
 libhandy
 libhandy-docs
 libharu
-libheif
 libhubbub
 libical
 libice
@@ -1918,7 +1914,6 @@ libpinyin
 libplacebo
 libplasma
 libplist
-libpng
 libpng12
 libportal
 libportal-docs
@@ -3406,9 +3401,9 @@ python-deepmerge
 python-defusedxml
 python-dep-logic
 python-deprecated
-python-deprecation
 python-devtools
 python-diff-cover
+python-digitalocean
 python-dill
 python-dirty-equals
 python-discid
@@ -3942,6 +3937,7 @@ python-pdm
 python-pecan
 python-peewee
 python-pefile
+python-pendulum
 python-pep440
 python-pep621
 python-perf
@@ -4771,7 +4767,6 @@ robin-map
 roc-toolkit
 rocblas
 rocm-clang-ocl
-rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4781,9 +4776,6 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
-rocm-llvm
-rocm-device-libs
-comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain
@@ -5544,9 +5536,6 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
-texlive-texmf
-texlive-doc
-texlive-meta
 thermald
 threadweaver
 threadweaver5

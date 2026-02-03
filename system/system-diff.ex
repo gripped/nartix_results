@@ -28,7 +28,6 @@ gcc-go
 gcc-objc
 lto-dump
 libgccjit
-gettext
 glibc
 lib32-glibc
 glibc-locales
@@ -37,7 +36,6 @@ gpm
 grep
 gssproxy
 gzip
-inetutils
 iputils
 libsasl
 libusb

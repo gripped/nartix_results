@@ -1,0 +1,159 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgbase=firewalld
+-pkgname=('firewalld' 'python-firewall' 'firewall-config' 'firewall-applet' 'firewalld-test')
++pkgname=('firewalld' 'firewalld-test')
+ pkgver=2.4.0
+-pkgrel=5
++pkgrel=2
+ url="https://firewalld.org"
+ arch=('any')
+ license=('GPL-2.0-or-later')
+@@ -31,100 +31,33 @@
+ 		--sbindir=/usr/bin \
+ 		--sysconfdir=/etc \
+ 		--disable-schemas-compile \
++		--disable-systemd \
+ 		--disable-sysconfig
+ 	make
+-
+-	make DESTDIR="${srcdir}/fakeinstall" install
+-}
+-
+-
+-_install() {
+-	local src f dir
+-	for src; do
+-		f="${src#fakeinstall/}"
+-		dir="${pkgdir}/${f%/*}"
+-		install -dm 755 "${dir}"
+-		cp -av "${src}" "${dir}/"
+-		rm -rf "${src}"
+-	done
+ }
+ 
+ package_firewalld() {
+ 	pkgdesc="Firewall daemon with D-Bus interface"
+-	depends=('glib2' 'python-firewall' 'python-capng')
++	depends=('python-dbus' 'glib2' 'hicolor-icon-theme'
++		 'nftables' 'python-capng' 'python-gobject')
+ 	optdepends=('bash-completion: bash completion'
++	            'gtk3: firewall-config'
++		    'libnotify: firewall-applet'
+ 		    'networkmanager: NetworkManager support'
+ 		    'polkit: privileged actions'
+-		    'firewall-config: Graphical user interface for firewallD configuration'
+-		    'firewall-applet: Systray applet for firewallD'
+-		    'firewalld-test: firewallD test suite')
++		    'python-pyqt6: firewall-applet')
+ 	backup=('etc/conf.d/firewalld'
+ 	        'etc/firewalld/firewalld.conf')
+-	install="${pkgbase}.install"
+ 
+-	_install fakeinstall/etc/conf.d/firewalld
+-	_install fakeinstall/etc/firewalld/*
+-	_install fakeinstall/etc/logrotate.d/firewalld
+-	_install fakeinstall/etc/modprobe.d/firewalld-sysctls.conf
+-	_install fakeinstall/usr/bin/firewall-cmd
+-	_install fakeinstall/usr/bin/firewall-offline-cmd
+-	_install fakeinstall/usr/lib/firewalld/*
+-	_install fakeinstall/usr/lib/systemd/system/firewalld.service
+-	_install fakeinstall/usr/bin/firewalld
+-	_install fakeinstall/usr/share/dbus-1/system.d/FirewallD.conf
+-	_install fakeinstall/usr/share/bash-completion/completions/firewall-cmd
+-	_install fakeinstall/usr/share/zsh/site-functions/_firewalld
+-	_install fakeinstall/usr/share/locale/*
+-	_install fakeinstall/usr/share/man/man1/firewall-cmd.1
+-	_install fakeinstall/usr/share/man/man1/firewall-offline-cmd.1
+-	_install fakeinstall/usr/share/man/man1/firewalld.1
+-	_install fakeinstall/usr/share/man/man5/*
+-	_install fakeinstall/usr/share/polkit-1/*
+-}
+-
+-package_python-firewall() {
+-	pkgdesc="Python bindings for firewallD"
+-	depends=('python' 'python-dbus' 'python-gobject' 'nftables')
+-
+-	_install fakeinstall/usr/lib/python*/*
+-
++	make DESTDIR="${pkgdir}" -C "${pkgbase}" install
+ 	python -m compileall -d /usr/lib "${pkgdir}/usr/lib"
+ 	python -O -m compileall -d /usr/lib "${pkgdir}/usr/lib"
+-}
+ 
+-package_firewall-config() {
+-	pkgdesc="Graphical user interface for firewallD configuration"
+-	depends=('firewalld' 'gtk3' 'hicolor-icon-theme')
+-
+-	_install fakeinstall/usr/bin/firewall-config
+-	_install fakeinstall/usr/share/applications/firewall-config.desktop
+-	_install fakeinstall/usr/share/firewalld/firewall-config.glade
+-	_install fakeinstall/usr/share/firewalld/gtk3_chooserbutton.py
+-	_install fakeinstall/usr/share/firewalld/gtk3_niceexpander.py
+-	_install fakeinstall/usr/share/glib-2.0/schemas/org.fedoraproject.FirewallConfig.gschema.xml
+-	_install fakeinstall/usr/share/icons/hicolor/*/apps/firewall-config.png
+-	_install fakeinstall/usr/share/icons/hicolor/*/apps/firewall-config.svg
+-	_install fakeinstall/usr/share/man/man1/firewall-config.1
+-	_install fakeinstall/usr/share/metainfo/firewall-config.appdata.xml
+-}
+-
+-package_firewall-applet() {
+-	pkgdesc="Systray applet for firewallD"
+-	depends=('firewalld' 'firewall-config' 'libnotify' 'python-pyqt6' 'hicolor-icon-theme')
+-
+-	_install fakeinstall/etc/firewall/applet.conf
+-	_install fakeinstall/etc/xdg/autostart/firewall-applet.desktop
+-	_install fakeinstall/usr/bin/firewall-applet
+-	_install fakeinstall/usr/share/icons/hicolor/*/apps/firewall-applet*.png
+-	_install fakeinstall/usr/share/icons/hicolor/*/apps/firewall-applet*.svg
+-	_install fakeinstall/usr/share/man/man1/firewall-applet.1
++	rm -rvf "${pkgdir}/usr/share/firewalld/testsuite/"
+ }
+ 
+ package_firewalld-test() {
+ 	pkgdesc="FirewallD test suite"
+-	depends=('firewalld')
+ 
+-	_install fakeinstall/usr/share/firewalld/testsuite/*
+-
+-	find fakeinstall -depth -print0 | xargs -0 rmdir
++	make DESTDIR="${pkgdir}" -C "${pkgbase}/src/tests" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,17 +1,10 @@
+ docbook-xsl
+-firewall-config
+-firewalld
+ git
+ glib2
+-gtk3
+ hicolor-icon-theme
+ intltool
+-libnotify
+ nftables
+ podman
+-python
+ python-capng
+ python-dbus
+-python-firewall
+ python-gobject
+-python-pyqt6
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ --sbindir=/usr/bin \
+ --sysconfdir=/etc \
+ --disable-schemas-compile \
++--disable-systemd \
+ --disable-sysconfig
+ make
+-make DESTDIR="${srcdir}/fakeinstall" install
+ }

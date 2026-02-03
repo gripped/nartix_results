@@ -37,6 +37,7 @@ flex
 gawk
 gc
 gdbm
+gettext
 glib2
 glib2-devel
 glib2-docs
@@ -51,6 +52,7 @@ hdparm
 hwdata
 iana-etc
 icu
+inetutils
 iproute2
 iptables
 iptables-nft
