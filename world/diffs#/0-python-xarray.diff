@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-xarray
+-pkgver=2026.01.0
+-pkgrel=1
++pkgver=2025.12.0
++pkgrel=2
+ pkgdesc="N-D labeled arrays and datasets in Python"
+ arch=(any)
+ url="https://xarray.pydata.org/"
+@@ -52,17 +52,8 @@
+   'python-seaborn: better color palettes for plots'
+   'python-pint: units of measure support'
+ )
+-source=(
+-  "https://github.com/pydata/xarray/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
+-  "$pkgname-fix-period-dtype-concat.patch"
+-)
+-b2sums=('4794146565fb10b6b3aa674f2c765deb65c29a63cdafe409fbdf4e93f1a56517064013506c887cfed9fea25917be816faf6f1e0ba45b6ef082954821a7415672'
+-        'c7535292388989d0a2dde3f32d03081254ea5d1bf859cd0ca8fecf0c40af9eddcb60d97e22b160256b6c7cd6b24f0001dc1e3efb1d9725cac4c672e785286e5d')
+-
+-prepare() {
+-  cd ${pkgname#python-}-$pkgver
+-  patch -Np1 < ../$pkgname-fix-period-dtype-concat.patch
+-}
++source=("https://github.com/pydata/xarray/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
++sha512sums=('08922858f6b790c85c2611c72eee42fbd9c90076f3ac893f491df3d076d717e54a3002382303b713d6a12864cec6b830eda0e0c328272ecf7d538dd68710a9a1')
+ 
+ build() {
+   cd ${pkgname#python-}-$pkgver
+@@ -84,8 +75,6 @@
+     --deselect=xarray/tests/test_groupby.py::test_dask_da_groupby_quantile
+ 
+     --deselect=xarray/tests/test_duck_array_ops.py::test_extension_array_attr
+-
+-    --deselect=xarray/tests/test_dataarray.py::TestDataArray::test_curvefit_helpers
+   )
+   pytest "${pytest_args[@]}"
+ }
+@@ -94,5 +83,5 @@
+   cd ${pkgname#python-}-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+-  rm -vr "$pkgdir/$site_packages/xarray/tests"
++  rm -r "${pkgdir}/${site_packages}/xarray/tests"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd ${pkgname#python-}-$pkgver
+-patch -Np1 < ../$pkgname-fix-period-dtype-concat.patch
+-}
+ build() {
+ cd ${pkgname#python-}-$pkgver
+ python -m build --wheel --skip-dependency-check --no-isolation

@@ -149,7 +149,6 @@ imv
 incron
 joyutils
 just
-kanshi
 kernel-headers-musl
 khard
 kodi

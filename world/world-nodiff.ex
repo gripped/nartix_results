@@ -404,6 +404,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
+cython
 cython0
 d-spy
 darktable
@@ -441,6 +442,7 @@ diffstat
 diffuse
 digikam
 directx-headers
+directx-shader-compiler
 discount
 discover
 distcc
@@ -619,6 +621,7 @@ featherpad
 feh
 festival
 ffcall
+ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
@@ -640,7 +643,6 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
-fish
 five-or-more
 flac
 flac-doc
@@ -1030,6 +1032,7 @@ hivex
 hostapd
 hotdoc
 hplip
+hsa-rocr
 hsakmt-roct
 hspell
 hunspell-he
@@ -1621,7 +1624,6 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
-libaec
 libaemu
 libakonadi5
 libalkimia
@@ -1634,6 +1636,7 @@ libass
 libasyncns
 libatomic_ops
 libavc1394
+libavif
 libavtp
 libayatana-appindicator
 libb2
@@ -1765,6 +1768,7 @@ libgxps
 libhandy
 libhandy-docs
 libharu
+libheif
 libhubbub
 libical
 libice
@@ -1914,6 +1918,7 @@ libpinyin
 libplacebo
 libplasma
 libplist
+libpng
 libpng12
 libportal
 libportal-docs
@@ -2113,6 +2118,7 @@ libyuv
 libzen
 libzip
 libzmf
+liferea
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
@@ -2458,7 +2464,6 @@ noto-fonts
 noto-fonts-extra
 npm
 nrpe
-nsight-compute
 nsight-systems
 nss-mdns
 nsxiv
@@ -3407,7 +3412,6 @@ python-digitalocean
 python-dill
 python-dirty-equals
 python-discid
-python-discogs-client
 python-distlib
 python-distributed
 python-distro
@@ -3477,13 +3481,11 @@ python-execnet
 python-executing
 python-expandvars
 python-expects
-python-extras
 python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
 python-fastapi
-python-fastbencode
 python-fasteners
 python-fastimport
 python-fastjsonschema
@@ -3719,7 +3721,6 @@ python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
-python-keyring
 python-keyrings-alt
 python-keystoneauth1
 python-keyutils
@@ -4069,7 +4070,6 @@ python-pyjwt
 python-pykakasi
 python-pykerberos
 python-pykka
-python-pylast
 python-pylatexenc
 python-pylev
 python-pylibmc
@@ -4121,7 +4121,6 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
-python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
@@ -4504,11 +4503,9 @@ python-update-checker
 python-uri-template
 python-uritemplate
 python-urllib3
-python-urwid
 python-userpath
 python-uvloop
 python-validate-email
-python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4551,7 +4548,6 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
-python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -4564,7 +4560,6 @@ python-xmltodict
 python-xxhash
 python-y-py
 python-yaml
-python-yara
 python-yarg
 python-yarl
 python-yaspin
@@ -4594,7 +4589,6 @@ python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
-python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4767,6 +4761,7 @@ robin-map
 roc-toolkit
 rocblas
 rocm-clang-ocl
+rocm-cmake
 rocm-core
 rocm-device-libs
 rocm-hip-sdk
@@ -4776,6 +4771,9 @@ rocm-hip-runtime
 rocm-language-runtime
 rocm-ml-sdk
 rocm-ml-libraries
+rocm-llvm
+rocm-device-libs
+comgr
 rocm-opencl-runtime
 rocm-smi-lib
 rocm-toolchain
@@ -5694,7 +5692,6 @@ vmaf
 vncdotool
 vnstat
 vokoscreen
-volatility3
 volk
 volume_key
 python-volume_key
@@ -5893,7 +5890,6 @@ yakuake
 yaml-cpp
 yamllint
 yapf
-yara
 yarn
 yasm
 yaz

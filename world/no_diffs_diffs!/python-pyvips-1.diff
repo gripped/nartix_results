@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgname=python-pyvips
+ _pkgname=pyvips
+-pkgver=3.1.1
+-pkgrel=1
++pkgver=3.0.0
++pkgrel=2
+ pkgdesc='Python binding for libvips using cffi'
+ arch=('x86_64')
+ url='https://github.com/libvips/pyvips'
+@@ -27,7 +27,7 @@
+   python-wheel
+ )
+ source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/libvips/pyvips/archive/refs/tags/v${pkgver}.tar.gz")
+-sha256sums=('1ab3c901fb9ae2221eef4b2258cddbaf52af30fc6d6023d610ebbe7cd94d3aff')
++sha256sums=('252819173f4d3737c516c5b81aa3c82a92a21f666633705ecf239a0b33e95899')
+ 
+ build() {
+   cd "${_pkgname}-${pkgver}"

@@ -8,15 +8,6 @@
    gst-plugin-opencv
    gst-plugin-qml6
    gst-plugin-qmlgl
-@@ -27,7 +26,7 @@
-   gstreamer-docs
- )
- pkgver=1.26.10
--pkgrel=4
-+pkgrel=3
- pkgdesc="Multimedia graph framework"
- url="https://gstreamer.freedesktop.org/"
- arch=(x86_64)
 @@ -138,7 +137,6 @@
    nasm
    neon
@@ -33,27 +24,7 @@
    taglib
    twolame
    v4l-utils
-@@ -205,13 +202,11 @@
-   "git+https://gitlab.freedesktop.org/gstreamer/gstreamer.git?signed#tag=$pkgver"
-   "https://gstreamer.freedesktop.org/src/gstreamer-docs/gstreamer-docs-$pkgver.tar.xz"{,.asc}
-   0001-HACK-meson-Disable-broken-tests.patch
--  https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/10545.patch
- )
- b2sums=('17a6826af9ed8ae50a215e6f831d8cb2b85b80f8899610febfcf8733000d185caf9c153cb3ed6197fffedcad4f7d4547e13baddc74018eca8a4b2c660c316376'
-         'b387e0389d34916b88707abeb7b3d2f521575075081d3f103733ac063cafd86853e4586b4a17771d37b47c1b43de8169af97444413f404eca0b4b18aaefc325d'
-         'SKIP'
--        '21d74423e44f4d9918ef477d7664b65d2848b14830f6d339c525f8de54aedfaae274ac772f157938f9a98bc9d1806210d807cab8ccf9dd95fcaf0547b587c36a'
--        '5193762971338636485e8800f99bb99cadc61e0f4728469167c5856f31e659b657dc88e97316384eb9a937b91f756c59561c9fe3648983573039e1d89674aedd')
-+        '21d74423e44f4d9918ef477d7664b65d2848b14830f6d339c525f8de54aedfaae274ac772f157938f9a98bc9d1806210d807cab8ccf9dd95fcaf0547b587c36a')
- validpgpkeys=(
-   D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim Müller <tim@gstreamer-foundation.org>
- )
-@@ -220,11 +215,11 @@
-   cd gstreamer
- 
-   git apply -3 ../0001-HACK-meson-Disable-broken-tests.patch
--  git apply -3 ../10545.patch
- }
+@@ -225,6 +222,7 @@
  
  build() {
    local meson_options=(
@@ -61,7 +32,7 @@
      -D benchmarks=disabled
      -D examples=disabled
      -D glib_debug=disabled
-@@ -264,7 +259,7 @@
+@@ -264,7 +262,7 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -70,7 +41,7 @@
      -D package-origin="https://www.archlinux.org/"
      -D vaapi=enabled
    )
-@@ -274,7 +269,7 @@
+@@ -274,7 +272,7 @@
    export CARGO_PROFILE_RELEASE_DEBUG=2 CARGO_PROFILE_RELEASE_STRIP=false
    export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
  
@@ -79,7 +50,7 @@
    meson compile -C build
  }
  
-@@ -285,7 +280,7 @@
+@@ -285,7 +283,7 @@
    export NO_AT_BRIDGE=1 GTK_A11Y=none
  
    xvfb-run -s "-nolisten local" \
@@ -88,25 +59,15 @@
  )
  
  _install() {
-@@ -768,17 +763,6 @@
-     zvbi
-     zxing-cpp
-   )
--  optdepends=(
--    'gst-plugin-gtk: gtk plugin'
--    'gst-plugin-msdk: msdk plugin'
+@@ -771,7 +769,6 @@
+   optdepends=(
+     'gst-plugin-gtk: gtk plugin'
+     'gst-plugin-msdk: msdk plugin'
 -    'gst-plugin-onnx: onnx plugin'
--    'gst-plugin-opencv: opencv plugin and library'
--    'gst-plugin-qml6: qml6 plugin'
--    'gst-plugin-qmlgl: qmlgl plugin'
--    'gst-plugin-qsv: qsv plugin'
--    'gst-plugin-va: va plugin'
--    'gst-plugin-wpe: wpe plugin'
--  )
- 
-   cd root; local files=(
-     usr/lib/gstreamer-1.0/libgstaes.so
-@@ -935,26 +919,9 @@
+     'gst-plugin-opencv: opencv plugin and library'
+     'gst-plugin-qml6: qml6 plugin'
+     'gst-plugin-qmlgl: qmlgl plugin'
+@@ -935,23 +932,6 @@
    ); _install
  }
  
@@ -129,12 +90,8 @@
 -}
  
  package_gst-plugin-opencv() {
--  pkgdesc+=" - opencv plugin and library"
-+  pkgdesc+=" - opencv plugin"
-   depends=(
-     "gst-plugins-base-libs=$pkgver-$pkgrel"
-     "gstreamer=$pkgver-$pkgrel"
-@@ -1202,7 +1169,6 @@
+   pkgdesc+=" - opencv plugin and library"
+@@ -1202,7 +1182,6 @@
      libva
      libx11
      libxrandr

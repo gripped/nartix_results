@@ -98,7 +98,6 @@ krun
 cups-filters
 cups
 libcups
-cython
 darkhttpd
 dbus-broker
 dconf
@@ -106,7 +105,6 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
-directx-shader-compiler
 dns-over-https
 docker
 dolphin-emu
@@ -162,11 +160,11 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
-ffmpeg
 fig2dev
 firefox
 firewalld
 firewalld-test
+fish
 flatpak
 flatpak-docs
 flite
@@ -281,7 +279,6 @@ hipcub
 hipfft
 hipsolver
 hipsparse
-hsa-rocr
 hwloc
 hyphen
 hyphen-en
@@ -343,8 +340,8 @@ ksystemlog
 kwin-x11
 kwin
 libabw
+libaec
 libatasmart
-libavif
 libayatana-indicator
 libblockdev
 libblockdev-btrfs
@@ -386,7 +383,6 @@ libgtop
 libgudev
 libguestfs
 libhandy0
-libheif
 libidl2
 libindi
 libinput
@@ -408,7 +404,6 @@ libnvme
 libofa
 libpagemaker
 libpgm
-libpng
 libprocps
 libqb
 librevenge
@@ -430,7 +425,6 @@ libxfce4ui
 libxfce4util
 libxklavier
 libxmlrpc
-liferea
 light-locker
 lightdm-slick-greeter
 lightdm
@@ -601,6 +595,7 @@ niri
 nodejs-lts-hydrogen
 nodejs-lts-jod
 nsd
+nsight-compute
 nushell
 nvidia-340xx-utils
 nvidia-390xx-utils
@@ -735,15 +730,26 @@ python-asn1crypto
 python-cram
 python-debugpy
 python-deprecation
+python-discogs-client
+python-extras
+python-fastbencode
 python-hidapi
+python-keyring
 python-ndg-httpsclient
+python-pylast
 python-pymad
 python-pymupdf
 python-pyscard
+python-pytables
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-urwid
+python-validate-pyproject
 python-wheel
+python-xarray
+python-yara
+python-zope-testrunner
 qastools
 qbittorrent
 qbittorrent-nox
@@ -860,10 +866,6 @@ ristretto
 rnnoise
 rocalution
 rocfft
-rocm-cmake
-rocm-llvm
-rocm-device-libs
-comgr
 rocrand
 rocsolver
 rocsparse
@@ -1080,6 +1082,7 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
+volatility3
 vpnc
 vte3
 vte-common
@@ -1182,6 +1185,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yara
 yubico-c-client
 yubico-c
 yubikey-personalization

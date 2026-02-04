@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libfyaml
+-pkgver=0.9.4
++pkgver=0.9.3
+ pkgrel=1
+ pkgdesc='Fully feature complete YAML parser and emitter'
+ arch=(x86_64)
+@@ -9,7 +9,7 @@
+ depends=(glibc)
+ makedepends=(git)
+ source=(git+https://github.com/pantoniou/libfyaml#tag=v$pkgver)
+-sha256sums=('06851d893ae1c66ce2db681f229aa62572a535a3ab67c49354c1b4c622c7c2ec')
++sha256sums=('ff9f7b7defe589dda095a4796fdeb098bbd3886242bc573a6ed5b65014f4e7b0')
+ 
+ prepare() {
+   cd $pkgname
