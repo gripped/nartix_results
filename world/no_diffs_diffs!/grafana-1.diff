@@ -22,21 +22,3 @@
    cd $pkgname
    install -Dsm755 bin/linux-*/grafana "$pkgdir/usr/bin/grafana"
    install -Dsm755 bin/linux-*/grafana-server "$pkgdir/usr/bin/grafana-server"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,11 +0,0 @@
--fontconfig
--freetype2
--git
--glibc
--go
--grunt-cli
--gsfonts
--nodejs-lts-jod
--npm
--python
--yarn

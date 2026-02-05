@@ -1,8 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,6 @@
- makedepends=('git' 'go' 'gox' 'go-tools')
- makedepends+=('procps-ng' 'zip' 'yarn' 'nodejs-lts-iron' 'pnpm')  # makedepends for the UI
+@@ -1,16 +1,15 @@
+ 
+ pkgname=consul
+ pkgver=1.22.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A tool for service discovery, monitoring and configuration."
+ arch=('x86_64')
+ url="https://www.consul.io"
+ license=('BUSL-1.1')
+ depends=('glibc')
+-makedepends=('git' 'go')
+-makedepends+=('yarn' 'nodejs-lts-iron' 'pnpm')  # makedepends for the UI
++makedepends=('git' 'go' 'gox' 'go-tools')
++makedepends+=('procps-ng' 'zip' 'yarn' 'nodejs-lts-iron' 'pnpm')  # makedepends for the UI
  source=("git+https://github.com/hashicorp/consul#tag=v${pkgver}"
 -        'consul.service'
          'consul.default'
@@ -24,3 +36,20 @@
    install -Dm644 "${srcdir}/consul.sysusers" "${pkgdir}/usr/lib/sysusers.d/consul.conf"
  
    install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,10 @@
+ git
+ glibc
+ go
++go-tools
++gox
+ nodejs-lts-iron
+ pnpm
++procps-ng
+ yarn
++zip
