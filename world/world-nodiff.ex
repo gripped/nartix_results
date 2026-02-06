@@ -278,7 +278,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -4854,7 +4853,6 @@ ruby-covered
 ruby-crack
 ruby-crass
 ruby-csv
-ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
@@ -5693,6 +5691,7 @@ vmaf
 vncdotool
 vnstat
 vokoscreen
+volatility3
 volk
 volume_key
 python-volume_key
@@ -5891,6 +5890,7 @@ yakuake
 yaml-cpp
 yamllint
 yapf
+yara
 yarn
 yasm
 yaz

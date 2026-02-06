@@ -186,8 +186,6 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
-libreoffice-fresh
-libreoffice-fresh-sdk
 libreoffice-still-i18n
 libretro-beetle-psx
 libretro-beetle-psx-hw

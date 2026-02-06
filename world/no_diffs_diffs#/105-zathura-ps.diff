@@ -3,7 +3,7 @@
 @@ -1,19 +1,19 @@
  
  pkgname=zathura-ps
--pkgver=2026.01.30
+-pkgver=2026.02.03
 -pkgrel=1
 +pkgver=0.2.8
 +pkgrel=2
@@ -15,7 +15,7 @@
 -makedepends=('meson' 'ninja' 'appstream' 'appstream-glib')
 +makedepends=('meson' 'ninja' 'appstream-glib')
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
--sha512sums=('a5bd74644aeebc23622b4f23829f4ffe54a9d8604712a51b278e1cc4fcc34878d20cedf09185b0237692fb10054015a572635bd48a0275662abf518accf534d6')
+-sha512sums=('38be5cce09a6d7dd008c12dc0f2dcf053d55b23792148add94d616b61b0e4ad2e2f395203a9391c6c7e0d46ddf4f9a62d106d917d5444e709cc963b511e78a95')
 +sha512sums=('73e230a089e40f660cbf9f478a3269bcc799d5e591fd1fe095e9ce3ec4fd4f331757a7ec74cb3ef5b3b3ffc66ba15e6f11d6e3fc619973219cb67e25a504875b')
  
  build() {

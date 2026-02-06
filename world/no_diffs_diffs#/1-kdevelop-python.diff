@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kdevelop-python
+-pkgver=25.12.2
+-pkgrel=1
++pkgver=25.12.1
++pkgrel=2
+ pkgdesc='Python language and documentation plugin for KDevelop'
+ arch=(x86_64)
+ url='https://www.kdevelop.org/'
+@@ -24,7 +24,7 @@
+ groups=(kde-applications
+         kdevelop)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/kdev-python-$pkgver.tar.xz{,.sig})
+-sha256sums=('cbaa04337b548b941146be53894d91c4ef90a54bcd5b496641b9f66a8c89859b'
++sha256sums=('11d419521746ce5e68be530206a25a85e5c5c4e6dd3c87932c1f0921b7da1cf5'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

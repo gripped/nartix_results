@@ -47,6 +47,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -874,6 +875,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-cucumber-ci-environment
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
@@ -1081,7 +1083,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-volatility3
 vpnc
 vte3
 vte-common
@@ -1184,7 +1185,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yara
 yubico-c-client
 yubico-c
 yubikey-personalization

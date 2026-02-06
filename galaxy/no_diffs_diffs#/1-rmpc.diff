@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=rmpc
+ pkgver=0.11.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A beautiful and configurable TUI client for MPD'
+ url='https://mierak.github.io/rmpc/'
+ arch=('x86_64')
+@@ -13,7 +13,7 @@
+   'python-mutagen: for youtube playback'
+   'ueberzugpp: for alternative album art method'
+   'cava: for visualizer')
+-makedepends=('cargo' 'desktop-file-utils')
++makedepends=('cargo')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/mierak/rmpc/archive/v$pkgver.tar.gz")
+ sha256sums=('930019066228d18e9530a8c0d77f10e231ab5efbbbca73b331efcd6fbb47557d')
+ 
+@@ -48,7 +48,5 @@
+   install -Dm 644 "README.md" "$pkgdir/usr/share/doc/$pkgname/README.md"
+ 
+   install -Dm 644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENCE"
+-
+-  desktop-file-install -m 644 --dir "$pkgdir/usr/share/applications/" "assets/$pkgname.desktop"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ cargo
+-desktop-file-utils
+ gcc-libs

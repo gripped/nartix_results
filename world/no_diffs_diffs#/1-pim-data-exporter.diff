@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=pim-data-exporter
+-pkgver=25.12.2
++pkgver=25.12.1
+ pkgrel=1
+ pkgdesc='Import and export KDE PIM settings'
+ arch=(x86_64)
+@@ -39,7 +39,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('189218591963873056f7335c29f4f3fb5c0ebe82bf4430a7ce092392baa28caa'
++sha256sums=('d0a8fc4c2127aeeeabb9ee2c59290f383c7b31caf12dec997d62aabacab838fb'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

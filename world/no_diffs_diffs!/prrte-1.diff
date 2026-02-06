@@ -9,18 +9,3 @@
  pkgdesc="PMIx Reference RunTime Environment"
  arch=(x86_64)
  url="https://github.com/openpmix/prrte"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,8 +0,0 @@
--glibc
--hwloc
--libevent
--libevent_core-2.1.so
--libevent_pthreads-2.1.so
--libpmix.so
--openpmix
--perl
