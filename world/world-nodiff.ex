@@ -157,8 +157,6 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -3395,7 +3393,6 @@ python-databases
 python-dateutil
 python-dbus-deviation
 python-dbus-next
-python-dbusmock
 python-ddt
 python-deadlib
 $_modules[@]/#/python-standard-
@@ -4853,6 +4850,7 @@ ruby-covered
 ruby-crack
 ruby-crass
 ruby-csv
+ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
@@ -5669,6 +5667,8 @@ vice-sdl2
 vid.stab
 viewnior
 vifm
+vigra
+python-vigra
 vimiv
 virglrenderer
 virt-manager

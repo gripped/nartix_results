@@ -19,6 +19,8 @@ atftp
 atril
 audacious-plugins
 avahi
+avogadrolibs
+avogadrolibs-qt
 awesome
 bash-bats
 blender
@@ -728,6 +730,7 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
+python-dbusmock
 python-debugpy
 python-deprecation
 python-discogs-client
@@ -875,7 +878,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-cucumber-ci-environment
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
@@ -995,8 +997,6 @@ v2ray
 v4l-utils
 valkey
 vault
-vigra
-python-vigra
 vim
 gvim
 vim-runtime

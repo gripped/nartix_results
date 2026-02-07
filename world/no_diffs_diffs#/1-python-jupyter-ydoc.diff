@@ -1,20 +1,40 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,14 +1,13 @@
  
  _pyname=jupyter_ydoc
  pkgname=python-${_pyname//_/-}
--pkgver=3.3.6
+-pkgver=3.4.0
 +pkgver=3.3.4
  pkgrel=1
  pkgdesc='Document structures for collaborative editing using Ypy'
  arch=(any)
-@@ -19,7 +19,7 @@
+ url='https://jupyter.org/'
+ license=(MIT)
+ depends=(python
+-         python-anyio
+          python-pycrdt)
+ makedepends=(git
+              python-build
+@@ -20,7 +19,7 @@
                python-websockets
                python-pycrdt-websocket)
  source=(git+https://github.com/jupyter-server/jupyter_ydoc#tag=v$pkgver)
--sha256sums=('1507163fd1e5e5c9ec42762a02a798f5b5bdfea98f083805a89d504323dd6cab')
+-sha256sums=('17b2ff1f5391072fae86d70ea9831c89a6effd60b1df9f74b3b9fc5c0bb4ca28')
 +sha256sums=('300283669a0be3b5ae165b2f6f811ec125e3c404ad3727e5c859a6d6a4bf1e90')
  
  build() {
    cd $_pyname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ git
+ python
+-python-anyio
+ python-build
+ python-hatch-nodejs-version
+ python-hatchling

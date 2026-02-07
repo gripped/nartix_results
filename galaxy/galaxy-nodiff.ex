@@ -149,6 +149,7 @@ imv
 incron
 joyutils
 just
+kanshi
 kernel-headers-musl
 khard
 kodi
@@ -662,6 +663,7 @@ ueberzugpp
 uncrustify
 utox
 vagrant
+vali
 vdirsyncer
 vhba-module
 vhba-module-dkms

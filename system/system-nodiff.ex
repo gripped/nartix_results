@@ -35,7 +35,6 @@ file
 findutils
 flex
 gawk
-gc
 gdbm
 gettext
 glib2

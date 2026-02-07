@@ -6,13 +6,22 @@
  pkgname=('libreoffice-fresh-sdk' 'libreoffice-fresh')
 -_LOver=26.2.0.3
 -pkgver=26.2.0
--pkgrel=1
+-pkgrel=2
 +_LOver=25.8.4.2
 +pkgver=25.8.4
 +pkgrel=3
  arch=('x86_64')
  license=('MPL-2.0' 'LGPL-3.0-or-later')
  url="https://www.libreoffice.org/"
+@@ -17,7 +17,7 @@
+     'libmspub' 'harfbuzz-icu' 'nss' 'hicolor-icon-theme'
+     'gst-plugins-base-libs' 'sane' 'perl-archive-zip' 'zip' 'unzip' 'unixodbc' 'ant'
+     'gperf' 'gtk3' 'gtk4' 'cppunit' 'beanshell' 'clucene'
+-    'qt5-base' 'qt5-x11extras' 'md4c'
++    'qt5-base' 'qt5-x11extras'
+     'qt6-base' 'qt6-multimedia' 'kio' 'kconfig' 'kcoreaddons' 'kwindowsystem' 'ki18n' 'kcoreaddons'
+     'libmythes' 'libwpg'  'java-environment=17' 'postgresql-libs' 'mariadb-libs' 'libgl'
+     'bluez-libs' 'gdb' 'doxygen'  'libatomic_ops'  'mdds'
 @@ -27,7 +27,7 @@
      'libtommath' 'libzmf' 'xmlsec' 'rxvt-unicode' 'gpgme' 'libwebp'
      'libepubgen' 'libfreehand' 'libqxp' 'libstaroffice'  'boost' 'libnumbertext'
@@ -148,6 +157,15 @@
          --with-gdrive-client-id=${_google_default_client_id} \
          --with-gdrive-client-secret=${_google_default_client_secret} \
          --disable-dependency-tracking
+@@ -286,7 +291,7 @@
+         'zxing-cpp' 'xdg-utils'
+         'libldap' 'fontconfig' 'zlib' 'libpng' 'freetype2' 'raptor' 'libxml2'
+         'cairo' 'libx11' 'expat' 'glib2' 'boost-libs' 'libtiff' 'dbus' 'glibc'
+-        'librevenge' 'libxext' 'openjpeg2' 'argon2' 'md4c')
++        'librevenge' 'libxext' 'openjpeg2' 'argon2')
+     optdepends=('java-runtime:     adds java support'
+         'java-environment>=17: required by extension-wiki-publisher and extension-nlpsolver'
+         'pstoedit:         translates PostScript and PDF graphics into other vector formats'
 
 
 ############# Stripped diff below #################
@@ -162,6 +180,14 @@
  fontconfig
  freetype2
  gcc
+@@ -91,7 +90,6 @@
+ lpsolve
+ make
+ mariadb-libs
+-md4c
+ mdds
+ neon>
+ nspr
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
