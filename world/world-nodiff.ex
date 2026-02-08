@@ -276,6 +276,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -1846,6 +1847,7 @@ libmediainfo
 libmemcached-awesome
 libmicrodns
 libmikmod
+libmilter
 libmirage
 libmodplug
 libmp4v2
@@ -2328,8 +2330,6 @@ minicom
 minidlna
 minio
 minisign
-miniupnpc
-python-miniupnpc
 minizip-ng
 minuet
 mitmproxy
@@ -2572,7 +2572,6 @@ os-prober
 osinfo-db-tools
 osinfo-db
 osm-gps-map
-ospray
 oxygen-icons
 oxygen-icons-svg
 oxygen-sounds
@@ -3233,7 +3232,6 @@ python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
 python-awscrt
-python-axolotl-curve25519
 python-axolotl
 python-babel
 python-backcall
@@ -3457,7 +3455,6 @@ python-ecdsa
 python-editables
 python-editdistance-s
 python-editdistance
-python-editor
 python-elastic-transport
 python-elasticsearch
 python-electrum-aionostr
@@ -3531,7 +3528,6 @@ python-flufl.bounce
 python-flufl.i18n
 python-flufl.testing
 python-fluidity
-python-flup
 python-fonttools
 python-forbiddenfruit
 python-fqdn
@@ -3734,7 +3730,6 @@ python-ldap3
 python-legacy-cgi
 python-levenshtein
 python-lexicon
-python-libarchive-c
 python-libcst
 python-libevdev
 python-librabbitmq
@@ -4212,7 +4207,6 @@ python-pytz
 python-pytzdata
 python-pyu2f
 python-pyusb
-python-pyvex
 python-pyvips
 python-pyvirtualdisplay
 python-pywal
@@ -4240,7 +4234,6 @@ python-reactivex
 python-readme-renderer
 python-redis
 python-referencing
-python-reflink
 python-regex
 python-regress
 python-rencode
@@ -4253,7 +4246,6 @@ python-requests-ftp
 python-requests-futures
 python-requests-gssapi
 python-requests-kerberos
-python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt

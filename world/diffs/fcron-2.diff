@@ -1,15 +1,42 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,27 +1,17 @@
+ 
+ pkgname=fcron
+ pkgver=3.4.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Feature-rich cron implementation'
+ arch=(x86_64)
  url='http://fcron.free.fr'
- license=('GPL')
- depends=('pam' 'run-parts')
--makedepends=('smtp-forwarder' 'vim' 'fcron' 'systemd')
+-license=(GPL-2.0-or-later)
+-depends=(
+-  pam
+-  run-parts
+-)
+-makedepends=(
+-  fcron
+-  smtp-forwarder
+-  systemd
+-  vim
+-)
+-optdepends=(
+-  'smtp-forwarder: to send mails from cron jobs'
+-  'vim: default editor for fcrontab'
+-)
+-provides=(cron)
+-conflicts=(dcron)
++license=('GPL')
++depends=('pam' 'run-parts')
 +makedepends=('smtp-forwarder' 'vim' 'fcron')
- optdepends=('smtp-forwarder: to send mails from cron jobs'
-             'vim: default editor for fcrontab')
- provides=('cron')
-@@ -39,7 +39,7 @@
++optdepends=('smtp-forwarder: to send mails from cron jobs'
++            'vim: default editor for fcrontab')
++provides=('cron')
++conflicts=('dcron')
+ backup=('etc/fcron/fcron.conf'
+         'etc/fcron/fcron.allow'
+         'etc/fcron/fcron.deny'
+@@ -49,7 +39,7 @@
                --datadir=/usr/share \
                --with-docdir=/usr/share/doc \
                --localstatedir=/var \
@@ -18,7 +45,7 @@
                --with-piddir=/run \
                --with-editor=/usr/bin/vim \
                --with-sendmail=/usr/bin/sendmail
-@@ -48,7 +48,6 @@
+@@ -58,7 +48,6 @@
  
  package() {
    cd $pkgname-$pkgver

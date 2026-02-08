@@ -380,6 +380,7 @@ ttf-zed-mono-nerd
 nicotineplus
 nim
 nushell
+nvm
 nwg-hello
 nyx
 obconf-qt

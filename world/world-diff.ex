@@ -49,7 +49,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -395,7 +394,6 @@ liblqr
 libmatekbd
 libmatemixer
 libmateweather
-libmilter
 libmms
 libmng
 libmpd
@@ -551,6 +549,8 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
+miniupnpc
+python-miniupnpc
 miopen-hip
 mod_dnssd
 modemmanager
@@ -628,6 +628,7 @@ opensmtpd
 opensnitch
 opensp
 openvpn
+ospray
 ostree
 packagekit
 libpackagekit-glib
@@ -729,15 +730,19 @@ pysolfc
 python-anytree
 python-aresponses
 python-asn1crypto
+python-axolotl-curve25519
 python-cram
 python-dbusmock
 python-debugpy
 python-deprecation
 python-discogs-client
+python-editor
 python-extras
 python-fastbencode
+python-flup
 python-hidapi
 python-keyring
+python-libarchive-c
 python-ndg-httpsclient
 python-pylast
 python-pymad
@@ -746,7 +751,10 @@ python-pyscard
 python-pytables
 python-pytest-freezegun
 python-pyudev
+python-pyvex
 python-recommonmark
+python-reflink
+python-requests-mock
 python-urwid
 python-validate-pyproject
 python-wheel

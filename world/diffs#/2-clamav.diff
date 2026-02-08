@@ -1,6 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=clamav
+ pkgver=1.5.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Anti-virus toolkit for Unix'
+ url='https://www.clamav.net/'
+ license=(GPL-2.0-only)
+@@ -15,21 +15,21 @@
+   json-c
+   libltdl
+   libmspack
+-  libmilter
+   libxml2
    ncurses
    openssl
    pcre2
@@ -9,7 +23,9 @@
    zlib
  )
  makedepends=(
-@@ -29,7 +29,7 @@
+   cargo
+   cmake
++  libmilter
    ninja
    python
    python-pytest
