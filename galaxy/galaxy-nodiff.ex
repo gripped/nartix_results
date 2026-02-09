@@ -126,6 +126,7 @@ fzy
 gammastep
 gaphor
 garcon
+gemini-cli
 ghostty
 ghostty-shell-integration
 ghostty-terminfo

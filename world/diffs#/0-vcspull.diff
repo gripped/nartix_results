@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname='vcspull'
+-pkgver=1.52.1
++pkgver=1.34.0
+ pkgrel=1
+ pkgdesc='Synchronize projects via yaml/json manifest. Built using `libvcs`'
+ arch=('any')
+@@ -21,22 +21,18 @@
+ )
+ checkdepends=(
+   git
+-  python-docutils
+   python-pytest
+-  python-pytest-asyncio
+   python-pytest-rerunfailures
+-  python-sphinx
+-  python-syrupy
+ )
+ optdepends=(
+   'bash-completion: for command line completion in bash'
+ )
+ source=("https://github.com/vcs-python/vcspull/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+-sha512sums=('f388bc58fec2b680f5efb8d3ced1efc1aee4379e7d8e47bcc205b1195261d52bcc1f7559c9ff97c18bf1865b1498bbd525fa740cd978d41bbd487845ca5f52ad')
+-b2sums=('1a8782f29b08047ee2e9de96282aecf962acd18ac9bb6b764a1383b9eac2f84ab5b7b40cd87841a6793fff5f27a945cc762588061baa05553de1310a1cd2279e')
++sha512sums=('7b2a94a769ba33fc5b02b69611a41962498f6db247a9c85847855042c9191b8aadb5eec5ee051ef5519c2230b859fbfd562d3b312395a7795b2f841bc0fbfd05')
++b2sums=('fc438d8d27b5adbb0bcf26a8f96391449235649723211ea2a47e8bbb467e8046a354a39e44a7599c58cdd751da7debfc63638e453262bbd53f1257f2bc8e18fa')
+ 
+ build() {
+-  cd "${pkgname}-${pkgver}"
++  cd  "${pkgname}-${pkgver}"
+ 
+   local _site_packages="$(python -c "import site; print(site.getsitepackages()[0])")"
+ 
+@@ -47,13 +43,13 @@
+ }
+ 
+ check() {
+-  cd "${pkgname}-${pkgver}"
++  cd  "${pkgname}-${pkgver}"
+ 
+   pytest -vv tests
+ }
+ 
+ package() {
+-  cd "${pkgname}-${pkgver}"
++  cd  "${pkgname}-${pkgver}"
+ 
+   cp --archive --verbose tmp_install/* "${pkgdir}"
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd "${pkgname}-${pkgver}"
++cd  "${pkgname}-${pkgver}"
+ local _site_packages="$(python -c "import site; print(site.getsitepackages()[0])")"
+ python -m build --wheel --skip-dependency-check --no-isolation
+ python -m installer --destdir=tmp_install dist/*.whl

@@ -338,7 +338,6 @@ clutter
 cmark-gfm
 cmark
 cmatrix
-cmocka
 cmus
 cni-plugins
 codespell
@@ -641,12 +640,12 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+fish
 five-or-more
 flac
 flac-doc
 flake8
 flameshot
-flashrom
 flatbuffers
 python-flatbuffers
 flatpak-builder
@@ -681,7 +680,6 @@ freecell-solver
 freeglut
 freeimage
 freeradius
-freetds
 freetype2
 freetype2-demos
 freetype2-docs
@@ -1793,7 +1791,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2330,6 +2327,8 @@ minicom
 minidlna
 minio
 minisign
+miniupnpc
+python-miniupnpc
 minizip-ng
 minuet
 mitmproxy
@@ -3142,6 +3141,7 @@ pysmbc
 python-pysmbc
 pysolfc-cardsets
 pystring
+python-a2wsgi
 python-aaf2
 python-aafigure
 python-absl
@@ -3232,11 +3232,13 @@ python-awesomeversion
 python-aws-sam-translator
 python-aws-xray-sdk
 python-awscrt
+python-axolotl-curve25519
 python-axolotl
 python-babel
 python-backcall
 python-backports-zstd
 python-backrefs
+python-baize
 python-base58
 python-bcrypt
 python-beaker
@@ -3391,6 +3393,7 @@ python-databases
 python-dateutil
 python-dbus-deviation
 python-dbus-next
+python-dbusmock
 python-ddt
 python-deadlib
 $_modules[@]/#/python-standard-
@@ -3401,12 +3404,14 @@ python-deepmerge
 python-defusedxml
 python-dep-logic
 python-deprecated
+python-deprecation
 python-devtools
 python-diff-cover
 python-digitalocean
 python-dill
 python-dirty-equals
 python-discid
+python-discogs-client
 python-distlib
 python-distributed
 python-distro
@@ -3455,6 +3460,7 @@ python-ecdsa
 python-editables
 python-editdistance-s
 python-editdistance
+python-editor
 python-elastic-transport
 python-elasticsearch
 python-electrum-aionostr
@@ -3475,11 +3481,13 @@ python-execnet
 python-executing
 python-expandvars
 python-expects
+python-extras
 python-factory-boy
 python-faker
 python-fakeredis
 python-falcon
 python-fastapi
+python-fastbencode
 python-fasteners
 python-fastimport
 python-fastjsonschema
@@ -3528,6 +3536,7 @@ python-flufl.bounce
 python-flufl.i18n
 python-flufl.testing
 python-fluidity
+python-flup
 python-fonttools
 python-forbiddenfruit
 python-fqdn
@@ -3544,7 +3553,6 @@ python-fuzzywuzzy
 python-gaphas
 python-gast
 python-gast03
-python-gcp-devrel-py-tools
 python-generic
 python-genshi
 python-genty
@@ -3563,7 +3571,6 @@ python-gitlab
 python-gitpython
 python-glanceclient
 python-glob2
-python-gmpy2
 python-gnupg
 python-gnupginterface
 python-google-api-core
@@ -3714,6 +3721,7 @@ python-kajiki
 python-kazoo
 python-keras-applications
 python-keras-preprocessing
+python-keyring
 python-keyrings-alt
 python-keystoneauth1
 python-keyutils
@@ -3730,6 +3738,7 @@ python-ldap3
 python-legacy-cgi
 python-levenshtein
 python-lexicon
+python-libarchive-c
 python-libcst
 python-libevdev
 python-librabbitmq
@@ -4062,6 +4071,7 @@ python-pyjwt
 python-pykakasi
 python-pykerberos
 python-pykka
+python-pylast
 python-pylatexenc
 python-pylev
 python-pylibmc
@@ -4113,6 +4123,7 @@ python-pysolr
 python-pyspinel
 python-pyspnego
 python-pystache
+python-pytables
 python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
@@ -4207,6 +4218,7 @@ python-pytz
 python-pytzdata
 python-pyu2f
 python-pyusb
+python-pyvex
 python-pyvips
 python-pyvirtualdisplay
 python-pywal
@@ -4234,6 +4246,7 @@ python-reactivex
 python-readme-renderer
 python-redis
 python-referencing
+python-reflink
 python-regex
 python-regress
 python-rencode
@@ -4246,6 +4259,7 @@ python-requests-ftp
 python-requests-futures
 python-requests-gssapi
 python-requests-kerberos
+python-requests-mock
 python-requests-ntlm
 python-requests-oauthlib
 python-requests-toolbelt
@@ -4464,6 +4478,7 @@ python-txrequests
 python-txtorcon
 python-typed-ast
 python-typeguard
+python-typer
 python-types-python-dateutil
 python-typing-inspection
 python-typing_extensions
@@ -4492,9 +4507,11 @@ python-update-checker
 python-uri-template
 python-uritemplate
 python-urllib3
+python-urwid
 python-userpath
 python-uvloop
 python-validate-email
+python-validate-pyproject
 python-validators
 python-vcrpy
 python-versioneer
@@ -4537,6 +4554,7 @@ python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
+python-xarray
 python-xattr
 python-xkbcommon
 python-xlib
@@ -4549,6 +4567,7 @@ python-xmltodict
 python-xxhash
 python-y-py
 python-yaml
+python-yara
 python-yarg
 python-yarl
 python-yaspin
@@ -4578,6 +4597,7 @@ python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing
+python-zope-testrunner
 python-zopfli
 python-zstandard
 pyxdg
@@ -4825,7 +4845,6 @@ ruby-bigdecimal
 ruby-brass
 ruby-build-environment
 ruby-build-files
-ruby-builder
 ruby-bump
 ruby-bundler
 ruby-byebug
@@ -5192,7 +5211,6 @@ sdl2_image
 sdl2_mixer
 sdl2_net
 sdl2_ttf
-sdl3
 sdl3_ttf
 sdl_image
 sdl_mixer
@@ -5649,7 +5667,6 @@ vapoursynth
 vc-intrinsics
 vc
 vcdimager
-vcspull
 vde2
 vdpauinfo
 veracrypt

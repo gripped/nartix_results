@@ -48,6 +48,7 @@ firedragon
 firefox-esr
 fu-perl
 gitea-tea
+github-copilot-cli
 grub-theme
 htpdate
 incron-next

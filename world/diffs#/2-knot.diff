@@ -1,21 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
- url="https://www.knot-dns.cz/"
- license=(GPL3)
- depends=(libedit gnutls liburcu lmdb
--         libidn2 systemd libcap-ng
-+         libidn2 libcap-ng
-          fstrm protobuf-c libmaxminddb
-          libbpf libxdp libnghttp2 libmnl)
- makedepends=(git python-sphinx)
-@@ -54,7 +54,6 @@
-     rm "${pkgdir}"/etc/knot/example.com.zone
-     mv "${pkgdir}"/etc/knot/{knot.sample.conf,knot.conf}
+@@ -23,7 +23,7 @@
+   libxdp
+   lmdb
+   protobuf-c
+-  systemd-libs
++
+ )
+ makedepends=(
+   git
+@@ -71,7 +71,6 @@
+   rm -v "${pkgdir}"/etc/knot/example.com.zone
+   mv -v "${pkgdir}"/etc/knot/{knot.sample.conf,knot.conf}
  
--    install -Dm644 distro/common/knot.service -t "${pkgdir}"/usr/lib/systemd/system/
-     install -Dm644 distro/pkg/arch/knot.tmpfiles.arch "${pkgdir}"/usr/lib/tmpfiles.d/${pkgname}.conf
-     install -Dm644 distro/pkg/arch/knot.sysusers "${pkgdir}"/usr/lib/sysusers.d/${pkgname}.conf
+-  install -vDm644 -t "${pkgdir}/usr/lib/systemd/system" distro/common/knot.service
+   install -vDm644 distro/pkg/arch/knot.tmpfiles.arch "${pkgdir}/usr/lib/tmpfiles.d/${pkgname}.conf"
+   install -vDm644 distro/pkg/arch/knot.sysusers "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"
  }
 
 
@@ -23,8 +23,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,4 +13,3 @@
+@@ -16,4 +16,3 @@
  lmdb
  protobuf-c
  python-sphinx
--systemd
+-systemd-libs

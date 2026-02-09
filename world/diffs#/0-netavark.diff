@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,11 +26,6 @@
+ prepare() {
+   cd $pkgname
+   cargo fetch --locked --target "$(rustc --print host-tuple)"
+-
+-  local in_file
+-  for in_file in contrib/systemd/system/*.in; do
+-    sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" "$in_file" > "${in_file%.in}"
+-  done
+ }
+ 
+ build() {
+@@ -49,6 +44,5 @@
+   install -vDm 755 target/release/$pkgname -t "$pkgdir/usr/lib/podman/"
+   install -vDm 644 docs/*.1 -t "$pkgdir/usr/share/man/man1/"
+   install -vDm 644 docs/*.7 -t "$pkgdir/usr/share/man/man7/"
+-  install -vDm 644 contrib/systemd/system/*.{service,socket} -t "$pkgdir/usr/lib/systemd/system/"
+   install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,6 @@
+ prepare() {
+ cd $pkgname
+ cargo fetch --locked --target "$(rustc --print host-tuple)"
+-local in_file
+-for in_file in contrib/systemd/system/*.in; do
+-sed "s|@@NETAVARK@@|/usr/lib/podman/netavark|" "$in_file" > "${in_file%.in}"
+-done
+ }
+ build() {
+ cd $pkgname

@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-gmpy2
+-pkgver=2.3.0
+-pkgrel=1
++pkgver=2.2.2
++pkgrel=2
+ pkgdesc='Provides C-coded Python modules for fast multiple-precision arithmetic'
+ arch=(x86_64)
+ url='https://github.com/aleaxit/gmpy'
+@@ -16,20 +16,14 @@
+              python-build
+              python-installer
+              python-setuptools
+-             python-setuptools-scm
+              python-wheel)
+ checkdepends=(python-hypothesis
+               python-pytest)
+ source=(git+https://github.com/aleaxit/gmpy#tag=v$pkgver)
+-sha256sums=('eb972811817f7fe2253ecaced9ae5a1deaab03673f719bc6c834dcb935833765')
+-
+-prepare() {
+-  sed -e 's|,<80||' -i gmpy/pyproject.toml # Drop setuptools version constraint
+-}
++sha256sums=('75869c26cad60e9f53d0e1605e4f1108552d065e778f837e028257f73344cbca')
+ 
+ build() {
+   cd gmpy
+-  SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver \
+   python -m build --wheel --no-isolation
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,5 +8,4 @@
+ python-installer
+ python-packaging
+ python-setuptools
+-python-setuptools-scm
+ python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,4 @@
+-prepare() {
+-sed -e 's|,<80||' -i gmpy/pyproject.toml # Drop setuptools version constraint
+-}
+ build() {
+ cd gmpy
+-SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver \
+ python -m build --wheel --no-isolation
+ }

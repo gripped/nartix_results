@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=haproxy
--pkgver=3.3.2
-+pkgver=3.3.1
- pkgrel=1
- 
- 
 @@ -9,8 +9,8 @@
  arch=('x86_64')
  license=('GPL-2.0-or-later')
@@ -19,15 +11,6 @@
  
  backup=('etc/haproxy/haproxy.cfg')
  
-@@ -24,7 +24,7 @@
-         'haproxy.sysusers'
-         '0001-Use-CFLAGS-and-LDFLAGS-when-building-admin.patch')
- 
--sha256sums=('933075f643e040523a2faea736af7e1cb625d34668e0ee283baf9396b493ea09'
-+sha256sums=('ed2a1e61c7a54ecb3bc7bc6fa23ca1ccc0c3af026f19a382fa1adabeefee7a9a'
-             'f6babef513b99a3fa0e50f2b144c73c980f1b78b119874ffa2580af1e651e7a9'
-             'c6e716ea59272a8e871af53703726dd2a75b56c82dacf097d4bf08ac5e841a0d'
-             'a1e3a1c2923465081383eb431bae55ff9841d89909469311cdba4b394ec4a998')
 @@ -58,9 +58,6 @@
      CFLAGS="$CFLAGS" \
      LDFLAGS="$LDFLAGS" \

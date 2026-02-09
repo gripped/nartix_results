@@ -1,0 +1,82 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,32 +1,41 @@
+ 
+ pkgname=cmocka
+-pkgver=2.0.2
++pkgver=1.1.8
+ pkgrel=1
+ pkgdesc='Elegant unit testing framework for C with support for mock objects'
++url='https://cmocka.org/'
+ arch=('x86_64')
+-url='https://cmocka.org/'
+-license=('Apache-2.0')
++license=('Apache')
+ depends=('glibc')
+ makedepends=('cmake')
+-options=('!lto')
+-source=("https://cmocka.org/files/${pkgver%.*}/cmocka-${pkgver}.tar.xz"{,.asc})
+-sha512sums=('d02d65f0881f18f30b9e46c325acfa349261339daa2c1bf3a4e6360976f13b31588e997415197220f6def156f77d9864994d4e3cfd09c8f16a8594d0a4789a16'
++source=(https://cmocka.org/files/1.1/cmocka-${pkgver}.tar.xz{,.asc})
++sha512sums=('59c3d8732c5558abf4dd9aedac2d5e41cf7693c26a88932449c3dec7be7903c479515f15b4ab8876e4b03f3b4b68460ef34bc6ce079677262638c15e29da37ef'
+             'SKIP')
+ validpgpkeys=('8DFF53E18F2ABC8D8F3C92237EE0FC4DCC014E3D') # Andreas Schneider <asn@cryptomilk.org>
++options=('!lto')
++
++prepare() {
++  cd ${pkgname}-${pkgver}
++  mkdir build
++}
+ 
+ build() {
+-  cmake -S ${pkgname}-${pkgver} -B build \
+-    -DCMAKE_BUILD_TYPE=None \
++  cd ${pkgname}-${pkgver}/build
++  cmake .. \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+-    -Wno-dev \
++    -DCMAKE_INSTALL_LIBDIR=lib \
++    -DCMAKE_BUILD_TYPE=Release \
+     -DUNIT_TESTING=ON
+-  cmake --build build
++  make
+ }
+ 
+ check() {
+-  ctest --test-dir build --output-on-failure
++  cd ${pkgname}-${pkgver}/build
++  make test
+ }
+ 
+ package() {
+-  DESTDIR="${pkgdir}" cmake --install build
++  cd ${pkgname}-${pkgver}/build
++  make install DESTDIR="${pkgdir}"
+ }
++
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,13 @@
++prepare() {
++cd ${pkgname}-${pkgver}
++mkdir build
++}
+ build() {
+-cmake -S ${pkgname}-${pkgver} -B build \
+--DCMAKE_BUILD_TYPE=None \
++cd ${pkgname}-${pkgver}/build
++cmake .. \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+--Wno-dev \
++-DCMAKE_INSTALL_LIBDIR=lib \
++-DCMAKE_BUILD_TYPE=Release \
+ -DUNIT_TESTING=ON
+-cmake --build build
++make
+ }

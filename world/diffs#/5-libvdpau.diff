@@ -1,7 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,11 +4,9 @@
- pkgrel=3
+@@ -1,14 +1,12 @@
+ 
+ pkgname=libvdpau
+ pkgver=1.5
+-pkgrel=4
++pkgrel=3
  pkgdesc='Nvidia VDPAU library'
  arch=(x86_64)
 -url='https://www.freedesktop.org/wiki/Software/VDPAU/'
@@ -14,8 +18,11 @@
    libxext
  )
  makedepends=(
-@@ -21,12 +19,20 @@
-   'mesa-vdpau: driver for Mesa'
+@@ -18,14 +16,23 @@
+ )
+ optdepends=(
+   'libvdpau-va-gl: driver using VAAPI'
++  'mesa-vdpau: driver for Mesa'
    'nvidia-utils: driver for NVIDIA'
  )
 -provides=(libvdpau.so)
@@ -39,7 +46,7 @@
    meson compile -C build
  }
  
-@@ -36,6 +42,6 @@
+@@ -35,6 +42,6 @@
  
  package() {
    meson install -C build --destdir "$pkgdir"
