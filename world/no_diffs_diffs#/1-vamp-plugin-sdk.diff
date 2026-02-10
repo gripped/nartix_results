@@ -5,7 +5,16 @@
  pkgname=vamp-plugin-sdk
  pkgver=2.10
 -pkgrel=1
-+pkgrel=2.1
++pkgrel=2.2
  epoch=1
  pkgdesc="The Vamp audio analysis plug-in system"
  arch=(x86_64)
+@@ -31,6 +31,8 @@
+   sed -n '33,65p' $_source_dir/COPYING > BSD-3-Clause.txt
+ }
+ 
++export MAKEFLAGS="-j1"
++
+ build() {
+   cd $_source_dir
+   ./configure --prefix=/usr

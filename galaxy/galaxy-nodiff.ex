@@ -111,6 +111,7 @@ exo
 ext4magic
 fastfetch
 fceux
+fcitx5-bamboo
 fd
 firefox-i18n
 fluxbox
@@ -188,7 +189,11 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
+libreoffice-still
+libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info

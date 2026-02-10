@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,19 @@
+@@ -1,20 +1,19 @@
  
  pkgname=ddcutil
 -pkgver=2.2.5
+-pkgrel=2
 +pkgver=2.2.3
- pkgrel=1
++pkgrel=1
  pkgdesc='Query and change Linux monitor settings using DDC/CI and USB.'
  url='http://ddcutil.com/'
  arch=('x86_64')
@@ -21,6 +22,7 @@
  
  prepare() {
    cd ddcutil
+-  git revert -n 642ddd5785e034eeae51db00a1d1402412471f43 316fcb977070f6161fd5b2779f7f2c8f6dca8593
 -  autoreconf -fiv
 +  NOCONFIGURE=1 ./autogen.sh
  }

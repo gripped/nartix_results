@@ -157,6 +157,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -338,6 +340,7 @@ clutter
 cmark-gfm
 cmark
 cmatrix
+cmocka
 cmus
 cni-plugins
 codespell
@@ -1791,6 +1794,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2034,6 +2038,7 @@ libva-intel-driver
 libva-utils
 libva-vdpau-driver
 libva
+libvdpau
 libvips
 libvirt-glib
 libvirt-python
@@ -2571,6 +2576,7 @@ os-prober
 osinfo-db-tools
 osinfo-db
 osm-gps-map
+ospray
 oxygen-icons
 oxygen-icons-svg
 oxygen-sounds
@@ -3367,6 +3373,7 @@ python-crispy-bootstrap3
 python-crispy-bootstrap4
 python-crispy-bootstrap5
 python-cron-converter
+python-cross-web
 python-cryptography
 python-cson
 python-css-parser
@@ -3553,6 +3560,7 @@ python-fuzzywuzzy
 python-gaphas
 python-gast
 python-gast03
+python-gcp-devrel-py-tools
 python-generic
 python-genshi
 python-genty
@@ -3571,6 +3579,7 @@ python-gitlab
 python-gitpython
 python-glanceclient
 python-glob2
+python-gmpy2
 python-gnupg
 python-gnupginterface
 python-google-api-core
@@ -4408,6 +4417,7 @@ python-stestr
 python-stevedore
 python-stone
 python-straight.plugin
+python-strawberry-graphql
 python-strict-rfc3339
 python-strictyaml
 python-structlog
@@ -4791,7 +4801,6 @@ rocprim
 rocprofiler-register
 rocs
 rocthrust
-roctracer
 rofi
 ropgadget
 ropper
@@ -4845,6 +4854,7 @@ ruby-bigdecimal
 ruby-brass
 ruby-build-environment
 ruby-build-files
+ruby-builder
 ruby-bump
 ruby-bundler
 ruby-byebug
@@ -5211,6 +5221,7 @@ sdl2_image
 sdl2_mixer
 sdl2_net
 sdl2_ttf
+sdl3
 sdl3_ttf
 sdl_image
 sdl_mixer

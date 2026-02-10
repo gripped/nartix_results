@@ -38,5 +38,6 @@ lib32-polkit
 lib32-spirv-llvm-translator
 lib32-v4l-utils
 steam
+steam-devices
 wine-staging
 wine

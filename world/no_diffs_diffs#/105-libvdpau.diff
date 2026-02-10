@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libvdpau
+ pkgver=1.5
+-pkgrel=4
++pkgrel=3.1
+ pkgdesc='Nvidia VDPAU library'
+ arch=(x86_64)
+ url='https://www.freedesktop.org/wiki/Software/VDPAU/'
+@@ -25,7 +25,7 @@
+ b2sums=(d8f0e7d6290d51fd764f2c29443fef52aea8a6ae5c3c3a91ca2a9ed788cd74972189c20095c239b0aab3dcece54acc320be95dfe5ec65902381b8f3bfe80ac3a)
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ meson compile -C build
+ }

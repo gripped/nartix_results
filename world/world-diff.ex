@@ -19,8 +19,6 @@ atftp
 atril
 audacious-plugins
 avahi
-avogadrolibs
-avogadrolibs-qt
 awesome
 bash-bats
 blender
@@ -83,7 +81,6 @@ clamav
 cloud-init
 clucene
 cmake
-cmocka
 colord
 libcolord
 colord-sane
@@ -166,6 +163,9 @@ fcron
 fig2dev
 firefox
 firewalld
+python-firewall
+firewall-config
+firewall-applet
 firewalld-test
 flashrom
 flatpak
@@ -391,7 +391,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -420,7 +419,6 @@ libunwind
 libusbsio
 python-libusbsio
 libutempter
-libvdpau
 libvirt
 libvncserver
 libwpd
@@ -629,7 +627,6 @@ opensmtpd
 opensnitch
 opensp
 openvpn
-ospray
 ostree
 packagekit
 libpackagekit-glib
@@ -733,8 +730,6 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-gcp-devrel-py-tools
-python-gmpy2
 python-hidapi
 python-ndg-httpsclient
 python-pymad
@@ -863,13 +858,13 @@ rocfft
 rocrand
 rocsolver
 rocsparse
+roctracer
 rpm-sequoia
 rrdtool
 rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-builder
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
@@ -891,7 +886,6 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
-sdl3
 seatd
 sfml
 shairport-sync

@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -62,7 +62,7 @@
+     lib32-libxss
+     lib32-nss
+     lib32-pipewire
+-    lib32-systemd
++
+     lib32-vulkan-driver
+     lib32-vulkan-icd-loader
+   )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -24,7 +24,6 @@
+ lib32-libxss
+ lib32-nss
+ lib32-pipewire
+-lib32-systemd
+ lib32-vulkan-driver
+ lib32-vulkan-icd-loader
+ libxcrypt
