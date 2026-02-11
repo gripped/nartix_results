@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cinnamon
+ pkgver=6.6.7
+-pkgrel=1
++pkgrel=1.2
+ pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
+ arch=(x86_64)
+ url='https://github.com/linuxmint/cinnamon'
+@@ -82,6 +82,7 @@
+   glib2-devel
+   gobject-introspection
+   gtk-doc
++  lua
+   meson
+   python-libsass
+ )
+@@ -110,7 +111,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     --libexecdir=lib/$pkgname \
+     -D docs=true
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -38,6 +38,7 @@
+ libx11
+ libxfixes
+ libxml2
++lua
+ meson
+ muffin
+ nemo
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ sed -i '/if .* in THEMES_BLACKLIST:/,+1 d' files/usr/share/cinnamon/cinnamon-settings/modules/cs_themes.py
+ }
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ --libexecdir=lib/$pkgname \
+ -D docs=true
+ meson compile -C build

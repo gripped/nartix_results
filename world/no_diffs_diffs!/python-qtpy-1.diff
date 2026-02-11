@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,12 @@
+ _pkgname=qtpy
+ pkgname=python-qtpy
+ pkgver=2.4.3
+-pkgrel=6
++pkgrel=5
+ pkgdesc="Provides an uniform layer to support PyQt and PySide with a single codebase"
+ arch=(any)
+ url="https://github.com/spyder-ide/qtpy/"
+ license=(MIT)
+-depends=(python-packaging
+-         qt6-python-bindings)
++depends=(python-packaging)
+ makedepends=(
+     python-build
+     python-installer
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,4 +3,3 @@
+ python-packaging
+ python-setuptools
+ python-wheel
+-qt6-python-bindings

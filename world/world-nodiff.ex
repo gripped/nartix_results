@@ -3506,7 +3506,6 @@ python-feedgen
 python-feedgenerator
 python-feedparser
 python-fido2
-python-fields
 python-filebytes
 python-filelock
 python-filetype
@@ -3542,7 +3541,6 @@ python-flufl-lock
 python-flufl.bounce
 python-flufl.i18n
 python-flufl.testing
-python-fluidity
 python-flup
 python-fonttools
 python-forbiddenfruit
@@ -3577,7 +3575,6 @@ python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
-python-glanceclient
 python-glob2
 python-gmpy2
 python-gnupg
@@ -5942,8 +5939,6 @@ zerotier-one
 zfp
 zig
 zimg
-zint
-zint-qt
 zip
 ziproxy
 zita-alsa-pcmi

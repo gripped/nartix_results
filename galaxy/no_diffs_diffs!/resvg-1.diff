@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=resvg
+-pkgver=0.47.0
+-pkgrel=2
++pkgver=0.46.0
++pkgrel=1
+ pkgdesc='SVG rendering library and CLI'
+ arch=('x86_64')
+ url="https://github.com/linebender/resvg"
+@@ -13,7 +13,7 @@
+ )
+ makedepends=(cargo clang qt5-base qt5-tools cairo pango)
+ source=("$url/archive/v$pkgver/$pkgname-v$pkgver.tar.gz")
+-sha256sums=('7869119fd822983b0a0bc2469bc94d59e7908fc12165fa67a105a4fa25087f9a')
++sha256sums=('81a82a8de33da0fcf13fd18532d653bbd0b50b146d82c319dd0ce7294562c7c5')
+ 
+ prepare() {
+ 	cd "$pkgname-$pkgver"

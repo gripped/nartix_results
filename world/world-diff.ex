@@ -730,6 +730,9 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-fields
+python-fluidity
+python-glanceclient
 python-hidapi
 python-ndg-httpsclient
 python-pymad
@@ -1186,6 +1189,8 @@ zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
 zeromq
+zint
+zint-qt
 znc
 zoxide
 zsh
