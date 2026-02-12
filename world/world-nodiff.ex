@@ -3598,7 +3598,6 @@ python-h11
 python-h2
 python-h5netcdf
 python-h5py
-python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version

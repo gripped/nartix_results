@@ -733,6 +733,7 @@ python-debugpy
 python-fields
 python-fluidity
 python-glanceclient
+python-hacking
 python-hidapi
 python-ndg-httpsclient
 python-pymad
