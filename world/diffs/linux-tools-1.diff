@@ -5,7 +5,7 @@
    'x86_energy_perf_policy'
  )
 -pkgver=6.19
--pkgrel=1
+-pkgrel=2
 +pkgver=6.18
 +pkgrel=3
  license=('GPL-2.0-only')
@@ -31,7 +31,25 @@
  
  prepare() {
    cd linux
-@@ -198,7 +192,6 @@
+@@ -64,8 +58,6 @@
+ }
+ 
+ build() {
+-  export CFLAGS="${CFLAGS} -Wno-error=discarded-qualifiers"
+-
+   echo ':: perf'
+   pushd linux/tools/perf
+   make -f Makefile.perf \
+@@ -169,7 +161,7 @@
+     prefix=/usr \
+     lib=lib/perf \
+     perfexecdir=lib/perf \
+-    EXTRA_CFLAGS=' -Wno-error=bad-function-cast -Wno-error=declaration-after-statement -Wno-error=switch-enum -Wno-error=discarded-qualifiers' \
++    EXTRA_CFLAGS=' -Wno-error=bad-function-cast -Wno-error=declaration-after-statement -Wno-error=switch-enum' \
+     NO_SDT=1 \
+     BUILD_BPF_SKEL=1 \
+     PYTHON=python \
+@@ -200,7 +192,6 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
      libdir='/usr/lib' \
@@ -39,7 +57,7 @@
      mandir='/usr/share/man' \
      docdir='/usr/share/doc/cpupower' \
      install install-man
-@@ -216,14 +209,13 @@
+@@ -218,14 +209,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -55,7 +73,7 @@
  }
  
  package_tmon() {
-@@ -248,9 +240,6 @@
+@@ -250,9 +240,6 @@
  
    cd linux/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib

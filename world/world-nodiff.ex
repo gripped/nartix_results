@@ -1108,7 +1108,6 @@ innoextract
 inotify-tools
 intel-compute-runtime
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1196,7 +1195,6 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
-julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1581,7 +1579,6 @@ kyotocabinet
 l-smash
 ladspa
 lager
-lame
 languagetool
 lapack
 blas
@@ -1794,7 +1791,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2273,10 +2269,6 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -2559,7 +2551,6 @@ opensmtpd-filter-senderscore
 opensubdiv
 opentimelineio
 openucc
-openucx
 openvdb
 openvkl
 openvr
@@ -3065,7 +3056,6 @@ pqiv
 pre-commit
 premake
 print-manager
-prison
 prison5
 privoxy
 procinfo-ng
@@ -3564,7 +3554,6 @@ python-genshi
 python-genty
 python-geographiclib
 python-geoip
-python-geoip2
 python-geopandas
 python-geopy
 python-gevent-websocket
@@ -4180,7 +4169,6 @@ python-pytest-shutil
 python-pytest-virtualenv
 python-pytest-pretty
 python-pytest-pylint
-python-pytest-qt
 python-pytest-randomly
 python-pytest-regressions
 python-pytest-relaxed
@@ -4234,7 +4222,6 @@ python-pyxbe
 python-pyyaml-env-tag
 python-pyzmq
 python-pyzstd
-python-qdarkstyle
 python-qrcode
 python-qt-material
 python-qtpy
@@ -5954,5 +5941,4 @@ zsh-history-substring-search
 zsh-syntax-highlighting
 zug
 zvbi
-zxing-cpp
 zziplib

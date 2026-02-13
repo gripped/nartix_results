@@ -1,15 +1,26 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -8,8 +8,8 @@
+  aspnet-targeting-pack-9.0
   dotnet-source-built-artifacts-9.0
  )
- pkgver=9.0.11.sdk112
+-pkgver=9.0.12.sdk113
 -pkgrel=1
++pkgver=9.0.11.sdk112
 +pkgrel=1.1
  arch=(x86_64)
  url=https://dotnet.microsoft.com
  license=(MIT)
-@@ -28,7 +28,7 @@
+@@ -17,8 +17,6 @@
+   bash
+   clang20
+   cmake
+-  dotnet-sdk-9.0
+-  dotnet-source-built-artifacts-9.0
+   git
+   icu
+   krb5
+@@ -30,7 +28,7 @@
    lttng-ust2.12
    nodejs
    openssl
@@ -18,7 +29,19 @@
    zlib
  )
  optdepends=('bash-completion: Bash completion support')
-@@ -77,6 +77,7 @@
+@@ -38,9 +36,9 @@
+   !lto
+   staticlibs
+ )
+-_tag=46e42120674fdd5fe1239797df142f8f6e7943b0
++_tag=191254d6485c508af3f6f8ff5f20e91fa63ee39c
+ source=(git+https://github.com/dotnet/dotnet.git#tag=${_tag})
+-b2sums=('aaa0f408a123fbfc67e94a2aa552a35c9fe6f10fd4266a362b8e2071e053c73e9286132418cc4ad892d5b374eb71967056bf57f35b48ef180abacc53586204ff')
++b2sums=('02b5f9181cd15f264762cf6bf6d96b38da593e3e03f88c15ce476a8015357e8ffc38fe6e682736d2f742152f75bff73f31a7656343773c89f931ed67c40ae009')
+ 
+ prepare() {
+   cd dotnet
+@@ -79,6 +77,7 @@
  }
  
  build() {
@@ -26,7 +49,7 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -115,7 +116,7 @@
+@@ -117,7 +116,7 @@
    optdepends=('lttng-ust2.12: CoreCLR tracing')
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -35,7 +58,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime-9.0
  }
  
-@@ -124,7 +125,7 @@
+@@ -126,7 +125,7 @@
    depends=(dotnet-runtime-9.0)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -44,7 +67,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime-9.0
  }
  
-@@ -140,7 +141,7 @@
+@@ -142,7 +141,7 @@
    optdepends=('aspnet-targeting-pack: Build ASP.NET Core applications')
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -53,7 +76,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk-9.0
  }
  
-@@ -149,7 +150,7 @@
+@@ -151,7 +150,7 @@
    depends=(netstandard-targeting-pack)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -62,7 +85,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack-9.0
  }
  
-@@ -158,7 +159,7 @@
+@@ -160,7 +159,7 @@
    depends=(dotnet-targeting-pack-9.0)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -77,7 +100,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -18,5 +18,5 @@
+@@ -3,8 +3,6 @@
+ cmake
+ dotnet-host
+ dotnet-runtime-9.0
+-dotnet-sdk-9.0
+-dotnet-source-built-artifacts-9.0
+ dotnet-targeting-pack-9.0
+ gcc-libs
+ git
+@@ -20,5 +18,5 @@
  netstandard-targeting-pack
  nodejs
  openssl

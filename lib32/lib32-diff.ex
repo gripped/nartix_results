@@ -25,6 +25,7 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-vulkan-mesa-implicit-layers
 lib32-vulkan-mesa-layers
+lib32-nvidia-580xx-utils
 lib32-nvidia-utils
 lib32-orc
 lib32-p11-kit

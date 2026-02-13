@@ -1,22 +1,38 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,16 +1,16 @@
  
  _pkgname=typer
  pkgname=python-typer
--pkgver=0.21.2
--pkgrel=1
+-pkgver=0.22.0
 +pkgver=0.21.1
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Build great CLIs. Easy to code. Based on Python type hints"
  arch=('any')
  url="https://typer.tiangolo.com/"
-@@ -10,7 +10,7 @@
- depends=('python-click' 'python-typing_extensions' 'python-rich' 'python-shellingham')
+ license=('MIT')
+-depends=('python-click' 'python-rich' 'python-shellingham' 'python-annotated-doc')
++depends=('python-click' 'python-typing_extensions' 'python-rich' 'python-shellingham')
  makedepends=('python-setuptools' 'python-build' 'python-installer' 'python-flit-core' 'python-pdm-backend')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/tiangolo/typer/archive/${pkgver}.tar.gz")
--sha512sums=('4232365782d2004adb95f9dafec179de50ae0c31d7f2646a329e738a87a2f15cc187807b52f43c6095dffd7ffc72251036ee708367d349e70f5ced8a5e8764d5')
+-sha512sums=('4765d9cfb6bd22058414e8540b17c1a0b1267da6abbdde59464daaabb3f4a7265f1d340901cccf93f5b979a7917ef0eea7055982d373ba184219fa64d42ff64d')
 +sha512sums=('945c9a1412c9f5276aca45d07cde9b0ff9b0c1077791edd519c6f824d3a2253e4dad1aa9aa1239c96b8aa251ca0d656e63d8e234ec0cec65ded0aaf3d5585af9')
  
  prepare() {
    cd typer-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-python-annotated-doc
+ python-build
+ python-click
+ python-flit-core
+@@ -7,3 +6,4 @@
+ python-rich
+ python-setuptools
+ python-shellingham
++python-typing_extensions

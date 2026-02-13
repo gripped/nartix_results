@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,11 @@
+@@ -1,12 +1,15 @@
 +
 +_ver=6.18.6
 +_rel=1
@@ -8,12 +8,20 @@
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
--pkgver=6.18.8.arch2
+-pkgver=6.18.9.arch1
+-pkgrel=2
 +pkgver=${_ver}.${_artix}
- pkgrel=1
++pkgrel=1
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
-@@ -30,10 +35,10 @@
+-arch=(
+-  x86_64
+-)
++arch=(x86_64)
+ license=(GPL-2.0-only)
+ makedepends=(
+   bc
+@@ -32,30 +35,30 @@
    !debug
    !strip
  )
@@ -25,44 +33,65 @@
 -  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
 +  https://cdn.kernel.org/pub/linux/kernel/v${_ver%%.*}.x/${_srcname}.tar.{xz,sign}
    $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
-   config  # the main kernel config file
- )
-@@ -42,18 +47,18 @@
+-)
+-source_x86_64=(config.x86_64)
++  config  # the main kernel config file
++)
+ validpgpkeys=(
+   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
  )
--sha256sums=('37f0c5d5c242c1d604e87d48f08795e861a5a85f725b4ca11d0a538f12ff8cff'
+-b2sums=('9aed902e41583597cb7595efe77504630a621993d20f89365a93cf2ea4d9790a6361d93cbb7fd7603881a4f82b76394b7e12fb4e4a88c9fedb2d63d64a9d49d3'
 +sha256sums=('472497197b2f68d4dbf1bc32cc6dc669ca220ff4c0eb0dc39a9cff9a88f9a31b'
-             'SKIP'
--            'aec3a380a435c2b25cfec077f7a74fb314f4d549ed4137617d478f45aefafbea'
++            'SKIP'
 +            '3cacf131fc916c2f9a9ed5b0a6e9dbfcd207263c25de844ed2ab337665844a3e'
-             'SKIP'
--            '6b7606d8f3a14ed0f5b682827d8a9f1b0622b020042dd402bec9785daa6526fb')
--b2sums=('9434b32e65e42c8663233d6ca4a7fe4fcbcc8fe2f5b0ba1c3a0bf602c0156009ecce4aef8cb6ed9435bc9b4f14cb4f5be8b5b8ea80f64b1dc2c9d4ad0faf5b4e'
++            'SKIP'
 +            '1defaed9890f398059a4b78024c90a03f01e66a48a538c5552c1f80975b29101')
 +b2sums=('f56b4894cef3fdc24d963985d4f497d8a1fd80cae48197aabcf58038132c3c03da74537b47411aebc158483f08bad8200544103f31647b711acb59c4d652e387'
          'SKIP'
--        '6ec5f6b428abc27cbaf595b9da1fe4f785b2fe604da3dd7296bd41fef79b14d38ed92f56c392b7848a84a8004c19e46508e9925f445475f9dd56a42431aa841c'
-+        'e99d4b9d40339240b429af1f6911244851fc60bceb444d38e1db405d6c2bd5db7523392366e85ba178495ebb6c92fa83c0160f2e8632ffe76e2a6c380ea5dbaf'
-         'SKIP'
--        '46fc8b23f2251bc02601ecb84a392c902efb34b823bffdb587cbb8adf8169be13ac3105482eeacf328529cfd9adb83ec250dec0658899a208e289be2c591635f')
+-        '0e9a6bbc9baf4e6706699257e811dcdb7d7e6c946a45f660ee56c564d907efaaac53387b29668ca3fc3082c5badc30ee082dac9d8de2bde72c79365af4050b47'
+-        'SKIP')
+-b2sums_x86_64=('bef3377ad86440af76e9dde4c29c9f4aaad42f5fe343f7d31f5eb537d6d358602f996f5d63986af275f2e92f94e71dc28c320edc8c03d05bd64dbd8ed23d75dc')
+-
+-sha256sums=('030115ff8fb4cb536d8449dc40ebc3e314e86ba1b316a6ae21091a11cc930578'
+-            'SKIP'
+-            '4815407239a6df15f8e0362ff652f9faf2e558fd774b08645e80ca664128e390'
+-            'SKIP')
 -
 -export KBUILD_BUILD_HOST=archlinux
++        'e99d4b9d40339240b429af1f6911244851fc60bceb444d38e1db405d6c2bd5db7523392366e85ba178495ebb6c92fa83c0160f2e8632ffe76e2a6c380ea5dbaf'
++        'SKIP'
 +        '940cf2e50e1720be2c786cd14b5ffc204c531b159784d7bc04d08e0eac11cd548e87fd739ca3470f6ba40d2b9b94f70e1c6133e2a72099d5c8d22e63caa61a78')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -73,6 +78,7 @@
+@@ -75,11 +78,12 @@
      echo "Applying patch $src..."
      patch -Np1 < "../$src"
    done
 +  sed -i -r "s/EXTRAVERSION = -${_arch}/EXTRAVERSION = -${_artix}/" "Makefile"
  
    echo "Setting config..."
-   cp ../config .config
-@@ -109,8 +115,8 @@
+-  cp ../config.$CARCH .config
++  cp ../config .config
+   make olddefconfig
+-  diff -u ../config.$CARCH .config || :
++  diff -u ../config .config || :
+ 
+   make -s kernelrelease > version
+   echo "Prepared $pkgbase version $(<version)"
+@@ -100,7 +104,6 @@
+     kmod
+   )
+   optdepends=(
+-    "$pkgbase-headers: headers and scripts for building modules"
+     'linux-firmware: firmware images needed for some devices'
+     'scx-scheds: to use sched-ext schedulers'
+     'wireless-regdb: to set the correct wireless channels of your country'
+@@ -112,8 +115,8 @@
      WIREGUARD-MODULE
    )
    replaces=(
@@ -73,7 +102,7 @@
    )
  
    cd $_srcname
-@@ -131,7 +137,6 @@
+@@ -134,37 +137,26 @@
  _package-headers() {
    pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
    depends=(pahole)
@@ -81,6 +110,64 @@
  
    cd $_srcname
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
+-
+-  local karch
+-  case $CARCH in
+-    x86_64) karch=x86 ;;
+-    *) echo "Unknown CARCH $CARCH"; exit 1 ;;
+-  esac
+ 
+   echo "Installing build files..."
+   install -Dt "$builddir" -m644 .config Makefile Module.symvers System.map \
+     localversion.* version vmlinux tools/bpf/bpftool/vmlinux.h
+   install -Dt "$builddir/kernel" -m644 kernel/Makefile
+-  install -Dt "$builddir/arch/$karch" -m644 arch/$karch/Makefile
++  install -Dt "$builddir/arch/x86" -m644 arch/x86/Makefile
+   cp -t "$builddir" -a scripts
+   ln -srt "$builddir" "$builddir/scripts/gdb/vmlinux-gdb.py"
+ 
+-  if [[ $(scripts/config -s CONFIG_HAVE_STACK_VALIDATION) = y ]]; then
+-    install -Dt "$builddir/tools/objtool" tools/objtool/objtool
+-  fi
+-
+-  if [[ $(scripts/config -s CONFIG_DEBUG_INFO_BTF_MODULES) = y ]]; then
+-    install -Dt "$builddir/tools/bpf/resolve_btfids" tools/bpf/resolve_btfids/resolve_btfids
+-  fi
++  install -Dt "$builddir/tools/objtool" tools/objtool/objtool
++
++  install -Dt "$builddir/tools/bpf/resolve_btfids" tools/bpf/resolve_btfids/resolve_btfids
+ 
+   echo "Installing headers..."
+   cp -t "$builddir" -a include
+-  cp -t "$builddir/arch/$karch" -a arch/$karch/include
+-  install -Dt "$builddir/arch/$karch/kernel" -m644 arch/$karch/kernel/asm-offsets.s
++  cp -t "$builddir/arch/x86" -a arch/x86/include
++  install -Dt "$builddir/arch/x86/kernel" -m644 arch/x86/kernel/asm-offsets.s
+ 
+   install -Dt "$builddir/drivers/md" -m644 drivers/md/*.h
+   install -Dt "$builddir/net/mac80211" -m644 net/mac80211/*.h
+@@ -181,10 +173,8 @@
+   find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
+ 
+   echo "Installing Rust files..."
+-  if [[ $(scripts/config -s CONFIG_RUST) = y ]]; then
+-    install -Dt "$builddir/rust" -m644 rust/*.rmeta
+-    install -Dt "$builddir/rust" rust/*.so
+-  fi
++  install -Dt "$builddir/rust" -m644 rust/*.rmeta
++  install -Dt "$builddir/rust" rust/*.so
+ 
+   echo "Installing unstripped VDSO..."
+   make INSTALL_MOD_PATH="$pkgdir/usr" vdso_install \
+@@ -193,7 +183,7 @@
+   echo "Removing unneeded architectures..."
+   local arch
+   for arch in "$builddir"/arch/*/; do
+-    [[ $arch = */$karch/ ]] && continue
++    [[ $arch = */x86/ ]] && continue
+     echo "Removing $(basename "$arch")"
+     rm -r "$arch"
+   done
 
 
 ############# Stripped diff below #################
@@ -89,11 +176,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -12,6 +12,7 @@
+@@ -12,10 +12,11 @@
  echo "Applying patch $src..."
  patch -Np1 < "../$src"
  done
 +sed -i -r "s/EXTRAVERSION = -${_arch}/EXTRAVERSION = -${_artix}/" "Makefile"
  echo "Setting config..."
- cp ../config .config
+-cp ../config.$CARCH .config
++cp ../config .config
  make olddefconfig
+-diff -u ../config.$CARCH .config || :
++diff -u ../config .config || :
+ make -s kernelrelease > version
+ echo "Prepared $pkgbase version $(<version)"
+ }

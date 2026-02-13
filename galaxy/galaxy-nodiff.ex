@@ -87,7 +87,6 @@ cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
-cosmic-store
 cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers
@@ -189,11 +188,7 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
-libreoffice-fresh
-libreoffice-fresh-sdk
 libreoffice-still-i18n
-libreoffice-still
-libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info

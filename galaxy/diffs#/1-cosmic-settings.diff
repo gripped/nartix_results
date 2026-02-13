@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=cosmic-settings
--pkgver=1.0.5
+-pkgver=1.0.6
 +pkgver=1.0.0
  pkgrel=1
  epoch=1
@@ -21,7 +21,7 @@
  )
  optdepends=('power-profiles-daemon: power profiles support')
  source=(git+https://github.com/pop-os/cosmic-settings.git#tag=epoch-${pkgver})
--b2sums=('169e69a09fa4f9d78bcd888836410f8d81ca34e31f641a544cea567fe8ac14317990c5fcd81dc935ecfe3ab06d85dd8fed36a3e8b09f13b5727c5d4d30903090')
+-b2sums=('d9e90dcc2466737abcc1ef9fe52da06346c20890798b5147a984f24258c55abb440060cd4078b25175dc512b384b044109a62c0fc7c05c56a06a9d09ffbcbdbc')
 +b2sums=('af4523b4fc83302f80157772c27f4fca0d184b391e79bf7d39e9bfe93577d7a0f95abe8397f6507f7b3af2ee57868c077af7d93ece87c8252f7ad635d1dcfcd5')
  
  prepare() {

@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ pkgname=('libreoffice-still-sdk' 'libreoffice-still')
+ _LOver=25.8.4.2
+ pkgver=25.8.4
+-pkgrel=2
++pkgrel=1
+ arch=('x86_64')
+ license=('MPL-2.0' 'LGPL-3.0-or-later')
+ url="https://www.libreoffice.org/"
+@@ -17,6 +17,7 @@
+     'libmspub' 'harfbuzz-icu' 'nss' 'hicolor-icon-theme'
+     'gst-plugins-base-libs' 'sane' 'perl-archive-zip' 'zip' 'unzip' 'unixodbc' 'ant'
+     'gperf' 'gtk3' 'gtk4' 'cppunit' 'beanshell' 'clucene'
++    'qt5-base' 'qt5-x11extras'
+     'qt6-base' 'qt6-multimedia' 'kio' 'kconfig' 'kcoreaddons' 'kwindowsystem' 'ki18n' 'kcoreaddons'
+     'libmythes' 'libwpg'  'java-environment=17' 'postgresql-libs' 'mariadb-libs' 'libgl'
+     'bluez-libs' 'gdb' 'doxygen'  'libatomic_ops'  'mdds'
+@@ -107,8 +108,8 @@
+             'f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140'
+             '3f15bba96d017f24532411701ddd5c5957c57935fdf8e3030486f086e15fc2fa'
+             'd0be8099cbee3c9dfda694a828149b881c345b204ab68826f317580aafb50879'
+-            'd7aae12edf82a2a20192ef153ca5132450ae0c6cb9df829b271a2c489c700641'
+-            'e1d7887e815970f3d21e07f58a7a3a4efc823768a1628307c516f14a506ae7dc'
++            '9fb33dbc3ffeb6af2ea7341b58242142d4eca903584c21c5f4b44ff27fbf5b5f'
++            '512355b5ef646791089da8c2b35cf8b019673c0c8a58685962af3b5d9eb5d6bb'
+             '04c3e77cd357b5f6ff2c53eb398a902b0219b8bfe9f169eae9c70748cd46d9d0')
+ 
+ prepare() {
+@@ -164,8 +165,8 @@
+         --enable-gio\
+         --disable-gtk3-kde5 \
+         --disable-kf5 \
+-        --disable-qt5 \
+         --enable-kf6 \
++        --enable-qt5 \
+         --enable-qt6 \
+         --enable-gtk3 \
+         --enable-gtk4 \
+@@ -301,6 +302,7 @@
+         'coin-or-mp:       required by the Calc solver'
+         'gtk3:             for GTK3 integration'
+         'gtk4:             for GTK4 integration (experimental)'
++        'qt5-x11extras:    for Qt5 desktop integration'
+         'kio:              for KF6 KDE desktop integration'
+         'qt6-multimedia:   for Qt6 desktop integration'
+         'rhino:            for JavaScript support')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -101,6 +101,8 @@
+ postgresql-libs
+ python
+ python-setuptools
++qt5-base
++qt5-x11extras
+ qt6-base
+ qt6-multimedia
+ raptor
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -41,8 +41,8 @@
+ --enable-gio\
+ --disable-gtk3-kde5 \
+ --disable-kf5 \
+---disable-qt5 \
+ --enable-kf6 \
++--enable-qt5 \
+ --enable-qt6 \
+ --enable-gtk3 \
+ --enable-gtk4 \

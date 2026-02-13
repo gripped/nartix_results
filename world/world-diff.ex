@@ -292,6 +292,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-graphics-compiler
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -330,6 +331,7 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 js78
+julia
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
@@ -343,6 +345,7 @@ knot
 ksystemlog
 kwin-x11
 kwin
+lame
 libabw
 libaec
 libatasmart
@@ -391,6 +394,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -501,6 +505,10 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 mate-applets
 mate-backgrounds
 mate-calc
@@ -605,6 +613,7 @@ nvidia-525xx-utils
 nvidia-535xx-utils
 nvidia-580xx-settings
 nvidia-580xx-utils
+nvidia-580xx
 nvidia-open
 nvidia-settings
 nvidia-utils-dinit
@@ -626,6 +635,7 @@ openresolv
 opensmtpd
 opensnitch
 opensp
+openucx
 openvpn
 ostree
 packagekit
@@ -715,6 +725,7 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
+prison
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -732,6 +743,7 @@ python-cram
 python-debugpy
 python-fields
 python-fluidity
+python-geoip2
 python-glanceclient
 python-hacking
 python-hidapi
@@ -740,7 +752,9 @@ python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
+python-pytest-qt
 python-pyudev
+python-qdarkstyle
 python-recommonmark
 python-wheel
 qastools
@@ -1196,3 +1210,4 @@ znc
 zoxide
 zsh
 zsh-doc
+zxing-cpp
