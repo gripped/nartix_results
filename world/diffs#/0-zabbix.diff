@@ -1,8 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,53 +4,36 @@
- pkgver=7.4.6
- pkgrel=3
+@@ -1,56 +1,39 @@
+ 
+ pkgbase=zabbix
+ pkgname=('zabbix-common' 'zabbix-server' 'zabbix-frontend-php' 'zabbix-web-service' 'zabbix-proxy' 'zabbix-agent' 'zabbix-agent2')
+-pkgver=7.4.7
+-pkgrel=1
++pkgver=7.4.6
++pkgrel=3
  pkgdesc="The universal, open-source observability solution for IT & OT"
 -url="https://www.zabbix.com"
 +url="https://cdn.zabbix.com/zabbix"
@@ -29,7 +34,7 @@
          'write_log_to_syslog.patch'
          'set_socket_paths.patch'
          'reproducible_build.patch')
--sha512sums=('0c97737dbc57667b9b28a61b92bd00165d49eed847346015cd305f919cbfc8013a5b60948f2d9886d8e1c87a8ff79610802f9a10ff41e7f4f6a885556cc44f33'
+-sha512sums=('5f23fb1c8dbed3302b449d97cd379bb306168d3daf826a87d172bee69853947c539ee4c6ec22b836efe0fbcbd3aa2c5ed4fe60cc346c960395006225e4c3e727'
 +sha512sums=('2f593e210409c74974395bf163be127159136eac86216443122f5d2104cb85b5b652c6f445ed7408532b894f7ddbc3f1f060465f7797326f1198d3354f48e2e9'
              '8570843ad927d900f9e9aa95dfa8a24ebb0f01beda3073b24c5963aedd92e3ebed75bbb6139127830eaf289df233c2734d81b52b25a1b8f4db57336152514194'
              '7c39d1cb1d269e8a2a22c634612c7d110e9e67c170f32add33312f97bc2e7f8f19bf5bb1d1c71df43afc893043472069b9f828dfc5a9f2946606798ed54c73a0'

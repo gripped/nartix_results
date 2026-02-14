@@ -144,7 +144,6 @@ lz4
 lzo
 m4
 make
-man-pages
 mkinitcpio-busybox
 mkinitcpio-nfs-utils
 mlocate
@@ -157,8 +156,6 @@ nettle
 nilfs-utils
 npth
 nspr
-nss
-ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl

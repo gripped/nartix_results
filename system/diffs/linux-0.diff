@@ -2,16 +2,15 @@
 +++ Artix PKGBUILD
 @@ -1,12 +1,15 @@
 +
-+_ver=6.18.6
++_ver=6.18.9
 +_rel=1
 +_arch=arch${_rel}
 +_artix=${_arch/arch/artix}
  
  pkgbase=linux
 -pkgver=6.18.9.arch1
--pkgrel=2
 +pkgver=${_ver}.${_artix}
-+pkgrel=1
+ pkgrel=2
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
 -arch=(
@@ -42,15 +41,14 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
  )
--b2sums=('9aed902e41583597cb7595efe77504630a621993d20f89365a93cf2ea4d9790a6361d93cbb7fd7603881a4f82b76394b7e12fb4e4a88c9fedb2d63d64a9d49d3'
-+sha256sums=('472497197b2f68d4dbf1bc32cc6dc669ca220ff4c0eb0dc39a9cff9a88f9a31b'
++sha256sums=('030115ff8fb4cb536d8449dc40ebc3e314e86ba1b316a6ae21091a11cc930578'
 +            'SKIP'
-+            '3cacf131fc916c2f9a9ed5b0a6e9dbfcd207263c25de844ed2ab337665844a3e'
++            '4815407239a6df15f8e0362ff652f9faf2e558fd774b08645e80ca664128e390'
 +            'SKIP'
-+            '1defaed9890f398059a4b78024c90a03f01e66a48a538c5552c1f80975b29101')
-+b2sums=('f56b4894cef3fdc24d963985d4f497d8a1fd80cae48197aabcf58038132c3c03da74537b47411aebc158483f08bad8200544103f31647b711acb59c4d652e387'
++            'f7361198c8148b0b47a90f042a2a2a901150b8759f260d9a91fe04e3740ce6bf')
+ b2sums=('9aed902e41583597cb7595efe77504630a621993d20f89365a93cf2ea4d9790a6361d93cbb7fd7603881a4f82b76394b7e12fb4e4a88c9fedb2d63d64a9d49d3'
          'SKIP'
--        '0e9a6bbc9baf4e6706699257e811dcdb7d7e6c946a45f660ee56c564d907efaaac53387b29668ca3fc3082c5badc30ee082dac9d8de2bde72c79365af4050b47'
+         '0e9a6bbc9baf4e6706699257e811dcdb7d7e6c946a45f660ee56c564d907efaaac53387b29668ca3fc3082c5badc30ee082dac9d8de2bde72c79365af4050b47'
 -        'SKIP')
 -b2sums_x86_64=('bef3377ad86440af76e9dde4c29c9f4aaad42f5fe343f7d31f5eb537d6d358602f996f5d63986af275f2e92f94e71dc28c320edc8c03d05bd64dbd8ed23d75dc')
 -
@@ -60,9 +58,8 @@
 -            'SKIP')
 -
 -export KBUILD_BUILD_HOST=archlinux
-+        'e99d4b9d40339240b429af1f6911244851fc60bceb444d38e1db405d6c2bd5db7523392366e85ba178495ebb6c92fa83c0160f2e8632ffe76e2a6c380ea5dbaf'
 +        'SKIP'
-+        '940cf2e50e1720be2c786cd14b5ffc204c531b159784d7bc04d08e0eac11cd548e87fd739ca3470f6ba40d2b9b94f70e1c6133e2a72099d5c8d22e63caa61a78')
++        '597453a133924e389a7b40a19b540672b6213a6c398b7e9b833c7eb78a67c74d58a30b3022dd90bb07caec19e330de16734a2a3a38e826b37f98ecbd8cc01a99')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
@@ -102,21 +99,16 @@
    )
  
    cd $_srcname
-@@ -134,37 +137,26 @@
- _package-headers() {
-   pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-   depends=(pahole)
--  provides=(LINUX-HEADERS)
- 
+@@ -139,32 +142,22 @@
    cd $_srcname
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
--
+ 
 -  local karch
 -  case $CARCH in
 -    x86_64) karch=x86 ;;
 -    *) echo "Unknown CARCH $CARCH"; exit 1 ;;
 -  esac
- 
+-
    echo "Installing build files..."
    install -Dt "$builddir" -m644 .config Makefile Module.symvers System.map \
      localversion.* version vmlinux tools/bpf/bpftool/vmlinux.h
@@ -146,7 +138,7 @@
  
    install -Dt "$builddir/drivers/md" -m644 drivers/md/*.h
    install -Dt "$builddir/net/mac80211" -m644 net/mac80211/*.h
-@@ -181,10 +173,8 @@
+@@ -181,10 +174,8 @@
    find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
  
    echo "Installing Rust files..."
@@ -159,7 +151,7 @@
  
    echo "Installing unstripped VDSO..."
    make INSTALL_MOD_PATH="$pkgdir/usr" vdso_install \
-@@ -193,7 +183,7 @@
+@@ -193,7 +184,7 @@
    echo "Removing unneeded architectures..."
    local arch
    for arch in "$builddir"/arch/*/; do

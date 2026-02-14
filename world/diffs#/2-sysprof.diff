@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   libsysprof-capture
- )
- pkgver=49.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="Kernel based performance profiler"
- url="https://apps.gnome.org/Sysprof/"
- license=(GPL-3.0-or-later)
 @@ -26,7 +26,6 @@
    libunwind
    pango
@@ -41,9 +32,26 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -18,5 +18,4 @@
- meson
- pango
- polkit
+@@ -1,22 +0,0 @@
+-
+-cairo
+-gcc-libs
+-git
+-glib2
+-glib2-devel
+-glibc
+-graphene
+-gtk4
+-hicolor-icon-theme
+-json-glib
+-libadwaita
+-libdex
+-libelf
+-libpanel
+-libsysprof-capture
+-libunwind
+-meson
+-pango
+-polkit
 -systemd-libs
- yelp-tools
+-yelp-tools

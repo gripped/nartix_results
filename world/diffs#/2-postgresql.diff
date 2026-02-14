@@ -1,48 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   postgresql-docs
- )
- pkgver=18.1
--pkgrel=3
-+pkgrel=2
- pkgdesc="Sophisticated object-relational DBMS"
- url="https://www.postgresql.org/"
- arch=(x86_64)
-@@ -15,21 +15,21 @@
-   bash
-   gcc-libs
-   glibc
--  icu libicui18n.so libicuuc.so
--  krb5 libgssapi_krb5.so
--  libldap #libldap.so
--  liburing liburing.so
--  libxml2 libxml2.so
-+  icu
-+  krb5
-+  libldap
-+  liburing
-+  libxml2
-   libxslt
-   llvm-libs
--  lz4 liblz4.so
--  numactl libnuma.so
--  openssl libcrypto.so libssl.so
--  pam libpam.so
+@@ -26,7 +26,7 @@
+   numactl libnuma.so
+   openssl libcrypto.so libssl.so
+   pam libpam.so
 -  systemd-libs libsystemd.so
-+  lz4
-+  numactl
-+  openssl
-+  pam
 +
    util-linux-libs
--  zlib libz.so
--  zstd libzstd.so
-+  zlib
-+  zstd
- )
- makedepends=(
-   clang
+   zlib libz.so
+   zstd libzstd.so
 @@ -41,7 +41,7 @@
    perl-ipc-run
    python
@@ -122,27 +88,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -11,19 +11,12 @@
- libcrypto.so
- libcurl.so
- libgssapi_krb5.so
--libicui18n.so
--libicuuc.so
- libldap
- liblz4.so
--libnuma.so
--libpam.so
+@@ -19,7 +19,6 @@
+ libpam.so
  libreadline.so
  libssl.so
 -libsystemd.so
  liburing
--liburing.so
+ liburing.so
  libxml2
--libxml2.so
- libxslt
- libz.so
- libzstd.so
-@@ -38,8 +31,6 @@
+@@ -38,8 +37,6 @@
  postgresql-libs>
  python
  readline

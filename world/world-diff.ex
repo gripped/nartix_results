@@ -134,6 +134,7 @@ dotnet-source-built-artifacts
 dovecot
 dracut
 drkonqi
+dune
 dunst
 earlyoom
 element.io
@@ -394,7 +395,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -410,6 +410,7 @@ libnvme
 libofa
 libpagemaker
 libpgm
+libplacebo
 libprocps
 libqb
 librevenge
@@ -725,7 +726,6 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
-prison
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -741,20 +741,13 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-fields
-python-fluidity
-python-geoip2
-python-glanceclient
-python-hacking
 python-hidapi
+python-llvmlite
 python-ndg-httpsclient
-python-pymad
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
-python-pytest-qt
 python-pyudev
-python-qdarkstyle
 python-recommonmark
 python-wheel
 qastools
@@ -876,7 +869,6 @@ rocfft
 rocrand
 rocsolver
 rocsparse
-roctracer
 rpm-sequoia
 rrdtool
 rspamd

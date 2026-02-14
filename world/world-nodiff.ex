@@ -495,7 +495,6 @@ dropbear-scp
 dtc
 duktape
 dump_syms
-dune
 duplicity
 dvd-rw-tools
 dvdauthor
@@ -1791,6 +1790,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1912,7 +1912,6 @@ libpeas-docs
 libpfm
 libphonenumber
 libpinyin
-libplacebo
 libplasma
 libplist
 libpng
@@ -2728,6 +2727,7 @@ perl-file-which
 perl-font-ttf
 perl-gd
 perl-getopt-argvfile
+perl-hash-case
 perl-hash-ordered
 perl-hook-lexwrap
 perl-html-parser
@@ -3056,6 +3056,7 @@ pqiv
 pre-commit
 premake
 print-manager
+prison
 prison5
 privoxy
 procinfo-ng
@@ -3496,6 +3497,7 @@ python-feedgen
 python-feedgenerator
 python-feedparser
 python-fido2
+python-fields
 python-filebytes
 python-filelock
 python-filetype
@@ -3531,6 +3533,7 @@ python-flufl-lock
 python-flufl.bounce
 python-flufl.i18n
 python-flufl.testing
+python-fluidity
 python-flup
 python-fonttools
 python-forbiddenfruit
@@ -3554,6 +3557,7 @@ python-genshi
 python-genty
 python-geographiclib
 python-geoip
+python-geoip2
 python-geopandas
 python-geopy
 python-gevent-websocket
@@ -3564,6 +3568,7 @@ python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
+python-glanceclient
 python-glob2
 python-gmpy2
 python-gnupg
@@ -3587,6 +3592,7 @@ python-h11
 python-h2
 python-h5netcdf
 python-h5py
+python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
@@ -3747,7 +3753,6 @@ python-linkify-it-py
 python-linux-procfs
 python-littleutils
 python-livereload
-python-llvmlite
 python-lmdb
 python-localzone
 python-locket
@@ -3954,6 +3959,7 @@ python-pipenv
 python-pipreqs
 python-pipx
 python-pixelmatch
+python-pkg_resources
 python-pkgconfig
 python-pkginfo
 python-platformdirs
@@ -4074,6 +4080,7 @@ python-pylint
 python-pylons-sphinx-themes
 python-pylsqpack
 python-pymacaroons
+python-pymad
 python-pymdown-extensions
 python-pymongo
 python-pymysql
@@ -4169,6 +4176,7 @@ python-pytest-shutil
 python-pytest-virtualenv
 python-pytest-pretty
 python-pytest-pylint
+python-pytest-qt
 python-pytest-randomly
 python-pytest-regressions
 python-pytest-relaxed
@@ -4222,6 +4230,7 @@ python-pyxbe
 python-pyyaml-env-tag
 python-pyzmq
 python-pyzstd
+python-qdarkstyle
 python-qrcode
 python-qt-material
 python-qtpy
@@ -4784,6 +4793,7 @@ rocprim
 rocprofiler-register
 rocs
 rocthrust
+roctracer
 rofi
 ropgadget
 ropper

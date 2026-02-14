@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
-  aspnet-targeting-pack
-  dotnet-source-built-artifacts
- )
--pkgver=10.0.3.sdk103
-+pkgver=10.0.0.sdk100
- pkgrel=1
- arch=(x86_64)
- url=https://dotnet.microsoft.com
-@@ -19,7 +19,6 @@
-   clang20
-   cmake
-   dotnet-sdk
--  dotnet-source-built-artifacts
-   git
-   icu
-   krb5
-@@ -31,7 +30,7 @@
+@@ -31,7 +31,7 @@
    lttng-ust2.12
    nodejs
    openssl
@@ -26,33 +9,7 @@
    zlib
  )
  optdepends=('bash-completion: Bash completion support')
-@@ -39,9 +38,9 @@
-   !lto
-   staticlibs
- )
--_tag=c2435c3e0f46de784341ac3ed62863ce77e117b4
-+_tag=b0f34d51fccc69fd334253924abd8d6853fad7aa
- source=(git+https://github.com/dotnet/dotnet.git#tag=${_tag})
--b2sums=('bc6afb278d7752a52077417290b4ed61f16e6ebf308e3a34465ca6f4a537573f31fe72fedc1490cbca52ef2dd00fd5761071ac2457b54b8548f1cf85995bb898')
-+b2sums=('0742a7412aaf03a6217cbbed5324c3dbb981fc8bea3f164b15808c43e8eee1b5b7cf15af8fad99ae72a9f5ad8286531a01785c8f440fb9d334841cc0e8450256')
- 
- prepare() {
-   cd dotnet
-@@ -73,16 +72,14 @@
-     exit 1
-   fi
- 
--  local _runtimemajorver=$(xmllint --xpath "//*[local-name()='MajorVersion']/text()" src/runtime/eng/Versions.props)
--  local _runtimeminorver=$(xmllint --xpath "//*[local-name()='MinorVersion']/text()" src/runtime/eng/Versions.props)
--  local _runtimepatchver=$(xmllint --xpath "//*[local-name()='PatchVersion']/text()" src/runtime/eng/Versions.props)
--  local _sdkminorver=$(xmllint --xpath "//*[local-name()='VersionSDKMinor']/text()" src/sdk/eng/Versions.props)
--  local _sdkminorpatchver=$(xmllint --xpath "//*[local-name()='VersionSDKMinorPatch']/text()" src/sdk/eng/Versions.props)
--
--  echo "${_runtimemajorver}.${_runtimeminorver}.${_runtimepatchver}.sdk${_sdkminorver}$(printf %02d ${_sdkminorpatchver})"
-+  local _sdkver=$(xmllint --xpath "//*[local-name()='VersionSDKMinor']/text()" src/sdk/eng/Versions.props)$(xmllint --xpath "//*[local-name()='VersionFeature']/text()" src/sdk/eng/Versions.props)
-+  local _runtimever=$(xmllint --xpath "//*[local-name()='ProductVersion']/text()" src/runtime/eng/Versions.props)
-+
-+  echo "${_runtimever}.sdk${_sdkver}"
+@@ -83,6 +83,7 @@
  }
  
  build() {
@@ -60,16 +17,7 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -103,7 +100,7 @@
-   unset CXXFLAGS
-   unset LDFLAGS
- 
--  ./build.sh --clean-while-building --online --source-build
-+  ./build.sh --clean-while-building --online --source-build --branding rtm
- }
- 
- package_dotnet-host() {
-@@ -115,8 +112,8 @@
+@@ -115,8 +116,8 @@
    optdepends=('bash-completion: Bash completion support')
  
    install -dm 755 "${pkgdir}"/usr/{bin,lib,share/{dotnet,licenses/dotnet-host}}
@@ -80,7 +28,7 @@
    ln -s /usr/share/dotnet/dotnet "${pkgdir}"/usr/bin/dotnet
    ln -s /usr/share/dotnet/host/fxr/${pkgver%.sdk*}/libhostfxr.so "${pkgdir}"/usr/lib/libhostfxr.so
    install -Dm 644 dotnet/src/sdk/scripts/register-completions.bash "${pkgdir}"/usr/share/bash-completion/completions/dotnet
-@@ -140,7 +137,7 @@
+@@ -140,7 +141,7 @@
    conflicts=(dotnet-runtime-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -89,7 +37,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime
  }
  
-@@ -151,7 +148,7 @@
+@@ -151,7 +152,7 @@
    conflicts=(aspnet-runtime-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -98,7 +46,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime
  }
  
-@@ -168,7 +165,7 @@
+@@ -168,7 +169,7 @@
    conflicts=(dotnet-sdk-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -107,7 +55,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk
  }
  
-@@ -178,7 +175,7 @@
+@@ -178,7 +179,7 @@
    conflicts=(dotnet-targeting-pack-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -116,7 +64,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack
  }
  
-@@ -189,7 +186,7 @@
+@@ -189,7 +190,7 @@
    conflicts=(aspnet-targeting-pack-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -131,15 +79,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,7 +4,6 @@
- dotnet-host
- dotnet-runtime
- dotnet-sdk
--dotnet-source-built-artifacts
- dotnet-targeting-pack
- gcc-libs
- git
-@@ -19,5 +18,5 @@
+@@ -19,5 +19,5 @@
  lttng-ust2.12
  nodejs
  openssl

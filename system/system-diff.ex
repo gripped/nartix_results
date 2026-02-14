@@ -46,10 +46,13 @@ logrotate
 lvm2
 device-mapper
 man-db
+man-pages
 mdadm
 mkinitcpio
 nfs-utils
 nfsidmap
+nss
+ca-certificates-mozilla
 openldap
 libldap
 openresolv
