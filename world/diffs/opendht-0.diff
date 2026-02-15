@@ -1,6 +1,31 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,8 +26,6 @@
+@@ -1,8 +1,8 @@
+ 
+ pkgname=opendht
+ epoch=1
+-pkgver=3.7.0rc8
+-pkgrel=1
++pkgver=3.5.4
++pkgrel=5
+ pkgdesc="C++17 Distributed Hash Table (DHT) implementation"
+ arch=(x86_64)
+ url="https://github.com/savoirfairelinux/opendht"
+@@ -13,7 +13,12 @@
+ optdepends=('python: to use the Python bindings'
+             'msgpack-cxx: linking against opendht')
+ source=(git+${url}#tag=v$pkgver)
+-sha256sums=('bc948237b5bb00750eddcf639978c5640e978c903ef584fe979a8eaa0b38febe')
++sha256sums=('b4c7b18d81cddd9c70a40d80c7ebd898da3454bc3e1643d7dd6051eda7829650')
++
++prepare() {
++  cd $pkgname
++  git cherry-pick -n d12f9271b8f8aafc87387729e03fc445a03c5ea7 # Fix segfault when built with GCC 15
++}
+ 
+ build() {
+   cd $pkgname
+@@ -21,8 +26,6 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DOPENDHT_DOCUMENTATION=OFF \
      -DOPENDHT_TESTS=ON \
@@ -17,7 +42,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,8 +8,6 @@
+@@ -1,11 +1,13 @@
++prepare() {
++cd $pkgname
++git cherry-pick -n d12f9271b8f8aafc87387729e03fc445a03c5ea7 # Fix segfault when built with GCC 15
++}
+ build() {
+ cd $pkgname
+ cmake . \
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DOPENDHT_DOCUMENTATION=OFF \
  -DOPENDHT_TESTS=ON \

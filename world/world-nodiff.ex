@@ -1,5 +1,4 @@
 0ad-data
-7zip
 a2ps
 aalib
 aarch64-linux-gnu-binutils
@@ -278,7 +277,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -495,6 +493,7 @@ dropbear-scp
 dtc
 duktape
 dump_syms
+dune
 duplicity
 dvd-rw-tools
 dvdauthor
@@ -625,8 +624,6 @@ ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
-fftw
-fftw-openmpi
 figlet
 file-roller
 filelight
@@ -1107,6 +1104,7 @@ innoextract
 inotify-tools
 intel-compute-runtime
 intel-gmmlib
+intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1150,7 +1148,6 @@ itstool
 iucode-tool
 iverilog
 j4-dmenu-desktop
-jami-qt
 jasper
 jasper-doc
 java-avalon-framework
@@ -1194,6 +1191,7 @@ jsonrpc-glib
 jsonrpc-glib-docs
 judy
 juk
+julia
 junit
 jupyter-console
 jupyter-nbclassic
@@ -1912,6 +1910,7 @@ libpeas-docs
 libpfm
 libphonenumber
 libpinyin
+libplacebo
 libplasma
 libplist
 libpng
@@ -2480,6 +2479,7 @@ ocaml-ctypes
 ocaml-findlib
 ocaml-integers
 ocaml-pp
+ocaml-re
 ocaml-result
 ocaml-stdlib-shims
 ocaml-topkg
@@ -2550,6 +2550,7 @@ opensmtpd-filter-senderscore
 opensubdiv
 opentimelineio
 openucc
+openucx
 openvdb
 openvkl
 openvr
@@ -3753,6 +3754,7 @@ python-linkify-it-py
 python-linux-procfs
 python-littleutils
 python-livereload
+python-llvmlite
 python-lmdb
 python-localzone
 python-locket
@@ -4798,6 +4800,7 @@ rofi
 ropgadget
 ropper
 rpcsvc-proto
+rpm-sequoia
 rpm-tools
 rpmextract
 rssguard
@@ -5935,6 +5938,8 @@ zerotier-one
 zfp
 zig
 zimg
+zint
+zint-qt
 zip
 ziproxy
 zita-alsa-pcmi
@@ -5951,4 +5956,5 @@ zsh-history-substring-search
 zsh-syntax-highlighting
 zug
 zvbi
+zxing-cpp
 zziplib

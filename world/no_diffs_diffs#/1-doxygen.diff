@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=doxygen
+ pkgname=(doxygen doxygen-docs)
+ pkgver=1.16.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Documentation system for C++, C, Java, IDL and PHP'
+ url='http://www.doxygen.nl'
+ arch=(x86_64)
+@@ -12,11 +12,10 @@
+   cmake
+   flex
+   fmt
++  gcc-libs
+   ghostscript
+   glibc
+   graphviz
+-  libgcc
+-  libstdc++
+   llvm
+   python
+   qt6-base
+@@ -81,9 +80,8 @@
+   depends=(
+     clang
+     fmt libfmt.so
++    gcc-libs
+     glibc
+-    libgcc
+-    libstdc++
+     llvm-libs
+     spdlog libspdlog.so
+     sqlite libsqlite3.so
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,14 +2,13 @@
+ cmake
+ flex
+ fmt
++gcc-libs
+ ghostscript
+ glibc
+ graphviz
+ libfmt.so
+-libgcc
+ libspdlog.so
+ libsqlite3.so
+-libstdc++
+ llvm
+ llvm-libs
+ python

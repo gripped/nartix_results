@@ -11,13 +11,14 @@
  license=('GPL-2.0-only')
  arch=('x86_64')
  url='https://www.kernel.org'
-@@ -33,18 +33,12 @@
+@@ -33,18 +33,14 @@
  makedepends+=('libnl')
  groups=("$pkgbase")
  source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"
 -        'usbipd.service'
 -        'hv_kvp_daemon.service'
 -        'hv_vss_daemon.service'
++        "d70f79fef65810faf64dbae1f3a1b5623cdb2345.patch"
  )
  validpgpkeys=(
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
@@ -27,11 +28,12 @@
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
-+sha256sums=('24f57ef27799392461ce0e1d595f96412af7ade4bfd41625e563fd797743d06a')
++sha256sums=('24f57ef27799392461ce0e1d595f96412af7ade4bfd41625e563fd797743d06a'
++            'bcb4e391a2ffa6babc5ad9222bd5bd4eef7a330188f9c3955d23af4053d32434')
  
  prepare() {
    cd linux
-@@ -64,8 +58,6 @@
+@@ -64,8 +60,6 @@
  }
  
  build() {
@@ -40,16 +42,7 @@
    echo ':: perf'
    pushd linux/tools/perf
    make -f Makefile.perf \
-@@ -169,7 +161,7 @@
-     prefix=/usr \
-     lib=lib/perf \
-     perfexecdir=lib/perf \
--    EXTRA_CFLAGS=' -Wno-error=bad-function-cast -Wno-error=declaration-after-statement -Wno-error=switch-enum -Wno-error=discarded-qualifiers' \
-+    EXTRA_CFLAGS=' -Wno-error=bad-function-cast -Wno-error=declaration-after-statement -Wno-error=switch-enum' \
-     NO_SDT=1 \
-     BUILD_BPF_SKEL=1 \
-     PYTHON=python \
-@@ -200,7 +192,6 @@
+@@ -200,7 +194,6 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
      libdir='/usr/lib' \
@@ -57,7 +50,7 @@
      mandir='/usr/share/man' \
      docdir='/usr/share/doc/cpupower' \
      install install-man
-@@ -218,14 +209,13 @@
+@@ -218,14 +211,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -73,7 +66,7 @@
  }
  
  package_tmon() {
-@@ -250,9 +240,6 @@
+@@ -250,9 +242,6 @@
  
    cd linux/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib

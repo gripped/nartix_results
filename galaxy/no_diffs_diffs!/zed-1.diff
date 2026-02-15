@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=zed
+ pkgver=0.223.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter'
+ arch=(x86_64)
+ url=https://zed.dev
+@@ -10,9 +10,8 @@
+ depends=(alsa-lib libasound.so
+          curl libcurl.so
+          fontconfig
+-         glibc # libc.so libm.so libresolv.so
+-         libgcc libgcc_s.so
+-         libstdc++ libstdc++.so
++         gcc-libs # libgcc_s.so libstdc++.so
++         glibc # libc.so libm.so
+          libxcb # libxcb.so libxcb-xkb.so
+          libxkbcommon # libxkbcommon.so
+          libxkbcommon-x11 # libxkbcommon-x11.so
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,15 +5,12 @@
+ cmake
+ curl
+ fontconfig
++gcc-libs
+ glibc
+ libasound.so
+ libcrypto.so
+ libcurl.so
+-libgcc
+-libgcc_s.so
+ libssl.so
+-libstdc++
+-libstdc++.so
+ libxcb
+ libxkbcommon
+ libxkbcommon-x11

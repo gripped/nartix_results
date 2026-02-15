@@ -8,15 +8,6 @@
    gst-plugin-opencv
    gst-plugin-qml6
    gst-plugin-qmlgl
-@@ -27,7 +26,7 @@
-   gstreamer-docs
- )
- pkgver=1.26.10
--pkgrel=5
-+pkgrel=4
- pkgdesc="Multimedia graph framework"
- url="https://gstreamer.freedesktop.org/"
- arch=(x86_64)
 @@ -138,7 +137,6 @@
    nasm
    neon
@@ -33,28 +24,7 @@
    taglib
    twolame
    v4l-utils
-@@ -206,14 +203,12 @@
-   "https://gstreamer.freedesktop.org/src/gstreamer-docs/gstreamer-docs-$pkgver.tar.xz"{,.asc}
-   0001-HACK-meson-Disable-broken-tests.patch
-   https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/10545.patch
--  0002-Fix-build-with-zxing-cpp-3.patch
- )
- b2sums=('17a6826af9ed8ae50a215e6f831d8cb2b85b80f8899610febfcf8733000d185caf9c153cb3ed6197fffedcad4f7d4547e13baddc74018eca8a4b2c660c316376'
-         'b387e0389d34916b88707abeb7b3d2f521575075081d3f103733ac063cafd86853e4586b4a17771d37b47c1b43de8169af97444413f404eca0b4b18aaefc325d'
-         'SKIP'
-         '21d74423e44f4d9918ef477d7664b65d2848b14830f6d339c525f8de54aedfaae274ac772f157938f9a98bc9d1806210d807cab8ccf9dd95fcaf0547b587c36a'
--        '5193762971338636485e8800f99bb99cadc61e0f4728469167c5856f31e659b657dc88e97316384eb9a937b91f756c59561c9fe3648983573039e1d89674aedd'
--        'c373304896ea20c7f7f1e61360fddad6589a8f2004bc0cbc317ae82ee845f64746a399212ab902aede35dea4bd95ad50eaccf254883cf2ee3bc2ac03cc1c2c4a')
-+        '5193762971338636485e8800f99bb99cadc61e0f4728469167c5856f31e659b657dc88e97316384eb9a937b91f756c59561c9fe3648983573039e1d89674aedd')
- validpgpkeys=(
-   D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim Müller <tim@gstreamer-foundation.org>
- )
-@@ -223,11 +218,11 @@
- 
-   git apply -3 ../0001-HACK-meson-Disable-broken-tests.patch
-   git apply -3 ../10545.patch
--  git apply -3 ../0002-Fix-build-with-zxing-cpp-3.patch
- }
+@@ -228,6 +225,7 @@
  
  build() {
    local meson_options=(
@@ -62,7 +32,7 @@
      -D benchmarks=disabled
      -D examples=disabled
      -D glib_debug=disabled
-@@ -267,7 +262,7 @@
+@@ -267,7 +265,7 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -71,7 +41,7 @@
      -D package-origin="https://www.archlinux.org/"
      -D vaapi=enabled
    )
-@@ -277,7 +272,7 @@
+@@ -277,7 +275,7 @@
    export CARGO_PROFILE_RELEASE_DEBUG=2 CARGO_PROFILE_RELEASE_STRIP=false
    export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
  
@@ -80,7 +50,7 @@
    meson compile -C build
  }
  
-@@ -288,7 +283,7 @@
+@@ -288,7 +286,7 @@
    export NO_AT_BRIDGE=1 GTK_A11Y=none
  
    xvfb-run -s "-nolisten local" \
@@ -89,7 +59,7 @@
  )
  
  _install() {
-@@ -774,7 +769,6 @@
+@@ -774,7 +772,6 @@
    optdepends=(
      'gst-plugin-gtk: gtk plugin'
      'gst-plugin-msdk: msdk plugin'
@@ -97,7 +67,7 @@
      'gst-plugin-opencv: opencv plugin and library'
      'gst-plugin-qml6: qml6 plugin'
      'gst-plugin-qmlgl: qmlgl plugin'
-@@ -938,23 +932,6 @@
+@@ -938,23 +935,6 @@
    ); _install
  }
  
@@ -121,7 +91,7 @@
  
  package_gst-plugin-opencv() {
    pkgdesc+=" - opencv plugin and library"
-@@ -1205,7 +1182,6 @@
+@@ -1205,7 +1185,6 @@
      libva
      libx11
      libxrandr

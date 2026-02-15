@@ -4,14 +4,14 @@
  
  pkgname=libmspub
  pkgver=0.1.4
--pkgrel=18
+-pkgrel=19
 +pkgrel=14
  pkgdesc="Microsoft Publisher file format parser library (latest snapshot)"
  arch=('x86_64')
  url="https://wiki.documentfoundation.org/DLP/Libraries/libmspub"
 -license=('MPL-2.0')
 -depends=('libwpd' 'icu' 'librevenge'
--         'zlib' 'gcc-libs' 'glibc')
+-         'zlib' 'glibc' 'libstdc++' 'libgcc')
 +license=('GPL2' 'LGPL2.1' 'MPL')
 +depends=('libwpd' 'icu' 'librevenge')
  makedepends=('libwpg' 'boost' 'doxygen')
@@ -44,13 +44,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,6 @@
+@@ -1,10 +1,6 @@
  boost
  doxygen
--gcc-libs
 -glibc
  icu
+-libgcc
  librevenge
+-libstdc++
  libwpd
  libwpg
 -zlib

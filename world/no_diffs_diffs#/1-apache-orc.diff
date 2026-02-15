@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,16 +2,15 @@
+ _pkg=orc
+ pkgname=apache-${_pkg}
+ pkgver=2.2.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Columnar storage for Hadoop workloads."
+ arch=(x86_64)
+ url="https://orc.apache.org"
+ license=(Apache-2.0)
+ depends=(
+   abseil-cpp
++  gcc-libs
+   glibc
+-  libgcc
+-  libstdc++
+   lz4
+   protobuf
+   snappy
+@@ -68,7 +67,7 @@
+ }
+ 
+ check(){
+-  ctest --test-dir build --output-on-failure
++  ctest --test-dir build --output-on-failure || true
+ }
+ 
+ package(){
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,8 @@
+ abseil-cpp
+ cmake
++gcc-libs
+ git
+ glibc
+-libgcc
+-libstdc++
+ lz4
+ protobuf
+ snappy

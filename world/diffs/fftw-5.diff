@@ -1,0 +1,70 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=fftw
+ pkgname=(fftw fftw-openmpi)
+ pkgver=3.3.10
+-pkgrel=8
++pkgrel=7
+ pkgdesc="A library for computing the discrete Fourier transform (DFT)"
+ arch=(x86_64)
+ url="http://www.fftw.org/"
+@@ -11,10 +11,8 @@
+   bash
+   cmake
+   gcc-fortran
++  gcc-libs
+   glibc
+-  libgcc
+-  libgomp
+-  libquadmath
+   openmpi
+ )
+ source=(http://www.fftw.org/$pkgname-$pkgver.tar.gz)
+@@ -76,7 +74,6 @@
+     -S $pkgname-$pkgver-$_build_types
+     -D CMAKE_INSTALL_PREFIX=/usr
+     -D CMAKE_BUILD_TYPE=None
+-    -D CMAKE_POLICY_VERSION_MINIMUM=3.5
+     -D ENABLE_OPENMP=ON
+     -D ENABLE_THREADS=ON
+     -D ENABLE_FLOAT=ON
+@@ -131,10 +128,8 @@
+ package_fftw() {
+   depends=(
+     bash
++    gcc-libs
+     glibc
+-    libgcc
+-    libgomp
+-    libquadmath
+   )
+   optdepends=('fftw-openmpi: for OpenMPI integration')
+   provides=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,8 +2,6 @@
+ cmake
+ fftw
+ gcc-fortran
++gcc-libs
+ glibc
+-libgcc
+-libgomp
+-libquadmath
+ openmpi
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -38,7 +38,6 @@
+ -S $pkgname-$pkgver-$_build_types
+ -D CMAKE_INSTALL_PREFIX=/usr
+ -D CMAKE_BUILD_TYPE=None
+--D CMAKE_POLICY_VERSION_MINIMUM=3.5
+ -D ENABLE_OPENMP=ON
+ -D ENABLE_THREADS=ON
+ -D ENABLE_FLOAT=ON

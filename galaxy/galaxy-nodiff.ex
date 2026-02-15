@@ -188,7 +188,11 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
+libreoffice-still
+libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
@@ -207,6 +211,8 @@ libscfg
 libsfdo
 libsidplayfp
 libsignal-protocol-c
+libstaroffice
+libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
@@ -492,7 +498,6 @@ rgbds
 rio
 ristretto
 rmpc
-rpi-imager
 rust-script
 sakura
 salt
@@ -511,7 +516,6 @@ spotify-launcher
 sqlitebrowser
 ssh-tools
 stalonetray
-starship
 subtitleeditor
 sundials
 swaync

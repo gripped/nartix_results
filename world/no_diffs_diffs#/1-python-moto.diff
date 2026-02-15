@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -86,6 +86,8 @@
+     --ignore=tests/test_cognitoidp/test_cognitoidp.py
+     -m 'not requires_docker'
+     --deselect=tests/test_awslambda/test_lambda.py::test_delete_function
++    --deselect=tests/test_s3/test_multiple_accounts_server.py::TestAccountIdResolution::test_with_custom_request_header
++    --deselect=tests/test_s3/test_server.py::test_s3_server_post_cors_multiple_origins
+   )
+   TZ=UTC pytest tests "${pytest_args[@]}"
+ }

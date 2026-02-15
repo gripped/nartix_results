@@ -1,16 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,12 +1,12 @@
  
  pkgname=libcmis
  pkgver=0.6.2
--pkgrel=6
+-pkgrel=7
 +pkgrel=2
  pkgdesc="a C/C++ client library for the CMIS protocol"
  arch=('x86_64')
  url="https://github.com/tdf/libcmis"
 -license=('GPL-2.0-or-later' 'LGPL-2.1-or-later' 'MPL-1.1')
+-depends=('boost-libs' 'curl' 'libxml2' 'glibc' 'libstdc++' 'libgcc')
 +license=('GPL2' 'LGPL2.1' 'MPL')
- depends=('boost-libs' 'curl' 'libxml2' 'gcc-libs' 'glibc')
++depends=('boost-libs' 'curl' 'libxml2' 'gcc-libs' 'glibc')
  makedepends=('docbook2x' 'cppunit' 'boost')
  source=("https://github.com/tdf/libcmis/releases/download/v${pkgver}/$pkgname-$pkgver.tar.xz"
+         libxml2-2.12.patch
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,6 @@
+ cppunit
+ curl
+ docbook2x
++gcc-libs
+ glibc
+-libgcc
+-libstdc++
+ libxml2

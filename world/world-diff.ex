@@ -1,4 +1,5 @@
 0ad
+7zip
 a52dec
 accountsservice
 aflplusplus
@@ -47,6 +48,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -134,7 +136,6 @@ dotnet-source-built-artifacts
 dovecot
 dracut
 drkonqi
-dune
 dunst
 earlyoom
 element.io
@@ -161,6 +162,8 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+fftw
+fftw-openmpi
 fig2dev
 firefox
 firewalld
@@ -293,7 +296,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-intel-graphics-compiler
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -302,6 +304,7 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+jami-qt
 jaq
 java-openjfx
 java-openjfx-doc
@@ -332,7 +335,6 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 js78
-julia
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
@@ -410,7 +412,6 @@ libnvme
 libofa
 libpagemaker
 libpgm
-libplacebo
 libprocps
 libqb
 librevenge
@@ -636,7 +637,6 @@ openresolv
 opensmtpd
 opensnitch
 opensp
-openucx
 openvpn
 ostree
 packagekit
@@ -742,7 +742,6 @@ python-asn1crypto
 python-cram
 python-debugpy
 python-hidapi
-python-llvmlite
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -869,7 +868,6 @@ rocfft
 rocrand
 rocsolver
 rocsparse
-rpm-sequoia
 rrdtool
 rspamd
 rsync
@@ -1196,10 +1194,7 @@ zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
 zeromq
-zint
-zint-qt
 znc
 zoxide
 zsh
 zsh-doc
-zxing-cpp

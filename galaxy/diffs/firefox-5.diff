@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=firefox
- pkgver=147.0.3
--pkgrel=2
-+pkgrel=1
- pkgdesc="Fast, Private & Safe Web Browser"
- url="https://www.mozilla.org/firefox/"
- arch=(x86_64)
 @@ -48,7 +48,6 @@
    mesa
    nasm
@@ -25,12 +16,10 @@
    'speech-dispatcher: Text-to-Speech'
    'xdg-desktop-portal: Screensharing with Wayland'
  )
-@@ -79,7 +77,10 @@
-   $pkgname.desktop
+@@ -80,6 +78,9 @@
    org.mozilla.$pkgname.metainfo.xml
    0001-Install-under-remoting-name.patch
--  0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
-+  0002-Bug-1995035-Allow-F_DUPFD_QUERY-in-the-Linux-sandbox.patch
+   0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
 +  policies.json
 +  preferences.patch
 +  preferences2.patch
@@ -44,7 +33,7 @@
 -            'ef63a12975f108f30b00bb3290d9ca76f311d8af9c1d5dfc0d8335ad57e8f77c'
 -            'eaa1e9c177f83ae9f20009b77eab8f97a8ad7ed5e4502999211d4eab57835774')
 +            '883ca2fa723a7572269d18559d5b82412782ad63e5dd3820eeb0540e3fe34314'
-+            '3b8bae25a05e6075c7025be387ee8e1a2dc57c19d89d3028b457128530f6c24b'
++            'eaa1e9c177f83ae9f20009b77eab8f97a8ad7ed5e4502999211d4eab57835774'
 +            'edc9d297a890bdcbf87251a5ff398c49114c3f99f0881d6bf31ed2ccfffd298c'
 +            '21dfd320408ffd57239eabf13df493fe7d575be6b12b07554f8454c233750ab2'
 +            '7802a6e1c6fb2d117041671b7853d376cebc5e7d76001159ed960fc557d2a0f5')
@@ -58,7 +47,7 @@
 -
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 +        '8a894b01e405b628877483e40e9b018647977cb053b6af02afc901ed24d6e1f767f3db8c321070e33aea4a05ba16f1eb47ae600e5299b5f9caad03d20ba38cf5'
-+        'e97f22602666465d418cbbb260cf8de936ca101b2c800247b45a63444c36fadee2c0dc8b93ee203409e27fb99a82e24d8c7bd20a7e53eddc979cd21b7cdaedde'
++        '512a387e28b64743f9086019860c649d7b08cf69aa10f256b39790fb9ab403ddad7693900684dfeb59206036940f7a273cede822b1395c947dd482f617f13729'
 +        '87eea4bc3c4f326f0667245b206cd1b10ef7f010ce7600906aa411dd4dfa653bd081b48e6c8c9de47576594ef4e5dceaff317380c3d2d198b0f064255e650838'
 +        '3a6d97231824c9c2d97bd15023faa4cdd25ae59a34c1961e6cd12bb5d172ede95594fd1f7e3dbed7d79a645cf734961a4b7d2bdedaee55c716d49f0e7fdfc3a4'
 +        'e4c6d14fbfde0237da9fad63289c2dc55084378e1edc805e39c207595dc71c12e731934b83fbf0286635f520832774c6c33398a47b11288dd4c34e431e8f6ffd')
@@ -66,12 +55,9 @@
  
  prepare() {
    mkdir mozbuild
-@@ -107,9 +113,10 @@
+@@ -110,6 +116,9 @@
+   patch -Np1 -i ../0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
  
-   patch -Np1 -i ../0001-Install-under-remoting-name.patch
- 
--  patch -Np1 -i ../0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
--
    echo -n "$_google_api_key" >google-api-key
 +
 +  patch -Np1 -i ../preferences.patch
@@ -79,7 +65,7 @@
  
    cat >../mozconfig <<END
  ac_add_options --enable-application=browser
-@@ -122,19 +129,18 @@
+@@ -122,19 +131,18 @@
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
  ac_add_options --disable-install-strip
@@ -101,7 +87,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -187,7 +193,7 @@
+@@ -187,7 +195,7 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
@@ -110,7 +96,7 @@
  ac_add_options --enable-profile-use=cross
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-@@ -198,9 +204,9 @@
+@@ -198,9 +206,9 @@
  package() {
    cd firefox-$pkgver
    DESTDIR="$pkgdir" ./mach install
@@ -123,7 +109,7 @@
  // Use LANG environment variable to choose locale
  pref("intl.locale.requested", "");
  
-@@ -217,19 +223,21 @@
+@@ -217,19 +225,21 @@
  pref("browser.gnome-search-provider.enabled", true);
  END
  
@@ -153,7 +139,7 @@
  
    local i theme=official
    for i in 16 22 24 32 48 64 128 256; do
-@@ -246,18 +254,21 @@
+@@ -246,18 +256,21 @@
    install -Dvm644 ../$pkgname-symbolic.svg -t "$pkgdir/usr/share/icons/hicolor/symbolic/apps"
    install -Dvm644 ../$pkgname.desktop -t "$pkgdir/usr/share/applications"
    install -Dvm644 ../org.mozilla.$pkgname.metainfo.xml -t "$pkgdir/usr/share/metainfo"
@@ -193,18 +179,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,9 @@
- mkdir mozbuild
- cd firefox-$pkgver
+@@ -4,6 +4,8 @@
  patch -Np1 -i ../0001-Install-under-remoting-name.patch
--patch -Np1 -i ../0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
+ patch -Np1 -i ../0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
  echo -n "$_google_api_key" >google-api-key
 +patch -Np1 -i ../preferences.patch
 +patch -Np1 -i ../preferences2.patch
  cat >../mozconfig <<END
  ac_add_options --enable-application=browser
  mk_add_options MOZ_OBJDIR=${PWD@Q}/obj
-@@ -14,17 +15,16 @@
+@@ -14,17 +16,16 @@
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
  ac_add_options --disable-install-strip
@@ -224,7 +208,7 @@
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
  ac_add_options --enable-alsa
-@@ -64,7 +64,7 @@
+@@ -64,7 +65,7 @@
  ./mach clobber objdir
  echo "Building optimized browser..."
  cat >.mozconfig ../mozconfig - <<END
