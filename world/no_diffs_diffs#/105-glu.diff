@@ -1,20 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- 
- pkgname=glu
- pkgver=9.0.3
--pkgrel=3
-+pkgrel=2
- pkgdesc="Mesa OpenGL utility library"
- arch=('x86_64')
- url="https://gitlab.freedesktop.org/mesa/glu"
- license=('SGI-B-2.0' 'MIT')
--depends=('libgl' 'glibc' 'libstdc++' 'libgcc')
-+depends=('libgl' 'gcc-libs' 'glibc')
- makedepends=('meson')
- source=(https://mesa.freedesktop.org/archive/glu/glu-$pkgver.tar.xz{,.sig})
- sha512sums=('b2781059c0e176192c3fc0d7244645020937a463311171efddb9f35fb94ee43faabcf627fa7f429d48fceaf6dd9c5adb69c86c7a21ec4ea490f4ab143d52e3ba'
 @@ -14,7 +14,7 @@
  validpgpkeys=('57551DE15B968F6341C248F68D8E31AFC32428A6') # Eric Engestrom <eric@engestrom.ch>
  
@@ -24,26 +9,11 @@
      -D default_library=shared
  
    meson configure build
-@@ -28,6 +28,4 @@
- 
- package() {
-   meson install -C build --destdir "$pkgdir"
--  install -dm755 "${pkgdir}/usr/share/licenses/${pkgname}"
--  echo "SGI-B-2.0 and MIT" > "${pkgdir}/usr/share/licenses/${pkgname}"/LICENSE
- }
 
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,5 +1,4 @@
-+gcc-libs
- glibc
--libgcc
- libgl
--libstdc++
- meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -4,13 +4,14 @@
  pkgname=lshw
  pkgver=B.02.20
  _commit=4c6497c8b0a67cd9fa9693e9101a7cafd3297e81
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="A small tool to provide detailed information on the hardware configuration of the machine."
  url="https://ezix.org/project/wiki/HardwareLiSter"
  license=('GPL')
  arch=('x86_64')
- depends=('gcc-libs' 'hwdata')
+-depends=('hwdata')
++depends=('gcc-libs' 'hwdata')
  optdepends=('gtk3')
 -makedepends=('gcc' 'sqlite' 'git' 'gtk3')
 +makedepends=('gcc' 'gtk2-compat' 'sqlite' 'git')
@@ -23,9 +24,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,6 @@
+@@ -1,5 +1,6 @@
  gcc
- gcc-libs
++gcc-libs
  git
 -gtk3
 +gtk2-compat

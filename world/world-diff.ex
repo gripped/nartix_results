@@ -107,6 +107,8 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
+django
+python-django
 dns-over-https
 docker
 dolphin-emu
@@ -176,6 +178,8 @@ flatpak
 flatpak-docs
 flite
 fluidsynth
+fmt
+fmt-docs
 font-manager
 fprintd
 freerdp
@@ -385,10 +389,8 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
-libepubgen
 libfido2
 libfprint
-libfreehand
 libgtop
 libgudev
 libguestfs
@@ -397,6 +399,9 @@ libidl2
 libindi
 libinput
 libinput-tools
+libjxl
+libjxl-doc
+libkate
 libldm
 liblqr
 libmatekbd
@@ -406,15 +411,11 @@ libmms
 libmng
 libmpd
 libmspub
-libmwaw
-libmwaw-docs
 libnvme
 libofa
-libpagemaker
 libpgm
 libprocps
 libqb
-librevenge
 libsidplay
 libsidplayfp
 libsoxr
@@ -427,7 +428,6 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
-libwpd
 libxfce4ui
 libxfce4util
 libxklavier
@@ -738,6 +738,7 @@ pyqt6
 pysolfc
 python-anytree
 python-aresponses
+python-asgiref
 python-asn1crypto
 python-cram
 python-debugpy
@@ -749,6 +750,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-wheel
+python-xlib
 qastools
 qbittorrent
 qbittorrent-nox

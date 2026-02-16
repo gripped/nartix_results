@@ -1,20 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- 
- pkgname=libwacom
- pkgver=2.18.0
--pkgrel=2
-+pkgrel=1
- pkgdesc="Library to identify Wacom tablets and their features"
- arch=('x86_64')
- url="https://github.com/linuxwacom/libwacom/wiki"
- license=('MIT')
--depends=('glib2' 'libevdev' 'libgudev' 'glibc' 'libgcc')
-+depends=('glib2' 'libevdev' 'libgudev' 'gcc-libs' 'glibc')
- makedepends=('libxml2' 'meson' 'python-pytest' 'python-libevdev' 'python-pyudev')
- optdepends=('python-libevdev: for libwacom-show-stylus'
-             'python-pyudev: for libwacom-show-stylus')
 @@ -16,7 +16,7 @@
  validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') # "Peter Hutterer (Who-T) <office@who-t.net>"
  
@@ -28,17 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,7 +1,7 @@
-+gcc-libs
- glib2
- glibc
- libevdev
--libgcc
- libgudev
- libxml2
- meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

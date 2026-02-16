@@ -446,8 +446,6 @@ discover
 distcc
 distro-info-data
 distro-info
-django
-python-django
 djvulibre
 dkms
 dleyna
@@ -653,8 +651,6 @@ flickcurl
 fltk
 fltk-docs
 fltk1.3
-fmt
-fmt-docs
 folks
 font-awesome
 woff2-font-awesome
@@ -1694,6 +1690,7 @@ libdvdread
 libdwarf
 libebml
 libebur128
+libepubgen
 libesmtp
 libetebase
 libetonyek
@@ -1717,6 +1714,7 @@ libfm-extra
 libfm-gtk3
 libfontenc
 libfreeaptx
+libfreehand
 libfreexl
 libftdi
 libfyaml
@@ -1786,9 +1784,6 @@ libixion
 libjcat
 libjpeg-turbo
 libjuice
-libjxl
-libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1853,6 +1848,8 @@ libmspack
 libmsym
 libmtp
 libmusicbrainz5
+libmwaw
+libmwaw-docs
 libmypaint
 libmysofa
 libmythes
@@ -1896,6 +1893,7 @@ libosinfo
 libotf
 libotr
 libp11
+libpagemaker
 libpanel
 libpanel-docs
 libpano13
@@ -1952,6 +1950,7 @@ librest
 librest-docs
 librest-demos
 libretls
+librevenge
 librsvg
 librsvg-docs
 librsync
@@ -2055,6 +2054,7 @@ libwlocate
 libwmf
 libwnck
 libwnck3
+libwpd
 libwpe
 libwpe-docs
 libwpg
@@ -3198,7 +3198,6 @@ python-argparse-manpage
 python-arpeggio
 python-arpy
 python-arrow
-python-asgiref
 python-aspectlib
 python-assertpy
 python-asteval
@@ -4561,7 +4560,6 @@ python-xapp
 python-xarray
 python-xattr
 python-xkbcommon
-python-xlib
 python-xlrd
 python-xlsxwriter
 python-xlwt

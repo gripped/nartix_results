@@ -1,15 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,8 +22,6 @@
+@@ -5,7 +5,7 @@
+   openmpi-docs
+ )
+ pkgver=5.0.9
+-pkgrel=3
++pkgrel=4
+ pkgdesc='High performance message passing library (MPI)'
+ arch=(x86_64)
+ url='https://www.open-mpi.org'
+@@ -14,19 +14,15 @@
+   cuda
+   nvidia-utils  # for libcuda.so
+   gcc-fortran
+-  gcc-libs
+   glibc
+   hip-runtime-amd
+   hwloc
++  libgcc
+   libevent
    libfabric
-   libnl
+-  libnl
    openpmix
 -  openucc
 -  openucx
    prrte
    valgrind
-   zlib
-@@ -65,8 +63,6 @@
+-  zlib
+ )
+ source=(
+   https://www.open-mpi.org/software/ompi/v${pkgver%.*}/downloads/$pkgbase-$pkgver.tar.bz2
+@@ -65,8 +61,6 @@
      --with-pmix=external
      --with-prrte=external
      --with-valgrind
@@ -18,15 +39,24 @@
      --with-cuda=/opt/cuda
      --with-cuda-libdir=/usr/lib
      --with-rocm=/opt/rocm
-@@ -96,7 +92,6 @@
+@@ -89,23 +83,19 @@
+ 
+ package_openmpi() {
+   depends=(
+-    gcc-libs
+     glibc
+     hwloc
++    libgcc
+     libevent libevent_{core,pthreads}-2.1.so
      libfabric
-     libnl
+-    libnl
      openpmix libpmix.so
 -    openucx
      prrte
-     zlib
+-    zlib
    )
-@@ -105,7 +100,6 @@
+   optdepends=(
+     'cuda: cuda support'
      'hip-runtime-amd: ROCm support'
      'gcc-fortran: fortran support'
      'openssh: for execution on remote hosts via plm_ssh_agent'
@@ -40,7 +70,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -12,8 +12,6 @@
+@@ -1,6 +1,5 @@
+ cuda
+ gcc-fortran
+-gcc-libs
+ glibc
+ hip-runtime-amd
+ hwloc
+@@ -8,12 +7,9 @@
+ libevent_core-2.1.so
+ libevent_pthreads-2.1.so
+ libfabric
+-libnl
++libgcc
  libpmix.so
  nvidia-utils
  openpmix
@@ -48,7 +90,7 @@
 -openucx
  prrte
  valgrind
- zlib
+-zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
