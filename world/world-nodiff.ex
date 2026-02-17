@@ -1,4 +1,5 @@
 0ad-data
+7zip
 a2ps
 aalib
 aarch64-linux-gnu-binutils
@@ -277,6 +278,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -332,6 +334,7 @@ clinfo
 clisp
 cln
 cloc
+clucene
 clutter-gst
 clutter-gtk
 clutter
@@ -612,7 +615,6 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
 fcitx5-qt
-fd
 featherpad
 feh
 festival
@@ -1144,6 +1146,7 @@ itstool
 iucode-tool
 iverilog
 j4-dmenu-desktop
+jami-qt
 jasper
 jasper-doc
 java-avalon-framework
@@ -1517,7 +1520,6 @@ kshisen
 ksirk
 ksmtp
 ksnakeduel
-ksnip
 kspaceduel
 ksquares
 ksshaskpass
@@ -2016,7 +2018,6 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
-libultrahdr
 libunibreak
 libuninameslist
 libupnp
@@ -2531,6 +2532,7 @@ openh264
 openimagedenoise
 openimageio
 openipmi
+openjade
 openjpeg2
 openlibm
 openmp
@@ -2618,7 +2620,6 @@ pdal
 pdfarranger
 pdfgrep
 pdfjs
-pdfmixtool
 pdnsd
 pegtl
 pelican
@@ -4765,7 +4766,6 @@ riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
-rkcommon
 rlwrap
 rng-tools
 robin-map
@@ -5215,7 +5215,6 @@ sdl2_image
 sdl2_mixer
 sdl2_net
 sdl2_ttf
-sdl3
 sdl3_ttf
 sdl_image
 sdl_mixer
@@ -5948,6 +5947,7 @@ zix-docs
 zlib-ng
 zlib-ng-compat
 zopfli
+zoxide
 zsh-autosuggestions
 zsh-completions
 zsh-history-substring-search

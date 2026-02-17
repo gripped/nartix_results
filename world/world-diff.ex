@@ -1,5 +1,4 @@
 0ad
-7zip
 a52dec
 accountsservice
 aflplusplus
@@ -48,7 +47,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -81,7 +79,6 @@ cinnamon
 cjs
 clamav
 cloud-init
-clucene
 cmake
 colord
 libcolord
@@ -164,6 +161,7 @@ fcgiwrap
 fcitx-mozc
 fcitx5
 fcron
+fd
 fftw
 fftw-openmpi
 fig2dev
@@ -250,6 +248,7 @@ gst-plugins-bad
 gst-plugins-ugly
 gst-libav
 gst-plugin-gtk
+gst-plugin-hip
 gst-plugin-msdk
 gst-plugin-opencv
 gst-plugin-qml6
@@ -257,11 +256,11 @@ gst-plugin-qmlgl
 gst-plugin-qsv
 gst-plugin-va
 gst-plugin-wpe
+gst-plugin-wpe2
 gst-devtools-libs
 gst-devtools
 gst-rtsp-server
 gst-editing-services
-gstreamer-vaapi
 gst-python
 gstreamer-docs
 gtk3
@@ -308,7 +307,6 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-jami-qt
 jaq
 java-openjfx
 java-openjfx-doc
@@ -349,6 +347,7 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
+ksnip
 ksystemlog
 kwin-x11
 kwin
@@ -422,6 +421,7 @@ libsoxr
 libstaroffice
 libtg_owt
 libudev0-shim
+libultrahdr
 libunwind
 libusbsio
 python-libusbsio
@@ -631,7 +631,6 @@ open-iscsi
 openbox
 opencollada
 opendht
-openjade
 openrct2
 openresolv
 opensmtpd
@@ -649,6 +648,7 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 pcsclite
+pdfmixtool
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -864,6 +864,7 @@ redshift
 refind
 refind-docs
 ristretto
+rkcommon
 rnnoise
 rocalution
 rocfft
@@ -896,6 +897,7 @@ $pkgbase
 $pkgbase-doc
 sdcv
 sddm
+sdl3
 seatd
 sfml
 shairport-sync
@@ -1197,6 +1199,5 @@ zabbix-agent2
 zathura-pdf-mupdf
 zeromq
 znc
-zoxide
 zsh
 zsh-doc

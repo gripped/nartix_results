@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=spirv-llvm-translator
+ pkgver=21.1.4
+-pkgrel=1
++pkgrel=2
+ pkgdesc="LLVM <-> SPIR-V converter for compilers targeting SPIR-V"
+ url="https://www.khronos.org/spirv/"
+ arch=(x86_64)
+ license=(NCSA)
+ depends=(
+-  gcc-libs
+   glibc
++  libstdc++
+   llvm-libs
+   spirv-tools
+ )
+@@ -55,9 +55,6 @@
+   cmake --build build
+ }
+ 
+-check() {
+-  cmake --build build --target test
+-}
+ 
+ package() {
+   DESTDIR="$pkgdir" cmake --install build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ cmake
+-gcc-libs
+ git
+ glibc
++libstdc++
+ llvm
+ llvm-libs
+ ninja

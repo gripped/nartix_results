@@ -1,11 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,12 +1,12 @@
+ 
+ pkgname=apcupsd
+ pkgver=3.14.14
+-pkgrel=8
++pkgrel=9
+ pkgdesc="Power mangement and controlling most of APC's UPS models"
  arch=(x86_64)
  url="http://www.apcupsd.org"
  license=('GPL')
 -depends=('gcc-libs' 'systemd-sysvcompat' 'libusb-compat')
-+depends=('gcc-libs' 'svc-manager' 'libusb-compat')
++depends=('libgcc' 'svc-manager' 'libusb-compat')
  optdepends=('gd: for CGI')
  makedepends=('gd')
  backup=(etc/apcupsd/apcupsd.conf
@@ -50,8 +56,9 @@
 --- arch_depends
 +++ artix_depends
 @@ -1,4 +1,4 @@
- gcc-libs
+-gcc-libs
  gd
++libgcc
  libusb-compat
 -systemd-sysvcompat
 +svc-manager

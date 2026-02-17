@@ -1,6 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -71,7 +71,7 @@
+@@ -6,7 +6,7 @@
+   freetype2-docs
+ )
+ pkgver=2.14.1
+-pkgrel=1
++pkgrel=2
+ epoch=
+ pkgdesc="Font rasterization library"
+ url="https://www.freetype.org/"
+@@ -21,7 +21,8 @@
+ )
+ makedepends=(
+   cairo
+-  gcc-libs
++  libgcc
++  libstdc++
+   glib2
+   harfbuzz
+   librsvg
+@@ -71,7 +72,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -9,11 +28,37 @@
    meson compile -C build
  }
  
+@@ -115,7 +116,8 @@
+   depends=(
+     cairo
+     freetype2
+-    gcc-libs
++    libgcc
++    libstdc++
+     glib2
+     glibc
+     librsvg
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -3,12 +3,13 @@
+ bzip2
+ cairo
+ freetype2
+-gcc-libs
+ glib2
+ glibc
+ harfbuzz
++libgcc
+ libpng
+ librsvg
++libstdc++
+ libx11
+ meson
+ qt5-base
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

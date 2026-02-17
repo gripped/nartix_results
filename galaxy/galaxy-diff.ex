@@ -67,10 +67,8 @@ qbittorrent-nox
 rage
 read-edid
 reflector
-rpi-imager
 sdcv
 signal-desktop
-starship
 terminology
 termshark
 tor

@@ -399,6 +399,7 @@ openrct2
 openshot
 orage
 oxipng
+packer
 parole
 pavucontrol-qt
 pcmanfm-gtk3
@@ -498,6 +499,7 @@ rgbds
 rio
 ristretto
 rmpc
+rpi-imager
 rust-script
 sakura
 salt
@@ -516,6 +518,7 @@ spotify-launcher
 sqlitebrowser
 ssh-tools
 stalonetray
+starship
 subtitleeditor
 sundials
 swaync

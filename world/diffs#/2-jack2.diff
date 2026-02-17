@@ -1,62 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,11 +7,11 @@
- pkgrel=1
+@@ -4,7 +4,7 @@
+ pkgdesc="The JACK low-latency audio server"
+ pkgver=1.9.22
+ _commit=80149e552b56d6d57d754dc04d119b8170d27313  # refs/tags/v1.9.22
+-pkgrel=1
++pkgrel=2
  arch=(x86_64)
  url="https://github.com/jackaudio/jack2"
--license=(GPL-2.0-or-later)
--makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus systemd waf)
-+license=(GPL2)
-+makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus waf)
- options=(!lto)
- source=(
--  git+$url#tag=$_commit?signed
-+  _$pkgbase::git+$url#tag=$_commit?signed
-   $pkgbase-1.9.22-db-5.3.patch
- )
- validpgpkeys=('62B11043D2F6EB6672D93103CDBAA37ABC74FBA0') # falkTX <falktx@falktx.com>
-@@ -29,9 +29,9 @@
- }
- 
- prepare() {
--  patch -Np1 -d $pkgbase -i ../$pkgbase-1.9.22-db-5.3.patch
-+  patch -Np1 -d _$pkgbase -i ../$pkgbase-1.9.22-db-5.3.patch
- 
--  rm -rv $pkgbase/waflib
-+  rm -rv _$pkgbase/waflib
- }
- 
- build() {
-@@ -40,12 +40,11 @@
-     --htmldir=/usr/share/doc/$pkgbase/html
-     --autostart=none
-     --doxygen=yes
--    --systemd-unit
-     --classic
-     --dbus
-   )
- 
--  cd $pkgbase
-+  cd _$pkgbase
-   export CXXFLAGS="$CXXFLAGS -I/usr/include/db5.3"
-   export LDFLAGS="$LDFLAGS -ldb-5.3"
-   export LINKFLAGS="$LDFLAGS"
-@@ -64,7 +63,6 @@
+ license=(GPL-2.0-or-later)
+@@ -60,9 +60,10 @@
+     alsa-lib libasound.so
+     db5.3
+     dbus libdbus-1.so
+-    gcc-libs
      glibc
++    libgcc
      libsamplerate libsamplerate.so
++    libstdc++
      opus libopus.so
--    systemd-libs libsystemd.so
+     systemd-libs libsystemd.so
    )
-   optdepends=(
-     'a2jmidid: for ALSA MIDI to JACK MIDI bridging'
-@@ -77,7 +75,7 @@
-   conflicts=(jack)
-   provides=(jack libjack.so libjacknet.so libjackserver.so)
- 
--  cd $pkgbase
-+  cd _$pkgbase
-   export PYTHONPATH="$PWD:$PYTHONPATH"
-   waf install --destdir="$pkgdir"
+@@ -95,9 +96,9 @@
+   depends=(
+     dbus libdbus-1.so
+     expat libexpat.so
+-    gcc-libs
+     glibc
+     jack2 libjackserver.so
++    libstdc++
+     python-dbus
+   )
  
 
 
@@ -64,13 +38,24 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -15,9 +15,6 @@
+@@ -3,7 +3,6 @@
+ dbus
+ doxygen
+ expat
+-gcc-libs
+ git
+ glibc
+ jack2
+@@ -11,10 +10,12 @@
+ libdbus-1.so
+ libexpat.so
+ libffado
++libgcc
+ libjackserver.so
  libopus.so
  libsamplerate
  libsamplerate.so
--libsystemd.so
++libstdc++
+ libsystemd.so
  opus
  python-dbus
--systemd
--systemd-libs
- waf
