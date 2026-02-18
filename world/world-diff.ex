@@ -741,9 +741,12 @@ python-aresponses
 python-asgiref
 python-asn1crypto
 python-cram
+python-cryptography
 python-debugpy
+python-filelock
 python-hidapi
 python-ndg-httpsclient
+python-pydantic-settings
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -875,6 +878,7 @@ rrdtool
 rspamd
 rsync
 rtkit
+ruby-addressable
 ruby-bake-modernize
 ruby-rbtree
 ruby-rdiscount
@@ -905,9 +909,9 @@ sharutils
 signal-desktop
 smartmontools
 snapper
-snappy
 solid
 spice-vdagent
+spirv-llvm-translator
 sqlcipher
 squid
 sshguard

@@ -1,11 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,14 +2,15 @@
  pkgname=('lact' 'lact-libadwaita')
  pkgbase=lact
  pkgver=0.8.4
 -pkgrel=1
-+pkgrel=1.1
++pkgrel=2
  pkgdesc="Linux GPU Configuration Tool"
  arch=('x86_64')
  url="https://github.com/ilya-zlobintsev/LACT"
+ license=('MIT')
+ depends=(
+   hwdata
+-  gcc-libs
++  libgcc
++  libstdc++
+   glibc
+   gtk4
+   vulkan-tools
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,11 @@
+ cargo
+ clang
+-gcc-libs
+ git
+ glibc
+ gtk4
+ hwdata
+ libadwaita
++libgcc
++libstdc++
+ ocl-icd
+ vulkan-tools

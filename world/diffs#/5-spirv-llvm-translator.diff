@@ -5,7 +5,7 @@
  pkgname=spirv-llvm-translator
  pkgver=21.1.4
 -pkgrel=1
-+pkgrel=2
++pkgrel=3
  pkgdesc="LLVM <-> SPIR-V converter for compilers targeting SPIR-V"
  url="https://www.khronos.org/spirv/"
  arch=(x86_64)
@@ -17,16 +17,14 @@
    llvm-libs
    spirv-tools
  )
-@@ -55,9 +55,6 @@
-   cmake --build build
+@@ -32,6 +32,7 @@
+   cd SPIRV-LLVM-Translator
+ 
+   git cherry-pick -n fc5873ee760c333738c9e8e8d8c2eb906f0c40f5
++  git cherry-pick -n 30258ee35493b5355a5c6df0655f91eff4217685
  }
  
--check() {
--  cmake --build build --target test
--}
- 
- package() {
-   DESTDIR="$pkgdir" cmake --install build
+ build() {
 
 
 ############# Stripped diff below #################
@@ -42,3 +40,14 @@
  llvm
  llvm-libs
  ninja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd SPIRV-LLVM-Translator
+ git cherry-pick -n fc5873ee760c333738c9e8e8d8c2eb906f0c40f5
++git cherry-pick -n 30258ee35493b5355a5c6df0655f91eff4217685
+ }
+ build() {
+ local cmake_options=(

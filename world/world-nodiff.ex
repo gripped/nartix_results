@@ -3366,7 +3366,6 @@ python-crispy-bootstrap4
 python-crispy-bootstrap5
 python-cron-converter
 python-cross-web
-python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -3500,7 +3499,6 @@ python-feedparser
 python-fido2
 python-fields
 python-filebytes
-python-filelock
 python-filetype
 python-findpython
 python-fiona
@@ -4039,7 +4037,6 @@ python-pycuda
 python-pycurl
 python-pydantic-core
 python-pydantic-extra-types
-python-pydantic-settings
 python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
@@ -4816,7 +4813,6 @@ rubberband-vamp
 rubocop
 ruby-abbrev
 ruby-activesupport
-ruby-addressable
 ruby-ae
 ruby-ansi
 ruby-ast
@@ -5265,6 +5261,7 @@ slurp
 smb4k
 smpeg
 smplayer
+snappy
 snapshot
 sndio
 snorenotify
@@ -5305,7 +5302,6 @@ spice-gtk
 spice-protocol
 spice
 spirv-headers
-spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
