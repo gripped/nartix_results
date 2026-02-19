@@ -69,6 +69,7 @@ read-edid
 reflector
 sdcv
 signal-desktop
+tealdeer
 terminology
 termshark
 tor

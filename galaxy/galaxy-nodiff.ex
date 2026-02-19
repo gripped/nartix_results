@@ -525,7 +525,6 @@ swaync
 swww
 sysbench
 t1lib
-tealdeer
 telegram-desktop
 terminus-font
 tesseract-data

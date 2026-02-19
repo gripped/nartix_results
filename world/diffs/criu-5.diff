@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=criu
+ pkgver=4.2
+-pkgrel=2
++pkgrel=3
+ pkgdesc='Utilities to checkpoint and restore processes in userspace'
+ arch=('x86_64')
+ url='https://criu.org'
+@@ -10,12 +10,12 @@
+   'LGPL-2.1-only'
+ )
+ depends=(
+-  'gcc-libs'
+   'glibc'
+   'gnutls'
+   'libbpf'
+   'libbsd'
+   'libdrm'
++  'libgcc'
+   'libnet'
+   'libnl'
+   'nftables'
+@@ -41,6 +41,10 @@
+ source=("git+https://github.com/checkpoint-restore/criu#tag=v$pkgver")
+ sha512sums=('23836d7a8103e8aa647716c48505ba023bfe1aebd625678986c0543634e3269f5c500cb9eb33eb006d94d78ded619a6ca4e9241b02ed120a3774371fd6e0176a')
+ b2sums=('b13f87a8f2978d1d7be94e39b3b5a02155fbf11473dae57ab1512fb49a0f683c00c09d840b8f817e585a5ae0603dfae5572e2247940e8c7371e106b0fec10999')
++
++prepare() {
++  git -C $pkgname cherry-pick -n 90300748effc1cf0fe56e35d3d1cc2ddfedab246
++}
+ 
+ build() {
+   cd "$pkgname"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,11 @@
+ asciidoc
+-gcc-libs
+ git
+ glibc
+ gnutls
+ libbpf
+ libbsd
+ libdrm
++libgcc
+ libnet
+ libnl
+ nftables
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,6 @@
++prepare() {
++git -C $pkgname cherry-pick -n 90300748effc1cf0fe56e35d3d1cc2ddfedab246
++}
+ build() {
+ cd "$pkgname"
+ export CFLAGS=$(echo "$CFLAGS" | sed 's/-Wp,-D_FORTIFY_SOURCE=[0-9]//g')
