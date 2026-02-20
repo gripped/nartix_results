@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -78,8 +78,6 @@
+@@ -79,8 +79,6 @@
    cd $_pkgname
    DESTDIR="$pkgdir" cmake --install build
    install -vDm644 -t "$pkgdir/etc" other/bootstrap_daemon/tox-bootstrapd.conf

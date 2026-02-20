@@ -1,11 +1,34 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,14 +1,14 @@
  
  pkgname=libgit2
  pkgver=1.9.2
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  epoch=1
  pkgdesc="A linkable library for Git"
  arch=(x86_64)
+ url="https://github.com/libgit2/libgit2"
+ license=(LicenseRef-GPL-2.0-only-with-linking-exception)
+ depends=(
+-  libgcc
++  gcc-libs
+   glibc
+   llhttp
+   zlib
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ cmake
++gcc-libs
+ glibc
+ libcrypto.so
+-libgcc
+ libpcre2-8.so
+ libssh2
+ libssh2.so

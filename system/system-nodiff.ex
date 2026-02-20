@@ -18,6 +18,7 @@ libcurl-compat
 libcurl-gnutls
 dash
 db
+db5.3
 debugedit
 dialog
 ding-libs
@@ -196,6 +197,4 @@ which
 wireless-regdb
 wpa_supplicant
 xz
-zlib
-minizip
 zstd

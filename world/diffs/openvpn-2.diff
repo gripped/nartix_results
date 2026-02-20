@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -11,12 +11,10 @@
+@@ -11,11 +11,10 @@
           'lz4'
           'lzo' 'liblzo2.so'
           'openssl' 'libcrypto.so' 'libssl.so'
@@ -10,12 +10,11 @@
  optdepends=('easy-rsa: easy CA and certificate handling'
              'pam: authenticate via PAM')
 -makedepends=('git' 'systemd' 'python-docutils')
--install=openvpn.install
 +makedepends=('git' 'python-docutils')
+ install=openvpn.install
  validpgpkeys=('F554A3687412CFFEBDEFE0A312F5F7B42F2B01E7'  # OpenVPN - Security Mailing List <security@openvpn.net>
                'B62E6A2B4E56570B7BDC6BE01D829EFECA562812') # Gert Doering <gert@v6.de>
- source=("git+https://github.com/OpenVPN/openvpn.git#tag=v${pkgver}?signed"
-@@ -48,7 +46,7 @@
+@@ -42,7 +41,7 @@
      --enable-dco \
      --enable-pkcs11 \
      --enable-plugins \

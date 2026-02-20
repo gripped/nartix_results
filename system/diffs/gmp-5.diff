@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,27 +1,18 @@
+ 
+ pkgname=gmp
+ pkgver=6.3.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='A free library for arbitrary precision arithmetic'
+ arch=(x86_64)
+ url='https://gmplib.org/'
+-depends=(libgcc
+-         libstdc++
++depends=(gcc-libs
+          glibc)
+ license=(GPL-2.0-or-later
+          LGPL-3.0-or-later)
+-source=(https://gmplib.org/download/gmp/gmp-$pkgver.tar.lz{,.sig}
+-        gmp-gcc-15.patch)
++source=(https://gmplib.org/download/gmp/gmp-$pkgver.tar.lz{,.sig})
+ sha256sums=('be5c908a7a836c3a9bd9d62aa58563c5e9e7fef94c43a7f42dbc35bb6d02733c'
+-            'SKIP'
+-            'fd0f1b48dbe72413efbd9c45f1ca7013d555f46c578446ce3ba202e3a9b96c6c')
++            'SKIP')
+ validpgpkeys=('343C2FF0FBEE5EC2EDBEF399F3599FF828C67298')   # Niels Möller
+-
+-prepare() {
+-  cd $pkgname-$pkgver
+-  patch -p1 < ../gmp-gcc-15.patch # Fix build with GCC 15
+-  autoreconf -vif
+-}
+ 
+ build() {
+   cd $pkgname-$pkgver
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
++gcc-libs
+ glibc
+-libgcc
+-libstdc++
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,3 @@
+-prepare() {
+-cd $pkgname-$pkgver
+-patch -p1 < ../gmp-gcc-15.patch # Fix build with GCC 15
+-autoreconf -vif
+-}
+ build() {
+ cd $pkgname-$pkgver
+ LDFLAGS+=' -Wl,-z,shstk' \

@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,7 @@
+          pam
+          qt6-base
+          qtkeychain-qt6
+-         systemd-libs
++         libelogind
+          wayland)
+ makedepends=(extra-cmake-modules
+              plasma-wayland-protocols)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -10,10 +10,10 @@
+ ki18n
+ kpipewire
+ kstatusnotifieritem
++libelogind
+ libxkbcommon
+ pam
+ plasma-wayland-protocols
+ qt6-base
+ qtkeychain-qt6
+-systemd-libs
+ wayland

@@ -1,16 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  
  pkgname=(libvirt libvirt-storage-gluster libvirt-storage-iscsi-direct)
  epoch=1
 -pkgver=12.0.0
--pkgrel=1
 +pkgver=11.10.0
-+pkgrel=2
+ pkgrel=2
  pkgdesc="API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)"
  arch=('x86_64')
- url="https://libvirt.org/"
+@@ -17,7 +17,7 @@
+   curl
+   device-mapper
+   fuse3
+-  libgcc
++  gcc-libs
+   glib2
+   glibc
+   gnutls
 @@ -36,7 +36,6 @@
    parted
    polkit
@@ -45,12 +52,46 @@
      -Dwerror=false -Dgit_werror=disabled \
      --libexecdir=lib/libvirt \
      -Drunstatedir=/run \
+@@ -216,7 +214,7 @@
+   pkgdesc="Libvirt Gluster storage backend"
+   depends=(
+     "libvirt=$pkgver"
+-    libgcc
++    gcc-libs
+     glib2
+     glibc
+     glusterfs
+@@ -232,7 +230,7 @@
+   pkgdesc="Libvirt iSCSI-direct storage backend"
+   depends=(
+     "libvirt=$pkgver"
+-    libgcc
++    gcc-libs
+     glib2
+     glibc
+     libiscsi
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
+@@ -5,6 +5,7 @@
+ curl
+ device-mapper
+ fuse3
++gcc-libs
+ git
+ glib2
+ glibc
+@@ -12,7 +13,6 @@
+ gnutls
+ json-c
+ libcap-ng
+-libgcc
+ libiscsi
+ libnbd
+ libnl
 @@ -31,6 +31,4 @@
  polkit
  python-docutils

@@ -214,6 +214,8 @@ ruby-braid
 ruby-fattr
 ruby-main
 ruby-map
+rustdesk-openrc
+rustdesk
 salt-dinit
 salt-openrc
 salt-runit

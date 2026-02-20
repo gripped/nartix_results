@@ -1,61 +1,49 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
+@@ -4,11 +4,11 @@
  pkgdesc="The JACK low-latency audio server"
  pkgver=1.9.22
  _commit=80149e552b56d6d57d754dc04d119b8170d27313  # refs/tags/v1.9.22
--pkgrel=1
-+pkgrel=2
+-pkgrel=2
++pkgrel=2.2
  arch=(x86_64)
  url="https://github.com/jackaudio/jack2"
  license=(GPL-2.0-or-later)
-@@ -60,9 +60,10 @@
-     alsa-lib libasound.so
-     db5.3
-     dbus libdbus-1.so
--    gcc-libs
-     glibc
-+    libgcc
+-makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus systemd waf)
++makedepends=(alsa-lib db5.3 dbus doxygen expat git libffado libsamplerate opus waf)
+ options=(!lto)
+ source=(
+   git+$url#tag=$_commit?signed
+@@ -40,7 +40,6 @@
+     --htmldir=/usr/share/doc/$pkgbase/html
+     --autostart=none
+     --doxygen=yes
+-    --systemd-unit
+     --classic
+     --dbus
+   )
+@@ -65,7 +64,7 @@
      libsamplerate libsamplerate.so
-+    libstdc++
+     libstdc++
      opus libopus.so
-     systemd-libs libsystemd.so
+-    systemd-libs libsystemd.so
++
    )
-@@ -95,9 +96,9 @@
-   depends=(
-     dbus libdbus-1.so
-     expat libexpat.so
--    gcc-libs
-     glibc
-     jack2 libjackserver.so
-+    libstdc++
-     python-dbus
-   )
- 
+   optdepends=(
+     'a2jmidid: for ALSA MIDI to JACK MIDI bridging'
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -3,7 +3,6 @@
- dbus
- doxygen
- expat
--gcc-libs
- git
- glibc
- jack2
-@@ -11,10 +10,12 @@
- libdbus-1.so
- libexpat.so
- libffado
-+libgcc
- libjackserver.so
- libopus.so
+@@ -16,9 +16,6 @@
  libsamplerate
  libsamplerate.so
-+libstdc++
- libsystemd.so
+ libstdc++
+-libsystemd.so
  opus
  python-dbus
+-systemd
+-systemd-libs
+ waf

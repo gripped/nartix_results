@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   zenmap
+ )
+ pkgver=7.98
+-pkgrel=5
++pkgrel=4
+ pkgdesc="Utility for network discovery and security auditing"
+ url='https://nmap.org/'
+ arch=(x86_64)
+@@ -17,11 +17,10 @@
+   python-setuptools
+   python-setuptools-gettext
+   python-wheel
++  gcc-libs
+   glibc
+-  libgcc
+   libpcap
+   libssh2
+-  libstdc++
+   lua
+   openssl
+   pcre2
+@@ -87,11 +86,10 @@
+ 
+ package_nmap() {
+   depends=(
++    gcc-libs
+     glibc
+-    libgcc
+     libpcap
+     libssh2
+-    libstdc++
+     lua
+     openssl
+     pcre2
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,10 @@
++gcc-libs
+ gdk-pixbuf2
+ glib2
+ glibc
+ gtk3
+-libgcc
+ libpcap
+ libssh2
+-libstdc++
+ lua
+ ndiff
+ nmap

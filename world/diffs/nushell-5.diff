@@ -4,9 +4,10 @@
  
  pkgname=nushell
 -pkgver=0.110.0
+-pkgrel=2
 +pkgver=0.88.1
 +_commit=fd56768fdcc1acbebcb75745600fc7419f72833d
- pkgrel=1
++pkgrel=1
  pkgdesc='A new type of shell'
 -arch=(x86_64)
 +arch=('x86_64')
@@ -16,7 +17,7 @@
  depends=(
 -  curl
 -  glibc
--  gcc-libs
+-  libgcc
 -  libcrypto.so
 -  libssl.so
 -  zlib
@@ -76,10 +77,11 @@
 @@ -1,8 +1,7 @@
 -curl
 +cargo
- gcc-libs
++gcc-libs
  git
  glibc
  libcrypto.so
+-libgcc
  libssl.so
 -rust
  zlib

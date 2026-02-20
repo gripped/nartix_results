@@ -1,48 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,19 @@
- 
- pkgname=ddcutil
--pkgver=2.2.5
--pkgrel=2
-+pkgver=2.2.3
-+pkgrel=1
- pkgdesc='Query and change Linux monitor settings using DDC/CI and USB.'
+@@ -6,8 +6,8 @@
  url='http://ddcutil.com/'
  arch=('x86_64')
--license=('GPL-2.0-or-later')
+ license=('GPL-2.0-or-later')
 -depends=('gcc-libs' 'glibc' 'glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libx11' 'libxext' 'libxrandr' 'systemd-libs')
 -makedepends=('git' 'systemd')
-+license=('GPL2')
-+depends=('glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libx11' 'libxext' 'libxrandr')
++depends=('gcc-libs' 'glibc' 'glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libx11' 'libxext' 'libxrandr' 'libudev')
 +makedepends=('git' 'udev')
  source=(git+https://github.com/rockowitz/ddcutil.git#tag=v$pkgver)
--sha512sums=('9b610790a8fba7273c1f9870b6f494de5b3b45be9b189667df5d20e3224119db1177f844af6a108ee2b17dbc752861500ddfdd7ed445e5296286771a36adaa07')
-+sha512sums=('1679daddb4dd1f4a4acc7d8c3297e9fcb305fec4b0f5b87921d880074ccb5a35ebd7a3ea7c4e614d3c493b625711c02aa499f991a1924003a792e703169dc8c8')
+ sha512sums=('9b610790a8fba7273c1f9870b6f494de5b3b45be9b189667df5d20e3224119db1177f844af6a108ee2b17dbc752861500ddfdd7ed445e5296286771a36adaa07')
  
- prepare() {
-   cd ddcutil
--  git revert -n 642ddd5785e034eeae51db00a1d1402412471f43 316fcb977070f6161fd5b2779f7f2c8f6dca8593
--  autoreconf -fiv
-+  NOCONFIGURE=1 ./autogen.sh
- }
- 
- build() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,5 @@
--gcc-libs
- git
- glib2
--glibc
+@@ -5,9 +5,9 @@
  i2c-tools
  jansson
  libdrm
-@@ -9,5 +7,4 @@
++libudev
+ libusb
  libx11
  libxext
  libxrandr

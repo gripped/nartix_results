@@ -250,6 +250,7 @@ breeze-icons
 breeze-plymouth
 breeze
 breeze5
+breeze-cursors
 breezy
 bridge-utils
 broadcom-wl-dkms
@@ -386,6 +387,7 @@ cppunit
 cpputest
 cppzmq
 criterion
+criu
 cryptoplusplus
 cscope
 ctags
@@ -448,6 +450,8 @@ discover
 distcc
 distro-info-data
 distro-info
+django
+python-django
 djvulibre
 dkms
 dleyna
@@ -614,6 +618,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
 fcitx5-qt
+fd
 featherpad
 feh
 festival
@@ -623,6 +628,8 @@ ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
+fftw
+fftw-openmpi
 figlet
 file-roller
 filelight
@@ -837,7 +844,6 @@ go-licenses
 go-md2man
 go-tools
 go-yq
-go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -889,6 +895,57 @@ gspell
 gspell-docs
 gssdp
 gssdp-docs
+gst-plugins-rs
+gst-webrtc-signalling-server
+gst-plugin-aws
+gst-plugin-cdg
+gst-plugin-claxon
+gst-plugin-dav1d
+gst-plugin-elevenlabs
+gst-plugin-fallbackswitch
+gst-plugin-ffv1
+gst-plugin-fmp4
+gst-plugin-gif
+gst-plugin-gopbuffer
+gst-plugin-gtk4
+gst-plugin-hlsmultivariantsink
+gst-plugin-hlssink3
+gst-plugin-hsv
+gst-plugin-json
+gst-plugin-lewton
+gst-plugin-livesync
+gst-plugin-mp4
+gst-plugin-mpegtslive
+gst-plugin-originalbuffer
+gst-plugin-quinn
+gst-plugin-raptorq
+gst-plugin-rav1e
+gst-plugin-regex
+gst-plugin-reqwest
+gst-plugin-rsaudiofx
+gst-plugin-rsclosedcaption
+gst-plugin-rsfile
+gst-plugin-rsflv
+gst-plugin-rsinter
+gst-plugin-rsonvif
+gst-plugin-rspng
+gst-plugin-rsrtp
+gst-plugin-rsrtsp
+gst-plugin-rstracers
+gst-plugin-rsvideofx
+gst-plugin-rswebp
+gst-plugin-rswebrtc
+gst-plugin-skia
+gst-plugin-sodium
+gst-plugin-speechmatics
+gst-plugin-spotify
+gst-plugin-streamgrouper
+gst-plugin-textahead
+gst-plugin-textwrap
+gst-plugin-threadshare
+gst-plugin-togglerecord
+gst-plugin-uriplaylistbin
+gst-plugin-webrtchttp
 gst-python
 gtest
 gthumb
@@ -997,6 +1054,7 @@ mythes-es
 hunspell-fr
 hunspell-it
 hunspell-nl
+hunspell-pl
 hunspell-ru
 hunspell
 hwinfo
@@ -1445,7 +1503,6 @@ kquickcharts
 kquickcharts5
 kquickimageeditor
 krdc
-krdp
 krecorder
 krename
 kreversi
@@ -1468,6 +1525,7 @@ kshisen
 ksirk
 ksmtp
 ksnakeduel
+ksnip
 kspaceduel
 ksquares
 ksshaskpass
@@ -1558,6 +1616,7 @@ lib2geom
 lib3mf
 
 python-
+libabw
 libaccounts-glib
 libaccounts-qt
 libadwaita
@@ -1734,6 +1793,8 @@ libixion
 libjcat
 libjpeg-turbo
 libjuice
+libjxl
+libjxl-doc
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1966,6 +2027,7 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
+libultrahdr
 libunibreak
 libuninameslist
 libupnp
@@ -2068,9 +2130,6 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
 lighttpd
-lilv
-lilv-docs
-python-lilv
 lilypond
 limine
 linux-atm
@@ -2568,6 +2627,7 @@ pdal
 pdfarranger
 pdfgrep
 pdfjs
+pdfmixtool
 pdnsd
 pegtl
 pelican
@@ -2940,6 +3000,7 @@ plasma-framework
 plasma-framework5
 plasma-integration
 plasma5-integration
+plasma-keyboard
 plasma-meta
 plasma-nm
 plasma-pa
@@ -3147,6 +3208,7 @@ python-argparse-manpage
 python-arpeggio
 python-arpy
 python-arrow
+python-asgiref
 python-aspectlib
 python-assertpy
 python-asteval
@@ -3314,6 +3376,7 @@ python-crispy-bootstrap4
 python-crispy-bootstrap5
 python-cron-converter
 python-cross-web
+python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
@@ -3447,6 +3510,7 @@ python-feedparser
 python-fido2
 python-fields
 python-filebytes
+python-filelock
 python-filetype
 python-findpython
 python-fiona
@@ -3985,6 +4049,7 @@ python-pycuda
 python-pycurl
 python-pydantic-core
 python-pydantic-extra-types
+python-pydantic-settings
 python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
@@ -4506,6 +4571,7 @@ python-xapp
 python-xarray
 python-xattr
 python-xkbcommon
+python-xlib
 python-xlrd
 python-xlsxwriter
 python-xlwt
@@ -4711,6 +4777,7 @@ riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
 riscv64-linux-gnu-linux-api-headers
+rkcommon
 rlwrap
 rng-tools
 robin-map
@@ -4761,6 +4828,7 @@ rubberband-vamp
 rubocop
 ruby-abbrev
 ruby-activesupport
+ruby-addressable
 ruby-ae
 ruby-ansi
 ruby-ast
@@ -5159,6 +5227,7 @@ sdl2_image
 sdl2_mixer
 sdl2_net
 sdl2_ttf
+sdl3
 sdl3_ttf
 sdl_image
 sdl_mixer
@@ -5250,6 +5319,7 @@ spice-gtk
 spice-protocol
 spice
 spirv-headers
+spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
@@ -5564,7 +5634,6 @@ twine
 twolame
 txt2man
 typescript
-uasm
 uchardet
 udiskie
 udpxy
@@ -5875,6 +5944,7 @@ zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
+zeromq
 zerotier-one
 zfp
 zig

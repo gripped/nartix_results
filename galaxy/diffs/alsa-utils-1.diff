@@ -1,15 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,14 +1,14 @@
  
  pkgname=alsa-utils
 -pkgver=1.2.15.2
--pkgrel=1
 +pkgver=1.2.13
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Advanced Linux Sound Architecture - Utilities"
  arch=(x86_64)
  url="https://www.alsa-project.org"
+ license=(GPL-2.0-or-later)
+ depends=(
++  gcc-libs
+   glibc
+-  libgcc
+   pciutils
+   psmisc
+ )
 @@ -19,7 +19,7 @@
    libsamplerate
    ncurses
@@ -59,6 +66,19 @@
 
 --- arch_depends
 +++ artix_depends
+@@ -1,11 +1,11 @@
+ alsa-lib
+ docbook-xsl
+ fftw
++gcc-libs
+ glibc
+ libasound.so
+ libatopology.so
+ libformw.so
+-libgcc
+ libmenuw.so
+ libncursesw.so
+ libpanelw.so
 @@ -15,5 +15,5 @@
  pciutils
  psmisc

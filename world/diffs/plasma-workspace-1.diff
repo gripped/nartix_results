@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -98,7 +98,7 @@
+@@ -96,7 +96,7 @@
           qt6-virtualkeyboard
           sh
           solid
@@ -9,7 +9,7 @@
           wayland
           xcb-util
           xcb-util-cursor
-@@ -137,18 +137,19 @@
+@@ -134,18 +134,19 @@
              'discover: manage applications installation from the launcher'
              'kdepim-addons: displaying PIM events in the calendar'
              'kwayland-integration: Wayland integration for Qt5 applications'
@@ -37,7 +37,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -63,6 +63,7 @@
+@@ -62,6 +62,7 @@
  kxmlgui
  layer-shell-qt
  libcanberra
@@ -45,15 +45,15 @@
  libice
  libkexiv2
  libksysguard
-@@ -86,6 +87,7 @@
+@@ -84,6 +85,7 @@
  plasma-integration
  plasma-wayland-protocols
  plasma-workspace
 +plasma-x11-session
- plasma5support
  prison
  qcoro
-@@ -99,7 +101,6 @@
+ qt6-5compat
+@@ -96,7 +98,6 @@
  qt6-virtualkeyboard
  sh
  solid

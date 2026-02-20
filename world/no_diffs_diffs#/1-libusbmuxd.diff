@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=libusbmuxd
+ pkgver=2.1.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Client library to multiplex connections from and to iOS devices'
+ arch=(x86_64)
+ url='https://libimobiledevice.org/'
+ license=('GPL-2.0-or-later AND LGPL-2.1-or-later')
+ depends=(
++  gcc-libs
+   glibc
+-  libgcc
+   libimobiledevice-glue
+   libplist
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,5 @@
++gcc-libs
+ git
+ glibc
+-libgcc
+ libimobiledevice-glue
+ libplist

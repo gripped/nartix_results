@@ -1,14 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,6 @@
-   lz4
-   openssl
-   pam
--  systemd-libs
+@@ -21,7 +21,6 @@
+   lz4 liblz4.so
+   openssl libcrypto.so libssl.so
+   pam libpam.so
+-  systemd-libs libsystemd.so
    util-linux-libs
-   zlib
-   zstd
-@@ -30,7 +29,6 @@
+   zlib libz.so
+   zstd libzstd.so
+@@ -31,7 +30,6 @@
    llvm
    perl
    python
@@ -16,7 +16,7 @@
    tcl
    util-linux
  )
-@@ -48,6 +46,7 @@
+@@ -49,6 +47,7 @@
  
  build() {
    local configure_options=(
@@ -24,7 +24,7 @@
      --prefix=/opt/pgsql-${pkgver%%.*}
      --disable-rpath
      --disable-nls
-@@ -65,7 +64,6 @@
+@@ -66,7 +65,6 @@
      --with-python
      --without-readline
      --with-system-tzdata=/usr/share/zoneinfo
@@ -38,7 +38,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,8 +13,6 @@
+@@ -14,7 +14,6 @@
+ libssl.so
+ libstdc++
+ libstdc++.so
+-libsystemd.so
+ libxml2
+ libxml2.so
+ libz.so
+@@ -27,8 +26,6 @@
  perl
  postgresql-libs>
  python

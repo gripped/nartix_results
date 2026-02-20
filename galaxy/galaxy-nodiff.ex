@@ -1,5 +1,4 @@
 0ad-data
-0ad
 abduco
 ack
 acpilight
@@ -75,7 +74,6 @@ cjs
 claws-mail
 compface
 copyq
-cosmic-app-library
 cosmic-bg
 cosmic-files
 cosmic-greeter
@@ -111,7 +109,6 @@ ext4magic
 fastfetch
 fceux
 fcitx5-bamboo
-fd
 firefox-i18n
 fluxbox
 font-manager
@@ -127,9 +124,6 @@ gammastep
 gaphor
 garcon
 gemini-cli
-ghostty
-ghostty-shell-integration
-ghostty-terminfo
 gigolo
 girara
 gitoxide
@@ -237,7 +231,6 @@ linux-rt-docs
 linux-zen
 linux-zen-headers
 linux-zen-docs
-lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -256,6 +249,7 @@ lxqt-about
 lxqt-admin
 lxqt-archiver
 lxqt-build-tools
+lxqt-config
 lxqt-globalkeys
 lxqt-menu-data
 lxqt-notificationd
@@ -500,7 +494,6 @@ rio
 ristretto
 rmpc
 rpi-imager
-rust-script
 sakura
 salt
 screengrab
@@ -525,6 +518,7 @@ swaync
 swww
 sysbench
 t1lib
+tealdeer
 telegram-desktop
 terminus-font
 tesseract-data

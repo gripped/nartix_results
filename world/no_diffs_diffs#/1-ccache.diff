@@ -1,14 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,18 +1,17 @@
  
  pkgname=ccache
 -pkgver=4.12.3
+-pkgrel=2
 +pkgver=4.12.2
- pkgrel=1
++pkgrel=1
  pkgdesc='Compiler cache that speeds up recompilation by caching previous compilations'
  url='https://ccache.dev/'
-@@ -25,10 +25,10 @@
+ arch=('x86_64')
+ license=('GPL-3.0-or-later')
+ depends=(
+   'fmt'
++  'gcc-libs'
+   'glibc'
+   'hiredis'
+   'libblake3'
+-  'libgcc'
+-  'libstdc++'
+   'libxxhash.so'
+   'libzstd.so'
+   'xxhash'
+@@ -26,10 +25,10 @@
  )
  checkdepends=('doctest')
  source=(https://github.com/ccache/ccache/releases/download/v${pkgver}/ccache-${pkgver}.tar.xz{,.minisig})
@@ -23,3 +37,22 @@
  validpgpkeys=('5A939A71A46792CF57866A51996DDA075594ADB8') # Joel Rosdahl <joel@rosdahl.net>
  
  build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,10 @@
+ asciidoctor
+ cmake
+ fmt
++gcc-libs
+ glibc
+ hiredis
+ libblake3
+-libgcc
+-libstdc++
+ libxxhash.so
+ libzstd.so
+ perl

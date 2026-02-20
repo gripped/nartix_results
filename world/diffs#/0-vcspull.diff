@@ -3,18 +3,19 @@
 @@ -1,6 +1,6 @@
  
  pkgname='vcspull'
--pkgver=1.52.1
+-pkgver=1.56.1
 +pkgver=1.34.0
  pkgrel=1
  pkgdesc='Synchronize projects via yaml/json manifest. Built using `libvcs`'
  arch=('any')
-@@ -21,22 +21,18 @@
+@@ -21,23 +21,18 @@
  )
  checkdepends=(
    git
 -  python-docutils
    python-pytest
 -  python-pytest-asyncio
+-  python-pytest-mock
    python-pytest-rerunfailures
 -  python-sphinx
 -  python-syrupy
@@ -23,8 +24,8 @@
    'bash-completion: for command line completion in bash'
  )
  source=("https://github.com/vcs-python/vcspull/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
--sha512sums=('f388bc58fec2b680f5efb8d3ced1efc1aee4379e7d8e47bcc205b1195261d52bcc1f7559c9ff97c18bf1865b1498bbd525fa740cd978d41bbd487845ca5f52ad')
--b2sums=('1a8782f29b08047ee2e9de96282aecf962acd18ac9bb6b764a1383b9eac2f84ab5b7b40cd87841a6793fff5f27a945cc762588061baa05553de1310a1cd2279e')
+-sha512sums=('ee223ea4b91363151a34901575637fc45184b0c71aa96aadcb6051400fd979b1aac53b64ac66067b789f0e6f44d1097b6e09a5f349ba9ddb93c2cac9e4ac00de')
+-b2sums=('055763503021df3e09ba11fe773cac81b5b615352b7f2045886cee0bb1128b099edd430e90223aa5d4c51ed94b18ec57bf2f1dbc856b54f9152bdd2deeb90d87')
 +sha512sums=('7b2a94a769ba33fc5b02b69611a41962498f6db247a9c85847855042c9191b8aadb5eec5ee051ef5519c2230b859fbfd562d3b312395a7795b2f841bc0fbfd05')
 +b2sums=('fc438d8d27b5adbb0bcf26a8f96391449235649723211ea2a47e8bbb467e8046a354a39e44a7599c58cdd751da7debfc63638e453262bbd53f1257f2bc8e18fa')
  
@@ -34,7 +35,7 @@
  
    local _site_packages="$(python -c "import site; print(site.getsitepackages()[0])")"
  
-@@ -47,13 +43,13 @@
+@@ -48,13 +43,13 @@
  }
  
  check() {

@@ -9,7 +9,6 @@ bash
 binutils
 btrfs-progs
 cronie
-db5.3
 dbus
 dbus-docs
 dhcpcd
@@ -72,3 +71,5 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
+zlib
+minizip

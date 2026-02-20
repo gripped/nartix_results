@@ -1,7 +1,9 @@
+0ad
 alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
+cosmic-app-library
 cosmic-applets
 cosmic-comp
 cosmic-osd
@@ -17,8 +19,12 @@ emptty
 ephoto
 etherwall
 evisum
+fd
 featherpad
 firefox
+ghostty
+ghostty-shell-integration
+ghostty-terminfo
 gpicview
 greetd-regreet
 gtk-engine-murrine
@@ -39,7 +45,7 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
-lxqt-config
+lutris
 ly
 mate-control-center
 mate-screensaver
@@ -67,9 +73,9 @@ qbittorrent-nox
 rage
 read-edid
 reflector
+rust-script
 sdcv
 signal-desktop
-tealdeer
 terminology
 termshark
 tor

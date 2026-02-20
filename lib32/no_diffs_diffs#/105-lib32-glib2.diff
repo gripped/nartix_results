@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   lib32-glib2
- )
- pkgver=2.86.3
--pkgrel=1
-+pkgrel=1.1
- pkgdesc="Low level core library - 32-bit"
- url="https://gitlab.gnome.org/GNOME/glib"
- license=(LGPL-2.1-or-later)
 @@ -81,7 +81,7 @@
    CFLAGS+=" -mstackrealign"
    CXXFLAGS+=" -mstackrealign"
