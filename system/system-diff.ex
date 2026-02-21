@@ -30,7 +30,6 @@ libgccjit
 glibc
 lib32-glibc
 glibc-locales
-gmp
 gpm
 grep
 gssproxy
@@ -71,5 +70,3 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
-zlib
-minizip

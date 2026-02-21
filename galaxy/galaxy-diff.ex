@@ -1,4 +1,3 @@
-0ad
 alsa-utils
 autorandr
 bsd-games
@@ -45,7 +44,6 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
-lutris
 ly
 mate-control-center
 mate-screensaver

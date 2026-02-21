@@ -1,23 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,44 @@
- 
- pkgname=pkgfile
- pkgver=25
--pkgrel=2
-+pkgrel=1
- pkgdesc='A tool to search for files in official repository packages'
- arch=('x86_64')
- url='https://github.com/falconindy/pkgfile/'
- license=('MIT')
- depends=(
+@@ -10,29 +10,36 @@
      'curl'
-+    'gcc-libs'
      'glibc'
      'libarchive'
--    'libgcc'
--    'libstdc++'
 +    'libelogind'
+     'libgcc'
+     'libstdc++'
      'pacman'
      'pcre'
 -    'systemd-libs')
@@ -58,15 +47,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +1,9 @@
- curl
-+gcc-libs
+@@ -2,9 +2,9 @@
  git
  glibc
  libarchive
--libgcc
--libstdc++
 +libelogind
+ libgcc
+ libstdc++
  meson
  pacman
  pcre

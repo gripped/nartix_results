@@ -42,6 +42,7 @@ gettext
 glib2
 glib2-devel
 glib2-docs
+gmp
 gnulib-l10n
 gnupg
 gnutls
@@ -197,4 +198,6 @@ which
 wireless-regdb
 wpa_supplicant
 xz
+zlib
+minizip
 zstd

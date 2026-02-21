@@ -1,6 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -32,7 +32,7 @@
+@@ -1,16 +1,15 @@
+ 
+ pkgname=j4-dmenu-desktop
+ pkgver=3.2
+-pkgrel=7
++pkgrel=6
+ pkgdesc="Find .desktop files and offer you a menu to start an application using dmenu"
+ arch=('x86_64')
+ url="https://github.com/enkore/j4-dmenu-desktop"
+ license=('GPL-3.0-only')
+ depends=(
+     'fmt'
++    'gcc-libs'
+     'glibc'
+-    'libstdc++.so'
+-    'libgcc_s.so'
+     'spdlog'
+ )
+ makedepends=(
+@@ -33,7 +32,7 @@
              'SKIP')
  
  build() {
@@ -13,7 +32,18 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,7 @@
+ catch2
+ cmake
+ fmt
++gcc-libs
+ glibc
+-libgcc_s.so
+-libstdc++.so
+ meson
+ spdlog
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

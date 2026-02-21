@@ -1,4 +1,5 @@
 0ad-data
+0ad
 abduco
 ack
 acpilight
@@ -231,6 +232,7 @@ linux-rt-docs
 linux-zen
 linux-zen-headers
 linux-zen-docs
+lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance

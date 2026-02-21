@@ -683,6 +683,7 @@ freecell-solver
 freeglut
 freeimage
 freeradius
+freetds
 freetype2
 freetype2-demos
 freetype2-docs
@@ -844,6 +845,7 @@ go-licenses
 go-md2man
 go-tools
 go-yq
+go
 gobject-introspection
 gobject-introspection-runtime
 libgirepository
@@ -1622,6 +1624,7 @@ libaccounts-qt
 libadwaita
 libadwaita-demos
 libadwaita-docs
+libaec
 libaemu
 libakonadi5
 libalkimia
@@ -1795,6 +1798,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2582,6 +2586,7 @@ oxygen-icons-svg
 oxygen-sounds
 oxygen
 oxygen5
+oxygen-cursors
 p7zip
 packagekit-qt
 packagekit-qt6
@@ -4505,7 +4510,6 @@ python-ubjson
 python-uc-micro-py
 python-ufolib2
 python-ujson
-python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
@@ -5920,7 +5924,6 @@ yara
 yarn
 yasm
 yaz
-yazi
 yelp-tools
 yelp-xsl
 yelp

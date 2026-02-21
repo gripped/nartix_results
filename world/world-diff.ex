@@ -177,7 +177,6 @@ font-manager
 fprintd
 freerdp
 freerdp2
-freetds
 frugally-deep
 fuzzel
 fwupd-efi
@@ -216,7 +215,6 @@ gnome-software
 gnome-system-monitor
 gnome-user-share
 go-bindata
-go
 godot
 godot-mono
 greetd-tuigreet
@@ -348,7 +346,6 @@ ksystemlog
 kwin-x11
 kwin
 lame
-libaec
 libatasmart
 libayatana-indicator
 libblockdev
@@ -393,7 +390,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -742,6 +738,7 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-ukkonen
 python-wheel
 qastools
 qbittorrent
@@ -1169,12 +1166,14 @@ xorg-server-xvfb
 xorg-server-xnest
 xorg-server-common
 xorg-server-devel
+xorg-server-src
 xorg-xdm
 xorg-xkbcomp
 xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yazi
 yubico-c-client
 yubico-c
 yubikey-personalization
