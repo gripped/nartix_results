@@ -2134,6 +2134,9 @@ lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
 lighttpd
+lilv
+lilv-docs
+python-lilv
 lilypond
 limine
 linux-atm
@@ -2279,6 +2282,10 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -3308,6 +3315,7 @@ python-calmjs.types
 python-calmjs
 python-calver
 python-canonicaljson
+python-capstone6pwndbg
 python-case
 python-cattrs
 python-cbor2
@@ -3860,6 +3868,7 @@ python-netifaces
 python-netifaces2
 python-networkx
 python-nh3
+python-niche-elf
 python-nine
 python-nitrokey
 python-nkdfu
@@ -4398,6 +4407,7 @@ python-sphinxcontrib-doxylink
 python-sphinxcontrib-htmlhelp
 python-sphinxcontrib-jquery
 python-sphinxcontrib-jsmath
+python-sphinxcontrib-mermaid
 python-sphinxcontrib-newsfeed
 python-sphinxcontrib-qthelp
 python-sphinxcontrib-serializinghtml
@@ -4510,6 +4520,7 @@ python-ubjson
 python-uc-micro-py
 python-ufolib2
 python-ujson
+python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
@@ -4769,6 +4780,7 @@ renderdoc
 reptyr
 rest
 restinio
+resvg
 retro-gtk
 rhash
 rhino
@@ -5699,6 +5711,9 @@ viewnior
 vifm
 vigra
 python-vigra
+vim
+gvim
+vim-runtime
 vimiv
 virglrenderer
 virt-manager

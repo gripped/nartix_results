@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=go-ethereum
--pkgver=1.17.0
-+pkgver=1.16.8
- pkgrel=1
- pkgdesc='Official Go implementation of the Ethereum protocol'
- arch=('x86_64')
 @@ -12,9 +12,8 @@
  conflicts=('geth')
  replaces=('geth')
@@ -16,7 +8,7 @@
 -sha256sums=('6a64b7f1af491ef2cbeaf57f2e9d2394e4b237e296b150b13ed8d6f2cdf32cf9'
 -            '806ab43221f0c203e663a78afced694786a5adb033f06fab07d07904384d7645')
 +        )
-+sha256sums=('a4778f0cf013050c191e0a864c49d7018015660137b43d35f1dd7e9748be0e5e')
++sha256sums=('6a64b7f1af491ef2cbeaf57f2e9d2394e4b237e296b150b13ed8d6f2cdf32cf9')
  
  build() {
      cd ${pkgname}

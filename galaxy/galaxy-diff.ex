@@ -2,14 +2,13 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
-cosmic-app-library
 cosmic-applets
 cosmic-comp
+cosmic-initial-setup
 cosmic-osd
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
-cosmic-store
 doctest
 dvtm
 ecrire

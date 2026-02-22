@@ -75,6 +75,7 @@ cjs
 claws-mail
 compface
 copyq
+cosmic-app-library
 cosmic-bg
 cosmic-files
 cosmic-greeter
@@ -86,6 +87,7 @@ cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
+cosmic-store
 cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers

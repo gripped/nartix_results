@@ -424,9 +424,6 @@ light-locker
 lightdm-slick-greeter
 lightdm
 liblightdm-qt5
-lilv
-lilv-docs
-python-lilv
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -498,10 +495,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 mate-applets
 mate-backgrounds
 mate-calc
@@ -738,7 +731,6 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-ukkonen
 python-wheel
 qastools
 qbittorrent
@@ -984,9 +976,6 @@ v4l-utils
 valkey
 vault
 vcspull
-vim
-gvim
-vim-runtime
 vlc
 libvlc
 vlc-cli

@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=cosmic-applets
--pkgver=1.0.7
--pkgrel=1
-+pkgver=1.0.0
-+pkgrel=2
- epoch=1
- pkgdesc='Applets for COSMIC Panel'
- arch=(x86_64)
 @@ -17,7 +17,7 @@
    libpipewire
    libpulse
@@ -19,15 +9,6 @@
    util-linux
  )
  makedepends=(
-@@ -28,7 +28,7 @@
-   mold
- )
- source=(git+https://github.com/pop-os/cosmic-applets.git#tag=epoch-${pkgver})
--b2sums=('bf50639071d0bf5c9e03e5607a391655445d1684e4414cf8e4cb143fe2e9c68e8897923b7f63228fc83eecd589c65b2cd3de28dd4faa560035cbeda408a87b4f')
-+b2sums=('0d4849931c8f15c316f9a3a7daa4d2e71c55ff7b5a5ee6eeeab0a99839a2c051d28fd495490857ac07d4bcaffc2c93cd8efecbc9148fb604a5a3ce8abe3739c6')
- 
- prepare() {
-   cd cosmic-applets
 
 
 ############# Stripped diff below #################

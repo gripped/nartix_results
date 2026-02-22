@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+   libpulse
+   libxkbcommon
+   polkit
+-  systemd-libs
++  libelogind
+ )
+ makedepends=(
+   cargo
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,8 +3,8 @@
+ git
+ git-lfs
+ just
++libelogind
+ libinput
+ libpulse
+ libxkbcommon
+ polkit
+-systemd-libs
