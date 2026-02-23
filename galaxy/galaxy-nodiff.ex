@@ -384,6 +384,7 @@ ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 nicotineplus
 nim
+nlopt
 nushell
 nvm
 nwg-hello

@@ -1798,7 +1798,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2543,7 +2542,6 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
-openexr
 openfec
 openfire
 openh264
@@ -5939,6 +5937,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp

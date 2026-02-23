@@ -17,3 +17,20 @@
  
  build() {
    cmake -B build -S $_pkgfn -G Ninja \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +0,0 @@
+-cmake
+-gcc-libs
+-git
+-glibc
+-hunspell
+-ninja
+-qt6-base
+-qt6-declarative
+-qt6-multimedia
+-qt6-svg

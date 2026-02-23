@@ -390,6 +390,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -615,6 +616,7 @@ open-iscsi
 openbox
 opencollada
 opendht
+openexr
 openrct2
 openresolv
 opensmtpd
@@ -1162,7 +1164,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

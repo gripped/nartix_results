@@ -3,10 +3,9 @@
 @@ -1,23 +1,26 @@
  
  pkgname=xfce4-whiskermenu-plugin
--pkgver=2.10.0
--pkgrel=2
+-pkgver=2.10.1
 +pkgver=2.8.3
-+pkgrel=1
+ pkgrel=1
  pkgdesc='Menu for Xfce4'
  arch=('x86_64')
 -url='https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start'
@@ -18,7 +17,7 @@
 -makedepends=('git' 'meson' 'ninja')
 -optdepends=('mugshot: Update user details')
 -source=("git+https://gitlab.xfce.org/panel-plugins/xfce4-whiskermenu-plugin.git#tag=v${pkgver}")
--sha256sums=('1e870594f5da764ec65ad0df62ce71403f5b0541adcd960fe268b87d8ba4e601')
+-sha256sums=('9eafb5f1caa550abe0190cae3861fa3ceca6380e10527ccae8b730e889515c13')
 +makedepends=('cmake' 'ninja')
 +source=("https://archive.xfce.org/src/panel-plugins/${pkgname}/${pkgver%.*}/${pkgname}-${pkgver}.tar.bz2")
 +sha256sums=('e776c287658f98d0739447279522fe78766088438242cf2365a49c8973fc9cd0')

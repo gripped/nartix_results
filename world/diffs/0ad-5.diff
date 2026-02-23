@@ -1,10 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,42 +1,54 @@
+@@ -1,44 +1,58 @@
  pkgname=0ad
--pkgver=a28.0
--_pkgver=0.28.0
--pkgrel=1
+-pkgver=0.28.0
+-pkgrel=2
 +pkgver=a26
 +_pkgver=0.0.26-alpha
 +pkgrel=12
@@ -12,16 +11,16 @@
  arch=('x86_64')
  url="http://play0ad.com/"
 -license=('GPL-2.0-or-later')
+-depends=("0ad-data=$pkgver" 'binutils' 'boost-libs' 'curl' 'enet' 'libogg' 'libpng' 'libvorbis'
 +license=('GPL2' 'CCPL')
- depends=('0ad-data' 'binutils' 'boost-libs' 'curl' 'enet' 'libogg' 'libpng' 'libvorbis'
--         'libxml2' 'openal' 'sdl2' 'wxwidgets-gtk3' 'zlib' 'libgl' 'glu' 'fmt' 'js128'
-+         'libxml2' 'openal' 'sdl2' 'wxwidgets-gtk3' 'zlib' 'libgl' 'glu' 'fmt'
++depends=('0ad-data' 'binutils' 'boost-libs' 'curl' 'enet' 'libogg' 'libpng' 'libvorbis'
+          'libxml2' 'openal' 'sdl2' 'wxwidgets-gtk3' 'zlib' 'libgl' 'glu' 'fmt'
           'gloox' 'miniupnpc' 'libminiupnpc.so' 'icu' 'nspr' 'libsodium' 'which')
 -makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'git' 'python' 'llvm' 'cbindgen'
 -             'premake')
 +makedepends=('boost' 'cmake' 'mesa' 'zip' 'libsm' 'rust' 'python' 'python-virtualenv' 'git')
  options=('!lto') # breaks spidermonkey linking (https://bugs.gentoo.org/746947)
--source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz")
+-source=("https://releases.wildfiregames.com/$pkgname-$pkgver-unix-build.tar.xz")
 -validpgpkeys=('A035C8C19219BA821ECEA86B64E628F8D684696D')  # Pablo Galindo Salgado <pablogsal@gmail.com>
 -sha512sums=('6b5d7893d27d5fa71ce4cad1b424a7d4b36e8bc438c590cbd86d9872148d5051cd3215f8f8f4b817e48d4fe386d8902ecc0dcd612ca779306ef35dfa2898a878')
 +source=("https://releases.wildfiregames.com/$pkgname-$_pkgver-unix-build.tar.xz"
@@ -48,21 +47,20 @@
 +}
  
  build() {
--  cd "$pkgname-$_pkgver"
+-  cd "$pkgname-$pkgver"
 +  cd "$pkgname-$_pkgver/build/workspaces"
  
+-  export CXXFLAGS="${CXXFLAGS/-fexceptions/}"
 +  export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
 +  export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
  
 -  cd libraries
 -  ./build-source-libs.sh \
--    --with-system-premake \
--    --with-system-mozjs
+-    --with-system-premake
 -
 -  cd ../build/workspaces
    ./update-workspaces.sh -j$(nproc) \
 -    --with-system-premake5 \
--    --with-system-mozjs \
 -    --with-lto \
 -    --without-pch \
 -    --bindir=/usr/bin \
@@ -80,6 +78,11 @@
  }
  
  package() {
+-  cd "$pkgname-$pkgver"
++  cd "$pkgname-$_pkgver"
+   install -d "${pkgdir}"/usr/{bin,lib/0ad,share/"${pkgname}"/data}
+   install -Dm755 binaries/system/pyrogenesis "${pkgdir}/usr/bin"
+   install -Dm755 binaries/system/*.so "${pkgdir}/usr/lib/0ad"
 
 
 ############# Stripped diff below #################
@@ -94,15 +97,7 @@
  cmake
  curl
  enet
-@@ -11,7 +10,6 @@
- gloox
- glu
- icu
--js128
- libgl
- libminiupnpc.so
- libogg
-@@ -20,13 +18,12 @@
+@@ -19,13 +18,12 @@
  libsodium
  libvorbis
  libxml2
@@ -120,7 +115,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,20 @@
+@@ -1,17 +1,20 @@
 +prepare() {
 +cd "$pkgname-$_pkgver"
 +patch -Np1 -i "$srcdir"/fix_python_3.11_ftbfs.patch
@@ -130,18 +125,17 @@
 +patch -p1 -i ../d2426312.patch # Fix build with libxml2 2.12
 +}
  build() {
--cd "$pkgname-$_pkgver"
+-cd "$pkgname-$pkgver"
+-export CXXFLAGS="${CXXFLAGS/-fexceptions/}"
 -cd libraries
 -./build-source-libs.sh \
----with-system-premake \
----with-system-mozjs
+---with-system-premake
 -cd ../build/workspaces
 +cd "$pkgname-$_pkgver/build/workspaces"
 +export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
 +export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
  ./update-workspaces.sh -j$(nproc) \
 ---with-system-premake5 \
----with-system-mozjs \
 ---with-lto \
  --without-pch \
  --bindir=/usr/bin \
