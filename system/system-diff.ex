@@ -34,7 +34,6 @@ gpm
 grep
 gssproxy
 gzip
-iproute2
 iputils
 libsasl
 libusb

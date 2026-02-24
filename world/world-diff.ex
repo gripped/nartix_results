@@ -390,7 +390,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -616,7 +615,6 @@ open-iscsi
 openbox
 opencollada
 opendht
-openexr
 openrct2
 openresolv
 opensmtpd
@@ -728,11 +726,13 @@ python-cram
 python-debugpy
 python-hidapi
 python-ndg-httpsclient
+python-poetry
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-sympy
 python-wheel
 qastools
 qbittorrent

@@ -70,7 +70,6 @@ qbittorrent-nox
 rage
 read-edid
 reflector
-rust-script
 sdcv
 signal-desktop
 terminology

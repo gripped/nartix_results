@@ -1798,6 +1798,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2542,6 +2543,7 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
+openexr
 openfec
 openfire
 openh264
@@ -3995,7 +3997,6 @@ python-ply
 python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
-python-poetry
 python-polib
 python-pooch
 python-pook
@@ -4443,7 +4444,6 @@ python-subunit
 python-sure
 python-svglib
 python-sybil
-python-sympy
 python-syrupy
 python-tabulate
 python-tabview

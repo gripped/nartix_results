@@ -166,6 +166,7 @@ lib32-readline
 lib32-rest
 lib32-sdl12-compat
 lib32-sdl2
+lib32-sdl3
 lib32-sndio
 lib32-speex
 lib32-speexdsp
