@@ -80,6 +80,7 @@ cjs
 clamav
 cloud-init
 cmake
+cmus
 colord
 libcolord
 colord-sane
@@ -725,7 +726,10 @@ python-asn1crypto
 python-cram
 python-debugpy
 python-hidapi
+python-mpmath
 python-ndg-httpsclient
+python-optree
+python-playwright
 python-poetry
 python-pymupdf
 python-pyscard

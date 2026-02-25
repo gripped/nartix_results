@@ -343,7 +343,6 @@ cmark-gfm
 cmark
 cmatrix
 cmocka
-cmus
 cni-plugins
 codespell
 coffeescript
@@ -3840,7 +3839,6 @@ python-moto
 python-motor
 python-mpd2
 python-mpi4py
-python-mpmath
 python-msgpack
 python-mss
 python-mujson
@@ -3903,7 +3901,6 @@ python-openid
 python-openpyxl
 python-openstacksdk
 python-opt_einsum
-python-optree
 python-ordered-set
 python-orderedmultidict
 python-orjson
@@ -3989,7 +3986,6 @@ python-pkg_resources
 python-pkgconfig
 python-pkginfo
 python-platformdirs
-python-playwright
 python-plette
 python-pluggy
 python-plumbum

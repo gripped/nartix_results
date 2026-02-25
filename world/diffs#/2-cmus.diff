@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+   glibc
+   libdiscid
+   ncurses
+-  systemd-libs
++  libudev
+ )
+ makedepends=(
+   git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -13,8 +13,8 @@
+ libmpcdec
+ libpulse
+ libsamplerate
++libudev
+ libvorbis
+ ncurses
+ opusfile>
+-systemd-libs
+ wavpack

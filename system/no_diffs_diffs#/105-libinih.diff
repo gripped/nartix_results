@@ -1,6 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,7 +28,7 @@
+@@ -1,14 +1,13 @@
+ 
+ pkgname=libinih
+-pkgver=62
+-pkgrel=2
++pkgver=61
++pkgrel=1
+ pkgdesc='A simple .INI file parser written in C'
+ arch=(x86_64)
+ url=https://github.com/benhoyt/inih
+ license=(BSD-3-Clause)
+ depends=(
+-  libgcc
+-  libstdc++
++  gcc-libs
+   glibc
+ )
+ makedepends=(
+@@ -19,9 +18,9 @@
+   libinih.so
+   libINIReader.so
+ )
+-_tag=26254ee9de7681f8825433415443e7116ff24b98
++_tag=3eda303b34610adc0554bdea08d02a25668c774c
+ source=(git+https://github.com/benhoyt/inih.git#tag=${_tag})
+-b2sums=('c5ce1ee01a318cfc0cb2fd4c5ecbfc3ae950af51f41a61b774891be0150326fa6088ebb868a89176bb5cbe1819d84a5bf15062540525d64d25530b8c10fafd12')
++b2sums=('0805f00009782f09e17e083a8c36e4a79237686b618e189fcc3cef21fe4fab04e7015e624dff5d8bc61080cdb3548a75213006549f8e3a6348158f11be965862')
+ 
+ pkgver() {
+   cd inih
+@@ -29,7 +28,7 @@
  }
  
  build() {
@@ -13,7 +43,15 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
++gcc-libs
+ git
+ glibc
+-libgcc
+-libstdc++
+ meson
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

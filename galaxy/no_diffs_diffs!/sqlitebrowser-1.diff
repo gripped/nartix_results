@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -9,7 +9,7 @@
- depends=('glibc' 'gcc-libs' 'qt5-base' 'qt5-svg' 'hicolor-icon-theme' 'sqlcipher'
+ depends=('glibc' 'libgcc' 'libstdc++' 'qt5-base' 'qt5-svg' 'hicolor-icon-theme' 'sqlcipher'
           'qcustomplot' 'qhexedit2' 'qscintilla-qt5' 'libqcustomplot.so' 'libqhexedit.so')
  makedepends=('git' 'cmake' 'ninja' 'qt5-tools')
 -source=("git+https://github.com/sqlitebrowser/sqlitebrowser#tag=v${pkgver}?signed")

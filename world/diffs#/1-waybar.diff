@@ -1,6 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=waybar
+ pkgver=0.15.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Highly customizable Wayland bar for Sway and Wlroots based compositors'
+ arch=('x86_64')
+ url="https://github.com/Alexays/Waybar/"
+@@ -10,6 +10,7 @@
+     'atkmm'
+     'cairomm'
+     'fmt'
++    'gcc-libs'
+     'glib2'
+     'glibc'
+     'glibmm'
+@@ -21,20 +22,18 @@
+     'jsoncpp'
+     'libdbusmenu-gtk3'
+     'libevdev'
+-    'libgcc'
+     'libinput'
+     'libmpdclient'
+     'libnl'
+     'libpipewire'
+     'libpulse'
+     'libsigc++'
+-    'libstdc++'
+     'libwireplumber'
+     'libxkbcommon'
      'playerctl'
      'sndio'
      'spdlog'
@@ -9,7 +39,7 @@
      'upower'
      'wayland'
  )
-@@ -61,6 +61,7 @@
+@@ -62,6 +61,7 @@
            --buildtype=plain \
            --auto-features=enabled \
            --wrap-mode=nodownload \
@@ -23,15 +53,33 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -17,6 +17,7 @@
+@@ -3,6 +3,7 @@
+ catch2
+ cmake
+ fmt
++gcc-libs
+ glib2
+ glib2-devel
+ glibc
+@@ -16,8 +17,8 @@
  libatkmm-1.6.so
  libcairomm-1.0.so
  libdbusmenu-gtk3
 +libelogind
  libevdev
+-libgcc
  libgtk-3.so
  libinput
-@@ -39,7 +40,6 @@
+ libjack.so
+@@ -30,7 +31,6 @@
+ libsigc++
+ libsndio.so
+ libspdlog.so
+-libstdc++
+ libudev.so
+ libupower-glib.so
+ libwireplumber
+@@ -40,7 +40,6 @@
  scdoc
  sndio
  spdlog

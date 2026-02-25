@@ -1,15 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,15 +2,14 @@
  _name=PyMuPDF
  pkgname=python-pymupdf
  pkgver=1.27.1
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Python bindings for MuPDF's rendering library"
  arch=(x86_64)
  url="https://github.com/pymupdf/PyMuPDF"
-@@ -22,7 +22,7 @@
+ license=(AGPL-3.0-or-later)
+ depends=(
++  gcc-libs
+   glibc
+-  libgcc
+-  libstdc++
+   libmupdf
+   python
+   python-mupdf
+@@ -23,7 +22,7 @@
    python-setuptools
    python-wheel
    swig
@@ -24,7 +33,16 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -10,4 +10,4 @@
+@@ -1,7 +1,6 @@
++gcc-libs
+ glibc
+-libgcc
+ libmupdf
+-libstdc++
+ python
+ python-build
+ python-distro
+@@ -11,4 +10,4 @@
  python-setuptools
  python-wheel
  swig

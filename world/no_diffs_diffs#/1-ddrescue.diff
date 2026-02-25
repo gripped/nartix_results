@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=ddrescue
+ pkgver=1.30
+-pkgrel=2
++pkgrel=1
+ pkgdesc="GNU data recovery tool"
+ arch=(x86_64)
+ url="https://www.gnu.org/software/ddrescue/ddrescue.html"
+ license=(GPL-2.0-or-later)
+ depends=(
+-  libgcc
+-  libstdc++
++  gcc-libs
+   glibc
+ )
+ source=(https://ftp.gnu.org/gnu/$pkgname/$pkgname-$pkgver.tar.lz{,.sig})
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
++gcc-libs
+ glibc
+-libgcc
+-libstdc++

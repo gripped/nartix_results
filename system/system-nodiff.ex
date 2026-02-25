@@ -118,7 +118,6 @@ libxcrypt-compat
 libxml2
 libxml2-docs
 licenses
-links
 linux-api-headers
 linux-firmware
 linux-firmware-whence

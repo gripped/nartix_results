@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,33 +1,23 @@
+ 
+ pkgname=python-mpmath
+-pkgver=1.4.0
+-pkgrel=1
++pkgver=1.3.0
++pkgrel=5
+ pkgdesc='Python library for arbitrary-precision floating-point arithmetic.'
+ arch=(any)
+ url='http://mpmath.org/'
+-license=(BSD-3-Clause)
+-depends=(python
+-         python-gmpy2)
+-makedepends=(git
+-             python-build
+-             python-installer
+-             python-setuptools
+-             python-setuptools-scm
+-             python-wheel)
+-checkdepends=(python-hypothesis
+-              python-pexpect
+-              python-pytest)
+-source=(git+https://github.com/mpmath/mpmath#tag=$pkgver)
+-sha256sums=('29a6b2f8f5d6e39f846ce0e523b6cef05c1227c42ac6f51c1a26e42746e5fcc4')
++license=(BSD)
++depends=(python-gmpy2)
++makedepends=(python-build python-installer python-setuptools python-wheel)
++source=(https://pypi.python.org/packages/source/m/mpmath/mpmath-$pkgver.tar.gz)
++sha256sums=('7a28eb2a9774d00c7bc92411c19a89209d5da7c4c9a9e227be8330a23a25b91f')
+ 
+ build() {
+-  cd mpmath
++  cd mpmath-$pkgver
+   python -m build --wheel --no-isolation
+ }
+ 
+-
+ package() {
+-  cd mpmath
++  cd mpmath-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ 
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,5 @@
+-git
+-python
+ python-build
+ python-gmpy2
+ python-installer
+ python-setuptools
+-python-setuptools-scm
+ python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd mpmath
++cd mpmath-$pkgver
+ python -m build --wheel --no-isolation
+ }

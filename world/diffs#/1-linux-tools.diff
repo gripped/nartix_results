@@ -1,26 +1,29 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,18 +33,12 @@
+@@ -33,20 +33,13 @@
+ makedepends+=('llvm' 'clang')
  makedepends+=('libnl')
  groups=("$pkgbase")
- source=("git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=v${pkgver//_/-}?signed"
+-source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
 -        'usbipd.service'
 -        'hv_kvp_daemon.service'
 -        'hv_vss_daemon.service'
- )
+-)
++source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign})
  validpgpkeys=(
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
  )
--sha256sums=('05c6e18573ffacca5c3ff0105090a0bb063a2927d280c5ae0372c9667a60f871'
+ sha256sums=('0e474968adfcbee32916fd01a89d8ccfd1168d8d32569e76a5c664c793198ebe'
+-            'SKIP'
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
-+sha256sums=('05c6e18573ffacca5c3ff0105090a0bb063a2927d280c5ae0372c9667a60f871')
++            'SKIP')
  
  prepare() {
-   cd linux
-@@ -200,7 +194,7 @@
+   cd "$_srcname"
+@@ -202,7 +195,7 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
      libdir='/usr/lib' \
@@ -29,14 +32,14 @@
      mandir='/usr/share/man' \
      docdir='/usr/share/doc/cpupower' \
      install install-man
-@@ -218,14 +212,13 @@
+@@ -220,14 +213,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
 -  depends=('glibc' 'glib2' 'sysfsutils' 'systemd-libs')
 +  depends=('glibc' 'glib2' 'sysfsutils' 'libudev')
  
-   pushd linux/tools/usb/usbip
+   pushd "$_srcname"/tools/usb/usbip
    make install DESTDIR="$pkgdir"
    popd
    install -Dm 644 /dev/null "$pkgdir/usr/lib/modules-load.d/$pkgname.conf"
@@ -45,9 +48,9 @@
  }
  
  package_tmon() {
-@@ -250,9 +243,6 @@
+@@ -252,9 +244,6 @@
  
-   cd linux/tools/hv
+   cd "$_srcname"/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib
 -  for _p in hv_kvp_daemon hv_vss_daemon; do
 -    install -Dm644 "$srcdir/$_p.service" "$pkgdir/usr/lib/systemd/system/$_p.service"
