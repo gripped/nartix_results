@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=lutris
+-pkgver=0.5.20
++pkgver=0.5.22
+ pkgrel=1
+ pkgdesc='Open Gaming Platform'
+ arch=(any)
+@@ -77,7 +77,7 @@
+ )
+ source=("git+https://github.com/lutris/lutris.git#tag=v${pkgver}"
+         "git+https://github.com/bartok765/galaxy_blizzard_plugin.git")
+-sha256sums=('bfca8dee63405ca89e949700435eeed408d4095e5663e2c7dfcda79b2e28fb45'
++sha256sums=('01092d0357841f1ec0b99b25cd83dfa4d01fb43a98899b71ed33c0ee68067934'
+             'SKIP')
+ 
+ prepare() {
 @@ -86,7 +86,7 @@
  }
  

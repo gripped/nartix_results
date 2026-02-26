@@ -1,4 +1,5 @@
 0ad-data
+0ad
 7zip
 a2ps
 aalib
@@ -7,6 +8,7 @@ aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
+abduco
 abseil-cpp
 accerciser
 accessibility-inspector
@@ -43,6 +45,7 @@ libakonadi
 akonadiconsole
 akregator
 alacarte
+alacritty
 alembic
 alligator
 alsa-firmware
@@ -747,7 +750,6 @@ git
 git-zsh-completion
 gitea
 github-cli
-gjs
 gkrellm
 gl2ps
 glad
@@ -1797,7 +1799,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3328,7 +3329,6 @@ python-cfn-lint
 python-cftime
 python-changelog-chug
 python-characteristic
-python-chardet
 python-charset-normalizer
 python-cheetah3
 python-cheetah3-docs
@@ -4287,7 +4287,6 @@ python-requests-oauthlib
 python-requests-toolbelt
 python-requests-unixsocket
 python-requests-wsgi-adapter
-python-requests
 python-requestsexceptions
 python-resolvelib
 python-responses
@@ -5599,6 +5598,7 @@ tnftp
 tokodon
 tomlplusplus
 torbrowser-launcher
+torsocks
 totem-pl-parser
 totem
 towncrier
@@ -5777,9 +5777,6 @@ wine
 winetricks
 wireguard-tools
 wireless_tools
-wireshark
-wireshark-cli
-wireshark-qt
 wl-clip-persist
 wl-clipboard
 woff2

@@ -1,8 +1,6 @@
-0ad
 a52dec
 accountsservice
 aflplusplus
-alacritty
 alsa-utils
 amule
 apache
@@ -198,6 +196,7 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
+gjs
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -391,6 +390,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -723,6 +723,7 @@ pysolfc
 python-anytree
 python-aresponses
 python-asn1crypto
+python-chardet
 python-cram
 python-debugpy
 python-hidapi
@@ -736,6 +737,7 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-requests
 python-sympy
 python-wheel
 qastools
@@ -940,7 +942,6 @@ tinysparql
 tinysparql-docs
 tmux
 tor
-torsocks
 tracker3-miners
 tracker3
 tracker3-docs
@@ -1086,6 +1087,9 @@ wildmidi
 wireplumber
 libwireplumber
 wireplumber-docs
+wireshark
+wireshark-cli
+wireshark-qt
 wlroots
 wlroots0.15
 wlroots0.16

@@ -4,7 +4,7 @@
  
  pkgbase=wireshark
 -pkgname=(wireshark-cli wireshark-qt)
--pkgver=4.6.3
+-pkgver=4.6.4
 +pkgname=('wireshark-cli' 'wireshark-qt')
 +pkgver=4.4.0
  pkgrel=1
@@ -20,7 +20,6 @@
 -  cmake
 -  desktop-file-utils
 -  doxygen
--  gcc-libs
 -  git
 -  glib2
 -  glibc
@@ -28,14 +27,15 @@
 -  hicolor-icon-theme
 -  krb5
 -  libcap
+-  libgcc
 -  libgcrypt
 -  libmaxminddb
 -  libnghttp2
 -  libnghttp3
 -  libnl
--  libnl
 -  libpcap
 -  libssh
+-  libstdc++
 -  libxml2
 -  libxslt
 -  lua
@@ -76,12 +76,12 @@
 -  "git+https://gitlab.com/wireshark/wireshark.git#tag=v${pkgver}"
 -  wireshark.sysusers
 -)
--sha512sums=('777f38e84cccff629a4d54ac8a9e85bb676b0b6b51c29c9217bd23847012917d4a7cd6fc1d16ba95fc1dde801cdcd10bad52f62cc4abd7e7a8c8b4ffa32bd3e0'
+-sha512sums=('5f1f2effdb9bd2f2f4d8d5036366e7cda5b59c591192cd7362daa1cfbad0c3b7afcd9233063cc804913bdae2999c2eca7b86b40053de23660f6d92afb2950f07'
 +source=(https://www.wireshark.org/download/src/${pkgbase}-${pkgver}.tar.xz
 +        wireshark.sysusers)
 +sha512sums=('a00275ffcc7c5bdf546e3e1c95a2fa77b86232d008f77b1b2f3de8e63f1862321d7a439cba2d136be4407131e07e20071d972a4efb7db2bc55388a347f47ce9e'
              '3956c1226e64f0ce4df463f80b55b15eed06ecd9b8703b3e8309d4236a6e1ca84e43007336f3987bc862d8a5e7cfcaaf6653125d2a34999a0f1357c52e7c4990')
--b2sums=('06360cd4307169e57852e75f533aa703aab495f154428749fb149ce6b59b12b5d824d51d22a273c8c40d4f297411d0d45d3f85d2d2c40511c5f78d481563eea8'
+-b2sums=('2532c052b9f97e939ac5d7384b50fe5a4375709c2907bdca80cffdf73da46a76388f56de60a5e13102a1582eb0d09c68596b76b83a2586ea2e3e6c311fad9655'
 +b2sums=('679b774e780201d1d188f5ce2ec1eb21d98250d2dd45b37b741a3cd5d6dc59d983e473a3f87e3ae1b8eef0b0f9b0c02227eecee644697ec19b6c3b2a21a5ad31'
          '3cebcc993f51eaf0e09673c77e0436598593ef5eff306d880415ccc8eecb32fee93c9a6986f1a7bb0835ab7f9732369d7c5a07e6c053d6293e73a1ea84c58a5c')
  
@@ -115,7 +115,6 @@
 -    bcg729
 -    brotli
 -    c-ares
--    gcc-libs
 -    glib2
 -    glibc
 -    gnutls
@@ -124,6 +123,7 @@
 -    libcap
 -    libcap.so
 -    libcares.so
+-    libgcc
 -    libgcrypt
 -    libk5crypto.so
 -    libkrb5.so
@@ -163,20 +163,21 @@
    DESTDIR="${pkgdir}" ninja -C build install
    DESTDIR="${pkgdir}" cmake --install build --component Development
  
-@@ -153,40 +67,21 @@
+@@ -153,41 +67,21 @@
  
  package_wireshark-qt() {
    pkgdesc+=' - Qt GUI'
 -  depends=(
 -    desktop-file-utils
--    gcc-libs
 -    glib2
 -    glibc
 -    hicolor-icon-theme
+-    libgcc
 -    libgcrypt
 -    libnl
 -    libpcap
 -    libpcap.so
+-    libstdc++
 -    libwireshark.so
 -    libwiretap.so
 -    libwsutil.so
@@ -219,15 +220,22 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,7 +6,6 @@
+@@ -5,7 +5,7 @@
+ cmake
  desktop-file-utils
  doxygen
- gcc-libs
 -git
++gcc-libs
  glib2
  glibc
  gnutls
-@@ -21,7 +20,6 @@
+@@ -15,33 +15,28 @@
+ libcap
+ libcap.so
+ libcares.so
+-libgcc
+ libgcrypt
+ libk5crypto.so
  libkrb5.so
  libmaxminddb
  libnghttp2
@@ -235,7 +243,10 @@
  libnl
  libpcap
  libpcap.so
-@@ -31,16 +29,14 @@
+ libssh
+-libstdc++
+ libwireshark.so
+ libwiretap.so
  libwsutil.so
  libxml2
  libxslt
@@ -253,7 +264,7 @@
  qt6-multimedia
  qt6-svg
  qt6-tools
-@@ -49,9 +45,7 @@
+@@ -50,9 +45,7 @@
  snappy
  spandsp
  speexdsp

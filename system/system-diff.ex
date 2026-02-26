@@ -37,7 +37,6 @@ gzip
 iputils
 libsasl
 libusb
-links
 linux
 linux-headers
 linux-docs
