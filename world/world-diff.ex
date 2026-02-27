@@ -196,7 +196,6 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
-gjs
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -725,8 +724,10 @@ python-aresponses
 python-asn1crypto
 python-chardet
 python-cram
+python-cython-test-exception-raiser
 python-debugpy
 python-hidapi
+python-keystoneauth1
 python-mpmath
 python-ndg-httpsclient
 python-optree
@@ -858,7 +859,6 @@ rocalution
 rocfft
 rocrand
 rocsolver
-rocsparse
 rrdtool
 rspamd
 rsync
@@ -1158,7 +1158,7 @@ xfce4-xkb-plugin
 xfconf
 xfdesktop
 xfwm4
-xl2tpd
+xkeyboard-config
 xorg-server
 xorg-server-xephyr
 xorg-server-xvfb

@@ -43,6 +43,9 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
+linux-zen
+linux-zen-headers
+linux-zen-docs
 ly
 mate-control-center
 mate-screensaver
@@ -74,6 +77,7 @@ sdcv
 signal-desktop
 terminology
 termshark
+thunderbird
 tor
 torsocks
 transmission

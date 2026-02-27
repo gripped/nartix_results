@@ -231,9 +231,6 @@ linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs
-linux-zen
-linux-zen-headers
-linux-zen-docs
 lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -659,7 +656,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
-thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher

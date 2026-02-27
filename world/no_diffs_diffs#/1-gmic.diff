@@ -1,0 +1,112 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,20 +2,14 @@
+ pkgbase=gmic
+ pkgname=(gmic
+          gimp-plugin-gmic)
+-pkgver=3.7.2
++pkgver=3.7.1
+ pkgrel=1
+ arch=(x86_64)
+ url='https://gmic.eu/'
+ license=(CECILL-C)
+-depends=(fftw
+-         glibc
+-         libgcc
+-         libgomp
+-         libstdc++
+-         libx11
+-         zlib)
+ makedepends=(cmake
+              eigen
++             fftw
+              gimp
+              graphicsmagick
+              opencv
+@@ -23,7 +17,7 @@
+              qt6-base
+              qt6-tools)
+ source=(https://gmic.eu/files/source/gmic_$pkgver.tar.gz)
+-sha256sums=('4b7018cc4dc88bbb933564f2c0dc31d3090989c4a7f6eee2a490f98b2861b32f')
++sha256sums=('5bad05dbe3d1fb0bdb33de79618bcf51ebe8605b1342e149e3bd7375d3caf141')
+ 
+ build() {
+   cmake -B build -S gmic-$pkgver \
+@@ -54,14 +48,19 @@
+ 
+ package_gmic() {
+   pkgdesc="GREYC's Magic Image Converter: image processing framework"
+-  depends+=(curl
+-            graphicsmagick
+-            imath
+-            libjpeg-turbo
+-            libpng
+-            libtiff
+-            opencv
+-            openexr)
++  depends=(curl
++           fftw
++           gcc-libs
++           glibc
++           graphicsmagick
++           imath
++           libjpeg-turbo
++           libpng
++           libtiff
++           libx11
++           opencv
++           openexr
++           zlib)
+   optdepends=('qt6-base: for the Qt UI')
+   conflicts=(cimg)
+ 
+@@ -82,12 +81,17 @@
+ 
+ package_gimp-plugin-gmic() {
+   pkgdesc="Gimp plugin for the G'MIC image processing framework"
+-  depends+=(babl
+-            gegl
+-            gimp
+-            glib2
+-            gmic
+-            qt6-base)
++  depends=(babl
++           fftw
++           gcc-libs
++           gegl
++           gimp
++           glib2
++           glibc
++           gmic
++           libx11
++           qt6-base
++           zlib)
+ 
+   DESTDIR="$pkgdir" cmake --install build-gimp
+   install -Dm644 gmic-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,7 @@
+ curl
+ eigen
+ fftw
++gcc-libs
+ gegl
+ gimp
+ glib2
+@@ -10,11 +11,8 @@
+ gmic
+ graphicsmagick
+ imath
+-libgcc
+-libgomp
+ libjpeg-turbo
+ libpng
+-libstdc++
+ libtiff
+ libx11
+ opencv

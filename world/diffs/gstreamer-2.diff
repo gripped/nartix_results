@@ -24,7 +24,7 @@
    taglib
    twolame
    v4l-utils
-@@ -229,6 +226,7 @@
+@@ -225,6 +222,7 @@
  
  build() {
    local meson_options=(
@@ -32,7 +32,7 @@
      -D benchmarks=disabled
      -D examples=disabled
      -D glib_debug=disabled
-@@ -270,7 +268,7 @@
+@@ -266,7 +264,7 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -41,7 +41,7 @@
      -D package-origin="https://www.archlinux.org/"
    )
  
-@@ -279,7 +277,7 @@
+@@ -275,7 +273,7 @@
    export CARGO_PROFILE_RELEASE_DEBUG=2 CARGO_PROFILE_RELEASE_STRIP=false
    export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
  
@@ -50,7 +50,7 @@
    meson compile -C build
  }
  
-@@ -783,7 +781,6 @@
+@@ -779,7 +777,6 @@
      'gst-plugin-gtk: gtk plugin'
      'gst-plugin-hip: hip plugin and library'
      'gst-plugin-msdk: msdk plugin'
@@ -58,7 +58,7 @@
      'gst-plugin-opencv: opencv plugin and library'
      'gst-plugin-qml6: qml6 plugin'
      'gst-plugin-qmlgl: qmlgl plugin'
-@@ -975,21 +972,6 @@
+@@ -971,21 +968,6 @@
    ); _install
  }
  

@@ -750,6 +750,7 @@ git
 git-zsh-completion
 gitea
 github-cli
+gjs
 gkrellm
 gl2ps
 glad
@@ -1023,6 +1024,7 @@ hip-runtime-amd
 hip-runtime
 hip-runtime-amd
 hip-runtime-nvidia
+hipblas-common
 hipblas
 hipify-clang
 hiprand
@@ -3401,7 +3403,6 @@ python-curtsies
 python-cwcwidth
 python-cx-freeze
 python-cycler
-python-cython-test-exception-raiser
 python-cytoolz
 python-d2to1
 python-daemon
@@ -3746,7 +3747,6 @@ python-keras-applications
 python-keras-preprocessing
 python-keyring
 python-keyrings-alt
-python-keystoneauth1
 python-keyutils
 python-kiwisolver
 python-kombu
@@ -4813,6 +4813,7 @@ rocminfo
 rocprim
 rocprofiler-register
 rocs
+rocsparse
 rocthrust
 roctracer
 rofi
@@ -5840,7 +5841,7 @@ xfce4-artwork
 xfce4-datetime-plugin
 xfwm4-themes
 xinetd
-xkeyboard-config
+xl2tpd
 xmldiff
 xmlsec
 xmlstarlet
