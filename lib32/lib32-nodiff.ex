@@ -151,6 +151,7 @@ lib32-mpg123
 lib32-ncurses
 lib32-nettle
 lib32-nspr
+lib32-nss
 lib32-ocl-icd
 lib32-openal
 lib32-openssl
@@ -161,7 +162,6 @@ lib32-pcre2
 lib32-pixman
 lib32-popt
 lib32-portaudio
-lib32-readline
 lib32-rest
 lib32-sdl12-compat
 lib32-sdl2

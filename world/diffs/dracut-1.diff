@@ -1,21 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,14 +1,14 @@
  pkgname=dracut
 -pkgver=110
+-pkgrel=2
 +pkgver=109
- pkgrel=1
++pkgrel=1
  pkgdesc="An event driven initramfs infrastructure"
  arch=('x86_64')
-@@ -8,6 +8,7 @@
+ url="https://github.com/dracut-ng/dracut-ng"
+ license=('GPL-2.0-or-later')
  depends=(
    'bash'
-   'coreutils'
-+  'cpio'
++  'coreutils'
+   'cpio'
+-  'coreutils'
    'filesystem'
    'findutils'
    'gawk'
-@@ -16,6 +17,7 @@
+@@ -17,6 +17,7 @@
    'pkgconf'
    'procps-ng'
    'sed'
@@ -23,7 +26,7 @@
    'util-linux'
  )
  makedepends=(
-@@ -25,37 +27,28 @@
+@@ -26,9 +27,7 @@
    'rust'
  )
  optdepends=(
@@ -33,10 +36,8 @@
    'bluez: bluetooth (keyboard)'
    'btrfs-progs: scan for Btrfs on block devices'
    'busybox: allows use of busybox (on your own risk)'
-   'bzip2: bzip2 compression'
-   'cifs-utils: support CIFS'
+@@ -37,25 +36,19 @@
    'connman: support for connman networking'
--  'cpio: support cpio archive generation'
    'cryptsetup: support for encrypted with LUKS filesystems'
    'dash: allows use of dash (on your own risk)'
 -  'dbus: dbus-daemon dracut module'
@@ -142,15 +143,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,6 +2,7 @@
- bash
- bash-completion
- coreutils
-+cpio
- filesystem
- findutils
- gawk
-@@ -12,4 +13,5 @@
+@@ -13,4 +13,5 @@
  procps-ng
  rust
  sed

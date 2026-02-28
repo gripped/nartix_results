@@ -33,15 +33,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +0,0 @@
--coreutils
--git
--glibc
--less
--python
--sed
+@@ -1,8 +1,9 @@
++bash
+ coreutils
+ git
+ glibc
++grep
+ less
+ python
+ sed
 -sh
--wget
+ wget
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -127,6 +127,9 @@ gammastep
 gaphor
 garcon
 gemini-cli
+ghostty
+ghostty-shell-integration
+ghostty-terminfo
 gigolo
 girara
 gitoxide
@@ -656,6 +659,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
+thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher

@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -34,6 +34,7 @@
+ 
+ build() {
+   cd "$pkgname-${pkgver}"
++  export ZSTD_SYS_USE_PKG_CONFIG=1
+   cargo build --release --no-default-features --features reqwest-rustls-tls --features no-self-update --bin rustup-init
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ build() {
+ cd "$pkgname-${pkgver}"
++export ZSTD_SYS_USE_PKG_CONFIG=1
+ cargo build --release --no-default-features --features reqwest-rustls-tls --features no-self-update --bin rustup-init
+ }
