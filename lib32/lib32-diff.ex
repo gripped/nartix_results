@@ -17,6 +17,7 @@ lib32-vulkan-dzn
 lib32-vulkan-freedreno
 lib32-vulkan-gfxstream
 lib32-vulkan-intel
+lib32-vulkan-kosmickrisp
 lib32-vulkan-nouveau
 lib32-vulkan-panfrost
 lib32-vulkan-powervr

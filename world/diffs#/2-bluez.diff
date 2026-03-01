@@ -1,15 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -2,25 +2,20 @@
+ pkgbase=bluez
+ pkgname=('bluez' 'bluez-utils' 'bluez-libs' 'bluez-cups' 'bluez-deprecated-tools' 'bluez-hid2hci' 'bluez-mesh' 'bluez-obex')
+ pkgver=5.86
+-pkgrel=3
++pkgrel=2
  url="http://www.bluez.org/"
  arch=('x86_64')
  license=('GPL-2.0-only')
 -makedepends=('dbus' 'libical' 'systemd' 'alsa-lib' 'json-c' 'ell' 'python-docutils' 'python-pygments' 'cups')
 +makedepends=('dbus' 'libical' 'alsa-lib' 'json-c' 'ell' 'python-docutils' 'python-pygments' 'cups')
  source=(https://www.kernel.org/pub/linux/bluetooth/${pkgname}-${pkgver}.tar.{xz,sign}
-         bluetooth.modprobe)
+-        bluetooth.modprobe
+-        fix-bt_shell_printf-in-non-interactive-mode.patch::https://github.com/bluez/bluez/commit/34b31e091659601ec95a402c967e4eb565daeb2b.patch?full_index=1)
++        bluetooth.modprobe)
  sha256sums=('99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d'
-@@ -27,6 +27,8 @@
+             'SKIP'
+-            '46c021be659c9a1c4e55afd04df0c059af1f3d98a96338236412e449bf7477b4'
+-            'b43fd0f9006b85daa200b46c2dac62055cb35ff126110178e7b28a2fe0406b82')
++            '46c021be659c9a1c4e55afd04df0c059af1f3d98a96338236412e449bf7477b4')
+ validpgpkeys=('E932D120BC2AEC444E558F0106CA9F5D1DCF2659') # Marcel Holtmann <marcel@holtmann.org>
+ 
+ prepare() {
+   rm -r "${pkgname}-${pkgver}"/ell
+-
+-  cd "${pkgname}-${pkgver}"
+-  patch -Np1 -i "${srcdir}/fix-bt_shell_printf-in-non-interactive-mode.patch"
+ }
+ 
+ build() {
+@@ -32,6 +27,8 @@
            --localstatedir=/var \
            --libexecdir=/usr/lib \
            --with-dbusconfdir=/usr/share \
@@ -18,7 +39,7 @@
            --enable-btpclient \
            --enable-midi \
            --enable-sixaxis \
-@@ -71,17 +73,17 @@
+@@ -76,17 +73,17 @@
  
  package_bluez() {
    pkgdesc="Daemons for the bluetooth protocol stack"
@@ -42,7 +63,7 @@
  
    chmod -v 555 "${pkgdir}"/etc/bluetooth
  
-@@ -95,13 +97,12 @@
+@@ -100,13 +97,12 @@
  
  package_bluez-utils() {
    pkgdesc="Development and debugging utilities for the bluetooth protocol stack"
@@ -57,7 +78,7 @@
    _install fakeinstall/usr/share/man/man1/bluetoothctl*.1
    _install fakeinstall/usr/share/man/man1/{bdaddr,btattach,btmgmt,btmon,isotest,l2ping,rctest}.1
    _install fakeinstall/usr/share/man/man5/org.bluez.{A,B,C,D,G,I,L,M,N,P,T}*.5
-@@ -111,7 +112,7 @@
+@@ -116,7 +112,7 @@
  
  package_bluez-deprecated-tools() {
    pkgdesc="Deprecated tools that are no longer maintained"
@@ -66,7 +87,7 @@
  
    _install fakeinstall/usr/bin/{ciptool,hciattach,hciconfig,hcidump,hcitool,meshctl,rfcomm,sdptool}
    _install fakeinstall/usr/share/man/man1/{ciptool,hciattach,hciconfig,hcidump,hcitool,rfcomm,sdptool}.1
-@@ -138,7 +139,7 @@
+@@ -143,7 +139,7 @@
  
  package_bluez-hid2hci() {
    pkgdesc="Put HID proxying bluetooth HCI's into HCI mode"
@@ -75,7 +96,7 @@
  
    _install fakeinstall/usr/lib/udev/*
    _install fakeinstall/usr/share/man/man1/hid2hci.1
-@@ -149,15 +150,13 @@
+@@ -154,15 +150,13 @@
    depends=('ell' 'json-c' 'readline' 'glibc')
    backup=('etc/bluetooth/mesh-main.conf')
  
@@ -93,7 +114,7 @@
  }
  
  package_bluez-obex() {
-@@ -166,12 +165,12 @@
+@@ -171,12 +165,12 @@
  
    _install fakeinstall/usr/bin/{obexctl,obex-client-tool,obex-server-tool}
    _install fakeinstall/usr/lib/bluetooth/obexd
