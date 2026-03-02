@@ -171,8 +171,6 @@ flatpak
 flatpak-docs
 flite
 fluidsynth
-fmt
-fmt-docs
 font-manager
 fprintd
 freerdp
@@ -390,7 +388,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -491,7 +488,6 @@ lxterminal
 ly
 mako
 maliit-framework
-mandown
 marco
 mariadb
 mariadb-libs

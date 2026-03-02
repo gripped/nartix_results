@@ -9,3 +9,15 @@
  pkgdesc='Library for password quality checking and generating random passwords'
  arch=(x86_64)
  url='https://github.com/libpwquality/libpwquality'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +0,0 @@
+-cracklib
+-git
+-glibc
+-pam
+-python-setuptools

@@ -1,10 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=v4l-utils
+ pkgver=1.32.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Userspace tools and conversion library for Video 4 Linux"
+ arch=('x86_64')
+ url="https://linuxtv.org/"
 @@ -9,7 +9,7 @@
  conflicts=('libv4l')
  backup=(etc/rc_maps.cfg)
  license=('LGPL')
--depends=('hicolor-icon-theme' 'gcc-libs' 'libbpf' 'libjpeg-turbo'  'systemd-libs' 'json-c')
+-depends=('hicolor-icon-theme' 'libgcc' 'libbpf' 'libjpeg-turbo'  'systemd-libs' 'json-c')
 +depends=('hicolor-icon-theme' 'gcc-libs' 'libbpf' 'libjpeg-turbo'  'libudev' 'json-c')
  makedepends=('qt6-base' 'qt6-5compat' 'alsa-lib' 'meson' 'clang' 'doxygen')
  optdepends=('qt6-base: for qv4l2 and qvidcap'
@@ -24,9 +32,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,7 +6,7 @@
+@@ -1,12 +1,12 @@
+ alsa-lib
+ clang
+ doxygen
++gcc-libs
+ hicolor-icon-theme
  json-c
  libbpf
+-libgcc
  libjpeg-turbo
 +libudev
  meson

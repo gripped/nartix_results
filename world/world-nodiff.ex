@@ -391,6 +391,8 @@ criterion
 criu
 cryptoplusplus
 cscope
+csound
+csound-doc
 ctags
 ctpl
 ctwm
@@ -495,6 +497,7 @@ draco
 dragon
 dropbear
 dropbear-scp
+dssi
 dtc
 duktape
 dump_syms
@@ -660,6 +663,8 @@ flickcurl
 fltk
 fltk-docs
 fltk1.3
+fmt
+fmt-docs
 folks
 font-awesome
 woff2-font-awesome
@@ -1810,6 +1815,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1874,6 +1880,7 @@ libmspack
 libmsym
 libmtp
 libmusicbrainz5
+libmusicxml
 libmwaw
 libmwaw-docs
 libmypaint
@@ -2285,6 +2292,7 @@ man-pages-uk
 man-pages-vi
 man2html
 mandoc
+mandown
 mangohud
 manifold
 marble
@@ -5789,6 +5797,7 @@ weechat
 wf-recorder
 wget
 whois
+wiiuse
 wine-staging
 wine
 winetricks
