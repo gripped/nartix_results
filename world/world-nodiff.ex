@@ -1061,11 +1061,6 @@ hub
 hugin
 hunspell-de
 hunspell-el
-hunspell-en
-hunspell-en_us
-hunspell-en_au
-hunspell-en_ca
-hunspell-en_gb
 hunspell-es
 hunspell-es_any
 hyphen-es
@@ -1537,7 +1532,6 @@ kscreen
 kscreenlocker
 kscreenlocker5
 kseexpr
-kservice
 kservice5
 ksh
 kshisen
@@ -1815,7 +1809,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2570,6 +2563,8 @@ openimageio
 openipmi
 openjade
 openjpeg2
+openjph
+openjph-doc
 openlibm
 openmp
 openmpi
@@ -3120,7 +3115,6 @@ psutils
 ptex
 publicsuffix-list
 pugixml
-pulseaudio-qt
 pulsemixer
 puppet
 purpose
@@ -3595,7 +3589,6 @@ python-gast
 python-gast03
 python-gcp-devrel-py-tools
 python-generic
-python-genshi
 python-genty
 python-geographiclib
 python-geoip

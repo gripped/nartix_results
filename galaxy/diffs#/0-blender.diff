@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=blender
+ pkgver=5.0.1
+-pkgrel=6
++pkgrel=5
+ epoch=17
+ pkgdesc="A fully integrated 3D graphics creation suite"
+ arch=('x86_64')
+@@ -129,10 +129,6 @@
+   git revert -n 49414a72f607ccd15f8b71b81edc9aff040d581e
+ 
+   patch -Np1 -i "$srcdir"/blender-hip-update.patch
+-
+-  local _hiprt_api_ver
+-  _hiprt_api_ver=$(awk '/HIPRT_API_VERSION/ {print $3}' /opt/rocm/include/hiprt/hiprtew.h)
+-  sed -i "/HIPRT_API_VERSION/s/2005/$_hiprt_api_ver/" extern/hipew/include/hiprtew.h
+ }
+ 
+ _get_pyver() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,9 +6,6 @@
+ git lfs checkout
+ git revert -n 49414a72f607ccd15f8b71b81edc9aff040d581e
+ patch -Np1 -i "$srcdir"/blender-hip-update.patch
+-local _hiprt_api_ver
+-_hiprt_api_ver=$(awk '/HIPRT_API_VERSION/ {print $3}' /opt/rocm/include/hiprt/hiprtew.h)
+-sed -i "/HIPRT_API_VERSION/s/2005/$_hiprt_api_ver/" extern/hipew/include/hiprtew.h
+ }
+ build() {
+ export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}

@@ -5,7 +5,7 @@
  pkgbase=thunderbird
  pkgname=(thunderbird)
 -pkgver=148.0
--pkgrel=2
+-pkgrel=4
 +pkgver=136.0.1
 +pkgrel=1
  pkgdesc='Standalone mail and news reader from mozilla.org'
@@ -54,15 +54,24 @@
    printf "%s" "$_google_api_key" >google-api-key
    printf "%s" "$_mozilla_api_key" >mozilla-api-key
    cp ../mozconfig.cfg .mozconfig
-@@ -107,8 +103,6 @@
+@@ -107,9 +103,6 @@
    fi
    export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
    export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
+-  export MOZ_NOSPAM=1
 -
 -  export MOZ_APP_REMOTINGNAME=org.mozilla.Thunderbird
  
    CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
    CFLAGS="${CFLAGS/-fexceptions/}"
+@@ -118,6 +111,7 @@
+ 
+   ./mach configure
+   ./mach build
++  ./mach buildsymbols
+ }
+ 
+ package_thunderbird() {
 @@ -246,76 +240,75 @@
      esac
  done
@@ -74,7 +83,7 @@
 -            '470f37b6401c9a031d11b56ed94dacc3f3e36e86c27931c5924ec8c3ad8f9676970d7d29af8f288ac88081a2a785b088365412128076559e1ba4df1546026dc8'
              '6918c0de63deeddc6f53b9ba331390556c12e0d649cf54587dfaabb98b32d6a597b63cf02809c7c58b15501720455a724d527375a8fb9d757ccca57460320734'
              '5cd3ac4c94ef6dcce72fba02bc18b771a2f67906ff795e0e3d71ce7db6d8a41165bd5443908470915bdbdb98dddd9cf3f837c4ba3a36413f55ec570e6efdbb9f'
--            '00ce7676a4da7cdf915cf7a8402b59ef2197f3f52973f929b8672abcd00237624143fb2de7428db2717c6c74afb5b6e533ec551a8c209d815576681096c64550'
+-            'f528f2645c44648a8a42015923e51b8626616e2c66cc3ff870c27223002c802c15616e570d639f9c79b3affa4b7f9e9f2c42c780bbcb42a55bd87edafa8352c5'
 +            '3a6957380243716065e9dff66cbbee8c5aa6b34b5b19bc6193a23407d33f6e4c23bfca55b929bee4739bdd2c47838cc0fd6667b188de066b795ab55e3bf275a6'
              '7e43b1f25827ddae615ad43fc1e11c6ba439d6c2049477dfe60e00188a70c0a76160c59a97cc01d1fd99c476f261c7cecb57628b5be48874be7cf991c22db290'
              'fffeb73e2055408c5598439b0214b3cb3bb4e53dac3090b880a55f64afcbc56ba5d32d1187829a08ef06d592513d158ced1fde2f20e2f01e967b5fbd3b2fafd4'
@@ -250,11 +259,17 @@
  printf "%s" "$_google_api_key" >google-api-key
  printf "%s" "$_mozilla_api_key" >mozilla-api-key
  cp ../mozconfig.cfg .mozconfig
-@@ -29,7 +26,6 @@
+@@ -29,12 +26,11 @@
  fi
  export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
  export MOZBUILD_STATE_PATH="${srcdir}/mozbuild"
+-export MOZ_NOSPAM=1
 -export MOZ_APP_REMOTINGNAME=org.mozilla.Thunderbird
  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
  CFLAGS="${CFLAGS/-fexceptions/}"
  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+ ./mach configure
+ ./mach build
++./mach buildsymbols
+ }

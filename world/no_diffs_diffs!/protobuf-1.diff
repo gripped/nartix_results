@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,17 +2,16 @@
+ pkgbase='protobuf'
+ pkgname=('protobuf' 'python-protobuf' 'ruby-google-protobuf')
+ pkgver=33.1
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Protocol Buffers - Google's data interchange format"
+ arch=('x86_64')
+ url='https://developers.google.com/protocol-buffers/'
+ license=('BSD-3-Clause')
+ depends=(
++  'gcc-libs'
++  'glibc'
++  'zlib'
+   'abseil-cpp'
+-  'glibc'
+-  'libgcc'
+-  'libstdc++'
+-  'zlib'
+ )
+ makedepends=(
+   'bazelisk'
+@@ -168,7 +167,6 @@
+ package_ruby-google-protobuf() {
+   pkgdesc='Ruby bindings for Google Protocol Buffers'
+   depends=(
+-    'libgcc'
+     'ruby'
+     'ruby-bigdecimal'
+     'ruby-rake'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,10 @@
+ abseil-cpp
+ bazelisk
+ cmake
++gcc-libs
+ git
+ glibc
+ gtest
+-libgcc
+-libstdc++
+ protobuf
+ python
+ python-build

@@ -1,5 +1,6 @@
 alsa-utils
 autorandr
+blender
 bsd-games
 cinnamon-desktop
 cosmic-applets

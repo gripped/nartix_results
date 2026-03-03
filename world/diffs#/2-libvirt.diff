@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=(libvirt libvirt-storage-gluster libvirt-storage-iscsi-direct)
  epoch=1
--pkgver=12.0.0
+-pkgver=12.1.0
+-pkgrel=1
 +pkgver=11.10.0
- pkgrel=2
++pkgrel=2
  pkgdesc="API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)"
  arch=('x86_64')
+ url="https://libvirt.org/"
 @@ -17,7 +17,7 @@
    curl
    device-mapper
@@ -38,7 +40,7 @@
  source=(
    "git+https://gitlab.com/libvirt/libvirt.git#tag=v${pkgver}"
  )
--sha256sums=('00d3df8f165b52d5c1b1f36a3b90bf50d309f2317482e56bbec633ec45442001')
+-sha256sums=('77101deea17670ec6f129899887c8d3767bda3ede2f4d41f26ca2792dabc5495')
 +sha256sums=('24e5e20169037352cd9f2a53f0a3b02f585464727731cda2e61f9bd487928631')
  
  prepare() {

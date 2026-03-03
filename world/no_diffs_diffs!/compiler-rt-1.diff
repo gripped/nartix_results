@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=compiler-rt
+ pkgver=21.1.8
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Compiler runtime libraries for clang"
+ arch=('x86_64')
+ url="https://compiler-rt.llvm.org/"
+ license=('Apache-2.0 WITH LLVM-exception')
+-depends=('glibc' 'libgcc' 'libstdc++')
++depends=('gcc-libs')
+ makedepends=('llvm' 'cmake' 'ninja' 'python')
+ makedepends_x86_64=('lib32-gcc-libs')
+ options=('staticlibs')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+ cmake
+-glibc
++gcc-libs
+ lib32-gcc-libs
+-libgcc
+-libstdc++
+ llvm
+ ninja
+ python

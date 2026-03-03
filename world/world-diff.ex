@@ -282,6 +282,11 @@ hipcub
 hipfft
 hipsolver
 hipsparse
+hunspell-en
+hunspell-en_us
+hunspell-en_au
+hunspell-en_ca
+hunspell-en_gb
 hwloc
 hyphen
 hyphen-en
@@ -340,6 +345,7 @@ kitty-shell-integration
 knockd
 knot
 krdp
+kservice
 ksystemlog
 kwin-x11
 kwin
@@ -388,6 +394,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -708,6 +715,7 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
+pulseaudio-qt
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -723,6 +731,7 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-genshi
 python-hidapi
 python-ndg-httpsclient
 python-pymupdf

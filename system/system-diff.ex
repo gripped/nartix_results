@@ -32,6 +32,7 @@ lib32-glibc
 glibc-locales
 gpm
 grep
+groff
 gssproxy
 gzip
 iputils

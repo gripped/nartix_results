@@ -47,7 +47,6 @@ gnulib-l10n
 gnupg
 gnutls
 gpgme
-groff
 grub
 guile
 hdparm
