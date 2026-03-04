@@ -71,6 +71,7 @@ angelfish
 ansible-core
 ansible-creator
 ansible-language-server
+ansible-lint
 ansible-navigator
 ansible-runner
 ansible
@@ -291,7 +292,6 @@ capstone
 python-capstone
 cargo-about
 cargo-c
-cargo-edit
 caribou
 catatonit
 catch2-v2
@@ -1061,6 +1061,11 @@ hub
 hugin
 hunspell-de
 hunspell-el
+hunspell-en
+hunspell-en_us
+hunspell-en_au
+hunspell-en_ca
+hunspell-en_gb
 hunspell-es
 hunspell-es_any
 hyphen-es
@@ -1532,6 +1537,7 @@ kscreen
 kscreenlocker
 kscreenlocker5
 kseexpr
+kservice
 kservice5
 ksh
 kshisen
@@ -1809,6 +1815,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2019,6 +2026,7 @@ libspng
 libsquish
 libsrtp
 libsrtp-docs
+libssc
 libssh
 libssh-docs
 libstatgrab
@@ -3115,6 +3123,7 @@ psutils
 ptex
 publicsuffix-list
 pugixml
+pulseaudio-qt
 pulsemixer
 puppet
 purpose
@@ -3217,7 +3226,6 @@ python-anyjson
 python-anysqlite
 python-apipkg
 python-apispec-webframeworks
-python-apispec
 python-appdirs
 python-apscheduler
 python-apsw
@@ -3273,7 +3281,6 @@ python-backrefs
 python-baize
 python-base58
 python-bcrypt
-python-beaker
 python-beautifulsoup4
 python-behave
 python-beniget
@@ -3361,7 +3368,6 @@ python-click-option-group
 python-click-plugins
 python-click-repl
 python-click
-python-cliff
 python-cligj
 python-clikit
 python-clint
@@ -3433,7 +3439,6 @@ python-deadlib
 $_modules[@]/#/python-standard-
 python-debtcollector
 python-decorator
-python-deepdiff
 python-deepmerge
 python-defusedxml
 python-dep-logic
@@ -3558,7 +3563,6 @@ python-flask-restful
 python-flask-socketio
 python-flask-sqlalchemy
 python-flask
-python-flex
 python-flexcache
 python-flexmock
 python-flexparser
@@ -3627,7 +3631,6 @@ python-h11
 python-h2
 python-h5netcdf
 python-h5py
-python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
@@ -3729,14 +3732,12 @@ python-jschema-to-python
 python-json-logger
 python-json5
 python-jsondiff
-python-jsonlines
 python-jsonmerge
 python-jsonpatch
 python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
-python-jsonschema-path
 python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
@@ -3769,7 +3770,6 @@ python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
 python-ldap
-python-ldap3
 python-legacy-cgi
 python-levenshtein
 python-lexicon
@@ -3868,14 +3868,12 @@ python-mysqlclient
 python-myst-parser
 python-natsort
 python-nbdime
-python-nbval
 python-nbxmpp
 python-ndindex
 python-nest-asyncio
 python-netaddr
 python-netcdf4
 python-nethsm-sdk-py
-python-netifaces
 python-netifaces2
 python-networkx
 python-nh3
@@ -3884,7 +3882,6 @@ python-nine
 python-nitrokey
 python-nkdfu
 python-nltk
-python-nodeenv
 python-noiseprotocol
 python-nose-random
 python-nose-show-skipped
@@ -3919,7 +3916,6 @@ python-ordered-set
 python-orderedmultidict
 python-orjson
 python-os-client-config
-python-os-service-types
 python-osc-lib
 python-oscrypto
 python-oslo-concurrency
@@ -3956,7 +3952,6 @@ python-pastedeploy
 python-pastel
 python-patch-ng
 python-path
-python-pathable
 python-pathspec
 python-pathtools
 python-patiencediff
@@ -4232,7 +4227,6 @@ python-pytest-sugar
 python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
-python-pytest-tornado
 python-pytest-tornasync
 python-pytest-trio
 python-pytest-twisted
@@ -4342,7 +4336,6 @@ python-scripttest
 python-scrypt
 python-scs
 python-seaborn
-python-secretstorage
 python-seedir
 python-semantic-version
 python-semver
@@ -4457,7 +4450,6 @@ python-subunit
 python-sure
 python-svglib
 python-sybil
-python-sympy
 python-syrupy
 python-tabulate
 python-tabview
@@ -4466,7 +4458,6 @@ python-tblib
 python-teamcity-messages
 python-tempita
 python-tempora
-python-tenacity
 python-tensile
 python-termcolor
 python-terminado
@@ -4565,7 +4556,6 @@ python-vobject
 python-volatile
 python-voluptuous
 python-waitress
-python-wand
 python-warlock
 python-watchdog
 python-watchfiles
@@ -4586,7 +4576,6 @@ python-wheezy-template
 python-whoosh
 python-wilderness
 python-wrapt
-python-wsaccel
 python-wsgiproxy2
 python-wsproto
 python-wstools
@@ -5662,6 +5651,7 @@ twine
 twolame
 txt2man
 typescript
+uasm
 uchardet
 udiskie
 udpxy

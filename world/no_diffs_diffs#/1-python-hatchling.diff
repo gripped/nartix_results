@@ -3,8 +3,9 @@
 @@ -1,7 +1,7 @@
  
  pkgname=python-hatchling
- pkgver=1.28.0
--pkgrel=3
+-pkgver=1.29.0
+-pkgrel=1
++pkgver=1.28.0
 +pkgrel=3.1
  pkgdesc="Extensible, standards compliant build backend used by Hatch"
  arch=('any')
@@ -18,6 +19,15 @@
  )
  checkdepends=(
    'libxcrypt-compat'
+@@ -30,7 +32,7 @@
+   'python-uv'
+ )
+ source=("https://github.com/pypa/hatch/archive/hatchling-v$pkgver.tar.gz")
+-sha256sums=('a687fb850d66e15986435b63cad6b041592dc2db6aed405cac0fd9c646835dec')
++sha256sums=('3a52e40675ab341eab0720fe22cbd82b6a0d18a6445e2ce6bb9aebb831ca79cd')
+ 
+ build() {
+   cd hatch-hatchling-v$pkgver
 
 
 ############# Stripped diff below #################

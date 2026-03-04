@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-hacking
+ pkgver=7.0.0
+-pkgrel=5
++pkgrel=4
+ arch=('any')
+ pkgdesc='OpenStack Hacking Guideline Enforcement'
+ url='https://docs.openstack.org/developer/hacking'
+@@ -15,7 +15,6 @@
+ 
+ prepare() {
+   cd hacking
+-  git cherry-pick -n 62e7de42e2f474b1dadfb1918c15182cbd349cda
+   sed -i 's/~=/>=/' requirements.txt
+ }
+ 
+@@ -33,3 +32,4 @@
+   cd hacking
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
++
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ cd hacking
+-git cherry-pick -n 62e7de42e2f474b1dadfb1918c15182cbd349cda
+ sed -i 's/~=/>=/' requirements.txt
+ }
+ build() {
