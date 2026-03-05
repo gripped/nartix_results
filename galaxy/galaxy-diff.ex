@@ -1,5 +1,6 @@
 alsa-utils
 autorandr
+blender
 bsd-games
 cinnamon-desktop
 cosmic-applets
@@ -65,6 +66,7 @@ p8-platform
 perl-cgi-fast
 profanity
 profanity-gtk
+python-cjkwrap
 qbittorrent
 qbittorrent-nox
 rage

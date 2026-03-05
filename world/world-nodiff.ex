@@ -2159,7 +2159,6 @@ python-lilv
 lilypond
 limine
 linux-atm
-liquidctl
 litehtml
 live-media
 lksctp-tools
@@ -2805,7 +2804,6 @@ perl-ipc-run3
 perl-ipc-system-simple
 perl-json-xs
 perl-json
-perl-libintl-perl
 perl-libwww
 perl-lingua-en-inflect
 perl-list-allutils
@@ -3285,7 +3283,6 @@ python-beautifulsoup4
 python-behave
 python-beniget
 python-betamax-matchers
-python-betamax-serializers
 python-betamax
 python-better-exceptions
 python-bidict
@@ -3354,7 +3351,6 @@ python-cheetah3
 python-cheetah3-docs
 python-cheroot
 python-cherrypy
-python-cjkwrap
 python-claripy
 python-cleo
 python-clevercsv
@@ -3367,7 +3363,6 @@ python-click-log
 python-click-option-group
 python-click-plugins
 python-click-repl
-python-click
 python-cligj
 python-clikit
 python-clint
@@ -3386,7 +3381,6 @@ python-colour
 python-comm
 python-commentjson
 python-commonmark
-python-configargparse
 python-configobj
 python-configupdater
 python-confuse
@@ -3434,10 +3428,8 @@ python-dateutil
 python-dbus-deviation
 python-dbus-next
 python-dbusmock
-python-ddt
 python-deadlib
 $_modules[@]/#/python-standard-
-python-debtcollector
 python-decorator
 python-deepmerge
 python-defusedxml
@@ -3532,7 +3524,6 @@ python-fastimport
 python-fastjsonschema
 python-fastnumbers
 python-fastparquet
-python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
@@ -3551,8 +3542,6 @@ python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flake8
-python-flaky
-python-flasgger
 python-flask-caching
 python-flask-compress
 python-flask-cors
@@ -3678,7 +3667,6 @@ python-imagesize
 python-immutabledict
 python-importlib-metadata
 python-importlib_resources
-python-incremental
 python-infinity
 python-inflate64
 python-inflect
@@ -3733,7 +3721,6 @@ python-json-logger
 python-json5
 python-jsondiff
 python-jsonmerge
-python-jsonpatch
 python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
@@ -3775,7 +3762,6 @@ python-levenshtein
 python-lexicon
 python-libarchive-c
 python-libcst
-python-libevdev
 python-librabbitmq
 python-librt
 python-libsass
@@ -3916,7 +3902,6 @@ python-ordered-set
 python-orderedmultidict
 python-orjson
 python-os-client-config
-python-osc-lib
 python-oscrypto
 python-oslo-concurrency
 python-oslo-config
@@ -4127,7 +4112,6 @@ python-pyopencl
 pyopencl-headers
 python-pyopenssl
 python-pyotp
-python-pypandoc
 python-pyparsing
 python-pypcode
 python-pypdf
@@ -4570,7 +4554,6 @@ python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
-python-werkzeug
 python-whatthepatch
 python-wheezy-template
 python-whoosh
@@ -5022,7 +5005,6 @@ ruby-msgpack
 ruby-multi_json
 ruby-multi_test
 ruby-multipart-parser
-ruby-multipart-post
 ruby-mustache
 ruby-mustermann
 ruby-mutex_m

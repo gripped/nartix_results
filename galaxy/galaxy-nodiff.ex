@@ -19,7 +19,6 @@ avidemux-cli
 avidemux-qt
 bat
 bleachbit
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -121,6 +120,7 @@ $pkgbase-terminfo
 fpc-src
 fpc
 freecell-solver
+fuzzel
 fvwm3
 fzy
 gammastep
@@ -442,7 +442,6 @@ pysolfc-cardsets
 pysolfc
 python-aiohttp-oauthlib
 python-caja
-python-cjkwrap
 python-click-log
 python-generic
 python-inflate64

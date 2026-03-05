@@ -5,7 +5,7 @@
  
  pkgname=blender
 -pkgver=5.0.1
--pkgrel=6
+-pkgrel=7
 +pkgver=4.3.2
 +pkgrel=2
  epoch=17
@@ -19,7 +19,7 @@
    'materialx'
    'onetbb'
    'openal'
-@@ -102,37 +101,57 @@
+@@ -102,40 +101,57 @@
    'ninja'
    'subversion'
    'wayland-protocols'
@@ -73,6 +73,9 @@
 -  local _hiprt_api_ver
 -  _hiprt_api_ver=$(awk '/HIPRT_API_VERSION/ {print $3}' /opt/rocm/include/hiprt/hiprtew.h)
 -  sed -i "/HIPRT_API_VERSION/s/2005/$_hiprt_api_ver/" extern/hipew/include/hiprtew.h
+-
+-  sed -i "/blender_help = subprocess/i\    blender_env = {\"LD_LIBRARY_PATH\": \"${pkgdir}/usr/share/blender/lib\"}" \
+-    doc/manpage/blender.1.py
 +  git submodule init
 +  git config submodule.release/datafiles/assets.url "$srcdir/blender-assets"
 +  git -c protocol.file.allow=always submodule update
@@ -96,7 +99,7 @@
  }
  
  _get_pyver() {
-@@ -141,25 +160,23 @@
+@@ -144,25 +160,23 @@
  
  build() {
    export CXXFLAGS=${CXXFLAGS/-Wp,-D_GLIBCXX_ASSERTIONS/}
@@ -126,7 +129,7 @@
      -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
      -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
      -D USD_ROOT_DIR=/usr
-@@ -171,6 +188,9 @@
+@@ -174,6 +188,9 @@
      -W no-dev
    )
  
@@ -136,7 +139,7 @@
    cmake "${cmake_options[@]}"
    cmake --build build
  }
-@@ -185,7 +205,10 @@
+@@ -188,7 +205,10 @@
  
    install -Dm644 release/freedesktop/org.blender.Blender.metainfo.xml "${pkgdir}/usr/share/metainfo/org.blender.Blender.metainfo.xml"
  
@@ -173,7 +176,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,34 +1,38 @@
+@@ -1,36 +1,38 @@
  prepare() {
  cd "$pkgname"
 -git lfs install --local
@@ -185,6 +188,8 @@
 -local _hiprt_api_ver
 -_hiprt_api_ver=$(awk '/HIPRT_API_VERSION/ {print $3}' /opt/rocm/include/hiprt/hiprtew.h)
 -sed -i "/HIPRT_API_VERSION/s/2005/$_hiprt_api_ver/" extern/hipew/include/hiprtew.h
+-sed -i "/blender_help = subprocess/i\    blender_env = {\"LD_LIBRARY_PATH\": \"${pkgdir}/usr/share/blender/lib\"}" \
+-doc/manpage/blender.1.py
 +git submodule init
 +git config submodule.release/datafiles/assets.url "$srcdir/blender-assets"
 +git -c protocol.file.allow=always submodule update
@@ -226,7 +231,7 @@
  -D SYCL_ROOT_DIR=/opt/intel/oneapi/compiler/latest
  -D SYCL_OFFLINE_COMPILER_PARALLEL_JOBS=8
  -D USD_ROOT_DIR=/usr
-@@ -39,6 +43,8 @@
+@@ -41,6 +43,8 @@
  -S "$pkgname"
  -W no-dev
  )

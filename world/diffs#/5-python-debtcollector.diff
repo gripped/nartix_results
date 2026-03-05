@@ -1,0 +1,67 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,30 +1,30 @@
+ 
+ pkgname=python-debtcollector
+ pkgver=3.0.0
+-pkgrel=6
++pkgrel=5
+ arch=('any')
+ pkgdesc='A collection of Python deprecation patterns and strategies that help you collect your technical debt in a non-destructive manner.'
+ url='https://docs.openstack.org/developer/debtcollector'
+-license=('Apache-2.0')
++license=('Apache')
+ depends=('python-wrapt')
+-makedepends=('git' 'python-build' 'python-installer' 'python-pbr' 'python-setuptools' 'python-wheel')
++makedepends=('python-pbr')
+ checkdepends=('python-stestr')
+-source=("git+https://github.com/openstack/debtcollector.git#tag=$pkgver")
+-sha512sums=('477af894df32fc783312e057bed32db820475e490c9fae51f44c693b0d226eb7505da22f14021bbe5854b832137ec2f8766e10529061d44cd1a3b9a564fda6e4')
++source=("https://github.com/openstack/debtcollector/archive/$pkgver/$pkgname-$pkgver.tar.gz")
++sha512sums=('f3e189b952db59e69dce79459b2a9cf0e795503b53bac9688a442dfcdecdd920477481e26bf552f88f0983d348f2605c176acefba5341066648e066f22f249f9')
+ 
+ export PBR_VERSION=$pkgver
+ 
+ build() {
+-  cd debtcollector
+-  python -m build --wheel --no-isolation
++  cd debtcollector-$pkgver
++  python setup.py build
+ }
+ 
+ check() {
+-  cd debtcollector
++  cd debtcollector-$pkgver
+   stestr run
+ }
+ 
+ package() {
+-  cd debtcollector
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  cd debtcollector-$pkgver
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,2 @@
+-git
+-python-build
+-python-installer
+ python-pbr
+-python-setuptools
+-python-wheel
+ python-wrapt
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-cd debtcollector
+-python -m build --wheel --no-isolation
++cd debtcollector-$pkgver
++python setup.py build
+ }

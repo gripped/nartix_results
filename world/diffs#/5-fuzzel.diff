@@ -1,15 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=fuzzel
- pkgver=1.14.0
--pkgrel=2
-+pkgrel=1
+-pkgver=1.14.1
++pkgver=1.14.0
+ pkgrel=1
  pkgdesc='Application launcher for wlroots based Wayland compositors'
  url="https://codeberg.org/dnkl/$pkgname"
- arch=(x86_64)
-@@ -14,7 +14,7 @@
+@@ -14,21 +14,21 @@
           libxkbcommon
           pixman
           wayland
@@ -18,7 +17,11 @@
  makedepends=(meson
               scdoc
               tllist
-@@ -25,10 +25,10 @@
+              wayland-protocols)
+ backup=('etc/xdg/fuzzel/fuzzel.ini')
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
+-sha256sums=('c6416786c3a0600b8ad91ed951c43c002a639870c3823b4a60c910442f4ae097')
++sha256sums=('f46387b29e855990614c0b699fda99130d1406f65e5ea8b447c8f7ac4b64efe4')
  
  build() {
  	cd "$pkgname"
