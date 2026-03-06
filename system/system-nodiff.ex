@@ -28,9 +28,6 @@ dosfstools
 ed
 efibootmgr
 efivar
-elfutils
-libelf
-debuginfod
 expat
 file
 findutils
@@ -114,8 +111,6 @@ libunistring
 libverto
 libxcrypt
 libxcrypt-compat
-libxml2
-libxml2-docs
 licenses
 links
 xlinks

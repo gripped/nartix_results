@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   debuginfod
+ )
+ pkgver=0.194
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Handle ELF object files and DWARF debugging information"
+ arch=(x86_64)
+ url="https://sourceware.org/elfutils/"
+@@ -24,7 +24,7 @@
+   zlib
+   zstd
+ )
+-options=(staticlibs)
++options=(staticlibs debug)
+ source=(git+$_url?signed#tag=$pkgbase-$pkgver)
+ sha512sums=('b8b031e1e99466af969792ea9fb2b1c2b0f39425b2eb5bed986fa72189410a4bc5bb8e0e48a57d41fb6bcedba0a5f3c56a4d0c8b66c606feac98c46a303ba379')
+ b2sums=('a2e84bfaa316f2de5aff212bd91f15bed66f1881e4622fbfc19d671d09be68d2203813743570044de2a1c29c3db18d069db7481ad8cfe71104878cfc9e6f2191')
+@@ -36,8 +36,6 @@
+ prepare() {
+   cd $pkgbase
+   git cherry-pick -n 00cb3efe36337f27925dbff9b2e7d97c7df95bf8
+-
+-  git cherry-pick -n 4a5cf8be906d5991e7527e69e3f2ceaa74811301
+ 
+   sed -e 's/run-backtrace-native.sh//g' -i tests/Makefile.am
+ 
+@@ -91,7 +89,7 @@
+ 
+   make DESTDIR="$pkgdir" install -C $pkgbase
+ 
+-  echo "https://debuginfod.archlinux.org" > "$pkgdir/etc/debuginfod/archlinux.urls"
++  echo "https://debuginfod.artixlinux.org" > "$pkgdir/etc/debuginfod/artixlinux.urls"
+ 
+   (
+     cd "$pkgdir"
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,6 @@
+ prepare() {
+ cd $pkgbase
+ git cherry-pick -n 00cb3efe36337f27925dbff9b2e7d97c7df95bf8
+-git cherry-pick -n 4a5cf8be906d5991e7527e69e3f2ceaa74811301
+ sed -e 's/run-backtrace-native.sh//g' -i tests/Makefile.am
+ autoreconf -fiv
+ }

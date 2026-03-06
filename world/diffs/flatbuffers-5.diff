@@ -1,0 +1,97 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,43 +2,42 @@
+ pkgbase=flatbuffers
+ pkgname=(flatbuffers python-flatbuffers)
+ pkgver=25.12.19
+-pkgrel=3
++pkgrel=2
+ pkgdesc='An efficient cross platform serialization library for C++, with support for Java, C# and Go'
+ arch=(x86_64)
+ url='https://google.github.io/flatbuffers/'
+ license=(Apache)
+ depends=(gcc-libs)
+ makedepends=(cmake
+-             git
+              python-build
+              python-installer
+              python-numpy
+              python-setuptools)
+-source=(git+https://github.com/google/flatbuffers#tag=v$pkgver-2026-02-06-03fffb2)
+-sha256sums=('2efba40d9c63ad93f64c86a9d7e58f94bd70f5eb687210e5fe0d26d6eebca299')
++source=(https://github.com/google/$pkgbase/archive/v$pkgver/$pkgbase-$pkgver.tar.gz)
++sha256sums=('f81c3162b1046fe8b84b9a0dbdd383e24fdbcf88583b9cb6028f90d04d90696a')
+ 
+ prepare() {
+-  sed -i 's/-Werror=/-W/g;s/-Werror//g' $pkgname/CMakeLists.txt
++  sed -i 's/-Werror=/-W/g;s/-Werror//g' $pkgname-$pkgver/CMakeLists.txt
+ 
+-  cd $pkgbase
++  cd $pkgbase-$pkgver
+   sed -i 's#${test_dir}/../flatc#${test_dir}/../../build/flatc#' tests/PythonTest.sh
+ }
+ 
+ build() {
+-  cmake -B build -S $pkgbase \
++  cmake -B build -S $pkgbase-$pkgver \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DFLATBUFFERS_BUILD_FLATLIB=OFF \
+     -DFLATBUFFERS_BUILD_SHAREDLIB=ON
+   cmake --build build
+ 
+-  cd $pkgbase/python
++  cd $pkgbase-$pkgver/python
+   VERSION=$pkgver python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+   cmake --build build --target test || true
+ 
+-  ./$pkgbase/tests/PythonTest.sh
++  ./$pkgbase-$pkgver/tests/PythonTest.sh
+ }
+ 
+ package_flatbuffers() {
+@@ -52,6 +51,6 @@
+     'python-numpy: support for Numpy arrays'
+   )
+ 
+-  cd $pkgbase/python
++  cd $pkgbase-$pkgver/python
+   VERSION=$pkgver python -m installer --destdir="$pkgdir" dist/*.whl
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
+ gcc-libs
+-git
+ python
+ python-build
+ python-installer
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ prepare() {
+-sed -i 's/-Werror=/-W/g;s/-Werror//g' $pkgname/CMakeLists.txt
+-cd $pkgbase
++sed -i 's/-Werror=/-W/g;s/-Werror//g' $pkgname-$pkgver/CMakeLists.txt
++cd $pkgbase-$pkgver
+ sed -i 's#${test_dir}/../flatc#${test_dir}/../../build/flatc#' tests/PythonTest.sh
+ }
+ build() {
+-cmake -B build -S $pkgbase \
++cmake -B build -S $pkgbase-$pkgver \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DFLATBUFFERS_BUILD_FLATLIB=OFF \
+ -DFLATBUFFERS_BUILD_SHAREDLIB=ON
+ cmake --build build
+-cd $pkgbase/python
++cd $pkgbase-$pkgver/python
+ VERSION=$pkgver python -m build --wheel --no-isolation
+ }

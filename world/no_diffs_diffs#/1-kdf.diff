@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kdf
+-pkgver=25.12.3
++pkgver=25.12.2
+ pkgrel=1
+ url='https://apps.kde.org/kdf/'
+ arch=(x86_64)
+@@ -29,7 +29,7 @@
+ groups=(kde-applications
+         kde-utilities)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('bbea67e19d3236724cfc1067f414f9bcf50364f1b4fd18e9478640288448b154'
++sha256sums=('3bde27de00bd188c7d2f7348d0d7e6228ecd4dcd104498163092d2a73e8412f0'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>

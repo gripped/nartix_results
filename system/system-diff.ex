@@ -15,6 +15,9 @@ dhcpcd
 diffutils
 e2fsprogs
 fuse2fs
+elfutils
+libelf
+debuginfod
 fakeroot
 filesystem
 gcc
@@ -38,6 +41,8 @@ gzip
 iputils
 libsasl
 libusb
+libxml2
+libxml2-docs
 linux
 linux-headers
 linux-docs

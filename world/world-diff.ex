@@ -45,6 +45,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 cargo-edit
 catfish
 certbot-apache
@@ -104,6 +105,7 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
+digikam
 dns-over-https
 docker
 dolphin-emu
@@ -167,6 +169,8 @@ firewall-config
 firewall-applet
 firewalld-test
 flashrom
+flatbuffers
+python-flatbuffers
 flatpak
 flatpak-docs
 flite
@@ -555,6 +559,7 @@ mousepad
 mozo
 mpd
 muffin
+mujs
 multipath-tools
 mumble
 mumble-server
@@ -763,6 +768,7 @@ python-pytest-tornado
 python-pyudev
 python-recommonmark
 python-secretstorage
+python-softlayer
 python-sympy
 python-tenacity
 python-wand
@@ -923,6 +929,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+spectacle
 spice-vdagent
 sqlcipher
 squid

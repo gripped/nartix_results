@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,9 +18,7 @@
+@@ -6,7 +6,7 @@
+   lib32-pipewire-jack
+   lib32-pipewire-v4l2
+ )
+-pkgver=1.6.0
++pkgver=1.4.10
+ pkgrel=1
+ epoch=1
+ pkgdesc="Low-latency audio/video router and processor - 32-bit"
+@@ -18,14 +18,12 @@
    lib32-alsa-lib
    lib32-dbus
    lib32-glib2
@@ -10,7 +19,38 @@
  )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
-@@ -69,15 +67,17 @@
+ )
+-b2sums=('7223fdee4491093b7611599794d379bcdeda59ac0e3ffb681b0bb5fd744fbc6d32714ba2257253ff97a2afc91043c862d75b2b6754df3d002137ce9637d60782')
++b2sums=('5c7c50e83200001fbaac5bdb9497eed56e68ebe3be5a75f1cb843d73ef855870f8da09b456b3530a7c66ce6a87665b386c00d4bbffb6c96f88ab9d65ba60c8ae')
+ 
+ prepare() {
+   cd pipewire
+@@ -38,16 +36,13 @@
+     -D avb=disabled
+     -D bluez5-codec-lc3=disabled
+     -D bluez5-codec-lc3plus=disabled
+-    -D bluez5-codec-ldac-dec=disabled
+     -D bluez5-codec-opus=disabled
+-    -D bluez5-plc-spandsp=disabled
+     -D bluez5=disabled
+     -D compress-offload=disabled
+     -D docs=disabled
+     -D ebur128=disabled
+     -D echo-cancel-webrtc=disabled
+     -D examples=disabled
+-    -D fftw=disabled
+     -D gstreamer-device-provider=disabled
+     -D gstreamer=disabled
+     -D jack-devel=true
+@@ -61,7 +56,6 @@
+     -D libusb=disabled
+     -D lv2=disabled
+     -D man=disabled
+-    -D onnxruntime=disabled
+     -D opus=disabled
+     -D pw-cat=disabled
+     -D raop=disabled
+@@ -73,15 +67,17 @@
      -D session-managers=[]
      -D snap=disabled
      -D sndfile=disabled
@@ -30,7 +70,7 @@
    meson compile -C build
  }
  
-@@ -106,7 +106,6 @@
+@@ -110,7 +106,6 @@
      lib32-gcc-libs
      lib32-glib2 libglib-2.0.so
      lib32-glibc

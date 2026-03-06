@@ -282,7 +282,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -445,7 +444,6 @@ dht
 dialog
 diffstat
 diffuse
-digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -655,8 +653,6 @@ flac
 flac-doc
 flake8
 flameshot
-flatbuffers
-python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
@@ -2405,7 +2401,6 @@ mtdev
 mtools
 mtr
 mtr-gtk
-mujs
 muparser
 mupdf
 libmupdf
@@ -4359,7 +4354,6 @@ python-socketio
 python-socketpool
 python-socksio
 python-softlayer-zeep
-python-softlayer
 python-sortedcollections
 python-sortedcontainers
 python-soupsieve
@@ -5307,7 +5301,6 @@ sparsehash
 spatialindex
 spdlog
 speakup-utils
-spectacle
 speech-dispatcher
 libspeechd
 speex
