@@ -111,6 +111,8 @@ libunistring
 libverto
 libxcrypt
 libxcrypt-compat
+libxml2
+libxml2-docs
 licenses
 links
 xlinks
@@ -134,9 +136,6 @@ linux-firmware-qcom
 linux-firmware-qlogic
 linux-firmware-radeon
 linux-firmware-realtek
-linux-lts
-linux-lts-headers
-linux-lts-docs
 lz4
 lzo
 m4
@@ -169,7 +168,6 @@ pkgconf
 popt
 pptpclient
 psmisc
-readline
 reiserfsprogs
 run-parts
 s-nail

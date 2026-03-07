@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ sha256sums=('bc84a11d51fbc4222ca43831671de2935e759229d21ee7136443e7250c78498f')
+ 
+ build() {
+-  arch-meson "${pkgname}" build
++  artix-meson -Dsession-manager=elogind "${pkgname}" build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "${pkgname}" build
++artix-meson -Dsession-manager=elogind "${pkgname}" build
+ meson compile -C build
+ }

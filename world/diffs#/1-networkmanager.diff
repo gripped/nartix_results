@@ -1,30 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   nm-cloud-setup
-   networkmanager-docs
- )
--pkgver=1.56.0
-+pkgver=1.54.3
- pkgrel=1
- pkgdesc="Network connection manager and user applications"
- url="https://networkmanager.dev/"
-@@ -18,6 +18,7 @@
-   curl
-   dhcpcd
-   dnsmasq
-+  gcc-libs
-   git
-   glib2
-   glib2-devel
-@@ -28,7 +29,6 @@
-   iptables
-   iwd
-   jansson
--  libgcc
-   libmm-glib
-   libndp
-   libnewt
 @@ -47,8 +47,7 @@
    ppp
    python-gobject
@@ -35,24 +10,7 @@
    vala
    vala
    wpa_supplicant
-@@ -60,7 +59,7 @@
- source=(
-   "git+https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git?signed#tag=${pkgver/[a-z]/-&}"
- )
--b2sums=('43aee5cce5e92861f89520fbb2174ed54a89adc89d6b903b40feddf3f8ab5b0f97559a90efc83cb2919e3eca01700726b8d2f665621bcf3a491127981625e136')
-+b2sums=('5da0800e5ea38f8eda955bf854c778b93e3a17b80da8602b48e017e66e74392caf9458701f6b7a4b9de85108d30ecd89d5491bd26123925228b6788d3b6aae32')
- validpgpkeys=(
-   3D10AD045AB4AAFF8E8F36AF9B980AC2FB874FEB # Ana Cabral <acabral@redhat.com>
-   F07F7C1EABD382F81CBFBA3B998D4828CD7E1656 # Beniamino Galvani <bgalvani@redhat.com>
-@@ -73,7 +72,6 @@
-   07F9AEC86144386D9576210B66A44781B4EBC2D0 # Íñigo Huguet <ihuguet@redhat.com>
-   8D1F4C471D38D59A56301CEBE1974C8D8DD6ED2A # Filip Pokryvka <fpokryvk@redhat.com>
-   1CFF865BDF957BE935765BBD2E1878D078DEF7C6 # Íñigo Huguet <ihuguet@riseup.net>
--  8353041CB75BD30380E0C97CBB71790DF5ADC65C # Vladimír Beneš <vbenes@redhat.com>
- )
- 
- prepare() {
-@@ -86,9 +84,12 @@
+@@ -86,9 +85,12 @@
  
      -D dist_version="$pkgver-$pkgrel"
      -D session_tracking_consolekit=false
@@ -66,7 +24,7 @@
  
      -D iwd=true
      -D teamdctl=true
-@@ -106,7 +107,7 @@
+@@ -106,7 +108,7 @@
      -D qt=false
    )
  
@@ -75,32 +33,16 @@
    meson compile -C build
  }
  
-@@ -128,11 +129,11 @@
-   depends=(
-     audit
-     curl
-+    gcc-libs
-     glib2
-     glibc
-     iproute2
-     jansson
--    libgcc
-     libmm-glib
-     libndp
-     libnewt
-@@ -140,10 +141,10 @@
-     libpsl
-     libteam
-     mobile-broadband-provider-info
-+    elogind
+@@ -143,7 +145,7 @@
      nspr
      nss
      readline
 -    systemd-libs
++    libelogind
      wpa_supplicant
    )
    optdepends=(
-@@ -194,7 +195,6 @@
+@@ -194,7 +196,6 @@
    _pick cloud usr/lib/**/*nm-cloud-setup*
    _pick cloud usr/share/man/*/nm-cloud-setup*
  
@@ -108,58 +50,37 @@
  
    install -d usr/lib/NetworkManager/dispatcher.d/no-wait.d
  }
-@@ -202,13 +202,13 @@
- package_libnm() {
-   pkgdesc="NetworkManager client library"
-   depends=(
-+    gcc-libs
-     glib2
-     glibc
--    libgcc
+@@ -207,7 +208,7 @@
+     libgcc
      nspr
      nss
 -    systemd-libs
-     util-linux-libs
 +    libelogind
+     util-linux-libs
    )
    provides=(libnm.so)
- 
-@@ -220,10 +220,10 @@
-   depends=(
-     bash
-     curl
-+    gcc-libs
-     glib2
-     glibc
-     jansson
--    libgcc
-     libnm
-     networkmanager
-   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -4,6 +4,8 @@
+@@ -4,6 +4,7 @@
  curl
  dhcpcd
  dnsmasq
 +elogind
-+gcc-libs
  git
  glib2
  glib2-devel
-@@ -14,7 +16,7 @@
+@@ -14,6 +15,7 @@
  iptables
  iwd
  jansson
--libgcc
 +libelogind
+ libgcc
  libmm-glib
  libndp
- libnewt
 @@ -36,8 +38,6 @@
  ppp
  python-gobject

@@ -8,39 +8,7 @@
    pipewire-pulse
    pipewire-roc
    gst-plugin-pipewire
-@@ -21,8 +20,8 @@
-   pipewire-session-manager
-   pulse-native-provider
- )
--pkgver=1.6.0
--pkgrel=1
-+pkgver=1.4.10
-+pkgrel=2
- epoch=1
- pkgdesc="Low-latency audio/video router and processor"
- url="https://pipewire.org"
-@@ -34,7 +33,6 @@
-   bluez-libs
-   dbus
-   doxygen
--  fftw
-   git
-   glib2
-   glib2-devel
-@@ -47,29 +45,25 @@
-   libfdk-aac
-   libffado
-   libfreeaptx
--  libgcc
-   liblc3
-   libldac
-   libmysofa
-   libpulse
-   libsndfile
--  libstdc++
-   libusb
-   libx11
-   libxfixes
+@@ -60,16 +59,15 @@
    lilv
    meson
    ncurses
@@ -53,36 +21,33 @@
    rtkit
    sbc
    sdl2
--  spandsp
+   spandsp
 -  systemd
    valgrind
    webrtc-audio-processing-1
  )
-@@ -80,7 +74,7 @@
+@@ -79,11 +77,13 @@
+ )
  source=(
    "git+https://gitlab.freedesktop.org/pipewire/pipewire.git#tag=$pkgver"
++   systemd.patch
  )
 -b2sums=('7223fdee4491093b7611599794d379bcdeda59ac0e3ffb681b0bb5fd744fbc6d32714ba2257253ff97a2afc91043c862d75b2b6754df3d002137ce9637d60782')
-+b2sums=('5c7c50e83200001fbaac5bdb9497eed56e68ebe3be5a75f1cb843d73ef855870f8da09b456b3530a7c66ce6a87665b386c00d4bbffb6c96f88ab9d65ba60c8ae')
++b2sums=('7223fdee4491093b7611599794d379bcdeda59ac0e3ffb681b0bb5fd744fbc6d32714ba2257253ff97a2afc91043c862d75b2b6754df3d002137ce9637d60782' SKIP)
  
  prepare() {
    cd pipewire
-@@ -89,7 +83,6 @@
- build() {
-   local meson_options=(
-     -D bluez5-codec-lc3plus=disabled
--    -D bluez5-codec-ldac-dec=disabled
-     -D docs=enabled
-     -D jack-devel=true
-     -D libjack-path=/usr/lib
-@@ -99,9 +92,12 @@
++   patch -Np1 -i ../systemd.patch
+ 
+   git cherry-pick -n 5cd734e8c097680eca0bfe7b46e4f93747b04fc3
+ }
+@@ -101,9 +101,11 @@
      -D session-managers=[]
      -D snap=disabled
      -D udevrulesdir=/usr/lib/udev/rules.d
 -  )
 -
 -  arch-meson pipewire build "${meson_options[@]}"
-+    -D systemd=disabled
 +    -D rlimits-install=false
 +    -D logind-provider=libelogind
 +  )
@@ -91,21 +56,15 @@
    meson compile -C build
  }
  
-@@ -129,12 +125,11 @@
-   depends=(
-     "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
-     dbus libdbus-1.so
-+    gcc-libs
-     glib2 libglib-2.0.so
-     glibc
--    libgcc
+@@ -136,7 +138,6 @@
+     libgcc
      ncurses libncursesw.so
      readline libreadline.so
 -    systemd-libs libsystemd.so libudev.so
    )
    optdepends=(
      'gst-plugin-pipewire: GStreamer plugin'
-@@ -145,7 +140,6 @@
+@@ -147,7 +148,6 @@
      'pipewire-jack-client: PipeWire as JACK client'
      'pipewire-jack: JACK replacement'
      'pipewire-libcamera: Libcamera support'
@@ -113,7 +72,7 @@
      'pipewire-pulse: PulseAudio replacement'
      'pipewire-roc: ROC streaming'
      'pipewire-session-manager: Session manager'
-@@ -155,7 +149,6 @@
+@@ -157,7 +157,6 @@
      'realtime-privileges: realtime privileges with rt module'
      'rtkit: realtime privileges with rtkit module'
    )
@@ -121,19 +80,15 @@
  
    meson install -C build --destdir "$pkgdir"
  
-@@ -179,10 +172,8 @@
+@@ -181,7 +180,6 @@
  
      _pick libcamera usr/lib/$_spaname/libcamera
  
 -    _pick onnx usr/lib/$_spaname/filter-graph/libspa-filter-graph-plugin-onnx.so
--
+ 
      _pick audio usr/bin/pipewire-{aes67,avb}
--    _pick audio usr/bin/pw-{cat,loopback,mididump,midi2play,midi2record,sysex}
-+    _pick audio usr/bin/pw-{cat,loopback,mididump}
-     _pick audio usr/bin/pw-{dsd,enc,midi,}play
-     _pick audio usr/bin/pw-{midi,}record
-     _pick audio usr/bin/spa-{acp-tool,resample}
-@@ -199,7 +190,6 @@
+     _pick audio usr/bin/pw-{cat,loopback,mididump,midi2play,midi2record,sysex}
+@@ -201,7 +199,6 @@
      _pick audio usr/lib/$_pwname/libpipewire-module-rtp-{sap,sink,source}.so
      _pick audio usr/lib/$_pwname/libpipewire-module-vban*.so
      _pick audio usr/lib/$_spaname/{aec,alsa,audio*,avb,bluez5,filter-graph}
@@ -141,7 +96,7 @@
      _pick audio usr/share/alsa
      _pick audio usr/share/man/man1/pw-{cat,loopback,mididump}.1
      _pick audio usr/share/man/man1/spa-{acp-tool,resample}.1
-@@ -237,7 +227,6 @@
+@@ -239,7 +236,6 @@
      _pick pulse usr/bin/pipewire-pulse
      _pick pulse usr/lib/$_pwname/libpipewire-module-protocol-pulse.so
      _pick pulse usr/lib/$_pwname/libpipewire-module-pulse-tunnel.so
@@ -149,65 +104,15 @@
      _pick pulse usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
-@@ -273,7 +262,7 @@
-   pkgdesc+=" - client library"
-   depends=(
-     glibc
--    libgcc
-+    gcc-libs
-   )
-   provides=(lib$_pwname.so)
- 
-@@ -300,10 +289,9 @@
- package_pipewire-libcamera() {
-   pkgdesc+=" - Libcamera support"
-   depends=(
-+    gcc-libs
-     glibc
-     libcamera libcamera-base.so libcamera.so
--    libgcc
--    libstdc++
-     pipewire
-   )
- 
-@@ -321,24 +309,20 @@
-     alsa-lib libasound.so
-     bluez-libs libbluetooth.so
-     dbus libdbus-1.so
--    fftw libfftw3f.so
-+    gcc-libs
-     glib2 libg{lib,object,io}-2.0.so
-     glibc
-     libebur128
-     libfdk-aac libfdk-aac.so
-     libfreeaptx libfreeaptx.so
--    libgcc
-     liblc3 liblc3.so
-     libldac libldacBT_enc.so
-     libmysofa libmysofa.so
-     libsndfile libsndfile.so
--    libstdc++
-     libusb libusb-1.0.so
-     lilv liblilv-0.so
+@@ -340,7 +336,6 @@
      opus libopus.so
      sbc libsbc.so
--    spandsp libspandsp.so
+     spandsp libspandsp.so
 -    systemd-libs
      webrtc-audio-processing-1 libwebrtc-audio-processing-1.so
    )
    provides=(
-@@ -395,9 +379,9 @@
-     "pipewire-audio=$epoch:$pkgver-$pkgrel"
-     "pipewire=$epoch:$pkgver-$pkgrel"
-     dbus libdbus-1.so
-+    gcc-libs
-     glibc
-     jack libjack.so
--    libgcc
-   )
-   conflicts=(pipewire-jack)
- 
-@@ -445,20 +429,6 @@
+@@ -447,19 +442,6 @@
    install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
  }
  
@@ -224,20 +129,10 @@
 -
 -  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
 -}
--
+ 
  package_pipewire-pulse() {
    pkgdesc+=" - PulseAudio replacement"
-   depends=(
-@@ -468,15 +438,14 @@
-     avahi libavahi-{client,common}.so
-     dbus libdbus-1.so
-     dconf
-+    gcc-libs
-     glib2 libg{lib,object,io}-2.0.so
-     glibc
--    libgcc
-     libpulse libpulse.so
-     pipewire-session-manager
+@@ -478,7 +460,6 @@
    )
    provides=(pulse-native-provider)
    conflicts=(pulseaudio)
@@ -245,79 +140,22 @@
  
    mv pulse/* "$pkgdir"
  
-@@ -494,8 +463,8 @@
-     "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
-     "pipewire-audio=$epoch:$pkgver-$pkgrel"
-     "pipewire=$epoch:$pkgver-$pkgrel"
--    glibc
--    libgcc
-+    gcc-libs
-+    glibc
-     roc-toolkit libroc.so
-   )
- 
-@@ -510,11 +479,11 @@
-     "libpipewire=$epoch:$pkgver-$pkgrel" lib$_pwname.so
-     "pipewire-audio=$epoch:$pkgver-$pkgrel"
-     "pipewire=$epoch:$pkgver-$pkgrel"
-+    gcc-libs
-     glib2 libg{lib,object}-2.0.so
-     glibc
-     gst-plugins-base-libs
-     gstreamer
--    libgcc
-     pipewire-session-manager
-   )
- 
-@@ -530,8 +499,8 @@
-     "pipewire-audio=$epoch:$pkgver-$pkgrel"
-     "pipewire=$epoch:$pkgver-$pkgrel"
-     avahi libavahi-{client,common}.so
--    glibc
--    libgcc
-+    gcc-libs
-+    glibc
-     openssl libcrypto.so
-     opus libopus.so
-   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -5,7 +5,7 @@
- dbus
- dconf
- doxygen
--fftw
-+gcc-libs
- git
- glib2
- glib2-devel
-@@ -32,10 +32,8 @@
- libfdk-aac.so
- libffado
- libffado.so
--libfftw3f.so
- libfreeaptx
- libfreeaptx.so
--libgcc
- libgio-2.0.so
- libglib-2.0.so
- libgobject-2.0.so
-@@ -58,10 +56,6 @@
- libsbc.so
- libsndfile
+@@ -60,8 +60,6 @@
  libsndfile.so
--libspandsp.so
--libstdc++
+ libspandsp.so
+ libstdc++
 -libsystemd.so
 -libudev.so
  libusb
  libusb-1.0.so
  libwebrtc-audio-processing-1.so
-@@ -70,7 +64,6 @@
+@@ -70,7 +68,6 @@
  lilv
  meson
  ncurses
@@ -325,7 +163,7 @@
  openssl
  opus
  pipewire
-@@ -78,15 +71,13 @@
+@@ -78,6 +75,7 @@
  pipewire-pulse
  pipewire-session-manager
  python-docutils
@@ -333,10 +171,10 @@
  readline
  roc-toolkit
  rtkit
- sbc
+@@ -85,8 +83,6 @@
  sdl2
  sh
--spandsp
+ spandsp
 -systemd
 -systemd-libs
  valgrind

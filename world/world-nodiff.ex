@@ -282,6 +282,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -291,6 +292,7 @@ capstone
 python-capstone
 cargo-about
 cargo-c
+cargo-edit
 caribou
 catatonit
 catch2-v2
@@ -444,6 +446,7 @@ dht
 dialog
 diffstat
 diffuse
+digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -653,6 +656,8 @@ flac
 flac-doc
 flake8
 flameshot
+flatbuffers
+python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
@@ -2155,6 +2160,7 @@ python-lilv
 lilypond
 limine
 linux-atm
+liquidctl
 litehtml
 live-media
 lksctp-tools
@@ -2401,6 +2407,7 @@ mtdev
 mtools
 mtr
 mtr-gtk
+mujs
 muparser
 mupdf
 libmupdf
@@ -2473,6 +2480,7 @@ node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
+nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
 nodejs
@@ -3219,6 +3227,7 @@ python-anyjson
 python-anysqlite
 python-apipkg
 python-apispec-webframeworks
+python-apispec
 python-appdirs
 python-apscheduler
 python-apsw
@@ -3274,10 +3283,12 @@ python-backrefs
 python-baize
 python-base58
 python-bcrypt
+python-beaker
 python-beautifulsoup4
 python-behave
 python-beniget
 python-betamax-matchers
+python-betamax-serializers
 python-betamax
 python-better-exceptions
 python-bidict
@@ -3358,6 +3369,8 @@ python-click-log
 python-click-option-group
 python-click-plugins
 python-click-repl
+python-click
+python-cliff
 python-cligj
 python-clikit
 python-clint
@@ -3376,6 +3389,7 @@ python-colour
 python-comm
 python-commentjson
 python-commonmark
+python-configargparse
 python-configobj
 python-configupdater
 python-confuse
@@ -3423,9 +3437,12 @@ python-dateutil
 python-dbus-deviation
 python-dbus-next
 python-dbusmock
+python-ddt
 python-deadlib
 $_modules[@]/#/python-standard-
+python-debtcollector
 python-decorator
+python-deepdiff
 python-deepmerge
 python-defusedxml
 python-dep-logic
@@ -3500,6 +3517,7 @@ python-entrypoint2
 python-entrypoints
 python-ephemeral-port-reserve
 python-et-xmlfile
+python-eth-hash
 python-evdev
 python-eventlet
 python-exceptiongroup
@@ -3519,6 +3537,7 @@ python-fastimport
 python-fastjsonschema
 python-fastnumbers
 python-fastparquet
+python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
@@ -3537,6 +3556,8 @@ python-fixtures
 python-flake8-black
 python-flake8-docstrings
 python-flake8
+python-flaky
+python-flasgger
 python-flask-caching
 python-flask-compress
 python-flask-cors
@@ -3547,6 +3568,7 @@ python-flask-restful
 python-flask-socketio
 python-flask-sqlalchemy
 python-flask
+python-flex
 python-flexcache
 python-flexmock
 python-flexparser
@@ -3577,6 +3599,7 @@ python-gast
 python-gast03
 python-gcp-devrel-py-tools
 python-generic
+python-genshi
 python-genty
 python-geographiclib
 python-geoip
@@ -3615,6 +3638,7 @@ python-h11
 python-h2
 python-h5netcdf
 python-h5py
+python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
@@ -3662,6 +3686,7 @@ python-imagesize
 python-immutabledict
 python-importlib-metadata
 python-importlib_resources
+python-incremental
 python-infinity
 python-inflate64
 python-inflect
@@ -3715,11 +3740,14 @@ python-jschema-to-python
 python-json-logger
 python-json5
 python-jsondiff
+python-jsonlines
 python-jsonmerge
+python-jsonpatch
 python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
+python-jsonschema-path
 python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
@@ -3752,11 +3780,13 @@ python-lazr.config
 python-lazr.delegates
 python-lazy-object-proxy
 python-ldap
+python-ldap3
 python-legacy-cgi
 python-levenshtein
 python-lexicon
 python-libarchive-c
 python-libcst
+python-libevdev
 python-librabbitmq
 python-librt
 python-libsass
@@ -3849,12 +3879,14 @@ python-mysqlclient
 python-myst-parser
 python-natsort
 python-nbdime
+python-nbval
 python-nbxmpp
 python-ndindex
 python-nest-asyncio
 python-netaddr
 python-netcdf4
 python-nethsm-sdk-py
+python-netifaces
 python-netifaces2
 python-networkx
 python-nh3
@@ -3863,6 +3895,7 @@ python-nine
 python-nitrokey
 python-nkdfu
 python-nltk
+python-nodeenv
 python-noiseprotocol
 python-nose-random
 python-nose-show-skipped
@@ -3895,8 +3928,11 @@ python-opt_einsum
 python-optree
 python-ordered-set
 python-orderedmultidict
+python-orderly-set
 python-orjson
 python-os-client-config
+python-os-service-types
+python-osc-lib
 python-oscrypto
 python-oslo-concurrency
 python-oslo-config
@@ -3932,6 +3968,7 @@ python-pastedeploy
 python-pastel
 python-patch-ng
 python-path
+python-pathable
 python-pathspec
 python-pathtools
 python-patiencediff
@@ -3984,6 +4021,11 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
+python-polars
+$pkgbase
+$pkgbase-runtime-32
+$pkgbase-runtime-64
+$pkgbase-runtime-compat
 python-polib
 python-pooch
 python-pook
@@ -4107,6 +4149,7 @@ python-pyopencl
 pyopencl-headers
 python-pyopenssl
 python-pyotp
+python-pypandoc
 python-pyparsing
 python-pypcode
 python-pypdf
@@ -4206,6 +4249,7 @@ python-pytest-sugar
 python-pytest-testinfra
 python-pytest-textual-snapshot
 python-pytest-timeout
+python-pytest-tornado
 python-pytest-tornasync
 python-pytest-trio
 python-pytest-twisted
@@ -4315,6 +4359,7 @@ python-scripttest
 python-scrypt
 python-scs
 python-seaborn
+python-secretstorage
 python-seedir
 python-semantic-version
 python-semver
@@ -4354,6 +4399,7 @@ python-socketio
 python-socketpool
 python-socksio
 python-softlayer-zeep
+python-softlayer
 python-sortedcollections
 python-sortedcontainers
 python-soupsieve
@@ -4428,6 +4474,7 @@ python-subunit
 python-sure
 python-svglib
 python-sybil
+python-sympy
 python-syrupy
 python-tabulate
 python-tabview
@@ -4436,6 +4483,7 @@ python-tblib
 python-teamcity-messages
 python-tempita
 python-tempora
+python-tenacity
 python-tensile
 python-termcolor
 python-terminado
@@ -4534,6 +4582,7 @@ python-vobject
 python-volatile
 python-voluptuous
 python-waitress
+python-wand
 python-warlock
 python-watchdog
 python-watchfiles
@@ -4548,11 +4597,13 @@ python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
+python-werkzeug
 python-whatthepatch
 python-wheezy-template
 python-whoosh
 python-wilderness
 python-wrapt
+python-wsaccel
 python-wsgiproxy2
 python-wsproto
 python-wstools
@@ -4798,6 +4849,7 @@ rocminfo
 rocprim
 rocprofiler-register
 rocs
+rocsolver
 rocsparse
 rocthrust
 roctracer
@@ -4999,6 +5051,7 @@ ruby-msgpack
 ruby-multi_json
 ruby-multi_test
 ruby-multipart-parser
+ruby-multipart-post
 ruby-mustache
 ruby-mustermann
 ruby-mutex_m
@@ -5301,6 +5354,7 @@ sparsehash
 spatialindex
 spdlog
 speakup-utils
+spectacle
 speech-dispatcher
 libspeechd
 speex

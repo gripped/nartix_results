@@ -9,7 +9,6 @@ lib32-libnm
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libusb
-lib32-libxml2
 lib32-mesa
 lib32-opencl-mesa
 lib32-vulkan-asahi
@@ -38,7 +37,6 @@ lib32-libpipewire
 lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-polkit
-lib32-readline
 lib32-spirv-llvm-translator
 lib32-v4l-utils
 steam

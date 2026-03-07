@@ -41,8 +41,9 @@ gzip
 iputils
 libsasl
 libusb
-libxml2
-libxml2-docs
+linux-lts
+linux-lts-headers
+linux-lts-docs
 linux
 linux-headers
 linux-docs
@@ -68,6 +69,7 @@ ppp
 procps-ng
 python
 python-tests
+readline
 rpcbind
 thin-provisioning-tools
 tpm2-tss

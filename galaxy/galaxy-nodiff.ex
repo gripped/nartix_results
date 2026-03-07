@@ -18,7 +18,12 @@ avidemux
 avidemux-cli
 avidemux-qt
 bat
+bcc
+bcc-libbpf-tools
+bcc-examples
+python-bcc
 bleachbit
+blender
 blueman
 bogofilter
 bogofilter-db
