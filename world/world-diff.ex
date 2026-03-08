@@ -3,6 +3,7 @@ accountsservice
 aflplusplus
 alsa-utils
 amule
+apache-orc
 apache
 apcupsd
 appstream
@@ -171,6 +172,7 @@ flatpak-docs
 flite
 fluidsynth
 font-manager
+fortune-mod
 fprintd
 freerdp
 freerdp2
@@ -392,6 +394,7 @@ liblqr
 libmatekbd
 libmatemixer
 libmateweather
+libmemcached-awesome
 libmms
 libmng
 libmpd
@@ -485,6 +488,7 @@ lxtask
 lxtask-gtk3
 lxterminal
 ly
+mac
 mako
 maliit-framework
 marco
@@ -720,6 +724,7 @@ pysolfc
 python-anytree
 python-aresponses
 python-asn1crypto
+python-cairosvg
 python-cjkwrap
 python-cram
 python-debugpy

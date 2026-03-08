@@ -164,30 +164,33 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,23 +0,0 @@
+@@ -1,23 +1,14 @@
 -bash
--cargo
--cmake
--fontconfig
+ cargo
+ cmake
++dbus
+ fontconfig
 -gcc-libs
--git
+ git
 -glib2
 -glibc
--hicolor-icon-theme
+ hicolor-icon-theme
 -libssh2
--libx11
+ libx11
 -libxcb
 -libxkbcommon
--libxkbcommon-x11
+ libxkbcommon-x11
 -openssl
--pkgconf
--python
+ pkgconf
+ python
 -ttf-jetbrains-mono
 -ttf-roboto
--wayland
+ wayland
 -xcb-util
--xcb-util-image
+ xcb-util-image
 -zlib
++xcb-util-keysyms
++xcb-util-wm
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

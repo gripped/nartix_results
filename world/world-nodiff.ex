@@ -81,7 +81,6 @@ anthy
 anubis
 aom
 aom-docs
-apache-orc
 apitrace
 apparmor
 appmenu-gtk-module
@@ -678,7 +677,6 @@ foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
-fortune-mod
 fossil
 four-in-a-row
 fractal
@@ -1867,7 +1865,6 @@ libmbim-docs
 libmd
 libmediaart
 libmediainfo
-libmemcached-awesome
 libmicrodns
 libmikmod
 libmilter
@@ -2254,7 +2251,6 @@ lzip
 lzop
 m17n-db
 m17n-lib
-mac
 macchanger
 maeparser
 magic-wormhole
@@ -3330,7 +3326,6 @@ python-cachy
 python-cairo
 python-cairo-docs
 python-cairocffi
-python-cairosvg
 python-caja
 python-calmjs.parse
 python-calmjs.types
