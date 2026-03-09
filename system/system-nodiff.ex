@@ -174,11 +174,6 @@ s-nail
 sdparm
 sed
 shadow
-sqlite
-sqlite-tcl
-sqlite-analyzer
-lemon
-sqlite-doc
 sudo
 sysfsutils
 syslinux
@@ -191,6 +186,4 @@ which
 wireless-regdb
 wpa_supplicant
 xz
-zlib
-minizip
 zstd

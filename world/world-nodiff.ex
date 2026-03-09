@@ -81,6 +81,7 @@ anthy
 anubis
 aom
 aom-docs
+apache-orc
 apitrace
 apparmor
 appmenu-gtk-module
@@ -521,7 +522,6 @@ edk2-shell
 edk2-ovmf
 egl-gbm
 egl-wayland
-egl-wayland2
 egl-x11
 eglexternalplatform
 eigen
@@ -677,6 +677,7 @@ foomatic-db-ppds
 foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 fop
+fortune-mod
 fossil
 four-in-a-row
 fractal
@@ -2251,6 +2252,7 @@ lzip
 lzop
 m17n-db
 m17n-lib
+mac
 macchanger
 maeparser
 magic-wormhole
@@ -2546,8 +2548,6 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
-opencc
-opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -3326,6 +3326,7 @@ python-cachy
 python-cairo
 python-cairo-docs
 python-cairocffi
+python-cairosvg
 python-caja
 python-calmjs.parse
 python-calmjs.types
@@ -3742,7 +3743,6 @@ python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
-python-jsonschema-path
 python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
@@ -5599,6 +5599,9 @@ texlive-langcyrillic
 texlive-latexextra
 texlive-pictures
 texlive-science
+texlive-texmf
+texlive-doc
+texlive-meta
 thermald
 threadweaver
 threadweaver5
@@ -5784,10 +5787,11 @@ wacomtablet
 waf
 warpinator
 wasi-compiler-rt
-wasi-libc
 wasi-libcplusplus
 wasi-libc++abi
 wasm-component-ld
+wasm-pkg-tools
+wasm-tools
 wavpack
 wayland-protocols
 wayland-utils
@@ -5806,10 +5810,10 @@ wget
 whois
 wiiuse
 wine-staging
-wine
 winetricks
 wireguard-tools
 wireless_tools
+wit-bindgen
 wl-clip-persist
 wl-clipboard
 woff2

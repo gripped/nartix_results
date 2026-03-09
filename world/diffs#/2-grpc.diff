@@ -1,65 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
- 
- pkgbase='grpc'
- pkgname=('grpc' 'python-grpcio' 'python-grpcio-tools' 'php-grpc' 'php-legacy-grpc' 'grpc-cli')
--pkgver=1.78.1
-+pkgver=1.76.0
- _gtestver=2dd1c131950043a8ad5ab0d2dda0e0970596586a
--pkgrel=1
-+pkgrel=4
- pkgdesc="High performance, open source, general RPC framework that puts mobile and HTTP/2 first."
- arch=('x86_64')
- url='https://grpc.io'
-@@ -20,7 +20,6 @@
-   'php'
-   'php-legacy'
-   'protobuf'
--  'cython'
-   'python-build'
-   'python-installer'
-   'python-setuptools'
-@@ -30,18 +29,13 @@
- )
- source=("https://github.com/grpc/grpc/archive/v$pkgver/$pkgbase-$pkgver.tar.gz"
-         "https://github.com/google/googletest/archive/$_gtestver/googletest-$_gtestver.tar.gz"
--        "fix-trigraph-warnings.patch::https://github.com/grpc/grpc/commit/c11767fda5516f9d02ba96e9d8dac82769a5ef02.patch"
--        "fix-python-system-abseil.patch")
--sha256sums=('961a44a2a5a50670e58f5e887c17fe70529253da23802245326d681f6d8d1ba6'
-+        'php-8.5.patch')
-+sha256sums=('0af37b800953130b47c075b56683ee60bdc3eda3c37fc6004193f5b569758204'
-             '31bf78bd91b96dd5e24fab3bb1d7f3f7453ccbaceec9afb86d6e4816a15ab109'
--            '5220ab11208d3e6a71d15a9a8bd6e4e5a669f09495d87301937340d422f37c7f'
--            '24a8dc761deff4a39b5fc9a7fb2b65c049e600b14c548a28f52376b98c456a7e')
-+            'a2b71c06347550260e5cffeb803a0737089ddadcd629643bf8dfdf8e71e6e4cc')
- 
- prepare() {
-   cd "$srcdir/$pkgbase-$pkgver"
--
--  patch -p1 -i "$srcdir/fix-trigraph-warnings.patch"
--  patch -p1 -i "$srcdir/fix-python-system-abseil.patch"
- 
-   ln -sf "$srcdir/googletest-$_gtestver/"{googlemock,googletest} \
-     third_party/googletest
-@@ -58,14 +52,14 @@
-       tools/distrib/python/grpcio_tools/protoc_lib_deps.py
-   ln -s ../../../.. tools/distrib/python/grpcio_tools/grpc_root
- 
--  sed 's/[Cc]ython==/cython>=/' -i pyproject.toml tools/distrib/python/grpcio_tools/pyproject.toml
-+  patch -p1 -i "$srcdir/php-8.5.patch"
- }
- 
- build() {
-   cd "$srcdir/$pkgbase-$pkgver"
-   cmake -Bbuild \
-     -DCMAKE_BUILD_TYPE=None \
--    -DCMAKE_CXX_FLAGS="${CXXFLAGS} -DNDEBUG -trigraphs -Wno-attributes -Wno-deprecated-declarations -Wno-return-type -Wno-non-virtual-dtor" \
-+    -DCMAKE_CXX_FLAGS="${CXXFLAGS} -DNDEBUG -Wno-attributes -Wno-deprecated-declarations -Wno-return-type -Wno-non-virtual-dtor" \
-     -DgRPC_INSTALL=ON \
-     -DBUILD_SHARED_LIBS=ON \
-     -DCMAKE_CXX_STANDARD=17 \
-@@ -80,7 +74,7 @@
+@@ -80,7 +80,7 @@
      -DgRPC_BENCHMARK_PROVIDER:STRING='package' \
      -DgRPC_ABSL_PROVIDER:STRING='package' \
      -DgRPC_USE_PROTO_LITE=OFF \
@@ -68,7 +9,7 @@
      -DgRPC_BUILD_GRPC_CPP_PLUGIN=ON \
      -DgRPC_BUILD_GRPC_CSHARP_PLUGIN=ON \
      -DgRPC_BUILD_GRPC_NODE_PLUGIN=ON \
-@@ -111,7 +105,7 @@
+@@ -111,7 +111,7 @@
    export GRPC_PYTHON_BUILD_SYSTEM_CARES=1
    export GRPC_PYTHON_BUILD_SYSTEM_RE2=1
    export GRPC_PYTHON_BUILD_SYSTEM_ABSL=1
@@ -77,12 +18,12 @@
    export GRPC_BUILD_WITH_BORING_SSL_ASM=0
  
    cd "$srcdir/$pkgbase-$pkgver"
-@@ -131,7 +125,7 @@
+@@ -131,7 +131,7 @@
  }
  
  package_grpc() {
 -  depends=('glibc' 'libgcc' 'zlib' 'systemd-libs' 'c-ares' 'protobuf' 'openssl' 're2' 'abseil-cpp')
-+  depends=('glibc' 'gcc-libs' 'zlib' 'c-ares' 'protobuf' 'openssl' 're2' 'abseil-cpp')
++  depends=('glibc' 'libgcc' 'zlib' 'c-ares' 'protobuf' 'openssl' 're2' 'abseil-cpp')
    provides=(
      'libupb.so'
      'libgrpcpp_channelz.so'
@@ -92,15 +33,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,7 +7,6 @@
- gcc-libs
- glibc
- grpc
--libgcc
- ninja
- openssl
- php
-@@ -23,5 +22,4 @@
+@@ -23,5 +23,4 @@
  python-wheel
  re2
  re2c

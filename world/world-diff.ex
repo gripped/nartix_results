@@ -3,7 +3,6 @@ accountsservice
 aflplusplus
 alsa-utils
 amule
-apache-orc
 apache
 apcupsd
 appstream
@@ -135,6 +134,7 @@ dracut
 drkonqi
 dunst
 earlyoom
+egl-wayland2
 element.io
 element-web
 element-desktop
@@ -172,7 +172,6 @@ flatpak-docs
 flite
 fluidsynth
 font-manager
-fortune-mod
 fprintd
 freerdp
 freerdp2
@@ -488,7 +487,6 @@ lxtask
 lxtask-gtk3
 lxterminal
 ly
-mac
 mako
 maliit-framework
 marco
@@ -614,6 +612,8 @@ onboard
 onionshare
 open-iscsi
 openbox
+opencc
+opencc-doc
 opencollada
 opendht
 openrct2
@@ -724,11 +724,11 @@ pysolfc
 python-anytree
 python-aresponses
 python-asn1crypto
-python-cairosvg
 python-cjkwrap
 python-cram
 python-debugpy
 python-hidapi
+python-jsonschema-path
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -923,9 +923,6 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
-texlive-texmf
-texlive-doc
-texlive-meta
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -1067,6 +1064,7 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
+wasi-libc
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -1078,6 +1076,7 @@ webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
 wildmidi
+wine
 wireplumber
 libwireplumber
 wireplumber-docs

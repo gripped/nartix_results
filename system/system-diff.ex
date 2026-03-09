@@ -71,6 +71,11 @@ python
 python-tests
 readline
 rpcbind
+sqlite
+sqlite-tcl
+sqlite-analyzer
+lemon
+sqlite-doc
 thin-provisioning-tools
 tpm2-tss
 traceroute
@@ -78,3 +83,5 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
+zlib
+minizip

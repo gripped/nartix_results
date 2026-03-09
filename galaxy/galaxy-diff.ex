@@ -40,9 +40,9 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
-linux-zen
-linux-zen-headers
-linux-zen-docs
+linux-hardened
+linux-hardened-headers
+linux-hardened-docs
 ly
 mate-control-center
 mate-screensaver

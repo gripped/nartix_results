@@ -230,6 +230,7 @@ simplescreenrecorder
 sneedacity
 snooze
 socklog
+sonic-desktop-interface
 sonic-silver-sddm
 sonic-silver-theme
 sonic-win
