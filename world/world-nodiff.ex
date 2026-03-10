@@ -2189,7 +2189,6 @@ lua51-$pkgbase
 lua52-$pkgbase
 lua53-$pkgbase
 lua54-$pkgbase
-lpsolve
 lrzip
 lsb-release
 lshw
@@ -2548,6 +2547,8 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
+opencc
+opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -3743,6 +3744,7 @@ python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
+python-jsonschema-path
 python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
@@ -4821,7 +4823,6 @@ rkcommon
 rlwrap
 rng-tools
 robin-map
-roc-toolkit
 rocblas
 rocm-clang-ocl
 rocm-cmake

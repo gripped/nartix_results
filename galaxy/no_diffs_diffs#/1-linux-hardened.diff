@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,7 +55,7 @@
+         'SKIP')
+ b2sums_x86_64=('6883841627541136ca6bb1c9e4913cc3a10416b8ca4a1c08225f95c5c1b573e4a8f5419c8407492e097b5675130ad173a88807f9f659a01c21dbdd660bd7eae0')
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 

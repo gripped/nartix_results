@@ -9,7 +9,7 @@
    zlib
  )
  optdepends=('bash-completion: Bash completion support')
-@@ -81,6 +81,7 @@
+@@ -86,6 +86,7 @@
  }
  
  build() {
@@ -17,48 +17,48 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -119,7 +120,7 @@
+@@ -124,7 +125,7 @@
    optdepends=('lttng-ust2.12: CoreCLR tracing')
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
--  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
-+  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
+-  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
++  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime-8.0
  }
  
-@@ -128,7 +129,7 @@
+@@ -133,7 +134,7 @@
    depends=(dotnet-runtime-8.0)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
--  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
-+  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
+-  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
++  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime-8.0
  }
  
-@@ -144,7 +145,7 @@
+@@ -149,7 +150,7 @@
    optdepends=('aspnet-targeting-pack: Build ASP.NET Core applications')
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
--  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
-+  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
+-  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
++  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk-8.0
  }
  
-@@ -153,7 +154,7 @@
+@@ -158,7 +159,7 @@
    depends=(netstandard-targeting-pack)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
--  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.arch-x64,Ref}
-+  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.artix-x64,Ref}
+-  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.arch-${_ARCH},Ref}
++  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.artix-${_ARCH},Ref}
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack-8.0
  }
  
-@@ -162,7 +163,7 @@
+@@ -167,7 +168,7 @@
    depends=(dotnet-targeting-pack-8.0)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
--  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
-+  bsdtar -xf dotnet/artifacts/x64/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-x64.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
+-  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
++  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-targeting-pack-8.0
  }
  

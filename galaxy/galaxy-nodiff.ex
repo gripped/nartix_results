@@ -230,6 +230,9 @@ libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
+linux-hardened
+linux-hardened-headers
+linux-hardened-docs
 linux-rt-lts
 linux-rt-lts-headers
 linux-rt-lts-docs
@@ -271,7 +274,6 @@ lxqt-runner
 lxqt-session
 lxqt-sudo
 lxqt-themes
-lxqt-wayland-session
 lxrandr
 lxsession
 lxtask

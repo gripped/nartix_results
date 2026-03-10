@@ -453,6 +453,7 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
+lpsolve
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -612,8 +613,6 @@ onboard
 onionshare
 open-iscsi
 openbox
-opencc
-opencc-doc
 opencollada
 opendht
 openrct2
@@ -728,7 +727,6 @@ python-cjkwrap
 python-cram
 python-debugpy
 python-hidapi
-python-jsonschema-path
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -850,6 +848,7 @@ refind
 refind-docs
 ristretto
 rnnoise
+roc-toolkit
 rocalution
 rocfft
 rocrand

@@ -40,9 +40,7 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
-linux-hardened
-linux-hardened-headers
-linux-hardened-docs
+lxqt-wayland-session
 ly
 mate-control-center
 mate-screensaver
