@@ -9,3 +9,13 @@
  depends=('cryptsetup' 'libcryptsetup.so')
  makedepends=('asciidoc')
  source=("$url/releases/download/v$pkgver/$pkgname-$pkgver.tar.bz2"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-asciidoc
+-cryptsetup
+-libcryptsetup.so

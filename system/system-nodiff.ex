@@ -186,4 +186,7 @@ which
 wireless-regdb
 wpa_supplicant
 xz
+zlib
+zlib-static
+minizip
 zstd

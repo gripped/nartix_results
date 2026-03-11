@@ -66,6 +66,7 @@ profanity-gtk
 python-cjkwrap
 qbittorrent
 qbittorrent-nox
+qt5-webengine
 rage
 read-edid
 reflector

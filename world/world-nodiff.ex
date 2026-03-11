@@ -94,7 +94,6 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
-ardour
 argyllcms
 aria2
 arianna
@@ -1815,7 +1814,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2493,6 +2491,7 @@ noto-fonts
 noto-fonts-extra
 npm
 nrpe
+nsight-compute
 nsight-systems
 nss-mdns
 nsxiv
@@ -2804,6 +2803,7 @@ perl-ipc-run3
 perl-ipc-system-simple
 perl-json-xs
 perl-json
+perl-libintl-perl
 perl-libwww
 perl-lingua-en-inflect
 perl-list-allutils
@@ -4293,7 +4293,6 @@ python-random2
 python-rapidfuzz
 python-rapidjson
 python-rcssmin
-python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
@@ -4423,7 +4422,6 @@ python-sphinx-notfound-page
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
-python-sphinx
 python-sphinx_rtd_theme
 python-sphinxcontrib-apidoc
 python-sphinxcontrib-applehelp
@@ -4485,7 +4483,6 @@ python-tensile
 python-termcolor
 python-terminado
 python-termstyle
-python-testfixtures
 python-testflo
 python-testing.common.database
 python-testing.postgresql
@@ -4520,7 +4517,6 @@ python-tqdm
 python-trailrunner
 python-traitlets
 python-transaction
-python-treq
 python-trio-asyncio
 python-trio
 python-trove-classifiers
@@ -5329,7 +5325,6 @@ socat
 sof-bin
 sof-firmware
 sof-tools
-softhsm
 solid5
 solr
 sonivox

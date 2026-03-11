@@ -10,6 +10,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+ardour
 at-spi2-core
 at-spi2-core-docs
 at
@@ -388,6 +389,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -590,7 +592,6 @@ networkmanager-docs
 niri
 nodejs-lts-hydrogen
 nsd
-nsight-compute
 nushell
 nvidia-340xx-utils
 nvidia-390xx-utils
@@ -635,7 +636,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-libintl-perl
 pgbouncer
 phodav
 php-legacy
@@ -732,7 +732,11 @@ python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
+python-rdflib
 python-recommonmark
+python-sphinx
+python-testfixtures
+python-treq
 python-wheel
 qastools
 qbittorrent
@@ -886,6 +890,7 @@ sharutils
 signal-desktop
 smartmontools
 snapper
+softhsm
 solid
 spice-vdagent
 sqlcipher

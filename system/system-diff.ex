@@ -83,5 +83,3 @@ usbutils
 util-linux
 util-linux-libs
 xfsprogs
-zlib
-minizip

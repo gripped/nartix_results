@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _pyname=pycrdt
+ pkgname=python-$_pyname
+-pkgver=0.12.48
++pkgver=0.12.47
+ pkgrel=1
+ pkgdesc='CRDTs based on Yrs'
+ arch=(x86_64)
+@@ -21,7 +21,7 @@
+               python-pytest-mypy-testing
+               python-trio)
+ source=(git+https://github.com/jupyter-server/pycrdt#tag=$pkgver)
+-sha256sums=('fff8e12791c0cfe483128a5ae9871c8a234b7b6a52d6650450b21aaa190d56a4')
++sha256sums=('4466dc78f15c0a24b01be53071f81044dafeaed1c702ef28a3e527fd41b8aeaf')
+ 
+ build() {
+   cd $_pyname
