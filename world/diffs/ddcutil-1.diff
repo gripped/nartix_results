@@ -4,12 +4,12 @@
  url='http://ddcutil.com/'
  arch=('x86_64')
  license=('GPL-2.0-or-later')
--depends=('gcc-libs' 'glibc' 'glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libx11' 'libxext' 'libxrandr' 'systemd-libs')
+-depends=('glibc' 'glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libgcc' 'libx11' 'libxext' 'libxrandr' 'systemd-libs')
 -makedepends=('git' 'systemd')
-+depends=('gcc-libs' 'glibc' 'glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libx11' 'libxext' 'libxrandr' 'libudev')
++depends=('glibc' 'glib2' 'i2c-tools' 'libusb' 'libdrm' 'jansson' 'libgcc' 'libx11' 'libxext' 'libxrandr' 'libudev')
 +makedepends=('git' 'udev')
  source=(git+https://github.com/rockowitz/ddcutil.git#tag=v$pkgver)
- sha512sums=('9b610790a8fba7273c1f9870b6f494de5b3b45be9b189667df5d20e3224119db1177f844af6a108ee2b17dbc752861500ddfdd7ed445e5296286771a36adaa07')
+ sha512sums=('c1014dbe0da28addc2a12e264d3a44a266fce9de95c51c20c6c98f2b1096e1f0f4393b1e9aff2d3f1bc05c8a439fc15d87104956617b6bac946a44afcdf463e1')
  
 
 
@@ -18,9 +18,9 @@
 --- arch_depends
 +++ artix_depends
 @@ -5,9 +5,9 @@
- i2c-tools
  jansson
  libdrm
+ libgcc
 +libudev
  libusb
  libx11

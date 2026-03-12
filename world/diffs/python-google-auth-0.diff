@@ -1,0 +1,82 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,10 @@
+ 
+-_name=google-auth
++_name=google-auth-library-python
+ pkgname=python-google-auth
+-pkgver=2.49.0
++pkgver=2.48.0
+ pkgrel=1
+ pkgdesc="Google Authentication Library"
+-url="https://github.com/googleapis/google-cloud-python"
++url="https://github.com/GoogleCloudPlatform/google-auth-library-python"
+ license=('Apache-2.0')
+ arch=('any')
+ depends=(
+@@ -48,16 +48,16 @@
+   'python-requests: for async HTTP support'
+ )
+ source=(
+-  "${url}/archive/refs/tags/${_name}-v${pkgver}.tar.gz"
++  "$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz"
+   "python-pyopenssl-compatibility.patch"
+ )
+-sha512sums=('0fafab1a43ce12450a05db1d026c2dd7cdd9c915b3c161a7cb3cd3cb26ddfeef41a93404f39b117fa2c17118ea89f0793c7320492f37e20f17ce63fb7a07948f'
++sha512sums=('67f010fc05cbf5db25312b0fcc5de59edf1cfc9387609dcf3d34b65508d28f1bc5a760a169c532f5c9f1c3f0bb14dd67807675c7c8a9c5ba2c7e89b1850919de'
+             '4e23dfaeec6933b1fb6736b6402f1f3cce0fedc0967e527879bc1b3e6215d94c986c28ab9d6b9b4ba975f39316eb0159bb74144aca1f27345b0a9174857fcfff')
+ 
+ prepare() {
+-  cd "google-cloud-python-${_name}-v${pkgver}/packages/${_name}"
++  cd $_name-$pkgver
+ 
+-  patch -Np1 -i "$srcdir"/python-pyopenssl-compatibility.patch
++  patch -Np1 -i ../python-pyopenssl-compatibility.patch
+ 
+   sed -i -e 's/^import mock$/from unittest import mock/' \
+          -e 's/^from mock import /from unittest.mock import /' \
+@@ -68,16 +68,16 @@
+ }
+ 
+ build() {
+-  cd "google-cloud-python-${_name}-v${pkgver}/packages/${_name}"
++  cd $_name-$pkgver
+   python -m build --wheel --no-isolation
+ }
+ 
+ check() {
+-  cd "google-cloud-python-${_name}-v${pkgver}/packages/${_name}"
++  cd $_name-$pkgver
+   python -m pytest tests
+ }
+ 
+ package() {
+-  cd "google-cloud-python-${_name}-v${pkgver}/packages/${_name}"
++  cd $_name-$pkgver
+   python -m installer --destdir="$pkgdir" dist/*.whl
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+-cd "google-cloud-python-${_name}-v${pkgver}/packages/${_name}"
+-patch -Np1 -i "$srcdir"/python-pyopenssl-compatibility.patch
++cd $_name-$pkgver
++patch -Np1 -i ../python-pyopenssl-compatibility.patch
+ sed -i -e 's/^import mock$/from unittest import mock/' \
+ -e 's/^from mock import /from unittest.mock import /' \
+ system_tests/*.py system_tests/*/*.py \
+@@ -9,6 +9,6 @@
+ tests/transport/aio/*.py
+ }
+ build() {
+-cd "google-cloud-python-${_name}-v${pkgver}/packages/${_name}"
++cd $_name-$pkgver
+ python -m build --wheel --no-isolation
+ }

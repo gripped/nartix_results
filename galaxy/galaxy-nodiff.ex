@@ -157,7 +157,6 @@ joyutils
 just
 kanshi
 kernel-headers-musl
-khard
 kodi
 kodi-gles
 kodi-eventclients

@@ -80,6 +80,7 @@ clamav
 cloud-init
 cmake
 cmus
+coin-or-clp
 colord
 libcolord
 colord-sane
@@ -379,6 +380,7 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
+libesmtp
 libfido2
 libfprint
 libgtop
@@ -389,7 +391,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -455,7 +456,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-lpsolve
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -723,12 +723,17 @@ pysolfc
 python-anytree
 python-aresponses
 python-asn1crypto
+python-blessed
 python-cjkwrap
+python-cogapp
 python-cram
 python-debugpy
+python-google-auth
 python-hidapi
+python-lsprotocol
 python-ndg-httpsclient
 python-pymupdf
+python-pyrfc3339
 python-pyscard
 python-pytest-freezegun
 python-pyudev
@@ -842,6 +847,7 @@ qtermwidget
 quazip
 quazip-qt5
 quazip-qt6
+r
 rabbitmq
 rabbitmqadmin
 rawtherapee
@@ -945,12 +951,14 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
+tree-sitter-lua
 tumbler
 udftools
 udisks2
 udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
+ufmt
 umockdev
 unace
 unbound

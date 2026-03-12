@@ -352,7 +352,6 @@ cogl
 coin-or-asl
 coin-or-cbc
 coin-or-cgl
-coin-or-clp
 coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
@@ -1719,7 +1718,6 @@ libdwarf
 libebml
 libebur128
 libepubgen
-libesmtp
 libetebase
 libetonyek
 libetonyek-doc
@@ -1814,6 +1812,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2187,6 +2186,7 @@ lua51-$pkgbase
 lua52-$pkgbase
 lua53-$pkgbase
 lua54-$pkgbase
+lpsolve
 lrzip
 lsb-release
 lshw
@@ -3299,7 +3299,6 @@ python-bitarray
 python-bitstring
 python-black
 python-bleach
-python-blessed
 python-blinker
 python-blockbuster
 python-blosc
@@ -3377,7 +3376,6 @@ python-cmake-build-extension
 python-cmarkgfm
 python-cmd2
 python-cmsis-pack-manager
-python-cogapp
 python-colorama
 python-colored-traceback
 python-coloredlogs
@@ -3620,7 +3618,6 @@ python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
-python-google-auth
 python-googleapis-common-protos
 python-gp-libs
 python-gpgme
@@ -3808,7 +3805,6 @@ python-looseversion
 python-lsp-black
 python-lsp-jsonrpc
 python-lsp-server
-python-lsprotocol
 python-lupa
 python-lxml-html-clean
 python-lxml
@@ -4161,7 +4157,6 @@ python-pyproject-metadata
 python-pyqt5-sip
 python-pyqt6-sip
 python-pyquery
-python-pyrfc3339
 python-pyro
 python-pyrsistent
 python-pysaml2
@@ -4767,7 +4762,6 @@ quota-tools
 qutebrowser
 qwindowkit
 qwt
-r
 r8168
 radeontop
 radicale
@@ -5643,7 +5637,6 @@ trash-cli
 tre
 tree-sitter-bash
 tree-sitter-c
-tree-sitter-lua
 tree-sitter-markdown
 tree-sitter-python
 tree-sitter-query
@@ -5678,7 +5671,6 @@ uasm
 uchardet
 udiskie
 udpxy
-ufmt
 ufw
 uget
 uglify-js
