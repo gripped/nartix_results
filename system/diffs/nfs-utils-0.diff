@@ -1,26 +1,40 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  
  pkgbase=nfs-utils
  pkgname=('nfs-utils' 'nfsidmap')
 -pkgver=2.8.6
--pkgrel=1
 +pkgver=2.8.5
-+pkgrel=2
+ pkgrel=2
  arch=('x86_64')
  url='http://nfs.sourceforge.net'
- license=('GPL-2.0-or-later')
-@@ -10,7 +10,7 @@
+@@ -9,21 +9,15 @@
+ makedepends=('libevent' 'sqlite' 'rpcsvc-proto' 'device-mapper' 'libnl')
  source=(https://www.kernel.org/pub/linux/utils/${pkgname}/${pkgver}/${pkgname}-${pkgver}.tar.{xz,sign}
          exports
-         nfs-utils.sysusers)
+-        nfs-utils.sysusers
+-        0001-nfsrahead-zero-initialise-device_info-struct.patch
+-        0002-nfsrahead-quieten-misleading-error-for-non-NFS-block.patch)
 -sha256sums=('2bd7b34e809a7eff2f4bc5fc5fd96ebcd66a5458b471a270cbd2dc169b011550'
++        nfs-utils.sysusers)
 +sha256sums=('b13ca4a9df44186bdbe107514b22732d4243f785f95daf2fb86afc1edba15bbb'
              'SKIP'
              'b8238b74179f7e1626db2b637671ddc17288a1c5b7692954ae6d2fbb1be3788d'
-             '61a3fbe55e30bc9c5da17a76e772c8be1cc695e0142a144c15f0f9aa46ab9ce0')
-@@ -40,7 +40,7 @@
+-            '61a3fbe55e30bc9c5da17a76e772c8be1cc695e0142a144c15f0f9aa46ab9ce0'
+-            '4a28256a560d0201cf9de34c543ee36da9337e2df12d4c17f3c54bd1820a05e4'
+-            '3eba5e757f190af79618efbe1b7f4ea574ee662e27d029a4960c69ccc3eac462')
++            '61a3fbe55e30bc9c5da17a76e772c8be1cc695e0142a144c15f0f9aa46ab9ce0')
+ validpgpkeys=('E1B71E339E20A10A676F7CB69AFB1D681A125177') # Steve Dickson
+ 
+ prepare() {
+   cd "${pkgbase}"-${pkgver}
+-  patch -Np1 -i "${srcdir}/0001-nfsrahead-zero-initialise-device_info-struct.patch"
+-  patch -Np1 -i "${srcdir}/0002-nfsrahead-quieten-misleading-error-for-non-NFS-block.patch"
+ 
+   sed -i "s|sbindir = /sbin|sbindir = /usr/bin|g" utils/*/Makefile.am
+   sed -i "s|sbin|bin|" utils/nfsidmap/id_resolver.conf
+@@ -46,7 +40,7 @@
      --enable-ipv6 \
      --enable-libmount-mount \
      --enable-mountconfig \
@@ -29,7 +43,7 @@
    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
    make
  }
-@@ -68,7 +68,6 @@
+@@ -74,7 +68,6 @@
    install -D -m 644 nfs.conf "$pkgdir"/etc/nfs.conf
  
    install -d -m 755 "$pkgdir"/usr/share/doc/$pkgname
@@ -45,7 +59,15 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -1,7 +1,5 @@
+ prepare() {
+ cd "${pkgbase}"-${pkgver}
+-patch -Np1 -i "${srcdir}/0001-nfsrahead-zero-initialise-device_info-struct.patch"
+-patch -Np1 -i "${srcdir}/0002-nfsrahead-quieten-misleading-error-for-non-NFS-block.patch"
+ sed -i "s|sbindir = /sbin|sbindir = /usr/bin|g" utils/*/Makefile.am
+ sed -i "s|sbin|bin|" utils/nfsidmap/id_resolver.conf
+ sed -i "s|libexec|bin|" tools/nfsrahead/99-nfs.rules
+@@ -22,7 +20,7 @@
  --enable-ipv6 \
  --enable-libmount-mount \
  --enable-mountconfig \

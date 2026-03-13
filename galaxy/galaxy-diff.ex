@@ -20,6 +20,9 @@ evisum
 fd
 featherpad
 firefox
+ghostty
+ghostty-shell-integration
+ghostty-terminfo
 gpicview
 greetd-regreet
 gtk-engine-murrine

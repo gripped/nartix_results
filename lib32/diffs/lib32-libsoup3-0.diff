@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   lib32-libsoup3
+ )
+ pkgver=3.6.6
+-pkgrel=2
++pkgrel=1
+ pkgdesc="HTTP client/server library for GNOME (32-bit)"
+ url="https://wiki.gnome.org/Projects/libsoup"
+ arch=(x86_64)
+@@ -37,11 +37,6 @@
+ 
+ prepare() {
+   cd libsoup
+-
+-  git cherry-pick -n 2e8fd6739b275ae9bc17ccecdab2a970b1ecc081 \
+-                     85b1411595e50c2cb816fdf71a70430fb0544efa
+-
+-  git cherry-pick -n 26c647ae5e3d8fcf137b9524bfbfca73cc7dedc8
+ }
+ 
+ build() {
+@@ -54,7 +49,7 @@
+     -D vapi=disabled
+   )
+ 
+-  arch-meson libsoup build "${meson_options[@]}"
++  artix-meson libsoup build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,5 @@
+ prepare() {
+ cd libsoup
+-git cherry-pick -n 2e8fd6739b275ae9bc17ccecdab2a970b1ecc081 \
+-85b1411595e50c2cb816fdf71a70430fb0544efa
+-git cherry-pick -n 26c647ae5e3d8fcf137b9524bfbfca73cc7dedc8
+ }
+ build() {
+ local meson_options=(
+@@ -13,6 +10,6 @@
+ -D sysprof=disabled
+ -D vapi=disabled
+ )
+-arch-meson libsoup build "${meson_options[@]}"
++artix-meson libsoup build "${meson_options[@]}"
+ meson compile -C build
+ }

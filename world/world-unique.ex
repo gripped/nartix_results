@@ -715,6 +715,8 @@ xl2tpd-dinit
 xl2tpd-openrc
 xl2tpd-runit
 xl2tpd-s6
+xlibre-input-wacom
+xlibre-video-amdgpu
 znc-dinit
 znc-openrc
 znc-runit

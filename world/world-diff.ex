@@ -21,6 +21,7 @@ avahi
 awesome
 bash-bats
 blender
+blosc2
 blueman
 bluez
 bluez-utils
@@ -66,7 +67,6 @@ certbot
 cgmanager
 chromium-bsu
 chrony
-cifs-utils
 cinnamon-control-center
 cinnamon-desktop
 cinnamon-menus
@@ -80,7 +80,6 @@ clamav
 cloud-init
 cmake
 cmus
-coin-or-clp
 colord
 libcolord
 colord-sane
@@ -391,6 +390,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -724,6 +724,7 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-blessed
+python-btrees
 python-cjkwrap
 python-cogapp
 python-cram
@@ -743,6 +744,7 @@ python-sphinx
 python-testfixtures
 python-treq
 python-wheel
+python-wsproto
 qastools
 qbittorrent
 qbittorrent-nox
@@ -847,7 +849,6 @@ qtermwidget
 quazip
 quazip-qt5
 quazip-qt6
-r
 rabbitmq
 rabbitmqadmin
 rawtherapee
@@ -858,7 +859,6 @@ refind
 refind-docs
 ristretto
 rnnoise
-roc-toolkit
 rocalution
 rocfft
 rocrand
@@ -896,8 +896,8 @@ sharutils
 signal-desktop
 smartmontools
 snapper
-softhsm
 solid
+solr
 spice-vdagent
 sqlcipher
 squid
@@ -958,7 +958,6 @@ udisks2
 udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
-ufmt
 umockdev
 unace
 unbound

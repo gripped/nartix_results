@@ -1,0 +1,75 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ pkgbase=ghostty
+ pkgname=(ghostty ghostty-shell-integration ghostty-terminfo)
+-pkgver=1.3.0
+-pkgrel=2
++pkgver=1.2.3
++pkgrel=3
+ pkgdesc='Fast, native, feature-rich terminal emulator pushing modern features'
+ arch=(x86_64 aarch64 i686)
+ url="https://github.com/ghostty-org/$pkgbase"
+@@ -24,13 +24,17 @@
+          zlib)
+ makedepends=(blueprint-compiler
+              pandoc-cli
+-             zig)
++             zig0.14)
+ _archive="$pkgname-$pkgver"
+-source=("$url/archive/v$pkgver/$_archive.tar.gz")
+-sha256sums=('3d05cbdb712ec19ecdc720a2757a09ebf79aaa8d90ae2ae5c0ddd5536ef31be6')
++source=("$url/archive/v$pkgver/$_archive.tar.gz"
++        ghostty-1.2.3-update-schemes-to-working-tag.patch
++    )
++sha256sums=('e17d39482fc70fba3d72f5f25c12e9d9a72b87dd45a61a854d9928e98b69edd8'
++            '4d6b324e79cf6182ab8518f328054a8a31ad1adec613414e1431cbf7a6c30057')
+ 
+ prepare() {
+ 	cd "$_archive"
++    patch -Np1 -i ../ghostty-1.2.3-update-schemes-to-working-tag.patch
+ 	ZIG_GLOBAL_CACHE_DIR="$srcdir/zig-global-cache/" ./nix/build-support/fetch-zig-cache.sh
+ }
+ 
+@@ -45,8 +49,7 @@
+ 		-Dcpu=baseline \
+ 		-Dpie=true \
+ 		-Demit-docs \
+-		-Dversion-string="$pkgver-arch$pkgrel" \
+-		--build-id=sha1
++		-Dversion-string="$pkgver-arch$pkgrel"
+ }
+ 
+ package_ghostty() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -26,5 +26,5 @@
+ pandoc-cli
+ pixman
+ wayland
+-zig
++zig0.14
+ zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd "$_archive"
++patch -Np1 -i ../ghostty-1.2.3-update-schemes-to-working-tag.patch
+ ZIG_GLOBAL_CACHE_DIR="$srcdir/zig-global-cache/" ./nix/build-support/fetch-zig-cache.sh
+ }
+ build() {
+@@ -13,6 +14,5 @@
+ -Dcpu=baseline \
+ -Dpie=true \
+ -Demit-docs \
+--Dversion-string="$pkgver-arch$pkgrel" \
+---build-id=sha1
++-Dversion-string="$pkgver-arch$pkgrel"
+ }

@@ -224,7 +224,6 @@ blackbox
 blinken
 blockdiag
 blosc
-blosc2
 bluedevil
 blueprint-compiler
 bluez-qt
@@ -322,6 +321,7 @@ chmlib
 chromaprint
 chrono-date
 chrpath
+cifs-utils
 cjson
 clang
 clang14
@@ -352,6 +352,7 @@ cogl
 coin-or-asl
 coin-or-cbc
 coin-or-cgl
+coin-or-clp
 coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
@@ -1812,7 +1813,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3315,7 +3315,6 @@ python-braintree
 python-breathe
 python-brotlicffi
 python-btchip
-python-btrees
 python-build
 python-cachecontrol
 python-cached-property
@@ -4593,7 +4592,6 @@ python-wilderness
 python-wrapt
 python-wsaccel
 python-wsgiproxy2
-python-wsproto
 python-wstools
 python-wurlitzer
 python-wxpython
@@ -4762,6 +4760,7 @@ quota-tools
 qutebrowser
 qwindowkit
 qwt
+r
 r8168
 radeontop
 radicale
@@ -4813,6 +4812,7 @@ rkcommon
 rlwrap
 rng-tools
 robin-map
+roc-toolkit
 rocblas
 rocm-clang-ocl
 rocm-cmake
@@ -5319,8 +5319,8 @@ socat
 sof-bin
 sof-firmware
 sof-tools
+softhsm
 solid5
-solr
 sonivox
 sonnet
 sonnet5
@@ -5671,6 +5671,7 @@ uasm
 uchardet
 udiskie
 udpxy
+ufmt
 ufw
 uget
 uglify-js

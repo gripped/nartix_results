@@ -132,9 +132,6 @@ gammastep
 gaphor
 garcon
 gemini-cli
-ghostty
-ghostty-shell-integration
-ghostty-terminfo
 gigolo
 girara
 gitoxide
@@ -531,6 +528,7 @@ sysbench
 t1lib
 tealdeer
 telegram-desktop
+tenacity
 terminus-font
 tesseract-data
 tesseract
