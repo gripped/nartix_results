@@ -1,7 +1,48 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -63,3 +63,4 @@
+@@ -1,8 +1,8 @@
+ 
+ _pyname=openapi-core
+ pkgname=python-$_pyname
+-pkgver=0.23.0
+-pkgrel=1
++pkgver=0.22.0
++pkgrel=2
+ pkgdesc='Client-side and server-side support for the OpenAPI Specification v3'
+ arch=(any)
+ url='https://github.com/p1c2u/openapi-core'
+@@ -14,6 +14,7 @@
+          python-more-itertools
+          python-openapi-schema-validator
+          python-openapi-spec-validator
++         python-parse
+          python-werkzeug)
+ makedepends=(git
+              python-build
+@@ -44,7 +45,7 @@
+               python-responses
+               python-starlette)
+ source=(git+https://github.com/python-openapi/openapi-core#tag=$pkgver)
+-sha256sums=('2b88d8e24f1ce7a3a9ad1155bb2fc906f7714dbcf240b7d729bf205e61e53d1a')
++sha256sums=('f4fb65d16f9499f3dc835973f129db3ab46e8386b364c6f7fe97b3825be85dec')
+ 
+ build() {
+   cd $_pyname
+@@ -62,3 +63,4 @@
    python -m installer --destdir="$pkgdir" dist/*.whl
    install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,5 +8,6 @@
+ python-more-itertools
+ python-openapi-schema-validator
+ python-openapi-spec-validator
++python-parse
+ python-poetry-core
+ python-werkzeug

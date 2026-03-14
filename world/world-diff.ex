@@ -21,7 +21,6 @@ avahi
 awesome
 bash-bats
 blender
-blosc2
 blueman
 bluez
 bluez-utils
@@ -390,7 +389,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -497,6 +495,7 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+marknote
 mate-applets
 mate-backgrounds
 mate-calc
@@ -727,11 +726,11 @@ python-blessed
 python-btrees
 python-cjkwrap
 python-cogapp
+python-colored-traceback
 python-cram
 python-debugpy
 python-google-auth
 python-hidapi
-python-lsprotocol
 python-ndg-httpsclient
 python-pymupdf
 python-pyrfc3339
@@ -877,7 +876,6 @@ rust-wasm
 lib32-rust-libs
 rust-aarch64-gnu
 rust-aarch64-musl
-rustup
 samba
 libwbclient
 ldb

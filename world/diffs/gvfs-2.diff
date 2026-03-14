@@ -9,7 +9,7 @@
    udisks2
  )
  makedepends=(
-@@ -79,10 +77,12 @@
+@@ -75,10 +73,12 @@
  
  build() {
    local meson_options=(
@@ -23,7 +23,7 @@
    meson compile -C build
  }
  
-@@ -124,7 +124,6 @@
+@@ -120,7 +120,6 @@
  
      _pick afc \
        usr/lib/gvfs{-afc-volume-monitor,d-afc} \
@@ -31,7 +31,7 @@
        usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
        usr/share/gvfs/mounts/afc.mount \
        usr/share/gvfs/remote-volume-monitors/afc.monitor
-@@ -137,7 +136,6 @@
+@@ -133,7 +132,6 @@
  
      _pick goa \
        usr/lib/gvfs-goa-volume-monitor \
@@ -39,7 +39,7 @@
        usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
        usr/share/gvfs/remote-volume-monitors/goa.monitor
  
-@@ -147,14 +145,12 @@
+@@ -143,14 +141,12 @@
  
      _pick gphoto2 \
        usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \

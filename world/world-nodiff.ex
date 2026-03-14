@@ -224,6 +224,7 @@ blackbox
 blinken
 blockdiag
 blosc
+blosc2
 bluedevil
 blueprint-compiler
 bluez-qt
@@ -591,6 +592,7 @@ evolution
 evolution-bogofilter
 evolution-spamassassin
 evtest
+ex-vi-compat
 exempi
 exfat-utils
 exfatprogs
@@ -1813,6 +1815,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2305,7 +2308,6 @@ markdownlint
 markdownpart
 marked-man
 marked
-marknote
 massif-visualizer
 mat2
 materia-kde
@@ -3376,7 +3378,6 @@ python-cmarkgfm
 python-cmd2
 python-cmsis-pack-manager
 python-colorama
-python-colored-traceback
 python-coloredlogs
 python-colorlog
 python-colour
@@ -3804,6 +3805,7 @@ python-looseversion
 python-lsp-black
 python-lsp-jsonrpc
 python-lsp-server
+python-lsprotocol
 python-lupa
 python-lxml-html-clean
 python-lxml
@@ -5227,6 +5229,7 @@ python-ruff
 run-parts
 runc
 rust-bindgen
+rustup
 rutabaga-ffi
 rxvt-unicode
 rxvt-unicode-terminfo
