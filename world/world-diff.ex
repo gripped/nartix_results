@@ -36,6 +36,10 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
+bullet
+bullet-dp
+bullet-docs
+python-pybullet
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -76,6 +80,7 @@ cinnamon-translations
 cinnamon
 cjs
 clamav
+clang
 cloud-init
 cmake
 cmus
@@ -83,6 +88,7 @@ colord
 libcolord
 colord-sane
 colord-docs
+compiler-rt
 composable-kernel
 conky
 conmon
@@ -368,6 +374,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
+libclc
 libdaemon
 libdc1394
 libdca
@@ -389,6 +396,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -450,6 +458,9 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+lld
+lldb
+llvm
 llvm14
 lm_sensors
 localsearch
@@ -495,7 +506,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-marknote
 mate-applets
 mate-backgrounds
 mate-calc
@@ -590,6 +600,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs
 nsd
 nushell
 nvidia-340xx-utils
@@ -615,8 +626,10 @@ open-iscsi
 openbox
 opencollada
 opendht
+openmp
 openrct2
 openresolv
+openshadinglanguage
 opensmtpd
 opensnitch
 opensp
@@ -718,6 +731,9 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
+pyside6
+pyside6-tools
+shiboken6
 pysolfc
 python-anytree
 python-aresponses
@@ -731,7 +747,9 @@ python-cram
 python-debugpy
 python-google-auth
 python-hidapi
+python-manuel
 python-ndg-httpsclient
+python-pydot
 python-pymupdf
 python-pyrfc3339
 python-pyscard
@@ -842,6 +860,7 @@ qt6-multimedia
 qt6-multimedia-ffmpeg
 qt6-multimedia-gstreamer
 qt6-serialport
+qt6-tools
 qt6-webengine
 qterminal
 qtermwidget
@@ -899,6 +918,7 @@ solr
 spice-vdagent
 sqlcipher
 squid
+sshfs
 sshguard
 sslh
 sssd
@@ -1073,7 +1093,10 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
+wasi-compiler-rt
 wasi-libc
+wasi-libcplusplus
+wasi-libc++abi
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

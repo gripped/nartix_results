@@ -1,0 +1,79 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,17 +4,17 @@
+          pyside6-tools
+          shiboken6)
+ pkgver=6.10.2
+-pkgrel=2
++pkgrel=3.1
+ arch=(x86_64)
+ url='https://www.qt.io'
+ license=(GPL-3.0-only
+          LGPL-3.0-only
+          LicenseRef-Qt-Commercial
+          Qt-GPL-exception-1.0)
+-makedepends=(clang21
++makedepends=(clang
+              cmake
+              git
+-             llvm21
++             llvm
+              ninja
+              python-numpy
+              python-setuptools
+@@ -53,8 +53,6 @@
+ }
+ 
+ build() {
+-  export CLANG_INSTALL_DIR=/usr/lib/llvm21
+-  export LLVM_INSTALL_DIR=/usr/lib/llvm21
+   cmake -B build -S pyside-setup -G Ninja \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_BUILD_TYPE=None \
+@@ -68,12 +66,12 @@
+ 
+ package_shiboken6() {
+   pkgdesc='Generates bindings for C++ libraries using CPython source code'
+-  depends=(clang21
++  depends=(clang
+            gcc-libs
+            glibc
+            libxml2
+            libxslt
+-           llvm21
++           llvm
+            python
+            qt6-base)
+   optdepends=('python: Python bindings')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,11 @@
+-clang21
++clang
+ cmake
+ gcc-libs
+ git
+ glibc
+ libxml2
+ libxslt
+-llvm21
++llvm
+ ninja
+ pyside6
+ python
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,8 +4,6 @@
+ patch -p1 -i ../fix-header-install-dir.patch # Revert broken header install dir
+ }
+ build() {
+-export CLANG_INSTALL_DIR=/usr/lib/llvm21
+-export LLVM_INSTALL_DIR=/usr/lib/llvm21
+ cmake -B build -S pyside-setup -G Ninja \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_BUILD_TYPE=None \

@@ -263,10 +263,6 @@ bubblewrap
 bubblewrap-suid
 buf
 build2
-bullet
-bullet-dp
-bullet-docs
-python-pybullet
 byacc
 bzip3
 c-ares
@@ -324,7 +320,6 @@ chrono-date
 chrpath
 cifs-utils
 cjson
-clang
 clang14
 clang15
 clang16
@@ -366,7 +361,6 @@ colord-kde
 colordiff
 colorgcc
 comgr
-compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
@@ -1678,7 +1672,6 @@ libcerf
 libcgif
 libchamplain
 libchewing
-libclc
 libcloudproviders
 libcloudproviders-docs
 libcmis
@@ -1815,7 +1808,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2162,15 +2154,12 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
-lld
 lld16
 lld18
 lld19
 lld20
-lldb
 llhttp
 llvm-julia
-llvm
 llvm15
 llvm16
 llvm18
@@ -2308,6 +2297,7 @@ markdownlint
 markdownpart
 marked-man
 marked
+marknote
 massif-visualizer
 mat2
 materia-kde
@@ -2416,6 +2406,7 @@ musl
 musl-aarch64
 musl-riscv64
 mutt
+mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
@@ -2480,7 +2471,6 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
-nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2574,7 +2564,6 @@ openjpeg2
 openjph
 openjph-doc
 openlibm
-openmp
 openmpi
 openmpi-docs
 openntpd
@@ -2582,7 +2571,6 @@ openpgl
 openpmix
 openpmix-docs
 openscenegraph
-openshadinglanguage
 opensips
 openslide
 opensmtpd-filter-dkimsign
@@ -3175,9 +3163,6 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
-pyside6
-pyside6-tools
-shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3819,7 +3804,6 @@ python-magic
 python-mailmanclient
 python-mako
 python-mamba
-python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
@@ -4090,7 +4074,6 @@ python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
-python-pydot
 python-pydrive
 python-pyee
 python-pyelftools
@@ -4740,7 +4723,6 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -5361,7 +5343,6 @@ squashfuse
 sratom
 sratom-docs
 srt
-sshfs
 sshpass
 sshuttle
 startup-notification
@@ -5778,9 +5759,6 @@ w3m
 wacomtablet
 waf
 warpinator
-wasi-compiler-rt
-wasi-libcplusplus
-wasi-libc++abi
 wasm-component-ld
 wasm-pkg-tools
 wasm-tools

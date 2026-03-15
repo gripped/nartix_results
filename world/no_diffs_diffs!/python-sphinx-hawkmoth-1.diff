@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-sphinx-hawkmoth
+ pkgver=0.22.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Sphinx autodoc C extension"
+ url="https://github.com/jnikula/hawkmoth"
+ arch=(x86_64)
 @@ -51,3 +51,4 @@
    install -Dm644 hawkmoth/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
  }

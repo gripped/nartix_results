@@ -1,0 +1,111 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=('lib32-llvm' 'lib32-llvm-libs')
+-pkgver=22.1.1
++pkgver=21.1.8
+ pkgrel=1
+ epoch=1
+ arch=('x86_64')
+@@ -10,8 +10,14 @@
+              'lib32-libxml2' 'python')
+ options=('staticlibs' '!lto') # tools/llvm-shlib/typeids.test fails with LTO
+ _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
+-source=($_source_base/llvm-project-$pkgver.src.tar.xz{,.sig})
+-sha256sums=('9c6f37f6f5f68d38f435d25f770fc48c62d92b2412205767a16dac2c942f0c95'
++source=($_source_base/llvm-$pkgver.src.tar.xz{,.sig}
++        $_source_base/cmake-$pkgver.src.tar.xz{,.sig}
++        $_source_base/third-party-$pkgver.src.tar.xz{,.sig})
++sha256sums=('d9022ddadb40a15015f6b27e6549a7144704ded8828ba036ffe4b8165707de21'
++            'SKIP'
++            '85735f20fd8c81ecb0a09abb0c267018475420e93b65050cc5b7634eab744de9'
++            'SKIP'
++            '7fe99424384aea529ffaeec9cc9dfb8b451fd1852c03fc109e426fe208a1f1a7'
+             'SKIP')
+ validpgpkeys=('474E22316ABF4785A88C6E8EA2C794A986419D8A'  # Tom Stellard <tstellar@redhat.com>
+               'D574BD5D1D0E98895E3BF90044F2485E45D59042'  # Tobias Hieta <tobias@hieta.se>
+@@ -46,14 +52,15 @@
+ }
+ 
+ prepare() {
+-  cd llvm-project-$pkgver.src/llvm
++  rename -v -- "-$pkgver.src" '' {cmake,third-party}-$pkgver.src
++  cd llvm-$pkgver.src
+   mkdir build
+ 
+   rm cmake/modules/Findzstd.cmake
+ }
+ 
+ build() {
+-  cd llvm-project-$pkgver.src/llvm/build
++  cd llvm-$pkgver.src/build
+ 
+   CFLAGS=${CFLAGS/-g /-g1 }
+   CXXFLAGS=${CXXFLAGS/-g /-g1 }
+@@ -99,9 +106,9 @@
+ 
+ package_lib32-llvm() {
+   pkgdesc="Compiler infrastructure (32-bit)"
+-  depends=('lib32-llvm-libs' 'llvm' 'lib32-gcc-libs' 'lib32-glibc')
++  depends=('lib32-llvm-libs' 'llvm')
+ 
+-  cd llvm-project-$pkgver.src/llvm/build
++  cd llvm-$pkgver.src/build
+ 
+   DESTDIR="$pkgdir" ninja install-distribution
+ 
+@@ -113,12 +120,12 @@
+   find "$pkgdir/usr/bin" -mindepth 1 -not -name llvm-config -delete
+   mv "$pkgdir"/usr/bin/llvm-config{,32}
+ 
+-  install -Dm644 "$srcdir/llvm-project-$pkgver.src/llvm/LICENSE.TXT" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
++  install -Dm644 ../LICENSE.TXT "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+ 
+ package_lib32-llvm-libs() {
+   pkgdesc="LLVM runtime libraries (32-bit) "
+-  depends=('lib32-gcc-libs' 'lib32-glibc' 'lib32-zlib' 'lib32-zstd' 'lib32-libffi'
++  depends=('lib32-gcc-libs' 'lib32-zlib' 'lib32-zstd' 'lib32-libffi'
+            'lib32-ncurses' 'lib32-libxml2')
+ 
+   install -d "$pkgdir/usr/lib32"
+@@ -130,7 +137,7 @@
+   install -d "$pkgdir/usr/lib32/bfd-plugins"
+   ln -s ../LLVMgold.so "$pkgdir/usr/lib32/bfd-plugins/LLVMgold.so"
+ 
+-  install -Dm644 "$srcdir/llvm-project-$pkgver.src/llvm/LICENSE.TXT" \
++  install -Dm644 "$srcdir/llvm-$pkgver.src/LICENSE.TXT" \
+     "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
+ lib32-gcc-libs
+-lib32-glibc
+ lib32-libffi
+ lib32-libxml2
+ lib32-llvm-libs
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,10 +1,11 @@
+ prepare() {
+-cd llvm-project-$pkgver.src/llvm
++rename -v -- "-$pkgver.src" '' {cmake,third-party}-$pkgver.src
++cd llvm-$pkgver.src
+ mkdir build
+ rm cmake/modules/Findzstd.cmake
+ }
+ build() {
+-cd llvm-project-$pkgver.src/llvm/build
++cd llvm-$pkgver.src/build
+ CFLAGS=${CFLAGS/-g /-g1 }
+ CXXFLAGS=${CXXFLAGS/-g /-g1 }
+ local cmake_args=(

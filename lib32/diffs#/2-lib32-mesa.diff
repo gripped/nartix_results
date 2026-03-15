@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+   lib32-vulkan-mesa-implicit-layers
+   lib32-vulkan-mesa-layers
+ )
+-pkgver=26.0.2
++pkgver=26.0.1
+ _pkgver=${pkgver/[a-z]/-&}
+ pkgrel=1
+ epoch=1
 @@ -52,7 +52,6 @@
    lib32-rust-libs
    lib32-spirv-llvm-translator
@@ -8,6 +17,24 @@
    lib32-vulkan-icd-loader
    lib32-wayland
    lib32-xcb-util-keysyms
+@@ -137,7 +136,7 @@
+   )
+ done
+ 
+-b2sums=('ab15b94cd59afcd2cdfb6efab58c703965697b42b6750c71ed07c60f50310aee67474c7dc208d6d72aa2a497bdb19b135b0218c41788eaa104b0d7b71824bfd8'
++b2sums=('927782ac7500b75b3e146cb2bf42965cbaa414da4141e19d90bfe87365273ce647e4bbf32987a42d6e83e34c31c0614b6296fa3fa8bba32c79124b2a37c76319'
+         'SKIP'
+         'cc21d419a6f60c13cb0da7e3ec0cc741759e3c17afc79b0d8def35159e8584ed94580afac83ab5fbba6158c7eb1999470a4650bfc532bd4343be2166d85aa571'
+         '431439d31632d177aeb15f910b4f546efa76d54fc74fc8e140399dc5e54eca33fd606f11dbfb48fa83067c8474ee512e62751895d5948367b65ab08b984284e5'
+@@ -170,7 +169,7 @@
+         '7681b1a7497b5711e663773c1a7e076f333c06c10d3f289079a781c36f050c1620cc279742ea8e5b15ec48f3d6038a6079bbda7fee3ae8e1128bd916d53ed43a'
+         '93385f64103fdb482bec34c7912474ae7a5935948715e6eb9a54907e0db5c39f089f6cd393bab33c935c59a1bbb0f4099431f206343811c1a450554d96a35756')
+ 
+-sha256sums=('973f535221be211c6363842b4cce9ef8e9b3e1d5ea86c5450ca86060163c7346'
++sha256sums=('bb5104f9f9a46c9b5175c24e601e0ef1ab44ce2d0fdbe81548b59adc8b385dcc'
+             'SKIP'
+             '46191b06854b253fac666fb201063a42c1c793a5eb9ae88614b743291e076d2e'
+             '67914ab451f3bfd2e69e5e9d2ef3858484e7074d63f204fd166ec391b54de21d'
 @@ -247,7 +246,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"

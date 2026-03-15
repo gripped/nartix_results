@@ -231,8 +231,10 @@ sneedacity
 snooze
 socklog
 sonic-desktop-interface
+sonic-screen-library
 sonic-silver-sddm
 sonic-silver-theme
+sonic-system-info
 sonic-win
 sonic-workspace
 sonicde-meta

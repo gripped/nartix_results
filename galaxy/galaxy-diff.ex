@@ -1,5 +1,9 @@
 alsa-utils
 autorandr
+bcc
+bcc-libbpf-tools
+bcc-examples
+python-bcc
 bsd-games
 cinnamon-desktop
 cosmic-applets
