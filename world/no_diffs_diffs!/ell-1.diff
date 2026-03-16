@@ -1,21 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
- 
- pkgname=ell
--pkgver=0.83
-+pkgver=0.82
- pkgrel=1
- pkgdesc="Embedded Linux library"
- arch=(x86_64)
+@@ -7,7 +7,7 @@
  url="https://git.kernel.org/pub/scm/libs/ell/ell.git/"
  license=('LGPL-2.1-or-later')
  depends=('libgcc' 'glibc')
 -checkdepends=('dbus' 'procps-ng')
 +checkdepends=('dbus' 'procps-ng' 'udev')
  source=(https://mirrors.edge.kernel.org/pub/linux/libs/$pkgname/$pkgname-$pkgver.tar.{xz,sign})
--sha256sums=('39a562f5ab2768e69da1ffbb1f98a8eb3483baffc7d2ef6adc3705e4fd4e53fb'
-+sha256sums=('133a9273151090b4cc37676063cc00ff350a093032ba20a2aaf8b3c5fd6f8b6d'
+ sha256sums=('39a562f5ab2768e69da1ffbb1f98a8eb3483baffc7d2ef6adc3705e4fd4e53fb'
              'SKIP')
- validpgpkeys=('E932D120BC2AEC444E558F0106CA9F5D1DCF2659') # "Marcel Holtmann <marcel@holtmann.org>"
- 

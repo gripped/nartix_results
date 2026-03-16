@@ -1,15 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -5,8 +5,8 @@
    lib32-harfbuzz-cairo
    lib32-harfbuzz-icu
  )
 -pkgver=13.1.1
+-pkgrel=2
 +pkgver=13.1.0
- pkgrel=1
++pkgrel=1
  pkgdesc="OpenType text shaping engine - 32-bit"
  url="https://harfbuzz.github.io/"
-@@ -33,7 +33,7 @@
+ arch=(x86_64)
+@@ -22,7 +22,6 @@
+   lib32-glibc
+   lib32-icu
+   lib32-libpng
+-  lib32-zlib
+   meson
+   python
+   ragel
+@@ -34,7 +33,7 @@
  source=(
    "git+https://github.com/harfbuzz/harfbuzz?signed#tag=$pkgver"
  )
@@ -18,7 +28,7 @@
  validpgpkeys=(
    053D20F17CCCA9651B2C6FCB9AB24930C0B997A2 # Khaled Hosny <khaled@aliftype.com> (@khaledhosny)
    9F377DDB6D3153A48EB3EB1E63CC496475267693 # Caleb Maclennan <caleb@alerque.com> (@alerque)
-@@ -57,7 +57,7 @@
+@@ -58,7 +57,7 @@
    CFLAGS="${CFLAGS/-fexceptions/}"
    CXXFLAGS="${CXXFLAGS/-fexceptions/}"
  
@@ -27,11 +37,36 @@
    meson compile -C build
  }
  
+@@ -86,7 +85,6 @@
+     lib32-glib2 libg{lib,object}-2.0.so
+     lib32-glibc
+     lib32-libpng libpng16.so
+-    lib32-zlib libz.so
+   )
+   provides=(libharfbuzz{,-{subset,gobject,raster,vector}}.so)
+ 
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -11,7 +11,6 @@
+ lib32-harfbuzz
+ lib32-icu
+ lib32-libpng
+-lib32-zlib
+ libcairo.so
+ libfreetype.so
+ libglib-2.0.so
+@@ -19,7 +18,6 @@
+ libharfbuzz.so
+ libicuuc.so
+ libpng16.so
+-libz.so
+ meson
+ python
+ ragel
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

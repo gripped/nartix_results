@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=valkey
--pkgver=9.0.3
-+pkgver=8.1.4
- pkgrel=1
- pkgdesc='An in-memory database that persists on disk'
- arch=('x86_64')
 @@ -13,11 +13,11 @@
    glibc
    jemalloc
@@ -22,7 +14,7 @@
  )
  checkdepends=(
    procps-ng
-@@ -36,17 +36,13 @@
+@@ -36,8 +36,6 @@
  install=valkey.install
  source=(
    git+https://github.com/valkey-io/valkey.git#tag=${pkgver}
@@ -31,30 +23,24 @@
    valkey.sysusers
    valkey.tmpfiles
    valkey.conf-sane-defaults.patch
-   valkey-5.0-use-system-jemalloc.patch
+@@ -45,8 +43,6 @@
    remove-deprecated-use-of-je_calloc.patch
  )
--sha512sums=('c1a593106ac783f3559c8cb174887e6dbe81e40a749833cfffdfbaf1bde21eb7ea2e66af152df0b9446ff970c4f19639da82163cc7fc8e6165d63097c0b22e9b'
+ sha512sums=('c1a593106ac783f3559c8cb174887e6dbe81e40a749833cfffdfbaf1bde21eb7ea2e66af152df0b9446ff970c4f19639da82163cc7fc8e6165d63097c0b22e9b'
 -            '8bfd088935615ee5fc192dea2d9efac970eb4d6b0147182da2ab59bfaca13a6109705db3941cb5c6fc071d093e33728f7a91680c3bc13d5a9242d6ce479f87e7'
 -            'e8064a16aa65e313583bc45389d53a546c367e7b74c23ad7754dd7d92e58474d64759f1cbc0d5b6a169bf215346c1eadc71e71c8a4b6e9601f2d01dcde632bb8'
-+sha512sums=('31c9e393e4192b11c15b9f4b6fe69b954d5e7121d9c4f696c0e4b084c387aff72b70dae35c2e8e2b3b02e9234eb73bc82c5b2bee49817e766d63832b02c6f4c7'
              'd47185f700293304b5c23caf59999fecda2d1485a28a5eeff3a2922906f0184794d3eeeeeaac2ca415b865d7c4b5d74f88e694d34eeb6d1ee3a6bedbcd6edfdd'
              '11cf6d6999329af7a9fa4bcbbcf22242b461cec0c16ad949cc6b0383703f19417092782569bf6224f94167a560de0b4ba53ec0d8522683736a14f01bc5986b28'
              '032b19af22dd96c7898aa3dcae76d63fd8566c1d35ccb069e22fd0b76612d3285cd318f26ad5994b4f761f44a23c091d5322dec975b9a5a8cc65455399576045'
-@@ -68,8 +64,11 @@
+@@ -68,7 +64,6 @@
  
  build() {
    make BUILD_TLS=yes \
 -       USE_SYSTEMD=yes \
         -C $pkgname
-+}
-+
-+check() {
-+  make test -C $pkgname
  }
  
- package() {
-@@ -81,8 +80,4 @@
+@@ -81,8 +76,4 @@
    install -Dm644 "$srcdir"/valkey.sysusers "$pkgdir"/usr/lib/sysusers.d/valkey.conf
    install -Dm644 "$srcdir"/valkey.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/valkey.conf
  

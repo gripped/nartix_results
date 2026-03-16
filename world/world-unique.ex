@@ -560,6 +560,12 @@ sndio-runit
 sndio-s6
 snooze
 socklog
+sonic-desktop-interface
+sonic-screen-library
+sonic-silver-sddm
+sonic-system-info
+sonic-win
+sonic-workspace
 spamassassin-dinit
 spamassassin-openrc
 spamassassin-runit

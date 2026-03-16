@@ -1,31 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-   postgresql-docs
- )
- pkgver=18.3
--pkgrel=2
-+pkgrel=1
- pkgdesc="Sophisticated object-relational DBMS"
- url="https://www.postgresql.org/"
- arch=(x86_64)
-@@ -27,7 +27,6 @@
+@@ -27,7 +27,7 @@
    numactl libnuma.so
    openssl libcrypto.so libssl.so
    pam libpam.so
 -  systemd-libs libsystemd.so
++
    util-linux-libs
    zlib libz.so
    zstd libzstd.so
-@@ -42,7 +41,6 @@
+@@ -42,7 +42,7 @@
    perl-ipc-run
    python
    readline
 -  systemd
++
    tcl
    util-linux
  )
-@@ -53,27 +51,15 @@
+@@ -53,27 +53,15 @@
    postgresql-check-db-dir.in
    postgresql.logrotate
    postgresql.pam
@@ -53,7 +46,7 @@
           'da6a0dda84638d0c3463abf4bc01e621'
           '9138244e0e6b98acc770931a4b150b86')
  sha256sums=('d95663fbbf3a80f81a9d98d895266bdcb74ba274bcc04ef6d76630a72dee016f'
-@@ -82,9 +68,17 @@
+@@ -82,9 +70,17 @@
              '94af93b53bf7772e6664c239523ef952ffc905a0de3c2c4b2dfc2fe8f3a2efed'
              '6abb842764bbed74ea4a269d24f1e73d1c0b1d8ecd6e2e6fb5fb10590298605e'
              '57dfd072fd7ef0018c6b0a798367aac1abb5979060ff3f9df22d1048bb71c0d5'
@@ -72,7 +65,7 @@
  
  prepare() {
    cd postgresql-${pkgver}
-@@ -117,7 +111,7 @@
+@@ -117,7 +113,7 @@
      --with-python
      --with-readline
      --with-system-tzdata=/usr/share/zoneinfo
@@ -81,7 +74,7 @@
      --with-tcl
      --with-uuid=e2fs
      --with-zstd
-@@ -205,7 +199,6 @@
+@@ -205,7 +201,6 @@
  
    install -Dm644 postgresql.pam "${pkgdir}/etc/pam.d/postgresql"
    install -Dm644 postgresql.logrotate "${pkgdir}/etc/logrotate.d/postgresql"

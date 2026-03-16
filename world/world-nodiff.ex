@@ -94,6 +94,7 @@ arc-solid-gtk-theme
 arc-icon-theme
 archey3
 archlinux-appstream-data
+ardour
 argyllcms
 aria2
 arianna
@@ -320,6 +321,7 @@ chrono-date
 chrpath
 cifs-utils
 cjson
+clang
 clang14
 clang15
 clang16
@@ -361,6 +363,7 @@ colord-kde
 colordiff
 colorgcc
 comgr
+compiler-rt
 compiler-rt14
 compiler-rt15
 compiler-rt16
@@ -644,6 +647,11 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
+firewalld
+python-firewall
+firewall-config
+firewall-applet
+firewalld-test
 fish
 five-or-more
 flac
@@ -1006,11 +1014,6 @@ gwenview
 gyp
 half
 handbrake
-harfbuzz
-harfbuzz-cairo
-harfbuzz-icu
-harfbuzz-utils
-harfbuzz-docs
 hashcat-utils
 hashcat
 hddtemp
@@ -1187,7 +1190,6 @@ openjdk-src
 java-xmlgraphics-commons
 jbig2dec
 jedi-language-server
-jemalloc
 jenkins
 jitterentropy
 jkqtplotter
@@ -1352,9 +1354,6 @@ kdnssd5
 kdoctools
 kdsingleapplication
 kdsoap-ws-discovery-client
-kdsoap
-kdsoap-qt5
-kdsoap-qt6
 kea
 "$pkgbase
 "$pkgbase
@@ -1672,6 +1671,7 @@ libcerf
 libcgif
 libchamplain
 libchewing
+libclc
 libcloudproviders
 libcloudproviders-docs
 libcmis
@@ -1808,6 +1808,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2154,12 +2155,15 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
+lld
 lld16
 lld18
 lld19
 lld20
+lldb
 llhttp
 llvm-julia
+llvm
 llvm15
 llvm16
 llvm18
@@ -2329,7 +2333,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard
@@ -2552,7 +2555,6 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
-openexr
 openfec
 openfire
 openh264
@@ -2564,6 +2566,7 @@ openjpeg2
 openjph
 openjph-doc
 openlibm
+openmp
 openmpi
 openmpi-docs
 openntpd
@@ -2571,6 +2574,7 @@ openpgl
 openpmix
 openpmix-docs
 openscenegraph
+openshadinglanguage
 opensips
 openslide
 opensmtpd-filter-dkimsign
@@ -3286,6 +3290,7 @@ python-bitarray
 python-bitstring
 python-black
 python-bleach
+python-blessed
 python-blinker
 python-blockbuster
 python-blosc
@@ -3302,6 +3307,7 @@ python-braintree
 python-breathe
 python-brotlicffi
 python-btchip
+python-btrees
 python-build
 python-cachecontrol
 python-cached-property
@@ -3362,7 +3368,9 @@ python-cmake-build-extension
 python-cmarkgfm
 python-cmd2
 python-cmsis-pack-manager
+python-cogapp
 python-colorama
+python-colored-traceback
 python-coloredlogs
 python-colorlog
 python-colour
@@ -3603,6 +3611,7 @@ python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
+python-google-auth
 python-googleapis-common-protos
 python-gp-libs
 python-gpgme
@@ -3804,6 +3813,7 @@ python-magic
 python-mailmanclient
 python-mako
 python-mamba
+python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
@@ -4074,6 +4084,7 @@ python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
+python-pydot
 python-pydrive
 python-pyee
 python-pyelftools
@@ -4141,6 +4152,7 @@ python-pyproject-metadata
 python-pyqt5-sip
 python-pyqt6-sip
 python-pyquery
+python-pyrfc3339
 python-pyro
 python-pyrsistent
 python-pysaml2
@@ -4272,6 +4284,7 @@ python-random2
 python-rapidfuzz
 python-rapidjson
 python-rcssmin
+python-rdflib
 python-re-assert
 python-reactivex
 python-readme-renderer
@@ -4401,6 +4414,7 @@ python-sphinx-notfound-page
 python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
+python-sphinx
 python-sphinx_rtd_theme
 python-sphinxcontrib-apidoc
 python-sphinxcontrib-applehelp
@@ -4462,6 +4476,7 @@ python-tensile
 python-termcolor
 python-terminado
 python-termstyle
+python-testfixtures
 python-testflo
 python-testing.common.database
 python-testing.postgresql
@@ -4496,6 +4511,7 @@ python-tqdm
 python-trailrunner
 python-traitlets
 python-transaction
+python-treq
 python-trio-asyncio
 python-trio
 python-trove-classifiers
@@ -4577,6 +4593,7 @@ python-wilderness
 python-wrapt
 python-wsaccel
 python-wsgiproxy2
+python-wsproto
 python-wstools
 python-wurlitzer
 python-wxpython
@@ -4723,6 +4740,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -5306,6 +5324,7 @@ sof-firmware
 sof-tools
 softhsm
 solid5
+solr
 sonivox
 sonnet
 sonnet5
@@ -5759,6 +5778,8 @@ w3m
 wacomtablet
 waf
 warpinator
+wasi-compiler-rt
+wasi-libc
 wasm-component-ld
 wasm-pkg-tools
 wasm-tools
