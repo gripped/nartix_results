@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -19,7 +19,7 @@
+   uv
  )
- checkdepends=(python-hypothesis)
  source=(
--  $_name-$pkgver.tar.gz::$url/archive/refs/tags/$pkgver.tar.gz
-+  $_name-$pkgver-$pkgrel.tar.gz::$url/archive/refs/tags/$pkgver.tar.gz
-   $pkgname-0.4.4-hypothesis_tests.patch::$url/pull/52.patch
-   $pkgname-0.4.4-set_version.patch::$url/commit/cff1a0a4478c17d4f970d133c06abbf6945b6a5e.patch
+-  $_name-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz
++  $_name-$pkgver-$pkgrel.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz
  )
+ sha512sums=('ccc823895ee23b0bd748b6a780cdc5adaf5961237ab45b4c8f26ccf5a7e78c1a42a58097a548ee6adffb44e9195c82028cb3182de0d23c49ec7494c4d700fde5')
+ b2sums=('199e7407289327ea2ae81d7040e008cd970896fe9774abad44c650feac8dd38b8a9bca54c943520e516064de9dba1f32d21237ba174f6f530f4d3640a9d7ad2d')

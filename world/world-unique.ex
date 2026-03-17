@@ -480,6 +480,7 @@ prosody-runit
 prosody-s6
 python-configparser
 python-dbus
+python-msgspec
 python-pytz-deprecation-shim
 python-screeninfo
 qemu-guest-agent-dinit

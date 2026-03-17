@@ -21,6 +21,7 @@ acpi_call
 acpica
 acpid
 acpilight
+ada
 add-determinism
 adios2
 adobe-source-code-pro-fonts
@@ -1808,7 +1809,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2333,6 +2333,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -2474,6 +2475,7 @@ nodejs-lts-iron
 nodejs-lts-jod
 nodejs-nopt
 nodejs-yaml
+nodejs
 noise-suppression-for-voice
 notify-osd
 notmuch
@@ -2555,6 +2557,7 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
+openexr
 openfec
 openfire
 openh264
@@ -3882,7 +3885,6 @@ python-niche-elf
 python-nine
 python-nitrokey
 python-nkdfu
-python-nltk
 python-nodeenv
 python-noiseprotocol
 python-nose-random
@@ -4097,7 +4099,6 @@ python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
-python-pygame
 python-pygdbmi
 python-pygeos
 python-pygit2
@@ -4171,7 +4172,6 @@ python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
-python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
@@ -4294,7 +4294,6 @@ python-reflink
 python-regex
 python-regress
 python-rencode
-python-reportlab
 python-repoze.lru
 python-requests-aws4auth
 python-requests-credssp

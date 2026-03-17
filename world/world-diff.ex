@@ -396,6 +396,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -548,7 +549,6 @@ vulkan-virtio
 vulkan-mesa-implicit-layers
 vulkan-mesa-layers
 mesa-docs
-meson
 mgba
 libmgba
 mgba-sdl
@@ -597,7 +597,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs
 nsd
 nushell
 nvidia-340xx-utils
@@ -623,7 +622,6 @@ open-iscsi
 openbox
 opencollada
 opendht
-openexr
 openrct2
 openresolv
 opensmtpd
@@ -739,11 +737,15 @@ python-cram
 python-debugpy
 python-hidapi
 python-ndg-httpsclient
+python-nltk
+python-pygame
 python-pymupdf
 python-pyscard
+python-pytest-benchmark
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-reportlab
 python-wheel
 qastools
 qbittorrent

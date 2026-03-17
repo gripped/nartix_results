@@ -7,14 +7,18 @@
 -  mutter-devkit
    mutter-docs
  )
--pkgver=49.4
+-pkgver=49.5
 -pkgrel=1
 +pkgver=48.5
 +pkgrel=2
  pkgdesc="Window manager and compositor for GNOME"
  url="https://gitlab.gnome.org/GNOME/mutter"
  arch=(x86_64)
-@@ -23,7 +22,6 @@
+@@ -19,10 +18,10 @@
+   egl-wayland
+   fontconfig
+   fribidi
++  gcc-libs
    gdk-pixbuf2
    glib2
    glibc
@@ -22,6 +26,14 @@
    gnome-desktop-4
    gnome-settings-daemon
    graphene
+@@ -36,7 +35,6 @@
+   libdisplay-info
+   libdrm
+   libei
+-  libgcc
+   libgirepository
+   libglvnd
+   libgudev
 @@ -67,10 +65,9 @@
    pixman
    python
@@ -41,7 +53,7 @@
 -  "git+https://gitlab.gnome.org/GNOME/gvdb.git#commit=b54bc5da25127ef416858a3ad92e57159ff565b3"
 +  "git+https://gitlab.gnome.org/GNOME/gvdb.git#commit=466fc22016cf0981424e7121557611942191992f"
  )
--b2sums=('200a37cd814697835c3e7da4e63afce8a00503d3cb837758a149c72140d39fca5e225e47daac5700b4e358c2407d58e013acc9e8f3aae46f08d2316dc6f4d0a2'
+-b2sums=('c21e6efd80c90d66884de203c4f6223e70c759f70373df9b24f7d72299493d4a5550cd94954da1ac48730393b5fe87b6f9fd9616951bcbb58653795dde50d66c'
 -        'f989bc2ceb52aad3c6a23c439df3bbc672bc11d561a247d19971d30cc85ed5d42295de40f8e55b13404ed32aa44f12307c9f5b470f2e288d1c9c8329255c43bf')
 +b2sums=('a24df78021a0f2499eae868bd168e2cf08e595a4df8e73ddbdb7bd2c2f24372b5652eccce1bffbfe09dc511abbf45c2ac9dd02f8493d0c2fe7accdda0f4a0819'
 +        'c25796ff54fee353c5fc7a0815c25255b399490148d2bad1f37932d2da66d80561d6e262a5f256c89d142419a504c23eff69f7ef4e65e349f2dea3e0ac0bac1a')
@@ -84,13 +96,13 @@
 -  pkgdesc="GNOME Mutter Development Kit"
 -  depends=(
 -    cairo
--    gcc-libs
 -    glib2
 -    glibc
 -    gtk4
 -    hicolor-icon-theme
 -    libadwaita
 -    libei
+-    libgcc
 -    libpipewire
 -    mutter
 -  )
@@ -105,7 +117,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -14,7 +14,6 @@
+@@ -7,13 +7,13 @@
+ egl-wayland
+ fontconfig
+ fribidi
++gcc-libs
+ gdk-pixbuf2
+ gi-docgen
+ git
  glib2
  glib2-devel
  glibc
@@ -113,7 +132,7 @@
  gnome-desktop-4
  gnome-settings-daemon
  gobject-introspection
-@@ -22,15 +21,14 @@
+@@ -21,16 +21,14 @@
  gsettings-desktop-schemas
  gtk4
  harfbuzz
@@ -126,6 +145,7 @@
  libdisplay-info
  libdrm
  libei
+-libgcc
 +libelogind
  libgirepository
  libglvnd
