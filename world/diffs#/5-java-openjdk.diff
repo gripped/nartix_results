@@ -1,0 +1,147 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,13 +8,13 @@
+   openjdk-doc
+   openjdk-src
+ )
+-_majorver=26
++_majorver=25
+ _minorver=0
+ _securityver=2
+-_updatever=35
+-pkgver=${_majorver}.u${_updatever}
++_updatever=10
++pkgver=${_majorver}.${_minorver}.${_securityver}.u${_updatever}
+ pkgrel=1
+-_git_tag=jdk-${_majorver}+${_updatever}
++_git_tag=jdk-${_majorver}.${_minorver}.${_securityver}+${_updatever}
+ arch=('x86_64')
+ url='https://openjdk.java.net/'
+ license=('LicenseRef-Java')
+@@ -24,6 +24,7 @@
+   bash
+   cpio
+   freetype2
++  gcc-libs
+   giflib
+   glibc
+   graphviz
+@@ -31,11 +32,9 @@
+   lcms2
+   libcups
+   libelf
+-  libgcc
+   libjpeg-turbo
+   libnet
+   libpng
+-  libstdc++
+   libx11
+   libxext
+   libxrandr
+@@ -55,10 +54,10 @@
+   freedesktop-jconsole.desktop
+   freedesktop-jshell.desktop
+ )
+-sha256sums=('958ce142d3aaa26e170dfbf087321219e8bfac60bc41a6a91d7c68455a765d73'
+-            '87d952d0d5d59ccf605ba582f6338eea7b42e8be2df1680634a7a5fb25443afb'
+-            '41548bd89c1300bf5aaae07acb3add82a0a179a2b1c0591e936a9608c718d3c0'
+-            'a3db68d377d5b6541096849404130a07a222859cd61d77eadc0defd09dec9de8')
++sha256sums=('9b3164cedf78d7a76a59499d7a6833145c7e0269ec7b664bfe5ee03ced2f449e'
++            'b800c73efde1b5655fff8d6926c6390e306b375ea72a3066a946011faa05de5a'
++            'a308c7b85339a03718583ceb8b37140fb23c754c30e50f60cee19d7b04c747ba'
++            'cd83d0a053954ea46a37b057e73668d5933deac873630aeaca06dc072c532413')
+ 
+ case "${CARCH}" in
+   x86_64) _JARCH='x86_64';;
+@@ -82,17 +81,16 @@
+   'java-runtime-common>=3'
+   ca-certificates-utils
+   freetype2
++  gcc-libs
+   glibc
+   harfbuzz
+   lcms2
+   libfreetype.so
+-  libgcc
+   libharfbuzz.so
+   libjpeg.so
+   libjpeg-turbo
+   liblcms2.so
+   libnet
+-  libstdc++
+   nss
+ )
+ 
+@@ -105,9 +103,14 @@
+   local _CFLAGS="${CFLAGS//-O2/-O3} ${CPPFLAGS} -fcommon"
+   local _CXXFLAGS="${CXXFLAGS//-O2/-O3} ${CPPFLAGS} -fcommon"
+   local _LDFLAGS=${LDFLAGS}
+-
+-  _CFLAGS=${_CFLAGS/-fexceptions/}
+-  _CXXFLAGS=${_CXXFLAGS/-fexceptions/}
++  if [[ ${CARCH} = i686 ]]; then
++    echo "Removing '-fno-plt' from CFLAGS and CXXFLAGS to prevent build fail with this architecture"
++    _CFLAGS=${CFLAGS/-fno-plt/}
++    _CXXFLAGS=${CXXFLAGS/-fno-plt/}
++  fi
++
++  _CFLAGS=${CFLAGS/-fexceptions/}
++  _CXXFLAGS=${CXXFLAGS/-fexceptions/}
+ 
+   unset CFLAGS
+   unset CXXFLAGS
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,7 @@
+ ca-certificates-utils
+ cpio
+ freetype2
++gcc-libs
+ giflib
+ glibc
+ graphviz
+@@ -11,12 +12,11 @@
+ java-environment-common
+ java-environment>
+ java-runtime-common>
+-jdk26-openjdk
++jdk25-openjdk
+ lcms2
+ libcups
+ libelf
+ libfreetype.so
+-libgcc
+ libgif.so
+ libharfbuzz.so
+ libjpeg-turbo
+@@ -24,7 +24,6 @@
+ liblcms2.so
+ libnet
+ libpng
+-libstdc++
+ libx11
+ libxext
+ libxrandr
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,8 +5,13 @@
+ local _CFLAGS="${CFLAGS//-O2/-O3} ${CPPFLAGS} -fcommon"
+ local _CXXFLAGS="${CXXFLAGS//-O2/-O3} ${CPPFLAGS} -fcommon"
+ local _LDFLAGS=${LDFLAGS}
+-_CFLAGS=${_CFLAGS/-fexceptions/}
+-_CXXFLAGS=${_CXXFLAGS/-fexceptions/}
++if [[ ${CARCH} = i686 ]]; then
++echo "Removing '-fno-plt' from CFLAGS and CXXFLAGS to prevent build fail with this architecture"
++_CFLAGS=${CFLAGS/-fno-plt/}
++_CXXFLAGS=${CXXFLAGS/-fno-plt/}
++fi
++_CFLAGS=${CFLAGS/-fexceptions/}
++_CXXFLAGS=${CXXFLAGS/-fexceptions/}
+ unset CFLAGS
+ unset CXXFLAGS
+ unset LDFLAGS

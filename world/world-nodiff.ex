@@ -265,6 +265,10 @@ bubblewrap
 bubblewrap-suid
 buf
 build2
+bullet
+bullet-dp
+bullet-docs
+python-pybullet
 byacc
 bzip3
 c-ares
@@ -298,7 +302,6 @@ catdoc
 cauchy
 cbatticon
 cbindgen
-ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -1182,12 +1185,6 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-jline
-java-openjdk
-jdk-openjdk
-jre-openjdk
-jre-openjdk-headless
-openjdk-doc
-openjdk-src
 java-xmlgraphics-commons
 jbig2dec
 jedi-language-server
@@ -3170,6 +3167,9 @@ pyside2
 shiboken2
 python-shiboken2
 pyside2-tools
+pyside6
+pyside6-tools
+shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
@@ -3290,7 +3290,6 @@ python-bincopy
 python-biopython
 python-biscuits
 python-bitarray
-python-bitstring
 python-black
 python-bleach
 python-blessed
@@ -3791,7 +3790,6 @@ python-linux-procfs
 python-littleutils
 python-livereload
 python-llvmlite
-python-lmdb
 python-localzone
 python-locket
 python-lockfile
@@ -4086,7 +4084,6 @@ python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
-python-pydot
 python-pydrive
 python-pyee
 python-pyelftools
@@ -4502,7 +4499,6 @@ python-tomli
 python-tomlkit
 python-toolz
 python-toposort
-python-tornado
 python-tox-current-env
 python-tox
 python-tpm2-pytss
@@ -4589,7 +4585,6 @@ python-whatthepatch
 python-wheezy-template
 python-whoosh
 python-wilderness
-python-wrapt
 python-wsaccel
 python-wsgiproxy2
 python-wsproto

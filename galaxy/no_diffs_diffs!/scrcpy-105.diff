@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,7 +15,7 @@
+ 
+ build() {
+   mkdir -p build
+-  arch-meson build $pkgname --buildtype release \
++  artix-meson build $pkgname --buildtype release \
+     -D b_lto=true \
+     -D b_ndebug=true \
+     -D prebuilt_server=../$pkgname-server-$pkgver.apk
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ mkdir -p build
+-arch-meson build $pkgname --buildtype release \
++artix-meson build $pkgname --buildtype release \
+ -D b_lto=true \
+ -D b_ndebug=true \
+ -D prebuilt_server=../$pkgname-server-$pkgver.apk

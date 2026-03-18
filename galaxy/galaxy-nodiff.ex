@@ -6,6 +6,7 @@ acpilight
 ada
 adw-gtk-theme
 alacritty
+anki
 anubis
 arc-gtk-theme
 arc-solid-gtk-theme
@@ -507,6 +508,7 @@ rpi-imager
 rust-script
 sakura
 salt
+scrcpy
 screengrab
 scribus
 scummvm

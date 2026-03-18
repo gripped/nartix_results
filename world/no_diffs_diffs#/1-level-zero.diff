@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,8 +3,8 @@
+ pkgname=(
+     'level-zero-headers'
+     'level-zero-loader')
+-pkgver=1.28.0
+-pkgrel=1
++pkgver=1.27.0
++pkgrel=2
+ pkgdesc='API for accessing low level interfaces in oneAPI platform devices'
+ arch=('x86_64')
+ url='https://github.com/oneapi-src/level-zero/'
+@@ -15,7 +15,7 @@
+     'opencl-headers'
+     'spdlog')
+ source=("https://github.com/oneapi-src/level-zero/archive/v${pkgver}/${pkgbase}-${pkgver}.tar.gz")
+-sha256sums=('92cdffb1e55084857c63672cfe6ef03fd763dec5cca0318d9d02583bf07064a5')
++sha256sums=('b9f5d6c661a23cad78db1552c4951a1bb6f1628e4f737c68e69c3a23d64db2eb')
+ 
+ prepare() {
+     printf '%s\n' "${pkgver##*.}" > "${pkgbase}-${pkgver}/VERSION_PATCH"

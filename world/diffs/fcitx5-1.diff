@@ -6,17 +6,17 @@
  groups=('fcitx5-im')
 -depends=('cairo' 'enchant' 'iso-codes' 'libgl' 'libxkbcommon-x11' 'pango' 'systemd' 'wayland'
 +depends=('cairo' 'enchant' 'iso-codes' 'libgl' 'libxkbcommon-x11' 'pango' 'elogind' 'libuv' 'wayland'
-          'xcb-imdkit' 'xcb-util-wm' 'libxkbfile' 'gdk-pixbuf2')
+          'xcb-imdkit' 'xcb-util-wm' 'libxkbfile' 'gdk-pixbuf2' 'yoga')
  makedepends=('git' 'extra-cmake-modules' 'ninja' 'nlohmann-json' 'wayland-protocols')
  source=("git+https://github.com/fcitx/fcitx5.git#tag=$pkgver?signed"
 @@ -28,6 +28,7 @@
-   cd $pkgname
+   cd fcitx5
  
    cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib \
 +        -DUSE_SYSTEMD=off \
-         -DCMAKE_INSTALL_SYSCONFDIR=/etc -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib .
+         -DCMAKE_INSTALL_SYSCONFDIR=/etc -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib \
+         -DUSE_SYSTEM_YOGA=ON .
    ninja
- }
 
 
 ############# Stripped diff below #################
