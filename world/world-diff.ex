@@ -35,6 +35,11 @@ box2d
 brightnessctl
 brltty
 brltty-udev-generic
+dracut-brltty
+java-brltty
+ocaml-brltty
+python-brltty
+tcl-brltty
 bumblebee
 caja-extensions
 caja-extensions-common
@@ -335,6 +340,7 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 jemalloc
+jrnl
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -625,6 +631,7 @@ open-iscsi
 openbox
 opencollada
 opendht
+openexr
 openrct2
 openresolv
 opensmtpd
@@ -874,6 +881,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-byebug
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem

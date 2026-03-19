@@ -9,20 +9,3 @@
  pkgdesc='A re-implementation of the asyncio mainloop on top of Trio'
  arch=(any)
  url=https://github.com/python-trio/trio-asyncio
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,10 +0,0 @@
--git
--python
--python-build
--python-greenlet
--python-installer
--python-outcome
--python-setuptools
--python-sniffio
--python-trio
--python-wheel

@@ -1194,7 +1194,6 @@ jkqtplotter
 jose
 jp2a
 jq
-jrnl
 jruby
 js102
 js115
@@ -2554,7 +2553,6 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
-openexr
 openfec
 openfire
 openh264
@@ -4891,7 +4889,6 @@ ruby-build-files
 ruby-builder
 ruby-bump
 ruby-bundler
-ruby-byebug
 ruby-cgi
 ruby-character_set
 ruby-chef-utils
@@ -5958,6 +5955,7 @@ yelp-tools
 yelp-xsl
 yelp
 yodl
+yoga
 youtube-dl
 yt-dlp-ejs
 yt-dlp
