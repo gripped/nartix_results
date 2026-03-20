@@ -1,16 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=tor
 -pkgver=0.4.9.5
--pkgrel=1
 +pkgver=0.4.8.10
-+pkgrel=2
+ pkgrel=2
  pkgdesc='Anonymizing overlay network.'
  arch=('x86_64')
- url='https://www.torproject.org/download/tor/'
-@@ -16,35 +16,33 @@
+@@ -8,43 +8,41 @@
+ license=("BSD-3-Clause" "LGPL-3.0-only" "MIT")
+ depends=(
+   'bash'
++  'gcc-libs'
+   'glibc'
+   'libcap.so'
+   'libcrypto.so'
+   'libevent'
+-  'libgcc'
    'liblzma.so'
    'libseccomp.so'
    'libssl.so'
@@ -72,15 +79,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,7 @@
+@@ -1,14 +1,14 @@
  bash
  ca-certificates
 +esysusers
 +etmpfiles
- gcc-libs
++gcc-libs
  glibc
  libcap.so
-@@ -8,7 +10,5 @@
+ libcrypto.so
+ libevent
+-libgcc
  liblzma.so
  libseccomp.so
  libssl.so

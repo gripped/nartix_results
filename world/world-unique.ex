@@ -480,7 +480,6 @@ prosody-runit
 prosody-s6
 python-configparser
 python-dbus
-python-msgspec
 python-pytz-deprecation-shim
 python-screeninfo
 qemu-guest-agent-dinit
@@ -563,9 +562,12 @@ snooze
 socklog
 sonic-desktop-interface
 sonic-screen-library
+sonic-screen
+sonic-screenlocker
 sonic-silver-sddm
 sonic-system-info
 sonic-win
+sonic-workspace-wallpapers
 sonic-workspace
 spamassassin-dinit
 spamassassin-openrc

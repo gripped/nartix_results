@@ -18,6 +18,7 @@ atril
 audacious-plugins
 avahi
 awesome
+aws-cli-v2
 bash-bats
 blender
 blueman
@@ -340,7 +341,6 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 jemalloc
-jrnl
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -387,6 +387,7 @@ libcdio-paranoia
 libdaemon
 libdc1394
 libdca
+libde265
 libdrm
 libdv
 libe-book
@@ -426,6 +427,7 @@ libsidplayfp
 libsoxr
 libstaroffice
 libtg_owt
+libtorrent-rasterbar
 libudev0-shim
 libunwind
 libusbsio
@@ -472,6 +474,7 @@ lm_sensors
 localsearch
 localsearch-testutils
 lua-filesystem
+luksmeta
 lxappearance-obconf-gtk3
 lxappearance-obconf
 lxappearance
@@ -631,7 +634,6 @@ open-iscsi
 openbox
 opencollada
 opendht
-openexr
 openrct2
 openresolv
 opensmtpd
@@ -707,6 +709,7 @@ pipewire-x11-bell
 pipewire-session-manager
 pulse-native-provider
 pkgfile
+plantuml
 plasma-desktop
 plasma-workspace
 plasma-x11-session
@@ -736,17 +739,25 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiobotocore
 python-anytree
 python-aresponses
 python-asn1crypto
+python-aws-xray-sdk
 python-bitstring
+python-cattrs
 python-cjkwrap
+python-click
 python-cram
 python-debugpy
 python-hidapi
+python-jsonpath-ng
 python-lmdb
 python-ndg-httpsclient
 python-nltk
+python-openapi-core
+python-oslo-db
+python-pycparser
 python-pydot
 python-pygame
 python-pymupdf
@@ -756,6 +767,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-reportlab
+python-stevedore
 python-tornado
 python-wheel
 python-wrapt
@@ -881,7 +893,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-byebug
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem

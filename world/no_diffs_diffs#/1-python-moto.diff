@@ -1,5 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-moto
+-pkgver=5.1.22
++pkgver=5.1.21
+ pkgrel=1
+ pkgdesc='Moto is a library to mock out the boto library.'
+ arch=(any)
+@@ -68,7 +68,7 @@
+   'python-jsonschema: for quicksight'
+ )
+ source=("git+https://github.com/getmoto/moto#tag=$pkgver")
+-b2sums=('2815fbb5c1cc3d0f3d7257d3090938658eb6dc556638df9d76bcb24f34b44bdc085a4adaadb38d31bb8b82724e8d3cfabbfa2bfaf486655be57b4283ef1d8f81')
++b2sums=('76b0b5782bb4e14b7da54f0f40777f7bb50ab49852872ac814be67c1be0679c11e9e4c5c1266f8468ff02e52a8c6dbb4b75e6d5e99a0fd12a259b699556e7e2b')
+ 
+ prepare() {
+   cd ${pkgname#python-}
 @@ -86,6 +86,8 @@
      --ignore=tests/test_cognitoidp/test_cognitoidp.py
      -m 'not requires_docker'

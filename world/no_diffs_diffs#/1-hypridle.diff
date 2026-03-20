@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,12 @@
+ 
+ pkgname=hypridle
+ pkgver=0.1.7
+-pkgrel=7
++pkgrel=6
+ pkgdesc='hyprland’s idle daemon'
+ arch=(x86_64 aarch64)
+ url="https://github.com/hyprwm/$pkgname"
+ license=(BSD-3-Clause)
+-depends=(libgcc # libgcc_s.so
+-         'libstdc++' # libstdc++.so
++depends=(gcc-libs # libgcc_s.so libstdc++.so
+          glibc # libc.so libm.so
+          hyprlang libhyprlang.so
+          hyprwayland-scanner
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,12 +1,11 @@
+ cmake
++gcc-libs
+ glibc
+ hyprland-protocols
+ hyprlang
+ hyprwayland-scanner
+-libgcc
+ libhyprlang.so
+ libsdbus-c++.so
+-libstdc++
+ libwayland-client.so
+ sdbus-cpp
+ wayland

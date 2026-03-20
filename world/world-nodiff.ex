@@ -175,7 +175,6 @@ aws-c-mqtt
 aws-c-s3
 aws-c-sdkutils
 aws-checksums
-aws-cli-v2
 aws-cli
 aws-crt-cpp
 aws-sdk-cpp
@@ -1194,6 +1193,7 @@ jkqtplotter
 jose
 jp2a
 jq
+jrnl
 jruby
 js102
 js115
@@ -1690,7 +1690,6 @@ libdbusmenu-qt5
 libdbusmenu
 libdbusmenu-gtk2
 libdbusmenu-gtk3
-libde265
 libdecor
 libdeflate
 libdex
@@ -2031,7 +2030,6 @@ libtiger
 libtlsrpt
 libtomcrypt
 libtommath
-libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -2218,7 +2216,6 @@ lua51-socket
 lua52-socket
 lua53-socket
 luit
-luksmeta
 lv2
 lv2-docs
 lv2-example-plugins
@@ -2553,6 +2550,7 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
+openexr
 openfec
 openfire
 openh264
@@ -3013,7 +3011,6 @@ pimcommon
 pixman
 pkcs11-helper
 plank
-plantuml
 plasma-activities-stats
 plasma-activities
 plasma-browser-integration
@@ -3180,7 +3177,6 @@ python-accessible-pygments
 python-acme
 python-adal
 python-adblock
-python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3261,7 +3257,6 @@ python-automat
 python-autopage
 python-awesomeversion
 python-aws-sam-translator
-python-aws-xray-sdk
 python-awscrt
 python-axolotl-curve25519
 python-axolotl
@@ -3327,7 +3322,6 @@ python-calver
 python-canonicaljson
 python-capstone6pwndbg
 python-case
-python-cattrs
 python-cbor2
 python-cchardet
 python-celery
@@ -3357,7 +3351,6 @@ python-click-log
 python-click-option-group
 python-click-plugins
 python-click-repl
-python-click
 python-cliff
 python-cligj
 python-clikit
@@ -3731,7 +3724,6 @@ python-jsondiff
 python-jsonlines
 python-jsonmerge
 python-jsonpatch
-python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
@@ -3851,6 +3843,7 @@ python-mpd2
 python-mpi4py
 python-mpmath
 python-msgpack
+python-msgspec
 python-mss
 python-mujson
 python-multidict
@@ -3904,7 +3897,6 @@ python-odfpy
 python-omemo-dr
 python-onigurumacffi
 python-openai
-python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
@@ -3923,7 +3915,6 @@ python-oscrypto
 python-oslo-concurrency
 python-oslo-config
 python-oslo-context
-python-oslo-db
 python-oslo-i18n
 python-oslo-log
 python-oslo-serialization
@@ -4067,7 +4058,6 @@ python-pycares
 python-pychm
 python-pycodestyle
 python-pycountry
-python-pycparser
 python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt
@@ -4444,7 +4434,6 @@ python-statsmodels
 python-stdlibs
 python-stem
 python-stestr
-python-stevedore
 python-stone
 python-straight.plugin
 python-strawberry-graphql
@@ -4889,6 +4878,7 @@ ruby-build-files
 ruby-builder
 ruby-bump
 ruby-bundler
+ruby-byebug
 ruby-cgi
 ruby-character_set
 ruby-chef-utils

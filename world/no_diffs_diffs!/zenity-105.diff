@@ -1,35 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
- 
- pkgname=zenity
--pkgver=4.2.1
-+pkgver=4.2.2
- pkgrel=1
- pkgdesc="Display graphical dialog boxes from shell scripts"
- url="https://gitlab.gnome.org/GNOME/zenity"
- arch=(x86_64)
- license=(LGPL-2.1-or-later)
- depends=(
--  gcc-libs
-   glib2
-   glibc
-   gtk4
-   hicolor-icon-theme
-   libadwaita
-+  libgcc
-   pango
- )
- makedepends=(
-@@ -24,7 +24,7 @@
-   yelp-tools
- )
- source=("git+$url.git?signed#tag=$pkgver")
--b2sums=('8c1bac960486e7b644d2b52bebbdda9949c87ea7d893aa56b55e4ae5e38404ca2902b557bb61d262f5b558237d485f5f359f489a01015c874e7515b71d8ed14c')
-+b2sums=('474d672bb62d614023d3cbd7da8b1e35a97d5edd2160ffe233cc96caf27ea479f2e6fd7cc0ae11aaa554e94aeece26035ca1deec2436873f5bfcff1ae6974f12')
- validpgpkeys=(
-   98FF7532A4639119B8FB4F15E520923A38618D6C # Logan Rathbone (GNOME) <larathbone@gnome.org>
- )
 @@ -34,7 +34,7 @@
  }
  
@@ -43,21 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,4 +1,3 @@
--gcc-libs
- git
- glib2
- glib2-devel
-@@ -7,6 +6,7 @@
- help2man
- hicolor-icon-theme
- libadwaita
-+libgcc
- meson
- pango
- util-linux
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

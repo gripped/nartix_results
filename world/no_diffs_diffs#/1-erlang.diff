@@ -1,15 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -36,7 +36,7 @@
+@@ -36,13 +36,14 @@
    erlang-wx
    erlang-xmerl
  )
 -pkgver=28.4.1
+-pkgrel=2
 +pkgver=28.3.1
- pkgrel=1
++pkgrel=1
  pkgdesc='General-purpose concurrent functional programming language developed by Ericsson'
  arch=(x86_64)
-@@ -67,13 +67,9 @@
+ url='https://erlang.org/'
+ license=(Apache-2.0)
+ makedepends=(
++  gcc-libs
+   git
+   glib2
+   glibc
+@@ -66,13 +67,9 @@
  source=(
    "git+https://github.com/erlang/otp#tag=OTP-$pkgver"
    epmd.conf
@@ -25,7 +33,7 @@
  
  prepare() {
    cd otp
-@@ -179,9 +175,8 @@
+@@ -178,9 +175,8 @@
  package_erlang-core() {
    pkgdesc='Erlang core components (compiler, crypto, erts, kernel, stdlib)'
    depends=(
@@ -37,7 +45,7 @@
      lksctp-tools
      ncurses
      openssl
-@@ -195,7 +190,6 @@
+@@ -194,7 +190,6 @@
      erlang-stdlib
    )
  
@@ -45,6 +53,14 @@
    install -vDm644 epmd.conf "$pkgdir/etc/conf.d/epmd"
  
    cd otp
+@@ -316,7 +311,6 @@
+   depends=(
+     erlang-core
+     erlang-syntax_tools
+-    glibc
+   )
+   cp -va -t "$pkgdir" "$pkgname/"*
+ }
 @@ -558,12 +552,11 @@
    pkgdesc='A library for wxWidgets support in Erlang'
    depends=(
@@ -65,7 +81,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -37,9 +37,7 @@
+@@ -30,15 +30,14 @@
+ erlang-tools
+ erlang-wx
+ erlang-xmerl
++gcc-libs
+ git
+ glib2
+ glibc
  glu
  java-environment
  java-runtime
