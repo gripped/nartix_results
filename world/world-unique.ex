@@ -561,10 +561,15 @@ sndio-s6
 snooze
 socklog
 sonic-desktop-interface
+sonic-frameworks-keybind
+sonic-globalacceld
+sonic-interface-libraries
+sonic-keybind-daemon
 sonic-screen-library
 sonic-screen
 sonic-screenlocker
 sonic-silver-sddm
+sonic-sysguard-library
 sonic-system-info
 sonic-win
 sonic-workspace-wallpapers

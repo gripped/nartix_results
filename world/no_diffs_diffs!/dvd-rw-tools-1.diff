@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=dvd+rw-tools
+ pkgver=7.1
+-pkgrel=13
++pkgrel=12
+ pkgdesc="Tools to master DVD media"
+ arch=(x86_64)
+-url='https://web.archive.org/web/20250512175714/https://fy.chalmers.se/~appro/linux/DVD+RW/'
++url='https://fy.chalmers.se/~appro/linux/DVD+RW'
+ license=(GPL-2.0-or-later)
+ depends=(
+   cdrtools
++  gcc-libs
+   glibc
+-  libstdc++
+ )
+ source=(
+   "https://ftp2.osuosl.org/pub/blfs/conglomeration/dvd+rw-tools/$pkgname-$pkgver.tar.gz"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,3 @@
+ cdrtools
++gcc-libs
+ glibc
+-libstdc++

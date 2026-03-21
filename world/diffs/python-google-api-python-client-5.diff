@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,26 @@
+ 
+ pkgname=python-google-api-python-client
+-pkgver=2.141.0
+-pkgrel=1
++pkgver=2.140.0
++pkgrel=3
+ pkgdesc="Google API Client Library for Python"
+ arch=('any')
+ url="https://github.com/google/google-api-python-client"
+-license=('Apache-2.0')
++license=('Apache')
+ depends=('python-google-auth-httplib2' 'python-uritemplate' 'python-google-api-core')
+ optdepends=('python-oauth2client: optional backend')
+-makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++makedepends=('python-setuptools')
+ source=("google-api-python-client-${pkgver}.tar.gz::https://github.com/google/google-api-python-client/archive/v${pkgver}.tar.gz")
+-sha256sums=('3cb8e1707aa2f2d6d5f2a4d290ea21cc9ec88d4fe046f62292f8b83a1a1fcdd6')
++sha256sums=('eb1658d1a8df9067949f7841abe8bc111698b3cbe0aa150fa9d1028760163853')
+ 
+ build() {
+   cd "google-api-python-client-${pkgver}"
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ package() {
+   cd "google-api-python-client-$pkgver"
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --skip-build --root="$pkgdir" --optimize=1
++
++  _site_packages=`python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"`
++  chmod -R a+r "$pkgdir$_site_packages"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,4 @@
+-python-build
+ python-google-api-core
+ python-google-auth-httplib2
+-python-installer
+ python-setuptools
+ python-uritemplate
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd "google-api-python-client-${pkgver}"
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

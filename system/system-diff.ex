@@ -53,6 +53,7 @@ device-mapper
 man-db
 mdadm
 mkinitcpio
+mpdecimal
 nfs-utils
 nfsidmap
 openldap

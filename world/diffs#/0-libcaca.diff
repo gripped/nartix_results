@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -39,7 +39,7 @@
+ 
+   git apply -3 ../libcaca-0.99.beta20-CVE-2022-0856.patch
+ 
+-  autoreconf -fi
++  autoreconf -fiv
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ prepare() {
+ cd $pkgname
+ git apply -3 ../libcaca-0.99.beta20-CVE-2022-0856.patch
+-autoreconf -fi
++autoreconf -fiv
+ }
+ build() {
+ cd $pkgname

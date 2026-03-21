@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,19 +1,18 @@
+ 
+ pkgname=mjpegtools
+ pkgver=2.2.1
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Video capture, editing, playback and compression to MPEG of MJPEG video'
+ arch=(x86_64)
+ url='https://mjpeg.sourceforge.io/'
+ license=(GPL-2.0-or-later)
+ depends=(
+   bash
++  gcc-libs
+   glibc
+   libdv
+-  libgcc
+   libjpeg-turbo
+   libpng
+-  libstdc++
+ )
+ source=(
+   "https://downloads.sourceforge.net/mjpeg/$pkgname-$pkgver.tar.gz"
+@@ -29,7 +28,7 @@
+ 
+   patch -Np2 -i ../mjpegtools-2.2.1-gcc15.patch
+ 
+-  autoreconf -fiv
++  autoreconf -fi
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ bash
++gcc-libs
+ glibc
+ libdv
+-libgcc
+ libjpeg-turbo
+ libpng
+-libstdc++
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ prepare() {
+ cd $pkgname-$pkgver
+ patch -Np2 -i ../mjpegtools-2.2.1-gcc15.patch
+-autoreconf -fiv
++autoreconf -fi
+ }
+ build() {
+ cd $pkgname-$pkgver

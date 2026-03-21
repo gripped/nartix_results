@@ -1,8 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,41 +3,23 @@
+@@ -1,43 +1,25 @@
+ 
+ pkgname=libdc1394
  pkgver=2.2.7
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  pkgdesc='Library to control IEEE 1394 based cameras'
 -arch=(x86_64)
 +arch=('x86_64')
@@ -24,7 +27,7 @@
 -
 -prepare() {
 -  cd $pkgname
--  autoreconf -fi
+-  autoreconf -fiv
 -}
 +license=('LGPL')
 +depends=('glibc' 'libraw1394' 'libusb')
@@ -71,7 +74,7 @@
 @@ -1,14 +1,6 @@
 -prepare() {
 -cd $pkgname
--autoreconf -fi
+-autoreconf -fiv
 -}
  build() {
 -cd $pkgname

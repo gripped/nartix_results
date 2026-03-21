@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=libgme
+ pkgver=0.6.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Video game music file emulation/playback library'
+ arch=(x86_64)
+ url='https://github.com/libgme/game-music-emu'
+ license=(LGPL-2.1-or-later)
+ depends=(
++  gcc-libs
+   glibc
+-  libstdc++
+   zlib
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ cmake
++gcc-libs
+ git
+ glibc
+-libstdc++
+ ninja
+ sdl2
+ zlib

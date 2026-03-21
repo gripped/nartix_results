@@ -1,5 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,17 +1,17 @@
+ 
+ pkgname=osinfo-db-tools
+ pkgver=1.12.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Tools for managing the osinfo database'
+ arch=(x86_64)
+ url='https://libosinfo.org/'
+ license=(GPL-2.0-or-later)
+ depends=(
++  gcc-libs
+   glib2
+   glibc
+   json-glib
+   libarchive
+-  libgcc
+   libsoup3
+   libxml2
+ )
 @@ -37,7 +37,7 @@
  }
  
@@ -13,7 +33,19 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,9 @@
++gcc-libs
+ git
+ glib2
+ glibc
+ json-glib
+ libarchive
+-libgcc
+ libsoup3
+ libxml2
+ meson
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

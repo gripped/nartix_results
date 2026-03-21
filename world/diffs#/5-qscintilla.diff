@@ -1,0 +1,99 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgbase=qscintilla
+-pkgname=(qscintilla-qt5 qscintilla-qt6 python-qscintilla-qt6)
++pkgname=(qscintilla-qt5 python-qscintilla-qt5 qscintilla-qt6 python-qscintilla-qt6)
+ pkgver=2.14.1
+-pkgrel=6
++pkgrel=5
+ license=(GPL)
+ arch=(x86_64)
+ url='https://www.riverbankcomputing.com/software/qscintilla/intro'
+-makedepends=(qt5-base python-pyqt6 qt6-tools sip pyqt-builder)
++makedepends=(python-pyqt5 qt5-tools python-pyqt6 qt6-tools sip pyqt-builder)
+ source=(https://www.riverbankcomputing.com/static/Downloads/QScintilla/$pkgver/QScintilla_src-$pkgver.tar.gz)
+ sha256sums=('dfe13c6acc9d85dfcba76ccc8061e71a223957a6c02f3c343b30a9d43a4cdd4d')
+ 
+@@ -16,6 +16,21 @@
+   cd QScintilla_src-$pkgver-qt5/src
+   export QMAKEFEATURES=$PWD/features/
+   qmake-qt5
++  make
++
++  cd ../designer
++  qmake-qt5 INCLUDEPATH+=../src QMAKE_LIBDIR+=../src
++  make
++
++  cd ../Python
++  mv pyproject{-qt5,}.toml
++  sip-build \
++    --no-make \
++    --qsci-features-dir ../src/features \
++    --qsci-include-dir ../src \
++    --qsci-library-dir ../src \
++    --api-dir /usr/share/qt/qsci/api/python
++  cd build
+   make
+ 
+   cd "$srcdir"/QScintilla_src-$pkgver/src
+@@ -45,6 +60,18 @@
+ 
+   cd QScintilla_src-$pkgver-qt5/src
+   make DESTDIR="$pkgdir" INSTALL_ROOT="$pkgdir" install
++
++  cd ../designer
++  make DESTDIR="$pkgdir" INSTALL_ROOT="$pkgdir" install
++}
++
++package_python-qscintilla-qt5() {
++  pkgdesc='Python bindings for QScintilla2'
++  depends=(qscintilla-qt5 python-pyqt5)
++  replaces=(python-qscintilla-qt5-common)
++
++  cd QScintilla_src-$pkgver-qt5/Python/build
++  make INSTALL_ROOT="$pkgdir" install
+ }
+ 
+ package_qscintilla-qt6() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,10 @@
+ pyqt-builder
++python-pyqt5
+ python-pyqt6
++qscintilla-qt5
+ qscintilla-qt6
+ qt5-base
++qt5-tools
+ qt6-base
+ qt6-tools
+ sip
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,19 @@
+ cd QScintilla_src-$pkgver-qt5/src
+ export QMAKEFEATURES=$PWD/features/
+ qmake-qt5
++make
++cd ../designer
++qmake-qt5 INCLUDEPATH+=../src QMAKE_LIBDIR+=../src
++make
++cd ../Python
++mv pyproject{-qt5,}.toml
++sip-build \
++--no-make \
++--qsci-features-dir ../src/features \
++--qsci-include-dir ../src \
++--qsci-library-dir ../src \
++--api-dir /usr/share/qt/qsci/api/python
++cd build
+ make
+ cd "$srcdir"/QScintilla_src-$pkgver/src
+ export QMAKEFEATURES=$PWD/features/

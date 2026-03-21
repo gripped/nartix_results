@@ -175,6 +175,7 @@ aws-c-mqtt
 aws-c-s3
 aws-c-sdkutils
 aws-checksums
+aws-cli-v2
 aws-cli
 aws-crt-cpp
 aws-sdk-cpp
@@ -669,6 +670,7 @@ flickcurl
 fltk
 fltk-docs
 fltk1.3
+fluxbox
 fmt
 fmt-docs
 folks
@@ -905,6 +907,7 @@ gsfonts
 gsm
 gsmartcontrol
 gsoap
+gsound
 gspell
 gspell-docs
 gssdp
@@ -995,6 +998,7 @@ gtksourceview5-docs
 gtksourceviewmm
 gtksourceviewmm-docs
 gtkspell
+gtkspell3
 gts
 gucharmap
 gufw
@@ -1108,7 +1112,6 @@ i3status
 iagno
 ibm-sw-tpm2
 icewm
-icmake
 icon-naming-utils
 icoutils
 id3lib
@@ -1657,7 +1660,6 @@ libbs2b
 libbsd
 libburn
 libbytesize
-libcaca
 libcacard
 libcanberra
 libcbor
@@ -1804,6 +1806,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1834,7 +1837,6 @@ libldac
 libliftoff
 liblo
 liblo-docs
-liblouis
 liblrdf
 libltc
 libluv
@@ -1845,14 +1847,11 @@ lua53-luv
 liblxqt
 liblzf
 libmad
-libmanette
-libmanette-docs
 libmatroska
 libmaxminddb
 libmbim
 libmbim-docs
 libmd
-libmediaart
 libmediainfo
 libmicrodns
 libmikmod
@@ -2350,7 +2349,6 @@ python-miniupnpc
 minizip-ng
 minuet
 mitmproxy
-mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
 mkdocs-material
@@ -2425,7 +2423,6 @@ neatvnc
 neochat
 neofetch
 neomutt
-neon
 neovim-qt
 neovim
 net-snmp
@@ -3011,6 +3008,7 @@ pimcommon
 pixman
 pkcs11-helper
 plank
+plantuml
 plasma-activities-stats
 plasma-activities
 plasma-browser-integration
@@ -3243,7 +3241,6 @@ python-asynctest
 python-atomicwrites
 python-atpublic
 python-attrdict
-python-attrs
 python-audioop-lts
 python-audioread
 python-auditwheel
@@ -3257,6 +3254,7 @@ python-automat
 python-autopage
 python-awesomeversion
 python-aws-sam-translator
+python-aws-xray-sdk
 python-awscrt
 python-axolotl-curve25519
 python-axolotl
@@ -3283,6 +3281,7 @@ python-bincopy
 python-biopython
 python-biscuits
 python-bitarray
+python-bitstring
 python-black
 python-bleach
 python-blessed
@@ -3322,6 +3321,7 @@ python-calver
 python-canonicaljson
 python-capstone6pwndbg
 python-case
+python-cattrs
 python-cbor2
 python-cchardet
 python-celery
@@ -3351,6 +3351,7 @@ python-click-log
 python-click-option-group
 python-click-plugins
 python-click-repl
+python-click
 python-cliff
 python-cligj
 python-clikit
@@ -3379,7 +3380,6 @@ python-contextlib2
 python-contourpy
 python-cookiecutter
 python-copr
-python-coverage
 python-cppheaderparser
 python-cppy
 python-cramjam
@@ -3600,8 +3600,6 @@ python-glob2
 python-gmpy2
 python-gnupg
 python-gnupginterface
-python-google-api-core
-python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
 python-google-auth
@@ -3618,7 +3616,6 @@ python-guzzle-sphinx-theme
 python-h11
 python-h2
 python-h5netcdf
-python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3724,6 +3721,7 @@ python-jsondiff
 python-jsonlines
 python-jsonmerge
 python-jsonpatch
+python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
@@ -3961,7 +3959,6 @@ python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
 python-pdm
-python-pecan
 python-peewee
 python-pefile
 python-pendulum
@@ -4399,7 +4396,6 @@ python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
 python-sphinx
-python-sphinx_rtd_theme
 python-sphinxcontrib-apidoc
 python-sphinxcontrib-applehelp
 python-sphinxcontrib-autoprogram
@@ -4487,7 +4483,6 @@ python-tomlkit
 python-toolz
 python-toposort
 python-tox-current-env
-python-tox
 python-tpm2-pytss
 python-tqdm
 python-trailrunner
@@ -4589,7 +4584,6 @@ python-xlrd
 python-xlsxwriter
 python-xlwt
 python-xmlschema
-python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
@@ -4650,11 +4644,6 @@ qrca
 qrcodegen-cmake
 qrcodegencpp-cmake
 qrencode
-qscintilla
-qscintilla-qt5
-python-qscintilla-qt5
-qscintilla-qt6
-python-qscintilla-qt6
 qt5-3d
 qt5-charts
 qt5-connectivity
@@ -4731,9 +4720,6 @@ qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
@@ -4742,7 +4728,6 @@ quilt
 quota-tools
 qutebrowser
 qwindowkit
-qwt
 r
 r8168
 radeontop
@@ -4896,9 +4881,6 @@ ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
-ruby-cucumber-gherkin
-ruby-cucumber-html-formatter
-ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
 ruby-daemons
@@ -4999,7 +4981,6 @@ ruby-mime-types
 ruby-mini_mime
 ruby-mini_portile
 ruby-mini_portile2
-ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
 ruby-minitest-parallel_fork
@@ -5102,7 +5083,6 @@ ruby-rr
 ruby-rspec-core
 ruby-rspec-expectations
 ruby-rspec-files
-ruby-rspec-its
 ruby-rspec-memory
 ruby-rspec-mocks
 ruby-rspec-rerun

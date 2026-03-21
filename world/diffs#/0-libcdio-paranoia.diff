@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,7 +20,7 @@
+ 
+   git checkout 53718dbe36ee9fd42e97527188a788f2754288c0 -- test
+ 
+-  autoreconf -fiv
++  autoreconf -fi
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ prepare() {
+ cd $pkgname
+ git checkout 53718dbe36ee9fd42e97527188a788f2754288c0 -- test
+-autoreconf -fiv
++autoreconf -fi
+ }
+ build() {
+ cd $pkgname

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ pkgname=simdjson
+ epoch=1
+-pkgver=4.4.1
++pkgver=4.4.0
+ pkgrel=1
+ pkgdesc="A C++ library to see how fast we can parse JSON with complete validation."
+ arch=('x86_64')
+@@ -17,7 +17,7 @@
+ source=(
+   "$pkgname-$pkgver.tar.gz::https://github.com/simdjson/simdjson/archive/v$pkgver.tar.gz"
+ )
+-sha256sums=('04f7e0381eab0eaad68d031b9438e7843e2f6b138151c1a9fd0fe4cc4bab3250')
++sha256sums=('d493cf4e5c60afab90cb4a3d58620c5a17904676076e927f715815d903ef4d08')
+ 
+ build() {
+   cmake -B build -S "$pkgname-$pkgver" \

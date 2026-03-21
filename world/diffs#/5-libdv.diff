@@ -1,8 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,29 +3,16 @@
+@@ -1,31 +1,18 @@
+ 
+ pkgname=libdv
  pkgver=1.0.0
- pkgrel=11
+-pkgrel=12
++pkgrel=11
  pkgdesc='Decoder library for DV video'
 -arch=(x86_64)
 +arch=('x86_64')
@@ -20,7 +23,7 @@
 -
 -prepare() {
 -  cd $pkgname-$pkgver
--  autoreconf -fi
+-  autoreconf -fiv
 -}
 +sha256sums=('a305734033a9c25541a59e8dd1c254409953269ea7c710c39e540bd8853389ba')
  
@@ -51,7 +54,7 @@
 @@ -1,13 +1,5 @@
 -prepare() {
 -cd $pkgname-$pkgver
--autoreconf -fi
+-autoreconf -fiv
 -}
  build() {
  cd $pkgname-$pkgver

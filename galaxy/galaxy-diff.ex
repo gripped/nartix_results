@@ -67,6 +67,7 @@ profanity-gtk
 python-cjkwrap
 qbittorrent
 qbittorrent-nox
+qgis
 qt5-webengine
 rage
 read-edid
@@ -89,6 +90,7 @@ wireshark
 wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
+xdialog
 xed
 xfce4-notifyd
 xfce4-screensaver

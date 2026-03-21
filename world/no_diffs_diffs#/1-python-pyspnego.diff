@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _pkg=pyspnego
+ pkgname=python-${_pkg}
+-pkgver=0.11.0
+-pkgrel=1
++pkgver=0.10.2
++pkgrel=4
+ pkgdesc="SPNEGO Authentication library"
+ arch=(any)
+ url="https://github.com/jborean93/pyspnego"
+@@ -14,7 +14,7 @@
+             'python-krb5: Kerberos support'
+             'python-ruamel-yaml: YAML configuration')
+ source=(${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('6f92ae401a3515e41b40a7cff9bffd837ba8b4567f4a078335df8d24a1187bd9')
++sha256sums=('eccd86a06050bd802b16c52a2c4e33649aabb23da8b3ccaa6b176894e444564b')
+ 
+ build() {
+   cd ${_pkg}-${pkgver}

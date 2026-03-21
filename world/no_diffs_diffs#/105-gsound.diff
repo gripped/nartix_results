@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+ validpgpkeys=(E59279669D642A60C0F2F50DFB5C9B2F1D6004CF) # Abderrahim Kitouni <akitouni@apache.org>
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D gtk_doc=true
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D gtk_doc=true
+ meson compile -C build
+ }

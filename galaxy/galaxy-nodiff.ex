@@ -472,7 +472,6 @@ python-sphinxcontrib-newsfeed
 python-texttable
 python-unrardll
 python-xapp
-qgis
 qgit
 qmmp
 qps
