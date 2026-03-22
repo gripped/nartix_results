@@ -248,7 +248,6 @@ lxappearance-obconf
 lxappearance
 lxde-common
 lxde-icon-theme
-lxdm
 lxhotkey
 lximage-qt
 lxinput
@@ -472,6 +471,7 @@ python-sphinxcontrib-newsfeed
 python-texttable
 python-unrardll
 python-xapp
+qgis
 qgit
 qmmp
 qps

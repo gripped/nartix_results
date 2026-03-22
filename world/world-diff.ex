@@ -102,12 +102,14 @@ cups-filters
 cups
 libcups
 darkhttpd
+dart
 dbus-broker
 dconf
 ddcutil
 dhcp
 dhclient
 dhcpcd
+djvulibre
 dns-over-https
 docker
 dolphin-emu
@@ -292,7 +294,6 @@ hyprland
 i2pd
 ibus
 libibus
-icmake
 igsc
 iio-sensor-proxy
 intel-opencl-clang
@@ -386,7 +387,6 @@ libcdio-paranoia
 libdaemon
 libdc1394
 libdca
-libde265
 libdrm
 libdv
 libe-book
@@ -406,14 +406,10 @@ libindi
 libinput
 libinput-tools
 libldm
-liblouis
 liblqr
-libmanette
-libmanette-docs
 libmatekbd
 libmatemixer
 libmateweather
-libmediaart
 libmemcached-awesome
 libmms
 libmng
@@ -569,7 +565,6 @@ mgba-sdl
 mgba-qt
 miopen-hip
 mjpegtools
-mod_dnssd
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -585,6 +580,9 @@ mumble-server
 musepack
 musepack-tools
 libmpcdec
+musl
+musl-aarch64
+musl-riscv64
 mutter
 mutter-docs
 mutter45
@@ -732,6 +730,7 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
+proj
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -742,7 +741,6 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiobotocore
 python-anytree
 python-aresponses
 python-asn1crypto
@@ -751,15 +749,17 @@ python-cjkwrap
 python-coverage
 python-cram
 python-debugpy
+python-glanceclient
 python-google-api-core
 python-google-api-python-client
 python-h5py
 python-hidapi
+python-incremental
 python-lmdb
 python-ndg-httpsclient
 python-nltk
-python-openapi-core
 python-oslo-db
+python-oslo-serialization
 python-pecan
 python-pycparser
 python-pydot
@@ -863,12 +863,6 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
-qqwing
-qscintilla
-qscintilla-qt5
-python-qscintilla-qt5
-qscintilla-qt6
-python-qscintilla-qt6
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
@@ -890,7 +884,6 @@ qtkeychain-qt6
 quazip
 quazip-qt5
 quazip-qt6
-qwt
 rabbitmq
 rabbitmqadmin
 rawtherapee
@@ -913,6 +906,7 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-minitar
+ruby-pry-byebug
 ruby-rbtree
 ruby-rdiscount
 ruby-rspec-its

@@ -1,6 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,7 @@
+@@ -1,22 +1,16 @@
+ 
+-pkgbase=gexiv2
+-pkgname=(
+-  gexiv2
+-  gexiv2-docs
+-)
+-pkgver=50.0
++pkgname=gexiv2
+ pkgver=0.16.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='GObject-based wrapper around the Exiv2 library'
+ url='https://gitlab.gnome.org/GNOME/gexiv2'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later)
+ depends=(
+   exiv2
++  gcc-libs
+   glib2
+   glibc
+-  libgcc
+-  libstdc++
+ )
+ makedepends=(
+   gi-docgen
+@@ -37,7 +31,7 @@
      -D python3=false
    )
  
@@ -9,11 +35,54 @@
    meson compile -C build
  }
  
+@@ -45,7 +39,7 @@
+   meson test -C build --print-errorlogs
+ }
+ 
+-package_gexiv2() {
++package() {
+   depends+=(
+     libg{lib,object,io}-2.0.so
+     libexiv2.so
+@@ -53,14 +47,4 @@
+   provides+=(libgexiv2-0.16.so)
+ 
+   meson install -C build --destdir "$pkgdir"
+-
+-  mkdir -p doc/usr/share
+-  mv {"$pkgdir",doc}/usr/share/doc
+ }
+-
+-package_gexiv2-docs() {
+-  pkgdesc+=" (documentation)"
+-  depends=()
+-
+-  mv doc/* "$pkgdir"
+-}
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,5 @@
+-
+ exiv2
++gcc-libs
+ gi-docgen
+ git
+ glib2
+@@ -7,10 +7,8 @@
+ glibc
+ gobject-introspection
+ libexiv2.so
+-libgcc
+ libgio-2.0.so
+ libglib-2.0.so
+ libgobject-2.0.so
+-libstdc++
+ meson
+ vala
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

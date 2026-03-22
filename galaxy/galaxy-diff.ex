@@ -41,6 +41,7 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
+lxdm
 lxqt-wayland-session
 ly
 mate-control-center
@@ -67,7 +68,6 @@ profanity-gtk
 python-cjkwrap
 qbittorrent
 qbittorrent-nox
-qgis
 qt5-webengine
 rage
 read-edid

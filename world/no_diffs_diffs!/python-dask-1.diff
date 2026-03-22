@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ _name=dask
+ pkgname=python-$_name
+-pkgver=2026.3.0
++pkgver=2026.1.2
+ pkgrel=1
+ pkgdesc="Parallel computing with task scheduling"
+ arch=(any)
+@@ -65,7 +65,7 @@
+ source=(
+   https://github.com/dask/dask/archive/$pkgver/$pkgname-$pkgver.tar.gz
+ )
+-b2sums=('54635d3f791aa77a3214a26c5c16d6b4503cb17c77b3bab8ea437b7094d8ca9eddfcd648fabe49e66fba5e869da0381c9f9d85a5679296b9ad3175c93fc26b9d')
++b2sums=('461aec2eeef773c599843677e681c3715c474a0b194a9a520033c8b1672568409360715dd46b2111f5f2b5c951ef4a122c1957bd850adb7230326eb1c8971d69')
+ 
+ prepare() {
+   cd $_name-$pkgver
+@@ -83,7 +83,6 @@
+     -vv
+     --override-ini="addopts="
+     -W ignore::DeprecationWarning
+-    -W ignore::FutureWarning
+     -n auto
+     --dist loadscope
+     --timeout-method signal
+@@ -106,7 +105,6 @@
+     --deselect dask/array/tests/test_array_core.py
+     --deselect dask/dataframe/dask_expr/tests/test_distributed.py::test_merge_indicator
+     --deselect dask/bag/tests/test_bag.py::test_multiple_repartition_partition_size
+-    --deselect dask/dataframe/tests/test_dataframe.py::test_combine_first_all_nans
+   )
+ 
+   cd $_name-$pkgver

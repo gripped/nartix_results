@@ -416,7 +416,6 @@ cython0
 d-spy
 darktable
 dart-sass
-dart
 darts
 dateutils
 dav1d
@@ -457,7 +456,6 @@ distro-info-data
 distro-info
 django
 python-django
-djvulibre
 dkms
 dleyna
 dleyna-docs
@@ -1112,6 +1110,7 @@ i3status
 iagno
 ibm-sw-tpm2
 icewm
+icmake
 icon-naming-utils
 icoutils
 id3lib
@@ -1692,6 +1691,7 @@ libdbusmenu-qt5
 libdbusmenu
 libdbusmenu-gtk2
 libdbusmenu-gtk3
+libde265
 libdecor
 libdeflate
 libdex
@@ -1837,6 +1837,7 @@ libldac
 libliftoff
 liblo
 liblo-docs
+liblouis
 liblrdf
 libltc
 libluv
@@ -1847,11 +1848,14 @@ lua53-luv
 liblxqt
 liblzf
 libmad
+libmanette
+libmanette-docs
 libmatroska
 libmaxminddb
 libmbim
 libmbim-docs
 libmd
+libmediaart
 libmediainfo
 libmicrodns
 libmikmod
@@ -2359,6 +2363,7 @@ mlt
 mm-common
 mmtf-cpp
 mobile-broadband-provider-info
+mod_dnssd
 modem-manager-gui
 modemmanager-qt
 modemmanager-qt5
@@ -2397,9 +2402,6 @@ mupdf-gl
 mupdf-tools
 python-mupdf
 musescore
-musl
-musl-aarch64
-musl-riscv64
 mutt
 mypaint-brushes
 mypaint-brushes1
@@ -3089,7 +3091,6 @@ prison
 prison5
 privoxy
 procinfo-ng
-proj
 projectm
 projectm-sdl
 projectm-pulseaudio
@@ -3175,6 +3176,7 @@ python-accessible-pygments
 python-acme
 python-adal
 python-adblock
+python-aiobotocore
 python-aiodns
 python-aiofiles
 python-aiogram
@@ -3595,7 +3597,6 @@ python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
-python-glanceclient
 python-glob2
 python-gmpy2
 python-gnupg
@@ -3664,7 +3665,6 @@ python-imagesize
 python-immutabledict
 python-importlib-metadata
 python-importlib_resources
-python-incremental
 python-infinity
 python-inflate64
 python-inflect
@@ -3895,6 +3895,7 @@ python-odfpy
 python-omemo-dr
 python-onigurumacffi
 python-openai
+python-openapi-core
 python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
@@ -3915,7 +3916,6 @@ python-oslo-config
 python-oslo-context
 python-oslo-i18n
 python-oslo-log
-python-oslo-serialization
 python-oslo-utils
 python-oslotest
 python-outcome
@@ -4640,10 +4640,15 @@ qpdf-docs
 qqc2-breeze-style
 qqc2-desktop-style
 qqc2-desktop-style5
+qqwing
 qrca
 qrcodegen-cmake
 qrcodegencpp-cmake
 qrencode
+qscintilla
+qscintilla-qt5
+qscintilla-qt6
+python-qscintilla-qt6
 qt5-3d
 qt5-charts
 qt5-connectivity
@@ -4728,6 +4733,9 @@ quilt
 quota-tools
 qutebrowser
 qwindowkit
+qwt
+qwt-qt5
+qwt-common
 r
 r8168
 radeontop
@@ -5042,7 +5050,6 @@ ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url
 ruby-protocol-websocket
-ruby-pry-byebug
 ruby-pry
 ruby-psych
 ruby-ptools

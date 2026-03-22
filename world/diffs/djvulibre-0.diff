@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ 
+ prepare() {
+   cd $pkgname
+-  autoreconf -fi
++  autoreconf -fiv
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd $pkgname
+-autoreconf -fi
++autoreconf -fiv
+ }
+ build() {
+ cd $pkgname

@@ -1,36 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,18 +1,18 @@
- 
- pkgname=retro-gtk
- pkgver=1.0.2
--pkgrel=6
-+pkgrel=5
- pkgdesc='Toolkit to write GTK based Libretro frontends'
- arch=(x86_64)
--url='https://gitlab.gnome.org/Archive/retro-gtk'
-+url='https://gnome.pages.gitlab.gnome.org/retro-gtk/'
- license=(GPL-3.0-or-later)
- depends=(
-+  gcc-libs
-   gdk-pixbuf2
-   glib2
-   glibc
-   gtk3
-   libepoxy
--  libgcc
-   libpulse
-   libsamplerate
- )
-@@ -23,7 +23,7 @@
-   meson
-   vala
- )
--source=("git+https://gitlab.gnome.org/Archive/$pkgname.git#tag=$pkgver")
-+source=("git+https://gitlab.gnome.org/GNOME/$pkgname.git#tag=$pkgver")
- b2sums=(a699e01edd159dfcebae12569350348caed57efe99ea2e0972a09125f869e7f0a07b5ddf025e3d2d2ce2a02c654fb622265766c553ab167b147a7a852bfb8a17)
- 
- prepare() {
 @@ -33,7 +33,7 @@
  }
  
@@ -44,21 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,3 +1,4 @@
-+gcc-libs
- gdk-pixbuf2
- git
- glib2
-@@ -6,7 +7,6 @@
- gobject-introspection
- gtk3
- libepoxy
--libgcc
- libpulse
- libsamplerate
- meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
