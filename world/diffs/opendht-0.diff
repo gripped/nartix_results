@@ -1,23 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=opendht
- epoch=1
--pkgver=3.7.7
-+pkgver=3.7.0rc8
- pkgrel=1
- pkgdesc="C++17 Distributed Hash Table (DHT) implementation"
- arch=(x86_64)
-@@ -13,7 +13,7 @@
- optdepends=('python: to use the Python bindings'
-             'msgpack-cxx: linking against opendht')
- source=(git+${url}#tag=v$pkgver)
--sha256sums=('87166fec8598fd685bd6f1f1d37740c709bccace30cb6099dd241245d30c00de')
-+sha256sums=('bc948237b5bb00750eddcf639978c5640e978c903ef584fe979a8eaa0b38febe')
- 
- build() {
-   cd $pkgname
 @@ -21,8 +21,6 @@
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DOPENDHT_DOCUMENTATION=OFF \

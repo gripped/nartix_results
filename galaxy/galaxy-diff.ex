@@ -66,6 +66,7 @@ perl-cgi-fast
 profanity
 profanity-gtk
 python-cjkwrap
+python-texttable
 qbittorrent
 qbittorrent-nox
 qt5-webengine
@@ -73,6 +74,7 @@ rage
 read-edid
 reflector
 sdcv
+shortwave
 signal-desktop
 terminology
 termshark

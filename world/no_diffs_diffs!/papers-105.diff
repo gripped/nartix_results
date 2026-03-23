@@ -1,5 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   papers-lib-docs
+ )
+ pkgver=49.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Document viewer for PDF and other document formats aimed at the GNOME desktop'
+ arch=(x86_64)
+ url='https://apps.gnome.org/Papers/'
+@@ -15,6 +15,7 @@
+   dconf
+   djvulibre
+   exempi
++  gcc-libs
+   gdk-pixbuf2
+   glib2
+   glibc
+@@ -24,7 +25,6 @@
+   hicolor-icon-theme
+   libadwaita
+   libarchive
+-  libgcc
+   libnautilus-extension
+   libspelling
+   libtiff
+@@ -44,7 +44,7 @@
+   rust
+ )
+ source=("git+https://gitlab.gnome.org/GNOME/papers.git#tag=${pkgver/[a-z]/.&}")
+-b2sums=(ae7175abfa1f2178fc7a4eabd1a68c3f3951470821501f4dacf26116f09756c69f82bde76cd132e9654413d2f3831f496d2d59d79a1bf5a5eb32d940ee65877f)
++b2sums=('ae7175abfa1f2178fc7a4eabd1a68c3f3951470821501f4dacf26116f09756c69f82bde76cd132e9654413d2f3831f496d2d59d79a1bf5a5eb32d940ee65877f')
+ 
+ export CARGO_PROFILE_RELEASE_DEBUG=2 CARGO_PROFILE_RELEASE_STRIP=false
+ 
 @@ -58,7 +58,7 @@
  }
  
@@ -13,7 +47,24 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -5,6 +5,7 @@
+ dconf
+ djvulibre
+ exempi
++gcc-libs
+ gdk-pixbuf2
+ gi-docgen
+ git
+@@ -19,7 +20,6 @@
+ itstool
+ libadwaita
+ libarchive
+-libgcc
+ libnautilus-extension
+ libspelling
+ libsysprof-capture
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

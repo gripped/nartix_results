@@ -416,6 +416,7 @@ cython0
 d-spy
 darktable
 dart-sass
+dart
 darts
 dateutils
 dav1d
@@ -1806,7 +1807,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2219,6 +2219,7 @@ lua51-socket
 lua52-socket
 lua53-socket
 luit
+luksmeta
 lv2
 lv2-docs
 lv2-example-plugins
@@ -3204,7 +3205,6 @@ python-annotated-doc
 python-annotated-types
 python-ansi2html
 python-ansible-compat
-python-ansicolors
 python-ansiwrap
 python-antlr4
 python-anyio
@@ -3243,6 +3243,7 @@ python-asynctest
 python-atomicwrites
 python-atpublic
 python-attrdict
+python-attrs
 python-audioop-lts
 python-audioread
 python-auditwheel
@@ -3382,6 +3383,7 @@ python-contextlib2
 python-contourpy
 python-cookiecutter
 python-copr
+python-coverage
 python-cppheaderparser
 python-cppy
 python-cramjam
@@ -3597,10 +3599,13 @@ python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
+python-glanceclient
 python-glob2
 python-gmpy2
 python-gnupg
 python-gnupginterface
+python-google-api-core
+python-google-api-python-client
 python-google-auth-httplib2
 python-google-auth-oauthlib
 python-google-auth
@@ -3617,6 +3622,7 @@ python-guzzle-sphinx-theme
 python-h11
 python-h2
 python-h5netcdf
+python-h5py
 python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
@@ -3629,6 +3635,7 @@ python-hatchling
 python-heapdict
 python-helpdev
 python-hexdump
+python-hidapi
 python-hiredis
 python-hishel
 python-hkdf
@@ -3665,6 +3672,7 @@ python-imagesize
 python-immutabledict
 python-importlib-metadata
 python-importlib_resources
+python-incremental
 python-infinity
 python-inflate64
 python-inflect
@@ -3778,6 +3786,7 @@ python-linux-procfs
 python-littleutils
 python-livereload
 python-llvmlite
+python-lmdb
 python-localzone
 python-locket
 python-lockfile
@@ -3872,6 +3881,7 @@ python-niche-elf
 python-nine
 python-nitrokey
 python-nkdfu
+python-nltk
 python-nodeenv
 python-noiseprotocol
 python-nose-random
@@ -3914,8 +3924,10 @@ python-oscrypto
 python-oslo-concurrency
 python-oslo-config
 python-oslo-context
+python-oslo-db
 python-oslo-i18n
 python-oslo-log
+python-oslo-serialization
 python-oslo-utils
 python-oslotest
 python-outcome
@@ -3959,6 +3971,7 @@ python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
 python-pdm
+python-pecan
 python-peewee
 python-pefile
 python-pendulum
@@ -4055,6 +4068,7 @@ python-pycares
 python-pychm
 python-pycodestyle
 python-pycountry
+python-pycparser
 python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt
@@ -4069,6 +4083,7 @@ python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
+python-pydot
 python-pydrive
 python-pyee
 python-pyelftools
@@ -4081,6 +4096,7 @@ python-pyftpdlib
 python-pygal
 python-pygaljs
 python-pygame-sdl2
+python-pygame
 python-pygdbmi
 python-pygeos
 python-pygit2
@@ -4137,7 +4153,6 @@ python-pyqt6-sip
 python-pyquery
 python-pyrfc3339
 python-pyro
-python-pyrsistent
 python-pysaml2
 python-pyscreenshot
 python-pysendfile
@@ -4154,6 +4169,7 @@ python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
+python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
@@ -4276,6 +4292,7 @@ python-reflink
 python-regex
 python-regress
 python-rencode
+python-reportlab
 python-repoze.lru
 python-requests-aws4auth
 python-requests-credssp
@@ -4396,6 +4413,7 @@ python-sphinx-pytest
 python-sphinx-reredirects
 python-sphinx-theme-builder
 python-sphinx
+python-sphinx_rtd_theme
 python-sphinxcontrib-apidoc
 python-sphinxcontrib-applehelp
 python-sphinxcontrib-autoprogram
@@ -4430,6 +4448,7 @@ python-statsmodels
 python-stdlibs
 python-stem
 python-stestr
+python-stevedore
 python-stone
 python-straight.plugin
 python-strawberry-graphql
@@ -4465,7 +4484,6 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
-python-texttable
 python-textual
 python-threadpoolctl
 python-tiktoken
@@ -4482,7 +4500,9 @@ python-tomli
 python-tomlkit
 python-toolz
 python-toposort
+python-tornado
 python-tox-current-env
+python-tox
 python-tpm2-pytss
 python-tqdm
 python-trailrunner
@@ -4567,6 +4587,7 @@ python-whatthepatch
 python-wheezy-template
 python-whoosh
 python-wilderness
+python-wrapt
 python-wsaccel
 python-wsgiproxy2
 python-wsproto
@@ -4584,6 +4605,7 @@ python-xlrd
 python-xlsxwriter
 python-xlwt
 python-xmlschema
+python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
@@ -4889,6 +4911,9 @@ ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
+ruby-cucumber-gherkin
+ruby-cucumber-html-formatter
+ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber
 ruby-daemons
@@ -4989,6 +5014,7 @@ ruby-mime-types
 ruby-mini_mime
 ruby-mini_portile
 ruby-mini_portile2
+ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
 ruby-minitest-parallel_fork
@@ -5050,6 +5076,7 @@ ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url
 ruby-protocol-websocket
+ruby-pry-byebug
 ruby-pry
 ruby-psych
 ruby-ptools
@@ -5090,6 +5117,7 @@ ruby-rr
 ruby-rspec-core
 ruby-rspec-expectations
 ruby-rspec-files
+ruby-rspec-its
 ruby-rspec-memory
 ruby-rspec-mocks
 ruby-rspec-rerun
@@ -5196,7 +5224,6 @@ ruff
 python-ruff
 run-parts
 runc
-rust-bindgen
 rustup
 rutabaga-ffi
 rxvt-unicode
@@ -5639,7 +5666,6 @@ twolame
 txt2man
 typescript
 uasm
-uchardet
 udiskie
 udpxy
 ufmt

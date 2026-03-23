@@ -138,7 +138,6 @@ linux-firmware-radeon
 linux-firmware-realtek
 lz4
 lzo
-m4
 make
 man-pages
 man-pages-utils
@@ -147,7 +146,6 @@ mkinitcpio-nfs-utils
 mlocate
 mpfr
 nano
-ncurses
 net-tools
 nettle
 nilfs-utils

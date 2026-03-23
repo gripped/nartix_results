@@ -50,6 +50,7 @@ cava
 ccze
 cdemu-client
 cdemu-daemon
+ceres-solver
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -468,7 +469,6 @@ python-pyzstd
 python-sphinx-autoapi
 python-sphinx-intl
 python-sphinxcontrib-newsfeed
-python-texttable
 python-unrardll
 python-xapp
 qgis

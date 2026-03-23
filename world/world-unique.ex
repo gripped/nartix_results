@@ -574,6 +574,7 @@ sonic-system-info
 sonic-win
 sonic-workspace-wallpapers
 sonic-workspace
+sonicde-meta
 spamassassin-dinit
 spamassassin-openrc
 spamassassin-runit

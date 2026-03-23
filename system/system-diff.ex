@@ -50,10 +50,12 @@ linux-docs
 logrotate
 lvm2
 device-mapper
+m4
 man-db
 mdadm
 mkinitcpio
 mpdecimal
+ncurses
 nfs-utils
 nfsidmap
 openldap
