@@ -4,9 +4,10 @@
  
  pkgname=cinnamon
 -pkgver=6.6.7
-+pkgver=6.0.4
- pkgrel=1
+-pkgrel=2
 -pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
++pkgver=6.0.4
++pkgrel=1
 +pkgdesc="Linux desktop which provides advanced innovative features and a traditional user experience"
  arch=(x86_64)
 -url='https://github.com/linuxmint/cinnamon'
@@ -26,7 +27,6 @@
 -  cjs
 -  dconf
 -  evolution-data-server
--  gcc-libs
 -  gcr
 -  gdk-pixbuf2
 -  glib2
@@ -37,6 +37,7 @@
 -  gstreamer
 -  gtk3
 -  hicolor-icon-theme
+-  libgcc
 -  libgirepository
 -  libglvnd
 -  libibus
@@ -88,7 +89,7 @@
 -  gobject-introspection
 -  gtk-doc
 -  meson
--  python-libsass
+-  sassc
 -)
 -source=(
 -  "git+https://github.com/linuxmint/cinnamon.git#tag=$pkgver"
@@ -187,7 +188,6 @@
  cjs
 -dconf
 -evolution-data-server
--gcc-libs
 -gcr
 -gdk-pixbuf2
 -git
@@ -202,6 +202,7 @@
 -gtk-doc
 -gtk3
 -hicolor-icon-theme
+-libgcc
 -libgirepository
 -libglvnd
 -libibus
@@ -229,7 +230,6 @@
  python-cairo
 +python-dbus
  python-gobject
--python-libsass
  python-pam
  python-pexpect
  python-pillow
@@ -240,6 +240,7 @@
 -python-setproctitle
  python-tinycss2
  python-xapp
+-sassc
 -sound-theme-freedesktop
 +samurai
  timezonemap

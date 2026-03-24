@@ -140,7 +140,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-egl-wayland2
 element.io
 element-web
 element-desktop
@@ -274,11 +273,6 @@ gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
 haproxy
-harfbuzz
-harfbuzz-cairo
-harfbuzz-icu
-harfbuzz-utils
-harfbuzz-docs
 haveged
 hexchat
 hidapi
@@ -425,7 +419,6 @@ libsidplayfp
 libsoxr
 libstaroffice
 libtg_owt
-libtorrent-rasterbar
 libudev0-shim
 libunwind
 libusbsio
@@ -729,7 +722,6 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
-proj
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -744,17 +736,16 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
-python-cjkwrap
 python-cram
 python-debugpy
 python-ndg-httpsclient
+python-ovirt-engine-sdk
 python-pymupdf
 python-pyrsistent
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-texttable
 python-wheel
 qastools
 qbittorrent
@@ -856,9 +847,6 @@ qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
-qtkeychain
-qtkeychain-qt5
-qtkeychain-qt6
 quazip
 quazip-qt5
 quazip-qt6
@@ -966,7 +954,6 @@ transmission-gtk
 transmission-qt
 tree-sitter-lua
 tumbler
-uchardet
 udftools
 udisks2
 udisks2-btrfs
@@ -994,7 +981,6 @@ uwsgi-plugin-mono
 uwsgi-plugin-webdav
 uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
-v2ray
 v4l-utils
 valkey
 vault
@@ -1190,6 +1176,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

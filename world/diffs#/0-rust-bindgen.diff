@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,8 @@
+ 
+ prepare() {
+   cd $pkgname-$pkgver
+-  cargo fetch --locked --target "$(rustc --print host-tuple)"
++  rustup default stable
++  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+   mkdir -p completions
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd $pkgname-$pkgver
+-cargo fetch --locked --target "$(rustc --print host-tuple)"
++rustup default stable
++cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ mkdir -p completions
+ }
+ build() {

@@ -1,5 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   python-libblockdev
+ )
+ pkgver=3.4.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="A library for manipulating block devices"
+ arch=('x86_64')
+ url="https://github.com/storaged-project/libblockdev"
+@@ -19,6 +19,7 @@
+   'dosfstools'
+   'e2fsprogs'
+   'exfatprogs'
++  'gcc-libs'
+   'glib2'
+   'glibc'
+   'gobject-introspection'
+@@ -28,7 +29,6 @@
+   'keyutils'
+   'libatasmart'
+   'libbytesize'
+-  'libgcc'
+   'libnvme'
+   'libyaml'
+   'lvm2'
 @@ -37,7 +37,7 @@
    'nss'
    'parted'
@@ -18,12 +43,117 @@
    )
    optdepends=(
      'libblockdev-btrfs: for BTRFS support'
+@@ -174,11 +174,11 @@
+   pkgdesc+=" - crypto support"
+   depends=(
+     cryptsetup libcryptsetup.so
++    gcc-libs
+     glib2 libglib-2.0.so
+     glibc
+     keyutils libkeyutils.so
+     "libblockdev=$pkgver" libbd_utils.so
+-    libgcc
+     nss
+     util-linux-libs libblkid.so
+     volume_key
+@@ -205,11 +205,11 @@
+   pkgdesc+=" - filesystem support"
+   depends=(
+     e2fsprogs libext2fs.so libe2p.so
+-    glib2 libglib-2.0.so
+-    glibc
+-    "libblockdev=$pkgver" libbd_utils.so
+-    libbytesize
+-    libgcc
++    gcc-libs
++    glib2 libglib-2.0.so
++    glibc
++    "libblockdev=$pkgver" libbd_utils.so
++    libbytesize
+     parted
+     util-linux-libs libblkid.so libmount.so libuuid.so
+   )
+@@ -233,10 +233,10 @@
+ package_libblockdev-loop() {
+   pkgdesc+=" - loop device support"
+   depends=(
+-    glib2 libglib-2.0.so
+-    glibc
+-    "libblockdev=$pkgver" libbd_utils.so
+-    libgcc
++    gcc-libs
++    glib2 libglib-2.0.so
++    glibc
++    "libblockdev=$pkgver" libbd_utils.so
+   )
+   provides=(libbd_loop.so)
+ 
+@@ -247,10 +247,10 @@
+   pkgdesc+=" - LVM support"
+   depends=(
+     device-mapper libdevmapper.so
++    gcc-libs
+     glib2 libglib-2.0.so
+     glibc
+     "libblockdev=$pkgver" libbd_utils.so libblockdev.so
+-    libgcc
+     libyaml
+     libbytesize
+   )
+@@ -273,11 +273,11 @@
+ package_libblockdev-mdraid() {
+   pkgdesc+=" - MDRAID support"
+   depends=(
+-    glib2 libglib-2.0.so
+-    glibc
+-    "libblockdev=$pkgver" libbd_utils.so
+-    libbytesize
+-    libgcc
++    gcc-libs
++    glib2 libglib-2.0.so
++    glibc
++    "libblockdev=$pkgver" libbd_utils.so
++    libbytesize
+     mdadm  # the libbd_mdraid.so library calls the mdadm executable
+   )
+   provides=(libbd_mdraid.so)
+@@ -361,10 +361,10 @@
+ package_libblockdev-swap() {
+   pkgdesc+=" - swap device support"
+   depends=(
+-    glib2 libglib-2.0.so
+-    glibc
+-    "libblockdev=$pkgver" libbd_utils.so
+-    libgcc
++    gcc-libs
++    glib2 libglib-2.0.so
++    glibc
++    "libblockdev=$pkgver" libbd_utils.so
+     util-linux-libs libblkid.so
+   )
+   provides=(libbd_swap.so)
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
+@@ -5,6 +5,7 @@
+ dosfstools
+ e2fsprogs
+ exfatprogs
++gcc-libs
+ glib2
+ glibc
+ gobject-introspection
+@@ -23,7 +24,6 @@
+ libe2p.so
+ libext2fs.so
+ libfdisk.so
+-libgcc
+ libgio-2.0.so
+ libglib-2.0.so
+ libgobject-2.0.so
 @@ -31,6 +31,7 @@
  libkmod.so
  libmount.so

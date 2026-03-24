@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,81 +1,59 @@
+@@ -1,82 +1,59 @@
  
  pkgbase=mgba
 -pkgname=(
@@ -9,7 +9,7 @@
 -  'mgba-qt'
 -)
 -pkgver=0.10.5
--pkgrel=2
+-pkgrel=3
 -pkgdesc='A Nintendo Gameboy Advance Emulator focusing on speed and accuracy'
 +pkgname=('libmgba' 'mgba-sdl' 'mgba-qt')
 +pkgver=0.10.3
@@ -97,10 +97,11 @@
 -  pkgdesc+=' (Qt5 UI)'
 -  depends=(
 -    'ffmpeg'
--    'gcc-libs'
 -    'glibc'
+-    'libgcc'
 -    'libglvnd'
 -    'libmgba'
+-    'libstdc++'
 -    'qt5-base'
 -    'qt5-multimedia'
 -    'sdl2'
@@ -125,17 +126,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,16 +1,11 @@
+@@ -1,17 +1,11 @@
  cmake
  desktop-file-utils
  ffmpeg
--gcc-libs
 -glibc
  libedit
 -libelf
+-libgcc
 -libglvnd
  libmgba
  libpng
+-libstdc++
  libzip
  lua
 -qt5-base

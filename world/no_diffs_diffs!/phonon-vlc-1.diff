@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,11 +3,11 @@
+ pkgname=(phonon-qt6-vlc)
+ pkgdesc='Phonon VLC backend'
+ pkgver=0.12.0
+-pkgrel=6
++pkgrel=5
+ arch=(x86_64)
+ url='https://community.kde.org/Phonon'
+ license=(LGPL-2.1-or-later)
+-depends=(libstdc++
++depends=(gcc-libs
+          glibc
+          libvlc
+          phonon-qt6
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+-libstdc++
+ libvlc
+ phonon-qt6
+ qt6-base

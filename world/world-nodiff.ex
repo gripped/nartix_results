@@ -522,6 +522,7 @@ edk2-shell
 edk2-ovmf
 egl-gbm
 egl-wayland
+egl-wayland2
 egl-x11
 eglexternalplatform
 eigen
@@ -745,6 +746,7 @@ geoip
 geos
 getdns
 gexiv2
+gexiv2-docs
 gflags
 gfxstream
 ghex
@@ -1020,6 +1022,11 @@ gwenview
 gyp
 half
 handbrake
+harfbuzz
+harfbuzz-cairo
+harfbuzz-icu
+harfbuzz-utils
+harfbuzz-docs
 hashcat-utils
 hashcat
 hddtemp
@@ -1624,6 +1631,7 @@ lgi
 lua-lgi
 lua51-lgi
 lua53-lgi
+lua54-lgi
 lhasa
 lib2geom
 lib3mf
@@ -1845,6 +1853,7 @@ lua-luv
 lua51-luv
 lua52-luv
 lua53-luv
+lua54-luv
 liblxqt
 liblzf
 libmad
@@ -2033,6 +2042,7 @@ libtiger
 libtlsrpt
 libtomcrypt
 libtommath
+libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -2195,15 +2205,18 @@ lua-mpack
 lua51-mpack
 lua52-mpack
 lua53-mpack
+lua54-mpack
 lua
 lua51
 lua52
 lua53
+lua54
 luaexpat
 lua-expat
 lua51-expat
 lua52-expat
 lua53-expat
+lua54-expat
 luajit
 luajson
 lua52-luajson
@@ -2213,11 +2226,13 @@ lua-sec
 lua51-sec
 lua52-sec
 lua53-sec
+lua54-sec
 luasocket
 lua-socket
 lua51-socket
 lua52-socket
 lua53-socket
+lua54-socket
 luit
 luksmeta
 lv2
@@ -3092,6 +3107,7 @@ prison
 prison5
 privoxy
 procinfo-ng
+proj
 projectm
 projectm-sdl
 projectm-pulseaudio
@@ -3342,6 +3358,7 @@ python-cheetah3
 python-cheetah3-docs
 python-cheroot
 python-cherrypy
+python-cjkwrap
 python-claripy
 python-cleo
 python-clevercsv
@@ -3932,7 +3949,6 @@ python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
-python-ovirt-engine-sdk
 python-owslib
 python-packaging
 python-pallets-sphinx-themes
@@ -4484,6 +4500,7 @@ python-testresources
 python-testscenarios
 python-testtools
 python-text-unidecode
+python-texttable
 python-textual
 python-threadpoolctl
 python-tiktoken
@@ -4747,6 +4764,8 @@ qt6-webview
 qt6ct
 qtcreator
 qtcreator-devel
+qtkeychain
+qtkeychain-qt6
 qtox
 qtqr
 qtxdg-tools
@@ -5666,6 +5685,7 @@ twolame
 txt2man
 typescript
 uasm
+uchardet
 udiskie
 udpxy
 ufmt
@@ -5706,6 +5726,7 @@ $pkgbase
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip
+v2ray
 vagrant
 vala
 valabind
@@ -5953,7 +5974,6 @@ yara
 yarn
 yasm
 yaz
-yazi
 yelp-tools
 yelp-xsl
 yelp

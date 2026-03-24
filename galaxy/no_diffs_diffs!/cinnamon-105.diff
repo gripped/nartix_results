@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=cinnamon
- pkgver=6.6.7
--pkgrel=1
-+pkgrel=1.2
- pkgdesc='Desktop environment which provides advanced innovative features and a traditional user experience'
- arch=(x86_64)
- url='https://github.com/linuxmint/cinnamon'
-@@ -82,6 +82,7 @@
-   glib2-devel
-   gobject-introspection
-   gtk-doc
-+  lua
-   meson
-   python-libsass
- )
-@@ -110,7 +111,7 @@
+@@ -110,7 +110,7 @@
  }
  
  build() {
@@ -30,16 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -38,6 +38,7 @@
- libx11
- libxfixes
- libxml2
-+lua
- meson
- muffin
- nemo
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

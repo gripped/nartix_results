@@ -1,5 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -13,13 +13,13 @@
+ license=(MIT)
+ makedepends=(
+   doxygen
++  gcc-libs
+   git
+   glib2
+   glib2-devel
+   glibc
+   gobject-introspection
+   graphviz
+-  libgcc
+   libpipewire
+   lua
+   meson
 @@ -28,8 +28,6 @@
    python-lxml
    python-sphinx
@@ -24,7 +39,13 @@
    meson compile -C build
  }
  
-@@ -75,17 +74,14 @@
+@@ -70,22 +69,19 @@
+ package_wireplumber() {
+   depends=(
+     "libwireplumber=$pkgver-$pkgrel"
++    gcc-libs
+     glibc
+-    libgcc
      libg{lib,object,io}-2.0.so
      libpipewire
      libpipewire-0.3.so
@@ -42,13 +63,35 @@
  
    meson install -C build --destdir "$pkgdir"
  
+@@ -108,8 +104,8 @@
+ package_libwireplumber() {
+   pkgdesc+=" - client library"
+   depends=(
++    gcc-libs
+     glibc
+-    libgcc
+     libg{lib,module,object,io}-2.0.so
+     libpipewire-0.3.so
+   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -12,7 +12,6 @@
+@@ -1,18 +1,17 @@
+ doxygen
++gcc-libs
+ git
+ glib2
+ glib2-devel
+ glibc
+ gobject-introspection
+ graphviz
+-libgcc
+ libgio-2.0.so
+ libglib-2.0.so
+ libgmodule-2.0.so
  libgobject-2.0.so
  libpipewire
  libpipewire-0.3.so

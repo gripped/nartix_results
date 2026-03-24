@@ -1,23 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  
  pkgname=grilo-plugins
 -pkgver=0.3.18
--pkgrel=1
 +pkgver=0.3.16+r46+gea3afa8c
-+pkgrel=2
+ pkgrel=2
  epoch=1
  pkgdesc="A collection of plugins for the Grilo framework"
- url="https://gitlab.gnome.org/GNOME/grilo-plugins"
-@@ -23,7 +23,6 @@
+@@ -23,9 +23,8 @@
    libgoa
    libmediaart
    liboauth
 -  librest
    libxml2
-   lua
+-  lua54
++  lua
    sqlite
+   tinysparql
+   totem-pl-parser
 @@ -48,14 +47,20 @@
    'tracker3-miners: Tracker plugin'
  )
@@ -64,14 +65,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,7 +19,6 @@
+@@ -19,9 +19,8 @@
  libgrlpls-0.3.so
  libmediaart
  liboauth
 -librest
  libxml2
- lua
+-lua54
++lua
  meson
+ sqlite
+ tinysparql
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -1,17 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,78 +1,62 @@
+@@ -1,83 +1,62 @@
  
  pkgname=yazi
 -pkgver=26.1.22
--pkgrel=2
+-pkgrel=4
 +pkgver=25.5.31
 +pkgrel=1
  pkgdesc="Blazing fast terminal file manager written in Rust, based on async I/O"
  url="https://github.com/sxyazi/yazi"
  arch=("x86_64")
  license=('MIT')
--depends=('glibc' 'libgcc' 'hicolor-icon-theme' 'ttf-nerd-fonts-symbols' 'lua' 'oniguruma')
+-depends=('glibc' 'hicolor-icon-theme' 'jemalloc' 'libgcc' 'lua54' 'oniguruma' 'ttf-nerd-fonts-symbols')
 +depends=('gcc-libs' 'ttf-nerd-fonts-symbols')
  optdepends=(
 +	'jq: for JSON preview'
@@ -57,6 +57,8 @@
 -  export VERGEN_GIT_SHA="Arch Linux"
 -  export YAZI_GEN_COMPLETIONS=true
 -  export RUSTONIG_DYNAMIC_LIBONIG=1
+-  export JEMALLOC_OVERRIDE=/usr/lib/libjemalloc.so
+-  export CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS=1
 -  cargo build --release --frozen --no-default-features
 +  VERGEN_GIT_SHA="Arch Linux" YAZI_GEN_COMPLETIONS=true cargo build --release --frozen --no-default-features
 +  YAZI_GEN_COMPLETIONS=true cargo build --release -p "$pkgname-cli"
@@ -64,7 +66,10 @@
  
  check() {
 -  cd "$pkgname-$pkgver"
--  RUSTONIG_DYNAMIC_LIBONIG=1 cargo test --frozen --workspace --no-default-features
+-  export RUSTONIG_DYNAMIC_LIBONIG=1
+-  export JEMALLOC_OVERRIDE=/usr/lib/libjemalloc.so
+-  export CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS=1
+-  cargo test --frozen --workspace --no-default-features
 +  cd "$pkgname"-$pkgver
 +  cargo test --frozen
  }
@@ -75,22 +80,25 @@
 -  install -Dm755 "target/release/ya" -t "$pkgdir/usr/bin/"
 -  install -Dm644 "LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname/"
 -  install -Dm644 "README.md" -t "$pkgdir/usr/share/doc/$pkgname/"
--  install -Dm644 "assets/yazi.desktop" -t "$pkgdir/usr/share/applications/"
 +  install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
 +  install -Dm755 "target/release/ya" "$pkgdir/usr/bin/ya"
 +  install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENCE"
 +  install -Dm644 "README.md" "$pkgdir/usr/share/doc/$pkgname/README.md"
 +  install -Dm644 "assets/yazi.desktop" "$pkgdir/usr/share/applications/yazi.desktop"
  
--  for r in 16 24 32 48 64 128 256 512; do
-+  local r
-+  for r in 16 24 32 48 64 128 256; do
-     install -dm755 "$pkgdir/usr/share/icons/hicolor/${r}x${r}/apps"
-     magick assets/logo.png -resize "${r}x${r}" "$pkgdir/usr/share/icons/hicolor/${r}x${r}/apps/yazi.png"
-   done
- 
 -  _install_completions "$pkgname-boot" "$pkgname"
 -  _install_completions "$pkgname-cli" "ya"
++  local r
++  for r in 16 24 32 48 64 128 256; do
++    install -dm755 "$pkgdir/usr/share/icons/hicolor/${r}x${r}/apps"
++    magick assets/logo.png -resize "${r}x${r}" "$pkgdir/usr/share/icons/hicolor/${r}x${r}/apps/yazi.png"
++  done
+ 
+-  cd assets
+-  install -Dm644 "yazi.desktop" -t "$pkgdir/usr/share/applications/"
+-  for r in 16 24 32 48 64 128 256 512; do
+-    install -Dm644 <(magick logo.png -resize "${r}x${r}" -) "$pkgdir/usr/share/icons/hicolor/${r}x${r}/apps/yazi.png"
+-  done
 +  cd "$pkgname-boot/completions"
 +  install -Dm644 "$pkgname.bash" "$pkgdir/usr/share/bash-completion/completions/$pkgname"
 +  install -Dm644 "$pkgname.fish" -t "$pkgdir/usr/share/fish/vendor_completions.d/"
@@ -112,20 +120,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,4 @@
+@@ -1,9 +1,4 @@
  cargo
 -glibc
 -hicolor-icon-theme
 +gcc-libs
  imagemagick
+-jemalloc
 -libgcc
--lua
+-lua54
 -oniguruma
  ttf-nerd-fonts-symbols
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,9 @@
+@@ -1,14 +1,9 @@
  prepare() {
  cd "$pkgname-$pkgver"
 -sed -i '/"vendored-lua"/d' yazi-{actor,binding,dds,fm,parser,plugin}/Cargo.toml
@@ -137,6 +146,8 @@
 -export VERGEN_GIT_SHA="Arch Linux"
 -export YAZI_GEN_COMPLETIONS=true
 -export RUSTONIG_DYNAMIC_LIBONIG=1
+-export JEMALLOC_OVERRIDE=/usr/lib/libjemalloc.so
+-export CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS=1
 -cargo build --release --frozen --no-default-features
 +VERGEN_GIT_SHA="Arch Linux" YAZI_GEN_COMPLETIONS=true cargo build --release --frozen --no-default-features
 +YAZI_GEN_COMPLETIONS=true cargo build --release -p "$pkgname-cli"

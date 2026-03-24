@@ -5,6 +5,7 @@ ack
 acpilight
 ada
 adw-gtk-theme
+aircrack-ng
 alacritty
 anki
 anubis
@@ -159,6 +160,7 @@ joyutils
 just
 kanshi
 kernel-headers-musl
+khard
 kodi
 kodi-gles
 kodi-eventclients
@@ -249,6 +251,7 @@ lxappearance-obconf
 lxappearance
 lxde-common
 lxde-icon-theme
+lxdm
 lxhotkey
 lximage-qt
 lxinput
@@ -274,6 +277,7 @@ lxqt-runner
 lxqt-session
 lxqt-sudo
 lxqt-themes
+lxqt-wayland-session
 lxrandr
 lxsession
 lxtask
@@ -449,6 +453,7 @@ pysolfc-cardsets
 pysolfc
 python-aiohttp-oauthlib
 python-caja
+python-cjkwrap
 python-click-log
 python-generic
 python-inflate64
@@ -469,6 +474,7 @@ python-pyzstd
 python-sphinx-autoapi
 python-sphinx-intl
 python-sphinxcontrib-newsfeed
+python-texttable
 python-unrardll
 python-xapp
 qgis
@@ -491,6 +497,7 @@ quassel-monolithic-qt
 quassel-common
 quickshell
 reaper
+reaver
 rebuild-detector
 renderdoc
 resvg
@@ -501,6 +508,7 @@ retroarch-assets-xmb
 retroarch
 rgbds
 rio
+riscv64-linux-gnu-gdb
 ristretto
 rmpc
 rpi-imager
@@ -512,6 +520,7 @@ screengrab
 scribus
 scummvm
 shairplay
+shortwave
 shotcut
 smokeping
 snes9x

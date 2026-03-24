@@ -27,7 +27,6 @@ gtklock
 hexchat
 hugin
 intel-gpu-tools
-khard
 lemurs
 libetonyek
 libmatemixer
@@ -41,8 +40,6 @@ python-libusbsio
 libxfce4ui
 libxfce4windowing
 light
-lxdm
-lxqt-wayland-session
 ly
 mate-control-center
 mate-screensaver
@@ -65,8 +62,6 @@ p8-platform
 perl-cgi-fast
 profanity
 profanity-gtk
-python-cjkwrap
-python-texttable
 qbittorrent
 qbittorrent-nox
 qt5-webengine
@@ -74,7 +69,6 @@ rage
 read-edid
 reflector
 sdcv
-shortwave
 signal-desktop
 terminology
 termshark

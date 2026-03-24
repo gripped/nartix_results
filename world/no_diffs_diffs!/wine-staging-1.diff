@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -24,6 +24,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=wine-staging
+ pkgver=11.5
+-pkgrel=2
++pkgrel=1
+ 
+ _pkgbasever=${pkgver/rc/-rc}
+ _winever=$_pkgbasever
+@@ -24,13 +24,13 @@
  arch=(x86_64)
  options=(!lto pestrip)
  license=(LGPL-2.1-or-later)
@@ -8,7 +17,15 @@
  depends=(
    attr
    desktop-file-utils
-@@ -39,6 +40,7 @@
+   fontconfig
+   freetype2
+-  glibc
+-  libgcc
++  gcc-libs
+   gettext
+   libpcap
+   libunwind
+@@ -40,6 +40,7 @@
    libxrandr
    wayland
  )
@@ -16,7 +33,7 @@
  makedepends=(
    alsa-lib
    ffmpeg
-@@ -67,6 +69,7 @@
+@@ -68,6 +69,7 @@
    vulkan-headers
    vulkan-icd-loader
  )
@@ -24,3 +41,25 @@
  optdepends=(
    alsa-lib
    alsa-plugins
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -4,14 +4,13 @@
+ ffmpeg
+ fontconfig
+ freetype2
++gcc-libs
+ gettext
+ git
+-glibc
+ gnutls
+ gst-plugins-base-libs
+ gtk3
+ libcups
+-libgcc
+ libgphoto2
+ libpcap
+ libpulse

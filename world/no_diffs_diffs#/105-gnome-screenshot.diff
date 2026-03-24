@@ -1,39 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,21 +1,21 @@
- 
- pkgname=gnome-screenshot
- pkgver=41.0
--pkgrel=2
-+pkgrel=1
- epoch=1
- pkgdesc='Take pictures of your screen'
- arch=(x86_64)
--url='https://gitlab.gnome.org/Archive/gnome-screenshot'
-+url='https://gitlab.gnome.org/GNOME/gnome-screenshot'
- license=(GPL-2.0-or-later)
- depends=(
-   cairo
-   dconf
-+  gcc-libs
-   gdk-pixbuf2
-   glib2
-   glibc
-   gtk3
-   hicolor-icon-theme
--  libgcc
-   libhandy
-   libx11
-   libxext
-@@ -26,7 +26,7 @@
-   meson
- )
- source=(
--  "git+https://gitlab.gnome.org/Archive/gnome-screenshot.git#tag=$pkgver"
-+  "git+https://gitlab.gnome.org/GNOME/gnome-screenshot.git#tag=$pkgver"
-   0001-Fix-various-fallback-paths.patch
-   0001-Present-existing-window-if-already-in-interactive-mo.patch
- )
 @@ -49,7 +49,7 @@
  }
  
@@ -47,23 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -1,13 +1,13 @@
- appstream
- cairo
- dconf
-+gcc-libs
- gdk-pixbuf2
- git
- glib2
- glibc
- gtk3
- hicolor-icon-theme
--libgcc
- libhandy
- libx11
- libxext
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

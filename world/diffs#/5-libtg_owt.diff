@@ -1,14 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,25 +1,21 @@
+@@ -1,23 +1,21 @@
  
  pkgname=libtg_owt
--_commit=ec53225952d5a2a398227644a2017358d2665fa8
--pkgver=0.git32.${_commit:0:7}
--pkgrel=2
+-_commit=26068e29bfa8d74a9dc9c8f7f94172fafbc262b8
+-pkgver=0.git33.${_commit:0:7}
 +_commit=592b14d13bf9103226e90a83571e24c49f6bfdcd
 +pkgver=0.git24.${_commit:0:7}
-+pkgrel=1
+ pkgrel=1
  pkgdesc='WebRTC library'
  arch=('x86_64')
  url='https://github.com/desktop-app/tg_owt'
@@ -22,13 +21,11 @@
 +             'ffmpeg' 'libva' 'opus' 'yasm' 'libjpeg-turbo' 'pipewire' 'libxtst' 'libepoxy')
  options=('staticlibs')
 -source=("git+${url}.git#commit=${_commit}"
--        0001-Replace-absl-template-nullability-annotations.patch
 -        "git+https://chromium.googlesource.com/libyuv/libyuv/"
 -        "git+https://github.com/google/crc32c"
 -        "git+https://github.com/abseil/abseil-cpp"
 -        "git+https://github.com/cisco/libsrtp")
--b2sums=('1e4ae9063cfb65642006c2fc9355c6486d3813bec0946b65fa0732b6b4aad554a19313b3f96ee908a773db9126890e65d4bdb83159c00c42393976cefa5b4140'
--        'b7505db537f72da43fdc648d181387a550a683e204a12df593d68ff51ae2f2a924352adf11ad2fa794e5de87ed96d0d698257b442ca0fd2fbb5fb09ac627a7b6'
+-b2sums=('72ae286f854a8f7cdc141663554d72946ab78f790df55b22af6ede1e3ad66f1757d0f89ce49d938d0884b12a47516406e418794dc1dd0c37bc1e0ceb46d6d283'
 -        'SKIP'
 +source=("tg_owt::git+${url}.git#commit=${_commit}"
 +        "libvpx::git+https://chromium.googlesource.com/webm/libvpx.git"
@@ -38,7 +35,7 @@
          'SKIP'
          'SKIP'
          'SKIP')
-@@ -27,13 +23,10 @@
+@@ -25,10 +23,9 @@
  prepare() {
    cd tg_owt
    git submodule init
@@ -50,11 +47,8 @@
 +  git config submodule.src/third_party/libyuv.url "$srcdir"/libyuv
 +  git config submodule.src/third_party/pipewire.url "$srcdir"/pipewire
    git -c protocol.file.allow=always submodule update
--
--  patch -p1 -i ../0001-Replace-absl-template-nullability-annotations.patch
  }
  
- build() {
 
 
 ############# Stripped diff below #################
@@ -79,7 +73,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,10 @@
+@@ -1,10 +1,9 @@
  prepare() {
  cd tg_owt
  git submodule init
@@ -91,7 +85,5 @@
 +git config submodule.src/third_party/libyuv.url "$srcdir"/libyuv
 +git config submodule.src/third_party/pipewire.url "$srcdir"/pipewire
  git -c protocol.file.allow=always submodule update
--patch -p1 -i ../0001-Replace-absl-template-nullability-annotations.patch
  }
  build() {
- cd tg_owt

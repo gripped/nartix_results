@@ -3,7 +3,7 @@
 @@ -1,8 +1,8 @@
  
  pkgname=qt6-webengine
--_pkgver=6.10.2
+-_pkgver=6.11.0
 +_pkgver=6.10.0
  pkgver=${_pkgver/-/}
 -pkgrel=1
@@ -11,7 +11,24 @@
  _chromium=
  arch=(x86_64)
  url='https://www.qt.io'
-@@ -54,7 +54,7 @@
+@@ -23,6 +23,8 @@
+          harfbuzz
+          icu
+          lcms2
++         libdrm
++         libevent
+          libglvnd
+          libjpeg-turbo
+          libpng
+@@ -44,7 +46,6 @@
+          minizip
+          nspr
+          nss
+-         openh264
+          openjpeg2
+          opus
+          qt6-base
+@@ -53,7 +54,7 @@
           qt6-webchannel
           re2
           snappy
@@ -20,24 +37,51 @@
           ttf-font
           zlib)
  makedepends=(cmake
-@@ -77,7 +77,7 @@
+@@ -75,11 +76,9 @@
+ groups=(qt6)
  _pkgfn=${pkgname/6-/}
  source=(git+https://code.qt.io/qt/$_pkgfn#tag=v$_pkgver
-         git+https://code.qt.io/qt/qtwebengine-chromium)
--sha256sums=('98d8f65137ae6d913ddbe45b3dac562e6b01a5879695424d7f1c3f9eeeb16c21'
+-        git+https://code.qt.io/qt/qtwebengine-chromium
+-        system-openh264.patch)
+-sha256sums=('b0c490850019c6ff4351e27c3635f3a0057cb5d45f5dacc6ff09dcedeeff6e3c'
+-            'SKIP'
+-            'f254ad8266ae78f661959db70e930d2e63edbc93174a0762ce1f85528629a7fc')
++        git+https://code.qt.io/qt/qtwebengine-chromium)
 +sha256sums=('bf7483c49ea6f7695d31fade149c7049644131a8df21209ed3f691a62357f67d'
-             'SKIP')
++            'SKIP')
  
  prepare() {
-@@ -86,7 +86,7 @@
+   cd $_pkgfn
+@@ -87,12 +86,10 @@
    git submodule set-url src/3rdparty "$srcdir"/qtwebengine-chromium
    git -c protocol.file.allow=always submodule update
  
--  git cherry-pick -n 4b2f03af22bfb19168e71092d075c649e942604f # Fix crashes
+-  patch -p1 -i "$srcdir"/system-openh264.patch
 +  git cherry-pick -n ac20cd91b59dcaa40a8106354cb4253c541e7643 # Fix GPU rendering with mesa 25.2
  
    cd src/3rdparty
    [[ -n $_chromium ]] && git checkout $_chromium || true
+-
+-  sed -e 's|src/codec/api/svc|src/codec/api/wels|' -i chromium/third_party/openh264/BUILD.gn
+ }
+ 
+ build() {
+@@ -101,8 +98,8 @@
+     -DCMAKE_TOOLCHAIN_FILE=/usr/lib/cmake/Qt6/qt.toolchain.cmake \
+     -DQT_FEATURE_webengine_system_ffmpeg=ON \
+     -DQT_FEATURE_webengine_system_icu=ON \
++    -DQT_FEATURE_webengine_system_libevent=ON \
+     -DQT_FEATURE_webengine_system_re2=ON \
+-    -DQT_FEATURE_webengine_system_openh264=ON \
+     -DQT_FEATURE_webengine_proprietary_codecs=ON \
+     -DQT_FEATURE_webengine_kerberos=ON \
+     -DQT_FEATURE_webengine_webrtc_pipewire=ON
+@@ -113,5 +110,4 @@
+   DESTDIR="$pkgdir" cmake --install build
+ 
+   install -Dm644 "$srcdir"/${_pkgfn}/src/3rdparty/chromium/LICENSE "$pkgdir"/usr/share/licenses/${pkgname}/LICENSE.chromium
+-  rm "$pkgdir"/usr/lib/cmake/Qt6/FindRust.cmake
+ }
 
 
 ############# Stripped diff below #################

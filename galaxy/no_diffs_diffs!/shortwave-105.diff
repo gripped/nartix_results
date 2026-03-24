@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,7 @@
+ }
+ 
+ build() {
+-  arch-meson Shortwave build
++  artix-meson Shortwave build
+ 
+   CARGO_PROFILE_RELEASE_LTO=true \
+     CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ build() {
+-arch-meson Shortwave build
++artix-meson Shortwave build
+ CARGO_PROFILE_RELEASE_LTO=true \
+ CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 \
+ CARGO_PROFILE_RELEASE_DEBUG=2 \
