@@ -359,7 +359,6 @@ coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
-collada-dom
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -871,7 +870,6 @@ google-glog
 gox
 gparted
 gperf
-gperftools
 gpgmepp
 gphoto2
 gpicview
@@ -1194,6 +1192,12 @@ java-commons-io
 java-commons-logging
 java-hamcrest
 java-jline
+java-openjdk
+jdk-openjdk
+jre-openjdk
+jre-openjdk-headless
+openjdk-doc
+openjdk-src
 java-xmlgraphics-commons
 jbig2dec
 jedi-language-server
@@ -2221,6 +2225,11 @@ luajit
 luajson
 lua52-luajson
 luarocks
+lua-luarocks
+lua54-luarocks
+lua53-luarocks
+lua52-luarocks
+lua51-luarocks
 luasec
 lua-sec
 lua51-sec
@@ -3067,9 +3076,6 @@ podofo-tools
 polari
 polkit-gnome
 polkit-kde-agent
-polkit-qt
-polkit-qt5
-polkit-qt6
 polybar
 poppler-data
 poppler
@@ -3949,6 +3955,7 @@ python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
+python-ovirt-engine-sdk
 python-owslib
 python-packaging
 python-pallets-sphinx-themes
@@ -3988,7 +3995,6 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
-python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -4169,6 +4175,7 @@ python-pyqt6-sip
 python-pyquery
 python-pyrfc3339
 python-pyro
+python-pyrsistent
 python-pysaml2
 python-pyscreenshot
 python-pysendfile
@@ -4741,6 +4748,9 @@ qt6-imageformats
 qt6-languageserver
 qt6-location
 qt6-lottie
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-multimedia-gstreamer
 qt6-networkauth
 qt6-positioning
 qt6-quick3d

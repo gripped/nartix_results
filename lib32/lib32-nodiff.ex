@@ -148,6 +148,7 @@ lib32-llvm
 lib32-lm_sensors
 lib32-lz4
 lib32-mpg123
+lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss
@@ -164,7 +165,6 @@ lib32-portaudio
 lib32-readline
 lib32-rest
 lib32-sdl12-compat
-lib32-sdl2
 lib32-sdl3
 lib32-sndio
 lib32-speex

@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ 
+ prepare() {
+   cd $pkgname
+-  autoreconf -fi
++  autoreconf -fiv
+ }
+ 
+ build() {
+@@ -38,7 +38,7 @@
+ 
+ check() {
+   cd $pkgname
+-  make check
++  make check SKIP=tcm_min_asserts_unittest || :
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd $pkgname
+-autoreconf -fi
++autoreconf -fiv
+ }
+ build() {
+ cd $pkgname

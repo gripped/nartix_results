@@ -84,6 +84,7 @@ clamav
 cloud-init
 cmake
 cmus
+collada-dom
 colord
 libcolord
 colord-sane
@@ -215,6 +216,7 @@ gnome-user-share
 go-bindata
 godot
 godot-mono
+gperftools
 greetd-tuigreet
 greetd
 $pkgbase
@@ -298,12 +300,6 @@ jack2-dbus
 jack2-docs
 jami-daemon
 jaq
-java-openjdk
-jdk-openjdk
-jre-openjdk
-jre-openjdk-headless
-openjdk-doc
-openjdk-src
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -711,6 +707,9 @@ pluma
 plymouth
 podman
 podman-docker
+polkit-qt
+polkit-qt5
+polkit-qt6
 polkit
 postgresql-old-upgrade
 postgresql
@@ -739,9 +738,8 @@ python-asn1crypto
 python-cram
 python-debugpy
 python-ndg-httpsclient
-python-ovirt-engine-sdk
+python-peewee
 python-pymupdf
-python-pyrsistent
 python-pyscard
 python-pytest-freezegun
 python-pyudev
@@ -840,9 +838,6 @@ qt6-base
 qt6-xcb-private-headers
 qt6-doc
 qt6-examples
-qt6-multimedia
-qt6-multimedia-ffmpeg
-qt6-multimedia-gstreamer
 qt6-serialport
 qt6-webengine
 qterminal

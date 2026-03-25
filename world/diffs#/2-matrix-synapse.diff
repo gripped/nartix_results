@@ -9,11 +9,11 @@
           'python-signedjson' 'python-pymacaroons'
           'python-service-identity' 'python-msgpack'
           'python-phonenumbers' 'python-prometheus_client'
-          'python-attrs' 'python-netaddr' 'python-sortedcontainers'
+          'python-attrs' 'python-netaddr' 'python-sortedcontainers' 'python-pyparsing' 'python-pyrsistent'
           'python-treq' 'python-idna' 'python-jinja' 'python-matrix-common'
 -         'python-bleach' 'python-typing_extensions' 'python-python-multipart' 'systemd')
 +         'python-bleach' 'python-typing_extensions' 'python-python-multipart')
- makedepends=(git python-build python-installer python-wheel python-poetry-core python-setuptools-rust)
+ makedepends=(git python-build python-installer python-wheel python-poetry-core python-maturin)
  checkdepends=('python-pip' 'python-authlib' 'python-pyjwt' 'python-lxml' 'python-parameterized'
                'python-txredisapi' 'python-hiredis' 'postgresql' 'python-pyicu')
 @@ -33,21 +33,14 @@
@@ -27,7 +27,7 @@
          'tmpfiles-synapse.conf'
 -        'override-hardened.conf')
 +        )
- sha256sums=('01eaa5afce4e4e0006206f7f754c53cdd1e6b67a6e599685c8ce5a4ecbecaca7'
+ sha256sums=('f80fe0f33c928980a745725464905734298eb3e2221b469883c8d9159da10ec7'
              '751d0cb122b3c17cb4a2142461ac99bbaec798f1e4b357dd41ec4041e5623d35'
              'f67334856609997eac26939d77cfc520e78e98d3755543ab730d83a0f362a35e'
 -            '74af0bc2f57e5ced1a44f2438922d420cbb7defedae784cac02ef125f276a2ed'
@@ -40,7 +40,7 @@
  backup=('etc/synapse/log_config.yaml')
  install=synapse.install
  validpgpkeys=('02450A9EDDFEE3E0C730B786A7E4A57880C3A4A9'
-@@ -98,9 +91,6 @@
+@@ -100,9 +93,6 @@
  	install -vDm644 contrib/systemd/log_config.yaml "$pkgdir"/etc/synapse/log_config.yaml
  	install -vDm644 "$srcdir"/generic_worker.yaml.example "$pkgdir"/etc/synapse/workers/generic_worker.yaml.example
  
@@ -56,8 +56,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -32,11 +32,9 @@
- python-setuptools-rust
+@@ -34,11 +34,9 @@
+ python-service-identity
  python-signedjson
  python-sortedcontainers
 -python-systemd

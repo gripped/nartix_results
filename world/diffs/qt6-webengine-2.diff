@@ -4,10 +4,10 @@
  
  pkgname=qt6-webengine
 -_pkgver=6.11.0
-+_pkgver=6.10.0
++_pkgver=6.10.2
  pkgver=${_pkgver/-/}
 -pkgrel=1
-+pkgrel=3.2
++pkgrel=2
  _chromium=
  arch=(x86_64)
  url='https://www.qt.io'
@@ -47,7 +47,7 @@
 -            'SKIP'
 -            'f254ad8266ae78f661959db70e930d2e63edbc93174a0762ce1f85528629a7fc')
 +        git+https://code.qt.io/qt/qtwebengine-chromium)
-+sha256sums=('bf7483c49ea6f7695d31fade149c7049644131a8df21209ed3f691a62357f67d'
++sha256sums=('98d8f65137ae6d913ddbe45b3dac562e6b01a5879695424d7f1c3f9eeeb16c21'
 +            'SKIP')
  
  prepare() {
@@ -57,7 +57,7 @@
    git -c protocol.file.allow=always submodule update
  
 -  patch -p1 -i "$srcdir"/system-openh264.patch
-+  git cherry-pick -n ac20cd91b59dcaa40a8106354cb4253c541e7643 # Fix GPU rendering with mesa 25.2
++  git cherry-pick -n 4b2f03af22bfb19168e71092d075c649e942604f # Fix crashes
  
    cd src/3rdparty
    [[ -n $_chromium ]] && git checkout $_chromium || true
