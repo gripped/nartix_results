@@ -312,6 +312,7 @@ libmgba
 mgba-sdl
 mgba-qt
 mimetic
+miniaudio
 mixxx
 mokutil
 monero-gui

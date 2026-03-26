@@ -1960,7 +1960,6 @@ libproxy
 libproxy-docs
 libpst
 libpst-docs
-libptytty
 libpwquality
 libqaccessibilityclient
 libqaccessibilityclient-qt5
@@ -2560,8 +2559,6 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
-opencc
-opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -3603,7 +3600,6 @@ python-furl
 python-future
 python-fuzzywuzzy
 python-gaphas
-python-gast
 python-gast03
 python-gcp-devrel-py-tools
 python-generic
@@ -3995,6 +3991,7 @@ python-pdm-build-locked
 python-pdm-pep517
 python-pdm
 python-pecan
+python-peewee
 python-pefile
 python-pendulum
 python-pep440
@@ -4072,7 +4069,6 @@ python-pwntools
 python-py-cpuinfo
 python-py-partiql-parser
 python-py
-python-py3c
 python-py7zr
 python-pyacoustid
 python-pyaes
@@ -4318,7 +4314,6 @@ python-rencode
 python-reportlab
 python-repoze.lru
 python-requests-aws4auth
-python-requests-credssp
 python-requests-file
 python-requests-ftp
 python-requests-futures

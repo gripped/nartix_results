@@ -1,7 +1,41 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -58,3 +58,4 @@
+@@ -1,15 +1,14 @@
+ 
+ pkgname=python-levenshtein
+ pkgver=0.27.3
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Python extension for computing string edit distances and similarities'
+ arch=(x86_64)
+ url='https://github.com/rapidfuzz/Levenshtein'
+ license=(GPL-2.0-or-later)
+ depends=(
+   glibc
+-  libgcc
+-  libstdc++
++  gcc-libs
+   python
+   python-rapidfuzz
+ )
+@@ -59,3 +58,4 @@
  
    python -m installer --destdir="$pkgdir" dist/*.whl
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,7 @@
+ cython
++gcc-libs
+ git
+ glibc
+-libgcc
+-libstdc++
+ python
+ python-build
+ python-installer

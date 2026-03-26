@@ -409,6 +409,7 @@ libnvme
 libofa
 libpgm
 libprocps
+libptytty
 libqb
 libsidplay
 libsidplayfp
@@ -622,6 +623,8 @@ onboard
 onionshare
 open-iscsi
 openbox
+opencc
+opencc-doc
 opencollada
 opendht
 openrct2
@@ -737,13 +740,15 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-gast
 python-ndg-httpsclient
-python-peewee
+python-py3c
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-requests-credssp
 python-wheel
 qastools
 qbittorrent

@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=freetds
--pkgver=1.5.14
+-pkgver=1.5.15
 +pkgver=1.5.13
  pkgrel=1
  pkgdesc='Library for accessing Sybase and MS SQL Server databases'
@@ -12,7 +12,7 @@
          etc/freetds/locales.conf
          etc/freetds/pool.conf)
  source=(https://www.freetds.org/files/stable/$pkgname-$pkgver.tar.bz2)
--sha256sums=('2422a04d6fb546f168e69dd4a8289d13ac9f53ef86fc852ab11f5e0de249207f')
+-sha256sums=('41eaa4e507620402f133459de88f7eb48b6da77138579d888c617faae8c2b027')
 +sha256sums=('0c34f60027d714fe11763da14c299d253bbd8c6b8e542a4cdb46f4545f70045d')
  
  build() {

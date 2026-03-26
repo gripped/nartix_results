@@ -1,12 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  pkgname=libnbd
 -pkgver=1.24.2
+-pkgrel=2
 +pkgver=1.24.1
- pkgrel=1
++pkgrel=1
  pkgdesc="NBD client library in userspace"
  arch=('x86_64')
+ url="https://gitlab.com/nbdkit/libnbd"
 @@ -15,7 +15,7 @@
  source=(
    "https://download.libguestfs.org/libnbd/${pkgver%.*}-stable/libnbd-${pkgver}.tar.gz"{,.sig}

@@ -1,0 +1,44 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ _bootstrap_version=3.14.0
+ _pkgname=build
+ pkgname=python-$_pkgname
+-pkgver=1.4.2
++pkgver=1.4.0
+ pkgrel=1
+ pkgdesc='A simple, correct Python build frontend'
+ arch=(any)
+@@ -30,7 +30,6 @@
+ fi
+ checkdepends=(
+   python-filelock
+-  python-pip
+   python-pytest
+   python-pytest-mock
+   python-pytest-rerunfailures
+@@ -46,10 +45,10 @@
+   'python-virtualenv: to use virtualenv for build isolation'
+ )
+ if (( _bootstrap == 0 )); then
+-  source=("$pkgname::git+$url#tag=$pkgver")
++  source=("$pkgname::git+$url#tag=$pkgver?signed")
+ else
+   source=(
+-    "python-bootstrap::git+https://gitlab.archlinux.org/archlinux/python-bootstrap.git#tag=$_bootstrap_version"
++    python-bootstrap::git+https://gitlab.archlinux.org/archlinux/python-bootstrap.git#tag=$_bootstrap_version
+     python-build::git+https://github.com/pypa/build.git
+     python-flit::git+https://github.com/pypa/flit.git
+     python-installer::git+https://github.com/pypa/installer.git
+@@ -59,7 +58,10 @@
+     python-setuptools::git+https://github.com/pypa/setuptools.git
+   )
+ fi
+-b2sums=('f99112175e033dee8f8bd8d2ee925e18b64d70ff0fea1892ad9d2eb252a758cf9798bf9dd7dfa5c2299219a33fa285acebd0a341445d48f9df8fb24666c2305f')
++validpgpkeys=(
++  2FDEC9863E5E14C7BC429F27B9D0E45146A241E8 # Henry Schreiner <henryschreineriii@gmail.com>
++)
++b2sums=('c8f090c3b22fc3baa339f73805839e66c67996927b538af7d7711d21efac46f822c90ec5cc97e5c98699035222dbee4309c81dfd63b7bc8d6e1c11d1b64480a9')
+ 
+ prepare() {
+   if (( _bootstrap == 0 )); then

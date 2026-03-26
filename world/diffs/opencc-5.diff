@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,13 @@
+ pkgbase=opencc
+ pkgname=(opencc opencc-doc)
+ pkgver=1.2.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Library for Open Chinese Convert"
+ url="https://github.com/BYVoid/OpenCC"
+ arch=('x86_64')
+ license=('Apache-2.0')
+ makedepends=('git' 'chrpath' 'cmake' 'darts' 'doxygen' 'marisa' 'pybind11' 'python-setuptools'
+-             'python-build' 'python-installer' 'python-wheel' 'rapidjson' 'tclap' 'gtest')
++             'python-wheel' 'rapidjson' 'tclap' 'gtest')
+ source=("git+https://github.com/BYVoid/OpenCC.git#tag=ver.$pkgver"
+         8f3a5b4b201f091713cb4e2b1b5883a4b12d10b2.patch)
+ sha512sums=('59e0ebf97ff630f10c46e594715cdf91629b053d23417df6d86bb3f051f17e3570b3d989420d03346efceeeb0bedd4cc37bdb4562e3342c818e2b1393e75b4f8'
+@@ -32,7 +32,7 @@
+   make
+ 
+   cp opencc_clib.*.so python/opencc/clib/
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -47,7 +47,7 @@
+ 
+   cd OpenCC
+   make DESTDIR="$pkgdir" install
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+ 
+   local python_version=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+   mkdir "$pkgdir"/usr/lib/"python$python_version"/site-packages/opencc/clib/share
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,8 +6,6 @@
+ gtest
+ marisa
+ pybind11
+-python-build
+-python-installer
+ python-setuptools
+ python-wheel
+ rapidjson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,5 +12,5 @@
+ -DUSE_SYSTEM_GTEST:BOOL=ON
+ make
+ cp opencc_clib.*.so python/opencc/clib/
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

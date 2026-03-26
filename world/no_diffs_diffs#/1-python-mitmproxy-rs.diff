@@ -1,16 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,15 +1,15 @@
  
  pkgname=python-mitmproxy-rs
  _pyname=mitmproxy_rs
 -pkgver=0.12.9
--pkgrel=1
 +pkgver=0.12.8
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Python bindings for mitmproxy's Rust code"
  arch=(x86_64)
  url='https://github.com/mitmproxy/mitmproxy_rs'
+ license=(MIT)
+ depends=(
++  gcc-libs
+   glibc
+-  libgcc
+   python
+ )
+ makedepends=(
 @@ -22,8 +22,8 @@
  )
  options=(!lto)
@@ -22,3 +29,18 @@
  
  build() {
    cd "$pkgname"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ bpf-linker
++gcc-libs
+ git
+ glibc
+-libgcc
+ maturin
+ python
+ python-installer

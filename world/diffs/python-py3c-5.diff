@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=python-py3c
+ pkgver=1.4
+-pkgrel=6
++pkgrel=5
+ pkgdesc="A Python 2/3 compatibility layer for C extensions"
+ url="https://github.com/encukou/py3c"
+ license=('MIT')
+ arch=('any')
+ depends=('python')
+-makedepends=('python-build' 'python-installer' 'python-setuptools' 'python-wheel')
++makedepends=('python-setuptools')
+ source=("$pkgname-$pkgver.tar.gz::https://github.com/encukou/py3c/archive/v$pkgver.tar.gz")
+ sha512sums=('db71db2c19a16ba5a430b676beb357faee5b67b161478932af13dd06be23b5505da85dbaf5b2447f95590fea55b833ee33fa19d3350ba3117f3364a9ab012ee6')
+ 
+@@ -18,7 +18,7 @@
+ 
+ build() {
+   cd py3c-$pkgver
+-  python -m build --wheel --no-isolation
++  python setup.py build
+   make prefix=/usr py3c.pc
+ }
+ 
+@@ -30,7 +30,7 @@
+ package() {
+   cd py3c-$pkgver
+   make prefix="$pkgdir"/usr install
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+ 
+   rm -r "$pkgdir"/usr/include/python*
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,2 @@
+ python
+-python-build
+-python-installer
+ python-setuptools
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ }
+ build() {
+ cd py3c-$pkgver
+-python -m build --wheel --no-isolation
++python setup.py build
+ make prefix=/usr py3c.pc
+ }
