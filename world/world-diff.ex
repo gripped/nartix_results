@@ -50,8 +50,8 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+cargo-about
 catfish
-ccache
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -106,6 +106,7 @@ darkhttpd
 dbus-broker
 dconf
 ddcutil
+deno
 dhcp
 dhclient
 dhcpcd
@@ -289,6 +290,7 @@ hyprland
 i2pd
 ibus
 libibus
+icoutils
 igsc
 iio-sensor-proxy
 intel-opencl-clang
@@ -344,6 +346,7 @@ kitty-shell-integration
 knockd
 knot
 krdp
+krita
 ksystemlog
 kwin-x11
 kwin
@@ -394,7 +397,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -409,7 +411,6 @@ libnvme
 libofa
 libpgm
 libprocps
-libptytty
 libqb
 libsidplay
 libsidplayfp
@@ -502,6 +503,10 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 mate-applets
 mate-backgrounds
 mate-calc
@@ -623,8 +628,6 @@ onboard
 onionshare
 open-iscsi
 openbox
-opencc
-opencc-doc
 opencollada
 opendht
 openrct2
@@ -740,15 +743,12 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-gast
 python-ndg-httpsclient
-python-py3c
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-requests-credssp
 python-wheel
 qastools
 qbittorrent
@@ -841,15 +841,13 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
-quazip
-quazip-qt5
-quazip-qt6
 rabbitmq
 rabbitmqadmin
 rawtherapee

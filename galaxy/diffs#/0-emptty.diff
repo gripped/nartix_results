@@ -11,7 +11,7 @@
 -backup=('etc/emptty/conf')
 -install="$pkgname.install"
 -source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
--sha512sums=('489c7ea6cabb4973af0e9c8b46aa86f0c4c7ef0b4529e87ccc1a8ffb3a771f648da7d16c09d58f2143d6e7a7d9005c152a3a3a05b4e76863eb5285e3a97dfa26')
+-sha512sums=('a0d13609bfd6392f04a2ad1c84630e42abd888e46a099f2573eef2e972d4b713b58d01c3bacc5649d1638e332f2873604acc0b12970ff510038e68b9e5255bed')
 +backup=('etc/emptty/conf' 'etc/pam.d/emptty')
 +source=("${url}/archive/v${pkgver}.tar.gz")
  
@@ -36,7 +36,7 @@
    install -Dm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
  }
  
-+sha256sums=('fae7c04afeeb9ef3dcbb9bca67e9a2fa940e99a91872ebc0775e10253972c7f3')
++sha256sums=('35a5d60d21b4496a7df1b14ce7f7b7be0be9dc1e54c1e86e17e49f6dd83732a8')
 +
 
 

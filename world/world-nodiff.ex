@@ -291,7 +291,6 @@ cantor
 capnproto
 capstone
 python-capstone
-cargo-about
 cargo-c
 cargo-edit
 caribou
@@ -302,6 +301,7 @@ catdoc
 cauchy
 cbatticon
 cbindgen
+ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -436,7 +436,6 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
-deno
 desktop-file-utils
 dev86
 devhelp
@@ -1118,7 +1117,6 @@ ibm-sw-tpm2
 icewm
 icmake
 icon-naming-utils
-icoutils
 id3lib
 ijs
 imagemagick
@@ -1531,7 +1529,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -1819,6 +1816,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1960,6 +1958,7 @@ libproxy
 libproxy-docs
 libpst
 libpst-docs
+libptytty
 libpwquality
 libqaccessibilityclient
 libqaccessibilityclient-qt5
@@ -2313,10 +2312,6 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -2559,6 +2554,8 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
+opencc
+opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -3600,6 +3597,7 @@ python-furl
 python-future
 python-fuzzywuzzy
 python-gaphas
+python-gast
 python-gast03
 python-gcp-devrel-py-tools
 python-generic
@@ -4069,6 +4067,7 @@ python-pwntools
 python-py-cpuinfo
 python-py-partiql-parser
 python-py
+python-py3c
 python-py7zr
 python-pyacoustid
 python-pyaes
@@ -4314,6 +4313,7 @@ python-rencode
 python-reportlab
 python-repoze.lru
 python-requests-aws4auth
+python-requests-credssp
 python-requests-file
 python-requests-ftp
 python-requests-futures
@@ -4735,7 +4735,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4775,6 +4774,8 @@ qtox
 qtqr
 qtxdg-tools
 quadrapassel
+quazip
+quazip-qt6
 quilt
 quota-tools
 qutebrowser

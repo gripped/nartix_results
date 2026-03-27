@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=anari-sdk
+ pkgver=0.13.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='ANARI Software Development Kit (SDK)'
+ arch=(x86_64)
+ url='https://github.com/KhronosGroup/ANARI-SDK'
+ license=(Apache-2.0)
+-depends=(glibc
+-         libgcc
+-         libstdc++
++depends=(gcc-libs
++         glibc
+          python)
+ makedepends=(cmake
+              git)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
++gcc-libs
+ git
+ glibc
+-libgcc
+-libstdc++
+ python

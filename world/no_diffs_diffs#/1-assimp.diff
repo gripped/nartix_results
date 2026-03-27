@@ -1,14 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,15 +1,15 @@
  
  pkgname=assimp
 -pkgver=6.0.4
+-pkgrel=2
 +pkgver=6.0.2
- pkgrel=1
++pkgrel=1
  pkgdesc="Library to import various well-known 3D model formats in an uniform manner"
  arch=('x86_64')
-@@ -9,7 +9,7 @@
+ license=('BSD-3-Clause')
+-depends=('zlib' 'glibc' 'libgcc' 'libstdc++')
++depends=('zlib' 'gcc-libs' 'glibc')
  makedepends=('cmake' 'ninja')
  url='https://github.com/assimp/assimp'
  source=("$pkgname-$pkgver.tar.gz::https://github.com/assimp/assimp/archive/v${pkgver}.tar.gz")
@@ -17,3 +20,17 @@
  
  build() {
    cd ${pkgname}-${pkgver}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
++gcc-libs
+ glibc
+-libgcc
+-libstdc++
+ ninja
+ zlib

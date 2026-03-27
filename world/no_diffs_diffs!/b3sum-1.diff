@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,12 +5,12 @@
+   libblake3
+ )
+ pkgver=1.8.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Command line implementation of the BLAKE3 hash function'
+ arch=(x86_64)
+ url=https://github.com/BLAKE3-team/BLAKE3
+ license=('CC0-1.0 OR Apache-2.0 OR Apache-2.0 WITH LLVM-exception')
+-depends=(glibc libgcc)
++depends=(gcc-libs)
+ makedepends=(
+   cmake
+   git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
++gcc-libs
+ git
+-glibc
+-libgcc
+ onetbb
+ rust

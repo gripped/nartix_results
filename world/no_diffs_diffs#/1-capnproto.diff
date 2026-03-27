@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,14 @@
+ 
+ pkgname=capnproto
+ pkgver=1.2.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Cap'n Proto serialization/RPC system"
+ arch=(x86_64)
+ url="https://capnproto.org/"
+ license=(MIT)
+ depends=(
++  gcc-libs
+   glibc
+-  libgcc
+-  libstdc++
+   openssl
+   zlib
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
++gcc-libs
+ glibc
+-libgcc
+-libstdc++
+ openssl
+ zlib

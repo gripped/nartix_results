@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=audiofile
+ pkgver=0.3.6
+-pkgrel=12
++pkgrel=11
+ pkgdesc="Silicon Graphics Audio File Library"
+ arch=(x86_64)
+ url="https://audiofile.68k.org/"
+@@ -12,9 +12,8 @@
+ )
+ depends=(
+   flac
++  gcc-libs
+   glibc
+-  libgcc
+-  libstdc++
+ )
+ makedepends=(alsa-lib)
+ provides=(libaudiofile.so)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ alsa-lib
+ flac
++gcc-libs
+ glibc
+-libgcc
+-libstdc++

@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,19 +1,19 @@
+ 
+ pkgname=cargo-about
+ pkgver=0.8.4
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Cargo plugin to generate list of all licenses for a crate"
+ arch=('x86_64')
+ url="https://github.com/EmbarkStudios/cargo-about"
+ license=('Apache-2.0' 'MIT')
+-depends=('cargo' 'glibc' 'libgcc')
++depends=('cargo' 'gcc-libs')
+ source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
+ sha256sums=('956cea9d2170936e7d53d1a8c951242332777be89bff4b8531066bff584fbcd3')
+ options=('!lto')
+ 
+ prepare() {
+   cd "$pkgname-$pkgver"
+-  cargo fetch --locked --target "$(rustc --print host-tuple)"
++  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+ cargo
+-glibc
+-libgcc
++gcc-libs
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd "$pkgname-$pkgver"
+-cargo fetch --locked --target "$(rustc --print host-tuple)"
++cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ build() {
+ cd "$pkgname-$pkgver"

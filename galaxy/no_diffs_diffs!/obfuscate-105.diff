@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,7 +48,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+ 
+   CARGO_PROFILE_RELEASE_LTO=true \
+     CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,7 +7,7 @@
+ git apply -3 ../obfuscate-new-window.patch
+ }
+ build() {
+-arch-meson $pkgname build
++artix-meson $pkgname build
+ CARGO_PROFILE_RELEASE_LTO=true \
+ CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 \
+ CARGO_PROFILE_RELEASE_DEBUG=2 \

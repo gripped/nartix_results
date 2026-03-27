@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
+@@ -1,22 +1,22 @@
+ 
+ pkgbase=crun
+ pkgname=(crun krun)
+-pkgver=1.27
+-pkgrel=1
++pkgver=1.26
++pkgrel=3
+ pkgdesc="A fast and lightweight fully featured OCI runtime and C library for running containers"
+ url="https://github.com/containers/crun"
  license=('LGPL-2.1-or-later')
  arch=('x86_64')
  provides=('oci-runtime')
@@ -8,8 +17,9 @@
 +makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git' 'yajl' 'libcap' 'libseccomp' 'criu' 'libkrun')
  source=("git+https://github.com/containers/crun.git#tag=$pkgver?signed")
  validpgpkeys=('AC404C1C0BF735C63FF4D562263D6DF2E163E1EA')
- sha256sums=('c42d4baf9a8f2e337b3b54f8659357fcd2697ef36f32bf6d41e8d0c91613632c')
-@@ -16,7 +16,7 @@
+-sha256sums=('08515e75cf570eaa6d8fb739feb7c006b5f630853fd84609b2788d45fd88e55f')
++sha256sums=('c42d4baf9a8f2e337b3b54f8659357fcd2697ef36f32bf6d41e8d0c91613632c')
+ 
  build() {
      cd "$pkgname"
      ./autogen.sh

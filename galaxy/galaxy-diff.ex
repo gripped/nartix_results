@@ -20,6 +20,7 @@ evisum
 fd
 featherpad
 firefox
+gemini-cli
 gpicview
 greetd-regreet
 gtk-engine-murrine
@@ -70,6 +71,7 @@ read-edid
 reflector
 sdcv
 signal-desktop
+telegram-desktop
 terminology
 termshark
 tor

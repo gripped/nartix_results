@@ -134,7 +134,6 @@ fzy
 gammastep
 gaphor
 garcon
-gemini-cli
 ghostty
 ghostty-shell-integration
 ghostty-terminfo
@@ -402,6 +401,7 @@ nvm
 nwg-hello
 nyx
 obconf-qt
+obfuscate
 obsidian-icon-theme
 octave
 onionshare
@@ -541,7 +541,6 @@ swww
 sysbench
 t1lib
 tealdeer
-telegram-desktop
 tenacity
 terminus-font
 tesseract-data
