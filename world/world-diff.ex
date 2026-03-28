@@ -50,7 +50,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cargo-about
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -106,7 +105,6 @@ darkhttpd
 dbus-broker
 dconf
 ddcutil
-deno
 dhcp
 dhclient
 dhcpcd
@@ -196,6 +194,7 @@ gdm
 libgdm
 gengetopt
 geoclue
+gflags
 ghc-filesystem
 glpk
 gnome-bluetooth-3.0
@@ -301,7 +300,6 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-jaq
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -346,7 +344,7 @@ kitty-shell-integration
 knockd
 knot
 krdp
-krita
+kseexpr
 ksystemlog
 kwin-x11
 kwin
@@ -397,6 +395,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -713,9 +712,6 @@ pluma
 plymouth
 podman
 podman-docker
-polkit-qt
-polkit-qt5
-polkit-qt6
 polkit
 postgresql-old-upgrade
 postgresql
@@ -841,7 +837,6 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
-qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport

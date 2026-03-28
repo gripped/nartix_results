@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,17 +3,16 @@
+ _pkgname=lib$pkgname
+ _upstream=dbus-cplusplus
+ pkgver=0.9.0
+-pkgrel=13
++pkgrel=12
+ pkgdesc="A C++ API for D-BUS"
+ arch=(x86_64)
+ url="https://sourceforge.net/projects/dbus-cplusplus/"
+ license=(LGPL-2.1-or-later)
+ depends=(
+   dbus
++  gcc-libs
+   glib2
+   glibc
+-  libgcc
+-  libstdc++
+ )
+ makedepends=(
+   expat
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ dbus
+ expat
++gcc-libs
+ glib2
+ glibc
+-libgcc
+-libstdc++

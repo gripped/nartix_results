@@ -4,10 +4,9 @@
  
  pkgname=cinnamon-settings-daemon
 -pkgver=6.6.3
--pkgrel=1
--pkgdesc='Settings daemon for Cinnamon'
 +pkgver=6.0.0
-+pkgrel=2
+ pkgrel=2
+-pkgdesc='Settings daemon for Cinnamon'
 +pkgdesc="The Cinnamon Settings daemon"
  arch=(x86_64)
 -url='https://github.com/linuxmint/cinnamon-settings-daemon'
@@ -17,7 +16,6 @@
 -  cinnamon-desktop
 -  dconf
 -  fontconfig
--  gcc-libs
 -  gdk-pixbuf2
 -  glib2
 -  glibc
@@ -25,6 +23,7 @@
 -  hicolor-icon-theme
 -  lcms2
 -  libcanberra-pulse
+-  libgcc
 -  libcolord
 -  libcups
 -  libgudev
@@ -83,7 +82,6 @@
  cinnamon-desktop
 -dconf
 -fontconfig
--gcc-libs
 -gdk-pixbuf2
 -git
 -glib2
@@ -97,6 +95,7 @@
  libcanberra-pulse
 -libcolord
  libcups
+-libgcc
 +libgnomekbd
  libgudev
  libnotify

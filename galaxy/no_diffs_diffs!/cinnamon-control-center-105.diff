@@ -1,7 +1,35 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -45,7 +45,7 @@
- b2sums=(0521be583a47061f35d76474308269c821e7c5c5e7bcbf6fee7fd6e8b6ff0ef9d0ffd79ed2d397d3af1509ec284e3a2700430a41d2233568aac52b33446e5262)
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cinnamon-control-center
+ pkgver=6.6.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='A collection of configuration plugins used in cinnamon-settings'
+ arch=(x86_64)
+ url='https://github.com/linuxmint/cinnamon-control-center'
+@@ -13,13 +13,13 @@
+   cinnamon-settings-daemon
+   colord
+   dconf
++  gcc-libs
+   gdk-pixbuf2
+   glib2
+   glibc
+   gnome-color-manager
+   gtk3
+   hicolor-icon-theme
+-  libgcc
+   libcolord
+   libgudev
+   libmm-glib
+@@ -42,10 +42,10 @@
+ )
+ options=(!emptydirs)
+ source=("git+https://github.com/linuxmint/cinnamon-control-center.git#tag=$pkgver")
+-b2sums=('0521be583a47061f35d76474308269c821e7c5c5e7bcbf6fee7fd6e8b6ff0ef9d0ffd79ed2d397d3af1509ec284e3a2700430a41d2233568aac52b33446e5262')
++b2sums=(0521be583a47061f35d76474308269c821e7c5c5e7bcbf6fee7fd6e8b6ff0ef9d0ffd79ed2d397d3af1509ec284e3a2700430a41d2233568aac52b33446e5262)
  
  build() {
 -  arch-meson $pkgname build
@@ -13,7 +41,24 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -5,6 +5,7 @@
+ cinnamon-settings-daemon
+ colord
+ dconf
++gcc-libs
+ gdk-pixbuf2
+ git
+ glib2
+@@ -14,7 +15,6 @@
+ gtk3
+ hicolor-icon-theme
+ libcolord
+-libgcc
+ libgudev
+ libmm-glib
+ libnm
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

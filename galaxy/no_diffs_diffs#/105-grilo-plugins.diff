@@ -1,14 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=grilo-plugins
 -pkgver=0.3.18
+-pkgrel=3
 +pkgver=0.3.16+r46+gea3afa8c
- pkgrel=2
++pkgrel=2
  epoch=1
  pkgdesc="A collection of plugins for the Grilo framework"
-@@ -23,9 +23,8 @@
+ url="https://gitlab.gnome.org/GNOME/grilo-plugins"
+@@ -10,6 +10,7 @@
+ depends=(
+   avahi
+   chromaprint
++  gcc-libs
+   glib2
+   glibc
+   gom
+@@ -19,13 +20,11 @@
+   json-glib
+   libarchive
+   libdmapsharing
+-  libgcc
    libgoa
    libmediaart
    liboauth
@@ -65,7 +79,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,9 +19,8 @@
+@@ -1,5 +1,6 @@
+ avahi
+ chromaprint
++gcc-libs
+ git
+ glib2
+ glib2-devel
+@@ -12,16 +13,14 @@
+ json-glib
+ libarchive
+ libdmapsharing
+-libgcc
+ libgoa
+ libgrilo-0.3.so
+ libgrlnet-0.3.so
  libgrlpls-0.3.so
  libmediaart
  liboauth

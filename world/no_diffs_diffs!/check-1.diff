@@ -1,5 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -5,15 +5,15 @@
+   check-docs
+ )
+ pkgver=0.15.2
+-pkgrel=4
++pkgrel=3
+ pkgdesc="Unit testing framework for C"
+ url="https://libcheck.github.io/check/"
+ arch=(x86_64)
+ license=(LGPL-2.1-or-later)
+ depends=(
+   awk
++  gcc-libs
+   glibc
+-  libgcc
+ )
+ makedepends=(
+   cmake
 @@ -23,6 +23,7 @@
    texi2html
    texlive-bin
@@ -8,3 +26,20 @@
  source=(
    "git+https://github.com/libcheck/check#tag=$pkgver"
    0001-Avoid-static-library.patch
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,9 +2,9 @@
+ awk
+ cmake
+ doxygen
++gcc-libs
+ git
+ glibc
+-libgcc
+ ninja
+ texi2html
+ texlive-bin

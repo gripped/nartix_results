@@ -1,13 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,14 +1,14 @@
  
  pkgname=gitoxide
 -pkgver=0.51.0
+-pkgrel=2
 +pkgver=0.50.0
- pkgrel=1
++pkgrel=1
  pkgdesc="An idiomatic, lean, fast & safe pure Rust implementation of Git"
  url='https://github.com/Byron/gitoxide'
+ arch=('x86_64')
+ license=('MIT' 'Apache-2.0')
+ depends=(
++  'gcc-libs'
+   'glibc'
+-  'libgcc'
+ )
+ makedepends=(
+   'cargo'
 @@ -16,8 +16,8 @@
  )
  options=(!lto)
@@ -19,3 +29,15 @@
  
  prepare() {
    cd "${pkgname}-${pkgver}"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+ cargo
+ cmake
++gcc-libs
+ glibc
+-libgcc

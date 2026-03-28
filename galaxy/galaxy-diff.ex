@@ -2,6 +2,9 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
+cinnamon-session
+cinnamon-settings-daemon
+cjs
 cosmic-applets
 cosmic-comp
 cosmic-initial-setup
@@ -20,7 +23,6 @@ evisum
 fd
 featherpad
 firefox
-gemini-cli
 gpicview
 greetd-regreet
 gtk-engine-murrine
@@ -61,8 +63,6 @@ osdlyrics
 ouch
 p8-platform
 perl-cgi-fast
-profanity
-profanity-gtk
 qbittorrent
 qbittorrent-nox
 qt5-webengine
@@ -71,7 +71,6 @@ read-edid
 reflector
 sdcv
 signal-desktop
-telegram-desktop
 terminology
 termshark
 tor

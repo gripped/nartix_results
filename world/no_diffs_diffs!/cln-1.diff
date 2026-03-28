@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,15 @@
+ 
+ pkgname=cln
+ pkgver=1.3.7
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Class library for numbers"
+ arch=(x86_64)
+ url="https://www.ginac.de/CLN/"
+ license=(GPL-2.0-or-later)
+ depends=(
++  gcc-libs
+   glibc
+   gmp
+-  libgcc
+-  libstdc++
+ )
+ makedepends=('texlive-latex')
+ source=(https://www.ginac.de/CLN/${pkgname}-${pkgver}.tar.bz2)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
++gcc-libs
+ glibc
+ gmp
+-libgcc
+-libstdc++
+ texlive-latex

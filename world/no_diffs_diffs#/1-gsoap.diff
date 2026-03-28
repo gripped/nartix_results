@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=gsoap
+ pkgver=2.8.140
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Offers an XML language binding to ease the development of SOAP/XML Web services in C and C/C++"
+ url="https://sourceforge.net/projects/gsoap2/"
+ arch=('x86_64')
+-license=('GPL-2.0-only' 'LicenseRef-gSOAP-Public-License-1.3')
+-depends=('glibc' 'libgcc' 'libstdc++' 'openssl' 'zlib')
++license=('GPL' 'custom')
++depends=('openssl' 'zlib' 'gcc-libs')
+ makedepends=('autoconf' 'automake')
+ options=('staticlibs')
+ source=("https://prdownloads.sourceforge.net/gsoap2/${pkgname}_${pkgver}.zip")
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ autoconf
+ automake
+-glibc
+-libgcc
+-libstdc++
++gcc-libs
+ openssl
+ zlib

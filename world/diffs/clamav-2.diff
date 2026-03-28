@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -20,7 +20,7 @@
+@@ -21,7 +21,7 @@
    ncurses
    openssl
    pcre2
@@ -9,7 +9,7 @@
    zlib
  )
  makedepends=(
-@@ -29,7 +29,7 @@
+@@ -30,7 +30,7 @@
    ninja
    python
    python-pytest
@@ -18,7 +18,7 @@
  )
  checkdepends=(
    check
-@@ -106,7 +106,7 @@
+@@ -107,7 +107,7 @@
  
  package() {
    depends+=(
@@ -33,15 +33,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,7 +13,6 @@
- libmilter
+@@ -14,7 +14,6 @@
  libmspack
  libncursesw.so
+ libstdc++
 -libsystemd.so
  libxml2
  ncurses
  ninja
-@@ -21,6 +20,4 @@
+@@ -22,6 +21,4 @@
  pcre2
  python
  python-pytest

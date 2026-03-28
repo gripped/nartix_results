@@ -74,11 +74,8 @@ chromium-bsu
 cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
-cinnamon-session
-cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
-cjs
 claws-mail
 compface
 copyq
@@ -134,6 +131,7 @@ fzy
 gammastep
 gaphor
 garcon
+gemini-cli
 ghostty
 ghostty-shell-integration
 ghostty-terminfo
@@ -450,6 +448,8 @@ pop-sound-theme
 ppsspp
 ppsspp-assets
 prismlauncher
+profanity
+profanity-gtk
 pysolfc-cardsets
 pysolfc
 python-aiohttp-oauthlib
@@ -541,6 +541,7 @@ swww
 sysbench
 t1lib
 tealdeer
+telegram-desktop
 tenacity
 terminus-font
 tesseract-data

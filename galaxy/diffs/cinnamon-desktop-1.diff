@@ -1,6 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -17,7 +17,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cinnamon-desktop
+ pkgver=6.6.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Library with common API for various Cinnamon modules'
+ arch=(x86_64)
+ url='https://github.com/linuxmint/cinnamon-desktop'
+@@ -9,15 +9,15 @@
+ depends=(
+   cairo
+   dconf
++  gcc-libs
+   gdk-pixbuf2
+   glib2
+   glibc
+   gtk3
+-  libgcc
    libpulse
    libx11
    libxkbfile
@@ -24,10 +42,18 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -8,8 +8,8 @@
+@@ -1,5 +1,6 @@
+ cairo
+ dconf
++gcc-libs
+ gdk-pixbuf2
+ git
+ glib2
+@@ -7,9 +8,8 @@
  glibc
  gobject-introspection
  gtk3
+-libgcc
 +libelogind
  libpulse
  libx11

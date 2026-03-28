@@ -4,7 +4,7 @@
  
  pkgname=cinnamon-control-center
 -pkgver=6.6.0
--pkgrel=2
+-pkgrel=3
 -pkgdesc='A collection of configuration plugins used in cinnamon-settings'
 +pkgver=6.0.0
 +pkgrel=1
@@ -19,13 +19,13 @@
 -  cinnamon-settings-daemon
 -  colord
 -  dconf
--  gcc-libs
 -  gdk-pixbuf2
 -  glib2
 -  glibc
 -  gnome-color-manager
 -  gtk3
 -  hicolor-icon-theme
+-  libgcc
 -  libcolord
 -  libgudev
 -  libmm-glib
@@ -56,7 +56,7 @@
 +makedepends=(meson samurai gnome-online-accounts)
  options=(!emptydirs)
 -source=("git+https://github.com/linuxmint/cinnamon-control-center.git#tag=$pkgver")
--b2sums=(0521be583a47061f35d76474308269c821e7c5c5e7bcbf6fee7fd6e8b6ff0ef9d0ffd79ed2d397d3af1509ec284e3a2700430a41d2233568aac52b33446e5262)
+-b2sums=('0521be583a47061f35d76474308269c821e7c5c5e7bcbf6fee7fd6e8b6ff0ef9d0ffd79ed2d397d3af1509ec284e3a2700430a41d2233568aac52b33446e5262')
 +source=(${url}/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz)
 +sha256sums=('8dcf3b1a5e0388f5292de27120482c692a79e7c31aea583301ad083a8c449532')
 +b2sums=('b856e4c258a76aa5e558cca53ac333df81ae135d731a5de65470282e741a95f2c179fbd9f28e8bb26824de5ee1f9b9fcb0143fee1760800149a345085c45f11b')
@@ -91,7 +91,6 @@
  cinnamon-settings-daemon
  colord
 -dconf
--gcc-libs
 -gdk-pixbuf2
 -git
 -glib2
@@ -101,6 +100,7 @@
 -gtk3
 -hicolor-icon-theme
 -libcolord
+-libgcc
 -libgudev
 +gnome-online-accounts
 +libgnomekbd

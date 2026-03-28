@@ -4,9 +4,10 @@
  
  pkgname=cinnamon-desktop
 -pkgver=6.6.2
-+pkgver=6.0.0
- pkgrel=1
+-pkgrel=2
 -pkgdesc='Library with common API for various Cinnamon modules'
++pkgver=6.0.0
++pkgrel=1
 +pkgdesc="Library with common API for various Cinnamon modules"
  arch=(x86_64)
 -url='https://github.com/linuxmint/cinnamon-desktop'
@@ -14,11 +15,11 @@
 -depends=(
 -  cairo
 -  dconf
--  gcc-libs
 -  gdk-pixbuf2
 -  glib2
 -  glibc
 -  gtk3
+-  libgcc
 -  libpulse
 -  libx11
 -  libxkbfile
@@ -81,7 +82,6 @@
 @@ -1,15 +1,8 @@
 -cairo
 -dconf
--gcc-libs
 -gdk-pixbuf2
 -git
 -glib2
@@ -90,6 +90,7 @@
 +accountsservice
  gobject-introspection
  gtk3
+-libgcc
 +intltool
  libpulse
 -libx11

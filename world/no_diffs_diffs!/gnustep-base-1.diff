@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=gnustep-base
+ pkgver=1.31.1
+-pkgrel=3
++pkgrel=2
+ pkgdesc='The GNUstep base package'
+ arch=('x86_64')
+ url='http://www.gnustep.org/'
+ license=('GPL-2.0-only' 'GPL-3.0-only' 'LGPL-2.1-only')
+-depends=(avahi glibc gmp gnutls icu libffi libgcc libobjc libxml2 libxslt openssl zlib)
++depends=(libxslt avahi gmp gcc-libs openssl libffi gnutls icu)
+ makedepends=(gcc-objc gnustep-make)
+ provides=('libgnustep-base.so')
+ groups=('gnustep-core')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,14 +1,10 @@
+ avahi
++gcc-libs
+ gcc-objc
+-glibc
+ gmp
+ gnustep-make
+ gnutls
+ icu
+ libffi
+-libgcc
+-libobjc
+-libxml2
+ libxslt
+ openssl
+-zlib

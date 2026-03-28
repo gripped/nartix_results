@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -31,7 +31,6 @@
+@@ -32,7 +32,6 @@
    'lua54'
    'ncurses' libncursesw.so
    'pango'
@@ -8,7 +8,7 @@
    'wayland'
    'wireless_tools'
  )
-@@ -87,7 +86,7 @@
+@@ -88,7 +87,7 @@
      -D BUILD_RSS=ON \
      -D BUILD_NVIDIA=ON \
      -D BUILD_PULSEAUDIO=ON \
@@ -23,15 +23,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,7 +19,6 @@
- libpulse.so
+@@ -20,7 +20,6 @@
  librsvg
  librsvg-2.so
+ libstdc++
 -libsystemd.so
  libx11
  libxdamage
  libxext
-@@ -35,7 +34,6 @@
+@@ -36,7 +35,6 @@
  pango
  python-jinja
  python-yaml

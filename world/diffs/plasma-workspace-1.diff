@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(plasma-workspace plasma-x11-session)
+ pkgver=6.6.3
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=1
++pkgrel=1.2
+ pkgdesc='KDE Plasma Workspace'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
 @@ -97,7 +97,7 @@
           qt6-virtualkeyboard
           sh

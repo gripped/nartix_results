@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,7 +26,6 @@
+@@ -28,7 +28,6 @@
    libsndfile
    portaudio
    readline
@@ -8,7 +8,7 @@
  )
  provides=(
    libfluidsynth.so
-@@ -78,11 +77,9 @@
+@@ -80,11 +79,9 @@
      libsndfile libsndfile.so
      portaudio libportaudio.so
      readline libreadline.so
@@ -26,10 +26,10 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,8 +20,6 @@
- libreadline.so
+@@ -22,8 +22,6 @@
  libsndfile
  libsndfile.so
+ libstdc++
 -libsystemd.so
  portaudio
  readline

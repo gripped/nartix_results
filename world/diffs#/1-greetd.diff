@@ -1,14 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -2,14 +2,14 @@
+ pkgbase=greetd
+ pkgname=($pkgbase $pkgbase-agreety)
+ pkgver=0.10.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Generic greeter daemon'
+ arch=(x86_64)
+ url="https://git.sr.ht/~kennylevinsen/$pkgbase"
  license=(GPL-3.0-only)
- depends=(gcc-libs
-          glibc
+-depends=(glibc
+-         libgcc
 -         systemd)
++depends=(gcc-libs
++         glibc
 +         elogind)
  makedepends=(cargo
               scdoc)
  _archive="$pkgbase-$pkgver"
+@@ -23,7 +23,7 @@
+ prepare() {
+ 	cd "$_archive"
+ 	sed -i -e '/feature.doc_cfg/d' greetd_ipc/src/lib.rs
+-	cargo fetch --locked --target "$(rustc --print host-tuple)"
++	cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ 
+ build() {
 @@ -45,7 +45,6 @@
  	        "etc/pam.d/$pkgbase")
  	cd "$_archive"
@@ -17,20 +36,31 @@
  	install -Dm0644 -t "$pkgdir/etc/$pkgname/" config.toml
  	install -Dm0644 "../$pkgname.pam" "$pkgdir/etc/pam.d/$pkgname"
  	install -Dm0644 "../$pkgname.sysusers" "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+@@ -54,8 +53,7 @@
+ }
+ 
+ package_greetd-agreety() {
+-	depends=(glibc
+-	         libgcc
++	depends=(gcc-libs
+ 	         "$pkgbase")
+ 	provides=("$pkgbase-greeter")
+ 	cd "$_archive"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,5 @@
+@@ -1,9 +1,9 @@
  cargo
 +elogind
- gcc-libs
++gcc-libs
  glibc
  greetd
-@@ -6,4 +7,3 @@
+ greetd-agreety
  greetd-greeter
+-libgcc
  pam
  scdoc
 -systemd

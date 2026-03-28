@@ -4,13 +4,14 @@
  
  pkgname=composable-kernel
 -pkgver=7.2.0
+-pkgrel=2
 +pkgver=6.0.2
- pkgrel=1
++pkgrel=1
  pkgdesc="High Performance Composable Kernel for AMD GPUs"
  arch=('x86_64')
  url="https://github.com/ROCm/composable_kernel"
  license=('MIT')
--depends=('rocm-core' 'glibc' 'gcc-libs' 'hip-runtime-amd')
+-depends=('rocm-core' 'glibc' 'libgcc' 'libstdc++' 'hip-runtime-amd')
 -makedepends=('git' 'cmake' 'ninja' 'rocm-cmake' 'rocm-toolchain' 'rocm-llvm' 'openmp')
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip')
 +makedepends=('git' 'cmake' 'ninja' 'rocm-cmake' 'rocm-llvm' 'openmp')
@@ -38,11 +39,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,10 +2,9 @@
- gcc-libs
+@@ -1,12 +1,10 @@
+ cmake
++gcc-libs
  git
  glibc
 -hip-runtime-amd
+-libgcc
+-libstdc++
 +hip
  ninja
  openmp

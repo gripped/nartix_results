@@ -291,6 +291,7 @@ cantor
 capnproto
 capstone
 python-capstone
+cargo-about
 cargo-c
 cargo-edit
 caribou
@@ -436,6 +437,7 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
+deno
 desktop-file-utils
 dev86
 devhelp
@@ -745,7 +747,6 @@ geos
 getdns
 gexiv2
 gexiv2-docs
-gflags
 gfxstream
 ghex
 ghex-docs
@@ -1179,6 +1180,7 @@ iucode-tool
 iverilog
 j4-dmenu-desktop
 jami-qt
+jaq
 jasper
 jasper-doc
 java-avalon-framework
@@ -1529,6 +1531,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -1538,7 +1541,6 @@ ksanecore
 kscreen
 kscreenlocker
 kscreenlocker5
-kseexpr
 kservice
 kservice5
 ksh
@@ -1816,7 +1818,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3070,6 +3071,9 @@ podofo-tools
 polari
 polkit-gnome
 polkit-kde-agent
+polkit-qt
+polkit-qt5
+polkit-qt6
 polybar
 poppler-data
 poppler
@@ -4735,6 +4739,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
