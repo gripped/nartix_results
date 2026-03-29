@@ -1,15 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=hyprland
--pkgver=0.54.2
--pkgrel=2
-+pkgver=0.54.3
-+pkgrel=1
- pkgdesc='a highly customizable dynamic tiling Wayland compositor'
- arch=(x86_64 aarch64)
- url="https://github.com/hyprwm/${pkgname^}"
 @@ -39,7 +39,7 @@
           pixman libpixman-1.so
           re2 libre2.so
@@ -19,7 +9,7 @@
           tomlplusplus libtomlplusplus.so libudev.so
           util-linux-libs libuuid.so
           wayland libwayland-client.so libwayland-server.so
-@@ -63,12 +63,11 @@
+@@ -63,7 +63,6 @@
              'glaze: to build and install plugins using hyprpm'
              'hyprland-protocols: to build and install plugins using hyprpm'
              'meson: to build and install plugins using hyprpm'
@@ -27,12 +17,6 @@
              'xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland')
  provides=(wayland-compositor)
  _archive="${pkgname^}-$pkgver"
- source=("$_archive.tar.gz::$url/releases/download/v$pkgver/source-v$pkgver.tar.gz")
--sha256sums=('723d9cf86ad09b2f01d2cc403ac5799f9d6ad69a438b43a8f7b7589122eafd1b')
-+sha256sums=('3c20a191a6f23af75f9a8db636d690c6adc95931447f9d69fb20884ec04c63ee')
- 
- prepare() {
- 	ln -sf hyprland-source "$_archive"
 @@ -78,7 +77,7 @@
  
  build() {

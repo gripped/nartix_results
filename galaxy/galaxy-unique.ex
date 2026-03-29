@@ -33,6 +33,7 @@ conan
 cython2
 dbus-dinit-user
 debuginfod-openrc
+deploytix
 edi
 entice
 enventor
@@ -175,6 +176,7 @@ newsraft
 numix-icon-theme
 octopi
 opensnitch-openrc
+openssl-1.1
 opentracker
 pacifica-icon-theme
 package-query

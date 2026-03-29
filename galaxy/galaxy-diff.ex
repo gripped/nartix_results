@@ -2,8 +2,6 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
-cinnamon-session
-cinnamon-settings-daemon
 cjs
 cosmic-applets
 cosmic-comp
@@ -35,6 +33,8 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
+libreoffice-fresh
+libreoffice-fresh-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -73,6 +73,7 @@ sdcv
 signal-desktop
 terminology
 termshark
+thunderbird
 tor
 torsocks
 transmission

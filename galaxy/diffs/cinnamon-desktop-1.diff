@@ -5,20 +5,11 @@
  pkgname=cinnamon-desktop
  pkgver=6.6.2
 -pkgrel=2
-+pkgrel=1
++pkgrel=2.1
  pkgdesc='Library with common API for various Cinnamon modules'
  arch=(x86_64)
  url='https://github.com/linuxmint/cinnamon-desktop'
-@@ -9,15 +9,15 @@
- depends=(
-   cairo
-   dconf
-+  gcc-libs
-   gdk-pixbuf2
-   glib2
-   glibc
-   gtk3
--  libgcc
+@@ -17,7 +17,7 @@
    libpulse
    libx11
    libxkbfile
@@ -32,7 +23,7 @@
  
  build() {
 -  arch-meson $pkgname build
-+  artix-meson build $pkgname -Dsystemd=disabled
++  artix-meson $pkgname build
    meson compile -C build
  }
  
@@ -42,19 +33,12 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,6 @@
- cairo
- dconf
-+gcc-libs
- gdk-pixbuf2
- git
- glib2
-@@ -7,9 +8,8 @@
+@@ -7,9 +7,9 @@
  glibc
  gobject-introspection
  gtk3
--libgcc
 +libelogind
+ libgcc
  libpulse
  libx11
  libxkbfile

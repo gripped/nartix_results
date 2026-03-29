@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kopeninghours
+ pkgver=25.12.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Library for parsing and evaluating OSM opening hours expressions'
+ arch=(x86_64)
+ url='https://www.kde.org'
+@@ -12,7 +12,6 @@
+          ki18n
+          qt6-base)
+ makedepends=(boost
+-             boost-libs
+              extra-cmake-modules
+              python
+              qt6-declarative)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ boost
+-boost-libs
+ extra-cmake-modules
+ gcc-libs
+ glibc

@@ -360,6 +360,7 @@ coin-or-coinutils
 coin-or-data-sample
 coin-or-mp
 coin-or-osi
+collada-dom
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -385,7 +386,6 @@ corrosion
 coturn
 couchdb
 cpio
-cpp-hocon
 cppunit
 cpputest
 cppzmq
@@ -398,7 +398,6 @@ csound-doc
 ctags
 ctpl
 ctwm
-cuda
 cudnn
 cunit
 cups-pdf
@@ -1818,6 +1817,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2562,11 +2562,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -4762,7 +4757,6 @@ qt6-sensors
 qt6-serialbus
 qt6-shadertools
 qt6-speech
-qt6-svg
 qt6-tools
 qt6-translations
 qt6-virtualkeyboard

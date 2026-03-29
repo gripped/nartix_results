@@ -83,7 +83,6 @@ clamav
 cloud-init
 cmake
 cmus
-collada-dom
 colord
 libcolord
 colord-sane
@@ -94,10 +93,12 @@ conmon
 connman
 containerd
 containers-common
+cpp-hocon
 cppcheck
 cppdap
 crun
 krun
+cuda
 cups-filters
 cups
 libcups
@@ -395,7 +396,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -628,6 +628,11 @@ onionshare
 open-iscsi
 openbox
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendht
 openrct2
 openresolv
@@ -840,6 +845,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-svg
 qt6-webengine
 qterminal
 qtermwidget
