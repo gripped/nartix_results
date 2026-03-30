@@ -1,0 +1,77 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   evolution-data-server-docs
+ )
+ pkgver=3.58.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Unified contacts, tasks and calendar backend"
+ url="https://gitlab.gnome.org/GNOME/evolution/-/wikis/home"
+ arch=(x86_64)
+@@ -14,6 +14,7 @@
+ depends=(
+   cairo
+   dconf
++  gcc-libs
+   glib2
+   glibc
+   gtk3
+@@ -22,7 +23,6 @@
+   json-glib
+   krb5
+   libcanberra
+-  libgcc
+   libgoa
+   libgweather-4
+   libical
+@@ -30,7 +30,6 @@
+   libphonenumber
+   libsecret
+   libsoup3
+-  libstdc++
+   libxml2
+   nspr
+   nss
+@@ -43,7 +42,6 @@
+ )
+ makedepends=(
+   boost
+-  boost-libs
+   cmake
+   gi-docgen
+   git
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,10 @@
+ 
+ boost
+-boost-libs
+ cairo
+ cmake
+ dconf
+ evolution-data-server
++gcc-libs
+ gi-docgen
+ git
+ glib2
+@@ -20,7 +20,6 @@
+ json-glib
+ krb5
+ libcanberra
+-libgcc
+ libgoa
+ libgweather-4
+ libical
+@@ -28,7 +27,6 @@
+ libphonenumber
+ libsecret
+ libsoup3
+-libstdc++
+ libxml2
+ ninja
+ nspr

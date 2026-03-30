@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
+@@ -1,33 +1,34 @@
  
  pkgname=fastfetch
--pkgver=2.60.0
+-pkgver=2.61.0
 +pkgver=2.38.0
  pkgrel=1
  pkgdesc="A feature-rich and performance oriented neofetch like system information tool"
@@ -11,14 +11,17 @@
  arch=('x86_64')
  license=('MIT')
  depends=('glibc' 'yyjson')
--makedepends=('chafa' 'cmake' 'dbus' 'dconf' 'ddcutil' 'directx-headers' 'imagemagick' 'libglvnd' 'libpulse' 'libxcb'
+-makedepends=('chafa' 'cmake' 'dbus' 'dconf' 'ddcutil' 'imagemagick' 'libglvnd' 'libpulse' 'libxcb'
 -             'libxrandr' 'ocl-icd' 'opencl-headers' 'sqlite' 'vulkan-headers' 'vulkan-icd-loader' 'wayland' 'xfconf' 'zlib')
 +makedepends=('chafa' 'cmake' 'dbus' 'dconf' 'ddcutil' 'directx-headers' 'imagemagick' 'libpulse' 'libxcb' 'libxrandr'
 +             'mesa' 'ocl-icd' 'opencl-headers' 'vulkan-headers' 'vulkan-icd-loader' 'wayland' 'xfconf' 'zlib')
  optdepends=('chafa: Image output as ascii art'
              'dbus: Bluetooth, Player & Media detection'
              'dconf: Needed for values that are only stored in DConf + Fallback for GSettings'
-@@ -19,16 +19,16 @@
+             'ddcutil: Brightness detection of external displays'
++            'directx-headers: GPU detection in WSL'
+             'glib2: Output for values that are only stored in GSettings'
+             'hwdata: GPU output'
              'imagemagick: Image output using sixel or kitty graphics protocol'
              'libdrm: Displays detection'
              'libelf: st term font detection and fast path of systemd version detection'
@@ -33,12 +36,12 @@
 +            'xfconf: Needed for XFWM theme and XFCE Terminal font'
              'zlib: Faster image output when using kitty graphics protocol')
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('001dd608ebe0d8b651069983690cc93fe7f3e41ac11a50fc591b22c2fe97d9a4')
+-sha256sums=('b05b95bcc0915431cf732382813261497fa4412c3967904c1a9f207d5c946c65')
 +sha256sums=('f64635bfc1b42a2e845e3f3f38531a641de8203300112504b9eddc5a61f38f6a')
  
  build() {
  	cmake -B build -S "${pkgname}-${pkgver}" \
-@@ -36,7 +36,7 @@
+@@ -35,7 +36,7 @@
  		-DCMAKE_INSTALL_PREFIX='/usr' \
  		-DBUILD_FLASHFETCH='OFF' \
  		-DBUILD_TESTS='ON' \
@@ -53,8 +56,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -6,13 +6,12 @@
- directx-headers
+@@ -3,15 +3,15 @@
+ dbus
+ dconf
+ ddcutil
++directx-headers
  glibc
  imagemagick
 -libglvnd

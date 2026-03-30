@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,98 +1,36 @@
+@@ -1,99 +1,36 @@
 -
  pkgname=telegram-desktop
 -pkgver=6.6.4
 -_td_commit=0ae923c493bceb75433de2682ba8ae29cc7bf88d
--pkgrel=6
+-pkgrel=7
 +pkgver=5.6.2
 +pkgrel=1
  pkgdesc='Official Telegram Desktop client'
@@ -15,25 +15,25 @@
 -depends=(
 -  'abseil-cpp'
 -  'ada'
+-  'boost-libs'
 -  'ffmpeg'
 -  'glib2'
+-  'glibc'
 -  'hicolor-icon-theme'
 -  'hunspell'
 -  'kcoreaddons'
 -  'libavif'
 -  'libdispatch'
+-  'libgcc'
 -  'libheif'
 -  'libjxl'
+-  'libstdc++'
 -  'libxcomposite'
 -  'libxdamage'
 -  'libxrandr'
 -  'libxtst'
 -  'lz4'
 -  'minizip'
--  'zlib'
--  'libstdc++'
--  'glibc'
--  'libgcc'
 -  'openal'
 -  'openh264'
 -  'openssl'
@@ -44,6 +44,7 @@
 -  'qt6-wayland'
 -  'rnnoise'
 -  'xxhash'
+-  'zlib'
 -)
 -makedepends=(
 -  'boost'
@@ -130,9 +131,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,42 +2,43 @@
+@@ -1,44 +1,44 @@
+ abseil-cpp
  ada
  boost
+-boost-libs
  cmake
 +extra-cmake-modules
  ffmpeg

@@ -1,19 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,15 +2,14 @@
- pkgname=greetd-tuigreet
- _pkgname=${pkgname#*-}
- pkgver=0.9.1
--pkgrel=2
-+pkgrel=1
- pkgdesc='A console UI greeter for greetd'
- url="https://github.com/apognu/$_pkgname"
- license=(GPL-3.0-only)
- arch=(x86_64)
--depends=(glibc
-+depends=(gcc-libs
+@@ -10,7 +10,7 @@
+ depends=(glibc
           greetd
--         libgcc
+          libgcc
 -         systemd)
 +        )
  provides=(greetd-greeter)
@@ -25,11 +15,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,6 +1,4 @@
- cargo
--glibc
-+gcc-libs
+@@ -3,4 +3,3 @@
  greetd
--libgcc
+ libgcc
  scdoc
 -systemd

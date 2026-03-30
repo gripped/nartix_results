@@ -1,0 +1,76 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,36 +1,28 @@
+ 
+ pkgname=perl-xml-parser
+-pkgver=2.49
+-pkgrel=1
++pkgver=2.47
++pkgrel=3
+ pkgdesc="Expat-based XML parser module for perl"
+ arch=('x86_64')
+-license=('GPL-1.0-or-later' 'Artistic-1.0-perl')
+-url="https://github.com/cpan-authors/XML-Parser"
+-depends=('perl-file-sharedir' 'perl-libwww' 'expat')
+-makedepends=('git' 'perl-file-sharedir-install' 'perl-devel-checklib')
++license=('GPL' 'PerlArtistic')
++url="https://search.cpan.org/dist/XML-Parser/"
++depends=('perl-libwww' 'expat')
+ options=('!emptydirs')
+-source=("git+https://github.com/cpan-authors/XML-Parser.git#tag=${pkgver}")
+-sha512sums=('bae8d4b55228abc26052f7ba4c93dd60555b85a4462f292ea7a404eea01677ab646a890ba7b22aedf1b426667c76425ba4307677ea789072180bc2723310c291')
+-
+-prepare() {
+-  cd XML-Parser
+-
+-  git cherry-pick -n 9efb80a 20ae2bd 0cb1959
+-
+-}
++source=("https://search.cpan.org/CPAN/authors/id/T/TO/TODDR/XML-Parser-${pkgver}.tar.gz")
++sha512sums=('3f9de53341bc85b87c88ad31e04b13f1f95516eec0d7e5fd1c1a3b3e66a91ca3d4de7c649978599219a4d4372f6218764ab5e1805b7155b5ca200006e1b0908f')
+ 
+ build() {
+-  cd XML-Parser
++  cd XML-Parser-${pkgver}
+   perl Makefile.PL INSTALLDIRS=vendor
+   make
+ }
+ 
+ check() {
+-  cd XML-Parser
++  cd XML-Parser-${pkgver}
+   make test
+ }
+ 
+ package() {
+-  cd XML-Parser
++  cd XML-Parser-${pkgver}
+   make DESTDIR="${pkgdir}" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,2 @@
+ expat
+-git
+-perl-devel-checklib
+-perl-file-sharedir
+-perl-file-sharedir-install
+ perl-libwww
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,5 @@
+-prepare() {
+-cd XML-Parser
+-git cherry-pick -n 9efb80a 20ae2bd 0cb1959
+-}
+ build() {
+-cd XML-Parser
++cd XML-Parser-${pkgver}
+ perl Makefile.PL INSTALLDIRS=vendor
+ make
+ }

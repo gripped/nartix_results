@@ -4,11 +4,20 @@
  pkgbase=wireshark
  pkgname=(wireshark-cli wireshark-qt)
  pkgver=4.6.4
--pkgrel=1
+-pkgrel=2
 +pkgrel=4
  pkgdesc='Network traffic and protocol analyzer/sniffer'
  url='https://www.wireshark.org/'
  arch=(x86_64)
+@@ -33,7 +33,7 @@
+   libstdc++
+   libxml2
+   libxslt
+-  lua54
++  lua
+   lz4
+   minizip
+   ninja
 @@ -49,7 +49,6 @@
    snappy
    spandsp
@@ -17,15 +26,7 @@
    xxhash
    zlib-ng
    zstd
-@@ -77,6 +76,7 @@
-     -DCMAKE_BUILD_TYPE=None \
-     -DCMAKE_INSTALL_PREFIX=/usr \
-     -DCMAKE_INSTALL_LIBDIR=lib \
-+    -DCMAKE_INSTALL_LIBEXECDIR=lib \
-     -DCMAKE_SKIP_INSTALL_RPATH=TRUE \
-     -DENABLE_LUA=ON \
-     -DENABLE_ZLIB=OFF \
-@@ -86,7 +86,6 @@
+@@ -87,7 +86,6 @@
  
  check() {
    cd ${pkgbase}
@@ -33,7 +34,16 @@
  }
  
  package_wireshark-cli() {
-@@ -124,7 +123,6 @@
+@@ -116,7 +114,7 @@
+     libpcap.so
+     libssh
+     libxml2
+-    lua54
++    lua
+     lz4
+     opencore-amr
+     opus
+@@ -125,7 +123,6 @@
      snappy
      spandsp
      speexdsp
@@ -47,6 +57,15 @@
 
 --- arch_depends
 +++ artix_depends
+@@ -32,7 +32,7 @@
+ libwsutil.so
+ libxml2
+ libxslt
+-lua54
++lua
+ lz4
+ minizip
+ ninja
 @@ -50,7 +50,6 @@
  snappy
  spandsp

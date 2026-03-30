@@ -302,7 +302,6 @@ catdoc
 cauchy
 cbatticon
 cbindgen
-ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -1817,7 +1816,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2087,7 +2085,6 @@ libwebsockets
 libwhereami
 libwhich
 libwlocate
-libwmf
 libwnck
 libwnck3
 libwpd
@@ -2977,7 +2974,6 @@ perl-variable-magic
 perl-www-robotrules
 perl-xml-libxml
 perl-xml-namespacesupport
-perl-xml-parser
 perl-xml-rss
 perl-xml-sax-base
 perl-xml-sax-expat
@@ -3112,10 +3108,6 @@ projectm-sdl
 projectm-pulseaudio
 prometheus
 prosody
-protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 proxychains-ng
 proxytunnel
 prrte
@@ -4757,6 +4749,7 @@ qt6-sensors
 qt6-serialbus
 qt6-shadertools
 qt6-speech
+qt6-svg
 qt6-tools
 qt6-translations
 qt6-virtualkeyboard
@@ -4800,7 +4793,6 @@ rccl
 rclone
 rdfind
 re2
-re2c
 rebar
 rebar3
 recastnavigation
@@ -5066,7 +5058,6 @@ ruby-mutex_m
 ruby-nanotest
 ruby-native-package-installer
 ruby-net-ftp
-ruby-net-http-persistent
 ruby-net-http
 ruby-net-imap
 ruby-net-pop
@@ -5414,7 +5405,6 @@ swaylock
 sweeper
 swell-foop
 swig
-swtpm
 sxhkd
 sxiv
 syncthing
@@ -5666,7 +5656,6 @@ tree-sitter-vim
 tree-sitter-vimdoc
 tree-sitter
 tree-sitter-cli
-tree
 trojan
 ts-node
 tslib

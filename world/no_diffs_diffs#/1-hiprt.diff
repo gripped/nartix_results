@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,12 @@
+-
+ pkgname=hiprt
+ pkgver=3.1.0.cb09c56
+ _libver=$(awk -F "." '{printf "%05d\n", $1 * 1000 + $2}' <<< $pkgver)
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Ray Tracing Library for HIP"
+ arch=('x86_64')
+ url="https://gpuopen.com/hiprt/"
+ license=('MIT')
+-depends=('rocm-core' 'hip-runtime-amd' 'glibc' 'libgcc' 'libstdc++')
++depends=('rocm-core' 'hip-runtime-amd' 'glibc' 'gcc-libs')
+ makedepends=('git' 'python' 'cmake')
+ source=("$pkgname-$pkgver::git+https://github.com/GPUOpen-LibrariesAndSDKs/HIPRT#tag=$pkgver")
+ sha256sums=('6c60046f8d9406807063a1c5accc6ce85b03b694d818cc56f8d79f3b700bc27a')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,7 @@
+ cmake
++gcc-libs
+ git
+ glibc
+ hip-runtime-amd
+-libgcc
+-libstdc++
+ python
+ rocm-core

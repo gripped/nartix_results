@@ -51,6 +51,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+ccache
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -396,6 +397,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -423,6 +425,7 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
+libwmf
 libxfce4ui
 libxfce4util
 libxklavier
@@ -654,6 +657,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-xml-parser
 pgbouncer
 phodav
 php-legacy
@@ -728,6 +732,10 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
+protobuf-c
+protobuf
+python-protobuf
+ruby-google-protobuf
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -845,7 +853,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-svg
 qt6-webengine
 qterminal
 qtermwidget
@@ -853,6 +860,7 @@ rabbitmq
 rabbitmqadmin
 rawtherapee
 rdma-core
+re2c
 redis
 redshift
 refind
@@ -867,6 +875,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-net-http-persistent
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem
@@ -909,6 +918,7 @@ stunnel
 sway
 swayidle
 switcheroo-control
+swtpm
 syslog-ng
 syslog-ng-python
 syslog-ng-amqp
@@ -952,6 +962,7 @@ transmission-cli
 transmission-gtk
 transmission-qt
 tree-sitter-lua
+tree
 tumbler
 udftools
 udisks2

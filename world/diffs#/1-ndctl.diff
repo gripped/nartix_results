@@ -1,10 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
+@@ -1,16 +1,16 @@
  
  pkgname=ndctl
- pkgver=82
+-pkgver=83
 -pkgrel=1
++pkgver=82
 +pkgrel=2
  pkgdesc='Utility library for managing the libnvdimm (non-volatile memory device) sub-system in the Linux kernel'
  arch=('x86_64')
@@ -16,8 +17,11 @@
 -makedepends=('git' 'asciidoctor' 'bash-completion' 'cmake' 'meson' 'systemd' 'xmlto')
 +makedepends=('git' 'asciidoctor' 'bash-completion' 'cmake' 'meson' 'udev' 'xmlto')
  source=("git+https://github.com/pmem/ndctl.git#tag=v$pkgver")
- sha512sums=('60e7a7babafce63ee7a273b071f511848f9954d508f7ae8df7a8e1faf27aef7a1d74fc50b308dd70c595f785d498807ef18c018aba839cd273ffe91dd2396a8d')
+-sha512sums=('afe7d7dbc56f8ef4c9e2aa45d320c0b98bf26c875952b45447f66ccb5c0aaa9428f25bf89ec6831078fd59edfb41de97934008874eafe00e8b03c53342c833e1')
++sha512sums=('60e7a7babafce63ee7a273b071f511848f9954d508f7ae8df7a8e1faf27aef7a1d74fc50b308dd70c595f785d498807ef18c018aba839cd273ffe91dd2396a8d')
  
+ prepare() {
+   cd ndctl
 @@ -18,7 +18,7 @@
  }
  

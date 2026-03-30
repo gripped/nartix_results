@@ -1,6 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -42,7 +42,7 @@
+@@ -2,7 +2,7 @@
+ pkgbase=rubberband
+ pkgname=(rubberband rubberband-{ladspa,lv2,vamp})
+ pkgver=4.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Time-stretching and pitch-shifting audio library and utility"
+ arch=(x86_64)
+ url="https://www.breakfastquay.com/rubberband/"
+@@ -10,14 +10,13 @@
+ license=(GPL-2.0-or-later)
+ makedepends=(
+   boost
+-  boost-libs
+   fftw
+   java-environment
+   ladspa
++  lv2
++  meson
+   libsamplerate
+   libsndfile
+-  lv2
+-  meson
+   vamp-plugin-sdk
+ )
+ source=($pkgbase-$pkgver.tar.gz::$_url/archive/v$pkgver.tar.gz)
+@@ -43,7 +42,7 @@
    )
    export JAVA_HOME="/usr/lib/jvm/java-$java_major-openjdk"
  
@@ -9,11 +35,69 @@
    meson compile -C build
  }
  
+@@ -54,8 +53,8 @@
+ package_rubberband() {
+   depends=(
+     fftw libfftw3.so
++    gcc-libs
+     glibc
+-    libgcc
+     libsamplerate libsamplerate.so
+     libsndfile libsndfile.so
+   )
+@@ -84,10 +83,10 @@
+   )
+   depends=(
+     fftw libfftw3.so
++    gcc-libs
+     glibc
++    libsamplerate libsamplerate.so
+     ladspa-host
+-    libgcc
+-    libsamplerate libsamplerate.so
+   )
+ 
+   mv -v $pkgname/* "$pkgdir"
+@@ -101,8 +100,8 @@
+   )
+   depends=(
+     fftw libfftw3.so
++    gcc-libs
+     glibc
+-    libgcc
+     libsamplerate libsamplerate.so
+     lv2-host
+   )
+@@ -118,8 +117,8 @@
+   )
+   depends=(
+     fftw libfftw3.so
++    gcc-libs
+     glibc
+-    libgcc
+     libsamplerate libsamplerate.so
+     vamp-host
+     vamp-plugin-sdk
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -1,12 +1,11 @@
+ boost
+-boost-libs
+ fftw
++gcc-libs
+ glibc
+ java-environment
+ ladspa
+ ladspa-host
+ libfftw3.so
+-libgcc
+ libsamplerate
+ libsamplerate.so
+ libsndfile
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

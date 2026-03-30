@@ -33,6 +33,7 @@ conan
 cython2
 dbus-dinit-user
 debuginfod-openrc
+deploytix-git
 deploytix
 edi
 entice
@@ -246,6 +247,8 @@ tinydns-openrc
 tinydns-runit
 tinydns-s6
 tinydns
+tkg-gui-git
+tkg-gui
 trizen
 ttf-unifont
 turnstile-openrc
