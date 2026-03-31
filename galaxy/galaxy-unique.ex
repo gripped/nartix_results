@@ -49,6 +49,7 @@ faenza-icon-theme
 firedragon
 firefox-esr
 fu-perl
+gdk-pixbuf2-noglycin
 gitea-tea
 github-copilot-cli
 grub-theme

@@ -23,7 +23,7 @@
  
  build() {
 -  arch-meson $pkgname build
-+  artix-meson $pkgname build
++  artix-meson build $pkgname -Dsystemd=disabled
    meson compile -C build
  }
  

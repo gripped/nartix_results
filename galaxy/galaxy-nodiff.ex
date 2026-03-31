@@ -78,7 +78,9 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
+cjs
 claws-mail
+coin
 compface
 copyq
 cosmic-app-library
@@ -320,9 +322,9 @@ msedit
 muffin
 mugshot
 mutt
+nbd
 nemo
 neomutt
-neovide
 nerd-fonts
 otf-atkinsonhyperlegiblemono-nerd
 otf-aurulent-nerd
@@ -676,6 +678,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
+thunderbird
 timeshift
 tinyxxd
 torbrowser-launcher

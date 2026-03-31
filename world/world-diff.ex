@@ -94,12 +94,10 @@ conmon
 connman
 containerd
 containers-common
-cpp-hocon
 cppcheck
 cppdap
 crun
 krun
-cuda
 cups-filters
 cups
 libcups
@@ -413,6 +411,7 @@ libofa
 libpgm
 libprocps
 libqb
+libsbsms
 libsidplay
 libsidplayfp
 libsoxr
@@ -631,11 +630,6 @@ onionshare
 open-iscsi
 openbox
 opencollada
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendht
 openrct2
 openresolv
@@ -733,9 +727,6 @@ powerdns-recursor
 powerdns
 presage
 protobuf-c
-protobuf
-python-protobuf
-ruby-google-protobuf
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -875,7 +866,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-net-http-persistent
 ruby-rbtree
 ruby-rdiscount
 ruby-sys-filesystem

@@ -2,7 +2,6 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
-cjs
 cosmic-applets
 cosmic-comp
 cosmic-initial-setup
@@ -51,6 +50,7 @@ mate-system-monitor
 mimalloc
 mpd
 neofetch
+neovide
 nvidia-340xx-utils
 nvidia-390xx-utils
 nvidia-510xx-utils
@@ -73,7 +73,6 @@ sdcv
 signal-desktop
 terminology
 termshark
-thunderbird
 tor
 torsocks
 transmission

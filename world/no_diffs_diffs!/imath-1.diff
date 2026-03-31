@@ -5,27 +5,7 @@
  pkgname=imath
  pkgver=3.2.2
 -pkgrel=4
-+pkgrel=3
++pkgrel=4.1
  pkgdesc='A C++ and python library of 2D and 3D vector, matrix, and math operations for computer graphics'
  url='https://www.openexr.com/'
  arch=(x86_64)
-@@ -11,7 +11,6 @@
- optdepends=('boost-libs: python bindings'
-             'python: python bindings')
- makedepends=(boost
--             boost-libs
-              cmake
-              git
-              python
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,5 +1,4 @@
- boost
--boost-libs
- cmake
- gcc-libs
- git

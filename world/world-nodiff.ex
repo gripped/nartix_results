@@ -385,6 +385,7 @@ corrosion
 coturn
 couchdb
 cpio
+cpp-hocon
 cppunit
 cpputest
 cppzmq
@@ -397,6 +398,7 @@ csound-doc
 ctags
 ctpl
 ctwm
+cuda
 cudnn
 cunit
 cups-pdf
@@ -1990,7 +1992,6 @@ librsync
 librttopo
 libsamplerate
 libsass
-libsbsms
 libscfg
 libsecp256k1
 libsfdo
@@ -2559,6 +2560,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3108,6 +3114,9 @@ projectm-sdl
 projectm-pulseaudio
 prometheus
 prosody
+protobuf
+python-protobuf
+ruby-google-protobuf
 proxychains-ng
 proxytunnel
 prrte
@@ -5058,6 +5067,7 @@ ruby-mutex_m
 ruby-nanotest
 ruby-native-package-installer
 ruby-net-ftp
+ruby-net-http-persistent
 ruby-net-http
 ruby-net-imap
 ruby-net-pop

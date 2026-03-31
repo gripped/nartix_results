@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,11 +11,9 @@
+ backup=('etc/nbd-server/config')
+ source=("git+https://github.com/NetworkBlockDevice/nbd.git#tag=nbd-${pkgver}"
+         'config'
+-        'nbd.service'
+         'sysusers_nbd.conf')
+ sha256sums=('a096087af761016e80b91ffc6518ae1b2a8f72bb9fa738ffeb16f376e7ebee11'
+             'ee2e9fbbeb8a8b9b71d16b6f32eb41788f6def9d00cc4a47897ed3cb97cdde7c'
+-            '1b1add55d82d7623eabf7ff3dfec15c1fbe3c340fa74160df3d60e91eb1c71ba'
+             'c2259eba02b7e959476e4f7032f273c1972947dfdeb9019106e70ce8798b912d')
+ 
+ prepare() {
+@@ -44,10 +42,8 @@
+   cd "${srcdir}/${pkgname}"
+ 
+   make DESTDIR="${pkgdir}" install
+-  install -D -m0644 systemd/nbd@.service "${pkgdir}"/usr/lib/systemd/system/nbd@.service
+ 
+   install -D -m0644 "${srcdir}"/config "${pkgdir}"/etc/nbd-server/config
+-  install -D -m0644 "${srcdir}"/nbd.service "${pkgdir}"/usr/lib/systemd/system/nbd.service
+   install -D -m0644 "${srcdir}"/sysusers_nbd.conf "${pkgdir}"/usr/lib/sysusers.d/nbd.conf
+ 
+   install -D -m0644 doc/README "${pkgdir}"/usr/share/doc/nbd/README
