@@ -5,24 +5,23 @@
  license=('BUSL-1.1')
  arch=('x86_64')
 -depends=('glibc')
-+depends=('glibc' 'esysusers' 'etmpfiles')
- makedepends=('go' 'git' 'yarn' 'nodejs-lts-iron' 'npm')
++depends=('esysusers' 'etmpfiles' 'glibc')
+ makedepends=('go' 'git' 'yarn' 'nodejs-lts-jod' 'npm')
  install=vault.install
  backup=('etc/vault.hcl' 'etc/default/vault')
-@@ -22,12 +22,6 @@
- pkgver() {
-   cd vault
+@@ -24,11 +24,6 @@
    git describe --tags --match 'v*' | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
--}
--
+ }
+ 
 -prepare() {
 -  cd vault
 -  sed -i 's|/etc/vault.d/vault.hcl|/etc/vault.hcl|g' .release/linux/package/usr/lib/systemd/system/vault.service
 -  sed -i 's|/etc/vault.d/vault.env|/etc/default/vault|g' .release/linux/package/usr/lib/systemd/system/vault.service
- }
+-}
  
  build() {
-@@ -62,7 +56,6 @@
+   mkdir -p "${srcdir}/vault/http/web_ui"
+@@ -62,7 +57,6 @@
    cd "${srcdir}/vault"
  
    install -Dm644 ".release/linux/package/etc/vault.d/vault.env" "${pkgdir}/etc/default/vault"

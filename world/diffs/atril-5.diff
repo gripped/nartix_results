@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,38 +1,32 @@
+@@ -1,37 +1,32 @@
  
  pkgname=atril
--pkgver=1.28.2
+-pkgver=1.28.3
 -pkgrel=1
 -pkgdesc="A document viewer for MATE"
 +pkgver=1.26.1
@@ -24,7 +24,7 @@
  replaces=('atril-gtk3')
 -source=("git+https://github.com/mate-desktop/atril.git#tag=v${pkgver}"
 -        git+https://github.com/mate-desktop/mate-submodules.git)
--sha256sums=('873ae0cbcecc12519e54e0ab9bdebf13f3c8cf9bdddb4236f820d27002c67f8e'
+-sha256sums=('5ecb107fe0fdef8d1340fa8ab756db38ceea22b77c902c4384e6e80bd86f65f2'
 -            'SKIP')
 +source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/$pkgname-$pkgver.tar.xz")
 +sha256sums=('a53a613acb9701a18ad671bf590254d1ce836ba0ae1be2c0bd8948fdf6b491a4')
@@ -37,7 +37,7 @@
 -	./autogen.sh
 +	cd "$pkgname-$pkgver"
  
- 	sed -i 's|/usr/share/javascript/mathjax|/usr/share/mathjax2|' backend/epub/epub-document.c
++	sed -i 's|/usr/share/javascript/mathjax|/usr/share/mathjax2|' backend/epub/epub-document.c
  }
  
  build() {
@@ -50,7 +50,7 @@
          	--enable-djvu \
          	--enable-dvi \
          	--enable-epub \
-@@ -41,10 +35,13 @@
+@@ -40,10 +35,13 @@
          	--enable-comics \
          	--enable-xps \
          	--enable-introspection
@@ -97,7 +97,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,16 +1,12 @@
+@@ -1,15 +1,12 @@
  prepare() {
 -cd "${pkgname}"
 -git submodule init
@@ -105,7 +105,7 @@
 -git -c protocol.file.allow=always submodule update
 -./autogen.sh
 +cd "$pkgname-$pkgver"
- sed -i 's|/usr/share/javascript/mathjax|/usr/share/mathjax2|' backend/epub/epub-document.c
++sed -i 's|/usr/share/javascript/mathjax|/usr/share/mathjax2|' backend/epub/epub-document.c
  }
  build() {
 -cd "${pkgname}"
@@ -117,7 +117,7 @@
  --enable-djvu \
  --enable-dvi \
  --enable-epub \
-@@ -19,5 +15,6 @@
+@@ -18,5 +15,6 @@
  --enable-comics \
  --enable-xps \
  --enable-introspection

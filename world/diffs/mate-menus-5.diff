@@ -3,8 +3,8 @@
 @@ -1,33 +1,31 @@
  
  pkgname=mate-menus
--pkgver=1.28.0
--pkgrel=3
+-pkgver=1.28.1
+-pkgrel=1
 +pkgver=1.26.0
 +pkgrel=1.1
  pkgdesc="MATE menu specifications"
@@ -17,7 +17,7 @@
 +makedepends=('gobject-introspection')
  groups=('mate')
 -source=("${pkgname}-${pkgver}.tar.gz::https://github.com/mate-desktop/mate-menus/archive/refs/tags/v${pkgver}.tar.gz")
--sha256sums=('3495fd3f5e0a9a88e207c2e863410d874fc9348807e68ace740c4798bc76b4d8')
+-sha256sums=('665b088155b28b7cd17bfae49f6cbf9cb6a29635e18183536636c383ec877e24')
 -
 -prepare() {
 -    cd "${pkgname}-${pkgver}"

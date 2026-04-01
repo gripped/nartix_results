@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,32 +1,41 @@
+@@ -1,29 +1,41 @@
  
  pkgname=doctest
--pkgver=2.4.12
+-pkgver=2.5.0
 -pkgrel=1
 +pkgver=2.4.9
 +pkgrel=2
@@ -13,8 +13,8 @@
 +url='https://github.com/onqtam/doctest'
  license=('MIT')
  makedepends=('cmake')
--source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz")
--sha256sums=('73381c7aa4dee704bd935609668cf41880ea7f19fa0504a200e13b74999c2d70')
+-source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
+-b2sums=('fbb51b0ff3a20ee425e2dfc9372741e8a5a53ec9759aa4898af4d3aa6594cdcee0b452eb61794653b48655a7e1b5519701f3a02994dcddb10f6cabc25de9f1c0')
 +source=("${pkgname}-${pkgver}.tar.gz::https://github.com/${pkgname}/${pkgname}/archive/refs/tags/v${pkgver}.tar.gz")
 +sha256sums=('19b2df757f2f3703a5e63cee553d85596875f06d91a3333acd80a969ef210856')
 +
@@ -24,8 +24,7 @@
 +}
  
  build() {
--  cd ${pkgname}-${pkgver}
--  cmake -S . -B build \
+-  cmake -S ${pkgname}-${pkgver} -B build \
 -    -DCMAKE_BUILD_TYPE=None \
 -    -DCMAKE_INSTALL_PREFIX=/usr \
 -    -Wno-dev
@@ -41,7 +40,6 @@
  }
  
  check() {
--  cd ${pkgname}-${pkgver}
 -  ctest --test-dir build --output-on-failure
 +  cd "${srcdir}/${pkgname}-${pkgver}/build"
 +  make
@@ -49,15 +47,15 @@
  }
  
  package() {
--  cd ${pkgname}-${pkgver}
 -  DESTDIR="${pkgdir}" cmake --install build
+-  cd ${pkgname}-${pkgver}
 -  install -vDm644 -t "${pkgdir}/usr/share/licenses/${pkgname}" LICENSE.txt
 +  cd "${srcdir}/${pkgname}-${pkgver}/build"
 +  make DESTDIR="${pkgdir}" install
 +  install -Dm 0644 ../LICENSE.txt \
 +    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
  }
- 
++
 
 
 ############# Stripped diff below #################
@@ -66,14 +64,13 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,14 @@
+@@ -1,7 +1,14 @@
 +prepare() {
 +cd "${srcdir}/${pkgname}-${pkgver}"
 +mkdir build
 +}
  build() {
--cd ${pkgname}-${pkgver}
--cmake -S . -B build \
+-cmake -S ${pkgname}-${pkgver} -B build \
 --DCMAKE_BUILD_TYPE=None \
 --DCMAKE_INSTALL_PREFIX=/usr \
 --Wno-dev

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(qbittorrent
+          qbittorrent-nox)
+ pkgver=5.1.4
+-pkgrel=2
++pkgrel=2.1
+ arch=(x86_64)
+ url='https://www.qbittorrent.org'
+ license=(GPL-2.0-or-later
 @@ -21,11 +21,9 @@
               qt6-tools)
  optdepends=('python: needed for torrent search tab')

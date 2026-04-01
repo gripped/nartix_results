@@ -1,26 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgbase=steam
- pkgname=(steam steam-devices)
- pkgver=1.0.0.85
--pkgrel=6
-+pkgrel=5
- pkgdesc="Valve's digital software delivery system"
- url='https://steampowered.com/'
- arch=('x86_64')
-@@ -32,10 +32,10 @@
-     desktop-file-utils
-     diffutils
-     freetype2
-+    gcc-libs
-     gdk-pixbuf2
-     glibc
-     hicolor-icon-theme
--    libgcc
-     libxcrypt
-     libxcrypt-compat
-     libxkbcommon-x11
 @@ -68,7 +68,7 @@
      lib32-libxss
      lib32-nss
@@ -36,22 +15,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -5,6 +5,7 @@
- desktop-file-utils
- diffutils
- freetype2
-+gcc-libs
- gdk-pixbuf2
- git
- glibc
-@@ -24,10 +25,8 @@
+@@ -24,7 +24,6 @@
  lib32-libxss
  lib32-nss
  lib32-pipewire
 -lib32-systemd
  lib32-vulkan-driver
  lib32-vulkan-icd-loader
--libgcc
- libxcrypt
- libxcrypt-compat
- libxkbcommon-x11
+ libgcc

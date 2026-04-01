@@ -1,11 +1,34 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,15 +1,15 @@
  
  pkgname=razor
- pkgver=2.86
--pkgrel=3
+-pkgver=2.87
+-pkgrel=2
++pkgver=2.86
 +pkgrel=3.1
  pkgdesc="A distributed, collaborative, spam detection and filtering network"
  arch=('x86_64')
  url="https://metacpan.org/dist/Razor2-Client-Agent"
+ license=('Artistic-2.0')
+-depends=('perl')
++depends=('perl-net-dns' 'perl-digest-sha1' 'perl-uri' 'perl-digest-nilsimsa' 'perl')
+ options=('!emptydirs')
+ source=("https://cpan.metacpan.org/authors/id/T/TO/TODDR/Razor2-Client-Agent-${pkgver}.tar.gz")
+-sha256sums=('3ba2105529d28a9086020ed3edd646d09f51f46cc8c8c3f186c046daad9cd756')
++sha256sums=('5e062e02ebb65e24b708e7eefa5300c43d6f657bf20d08fec4ca8a0a3b94845f')
+ 
+ build() {
+   cd Razor2-Client-Agent-${pkgver}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1 +1,5 @@
+ perl
++perl-digest-nilsimsa
++perl-digest-sha1
++perl-net-dns
++perl-uri

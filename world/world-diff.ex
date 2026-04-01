@@ -51,7 +51,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
-ccache
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -111,6 +110,7 @@ dhcpcd
 djvulibre
 dns-over-https
 docker
+doctest
 dolphin-emu
 dolphin-emu-tool
 dotnet-core-8.0
@@ -395,7 +395,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -726,7 +725,6 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
-protobuf-c
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -851,7 +849,6 @@ rabbitmq
 rabbitmqadmin
 rawtherapee
 rdma-core
-re2c
 redis
 redshift
 refind
@@ -908,7 +905,6 @@ stunnel
 sway
 swayidle
 switcheroo-control
-swtpm
 syslog-ng
 syslog-ng-python
 syslog-ng-amqp
@@ -952,7 +948,6 @@ transmission-cli
 transmission-gtk
 transmission-qt
 tree-sitter-lua
-tree
 tumbler
 udftools
 udisks2

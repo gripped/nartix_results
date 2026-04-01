@@ -302,6 +302,7 @@ catdoc
 cauchy
 cbatticon
 cbindgen
+ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -480,7 +481,6 @@ docbook2x
 docbook5-xml
 docker-buildx
 docker-compose
-doctest
 docx2txt
 dolphin-plugins
 dolphin
@@ -1818,6 +1818,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3114,6 +3115,7 @@ projectm-sdl
 projectm-pulseaudio
 prometheus
 prosody
+protobuf-c
 protobuf
 python-protobuf
 ruby-google-protobuf
@@ -4802,6 +4804,7 @@ rccl
 rclone
 rdfind
 re2
+re2c
 rebar
 rebar3
 recastnavigation
@@ -5415,6 +5418,7 @@ swaylock
 sweeper
 swell-foop
 swig
+swtpm
 sxhkd
 sxiv
 syncthing
@@ -5666,6 +5670,7 @@ tree-sitter-vim
 tree-sitter-vimdoc
 tree-sitter
 tree-sitter-cli
+tree
 trojan
 ts-node
 tslib
