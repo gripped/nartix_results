@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,12 +5,12 @@
+@@ -4,13 +4,13 @@
+   b3sum
    libblake3
  )
- pkgver=1.8.3
--pkgrel=2
-+pkgrel=1
+-pkgver=1.8.4
++pkgver=1.8.3
+ pkgrel=1
  pkgdesc='Command line implementation of the BLAKE3 hash function'
  arch=(x86_64)
  url=https://github.com/BLAKE3-team/BLAKE3
@@ -15,6 +16,15 @@
  makedepends=(
    cmake
    git
+@@ -18,7 +18,7 @@
+   rust
+ )
+ source=("git+$url.git#tag=$pkgver")
+-b2sums=('2525d6cb5b038560211c3934e7e0de520e150fd3602cc4ded77f927762e5dacfec611063c850409490c1acebd57c598fc87cefec3c2b231a6a89ac0bb9808014')
++b2sums=('d3a5de3c8f9a54b23efdaaedb694a6836afcb0718005460f3d7a9d045d457e213649f0e19d4325ea1ee9478034ca2e25f48e58f68ee7088a3da74b7988184d1b')
+ 
+ prepare() {
+   cd $_name/"${pkgname[0]}"
 
 
 ############# Stripped diff below #################

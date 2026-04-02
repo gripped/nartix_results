@@ -3,7 +3,7 @@
 @@ -1,35 +1,26 @@
  
  pkgname=hipfft
--pkgver=7.2.0
+-pkgver=7.2.1
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='rocFFT marshalling library.'
@@ -11,9 +11,9 @@
  url='https://rocm.docs.amd.com/projects/hipFFT/en/latest/index.html'
  license=('MIT')
 -depends=(
--  'gcc-libs'
 -  'glibc'
 -  'hip-runtime-amd'
+-  'libgcc'
 -  'rocfft'
 -  'rocm-core'
 -)
@@ -24,7 +24,7 @@
 -)
 -_git='https://github.com/ROCm/rocm-libraries'
 -source=("$pkgname-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/releases/download/rocm-$pkgver/$pkgname.tar.gz")
--sha256sums=('cc1a79c2601e98cf88492207ac975a3575eff9f4da4d7d54250de662a9f45da0')
+-sha256sums=('2aadd7801852a8baa9333e8370dc04f6737aaf7b85dcc94b4d19a57867780d1a')
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocfft')
 +makedepends=('cmake' 'rocm-cmake' 'git')
 +_git='https://github.com/ROCm/hipFFT'
@@ -58,11 +58,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,7 +2,7 @@
- gcc-libs
+@@ -1,8 +1,8 @@
+ cmake
++gcc-libs
  git
  glibc
 -hip-runtime-amd
+-libgcc
 +hip
  rocfft
  rocm-cmake

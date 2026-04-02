@@ -4,10 +4,9 @@
  
  pkgname=vokoscreen
  _pkgname=vokoscreenNG
--pkgver=4.8.3
--pkgrel=3
+-pkgver=4.9.0
 +pkgver=4.7.2
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Easy to use screencast creator"
  arch=('x86_64')
  url="https://linuxecke.volkoh.de/${pkgname}/${pkgname}.html"
@@ -34,7 +33,7 @@
 -optdepends=('gst-plugin-pipewire: Wayland support')
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/vkohaupt/${_pkgname}/archive/${pkgver}.tar.gz"
  	"vokoscreenNG.appdata.xml")
--sha256sums=('2e9d69e77de3e782b663056e040d649f60de651d1537a8b3ab124bf6f71c1232'
+-sha256sums=('644978f0fd3a1c8caccf8cc18145cfa9108dc38d4facee75e336b2a5390bdd69'
 +sha256sums=('1bc7e4d1bd59b7aaa616e3648da3ae9f147e4c786b6059ce348731eced2d2802'
              'b40fdfaf0166e1735be00a08bc55091176df758af7aff6585be4122423c73dda')
  

@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,15 +1,15 @@
+ 
+ pkgname=roctracer
+-pkgver=7.2.1
+-pkgrel=1
++pkgver=7.2.0
++pkgrel=3
+ pkgdesc='ROCm tracer library for performance tracing'
+ arch=('x86_64')
+ url='https://rocm.docs.amd.com/projects/roctracer/en/latest'
+ license=('MIT')
+-depends=('rocm-core' 'glibc' 'libgcc' 'hip-runtime-amd' 'hsa-rocr' 'comgr')
++depends=('rocm-core' 'glibc' 'gcc-libs' 'hip-runtime-amd' 'hsa-rocr' 'comgr')
+ makedepends=('cmake' 'python-cppheaderparser' 'python-ply')
+ source=("rocm-$pkgver.tar.gz::https://github.com/ROCm/rocm-systems/archive/refs/tags/rocm-$pkgver.tar.gz")
+-sha256sums=('201f19174eafbace2f7abf0d1178ebb17db878191276aba6d23f0e1758b0e10f')
++sha256sums=('728ea7e9bf16e6ed217a0fd1a8c9afaba2dae2e7908fa4e27201e67c803c5638')
+ options=('!lto')
+ _dirname="rocm-systems-rocm-$pkgver/projects/$pkgname"
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,9 @@
+ cmake
+ comgr
++gcc-libs
+ glibc
+ hip-runtime-amd
+ hsa-rocr
+-libgcc
+ python-cppheaderparser
+ python-ply
+ rocm-core

@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=amule
+ epoch=1
+ pkgver=2.3.3
+-pkgrel=11
++pkgrel=10
+ pkgdesc='An eMule-like client for ed2k p2p network'
+ arch=(x86_64)
+ url='http://www.amule.org'
 @@ -17,13 +17,9 @@
               git)
  provides=(amule-daemon)
@@ -14,15 +23,21 @@
              '1a1780d3010f338b16ace33fac6af8480bb0830402001f95f12c2e98afbd1b60'
              'e9d1b7019c7075b0f8616c6507a767b87de8f899936680e9ff5829d8cbba224d')
  
-@@ -35,6 +31,7 @@
+@@ -33,12 +29,9 @@
+   git cherry-pick -n 8085232
+   git cherry-pick -n f186b3a
    git cherry-pick -n d22e057 # Fix build
+-  git cherry-pick -n 212b189 # Boost.Asio API updates (Boost 1.87+)
+-  git cherry-pick -n 8ad387d # Boost 1.89 deadline_timer includes
+-  git cherry-pick -n 0cd4412 # CMake 4 compatibility in ec abstracts
    git cherry-pick -n 9e1d9eb
    git cherry-pick -n a667c61 # Install icons
+-  sed -i 's/const void \*Event/void *Event/' src/UPnPBase.h src/UPnPBase.cpp # libupnp callback signature
 +  git cherry-pick -n 212b189 # Fix build with boost
    rm -fr .git
  }
  
-@@ -58,8 +55,6 @@
+@@ -62,8 +55,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  
@@ -39,10 +54,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,6 +6,7 @@
+@@ -4,12 +4,9 @@
+ git cherry-pick -n 8085232
+ git cherry-pick -n f186b3a
  git cherry-pick -n d22e057 # Fix build
+-git cherry-pick -n 212b189 # Boost.Asio API updates (Boost 1.87+)
+-git cherry-pick -n 8ad387d # Boost 1.89 deadline_timer includes
+-git cherry-pick -n 0cd4412 # CMake 4 compatibility in ec abstracts
  git cherry-pick -n 9e1d9eb
  git cherry-pick -n a667c61 # Install icons
+-sed -i 's/const void \*Event/void *Event/' src/UPnPBase.h src/UPnPBase.cpp # libupnp callback signature
 +git cherry-pick -n 212b189 # Fix build with boost
  rm -fr .git
  }

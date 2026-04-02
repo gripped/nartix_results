@@ -387,6 +387,7 @@ coturn
 couchdb
 cpio
 cpp-hocon
+cppdap
 cppunit
 cpputest
 cppzmq
@@ -481,6 +482,7 @@ docbook2x
 docbook5-xml
 docker-buildx
 docker-compose
+doctest
 docx2txt
 dolphin-plugins
 dolphin
@@ -747,6 +749,7 @@ geos
 getdns
 gexiv2
 gexiv2-docs
+gflags
 gfxstream
 ghex
 ghex-docs
@@ -1118,6 +1121,7 @@ ibm-sw-tpm2
 icewm
 icmake
 icon-naming-utils
+icoutils
 id3lib
 ijs
 imagemagick
@@ -1365,6 +1369,7 @@ kdnssd5
 kdoctools
 kdsingleapplication
 kdsoap-ws-discovery-client
+kdsoap
 kea
 "$pkgbase
 "$pkgbase
@@ -1703,6 +1708,7 @@ libdbusmenu-qt5
 libdbusmenu
 libdbusmenu-gtk2
 libdbusmenu-gtk3
+libdc1394
 libde265
 libdecor
 libdeflate
@@ -1716,6 +1722,7 @@ libdmtx
 libdnet
 libdom
 libdovi
+libdv
 libdvbpsi
 libdvdcss
 libdvdnav
@@ -1993,6 +2000,7 @@ librsync
 librttopo
 libsamplerate
 libsass
+libsbsms
 libscfg
 libsecp256k1
 libsfdo
@@ -2087,6 +2095,7 @@ libwebsockets
 libwhereami
 libwhich
 libwlocate
+libwmf
 libwnck
 libwnck3
 libwpd
@@ -2312,6 +2321,10 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -2372,6 +2385,7 @@ python-miniupnpc
 minizip-ng
 minuet
 mitmproxy
+mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
 mkdocs-material
@@ -2444,6 +2458,7 @@ neatvnc
 neochat
 neofetch
 neomutt
+neon
 neovim-qt
 neovim
 net-snmp
@@ -2474,9 +2489,6 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nltk-data
-nmap
-ndiff
-zenmap
 nng
 nnn
 node-gyp
@@ -2484,6 +2496,7 @@ nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
 nodejs-lts-jod
+nodejs-lts-krypton
 nodejs-nopt
 nodejs-yaml
 nodejs
@@ -5787,6 +5800,7 @@ volume_key
 python-volume_key
 volumeicon
 vorbis-tools
+vpnc
 vsftpd
 vst3sdk
 vst3sdk-docs
@@ -5983,6 +5997,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp

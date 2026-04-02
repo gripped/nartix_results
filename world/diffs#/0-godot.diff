@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
  build() {
-   cd $pkgname-$pkgver-stable
+   cd $pkgname
  
 -  export BUILD_NAME=arch_linux
 +  export BUILD_NAME=artix_linux
@@ -20,7 +20,7 @@
 @@ -12,7 +12,7 @@
  }
  build() {
- cd $pkgname-$pkgver-stable
+ cd $pkgname
 -export BUILD_NAME=arch_linux
 +export BUILD_NAME=artix_linux
  _args=(

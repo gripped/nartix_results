@@ -94,7 +94,6 @@ connman
 containerd
 containers-common
 cppcheck
-cppdap
 crun
 krun
 cups-filters
@@ -110,7 +109,6 @@ dhcpcd
 djvulibre
 dns-over-https
 docker
-doctest
 dolphin-emu
 dolphin-emu-tool
 dotnet-core-8.0
@@ -194,7 +192,6 @@ gdm
 libgdm
 gengetopt
 geoclue
-gflags
 ghc-filesystem
 glpk
 gnome-bluetooth-3.0
@@ -289,7 +286,6 @@ hyprland
 i2pd
 ibus
 libibus
-icoutils
 igsc
 iio-sensor-proxy
 intel-opencl-clang
@@ -333,9 +329,6 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
-kdsoap
-kdsoap-qt5
-kdsoap-qt6
 kinfocenter
 kismet
 kitty
@@ -375,10 +368,8 @@ gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
 libdaemon
-libdc1394
 libdca
 libdrm
-libdv
 libe-book
 libei
 libei-docs
@@ -410,7 +401,6 @@ libofa
 libpgm
 libprocps
 libqb
-libsbsms
 libsidplay
 libsidplayfp
 libsoxr
@@ -423,7 +413,6 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
-libwmf
 libxfce4ui
 libxfce4util
 libxklavier
@@ -503,10 +492,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 mate-applets
 mate-backgrounds
 mate-calc
@@ -558,7 +543,6 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
-mjpegtools
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -596,7 +580,6 @@ nemo-seahorse
 nemo-share
 nemo-terminal
 nemo
-neon
 netavark
 netplan
 networkmanager
@@ -604,6 +587,9 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nmap
+ndiff
+zenmap
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -1063,7 +1049,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-vpnc
 vte3
 vte-common
 vte3-utils
@@ -1171,7 +1156,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yazi
 yubico-c-client
 yubico-c
 yubikey-personalization

@@ -18,7 +18,7 @@
    taglib
    twolame
    wayland
-@@ -447,7 +447,6 @@
+@@ -449,7 +449,6 @@
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/access/libaccess_jack_plugin.so
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/audio_output/libjack_plugin.so
  
@@ -26,7 +26,7 @@
  
      _pick $pkgname-plugin-jpeg usr/lib/vlc/plugins/codec/libjpeg_plugin.so
  
-@@ -1329,16 +1328,6 @@
+@@ -1331,16 +1330,6 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
@@ -43,7 +43,7 @@
  
  package_vlc-plugin-jpeg() {
    pkgdesc+=" - JPEG plugin"
-@@ -1764,7 +1753,7 @@
+@@ -1766,7 +1755,7 @@
      alsa-lib
      glibc
      libvlc libvlccore.so
@@ -52,7 +52,7 @@
      vlc-plugins-base
    )
  
-@@ -1894,7 +1883,6 @@
+@@ -1896,7 +1885,6 @@
      vlc-plugin-gnutls
      vlc-plugin-inflate
      vlc-plugin-jpeg

@@ -1,21 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=wl-clipboard
--pkgver=2.3.0
--pkgrel=1
-+pkgver=2.2.1
-+pkgrel=3
- epoch=1
- pkgdesc="Command-line copy/paste utilities for Wayland"
- arch=('x86_64')
-@@ -14,10 +14,10 @@
- )
- makedepends=('meson' 'wayland-protocols')
- source=("$pkgname-$pkgver.tar.gz::https://github.com/bugaevc/wl-clipboard/archive/v$pkgver.tar.gz")
--sha256sums=('b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402')
-+sha256sums=('6eb8081207fb5581d1d82c4bcd9587205a31a3d47bea3ebeb7f41aa1143783eb')
+@@ -17,7 +17,7 @@
+ sha256sums=('b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402')
  
  build() {
 -    arch-meson "$pkgname-$pkgver" build
