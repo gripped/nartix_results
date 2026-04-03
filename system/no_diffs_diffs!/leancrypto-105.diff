@@ -1,19 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=leancrypto
--pkgver=1.7.1
-+pkgver=1.7.0
- pkgrel=1
- pkgdesc="Lean cryptographic library usable for bare-metal environments"
- arch=('x86_64')
-@@ -11,10 +11,10 @@
- depends=('glibc')
- makedepends=('meson')
- source=("$pkgname-$pkgver.tar.gz::https://github.com/smuellerDD/leancrypto/archive/refs/tags/v$pkgver.tar.gz")
--sha256sums=('01ede88f55cb157d8c79f3448b8da94e6b6cb3eb6c28877d6a673735a01958fc')
-+sha256sums=('86fc32dc0fb2690853afde270ff15c92034112f17fc37f5c4f8fd3ce4430eaa8')
+@@ -14,7 +14,7 @@
+ sha256sums=('01ede88f55cb157d8c79f3448b8da94e6b6cb3eb6c28877d6a673735a01958fc')
  
  build() {
 -  arch-meson $pkgname-$pkgver build

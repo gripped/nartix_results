@@ -2321,10 +2321,6 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -2489,6 +2485,9 @@ nitrokey-udev-rules
 nload
 nlohmann-json
 nltk-data
+nmap
+ndiff
+zenmap
 nng
 nnn
 node-gyp
@@ -3506,7 +3505,6 @@ python-docstring-to-markdown
 python-doctest-ignore-unicode
 python-docutils-stubs
 python-docutils
-python-dogpile.cache
 python-dotenv
 python-doublex-expects
 python-doublex
@@ -3516,7 +3514,6 @@ python-dulwich
 python-dunamai
 python-durationpy
 python-easyprocess
-python-ecdsa
 python-editables
 python-editdistance-s
 python-editdistance
@@ -3655,7 +3652,6 @@ python-h11
 python-h2
 python-h5netcdf
 python-h5py
-python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
@@ -3951,7 +3947,6 @@ python-orderly-set
 python-orjson
 python-os-client-config
 python-os-service-types
-python-osc-lib
 python-oscrypto
 python-oslo-concurrency
 python-oslo-config
@@ -4038,7 +4033,6 @@ python-plumbum
 python-ply
 python-poetry-core
 python-poetry-dynamic-versioning
-python-poetry-plugin-export
 python-poetry
 python-polars
 $pkgbase
@@ -4183,7 +4177,6 @@ python-pyproject-metadata
 python-pyqt5-sip
 python-pyqt6-sip
 python-pyquery
-python-pyrfc3339
 python-pyro
 python-pyrsistent
 python-pysaml2
@@ -4459,12 +4452,10 @@ python-sphinxcontrib-mermaid
 python-sphinxcontrib-newsfeed
 python-sphinxcontrib-qthelp
 python-sphinxcontrib-serializinghtml
-python-sphinxcontrib-spelling
 python-sphinxcontrib-towncrier
 python-sphinxcontrib-trio
 python-sphinxext-opengraph
 python-sphinxygen
-python-sphobjinv
 python-spsdk
 python-spur
 python-sqlalchemy-utils
@@ -4572,7 +4563,6 @@ python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
-python-uncertainties
 python-unearth
 python-unicodedata2
 python-unidecode
@@ -4627,7 +4617,6 @@ python-wsgiproxy2
 python-wsproto
 python-wstools
 python-wurlitzer
-python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
@@ -4981,6 +4970,7 @@ ruby-falcon
 ruby-faraday-em_http
 ruby-faraday-em_synchrony
 ruby-faraday-excon
+ruby-faraday-http-cache
 ruby-faraday-httpclient
 ruby-faraday-multipart
 ruby-faraday-net_http
@@ -5063,6 +5053,7 @@ ruby-minitest-power_assert
 ruby-minitest-proveit
 ruby-minitest-reporters
 ruby-minitest-retry
+ruby-minitest-rg
 ruby-minitest-sprint
 ruby-minitest-stub-const
 ruby-minitest
@@ -5142,6 +5133,7 @@ ruby-rb-fsevent
 ruby-rb-inotify
 ruby-rbnacl
 ruby-rbs
+ruby-rdiscount
 ruby-rdoc
 ruby-redcarpet
 ruby-redcloth
@@ -5231,6 +5223,7 @@ ruby-thread-local
 ruby-thread_order
 ruby-tilt
 ruby-time
+ruby-timecop
 ruby-timers
 ruby-tins
 ruby-tmpdir
@@ -5430,7 +5423,6 @@ swaybg
 swaylock
 sweeper
 swell-foop
-swig
 swtpm
 sxhkd
 sxiv
