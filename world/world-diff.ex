@@ -2,7 +2,6 @@ a52dec
 accountsservice
 aflplusplus
 alsa-utils
-amule
 apache
 apcupsd
 appstream
@@ -193,6 +192,7 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
+giflib
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -492,10 +492,6 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 mate-applets
 mate-backgrounds
 mate-calc
@@ -637,6 +633,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-net-ssleay
 perl-xml-parser
 pgbouncer
 phodav
@@ -673,6 +670,7 @@ php-snmp
 php-sqlite
 php-tidy
 php-xsl
+picom
 pipewire-media-session
 pipewire
 libpipewire
@@ -728,6 +726,7 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-django-guardian
 python-dogpile.cache
 python-ecdsa
 python-hacking
@@ -900,7 +899,6 @@ strongswan
 stunnel
 sway
 swayidle
-swig
 switcheroo-control
 syslog-ng
 syslog-ng-python
@@ -1060,6 +1058,7 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
+vmaf
 vte3
 vte-common
 vte3-utils

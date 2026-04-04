@@ -48,6 +48,7 @@ extundelete
 faenza-icon-theme
 firedragon
 firefox-esr
+forkgram
 fu-perl
 gdk-pixbuf2-noglycin
 gitea-tea

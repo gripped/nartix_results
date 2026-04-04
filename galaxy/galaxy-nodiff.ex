@@ -410,6 +410,7 @@ octave
 onionshare
 openbox
 openrct2
+opensc
 openshot
 orage
 oxipng

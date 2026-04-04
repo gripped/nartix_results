@@ -54,7 +54,6 @@ nvidia-510xx-utils
 nvidia-525xx-utils
 nvidia-535xx-utils
 nvidia-580xx-utils
-opensc
 opensnitch
 osdlyrics
 ouch

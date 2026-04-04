@@ -62,6 +62,7 @@ amf-headers
 amfora
 aml
 amtk
+amule
 analitza
 analitza5
 anari-sdk
@@ -755,7 +756,6 @@ ghex
 ghex-docs
 ghostscript
 gi-docgen
-giflib
 gifski
 gimp-help
 gimp
@@ -2321,6 +2321,10 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -2871,7 +2875,6 @@ perl-net-http
 perl-net-ip
 perl-net-libidn2
 perl-net-server
-perl-net-ssleay
 perl-netaddr-ip
 perl-number-compare
 perl-object-realize-later
@@ -3027,7 +3030,6 @@ php-legacy-redis
 php-snuffleupagus
 picard
 picmi
-picom
 pidgin
 libpurple
 finch
@@ -3486,7 +3488,6 @@ python-django-extensions
 python-django-fake-model
 python-django-filter
 python-django-gravatar
-python-django-guardian
 python-django-haystack
 python-django-mailman3
 python-django-ninja
@@ -5423,6 +5424,7 @@ swaybg
 swaylock
 sweeper
 swell-foop
+swig
 swtpm
 sxhkd
 sxiv
@@ -5782,7 +5784,6 @@ virtualgl
 viskores
 vkd3d
 vkd3d-docs
-vmaf
 vncdotool
 vnstat
 vokoscreen

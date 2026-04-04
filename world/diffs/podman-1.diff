@@ -9,7 +9,7 @@
  )
  options=(!lto)
  source=(
-@@ -70,6 +70,8 @@
+@@ -72,6 +72,8 @@
    )
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -18,7 +18,7 @@
  }
  
  package_podman-docker() {
-@@ -82,4 +84,6 @@
+@@ -84,4 +86,6 @@
    provides=(docker)
  
    make install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase

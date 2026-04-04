@@ -1,0 +1,66 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,8 @@
+ 
+ _pkg=geopandas
+ pkgname=python-${_pkg}
+-pkgver=1.1.3
+-pkgrel=1
++pkgver=1.1.2
++pkgrel=2
+ pkgdesc="Python tools for geographic data"
+ arch=(any)
+ url="https://geopandas.org"
+@@ -13,11 +13,11 @@
+     python-numpy
+     python-packaging
+     python-pandas
+-    python-pyogrio
+     python-pyproj
+     python-shapely
+ )
+ optdepends=(
++    'python-pyogrio: vectorized IO for GDAL/OGR'
+     'python-rtree: spatial access methods'
+     'python-psycopg2: PostGIS access'
+     'python-sqlalchemy: other geodatabase access'
+@@ -33,6 +33,7 @@
+ checkdepends=(
+     python-pytest
+     python-fsspec
++    python-pyogrio
+     python-rtree
+     python-matplotlib
+     python-scipy
+@@ -45,7 +46,7 @@
+     ghostscript
+ )
+ source=(https://github.com/geopandas/geopandas/archive/refs/tags/v${pkgver}/${pkgname}-${pkgver}.tar.gz)
+-sha256sums=('3bc32f5b31f2bb407be2e3672b53b90038bf2c2cedb572ab2a69c339ec8cef36')
++sha256sums=('5974ecba6e08d89698d8a85496183d2591b00aa5ce75c08e1bfa8d884f5efc80')
+ 
+ build() {
+   cd ${_pkg}-${pkgver}
+@@ -54,7 +55,7 @@
+ 
+ check() {
+   cd ${_pkg}-${pkgver}
+-  PYTHONPATH="${PWD}"/build/lib/ pytest -vv --color=yes
++  PYTHONPATH="${PWD}"/build/lib/ pytest -vv --color=yes -k 'not test_fillna_scalar and not test_repr_linearring'
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,7 +5,6 @@
+ python-numpy
+ python-packaging
+ python-pandas
+-python-pyogrio
+ python-pyproj
+ python-setuptools
+ python-shapely
