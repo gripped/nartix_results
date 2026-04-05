@@ -77,6 +77,7 @@ transmission-gtk
 transmission-qt
 unoconv
 vice
+warpinator
 wayvnc
 wezterm
 wireshark

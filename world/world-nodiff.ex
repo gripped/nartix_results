@@ -1674,7 +1674,6 @@ libbluray
 libbobcat
 libbs2b
 libbsd
-libburn
 libbytesize
 libcacard
 libcanberra
@@ -1825,7 +1824,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4196,7 +4194,6 @@ python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
-python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
@@ -4484,7 +4481,6 @@ python-subprocess-tee
 python-subunit
 python-sure
 python-svglib
-python-sybil
 python-sympy
 python-syrupy
 python-tabulate
@@ -5049,7 +5045,6 @@ ruby-mini_portile2
 ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
-ruby-minitest-parallel_fork
 ruby-minitest-power_assert
 ruby-minitest-proveit
 ruby-minitest-reporters
@@ -5086,7 +5081,6 @@ ruby-nio4r
 ruby-nkf
 ruby-nokogiri
 ruby-observer
-ruby-octokit
 ruby-oedipus_lex
 ruby-open-uri
 ruby-optimist
@@ -5808,10 +5802,8 @@ vulkan-validation-layers
 w3m
 wacomtablet
 waf
-warpinator
 wasi-compiler-rt
 wasi-libc
-wasm-component-ld
 wasm-pkg-tools
 wasm-tools
 wavpack

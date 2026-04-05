@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,28 +1,28 @@
+ 
+ pkgname=python-osc-lib
+-pkgver=4.0.0
+-pkgrel=2
++pkgver=3.2.0
++pkgrel=1
+ pkgdesc="OpenStackClient Library"
+ arch=('any')
+ url="https://docs.openstack.org/osc-lib/latest/"
+ license=('Apache-2.0')
+ depends=('python-pbr' 'python-cliff' 'python-keystoneauth1' 'python-openstacksdk' 'python-oslo-i18n'
+          'python-oslo-utils' 'python-requests' 'python-stevedore')
+-makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+-checkdepends=('python-fixtures' 'python-oslotest' 'python-requests-mock' 'python-stestr'
+-              'python-testrepository' 'python-testtools')
++makedepends=('git' 'python-setuptools')
++checkdepends=('python-oslotest' 'python-requests-mock' 'python-stestr' 'python-testrepository'
++              'python-testtools')
+ source=("git+https://github.com/openstack/osc-lib.git#tag=$pkgver")
+-sha512sums=('f280812df5ba9695bf85009782df01ed333c3a0d5bdf8e2e46ed68fc544b21f839fae7b1dcab324e51070d2cf3913c0452aaff60bab6269803f9162ac5441831')
++sha512sums=('845cb09806d12ee67fda58d2029235fba4bf6f2af2912efbf90bb060e61ec541b86e130c973940f923db1d77c6d8a9c134e9c21339350e39b3989f22fc5f1b69')
+ 
+ prepare() {
+   cd osc-lib
+-  sed -i "s/parser = argparse.ArgumentParser(/parser = argparse.ArgumentParser(prog='run.py', /g" \
++  sed -i "s/parser = argparse.ArgumentParser()/parser = argparse.ArgumentParser(prog='run.py')/g" \
+     osc_lib/tests/utils/test_tags.py
+ }
+ 
+ build() {
+   cd osc-lib
+-  python -m build --wheel --no-isolation
++  python setup.py build
+ }
+ 
+ check() {
+@@ -32,5 +32,5 @@
+ 
+ package() {
+   cd osc-lib
+-  python -m installer --destdir="$pkgdir" dist/*.whl
++  python setup.py install --root="$pkgdir" --optimize=1
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,5 @@
+ git
+-python-build
+ python-cliff
+-python-installer
+ python-keystoneauth1
+ python-openstacksdk
+ python-oslo-i18n
+@@ -10,4 +8,3 @@
+ python-requests
+ python-setuptools
+ python-stevedore
+-python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,9 @@
+ prepare() {
+ cd osc-lib
+-sed -i "s/parser = argparse.ArgumentParser(/parser = argparse.ArgumentParser(prog='run.py', /g" \
++sed -i "s/parser = argparse.ArgumentParser()/parser = argparse.ArgumentParser(prog='run.py')/g" \
+ osc_lib/tests/utils/test_tags.py
+ }
+ build() {
+ cd osc-lib
+-python -m build --wheel --no-isolation
++python setup.py build
+ }

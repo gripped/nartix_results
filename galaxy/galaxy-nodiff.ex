@@ -19,6 +19,7 @@ audacious
 avidemux
 avidemux-cli
 avidemux-qt
+awww
 bat
 bcc
 bcc-libbpf-tools
@@ -700,7 +701,6 @@ vhba-module
 vhba-module-dkms
 vicious
 voa
-warpinator
 waylandpp
 waypipe
 wev

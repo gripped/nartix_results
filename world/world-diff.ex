@@ -359,6 +359,7 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
+libburn
 libcaca
 libcamera
 libcamera-docs
@@ -386,6 +387,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -736,11 +738,13 @@ python-poetry-plugin-export
 python-pymupdf
 python-pyrfc3339
 python-pyscard
+python-pytest-benchmark
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
 python-sphobjinv
+python-sybil
 python-uncertainties
 python-wheel
 python-wxpython
@@ -859,6 +863,8 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-minitest-parallel_fork
+ruby-octokit
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -1065,8 +1071,10 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
+warpinator
 wasi-libcplusplus
 wasi-libc++abi
+wasm-component-ld
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs

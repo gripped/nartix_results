@@ -322,4 +322,5 @@ xlibre-xorgxrdp-glamor
 xlibre-xorgxrdp
 xlibre-xserver
 xrdp
+zramen-dinit
 zramen

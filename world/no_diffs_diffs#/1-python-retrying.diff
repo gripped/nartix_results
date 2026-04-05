@@ -3,7 +3,7 @@
 @@ -1,15 +1,15 @@
  
  pkgname=python-retrying
--pkgver=1.3.5
+-pkgver=1.3.6
 -pkgrel=1
 +pkgver=1.3.4
 +pkgrel=5
@@ -15,7 +15,7 @@
 +depends=('python-six')
  makedepends=('python-setuptools' 'python-build' 'python-installer' 'python-wheel')
  source=("https://github.com/groodt/retrying/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
--sha512sums=('87ce6a08861cff34022ed39525a84aab73eb62415aab1334ae8433dd1c3e65b13402eeffc8001d5249abfa9b864c658f00af95ff88db3b30f16e8ec50245a543')
+-sha512sums=('6980d0a1955092401fe890761ad151e6acfd17fabcac82d8846945877f6b23d2bf795a07c7aadef93bbfe22f3c856da1492f92b00ef1848720ba923814212660')
 +sha512sums=('80bd19eefdbd8277ec0ba656d1b1d3589b2e3492cbb902c963376b3df475abbe4725c9902426a1784e4dddbd57ea8bc51ea5925a0a72a6f5c11333893314f2c5')
  
  build() {
