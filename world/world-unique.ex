@@ -482,7 +482,6 @@ python-configparser
 python-dbus
 python-pytz-deprecation-shim
 python-screeninfo
-python-vcs-versioning
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
 qemu-guest-agent-runit

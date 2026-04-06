@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,52 +1,29 @@
+@@ -1,58 +1,32 @@
  
  pkgname=warpinator
 -pkgver=2.0.3
--pkgrel=1
 +pkgver=1.8.8
-+pkgrel=2
+ pkgrel=2
  pkgdesc='LAN file sender, send and receive files across the network'
 -arch=(any)
 +arch=('any')
@@ -68,6 +67,12 @@
    meson compile -C build
  }
  
+ package() {
+   meson install -C build --destdir "$pkgdir"
+-
+-  python -m compileall -d /usr/lib "$pkgdir/usr/lib"
+-  python -O -m compileall -d /usr/lib "$pkgdir/usr/lib"
+ }
 
 
 ############# Stripped diff below #################

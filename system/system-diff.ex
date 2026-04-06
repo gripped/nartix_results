@@ -34,6 +34,8 @@ gpm
 grep
 gssproxy
 gzip
+iptables
+iptables-nft
 iputils
 libsasl
 libusb

@@ -162,8 +162,6 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
-avogadrolibs
-avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -756,6 +754,7 @@ ghex
 ghex-docs
 ghostscript
 gi-docgen
+giflib
 gifski
 gimp-help
 gimp
@@ -1674,6 +1673,7 @@ libbluray
 libbobcat
 libbs2b
 libbsd
+libburn
 libbytesize
 libcacard
 libcanberra
@@ -1824,6 +1824,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2582,7 +2583,6 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
-openexr
 openfec
 openfire
 openh264
@@ -4383,7 +4383,6 @@ python-setuptools-gettext
 python-setuptools-git-versioning
 python-setuptools-git
 python-setuptools-rust
-python-setuptools-scm
 python-setuptools
 python-sgmllib3k
 python-sh
@@ -4578,6 +4577,7 @@ python-validate-email
 python-validate-pyproject
 python-validators
 python-vcrpy
+python-vcs-versioning
 python-versioneer
 python-versioningit
 python-vine
@@ -4760,7 +4760,6 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -4963,7 +4962,6 @@ ruby-erubi
 ruby-etc
 ruby-eventmachine
 ruby-facets
-ruby-falcon
 ruby-faraday-em_http
 ruby-faraday-em_synchrony
 ruby-faraday-excon
@@ -5095,7 +5093,6 @@ ruby-permessage_deflate
 ruby-pkg-config
 ruby-power_assert
 ruby-prime
-ruby-process-metrics
 ruby-protocol-hpack
 ruby-protocol-http
 ruby-protocol-http1
@@ -5778,6 +5775,7 @@ virtualgl
 viskores
 vkd3d
 vkd3d-docs
+vmaf
 vncdotool
 vnstat
 vokoscreen

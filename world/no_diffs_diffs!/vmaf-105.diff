@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+         printf '%s\n' "limiting the compilation jobs to ${_jobs}"
+     fi
+ 
+-    arch-meson -Denable_avx512='false' "${pkgname}-${pkgver}/libvmaf" build
++    artix-meson -Denable_avx512='false' "${pkgname}-${pkgver}/libvmaf" build
+     meson compile -C build --jobs "$_jobs"
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ local _jobs="$_max_jobs"
+ printf '%s\n' "limiting the compilation jobs to ${_jobs}"
+ fi
+-arch-meson -Denable_avx512='false' "${pkgname}-${pkgver}/libvmaf" build
++artix-meson -Denable_avx512='false' "${pkgname}-${pkgver}/libvmaf" build
+ meson compile -C build --jobs "$_jobs"
+ }

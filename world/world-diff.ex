@@ -16,6 +16,8 @@ atftp
 atril
 audacious-plugins
 avahi
+avogadrolibs
+avogadrolibs-qt
 awesome
 bash-bats
 blender
@@ -192,7 +194,6 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
-giflib
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -359,7 +360,6 @@ libblockdev-part
 libblockdev-smart
 libblockdev-swap
 python-libblockdev
-libburn
 libcaca
 libcamera
 libcamera-docs
@@ -387,7 +387,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -615,6 +614,7 @@ open-iscsi
 openbox
 opencollada
 opendht
+openexr
 openrct2
 openresolv
 opensmtpd
@@ -742,6 +742,7 @@ python-pytest-benchmark
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-setuptools-scm
 python-sphinxcontrib-spelling
 python-sphobjinv
 python-sybil
@@ -842,6 +843,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
 qt6-webengine
 qterminal
 qtermwidget
@@ -863,8 +865,10 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-falcon
 ruby-minitest-parallel_fork
 ruby-octokit
+ruby-process-metrics
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -1064,7 +1068,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-vmaf
 vte3
 vte-common
 vte3-utils
