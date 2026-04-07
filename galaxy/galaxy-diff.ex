@@ -1,3 +1,4 @@
+alacritty
 alsa-utils
 autorandr
 bsd-games
@@ -67,6 +68,7 @@ read-edid
 reflector
 sdcv
 signal-desktop
+sundials
 terminology
 termshark
 tor
@@ -76,10 +78,16 @@ transmission-cli
 transmission-gtk
 transmission-qt
 unoconv
+vhba-module
+vhba-module-dkms
 vice
 warpinator
+wayfire
 wayvnc
+wcm
 wezterm
+wf-config
+wf-shell
 wireshark
 wireshark-cli
 wireshark-qt

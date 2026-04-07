@@ -261,12 +261,8 @@ vscodium
 vte-legacy
 waterfox
 wayfire-plugins-extra
-wayfire
-wcm
 webappcontainer
 webmin
-wf-config
-wf-shell
 wireplumber-dinit
 wlogout
 wlrctl

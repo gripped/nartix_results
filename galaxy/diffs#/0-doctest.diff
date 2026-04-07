@@ -3,7 +3,7 @@
 @@ -1,29 +1,41 @@
  
  pkgname=doctest
--pkgver=2.5.0
+-pkgver=2.5.1
 -pkgrel=1
 +pkgver=2.4.9
 +pkgrel=2
@@ -14,7 +14,7 @@
  license=('MIT')
  makedepends=('cmake')
 -source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
--b2sums=('fbb51b0ff3a20ee425e2dfc9372741e8a5a53ec9759aa4898af4d3aa6594cdcee0b452eb61794653b48655a7e1b5519701f3a02994dcddb10f6cabc25de9f1c0')
+-b2sums=('1fa3d7a06d86119db6e23d72065bfa443cf04417deb31890de6ba097c12e1025d591893f6ea743f6fb15239965d89964db310e2e59e0433708a0a5a64be46697')
 +source=("${pkgname}-${pkgver}.tar.gz::https://github.com/${pkgname}/${pkgname}/archive/refs/tags/v${pkgver}.tar.gz")
 +sha256sums=('19b2df757f2f3703a5e63cee553d85596875f06d91a3333acd80a969ef210856')
 +

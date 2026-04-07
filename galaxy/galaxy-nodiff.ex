@@ -6,7 +6,6 @@ acpilight
 ada
 adw-gtk-theme
 aircrack-ng
-alacritty
 anki
 anubis
 arc-gtk-theme
@@ -542,7 +541,6 @@ ssh-tools
 stalonetray
 starship
 subtitleeditor
-sundials
 swaync
 swww
 sysbench
@@ -697,8 +695,6 @@ utox
 vagrant
 vali
 vdirsyncer
-vhba-module
-vhba-module-dkms
 vicious
 voa
 waylandpp

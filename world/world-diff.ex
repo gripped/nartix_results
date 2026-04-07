@@ -1,6 +1,7 @@
 a52dec
 accountsservice
 aflplusplus
+alacritty
 alsa-utils
 apache
 apcupsd
@@ -16,8 +17,6 @@ atftp
 atril
 audacious-plugins
 avahi
-avogadrolibs
-avogadrolibs-qt
 awesome
 bash-bats
 blender
@@ -387,6 +386,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -493,6 +493,10 @@ mariadb
 mariadb-libs
 mariadb-clients
 mytop
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 mate-applets
 mate-backgrounds
 mate-calc
@@ -614,7 +618,6 @@ open-iscsi
 openbox
 opencollada
 opendht
-openexr
 openrct2
 openresolv
 opensmtpd
@@ -635,8 +638,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-net-ssleay
-perl-xml-parser
 pgbouncer
 phodav
 php-legacy
@@ -749,6 +750,7 @@ python-sybil
 python-uncertainties
 python-wheel
 python-wxpython
+python-xmlsec
 qastools
 qbittorrent
 qbittorrent-nox
@@ -865,10 +867,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-falcon
-ruby-minitest-parallel_fork
-ruby-octokit
-ruby-process-metrics
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -899,7 +897,6 @@ smartmontools
 snapper
 solid
 spice-vdagent
-sqlcipher
 squid
 sshfs
 sshguard
@@ -952,7 +949,6 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
-tree-sitter-lua
 tumbler
 udftools
 udisks2
@@ -1077,7 +1073,6 @@ vte-docs
 warpinator
 wasi-libcplusplus
 wasi-libc++abi
-wasm-component-ld
 waybar
 webkit2gtk-4.1
 webkit2gtk-4.1-docs
@@ -1177,6 +1172,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yaml-cpp
 yubico-c-client
 yubico-c
 yubikey-personalization

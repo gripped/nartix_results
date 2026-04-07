@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(qtcreator
+          qtcreator-devel)
+ pkgver=19.0.0
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Lightweight, cross-platform integrated development environment'
+ arch=(x86_64)
+ url='https://www.qt.io'
+@@ -30,8 +30,7 @@
+          sh
+          yaml-cpp
+          zstd)
+-makedepends=(clang21 # for qdoc
+-             cmake
++makedepends=(cmake
+              git
+              go
+              llvm)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,4 @@
+ clang
+-clang21
+ clazy
+ cmake
+ gcc-libs

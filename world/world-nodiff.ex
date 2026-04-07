@@ -46,7 +46,6 @@ libakonadi
 akonadiconsole
 akregator
 alacarte
-alacritty
 alembic
 alligator
 alsa-firmware
@@ -162,6 +161,8 @@ avisynthplus
 avogadro-crystals
 avogadro-fragments
 avogadro-molecules
+avogadrolibs
+avogadrolibs-qt
 awesome-terminal-fonts
 aws-c-auth
 aws-c-cal
@@ -1824,7 +1825,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2320,10 +2320,6 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
-marisa
-perl-marisa
-python-marisa
-ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -2583,6 +2579,7 @@ opencv-cuda
 python-opencv-cuda
 opendbx
 opendoas
+openexr
 openfec
 openfire
 openh264
@@ -2873,6 +2870,7 @@ perl-net-http
 perl-net-ip
 perl-net-libidn2
 perl-net-server
+perl-net-ssleay
 perl-netaddr-ip
 perl-number-compare
 perl-object-realize-later
@@ -2994,6 +2992,7 @@ perl-variable-magic
 perl-www-robotrules
 perl-xml-libxml
 perl-xml-namespacesupport
+perl-xml-parser
 perl-xml-rss
 perl-xml-sax-base
 perl-xml-sax-expat
@@ -4625,7 +4624,6 @@ python-xlrd
 python-xlsxwriter
 python-xlwt
 python-xmlschema
-python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
@@ -4962,6 +4960,7 @@ ruby-erubi
 ruby-etc
 ruby-eventmachine
 ruby-facets
+ruby-falcon
 ruby-faraday-em_http
 ruby-faraday-em_synchrony
 ruby-faraday-excon
@@ -5043,6 +5042,7 @@ ruby-mini_portile2
 ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
+ruby-minitest-parallel_fork
 ruby-minitest-power_assert
 ruby-minitest-proveit
 ruby-minitest-reporters
@@ -5079,6 +5079,7 @@ ruby-nio4r
 ruby-nkf
 ruby-nokogiri
 ruby-observer
+ruby-octokit
 ruby-oedipus_lex
 ruby-open-uri
 ruby-optimist
@@ -5093,6 +5094,7 @@ ruby-permessage_deflate
 ruby-pkg-config
 ruby-power_assert
 ruby-prime
+ruby-process-metrics
 ruby-protocol-hpack
 ruby-protocol-http
 ruby-protocol-http1
@@ -5378,6 +5380,7 @@ spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
+sqlcipher
 squashfs-tools
 squashfuse
 sratom
@@ -5661,6 +5664,7 @@ trash-cli
 tre
 tree-sitter-bash
 tree-sitter-c
+tree-sitter-lua
 tree-sitter-markdown
 tree-sitter-python
 tree-sitter-query
@@ -5802,6 +5806,7 @@ wacomtablet
 waf
 wasi-compiler-rt
 wasi-libc
+wasm-component-ld
 wasm-pkg-tools
 wasm-tools
 wavpack
@@ -5973,7 +5978,6 @@ xwallpaper
 yad
 yajl
 yakuake
-yaml-cpp
 yamllint
 yapf
 yara
