@@ -13,7 +13,6 @@ cosmic-settings
 doctest
 dvtm
 ecrire
-efl
 emptty
 ephoto
 etherwall
@@ -68,7 +67,6 @@ read-edid
 reflector
 sdcv
 signal-desktop
-sundials
 terminology
 termshark
 tor

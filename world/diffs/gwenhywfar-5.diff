@@ -1,0 +1,176 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,116 +1,31 @@
+ 
+-pkgbase=gwenhywfar
+-pkgname=(
+-  gwenhywfar
+-  gwenhywfar-gtk
+-  gwenhywfar-qt
+-)
++pkgname=gwenhywfar
+ pkgver=5.14.1
+-pkgrel=3
++pkgrel=1
+ pkgdesc="OS abstraction functions for various projects"
+ arch=('x86_64')
+-url="https://www.aquamaniac.de/rdm"
+-license=('LGPL-2.1-or-later')
+-makedepends=(
+-  'glibc'
+-  'gnutls'
+-  'gtk3'
+-  'libgcc'
+-  'libgcrypt'
+-  'libgpg-error'
+-  'libstdc++'
+-  'openssl'
+-  'qt6-base'
+-)
+-source=(
+-  "$url/attachments/download/630/$pkgbase-$pkgver.tar.gz"
+-  "$url/attachments/download/629/$pkgbase-$pkgver.tar.gz.asc"
+-)
+-b2sums=('9bea5f80099f0a3ad964e81a48f5d56ea535dbefdb57355965337251c539466704d0f0b7af1f57a691142ba79e72e6301dbdde4242d30803b4af72323d7207c8'
+-        'SKIP')
++url="https://www.aquamaniac.de/rdm/"
++license=('LGPL')
++depends=('gnutls' 'libgcrypt' 'openssl')
++makedepends=('git' 'gtk3' 'qt6-base')
++optdepends=('gtk3: for the GTK3 UI'
++            'qt6-base: for the Qt6 UI')
++source=(https://www.aquamaniac.de/rdm/attachments/download/630/$pkgname-$pkgver.tar.gz
++        https://www.aquamaniac.de/rdm/attachments/download/629/$pkgname-$pkgver.tar.gz.asc)
++sha256sums=('8916feaa99cb954f963f2cba8dd2dffe57cacf7f284daf00eab071aad6fe2ab3'
++            'SKIP')
+ validpgpkeys=(42400AF5EB2A17F0A69BB551E9899D784A977416) # AqBanking Package Key <packages@aqbanking.de>
+ 
+ build() {
+-  cd $pkgbase-$pkgver
+-  GPGRT_CONFIG="/usr/bin/gpgrt-config" PATH="/usr/lib/qt6/bin:$PATH" \
+-    ./configure --prefix=/usr \
+-    --sysconfdir=/etc \
+-    --enable-system-certs \
+-    --disable-network-checks \
+-    --with-guis="gtk3 qt5"
++  cd $pkgname-$pkgver
++  GPGRT_CONFIG="/usr/bin/gpgrt-config" \
++  PATH="/usr/lib/qt6/bin:$PATH" \
++  ./configure --prefix=/usr --sysconfdir=/etc --enable-system-certs --with-guis="gtk3 qt5"
+   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+   make
+ }
+ 
+-check() {
+-  cd $pkgbase-$pkgver
+-  make check
++package() {
++  cd $pkgname-$pkgver
++  make DESTDIR="${pkgdir}" install
+ }
+-
+-_pick() {
+-  local dest="$1"
+-  shift
+-  for obj in "$@"; do
+-    mkdir -p "$dest/$(dirname "$obj")/"
+-    mv -v -t "$dest/$(dirname "$obj")/" "$obj"
+-  done
+-}
+-
+-package_gwenhywfar() {
+-  depends=(
+-    'glibc'
+-    'gnutls'
+-    'libgcrypt'
+-    'libgpg-error'
+-    'openssl'
+-  )
+-  provides=('libgwenhywfar.so')
+-
+-  cd $pkgbase-$pkgver
+-  make DESTDIR="$pkgdir" install
+-
+-  cd "$pkgdir"
+-  _pick "$srcdir/gwenhywfar-gtk" \
+-    usr/include/gwenhywfar5/gwen-gui-gtk3 \
+-    usr/lib/libgwengui-gtk3.so* \
+-    usr/lib/pkgconfig/gwengui-gtk3.pc
+-
+-  _pick "$srcdir/gwenhywfar-qt" \
+-    usr/include/gwenhywfar5/gwen-gui-cpp \
+-    usr/include/gwenhywfar5/gwen-gui-qt5 \
+-    usr/lib/cmake/gwengui-cpp-* \
+-    usr/lib/cmake/gwengui-qt6-* \
+-    usr/lib/libgwengui-cpp.so* \
+-    usr/lib/libgwengui-qt6.so* \
+-    usr/lib/pkgconfig/gwengui-qt6.pc
+-}
+-
+-package_gwenhywfar-gtk() {
+-  pkgdesc+=" (GTK3 GUI library)"
+-  depends=(
+-    'glib2'
+-    'glibc'
+-    'gtk3'
+-    'gwenhywfar'
+-  )
+-  provides=('libgwengui-gtk3.so')
+-
+-  cp -va -t "$pkgdir" "$pkgname/"*
+-}
+-
+-package_gwenhywfar-qt() {
+-  pkgdesc+=" (Qt6 GUI library)"
+-  depends=(
+-    'glibc'
+-    'gwenhywfar'
+-    'libgcc'
+-    'libstdc++'
+-    'qt6-base'
+-  )
+-  provides=(
+-    'libgwengui-cpp.so'
+-    'libgwengui-qt6.so'
+-  )
+-
+-  cp -va -t "$pkgdir" "$pkgname/"*
+-}
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,6 @@
+-glib2
+-glibc
++git
+ gnutls
+ gtk3
+-gwenhywfar
+-libgcc
+ libgcrypt
+-libgpg-error
+-libstdc++
+ openssl
+ qt6-base
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,8 @@
+ build() {
+-cd $pkgbase-$pkgver
+-GPGRT_CONFIG="/usr/bin/gpgrt-config" PATH="/usr/lib/qt6/bin:$PATH" \
+-./configure --prefix=/usr \
+---sysconfdir=/etc \
+---enable-system-certs \
+---disable-network-checks \
+---with-guis="gtk3 qt5"
++cd $pkgname-$pkgver
++GPGRT_CONFIG="/usr/bin/gpgrt-config" \
++PATH="/usr/lib/qt6/bin:$PATH" \
++./configure --prefix=/usr --sysconfdir=/etc --enable-system-certs --with-guis="gtk3 qt5"
+ sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+ make
+ }

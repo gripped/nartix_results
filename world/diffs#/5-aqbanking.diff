@@ -1,0 +1,92 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,38 +1,33 @@
+ 
+ pkgname=aqbanking
+ pkgver=6.9.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A library for online banking and financial applications"
+ arch=('x86_64')
+ url="https://www.aquamaniac.de/rdm/projects/aqbanking"
+-license=('GPL-2.0-or-later')
+-depends=(
+-  'glibc'
+-  'gmp'
+-  'gwenhywfar'
+-  'libxml2'
+-  'xmlsec'
+-  'zlib'
+-)
+-provides=('libaqbanking.so')
+-source=(
+-  "https://www.aquamaniac.de/rdm/attachments/download/652/$pkgname-$pkgver.tar.gz"
+-  "https://www.aquamaniac.de/rdm/attachments/download/651/$pkgname-$pkgver.tar.gz.asc"
+-)
+-b2sums=('eab21b93e6f03ca26a66545e4d15e5df399d8c61f4f27282daf97437f73503f54cb2b98c539642e6e2b56b7ed3b54a5f70782ec2232b613f857fa53afceb38cf'
+-        'SKIP')
+-validpgpkeys=('42400AF5EB2A17F0A69BB551E9899D784A977416') # AqBanking Package Key <packages@aqbanking.de>
++license=('GPL')
++depends=('gwenhywfar')
++options=('!makeflags')
++source=(https://www.aquamaniac.de/rdm/attachments/download/652/$pkgname-$pkgver.tar.gz
++        https://www.aquamaniac.de/rdm/attachments/download/651/$pkgname-$pkgver.tar.gz.asc)
++validpgpkeys=('42400AF5EB2A17F0A69BB551E9899D784A977416') #AqBanking Package Key <packages@aqbanking.de>
++sha256sums=('fc94a2bebfbb4fc26b98dc93c8fa36a8026298cd7995f79821c480db35587f6b'
++            'SKIP')
+ 
+ build() {
+-  cd $pkgname-$pkgver
+-  ./configure --prefix=/usr \
+-    --enable-gwenhywfar \
+-    --with-build-datetime="@$SOURCE_DATE_EPOCH"
+-  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++  cd "${srcdir}"/$pkgname-$pkgver
++
++  BUILD_DATE="$(date --utc --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m%d%H%M%S)"
++
++  export PKG_CONFIG=/usr/bin/pkg-config
++  ./configure --prefix=/usr --enable-gwenhywfar \
++              --with-build-datetime=${BUILD_DATE} \
++              --with-backends="aqhbci aqofxconnect aqpaypal aqnone" # aqnone https://www.aquamaniac.de/rdm/issues/258
+   make
+ }
+ 
+ package() {
+-  cd $pkgname-$pkgver
+-  make DESTDIR="$pkgdir" install
++  cd "${srcdir}"/$pkgname-$pkgver
++
++  make DESTDIR="${pkgdir}" install
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1 @@
+-glibc
+-gmp
+ gwenhywfar
+-libxml2
+-xmlsec
+-zlib
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,9 @@
+ build() {
+-cd $pkgname-$pkgver
+-./configure --prefix=/usr \
+---enable-gwenhywfar \
+---with-build-datetime="@$SOURCE_DATE_EPOCH"
+-sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
++cd "${srcdir}"/$pkgname-$pkgver
++BUILD_DATE="$(date --utc --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m%d%H%M%S)"
++export PKG_CONFIG=/usr/bin/pkg-config
++./configure --prefix=/usr --enable-gwenhywfar \
++--with-build-datetime=${BUILD_DATE} \
++--with-backends="aqhbci aqofxconnect aqpaypal aqnone" # aqnone https://www.aquamaniac.de/rdm/issues/258
+ make
+ }

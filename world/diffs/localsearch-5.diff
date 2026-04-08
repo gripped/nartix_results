@@ -1,0 +1,103 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+   localsearch
+   localsearch-testutils
+ )
+-pkgver=3.11.0
++pkgver=3.10.2
+ pkgrel=1
+ pkgdesc="Filesystem indexer and metadata extractor"
+ url="https://gnome.pages.gitlab.gnome.org/localsearch/"
+@@ -14,6 +14,7 @@
+   dconf
+   exempi
+   ffmpeg
++  gcc-libs
+   gexiv2
+   giflib
+   glib2
+@@ -24,7 +25,6 @@
+   icu
+   libcue
+   libexif
+-  libgcc
+   libgsf
+   libgudev
+   libgxps
+@@ -36,7 +36,6 @@
+   libtiff
+   libwebp
+   libxml2
+-  libzip
+   poppler-glib
+   tinysparql
+   totem-plparser
+@@ -54,7 +53,7 @@
+   python-gobject
+ )
+ source=("git+https://gitlab.gnome.org/GNOME/localsearch.git#tag=${pkgver/[a-z]/.&}")
+-b2sums=('4c7987cd6688e872e088feeb2955815b185d1207f564f9869c011753d205569ff89e7df7f6fe064bd47f9239a0f8400e8080494ee75c75e06883c903bc7f3521')
++b2sums=('8a06eb3ee9be2146c04558ebe6ae27089cca15029e9754100bf27c058c84e091b3ae3f77c1ade526c38f08b1c6f6a95edb2bd6fb3770def56b81a39b6a62187e')
+ 
+ prepare() {
+   cd localsearch
+@@ -62,11 +61,12 @@
+ 
+ build() {
+   local meson_options=(
++    -D systemd_user_services=false
+     -D landlock=enabled
+     -D tests_tap_protocol=true
+   )
+ 
+-  arch-meson localsearch build "${meson_options[@]}"
++  artix-meson localsearch build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,6 +3,7 @@
+ dconf
+ exempi
+ ffmpeg
++gcc-libs
+ gexiv2
+ giflib
+ git
+@@ -16,7 +17,6 @@
+ icu
+ libcue
+ libexif
+-libgcc
+ libgsf
+ libgudev
+ libgxps
+@@ -29,7 +29,6 @@
+ libtinysparql-3.0.so
+ libwebp
+ libxml2
+-libzip
+ meson
+ poppler-glib
+ python
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,9 +3,10 @@
+ }
+ build() {
+ local meson_options=(
++-D systemd_user_services=false
+ -D landlock=enabled
+ -D tests_tap_protocol=true
+ )
+-arch-meson localsearch build "${meson_options[@]}"
++artix-meson localsearch build "${meson_options[@]}"
+ meson compile -C build
+ }

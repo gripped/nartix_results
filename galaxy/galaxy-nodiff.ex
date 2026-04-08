@@ -110,6 +110,7 @@ doublecmd
 doublecmd-qt5
 doublecmd-qt6
 easy-rsa
+efl
 elementary-icon-theme
 engrampa
 eom
@@ -541,6 +542,7 @@ ssh-tools
 stalonetray
 starship
 subtitleeditor
+sundials
 swaync
 swww
 sysbench

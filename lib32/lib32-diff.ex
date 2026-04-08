@@ -3,6 +3,7 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
+lib32-gdk-pixbuf2
 lib32-harfbuzz
 lib32-harfbuzz-cairo
 lib32-harfbuzz-icu

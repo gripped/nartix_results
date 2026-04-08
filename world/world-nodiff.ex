@@ -88,7 +88,6 @@ apparmor
 appmenu-gtk-module
 appstream-glib
 apr-util
-aqbanking
 arandr
 arc-gtk-theme
 arc-solid-gtk-theme
@@ -543,7 +542,6 @@ enblend-enfuse
 enca
 encfs
 enchant
-endeavour
 enet
 enscript
 entr
@@ -675,7 +673,6 @@ fltk1.3
 fluxbox
 fmt
 fmt-docs
-folks
 font-awesome
 woff2-font-awesome
 otf-font-awesome
@@ -734,7 +731,6 @@ gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
-geary
 gedit-plugins
 gedit
 gegl
@@ -765,7 +761,6 @@ git
 git-zsh-completion
 gitea
 github-cli
-gjs
 gkrellm
 gl2ps
 glad
@@ -831,7 +826,6 @@ gnome-online-accounts
 libgoa
 gnome-photos
 gnome-recipes
-gnome-robots
 gnome-screenshot
 gnome-shell-extensions
 gnome-sound-recorder
@@ -1018,7 +1012,6 @@ gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
-gwenhywfar
 gwenview
 gyp
 half
@@ -1059,7 +1052,6 @@ hiredis
 hitori
 hivex
 hostapd
-hotdoc
 hplip
 hsa-rocr
 hsakmt-roct
@@ -1092,7 +1084,6 @@ hwinfo
 hy
 hypercorn
 hyperkitty
-hyperscan
 hyprcursor
 hyprgraphics
 hypridle
@@ -1370,9 +1361,6 @@ kdoctools
 kdsingleapplication
 kdsoap-ws-discovery-client
 kdsoap
-kea
-"$pkgbase
-"$pkgbase
 keditbookmarks
 keepassxc
 kemoticons
@@ -1476,7 +1464,6 @@ kmix
 kmousetool
 kmouth
 kmplot
-kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1685,7 +1672,6 @@ libcdr
 libcerf
 libcgif
 libchamplain
-libchewing
 libclc
 libcloudproviders
 libcloudproviders-docs
@@ -1792,8 +1778,6 @@ libgsf-docs
 libgssglue
 libgusb
 libgusb-docs
-libgweather-4
-libgweather-4-docs
 libgxps
 libhandy
 libhandy-docs
@@ -1956,11 +1940,11 @@ libplist
 libpng
 libpng12
 libportal
-libportal-docs
 libportal-gtk3
 libportal-gtk4
 libportal-qt5
 libportal-qt6
+libportal-docs
 libppd
 libproxy
 libproxy-docs
@@ -2191,7 +2175,6 @@ lmdbxx
 log4cplus
 lokalize
 lolcat
-loupe
 lowdown
 lpeg
 lua-$pkgbase
@@ -2206,7 +2189,6 @@ lshw
 lskat
 lsof
 lsscsi
-ltrace
 lttng-ust2.12
 lua-bitop
 lua51-bitop
@@ -2284,8 +2266,6 @@ mailman-web
 mailman3-hyperkitty
 mailman3
 maim
-malcontent
-libmalcontent
 maliit-keyboard
 mallard-ducktype
 man-pages-l10n
@@ -2439,9 +2419,6 @@ nanobind
 nanomsg
 nanosvg
 nasm
-nautilus
-libnautilus-extension
-libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -2649,8 +2626,6 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
-papers
-papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
@@ -2679,7 +2654,6 @@ pdfgrep
 pdfjs
 pdfmixtool
 pdnsd
-pegtl
 pelican
 perl-acme-alien-dontpanic
 perl-algorithm-diff
@@ -3092,15 +3066,6 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
-postfix
-postfix-cdb
-postfix-ldap
-postfix-lmdb
-postfix-mongodb
-postfix-mysql
-postfix-pcre
-postfix-pgsql
-postfix-sqlite
 postgis
 postgrey
 postorius
@@ -3124,7 +3089,6 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
-prometheus
 prosody
 protobuf-c
 protobuf
@@ -3179,6 +3143,7 @@ python-pyqt5-webengine
 pyqt5
 python-pyqt5
 pyqt6-3d
+python-pyqt6-3d
 pyqt6-charts
 python-pyqt6-charts
 pyqt6-datavisualization
@@ -3531,7 +3496,6 @@ python-ephemeral-port-reserve
 python-et-xmlfile
 python-eth-hash
 python-evdev
-python-eventlet
 python-exceptiongroup
 python-execnet
 python-executing
@@ -3728,7 +3692,6 @@ python-itsdangerous
 python-jaconv
 python-jaraco.classes
 python-jaraco.collections
-python-jaraco.context
 python-jaraco.envs
 python-jaraco.functools
 python-jaraco.itertools
@@ -4306,7 +4269,6 @@ python-rapidfuzz
 python-rapidjson
 python-rcssmin
 python-rdflib
-python-re-assert
 python-reactivex
 python-readme-renderer
 python-redis
@@ -4335,7 +4297,6 @@ python-requestsexceptions
 python-resolvelib
 python-responses
 python-respx
-python-retrying
 python-rfc3339-validator
 python-rfc3986-validator
 python-rfc3986
@@ -4758,6 +4719,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -5336,7 +5298,6 @@ smb4k
 smpeg
 smplayer
 snappy
-snapshot
 sndio
 snorenotify
 snowball
@@ -5409,7 +5370,6 @@ suil-docs
 suitesparse
 suitesparse-graphblas
 supermin
-sushi
 svgcleaner
 svgpart
 svt-av1
@@ -5651,7 +5611,6 @@ tomlplusplus
 torbrowser-launcher
 torsocks
 totem-pl-parser
-totem
 towncrier
 toxcore
 toxic

@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ruby-redcloth
+ pkgver=4.3.4
+-pkgrel=6
++pkgrel=5
+ pkgdesc='Textile parser for Ruby'
+ arch=(x86_64)
+ url='https://github.com/jgarber/redcloth'
+@@ -10,7 +10,7 @@
+   ruby
+ )
+ makedepends=(
+-  ragel6
++  ragel
+   ruby-bundler
+   ruby-diff-lcs
+   ruby-rake
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+-ragel6
++ragel
+ ruby
+ ruby-bundler
+ ruby-diff-lcs

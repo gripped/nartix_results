@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,53 +1,31 @@
+@@ -1,51 +1,31 @@
  
  pkgname=xed
 -pkgver=3.8.9
--pkgrel=1
+-pkgrel=2
 -pkgdesc='A small and lightweight text editor'
 +pkgver=3.6.3
 +pkgrel=1.1
@@ -25,7 +25,6 @@
 -  gspell
 -  gtk3
 -  gtksourceview4
--  libgirepository
 -  libpeas
 -  libx11
 -  libxml2
@@ -40,6 +39,7 @@
 -  gobject-introspection
 -  intltool
 -  itstool
+-  libgirepository
 -  meson
 -)
 -source=("git+https://github.com/linuxmint/xed.git#tag=$pkgver")
@@ -56,8 +56,6 @@
  
  prepare() {
 -  cd $pkgname
--
--  git revert -n 13f55ff3f0db4e4f3b75883260bb56afbad08fd2
 +  patch -d $pkgname-$pkgver -p1 < libxml-2.12.patch
  }
  
@@ -106,10 +104,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,7 @@
+@@ -1,7 +1,7 @@
  prepare() {
 -cd $pkgname
--git revert -n 13f55ff3f0db4e4f3b75883260bb56afbad08fd2
 +patch -d $pkgname-$pkgver -p1 < libxml-2.12.patch
  }
  build() {

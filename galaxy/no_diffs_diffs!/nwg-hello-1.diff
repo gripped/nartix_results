@@ -1,19 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=nwg-hello
--pkgver=0.4.4
-+pkgver=0.4.3
- pkgrel=1
+ pkgver=0.4.4
+-pkgrel=1
++pkgrel=1.1
  pkgdesc="GTK3-based greeter for greetd written in python"
  url="https://github.com/nwg-piotr/nwg-hello"
-@@ -13,7 +13,7 @@
-             'mugshot: for user avatar support')
- source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz"
-         "${pkgname}.tmpfiles")
--sha256sums=('5570e12dd71f0c9b6704a5504a1e906a6c03ec3007b207613fdd8695c9d51554'
-+sha256sums=('b0956b24a7033df247b1124659c88ee842c416ca2f16dc1e37d680a4c12c317e'
-             '7f684ff594b49f22035b804659541aa7b14d046c70f50e434227dbb2d083aa1c')
+ arch=('any')
+@@ -25,9 +25,12 @@
+ 	cd "${pkgname}-${pkgver}"
+ 	python -m installer --destdir="${pkgdir}" dist/*.whl
  
- build() {
++	sed -i s/systemctl/loginctl/g "${pkgname}-default.json"
+ 	install -Dm 644 "${pkgname}-default.json" "${pkgdir}/etc/${pkgname}/${pkgname}-default.json"
+ 	install -Dm 644 "${pkgname}-default.css" "${pkgdir}/etc/${pkgname}/${pkgname}-default.css"
++	sed -i s/systemctl/loginctl/g hyprland.conf
+ 	install -Dm 644 hyprland.conf "${pkgdir}/etc/${pkgname}/hyprland.conf"
++	sed -i s/systemctl/loginctl/g sway-config
+ 	install -Dm 644 sway-config "${pkgdir}/etc/${pkgname}/sway-config"
+ 	install -Dm 644 README "${pkgdir}/etc/${pkgname}/README"
+ 	install -Dm 644 img/* -t "${pkgdir}/usr/share/${pkgname}/"

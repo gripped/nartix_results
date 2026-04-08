@@ -8,6 +8,7 @@ apcupsd
 appstream
 appstream-qt
 apr
+aqbanking
 aquamarine
 archivetools
 at-spi2-core
@@ -145,6 +146,7 @@ emacs
 emacs-nox
 emacs-wayland
 embree
+endeavour
 engrampa
 eog
 eog-docs
@@ -169,6 +171,7 @@ flatpak
 flatpak-docs
 flite
 fluidsynth
+folks
 font-manager
 fprintd
 freerdp
@@ -190,9 +193,11 @@ gcr
 gcr-docs
 gdm
 libgdm
+geary
 gengetopt
 geoclue
 ghc-filesystem
+gjs
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -203,6 +208,7 @@ gnome-disk-utility
 gnome-keyring
 gnome-panel
 gnome-remote-desktop
+gnome-robots
 gnome-session
 gnome-settings-daemon
 gnome-shell
@@ -271,6 +277,7 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
+gwenhywfar
 haproxy
 haveged
 hexchat
@@ -279,7 +286,9 @@ hipcub
 hipfft
 hipsolver
 hipsparse
+hotdoc
 hwloc
+hyperscan
 hyphen
 hyphen-en
 hyprland
@@ -329,11 +338,15 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
+kea
+"$pkgbase
+"$pkgbase
 kinfocenter
 kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
+kmymoney
 knockd
 knot
 krdp
@@ -367,6 +380,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
+libchewing
 libdaemon
 libdca
 libdrm
@@ -381,6 +395,8 @@ libfprint
 libgtop
 libgudev
 libguestfs
+libgweather-4
+libgweather-4-docs
 libhandy0
 libidl2
 libindi
@@ -452,6 +468,8 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
+loupe
+ltrace
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -487,6 +505,8 @@ lxtask-gtk3
 lxterminal
 ly
 mako
+malcontent
+libmalcontent
 maliit-framework
 marco
 mariadb
@@ -570,6 +590,9 @@ mutter
 mutter-docs
 mutter45
 mutter46
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
@@ -628,6 +651,8 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
+papers
+papers-lib-docs
 parole
 passim
 pc-ble-driver
@@ -635,6 +660,7 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 pcsclite
+pegtl
 percona-server
 libperconaserverclient
 percona-server-clients
@@ -703,6 +729,15 @@ plymouth
 podman
 podman-docker
 polkit
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mongodb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgresql-old-upgrade
 postgresql
 postgresql-libs
@@ -713,6 +748,7 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
+prometheus
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -732,7 +768,9 @@ python-debugpy
 python-django-guardian
 python-dogpile.cache
 python-ecdsa
+python-eventlet
 python-hacking
+python-jaraco.context
 python-ndg-httpsclient
 python-osc-lib
 python-poetry-plugin-export
@@ -742,7 +780,9 @@ python-pyscard
 python-pytest-benchmark
 python-pytest-freezegun
 python-pyudev
+python-re-assert
 python-recommonmark
+python-retrying
 python-setuptools-scm
 python-sphinxcontrib-spelling
 python-sphobjinv
@@ -845,7 +885,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
 qt6-webengine
 qterminal
 qtermwidget
@@ -895,6 +934,7 @@ sharutils
 signal-desktop
 smartmontools
 snapper
+snapshot
 solid
 spice-vdagent
 squid
@@ -904,6 +944,7 @@ sslh
 sssd
 strongswan
 stunnel
+sushi
 sway
 swayidle
 switcheroo-control
@@ -942,6 +983,7 @@ tinysparql
 tinysparql-docs
 tmux
 tor
+totem
 tracker3-miners
 tracker3
 tracker3-docs

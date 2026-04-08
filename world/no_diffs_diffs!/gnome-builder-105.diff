@@ -1,6 +1,53 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -89,7 +89,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnome-builder
+-pkgver=50.0
+-pkgrel=1
++pkgver=49.1
++pkgrel=3
+ pkgdesc="An IDE for writing GNOME-based software"
+ url="https://apps.gnome.org/Builder/"
+ arch=(x86_64)
+@@ -16,6 +16,7 @@
+   desktop-file-utils
+   editorconfig-core-c
+   flatpak
++  gcc-libs
+   gdk-pixbuf2
+   gjs
+   glib2
+@@ -29,7 +30,6 @@
+   jsonrpc-glib
+   libadwaita
+   libdex
+-  libgcc
+   libgirepository
+   libgit2-glib
+   libpanel
+@@ -62,10 +62,7 @@
+   python-sphinx_rtd_theme
+   yelp-tools
+ )
+-checkdepends=(
+-  weston
+-  xdg-desktop-portal-gnome
+-)
++checkdepends=(weston)
+ optdepends=(
+   'bash-language-server: Shell code assistance'
+   'python-lsp-server: Python code assistance'
+@@ -80,7 +77,7 @@
+ )
+ groups=(gnome-extra)
+ source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#tag=${pkgver/[a-z]/.&}")
+-b2sums=('e0266dbdcc6abcf0e96adb197c62ce525c080924eda64f7a7bc599b83e0d7034595bc8da08cba4478eb2e59c67b4015357a393bcf82aeadcef1320ec3b5d7c6a')
++b2sums=('1ff9e20f8ffaa9b6c0955fc3c02175af06025b87e52777aa1bef10d3488e49bd1b5faa3a3acb323bee08bce7e3fd48b942ed613393d0bcee7a3c28dff2d5833a')
+ 
+ prepare() {
+   cd $pkgname
+@@ -92,7 +89,7 @@
      -D network_tests=false
    )
  
@@ -13,7 +60,24 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -8,6 +8,7 @@
+ desktop-file-utils
+ editorconfig-core-c
+ flatpak
++gcc-libs
+ gdk-pixbuf2
+ git
+ gjs
+@@ -24,7 +25,6 @@
+ jsonrpc-glib
+ libadwaita
+ libdex
+-libgcc
+ libgirepository
+ libgit2-glib
+ libgit2.so
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

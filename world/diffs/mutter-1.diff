@@ -7,7 +7,7 @@
 -  mutter-devkit
    mutter-docs
  )
--pkgver=49.5
+-pkgver=50.0
 -pkgrel=1
 +pkgver=48.5
 +pkgrel=2
@@ -26,7 +26,7 @@
    gnome-desktop-4
    gnome-settings-daemon
    graphene
-@@ -36,7 +35,6 @@
+@@ -36,12 +35,13 @@
    libdisplay-info
    libdrm
    libei
@@ -34,7 +34,24 @@
    libgirepository
    libglvnd
    libgudev
-@@ -67,10 +65,9 @@
++  libice
+   libinput
+   libpipewire
++  libsm
+   libsysprof-capture
+   libwacom
+   libx11
+@@ -55,17 +55,19 @@
+   libxi
+   libxinerama
+   libxkbcommon
++  libxkbcommon-x11
++  libxkbfile
+   libxrandr
++  libxtst
+   mesa
+   pango
+   pipewire
    pixman
    python
    python-argcomplete
@@ -46,21 +63,21 @@
    wayland
    xorg-xwayland
  )
-@@ -87,10 +84,10 @@
+@@ -82,10 +84,10 @@
  )
  source=(
    "git+$url.git#tag=${pkgver/[a-z]/.&}"
 -  "git+https://gitlab.gnome.org/GNOME/gvdb.git#commit=b54bc5da25127ef416858a3ad92e57159ff565b3"
 +  "git+https://gitlab.gnome.org/GNOME/gvdb.git#commit=466fc22016cf0981424e7121557611942191992f"
  )
--b2sums=('c21e6efd80c90d66884de203c4f6223e70c759f70373df9b24f7d72299493d4a5550cd94954da1ac48730393b5fe87b6f9fd9616951bcbb58653795dde50d66c'
+-b2sums=('bd33bec1e65648b386f4f8c042097c948ff663034a8f99a3aa483dd9b20c066a1c5e69634fffdcb503993eaa9460b45128d68ef418c572f5a635a8d2934313d3'
 -        'f989bc2ceb52aad3c6a23c439df3bbc672bc11d561a247d19971d30cc85ed5d42295de40f8e55b13404ed32aa44f12307c9f5b470f2e288d1c9c8329255c43bf')
 +b2sums=('a24df78021a0f2499eae868bd168e2cf08e595a4df8e73ddbdb7bd2c2f24372b5652eccce1bffbfe09dc511abbf45c2ac9dd02f8493d0c2fe7accdda0f4a0819'
 +        'c25796ff54fee353c5fc7a0815c25255b399490148d2bad1f37932d2da66d80561d6e262a5f256c89d142419a504c23eff69f7ef4e65e349f2dea3e0ac0bac1a')
  
  prepare() {
    cd mutter
-@@ -110,7 +107,7 @@
+@@ -105,7 +107,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -69,11 +86,11 @@
    meson compile -C build
  }
  
-@@ -125,39 +122,12 @@
+@@ -120,40 +122,12 @@
  }
  
  package_mutter() {
--  provides=(libmutter-17.so)
+-  provides=(libmutter-18.so)
 -  optdepends=(
 -    'bash-completion: Bash completions for gdctl'
 -    'mutter-devkit: Mutter SDK, "MDK"'
@@ -104,6 +121,7 @@
 -    libei
 -    libgcc
 -    libpipewire
+-    libxkbcommon
 -    mutter
 -  )
 -
@@ -132,7 +150,7 @@
  gnome-desktop-4
  gnome-settings-daemon
  gobject-introspection
-@@ -21,16 +21,14 @@
+@@ -21,21 +21,21 @@
  gsettings-desktop-schemas
  gtk4
  harfbuzz
@@ -150,8 +168,21 @@
  libgirepository
  libglvnd
  libgudev
-@@ -57,18 +55,15 @@
- libxtst
++libice
+ libinput
+ libpipewire
++libsm
+ libsysprof-capture
+ libwacom
+ libx11
+@@ -49,21 +49,21 @@
+ libxi
+ libxinerama
+ libxkbcommon
++libxkbcommon-x11
++libxkbfile
+ libxrandr
++libxtst
  mesa
  meson
 -mutter

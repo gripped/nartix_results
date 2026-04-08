@@ -1,6 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,8 +37,6 @@
+@@ -5,6 +5,7 @@
+   gvfs-afc
+   gvfs-dnssd
+   gvfs-goa
++  gvfs-google
+   gvfs-gphoto2
+   gvfs-mtp
+   gvfs-nfs
+@@ -12,8 +13,8 @@
+   gvfs-smb
+   gvfs-wsdd
+ )
+-pkgver=1.60.0
+-pkgrel=2
++pkgver=1.58.3
++pkgrel=1
+ pkgdesc="Virtual filesystem implementation for GIO"
+ url="https://gitlab.gnome.org/GNOME/gvfs"
+ arch=(x86_64)
+@@ -36,8 +37,6 @@
    libsoup3
    polkit
    procps-ng
@@ -9,7 +28,24 @@
    udisks2
  )
  makedepends=(
-@@ -75,10 +73,12 @@
+@@ -46,6 +45,7 @@
+   docbook-xsl
+   git
+   glib2-devel
++  libgdata
+   libgoa
+   libgphoto2
+   libimobiledevice
+@@ -64,7 +64,7 @@
+   "git+https://gitlab.gnome.org/GNOME/gvfs.git#tag=$pkgver"
+   gvfsd.hook
+ )
+-b2sums=('79865df854d878ecac23b8ea2cbbf594accb581a5c824a66314955374c8a633a3ed70ed752903f1369151dba86d6e9df4b2fdc390e0cde9052427f79953ad234'
++b2sums=('e5e0a12a9514317be9559ef7c5b541d9b49e26acb7e45f4b21ae01ce2023b10aede93204fd4b894c51cc9d86518c45ba9468d6c77d50c3ba6d9187b9a1522f1a'
+         'a0356a49c419dc69466c591d5e69701b865bb97ca336ea6d8bca0f0d9173b832b73d9f2c701d572a0245957d39c9a38ab6dff4ea7c737c34f2a1a28d93c0427f')
+ 
+ prepare() {
+@@ -73,10 +73,12 @@
  
  build() {
    local meson_options=(
@@ -23,7 +59,28 @@
    meson compile -C build
  }
  
-@@ -120,7 +120,6 @@
+@@ -99,6 +101,7 @@
+     'gvfs-afc: AFC support (Apple mobile devices)'
+     'gvfs-dnssd: DNS-SD and WebDAV support (macOS file sharing)'
+     'gvfs-goa:  Gnome Online Accounts support (e.g. OwnCloud)'
++    'gvfs-google: Google Drive support'
+     'gvfs-gphoto2: gphoto2 support (PTP camera, MTP media player)'
+     'gvfs-mtp: MTP support (Android, media player)'
+     'gvfs-nfs: NFS support'
+@@ -106,8 +109,10 @@
+     'gvfs-smb: SMB/CIFS support (Windows file sharing)'
+     'gvfs-wsdd: Web Services Dynamic Discovery support (Windows discovery)'
+   )
+-  conflicts=('gvfs-google<=1.58.3-1')
+-  replaces=('gvfs-google<=1.58.3-1')
++  replaces=(
++    gvfs-afp
++    gvfs-obexftp
++  )
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
+@@ -115,7 +120,6 @@
  
      _pick afc \
        usr/lib/gvfs{-afc-volume-monitor,d-afc} \
@@ -31,7 +88,7 @@
        usr/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service \
        usr/share/gvfs/mounts/afc.mount \
        usr/share/gvfs/remote-volume-monitors/afc.monitor
-@@ -133,7 +132,6 @@
+@@ -128,20 +132,21 @@
  
      _pick goa \
        usr/lib/gvfs-goa-volume-monitor \
@@ -39,8 +96,10 @@
        usr/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service \
        usr/share/gvfs/remote-volume-monitors/goa.monitor
  
-@@ -143,14 +141,12 @@
- 
++    _pick google \
++      usr/lib/gvfsd-google \
++      usr/share/gvfs/mounts/google.mount
++
      _pick gphoto2 \
        usr/lib/gvfs{-gphoto2-volume-monitor,d-gphoto2} \
 -      usr/lib/systemd/user/gvfs-gphoto2-volume-monitor.service \
@@ -54,13 +113,54 @@
        usr/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service \
        usr/share/gvfs/mounts/mtp.mount \
        usr/share/gvfs/remote-volume-monitors/mtp.monitor
+@@ -204,11 +209,23 @@
+     "gvfs=$pkgver"
+     glib2
+     glibc
+-    libgcc
+     libgoa
+   )
+ 
+   mv goa/* "$pkgdir"
++}
++
++package_gvfs-google() {
++  pkgdesc+=" - Google Drive backend"
++  depends=(
++    "gvfs-goa=$pkgver"
++    glib2
++    glibc
++    libgdata
++    libgoa
++  )
++
++  mv google/* "$pkgdir"
+ }
+ 
+ package_gvfs-gphoto2() {
+@@ -217,7 +234,6 @@
+     "gvfs=$pkgver"
+     glib2
+     glibc
+-    libgcc
+     libgphoto2
+     libgudev
+   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -37,8 +37,6 @@
+@@ -17,6 +17,7 @@
+ libcdio-paranoia
+ libgcc
+ libgcrypt
++libgdata
+ libgoa
+ libgphoto2
+ libgudev
+@@ -36,8 +37,6 @@
  python
  smbclient
  smbclient>
