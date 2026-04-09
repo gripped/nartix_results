@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -74,7 +74,7 @@
+     -D selinux=false
+   )
+ 
+-  arch-meson nautilus build "${meson_options[@]}"
++  artix-meson nautilus build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -7,6 +7,6 @@
+ -D packagekit=false
+ -D selinux=false
+ )
+-arch-meson nautilus build "${meson_options[@]}"
++artix-meson nautilus build "${meson_options[@]}"
+ meson compile -C build
+ }

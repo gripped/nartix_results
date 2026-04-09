@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,7 +48,7 @@
+ }
+ 
+ build() {
+-  arch-meson Endeavour build
++  artix-meson Endeavour build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ git apply -3 ../0002-libpeas-1.38.patch
+ }
+ build() {
+-arch-meson Endeavour build
++artix-meson Endeavour build
+ meson compile -C build
+ }

@@ -1,30 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gnome-software
--pkgver=50.0
-+pkgver=49.3
- pkgrel=1
- pkgdesc="Allows you to find and install new apps"
- url="https://apps.gnome.org/Software"
-@@ -9,6 +9,7 @@
- depends=(
-   appstream
-   dconf
-+  gcc-libs
-   gdk-pixbuf2
-   glib2
-   glibc
-@@ -18,15 +19,12 @@
-   hicolor-icon-theme
-   json-glib
-   libadwaita
--  libgcc
-   libgudev
--  libmalcontent
-   libsoup3
-   libsysprof-capture
+@@ -26,7 +26,6 @@
    libxmlb
    pango
    polkit
@@ -32,16 +8,7 @@
  )
  makedepends=(
    docbook-xsl
-@@ -51,7 +49,7 @@
-   "git+https://gitlab.gnome.org/GNOME/gnome-software.git?signed#tag=${pkgver/[a-z]/.&}"
-   "git+https://gitlab.gnome.org/mwleeds/gnome-pwa-list.git"
- )
--b2sums=('127ec6ae9fdd890072a5149f035c0a9d9a23090a7c3aab52b4bf6eeece24753ba63fde9339036086313e8f879b80c1ef490cd62a13dbada07dc2570a2d94886c'
-+b2sums=('e7f91ae1f7dcafdb480a2fd97503c3548ac39fd460bceed75b19837f48b3d8b418461249bc3275c639e7b5ab28df0e37f91f297e3890f695e0867f407f027e9b'
-         'SKIP')
- validpgpkeys=(
-   2AA441054BD2F1715EC11610FB183E7EF3C36A0D # Milan Crha <mcrha@redhat.com>
-@@ -71,7 +69,7 @@
+@@ -71,7 +70,7 @@
      -D packagekit=false
    )
  
@@ -56,26 +23,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,7 @@
- docbook-xsl
- flatpak
- fwupd
-+gcc-libs
- gdk-pixbuf2
- git
- glib2
-@@ -17,10 +18,8 @@
- itstool
- json-glib
- libadwaita
--libgcc
- libglib-testing
- libgudev
--libmalcontent
- libsoup3
- libsysprof-capture
- libxmlb
-@@ -28,4 +27,3 @@
+@@ -28,4 +28,3 @@
  meson
  pango
  polkit

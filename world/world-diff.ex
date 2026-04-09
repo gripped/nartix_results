@@ -146,7 +146,6 @@ emacs
 emacs-nox
 emacs-wayland
 embree
-endeavour
 engrampa
 eog
 eog-docs
@@ -171,7 +170,6 @@ flatpak
 flatpak-docs
 flite
 fluidsynth
-folks
 font-manager
 fprintd
 freerdp
@@ -193,11 +191,9 @@ gcr
 gcr-docs
 gdm
 libgdm
-geary
 gengetopt
 geoclue
 ghc-filesystem
-gjs
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -208,13 +204,13 @@ gnome-disk-utility
 gnome-keyring
 gnome-panel
 gnome-remote-desktop
-gnome-robots
 gnome-session
 gnome-settings-daemon
 gnome-shell
 gnome-shell-docs
 gnome-software
 gnome-system-monitor
+gnome-tour
 gnome-user-share
 go-bindata
 godot
@@ -270,7 +266,6 @@ gvfs
 gvfs-afc
 gvfs-dnssd
 gvfs-goa
-gvfs-google
 gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
@@ -286,7 +281,6 @@ hipcub
 hipfft
 hipsolver
 hipsparse
-hotdoc
 hwloc
 hyperscan
 hyphen
@@ -338,9 +332,6 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
-kea
-"$pkgbase
-"$pkgbase
 kinfocenter
 kismet
 kitty
@@ -392,11 +383,10 @@ libepoxy-docs
 libesmtp
 libfido2
 libfprint
+libgsystemservice
 libgtop
 libgudev
 libguestfs
-libgweather-4
-libgweather-4-docs
 libhandy0
 libidl2
 libindi
@@ -423,6 +413,7 @@ libsidplayfp
 libsoxr
 libstaroffice
 libtg_owt
+libtiff
 libudev0-shim
 libunwind
 libusbsio
@@ -468,7 +459,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-loupe
 ltrace
 lua-filesystem
 lxappearance-obconf-gtk3
@@ -507,6 +497,7 @@ ly
 mako
 malcontent
 libmalcontent
+malcontent-docs
 maliit-framework
 marco
 mariadb
@@ -574,6 +565,7 @@ modemmanager-docs
 modest
 mosquitto
 mousepad
+movit
 mozo
 mpd
 muffin
@@ -590,9 +582,6 @@ mutter
 mutter-docs
 mutter45
 mutter46
-nautilus
-libnautilus-extension
-libnautilus-extension-docs
 nbd
 ndctl
 ndisc6
@@ -640,6 +629,11 @@ onionshare
 open-iscsi
 openbox
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendht
 openrct2
 openresolv
@@ -651,8 +645,6 @@ ostree
 packagekit
 libpackagekit-glib
 pacman-contrib
-papers
-papers-lib-docs
 parole
 passim
 pc-ble-driver
@@ -769,7 +761,9 @@ python-django-guardian
 python-dogpile.cache
 python-ecdsa
 python-eventlet
+python-google-auth-oauthlib
 python-hacking
+python-invoke
 python-jaraco.context
 python-ndg-httpsclient
 python-osc-lib
@@ -890,6 +884,7 @@ qterminal
 qtermwidget
 rabbitmq
 rabbitmqadmin
+ragel
 rawtherapee
 rdma-core
 redis
@@ -934,7 +929,6 @@ sharutils
 signal-desktop
 smartmontools
 snapper
-snapshot
 solid
 spice-vdagent
 squid
@@ -944,7 +938,6 @@ sslh
 sssd
 strongswan
 stunnel
-sushi
 sway
 swayidle
 switcheroo-control
@@ -983,7 +976,6 @@ tinysparql
 tinysparql-docs
 tmux
 tor
-totem
 tracker3-miners
 tracker3
 tracker3-docs
@@ -1112,6 +1104,7 @@ vte3-utils
 vte4
 vte4-utils
 vte-docs
+vtk
 warpinator
 wasi-libcplusplus
 wasi-libc++abi

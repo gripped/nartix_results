@@ -360,6 +360,7 @@ coin-or-data-sample
 coin-or-mp
 coin-or-osi
 collada-dom
+colm
 colord-gtk
 colord-gtk-common
 colord-gtk4
@@ -542,6 +543,7 @@ enblend-enfuse
 enca
 encfs
 enchant
+endeavour
 enet
 enscript
 entr
@@ -673,6 +675,7 @@ fltk1.3
 fluxbox
 fmt
 fmt-docs
+folks
 font-awesome
 woff2-font-awesome
 otf-font-awesome
@@ -731,6 +734,7 @@ gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
+geary
 gedit-plugins
 gedit
 gegl
@@ -761,6 +765,7 @@ git
 git-zsh-completion
 gitea
 github-cli
+gjs
 gkrellm
 gl2ps
 glad
@@ -824,8 +829,10 @@ gnome-nibbles
 gnome-notes
 gnome-online-accounts
 libgoa
+libgoa-docs
 gnome-photos
 gnome-recipes
+gnome-robots
 gnome-screenshot
 gnome-shell-extensions
 gnome-sound-recorder
@@ -835,7 +842,6 @@ gnome-terminal
 gnome-tetravex
 gnome-text-editor
 gnome-themes-extra
-gnome-tour
 gnome-tweaks
 gnome-usage
 gnome-user-docs
@@ -1012,6 +1018,7 @@ gupnp-docs
 gutenprint
 foomatic-db-gutenprint-ppds
 gv
+gweather-locations
 gwenview
 gyp
 half
@@ -1052,6 +1059,7 @@ hiredis
 hitori
 hivex
 hostapd
+hotdoc
 hplip
 hsa-rocr
 hsakmt-roct
@@ -1361,6 +1369,9 @@ kdoctools
 kdsingleapplication
 kdsoap-ws-discovery-client
 kdsoap
+kea
+"$pkgbase
+"$pkgbase
 keditbookmarks
 keepassxc
 kemoticons
@@ -1778,6 +1789,8 @@ libgsf-docs
 libgssglue
 libgusb
 libgusb-docs
+libgweather-4
+libgweather-4-docs
 libgxps
 libhandy
 libhandy-docs
@@ -2031,7 +2044,6 @@ libteam-docs
 libtermkey
 libthai
 libtheora
-libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -2175,6 +2187,7 @@ lmdbxx
 log4cplus
 lokalize
 lolcat
+loupe
 lowdown
 lpeg
 lua-$pkgbase
@@ -2384,7 +2397,6 @@ mopidy
 moreutils
 mosh
 motion
-movit
 mpdecimal
 mpg123
 mplayer
@@ -2419,6 +2431,9 @@ nanobind
 nanomsg
 nanosvg
 nasm
+nautilus
+libnautilus-extension
+libnautilus-extension-docs
 nauty
 nawk
 nccl
@@ -2549,11 +2564,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2626,6 +2636,8 @@ pangomm-2.48
 pangomm-2.48-docs
 pangomm
 pangomm-docs
+papers
+papers-lib-docs
 papirus-icon-theme
 paprefs
 par2cmdline
@@ -3598,7 +3610,6 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
-python-google-auth-oauthlib
 python-google-auth
 python-googleapis-common-protos
 python-gp-libs
@@ -3674,7 +3685,6 @@ python-intelhex
 python-interpreters-pep-734
 python-intervals
 python-intervaltree
-python-invoke
 python-iocapture
 python-ipdb
 python-ipykernel
@@ -4749,7 +4759,6 @@ r8168
 radeontop
 radicale
 raft
-ragel
 range-v3
 ranger
 rapidfuzz-cpp
@@ -5298,6 +5307,7 @@ smb4k
 smpeg
 smplayer
 snappy
+snapshot
 sndio
 snorenotify
 snowball
@@ -5370,6 +5380,7 @@ suil-docs
 suitesparse
 suitesparse-graphblas
 supermin
+sushi
 svgcleaner
 svgpart
 svt-av1
@@ -5611,6 +5622,7 @@ tomlplusplus
 torbrowser-launcher
 torsocks
 totem-pl-parser
+totem
 towncrier
 toxcore
 toxic
@@ -5752,7 +5764,6 @@ vpnc
 vsftpd
 vst3sdk
 vst3sdk-docs
-vtk
 vulkan-docs
 vulkan-html-docs
 vulkan-headers

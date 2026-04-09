@@ -1,36 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-   gdm
-   libgdm
- )
--pkgver=50.0
-+pkgver=49.2
- pkgrel=1
- pkgdesc="Display manager and login screen"
- url="https://gitlab.gnome.org/GNOME/gdm"
-@@ -14,22 +14,24 @@
-   accountsservice
-   audit
-   bash
-+  gcc-libs
-   gdk-pixbuf2
-   glib2
-   glibc
-   gnome-session
-   gnome-shell
-+  gtk3
-   json-glib
-   keyutils
-   libcanberra
--  libgcc
-   libgudev
-+  libx11
-   libxau
+@@ -28,8 +28,8 @@
    libxcb
-+  libxdmcp
    pam
--  polkit
+   polkit
 -  systemd
 -  systemd-libs
 +  elogind
@@ -38,30 +11,7 @@
    upower
  )
  makedepends=(
-@@ -41,13 +43,21 @@
-   meson
-   plymouth
-   yelp-tools
-+  xorg-server
-+  xorg-xhost
-+  xorg-xrdb
-+)
-+optdepends=(
-+  'xorg-server: X session support'
-+  'xorg-xhost: X session support'
-+  'xorg-xrdb: X session support'
- )
- checkdepends=(check)
- source=(
-   "git+https://gitlab.gnome.org/GNOME/gdm.git#tag=${pkgver/[a-z]/.&}"
-   0001-Xsession-Don-t-start-ssh-agent-by-default.patch
- )
--b2sums=('5c3784315c8718aabe6c4abacfca3bc00ac8d028f2a0442d397496633f1e0af44ac4dd156d8b2025212b68a43b3d837d32423aa82cc2be7d565f2445c8144839'
-+b2sums=('3a5bfad78a2eb390a5be0fa2667e8a173b26da7c9b527b88b4d0562825942ee325117c11a979442e516ff6435560471adee3982c20c84efccf0635407ddeee82'
-         'f7e868fdd7cc121433de1572583eb728f4d186cd4f52c6d6c8f2ccf4a3cf781144ff71f704f13571ddb97a1ff4ec55cfa3df25d38737ad19da21e84ddc2d3ee4')
- 
- prepare() {
-@@ -58,15 +68,20 @@
+@@ -58,6 +58,10 @@
  
  build() {
    local meson_options=(
@@ -72,9 +22,7 @@
      -D dbus-sys="/usr/share/dbus-1/system.d"
      -D default-pam-config=arch
      -D default-path="/usr/local/bin:/usr/local/sbin:/usr/bin"
-     -D gdm-xsession=true
-+    -D ipv6=true
-     -D run-dir=/run/gdm
+@@ -66,7 +70,7 @@
      -D selinux=disabled
    )
  
@@ -83,13 +31,8 @@
    meson compile -C build
  }
  
-@@ -106,14 +121,14 @@
+@@ -110,10 +114,10 @@
  
-   install -Dm644 /dev/stdin usr/lib/sysusers.d/gdm.conf <<END
- g gdm 120 -
-+u gdm 120 "Gnome Display Manager" /var/lib/gdm
- END
--
    mkdir -p var/lib/gdm
  
 -  install -Dm644 /dev/stdin usr/share/glib-2.0/schemas/30_org.archlinux.gdm.gschema.override <<END
@@ -101,14 +44,9 @@
  END
  
    _pick libgdm usr/include
-@@ -125,12 +140,12 @@
-   pkgdesc+=" - support library"
-   depends=(
-     dconf
-+    gcc-libs
-     glib2
+@@ -129,8 +133,8 @@
      glibc
--    libgcc
+     libgcc
      libg{lib,object,io}-2.0.so
 -    libsystemd.so
 -    systemd-libs
@@ -123,44 +61,34 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,6 +3,8 @@
+@@ -3,6 +3,7 @@
  bash
  dconf
  docbook-xsl
 +elogind
-+gcc-libs
  gdk-pixbuf2
  git
  glib2
-@@ -11,23 +13,26 @@
- gnome-session
- gnome-shell
- gobject-introspection
-+gtk3
+@@ -14,20 +15,19 @@
  json-glib
  keyutils
  libcanberra
--libgcc
 +libelogind
 +libelogind.so
+ libgcc
  libgdm
  libgio-2.0.so
  libglib-2.0.so
  libgobject-2.0.so
  libgudev
 -libsystemd.so
-+libx11
  libxau
  libxcb
-+libxdmcp
  meson
  pam
  plymouth
--polkit
+ polkit
 -systemd
 -systemd-libs
  upower
-+xorg-server
-+xorg-xhost
-+xorg-xrdb
  yelp-tools

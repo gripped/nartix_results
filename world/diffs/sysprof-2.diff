@@ -1,30 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,14 +4,15 @@
-   sysprof
-   libsysprof-capture
- )
--pkgver=50.0
--pkgrel=1
-+pkgver=49.0
-+pkgrel=2
- pkgdesc="Kernel based performance profiler"
- url="https://apps.gnome.org/Sysprof/"
- license=(GPL-3.0-or-later)
- arch=(x86_64)
- depends=(
-   cairo
-+  gcc-libs
-   glib2
-   glibc
-   graphene
-@@ -21,13 +22,10 @@
-   libadwaita
-   libdex
-   libelf
--  libgcc
-   libpanel
--  libstdc++
+@@ -27,7 +27,6 @@
    libunwind
    pango
    polkit
@@ -32,16 +8,7 @@
  )
  makedepends=(
    git
-@@ -38,7 +36,7 @@
- source=(
-   "git+https://gitlab.gnome.org/GNOME/sysprof.git#tag=${pkgver/[a-z]/.&}"
- )
--b2sums=('dcdc3157710f9eb72afda82b22475694180e36b45b96c07bda13d23bd05bdf51036d39f22aba586ffc09b706f13c880e704f1a3c7c48124f8e01e8e37791a14d')
-+b2sums=('615b5e11e44a7762430a35c6c36979dff70c021bb9eb556690ff70194414f78eb6ea8c230497b5b10fc10d60361331faaf8671d9f92d92e37424610b4278f9c1')
- 
- prepare() {
-   cd sysprof
-@@ -47,7 +45,7 @@
+@@ -47,7 +46,7 @@
  build() {
    CFLAGS+=" -ffat-lto-objects"
  
@@ -50,7 +17,7 @@
    meson compile -C build
  }
  
-@@ -78,6 +76,8 @@
+@@ -78,6 +77,8 @@
    _pick capture usr/include/sysprof-*/sysprof-{address,capture,clock,collector,macros}.h
    _pick capture usr/include/sysprof-*/sysprof-{platform,version,version-macros}.h
    _pick capture usr/include/sysprof-*/sysprof-capture-{condition,cursor,reader,types,writer}.h
@@ -65,22 +32,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,5 +1,6 @@
- 
- cairo
-+gcc-libs
- git
- glib2
- glib2-devel
-@@ -11,13 +12,10 @@
- libadwaita
- libdex
- libelf
--libgcc
- libpanel
--libstdc++
- libsysprof-capture
- libunwind
+@@ -19,5 +19,4 @@
  meson
  pango
  polkit

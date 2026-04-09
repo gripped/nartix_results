@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=opencascade
+ pkgver=7.9.3
+-pkgrel=3
++pkgrel=2
+ epoch=1
+ pkgdesc='SDK intended for development of applications dealing with 3D CAD data'
+ arch=(x86_64)
+@@ -14,7 +14,6 @@
+   libgcc
+   libglvnd
+   libstdc++
+-  libx11
+   tcl
+   tk
+   vtk
+@@ -23,8 +22,6 @@
+   git
+   cmake
+   eigen
+-  fast_float
+-  libxcursor
+   nlohmann-json
+   rapidjson
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cmake
+ eigen
+-fast_float
+ fontconfig
+ freetype2
+ git
+@@ -8,8 +7,6 @@
+ libgcc
+ libglvnd
+ libstdc++
+-libx11
+-libxcursor
+ nlohmann-json
+ rapidjson
+ tcl

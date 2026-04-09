@@ -1,0 +1,50 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,9 +9,9 @@
+ depends=(
+   glib2
+   glibc
++  libelogind
+   libgcc
+   polkit
+-  systemd-libs
+ )
+ makedepends=(
+   git
+@@ -20,15 +20,18 @@
+   meson
+ )
+ provides=(libgsystemservice-0.so)
+-source=("git+https://gitlab.gnome.org/pwithnall/libgsystemservice.git#tag=${pkgver}")
+-b2sums=('08db1b4568afa0065346c47c0956f545d4d9fb5e04608667942bc5a10c9293dcaaa2cd7b15a83f5ac1b70e78b34374c863ff9b18989f363beab1b0468149f5b9')
++source=("git+https://gitlab.gnome.org/pwithnall/libgsystemservice.git#tag=${pkgver}"
++        "0001-build-allow-building-with-elogind.patch")
++b2sums=('08db1b4568afa0065346c47c0956f545d4d9fb5e04608667942bc5a10c9293dcaaa2cd7b15a83f5ac1b70e78b34374c863ff9b18989f363beab1b0468149f5b9'
++        'SKIP')
+ 
+ prepare() {
+   cd $pkgname
++  patch -Np1 -i ../0001-build-allow-building-with-elogind.patch
+ }
+ 
+ build() {
+-  arch-meson $pkgname build
++  artix-meson $pkgname build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,7 @@
+ glib2-devel
+ glibc
+ gtk-doc
++libelogind
+ libgcc
+ meson
+ polkit
+-systemd-libs

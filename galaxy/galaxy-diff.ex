@@ -13,6 +13,7 @@ cosmic-settings
 doctest
 dvtm
 ecrire
+efl
 emptty
 ephoto
 etherwall

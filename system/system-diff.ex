@@ -60,6 +60,7 @@ pacman
 pam
 pambase
 patch
+pciutils
 ppp
 procps-ng
 python

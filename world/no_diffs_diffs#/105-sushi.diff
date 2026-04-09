@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -52,7 +52,7 @@
+ }
+ 
+ build() {
+-  arch-meson sushi build
++  artix-meson sushi build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,6 +3,6 @@
+ git apply -3 ../0001-sushi-media-bin-Fix-llvmpipe-detection.patch
+ }
+ build() {
+-arch-meson sushi build
++artix-meson sushi build
+ meson compile -C build
+ }

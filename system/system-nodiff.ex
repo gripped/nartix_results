@@ -164,7 +164,6 @@ ca-certificates-mozilla
 openssh
 openssl-1.1
 openssl
-pciutils
 pcre
 pcre2
 perl
