@@ -80,6 +80,7 @@ cinnamon-translations
 cinnamon
 cjs
 claws-mail
+cliphist
 coin
 compface
 copyq
@@ -95,7 +96,6 @@ cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
-cosmic-store
 cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers
@@ -110,6 +110,7 @@ doublecmd
 doublecmd-qt5
 doublecmd-qt6
 easy-rsa
+efl
 elementary-icon-theme
 engrampa
 eom
@@ -713,6 +714,7 @@ xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic
 xdg-desktop-portal-lxqt
+xed
 xfburn
 xfce4-appfinder
 xfce4-artwork
@@ -765,6 +767,7 @@ xonotic
 xreader
 xsane
 xsane-gimp
+xviewer
 xwayland-satellite
 yyjson
 zathura-cb

@@ -1092,6 +1092,7 @@ hwinfo
 hy
 hypercorn
 hyperkitty
+hyperscan
 hyprcursor
 hyprgraphics
 hypridle
@@ -1683,6 +1684,7 @@ libcdr
 libcerf
 libcgif
 libchamplain
+libchewing
 libclc
 libcloudproviders
 libcloudproviders-docs
@@ -1692,7 +1694,6 @@ libcroco
 libcryptui
 libcss
 libcuckoo
-libcue
 libcupsfilters
 libcutl
 libdatachannel
@@ -2044,6 +2045,7 @@ libteam-docs
 libtermkey
 libthai
 libtheora
+libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -2313,6 +2315,10 @@ marble-behaim
 marble-common
 marble-maps
 marble-qt
+marisa
+perl-marisa
+python-marisa
+ruby-marisa
 markdownlint
 markdownpart
 marked-man
@@ -3013,6 +3019,7 @@ php-legacy-redis
 php-snuffleupagus
 picard
 picmi
+picom
 pidgin
 libpurple
 finch
@@ -3078,6 +3085,15 @@ poppler-qt6
 portaudio
 portmidi
 portsmf
+postfix
+postfix-cdb
+postfix-ldap
+postfix-lmdb
+postfix-mongodb
+postfix-mysql
+postfix-pcre
+postfix-pgsql
+postfix-sqlite
 postgis
 postgrey
 postorius
@@ -3101,6 +3117,7 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 prosody
 protobuf-c
 protobuf
@@ -3362,7 +3379,6 @@ python-click-option-group
 python-click-plugins
 python-click-repl
 python-click
-python-cliff
 python-cligj
 python-clikit
 python-clint
@@ -3462,6 +3478,7 @@ python-django-extensions
 python-django-fake-model
 python-django-filter
 python-django-gravatar
+python-django-guardian
 python-django-haystack
 python-django-mailman3
 python-django-ninja
@@ -3480,6 +3497,7 @@ python-docstring-to-markdown
 python-doctest-ignore-unicode
 python-docutils-stubs
 python-docutils
+python-dogpile.cache
 python-dotenv
 python-doublex-expects
 python-doublex
@@ -3489,6 +3507,7 @@ python-dulwich
 python-dunamai
 python-durationpy
 python-easyprocess
+python-ecdsa
 python-editables
 python-editdistance-s
 python-editdistance
@@ -3508,6 +3527,7 @@ python-ephemeral-port-reserve
 python-et-xmlfile
 python-eth-hash
 python-evdev
+python-eventlet
 python-exceptiongroup
 python-execnet
 python-executing
@@ -3610,6 +3630,7 @@ python-gnupginterface
 python-google-api-core
 python-google-api-python-client
 python-google-auth-httplib2
+python-google-auth-oauthlib
 python-google-auth
 python-googleapis-common-protos
 python-gp-libs
@@ -3625,6 +3646,7 @@ python-h11
 python-h2
 python-h5netcdf
 python-h5py
+python-hacking
 python-hatch-fancy-pypi-readme
 python-hatch-jupyter-builder
 python-hatch-nodejs-version
@@ -3685,6 +3707,7 @@ python-intelhex
 python-interpreters-pep-734
 python-intervals
 python-intervaltree
+python-invoke
 python-iocapture
 python-ipdb
 python-ipykernel
@@ -3702,6 +3725,7 @@ python-itsdangerous
 python-jaconv
 python-jaraco.classes
 python-jaraco.collections
+python-jaraco.context
 python-jaraco.envs
 python-jaraco.functools
 python-jaraco.itertools
@@ -3918,6 +3942,7 @@ python-orderly-set
 python-orjson
 python-os-client-config
 python-os-service-types
+python-osc-lib
 python-oscrypto
 python-oslo-concurrency
 python-oslo-config
@@ -3965,7 +3990,6 @@ python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
 python-pdftotext
-python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
 python-pdm
@@ -4004,6 +4028,7 @@ python-plumbum
 python-ply
 python-poetry-core
 python-poetry-dynamic-versioning
+python-poetry-plugin-export
 python-poetry
 python-polars
 $pkgbase
@@ -4070,7 +4095,6 @@ python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome
-python-pycryptodomex
 python-pycuda
 python-pycurl
 python-pydantic-core
@@ -4148,6 +4172,7 @@ python-pyproject-metadata
 python-pyqt5-sip
 python-pyqt6-sip
 python-pyquery
+python-pyrfc3339
 python-pyro
 python-pyrsistent
 python-pysaml2
@@ -4166,6 +4191,7 @@ python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
+python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
@@ -4279,6 +4305,7 @@ python-rapidfuzz
 python-rapidjson
 python-rcssmin
 python-rdflib
+python-re-assert
 python-reactivex
 python-readme-renderer
 python-redis
@@ -4306,7 +4333,7 @@ python-requests
 python-requestsexceptions
 python-resolvelib
 python-responses
-python-respx
+python-retrying
 python-rfc3339-validator
 python-rfc3986-validator
 python-rfc3986
@@ -4353,6 +4380,7 @@ python-setuptools-gettext
 python-setuptools-git-versioning
 python-setuptools-git
 python-setuptools-rust
+python-setuptools-scm
 python-setuptools
 python-sgmllib3k
 python-sh
@@ -4423,6 +4451,7 @@ python-sphinxcontrib-towncrier
 python-sphinxcontrib-trio
 python-sphinxext-opengraph
 python-sphinxygen
+python-sphobjinv
 python-spsdk
 python-spur
 python-sqlalchemy-utils
@@ -4450,6 +4479,7 @@ python-subprocess-tee
 python-subunit
 python-sure
 python-svglib
+python-sybil
 python-sympy
 python-syrupy
 python-tabulate
@@ -4529,6 +4559,7 @@ python-ukkonen
 python-ukpostcodeparser
 python-ulid-transform
 python-ulid
+python-uncertainties
 python-unearth
 python-unicodedata2
 python-unidecode
@@ -4584,6 +4615,7 @@ python-wsgiproxy2
 python-wsproto
 python-wstools
 python-wurlitzer
+python-wxpython
 python-xapian-haystack
 python-xapian
 python-xapp
@@ -4595,6 +4627,7 @@ python-xlrd
 python-xlsxwriter
 python-xlwt
 python-xmlschema
+python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
@@ -4759,6 +4792,7 @@ r8168
 radeontop
 radicale
 raft
+ragel
 range-v3
 ranger
 rapidfuzz-cpp
@@ -5404,7 +5438,6 @@ sz
 t1lib
 t1utils
 taglib
-taglib1
 tailscale
 tali
 talloc
@@ -5792,6 +5825,7 @@ webrtc-audio-processing-1
 webrtc-audio-processing
 websocketpp
 weechat
+wf-config
 wf-recorder
 wget
 whois
@@ -5858,6 +5892,7 @@ xf86-input-synaptics
 xf86-input-void
 xf86-video-dummy
 xf86-video-fbdev
+xf86-video-sisusb
 xf86-video-vesa
 xf86-video-voodoo
 xfce4-artwork

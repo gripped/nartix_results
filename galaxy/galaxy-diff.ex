@@ -10,10 +10,10 @@ cosmic-osd
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
+cosmic-store
 doctest
 dvtm
 ecrire
-efl
 emptty
 ephoto
 etherwall
@@ -92,7 +92,6 @@ wireshark-cli
 wireshark-qt
 xdg-desktop-portal-xapp
 xdialog
-xed
 xfce4-notifyd
 xfce4-screensaver
 yazi
