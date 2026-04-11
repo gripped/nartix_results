@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=mpc
+ pkgver=0.35
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Minimalist command line interface to MPD"
+ arch=(x86_64)
+ url="https://www.musicpd.org/clients/mpc/"
+@@ -22,7 +22,7 @@
+ 
+ 
+ build() {
+-  arch-meson build $pkgname-$pkgver
++  artix-meson build $pkgname-$pkgver
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson build $pkgname-$pkgver
++artix-meson build $pkgname-$pkgver
+ meson compile -C build
+ }

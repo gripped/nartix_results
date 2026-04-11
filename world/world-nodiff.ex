@@ -88,6 +88,7 @@ apparmor
 appmenu-gtk-module
 appstream-glib
 apr-util
+aqbanking
 arandr
 arc-gtk-theme
 arc-solid-gtk-theme
@@ -230,7 +231,6 @@ bluedevil
 blueprint-compiler
 bluez-qt
 bluez-qt5
-bmake
 bogofilter
 bogofilter-db
 bogofilter-kyotocabinet
@@ -439,7 +439,6 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
-deno
 desktop-file-utils
 dev86
 devhelp
@@ -767,7 +766,6 @@ gitea
 github-cli
 gjs
 gkrellm
-gl2ps
 glad
 glade
 glances
@@ -1019,6 +1017,9 @@ gutenprint
 foomatic-db-gutenprint-ppds
 gv
 gweather-locations
+gwenhywfar
+gwenhywfar-gtk
+gwenhywfar-qt
 gwenview
 gyp
 half
@@ -1476,6 +1477,7 @@ kmix
 kmousetool
 kmouth
 kmplot
+kmymoney
 knavalbattle
 knetwalk
 knewstuff
@@ -1532,7 +1534,6 @@ kquickcharts5
 kquickimageeditor
 krdc
 krecorder
-krename
 kreversi
 krfb
 krita
@@ -1707,6 +1708,7 @@ libdbusmenu
 libdbusmenu-gtk2
 libdbusmenu-gtk3
 libdc1394
+libdca
 libde265
 libdecor
 libdeflate
@@ -1726,7 +1728,6 @@ libdvdcss
 libdvdnav
 libdvdread
 libdwarf
-libebml
 libebur128
 libepubgen
 libetebase
@@ -1881,6 +1882,7 @@ libmirage
 libmodplug
 libmp4v2
 libmpack
+libmpd
 libmpdclient
 libmpeg2
 libmspack
@@ -1946,6 +1948,7 @@ libpeas
 libpeas-demos
 libpeas-docs
 libpfm
+libpgm
 libphonenumber
 libpinyin
 libplacebo
@@ -2204,6 +2207,7 @@ lshw
 lskat
 lsof
 lsscsi
+ltrace
 lttng-ust2.12
 lua-bitop
 lua51-bitop
@@ -2672,6 +2676,7 @@ pdfgrep
 pdfjs
 pdfmixtool
 pdnsd
+pegtl
 pelican
 perl-acme-alien-dontpanic
 perl-algorithm-diff
@@ -2984,7 +2989,6 @@ perl-variable-magic
 perl-www-robotrules
 perl-xml-libxml
 perl-xml-namespacesupport
-perl-xml-parser
 perl-xml-rss
 perl-xml-sax-base
 perl-xml-sax-expat
@@ -4213,7 +4217,6 @@ python-pytest-home
 python-pytest-html
 python-pytest-httpbin
 python-pytest-httpserver
-python-pytest-httpx
 python-pytest-ignore-flaky
 python-pytest-instafail
 python-pytest-isort
@@ -4648,7 +4651,6 @@ python-zipstream-ng
 python-zlib-ng
 python-zodbpickle
 python-zope-component
-python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
@@ -4656,7 +4658,6 @@ python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
-python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
@@ -4762,7 +4763,6 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -4793,6 +4793,7 @@ radeontop
 radicale
 raft
 ragel
+ragel6
 range-v3
 ranger
 rapidfuzz-cpp
@@ -5102,7 +5103,6 @@ ruby-prime
 ruby-process-metrics
 ruby-protocol-hpack
 ruby-protocol-http
-ruby-protocol-http1
 ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url
@@ -5391,6 +5391,7 @@ squashfuse
 sratom
 sratom-docs
 srt
+sshfs
 sshpass
 sshuttle
 startup-notification
@@ -5427,7 +5428,6 @@ swig
 swtpm
 sxhkd
 sxiv
-syncthing
 syndication
 syndication5
 syntax-highlighting
@@ -5983,6 +5983,7 @@ xwallpaper
 yad
 yajl
 yakuake
+yaml-cpp
 yamllint
 yapf
 yara
@@ -5999,6 +6000,7 @@ youtube-dl
 yt-dlp-ejs
 yt-dlp
 ytfzf
+yubico-c
 yyjson
 z3
 python-z3-solver
@@ -6021,7 +6023,6 @@ zig
 zimg
 zint
 zint-qt
-zip
 ziproxy
 zita-alsa-pcmi
 zita-resampler

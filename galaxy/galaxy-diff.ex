@@ -14,6 +14,7 @@ cosmic-store
 doctest
 dvtm
 ecrire
+efl
 emptty
 ephoto
 etherwall
@@ -80,13 +81,11 @@ unoconv
 vhba-module
 vhba-module-dkms
 vice
-warpinator
 wayfire
 wayvnc
 wcm
 wezterm
 wf-config
-wf-shell
 wireshark
 wireshark-cli
 wireshark-qt

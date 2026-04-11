@@ -110,7 +110,6 @@ doublecmd
 doublecmd-qt5
 doublecmd-qt6
 easy-rsa
-efl
 elementary-icon-theme
 engrampa
 eom
@@ -140,6 +139,7 @@ gemini-cli
 ghostty
 ghostty-shell-integration
 ghostty-terminfo
+ghostty-nautilus
 gigolo
 girara
 gitoxide
@@ -155,6 +155,7 @@ gtk-engines
 gtk-session-lock
 gtk2
 gtk4-layer-shell
+hugo
 hyperfine
 imv
 incron
@@ -321,6 +322,7 @@ monero-gui
 monero
 mousepad
 mozo
+mpc
 msedit
 muffin
 mugshot
@@ -416,6 +418,7 @@ openshot
 orage
 oxipng
 packer
+pamixer
 parole
 pavucontrol-qt
 pcmanfm-gtk3
@@ -699,9 +702,11 @@ vali
 vdirsyncer
 vicious
 voa
+warpinator
 waylandpp
 waypipe
 wev
+wf-shell
 wlopm
 wlr-randr
 wlsunset

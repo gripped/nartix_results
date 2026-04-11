@@ -1,0 +1,32 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,6 +13,12 @@
+             'SKIP')
+ validpgpkeys=(7E228507C26D8DC164F531BFBA54C8AF755A2A99)
+ 
++prepare() {
++	cd bmake
++	sed -i 's/cmd-interrupt//g' unit-tests/Makefile
++	sed -i 's/deptgt-interrupt//g' unit-tests/Makefile
++}
++
+ build() {
+ 	cd bmake
+ 	./boot-strap --prefix=/usr op=build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,8 @@
++prepare() {
++cd bmake
++sed -i 's/cmd-interrupt//g' unit-tests/Makefile
++sed -i 's/deptgt-interrupt//g' unit-tests/Makefile
++}
+ build() {
+ cd bmake
+ ./boot-strap --prefix=/usr op=build

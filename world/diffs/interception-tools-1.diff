@@ -1,16 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,24 +1,23 @@
+@@ -1,7 +1,7 @@
  
  pkgname=interception-tools
  pkgver=0.6.8
 -pkgrel=9
-+pkgrel=8
++pkgrel=9.1
  pkgdesc='A minimal composable infrastructure on top of libudev and libevdev'
  arch=('x86_64')
--license=('GPL-3.0-only')
-+license=('GPL3')
- url='https://gitlab.com/interception/linux/tools'
+ license=('GPL-3.0-only')
+@@ -9,9 +9,9 @@
  depends=(
      'libevdev' 'libevdev.so'
      'yaml-cpp' 'libyaml-cpp.so'
@@ -22,14 +21,7 @@
  source=(
      "$pkgname-$pkgver.tar.gz::https://gitlab.com/interception/linux/tools/-/archive/v$pkgver/tools-v$pkgver.tar.gz"
  )
- sha256sums=('84ced1c10bef7f00660704685c651c4241096cc9848c31f5a04f166e1450949d')
- 
- build() {
--    export CMAKE_POLICY_VERSION_MINIMUM=3.5
-     cmake -B build \
-           -S "tools-v${pkgver}" \
-           -DCMAKE_INSTALL_PREFIX=/usr \
-@@ -29,7 +28,6 @@
+@@ -29,7 +29,6 @@
  
  package() {
      install -dm755 "$pkgdir/etc/interception/udevmon.d"

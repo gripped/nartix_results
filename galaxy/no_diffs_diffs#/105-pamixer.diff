@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=pamixer
+ pkgver=1.6
+-pkgrel=3
++pkgrel=4
+ pkgdesc='Pulseaudio command-line mixer like amixer'
+ arch=(x86_64)
+ url='https://github.com/cdemoulins/pamixer'
+ license=(GPL-3.0-or-later)
+ depends=(
+-  gcc-libs
+   glibc
++  libgcc
+   libpulse
+ )
+ makedepends=(
+@@ -21,7 +21,7 @@
+ b2sums=('f7951102b2605d31886a7d76f608e3a349ab760a0995e81514dfc978d92e322ce83abb733364169317b996494bc898c1a81efc71805a62b61f9817c743a31e79')
+ 
+ build() {
+-  arch-meson $pkgname-$pkgver build
++  artix-meson $pkgname-$pkgver build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,6 @@
+ cxxopts
+-gcc-libs
+ glibc
++libgcc
+ libpulse
+ meson
+ ninja
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson $pkgname-$pkgver build
++artix-meson $pkgname-$pkgver build
+ meson compile -C build
+ }

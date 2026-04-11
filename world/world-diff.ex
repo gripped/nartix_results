@@ -8,7 +8,6 @@ apcupsd
 appstream
 appstream-qt
 apr
-aqbanking
 aquamarine
 archivetools
 at-spi2-core
@@ -30,6 +29,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-obex
+bmake
 bolt
 booster
 box2d
@@ -104,6 +104,7 @@ darkhttpd
 dbus-broker
 dconf
 ddcutil
+deno
 dhcp
 dhclient
 dhcpcd
@@ -194,6 +195,7 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
+gl2ps
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -272,7 +274,6 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
-gwenhywfar
 haproxy
 haveged
 hexchat
@@ -336,10 +337,10 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
-kmymoney
 knockd
 knot
 krdp
+krename
 kseexpr
 ksystemlog
 kwin-x11
@@ -372,9 +373,9 @@ python-libcamera
 libcdio-paranoia
 libcue
 libdaemon
-libdca
 libdrm
 libe-book
+libebml
 libei
 libei-docs
 libepoxy
@@ -400,11 +401,9 @@ libmateweather
 libmemcached-awesome
 libmms
 libmng
-libmpd
 libmspub
 libnvme
 libofa
-libpgm
 libprocps
 libqb
 libsidplay
@@ -457,7 +456,6 @@ llvm14
 lm_sensors
 localsearch
 localsearch-testutils
-ltrace
 lua-filesystem
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -646,10 +644,10 @@ pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
 pcsclite
-pegtl
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-xml-parser
 pgbouncer
 phodav
 php-legacy
@@ -747,11 +745,14 @@ python-pycryptodomex
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
+python-pytest-httpx
 python-pyudev
 python-recommonmark
 python-respx
 python-sphinxcontrib-spelling
 python-wheel
+python-zope-configuration
+python-zope-interface
 qastools
 qbittorrent
 qbittorrent-nox
@@ -846,6 +847,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
 qt6-webengine
 qterminal
 qtermwidget
@@ -867,6 +869,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-protocol-http1
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -898,7 +901,6 @@ snapper
 solid
 spice-vdagent
 squid
-sshfs
 sshguard
 sslh
 sssd
@@ -907,6 +909,7 @@ stunnel
 sway
 swayidle
 switcheroo-control
+syncthing
 syslog-ng
 syslog-ng-python
 syslog-ng-amqp
@@ -1173,9 +1176,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yaml-cpp
 yubico-c-client
-yubico-c
 yubikey-personalization
 zabbix
 zabbix-common
@@ -1186,6 +1187,7 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
+zip
 znc
 zsh
 zsh-doc

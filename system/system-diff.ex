@@ -35,7 +35,7 @@ grep
 gssproxy
 gzip
 iptables
-iptables-nft
+iptables-legacy
 iputils
 libsasl
 libusb
@@ -67,6 +67,11 @@ python
 python-tests
 readline
 rpcbind
+sqlite
+sqlite-tcl
+sqlite-analyzer
+lemon
+sqlite-doc
 thin-provisioning-tools
 tpm2-tss
 traceroute

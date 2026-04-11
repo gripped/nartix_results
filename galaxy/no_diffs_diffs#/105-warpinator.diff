@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -44,7 +44,7 @@
+ }
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D bundle-zeroconf=false \
+     -D bundle-grpc=false
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ sed -i 's|libexec/warpinator|lib/warpinator|' data/org.x.warpinator.policy.in.in
+ }
+ build() {
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D bundle-zeroconf=false \
+ -D bundle-grpc=false
+ meson compile -C build
