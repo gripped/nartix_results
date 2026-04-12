@@ -7,7 +7,6 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
-aardvark-dns
 abduco
 abseil-cpp
 accerciser
@@ -46,6 +45,7 @@ libakonadi
 akonadiconsole
 akregator
 alacarte
+alacritty
 alembic
 alligator
 alsa-firmware
@@ -716,6 +716,7 @@ fuse-common
 futuresql
 fwknop
 fzf
+fzssh
 gajim
 galculator
 gavl
@@ -766,6 +767,7 @@ gitea
 github-cli
 gjs
 gkrellm
+gl2ps
 glad
 glade
 glances
@@ -1534,6 +1536,7 @@ kquickcharts5
 kquickimageeditor
 krdc
 krecorder
+krename
 kreversi
 krfb
 krita
@@ -1695,6 +1698,7 @@ libcroco
 libcryptui
 libcss
 libcuckoo
+libcue
 libcupsfilters
 libcutl
 libdatachannel
@@ -1728,6 +1732,7 @@ libdvdcss
 libdvdnav
 libdvdread
 libdwarf
+libebml
 libebur128
 libepubgen
 libetebase
@@ -1824,6 +1829,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -1970,7 +1976,6 @@ libpst-docs
 libptytty
 libpwquality
 libqaccessibilityclient
-libqaccessibilityclient-qt5
 libqaccessibilityclient-qt6
 libqalculate
 libqmi
@@ -2432,6 +2437,9 @@ mupdf-gl
 mupdf-tools
 python-mupdf
 musescore
+musl
+musl-aarch64
+musl-riscv64
 mutt
 mypaint-brushes
 mypaint-brushes1
@@ -2561,10 +2569,6 @@ openal
 openal-examples
 openbabel
 python-openbabel
-openblas
-openblas64
-blas-openblas
-blas64-openblas
 openbsd-netcat
 opencascade
 opencc
@@ -2601,7 +2605,6 @@ opensips
 openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
-opensmtpd-filter-senderscore
 opensubdiv
 opentimelineio
 openucc
@@ -2835,7 +2838,6 @@ perl-log-report
 perl-lwp-mediatypes
 perl-lwp-protocol-https
 perl-mail-authenticationresults
-perl-mail-box
 perl-mail-dkim
 perl-mail-message
 perl-mail-spf
@@ -2989,6 +2991,7 @@ perl-variable-magic
 perl-www-robotrules
 perl-xml-libxml
 perl-xml-namespacesupport
+perl-xml-parser
 perl-xml-rss
 perl-xml-sax-base
 perl-xml-sax-expat
@@ -3383,6 +3386,7 @@ python-click-option-group
 python-click-plugins
 python-click-repl
 python-click
+python-cliff
 python-cligj
 python-clikit
 python-clint
@@ -3994,6 +3998,7 @@ python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
 python-pdftotext
+python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
 python-pdm
@@ -4099,6 +4104,7 @@ python-pycrdt-store
 python-pycrdt-websocket
 python-pycrdt
 python-pycryptodome
+python-pycryptodomex
 python-pycuda
 python-pycurl
 python-pydantic-core
@@ -4217,6 +4223,7 @@ python-pytest-home
 python-pytest-html
 python-pytest-httpbin
 python-pytest-httpserver
+python-pytest-httpx
 python-pytest-ignore-flaky
 python-pytest-instafail
 python-pytest-isort
@@ -4336,6 +4343,7 @@ python-requests
 python-requestsexceptions
 python-resolvelib
 python-responses
+python-respx
 python-retrying
 python-rfc3339-validator
 python-rfc3986-validator
@@ -4630,7 +4638,6 @@ python-xlrd
 python-xlsxwriter
 python-xlwt
 python-xmlschema
-python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
@@ -4651,6 +4658,7 @@ python-zipstream-ng
 python-zlib-ng
 python-zodbpickle
 python-zope-component
+python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
@@ -4658,6 +4666,7 @@ python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
+python-zope-interface
 python-zope-location
 python-zope-proxy
 python-zope-schema
@@ -4763,6 +4772,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -5103,6 +5113,7 @@ ruby-prime
 ruby-process-metrics
 ruby-protocol-hpack
 ruby-protocol-http
+ruby-protocol-http1
 ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url
@@ -5428,6 +5439,7 @@ swig
 swtpm
 sxhkd
 sxiv
+syncthing
 syndication
 syndication5
 syntax-highlighting
@@ -5438,6 +5450,7 @@ sz
 t1lib
 t1utils
 taglib
+taglib1
 tailscale
 tali
 talloc
@@ -5721,7 +5734,6 @@ unicorn
 python-unicorn
 ruby-unicorn-engine
 unifdef
-unittestpp
 unrar
 libunrar
 unrealircd
@@ -5981,7 +5993,6 @@ xtrans
 xvidcore
 xwallpaper
 yad
-yajl
 yakuake
 yaml-cpp
 yamllint
@@ -6023,6 +6034,7 @@ zig
 zimg
 zint
 zint-qt
+zip
 ziproxy
 zita-alsa-pcmi
 zita-resampler

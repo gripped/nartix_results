@@ -74,6 +74,8 @@ librewolf
 libtree
 libwireplumber-4.0-compat
 lightdm-settings
+limine-mkinitcpio-hook
+limine-snapper-sync
 linux-lts515
 linux-wifi-hotspot
 logalize
@@ -83,6 +85,7 @@ lxappearance-obconf-gtk2
 lxdm-dinit
 lxdm-gtk2
 lxdm-openrc
+lxdm-runit
 lxhotkey-gtk2
 lxinput-gtk2
 lxlauncher-gtk2

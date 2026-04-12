@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,11 +2,10 @@
+@@ -2,10 +2,9 @@
  pkgbase=mutter
  pkgname=(
    mutter
@@ -8,12 +8,10 @@
    mutter-docs
  )
 -pkgver=50.0
--pkgrel=1
 +pkgver=48.5
-+pkgrel=2
+ pkgrel=2
  pkgdesc="Window manager and compositor for GNOME"
  url="https://gitlab.gnome.org/GNOME/mutter"
- arch=(x86_64)
 @@ -19,10 +18,10 @@
    egl-wayland
    fontconfig
@@ -63,7 +61,7 @@
    wayland
    xorg-xwayland
  )
-@@ -82,10 +84,10 @@
+@@ -82,14 +84,13 @@
  )
  source=(
    "git+$url.git#tag=${pkgver/[a-z]/.&}"
@@ -77,7 +75,11 @@
  
  prepare() {
    cd mutter
-@@ -105,7 +107,7 @@
+-  git cherry-pick -n aae0955e6718de9084a6679fcd796cf8bd2cdef7
+ }
+ 
+ build() {
+@@ -106,7 +107,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -86,7 +88,7 @@
    meson compile -C build
  }
  
-@@ -120,40 +122,12 @@
+@@ -121,40 +122,12 @@
  }
  
  package_mutter() {

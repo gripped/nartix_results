@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,7 +9,7 @@
+@@ -2,14 +2,14 @@
+ pkgbase=fira-code
+ pkgname=('ttf-fira-code' 'woff-fira-code' 'woff2-fira-code')
+ pkgver=6.2
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Monospaced font with programming ligatures"
+ arch=('any')
+ url='https://github.com/tonsky/FiraCode'
  license=('custom:OFL')
  depends=()
  source=("$pkgbase-$pkgver.zip::https://github.com/tonsky/FiraCode/releases/download/${pkgver}/Fira_Code_v${pkgver}.zip"

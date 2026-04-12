@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -15,6 +15,10 @@
+ prepare() {
+   cd python-xmlsec
+   sed -i 's/setuptools==80\.9\.0/setuptools/' pyproject.toml
++  sed -i 's/lxml==6.0.2/lxml==6.0.3/' pyproject.toml
++
++  sed -e 's/lxml==6.0.2/lxml==6.0.3/' -i requirements.txt
++  sed -e 's/lxml==6.0.2/lxml==6.0.3/' -i doc/source/requirements.txt
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,9 @@
+ prepare() {
+ cd python-xmlsec
+ sed -i 's/setuptools==80\.9\.0/setuptools/' pyproject.toml
++sed -i 's/lxml==6.0.2/lxml==6.0.3/' pyproject.toml
++sed -e 's/lxml==6.0.2/lxml==6.0.3/' -i requirements.txt
++sed -e 's/lxml==6.0.2/lxml==6.0.3/' -i doc/source/requirements.txt
+ }
+ build() {
+ cd python-xmlsec

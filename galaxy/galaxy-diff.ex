@@ -10,7 +10,6 @@ cosmic-osd
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
-cosmic-store
 doctest
 dvtm
 ecrire
@@ -67,10 +66,12 @@ qt5-webengine
 rage
 read-edid
 reflector
+rpi-imager
 sdcv
 signal-desktop
 terminology
 termshark
+thunar
 tor
 torsocks
 transmission

@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,7 +43,7 @@
+       -D pgp=enabled
+     )
+ 
+-    arch-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
++    artix-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
+     meson compile -C build
+   )
+   echo "Building gtk variant..."
+@@ -59,7 +59,7 @@
+       -D pgp=enabled
+     )
+ 
+-    arch-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
++    artix-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
+     meson compile -C build-gtk
+   )
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ -D omemo=enabled
+ -D pgp=enabled
+ )
+-arch-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
++artix-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
+ meson compile -C build
+ )
+ echo "Building gtk variant..."
+@@ -29,7 +29,7 @@
+ -D omemo=enabled
+ -D pgp=enabled
+ )
+-arch-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
++artix-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
+ meson compile -C build-gtk
+ )
+ }

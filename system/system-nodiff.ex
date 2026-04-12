@@ -56,6 +56,8 @@ iana-etc
 icu
 inetutils
 iproute2
+iptables
+iptables-legacy
 iw
 jansson
 jfsutils
@@ -178,6 +180,11 @@ s-nail
 sdparm
 sed
 shadow
+sqlite
+sqlite-tcl
+sqlite-analyzer
+lemon
+sqlite-doc
 sudo
 sysfsutils
 syslinux

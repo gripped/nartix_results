@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,7 +13,7 @@
+ sha512sums=('82efaac1d191ba864f24c724d978717a70fdb9f8847bfabafbbec1b2dc010be5c28632c2cad8c73d2724e6d11f1afa6eb8ec388c2374eb5c66dc48b735a2d0ed')
+ 
+ build() {
+-	arch-meson "${pkgname}-${pkgver}" build
++	artix-meson "${pkgname}-${pkgver}" build
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson "${pkgname}-${pkgver}" build
++artix-meson "${pkgname}-${pkgver}" build
+ meson compile -C build
+ }

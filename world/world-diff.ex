@@ -1,7 +1,7 @@
 a52dec
+aardvark-dns
 accountsservice
 aflplusplus
-alacritty
 alsa-utils
 apache
 apcupsd
@@ -195,7 +195,6 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
-gl2ps
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -340,7 +339,6 @@ kitty-shell-integration
 knockd
 knot
 krdp
-krename
 kseexpr
 ksystemlog
 kwin-x11
@@ -371,11 +369,9 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
-libcue
 libdaemon
 libdrm
 libe-book
-libebml
 libei
 libei-docs
 libepoxy
@@ -392,7 +388,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -567,9 +562,6 @@ mumble-server
 musepack
 musepack-tools
 libmpcdec
-musl
-musl-aarch64
-musl-riscv64
 mutter
 mutter-docs
 mutter45
@@ -619,6 +611,10 @@ nvtop
 onboard
 onionshare
 open-iscsi
+openblas
+openblas64
+blas-openblas
+blas64-openblas
 openbox
 opencollada
 opencv
@@ -629,6 +625,7 @@ python-opencv-cuda
 opendht
 openrct2
 openresolv
+opensmtpd-filter-senderscore
 opensmtpd
 opensnitch
 opensp
@@ -647,7 +644,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-xml-parser
+perl-mail-box
 pgbouncer
 phodav
 php-legacy
@@ -736,23 +733,17 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
-python-cliff
 python-cram
 python-debugpy
 python-ndg-httpsclient
-python-pdm-backend
-python-pycryptodomex
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
-python-pytest-httpx
 python-pyudev
 python-recommonmark
-python-respx
 python-sphinxcontrib-spelling
 python-wheel
-python-zope-configuration
-python-zope-interface
+python-xmlsec
 qastools
 qbittorrent
 qbittorrent-nox
@@ -847,7 +838,6 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
 qt6-webengine
 qterminal
 qtermwidget
@@ -869,7 +859,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-protocol-http1
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -909,7 +898,6 @@ stunnel
 sway
 swayidle
 switcheroo-control
-syncthing
 syslog-ng
 syslog-ng-python
 syslog-ng-amqp
@@ -924,7 +912,6 @@ sysprof
 libsysprof-capture
 sysstat
 system-config-printer
-taglib1
 tcc
 telegram-desktop
 tensorflow
@@ -962,6 +949,7 @@ udisks2-docs
 umockdev
 unace
 unbound
+unittestpp
 unoconv
 upower
 uptimed
@@ -1176,6 +1164,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yajl
 yubico-c-client
 yubikey-personalization
 zabbix
@@ -1187,7 +1176,6 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
-zip
 znc
 zsh
 zsh-doc

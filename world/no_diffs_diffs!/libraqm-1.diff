@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=libraqm
+-pkgver=0.10.5
++pkgver=0.10.4
+ pkgrel=1
+ pkgdesc='A library that encapsulates the logic for complex text layout'
+ arch=(x86_64)
+@@ -14,7 +14,7 @@
+              gtk-doc
+              meson)
+ source=(git+https://github.com/HOST-Oman/libraqm#tag=v$pkgver)
+-sha256sums=('778c71f6d4f8708d019a1da1ef666492b3c1e5dea4ba86663f47d5e21b431f61')
++sha256sums=('bba0ad6c2c5861ee0b1db2673ef63a1ea93d4af390b465743e3fc68eb3283c82')
+ 
+ build() {
+   meson build libraqm \

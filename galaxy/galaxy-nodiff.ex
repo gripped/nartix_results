@@ -96,6 +96,7 @@ cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
+cosmic-store
 cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers
@@ -522,7 +523,6 @@ rio
 riscv64-linux-gnu-gdb
 ristretto
 rmpc
-rpi-imager
 rust-script
 sakura
 salt
@@ -685,7 +685,6 @@ tesseract-data-yor
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
-thunar
 thunderbird
 timeshift
 tinyxxd

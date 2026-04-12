@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgname=opensmtpd-filter-senderscore
+ _pkgname=filter-senderscore
+ pkgver=0.1.2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='OpenSMTPD filter integration for Sender Score'
+ arch=(i686 x86_64)
+ url=https://github.com/poolpOrg/filter-senderscore
+@@ -15,14 +15,7 @@
+ 
+ build() {
+ 	cd "$_pkgname-$pkgver"
+-
+-	export CGO_CPPFLAGS="${CPPFLAGS}"
+-	export CGO_CFLAGS="${CFLAGS}"
+-	export CGO_CXXFLAGS="${CXXFLAGS}"
+-	export CGO_LDFLAGS="${LDFLAGS}"
+-	export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+-
+-	go build "$_pkgname.go"
++	go build -buildmode pie -ldflags "-extldflags $LDFLAGS" -trimpath "$_pkgname.go"
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,9 +1,4 @@
+ build() {
+ cd "$_pkgname-$pkgver"
+-export CGO_CPPFLAGS="${CPPFLAGS}"
+-export CGO_CFLAGS="${CFLAGS}"
+-export CGO_CXXFLAGS="${CXXFLAGS}"
+-export CGO_LDFLAGS="${LDFLAGS}"
+-export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+-go build "$_pkgname.go"
++go build -buildmode pie -ldflags "-extldflags $LDFLAGS" -trimpath "$_pkgname.go"
+ }

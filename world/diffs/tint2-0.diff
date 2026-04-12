@@ -4,7 +4,7 @@
  
  pkgname=tint2
  pkgver=17.0.2
--pkgrel=4
+-pkgrel=5
 +pkgrel=4.1
  pkgdesc='Basic, good-looking task manager for WMs'
  arch=(x86_64)
@@ -29,6 +29,14 @@
  }
  
  build() {
+@@ -25,7 +28,6 @@
+ 	cmake ../"${pkgname}" \
+ 	  -D CMAKE_INSTALL_PREFIX=/usr \
+ 	  -D ENABLE_TINT2CONF=1 \
+-	  -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+ 	  -G Ninja
+ 	ninja
+ }
 
 
 ############# Stripped diff below #################
@@ -45,3 +53,11 @@
  }
  build() {
  mkdir -p build
+@@ -9,7 +10,6 @@
+ cmake ../"${pkgname}" \
+ -D CMAKE_INSTALL_PREFIX=/usr \
+ -D ENABLE_TINT2CONF=1 \
+--D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+ -G Ninja
+ ninja
+ }
