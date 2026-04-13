@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,12 +11,10 @@
+ backup=('etc/conf.d/atftpd')
+ options=('!lto')
+ source=("atftp::git+https://git.code.sf.net/p/atftp/code#tag=v${pkgver}"
+-        'atftpd.service'
+         'atftpd.conf'
+         'atftp.sysusers'
+         'atftp.tmpfiles')
+ sha256sums=('85b56ee612c3c84f782c5428e867cf0d22461197a8062fd4afeb4b0bac44184b'
+-            '74a030f0fb48e97470d59d767039e44d28cbd6c4722621207684220210b8fa65'
+             '0b28125099ffdd6869c6fbcb3167e93ccd71a0c6e465b1b62c7dedf9f628dd4e'
+             '9a0f81ed10ffa35466e3ff35b82dad181aadacb4a05917f580681ffbb5a597e6'
+             '2096272445c736ba05529af628cc2d46d0236c8f1ecbd50bb1db6dc6c4a972c5')
+@@ -44,7 +42,6 @@
+ 
+   make DESTDIR="${pkgdir}" install
+ 
+-  install -D -m0644 ../atftpd.service "${pkgdir}"/usr/lib/systemd/system/atftpd.service
+   install -D -m0644 ../atftpd.conf "${pkgdir}"/etc/conf.d/atftpd
+   install -D -m0644 ../atftp.sysusers "${pkgdir}"/usr/lib/sysusers.d/atftp.conf
+   install -D -m0644 ../atftp.tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/atftp.conf

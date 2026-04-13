@@ -1,5 +1,4 @@
 a52dec
-aardvark-dns
 accountsservice
 aflplusplus
 alsa-utils
@@ -13,7 +12,6 @@ archivetools
 at-spi2-core
 at-spi2-core-docs
 at
-atftp
 atril
 audacious-plugins
 avahi
@@ -166,7 +164,6 @@ fcitx5
 fcron
 fig2dev
 firefox
-flashrom
 flatpak
 flatpak-docs
 flite
@@ -326,7 +323,6 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
-jemalloc
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -376,7 +372,6 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
-libesmtp
 libfido2
 libfprint
 libgsystemservice
@@ -388,6 +383,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -611,10 +607,6 @@ nvtop
 onboard
 onionshare
 open-iscsi
-openblas
-openblas64
-blas-openblas
-blas64-openblas
 openbox
 opencollada
 opencv
@@ -644,7 +636,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-mail-box
 pgbouncer
 phodav
 php-legacy
@@ -928,7 +919,6 @@ thunar-volman
 thunar
 thunderbird
 tigervnc
-tint2
 tinysparql
 tinysparql-docs
 tmux

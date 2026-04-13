@@ -110,6 +110,7 @@ dosbox
 doublecmd
 doublecmd-qt5
 doublecmd-qt6
+dvtm
 easy-rsa
 elementary-icon-theme
 engrampa
@@ -523,6 +524,7 @@ rio
 riscv64-linux-gnu-gdb
 ristretto
 rmpc
+rpi-imager
 rust-script
 sakura
 salt
@@ -685,6 +687,7 @@ tesseract-data-yor
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+thunar
 thunderbird
 timeshift
 tinyxxd
@@ -699,6 +702,8 @@ utox
 vagrant
 vali
 vdirsyncer
+vhba-module-dkms
+vhba-module
 vicious
 voa
 warpinator
@@ -719,6 +724,14 @@ xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic
 xdg-desktop-portal-lxqt
 xed
+xf86-input-libinput
+xf86-input-synaptics
+xf86-input-void
+xf86-video-dummy
+xf86-video-fbdev
+xf86-video-sisusb
+xf86-video-vesa
+xf86-video-voodoo
 xfburn
 xfce4-appfinder
 xfce4-artwork

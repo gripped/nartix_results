@@ -7,6 +7,7 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
+aardvark-dns
 abduco
 abseil-cpp
 accerciser
@@ -132,6 +133,7 @@ aspell
 assimp
 astromenace
 astyle
+atftp
 atkmm-2.36
 atkmm-2.36-docs
 atkmm
@@ -663,6 +665,7 @@ flac
 flac-doc
 flake8
 flameshot
+flashrom
 flatbuffers
 python-flatbuffers
 flatpak-builder
@@ -1208,7 +1211,9 @@ openjdk-src
 java-xmlgraphics-commons
 jbig2dec
 jedi-language-server
+jemalloc
 jenkins
+jimtcl
 jitterentropy
 jkqtplotter
 jose
@@ -1735,6 +1740,7 @@ libdwarf
 libebml
 libebur128
 libepubgen
+libesmtp
 libetebase
 libetonyek
 libetonyek-doc
@@ -1829,7 +1835,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2569,6 +2574,10 @@ openal
 openal-examples
 openbabel
 python-openbabel
+openblas
+openblas64
+blas-openblas
+blas64-openblas
 openbsd-netcat
 opencascade
 opencc
@@ -2838,6 +2847,7 @@ perl-log-report
 perl-lwp-mediatypes
 perl-lwp-protocol-https
 perl-mail-authenticationresults
+perl-mail-box
 perl-mail-dkim
 perl-mail-message
 perl-mail-spf
@@ -5646,6 +5656,7 @@ time
 timeshift
 timew
 timezonemap
+tint2
 tinycdb
 tinycompress
 tinyprog

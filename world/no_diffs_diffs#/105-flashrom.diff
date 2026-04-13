@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,7 @@
+ }
+ 
+ build() {
+-  arch-meson ${pkgname} build
++  artix-meson ${pkgname} build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,6 @@
+ patch -Np1 -d flashrom < glibc-2.42-fix.patch
+ }
+ build() {
+-arch-meson ${pkgname} build
++artix-meson ${pkgname} build
+ meson compile -C build
+ }

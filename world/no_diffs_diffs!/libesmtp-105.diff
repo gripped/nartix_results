@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ sha256sums=('32bc3614ca12d21c7d933f32d43410e8744b6f91fdca7732da9877a385e4e6c3')
+ 
+ build() {
+-	arch-meson build libESMTP-${pkgver} -Dc_args="-D_DEFAULT_SOURCE"
++	artix-meson build libESMTP-${pkgver} -Dc_args="-D_DEFAULT_SOURCE"
+ 	meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson build libESMTP-${pkgver} -Dc_args="-D_DEFAULT_SOURCE"
++artix-meson build libESMTP-${pkgver} -Dc_args="-D_DEFAULT_SOURCE"
+ meson compile -C build
+ }
