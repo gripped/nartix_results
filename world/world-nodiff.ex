@@ -2587,6 +2587,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2697,6 +2702,7 @@ perl-alien-build-plugin-download-gitlab
 perl-alien-build
 perl-alien-cmake3
 perl-alien-libxml2
+perl-app-docmake
 perl-appconfig
 perl-archive-cpio
 perl-archive-extract
@@ -2973,6 +2979,7 @@ perl-test-requiresinternet
 perl-test-script
 perl-test-simple
 perl-test-subcalls
+perl-test-trap
 perl-test-utf8
 perl-test-warn
 perl-test-warnings
@@ -5745,6 +5752,7 @@ unicorn
 python-unicorn
 ruby-unicorn-engine
 unifdef
+unittestpp
 unrar
 libunrar
 unrealircd

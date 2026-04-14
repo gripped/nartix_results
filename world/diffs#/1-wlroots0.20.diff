@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ depends=('glibc' 'libdisplay-info.so' 'libdrm' 'libglvnd' 'libinput' 'liblcms2.so' 'libliftoff.so' 'libpixman-1.so'
+          'libseat.so' 'libudev.so' 'libvulkan.so' 'libwayland-client.so' 'libwayland-server.so' 'libxcb' 'libxkbcommon.so'
+          'wayland-protocols' 'opengl-driver' 'xcb-util-errors' 'xcb-util-renderutil' 'xcb-util-wm')
+-makedepends=('git' 'glslang' 'meson' 'ninja' 'systemd' 'vulkan-headers' 'xorg-xwayland')
++makedepends=('git' 'glslang' 'meson' 'ninja' 'vulkan-headers' 'xorg-xwayland')
+ optdepends=('xorg-xwayland: Xwayland support'
+             'vulkan-validation-layers: validation layers for the experimental vulkan renderer backend')
+ provides=("libwlroots-${pkgver%.*}.so")
+@@ -21,7 +21,7 @@
+               '4100929B33EEB0FD1DB852797BC79407090047CA') # Sway signing key)
+ 
+ build() {
+-	arch-meson "${pkgname}" build
++	artix-meson "${pkgname}" build
+ 	ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -18,7 +18,6 @@
+ meson
+ ninja
+ opengl-driver
+-systemd
+ vulkan-headers
+ wayland-protocols
+ xcb-util-errors

@@ -159,6 +159,7 @@ gtk2
 gtk4-layer-shell
 hugo
 hyperfine
+impala
 imv
 incron
 joyutils

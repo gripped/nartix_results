@@ -609,11 +609,6 @@ onionshare
 open-iscsi
 openbox
 opencollada
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendht
 openrct2
 openresolv
@@ -939,7 +934,6 @@ udisks2-docs
 umockdev
 unace
 unbound
-unittestpp
 unoconv
 upower
 uptimed
@@ -1080,6 +1074,7 @@ wlroots0.16
 wlroots0.17
 wlroots0.18
 wlroots0.19
+wlroots0.20
 wpewebkit
 wpewebkit-docs
 wsdd

@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,6 +8,7 @@
+ license=(GPL-3.0-or-later)
+ arch=(x86_64)
+ depends=(wayland-compositor
++         accountsservice
+          greetd
+          cairo
+          libgcc
+@@ -24,14 +25,16 @@
+ source=("$url/archive/$pkgver/$_archive.tar.gz"
+         "${_pkgname,,}.toml")
+ sha256sums=('0d8855b98c868f89f62ed1ce0eff2e34c5eba903040fcf8acd96e6b18ab69dc6'
+-            'b80b3eb31f8cc463d512c9db0eef899bdbe232d977429a8a12e95a3b6df2e387')
++            '7780028e5774347793e8073c86bde7f38b70a9736dc7c5b0566d93aa7f0c252b')
+ 
+ prepare() {
+ 	cd "$_archive"
++	sed -i -e 's|systemctl|loginctl|' regreet.sample.toml
+ 	cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ 
+ build() {
++	export REBOOT_CMD="loginctl reboot" POWEROFF_CMD="loginctl poweroff"
+ 	cd "$_archive"
+ 	cargo build --frozen --release --all-features
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++accountsservice
+ cairo
+ cargo
+ gdk-pixbuf2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,8 +1,10 @@
+ prepare() {
+ cd "$_archive"
++sed -i -e 's|systemctl|loginctl|' regreet.sample.toml
+ cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+ }
+ build() {
++export REBOOT_CMD="loginctl reboot" POWEROFF_CMD="loginctl poweroff"
+ cd "$_archive"
+ cargo build --frozen --release --all-features
+ }
