@@ -284,7 +284,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -496,7 +495,6 @@ doxygen
 doxygen-docs
 dpdk
 dpkg
-dqlite
 draco
 dragon
 dropbear
@@ -1211,7 +1209,6 @@ openjdk-src
 java-xmlgraphics-commons
 jbig2dec
 jedi-language-server
-jemalloc
 jenkins
 jimtcl
 jitterentropy
@@ -1459,7 +1456,6 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
-kitinerary
 kjobwidgets
 kjobwidgets5
 kjots
@@ -2138,7 +2134,6 @@ libxkbcommon
 libxkbcommon-x11
 libxkbcommon-doc
 libxkbfile
-libxmlb
 libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
@@ -2619,6 +2614,7 @@ opensips
 openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
+opensmtpd-filter-senderscore
 opensubdiv
 opentimelineio
 openucc
@@ -5343,6 +5339,7 @@ shairplay
 shapelib
 shared-color-targets
 shared-mime-info
+sharutils
 shhmsg
 shhopt
 shunit2
@@ -6012,6 +6009,7 @@ xtrans
 xvidcore
 xwallpaper
 yad
+yajl
 yakuake
 yaml-cpp
 yamllint
@@ -6030,6 +6028,7 @@ youtube-dl
 yt-dlp-ejs
 yt-dlp
 ytfzf
+yubico-c-client
 yubico-c
 yyjson
 z3

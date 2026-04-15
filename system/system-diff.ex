@@ -1,5 +1,3 @@
-acl
-attr
 audit
 audispd-plugins
 audispd-plugins-zos
@@ -35,6 +33,7 @@ grep
 gssproxy
 gzip
 iputils
+libmicrohttpd
 libsasl
 libusb
 linux

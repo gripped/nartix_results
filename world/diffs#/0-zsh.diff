@@ -1,6 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,22 +9,18 @@
+@@ -2,29 +2,25 @@
+ pkgbase=zsh
+ pkgname=('zsh' 'zsh-doc')
+ pkgver=5.9
+-pkgrel=6
++pkgrel=5
+ arch=('x86_64')
+ url='https://www.zsh.org/'
+ license=('custom')
  makedepends=('pcre2' 'libcap' 'gdbm' 'yodl')
  source=("https://www.zsh.org/pub/zsh-${pkgver}"{,-doc}".tar.xz"{,.asc}
          '0001-50629-do-not-use-egrep-in-tests.patch'

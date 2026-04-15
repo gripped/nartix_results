@@ -49,6 +49,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -134,6 +135,7 @@ dotnet-targeting-pack
 aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
+dqlite
 dracut
 drkonqi
 dunst
@@ -323,12 +325,14 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
+jemalloc
 js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
 kinfocenter
 kismet
+kitinerary
 kitty
 kitty-terminfo
 kitty-shell-integration
@@ -412,6 +416,7 @@ libvncserver
 libxfce4ui
 libxfce4util
 libxklavier
+libxmlb
 libxmlrpc
 light-locker
 lightdm-slick-greeter
@@ -612,7 +617,6 @@ opencollada
 opendht
 openrct2
 openresolv
-opensmtpd-filter-senderscore
 opensmtpd
 opensnitch
 opensp
@@ -869,7 +873,6 @@ sddm
 seatd
 sfml
 shairport-sync
-sharutils
 signal-desktop
 smartmontools
 snapper
@@ -1149,8 +1152,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yajl
-yubico-c-client
 yubikey-personalization
 zabbix
 zabbix-common

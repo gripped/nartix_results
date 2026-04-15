@@ -720,6 +720,7 @@ wol
 xapp-symbolic-icons
 xapp
 xautolock
+xcur2png
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
 xdg-desktop-portal-cosmic

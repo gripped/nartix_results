@@ -1,4 +1,6 @@
+acl
 argon2
+attr
 autoconf
 automake
 b43-fwcutter
@@ -88,7 +90,6 @@ libinih
 libisl
 libksba
 libmakepkg-dropins
-libmicrohttpd
 libmnl
 libmpc
 libnetfilter_conntrack
