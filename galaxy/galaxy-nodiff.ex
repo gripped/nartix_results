@@ -83,6 +83,7 @@ claws-mail
 cliphist
 coin
 compface
+conky-manager2
 copyq
 cosmic-app-library
 cosmic-bg
@@ -116,7 +117,6 @@ elementary-icon-theme
 engrampa
 eom
 esbuild
-etherape
 exo
 ext4magic
 fastfetch
@@ -537,6 +537,7 @@ shairplay
 shortwave
 shotcut
 smokeping
+snap-pac
 snes9x
 snes9x-gtk
 snorenotify

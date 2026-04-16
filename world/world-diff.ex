@@ -140,6 +140,11 @@ dracut
 drkonqi
 dunst
 earlyoom
+edk2
+edk2-aarch64
+edk2-riscv64
+edk2-shell
+edk2-ovmf
 element.io
 element-web
 element-desktop
@@ -387,7 +392,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -416,7 +420,6 @@ libvncserver
 libxfce4ui
 libxfce4util
 libxklavier
-libxmlb
 libxmlrpc
 light-locker
 lightdm-slick-greeter

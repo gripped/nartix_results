@@ -90,6 +90,7 @@ libinih
 libisl
 libksba
 libmakepkg-dropins
+libmicrohttpd
 libmnl
 libmpc
 libnetfilter_conntrack

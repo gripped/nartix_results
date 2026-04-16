@@ -15,6 +15,7 @@ ecrire
 efl
 emptty
 ephoto
+etherape
 etherwall
 evisum
 fd

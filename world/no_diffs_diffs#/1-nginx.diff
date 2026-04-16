@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+   nginx-src
+ )
+ pkgver=1.30.0
+-pkgrel=1
++pkgrel=2
+ _tests_commit=cf90a22921652731302e8a4dc2a88049c723377d
+ arch=(x86_64)
+ pkgdesc='Lightweight HTTP server and IMAP/POP3 proxy server'
 @@ -46,7 +46,6 @@
  source=(
    "git+https://github.com/nginx/nginx.git#tag=release-${pkgver}"
@@ -16,7 +25,17 @@
              '2f4dfcfa711b8bcbc5918ba635f5e430ef7132e66276261ade62bb1cba016967432c8dce7f84352cb8b07dc7c6b18f09177aa3eb92c8e358b2a106c8ca142fe9')
  
  prepare() {
-@@ -220,7 +218,6 @@
+@@ -200,8 +198,7 @@
+   mv "$srcdir"/install/* "$pkgdir/"
+ 
+   sed -e 's|\<user\s\+\w\+;|user http;|g' \
+-    -e '44s|html|/usr/share/nginx/html|' \
+-    -e '54s|html|/usr/share/nginx/html|' \
++    -e '/^\s\+root/s|html|/usr/share/nginx/html|' \
+     -e '/^events {/ i # Load all installed modules\ninclude modules.d/*.conf;\n' \
+     -i "$pkgdir"/etc/nginx/nginx.conf
+ 
+@@ -220,7 +217,6 @@
    mv "$pkgdir"/etc/nginx/html/ "$pkgdir"/usr/share/nginx
  
    install -Dm644 ../logrotate "$pkgdir"/etc/logrotate.d/nginx

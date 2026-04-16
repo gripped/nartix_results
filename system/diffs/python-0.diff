@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ pkgbase=python
+ pkgname=(python python-tests)
+ pkgver=3.14.4
+-pkgrel=1
++pkgrel=1.1
+ _pybasever=${pkgver%.*}
+ pkgdesc="The Python programming language"
+ arch=('x86_64')
 @@ -49,7 +49,8 @@
    export servernum=99
    while ! xvfb-run -a -n "$servernum" /bin/true 2>/dev/null; do servernum=$((servernum+1)); done

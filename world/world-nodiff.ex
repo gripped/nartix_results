@@ -516,11 +516,6 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
-edk2
-edk2-arm
-edk2-aarch64
-edk2-shell
-edk2-ovmf
 egl-gbm
 egl-wayland
 egl-wayland2
@@ -1831,6 +1826,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2134,6 +2130,7 @@ libxkbcommon
 libxkbcommon-x11
 libxkbcommon-doc
 libxkbfile
+libxmlb
 libxmlplusplus
 libxml++-docs
 libxmlplusplus2.6
