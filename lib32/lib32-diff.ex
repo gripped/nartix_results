@@ -1,6 +1,4 @@
-lib32-acl
 lib32-at-spi2-core
-lib32-attr
 lib32-colord
 lib32-dbus
 lib32-fluidsynth

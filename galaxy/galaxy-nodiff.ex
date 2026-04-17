@@ -25,7 +25,6 @@ bcc-libbpf-tools
 bcc-examples
 python-bcc
 bleachbit
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -33,6 +32,7 @@ bogofilter-kyotocabinet
 bogofilter-lmdb
 bogofilter-sqlite
 box2d
+btrfs-assistant
 cairo-perl
 caja-extensions
 caja-extensions-common
@@ -117,6 +117,7 @@ elementary-icon-theme
 engrampa
 eom
 esbuild
+etherape
 exo
 ext4magic
 fastfetch
@@ -167,11 +168,6 @@ just
 kanshi
 kernel-headers-musl
 khard
-kodi
-kodi-gles
-kodi-eventclients
-kodi-tools-texturepacker
-kodi-dev
 labwc
 lact
 lact-libadwaita
@@ -711,6 +707,7 @@ voa
 warpinator
 waylandpp
 waypipe
+wcm
 wev
 wf-shell
 wlopm

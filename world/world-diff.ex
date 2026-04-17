@@ -331,6 +331,7 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 jemalloc
+jq
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -348,7 +349,6 @@ kseexpr
 ksystemlog
 kwin-x11
 kwin
-lame
 libatasmart
 libayatana-indicator
 libblockdev
@@ -828,6 +828,7 @@ qt5-xcb-private-headers
 qt5-datavis3d
 qt6-base
 qt6-xcb-private-headers
+qt6-declarative
 qt6-doc
 qt6-examples
 qt6-serialport
@@ -854,6 +855,7 @@ rtkit
 ruby-bake-modernize
 ruby-rbtree
 ruby-sys-filesystem
+ruby-yard
 rust-bindgen
 rust
 rust-musl
@@ -920,6 +922,7 @@ thunar-volman
 thunar
 thunderbird
 tigervnc
+tint2
 tinysparql
 tinysparql-docs
 tmux
@@ -1165,6 +1168,5 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
+zip
 znc
-zsh
-zsh-doc

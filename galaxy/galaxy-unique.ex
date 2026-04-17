@@ -270,6 +270,7 @@ wireplumber-dinit
 wlogout
 wlrctl
 xarchiver-gtk2
+xchpst
 xcursor-breeze
 xcursor-premium
 xfce4-kbdleds-plugin

@@ -1,6 +1,7 @@
 alacritty
 alsa-utils
 autorandr
+blender
 bsd-games
 cinnamon-desktop
 cosmic-applets
@@ -15,7 +16,6 @@ ecrire
 efl
 emptty
 ephoto
-etherape
 etherwall
 evisum
 fd
@@ -28,6 +28,11 @@ gtklock
 hexchat
 hugin
 intel-gpu-tools
+kodi
+kodi-gles
+kodi-eventclients
+kodi-tools-texturepacker
+kodi-dev
 lemurs
 libetonyek
 libmatemixer
@@ -80,7 +85,6 @@ unoconv
 vice
 wayfire
 wayvnc
-wcm
 wezterm
 wf-config
 wireshark

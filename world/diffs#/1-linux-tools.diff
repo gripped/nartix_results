@@ -1,84 +1,29 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,8 +14,8 @@
-   'usbip'
-   'x86_energy_perf_policy'
- )
--pkgver=7.0
--pkgrel=3
-+pkgver=6.19.11
-+pkgrel=1
- _srcname=linux-${pkgver}
- license=('GPL-2.0-only')
- arch=('x86_64')
-@@ -24,7 +24,7 @@
- makedepends=('git')
- makedepends+=('asciidoc' 'xmlto')
- makedepends+=('perl' 'python' 'python-setuptools' 'slang' 'elfutils' 'libunwind'
--  'numactl' 'audit' 'zstd' 'libcap' 'libtraceevent' 'openssl' 'clang21' 'llvm21-libs' 'libpfm')
-+  'numactl' 'audit' 'zstd' 'libcap' 'libtraceevent' 'openssl' 'clang' 'llvm-libs' 'libpfm')
- makedepends+=('pciutils')
- makedepends+=('glib2' 'sysfsutils' 'udev')
- makedepends+=('ncurses')
-@@ -34,19 +34,13 @@
+@@ -33,20 +33,13 @@
+ makedepends+=('llvm' 'clang')
  makedepends+=('libnl')
  groups=("$pkgbase")
- source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
+-source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
 -        'usbipd.service'
 -        'hv_kvp_daemon.service'
 -        'hv_vss_daemon.service'
- )
+-)
++source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign})
  validpgpkeys=(
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
  )
--sha256sums=('bb7f6d80b387c757b7d14bb93028fcb90f793c5c0d367736ee815a100b3891f0'
+ sha256sums=('bb7f6d80b387c757b7d14bb93028fcb90f793c5c0d367736ee815a100b3891f0'
 -            'SKIP'
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
-+sha256sums=('20039d7b6b256c08be2f8fac43c3ff9a620308c703c643cf2f80c3910b9bd59b'
 +            'SKIP')
  
  prepare() {
    cd "$_srcname"
-@@ -81,8 +75,7 @@
-     NO_LIBLLVM=1 \
-     PYTHON_CONFIG=python-config \
-     LIBPFM4=1 \
--    DESTDIR="$pkgdir" \
--    CLANG=/usr/lib/llvm21/bin/clang
-+    DESTDIR="$pkgdir"
-   popd
- 
-   echo ':: cpupower'
-@@ -120,7 +113,7 @@
- 
-   echo ':: bpf'
-   pushd "$_srcname"/tools/bpf
--  make -j1 -C bpftool all doc
-+  make -C bpftool all doc
-   make -W runqslower
-   popd
- 
-@@ -165,7 +158,7 @@
-   pkgdesc='Linux kernel performance auditing tool'
-   depends=('glibc' 'perl' 'python' 'slang' 'elfutils' 'libunwind' 'binutils'
-            'numactl' 'audit' 'coreutils' 'glib2' 'xz' 'zlib' 'libelf' 'bash'
--           'zstd' 'libcap' 'libtraceevent' 'openssl' 'libsframe.so' 'llvm21-libs' 'libpfm')
-+           'zstd' 'libcap' 'libtraceevent' 'openssl' 'libsframe.so' 'llvm-libs' 'libpfm')
- 
-   cd "$_srcname"/tools/perf
-   make -f Makefile.perf \
-@@ -195,6 +188,7 @@
-   depends=('glibc' 'bash' 'pciutils')
-   conflicts=('cpufrequtils')
-   replaces=('cpufrequtils')
-+  install=cpupower.install
- 
-   pushd "$_srcname"/tools/power/cpupower
-   make \
-@@ -202,7 +196,6 @@
+@@ -202,7 +195,6 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
      libdir='/usr/lib' \
@@ -86,7 +31,7 @@
      mandir='/usr/share/man' \
      docdir='/usr/share/doc/cpupower' \
      install install-man
-@@ -220,14 +213,13 @@
+@@ -220,14 +212,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -102,7 +47,7 @@
  }
  
  package_tmon() {
-@@ -252,14 +244,11 @@
+@@ -252,9 +243,6 @@
  
    cd "$_srcname"/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib
@@ -112,39 +57,21 @@
  }
  
  package_bpf() {
-   pkgdesc='BPF tools'
--  depends=('glibc' 'readline' 'zlib' 'libelf' 'libcap' 'zstd' 'llvm21-libs' 'binutils' 'libsframe.so')
-+  depends=('glibc' 'readline' 'zlib' 'libelf' 'libcap' 'zstd' 'llvm-libs' 'binutils' 'libsframe.so')
- 
-   cd "$_srcname"/tools/bpf
-   make -W runqslower_install install prefix=/usr DESTDIR="$pkgdir"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -5,7 +5,6 @@
- bootconfig
- bpf
- clang
--clang21
- coreutils
- cpupower
- elfutils
-@@ -21,9 +20,10 @@
+@@ -21,6 +21,7 @@
  libpfm
  libsframe.so
  libtraceevent
 +libudev
  libunwind
  llvm
--llvm21-libs
-+llvm-libs
- ncurses
- numactl
- openssl
-@@ -36,7 +36,6 @@
+ llvm21-libs
+@@ -36,7 +37,6 @@
  readline
  slang
  sysfsutils

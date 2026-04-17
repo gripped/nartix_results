@@ -1210,7 +1210,6 @@ jitterentropy
 jkqtplotter
 jose
 jp2a
-jq
 jrnl
 jruby
 js102
@@ -1607,6 +1606,7 @@ kyotocabinet
 l-smash
 ladspa
 lager
+lame
 languagetool
 lapack
 blas
@@ -4758,7 +4758,6 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
-qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -5269,7 +5268,6 @@ ruby-websocket-driver
 ruby-websocket-extensions
 ruby-x25519
 ruby-xrb
-ruby-yard
 ruby-zeitwerk
 ruby
 ruby2.7
@@ -5657,7 +5655,6 @@ time
 timeshift
 timew
 timezonemap
-tint2
 tinycdb
 tinycompress
 tinyprog
@@ -6049,7 +6046,6 @@ zig
 zimg
 zint
 zint-qt
-zip
 ziproxy
 zita-alsa-pcmi
 zita-resampler
@@ -6064,6 +6060,8 @@ zsh-autosuggestions
 zsh-completions
 zsh-history-substring-search
 zsh-syntax-highlighting
+zsh
+zsh-doc
 zug
 zvbi
 zxing-cpp

@@ -516,6 +516,7 @@ ruby-braid
 ruby-fattr
 ruby-main
 ruby-map
+ruby-memoist3
 runit-bash-completions
 runit-rc
 runit
