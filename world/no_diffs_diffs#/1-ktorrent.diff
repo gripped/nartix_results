@@ -1,0 +1,47 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ktorrent
+-pkgver=25.12.3
++pkgver=26.04.0
+ pkgrel=1
+ pkgdesc='A powerful BitTorrent client for KDE'
+ arch=(x86_64)
+@@ -30,9 +30,9 @@
+          kxmlgui
+          libmaxminddb
+          libktorrent
+-         phonon-qt6
+          qt6-5compat
+          qt6-base
++         qt6-multimedia
+          qt6-webengine)
+ makedepends=(boost
+              extra-cmake-modules
+@@ -48,7 +48,7 @@
+ groups=(kde-applications
+         kde-network)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('d7aeef6fd792ecffc0a836c2978cfb8754223d725db1a12397dfcc9787be98d2'
++sha256sums=('505affd4db76b22b0b1fa127d9eb97a373b510aa55adcf0125936b17b1810a08'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -27,9 +27,9 @@
+ kxmlgui
+ libktorrent
+ libmaxminddb
+-phonon-qt6
+ qt6-5compat
+ qt6-base
++qt6-multimedia
+ qt6-webengine
+ syndication
+ taglib

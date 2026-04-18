@@ -198,6 +198,8 @@ gdm
 libgdm
 gengetopt
 geoclue
+geocode-glib
+geocode-glib-docs
 ghc-filesystem
 glpk
 gnome-bluetooth-3.0
@@ -337,8 +339,9 @@ jupyter-server-ydoc
 kcoreaddons
 kdoctools5
 kinfocenter
+kio-admin
+kio-zeroconf
 kismet
-kitinerary
 kitty
 kitty-terminfo
 kitty-shell-integration
@@ -392,6 +395,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkdcraw
 libldm
 liblqr
 libmatekbd
@@ -401,6 +405,7 @@ libmemcached-awesome
 libmms
 libmng
 libmspub
+libmysofa
 libnvme
 libofa
 libprocps
@@ -729,12 +734,16 @@ python-asn1crypto
 python-cram
 python-debugpy
 python-ndg-httpsclient
+python-openstacksdk
+python-oslo-config
 python-pymupdf
 python-pyscard
+python-pytest-benchmark
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-testscenarios
 python-wheel
 python-xmlsec
 qastools

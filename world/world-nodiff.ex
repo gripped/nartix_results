@@ -42,7 +42,6 @@ akonadi-notes
 akonadi-notes5
 akonadi-search
 akonadi
-libakonadi
 akonadiconsole
 akregator
 alacarte
@@ -736,9 +735,6 @@ gedit
 gegl
 gendesk
 genxrdpattern
-geocode-glib
-geocode-glib-common
-geocode-glib-2
 geoip-database
 geoip
 geos
@@ -1431,11 +1427,9 @@ kimageformats5
 kimagemapeditor
 kimap
 kinit
-kio-admin
 kio-extras
 kio-fuse
 kio-gdrive
-kio-zeroconf
 kio
 kio5-extras
 kio5
@@ -1450,6 +1444,7 @@ kitemmodels5
 kitemviews
 kitemviews5
 kiten
+kitinerary
 kjobwidgets
 kjobwidgets5
 kjots
@@ -1829,8 +1824,6 @@ libjxl-doc
 libkate
 libkcddb
 libkcompactdisc
-libkdcraw
-libkdcraw5
 libkdegames
 libkdepim
 libkeduvocdocument
@@ -1896,7 +1889,6 @@ libmusicxml
 libmwaw
 libmwaw-docs
 libmypaint
-libmysofa
 libmythes
 libnatpmp
 libnbd
@@ -3684,6 +3676,7 @@ python-hpack
 python-html2text
 python-html5-parser
 python-html5lib
+python-html5tagger
 python-http-parser
 python-httpcore
 python-httplib2
@@ -3951,7 +3944,6 @@ python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
 python-openpyxl
-python-openstacksdk
 python-opt_einsum
 python-optree
 python-ordered-set
@@ -3963,7 +3955,6 @@ python-os-service-types
 python-osc-lib
 python-oscrypto
 python-oslo-concurrency
-python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
@@ -4211,7 +4202,6 @@ python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
-python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
@@ -4376,6 +4366,8 @@ python-ruff-api
 python-rx
 python-s3transfer
 python-saml
+python-sanic-routing
+python-sanic
 python-sarif-om
 python-schema
 python-scikit-build-core
@@ -4522,7 +4514,6 @@ python-testing.postgresql
 python-testpath
 python-testrepository
 python-testresources
-python-testscenarios
 python-testtools
 python-text-unidecode
 python-texttable
@@ -4547,6 +4538,7 @@ python-tox-current-env
 python-tox
 python-tpm2-pytss
 python-tqdm
+python-tracerite
 python-trailrunner
 python-traitlets
 python-transaction
@@ -5815,6 +5807,7 @@ volume_key
 python-volume_key
 volumeicon
 vorbis-tools
+vpl-gpu-rt
 vpnc
 vsftpd
 vst3sdk

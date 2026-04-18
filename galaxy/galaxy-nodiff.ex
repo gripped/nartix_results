@@ -315,6 +315,7 @@ mgba-sdl
 mgba-qt
 mimetic
 miniaudio
+minio-client
 mixxx
 mokutil
 monero-gui
@@ -546,6 +547,7 @@ stalonetray
 starship
 subtitleeditor
 sundials
+superfile
 swaync
 swww
 sysbench

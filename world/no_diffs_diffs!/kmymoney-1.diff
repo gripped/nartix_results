@@ -1,11 +1,44 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,12 +1,13 @@
  
  pkgname=kmymoney
  pkgver=5.2.2
 -pkgrel=3
-+pkgrel=3.1
++pkgrel=4
  pkgdesc="Personal finance manager for KDE which operates similarly to MS-Money or Quicken"
  arch=('x86_64')
  url="https://kmymoney.org/"
+ license=('GPL-2.0-or-later')
+ depends=(
++  'akonadi'
+   'aqbanking'
+   'glibc'
+   'gmp'
+@@ -34,7 +35,6 @@
+   'ktextwidgets'
+   'kwidgetsaddons'
+   'kxmlgui'
+-  'libakonadi'
+   'libalkimia'
+   'libgcc'
+   'libical'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++akonadi
+ aqbanking
+ extra-cmake-modules
+ glibc
+@@ -27,7 +28,6 @@
+ ktextwidgets
+ kwidgetsaddons
+ kxmlgui
+-libakonadi
+ libalkimia
+ libgcc
+ libical
