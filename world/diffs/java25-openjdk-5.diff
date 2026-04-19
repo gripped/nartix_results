@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,13 +13,13 @@
+ _securityver=2
+ _updatever=10
+ pkgver=${_majorver}.${_minorver}.${_securityver}.u${_updatever}
+-pkgrel=1
++pkgrel=1.1
+ _git_tag=jdk-${_majorver}.${_minorver}.${_securityver}+${_updatever}
+ arch=('x86_64')
+ url='https://openjdk.java.net/'
+ license=('LicenseRef-Java')
+ makedepends=(
+-  "java-environment>=22"
++  "java-environment=25"
+   alsa-lib
+   bash
+   cpio
+@@ -136,7 +136,7 @@
+     --with-native-debug-symbols=internal \
+     --enable-unlimited-crypto \
+     --disable-warnings-as-errors \
+-    --with-vendor-name="Arch Linux"
++    --with-vendor-name="Artix Linux"
+ 
+   make images legacy-jre-image docs
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -8,8 +8,8 @@
+ graphviz
+ harfbuzz
+ hicolor-icon-theme
++java-environment
+ java-environment-common
+-java-environment>
+ java-runtime-common>
+ jdk25-openjdk
+ lcms2
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+ --with-native-debug-symbols=internal \
+ --enable-unlimited-crypto \
+ --disable-warnings-as-errors \
+---with-vendor-name="Arch Linux"
++--with-vendor-name="Artix Linux"
+ make images legacy-jre-image docs
+ find "${srcdir}/${_imgdir}" -iname '*.so' -exec chmod +x {} \;
+ }

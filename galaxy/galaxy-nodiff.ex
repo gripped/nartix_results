@@ -490,6 +490,7 @@ python-unrardll
 python-xapp
 qgis
 qgit
+qjackctl
 qmmp
 qps
 qrupdate
@@ -507,6 +508,8 @@ quassel-monolithic
 quassel-monolithic-qt
 quassel-common
 quickshell
+realtime-privileges
+reapack
 reaper
 reaver
 rebuild-detector

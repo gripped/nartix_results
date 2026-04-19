@@ -17,6 +17,7 @@ audacious-plugins
 avahi
 awesome
 bash-bats
+bear
 blender
 blueman
 bluez
@@ -325,6 +326,12 @@ jre21-openjdk
 jdk21-openjdk
 openjdk21-src
 openjdk21-doc
+java25-openjdk
+jdk25-openjdk
+jre25-openjdk
+jre25-openjdk-headless
+openjdk25-doc
+openjdk25-src
 java8-openjdk
 jre8-openjdk-headless
 jre8-openjdk
@@ -338,6 +345,8 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
+kicad
+kicad-demos
 kinfocenter
 kio-admin
 kio-zeroconf
@@ -530,6 +539,7 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+maven
 media-player-info
 memcached
 mesa
@@ -561,7 +571,6 @@ modemmanager-docs
 modest
 mosquitto
 mousepad
-movit
 mozo
 mpd
 muffin
@@ -727,6 +736,7 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+pystring
 python-ansicolors
 python-anytree
 python-aresponses
@@ -862,6 +872,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-cucumber
 ruby-rbtree
 ruby-sys-filesystem
 ruby-yard

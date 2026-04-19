@@ -210,7 +210,6 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
-bear
 bearssl
 beep
 bemenu
@@ -1408,7 +1407,6 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
-kicad
 kiconthemes
 kiconthemes5
 kid3
@@ -2331,7 +2329,6 @@ mathjax2
 matterbridge
 maturin
 python-maturin
-maven
 mbedtls
 mbedtls2
 mbox-importer
@@ -2401,6 +2398,7 @@ mopidy
 moreutils
 mosh
 motion
+movit
 mpdecimal
 mpg123
 mplayer
@@ -3200,7 +3198,6 @@ shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
-pystring
 python-a2wsgi
 python-aaf2
 python-aafigure
@@ -4956,7 +4953,6 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
-ruby-cucumber
 ruby-daemons
 ruby-date
 ruby-dbm
