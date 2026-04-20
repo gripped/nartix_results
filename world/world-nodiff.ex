@@ -290,7 +290,6 @@ capnproto
 capstone
 python-capstone
 cargo-about
-cargo-c
 cargo-edit
 caribou
 catatonit
@@ -412,7 +411,6 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
-cython
 cython0
 d-spy
 darktable
@@ -5037,7 +5035,6 @@ ruby-lsp
 ruby-m
 ruby-manpages
 ruby-mapping
-ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
@@ -5639,7 +5636,6 @@ threadweaver5
 thrift
 python-thrift
 tidy
-time
 timeshift
 timew
 timezonemap
@@ -5751,7 +5747,6 @@ $pkgbase
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip
-v2ray
 vagrant
 vala
 valabind

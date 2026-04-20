@@ -51,6 +51,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 calligra
+cargo-c
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -100,6 +101,7 @@ krun
 cups-filters
 cups
 libcups
+cython
 darkhttpd
 dbus-broker
 dconf
@@ -873,6 +875,7 @@ rsync
 rtkit
 ruby-bake-modernize
 ruby-cucumber
+ruby-markly
 ruby-rbtree
 ruby-sys-filesystem
 ruby-yard
@@ -942,6 +945,7 @@ thunar-volman
 thunar
 thunderbird
 tigervnc
+time
 tint2
 tinysparql
 tinysparql-docs
@@ -982,6 +986,7 @@ uwsgi-plugin-mono
 uwsgi-plugin-webdav
 uwsgi-plugin-zabbix
 uwsgi-plugin-notfound
+v2ray
 v4l-utils
 valkey
 vault

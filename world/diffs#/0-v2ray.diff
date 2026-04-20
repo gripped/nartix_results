@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=v2ray
+-pkgver=5.44.1
+-pkgrel=1
++pkgver=5.46.0
++pkgrel=1.1
+ pkgdesc="A platform for building proxies to bypass network restrictions"
+ arch=('x86_64')
+ url="https://github.com/v2fly/v2ray-core"
+@@ -10,12 +10,7 @@
+ makedepends=('go' 'git')
+ backup=(etc/v2ray/config.json)
+ source=("git+https://github.com/v2fly/v2ray-core.git#tag=v$pkgver")
+-sha512sums=('a7af82f02b939116e73b9c67655c82a0ad06bbce5dbef60b11a1ebd94b2f164cdb3d7e4b2f6970163f5932baa375a11332b9f343a2a138eea68bc385b6a4cbac')
+-
+-prepare() {
+-  cd v2ray-core
+-  sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' release/config/systemd/system/*.service
+-}
++sha512sums=('9e114dcc5449fd53189f06a35ae0cbb7f2da59e5c0b74da5eb17cde1f9267856b3144ae8040bfca64b3887e2795b99f008b5507227403f721df81d9c7a6db916')
+ 
+ build() {
+   cd v2ray-core
+@@ -34,8 +29,6 @@
+ package() {
+   cd v2ray-core
+   install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/v2ray/
+-  install -Dm644 release/config/systemd/system/v2ray.service -t "$pkgdir"/usr/lib/systemd/system/
+-  install -Dm644 release/config/systemd/system/v2ray@.service -t "$pkgdir"/usr/lib/systemd/system/
+   install -Dm644 release/config/*.json -t "$pkgdir"/etc/v2ray/
+   install -Dm755 v2ray -t "$pkgdir"/usr/bin/
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,3 @@
+-prepare() {
+-cd v2ray-core
+-sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' release/config/systemd/system/*.service
+-}
+ build() {
+ cd v2ray-core
+ export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external"
