@@ -355,7 +355,6 @@ coin-or-cgl
 coin-or-clp
 coin-or-coinutils
 coin-or-data-sample
-coin-or-mp
 coin-or-osi
 collada-dom
 colm
@@ -2560,8 +2559,6 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
-opencc
-opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio

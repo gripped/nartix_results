@@ -85,6 +85,7 @@ clamav
 cloud-init
 cmake
 cmus
+coin-or-mp
 colord
 libcolord
 colord-sane
@@ -632,6 +633,8 @@ onboard
 onionshare
 open-iscsi
 openbox
+opencc
+opencc-doc
 opencollada
 opendht
 openrct2
