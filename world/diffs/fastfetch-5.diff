@@ -3,7 +3,7 @@
 @@ -1,33 +1,34 @@
  
  pkgname=fastfetch
--pkgver=2.61.0
+-pkgver=2.62.1
 +pkgver=2.38.0
  pkgrel=1
  pkgdesc="A feature-rich and performance oriented neofetch like system information tool"
@@ -36,7 +36,7 @@
 +            'xfconf: Needed for XFWM theme and XFCE Terminal font'
              'zlib: Faster image output when using kitty graphics protocol')
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
--sha256sums=('b05b95bcc0915431cf732382813261497fa4412c3967904c1a9f207d5c946c65')
+-sha256sums=('8c4833e55b8b445a32c7cb7570007b5e10a9ee4cee74a494004ba61e88b12b26')
 +sha256sums=('f64635bfc1b42a2e845e3f3f38531a641de8203300112504b9eddc5a61f38f6a')
  
  build() {

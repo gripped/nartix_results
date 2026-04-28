@@ -10,7 +10,7 @@
    go
    julia
    luarocks
-@@ -50,39 +48,6 @@
+@@ -50,40 +48,6 @@
    python -m build --wheel --no-isolation
  }
  
@@ -44,7 +44,8 @@
 -                   --deselect tests/languages/ruby_test.py::test_install_ruby_with_version \
 -                   --deselect tests/languages/ruby_test.py::test_ruby_hook_language_version \
 -                   --deselect tests/languages/ruby_test.py::test_ruby_with_bundle_disable_shared_gems \
--                   --deselect tests/languages/rust_test.py::test_language_version_with_rustup
+-                   --deselect tests/languages/rust_test.py::test_language_version_with_rustup \
+-                   --deselect tests/languages/lua_test.py::test_lua_additional_dependencies
 -  deactivate
 -}
  

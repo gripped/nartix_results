@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -17,7 +17,6 @@
+ prepare() {
+ 	cd "${pkgbase}"
+ 
+-	patch -Np1 -i "${srcdir}/firewalld-sysconfigdir.patch"
+ 	patch -Np1 -i "${srcdir}/fix_gettext_macros_path.patch"
+ 
+ 	NOCONFIGURE=true ./autogen.sh
+@@ -31,10 +30,13 @@
+ 		--sbindir=/usr/bin \
+ 		--sysconfdir=/etc \
+ 		--disable-schemas-compile \
++		--disable-systemd \
+ 		--disable-sysconfig
+ 	make
+ 
+ 	make DESTDIR="${srcdir}/fakeinstall" install
++
++	rm -rf "${srcdir}/fakeinstall/usr/lib/systemd"
+ }
+ 
+ 
+@@ -58,18 +60,18 @@
+ 		    'firewall-config: Graphical user interface for firewallD configuration'
+ 		    'firewall-applet: Systray applet for firewallD'
+ 		    'firewalld-test: firewallD test suite')
+-	backup=('etc/conf.d/firewalld'
++	backup=('etc/sysconfig/firewalld'
+ 	        'etc/firewalld/firewalld.conf')
+ 	install="${pkgbase}.install"
+ 
+-	_install fakeinstall/etc/conf.d/firewalld
++	_install fakeinstall/etc/sysconfig/firewalld
++	_install fakeinstall/etc/rc.d/init.d/firewalld
+ 	_install fakeinstall/etc/firewalld/*
+ 	_install fakeinstall/etc/logrotate.d/firewalld
+ 	_install fakeinstall/etc/modprobe.d/firewalld-sysctls.conf
+ 	_install fakeinstall/usr/bin/firewall-cmd
+ 	_install fakeinstall/usr/bin/firewall-offline-cmd
+ 	_install fakeinstall/usr/lib/firewalld/*
+-	_install fakeinstall/usr/lib/systemd/system/firewalld.service
+ 	_install fakeinstall/usr/bin/firewalld
+ 	_install fakeinstall/usr/share/dbus-1/system.d/FirewallD.conf
+ 	_install fakeinstall/usr/share/bash-completion/completions/firewall-cmd
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ cd "${pkgbase}"
+-patch -Np1 -i "${srcdir}/firewalld-sysconfigdir.patch"
+ patch -Np1 -i "${srcdir}/fix_gettext_macros_path.patch"
+ NOCONFIGURE=true ./autogen.sh
+ }
+@@ -12,7 +11,9 @@
+ --sbindir=/usr/bin \
+ --sysconfdir=/etc \
+ --disable-schemas-compile \
++--disable-systemd \
+ --disable-sysconfig
+ make
+ make DESTDIR="${srcdir}/fakeinstall" install
++rm -rf "${srcdir}/fakeinstall/usr/lib/systemd"
+ }

@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,17 +13,17 @@
+ sha512sums=('b1087b2636246137c3e4cab9d8bbdcd0f32db288fba91029c218f13e8b9d88b16aa83d79d975fd659db5bf4a3393e4e36e03e4457c1e8fca294cb5166dee4d99')
+ 
+ build() {
+-  cd File-MimeInfo-$pkgver
+-  perl Makefile.PL INSTALLDIRS=vendor
+-  make
++    cd File-MimeInfo-$pkgver
++    perl Makefile.PL INSTALLDIRS=vendor
++    make
+ }
+ 
+ check() {
+-  cd File-MimeInfo-$pkgver
+-  make test
++    cd File-MimeInfo-$pkgver
++    make test
+ }
+ 
+ package() {
+-  cd File-MimeInfo-$pkgver
+-  make DESTDIR="${pkgdir}" install
++    cd File-MimeInfo-$pkgver
++    make DESTDIR="${pkgdir}" install
+ }

@@ -1,0 +1,21 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,13 +12,13 @@
+ sha256sums=('3270a28de977f375c80984ef50f7433cb03cfdf198b079ae9c80d1513f0e9176')
+ 
+ build() {
+-        cd "${pkgname}-${pkgver}"
+-        python -m build --wheel --no-isolation
++  cd "${pkgname}-${pkgver}"
++  python -m build --wheel --no-isolation
+ }
+ 
+ package() {
+-	cd "${pkgname}-${pkgver}"
+-	python -m installer --destdir="${pkgdir}" dist/*.whl
++  cd "${pkgname}-${pkgver}"
++  python -m installer --destdir="${pkgdir}" dist/*.whl
+ 
+-	install -Dm 644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
++  install -Dm 644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
+ }

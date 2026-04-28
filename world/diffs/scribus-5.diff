@@ -1,43 +1,47 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,103 +1,71 @@
+@@ -1,88 +1,71 @@
  
  pkgname=scribus
--pkgver=1.6.5
--pkgrel=7
+-pkgver=1.6.6
+-pkgrel=2
 +pkgver=1.5.8
 +pkgrel=24
  pkgdesc="Desktop publishing software"
  arch=(x86_64)
  url="https://www.scribus.net/"
 -license=(GPL-2.0-or-later)
--depends=(cairo
--         fontconfig
--         freetype2
--         harfbuzz-icu
--         hunspell
+-depends=(cairo libcairo.so
+-         fontconfig libfontconfig.so
+-         freetype2 libfreetype.so
+-         glibc # libc.so libm.so
+-         harfbuzz libharfbuzz.so libharfbuzz-subset.so
+-         harfbuzz-icu libharfbuzz-icu.so
+-         hunspell # libhunspell-1.7.so
 -         icu libicuuc.so
--         lcms2
--         libcdr
--         libcups
--         libfreehand
+-         lcms2 liblcms2.so
+-         libcdr # libcdr-0.1.so
+-         libcups # libcups.so
+-         libfreehand # libfreehand-0.1.so
+-         libgcc libgcc_s.so
 -         libjpeg-turbo libjpeg.so
--         libmspub
--         libpagemaker
--         libpng
--         libqxp
--         librevenge
--         libtiff
--         libvisio
--         libxml2
--         libzmf
--         openscenegraph
+-         libmspub # libmspub-0.1.so
+-         libpagemaker # libpagemaker-0.0.so
+-         libpng libpng16.so
+-         libqxp # libqxp-0.0.so
+-         librevenge # librevenge-0.0.so librevenge-generators-0.0.so librevenge-stream-0.0.so
+-         libstdc++ libstdc++.so
+-         libtiff libtiff.so
+-         libvisio # libvisio-0.1.so
+-         libxml2 libxml2.so
+-         libzmf # libzmf-0.0.so
+-         openscenegraph # libOpenThreads.so libosgDB.so libosgGA.so libosg.so libosgUtil.so libosgViewer.so
 -         openssl
--         podofo
--         poppler
--         python3
--         qt5-base
--         zlib) # graphicsmagick
+-         podofo libpodofo.so
+-         poppler libpoppler.so
+-         python # libpython3.14.so
+-         qt5-base # libQt5Core.so libQt5Gui.so libQt5Network.so libQt5OpenGL.so libQt5PrintSupport.so libQt5Widgets.so libQt5Xml.so
+-         zlib libz.so)
 -makedepends=(cmake
 -             mesa
 -             qt5-tools)
@@ -54,12 +58,9 @@
 +            'hyphen-lang: hyphenation patterns for desired languages')
  options=(!lto)
 -_archive="$pkgname-$pkgver"
--source=("https://downloads.sourceforge.net/${pkgname}/$_archive.tar.xz"{,.asc}
--        'fix_build_with_poppler_26.01.0.patch'
--        'fix_build_with_poppler_26.02.0.patch'
--        'fix_build_with_poppler_26.03.0.patch'
--        'fix_build_with_poppler_26.04.0.patch')
--sha256sums=('09bdb736a8ff8a437191458a36d847cc0adeca0fc059cf696474e0ba6f59ac6a'
+-source=("https://downloads.sourceforge.net/${pkgname}/$_archive.tar.xz"{,.asc})
+-sha256sums=('fdfe3e7cbe84b760b38d0561ed8736f9d25d4923adde6e15e03760d83be6166d'
+-            'SKIP')
 +source=("https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.xz"{,.asc}
 +        $pkgname-poppler-22.02.0.patch::https://github.com/scribusproject/scribus/commit/85c0dff3422f.patch
 +        $pkgname-poppler-22.02.0-fixup.patch::https://github.com/scribusproject/scribus/commit/f75c1613db67.patch
@@ -67,11 +68,7 @@
 +        $pkgname-poppler-22.04.0.patch::https://github.com/scribusproject/scribus/commit/f2237b8f0b5c.patch
 +	scribus-1.5.8-poppler-22.09.0.patch)
 +sha256sums=('47816e8fcf6d05788ff16aa4499f97ff22431c777a7789149b0a88b451e16b74'
-             'SKIP'
--            '6826daa9be333e722e91bd09d5e8c1f2c31317efb1875f2cf6c12a3c8c11f045'
--            '136aba5019f6fcadad44c6615af10546ac32e4b9dd7d1459273ce10a9a553c28'
--            '369b181a4f818057b0cf733a3b83e1419923aa9484fa6962497bb3252f0a1049'
--            '7655f8017e11f0a07018750d0a77588575d8ca8f14815e80edb45d52a3717747')
++            'SKIP'
 +            '718ae9c882889b56919ab9718185b915a75e75e193a028539722b537f528c3dd'
 +            '2b57c0c6dbc93037b83e392d4721523efbccd8af1fe6fc11a26f1d2933b14a85'
 +            '986717d7c99a418d765e6b3d8b37165067548e62b6febb9c31f8831689f3540e'
@@ -81,19 +78,6 @@
                757F5E9B13DD648887AD50092D47C099E782504E  # The Scribus Team (www.scribus.net) <the_scribus_team@scribus.net>
                6558BE84D27273A438A151198BEA48118AEBEE64) # Craig Bradney <cbradney@zipworld.com.au>
  
- prepare() {
--    cd "$_archive"
--    sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
--
--    patch -Np1 -i "$srcdir/fix_build_with_poppler_26.01.0.patch"
--
--    patch -Np1 -i "$srcdir/fix_build_with_poppler_26.02.0.patch"
--
--    patch -Np1 -i "$srcdir/fix_build_with_poppler_26.03.0.patch"
--
--    patch -Np1 -i "$srcdir/fix_build_with_poppler_26.04.0.patch"
--}
--
 -pkgver() {
 -	if [[ $pkgver =~ ^[0-9]+\.[13579]+\.[0-9]+$ ]]; then
 -		echo 'Odd-numbered minor version segments indicate development versions.' >&2
@@ -101,6 +85,7 @@
 -	else
 -		echo "$pkgver"
 -	fi
++prepare() {
 +  cd ${pkgname}-${pkgver}
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
@@ -110,14 +95,16 @@
  }
  
  build() {
--	cmake -B build -S "$_archive" \
--		-D CMAKE_INSTALL_PREFIX=/usr \
--		-D CMAKE_BUILD_TYPE=None \
--		-D CMAKE_SKIP_RPATH=On \
--		-D WANT_CPP20=On \
--		-D WANT_HUNSPELL=On \
--		-D WITH_PODOFO=On \
+-	local cmake_options=(
+-		-D CMAKE_INSTALL_PREFIX=/usr
+-		-D CMAKE_BUILD_TYPE=None
+-		-D CMAKE_SKIP_RPATH=On
+-		-D WANT_CPP20=On
+-		-D WANT_HUNSPELL=On
+-		-D WITH_PODOFO=On
 -		-D WANT_GRAPHICSMAGICK=On
+-	)
+-	cmake -B build -S "$_archive" -W no-dev "${cmake_options[@]}"
 -	make -C build
 +  cmake -B build -S ${pkgname}-${pkgver} \
 +    -DCMAKE_INSTALL_PREFIX=/usr \
@@ -135,7 +122,7 @@
  package() {
 -	make -C build DESTDIR="${pkgdir}" install
 -	cd "$_archive"
--	install -Dm0644 scribus.desktop -t "$pkgdir/usr/share/applications"
+-	install -Dm0644 -t "$pkgdir/usr/share/applications/" scribus.desktop
 -	pushd resources/iconsets/artwork
 -	for i in 16x16 32x32 128x128 256x256 512x512 1024x1024; do
 -		install -Dm0644 icon_$i.png "$pkgdir/usr/share/icons/hicolor/$i/apps/scribus.png"
@@ -162,58 +149,83 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,14 +4,12 @@
+@@ -2,50 +2,29 @@
+ cmake
+ fontconfig
  freetype2
+-glibc
+-harfbuzz
  harfbuzz-icu
  hunspell
 -icu
  lcms2
+-libcairo.so
  libcdr
  libcups
+-libfontconfig.so
  libfreehand
+-libfreetype.so
+-libgcc
+-libgcc_s.so
+-libharfbuzz-icu.so
+-libharfbuzz-subset.so
+-libharfbuzz.so
  libicuuc.so
 -libjpeg-turbo
 -libjpeg.so
+-liblcms2.so
 +libjpeg
  libmspub
  libpagemaker
  libpng
-@@ -24,7 +22,7 @@
+-libpng16.so
+-libpodofo.so
+-libpoppler.so
+ libqxp
+ librevenge
+-libstdc++
+-libstdc++.so
+ libtiff
+-libtiff.so
+ libvisio
+ libxml2
+-libxml2.so
+-libz.so
+ libzmf
  mesa
  openscenegraph
  openssl
 -podofo
 +podofo-0.9
  poppler
- python3
+-python
++python3
  qt5-base
+ qt5-tools
+ zlib
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,21 @@
- prepare() {
--cd "$_archive"
--sed -e 's|WANT_CPP17|WANT_CPP20|g' -e 's|CMAKE_CXX_STANDARD 17|CMAKE_CXX_STANDARD 20|g' -i CMakeLists.txt
--patch -Np1 -i "$srcdir/fix_build_with_poppler_26.01.0.patch"
--patch -Np1 -i "$srcdir/fix_build_with_poppler_26.02.0.patch"
--patch -Np1 -i "$srcdir/fix_build_with_poppler_26.03.0.patch"
--patch -Np1 -i "$srcdir/fix_build_with_poppler_26.04.0.patch"
+@@ -1,13 +1,21 @@
++prepare() {
 +cd ${pkgname}-${pkgver}
 +patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
 +patch -Np1 -i ../$pkgname-poppler-22.03.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.04.0.patch
 +patch -Np1 -i ../scribus-1.5.8-poppler-22.09.0.patch
- }
++}
  build() {
--cmake -B build -S "$_archive" \
---D CMAKE_INSTALL_PREFIX=/usr \
---D CMAKE_BUILD_TYPE=None \
---D CMAKE_SKIP_RPATH=On \
---D WANT_CPP20=On \
---D WANT_HUNSPELL=On \
---D WITH_PODOFO=On \
+-local cmake_options=(
+--D CMAKE_INSTALL_PREFIX=/usr
+--D CMAKE_BUILD_TYPE=None
+--D CMAKE_SKIP_RPATH=On
+--D WANT_CPP20=On
+--D WANT_HUNSPELL=On
+--D WITH_PODOFO=On
 --D WANT_GRAPHICSMAGICK=On
+-)
+-cmake -B build -S "$_archive" -W no-dev "${cmake_options[@]}"
 +cmake -B build -S ${pkgname}-${pkgver} \
 +-DCMAKE_INSTALL_PREFIX=/usr \
 +-DCMAKE_BUILD_TYPE=None \

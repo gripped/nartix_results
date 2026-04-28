@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,22 +1,25 @@
+@@ -1,23 +1,25 @@
  
  pkgname=lxqt-openssh-askpass
--pkgver=2.3.0
+-pkgver=2.4.0
 -pkgrel=1
 +pkgver=1.4.0
 +pkgrel=1.1
@@ -18,13 +18,14 @@
  source=(
  	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc}
  )
--sha256sums=('6354664b5509f315a65ce46449728552730c9c4c664d3e47b9f4ede94d94b9d8'
+-sha256sums=('1a4d5c9c9450cc08cacd1646fc55dc9c78c297ab1fbae49b8047df78665b5c55'
 +sha256sums=('2ba6bcac5d90db846dce7895d03294126315ec20e59977f9f2faadf3e668c54a'
              'SKIP')
  validpgpkeys=(
 +	"169704C6FB490C6892C7F23C37E0AF1FDA48F373"  # Jerome Leclanche <jerome@leclan.ch>
 +	"7C733BA5F585AAD669E4D23A42C9C8D3AF5EA5E3"  # Alf Gaida <agaida@siduction.org>
  	"19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # Pedram Pourang <tsujan2000@gmail.com>
+-	"48836EB124A1EAAE695EDFEA229CA0A00A17D258"  # the key owned by an email used by https://github.com/stefonarch/, a long-time LXQt contributor, as per keys.openpgp.org
  )
 +
  

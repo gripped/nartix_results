@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -33,7 +33,7 @@
- }
+@@ -38,8 +38,8 @@
+     -D selinux=disabled
+   )
  
- build() {
--  arch-meson $pkgbase build -D selinux=disabled
-+  artix-meson $pkgbase build -D selinux=disabled
+-  arch-meson $pkgbase build "${meson_options[@]}"
+-  arch-meson $pkgbase build-suid "${meson_options[@]}" -D support_setuid=true
++  artix-meson $pkgbase build "${meson_options[@]}"
++  artix-meson $pkgbase build-suid "${meson_options[@]}" -D support_setuid=true
+ 
    meson compile -C build
- }
- 
+   meson compile -C build-suid
 
 
 ############# Stripped diff below #################
@@ -17,11 +19,14 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd $pkgbase
- }
- build() {
--arch-meson $pkgbase build -D selinux=disabled
-+artix-meson $pkgbase build -D selinux=disabled
+@@ -5,8 +5,8 @@
+ local meson_options=(
+ -D selinux=disabled
+ )
+-arch-meson $pkgbase build "${meson_options[@]}"
+-arch-meson $pkgbase build-suid "${meson_options[@]}" -D support_setuid=true
++artix-meson $pkgbase build "${meson_options[@]}"
++artix-meson $pkgbase build-suid "${meson_options[@]}" -D support_setuid=true
  meson compile -C build
+ meson compile -C build-suid
  }

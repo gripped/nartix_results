@@ -1,11 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,11 +1,11 @@
+@@ -1,16 +1,16 @@
  
  pkgname=netplan
 -pkgver=1.2.1
+-pkgrel=2
 +pkgver=0.107
- pkgrel=1
++pkgrel=1
  pkgdesc="Network configuration abstraction renderer"
  arch=('x86_64')
 -url="https://github.com/canonical/netplan"
@@ -14,7 +15,13 @@
 +license=('GPL3')
  depends=(
    'dbus-python'
-   'gcc-libs'
++  'gcc-libs'
+   'glibc'
+   'glib2'
+-  'libgcc'
+   'libyaml'
+   'python'
+   'python-cffi'
 @@ -18,61 +18,46 @@
    'python-netifaces'
    'python-rich'
@@ -107,12 +114,13 @@
  bash-completion
  cmocka
  dbus-python
-+elogind
- gcc-libs
 -git
++elogind
++gcc-libs
  glib2
  glibc
  iproute2
+-libgcc
 +libelogind
  libyaml
  meson

@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,17 +1,17 @@
+@@ -1,21 +1,20 @@
  
  pkgname=lxqt-build-tools
--pkgver=2.3.0
+-pkgver=2.4.0
 -pkgrel=1
 +pkgver=0.13.0
 +pkgrel=1.1
@@ -17,11 +17,15 @@
  	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"
  	"https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz.asc"
  )
--sha256sums=('f979142ceee22993da6f5d43a7eea9b0d8ef1ff9812ea9210f514e9a52407f42'
+-sha256sums=('14999ff954e820a23af44389b9f7c65f9e58b2f1c0a559f0badd38f9b459aee6'
 +sha256sums=('fd3c199d0d7c61f23040a45ead57cc9a4f888af5995371f6b0ce1fa902eb59ce'
              'SKIP')
  validpgpkeys=(
  	"19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # https://github.com/tsujan.gpg
+-	"48836EB124A1EAAE695EDFEA229CA0A00A17D258"  # the key owned by an email used by https://github.com/stefonarch/, a long-time LXQt contributor, as per keys.openpgp.org
+ )
+ 
+ build() {
 
 
 ############# Stripped diff below #################

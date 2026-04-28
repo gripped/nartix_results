@@ -1,7 +1,6 @@
 alacritty
 alsa-utils
 autorandr
-blender
 bsd-games
 cinnamon-desktop
 cosmic-applets
@@ -14,6 +13,9 @@ cosmic-settings
 doctest
 ecrire
 efl
+element.io
+element-web
+element-desktop
 emptty
 ephoto
 etherwall
@@ -28,11 +30,6 @@ gtklock
 hexchat
 hugin
 intel-gpu-tools
-kodi
-kodi-gles
-kodi-eventclients
-kodi-tools-texturepacker
-kodi-dev
 lemurs
 libetonyek
 libmatemixer
@@ -43,6 +40,7 @@ libretro-mupen64plus-next
 libretro-pcsx2
 libusbsio
 python-libusbsio
+libva-nvidia-driver
 libxfce4ui
 libxfce4windowing
 light
@@ -53,6 +51,9 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
+mullvad-vpn
+mullvad-vpn-daemon
+nbd
 neofetch
 nvidia-340xx-utils
 nvidia-390xx-utils
@@ -62,9 +63,9 @@ nvidia-535xx-utils
 nvidia-580xx-utils
 opensnitch
 osdlyrics
-ouch
 p8-platform
 perl-cgi-fast
+perl-curses
 qbittorrent
 qbittorrent-nox
 qt5-webengine

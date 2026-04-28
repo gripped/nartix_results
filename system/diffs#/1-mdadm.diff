@@ -13,10 +13,10 @@
  	cd mdadm
  
  	make INSTALL=/usr/bin/install BINDIR=/usr/bin DESTDIR="$pkgdir" UDEVDIR=/usr/lib/udev install
--	make SYSTEMD_DIR="$pkgdir"/usr/lib/systemd/system install-systemd
+-	make SYSTEMD_DIR=/usr/lib/systemd/system BINDIR=/usr/bin DESTDIR="$pkgdir" install-systemd
  	install -D -m644 ../mdadm.conf "$pkgdir"/etc/mdadm.conf
- 	install -D -m755 misc/mdcheck "$pkgdir"/usr/share/mdadm/mdcheck
  
+ 	install -Dm 644 raid6check.8 "$pkgdir"/usr/share/man/man8/raid6check.8
 
 
 ############# Stripped diff below #################

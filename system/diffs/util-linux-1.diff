@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,14 +9,16 @@
+@@ -3,20 +3,22 @@
+ pkgbase=util-linux
+ pkgname=(util-linux util-linux-libs)
+ pkgver=2.42
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Miscellaneous system utilities for Linux'
+ url='https://github.com/util-linux/util-linux'
  arch=('x86_64')
  makedepends=('asciidoctor'
               'bash-completion'
@@ -35,7 +42,7 @@
              '7423aaaa09fee7f47baa83df9ea6fef525ff9aec395c8cbd9fe848ceb2643f37'
 -            '8ccec10a22523f6b9d55e0d6cbf91905a39881446710aa083e935e8073323376'
 -            'a22e0a037e702170c7d88460cc9c9c2ab1d3e5c54a6985cd4a164ea7beff1b36')
-+            '43180fb2bf51696654cc6bda7a5bacc769882268613343d783caad875749ef45')
++            'ddd71ce505a677b086d5bcf7b6890cc8927367d871227bbd6a773acff1def219')
  
  _backports=(
  )
@@ -77,7 +84,7 @@
  check() {
    cd build
 -  ../util-linux/tests/run.sh --show-diff
-+  ../util-linux/tests/run.sh --show-diff --exclude='lsfd/column-mntid-nonroot'
++  ../util-linux/tests/run.sh --show-diff --exclude='lsfd/column-mntid-nonroot','lsfd/assoc-pidfs'
  }
  
  package_util-linux() {

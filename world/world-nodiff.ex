@@ -3,8 +3,6 @@
 7zip
 a2ps
 aalib
-aarch64-linux-gnu-binutils
-aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
@@ -210,6 +208,7 @@ bbswitch-dkms
 bc
 bcg729
 beanshell
+bear
 bearssl
 beep
 bemenu
@@ -282,6 +281,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -290,6 +290,7 @@ capnproto
 capstone
 python-capstone
 cargo-about
+cargo-c
 cargo-edit
 caribou
 catatonit
@@ -299,11 +300,11 @@ catdoc
 cauchy
 cbatticon
 cbindgen
-ccache
 cdparanoia
 cdrdao
 gcdmaster
 cdrtools
+cef
 celluloid
 cervisia
 cfitsio
@@ -355,6 +356,7 @@ coin-or-cgl
 coin-or-clp
 coin-or-coinutils
 coin-or-data-sample
+coin-or-mp
 coin-or-osi
 collada-dom
 colm
@@ -385,6 +387,7 @@ couchdb
 cpio
 cpp-hocon
 cppdap
+cppjieba
 cppunit
 cpputest
 cppzmq
@@ -410,6 +413,7 @@ cyrus-sasl-gssapi
 cyrus-sasl-ldap
 cyrus-sasl-sql
 cython-dev
+cython
 cython0
 d-spy
 darktable
@@ -435,6 +439,7 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
+deno
 desktop-file-utils
 dev86
 devhelp
@@ -511,6 +516,11 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
+edk2
+edk2-aarch64
+edk2-riscv64
+edk2-shell
+edk2-ovmf
 egl-gbm
 egl-wayland
 egl-wayland2
@@ -642,11 +652,6 @@ fira-sans
 ttf-fira-sans
 otf-fira-sans
 firejail
-firewalld
-python-firewall
-firewall-config
-firewall-applet
-firewalld-test
 fish
 five-or-more
 flac
@@ -731,6 +736,8 @@ gedit
 gegl
 gendesk
 genxrdpattern
+geocode-glib
+geocode-glib-docs
 geoip-database
 geoip
 geos
@@ -1153,6 +1160,7 @@ intel-oneapi-mkl
 intel-oneapi-openmp
 intel-oneapi-tbb
 intel-oneapi-tcm
+intel-oneapi-umf
 intel-ucode
 intltool
 inxi
@@ -1179,7 +1187,6 @@ jaq
 jasper
 jasper-doc
 java-avalon-framework
-java-batik
 java-common
 java-runtime-common
 java-environment-common
@@ -1196,12 +1203,14 @@ openjdk-src
 java-xmlgraphics-commons
 jbig2dec
 jedi-language-server
+jemalloc
 jenkins
 jimtcl
 jitterentropy
 jkqtplotter
 jose
 jp2a
+jq
 jrnl
 jruby
 js102
@@ -1404,6 +1413,8 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
+kicad-demos
 kiconthemes
 kiconthemes5
 kid3
@@ -1422,9 +1433,11 @@ kimageformats5
 kimagemapeditor
 kimap
 kinit
+kio-admin
 kio-extras
 kio-fuse
 kio-gdrive
+kio-zeroconf
 kio
 kio5-extras
 kio5
@@ -1569,6 +1582,7 @@ kubrick
 kunifiedpush
 kunitconversion
 kunitconversion5
+kup
 kuserfeedback
 kuserfeedback5
 kvantum
@@ -1656,6 +1670,7 @@ libavc1394
 libavif
 libavtp
 libayatana-appindicator
+libayatana-indicator
 libb2
 libb64
 libblastrampoline
@@ -1819,6 +1834,7 @@ libjxl-doc
 libkate
 libkcddb
 libkcompactdisc
+libkdcraw
 libkdegames
 libkdepim
 libkeduvocdocument
@@ -1884,6 +1900,7 @@ libmusicxml
 libmwaw
 libmwaw-docs
 libmypaint
+libmysofa
 libmythes
 libnatpmp
 libnbd
@@ -2157,6 +2174,7 @@ lilv-docs
 python-lilv
 lilypond
 limine
+limonp
 linux-atm
 liquidctl
 litehtml
@@ -2332,6 +2350,7 @@ mbox-importer
 mc
 mcpp
 md4c
+mdbook
 mdds
 mediainfo
 mediainfo-gui
@@ -2438,6 +2457,7 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
+nbd
 nccl
 ncdu
 ncftp
@@ -2559,6 +2579,8 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
+opencc
+opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -2597,6 +2619,7 @@ openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
+opensp
 opensubdiv
 opentimelineio
 openucc
@@ -3050,7 +3073,6 @@ plasma-nm
 plasma-pa
 plasma-pass
 plasma-sdk
-plasma-systemmonitor
 plasma-thunderbolt
 plasma-vault
 plasma-wayland-protocols
@@ -3193,6 +3215,7 @@ shiboken6
 pysmbc
 python-pysmbc
 pysolfc-cardsets
+pystring
 python-a2wsgi
 python-aaf2
 python-aafigure
@@ -3759,7 +3782,6 @@ python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
-python-jsonschema-path
 python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
@@ -3936,6 +3958,7 @@ python-openapi-schema-validator
 python-openapi-spec-validator
 python-openid
 python-openpyxl
+python-openstacksdk
 python-opt_einsum
 python-optree
 python-ordered-set
@@ -3947,6 +3970,7 @@ python-os-service-types
 python-osc-lib
 python-oscrypto
 python-oslo-concurrency
+python-oslo-config
 python-oslo-context
 python-oslo-db
 python-oslo-i18n
@@ -4014,6 +4038,7 @@ python-pillow
 python-pint
 python-pip-run
 python-pip
+python-pipcl
 python-pipenv-to-requirements
 python-pipenv
 python-pipreqs
@@ -4194,6 +4219,7 @@ python-pyte
 python-pytest-aiohttp
 python-pytest-asyncio
 python-pytest-bdd
+python-pytest-benchmark
 python-pytest-black
 python-pytest-celery
 python-pytest-click
@@ -4506,6 +4532,7 @@ python-testing.postgresql
 python-testpath
 python-testrepository
 python-testresources
+python-testscenarios
 python-testtools
 python-text-unidecode
 python-texttable
@@ -4611,6 +4638,7 @@ python-websockets
 python-webtest
 python-werkzeug
 python-whatthepatch
+python-wheel
 python-wheezy-template
 python-whoosh
 python-wilderness
@@ -4632,6 +4660,7 @@ python-xlrd
 python-xlsxwriter
 python-xlwt
 python-xmlschema
+python-xmlsec
 python-xmltodict
 python-xxhash
 python-y-py
@@ -4742,6 +4771,7 @@ qt6-5compat
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
+qt6-declarative
 qt6-graphs
 qt6-grpc
 qt6-httpserver
@@ -4948,6 +4978,7 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
+ruby-cucumber
 ruby-daemons
 ruby-date
 ruby-dbm
@@ -5032,9 +5063,11 @@ ruby-lsp
 ruby-m
 ruby-manpages
 ruby-mapping
+ruby-markly
 ruby-maruku
 ruby-matrix
 ruby-memoist
+ruby-memoist3
 ruby-memory-leak
 ruby-memory
 ruby-memory_profiler
@@ -5250,6 +5283,7 @@ ruby-websocket-driver
 ruby-websocket-extensions
 ruby-x25519
 ruby-xrb
+ruby-yard
 ruby-zeitwerk
 ruby
 ruby2.7
@@ -5451,7 +5485,6 @@ tcl
 tclap
 tcsh
 tdb
-tea
 tecla
 telegram-qt
 telepathy-accounts-signon
@@ -5633,9 +5666,11 @@ threadweaver5
 thrift
 python-thrift
 tidy
+time
 timeshift
 timew
 timezonemap
+tint2
 tinycdb
 tinycompress
 tinyprog
@@ -5762,8 +5797,6 @@ vice-sdl2
 vid.stab
 viewnior
 vifm
-vigra
-python-vigra
 vim
 gvim
 vim-runtime
@@ -6027,6 +6060,7 @@ zig
 zimg
 zint
 zint-qt
+zip
 ziproxy
 zita-alsa-pcmi
 zita-resampler

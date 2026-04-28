@@ -7,9 +7,9 @@
 -         'libdrm' 'pam' 'systemd-libs' 'cairo' 'libpng' 'libjpeg-turbo' 'libwebp'
 +         'libdrm' 'pam' 'libelogind' 'cairo' 'libpng' 'libjpeg-turbo' 'libwebp'
           'mesa' 'libegl' 'libevdev' 'libgles' 'glib2' 'pango' 'lcms2' 'mtdev' 'libx11'
-          'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd'
+          'libxcb' 'dbus' 'libva' 'libxcursor' 'colord' 'seatd' 'lua'
           'gstreamer' 'gst-plugins-base-libs')
-@@ -42,8 +42,8 @@
+@@ -41,8 +41,8 @@
  }
  
  build() {
@@ -34,11 +34,11 @@
  libevdev
  libgles
  libinput
-@@ -33,7 +34,6 @@
+@@ -34,7 +35,6 @@
  pango
  pixman
  seatd
 -systemd-libs
+ vulkan-headers
  wayland
  wayland-protocols
- xcb-util-cursor

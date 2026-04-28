@@ -1,11 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,14 +1,14 @@
+ 
+ pkgname=sfml
+ pkgver=3.1.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='A simple, fast, cross-platform, and object-oriented multimedia API'
+ arch=('x86_64')
  url='http://www.sfml-dev.org/'
  license=('Zlib')
- depends=('libsndfile' 'libxrandr' 'glew' 'freetype2' 'libx11' 'libxcursor' 'libxi')
--makedepends=('mesa' 'cmake' 'doxygen' 'systemd' 'ninja')
-+makedepends=('mesa' 'cmake' 'doxygen' 'udev' 'ninja')
+ depends=('libsndfile' 'libxrandr' 'glew' 'freetype2' 'libx11' 'libxcursor' 'libxi'
+          'mbedtls' 'harfbuzz' 'glibc' 'libstdc++' 'libgcc' 'libogg' 'flac' 'libvorbis')
+-makedepends=('mesa' 'cmake' 'doxygen' 'systemd' 'ninja' 'git')
++makedepends=('mesa' 'cmake' 'doxygen' 'udev' 'ninja' 'git')
  provides=('libsfml-window.so' 'libsfml-network.so' 'libsfml-system.so'
            'libsfml-audio.so' 'libsfml-graphics.so')
  source=(${pkgname}-${pkgver}.tar.gz::https://github.com/SFML/SFML/archive/${pkgver}.tar.gz)
@@ -15,8 +23,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,4 +9,4 @@
- libxrandr
+@@ -18,4 +18,4 @@
+ mbedtls
  mesa
  ninja
 -systemd

@@ -116,7 +116,6 @@ coturn-dinit
 coturn-openrc
 coturn-runit
 coturn-s6
-cppjieba
 cpptoml
 cpupower-dinit
 cpupower-openrc
@@ -302,7 +301,6 @@ lighttpd-dinit
 lighttpd-openrc
 lighttpd-runit
 lighttpd-s6
-limonp
 lirc-dinit
 lirc-openrc
 lirc-runit
@@ -518,7 +516,6 @@ ruby-braid
 ruby-fattr
 ruby-main
 ruby-map
-ruby-memoist3
 runit-bash-completions
 runit-rc
 runit

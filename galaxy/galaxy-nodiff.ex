@@ -16,6 +16,7 @@ atool
 atril
 audacious-plugins
 audacious
+autotiling
 avidemux
 avidemux-cli
 avidemux-qt
@@ -26,6 +27,7 @@ bcc-libbpf-tools
 bcc-examples
 python-bcc
 bleachbit
+blender
 blueman
 bogofilter
 bogofilter-db
@@ -114,6 +116,10 @@ doublecmd-qt5
 doublecmd-qt6
 dvtm
 easy-rsa
+electron
+electron39
+electron40
+electron41
 elementary-icon-theme
 engrampa
 eom
@@ -126,6 +132,9 @@ fceux
 fcitx5-bamboo
 firefox-i18n
 fluxbox
+font-awesome
+woff2-font-awesome
+otf-font-awesome
 font-manager
 foot
 $pkgbase
@@ -149,7 +158,12 @@ girara
 gitoxide
 gkrellm
 glib-perl
+gnote
 goocanvas
+goverlay
+gpu-screen-recorder-notification
+gpu-screen-recorder-ui
+gpu-screen-recorder
 grilo-plugins
 grub-btrfs
 grub-customizer
@@ -159,6 +173,7 @@ gtk-engines
 gtk-session-lock
 gtk2
 gtk4-layer-shell
+halloy
 hugo
 hyperfine
 impala
@@ -169,6 +184,11 @@ just
 kanshi
 kernel-headers-musl
 khard
+kodi
+kodi-gles
+kodi-eventclients
+kodi-tools-texturepacker
+kodi-dev
 labwc
 lact
 lact-libadwaita
@@ -186,6 +206,7 @@ libe-book
 libetpan
 libexttextcat
 libfm-qt
+libhx
 libkeyfinder
 liblangtag
 liblxqt
@@ -286,6 +307,8 @@ lxsession
 lxtask
 lxterminal
 mailgraph
+mame
+mame-tools
 marco
 mate-applets
 mate-backgrounds
@@ -328,7 +351,6 @@ msedit
 muffin
 mugshot
 mutt
-nbd
 nemo
 neomutt
 neovide
@@ -417,8 +439,10 @@ openrct2
 opensc
 openshot
 orage
+ouch
 oxipng
 packer
+pam_mount
 pamixer
 parole
 pavucontrol-qt
@@ -436,6 +460,7 @@ perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-basedir
 perl-file-desktopentry
+perl-file-mimeinfo
 perl-file-next
 perl-glib-object-introspection
 perl-gtk3
@@ -445,6 +470,7 @@ perl-net-openssh
 perl-net-snmp
 perl-net-telnet
 perl-perl4-corelibs
+perl-term-animation
 perl-text-iconv
 perl-text-soundex
 perl-xml-filter-buffertext
@@ -495,6 +521,7 @@ qjackctl
 qmmp
 qps
 qrupdate
+qt5-location
 qt5ct
 qt5pas
 qt6pas
@@ -525,11 +552,14 @@ rgbds
 rio
 riscv64-linux-gnu-gdb
 ristretto
+river-classic
+river
 rmpc
 rpi-imager
 rust-script
 sakura
 salt
+satty
 scrcpy
 screengrab
 scribus
@@ -552,6 +582,7 @@ starship
 subtitleeditor
 sundials
 superfile
+sway-contrib
 swaync
 swww
 sysbench
@@ -710,10 +741,12 @@ vhba-module-dkms
 vhba-module
 vicious
 voa
+vpl-gpu-rt
 warpinator
 waylandpp
 waypipe
 wcm
+wdisplays
 wev
 wf-shell
 wlopm
@@ -721,6 +754,7 @@ wlr-randr
 wlsunset
 wofi
 wol
+wxsvg
 xapp-symbolic-icons
 xapp
 xautolock

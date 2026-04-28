@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,15 @@
+@@ -1,19 +1,18 @@
  
  pkgname=qtxdg-tools
--pkgver=4.3.0
+-pkgver=4.4.0
 +pkgver=3.12.0
  pkgrel=1
  pkgdesc="libqtxdg user tools"
@@ -15,11 +15,15 @@
 +depends=("qt5-base" "libqtxdg")
 +makedepends=("cmake" "qt5-tools" "lxqt-build-tools")
  source=("https://github.com/lxqt/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz"{,.asc})
--sha256sums=('6d84dc5016464741a6fbc466b94120267ea5333ebe037b9b0e1799846165ef96'
+-sha256sums=('f21ba4308eac0effd417d910cc4916df7b6202aaeee777b51bb120f7abc6c5ac'
 +sha256sums=('8afba8c57647ccbec27964c021b1f317866bb93c7293f60319a340b6484bf883'
              'SKIP')
  validpgpkeys=(
    "19DFDF3A579BD509DBB572D8BE793007AD22DF7E"  # Pedram Pourang <tsujan2000@gmail.com>
+-  "48836EB124A1EAAE695EDFEA229CA0A00A17D258"  # the key owned by an email used by https://github.com/stefonarch/, a long-time LXQt contributor, as per keys.openpgp.org
+ )
+ conflicts=('libqtxdg<3.9.1')
+ 
 
 
 ############# Stripped diff below #################

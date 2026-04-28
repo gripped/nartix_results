@@ -75,6 +75,7 @@ libtree
 libwireplumber-4.0-compat
 lightdm-settings
 limine-mkinitcpio-hook
+limine-snapper-sync-openrc
 limine-snapper-sync
 linux-lts515
 linux-wifi-hotspot

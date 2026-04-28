@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,7 @@
+ b2sums=('b38f5c69da1d3f5ba69900d852e711062385c85cc21f2071f6b255ec584ef58c3526c69292ad744e551ff36b76926d71df7c247725258fab8d6d154f5afc282d')
+ 
+ build() {
+-  arch-meson gnote build
++  artix-meson gnote build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson gnote build
++artix-meson gnote build
+ meson compile -C build
+ }

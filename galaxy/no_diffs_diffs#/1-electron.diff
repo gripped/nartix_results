@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,7 +10,7 @@
+ depends=("electron$pkgver")
+ 
+ package() {
+-	mkdir -p "$pkgdir/usr/bin" "$pkgdir/usr/lib"
+-	ln -sf "${depends[0]}" "$pkgdir/usr/bin/$pkgname"
+-	ln -sf "${depends[0]}" "$pkgdir/usr/lib/$pkgname"
++  mkdir -p "$pkgdir/usr/bin" "$pkgdir/usr/lib"
++  ln -sf "${depends[0]}" "$pkgdir/usr/bin/$pkgname"
++  ln -sf "${depends[0]}" "$pkgdir/usr/lib/$pkgname"
+ }

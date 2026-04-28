@@ -1,53 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgbase=python-polars
- pkgname=($pkgbase $pkgbase-runtime-{32,64,compat})
--pkgver=1.39.3
-+pkgver=1.40.0
- pkgrel=1
- pkgdesc="Blazingly fast DataFrames library using Apache Arrow Columnar Format as memory model"
- arch=("x86_64")
-@@ -29,11 +29,11 @@
+@@ -29,9 +29,7 @@
                'python-cloudpickle'
                'python-aiosqlite'
                'python-boto3'
--              'python-orjson')
+-              'python-orjson'
+-              'python-altair'
+-              'python-arrow-adbc-driver-sqlite')
 +	      'python-orjson')
  _name=${pkgname#python-}
  _tag="py-$pkgver"
  source=("https://github.com/pola-rs/polars/archive/refs/tags/$_tag.tar.gz")
--b2sums=('13b1f1bdf8db3f006216d90edb3cd4da33ba44359ccbd16a07aaeffd8b5368bf46600d035e91de11b9b33196861ad2984a5c016787d3b00edf91d2c15c6ebcef')
-+b2sums=('c9d5df9770de6c5faad1e742afee1cf543af0e0d2454f233e31a79819e209020e489d6f83e6871894265a3c3b74d41297de4366389d59b3d3d1ba072584628d4')
- 
- prepare() {
-     cd polars-$_tag/py-polars
-@@ -58,24 +58,16 @@
- 
- 
-     local _pytest_args=(
--        -W ignore::DeprecationWarning
--        -W ignore::ResourceWarning
--        -W ignore::pydantic.warnings.PydanticDeprecatedSince211
-         --ignore tests/unit/io/test_delta.py
--        --ignore tests/unit/operations/namespaces/test_plot.py
-+        --ignore tests/unit/io/test_delta_deletion_vector.py
-+        --deselect tests/unit/io/test_hive.py::test_hive_decode_reserved_ascii_23241
-+        --deselect tests/unit/io/test_hive.py::test_hive_decode_utf8_23241
+@@ -67,7 +65,9 @@
          --ignore tests/unit/io/cloud/test_aws.py
--        --ignore tests/unit/functions/range/test_datetime_range.py
          --ignore tests/unit/io/test_spreadsheet.py
          --ignore tests/unit/io/test_iceberg.py
--        --ignore tests/unit/io/database
--        --deselect "tests/unit/streaming/test_streaming_categoricals.py::test_streaming_cat_14933"
--        --deselect "tests/unit/dataframe/test_df.py::test_extension"
--        --deselect "tests/unit/streaming/test_streaming_group_by.py::test_streaming_group_by_literal[1]"
--        --deselect tests/unit/io/test_hive.py::test_hive_decode_reserved_ascii_23241
--        --deselect tests/unit/io/test_hive.py::test_hive_decode_utf8_23241
--        --deselect tests/unit/constructors/test_constructors.py::test_init_structured_objects_nested[_TestFooNT-_TestBarNT-_TestBazNT]
--        --deselect tests/unit/series/test_item.py::test_series_item_out_of_range_date
--        --deselect tests/unit/test_init.py::test_type_aliases_deprecated
+-        --deselect "tests/unit/io/database/test_read.py::test_read_database_cx_credentials"
 +        --ignore tests/unit/operations/namespaces/test_plot.py
 +        --ignore tests/unit/io/database/test_read.py
 +        --ignore tests/unit/io/database/test_write.py
