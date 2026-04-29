@@ -52,7 +52,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
-ccache
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -396,6 +395,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -731,7 +731,6 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-jsonschema-path
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -739,6 +738,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-zope-event
 qastools
 qbittorrent
 qbittorrent-nox
@@ -967,6 +967,7 @@ v4l-utils
 valkey
 vault
 vcspull
+verdict
 vigra
 python-vigra
 vlc

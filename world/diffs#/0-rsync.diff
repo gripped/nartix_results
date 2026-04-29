@@ -1,6 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -10,7 +10,10 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=rsync
+-pkgver=3.4.2
+-pkgrel=1
++pkgver=3.4.1
++pkgrel=2
+ pkgdesc='A fast and versatile file copying tool for remote and local files'
+ arch=('x86_64')
+ url='https://rsync.samba.org/'
+@@ -10,12 +10,15 @@
           'zlib' 'zstd')
  optdepends=('python: for rrsync')
  makedepends=('git' 'python-commonmark')
@@ -12,15 +22,13 @@
  validpgpkeys=('0048C8B026D4C96F0E589C2F6C859FB14B96A8C5'  # Wayne Davison <wayned@users.sourceforge.net>
                '9FEF112DCE19A0DC7E882CB81BB24997A8535F6F') # Andrew Tridgell <andrew@tridgell.net
  source=("git+https://github.com/RsyncProject/rsync.git#tag=v${pkgver}?signed"
-@@ -19,7 +22,6 @@
+         'rsyncd.conf')
+-sha256sums=('3b6fa3f3efe4ea43b077aa5c78ab7d4245e72edb44b37547f45c3616481241e4'
++sha256sums=('97ac2998444ad0611ea47103e294682fc39c7518a33af3ef3e44fdb1ed282021'
              '733ccb571721433c3a6262c58b658253ca6553bec79c2bdd0011810bb4f2156b')
  
  _backports=(
--  'a4b926dcdce96b0f2cc0dc7744e95747b233500a'
- )
- 
- _reverts=(
-@@ -41,8 +43,6 @@
+@@ -40,8 +43,6 @@
      git log --oneline -1 "${_c}"
      git revert -n "${_c}"
    done
@@ -29,7 +37,7 @@
  }
  
  build() {
-@@ -78,7 +78,5 @@
+@@ -77,7 +78,5 @@
    done
    install -Dm0644 "tech_report.tex" "$pkgdir/usr/share/doc/rsync/tech_report.tex"
    install -Dm0644 ../rsyncd.conf "$pkgdir/etc/rsyncd.conf"

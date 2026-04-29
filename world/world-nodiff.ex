@@ -300,6 +300,7 @@ catdoc
 cauchy
 cbatticon
 cbindgen
+ccache
 cdparanoia
 cdrdao
 gcdmaster
@@ -1831,7 +1832,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3782,6 +3782,7 @@ python-jsonpath-ng
 python-jsonpickle
 python-jsonpointer
 python-jsonrpclib-pelix
+python-jsonschema-path
 python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
@@ -4685,7 +4686,6 @@ python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
-python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
@@ -5791,7 +5791,6 @@ vcdimager
 vde2
 vdpauinfo
 veracrypt
-verdict
 vice
 vice-sdl2
 vid.stab
