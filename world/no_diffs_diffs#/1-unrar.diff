@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,17 +2,16 @@
+ pkgbase=unrar
+ pkgname=(libunrar
+          unrar)
+-pkgver=7.2.6
++pkgver=7.2.5
+ pkgrel=1
+ epoch=1
+ arch=(x86_64)
+ url='https://www.rarlab.com/rar_add.htm'
+-depends=(glibc
+-         libgcc
+-         libstdc++)
++depends=(gcc-libs
++         glibc)
+ license=(LicenseRef-UnRAR)
+ source=(https://www.rarlab.com/rar/unrarsrc-$pkgver.tar.gz)
+-sha256sums=('d1afa67ef4121ebc5986815699e05db0ce8648499e5dca854f282a4c3f72c003')
++sha256sums=('3d7b402ce7b9825af32a5f593379269e742c883d9d276527be19d0e9f6a114f9')
+ 
+ prepare() {
+   sed -e '/CXXFLAGS=/d' -e '/LDFLAGS=/d' -i unrar/makefile # Use system build flags
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
++gcc-libs
+ glibc
+-libgcc
+-libstdc++

@@ -1,6 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,16 +1,16 @@
+ 
+ pkgname=archivetools
+-pkgver=5
++pkgver=4
+ pkgrel=1
+ pkgdesc='Arch Linux Archive Tools'
  arch=('any')
  url='https://gitlab.archlinux.org/archlinux/archivetools'
  license=('GPL-2.0-or-later')
@@ -9,6 +15,11 @@
  makedepends=('git')
  backup=('etc/archive.conf')
  source=("git+https://gitlab.archlinux.org/archlinux/archivetools.git#tag=v$pkgver")
+-sha256sums=('68f69c46995b3b68fab7a04f6168b5f18cdf570c030dbbf06bd2ae8b239b9bd5')
++sha256sums=('93e36e9a84f52da3572b8e594f62bc388ce468ea376e8bbfc2e78d995f6f8c56')
+ 
+ package() {
+   cd $pkgname
 @@ -19,8 +19,5 @@
    install -Dm755 archive-cleaner -t "$pkgdir/usr/bin"
    install -Dm644 archive.sysusers "$pkgdir/usr/lib/sysusers.d/archive.conf"

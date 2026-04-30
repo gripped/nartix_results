@@ -324,4 +324,5 @@ xlibre-xorgxrdp
 xlibre-xserver
 xrdp
 zramen-dinit
+zramen-openrc
 zramen

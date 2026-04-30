@@ -130,6 +130,8 @@ ext4magic
 fastfetch
 fceux
 fcitx5-bamboo
+fcitx5-chinese-addons
+fcitx5-lua
 firefox-i18n
 fluxbox
 font-awesome
@@ -207,6 +209,7 @@ libetpan
 libexttextcat
 libfm-qt
 libhx
+libime
 libkeyfinder
 liblangtag
 liblxqt
@@ -574,6 +577,7 @@ snes9x-gtk
 snorenotify
 solaar
 sparsehash
+speedtest-cli
 spotify-launcher
 sqlitebrowser
 ssh-tools
