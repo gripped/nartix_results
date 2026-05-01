@@ -135,7 +135,6 @@ dotnet-targeting-pack
 aspnet-targeting-pack
 dotnet-source-built-artifacts
 dovecot
-dqlite
 dracut
 drkonqi
 dunst
@@ -395,7 +394,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -739,6 +737,7 @@ python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
 python-zope-event
+python-zope-proxy
 qastools
 qbittorrent
 qbittorrent-nox

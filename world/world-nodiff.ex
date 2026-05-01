@@ -496,6 +496,7 @@ doxygen
 doxygen-docs
 dpdk
 dpkg
+dqlite
 draco
 dragon
 dropbear
@@ -1832,6 +1833,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -4691,7 +4693,6 @@ python-zope-hookable
 python-zope-i18nmessageid
 python-zope-interface
 python-zope-location
-python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing

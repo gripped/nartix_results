@@ -35,6 +35,8 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
+libreoffice-fresh
+libreoffice-fresh-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
