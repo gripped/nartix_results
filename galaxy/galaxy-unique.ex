@@ -12,11 +12,14 @@ artix-community-presets
 artix-dark-theme
 artix-desktop-presets
 artix-docs
+artix-grub-theme
 artix-gtk-presets
 artix-i3-presets
 artix-metro
 artix-mlg
+artix-plasma-splash
 artix-qt-presets
+artix-sddm-theme
 artixnews
 autofs-dinit
 autofs

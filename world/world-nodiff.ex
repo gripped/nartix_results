@@ -383,7 +383,6 @@ coordgen
 copr-cli
 corepack
 corrosion
-coturn
 couchdb
 cpio
 cpp-hocon
@@ -722,8 +721,6 @@ gcab
 gcc13
 gcc14
 gd
-gdal
-python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -3866,7 +3863,6 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
-python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -4688,11 +4684,13 @@ python-zope-configuration
 python-zope-copy
 python-zope-deferredimport
 python-zope-deprecation
+python-zope-event
 python-zope-exceptions
 python-zope-hookable
 python-zope-i18nmessageid
 python-zope-interface
 python-zope-location
+python-zope-proxy
 python-zope-schema
 python-zope-security
 python-zope-testing

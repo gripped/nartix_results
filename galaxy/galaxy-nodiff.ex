@@ -193,7 +193,6 @@ kodi-tools-texturepacker
 kodi-dev
 labwc
 lact
-lact-libadwaita
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -223,6 +222,8 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
 libreoffice-still
 libreoffice-still-sdk
@@ -742,6 +743,8 @@ vdirsyncer
 vhba-module-dkms
 vhba-module
 vicious
+vis
+vis-syntax-highlighting
 voa
 vpl-gpu-rt
 warpinator

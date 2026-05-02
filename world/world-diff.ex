@@ -94,6 +94,7 @@ conmon
 connman
 containerd
 containers-common
+coturn
 cppcheck
 crun
 krun
@@ -193,6 +194,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdal
+python-gdal
 gdm
 libgdm
 gengetopt
@@ -729,6 +732,7 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-marshmallow
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -736,8 +740,6 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
-python-zope-event
-python-zope-proxy
 qastools
 qbittorrent
 qbittorrent-nox
