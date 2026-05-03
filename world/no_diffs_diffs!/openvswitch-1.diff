@@ -18,7 +18,7 @@
  
  prepare() {
    cd "$srcdir/$pkgname-$pkgver"
-@@ -44,8 +40,6 @@
+@@ -45,8 +41,6 @@
    cd "$srcdir/$pkgname-$pkgver"
    make DESTDIR="$pkgdir" install
    install -Dm0644 "$srcdir"/openvswitch.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/openvswitch.conf"

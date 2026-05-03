@@ -120,6 +120,9 @@ electron
 electron39
 electron40
 electron41
+element.io
+element-web
+element-desktop
 elementary-icon-theme
 engrampa
 eom
@@ -745,6 +748,7 @@ vhba-module
 vicious
 vis
 vis-syntax-highlighting
+vivaldi
 voa
 vpl-gpu-rt
 warpinator

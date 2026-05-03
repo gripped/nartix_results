@@ -13,9 +13,6 @@ cosmic-settings
 doctest
 ecrire
 efl
-element.io
-element-web
-element-desktop
 emptty
 ephoto
 etherwall
@@ -76,6 +73,7 @@ sdcv
 signal-desktop
 terminology
 termshark
+tigervnc
 tor
 torsocks
 transmission

@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,174 +1,177 @@
+@@ -1,174 +1,170 @@
  
  pkgbase=mullvad-vpn
  pkgname=(
@@ -11,7 +11,7 @@
  )
  pkgver=2026.1
 -pkgrel=1
-+pkgrel=2
++pkgrel=3
  pkgdesc="Mullvad VPN client"
  arch=('x86_64')
  url="https://www.mullvad.net"
@@ -96,15 +96,6 @@
  
 -  sed -i 's|/opt/Mullvad\\x20VPN/resources/|/usr/lib/mullvad-vpn|g' \
 -    dist-assets/linux/mullvad-daemon.service
-+    sed -i 's|/opt/Mullvad\\x20VPN/resources/|/usr/lib/mullvad-vpn|g' \
-+        dist-assets/linux/mullvad-daemon.service
- 
--  git submodule init
--  git config submodule.dist-assets/binaries.url ../mullvadvpn-app-binaries
--  git config submodule.wireguard-go-rs/libwg/wireguard-go.url ../wireguard-go
--  git -c protocol.file.allow=always submodule update \
--    dist-assets/binaries \
--    wireguard-go-rs/libwg/wireguard-go
 +    git submodule init
 +    git config submodule.dist-assets/binaries.url ../mullvadvpn-app-binaries
 +    git config submodule.wireguard-go-rs/libwg/wireguard-go.url ../wireguard-go
@@ -112,11 +103,18 @@
 +        dist-assets/binaries \
 +        wireguard-go-rs/libwg/wireguard-go
  
--  export RUSTUP_TOOLCHAIN=stable
--  cargo fetch --locked --target "$(rustc --print host-tuple)"
+-  git submodule init
+-  git config submodule.dist-assets/binaries.url ../mullvadvpn-app-binaries
+-  git config submodule.wireguard-go-rs/libwg/wireguard-go.url ../wireguard-go
+-  git -c protocol.file.allow=always submodule update \
+-    dist-assets/binaries \
+-    wireguard-go-rs/libwg/wireguard-go
 +    export RUSTUP_TOOLCHAIN=stable
 +    cargo fetch --locked --target "$(rustc --print host-tuple)"
  
+-  export RUSTUP_TOOLCHAIN=stable
+-  cargo fetch --locked --target "$(rustc --print host-tuple)"
+-
 -  (
 -    cd desktop
 -    npm clean-install --ignore-scripts
@@ -251,19 +249,16 @@
 -  install -vDm644 -t "$pkgdir/usr/lib/systemd/system" \
 -    dist-assets/linux/mullvad-daemon.service \
 -    dist-assets/linux/mullvad-early-boot-blocking.service
-+    install -vDm644 -t "$pkgdir/usr/lib/systemd/system" \
-+        dist-assets/linux/mullvad-daemon.service \
-+        dist-assets/linux/mullvad-early-boot-blocking.service
- 
--  install -vDm644 build/mullvad.bash \
--    "$pkgdir/usr/share/bash-completion/completions/mullvad"
--  install -vDm644 build/_mullvad -t "$pkgdir/usr/share/zsh/site-functions/"
--  install -vDm644 build/mullvad.fish -t "$pkgdir/usr/share/fish/vendor_completions.d/"
 +    install -vDm644 build/mullvad.bash \
 +        "$pkgdir/usr/share/bash-completion/completions/mullvad"
 +    install -vDm644 build/_mullvad -t "$pkgdir/usr/share/zsh/site-functions/"
 +    install -vDm644 build/mullvad.fish -t "$pkgdir/usr/share/fish/vendor_completions.d/"
  
+-  install -vDm644 build/mullvad.bash \
+-    "$pkgdir/usr/share/bash-completion/completions/mullvad"
+-  install -vDm644 build/_mullvad -t "$pkgdir/usr/share/zsh/site-functions/"
+-  install -vDm644 build/mullvad.fish -t "$pkgdir/usr/share/fish/vendor_completions.d/"
+-
 -  install -vDm644 dist-assets/linux/apparmor_mullvad "$pkgdir/etc/apparmor.d/mullvad"
 +    install -vDm644 dist-assets/linux/apparmor_mullvad "$pkgdir/etc/apparmor.d/mullvad"
  }
@@ -312,7 +307,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,11 @@
+@@ -1,11 +1,12 @@
  prepare() {
  sed -i "s/@_electronver@/$_electronver/" "$pkgbase.sh"
  cd mullvadvpn-app
@@ -324,9 +319,12 @@
 +exit 1
 +)
  install -vDm644 -t desktop/packages/mullvad-vpn ../electron-builder.yml
- sed -i 's|/opt/Mullvad\\x20VPN/resources/|/usr/lib/mullvad-vpn|g' \
- dist-assets/linux/mullvad-daemon.service
-@@ -48,7 +51,7 @@
+-sed -i 's|/opt/Mullvad\\x20VPN/resources/|/usr/lib/mullvad-vpn|g' \
+-dist-assets/linux/mullvad-daemon.service
+ git submodule init
+ git config submodule.dist-assets/binaries.url ../mullvadvpn-app-binaries
+ git config submodule.wireguard-go-rs/libwg/wireguard-go.url ../wireguard-go
+@@ -48,7 +49,7 @@
  -p mullvad-cli --bin mullvad \
  -p mullvad-setup --bin mullvad-setup \
  -p mullvad-problem-report --bin mullvad-problem-report \

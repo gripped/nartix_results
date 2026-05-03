@@ -182,6 +182,7 @@ moksha
 moodbar
 mpd-dinit-user
 mpd-dinit
+mullvad-vpn-openrc
 newsraft
 numix-icon-theme
 octopi

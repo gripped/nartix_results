@@ -397,6 +397,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -499,6 +500,7 @@ malcontent
 libmalcontent
 malcontent-docs
 maliit-framework
+mangohud
 marco
 mariadb
 mariadb-libs
@@ -541,7 +543,6 @@ vulkan-dzn
 vulkan-freedreno
 vulkan-gfxstream
 vulkan-intel
-vulkan-kosmickrisp
 vulkan-nouveau
 vulkan-panfrost
 vulkan-powervr
@@ -1093,6 +1094,8 @@ wpewebkit
 wpewebkit-docs
 wsdd
 x11vnc
+xapian-core
+xapian-core-docs
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt
 xdg-desktop-portal-wlr
@@ -1173,4 +1176,5 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
+zeitgeist
 znc
