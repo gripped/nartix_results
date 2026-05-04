@@ -1,8 +1,19 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,9 +15,6 @@
+@@ -1,6 +1,6 @@
+ 
+ pkgname=containerd
+-pkgver=2.3.0
++pkgver=2.2.3
+ pkgrel=1
+ pkgdesc='An open and reliable container runtime'
+ url='https://containerd.io/'
+@@ -13,11 +13,8 @@
+ source=("git+https://github.com/containerd/containerd.git#tag=v${pkgver}?signed")
+ validpgpkeys=("8C7A111C21105794B0E8A27BF58C5D0A4405ACDB" # Derek McGowan
                "910C28608D33DDE689C03290997C5A3CD3167CB5") # Samuel Karp
- sha256sums=('3a790356fc59e2d8714953a8c52d0ff5d5a303ac7024af22ab44d4f10d358afe')
+-sha256sums=('f66ef36a301ae53fffb326d7f9ac7db0597e51bbc70d1d6820fdaada7207b9d1')
++sha256sums=('3a790356fc59e2d8714953a8c52d0ff5d5a303ac7024af22ab44d4f10d358afe')
  
 -prepare() {
 -  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service

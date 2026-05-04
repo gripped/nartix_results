@@ -753,6 +753,7 @@ voa
 vpl-gpu-rt
 warpinator
 waylandpp
+waylock
 waypipe
 wcm
 wdisplays

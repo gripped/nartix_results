@@ -1830,6 +1830,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2454,7 +2455,6 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
-nbd
 nccl
 ncdu
 ncftp

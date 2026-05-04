@@ -1,0 +1,85 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,15 +2,14 @@
+ pkgbase=qbittorrent
+ pkgname=(qbittorrent
+          qbittorrent-nox)
+-pkgver=5.2.0
++pkgver=5.0.2
+ pkgrel=1
+ arch=(x86_64)
+ url='https://www.qbittorrent.org'
+ license=(GPL-2.0-or-later
+          GPL-3.0-or-later)
+-depends=(glibc
+-         libgcc
+-         libstdc++
++depends=(gcc-libs
++         glibc
+          libtorrent-rasterbar
+          openssl
+          qt6-base
+@@ -21,14 +20,8 @@
+              qt6-svg
+              qt6-tools)
+ optdepends=('python: needed for torrent search tab')
+-source=(git+https://github.com/qbittorrent/qBittorrent/#tag=release-$pkgver
+-        qbittorrent-nox.service
+-        qbittorrent.sysusers
+-        qbittorrent.tmpfiles)
+-sha256sums=('20fb5ff17314dc8e492caf308231f424db04a45ab04861daa953fa0fab260120'
+-            'e0142e716098aa7047bf5160eee1dd839d84feaa30ec2c01b988c9bca16bd831'
+-            '0f148c97cc5fae83fc5022b5f2da374b60a1e2f62a4faf01265e73a9f208825a'
+-            '8bd2274ba9a6d414cd0170c8855cd6823fa026158ce7ed5eb74d661f21457238')
++source=(git+https://github.com/qbittorrent/qBittorrent/#tag=release-$pkgver?signed)
++sha256sums=('5e54f0f08d550b84e39315c86a1ae2450b9c712c699f8c2f5c5960e20bee4c77')
+ validpgpkeys=('D8F3DA77AAC6741053599C136E4A2D025B7CC9A2') # sledgehammer999 <sledgehammer999@qbittorrent.org>
+ 
+ build() {
+@@ -39,7 +32,7 @@
+   cmake -B build-nox -S qBittorrent \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DGUI=OFF \
+-    -DSYSTEMD=ON
++    -DSYSTEMD=OFF
+   cmake --build build-nox
+ }
+ 
+@@ -56,8 +49,4 @@
+ 
+   DESTDIR="$pkgdir" cmake --install build-nox
+   install -Dm644 qBittorrent/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname
+-
+-  install -Dm644 qbittorrent.sysusers "$pkgdir/usr/lib/sysusers.d/qbittorrent.conf"
+-  install -Dm644 qbittorrent.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/qbittorrent.conf"
+-  install -Dm644 qbittorrent-nox.service "$pkgdir/usr/lib/systemd/system/qbittorrent-nox.service"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,9 @@
+ boost
+ cmake
++gcc-libs
+ git
+ glibc
+ hicolor-icon-theme
+-libgcc
+-libstdc++
+ libtorrent-rasterbar
+ openssl
+ qt6-base
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,6 +5,6 @@
+ cmake -B build-nox -S qBittorrent \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DGUI=OFF \
+--DSYSTEMD=ON
++-DSYSTEMD=OFF
+ cmake --build build-nox
+ }

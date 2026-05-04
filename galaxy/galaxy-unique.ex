@@ -31,6 +31,7 @@ batticonplus
 birdtray
 calamares-branding
 calamares
+chcgs
 clawsker
 conan
 cython2
@@ -182,6 +183,7 @@ moksha
 moodbar
 mpd-dinit-user
 mpd-dinit
+mullvad-vpn-dinit
 mullvad-vpn-openrc
 newsraft
 numix-icon-theme

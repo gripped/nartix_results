@@ -397,7 +397,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -576,6 +575,7 @@ mutter
 mutter-docs
 mutter45
 mutter46
+nbd
 ndctl
 ndisc6
 nemo-extensions

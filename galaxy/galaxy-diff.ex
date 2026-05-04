@@ -26,6 +26,7 @@ gtk-engine-murrine
 gtklock
 hexchat
 hugin
+innernet
 intel-gpu-tools
 lemurs
 libetonyek

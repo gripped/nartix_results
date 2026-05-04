@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -1,28 +1,27 @@
  pkgname=frugally-deep
--pkgver=0.19.1
+-pkgver=0.20.0
 -pkgrel=1
 +pkgver=0.15.20
 +pkgrel=2
@@ -13,7 +13,7 @@
  depends=('functional-plus' 'eigen' 'nlohmann-json')
  makedepends=('cmake')
 -source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
--sha256sums=('c8c343e79067d6f268e47de24c7759f35ffd7f926fe056dedfc6beff410fc5a1')
+-sha256sums=('79a1f400523d629a5f7545f23c152f5b2ba17668a0e07edf8949658ee4066002')
 +source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver-p0.tar.gz")
 +sha256sums=('ad0e0506b89e36ea73644c2e8dde0e56b37846de4d28f625905c633b3e1f6d6e')
  

@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,7 @@
+ license=('GPL-3.0-or-later')
+ depends=('glibc'
+          'libgcc' 'libgcc_s.so'
+-         'systemd-libs' 'libudev.so')
++         'libudev.so')
+ makedepends=('git' 'cargo' 'clang' 'device-mapper')
+ source=("git+https://github.com/jthornber/thin-provisioning-tools#tag=v${pkgver}")
+ sha256sums=('f30d80ec123e1cad584619683e75c4e320cf63feb8737fb6a8f83fdc7a4fff99')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,4 +6,3 @@
+ libgcc
+ libgcc_s.so
+ libudev.so
+-systemd-libs
