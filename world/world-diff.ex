@@ -499,7 +499,6 @@ malcontent
 libmalcontent
 malcontent-docs
 maliit-framework
-mangohud
 marco
 mariadb
 mariadb-libs
@@ -1094,8 +1093,6 @@ wpewebkit
 wpewebkit-docs
 wsdd
 x11vnc
-xapian-core
-xapian-core-docs
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt
 xdg-desktop-portal-wlr
@@ -1176,5 +1173,4 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
-zeitgeist
 znc

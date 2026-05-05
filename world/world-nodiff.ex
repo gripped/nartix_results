@@ -2318,6 +2318,7 @@ man-pages-vi
 man2html
 mandoc
 mandown
+mangohud
 manifold
 marble
 marble-behaim
@@ -5885,6 +5886,8 @@ x264
 x265
 xa
 xalan-c
+xapian-core
+xapian-core-docs
 xapp
 xarchiver
 xautolock
@@ -6043,6 +6046,7 @@ zathura-pdf-poppler
 zathura-ps
 zathura
 zbar
+zeitgeist
 zenity
 zeroc-ice
 zeroc-ice-java
