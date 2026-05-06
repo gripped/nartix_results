@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=goverlay
- pkgver=1.7.5
- _pkgver=${pkgver//_/-}
--pkgrel=1
-+pkgrel=2
- pkgdesc="A GUI to help manage Vulkan/OpenGL overlays"
- url="https://github.com/benjamimgois/goverlay"
- arch=('x86_64')
 @@ -11,23 +11,23 @@
  makedepends=('git' 'lazarus')
  checkdepends=('appstream' 'desktop-file-utils')

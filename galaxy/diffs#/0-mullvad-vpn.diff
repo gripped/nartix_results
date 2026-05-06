@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,174 +1,170 @@
+@@ -1,8 +1,8 @@
  
  pkgbase=mullvad-vpn
  pkgname=(
@@ -10,11 +10,8 @@
 +    mullvad-vpn-daemon
  )
  pkgver=2026.1
--pkgrel=1
-+pkgrel=3
- pkgdesc="Mullvad VPN client"
- arch=('x86_64')
- url="https://www.mullvad.net"
+ pkgrel=1
+@@ -12,163 +12,159 @@
  license=('GPL-3.0-or-later')
  _electronver=39
  makedepends=(

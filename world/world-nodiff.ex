@@ -1830,7 +1830,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2539,6 +2538,7 @@ nvchecker
 oath-toolkit
 obconf-qt
 obs-studio
+obs-studio-plugin-browser
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp

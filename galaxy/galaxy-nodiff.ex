@@ -505,7 +505,6 @@ python-linux-procfs
 python-lxml-html-clean
 python-multivolumefile
 python-pdftotext
-python-poetry-core
 python-py7zr
 python-pybcj
 python-pybluez

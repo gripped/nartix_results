@@ -64,6 +64,7 @@ osdlyrics
 p8-platform
 perl-cgi-fast
 perl-curses
+python-poetry-core
 qbittorrent
 qbittorrent-nox
 qt5-webengine
