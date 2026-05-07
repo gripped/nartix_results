@@ -400,7 +400,6 @@ csound-doc
 ctags
 ctpl
 ctwm
-cuda
 cudnn
 cunit
 cups-pdf
@@ -1131,7 +1130,6 @@ inchi
 incidenceeditor
 indent
 iniparser
-inkscape
 innoextract
 inotify-tools
 intel-compute-runtime
@@ -3989,7 +3987,6 @@ python-pandocfilters
 python-parameterized
 python-paramiko
 python-parse-type
-python-parse
 python-parsedatetime
 python-parso
 python-partd
@@ -4035,7 +4032,6 @@ python-pikepdf
 python-pillow
 python-pint
 python-pip-run
-python-pip
 python-pipcl
 python-pipenv-to-requirements
 python-pipenv

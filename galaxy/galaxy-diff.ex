@@ -66,7 +66,6 @@ perl-cgi-fast
 perl-curses
 python-poetry-core
 qbittorrent
-qbittorrent-nox
 qt5-webengine
 rage
 read-edid

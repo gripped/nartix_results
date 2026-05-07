@@ -52,6 +52,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+cccl
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -98,6 +99,7 @@ coturn
 cppcheck
 crun
 krun
+cuda
 cups-filters
 cups
 libcups
@@ -296,6 +298,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -735,6 +738,8 @@ python-cram
 python-debugpy
 python-marshmallow
 python-ndg-httpsclient
+python-parse
+python-pip
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
