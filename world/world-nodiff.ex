@@ -871,9 +871,6 @@ gphoto2
 gpicview
 gpsd
 gptfdisk
-gradle
-gradle-doc
-gradle-src
 grafana
 granatier
 granite
@@ -1724,6 +1721,7 @@ libdmtx
 libdnet
 libdom
 libdovi
+libdrm
 libdv
 libdvbpsi
 libdvdcss
@@ -1828,6 +1826,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2444,7 +2443,6 @@ mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
-nanobind
 nanomsg
 nanosvg
 nasm
@@ -2620,7 +2618,6 @@ opensubdiv
 opentimelineio
 openucc
 openucx
-openvdb
 openvkl
 openvr
 openvswitch
@@ -5762,7 +5759,6 @@ unzip
 upx
 uriparser
 usbredir
-usd
 usort
 utf8cpp
 uthash
@@ -5790,6 +5786,8 @@ vice-sdl2
 vid.stab
 viewnior
 vifm
+vigra
+python-vigra
 vim
 gvim
 vim-runtime

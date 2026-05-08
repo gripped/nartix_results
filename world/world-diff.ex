@@ -225,6 +225,9 @@ go-bindata
 godot
 godot-mono
 gperftools
+gradle
+gradle-doc
+gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -383,7 +386,6 @@ gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
 libdaemon
-libdrm
 libe-book
 libei
 libei-docs
@@ -400,7 +402,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -578,6 +579,7 @@ mutter
 mutter-docs
 mutter45
 mutter46
+nanobind
 nbd
 ndctl
 ndisc6
@@ -630,6 +632,7 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
+openvdb
 openvpn
 ostree
 packagekit
@@ -956,6 +959,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -975,8 +979,6 @@ valkey
 vault
 vcspull
 verdict
-vigra
-python-vigra
 vlc
 libvlc
 vlc-cli

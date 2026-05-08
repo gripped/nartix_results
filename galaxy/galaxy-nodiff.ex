@@ -195,7 +195,6 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
-lact
 lazarus
 lazarus-qt5
 lazarus-qt6
