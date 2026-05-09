@@ -12,6 +12,7 @@ anubis
 arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme
+arduino-cli
 atool
 atril
 audacious-plugins
@@ -195,6 +196,7 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
+lact
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -429,6 +431,7 @@ ttf-zed-mono-nerd
 nicotineplus
 nim
 nlopt
+ntpd-rs
 nushell
 nvm
 nwg-hello

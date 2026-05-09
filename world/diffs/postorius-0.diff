@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=postorius
+ pkgver=1.3.13
+-pkgrel=5
++pkgrel=6
+ pkgdesc="The New Mailman Web UI"
+ arch=(any)
+ url="https://gitlab.com/mailman/postorius"
+@@ -70,6 +70,7 @@
+ }
+ 
+ prepare() {
++  git -C $pkgname cherry-pick -n 8d00a3c317729f37435bdbd27170f630e341f29e
+   patch -d $pkgname -p1 -i ../$pkgname-1.3.10-settings.patch
+ 
+   sed '/example_project/d' -i $pkgname/pyproject.toml
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ prepare() {
++git -C $pkgname cherry-pick -n 8d00a3c317729f37435bdbd27170f630e341f29e
+ patch -d $pkgname -p1 -i ../$pkgname-1.3.10-settings.patch
+ sed '/example_project/d' -i $pkgname/pyproject.toml
+ touch settings_local.py

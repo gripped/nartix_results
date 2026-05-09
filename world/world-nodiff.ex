@@ -1826,7 +1826,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3113,7 +3112,6 @@ postfix-pgsql
 postfix-sqlite
 postgis
 postgrey
-postorius
 potrace
 powerline
 powerline-fonts

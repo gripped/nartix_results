@@ -402,6 +402,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -717,6 +718,7 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
+postorius
 povray
 power-profiles-daemon
 powerdevil
