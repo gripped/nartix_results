@@ -310,7 +310,6 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-java-batik
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -349,6 +348,7 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
+kimageformats
 kinfocenter
 kismet
 kitty
@@ -462,6 +462,7 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+lld
 llvm14
 lm_sensors
 localsearch
@@ -581,7 +582,6 @@ mutter-docs
 mutter45
 mutter46
 nanobind
-nbd
 ndctl
 ndisc6
 nemo-extensions
@@ -919,7 +919,6 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
-tea
 telegram-desktop
 tensorflow
 tensorflow-opt

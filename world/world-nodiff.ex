@@ -1181,6 +1181,7 @@ jaq
 jasper
 jasper-doc
 java-avalon-framework
+java-batik
 java-common
 java-runtime-common
 java-environment-common
@@ -1422,7 +1423,6 @@ kig
 kigo
 killbots
 kimageannotator
-kimageformats
 kimageformats5
 kimagemapeditor
 kimap
@@ -2174,7 +2174,6 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
-lld
 lld16
 lld18
 lld19
@@ -2450,6 +2449,7 @@ libnautilus-extension
 libnautilus-extension-docs
 nauty
 nawk
+nbd
 nccl
 ncdu
 ncftp
@@ -5474,6 +5474,7 @@ tcl
 tclap
 tcsh
 tdb
+tea
 tecla
 telegram-qt
 telepathy-accounts-signon

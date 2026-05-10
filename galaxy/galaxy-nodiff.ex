@@ -180,6 +180,7 @@ gtk-session-lock
 gtk2
 gtk4-layer-shell
 halloy
+helvum
 hugo
 hyperfine
 impala
@@ -339,6 +340,7 @@ mate-user-share
 mate-utils
 mathjax
 mednafen
+mg
 mgba
 libmgba
 mgba-sdl
@@ -435,6 +437,7 @@ ntpd-rs
 nushell
 nvm
 nwg-hello
+nwg-look
 nyx
 obconf-qt
 obfuscate

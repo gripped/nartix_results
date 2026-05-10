@@ -15,9 +15,6 @@ ca-certificates-utils
 coreutils
 cracklib
 cryptsetup
-curl
-libcurl-compat
-libcurl-gnutls
 dash
 db
 db5.3
@@ -56,7 +53,6 @@ hdparm
 hwdata
 iana-etc
 icu
-inetutils
 iproute2
 iptables
 iptables-legacy
