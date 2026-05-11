@@ -378,6 +378,7 @@ mpd-openrc
 mpd-runit
 mpd-s6
 net-snmp-openrc
+nettle3
 networkmanager-dinit
 networkmanager-openrc
 networkmanager-runit

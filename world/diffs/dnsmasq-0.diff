@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,24 +1,30 @@
+ 
+ pkgname=dnsmasq
+ pkgver=2.92
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Lightweight, easy to configure DNS forwarder and DHCP server'
+ url='http://www.thekelleys.org.uk/dnsmasq/doc.html'
+ arch=('x86_64')
+-license=('GPL')
++license=('GPL-2.0-or-later')
+ depends=('glibc' 'gmp' 'libidn2' 'libidn2.so' 'libdbus' 'libdbus-1.so' 'nftables'
+          'libnetfilter_conntrack' 'nettle' 'libnettle.so' 'libhogweed.so')
+ backup=('etc/dnsmasq.conf')
+ validpgpkeys=('D6EACBD6EE46B834248D111215CDDA6AE19135A2') # Simon Kelley <simon@thekelleys.org.uk>
+ source=("http://www.thekelleys.org.uk/$pkgname/$pkgname-$pkgver.tar.xz"{,.asc}
+-        'dnsmasq.service'
++        '0001-nettle-4-0.patch'
+         'dnsmasq.sysusers')
+ sha256sums=('4bf50c2c1018f9fbc26037df51b90ecea0cb73d46162846763b92df0d6c3a458'
+             'SKIP'
+-            '297dbae8cfa3d353284820dd87cc65c37d1ef289cac3a5c3ede079413d31eeec'
++            'bec0c353e33efcf259a29f2f5a566edfb57b6cf2371c1680d553a62c63006193'
+             'e805d41b291dfe6988d6896d311ff2fa62d8291067572f3db1059b0217f31aff')
+ 
+ _build_copts='-DHAVE_DNSSEC -DHAVE_DBUS -DHAVE_LIBIDN2 -DHAVE_CONNTRACK -DHAVE_NFTSET'
++
++prepare() {
++  cd "$pkgname-$pkgver"
++
++  patch -Np1 < ../0001-nettle-4-0.patch
++}
+ 
+ build() {
+   cd "$pkgname-$pkgver"
+@@ -52,7 +58,6 @@
+ 
+   install -Dm0644 "dbus/dnsmasq.conf" "$pkgdir"/usr/share/dbus-1/system.d/dnsmasq.conf
+   install -Dm0644 "dnsmasq.conf.example" "$pkgdir"/etc/dnsmasq.conf
+-  install -Dm0644 "$srcdir/dnsmasq.service" "$pkgdir"/usr/lib/systemd/system/dnsmasq.service
+   install -Dm0644 "$srcdir/dnsmasq.sysusers" "$pkgdir"/usr/lib/sysusers.d/dnsmasq.conf
+ 
+   sed -i 's,%%PREFIX%%,/usr,' "$pkgdir"/etc/dnsmasq.conf
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,7 @@
++prepare() {
++cd "$pkgname-$pkgver"
++patch -Np1 < ../0001-nettle-4-0.patch
++}
+ build() {
+ cd "$pkgname-$pkgver"
+ make \

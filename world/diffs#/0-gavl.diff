@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gavl
+ pkgver=2.0.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Low level library, upon which multimedia APIs can be built'
+ arch=(x86_64)
+ url='https://github.com/bplaum/gavl'
+@@ -13,6 +13,7 @@
+ 
+ prepare() {
+   cd $pkgname
++  git cherry-pick -n 5b776fe265810ff98f3a4e918d2afb0d337aa965 # support nettle 4
+   autoreconf -fi
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd $pkgname
++git cherry-pick -n 5b776fe265810ff98f3a4e918d2afb0d337aa965 # support nettle 4
+ autoreconf -fi
+ }
+ build() {

@@ -11,6 +11,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+aria2
 at-spi2-core
 at-spi2-core-docs
 at
@@ -112,6 +113,7 @@ dhclient
 dhcpcd
 djvulibre
 dns-over-https
+dnsmasq
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -191,6 +193,7 @@ gamemode
 gamescope
 gammastep
 garcon
+gavl
 gcc12
 gcr-4
 gcr-4-docs
@@ -428,6 +431,7 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
+libwslay
 libxfce4ui
 libxfce4util
 libxklavier
@@ -584,6 +588,7 @@ mutter46
 nanobind
 ndctl
 ndisc6
+neatvnc
 nemo-extensions
 nemo-audio-tab
 nemo-emblems
@@ -735,6 +740,7 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-aiogram
 python-ansicolors
 python-anytree
 python-aresponses
@@ -745,6 +751,7 @@ python-marshmallow
 python-ndg-httpsclient
 python-parse
 python-pip
+python-poetry-core
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -861,10 +868,12 @@ rnnoise
 rocalution
 rocfft
 rocrand
+rpm-sequoia
 rrdtool
 rspamd
 rsync
 rtkit
+rtmpdump
 ruby-bake-modernize
 ruby-rbtree
 ruby-sys-filesystem
@@ -888,6 +897,8 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+sequoia-sq
+sequoia-sqv
 sfml
 shairport-sync
 signal-desktop
@@ -899,6 +910,7 @@ squid
 sshguard
 sslh
 sssd
+stoken
 strongswan
 stunnel
 sway
@@ -1083,6 +1095,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wget
 wildmidi
 wine
 wireplumber
@@ -1172,6 +1185,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yazi
 yubikey-personalization
 zabbix
 zabbix-common
@@ -1182,4 +1196,5 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
+zig
 znc

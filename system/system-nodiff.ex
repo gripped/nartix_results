@@ -18,7 +18,6 @@ cryptsetup
 dash
 db
 db5.3
-debugedit
 dialog
 ding-libs
 dmraid
@@ -27,9 +26,6 @@ dosfstools
 ed
 efibootmgr
 efivar
-elfutils
-libelf
-debuginfod
 expat
 file
 findutils

@@ -95,7 +95,6 @@ archey3
 archlinux-appstream-data
 ardour
 argyllcms
-aria2
 arianna
 aribb24
 aribb25
@@ -470,7 +469,6 @@ dmg2img
 dmidecode
 dns-lexicon
 dnscrypt-proxy
-dnsmasq
 docbook-dsssl
 docbook-sgml
 docbook-sgml31
@@ -715,7 +713,6 @@ fzf
 fzssh
 gajim
 galculator
-gavl
 gcab
 gcc13
 gcc14
@@ -2104,7 +2101,6 @@ libwpe-docs
 libwpg
 libwps
 libwps-doc
-libwslay
 libx11
 libx86
 libx86emu
@@ -2455,7 +2451,6 @@ ncdu
 ncftp
 ncmpcpp
 ncompress
-neatvnc
 neochat
 neofetch
 neomutt
@@ -3218,7 +3213,6 @@ python-adblock
 python-aiobotocore
 python-aiodns
 python-aiofiles
-python-aiogram
 python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-oauthlib
@@ -4042,7 +4036,6 @@ python-plette
 python-pluggy
 python-plumbum
 python-ply
-python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
@@ -4893,7 +4886,6 @@ rofi
 ropgadget
 ropper
 rpcsvc-proto
-rpm-sequoia
 rpm-tools
 rpmextract
 rssguard
@@ -4901,7 +4893,6 @@ rst2pdf
 rtaudio
 rtaudio-docs
 rtl-sdr
-rtmpdump
 rtorrent
 rubberband
 rubberband-ladspa
@@ -5325,8 +5316,6 @@ seabios-docs
 seahorse
 semver
 senpai
-sequoia-sq
-sequoia-sqv
 serd
 serd-docs
 serf
@@ -5427,7 +5416,6 @@ step
 stfl
 stk
 stk-docs
-stoken
 stow
 strace
 strawberry
@@ -5853,7 +5841,6 @@ websocketpp
 weechat
 wf-config
 wf-recorder
-wget
 whois
 wiiuse
 wine-staging
@@ -6016,7 +6003,6 @@ yara
 yarn
 yasm
 yaz
-yazi
 yelp-tools
 yelp-xsl
 yelp
@@ -6046,7 +6032,6 @@ zeroc-ice-java
 zeromq
 zerotier-one
 zfp
-zig
 zimg
 zint
 zint-qt
