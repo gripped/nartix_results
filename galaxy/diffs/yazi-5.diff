@@ -3,15 +3,15 @@
 @@ -1,83 +1,62 @@
  
  pkgname=yazi
--pkgver=26.1.22
--pkgrel=4
+-pkgver=26.5.6
+-pkgrel=2
 +pkgver=25.5.31
 +pkgrel=1
  pkgdesc="Blazing fast terminal file manager written in Rust, based on async I/O"
  url="https://github.com/sxyazi/yazi"
  arch=("x86_64")
  license=('MIT')
--depends=('glibc' 'hicolor-icon-theme' 'jemalloc' 'libgcc' 'lua54' 'oniguruma' 'ttf-nerd-fonts-symbols')
+-depends=('glibc' 'hicolor-icon-theme' 'jemalloc' 'libgcc' 'lua' 'oniguruma' 'ttf-nerd-fonts-symbols')
 +depends=('gcc-libs' 'ttf-nerd-fonts-symbols')
  optdepends=(
 +	'jq: for JSON preview'
@@ -39,14 +39,14 @@
  )
  makedepends=('cargo' 'imagemagick')
  source=("$pkgname-$pkgver.tar.gz::https://github.com/sxyazi/$pkgname/archive/v$pkgver.tar.gz")
--sha256sums=('83b8a1bf166bfcb54b44b966fa3f34afa7c55584bf81d29275a1cdd99d1c9c4c')
+-sha256sums=('a18445df86a20068f7b17609d12d6f635de488958579ae7a2b143a244ba7e63f')
 +sha256sums=('4d005e7c3f32b5574d51ab105597f3da3a4be2f7b5cd1bcb284143ad38253ed4')
  options=('!lto')
  
  prepare() {
    cd "$pkgname-$pkgver"
 -
--  sed -i '/"vendored-lua"/d' yazi-{actor,binding,dds,fm,parser,plugin}/Cargo.toml
+-  find -name Cargo.toml -type f -exec sed -i '/"vendored-lua"/d' {} +
 -
 -  cargo fetch --locked --target host-tuple
 +  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
@@ -128,7 +128,7 @@
  imagemagick
 -jemalloc
 -libgcc
--lua54
+-lua
 -oniguruma
  ttf-nerd-fonts-symbols
 
@@ -137,7 +137,7 @@
 @@ -1,14 +1,9 @@
  prepare() {
  cd "$pkgname-$pkgver"
--sed -i '/"vendored-lua"/d' yazi-{actor,binding,dds,fm,parser,plugin}/Cargo.toml
+-find -name Cargo.toml -type f -exec sed -i '/"vendored-lua"/d' {} +
 -cargo fetch --locked --target host-tuple
 +cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
  }

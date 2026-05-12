@@ -11,7 +11,6 @@ appstream-qt
 apr
 aquamarine
 archivetools
-aria2
 at-spi2-core
 at-spi2-core-docs
 at
@@ -53,7 +52,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
-cccl
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -113,7 +111,6 @@ dhclient
 dhcpcd
 djvulibre
 dns-over-https
-dnsmasq
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -193,14 +190,11 @@ gamemode
 gamescope
 gammastep
 garcon
-gavl
 gcc12
 gcr-4
 gcr-4-docs
 gcr
 gcr-docs
-gdal
-python-gdal
 gdm
 libgdm
 gengetopt
@@ -228,9 +222,6 @@ go-bindata
 godot
 godot-mono
 gperftools
-gradle
-gradle-doc
-gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -291,6 +282,7 @@ haproxy
 haveged
 hexchat
 hidapi
+hipblaslt
 hipcub
 hipfft
 hipsolver
@@ -304,7 +296,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-inkscape
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -351,7 +342,6 @@ js78
 jupyter-server-ydoc
 kcoreaddons
 kdoctools5
-kimageformats
 kinfocenter
 kismet
 kitty
@@ -431,7 +421,6 @@ python-libusbsio
 libutempter
 libvirt
 libvncserver
-libwslay
 libxfce4ui
 libxfce4util
 libxklavier
@@ -466,7 +455,6 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
-lld
 llvm14
 lm_sensors
 localsearch
@@ -585,10 +573,8 @@ mutter
 mutter-docs
 mutter45
 mutter46
-nanobind
 ndctl
 ndisc6
-neatvnc
 nemo-extensions
 nemo-audio-tab
 nemo-emblems
@@ -638,7 +624,6 @@ openrct2
 openresolv
 opensmtpd
 opensnitch
-openvdb
 openvpn
 ostree
 packagekit
@@ -723,7 +708,6 @@ postgresql-old-upgrade
 postgresql
 postgresql-libs
 postgresql-docs
-postorius
 povray
 power-profiles-daemon
 powerdevil
@@ -740,19 +724,17 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
-python-aiogram
 python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-marshmallow
 python-ndg-httpsclient
-python-parse
-python-pip
-python-poetry-core
+python-pydantic-core
+python-pydantic
 python-pymupdf
+python-pypdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
@@ -868,12 +850,12 @@ rnnoise
 rocalution
 rocfft
 rocrand
-rpm-sequoia
+rocsparse
+roctracer
 rrdtool
 rspamd
 rsync
 rtkit
-rtmpdump
 ruby-bake-modernize
 ruby-rbtree
 ruby-sys-filesystem
@@ -898,7 +880,6 @@ sdcv
 sddm
 seatd
 sequoia-sq
-sequoia-sqv
 sfml
 shairport-sync
 signal-desktop
@@ -910,7 +891,6 @@ squid
 sshguard
 sslh
 sssd
-stoken
 strongswan
 stunnel
 sway
@@ -972,7 +952,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-usd
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
@@ -1095,7 +1074,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wget
 wildmidi
 wine
 wireplumber
@@ -1185,7 +1163,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yazi
 yubikey-personalization
 zabbix
 zabbix-common
@@ -1196,5 +1173,5 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
-zig
+zerotier-one
 znc

@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=pacman
- pkgver=7.1.0.r9.g54d9411
--pkgrel=1
-+pkgrel=2
- _git_tag=7.1.0
- _git_patch_level_commit=54d94116164b0b2202c6061c4a59c6f3e70820d8
- pkgdesc="A library-based package manager with dependency support"
 @@ -20,8 +20,7 @@
    grep
    libarchive libarchive.so
@@ -19,12 +10,7 @@
    libmakepkg-dropins
  )
  makedepends=(
-@@ -48,19 +47,26 @@
- source=("git+https://gitlab.archlinux.org/pacman/pacman.git#tag=v${_git_tag}?signed"
-         "revertme-makepkg-remove-libdepends-and-libprovides.patch::https://gitlab.archlinux.org/pacman/pacman/-/commit/354a300cd26bb1c7e6551473596be5ecced921de.patch"
-         "patch-reproducible-builds.patch::https://gitlab.archlinux.org/pacman/pacman/-/commit/f4bdb77470528019aaba4d8b8f947e918c6db17d.patch"
-+        '0001-libalpm-invalidate-curl-data-in-child.patch'
-         pacman.conf
+@@ -53,16 +52,21 @@
          makepkg.conf
          alpm.sysusers
          fortran.conf
@@ -36,10 +22,10 @@
  sha256sums=('74cfd4b6d2b10c742f5a4a7cdaeffb01405ab897b11b80681a9063245113a308'
              'b3bce9d662e189e8e49013b818f255d08494a57e13fc264625f852f087d3def2'
              'de428b496a825772ef49ec5555a386a4b23ffa10b9dfd9907f0671d5c1dc2178'
+             '9a734e5d75be603d58aa92e8d29a15466b3ac2af6b7d6f6728dd5c3e5ed8758d'
 -            'd6f6ca86104df026462ab634efa1ecc850bccfa748ed5a6a88283e7659ec90c5'
 -            '20497c90cbb678a9ca1a71eca66cf2a1d0c991c3e695f7b7d10fb68fc0ac4f12'
 -            '9c14afbc7dabee5a563202c833a043bd3b80c4522f8943c33d550641d7d1bbf1'
-+            '9a734e5d75be603d58aa92e8d29a15466b3ac2af6b7d6f6728dd5c3e5ed8758d'
 +            '3489d68d56fd453fd13cc456cb21014c6dd4fcb1075fe82d3f2f5fa09e729cf6'
 +            '77dbd360964f3c3c86d0a777ca2a6a61ba3f6113578172434cd63515694c708c'
 +            'c79460e7262faad7505163049da520fc0693fe7672eaffdddc739072218ee939'
@@ -51,7 +37,7 @@
  
  pkgver() {
    cd "$pkgname"
-@@ -127,13 +133,5 @@
+@@ -129,13 +133,5 @@
    install -D -m644 "$srcdir/alpm.sysusers" "${pkgdir}"/usr/lib/sysusers.d/alpm.conf
    install -m644 "$srcdir/fortran.conf" "$pkgdir/etc/makepkg.conf.d"
    install -m644 "$srcdir/rust.conf" "$pkgdir/etc/makepkg.conf.d"

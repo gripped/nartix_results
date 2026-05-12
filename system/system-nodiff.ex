@@ -15,9 +15,13 @@ ca-certificates-utils
 coreutils
 cracklib
 cryptsetup
+curl
+libcurl-compat
+libcurl-gnutls
 dash
 db
 db5.3
+debugedit
 dialog
 ding-libs
 dmraid
@@ -26,6 +30,9 @@ dosfstools
 ed
 efibootmgr
 efivar
+elfutils
+libelf
+debuginfod
 expat
 file
 findutils
@@ -49,6 +56,7 @@ hdparm
 hwdata
 iana-etc
 icu
+inetutils
 iproute2
 iptables
 iptables-legacy

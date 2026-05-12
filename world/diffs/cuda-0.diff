@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -111,13 +111,11 @@
+     rm -r "$lib"
+   done
+ 
+-  if [[ $CARCH == "x86_64*" ]]; then
+-    rm -r "${_prepdir}"/opt/cuda/targets/x86_64-linux/include/cccl/
+-    ln -s /usr/include/cccl "${_prepdir}"/opt/cuda/targets/x86_64-linux/include/cccl
+-    rm -r "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake/{cccl,cub,libcudacxx,thrust}
+-    rmdir "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake/
+-    ln -s /usr/lib/cmake "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake
+-  fi
++  rm -r "${_prepdir}"/opt/cuda/targets/x86_64-linux/include/cccl/
++  ln -s /usr/include/cccl "${_prepdir}"/opt/cuda/targets/x86_64-linux/include/cccl
++  rm -r "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake/{cccl,cub,libcudacxx,thrust}
++  rmdir "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake/
++  ln -s /usr/lib/cmake "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake
+ 
+   mv "${_prepdir}"/opt/cuda/extras/CUPTI/include/* "${_prepdir}"/opt/cuda/include/
+   mv "${_prepdir}"/opt/cuda/extras/CUPTI/lib64/* "${_prepdir}"/opt/cuda/lib64/
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -20,13 +20,11 @@
+ cp -alr --force "$lib"/* "${_prepdir}"/opt/cuda/
+ rm -r "$lib"
+ done
+-if [[ $CARCH == "x86_64*" ]]; then
+ rm -r "${_prepdir}"/opt/cuda/targets/x86_64-linux/include/cccl/
+ ln -s /usr/include/cccl "${_prepdir}"/opt/cuda/targets/x86_64-linux/include/cccl
+ rm -r "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake/{cccl,cub,libcudacxx,thrust}
+ rmdir "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake/
+ ln -s /usr/lib/cmake "${_prepdir}"/opt/cuda/targets/x86_64-linux/lib/cmake
+-fi
+ mv "${_prepdir}"/opt/cuda/extras/CUPTI/include/* "${_prepdir}"/opt/cuda/include/
+ mv "${_prepdir}"/opt/cuda/extras/CUPTI/lib64/* "${_prepdir}"/opt/cuda/lib64/
+ rmdir "${_prepdir}"/opt/cuda/extras/CUPTI/{include,lib64}

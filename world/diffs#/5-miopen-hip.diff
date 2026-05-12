@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,131 +1,60 @@
+@@ -1,135 +1,60 @@
  
  pkgname=miopen-hip
--pkgver=7.2.2
+-pkgver=7.2.3
 +pkgver=6.0.2
  pkgrel=1
 -_fdeep_ver=0.15.31
@@ -48,7 +48,7 @@
  conflicts=('miopen')
 +_git='https://github.com/ROCm/MIOpen'
  _mlir='https://github.com/ROCm/rocMLIR'
--_mlir_ver=7.1
+-_mlir_ver=7.2.2
 -_git='https://github.com/ROCm/rocm-libraries'
 -source=(
 -  "rocm-libraries::git+$_git.git#tag=rocm-$pkgver"
@@ -59,7 +59,7 @@
 -)
 -sha256sums=('b476acbcd0f4017c800e4b05533e6dfb875bde32242729c8df557d4624379623'
 -            'SKIP'
--            '52051d393202b5a72824d788fd245fd81bd12e3a88f95969d65031912127f927'
+-            '674cf03c6d5d0fb65e7b57c71cb0671cc29e1672446f4abb39c13cd9296aa9ef'
 -            'f21d7a04cae40af1d843ad9ca81416bb469f0540607f68b2e35b642362c89b42'
 -            'd1e1d55945eded7219c50f59f55967327118d6792df5a283c01131b18a3f061f')
 +source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz"
@@ -80,6 +80,10 @@
 -  git -c protocol.file.allow=always submodule update --init --recursive
 -
 -  sed -i '/add_subdirectory(test)/d' CMakeLists.txt
+-
+-  sed -i 's/return {ovr_rec};/return ovr_rec;/g' src/include/miopen/sqlite_db.hpp
+-  sed -i 's/return {rec};/return rec;/g' src/include/miopen/sqlite_db.hpp
+-  sed -i 's/return {res};/return res;/g' src/find_controls.cpp
 +    sed -i '/add_subdirectory(test)/d' "$_dirname/CMakeLists.txt"
  }
  
@@ -150,7 +154,7 @@
    )
    cmake "${cmake_args[@]}"
    cmake --build build
-@@ -134,5 +63,5 @@
+@@ -138,5 +63,5 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  
@@ -197,13 +201,16 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,51 +1,23 @@
+@@ -1,54 +1,23 @@
  prepare() {
 -cd "$_dirname"
 -git submodule init
 -git config submodule."fin".url "${srcdir}/${pkgname}"-MIFin
 -git -c protocol.file.allow=always submodule update --init --recursive
 -sed -i '/add_subdirectory(test)/d' CMakeLists.txt
+-sed -i 's/return {ovr_rec};/return ovr_rec;/g' src/include/miopen/sqlite_db.hpp
+-sed -i 's/return {rec};/return rec;/g' src/include/miopen/sqlite_db.hpp
+-sed -i 's/return {res};/return res;/g' src/find_controls.cpp
 +sed -i '/add_subdirectory(test)/d' "$_dirname/CMakeLists.txt"
  }
  build() {
@@ -253,7 +260,7 @@
  local cmake_args=(
  -Wno-dev
  -G Ninja
-@@ -54,13 +26,9 @@
+@@ -57,13 +26,9 @@
  -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none -DNDEBUG"
  -D CMAKE_INSTALL_PREFIX=/opt/rocm
  -D CMAKE_BUILD_TYPE=None

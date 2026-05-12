@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=xorg-xwayland
- pkgver=24.1.11
--pkgrel=1
-+pkgrel=2
- arch=('x86_64')
- license=(
-     LicenseRef-Adobe-Display-PostScript
 @@ -29,7 +29,7 @@
           'libei' 'libxshmfence' 'libdecor' 'glibc')
  makedepends=('meson' 'xorgproto' 'xtrans' 'libxkbfile' 'dbus'

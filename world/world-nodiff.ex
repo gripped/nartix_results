@@ -95,6 +95,7 @@ archey3
 archlinux-appstream-data
 ardour
 argyllcms
+aria2
 arianna
 aribb24
 aribb25
@@ -300,6 +301,7 @@ cauchy
 cbatticon
 cbindgen
 ccache
+cccl
 cdparanoia
 cdrdao
 gcdmaster
@@ -469,6 +471,7 @@ dmg2img
 dmidecode
 dns-lexicon
 dnscrypt-proxy
+dnsmasq
 docbook-dsssl
 docbook-sgml
 docbook-sgml31
@@ -713,10 +716,14 @@ fzf
 fzssh
 gajim
 galculator
+gavl
 gcab
 gcc13
 gcc14
+gcc15
 gd
+gdal
+python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
@@ -868,6 +875,9 @@ gphoto2
 gpicview
 gpsd
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
@@ -1041,7 +1051,6 @@ hip-runtime-amd
 hip-runtime-nvidia
 hipblas-common
 hipblas
-hipblaslt
 hipify-clang
 hiprand
 hiprt
@@ -1124,6 +1133,7 @@ inchi
 incidenceeditor
 indent
 iniparser
+inkscape
 innoextract
 inotify-tools
 intel-compute-runtime
@@ -1420,6 +1430,7 @@ kig
 kigo
 killbots
 kimageannotator
+kimageformats
 kimageformats5
 kimagemapeditor
 kimap
@@ -2101,6 +2112,7 @@ libwpe-docs
 libwpg
 libwps
 libwps-doc
+libwslay
 libx11
 libx86
 libx86emu
@@ -2170,6 +2182,7 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
+lld
 lld16
 lld18
 lld19
@@ -2437,6 +2450,7 @@ mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
+nanobind
 nanomsg
 nanosvg
 nasm
@@ -2451,6 +2465,7 @@ ncdu
 ncftp
 ncmpcpp
 ncompress
+neatvnc
 neochat
 neofetch
 neomutt
@@ -2463,6 +2478,7 @@ netcdf
 netcf
 netpbm
 netsurf-buildsystem
+nettle3
 network-manager-applet
 nm-connection-editor
 networkmanager-openvpn
@@ -2612,6 +2628,7 @@ opensubdiv
 opentimelineio
 openucc
 openucx
+openvdb
 openvkl
 openvr
 openvswitch
@@ -3107,6 +3124,7 @@ postfix-pgsql
 postfix-sqlite
 postgis
 postgrey
+postorius
 potrace
 powerline
 powerline-fonts
@@ -3213,6 +3231,7 @@ python-adblock
 python-aiobotocore
 python-aiodns
 python-aiofiles
+python-aiogram
 python-aiohappyeyeballs
 python-aiohttp-cors
 python-aiohttp-oauthlib
@@ -3849,6 +3868,7 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
+python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -3976,6 +3996,7 @@ python-pandocfilters
 python-parameterized
 python-paramiko
 python-parse-type
+python-parse
 python-parsedatetime
 python-parso
 python-partd
@@ -4021,6 +4042,7 @@ python-pikepdf
 python-pillow
 python-pint
 python-pip-run
+python-pip
 python-pipcl
 python-pipenv-to-requirements
 python-pipenv
@@ -4036,6 +4058,7 @@ python-plette
 python-pluggy
 python-plumbum
 python-ply
+python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
@@ -4107,10 +4130,8 @@ python-pycryptodome
 python-pycryptodomex
 python-pycuda
 python-pycurl
-python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
-python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
@@ -4170,7 +4191,6 @@ python-pyotp
 python-pypandoc
 python-pyparsing
 python-pypcode
-python-pypdf
 python-pyperclip
 python-pypng
 python-pyppeteer
@@ -4879,13 +4899,12 @@ rocprim
 rocprofiler-register
 rocs
 rocsolver
-rocsparse
 rocthrust
-roctracer
 rofi
 ropgadget
 ropper
 rpcsvc-proto
+rpm-sequoia
 rpm-tools
 rpmextract
 rssguard
@@ -4893,6 +4912,7 @@ rst2pdf
 rtaudio
 rtaudio-docs
 rtl-sdr
+rtmpdump
 rtorrent
 rubberband
 rubberband-ladspa
@@ -5316,6 +5336,7 @@ seabios-docs
 seahorse
 semver
 senpai
+sequoia-sqv
 serd
 serd-docs
 serf
@@ -5416,6 +5437,7 @@ step
 stfl
 stk
 stk-docs
+stoken
 stow
 strace
 strawberry
@@ -5746,6 +5768,7 @@ unzip
 upx
 uriparser
 usbredir
+usd
 usort
 utf8cpp
 uthash
@@ -5841,6 +5864,7 @@ websocketpp
 weechat
 wf-config
 wf-recorder
+wget
 whois
 wiiuse
 wine-staging
@@ -6003,6 +6027,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp
@@ -6030,8 +6055,8 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zeromq
-zerotier-one
 zfp
+zig
 zimg
 zint
 zint-qt

@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,34 +1,37 @@
+@@ -1,35 +1,37 @@
 -
  pkgname=rocfft
--pkgver=7.2.2
+-pkgver=7.2.3
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='Next generation FFT implementation for ROCm'
@@ -13,20 +13,22 @@
  license=('MIT')
 -depends=('rocm-core' 'hip-runtime-amd' 'glibc' 'libgcc')
 -makedepends=('cmake' 'rocm-cmake' 'rocm-toolchain')
+-_git='https://github.com/ROCm/rocm-libraries'
+-source=("rocm-libraries-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-$pkgver.tar.gz")
+-sha256sums=('300cc50720d40bad7c7ed1f6d67e8c5ebecaba62c07a6ea1cc5813c0ea2e41b5')
 +depends=('hip' 'python')
 +makedepends=('rocm-cmake')
- _git='https://github.com/ROCmSoftwarePlatform/rocFFT'
--source=("$pkgname-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/releases/download/rocm-$pkgver/$pkgname.tar.gz")
--sha256sums=('a0f401cd59c169a1295a0fe477622c3b7f7004b55cd9b1cfbbf6d39a3fec8e83')
++_git='https://github.com/ROCmSoftwarePlatform/rocFFT'
 +source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('fb8ba56572702e77e4383d922cd1fee4ad3fa5f63a5ebdb3d9c354439a446992')
  options=(!lto)
+-_dirname="rocm-libraries-rocm-$pkgver/projects/$pkgname"
 +_dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
  
  build() {
 -  local cmake_args=(
 -    -Wno-dev
--    -S "$pkgname"
+-    -S "$_dirname"
 -    -B build
 -    -D CMAKE_BUILD_TYPE=None
 -    -D CMAKE_CXX_COMPILER=amdclang++
@@ -50,7 +52,7 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
--  install -Dm644 "$pkgname/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+-  install -Dm644 "$_dirname/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 +
 +  echo "/opt/rocm/$pkgname/lib" > "$pkgname.conf"
 +  install -Dm644 "$pkgname.conf" "$pkgdir/etc/ld.so.conf.d/rocfft.conf"
@@ -80,7 +82,7 @@
  build() {
 -local cmake_args=(
 --Wno-dev
---S "$pkgname"
+--S "$_dirname"
 --B build
 --D CMAKE_BUILD_TYPE=None
 --D CMAKE_CXX_COMPILER=amdclang++

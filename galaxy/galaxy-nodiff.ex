@@ -28,7 +28,6 @@ bcc-libbpf-tools
 bcc-examples
 python-bcc
 bleachbit
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -106,6 +105,7 @@ cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers
 cosmic-workspaces
+cpptrace
 cvs
 dbeaver
 dillo
@@ -197,6 +197,7 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
+lact
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -509,6 +510,7 @@ python-linux-procfs
 python-lxml-html-clean
 python-multivolumefile
 python-pdftotext
+python-poetry-core
 python-py7zr
 python-pybcj
 python-pybluez

@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,13 @@
- 
- pkgname=squid
- pkgver=7.5
--pkgrel=1
-+pkgrel=2
- pkgdesc='Full-featured Web proxy cache server'
+@@ -6,8 +6,8 @@
  arch=('x86_64')
  url='http://www.squid-cache.org'
  depends=('openssl' 'pam' 'perl' 'libltdl' 'libcap' 'nettle' 'gnutls' 'libnsl' 'libxml2'
@@ -17,21 +11,21 @@
  optdepends=('libldap')
  license=('GPL')
  options=('emptydirs')
-@@ -23,22 +23,20 @@
+@@ -23,21 +23,16 @@
          'squid.pam'
          'squid.tmpfiles'
          'squid.sysusers'
 -        'squid-rotate.service'
--        'squid-rotate.timer')
-+         nettle-4.patch)
+-        'squid-rotate.timer'
+          nettle-4.patch)
  sha256sums=('f6058907db0150d2f5d228482b5a9e5678920cf368ae0ccbcecceb2ff4c35106'
              'SKIP'
              '11fb388f8679fd6461e0de006810ea608a3686fffda16904b0ed71f412be499c'
              '495f54e51f6ec1e4dce87090d76718aea1eb37559c4439d876dd39598163062a'
              'b13c6c17ba8d24fa9414ba3c0aa92863dccce720930a0dd53acc1c0e32041e5a'
 -            '3a97aa6bf6dcdc427e73bb2f36afdeaaf2bbf7dd2c0bbb7f1a948850198a8b7c'
--            '8bc77fa1f653a17a4956feac042be9577ba30a8a43480b443fbd67640ae711ee')
-+            'd0cef79717db6d547d776eac61195430933ae7a5ffc24403bde44175b3eb373b')
+-            '8bc77fa1f653a17a4956feac042be9577ba30a8a43480b443fbd67640ae711ee'
+             'd0cef79717db6d547d776eac61195430933ae7a5ffc24403bde44175b3eb373b')
  
  prepare() {
    cd "$srcdir/$pkgname-$pkgver"
@@ -39,11 +33,7 @@
    for p in ${source[@]}; do
      test "${p:(-5)}" == "patch" && patch -p1 -i ../${p:(-46)} || true
    done
-+  patch -p1 -i ../nettle-4.patch
- }
- 
- build() {
-@@ -96,12 +94,6 @@
+@@ -99,12 +94,6 @@
    install -Dm644 "$srcdir/squid.pam" "$pkgdir/usr/lib/pam.d/squid"
    install -Dm644 "$srcdir/squid.tmpfiles" "$pkgdir/usr/lib/tmpfiles.d/squid.conf"
    install -Dm644 "$srcdir/squid.sysusers" "$pkgdir/usr/lib/sysusers.d/squid.conf"

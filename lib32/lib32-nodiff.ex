@@ -11,6 +11,9 @@ lib32-cairo
 lib32-cdparanoia
 lib32-clang
 lib32-cmocka
+lib32-curl
+lib32-libcurl-compat
+lib32-libcurl-gnutls
 lib32-dconf
 lib32-directx-headers
 lib32-duktape
@@ -64,6 +67,7 @@ lib32-libdecor
 lib32-libdisplay-info
 lib32-libdrm
 lib32-libdv
+lib32-libelf
 lib32-libffi
 lib32-libgcrypt
 lib32-libglvnd

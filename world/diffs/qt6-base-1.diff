@@ -1,39 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,7 +4,7 @@
-          qt6-xcb-private-headers)
- _pkgver=6.11.0
- pkgver=${_pkgver/-/}
--pkgrel=3
-+pkgrel=4
- arch=(x86_64)
- url='https://www.qt.io'
- license=(GPL-3.0-only
-@@ -17,7 +17,6 @@
-          double-conversion
-          fontconfig
-          freetype2
--         gcc-libs
-          glib2
-          glibc
-          harfbuzz
-@@ -26,6 +25,7 @@
-          libb2
-          libcups
-          libdrm
-+         libgcc
-          libgl
-          libice
-          libinput
-@@ -33,6 +33,7 @@
-          libpng
-          libproxy
-          libsm
-+         libstdc++
-          liburing
-          libx11
-          libxcb
-@@ -45,7 +46,7 @@
+@@ -46,7 +46,7 @@
           pcre2
           shared-mime-info
           sqlite
@@ -42,7 +9,7 @@
           tslib
           wayland
           xcb-util-cursor
-@@ -118,12 +119,13 @@
+@@ -119,7 +119,7 @@
      -DINSTALL_INCLUDEDIR=include/qt6 \
      -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
      -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
@@ -51,45 +18,21 @@
      -DFEATURE_libproxy=ON \
      -DFEATURE_openssl_linked=ON \
      -DFEATURE_system_sqlite=ON \
-     -DFEATURE_system_xcb_xinput=ON \
-     -DFEATURE_no_direct_extern_access=$_no_direct_extern_access \
-+    -DFEATURE_mimetype_database=OFF \
-     -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
-     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
-   cmake --build build
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -7,7 +7,6 @@
- fontconfig
- freetds
- freetype2
--gcc-libs
- git
- glib2
- glibc
-@@ -20,7 +19,9 @@
+@@ -19,6 +19,7 @@
  libb2
  libcups
  libdrm
 +libelogind
  libfbclient
-+libgcc
+ libgcc
  libgl
- libice
- libinput
-@@ -29,6 +30,7 @@
- libproxy
- libpulse
- libsm
-+libstdc++
- liburing
- libx11
- libxcb
-@@ -47,7 +49,6 @@
+@@ -48,7 +49,6 @@
  renderdoc
  shared-mime-info
  sqlite

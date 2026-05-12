@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,35 +1,26 @@
+@@ -1,28 +1,18 @@
  
  pkgname=hipfft
--pkgver=7.2.2
+-pkgver=7.2.3
 +pkgver=6.0.2
  pkgrel=1
  pkgdesc='rocFFT marshalling library.'
@@ -23,21 +23,21 @@
 -  'rocm-cmake'
 -)
 -_git='https://github.com/ROCm/rocm-libraries'
--source=("$pkgname-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/releases/download/rocm-$pkgver/$pkgname.tar.gz")
--sha256sums=('beb4328f1c8c68e1237eab96b984147d010381601c8b7ceb01769d99978105ab')
+-source=("rocm-libraries-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-$pkgver.tar.gz")
+-sha256sums=('300cc50720d40bad7c7ed1f6d67e8c5ebecaba62c07a6ea1cc5813c0ea2e41b5')
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'hip' 'rocfft')
 +makedepends=('cmake' 'rocm-cmake' 'git')
 +_git='https://github.com/ROCm/hipFFT'
 +source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
 +sha256sums=('c0a4bac5fa9a757a19a4995fa9571328b6ee0a71e93c66a880069794d65d284a')
  options=(!lto)
+-_dirname="rocm-libraries-rocm-$pkgver/projects/$pkgname"
 +_dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
  
  build() {
    local cmake_args=(
-     -Wno-dev
--    -S "$pkgname"
-+    -S "$_dirname"
+@@ -30,7 +20,7 @@
+     -S "$_dirname"
      -B build
      -D CMAKE_BUILD_TYPE=None
 -    -D CMAKE_CXX_COMPILER=amdclang++
@@ -45,13 +45,6 @@
      -D CMAKE_CXX_FLAGS="${CXXFLAGS} -fcf-protection=none"
      -D CMAKE_INSTALL_PREFIX=/opt/rocm
    )
-@@ -40,5 +31,5 @@
- package() {
-   DESTDIR="$pkgdir" cmake --install build
- 
--  install -Dm644 "$srcdir/$pkgname/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-+  install -Dm644 "$srcdir/$_dirname/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
- }
 
 
 ############# Stripped diff below #################
@@ -72,12 +65,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,10 +1,10 @@
- build() {
- local cmake_args=(
- -Wno-dev
---S "$pkgname"
-+-S "$_dirname"
+@@ -4,7 +4,7 @@
+ -S "$_dirname"
  -B build
  -D CMAKE_BUILD_TYPE=None
 --D CMAKE_CXX_COMPILER=amdclang++

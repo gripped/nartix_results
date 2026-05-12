@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,7 +25,10 @@
+   zlib
+   zstd
+ )
+-options=(staticlibs)
++options=(
++  staticlibs
++  debug
++)
+ source=(git+$_url?signed#tag=$pkgbase-$pkgver
+         "remove-comment.patch")
+ sha512sums=('7bbc1db55939e999683ccff41f287433ed926e255b4a35048812bc85505a1b3339828691691c769c4d79347f513792356c2d6b1727eabe0fd720722f7076643e'
+@@ -98,7 +101,7 @@
+ 
+   make DESTDIR="$pkgdir" install -C $pkgbase
+ 
+-  echo "https://debuginfod.archlinux.org" > "$pkgdir/etc/debuginfod/archlinux.urls"
++  echo "https://debuginfod.artixlinux.org" > "$pkgdir/etc/debuginfod/artixlinux.urls"
+ 
+   (
+     cd "$pkgdir"

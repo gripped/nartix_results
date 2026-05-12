@@ -1,22 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=chrony
- pkgver=4.8
--pkgrel=2
-+pkgrel=3
- pkgdesc='Lightweight NTP client and server'
- url=https://chrony-project.org/
- arch=('x86_64')
-@@ -36,13 +36,13 @@
- 
- prepare() {
-   cd $pkgname
-+  git cherry-pick -n fee12ec914cce805cc704a4c2804d75b4933ad2f # Fix build with nettle 4.0
-   sed -i \
-     -e 's|pool pool.ntp.org|pool 2.arch.pool.ntp.org|g' \
-     -e 's|server ntp1.example.net|server 0.arch.pool.ntp.org|g' \
+@@ -43,7 +43,6 @@
      -e 's|server ntp2.example.net|server 1.arch.pool.ntp.org|g' \
      -e 's|server ntp3.example.net|server 3.arch.pool.ntp.org|g' \
      examples/chrony.conf.example*
@@ -24,7 +8,7 @@
    echo $pkgver > version.txt
  }
  
-@@ -71,11 +71,9 @@
+@@ -72,11 +71,9 @@
  
    install -vDm 644 "${srcdir}/chrony.sysusers" "${pkgdir}/usr/lib/sysusers.d/chrony.conf"
    install -vDm 644 "${srcdir}/chrony.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/chrony.conf"
@@ -44,13 +28,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
- prepare() {
- cd $pkgname
-+git cherry-pick -n fee12ec914cce805cc704a4c2804d75b4933ad2f # Fix build with nettle 4.0
- sed -i \
- -e 's|pool pool.ntp.org|pool 2.arch.pool.ntp.org|g' \
- -e 's|server ntp1.example.net|server 0.arch.pool.ntp.org|g' \
+@@ -7,7 +7,6 @@
  -e 's|server ntp2.example.net|server 1.arch.pool.ntp.org|g' \
  -e 's|server ntp3.example.net|server 3.arch.pool.ntp.org|g' \
  examples/chrony.conf.example*

@@ -1,23 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=libdrm
--pkgver=2.4.131
-+pkgver=2.4.133
- pkgrel=1
- pkgdesc="Userspace interface to kernel DRM services"
- url="https://dri.freedesktop.org/"
-@@ -13,13 +13,13 @@
- replaces=('libdrm-new' 'libdrm-nouveau')
- source=(https://dri.freedesktop.org/$pkgname/$pkgname-$pkgver.tar.xz{,.sig}
-         COPYING)
--sha512sums=('d75894215600b648e25bbe13422901b650fb94bba8276d77971a49db7dc001819c9fc4b7e90ed82275f170a331687960ca5752cbb12064b2eec9c5c8eb60bf3c'
-+sha512sums=('2b8016f64d2553c6cec4870b01820c48eb3985cadc4e39846bcc54db6bcec9435f65ba7749fc8271020317489bc05625e991383569cba803cca85c686d1f4568'
-             'SKIP'
-             'b0ca349b882a4326b19f81f22804fabdb6fb7aef31cdc7b16b0a7ae191bfbb50c7daddb2fc4e6c33f1136af06d060a273de36f6f3412ea326f16fa4309fda660')
--validpgpkeys=('34FF9526CFEF0E97A340E2E40FDE7BE0E88F5E48') # emersion <contact@emersion.fr>
-+validpgpkeys=('9DA7C211125935E1D6CED9BD34937756138E7D52') # Samuel Pitoiset <hakzsam@gmail.com>
+@@ -19,7 +19,7 @@
+ validpgpkeys=('9DA7C211125935E1D6CED9BD34937756138E7D52') # Samuel Pitoiset <hakzsam@gmail.com>
  
  build() {
 -  arch-meson $pkgname-$pkgver build \

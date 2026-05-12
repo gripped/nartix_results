@@ -225,7 +225,6 @@ fwknop-dinit
 fwknop-openrc
 fwknop-runit
 fwknop-s6
-gcc15
 gdm-dinit
 gdm-openrc
 gdm-runit
@@ -378,7 +377,6 @@ mpd-openrc
 mpd-runit
 mpd-s6
 net-snmp-openrc
-nettle3
 networkmanager-dinit
 networkmanager-openrc
 networkmanager-runit

@@ -1,12 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
- 
--pkgver=41
-+pkgver=42
- pkgrel=1
- epoch=1
- pkgname=electron
 @@ -10,7 +10,7 @@
  depends=("electron$pkgver")
  
@@ -18,12 +11,3 @@
 +  ln -sf "${depends[0]}" "$pkgdir/usr/bin/$pkgname"
 +  ln -sf "${depends[0]}" "$pkgdir/usr/lib/$pkgname"
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1 +1 @@
--electron41
-+electron42

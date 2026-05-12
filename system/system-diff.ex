@@ -7,19 +7,12 @@ bash
 binutils
 btrfs-progs
 cronie
-curl
-libcurl-compat
-libcurl-gnutls
 dbus
 dbus-docs
-debugedit
 dhcpcd
 diffutils
 e2fsprogs
 fuse2fs
-elfutils
-libelf
-debuginfod
 fakeroot
 filesystem
 gcc
@@ -39,7 +32,6 @@ gpm
 grep
 gssproxy
 gzip
-inetutils
 iputils
 libsasl
 libusb

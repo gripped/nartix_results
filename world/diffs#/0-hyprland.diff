@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -61,7 +61,6 @@
+             'glaze: to build and install plugins using hyprpm'
+             'hyprland-protocols: to build and install plugins using hyprpm'
+             'meson: to build and install plugins using hyprpm'
+-            'uwsm: an advanced way to start desktop compositors as systemd units'
+             'xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland')
+ provides=(wayland-compositor)
+ _archive="${pkgname^}-$pkgver"
+@@ -76,7 +75,7 @@
+ 
+ build() {
+ 	cd "$_archive"
+-	make release PREFIX=/usr
++	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DNO_SYSTEMD=True
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,5 +5,5 @@
+ }
+ build() {
+ cd "$_archive"
+-make release PREFIX=/usr
++cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DNO_SYSTEMD=True
+ }

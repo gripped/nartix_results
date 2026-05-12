@@ -1,6 +1,7 @@
 alacritty
 alsa-utils
 autorandr
+blender
 bsd-games
 cinnamon-desktop
 cosmic-applets
@@ -28,7 +29,6 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
-lact
 lemurs
 libetonyek
 libmatemixer
@@ -65,7 +65,6 @@ osdlyrics
 p8-platform
 perl-cgi-fast
 perl-curses
-python-poetry-core
 qbittorrent
 qt5-webengine
 rage

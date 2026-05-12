@@ -29,6 +29,7 @@ b43legacy-firmware
 basu
 batticonplus
 birdtray
+caja-gtkhash
 calamares-branding
 calamares
 chcgs
