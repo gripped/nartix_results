@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -43,7 +43,7 @@
+@@ -49,7 +49,7 @@
  }
  
  build() {
@@ -17,8 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,6 +2,6 @@
- cd $pkgname
+@@ -3,6 +3,6 @@
+ git apply -3 ../0001-Support-libical-4.0.0.patch
  }
  build() {
 -arch-meson $pkgname build

@@ -111,6 +111,7 @@ dhclient
 dhcpcd
 djvulibre
 dns-over-https
+dnsmasq
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -395,7 +396,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -570,6 +570,7 @@ musepack
 musepack-tools
 libmpcdec
 mutter
+mutter-devkit
 mutter-docs
 mutter45
 mutter46
@@ -730,6 +731,7 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-idna
 python-ndg-httpsclient
 python-pydantic-core
 python-pydantic
@@ -740,6 +742,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-twisted
 qastools
 qbittorrent
 qbittorrent-nox
@@ -879,7 +882,6 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
-sequoia-sq
 sfml
 shairport-sync
 signal-desktop

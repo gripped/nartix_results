@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,88 +1,71 @@
+@@ -1,95 +1,71 @@
  
  pkgname=scribus
 -pkgver=1.6.6
--pkgrel=3
+-pkgrel=4
 +pkgver=1.5.8
 +pkgrel=24
  pkgdesc="Desktop publishing software"
@@ -58,9 +58,9 @@
 +            'hyphen-lang: hyphenation patterns for desired languages')
  options=(!lto)
 -_archive="$pkgname-$pkgver"
--source=("https://downloads.sourceforge.net/${pkgname}/$_archive.tar.xz"{,.asc})
+-source=("https://downloads.sourceforge.net/${pkgname}/$_archive.tar.xz"{,.asc}
+-        "fix_build_with_poppler_26.05.patch::https://github.com/scribusproject/scribus/commit/14a287fc1db2a44abfe1743260554447b31b4adf.patch?full_index=1")
 -sha256sums=('fdfe3e7cbe84b760b38d0561ed8736f9d25d4923adde6e15e03760d83be6166d'
--            'SKIP')
 +source=("https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.xz"{,.asc}
 +        $pkgname-poppler-22.02.0.patch::https://github.com/scribusproject/scribus/commit/85c0dff3422f.patch
 +        $pkgname-poppler-22.02.0-fixup.patch::https://github.com/scribusproject/scribus/commit/f75c1613db67.patch
@@ -68,7 +68,8 @@
 +        $pkgname-poppler-22.04.0.patch::https://github.com/scribusproject/scribus/commit/f2237b8f0b5c.patch
 +	scribus-1.5.8-poppler-22.09.0.patch)
 +sha256sums=('47816e8fcf6d05788ff16aa4499f97ff22431c777a7789149b0a88b451e16b74'
-+            'SKIP'
+             'SKIP'
+-            'e84b3f12333cac812c942b85f06403669ad3792bdae821a7e95fa9a3258e1cda')
 +            '718ae9c882889b56919ab9718185b915a75e75e193a028539722b537f528c3dd'
 +            '2b57c0c6dbc93037b83e392d4721523efbccd8af1fe6fc11a26f1d2933b14a85'
 +            '986717d7c99a418d765e6b3d8b37165067548e62b6febb9c31f8831689f3540e'
@@ -85,7 +86,11 @@
 -	else
 -		echo "$pkgver"
 -	fi
-+prepare() {
+-}
+-
+ prepare() {
+-	cd "$_archive"
+-	patch -Np1 -i "$srcdir/fix_build_with_poppler_26.05.patch"
 +  cd ${pkgname}-${pkgver}
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +  patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
@@ -206,15 +211,17 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,13 +1,21 @@
-+prepare() {
+@@ -1,17 +1,21 @@
+ prepare() {
+-cd "$_archive"
+-patch -Np1 -i "$srcdir/fix_build_with_poppler_26.05.patch"
 +cd ${pkgname}-${pkgver}
 +patch -Np1 -i ../$pkgname-poppler-22.02.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.02.0-fixup.patch
 +patch -Np1 -i ../$pkgname-poppler-22.03.0.patch
 +patch -Np1 -i ../$pkgname-poppler-22.04.0.patch
 +patch -Np1 -i ../scribus-1.5.8-poppler-22.09.0.patch
-+}
+ }
  build() {
 -local cmake_options=(
 --D CMAKE_INSTALL_PREFIX=/usr

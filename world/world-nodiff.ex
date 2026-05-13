@@ -471,7 +471,6 @@ dmg2img
 dmidecode
 dns-lexicon
 dnscrypt-proxy
-dnsmasq
 docbook-dsssl
 docbook-sgml
 docbook-sgml31
@@ -1834,6 +1833,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -3669,6 +3669,9 @@ python-graphql-core
 python-graphql-relay
 python-graphviz
 python-greenlet
+python-griffe
+python-griffelib
+python-griffecli
 python-gssapi
 python-guzzle-sphinx-theme
 python-h11
@@ -3718,7 +3721,6 @@ python-ibm-db-sa
 python-icecream
 python-id
 python-identify
-python-idna
 python-ifaddr
 python-ijson
 python-imagesize
@@ -4569,7 +4571,6 @@ python-trio
 python-trove-classifiers
 python-trustme
 python-truststore
-python-twisted
 python-txaio
 python-txredisapi
 python-txrequests
@@ -5336,6 +5337,7 @@ seabios-docs
 seahorse
 semver
 senpai
+sequoia-sq
 sequoia-sqv
 serd
 serd-docs

@@ -1,71 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=gnome-settings-daemon
--pkgver=50.1
-+pkgver=48.1
- pkgrel=1
- pkgdesc="GNOME Settings Daemon"
- url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
-@@ -12,20 +12,21 @@
- depends=(
-   alsa-lib
-   bash
-+  cairo
-   dconf
-   fontconfig
-+  gcc-libs
-   gcr-4
-   geoclue
-   geocode-glib-2
-   glib2
-   glibc
--  gnome-desktop-4
-+  gnome-desktop
-   gsettings-desktop-schemas
--  gtk4
-+  gtk3
-   libcanberra-pulse
-   libcolord
-   libcups
--  libgcc
-   libgudev
-   libgweather-4
-   libmm-glib
-@@ -33,12 +34,21 @@
-   libnotify
-   libp11-kit
-   libpulse
-+  librsvg
-+  libwacom
-   libx11
-+  libxext
+@@ -37,7 +37,7 @@
    libxfixes
-+  libxi
-+  nss
-+  pango
    polkit
    pulse-native-provider
 -  systemd-libs
-+  elogind
 +  libelogind
    upower
-+  wayland
-+  xorg-xrdb
  )
  makedepends=(
-   docbook-xsl
-@@ -60,7 +70,7 @@
-   "git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#tag=${pkgver/[a-z]/.&}"
-   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
+@@ -47,6 +47,7 @@
+   libxslt
+   meson
+   python
++  udev
+   usbguard
  )
--b2sums=('0b410617b89c8b3956086cecdd66704c73d3e57c64888a5c510d6eb4c43efa112c578a0cf2eda1e9729e631ac7f6201dcd2cd3c97eddb15ec316ba6bba55887e'
-+b2sums=('58eefca256c425049936de5f7e58b35dad065f9a659a1ba89a8a15f9e2bbbc9a698f0e295f8bb2ff24b8f76ff9ece6a77244068452a69c4ba6bd32c669babbec'
-         'SKIP')
- 
- prepare() {
-@@ -72,7 +82,7 @@
+ checkdepends=(
+@@ -72,7 +73,7 @@
  }
  
  build() {
@@ -80,54 +32,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,11 @@
- alsa-lib
- bash
-+cairo
- dconf
- docbook-xsl
-+elogind
- fontconfig
-+gcc-libs
- gcr-4
- geoclue
- geocode-glib-2
-@@ -10,13 +13,13 @@
- glib2
- glib2-devel
- glibc
--gnome-desktop-4
-+gnome-desktop
- gsettings-desktop-schemas
--gtk4
-+gtk3
+@@ -16,6 +16,7 @@
  libcanberra-pulse
  libcolord
  libcups
--libgcc
 +libelogind
+ libgcc
  libgudev
  libgweather-4
- libmm-glib
-@@ -24,13 +27,20 @@
- libnotify
- libp11-kit
- libpulse
-+librsvg
-+libwacom
- libx11
-+libxext
- libxfixes
-+libxi
- libxslt
- meson
-+nss
-+pango
+@@ -31,6 +32,6 @@
  polkit
  pulse-native-provider
  python
 -systemd-libs
++udev
  upower
  usbguard
-+wayland
-+xorg-xrdb

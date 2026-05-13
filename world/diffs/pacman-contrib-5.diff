@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,12 +22,15 @@
+   'vim: default diff program for pacdiff'
+   'neovim: default diff program for pacdiff if EDITOR=nvim'
+ )
+-source=("git+$url.git#tag=v$pkgver")
+-b2sums=('cf1396aa108c6742d74a369456dfdf6a83286c0e8996b730ed16fa8907d0253ebb49ddcd6b548959d5df8d30af223d7883bbabda9e1dfb006d175400e37a105f')
++source=("git+$url.git#tag=v$pkgver"
++        pacman-contrib-artix.patch)
++b2sums=('cf1396aa108c6742d74a369456dfdf6a83286c0e8996b730ed16fa8907d0253ebb49ddcd6b548959d5df8d30af223d7883bbabda9e1dfb006d175400e37a105f'
++        'e7ec0e49e94c9d1ad2ddfd748966431759b57181e96bea93e60ae6451556fc7d258ed1d1b10f40f123adf442839f2b5b4306e3cf23a7383ae7fcae8930a01157')
+ validpgpkeys=(04DC3FB1445FECA813C27EFAEA4F7B321A906AD9 44A62127789A949F2F082ED429C71CE612B57264) # Daniel M. Capella <polyzen@archlinux.org>
+ 
+ prepare() {
+   cd $pkgname
++  patch -Np 1 -i ../pacman-contrib-artix.patch
+   ./autogen.sh
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +0,0 @@
+-asciidoc
+-git
+-pacman
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ prepare() {
+ cd $pkgname
++patch -Np 1 -i ../pacman-contrib-artix.patch
+ ./autogen.sh
+ }
+ build() {

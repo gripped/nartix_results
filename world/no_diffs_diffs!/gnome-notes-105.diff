@@ -4,8 +4,8 @@
      -D update_mimedb=false
    )
  
--  arch-meson $pkgname build "${meson_options[@]}"
-+  artix-meson $pkgname build "${meson_options[@]}"
+-  arch-meson bijiben build "${meson_options[@]}"
++  artix-meson bijiben build "${meson_options[@]}"
    meson compile -C build
  }
  
@@ -21,7 +21,7 @@
  local meson_options=(
  -D update_mimedb=false
  )
--arch-meson $pkgname build "${meson_options[@]}"
-+artix-meson $pkgname build "${meson_options[@]}"
+-arch-meson bijiben build "${meson_options[@]}"
++artix-meson bijiben build "${meson_options[@]}"
  meson compile -C build
  }

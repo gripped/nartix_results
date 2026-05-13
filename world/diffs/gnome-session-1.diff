@@ -1,77 +1,37 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,48 +1,57 @@
- 
- pkgname=gnome-session
--pkgver=50.0
-+pkgver=48.0
- pkgrel=1
- pkgdesc="The GNOME Session Handler"
- url="https://gitlab.gnome.org/GNOME/gnome-session"
- arch=(x86_64)
- license=(GPL-2.0-or-later)
- depends=(
-+  bash
-   dconf
-+  gcc-libs
-   glib2
-   glibc
--  gnome-desktop-4
-+  gnome-desktop
-+  gnome-keyring
-+  gnome-mimeapps
+@@ -13,7 +13,7 @@
+   gnome-desktop-4
    gsettings-desktop-schemas
--  libgcc
+   libgcc
 -  systemd-libs
-+  gtk3
-+  json-glib
-+  libepoxy
-+  libgl
-+  libice
-+  libsm
-+  libx11
-+  libxcomposite
-+  libxtst
 +  libelogind
    xdg-desktop-portal-gnome
  )
  makedepends=(
-   docbook-xsl
-   git
-   glib2-devel
--  libxslt
-+  gtk-doc
-+  mesa
-   meson
-+  python
-   xmlto
-+  xtrans
- )
--optdepends=('gnome-keyring: Secrets service backend')
--conflicts=(gnome-mimeapps)
--replaces=(gnome-mimeapps)
--provides=(gnome-mimeapps)
+@@ -29,11 +29,14 @@
+ replaces=(gnome-mimeapps)
+ provides=(gnome-mimeapps)
  groups=(gnome)
 -source=("git+https://gitlab.gnome.org/GNOME/gnome-session.git#tag=${pkgver/[a-z]/.&}")
 -b2sums=('255580de8e1a260d7d677049abac79e782e675d979de390209fab824b0fdb6d683916abd85f5e9c3fda33f19a97c9a6fbc5ad3cc171697c9286d418a56f98190')
 +source=("git+https://gitlab.gnome.org/GNOME/gnome-session.git#tag=${pkgver/[a-z]/.&}"
-+        "0001-meson-add-logind-provider-option.patch")
-+b2sums=('e7364791aae9fe2be01dc907218b5208eb7cb7aa27e18f34b41502459aab1333327ba0c82511d0021ee20758eb3dace4145be2a6776ee2cc90c8b04d4bcb738d'
-+        '016b4861e92f75c2a880f5479d6c05970949955b4682474f327356520d1198fc96f20fccfd34a65261a97de70f47e62996df9d4884f9a5704ff73f2b9f14e8d7')
++        0001-meson-allow-building-with-elogind.patch)
++b2sums=('255580de8e1a260d7d677049abac79e782e675d979de390209fab824b0fdb6d683916abd85f5e9c3fda33f19a97c9a6fbc5ad3cc171697c9286d418a56f98190'
++        '0685ff053573841b23fe427e79bc9e42aaef92017f479b59347645083830efbe9a08a27d62afb74d0cdc1b5e341be5139b3d8eeb194d3b322f272aaf0d40da4f')
  
  prepare() {
    cd $pkgname
-+  git apply -3 ../0001-meson-add-logind-provider-option.patch
++  patch -Np1 -i ../0001-meson-allow-building-with-elogind.patch
  }
  
  build() {
--  local meson_options=(
--    -D docbook=true
--    -D man=true
--  )
--
+@@ -42,7 +45,7 @@
+     -D man=true
+   )
+ 
 -  arch-meson $pkgname build "${meson_options[@]}"
-+  artix-meson $pkgname build -Dlogind_provider=elogind
++  artix-meson $pkgname build "${meson_options[@]}"
    meson compile -C build
  }
  
@@ -81,37 +41,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,14 +1,29 @@
-+bash
- dconf
- docbook-xsl
-+gcc-libs
- git
- glib2
- glib2-devel
+@@ -6,9 +6,9 @@
  glibc
--gnome-desktop-4
-+gnome-desktop
-+gnome-keyring
-+gnome-mimeapps
+ gnome-desktop-4
  gsettings-desktop-schemas
--libgcc
--libxslt
-+gtk-doc
-+gtk3
-+json-glib
 +libelogind
-+libepoxy
-+libgl
-+libice
-+libsm
-+libx11
-+libxcomposite
-+libxtst
-+mesa
+ libgcc
+ libxslt
  meson
 -systemd-libs
-+python
  xdg-desktop-portal-gnome
  xmlto
-+xtrans

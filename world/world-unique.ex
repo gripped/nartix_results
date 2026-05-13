@@ -257,6 +257,7 @@ hostapd-dinit
 hostapd-openrc
 hostapd-runit
 hostapd-s6
+hyprshutdown
 i2pd-dinit
 i2pd-openrc
 i2pd-runit

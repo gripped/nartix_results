@@ -1,14 +1,25 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -61,7 +61,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=hyprland
+ pkgver=0.55.0
+-pkgrel=3
++pkgrel=4
+ pkgdesc='a highly customizable dynamic tiling Wayland compositor'
+ arch=(x86_64 aarch64)
+ url="https://github.com/hyprwm/${pkgname^}"
+@@ -60,8 +60,8 @@
+             'cpio: to build and install plugins using hyprpm'
              'glaze: to build and install plugins using hyprpm'
              'hyprland-protocols: to build and install plugins using hyprpm'
++            'hyprshutdown: clean logout and shutdown helper'
              'meson: to build and install plugins using hyprpm'
 -            'uwsm: an advanced way to start desktop compositors as systemd units'
              'xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland')
  provides=(wayland-compositor)
  _archive="${pkgname^}-$pkgver"
-@@ -76,7 +75,7 @@
+@@ -76,7 +76,7 @@
  
  build() {
  	cd "$_archive"

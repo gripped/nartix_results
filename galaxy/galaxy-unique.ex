@@ -92,6 +92,7 @@ lxdm-dinit
 lxdm-gtk2
 lxdm-openrc
 lxdm-runit
+lxdm-s6
 lxhotkey-gtk2
 lxinput-gtk2
 lxlauncher-gtk2
@@ -102,6 +103,7 @@ lxrandr-gtk2
 lxsession-gtk2
 lxtask-gtk2
 lxterminal-gtk2
+ly-s6
 mailgraph-openrc
 mcomix
 mesa-git
@@ -184,6 +186,7 @@ moksha
 moodbar
 mpd-dinit-user
 mpd-dinit
+mpd-s6
 mullvad-vpn-dinit
 mullvad-vpn-openrc
 newsraft
@@ -255,6 +258,7 @@ sonic-win
 sonic-workspace
 sonicde-meta
 sv-helper
+tigervnc-s6
 tinydns-dinit
 tinydns-openrc
 tinydns-runit
