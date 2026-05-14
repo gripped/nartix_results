@@ -1,0 +1,18 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -64,7 +64,6 @@
+   cd "${srcdir}/ZeroTierOne-${pkgver}"
+ 
+   make DESTDIR="${pkgdir}" install
+-  install -D -m0644 debian/zerotier-one.service "${pkgdir}"/usr/lib/systemd/system/zerotier-one.service
+ 
+   install -D -m0644 "${srcdir}"/zerotier-one.sysusers "${pkgdir}"/usr/lib/sysusers.d/"${pkgname}".conf
+ }
+@@ -77,7 +76,6 @@
+   cd "${srcdir}/ZeroTierOne-${pkgver}-full"
+ 
+   make DESTDIR="${pkgdir}" install
+-  install -D -m0644 debian/zerotier-one.service "${pkgdir}"/usr/lib/systemd/system/zerotier-one.service
+ 
+   install -D -m0644 "${srcdir}"/zerotier-one.sysusers "${pkgdir}"/usr/lib/sysusers.d/"${pkgname}".conf
+ 

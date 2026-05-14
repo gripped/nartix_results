@@ -121,9 +121,6 @@ electron
 electron39
 electron40
 electron41
-element.io
-element-web
-element-desktop
 elementary-icon-theme
 engrampa
 eom
@@ -757,7 +754,6 @@ voa
 vpl-gpu-rt
 warpinator
 waylandpp
-waylock
 waypipe
 wcm
 wdisplays

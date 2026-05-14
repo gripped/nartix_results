@@ -80,6 +80,7 @@ libtree
 libwireplumber-4.0-compat
 lightdm-settings
 limine-mkinitcpio-hook
+limine-snapper-sync-dinit
 limine-snapper-sync-openrc
 limine-snapper-sync
 linux-lts515
@@ -143,6 +144,7 @@ moksha-module-net
 moksha-module-news
 moksha-module-penguins
 moksha-module-photo
+moksha-module-picom
 moksha-module-productivity
 moksha-module-rain
 moksha-module-screenshot

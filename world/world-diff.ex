@@ -111,7 +111,6 @@ dhclient
 dhcpcd
 djvulibre
 dns-over-https
-dnsmasq
 docker
 dolphin-emu
 dolphin-emu-tool
@@ -156,6 +155,9 @@ eom
 esbuild
 espeakup
 etherwall
+evolution-data-server
+libedataserverui4
+evolution-data-server-docs
 exo
 expect
 extra-cmake-modules
@@ -297,6 +299,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -731,18 +734,13 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-idna
 python-ndg-httpsclient
-python-pydantic-core
-python-pydantic
 python-pymupdf
-python-pypdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
-python-twisted
 qastools
 qbittorrent
 qbittorrent-nox
@@ -860,6 +858,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-lemon
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -1175,5 +1174,4 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
-zerotier-one
 znc

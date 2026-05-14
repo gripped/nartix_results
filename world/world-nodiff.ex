@@ -471,6 +471,7 @@ dmg2img
 dmidecode
 dns-lexicon
 dnscrypt-proxy
+dnsmasq
 docbook-dsssl
 docbook-sgml
 docbook-sgml31
@@ -587,9 +588,6 @@ ethtool
 eventviews
 evince
 evince-lib-docs
-evolution-data-server
-libedataserverui4
-evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
@@ -1104,6 +1102,7 @@ hyprpaper
 hyprpicker
 hyprpolkitagent
 hyprshot
+hyprshutdown
 hyprsunset
 hyprtoolkit
 hyprutils
@@ -1135,7 +1134,6 @@ iniparser
 inkscape
 innoextract
 inotify-tools
-intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
 intel-media-driver
@@ -3721,6 +3719,7 @@ python-ibm-db-sa
 python-icecream
 python-id
 python-identify
+python-idna
 python-ifaddr
 python-ijson
 python-imagesize
@@ -4132,8 +4131,10 @@ python-pycryptodome
 python-pycryptodomex
 python-pycuda
 python-pycurl
+python-pydantic-core
 python-pydantic-extra-types
 python-pydantic-settings
+python-pydantic
 python-pydata-sphinx-theme
 python-pydbus
 python-pydocstyle
@@ -4193,6 +4194,7 @@ python-pyotp
 python-pypandoc
 python-pyparsing
 python-pypcode
+python-pypdf
 python-pyperclip
 python-pypng
 python-pyppeteer
@@ -4571,6 +4573,7 @@ python-trio
 python-trove-classifiers
 python-trustme
 python-truststore
+python-twisted
 python-txaio
 python-txredisapi
 python-txrequests
@@ -5053,7 +5056,6 @@ ruby-kramdown-parser-gfm
 ruby-kramdown
 ruby-language_server-protocol
 ruby-launchy
-ruby-lemon
 ruby-leto
 ruby-lint_roller
 ruby-locale
@@ -6057,6 +6059,8 @@ zenity
 zeroc-ice
 zeroc-ice-java
 zeromq
+zerotier-one
+zerotier-one-full
 zfp
 zig
 zimg

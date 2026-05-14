@@ -1,0 +1,23 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,8 +18,7 @@
+     'level-zero-headers'
+     'libnl>=3.0.0'
+     'libnl<4.0.0'
+-    'libva'
+-    'systemd-libs')
++    'libva')
+ optdepends=(
+     'libdrm: for cl_intel_va_api_media_sharing OpenCL extension'
+     'libigsc.so=0: for discrete GPU firmware enumeration through Level Zero'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,4 +9,3 @@
+ libnl>
+ libstdc++
+ libva
+-systemd-libs

@@ -14,6 +14,9 @@ cosmic-settings
 doctest
 ecrire
 efl
+element.io
+element-web
+element-desktop
 emptty
 ephoto
 etherwall
@@ -85,6 +88,7 @@ transmission-qt
 unoconv
 vice
 wayfire
+waylock
 wayvnc
 wezterm
 wf-config
