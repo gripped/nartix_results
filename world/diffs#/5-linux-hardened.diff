@@ -1,12 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,64 +1,43 @@
+@@ -1,61 +1,43 @@
  
  pkgbase=linux-hardened
--pkgver=6.19.14.hardened1
--pkgrel=2
+-pkgver=7.0.6.hardened1
 +pkgver=6.4.14.hardened1
-+pkgrel=1
+ pkgrel=1
  pkgdesc='Security-Hardened Linux'
  url='https://github.com/anthraxx/linux-hardened'
 -arch=(
@@ -48,7 +47,6 @@
  source=(
 -  https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
 -  ${url}/releases/download/${_srctag}/${pkgbase}-${_srctag}.patch{,.sig}
--  linux-hardened-6.19-gcc-16.patch::https://github.com/anthraxx/linux-hardened/commit/b5f33fa6f5de9643e5ed81385189e06a215ca28e.patch
 -)
 -source_x86_64=(config.x86_64)
 +  https://www.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
@@ -60,29 +58,28 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
--sha256sums=('cde8bf6739be4a0777fedbbba5330b8188c55680c45a922a4dfa289cbec6f185'
+-sha256sums=('cba44440aa57affd7c21241dc5bc234b0df53c499f8ffc3ebc290dd3390a7523'
 -            'SKIP'
--            '021f009c5eac07882f1fd4f3f0a6b418a4b2c25ad15d16a920eae6452cb2b371'
--            'SKIP'
--            '547184f2c7dde93773978aff1d5060d314fd0618ab3e3cec765c36f4c4db7282')
--sha256sums_x86_64=('41e6fa9952cb140f9878c4980f39b16ba1993198e2d212f7dcda6d16aa6cf87a')
--b2sums=('64c2a0003d8080f268772d36923ff6ef8b2d55320ea08b77ad39384c98c9a5c1a8e71425470619aa3aa4dda8941f46aa9da364748cfa8fd9f8507a5ddd7ac03a'
+-            'bd08f8e2bf24aab26f719b0fb48a3ed3a73cad154212dd422304caef63d681aa'
+-            'SKIP')
+-sha256sums_x86_64=('3d923214180b4a0455af4f952b1f3e973471ffcebaa37c3bded490b148c47d1f')
+-b2sums=('0e8640c77249b251b22f162b8eb21d062308c4a5d16e3942882fbfbbb50a3ac981ad14db8e5612fb9e0a26f8f3a2c6bb07f0309e26ea59323430f780d22b2821'
 +b2sums=('f81dabaef7e31b743aeb75d0dbb0a337e747d1d743fb0b38cb314498200d8d459d82f5f8bb34d6ad688842f3617fd53fd35b1b518654c845a6781580531ab1b2'
          'SKIP'
--        'b1fd7c9e26a232588382f1c47ffa7eb38efa6048478d9f1d8298fca84f0c39f25edae1e80a83fc646e94acedb94e7e5735a1f83504da161411bdafff7058d5fe'
-+        'd12ff8cbb4dc171167050a198a783e8341df51aa1c3579d3c3f20b9d28025847e6cae9575fc2a37dda2e0f96a10d0306ec4293edaa53ebdfe15a21892c6d2a5f'
-         'SKIP'
--        'cf95827d283823ef3a561c70c2ea23120451779a7d80bff2588f2f15fdb3f63e2814e95bca3231a0afed3417d77c29cf79a8791d3d863d97ce1cdcc0d727dc80')
--b2sums_x86_64=('1fea59f72acd07724f90d69c469c2d649f3f84ced059cc19c2b5fb51c8c4e0259d532580caa7722edee44b43fcb5b2d19e4fa5323303692dba2ece5245469b90')
+-        '89576587539667cf8b5fd6c461c4d5bfc4b8ad427ac43789e170deadc8118dff7e8f0bc74ed68b54fc968daa28d846f13ae03344b7be9785ccb61e6d82a0f15a'
+-        'SKIP')
+-b2sums_x86_64=('95bbec4a41159097d14f29288ba4eb26ce045610a9589758b433ea7453f4b20d6d307689d3c0f8adb805bb5fbb2d6c5e17b15ede0e1662b8e090a358e979114d')
 -
 -export KBUILD_BUILD_HOST=archlinux
++        'd12ff8cbb4dc171167050a198a783e8341df51aa1c3579d3c3f20b9d28025847e6cae9575fc2a37dda2e0f96a10d0306ec4293edaa53ebdfe15a21892c6d2a5f'
++        'SKIP'
 +        'f60be61e60a36d8c8fd186ddb2ac7514a6439c413a0a563d8c3d13593aaa5e34e20a3ddeba2d0b868fffdd515678320ddda1fe843e24f90369c1d4d0c4019306')
 +
 +export KBUILD_BUILD_HOST=artixlinux
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -73,16 +52,15 @@
+@@ -70,16 +52,15 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -101,7 +98,7 @@
  
    make -s kernelrelease > version
    echo "Prepared $pkgbase version $(<version)"
-@@ -90,13 +68,7 @@
+@@ -87,13 +68,7 @@
  
  build() {
    cd $_srcname
@@ -115,7 +112,7 @@
  }
  
  _package() {
-@@ -107,20 +79,15 @@
+@@ -104,20 +79,15 @@
      kmod
    )
    optdepends=(
@@ -137,7 +134,7 @@
  
    cd $_srcname
    local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-@@ -134,43 +101,30 @@
+@@ -131,43 +101,30 @@
    ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
      DEPMOD=/doesnt/exist modules_install  # Suppress depmod
  
@@ -189,7 +186,7 @@
  
    install -Dt "$builddir/drivers/md" -m644 drivers/md/*.h
    install -Dt "$builddir/net/mac80211" -m644 net/mac80211/*.h
-@@ -186,15 +140,10 @@
+@@ -183,15 +140,10 @@
    echo "Installing KConfig files..."
    find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
  

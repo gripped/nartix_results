@@ -6,8 +6,8 @@
 +_electron=electron39
  pkgbase=element.io
  pkgname=(element-web element-desktop)
--pkgver=1.12.15
--pkgrel=2
+-pkgver=1.12.18
+-pkgrel=3
 +pkgver=1.12.9
 +pkgrel=1
  pkgdesc="Glossy Matrix collaboration client — "
@@ -27,7 +27,7 @@
          io.element.Element.desktop
 -        element-desktop.sh
 -        autolaunch.patch)
--sha256sums=('8372d34d15870a4499352429c5790a62a79d6926f2f7176c69d6b39ecd43ca8b'
+-sha256sums=('477c74c3712450fa412fea2b3880b2c2be2abc7f7d1da8dee6ffb20d96fd912e'
 +        element-desktop.sh)
 +sha256sums=('0e503dcd7e8641ef64a9af9a91e3a3b62fa0e33b7392bf0d9b8b6f763a6ee301'
 +            '6717e1d78bcc4b6218743e2995a6988f7af9f2ec58e3d082834b9bf91622aa44'
@@ -86,7 +86,7 @@
  
    install -d "${pkgdir}"/{usr/share/webapps,etc/webapps}/element
  
-@@ -85,7 +83,7 @@
+@@ -85,19 +83,19 @@
    depends=("element-web=${pkgver}" ${_electron} libsecret)
    backup=('etc/element/config.json')
  
@@ -95,7 +95,10 @@
  
    install -d "${pkgdir}"{/usr/lib/element/,/etc/webapps/element}
  
-@@ -95,9 +93,9 @@
+-  cp -r dist/linux-*/resources/* "${pkgdir}"/usr/lib/element/
++  cp -r dist/linux-unpacked/resources/* "${pkgdir}"/usr/lib/element/
+   ln -s /usr/share/webapps/element "${pkgdir}"/usr/lib/element/webapp
+ 
    ln -s /etc/element/config.json "${pkgdir}"/etc/webapps/element/config.json
    install -Dm644 element.io/release/config.json -t "${pkgdir}"/etc/element
  

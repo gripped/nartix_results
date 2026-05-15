@@ -32,7 +32,6 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
-lact
 lemurs
 libetonyek
 libmatemixer

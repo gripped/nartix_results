@@ -399,6 +399,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -597,6 +598,14 @@ networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
+nginx
+nginx-mod-geoip
+nginx-mod-image-filter
+nginx-mod-mail
+nginx-mod-perl
+nginx-mod-stream
+nginx-mod-xslt
+nginx-src
 niri
 nodejs-lts-hydrogen
 nsd
@@ -734,6 +743,7 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-faker
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -857,7 +867,10 @@ rrdtool
 rspamd
 rsync
 rtkit
+ruby-ae
 ruby-bake-modernize
+ruby-brass
+ruby-facets
 ruby-lemon
 ruby-rbtree
 ruby-sys-filesystem

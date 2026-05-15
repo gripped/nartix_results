@@ -1,0 +1,74 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,15 @@
+ 
+ pkgname=ruby-facets
+-pkgver=3.2.0
+-pkgrel=1
++pkgver=3.1.0
++pkgrel=7
+ pkgdesc='Premiere collection of general purpose method extensions and standard additions for the Ruby programming language'
+ arch=(any)
+ url='https://github.com/rubyworks/facets'
+-license=(BSD-2-Clause)
++license=(BSD)
+ depends=(
+   ruby
+ )
+ makedepends=(
+-  git
+   ruby-rdoc
+ )
+ checkdepends=(
+@@ -21,12 +20,12 @@
+   ruby-simplecov
+ )
+ options=(!emptydirs)
+-source=(git+https://github.com/rubyworks/facets.git#tag=v$pkgver)
+-sha256sums=('26b3069f390983c1c719db73cd593a8865b3b56a02d9436ff4263edbbca51353')
++source=(https://github.com/rubyworks/facets/archive/$pkgver/$pkgname-$pkgver.tar.gz)
++sha256sums=('a432b57dd3999fd83b239d675cc97f28c626e1b2d1d91702de4fbaf951ae1fad')
+ 
+ build() {
+   local _gemdir="$(gem env gemdir)"
+-  cd facets
++  cd facets-$pkgver
+   gem build facets.gemspec
+   gem install \
+     --local \
+@@ -52,12 +51,12 @@
+ 
+ check() {
+   local _gemdir="$(gem env gemdir)"
+-  cd facets
++  cd facets-$pkgver
+   GEM_HOME="tmp_install/$_gemdir" rake || echo "Tests failed"
+ }
+ 
+ package() {
+-  cd facets
++  cd facets-$pkgver
+   cp -a tmp_install/* "$pkgdir"/
+   install -Dm644 LICENSE.txt -t "$pkgdir"/usr/share/licenses/$pkgname/
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,2 @@
+-git
+ ruby
+ ruby-rdoc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ local _gemdir="$(gem env gemdir)"
+-cd facets
++cd facets-$pkgver
+ gem build facets.gemspec
+ gem install \
+ --local \

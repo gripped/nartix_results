@@ -64,6 +64,7 @@ incron-next
 incron-openrc
 iso-profiles
 knockd-openrc
+konform-browser
 kotatogram-desktop-git
 lact-openrc
 lagrange

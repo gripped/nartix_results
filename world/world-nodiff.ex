@@ -1831,7 +1831,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2485,14 +2484,6 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
-nginx
-nginx-mod-geoip
-nginx-mod-image-filter
-nginx-mod-mail
-nginx-mod-perl
-nginx-mod-stream
-nginx-mod-xslt
-nginx-src
 ngspice
 ninja
 nitrokey-udev-rules
@@ -3562,7 +3553,6 @@ python-expandvars
 python-expects
 python-extras
 python-factory-boy
-python-faker
 python-fakeredis
 python-falcon
 python-fastapi
@@ -4774,6 +4764,7 @@ qt5ct
 qt5pas
 qt6-3d
 qt6-5compat
+qt6-canvaspainter
 qt6-charts
 qt6-connectivity
 qt6-datavis3d
@@ -4926,7 +4917,6 @@ rubocop
 ruby-abbrev
 ruby-activesupport
 ruby-addressable
-ruby-ae
 ruby-ansi
 ruby-ast
 ruby-async-container-supervisor
@@ -4954,7 +4944,6 @@ ruby-base64
 ruby-benchmark-ips
 ruby-benchmark
 ruby-bigdecimal
-ruby-brass
 ruby-build-environment
 ruby-build-files
 ruby-builder
@@ -5002,7 +4991,6 @@ ruby-erb
 ruby-erubi
 ruby-etc
 ruby-eventmachine
-ruby-facets
 ruby-falcon
 ruby-faraday-em_http
 ruby-faraday-em_synchrony
