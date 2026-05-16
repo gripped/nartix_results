@@ -2,8 +2,11 @@ a52dec
 aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 accountsservice
+adios2
 aflplusplus
 alsa-utils
+aom
+aom-docs
 apache
 apcupsd
 appstream
@@ -399,7 +402,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -578,6 +580,7 @@ mutter-devkit
 mutter-docs
 mutter45
 mutter46
+nanobind
 ndctl
 ndisc6
 nemo-extensions
@@ -593,19 +596,12 @@ nemo-share
 nemo-terminal
 nemo
 netavark
+netpbm
 netplan
 networkmanager
 libnm
 nm-cloud-setup
 networkmanager-docs
-nginx
-nginx-mod-geoip
-nginx-mod-image-filter
-nginx-mod-mail
-nginx-mod-perl
-nginx-mod-stream
-nginx-mod-xslt
-nginx-src
 niri
 nodejs-lts-hydrogen
 nsd
@@ -708,6 +704,7 @@ pipewire-session-manager
 pulse-native-provider
 pkgfile
 plasma-desktop
+plasma-mobile
 plasma-systemmonitor
 plasma-workspace
 plasma-x11-session
@@ -743,7 +740,6 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-faker
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -867,10 +863,7 @@ rrdtool
 rspamd
 rsync
 rtkit
-ruby-ae
 ruby-bake-modernize
-ruby-brass
-ruby-facets
 ruby-lemon
 ruby-rbtree
 ruby-sys-filesystem
@@ -966,6 +959,7 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+utf8cpp
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

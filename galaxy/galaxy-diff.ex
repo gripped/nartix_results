@@ -14,9 +14,6 @@ cosmic-settings
 doctest
 ecrire
 efl
-element.io
-element-web
-element-desktop
 emptty
 ephoto
 etherwall
@@ -73,6 +70,8 @@ qt5-webengine
 rage
 read-edid
 reflector
+river-classic
+river
 sdcv
 signal-desktop
 terminology

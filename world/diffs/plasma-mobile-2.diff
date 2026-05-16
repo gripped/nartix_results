@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -53,7 +53,7 @@
+   qt6-declarative
+   qt6-sensors
+   solid
+-  systemd-libs
++  libudev
+   wayland
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -29,6 +29,7 @@
+ libkscreen
+ libplasma
+ libstdc++
++libudev
+ milou
+ modemmanager-qt
+ networkmanager-qt
+@@ -45,5 +46,4 @@
+ qt6-declarative
+ qt6-sensors
+ solid
+-systemd-libs
+ wayland

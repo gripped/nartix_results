@@ -121,6 +121,9 @@ electron
 electron39
 electron40
 electron41
+element.io
+element-web
+element-desktop
 elementary-icon-theme
 engrampa
 eom
@@ -133,6 +136,7 @@ fceux
 fcitx5-bamboo
 fcitx5-chinese-addons
 fcitx5-lua
+fcitx5-qt
 firefox-i18n
 fluxbox
 font-awesome
@@ -559,8 +563,6 @@ rgbds
 rio
 riscv64-linux-gnu-gdb
 ristretto
-river-classic
-river
 rmpc
 rpi-imager
 rust-script

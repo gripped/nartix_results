@@ -30,6 +30,7 @@ elogind-dinit
 elogind-openrc
 elogind-s6
 elogind
+esys-utils
 execline
 glibc-dinit
 glibc-openrc
@@ -69,6 +70,7 @@ rpcbind-openrc
 rpcbind-s6
 s6-base
 s6-contrib
+s6-frontend
 s6-linux-init
 s6-rc
 s6-scripts

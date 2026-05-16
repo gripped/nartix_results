@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libaio
+ pkgver=0.3.113
+-pkgrel=4
++pkgrel=3
+ pkgdesc="The Linux-native asynchronous I/O facility (aio) library"
+ arch=(x86_64)
+ url="https://pagure.io/libaio"
+@@ -16,7 +16,6 @@
+ prepare() {
+   sed 's/-Werror//' -i $pkgname-$pkgname-$pkgver/harness/Makefile
+ 
+-  rm -frv $pkgname-$pkgname-$pkgver/harness/cases/20.t
+   rm -frv $pkgname-$pkgname-$pkgver/harness/cases/21.t
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ sed 's/-Werror//' -i $pkgname-$pkgname-$pkgver/harness/Makefile
+-rm -frv $pkgname-$pkgname-$pkgver/harness/cases/20.t
+ rm -frv $pkgname-$pkgname-$pkgver/harness/cases/21.t
+ }
+ build() {

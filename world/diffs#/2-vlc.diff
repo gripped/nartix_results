@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -5,13 +5,13 @@
    libvlc
    vlc-cli
    vlc-gui-{ncurses,qt,skins2}
@@ -9,7 +9,55 @@
    vlc-plugins-{all,base,extra,video-output,visualization}
  )
  _vlcver=3.0.22
-@@ -114,7 +114,7 @@
+ _vlcfixupver=
+ pkgver=$_vlcver${_vlcfixupver//-/.r}
+-pkgrel=3
++pkgrel=4
+ pkgdesc='Free and open source cross-platform multimedia player and framework'
+ url=https://www.videolan.org/vlc/
+ arch=(x86_64)
+@@ -39,7 +39,6 @@
+   fontconfig
+   freetype2
+   fribidi
+-  gcc-libs
+   gdk-pixbuf2
+   glib2
+   glibc
+@@ -55,12 +54,13 @@
+   libbluray
+   libcaca
+   libcddb
++  libdc1394
+   libdca
+-  libdc1394
+   libdvbpsi
+   libdvdcss
+   libdvdnav
+   libdvdread
++  libgcc
+   libglvnd
+   libgme
+   libgoom2
+@@ -73,8 +73,8 @@
+   libmpcdec
+   libmpeg2
+   libmtp
++  libnfs
+   libnotify
+-  libnfs
+   libogg
+   libpng
+   libproxy
+@@ -85,6 +85,7 @@
+   libshout
+   libsoxr
+   libssh2
++  libstdc++
+   libtheora
+   libtiger
+   libupnp
+@@ -114,7 +115,7 @@
    speex
    speexdsp
    srt
@@ -18,7 +66,16 @@
    taglib
    twolame
    wayland
-@@ -449,7 +449,6 @@
+@@ -141,8 +142,6 @@
+   sed -e 's:truetype/ttf-dejavu:TTF:g' -i modules/visualization/projectm.cpp
+   sed 's|whoami|echo builduser|g' -i configure
+   sed 's|hostname -f|echo arch|g' -i configure
+-
+-  sed -i 's/typedef const void\* UpnpEventPtr;/typedef void* UpnpEventPtr;/' modules/services_discovery/upnp.hpp
+ 
+   sed -i '/#include <gst\/gstbufferpool.h>/d; /#include <gst\/video\/gstvideopool.h>/d' modules/codec/gstreamer/gstvlcvideopool.h
+ 
+@@ -449,7 +448,6 @@
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/access/libaccess_jack_plugin.so
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/audio_output/libjack_plugin.so
  
@@ -26,7 +83,66 @@
  
      _pick $pkgname-plugin-jpeg usr/lib/vlc/plugins/codec/libjpeg_plugin.so
  
-@@ -1331,16 +1330,6 @@
+@@ -866,8 +864,8 @@
+   pkgdesc+=" - library"
+   depends=(
+     dbus
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
+   )
+   provides=(
+     libvlc.so
+@@ -913,8 +911,9 @@
+   pkgdesc+=" - Qt GUI"
+   depends=(
+     bash
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libvlc libvlccore.so
+     libx11
+     qt5-base
+@@ -946,8 +945,9 @@
+     bash
+     freetype2
+     fribidi
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libvlc libvlccore.so
+     libx11
+     libxext
+@@ -1108,8 +1108,9 @@
+   pkgdesc+=" - Chromecast plugin"
+   depends=(
+     abseil-cpp
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libvlc libvlccore.so
+     protobuf
+     vlc-plugins-base
+@@ -1221,10 +1222,10 @@
+ package_vlc-plugin-firewire() {
+   pkgdesc+=" - FireWire plugins"
+   depends=(
+-    gcc-libs
+     glibc
+     libavc1394
+     libdc1394
++    libgcc
+     libraw1394
+     libvlc libvlccore.so
+     vlc-plugins-base
+@@ -1331,16 +1332,6 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
@@ -43,7 +159,55 @@
  
  package_vlc-plugin-jpeg() {
    pkgdesc+=" - JPEG plugin"
-@@ -1766,7 +1755,7 @@
+@@ -1407,8 +1398,9 @@
+ package_vlc-plugin-live555() {
+   pkgdesc+=" - live555 RTP/RSTP client plugin"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libvlc libvlccore.so
+     live-media
+     vlc-plugins-base
+@@ -1420,8 +1412,8 @@
+ package_vlc-plugin-lua() {
+   pkgdesc+=" - Lua scripting plugins"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
+     libvlc libvlccore.so
+     lua
+     vlc-plugins-base
+@@ -1448,10 +1440,11 @@
+ package_vlc-plugin-matroska() {
+   pkgdesc+=" - Matroska plugin"
+   depends=(
+-    gcc-libs
+     glibc
+     libebml
++    libgcc
+     libmatroska
++    libstdc++
+     libvlc libvlccore.so
+     zlib
+     vlc-plugins-base
+@@ -1729,8 +1722,9 @@
+ package_vlc-plugin-tag() {
+   pkgdesc+=" - tag plugin"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libvlc libvlccore.so
+     taglib
+   )
+@@ -1766,7 +1760,7 @@
      alsa-lib
      glibc
      libvlc libvlccore.so
@@ -52,7 +216,31 @@
      vlc-plugins-base
    )
  
-@@ -1896,7 +1885,6 @@
+@@ -1776,8 +1770,9 @@
+ package_vlc-plugin-upnp() {
+   pkgdesc+=" - UPnP plugin"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libupnp
+     libvlc libvlccore.so
+     vlc-plugins-base
+@@ -1882,8 +1877,9 @@
+ package_vlc-plugins-base() {
+   pkgdesc+=" - base plugins"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
++    libstdc++
+     libvlc libvlccore.so
+     vlc-plugin-alsa
+     vlc-plugin-a52dec
+@@ -1896,7 +1892,6 @@
      vlc-plugin-gnutls
      vlc-plugin-inflate
      vlc-plugin-jpeg
@@ -60,21 +248,65 @@
      vlc-plugin-mpg123
      vlc-plugin-ogg
      vlc-plugin-opus
+@@ -1965,8 +1960,8 @@
+ package_vlc-plugins-video-output() {
+   pkgdesc+=" - video output plugins"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
+     libglvnd
+     libva
+     libvlc libvlccore.so
+@@ -1990,10 +1985,11 @@
+ package_vlc-plugins-visualization() {
+   pkgdesc+=" - visualization plugins"
+   depends=(
+-    gcc-libs
+-    glibc
++    glibc
++    libgcc
+     libglvnd
+     libgoom2
++    libstdc++
+     libvlc libvlccore.so
+     projectm
+     ttf-dejavu
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -71,6 +71,7 @@
+@@ -17,7 +17,6 @@
+ fontconfig
+ freetype2
+ fribidi
+-gcc-libs
+ gdk-pixbuf2
+ glib2
+ glibc
+@@ -42,6 +41,7 @@
+ libdvdnav
+ libdvdread
+ libebml
++libgcc
+ libglvnd
+ libgme
+ libgoom2
+@@ -69,8 +69,10 @@
+ libshout
+ libsoxr
  libssh2
++libstdc++
  libtheora
  libtiger
 +libudev
  libupnp
  libva
  libvlc
-@@ -105,7 +106,6 @@
+@@ -105,7 +107,6 @@
  speex
  speexdsp
  srt
@@ -82,7 +314,7 @@
  taglib
  ttf-dejavu
  twolame
-@@ -141,7 +141,6 @@
+@@ -141,7 +142,6 @@
  vlc-plugin-gstreamer
  vlc-plugin-inflate
  vlc-plugin-jack

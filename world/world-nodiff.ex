@@ -21,7 +21,6 @@ acpid
 acpilight
 ada
 add-determinism
-adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -78,8 +77,6 @@ ant
 ant-doc
 anthy
 anubis
-aom
-aom-docs
 apache-orc
 apitrace
 apparmor
@@ -1079,6 +1076,9 @@ hunspell-es_any
 hyphen-es
 mythes-es
 hunspell-fr
+$pkgbase-classical
+$pkgbase-comprehensive
+$pkgbase-revised
 hunspell-it
 hunspell-nl
 hunspell-pl
@@ -1831,6 +1831,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2447,7 +2448,6 @@ mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
-nanobind
 nanomsg
 nanosvg
 nasm
@@ -2473,7 +2473,6 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
-netpbm
 netsurf-buildsystem
 nettle3
 network-manager-applet
@@ -2484,6 +2483,14 @@ networkmanager-qt
 networkmanager-qt5
 newsboat
 nftables
+nginx
+nginx-mod-geoip
+nginx-mod-image-filter
+nginx-mod-mail
+nginx-mod-perl
+nginx-mod-stream
+nginx-mod-xslt
+nginx-src
 ngspice
 ninja
 nitrokey-udev-rules
@@ -3062,6 +3069,7 @@ plasma-integration
 plasma5-integration
 plasma-keyboard
 plasma-meta
+plasma-nano
 plasma-nm
 plasma-pa
 plasma-pass
@@ -3553,6 +3561,7 @@ python-expandvars
 python-expects
 python-extras
 python-factory-boy
+python-faker
 python-fakeredis
 python-falcon
 python-fastapi
@@ -4917,6 +4926,7 @@ rubocop
 ruby-abbrev
 ruby-activesupport
 ruby-addressable
+ruby-ae
 ruby-ansi
 ruby-ast
 ruby-async-container-supervisor
@@ -4944,6 +4954,7 @@ ruby-base64
 ruby-benchmark-ips
 ruby-benchmark
 ruby-bigdecimal
+ruby-brass
 ruby-build-environment
 ruby-build-files
 ruby-builder
@@ -4991,6 +5002,7 @@ ruby-erb
 ruby-erubi
 ruby-etc
 ruby-eventmachine
+ruby-facets
 ruby-falcon
 ruby-faraday-em_http
 ruby-faraday-em_synchrony
@@ -5762,7 +5774,6 @@ uriparser
 usbredir
 usd
 usort
-utf8cpp
 uthash
 uv
 $pkgbase

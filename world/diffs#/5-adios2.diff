@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=adios2
+ pkgver=2.12.1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="The Adaptable Input/Output System version 2"
+ arch=(x86_64)
+ url="https://adios2.readthedocs.io/en/latest/"
+@@ -38,6 +38,7 @@
+   cuda
+   gcc-fortran
+   gtest
++  nanobind
+   ninja
+   nlohmann-json
+   python-mpi4py
+@@ -69,7 +70,7 @@
+     -DADIOS2_USE_CUDA=ON
+     -DADIOS2_USE_EXTERNAL_DEPENDENCIES=ON
+     -DADIOS2_USE_EXTERNAL_PERFSTUBS=OFF
+-    -DADIOS2_USE_EXTERNAL_NANOBIND=OFF
++    -DADIOS2_USE_EXTERNAL_NANOBIND=ON
+     -DADIOS2_HAVE_HDF5_VOL=OFF
+     -DADIOS2_BUILD_EXAMPLES=OFF
+     -DADIOS2_USE_Derived_Variable=ON
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -28,6 +28,7 @@
+ libzmq.so
+ libzstd.so
+ mgard
++nanobind
+ ninja
+ nlohmann-json
+ openmpi
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ -DADIOS2_USE_CUDA=ON
+ -DADIOS2_USE_EXTERNAL_DEPENDENCIES=ON
+ -DADIOS2_USE_EXTERNAL_PERFSTUBS=OFF
+--DADIOS2_USE_EXTERNAL_NANOBIND=OFF
++-DADIOS2_USE_EXTERNAL_NANOBIND=ON
+ -DADIOS2_HAVE_HDF5_VOL=OFF
+ -DADIOS2_BUILD_EXAMPLES=OFF
+ -DADIOS2_USE_Derived_Variable=ON
