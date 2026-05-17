@@ -7,9 +7,6 @@ bash
 binutils
 btrfs-progs
 cronie
-curl
-libcurl-compat
-libcurl-gnutls
 dbus
 dbus-docs
 dhcpcd
@@ -36,7 +33,6 @@ grep
 gssproxy
 gzip
 iputils
-libaio
 libsasl
 libusb
 linux

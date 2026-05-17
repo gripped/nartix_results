@@ -2,9 +2,9 @@ a52dec
 aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 accountsservice
-adios2
 aflplusplus
 alsa-utils
+amule
 aom
 aom-docs
 apache
@@ -112,7 +112,6 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
-djvulibre
 dns-over-https
 docker
 dolphin-emu
@@ -402,6 +401,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkate
 libldm
 liblqr
 libmatekbd
@@ -580,7 +580,6 @@ mutter-devkit
 mutter-docs
 mutter45
 mutter46
-nanobind
 ndctl
 ndisc6
 nemo-extensions
@@ -959,7 +958,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-utf8cpp
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

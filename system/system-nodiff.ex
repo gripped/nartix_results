@@ -15,6 +15,9 @@ ca-certificates-utils
 coreutils
 cracklib
 cryptsetup
+curl
+libcurl-compat
+libcurl-gnutls
 dash
 db
 db5.3
@@ -68,6 +71,7 @@ krb5
 ldns
 leancrypto
 less
+libaio
 libarchive
 libassuan
 libbpf

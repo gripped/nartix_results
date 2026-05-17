@@ -78,20 +78,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,37 +0,0 @@
+@@ -1,36 +1,12 @@
 -cairo
 -dconf
 -fontconfig
 -freetype2
 -glib2
 -glibc
--gobject-introspection
+ gobject-introspection
 -graphene
--gtk4
+ gtk4
 -harfbuzz
 -hicolor-icon-theme
--intltool
--json-glib
+ intltool
+ json-glib
 -libcairo.so
 -libfontconfig.so
 -libfreetype.so
@@ -104,18 +104,18 @@
 -libpango-1.0.so
 -libpangoft2-1.0.so
 -libsoup-3.0.so
--libsoup3
+ libsoup3
 -libsqlite3.so
 -libwebkitgtk-6.0.so
--libxml2
+ libxml2
 -libxml2.so
--meson
--nautilus
+ meson
+ nautilus
 -pango
--sqlite
--vala
--webkitgtk-6.0
--yelp-tools
++ninja
+ sqlite
+ vala
+ webkitgtk-6.0
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

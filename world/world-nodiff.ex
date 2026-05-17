@@ -21,6 +21,7 @@ acpid
 acpilight
 ada
 add-determinism
+adios2
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
 adwaita-fonts
@@ -58,7 +59,6 @@ amf-headers
 amfora
 aml
 amtk
-amule
 analitza
 analitza5
 anari-sdk
@@ -456,6 +456,7 @@ distro-info-data
 distro-info
 django
 python-django
+djvulibre
 dkms
 dleyna
 dleyna-docs
@@ -1831,7 +1832,6 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
-libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2295,6 +2295,7 @@ maim
 maliit-keyboard
 mallard-ducktype
 man-pages-l10n
+man-pages-ar
 man-pages-cs
 man-pages-da
 man-pages-de
@@ -2448,6 +2449,7 @@ mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
+nanobind
 nanomsg
 nanosvg
 nasm
@@ -5774,6 +5776,7 @@ uriparser
 usbredir
 usd
 usort
+utf8cpp
 uthash
 uv
 $pkgbase
