@@ -11,6 +11,9 @@ lib32-cairo
 lib32-cdparanoia
 lib32-clang
 lib32-cmocka
+lib32-curl
+lib32-libcurl-compat
+lib32-libcurl-gnutls
 lib32-dconf
 lib32-directx-headers
 lib32-duktape
@@ -25,7 +28,6 @@ lib32-freetype2
 lib32-fribidi
 lib32-gdk-pixbuf2
 lib32-gettext
-lib32-giflib
 lib32-glib-networking
 lib32-glib2
 lib32-glu

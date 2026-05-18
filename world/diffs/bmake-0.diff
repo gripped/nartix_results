@@ -1,30 +1,18 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=bmake
--pkgver=20260508
-+pkgver=20260406
- pkgrel=1
- pkgdesc='Portable version of the NetBSD make build tool'
- arch=(x86_64)
-@@ -9,9 +9,15 @@
- makedepends=(bc)
- optdepends=('python: for meta2deps.py script')
- source=("https://www.crufty.net/ftp/pub/sjg/bmake-$pkgver.tar.gz"{,.asc})
--sha256sums=('7b1eea90abc767430cd1a612529d5f301c47fd6a35bee7585778c951e891a82c'
-+sha256sums=('ed6e5fa0d661ea3c71d12e7481cbbcac6f2bff34051ce36ae7575811766adf26'
+@@ -13,6 +13,12 @@
              'SKIP')
  validpgpkeys=(7E228507C26D8DC164F531BFBA54C8AF755A2A99)
-+
+ 
 +prepare() {
 +	cd bmake
 +	sed -i 's/cmd-interrupt//g' unit-tests/Makefile
 +	sed -i 's/deptgt-interrupt//g' unit-tests/Makefile
 +}
- 
++
  build() {
  	cd bmake
+ 	./boot-strap --prefix=/usr op=build
 
 
 ############# Stripped diff below #################

@@ -1,76 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,49 +1,16 @@
- 
- pkgname=jami-daemon
- pkgver=20260206
--pkgrel=7
-+pkgrel=6
- pkgdesc="Free and universal communication platform which preserves the users’ privacy and freedoms (daemon component)"
- arch=(x86_64)
- url="https://jami.net"
- license=(GPL-3.0-or-later)
- groups=(jami)
--depends=(
--  alsa-lib
--  ffmpeg
--  fmt
--  glibc
--  gnutls
--  jack
--  jsoncpp
--  libarchive
--  libgcc
--  libgit2
--  libnatpmp
--  libpulse
--  libsecp256k1
--  libupnp
--  libstdc++
--  nettle
--  opendht
--  openssl
--  speexdsp
+@@ -27,7 +27,7 @@
+   opendht
+   openssl
+   speexdsp
 -  systemd-libs
--  util-linux-libs
--  webrtc-audio-processing-0.3
--  yaml-cpp
--  zlib
--)
--makedepends=(
--  asio
--  cmake
--  git
--  meson
--  msgpack-c
--  msgpack-cxx
--  perl
--  restinio
++  libudev
+   util-linux-libs
+   webrtc-audio-processing-0.3
+   yaml-cpp
+@@ -42,7 +42,7 @@
+   msgpack-cxx
+   perl
+   restinio
 -  systemd
--)
-+depends=(glibc opendht gnutls nettle libgit2 libsecp256k1 libsecp256k1.so ffmpeg speexdsp
-+         fmt yaml-cpp jsoncpp zlib alsa-lib libpulse jack libupnp libnatpmp
-+         openssl webrtc-audio-processing-0.3 libudev libarchive)
-+makedepends=(git cmake perl asio msgpack-c msgpack-cxx restinio udev meson)
++  udev
+ )
  checkdepends=(cppunit)
  _commit=55dd53736b9e6cd7204cc17e01d10d8a9276618f
- _pjprojectver=59d9e1355686cf4f3f3d81d45560058354f42802
-@@ -75,6 +42,14 @@
-   cp ../dhtnet-$_dhtnetver.tar.gz contrib/tarballs/
-   mkdir -p contrib/native
- 
-+  sed -i '/^\t$(UNPACK)$/a\
-+\tsed -i '\''s/static int client_cb(Upnp_EventType event_type, const void \\*event,/static int client_cb(Upnp_EventType event_type, void *event,/'\'' pjproject-$(PJPROJECT_VERSION)/pjnath/src/pjnath/upnp.c' \
-+    contrib/src/pjproject/rules.mak
-+
-+  sed -i '/^\t$(UNPACK)$/a\
-+\tsed -i '\''s/#if UPNP_VERSION < 10800/#if UPNP_VERSION < 10800 || UPNP_VERSION >= 11400/g'\'' dhtnet-$(DHTNET_VERSION)/src/upnp/protocol/pupnp/pupnp.h' \
-+    contrib/src/dhtnet/rules.mak
-+
-   patch -p1 -i ../ffmpeg-7.patch # Fix build with ffmpeg 7+
-   patch -p1 -i ../ffmpeg-8.patch # Fix build with ffmpeg 8
-   patch -p1 -i ../nettle-4.patch
-@@ -91,7 +66,7 @@
+@@ -91,7 +91,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  
    cd "${srcdir}"
@@ -85,29 +33,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,12 +9,12 @@
- jack
- jsoncpp
- libarchive
--libgcc
- libgit2
- libnatpmp
+@@ -15,6 +15,7 @@
  libpulse
  libsecp256k1
--libstdc++
-+libsecp256k1.so
+ libstdc++
 +libudev
  libupnp
  meson
  msgpack-c
-@@ -25,9 +25,7 @@
+@@ -25,8 +26,7 @@
  perl
  restinio
  speexdsp
 -systemd
 -systemd-libs
--util-linux-libs
 +udev
+ util-linux-libs
  webrtc-audio-processing-0.3
  yaml-cpp
- zlib

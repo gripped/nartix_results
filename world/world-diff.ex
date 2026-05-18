@@ -5,8 +5,8 @@ accountsservice
 aflplusplus
 alsa-utils
 amule
-aom
-aom-docs
+ant
+ant-doc
 apache
 apcupsd
 appstream
@@ -401,7 +401,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkate
 libldm
 liblqr
 libmatekbd
@@ -595,7 +594,6 @@ nemo-share
 nemo-terminal
 nemo
 netavark
-netpbm
 netplan
 networkmanager
 libnm
@@ -739,13 +737,16 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-krb5
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-repoze.lru
 python-sphinxcontrib-spelling
+python-syrupy
 qastools
 qbittorrent
 qbittorrent-nox
@@ -845,6 +846,7 @@ qterminal
 qtermwidget
 rabbitmq
 rabbitmqadmin
+radicale
 rawtherapee
 rdma-core
 redis

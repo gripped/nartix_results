@@ -73,10 +73,10 @@ ansible-lint
 ansible-navigator
 ansible-runner
 ansible
-ant
-ant-doc
 anthy
 anubis
+aom
+aom-docs
 apache-orc
 apitrace
 apparmor
@@ -1832,6 +1832,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
+libkate
 libkcddb
 libkcompactdisc
 libkdcraw
@@ -2475,6 +2476,7 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
+netpbm
 netsurf-buildsystem
 nettle3
 network-manager-applet
@@ -3814,7 +3816,6 @@ python-keystoneauth1
 python-keyutils
 python-kiwisolver
 python-kombu
-python-krb5
 python-kubernetes
 python-lark-parser
 python-lazr.config
@@ -4350,7 +4351,6 @@ python-regex
 python-regress
 python-rencode
 python-reportlab
-python-repoze.lru
 python-requests-aws4auth
 python-requests-credssp
 python-requests-file
@@ -4519,7 +4519,6 @@ python-sure
 python-svglib
 python-sybil
 python-sympy
-python-syrupy
 python-tabulate
 python-tabview
 python-tappy
@@ -4831,7 +4830,6 @@ qwt-common
 r
 r8168
 radeontop
-radicale
 raft
 ragel
 ragel6
