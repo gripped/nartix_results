@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+ arch=(x86_64)
+ url='https://github.com/Genymobile/scrcpy'
+ license=(Apache-2.0)
+-depends=(android-tools ffmpeg sdl3 glibc libusb)
++depends=(android-tools ffmpeg sdl2 glibc libusb)
+ makedepends=(git meson)
+ source=("git+$url#tag=v$pkgver"
+         "$pkgname-server-$pkgver.apk::$url/releases/download/v$pkgver/$pkgname-server-v$pkgver")
 @@ -15,7 +15,7 @@
  
  build() {
@@ -13,7 +22,14 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -4,4 +4,4 @@
+ glibc
+ libusb
+ meson
+-sdl3
++sdl2
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

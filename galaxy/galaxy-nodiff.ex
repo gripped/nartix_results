@@ -198,11 +198,13 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
+lact
 lazarus
 lazarus-qt5
 lazarus-qt6
 lazygit
 leafpad
+lesspipe
 lf
 libaacs
 libcec
@@ -210,7 +212,6 @@ libcmis
 libdbusmenu-lxqt
 libe-book
 libetpan
-libexttextcat
 libfm-qt
 libhx
 libime

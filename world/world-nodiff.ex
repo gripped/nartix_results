@@ -59,6 +59,7 @@ amf-headers
 amfora
 aml
 amtk
+amule
 analitza
 analitza5
 anari-sdk
@@ -1745,7 +1746,6 @@ libev
 libevdev
 libewf
 libexif
-libexttextcat
 libfabric
 libfakekey
 libfaketime
@@ -2391,7 +2391,6 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
-mitmproxy
 mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
@@ -4056,7 +4055,6 @@ python-pkg_resources
 python-pkgconfig
 python-pkginfo
 python-platformdirs
-python-playwright
 python-plette
 python-pluggy
 python-plumbum

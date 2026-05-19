@@ -29,9 +29,9 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
-lact
 lemurs
 libetonyek
+libexttextcat
 libmatemixer
 libodfgen
 libratbag

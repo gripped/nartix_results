@@ -4,7 +4,6 @@ aarch64-linux-gnu-gcc
 accountsservice
 aflplusplus
 alsa-utils
-amule
 ant
 ant-doc
 apache
@@ -390,6 +389,7 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
+libexttextcat
 libfido2
 libfprint
 libgsystemservice
@@ -559,6 +559,7 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
+mitmproxy
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -739,6 +740,7 @@ python-cram
 python-debugpy
 python-krb5
 python-ndg-httpsclient
+python-playwright
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
