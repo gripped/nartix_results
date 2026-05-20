@@ -3651,7 +3651,6 @@ python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
-python-glanceclient
 python-glob2
 python-gmpy2
 python-gnupg
@@ -3855,8 +3854,6 @@ python-lsp-server
 python-lsprotocol
 python-lupa
 python-lxml-html-clean
-python-lxml
-python-lxml-docs
 python-lz4
 python-m2crypto
 python-magic-filter
@@ -4712,7 +4709,6 @@ qca-qt5
 qca-qt6
 qcoro
 qgit
-qgpgme
 qhexedit2
 qhull
 qoi

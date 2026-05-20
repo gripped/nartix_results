@@ -738,7 +738,10 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
+python-glanceclient
 python-krb5
+python-lxml
+python-lxml-docs
 python-ndg-httpsclient
 python-playwright
 python-pymupdf
@@ -834,6 +837,7 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
+qgpgme
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers

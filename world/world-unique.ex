@@ -742,6 +742,7 @@ xlibre-input-vmmouse
 xlibre-input-void
 xlibre-input-wacom
 xlibre-video-amdgpu
+xlibre-video-intel
 xlibre-video-openchrome
 xlibre-video-v4l
 xlibre-xorgxrdp-glamor

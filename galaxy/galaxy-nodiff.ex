@@ -212,6 +212,7 @@ libcmis
 libdbusmenu-lxqt
 libe-book
 libetpan
+libexttextcat
 libfm-qt
 libhx
 libime
@@ -597,6 +598,7 @@ swaync
 swww
 sysbench
 t1lib
+tcpdump
 tealdeer
 telegram-desktop
 tenacity
@@ -736,6 +738,8 @@ thunar
 thunderbird
 timeshift
 tinyxxd
+tlsh
+python-tlsh
 torbrowser-launcher
 ttf-input-nerd
 ttf-jetbrains-mono

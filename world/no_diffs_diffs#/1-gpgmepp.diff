@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,22 +1,21 @@
+ 
+ pkgname=gpgmepp
+-pkgver=2.1.0
+-pkgrel=1
++pkgver=2.0.0
++pkgrel=2
+ pkgdesc='C++ bindings for GPGME'
+ arch=(x86_64)
+ url='https://gnupg.org/software/gpgme/index.html'
+ license=(LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          gpgme
+-         libgcc
+-         libgpg-error
+-         libstdc++)
++         libgpg-error)
+ makedepends=(cmake
+              git)
+ provides=(libgpgmepp.so)
+ conflicts=('gpgme<2')
+ source=(git+https://dev.gnupg.org/source/gpgmepp#tag=gpgmepp-$pkgver)
+-sha256sums=('b95a368b0a8f6f72a6e9421fd88a0ba58d2390a3c8a5401c063854c113c3eb6b')
++sha256sums=('94d24543dcdbfb6e6625d0a9852dd318e4af198ae0b70bdad092634d0aa864c0')
+ 
+ build() {
+   cmake -B build -S $pkgname \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ cmake
++gcc-libs
+ git
+ glibc
+ gpgme
+-libgcc
+ libgpg-error
+-libstdc++

@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -9,6 +9,8 @@
+ license=(Apache-2.0)
+ makedepends=(
+   cmake
++  gcc
++  make
+   python
+   gcc-libs
+   python-build
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,8 @@
+ cmake
++gcc
+ gcc-libs
+ glibc
++make
+ python
+ python-build
+ python-installer

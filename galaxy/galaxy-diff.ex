@@ -31,7 +31,6 @@ innernet
 intel-gpu-tools
 lemurs
 libetonyek
-libexttextcat
 libmatemixer
 libodfgen
 libratbag
