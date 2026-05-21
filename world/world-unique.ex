@@ -749,6 +749,7 @@ xlibre-xorgxrdp-glamor
 xlibre-xorgxrdp
 xlibre-xserver-beta
 xlibre-xserver
+xorg-server-tearfree
 znc-dinit
 znc-openrc
 znc-runit

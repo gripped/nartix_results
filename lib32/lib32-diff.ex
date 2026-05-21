@@ -3,7 +3,6 @@ lib32-colord
 lib32-dbus
 lib32-fluidsynth
 lib32-gamemode
-lib32-giflib
 lib32-krb5
 lib32-libepoxy
 lib32-libgudev
@@ -27,6 +26,7 @@ lib32-vulkan-swrast
 lib32-vulkan-virtio
 lib32-vulkan-mesa-implicit-layers
 lib32-vulkan-mesa-layers
+lib32-nettle
 lib32-nvidia-580xx-utils
 lib32-nvidia-utils
 lib32-orc

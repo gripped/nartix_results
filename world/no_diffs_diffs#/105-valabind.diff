@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,7 @@
- }
+@@ -12,7 +12,7 @@
+ sha256sums=('736185af3746a39ebd3a9c3ef28f23ee3d636f78a4a51225d9e10f251d8d01de')
  
  build() {
--  arch-meson ${pkgname}-${pkgver} build
-+  artix-meson ${pkgname}-${pkgver} build
+-  arch-meson "$pkgname" build
++  artix-meson "$pkgname" build
    meson compile -C build
  }
  
@@ -17,11 +17,9 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -3,6 +3,6 @@
- patch -Np1 -i ../fix-build.diff
- }
+@@ -1,4 +1,4 @@
  build() {
--arch-meson ${pkgname}-${pkgver} build
-+artix-meson ${pkgname}-${pkgver} build
+-arch-meson "$pkgname" build
++artix-meson "$pkgname" build
  meson compile -C build
  }

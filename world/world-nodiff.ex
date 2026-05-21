@@ -1091,6 +1091,8 @@ hy
 hypercorn
 hyperkitty
 hyperscan
+hyphen
+hyphen-en
 hyprcursor
 hyprgraphics
 hypridle
@@ -2346,6 +2348,7 @@ mathjax2
 matterbridge
 maturin
 python-maturin
+maven
 mbedtls
 mbedtls2
 mbox-importer
@@ -3010,7 +3013,6 @@ perl-uri
 perl-user-identity
 perl-variable-magic
 perl-www-robotrules
-perl-xml-libxml
 perl-xml-namespacesupport
 perl-xml-parser
 perl-xml-rss
@@ -3999,7 +4001,6 @@ python-parse
 python-parsedatetime
 python-parso
 python-partd
-python-parver
 python-passlib
 python-pasta
 python-paste

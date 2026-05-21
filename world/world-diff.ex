@@ -292,8 +292,6 @@ hipfft
 hipsolver
 hipsparse
 hwloc
-hyphen
-hyphen-en
 hyprland
 i2pd
 ibus
@@ -534,7 +532,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-maven
 media-player-info
 memcached
 mesa
@@ -646,6 +643,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-xml-libxml
 pgbouncer
 phodav
 php-legacy
@@ -743,6 +741,7 @@ python-krb5
 python-lxml
 python-lxml-docs
 python-ndg-httpsclient
+python-parver
 python-playwright
 python-pymupdf
 python-pyscard

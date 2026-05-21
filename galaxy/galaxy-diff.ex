@@ -1,7 +1,6 @@
 alacritty
 alsa-utils
 autorandr
-blender
 bsd-games
 cinnamon-desktop
 cosmic-applets
@@ -29,6 +28,7 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
+lact
 lemurs
 libetonyek
 libmatemixer

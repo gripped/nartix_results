@@ -28,6 +28,7 @@ bcc-libbpf-tools
 bcc-examples
 python-bcc
 bleachbit
+blender
 blueman
 bogofilter
 bogofilter-db
@@ -198,7 +199,6 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
-lact
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -534,6 +534,7 @@ qmmp
 qps
 qrupdate
 qt5-location
+qt5-sensors
 qt5ct
 qt5pas
 qt6pas

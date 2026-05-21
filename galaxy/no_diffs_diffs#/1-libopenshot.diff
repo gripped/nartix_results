@@ -1,33 +1,44 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,21 +1,21 @@
  
  pkgname=libopenshot
 -pkgver=0.4.0
 -pkgrel=14
-+pkgver=0.5.0
-+pkgrel=3
++pkgver=0.7.0
++pkgrel=1
  pkgdesc="A video editing, animation, and playback library for C++, Python, and Ruby"
  arch=(x86_64)
  url="https://github.com/openshot/libopenshot"
-@@ -13,7 +13,9 @@
+ license=(LGPL-3.0-or-later)
+ depends=(
+   babl
+-  gcc-libs
++  libgomp
++  libstdc++
++  libgcc
+   glibc
    libmagick
    opencv
    python
-+  resvg
    qt5-base
-+  qt6-base
-   qt5-multimedia
-   qt5-svg
+-  qt5-multimedia
+-  qt5-svg
  )
-@@ -34,8 +36,8 @@
+ makedepends=(
+   catch2
+@@ -31,11 +31,12 @@
+   unittestpp
+   xorg-server-xvfb
+   zeromq
++  qt5-svg
  )
  provides=(libopenshot.so)
  source=($url/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
 -sha512sums=('e5aa91e2ec3f64952a60e069e3c843d3ac59c3f896d81dccd789e52244f442ceed2e62374b6aeeb2514a8b88557edd60faca33cadb06c297ff400aebc83f98a6')
 -b2sums=('faf2bcabb484a167667c0b2191d8b51ee972d2c204ae7edebbfaa7500542eebdce2dc6c4a8134bc8490e5254190ebda1521e3f437d874df18a8c40dfb48ffed2')
-+sha512sums=('6a19717ed9f1602e0c3737a69b7664de0a36f837e2cbcf3d9275b28001306ea75bc0cd45306221d5134913ac1173ee764e74a321e07045eca177d52355a70dd9')
-+b2sums=('e667138e67debeb0161ac221744009f5112abdcd10689a14195fd21319874000c5fde3d69ea10900ddec71f21f991657e867929486b87fde78928a42a0597dbb')
++sha512sums=('d36ad17e65534c890358ea7a12b039e94296327341835f39c5d76d257f5be5e8f874124b51005cd710cfc668a44dd898f63de2c674544d30b5a9d012273f56ce')
++b2sums=('3c11f13d881b798e173c685f20700a2e060606a852834905547d971a569d85ccd7951753f4de2d119caebfacd1917df30c8038c6b69f3c9d31560c92e9b361d4')
  
  prepare() {
    sed -e 's|CMAKE_CXX_STANDARD 14|CMAKE_CXX_STANDARD 17|' -i $pkgname-$pkgver/CMakeLists.txt
@@ -37,12 +48,32 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -25,6 +25,8 @@
+@@ -4,17 +4,19 @@
+ cppzmq
+ doxygen
+ ffmpeg4.4
+-gcc-libs
+ glibc
+ jsoncpp
+ libavcodec.so
+ libavformat.so
+ libavutil.so
++libgcc
++libgomp
+ libjsoncpp.so
+ libmagick
+ libopenshot-audio
+ libopenshot-audio.so
+ libprotobuf.so
++libstdc++
+ libswresample.so
+ libswscale.so
+ libzmq.so
+@@ -23,7 +25,6 @@
+ python
+ python-setuptools
  qt5-base
- qt5-multimedia
+-qt5-multimedia
  qt5-svg
-+qt6-base
-+resvg
  swig
  unittestpp
- xorg-server-xvfb

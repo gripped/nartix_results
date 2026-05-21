@@ -196,6 +196,7 @@ mullvad-vpn-openrc
 newsraft
 numix-icon-theme
 octopi
+ofono-openrc
 opensnitch-openrc
 openssl-1.1
 opentracker
