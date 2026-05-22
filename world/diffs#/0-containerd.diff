@@ -2,7 +2,7 @@
 +++ Artix PKGBUILD
 @@ -15,9 +15,6 @@
                "910C28608D33DDE689C03290997C5A3CD3167CB5") # Samuel Karp
- sha256sums=('f66ef36a301ae53fffb326d7f9ac7db0597e51bbc70d1d6820fdaada7207b9d1')
+ sha256sums=('27ce2f74ff289f85dbd23683d377aa8adc17783f828d801897728fb570fd62e4')
  
 -prepare() {
 -  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service

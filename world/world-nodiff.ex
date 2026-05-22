@@ -416,7 +416,6 @@ cython0
 d-spy
 darktable
 dart-sass
-dart
 darts
 dateutils
 dav1d
@@ -756,6 +755,7 @@ girara
 git-lfs
 git
 git-zsh-completion
+gitea-runner
 gitea
 github-cli
 gjs
@@ -1055,7 +1055,6 @@ hitori
 hivex
 hostapd
 hotdoc
-hplip
 hsa-rocr
 hsakmt-roct
 hspell
@@ -2816,7 +2815,6 @@ perl-html-parser
 perl-html-tagset
 perl-http-cookiejar
 perl-http-cookies
-perl-http-daemon
 perl-http-date
 perl-http-message
 perl-http-negotiate
@@ -3653,6 +3651,7 @@ python-gitdb
 python-github3py
 python-gitlab
 python-gitpython
+python-glanceclient
 python-glob2
 python-gmpy2
 python-gnupg
@@ -3816,6 +3815,7 @@ python-keystoneauth1
 python-keyutils
 python-kiwisolver
 python-kombu
+python-krb5
 python-kubernetes
 python-lark-parser
 python-lazr.config
@@ -3856,6 +3856,8 @@ python-lsp-server
 python-lsprotocol
 python-lupa
 python-lxml-html-clean
+python-lxml
+python-lxml-docs
 python-lz4
 python-m2crypto
 python-magic-filter
@@ -3869,7 +3871,6 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
-python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -4001,6 +4002,7 @@ python-parse
 python-parsedatetime
 python-parso
 python-partd
+python-parver
 python-passlib
 python-pasta
 python-paste
@@ -4053,6 +4055,7 @@ python-pkg_resources
 python-pkgconfig
 python-pkginfo
 python-platformdirs
+python-playwright
 python-plette
 python-pluggy
 python-plumbum
@@ -4281,7 +4284,6 @@ python-pytest-run-parallel
 python-pytest-runner
 python-pytest-services
 python-pytest-snapshot
-python-pytest-socket
 python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
@@ -4347,6 +4349,7 @@ python-regex
 python-regress
 python-rencode
 python-reportlab
+python-repoze.lru
 python-requests-aws4auth
 python-requests-credssp
 python-requests-file
@@ -4515,6 +4518,7 @@ python-sure
 python-svglib
 python-sybil
 python-sympy
+python-syrupy
 python-tabulate
 python-tabview
 python-tappy
@@ -4865,7 +4869,6 @@ java-rhino
 rhino-javadoc
 rinutils
 ripgrep-all
-ripgrep
 riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc

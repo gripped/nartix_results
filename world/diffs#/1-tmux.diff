@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=tmux
--pkgver=3.6_b
-+pkgver=3.6_a
- pkgrel=1
- pkgdesc='Terminal multiplexer'
- url='https://github.com/tmux/tmux/wiki'
-@@ -9,10 +9,10 @@
+@@ -9,8 +9,8 @@
  depends=('libevent' 'libevent_core-2.1.so'
           'libutempter'
           'ncurses' 'libncursesw.so'
@@ -17,11 +9,8 @@
 +          'libudev.so')
 +makedepends=('git' )
  source=("git+https://github.com/tmux/tmux.git#tag=${pkgver/_/}")
--sha256sums=('21082e6362c674c7e1e808c45dc9978fa58482da5cfbdafbd4e06db36ac965d2')
-+sha256sums=('4889f3cdd14c538fa199e788e78ed4d0bc46f16d70d79b525d58e96d931ca47a')
+ sha256sums=('ab7fbfcb827a93eb7da177d45b50af4710f913f7b2db34037527e8235cda1e97')
  
- prepare() {
- 	cd "$pkgname"
 @@ -26,7 +26,7 @@
  	./configure \
  		--prefix=/usr \

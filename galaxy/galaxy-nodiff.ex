@@ -139,6 +139,7 @@ fcitx5-chinese-addons
 fcitx5-lua
 fcitx5-qt
 firefox-i18n
+firefox-noscript
 fluxbox
 font-awesome
 woff2-font-awesome
@@ -269,9 +270,6 @@ lightdm-slick-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
-linux-rt-lts
-linux-rt-lts-headers
-linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs
@@ -745,6 +743,9 @@ torbrowser-launcher
 ttf-input-nerd
 ttf-jetbrains-mono
 tumbler
+ublock-origin
+firefox-ublock-origin
+thunderbird-ublock-origin
 ueberzug
 ueberzugpp
 uncrustify
@@ -756,7 +757,7 @@ vhba-module-dkms
 vhba-module
 vicious
 vis
-vis-syntax-highlighting
+vis-lexers
 vivaldi
 voa
 vpl-gpu-rt

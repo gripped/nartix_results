@@ -1,0 +1,22 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ }
+ 
+ package() {
+-  depends=('firefox')
++  optdepends=('firefox' 'konform-browser')
+   _extension_id="{73a6fe31-595d-460b-a920-fcc0f8843232}"
+   _extension_dest="${pkgdir}/usr/lib/firefox/browser/extensions/${_extension_id}"
+   install -Dm644 noscript/xpi/noscript-$pkgver.xpi "${_extension_dest}.xpi"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-firefox
+ git
+ nodejs
+ npm

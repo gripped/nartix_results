@@ -105,6 +105,7 @@ cups-filters
 cups
 libcups
 darkhttpd
+dart
 dbus-broker
 dconf
 ddcutil
@@ -291,6 +292,7 @@ hipcub
 hipfft
 hipsolver
 hipsparse
+hplip
 hwloc
 hyprland
 i2pd
@@ -643,6 +645,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-http-daemon
 perl-xml-libxml
 pgbouncer
 phodav
@@ -736,21 +739,15 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-glanceclient
-python-krb5
-python-lxml
-python-lxml-docs
+python-marshmallow
 python-ndg-httpsclient
-python-parver
-python-playwright
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
+python-pytest-socket
 python-pyudev
 python-recommonmark
-python-repoze.lru
 python-sphinxcontrib-spelling
-python-syrupy
 qastools
 qbittorrent
 qbittorrent-nox
@@ -858,6 +855,7 @@ redis
 redshift
 refind
 refind-docs
+ripgrep
 ristretto
 rnnoise
 rocalution

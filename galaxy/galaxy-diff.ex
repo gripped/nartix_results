@@ -43,6 +43,9 @@ libva-nvidia-driver
 libxfce4ui
 libxfce4windowing
 light
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
 ly
 mate-control-center
 mate-screensaver

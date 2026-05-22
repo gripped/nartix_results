@@ -1,23 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,21 +2,23 @@
- 
- pkgbase=util-linux
- pkgname=(util-linux util-linux-libs)
--pkgver=2.42.1
--pkgrel=1
-+pkgver=2.42
-+pkgrel=1.1
- pkgdesc='Miscellaneous system utilities for Linux'
- url='https://github.com/util-linux/util-linux'
+@@ -9,14 +9,17 @@
  arch=('x86_64')
  makedepends=('asciidoctor'
               'bash-completion'
 +             'cryptsetup'
               'git'
               'libcap-ng'
-              'libxcrypt'
++             'libelogind'
 +             'libutempter'
+              'libxcrypt'
               'meson'
               'po4a'
               'python'
@@ -27,39 +19,42 @@
  license=(
    'BSD-2-Clause'
    'BSD-3-Clause'
-@@ -35,9 +37,9 @@
+@@ -35,8 +38,7 @@
          {login,common,remote,runuser,su}.pam
          'util-linux.sysusers'
          '60-rfkill.rules'
 -        'rfkill-unblock_.service'
 -        'rfkill-block_.service')
--sha256sums=('02c15bd250c371d4864c43c7fc61c794b83e5e2eff264a88469001cb03299c3e'
-+        0001-util-linux-no-systemd.patch
-+)
-+sha256sums=('fb18631f240fce145e1dca75fe9b587bb206ffd463f433ae0eaa8a808ecb24ec'
++        0001-util-linux-optional-elogind-support.patch)
+ sha256sums=('02c15bd250c371d4864c43c7fc61c794b83e5e2eff264a88469001cb03299c3e'
              '6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a'
              'ee917d55042f78b8bb03f5467e5233e3e2ddc2fe01e302bc53b218003fe22275'
-             '57e057758944f4557762c6def939410c04ca5803cbdd2bfa2153ce47ffe7a4af'
-@@ -46,8 +48,7 @@
+@@ -46,13 +48,13 @@
              '3f54249ac2db44945d6d12ec728dcd0d69af0735787a8b078eacd2c67e38155b'
              '4a0b3dd8aa6d34dd29e1d153f396cacf908b0d64f7218276cbcab684587c0a0a'
              '7423aaaa09fee7f47baa83df9ea6fef525ff9aec395c8cbd9fe848ceb2643f37'
 -            '8ccec10a22523f6b9d55e0d6cbf91905a39881446710aa083e935e8073323376'
 -            'a22e0a037e702170c7d88460cc9c9c2ab1d3e5c54a6985cd4a164ea7beff1b36')
-+            'ddd71ce505a677b086d5bcf7b6890cc8927367d871227bbd6a773acff1def219')
++            'd830210ac8805ca44cd61139ed8df01c67ea8cf6eb8be225f2844c15c5cd623b')
  
  _backports=(
  )
-@@ -70,6 +71,8 @@
+ 
+ _reverts=(
++  'ec2e371da56a8d69d6787eff856a36ddab9e12f0'
+ )
+ 
+ prepare() {
+@@ -70,6 +72,8 @@
      git revert --mainline 1 --no-commit "${_c}"
    done
  
-+  git apply ../0001-util-linux-no-systemd.patch
++  git apply ../0001-util-linux-optional-elogind-support.patch
 +
    sed -i '/dirty=/c dirty=' tools/git-version-gen
  }
  
-@@ -77,8 +80,9 @@
+@@ -77,8 +81,9 @@
    local _meson_options=(
      -Dfs-search-path=/usr/bin:/usr/local/bin
  
@@ -70,11 +65,12 @@
      -Dncurses=disabled
      -Dncursesw=enabled
      -Deconf=disabled
-@@ -89,16 +93,19 @@
+@@ -89,9 +94,13 @@
      -Dbuild-newgrp=enabled
      -Dbuild-vipw=enabled
      -Dbuild-write=enabled
 +
++    -Delogind=enabled
 +    -Dsysusersdir=/usr/lib/sysusers.d
 +    -Dtmpfilesdir=/usr/lib/tmpfiles.d
    )
@@ -84,19 +80,12 @@
  
    meson compile -C build
  }
- 
- check() {
-   cd build
--  ../util-linux/tests/run.sh --show-diff
-+  ../util-linux/tests/run.sh --show-diff --exclude='lsfd/column-mntid-nonroot','lsfd/assoc-pidfs'
- }
- 
- package_util-linux() {
-@@ -110,13 +117,13 @@
+@@ -110,13 +119,15 @@
             'file' 'libmagic.so'
             'glibc'
             'libcap-ng'
--           'libgcc' 'libgcc_s.so'
++           'libelogind'
+            'libgcc' 'libgcc_s.so'
             'libxcrypt' 'libcrypt.so'
             'ncurses' 'libncursesw.so'
             'pam'
@@ -108,7 +97,7 @@
             'zlib')
    optdepends=('words: default dictionary for look')
    backup=(etc/pam.d/chfn
-@@ -145,8 +152,6 @@
+@@ -145,8 +156,6 @@
    install -Dm0644 su.pam "${pkgdir}/etc/pam.d/su"
    install -Dm0644 su.pam "${pkgdir}/etc/pam.d/su-l"
  
@@ -117,25 +106,33 @@
    install -d -m0755 util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/lib*.so* util-linux-libs/lib/
    mv "$pkgdir"/usr/lib/pkgconfig util-linux-libs/lib/pkgconfig
-@@ -160,11 +165,6 @@
- 
+@@ -161,11 +170,6 @@
    install -Dm0644 60-rfkill.rules \
      "${pkgdir}/usr/lib/udev/rules.d/60-rfkill.rules"
--
+ 
 -  install -Dm0644 rfkill-unblock_.service \
 -    "${pkgdir}/usr/lib/systemd/system/rfkill-unblock@.service"
 -  install -Dm0644 rfkill-block_.service \
 -    "${pkgdir}/usr/lib/systemd/system/rfkill-block@.service"
- 
+-
    install -vDm 644 $pkgbase/Documentation/licenses/COPYING.{BSD*,ISC} -t "$pkgdir/usr/share/licenses/$pkgname/"
    install -vDm 644 $pkgbase-BSD-2-Clause.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+ }
+@@ -173,6 +177,7 @@
+ package_util-linux-libs() {
+   pkgdesc='util-linux runtime libraries'
+   depends=('glibc'
++           'libelogind'
+            'sqlite')
+   provides=('libutil-linux' 'libblkid.so' 'libfdisk.so' 'libmount.so' 'libsmartcols.so' 'libuuid.so')
+   conflicts=('libutil-linux')
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,17 +1,16 @@
+@@ -1,17 +1,19 @@
  asciidoctor
  bash-completion
  coreutils
@@ -145,8 +142,9 @@
  glibc
  libcap-ng
  libcrypt.so
--libgcc
--libgcc_s.so
++libelogind
+ libgcc
+ libgcc_s.so
  libmagic.so
  libncursesw.so
 -libsystemd.so
@@ -156,7 +154,7 @@
  libxcrypt
  meson
  ncurses
-@@ -21,7 +20,6 @@
+@@ -21,7 +23,6 @@
  readline
  shadow
  sqlite

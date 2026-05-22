@@ -236,6 +236,7 @@ git-s6
 gitea-dinit
 gitea-openrc
 gitea-runit
+gitea-runner-openrc
 gitea-s6
 gitea-tea
 glibc-runit

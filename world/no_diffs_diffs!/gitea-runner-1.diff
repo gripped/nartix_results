@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,16 +10,14 @@
+ depends=('glibc' 'git')
+ makedepends=('go')
+ optdepends=('docker: To run runners in containers')
+-provides=('act_runner')
+-replaces=('act_runner')
++provides=('act_runner' 'act-runner')
++replaces=('act_runner' 'act-runner')
+ backup=("etc/${pkgname}/config.yaml")
+ install="${pkgname}.install"
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz"
+-        "${pkgname}.service"
+         "${pkgname}.sysusers"
+         "${pkgname}.tmpfiles")
+ sha256sums=('103b9b903b16db865f0295f5f3a2c175eec40932b267aaa4ddc9cc8f50a9d555'
+-            '84f1d7c8f6311689b935ab16037d9b1bb6fae0155a54a6a19d3edabe8856e5cf'
+             'd7d0ec932b3efd2c5a98b2084d6f13baa74ec458ed244aaa48053cee6628c89d'
+             '476e49e002f64e996c1d7d5b0c46a1f850c52273e6f974496eaa71b4446d7f37')
+ 
+@@ -43,5 +41,4 @@
+ 	install -Dm 644 "${srcdir}/${pkgname}-config.yaml" "${pkgdir}/etc/${pkgname}/config.yaml"
+ 	install -Dm 644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"
+ 	install -Dm 644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/${pkgname}.conf"
+-	install -Dm 644 "${srcdir}/${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+ }
