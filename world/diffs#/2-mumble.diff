@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=mumble
+ pkgname=(mumble mumble-server)
+ pkgver=1.5.857
+-pkgrel=8
++pkgrel=7
+ pkgdesc="An Open Source, low-latency, high quality voice chat software"
+ arch=(x86_64)
+ url="https://www.mumble.info/"
 @@ -45,21 +45,19 @@
  )
  makedepends+=(
@@ -24,13 +33,32 @@
          'c607246691e9701f54b8d133db7d424a46ab94781178d172ae8a35df8ca505da59734ddae00789b93af316de3344d7e177a1a988e1438121e1e921ff59724f24')
  validpgpkeys=(
    'CEB6BB9EC81FA7105F22A017CABE1DB1F21021AE'  # Mumble Automatic Build Infrastructure 2025 <mumble-auto-build-2025@mumble.info>
+@@ -127,7 +125,7 @@
+     libxi
+     openssl libcrypto.so libssl.so
+     opus libopus.so
+-    poco libPocoFoundation.so libPocoXML.so libPocoZip.so
++    poco
+     qt5-svg
+     rnnoise
+     speexdsp libspeexdsp.so
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -38,6 +38,5 @@
+@@ -8,9 +8,6 @@
+ hicolor-icon-theme
+ jack
+ lib32-gcc-libs
+-libPocoFoundation.so
+-libPocoXML.so
+-libPocoZip.so
+ libasound.so
+ libcap
+ libcap.so
+@@ -41,6 +38,5 @@
  rnnoise
  speech-dispatcher
  speexdsp

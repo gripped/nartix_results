@@ -53,6 +53,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calc
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -105,10 +106,10 @@ cups-filters
 cups
 libcups
 darkhttpd
-dart
 dbus-broker
 dconf
 ddcutil
+deno
 dhcp
 dhclient
 dhcpcd
@@ -143,6 +144,11 @@ dracut
 drkonqi
 dunst
 earlyoom
+edk2
+edk2-aarch64
+edk2-riscv64
+edk2-shell
+edk2-ovmf
 element.io
 element-web
 element-desktop
@@ -292,7 +298,6 @@ hipcub
 hipfft
 hipsolver
 hipsparse
-hplip
 hwloc
 hyprland
 i2pd
@@ -645,8 +650,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-http-daemon
-perl-xml-libxml
 pgbouncer
 phodav
 php-legacy
@@ -710,6 +713,7 @@ plasma-x11-session
 plocate
 pluma
 plymouth
+poco
 podman
 podman-docker
 polkit
@@ -739,12 +743,10 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-debugpy
-python-marshmallow
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
-python-pytest-socket
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
@@ -833,7 +835,6 @@ qemu-base
 qemu-desktop
 qemu-emulators-full
 qemu-full
-qgpgme
 qt-gstreamer
 qt5-base
 qt5-xcb-private-headers
@@ -855,7 +856,6 @@ redis
 redshift
 refind
 refind-docs
-ripgrep
 ristretto
 rnnoise
 rocalution
@@ -1085,6 +1085,7 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
+wget
 wildmidi
 wine
 wireplumber

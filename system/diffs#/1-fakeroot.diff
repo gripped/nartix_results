@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,20 +1,23 @@
- 
- pkgname=fakeroot
--pkgver=1.38
--pkgrel=3
-+pkgver=1.38.1
-+pkgrel=1
- pkgdesc='Tool for simulating superuser privileges'
- arch=('x86_64')
- license=('GPL-3.0-or-later')
+@@ -8,8 +8,9 @@
  url='https://tracker.debian.org/pkg/fakeroot'
  install=fakeroot.install
  depends=('glibc' 'filesystem' 'sed' 'util-linux' 'sh')
@@ -18,27 +9,8 @@
  checkdepends=('sharutils')
 +options=(debug)
  source=("git+https://salsa.debian.org/clint/fakeroot.git#tag=upstream/${pkgver}")
--sha256sums=('45ec81aa9b9987176a3c3ddeec61470a936b7424f395b422e168abf6144ee175')
-+sha256sums=('4c32e5b0acf983e36e6dabc73ac15f2ebafa7817b031acd4f1e6c80fb79c78b7')
+ sha256sums=('4c32e5b0acf983e36e6dabc73ac15f2ebafa7817b031acd4f1e6c80fb79c78b7')
  
- prepare() {
-   cd "${pkgname}"
-+
-+  sed -i 's|gnu|user|' test/t.xattr2
- 
-   autoreconf -fi
- }
-@@ -36,7 +39,9 @@
- check() {
-   cd "${pkgname}"
- 
--  make check
-+  make \
-+    VERBOSE=1 \
-+    check
- }
- 
- package() {
 
 
 ############# Stripped diff below #################

@@ -275,7 +275,6 @@ cairomm-1.16
 cairomm-1.16-docs
 cairomm
 cairomm-docs
-calc
 calcurse
 calendarsupport
 calf
@@ -416,6 +415,7 @@ cython0
 d-spy
 darktable
 dart-sass
+dart
 darts
 dateutils
 dav1d
@@ -436,7 +436,6 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
-deno
 desktop-file-utils
 dev86
 devhelp
@@ -515,11 +514,6 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
-edk2
-edk2-aarch64
-edk2-riscv64
-edk2-shell
-edk2-ovmf
 egl-gbm
 egl-wayland
 egl-wayland2
@@ -1055,6 +1049,7 @@ hitori
 hivex
 hostapd
 hotdoc
+hplip
 hsa-rocr
 hsakmt-roct
 hspell
@@ -2815,6 +2810,7 @@ perl-html-parser
 perl-html-tagset
 perl-http-cookiejar
 perl-http-cookies
+perl-http-daemon
 perl-http-date
 perl-http-message
 perl-http-negotiate
@@ -3011,6 +3007,7 @@ perl-uri
 perl-user-identity
 perl-variable-magic
 perl-www-robotrules
+perl-xml-libxml
 perl-xml-namespacesupport
 perl-xml-parser
 perl-xml-rss
@@ -3093,7 +3090,6 @@ pmbootstrap
 pngplusplus
 pnpm
 po4a
-poco
 podman-compose
 podofo-0.9
 podofo
@@ -3871,6 +3867,7 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
+python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -4284,6 +4281,7 @@ python-pytest-run-parallel
 python-pytest-runner
 python-pytest-services
 python-pytest-snapshot
+python-pytest-socket
 python-pytest-subprocess
 python-pytest-subtesthack
 python-pytest-subtests
@@ -4714,6 +4712,7 @@ qca-qt5
 qca-qt6
 qcoro
 qgit
+qgpgme
 qhexedit2
 qhull
 qoi
@@ -4869,6 +4868,7 @@ java-rhino
 rhino-javadoc
 rinutils
 ripgrep-all
+ripgrep
 riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 riscv64-linux-gnu-glibc
@@ -5866,7 +5866,6 @@ websocketpp
 weechat
 wf-config
 wf-recorder
-wget
 whois
 wiiuse
 wine-staging

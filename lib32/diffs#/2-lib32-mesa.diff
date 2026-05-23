@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
-   lib32-vulkan-mesa-implicit-layers
-   lib32-vulkan-mesa-layers
- )
--pkgver=26.0.6
-+pkgver=26.1.1
- _pkgver=${pkgver/[a-z]/-&}
- pkgrel=1
- epoch=1
 @@ -51,7 +51,6 @@
    lib32-rust-libs
    lib32-spirv-llvm-translator
@@ -17,33 +8,7 @@
    lib32-vulkan-icd-loader
    lib32-wayland
    lib32-xcb-util-keysyms
-@@ -134,7 +133,7 @@
-   )
- done
- 
--b2sums=('2bb539e1944daacfab18efac7a07e3287f88f2b453f6fb2c9ce90a1768dd9a1a085daab1d87390c0df85b2f119e9a9272581c89331813caa70b2b67b2d68b59e'
-+b2sums=('2acad90126cc381f29024f46f32ee324fef9497ef47ec504d561cbd6580200b6b66e5da3b6d7038bcc801af6690b03844d336dbb2508dd8b0d0cc10dd551382d'
-         'SKIP'
-         '431439d31632d177aeb15f910b4f546efa76d54fc74fc8e140399dc5e54eca33fd606f11dbfb48fa83067c8474ee512e62751895d5948367b65ab08b984284e5'
-         'a6d47c903be6094423d89b8ec3ca899d0a84df6dbd6e76632bb6c9b9f40ad9c216f8fa400310753d392f85072756b43ac3892e0a2c4d55f87ab6463002554823'
-@@ -166,7 +165,7 @@
-         '7681b1a7497b5711e663773c1a7e076f333c06c10d3f289079a781c36f050c1620cc279742ea8e5b15ec48f3d6038a6079bbda7fee3ae8e1128bd916d53ed43a'
-         '93385f64103fdb482bec34c7912474ae7a5935948715e6eb9a54907e0db5c39f089f6cd393bab33c935c59a1bbb0f4099431f206343811c1a450554d96a35756')
- 
--sha256sums=('1d3c3b8a8363b8cc354175bb4a684ad8b035211cc1d6fa17aeb9b9623c513f89'
-+sha256sums=('8bd36c031cc6d0edfec04617527609454ee3a09ad53bdf983b45fc2c1e129b2e'
-             'SKIP'
-             '67914ab451f3bfd2e69e5e9d2ef3858484e7074d63f204fd166ec391b54de21d'
-             'ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9'
-@@ -229,6 +228,7 @@
-     -D gles1=disabled
-     -D html-docs=disabled
-     -D intel-rt=disabled
-+    -D intel-virtio-experimental=true
-     -D libunwind=disabled
-     -D microsoft-clc=disabled
-     -D sysprof=false
-@@ -244,7 +244,7 @@
+@@ -245,7 +244,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -52,7 +17,7 @@
    meson compile -C build
  }
  
-@@ -388,7 +388,6 @@
+@@ -389,7 +388,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -60,7 +25,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -418,7 +417,6 @@
+@@ -419,7 +417,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -68,7 +33,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -448,7 +446,6 @@
+@@ -449,7 +446,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -76,7 +41,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -478,7 +475,6 @@
+@@ -479,7 +475,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -84,7 +49,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -507,7 +503,6 @@
+@@ -508,7 +503,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence
@@ -92,7 +57,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -535,7 +530,6 @@
+@@ -536,7 +530,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -100,7 +65,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -565,7 +559,6 @@
+@@ -566,7 +559,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -108,7 +73,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -595,7 +588,6 @@
+@@ -596,7 +588,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -116,7 +81,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -625,7 +617,6 @@
+@@ -626,7 +617,6 @@
      lib32-libxcb
      lib32-libxshmfence
      lib32-spirv-tools
@@ -124,7 +89,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -657,7 +648,6 @@
+@@ -658,7 +648,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
@@ -132,7 +97,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -689,7 +679,6 @@
+@@ -690,7 +679,6 @@
      lib32-libxshmfence
      lib32-llvm-libs
      lib32-spirv-tools
@@ -140,7 +105,7 @@
      lib32-vulkan-icd-loader
      lib32-vulkan-mesa-implicit-layers
      lib32-wayland
-@@ -720,7 +709,6 @@
+@@ -721,7 +709,6 @@
      lib32-libx11
      lib32-libxcb
      lib32-libxshmfence

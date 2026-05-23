@@ -193,6 +193,7 @@ joyutils
 just
 kanshi
 kernel-headers-musl
+keyd
 khard
 kodi
 kodi-gles
@@ -200,6 +201,7 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
+lact
 lazarus
 lazarus-qt5
 lazarus-qt6

@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=keyd
+ pkgver=2.6.0
+-pkgrel=5
++pkgrel=5.1
+ pkgdesc="A key remapping daemon for linux"
+ arch=(x86_64)
+ url="https://github.com/rvaiya/keyd"
+@@ -29,7 +29,7 @@
+ 
+ package() {
+     cd "$pkgname-$pkgver"
+-    make PREFIX=/usr DESTDIR="$pkgdir/" FORCE_SYSTEMD=1 install
++    make PREFIX=/usr DESTDIR="$pkgdir/" install
+ 
+     rm -fv "$pkgdir/usr/bin/test-io"
+ 

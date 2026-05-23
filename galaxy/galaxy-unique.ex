@@ -63,6 +63,7 @@ htpdate
 incron-next
 incron-openrc
 iso-profiles
+keyd-openrc
 knockd-openrc
 konform-browser
 kotatogram-desktop-git
@@ -79,6 +80,7 @@ libpamac
 librewolf
 librsvg-noglycin
 libtree
+libusrsctp
 libwireplumber-4.0-compat
 lightdm-settings
 limine-mkinitcpio-hook
@@ -209,6 +211,7 @@ pcmanfm-gtk2
 pipewire-dinit
 pix
 pod2man
+psi-plus
 pure-ftpd-openrc
 pure-ftpd
 pwvucontrol
