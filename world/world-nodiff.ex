@@ -275,6 +275,7 @@ cairomm-1.16
 cairomm-1.16-docs
 cairomm
 cairomm-docs
+calc
 calcurse
 calendarsupport
 calf
@@ -580,6 +581,9 @@ ethtool
 eventviews
 evince
 evince-lib-docs
+evolution-data-server
+libedataserverui4
+evolution-data-server-docs
 evolution
 evolution-bogofilter
 evolution-spamassassin
@@ -1735,7 +1739,6 @@ libebml
 libebur128
 libepubgen
 libesmtp
-libetebase
 libetonyek
 libetonyek-doc
 libev
@@ -4947,7 +4950,6 @@ ruby-bacon-colored_output
 ruby-bacon
 ruby-bake-test-external
 ruby-bake-test
-ruby-bake
 ruby-base64
 ruby-benchmark-ips
 ruby-benchmark
@@ -4975,7 +4977,6 @@ ruby-csv
 ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
-ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages

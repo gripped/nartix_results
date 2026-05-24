@@ -53,7 +53,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-calc
 catfish
 certbot-apache
 certbot-dns-cloudflare
@@ -163,9 +162,6 @@ eom
 esbuild
 espeakup
 etherwall
-evolution-data-server
-libedataserverui4
-evolution-data-server-docs
 exo
 expect
 extra-cmake-modules
@@ -394,6 +390,7 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
+libetebase
 libexttextcat
 libfido2
 libfprint
@@ -868,6 +865,8 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-bake
+ruby-cucumber-cucumber-expressions
 ruby-lemon
 ruby-rbtree
 ruby-sys-filesystem

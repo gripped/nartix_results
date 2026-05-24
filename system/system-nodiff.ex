@@ -67,7 +67,6 @@ json-c
 kbd
 keyutils
 kmod
-krb5
 ldns
 leancrypto
 less

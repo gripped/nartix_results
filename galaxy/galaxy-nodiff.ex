@@ -138,6 +138,7 @@ fcitx5-bamboo
 fcitx5-chinese-addons
 fcitx5-lua
 fcitx5-qt
+fcitx5-unikey
 firefox-i18n
 firefox-noscript
 fluxbox
@@ -172,7 +173,6 @@ goocanvas
 goverlay
 gpu-screen-recorder-notification
 gpu-screen-recorder-ui
-gpu-screen-recorder
 grilo-plugins
 grub-btrfs
 grub-customizer
@@ -189,6 +189,7 @@ hyperfine
 impala
 imv
 incron
+jellyfin-mpv-shim
 joyutils
 just
 kanshi
@@ -357,6 +358,7 @@ monero
 mousepad
 mozo
 mpc
+mpv-shim-default-shaders
 msedit
 muffin
 mugshot
@@ -508,8 +510,11 @@ python-click-log
 python-generic
 python-inflate64
 python-jaconv
+python-jellyfin-apiclient
 python-linux-procfs
 python-lxml-html-clean
+python-mpv-jsonipc
+python-mpv
 python-multivolumefile
 python-pdftotext
 python-poetry-core
@@ -535,6 +540,7 @@ qps
 qrupdate
 qt5-location
 qt5-sensors
+qt5-webchannel
 qt5ct
 qt5pas
 qt6pas
@@ -744,6 +750,7 @@ python-tlsh
 torbrowser-launcher
 ttf-input-nerd
 ttf-jetbrains-mono
+ttf-sarasa-gothic
 tumbler
 ublock-origin
 firefox-ublock-origin

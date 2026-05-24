@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,15 @@
+ 
+ pkgname=kquickimageeditor
+ pkgver=0.6.1
+-pkgrel=2
++pkgrel=1
+ pkgdesc='QML image editing components'
+ license=(LGPL-2.1-or-later)
+ arch=(x86_64)
+ url='https://invent.kde.org/libraries/kquickimageeditor'
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kconfig
+          kirigami
+-         libgcc
+-         libstdc++
+          opencv
+          qt6-base
+          qt6-declarative)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,8 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kconfig
+ kirigami
+-libgcc
+-libstdc++
+ opencv
+ qt6-base
+ qt6-declarative

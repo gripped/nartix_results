@@ -21,6 +21,7 @@ fd
 featherpad
 firefox
 gpicview
+gpu-screen-recorder
 greetd-regreet
 gtk-engine-murrine
 gtklock
