@@ -29,6 +29,7 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
+lact
 lemurs
 libetonyek
 libmatemixer
@@ -69,16 +70,17 @@ p8-platform
 perl-cgi-fast
 perl-curses
 qbittorrent
+qrupdate
 qt5-webengine
 rage
 read-edid
 reflector
-river-classic
 river
 sdcv
 signal-desktop
 terminology
 termshark
+thunderbird
 tigervnc
 tor
 torsocks

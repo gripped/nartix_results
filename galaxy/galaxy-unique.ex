@@ -108,6 +108,7 @@ lxrandr-gtk2
 lxsession-gtk2
 lxtask-gtk2
 lxterminal-gtk2
+ly-dinit
 ly-s6
 mailgraph-openrc
 mcomix

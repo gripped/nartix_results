@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,13 @@
+ 
+ pkgname=qrupdate
+ pkgver=1.1.5
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Fortran library for fast updates of QR and Cholesky decompositions'
+ url='https://sourceforge.net/projects/qrupdate'
+ depends=(blas
++         gcc-libs
+          glibc
+-         lapack
+-         libgcc
+-         libgfortran)
++         lapack)
+ makedepends=(cmake
+              gcc-fortran
+              git)
+@@ -19,8 +18,7 @@
+ 
+ build() {
+   cmake -B build -S $pkgname-ng \
+-    -DCMAKE_INSTALL_PREFIX=/usr \
+-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
++    -DCMAKE_INSTALL_PREFIX=/usr
+   cmake --build build --verbose
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,7 @@
+ blas
+ cmake
+ gcc-fortran
++gcc-libs
+ git
+ glibc
+ lapack
+-libgcc
+-libgfortran
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ build() {
+ cmake -B build -S $pkgname-ng \
+--DCMAKE_INSTALL_PREFIX=/usr \
+--DCMAKE_POLICY_VERSION_MINIMUM=3.5
++-DCMAKE_INSTALL_PREFIX=/usr
+ cmake --build build --verbose
+ }

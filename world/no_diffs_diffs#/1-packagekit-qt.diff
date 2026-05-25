@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,13 +3,12 @@
+ pkgname=(packagekit-qt6)
+ pkgdesc='Qt bindings for PackageKit'
+ pkgver=1.1.4
+-pkgrel=2
++pkgrel=1
+ arch=(x86_64)
+-url='https://www.freedesktop.org/software/PackageKit/'
++url='http://www.packagekit.org/'
+ license=(LGPL-2.1-only)
+-depends=(glibc
+-         libgcc
+-         libstdc++
++depends=(gcc-libs
++         glibc
+          packagekit
+          qt6-base)
+ makedepends=(cmake
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ cmake
++gcc-libs
+ git
+ glibc
+-libgcc
+-libstdc++
+ packagekit
+ qt6-base

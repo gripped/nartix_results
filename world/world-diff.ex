@@ -108,7 +108,6 @@ darkhttpd
 dbus-broker
 dconf
 ddcutil
-deno
 dhcp
 dhclient
 dhcpcd
@@ -143,11 +142,6 @@ dracut
 drkonqi
 dunst
 earlyoom
-edk2
-edk2-aarch64
-edk2-riscv64
-edk2-shell
-edk2-ovmf
 element.io
 element-web
 element-desktop
@@ -390,7 +384,6 @@ libei
 libei-docs
 libepoxy
 libepoxy-docs
-libetebase
 libexttextcat
 libfido2
 libfprint
@@ -462,6 +455,7 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+lld
 llvm14
 lm_sensors
 localsearch
@@ -710,7 +704,6 @@ plasma-x11-session
 plocate
 pluma
 plymouth
-poco
 podman
 podman-docker
 polkit
@@ -738,6 +731,7 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
+python-beaker
 python-cram
 python-debugpy
 python-ndg-httpsclient
@@ -865,9 +859,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-bake
-ruby-cucumber-cucumber-expressions
-ruby-lemon
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen

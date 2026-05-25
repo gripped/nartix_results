@@ -191,6 +191,7 @@ imv
 incron
 jellyfin-mpv-shim
 joyutils
+json-schema-validator
 just
 kanshi
 kernel-headers-musl
@@ -202,7 +203,6 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
-lact
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -352,6 +352,7 @@ mimetic
 miniaudio
 minio-client
 mixxx
+mnxdom
 mokutil
 monero-gui
 monero
@@ -362,6 +363,7 @@ mpv-shim-default-shaders
 msedit
 muffin
 mugshot
+musescore
 mutt
 nemo
 neomutt
@@ -537,7 +539,6 @@ qgit
 qjackctl
 qmmp
 qps
-qrupdate
 qt5-location
 qt5-sensors
 qt5-webchannel
@@ -571,6 +572,7 @@ rgbds
 rio
 riscv64-linux-gnu-gdb
 ristretto
+river-classic
 rmpc
 rpi-imager
 rust-script
@@ -742,7 +744,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
-thunderbird
 timeshift
 tinyxxd
 tlsh

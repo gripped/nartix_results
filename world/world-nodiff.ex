@@ -437,6 +437,7 @@ default-cursors
 dejagnu
 deluge
 deluge-gtk
+deno
 desktop-file-utils
 dev86
 devhelp
@@ -515,6 +516,11 @@ ecryptfs-utils
 ed
 editline
 editorconfig-core-c
+edk2
+edk2-aarch64
+edk2-riscv64
+edk2-shell
+edk2-ovmf
 egl-gbm
 egl-wayland
 egl-wayland2
@@ -1739,6 +1745,7 @@ libebml
 libebur128
 libepubgen
 libesmtp
+libetebase
 libetonyek
 libetonyek-doc
 libev
@@ -2180,7 +2187,6 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
-lld
 lld16
 lld18
 lld19
@@ -3093,6 +3099,7 @@ pmbootstrap
 pngplusplus
 pnpm
 po4a
+poco
 podman-compose
 podofo-0.9
 podofo
@@ -3318,7 +3325,6 @@ python-backrefs
 python-baize
 python-base58
 python-bcrypt
-python-beaker
 python-beautifulsoup4
 python-behave
 python-beniget
@@ -4950,6 +4956,7 @@ ruby-bacon-colored_output
 ruby-bacon
 ruby-bake-test-external
 ruby-bake-test
+ruby-bake
 ruby-base64
 ruby-benchmark-ips
 ruby-benchmark
@@ -4977,6 +4984,7 @@ ruby-csv
 ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
+ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
@@ -5055,6 +5063,7 @@ ruby-kramdown-parser-gfm
 ruby-kramdown
 ruby-language_server-protocol
 ruby-launchy
+ruby-lemon
 ruby-leto
 ruby-lint_roller
 ruby-locale
