@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -116,6 +116,8 @@
+     --deselect 'test/mitmproxy/proxy/layers/http/test_http3.py::TestClient::test_no_data_on_closed_stream'
+     --deselect 'test/mitmproxy/proxy/layers/http/test_http3.py::TestClient::test_ignore_wrong_order'
+     --deselect 'test/mitmproxy/proxy/layers/http/test_http3.py::test_early_server_data'
++    --deselect 'test/mitmproxy/addons/test_dns_resolver.py'
++    --deselect 'test/mitmproxy/proxy/test_mode_servers.py'
+   )
+ 
+   pytest -vv "${deselected_tests[@]}"

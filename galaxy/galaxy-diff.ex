@@ -42,7 +42,6 @@ libusbsio
 python-libusbsio
 libva-nvidia-driver
 libxfce4ui
-libxfce4windowing
 light
 linux-rt-lts
 linux-rt-lts-headers

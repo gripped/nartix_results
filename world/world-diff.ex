@@ -142,6 +142,7 @@ dracut
 drkonqi
 dunst
 earlyoom
+eclipse-ecj
 element.io
 element-web
 element-desktop
@@ -554,7 +555,6 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
-mitmproxy
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -725,13 +725,13 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
+putty
 pyqt6
 pysolfc
 python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
-python-beaker
 python-cram
 python-debugpy
 python-ndg-httpsclient
@@ -840,7 +840,6 @@ qterminal
 qtermwidget
 rabbitmq
 rabbitmqadmin
-radicale
 rawtherapee
 rdma-core
 redis
@@ -852,8 +851,6 @@ rnnoise
 rocalution
 rocfft
 rocrand
-rocsparse
-roctracer
 rrdtool
 rspamd
 rsync

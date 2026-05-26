@@ -511,7 +511,6 @@ dvisvgm
 dzen2
 easytag
 ebook-tools
-eclipse-ecj
 ecryptfs-utils
 ed
 editline
@@ -2397,6 +2396,7 @@ miniupnpc
 python-miniupnpc
 minizip-ng
 minuet
+mitmproxy
 mjpegtools
 mkdocs-autorefs
 mkdocs-get-deps
@@ -3171,7 +3171,6 @@ pulsemixer
 puppet
 purpose
 purpose5
-putty
 pv
 pwndbg
 pyalpm
@@ -3325,6 +3324,7 @@ python-backrefs
 python-baize
 python-base58
 python-bcrypt
+python-beaker
 python-beautifulsoup4
 python-behave
 python-beniget
@@ -4837,6 +4837,7 @@ qwt-common
 r
 r8168
 radeontop
+radicale
 raft
 ragel
 ragel6
@@ -4910,7 +4911,9 @@ rocprim
 rocprofiler-register
 rocs
 rocsolver
+rocsparse
 rocthrust
+roctracer
 rofi
 ropgadget
 ropper

@@ -1,0 +1,131 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,9 +4,8 @@
+   dolphin-emu
+   dolphin-emu-tool
+ )
+-pkgver=2603.1
+-_gittag=2603a
+-pkgrel=1
++pkgver=2512
++pkgrel=2
+ epoch=1
+ pkgdesc='A Gamecube and Wii emulator'
+ arch=(x86_64)
+@@ -16,19 +15,17 @@
+   bluez-libs
+   bzip2
+   enet
++  gcc-libs
+   glibc
+-  glslang
+   hidapi
+   libavcodec.so
+   libavformat.so
+   libavutil.so
+   libcurl.so
+-  libgcc
+   libgl
+   libsfml-network.so
+   libsfml-system.so
+   libspng.so
+-  libstdc++
+   libswscale.so
+   libusb-1.0.so
+   libx11
+@@ -38,12 +35,10 @@
+   lzo
+   mbedtls2
+   pugixml
+-  sdl3
++  sdl2
+   speexdsp
+   xxhash
+   xz
+-  zlib
+-  zlib-ng
+   zstd
+ )
+ makedepends=(
+@@ -63,8 +58,9 @@
+ )
+ optdepends=('pulseaudio: PulseAudio backend')
+ options=(!emptydirs !lto)
++_tag=2614969fa80dfeb87d2a4ad3bdaa703237127074
+ source=(
+-  dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#tag=${_gittag}
++  dolphin-emu::git+https://github.com/dolphin-emu/dolphin.git#tag=${_tag}
+   git+https://github.com/mutouyun/cpp-ipc.git
+   git+https://github.com/weisslj/cpp-optparse.git
+   git+https://github.com/mozilla/cubeb.git
+@@ -81,7 +77,7 @@
+   git+https://github.com/e-dant/watcher.git
+   git+https://github.com/zlib-ng/zlib-ng.git
+ )
+-b2sums=('8e43c8c34c355a36fea357307a01423a549ce43d2dadf4b782166fe9c62faa9de49798f59d386a599ce964cb8b063a0e5977c218124cfc2345b33776324dcfdb'
++b2sums=('290af3a2d6825ccb17578e6c6105cdf29b8708a8dd59982693d1c5bbc56f06f4d82a069d8615a1a55908f7dbc1e460f7b43f883ad96381ee13ca9c7448caad47'
+         'SKIP'
+         'SKIP'
+         'SKIP'
+@@ -111,13 +107,14 @@
+   git -c protocol.file.allow=always submodule update cmake/sanitizers-cmake
+ }
+ 
++
+ build() {
+   cmake -S dolphin-emu -B build -G Ninja \
+     -DCMAKE_BUILD_TYPE=None \
+     -DCMAKE_SKIP_RPATH=ON \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+-    -DDISTRIBUTOR=archlinux.org \
++    -DDISTRIBUTOR=artixlinux.org \
+     -DENABLE_ANALYTICS=OFF \
+     -DENABLE_AUTOUPDATE=OFF \
+     -DENABLE_LTO=OFF \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,9 +3,9 @@
+ bzip2
+ cmake
+ enet
++gcc-libs
+ git
+ glibc
+-glslang
+ hicolor-icon-theme
+ hidapi
+ libavcodec.so
+@@ -13,14 +13,12 @@
+ libavutil.so
+ libcurl.so
+ libevdev
+-libgcc
+ libgl
+ libminiupnpc.so
+ libpulse
+ libsfml-network.so
+ libsfml-system.so
+ libspng.so
+-libstdc++
+ libswscale.so
+ libudev.so
+ libusb-1.0.so
+@@ -35,12 +33,10 @@
+ python
+ qt6-base
+ qt6-svg
+-sdl3
++sdl2
+ sfml
+ speexdsp
+ vulkan-headers
+ xxhash
+ xz
+-zlib
+-zlib-ng
+ zstd

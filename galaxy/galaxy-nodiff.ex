@@ -266,6 +266,7 @@ libutp
 libvarlink
 libwnck
 libxfce4util
+libxfce4windowing
 libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter

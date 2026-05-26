@@ -41,7 +41,7 @@
    cd pipewire
 +   patch -Np1 -i ../systemd.patch
  
-   git cherry-pick -n fb47e739d9f605772b5098421a809537c108d30c
+   git cherry-pick -n 012b037eeea2ed92812ad6c930570b0a045a34dc
  }
 @@ -101,9 +103,11 @@
      -D session-managers=[]
