@@ -2580,8 +2580,6 @@ opam
 open-isns
 openal
 openal-examples
-openbabel
-python-openbabel
 openblas
 openblas64
 blas-openblas
@@ -3775,6 +3773,7 @@ python-jeepney
 python-jellyfish
 python-jinja-time
 python-jinja
+python-jinxed
 python-jiter
 python-jmespath
 python-joblib
@@ -4834,6 +4833,7 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
+qxlsx
 r
 r8168
 radeontop

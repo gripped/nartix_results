@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gopass
+ pkgver=1.16.1
+-pkgrel=2
++pkgrel=2.1
+ pkgdesc="The slightly more awesome standard unix password manager for teams."
+ arch=('x86_64')
+ url="https://github.com/gopasspw/gopass"
+@@ -49,7 +49,7 @@
+ check() {
+   cd ${pkgname}
+   export GIT_CONFIG_GLOBAL="${PWD}/gitconfig"
+-  git config --global user.email "builduser@archlinux.org"
++  git config --global user.email "builduser@artixlinux.org"
+   git config --global user.name "Build User"
+ 
+   local unit_tests=$(

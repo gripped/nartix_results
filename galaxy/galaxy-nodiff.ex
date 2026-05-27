@@ -170,6 +170,7 @@ gkrellm
 glib-perl
 gnote
 goocanvas
+gopass
 goverlay
 gpu-screen-recorder-notification
 gpu-screen-recorder-ui
@@ -203,6 +204,7 @@ kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
 labwc
+lact
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -274,6 +276,9 @@ lightdm-slick-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs

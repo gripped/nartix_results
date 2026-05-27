@@ -619,6 +619,8 @@ nvtop
 onboard
 onionshare
 open-iscsi
+openbabel
+python-openbabel
 openbox
 opencollada
 opendht
