@@ -500,7 +500,6 @@ dragon
 dropbear
 dropbear-scp
 dssi
-dtc
 duktape
 dump_syms
 dune
@@ -1021,6 +1020,7 @@ gwenhywfar-qt
 gwenview
 gyp
 half
+halibut
 handbrake
 harfbuzz
 harfbuzz-cairo
@@ -1319,7 +1319,6 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
-kddockwidgets
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -2580,6 +2579,8 @@ opam
 open-isns
 openal
 openal-examples
+openbabel
+python-openbabel
 openblas
 openblas64
 blas-openblas
@@ -3169,6 +3170,7 @@ pulsemixer
 puppet
 purpose
 purpose5
+putty
 pv
 pwndbg
 pyalpm
@@ -3481,6 +3483,7 @@ python-ddt
 python-deadlib
 $_modules[@]/#/python-standard-
 python-debtcollector
+python-debugpy
 python-decorator
 python-deepdiff
 python-deepmerge
@@ -4719,6 +4722,8 @@ qca
 qca-qt5
 qca-qt6
 qcoro
+qcustomplot
+qcustomplot-doc
 qgit
 qgpgme
 qhexedit2
@@ -5879,6 +5884,7 @@ websocketpp
 weechat
 wf-config
 wf-recorder
+wget
 whois
 wiiuse
 wine-staging

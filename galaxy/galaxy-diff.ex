@@ -65,7 +65,6 @@ p8-platform
 perl-cgi-fast
 perl-curses
 qbittorrent
-qrupdate
 qt5-webengine
 rage
 read-edid
@@ -75,7 +74,6 @@ sdcv
 signal-desktop
 terminology
 termshark
-thunderbird
 tigervnc
 tor
 torsocks

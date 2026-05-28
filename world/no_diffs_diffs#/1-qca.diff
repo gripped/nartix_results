@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,14 +3,15 @@
+ pkgname=(qca-qt5
+          qca-qt6)
+ pkgver=2.3.10
+-pkgrel=6
++pkgrel=7
+ pkgdesc='Qt Cryptographic Architecture'
+ arch=(x86_64)
+ url='https://userbase.kde.org/QCA'
+ license=(LGPL-2.1-or-later)
+ depends=(ca-certificates
+-         gcc-libs
+          glibc
++         libgcc
++         libstdc++
+          nss)
+ optdepends=('botan: botan plugin'
+             'libgcrypt: gcrypt plugin'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,10 +2,11 @@
+ ca-certificates
+ cmake
+ doxygen
+-gcc-libs
+ glibc
++libgcc
+ libgcrypt
+ libsasl
++libstdc++
+ nss
+ openssl
+ pkcs11-helper

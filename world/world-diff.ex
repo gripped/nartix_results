@@ -140,6 +140,7 @@ dotnet-source-built-artifacts
 dovecot
 dracut
 drkonqi
+dtc
 dunst
 earlyoom
 eclipse-ecj
@@ -342,6 +343,7 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
+kddockwidgets
 kdoctools5
 kinfocenter
 kismet
@@ -619,8 +621,6 @@ nvtop
 onboard
 onionshare
 open-iscsi
-openbabel
-python-openbabel
 openbox
 opencollada
 opendht
@@ -727,7 +727,6 @@ pulseaudio-jack
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-rtp
-putty
 pyqt6
 pysolfc
 python-ansicolors
@@ -735,7 +734,6 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
-python-debugpy
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -746,8 +744,6 @@ python-sphinxcontrib-spelling
 qastools
 qbittorrent
 qbittorrent-nox
-qcustomplot
-qcustomplot-doc
 qemu
 qemu-common
 qemu-audio-alsa
@@ -1074,7 +1070,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wget
 wildmidi
 wine
 wireplumber

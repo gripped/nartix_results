@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(zint
+          zint-qt)
+ pkgver=2.16.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc='Barcode encoding library supporting over 50 symbologies'
+ arch=(x86_64)
+ url='https://zint.org.uk/'
+@@ -34,7 +34,8 @@
+ 
+ package_zint-qt() {
+   pkgdesc='Zint Barcode Studio GUI'
+-  depends+=(gcc-libs
++  depends+=(libgcc
++            libstdc++
+             qt6-base
+             qt6-svg
+             qt6-tools
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,9 @@
+ cmake
+-gcc-libs
+ git
+ glibc
++libgcc
+ libpng
++libstdc++
+ qt6-base
+ qt6-svg
+ qt6-tools

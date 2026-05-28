@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,13 +2,13 @@
+ pkgname=libcerf
+ epoch=1
+ pkgver=3.3
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Self-contained numeric library that provides an efficient and accurate implementation of complex error functions'
+ arch=(x86_64)
+ url='https://jugit.fz-juelich.de/mlz/libcerf/'
+ license=(MIT)
+-depends=(glibc
+-         libgcc)
++depends=(gcc-libs
++         glibc)
+ makedepends=(cmake
+              git)
+ source=(git+https://jugit.fz-juelich.de/mlz/libcerf#tag=v$pkgver)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+ cmake
++gcc-libs
+ git
+ glibc
+-libgcc

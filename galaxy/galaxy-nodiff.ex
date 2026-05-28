@@ -545,6 +545,7 @@ qgit
 qjackctl
 qmmp
 qps
+qrupdate
 qt5-location
 qt5-sensors
 qt5-webchannel
@@ -750,6 +751,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 thunar
+thunderbird
 timeshift
 tinyxxd
 tlsh
