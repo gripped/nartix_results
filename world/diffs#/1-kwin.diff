@@ -9,7 +9,7 @@
           wayland
           xcb-util-keysyms
           xcb-util-wm)
-@@ -95,4 +95,6 @@
+@@ -102,4 +102,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
    setcap CAP_SYS_NICE=+ep "$pkgdir"/usr/bin/kwin_wayland

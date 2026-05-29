@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=krusader
+ pkgver=2.9.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Advanced twin panel (commander style) file manager'
+ arch=(x86_64)
+ url='https://krusader.org/'
+ license=(GPL-2.0-or-later)
+ depends=(acl
++         gcc-libs
+          glibc
+          karchive
+          kbookmarks
+@@ -32,7 +33,6 @@
+          kwidgetsaddons
+          kwindowsystem
+          kxmlgui
+-         libstdc++
+          qt6-5compat
+          qt6-base
+          solid
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ acl
+ extra-cmake-modules
++gcc-libs
+ glibc
+ karchive
+ kbookmarks
+@@ -26,7 +27,6 @@
+ kwidgetsaddons
+ kwindowsystem
+ kxmlgui
+-libstdc++
+ qt6-5compat
+ qt6-base
+ solid

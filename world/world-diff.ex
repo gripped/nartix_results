@@ -97,6 +97,7 @@ connman
 containerd
 containers-common
 coturn
+couchdb
 cppcheck
 crun
 krun
@@ -343,7 +344,6 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
-kddockwidgets
 kdoctools5
 kinfocenter
 kismet
@@ -837,9 +837,9 @@ qt6-webengine
 qterminal
 qtermwidget
 rabbitmq
-rabbitmqadmin
 rawtherapee
 rdma-core
+rebar3
 redis
 redshift
 refind
@@ -1005,7 +1005,6 @@ vlc-plugin-inflate
 vlc-plugin-jack
 vlc-plugin-jpeg
 vlc-plugin-kate
-vlc-plugin-kwallet
 vlc-plugin-libsecret
 vlc-plugin-lirc
 vlc-plugin-live555
@@ -1024,7 +1023,6 @@ vlc-plugin-ogg
 vlc-plugin-opus
 vlc-plugin-png
 vlc-plugin-pulse
-vlc-plugin-quicksync
 vlc-plugin-samplerate
 vlc-plugin-sdl
 vlc-plugin-sftp

@@ -382,7 +382,6 @@ coordgen
 copr-cli
 corepack
 corrosion
-couchdb
 cpio
 cpp-hocon
 cppdap
@@ -1319,6 +1318,7 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
+kddockwidgets
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -4860,7 +4860,6 @@ rdfind
 re2
 re2c
 rebar
-rebar3
 recastnavigation
 recode
 recordmydesktop

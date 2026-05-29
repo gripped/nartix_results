@@ -4,12 +4,12 @@
    libvlc
    vlc-cli
    vlc-gui-{ncurses,qt,skins2}
--  vlc-plugin-{a52dec,aalib,alsa,aom,archive,aribb24,aribb25,ass,avahi,bluray,caca,cddb,chromecast,dav1d,dbus,dbus-screensaver,dca,dvb,dvd,faad2,ffmpeg,firewire,flac,fluidsynth,freetype,gme,gnutls,gstreamer,inflate,jack,journal,jpeg,kate,kwallet,libsecret,lirc,live555,lua,mad,matroska,mdns,modplug,mpeg2,mpg123,mtp,musepack,nfs,notify,ogg,opus,png,pulse,quicksync,samplerate,sdl,sftp,shout,smb,soxr,speex,srt,svg,tag,theora,twolame,udev,upnp,vorbis,vpx,x264,x265,xml,zvbi}
-+  vlc-plugin-{a52dec,aalib,alsa,aom,archive,aribb24,aribb25,ass,avahi,bluray,caca,cddb,chromecast,dav1d,dbus,dbus-screensaver,dca,dvb,dvd,faad2,ffmpeg,firewire,flac,fluidsynth,freetype,gme,gnutls,gstreamer,inflate,jack,jpeg,kate,kwallet,libsecret,lirc,live555,lua,mad,matroska,mdns,modplug,mpeg2,mpg123,mtp,musepack,nfs,notify,ogg,opus,png,pulse,quicksync,samplerate,sdl,sftp,shout,smb,soxr,speex,srt,svg,tag,theora,twolame,udev,upnp,vorbis,vpx,x264,x265,xml,zvbi}
+-  vlc-plugin-{a52dec,aalib,alsa,aom,archive,aribb24,aribb25,ass,avahi,bluray,caca,cddb,chromecast,dav1d,dbus,dbus-screensaver,dca,dvb,dvd,faad2,ffmpeg,firewire,flac,fluidsynth,freetype,gme,gnutls,gstreamer,inflate,jack,journal,jpeg,kate,libsecret,lirc,live555,lua,mad,matroska,mdns,modplug,mpeg2,mpg123,mtp,musepack,nfs,notify,ogg,opus,png,pulse,samplerate,sdl,sftp,shout,smb,soxr,speex,srt,svg,tag,theora,twolame,udev,upnp,vorbis,vpx,x264,x265,xml,zvbi}
++  vlc-plugin-{a52dec,aalib,alsa,aom,archive,aribb24,aribb25,ass,avahi,bluray,caca,cddb,chromecast,dav1d,dbus,dbus-screensaver,dca,dvb,dvd,faad2,ffmpeg,firewire,flac,fluidsynth,freetype,gme,gnutls,gstreamer,inflate,jack,jpeg,kate,libsecret,lirc,live555,lua,mad,matroska,mdns,modplug,mpeg2,mpg123,mtp,musepack,nfs,notify,ogg,opus,png,pulse,samplerate,sdl,sftp,shout,smb,soxr,speex,srt,svg,tag,theora,twolame,udev,upnp,vorbis,vpx,x264,x265,xml,zvbi}
    vlc-plugins-{all,base,extra,video-output,visualization}
  )
- _vlcver=3.0.22
-@@ -115,7 +115,7 @@
+ pkgver=3.0.23_2
+@@ -114,7 +114,7 @@
    speex
    speexdsp
    srt
@@ -18,7 +18,7 @@
    taglib
    twolame
    wayland
-@@ -448,7 +448,6 @@
+@@ -440,7 +440,6 @@
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/access/libaccess_jack_plugin.so
      _pick $pkgname-plugin-jack usr/lib/vlc/plugins/audio_output/libjack_plugin.so
  
@@ -26,7 +26,7 @@
  
      _pick $pkgname-plugin-jpeg usr/lib/vlc/plugins/codec/libjpeg_plugin.so
  
-@@ -1333,16 +1332,6 @@
+@@ -1319,16 +1318,6 @@
    mv -v $pkgname/* "$pkgdir"
  }
  
@@ -43,7 +43,7 @@
  
  package_vlc-plugin-jpeg() {
    pkgdesc+=" - JPEG plugin"
-@@ -1771,7 +1760,7 @@
+@@ -1733,7 +1722,7 @@
      alsa-lib
      glibc
      libvlc libvlccore.so
@@ -52,29 +52,29 @@
      vlc-plugins-base
    )
  
-@@ -1903,7 +1892,6 @@
+@@ -1863,7 +1852,6 @@
      vlc-plugin-gnutls
      vlc-plugin-inflate
      vlc-plugin-jpeg
 -    vlc-plugin-journal
+     vlc-plugin-matroska
      vlc-plugin-mpg123
      vlc-plugin-ogg
-     vlc-plugin-opus
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -72,6 +72,7 @@
- libstdc++
+@@ -75,6 +75,7 @@
+ libswscale.so
  libtheora
  libtiger
 +libudev
  libupnp
  libva
  libvlc
-@@ -106,7 +107,6 @@
+@@ -109,7 +110,6 @@
  speex
  speexdsp
  srt
@@ -82,11 +82,11 @@
  taglib
  ttf-dejavu
  twolame
-@@ -142,7 +142,6 @@
+@@ -145,7 +145,6 @@
  vlc-plugin-gstreamer
  vlc-plugin-inflate
  vlc-plugin-jack
 -vlc-plugin-journal
  vlc-plugin-jpeg
  vlc-plugin-kate
- vlc-plugin-kwallet
+ vlc-plugin-libsecret

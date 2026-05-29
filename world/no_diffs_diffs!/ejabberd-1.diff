@@ -1,23 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,18 +1,16 @@
  
  pkgname=ejabberd
 -pkgver=26.04
+-pkgrel=2
 +pkgver=26.02
- pkgrel=1
++pkgrel=1
  pkgdesc="Jabber server written in Erlang"
  arch=('x86_64')
-@@ -10,7 +10,7 @@
- 	 'libyaml' 'sqlite' 'gd' 'elixir'
- 	 'erlang-mnesia' 'erlang-os_mon' 'erlang-odbc' 'erlang-syntax_tools' 'erlang-xmerl')
+ url="https://www.ejabberd.im/"
+ license=("GPL-2.0-or-later")
+ depends=('expat' 'openssl' 'zlib' 'erlang-core' 'pam' 'iproute2'
+-	'libyaml' 'sqlite' 'gd' 'elixir'
+-	'erlang-mnesia' 'erlang-os_mon' 'erlang-odbc' 'erlang-syntax_tools' 'erlang-xmerl'
+-  'libstdc++' 'libgcc' 'glibc'
+-)
++	 'libyaml' 'sqlite' 'gd' 'elixir'
++	 'erlang-mnesia' 'erlang-os_mon' 'erlang-odbc' 'erlang-syntax_tools' 'erlang-xmerl')
  makedepends=('erlang-compiler' 'erlang-asn1' 'erlang-public_key' 'erlang-ssl' 'erlang-parsetools'
 -	     'erlang-erl_interface' 'erlang-eunit' 'erlang-eldap' 'unzip'
 +	     'erlang-erl_interface' 'erlang-eunit' 'erlang-eldap'
  	     'git' 'rebar3' 'hevea' 'texlive-bin' 'texlive-basic' 'texlive-latexextra' 'elixir')
  optdepends=('gsfonts: for captcha'
  	    'imagemagick: for captcha')
-@@ -50,7 +50,7 @@
+@@ -52,7 +50,7 @@
  	"eredis2::git+https://github.com/wooga/eredis/"
  	"$pkgname.logrotate"
  	"$pkgname.sysusers")
@@ -26,7 +33,7 @@
              'a8e1be2d9daf8dd2dfedc11736a9677f3ed5c520c0f2ddf183689d2182b9151a'
              'SKIP'
              'SKIP'
-@@ -138,7 +138,6 @@
+@@ -140,7 +138,6 @@
      -e "s|INSTALLUSER=\"\"|INSTALLUSER=\"jabber\"|g" \
      "$pkgdir"/usr/bin/ejabberdctl
  
@@ -40,7 +47,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -26,5 +26,4 @@
+@@ -16,11 +16,8 @@
+ expat
+ gd
+ git
+-glibc
+ hevea
+ iproute2
+-libgcc
+-libstdc++
+ libyaml
+ openssl
+ pam
+@@ -29,5 +26,4 @@
  texlive-basic
  texlive-bin
  texlive-latexextra

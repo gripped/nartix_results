@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,16 +1,15 @@
+ 
+ pkgname=stellarsolver
+ pkgver=2.7
+-pkgrel=3
++pkgrel=2
+ pkgdesc='The cross platform Sextractor and Astrometry.net-Based internal astrometric solver'
+ arch=(x86_64)
+ url='https://github.com/rlancaste/stellarsolver'
+ license=(GPL-3.0-or-later)
+ depends=(cfitsio
++         gcc-libs
+          glibc
+          gsl
+-         libgcc
+-         libstdc++
+          qt6-base
+          wcslib)
+ makedepends=(cmake
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,8 @@
+ cfitsio
+ cmake
++gcc-libs
+ git
+ glibc
+ gsl
+-libgcc
+-libstdc++
+ qt6-base
+ wcslib

@@ -4,17 +4,16 @@
    'usbip'
    'x86_energy_perf_policy'
  )
--pkgver=7.0.9
+-pkgver=7.0.10
 +pkgver=7.0.8
  pkgrel=1
  _srcname=linux-${pkgver}
  license=('GPL-2.0-only')
-@@ -33,22 +33,13 @@
+@@ -33,20 +33,13 @@
  makedepends+=('llvm' 'clang')
  makedepends+=('libnl')
  groups=("$pkgbase")
 -source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
--        0001-tools-power-turbostat-Fix-AMD-RAPL-regression-on-big.patch
 -        'usbipd.service'
 -        'hv_kvp_daemon.service'
 -        'hv_vss_daemon.service'
@@ -24,9 +23,8 @@
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
  )
--sha256sums=('ac07acdf76cf4621cc5187a2670270a1a699533c8a6b225e4878c416ad83f1c4'
+-sha256sums=('094977eb62c20e3d1939fe81a92958a1f987f339446e532fa86963b2804e32dc'
 -            'SKIP'
--            'f0c08d0325847662651f07feb681ed86d4864f16e029e9b6bbd6a95c810a676b'
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
@@ -35,7 +33,7 @@
  
  prepare() {
    cd "$_srcname"
-@@ -204,7 +195,6 @@
+@@ -202,7 +195,6 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
      libdir='/usr/lib' \
@@ -43,7 +41,7 @@
      mandir='/usr/share/man' \
      docdir='/usr/share/doc/cpupower' \
      install install-man
-@@ -222,14 +212,13 @@
+@@ -220,14 +212,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -59,7 +57,7 @@
  }
  
  package_tmon() {
-@@ -254,9 +243,6 @@
+@@ -252,9 +243,6 @@
  
    cd "$_srcname"/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib

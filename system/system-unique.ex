@@ -93,7 +93,9 @@ s6-scripts
 s6
 skalibs
 udev
+userspawn-dinit
 userspawn-runit
+userspawn
 wpa_supplicant-dinit
 wpa_supplicant-openrc
 wpa_supplicant-runit

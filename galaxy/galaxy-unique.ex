@@ -226,6 +226,7 @@ python2-setuptools
 python2
 qbittorrent-openrc
 qdirstat
+qhexedit2-gui
 qpdfview
 qt-sudo
 qt5-styleplugins
