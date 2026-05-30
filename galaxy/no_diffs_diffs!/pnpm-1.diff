@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=pnpm
--pkgver=10.33.4
+-pkgver=11.3.0
 +pkgver=10.24.0
  pkgrel=1
  pkgdesc='Fast, disk space efficient package manager'
@@ -12,8 +12,26 @@
    python
  )
  source=("git+https://github.com/$pkgname/$pkgname.git#tag=v$pkgver?signed")
--b2sums=('ac8a2b5d5495c49961ac40284ff9f55625fb7c507077148d9448f7785b315d6698eb9e80b47808122aedf13e5ff47bcab2c07e51677f44446ac5be6d0f363084')
+-b2sums=('f4678c4d2f5d628bf0c829f2ea7d1aa3201f0b7b99b07ef326976011b8b9b8d7e8dfa583aaa5899611eb0b73646dcf323cc349b455b3e1cccae438c2d102a48a')
 +b2sums=('56325a1f7a45c9e128f56687059a972723eb13a3fdabf2a455f256bd28acf2775cc6d651dacb69bfdfba37a9df97d777727b825395ed1c2feb12928f023dd869')
  validpgpkeys=(7B74D1299568B586BA9962B5649E4D4AF74E7DEC) # Zoltan Kochan <z@kochan.io>
  
  prepare() {
+@@ -30,14 +30,12 @@
+   local mod_dir=/usr/lib/node_modules/$pkgname
+ 
+   install -d "$pkgdir"/{usr/bin,$mod_dir/dist}
+-  ln -s $mod_dir/bin/$pkgname.mjs "$pkgdir"/usr/bin/$pkgname
+-  ln -s $mod_dir/bin/$pkgname.mjs "$pkgdir"/usr/bin/pn
+-  ln -s $mod_dir/bin/pnpx.mjs "$pkgdir"/usr/bin/pnpx
+-  ln -s $mod_dir/bin/pnpx.mjs "$pkgdir"/usr/bin/pnx
++  ln -s $mod_dir/bin/$pkgname.cjs "$pkgdir"/usr/bin/$pkgname
++  ln -s $mod_dir/bin/pnpx.cjs "$pkgdir"/usr/bin/pnpx
+ 
+   cd $pkgname/$pkgname
+   cp -r bin package.json "$pkgdir"/$mod_dir
+   install -Dt "$pkgdir"/usr/share/licenses/$pkgname LICENSE
+   cd dist
+-  cp -r $pkgname.mjs pnpmrc templates worker.js "$pkgdir"/$mod_dir/dist
++  cp -r $pkgname.cjs pnpmrc templates worker.js "$pkgdir"/$mod_dir/dist
+ }

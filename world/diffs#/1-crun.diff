@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,7 +8,7 @@
- license=('LGPL-2.1-or-later')
- arch=('x86_64')
- provides=('oci-runtime')
--makedepends=('libtool' 'python' 'go-md2man' 'systemd' 'git' 'yajl' 'libcap' 'libseccomp' 'criu' 'libkrun')
-+makedepends=('libtool' 'python' 'go-md2man' 'udev' 'git' 'yajl' 'libcap' 'libseccomp' 'criu' 'libkrun')
- source=("git+https://github.com/containers/crun.git#tag=$pkgver?signed")
- validpgpkeys=('AC404C1C0BF735C63FF4D562263D6DF2E163E1EA')
- sha256sums=('0d6a1c945e1bf73371196c5625a15cdfa9dde0c0e6a7dd696964d3fd906ac74c')
-@@ -16,7 +16,7 @@
+@@ -19,7 +19,7 @@
+   'libseccomp'
+   'libtool'
+   'python'
+-  'systemd'
++  'udev'
+ )
+ source=(
+   "git+https://github.com/containers/crun.git#tag=$pkgver?signed"
+@@ -37,7 +37,7 @@
  build() {
      cd "$pkgname"
      ./autogen.sh
@@ -18,22 +18,22 @@
          --prefix=/usr \
          --enable-shared \
          --enable-dynamic \
-@@ -26,7 +26,7 @@
- }
- 
- package_crun() {
--    depends=('yajl' 'systemd-libs' 'libcap' 'libseccomp' 'criu')
-+    depends=('yajl' 'libudev' 'libcap' 'libseccomp' 'criu')
+@@ -53,7 +53,7 @@
+       'libblake3'
+       'libcap'
+       'libseccomp'
+-      'systemd-libs'
++      'libudev'
+     )
  
      make -C "$pkgname" DESTDIR="$pkgdir" install
-     rm -v "$pkgdir/usr/bin/krun"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -6,7 +6,7 @@
+@@ -8,6 +8,6 @@
  libkrun
  libseccomp
  libtool
@@ -42,4 +42,3 @@
 -systemd
 -systemd-libs
 +udev
- yajl

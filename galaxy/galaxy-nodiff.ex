@@ -203,7 +203,6 @@ kodi-gles
 kodi-eventclients
 kodi-tools-texturepacker
 kodi-dev
-labwc
 lazarus
 lazarus-qt5
 lazarus-qt6
@@ -580,6 +579,7 @@ riscv64-linux-gnu-gdb
 ristretto
 river-classic
 rmpc
+rofimoji
 rpi-imager
 rust-script
 sakura

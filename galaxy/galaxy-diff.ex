@@ -29,6 +29,7 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
+labwc
 lact
 lemurs
 libetonyek

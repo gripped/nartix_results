@@ -97,7 +97,6 @@ connman
 containerd
 containers-common
 coturn
-couchdb
 cppcheck
 crun
 krun
@@ -839,7 +838,6 @@ qtermwidget
 rabbitmq
 rawtherapee
 rdma-core
-rebar3
 redis
 redshift
 refind

@@ -382,6 +382,7 @@ coordgen
 copr-cli
 corepack
 corrosion
+couchdb
 cpio
 cpp-hocon
 cppdap
@@ -4860,6 +4861,7 @@ rdfind
 re2
 re2c
 rebar
+rebar3
 recastnavigation
 recode
 recordmydesktop
