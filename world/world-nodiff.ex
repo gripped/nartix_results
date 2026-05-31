@@ -1553,6 +1553,7 @@ ksanecore
 kscreen
 kscreenlocker
 kscreenlocker5
+kseexpr
 kservice
 kservice5
 ksh
@@ -3992,7 +3993,6 @@ python-oslo-db
 python-oslo-i18n
 python-oslo-log
 python-oslo-serialization
-python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
@@ -4390,7 +4390,6 @@ python-roman-numerals-py
 python-roman
 python-rope
 python-routes
-python-rpds-py
 python-rpyc
 python-rsa
 python-rtree

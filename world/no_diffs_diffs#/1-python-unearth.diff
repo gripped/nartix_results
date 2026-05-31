@@ -5,3 +5,17 @@
    install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
  }
 +
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +0,0 @@
+-python
+-python-build
+-python-httpx
+-python-installer
+-python-packaging
+-python-pdm-backend
+-python-wheel

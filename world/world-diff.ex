@@ -352,7 +352,6 @@ kitty-shell-integration
 knockd
 knot
 krdp
-kseexpr
 ksystemlog
 kwin-x11
 kwin
@@ -734,11 +733,13 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-ndg-httpsclient
+python-oslo-utils
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-rpds-py
 python-sphinxcontrib-spelling
 qastools
 qbittorrent
