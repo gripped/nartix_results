@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,13 +4,12 @@
+ pkgver=18.1.7.4
+ _pkgver=${pkgver%.*}-${pkgver##*.}
+ _majver=${pkgver%.*.*.*}
+-pkgrel=3
++pkgrel=2
+ arch=(x86_64)
+ url='https://julialang.org/'
+ license=('custom:Apache 2.0 with LLVM Exception')
+-depends=(glibc
+-         libgcc
+-         libstdc++
++depends=(gcc-libs
++         glibc
+          zlib
+          zstd)
+ makedepends=(cmake
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,9 @@
+ cmake
++gcc-libs
+ git
+ glibc
+ libedit
+ libffi
+-libgcc
+-libstdc++
+ libxml2
+ llvm-julia-libs
+ ncurses

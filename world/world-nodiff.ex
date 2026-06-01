@@ -304,7 +304,6 @@ cdparanoia
 cdrdao
 gcdmaster
 cdrtools
-cef
 celluloid
 cervisia
 cfitsio
@@ -1766,7 +1765,6 @@ libfm-extra
 libfm-gtk3
 libfontenc
 libfreeaptx
-libfreehand
 libfreexl
 libftdi
 libfyaml
@@ -2187,6 +2185,7 @@ liquidctl
 litehtml
 live-media
 lksctp-tools
+lld
 lld16
 lld18
 lld19
@@ -2422,7 +2421,6 @@ mopidy
 moreutils
 mosh
 motion
-movit
 mpdecimal
 mpg123
 mplayer
@@ -3993,6 +3991,7 @@ python-oslo-db
 python-oslo-i18n
 python-oslo-log
 python-oslo-serialization
+python-oslo-utils
 python-oslotest
 python-outcome
 python-overrides
@@ -4390,6 +4389,7 @@ python-roman-numerals-py
 python-roman
 python-rope
 python-routes
+python-rpds-py
 python-rpyc
 python-rsa
 python-rtree

@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ _cef_commit=18e00ea6d6e4567ab4031efaf04c50e5b2709c29
+ _chromium_ver=148.0.7778.96
+ _system_clang=1
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Chromium Embedded Framework (CEF), simple framework for embedding Chromium-based browsers in other applications"
+ arch=('x86_64')
+ url="https://chromiumembedded.github.io/cef"
+@@ -23,6 +23,7 @@
+   'mesa'
+   'nss'
+   'pango'
++  'libudev'
+ )
+ makedepends=(
+   'clang'
+@@ -234,7 +235,7 @@
+     'use_gio=false'
+     'use_kerberos=false'
+     'use_libpci=false'
+-    'use_udev=false'
++    'use_udev=true'
+     'cef_use_gtk=false'
+     'enable_remoting=false'
+     'use_vaapi=false'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,6 +16,7 @@
+ libffi
+ libjpeg-turbo
+ libpulse
++libudev
+ libwebp
+ libxcomposite
+ libxdamage
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -91,7 +91,7 @@
+ 'use_gio=false'
+ 'use_kerberos=false'
+ 'use_libpci=false'
+-'use_udev=false'
++'use_udev=true'
+ 'cef_use_gtk=false'
+ 'enable_remoting=false'
+ 'use_vaapi=false'

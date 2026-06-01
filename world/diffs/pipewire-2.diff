@@ -8,6 +8,15 @@
    pipewire-pulse
    pipewire-roc
    gst-plugin-pipewire
+@@ -22,7 +21,7 @@
+   pulse-native-provider
+ )
+ pkgver=1.6.6
+-pkgrel=1
++pkgrel=1.1
+ epoch=1
+ pkgdesc="Low-latency audio/video router and processor"
+ url="https://pipewire.org"
 @@ -60,16 +59,15 @@
    lilv
    meson
@@ -106,6 +115,15 @@
      _pick pulse usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
      _pick pulse usr/share/man/man1/pipewire-pulse.1
      _pick pulse usr/share/man/man5/pipewire-pulse.conf.5
+@@ -265,7 +263,7 @@
+ 
+     mkdir -p etc/pipewire/{client-rt,client,minimal,pipewire}.conf.d
+   )
+-
++  install -Dm755 $srcdir/artix-pipewire-launcher $pkgdir/usr/bin
+   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 pipewire/COPYING
+ }
+ 
 @@ -338,7 +336,6 @@
      opus libopus.so
      sbc libsbc.so

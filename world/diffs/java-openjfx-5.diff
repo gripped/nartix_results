@@ -24,15 +24,31 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -7,7 +7,7 @@
- gdk-pixbuf2
- glib2
- gperf
--gradle
+@@ -0,0 +1,24 @@
++alsa-lib
++ant
++cairo
++cmake
++ffmpeg4.4
++freetype2
++gdk-pixbuf2
++glib2
++gperf
 +gradle7
- gtk2
- gtk3
- java-environment-openjdk
++gtk2
++gtk3
++java-environment-openjdk
++java-runtime-openjdk
++libgl
++libx11
++libxtst
++pango
++python
++qt5-base
++ruby
++unzip
++webkit2gtk
++zip
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

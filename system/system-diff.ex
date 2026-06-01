@@ -33,6 +33,7 @@ grep
 gssproxy
 gzip
 iputils
+less
 libsasl
 libusb
 linux

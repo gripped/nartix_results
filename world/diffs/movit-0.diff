@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=movit
+ pkgver=1.7.2
+-pkgrel=2
++pkgrel=1.1
+ pkgdesc="The modern video toolkit"
+ arch=('x86_64')
+ url="https://movit.sesse.net/"
+@@ -33,7 +33,6 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-  CXXFLAGS+=" --std=c++17" \
+   ./configure --prefix=/usr
+   make -j1
+ }
+@@ -45,7 +44,6 @@
+     ColorspaceConversionEffectTest.Rec601_525_Primaries
+     ColorspaceConversionEffectTest.Rec601_625_Primaries
+     ColorspaceConversionEffectTest.sRGB_Primaries
+-    DeconvolutionSharpenEffectTest.CircularDeconvolutionKeepsAlpha
+     EffectChainTest.Linear10bitIntermediateAccuracy
+     FlatInput.ExternalTextureMipmapState
+     ResampleEffectTest.UpscaleByThreeGetsCorrectPixelCenters
+@@ -54,8 +52,8 @@
+   )
+   local skipped_tests_filter="${skipped_tests[0]}$(printf ':%s' "${skipped_tests[@]:1}")"
+   export GTEST_FILTER="-$skipped_tests_filter"
+-  sed -i '/TESTED_EFFECTS += deinterlace_effect/d;/UNTESTED_EFFECTS += fft_input/a UNTESTED_EFFECTS += deinterlace_effect' Makefile
+-  xvfb-run make check
++  sed -i '/TESTED_EFFECTS += deinterlace_effect/d' Makefile
++  xvfb-run env LIBGL_ALWAYS_SOFTWARE=1 make check
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,6 @@
+ }
+ build() {
+ cd $pkgname-$pkgver
+-CXXFLAGS+=" --std=c++17" \
+ ./configure --prefix=/usr
+ make -j1
+ }

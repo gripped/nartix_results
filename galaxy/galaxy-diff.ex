@@ -30,7 +30,6 @@ hugin
 innernet
 intel-gpu-tools
 labwc
-lact
 lemurs
 libetonyek
 libmatemixer
@@ -71,7 +70,6 @@ qt5-webengine
 rage
 read-edid
 reflector
-river
 sdcv
 signal-desktop
 terminology

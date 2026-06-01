@@ -54,6 +54,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+cef
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -388,6 +389,7 @@ libepoxy-docs
 libexttextcat
 libfido2
 libfprint
+libfreehand
 libgsystemservice
 libgtop
 libgudev
@@ -456,7 +458,6 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
-lld
 llvm14
 lm_sensors
 localsearch
@@ -561,6 +562,7 @@ modemmanager-docs
 modest
 mosquitto
 mousepad
+movit
 mozo
 mpd
 muffin
@@ -733,13 +735,11 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-ndg-httpsclient
-python-oslo-utils
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-rpds-py
 python-sphinxcontrib-spelling
 qastools
 qbittorrent

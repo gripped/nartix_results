@@ -70,7 +70,6 @@ kmod
 krb5
 ldns
 leancrypto
-less
 libaio
 libarchive
 libassuan

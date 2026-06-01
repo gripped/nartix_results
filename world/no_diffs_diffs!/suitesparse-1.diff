@@ -1,15 +1,28 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
+@@ -2,16 +2,18 @@
  pkgbase=suitesparse
  pkgname=(suitesparse
           suitesparse-graphblas)
 -pkgver=7.12.1
+-pkgrel=1
 +pkgver=7.12.2
- pkgrel=1
++pkgrel=2
  pkgdesc='A collection of sparse matrix libraries'
  url='http://faculty.cse.tamu.edu/davis/suitesparse.html'
-@@ -19,7 +19,7 @@
+ arch=(x86_64)
+ depends=(blas
+-         gcc-libs
+          glibc
+          gmp
+          lapack
++         libgcc
++         libgomp
++         libstdc++
+          mpfr)
+ makedepends=(cmake
+              gcc-fortran
+@@ -19,7 +21,7 @@
  replaces=('suitesparse64<7.1.0')
  license=(GPL)
  source=(git+https://github.com/DrTimothyAldenDavis/SuiteSparse#tag=v$pkgver)
@@ -18,3 +31,34 @@
  
  build() {
    cd SuiteSparse
+@@ -42,8 +44,9 @@
+ 
+ package_suitesparse-graphblas() {
+   pkgdesc='Graph algorithms in the language of linear algebra'
+-  depends=(gcc-libs
+-           glibc)
++  depends=(glibc
++           libgcc
++           libgomp)
+ 
+   cd SuiteSparse
+   DESTDIR="$pkgdir" make install -C GraphBLAS
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,11 @@
+ blas
+ cmake
+ gcc-fortran
+-gcc-libs
+ git
+ glibc
+ gmp
+ lapack
++libgcc
++libgomp
++libstdc++
+ mpfr

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=which
+-pkgver=2.25
++pkgver=2.23
+ pkgrel=1
+ pkgdesc='A utility to show the full path of commands'
+ arch=('x86_64')
+@@ -11,7 +11,7 @@
+   glibc
+ )
+ source=("https://ftp.gnu.org/gnu/$pkgname/$pkgname-$pkgver.tar.gz")
+-b2sums=('9c9b0e197e0f35845fee8a050aeccb3407ea27f82955be028ee3f148d74bf5d2c844814657ccf16adf03176f94b40bb4ae8817f27ffc7b2196b8d2e1e77f82c8')
++b2sums=('64a3ae1f23a4c389f945f6c0985e6f6062b46785125a0d0659ff160560a4a473633d38af71b1505beeabba8336f5a9906f1ba58ab3494635e970bd5529b3936f')
+ 
+ build() {
+   cd $pkgname-$pkgver
