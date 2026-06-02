@@ -399,6 +399,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libkrun
 libldm
 liblqr
 libmatekbd
@@ -618,6 +619,8 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+obs-studio
+obs-studio-plugin-browser
 onboard
 onionshare
 open-iscsi
@@ -629,6 +632,7 @@ openresolv
 opensmtpd
 opensnitch
 openvpn
+osm-gps-map
 ostree
 packagekit
 libpackagekit-glib

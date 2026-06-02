@@ -368,6 +368,8 @@ mpv-shim-default-shaders
 msedit
 muffin
 mugshot
+mullvad-vpn
+mullvad-vpn-daemon
 musescore
 mutt
 nemo
@@ -792,7 +794,6 @@ wlr-randr
 wlsunset
 wofi
 wol
-wxsvg
 xapp-symbolic-icons
 xapp
 xautolock

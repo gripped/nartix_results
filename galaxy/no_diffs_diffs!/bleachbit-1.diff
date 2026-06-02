@@ -1,0 +1,43 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,15 @@
+ 
+ pkgname=bleachbit
+ pkgver=6.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Deletes unneeded files to free disk space and maintain privacy'
+ arch=(any)
+ url='https://www.bleachbit.org/'
+ license=(GPL-3.0-or-later)
+-depends=(glib2
+-         gtk3
+-         pango
++depends=(gtk3
+          python
+-         python-chardet
+          python-gobject
+-         python-psutil
+-         python-requests
+-         python-urllib3)
++         python-psutil)
+ makedepends=(git)
+ source=(git+https://github.com/bleachbit/bleachbit.git#tag=v${pkgver}?signed)
+ validpgpkeys=(A9E582E4054A159315EDC943D6D447B02B4D4C9D) # Andrew Ziem <ahz001@gmail.com>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,5 @@
+ git
+-glib2
+ gtk3
+-pango
+ python
+-python-chardet
+ python-gobject
+ python-psutil
+-python-requests
+-python-urllib3

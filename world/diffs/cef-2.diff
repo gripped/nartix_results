@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -23,7 +23,7 @@
+   'mesa'
+   'nss'
+   'pango'
+-  'systemd-libs'
++  'libudev'
+ )
+ makedepends=(
+   'clang'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,6 +16,7 @@
+ libffi
+ libjpeg-turbo
+ libpulse
++libudev
+ libwebp
+ libxcomposite
+ libxdamage
+@@ -42,5 +43,4 @@
+ rsync
+ rust
+ rust-bindgen
+-systemd-libs
+ zstd

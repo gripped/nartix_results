@@ -1,20 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,8 +8,8 @@
+@@ -1,8 +1,8 @@
+ 
+ _pkgname=ReGreet
+ pkgname=greetd-${_pkgname,,}
+-pkgver=0.3.0
+-pkgrel=2
++pkgver=0.4.0
++pkgrel=1
+ pkgdesc='Clean and customizable greeter for greetd'
+ url="https://github.com/rharish101/$_pkgname"
  license=(GPL-3.0-or-later)
- arch=(x86_64)
- depends=(wayland-compositor
-+         accountsservice
-          greetd
--         accountsservice
-          cairo
-          libgcc
-          gdk-pixbuf2
-@@ -25,14 +25,16 @@
+@@ -24,11 +24,12 @@
+ _archive="$_pkgname-$pkgver"
  source=("$url/archive/$pkgver/$_archive.tar.gz"
          "${_pkgname,,}.toml")
- sha256sums=('0d8855b98c868f89f62ed1ce0eff2e34c5eba903040fcf8acd96e6b18ab69dc6'
+-sha256sums=('0d8855b98c868f89f62ed1ce0eff2e34c5eba903040fcf8acd96e6b18ab69dc6'
 -            'b80b3eb31f8cc463d512c9db0eef899bdbe232d977429a8a12e95a3b6df2e387')
++sha256sums=('dd11f6dc82a929ac51a51750b3268028fe5aa46e5fe1d1cbd11b43ad57b3006a'
 +            '7780028e5774347793e8073c86bde7f38b70a9736dc7c5b0566d93aa7f0c252b')
  
  prepare() {
@@ -23,11 +26,6 @@
  	cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
  }
  
- build() {
-+	export REBOOT_CMD="loginctl reboot" POWEROFF_CMD="loginctl poweroff"
- 	cd "$_archive"
- 	cargo build --frozen --release --all-features
- }
 
 
 ############# Stripped diff below #################
@@ -36,14 +34,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,10 @@
+@@ -1,5 +1,6 @@
  prepare() {
  cd "$_archive"
 +sed -i -e 's|systemctl|loginctl|' regreet.sample.toml
  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
  }
  build() {
-+export REBOOT_CMD="loginctl reboot" POWEROFF_CMD="loginctl poweroff"
- cd "$_archive"
- cargo build --frozen --release --all-features
- }

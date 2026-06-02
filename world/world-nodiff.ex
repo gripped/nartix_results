@@ -1851,7 +1851,6 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
-libkrun
 libkrunfw
 libksane
 libkscreen
@@ -2547,8 +2546,6 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
-obs-studio
-obs-studio-plugin-browser
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -2647,7 +2644,6 @@ orca
 os-prober
 osinfo-db-tools
 osinfo-db
-osm-gps-map
 ospray
 oxygen-icons
 oxygen-icons-svg
@@ -3282,6 +3278,12 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
+python-arrow-adbc
+python-arrow-adbc-driver-bigquery
+python-arrow-adbc-driver-flightsql
+python-arrow-adbc-driver-postgresql
+python-arrow-adbc-driver-sqlite
+python-arrow-adbc-driver-snowflake
 python-arrow
 python-asgiref
 python-aspectlib
@@ -3927,6 +3929,7 @@ python-mypy_extensions
 python-mysql-connector
 python-mysqlclient
 python-myst-parser
+python-narwhals
 python-natsort
 python-nbdime
 python-nbval

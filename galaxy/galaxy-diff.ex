@@ -50,8 +50,6 @@ mate-session-manager
 mate-system-monitor
 mimalloc
 mpd
-mullvad-vpn
-mullvad-vpn-daemon
 nbd
 neofetch
 nvidia-340xx-utils
@@ -91,6 +89,7 @@ wf-config
 wireshark
 wireshark-cli
 wireshark-qt
+wxsvg
 xdg-desktop-portal-xapp
 xdialog
 xf86-input-evdev
