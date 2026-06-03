@@ -3,31 +3,36 @@
 @@ -1,13 +1,13 @@
  
  pkgname=rrdtool
--pkgver=1.10.1
--pkgrel=2
+-pkgver=1.10.2
 +pkgver=1.10.0
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Data logging and graphing application"
  arch=('x86_64')
  url="https://www.rrdtool.org"
  license=('GPL-2.0-or-later')
  depends=('libxml2' 'pango' 'ttf-dejavu')
--makedepends=('git' 'intltool' 'ruby' 'python-setuptools' 'tcl' 'lua51' 'systemd')
+-makedepends=('git' 'intltool' 'ruby' 'python-setuptools' 'python-wheel' 'python-installer' 'tcl' 'lua51' 'systemd')
 +makedepends=('git' 'intltool' 'ruby' 'python-setuptools' 'tcl' 'lua51' 'udev')
  optdepends=('perl: to use corresponding binding'
              'tcl: to use corresponding binding'
              'python: to use corresponding binding'
-@@ -15,12 +15,10 @@
+@@ -15,18 +15,10 @@
              'lua51: to use corresponding binding')
  options=('!emptydirs' '!makeflags')
  source=("git+https://github.com/oetiker/rrdtool-1.x.git#tag=v$pkgver")
--sha256sums=('1b2adec00d1bb12726c7cbae046be2dc6fae63e4c0bb89cd48b511e16a0bceda')
+-sha256sums=('578cf2cb3eb9801a4a84ee2b189026e2551af5169840e9b582e074501714e600')
 +sha256sums=('ee7c33f112deac491682dff2b6523a536ce220b8d930dc34dd47263a1e1b6bcf')
  
  prepare() {
    cd rrdtool-1.x
 -
--  git show --format= bbb85a157261e896a4964ff826674dd2035632c5 -- src/rrd_graph_helper.c | git apply
+-  git show --format= bbb85a157261e896a4964ff826674dd2035632c5 -- src/rrd_graph_helper.c | git apply -3
+-
+-  sed -i \
+-    -e 's|$(PYTHON) -m pip install --upgrade --no-index --no-deps|$(PYTHON) -m installer --destdir=$(DESTDIR)|' \
+-    -e '/--no-cache-dir --disable-pip-version-check/d' \
+-    -e '/--target=$(DESTDIR)$(libdir)\/python3\/site-packages/d' \
+-    bindings/Makefile.am
  
    sed -e 's/$(RUBY) ${abs_srcdir}\/ruby\/extconf.rb/& --vendor/' -i bindings/Makefile.am
  
@@ -37,9 +42,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -5,6 +5,6 @@
+@@ -3,10 +3,8 @@
+ libxml2
+ lua51
  pango
+-python-installer
  python-setuptools
+-python-wheel
  ruby
 -systemd
  tcl

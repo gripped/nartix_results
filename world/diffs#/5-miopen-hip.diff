@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,135 +1,60 @@
+@@ -1,136 +1,60 @@
  
  pkgname=miopen-hip
--pkgver=7.2.3
+-pkgver=7.2.4
 +pkgver=6.0.2
  pkgrel=1
 -_fdeep_ver=0.15.31
@@ -39,6 +39,7 @@
 -  'nlohmann-json'
 -  'rocm-cmake'
 -  'rocm-toolchain'
+-  'rocm-llvm'
 -)
 +depends=('rocm-core' 'glibc' 'gcc-libs' 'rocblas' 'rocm-clang-ocl' 'hip'
 +         'comgr' 'bzip2' 'composable-kernel' 'roctracer' 'sqlite')
@@ -154,7 +155,7 @@
    )
    cmake "${cmake_args[@]}"
    cmake --build build
-@@ -138,5 +63,5 @@
+@@ -139,5 +63,5 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  
@@ -167,7 +168,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,25 +1,21 @@
+@@ -1,26 +1,21 @@
  boost
 -boost-libs
  bzip2
@@ -194,6 +195,7 @@
 +rocm-clang-ocl
  rocm-cmake
  rocm-core
+-rocm-llvm
 -rocm-toolchain
 -rocrand
  roctracer

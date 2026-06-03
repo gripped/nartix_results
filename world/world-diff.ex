@@ -3,6 +3,7 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 accountsservice
 aflplusplus
+alsa-ucm-conf
 alsa-utils
 ant
 ant-doc
@@ -746,6 +747,7 @@ python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
 qastools
+qbe
 qbittorrent
 qbittorrent-nox
 qemu
@@ -857,6 +859,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-cucumber
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen

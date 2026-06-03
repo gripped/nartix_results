@@ -3,7 +3,7 @@
 @@ -1,35 +1,37 @@
 -
  pkgname=rocfft
--pkgver=7.2.3
+-pkgver=7.2.4
 +pkgver=6.0.0
  pkgrel=1
  pkgdesc='Next generation FFT implementation for ROCm'
@@ -12,10 +12,10 @@
 +url='https://rocfft.readthedocs.io/en/latest/library.html'
  license=('MIT')
 -depends=('rocm-core' 'hip-runtime-amd' 'glibc' 'libgcc')
--makedepends=('cmake' 'rocm-cmake' 'rocm-toolchain')
+-makedepends=('cmake' 'rocm-cmake' 'rocm-toolchain' 'rocm-llvm')
 -_git='https://github.com/ROCm/rocm-libraries'
 -source=("rocm-libraries-$pkgver.tar.gz::https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-$pkgver.tar.gz")
--sha256sums=('300cc50720d40bad7c7ed1f6d67e8c5ebecaba62c07a6ea1cc5813c0ea2e41b5')
+-sha256sums=('50a4090b4ad18b34c375f666e5f71816cf55f89bc2175dc3eba9a7b80f65a15d')
 +depends=('hip' 'python')
 +makedepends=('rocm-cmake')
 +_git='https://github.com/ROCmSoftwarePlatform/rocFFT'
@@ -65,7 +65,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,7 +1,3 @@
+@@ -1,8 +1,3 @@
 -cmake
 -glibc
 -hip-runtime-amd
@@ -74,6 +74,7 @@
 +python
  rocm-cmake
 -rocm-core
+-rocm-llvm
 -rocm-toolchain
 
 --- Arch PKGBUILD

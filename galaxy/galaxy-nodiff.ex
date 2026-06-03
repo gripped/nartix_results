@@ -794,6 +794,7 @@ wlr-randr
 wlsunset
 wofi
 wol
+wxsvg
 xapp-symbolic-icons
 xapp
 xautolock

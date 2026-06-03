@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -28,7 +28,7 @@
+ 
+ build() {
+   cd "$srcdir"/$pkgname
+-  arch-meson build --buildtype=release -Dstrip=true
++  artix-meson build --buildtype=release -Dstrip=true
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd "$srcdir"/$pkgname
+-arch-meson build --buildtype=release -Dstrip=true
++artix-meson build --buildtype=release -Dstrip=true
+ meson compile -C build
+ }

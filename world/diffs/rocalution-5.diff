@@ -3,7 +3,7 @@
 @@ -1,50 +1,38 @@
 -
  pkgname=rocalution
--pkgver=7.2.3
+-pkgver=7.2.4
 -pkgrel=1
 +pkgver=6.0.2
 +pkgrel=2
@@ -24,7 +24,7 @@
 -  'rocsolver'
 -  'rocsparse'
 -)
--makedepends=('rocm-cmake' 'rocm-toolchain' 'openmp' 'openmpi')
+-makedepends=('cmake' 'rocm-cmake' 'rocm-toolchain' 'rocm-llvm' 'openmp' 'openmpi')
 +depends=('rocm-core' 'hip' 'glibc' 'gcc-libs'
 +         'rocsparse' 'rocblas' 'rocsolver' 'rocprim' 'rocrand')
 +makedepends=('rocm-cmake' 'openmp' 'openmpi')
@@ -32,7 +32,7 @@
 +            'openmpi: Distributed CPU and multi GPU applications')
  _git='https://github.com/ROCm/rocALUTION'
  source=("$pkgname-$pkgver.tar.gz::$_git/archive/rocm-$pkgver.tar.gz")
--sha256sums=('6092bf6f59435b573f6d44fd4e78aa515f2e1f0c1b516f2d9f4e76a5a0fbd049')
+-sha256sums=('2f769d84b2de2ee3b3faaa5128cd9bab29f3ee1ac792ece64fbb9e593f5f1fb1')
 +sha256sums=('453f889677728b510286d4c72952b343cac63c45e2cb8b801d8388a2ec599d2a')
  options=(!lto)
  _dirname="$(basename "$_git")-$(basename "${source[0]}" ".tar.gz")"
@@ -67,7 +67,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,11 @@
+@@ -1,14 +1,11 @@
+-cmake
 +gcc-libs
  glibc
 -hip-runtime-amd
@@ -78,6 +79,7 @@
  rocblas
  rocm-cmake
  rocm-core
+-rocm-llvm
 -rocm-toolchain
  rocprim
  rocrand

@@ -3,7 +3,7 @@
 @@ -1,16 +1,16 @@
  
  pkgname=hipblaslt
--pkgver=7.2.3
+-pkgver=7.2.4
 +pkgver=7.2.0
  pkgrel=1
  pkgdesc='General matrix-matrix operations beyond a traditional BLAS library'
@@ -19,7 +19,13 @@
    'msgpack-cxx'
    'rocblas'
    'rocm-core'
-@@ -42,12 +42,10 @@
+@@ -37,18 +37,15 @@
+   'python-ujson'
+   'rocm-cmake'
+   'rocm-toolchain'
+-  'rocm-llvm'
+   'spdlog'
+ )
  _git='https://github.com/ROCm/rocm-libraries'
  source=("rocm-libraries::git+$_git.git#tag=rocm-$pkgver"
          "hipblaslt-Don-t-fetch-deps-for-rocroller.patch"
@@ -35,7 +41,7 @@
  _dirname="rocm-libraries/projects/$pkgname"
  
  options=(!strip)
-@@ -56,7 +54,6 @@
+@@ -57,7 +54,6 @@
    cd rocm-libraries
    patch -Np1 -i "$srcdir/hipblaslt-Don-t-fetch-deps-for-rocroller.patch"
    patch -Np1 -i "$srcdir/rocroller-Always-fetch-libdivide-if-it-s-not-install.patch"
@@ -64,6 +70,14 @@
  msgpack-cxx
  ninja
  python
+@@ -23,7 +23,6 @@
+ rocblas
+ rocm-cmake
+ rocm-core
+-rocm-llvm
+ rocm-smi-lib
+ rocm-toolchain
+ spdlog
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

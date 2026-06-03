@@ -53,7 +53,6 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
-alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -4719,7 +4718,6 @@ python-zstandard
 pyxdg
 qalculate-gtk
 qalculate-qt
-qbe
 qbs
 qca
 qca-qt5
@@ -5000,7 +4998,6 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
-ruby-cucumber
 ruby-daemons
 ruby-date
 ruby-dbm

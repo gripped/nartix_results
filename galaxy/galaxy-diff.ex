@@ -89,7 +89,6 @@ wf-config
 wireshark
 wireshark-cli
 wireshark-qt
-wxsvg
 xdg-desktop-portal-xapp
 xdialog
 xf86-input-evdev
