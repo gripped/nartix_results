@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -39,7 +39,7 @@
+@@ -5,7 +5,7 @@
+   glibmm-2.68-docs
+ )
+ pkgver=2.88.0
+-pkgrel=1
++pkgrel=2
+ pkgdesc="C++ bindings for GLib"
+ url="https://www.gtkmm.org/"
+ arch=(x86_64)
+@@ -21,6 +21,7 @@
+ makedepends=(
+   clang
+   git
++  libsigc++-3.0-docs
+   meson
+   mm-common
+   perl-xml-parser
+@@ -39,7 +40,7 @@
      -D maintainer-mode=true
    )
  
@@ -9,11 +26,29 @@
    meson compile -C build
  }
  
+@@ -49,7 +50,7 @@
+ 
+ package_glibmm-2.68() {
+   depends+=(libsigc-3.0.so)
+-  provides=(libglibmm-2.68.so)
++  provides=(libg{lib,io}mm-2.68.so)
+ 
+   meson install -C build --destdir "$pkgdir"
+ 
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -5,6 +5,7 @@
+ glibc
+ libgcc
+ libsigc++-3.0
++libsigc++-3.0-docs
+ libsigc-3.0.so
+ libstdc++
+ meson
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

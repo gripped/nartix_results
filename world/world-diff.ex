@@ -3,7 +3,6 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 accountsservice
 aflplusplus
-alsa-ucm-conf
 alsa-utils
 ant
 ant-doc
@@ -102,7 +101,6 @@ coturn
 cppcheck
 crun
 krun
-cuda
 cups-filters
 cups
 libcups
@@ -395,6 +393,14 @@ libgsystemservice
 libgtop
 libgudev
 libguestfs
+erlang-libguestfs
+java-libguestfs
+lua-libguestfs
+ocaml-libguestfs
+perl-libguestfs
+php-libguestfs
+python-libguestfs
+ruby-libguestfs
 libhandy0
 libidl2
 libindi
@@ -507,7 +513,8 @@ marco
 mariadb
 mariadb-libs
 mariadb-clients
-mytop
+mariadb-mytop
+mariadb-pam
 mate-applets
 mate-backgrounds
 mate-calc
@@ -620,8 +627,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-obs-studio
-obs-studio-plugin-browser
 onboard
 onionshare
 open-iscsi
@@ -746,6 +751,8 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-webob
+python-webob-docs
 qastools
 qbe
 qbittorrent
@@ -859,7 +866,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-cucumber
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen

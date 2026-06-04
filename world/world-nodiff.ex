@@ -53,6 +53,7 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
+alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -397,6 +398,7 @@ csound-doc
 ctags
 ctpl
 ctwm
+cuda
 cudnn
 cunit
 cups-pdf
@@ -2535,6 +2537,8 @@ nss-mdns
 nsxiv
 nsync
 ntfs-3g
+ntfsprogs
+libntfs-3g
 ntp
 nuget
 nuitka
@@ -2545,6 +2549,8 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
+obs-studio
+obs-studio-plugin-browser
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -4648,8 +4654,6 @@ python-wcmatch
 python-wcwidth
 python-webcolors
 python-webencodings
-python-webob
-python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
@@ -4998,6 +5002,7 @@ ruby-cucumber-gherkin
 ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
+ruby-cucumber
 ruby-daemons
 ruby-date
 ruby-dbm
@@ -5839,6 +5844,8 @@ virtualgl
 viskores
 vkd3d
 vkd3d-docs
+vl-convert
+python-vl-convert
 vmaf
 vncdotool
 vnstat

@@ -1,6 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -46,7 +46,7 @@
+@@ -1,12 +1,11 @@
+ 
+ pkgname=gpu-screen-recorder
+ pkgver=5.13.9
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A shadowplay-like screen recorder for Linux. The fastest screen recorder for Linux'
+ arch=('x86_64')
+ url="https://git.dec05eba.com/gpu-screen-recorder"
+ license=('GPL-3.0-only')
+-install=gpu-screen-recorder.install
+ makedepends=(
+   meson
+   vulkan-headers
+@@ -47,11 +46,12 @@
  
  build() {
    cd "$srcdir"/$pkgname
@@ -9,6 +23,11 @@
    meson compile -C build
  }
  
+ package() {
+   cd "$srcdir"/$pkgname
+   meson install -C build --destdir "$pkgdir"
++  setcap CAP_SYS_ADMIN=+ep "$pkgdir"/usr/bin/gsr-kms-server
+ }
 
 
 ############# Stripped diff below #################

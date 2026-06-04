@@ -1,44 +1,47 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,14 +1,14 @@
+@@ -1,15 +1,14 @@
  
  pkgname=alsa-utils
--pkgver=1.2.15.2
+-pkgver=1.2.16
+-pkgrel=1
 +pkgver=1.2.13
- pkgrel=2
++pkgrel=2
  pkgdesc="Advanced Linux Sound Architecture - Utilities"
  arch=(x86_64)
  url="https://www.alsa-project.org"
  license=(GPL-2.0-or-later)
  depends=(
+-  bash
 +  gcc-libs
    glibc
 -  libgcc
    pciutils
    psmisc
  )
-@@ -19,7 +19,7 @@
+@@ -20,23 +19,31 @@
    libsamplerate
    ncurses
    python-docutils
 -  systemd
 +  udev
    xmlto
- )
- optdepends=(
-@@ -28,18 +28,22 @@
++)
++optdepends=(
++  'bash: for alsa-info.sh and alsabat-test.sh'
++  'fftw: for alsabat'
  )
  source=(
    $url/files/pub/utils/$pkgname-$pkgver.tar.bz2{,.sig}
 +  0001-alsactl-90-alsa-restore.rules-fix-alsa_restore_go-std.patch
    $pkgname.tmpfiles
  )
--sha512sums=('13ca15a63bcbf81a4643ef03e391200d7523335bc300e290756089c4cfeccb9773cf6b77f9fcf4b80e6aa2e8c5e33a2c86c9173f1feb480aedf5ecda0f7c47cd'
+-sha512sums=('288c042f5acb8a7cf1b0a0c25327c74e0bce126124253bdb2d0dc2630b8bc80b5e5d694de97738d031377fd82d887db32af1c4b27c6d940357b318d0a3ef02cf'
 +sha512sums=('0e2fb5b6e497b977badba2ebe2bddfc819654d24001622e0299e4034210caeeea2f3c2c2d1d260a48caefb6584e0b989fdb7036c6012108c8c38d89b3cb04c78'
              'SKIP'
 +            '1b47353970c9a80a7a41e2ff0faf0491b0b90ad1be59593a15a8ead22c43353f7a4bad6b509dade50617c31c06517e0333cc1ddbecfc78f51ec306472d4a9d84'
              '17ca2d760f383c02ccd00073d4fe73d6687ee58eb0ab5e458ad9d09845be7891cfe389e365bef00c7885e8afad45ea9ebf2925950f8d3fd8157feb818f986990')
--b2sums=('0688e668241917027b5dd161ebe3ea4ab6f8fede612e148dee74e033ab09f9557c7610a6b506d2507402cca7007a031b85c8c0cb9af80652ae9f3cc5ea157973'
+-b2sums=('9a4d6daf4bcb5564661eb92b0d11b3077d209282c4826c96531590b2d987bd1e4cf92f2ee65a9c388235f540cbaaea108eb90987112ed528620eaecb1d0f0137'
 +b2sums=('9bc2bf8e21fb9308c2eabc6612da0848f9ddba45acb8bf8453d9cff7f73fa0267495430a150ea53b28fab8afb69a51e487e8b253dc7501e17d77ea3f6e90bcf7'
          'SKIP'
 +        'f6b58f928352b62360a600c441b2c949eac9bf6582d58f39f332b28042f4ab25394a031b59fef470195ef81f3e734bc1675bc604616d5925874392c596d9c69b'
@@ -51,7 +54,7 @@
    autoreconf -fiv
  }
  
-@@ -49,7 +53,7 @@
+@@ -46,7 +53,7 @@
      --disable-alsaconf
      --sbindir=/usr/bin
      --with-udev-rules-dir=/usr/lib/udev/rules.d
@@ -60,26 +63,36 @@
    )
  
    cd $pkgname-$pkgver
+@@ -62,7 +69,6 @@
+ package() {
+   depends+=(
+     alsa-lib libasound.so libatopology.so
+-    fftw libfftw3f.so
+     ncurses libformw.so libmenuw.so libncursesw.so libpanelw.so
+     libsamplerate libsamplerate.so
+   )
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +1,11 @@
+@@ -1,13 +1,11 @@
  alsa-lib
+-bash
  docbook-xsl
  fftw
 +gcc-libs
  glibc
  libasound.so
  libatopology.so
+-libfftw3f.so
  libformw.so
 -libgcc
  libmenuw.so
  libncursesw.so
  libpanelw.so
-@@ -15,5 +15,5 @@
+@@ -17,5 +15,5 @@
  pciutils
  psmisc
  python-docutils

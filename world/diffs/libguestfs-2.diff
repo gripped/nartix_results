@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -37,7 +37,6 @@
+@@ -49,7 +49,6 @@
    squashfs-tools
    strace
    syslinux
@@ -8,23 +8,15 @@
    vim
    xfsprogs
    yara
-@@ -86,6 +85,7 @@
-   ruby-rdoc
-   rust
-   vala
-+  wget
- )
- checkdepends=(
-   linux-lts  # test against LTS kernel: https://github.com/libguestfs/libguestfs/issues/139
-@@ -131,7 +131,6 @@
+@@ -136,7 +135,6 @@
      --prefix=/usr
      --sbindir=/usr/bin
      --sysconfdir=/etc
--    --with-extra-packages="libldm systemd-sysvcompat openssh"
+-    --with-extra-packages="libldm systemd-sysvcompat openssh ntfsprogs"
      --with-guestfs-path=/usr/lib/guestfs
    )
  
-@@ -141,13 +140,6 @@
+@@ -146,14 +144,6 @@
    make
  }
  
@@ -33,24 +25,23 @@
 -  export SKIP_TEST_EXPAND_GPT_PL=1  # https://github.com/libguestfs/libguestfs/issues/155
 -  export SKIP_RHBZ1011907_1165785_SH=1 # Prevent: 'umount: /sysroot: target is busy.', unrelated to ocaml rebuild: Need to investigate
 -  export SKIP_TEST_SYSLINUX_PL=1  # https://github.com/libguestfs/libguestfs/issues/291
+-  export SKIP_TEST_CHARSET_FIDELITY=1  # https://github.com/libguestfs/libguestfs/issues/357
 -  LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1 make -k check -C $pkgname-$pkgver
 -}
  
- package() {
-   make INSTALLDIRS=vendor DESTDIR="$pkgdir" install -C $pkgname-$pkgver
+ _pick() {
+   local p="$1" f d; shift
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -64,8 +64,8 @@
+@@ -71,7 +71,6 @@
  strace
  supermin
  syslinux
 -systemd-sysvcompat
  vala
  vim
-+wget
  xfsprogs
- yara
