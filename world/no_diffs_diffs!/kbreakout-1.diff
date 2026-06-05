@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kbreakout
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='A Breakout-like game'
+ url='https://apps.kde.org/kbreakout/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kconfig
+          kconfigwidgets
+          kcoreaddons
+@@ -17,7 +18,6 @@
+          kwidgetsaddons
+          kxmlgui
+          libkdegames
+-         libstdc++
+          qt6-base
+          qt6-declarative)
+ makedepends=(extra-cmake-modules
+@@ -25,7 +25,7 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('b070386a8b0eb5ae2b6f7bc862acebd670c50e9ee3fa64a711c88397e3a4e570'
++sha256sums=('0167299af94300f2c528dfef5ab1f03939b61ce77f916f1183b6be27ac6bc6d6'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kconfig
+ kconfigwidgets
+@@ -11,6 +12,5 @@
+ kwidgetsaddons
+ kxmlgui
+ libkdegames
+-libstdc++
+ qt6-base
+ qt6-declarative

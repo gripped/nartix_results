@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kleopatra
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Certificate Manager and Unified Crypto GUI'
+ arch=(x86_64)
+ url='https://apps.kde.org/kleopatra/'
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+ depends=(akonadi-mime
++         gcc-libs
+          glibc
+          gpgmepp
+          kcodecs
+@@ -27,10 +28,8 @@
+          kwindowsystem
+          kxmlgui
+          libassuan
+-         libgcc
+          libgpg-error
+          libkleo
+-         libstdc++
+          mimetreeparser
+          qgpgme
+          qt6-base)
+@@ -39,7 +38,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('cafaec7975ef28d557fe1f280c2c62beae86f4c642cf969d7cbc9c05e0ff7aee'
++sha256sums=('3bf1ff1e9aacc0b8c8d11272100b6195bf7e44d7bd3e98adcde90352c469545d'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ akonadi-mime
+ extra-cmake-modules
++gcc-libs
+ glibc
+ gpgmepp
+ kcodecs
+@@ -21,10 +22,8 @@
+ kwindowsystem
+ kxmlgui
+ libassuan
+-libgcc
+ libgpg-error
+ libkleo
+-libstdc++
+ mimetreeparser
+ qgpgme
+ qt6-base

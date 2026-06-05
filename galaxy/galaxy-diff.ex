@@ -81,6 +81,8 @@ transmission-gtk
 transmission-qt
 unoconv
 vice
+vis
+vis-lexers
 wayfire
 waylock
 wayvnc
@@ -109,3 +111,4 @@ xorg-server-common
 xorg-server-devel
 xorg-server-src
 yazi
+zed

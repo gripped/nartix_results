@@ -299,7 +299,6 @@ cauchy
 cbatticon
 cbindgen
 ccache
-cccl
 cdparanoia
 cdrdao
 gcdmaster
@@ -3256,6 +3255,7 @@ python-aiosqlite
 python-aiostream
 python-aiounittest
 python-alembic
+python-altair
 python-amqp
 python-aniso8601
 python-annotated-doc
@@ -3267,6 +3267,7 @@ python-antlr4
 python-anyio
 python-anyjson
 python-anysqlite
+python-anywidget
 python-apipkg
 python-apispec-webframeworks
 python-apispec
@@ -4110,6 +4111,7 @@ python-psutil
 python-psycopg-pool
 python-psycopg
 python-psycopg2
+python-psygnal
 python-pt
 python-ptrace
 python-ptyprocess
@@ -4654,6 +4656,8 @@ python-wcmatch
 python-wcwidth
 python-webcolors
 python-webencodings
+python-webob
+python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest

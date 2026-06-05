@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,14 @@
+ 
+ pkgname=rocs
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Graph Theory IDE'
+ url='https://apps.kde.org/rocs/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later
+          LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          karchive
+          kcompletion
+          kconfig
+@@ -22,8 +23,6 @@
+          kparts
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+-         libstdc++
+          qt6-base
+          qt6-declarative)
+ makedepends=(boost
+@@ -32,7 +31,7 @@
+ groups=(kde-applications
+         kde-education)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('dee5f9fb0e7d782e5d336174dadc43088f6235839ec5baa9e352c2e82eabd13d'
++sha256sums=('2e22bb8ad84afde650132666ec36b29aedab5606fa6946189848a92dfc86b773'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ boost
+ extra-cmake-modules
++gcc-libs
+ glibc
+ karchive
+ kcompletion
+@@ -16,7 +17,5 @@
+ ktextwidgets
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+-libstdc++
+ qt6-base
+ qt6-declarative

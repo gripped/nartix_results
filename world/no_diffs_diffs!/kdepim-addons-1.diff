@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kdepim-addons
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Addons for KDE PIM applications'
+ arch=(x86_64)
+@@ -13,6 +13,7 @@
+          akonadi-mime
+          calendarsupport
+          discount
++         gcc-libs
+          glibc
+          gpgmepp
+          grantleetheme
+@@ -50,11 +51,9 @@
+          ktnef
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+          libgravatar
+          libkleo
+          libksieve
+-         libstdc++
+          mailcommon
+          mailimporter
+          messagelib
+@@ -73,7 +72,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ee69400cebd2ee4b2e19f5a571bbcaf1285e5717215756852154c0809c81c03e'
++sha256sums=('1cebe640b990e9d25509f4cb94ec8e4d5fdba9aa919fc53ae872c18b0c888da9'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,6 +7,7 @@
+ corrosion
+ discount
+ extra-cmake-modules
++gcc-libs
+ glibc
+ gpgmepp
+ grantleetheme
+@@ -46,11 +47,9 @@
+ ktnef
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+ libgravatar
+ libkleo
+ libksieve
+-libstdc++
+ mailcommon
+ mailimporter
+ messagelib

@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=konquest
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='The KDE version of Gnu-Lactic'
+ url='https://apps.kde.org/konquest/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kcolorscheme
+          kconfig
+          kcoreaddons
+@@ -17,7 +18,6 @@
+          kwidgetsaddons
+          kxmlgui
+          libkdegames
+-         libstdc++
+          qt6-base
+          qt6-scxml
+          qt6-svg)
+@@ -26,7 +26,7 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('d5009fb07e1955db8801b7babf522d1f83551e6c5ff43436e7508b6b55f1f556'
++sha256sums=('b9b683c177e1d0da1ec966281800970ada1efb84cc3d7d3405cba5d88fa1c8aa'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kcolorscheme
+ kconfig
+@@ -11,7 +12,6 @@
+ kwidgetsaddons
+ kxmlgui
+ libkdegames
+-libstdc++
+ qt6-base
+ qt6-scxml
+ qt6-svg

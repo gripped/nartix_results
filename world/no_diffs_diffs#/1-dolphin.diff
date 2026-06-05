@@ -1,5 +1,38 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=dolphin
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='KDE File Manager'
+ arch=(x86_64)
+@@ -8,6 +8,7 @@
+ license=(LGPL-2.0-or-later)
+ depends=(baloo
+          baloo-widgets
++         gcc-libs
+          glibc
+          kbookmarks
+          kcmutils
+@@ -35,7 +36,6 @@
+          kwidgetsaddons
+          kwindowsystem
+          kxmlgui
+-         libstdc++
+          qt6-base
+          qt6-multimedia
+          solid)
+@@ -55,7 +55,7 @@
+ groups=(kde-applications
+         kde-system)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('c7e90beb8ce13aea091494ae7ddfabde999b1297986a596403828010bec59346'
++sha256sums=('ba4da5192f7e45f392feaa74dfb18fddddcf9dbcc8f9abeb3f670e83ed9e4f57'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
 @@ -69,4 +69,6 @@
  
  package() {
@@ -7,3 +40,25 @@
 +
 +  rm -r $pkgdir/usr/lib/systemd
  }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ baloo
+ baloo-widgets
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kbookmarks
+ kcmutils
+@@ -29,7 +30,6 @@
+ kwidgetsaddons
+ kwindowsystem
+ kxmlgui
+-libstdc++
+ qt6-base
+ qt6-multimedia
+ solid

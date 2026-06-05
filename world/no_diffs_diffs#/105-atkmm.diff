@@ -1,29 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
-   atkmm-docs
- )
- pkgver=2.28.5
--pkgrel=1
-+pkgrel=2
- pkgdesc="C++ bindings for ATK"
- url="https://www.gtkmm.org/"
- arch=(x86_64)
-@@ -16,11 +16,13 @@
-   glibc
-   glibmm
-   libgcc
-+  libsigc++
-   libstdc++
- )
- makedepends=(
-   git
-   glibmm-docs
-+  libsigc++-docs
-   meson
-   mm-common
- )
-@@ -37,7 +39,7 @@
+@@ -39,7 +39,7 @@
      -D maintainer-mode=true
    )
  
@@ -36,17 +13,7 @@
 
 ############# Stripped diff below #################
 
---- arch_depends
-+++ artix_depends
-@@ -7,6 +7,8 @@
- glibmm-docs
- libgcc
- libglibmm-2.4.so
-+libsigc++
-+libsigc++-docs
- libsigc-2.0.so
- libstdc++
- meson
+
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

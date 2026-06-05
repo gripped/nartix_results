@@ -1,0 +1,53 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kde-dev-utils
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Small utilities for developers using KDE/Qt libs/frameworks'
+ url='https://apps.kde.org/kuiviewer/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kconfig
+          kconfigwidgets
+          kcoreaddons
+@@ -15,14 +16,13 @@
+          kparts
+          kwidgetsaddons
+          kxmlgui
+-         libstdc++
+          qt6-base
+          qt6-tools)
+ makedepends=(extra-cmake-modules)
+ groups=(kde-applications
+         kde-sdk)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('f499a676b165eebcc38448ad85f819911c1f462d4f69bc1ea73438095a362010'
++sha256sums=('4de750638d6302b8d20b4f256d785bbb22a69b151398a23efbbac30104345da0'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kconfig
+ kconfigwidgets
+@@ -8,6 +9,5 @@
+ kparts
+ kwidgetsaddons
+ kxmlgui
+-libstdc++
+ qt6-base
+ qt6-tools

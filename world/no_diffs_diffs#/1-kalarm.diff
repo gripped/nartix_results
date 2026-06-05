@@ -1,0 +1,59 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kalarm
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Personal alarm scheduler'
+ arch=(x86_64)
+@@ -9,6 +9,7 @@
+ depends=(akonadi
+          akonadi-contacts
+          akonadi-mime
++         gcc-libs
+          glibc
+          kauth
+          kcalendarcore
+@@ -40,8 +41,6 @@
+          kwidgetsaddons
+          kwindowsystem
+          kxmlgui
+-         libgcc
+-         libstdc++
+          qt6-base)
+ makedepends=(extra-cmake-modules
+              kdoctools
+@@ -52,7 +51,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('e1df450ae1436b63381b75766d23b2af01f2395e8ed6d45fbdfc160b15e92533'
++sha256sums=('45c144398b380f03424159a8333f50e7f67e8058c0baef1b605e5bb7f5036e9c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ akonadi-contacts
+ akonadi-mime
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kauth
+ kcalendarcore
+@@ -34,8 +35,6 @@
+ kwidgetsaddons
+ kwindowsystem
+ kxmlgui
+-libgcc
+-libstdc++
+ libvlc
+ mpv
+ qt6-base

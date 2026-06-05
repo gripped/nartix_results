@@ -1,0 +1,69 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kio-extras
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Additional components to increase the functionality of KIO'
+ arch=(x86_64)
+ url='https://www.kde.org/'
+ license=(LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          karchive
+          kcmutils
+          kconfig
+@@ -20,14 +21,12 @@
+          knotifications
+          kservice
+          kwidgetsaddons
+-         libgcc
+          libimobiledevice
+          libkexiv2
+          libmtp
+          libplist
+          libproxy
+          libssh
+-         libstdc++
+          libtirpc
+          libxcursor
+          plasma-activities
+@@ -56,7 +55,7 @@
+ groups=(kde-applications
+         kde-network)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('af4941af624f883891d33701aa0ce4216d6de114db3e4a250099c52d3d42acaa'
++sha256sums=('f53a64fbe5f0bbcadde55f347fef41d2f39c0b5cdcb7c74df8dee7439ee1194c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ gperf
+ karchive
+@@ -16,14 +17,12 @@
+ kservice
+ kwidgetsaddons
+ libappimage
+-libgcc
+ libimobiledevice
+ libkexiv2
+ libmtp
+ libplist
+ libproxy
+ libssh
+-libstdc++
+ libtirpc
+ libxcursor
+ openexr

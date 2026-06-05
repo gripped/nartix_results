@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=gwenview
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='A fast and easy to use image viewer'
+ url='https://apps.kde.org/gwenview/'
+@@ -9,6 +9,7 @@
+ depends=(baloo
+          cfitsio
+          exiv2
++         gcc-libs
+          glibc
+          kcolorscheme
+          kcompletion
+@@ -30,11 +31,9 @@
+          kwidgetsaddons
+          kxmlgui
+          lcms2
+-         libgcc
+          libjpeg-turbo
+          libkdcraw
+          libpng
+-         libstdc++
+          libtiff
+          libx11
+          plasma-activities
+@@ -53,7 +52,7 @@
+ groups=(kde-applications
+         kde-graphics)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('150b601741f1fcf3aae5e8fa6dbd28ae83afe3e0914a1e91c84efa55312d9a69'
++sha256sums=('47c8d6d97c1ec3c6e8138df4b233f7e1f7ebc86d3b04bf0b43196dea430a03bd'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ cfitsio
+ exiv2
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kcolorscheme
+ kcompletion
+@@ -24,11 +25,9 @@
+ kwidgetsaddons
+ kxmlgui
+ lcms2
+-libgcc
+ libjpeg-turbo
+ libkdcraw
+ libpng
+-libstdc++
+ libtiff
+ libx11
+ plasma-activities

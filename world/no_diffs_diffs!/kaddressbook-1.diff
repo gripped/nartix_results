@@ -1,0 +1,60 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=kaddressbook
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='KDE contact manager'
+ arch=(x86_64)
+@@ -9,6 +9,7 @@
+ depends=(akonadi
+          akonadi-contacts
+          akonadi-search
++         gcc-libs
+          glibc
+          grantleetheme
+          kcmutils
+@@ -29,9 +30,7 @@
+          kuserfeedback
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+          libkdepim
+-         libstdc++
+          pimcommon
+          qt6-base)
+ makedepends=(extra-cmake-modules
+@@ -39,7 +38,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('cfe623b74273f7c6ca576dcb6a59caa605aacacc100b3fc4e1ab5433fcf8ac78'
++sha256sums=('1b9f6f78f60a3044164a6b0b7fae5a9608925969d8c71541a61d84ab6d3caa2b'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ akonadi-contacts
+ akonadi-search
+ extra-cmake-modules
++gcc-libs
+ glibc
+ grantleetheme
+ kcmutils
+@@ -23,8 +24,6 @@
+ kuserfeedback
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+ libkdepim
+-libstdc++
+ pimcommon
+ qt6-base

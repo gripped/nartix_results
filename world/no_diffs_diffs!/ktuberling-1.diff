@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=ktuberling
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='A simple constructor game suitable for children and adults alike'
+ url='https://apps.kde.org/ktuberling/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kcompletion
+          kconfig
+          kconfigwidgets
+@@ -18,7 +19,6 @@
+          kwidgetsaddons
+          kxmlgui
+          libkdegames
+-         libstdc++
+          qt6-base
+          qt6-multimedia
+          qt6-svg)
+@@ -27,7 +27,7 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('f0ad762050ad5f5ef402decf92f4cdb8f2925f946569cf5936a3ca68b279e22c'
++sha256sums=('7041307923f52e249beef96199e105b6238de79ebc7ef723e6a305ed509a03f6'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kcompletion
+ kconfig
+@@ -12,7 +13,6 @@
+ kwidgetsaddons
+ kxmlgui
+ libkdegames
+-libstdc++
+ qt6-base
+ qt6-multimedia
+ qt6-svg

@@ -1,0 +1,56 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=akonadi-search
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Libraries and daemons to implement searching in Akonadi'
+ url='https://kontact.kde.org'
+@@ -8,6 +8,7 @@
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+ depends=(akonadi
+          akonadi-mime
++         gcc-libs
+          glibc
+          kcalendarcore
+          kcmutils
+@@ -20,14 +21,12 @@
+          krunner
+          ktextaddons
+          kwidgetsaddons
+-         libgcc
+-         libstdc++
+          qt6-base
+          xapian-core)
+ makedepends=(corrosion
+              extra-cmake-modules)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('142ce46f3dae262f43263f80a13ba532767910a39e442fdc4b92693870839c04'
++sha256sums=('2a3a40284faeb61c2d2f1b09ecc80c1844e498115ad8bccc1729431141b95e3f'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ akonadi-mime
+ corrosion
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kcalendarcore
+ kcmutils
+@@ -14,7 +15,5 @@
+ krunner
+ ktextaddons
+ kwidgetsaddons
+-libgcc
+-libstdc++
+ qt6-base
+ xapian-core

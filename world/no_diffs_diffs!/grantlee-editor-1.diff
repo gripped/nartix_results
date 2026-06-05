@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=grantlee-editor
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Editor for Grantlee themes'
+ arch=(x86_64)
+ url='https://kontact.kde.org/'
+ license=(GPL-2.0-or-later)
+ depends=(akonadi-contacts
++         gcc-libs
+          glibc
+          grantleetheme
+          karchive
+@@ -23,8 +24,6 @@
+          ktextaddons
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+-         libstdc++
+          messagelib
+          pimcommon
+          qt6-base
+@@ -35,7 +34,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('12853619f2a8f43d4d66068ee58ada2bb69bfe444d55dac6a0b844870ac480fd'
++sha256sums=('d6f629d58cf6b2820c91392376db55255ce70ff801375a8d943532c1a98aea55'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ akonadi-contacts
+ extra-cmake-modules
++gcc-libs
+ glibc
+ grantleetheme
+ karchive
+@@ -17,8 +18,6 @@
+ ktextaddons
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+-libstdc++
+ messagelib
+ pimcommon
+ qt6-base

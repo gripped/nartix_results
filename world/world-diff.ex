@@ -54,6 +54,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+cccl
 cef
 certbot-apache
 certbot-dns-cloudflare
@@ -751,8 +752,6 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
-python-webob
-python-webob-docs
 qastools
 qbe
 qbittorrent

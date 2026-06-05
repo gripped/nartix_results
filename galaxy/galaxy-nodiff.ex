@@ -106,6 +106,7 @@ cosmic-terminal
 cosmic-text-editor
 cosmic-wallpapers
 cosmic-workspaces
+cowsay
 cpptrace
 cvs
 dbeaver
@@ -596,6 +597,7 @@ scummvm
 shairplay
 shortwave
 shotcut
+sl
 smokeping
 snap-pac
 snes9x
@@ -777,8 +779,6 @@ vdirsyncer
 vhba-module-dkms
 vhba-module
 vicious
-vis
-vis-lexers
 vivaldi
 voa
 vpl-gpu-rt
@@ -873,5 +873,4 @@ zathura-pdf-mupdf
 zathura-pdf-poppler
 zathura-ps
 zathura
-zed
 zig0.14

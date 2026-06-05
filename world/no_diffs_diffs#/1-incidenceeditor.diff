@@ -1,0 +1,57 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=incidenceeditor
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='KDE PIM incidence editor'
+ arch=(x86_64)
+@@ -12,6 +12,7 @@
+          akonadi-mime
+          calendarsupport
+          eventviews
++         gcc-libs
+          glibc
+          kcalendarcore
+          kcalutils
+@@ -32,14 +33,12 @@
+          ktextwidgets
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+          libkdepim
+-         libstdc++
+          pimcommon
+          qt6-base)
+ makedepends=(extra-cmake-modules)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('ad3da4dd53a47f072c16e277fe3b841ad0e3dddf29906cf9492fef32ee7eb664'
++sha256sums=('401b2152aba9318c49c42022f32a9ea2c592da5db3f11c50ae93d319f53bd94c'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,6 +5,7 @@
+ calendarsupport
+ eventviews
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kcalendarcore
+ kcalutils
+@@ -25,8 +26,6 @@
+ ktextwidgets
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+ libkdepim
+-libstdc++
+ pimcommon
+ qt6-base

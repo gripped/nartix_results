@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=mailcommon
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='KDE PIM library providing support for mail applications'
+ arch=(x86_64)
+@@ -9,6 +9,7 @@
+ depends=(akonadi
+          akonadi-contacts
+          akonadi-mime
++         gcc-libs
+          glibc
+          gpgmepp
+          karchive
+@@ -29,10 +30,8 @@
+          ktextaddons
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+          libkdepim
+          libkleo
+-         libstdc++
+          mailimporter
+          messagelib
+          pimcommon
+@@ -43,7 +42,7 @@
+ makedepends=(extra-cmake-modules
+              qt6-tools)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('b65177ebaee6447a1d60cfb994eb2a03e3afd62b6010504ce45d99439ccc9ccc'
++sha256sums=('fa7c24f54f185cad3c3a23131f2cf14bdc4df2e24247bec75dbd1b9a6a62589a'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ akonadi-contacts
+ akonadi-mime
+ extra-cmake-modules
++gcc-libs
+ glibc
+ gpgmepp
+ karchive
+@@ -22,10 +23,8 @@
+ ktextaddons
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+ libkdepim
+ libkleo
+-libstdc++
+ mailimporter
+ messagelib
+ pimcommon

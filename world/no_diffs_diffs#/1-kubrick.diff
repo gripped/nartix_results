@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kubrick
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc="Based on the famous Rubik's Cube"
+ url='https://apps.kde.org/kubrick/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          glu
+          kconfig
+          kconfigwidgets
+@@ -18,7 +19,6 @@
+          kxmlgui
+          libglvnd
+          libkdegames
+-         libstdc++
+          qt6-base
+          qt6-svg)
+ makedepends=(extra-cmake-modules
+@@ -26,7 +26,7 @@
+ groups=(kde-applications
+         kde-games)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('8373f79eeb5b615e43850d036d5a26cd9e970cd32595bba5e62a2d3e96489230'
++sha256sums=('3351d20ef0eb0135bd110605c7ac5b2f4e08b546d6af892ec82754bc4f222b05'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ glu
+ kconfig
+@@ -12,6 +13,5 @@
+ kxmlgui
+ libglvnd
+ libkdegames
+-libstdc++
+ qt6-base
+ qt6-svg

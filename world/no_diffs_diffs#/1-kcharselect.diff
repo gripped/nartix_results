@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kcharselect
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Character Selector'
+ url='https://apps.kde.org/kcharselect/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kbookmarks
+          kcolorscheme
+          kconfig
+@@ -17,14 +18,13 @@
+          kiconthemes
+          kwidgetsaddons
+          kxmlgui
+-         libstdc++
+          qt6-base)
+ makedepends=(extra-cmake-modules
+              kdoctools)
+ groups=(kde-applications
+         kde-utilities)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('4e4e1037da17e3374a83615089cb9a51935675a2eb2409ff22ad98f7578fdd6e'
++sha256sums=('9a8af0148b9f1686f6a3c9746f553ecd8107e386acacaed34018b25269cdec1d'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kbookmarks
+ kcolorscheme
+@@ -11,5 +12,4 @@
+ kiconthemes
+ kwidgetsaddons
+ kxmlgui
+-libstdc++
+ qt6-base

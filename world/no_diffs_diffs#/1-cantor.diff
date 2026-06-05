@@ -1,0 +1,63 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,14 @@
+ 
+ pkgname=cantor
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='KDE Frontend to Mathematical Software'
+ url='https://apps.kde.org/cantor/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later
+          LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          karchive
+          kcolorscheme
+          kcompletion
+@@ -24,10 +25,8 @@
+          ktextwidgets
+          kwidgetsaddons
+          kxmlgui
+-         libgcc
+          libqalculate
+          libspectre
+-         libstdc++
+          libxml2
+          libxslt
+          poppler-qt6
+@@ -54,7 +53,7 @@
+ groups=(kde-applications
+         kde-education)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('a1224d780ac8657dfac0f53bfc645aad8bee7f0b2beb9e373212c91dd2f4dcf6'
++sha256sums=('ce835577baaad9acf438fefd69ffd8da406d9c3f148abee467270f6d8cf96670'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,5 +1,6 @@
+ analitza
+ extra-cmake-modules
++gcc-libs
+ glibc
+ julia
+ karchive
+@@ -19,10 +20,8 @@
+ ktextwidgets
+ kwidgetsaddons
+ kxmlgui
+-libgcc
+ libqalculate
+ libspectre
+-libstdc++
+ libxml2
+ libxslt
+ luajit

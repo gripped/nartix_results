@@ -1,0 +1,55 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=khangman
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='Hangman Game'
+ url='https://apps.kde.org/khangman/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kconfig
+          kcoreaddons
+          kcrash
+@@ -15,7 +16,6 @@
+          kirigami-addons
+          knewstuff
+          libkeduvocdocument
+-         libstdc++
+          qt6-base
+          qt6-declarative
+          qt6-multimedia)
+@@ -25,7 +25,7 @@
+ groups=(kde-applications
+         kde-education)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('92df44a17f4cb0cd62af9ecc16f61669b83f1c259f70992d31fc3c76739d078c'
++sha256sums=('99618ea09efb081f230bd510af22aade1774623bf2166d69663b3b11c1aa5747'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kconfig
+ kconfigwidgets
+@@ -10,7 +11,6 @@
+ kirigami-addons
+ knewstuff
+ libkeduvocdocument
+-libstdc++
+ qt6-base
+ qt6-declarative
+ qt6-multimedia

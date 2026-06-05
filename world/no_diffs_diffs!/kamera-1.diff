@@ -1,0 +1,52 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,13 @@
+ 
+ pkgname=kamera
+-pkgver=26.04.2
++pkgver=26.04.1
+ pkgrel=1
+ pkgdesc='KDE integration for gphoto2 cameras'
+ url='https://apps.kde.org/kamera/'
+ arch=(x86_64)
+ license=(GPL-2.0-or-later LGPL-2.0-or-later)
+-depends=(glibc
++depends=(gcc-libs
++         glibc
+          kcmutils
+          kconfig
+          kcoreaddons
+@@ -15,14 +16,13 @@
+          kwidgetsaddons
+          kxmlgui
+          libgphoto2
+-         libstdc++
+          qt6-base)
+ makedepends=(extra-cmake-modules
+              kdoctools)
+ groups=(kde-applications
+         kde-graphics)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('73166f0bd638a40b041715e11aca1fac606dfbc654a413efca8f864c06f04eaf'
++sha256sums=('d98de5e7c57a6c3d8625d5b3d84a16c99598e91a993c4e4aa94dce3ba2ebf0c8'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ extra-cmake-modules
++gcc-libs
+ glibc
+ kcmutils
+ kconfig
+@@ -9,5 +10,4 @@
+ kwidgetsaddons
+ kxmlgui
+ libgphoto2
+-libstdc++
+ qt6-base
