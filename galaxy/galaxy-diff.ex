@@ -31,6 +31,7 @@ innernet
 intel-gpu-tools
 labwc
 lemurs
+libcmis
 libetonyek
 libmatemixer
 libodfgen

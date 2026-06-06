@@ -187,6 +187,7 @@ gtk4-layer-shell
 halloy
 helvum
 hugo
+hyfetch
 hyperfine
 impala
 imv
@@ -214,7 +215,6 @@ lesspipe
 lf
 libaacs
 libcec
-libcmis
 libdbusmenu-lxqt
 libe-book
 libetpan

@@ -1,35 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,8 +2,8 @@
- pkgname=qt6-webengine
- _pkgver=6.11.1
- pkgver=${_pkgver/-/}
--pkgrel=3
--_chromium=03b27c14186b88d821551a0cc312b5455a7202e5
-+pkgrel=1
-+_chromium=
- arch=(x86_64)
- url='https://www.qt.io'
- license=(GPL-3.0-only
-@@ -17,16 +17,15 @@
-          ffmpeg
-          fontconfig
-          freetype2
-+         gcc-libs
-          glib2
-          glibc
-          harfbuzz
-          icu
-          lcms2
--         libgcc
-          libglvnd
-          libjpeg-turbo
-          libpng
--         libstdc++
-          libtiff
-          libwebp
-          libx11
-@@ -54,7 +53,7 @@
+@@ -54,7 +54,7 @@
           qt6-webchannel
           re2
           snappy
@@ -38,45 +9,21 @@
           ttf-font
           zlib)
  makedepends=(cmake
-@@ -90,8 +89,6 @@
- 
-   cd src/3rdparty
-   [[ -n $_chromium ]] && git checkout $_chromium || true
--
--  git revert -n d3f726be3023f698a01ba4f74533524bd81df8d6 # Revert commit that causes crashes
- }
- 
- build() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -5,6 +5,7 @@
- ffmpeg
- fontconfig
- freetype2
-+gcc-libs
- git
- glib2
- glibc
-@@ -14,13 +15,12 @@
- jsoncpp
- lcms2
- libepoxy
--libgcc
- libglvnd
- libjpeg-turbo
- libpng
+@@ -21,6 +21,7 @@
  libpulse
--libstdc++
+ libstdc++
  libtiff
 +libudev
  libva
  libwebp
  libx11
-@@ -56,6 +56,5 @@
+@@ -56,6 +57,5 @@
  qt6-websockets
  re2
  snappy

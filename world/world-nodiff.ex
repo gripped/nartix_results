@@ -53,7 +53,6 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
-alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
@@ -1699,7 +1698,6 @@ libchewing
 libclc
 libcloudproviders
 libcloudproviders-docs
-libcmis
 libconfig
 libcroco
 libcryptui
@@ -4005,7 +4003,6 @@ python-oslotest
 python-outcome
 python-overrides
 python-ovirt-engine-sdk
-python-owslib
 python-packaging
 python-pallets-sphinx-themes
 python-pam
@@ -4546,7 +4543,6 @@ python-teamcity-messages
 python-tempita
 python-tempora
 python-tenacity
-python-tensile
 python-termcolor
 python-terminado
 python-termstyle
@@ -4902,7 +4898,6 @@ rlwrap
 rng-tools
 robin-map
 roc-toolkit
-rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core

@@ -1,57 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,13 @@
- 
- pkgname=kwalletmanager
--pkgver=26.04.2
-+pkgver=26.04.1
- pkgrel=1
- pkgdesc='Wallet management tool'
- arch=(x86_64)
- url='https://apps.kde.org/kwalletmanager5/'
- license=(LGPL-2.0-or-later)
--depends=(glibc
-+depends=(gcc-libs
-+         glibc
-          karchive
-          kauth
-          kcmutils
-@@ -25,14 +26,13 @@
-          kwidgetsaddons
-          kwindowsystem
-          kxmlgui
--         libstdc++
-          qt6-base)
- makedepends=(extra-cmake-modules
-              kdoctools)
- groups=(kde-applications
-         kde-utilities)
- source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('9693258df56bc08dc0fc122ce36eb79ee04498d3be7706635af134f3c9ebe5ea'
-+sha256sums=('7fe0724d64efcc17c97a611f6bd1ea59cd13aab5969acb53cdbeed76d651e74f'
-             'SKIP')
- validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
-               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
 @@ -47,4 +47,3 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  }
 -
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +1,5 @@
- extra-cmake-modules
-+gcc-libs
- glibc
- karchive
- kauth
-@@ -19,5 +20,4 @@
- kwidgetsaddons
- kwindowsystem
- kxmlgui
--libstdc++
- qt6-base

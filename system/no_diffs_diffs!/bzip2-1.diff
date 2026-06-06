@@ -9,3 +9,12 @@
  url="https://sourceware.org/bzip2/"
  depends=('glibc' 'sh')
  provides=('libbz2.so')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,2 +0,0 @@
+-glibc
+-sh

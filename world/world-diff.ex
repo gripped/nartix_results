@@ -3,6 +3,7 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 accountsservice
 aflplusplus
+alsa-ucm-conf
 alsa-utils
 ant
 ant-doc
@@ -380,6 +381,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
+libcmis
 libdaemon
 libe-book
 libei
@@ -746,12 +748,14 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-ndg-httpsclient
+python-owslib
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-tensile
 qastools
 qbe
 qbittorrent
@@ -858,6 +862,7 @@ refind-docs
 ristretto
 rnnoise
 rocalution
+rocblas
 rocfft
 rocrand
 rrdtool
