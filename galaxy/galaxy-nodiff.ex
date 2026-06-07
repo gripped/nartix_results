@@ -578,7 +578,6 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
-rio
 riscv64-linux-gnu-gdb
 ristretto
 river-classic
@@ -873,4 +872,5 @@ zathura-pdf-mupdf
 zathura-pdf-poppler
 zathura-ps
 zathura
+zed
 zig0.14

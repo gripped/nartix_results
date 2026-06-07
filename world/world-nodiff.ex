@@ -4003,6 +4003,7 @@ python-oslotest
 python-outcome
 python-overrides
 python-ovirt-engine-sdk
+python-owslib
 python-packaging
 python-pallets-sphinx-themes
 python-pam

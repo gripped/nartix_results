@@ -35,6 +35,8 @@ gzip
 iputils
 less
 libsasl
+libtool
+lib32-libltdl
 libusb
 linux
 linux-headers

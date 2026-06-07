@@ -35,14 +35,3 @@
 -  cp -r $pkgname.mjs pnpmrc templates worker.js "$pkgdir"/$mod_dir/dist
 +  cp -r $pkgname.cjs pnpmrc templates worker.js "$pkgdir"/$mod_dir/dist
  }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,4 +0,0 @@
--git
--node-gyp
--pnpm
--python

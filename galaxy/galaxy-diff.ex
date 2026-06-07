@@ -69,6 +69,7 @@ qt5-webengine
 rage
 read-edid
 reflector
+rio
 sdcv
 signal-desktop
 terminology
@@ -112,4 +113,3 @@ xorg-server-common
 xorg-server-devel
 xorg-server-src
 yazi
-zed

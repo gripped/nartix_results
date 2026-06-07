@@ -748,7 +748,6 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-ndg-httpsclient
-python-owslib
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
