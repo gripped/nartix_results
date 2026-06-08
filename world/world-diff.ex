@@ -14,6 +14,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+armagetronad
 at-spi2-core
 at-spi2-core-docs
 at
@@ -99,7 +100,6 @@ conmon
 connman
 containerd
 containers-common
-coturn
 cppcheck
 crun
 krun
@@ -409,7 +409,6 @@ libidl2
 libindi
 libinput
 libinput-tools
-libkrun
 libldm
 liblqr
 libmatekbd

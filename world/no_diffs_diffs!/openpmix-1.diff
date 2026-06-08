@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   openpmix-docs
+ )
+ pkgver=5.0.10
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Extended version of the PMI standard"
+ arch=(x86_64)
+ url="https://github.com/openpmix/openpmix"
+@@ -16,6 +16,7 @@
+   hwloc
+   perl
+   libevent
++  libevent_{core,pthreads}-2.1.so
+   python
+   zlib
+ )

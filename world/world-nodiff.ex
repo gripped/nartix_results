@@ -101,7 +101,6 @@ ark
 arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
-armagetronad
 arpack
 arrow
 artikulate
@@ -379,6 +378,7 @@ coordgen
 copr-cli
 corepack
 corrosion
+coturn
 couchdb
 cpio
 cpp-hocon
@@ -1849,6 +1849,7 @@ libkleo
 libkmahjongg
 libkolabxml
 libkomparediff2
+libkrun
 libkrunfw
 libksane
 libkscreen

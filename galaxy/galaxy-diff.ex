@@ -59,6 +59,7 @@ nvidia-510xx-utils
 nvidia-525xx-utils
 nvidia-535xx-utils
 nvidia-580xx-utils
+nwg-look
 opensnitch
 osdlyrics
 p8-platform
@@ -69,7 +70,6 @@ qt5-webengine
 rage
 read-edid
 reflector
-rio
 sdcv
 signal-desktop
 terminology

@@ -240,6 +240,7 @@ gitea-runner-openrc
 gitea-s6
 gitea-tea
 glibc-runit
+gnome-session-sysvinit
 gpm-runit
 grafana-dinit
 grafana-openrc

@@ -451,7 +451,6 @@ ntpd-rs
 nushell
 nvm
 nwg-hello
-nwg-look
 nyx
 obconf-qt
 obfuscate
@@ -564,6 +563,7 @@ quassel-client-qt
 quassel-monolithic
 quassel-monolithic-qt
 quassel-common
+quickjs-ng
 quickshell
 realtime-privileges
 reapack
@@ -578,6 +578,7 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
+rio
 riscv64-linux-gnu-gdb
 ristretto
 river-classic
