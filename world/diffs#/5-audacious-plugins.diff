@@ -3,20 +3,21 @@
 @@ -1,30 +1,37 @@
  
  pkgname=audacious-plugins
--pkgver=4.5.1
--pkgrel=2
+-pkgver=4.6.1
+-pkgrel=1
 +pkgver=4.3.1
 +pkgrel=3
  pkgdesc="Plugins for Audacious"
  arch=('x86_64')
  url="https://audacious-media-player.org/"
- license=('BSD' 'GPL')
+-license=('BSD-2-Clause')
 -depends=('alsa-lib' 'curl' 'faad2' 'ffmpeg' 'flac' 'fluidsynth'
++license=('BSD' 'GPL')
 +depends=('alsa-lib' 'curl' 'dbus-glib' 'faad2' 'ffmpeg' 'flac' 'fluidsynth'
           'jack' 'lame' 'libcdio-paranoia' 'libcue' 'libmms' 'libmodplug'
           'libmtp' 'libpulse' 'libnotify' 'libsamplerate' 'libsidplayfp'
           'libvorbis' 'lirc' 'mpg123' 'neon' 'wavpack' 'libbs2b' 'libopenmpt'
--         'libcddb' 'opusfile' 'libpipewire')
+-         'libcddb' 'opusfile' 'libpipewire' 'libstdc++' 'libgcc')
 -makedepends=("audacious>=$pkgver" 'meson' 'glib2-devel')
 +         'libcddb' 'qt5-x11extras' 'opusfile' 'libpipewire')
 +makedepends=("audacious>=$pkgver" 'meson' 'python-packaging')
@@ -24,7 +25,7 @@
 +        $pkgname-replace-xmlParseMemory.patch::https://github.com/audacious-media-player/audacious-plugins/commit/c9246b1c8b09.patch
 +        $pkgname-fix-xml-parsing.patch::https://github.com/audacious-media-player/audacious-plugins/commit/5103ba0f504f.patch
          sidplay-rom-paths.patch)
--sha256sums=('f4feedc32776acfa9d24701d3b794fc97822f76da6991e91e627e70e561fdd3b'
+-sha256sums=('22e58a8a2c3f3caa9687434353618c822963cc8846cd239de36d4e8e5bd166a6'
 +sha256sums=('2dea26e3af583a2d684df240b27b2b2932bcd653df4db500a85f4fe5d5fdc8a6'
 +            '2a412c5eafa9cd982cc281b21e3525dbbaecdedeba6181a2f144832c1c273675'
 +            '51e0044dc099fbfd7faff15745ad09bc0e4b4da7be9689495669ff3fc6458ae7'
@@ -51,7 +52,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +1,11 @@
+@@ -1,18 +1,17 @@
  alsa-lib
  audacious>
  curl
@@ -64,7 +65,21 @@
  jack
  lame
  libbs2b
-@@ -27,4 +27,6 @@
+ libcddb
+ libcdio-paranoia
+ libcue
+-libgcc
+ libmms
+ libmodplug
+ libmtp
+@@ -22,11 +21,12 @@
+ libpulse
+ libsamplerate
+ libsidplayfp
+-libstdc++
+ libvorbis
+ lirc
+ meson
  mpg123
  neon
  opusfile

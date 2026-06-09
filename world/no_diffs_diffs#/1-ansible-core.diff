@@ -1,23 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=ansible-core
- _pkgname=ansible
- pkgver=2.21.0
--pkgrel=2
-+pkgrel=1
- pkgdesc='Radically simple IT automation platform'
- arch=('any')
- url='https://www.ansible.com'
-@@ -14,6 +14,7 @@
-   'python-packaging'
-   'python-pyyaml'
-   'python-resolvelib'
-+  'python-paramiko'
-   'python-typing_extensions'
- )
- makedepends=(
-@@ -46,7 +47,6 @@
+@@ -46,7 +46,6 @@
    'python-pip: for module to manage Python libarary dependencies'
    'python-pywinrm: connect to Windows machines'
    'python-setuptools: for module to manage Python libarary dependencies'
@@ -25,17 +8,3 @@
    'sshpass: for ssh connections with password'
  )
  provides=('python-ansible' 'ansible-base')
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -5,6 +5,7 @@
- python-installer
- python-jinja
- python-packaging
-+python-paramiko
- python-pyyaml
- python-resolvelib
- python-setuptools

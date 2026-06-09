@@ -53,12 +53,12 @@ alsa-plugins
 pulseaudio-alsa
 alsa-tools
 alsa-topology-conf
+alsa-ucm-conf
 amdvlk
 amf-headers
 amfora
 aml
 amtk
-amule
 analitza
 analitza5
 anari-sdk
@@ -101,6 +101,7 @@ ark
 arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
+armagetronad
 arpack
 arrow
 artikulate
@@ -297,6 +298,7 @@ cauchy
 cbatticon
 cbindgen
 ccache
+cccl
 cdparanoia
 cdrdao
 gcdmaster
@@ -1723,6 +1725,7 @@ libdecor
 libdeflate
 libdex
 libdex-docs
+libdicom
 libdiscid
 libdispatch
 libdisplay-info
@@ -2419,6 +2422,7 @@ mopidy
 moreutils
 mosh
 motion
+movit
 mpdecimal
 mpg123
 mplayer
@@ -5939,6 +5943,7 @@ xclip
 xcompmgr
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
+xdelta3
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

@@ -3,8 +3,8 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 accountsservice
 aflplusplus
-alsa-ucm-conf
 alsa-utils
+amule
 ant
 ant-doc
 apache
@@ -14,7 +14,6 @@ appstream-qt
 apr
 aquamarine
 archivetools
-armagetronad
 at-spi2-core
 at-spi2-core-docs
 at
@@ -56,7 +55,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
-cccl
 cef
 certbot-apache
 certbot-dns-cloudflare
@@ -573,7 +571,6 @@ modemmanager-docs
 modest
 mosquitto
 mousepad
-movit
 mozo
 mpd
 muffin

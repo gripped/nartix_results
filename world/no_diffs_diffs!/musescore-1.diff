@@ -1,14 +1,39 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=musescore
 -pkgver=4.7.2
+-pkgrel=2
 +pkgver=4.7.1
- pkgrel=1
++pkgrel=1
  pkgdesc='Create, play and print beautiful sheet music'
  arch=(x86_64)
-@@ -49,11 +49,11 @@
+ url=https://musescore.org/
+@@ -12,7 +12,12 @@
+   flac
+   harfbuzz
+   hicolor-icon-theme
++  libasound.so
++  libfreetype.so
+   libopusenc
++  libsndfile.so
++  libgcc
++  libstdc++
+   mnxdom
+   opus
+   qt6-5compat
+@@ -35,9 +40,6 @@
+   python
+   qt6-tools
+   vulkan-headers
+-  libsndfile
+-  alsa-lib
+-  freetype2
+ )
+ optdepends=('lame: MP3 export')
+ options=(!lto)
+@@ -47,11 +49,11 @@
    fix-qt-qml-null-bindings.patch
    fix-mnxdom-linking.patch
  )
@@ -22,3 +47,45 @@
          '312bb237dcf70c712dfbd1aad06cd673b2e50cca45470f94876ead6e901ac663be4c490051855622a09c682a80c0f8c5dc4cf7e55b292c56a2f389f50d29a0ea'
          '2d943853893f819bcc766406ecce8d9aafa17ba37baea204e1b426fa5548d6b18a768039c715f16b0b369ed83f234f8eebafecbca1af89f56a34d2627df5e3f4'
          'fc7ff90cdc43ddeb37b8a31536bd8b23fff742817bcab5da7e023bc86f8a363f7abaa114cec88d55f29a0b2972d2893a57868c2c7bb3ef71508666e79865d9c9')
+@@ -104,13 +106,6 @@
+ }
+ 
+ package() {
+-  depends+=(
+-    alsa-lib libasound.so
+-    freetype2 libfreetype.so
+-    libsndfile libsndfile.so
+-    libgcc libgcc_s.so
+-    libstdc++ libstdc++.so
+-  )
+   DESTDIR="$pkgdir" cmake --install build
+ 
+   install -vDm755 "$pkgdir/usr/bin/mscore" -t "$pkgdir/usr/lib/musescore"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,8 +1,6 @@
+-alsa-lib
+ cmake
+ doxygen
+ flac
+-freetype2
+ git
+ glibc
+ harfbuzz
+@@ -11,12 +9,9 @@
+ libasound.so
+ libfreetype.so
+ libgcc
+-libgcc_s.so
+ libopusenc
+-libsndfile
+ libsndfile.so
+ libstdc++
+-libstdc++.so
+ mnxdom
+ ninja
+ opus

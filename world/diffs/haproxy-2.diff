@@ -1,13 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=haproxy
 -pkgver=3.4.0
+-pkgrel=2
 +pkgver=3.3.10
- pkgrel=1
++pkgrel=1
  
  
+ pkgdesc='Reliable, high performance TCP/HTTP load balancer'
 @@ -9,8 +9,8 @@
  arch=('x86_64')
  license=('GPL-2.0-or-later')
@@ -44,10 +46,11 @@
  }
  
  package() {
-@@ -78,8 +75,6 @@
+@@ -78,9 +75,6 @@
  
    install -D -m0644 ../haproxy.sysusers "$pkgdir"/usr/lib/sysusers.d/haproxy.conf
    install -D -m0644 ../haproxy.cfg "$pkgdir"/etc/haproxy/haproxy.cfg
+-  install -d -m0755 "$pkgdir"/etc/haproxy/conf.d
 -  install -D -m0644 admin/systemd/haproxy.service \
 -    "$pkgdir"/usr/lib/systemd/system/haproxy.service
    install -D -m0644 admin/syntax-highlight/haproxy.vim \

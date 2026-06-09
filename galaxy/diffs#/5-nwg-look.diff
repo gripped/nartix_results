@@ -4,7 +4,7 @@
  
  pkgname=nwg-look
  pkgver=1.1.1
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="GTK settings editor adapted to work on wlroots-based compositors"
  url="https://github.com/nwg-piotr/nwg-look"
@@ -12,7 +12,7 @@
  license=('MIT')
 -depends=('glibc' 'gtk3' 'at-spi2-core' 'cairo' 'fontconfig' 'freetype2' 'gdk-pixbuf2' 'glib2' 'harfbuzz' 'pango' 'zlib' 'xcur2png')
 -makedepends=('go')
--source=("${url}/${pkgname}-${pkgver}.tar.gz")
+-source=("${url}/archive/v${pkgver}/${pkgname}-${pkgver}.tar.gz")
 +depends=(
 +  'glibc'
 +  'gtk3'
@@ -44,13 +44,13 @@
  build() {
 -	cd "${pkgname}-${pkgver}"
 -	go build \
--	  -trimpath \
--	  -buildmode=pie \
--	  -mod=readonly \
--	  -modcacherw \
--	  -ldflags "-linkmode external -extldflags \"${LDFLAGS}\"" \
--	  -o bin/nwg-look \
--	  .
+-		-trimpath \
+-		-buildmode=pie \
+-		-mod=readonly \
+-		-modcacherw \
+-		-ldflags "-linkmode external -extldflags \"${LDFLAGS}\"" \
+-		-o bin/nwg-look \
+-		.
 +  cd ${pkgname}-${pkgver}
 +  go build \
 +    -trimpath \

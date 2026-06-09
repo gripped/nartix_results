@@ -7,6 +7,7 @@ ada
 adw-gtk-theme
 aircrack-ng
 amdgpu_top
+amule
 anki
 anubis
 arc-gtk-theme
@@ -472,6 +473,7 @@ pavucontrol-qt
 pcmanfm-gtk3
 pcmanfm-qt
 pcmanfm
+pdfjs
 peek
 peg
 pekwm
