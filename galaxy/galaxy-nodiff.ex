@@ -216,6 +216,7 @@ lesspipe
 lf
 libaacs
 libcec
+libcmis
 libdbusmenu-lxqt
 libe-book
 libetpan
@@ -452,6 +453,7 @@ ntpd-rs
 nushell
 nvm
 nwg-hello
+nwg-look
 nyx
 obconf-qt
 obfuscate
@@ -781,6 +783,8 @@ vdirsyncer
 vhba-module-dkms
 vhba-module
 vicious
+vis
+vis-lexers
 vivaldi
 voa
 vpl-gpu-rt

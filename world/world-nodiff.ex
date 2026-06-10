@@ -4864,6 +4864,7 @@ rapidjson
 raptor
 rasqal
 rav1e
+rawtherapee
 razor
 rccl
 rclone

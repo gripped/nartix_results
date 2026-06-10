@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,63 +7,63 @@
+@@ -1,69 +1,69 @@
+ 
+ pkgname=sway-contrib
+ pkgver=1.11
+-pkgrel=2
++pkgrel=1
+ pkgdesc="A collection of user-contributed scripts for sway"
+ arch=('any')
  url="https://github.com/OctopusET/sway-contrib"
  license=('MIT')
  depends=(
@@ -67,7 +74,7 @@
 +  done
  
 -    install -dm755 "$pkgdir/usr/lib/systemd/user/"
--    install sway-session.target -t "$pkgdir/usr/lib/systemd/user/"
+-    install -Dm644 sway-session.target -t "$pkgdir/usr/lib/systemd/user/"
 +  install -dm755 "$pkgdir/usr/lib/systemd/user/"
 +  install sway-session.target -t "$pkgdir/usr/lib/systemd/user/"
  

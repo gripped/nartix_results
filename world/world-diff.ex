@@ -848,7 +848,6 @@ qt6-webengine
 qterminal
 qtermwidget
 rabbitmq
-rawtherapee
 rdma-core
 redis
 redshift

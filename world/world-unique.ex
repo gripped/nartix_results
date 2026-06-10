@@ -482,8 +482,10 @@ prosody-runit
 prosody-s6
 python-configparser
 python-dbus
+python-httpx2
 python-pytz-deprecation-shim
 python-screeninfo
+python-uv-dynamic-versioning
 qemu-guest-agent-dinit
 qemu-guest-agent-openrc
 qemu-guest-agent-runit

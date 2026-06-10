@@ -31,7 +31,6 @@ innernet
 intel-gpu-tools
 labwc
 lemurs
-libcmis
 libetonyek
 libmatemixer
 libodfgen
@@ -59,7 +58,6 @@ nvidia-510xx-utils
 nvidia-525xx-utils
 nvidia-535xx-utils
 nvidia-580xx-utils
-nwg-look
 opensnitch
 osdlyrics
 p8-platform
@@ -83,8 +81,6 @@ transmission-gtk
 transmission-qt
 unoconv
 vice
-vis
-vis-lexers
 wayfire
 waylock
 wayvnc
