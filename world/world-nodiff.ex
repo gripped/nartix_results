@@ -5796,7 +5796,6 @@ libunrar
 unrealircd
 unrtf
 unzip
-upx
 uriparser
 usbredir
 usd

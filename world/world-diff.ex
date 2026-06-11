@@ -955,6 +955,7 @@ unbound
 unoconv
 upower
 uptimed
+upx
 usb_modeswitch
 usbguard
 usbmuxd

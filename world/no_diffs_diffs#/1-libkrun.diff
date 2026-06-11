@@ -1,11 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=libkrun
- pkgver=1.18.1
--pkgrel=1
-+pkgrel=2
- pkgdesc="A dynamic library providing Virtualization-based process isolation capabilities"
- url='https://github.com/containers/libkrun'
+@@ -7,7 +7,7 @@
  arch=('x86_64')
+ license=('Apache-2.0')
+ makedepends=('cargo' 'patchelf' 'clang')
+-depends=('glibc' 'libgcc' 'zstd' 'bzip2' 'libkrunfw' 'libpipewire' 'virglrenderer')
++depends=('glibc' 'gcc-libs' 'libkrunfw' 'pipewire' 'virglrenderer')
+ source=("https://github.com/containers/libkrun/archive/refs/tags/v$pkgver/$pkgname-$pkgver.tar.gz")
+ sha256sums=('483f5579006d59212b9942b9ca39f03c6305940129d99925ecc979b1e6754711')
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,8 @@
+-bzip2
+ cargo
+ clang
++gcc-libs
+ glibc
+-libgcc
+ libkrunfw
+-libpipewire
+ patchelf
++pipewire
+ virglrenderer
+-zstd

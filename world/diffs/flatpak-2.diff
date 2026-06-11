@@ -9,12 +9,11 @@
    wayland
    xdg-dbus-proxy
    xdg-utils
-@@ -77,13 +75,14 @@
+@@ -77,12 +75,13 @@
  
  build() {
    local meson_options=(
 +    -D systemd=disabled
-     -D dbus_config_dir=/usr/share/dbus-1/system.d
      -D selinux_module=disabled
      -D system_bubblewrap=bwrap
      -D system_dbus_proxy=xdg-dbus-proxy
@@ -25,7 +24,7 @@
    meson compile -C build
  }
  
-@@ -114,6 +113,8 @@
+@@ -113,6 +112,8 @@
    install -Dt "$pkgdir/usr/share/flatpak/remotes.d" flathub.flatpakrepo
  
    _pick docs "$pkgdir"/usr/share/{doc,gtk-doc}
