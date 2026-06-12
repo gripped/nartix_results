@@ -750,7 +750,6 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
-python-tensile
 qastools
 qbe
 qbittorrent
@@ -856,7 +855,6 @@ refind-docs
 ristretto
 rnnoise
 rocalution
-rocblas
 rocfft
 rocrand
 rrdtool
@@ -955,7 +953,6 @@ unbound
 unoconv
 upower
 uptimed
-upx
 usb_modeswitch
 usbguard
 usbmuxd

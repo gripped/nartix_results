@@ -3442,6 +3442,7 @@ python-colour
 python-comm
 python-commentjson
 python-commonmark
+python-comrak
 python-configargparse
 python-configobj
 python-configupdater
@@ -4549,6 +4550,7 @@ python-teamcity-messages
 python-tempita
 python-tempora
 python-tenacity
+python-tensile
 python-termcolor
 python-terminado
 python-termstyle
@@ -4905,6 +4907,7 @@ rlwrap
 rng-tools
 robin-map
 roc-toolkit
+rocblas
 rocm-clang-ocl
 rocm-cmake
 rocm-core
@@ -5796,6 +5799,7 @@ libunrar
 unrealircd
 unrtf
 unzip
+upx
 uriparser
 usbredir
 usd

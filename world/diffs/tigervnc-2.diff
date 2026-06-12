@@ -4,12 +4,21 @@
  
  pkgname=tigervnc
  pkgver=1.16.2
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="Suite of VNC servers and clients based on the VNC 4 branch of TightVNC"
  arch=('x86_64')
  url="https://www.tigervnc.org"
-@@ -37,7 +37,7 @@
+@@ -10,6 +10,8 @@
+   'bash'
+   'ffmpeg'
+   'fltk1.3'
++  'gcc-libs'
++  'glibc'
+   'gmp'
+   'gnutls'
+   'hicolor-icon-theme'
+@@ -35,7 +37,7 @@
    'pam'
    'perl'
    'pixman'
@@ -18,7 +27,7 @@
    'xkeyboard-config'
    'xorg-xauth'
    'xorg-xinit'
-@@ -73,21 +73,17 @@
+@@ -71,23 +73,17 @@
    more-xsessions.patch
    remove-selinux.patch
    tigervnc-1.16.0-fltk1.3.patch
@@ -34,6 +43,8 @@
  
  prepare() {
    cd ${pkgname}
+-
+-
    patch -p1 -i ../more-xsessions.patch
    patch -p1 -i ../remove-selinux.patch
 -
@@ -54,7 +65,17 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -13,6 +13,7 @@
+@@ -2,7 +2,9 @@
+ cmake
+ ffmpeg
+ fltk1.3
++gcc-libs
+ git
++glibc
+ gmp
+ gnutls
+ hicolor-icon-theme
+@@ -11,6 +13,7 @@
  libgl
  libjpeg-turbo
  libpipewire
@@ -62,7 +83,7 @@
  libunwind
  libx11
  libxau
-@@ -33,7 +34,6 @@
+@@ -31,7 +34,6 @@
  pam
  perl
  pixman

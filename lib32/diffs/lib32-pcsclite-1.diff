@@ -4,7 +4,7 @@
  
  _pkgname=pcsclite
  pkgname=lib32-$_pkgname
--pkgver=2.5.0
+-pkgver=2.5.1
 -pkgrel=1
 +pkgver=2.4.1
 +pkgrel=1.1
@@ -29,11 +29,17 @@
  )
  provides=(
    'libpcsclite.so'
-@@ -36,7 +34,7 @@
+@@ -31,12 +29,12 @@
+ )
+ validpgpkeys=('F5E11B9FFE911146F41D953D78A1B4DFE8F9C57E') # Ludovic Rousseau <rousseau@debian.org>
+ source=(
+-  "git+https://github.com/LudovicRousseau/PCSC.git?signed#tag=${pkgver}"
++  "git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
+   "program-suffix.patch"
    "systemd-unit-conflicts.diff"
    "0001-Allow-to-run-32-bit-pcscd-on-64-bit-systems.patch"
  )
--sha256sums=('ab0abdbb1ae253b2cb070c039cbe198effaab0d509e0c5ad5b99d3c2f793a48e'
+-sha256sums=('fb396681125b89569e3513e80b11f8636dba144dae6b49d480fe292cbb759b1d'
 +sha256sums=('0347f8dbc250f465dfaf2a9c58779f47fd193fbcf73e6ef64bdc3b47bd069f7a'
              '782db4be00202c5a8ea305bfbf6c8a6da17ccdbf370b3b79bb0c0eea3f4c6bf1'
              '207a2109c954ae75ba31e607f8da587f7053c6fe2f9e3ae17090acfb0c680b36'
