@@ -655,7 +655,6 @@ five-or-more
 flac
 flac-doc
 flake8
-flameshot
 flashrom
 flatbuffers
 python-flatbuffers
@@ -2651,6 +2650,7 @@ orca
 os-prober
 osinfo-db-tools
 osinfo-db
+osm-gps-map
 ospray
 oxygen-icons
 oxygen-icons-svg

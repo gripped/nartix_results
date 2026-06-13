@@ -175,6 +175,7 @@ python-firewall
 firewall-config
 firewall-applet
 firewalld-test
+flameshot
 flatpak
 flatpak-docs
 flite
@@ -637,7 +638,6 @@ openresolv
 opensmtpd
 opensnitch
 openvpn
-osm-gps-map
 ostree
 packagekit
 libpackagekit-glib
