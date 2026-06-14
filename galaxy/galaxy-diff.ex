@@ -35,6 +35,10 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
+libreoffice-fresh
+libreoffice-fresh-sdk
+libreoffice-still
+libreoffice-still-sdk
 libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
@@ -68,6 +72,7 @@ qt5-webengine
 rage
 read-edid
 reflector
+scribus
 sdcv
 signal-desktop
 terminology

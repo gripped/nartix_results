@@ -175,7 +175,6 @@ python-firewall
 firewall-config
 firewall-applet
 firewalld-test
-flameshot
 flatpak
 flatpak-docs
 flite
@@ -298,6 +297,7 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
+inkscape
 intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
@@ -749,6 +749,7 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-scikit-learn
 python-sphinxcontrib-spelling
 qastools
 qbe

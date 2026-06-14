@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -20,7 +20,7 @@
    man-db
    shadow
    sqlite
@@ -9,7 +9,7 @@
  )
  options=(!lto)
  source=(
-@@ -72,6 +72,8 @@
+@@ -85,6 +85,8 @@
    )
  
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
@@ -18,7 +18,7 @@
  }
  
  package_podman-docker() {
-@@ -84,4 +86,6 @@
+@@ -97,4 +99,6 @@
    provides=(docker)
  
    make install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase

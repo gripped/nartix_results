@@ -285,6 +285,8 @@ ungoogled-chromium
 vertex-themes
 vscodium
 vte-legacy
+wasi-compiler-rt21
+waterfox-bin
 waterfox
 wayfire-plugins-extra
 webappcontainer

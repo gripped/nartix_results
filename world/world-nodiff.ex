@@ -655,6 +655,7 @@ five-or-more
 flac
 flac-doc
 flake8
+flameshot
 flashrom
 flatbuffers
 python-flatbuffers
@@ -1137,7 +1138,6 @@ inchi
 incidenceeditor
 indent
 iniparser
-inkscape
 innoextract
 inotify-tools
 intel-gmmlib
@@ -4419,7 +4419,6 @@ python-sarif-om
 python-schema
 python-scikit-build-core
 python-scikit-build
-python-scikit-learn
 python-scipy
 python-scramp
 python-scripttest

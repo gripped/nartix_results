@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,69 +1,69 @@
+@@ -1,66 +1,69 @@
  
  pkgname=sway-contrib
  pkgver=1.11
--pkgrel=2
+-pkgrel=3
 +pkgrel=1
  pkgdesc="A collection of user-contributed scripts for sway"
  arch=('any')
@@ -73,44 +73,42 @@
 +    install -Dm755 "$bin" -t "$pkgdir/usr/bin/"
 +  done
  
--    install -dm755 "$pkgdir/usr/lib/systemd/user/"
--    install -Dm644 sway-session.target -t "$pkgdir/usr/lib/systemd/user/"
-+  install -dm755 "$pkgdir/usr/lib/systemd/user/"
-+  install sway-session.target -t "$pkgdir/usr/lib/systemd/user/"
- 
 -    install -dm755 "$pkgdir/usr/share/doc/$pkgname"
 -    install -Dm644 README.md -t "$pkgdir/usr/share/doc/$pkgname"
 -    install -Dm644 float-window-manager/float-window-managerd-readme.txt -t "$pkgdir/usr/share/doc/$pkgname"
-+  install -dm755 "$pkgdir/usr/share/doc/$pkgname"
-+  install -Dm644 README.md -t "$pkgdir/usr/share/doc/$pkgname"
-+  install -Dm644 float-window-manager/float-window-managerd-readme.txt -t "$pkgdir/usr/share/doc/$pkgname"
++  install -dm755 "$pkgdir/usr/lib/systemd/user/"
++  install sway-session.target -t "$pkgdir/usr/lib/systemd/user/"
  
 -    install -dm755 "$pkgdir/usr/share/man/man1"
 -    scdoc < grimshot/grimshot.1.scd > "$pkgdir/usr/share/man/man1/grimshot.1"
 -    scdoc < grimpicker/grimpicker.1.scd > "$pkgdir/usr/share/man/man1/grimpicker.1"
-+  install -dm755 "$pkgdir/usr/share/man/man1"
-+  scdoc <grimshot/grimshot.1.scd >"$pkgdir/usr/share/man/man1/grimshot.1"
-+  scdoc <grimpicker/grimpicker.1.scd >"$pkgdir/usr/share/man/man1/grimpicker.1"
++  install -dm755 "$pkgdir/usr/share/doc/$pkgname"
++  install -Dm644 README.md -t "$pkgdir/usr/share/doc/$pkgname"
++  install -Dm644 float-window-manager/float-window-managerd-readme.txt -t "$pkgdir/usr/share/doc/$pkgname"
  
 -    install -dm755 "$pkgdir/usr/share/bash-completion/completions/"
 -    install -Dm644 grimpicker/completion.bash "$pkgdir/usr/share/bash-completion/completions/grimpicker"
 -    install -Dm644 grimshot/grimshot-completion.bash "$pkgdir/usr/share/bash-completion/completions/grimshot"
++  install -dm755 "$pkgdir/usr/share/man/man1"
++  scdoc <grimshot/grimshot.1.scd >"$pkgdir/usr/share/man/man1/grimshot.1"
++  scdoc <grimpicker/grimpicker.1.scd >"$pkgdir/usr/share/man/man1/grimpicker.1"
+ 
+-    install -dm755 "$pkgdir/usr/share/zsh/site-functions/"
+-    install -Dm644 grimpicker/completion.zsh "$pkgdir/usr/share/zsh/site-functions/_grimpicker"
 +  install -dm755 "$pkgdir/usr/share/bash-completion/completions/"
 +  install -Dm644 grimpicker/completion.bash "$pkgdir/usr/share/bash-completion/completions/grimpicker"
 +  install -Dm644 grimshot/grimshot-completion.bash "$pkgdir/usr/share/bash-completion/completions/grimshot"
  
--    install -dm755 "$pkgdir/usr/share/zsh/site-functions/"
--    install -Dm644 grimpicker/completion.zsh "$pkgdir/usr/share/zsh/site-functions/_grimpicker"
+-    install -dm755 "$pkgdir/usr/share/fish/vendor_completions.d/"
+-    install -Dm644 grimpicker/completion.fish "$pkgdir/usr/share/fish/vendor_completions.d/grimpicker.fish"
 +  install -dm755 "$pkgdir/usr/share/zsh/site-functions/"
 +  install -Dm644 grimpicker/completion.zsh "$pkgdir/usr/share/zsh/site-functions/_grimpicker"
  
--    install -dm755 "$pkgdir/usr/share/fish/vendor_completions.d/"
--    install -Dm644 grimpicker/completion.fish "$pkgdir/usr/share/fish/vendor_completions.d/grimpicker.fish"
-+  install -dm755 "$pkgdir/usr/share/fish/vendor_completions.d/"
-+  install -Dm644 grimpicker/completion.fish "$pkgdir/usr/share/fish/vendor_completions.d/grimpicker.fish"
- 
 -    install -dm755 "$pkgdir/usr/share/licenses/$pkgname"
 -    install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
++  install -dm755 "$pkgdir/usr/share/fish/vendor_completions.d/"
++  install -Dm644 grimpicker/completion.fish "$pkgdir/usr/share/fish/vendor_completions.d/grimpicker.fish"
++
 +  install -dm755 "$pkgdir/usr/share/licenses/$pkgname"
 +  install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
  }
