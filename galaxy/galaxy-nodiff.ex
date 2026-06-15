@@ -237,7 +237,11 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
+libreoffice-fresh
+libreoffice-fresh-sdk
 libreoffice-still-i18n
+libreoffice-still
+libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
@@ -578,7 +582,6 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
-rio
 riscv64-linux-gnu-gdb
 ristretto
 river-classic

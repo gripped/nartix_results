@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -12,7 +12,7 @@
+ pkgdesc='A cross-platform application and UI framework (Development Tools, QtHelp)'
+ depends=(glibc
+          libstdc++
+-         litehtml0.9
++         litehtml
+          qt6-base
+          zstd)
+ makedepends=(clang
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -3,7 +3,7 @@
+ git
+ glibc
+ libstdc++
+-litehtml0.9
++litehtml
+ llvm
+ ninja
+ qt6-base

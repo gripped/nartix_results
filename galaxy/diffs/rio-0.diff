@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,12 @@
+ 
+ pkgname=rio
+ pkgver=0.4.7
+-pkgrel=3
++pkgrel=1
+ pkgdesc="A hardware-accelerated GPU terminal emulator powered by WebGPU"
+ arch=('x86_64')
+ url="https://github.com/raphamorim/rio"
+ license=('MIT')
++options=('!lto')
+ depends=(
+   'alsa-lib'
+   'fontconfig'
+@@ -26,29 +27,23 @@
+   'glslang'
+   'scdoc'
+ )
+-options=(!lto)
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+ sha512sums=('3bef09a44bf00e0f5ce361d6d5b1d7fe2d694b12f47b121ee378f9fd4c100015833c4681cf962aa7e56db54c9abba8d776a6bccd8c75cd52cb28bb7dd867ea65')
+ 
+ prepare() {
+   cd "${pkgname}-${pkgver}"
+-  cargo fetch --locked --target host-tuple
+-
+-  sed -i "s/com.rioterm.Rio.desktop/rio.desktop/" "misc/com.rioterm.Rio.metainfo.xml"
++  cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ 
+ build() {
+   cd "${pkgname}-${pkgver}"
+-  export CARGO_PROFILE_RELEASE_DEBUG=2
+-  export RUSTONIG_DYNAMIC_LIBONIG=1
+-  cargo build --frozen --release --all-features
++  RUSTONIG_DYNAMIC_LIBONIG=1 cargo build --frozen --release --all-features
+   make -C extra/man
+ }
+ 
+ check() {
+   cd "${pkgname}-${pkgver}"
+-  export RUSTONIG_DYNAMIC_LIBONIG=1
+-  cargo test --frozen --workspace
++  RUSTONIG_DYNAMIC_LIBONIG=1 cargo test --frozen --workspace
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,9 @@
+ prepare() {
+ cd "${pkgname}-${pkgver}"
+-cargo fetch --locked --target host-tuple
+-sed -i "s/com.rioterm.Rio.desktop/rio.desktop/" "misc/com.rioterm.Rio.metainfo.xml"
++cargo fetch --locked --target "$(rustc --print host-tuple)"
+ }
+ build() {
+ cd "${pkgname}-${pkgver}"
+-export CARGO_PROFILE_RELEASE_DEBUG=2
+-export RUSTONIG_DYNAMIC_LIBONIG=1
+-cargo build --frozen --release --all-features
++RUSTONIG_DYNAMIC_LIBONIG=1 cargo build --frozen --release --all-features
+ make -C extra/man
+ }

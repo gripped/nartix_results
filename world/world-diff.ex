@@ -297,7 +297,6 @@ ibus
 libibus
 igsc
 iio-sensor-proxy
-inkscape
 intel-compute-runtime
 intel-opencl-clang
 intel-undervolt
@@ -350,6 +349,7 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
+kmime
 knockd
 knot
 krdp
@@ -420,7 +420,6 @@ libmspub
 libnvme
 libofa
 libprocps
-libqb
 libsidplay
 libsidplayfp
 libsoxr
@@ -441,6 +440,7 @@ light-locker
 lightdm-slick-greeter
 lightdm
 liblightdm-qt5
+lilypond
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
@@ -633,6 +633,8 @@ open-iscsi
 openbox
 opencollada
 opendht
+openmpi
+openmpi-docs
 openrct2
 openresolv
 opensmtpd
@@ -749,8 +751,8 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-scikit-learn
 python-sphinxcontrib-spelling
+python-zodbpickle
 qastools
 qbe
 qbittorrent

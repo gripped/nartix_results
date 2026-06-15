@@ -4,8 +4,8 @@
      --with-mpris-interface
      --with-avahi
      --with-dns_sd
--    --with-systemd
-+    --without-systemd
+-    --with-systemd-startup
++    --without-systemd-startup
      --with-ssl=openssl
      --with-configfiles
      --with-pkg-config
@@ -29,8 +29,8 @@
  --with-mpris-interface
  --with-avahi
  --with-dns_sd
----with-systemd
-+--without-systemd
+---with-systemd-startup
++--without-systemd-startup
  --with-ssl=openssl
  --with-configfiles
  --with-pkg-config

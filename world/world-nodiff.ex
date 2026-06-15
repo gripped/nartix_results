@@ -1138,6 +1138,7 @@ inchi
 incidenceeditor
 indent
 iniparser
+inkscape
 innoextract
 inotify-tools
 intel-gmmlib
@@ -1475,7 +1476,6 @@ kmail
 kmailtransport
 kmbox
 kmenuedit
-kmime
 kmime5
 kmines
 kmix
@@ -1984,6 +1984,7 @@ libpwquality
 libqaccessibilityclient
 libqaccessibilityclient-qt6
 libqalculate
+libqb
 libqmi
 libqmi-docs
 libqrtr-glib
@@ -2175,14 +2176,15 @@ lightdm-gtk-greeter
 lightsoff
 lighttpd
 lilv
-lilv-docs
+lilv-{docs
+lilvtools
 python-lilv
-lilypond
 limine
 limonp
 linux-atm
 liquidctl
 litehtml
+litehtml0.9
 live-media
 lksctp-tools
 lld
@@ -2617,8 +2619,6 @@ openjph
 openjph-doc
 openlibm
 openmp
-openmpi
-openmpi-docs
 openntpd
 openpgl
 openpmix
@@ -3725,6 +3725,8 @@ python-httptools
 python-httpx-aiohttp
 python-httpx-ws
 python-httpx
+python-httpx2
+python-httpcore2
 python-humanfriendly
 python-humanize
 python-hvac
@@ -4419,6 +4421,7 @@ python-sarif-om
 python-schema
 python-scikit-build-core
 python-scikit-build
+python-scikit-learn
 python-scipy
 python-scramp
 python-scripttest
@@ -4633,6 +4636,7 @@ python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
+python-uv-dynamic-versioning
 python-uvloop
 python-validate-email
 python-validate-pyproject
@@ -4707,7 +4711,6 @@ python-zict
 python-zipp
 python-zipstream-ng
 python-zlib-ng
-python-zodbpickle
 python-zope-component
 python-zope-configuration
 python-zope-copy

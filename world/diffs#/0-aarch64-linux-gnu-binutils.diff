@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,30 +1,27 @@
+@@ -1,33 +1,27 @@
  
  _target=aarch64-linux-gnu
  pkgname=$_target-binutils
--pkgver=2.46
--_pkgver="${pkgver}.0"
--pkgrel=2
+-pkgver=2.46.1
+-_pkgver="${pkgver}"
+-pkgrel=1
 +pkgver=2.44
 +pkgrel=3
  pkgdesc='A set of programs to assemble and manipulate binary and object files for the ARM64 target'
@@ -15,14 +15,18 @@
  license=(GPL)
  depends=(zlib libelf)
 -source=(https://ftpmirror.gnu.org/gnu/binutils/binutils-$_pkgver.tar.bz2{,.sig})
--sha1sums=('0a64618bb1d511a9ebe9eba12b54cdd9847b329d'
+-sha1sums=('bf552a22c05c452734a9007f3c833f35961b6f69'
 +source=(https://ftp.gnu.org/gnu/binutils/binutils-$pkgver.tar.bz2{,.sig})
 +sha1sums=('8657069418bb4b198dddca6ff38cd355c2d5a04c'
            'SKIP')
--sha256sums=('0f3152632a2a9ce066f20963e9bb40af7cf85b9b6c409ed892fd0676e84ecd12'
+-sha256sums=('324ed40ada2633a28eaa5d104ca5db165fd3cc3162cc1d48a7b7fa9c932da439'
 +sha256sums=('f66390a661faa117d00fab2e79cf2dc9d097b42cc296bf3f8677d1e7b452dc3a'
              'SKIP')
- validpgpkeys=('3A24BC1E8FB409FA9F14371813FCEF89DD9E3C4F') # Nick Clifton (Chief Binutils Maintainer) <nickc@redhat.com>
+-validpgpkeys=(
+-	'3A24BC1E8FB409FA9F14371813FCEF89DD9E3C4F' # Nick Clifton (Chief Binutils Maintainer) <nickc@redhat.com>
+-	'5EF3A41171BB77E6110ED2D01F3D03348DB1A3E2' # "Sam James <sam@cmpct.info>"
+-)
++validpgpkeys=('3A24BC1E8FB409FA9F14371813FCEF89DD9E3C4F') # Nick Clifton (Chief Binutils Maintainer) <nickc@redhat.com>
  
  prepare() {
 -  cd binutils-$_pkgver
@@ -38,7 +42,7 @@
  
    ./configure --target=$_target \
                --with-sysroot=/usr/$_target \
-@@ -44,13 +41,13 @@
+@@ -47,13 +41,13 @@
  }
  
  check() {
