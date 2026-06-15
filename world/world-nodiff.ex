@@ -595,7 +595,6 @@ evtest
 ex-vi-compat
 exempi
 exfat-utils
-exfatprogs
 exim
 exiv2
 expac
@@ -6066,7 +6065,6 @@ yara
 yarn
 yasm
 yaz
-yazi
 yelp-tools
 yelp-xsl
 yelp

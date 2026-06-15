@@ -68,7 +68,6 @@ qt5-webengine
 rage
 read-edid
 reflector
-rio
 scribus
 sdcv
 signal-desktop

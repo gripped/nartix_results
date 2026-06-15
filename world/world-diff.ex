@@ -158,6 +158,7 @@ eom
 esbuild
 espeakup
 etherwall
+exfatprogs
 exo
 expect
 extra-cmake-modules
@@ -1168,6 +1169,7 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
+yazi
 yubikey-personalization
 zabbix
 zabbix-common

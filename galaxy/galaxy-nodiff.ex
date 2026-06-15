@@ -582,6 +582,7 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
+rio
 riscv64-linux-gnu-gdb
 ristretto
 river-classic
@@ -840,6 +841,7 @@ xfce4-netload-plugin
 xfce4-notes-plugin
 xfce4-panel-profiles
 xfce4-panel
+xfce4-places-plugin
 xfce4-power-manager
 xfce4-pulseaudio-plugin
 xfce4-screenshooter
