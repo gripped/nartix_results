@@ -595,6 +595,7 @@ evtest
 ex-vi-compat
 exempi
 exfat-utils
+exfatprogs
 exim
 exiv2
 expac
@@ -1475,6 +1476,7 @@ kmail
 kmailtransport
 kmbox
 kmenuedit
+kmime
 kmime5
 kmines
 kmix
@@ -2376,7 +2378,6 @@ mesa-utils
 meson-python
 meson
 messagelib
-metalog
 mgard
 micro
 microsoft-gsl
@@ -3893,7 +3894,6 @@ python-markdown
 python-markupsafe
 python-marshmallow
 python-matplotlib-inline
-python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
@@ -4710,6 +4710,7 @@ python-zict
 python-zipp
 python-zipstream-ng
 python-zlib-ng
+python-zodbpickle
 python-zope-component
 python-zope-configuration
 python-zope-copy
@@ -6065,6 +6066,7 @@ yara
 yarn
 yasm
 yaz
+yazi
 yelp-tools
 yelp-xsl
 yelp

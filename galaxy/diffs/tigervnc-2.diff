@@ -9,15 +9,7 @@
    'xkeyboard-config'
    'xorg-xauth'
    'xorg-xinit'
-@@ -83,6 +83,7 @@
- prepare() {
-   cd ${pkgname}
- 
-+  echo >java/cmake/SignJar.cmake
- 
-   patch -p1 -i ../more-xsessions.patch
-   patch -p1 -i ../remove-selinux.patch
-@@ -152,4 +153,6 @@
+@@ -152,4 +152,6 @@
    make DESTDIR="$pkgdir" install
    install -Dm0755 "$srcdir"/Xsession "$pkgdir"/etc/X11/tigervnc/Xsession
  

@@ -158,7 +158,6 @@ eom
 esbuild
 espeakup
 etherwall
-exfatprogs
 exo
 expect
 extra-cmake-modules
@@ -350,7 +349,6 @@ kismet
 kitty
 kitty-terminfo
 kitty-shell-integration
-kmime
 knockd
 knot
 krdp
@@ -562,6 +560,7 @@ vulkan-virtio
 vulkan-mesa-implicit-layers
 vulkan-mesa-layers
 mesa-docs
+metalog
 mgba
 libmgba
 mgba-sdl
@@ -746,6 +745,7 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
+python-matplotlib
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -753,7 +753,6 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
-python-zodbpickle
 qastools
 qbe
 qbittorrent
@@ -1169,7 +1168,6 @@ xorg-xwayland
 xreader
 xscreensaver
 xxhash
-yazi
 yubikey-personalization
 zabbix
 zabbix-common

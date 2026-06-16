@@ -144,6 +144,7 @@ fcitx5-unikey
 firefox-i18n
 firefox-noscript
 fluxbox
+foliate
 font-awesome
 woff2-font-awesome
 otf-font-awesome

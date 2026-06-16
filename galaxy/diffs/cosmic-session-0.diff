@@ -1,13 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
- 
- pkgname=cosmic-session
--pkgver=1.0.16
-+pkgver=1.0.15
- pkgrel=1
- epoch=1
- pkgdesc='Session manager for the COSMIC desktop environment'
 @@ -55,13 +55,16 @@
  source=(
    git+https://github.com/pop-os/cosmic-session.git#tag=epoch-${pkgver}
