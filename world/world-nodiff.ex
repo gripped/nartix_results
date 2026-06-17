@@ -3,6 +3,8 @@
 7zip
 a2ps
 aalib
+aarch64-linux-gnu-binutils
+aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
 aardvark-dns
@@ -2378,6 +2380,7 @@ mesa-utils
 meson-python
 meson
 messagelib
+metalog
 mgard
 micro
 microsoft-gsl
@@ -3892,8 +3895,8 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
-python-marshmallow
 python-matplotlib-inline
+python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
@@ -4853,7 +4856,6 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
-qxlsx
 r
 r8168
 radeontop

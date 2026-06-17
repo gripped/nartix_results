@@ -65,6 +65,7 @@ python
 python-tests
 readline
 rpcbind
+shadow
 thin-provisioning-tools
 tpm2-tss
 traceroute

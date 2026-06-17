@@ -9,7 +9,7 @@
    zlib
  )
  optdepends=('bash-completion: Bash completion support')
-@@ -79,6 +79,7 @@
+@@ -58,6 +58,7 @@
  }
  
  build() {
@@ -17,7 +17,7 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -117,7 +118,7 @@
+@@ -96,7 +97,7 @@
    optdepends=('lttng-ust2.12: CoreCLR tracing')
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -26,7 +26,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime-9.0
  }
  
-@@ -126,7 +127,7 @@
+@@ -105,7 +106,7 @@
    depends=(dotnet-runtime-9.0)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -35,7 +35,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime-9.0
  }
  
-@@ -142,7 +143,7 @@
+@@ -121,7 +122,7 @@
    optdepends=('aspnet-targeting-pack: Build ASP.NET Core applications')
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -44,7 +44,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk-9.0
  }
  
-@@ -151,7 +152,7 @@
+@@ -130,7 +131,7 @@
    depends=(netstandard-targeting-pack)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -53,7 +53,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack-9.0
  }
  
-@@ -160,7 +161,7 @@
+@@ -139,7 +140,7 @@
    depends=(dotnet-targeting-pack-9.0)
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}

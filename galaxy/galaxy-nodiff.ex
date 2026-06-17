@@ -770,6 +770,7 @@ ttf-input-nerd
 ttf-jetbrains-mono
 ttf-sarasa-gothic
 tumbler
+typst
 ublock-origin
 firefox-ublock-origin
 thunderbird-ublock-origin

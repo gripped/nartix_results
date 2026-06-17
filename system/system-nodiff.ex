@@ -179,7 +179,6 @@ run-parts
 s-nail
 sdparm
 sed
-shadow
 sqlite
 sqlite-tcl
 sqlite-analyzer

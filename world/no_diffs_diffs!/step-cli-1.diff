@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=step-cli
--pkgver=0.30.4
+-pkgver=0.30.6
 +pkgver=0.28.7
  pkgrel=1
  pkgdesc="A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc."
@@ -12,7 +12,7 @@
  makedepends=(go)
  optdepends=("step-ca: setup CA/SSO/ACME server")
  source=($pkgname-$pkgver.tar.gz::https://github.com/smallstep/cli/archive/refs/tags/v${pkgver}.tar.gz)
--sha512sums=('9ffd427f6eb5bcafa90453f03452a1fc428c9a44c8093752c653070643fcf95cca8b1dd0f00dbe5fc176726b468942c96fa22122e5348996a1b540814c8388f8')
+-sha512sums=('5c9ea5dbf65978c747b90c63bf82f48ae15285b639f4d5cdda2d7dad8af98d820f67d6ec6e0c87d209faf732a1f1a88e1f5e01dd3c8b760ecace7c41264f29cc')
 +sha512sums=('1b235afa6f33d86157d8f02e1b265a884e89a680d4e52952dfa57a431d42a845dad4b198a43df48fbf2f1d54e478dd130779b438ccec5a5802b6f67036ef81c3')
  
  prepare() {

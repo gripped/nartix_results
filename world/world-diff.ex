@@ -1,6 +1,4 @@
 a52dec
-aarch64-linux-gnu-binutils
-aarch64-linux-gnu-gcc
 accountsservice
 aflplusplus
 alsa-utils
@@ -560,7 +558,6 @@ vulkan-virtio
 vulkan-mesa-implicit-layers
 vulkan-mesa-layers
 mesa-docs
-metalog
 mgba
 libmgba
 mgba-sdl
@@ -745,7 +742,7 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
-python-matplotlib
+python-marshmallow
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -849,6 +846,7 @@ qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
+qxlsx
 rabbitmq
 rdma-core
 redis

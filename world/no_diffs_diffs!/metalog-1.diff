@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -13,9 +13,8 @@
+ )
+ provides=('logger')
+ backup=('etc/metalog.conf')
+-source=("https://github.com/hvisage/metalog/archive/refs/tags/$pkgver.tar.gz" 'metalog.service')
+-sha256sums=('74758d711cf264aa8eb78caf4887998cb7bea0876c34d8ec19bd59fb8991349f'
+-            'd6e51d73683d2d460f9b9cf253f85118a6c63266d0d3a161100f80f148f4c430')
++source=("https://github.com/hvisage/metalog/archive/refs/tags/$pkgver.tar.gz")
++sha256sums=('74758d711cf264aa8eb78caf4887998cb7bea0876c34d8ec19bd59fb8991349f')
+ 
+ build() {
+   cd $pkgname-${pkgver}
+@@ -28,5 +27,4 @@
+   cd $pkgname-${pkgver}
+   make DESTDIR="$pkgdir" install
+   install -D -m644 metalog.conf "$pkgdir/etc/metalog.conf"
+-  install -Dm644 "${srcdir}"/metalog.service "${pkgdir}"/usr/lib/systemd/system/metalog.service
+ }
