@@ -792,6 +792,7 @@ vpl-gpu-rt
 warpinator
 waylandpp
 waypipe
+wayvnc
 wcm
 wdisplays
 wev

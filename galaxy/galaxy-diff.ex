@@ -84,7 +84,6 @@ unoconv
 vice
 wayfire
 waylock
-wayvnc
 wezterm
 wf-config
 wireshark

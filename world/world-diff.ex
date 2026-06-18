@@ -141,7 +141,6 @@ drkonqi
 dtc
 dunst
 earlyoom
-eclipse-ecj
 element.io
 element-web
 element-desktop
@@ -387,7 +386,6 @@ libepoxy-docs
 libexttextcat
 libfido2
 libfprint
-libfreehand
 libgsystemservice
 libgtop
 libgudev
@@ -651,6 +649,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-dbi
 pgbouncer
 phodav
 php-legacy
@@ -742,7 +741,6 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
-python-marshmallow
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -846,7 +844,6 @@ qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
-qxlsx
 rabbitmq
 rdma-core
 redis

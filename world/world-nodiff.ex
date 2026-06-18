@@ -512,6 +512,7 @@ dvisvgm
 dzen2
 easytag
 ebook-tools
+eclipse-ecj
 ecryptfs-utils
 ed
 editline
@@ -1642,6 +1643,7 @@ leafpad
 leatherman
 lensfun
 leptonica
+lesspipe
 level-zero
 level-zero-headers
 level-zero-loader
@@ -1750,6 +1752,7 @@ libesmtp
 libetebase
 libetonyek
 libetonyek-doc
+libetpan
 libev
 libevdev
 libewf
@@ -1768,6 +1771,7 @@ libfm-extra
 libfm-gtk3
 libfontenc
 libfreeaptx
+libfreehand
 libfreexl
 libftdi
 libfyaml
@@ -2623,6 +2627,7 @@ openjph-doc
 openlibm
 openmp
 openntpd
+openpace
 openpgl
 openpmix
 openpmix-docs
@@ -2768,7 +2773,6 @@ perl-datetime-locale
 perl-datetime-timezone
 perl-datetime
 perl-dbd-mysql
-perl-dbi
 perl-devel-checkcompiler
 perl-devel-checklib
 perl-devel-cycle
@@ -3895,6 +3899,7 @@ python-manuel
 python-markdown-it-py
 python-markdown
 python-markupsafe
+python-marshmallow
 python-matplotlib-inline
 python-matplotlib
 python-matrix-common
@@ -4856,6 +4861,7 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
+qxlsx
 r
 r8168
 radeontop

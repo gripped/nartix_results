@@ -1,18 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,9 +6,9 @@
-          'virtualbox-guest-utils-nox'
-          'virtualbox-host-dkms'
-          'virtualbox-sdk')
--pkgver=7.2.10
-+pkgver=7.2.8
- _tarver=${pkgver}
--pkgrel=1
-+pkgrel=2
- arch=('x86_64')
- url='https://virtualbox.org/'
- license=('GPL-3.0-only AND (GPL-3.0-only OR CDDL-1.0)')
-@@ -57,9 +57,6 @@
+@@ -56,9 +56,6 @@
          '60-vboxdrv.rules'
          '60-vboxguest.rules'
          'LocalConfig.kmk'
@@ -20,21 +8,9 @@
 -        'vboxservice-nox.service'
 -        'vboxweb.service'
          'vboxreload'
-         '001-disable-update.patch'
-         '004-drop-Wno-format.patch'
-@@ -68,8 +65,9 @@
-         '012-vbglR3GuestCtrlDetectPeekGetCancelSupport.patch'
-         '013-support-building-from-dkms.patch'
-         '018-upate-xclient-script.patch'
--        '020-python-3-12.patch')
--sha256sums=('203a02e3c33ed02fdd75211a58bc9e77c9a8042ad4fa91ddc2914afbd2d67125'
-+        '020-python-3-12.patch'
-+        '021-disable-CET-on-kallsyms_lookup_name.patch')
-+sha256sums=('0642ed4a12b7204cd30c0abbc2c10c1cc7ad55ce1756a01e86a16d4b6b066592'
-             'f753501352054576c510aa81e83f4935079ea620e601057784b02b4d4d1eeb04'
-             '07fe5c8b313cd7f01505eb9721357269a288ccd0c04e6467afb954038d6f46df'
-             '2101ebb58233bbfadf3aa74381f22f7e7e508559d2b46387114bc2d8e308554c'
-@@ -77,9 +75,6 @@
+         '0001-disable-update.patch'
+         '0004-drop-Wno-format.patch'
+@@ -75,9 +72,6 @@
              'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
              '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
              '942743b5ef38eecd8ebcb8682c2c65e1be377b4af83fa54d28cd71385f26dc5a'
@@ -44,17 +20,7 @@
              '4001b5927348fe669a541e80526d4f9ea91b883805f102f7d571edbb482a9b9d'
              '483a043ddfe32c4c5001a8de0a94a0ea884f34d3dbd817b492b9c97fba3ab5e0'
              'eea2671ca4be1d06d1c8e6903ba4bad90581da9fbeea218023409de298803d58'
-@@ -88,7 +83,8 @@
-             '8c64b3617e597390dd25cf85c9afac0ebbe369d620349d7f5c8056d834acb6c6'
-             '00f68b86d32a1fada900c2da8dad2ab4215106cd58004f049bded99727cda2ff'
-             '2540381de895fabbcc68d820c1f72ba644ef566ff5dab0f60be055c7b45cc06f'
--            'ddb2092a5a000aa6ef854796f39dcdf86e72c06d53b24bac3835350571182df6')
-+            'ddb2092a5a000aa6ef854796f39dcdf86e72c06d53b24bac3835350571182df6'
-+            '6d038c245b216ac4ffbfe08998c75350d833c1bd4bda4ccdb685a157e6ce29c2')
- 
- prepare() {
-     cd "VirtualBox-${pkgver}"
-@@ -215,7 +211,6 @@
+@@ -213,7 +207,6 @@
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
  
      install -D -m0644 60-vboxdrv.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxdrv.rules"
@@ -62,7 +28,7 @@
      install -D -m0644 virtualbox.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox.conf"
  
      install -D -m0755 vboxreload "${pkgdir}/usr/bin"
-@@ -273,7 +268,6 @@
+@@ -269,7 +262,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
@@ -70,7 +36,7 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 VirtualBox-${pkgver}/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
-@@ -296,7 +290,6 @@
+@@ -292,7 +284,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
      install -D -m0644 60-vboxguest.rules "${pkgdir}/usr/lib/udev/rules.d/60-vboxguest.rules"
