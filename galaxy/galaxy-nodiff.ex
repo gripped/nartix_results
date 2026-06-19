@@ -201,7 +201,6 @@ just
 kanshi
 kernel-headers-musl
 keyd
-khard
 kodi
 kodi-gles
 kodi-eventclients
@@ -791,6 +790,7 @@ voa
 vpl-gpu-rt
 warpinator
 waylandpp
+waylock
 waypipe
 wayvnc
 wcm

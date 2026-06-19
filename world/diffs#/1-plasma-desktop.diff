@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -67,7 +67,7 @@
+@@ -66,7 +66,7 @@
           sdl2
           solid
           sonnet
@@ -9,7 +9,7 @@
           systemsettings
           wayland
           xcb-util-keysyms
-@@ -110,4 +110,6 @@
+@@ -109,4 +109,6 @@
  
  package() {
    DESTDIR="$pkgdir" cmake --install build
@@ -22,7 +22,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -41,6 +41,7 @@
+@@ -39,6 +39,7 @@
  kwindowsystem
  kxmlgui
  libcanberra
@@ -30,7 +30,7 @@
  libibus
  libksysguard
  libplasma
-@@ -65,7 +66,6 @@
+@@ -64,7 +65,6 @@
  sdl2
  solid
  sonnet

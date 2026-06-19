@@ -1,0 +1,29 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -29,7 +29,7 @@
+          qt6-base
+          qt6-declarative
+          solid
+-         systemd-libs)
++         libudev)
+ makedepends=(extra-cmake-modules
+              qt6-tools)
+ groups=(plasma)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -16,10 +16,10 @@
+ libnl
+ libpcap
+ libstdc++
++libudev
+ lm_sensors
+ qt6-5compat
+ qt6-base
+ qt6-declarative
+ qt6-tools
+ solid
+-systemd-libs

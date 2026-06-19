@@ -176,6 +176,8 @@ flatpak
 flatpak-docs
 flite
 fluidsynth
+fmt
+fmt-docs
 font-manager
 fprintd
 freerdp
@@ -287,6 +289,7 @@ hipcub
 hipfft
 hipsolver
 hipsparse
+httpbin
 hwloc
 hyprland
 i2pd
@@ -303,6 +306,7 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+jaq
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -340,6 +344,7 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
+kdeplasma-addons
 kdoctools5
 kinfocenter
 kismet
@@ -403,6 +408,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libksysguard
 libldm
 liblqr
 libmatekbd
@@ -581,6 +587,7 @@ mutter-devkit
 mutter-docs
 mutter45
 mutter46
+nanobind
 ndctl
 ndisc6
 nemo-extensions
@@ -844,6 +851,7 @@ qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
+qxlsx
 rabbitmq
 rdma-core
 redis
@@ -860,6 +868,8 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-protocol-http
+ruby-protocol-http1
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen

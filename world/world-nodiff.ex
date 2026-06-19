@@ -669,8 +669,6 @@ fltk
 fltk-docs
 fltk1.3
 fluxbox
-fmt
-fmt-docs
 folks
 font-awesome
 woff2-font-awesome
@@ -1069,7 +1067,6 @@ hunspell-he
 htmlq
 htop
 http-parser
-httpbin
 hub
 hugin
 hunspell-de
@@ -1191,7 +1188,6 @@ iucode-tool
 iverilog
 j4-dmenu-desktop
 jami-qt
-jaq
 jasper
 jasper-doc
 java-avalon-framework
@@ -1358,7 +1354,6 @@ kdenetwork-filesharing
 kdenlive
 kdepim-addons
 kdepim-runtime
-kdeplasma-addons
 kdesdk-kio
 kdesdk-thumbnailers
 kdesignerplugin
@@ -1864,7 +1859,6 @@ libksane
 libkscreen
 libkscreen5
 libksieve
-libksysguard
 libktorrent
 liblangtag
 liblas
@@ -2464,7 +2458,6 @@ mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
-nanobind
 nanomsg
 nanosvg
 nasm
@@ -4643,6 +4636,7 @@ python-uritemplate
 python-urllib3
 python-urwid
 python-userpath
+python-uuid6
 python-uv-dynamic-versioning
 python-uvloop
 python-validate-email
@@ -4861,7 +4855,6 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
-qxlsx
 r
 r8168
 radeontop
@@ -5179,8 +5172,6 @@ ruby-power_assert
 ruby-prime
 ruby-process-metrics
 ruby-protocol-hpack
-ruby-protocol-http
-ruby-protocol-http1
 ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url

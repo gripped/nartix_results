@@ -1,0 +1,30 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -45,7 +45,7 @@
+          qt6-declarative
+          qt6-quick3d
+          sonnet
+-         systemd-libs)
++         libudev)
+ makedepends=(corrosion
+              extra-cmake-modules
+              networkmanager-qt
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -32,6 +32,7 @@
+ libgcc
+ libplasma
+ libstdc++
++libudev
+ networkmanager-qt
+ plasma-workspace
+ qt6-5compat
+@@ -40,4 +41,3 @@
+ qt6-quick3d
+ qt6-webengine
+ sonnet
+-systemd-libs

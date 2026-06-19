@@ -9,7 +9,7 @@
    zlib
  )
  optdepends=('bash-completion: Bash completion support')
-@@ -83,6 +83,7 @@
+@@ -58,6 +58,7 @@
  }
  
  build() {
@@ -17,7 +17,7 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -115,8 +116,8 @@
+@@ -90,8 +91,8 @@
    optdepends=('bash-completion: Bash completion support')
  
    install -dm 755 "${pkgdir}"/usr/{bin,lib,share/{dotnet,licenses/dotnet-host}}
@@ -28,7 +28,7 @@
    ln -s /usr/share/dotnet/dotnet "${pkgdir}"/usr/bin/dotnet
    ln -s /usr/share/dotnet/host/fxr/${pkgver%.sdk*}/libhostfxr.so "${pkgdir}"/usr/lib/libhostfxr.so
    install -Dm 644 dotnet/src/sdk/scripts/register-completions.bash "${pkgdir}"/usr/share/bash-completion/completions/dotnet
-@@ -140,7 +141,7 @@
+@@ -115,7 +116,7 @@
    conflicts=(dotnet-runtime-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -37,7 +37,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime
  }
  
-@@ -151,7 +152,7 @@
+@@ -126,7 +127,7 @@
    conflicts=(aspnet-runtime-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -46,7 +46,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime
  }
  
-@@ -168,7 +169,7 @@
+@@ -143,7 +144,7 @@
    conflicts=(dotnet-sdk-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -55,7 +55,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk
  }
  
-@@ -178,7 +179,7 @@
+@@ -153,7 +154,7 @@
    conflicts=(dotnet-targeting-pack-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -64,7 +64,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack
  }
  
-@@ -189,7 +190,7 @@
+@@ -164,7 +165,7 @@
    conflicts=(aspnet-targeting-pack-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}

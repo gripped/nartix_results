@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=plasma-meta
+-pkgver=6.6
++pkgver=6.7
+ pkgrel=2
+ pkgdesc='Meta package to install KDE Plasma'
+ arch=(any)
 @@ -11,7 +11,6 @@
           breeze
           breeze-gtk
@@ -8,7 +16,15 @@
           flatpak-kcm
           kactivitymanagerd
           kde-cli-tools
-@@ -48,7 +47,6 @@
+@@ -22,6 +21,7 @@
+          kinfocenter
+          kmenuedit
+          knighttime
++         konsole
+          kpipewire
+          krdp
+          kscreen
+@@ -48,7 +48,6 @@
           plasma-firewall
           plasma-integration
           plasma-keyboard
@@ -16,15 +32,7 @@
           plasma-nm
           plasma-pa
           plasma-systemmonitor
-@@ -59,6 +57,7 @@
-          polkit-kde-agent
-          powerdevil
-          print-manager
-+         sddm-kcm
-          spectacle
-          systemsettings
-          xdg-desktop-portal-kde
-@@ -67,9 +66,9 @@
+@@ -67,9 +66,10 @@
              'breeze-plymouth: Breeze theme for Plymouth'
              'kgamma: Adjust gamma settings on X'
              'kwin-x11: X11 window manager'
@@ -34,6 +42,7 @@
              'plasma-sdk: Development tools'
 +            'plasma-workspace-wallpapers: Additional wallpapers'
              'sddm-kcm: SDDM configuration module'
++            'union: Next generation QtQuick/QtWidgets style engine'
              'wacomtablet: Drawing tablet settings on X')
 
 
@@ -49,7 +58,15 @@
  flatpak-kcm
  kactivitymanagerd
  kde-cli-tools
-@@ -40,7 +39,6 @@
+@@ -14,6 +13,7 @@
+ kinfocenter
+ kmenuedit
+ knighttime
++konsole
+ kpipewire
+ krdp
+ kscreen
+@@ -40,7 +40,6 @@
  plasma-firewall
  plasma-integration
  plasma-keyboard
@@ -57,11 +74,3 @@
  plasma-nm
  plasma-pa
  plasma-systemmonitor
-@@ -51,6 +49,7 @@
- polkit-kde-agent
- powerdevil
- print-manager
-+sddm-kcm
- spectacle
- systemsettings
- xdg-desktop-portal-kde

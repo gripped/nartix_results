@@ -29,6 +29,7 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
+khard
 labwc
 lemurs
 libetonyek
@@ -83,7 +84,6 @@ transmission-qt
 unoconv
 vice
 wayfire
-waylock
 wezterm
 wf-config
 wireshark

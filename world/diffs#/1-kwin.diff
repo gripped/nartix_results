@@ -1,15 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -63,7 +63,7 @@
+@@ -2,7 +2,7 @@
+ pkgname=kwin
+ pkgver=6.7.0
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+-pkgrel=1
++pkgrel=2
+ pkgdesc='An easy to use, but flexible, Wayland compositor'
+ arch=(x86_64)
+ url='https://kde.org/plasma-desktop/'
+@@ -64,7 +64,7 @@
           qt6-declarative
           qt6-svg
           qt6-tools
 -         systemd-libs
 +         libelogind
+          vulkan-icd-loader
           wayland
           xcb-util-keysyms
-          xcb-util-wm)
-@@ -102,4 +102,6 @@
+@@ -98,4 +98,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
    setcap CAP_SYS_NICE=+ep "$pkgdir"/usr/bin/kwin_wayland
@@ -22,19 +31,19 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -39,6 +39,7 @@
+@@ -38,6 +38,7 @@
  libdisplay-info
  libdrm
  libei
 +libelogind
  libepoxy
  libevdev
- libinput
-@@ -59,7 +60,6 @@
+ libgcc
+@@ -60,7 +61,6 @@
  qt6-declarative
  qt6-svg
  qt6-tools
 -systemd-libs
+ vulkan-headers
+ vulkan-icd-loader
  wayland
- wayland-protocols
- xcb-util-keysyms
