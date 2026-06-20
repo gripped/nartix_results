@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -21,7 +21,7 @@
+ )
+ pkgver=26.1.3
+ _pkgver=${pkgver/[a-z]/-&}
+-pkgrel=2
++pkgrel=1
+ epoch=1
+ pkgdesc="Open-source OpenGL drivers"
+ url="https://www.mesa3d.org/"
 @@ -53,7 +53,6 @@
    rust
    spirv-llvm-translator
@@ -8,7 +17,32 @@
    vulkan-icd-loader
    wayland
    xcb-util-keysyms
-@@ -248,7 +247,7 @@
+@@ -86,8 +85,6 @@
+ )
+ source=(
+   "https://archive.mesa3d.org/mesa-$_pkgver.tar.xz"{,.sig}
+-
+-  0001-radeonsi-mm-Return-error-when-decoding-H264-P-B-fram.patch
+ )
+ validpgpkeys=(
+   946D09B5E4C9845E63075FF1D961C596A7203456 # Andres Gomez <tanty@igalia.com>
+@@ -145,7 +142,6 @@
+ 
+ b2sums=('faccf9aeb76b0920c1746cf911e9d4de2d0b1a41eb1efe5f74a3f5957700e098acf8ef379149a8f844cc39c0e49503223cda7a2a164bb382e8b65480c0626921'
+         'SKIP'
+-        '994e5bfc4f14b0dd260ed67ba42e0ba5361adbd0e79ec8fc170a0455c25f2f783613b5a6cf46af19009b13ff412bd3084f0d0f27e6dbd9646f149cad15bfd8d4'
+         '431439d31632d177aeb15f910b4f546efa76d54fc74fc8e140399dc5e54eca33fd606f11dbfb48fa83067c8474ee512e62751895d5948367b65ab08b984284e5'
+         'a6d47c903be6094423d89b8ec3ca899d0a84df6dbd6e76632bb6c9b9f40ad9c216f8fa400310753d392f85072756b43ac3892e0a2c4d55f87ab6463002554823'
+         '9a73962e1e38b84131ab2350b69a1f5d611c549533eec73e898c394a9b9442f357bb5d5f59e1be12270dd29bdf237dc2d21786c0c2210736e224ef5d48300dcf'
+@@ -178,7 +174,6 @@
+ 
+ sha256sums=('7725004e724b34c6d4fbaf5c48fc6c6223aa9f2741d6d7782c699b049356fc45'
+             'SKIP'
+-            '96784a0cb631e60200d9dcb7a41f87cf4f7f6d2c27a3889cff94c39136903d2f'
+             '67914ab451f3bfd2e69e5e9d2ef3858484e7074d63f204fd166ec391b54de21d'
+             'ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9'
+             '7f9f832470494906d1fca5329f8ab5791cc60beb230c74815dff541cbd2b5ca0'
+@@ -252,7 +247,7 @@
  
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -17,7 +51,7 @@
    meson compile -C build
  }
  
-@@ -410,7 +409,6 @@
+@@ -414,7 +409,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -25,7 +59,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -439,7 +437,6 @@
+@@ -443,7 +437,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -33,7 +67,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -468,7 +465,6 @@
+@@ -472,7 +465,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -41,7 +75,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -497,7 +493,6 @@
+@@ -501,7 +493,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -49,7 +83,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -525,7 +520,6 @@
+@@ -529,7 +520,6 @@
      libx11
      libxcb
      libxshmfence
@@ -57,7 +91,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -552,7 +546,6 @@
+@@ -556,7 +546,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -65,7 +99,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -581,7 +574,6 @@
+@@ -585,7 +574,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -73,7 +107,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -610,7 +602,6 @@
+@@ -614,7 +602,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -81,7 +115,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -639,7 +630,6 @@
+@@ -643,7 +630,6 @@
      libxcb
      libxshmfence
      spirv-tools
@@ -89,7 +123,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -670,7 +660,6 @@
+@@ -674,7 +660,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -97,7 +131,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -701,7 +690,6 @@
+@@ -705,7 +690,6 @@
      libxshmfence
      llvm-libs
      spirv-tools
@@ -105,7 +139,7 @@
      vulkan-icd-loader
      vulkan-mesa-implicit-layers
      wayland
-@@ -730,7 +718,6 @@
+@@ -734,7 +718,6 @@
      libx11
      libxcb
      libxshmfence

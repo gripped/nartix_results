@@ -289,7 +289,6 @@ hipcub
 hipfft
 hipsolver
 hipsparse
-httpbin
 hwloc
 hyprland
 i2pd
@@ -306,7 +305,6 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
-jaq
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -383,6 +381,7 @@ python-libcamera
 libcdio-paranoia
 libcmis
 libdaemon
+libdrm
 libe-book
 libei
 libei-docs
@@ -749,12 +748,15 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-ndg-httpsclient
+python-praw
+python-prawcore
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-zeep
 qastools
 qbe
 qbittorrent
@@ -851,13 +853,13 @@ qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
-qxlsx
 rabbitmq
 rdma-core
 redis
 redshift
 refind
 refind-docs
+resvg
 ristretto
 rnnoise
 rocalution
@@ -868,7 +870,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-protocol-http
 ruby-protocol-http1
 ruby-rbtree
 ruby-sys-filesystem

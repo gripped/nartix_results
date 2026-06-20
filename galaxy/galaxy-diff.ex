@@ -36,7 +36,6 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
-libretro-dolphin
 libretro-mupen64plus-next
 libretro-pcsx2
 libusbsio
@@ -53,6 +52,7 @@ mimalloc
 mpd
 nbd
 neofetch
+nut
 nvidia-340xx-utils
 nvidia-390xx-utils
 nvidia-510xx-utils
@@ -69,6 +69,7 @@ qt5-webengine
 rage
 read-edid
 reflector
+resvg
 scribus
 sdcv
 signal-desktop
@@ -81,6 +82,9 @@ transmission
 transmission-cli
 transmission-gtk
 transmission-qt
+tuned
+"$pkgbase
+"$pkgbase
 unoconv
 vice
 wayfire

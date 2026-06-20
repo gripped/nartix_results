@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=resvg
+-pkgver=0.47.0
+-pkgrel=4
++pkgver=0.46.0
++pkgrel=1
+ pkgdesc='SVG rendering library and CLI'
+ arch=('x86_64')
+ url="https://github.com/linebender/resvg"
+@@ -11,9 +11,9 @@
+ 	'qt5-base: For the Qt backend'
+ 	'cairo: For the cairo backend'
+ )
+-makedepends=(cargo cargo-c clang qt5-base qt5-tools cairo pango)
++makedepends=(cargo clang qt5-base qt5-tools cairo pango)
+ source=("$url/archive/v$pkgver/$pkgname-v$pkgver.tar.gz")
+-sha256sums=('7869119fd822983b0a0bc2469bc94d59e7908fc12165fa67a105a4fa25087f9a')
++sha256sums=('81a82a8de33da0fcf13fd18532d653bbd0b50b146d82c319dd0ce7294562c7c5')
+ 
+ prepare() {
+ 	cd "$pkgname-$pkgver"
+@@ -32,7 +32,6 @@
+ 		make
+ 	)
+ 
+-	cargo cbuild --frozen --release --all-features -p resvg-capi
+ 	cargo doc --release --no-deps -p resvg-capi
+ }
+ 
+@@ -46,7 +45,8 @@
+ 	cd "$pkgname-$pkgver"
+ 
+ 	install -Dm755 -t "$pkgdir/usr/bin/" target/release/{resvg,usvg} tools/viewsvg/viewsvg
+-	cargo cinstall --frozen --release --all-features -p resvg-capi --destdir="$pkgdir" --prefix=/usr
++	install -Dm755 -t "$pkgdir/usr/lib/" target/release/libresvg.so
++	install -Dm644 -t "$pkgdir/usr/include/" crates/c-api/*.h
+ 	install -d "$pkgdir/usr/share/doc/resvg"
+ 	cp -r target/doc/* "$pkgdir/usr/share/doc/resvg"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ cairo
+ cargo
+-cargo-c
+ clang
+ gdk-pixbuf2
+ pango
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,6 +11,5 @@
+ qmake PREFIX="$pkgdir/usr"
+ make
+ )
+-cargo cbuild --frozen --release --all-features -p resvg-capi
+ cargo doc --release --no-deps -p resvg-capi
+ }

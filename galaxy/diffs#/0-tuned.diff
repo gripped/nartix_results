@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,11 +10,15 @@
+ depends=('ethtool' 'gawk' 'hdparm' 'polkit' 'perf' 'python-configobj'
+          'python-dbus' 'python-gobject' 'python-linux-procfs' 'python-pyudev')
+ makedepends=('desktop-file-utils')
+-source=("https://github.com/redhat-performance/${pkgbase}/archive/v${pkgver}/${pkgbase}-${pkgver}.tar.gz")
+-sha512sums=('7471d073879a688da66e72c4f5c562d1a732d6bfb562d8c033874a8edbad2bab3cf3c7dc387270bf99ae6b1b35ffc451173122e32023116709567e529e09dc52')
++source=("https://github.com/redhat-performance/${pkgbase}/archive/v${pkgver}/${pkgbase}-${pkgver}.tar.gz"
++	'gui-no-init-system.patch')
++sha512sums=('7471d073879a688da66e72c4f5c562d1a732d6bfb562d8c033874a8edbad2bab3cf3c7dc387270bf99ae6b1b35ffc451173122e32023116709567e529e09dc52'
++            '99305ef167894decb48a8cae54e2eef7e7b809449c51fd3c48bd31bc95f1dc7540eb33bf1c25693761fc13f57e20c9dda7dc305f4d9a9bcb02f6950ac4d1eab4')
+ 
+ prepare() {
+   cd "${pkgbase}-${pkgver}"
++
++  patch -p1 < "$srcdir/gui-no-init-system.patch"
+ 
+   sed -i 's|/sbin/|/bin/|g' tuned.service tuned-gui.py tuned-gui.desktop tuned/ppd/tuned-ppd.service
+ }
+@@ -43,6 +47,9 @@
+   make DESTDIR="${pkgdir}" SBINDIR="/usr/bin" LIBEXECDIR="/usr/lib" install
+   rm -rv "${pkgdir}"/{run,var}
+ 
++  rm -rv "$pkgdir/usr/lib/systemd"
++  rm -rv "$pkgdir/usr/lib/python3.14/site-packages/tuned/plugins/plugin_systemd.py"
++
+   python -m compileall -d /usr/lib "${pkgdir}/usr/lib"
+   python -O -m compileall -d /usr/lib "${pkgdir}/usr/lib"
+ }
+@@ -57,4 +64,6 @@
+   cd "${pkgbase}-${pkgver}"
+ 
+   make DESTDIR="${pkgdir}" SBINDIR="/usr/bin" LIBEXECDIR="/usr/lib" install-ppd
++
++  rm -rf "$pkgdir/usr/lib/systemd"
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,5 @@
+ prepare() {
+ cd "${pkgbase}-${pkgver}"
++patch -p1 < "$srcdir/gui-no-init-system.patch"
+ sed -i 's|/sbin/|/bin/|g' tuned.service tuned-gui.py tuned-gui.desktop tuned/ppd/tuned-ppd.service
+ }

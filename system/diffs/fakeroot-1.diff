@@ -1,14 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,21 +2,24 @@
- pkgname=fakeroot
- epoch=1
- pkgver=1.37.2
--pkgrel=2
-+pkgrel=1
- pkgdesc='Tool for simulating superuser privileges'
- arch=('x86_64')
- license=('GPL-3.0-or-later')
+@@ -9,14 +9,17 @@
  url='https://tracker.debian.org/pkg/fakeroot'
  install=fakeroot.install
  depends=('glibc' 'filesystem' 'sed' 'util-linux' 'sh')

@@ -1067,6 +1067,7 @@ hunspell-he
 htmlq
 htop
 http-parser
+httpbin
 hub
 hugin
 hunspell-de
@@ -1188,6 +1189,7 @@ iucode-tool
 iverilog
 j4-dmenu-desktop
 jami-qt
+jaq
 jasper
 jasper-doc
 java-avalon-framework
@@ -1733,7 +1735,6 @@ libdmtx
 libdnet
 libdom
 libdovi
-libdrm
 libdv
 libdvbpsi
 libdvdcss
@@ -4098,8 +4099,6 @@ python-pook
 python-portend
 python-pprofile
 python-prance
-python-praw
-python-prawcore
 python-pre-commit
 python-precis_i18n
 python-pretend
@@ -4706,7 +4705,6 @@ python-yg.lockfile
 python-ypy-websocket
 python-ytmusicapi
 python-zc.lockfile
-python-zeep
 python-zeroconf
 python-zict
 python-zipp
@@ -4855,6 +4853,7 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
+qxlsx
 r
 r8168
 radeontop
@@ -4892,7 +4891,6 @@ renderdoc
 reptyr
 rest
 restinio
-resvg
 retro-gtk
 rhash
 rhino
@@ -5172,6 +5170,7 @@ ruby-power_assert
 ruby-prime
 ruby-process-metrics
 ruby-protocol-hpack
+ruby-protocol-http
 ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url

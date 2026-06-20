@@ -279,6 +279,8 @@ tkg-gui-git
 tkg-gui
 trizen
 ttf-unifont
+tuned-dinit
+tuned-openrc
 turnstile-openrc
 turnstile
 ungoogled-chromium

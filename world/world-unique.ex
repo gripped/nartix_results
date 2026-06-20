@@ -288,6 +288,7 @@ knot-runit
 knot-s6
 krb5-runit
 libnl
+libpathrs
 libplacebo5
 librewolf
 libvirt-dinit

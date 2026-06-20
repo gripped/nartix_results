@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=jupyter-notebook
+ _pipname=notebook
+-pkgver=7.6.0
++pkgver=7.5.7
+ pkgrel=1
+ pkgdesc='The language-agnostic HTML notebook application for Project Jupyter'
+ arch=(any)
+@@ -20,14 +20,13 @@
+              nodejs
+              python-build
+              python-hatch-jupyter-builder
+-             python-installer
+-             python-jupyter-builder)
++             python-installer)
+ checkdepends=(python-pytest-jupyter
+               python-pytest-timeout
+               python-requests)
+ replaces=(jupyter-retrolab)
+ source=(git+https://github.com/jupyter/notebook#tag=v$pkgver)
+-sha256sums=('90584b3e1cb1095c1f6f05cca825aabec4c6dfc7e2f1140ef35236a35a66d10c')
++sha256sums=('15587e0d0f5c5ea7b2d1237f9bd11134bf0a226a7702499d646b69da35083217')
+ 
+ build() {
+   cd notebook
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -7,7 +7,6 @@
+ python-build
+ python-hatch-jupyter-builder
+ python-installer
+-python-jupyter-builder
+ python-jupyter-client
+ python-jupyter-core
+ python-jupyterlab-server
