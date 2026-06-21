@@ -1,25 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgname=jupyterlab
  _pipname=jupyterlab
 -pkgver=4.6.0
+-pkgrel=2
 +pkgver=4.5.9
- pkgrel=1
++pkgrel=1
  pkgdesc='JupyterLab computational environment'
  arch=(any)
-@@ -22,8 +22,7 @@
- makedepends=(git
-              python-build
-              python-hatch-jupyter-builder
--             python-installer
--             python-jupyter-builder)
-+             python-installer)
- optdepends=('jupyter-collaboration: collaborative mode'
-             'jupyterlab-lsp: LSP extension'
-             'jupyterlab-widgets: ipywidgets support'
-@@ -33,7 +32,7 @@
+ url='https://github.com/jupyterlab/jupyterlab'
+@@ -12,8 +12,8 @@
+          python
+          python-async-lru
+          python-httpx
++         python-importlib-metadata
+          python-ipykernel
+-         python-jupyter-builder
+          python-jupyter-core
+          python-jupyterlab-server
+          python-packaging
+@@ -32,7 +32,7 @@
                python-pytest-jupyter
                python-pytest-tornasync)
  source=(git+https://github.com/jupyterlab/jupyterlab#tag=v$pkgver)
@@ -34,8 +36,11 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -9,7 +9,6 @@
- python-importlib-metadata
+@@ -6,9 +6,9 @@
+ python-build
+ python-hatch-jupyter-builder
+ python-httpx
++python-importlib-metadata
  python-installer
  python-ipykernel
 -python-jupyter-builder

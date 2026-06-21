@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,23 @@
+ 
+ pkgname=libretro-gambatte
+-pkgver=20260619.121446.g4832d33cc342
++pkgver=1080
+ pkgrel=1
+ pkgdesc='Nintendo Game Boy/Game Boy Color core'
+ arch=(x86_64)
+ url=https://github.com/libretro/gambatte-libretro
+-license=(GPL-2.0-only)
++license=(GPL2)
+ groups=(libretro)
+-depends=(
+-  glibc
+-  libretro-core-info
+-  libstdc++
+-)
++depends=(libretro-core-info)
+ makedepends=(git)
+-source=(libretro-gambatte::git+https://github.com/libretro/gambatte-libretro.git#commit=${pkgver##*.g})
+-sha256sums=('5d7faf9916638a53abe8d2ce2f3cbf938aa31246b98d0e7221f7655e180cc5f4')
++_commit=6924c76ba03dadddc6e97fa3660f3d3bc08faa94
++source=(libretro-gambatte::git+https://github.com/libretro/gambatte-libretro.git#commit=${_commit})
++sha256sums=('546796c81347d79b388187ec73cd40b1ac6f1ff4885fe2da8e02d6630b2f33fd')
++
++pkgver() {
++  cd libretro-gambatte
++
++  git rev-list --count HEAD
++}
+ 
+ build() {
+   make -C libretro-gambatte -f Makefile.libretro
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,2 @@
+ git
+-glibc
+ libretro-core-info
+-libstdc++

@@ -339,6 +339,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
+jq
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -351,6 +352,7 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
+kquickimageeditor
 krdp
 ksystemlog
 kwin-x11
@@ -586,7 +588,6 @@ mutter-devkit
 mutter-docs
 mutter45
 mutter46
-nanobind
 ndctl
 ndisc6
 nemo-extensions
@@ -746,15 +747,20 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
+python-clevercsv
+python-cmd2
 python-cram
 python-ndg-httpsclient
+python-paramiko
 python-praw
 python-prawcore
+python-py7zr
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-scipy
 python-sphinxcontrib-spelling
 python-zeep
 qastools
@@ -869,8 +875,8 @@ rrdtool
 rspamd
 rsync
 rtkit
+ruby-async-http
 ruby-bake-modernize
-ruby-protocol-http1
 ruby-rbtree
 ruby-sys-filesystem
 rust-bindgen
@@ -1065,6 +1071,7 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
+vmaf
 vte3
 vte-common
 vte3-utils

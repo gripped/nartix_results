@@ -137,7 +137,7 @@ ext4magic
 fastfetch
 fceux
 fcitx5-bamboo
-fcitx5-chinese-addons
+fcitx5-configtool
 fcitx5-lua
 fcitx5-qt
 fcitx5-unikey
@@ -252,8 +252,6 @@ libretro-mesen-s
 libretro-mesen
 libretro-mgba
 libretro-overlays
-libretro-parallel-n64
-libretro-play
 libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
@@ -533,7 +531,6 @@ python-mpv
 python-multivolumefile
 python-pdftotext
 python-poetry-core
-python-py7zr
 python-pybcj
 python-pybluez
 python-pychm
@@ -884,4 +881,5 @@ zathura-pdf-poppler
 zathura-ps
 zathura
 zed
+zellij
 zig0.14

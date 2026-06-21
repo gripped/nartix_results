@@ -17,6 +17,7 @@ emptty
 ephoto
 etherwall
 evisum
+fcitx5-chinese-addons
 fd
 featherpad
 firefox
@@ -37,7 +38,9 @@ libmatemixer
 libodfgen
 libratbag
 libretro-mupen64plus-next
+libretro-parallel-n64
 libretro-pcsx2
+libretro-play
 libusbsio
 python-libusbsio
 libva-nvidia-driver
@@ -64,6 +67,7 @@ osdlyrics
 p8-platform
 perl-cgi-fast
 perl-curses
+python-py7zr
 qbittorrent
 qt5-webengine
 rage

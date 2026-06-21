@@ -4,8 +4,8 @@
  pkgname=kwin
  pkgver=6.7.0
  _dirver=$(echo $pkgver | cut -d. -f1-3)
--pkgrel=1
-+pkgrel=2
+-pkgrel=3
++pkgrel=4
  pkgdesc='An easy to use, but flexible, Wayland compositor'
  arch=(x86_64)
  url='https://kde.org/plasma-desktop/'
@@ -18,7 +18,7 @@
           vulkan-icd-loader
           wayland
           xcb-util-keysyms
-@@ -98,4 +98,6 @@
+@@ -105,4 +105,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
    setcap CAP_SYS_NICE=+ep "$pkgdir"/usr/bin/kwin_wayland

@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,13 +1,13 @@
+ 
+ pkgname=goverlay
+-pkgver=1.8.3
++pkgver=1.8.2
+ _pkgver=${pkgver//_/-}
+ pkgrel=1
+ pkgdesc="A GUI to help manage Vulkan/OpenGL overlays"
+ url="https://github.com/benjamimgois/goverlay"
+ arch=('x86_64')
+ license=('GPL-3.0-or-later')
+-depends=('glu' 'qt6pas' 'mangohud' '7zip' 'wget' 'fontconfig' 'sdl2-compat')
++depends=('glu' 'qt6pas' 'mangohud' '7zip' 'wget')
+ makedepends=('git' 'lazarus')
+ checkdepends=('appstream' 'desktop-file-utils')
+ optdepends=('mesa-utils: OpenGL preview'
+@@ -15,7 +15,7 @@
+             'vkbasalt: Configure vkBasalt'
+             'git: Clone reshade repository')
+ source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${_pkgver}.tar.gz")
+-sha256sums=('ce268bca7ef0e41c50a38ac0aaab7d299a354b3de9a371b079b5d2ff15ddc593')
++sha256sums=('e5663202f22dfa57310fd86d3ba8fe7e497e3859ef630318424f982a02cdc05f')
+ 
+ build() {
+ 	cd "${pkgname}-${_pkgver}"
+@@ -30,5 +30,4 @@
+ package() {
+ 	cd "${pkgname}-${_pkgver}"
+ 	make prefix=/usr libexecdir=/lib DESTDIR="${pkgdir}" install
+-	ln -s /usr/lib/pascube "${pkgdir}/usr/bin/"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,7 @@
+ 7zip
+-fontconfig
+ git
+ glu
+ lazarus
+ mangohud
+ qt6pas
+-sdl2-compat
+ wget

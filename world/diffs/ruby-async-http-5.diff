@@ -1,0 +1,92 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ruby-async-http
+-pkgver=0.94.3
++pkgver=0.94.2
+ pkgrel=1
+ pkgdesc='A HTTP client and server library'
+ arch=(any)
+@@ -20,7 +20,6 @@
+   ruby-traces
+ )
+ makedepends=(
+-  git
+   ruby-rdoc
+ )
+ checkdepends=(
+@@ -40,14 +39,12 @@
+   ruby-sus-fixtures-openssl
+ )
+ options=(!emptydirs)
+-source=(git+https://github.com/socketry/async-http.git#tag=v$pkgver)
+-sha512sums=('a932f9ae0124c31738ce6f99dc8d9d765c38460bf52df5c4891042673a2619753c81eea21b193c49ecca25b07b2ec499536659b465f84f8fb7fa62366143f224')
+-b2sums=('9886e52ec6756bb5d90aa5a9724e6ea34c44b308ab075c0a63ec862df59f3fd99929b7ab7eb7f064dfaf903e9558e8e8ae37badb8df9566a42e4875acdc658f6')
++source=(https://github.com/socketry/async-http/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
++sha512sums=('e44bea2da90a84d271e32d7b5219b315d1e608d6e57f412237b82ae17c0bd1b4e9aa2485209637223abaa8baf413d1a640d90c65c3772f8e4d60f8396082cef1')
++b2sums=('a901d08b69044ff80da65b755c7a160dd12de8eb86d46dc8d0eee72bc00939065235addc6e0476806ee8a58bbb04b5f5a695037b82e3f20b30c2845b15078cb0')
+ 
+ prepare() {
+-  cd async-http
+-
+-  git cherry-pick -n 7a8850e6fb081af1c672a537828fc3b596f6e8f5
++  cd async-http-$pkgver
+ 
+   sed -r \
+     -e 's|~>|>=|g' \
+@@ -62,7 +59,7 @@
+ 
+ build() {
+   local _gemdir="$(gem env gemdir)"
+-  cd async-http
++  cd async-http-$pkgver
+   gem build async-http.gemspec
+   gem install \
+     --local \
+@@ -88,12 +85,12 @@
+ 
+ check() {
+   local _gemdir="$(gem env gemdir)"
+-  cd async-http
++  cd async-http-$pkgver
+   GEM_HOME="tmp_install/$_gemdir" bake test
+   GEM_HOME="tmp_install/$_gemdir" sus
+ }
+ 
+ package() {
+-  cd async-http
++  cd async-http-$pkgver
+   cp -a tmp_install/* "$pkgdir"/
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,3 @@
+-git
+ ruby
+ ruby-async
+ ruby-async-pool
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+-cd async-http
+-git cherry-pick -n 7a8850e6fb081af1c672a537828fc3b596f6e8f5
++cd async-http-$pkgver
+ sed -r \
+ -e 's|~>|>=|g' \
+ -e '/signing_key/d' \
+@@ -12,7 +11,7 @@
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"
+-cd async-http
++cd async-http-$pkgver
+ gem build async-http.gemspec
+ gem install \
+ --local \

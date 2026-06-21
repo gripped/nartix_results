@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-strawberry-graphql
+ _pkgname=strawberry
+-pkgver=0.318.1
++pkgver=0.316.0
+ pkgrel=1
+ pkgdesc="A GraphQL library for Python that leverages type annotations"
+ url="https://strawberry.rocks"
+@@ -11,7 +11,7 @@
+          'python-cross-web' 'python-rich' 'python-typing_extensions' 'python-pygments')
+ makedepends=('python-build' 'python-installer' 'python-uv-build')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/strawberry-graphql/strawberry/archive/refs/tags/${pkgver}.tar.gz")
+-sha256sums=('d67241c6dcb45cdd67ce64aa42f8f95217eb2e85c5b4e595bb6b40c72d255298')
++sha256sums=('bac6bb91e42bd258434dbea330532f5a3ed1eacefed0006881131b596e6ff2bd')
+ 
+ build() {
+ 	cd "${_pkgname}-${pkgver}"

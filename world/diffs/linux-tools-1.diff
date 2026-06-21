@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+   'usbip'
+   'x86_energy_perf_policy'
+ )
+-pkgver=7.0.12
++pkgver=7.0.10
+ pkgrel=1
+ _srcname=linux-${pkgver}
+ license=('GPL-2.0-only')
 @@ -33,20 +33,13 @@
  makedepends+=('llvm' 'clang')
  makedepends+=('libnl')
@@ -14,15 +23,25 @@
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
  )
- sha256sums=('094977eb62c20e3d1939fe81a92958a1f987f339446e532fa86963b2804e32dc'
+-sha256sums=('57edc9a41efc1ca6b797afa8f4a587a30da2af6bca7356eb56e1e1a4ada265da'
 -            'SKIP'
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
++sha256sums=('094977eb62c20e3d1939fe81a92958a1f987f339446e532fa86963b2804e32dc'
 +            'SKIP')
  
  prepare() {
    cd "$_srcname"
+@@ -165,7 +158,7 @@
+   pkgdesc='Linux kernel performance auditing tool'
+   depends=('glibc' 'perl' 'python' 'slang' 'elfutils' 'libunwind' 'binutils'
+            'numactl' 'audit' 'coreutils' 'glib2' 'xz' 'zlib' 'libelf' 'bash'
+-           'zstd' 'libcap' 'libtraceevent' 'openssl' 'libsframe.so' 'llvm-libs' 'libpfm')
++           'zstd' 'libcap' 'libtraceevent' 'openssl' 'libsframe.so' 'llvm21-libs' 'libpfm')
+ 
+   cd "$_srcname"/tools/perf
+   make -f Makefile.perf \
 @@ -202,7 +195,6 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
@@ -47,7 +66,7 @@
  }
  
  package_tmon() {
-@@ -252,9 +243,6 @@
+@@ -252,14 +243,11 @@
  
    cd "$_srcname"/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib
@@ -57,21 +76,30 @@
  }
  
  package_bpf() {
+   pkgdesc='BPF tools'
+-  depends=('glibc' 'readline' 'zlib' 'libelf' 'libcap' 'zstd' 'llvm-libs' 'binutils' 'libsframe.so')
++  depends=('glibc' 'readline' 'zlib' 'libelf' 'libcap' 'zstd' 'llvm21-libs' 'binutils' 'libsframe.so')
+ 
+   cd "$_srcname"/tools/bpf
+   make -W runqslower_install install prefix=/usr DESTDIR="$pkgdir"
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -21,6 +21,7 @@
+@@ -21,9 +21,9 @@
  libpfm
  libsframe.so
  libtraceevent
 +libudev
  libunwind
  llvm
+-llvm-libs
  llvm21-libs
-@@ -36,7 +37,6 @@
+ ncurses
+ numactl
+@@ -37,7 +37,6 @@
  readline
  slang
  sysfsutils

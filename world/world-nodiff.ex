@@ -1217,7 +1217,6 @@ jitterentropy
 jkqtplotter
 jose
 jp2a
-jq
 jrnl
 jruby
 js102
@@ -1537,7 +1536,6 @@ kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
-kquickimageeditor
 krdc
 krecorder
 krename
@@ -1815,6 +1813,7 @@ libharu
 libheif
 libhubbub
 libical
+libical-docs
 libice
 libiconv
 libid3tag
@@ -1955,6 +1954,7 @@ libpanel-docs
 libpano13
 libpaper
 libparserutils
+libpathrs
 libpciaccess
 libpeas-2
 libpeas-2-docs
@@ -2459,6 +2459,7 @@ mypaint-brushes
 mypaint-brushes1
 mypy
 namcap
+nanobind
 nanomsg
 nanosvg
 nasm
@@ -3413,7 +3414,6 @@ python-cherrypy
 python-cjkwrap
 python-claripy
 python-cleo
-python-clevercsv
 python-click-aliases
 python-click-command-tree
 python-click-default-group
@@ -3432,7 +3432,6 @@ python-cloudflare
 python-cloudpickle
 python-cmake-build-extension
 python-cmarkgfm
-python-cmd2
 python-cmsis-pack-manager
 python-cogapp
 python-colorama
@@ -4020,7 +4019,6 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
-python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
@@ -4130,7 +4128,6 @@ python-py-cpuinfo
 python-py-partiql-parser
 python-py
 python-py3c
-python-py7zr
 python-pyacoustid
 python-pyaes
 python-pyaml
@@ -4421,7 +4418,6 @@ python-schema
 python-scikit-build-core
 python-scikit-build
 python-scikit-learn
-python-scipy
 python-scramp
 python-scripttest
 python-scrypt
@@ -4963,7 +4959,6 @@ ruby-async-container-supervisor
 ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
-ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
@@ -5171,6 +5166,7 @@ ruby-prime
 ruby-process-metrics
 ruby-protocol-hpack
 ruby-protocol-http
+ruby-protocol-http1
 ruby-protocol-http2
 ruby-protocol-rack
 ruby-protocol-url
@@ -5855,7 +5851,6 @@ vkd3d
 vkd3d-docs
 vl-convert
 python-vl-convert
-vmaf
 vncdotool
 vnstat
 vokoscreen

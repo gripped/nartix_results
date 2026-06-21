@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ruby-ffi-compiler
+-pkgver=1.4.0
++pkgver=1.3.2
+ pkgrel=1
+ pkgdesc='Ruby library for automating compilation of native libraries for use with ffi'
+ arch=(any)
+@@ -10,7 +10,7 @@
+ makedepends=(git ruby-rspec ruby-rubygems-tasks ruby-rdoc)
+ options=(!emptydirs)
+ source=(git+https://github.com/ffi/ffi-compiler.git#tag=$pkgver)
+-sha256sums=('04dff80a0a57e638b7b8a1b51f3ef6cb9d9360b98bfcc691b39149061b1d9e01')
++sha256sums=('cf7d2bd2e841512b2f097b4e631b8147d9738e09cf629b56d5e587542bcab800')
+ 
+ build() {
+   local _gemdir="$(gem env gemdir)"

@@ -7,7 +7,7 @@
 -depends=('cairo' 'enchant' 'iso-codes' 'libgl' 'libxkbcommon-x11' 'pango' 'systemd' 'wayland'
 +depends=('cairo' 'enchant' 'iso-codes' 'libgl' 'libxkbcommon-x11' 'pango' 'elogind' 'libuv' 'wayland'
           'xcb-imdkit' 'xcb-util-wm' 'libxkbfile' 'gdk-pixbuf2' 'yoga')
- makedepends=('git' 'extra-cmake-modules' 'ninja' 'nlohmann-json' 'wayland-protocols')
+ makedepends=('git' 'extra-cmake-modules' 'ninja' 'nlohmann-json' 'plasma-wayland-protocols' 'wayland-protocols')
  source=("git+https://github.com/fcitx/fcitx5.git#tag=$pkgver?signed"
 @@ -28,6 +28,7 @@
    cd fcitx5
@@ -23,7 +23,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,16 +1,17 @@
+@@ -1,17 +1,18 @@
  cairo
 +elogind
  enchant
@@ -38,6 +38,7 @@
  ninja
  nlohmann-json
  pango
+ plasma-wayland-protocols
 -systemd
  wayland
  wayland-protocols
