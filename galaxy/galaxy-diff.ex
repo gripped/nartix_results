@@ -21,6 +21,8 @@ fcitx5-chinese-addons
 fd
 featherpad
 firefox
+godot
+godot-mono
 gpicview
 gpu-screen-recorder
 greetd-regreet
@@ -37,10 +39,7 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
-libretro-mupen64plus-next
-libretro-parallel-n64
 libretro-pcsx2
-libretro-play
 libusbsio
 python-libusbsio
 libva-nvidia-driver
@@ -74,6 +73,7 @@ rage
 read-edid
 reflector
 resvg
+retroarch
 scribus
 sdcv
 signal-desktop

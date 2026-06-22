@@ -251,7 +251,10 @@ libretro-gambatte
 libretro-mesen-s
 libretro-mesen
 libretro-mgba
+libretro-mupen64plus-next
 libretro-overlays
+libretro-parallel-n64
+libretro-play
 libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
@@ -578,7 +581,6 @@ retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
-retroarch
 rgbds
 rio
 riscv64-linux-gnu-gdb

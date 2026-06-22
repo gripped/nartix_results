@@ -7,7 +7,7 @@
 -source=("$pkgname-$pkgver.tar.gz::https://github.com/jirka-h/$pkgname/archive/v$pkgver.tar.gz"
 -        'initcpio.hook'
 -        'initcpio.install')
--sha256sums=('376c9d6530c53274c5eadf220ae43d0658e15414150ea52711142f6743bbfd74'
+-sha256sums=('76f2f77547e4b7dafe78352b4c96fa27cd6f03afc7cecf2ed37c7c7b32b679d7'
 -            'a59ff95d521a860031693d1e1d65d37ffba58412f0199b029bd340e2f7f52a0b'
 -            'befb42d418d13c832da6d67f50417f6bca9a1c754dbdc63175f1e2546ea29b51')
 -
@@ -17,7 +17,7 @@
 -  sed -i 's/@SBIN_DIR@/\/usr\/bin/' contrib/Fedora/haveged*.service
 -}
 +source=("$pkgname-$pkgver.tar.gz::https://github.com/jirka-h/$pkgname/archive/v$pkgver.tar.gz")
-+sha256sums=('376c9d6530c53274c5eadf220ae43d0658e15414150ea52711142f6743bbfd74')
++sha256sums=('76f2f77547e4b7dafe78352b4c96fa27cd6f03afc7cecf2ed37c7c7b32b679d7')
  
  build() {
    cd $pkgname-$pkgver

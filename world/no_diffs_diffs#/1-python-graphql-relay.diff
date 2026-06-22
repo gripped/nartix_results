@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=python-graphql-relay
+ pkgver=3.2.0
+-pkgrel=8
++pkgrel=7
+ pkgdesc='A library to help construct a graphql-py server supporting react-relay'
+ url=https://github.com/graphql-python/graphql-relay-py
+ arch=(any)
+ license=(MIT)
+ depends=(
+-  python
+   python-graphql-core
++  python-promise
+   python-typing_extensions
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,9 @@
+ git
+-python
+ python-build
+ python-graphql-core
+ python-installer
+ python-poetry-core
++python-promise
+ python-setuptools
+ python-typing_extensions
+ python-wheel

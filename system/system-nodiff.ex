@@ -111,6 +111,8 @@ libsecret-docs
 libssh2
 libtasn1
 libtirpc
+libtool
+lib32-libltdl
 libunistring
 libverto
 libxcrypt

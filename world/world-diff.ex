@@ -339,7 +339,6 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
-jq
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -352,7 +351,6 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
-kquickimageeditor
 krdp
 ksystemlog
 kwin-x11
@@ -590,6 +588,7 @@ mutter45
 mutter46
 ndctl
 ndisc6
+neatvnc
 nemo-extensions
 nemo-audio-tab
 nemo-emblems
@@ -656,7 +655,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-dbi
 pgbouncer
 phodav
 php-legacy
@@ -747,22 +745,15 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
-python-clevercsv
-python-cmd2
 python-cram
 python-ndg-httpsclient
-python-paramiko
-python-praw
-python-prawcore
 python-py7zr
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
-python-scipy
 python-sphinxcontrib-spelling
-python-zeep
 qastools
 qbe
 qbittorrent
@@ -875,7 +866,6 @@ rrdtool
 rspamd
 rsync
 rtkit
-ruby-async-http
 ruby-bake-modernize
 ruby-rbtree
 ruby-sys-filesystem

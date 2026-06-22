@@ -1,16 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=intel-compute-runtime
--pkgver=26.22.38646.4
--pkgrel=1
-+pkgver=26.18.38308.1
-+pkgrel=2
- pkgdesc='Intel(R) Graphics Compute Runtime for oneAPI Level Zero and OpenCL(TM) Driver'
- arch=('x86_64')
- url='https://github.com/intel/compute-runtime/'
-@@ -18,23 +18,21 @@
+@@ -18,15 +18,13 @@
      'level-zero-headers'
      'libnl>=3.0.0'
      'libnl<4.0.0'
@@ -27,16 +17,6 @@
  )
  provides=(
      'level-zero-driver'
-     'opencl-driver')
- source=("https://github.com/intel/compute-runtime/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz"
-         '010-intel-compute-runtime-disable-werror.patch')
--sha256sums=('4fcea3df862ce964fefd848c111fc1d3f81a4a9a03e776a1e5849deb578ff68f'
--            '849e4103d3660eadd9c79a79ddaba7e9a5a228743e4991bb238d7abe908b545f')
-+sha256sums=('a192110226b98fc6fa640ed5f948c7b88fbed7e86536c61a4633b690a84b9792'
-+            '40d2639392958b9104b5294305054415d6a718ba183064a65892204aa17bc9ef')
- 
- prepare() {
-     patch -d "compute-runtime-${pkgver}" -Np1 -i "${srcdir}/010-intel-compute-runtime-disable-werror.patch"
 
 
 ############# Stripped diff below #################

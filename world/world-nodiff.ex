@@ -1217,6 +1217,7 @@ jitterentropy
 jkqtplotter
 jose
 jp2a
+jq
 jrnl
 jruby
 js102
@@ -1536,6 +1537,7 @@ kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
+kquickimageeditor
 krdc
 krecorder
 krename
@@ -2474,7 +2476,6 @@ ncdu
 ncftp
 ncmpcpp
 ncompress
-neatvnc
 neochat
 neofetch
 neomutt
@@ -2535,6 +2536,7 @@ noto-fonts-emoji
 noto-fonts
 noto-fonts-extra
 npm
+nqptp
 nrpe
 nsight-compute
 nsight-systems
@@ -2735,6 +2737,7 @@ perl-cgi-fast
 perl-cgi
 perl-class-data-inheritable
 perl-class-inspector
+perl-class-load-xs
 perl-class-load
 perl-class-method-modifiers
 perl-class-singleton
@@ -2768,10 +2771,12 @@ perl-datetime-locale
 perl-datetime-timezone
 perl-datetime
 perl-dbd-mysql
+perl-dbi
 perl-devel-checkcompiler
 perl-devel-checklib
 perl-devel-cycle
 perl-devel-globaldestruction
+perl-devel-overloadinfo
 perl-devel-stacktrace
 perl-devel-symdump
 perl-digest-bubblebabble
@@ -2883,9 +2888,11 @@ perl-module-build
 perl-module-implementation
 perl-module-install
 perl-module-pluggable
+perl-module-runtime-conflicts
 perl-module-runtime
 perl-module-scandeps
 perl-moo
+perl-moose
 perl-mouse
 perl-mozilla-ca
 perl-mro-compat
@@ -2903,6 +2910,7 @@ perl-net-ssleay
 perl-netaddr-ip
 perl-number-compare
 perl-object-realize-later
+perl-package-deprecationmanager
 perl-package-stash-xs
 perl-package-stash
 perl-padwalker
@@ -2997,6 +3005,7 @@ perl-test-trap
 perl-test-utf8
 perl-test-warn
 perl-test-warnings
+perl-test-without-module
 perl-test-yaml
 perl-test2-suite
 perl-test2-tools-process
@@ -3414,6 +3423,7 @@ python-cherrypy
 python-cjkwrap
 python-claripy
 python-cleo
+python-clevercsv
 python-click-aliases
 python-click-command-tree
 python-click-default-group
@@ -3432,6 +3442,7 @@ python-cloudflare
 python-cloudpickle
 python-cmake-build-extension
 python-cmarkgfm
+python-cmd2
 python-cmsis-pack-manager
 python-cogapp
 python-colorama
@@ -3815,6 +3826,7 @@ python-jsonschema-spec
 python-jsonschema-specifications
 python-jsonschema
 python-junit-xml
+python-jupyter-builder
 python-jupyter-client
 python-jupyter-core
 python-jupyter-events
@@ -4019,6 +4031,7 @@ python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
+python-paramiko
 python-parse-type
 python-parse
 python-parsedatetime
@@ -4097,6 +4110,8 @@ python-pook
 python-portend
 python-pprofile
 python-prance
+python-praw
+python-prawcore
 python-pre-commit
 python-precis_i18n
 python-pretend
@@ -4255,12 +4270,14 @@ python-pytest-console-scripts
 python-pytest-cov
 python-pytest-datadir
 python-pytest-datafiles
+python-pytest-deadfixtures
 python-pytest-dependency
 python-pytest-django
 python-pytest-enabler
 python-pytest-env
 python-pytest-examples
 python-pytest-expect
+python-pytest-fixture-classes
 python-pytest-flake8
 python-pytest-forked
 python-pytest-freezer
@@ -4394,6 +4411,7 @@ python-rfc3339-validator
 python-rfc3986-validator
 python-rfc3986
 python-rfc3987
+python-rich-argparse
 python-rich
 python-rjsmin
 python-robot-detection
@@ -4418,6 +4436,7 @@ python-schema
 python-scikit-build-core
 python-scikit-build
 python-scikit-learn
+python-scipy
 python-scramp
 python-scripttest
 python-scrypt
@@ -4701,6 +4720,7 @@ python-yg.lockfile
 python-ypy-websocket
 python-ytmusicapi
 python-zc.lockfile
+python-zeep
 python-zeroconf
 python-zict
 python-zipp
@@ -4955,17 +4975,21 @@ ruby-addressable
 ruby-ae
 ruby-ansi
 ruby-ast
+ruby-async-bus
 ruby-async-container-supervisor
 ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
+ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
 ruby-async-rest
 ruby-async-rspec
 ruby-async-safe
+ruby-async-service-supervisor
 ruby-async-service
+ruby-async-utilization
 ruby-async-websocket
 ruby-async
 ruby-atk
@@ -5224,6 +5248,7 @@ ruby-rubocop-ast
 ruby-rubocop-performance
 ruby-rubocop-rake
 ruby-rubocop-rspec
+ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
 ruby-ruby_memcheck

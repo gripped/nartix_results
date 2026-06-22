@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -26,7 +26,6 @@
-   libxfixes
-   mutter46
+@@ -28,7 +28,6 @@
+   mutter
+   pango
    sqlite
 -  systemd-libs
    wayland
  )
  makedepends=(
-@@ -48,7 +47,7 @@
- }
+@@ -44,7 +43,7 @@
+ b2sums=('6b7e96aa372f2db2d49b53085718937ac5f43f0c467aa6a3341908dd54a5fae78a6b7db2cf68661c40e2f4f31a84e46136ca8bfe7c314f21a7fa2a0e9d8eacd0')
  
  build() {
 -  arch-meson gala build
@@ -23,9 +23,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -21,6 +21,5 @@
- meson
- mutter46
+@@ -23,6 +23,5 @@
+ mutter
+ pango
  sqlite
 -systemd-libs
  vala

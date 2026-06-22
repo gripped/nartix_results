@@ -9,7 +9,7 @@
  )
  makedepends=(
    docbook-xsl
-@@ -74,7 +72,7 @@
+@@ -78,7 +76,7 @@
  build() {
    export MESON_PACKAGE_CACHE_DIR="$srcdir"
  
@@ -18,7 +18,7 @@
    meson compile -C build
  }
  
-@@ -85,5 +83,7 @@
+@@ -89,5 +87,7 @@
  
  package() {
    meson install -C build --destdir "$pkgdir"

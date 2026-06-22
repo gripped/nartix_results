@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -22,7 +22,6 @@
+ package() {
+   cd nqptp-$pkgver
+   make DESTDIR="$pkgdir/" install
+-  mkdir -p "$pkgdir/usr/lib/systemd/system" "$pkgdir/usr/lib/sysusers.d/"
+-  cp nqptp.service "$pkgdir/usr/lib/systemd/system/"
++  mkdir -p "$pkgdir/usr/lib/sysusers.d/"
+   cp ../nqptp.sysusers "$pkgdir/usr/lib/sysusers.d/nqptp.conf"
+ }

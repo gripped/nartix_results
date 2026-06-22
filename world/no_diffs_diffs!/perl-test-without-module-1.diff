@@ -1,0 +1,8 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -36,5 +36,4 @@
+ package() {
+ 	cd Test-Without-Module-"$pkgver"
+ 	make install DESTDIR="$pkgdir"
+-	find "$pkgdir" -name .packlist -o -name perllocal.pod -delete
+ }
