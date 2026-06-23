@@ -17,7 +17,6 @@ emptty
 ephoto
 etherwall
 evisum
-fcitx5-chinese-addons
 fd
 featherpad
 firefox
@@ -75,6 +74,7 @@ reflector
 resvg
 retroarch
 scribus
+scummvm
 sdcv
 signal-desktop
 terminology

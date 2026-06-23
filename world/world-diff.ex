@@ -176,8 +176,6 @@ flatpak
 flatpak-docs
 flite
 fluidsynth
-fmt
-fmt-docs
 font-manager
 fprintd
 freerdp
@@ -381,6 +379,7 @@ python-libcamera
 libcdio-paranoia
 libcmis
 libdaemon
+libdovi
 libdrm
 libe-book
 libei
@@ -588,7 +587,6 @@ mutter45
 mutter46
 ndctl
 ndisc6
-neatvnc
 nemo-extensions
 nemo-audio-tab
 nemo-emblems
@@ -747,6 +745,7 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-ndg-httpsclient
+python-oslo-concurrency
 python-py7zr
 python-pymupdf
 python-pyscard

@@ -407,6 +407,7 @@ cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
+curl-impersonate
 cxxopts
 cyrus-sasl
 cyrus-sasl-gssapi
@@ -669,6 +670,8 @@ fltk
 fltk-docs
 fltk1.3
 fluxbox
+fmt
+fmt-docs
 folks
 font-awesome
 woff2-font-awesome
@@ -1734,7 +1737,6 @@ libdmapsharing
 libdmtx
 libdnet
 libdom
-libdovi
 libdv
 libdvbpsi
 libdvdcss
@@ -2476,6 +2478,7 @@ ncdu
 ncftp
 ncmpcpp
 ncompress
+neatvnc
 neochat
 neofetch
 neomutt
@@ -3484,6 +3487,8 @@ python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
 python-curio
+python-curl-adapter
+python-curl_cffi
 python-curtsies
 python-cwcwidth
 python-cx-freeze
@@ -4011,7 +4016,6 @@ python-os-client-config
 python-os-service-types
 python-osc-lib
 python-oscrypto
-python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db

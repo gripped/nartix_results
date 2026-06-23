@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -35,7 +35,7 @@
+ }
+ 
+ build() {
+-  arch-meson neatvnc build \
++  artix-meson neatvnc build \
+     -Djpeg=enabled \
+     -Dtls=enabled
+   meson compile -C build
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,7 @@
+ git cherry-pick -n f97805deaaea489a1c8c851324163a92a3125195
+ }
+ build() {
+-arch-meson neatvnc build \
++artix-meson neatvnc build \
+ -Djpeg=enabled \
+ -Dtls=enabled
+ meson compile -C build

@@ -137,6 +137,7 @@ ext4magic
 fastfetch
 fceux
 fcitx5-bamboo
+fcitx5-chinese-addons
 fcitx5-configtool
 fcitx5-lua
 fcitx5-qt
@@ -596,7 +597,6 @@ salt
 satty
 scrcpy
 screengrab
-scummvm
 shairplay
 shortwave
 shotcut

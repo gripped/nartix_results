@@ -1,0 +1,34 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,14 @@
+ 
+ pkgname=postorius
+ pkgver=1.3.13
+-pkgrel=6
++pkgrel=7
+ pkgdesc="The New Mailman Web UI"
+ arch=(any)
+ url="https://gitlab.com/mailman/postorius"
+ license=(GPL-3.0-or-later)
+ depends=(
+   python
+-  python-cmarkgfm
++  python-comrak  # via readme_renderer[md]
+   python-django
+   python-django-allauth  # via python-django-mailman3
+   python-django-mailman3
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ git
+ python
+ python-build
+-python-cmarkgfm
++python-comrak
+ python-django
+ python-django-allauth
+ python-django-mailman3
