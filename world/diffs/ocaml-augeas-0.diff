@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=ocaml-augeas
+ pkgver=0.7
+-pkgrel=2
++pkgrel=3
+ pkgdesc="OCaml bindings for Augeas"
+ arch=(x86_64)
+ url="https://people.redhat.com/~rjones/augeas/"
+@@ -23,7 +23,7 @@
+ 
+ build() {
+   cd $pkgname-$pkgver
+-
++  unset LDFLAGS
+   export CFLAGS+=" -ffat-lto-objects"
+   ./configure
+   make -j1
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,6 @@
+ build() {
+ cd $pkgname-$pkgver
++unset LDFLAGS
+ export CFLAGS+=" -ffat-lto-objects"
+ ./configure
+ make -j1

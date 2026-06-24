@@ -1,0 +1,58 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=python-fastimport
+ pkgver=0.9.16
+-pkgrel=1
++pkgrel=2
+ pkgdesc='VCS fastimport/fastexport parser'
+ arch=(any)
+ url=https://github.com/jelmer/python-fastimport
+@@ -9,7 +9,10 @@
+ depends=(python)
+ makedepends=(
+   git
++  python-build
++  python-installer
+   python-setuptools
++  python-wheel
+ )
+ source=(git+https://github.com/jelmer/python-fastimport.git#tag=v${pkgver})
+ validpgpkeys=(DC837EE14A7E37347E87061700806F2BD729A457) # Jelmer Vernooĳ <jelmer@jelmer.uk>
+@@ -17,11 +20,10 @@
+ 
+ build() {
+   cd python-fastimport
+-  python setup.py build
++  python -m build --wheel --no-isolation
+ }
+ 
+ package() {
+-  cd python-fastimport
+-  python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
++  python -m installer --destdir="${pkgdir}" python-fastimport/dist/*.whl
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,6 @@
+ git
+ python
++python-build
++python-installer
+ python-setuptools
++python-wheel
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+ cd python-fastimport
+-python setup.py build
++python -m build --wheel --no-isolation
+ }

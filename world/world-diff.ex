@@ -429,6 +429,7 @@ libunwind
 libusbsio
 python-libusbsio
 libutempter
+libva-intel-driver
 libvirt
 libvncserver
 libxfce4ui
@@ -626,6 +627,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+ocaml-augeas
 onboard
 onionshare
 open-iscsi
@@ -744,6 +746,7 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
+python-fastimport
 python-ndg-httpsclient
 python-oslo-concurrency
 python-py7zr
@@ -863,6 +866,7 @@ rocfft
 rocrand
 rrdtool
 rspamd
+rssguard
 rsync
 rtkit
 ruby-bake-modernize

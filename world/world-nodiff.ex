@@ -2089,7 +2089,6 @@ libusbmuxd
 libutf8proc
 libutp
 libuv
-libva-intel-driver
 libva-utils
 libva-vdpau-driver
 libva
@@ -2561,7 +2560,6 @@ oath-toolkit
 obconf-qt
 obs-studio
 obs-studio-plugin-browser
-ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
 ocaml-ctypes
@@ -3604,7 +3602,6 @@ python-falcon
 python-fastapi
 python-fastbencode
 python-fasteners
-python-fastimport
 python-fastjsonschema
 python-fastnumbers
 python-fastparquet
@@ -4252,6 +4249,7 @@ python-pyrsistent
 python-pysaml2
 python-pyscreenshot
 python-pysendfile
+python-pysequoia
 python-pyserial
 python-pysmt
 python-pysocks
@@ -4961,7 +4959,6 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
-rssguard
 rst2pdf
 rtaudio
 rtaudio-docs

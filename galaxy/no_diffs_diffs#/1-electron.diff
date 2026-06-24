@@ -1,12 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  
 -pkgver=42
-+pkgver=40
- pkgrel=1
+-pkgrel=1
++pkgver=41
++pkgrel=2
  epoch=1
  pkgname=electron
+ pkgdesc='Meta package providing the latest available stable Electron build'
 @@ -10,7 +10,7 @@
  depends=("electron$pkgver")
  
@@ -26,4 +28,4 @@
 +++ artix_depends
 @@ -1 +1 @@
 -electron42
-+electron40
++electron41
