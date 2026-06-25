@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=plasma-desktop
+-pkgver=6.7.0
++pkgver=6.7.1
+ _dirver=$(echo $pkgver | cut -d. -f1-3)
+ pkgrel=1
+ pkgdesc='KDE Plasma Desktop'
 @@ -66,7 +66,7 @@
           sdl2
           solid
@@ -9,6 +17,15 @@
           systemsettings
           wayland
           xcb-util-keysyms
+@@ -93,7 +93,7 @@
+              xorg-server-devel)
+ groups=(plasma)
+ source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('63513b54f6f60b3cd7ec35ca2f0962bdf25669729388e8515ac1d3b8899ee47f'
++sha256sums=('f0450dc26706fc2d719ab28e3102149cfbf6a72e81cd310c936b85c08abb6f2f'
+             'SKIP')
+ validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
+               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
 @@ -109,4 +109,6 @@
  
  package() {

@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=haveged
+-pkgver=1.9.24
++pkgver=1.9.26
+ pkgrel=1
+ pkgdesc='Entropy harvesting daemon using CPU timings'
+ arch=('x86_64')
 @@ -8,18 +8,8 @@
  license=('GPL-3.0-or-later')
  depends=('glibc')
@@ -17,7 +25,7 @@
 -  sed -i 's/@SBIN_DIR@/\/usr\/bin/' contrib/Fedora/haveged*.service
 -}
 +source=("$pkgname-$pkgver.tar.gz::https://github.com/jirka-h/$pkgname/archive/v$pkgver.tar.gz")
-+sha256sums=('76f2f77547e4b7dafe78352b4c96fa27cd6f03afc7cecf2ed37c7c7b32b679d7')
++sha256sums=('74bc6052506451ca9f23ba186f72cf81b124f859351f8a4b777ead32d9bdd4da')
  
  build() {
    cd $pkgname-$pkgver

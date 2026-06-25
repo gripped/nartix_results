@@ -625,7 +625,6 @@ fcitx-qt6
 fcitx
 fcitx5-configtool
 fcitx5-gtk
-fcitx5-mozc
 fcitx5-qt
 fd
 featherpad
@@ -663,7 +662,6 @@ flameshot
 flashrom
 flatbuffers
 python-flatbuffers
-flatpak-builder
 flatpak-kcm
 flickcurl
 fltk
@@ -4111,8 +4109,6 @@ python-pook
 python-portend
 python-pprofile
 python-prance
-python-praw
-python-prawcore
 python-pre-commit
 python-precis_i18n
 python-pretend
@@ -4981,7 +4977,6 @@ ruby-async-container-supervisor
 ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
-ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
@@ -5252,7 +5247,6 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
-ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
@@ -5849,7 +5843,6 @@ vdpauinfo
 veracrypt
 vice
 vice-sdl2
-vid.stab
 viewnior
 vifm
 vigra

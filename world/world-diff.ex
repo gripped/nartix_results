@@ -163,6 +163,7 @@ fastjar
 fceux
 fcgiwrap
 fcitx-mozc
+fcitx5-mozc
 fcitx5
 fcron
 fig2dev
@@ -172,6 +173,7 @@ python-firewall
 firewall-config
 firewall-applet
 firewalld-test
+flatpak-builder
 flatpak
 flatpak-docs
 flite
@@ -749,6 +751,8 @@ python-cram
 python-fastimport
 python-ndg-httpsclient
 python-oslo-concurrency
+python-praw
+python-prawcore
 python-py7zr
 python-pymupdf
 python-pyscard
@@ -869,8 +873,10 @@ rspamd
 rssguard
 rsync
 rtkit
+ruby-async-http
 ruby-bake-modernize
 ruby-rbtree
+ruby-ruby_memcheck
 ruby-sys-filesystem
 rust-bindgen
 rust
@@ -983,6 +989,7 @@ valkey
 vault
 vcspull
 verdict
+vid.stab
 vlc
 libvlc
 vlc-cli
