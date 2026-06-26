@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=dvdauthor
+ pkgver=0.7.2
+-pkgrel=13
++pkgrel=14
+ pkgdesc='DVD authoring tools'
+ arch=('x86_64')
+ url='http://dvdauthor.sourceforge.net/'
+-license=('GPL2')
++license=('GPL-2.0-or-later')
+ depends=('libdvdread' 'imagemagick' 'libxml2')
+ source=("https://downloads.sourceforge.net/$pkgname/$pkgname-$pkgver.tar.gz"
+         'dvdauthor-0.7.2-imagemagick7.patch'
+@@ -21,7 +21,7 @@
+ 
+   patch -p1 -i ../dvdauthor-0.7.2-freetype-pkgconfig.patch
+ 
+-  autoreconf -vi
++  autoreconf -vif
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ cd $pkgname
+ patch -Np1 -i ../dvdauthor-0.7.2-imagemagick7.patch
+ patch -p1 -i ../dvdauthor-0.7.2-freetype-pkgconfig.patch
+-autoreconf -vi
++autoreconf -vif
+ }
+ build() {
+ cd $pkgname

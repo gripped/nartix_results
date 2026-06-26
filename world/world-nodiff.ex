@@ -238,6 +238,7 @@ boinc
 boinc-nox
 bomber
 boost
+booster
 botan
 botan2
 bovo
@@ -508,7 +509,6 @@ dump_syms
 dune
 duplicity
 dvd-rw-tools
-dvdauthor
 dvisvgm
 dzen2
 easytag
@@ -631,8 +631,6 @@ featherpad
 feh
 festival
 ffcall
-ffmpeg
-ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -2353,8 +2351,6 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
-maturin
-python-maturin
 maven
 mbedtls
 mbedtls2
@@ -3441,7 +3437,6 @@ python-cloudflare
 python-cloudpickle
 python-cmake-build-extension
 python-cmarkgfm
-python-cmd2
 python-cmsis-pack-manager
 python-cogapp
 python-colorama
@@ -4624,7 +4619,6 @@ python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata
-python-tzlocal
 python-u-msgpack
 python-ubjson
 python-uc-micro-py
@@ -5063,7 +5057,6 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
-ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local

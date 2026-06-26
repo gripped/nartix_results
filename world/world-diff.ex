@@ -32,7 +32,6 @@ bluez-mesh
 bluez-obex
 bmake
 bolt
-booster
 box2d
 brightnessctl
 brltty
@@ -140,6 +139,7 @@ dracut
 drkonqi
 dtc
 dunst
+dvdauthor
 earlyoom
 element.io
 element-web
@@ -166,6 +166,8 @@ fcitx-mozc
 fcitx5-mozc
 fcitx5
 fcron
+ffmpeg
+ffmpeg4.4
 fig2dev
 firefox
 firewalld
@@ -544,6 +546,8 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+maturin
+python-maturin
 media-player-info
 memcached
 mesa
@@ -747,6 +751,7 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
+python-cmd2
 python-cram
 python-fastimport
 python-ndg-httpsclient
@@ -760,6 +765,7 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
+python-tzlocal
 qastools
 qbe
 qbittorrent
@@ -875,6 +881,7 @@ rsync
 rtkit
 ruby-async-http
 ruby-bake-modernize
+ruby-ffi-compiler
 ruby-rbtree
 ruby-ruby_memcheck
 ruby-sys-filesystem

@@ -91,7 +91,6 @@ compface
 conky-manager2
 copyq
 cosmic-app-library
-cosmic-bg
 cosmic-files
 cosmic-greeter
 cosmic-icon-theme
@@ -202,6 +201,7 @@ just
 kanshi
 kernel-headers-musl
 keyd
+khard
 kodi
 kodi-gles
 kodi-eventclients
@@ -624,7 +624,6 @@ sysbench
 t1lib
 tcpdump
 tealdeer
-telegram-desktop
 tenacity
 terminus-font
 tesseract-data
@@ -793,7 +792,6 @@ waylandpp
 waylock
 waypipe
 wayvnc
-wcm
 wdisplays
 wev
 wf-shell

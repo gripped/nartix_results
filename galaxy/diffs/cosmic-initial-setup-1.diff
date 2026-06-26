@@ -1,5 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cosmic-initial-setup
+-pkgver=1.0.16
++pkgver=1.1.0
+ pkgrel=1
+ epoch=1
+ pkgdesc="COSMIC Initial Setup"
 @@ -14,7 +14,7 @@
    libpulse
    libxkbcommon
@@ -9,6 +17,15 @@
  )
  makedepends=(
    cargo
+@@ -23,7 +23,7 @@
+   just
+ )
+ source=(git+https://github.com/pop-os/cosmic-initial-setup.git#tag=epoch-${pkgver})
+-sha256sums=('3e27d6bfddaa98e25d28e8846ad0a44d6052fb41c1c5540759001e67d9508f08')
++sha256sums=('af3fb5304884561bf2672ead3a823800bd570ae1dbc47b90c05bffc16db9bb3b')
+ 
+ prepare() {
+   cd "${pkgname}"
 
 
 ############# Stripped diff below #################

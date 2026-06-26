@@ -1,0 +1,39 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-cmd2
+-pkgver=3.0.0
++pkgver=3.1.1
+ pkgrel=1
+ pkgdesc="A tool for building interactive command line apps"
+ arch=('any')
+@@ -10,12 +10,10 @@
+ makedepends=('git' 'python-setuptools-scm' 'python-build' 'python-installer' 'python-wheel')
+ checkdepends=('python-pytest' 'python-pytest-mock' 'vi')
+ source=("git+https://github.com/python-cmd2/cmd2.git#tag=$pkgver")
+-sha512sums=('e62d3ad1e0566fc7cee9b27756546d51ec145c76c67582d3e42bed83ced7ebd8bc650cafc77a898602faebb3958489cf4c368d8f9a77b4caf492403a2508f42b')
++sha512sums=('065c290309dc531e6d66156c96e62a39cf377747a2211e09261c49b3a8f3c173b7555286d62c9320213f76e4be760f05adeeb8a9deccf6f75628df71a5b20064')
+ 
+ prepare() {
+   cd cmd2
+-
+-  git cherry-pick -n 926636a38156e4a7e07dc1cee04bca7b019776ec
+ 
+   sed -e '/def _format_usage(/i\
+     if not hasattr(argparse.HelpFormatter, "_format_actions_usage"):\
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,5 @@
+ prepare() {
+ cd cmd2
+-git cherry-pick -n 926636a38156e4a7e07dc1cee04bca7b019776ec
+ sed -e '/def _format_usage(/i\
+ if not hasattr(argparse.HelpFormatter, "_format_actions_usage"):\
+ def _format_actions_usage(self, actions, groups):\

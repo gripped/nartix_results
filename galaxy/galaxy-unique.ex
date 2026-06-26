@@ -47,6 +47,7 @@ eovim
 epour
 equate
 espionage
+ex-evi-compat
 exaile
 express
 extundelete

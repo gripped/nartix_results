@@ -4,6 +4,7 @@ autorandr
 bsd-games
 cinnamon-desktop
 cosmic-applets
+cosmic-bg
 cosmic-comp
 cosmic-initial-setup
 cosmic-osd
@@ -31,7 +32,6 @@ hexchat
 hugin
 innernet
 intel-gpu-tools
-khard
 labwc
 lemurs
 libetonyek
@@ -77,6 +77,7 @@ scribus
 scummvm
 sdcv
 signal-desktop
+telegram-desktop
 terminology
 termshark
 tigervnc
@@ -92,6 +93,7 @@ tuned
 unoconv
 vice
 wayfire
+wcm
 wezterm
 wf-config
 wireshark

@@ -1,0 +1,49 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=mlt
+-pkgver=7.38.0
++pkgver=7.40.0
+ pkgrel=1
+ pkgdesc='An open source multimedia framework'
+ arch=(x86_64)
+@@ -32,6 +32,7 @@
+             'qt6-svg: Qt6 plugin'
+             'pango: gdk plugin'
+             'python: python bindings'
++            'rnnoise: rnnoise plugin'
+             'rtaudio: rtaudio plugin'
+             'rubberband: audio pitch plugin'
+             'sdl2: SDL2 plugin'
+@@ -58,6 +59,7 @@
+              python
+              qt6-5compat
+              qt6-svg
++             rnnoise
+              rtaudio
+              rubberband
+              sox
+@@ -67,7 +69,7 @@
+ source=(git+https://github.com/mltframework/mlt#tag=v$pkgver
+         git+https://invent.kde.org/graphics/glaxnimate.git
+         git+https://github.com/mbasaglia/thorvg.git)
+-sha256sums=('3d7ed52001238ec13d858db372fc598219771217baedb3aa38e6efdad4e6dff4'
++sha256sums=('99f6370263714259200af2cdc381205610247767ca6eb0ef5d1d2ebba2901a4f'
+             'SKIP'
+             'SKIP')
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -20,6 +20,7 @@
+ python
+ qt6-5compat
+ qt6-svg
++rnnoise
+ rtaudio
+ rubberband
+ sdl_image
