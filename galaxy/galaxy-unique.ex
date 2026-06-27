@@ -198,6 +198,7 @@ mpd-s6
 mullvad-vpn-dinit
 mullvad-vpn-openrc
 newsraft
+nl-ease
 numix-icon-theme
 octopi
 ofono-openrc
@@ -270,6 +271,7 @@ sonic-win
 sonic-workspace
 sonicde-meta
 sv-helper
+sysinfo
 tigervnc-s6
 tinydns-dinit
 tinydns-openrc

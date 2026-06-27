@@ -247,7 +247,6 @@ libreoffice-still-sdk
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
-libretro-dolphin
 libretro-gambatte
 libretro-mesen-s
 libretro-mesen

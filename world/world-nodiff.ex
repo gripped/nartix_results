@@ -873,9 +873,6 @@ gphoto2
 gpicview
 gpsd
 gptfdisk
-gradle
-gradle-doc
-gradle-src
 grafana
 granatier
 granite
@@ -1232,6 +1229,7 @@ jsoncpp-doc
 jsonrpc-glib
 jsonrpc-glib-docs
 judy
+jujutsu
 juk
 julia
 junit
@@ -2354,6 +2352,7 @@ matterbridge
 maven
 mbedtls
 mbedtls2
+mbedtls3
 mbox-importer
 mc
 mcpp
@@ -3263,7 +3262,6 @@ python-aiosmtpd
 python-aiosqlite
 python-aiostream
 python-aiounittest
-python-alembic
 python-altair
 python-amqp
 python-aniso8601
@@ -4463,7 +4461,6 @@ python-simplejson
 python-siphash24
 python-six
 python-slip
-python-slugify
 python-sly
 python-smartypants
 python-smbprotocol
@@ -4701,7 +4698,6 @@ python-xlwt
 python-xmlschema
 python-xmlsec
 python-xmltodict
-python-xxhash
 python-y-py
 python-yaml
 python-yara

@@ -1,0 +1,38 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-xxhash
+-pkgver=3.7.0
++pkgver=3.7.1
+ pkgrel=1
+ pkgdesc='Python binding for xxHash'
+ arch=(x86_64)
+@@ -19,7 +19,11 @@
+     python-wheel
+ )
+ source=("$pkgname::git+$url.git#tag=v$pkgver")
+-b2sums=('e96b8db35efe2e17468140d0058fbcd7bc845cc25e9c6b133eae8b3f347b99fa0aefe929fceeb5ec94a814374095ad8f481b876dca9721d69ab71d0e77419fab')
++b2sums=('81363fd837bc3c35f623c470043df87be8630de84f91ffe4b1e3438ca75c32dd01769ecc2e69bc0f2c8e6cd804c52da609fc9c5e03a01e234f7ad62362b0160b')
++
++prepare() {
++    rm $pkgname/tests/test_benchmark.py
++}
+ 
+ build() {
+     cd $pkgname
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,3 +1,6 @@
++prepare() {
++rm $pkgname/tests/test_benchmark.py
++}
+ build() {
+ cd $pkgname
+ XXHASH_LINK_SO=1 \

@@ -226,6 +226,9 @@ go-bindata
 godot
 godot-mono
 gperftools
+gradle
+gradle-doc
+gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -747,6 +750,7 @@ pulseaudio-equalizer
 pulseaudio-rtp
 pyqt6
 pysolfc
+python-alembic
 python-ansicolors
 python-anytree
 python-aresponses
@@ -764,8 +768,10 @@ python-pyscard
 python-pytest-freezegun
 python-pyudev
 python-recommonmark
+python-slugify
 python-sphinxcontrib-spelling
 python-tzlocal
+python-xxhash
 qastools
 qbe
 qbittorrent

@@ -38,6 +38,7 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
+libretro-dolphin
 libretro-pcsx2
 libusbsio
 python-libusbsio

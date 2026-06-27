@@ -1,0 +1,65 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=gradle
+ pkgname=('gradle' 'gradle-doc' 'gradle-src')
+ pkgver=9.6.0
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='Powerful build system for the JVM'
+ url='https://gradle.org/'
+ arch=('any')
+@@ -21,7 +21,7 @@
+   'groovy'
+   'java-environment=11'
+   'java-environment=17'
+-  'java-environment=21'
++  'jdk21-openjdk'
+   'xmlto'
+ )
+ source=(https://services.gradle.org/distributions/${pkgbase}-${pkgver}-src.zip
+@@ -47,8 +47,14 @@
+ 
+ build() {
+   cd ${pkgbase}-${pkgver}
++
++  mkdir /tmp/gradle
++  export GRADLE_OPTS+=" -Djava.io.tmpdir=/tmp/gradle"
++  export GRADLE_USER_HOME="/tmp/gradle"
++
+   ./gradlew installAll \
+     --info \
++    --stacktrace \
+     -Porg.gradle.java.installations.paths=/usr/lib/jvm/java-21-openjdk \
+     -Porg.gradle.java.installations.auto-download=false \
+     -PfinalRelease=true \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -6,6 +6,7 @@
+ groovy
+ java-environment
+ java-environment>
++jdk21-openjdk
+ sed
+ which
+ xmlto
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,8 +8,12 @@
+ }
+ build() {
+ cd ${pkgbase}-${pkgver}
++mkdir /tmp/gradle
++export GRADLE_OPTS+=" -Djava.io.tmpdir=/tmp/gradle"
++export GRADLE_USER_HOME="/tmp/gradle"
+ ./gradlew installAll \
+ --info \
++--stacktrace \
+ -Porg.gradle.java.installations.paths=/usr/lib/jvm/java-21-openjdk \
+ -Porg.gradle.java.installations.auto-download=false \
+ -PfinalRelease=true \
