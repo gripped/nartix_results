@@ -60,6 +60,7 @@ gdk-pixbuf2-noglycin
 gitea-tea
 github-copilot-cli
 grub-theme
+helium-browser
 htpdate
 incron-next
 incron-openrc

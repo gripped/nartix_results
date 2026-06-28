@@ -724,8 +724,6 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
-gdk-pixbuf2
-gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -3373,7 +3371,6 @@ python-bowler
 python-bracex
 python-braintree
 python-breathe
-python-brotlicffi
 python-btchip
 python-btrees
 python-build
@@ -3534,7 +3531,6 @@ python-django-guardian
 python-django-haystack
 python-django-mailman3
 python-django-ninja
-python-django-picklefield
 python-django-q
 python-django-q2
 python-django-rest-framework
@@ -3686,7 +3682,6 @@ python-google-auth
 python-googleapis-common-protos
 python-gp-libs
 python-gpgme
-python-graphene
 python-graphql-core
 python-graphql-relay
 python-graphviz
@@ -3910,7 +3905,6 @@ python-mediafile
 python-memcached
 python-memory-profiler
 python-merge3
-python-mergedeep
 python-mimeparse
 python-minidump
 python-mistletoe
@@ -4110,7 +4104,6 @@ python-priority
 python-process-tests
 python-profilestats
 python-prometheus_client
-python-promise
 python-prompt_toolkit
 python-propcache
 python-proxmoxer
@@ -5205,6 +5198,7 @@ ruby-rb-fsevent
 ruby-rb-inotify
 ruby-rbnacl
 ruby-rbs
+ruby-rbtree
 ruby-rdiscount
 ruby-rdoc
 ruby-redcarpet

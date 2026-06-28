@@ -43,6 +43,7 @@ libretro-pcsx2
 libusbsio
 python-libusbsio
 libva-nvidia-driver
+libvdpau-va-gl
 libxfce4ui
 light
 ly

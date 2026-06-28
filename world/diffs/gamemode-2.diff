@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gamemode
+ pkgver=1.8.2
+-pkgrel=2
++pkgrel=3
+ pkgdesc='A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS'
+ arch=(x86_64)
+ url=https://github.com/FeralInteractive/gamemode
 @@ -12,7 +12,7 @@
    libdbus-1.so
    libgcc
@@ -9,9 +18,20 @@
    polkit
  )
  makedepends=(
-@@ -34,8 +34,9 @@
- }
+@@ -24,18 +24,13 @@
+   libgamemode.so
+   libgamemodeauto.so
+ )
+-_tag=c54d6d4243b0dd0afcb49f2c9836d432da171a2b
+-source=(git+https://github.com/FeralInteractive/gamemode.git#tag=${_tag})
++source=(git+https://github.com/FeralInteractive/gamemode.git#tag=${pkgver})
+ b2sums=('4be672cdc658341d5911e45289883fd8466648752ba7c30ba9428a214319383d4058e282614be8d82d2af310fc99b276950e31bc1d26b60da74bc7af3774cc93')
  
+-pkgver() {
+-  cd gamemode
+-  git describe --tags
+-}
+-
  build() {
 -  arch-meson gamemode build \
 +  artix-meson gamemode build \
@@ -20,6 +40,11 @@
      -Dwith-examples=false
    meson compile -C build
  }
+@@ -48,4 +43,3 @@
+   meson install -C build --destdir "${pkgdir}"
+   install -Dm 644 gamemode/LICENSE.txt -t "${pkgdir}"/usr/share/licenses/gamemode/
+ }
+-
 
 
 ############# Stripped diff below #################

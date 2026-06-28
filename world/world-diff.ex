@@ -199,6 +199,8 @@ gcr-4
 gcr-4-docs
 gcr
 gcr-docs
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdm
 libgdm
 gengetopt
@@ -755,13 +757,18 @@ python-ansicolors
 python-anytree
 python-aresponses
 python-asn1crypto
+python-brotlicffi
 python-cmd2
 python-cram
+python-django-picklefield
 python-fastimport
+python-graphene
+python-mergedeep
 python-ndg-httpsclient
 python-oslo-concurrency
 python-praw
 python-prawcore
+python-promise
 python-py7zr
 python-pymupdf
 python-pyscard
@@ -888,7 +895,6 @@ rtkit
 ruby-async-http
 ruby-bake-modernize
 ruby-ffi-compiler
-ruby-rbtree
 ruby-ruby_memcheck
 ruby-sys-filesystem
 rust-bindgen
