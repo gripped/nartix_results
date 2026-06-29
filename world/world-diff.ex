@@ -351,6 +351,9 @@ jupyter-server-ydoc
 kcoreaddons
 kdeplasma-addons
 kdoctools5
+kea
+"$pkgbase
+"$pkgbase
 kinfocenter
 kismet
 kitty
@@ -658,6 +661,7 @@ libpackagekit-glib
 pacman-contrib
 parole
 passim
+patchelf
 pc-ble-driver
 pcmanfm-gtk3
 pcmanfm-qt
@@ -875,6 +879,7 @@ qt6-serialport
 qt6-webengine
 qterminal
 qtermwidget
+qxlsx
 rabbitmq
 rdma-core
 redis
@@ -910,6 +915,7 @@ libwbclient
 ldb
 smbclient
 sane
+scour
 scribus
 sdbus-cpp
 $pkgbase
@@ -1211,3 +1217,4 @@ zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
 znc
+zopfli

@@ -1371,9 +1371,6 @@ kdoctools
 kdsingleapplication
 kdsoap-ws-discovery-client
 kdsoap
-kea
-"$pkgbase
-"$pkgbase
 keditbookmarks
 keepassxc
 kemoticons
@@ -2689,7 +2686,6 @@ passff-host
 passt
 pastebinit
 pasystray
-patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
@@ -4850,7 +4846,6 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
-qxlsx
 r
 r8168
 radeontop
@@ -5344,7 +5339,6 @@ schroedinger
 scim
 scite
 scons
-scour
 screen
 screengrab
 scrot
@@ -6105,7 +6099,6 @@ zix
 zix-docs
 zlib-ng
 zlib-ng-compat
-zopfli
 zoxide
 zsh-autosuggestions
 zsh-completions
