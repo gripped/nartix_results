@@ -1,14 +1,36 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=zed
 -pkgver=1.7.2
+-pkgrel=1
 +pkgver=1.8.2
- pkgrel=1
++pkgrel=2
  pkgdesc='A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter'
  arch=(x86_64)
-@@ -40,7 +40,7 @@
+ url=https://zed.dev
+@@ -10,10 +10,10 @@
+ depends=(alsa-lib libasound.so
+          curl
+          fontconfig
++         git
+          glib2 libgio-2.0.so libglib-2.0.so libgobject-2.0.so
+          glibc # libc.so libm.so ld-linux-x86_64.so
+          libgcc libgcc_s.so
+-         libgit2 libgit2.so
+          libstdc++ libstdc++.so
+          libxcb # libxcb.so libxcb-xkb.so
+          libx11 # libX11-xcb.so
+@@ -27,7 +27,6 @@
+          vulkan-icd-loader
+          vulkan-tools
+          wayland
+-         zlib libz.so
+          zstd libzstd.so)
+ makedepends=(cargo
+              cargo-about
+@@ -40,7 +39,7 @@
  replaces=(zed-editor)
  _archive="$pkgname-$pkgver"
  source=("$_url/archive/v$pkgver/$_archive.tar.gz")
@@ -17,3 +39,47 @@
  
  _binname=zeditor
  _appid=dev.zed.Zed
+@@ -67,7 +66,6 @@
+ 	CFLAGS+=' -ffat-lto-objects'
+ 	CXXFLAGS+=' -ffat-lto-objects'
+ 	RUSTFLAGS+=" --remap-path-prefix $PWD=/"
+-	export LIBGIT2_NO_VENDOR=1
+ 	export LIBSQLITE3_SYS_USE_PKG_CONFIG=1
+ 	export ZSTD_SYS_USE_PKG_CONFIG=1
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,14 +5,13 @@
+ cmake
+ curl
+ fontconfig
++git
+ glib2
+ glibc
+ libasound.so
+ libgcc
+ libgcc_s.so
+ libgio-2.0.so
+-libgit2
+-libgit2.so
+ libglib-2.0.so
+ libgobject-2.0.so
+ libsqlite3.so
+@@ -24,7 +23,6 @@
+ libxkbcommon-x11
+ libxkbcommon-x11.so
+ libxkbcommon.so
+-libz.so
+ libzstd.so
+ netcat
+ nodejs>
+@@ -37,5 +35,4 @@
+ vulkan-tools
+ vulkan-validation-layers
+ wayland
+-zlib
+ zstd
