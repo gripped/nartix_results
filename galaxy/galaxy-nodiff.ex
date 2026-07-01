@@ -768,9 +768,6 @@ ttf-jetbrains-mono
 ttf-sarasa-gothic
 tumbler
 typst
-ublock-origin
-firefox-ublock-origin
-thunderbird-ublock-origin
 ueberzug
 ueberzugpp
 uncrustify
@@ -867,6 +864,7 @@ xfwm4-themes
 xfwm4
 xonotic-data
 xonotic
+xorg-xfontsel
 xreader
 xsane
 xsane-gimp

@@ -652,6 +652,7 @@ openmpi
 openmpi-docs
 openrct2
 openresolv
+opensips
 opensmtpd
 opensnitch
 openvpn
@@ -1136,6 +1137,8 @@ wpewebkit
 wpewebkit-docs
 wsdd
 x11vnc
+xarchiver
+xdelta3
 xdg-desktop-portal-gnome
 xdg-desktop-portal-lxqt
 xdg-desktop-portal-wlr

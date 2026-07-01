@@ -2619,7 +2619,6 @@ openpmix
 openpmix-docs
 openscenegraph
 openshadinglanguage
-opensips
 openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
@@ -5920,7 +5919,6 @@ xalan-c
 xapian-core
 xapian-core-docs
 xapp
-xarchiver
 xautolock
 xaw3d
 xbitmaps
@@ -5938,7 +5936,6 @@ xclip
 xcompmgr
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
-xdelta3
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

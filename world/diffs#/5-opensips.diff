@@ -1,0 +1,71 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,12 +1,12 @@
+ 
+ pkgname=opensips
+-pkgver=3.6.7
+-pkgrel=1
++pkgver=4.0.0
++pkgrel=1.1
+ pkgdesc="An Open Source SIP Server able to act as a SIP proxy, registrar, location server, redirect server ..."
+ url="https://www.opensips.org"
+ depends=()
+ makedepends=('libldap' 'libmariadbclient' 'libmicrohttpd' 'libxml2' 'libxslt'
+-             'lynx' 'openssl' 'postgresql-libs' 'unixodbc')
++             'lynx' 'openssl' 'postgresql-libs' 'unixodbc' 'git')
+ optdepends=('curl: db_http module'
+             'libldap: ldap module'
+             'libmicrohttpd: httpd module'
+@@ -21,15 +21,13 @@
+ arch=('x86_64')
+ license=('GPL-2.0-only')
+ options=('!emptydirs' '!makeflags')
+-source=(https://opensips.org/pub/opensips/${pkgver}/opensips-${pkgver}.tar.gz
+-	opensips.service)
+-sha256sums=('1dcc60d73bee3c5bc9878752965b45dbed800222e5b5d09ca905040d38edf25c'
+-            'c2fec4be085b108db10834fa9832e98d696c2de6408f85f96cf89c13bf6be819')
++source=("git+https://github.com/OpenSIPS/opensips.git#tag=$pkgver")
++sha256sums=('f6fcc950e6e0b486e6c1617dcd380bad7bfc2488cd00053df6ecadb386869483')
+ 
+ _modules="db_http db_mysql db_postgres db_unixodbc h350 httpd ldap presence presence_xml proto_tls tls_mgm tls_openssl tm rr"
+ 
+ build() {
+-  cd "$srcdir"/$pkgname-$pkgver/
++  cd "$srcdir"/$pkgname/
+ 
+   make \
+ 	include_modules="${_modules}" bin_dir=bin/ cfg_target=/etc/$pkgname/ \
+@@ -37,11 +35,10 @@
+ }
+ 
+ package() {
+-  cd "$srcdir"/$pkgname-$pkgver/
++  cd "$srcdir"/$pkgname/
+ 
+   make \
+ 	include_modules="${_modules}" bin_dir=bin/ cfg_target=/etc/$pkgname/ cfg_prefix="$pkgdir" \
+ 	BASEDIR="$pkgdir" PREFIX=/usr LIBDIR=lib install
+ 
+-  install -Dm0644 "$srcdir"/$pkgname.service "$pkgdir"/usr/lib/systemd/system/$pkgname.service
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
++git
+ libldap
+ libmariadbclient
+ libmicrohttpd
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-cd "$srcdir"/$pkgname-$pkgver/
++cd "$srcdir"/$pkgname/
+ make \
+ include_modules="${_modules}" bin_dir=bin/ cfg_target=/etc/$pkgname/ \
+ LIBDIR=lib PREFIX=/usr

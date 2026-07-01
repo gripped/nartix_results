@@ -20,6 +20,10 @@ etherwall
 evisum
 fd
 featherpad
+firefox-tridactyl
+firefox-developer-edition-tridactyl
+firefox-esr-tridactyl
+konform-browser-tridactyl
 firefox
 godot
 godot-mono
@@ -92,6 +96,9 @@ transmission-qt
 tuned
 "$pkgbase
 "$pkgbase
+ublock-origin
+firefox-ublock-origin
+thunderbird-ublock-origin
 unoconv
 vice
 wayfire
