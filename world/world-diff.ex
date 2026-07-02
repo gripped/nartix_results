@@ -361,6 +361,7 @@ kitty-terminfo
 kitty-shell-integration
 knockd
 knot
+kquickimageeditor
 krdp
 ksystemlog
 kwin-x11
@@ -419,6 +420,7 @@ libindi
 libinput
 libinput-tools
 libksysguard
+libldac
 libldm
 liblqr
 libmatekbd
@@ -646,6 +648,8 @@ onboard
 onionshare
 open-iscsi
 openbox
+opencc
+opencc-doc
 opencollada
 opendht
 openmpi
@@ -771,10 +775,16 @@ python-graphene
 python-mergedeep
 python-ndg-httpsclient
 python-oslo-concurrency
+python-polars
+$pkgbase
+$pkgbase-runtime-32
+$pkgbase-runtime-64
+$pkgbase-runtime-compat
 python-praw
 python-prawcore
 python-promise
 python-py7zr
+python-pygraphviz
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -955,6 +965,7 @@ libsysprof-capture
 sysstat
 system-config-printer
 tcc
+tea
 telegram-desktop
 tensorflow
 tensorflow-opt

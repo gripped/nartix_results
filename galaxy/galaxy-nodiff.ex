@@ -18,6 +18,7 @@ atool
 atril
 audacious-plugins
 audacious
+autotiling-rs
 autotiling
 avidemux
 avidemux-cli
@@ -194,6 +195,7 @@ hyperfine
 impala
 imv
 incron
+intel-gpu-tools
 jellyfin-mpv-shim
 joyutils
 json-schema-validator

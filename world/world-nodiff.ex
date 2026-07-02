@@ -1529,7 +1529,6 @@ kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
-kquickimageeditor
 krdc
 krecorder
 krename
@@ -1856,7 +1855,6 @@ libktorrent
 liblangtag
 liblas
 liblc3
-libldac
 libliftoff
 liblo
 liblo-docs
@@ -2585,8 +2583,6 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
-opencc
-opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
@@ -4080,11 +4076,6 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
-python-polars
-$pkgbase
-$pkgbase-runtime-32
-$pkgbase-runtime-64
-$pkgbase-runtime-compat
 python-polib
 python-pooch
 python-pook
@@ -4171,7 +4162,6 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
-python-pygraphviz
 python-pyhamcrest
 python-pyhcl
 python-pyicu
@@ -5510,7 +5500,6 @@ tcl
 tclap
 tcsh
 tdb
-tea
 tecla
 telegram-qt
 telepathy-accounts-signon

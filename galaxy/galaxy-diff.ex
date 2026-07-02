@@ -35,7 +35,6 @@ gtklock
 hexchat
 hugin
 innernet
-intel-gpu-tools
 labwc
 lemurs
 libetonyek
