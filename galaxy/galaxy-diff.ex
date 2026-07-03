@@ -126,4 +126,6 @@ xorg-server-xnest
 xorg-server-common
 xorg-server-devel
 xorg-server-src
+xsane
+xsane-gimp
 yazi

@@ -187,7 +187,6 @@ ayatana-ido
 b3sum
 babl
 backuppc
-baloo-widgets
 baloo
 baloo5
 bamf
@@ -281,7 +280,6 @@ calc
 calcurse
 calendarsupport
 calf
-calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -401,7 +399,6 @@ csound-doc
 ctags
 ctpl
 ctwm
-cuda
 cudnn
 cunit
 cups-pdf
@@ -1826,7 +1823,6 @@ libisoburn
 libisofs
 libixion
 libjcat
-libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
@@ -2361,7 +2357,6 @@ memtest86+-efi
 memtest86+-iso
 menu-cache
 menumaker
-mercurial
 merkuro
 mesa-demos
 mesa-utils
@@ -3853,7 +3848,6 @@ python-linkify-it-py
 python-linux-procfs
 python-littleutils
 python-livereload
-python-llvmlite
 python-lmdb
 python-localzone
 python-locket

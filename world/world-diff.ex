@@ -19,6 +19,7 @@ atril
 audacious-plugins
 avahi
 awesome
+baloo-widgets
 bash-bats
 blender
 blueman
@@ -51,6 +52,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+calligra
 catfish
 cef
 certbot-apache
@@ -98,6 +100,7 @@ containers-common
 cppcheck
 crun
 krun
+cuda
 cups-filters
 cups
 libcups
@@ -419,6 +422,7 @@ libidl2
 libindi
 libinput
 libinput-tools
+libjpeg-turbo
 libksysguard
 libldac
 libldm
@@ -560,6 +564,7 @@ maturin
 python-maturin
 media-player-info
 memcached
+mercurial
 mesa
 opencl-mesa
 vulkan-asahi
@@ -772,6 +777,7 @@ python-cram
 python-django-picklefield
 python-fastimport
 python-graphene
+python-llvmlite
 python-mergedeep
 python-ndg-httpsclient
 python-oslo-concurrency

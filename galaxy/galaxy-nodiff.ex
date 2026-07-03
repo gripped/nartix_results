@@ -868,8 +868,6 @@ xonotic-data
 xonotic
 xorg-xfontsel
 xreader
-xsane
-xsane-gimp
 xviewer
 xwayland-satellite
 yyjson

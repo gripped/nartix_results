@@ -1,0 +1,94 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=kmail
+-pkgver=26.04.2
+-pkgrel=2
++pkgver=26.04.3
++pkgrel=1
+ pkgdesc='KDE mail client'
+ arch=(x86_64)
+ url='https://apps.kde.org/kmail2/'
+@@ -77,7 +77,7 @@
+ groups=(kde-applications
+         kde-pim)
+ source=(https://download.kde.org/stable/release-service/$pkgver/src/$pkgname-$pkgver.tar.xz{,.sig})
+-sha256sums=('8c9185d634eeeb3f151126439fd027f54a9f124a8e865fbda6b110993bd300f9'
++sha256sums=('7abd2c0e88779f18eff35ebb4f72f6447e25c0db6867a1edf94536052a1ae952'
+             'SKIP')
+ validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+               F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87  # Christoph Feck <cfeck@kde.org>
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,66 +0,0 @@
+-akonadi
+-akonadi-contacts
+-akonadi-import-wizard
+-akonadi-mime
+-akonadi-search
+-extra-cmake-modules
+-glibc
+-gpgmepp
+-kbookmarks
+-kcalendarcore
+-kcalutils
+-kcmutils
+-kcodecs
+-kcolorscheme
+-kcompletion
+-kconfig
+-kconfigwidgets
+-kcontacts
+-kcoreaddons
+-kcrash
+-kdbusaddons
+-kdepim-runtime
+-kdoctools
+-kguiaddons
+-ki18n
+-kiconthemes
+-kidentitymanagement
+-kio
+-kitemmodels
+-kitemviews
+-kjobwidgets
+-kldap
+-kmail-account-wizard
+-kmailtransport
+-kmime
+-knotifications
+-knotifyconfig
+-kontactinterface
+-kparts
+-kpimtextedit
+-kservice
+-kstatusnotifieritem
+-ktextaddons
+-ktnef
+-kuserfeedback
+-kwidgetsaddons
+-kwindowsystem
+-kxmlgui
+-libgcc
+-libgpg-error
+-libgravatar
+-libkdepim
+-libkleo
+-libksieve
+-libstdc++
+-mailcommon
+-mbox-importer
+-messagelib
+-pim-data-exporter
+-pim-sieve-editor
+-pimcommon
+-qgpgme
+-qt6-base
+-qt6-webengine
+-qtkeychain-qt6
+-sonnet
