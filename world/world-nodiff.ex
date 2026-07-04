@@ -103,7 +103,6 @@ ark
 arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
-armagetronad
 arpack
 arrow
 artikulate
@@ -693,7 +692,6 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
-frei0r-plugins
 fribidi
 fstrm
 fsverity-utils
@@ -2393,7 +2391,6 @@ mkdocs
 mkdocstrings
 mktorrent
 mlt
-mm-common
 mmtf-cpp
 mobile-broadband-provider-info
 mod_dnssd
@@ -2530,6 +2527,7 @@ ntfs-3g
 ntfsprogs
 libntfs-3g
 ntp
+ntpd-rs
 nuget
 nuitka
 nuklear
@@ -2610,7 +2608,6 @@ openpmix
 openpmix-docs
 openscenegraph
 openshadinglanguage
-openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
@@ -5358,7 +5355,6 @@ shaderc
 shairplay
 shapelib
 shared-color-targets
-shared-mime-info
 sharutils
 shhmsg
 shhopt
@@ -5469,7 +5465,6 @@ swaybg
 swaylock
 sweeper
 swell-foop
-swig
 swtpm
 sxhkd
 sxiv
@@ -5658,7 +5653,6 @@ testdisk
 tevent
 tex-gyre-fonts
 texi2html
-texlive-bin
 texlive-core
 texlive-fontsextra
 texlive-formatsextra

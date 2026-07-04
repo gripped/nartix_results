@@ -70,6 +70,8 @@ osdlyrics
 p8-platform
 perl-cgi-fast
 perl-curses
+ppsspp
+ppsspp-assets
 python-py7zr
 qbittorrent
 qt5-webengine
@@ -107,6 +109,7 @@ wf-config
 wireshark
 wireshark-cli
 wireshark-qt
+xdg-desktop-portal-cosmic
 xdg-desktop-portal-xapp
 xdialog
 xf86-input-evdev

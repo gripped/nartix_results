@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=(texlive-bin libsynctex)
+ pkgver=2026.0
+-pkgrel=2
++pkgrel=2.1
+ license=(GPL-2.0-or-later)
+ arch=(x86_64)
+ makedepends=(bash
+@@ -71,7 +71,7 @@
+     --datadir=/usr/share \
+     --mandir=/usr/share/man \
+     --disable-native-texlive-build \
+-    --with-banner-add="/Arch Linux" \
++    --with-banner-add="/Artix Linux" \
+     --disable-multiplatform \
+     --disable-dialog \
+     --disable-psutils \
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ --datadir=/usr/share \
+ --mandir=/usr/share/man \
+ --disable-native-texlive-build \
+---with-banner-add="/Arch Linux" \
++--with-banner-add="/Artix Linux" \
+ --disable-multiplatform \
+ --disable-dialog \
+ --disable-psutils \

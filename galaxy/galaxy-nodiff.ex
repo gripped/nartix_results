@@ -514,8 +514,6 @@ pnpm
 pop-icon-theme
 pop-launcher
 pop-sound-theme
-ppsspp
-ppsspp-assets
 prismlauncher
 profanity
 profanity-gtk
@@ -805,7 +803,6 @@ xautolock
 xcur2png
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
-xdg-desktop-portal-cosmic
 xdg-desktop-portal-lxqt
 xed
 xf86-input-libinput

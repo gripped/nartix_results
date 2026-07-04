@@ -12,6 +12,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+armagetronad
 at-spi2-core
 at-spi2-core-docs
 at
@@ -187,6 +188,7 @@ font-manager
 fprintd
 freerdp
 freerdp2
+frei0r-plugins
 frugally-deep
 fuzzel
 fwupd-efi
@@ -587,6 +589,7 @@ libmgba
 mgba-sdl
 mgba-qt
 miopen-hip
+mm-common
 modemmanager
 libmm-glib
 modemmanager-docs
@@ -662,6 +665,7 @@ openmpi-docs
 openrct2
 openresolv
 opensips
+openslide
 opensmtpd
 opensnitch
 openvpn
@@ -942,6 +946,7 @@ sddm
 seatd
 sfml
 shairport-sync
+shared-mime-info
 signal-desktop
 smartmontools
 snapper
@@ -955,6 +960,7 @@ strongswan
 stunnel
 sway
 swayidle
+swig
 switcheroo-control
 syslog-ng
 syslog-ng-python
@@ -981,6 +987,7 @@ python-tensorflow
 python-tensorflow-opt
 python-tensorflow-cuda
 python-tensorflow-opt-cuda
+texlive-bin
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
