@@ -435,8 +435,6 @@ debootstrap
 decibels
 default-cursors
 dejagnu
-deluge
-deluge-gtk
 deno
 desktop-file-utils
 dev86
@@ -3248,7 +3246,6 @@ python-amqp
 python-aniso8601
 python-annotated-doc
 python-annotated-types
-python-ansi2html
 python-ansible-compat
 python-ansiwrap
 python-antlr4
@@ -3290,7 +3287,6 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
-python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3389,8 +3385,6 @@ python-changelog-chug
 python-characteristic
 python-chardet
 python-charset-normalizer
-python-cheetah3
-python-cheetah3-docs
 python-cheroot
 python-cherrypy
 python-cjkwrap
@@ -3486,7 +3480,6 @@ python-deepdiff
 python-deepmerge
 python-defusedxml
 python-dep-logic
-python-deprecated
 python-deprecation
 python-devtools
 python-diff-cover
@@ -3533,7 +3526,6 @@ python-dotenv
 python-doublex-expects
 python-doublex
 python-dpcontracts
-python-dropbox
 python-dulwich
 python-dunamai
 python-durationpy
@@ -3644,7 +3636,6 @@ python-geoip
 python-geoip2
 python-geopandas
 python-geopy
-python-gevent-websocket
 python-gevent
 python-gherkin
 python-ghp-import
@@ -3697,7 +3688,6 @@ python-hkdf
 python-hpack
 python-html2text
 python-html5-parser
-python-html5lib
 python-html5tagger
 python-http-parser
 python-httpcore
@@ -3853,7 +3843,6 @@ python-logbook
 python-loguru
 python-logutils
 python-looseversion
-python-lsp-black
 python-lsp-jsonrpc
 python-lsp-server
 python-lsprotocol
@@ -3953,7 +3942,6 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
-python-numba
 python-numexpr
 python-numpy
 python-oauth2client
@@ -4008,7 +3996,6 @@ python-partd
 python-parver
 python-passlib
 python-pasta
-python-paste
 python-pastedeploy
 python-pastel
 python-patch-ng
@@ -4056,7 +4043,6 @@ python-pipx
 python-pixelmatch
 python-pkg_resources
 python-pkgconfig
-python-pkginfo
 python-platformdirs
 python-playwright
 python-plette
@@ -4423,7 +4409,6 @@ python-sh
 python-shapely
 python-shellingham
 python-should-dsl
-python-shtab
 python-signedjson
 python-simple-websocket
 python-simplejson
