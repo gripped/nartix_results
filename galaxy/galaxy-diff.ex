@@ -49,6 +49,7 @@ libva-nvidia-driver
 libvdpau-va-gl
 libxfce4ui
 light
+lightdm-gtk-greeter-settings
 ly
 mate-control-center
 mate-screensaver
@@ -67,6 +68,7 @@ nvidia-535xx-utils
 nvidia-580xx-utils
 opensnitch
 osdlyrics
+ouch
 p8-platform
 perl-cgi-fast
 perl-curses

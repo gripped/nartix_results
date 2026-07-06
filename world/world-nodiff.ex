@@ -2579,11 +2579,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -3812,8 +3807,6 @@ python-kombu
 python-krb5
 python-kubernetes
 python-lark-parser
-python-lazr.config
-python-lazr.delegates
 python-lazy-object-proxy
 python-ldap
 python-ldap3
@@ -3983,7 +3976,6 @@ python-owslib
 python-packaging
 python-pallets-sphinx-themes
 python-pam
-python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
@@ -3994,7 +3986,6 @@ python-parsedatetime
 python-parso
 python-partd
 python-parver
-python-passlib
 python-pasta
 python-pastedeploy
 python-pastel
@@ -4526,7 +4517,6 @@ python-testtools
 python-text-unidecode
 python-texttable
 python-textual
-python-threadpoolctl
 python-tiktoken
 python-time-machine
 python-tiny-proxy
@@ -4621,8 +4611,6 @@ python-wcmatch
 python-wcwidth
 python-webcolors
 python-webencodings
-python-webob
-python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
@@ -5397,7 +5385,6 @@ sparsehash
 spatialindex
 spdlog
 speakup-utils
-spectacle
 speech-dispatcher
 libspeechd
 speex

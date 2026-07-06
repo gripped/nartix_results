@@ -661,6 +661,11 @@ openbox
 opencc
 opencc-doc
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendht
 openmpi
 openmpi-docs
@@ -791,12 +796,16 @@ python-fastimport
 python-gevent-websocket
 python-graphene
 python-html5lib
+python-lazr.config
+python-lazr.delegates
 python-llvmlite
 python-lsp-black
 python-mergedeep
 python-ndg-httpsclient
 python-numba
 python-oslo-concurrency
+python-pandas-datareader
+python-passlib
 python-paste
 python-pkginfo
 python-polars
@@ -817,7 +826,10 @@ python-recommonmark
 python-shtab
 python-slugify
 python-sphinxcontrib-spelling
+python-threadpoolctl
 python-tzlocal
+python-webob
+python-webob-docs
 python-xxhash
 qastools
 qbe
@@ -966,6 +978,7 @@ signal-desktop
 smartmontools
 snapper
 solid
+spectacle
 spice-vdagent
 squid
 sshguard

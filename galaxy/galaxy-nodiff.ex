@@ -277,7 +277,6 @@ libwnck
 libxfce4util
 libxfce4windowing
 libxml2-legacy
-lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 linux-hardened
@@ -470,7 +469,6 @@ openrct2
 opensc
 openshot
 orage
-ouch
 oxipng
 packer
 pam_mount

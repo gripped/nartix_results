@@ -33,6 +33,8 @@ grep
 gssproxy
 gzip
 iputils
+libevent
+libevent-docs
 libsasl
 libssh2
 libusb
