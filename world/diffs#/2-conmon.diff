@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=conmon
+ pkgver=2.2.1
+-pkgrel=1
++pkgrel=1.1
+ epoch=1
+ pkgdesc='OCI container runtime monitor'
  arch=(x86_64)
  url='https://github.com/containers/conmon'
  license=(APACHE)
@@ -9,6 +16,15 @@
  makedepends=(git)
  source=(
    "git+https://github.com/containers/conmon#commit=v${pkgver}"
+@@ -16,7 +16,7 @@
+ 
+ build() {
+   cd conmon
+-  make PREFIX=/usr LIBEXECDIR=/usr/lib DESTDIR="$pkgdir"
++  make DISABLE_SYSTEMD=1 PREFIX=/usr LIBEXECDIR=/usr/lib DESTDIR="$pkgdir"
+ }
+ 
+ package() {
 
 
 ############# Stripped diff below #################

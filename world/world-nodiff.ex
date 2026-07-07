@@ -414,7 +414,6 @@ cython-dev
 cython
 cython0
 d-spy
-darktable
 dart-sass
 dart
 darts
@@ -445,7 +444,6 @@ dht
 dialog
 diffstat
 diffuse
-digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -4442,7 +4440,6 @@ python-sphinx-jinja
 python-sphinx-lv2-theme
 python-sphinx-notfound-page
 python-sphinx-pytest
-python-sphinx-reredirects
 python-sphinx-theme-builder
 python-sphinx
 python-sphinx_rtd_theme
@@ -4556,7 +4553,6 @@ python-typeguard
 python-typer
 python-types-python-dateutil
 python-typing-inspection
-python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata
@@ -5856,10 +5852,6 @@ wpebackend-fdo
 wpebackend-fdo-docs
 wqy-zenhei
 wtype
-wxwidgets
-wxwidgets-common
-wxwidgets-gtk3
-wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265

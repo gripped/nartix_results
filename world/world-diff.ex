@@ -106,6 +106,7 @@ cups-filters
 cups
 libcups
 darkhttpd
+darktable
 dbus-broker
 dconf
 ddcutil
@@ -114,6 +115,7 @@ deluge-gtk
 dhcp
 dhclient
 dhcpcd
+digikam
 dns-over-https
 docker
 dolphin-emu
@@ -825,8 +827,10 @@ python-pyudev
 python-recommonmark
 python-shtab
 python-slugify
+python-sphinx-reredirects
 python-sphinxcontrib-spelling
 python-threadpoolctl
+python-typing_extensions
 python-tzlocal
 python-webob
 python-webob-docs
@@ -1188,6 +1192,10 @@ wlroots0.20
 wpewebkit
 wpewebkit-docs
 wsdd
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11vnc
 xarchiver
 xdelta3
