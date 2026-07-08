@@ -65,7 +65,6 @@ analitza
 analitza5
 anari-sdk
 android-file-transfer
-android-tools
 android-udev
 angelfish
 ansible-core
@@ -93,7 +92,6 @@ arc-icon-theme
 archey3
 archlinux-appstream-data
 ardour
-argyllcms
 aria2
 arianna
 aribb24

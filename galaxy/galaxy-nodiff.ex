@@ -80,7 +80,6 @@ chromium-bsu
 cinnamon-control-center
 cinnamon-menus
 cinnamon-screensaver
-cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cinnamon
@@ -263,7 +262,6 @@ libretro-shaders-slang
 libretro-snes9x
 libscfg
 libsfdo
-libsidplayfp
 libsignal-protocol-c
 libstaroffice
 libstaroffice-doc
@@ -454,7 +452,6 @@ nicotineplus
 nim
 nlopt
 ntpd-rs
-nushell
 nvm
 nwg-hello
 nwg-look

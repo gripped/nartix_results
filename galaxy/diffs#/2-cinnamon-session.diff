@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=cinnamon-session
+-pkgver=6.6.3
+-pkgrel=2
++pkgver=6.6.4
++pkgrel=1
+ pkgdesc='The Cinnamon session handler'
+ arch=(x86_64)
+ url='https://github.com/linuxmint/cinnamon-session'
+@@ -25,7 +25,6 @@
+   python
+   python-gobject
+   python-setproctitle
+-  systemd-libs
+   xapp
+ )
+ optdepends=('cinnamon-translations: i18n')
+@@ -36,10 +35,10 @@
+   xtrans
+ )
+ source=("git+https://github.com/linuxmint/cinnamon-session.git#tag=$pkgver")
+-b2sums=('9559ad84a78294adfea50d97c82979fb1b0309d739688096fcc41136d93aeaf677994848f8caf271e806c75aa12214cbd1acb7cf13bd3bd55d9fa523cf2cd525')
++b2sums=('3312c5d67c29096e1d9e4af9a226c0b75d39cf863107292882c8e7dcf2d35b434203f3127ef682f2fc95d22ccd3437a12cbd693e534875803abc4ca755fd55ef')
+ 
+ build() {
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     --libexecdir=lib/$pkgname
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -19,6 +19,5 @@
+ python
+ python-gobject
+ python-setproctitle
+-systemd-libs
+ xapp
+ xtrans

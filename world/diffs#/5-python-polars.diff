@@ -5,16 +5,24 @@
  pkgbase=python-polars
  pkgname=($pkgbase $pkgbase-runtime-{32,64,compat})
 -pkgver=1.41.2
-+pkgver=1.42.0
++pkgver=1.42.1
  pkgrel=1
  pkgdesc="Blazingly fast DataFrames library using Apache Arrow Columnar Format as memory model"
  arch=("x86_64")
-@@ -35,19 +35,21 @@
+@@ -9,6 +9,7 @@
+ license=('MIT')
+ options=('!lto')
+ makedepends=(
++    'zstd'
+     'maturin'
+     'rustup'
+     'python-installer'
+@@ -35,19 +36,22 @@
  _name=${pkgname#python-}
  _tag="py-$pkgver"
  source=("https://github.com/pola-rs/polars/archive/refs/tags/$_tag.tar.gz")
 -b2sums=('1cf79e4e5eeb4838c8e5f22f926fe5a15b5a85d1027763d35a9632d6815503d1d9231bed9ea70554ce7c15c686292cc0f92a315f335234b84803419048a907a4')
-+b2sums=('060c6fbe14c91b2c7465a269d06b38c00be4a05b2783c4541a59ff79eb96dc8492e81787a16629f1686d7f3f089fa54cbf5a92760a713dfff7c272dd4ddab324')
++b2sums=('8eb91480d4e3e692472b07f2f692ee677c9cead47090011b5bc791ed0c6754b2b5104c50316c0c2f357eb1fd546b1e4326ec351ec1599e14c3b6b1834df1895d')
  
  prepare() {
      cd polars-$_tag/py-polars
@@ -28,13 +36,14 @@
      cd polars-$_tag/py-polars
      python -m build --wheel --no-isolation
 +
++    export ZSTD_SYS_USE_PKG_CONFIG=1
      for runtime in 32 64 compat; do
 -        maturin build -o dist --release --locked --strip --compatibility linux --manifest-path runtime/polars-runtime-$runtime/Cargo.toml
 +        maturin build -o dist --compression-enable-large-file-support --release --locked --strip --compatibility linux --manifest-path runtime/polars-runtime-$runtime/Cargo.toml
      done
  }
  
-@@ -69,6 +71,7 @@
+@@ -69,6 +73,7 @@
          --ignore tests/unit/io/test_spreadsheet.py
          --ignore tests/unit/io/test_iceberg.py
          --deselect "tests/unit/io/database/test_read.py::test_read_database_cx_credentials"
@@ -42,15 +51,30 @@
      )
  
      test-env/bin/python -P -m pytest tests/unit "${_pytest_args[@]}"
+@@ -89,7 +94,7 @@
+ _package_runtime() {
+     local runtime=$1
+     arch=("x86_64")
+-    depends=('python')
++    depends=('zstd' 'glibc' 'libgcc' 'python')
+     provides=(python-polars-runtime)
+     pkgdesc="$pkgdesc, runtime libraries$2"
+ 
 
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -7,3 +7,4 @@
+ python-setuptools
+ python-wheel
+ rustup
++zstd
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,12 +1,12 @@
+@@ -1,12 +1,13 @@
  prepare() {
  cd polars-$_tag/py-polars
 -cargo fetch --locked --target "$(rustc --print host-tuple)"
@@ -60,6 +84,7 @@
  local runtime
  cd polars-$_tag/py-polars
  python -m build --wheel --no-isolation
++export ZSTD_SYS_USE_PKG_CONFIG=1
  for runtime in 32 64 compat; do
 -maturin build -o dist --release --locked --strip --compatibility linux --manifest-path runtime/polars-runtime-$runtime/Cargo.toml
 +maturin build -o dist --compression-enable-large-file-support --release --locked --strip --compatibility linux --manifest-path runtime/polars-runtime-$runtime/Cargo.toml

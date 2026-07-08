@@ -3,6 +3,7 @@ accountsservice
 aflplusplus
 alsa-utils
 amule
+android-tools
 ant
 ant-doc
 apache
@@ -12,6 +13,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+argyllcms
 armagetronad
 at-spi2-core
 at-spi2-core-docs

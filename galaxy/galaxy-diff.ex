@@ -3,6 +3,7 @@ alsa-utils
 autorandr
 bsd-games
 cinnamon-desktop
+cinnamon-session
 cosmic-applets
 cosmic-bg
 cosmic-comp
@@ -43,6 +44,7 @@ libodfgen
 libratbag
 libretro-dolphin
 libretro-pcsx2
+libsidplayfp
 libusbsio
 python-libusbsio
 libva-nvidia-driver
@@ -59,6 +61,7 @@ mimalloc
 mpd
 nbd
 neofetch
+nushell
 nut
 nvidia-340xx-utils
 nvidia-390xx-utils

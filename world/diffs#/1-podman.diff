@@ -5,9 +5,10 @@
  pkgbase=podman
  pkgname=(podman podman-docker)
 -pkgver=5.8.3
-+pkgver=6.0.0
- pkgrel=1
+-pkgrel=1
 -pkgdesc='Tool and library for running OCI-based containers in pods'
++pkgver=6.0.0
++pkgrel=1.1
 +pkgdesc='A tool for managing OCI containers and pods.'
  arch=(x86_64)
 -url='https://github.com/containers/podman'
@@ -15,7 +16,7 @@
  license=(Apache-2.0)
  makedepends=(
    apparmor
-@@ -20,7 +20,7 @@
+@@ -20,19 +20,20 @@
    man-db
    shadow
    sqlite
@@ -24,18 +25,22 @@
  )
  options=(!lto)
  source=(
-@@ -31,8 +31,8 @@
+   "git+$url?signed#tag=v$pkgver"
++  logdriver.conf
+ )
+ validpgpkeys=(
+   B7DBDCA456F7335E91F1C25CD3624C551D0515C4  # Matthew Heon <mheon@redhat.com>
    7CE1E6F8C90CB53E7E4D8F2D502E08DB0BBF8EEE  # Ashley Cui <acui@redhat.com>
    9E33DD8704CC03E2DEB84D9A1C1EDD7CC7C3A0DD  # Lokesh Mandvekar <lsm5@redhat.com>
  )
 -sha512sums=('294f91005d1a7f52f8696ed7fb613862e0c526749289f6257e82b7df0bf74267c2857ab0b94e5cfa58ac153517e175c1fed87860f249fafea1de395d296cebac')
 -b2sums=('c2cdeb522557855d19d8a6a90b644372acc25a1cc1c7f8b5939ec0f2facc847cc43363e01a149f24ad725d6bb7065340cb5c116830cf36e2e347aa1cdd73d018')
-+sha512sums=('9a3265f6ecc6423bb097c534e739f3c31692dfa03db14b9cdb0c8226da0493c1b12762b2f9b5d639880cd91d9172581bd2d05f407f0defdb4d5b02218a17d83d')
-+b2sums=('4c6eda2b287ecc32ba6a4c2b12b393cda29fccd14fc5f666f4610fe116ef44f19c9342f51add410a4d7cd602cb55dc53cb9fb5250c3ab4f6f47f0e97a5905515')
++sha512sums=('9a3265f6ecc6423bb097c534e739f3c31692dfa03db14b9cdb0c8226da0493c1b12762b2f9b5d639880cd91d9172581bd2d05f407f0defdb4d5b02218a17d83d' '45d52273ab0e728931bf05162481dbb7eb50c30e1525a1ea0bb2622cbe513f8210a4d4496a74b838748cd28a493710efcc09c30d1817c00612eb09b593458157')
++b2sums=('4c6eda2b287ecc32ba6a4c2b12b393cda29fccd14fc5f666f4610fe116ef44f19c9342f51add410a4d7cd602cb55dc53cb9fb5250c3ab4f6f47f0e97a5905515' '72542f4d0d1610d96ca23faa1d313b9884b4d3c559d28113970f8c4135ef608ca5b1559e671590a0946fb46d93daaa0aae14f32883bac4901066809e0e2c7262')
  
  build() {
    export CGO_CPPFLAGS="${CPPFLAGS}"
-@@ -42,7 +42,7 @@
+@@ -42,7 +43,7 @@
    export GOFLAGS="-buildmode=pie"
    export GOPATH="${srcdir}"
  
@@ -44,7 +49,7 @@
    make docker-docs -C $pkgbase
  }
  
-@@ -65,7 +65,7 @@
+@@ -65,7 +66,7 @@
      containers-common
      oci-runtime
      glibc
@@ -53,7 +58,7 @@
      gpgme libgpgme.so
      libgcc
      libseccomp libseccomp.so
-@@ -81,10 +81,11 @@
+@@ -81,10 +82,12 @@
      'podman-compose: for docker-compose compatibility'
      'podman-desktop: GUI and tray to manage Podman containers (and Kubernetes pods)'
      'podman-docker: for Docker-compatible CLI'
@@ -63,10 +68,11 @@
    make install install.completions DESTDIR="$pkgdir" PREFIX=/usr LIBEXECDIR=/usr/lib -C $pkgbase
 +
 +  rm -r $pkgdir/usr/lib/systemd
++  install -Dm644 "$srcdir/logdriver.conf" "$pkgdir/etc/containers/containers.conf.d/000-logdriver.conf"
  }
  
  package_podman-docker() {
-@@ -97,4 +98,6 @@
+@@ -97,4 +100,6 @@
    provides=(docker)
  
    make install.docker-full DESTDIR="$pkgdir" PREFIX=/usr -C $pkgbase
