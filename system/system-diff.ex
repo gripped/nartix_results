@@ -61,6 +61,7 @@ pam
 pambase
 patch
 pciutils
+pinentry
 ppp
 procps-ng
 python

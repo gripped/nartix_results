@@ -220,7 +220,6 @@ blackbox
 blinken
 blockdiag
 blosc
-blosc2
 bluedevil
 blueprint-compiler
 bluez-qt
@@ -3270,6 +3269,7 @@ python-arrow
 python-asgiref
 python-aspectlib
 python-assertpy
+python-ast-serialize
 python-asteval
 python-astor
 python-astroid
@@ -5775,7 +5775,6 @@ virt-manager
 virt-install
 virt-viewer
 virt-what
-virtiofsd
 virtualbox-guest-iso
 virtualbox
 virtualbox-ext-vnc

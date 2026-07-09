@@ -25,6 +25,7 @@ awesome
 baloo-widgets
 bash-bats
 blender
+blosc2
 blueman
 bluez
 bluez-utils
@@ -1074,6 +1075,7 @@ vault
 vcspull
 verdict
 vid.stab
+virtiofsd
 vlc
 libvlc
 vlc-cli
