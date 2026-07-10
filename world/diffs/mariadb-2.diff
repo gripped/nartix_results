@@ -1,12 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -9,12 +9,12 @@
-   'mariadb-pam')
- pkgdesc='Fast SQL database server, derived from MySQL'
- pkgver=12.3.2
--pkgrel=2
-+pkgrel=3
- arch=('x86_64')
+@@ -14,7 +14,7 @@
  license=('GPL-2.0-only')
  url='https://mariadb.org/'
  makedepends=('git' 'boost' 'bzip2' 'cmake' 'cracklib' 'curl' 'jemalloc' 'judy' 'krb5' 'liburing'
@@ -54,17 +48,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -76,7 +79,8 @@
-     -DDEFAULT_CHARSET=utf8mb4
-     -DDEFAULT_COLLATION=utf8mb4_unicode_ci
- 
--    -DENABLED_LOCAL_INFILE=ON
-+    -DENABLED_LOCAL_INFILE=OFF
-+
-     -DPLUGIN_EXAMPLE=NO
-     -DPLUGIN_FEDERATED=NO
-     -DPLUGIN_FEEDBACK=NO
-@@ -87,7 +91,7 @@
+@@ -88,7 +91,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -73,7 +57,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -181,7 +185,7 @@
+@@ -182,7 +185,7 @@
             'jemalloc'
             'libxml2' 'libxml2.so'
             'lz4' 'liblz4.so'
@@ -82,7 +66,7 @@
             'zstd' 'libzstd.so')
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
-@@ -215,8 +219,8 @@
+@@ -216,8 +219,8 @@
    mv usr/share/user_map.conf etc/security/
    mv usr/share/pam_user_map.so usr/lib/security/
  

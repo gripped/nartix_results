@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -90,7 +90,6 @@
+ 
+   cd "$srcdir/jellyfin-packaging/debian/conf"
+ 
+-  install -vDm644 jellyfin.service -t "$pkgdir/usr/lib/systemd/system"
+   install -vDm644 "$srcdir/sysusers.conf" "$pkgdir/usr/lib/sysusers.d/$_pkgname.conf"
+   install -vDm644 "$srcdir/tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/$_pkgname.conf"
+   install -vdm750 "$pkgdir/etc/$_pkgname"

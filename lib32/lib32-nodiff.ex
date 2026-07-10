@@ -5,7 +5,6 @@ lib32-alsa-plugins
 lib32-amdvlk
 lib32-attr
 lib32-audit
-lib32-brotli
 lib32-bzip2
 lib32-cairo
 lib32-cdparanoia
@@ -26,6 +25,7 @@ lib32-flex
 lib32-fontconfig
 lib32-freetype2
 lib32-fribidi
+lib32-gdk-pixbuf2
 lib32-gettext
 lib32-giflib
 lib32-glib-networking
@@ -102,6 +102,7 @@ lib32-libsm
 lib32-libsndfile
 lib32-libsoup
 lib32-libsoup3
+lib32-libssh2
 lib32-libtasn1
 lib32-libthai
 lib32-libtheora

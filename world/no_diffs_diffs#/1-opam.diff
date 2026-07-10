@@ -1,11 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=opam
- pkgver=2.5.1
--pkgrel=1
-+pkgrel=2
- pkgdesc='OCaml package manager'
+@@ -6,14 +6,7 @@
  arch=(x86_64)
  url='https://opam.ocaml.org/'
+ license=(LGPL-2.1-only)
+-depends=(
+-  bubblewrap
+-  libgcc
+-  libstdc++
+-  glibc
+-  ocaml-compiler-libs
+-  unzip
+-)
++depends=(bubblewrap gcc-libs glibc ocaml-compiler-libs unzip)
+ optdepends=('darcs: For downloading packages with darcs'
+             'git: For downloading packages with git'
+             'mercurial: For downloading packages with mercurial'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,5 @@
+ bubblewrap
++gcc-libs
+ glibc
+-libgcc
+-libstdc++
+ ocaml-compiler-libs
+ unzip

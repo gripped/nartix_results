@@ -1,0 +1,700 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -64,6 +64,7 @@
+   tcl
+ )
+ options=(
++  debug
+   !emptydirs
+   !lto
+ )
+@@ -84,10 +85,6 @@
+             '44ea973558842f3f4bd666bdaf6e810fd7b7c7bd36b5cc4c69f93d2cd0124fc7'
+             '1773f5137f08ac1f48f0f7297e324d5d868d55201c03068670ee4602babdef2f'
+             '838e14d4ef76079107a5373316598025915eaf747a10522ec9f8842125ca9a8e')
+-pkgver() {
+-  cd gcc
+-  echo "$(cat gcc/BASE-VER)+$(git describe --abbrev=12 --tags | sed 's/[^-]*-[^-]*-//;s/[^-]*-/r&/;s/-/+/g;s/_/./')"
+-}
+ 
+ prepare() {
+   [[ ! -d gcc ]] && ln -s gcc-${pkgver/+/-} gcc
+@@ -110,7 +107,7 @@
+       --libexecdir=/usr/lib
+       --mandir=/usr/share/man
+       --infodir=/usr/share/info
+-      --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues \
++      --with-bugurl=https://gitea.artixlinux.org/packages/gcc/issues
+       --with-build-config=bootstrap-lto
+       --with-gcc-major-version-only
+       --with-linker-hash-style=gnu
+@@ -176,16 +173,6 @@
+   "$srcdir/gcc/contrib/test_summary"
+ }
+ 
+-_pick() {
+-  local p="$1" f d; shift
+-  for f; do
+-    d="$srcdir/$p/${f#$pkgdir/}"
+-    mkdir -vp "$(dirname "$d")"
+-    mv -v "$f" "$d"
+-    rmdir -vp --ignore-fail-on-non-empty "$(dirname "$f")"
+-  done
+-}
+-
+ _install_runtime_library_exception() {
+   install -Dm644 "$srcdir/gcc/COPYING.RUNTIME" \
+     "$pkgdir/usr/share/licenses/$pkgname/RUNTIME.LIBRARY.EXCEPTION"
+@@ -220,135 +207,70 @@
+     $pkgname-multilib
+   )
+   options=(
++    debug
+     !emptydirs
+     staticlibs
+   )
+ 
+   cd gcc-build
+-  make DESTDIR="$pkgdir" install
+-  make -C gcc DESTDIR="$pkgdir" jit.install-common jit.install-info
+-
+-  (
+-    cd "$pkgdir"
+-
+-    _pick gcc-ada usr/bin/gnat{,bind,chop,clean,kr,link,ls,make,name,prep}
+-    _pick gcc-ada "$_libdir"/{,32/}ada_target_properties
+-    _pick gcc-ada "$_libdir"/{,32/}ada{include,lib}/
+-    _pick gcc-ada "$_libdir"/gnat1
+-    _pick gcc-ada usr/share/info/gnat{-style,_rm,_ugn}.info
+-
+-    _pick gcc-d usr/bin/{gdc,"$CHOST"-gdc}
+-    _pick gcc-d "$_libdir"/d21
+-    _pick gcc-d "$_libdir"/include/d/
+-    _pick gcc-d usr/lib{,32}/libg{druntime,phobos}.a
+-    _pick gcc-d usr/lib{,32}/libgphobos.spec
+-    _pick gcc-d usr/share/info/gdc.info
+-    _pick gcc-d usr/share/man/man1/gdc.1
+-
+-    _pick gcc-fortran usr/bin/{gfortran,"$CHOST"-gfortran}
+-    _pick gcc-fortran "$_libdir"/{,32/}finclude/
+-    _pick gcc-fortran "$_libdir"/{,32/}libcaf_{shmem,single}.a
+-    _pick gcc-fortran "$_libdir"/f951
+-    _pick gcc-fortran "$_libdir"/include/ISO_Fortran_binding.h
+-    _pick gcc-fortran usr/lib{,32}/libgfortran.spec
+-    _pick gcc-fortran usr/share/info/gfortran.info
+-    _pick gcc-fortran usr/share/man/man1/gfortran.1
+-
+-    _pick gcc-gcobol usr/bin/{gcobc,gcobol,"$CHOST"-{gcobc,gcobol}}
+-    _pick gcc-gcobol "$_libdir"/cobol/
+-    _pick gcc-gcobol "$_libdir"/cobol1
+-    _pick gcc-gcobol usr/lib/libgcobol.spec
+-    _pick gcc-gcobol usr/share/man/man1/gcobol.1
+-    _pick gcc-gcobol usr/share/man/man3/gcobol-io.3
+-
+-    _pick gcc-go usr/bin/{gccgo,go,gofmt,"$CHOST"-gccgo}
+-    _pick gcc-go "$_libdir"/{buildid,cgo,go1,test2json,vet}
+-    _pick gcc-go usr/lib{,32}/go/
+-    _pick gcc-go usr/lib{,32}/lib{go,gobegin,golibbegin}.a
+-    _pick gcc-go usr/share/info/gccgo.info
+-    _pick gcc-go usr/share/man/man1/{gccgo,go,gofmt}.1
+-
+-    _pick gcc-m2 usr/bin/{gm2,"$CHOST"-gm2}
+-    _pick gcc-m2 "$_libdir"/cc1gm2
+-    _pick gcc-m2 usr/share/info/m2.info
+-    _pick gcc-m2 usr/share/man/man1/gm2.1
+-
+-    _pick gcc-objc "$_libdir"/include/objc/
+-    _pick gcc-objc "$_libdir"/cc1obj*
+-
+-    _pick gcc-rust usr/bin/{gccrs,"$CHOST"-gccrs}
+-    _pick gcc-rust "$_libdir"/crab1
+-
+-    _pick lib32-gcc-libs usr/lib32/libasan.{a,so*}
+-    _pick lib32-gcc-libs usr/lib32/libatomic.so*
+-    _pick lib32-gcc-libs usr/lib32/libgcc_s.so.*
+-    _pick lib32-gcc-libs usr/lib32/libgdruntime.so*
+-    _pick lib32-gcc-libs usr/lib32/libgfortran.{a,so*}
+-    _pick lib32-gcc-libs usr/lib32/libgo.so*
+-    _pick lib32-gcc-libs usr/lib32/libgomp.{a,so*}
+-    _pick lib32-gcc-libs usr/lib32/libgphobos.so*
+-    _pick lib32-gcc-libs usr/lib32/libitm.{a,so*}
+-    _pick lib32-gcc-libs usr/lib32/libobjc.{a,so*}
+-    _pick lib32-gcc-libs usr/lib32/libquadmath.{a,so*}
+-    _pick lib32-gcc-libs usr/lib32/libstdc++.so*
+-    _pick lib32-gcc-libs usr/lib32/libubsan.{a,so*}
+-
+-    _pick libasan usr/lib/libasan.{a,so*}
+-
+-    _pick libatomic usr/lib/libatomic.so*
+-
+-    _pick libgcc usr/lib/libgcc_s.so.*
+-
+-    _pick libgccjit usr/include/libgccjit*
+-    _pick libgccjit usr/lib/libgccjit.so*
+-    _pick libgccjit usr/share/info/libgccjit.info
+-
+-    _pick libgcobol usr/lib/libgcobol.{a,so*}
+-
+-    _pick libgfortran usr/lib/libgfortran.{a,so*}
+-
+-    _pick libgm2 "$_libdir"/{,32/}m2/
+-    _pick libgm2 usr/lib{,32}/libm2{cor,iso,log,min,pim}.{a,so*}
+-
+-    _pick libgo usr/lib/libgo.so*
+-
+-    _pick libgomp usr/lib/libgomp.{a,so*}
+-    _pick libgomp usr/share/info/libgomp.info
+-
+-    _pick libgphobos usr/lib/libgdruntime.so*
+-    _pick libgphobos usr/lib/libgphobos.so*
+-
+-    _pick libhwasan usr/lib/libhwasan.{a,so*}
+-
+-    _pick libitm usr/lib/libitm.{a,so*}
+-    _pick libitm usr/share/info/libitm.info
+-
+-    _pick liblsan usr/lib/liblsan.{a,so*}
+-
+-    _pick libobjc usr/lib/libobjc.{a,so*}
+-
+-    _pick libquadmath usr/lib/libquadmath.{a,so*}
+-    _pick libquadmath usr/share/info/libquadmath.info
+-
+-    _pick libstdc++ usr/lib/libstdc++.so*
+-    _pick libstdc++ usr/share/locale/{de,fr}/LC_MESSAGES/libstdc++.mo
+-
+-    _pick libtsan usr/lib/libtsan.{a,so*}
+-
+-    _pick libubsan usr/lib/libubsan.{a,so*}
+-
+-    _pick lto-dump usr/bin/lto-dump
+-    _pick lto-dump usr/share/man/man1/lto-dump.1
+-  )
+-
++
++  make -C gcc DESTDIR="$pkgdir" install-driver install-cpp install-gcc-ar \
++    c++.install-common install-headers install-plugin install-lto-wrapper
++
++  install -m755 -t "$pkgdir/usr/bin/" gcc/gcov{,-tool}
++  install -m755 -t "$pkgdir/$_libdir/" gcc/{cc1,cc1plus,collect2,lto1}
++
++  make -C $CHOST/libgcc DESTDIR="$pkgdir" install
++  make -C $CHOST/32/libgcc DESTDIR="$pkgdir" install
++
++  make -C $CHOST/libstdc++-v3/src DESTDIR="$pkgdir" install
++  make -C $CHOST/libstdc++-v3/include DESTDIR="$pkgdir" install
++  make -C $CHOST/libstdc++-v3/libsupc++ DESTDIR="$pkgdir" install
++  make -C $CHOST/libstdc++-v3/python DESTDIR="$pkgdir" install
++  make -C $CHOST/libatomic DESTDIR="$pkgdir" install
++  make -C $CHOST/32/libstdc++-v3/src DESTDIR="$pkgdir" install
++  make -C $CHOST/32/libstdc++-v3/include DESTDIR="$pkgdir" install
++  make -C $CHOST/32/libstdc++-v3/libsupc++ DESTDIR="$pkgdir" install
++  make -C $CHOST/32/libatomic DESTDIR="$pkgdir" install
++
++  make DESTDIR="$pkgdir" install-libcc1
+   install -d "$pkgdir/usr/share/gdb/auto-load/usr/lib"
+-  mv ../libstdc++/usr/lib/libstdc++.so.6.*-gdb.py \
++  mv "$pkgdir"/usr/lib/libstdc++.so.6.*-gdb.py \
+     "$pkgdir/usr/share/gdb/auto-load/usr/lib/"
+-
++  rm "$pkgdir"/usr/lib{,32}/libstdc++.so*
++  rm "$pkgdir"/usr/lib{,32}/libatomic.so*
++  mv -v "$pkgdir"/usr/lib/libatomic* "$pkgdir/$_libdir/"
++  mv -v "$pkgdir"/usr/lib32/libatomic* "$pkgdir/$_libdir/32"
++
++  make DESTDIR="$pkgdir" install-fixincludes
++  make -C gcc DESTDIR="$pkgdir" install-mkheaders
++
++  make -C lto-plugin DESTDIR="$pkgdir" install
+   install -dm755 "$pkgdir"/usr/lib/bfd-plugins/
+   ln -s /$_libdir/liblto_plugin.so \
+     "$pkgdir/usr/lib/bfd-plugins/"
+ 
++  make -C $CHOST/libgomp DESTDIR="$pkgdir" install-nodist_{libsubinclude,toolexeclib}HEADERS
++  make -C $CHOST/libitm DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/libquadmath DESTDIR="$pkgdir" install-nodist_libsubincludeHEADERS
++  make -C $CHOST/libsanitizer DESTDIR="$pkgdir" install-nodist_{saninclude,toolexeclib}HEADERS
++  make -C $CHOST/libsanitizer/asan DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/libsanitizer/hwasan DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/libsanitizer/tsan DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/libsanitizer/lsan DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/32/libgomp DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/32/libitm DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++  make -C $CHOST/32/libsanitizer DESTDIR="$pkgdir" install-nodist_{saninclude,toolexeclib}HEADERS
++  make -C $CHOST/32/libsanitizer/asan DESTDIR="$pkgdir" install-nodist_toolexeclibHEADERS
++
++  make -C gcc DESTDIR="$pkgdir" install-man install-info
++  rm "$pkgdir"/usr/share/man/man1/{gccgo,gfortran,lto-dump,gdc,gm2,gcobol}.1
++  rm "$pkgdir"/usr/share/man/man3/gcobol-io.3
++  rm "$pkgdir"/usr/share/info/{gccgo,gfortran,gnat-style,gnat_rm,gnat_ugn,gdc,m2}.info
++
++  make -C libcpp DESTDIR="$pkgdir" install
++  make -C gcc DESTDIR="$pkgdir" install-po
++
+   ln -s gcc "$pkgdir"/usr/bin/cc
+ 
+   for binary in {c++,g++,gcc,gcc-ar,gcc-nm,gcc-ranlib}; do
+@@ -360,18 +282,8 @@
+ 
+   make -C $CHOST/libstdc++-v3/doc DESTDIR="$pkgdir" doc-install-man
+ 
+-  mv -v "$pkgdir"/usr/lib/libgcc_s{,_asneeded}.so "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/libgcc_s{,_asneeded}.so "$pkgdir/$_libdir/32/"
+-  mv -v "$pkgdir"/usr/lib/libatomic* "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/libatomic* "$pkgdir/$_libdir/32/"
+-  mv -v "$pkgdir"/usr/lib/*_preinit.o "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/*_preinit.o "$pkgdir/$_libdir/32/"
+-  mv -v "$pkgdir"/usr/lib/*.spec "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/*.spec "$pkgdir/$_libdir/32/"
+-  mv -v "$pkgdir"/usr/lib/libstdc++* "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/libstdc++* "$pkgdir/$_libdir/32/"
+-  mv -v "$pkgdir"/usr/lib/libsupc++.a "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/libsupc++.a "$pkgdir/$_libdir/32/"
++  rm -f "$pkgdir"/usr/lib{,32}/libgcc_s{,_asneeded}.so*
++  rm -f "$pkgdir"/usr/lib32/libstdc++.so
+ 
+   python -m compileall "$pkgdir/usr/share/gcc-${pkgver%%+*}/"
+   python -O -m compileall "$pkgdir/usr/share/gcc-${pkgver%%+*}/"
+@@ -399,11 +311,23 @@
+     $pkgname-multilib
+   )
+   options=(
++    debug
+     !emptydirs
+     staticlibs
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build/gcc
++  make DESTDIR="$pkgdir" ada.install-{common,info}
++  install -m755 gnat1 "$pkgdir/$_libdir"
++
++  cd "$srcdir"/gcc-build/$CHOST/libada
++  make DESTDIR="$pkgdir" INSTALL="install" \
++    INSTALL_DATA="install -m644" install-libada
++
++  cd "$srcdir"/gcc-build/$CHOST/32/libada
++  make DESTDIR="$pkgdir" INSTALL="install" \
++    INSTALL_DATA="install -m644" install-libada
++
+   ln -s gcc "$pkgdir/usr/bin/gnatgcc"
+ 
+   mv "$pkgdir"/$_libdir/adalib/libgna{rl,t}-${pkgver%%.*}.so "$pkgdir/usr/lib"
+@@ -440,16 +364,21 @@
+     gdc
+   )
+   options=(
++    debug
+     !emptydirs
+     staticlibs
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
+-  mkdir -v "$pkgdir/$_libdir/32"
+-  mv -v "$pkgdir"/usr/lib/libg{druntime,phobos}.a "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir"/usr/lib32/libg{druntime,phobos}.a "$pkgdir/$_libdir/32"
+-  mv -v "$pkgdir/usr/lib/libgphobos.spec" "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir/usr/lib32/libgphobos.spec" "$pkgdir/$_libdir/32"
++  cd gcc-build
++  make -C gcc DESTDIR="$pkgdir" d.install-{common,man,info}
++
++  install -Dm755 gcc/gdc "$pkgdir"/usr/bin/gdc
++  install -Dm755 gcc/d21 "$pkgdir"/"$_libdir"/d21
++
++  make -C $CHOST/libphobos DESTDIR="$pkgdir" install
++  rm -f "$pkgdir/usr/lib/"lib{gphobos,gdruntime}.so*
++  rm -f "$pkgdir/usr/lib32/"lib{gphobos,gdruntime}.so*
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -473,10 +402,17 @@
+     $pkgname-multilib
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libgfortran DESTDIR="$pkgdir" install-cafexeclibLTLIBRARIES \
++    install-{toolexeclibDATA,nodist_fincludeHEADERS,gfor_cHEADERS}
++  make -C $CHOST/32/libgfortran DESTDIR="$pkgdir" install-cafexeclibLTLIBRARIES \
++    install-{toolexeclibDATA,nodist_fincludeHEADERS,gfor_cHEADERS}
++  make -C $CHOST/libgomp DESTDIR="$pkgdir" install-nodist_fincludeHEADERS
++  make -C gcc DESTDIR="$pkgdir" fortran.install-{common,man,info}
++  install -Dm755 gcc/f951 "$pkgdir/$_libdir/f951"
++
+   ln -s gfortran "$pkgdir/usr/bin/f95"
+-  mv -v "$pkgdir/usr/lib/libgfortran.spec" "$pkgdir/$_libdir/"
+-  mv -v "$pkgdir/usr/lib32/libgfortran.spec" "$pkgdir/$_libdir/32"
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -494,8 +430,13 @@
+     zstd
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
+-  mv -v "$pkgdir/usr/lib/libgcobol.spec" "$pkgdir/$_libdir/"
++  cd gcc-build
++  make -C gcc DESTDIR="$pkgdir" cobol.install-{common,man,info}
++
++  install -Dm755 gcc/gcobol "$pkgdir"/usr/bin/gcobol
++
++  install -Dm644 $CHOST/libgcobol/libgcobol.spec "$pkgdir"/$_libdir/
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -523,9 +464,18 @@
+     go
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
+-  _install_runtime_library_exception
+-}
++  cd gcc-build
++  make -C $CHOST/libgo DESTDIR="$pkgdir" install-exec-am
++  make -C $CHOST/32/libgo DESTDIR="$pkgdir" install-exec-am
++  make DESTDIR="$pkgdir" install-gotools
++  make -C gcc DESTDIR="$pkgdir" go.install-{common,man,info}
++
++  rm -f "$pkgdir"/usr/lib{,32}/libgo.so*
++  install -Dm755 gcc/go1 "$pkgdir/$_libdir/go1"
++
++  _install_runtime_library_exception
++}
++
+ 
+ package_gcc-libs() {
+   pkgdesc='Runtime libraries shipped by GCC'
+@@ -563,7 +513,12 @@
+     zstd
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C gcc DESTDIR="$pkgdir" m2.install-{common,man,info}
++
++  install -Dm755 gcc/cc1gm2 "$pkgdir/$_libdir"/cc1gm2
++  install -Dm755 gcc/gm2 "$pkgdir"/usr/bin/gm2
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -587,7 +542,11 @@
+     $pkgname-multilib
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make DESTDIR="$pkgdir" -C $CHOST/libobjc install-headers
++  install -dm755 "$pkgdir/$_libdir"
++  install -m755 gcc/cc1obj{,plus} "$pkgdir/$_libdir/"
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -604,7 +563,12 @@
+     zstd
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C gcc DESTDIR="$pkgdir" rust.install-{common,man,info}
++
++  install -Dm755 gcc/gccrs "$pkgdir"/usr/bin/gccrs
++  install -Dm755 gcc/crab1 "$pkgdir"/usr/bin/crab1
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -627,11 +591,35 @@
+     libubsan.so
+   )
+   options=(
++    debug
+     !emptydirs
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
+-  rm -v "$pkgdir"/usr/lib32/libstdc++.so.6.0.35-gdb.py
++  cd gcc-build
++
++  make -C $CHOST/32/libgcc DESTDIR="$pkgdir" install-shared
++  rm -f "$pkgdir/$_libdir/32/libgcc_eh.a"
++  mv -v "$pkgdir"/usr/lib32/libgcc_s{,_asneeded}.so "$pkgdir/$_libdir/32"
++
++  for lib in libatomic \
++             libgcobol \
++             libgfortran \
++             libgo \
++             libgomp \
++             libitm \
++             libquadmath \
++             libsanitizer/{a,l,ub}san \
++             libstdc++-v3/src; do
++    make -C $CHOST/32/$lib DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++  done
++
++  make -C $CHOST/32/libobjc DESTDIR="$pkgdir" install-libs
++
++  make -C $CHOST/libphobos DESTDIR="$pkgdir" install
++  rm -f "$pkgdir"/usr/lib32/libgphobos.spec
++
++  rm -rf "$pkgdir"/usr/lib
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -646,7 +634,10 @@
+     libasan.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libsanitizer/asan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -659,7 +650,10 @@
+     libatomic.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libatomic DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -672,7 +666,11 @@
+     libgcc_s.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libgcc DESTDIR="$pkgdir" install-shared
++  rm -f "$pkgdir/$_libdir/libgcc_eh.a"
++  mv -v "$pkgdir"/usr/lib/libgcc_s{,_asneeded}.so "$pkgdir/$_libdir/"
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -692,7 +690,9 @@
+     libgccjit.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C gcc DESTDIR="$pkgdir" jit.install-common jit.install-info
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -707,7 +707,9 @@
+     libgcobol.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libgcobol DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -721,7 +723,9 @@
+     libgfortran.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libgfortran DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -738,7 +742,12 @@
+     libm2pim.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libgm2 DESTDIR="$pkgdir" install
++
++  rm -rf "$pkgdir"/usr/lib32/
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -752,7 +761,9 @@
+     libgo.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libgo DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -765,7 +776,11 @@
+     libgomp.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libgomp DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++  make -C $CHOST/libgomp DESTDIR="$pkgdir" install-info
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -780,7 +795,14 @@
+     libgphobos.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libphobos DESTDIR="$pkgdir" install
++  rm -rf "$pkgdir"/$_libdir/include/d/
++  rm -f "$pkgdir"/usr/lib/libgphobos.spec
++
++  rm -rf "$pkgdir"/usr/lib32/
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -795,7 +817,10 @@
+     libhwasan.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libsanitizer/hwasan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -809,7 +834,11 @@
+     libitm.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libitm DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++  make -C $CHOST/libitm DESTDIR="$pkgdir" install-info
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -824,7 +853,10 @@
+     liblsan.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libsanitizer/lsan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -838,7 +870,11 @@
+     libobjc.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libobjc DESTDIR="$pkgdir" install-libs
++
++  rm -rf "$pkgdir"/usr/lib32/
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -852,7 +888,11 @@
+     libquadmath.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libquadmath DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++  make -C $CHOST/libquadmath DESTDIR="$pkgdir" install-info
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -866,7 +906,10 @@
+     libstdc++.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++  make -C $CHOST/libstdc++-v3/src DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++  make -C $CHOST/libstdc++-v3/po DESTDIR="$pkgdir" install
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -881,7 +924,10 @@
+     libtsan.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libsanitizer/tsan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -896,7 +942,10 @@
+     libubsan.so
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
++  cd gcc-build
++
++  make -C $CHOST/libsanitizer/ubsan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
++
+   _install_runtime_library_exception
+ }
+ 
+@@ -913,6 +962,8 @@
+     zstd
+   )
+ 
+-  mv -v "$pkgname"/* "$pkgdir"
+-  _install_runtime_library_exception
+-}
++  cd gcc-build
++  make -C gcc DESTDIR="$pkgdir" lto.install-{common,man,info}
++
++  _install_runtime_library_exception
++}
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ --libexecdir=/usr/lib
+ --mandir=/usr/share/man
+ --infodir=/usr/share/info
+---with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues \
++--with-bugurl=https://gitea.artixlinux.org/packages/gcc/issues
+ --with-build-config=bootstrap-lto
+ --with-gcc-major-version-only
+ --with-linker-hash-style=gnu

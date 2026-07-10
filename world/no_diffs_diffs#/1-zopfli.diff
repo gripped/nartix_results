@@ -1,0 +1,7 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -48,4 +48,3 @@
+   DESTDIR="${pkgdir}" cmake --install build
+   install -vDm 644 ${pkgname}/README* -t "${pkgdir}/usr/share/doc/${pkgname}/"
+ }
+-

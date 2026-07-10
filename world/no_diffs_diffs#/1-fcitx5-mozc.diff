@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -43,14 +43,7 @@
+ arch=('x86_64')
+ url="https://github.com/google/mozc"
+ license=('BSD-3-Clause AND Apache-2.0 AND LGPL-2.0-or-later AND LicenseRef-Unicode-DFS-2015 AND LicenseRef-NAIST-2003')
+-depends=(
+-  'qt6-base'
+-  'fcitx5'
+-  'hicolor-icon-theme'
+-  'libgcc'
+-  'libstdc++'
+-  'glibc'
+-)
++depends=('qt6-base' 'fcitx5' 'hicolor-icon-theme' 'gcc-libs' 'glibc')
+ makedepends=('git' 'bazelisk' 'python')
+ replaces=('mozc-fcitx')
+ conflicts=('mozc' 'mozc-server' 'mozc-utils-gui' 'mozc-fcitx' 'fcitx-mozc')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,9 +1,8 @@
+ bazelisk
+ fcitx5
++gcc-libs
+ git
+ glibc
+ hicolor-icon-theme
+-libgcc
+-libstdc++
+ python
+ qt6-base

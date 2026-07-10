@@ -65,6 +65,7 @@ analitza
 analitza5
 anari-sdk
 android-file-transfer
+android-tools
 android-udev
 angelfish
 ansible-core
@@ -92,6 +93,7 @@ arc-icon-theme
 archey3
 archlinux-appstream-data
 ardour
+argyllcms
 aria2
 arianna
 aribb24
@@ -101,6 +103,7 @@ ark
 arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
+armagetronad
 arpack
 arrow
 artikulate
@@ -124,7 +127,6 @@ aspell-sv
 aspell-uk
 aspell
 assimp
-astromenace
 astyle
 atftp
 atkmm-2.36
@@ -184,6 +186,7 @@ ayatana-ido
 b3sum
 babl
 backuppc
+baloo-widgets
 baloo
 baloo5
 bamf
@@ -220,6 +223,7 @@ blackbox
 blinken
 blockdiag
 blosc
+blosc2
 bluedevil
 blueprint-compiler
 bluez-qt
@@ -265,7 +269,6 @@ python-pybullet
 byacc
 bzip3
 c-ares
-cabextract
 cairo
 cairo-docs
 cairomm-1.16
@@ -276,6 +279,7 @@ calc
 calcurse
 calendarsupport
 calf
+calligra
 camlp-streams
 camlp4
 cantarell-fonts
@@ -372,6 +376,7 @@ compiler-rt20
 composefs
 confuse
 consul
+containers-common
 convertlit
 coordgen
 copr-cli
@@ -395,6 +400,7 @@ csound-doc
 ctags
 ctpl
 ctwm
+cuda
 cudnn
 cunit
 cups-pdf
@@ -411,6 +417,7 @@ cython-dev
 cython
 cython0
 d-spy
+darktable
 dart-sass
 dart
 darts
@@ -431,6 +438,8 @@ debootstrap
 decibels
 default-cursors
 dejagnu
+deluge
+deluge-gtk
 deno
 desktop-file-utils
 dev86
@@ -441,6 +450,7 @@ dht
 dialog
 diffstat
 diffuse
+digikam
 directx-headers
 directx-shader-compiler
 discount
@@ -493,11 +503,13 @@ dragon
 dropbear
 dropbear-scp
 dssi
+dtc
 duktape
 dump_syms
 dune
 duplicity
 dvd-rw-tools
+dvdauthor
 dvisvgm
 dzen2
 easytag
@@ -614,12 +626,15 @@ fcitx-qt6
 fcitx
 fcitx5-configtool
 fcitx5-gtk
+fcitx5-mozc
 fcitx5-qt
 fd
 featherpad
 feh
 festival
 ffcall
+ffmpeg
+ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 ffnvcodec-headers
@@ -649,6 +664,7 @@ flameshot
 flashrom
 flatbuffers
 python-flatbuffers
+flatpak-builder
 flatpak-kcm
 flickcurl
 fltk
@@ -685,6 +701,7 @@ freetds
 freetype2
 freetype2-demos
 freetype2-docs
+frei0r-plugins
 fribidi
 fstrm
 fsverity-utils
@@ -712,6 +729,8 @@ python-gdal
 gdb
 gdb-common
 gdk-pixbuf-xlib
+gdk-pixbuf2
+gdk-pixbuf2-docs
 gdl
 geany-plugins
 geany
@@ -767,8 +786,7 @@ glu
 glusterfs
 glycin
 glycin-gtk4
-glycin1
-glycin1-gtk4
+glycin-docs
 gmic
 gimp-plugin-gmic
 gmime3
@@ -1359,6 +1377,9 @@ kdoctools
 kdsingleapplication
 kdsoap-ws-discovery-client
 kdsoap
+kea
+"$pkgbase
+"$pkgbase
 keditbookmarks
 keepassxc
 kemoticons
@@ -1517,6 +1538,7 @@ kpublictransport
 kqtquickcharts
 kquickcharts
 kquickcharts5
+kquickimageeditor
 krdc
 krecorder
 krename
@@ -1544,7 +1566,6 @@ ksnip
 kspaceduel
 ksquares
 ksshaskpass
-kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -1596,7 +1617,6 @@ kyotocabinet
 l-smash
 ladspa
 lager
-lame
 languagetool
 lapack
 blas
@@ -1713,6 +1733,7 @@ libdmapsharing
 libdmtx
 libdnet
 libdom
+libdovi
 libdv
 libdvbpsi
 libdvdcss
@@ -1814,6 +1835,7 @@ libisoburn
 libisofs
 libixion
 libjcat
+libjpeg-turbo
 libjuice
 libjxl
 libjxl-doc
@@ -1842,6 +1864,7 @@ libktorrent
 liblangtag
 liblas
 liblc3
+libldac
 libliftoff
 liblo
 liblo-docs
@@ -2016,6 +2039,7 @@ libsoup
 libsoup-docs
 libsoup3
 libsoup3-docs
+libsoxr
 libspatialindex
 libspatialite
 libspectre
@@ -2040,7 +2064,6 @@ libteam-docs
 libtermkey
 libthai
 libtheora
-libtiff
 libtiger
 libtlsrpt
 libtomcrypt
@@ -2063,6 +2086,7 @@ libusbmuxd
 libutf8proc
 libutp
 libuv
+libva-intel-driver
 libva-utils
 libva-vdpau-driver
 libva
@@ -2110,7 +2134,6 @@ libxdg-basedir
 libxdmcp
 libxext
 libxfixes
-libxfont2
 libxft
 libxi
 libxinerama
@@ -2150,7 +2173,6 @@ libzen
 libzip
 libzmf
 liferea
-lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightsoff
 lighttpd
@@ -2329,6 +2351,8 @@ kvantum-theme-materia
 materialx
 mathjax2
 matterbridge
+maturin
+python-maturin
 maven
 mbedtls
 mbedtls2
@@ -2384,6 +2408,7 @@ mkdocs
 mkdocstrings
 mktorrent
 mlt
+mm-common
 mmtf-cpp
 mobile-broadband-provider-info
 mod_dnssd
@@ -2532,6 +2557,7 @@ oath-toolkit
 obconf-qt
 obs-studio
 obs-studio-plugin-browser
+ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
 ocaml-ctypes
@@ -2569,11 +2595,18 @@ blas-openblas
 blas64-openblas
 openbsd-netcat
 opencascade
+opencc
+opencc-doc
 opencl-clhpp
 opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendoas
 openexr
@@ -2596,6 +2629,8 @@ openpmix
 openpmix-docs
 openscenegraph
 openshadinglanguage
+opensips
+openslide
 opensmtpd-filter-dkimsign
 opensmtpd-filter-rspamd
 opensmtpd-filter-senderscore
@@ -2661,6 +2696,7 @@ passff-host
 passt
 pastebinit
 pasystray
+patchelf
 patchutils
 pavucontrol-qt
 pavucontrol
@@ -3231,11 +3267,13 @@ python-aiosmtpd
 python-aiosqlite
 python-aiostream
 python-aiounittest
+python-alembic
 python-altair
 python-amqp
 python-aniso8601
 python-annotated-doc
 python-annotated-types
+python-ansi2html
 python-ansible-compat
 python-ansiwrap
 python-antlr4
@@ -3278,6 +3316,7 @@ python-astunparse
 python-async-lru
 python-async-timeout
 python-async_generator
+python-asyncpg
 python-asynctest
 python-atomicwrites
 python-atpublic
@@ -3341,6 +3380,7 @@ python-bowler
 python-bracex
 python-braintree
 python-breathe
+python-brotlicffi
 python-btchip
 python-btrees
 python-build
@@ -3376,6 +3416,8 @@ python-changelog-chug
 python-characteristic
 python-chardet
 python-charset-normalizer
+python-cheetah3
+python-cheetah3-docs
 python-cheroot
 python-cherrypy
 python-cjkwrap
@@ -3400,6 +3442,7 @@ python-cloudflare
 python-cloudpickle
 python-cmake-build-extension
 python-cmarkgfm
+python-cmd2
 python-cmsis-pack-manager
 python-cogapp
 python-colorama
@@ -3471,6 +3514,7 @@ python-deepdiff
 python-deepmerge
 python-defusedxml
 python-dep-logic
+python-deprecated
 python-deprecation
 python-devtools
 python-diff-cover
@@ -3498,6 +3542,7 @@ python-django-guardian
 python-django-haystack
 python-django-mailman3
 python-django-ninja
+python-django-picklefield
 python-django-q
 python-django-q2
 python-django-rest-framework
@@ -3517,6 +3562,7 @@ python-dotenv
 python-doublex-expects
 python-doublex
 python-dpcontracts
+python-dropbox
 python-dulwich
 python-dunamai
 python-durationpy
@@ -3555,6 +3601,7 @@ python-falcon
 python-fastapi
 python-fastbencode
 python-fasteners
+python-fastimport
 python-fastjsonschema
 python-fastnumbers
 python-fastparquet
@@ -3627,6 +3674,7 @@ python-geoip
 python-geoip2
 python-geopandas
 python-geopy
+python-gevent-websocket
 python-gevent
 python-gherkin
 python-ghp-import
@@ -3647,6 +3695,7 @@ python-google-auth
 python-googleapis-common-protos
 python-gp-libs
 python-gpgme
+python-graphene
 python-graphql-core
 python-graphql-relay
 python-graphviz
@@ -3679,10 +3728,10 @@ python-hkdf
 python-hpack
 python-html2text
 python-html5-parser
+python-html5lib
 python-html5tagger
 python-http-parser
 python-httpcore
-python-httplib2
 python-httpretty
 python-httptools
 python-httpx-aiohttp
@@ -3803,6 +3852,8 @@ python-kombu
 python-krb5
 python-kubernetes
 python-lark-parser
+python-lazr.config
+python-lazr.delegates
 python-lazy-object-proxy
 python-ldap
 python-ldap3
@@ -3824,6 +3875,7 @@ python-linkify-it-py
 python-linux-procfs
 python-littleutils
 python-livereload
+python-llvmlite
 python-lmdb
 python-localzone
 python-locket
@@ -3832,6 +3884,7 @@ python-logbook
 python-loguru
 python-logutils
 python-looseversion
+python-lsp-black
 python-lsp-jsonrpc
 python-lsp-server
 python-lsprotocol
@@ -3865,6 +3918,7 @@ python-mediafile
 python-memcached
 python-memory-profiler
 python-merge3
+python-mergedeep
 python-mimeparse
 python-minidump
 python-mistletoe
@@ -3931,6 +3985,7 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
+python-numba
 python-numexpr
 python-numpy
 python-oauth2client
@@ -3957,6 +4012,7 @@ python-os-client-config
 python-os-service-types
 python-osc-lib
 python-oscrypto
+python-oslo-concurrency
 python-oslo-config
 python-oslo-context
 python-oslo-db
@@ -3972,6 +4028,7 @@ python-owslib
 python-packaging
 python-pallets-sphinx-themes
 python-pam
+python-pandas-datareader
 python-pandas
 python-pandocfilters
 python-parameterized
@@ -3982,7 +4039,9 @@ python-parsedatetime
 python-parso
 python-partd
 python-parver
+python-passlib
 python-pasta
+python-paste
 python-pastedeploy
 python-pastel
 python-patch-ng
@@ -3998,7 +4057,6 @@ python-pbr
 python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
-python-pdftotext
 python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
@@ -4030,6 +4088,7 @@ python-pipx
 python-pixelmatch
 python-pkg_resources
 python-pkgconfig
+python-pkginfo
 python-platformdirs
 python-playwright
 python-plette
@@ -4040,12 +4099,19 @@ python-poetry-core
 python-poetry-dynamic-versioning
 python-poetry-plugin-export
 python-poetry
+python-polars
+$pkgbase
+$pkgbase-runtime-32
+$pkgbase-runtime-64
+$pkgbase-runtime-compat
 python-polib
 python-pooch
 python-pook
 python-portend
 python-pprofile
 python-prance
+python-praw
+python-prawcore
 python-pre-commit
 python-precis_i18n
 python-pretend
@@ -4054,6 +4120,7 @@ python-priority
 python-process-tests
 python-profilestats
 python-prometheus_client
+python-promise
 python-prompt_toolkit
 python-propcache
 python-proxmoxer
@@ -4126,6 +4193,7 @@ python-pygeos
 python-pygit2
 python-pygls
 python-pygments
+python-pygraphviz
 python-pyhamcrest
 python-pyhcl
 python-pyicu
@@ -4396,12 +4464,14 @@ python-sh
 python-shapely
 python-shellingham
 python-should-dsl
+python-shtab
 python-signedjson
 python-simple-websocket
 python-simplejson
 python-siphash24
 python-six
 python-slip
+python-slugify
 python-sly
 python-smartypants
 python-smbprotocol
@@ -4438,6 +4508,7 @@ python-sphinx-jinja
 python-sphinx-lv2-theme
 python-sphinx-notfound-page
 python-sphinx-pytest
+python-sphinx-reredirects
 python-sphinx-theme-builder
 python-sphinx
 python-sphinx_rtd_theme
@@ -4512,6 +4583,7 @@ python-testtools
 python-text-unidecode
 python-texttable
 python-textual
+python-threadpoolctl
 python-tiktoken
 python-time-machine
 python-tiny-proxy
@@ -4551,9 +4623,11 @@ python-typeguard
 python-typer
 python-types-python-dateutil
 python-typing-inspection
+python-typing_extensions
 python-typing_inspect
 python-typogrify
 python-tzdata
+python-tzlocal
 python-u-msgpack
 python-ubjson
 python-uc-micro-py
@@ -4605,6 +4679,8 @@ python-wcmatch
 python-wcwidth
 python-webcolors
 python-webencodings
+python-webob
+python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
@@ -4634,6 +4710,7 @@ python-xlwt
 python-xmlschema
 python-xmlsec
 python-xmltodict
+python-xxhash
 python-y-py
 python-yaml
 python-yara
@@ -4793,6 +4870,7 @@ qwindowkit
 qwt
 qwt-qt5
 qwt-common
+qxlsx
 r
 r8168
 radeontop
@@ -4880,6 +4958,7 @@ rpcsvc-proto
 rpm-sequoia
 rpm-tools
 rpmextract
+rssguard
 rst2pdf
 rtaudio
 rtaudio-docs
@@ -4902,6 +4981,7 @@ ruby-async-container-supervisor
 ruby-async-container
 ruby-async-dns
 ruby-async-http-cache
+ruby-async-http
 ruby-async-io
 ruby-async-pool
 ruby-async-process
@@ -4988,6 +5068,7 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
+ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
@@ -5172,6 +5253,7 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
+ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
@@ -5266,6 +5348,7 @@ ruff
 python-ruff
 run-parts
 runc
+rust-bindgen
 rustup
 rutabaga-ffi
 rxvt-unicode
@@ -5286,6 +5369,7 @@ schroedinger
 scim
 scite
 scons
+scour
 screen
 screengrab
 scrot
@@ -5322,6 +5406,7 @@ shaderc
 shairplay
 shapelib
 shared-color-targets
+shared-mime-info
 sharutils
 shhmsg
 shhopt
@@ -5379,6 +5464,7 @@ sparsehash
 spatialindex
 spdlog
 speakup-utils
+spectacle
 speech-dispatcher
 libspeechd
 speex
@@ -5416,7 +5502,6 @@ strawberry
 strip-nondeterminism
 stubby
 subversion
-sugar-datastore
 suil
 suil-docs
 suitesparse
@@ -5431,6 +5516,7 @@ swaybg
 swaylock
 sweeper
 swell-foop
+swig
 swtpm
 sxhkd
 sxiv
@@ -5455,6 +5541,7 @@ tcl
 tclap
 tcsh
 tdb
+tea
 tecla
 telegram-qt
 telepathy-accounts-signon
@@ -5762,6 +5849,7 @@ vdpauinfo
 veracrypt
 vice
 vice-sdl2
+vid.stab
 viewnior
 vifm
 vigra
@@ -5775,6 +5863,7 @@ virt-manager
 virt-install
 virt-viewer
 virt-what
+virtiofsd
 virtualbox-guest-iso
 virtualbox
 virtualbox-ext-vnc
@@ -5849,6 +5938,10 @@ wpebackend-fdo
 wpebackend-fdo-docs
 wqy-zenhei
 wtype
+wxwidgets
+wxwidgets-common
+wxwidgets-gtk3
+wxwidgets-qt5
 x11-ssh-askpass
 x264
 x265
@@ -5857,6 +5950,7 @@ xalan-c
 xapian-core
 xapian-core-docs
 xapp
+xarchiver
 xautolock
 xaw3d
 xbitmaps
@@ -5874,6 +5968,7 @@ xclip
 xcompmgr
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
+xdelta3
 xdg-dbus-proxy
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -5978,7 +6073,6 @@ xsimd
 xsimd12
 xterm
 xtrans
-xvidcore
 xwallpaper
 yad
 yajl
@@ -6034,6 +6128,7 @@ zix
 zix-docs
 zlib-ng
 zlib-ng-compat
+zopfli
 zoxide
 zsh-autosuggestions
 zsh-completions
@@ -6043,5 +6138,4 @@ zsh
 zsh-doc
 zug
 zvbi
-zxing-cpp
 zziplib

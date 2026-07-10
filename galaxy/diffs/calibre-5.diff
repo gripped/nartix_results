@@ -1,0 +1,157 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=calibre
+-pkgver=9.11.0
+-pkgrel=2
++pkgver=8.7.0
++pkgrel=12
+ pkgdesc='Ebook management application'
+ arch=(x86_64)
+ url=https://calibre-ebook.com
+@@ -20,7 +20,6 @@
+          lxml
+          lxml-html-clean
+          markdown
+-         html5lib
+          mechanize
+          msgpack
+          netifaces
+@@ -35,31 +34,22 @@
+          pyqt6
+          pyqt6-webengine
+          regex
+-         tzlocal
+-         tzdata
+          unrardll
+          xxhash
+          zeroconf
+          zstandard)
+-depends=(espeak-ng
+-         ffmpeg
+-         hicolor-icon-theme
+-         hunspell
++depends=(hunspell
+          hyphen
+          icu
+          jxrlib
+          libmtp
+-         libstdc++
+          libstemmer
+          libusb
+          libwmf
+          mtdev
+-         openssl
+          optipng
+          podofo
+-         protobuf
+          "${_pydeps[@]/#/python-}"
+-         python
+          qt6-imageformats
+          qt6-multimedia
+          qt6-speech
+@@ -70,7 +60,6 @@
+          udisks2
+          zstd)
+ makedepends=(cmake
+-             onnxruntime
+              pyqt-builder
+              rapydscript-ng
+              sip
+@@ -80,8 +69,7 @@
+               python-pyzstd
+               speech-dispatcher
+               tk)
+-optdepends=('onnxruntime: required for text-to-speech'
+-            'poppler: required for converting pdf to html'
++optdepends=('poppler: required for converting pdf to html'
+             'python-fonttools: required for font subset feature in epub editor'
+             'speech-dispatcher: TTS support in the viewer')
+ conflicts=(calibre-common
+@@ -90,10 +78,10 @@
+ _archive="$pkgname-$pkgver"
+ source=("https://download.calibre-ebook.com/$pkgver/$_archive.tar.xz"
+         "$url/signatures/$_archive.tar.xz.sig"
+-        "tts-piper-remove-withterminator.patch")
+-sha256sums=('50d42e3b32ec5116f6b1df099537f4becaf36bfedecf9f581b743f11d8b6cb36'
++         qt-6.10.patch)
++sha256sums=('2cfe587e3773d8607fe8bbefbcd77b5cfb816124cac89e491353deb8f2fa9324'
+             'SKIP'
+-            '128dad5dda9175ee9d8a798cdac0514e228821dca11b746b54682a9cc787d3da')
++            '5b1b0b0d60400727136e929b941bac0b32125c9636600c2f9ec1a1d7fd74db64')
+ validpgpkeys=('3CE1780F78DD88DF45194FD706BC317B515ACE7C') # Kovid Goyal (New longer key) <kovid@kovidgoyal.net>
+ 
+ prepare(){
+@@ -102,10 +90,9 @@
+ 		-e "s/'ctc-posml'/'text' not in mt and 'pdf' not in mt and 'xhtml'/" \
+ 		-e "s/^Name=calibre/Name=Calibre/g" \
+ 		-i  src/calibre/linux.py
+-
+ 	rm -f resources/$pkgname-portable.*
+ 
+-	patch -Np1 -i ../tts-piper-remove-withterminator.patch
++        patch -p1 -i ../qt-6.10.patch
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,24 +1,16 @@
+ cmake
+-espeak-ng
+-ffmpeg
+-hicolor-icon-theme
+ hunspell
+ hyphen
+ icu
+ jxrlib
+ libmtp
+-libstdc++
+ libstemmer
+ libusb
+ libwmf
+ mtdev
+-onnxruntime
+-openssl
+ optipng
+ podofo
+-protobuf
+ pyqt-builder
+-python
+ python-apsw
+ python-beautifulsoup4
+ python-css-parser
+@@ -29,7 +21,6 @@
+ python-feedparser
+ python-html2text
+ python-html5-parser
+-python-html5lib
+ python-jeepney
+ python-lxml
+ python-lxml-html-clean
+@@ -48,8 +39,6 @@
+ python-pyqt6
+ python-pyqt6-webengine
+ python-regex
+-python-tzdata
+-python-tzlocal
+ python-unrardll
+ python-xxhash
+ python-zeroconf
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+ -e "s/^Name=calibre/Name=Calibre/g" \
+ -i  src/calibre/linux.py
+ rm -f resources/$pkgname-portable.*
+-patch -Np1 -i ../tts-piper-remove-withterminator.patch
++patch -p1 -i ../qt-6.10.patch
+ }
+ build() {
+ cd "$_archive"

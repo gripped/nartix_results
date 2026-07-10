@@ -3,7 +3,7 @@
 @@ -1,55 +1,39 @@
  
  pkgname=firefox
--pkgver=152.0.1
+-pkgver=152.0.5
 +pkgver=120.0
  pkgrel=1
 -pkgdesc="Fast, Private & Safe Web Browser"
@@ -93,14 +93,14 @@
  validpgpkeys=(
    14F26682D0916CDD81E37B6D61B7B526D98F0353
  )
--sha256sums=('bff037bd04f0df25a330daa7133bea6eee5a02b7ce39da30581580271502f15e'
+-sha256sums=('0a0341b05ac68834c4071665fe11f1e6729084b4e4ffcd70241097b0ad2cb224'
 +sha256sums=('e710058701074eda53ca9f5fd52c57254858a027984f735bdcd58d6906f6b574'
              'SKIP'
 -            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9'
 -            '2a51d57d98fbda86f094bc991e1ad4dd6e8a9d32fd0836b1183bf70ec4b68915'
 -            '23f557fa7989adcae03cc9458d94716981dbcf0e9d6d52a289a2426e50b4b785'
 -            '075ecdf42fa429d6c4b273c52d406f4335484c31b38f76fe3cc2e33ead7750cc')
--b2sums=('e1ebcc491e47039fc3505972c1fc23bee3b642d48b2b7e6689f17c5542503d905be235d79d98629ca614f738920a9bc3e8af8f47bd63bb6107e84c33ceecc331'
+-b2sums=('011cae8194c98ada33d47f468ce3e23c7c3056f09c9ee0c69cd8eb58007d88002436a374bcb8eb9cbffbbde27b083004c53b752a5a4b6d342af220193ab2e7f7'
 +            '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
 +            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
 +b2sums=('06f11d9d6f705c13c3288f1757d68c7c910e258b3efa643f0f0168fba0d585f758082af3905c951e227894df0c092965663f52196ee1fc3477195748e0049767'
@@ -188,7 +188,7 @@
      xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
      ./mach python build/pgo/profileserver.py
  
-@@ -179,7 +153,7 @@
+@@ -179,26 +153,27 @@
    test -s jarlog
  
    echo "Removing instrumented browser..."
@@ -197,7 +197,9 @@
  
    echo "Building optimized browser..."
    cat >.mozconfig ../mozconfig - <<END
-@@ -188,17 +162,18 @@
+-ac_add_options --enable-lto=cross
++ac_add_options --enable-lto=cross,full
+ ac_add_options --enable-profile-use=cross
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END
@@ -415,7 +417,7 @@
  xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
  ./mach python build/pgo/profileserver.py
  stat -c "Profile data found (%s bytes)" merged.profdata
-@@ -60,7 +56,7 @@
+@@ -60,13 +56,15 @@
  stat -c "Jar log found (%s bytes)" jarlog
  test -s jarlog
  echo "Removing instrumented browser..."
@@ -423,8 +425,9 @@
 +./mach clobber
  echo "Building optimized browser..."
  cat >.mozconfig ../mozconfig - <<END
- ac_add_options --enable-lto=cross,full
-@@ -68,5 +64,7 @@
+-ac_add_options --enable-lto=cross
++ac_add_options --enable-lto=cross,full
+ ac_add_options --enable-profile-use=cross
  ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
  ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
  END

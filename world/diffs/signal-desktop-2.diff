@@ -4,7 +4,7 @@
  
  pkgname=signal-desktop
  _pkgname=Signal-Desktop
--pkgver=8.15.0
+-pkgver=8.17.0
 +pkgver=6.39.1
  pkgrel=1
  pkgdesc="Signal Private Messenger for Linux"
@@ -57,10 +57,10 @@
    'git-lfs'
    'libxcrypt-compat'
 -  'node-gyp'
--  'nodejs-lts-jod'
--  'pnpm'
+-  'nodejs-lts-krypton'
 +  'nodejs'
-+  'npm'
+   'npm'
+-  'pnpm'
    'python'
 +  'yarn'
  )
@@ -71,10 +71,10 @@
 -  "${pkgname}.sh"
 +  "${pkgname}.desktop"
  )
--sha256sums=('d94e6ce65bee0f4622d49dbae6f3b4abe9bed5d18d80edd2dafa4cf59cc09885'
+-sha256sums=('fcf29aa0cafec61394f60d34ccce9ac6757807837b9346cd32afa27841588361'
 -            'bf388df4b5bbcab5559ebbf220ed4748ed21b057f24b5ff46684e3fe6e88ccce'
 -            '37701c610829ea3d0ae984b468ef83870fb75358396feb85b5f13f69cdbf1e68')
--b2sums=('ddba359eb9f1c4bafbc25d3c9aee04dfbe3edfe3323b5a8bb067f2a5258c39c154d7efc094230c622dbdc1f3f2dc4fe6e596e37a15719ea330c0343160d7b053'
+-b2sums=('cad92024e4fddcadc6a9d001cee1cb0e47af8acd1d45a11cba8c5c04af798f992d0d716b301409ee6a8be8158300cd586c5581435608f5e2cc8a9375ae83b5b4'
 -        'ffb8f7bab4fd84aacf13e7b6d2835daf449b6650b4b3fa723456792ba7fb6cae352928fea11cb030510d558ce30036ff5a1513444f067b94c7fff0158b4f2265'
 -        '3b52b3e8530652472560fbc83f709cd1377210098c81b84cb9b14a985fbfcb349897843bb995cb772de31568517e038b497277b2fddca18b4a6dba5315d1a7c1')
 +sha256sums=('ffbf416bb566f743aa8219af3831f478543f3800d31b26602b986ea7520ac513'
@@ -94,7 +94,13 @@
  
 -  pnpm install --dir sticker-creator
 -
--  pnpm install
+-  case "${CARCH}" in
+-    "aarch64") electron_arch="arm64" ;;
+-    *) electron_arch="x64" ;;
+-  esac
+-  node scripts/prepare_linux_build.mjs deb "${electron_arch}"
+-
+-  pnpm install --frozen-lockfile
 +  yarn install --ignore-engines
  }
  
@@ -102,13 +108,6 @@
    cd "${_pkgname}-${pkgver}"
 -
 -  pnpm --prefix ./sticker-creator/ run build
--
--  case "${CARCH}" in
--    "aarch64") electron_arch="arm64" ;;
--    *) electron_arch="x64" ;;
--  esac
--
--  node scripts/prepare_linux_build.mjs deb "${electron_arch}"
 -
 -  pnpm run build
 +  yarn generate
@@ -143,7 +142,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,45 +1,18 @@
+@@ -1,46 +1,18 @@
 -alsa-lib
 -at-spi2-core
 -cairo
@@ -182,14 +181,14 @@
 -libxrandr
 -mesa
 -node-gyp
--nodejs-lts-jod
+-nodejs-lts-krypton
++libxss
++nodejs
+ npm
 -nspr
 -nss
 -pango
 -pnpm
-+libxss
-+nodejs
-+npm
  python
 -systemd-libs
 +yarn

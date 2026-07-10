@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,12 @@
+ _pkgname=igt-gpu-tools
+ pkgname=intel-gpu-tools
+ pkgver=2.5
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc="Tools for development and testing of the Intel DRM driver"
+ arch=(x86_64)
+ license=(MIT)
+ url='https://gitlab.freedesktop.org/drm/igt-gpu-tools'
+-depends=(libdrm libpciaccess cairo python xorg-xrandr pciutils libprocps kmod libxv libunwind peg systemd)
++depends=(libdrm libpciaccess cairo python xorg-xrandr pciutils libprocps kmod libxv libunwind peg)
+ makedepends=(python-docutils swig xorg-util-macros xorgproto meson)
+ optdepends=('python-dissect.cstruct: for intel-gfx-fw-info')
+ source=(https://xorg.freedesktop.org/releases/individual/app/${_pkgname}-$pkgver.tar.xz{,.sig})
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,7 +11,6 @@
+ python
+ python-docutils
+ swig
+-systemd
+ xorg-util-macros
+ xorg-xrandr
+ xorgproto

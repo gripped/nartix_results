@@ -8,15 +8,6 @@
    gst-plugin-opencv
    gst-plugin-qml6
    gst-plugin-qmlgl
-@@ -28,7 +27,7 @@
-   gstreamer-docs
- )
- pkgver=1.28.4
--pkgrel=2
-+pkgrel=3
- pkgdesc="Multimedia graph framework"
- url="https://gstreamer.freedesktop.org/"
- arch=(x86_64)
 @@ -140,7 +139,6 @@
    nasm
    neon
@@ -33,28 +24,7 @@
    taglib
    twolame
    v4l-utils
-@@ -208,11 +205,13 @@
-   "git+https://gitlab.freedesktop.org/gstreamer/gstreamer.git?signed#tag=$pkgver"
-   "https://gstreamer.freedesktop.org/src/gstreamer-docs/gstreamer-docs-$pkgver.tar.xz"{,.asc}
-   0001-HACK-meson-Disable-broken-tests.patch
-+  0002-opencv-5.patch
- )
- b2sums=('3a8a3d89bfc9be8b2b1cbd24b6e7e1dbea25c4619045dd97df4631b94ad5d59d9ac54ffc54eccdec10b0195aee87e0dadd8f560e5cdc499dee99b033d141f7e9'
-         'd75fa25315a17b78ecc6f131b7e33cdac54106dc36ff2aa6ac4aee83d13dbb12bfcb72f4577775821eb74c926f90cf4d9148be848ab74224a3e3e43d02831912'
-         'SKIP'
--        'a346129eb6bf79b2d7766e5345e290c0ae57e57ca32641a629e702ae79f562cdf590121bfcec320a5c9d81c4d70bc2ca89f685952d47ade59598d5e6feee5803')
-+        'a346129eb6bf79b2d7766e5345e290c0ae57e57ca32641a629e702ae79f562cdf590121bfcec320a5c9d81c4d70bc2ca89f685952d47ade59598d5e6feee5803'
-+        'd197ca43fd75ce3b3533b17ae1d465c7e8b5e7db8e2c97ef557a696e2817a2cf92d15361bb63d474618f375741729b773c9f1be28dad9298608b4413fc9162b3')
- validpgpkeys=(
-   D637032E45B8C6585B9456565D2EEE6F6F349D7C # Tim Müller <tim@gstreamer-foundation.org>
- )
-@@ -221,10 +220,13 @@
-   cd gstreamer
- 
-   git apply -3 ../0001-HACK-meson-Disable-broken-tests.patch
-+
-+  patch -p1 -i ../0002-opencv-5.patch
- }
+@@ -229,6 +226,7 @@
  
  build() {
    local meson_options=(
@@ -62,7 +32,7 @@
      -D benchmarks=disabled
      -D examples=disabled
      -D glib_debug=disabled
-@@ -266,7 +268,7 @@
+@@ -270,7 +268,7 @@
      -D gstreamer:ptp-helper-permissions=capabilities
      -D libnice=disabled
      -D orc-source=system
@@ -71,7 +41,7 @@
      -D package-origin="https://www.archlinux.org/"
    )
  
-@@ -275,7 +277,7 @@
+@@ -279,7 +277,7 @@
    export CARGO_PROFILE_RELEASE_DEBUG=2 CARGO_PROFILE_RELEASE_STRIP=false
    export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
  
@@ -80,7 +50,7 @@
    meson compile -C build
  }
  
-@@ -779,7 +781,6 @@
+@@ -783,7 +781,6 @@
      'gst-plugin-gtk: gtk plugin'
      'gst-plugin-hip: hip plugin and library'
      'gst-plugin-msdk: msdk plugin'
@@ -88,7 +58,7 @@
      'gst-plugin-opencv: opencv plugin and library'
      'gst-plugin-qml6: qml6 plugin'
      'gst-plugin-qmlgl: qmlgl plugin'
-@@ -971,21 +972,6 @@
+@@ -975,21 +972,6 @@
    ); _install
  }
  

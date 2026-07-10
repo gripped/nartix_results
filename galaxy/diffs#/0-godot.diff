@@ -1,0 +1,28 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -46,7 +46,7 @@
+ build() {
+   cd $pkgname
+ 
+-  export BUILD_NAME=arch_linux
++  export BUILD_NAME=artix_linux
+ 
+ 
+   _args=(
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ }
+ build() {
+ cd $pkgname
+-export BUILD_NAME=arch_linux
++export BUILD_NAME=artix_linux
+ _args=(
+ -j$(nproc --all)
+ cflags="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w"

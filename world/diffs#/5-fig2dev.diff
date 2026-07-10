@@ -1,6 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,7 +7,7 @@
+@@ -1,13 +1,13 @@
+ 
+ pkgname=fig2dev
+ pkgver=3.2.9
+-pkgrel=2
++pkgrel=1
+ pkgdesc="Format conversion utility that can be used with xfig"
+ arch=('x86_64')
  url="http://mcj.sourceforge.net/"
  license=(Xfig)
  depends=('bash' 'bc' 'ghostscript' 'glibc' 'libpng' 'libxpm' 'netpbm' 'zlib')
@@ -9,10 +16,11 @@
  conflicts=('transfig')
  replaces=('transfig')
  provides=('transfig')
-@@ -29,6 +29,7 @@
+@@ -29,7 +29,7 @@
  
  build() {
    cd "${pkgname}-${pkgver}"
+-  CFLAGS+=' -std=gnu17'
 +    export CC="gcc-14"
    ./configure --prefix=/usr --enable-transfig
    make
@@ -33,10 +41,11 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -7,6 +7,7 @@
+@@ -7,7 +7,7 @@
  }
  build() {
  cd "${pkgname}-${pkgver}"
+-CFLAGS+=' -std=gnu17'
 +export CC="gcc-14"
  ./configure --prefix=/usr --enable-transfig
  make

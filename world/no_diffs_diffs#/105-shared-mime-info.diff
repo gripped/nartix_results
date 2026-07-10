@@ -1,0 +1,26 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -16,7 +16,7 @@
+ options=(!makeflags)
+ 
+ build() {
+-  arch-meson ${pkgname}-${pkgver} build \
++  artix-meson ${pkgname}-${pkgver} build \
+     -D update-mimedb=false \
+     -D build-tests=false
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+-arch-meson ${pkgname}-${pkgver} build \
++artix-meson ${pkgname}-${pkgver} build \
+ -D update-mimedb=false \
+ -D build-tests=false
+ meson configure build

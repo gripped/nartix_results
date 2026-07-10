@@ -50,7 +50,6 @@ caja-wallpaper
 caja-xattr-tags
 caja-audio-video-properties
 caja
-calibre
 cargo-nextest
 catfish
 cava
@@ -91,6 +90,7 @@ compface
 conky-manager2
 copyq
 cosmic-app-library
+cosmic-bg
 cosmic-files
 cosmic-greeter
 cosmic-icon-theme
@@ -123,9 +123,6 @@ electron
 electron39
 electron40
 electron41
-element.io
-element-web
-element-desktop
 elementary-icon-theme
 engrampa
 eom
@@ -152,6 +149,7 @@ font-manager
 foot
 $pkgbase
 $pkgbase-terminfo
+forgejo-runner
 fpc-src
 fpc
 freecell-solver
@@ -194,8 +192,10 @@ hyperfine
 impala
 imv
 incron
-intel-gpu-tools
+innernet
+jellyfin-ffmpeg
 jellyfin-mpv-shim
+jellyfin-server
 joyutils
 json-schema-validator
 just
@@ -222,6 +222,7 @@ libcmis
 libdbusmenu-lxqt
 libe-book
 libetpan
+libexsid
 libexttextcat
 libfm-qt
 libhx
@@ -245,9 +246,11 @@ libreoffice-fresh-sdk
 libreoffice-still-i18n
 libreoffice-still
 libreoffice-still-sdk
+libresidfp
 libretro-beetle-psx
 libretro-beetle-psx-hw
 libretro-core-info
+libretro-dolphin
 libretro-gambatte
 libretro-mesen-s
 libretro-mesen
@@ -262,6 +265,7 @@ libretro-shaders-slang
 libretro-snes9x
 libscfg
 libsfdo
+libsidplayfp
 libsignal-protocol-c
 libstaroffice
 libstaroffice-doc
@@ -271,10 +275,12 @@ libsysstat
 libtg_owt
 libutp
 libvarlink
+libvdpau-va-gl
 libwnck
 libxfce4util
 libxfce4windowing
 libxml2-legacy
+lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
 linux-hardened
@@ -452,6 +458,7 @@ nicotineplus
 nim
 nlopt
 ntpd-rs
+nushell
 nvm
 nwg-hello
 nwg-look
@@ -466,6 +473,7 @@ openrct2
 opensc
 openshot
 orage
+ouch
 oxipng
 packer
 pam_mount
@@ -509,6 +517,8 @@ pnpm
 pop-icon-theme
 pop-launcher
 pop-sound-theme
+ppsspp
+ppsspp-assets
 prismlauncher
 profanity
 profanity-gtk
@@ -527,7 +537,6 @@ python-lxml-html-clean
 python-mpv-jsonipc
 python-mpv
 python-multivolumefile
-python-pdftotext
 python-poetry-core
 python-pybcj
 python-pybluez
@@ -576,8 +585,8 @@ retroarch-assets
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
+retroarch
 rgbds
-rio
 riscv64-linux-gnu-gdb
 ristretto
 river-classic
@@ -591,6 +600,7 @@ salt
 satty
 scrcpy
 screengrab
+scummvm
 shairplay
 shortwave
 shotcut
@@ -618,6 +628,7 @@ sysbench
 t1lib
 tcpdump
 tealdeer
+telegram-desktop
 tenacity
 terminus-font
 tesseract-data
@@ -783,6 +794,7 @@ waylandpp
 waylock
 waypipe
 wayvnc
+wcm
 wdisplays
 wev
 wf-shell
@@ -798,6 +810,7 @@ xautolock
 xcur2png
 xcursor-vanilla-dmz
 xcursor-vanilla-dmz-aa
+xdg-desktop-portal-cosmic
 xdg-desktop-portal-lxqt
 xed
 xf86-input-libinput

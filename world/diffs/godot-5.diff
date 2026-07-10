@@ -1,0 +1,114 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,12 +2,12 @@
+ pkgbase=godot
+ pkgname=(godot godot-mono)
+ pkgver=4.7
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Advanced cross-platform 2D and 3D game engine'
+ url='https://godotengine.org/'
+ license=(MIT)
+ arch=(x86_64)
+-makedepends=(alsa-lib dotnet-sdk git nuget pulse-native-provider scons setconf yasm)
++makedepends=(alsa-lib dotnet-sdk-8.0 git nuget pulse-native-provider scons setconf yasm)
+ depends=(brotli ca-certificates embree freetype2 graphite libglvnd libspeechd libsquish libtheora libvorbis
+          libwebp libwslay libxcursor libxi libxinerama libxrandr miniupnpc openxr pcre2)
+ optdepends=('pipewire-alsa: for audio support'
+@@ -24,13 +24,8 @@
+ 
+   cp -f org.godotengine.Godot.desktop org.godotengine.Godot-mono.desktop
+   setconf org.godotengine.Godot-mono.desktop Exec godot-mono
+-  setconf org.godotengine.Godot-mono.desktop Icon godot-mono
++  setconf org.godotengine.Godot-mono.desktop Icon godot-mono.svg
+   setconf org.godotengine.Godot-mono.desktop Name 'Godot Engine Mono'
+-
+-  cp -f org.godotengine.Godot.appdata.xml org.godotengine.Godot-mono.appdata.xml
+-  sed -i -e 's/org.godotengine.Godot/org.godotengine.Godot-mono/' \
+-    -e 's|<name>Godot Engine</name>|<name>Godot Engine Mono</name>|' \
+-    org.godotengine.Godot-mono.appdata.xml
+ 
+   sed -i 's,xmlns="https://specifications.freedesktop.org/shared-mime-info-spec",xmlns="http://www.freedesktop.org/standards/shared-mime-info",g' \
+     org.godotengine.Godot.xml
+@@ -46,7 +41,7 @@
+ build() {
+   cd $pkgname
+ 
+-  export BUILD_NAME=arch_linux
++  export BUILD_NAME=artix_linux
+ 
+ 
+   _args=(
+@@ -110,10 +105,8 @@
+ 
+   install -Dm755 bin/godot.linuxbsd.editor.$_CARCH "$pkgdir/usr/bin/godot"
+ 
+-  install -Dm644 misc/logo/icon.png "$pkgdir/usr/share/icons/hicolor/256x256/apps/$pkgname.png"
+-  install -Dm644 misc/logo/icon.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
++  install -Dm644 misc/logo/icon.svg "$pkgdir/usr/share/pixmaps/$pkgname.svg"
+   install -Dm644 misc/dist/linux/org.godotengine.Godot.desktop "$pkgdir/usr/share/applications/org.godotengine.Godot.desktop"
+-  install -Dm644 misc/dist/linux/org.godotengine.Godot.appdata.xml "$pkgdir/usr/share/metainfo/org.godotengine.Godot.appdata.xml"
+   install -Dm644 misc/dist/linux/org.godotengine.Godot.xml "$pkgdir/usr/share/mime/packages/org.godotengine.Godot.xml"
+ 
+   install -Dm644 misc/dist/linux/godot.6 "$pkgdir/usr/share/man/man6/$pkgname.6"
+@@ -121,7 +114,7 @@
+ }
+ 
+ package_godot-mono(){
+-  depends+=(dotnet-sdk)
++  depends+=(dotnet-sdk-8.0)
+ 
+   cd $pkgbase
+ 
+@@ -131,10 +124,8 @@
+   install -d "$pkgdir/usr/bin"
+   ln -s /usr/lib/$pkgname/godot.linuxbsd.editor.$_CARCH.mono "$pkgdir/usr/bin/$pkgname"
+ 
+-  install -Dm644 misc/logo/icon.png "$pkgdir/usr/share/icons/hicolor/256x256/apps/$pkgname.png"
+-  install -Dm644 misc/logo/icon.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
++  install -Dm644 misc/logo/icon.svg "$pkgdir/usr/share/pixmaps/$pkgname.svg"
+   install -Dm644 misc/dist/linux/org.godotengine.Godot-mono.desktop "$pkgdir/usr/share/applications/org.godotengine.Godot-mono.desktop"
+-  install -Dm644 misc/dist/linux/org.godotengine.Godot-mono.appdata.xml "$pkgdir/usr/share/metainfo/org.godotengine.Godot-mono.appdata.xml"
+   install -Dm644 misc/dist/linux/org.godotengine.Godot-mono.xml "$pkgdir/usr/share/mime/packages/org.godotengine.Godot-mono.xml"
+ 
+   install -Dm644 misc/dist/linux/godot.6 "$pkgdir/usr/share/man/man6/$pkgname.6"
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,7 @@
+ alsa-lib
+ brotli
+ ca-certificates
+-dotnet-sdk
++dotnet-sdk-8.0
+ embree
+ freetype2
+ git
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,19 +4,15 @@
+ cd misc/dist/linux
+ cp -f org.godotengine.Godot.desktop org.godotengine.Godot-mono.desktop
+ setconf org.godotengine.Godot-mono.desktop Exec godot-mono
+-setconf org.godotengine.Godot-mono.desktop Icon godot-mono
++setconf org.godotengine.Godot-mono.desktop Icon godot-mono.svg
+ setconf org.godotengine.Godot-mono.desktop Name 'Godot Engine Mono'
+-cp -f org.godotengine.Godot.appdata.xml org.godotengine.Godot-mono.appdata.xml
+-sed -i -e 's/org.godotengine.Godot/org.godotengine.Godot-mono/' \
+--e 's|<name>Godot Engine</name>|<name>Godot Engine Mono</name>|' \
+-org.godotengine.Godot-mono.appdata.xml
+ sed -i 's,xmlns="https://specifications.freedesktop.org/shared-mime-info-spec",xmlns="http://www.freedesktop.org/standards/shared-mime-info",g' \
+ org.godotengine.Godot.xml
+ cp -f org.godotengine.Godot.xml org.godotengine.Godot-mono.xml
+ }
+ build() {
+ cd $pkgname
+-export BUILD_NAME=arch_linux
++export BUILD_NAME=artix_linux
+ _args=(
+ -j$(nproc --all)
+ cflags="$CFLAGS -fPIC -Wl,-z,relro,-z,now -w"

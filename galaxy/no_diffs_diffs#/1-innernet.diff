@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -10,6 +10,7 @@
+ makedepends=('rust' 'git' 'clang' 'llvm')
+ source=("$url/archive/v$pkgver/$pkgname-$pkgver.tar.gz")
+ sha256sums=('1429e8546dcafe508c2f9f94a51d65aea64c8049619fef971997ae9e0fdbc79a')
++options=('!lto')
+ 
+ prepare() {
+   cd "$pkgname-$pkgver"

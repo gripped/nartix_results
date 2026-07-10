@@ -79,6 +79,8 @@ libcap-ng
 python-capng
 libcap
 libedit
+libevent
+libevent-docs
 libffi
 libgcrypt
 libgpg-error
@@ -106,6 +108,7 @@ libseccomp
 python-libseccomp
 libsecret
 libsecret-docs
+libssh2
 libtasn1
 libtirpc
 libtool
@@ -162,11 +165,13 @@ npth
 nspr
 nss
 ca-certificates-mozilla
+openssh
 openssl-1.1
 openssl
 pcre
 pcre2
 perl
+pinentry
 pkgconf
 popt
 pptpclient

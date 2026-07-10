@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -19,7 +19,7 @@
+ b2sums=('f63b87aa4bd661213dd45d39cfb2bf46920d5a7ec6b877196d5bc341f30ac7bedc0b587ca3cfd05a1437b826eb96976595239f9e385643aa711df4c721d7ed3a')
+ 
+ build() {
+-  arch-meson intel-vaapi-driver-irql build
++  artix-meson intel-vaapi-driver-irql build
+   ninja -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson intel-vaapi-driver-irql build
++artix-meson intel-vaapi-driver-irql build
+ ninja -C build
+ }

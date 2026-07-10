@@ -4,20 +4,43 @@
  
  pkgname=pop-launcher
  pkgver=1.2.7
--pkgrel=1
+-pkgrel=2
 +pkgrel=1.3
  pkgdesc='Modular IPC-based desktop launcher service'
  arch=(x86_64)
  url=https://github.com/pop-os/launcher
-@@ -34,11 +34,6 @@
-   sed 's/lto = "fat"/lto = "thin"/g' -i Cargo.toml
- }
- 
--pkgver() {
--  cd launcher
--  git describe --tags
--}
--
- build() {
+@@ -9,9 +9,9 @@
+ depends=(
+   dbus
+   fd
++  gcc-libs
+   glibc
+   libegl
+-  libgcc
+   libqalculate
+   libxkbcommon
+   pop-icon-theme
+@@ -49,3 +49,4 @@
    cd launcher
-   RUSTFLAGS+=" -C link-arg=-fuse-ld=lld"
+   just rootdir="${pkgdir}" install
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,11 +2,11 @@
+ clang
+ dbus
+ fd
++gcc-libs
+ git
+ glibc
+ just
+ libegl
+-libgcc
+ libqalculate
+ libxkbcommon
+ lld

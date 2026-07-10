@@ -1,0 +1,87 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,7 +5,7 @@
+   glycin1-gtk4
+ )
+ pkgver=1.2.4
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Sandboxed and extendable image decoding (legacy version)"
+ arch=(x86_64)
+ url="https://gitlab.gnome.org/GNOME/glycin"
+@@ -14,7 +14,7 @@
+   bubblewrap
+   cairo
+   fontconfig
+-  libgcc
++  gcc-libs
+   glib2
+   glibc
+   lcms2
+@@ -57,7 +57,7 @@
+   git -c protocol.file.allow=always -c protocol.allow=never submodule update
+ 
+   CARGO_HOME="$srcdir/build/cargo-home" \
+-    cargo fetch --locked --target "$(rustc --print host-tuple)"
++    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ 
+ build() {
+@@ -65,7 +65,7 @@
+     -D test_skip_install=true
+   )
+ 
+-  arch-meson glycin build "${meson_options[@]}"
++  artix-meson glycin build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+@@ -98,7 +98,7 @@
+ package_glycin1-gtk4() {
+   pkgdesc+=" - GTK4 integration"
+   depends=(
+-    libgcc
++    gcc-libs
+     glib2
+     glibc
+     glycin1
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,6 +2,7 @@
+ cairo
+ clang
+ fontconfig
++gcc-libs
+ git
+ glib2
+ glibc
+@@ -9,7 +10,6 @@
+ gobject-introspection
+ gtk4
+ lcms2
+-libgcc
+ libheif
+ libjxl
+ librsvg
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,12 +4,12 @@
+ git submodule set-url tests/test-images "$srcdir/test-images"
+ git -c protocol.file.allow=always -c protocol.allow=never submodule update
+ CARGO_HOME="$srcdir/build/cargo-home" \
+-cargo fetch --locked --target "$(rustc --print host-tuple)"
++cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+ }
+ build() {
+ local meson_options=(
+ -D test_skip_install=true
+ )
+-arch-meson glycin build "${meson_options[@]}"
++artix-meson glycin build "${meson_options[@]}"
+ meson compile -C build
+ }

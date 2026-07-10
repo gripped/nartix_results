@@ -33,10 +33,7 @@ grep
 gssproxy
 gzip
 iputils
-libevent
-libevent-docs
 libsasl
-libssh2
 libusb
 linux
 linux-headers
@@ -52,7 +49,6 @@ nfsidmap
 openldap
 libldap
 openresolv
-openssh
 p11-kit
 libp11-kit
 p11-kit-docs
@@ -61,7 +57,6 @@ pam
 pambase
 patch
 pciutils
-pinentry
 ppp
 procps-ng
 python

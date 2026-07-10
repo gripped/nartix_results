@@ -75,13 +75,11 @@ lagrange
 leftwm
 lemonbar
 lib32-artix-archlinux-support
-libexsid
 libfm-gtk2
 libfoo
 libglade
 liboctopi
 libpamac
-libresidfp
 librewolf
 librsvg-noglycin
 libtree

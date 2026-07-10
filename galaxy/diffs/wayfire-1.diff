@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -22,7 +22,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=wayfire
+ pkgver=0.10.1
+-pkgrel=5
++pkgrel=4
+ pkgdesc='3D Wayland compositor, inspired by Compiz and based on wlroots'
+ arch=(x86_64)
+ url='https://wayfire.org/'
+@@ -15,14 +15,14 @@
+   libglvnd
+   libgomp
+   libinput
+-  libjpeg-turbo
++  libjpeg
+   libpng
+   libstdc++
+   libxcb
    libxkbcommon
    pango
    pixman
@@ -24,7 +41,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -4,6 +4,7 @@
+@@ -4,12 +4,13 @@
  glib2
  glibc
  glm
@@ -32,6 +49,13 @@
  libevdev
  libgcc
  libglvnd
+ libgomp
+ libinput
+-libjpeg-turbo
++libjpeg
+ libpng
+ libstdc++
+ libxcb
 @@ -17,7 +18,6 @@
  meson
  pango
