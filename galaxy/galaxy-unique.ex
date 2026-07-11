@@ -55,6 +55,7 @@ extundelete
 faenza-icon-theme
 firedragon
 firefox-esr
+forgejo-runner-openrc
 forkgram
 fu-perl
 gdk-pixbuf2-noglycin

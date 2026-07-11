@@ -200,8 +200,6 @@ gengetopt
 geoclue
 ghc-filesystem
 glpk
-glycin1
-glycin1-gtk4
 gnome-bluetooth-3.0
 gnome-desktop
 gnome-desktop-common

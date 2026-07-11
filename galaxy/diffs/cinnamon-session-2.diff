@@ -8,15 +8,18 @@
    xapp
  )
  optdepends=('cinnamon-translations: i18n')
-@@ -39,7 +38,7 @@
+@@ -39,8 +38,9 @@
  b2sums=('3312c5d67c29096e1d9e4af9a226c0b75d39cf863107292882c8e7dcf2d35b434203f3127ef682f2fc95d22ccd3437a12cbd693e534875803abc4ca755fd55ef')
  
  build() {
 -  arch-meson $pkgname build \
+-    --libexecdir=lib/$pkgname
 +  artix-meson $pkgname build \
-     --libexecdir=lib/$pkgname
++    --libexecdir=lib/$pkgname \
++    -D systemd=disabled
    meson compile -C build
  }
+ 
 
 
 ############# Stripped diff below #################

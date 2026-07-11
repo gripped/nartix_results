@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ pkgname=openvdb
+ pkgver=13.0.0
+-pkgrel=2
++pkgrel=1
+ pkgdesc='A large suite of tools for the efficient storage and manipulation of sparse volumetric data discretized on three-dimensional grids'
+ url='https://github.com/AcademySoftwareFoundation/openvdb'
+ arch=('x86_64')
+ license=('MPL-2.0')
+-depends=('boost-libs' 'intel-tbb' 'zlib' 'jemalloc' 'blosc' 'log4cplus' 'imath' 'robin-map' 'libgcc' 'libstdc++' 'glibc')
++depends=('boost-libs' 'intel-tbb' 'zlib' 'jemalloc' 'blosc' 'log4cplus' 'imath' 'robin-map')
+ makedepends=('doxygen' 'boost' 'cmake' 'mesa' 'cppunit' 'glfw-x11' 'glu' 'python'
+              'python-numpy' 'ninja' 'nanobind')
+ optdepends=('glfw: for tools'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -5,13 +5,10 @@
+ cppunit
+ doxygen
+ glfw-x11
+-glibc
+ glu
+ imath
+ intel-tbb
+ jemalloc
+-libgcc
+-libstdc++
+ log4cplus
+ mesa
+ nanobind

@@ -30,6 +30,7 @@ firefox-developer-edition-tridactyl
 firefox-esr-tridactyl
 konform-browser-tridactyl
 firefox
+forgejo-runner
 godot
 godot-mono
 gpicview
@@ -81,7 +82,6 @@ rage
 read-edid
 reflector
 resvg
-rio
 scribus
 sdcv
 signal-desktop
@@ -130,3 +130,4 @@ xorg-server-src
 xsane
 xsane-gimp
 yazi
+zathura-cb

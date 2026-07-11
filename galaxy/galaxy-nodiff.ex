@@ -149,7 +149,6 @@ font-manager
 foot
 $pkgbase
 $pkgbase-terminfo
-forgejo-runner
 fpc-src
 fpc
 freecell-solver
@@ -575,6 +574,7 @@ quassel-monolithic-qt
 quassel-common
 quickjs-ng
 quickshell
+radicle
 realtime-privileges
 reapack
 reaper
@@ -587,6 +587,7 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 retroarch
 rgbds
+rio
 riscv64-linux-gnu-gdb
 ristretto
 river-classic
@@ -876,7 +877,6 @@ xreader
 xviewer
 xwayland-satellite
 yyjson
-zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-pdf-poppler

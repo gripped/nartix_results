@@ -787,6 +787,8 @@ glusterfs
 glycin
 glycin-gtk4
 glycin-docs
+glycin1
+glycin1-gtk4
 gmic
 gimp-plugin-gmic
 gmime3
