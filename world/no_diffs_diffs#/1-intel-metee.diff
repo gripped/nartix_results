@@ -1,0 +1,20 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -3,7 +3,7 @@
+ pkgname=(
+     'intel-metee'
+     'intel-metee-doc')
+-pkgver=6.2.5
++pkgver=6.2.4
+ pkgrel=1
+ pkgdesc='Access library for Intel CSME HECI interface'
+ arch=('x86_64')
+@@ -14,7 +14,7 @@
+     'doxygen'
+     'graphviz')
+ source=("https://github.com/intel/metee/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz")
+-sha256sums=('055550837a1294aacc1709cc7ea34d2b790972688371c15dd842108de2afd59d')
++sha256sums=('927dec2aa290019fc924f8772c23fab7788a1b0fdb10cc7701b3f13c358cd6e6')
+ 
+ build() {
+     export CFLAGS="${CFLAGS/-Wp,-D_FORTIFY_SOURCE=?/}"

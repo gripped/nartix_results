@@ -1,15 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -27,7 +27,7 @@
-   opendht
+@@ -28,7 +28,7 @@
    openssl
+   simdutf
    speexdsp
 -  systemd-libs
 +  libudev
    util-linux-libs
    webrtc-audio-processing-0.3
    yaml-cpp
-@@ -42,7 +42,7 @@
+@@ -43,7 +43,7 @@
    msgpack-cxx
    perl
    restinio
@@ -17,13 +17,13 @@
 +  udev
  )
  checkdepends=(cppunit)
- _commit=55dd53736b9e6cd7204cc17e01d10d8a9276618f
-@@ -91,7 +91,7 @@
+ _commit=12948b655fb38ff2d441a67871d0feab3573adbc
+@@ -99,7 +99,7 @@
    make DEPS_pjproject= DEPS_dhtnet=pjproject
  
    cd "${srcdir}"
--  arch-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
-+  artix-meson ${pkgname} build -D interfaces=library -D opensl=disabled -D portaudio=disabled \
+-  arch-meson ${pkgname} build -D interfaces=library -D aaudio=disabled -D portaudio=disabled \
++  artix-meson ${pkgname} build -D interfaces=library -D aaudio=disabled -D portaudio=disabled \
                                $( ((CHECKFUNC)) && echo -D tests=true) \
                                -D pkg_config_path="${PWD}/${pkgname}/contrib/$(cc -dumpmachine)/lib/pkgconfig"
    meson compile -C build
@@ -41,9 +41,9 @@
  libupnp
  meson
  msgpack-c
-@@ -25,8 +26,7 @@
- perl
+@@ -26,8 +27,7 @@
  restinio
+ simdutf
  speexdsp
 -systemd
 -systemd-libs

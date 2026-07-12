@@ -34,6 +34,7 @@ gssproxy
 gzip
 iputils
 libsasl
+libssh2
 libusb
 linux
 linux-headers

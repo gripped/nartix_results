@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -28,8 +28,6 @@
+@@ -39,8 +39,6 @@
+   cmake . \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DOPENDHT_DOCUMENTATION=OFF \
-     -DOPENDHT_TESTS=ON \
 -    -DOPENDHT_SYSTEMD=ON \
 -    -DOPENDHT_SYSTEMD_UNIT_FILE_LOCATION=/usr/lib/systemd/system/ \
      -DOPENDHT_INDEX=ON \
@@ -17,10 +17,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -8,8 +8,6 @@
+@@ -3,8 +3,6 @@
+ cmake . \
  -DCMAKE_INSTALL_PREFIX=/usr \
  -DOPENDHT_DOCUMENTATION=OFF \
- -DOPENDHT_TESTS=ON \
 --DOPENDHT_SYSTEMD=ON \
 --DOPENDHT_SYSTEMD_UNIT_FILE_LOCATION=/usr/lib/systemd/system/ \
  -DOPENDHT_INDEX=ON \

@@ -1,12 +1,12 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -19,7 +19,7 @@
+@@ -26,7 +26,7 @@
  
  build() {
-         cd "${pkgname}-${pkgver}"
--        arch-meson build
-+        artix-meson build
-         ninja -C build
+ 	cd "${pkgname}-${pkgver}"
+-	arch-meson build
++	artix-meson build
+ 	ninja -C build
  }
  
 
@@ -17,7 +17,8 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,5 @@
+@@ -4,6 +4,6 @@
+ }
  build() {
  cd "${pkgname}-${pkgver}"
 -arch-meson build

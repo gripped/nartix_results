@@ -197,7 +197,6 @@ jellyfin-mpv-shim
 jellyfin-server
 joyutils
 json-schema-validator
-just
 kanshi
 kernel-headers-musl
 keyd
@@ -877,6 +876,7 @@ xreader
 xviewer
 xwayland-satellite
 yyjson
+zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-pdf-poppler

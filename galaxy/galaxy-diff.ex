@@ -41,6 +41,7 @@ gtklock
 hexchat
 hugin
 intel-gpu-tools
+just
 labwc
 lemurs
 libetonyek
@@ -130,4 +131,3 @@ xorg-server-src
 xsane
 xsane-gimp
 yazi
-zathura-cb

@@ -1187,6 +1187,8 @@ zabbix-web-service
 zabbix-proxy
 zabbix-agent
 zabbix-agent2
+zathura-cb
 zathura-pdf-mupdf
+zathura
 znc
 zxing-cpp

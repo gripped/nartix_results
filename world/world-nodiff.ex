@@ -5420,6 +5420,7 @@ signon-ui
 signond
 simde
 simdjson
+simdutf
 simple-scan
 sip
 skanlite
@@ -6103,11 +6104,9 @@ z3
 python-z3-solver
 z3-java
 zanshin
-zathura-cb
 zathura-djvu
 zathura-pdf-poppler
 zathura-ps
-zathura
 zbar
 zeitgeist
 zenity
