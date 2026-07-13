@@ -427,6 +427,7 @@ libsidplayfp
 libstaroffice
 libtg_owt
 libtiff
+libtorrent-rasterbar
 libudev0-shim
 libunwind
 libusbsio
@@ -566,6 +567,7 @@ vulkan-virtio
 vulkan-mesa-implicit-layers
 vulkan-mesa-layers
 mesa-docs
+meson
 mgba
 libmgba
 mgba-sdl
@@ -893,6 +895,7 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+sequoia-sqv
 sfml
 shairport-sync
 signal-desktop

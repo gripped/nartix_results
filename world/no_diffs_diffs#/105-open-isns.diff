@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -18,7 +18,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=open-isns
+ pkgver=0.103
+-pkgrel=1
++pkgrel=1.1
+ pkgdesc='iSNS server and client for Linux'
+ arch=('x86_64')
+ depends=('openssl')
+@@ -18,11 +18,13 @@
      -Dlibdir=lib
    )
  
@@ -8,6 +17,12 @@
 +  artix-meson "${pkgname}-${pkgver}" build "${_meson_options[@]}"
  
    meson compile -C build
+ }
+ 
+ package() {
+   DESTDIR="${pkgdir}" meson install -C build
++
++  rm -r $pkgdir/usr/lib/systemd
  }
 
 

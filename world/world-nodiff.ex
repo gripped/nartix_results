@@ -2070,7 +2070,6 @@ libtiger
 libtlsrpt
 libtomcrypt
 libtommath
-libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -2378,7 +2377,6 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
-meson
 messagelib
 metalog
 mgard
@@ -5396,7 +5394,6 @@ seahorse
 semver
 senpai
 sequoia-sq
-sequoia-sqv
 serd
 serd-docs
 serf

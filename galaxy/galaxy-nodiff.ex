@@ -885,3 +885,5 @@ zathura
 zed
 zellij
 zig0.14
+zsh
+zsh-doc

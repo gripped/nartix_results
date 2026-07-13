@@ -1,13 +1,24 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -49,10 +49,6 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=gnupg
+ pkgver=2.4.9
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Complete and free implementation of the OpenPGP standard'
+ arch=(x86_64)
+ url='https://www.gnupg.org/'
+@@ -48,11 +48,7 @@
+ )
  install=$pkgname.install
  source=(
-   git+https://dev.gnupg.org/source/gnupg.git?signed#tag=${pkgname}-${pkgver}
+-  git+https://github.com/gpg/gnupg.git?signed#tag=${pkgname}-${pkgver}
 -  dirmngr{,@}.{service,socket}
 -  gpg-agent{,@}.{service,socket}
 -  gpg-agent-{browser,extra,ssh}{,@}.socket
 -  keyboxd{,@}.{service,socket}
++  git+https://dev.gnupg.org/source/gnupg.git?signed#tag=${pkgname}-${pkgver}
    keyboxd.8
    $pkgname-2.4-avoid_beta_warning.patch  # do not emit beta warnings (due to misbehaving build system)
    0001-gpg-accept-subkeys-with-a-good-revocation-but-no-sel.patch

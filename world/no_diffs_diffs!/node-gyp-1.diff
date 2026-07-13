@@ -1,0 +1,13 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,10 +21,6 @@
+   npm install
+ }
+ 
+-check() {
+-  cd $pkgname
+-  npm test
+-}
+ 
+ package() {
+   local mod_dir=/usr/lib/node_modules/$pkgname
