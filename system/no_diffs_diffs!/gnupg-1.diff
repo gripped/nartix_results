@@ -1,28 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=gnupg
- pkgver=2.4.9
--pkgrel=2
-+pkgrel=1
- pkgdesc='Complete and free implementation of the OpenPGP standard'
- arch=(x86_64)
- url='https://www.gnupg.org/'
-@@ -48,11 +48,7 @@
+@@ -46,13 +46,8 @@
+ optdepends=(
+   'pcsclite: for using scdaemon not with the gnupg internal card driver'
  )
- install=$pkgname.install
+-install=$pkgname.install
  source=(
--  git+https://github.com/gpg/gnupg.git?signed#tag=${pkgname}-${pkgver}
+   git+https://github.com/gpg/gnupg.git?signed#tag=${pkgname}-${pkgver}
 -  dirmngr{,@}.{service,socket}
 -  gpg-agent{,@}.{service,socket}
 -  gpg-agent-{browser,extra,ssh}{,@}.socket
 -  keyboxd{,@}.{service,socket}
-+  git+https://dev.gnupg.org/source/gnupg.git?signed#tag=${pkgname}-${pkgver}
    keyboxd.8
    $pkgname-2.4-avoid_beta_warning.patch  # do not emit beta warnings (due to misbehaving build system)
    0001-gpg-accept-subkeys-with-a-good-revocation-but-no-sel.patch
-@@ -81,24 +77,6 @@
+@@ -81,24 +76,6 @@
    0024-gpg-Do-not-use-a-default-when-asking-for-another-out.patch
  )
  sha256sums=('383fd9720a966825b9d5e45a2b49b3b340ebed356252c73cca242b26dffec0ba'
@@ -47,7 +39,7 @@
              '38c66efbd3bffdfa9cb0f226a6db03ae4b226f705dc2d0266a555d8ace823b79'
              '243c3a79295519b3931f9d846cf2af5caa064a78de812ee336dc786c1567b4d0'
              '28ab30a6d4318db5fd43e0023dff4c1e14b52dc0d1a61e0f2fc2de580a5c2ed4'
-@@ -126,24 +104,6 @@
+@@ -126,24 +103,6 @@
              '741bb77575765aac6728f12b2ba83ded281ae5a591cc531054fe29a0b691e7f2'
              'a4fe401b274d22bbbea8c48caf40cee8e0a361b1bdb94019803120b4a9feeecd')
  b2sums=('c6b16d797b13e91c4f3eb41d28a69a5854e1744eaac662058cc5332b69b90349a79b891895b7460027bd6234394a4caf36f800d20a74c696a049764112f00658'
@@ -72,14 +64,14 @@
          '5e4fed3c54785fc0140a1cfe970c6ed6a61c0041961999a9777dfcb0050d45e2b9231b3e5e97e025cefe1461614b599bc7129eea931d1996f4849cd83f546abc'
          '168855b598714abb27e01e52e0ed1e1a01ab14ffb2ee09d759308375359cd28c0a9f96c6b9dee0a2cc5713aec8ea831858d59f56a0a126bca3e1401b078fc7ab'
          '5154c189b160e7a5c03126b9dea02101ff4139d82693c0becb9f110150da04a5c4bd4729d4ef50777b767c8bff07eb8c395c64ead6b77f24a38de4b5a4a2e6a3'
-@@ -235,17 +195,6 @@
+@@ -235,17 +194,6 @@
    install -vDm 644 ../keyboxd.8 -t "$pkgdir/usr/share/man/man8/"
    install -vDm 644 {BSD-{2,3,4}-Clause,MIT,Unicode-TOU}.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
  
 -  local systemdir="$pkgdir/usr/lib/systemd/"
 -  local wantsdir="${systemdir}user/sockets.target.wants/"
 -  install -vdm 755 "$wantsdir"
--
+ 
 -  local unit
 -  for unit in ../*.{service,socket}; do
 -    case $unit in
@@ -88,8 +80,5 @@
 -      *) install -vDm 644 "$unit" -t "${systemdir}user/" ;;
 -    esac
 -  done
--}
--
-+
-+}
-+
+ }
+ 

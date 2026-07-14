@@ -567,7 +567,6 @@ vulkan-virtio
 vulkan-mesa-implicit-layers
 vulkan-mesa-layers
 mesa-docs
-meson
 mgba
 libmgba
 mgba-sdl
@@ -661,6 +660,7 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
+perl-cpan-requirements-dynamic
 pgbouncer
 phodav
 php-legacy

@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -85,8 +85,8 @@
+ )
+ source=(
+   "git+https://github.com/mesonbuild/meson?signed#tag=$pkgver"
+-  arch-meson
+-  arch-meson-check-wraps
++  artix-meson
++  artix-meson-check-wraps
+   cross-lib32
+   native-clang
+ )
+@@ -133,7 +133,9 @@
+   install -Dm644 data/shell-completions/bash/* -t "$pkgdir/usr/share/bash-completion/completions"
+   install -Dm644 data/shell-completions/zsh/*  -t "$pkgdir/usr/share/zsh/site-functions"
+ 
+-  install -D ../arch-meson* -t "$pkgdir/usr/bin"
++  install -D ../artix-meson* -t "${pkgdir}/usr/bin"
++  ln -sfv artix-meson "${pkgdir}"/usr/bin/arch-meson
++  ln -sfv artix-meson-check-wraps "${pkgdir}"/usr/bin/arch-meson-check-wraps
+ 
+   install -Dm644 ../cross-lib32 "$pkgdir/usr/share/meson/cross/lib32"
+   install -Dm644 ../native-clang "$pkgdir/usr/share/meson/native/clang"

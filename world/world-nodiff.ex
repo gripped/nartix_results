@@ -2377,6 +2377,7 @@ merkuro
 mesa-demos
 mesa-utils
 meson-python
+meson
 messagelib
 metalog
 mgard
@@ -2749,7 +2750,6 @@ perl-config-tiny
 perl-cpan-changes
 perl-cpan-meta-check
 perl-cpan-meta-requirements
-perl-cpan-requirements-dynamic
 perl-crypt-openssl-bignum
 perl-crypt-openssl-dsa
 perl-crypt-openssl-guess
