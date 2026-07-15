@@ -3562,7 +3562,6 @@ python-dotenv
 python-doublex-expects
 python-doublex
 python-dpcontracts
-python-dropbox
 python-dulwich
 python-dunamai
 python-durationpy
@@ -4546,7 +4545,6 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
-python-stone
 python-straight.plugin
 python-strawberry-graphql
 python-strict-rfc3339
@@ -5029,7 +5027,6 @@ ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
-ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber

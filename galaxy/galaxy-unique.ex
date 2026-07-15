@@ -232,6 +232,7 @@ python2
 qbittorrent-openrc
 qdirstat
 qhexedit2-gui
+qownnotes
 qpdfview
 qt-sudo
 qt5-styleplugins

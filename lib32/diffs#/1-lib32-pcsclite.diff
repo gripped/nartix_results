@@ -1,27 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
- 
- _pkgname=pcsclite
- pkgname=lib32-$_pkgname
--pkgver=2.5.1
--pkgrel=1
-+pkgver=2.4.1
-+pkgrel=1.1
- pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
- arch=('x86_64')
- url='https://pcsclite.apdu.fr/'
-@@ -13,8 +13,7 @@
+@@ -13,16 +13,16 @@
    '0BSD'                # src/simclist.c, src/simclist.h
  )
  depends=(
 -  'libsystemd.so'
--  'libudev.so'
-+  'libudev.so' 'lib32-udev'
+   'libudev.so'
++   lib32-udev
    'libpolkit-gobject-1.so'
    $_pkgname
++  lib32-elogind
  )
-@@ -22,7 +21,6 @@
+ makedepends=(
    'git'
    'meson'
    'lib32-polkit'
@@ -29,31 +19,16 @@
  )
  provides=(
    'libpcsclite.so'
-@@ -31,12 +29,12 @@
- )
- validpgpkeys=('F5E11B9FFE911146F41D953D78A1B4DFE8F9C57E') # Ludovic Rousseau <rousseau@debian.org>
- source=(
--  "git+https://github.com/LudovicRousseau/PCSC.git?signed#tag=${pkgver}"
-+  "git+https://github.com/LudovicRousseau/PCSC.git#tag=${pkgver}?signed"
-   "program-suffix.patch"
-   "systemd-unit-conflicts.diff"
-   "0001-Allow-to-run-32-bit-pcscd-on-64-bit-systems.patch"
- )
--sha256sums=('fb396681125b89569e3513e80b11f8636dba144dae6b49d480fe292cbb759b1d'
-+sha256sums=('0347f8dbc250f465dfaf2a9c58779f47fd193fbcf73e6ef64bdc3b47bd069f7a'
-             '782db4be00202c5a8ea305bfbf6c8a6da17ccdbf370b3b79bb0c0eea3f4c6bf1'
-             '207a2109c954ae75ba31e607f8da587f7053c6fe2f9e3ae17090acfb0c680b36'
-             '6623cfd64ce75c3c8a4274210a437f3d192908bd3b5505f5c529c2aebd581581')
-@@ -52,14 +50,13 @@
+@@ -52,14 +52,13 @@
    local meson_options=(
      --cross-file lib32
      -D program_suffix="-32"
 -    -D libsystemd=true
      -D libudev=true
++    -D libsystemd=false
      -D polkit=true
      -D serial=true
 -    -D systemdunit=system
-+    -D libsystemd=false
      -D usbdropdir=/usr/lib32/pcsc/drivers
    )
 -  arch-meson PCSC build "${meson_options[@]}"
@@ -61,12 +36,12 @@
    meson compile -C build
  
    awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' PCSC/COPYING > LICENSE.BSD-3-Clause
-@@ -71,7 +68,7 @@
+@@ -71,7 +70,7 @@
  package() {
    meson install -C build --destdir "${pkgdir}"
  
 -  rm -rv "$pkgdir"/{etc,usr/{include,lib/sysusers.d,share}}
-+  rm -rv "$pkgdir"/{etc,usr/{include,sysusers.d,share}}
++  rm -rv "$pkgdir"/{etc,usr/{include,share}}
    rm -v "$pkgdir"/usr/bin/pcsc-spy
  
    install -D -m0644 LICENSE.* -t "${pkgdir}"/usr/share/licenses/$pkgname
@@ -76,8 +51,9 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,8 +1,7 @@
+@@ -1,8 +1,8 @@
  git
++lib32-elogind
  lib32-polkit
 -lib32-systemd
 +lib32-udev

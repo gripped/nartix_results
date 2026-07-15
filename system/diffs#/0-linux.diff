@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,11 @@
+@@ -1,7 +1,12 @@
 +
 +_ver=7.1.3
 +_rel=1
@@ -9,10 +9,12 @@
  
  pkgbase=linux
 -pkgver=7.1.3.arch1
+-pkgrel=3
 +pkgver=${_ver}.${_artix}
- pkgrel=2
++pkgrel=2
  pkgdesc='Linux'
  url='https://github.com/archlinux/linux'
+ arch=(
 @@ -39,11 +44,12 @@
    !debug
    !strip

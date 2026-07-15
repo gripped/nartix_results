@@ -65,49 +65,29 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,45 +0,0 @@
--bash
--cmake
--ffmpeg
--fltk1.3
--git
--gmp
--gnutls
--hicolor-icon-theme
--imagemagick
--java-environment
--libgl
--libjpeg-turbo
--libpipewire
--libunwind
--libx11
--libxau
--libxcvt
--libxdamage
--libxdmcp
--libxext
--libxfixes
--libxfont2
--libxi
--libxkbcommon
--libxrender
--libxshmfence
--libxtst
--mesa
--nasm
--nettle
--pam
--perl
--pixman
+@@ -2,7 +2,9 @@
+ cmake
+ ffmpeg
+ fltk1.3
++gcc-libs
+ git
++glibc
+ gmp
+ gnutls
+ hicolor-icon-theme
+@@ -11,6 +13,7 @@
+ libgl
+ libjpeg-turbo
+ libpipewire
++libudev
+ libunwind
+ libx11
+ libxau
+@@ -31,7 +34,6 @@
+ pam
+ perl
+ pixman
 -systemd-libs
--xkeyboard-config
--xorg-font-util
--xorg-server-src
--xorg-util-macros
--xorg-xauth
--xorg-xinit
--xorg-xkbcomp
--xorg-xsetroot
--xorgproto
--xtrans
--zlib
+ xkeyboard-config
+ xorg-font-util
+ xorg-server-src
