@@ -289,7 +289,6 @@ capstone
 python-capstone
 cargo-about
 cargo-c
-cargo-edit
 caribou
 catatonit
 catch2-v2
@@ -3562,6 +3561,7 @@ python-dotenv
 python-doublex-expects
 python-doublex
 python-dpcontracts
+python-dropbox
 python-dulwich
 python-dunamai
 python-durationpy
@@ -4545,6 +4545,7 @@ python-stdlibs
 python-stem
 python-stestr
 python-stevedore
+python-stone
 python-straight.plugin
 python-strawberry-graphql
 python-strict-rfc3339
@@ -4901,7 +4902,6 @@ redland-storage-postgresql
 redland-storage-virtuoso
 redland-storage-sqlite
 remmina
-renameutils
 renderdoc
 reptyr
 rest
@@ -5027,6 +5027,7 @@ ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
 ruby-cucumber-gherkin
+ruby-cucumber-html-formatter
 ruby-cucumber-messages
 ruby-cucumber-tag-expressions
 ruby-cucumber

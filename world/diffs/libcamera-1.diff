@@ -1,6 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -38,7 +38,7 @@
+@@ -40,7 +40,7 @@
    qt6-base
    qt6-tools
    sdl2
@@ -9,7 +9,7 @@
    texlive-core
  )
  source=(
-@@ -74,19 +74,10 @@
+@@ -76,7 +76,7 @@
      -D test=true
    )
  
@@ -18,19 +18,15 @@
    meson compile -C build
  }
  
--check() {
--  local tests=$(
--    meson test -C build --list | awk '{print $3}' \
--      | grep -v single_stream_test \
--      | grep -v multi_stream_test \
--      | grep -v memory_lifetime_test \
--  )
+@@ -87,7 +87,6 @@
+       | grep -v multi_stream_test \
+       | grep -v memory_lifetime_test \
+   )
 -  meson test -C build ${tests[@]}
--}
+ }
  
  package_libcamera() {
-   license=(
-@@ -110,7 +101,7 @@
+@@ -112,7 +111,7 @@
      libyaml
      libyuv
      sh

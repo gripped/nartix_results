@@ -1,11 +1,11 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,14 +2,14 @@
+@@ -2,15 +2,14 @@
  pkgbase=qbittorrent
  pkgname=(qbittorrent
           qbittorrent-nox)
 -pkgver=5.2.3
--pkgrel=2
+-pkgrel=3
 +pkgver=5.0.2
 +pkgrel=1
  arch=(x86_64)
@@ -14,12 +14,13 @@
           GPL-3.0-or-later)
 -depends=(glibc
 -         libgcc
+-         libstdc++
 +depends=(gcc-libs
 +         glibc
           libtorrent-rasterbar
           openssl
           qt6-base
-@@ -20,20 +20,9 @@
+@@ -21,20 +20,9 @@
               qt6-svg
               qt6-tools)
  optdepends=('python: needed for torrent search tab')
@@ -42,7 +43,7 @@
  
  build() {
    cmake -B build -S qBittorrent \
-@@ -43,7 +32,7 @@
+@@ -44,7 +32,7 @@
    cmake -B build-nox -S qBittorrent \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DGUI=OFF \
@@ -51,7 +52,7 @@
    cmake --build build-nox
  }
  
-@@ -60,8 +49,4 @@
+@@ -61,8 +49,4 @@
  
    DESTDIR="$pkgdir" cmake --install build-nox
    install -Dm644 qBittorrent/COPYING -t "$pkgdir"/usr/share/licenses/$pkgname
@@ -66,7 +67,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,9 +1,9 @@
+@@ -1,10 +1,9 @@
  boost
  cmake
 +gcc-libs
@@ -74,6 +75,7 @@
  glibc
  hicolor-icon-theme
 -libgcc
+-libstdc++
  libtorrent-rasterbar
  openssl
  qt6-base

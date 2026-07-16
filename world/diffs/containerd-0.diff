@@ -1,8 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -15,9 +15,6 @@
-               "910C28608D33DDE689C03290997C5A3CD3167CB5") # Samuel Karp
- sha256sums=('573733d8e4d1d92e6ffa452d9201099c479186ece8946bc0f3da24e9833b8387')
+@@ -16,9 +16,6 @@
+               "E11730FCC99E82014347C431F32F8A0F649BC9D4") # Fu Wei
+ sha256sums=('d7ed8c3a97647c15b9349206745a62f67a91d365aca1d78b28882900b0d27893')
  
 -prepare() {
 -  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' $pkgname/containerd.service
@@ -10,7 +10,7 @@
  
  build() {
    cd "${pkgname}"
-@@ -34,7 +31,6 @@
+@@ -35,7 +32,6 @@
  package() {
    cd "${pkgname}"
    make PREFIX=/usr DESTDIR="$pkgdir/" install

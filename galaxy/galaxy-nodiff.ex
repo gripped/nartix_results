@@ -96,6 +96,7 @@ cosmic-greeter
 cosmic-icon-theme
 cosmic-idle
 cosmic-launcher
+cosmic-monitor
 cosmic-notifications
 cosmic-panel
 cosmic-player
@@ -197,6 +198,7 @@ jellyfin-mpv-shim
 jellyfin-server
 joyutils
 json-schema-validator
+just
 kanshi
 kernel-headers-musl
 keyd

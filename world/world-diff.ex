@@ -53,6 +53,7 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
+cargo-edit
 catfish
 cef
 certbot-apache
@@ -752,7 +753,6 @@ python-anytree
 python-aresponses
 python-asn1crypto
 python-cram
-python-dropbox
 python-httplib2
 python-ndg-httpsclient
 python-pdftotext
@@ -763,7 +763,6 @@ python-pytest-freezegun
 python-pyudev
 python-recommonmark
 python-sphinxcontrib-spelling
-python-stone
 qastools
 qbe
 qbittorrent
@@ -866,6 +865,7 @@ redis
 redshift
 refind
 refind-docs
+renameutils
 resvg
 ristretto
 rnnoise
@@ -877,7 +877,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-cucumber-html-formatter
 ruby-sys-filesystem
 rust
 rust-musl

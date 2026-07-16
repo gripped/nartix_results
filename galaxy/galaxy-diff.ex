@@ -41,7 +41,6 @@ gtklock
 hexchat
 hugin
 intel-gpu-tools
-just
 labwc
 lemurs
 libetonyek
