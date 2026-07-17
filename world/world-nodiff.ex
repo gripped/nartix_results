@@ -289,6 +289,7 @@ capstone
 python-capstone
 cargo-about
 cargo-c
+cargo-edit
 caribou
 catatonit
 catch2-v2
@@ -340,7 +341,6 @@ clucene
 clutter-gst
 clutter-gtk
 clutter
-cmark-gfm
 cmark
 cmatrix
 cmocka
@@ -2484,7 +2484,6 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
-netpbm
 netsurf-buildsystem
 nettle3
 network-manager-applet
@@ -2607,7 +2606,6 @@ opencv-samples
 python-opencv
 opencv-cuda
 python-opencv-cuda
-opendbx
 opendoas
 openexr
 openfec
@@ -4906,6 +4904,7 @@ renderdoc
 reptyr
 rest
 restinio
+resvg
 retro-gtk
 rhash
 rhino
@@ -6071,6 +6070,7 @@ xsimd
 xsimd12
 xterm
 xtrans
+xvidcore
 xwallpaper
 yad
 yajl

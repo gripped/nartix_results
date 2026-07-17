@@ -53,7 +53,6 @@ caja-share
 caja-wallpaper
 caja-xattr-tags
 caja
-cargo-edit
 catfish
 cef
 certbot-apache
@@ -87,6 +86,7 @@ cjs
 clamav
 cloud-init
 cmake
+cmark-gfm
 cmus
 colord
 libcolord
@@ -608,6 +608,7 @@ nemo-share
 nemo-terminal
 nemo
 netavark
+netpbm
 netplan
 networkmanager
 libnm
@@ -639,6 +640,7 @@ onionshare
 open-iscsi
 openbox
 opencollada
+opendbx
 opendht
 openmpi
 openmpi-docs
@@ -866,7 +868,6 @@ redshift
 refind
 refind-docs
 renameutils
-resvg
 ristretto
 rnnoise
 rocalution
@@ -1181,7 +1182,6 @@ xorg-xkbcomp
 xorg-xwayland
 xreader
 xscreensaver
-xvidcore
 xxhash
 yubikey-personalization
 zabbix

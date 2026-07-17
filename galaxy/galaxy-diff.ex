@@ -1,6 +1,7 @@
 alacritty
 alsa-utils
 autorandr
+blender
 bsd-games
 calibre
 cinnamon-desktop
@@ -14,6 +15,13 @@ cosmic-session
 cosmic-settings-daemon
 cosmic-settings
 doctest
+dotnet-core-10.0
+dotnet-runtime-10.0
+aspnet-runtime-10.0
+dotnet-sdk-10.0
+dotnet-targeting-pack-10.0
+aspnet-targeting-pack-10.0
+dotnet-source-built-artifacts-10.0
 ecrire
 efl
 element.io
@@ -25,6 +33,7 @@ etherwall
 evisum
 fd
 featherpad
+firefox-noscript
 firefox-tridactyl
 firefox-developer-edition-tridactyl
 firefox-esr-tridactyl
@@ -77,6 +86,7 @@ perl-curses
 python-pdftotext
 python-py7zr
 qbittorrent
+qrupdate
 qt5-webengine
 rage
 read-edid

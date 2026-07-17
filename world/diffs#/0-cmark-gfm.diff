@@ -1,0 +1,42 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,11 @@
+ 
+ pkgname=cmark-gfm
+ pkgver=0.29.0.gfm.13
+-pkgrel=2
++pkgrel=1
+ pkgdesc="GitHub's fork of cmark, a CommonMark parsing and rendering library and program in C"
+ arch=('x86_64')
+ url="https://github.com/github/cmark"
+-license=('BSD-2-Clause')
++license=('custom:BSD2')
+ depends=('glibc')
+ makedepends=('cmake' 'python')
+ source=("$url/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+@@ -20,8 +20,6 @@
+   cmake \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+-    -DCMARK_STATIC=off \
+     ../cmark-gfm-$pkgver
+   make
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,8 +6,6 @@
+ cmake \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+--DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+--DCMARK_STATIC=off \
+ ../cmark-gfm-$pkgver
+ make
+ }

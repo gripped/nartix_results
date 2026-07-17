@@ -63,19 +63,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +1,8 @@
+@@ -1,14 +0,0 @@
 -appstream
-+appstream-glib
-+check
- desktop-file-utils
- file
- girara
+-desktop-file-utils
+-file
+-girara
 -glib2
 -gtk4
 -json-glib
- libseccomp
- libsynctex
- meson
+-libseccomp
+-libsynctex
+-meson
+-ninja
+-python-sphinx
+-sqlite
+-texlive-bin
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

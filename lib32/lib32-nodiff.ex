@@ -5,6 +5,7 @@ lib32-alsa-plugins
 lib32-amdvlk
 lib32-attr
 lib32-audit
+lib32-brotli
 lib32-bzip2
 lib32-cairo
 lib32-cdparanoia

@@ -1,5 +1,4 @@
 lib32-at-spi2-core
-lib32-brotli
 lib32-colord
 lib32-dbus
 lib32-fluidsynth

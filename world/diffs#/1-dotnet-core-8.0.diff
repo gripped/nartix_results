@@ -17,8 +17,8 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -103,7 +104,7 @@
-   optdepends=('lttng-ust2.12: CoreCLR tracing')
+@@ -105,7 +106,7 @@
+   provides=(dotnet-runtime=${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
 -  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
@@ -26,8 +26,8 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime-8.0
  }
  
-@@ -112,7 +113,7 @@
-   depends=(dotnet-runtime-8.0)
+@@ -115,7 +116,7 @@
+   provides=(aspnet-runtime=${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
 -  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
@@ -35,17 +35,17 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime-8.0
  }
  
-@@ -128,7 +129,7 @@
-   optdepends=('aspnet-targeting-pack: Build ASP.NET Core applications')
+@@ -133,7 +134,7 @@
+   provides=(dotnet-sdk=${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
 -  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
 +  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
+   install -dm 755 "${pkgdir}"/usr/share/dotnet/metadata/workloads/${pkgver%.*.sdk*}.${pkgver#*.sdk}
+   touch "${pkgdir}"/usr/share/dotnet/metadata/workloads/${pkgver%.*.sdk*}.${pkgver#*.sdk}/userlocal
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk-8.0
- }
- 
-@@ -137,7 +138,7 @@
-   depends=(netstandard-targeting-pack)
+@@ -145,7 +146,7 @@
+   provides=(dotnet-targeting-pack=${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
 -  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.arch-${_ARCH},Ref}
@@ -53,8 +53,8 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack-8.0
  }
  
-@@ -146,7 +147,7 @@
-   depends=(dotnet-targeting-pack-8.0)
+@@ -155,7 +156,7 @@
+   provides=(aspnet-targeting-pack=${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
 -  bsdtar -xf dotnet/artifacts/${_ARCH}/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-${_ARCH}.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
@@ -68,7 +68,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -20,5 +20,5 @@
+@@ -21,5 +21,5 @@
  netstandard-targeting-pack
  nodejs
  openssl

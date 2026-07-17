@@ -30,7 +30,6 @@ bcc-libbpf-tools
 bcc-examples
 python-bcc
 bleachbit
-blender
 blueman
 bogofilter
 bogofilter-db
@@ -140,7 +139,6 @@ fcitx5-lua
 fcitx5-qt
 fcitx5-unikey
 firefox-i18n
-firefox-noscript
 fluxbox
 foliate
 font-awesome
@@ -556,7 +554,6 @@ qgit
 qjackctl
 qmmp
 qps
-qrupdate
 qt5-location
 qt5-sensors
 qt5-webchannel

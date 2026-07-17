@@ -1,0 +1,77 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -30,7 +30,7 @@
+   lttng-ust2.12
+   nodejs
+   openssl
+-  systemd
++  udev
+   zlib
+ )
+ optdepends=('bash-completion: Bash completion support')
+@@ -57,6 +57,7 @@
+ }
+ 
+ build() {
++  export DOTNET_CLI_TELEMETRY_OPTOUT=1
+   cd dotnet
+ 
+   export COMPlus_LTTng=0
+@@ -97,7 +98,7 @@
+   provides=(dotnet-runtime=${pkgver%.*.sdk*})
+ 
+   install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
+-  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
++  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.NETCore.App
+   ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime-10.0
+ }
+ 
+@@ -107,7 +108,7 @@
+   provides=(aspnet-runtime=${pkgver%.*.sdk*})
+ 
+   install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
+-  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
++  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner shared/Microsoft.AspNetCore.App
+   ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime-10.0
+ }
+ 
+@@ -124,7 +125,7 @@
+   provides=(dotnet-sdk=${pkgver%.*.sdk*})
+ 
+   install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
+-  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
++  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
+   install -dm 755 "${pkgdir}"/usr/share/dotnet/metadata/workloads/${pkgver%.*.sdk*}.${pkgver#*.sdk}
+   touch "${pkgdir}"/usr/share/dotnet/metadata/workloads/${pkgver%.*.sdk*}.${pkgver#*.sdk}/userlocal
+   ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk-10.0
+@@ -135,7 +136,7 @@
+   provides=(dotnet-targeting-pack=${pkgver%.*.sdk*})
+ 
+   install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
+-  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.arch-*,Ref}
++  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.NETCore.App.{Host.artix-*,Ref}
+   ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack-10.0
+ }
+ 
+@@ -145,7 +146,7 @@
+   provides=(aspnet-targeting-pack=${pkgver%.*.sdk*})
+ 
+   install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
+-  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
++  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner packs/Microsoft.AspNetCore.App.Ref
+   ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-targeting-pack-10.0
+ }
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -20,5 +20,5 @@
+ lttng-ust2.12
+ nodejs
+ openssl
+-systemd
++udev
+ zlib

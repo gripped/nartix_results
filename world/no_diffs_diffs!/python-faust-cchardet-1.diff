@@ -1,0 +1,36 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,14 +1,15 @@
+ 
+ pkgname=python-faust-cchardet
+ pkgver=2.1.19
+-pkgrel=5
++pkgrel=6
+ pkgdesc="Fork of the original cChardet"
+ url="https://github.com/faust-streaming/cChardet"
+ arch=(x86_64)
+ license=('GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1')
+ depends=(
+-  gcc-libs
+   glibc
++  libgcc
++  libstdc++
+   python
+ )
+ makedepends=(
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,8 @@
+ cython
+-gcc-libs
+ git
+ glibc
++libgcc
++libstdc++
+ python
+ python-build
+ python-installer

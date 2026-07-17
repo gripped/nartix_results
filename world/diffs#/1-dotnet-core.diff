@@ -17,7 +17,7 @@
    cd dotnet
  
    export COMPlus_LTTng=0
-@@ -90,8 +91,8 @@
+@@ -91,8 +92,8 @@
    optdepends=('bash-completion: Bash completion support')
  
    install -dm 755 "${pkgdir}"/usr/{bin,lib,share/{dotnet,licenses/dotnet-host}}
@@ -28,7 +28,7 @@
    ln -s /usr/share/dotnet/dotnet "${pkgdir}"/usr/bin/dotnet
    ln -s /usr/share/dotnet/host/fxr/${pkgver%.sdk*}/libhostfxr.so "${pkgdir}"/usr/lib/libhostfxr.so
    install -Dm 644 dotnet/src/sdk/scripts/register-completions.bash "${pkgdir}"/usr/share/bash-completion/completions/dotnet
-@@ -115,7 +116,7 @@
+@@ -120,7 +121,7 @@
    conflicts=(dotnet-runtime-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -37,7 +37,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-runtime
  }
  
-@@ -126,7 +127,7 @@
+@@ -134,7 +135,7 @@
    conflicts=(aspnet-runtime-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -46,16 +46,16 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime
  }
  
-@@ -143,7 +144,7 @@
+@@ -155,7 +156,7 @@
    conflicts=(dotnet-sdk-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
 -  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-arch-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
 +  bsdtar -xf dotnet/artifacts/assets/Release/dotnet-sdk-${pkgver%.*.sdk*}.${pkgver#*sdk}-artix-*.tar.gz -C "${pkgdir}"/usr/share/dotnet/ --no-same-owner sdk sdk-manifests templates
+   install -dm 755 "${pkgdir}"/usr/share/dotnet/metadata/workloads/${pkgver%.*.sdk*}.${pkgver#*.sdk}
+   touch "${pkgdir}"/usr/share/dotnet/metadata/workloads/${pkgver%.*.sdk*}.${pkgver#*.sdk}/userlocal
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-sdk
- }
- 
-@@ -153,7 +154,7 @@
+@@ -170,7 +171,7 @@
    conflicts=(dotnet-targeting-pack-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -64,7 +64,7 @@
    ln -s dotnet-host "${pkgdir}"/usr/share/licenses/dotnet-targeting-pack
  }
  
-@@ -164,7 +165,7 @@
+@@ -184,7 +185,7 @@
    conflicts=(aspnet-targeting-pack-${pkgver%.*.sdk*})
  
    install -dm 755 "${pkgdir}"/usr/share/{dotnet,licenses}
@@ -79,7 +79,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -19,5 +19,5 @@
+@@ -20,5 +20,5 @@
  lttng-ust2.12
  nodejs
  openssl

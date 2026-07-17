@@ -5,7 +5,7 @@
  pkgname=lib32-$_pkgname
  pkgver=2.5.1
 -pkgrel=1
-+pkgrel=1.1
++pkgrel=1.2
  pkgdesc="PC/SC Architecture smartcard middleware library (32-bit)"
  arch=('x86_64')
  url='https://pcsclite.apdu.fr/'
@@ -45,6 +45,15 @@
    meson compile -C build
  
    awk '/David Corcoran/{flag=1} /GNU GPL v3/ {flag=0} flag' PCSC/COPYING > LICENSE.BSD-3-Clause
+@@ -71,7 +70,7 @@
+ package() {
+   meson install -C build --destdir "${pkgdir}"
+ 
+-  rm -rv "$pkgdir"/{etc,usr/{include,lib/sysusers.d,share}}
++  rm -rv "$pkgdir"/{etc,usr/{lib,include,sysusers.d,share}}
+   rm -v "$pkgdir"/usr/bin/pcsc-spy
+ 
+   install -D -m0644 LICENSE.* -t "${pkgdir}"/usr/share/licenses/$pkgname
 
 
 ############# Stripped diff below #################
