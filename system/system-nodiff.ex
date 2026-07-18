@@ -79,6 +79,8 @@ libcap-ng
 python-capng
 libcap
 libedit
+libevent
+libevent-docs
 libffi
 libgcrypt
 libgpg-error

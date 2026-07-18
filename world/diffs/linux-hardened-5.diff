@@ -1,10 +1,10 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,61 +1,43 @@
+@@ -1,68 +1,43 @@
  
  pkgbase=linux-hardened
 -pkgver=7.1.3.hardened1
--pkgrel=3
+-pkgrel=4
 +pkgver=6.4.14.hardened1
 +pkgrel=1
  pkgdesc='Security-Hardened Linux'
@@ -17,10 +17,14 @@
 +license=(GPL2)
  makedepends=(
    bc
+-  binutils
    cpio
    gettext
+-  glibc
 +  git
    libelf
+-  libgcc
+-  openssl
    pahole
    perl
    python
@@ -28,7 +32,10 @@
 -  rust-bindgen
 -  rust-src
    tar
+-  xxhash
    xz
+-  zlib
+-  zstd
 -
 -  graphviz
 -  imagemagick
@@ -59,17 +66,17 @@
    647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
    E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
  )
--sha256sums=('be41c068e88f5242a19bccdbffbe077b18c47b45f627e2325504b4fab79dd1dc'
--            'SKIP'
--            'f80f65c15d26201d817aaa0070e0765aa2a894f0eef68c2f669172b3137eba0b'
--            'SKIP')
--sha256sums_x86_64=('5c9898470d552cb361fc45dd4211ea1758f06cf9b02f78f27aba1f79965b3b65')
 -b2sums=('b6466e2798627522f0339c670a223b21266f4d4ede39163867c0f122295e54c5d24093abb51d5c6c6c917de0cb199836e81f45f7c391a5cc138cac2a519438e8'
 +b2sums=('f81dabaef7e31b743aeb75d0dbb0a337e747d1d743fb0b38cb314498200d8d459d82f5f8bb34d6ad688842f3617fd53fd35b1b518654c845a6781580531ab1b2'
          'SKIP'
 -        '96ca72fdf77492d73d6022733ae8d54455bbc0731336e7630fbe3c688a2bf6f7753a88bbe730b8c017dea927f126dfab784f223a8ecd8235e635f349b878eb5e'
 -        'SKIP')
--b2sums_x86_64=('eb2cb1d3de8969e598f25076da5be4aca9bc73211268ab4e9f1d92c574885b3795c693fa05cd024c313dc31338c1affc85ce66c7250f2553af5a577d0103a4b6')
+-b2sums_x86_64=('52d0d7f52e705b0304cbcb8f27ee0020a355f6d1384c98f74a58be89631a36e732bc29ad9abd116089e2be98d6ef31057043138a2fe42cc1e3cecb3bc9436037')
+-
+-sha256sums=('be41c068e88f5242a19bccdbffbe077b18c47b45f627e2325504b4fab79dd1dc'
+-            'SKIP'
+-            'f80f65c15d26201d817aaa0070e0765aa2a894f0eef68c2f669172b3137eba0b'
+-            'SKIP')
 -
 -export KBUILD_BUILD_HOST=archlinux
 +        'd12ff8cbb4dc171167050a198a783e8341df51aa1c3579d3c3f20b9d28025847e6cae9575fc2a37dda2e0f96a10d0306ec4293edaa53ebdfe15a21892c6d2a5f'
@@ -80,7 +87,7 @@
  export KBUILD_BUILD_USER=$pkgbase
  export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
  
-@@ -70,16 +52,15 @@
+@@ -77,16 +52,15 @@
    for src in "${source[@]}"; do
      src="${src%%::*}"
      src="${src##*/}"
@@ -99,7 +106,7 @@
  
    make -s kernelrelease > version
    echo "Prepared $pkgbase version $(<version)"
-@@ -87,13 +68,7 @@
+@@ -94,13 +68,7 @@
  
  build() {
    cd $_srcname
@@ -109,11 +116,11 @@
 -
    make all
 -  make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
--  wait "${pid_docs}"
+-  wait $pid_docs
  }
  
  _package() {
-@@ -104,20 +79,15 @@
+@@ -111,20 +79,15 @@
      kmod
    )
    optdepends=(
@@ -135,7 +142,7 @@
  
    cd $_srcname
    local modulesdir="$pkgdir/usr/lib/modules/$(<version)"
-@@ -131,43 +101,30 @@
+@@ -138,53 +101,30 @@
    ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
      DEPMOD=/doesnt/exist modules_install  # Suppress depmod
  
@@ -145,8 +152,19 @@
  
  _package-headers() {
    pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-   depends=(pahole)
+-  depends=(
+-    binutils
+-    glibc
+-    libelf
+-    libgcc
+-    openssl
+-    pahole
+-    xxhash
+-    zlib
+-    zstd
+-  )
 -  provides=(LINUX-HEADERS)
++  depends=(pahole)
  
    cd $_srcname
    local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -187,10 +205,15 @@
  
    install -Dt "$builddir/drivers/md" -m644 drivers/md/*.h
    install -Dt "$builddir/net/mac80211" -m644 net/mac80211/*.h
-@@ -183,15 +140,10 @@
+@@ -200,20 +140,10 @@
    echo "Installing KConfig files..."
    find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
  
+-  if [[ $(scripts/config -s CONFIG_RUST) = y ]]; then
+-    echo "Installing Rust files..."
+-    install -Dt "$builddir/rust" -m644 rust/*.rmeta
+-    install -Dt "$builddir/rust" rust/*.so
+-  fi
 -
 -  echo "Installing unstripped VDSO..."
 -  make INSTALL_MOD_PATH="$pkgdir/usr" vdso_install \
@@ -210,16 +233,21 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -2,19 +2,12 @@
+@@ -1,27 +1,13 @@
+ bc
+-binutils
  coreutils
  cpio
  gettext
+-glibc
 -graphviz
 -imagemagick
 +git
  initramfs
  kmod
  libelf
+-libgcc
+-openssl
  pahole
  perl
  python
@@ -230,7 +258,10 @@
 -rust-src
  tar
 -texlive-latexextra
+-xxhash
  xz
+-zlib
+-zstd
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
@@ -258,5 +289,5 @@
 -local pid_docs=$!
  make all
 -make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
--wait "${pid_docs}"
+-wait $pid_docs
  }

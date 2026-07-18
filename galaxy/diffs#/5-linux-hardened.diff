@@ -1,0 +1,144 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=linux-hardened
+ pkgver=7.1.3.hardened1
+-pkgrel=4
++pkgrel=3
+ pkgdesc='Security-Hardened Linux'
+ url='https://github.com/anthraxx/linux-hardened'
+ arch=(
+@@ -10,13 +10,9 @@
+ license=(GPL-2.0-only)
+ makedepends=(
+   bc
+-  binutils
+   cpio
+   gettext
+-  glibc
+   libelf
+-  libgcc
+-  openssl
+   pahole
+   perl
+   python
+@@ -24,10 +20,7 @@
+   rust-bindgen
+   rust-src
+   tar
+-  xxhash
+   xz
+-  zlib
+-  zstd
+ 
+   graphviz
+   imagemagick
+@@ -51,18 +44,18 @@
+   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
+   E240B57E2C4630BA768E2F26FC1B547C8D8172C8  # Levente Polyak
+ )
++sha256sums=('be41c068e88f5242a19bccdbffbe077b18c47b45f627e2325504b4fab79dd1dc'
++            'SKIP'
++            'f80f65c15d26201d817aaa0070e0765aa2a894f0eef68c2f669172b3137eba0b'
++            'SKIP')
++sha256sums_x86_64=('14a1d592896d27c574a8f4c8bd71bc17509e3248d62c7ffe55dfbbe58b90f30f')
+ b2sums=('b6466e2798627522f0339c670a223b21266f4d4ede39163867c0f122295e54c5d24093abb51d5c6c6c917de0cb199836e81f45f7c391a5cc138cac2a519438e8'
+         'SKIP'
+         '96ca72fdf77492d73d6022733ae8d54455bbc0731336e7630fbe3c688a2bf6f7753a88bbe730b8c017dea927f126dfab784f223a8ecd8235e635f349b878eb5e'
+         'SKIP')
+-b2sums_x86_64=('52d0d7f52e705b0304cbcb8f27ee0020a355f6d1384c98f74a58be89631a36e732bc29ad9abd116089e2be98d6ef31057043138a2fe42cc1e3cecb3bc9436037')
+-
+-sha256sums=('be41c068e88f5242a19bccdbffbe077b18c47b45f627e2325504b4fab79dd1dc'
+-            'SKIP'
+-            'f80f65c15d26201d817aaa0070e0765aa2a894f0eef68c2f669172b3137eba0b'
+-            'SKIP')
+-
+-export KBUILD_BUILD_HOST=archlinux
++b2sums_x86_64=('5246badcef8f1176888de8bb28721b1161f206b29b08929b725a4d0b906ed218aa8507926588c206c650d664a3fa04ff7f3f254f0711ae634172f33764c0c174')
++
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -100,7 +93,7 @@
+ 
+   make all
+   make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
+-  wait $pid_docs
++  wait "${pid_docs}"
+ }
+ 
+ _package() {
+@@ -143,17 +136,7 @@
+ 
+ _package-headers() {
+   pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
+-  depends=(
+-    binutils
+-    glibc
+-    libelf
+-    libgcc
+-    openssl
+-    pahole
+-    xxhash
+-    zlib
+-    zstd
+-  )
++  depends=(pahole)
+   provides=(LINUX-HEADERS)
+ 
+   cd $_srcname
+@@ -200,11 +183,6 @@
+   echo "Installing KConfig files..."
+   find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
+ 
+-  if [[ $(scripts/config -s CONFIG_RUST) = y ]]; then
+-    echo "Installing Rust files..."
+-    install -Dt "$builddir/rust" -m644 rust/*.rmeta
+-    install -Dt "$builddir/rust" rust/*.so
+-  fi
+ 
+   echo "Installing unstripped VDSO..."
+   make INSTALL_MOD_PATH="$pkgdir/usr" vdso_install \
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +1,12 @@
+ bc
+-binutils
+ coreutils
+ cpio
+ gettext
+-glibc
+ graphviz
+ imagemagick
+ initramfs
+ kmod
+ libelf
+-libgcc
+-openssl
+ pahole
+ perl
+ python
+@@ -21,7 +17,4 @@
+ rust-src
+ tar
+ texlive-latexextra
+-xxhash
+ xz
+-zlib
+-zstd
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -25,5 +25,5 @@
+ local pid_docs=$!
+ make all
+ make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
+-wait $pid_docs
++wait "${pid_docs}"
+ }

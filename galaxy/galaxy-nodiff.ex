@@ -30,6 +30,7 @@ bcc-libbpf-tools
 bcc-examples
 python-bcc
 bleachbit
+blender
 blueman
 bogofilter
 bogofilter-db
@@ -281,18 +282,12 @@ libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
-linux-hardened
-linux-hardened-headers
-linux-hardened-docs
 linux-rt-lts
 linux-rt-lts-headers
 linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs
-linux-zen
-linux-zen-headers
-linux-zen-docs
 lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf
@@ -452,6 +447,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
+netstandard-targeting-pack
 nicotineplus
 nim
 nlopt
@@ -535,7 +531,9 @@ python-lxml-html-clean
 python-mpv-jsonipc
 python-mpv
 python-multivolumefile
+python-pdftotext
 python-poetry-core
+python-py7zr
 python-pybcj
 python-pybluez
 python-pychm
@@ -554,6 +552,7 @@ qgit
 qjackctl
 qmmp
 qps
+qrupdate
 qt5-location
 qt5-sensors
 qt5-webchannel
@@ -627,7 +626,6 @@ sysbench
 t1lib
 tcpdump
 tealdeer
-telegram-desktop
 tenacity
 terminus-font
 tesseract-data

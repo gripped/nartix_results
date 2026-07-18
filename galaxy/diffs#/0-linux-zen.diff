@@ -1,0 +1,72 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgbase=linux-zen
+ pkgver=7.1.3.zen2
+-pkgrel=2
++pkgrel=1
+ pkgdesc='Linux ZEN'
+ url='https://github.com/zen-kernel/zen-kernel'
+ arch=(
+@@ -55,14 +55,14 @@
+         'SKIP'
+         'cb113cb637d9bc2ba60215c6ecd4d5c62c8fe2add15ff6eff38bd421b0f7da62b5e8f4a1c29b348eb37587a48162e14264f1775d702ff05b61eb83d058bf4a09'
+         'SKIP')
+-b2sums_x86_64=('47cfb269ddd885e6bdf7724327469984db16befb38f10753cd4500701bb35590c28e1b0d937662b2ff2523994dc4376235ca6f47c006fc3811505d30e9054725')
++b2sums_x86_64=('9bcd5c30c0289f055a610cd9949ebc45d1e302d384d79a2b23689c131638c7fc39cd5c36ab2bcdcdfe1f89b60aa7da155053e6d26f1bc5c8707aee5cb7a4f0f7')
+ 
+ sha256sums=('be41c068e88f5242a19bccdbffbe077b18c47b45f627e2325504b4fab79dd1dc'
+             'SKIP'
+             '78ecb385736d6e59790e80b7a59a5116b3cb2a1c2da280564432f8937db03a23'
+             'SKIP')
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -94,13 +94,9 @@
+ 
+ build() {
+   cd $_srcname
+-
+-  make htmldocs SPHINXOPTS=-QT &
+-  local pid_docs=$!
+-
+   make all
+   make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
+-  wait $pid_docs
++  make htmldocs SPHINXOPTS=-QT
+ }
+ 
+ _package() {
+@@ -200,8 +196,8 @@
+   echo "Installing KConfig files..."
+   find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
+ 
++  echo "Installing Rust files..."
+   if [[ $(scripts/config -s CONFIG_RUST) = y ]]; then
+-    echo "Installing Rust files..."
+     install -Dt "$builddir/rust" -m644 rust/*.rmeta
+     install -Dt "$builddir/rust" rust/*.so
+   fi
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -21,9 +21,7 @@
+ }
+ build() {
+ cd $_srcname
+-make htmldocs SPHINXOPTS=-QT &
+-local pid_docs=$!
+ make all
+ make -C tools/bpf/bpftool vmlinux.h feature-clang-bpf-co-re=1
+-wait $pid_docs
++make htmldocs SPHINXOPTS=-QT
+ }

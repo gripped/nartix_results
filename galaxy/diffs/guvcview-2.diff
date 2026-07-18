@@ -1,0 +1,37 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -26,7 +26,7 @@
+   portaudio
+   qt6-base
+   sdl2
+-  systemd-libs
++  libudev
+   v4l-utils
+ )
+ makedepends=(
+@@ -79,7 +79,7 @@
+     libusb
+     portaudio
+     sdl2
+-    systemd-libs
++    libudev
+     v4l-utils
+   )
+ 
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -11,9 +11,9 @@
+ libpng
+ libpulse
+ libstdc++
++libudev
+ libusb
+ portaudio
+ qt6-base
+ sdl2
+-systemd-libs
+ v4l-utils

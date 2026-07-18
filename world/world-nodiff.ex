@@ -341,6 +341,7 @@ clucene
 clutter-gst
 clutter-gtk
 clutter
+cmark-gfm
 cmark
 cmatrix
 cmocka
@@ -456,7 +457,6 @@ discount
 discover
 distcc
 distro-info-data
-distro-info
 django
 python-django
 djvulibre
@@ -2196,7 +2196,6 @@ lld20
 lldb
 llhttp
 llvm-julia
-llvm
 llvm15
 llvm16
 llvm18
@@ -2747,6 +2746,7 @@ perl-config-tiny
 perl-cpan-changes
 perl-cpan-meta-check
 perl-cpan-meta-requirements
+perl-cpan-requirements-dynamic
 perl-crypt-openssl-bignum
 perl-crypt-openssl-dsa
 perl-crypt-openssl-guess
@@ -4054,6 +4054,7 @@ python-pbr
 python-pbs-installer
 python-pc-ble-driver-py
 python-pdfrw
+python-pdftotext
 python-pdm-backend
 python-pdm-build-locked
 python-pdm-pep517
@@ -4140,6 +4141,7 @@ python-py-cpuinfo
 python-py-partiql-parser
 python-py
 python-py3c
+python-py7zr
 python-pyacoustid
 python-pyaes
 python-pyaml
@@ -5844,8 +5846,6 @@ vcdimager
 vde2
 vdpauinfo
 veracrypt
-vice
-vice-sdl2
 vid.stab
 viewnior
 vifm

@@ -86,7 +86,6 @@ cjs
 clamav
 cloud-init
 cmake
-cmark-gfm
 cmus
 colord
 libcolord
@@ -110,6 +109,7 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
+distro-info
 dns-over-https
 docker
 dolphin-emu
@@ -473,6 +473,7 @@ linux-zen
 linux-zen-headers
 linux-zen-docs
 lirc
+llvm
 llvm14
 lm_sensors
 localsearch
@@ -663,7 +664,6 @@ pcsclite
 percona-server
 libperconaserverclient
 percona-server-clients
-perl-cpan-requirements-dynamic
 pgbouncer
 phodav
 php-legacy
@@ -757,8 +757,6 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
-python-pdftotext
-python-py7zr
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -992,6 +990,8 @@ valkey
 vault
 vcspull
 verdict
+vice
+vice-sdl2
 vlc
 libvlc
 vlc-cli
