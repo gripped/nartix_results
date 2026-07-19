@@ -111,18 +111,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,11 +0,0 @@
--clang
--curl
--fcitx
--git
--mesa
--ninja
--pkg-config
--python
--python-six
--qt5-base
--subversion
+@@ -2,6 +2,7 @@
+ curl
+ fcitx
+ git
++gtk2
+ mesa
+ ninja
+ pkg-config
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

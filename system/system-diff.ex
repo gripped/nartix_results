@@ -41,7 +41,6 @@ linux-docs
 logrotate
 lvm2
 device-mapper
-man-db
 mdadm
 mkinitcpio
 nfs-utils

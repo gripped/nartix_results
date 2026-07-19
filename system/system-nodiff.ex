@@ -149,6 +149,7 @@ lz4
 lzo
 m4
 make
+man-db
 man-pages
 man-pages-utils
 mkinitcpio-busybox

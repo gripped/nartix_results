@@ -1,0 +1,35 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=xorg-mkfontscale
+ pkgver=1.2.4
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Create an index of scalable font files for X"
+ arch=(x86_64)
+ url="https://gitlab.freedesktop.org/xorg/app/mkfontscale"
+@@ -9,8 +9,7 @@
+          'X11'
+          'MIT'
+          'HPND-sell-variant')
+-install=xorg-mkfontscale.install
+-depends=('freetype2' 'libfontenc' 'zlib' 'glibc')
++depends=('freetype2' 'libfontenc' 'zlib' 'glibc' 'sh')
+ makedepends=('xorg-util-macros' 'xorgproto')
+ groups=('xorg-apps' 'xorg')
+ provides=('xorg-mkfontdir')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ freetype2
+ glibc
+ libfontenc
++sh
+ xorg-util-macros
+ xorgproto
+ zlib

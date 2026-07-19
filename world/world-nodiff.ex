@@ -3908,7 +3908,6 @@ python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
-python-mdit_py_plugins
 python-mdurl
 python-mechanize
 python-mediafile
@@ -3950,7 +3949,6 @@ python-mutagen
 python-mypy_extensions
 python-mysql-connector
 python-mysqlclient
-python-myst-parser
 python-narwhals
 python-natsort
 python-nbdime
@@ -5846,6 +5844,8 @@ vcdimager
 vde2
 vdpauinfo
 veracrypt
+vice
+vice-sdl2
 vid.stab
 viewnior
 vifm

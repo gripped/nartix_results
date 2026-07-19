@@ -756,6 +756,8 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-httplib2
+python-mdit_py_plugins
+python-myst-parser
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -990,8 +992,6 @@ valkey
 vault
 vcspull
 verdict
-vice
-vice-sdl2
 vlc
 libvlc
 vlc-cli

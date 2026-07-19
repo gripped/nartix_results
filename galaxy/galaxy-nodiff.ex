@@ -89,6 +89,7 @@ coin
 compface
 conky-manager2
 copyq
+cosign
 cosmic-app-library
 cosmic-bg
 cosmic-files
