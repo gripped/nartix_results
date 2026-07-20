@@ -1,0 +1,61 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=virt-manager
+ pkgname=(virt-install virt-manager)
+ pkgver=5.1.0
+-pkgrel=3
++pkgrel=4
+ arch=('any')
+ url='https://virt-manager.org/'
+ license=('GPL-2.0-only')
+@@ -12,7 +12,7 @@
+   python-docutils
+ )
+ optdepends=(
+-  'libayatana-appindicator: tray icon'
++  'libappindicator: SNI tray icon'
+   'x11-ssh-askpass: provide password for remote machines connected via ssh tunnel'
+ )
+ source=("git+https://github.com/virt-manager/virt-manager.git#tag=v${pkgver}"
+@@ -23,6 +23,7 @@
+ prepare() {
+   cd $pkgbase
+   patch -Np1 -i "${srcdir}/0001-virtinst-cloudinit-include-empty-meta-data-file.patch"
++  sed -i 's/AyatanaAppIndicator3/AppIndicator3/' virtManager/systray.py
+ }
+ 
+ build() {
+@@ -33,7 +34,7 @@
+     -D tests=disabled
+   )
+ 
+-  arch-meson ${pkgbase} build "${meson_options[@]}"
++  artix-meson ${pkgbase} build "${meson_options[@]}"
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,7 @@
+ prepare() {
+ cd $pkgbase
+ patch -Np1 -i "${srcdir}/0001-virtinst-cloudinit-include-empty-meta-data-file.patch"
++sed -i 's/AyatanaAppIndicator3/AppIndicator3/' virtManager/systray.py
+ }
+ build() {
+ local meson_options=(
+@@ -9,6 +10,6 @@
+ -D update-icon-cache=false
+ -D tests=disabled
+ )
+-arch-meson ${pkgbase} build "${meson_options[@]}"
++artix-meson ${pkgbase} build "${meson_options[@]}"
+ meson compile -C build
+ }

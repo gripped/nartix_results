@@ -637,6 +637,7 @@ nvidia
 nvme-cli
 nvtop
 onboard
+onetbb
 onionshare
 open-iscsi
 openbox
@@ -756,8 +757,6 @@ python-aresponses
 python-asn1crypto
 python-cram
 python-httplib2
-python-mdit_py_plugins
-python-myst-parser
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -954,6 +953,7 @@ tor
 tracker3-miners
 tracker3
 tracker3-docs
+transmageddon
 transmission
 transmission-cli
 transmission-gtk
@@ -992,6 +992,8 @@ valkey
 vault
 vcspull
 verdict
+virt-manager
+virt-install
 vlc
 libvlc
 vlc-cli

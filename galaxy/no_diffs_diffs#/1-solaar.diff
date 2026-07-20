@@ -1,0 +1,54 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,19 +2,20 @@
+ _name=Solaar
+ pkgname=solaar
+ pkgver=1.1.20
+-pkgrel=1
++pkgrel=2
+ pkgdesc="Linux device manager for a wide range of Logitech devices"
+ url="https://pwr-solaar.github.io/Solaar/"
+ _url="https://github.com/pwr-Solaar/Solaar"
+ license=(GPL-2.0-or-later)
+ arch=(any)
+ depends=(
++  gdk-pixbuf2
+   glib2
+-  gobject-introspection-runtime
+   gtk3
+   hicolor-icon-theme
+   libnotify
+   python
++  python-cairo
+   python-dbus
+   python-evdev
+   python-gobject
+@@ -31,7 +32,7 @@
+   python-setuptools
+   python-wheel
+ )
+-optdepends=('libayatana-appindicator: Display tray icon')
++optdepends=('libappindicator: Display tray icon')
+ source=(
+   "git+$_url.git?signed#tag=$pkgver"
+ )
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,11 +1,12 @@
++gdk-pixbuf2
+ git
+ glib2
+-gobject-introspection-runtime
+ gtk3
+ hicolor-icon-theme
+ libnotify
+ python
+ python-build
++python-cairo
+ python-dbus
+ python-evdev
+ python-gobject

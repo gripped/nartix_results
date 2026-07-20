@@ -391,6 +391,7 @@ cppjieba
 cppunit
 cpputest
 cppzmq
+cpuinfo
 criterion
 criu
 cryptoplusplus
@@ -2576,7 +2577,6 @@ okteta
 okular
 okularpart5
 onednn
-onetbb
 onevpl
 oniguruma
 onnx
@@ -3908,6 +3908,7 @@ python-matplotlib
 python-matrix-common
 python-maxminddb
 python-mccabe
+python-mdit_py_plugins
 python-mdurl
 python-mechanize
 python-mediafile
@@ -3949,6 +3950,7 @@ python-mutagen
 python-mypy_extensions
 python-mysql-connector
 python-mysqlclient
+python-myst-parser
 python-narwhals
 python-natsort
 python-nbdime
@@ -5049,6 +5051,7 @@ ruby-erb
 ruby-erubi
 ruby-etc
 ruby-eventmachine
+ruby-extconf_compile_commands_json
 ruby-facets
 ruby-falcon
 ruby-faraday-em_http
@@ -5106,10 +5109,13 @@ ruby-launchy
 ruby-lemon
 ruby-leto
 ruby-lint_roller
+ruby-liquid-c
+ruby-liquid
 ruby-locale
 ruby-localhost
 ruby-logger
 ruby-loofah
+ruby-lru_redux
 ruby-lsp
 ruby-m
 ruby-manpages
@@ -5133,6 +5139,7 @@ ruby-mini_portile2
 ruby-minitar
 ruby-minitest-global_expectations
 ruby-minitest-hooks
+ruby-minitest-mock
 ruby-minitest-parallel_fork
 ruby-minitest-power_assert
 ruby-minitest-proveit
@@ -5176,6 +5183,7 @@ ruby-open-uri
 ruby-optimist
 ruby-packetfu
 ruby-paint
+ruby-pandoc-ruby
 ruby-parallel
 ruby-parser
 ruby-path_expander
@@ -5754,7 +5762,6 @@ tp_smapi
 tpm2-abrmd
 tpm2-tools
 transcode
-transmageddon
 trash-cli
 tre
 tree-sitter-bash
@@ -5856,8 +5863,6 @@ gvim
 vim-runtime
 vimiv
 virglrenderer
-virt-manager
-virt-install
 virt-viewer
 virt-what
 virtiofsd
