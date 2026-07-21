@@ -53,7 +53,6 @@ firefox-developer-edition-tridactyl
 firefox-esr-tridactyl
 konform-browser-tridactyl
 firefox
-forgejo-runner
 godot
 godot-mono
 gpicview
@@ -79,12 +78,6 @@ python-libusbsio
 libva-nvidia-driver
 libxfce4ui
 light
-linux-hardened
-linux-hardened-headers
-linux-hardened-docs
-linux-zen
-linux-zen-headers
-linux-zen-docs
 ly
 mate-control-center
 mate-screensaver

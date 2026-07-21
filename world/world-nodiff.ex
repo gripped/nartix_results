@@ -236,7 +236,6 @@ bogofilter-sqlite
 boinc
 boinc-nox
 bomber
-boost
 booster
 botan
 botan2
@@ -1323,7 +1322,6 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
-kddockwidgets
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -2444,11 +2442,6 @@ mtr
 mtr-gtk
 mujs
 muparser
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
-python-mupdf
 musescore
 musl
 musl-aarch64
@@ -2577,6 +2570,7 @@ okteta
 okular
 okularpart5
 onednn
+onetbb
 onevpl
 oniguruma
 onnx
@@ -5863,6 +5857,8 @@ gvim
 vim-runtime
 vimiv
 virglrenderer
+virt-manager
+virt-install
 virt-viewer
 virt-what
 virtiofsd
@@ -6104,9 +6100,11 @@ z3
 python-z3-solver
 z3-java
 zanshin
+zathura-cb
 zathura-djvu
 zathura-pdf-poppler
 zathura-ps
+zathura
 zbar
 zeitgeist
 zenity

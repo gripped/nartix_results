@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=zathura-cb
- pkgver=2026.07.08
--pkgrel=1
-+pkgrel=1.2
- pkgdesc="Adds comic book support to zathura"
- url="https://pwmt.org/projects/zathura-cb/"
- arch=('x86_64')
-@@ -20,7 +20,7 @@
+@@ -13,7 +13,7 @@
  
  build() {
  	cd "${pkgname}-${pkgver}"
@@ -26,8 +17,7 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,6 +4,6 @@
- }
+@@ -1,5 +1,5 @@
  build() {
  cd "${pkgname}-${pkgver}"
 -arch-meson build

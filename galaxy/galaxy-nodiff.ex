@@ -150,6 +150,7 @@ font-manager
 foot
 $pkgbase
 $pkgbase-terminfo
+forgejo-runner
 fpc-src
 fpc
 freecell-solver
@@ -283,12 +284,18 @@ libxml2-legacy
 lightdm-gtk-greeter-settings
 lightdm-gtk-greeter
 lightdm-slick-greeter
+linux-hardened
+linux-hardened-headers
+linux-hardened-docs
 linux-rt-lts
 linux-rt-lts-headers
 linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs
+linux-zen
+linux-zen-headers
+linux-zen-docs
 lutris
 lxappearance-obconf-gtk3
 lxappearance-obconf

@@ -1,0 +1,31 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -55,14 +55,14 @@
+         'SKIP'
+         '0ac867999730158e75283983c38c91e6b9e94e9f3964b39bb15dcda8e5bbc9d13683f0e7bf3af61d4364e0bb9cf8f519214f43348e90e0913cfb676f9f23625f'
+         'SKIP')
+-b2sums_x86_64=('a01726739c30ecfc9eea59f53d94759b9df6dfda144e9a09faeb81c5a42a3fc3198bfa56e455016c4843c9fc41886c3a64af1c27e4c19d0156ecb2287bcff4f6')
++b2sums_x86_64=('a11d157bc449e714b63d40106601cc74620e102372cd82e0a1493bc640bddb50b8cee22deae49c93b4fc53e8e3a5e243b316985e6e94e1792f785f7b3083f2f1')
+ 
+ sha256sums=('1c63922a119675d38e3ae0f8f6ee07f15c41a786ab9ed66563749bb8c9a08e2e'
+             'SKIP'
+             'b9807636885af4ba97f9fbab40a18ee9dddf0bfd58ce30991844dab76ad5ec44'
+             'SKIP')
+ 
+-export KBUILD_BUILD_HOST=archlinux
++export KBUILD_BUILD_HOST=artixlinux
+ export KBUILD_BUILD_USER=$pkgbase
+ export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+ 
+@@ -262,10 +262,7 @@
+     dst="${src#Documentation/}"
+     dst="$builddir/Documentation/${dst#output/}"
+     install -Dm644 "$src" "$dst"
+-  done < <(
+-    find Documentation \( -name '.*' -o -name __pycache__ \) -prune \
+-      -o \! -type d -print0
+-  )
++  done < <(find Documentation -name '.*' -prune -o ! -type d -print0)
+ 
+   echo "Adding symlink..."
+   mkdir -p "$pkgdir/usr/share/doc"

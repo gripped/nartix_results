@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,29 +1,24 @@
+ 
+ pkgname=zathura-cb
+-pkgver=2026.07.18
++pkgver=0.1.11
+ pkgrel=1
+ pkgdesc="Adds comic book support to zathura"
+ url="https://pwmt.org/projects/zathura-cb/"
+ arch=('x86_64')
+ license=('Zlib')
+-depends=('zathura' 'libarchive')
+-makedepends=('meson' 'ninja' 'appstream' 'desktop-file-utils')
++depends=('zathura' 'libarchive' 'desktop-file-utils')
++makedepends=('meson' 'ninja' 'appstream-glib')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
+-sha512sums=('4b7eac4aec8be060526788b523fa190ece7f97ac187af5bec41752e11b99d023b5c5af5641f5316e0aa2866a299ca41681bc3008666435bde098340f30ac2aff')
++sha512sums=('27246eca7ca8b5ca02e979943d43d80248da4cf226ce6929cdbbf4f2516d8872c9ba487d1e3cefdd27a63e30a396897b6884c73ae1774e2c7a4ba9afb3c6d593')
+ 
+ build() {
+-	cd "${pkgname}-${pkgver}"
+-	arch-meson build
+-	ninja -C build
+-}
+-
+-check() {
+-	cd "${pkgname}-${pkgver}"
+-	meson test -C build --print-errorlogs
++        cd "${pkgname}-${pkgver}"
++        artix-meson build
++        ninja -C build
+ }
+ 
+ package() {
+-	cd "${pkgname}-${pkgver}"
+-	DESTDIR="${pkgdir}" ninja -C build install
+-	install -Dm 664 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++        cd "${pkgname}-${pkgver}"
++        DESTDIR="${pkgdir}" ninja -C build install
++        install -Dm 664 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,4 @@
+-appstream
++appstream-glib
+ desktop-file-utils
+ libarchive
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd "${pkgname}-${pkgver}"
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

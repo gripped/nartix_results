@@ -1,0 +1,80 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,35 +1,35 @@
+ 
+ pkgname=zathura
+-pkgver=2026.07.18
++pkgver=0.5.8
+ pkgrel=1
+ pkgdesc="Minimalistic document viewer"
+ url="https://pwmt.org/projects/zathura/"
+ arch=('x86_64')
+ license=('Zlib')
+-depends=('girara' 'sqlite' 'desktop-file-utils' 'file' 'libsynctex' 'libseccomp' 'gtk4' 'glib2' 'json-glib')
+-makedepends=('appstream' 'python-sphinx' 'texlive-bin' 'meson' 'ninja')
+-checkdepends=('xorg-server-xvfb' 'weston' 'libdisplay-info')
++makedepends=('python-sphinx' 'texlive-bin' 'meson' 'ninja' 'appstream-glib' 'check')
++checkdepends=('xorg-server-xvfb')
++depends=('girara' 'sqlite' 'desktop-file-utils' 'file' 'libsynctex' 'file' 'libseccomp')
+ optdepends=('zathura-djvu: DjVu support'
+             'zathura-pdf-poppler: PDF support using Poppler'
+             'zathura-pdf-mupdf: PDF support using MuPDF'
+             'zathura-ps: PostScript support'
+             'zathura-cb: Comic book support')
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
+-sha512sums=('1d0900e67e43e4bcd6dfcb05918969ff30b0a0c7e0cd214ff09499359e5e61a20440d7b9723192683a540bb9d34a9239a05075558baf26b1a14ccffa383d0200')
++sha512sums=('6954f8bf8c76526e86a4e335c18c3c68f509fbbe1081f7c74d333f8a9ba83bc5da971ad744f91408f8b0fb8f0b647ae07f02601b5efa97961155ba193c8777f6')
+ 
+ build() {
+-	cd "${pkgname}-${pkgver}"
+-	arch-meson build
+-	ninja -C build
++        cd "${pkgname}-${pkgver}"
++        artix-meson build
++        ninja -C build
+ }
+ 
+ check() {
+-	cd "${pkgname}-${pkgver}"
+-	ninja -C build test
++        cd "${pkgname}-${pkgver}"
++        ninja -C build test
+ }
+ 
+ package() {
+-	cd "${pkgname}-${pkgver}"
+-	DESTDIR="${pkgdir}" ninja -C build install
+-	install -Dm 664 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++        cd "${pkgname}-${pkgver}"
++        DESTDIR="${pkgdir}" ninja -C build install
++        install -Dm 664 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,10 +1,8 @@
+-appstream
++appstream-glib
++check
+ desktop-file-utils
+ file
+ girara
+-glib2
+-gtk4
+-json-glib
+ libseccomp
+ libsynctex
+ meson
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,5 @@
+ build() {
+ cd "${pkgname}-${pkgver}"
+-arch-meson build
++artix-meson build
+ ninja -C build
+ }

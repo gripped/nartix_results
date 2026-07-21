@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -6,7 +6,7 @@
+   zenmap
+ )
+ pkgver=7.99
+-pkgrel=3
++pkgrel=2
+ pkgdesc="Utility for network discovery and security auditing"
+ url='https://nmap.org/'
+ arch=(x86_64)
+@@ -144,6 +144,6 @@
+   install -vDm644 -t "$pkgdir/usr/share/applications" \
+     zenmap/install_scripts/unix/zenmap-root.desktop \
+     zenmap/install_scripts/unix/zenmap.desktop
+-  install -vDm644 -t "$pkgdir/usr/share/icons/hicolor/256x256/apps" \
++  install -vDm644 -t "$pkgdir/usr/share/pixmaps" \
+     zenmap/zenmapCore/data/pixmaps/zenmap.png
+ }

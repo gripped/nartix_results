@@ -1,21 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,19 @@
+@@ -1,25 +1,20 @@
  
  pkgname=zathura-pdf-poppler
--pkgver=2026.05.10
--pkgrel=5
+-pkgver=2026.07.18
 +pkgver=0.3.3
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Adds pdf support to zathura by using the poppler engine"
  url="https://pwmt.org/projects/zathura-pdf-poppler/"
  arch=('x86_64')
  license=('Zlib')
- depends=('poppler-glib' 'zathura' 'desktop-file-utils')
--makedepends=('meson' 'ninja' 'appstream' 'appstream-glib')
+-depends=('poppler-glib' 'zathura')
+-makedepends=('meson' 'ninja' 'appstream' 'desktop-file-utils')
++depends=('poppler-glib' 'zathura' 'desktop-file-utils')
 +makedepends=('meson' 'ninja' 'appstream-glib')
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
--sha512sums=('f864dc9415fb040b15bd0f8ef243ee6c1a5171a5468074f2c140e7f6a770d7d76f2afd14f6f71b31b4b88e78bc0a13454ad37ec27dd342988c80cc5d37b8cea4')
+-sha512sums=('6a1ca54a3041f1bcc591cd26c496d6e8868bd0f25336d78268724e4b65fa1fb4839660aca6fb93e5b8a0367da656185868186d1f7d033a3cd90075f197409c2e')
 +sha512sums=('791b0e6cac29358226b2416e22527449d89b8544242d1b492b6017d52eb996aa9647e10259d475c5c84bbf4a19b680c160ac7e822e331c466c3ff5697913b003')
  
  build() {
@@ -23,19 +23,26 @@
 -        arch-meson build
 +        artix-meson build
          ninja -C build
+-}
+-
+-check() {
+-	cd "${pkgname}-${pkgver}"
+-	meson test -C build --print-errorlogs
  }
  
+ package() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,4 +1,4 @@
 -appstream
- appstream-glib
++appstream-glib
  desktop-file-utils
  meson
+ ninja
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -1,21 +1,21 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,19 @@
+@@ -1,25 +1,20 @@
  
  pkgname=zathura-djvu
--pkgver=2026.05.10
--pkgrel=5
+-pkgver=2026.07.18
 +pkgver=0.2.10
-+pkgrel=1
+ pkgrel=1
  pkgdesc="DjVu support for Zathura"
  url="https://pwmt.org/projects/zathura-djvu/"
  arch=('x86_64')
  license=('Zlib')
- depends=('djvulibre' 'zathura' 'desktop-file-utils')
--makedepends=('meson' 'ninja' 'appstream' 'appstream-glib')
+-depends=('djvulibre' 'zathura')
+-makedepends=('meson' 'ninja' 'appstream' 'desktop-file-utils')
++depends=('djvulibre' 'zathura' 'desktop-file-utils')
 +makedepends=('meson' 'ninja' 'appstream-glib')
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
--sha512sums=('96540e77acdf234787714baf71495aeaea7c1e20f5b1202d3326be2ad18358608c546ea164c2c3ee415a97004bcf3e5e23da0f2b3df8926dfb92662850842c28')
+-sha512sums=('8844bec659e4de1266c2987eb937ce3ee99b55e62748343b16ca3a92e4464b8dbe8c2598fb8642c42e47af5206aed5fa002cf750d338876d9857daf74388bcad')
 +sha512sums=('427ccefb0e808d978b69de8e2b2ce1c3a2f30a58a88639b6226da2793d211a722146df6bed248000244f32fe0f4555c013ea9c02c9da5640811921a8e89c9576')
  
  build() {
@@ -23,19 +23,26 @@
 -        arch-meson build
 +        artix-meson build
          ninja -C build
+-}
+-
+-check() {
+-	cd "${pkgname}-${pkgver}"
+-	meson test -C build --print-errorlogs
  }
  
+ package() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,4 +1,4 @@
 -appstream
- appstream-glib
++appstream-glib
  desktop-file-utils
  djvulibre
+ meson
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

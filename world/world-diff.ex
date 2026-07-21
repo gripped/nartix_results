@@ -33,6 +33,7 @@ bluez-mesh
 bluez-obex
 bmake
 bolt
+boost
 box2d
 brightnessctl
 brltty
@@ -343,6 +344,7 @@ jbigkit
 js78
 jupyter-server-ydoc
 kcoreaddons
+kddockwidgets
 kdeplasma-addons
 kdoctools5
 kinfocenter
@@ -586,6 +588,11 @@ muffin
 multipath-tools
 mumble
 mumble-server
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
+python-mupdf
 musepack
 musepack-tools
 libmpcdec
@@ -637,7 +644,6 @@ nvidia
 nvme-cli
 nvtop
 onboard
-onetbb
 onionshare
 open-iscsi
 openbox
@@ -992,8 +998,6 @@ valkey
 vault
 vcspull
 verdict
-virt-manager
-virt-install
 vlc
 libvlc
 vlc-cli
@@ -1194,8 +1198,6 @@ zabbix-web-service
 zabbix-proxy
 zabbix-agent
 zabbix-agent2
-zathura-cb
 zathura-pdf-mupdf
-zathura
 znc
 zxing-cpp

@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=distro-info
--pkgver=1.16
+-pkgver=1.17
 +pkgver=1.15
  pkgrel=1
  pkgdesc="Information about all releases of Debian and Ubuntu"
@@ -12,7 +12,7 @@
  conflicts=('python-distro-info' 'perl-distro-info')
  options=('!emptydirs')
  source=("git+https://salsa.debian.org/debian/distro-info.git#tag=debian/$pkgver")
--sha256sums=('54a03b26734241647eb82412974a0bf0e1dfa531071b21a471fa77b0b4fe2207')
+-sha256sums=('8d74440938fc2d24c3bf60c13648c980684db5655c3c120cbff4e679e29be371')
 +sha256sums=('fe11e1361a74f17f96501a64037725132c0f1356113e24bcaaa09573662a972f')
  
  prepare() {

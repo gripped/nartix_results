@@ -1,21 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,19 +1,19 @@
+@@ -1,25 +1,20 @@
  
  pkgname=zathura-ps
--pkgver=2026.02.03
--pkgrel=8
+-pkgver=2026.07.18
+-pkgrel=1
 +pkgver=0.2.8
 +pkgrel=2
  pkgdesc="Adds ps support to zathura by using the libspectre library"
  url="https://pwmt.org/projects/zathura-ps"
  arch=('x86_64')
  license=('Zlib')
- depends=('libspectre' 'zathura' 'desktop-file-utils')
--makedepends=('meson' 'ninja' 'appstream' 'appstream-glib')
+-depends=('libspectre' 'zathura')
+-makedepends=('meson' 'ninja' 'appstream' 'desktop-file-utils')
++depends=('libspectre' 'zathura' 'desktop-file-utils')
 +makedepends=('meson' 'ninja' 'appstream-glib')
  source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pwmt/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
--sha512sums=('38be5cce09a6d7dd008c12dc0f2dcf053d55b23792148add94d616b61b0e4ad2e2f395203a9391c6c7e0d46ddf4f9a62d106d917d5444e709cc963b511e78a95')
+-sha512sums=('6d823b2ad1dee7ffd9c74c77610f871a71e8a1e911ba5fea50650287afdb5c25c63fb1bd65df9a73e6bb469579e91fd6577fb39dde8513bfbaf0b8763a346aec')
 +sha512sums=('73e230a089e40f660cbf9f478a3269bcc799d5e591fd1fe095e9ce3ec4fd4f331757a7ec74cb3ef5b3b3ffc66ba15e6f11d6e3fc619973219cb67e25a504875b')
  
  build() {
@@ -23,19 +24,26 @@
 -        arch-meson build
 +        artix-meson build
          ninja -C build
+-}
+-
+-check() {
+-	cd "${pkgname}-${pkgver}"
+-	meson test -C build --print-errorlogs
  }
  
+ package() {
 
 
 ############# Stripped diff below #################
 
 --- arch_depends
 +++ artix_depends
-@@ -1,4 +1,3 @@
+@@ -1,4 +1,4 @@
 -appstream
- appstream-glib
++appstream-glib
  desktop-file-utils
  libspectre
+ meson
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

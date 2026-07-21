@@ -1,0 +1,10 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -64,7 +64,6 @@
+   install -vDm755 -t "$pkgdir/usr/bin" build/forgejo-runner
+ 
+   install -vDm640 -t "$pkgdir/etc/forgejo-runner" config.yaml
+-  install -vDm644 -t "$pkgdir/usr/lib/systemd/system" contrib/forgejo-runner.service
+   install -vDm644 "$srcdir/sysusers.conf" "$pkgdir/usr/lib/sysusers.d/forgejo-runner.conf"
+   install -vDm644 "$srcdir/tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/forgejo-runner.conf"
+ 

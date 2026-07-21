@@ -49,34 +49,31 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,16 +1,20 @@
+@@ -1,27 +0,0 @@
 -archlinux-keyring
-+artix-keyring
- bash
- bzip2
- coreutils
-+esysusers
-+etmpfiles
- file
- filesystem
- findutils
- gawk
- gcc-libs
- gettext
-+git
- glibc
- grep
- gzip
-+init-logind
- iproute2
- iputils
- licenses
-@@ -20,8 +24,6 @@
- psmisc
- sed
- shadow
+-bash
+-bzip2
+-coreutils
+-file
+-filesystem
+-findutils
+-gawk
+-gcc-libs
+-gettext
+-glibc
+-grep
+-gzip
+-iproute2
+-iputils
+-licenses
+-pacman
+-pciutils
+-procps-ng
+-psmisc
+-sed
+-shadow
 -systemd
 -systemd-sysvcompat
- tar
- util-linux
- xz
+-tar
+-util-linux
+-xz

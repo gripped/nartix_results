@@ -1,0 +1,91 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=lame
+-pkgver=4.0
++pkgver=3.101.r6531
+ pkgrel=1
+ pkgdesc='A high quality MPEG Audio Layer III (MP3) encoder'
+ arch=(x86_64)
+@@ -11,27 +11,33 @@
+   mpg123
+   ncurses
+ )
+-makedepends=(nasm)
++makedepends=(
++  nasm
++  subversion
++)
+ provides=(libmp3lame.so)
++_revision=6531
+ source=(
+-  https://sourceforge.net/projects/lame/files/lame/${pkgver}/lame-${pkgver}.tar.gz
++  svn+https://svn.code.sf.net/p/lame/svn/trunk/lame#revision=6531
+   lame-symbols.patch
+   lame-cbr-abr-quality-settings-clamp.patch
+ )
+-b2sums=('9e05275c28bc6d086011362f211edc2e2cd831429ca4d2daa1bc0ae7084ebd9bec3c3db93e1cab638570a9f624468372b9ff39f3dc9e7d0b105dbba7f248b2df'
++b2sums=('SKIP'
+         'c8cc00f560515231dba1bf9393d056ecb11c2268bafae4923e8c2594b92de473b94e6e5cbef1e52b4843ddd36bb4e06ea6b24ac4a18aa682b2ab7c5ef6deb73c'
+         '217cf6611f13cb91997856c3af9c30b7c23fa3744126d27f71768001b6799a4a100c9c0baec34beb656fee1c8c519c86b1a9c549e2ea6befe197eb930f70caaa')
+ 
+ prepare() {
+-  cd lame-${pkgver}
++  cd lame
+   patch -Np1 -i ../lame-symbols.patch
+   patch -Np1 -i ../lame-cbr-abr-quality-settings-clamp.patch
+-  autoreconf -fiv -I /usr/share/gettext/m4
++}
+ 
++pkgver() {
++  echo "3.101.r${_revision}"
+ }
+ 
+ build() {
+-  cd lame-${pkgver}
++  cd lame
+   export CFLAGS+=" -Wno-implicit-function-declaration -Wno-incompatible-pointer-types"
+   ./configure \
+     --prefix=/usr \
+@@ -42,9 +48,10 @@
+ }
+ 
+ check() {
+-  make test -C lame-${pkgver}
++  make test -C lame
+ }
+ 
+ package() {
+-  make DESTDIR="${pkgdir}" install -C lame-${pkgver}
++  make DESTDIR="${pkgdir}" install -C lame
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -2,3 +2,4 @@
+ mpg123
+ nasm
+ ncurses
++subversion
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,10 @@
+ prepare() {
+-cd lame-${pkgver}
++cd lame
+ patch -Np1 -i ../lame-symbols.patch
+ patch -Np1 -i ../lame-cbr-abr-quality-settings-clamp.patch
+-autoreconf -fiv -I /usr/share/gettext/m4
+ }
+ build() {
+-cd lame-${pkgver}
++cd lame
+ export CFLAGS+=" -Wno-implicit-function-declaration -Wno-incompatible-pointer-types"
+ ./configure \
+ --prefix=/usr \
