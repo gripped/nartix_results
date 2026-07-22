@@ -33,7 +33,6 @@ bluez-mesh
 bluez-obex
 bmake
 bolt
-boost
 box2d
 brightnessctl
 brltty
@@ -341,10 +340,10 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
+js140
 js78
 jupyter-server-ydoc
 kcoreaddons
-kddockwidgets
 kdeplasma-addons
 kdoctools5
 kinfocenter
@@ -648,6 +647,11 @@ onionshare
 open-iscsi
 openbox
 opencollada
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendbx
 opendht
 openmpi

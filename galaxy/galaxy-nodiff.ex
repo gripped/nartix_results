@@ -39,6 +39,7 @@ bogofilter-lmdb
 bogofilter-sqlite
 box2d
 btrfs-assistant
+cairo-dock-plug-ins
 cairo-perl
 caja-extensions
 caja-extensions-common
@@ -121,6 +122,7 @@ doublecmd-qt5
 doublecmd-qt6
 dvtm
 easy-rsa
+easyeffects
 electron
 electron39
 electron40
@@ -290,9 +292,6 @@ linux-hardened-docs
 linux-rt-lts
 linux-rt-lts-headers
 linux-rt-lts-docs
-linux-rt
-linux-rt-headers
-linux-rt-docs
 linux-zen
 linux-zen-headers
 linux-zen-docs
@@ -890,5 +889,6 @@ zathura
 zed
 zellij
 zig0.14
+zita-convolver
 zsh
 zsh-doc

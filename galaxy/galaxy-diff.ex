@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 autorandr
 bsd-games
+cairo-dock
 calibre
 cinnamon-desktop
 cinnamon-session
@@ -78,6 +79,9 @@ python-libusbsio
 libva-nvidia-driver
 libxfce4ui
 light
+linux-rt
+linux-rt-headers
+linux-rt-docs
 ly
 mate-control-center
 mate-screensaver
@@ -99,6 +103,7 @@ osdlyrics
 p8-platform
 perl-cgi-fast
 perl-curses
+python-pystray
 qbittorrent
 qt5-webengine
 rage

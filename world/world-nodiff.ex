@@ -236,6 +236,7 @@ bogofilter-sqlite
 boinc
 boinc-nox
 bomber
+boost
 booster
 botan
 botan2
@@ -1224,7 +1225,6 @@ jruby
 js102
 js115
 js128
-js140
 js91
 jshon
 json-glib
@@ -1322,6 +1322,7 @@ kdav
 kdav5
 kdbusaddons
 kdbusaddons5
+kddockwidgets
 kde-applications-meta
 kde-accessibility-meta
 kde-education-meta
@@ -2594,11 +2595,6 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendoas
 openexr
 openfec

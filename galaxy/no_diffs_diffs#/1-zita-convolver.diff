@@ -1,0 +1,24 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -8,7 +8,8 @@
+ license=(GPL-3.0-or-later)
+ depends=(
+   fftw
+-  gcc-libs
++  libgcc
++  libstdc++
+   glibc
+ )
+ provides=(libzita-convolver.so)
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,3 +1,4 @@
+ fftw
+-gcc-libs
+ glibc
++libgcc
++libstdc++
