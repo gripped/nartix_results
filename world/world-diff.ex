@@ -340,12 +340,13 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
-js140
 js78
 jupyter-server-ydoc
 kcoreaddons
 kdeplasma-addons
 kdoctools5
+kicad
+kicad-demos
 kinfocenter
 kismet
 kitty
@@ -358,7 +359,6 @@ kstars
 ksystemlog
 kwin-x11
 kwin
-lame
 libatasmart
 libblockdev
 libblockdev-btrfs
@@ -587,11 +587,6 @@ muffin
 multipath-tools
 mumble
 mumble-server
-mupdf
-libmupdf
-mupdf-gl
-mupdf-tools
-python-mupdf
 musepack
 musepack-tools
 libmpcdec
@@ -647,11 +642,6 @@ onionshare
 open-iscsi
 openbox
 opencollada
-opencv
-opencv-samples
-python-opencv
-opencv-cuda
-python-opencv-cuda
 opendbx
 opendht
 openmpi
@@ -907,6 +897,7 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
+sequoia-sq
 sequoia-sqv
 sfml
 shairport-sync
@@ -1083,7 +1074,6 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
-vmaf
 vte3
 vte-common
 vte3-utils

@@ -4,12 +4,12 @@
  
  pkgname=cmake
  pkgver=4.4.0
--pkgrel=1
+-pkgrel=2
 +pkgrel=1.1
  pkgdesc='A cross-platform open-source make system'
  arch=('x86_64')
  url="https://www.cmake.org/"
-@@ -29,12 +29,19 @@
+@@ -29,13 +29,19 @@
    'ninja: for ninja generator'
    'qt6-base: cmake-gui'
  )
@@ -25,6 +25,7 @@
  
  prepare() {
    cd $pkgname
+-  git cherry-pick -n 39cc425791394dd8c48e132fb8789ccea8249500 # Unbreak meson
 +  git cherry-pick -n 261b7b933c6604095687d473503e24bae6ec0d6f # Support LUA 5.5
 +  git revert -n 240481490cdf44f2f615d58e03add98324b15cf7 # Fix a regression with some builds
 +  git apply ../artix-cmake.patch
@@ -39,9 +40,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,5 +1,8 @@
+@@ -1,6 +1,8 @@
  prepare() {
  cd $pkgname
+-git cherry-pick -n 39cc425791394dd8c48e132fb8789ccea8249500 # Unbreak meson
 +git cherry-pick -n 261b7b933c6604095687d473503e24bae6ec0d6f # Support LUA 5.5
 +git revert -n 240481490cdf44f2f615d58e03add98324b15cf7 # Fix a regression with some builds
 +git apply ../artix-cmake.patch

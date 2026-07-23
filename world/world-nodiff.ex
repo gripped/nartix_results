@@ -1225,6 +1225,7 @@ jruby
 js102
 js115
 js128
+js140
 js91
 jshon
 json-glib
@@ -1421,8 +1422,6 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
-kicad
-kicad-demos
 kiconthemes
 kiconthemes5
 kid3
@@ -1618,6 +1617,7 @@ kyotocabinet
 l-smash
 ladspa
 lager
+lame
 languagetool
 lapack
 blas
@@ -2443,6 +2443,11 @@ mtr
 mtr-gtk
 mujs
 muparser
+mupdf
+libmupdf
+mupdf-gl
+mupdf-tools
+python-mupdf
 musescore
 musl
 musl-aarch64
@@ -2595,6 +2600,11 @@ opencl-headers
 opencolorio
 openconnect
 opencore-amr
+opencv
+opencv-samples
+python-opencv
+opencv-cuda
+python-opencv-cuda
 opendoas
 openexr
 openfec
@@ -5388,7 +5398,6 @@ seabios-docs
 seahorse
 semver
 senpai
-sequoia-sq
 serd
 serd-docs
 serf
@@ -5871,6 +5880,7 @@ vkd3d
 vkd3d-docs
 vl-convert
 python-vl-convert
+vmaf
 vncdotool
 vnstat
 vokoscreen
