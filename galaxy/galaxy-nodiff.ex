@@ -223,6 +223,7 @@ libaacs
 libcec
 libcmis
 libdbusmenu-lxqt
+libe-book
 libetpan
 libexsid
 libexttextcat
@@ -288,9 +289,6 @@ lightdm-slick-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
-linux-rt-lts
-linux-rt-lts-headers
-linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs

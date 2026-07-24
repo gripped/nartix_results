@@ -618,6 +618,7 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
+nodejs-lts-krypton
 nsd
 nushell
 nvidia-340xx-utils
@@ -897,7 +898,6 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
-sequoia-sq
 sequoia-sqv
 sfml
 shairport-sync
@@ -974,6 +974,10 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
+uv
+$pkgbase
+"python-$pkgbase"
+"python-$pkgbase"-build
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi

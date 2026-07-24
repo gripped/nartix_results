@@ -69,7 +69,6 @@ hugin
 intel-gpu-tools
 labwc
 lemurs
-libe-book
 libetonyek
 libmatemixer
 libodfgen
@@ -80,6 +79,9 @@ python-libusbsio
 libva-nvidia-driver
 libxfce4ui
 light
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
 ly
 mate-control-center
 mate-screensaver
