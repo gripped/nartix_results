@@ -244,8 +244,6 @@ libqtxdg
 libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-fresh-i18n
-libreoffice-fresh
-libreoffice-fresh-sdk
 libreoffice-still-i18n
 libreoffice-still
 libreoffice-still-sdk
@@ -289,6 +287,9 @@ lightdm-slick-greeter
 linux-hardened
 linux-hardened-headers
 linux-hardened-docs
+linux-rt-lts
+linux-rt-lts-headers
+linux-rt-lts-docs
 linux-rt
 linux-rt-headers
 linux-rt-docs

@@ -139,6 +139,8 @@ dotnet-source-built-artifacts
 dovecot
 dracut
 drkonqi
+dropbear
+dropbear-scp
 dunst
 earlyoom
 element.io
@@ -345,8 +347,6 @@ jupyter-server-ydoc
 kcoreaddons
 kdeplasma-addons
 kdoctools5
-kicad
-kicad-demos
 kinfocenter
 kismet
 kitty
@@ -429,7 +429,6 @@ libsidplayfp
 libstaroffice
 libtg_owt
 libtiff
-libtorrent-rasterbar
 libudev0-shim
 libunwind
 libusbsio
@@ -618,7 +617,6 @@ nm-cloud-setup
 networkmanager-docs
 niri
 nodejs-lts-hydrogen
-nodejs-lts-krypton
 nsd
 nushell
 nvidia-340xx-utils

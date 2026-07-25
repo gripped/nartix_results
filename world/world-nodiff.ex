@@ -500,8 +500,6 @@ dpkg
 dqlite
 draco
 dragon
-dropbear
-dropbear-scp
 dssi
 dtc
 duktape
@@ -1422,6 +1420,8 @@ ki18n5
 kicad-library
 $pkgbase
 $pkgbase-3d
+kicad
+kicad-demos
 kiconthemes
 kiconthemes5
 kid3
@@ -2069,6 +2069,7 @@ libtiger
 libtlsrpt
 libtomcrypt
 libtommath
+libtorrent-rasterbar
 libtorrent
 libtpms
 libtraceevent
@@ -2517,6 +2518,7 @@ nodejs-lts-fermium
 nodejs-lts-gallium
 nodejs-lts-iron
 nodejs-lts-jod
+nodejs-lts-krypton
 nodejs-nopt
 nodejs-yaml
 nodejs

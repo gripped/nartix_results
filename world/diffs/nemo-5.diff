@@ -97,36 +97,39 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,29 +0,0 @@
+@@ -1,29 +1,14 @@
 -at-spi2-core
 -bash
 -cairo
--cinnamon-desktop
--dconf
--exempi
+ cinnamon-desktop
+ dconf
+ exempi
 -gcc-libs
 -gdk-pixbuf2
 -git
 -glib2
 -glib2-devel
 -glibc
--gobject-introspection
+ gobject-introspection
 -gtk-doc
 -gtk3
--gvfs
+ gvfs
 -hicolor-icon-theme
--intltool
+ intltool
 -json-glib
--libexif
--libgsf
+ libexif
+ libgsf
 -libx11
 -libxmlb
--meson
++libnotify
++libxml2
+ meson
 -pango
--python
+ python
 -python-cairo
 -python-gobject
--xapp
++samurai
+ xapp
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

@@ -73,15 +73,14 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
+libreoffice-fresh
+libreoffice-fresh-sdk
 libretro-pcsx2
 libusbsio
 python-libusbsio
 libva-nvidia-driver
 libxfce4ui
 light
-linux-rt-lts
-linux-rt-lts-headers
-linux-rt-lts-docs
 ly
 mate-control-center
 mate-screensaver
@@ -105,6 +104,7 @@ perl-cgi-fast
 perl-curses
 python-pystray
 qbittorrent
+qbittorrent-nox
 qt5-webengine
 rage
 read-edid
