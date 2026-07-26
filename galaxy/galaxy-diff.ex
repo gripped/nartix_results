@@ -73,8 +73,6 @@ libetonyek
 libmatemixer
 libodfgen
 libratbag
-libreoffice-fresh
-libreoffice-fresh-sdk
 libretro-pcsx2
 libusbsio
 python-libusbsio
@@ -113,7 +111,6 @@ resvg
 scribus
 sdcv
 signal-desktop
-telegram-desktop
 terminology
 termshark
 tigervnc

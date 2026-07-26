@@ -5,9 +5,8 @@
  
  pkgname=tesseract
 -pkgver=5.5.3
--pkgrel=1
-+pkgver=5.3.3
-+pkgrel=2
++pkgver=5.5.2
+ pkgrel=1
  pkgdesc='An OCR program'
  arch=(x86_64)
  url="https://github.com/tesseract-ocr/tesseract"
@@ -29,7 +28,7 @@
  provides=(libtesseract.so)
  source=("$url/archive/$pkgver/$pkgname-$pkgver.tar.gz")
 -sha256sums=('9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884')
-+sha256sums=('dc4329f85f41191b2d813b71b528ba6047745813474e583ccce8795ff2ff5681')
++sha256sums=('6235ea0dae45ea137f59c09320406f5888383741924d98855bd2ce0d16b54f21')
  
  build() {
    cd "$srcdir"/$pkgname-${pkgver}

@@ -5763,6 +5763,7 @@ tp_smapi
 tpm2-abrmd
 tpm2-tools
 transcode
+transmageddon
 trash-cli
 tre
 tree-sitter-bash
@@ -5833,6 +5834,10 @@ usd
 usort
 utf8cpp
 uthash
+uv
+$pkgbase
+"python-$pkgbase"
+"python-$pkgbase"-build
 uvicorn
 v2ray-domain-list-community
 v2ray-geoip

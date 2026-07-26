@@ -952,7 +952,6 @@ tor
 tracker3-miners
 tracker3
 tracker3-docs
-transmageddon
 transmission
 transmission-cli
 transmission-gtk
@@ -972,10 +971,6 @@ uptimed
 usb_modeswitch
 usbguard
 usbmuxd
-uv
-$pkgbase
-"python-$pkgbase"
-"python-$pkgbase"-build
 uwsgi
 uwsgi-plugin-rack
 uwsgi-plugin-psgi
