@@ -2484,7 +2484,6 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
-netsurf-buildsystem
 nettle3
 network-manager-applet
 nm-connection-editor
@@ -2545,6 +2544,7 @@ ntfsprogs
 libntfs-3g
 ntp
 ntpd-rs
+ntsync-autoload
 nuget
 nuitka
 nuklear
@@ -4969,7 +4969,6 @@ rubberband
 rubberband-ladspa
 rubberband-lv2
 rubberband-vamp
-rubocop
 ruby-abbrev
 ruby-activesupport
 ruby-addressable
@@ -5069,7 +5068,6 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
-ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
@@ -5931,6 +5929,7 @@ wf-recorder
 wget
 whois
 wiiuse
+wildmidi
 wine-staging
 winetricks
 wireguard-tools

@@ -104,6 +104,7 @@ cosmic-panel
 cosmic-player
 cosmic-randr
 cosmic-screenshot
+cosmic-sound-theme
 cosmic-store
 cosmic-terminal
 cosmic-text-editor

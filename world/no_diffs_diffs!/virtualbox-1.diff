@@ -1,14 +1,5 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
-          'virtualbox-guest-utils-nox'
-          'virtualbox-host-dkms'
-          'virtualbox-sdk')
--pkgver=7.2.14
-+pkgver=7.2.12
- _tarver=${pkgver}
- pkgrel=1
- arch=('x86_64')
 @@ -56,9 +56,6 @@
          '60-vboxdrv.rules'
          '60-vboxguest.rules'
@@ -19,15 +10,7 @@
          'vboxreload'
          '0001-disable-update.patch'
          '0004-drop-Wno-format.patch'
-@@ -68,16 +65,13 @@
-         '0013-support-building-from-dkms.patch'
-         '0018-upate-xclient-script.patch'
-         '0020-python-3-12.patch')
--sha256sums=('384f293184c52fd51bc941c17d753b4019446f53a6b07c828adfb3e61fe0a500'
-+sha256sums=('64a4843677e42010e7799e951883fbbefc56bf2bc162e4970edea04f142f8b25'
-             'f753501352054576c510aa81e83f4935079ea620e601057784b02b4d4d1eeb04'
-             '2101ebb58233bbfadf3aa74381f22f7e7e508559d2b46387114bc2d8e308554c'
-             'da4c49f6ca94e047e196cdbcba2c321199f4760056ea66e0fbc659353e128c9e'
+@@ -75,9 +72,6 @@
              'f876e9f55243eded423fda4fc2ffe3b174dca90380a6315f7c9b3cd1c9d07206'
              '033c597e0f5285d2ddb0490868e5b6f945f45c7b1b1152a02a9e6fea438b2c95'
              '942743b5ef38eecd8ebcb8682c2c65e1be377b4af83fa54d28cd71385f26dc5a'
@@ -37,16 +20,6 @@
              '4001b5927348fe669a541e80526d4f9ea91b883805f102f7d571edbb482a9b9d'
              '483a043ddfe32c4c5001a8de0a94a0ea884f34d3dbd817b492b9c97fba3ab5e0'
              'eea2671ca4be1d06d1c8e6903ba4bad90581da9fbeea218023409de298803d58'
-@@ -158,8 +152,8 @@
-                 'virtualbox-ext-vnc: VNC server support'
-                 'virtualbox-sdk: Developer kit')
-     backup=('etc/vbox/vbox.cfg')
-+    replaces=('virtualbox-ose')
-     conflicts=('virtualbox-ose')
--    replaces=('virtualbox-ose')
- 
-     source "VirtualBox-${pkgver}/env.sh"
-     cd "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/bin"
 @@ -213,7 +207,6 @@
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
  
@@ -55,40 +28,20 @@
      install -D -m0644 virtualbox.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox.conf"
  
      install -D -m0755 vboxreload "${pkgdir}/usr/bin"
-@@ -225,11 +218,11 @@
-     depends=('virtualbox'
-              'libvncserver')
-     optdepends=('tigervnc: vnc client')
--
--    source "VirtualBox-${pkgver}/env.sh"
--    tar --no-same-owner --one-top-level="${pkgdir}/usr/lib/virtualbox/ExtensionPacks/VNC/" \
--        -xzf "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/packages"/VNC-*.vbox-extpack
--
-+    install=virtualbox-ext-vnc.install
-+
-+    source "VirtualBox-${pkgver}/env.sh"
-+    cd "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/packages"
-+    install -D -m0644 VNC-*.vbox-extpack "${pkgdir}/usr/share/virtualbox/extensions/VNC-${pkgver}.vbox-extpack"
-     install -D -m0644 "${srcdir}/VirtualBox-${pkgver}/COPYING" \
-         "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-     install -D -m0644 "${srcdir}/VirtualBox-${pkgver}/COPYING.CDDL" \
-@@ -250,13 +243,13 @@
+@@ -250,11 +243,11 @@
               'wayland'
               'xorg-xrandr'
               'VIRTUALBOX-GUEST-MODULES')
-+    replaces=('virtualbox-archlinux-additions'
-+              'virtualbox-guest-additions'
-+              'virtualbox-guest-dkms')
-     conflicts=('virtualbox-archlinux-additions'
+-    conflicts=('virtualbox-archlinux-additions'
++    conflicts=('virtualbox-artixlinux-additions'
                 'virtualbox-guest-additions'
                 'virtualbox-guest-utils-nox'
                 'virtualbox-guest-dkms')
 -    replaces=('virtualbox-archlinux-additions'
--              'virtualbox-guest-additions'
--              'virtualbox-guest-dkms')
++    replaces=('virtualbox-artixlinux-additions'
+               'virtualbox-guest-additions'
+               'virtualbox-guest-dkms')
  
-     source "VirtualBox-${pkgver}/env.sh"
-     pushd "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/bin/additions"
 @@ -269,7 +262,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
@@ -97,17 +50,6 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 VirtualBox-${pkgver}/COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      install -D -m0644 VirtualBox-${pkgver}/COPYING.CDDL "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.CDDL"
-@@ -281,9 +273,9 @@
-              'pam' 'libpam.so'
-              'zlib' 'libz.so'
-              'VIRTUALBOX-GUEST-MODULES')
-+    replaces=('virtualbox-guest-dkms')
-     conflicts=('virtualbox-guest-utils'
-                'virtualbox-guest-dkms')
--    replaces=('virtualbox-guest-dkms')
- 
-     source "VirtualBox-${pkgver}/env.sh"
-     pushd "VirtualBox-${pkgver}/out/linux.${BUILD_PLATFORM_ARCH}/release/bin/additions"
 @@ -292,7 +284,6 @@
      install -m0755 -D pam_vbox.so "${pkgdir}/usr/lib/security/pam_vbox.so"
      popd
@@ -116,21 +58,18 @@
      install -D -m0644 virtualbox-guest-utils.sysusers "${pkgdir}/usr/lib/sysusers.d/virtualbox-guest-utils.conf"
      install -D -m0644 "${srcdir}/VirtualBox-${pkgver}/COPYING" \
          "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-@@ -305,14 +296,9 @@
+@@ -305,12 +296,10 @@
      depends=('dkms'
               'gcc'
               'make')
 -    conflicts=('virtualbox-host-modules-arch'
 -               'virtualbox-host-modules-lts'
--               'virtualbox-host-source'
--               'virtualbox-source')
++    conflicts=('virtualbox-host-modules-artix'
+                'virtualbox-host-source'
+                'virtualbox-source')
 -    replaces=('virtualbox-host-modules-arch'
 -              'virtualbox-host-modules-lts'
--              'virtualbox-host-source'
--              'virtualbox-source')
-+    replaces=('virtualbox-source'
-+              'virtualbox-host-source')
-+    conflicts=('virtualbox-source' 'virtualbox-host-source')
++    replaces=('virtualbox-host-modules-artix'
+               'virtualbox-host-source'
+               'virtualbox-source')
      provides=('VIRTUALBOX-HOST-MODULES')
- 
-     install -d -m0755 "${pkgdir}/usr/src"

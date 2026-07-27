@@ -1,0 +1,25 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -18,7 +18,7 @@
+ b2sums=('df9d7cccfd64e1f09b39afb21a6d3093f7577573d349c71d74e44c8c05f567f2805c43a1bb000c7cdffc3f17d7802b8161b9f3d58d7906d1933bee282e2ba2e9')
+ 
+ build() {
+-  arch-meson cosmic-sound-theme build
++  artix-meson cosmic-sound-theme build
+   meson compile -C build
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,4 +1,4 @@
+ build() {
+-arch-meson cosmic-sound-theme build
++artix-meson cosmic-sound-theme build
+ meson compile -C build
+ }

@@ -611,6 +611,7 @@ nemo
 netavark
 netpbm
 netplan
+netsurf-buildsystem
 networkmanager
 libnm
 nm-cloud-setup
@@ -875,7 +876,9 @@ rrdtool
 rspamd
 rsync
 rtkit
+rubocop
 ruby-bake-modernize
+ruby-ffi-compiler
 ruby-sys-filesystem
 rust
 rust-musl
@@ -1091,7 +1094,6 @@ webkit2gtk-docs
 webkitgtk-6.0
 webkitgtk-6.0-docs
 weston
-wildmidi
 wine
 wireplumber
 libwireplumber
