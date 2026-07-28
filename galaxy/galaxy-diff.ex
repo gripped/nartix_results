@@ -1,5 +1,6 @@
 alacritty
 alsa-utils
+amule
 autorandr
 bsd-games
 cairo-dock
@@ -64,6 +65,7 @@ gtklock
 guvcview
 guvcview-common
 guvcview-qt
+halloy
 hexchat
 hugin
 intel-gpu-tools

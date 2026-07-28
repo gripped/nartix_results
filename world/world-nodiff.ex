@@ -458,6 +458,7 @@ discount
 discover
 distcc
 distro-info-data
+distro-info
 django
 python-django
 djvulibre
@@ -2484,6 +2485,7 @@ net-snmp
 netcdf-fortran
 netcdf
 netcf
+netsurf-buildsystem
 nettle3
 network-manager-applet
 nm-connection-editor
@@ -2606,6 +2608,7 @@ opencv-samples
 python-opencv
 opencv-cuda
 python-opencv-cuda
+opendbx
 opendoas
 openexr
 openfec
@@ -4969,6 +4972,7 @@ rubberband
 rubberband-ladspa
 rubberband-lv2
 rubberband-vamp
+rubocop
 ruby-abbrev
 ruby-activesupport
 ruby-addressable
@@ -5068,6 +5072,7 @@ ruby-faraday-retry
 ruby-faraday
 ruby-fast_gettext
 ruby-fcntl
+ruby-ffi-compiler
 ruby-ffi
 ruby-fiber-annotation
 ruby-fiber-local
@@ -5398,6 +5403,7 @@ seahorse
 semver
 senpai
 sequoia-sq
+sequoia-sqv
 serd
 serd-docs
 serf
@@ -5506,6 +5512,7 @@ strawberry
 strip-nondeterminism
 stubby
 subversion
+sugar-datastore
 suil
 suil-docs
 suitesparse

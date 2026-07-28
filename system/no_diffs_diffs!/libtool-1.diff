@@ -1,25 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,9 +2,9 @@
+@@ -2,8 +2,8 @@
  
  pkgbase=libtool
  pkgname=(libtool lib32-libltdl)
 -pkgver=2.6.2
 -_commit=309bb53a8adfb22c6e5869cc8da049bf123e5438
--pkgrel=1
 +pkgver=2.6.1
 +_commit=79de7bb71bc0a1167f4c4ae8bd897976a0ff2b51
-+pkgrel=2
+ pkgrel=2
  _gccver=16
  pkgdesc='A generic library support script'
- arch=(aarch64 x86_64)
-@@ -25,12 +25,15 @@
+@@ -18,21 +18,22 @@
+   "gcc>=$_gccver"
+   git
+   glibc
+-  help2man
+-)
+-makedepends_x86_64=(
+   lib32-gcc-libs
+   lib32-glibc
++  help2man
+ )
  checkdepends=(
    gcc-fortran
- )
++)
 +options=(
 +    debug
-+)
+ )
  source=(
    git+https://git.savannah.gnu.org/git/libtool.git#commit=$_commit
    git+https://git.savannah.gnu.org/git/gnulib.git

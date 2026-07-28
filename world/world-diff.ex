@@ -109,7 +109,6 @@ ddcutil
 dhcp
 dhclient
 dhcpcd
-distro-info
 dns-over-https
 docker
 dolphin-emu
@@ -611,7 +610,6 @@ nemo
 netavark
 netpbm
 netplan
-netsurf-buildsystem
 networkmanager
 libnm
 nm-cloud-setup
@@ -642,7 +640,6 @@ onionshare
 open-iscsi
 openbox
 opencollada
-opendbx
 opendht
 openmpi
 openmpi-docs
@@ -876,9 +873,7 @@ rrdtool
 rspamd
 rsync
 rtkit
-rubocop
 ruby-bake-modernize
-ruby-ffi-compiler
 ruby-sys-filesystem
 rust
 rust-musl
@@ -899,7 +894,6 @@ $pkgbase-doc
 sdcv
 sddm
 seatd
-sequoia-sqv
 sfml
 shairport-sync
 signal-desktop
@@ -913,7 +907,6 @@ sslh
 sssd
 strongswan
 stunnel
-sugar-datastore
 sway
 swayidle
 switcheroo-control

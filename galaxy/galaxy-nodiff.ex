@@ -7,7 +7,6 @@ ada
 adw-gtk-theme
 aircrack-ng
 amdgpu_top
-amule
 anki
 anubis
 arc-gtk-theme
@@ -188,7 +187,6 @@ gtk-engines
 gtk-session-lock
 gtk2
 gtk4-layer-shell
-halloy
 helvum
 hugo
 hyfetch
