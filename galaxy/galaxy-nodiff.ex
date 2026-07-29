@@ -7,6 +7,7 @@ ada
 adw-gtk-theme
 aircrack-ng
 amdgpu_top
+amule
 anki
 anubis
 arc-gtk-theme

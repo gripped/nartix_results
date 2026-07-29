@@ -61,6 +61,7 @@ amf-headers
 amfora
 aml
 amtk
+amule
 analitza
 analitza5
 anari-sdk
@@ -1144,7 +1145,6 @@ inkscape
 innoextract
 inotify-tools
 intel-gmmlib
-intel-graphics-compiler
 intel-media-driver
 intel-media-sdk
 libmfx
@@ -1642,9 +1642,6 @@ leatherman
 lensfun
 leptonica
 lesspipe
-level-zero
-level-zero-headers
-level-zero-loader
 leveldb
 lftp
 lgi
@@ -2384,7 +2381,6 @@ mgard
 micro
 microsoft-gsl
 milou
-mimalloc
 mimetic
 mimetreeparser
 mingw-w64-binutils
@@ -2573,7 +2569,6 @@ ocaml
 ocaml-compiler-libs
 ocamlbuild
 ocean-sound-theme
-ocl-icd
 odt2txt
 okteta
 okular
@@ -3298,12 +3293,6 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
-python-arrow-adbc
-python-arrow-adbc-driver-bigquery
-python-arrow-adbc-driver-flightsql
-python-arrow-adbc-driver-postgresql
-python-arrow-adbc-driver-sqlite
-python-arrow-adbc-driver-snowflake
 python-arrow
 python-asgiref
 python-aspectlib
@@ -3480,7 +3469,6 @@ python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
-python-cssselect
 python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
@@ -4374,7 +4362,6 @@ python-qrcode
 python-qt-material
 python-qtpy
 python-quart-trio
-python-quart
 python-railroad-diagrams
 python-random2
 python-rapidfuzz
@@ -4382,7 +4369,6 @@ python-rapidjson
 python-rcssmin
 python-rdflib
 python-re-assert
-python-reactivex
 python-readme-renderer
 python-redis
 python-referencing
@@ -4888,7 +4874,6 @@ rapidjson
 raptor
 rasqal
 rav1e
-rawtherapee
 razor
 rccl
 rclone
@@ -5482,7 +5467,6 @@ speexdsp
 spglib
 spice-gtk
 spice-protocol
-spice
 spirv-headers
 spirv-llvm-translator
 spirv-tools

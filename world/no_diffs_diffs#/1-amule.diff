@@ -1,21 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,7 +2,7 @@
- pkgname=amule
- epoch=1
- pkgver=3.0.1
--pkgrel=1
-+pkgrel=2
- pkgdesc='An eMule-like client for ed2k p2p network'
- arch=(x86_64)
- url='https://amule-org.github.io/'
-@@ -27,17 +27,14 @@
-          zstd)
- makedepends=(boost
-              cmake
--             git)
-+             git
-+             po4a)
+@@ -31,14 +31,10 @@
+              po4a)
  provides=(amule-daemon)
  source=(git+https://github.com/amule-org/amule#tag=$pkgver
 -        amuled.systemd
@@ -29,16 +15,7 @@
              '1a1780d3010f338b16ace33fac6af8480bb0830402001f95f12c2e98afbd1b60'
              'e9d1b7019c7075b0f8616c6507a767b87de8f899936680e9ff5829d8cbba224d')
  
-@@ -59,15 +56,14 @@
-     -DBUILD_WXCAS=ON \
-     -DBUILD_FILEVIEW=ON \
-     -DENABLE_IP2COUNTRY=ON \
--    -DENABLE_NLS=ON
-+    -DENABLE_NLS=ON \
-+    -DENABLE_UPNP=ON
-   cmake --build build
- }
- 
+@@ -68,8 +64,6 @@
  package() {
    DESTDIR="$pkgdir" cmake --install build
  
@@ -46,30 +23,4 @@
 -  install -Dm644 "$srcdir"/amuleweb.systemd "$pkgdir"/usr/lib/systemd/system/amuleweb.service
    install -Dm644 "$srcdir"/amule.sysusers "$pkgdir"/usr/lib/sysusers.d/amule.conf
    install -Dm644 "$srcdir"/amule.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/amule.conf
- }
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -14,6 +14,7 @@
- libpng
- libstdc++
- libupnp
-+po4a
- readline
- wxwidgets-common
- wxwidgets-gtk3
-
---- Arch PKGBUILD
-+++ Artix PKGBUILD
-@@ -15,6 +15,7 @@
- -DBUILD_WXCAS=ON \
- -DBUILD_FILEVIEW=ON \
- -DENABLE_IP2COUNTRY=ON \
---DENABLE_NLS=ON
-+-DENABLE_NLS=ON \
-+-DENABLE_UPNP=ON
- cmake --build build
  }

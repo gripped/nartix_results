@@ -2,7 +2,6 @@ a52dec
 accountsservice
 aflplusplus
 alsa-utils
-amule
 ant
 ant-doc
 apache
@@ -299,6 +298,7 @@ libibus
 igsc
 iio-sensor-proxy
 intel-compute-runtime
+intel-graphics-compiler
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -358,6 +358,9 @@ kstars
 ksystemlog
 kwin-x11
 kwin
+level-zero
+level-zero-headers
+level-zero-loader
 libatasmart
 libblockdev
 libblockdev-btrfs
@@ -572,6 +575,7 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
+mimalloc
 miopen-hip
 modemmanager
 libmm-glib
@@ -635,6 +639,7 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+ocl-icd
 onboard
 onionshare
 open-iscsi
@@ -751,14 +756,23 @@ pysolfc
 python-ansicolors
 python-anytree
 python-aresponses
+python-arrow-adbc
+python-arrow-adbc-driver-bigquery
+python-arrow-adbc-driver-flightsql
+python-arrow-adbc-driver-postgresql
+python-arrow-adbc-driver-sqlite
+python-arrow-adbc-driver-snowflake
 python-asn1crypto
 python-cram
+python-cssselect
 python-httplib2
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
 python-pyudev
+python-quart
+python-reactivex
 python-recommonmark
 python-sphinxcontrib-spelling
 qastools
@@ -858,6 +872,7 @@ qt6-webengine
 qterminal
 qtermwidget
 rabbitmq
+rawtherapee
 rdma-core
 redis
 redshift
@@ -901,6 +916,7 @@ smartmontools
 snapper
 solid
 spice-vdagent
+spice
 squid
 sshguard
 sslh

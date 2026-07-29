@@ -1,6 +1,5 @@
 alacritty
 alsa-utils
-amule
 autorandr
 bsd-games
 cairo-dock
