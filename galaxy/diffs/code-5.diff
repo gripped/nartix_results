@@ -1,14 +1,17 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,9 +1,9 @@
  
  pkgname=code
  pkgdesc='The Open Source build of Visual Studio Code (vscode) editor'
 -_electron=electron42
 +_electron=electron41
  pkgver=1.130.0
- pkgrel=1
+-pkgrel=2
++pkgrel=1
  arch=('x86_64')
+ url='https://github.com/microsoft/vscode'
+ license=('MIT')
 @@ -12,7 +12,6 @@
    'libsecret'
    'libx11'
@@ -32,7 +35,7 @@
  
    find "$pkgdir" -name rg -print0 | xargs --null --replace ln -s -vsf /usr/bin/rg {}
  
--  rm --verbose "$pkgdir"/usr/lib/code/node_modules.asar.unpacked/onnxruntime-node/bin/napi-v6/linux/x64/libonnxruntime*
+-  rm --verbose "$pkgdir"/usr/lib/code/node_modules.asar.unpacked/onnxruntime-node/bin/napi-v6/linux/$_vscode_arch/libonnxruntime*
 -
    install -Dm 755 code.sh "$pkgdir"/usr/bin/code-oss
    install -Dm 755 code.mjs "$pkgdir"/usr/lib/$pkgname/code.mjs

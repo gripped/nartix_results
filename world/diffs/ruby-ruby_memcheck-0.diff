@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=ruby-ruby_memcheck
+-pkgver=2.2.1
++pkgver=2.2.0
+ pkgrel=1
+ pkgdesc='Use Valgrind memcheck without going crazy'
+ arch=(any)
+@@ -24,11 +24,11 @@
+ )
+ options=(!emptydirs)
+ source=(git+https://github.com/Shopify/ruby_memcheck.git#tag=$pkgver)
+-sha256sums=('feaca9cac8f53e3e4a53f559936fa6738d9568425fb61aca34974dda15875fd5')
++sha256sums=('09831540e30546ace446c5fb66b5fec2d5143dba3c682cb3bec01a2488a94f42')
+ 
+ prepare() {
+   cd ruby_memcheck
+-  git cherry-pick -n 72e957c 5b16f38 8f88ed6 98d7949 988312b
++  git cherry-pick -n 6c4e169 72e957c 5b16f38 8f88ed6 98d7949 988312b
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ prepare() {
+ cd ruby_memcheck
+-git cherry-pick -n 72e957c 5b16f38 8f88ed6 98d7949 988312b
++git cherry-pick -n 6c4e169 72e957c 5b16f38 8f88ed6 98d7949 988312b
+ }
+ build() {
+ local _gemdir="$(gem env gemdir)"

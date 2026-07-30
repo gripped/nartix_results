@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=tailscale
--pkgver=1.98.9
+-pkgver=1.98.10
 +pkgver=1.98.4
  pkgrel=1
  pkgdesc="A mesh VPN that makes it easy to connect your devices, wherever they are."
@@ -12,7 +12,7 @@
  depends=("glibc")
  backup=("etc/default/tailscaled")
  source=("git+https://github.com/tailscale/tailscale.git#tag=v${pkgver}")
--sha256sums=('20f34753700bf92ad5f43409bc3e0c9f01dc5bad2e90c3a1dfea2371206df036')
+-sha256sums=('6d6dcf46680c575d6c3b8de387c03853452397fad922fbd6d5b9f3f5529055a2')
 +sha256sums=('6d5835450ea3c4628cb419cb18240dc6ed5da4d167ffebd03010308a8c40a06b')
  
  options=(!lto)

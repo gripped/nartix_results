@@ -394,7 +394,6 @@ cpputest
 cppzmq
 cpuinfo
 criterion
-criu
 cryptoplusplus
 cscope
 csound
@@ -607,7 +606,6 @@ expac
 expected-lite
 eza
 f2fs-tools
-faac
 faad2
 facile
 facter
@@ -1696,7 +1694,6 @@ libcerf
 libcgif
 libchamplain
 libchewing
-libclc
 libcloudproviders
 libcloudproviders-docs
 libconfig
@@ -1947,7 +1944,6 @@ liborcus
 libosinfo
 libotf
 libotr
-libp11
 libpagemaker
 libpanel
 libpanel-docs
@@ -3933,7 +3929,6 @@ python-msgspec
 python-mss
 python-mujson
 python-multidict
-python-multipart
 python-multivolumefile
 python-munch
 python-munkres
@@ -5247,7 +5242,6 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
-ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli

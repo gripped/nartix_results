@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=python-tracerite
+-pkgver=2.4.1
++pkgver=2.4.0
+ pkgrel=1
+ pkgdesc='Pythonic HTML generation/templating (no template files)'
+ arch=("any")
+@@ -9,7 +9,7 @@
+ depends=(python python-html5tagger)
+ makedepends=(git python-build python-installer python-hatchling python-hatch-vcs)
+ source=("git+https://github.com/sanic-org/tracerite.git#tag=v$pkgver")
+-sha256sums=('0f9eb8c631e913938832a935101080171b9e65e85d71d0b4aa5c6fdc5374de77')
++sha256sums=('17e9677b55f84397991938f4c0b510e68eeeae032bc55b815558541bbe469596')
+ 
+ build() {
+     cd tracerite

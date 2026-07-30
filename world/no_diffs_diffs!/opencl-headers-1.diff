@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=opencl-headers
+-pkgver=2026.05.29
++pkgver=2025.07.22
+ pkgrel=1
+ epoch=2
+ pkgdesc='OpenCL (Open Computing Language) header files'
+@@ -9,7 +9,7 @@
+ license=('Apache-2.0')
+ makedepends=(cmake python)
+ source=("${pkgname}-${pkgver}.tar.gz::https://github.com/KhronosGroup/OpenCL-Headers/archive/v${pkgver}.tar.gz")
+-sha256sums=('d9e6c48357de5002da11ce45de600e0c3ffe6ab4f628a3b9fe2b38603161658a')
++sha256sums=('98f0a3ea26b4aec051e533cb1750db2998ab8e82eda97269ed6efe66ec94a240')
+ optdepends=('opencl-clhpp: C++ support')
+ 
+ build() {

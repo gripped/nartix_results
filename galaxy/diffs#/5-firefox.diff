@@ -3,7 +3,7 @@
 @@ -1,9 +1,9 @@
  
  pkgname=firefox
--pkgver=153.0
+-pkgver=153.0.1
 +pkgver=152.0.6
  pkgrel=1
  pkgdesc="Fast, Private & Safe Web Browser"
@@ -20,15 +20,20 @@
    python
    rust
    unzip
-@@ -65,7 +64,6 @@
-   'hunspell-en_US: Spell checking, American English'
+@@ -62,11 +61,9 @@
+   zip
+ )
+ optdepends=(
+-  'firefox-i18n: Localizations'
+-  'hunspell-dictionary: Spell checking'
++  'hunspell-en_US: Spell checking, American English'
    'libnotify: Notification integration'
    'networkmanager: Location detection via available WiFi networks'
 -  'onnxruntime: Local machine learning features such as smart tab groups'
    'speech-dispatcher: Text-to-Speech'
    'xdg-desktop-portal: Screensharing with Wayland'
  )
-@@ -79,40 +77,33 @@
+@@ -80,40 +77,33 @@
    $pkgname-symbolic.svg
    $pkgname.desktop
    org.mozilla.$pkgname.metainfo.xml
@@ -40,7 +45,7 @@
  validpgpkeys=(
    14F26682D0916CDD81E37B6D61B7B526D98F0353
  )
--sha256sums=('bc510f74c8c4c692d31e559aeb5850849d13bc98214ac81e004f66f819a55522'
+-sha256sums=('ac586cfe4573cd02a0b96dd496ae28da0157a9fcc6530ede6b1decfd2a3fb512'
 +sha256sums=('ea220c4f8d19d4edaa20e6dadfd3c4aeb07dbed017ade2828fd814d660660f0e'
              'SKIP'
 -            'cb00ea359d6daf37900102307be4f515f1b7ef9c98825c64cc55bb562449d0d8'
@@ -48,7 +53,7 @@
              '2a51d57d98fbda86f094bc991e1ad4dd6e8a9d32fd0836b1183bf70ec4b68915'
 -            '4e01a62e20026b67466943bad9dfba47874c5e1492375f8293aeb85ecedf2288'
 -            '075ecdf42fa429d6c4b273c52d406f4335484c31b38f76fe3cc2e33ead7750cc')
--b2sums=('418cc4576a8a98bb957e93712c146629720d5de960d29196395436f05c2eff95adde1dded34805e3b5e664b4a9486af3fe58acdb945d068bb882321e30a4e1a4'
+-b2sums=('e7b1749b81c81744d3461c18b48e84a72adbc130a54256321bb2a854f8e96fc315d5dc97ad685610774e27de39145aa6897b9c832a1da9fd9f7ecd89555f678b'
 +            '23f557fa7989adcae03cc9458d94716981dbcf0e9d6d52a289a2426e50b4b785'
 +            '075ecdf42fa429d6c4b273c52d406f4335484c31b38f76fe3cc2e33ead7750cc'
 +            '5a04df0214fbce0ff7c68ed8bfea6b4544a515a76a223bfe11c2c853254841ae')
@@ -83,7 +88,7 @@
  
    echo -n "$_google_api_key" >google-api-key
  
-@@ -132,14 +123,12 @@
+@@ -133,14 +123,12 @@
  
  ac_add_options --enable-official-branding
  ac_add_options --enable-update-channel=release
@@ -99,7 +104,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -226,17 +215,16 @@
+@@ -227,17 +215,16 @@
  
    install -Dvm644 /dev/stdin "$appdir/distribution/distribution.ini" <<END
  [Global]
@@ -123,7 +128,7 @@
  
    local i theme=official
    for i in 16 22 24 32 48 64 128 256; do
-@@ -253,6 +241,7 @@
+@@ -254,6 +241,7 @@
    install -Dvm644 ../$pkgname-symbolic.svg -t "$pkgdir/usr/share/icons/hicolor/symbolic/apps"
    install -Dvm644 ../$pkgname.desktop -t "$pkgdir/usr/share/applications"
    install -Dvm644 ../org.mozilla.$pkgname.metainfo.xml -t "$pkgdir/usr/share/metainfo"

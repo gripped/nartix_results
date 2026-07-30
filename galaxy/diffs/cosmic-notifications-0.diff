@@ -1,0 +1,33 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=cosmic-notifications
+-pkgver=1.5.0
++pkgver=1.4.0
+ pkgrel=1
+ epoch=1
+ pkgdesc='Layer Shell notifications daemon which integrates with COSMIC'
+@@ -33,7 +33,6 @@
+ 
+ build() {
+   cd cosmic-notifications
+-  export RUST_MIN_STACK=33554432
+   just build-release --frozen
+ }
+ 
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,6 +4,5 @@
+ }
+ build() {
+ cd cosmic-notifications
+-export RUST_MIN_STACK=33554432
+ just build-release --frozen
+ }

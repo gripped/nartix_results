@@ -96,6 +96,7 @@ conmon
 connman
 containerd
 cppcheck
+criu
 crun
 krun
 cups-filters
@@ -158,6 +159,7 @@ etherwall
 exo
 expect
 extra-cmake-modules
+faac
 fastfetch
 fastjar
 fceux
@@ -385,6 +387,7 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
+libclc
 libcmis
 libdaemon
 libdrm
@@ -425,6 +428,7 @@ libmng
 libmspub
 libnvme
 libofa
+libp11
 libprocps
 libsidplay
 libsidplayfp
@@ -766,6 +770,7 @@ python-asn1crypto
 python-cram
 python-cssselect
 python-httplib2
+python-multipart
 python-ndg-httpsclient
 python-pymupdf
 python-pyscard
@@ -889,6 +894,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-ruby_memcheck
 ruby-sys-filesystem
 rust
 rust-musl

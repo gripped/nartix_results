@@ -99,7 +99,6 @@ cosmic-icon-theme
 cosmic-idle
 cosmic-launcher
 cosmic-monitor
-cosmic-notifications
 cosmic-panel
 cosmic-player
 cosmic-randr

@@ -10,6 +10,7 @@ code
 cosmic-applets
 cosmic-comp
 cosmic-initial-setup
+cosmic-notifications
 cosmic-osd
 cosmic-session
 cosmic-settings-daemon
