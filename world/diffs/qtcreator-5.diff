@@ -1,0 +1,87 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,7 +2,7 @@
+ pkgbase=qtcreator
+ pkgname=(qtcreator
+          qtcreator-devel)
+-pkgver=20.0.0
++pkgver=20.0.1
+ pkgrel=1
+ pkgdesc='Lightweight, cross-platform integrated development environment'
+ arch=(x86_64)
+@@ -16,7 +16,7 @@
+          libelf
+          libgcc
+          libstdc++
+-         litehtml0.9
++         litehtml
+          llvm-libs
+          python
+          qt6-base
+@@ -49,7 +49,7 @@
+ source=(git+https://code.qt.io/qt-creator/qt-creator#tag=v$pkgver
+         git+https://code.qt.io/qt-creator/perfparser
+         git+https://code.qt.io/playground/qlitehtml)
+-sha256sums=('22c9cb5ee0d2a17b3aa536bf16f83d199b5084625447bb40a46e41786ecb660c'
++sha256sums=('d35956f1854a927e119e40f971c47316ddcd16c319c52a93cbd8aa1c03c377ef'
+             'SKIP'
+             'SKIP')
+ options=(docs)
+@@ -61,7 +61,8 @@
+   git -c protocol.file.allow=always submodule update --init src/libs/qlitehtml src/tools/perfparser
+ 
+   rm src/libs/qlitehtml/src/3rdparty/qt_attribution.json
+-  sed -e '/litehtml\/types.h/d' -i src/libs/qlitehtml/src/container_qpainter_p.h
++  cd src/libs/qlitehtml
++  git checkout 1f56cfe0a8e9a8a99072e0d325632bd8dc0e20d3
+ }
+ 
+ build() {
+@@ -72,8 +73,7 @@
+     -DBUILD_DEVELOPER_DOCS=ON \
+     -DQTC_CLANG_BUILDMODE_MATCH=ON \
+     -DCLANGTOOLING_LINK_CLANG_DYLIB=ON \
+-    -DQLITEHTML_USE_SYSTEM_LITEHTML=ON \
+-    -Dlitehtml_DIR=/usr/lib/cmake/litehtml0.9
++    -DQLITEHTML_USE_SYSTEM_LITEHTML=ON
+   cmake --build build
+   cmake --build build --target docs
+ }
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -9,7 +9,7 @@
+ libelf
+ libgcc
+ libstdc++
+-litehtml0.9
++litehtml
+ llvm
+ llvm-libs
+ python
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -4,7 +4,8 @@
+ git submodule set-url src/libs/qlitehtml "$srcdir"/qlitehtml
+ git -c protocol.file.allow=always submodule update --init src/libs/qlitehtml src/tools/perfparser
+ rm src/libs/qlitehtml/src/3rdparty/qt_attribution.json
+-sed -e '/litehtml\/types.h/d' -i src/libs/qlitehtml/src/container_qpainter_p.h
++cd src/libs/qlitehtml
++git checkout 1f56cfe0a8e9a8a99072e0d325632bd8dc0e20d3
+ }
+ build() {
+ cmake -B build -S qt-creator \
+@@ -14,8 +15,7 @@
+ -DBUILD_DEVELOPER_DOCS=ON \
+ -DQTC_CLANG_BUILDMODE_MATCH=ON \
+ -DCLANGTOOLING_LINK_CLANG_DYLIB=ON \
+--DQLITEHTML_USE_SYSTEM_LITEHTML=ON \
+--Dlitehtml_DIR=/usr/lib/cmake/litehtml0.9
++-DQLITEHTML_USE_SYSTEM_LITEHTML=ON
+ cmake --build build
+ cmake --build build --target docs
+ }

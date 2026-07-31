@@ -9,7 +9,7 @@ aircrack-ng
 amdgpu_top
 amule
 anki
-anubis
+appstream-generator
 arc-gtk-theme
 arc-solid-gtk-theme
 arc-icon-theme

@@ -77,7 +77,6 @@ ansible-navigator
 ansible-runner
 ansible
 anthy
-anubis
 aom
 aom-docs
 apache-orc
@@ -1694,6 +1693,7 @@ libcerf
 libcgif
 libchamplain
 libchewing
+libclc
 libcloudproviders
 libcloudproviders-docs
 libconfig
@@ -2070,7 +2070,6 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
-libultrahdr
 libunibreak
 libuninameslist
 libupnp
@@ -4829,7 +4828,6 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
-qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -4837,8 +4835,6 @@ qt6-webchannel
 qt6-websockets
 qt6-webview
 qt6ct
-qtcreator
-qtcreator-devel
 qtkeychain
 qtkeychain-qt6
 qtox
@@ -6130,4 +6126,5 @@ zsh
 zsh-doc
 zug
 zvbi
+zxing-cpp
 zziplib

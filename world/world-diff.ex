@@ -4,6 +4,7 @@ aflplusplus
 alsa-utils
 ant
 ant-doc
+anubis
 apache
 apcupsd
 appstream
@@ -387,7 +388,6 @@ libcamera-tools
 gst-plugin-libcamera
 python-libcamera
 libcdio-paranoia
-libclc
 libcmis
 libdaemon
 libdrm
@@ -436,6 +436,7 @@ libstaroffice
 libtg_owt
 libtiff
 libudev0-shim
+libultrahdr
 libunwind
 libusbsio
 python-libusbsio
@@ -873,7 +874,10 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
+qt6-tools
 qt6-webengine
+qtcreator
+qtcreator-devel
 qterminal
 qtermwidget
 rabbitmq
@@ -1208,4 +1212,3 @@ zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
 znc
-zxing-cpp
