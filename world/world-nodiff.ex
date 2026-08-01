@@ -100,7 +100,6 @@ aribb24
 aribb25
 arj
 ark
-arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
@@ -1211,7 +1210,6 @@ jedi-language-server
 jemalloc
 jenkins
 jimtcl
-jitterentropy
 jkqtplotter
 jose
 jp2a
@@ -1542,7 +1540,6 @@ krecorder
 krename
 kreversi
 krfb
-krita
 kross
 kruler
 krunner
@@ -2070,6 +2067,7 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
+libultrahdr
 libunibreak
 libuninameslist
 libupnp
@@ -2100,7 +2098,6 @@ libwacom
 libwapcaplet
 libwebp
 libwebp-utils
-libwebsockets
 libwhereami
 libwhich
 libwlocate
@@ -3593,7 +3590,7 @@ python-fastpbkdf2
 python-faust-cchardet
 python-feedgen
 python-feedgenerator
-python-feedparser
+python-feedparser-sgmllib
 python-fido2
 python-fields
 python-filebytes
@@ -4447,7 +4444,6 @@ python-sh
 python-shapely
 python-shellingham
 python-should-dsl
-python-shtab
 python-signedjson
 python-simple-websocket
 python-simplejson
@@ -4828,6 +4824,7 @@ qt6-serialbus
 qt6-shadertools
 qt6-speech
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-virtualkeyboard
 qt6-wayland
@@ -4835,6 +4832,8 @@ qt6-webchannel
 qt6-websockets
 qt6-webview
 qt6ct
+qtcreator
+qtcreator-devel
 qtkeychain
 qtkeychain-qt6
 qtox
@@ -5238,6 +5237,7 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
+ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
@@ -6097,8 +6097,6 @@ zathura
 zbar
 zeitgeist
 zenity
-zeroc-ice
-zeroc-ice-java
 zeromq
 zerotier-one
 zerotier-one-full

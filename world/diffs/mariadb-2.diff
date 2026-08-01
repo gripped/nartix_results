@@ -30,7 +30,7 @@
  
  prepare() {
    cd mariadb/
-@@ -50,7 +53,7 @@
+@@ -53,7 +56,7 @@
  
  build() {
    local _cmake_options=(
@@ -39,7 +39,7 @@
      -DCMAKE_BUILD_TYPE=RelWithDebInfo
      -Wno-dev
  
-@@ -62,7 +65,7 @@
+@@ -65,7 +68,7 @@
      -DINSTALL_SCRIPTDIR=bin
      -DINSTALL_INCLUDEDIR=include/mysql
      -DINSTALL_PLUGINDIR=lib/mysql/plugin
@@ -48,7 +48,7 @@
      -DINSTALL_SYSTEMD_SYSUSERSDIR=lib/sysusers.d/
      -DINSTALL_SYSTEMD_TMPFILESDIR=lib/tmpfiles.d/
      -DINSTALL_SHAREDIR=share
-@@ -88,7 +91,7 @@
+@@ -91,7 +94,7 @@
      -DWITH_PCRE2=system
      -DWITH_READLINE=ON
      -DWITH_SSL=system
@@ -57,7 +57,7 @@
      -DWITH_UNIT_TESTS=OFF
      -DWITH_ZLIB=system
    )
-@@ -182,7 +185,7 @@
+@@ -185,7 +188,7 @@
             'jemalloc'
             'libxml2' 'libxml2.so'
             'lz4' 'liblz4.so'
@@ -66,9 +66,9 @@
             'zstd' 'libzstd.so')
    optdepends=('cracklib: for cracklib plugin'
                'curl: for ha_s3 plugin'
-@@ -216,8 +219,8 @@
-   mv usr/share/user_map.conf etc/security/
-   mv usr/share/pam_user_map.so usr/lib/security/
+@@ -215,8 +218,8 @@
+ 
+   mv usr/share/{groonga{,-normalizer-mysql},doc/mariadb/}
  
 -  rm -r usr/share/mysql/systemd/
 -  rm -r usr/lib/systemd/system/mariadb@bootstrap.service.d

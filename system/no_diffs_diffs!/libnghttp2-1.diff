@@ -1,0 +1,11 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -11,7 +11,7 @@
+ makedepends=('git')
+ conflicts=('nghttp2<1.20.0-2')
+ validpgpkeys=('F4F3B91474D1EB29889BD0EF7E8403D5D673C366') # Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+-source=("git+https://github.com/nghttp2/nghttp2.git?signed#tag=v${pkgver}"
++source=("git+https://github.com/nghttp2/nghttp2.git#tag=v${pkgver}?signed"
+         'git+https://github.com/ngtcp2/munit.git'
+         'git+https://github.com/mruby/mruby.git'
+         'git+https://github.com/tatsuhiro-t/neverbleed.git')

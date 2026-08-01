@@ -12,6 +12,7 @@ appstream-qt
 apr
 aquamarine
 archivetools
+arm-none-eabi-binutils
 astromenace
 at-spi2-core
 at-spi2-core-docs
@@ -344,6 +345,7 @@ jdk8-openjdk
 openjdk8-src
 openjdk8-doc
 jbigkit
+jitterentropy
 js78
 jupyter-server-ydoc
 kcoreaddons
@@ -357,6 +359,7 @@ kitty-shell-integration
 knockd
 knot
 krdp
+krita
 kstars
 ksystemlog
 kwin-x11
@@ -436,13 +439,13 @@ libstaroffice
 libtg_owt
 libtiff
 libudev0-shim
-libultrahdr
 libunwind
 libusbsio
 python-libusbsio
 libutempter
 libvirt
 libvncserver
+libwebsockets
 libxfce4ui
 libxfce4util
 libxfont2
@@ -770,6 +773,7 @@ python-arrow-adbc-driver-snowflake
 python-asn1crypto
 python-cram
 python-cssselect
+python-feedparser
 python-httplib2
 python-multipart
 python-ndg-httpsclient
@@ -780,6 +784,7 @@ python-pyudev
 python-quart
 python-reactivex
 python-recommonmark
+python-shtab
 python-sphinxcontrib-spelling
 qastools
 qbe
@@ -874,10 +879,7 @@ qt6-xcb-private-headers
 qt6-doc
 qt6-examples
 qt6-serialport
-qt6-tools
 qt6-webengine
-qtcreator
-qtcreator-devel
 qterminal
 qtermwidget
 rabbitmq
@@ -898,7 +900,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-ruby_memcheck
 ruby-sys-filesystem
 rust
 rust-musl
@@ -1211,4 +1212,6 @@ zabbix-proxy
 zabbix-agent
 zabbix-agent2
 zathura-pdf-mupdf
+zeroc-ice
+zeroc-ice-java
 znc
