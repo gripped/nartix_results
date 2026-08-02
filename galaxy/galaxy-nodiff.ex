@@ -797,6 +797,7 @@ vivaldi
 voa
 vpl-gpu-rt
 warpinator
+wayfire
 waylandpp
 waylock
 waypipe

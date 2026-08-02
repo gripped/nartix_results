@@ -100,6 +100,7 @@ aribb24
 aribb25
 arj
 ark
+arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-newlib
 armagetronad
@@ -1210,6 +1211,7 @@ jedi-language-server
 jemalloc
 jenkins
 jimtcl
+jitterentropy
 jkqtplotter
 jose
 jp2a
@@ -1540,6 +1542,7 @@ krecorder
 krename
 kreversi
 krfb
+krita
 kross
 kruler
 krunner
@@ -3285,6 +3288,10 @@ python-argparse-addons
 python-argparse-manpage
 python-arpeggio
 python-arpy
+python-arrow-adbc
+python-arrow-adbc-driver-flightsql
+python-arrow-adbc-driver-postgresql
+python-arrow-adbc-driver-sqlite
 python-arrow
 python-asgiref
 python-aspectlib
@@ -3461,6 +3468,7 @@ python-cryptography
 python-cson
 python-css-parser
 python-csscompressor
+python-cssselect
 python-cssselect2
 python-csv23
 python-cucumber-tag-expressions
@@ -3591,6 +3599,7 @@ python-faust-cchardet
 python-feedgen
 python-feedgenerator
 python-feedparser-sgmllib
+python-feedparser
 python-fido2
 python-fields
 python-filebytes
@@ -3925,6 +3934,7 @@ python-msgspec
 python-mss
 python-mujson
 python-multidict
+python-multipart
 python-multivolumefile
 python-munch
 python-munkres
@@ -4360,6 +4370,7 @@ python-rapidjson
 python-rcssmin
 python-rdflib
 python-re-assert
+python-reactivex
 python-readme-renderer
 python-redis
 python-referencing
@@ -4444,6 +4455,7 @@ python-sh
 python-shapely
 python-shellingham
 python-should-dsl
+python-shtab
 python-signedjson
 python-simple-websocket
 python-simplejson

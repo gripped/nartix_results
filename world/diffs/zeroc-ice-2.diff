@@ -1,33 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -2,13 +2,13 @@
- pkgname=(zeroc-ice zeroc-ice-java)
- pkgbase=zeroc-ice
- pkgver=3.7.10
--pkgrel=3
-+pkgrel=2
- pkgdesc="An object-oriented middleware that provides RPC functionality"
- arch=(x86_64)
+@@ -8,7 +8,7 @@
  url="https://zeroc.com"
--license=('GPL-2.0-only' 'LicenseRef-ICE')
-+license=('GPL' 'custom:ice')
+ license=('GPL-2.0-only' 'LicenseRef-ICE')
  makedepends=('java-environment=11') # 'gradle' currently not compatible
 -depends=('mcpp' 'lmdb' 'libedit' 'expat' 'bzip2' 'openssl' 'libxcrypt' 'libstdc++' 'libgcc' 'systemd-libs' 'glibc')
-+depends=('mcpp' 'lmdb' 'libedit' 'expat' 'bzip2' 'openssl' 'libxcrypt')
++depends=('mcpp' 'lmdb' 'libedit' 'expat' 'bzip2' 'openssl' 'libxcrypt' 'libstdc++' 'libgcc' 'glibc')
  source=("ice-${pkgver}.tar.gz::https://github.com/zeroc-ice/ice/archive/v${pkgver}.tar.gz"
          "ice-packaging-${pkgver}.tar.gz::https://github.com/zeroc-ice/ice-packaging/archive/v${pkgver}.tar.gz"
          zeroc-ice.sysusers
-@@ -27,8 +27,7 @@
- 
- build() {
-   cd "${srcdir}"/ice-${pkgver}
--  CXXFLAGS+=' -Wno-error=unused-but-set-variable' \
--    make "${_make_args[@]}" "LANGUAGES=cpp java" srcs
-+  make "${_make_args[@]}" "LANGUAGES=cpp java" srcs
- }
- 
- package_zeroc-ice() {
-@@ -52,13 +51,6 @@
+@@ -52,13 +52,6 @@
    install -Dm644 "${srcdir}"/ice-packaging-${pkgver}/ice/rpm/icegridnode.conf "${pkgdir}"/etc/icegridnode.conf
    install -Dm644 "${srcdir}"/ice-packaging-${pkgver}/ice/rpm/icegridregistry.conf "${pkgdir}"/etc/icegridregistry.conf
  
@@ -47,15 +29,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,13 +1,9 @@
- bzip2
- expat
--glibc
- java-environment
- libedit
--libgcc
--libstdc++
- libxcrypt
+@@ -9,5 +9,4 @@
  lmdb
  mcpp
  openssl

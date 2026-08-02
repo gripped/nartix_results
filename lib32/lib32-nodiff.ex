@@ -103,7 +103,6 @@ lib32-libsm
 lib32-libsndfile
 lib32-libsoup
 lib32-libsoup3
-lib32-libssh2
 lib32-libtasn1
 lib32-libthai
 lib32-libtheora
