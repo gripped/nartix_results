@@ -1,26 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
+@@ -1,7 +1,7 @@
  
  pkgname=code
  pkgdesc='The Open Source build of Visual Studio Code (vscode) editor'
 -_electron=electron42
 +_electron=electron41
- pkgver=1.130.0
--pkgrel=2
-+pkgrel=1
+ pkgver=1.131.0
+ pkgrel=1
  arch=('x86_64')
- url='https://github.com/microsoft/vscode'
- license=('MIT')
-@@ -12,7 +12,6 @@
-   'libsecret'
-   'libx11'
-   'libxkbfile'
--  'onnxruntime'
-   'ripgrep')
- optdepends=('bash-completion: Bash completions'
-             'zsh-completions: ZSH completitons'
-@@ -66,9 +65,8 @@
+@@ -65,9 +65,8 @@
    local _electronver=$(awk -F= '{if ($1 == "target") {gsub(/"|\..*"/, "", $2); print $2}}' .npmrc)
    if [[ "electron$_electronver" != "$_electron" ]]; then
      echo "Wrong electron dependency. Change _electron to $_electronver"
@@ -31,15 +20,6 @@
  
    sed -e "s|name=electron|name=$_electron |" \
        -e '/PKGBUILD/d' \
-@@ -137,8 +135,6 @@
- 
-   find "$pkgdir" -name rg -print0 | xargs --null --replace ln -s -vsf /usr/bin/rg {}
- 
--  rm --verbose "$pkgdir"/usr/lib/code/node_modules.asar.unpacked/onnxruntime-node/bin/napi-v6/linux/$_vscode_arch/libonnxruntime*
--
-   install -Dm 755 code.sh "$pkgdir"/usr/bin/code-oss
-   install -Dm 755 code.mjs "$pkgdir"/usr/lib/$pkgname/code.mjs
-   ln -sf code-oss "$pkgdir"/usr/bin/code
 
 
 ############# Stripped diff below #################
@@ -53,14 +33,6 @@
  git
  jq
  libsecret
-@@ -7,7 +7,6 @@
- libxkbfile
- nodejs-lts-krypton
- npm
--onnxruntime
- python
- ripgrep
- zip
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

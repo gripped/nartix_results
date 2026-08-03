@@ -1,23 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,47 +1,33 @@
+@@ -1,48 +1,33 @@
  
  pkgname=xfce4-power-manager
--pkgver=4.20.0
--pkgrel=3
+-pkgver=4.20.1
 +pkgver=4.18.3
-+pkgrel=1
+ pkgrel=1
  pkgdesc="Power Manager for Xfce"
  arch=('x86_64')
  url="https://docs.xfce.org/xfce/xfce4-power-manager/start"
 -license=('GPL-2.0-or-later')
 +license=('GPL2')
  groups=('xfce4')
- depends=('libxfce4ui' 'upower' 'libnotify' 'xfce4-notifyd' 'hicolor-icon-theme')
+-depends=('libxfce4ui' 'upower' 'libnotify' 'hicolor-icon-theme')
 -makedepends=('git' 'glib2-devel' 'xfce4-dev-tools' 'xfce4-panel' 'wayland-protocols')
+-optdepends=('xfce4-notifyd: status notifications')
 -source=("git+https://gitlab.xfce.org/xfce/xfce4-power-manager.git#tag=$pkgname-$pkgver"
 -        git+https://gitlab.freedesktop.org/wlroots/wlr-protocols.git)
--sha256sums=('9798ac882a57b1752295d06151104b84741820d665dd0eab734279089bd912aa'
+-sha256sums=('9ed8f15b7674a3696a64e444b0db6624ff57d8745e519de5d52c52da0f43f400'
 -            'SKIP')
 -
 -prepare() {
@@ -29,6 +29,7 @@
 -
 -  NOCONFIGURE=1 ./autogen.sh
 -}
++depends=('libxfce4ui' 'upower' 'libnotify' 'xfce4-notifyd' 'hicolor-icon-theme')
 +makedepends=('intltool' 'xfce4-panel')
 +source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
 +sha256sums=('0d79dd0f68b90d07b384366be4d2291a6d7815410eb0c20d3d8e8590c62e84f0')
@@ -64,7 +65,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,10 +1,7 @@
+@@ -1,9 +1,7 @@
 -git
 -glib2-devel
  hicolor-icon-theme
@@ -74,7 +75,7 @@
  upower
 -wayland-protocols
 -xfce4-dev-tools
- xfce4-notifyd
++xfce4-notifyd
  xfce4-panel
 
 --- Arch PKGBUILD

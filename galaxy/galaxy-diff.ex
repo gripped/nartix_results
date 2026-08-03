@@ -131,6 +131,7 @@ firefox-ublock-origin
 thunderbird-ublock-origin
 unoconv
 vice
+vpl-gpu-rt
 wezterm
 wf-config
 wireshark

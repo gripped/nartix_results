@@ -795,7 +795,6 @@ vis
 vis-lexers
 vivaldi
 voa
-vpl-gpu-rt
 warpinator
 wayfire
 waylandpp

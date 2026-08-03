@@ -304,7 +304,6 @@ cdparanoia
 cdrdao
 gcdmaster
 cdrtools
-celluloid
 cervisia
 cfitsio
 cgns
@@ -1142,7 +1141,6 @@ inkscape
 innoextract
 inotify-tools
 intel-gmmlib
-intel-media-driver
 intel-media-sdk
 libmfx
 intel-metee
@@ -4081,7 +4079,6 @@ python-pkg_resources
 python-pkgconfig
 python-pkginfo
 python-platformdirs
-python-playwright
 python-plette
 python-pluggy
 python-plumbum
@@ -4670,8 +4667,6 @@ python-wcmatch
 python-wcwidth
 python-webcolors
 python-webencodings
-python-webob
-python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
@@ -5470,7 +5465,6 @@ spglib
 spice-gtk
 spice-protocol
 spirv-headers
-spirv-llvm-translator
 spirv-tools
 splint
 spotifyd
@@ -5884,7 +5878,6 @@ volume_key
 python-volume_key
 volumeicon
 vorbis-tools
-vpl-gpu-rt
 vpnc
 vsftpd
 vst3sdk

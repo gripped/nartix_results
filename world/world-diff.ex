@@ -55,6 +55,7 @@ caja-xattr-tags
 caja
 catfish
 cef
+celluloid
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -302,6 +303,7 @@ igsc
 iio-sensor-proxy
 intel-compute-runtime
 intel-graphics-compiler
+intel-media-driver
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -765,6 +767,7 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
+python-playwright
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -772,6 +775,8 @@ python-pyudev
 python-quart
 python-recommonmark
 python-sphinxcontrib-spelling
+python-webob
+python-webob-docs
 qastools
 qbe
 qbittorrent
@@ -914,6 +919,7 @@ snapper
 solid
 spice-vdagent
 spice
+spirv-llvm-translator
 squid
 sshguard
 sslh
@@ -1080,6 +1086,7 @@ vlc-plugins-base
 vlc-plugins-extra
 vlc-plugins-video-output
 vlc-plugins-visualization
+vpl-gpu-rt
 vte3
 vte-common
 vte3-utils

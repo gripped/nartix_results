@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=libwebsockets
+ pkgver=4.5.8
+-pkgrel=3
++pkgrel=2
+ pkgdesc="C library for websocket clients and servers"
+ arch=(x86_64)
+ url="https://libwebsockets.org"
 @@ -20,7 +20,6 @@
    libev
    libuv
@@ -8,11 +17,10 @@
    zlib
  )
  makedepends=(cmake)
-@@ -68,7 +67,7 @@
+@@ -68,6 +67,7 @@
      -D LWS_WITH_LIBUV=ON
      -D LWS_WITH_LWSAC=ON
      -D LWS_WITH_RANGES=ON
--    -D LWS_WITH_SDEVENT=ON
 +    -D LWS_WITH_SDEVENT=OFF
      -D LWS_WITH_SOCKS5=ON
      -D LWS_WITH_STATIC=OFF

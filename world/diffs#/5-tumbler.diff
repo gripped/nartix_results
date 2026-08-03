@@ -3,7 +3,7 @@
 @@ -1,15 +1,15 @@
  
  pkgname=tumbler
--pkgver=4.20.1
+-pkgver=4.20.2
 +pkgver=4.18.2
  pkgrel=1
  pkgdesc="Thumbnail service implementing the thumbnail management D-Bus specification"
@@ -12,9 +12,10 @@
 -license=('GPL-2.0-or-later')
 +license=('GPL2' 'LGPL')
  groups=('xfce4')
- depends=('libxfce4util' 'gdk-pixbuf2')
+-depends=('libxfce4util' 'gdk-pixbuf2' 'hicolor-icon-theme')
 -makedepends=('git' 'glib2-devel' 'python' 'ffmpegthumbnailer' 'poppler-glib'
 -             'libgsf' 'libgepub' 'libopenraw' 'freetype2' 'xfce4-dev-tools')
++depends=('libxfce4util' 'gdk-pixbuf2')
 +makedepends=('intltool' 'python' 'ffmpegthumbnailer' 'poppler-glib' 'libgsf'
 +             'libgepub' 'libopenraw' 'freetype2')
  optdepends=('ffmpegthumbnailer: video thumbnails'
@@ -25,7 +26,7 @@
              'freetype2: font thumbnails')
  backup=('etc/xdg/tumbler/tumbler.rc')
 -source=("git+https://gitlab.xfce.org/xfce/tumbler.git#tag=$pkgname-$pkgver")
--sha256sums=('6757a8acc992f67fb64e1a3b9f045d6bba5370bbc47b07a57bb0e28d0370ca92')
+-sha256sums=('35be9343828acc0269ea2036276ae1087bcb0dd036e74c76a571f63d9b868ad3')
 -
 -prepare() {
 -  cd $pkgname
@@ -61,12 +62,13 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,12 +1,10 @@
+@@ -1,13 +1,10 @@
  ffmpegthumbnailer
  freetype2
  gdk-pixbuf2
 -git
 -glib2-devel
+-hicolor-icon-theme
 +intltool
  libgepub
  libgsf
