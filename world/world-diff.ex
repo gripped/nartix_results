@@ -55,7 +55,6 @@ caja-xattr-tags
 caja
 catfish
 cef
-celluloid
 certbot-apache
 certbot-dns-cloudflare
 certbot-dns-digitalocean
@@ -303,7 +302,6 @@ igsc
 iio-sensor-proxy
 intel-compute-runtime
 intel-graphics-compiler
-intel-media-driver
 intel-opencl-clang
 intel-undervolt
 interception-tools
@@ -582,7 +580,6 @@ mgba
 libmgba
 mgba-sdl
 mgba-qt
-mimalloc
 miopen-hip
 modemmanager
 libmm-glib
@@ -646,6 +643,8 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+obs-studio
+obs-studio-plugin-browser
 ocl-icd
 onboard
 onionshare
@@ -750,6 +749,7 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
+prometheus
 pulseaudio
 libpulse
 pulseaudio-zeroconf
@@ -767,7 +767,6 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
-python-playwright
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -775,8 +774,6 @@ python-pyudev
 python-quart
 python-recommonmark
 python-sphinxcontrib-spelling
-python-webob
-python-webob-docs
 qastools
 qbe
 qbittorrent
@@ -919,7 +916,6 @@ snapper
 solid
 spice-vdagent
 spice
-spirv-llvm-translator
 squid
 sshguard
 sslh

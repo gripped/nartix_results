@@ -304,6 +304,7 @@ cdparanoia
 cdrdao
 gcdmaster
 cdrtools
+celluloid
 cervisia
 cfitsio
 cgns
@@ -1141,6 +1142,7 @@ inkscape
 innoextract
 inotify-tools
 intel-gmmlib
+intel-media-driver
 intel-media-sdk
 libmfx
 intel-metee
@@ -2374,6 +2376,7 @@ mgard
 micro
 microsoft-gsl
 milou
+mimalloc
 mimetic
 mimetreeparser
 mingw-w64-binutils
@@ -2545,8 +2548,6 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
-obs-studio
-obs-studio-plugin-browser
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -3152,7 +3153,6 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
-prometheus
 prosody
 protobuf-c
 protobuf
@@ -4079,6 +4079,7 @@ python-pkg_resources
 python-pkgconfig
 python-pkginfo
 python-platformdirs
+python-playwright
 python-plette
 python-pluggy
 python-plumbum
@@ -4667,6 +4668,8 @@ python-wcmatch
 python-wcwidth
 python-webcolors
 python-webencodings
+python-webob
+python-webob-docs
 python-websocket-client
 python-websockets
 python-webtest
@@ -5465,6 +5468,7 @@ spglib
 spice-gtk
 spice-protocol
 spirv-headers
+spirv-llvm-translator
 spirv-tools
 splint
 spotifyd

@@ -1,0 +1,19 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ 
+ pkgname=sip
+-pkgver=6.16.0
++pkgver=6.15.3
+ pkgrel=1
+ arch=(any)
+ pkgdesc='A tool that makes it easy to create Python bindings for C and C++ libraries'
+@@ -15,7 +15,7 @@
+              python-setuptools-scm
+              python-wheel)
+ source=(git+https://github.com/Python-SIP/sip#tag=$pkgver)
+-sha256sums=('cd8487e22c66f79264d21c2e3be53a0a2626071e93f0b9673c8867ba5b173399')
++sha256sums=('ccb97983ec2cb995259ae60658f04e61bb3766af309c0e3a11d3786b0eb49060')
+ 
+ build() {
+   cd $pkgname

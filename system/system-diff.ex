@@ -35,7 +35,6 @@ gzip
 iputils
 libarchive
 libsasl
-libssh2
 libusb
 linux
 linux-headers
