@@ -77,6 +77,7 @@ libmatemixer
 libodfgen
 libratbag
 libretro-pcsx2
+libtg_owt
 libusbsio
 python-libusbsio
 libva-nvidia-driver

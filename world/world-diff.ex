@@ -399,6 +399,7 @@ libepoxy-docs
 libexttextcat
 libfido2
 libfprint
+libfyaml
 libgsystemservice
 libgtop
 libgudev
@@ -643,8 +644,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-obs-studio
-obs-studio-plugin-browser
 ocl-icd
 onboard
 onionshare

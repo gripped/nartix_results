@@ -274,7 +274,6 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
-libtg_owt
 libutp
 libvarlink
 libvdpau-va-gl
