@@ -67,6 +67,7 @@ htpdate
 incron-next
 incron-openrc
 iso-profiles
+jotdown
 keyd-openrc
 knockd-openrc
 konform-browser

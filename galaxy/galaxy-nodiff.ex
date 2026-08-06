@@ -803,7 +803,6 @@ wayvnc
 wcm
 wdisplays
 wev
-wf-shell
 wlopm
 wlr-randr
 wlsunset

@@ -203,6 +203,7 @@ libgdm
 gengetopt
 geoclue
 ghc-filesystem
+gitea
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -399,7 +400,6 @@ libepoxy-docs
 libexttextcat
 libfido2
 libfprint
-libfyaml
 libgsystemservice
 libgtop
 libgudev
@@ -557,6 +557,7 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+mbedtls3
 media-player-info
 memcached
 mercurial
@@ -748,7 +749,6 @@ powerdevil
 powerdns-recursor
 powerdns
 presage
-prometheus
 pulseaudio
 libpulse
 pulseaudio-zeroconf

@@ -1,6 +1,23 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -41,7 +41,7 @@
+@@ -1,7 +1,7 @@
+ 
+ pkgname=wcm
+ pkgver=0.10.0
+-pkgrel=5
++pkgrel=4
+ pkgdesc='GTK application to configure Wayfire'
+ arch=(x86_64)
+ url='https://github.com/WayfireWM/wcm'
+@@ -13,7 +13,6 @@
+   glibmm
+   gtk3
+   gtkmm3
+-  hicolor-icon-theme
+   libevdev
+   libgcc
+   libsigc++
+@@ -42,7 +41,7 @@
  }
  
  build() {
@@ -13,7 +30,16 @@
 
 ############# Stripped diff below #################
 
-
+--- arch_depends
++++ artix_depends
+@@ -6,7 +6,6 @@
+ glm
+ gtk3
+ gtkmm3
+-hicolor-icon-theme
+ libevdev
+ libgcc
+ libsigc++
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD

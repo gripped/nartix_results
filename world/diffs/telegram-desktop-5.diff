@@ -1,12 +1,13 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,102 +1,36 @@
+@@ -1,103 +1,36 @@
 -
  pkgname=telegram-desktop
 -pkgver=7.0.8
 -_td_commit=022d60202e446ad1287b9fb68e687c8a0760788b
+-pkgrel=2
 +pkgver=5.6.2
- pkgrel=1
++pkgrel=1
  pkgdesc='Official Telegram Desktop client'
  arch=('x86_64')
  url="https://desktop.telegram.org/"
@@ -28,6 +29,7 @@
 -  'libjpeg-turbo'
 -  'libjxl'
 -  'libpipewire'
+-  'libsrtp'
 -  'libstdc++'
 -  'libxcb'
 -  'libxcomposite'
@@ -133,7 +135,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,53 +1,44 @@
+@@ -1,54 +1,44 @@
  abseil-cpp
  ada
  boost
@@ -159,6 +161,7 @@
 -libjpeg-turbo
 -libjxl
 -libpipewire
+-libsrtp
 -libstdc++
 +libdispatch
 +libsigc++-3.0

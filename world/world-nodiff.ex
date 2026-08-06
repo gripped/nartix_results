@@ -760,7 +760,6 @@ git-lfs
 git
 git-zsh-completion
 gitea-runner
-gitea
 github-cli
 gjs
 gkrellm
@@ -1765,6 +1764,7 @@ libfreeaptx
 libfreehand
 libfreexl
 libftdi
+libfyaml
 libgadu
 libgdata
 libgdiplus
@@ -2348,7 +2348,6 @@ python-maturin
 maven
 mbedtls
 mbedtls2
-mbedtls3
 mbox-importer
 mc
 mcpp
@@ -3154,6 +3153,7 @@ proj
 projectm
 projectm-sdl
 projectm-pulseaudio
+prometheus
 prosody
 protobuf-c
 protobuf

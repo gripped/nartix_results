@@ -3,7 +3,7 @@
 @@ -1,13 +1,13 @@
  
  pkgname=drkonqi
--pkgver=6.7.3
+-pkgver=6.7.4
 +pkgver=6.3.5
  _dirver=$(echo $pkgver | cut -d. -f1-3)
  pkgrel=1
@@ -34,7 +34,7 @@
  makedepends=(extra-cmake-modules)
  groups=(plasma)
  source=(https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz{,.sig})
--sha256sums=('d2e2c158c0e3f7e47f1a2529c30caffc3bff1aa8398dd6dff8c9645244f9ce26'
+-sha256sums=('c7f9402b7a32e077b23d34d083926bc7a78f18b93184510def3fcc32532d6959'
 +sha256sums=('d0c93f0fc1b4203b6245d3a2f4e9c85d4161570d14a14d81eed5a4ebd5adffcd'
              'SKIP')
  validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>

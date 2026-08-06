@@ -70,6 +70,7 @@ halloy
 hexchat
 hugin
 intel-gpu-tools
+jaq
 labwc
 lemurs
 libetonyek
@@ -135,6 +136,7 @@ vice
 vpl-gpu-rt
 wezterm
 wf-config
+wf-shell
 wireshark
 wireshark-cli
 wireshark-qt

@@ -1,15 +1,32 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -6,7 +6,7 @@
+@@ -1,20 +1,20 @@
+ 
+ pkgname=vault
+ pkgdesc='A tool for managing secrets'
+-pkgver=2.0.3
+-pkgrel=1
++pkgver=1.21.4
++pkgrel=2
  url="https://vaultproject.io/"
  license=('BUSL-1.1')
  arch=('x86_64')
 -depends=('glibc')
+-makedepends=('go' 'git' 'nodejs-lts-jod' 'pnpm' 'npm')
 +depends=('esysusers' 'etmpfiles' 'glibc')
- makedepends=('go' 'git' 'yarn' 'nodejs-lts-jod' 'npm')
++makedepends=('go' 'git' 'yarn' 'nodejs-lts-jod' 'npm')
  install=vault.install
  backup=('etc/vault.hcl' 'etc/default/vault')
-@@ -24,11 +24,6 @@
+ source=("git+https://github.com/hashicorp/vault#tag=v${pkgver}"
+   'vault.sysusers'
+   'vault.tmpfiles'
+   'vault.hcl')
+-sha512sums=('93700c98be594796835e9d0f412d2300fe9afbb8c18ddb011b6da1b3596053b6f463b2717e2a2a381a0380ed1d4be67ad6c8119c4899764c49b2a88362c60dce'
++sha512sums=('93082e087944a0980adb4bb1013b6185528511d548fee50028965ac0d7e9fc73099c0ff5fa4e0795cc1f45e3b1057fad98b0d13a0124bccf89b284d22bb1de29'
+             '598d673a7d86cd4948855adda005c0d4dd4fc494173221306b1c0eebc359bb881b5272f3166ea46ca23b54983ebfba2b1799c6f827ed8dbaa864f03cf06acb00'
+             'db327aae6f821ee1ea608abdb3fc82aeeae72ce873d78ada44461644add32afd6c0197019427734498bc28ae187b6f741a02196e40a620caab597e5eef32ca7a'
+             '75d654ec4eadfe983f57951d470fff8b9eb953b42c08e7b6b3a1baaa0721fd7a9d5be37480b0e4f4fd8518f375348bdd8394848f0fb27cb1d425279acb67f693')
+@@ -24,16 +24,13 @@
    git describe --tags --match 'v*' | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
  }
  
@@ -21,7 +38,15 @@
  
  build() {
    mkdir -p "${srcdir}/vault/http/web_ui"
-@@ -62,7 +57,6 @@
+   cd "${srcdir}/vault/ui"
+-  pnpm build
++  yarn install
++  npm rebuild node-sass
++  yarn run build
+ 
+   cd "${srcdir}/vault"
+   export CGO_CPPFLAGS="${CPPFLAGS}"
+@@ -60,7 +57,6 @@
    cd "${srcdir}/vault"
  
    install -Dm644 ".release/linux/package/etc/vault.d/vault.env" "${pkgdir}/etc/default/vault"
@@ -35,16 +60,20 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,3 +1,5 @@
+@@ -1,6 +1,8 @@
 +esysusers
 +etmpfiles
  git
  glibc
  go
+ nodejs-lts-jod
+ npm
+-pnpm
++yarn
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,3 @@
+@@ -1,12 +1,9 @@
 -prepare() {
 -cd vault
 -sed -i 's|/etc/vault.d/vault.hcl|/etc/vault.hcl|g' .release/linux/package/usr/lib/systemd/system/vault.service
@@ -53,3 +82,10 @@
  build() {
  mkdir -p "${srcdir}/vault/http/web_ui"
  cd "${srcdir}/vault/ui"
+-pnpm build
++yarn install
++npm rebuild node-sass
++yarn run build
+ cd "${srcdir}/vault"
+ export CGO_CPPFLAGS="${CPPFLAGS}"
+ export CGO_CFLAGS="${CFLAGS}"
