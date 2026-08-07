@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  
  pkgname=fuzzel
 -pkgver=1.14.1
+-pkgrel=2
 +pkgver=1.14.0
- pkgrel=1
++pkgrel=1
  pkgdesc='Application launcher for wlroots based Wayland compositors'
  url="https://codeberg.org/dnkl/$pkgname"
-@@ -14,21 +14,21 @@
+ arch=(x86_64)
+@@ -14,22 +14,21 @@
           libxkbcommon
           pixman
           wayland
@@ -20,11 +22,12 @@
               wayland-protocols)
  backup=('etc/xdg/fuzzel/fuzzel.ini')
  source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
--sha256sums=('c6416786c3a0600b8ad91ed951c43c002a639870c3823b4a60c910442f4ae097')
+-sha256sums=('4b8a914d7a065e34da7db4cc6ae4f02c773445e41b724b28b8b7385636b449ee')
 +sha256sums=('f46387b29e855990614c0b699fda99130d1406f65e5ea8b447c8f7ac4b64efe4')
  
  build() {
  	cd "$pkgname"
+-	CFLAGS+=' -I/usr/include/resvg'
 -	arch-meson \
 +	artix-meson \
  		-Denable-cairo=enabled \
@@ -55,9 +58,10 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,9 +1,9 @@
+@@ -1,10 +1,9 @@
  build() {
  cd "$pkgname"
+-CFLAGS+=' -I/usr/include/resvg'
 -arch-meson \
 +artix-meson \
  -Denable-cairo=enabled \

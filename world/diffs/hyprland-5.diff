@@ -1,0 +1,51 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -51,6 +51,7 @@
+          xcb-util-wm # libxcb-ewmh.so  libxcb-icccm.so
+          xorg-xwayland)
+ makedepends=(cmake
++             git
+              glaze
+              hyprland-protocols
+              meson
+@@ -62,7 +63,6 @@
+             'hyprland-protocols: to build and install plugins using hyprpm'
+             'hyprshutdown: clean logout and shutdown helper'
+             'meson: to build and install plugins using hyprpm'
+-            'uwsm: an advanced way to start desktop compositors as systemd units'
+             'xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland')
+ provides=(wayland-compositor)
+ _archive="${pkgname^}-$pkgver"
+@@ -77,7 +77,7 @@
+ 
+ build() {
+ 	cd "$_archive"
+-	make release PREFIX=/usr
++	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DNO_SYSTEMD=True
+ }
+ 
+ package() {
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,6 +1,7 @@
+ aquamarine
+ cairo
+ cmake
++git
+ glaze
+ glib2
+ glibc
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -5,5 +5,5 @@
+ }
+ build() {
+ cd "$_archive"
+-make release PREFIX=/usr
++cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DNO_SYSTEMD=True
+ }

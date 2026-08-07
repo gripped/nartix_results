@@ -56,6 +56,7 @@ firefox-developer-edition-tridactyl
 firefox-esr-tridactyl
 konform-browser-tridactyl
 firefox
+fuzzel
 godot
 godot-mono
 gpicview
@@ -70,7 +71,6 @@ halloy
 hexchat
 hugin
 intel-gpu-tools
-jaq
 labwc
 lemurs
 libetonyek
@@ -78,7 +78,6 @@ libmatemixer
 libodfgen
 libratbag
 libretro-pcsx2
-libtg_owt
 libusbsio
 python-libusbsio
 libva-nvidia-driver
@@ -133,7 +132,6 @@ firefox-ublock-origin
 thunderbird-ublock-origin
 unoconv
 vice
-vpl-gpu-rt
 wezterm
 wf-config
 wf-shell

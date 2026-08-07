@@ -743,8 +743,6 @@ geoip-database
 geoip
 geos
 getdns
-gexiv2
-gexiv2-docs
 gflags
 gfxstream
 ghex
@@ -760,6 +758,7 @@ git-lfs
 git
 git-zsh-completion
 gitea-runner
+gitea
 github-cli
 gjs
 gkrellm
@@ -1186,7 +1185,6 @@ iucode-tool
 iverilog
 j4-dmenu-desktop
 jami-qt
-jaq
 jasper
 jasper-doc
 java-avalon-framework
@@ -1230,7 +1228,6 @@ jsoncpp-doc
 jsonrpc-glib
 jsonrpc-glib-docs
 judy
-jujutsu
 juk
 julia
 junit
@@ -1775,7 +1772,6 @@ libgedit-tepl
 libgee
 libgeotiff
 libgepub
-libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
@@ -2127,6 +2123,7 @@ libxdg-basedir
 libxdmcp
 libxext
 libxfixes
+libxfont2
 libxft
 libxi
 libxinerama
@@ -2348,6 +2345,7 @@ python-maturin
 maven
 mbedtls
 mbedtls2
+mbedtls3
 mbox-importer
 mc
 mcpp
@@ -5013,7 +5011,6 @@ ruby-covered
 ruby-crack
 ruby-crass
 ruby-csv
-ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
@@ -5248,7 +5245,6 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
-ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
@@ -5512,7 +5508,6 @@ swaybg
 swaylock
 sweeper
 swell-foop
-swig
 swtpm
 sxhkd
 sxiv

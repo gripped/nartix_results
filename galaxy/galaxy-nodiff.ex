@@ -156,7 +156,6 @@ forgejo-runner
 fpc-src
 fpc
 freecell-solver
-fuzzel
 fvwm3
 fzy
 gammastep
@@ -195,9 +194,11 @@ impala
 imv
 incron
 innernet
+jaq
 jellyfin-ffmpeg
 jellyfin-mpv-shim
 jellyfin-server
+jotdown
 joyutils
 json-schema-validator
 just
@@ -274,6 +275,7 @@ libstaroffice-doc
 libstrophe
 libstrophe-doc
 libsysstat
+libtg_owt
 libutp
 libvarlink
 libvdpau-va-gl
@@ -794,6 +796,7 @@ vis
 vis-lexers
 vivaldi
 voa
+vpl-gpu-rt
 warpinator
 wayfire
 waylandpp

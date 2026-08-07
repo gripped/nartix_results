@@ -202,8 +202,9 @@ gdm
 libgdm
 gengetopt
 geoclue
+gexiv2
+gexiv2-docs
 ghc-filesystem
-gitea
 glpk
 gnome-bluetooth-3.0
 gnome-desktop
@@ -311,6 +312,7 @@ jack2
 jack2-dbus
 jack2-docs
 jami-daemon
+jaq
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
@@ -346,6 +348,7 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 js78
+jujutsu
 jupyter-server-ydoc
 kcoreaddons
 kdeplasma-addons
@@ -400,6 +403,7 @@ libepoxy-docs
 libexttextcat
 libfido2
 libfprint
+libgexiv2
 libgsystemservice
 libgtop
 libgudev
@@ -446,7 +450,6 @@ libvncserver
 libwebsockets
 libxfce4ui
 libxfce4util
-libxfont2
 libxklavier
 libxmlrpc
 light-locker
@@ -557,7 +560,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-mbedtls3
 media-player-info
 memcached
 mercurial
@@ -887,6 +889,8 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-cucumber-ci-environment
+ruby-ruby_memcheck
 ruby-sys-filesystem
 rust
 rust-musl
@@ -923,6 +927,7 @@ strongswan
 stunnel
 sway
 swayidle
+swig
 switcheroo-control
 syslog-ng
 syslog-ng-python
