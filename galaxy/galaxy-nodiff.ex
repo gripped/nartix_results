@@ -156,6 +156,7 @@ forgejo-runner
 fpc-src
 fpc
 freecell-solver
+fuzzel
 fvwm3
 fzy
 gammastep
@@ -806,6 +807,7 @@ wayvnc
 wcm
 wdisplays
 wev
+wf-shell
 wlopm
 wlr-randr
 wlsunset

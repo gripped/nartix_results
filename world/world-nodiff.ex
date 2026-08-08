@@ -743,6 +743,9 @@ geoip-database
 geoip
 geos
 getdns
+gexiv2
+gexiv2-common
+gexiv2-docs
 gflags
 gfxstream
 ghex
@@ -1228,6 +1231,7 @@ jsoncpp-doc
 jsonrpc-glib
 jsonrpc-glib-docs
 judy
+jujutsu
 juk
 julia
 junit
@@ -1560,6 +1564,7 @@ ksnip
 kspaceduel
 ksquares
 ksshaskpass
+kstars
 kstatusnotifieritem
 ksudoku
 ksvg
@@ -1772,6 +1777,7 @@ libgedit-tepl
 libgee
 libgeotiff
 libgepub
+libgexiv2
 libgig
 libgit2-glib
 libgit2-glib-docs
@@ -4161,7 +4167,6 @@ python-pydantic-extra-types
 python-pydantic-settings
 python-pydantic
 python-pydata-sphinx-theme
-python-pydbus
 python-pydocstyle
 python-pydot
 python-pydrive
@@ -5011,6 +5016,7 @@ ruby-covered
 ruby-crack
 ruby-crass
 ruby-csv
+ruby-cucumber-ci-environment
 ruby-cucumber-compatibility-kit
 ruby-cucumber-core
 ruby-cucumber-cucumber-expressions
@@ -5245,6 +5251,7 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
+ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
@@ -5508,6 +5515,7 @@ swaybg
 swaylock
 sweeper
 swell-foop
+swig
 swtpm
 sxhkd
 sxiv

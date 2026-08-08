@@ -1,5 +1,14 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
+@@ -1,7 +1,7 @@
+ 
+ pkgname=shairport-sync
+ pkgver=5.0.4
+-pkgrel=2
++pkgrel=3
+ pkgdesc='AirPlay and AirPlay 2 audio player'
+ url='https://github.com/mikebrady/shairport-sync'
+ arch=(x86_64)
 @@ -11,12 +11,10 @@
  makedepends=(glib2-devel xmltoman vim) # vim for xxd tool
  source=(shairport-sync-$pkgver.tar.gz::https://github.com/mikebrady/shairport-sync/archive/refs/tags/$pkgver.tar.gz

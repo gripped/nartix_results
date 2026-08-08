@@ -1,126 +1,27 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   'usbip'
-   'x86_energy_perf_policy'
- )
--pkgver=7.1.7
-+pkgver=7.1.5
- pkgrel=1
- _srcname=linux-${pkgver}
- license=('GPL-2.0-only')
-@@ -29,24 +29,17 @@
- makedepends+=('glib2' 'sysfsutils' 'udev')
- makedepends+=('ncurses')
- makedepends+=('readline' 'zlib' 'libelf' 'libcap' 'python-docutils')
--makedepends_x86_64=('libcap')
-+makedepends+=('libcap')
- makedepends+=('llvm' 'clang')
--makedepends_x86_64+=('libnl')
-+makedepends+=('libnl')
+@@ -34,19 +34,13 @@
+ makedepends_x86_64+=('libnl')
  groups=("$pkgbase")
--source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
+ source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
 -        'usbipd.service'
 -        'hv_kvp_daemon.service'
 -        'hv_vss_daemon.service'
--)
-+source=(https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign})
+ )
  validpgpkeys=(
    'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
    '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
  )
--sha256sums=('ca8f2a6884a4d62043e9ab93ac1ab15efc2b6630fe8f768b2ef2ffdf4b5e26df'
+ sha256sums=('ca8f2a6884a4d62043e9ab93ac1ab15efc2b6630fe8f768b2ef2ffdf4b5e26df'
 -            'SKIP'
 -            '2e187734d8aec58a3046d79883510d779aa93fb3ab20bd3132c1a607ebe5498f'
 -            'b1315cb77a35454e1af9172f821a52e2a0cb18561be05a340d21cf337b01ae61'
 -            '2d5e2f8d40b6f19bf2e1dead57ca105d72098fb0b418c09ff2e0cb91089710af')
-+sha256sums=('22a0196b3cbcdf34dc27b77561f4d040585fd3447edc9ab3531a1ac79e3041e7'
 +            'SKIP')
  
  prepare() {
    cd "$_srcname"
-@@ -90,12 +83,10 @@
-   make VERSION=$pkgver-$pkgrel
-   popd
- 
--  if [[ ${CARCH} == x86_64* ]]; then
--    echo ':: x86_energy_perf_policy'
--    pushd "$_srcname"/tools/power/x86/x86_energy_perf_policy
--    make
--    popd
--  fi
-+  echo ':: x86_energy_perf_policy'
-+  pushd "$_srcname"/tools/power/x86/x86_energy_perf_policy
-+  make
-+  popd
- 
-   echo ':: usbip'
-   pushd "$_srcname"/tools/usb/usbip
-@@ -110,12 +101,10 @@
-   make
-   popd
- 
--  if [[ ${CARCH} == x86_64* ]]; then
--    echo ':: turbostat'
--    pushd "$_srcname"/tools/power/x86/turbostat
--    make
--    popd
--  fi
-+  echo ':: turbostat'
-+  pushd "$_srcname"/tools/power/x86/turbostat
-+  make
-+  popd
- 
-   echo ':: hv'
-   pushd "$_srcname"/tools/hv
-@@ -133,19 +122,15 @@
-   make
-   popd
- 
--  if [[ ${CARCH} == x86_64* ]]; then
--    echo ':: intel-speed-select'
--    pushd "$_srcname"/tools/power/x86/intel-speed-select
--    make
--    popd
--  fi
--
--  if [[ ${CARCH} == x86_64* ]]; then
--    echo ':: kcpuid'
--    pushd "$_srcname"/tools/arch/x86/kcpuid
--    make
--    popd
--  fi
-+  echo ':: intel-speed-select'
-+  pushd "$_srcname"/tools/power/x86/intel-speed-select
-+  make
-+  popd
-+
-+  echo ':: kcpuid'
-+  pushd "$_srcname"/tools/arch/x86/kcpuid
-+  make
-+  popd
- }
- 
- package_linux-tools-meta() {
-@@ -156,14 +141,12 @@
-     'bpf'
-     'cpupower'
-     'hyperv'
-+    'intel-speed-select'
-+    'kcpuid'
-     'perf'
-     'tmon'
-+    'turbostat'
-     'usbip'
--  )
--  depends_x86_64=(
--    'intel-speed-select'
--    'kcpuid'
--    'turbostat'
-     'x86_energy_perf_policy'
-   )
-   conflicts=(
-@@ -212,7 +195,6 @@
+@@ -212,7 +206,6 @@
      confdir='/etc/default/' \
      sbindir='/usr/bin' \
      libdir='/usr/lib' \
@@ -128,15 +29,7 @@
      mandir='/usr/share/man' \
      docdir='/usr/share/doc/cpupower' \
      install install-man
-@@ -222,7 +204,6 @@
- package_x86_energy_perf_policy() {
-   pkgdesc='Read or write MSR_IA32_ENERGY_PERF_BIAS'
-   depends=('glibc')
--  arch=(x86_64)
- 
-   cd "$_srcname"/tools/power/x86/x86_energy_perf_policy
-   install -Dm 755 x86_energy_perf_policy "$pkgdir/usr/bin/x86_energy_perf_policy"
-@@ -231,14 +212,13 @@
+@@ -231,14 +224,13 @@
  
  package_usbip() {
    pkgdesc='An USB device sharing system over IP network'
@@ -152,15 +45,7 @@
  }
  
  package_tmon() {
-@@ -252,7 +232,6 @@
- package_turbostat() {
-   pkgdesc='Report processor frequency and idle statistics'
-   depends=('glibc' 'libcap')
--  arch=(x86_64)
- 
-   cd "$_srcname"/tools/power/x86/turbostat
-   make install DESTDIR="$pkgdir"
-@@ -264,9 +243,6 @@
+@@ -264,9 +256,6 @@
  
    cd "$_srcname"/tools/hv
    make install DESTDIR="$pkgdir" sbindir=/usr/bin libexecdir=/usr/lib
@@ -170,22 +55,6 @@
  }
  
  package_bpf() {
-@@ -292,7 +268,6 @@
- package_intel-speed-select() {
-   pkgdesc='Intel Speed Select'
-   depends=('libnl')
--  arch=(x86_64)
- 
-   cd "$_srcname"/tools/power/x86/intel-speed-select
-   make install DESTDIR="$pkgdir"
-@@ -301,7 +276,6 @@
- package_kcpuid() {
-   pkgdesc='Kernel tool for various cpu debug outputs'
-   depends=('glibc')
--  arch=(x86_64)
- 
-   make BINDIR=/usr/bin HWDATADIR="/usr/share/misc" DESTDIR="$pkgdir" -C "$_srcname"/tools/arch/x86/kcpuid install
- }
 
 
 ############# Stripped diff below #################

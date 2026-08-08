@@ -3,17 +3,25 @@
 @@ -1,6 +1,6 @@
  
  pkgname=rio
--pkgver=0.5.14
+-pkgver=0.5.16
 +pkgver=0.5.5
  pkgrel=1
  pkgdesc="A hardware-accelerated GPU terminal emulator powered by WebGPU"
  arch=('x86_64')
-@@ -23,7 +23,7 @@
+@@ -23,14 +23,14 @@
               python
               scdoc)
  source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
--sha512sums=('05f98aa67d2d673669d1faac7a7a71ed69c7fa83ebae1ab7456b38cfdc977d520ddae374619198cefa5ac1ea8ce67c6e13a00bb9b6e4c04dcd08fcd0aab3b58e')
+-sha512sums=('56444fef2e66f4a4d50ab4115d2297710157fb8bd8b3287f5c20689513bc16e7c7250a8075d4e853096b65ff3630ef31ffe27787543594e00761a993af5f8a57')
 +sha512sums=('d584275b39f7c59469edfb3b08e7cac960069430fd489a7ac1878bc85cab14498c4a32a5921078cd6cb0092ff7bc2a23118530af3a65e48efc402cffb5c25506')
  
  _srcenv() {
    cd "${pkgname}-${pkgver}"
+   export CARGO_HOME="$srcdir"
+   export CARGO_PROFILE_RELEASE_DEBUG=2
+   export CARGO_PROFILE_RELEASE_STRIP=false
+-  export CARGO_PROFILE_RELEASE_LTO=thin
++  export CARGO_PROFILE_RELEASE_LTO=true
+   export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
+   export CARGO_PROFILE_RELEASE_OPT_LEVEL=3
+   CFLAGS+=' -ffat-lto-objects'

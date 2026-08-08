@@ -202,8 +202,6 @@ gdm
 libgdm
 gengetopt
 geoclue
-gexiv2
-gexiv2-docs
 ghc-filesystem
 glpk
 gnome-bluetooth-3.0
@@ -348,7 +346,6 @@ openjdk8-src
 openjdk8-doc
 jbigkit
 js78
-jujutsu
 jupyter-server-ydoc
 kcoreaddons
 kdeplasma-addons
@@ -361,7 +358,6 @@ kitty-shell-integration
 knockd
 knot
 krdp
-kstars
 ksystemlog
 kwin-x11
 kwin
@@ -403,7 +399,6 @@ libepoxy-docs
 libexttextcat
 libfido2
 libfprint
-libgexiv2
 libgsystemservice
 libgtop
 libgudev
@@ -768,6 +763,7 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
+python-pydbus
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -889,8 +885,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-cucumber-ci-environment
-ruby-ruby_memcheck
 ruby-sys-filesystem
 rust
 rust-musl
@@ -927,7 +921,6 @@ strongswan
 stunnel
 sway
 swayidle
-swig
 switcheroo-control
 syslog-ng
 syslog-ng-python

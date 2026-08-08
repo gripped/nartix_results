@@ -56,7 +56,6 @@ firefox-developer-edition-tridactyl
 firefox-esr-tridactyl
 konform-browser-tridactyl
 firefox
-fuzzel
 godot
 godot-mono
 gpicview
@@ -134,7 +133,6 @@ unoconv
 vice
 wezterm
 wf-config
-wf-shell
 wireshark
 wireshark-cli
 wireshark-qt
