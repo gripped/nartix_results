@@ -18,11 +18,16 @@
  
  prepare() {
    cd "$srcdir/$pkgname"
-@@ -38,7 +40,6 @@
+@@ -37,8 +39,10 @@
+ package() {
    cd "$srcdir/$pkgname"
    DESTDIR="$pkgdir" make install
-   install -Dm644 minidlna.conf "$pkgdir"/etc/minidlna.conf
+-  install -Dm644 minidlna.conf "$pkgdir"/etc/minidlna.conf
 -  install -Dm0644 "$srcdir"/minidlna.service "$pkgdir"/usr/lib/systemd/system/minidlna.service
++
++  install -Dm0644 "$srcdir"/minidlna.sysusers "$pkgdir"/usr/lib/sysusers.d/minidlna.conf
++  install -Dm0644 "$srcdir"/minidlna.tmpfiles "$pkgdir"/usr/lib/tmpfiles.d/minidlna.conf
++
    install -Dm644 "$srcdir"/$pkgname/minidlna.conf.5 "$pkgdir"/usr/share/man/man5/minidlna.conf.5
    install -Dm644 "$srcdir"/$pkgname/minidlnad.8 "$pkgdir"/usr/share/man/man8/minidlnad.8
  }

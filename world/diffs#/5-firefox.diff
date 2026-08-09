@@ -4,10 +4,11 @@
  
  pkgname=firefox
 -pkgver=153.0.3
-+pkgver=120.0
- pkgrel=1
+-pkgrel=2
 -pkgdesc="Fast, Private & Safe Web Browser"
 -url="https://www.firefox.com/"
++pkgver=120.0
++pkgrel=1
 +pkgdesc="Standalone web browser from mozilla.org"
 +url="https://www.mozilla.org/firefox/"
  arch=(x86_64)
@@ -67,7 +68,7 @@
    python
    rust
    unzip
-@@ -62,60 +46,45 @@
+@@ -62,64 +46,45 @@
    zip
  )
  optdepends=(
@@ -95,6 +96,8 @@
 -  org.mozilla.$pkgname.metainfo.xml
 -
 -  0001-Install-under-remoting-name.patch
+-
+-  0002-Bug-2057577-DOM-Media-Add-FFmpeg-63-support.-r-alwu-.patch
 +  identity-icons-brand.svg
  )
  validpgpkeys=(
@@ -106,7 +109,8 @@
 -            'cb00ea359d6daf37900102307be4f515f1b7ef9c98825c64cc55bb562449d0d8'
 -            '2a51d57d98fbda86f094bc991e1ad4dd6e8a9d32fd0836b1183bf70ec4b68915'
 -            '4e01a62e20026b67466943bad9dfba47874c5e1492375f8293aeb85ecedf2288'
--            '075ecdf42fa429d6c4b273c52d406f4335484c31b38f76fe3cc2e33ead7750cc')
+-            '83311ecf83698f2739ac42f26777df2e5df3fc090144480d10a9c203076b8165'
+-            '55aeec4d098990e91f881de32126ea91576b0d185e322b561241c513ea5b9fcd')
 -b2sums=('643a82abbb618943f4f299a25768d77d1b21daebec81a2101a0d69288a4d7dd76734f4a58d6e48469e75740f6e08f9339e6a5f3e00fdac4963489c66b22fec35'
 +            '1f241fdc619f92a914c75aece7c7c717401d7467c9a306458e106b05f34e5044'
 +            'a9b8b4a0a1f4a7b4af77d5fc70c2686d624038909263c795ecc81e0aec7711e9')
@@ -115,7 +119,8 @@
 -        'f2a9cfb758692584dd8057ab30d0ed9d22f5356d0021e1c8111a061866ee66d6b2d891351e11064f904fe8c90032e78f9def61ed54ae4208c8be4de6b4226277'
 -        '63c62c85ee70e22b02e9ea34e69f04f50403b7634b99fb0e996a83c963916dc4224041a0b265e54f6c224bd1777ddfdeb255037e3e30fec288695f3050278b05'
 -        '607d592b164a88a11a1041002d67339a9a0001469cd979d24d0fda547cec472f602f6299c198f626f2c854df3ff05bd0b1fd84ae47ee52b97a7906575f5a5f36'
--        'b9fb91bb2d9513aa4dd7d9492738c873871fa9f0866a63a4897f08194bde05e98c8cdb278aef6635dd54982b97ce6e951b5d9f8e71b91a2a83b2f8093c57ba04')
+-        '20b287c93a43bbd08373af81d626c167a374700a5318ac83546c45d4bc54ff335c12cb32584f66ca61b7509836292117f8622feda56983fe72d6a4f3af3a5613'
+-        '3a613f8534d1895b2e683e91155f990502f139dd49589de61589ce9c223e43d07782e1a8c07e1f82b2a8e74c313ec545e4851075cece927326f8aa43b2a18c57')
 -
 -_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 +        'd07557840097dd48a60c51cc5111950781e1c6ce255557693bd11306c7a9258b2a82548329762148f117b2295145f9e66e0483a18e2fe09c5afcffed2e4b8628'
@@ -142,7 +147,7 @@
  
    cat >../mozconfig <<END
  ac_add_options --enable-application=browser
-@@ -127,20 +96,18 @@
+@@ -131,20 +96,18 @@
  ac_add_options --enable-optimize
  ac_add_options --enable-rust-simd
  ac_add_options --enable-linker=lld
@@ -167,7 +172,7 @@
  
  ac_add_options --with-system-nspr
  ac_add_options --with-system-nss
-@@ -156,16 +123,13 @@
+@@ -160,16 +123,13 @@
  build() {
    cd firefox-$pkgver
  
@@ -187,7 +192,7 @@
  
    ulimit -n 4096
  
-@@ -173,12 +137,12 @@
+@@ -177,12 +137,12 @@
    cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-profile-generate=cross
  END
@@ -203,7 +208,7 @@
      xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
      ./mach python build/pgo/profileserver.py
  
-@@ -189,26 +153,27 @@
+@@ -193,26 +153,27 @@
    test -s jarlog
  
    echo "Removing instrumented browser..."
@@ -238,7 +243,7 @@
  // Use LANG environment variable to choose locale
  pref("intl.locale.requested", "");
  
-@@ -225,19 +190,18 @@
+@@ -229,19 +190,18 @@
  pref("browser.gnome-search-provider.enabled", true);
  END
  
@@ -265,7 +270,7 @@
  
    local i theme=official
    for i in 16 22 24 32 48 64 128 256; do
-@@ -250,27 +214,37 @@
+@@ -254,27 +214,37 @@
      "$pkgdir/usr/share/icons/hicolor/384x384/apps/$pkgname.png"
    install -Dvm644 browser/branding/$theme/content/about-logo.svg \
      "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"

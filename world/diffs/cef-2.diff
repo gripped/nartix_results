@@ -1,17 +1,20 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,8 +1,8 @@
+@@ -1,10 +1,10 @@
  
  pkgname=cef
--pkgver=150.0.17
--_cef_commit=94c17267eb4595a1ad17fb67dee6cdb8ded41c6d
--_chromium_ver=150.0.7871.187
-+pkgver=150.0.14
-+_cef_commit=7c1aa68455db1f1fad159c2b83070ad318212b3d
-+_chromium_ver=150.0.7871.129
+-pkgver=151.3.16
+-_cef_commit=be1e15d8892c064f0299ba18350236a9b272ce7f
+-_chromium_ver=151.0.7922.109
++pkgver=151.3.14
++_cef_commit=5d67476b12f718c8388918d1740aeec27f6b2b80
++_chromium_ver=151.0.7922.72
  _system_clang=1
- pkgrel=1
+-pkgrel=1
++pkgrel=2
  pkgdesc="Chromium Embedded Framework (CEF), simple framework for embedding Chromium-based browsers in other applications"
+ arch=('x86_64')
+ url="https://chromiumembedded.github.io/cef"
 @@ -23,7 +23,7 @@
    'mesa'
    'nss'
@@ -25,10 +28,10 @@
    chromium-disable-font-tests.patch
    FindCEF.cmake
  )
--sha256sums=('63e1e8b3c40d1c9b51c55d27356f6d6b074e5c7f210e776290b1ef6d290a7df1'
--            'ec791113ae4a8d93ef9d7dd06b60e55990a5f7561575e890af5b53c793f7eab8'
-+sha256sums=('851ced572bf2dc41c1afaad4a64975f6b6aa2d9d6a7fafc4cb2484ca09067aaa'
-+            '85878445be27590f372e3628384b8f2d2a89eac51712d46ed8e8c9e1007c23c3'
+-sha256sums=('1db2843d977f9cbd2a16120e3cd9951bd3356f575a245d735ef00a2dbf88a6ba'
+-            '1397aceb4490d6ca107e088118c12e3f5760eab269ded61fbba6e51b93a3b470'
++sha256sums=('421597c9b70b885f61079a08edd1b943d5c9965321c004c18e4d66fa747add52'
++            'cf17527e5e3ffbd8db9009620357af2cc05f30ae53309e6a4c8754053e8359cc'
              '11a96ffa21448ec4c63dd5c8d6795a1998d8e5cd5a689d91aea4d2bdd13fb06e'
              '4fc040a0656a0a524dd8ad090cd129fc5b6cb21adcc66be82080165789e8c13e'
              'c382830318c5b37826ecf44f3ba9def6be8affdad1bce819ecb83f3222ff4b3a'
@@ -38,7 +41,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -16,6 +16,7 @@
+@@ -18,6 +18,7 @@
  libffi
  libjpeg-turbo
  libpulse
@@ -46,7 +49,7 @@
  libwebp
  libxcomposite
  libxdamage
-@@ -42,5 +43,4 @@
+@@ -44,5 +45,4 @@
  rsync
  rust
  rust-bindgen

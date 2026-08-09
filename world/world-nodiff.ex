@@ -66,7 +66,6 @@ analitza
 analitza5
 anari-sdk
 android-file-transfer
-android-tools
 android-udev
 angelfish
 ansible-core
@@ -407,7 +406,6 @@ cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
-curl-impersonate
 cxxopts
 cyrus-sasl
 cyrus-sasl-gssapi
@@ -2340,7 +2338,6 @@ marked-man
 marked
 marknote
 massif-visualizer
-mat2
 materia-kde
 kvantum-theme-materia
 materialx
@@ -4167,6 +4164,7 @@ python-pydantic-extra-types
 python-pydantic-settings
 python-pydantic
 python-pydata-sphinx-theme
+python-pydbus
 python-pydocstyle
 python-pydot
 python-pydrive
@@ -4906,7 +4904,6 @@ rhino
 java-rhino
 rhino-javadoc
 rinutils
-ripgrep-all
 ripgrep
 riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
@@ -5251,7 +5248,6 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
-ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli

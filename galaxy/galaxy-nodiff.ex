@@ -16,7 +16,6 @@ arc-icon-theme
 arduino-cli
 atool
 atril
-audacious-plugins
 audacious
 autotiling-rs
 autotiling
@@ -583,6 +582,7 @@ quassel-common
 quickjs-ng
 quickshell
 radicle
+rapydscript-ng
 realtime-privileges
 reapack
 reaper

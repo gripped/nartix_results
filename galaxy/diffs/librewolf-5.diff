@@ -1,0 +1,345 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,11 +1,16 @@
++
++: ${_build_profiled:=true}
++: ${_build_profiled_xvfb:=true}
+ 
+ pkgname=librewolf
++_pkgname=LibreWolf
++epoch=1
+ pkgver=153.0.3_1
+ _fixedfirefoxver="${pkgver%_*}" # Version of Firefox this LibreWolf version is based on, but the Firefox patch number is always included
+ _librewolfver="${pkgver#*_}"
+ _firefoxver="${_fixedfirefoxver%.0}" # Removes ".0" from the end. For "136.0.0" this will result in "136.0" but for "136.0.1" won't do anything.
+ pkgrel=1
+-pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom"
++pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom."
+ url="https://librewolf.net/"
+ arch=(x86_64 aarch64)
+ license=(MPL-2.0)
+@@ -24,9 +29,7 @@
+   glibc
+   gtk3
+   hicolor-icon-theme
+-  libgcc
+   libpulse
+-  libstdc++
+   libx11
+   libxcb
+   libxcomposite
+@@ -68,7 +71,7 @@
+   wasi-libc
+   yasm
+   zip
+-)
++  ) # pciutils: only to avoid some PGO warning(?)
+ optdepends=(
+   'hunspell-dictionary: Spell checking'
+   'libnotify: Notification integration'
+@@ -77,6 +80,21 @@
+   'xdg-desktop-portal: Screensharing with Wayland'
+ )
+ 
++if [[ "${_build_profiled}" == "true" ]]; then
++  if [[ "${_build_profiled_xvfb}" == "true" ]]; then
++    makedepends+=(
++      xorg-server-xvfb
++    )
++  else
++    makedepends+=(
++      weston
++      wlheadless-run # aur/xwayland-run-git
++    )
++  fi
++fi
++
++backup=('usr/lib/librewolf/librewolf.cfg'
++        'usr/lib/librewolf/distribution/policies.json')
+ options=(
+   !debug
+   !emptydirs
+@@ -87,11 +105,13 @@
+ source=(
+   https://codeberg.org/api/packages/librewolf/generic/librewolf-source/$_firefoxver-$_librewolfver/librewolf-$_firefoxver-$_librewolfver.source.tar.gz{,.sig}
+   $pkgname.desktop
++  "default192x192.png"
+ )
+ 
+ sha256sums=('ab4283ce8eb6765e9df0f4586b2f4fb0a05de186398f2b944f6f5c791541321f'
+             'SKIP'
+-            '3d6ac59ae9d5ba4c9fe15f95c1338fa68214dec6119f8432336403e3be50f8ae')
++            '3d6ac59ae9d5ba4c9fe15f95c1338fa68214dec6119f8432336403e3be50f8ae'
++            '959c94c68cab8d5a8cff185ddf4dca92e84c18dccc6dc7c8fe11c78549cdc2f1')
+ 
+ validpgpkeys=('662E3CDD6FE329002D0CA5BB40339DD82B12EF16') # https://rpm.librewolf.net/pubkey.gpg
+ 
+@@ -174,7 +194,99 @@
+   CFLAGS="${CFLAGS/-fexceptions/}"
+   CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+ 
+-  cp ../mozconfig .mozconfig
++  ulimit -n 4096
++
++
++
++  if [[ "${_build_profiled}" == "true" ]]; then
++    if [[ "${CARCH}" == "aarch64" ]]; then
++
++      cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-generate
++export MOZ_ENABLE_FULL_SYMBOLS=1
++END
++
++    else
++
++      cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-generate=cross
++export MOZ_ENABLE_FULL_SYMBOLS=1
++END
++
++    fi
++
++    cp "lw/policies.json" "$srcdir/policies.json"
++    jq 'del(.policies.Extensions.Install)' "$srcdir/policies.json" > "lw/policies.json"
++
++    echo "Building instrumented browser..."
++
++    ./mach build --priority normal
++
++    echo "Profiling instrumented browser..."
++
++    ./mach package
++
++    local _headless_env=(
++      LIBGL_ALWAYS_SOFTWARE=true \
++      LLVM_PROFDATA=llvm-profdata \
++        JARLOG_FILE="$PWD/jarlog" \
++        dbus-run-session
++    )
++
++    if [[ "${_build_profiled_xvfb}" == "true" ]]; then
++      local _headless_run=(
++        xvfb-run
++        -s "-screen 0 1920x1080x24 -nolisten local"
++      )
++    else
++      local _headless_run=(
++        wlheadless-run
++        -c weston --width=1920 --height=1080
++      )
++    fi
++
++    env "${_headless_env[@]}" "${_headless_run[@]}" -- ./mach python build/pgo/profileserver.py
++
++    echo "Removing instrumented browser..."
++    ./mach clobber objdir
++
++    echo "Building optimized browser..."
++
++    if [[ -s merged.profdata ]]; then
++      stat -c "Profile data found (%s bytes)" merged.profdata
++
++      if [[ "${CARCH}" == "x86_64" ]]; then
++        cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-use
++END
++      else
++        cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-use=cross
++END
++      fi
++
++      cat >> .mozconfig - << END
++ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
++END
++    else
++      echo "Profile data not found."
++    fi
++
++    if [[ -s jarlog ]]; then
++      stat -c "Jar log found (%s bytes)" jarlog
++      cat >> .mozconfig - << END
++ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
++END
++    else
++      echo "Jar log not found."
++    fi
++
++    cp "$srcdir/policies.json" "lw/policies.json"
++
++  else
++    cat >.mozconfig ../mozconfig
++  fi
++
+   ./mach build --priority normal
+ }
+ 
+@@ -182,10 +294,9 @@
+   cd librewolf-$_firefoxver-$_librewolfver
+   DESTDIR="$pkgdir" ./mach install
+ 
+-  local appdir="$pkgdir/usr/lib/$pkgname"
+-  touch "$appdir/is-packaged-app"
+-
+-  install -Dvm644 /dev/stdin "$appdir/browser/defaults/preferences/vendor.js" <<END
++  local vendorjs="$pkgdir/usr/lib/$pkgname/browser/defaults/preferences/vendor.js"
++
++  install -Dvm644 /dev/stdin "$vendorjs" <<END
+ // Use system-provided dictionaries
+ pref("spellchecker.dictionary_path", "/usr/share/hunspell");
+ 
+@@ -194,7 +305,9 @@
+ // pref("extensions.autoDisableScopes", 11);
+ END
+ 
+-  install -Dvm644 /dev/stdin "$appdir/distribution/distribution.ini" <<END
++  local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
++  install -Dvm644 /dev/stdin "$distini" <<END
++
+ [Global]
+ id=io.gitlab.${pkgname}-community
+ version=1.0
+@@ -206,29 +319,26 @@
+ app.partner.librewolf=$pkgname
+ END
+ 
+-  local i theme=librewolf
+-  for i in 16 32 48 64 128 256; do
+-    install -Dvm644 browser/branding/$theme/default$i.png \
++  for i in 16 32 48 64 128; do
++    install -Dvm644 browser/branding/${pkgname}/default$i.png \
+       "$pkgdir/usr/share/icons/hicolor/${i}x${i}/apps/$pkgname.png"
+   done
+-  install -Dvm644 browser/branding/$theme/content/about-logo.png \
++  install -Dvm644 ${srcdir}/default192x192.png \
+     "$pkgdir/usr/share/icons/hicolor/192x192/apps/$pkgname.png"
+-  install -Dvm644 browser/branding/$theme/content/about-logo@2x.png \
+-    "$pkgdir/usr/share/icons/hicolor/384x384/apps/$pkgname.png"
+-
+-  install -Dvm644 browser/branding/${theme}/default16.png \
++
++  install -Dvm644 browser/branding/${pkgname}/default16.png \
+     "$pkgdir/usr/share/icons/hicolor/symbolic/apps/$pkgname-symbolic.png"
+ 
+-  install -Dvm644 ../$pkgname.desktop "$pkgdir/usr/share/applications/$pkgname.desktop"
++  install -Dvm644 ../$pkgname.desktop \
++    "$pkgdir/usr/share/applications/$pkgname.desktop"
+ 
+   install -Dvm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<END
+ exec /usr/lib/$pkgname/librewolf "\$@"
+ END
+ 
+-  ln -srfv "$pkgdir/usr/bin/$pkgname" "$appdir/librewolf-bin"
+-
+-  if [[ -e $appdir/libnss3.so ]]; then
+-    ln -sfv ../libnssckbi.so -t "$appdir"
++  ln -srfv "$pkgdir/usr/bin/$pkgname" "$pkgdir/usr/lib/$pkgname/librewolf-bin"
++  local nssckbi="$pkgdir/usr/lib/$pkgname/libnssckbi.so"
++  if [[ -e $nssckbi ]]; then
++    ln -srfv "$pkgdir/usr/lib/libnssckbi.so" "$nssckbi"
+   fi
+ }
+-
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -20,9 +20,7 @@
+ inetutils
+ jack
+ jq
+-libgcc
+ libpulse
+-libstdc++
+ libx11
+ libxcb
+ libxcomposite
+@@ -51,5 +49,6 @@
+ wasi-libc
+ wasi-libc++
+ wasi-libc++abi
++xorg-server-xvfb
+ yasm
+ zip
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -47,6 +47,74 @@
+ CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+ CFLAGS="${CFLAGS/-fexceptions/}"
+ CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+-cp ../mozconfig .mozconfig
++ulimit -n 4096
++if [[ "${_build_profiled}" == "true" ]]; then
++if [[ "${CARCH}" == "aarch64" ]]; then
++cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-generate
++export MOZ_ENABLE_FULL_SYMBOLS=1
++END
++else
++cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-generate=cross
++export MOZ_ENABLE_FULL_SYMBOLS=1
++END
++fi
++cp "lw/policies.json" "$srcdir/policies.json"
++jq 'del(.policies.Extensions.Install)' "$srcdir/policies.json" > "lw/policies.json"
++echo "Building instrumented browser..."
++./mach build --priority normal
++echo "Profiling instrumented browser..."
++./mach package
++local _headless_env=(
++LIBGL_ALWAYS_SOFTWARE=true \
++LLVM_PROFDATA=llvm-profdata \
++JARLOG_FILE="$PWD/jarlog" \
++dbus-run-session
++)
++if [[ "${_build_profiled_xvfb}" == "true" ]]; then
++local _headless_run=(
++xvfb-run
++-s "-screen 0 1920x1080x24 -nolisten local"
++)
++else
++local _headless_run=(
++wlheadless-run
++-c weston --width=1920 --height=1080
++)
++fi
++env "${_headless_env[@]}" "${_headless_run[@]}" -- ./mach python build/pgo/profileserver.py
++echo "Removing instrumented browser..."
++./mach clobber objdir
++echo "Building optimized browser..."
++if [[ -s merged.profdata ]]; then
++stat -c "Profile data found (%s bytes)" merged.profdata
++if [[ "${CARCH}" == "x86_64" ]]; then
++cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-use
++END
++else
++cat >.mozconfig ../mozconfig - <<END
++ac_add_options --enable-profile-use=cross
++END
++fi
++cat >> .mozconfig - << END
++ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
++END
++else
++echo "Profile data not found."
++fi
++if [[ -s jarlog ]]; then
++stat -c "Jar log found (%s bytes)" jarlog
++cat >> .mozconfig - << END
++ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
++END
++else
++echo "Jar log not found."
++fi
++cp "$srcdir/policies.json" "lw/policies.json"
++else
++cat >.mozconfig ../mozconfig
++fi
+ ./mach build --priority normal
+ }

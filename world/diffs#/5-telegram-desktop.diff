@@ -1,9 +1,9 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,103 +1,36 @@
+@@ -1,104 +1,36 @@
 -
  pkgname=telegram-desktop
--pkgver=7.0.8
+-pkgver=7.0.9
 -_td_commit=022d60202e446ad1287b9fb68e687c8a0760788b
 -pkgrel=2
 +pkgver=5.6.2
@@ -69,6 +69,7 @@
 -  'python'
 -  'range-v3'
 -  'tl-expected'
+-  'vulkan-headers'
 -)
 -optdepends=(
 -  'geoclue: geoinformation support'
@@ -81,7 +82,7 @@
 -  "https://github.com/telegramdesktop/tdesktop/releases/download/v${pkgver}/tdesktop-${pkgver}-full.tar.gz"
 -  "git+https://github.com/tdlib/td.git#commit=${_td_commit}"
 -)
--sha512sums=('3b42a27fe997da838352ce64ed0f975bb43634982bb7a6ed87a76d9d186bd82707b536a4450b84d790726c3f556eaa58f089a2ab79e742d4ef03f601efde53d5'
+-sha512sums=('c5e97a146c903b3398b53a7451d86efcbb5f87a989586d20753c83e2cb1452b964ab1175b88977eb590b04bcffc14fc678eb9f6a629b7f6f7af522a0da811780'
 -            '45ef8f69708c46aef8e8d0301b8710467a208e43a9ebb5918152b49d24f9d6c8b69ca9a94f19c4e401f44e8d60706cd840832ce442ca1a839df942a7b88afde2')
 +license=('GPL3')
 +depends=('hunspell' 'ffmpeg' 'hicolor-icon-theme' 'lz4' 'minizip' 'openal'
@@ -135,7 +136,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,54 +1,44 @@
+@@ -1,55 +1,44 @@
  abseil-cpp
  ada
  boost
@@ -197,6 +198,7 @@
  range-v3
  rnnoise
  tl-expected
+-vulkan-headers
 +wayland-protocols
  xxhash
 -zlib

@@ -2,6 +2,7 @@ a52dec
 accountsservice
 aflplusplus
 alsa-utils
+android-tools
 ant
 ant-doc
 anubis
@@ -103,6 +104,7 @@ krun
 cups-filters
 cups
 libcups
+curl-impersonate
 darkhttpd
 dbus-broker
 dconf
@@ -430,6 +432,7 @@ libnvme
 libofa
 libp11
 libprocps
+librewolf
 libsidplay
 libsidplayfp
 libstaroffice
@@ -529,6 +532,7 @@ mariadb-libs
 mariadb-clients
 mariadb-mytop
 mariadb-pam
+mat2
 mate-applets
 mate-backgrounds
 mate-calc
@@ -763,7 +767,6 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
-python-pydbus
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -875,6 +878,7 @@ redshift
 refind
 refind-docs
 renameutils
+ripgrep-all
 ristretto
 rnnoise
 rocalution
@@ -885,6 +889,7 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
+ruby-ruby_memcheck
 ruby-sys-filesystem
 rust
 rust-musl

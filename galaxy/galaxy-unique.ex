@@ -81,7 +81,6 @@ libfoo
 libglade
 liboctopi
 libpamac
-librewolf
 librsvg-noglycin
 libtree
 libusrsctp

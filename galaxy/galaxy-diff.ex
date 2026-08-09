@@ -1,6 +1,7 @@
 alacritty
 alsa-utils
 anubis
+audacious-plugins
 autorandr
 bsd-games
 cairo-dock
@@ -77,6 +78,7 @@ libmatemixer
 libodfgen
 libratbag
 libretro-pcsx2
+librewolf
 libusbsio
 python-libusbsio
 libva-nvidia-driver

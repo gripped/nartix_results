@@ -4,7 +4,7 @@
  
  pkgname=calibre
 -pkgver=9.12.0
--pkgrel=1
+-pkgrel=2
 +pkgver=8.7.0
 +pkgrel=12
  pkgdesc='Ebook management application'
@@ -59,8 +59,11 @@
               pyqt-builder
               rapydscript-ng
               sip
-@@ -80,8 +69,7 @@
+@@ -78,11 +67,9 @@
+ checkdepends=(poppler
+               python-fonttools
                python-pyzstd
+-              python-sgmllib3k
                speech-dispatcher
                tk)
 -optdepends=('onnxruntime: required for text-to-speech'
@@ -69,21 +72,23 @@
              'python-fonttools: required for font subset feature in epub editor'
              'speech-dispatcher: TTS support in the viewer')
  conflicts=(calibre-common
-@@ -90,10 +78,10 @@
+@@ -91,12 +78,10 @@
  _archive="$pkgname-$pkgver"
  source=("https://download.calibre-ebook.com/$pkgver/$_archive.tar.xz"
          "$url/signatures/$_archive.tar.xz.sig"
+-        https://github.com/kovidgoyal/calibre/commit/49af1f0904e00351ffbf9ad430a37bfe66226bae.patch
 -        "tts-piper-remove-withterminator.patch")
 -sha256sums=('6e2b49e2210f40730bb9a79ebd9108e8c1d9e2c8b34ab0a1a9ef23f936b120ed'
 +         qt-6.10.patch)
 +sha256sums=('2cfe587e3773d8607fe8bbefbcd77b5cfb816124cac89e491353deb8f2fa9324'
              'SKIP'
+-            'ec609872b37da3c6135440555ea17da8f3ebe3effee1ac5bd63821298e756051'
 -            '128dad5dda9175ee9d8a798cdac0514e228821dca11b746b54682a9cc787d3da')
 +            '5b1b0b0d60400727136e929b941bac0b32125c9636600c2f9ec1a1d7fd74db64')
  validpgpkeys=('3CE1780F78DD88DF45194FD706BC317B515ACE7C') # Kovid Goyal (New longer key) <kovid@kovidgoyal.net>
  
  prepare(){
-@@ -102,10 +90,9 @@
+@@ -105,12 +90,9 @@
  		-e "s/'ctc-posml'/'text' not in mt and 'pdf' not in mt and 'xhtml'/" \
  		-e "s/^Name=calibre/Name=Calibre/g" \
  		-i  src/calibre/linux.py
@@ -91,6 +96,8 @@
  	rm -f resources/$pkgname-portable.*
  
 -	patch -Np1 -i ../tts-piper-remove-withterminator.patch
+-
+-	patch -Np1 -i ../49af1f0904e00351ffbf9ad430a37bfe66226bae.patch
 +        patch -p1 -i ../qt-6.10.patch
  }
  
@@ -146,11 +153,12 @@
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -5,7 +5,7 @@
+@@ -5,8 +5,7 @@
  -e "s/^Name=calibre/Name=Calibre/g" \
  -i  src/calibre/linux.py
  rm -f resources/$pkgname-portable.*
 -patch -Np1 -i ../tts-piper-remove-withterminator.patch
+-patch -Np1 -i ../49af1f0904e00351ffbf9ad430a37bfe66226bae.patch
 +patch -p1 -i ../qt-6.10.patch
  }
  build() {
