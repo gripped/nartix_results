@@ -1,0 +1,40 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,20 +1,12 @@
+ 
+ pkgname=pcre
+ pkgver=8.45
+-pkgrel=5
++pkgrel=4
+ pkgdesc='A deprecated library that implements Perl 5-style regular expressions'
+ arch=('x86_64')
+ url='https://www.pcre.org/'
+ license=('BSD')
+-depends=(
+-  'glibc'
+-  'libgcc'
+-  'libstdc++'
+-  'readline'
+-  'zlib'
+-  'bzip2'
+-  'bash'
+-)
++depends=('glibc' 'gcc-libs' 'readline' 'zlib' 'bzip2' 'bash')
+ provides=(libpcre{,16,32,posix,cpp}.so)
+ source=("https://sourceforge.net/projects/pcre/files/$pkgname/$pkgver/$pkgname-$pkgver.tar.bz2"{,.sig}
+         '0001-pcre-JIT-compiler-update-for-Intel-CET.patch'
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,7 +1,6 @@
+ bash
+ bzip2
++gcc-libs
+ glibc
+-libgcc
+-libstdc++
+ readline
+ zlib

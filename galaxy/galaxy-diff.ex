@@ -17,6 +17,7 @@ cosmic-osd
 cosmic-session
 cosmic-settings-daemon
 cosmic-settings
+dillo
 doctest
 dotnet-core-10.0
 dotnet-runtime-10.0
@@ -131,6 +132,7 @@ tuned
 ublock-origin
 firefox-ublock-origin
 thunderbird-ublock-origin
+ueberzug
 unoconv
 vice
 wezterm

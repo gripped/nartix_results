@@ -1,30 +1,33 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,15 +1,16 @@
+@@ -1,31 +1,32 @@
  
  pkgname=librewolf
 -pkgver=153.0.3_1
 -_fixedfirefoxver="${pkgver%_*}" # Version of Firefox this LibreWolf version is based on, but the Firefox patch number is always included
 -_librewolfver="${pkgver#*_}"
 -_firefoxver="${_fixedfirefoxver%.0}" # Removes ".0" from the end. For "136.0.0" this will result in "136.0" but for "136.0.1" won't do anything.
+-pkgrel=4
+-pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom"
 +_pkgname=LibreWolf
 +pkgver=131.0.3
- pkgrel=1
--pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom"
++pkgrel=1
 +pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom."
  url="https://librewolf.net/"
  arch=(x86_64 aarch64)
 -license=(MPL-2.0)
--
 +license=(
 +  GPL
 +  LGPL
 +  MPL
 +)
  depends=(
-   dbus
++  dbus
    alsa-lib
-@@ -19,14 +20,13 @@
+   at-spi2-core
+   bash
+   cairo
+-  dbus
    ffmpeg
    fontconfig
    freetype2
@@ -40,30 +43,38 @@
    libx11
    libxcb
    libxcomposite
-@@ -51,7 +51,6 @@
+@@ -42,110 +43,120 @@
+   ttf-font
+ )
+ makedepends=(
++  binutils
+   cbindgen
+   clang
+   diffutils
+   git
    imake
-   inetutils
++  inetutils
    jack
 -  jq
    lld
    llvm
    mesa
-@@ -59,46 +58,50 @@
+   nasm
    nodejs
-   pciutils
+-  onnxruntime
++  pciutils
    python
--  python-setuptools
    rust
    unzip
 -  wasi-compiler-rt
+-  wasi-libc
 -  wasi-libc++
 -  wasi-libc++abi
--  wasi-libc
 +  'wasi-compiler-rt>15'
 +  'wasi-libc++>15'
 +  'wasi-libc++abi>15'
 +  'wasi-libc>=1:0+314+a1c7c2c'
-+  xorg-server-xvfb
+   xorg-server-xvfb
    yasm
    zip
 -)
@@ -80,7 +91,6 @@
 +backup=('usr/lib/librewolf/librewolf.cfg'
 +        'usr/lib/librewolf/distribution/policies.json')
  options=(
--  !debug
    !emptydirs
    !lto
    !makeflags
@@ -91,11 +101,14 @@
 -  https://codeberg.org/api/packages/librewolf/generic/librewolf-source/$_firefoxver-$_librewolfver/librewolf-$_firefoxver-$_librewolfver.source.tar.gz{,.sig}
 +  https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${pkgver}-${pkgrel}/librewolf-${pkgver}-${pkgrel}.source.tar.gz
    $pkgname.desktop
+-
+-  https://gitlab.archlinux.org/archlinux/packaging/packages/firefox/-/raw/153.0.3-2/0002-Bug-2057577-DOM-Media-Add-FFmpeg-63-support.-r-alwu-.patch
 -)
 -
 -sha256sums=('ab4283ce8eb6765e9df0f4586b2f4fb0a05de186398f2b944f6f5c791541321f'
 -            'SKIP'
--            '3d6ac59ae9d5ba4c9fe15f95c1338fa68214dec6119f8432336403e3be50f8ae')
+-            '3d6ac59ae9d5ba4c9fe15f95c1338fa68214dec6119f8432336403e3be50f8ae'
+-            '55aeec4d098990e91f881de32126ea91576b0d185e322b561241c513ea5b9fcd')
 -
 -validpgpkeys=('662E3CDD6FE329002D0CA5BB40339DD82B12EF16') # https://rpm.librewolf.net/pubkey.gpg
 -
@@ -114,16 +127,42 @@
  prepare() {
    mkdir -p mozbuild
 -  cd librewolf-$_firefoxver-$_librewolfver
+-
+-  local src
+-  for src in "${source[@]}"; do
+-    src="${src%%::*}"
+-    src="${src##*/}"
+-    src="${src%.zst}"
+-    [[ $src = *.patch ]] || continue
+-    echo "Applying patch $src..."
+-    patch -Np1 < "../$src"
+-  done
 +  cd librewolf-$pkgver-$pkgrel
  
    mv mozconfig ../mozconfig
  
-@@ -114,30 +117,23 @@
- export CXX='clang++'
+   cat >>../mozconfig <<END
+-mk_add_options MOZ_OBJDIR=${PWD@Q}/obj
++
++ac_add_options --enable-linker=lld
+ 
+ ac_add_options --prefix=/usr
+-ac_add_options --enable-release
+-ac_add_options --enable-hardening
+-ac_add_options --enable-optimize
+-ac_add_options --enable-rust-simd
+-ac_add_options --enable-linker=lld
+-ac_add_options --disable-install-strip
++
+ ac_add_options --disable-bootstrap
+-ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
++
++export CC='clang'
++export CXX='clang++'
  
  ac_add_options --with-app-name=${pkgname}
 +ac_add_options --enable-update-channel=release
- 
++
  export MOZ_APP_REMOTINGNAME=${pkgname}
 -
 -ac_add_options --with-l10n-base=$PWD/lw/l10n
@@ -134,43 +173,33 @@
  ac_add_options --enable-alsa
  ac_add_options --enable-jack
 -ac_add_options --enable-pulseaudio
-+
- 
- ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
--
--
--ac_add_options OPT_LEVEL="2"
--ac_add_options RUSTC_OPT_LEVEL="2"
+-ac_add_options --disable-updater
 -END
--
--if [[ "${CARCH}" == "aarch64" ]]; then
++
++
++ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
 +END
 +
 +if [[ $CARCH == 'aarch64' ]]; then
-   cat >>../mozconfig <<END
- ac_add_options --enable-optimize="-g0 -O2"
--
--ac_add_options --enable-lto
- END
++  cat >>../mozconfig <<END
++ac_add_options --enable-optimize="-g0 -O2"
++END
++
++  export MOZ_DEBUG_FLAGS=" "
++  export CFLAGS+=" -g0"
++  export CXXFLAGS+=" -g0"
++  export RUSTFLAGS="-Cdebuginfo=0"
  
-   export MOZ_DEBUG_FLAGS=" "
-@@ -145,23 +141,22 @@
-   export CXXFLAGS+=" -g0"
-   export RUSTFLAGS="-Cdebuginfo=0"
- 
-+  export LDFLAGS+=" -Wl,--no-keep-memory"
- else
- 
-   cat >>../mozconfig <<END
- ac_add_options --disable-elf-hack
- 
--ac_add_options --enable-lto=cross
+   export LDFLAGS+=" -Wl,--no-keep-memory"
++else
++
++  cat >>../mozconfig <<END
++ac_add_options --disable-elf-hack
++
 +export LDFLAGS+=" -Wl,--no-keep-memory"
- END
- fi
++END
++fi
  
--  export LDFLAGS+=" -Wl,--no-keep-memory"
--
  
  }
  
@@ -181,14 +210,15 @@
  
    export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
    export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
-@@ -174,18 +169,85 @@
-   CFLAGS="${CFLAGS/-fexceptions/}"
-   CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+@@ -160,51 +171,83 @@
  
--  cp ../mozconfig .mozconfig
-+  ulimit -n 4096
-+
-+  echo "Building instrumented browser..."
+   ulimit -n 4096
+ 
+-  cp "lw/policies.json" "$srcdir/policies.json"
+-  jq 'del(.policies.Extensions.Install)' "$srcdir/policies.json" > "lw/policies.json"
+-
+   echo "Building instrumented browser..."
+-  cat >.mozconfig ../mozconfig - <<END
 +
 +  if [[ $CARCH == 'aarch64' && $_build_profiled_aarch64 == true ]]; then
 +
@@ -199,8 +229,30 @@
 +  elif [[ $CARCH == 'x86_64' && $_build_profiled_x86_64 == true ]]; then
 +
 +    cat >.mozconfig ../mozconfig - <<END
-+ac_add_options --enable-profile-generate=cross
-+END
+ ac_add_options --enable-profile-generate=cross
+ END
+-  ./mach build --priority normal
+-
+-  echo "Profiling instrumented browser..."
+-  ./mach package
+-  LLVM_PROFDATA=llvm-profdata JARLOG_FILE="$PWD/jarlog" \
+-    dbus-run-session \
+-    xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
+-    ./mach python build/pgo/profileserver.py
+-
+-  stat -c "Profile data found (%s bytes)" merged.profdata
+-  test -s merged.profdata
+-
+-  stat -c "Jar log found (%s bytes)" jarlog
+-  test -s jarlog
+-
+-  echo "Removing instrumented browser..."
+-  ./mach clobber objdir
+-
+-  cp "$srcdir/policies.json" "lw/policies.json"
+-
+-  echo "Building optimized browser..."
+-  cat >.mozconfig ../mozconfig - <<END
 +
 +  fi
 +
@@ -241,11 +293,11 @@
 +    else
 +
 +      cat >.mozconfig ../mozconfig - <<END
-+ac_add_options --enable-lto=cross
-+ac_add_options --enable-profile-use=cross
-+ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
-+ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-+END
+ ac_add_options --enable-lto=cross
+ ac_add_options --enable-profile-use=cross
+ ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
+ ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
+ END
 +
 +    fi
 +  fi
@@ -273,7 +325,7 @@
  // Use system-provided dictionaries
  pref("spellchecker.dictionary_path", "/usr/share/hunspell");
  
-@@ -194,7 +256,9 @@
+@@ -213,7 +256,9 @@
  // pref("extensions.autoDisableScopes", 11);
  END
  
@@ -284,7 +336,7 @@
  [Global]
  id=io.gitlab.${pkgname}-community
  version=1.0
-@@ -206,29 +270,27 @@
+@@ -225,29 +270,27 @@
  app.partner.librewolf=$pkgname
  END
  
@@ -331,7 +383,15 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -10,6 +10,7 @@
+@@ -1,6 +1,7 @@
+ alsa-lib
+ at-spi2-core
+ bash
++binutils
+ cairo
+ cbindgen
+ clang
+@@ -9,6 +10,7 @@
  ffmpeg
  fontconfig
  freetype2
@@ -339,9 +399,11 @@
  gdk-pixbuf2
  git
  glib2
-@@ -19,10 +20,7 @@
+@@ -16,11 +18,9 @@
+ gtk3
+ hicolor-icon-theme
  imake
- inetutils
++inetutils
  jack
 -jq
 -libgcc
@@ -350,11 +412,14 @@
  libx11
  libxcb
  libxcomposite
-@@ -43,13 +41,13 @@
+@@ -38,16 +38,16 @@
+ nodejs
+ nspr
+ nss
+-onnxruntime
  pango
- pciutils
++pciutils
  python
--python-setuptools
  rust
  ttf-font
  unzip
@@ -366,23 +431,41 @@
 +wasi-libc++>15
 +wasi-libc++abi>15
 +wasi-libc>
-+xorg-server-xvfb
+ xorg-server-xvfb
  yasm
  zip
 
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,6 +1,6 @@
+@@ -1,41 +1,40 @@
  prepare() {
  mkdir -p mozbuild
 -cd librewolf-$_firefoxver-$_librewolfver
+-local src
+-for src in "${source[@]}"; do
+-src="${src%%::*}"
+-src="${src##*/}"
+-src="${src%.zst}"
+-[[ $src = *.patch ]] || continue
+-echo "Applying patch $src..."
+-patch -Np1 < "../$src"
+-done
 +cd librewolf-$pkgver-$pkgrel
  mv mozconfig ../mozconfig
  cat >>../mozconfig <<END
- ac_add_options --enable-linker=lld
-@@ -9,36 +9,32 @@
- export CC='clang'
- export CXX='clang++'
+-mk_add_options MOZ_OBJDIR=${PWD@Q}/obj
++ac_add_options --enable-linker=lld
+ ac_add_options --prefix=/usr
+-ac_add_options --enable-release
+-ac_add_options --enable-hardening
+-ac_add_options --enable-optimize
+-ac_add_options --enable-rust-simd
+-ac_add_options --enable-linker=lld
+-ac_add_options --disable-install-strip
+ ac_add_options --disable-bootstrap
+-ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
++export CC='clang'
++export CXX='clang++'
  ac_add_options --with-app-name=${pkgname}
 +ac_add_options --enable-update-channel=release
  export MOZ_APP_REMOTINGNAME=${pkgname}
@@ -392,29 +475,24 @@
  ac_add_options --enable-alsa
  ac_add_options --enable-jack
 -ac_add_options --enable-pulseaudio
- ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
--ac_add_options OPT_LEVEL="2"
--ac_add_options RUSTC_OPT_LEVEL="2"
+-ac_add_options --disable-updater
++ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
  END
--if [[ "${CARCH}" == "aarch64" ]]; then
 +if [[ $CARCH == 'aarch64' ]]; then
- cat >>../mozconfig <<END
- ac_add_options --enable-optimize="-g0 -O2"
--ac_add_options --enable-lto
- END
- export MOZ_DEBUG_FLAGS=" "
- export CFLAGS+=" -g0"
- export CXXFLAGS+=" -g0"
- export RUSTFLAGS="-Cdebuginfo=0"
++cat >>../mozconfig <<END
++ac_add_options --enable-optimize="-g0 -O2"
++END
++export MOZ_DEBUG_FLAGS=" "
++export CFLAGS+=" -g0"
++export CXXFLAGS+=" -g0"
++export RUSTFLAGS="-Cdebuginfo=0"
+ export LDFLAGS+=" -Wl,--no-keep-memory"
++else
++cat >>../mozconfig <<END
++ac_add_options --disable-elf-hack
 +export LDFLAGS+=" -Wl,--no-keep-memory"
- else
- cat >>../mozconfig <<END
- ac_add_options --disable-elf-hack
--ac_add_options --enable-lto=cross
-+export LDFLAGS+=" -Wl,--no-keep-memory"
- END
- fi
--export LDFLAGS+=" -Wl,--no-keep-memory"
++END
++fi
  }
  build() {
 -cd librewolf-$_firefoxver-$_librewolfver
@@ -422,38 +500,41 @@
  export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
  export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
  export MOZ_BUILD_DATE="$(date -u${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH} +%Y%m%d%H%M%S)"
-@@ -47,6 +43,51 @@
- CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+@@ -45,18 +44,24 @@
  CFLAGS="${CFLAGS/-fexceptions/}"
  CXXFLAGS="${CXXFLAGS/-fexceptions/}"
--cp ../mozconfig .mozconfig
-+ulimit -n 4096
-+echo "Building instrumented browser..."
+ ulimit -n 4096
+-cp "lw/policies.json" "$srcdir/policies.json"
+-jq 'del(.policies.Extensions.Install)' "$srcdir/policies.json" > "lw/policies.json"
+ echo "Building instrumented browser..."
 +if [[ $CARCH == 'aarch64' && $_build_profiled_aarch64 == true ]]; then
 +cat >.mozconfig ../mozconfig - <<END
 +ac_add_options --enable-profile-generate
 +END
 +elif [[ $CARCH == 'x86_64' && $_build_profiled_x86_64 == true ]]; then
-+cat >.mozconfig ../mozconfig - <<END
-+ac_add_options --enable-profile-generate=cross
-+END
+ cat >.mozconfig ../mozconfig - <<END
+ ac_add_options --enable-profile-generate=cross
+ END
 +fi
 +if [[ $CARCH == 'aarch64' && $_build_profiled_aarch64 == true || $CARCH == 'x86_64' && $_build_profiled_x86_64 == true ]]; then
-+./mach build --priority normal
-+echo "Profiling instrumented browser..."
-+./mach package
+ ./mach build --priority normal
+ echo "Profiling instrumented browser..."
+ ./mach package
+-LLVM_PROFDATA=llvm-profdata JARLOG_FILE="$PWD/jarlog" \
 +LLVM_PROFDATA=llvm-profdata \
 +JARLOG_FILE="$PWD/jarlog" \
 +xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
-+dbus-run-session \
-+./mach python build/pgo/profileserver.py
-+stat -c "Profile data found (%s bytes)" merged.profdata
-+test -s merged.profdata
-+stat -c "Jar log found (%s bytes)" jarlog
-+test -s jarlog
-+echo "Removing instrumented browser..."
-+./mach clobber objdir
-+echo "Building optimized browser..."
+ dbus-run-session \
+-xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
+ ./mach python build/pgo/profileserver.py
+ stat -c "Profile data found (%s bytes)" merged.profdata
+ test -s merged.profdata
+@@ -64,13 +69,25 @@
+ test -s jarlog
+ echo "Removing instrumented browser..."
+ ./mach clobber objdir
+-cp "$srcdir/policies.json" "lw/policies.json"
+ echo "Building optimized browser..."
 +if [[ $CARCH == 'aarch64' ]]; then
 +cat >.mozconfig ../mozconfig - <<END
 +ac_add_options --enable-lto
@@ -462,12 +543,12 @@
 +ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
 +END
 +else
-+cat >.mozconfig ../mozconfig - <<END
-+ac_add_options --enable-lto=cross
-+ac_add_options --enable-profile-use=cross
-+ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
-+ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
-+END
+ cat >.mozconfig ../mozconfig - <<END
+ ac_add_options --enable-lto=cross
+ ac_add_options --enable-profile-use=cross
+ ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
+ ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
+ END
 +fi
 +fi
 +if [[ $CARCH == 'aarch64' && $_build_profiled_aarch64 == false || $CARCH == 'x86_64' && $_build_profiled_x86_64 == false ]]; then

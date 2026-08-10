@@ -104,7 +104,6 @@ krun
 cups-filters
 cups
 libcups
-curl-impersonate
 darkhttpd
 dbus-broker
 dconf
@@ -439,6 +438,7 @@ libstaroffice
 libtg_owt
 libtiff
 libudev0-shim
+libultrahdr
 libunwind
 libusbsio
 python-libusbsio
@@ -878,7 +878,6 @@ redshift
 refind
 refind-docs
 renameutils
-ripgrep-all
 ristretto
 rnnoise
 rocalution
@@ -889,7 +888,6 @@ rspamd
 rsync
 rtkit
 ruby-bake-modernize
-ruby-ruby_memcheck
 ruby-sys-filesystem
 rust
 rust-musl

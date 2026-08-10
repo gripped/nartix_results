@@ -181,7 +181,6 @@ reiserfsprogs
 run-parts
 s-nail
 sdparm
-sed
 sqlite
 sqlite-tcl
 sqlite-analyzer
@@ -190,7 +189,6 @@ sqlite-doc
 sudo
 sysfsutils
 syslinux
-tar
 texinfo
 tzdata
 unixodbc

@@ -1,0 +1,64 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,23 +1,30 @@
+ 
+ pkgname=tar
+ pkgver=1.35
+-pkgrel=3
++pkgrel=2
+ pkgdesc='Utility used to store, backup, and transport files'
+ arch=('x86_64')
+ url='https://www.gnu.org/software/tar/'
+-license=('GPL-3.0-or-later')
++license=('GPL3')
+ depends=('glibc' 'acl')
+ checkdepends=('attr')
+ options=('!emptydirs')
+ validpgpkeys=('325F650C4C2B6AD58807327A3602B07F55D0C732') # Sergey Poznyakoff
+-source=("https://ftp.gnu.org/gnu/$pkgname/$pkgname-$pkgver.tar.xz"{,.sig}
+-        "fix-libacl-conflicts.patch")
++source=("https://ftp.gnu.org/gnu/$pkgname/$pkgname-$pkgver.tar.xz"{,.sig})
+ sha256sums=('4d62ff37342ec7aed748535323930c7cf94acf71c3591882b26a7ea50f3edc16'
+-            'SKIP'
+-            '07c20fc924001f15e93e779588de8113a2ce683ce5b18431e797f7c242eaa33a')
++            'SKIP')
+ 
+ prepare() {
+-  patch -d "${pkgname}-${pkgver}" -Np1 -i ../fix-libacl-conflicts.patch
++  cd $pkgname-$pkgver
++  local src
++  for src in "${source[@]}"; do
++    src="${src%%::*}"
++    src="${src##*/}"
++    [[ $src = *.patch ]] || continue
++    echo "Applying patch $src..."
++    patch -Np1 < "../$src"
++  done
++  :
+ }
+ 
+ build() {
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,5 +1,14 @@
+ prepare() {
+-patch -d "${pkgname}-${pkgver}" -Np1 -i ../fix-libacl-conflicts.patch
++cd $pkgname-$pkgver
++local src
++for src in "${source[@]}"; do
++src="${src%%::*}"
++src="${src##*/}"
++[[ $src = *.patch ]] || continue
++echo "Applying patch $src..."
++patch -Np1 < "../$src"
++done
++:
+ }
+ build() {
+ cd $pkgname-$pkgver

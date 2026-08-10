@@ -406,6 +406,7 @@ cups-pdf
 cups-pk-helper
 curator
 python-elasticsearch-curator
+curl-impersonate
 cxxopts
 cyrus-sasl
 cyrus-sasl-gssapi
@@ -2069,7 +2070,6 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
-libultrahdr
 libunibreak
 libuninameslist
 libupnp
@@ -4904,6 +4904,7 @@ rhino
 java-rhino
 rhino-javadoc
 rinutils
+ripgrep-all
 ripgrep
 riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
@@ -5248,6 +5249,7 @@ ruby-rubocop-rspec
 ruby-ruby-coverage
 ruby-ruby-progressbar
 ruby-ruby2_keywords
+ruby-ruby_memcheck
 ruby-rubydns
 ruby-rubygems-tasks
 ruby-rubytest-cli
