@@ -2,24 +2,24 @@
 +++ Artix PKGBUILD
 @@ -7,7 +7,7 @@
  url="https://linuxcontainers.org/"
- license=('GPL')
+ license=('LGPL-2.1-or-later')
  depends=('lxc' 'libnih' 'fuse3' 'dbus-glib')
--makedepends=('help2man' 'meson' 'python-jinja' 'systemd')
-+makedepends=('help2man' 'meson' 'python-jinja')
+-makedepends=('help2man' 'meson' 'python-jinja' 'systemd' 'git')
++makedepends=('help2man' 'meson' 'python-jinja' 'git')
  options=('emptydirs')
- source=("https://linuxcontainers.org/downloads/lxcfs/lxcfs-$pkgver.tar.gz"{,.asc})
+ source=("git+https://github.com/lxc/lxcfs.git#tag=v$pkgver?signed")
  validpgpkeys=('602F567663E593BCBD14F338C638974D64792D67')
-@@ -16,7 +16,7 @@
+@@ -15,7 +15,7 @@
  
  build() {
-     cd "$pkgname-$pkgver"
+     cd "$pkgname"
 -    arch-meson ../build
 +    artix-meson -Dinit-script=sysvinit ../build
      meson compile -C ../build
  }
  
-@@ -24,4 +24,5 @@
-     cd "$pkgname-$pkgver"
+@@ -23,4 +23,5 @@
+     cd "$pkgname"
      DESTDIR="$pkgdir" meson install -C ../build
      install -dm0755 "$pkgdir"/var/lib/lxcfs
 +    rm -rf "$pkgdir"/etc/init.d
@@ -30,7 +30,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -5,4 +5,3 @@
+@@ -6,4 +6,3 @@
  lxc
  meson
  python-jinja

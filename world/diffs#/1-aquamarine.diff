@@ -1,25 +1,8 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
- 
- pkgname=aquamarine
- pkgver=0.14.0
--pkgrel=1
-+pkgrel=2
- pkgdesc='a very light linux rendering backend library'
- arch=(x86_64 aarch64)
- url="https://github.com/hyprwm/$pkgname"
-@@ -13,14 +13,13 @@
-          hyprwayland-scanner
-          libdisplay-info libdisplay-info.so
-          libdrm # libdrm.so
--         libglvnd libEGL.so libGLESv2.so
-+         libglvnd libEGL.so
-          libinput # libinput.so
-          mesa # libgbm.so
+@@ -19,7 +19,7 @@
           opengl-driver
           pixman
--         pugixml
           seatd libseat.so
 -         systemd-libs libudev.so
 +         libudev libudev.so
@@ -32,15 +15,7 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,7 +3,6 @@
- hyprutils
- hyprwayland-scanner
- libEGL.so
--libGLESv2.so
- libdisplay-info
- libdisplay-info.so
- libdrm
-@@ -13,13 +12,12 @@
+@@ -12,12 +12,12 @@
  libinput
  libseat.so
  libstdc++
@@ -50,7 +25,6 @@
  mesa
  opengl-driver
  pixman
--pugixml
  seatd
 -systemd-libs
  wayland

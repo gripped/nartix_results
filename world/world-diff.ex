@@ -1,4 +1,5 @@
 a52dec
+aardvark-dns
 accountsservice
 aflplusplus
 alsa-utils
@@ -19,6 +20,7 @@ at-spi2-core-docs
 at
 atril
 audacious-plugins
+audacious
 avahi
 awesome
 bash-bats
@@ -429,7 +431,6 @@ libmng
 libmspub
 libnvme
 libofa
-libp11
 libprocps
 librewolf
 libsidplay
@@ -438,7 +439,6 @@ libstaroffice
 libtg_owt
 libtiff
 libudev0-shim
-libultrahdr
 libunwind
 libusbsio
 python-libusbsio
@@ -901,6 +901,7 @@ libwbclient
 ldb
 smbclient
 sane
+sbctl
 scribus
 sdbus-cpp
 $pkgbase

@@ -7,7 +7,6 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
-aardvark-dns
 abduco
 abseil-cpp
 accerciser
@@ -138,7 +137,6 @@ attica
 attica5
 aubio
 python-aubio
-audacious
 audacity
 audacity-docs
 audex
@@ -1944,6 +1942,7 @@ liborcus
 libosinfo
 libotf
 libotr
+libp11
 libpagemaker
 libpanel
 libpanel-docs
@@ -2070,6 +2069,7 @@ libtraceevent
 libtraceevent-docs
 libtracefs
 libtracefs-docs
+libultrahdr
 libunibreak
 libuninameslist
 libupnp
@@ -5357,7 +5357,6 @@ salt
 samurai
 sassc
 sbc
-sbctl
 sbsigntools
 scdoc
 schedtool

@@ -62,7 +62,6 @@ python
 python-tests
 readline
 rpcbind
-sed
 shadow
 tar
 thin-provisioning-tools

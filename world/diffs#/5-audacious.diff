@@ -1,0 +1,105 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,44 +1,30 @@
+ 
+ pkgname=audacious
+-pkgver=4.6.1
+-pkgrel=2
+-pkgdesc='Lightweight, advanced audio player focused on audio quality'
+-arch=(x86_64)
+-url='https://audacious-media-player.org/'
+-license=(BSD-2-Clause)
+-depends=(
+-  cairo
+-  gdk-pixbuf2
+-  glib2
+-  glibc
+-  gtk3
+-  hicolor-icon-theme
+-  libgcc
+-  libstdc++
+-  pango
+-  qt6-base
+-  qt6-imageformats
+-  qt6-svg
+-)
+-makedepends=(
+-  git
+-  glib2-devel
+-  meson
+-)
++pkgver=4.3.1
++pkgrel=1.2
++pkgdesc="Lightweight, advanced audio player focused on audio quality"
++arch=('x86_64')
++url="https://audacious-media-player.org/"
++license=('BSD')
++depends=('qt5-base' 'qt5-svg' 'qt5-imageformats' 'glib2' 'hicolor-icon-theme'
++         'desktop-file-utils')
++makedepends=('meson')
+ optdepends=('unzip: zipped skins support')
+-source=("git+https://github.com/audacious-media-player/audacious.git#tag=$pkgname-$pkgver")
+-b2sums=(be95274e3ea80103aa61113bc034ecf9c3bcebf55db9146c3e7517adbd1b72bcdda816a9abe73c4da1809e20b7d0d2926f904bc3d19417b4269202bdd5b76749)
++source=(https://distfiles.audacious-media-player.org/$pkgname-$pkgver.tar.bz2)
++sha256sums=('85e9e26841505b51e342ee72a2d05f19bef894f567a029ebb3f3e0c1adb42042')
+ 
+ build() {
+-  _PRETTY_NAME=`sed -n 's/^PRETTY_NAME="\([^"]*\)"/\1/p' /etc/os-release`
+-  arch-meson $pkgname build \
+-    -D buildstamp="$_PRETTY_NAME"
++  artix-meson $pkgname-$pkgver build \
++    -Dgtk=false \
++    -Dbuildstamp='Arch Linux'
+   meson compile -C build
+ }
+ 
+ package() {
+-  depends+=(audacious-plugins)
++  depends+=('audacious-plugins')
+ 
+   meson install -C build --destdir "$pkgdir"
+-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" $pkgname/COPYING
++  install -Dm644 $pkgname-$pkgver/contrib/audacious.appdata.xml -t "$pkgdir/usr/share/metainfo"
++  install -Dm644 $pkgname-$pkgver/COPYING -t "$pkgdir/usr/share/licenses/$pkgname"
+ }
++
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,16 +1,8 @@
+ audacious-plugins
+-cairo
+-gdk-pixbuf2
+-git
++desktop-file-utils
+ glib2
+-glib2-devel
+-glibc
+-gtk3
+ hicolor-icon-theme
+-libgcc
+-libstdc++
+ meson
+-pango
+-qt6-base
+-qt6-imageformats
+-qt6-svg
++qt5-base
++qt5-imageformats
++qt5-svg
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+-_PRETTY_NAME=`sed -n 's/^PRETTY_NAME="\([^"]*\)"/\1/p' /etc/os-release`
+-arch-meson $pkgname build \
+--D buildstamp="$_PRETTY_NAME"
++artix-meson $pkgname-$pkgver build \
++-Dgtk=false \
++-Dbuildstamp='Arch Linux'
+ meson compile -C build
+ }

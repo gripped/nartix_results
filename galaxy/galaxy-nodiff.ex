@@ -16,7 +16,6 @@ arc-icon-theme
 arduino-cli
 atool
 atril
-audacious
 autotiling-rs
 autotiling
 avidemux
@@ -112,6 +111,7 @@ cowsay
 cpptrace
 cvs
 dbeaver
+dillo
 dino
 distrobox
 dosbox
