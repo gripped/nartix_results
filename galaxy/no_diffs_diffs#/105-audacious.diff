@@ -1,0 +1,27 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -31,7 +31,7 @@
+ 
+ build() {
+   _PRETTY_NAME=`sed -n 's/^PRETTY_NAME="\([^"]*\)"/\1/p' /etc/os-release`
+-  arch-meson $pkgname build \
++  artix-meson $pkgname build \
+     -D buildstamp="$_PRETTY_NAME"
+   meson compile -C build
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ _PRETTY_NAME=`sed -n 's/^PRETTY_NAME="\([^"]*\)"/\1/p' /etc/os-release`
+-arch-meson $pkgname build \
++artix-meson $pkgname build \
+ -D buildstamp="$_PRETTY_NAME"
+ meson compile -C build
+ }

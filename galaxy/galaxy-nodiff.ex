@@ -16,6 +16,8 @@ arc-icon-theme
 arduino-cli
 atool
 atril
+audacious-plugins
+audacious
 autotiling-rs
 autotiling
 avidemux

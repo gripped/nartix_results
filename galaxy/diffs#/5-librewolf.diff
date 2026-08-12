@@ -12,7 +12,7 @@
  _fixedfirefoxver="${pkgver%_*}" # Version of Firefox this LibreWolf version is based on, but the Firefox patch number is always included
  _librewolfver="${pkgver#*_}"
  _firefoxver="${_fixedfirefoxver%.0}" # Removes ".0" from the end. For "136.0.0" this will result in "136.0" but for "136.0.1" won't do anything.
--pkgrel=4
+-pkgrel=5
 -pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom"
 +pkgrel=2
 +pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom."
@@ -196,7 +196,7 @@
  
    export LDFLAGS+=" -Wl,--no-keep-memory"
  
-@@ -160,40 +200,97 @@
+@@ -160,54 +200,107 @@
  
    ulimit -n 4096
  
@@ -220,29 +220,6 @@
 +      cat >.mozconfig ../mozconfig - <<END
  ac_add_options --enable-profile-generate=cross
 -END
--  ./mach build --priority normal
--
--  echo "Profiling instrumented browser..."
--  ./mach package
--  LLVM_PROFDATA=llvm-profdata JARLOG_FILE="$PWD/jarlog" \
--    dbus-run-session \
--    xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
--    ./mach python build/pgo/profileserver.py
--
--  stat -c "Profile data found (%s bytes)" merged.profdata
--  test -s merged.profdata
--
--  stat -c "Jar log found (%s bytes)" jarlog
--  test -s jarlog
--
--  echo "Removing instrumented browser..."
--  ./mach clobber objdir
--
--  cp "$srcdir/policies.json" "lw/policies.json"
--
--  echo "Building optimized browser..."
--  cat >.mozconfig ../mozconfig - <<END
--ac_add_options --enable-lto=cross
 +export MOZ_ENABLE_FULL_SYMBOLS=1
 +END
 +
@@ -294,12 +271,12 @@
 +END
 +      else
 +        cat >.mozconfig ../mozconfig - <<END
- ac_add_options --enable-profile-use=cross
++ac_add_options --enable-profile-use=cross
 +END
 +      fi
 +
 +      cat >> .mozconfig - << END
- ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
++ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
 +END
 +    else
 +      echo "Profile data not found."
@@ -308,8 +285,8 @@
 +    if [[ -s jarlog ]]; then
 +      stat -c "Jar log found (%s bytes)" jarlog
 +      cat >> .mozconfig - << END
- ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
- END
++ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
++END
 +    else
 +      echo "Jar log not found."
 +    fi
@@ -321,23 +298,55 @@
 +  fi
 +
    ./mach build --priority normal
+-
+-  echo "Profiling instrumented browser..."
+-  ./mach package
+-  LLVM_PROFDATA=llvm-profdata JARLOG_FILE="$PWD/jarlog" \
+-    dbus-run-session \
+-    xvfb-run -s "-screen 0 1920x1080x24 -nolisten local" \
+-    ./mach python build/pgo/profileserver.py
+-
+-  stat -c "Profile data found (%s bytes)" merged.profdata
+-  test -s merged.profdata
+-
+-  stat -c "Jar log found (%s bytes)" jarlog
+-  test -s jarlog
+-
+-  echo "Removing instrumented browser..."
+-  ./mach clobber objdir
+-
+-  cp "$srcdir/policies.json" "lw/policies.json"
+-
+-  echo "Building optimized browser..."
+-  cat >.mozconfig ../mozconfig - <<END
+-ac_add_options --enable-lto=cross
+-ac_add_options --enable-profile-use=cross
+-ac_add_options --with-pgo-profile-path=${PWD@Q}/merged.profdata
+-ac_add_options --with-pgo-jarlog=${PWD@Q}/jarlog
+-END
+-  ./mach build --priority normal
+-
+-  xargs ./mach package-multi-locale --locales < browser/locales/shipped-locales
  }
  
-@@ -201,10 +298,9 @@
+ package() {
    cd librewolf-$_firefoxver-$_librewolfver
-   DESTDIR="$pkgdir" ./mach install
- 
+-
 -  local appdir="$pkgdir/usr/lib/$pkgname"
+-  install -dvm755 "$appdir/"
+-  cp -a obj/dist/librewolf/. "$appdir/"
 -  touch "$appdir/is-packaged-app"
 -
 -  install -Dvm644 /dev/stdin "$appdir/browser/defaults/preferences/vendor.js" <<END
++  DESTDIR="$pkgdir" ./mach install
++
 +  local vendorjs="$pkgdir/usr/lib/$pkgname/browser/defaults/preferences/vendor.js"
 +
 +  install -Dvm644 /dev/stdin "$vendorjs" <<END
  // Use system-provided dictionaries
  pref("spellchecker.dictionary_path", "/usr/share/hunspell");
  
-@@ -213,7 +309,9 @@
+@@ -216,7 +309,9 @@
  // pref("extensions.autoDisableScopes", 11);
  END
  
@@ -348,7 +357,7 @@
  [Global]
  id=io.gitlab.${pkgname}-community
  version=1.0
-@@ -225,29 +323,26 @@
+@@ -228,29 +323,26 @@
  app.partner.librewolf=$pkgname
  END
  
@@ -490,7 +499,7 @@
  export LDFLAGS+=" -Wl,--no-keep-memory"
  }
  build() {
-@@ -45,32 +49,73 @@
+@@ -45,33 +49,73 @@
  CFLAGS="${CFLAGS/-fexceptions/}"
  CXXFLAGS="${CXXFLAGS/-fexceptions/}"
  ulimit -n 4096
@@ -576,4 +585,5 @@
 +cat >.mozconfig ../mozconfig
 +fi
  ./mach build --priority normal
+-xargs ./mach package-multi-locale --locales < browser/locales/shipped-locales
  }

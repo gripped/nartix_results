@@ -7,6 +7,7 @@ aarch64-linux-gnu-binutils
 aarch64-linux-gnu-gcc
 aarch64-linux-gnu-glibc
 aarch64-linux-gnu-linux-api-headers
+aardvark-dns
 abduco
 abseil-cpp
 accerciser
@@ -65,6 +66,7 @@ analitza
 analitza5
 anari-sdk
 android-file-transfer
+android-tools
 android-udev
 angelfish
 ansible-core
@@ -2364,6 +2366,7 @@ memtest86+-efi
 memtest86+-iso
 menu-cache
 menumaker
+mercurial
 merkuro
 mesa-demos
 mesa-utils
@@ -5357,6 +5360,7 @@ salt
 samurai
 sassc
 sbc
+sbctl
 sbsigntools
 scdoc
 schedtool

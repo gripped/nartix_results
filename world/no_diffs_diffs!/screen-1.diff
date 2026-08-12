@@ -1,16 +1,22 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,12 +1,13 @@
  
  pkgname=screen
 -pkgver=5.0.2
--pkgrel=1
+-pkgrel=2
 +pkgver=5.0.1
 +pkgrel=3
  pkgdesc='Full-screen window manager that multiplexes a physical terminal'
  url='https://www.gnu.org/software/screen/'
  arch=('x86_64')
-@@ -18,7 +18,7 @@
+ license=('GPL-3.0-or-later')
+ depends=(
++    'libcrypt.so'
+     'libncursesw.so'
+     'libpam.so'
+     'libutempter'
+@@ -17,7 +18,7 @@
  source=("git+https://git.savannah.gnu.org/git/screen.git#tag=v.${pkgver}"
          'tmpfiles.d'
          'pam.d')
@@ -19,3 +25,15 @@
              '1f33ce4faca7bd05dd80403411af31e682d5d23e79558e884ae5a35f1dd96223'
              '971c25929ea97422c09e10679ab98e9e6c59295aae1a4a9970909d2206e23090')
  backup=('etc/screenrc' 'etc/pam.d/screen')
+
+
+############# Stripped diff below #################
+
+--- arch_depends
++++ artix_depends
+@@ -1,4 +1,5 @@
+ git
++libcrypt.so
+ libncursesw.so
+ libpam.so
+ libutempter

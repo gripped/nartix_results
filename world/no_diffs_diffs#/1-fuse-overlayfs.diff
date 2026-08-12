@@ -1,14 +1,16 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -1,7 +1,7 @@
+@@ -1,8 +1,8 @@
  
  pkgdesc='FUSE implementation of overlayfs'
  pkgname=fuse-overlayfs
 -pkgver=1.17
+-pkgrel=2
 +pkgver=1.16
- pkgrel=1
++pkgrel=1
  arch=(x86_64)
  url=https://github.com/containers/fuse-overlayfs
+ license=(GPL-2.0-only)
 @@ -10,7 +10,7 @@
  makedepends=(git)
  source=("git+https://github.com/containers/fuse-overlayfs.git#tag=v$pkgver?signed")

@@ -1,8 +1,6 @@
 alacritty
 alsa-utils
 anubis
-audacious-plugins
-audacious
 autorandr
 bsd-games
 cairo-dock

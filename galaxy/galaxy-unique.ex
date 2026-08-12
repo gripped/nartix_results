@@ -20,6 +20,7 @@ artix-mlg
 artix-plasma-splash
 artix-qt-presets
 artix-sddm-theme
+artixforge
 artixnews
 autofs-dinit
 autofs
@@ -62,6 +63,7 @@ gdk-pixbuf2-noglycin
 gitea-tea
 github-copilot-cli
 grub-theme
+gtk2-ng-git
 helium-browser
 htpdate
 incron-next

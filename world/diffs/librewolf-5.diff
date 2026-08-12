@@ -7,7 +7,7 @@
 -_fixedfirefoxver="${pkgver%_*}" # Version of Firefox this LibreWolf version is based on, but the Firefox patch number is always included
 -_librewolfver="${pkgver#*_}"
 -_firefoxver="${_fixedfirefoxver%.0}" # Removes ".0" from the end. For "136.0.0" this will result in "136.0" but for "136.0.1" won't do anything.
--pkgrel=4
+-pkgrel=5
 -pkgdesc="Community-maintained fork of Firefox, focused on privacy, security and freedom"
 +_pkgname=LibreWolf
 +pkgver=131.0.3
@@ -210,7 +210,7 @@
  
    export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
    export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
-@@ -160,51 +171,83 @@
+@@ -160,54 +171,83 @@
  
    ulimit -n 4096
  
@@ -307,17 +307,22 @@
 +  fi
 +
    ./mach build --priority normal
+-
+-  xargs ./mach package-multi-locale --locales < browser/locales/shipped-locales
  }
  
  package() {
 -  cd librewolf-$_firefoxver-$_librewolfver
-+  cd librewolf-$pkgver-$pkgrel
-   DESTDIR="$pkgdir" ./mach install
- 
+-
 -  local appdir="$pkgdir/usr/lib/$pkgname"
+-  install -dvm755 "$appdir/"
+-  cp -a obj/dist/librewolf/. "$appdir/"
 -  touch "$appdir/is-packaged-app"
 -
 -  install -Dvm644 /dev/stdin "$appdir/browser/defaults/preferences/vendor.js" <<END
++  cd librewolf-$pkgver-$pkgrel
++  DESTDIR="$pkgdir" ./mach install
++
 +
 +  local vendorjs="$pkgdir/usr/lib/$pkgname/browser/defaults/preferences/vendor.js"
 +
@@ -325,7 +330,7 @@
  // Use system-provided dictionaries
  pref("spellchecker.dictionary_path", "/usr/share/hunspell");
  
-@@ -213,7 +256,9 @@
+@@ -216,7 +256,9 @@
  // pref("extensions.autoDisableScopes", 11);
  END
  
@@ -336,7 +341,7 @@
  [Global]
  id=io.gitlab.${pkgname}-community
  version=1.0
-@@ -225,29 +270,27 @@
+@@ -228,29 +270,27 @@
  app.partner.librewolf=$pkgname
  END
  
@@ -529,7 +534,7 @@
  ./mach python build/pgo/profileserver.py
  stat -c "Profile data found (%s bytes)" merged.profdata
  test -s merged.profdata
-@@ -64,13 +69,25 @@
+@@ -64,14 +69,25 @@
  test -s jarlog
  echo "Removing instrumented browser..."
  ./mach clobber objdir
@@ -555,4 +560,5 @@
 +cat >.mozconfig ../mozconfig
 +fi
  ./mach build --priority normal
+-xargs ./mach package-multi-locale --locales < browser/locales/shipped-locales
  }

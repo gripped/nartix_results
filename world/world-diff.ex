@@ -1,9 +1,7 @@
 a52dec
-aardvark-dns
 accountsservice
 aflplusplus
 alsa-utils
-android-tools
 ant
 ant-doc
 anubis
@@ -561,7 +559,6 @@ mate-utils
 matrix-synapse
 media-player-info
 memcached
-mercurial
 mesa
 opencl-mesa
 vulkan-asahi
@@ -672,7 +669,6 @@ pcmanfm-qt
 pcmanfm
 pcsclite
 percona-server
-libperconaserverclient
 percona-server-clients
 pgbouncer
 phodav
@@ -901,7 +897,6 @@ libwbclient
 ldb
 smbclient
 sane
-sbctl
 scribus
 sdbus-cpp
 $pkgbase
