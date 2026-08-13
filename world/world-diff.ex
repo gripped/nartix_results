@@ -585,6 +585,7 @@ modemmanager
 libmm-glib
 modemmanager-docs
 modest
+mongo-c-driver
 mosquitto
 mousepad
 mozo
@@ -646,6 +647,8 @@ nvtop
 ocl-icd
 onboard
 onionshare
+onnx
+python-onnx
 open-iscsi
 openbox
 opencollada
@@ -786,7 +789,6 @@ qemu-audio-sdl
 qemu-audio-spice
 qemu-block-curl
 qemu-block-dmg
-qemu-block-gluster
 qemu-block-iscsi
 qemu-block-nfs
 qemu-block-ssh
@@ -812,6 +814,7 @@ qemu-system-aarch64
 qemu-system-alpha
 qemu-system-arm
 qemu-system-avr
+qemu-system-hexagon
 qemu-system-hppa
 qemu-system-loongarch64
 qemu-system-m68k
@@ -905,6 +908,7 @@ sdcv
 sddm
 seatd
 sfml
+sg3_utils
 shairport-sync
 signal-desktop
 smartmontools

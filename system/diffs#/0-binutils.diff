@@ -1,6 +1,15 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -44,6 +44,7 @@
+@@ -3,7 +3,7 @@
+ pkgname=binutils
+ pkgver=2.47
+ _commit=6ce87bbc521cf46eaee9a1f7ef61cee2cdfb3e32
+-pkgrel=4
++pkgrel=1
+ pkgdesc='A set of programs to assemble and manipulate binary and object files'
+ arch=(x86_64)
+ url='https://www.gnu.org/software/binutils/'
+@@ -44,12 +44,13 @@
    'etc/gprofng.rc'
  )
  options=(
@@ -8,6 +17,13 @@
    staticlibs
    !distcc
    !ccache
+ )
+ source=(
+-  binutils-gdb::git+https://forge.sourceware.org/binutils-gdb/binutils-gdb-mirror#commit=${_commit}
++  git+https://sourceware.org/git/binutils-gdb.git#commit=${_commit}
+   gold-warn-unsupported.patch
+   0001-strip-Don-t-treat-fat-IR-objects-as-plugin-object.patch
+ )
 @@ -81,7 +82,7 @@
      --prefix=/usr \
      --sysconfdir=/etc \

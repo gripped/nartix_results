@@ -784,6 +784,7 @@ ttf-jetbrains-mono
 ttf-sarasa-gothic
 tumbler
 typst
+ueberzug
 ueberzugpp
 uncrustify
 utox

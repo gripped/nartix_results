@@ -3,7 +3,7 @@
 @@ -1,6 +1,6 @@
  
  pkgname=marked
--pkgver=14.1.1
+-pkgver=14.1.2
 +pkgver=14.0.0
  pkgrel=1
  pkgdesc="A markdown parser built for speed"
@@ -12,7 +12,7 @@
  makedepends=('npm')
  source=(https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz)
  noextract=($pkgname-$pkgver.tgz)
--sha512sums=('792e7da31a1fe5e0550c2293b3e9896ef07fe95ab5dfb19b8a617dc244c896da36fc1da9a58e678a0514420295980ddb23698f4c8b215320e3e63eb5d99c6541')
+-sha512sums=('7f7af4caaa73df555788307fc23f4668e0746b63d12d097abc9997885ae788dc2390a76f6a4a894542e18c5289a7139c865091886e5f71a7285196395dae8f11')
 +sha512sums=('b888f8f9f690f8c807830516d65d8fb0f82564b38b393d6e12bb74e9d00fb71da48ed78b0246ec77fd0589883f3064be8bb64a2dbef0d960a5c4793338ebabc9')
  
  package() {

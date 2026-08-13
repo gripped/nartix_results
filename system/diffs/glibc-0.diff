@@ -1,15 +1,6 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -14,7 +14,7 @@
-   python
- )
- makedepends_x86_64=(lib32-gcc-libs)
--options=(staticlibs !lto)
-+options=(staticlibs !lto debug)
- source=(
-   "git+https://sourceware.org/git/glibc.git#commit=${_commit}"
-   locale.gen.txt
-@@ -64,7 +64,7 @@
+@@ -73,7 +73,7 @@
    local _configure_flags=(
        --prefix=/usr
        --with-headers=/usr/include

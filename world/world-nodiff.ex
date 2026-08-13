@@ -2413,7 +2413,6 @@ modemmanager-qt5
 mold
 molecule
 molequeue
-mongo-c-driver
 mono
 mopidy
 moreutils
@@ -2575,8 +2574,6 @@ onednn
 onetbb
 onevpl
 oniguruma
-onnx
-python-onnx
 opam
 open-isns
 openal
@@ -5399,7 +5396,6 @@ serd-docs
 serf
 setconf
 sfsexp
-sg3_utils
 sgml-common
 shaderc
 shairplay

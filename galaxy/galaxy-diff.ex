@@ -130,7 +130,6 @@ tuned
 ublock-origin
 firefox-ublock-origin
 thunderbird-ublock-origin
-ueberzug
 unoconv
 vice
 wezterm
