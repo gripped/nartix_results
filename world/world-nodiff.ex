@@ -294,7 +294,6 @@ catatonit
 catch2-v2
 catch2
 catdoc
-cauchy
 cbatticon
 cbindgen
 ccache
@@ -375,7 +374,6 @@ compiler-rt20
 composefs
 confuse
 consul
-containers-common
 convertlit
 coordgen
 copr-cli
@@ -2348,7 +2346,6 @@ matterbridge
 maturin
 python-maturin
 maven
-mbedtls
 mbedtls2
 mbedtls3
 mbox-importer
@@ -2413,6 +2410,7 @@ modemmanager-qt5
 mold
 molecule
 molequeue
+mongo-c-driver
 mono
 mopidy
 moreutils
@@ -2574,6 +2572,8 @@ onednn
 onetbb
 onevpl
 oniguruma
+onnx
+python-onnx
 opam
 open-isns
 openal
@@ -3975,7 +3975,6 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
-python-numba
 python-numexpr
 python-numpy
 python-oauth2client
@@ -5751,7 +5750,6 @@ toxcore
 toxic
 tp_smapi
 tpm2-abrmd
-tpm2-tools
 transcode
 transmageddon
 trash-cli

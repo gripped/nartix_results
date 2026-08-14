@@ -525,8 +525,6 @@ pop-sound-theme
 ppsspp
 ppsspp-assets
 prismlauncher
-profanity
-profanity-gtk
 pysolfc-cardsets
 pysolfc
 python-aiohttp-oauthlib

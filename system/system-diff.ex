@@ -56,7 +56,6 @@ pam
 pambase
 patch
 pciutils
-perl
 ppp
 procps-ng
 python
@@ -71,5 +70,4 @@ traceroute
 usbutils
 util-linux
 util-linux-libs
-wpa_supplicant
 xfsprogs

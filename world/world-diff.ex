@@ -55,6 +55,7 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
+cauchy
 cef
 certbot-apache
 certbot-dns-cloudflare
@@ -97,6 +98,7 @@ conky
 conmon
 connman
 containerd
+containers-common
 cppcheck
 criu
 crun
@@ -557,6 +559,7 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
+mbedtls
 media-player-info
 memcached
 mesa
@@ -585,7 +588,6 @@ modemmanager
 libmm-glib
 modemmanager-docs
 modest
-mongo-c-driver
 mosquitto
 mousepad
 mozo
@@ -647,8 +649,6 @@ nvtop
 ocl-icd
 onboard
 onionshare
-onnx
-python-onnx
 open-iscsi
 openbox
 opencollada
@@ -766,6 +766,7 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
+python-numba
 python-pymupdf
 python-pyscard
 python-pytest-freezegun
@@ -960,6 +961,7 @@ tinysparql
 tinysparql-docs
 tmux
 tor
+tpm2-tools
 tracker3-miners
 tracker3
 tracker3-docs

@@ -14,8 +14,8 @@
    keyboxd.8
    $pkgname-2.4-avoid_beta_warning.patch  # do not emit beta warnings (due to misbehaving build system)
    0001-gpg-accept-subkeys-with-a-good-revocation-but-no-sel.patch
-@@ -81,24 +76,6 @@
-   0024-gpg-Do-not-use-a-default-when-asking-for-another-out.patch
+@@ -90,24 +85,6 @@
+   0033-dirmngr-Fix-a-call-of-calloc.patch
  )
  sha256sums=('383fd9720a966825b9d5e45a2b49b3b340ebed356252c73cca242b26dffec0ba'
 -            '80a3a80f9f1f337da555a6838483e1baca44cde8a8a3d8c4ba7743626304b981'
@@ -38,10 +38,10 @@
 -            '50a00213e44ff07b385e12bca455cd5eec35b271ca2fe500bfe7704ebd8ec73d'
              '38c66efbd3bffdfa9cb0f226a6db03ae4b226f705dc2d0266a555d8ace823b79'
              '243c3a79295519b3931f9d846cf2af5caa064a78de812ee336dc786c1567b4d0'
-             '28ab30a6d4318db5fd43e0023dff4c1e14b52dc0d1a61e0f2fc2de580a5c2ed4'
-@@ -126,24 +103,6 @@
-             '741bb77575765aac6728f12b2ba83ded281ae5a591cc531054fe29a0b691e7f2'
-             'a4fe401b274d22bbbea8c48caf40cee8e0a361b1bdb94019803120b4a9feeecd')
+             '8791f21d563721bedbc3a8f1c5c0e1882f6df439a400f50a13b37c94d1cd520f'
+@@ -144,24 +121,6 @@
+             '401fb135156586d829e2d195860c185f0a4bf7f41d549a602331196da0219aa4'
+             '227ec57201c7ae6835b64b794442be9898438fb006e24e68b8b9318b7343b0a0')
  b2sums=('c6b16d797b13e91c4f3eb41d28a69a5854e1744eaac662058cc5332b69b90349a79b891895b7460027bd6234394a4caf36f800d20a74c696a049764112f00658'
 -        '7a3af856305eb4b00929aaf029dd4e5c84376df4f30add76976b9b058addf6fc4d8c39335fc83d11493ea9d8a40f0510dbac8572b99a8c8b9b3a4eca8e585774'
 -        'ee51a4702715f5ec2629ff42eeba8630010da8a67545d1e53961e710de5faf197708e55d2d55796917a134ca2a76b1d6c88a8f7756d0706e0cbc33b605f52d86'
@@ -63,15 +63,16 @@
 -        'af13f78ff240c00d9e61bd470ace03bc6926e1cf946016c8c4fa27706ed278babc0ec8a04c79b930d9047f62bd7cfcfeba3e7fd493da7476a318fc49ff0e54fe'
          '5e4fed3c54785fc0140a1cfe970c6ed6a61c0041961999a9777dfcb0050d45e2b9231b3e5e97e025cefe1461614b599bc7129eea931d1996f4849cd83f546abc'
          '168855b598714abb27e01e52e0ed1e1a01ab14ffb2ee09d759308375359cd28c0a9f96c6b9dee0a2cc5713aec8ea831858d59f56a0a126bca3e1401b078fc7ab'
-         '5154c189b160e7a5c03126b9dea02101ff4139d82693c0becb9f110150da04a5c4bd4729d4ef50777b767c8bff07eb8c395c64ead6b77f24a38de4b5a4a2e6a3'
-@@ -235,17 +194,6 @@
+         '3d5eaacac232132aa6ec8b70dc9a71b1010851c38a7138affdb483c7b49dbfe395ba4119c8be552e5b4e9b0f5ad628ef8be1cddd5c8eb237bcd29b0b990bb30e'
+@@ -261,18 +220,5 @@
+ 
    install -vDm 644 ../keyboxd.8 -t "$pkgdir/usr/share/man/man8/"
    install -vDm 644 {BSD-{2,3,4}-Clause,MIT,Unicode-TOU}.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
- 
+-
 -  local systemdir="$pkgdir/usr/lib/systemd/"
 -  local wantsdir="${systemdir}user/sockets.target.wants/"
 -  install -vdm 755 "$wantsdir"
- 
+-
 -  local unit
 -  for unit in ../*.{service,socket}; do
 -    case $unit in
@@ -80,5 +81,7 @@
 -      *) install -vDm 644 "$unit" -t "${systemdir}user/" ;;
 -    esac
 -  done
- }
- 
+-}
+-
++}
++

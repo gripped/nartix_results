@@ -171,6 +171,7 @@ openssl-1.1
 openssl
 pcre
 pcre2
+perl
 pinentry
 pkgconf
 popt
@@ -195,6 +196,7 @@ unixodbc
 vi
 which
 wireless-regdb
+wpa_supplicant
 xz
 zlib
 zlib-static
