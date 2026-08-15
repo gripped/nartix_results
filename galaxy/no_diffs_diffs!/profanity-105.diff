@@ -1,0 +1,46 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -59,7 +59,7 @@
+       -D xscreensaver=disabled
+     )
+ 
+-    arch-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
++    artix-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
+     meson compile -C build
+   )
+   echo "Building gtk variant..."
+@@ -76,7 +76,7 @@
+       -D xscreensaver=enabled
+     )
+ 
+-    arch-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
++    artix-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
+     meson compile -C build-gtk
+   )
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -14,7 +14,7 @@
+ -D python-plugins=enabled
+ -D xscreensaver=disabled
+ )
+-arch-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
++artix-meson ${pkgname}-${pkgver} build "${meson_options[@]}"
+ meson compile -C build
+ )
+ echo "Building gtk variant..."
+@@ -30,7 +30,7 @@
+ -D python-plugins=enabled
+ -D xscreensaver=enabled
+ )
+-arch-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
++artix-meson ${pkgname}-${pkgver} build-gtk "${meson_options[@]}"
+ meson compile -C build-gtk
+ )
+ }

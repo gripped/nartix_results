@@ -294,6 +294,7 @@ catatonit
 catch2-v2
 catch2
 catdoc
+cauchy
 cbatticon
 cbindgen
 ccache
@@ -374,6 +375,7 @@ compiler-rt20
 composefs
 confuse
 consul
+containers-common
 convertlit
 coordgen
 copr-cli
@@ -874,6 +876,9 @@ gphoto2
 gpicview
 gpsd
 gptfdisk
+gradle
+gradle-doc
+gradle-src
 grafana
 granatier
 granite
@@ -2346,6 +2351,7 @@ matterbridge
 maturin
 python-maturin
 maven
+mbedtls
 mbedtls2
 mbedtls3
 mbox-importer
@@ -3975,6 +3981,7 @@ python-nptyping
 python-nrfutil
 python-nspektr
 python-ntlm-auth
+python-numba
 python-numexpr
 python-numpy
 python-oauth2client

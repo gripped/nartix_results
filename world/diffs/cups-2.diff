@@ -33,22 +33,14 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -1,18 +0,0 @@
--acl
--avahi
--colord
--cups-filters
--dbus
--glibc
--gnutls
--hicolor-icon-theme
--libcups>
--libgcc
--libpaper
--libstdc++
--libusb
--pam
--sh
+@@ -10,9 +10,8 @@
+ libgcc
+ libpaper
+ libstdc++
++libudev
+ libusb
+ pam
+ sh
 -systemd
 -systemd-libs
--zlib
+ zlib

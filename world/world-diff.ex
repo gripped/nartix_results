@@ -55,7 +55,6 @@ caja-wallpaper
 caja-xattr-tags
 caja
 catfish
-cauchy
 cef
 certbot-apache
 certbot-dns-cloudflare
@@ -98,7 +97,6 @@ conky
 conmon
 connman
 containerd
-containers-common
 cppcheck
 criu
 crun
@@ -228,9 +226,6 @@ go-bindata
 godot
 godot-mono
 gperftools
-gradle
-gradle-doc
-gradle-src
 greetd-tuigreet
 greetd
 $pkgbase
@@ -455,6 +450,7 @@ lightdm-gtk-greeter-settings
 lightdm-slick-greeter
 lightdm
 liblightdm-qt5
+liblightdm-qt6
 lilypond
 linux-hardened
 linux-hardened-headers
@@ -559,7 +555,6 @@ mate-user-guide
 mate-user-share
 mate-utils
 matrix-synapse
-mbedtls
 media-player-info
 memcached
 mesa
@@ -766,7 +761,6 @@ python-asn1crypto
 python-cram
 python-httplib2
 python-ndg-httpsclient
-python-numba
 python-pymupdf
 python-pyscard
 python-pytest-freezegun

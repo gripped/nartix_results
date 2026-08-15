@@ -20,19 +20,3 @@
  
  prepare() {
    cd "${_gemname}-ruby-${pkgver}"
-
-
-############# Stripped diff below #################
-
---- arch_depends
-+++ artix_depends
-@@ -1,9 +0,0 @@
--ruby
--ruby-bundler
--ruby-rake
--ruby-rake-compiler
--ruby-rdoc
--ruby-rspec
--ruby-ruby_memcheck
--ruby-webrick
--ruby-yard

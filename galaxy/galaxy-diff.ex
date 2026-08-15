@@ -104,8 +104,6 @@ osdlyrics
 p8-platform
 perl-cgi-fast
 perl-curses
-profanity
-profanity-gtk
 python-pystray
 qbittorrent
 qbittorrent-nox
