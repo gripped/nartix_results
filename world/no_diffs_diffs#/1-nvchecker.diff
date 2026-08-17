@@ -4,8 +4,8 @@
  
  check() {
    cd nvchecker
--  pytest --deselect tests/test_container.py::test_container_with_tag
-+  pytest --deselect tests/test_container.py::test_container_with_tag || :
+-  pytest
++  pytest||:
  }
  
  package() {

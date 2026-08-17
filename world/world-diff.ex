@@ -621,6 +621,7 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
+nnn
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -641,6 +642,8 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
+obs-studio
+obs-studio-plugin-browser
 ocl-icd
 onboard
 onionshare

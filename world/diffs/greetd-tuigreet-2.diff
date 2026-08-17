@@ -1,7 +1,7 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
 @@ -10,7 +10,7 @@
- depends=(glibc
+ depends=(glibc # libc.so libm.so
           greetd
           libgcc
 -         systemd)
@@ -15,8 +15,8 @@
 
 --- arch_depends
 +++ artix_depends
-@@ -3,4 +3,3 @@
- greetd
+@@ -4,4 +4,3 @@
  libgcc
+ libgcc_s.so
  scdoc
 -systemd

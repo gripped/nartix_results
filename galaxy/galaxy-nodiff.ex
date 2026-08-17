@@ -206,6 +206,7 @@ just
 kanshi
 kernel-headers-musl
 keyd
+khal
 khard
 kodi
 kodi-gles
@@ -534,6 +535,7 @@ python-caja
 python-cjkwrap
 python-click-log
 python-generic
+python-icalendar
 python-inflate64
 python-jaconv
 python-jellyfin-apiclient

@@ -2510,7 +2510,6 @@ nmap
 ndiff
 zenmap
 nng
-nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
@@ -2553,8 +2552,6 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
-obs-studio
-obs-studio-plugin-browser
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
