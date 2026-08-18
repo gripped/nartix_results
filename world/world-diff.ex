@@ -179,6 +179,8 @@ firewalld-test
 flatpak
 flatpak-docs
 flite
+fltk
+fltk-docs
 fluidsynth
 font-manager
 fprintd
@@ -291,6 +293,8 @@ hipcub
 hipfft
 hipsolver
 hipsparse
+hspell
+hunspell-he
 hwloc
 hyprland
 i2pd
@@ -621,7 +625,6 @@ libnm
 nm-cloud-setup
 networkmanager-docs
 niri
-nnn
 nodejs-lts-hydrogen
 nsd
 nushell
@@ -642,8 +645,6 @@ nvidia-utils
 nvidia
 nvme-cli
 nvtop
-obs-studio
-obs-studio-plugin-browser
 ocl-icd
 onboard
 onionshare
@@ -771,6 +772,7 @@ python-pyudev
 python-quart
 python-recommonmark
 python-sphinxcontrib-spelling
+python-tpm2-pytss
 qastools
 qbe
 qbittorrent
@@ -973,6 +975,7 @@ udisks2-btrfs
 udisks2-lvm2
 udisks2-docs
 umockdev
+umurmur
 unace
 unbound
 unoconv

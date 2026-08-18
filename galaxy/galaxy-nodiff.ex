@@ -38,7 +38,6 @@ bogofilter-kyotocabinet
 bogofilter-lmdb
 bogofilter-sqlite
 box2d
-btrfs-assistant
 cairo-dock-plug-ins
 cairo-perl
 caja-extensions
@@ -268,6 +267,7 @@ libretro-ppsspp
 libretro-sameboy
 libretro-shaders-slang
 libretro-snes9x
+librewolf
 libscfg
 libsfdo
 libsidplayfp
@@ -464,7 +464,6 @@ nicotineplus
 nim
 nlopt
 ntpd-rs
-nushell
 nvm
 nwg-hello
 nwg-look

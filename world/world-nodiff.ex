@@ -663,8 +663,6 @@ python-flatbuffers
 flatpak-builder
 flatpak-kcm
 flickcurl
-fltk
-fltk-docs
 fltk1.3
 fluxbox
 fmt
@@ -1064,8 +1062,6 @@ hotdoc
 hplip
 hsa-rocr
 hsakmt-roct
-hspell
-hunspell-he
 htmlq
 htop
 http-parser
@@ -2510,6 +2506,7 @@ nmap
 ndiff
 zenmap
 nng
+nnn
 node-gyp
 nodejs-lts-fermium
 nodejs-lts-gallium
@@ -2552,6 +2549,8 @@ nuspell
 nvchecker
 oath-toolkit
 obconf-qt
+obs-studio
+obs-studio-plugin-browser
 ocaml-augeas
 ocaml-bigarray-compat
 ocaml-csexp
@@ -4595,7 +4594,6 @@ python-toposort
 python-tornado
 python-tox-current-env
 python-tox
-python-tpm2-pytss
 python-tqdm
 python-tracerite
 python-trailrunner
@@ -5801,7 +5799,6 @@ uget
 uglify-js
 uhttpmock
 umbrello
-umurmur
 unarchiver
 unclutter
 unibilium

@@ -3,6 +3,7 @@ alsa-utils
 anubis
 autorandr
 bsd-games
+btrfs-assistant
 cairo-dock
 calibre
 cinnamon-desktop
@@ -24,6 +25,13 @@ dotnet-sdk-10.0
 dotnet-targeting-pack-10.0
 aspnet-targeting-pack-10.0
 dotnet-source-built-artifacts-10.0
+dotnet-core-8.0
+dotnet-runtime-8.0
+aspnet-runtime-8.0
+dotnet-sdk-8.0
+dotnet-targeting-pack-8.0
+aspnet-targeting-pack-8.0
+dotnet-source-built-artifacts-8.0
 dotnet-core-9.0
 dotnet-runtime-9.0
 aspnet-runtime-9.0
@@ -77,7 +85,6 @@ libmatemixer
 libodfgen
 libratbag
 libretro-pcsx2
-librewolf
 libusbsio
 python-libusbsio
 libva-nvidia-driver
@@ -92,6 +99,7 @@ mimalloc
 mpd
 nbd
 neofetch
+nushell
 nut
 nvidia-340xx-utils
 nvidia-390xx-utils

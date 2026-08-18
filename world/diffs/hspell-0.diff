@@ -1,0 +1,94 @@
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -2,10 +2,10 @@
+ pkgbase=hspell
+ pkgname=('hspell' 'hunspell-he')
+ pkgver=1.4
+-pkgrel=6
++pkgrel=7
+ arch=('x86_64')
+-license=('GPL')
+-url="http://www.ivrix.org.il/projects/spell-checker/"
++license=('AGPL-3.0-only')
++url="http://www.ivrix.org.il/"
+ makedepends=('glibc' 'zlib' 'perl' 'hunspell' 'gawk' 'qt6-webengine')
+ options=('!makeflags')
+ source=(http://hspell.ivrix.org.il/${pkgname}-${pkgver}.tar.gz{,.sig})
+@@ -15,7 +15,7 @@
+ 
+ build() {
+   cd ${pkgname}-${pkgver}
+-  export PERLLIB="$PWD"
++  export PERLLIB="${PWD}"
+   ./configure --prefix=/usr --mandir=/usr/share/man \
+       --enable-linginfo --enable-fatverb --enable-shared
+   make
+@@ -23,7 +23,6 @@
+ }
+ 
+ package_hspell() {
+-
+   pkgdesc="Hebrew spell-checker"
+   depends=('glibc' 'zlib' 'perl')
+ 
+@@ -34,27 +33,29 @@
+ }
+ 
+ package_hunspell-he() {
+-
+   pkgdesc="Hebrew hunspell dictionary"
+   provides=('hunspell-dictionary')
+ 
+   cd ${pkgbase}-${pkgver}
++  install -dm755 "${pkgdir}/usr/share/hunspell"
++  install -m644 he.dic "${pkgdir}/usr/share/hunspell/he_IL.dic"
++  install -m644 he.aff "${pkgdir}/usr/share/hunspell/he_IL.aff"
+ 
+-  install -dm755 "$pkgdir"/usr/share/hunspell
+-  install -m644 he.dic "$pkgdir"/usr/share/hunspell/he_IL.dic
+-  install -m644 he.aff "$pkgdir"/usr/share/hunspell/he_IL.aff
+-
+-  install -dm755 "$pkgdir"/usr/share/myspell/dicts
+-  pushd "$pkgdir"/usr/share/myspell/dicts
+-    for file in "$pkgdir"/usr/share/hunspell/*; do
+-      ln -sv /usr/share/hunspell/$(basename $file) .
+-    done
++  install -dm755 "${pkgdir}/usr/share/myspell/dicts"
++  pushd "${pkgdir}/usr/share/myspell/dicts"
++  for _file in "${pkgdir}/usr/share/hunspell"/*
++  do
++    ln -sv "/usr/share/hunspell/$(basename ${_file})" .
++  done
+   popd
+ 
+-  install -d "$pkgdir"/usr/share/qt{,6}/qtwebengine_dictionaries/
+-  for _file in "$pkgdir"/usr/share/hunspell/*.dic; do
+-  _filename=$(basename $_file)
+-    /usr/lib/qt6/qwebengine_convert_dict $_file "$pkgdir"/usr/share/qt6/qtwebengine_dictionaries/${_filename/\.dic/\.bdic}
+-  ln -rs "$pkgdir"/usr/share/qt6/qtwebengine_dictionaries/${_filename/\.dic/\.bdic} "$pkgdir"/usr/share/qt/qtwebengine_dictionaries/
++  install -d "${pkgdir}/usr/share"/qt{,6}/qtwebengine_dictionaries/
++  for _file in "${pkgdir}/usr/share"/hunspell*/*.dic
++  do
++    _filename="$(basename ${_file})"
++    /usr/lib/qt6/qwebengine_convert_dict "${_file}" \
++      "${pkgdir}/usr/share/qt6/qtwebengine_dictionaries/${_filename/\.dic/\.bdic}"
++    ln -rs "${pkgdir}/usr/share/qt6/qtwebengine_dictionaries/${_filename/\.dic/\.bdic}" \
++      "${pkgdir}/usr/share/qt/qtwebengine_dictionaries/"
+   done
+ }
+
+
+############# Stripped diff below #################
+
+
+
+--- Arch PKGBUILD
++++ Artix PKGBUILD
+@@ -1,6 +1,6 @@
+ build() {
+ cd ${pkgname}-${pkgver}
+-export PERLLIB="$PWD"
++export PERLLIB="${PWD}"
+ ./configure --prefix=/usr --mandir=/usr/share/man \
+ --enable-linginfo --enable-fatverb --enable-shared
+ make

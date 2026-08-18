@@ -30,9 +30,6 @@ dosfstools
 ed
 efibootmgr
 efivar
-elfutils
-libelf
-debuginfod
 expat
 file
 findutils

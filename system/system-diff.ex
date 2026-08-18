@@ -13,6 +13,9 @@ dhcpcd
 diffutils
 e2fsprogs
 fuse2fs
+elfutils
+libelf
+debuginfod
 fakeroot
 filesystem
 gcc

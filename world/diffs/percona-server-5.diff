@@ -1,52 +1,30 @@
 --- Arch PKGBUILD
 +++ Artix PKGBUILD
-@@ -4,9 +4,9 @@
- pkgver=9.7.1_1
- _pkgver=${pkgver/_/-}
+@@ -6,7 +6,7 @@
  _myver=${pkgver/_rel*}
--pkgrel=1
-+pkgrel=1.1
+ pkgrel=2
  arch=('x86_64')
 -makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'systemd-tools' 'pam' 'numactl' 'jemalloc' 'openssl'
 +makedepends=('cmake' 'zlib' 'lz4' 'zstd' 'libaio' 'pam' 'numactl' 'jemalloc' 'openssl'
               'rpcsvc-proto' 'doxygen' 'graphviz' 'libevent' 'libfido2' 'protobuf' 'editline')
  license=('GPL-2.0-only')
  url="https://www.percona.com/software/mysql-database/percona-server"
-@@ -28,15 +28,6 @@
- 	sed -r -e s@/var/run/mysqlrouter@/run/mysqlrouter@ \
+@@ -29,14 +29,7 @@
  	       -e s@lib64/mysql@lib/mysql@ \
  	       -i cmake/install_layout.cmake
--
+ 
 -	for svcfile in mysqld{,@}.service.in; do
 -		sed -e '/^PrivateTmp=/ a StateDirectory=mysql mysql-files\nRuntimeDirectory=mysqld' \
 -		    -e 's@/etc/sysconfig/@/etc/conf.d/@' \
 -		    -i "scripts/systemd/$svcfile"
 -	done
--
+ 
 -	sed '/^PrivateTmp=/ a StateDirectory=mysqlrouter\nRuntimeDirectory=mysqlrouter' \
 -		-i scripts/systemd/mysqlrouter.service.in
  
  	sed 's/-DNDEBUG -D_FORTIFY_SOURCE=2//' -i CMakeLists.txt
  
-@@ -83,7 +74,7 @@
- 		-DWITH_ICU=system \
- 		-DWITH_FIDO=system \
- 		-DWITH_PROTOBUF=system \
--    -DWITH_EDITLINE=system \
-+        -DWITH_EDITLINE=system \
- 		-DWITH_ENCRYPTION_UDF=ON \
- 		-DWITH_LIBWRAP=OFF \
- 		-DWITH_MECAB=OFF \
-@@ -99,7 +90,7 @@
- 		-DDEBUG_EXTNAME=OFF \
- 		-DBUILD_TESTING=OFF \
- 		-DWITH_UNIT_TESTS=OFF \
--		-DWITH_SYSTEMD=1 \
-+		-DWITH_SYSTEMD=0 \
- 		-DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
- 		-DWITH_LTO=ON \
- 		-DUSE_LD_LLD=0 \
-@@ -144,7 +135,7 @@
+@@ -146,7 +139,7 @@
  package_percona-server() {
  	pkgdesc='Drop-in replacement for MySQL that provides improved performance, diagnostics, instrumentation and MyRocks storage engine'
  	backup=('etc/mysql/my.cnf' 'etc/mysqlrouter/mysqlrouter.conf' 'etc/conf.d/mysql')
@@ -85,12 +63,3 @@
  sed 's/-DNDEBUG -D_FORTIFY_SOURCE=2//' -i CMakeLists.txt
  patch -p1 -i ../gcc-14.patch # Fix build with GCC 14
  }
-@@ -69,7 +62,7 @@
- -DDEBUG_EXTNAME=OFF \
- -DBUILD_TESTING=OFF \
- -DWITH_UNIT_TESTS=OFF \
---DWITH_SYSTEMD=1 \
-+-DWITH_SYSTEMD=0 \
- -DCMAKE_EXE_LINKER_FLAGS='-ljemalloc' \
- -DWITH_LTO=ON \
- -DUSE_LD_LLD=0 \

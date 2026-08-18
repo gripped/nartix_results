@@ -8,15 +8,17 @@
    'sqlite'
    'whois'
  )
-@@ -66,8 +65,6 @@
+@@ -57,10 +56,6 @@
    cd $pkgname
    python -m installer --destdir="$pkgdir" dist/*.whl
  
 -  install -Dm644 build/fail2ban.service \
 -    "$pkgdir"/usr/lib/systemd/system/$pkgname.service
-   install -Dm644 files/fail2ban-tmpfiles.conf \
-     "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
+-  install -Dm644 build/fail2ban.socket \
+-    "$pkgdir"/usr/lib/systemd/system/$pkgname.socket
    install -Dm644 files/fail2ban-logrotate \
+     "$pkgdir"/etc/logrotate.d/fail2ban
+   install -Dm644 files/bash-completion \
 
 
 ############# Stripped diff below #################
